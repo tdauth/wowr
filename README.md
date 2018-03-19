@@ -9,6 +9,8 @@ This version provides several new features compared to the original map:
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Every hero has the ability "Attribute Bonus".
+* Increased boss levels.
+* New heroes from the TFT expansions are available.
 * Translation into German.
 
 It does also fix several bugs of the original map:
