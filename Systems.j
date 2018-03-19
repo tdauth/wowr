@@ -135,7 +135,7 @@ function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns 
         endif
     endif
     set RucksackPage = udg_RucksackPageNumber[PlayerNumber]
-    call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Rucksack-Seite " + I2S(RucksackPage) + " geöffnet."))
+    call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Rucksack-Seite " + I2S(RucksackPage + 1) + " geöffnet."))
     // Create All Items From Next/Last Page
     set I0 = 0
     loop
@@ -217,7 +217,6 @@ function ChangeCharacterForPlayer takes integer PlayerNumber, integer Number ret
     local integer UnitType = udg_CharacterUnitType[Number]
     local string Animation = udg_CharacterAnimation[Number]
     local string Description = udg_CharacterDescription[Number]
-    call BJDebugMsg("Hallo 3")
     set udg_PlayerSelectedCharacter[PlayerNumber] = Number
     if (udg_ViewCharacter[PlayerNumber] != null) then
         call RemoveUnit(udg_ViewCharacter[PlayerNumber])
@@ -318,23 +317,19 @@ endfunction
 function CreateCharacterSelectionForPlayer takes player SelectionPlayer returns nothing
     local integer PlayerNumber = GetPlayerId(SelectionPlayer)
     local force PlayerForce = GetForceOfPlayer(SelectionPlayer)
-    call BJDebugMsg("Hallo 1")
     // Save Player Data
     set udg_PlayerSelectionIsEnabled[PlayerNumber] = true
     set udg_PlayerSelectedCharacter[PlayerNumber] = 0
     // Selection Trigger Select
-     call BJDebugMsg("Hallo 2")
     set udg_SelectionTrigger[PlayerNumber] = CreateTrigger()
     call TriggerRegisterAnyUnitEventBJ(udg_SelectionTrigger[PlayerNumber], EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(udg_SelectionTrigger[PlayerNumber], Condition(function TriggerConditionPlayerIsInSelection))
     call TriggerAddAction(udg_SelectionTrigger[PlayerNumber], function TriggerActionSelectCharacter)
-     call BJDebugMsg("Hallo 3")
     // View Trigger
     set udg_ViewTrigger[PlayerNumber] = CreateTrigger()
     call TriggerRegisterTimerEvent(udg_ViewTrigger[PlayerNumber], GetViewTimeout(), true)
     call TriggerAddAction(udg_ViewTrigger[PlayerNumber], function TriggerActionSetupView)
     call SaveTriggerParameterInteger(udg_ViewTrigger[PlayerNumber], "PlayerNumber", PlayerNumber)
-     call BJDebugMsg("Hallo 4")
 
     call ChangeCharacterForPlayer(PlayerNumber, 1)
     call SetUserControlForceOn(PlayerForce)
@@ -541,15 +536,10 @@ function InitCustomSystems takes nothing returns nothing
     local integer I0 = 0
     local trigger LeaveTrigger = null
     set udg_DB = InitHashtable()
-    call BJDebugMsg("1")
     call SetupRPGSystems()
-    call BJDebugMsg("2")
     call SetupCustomCharacterSelection()
-    call BJDebugMsg("3")
     call SetupCustomRucksackSystem()
-    call BJDebugMsg("4")
     call SetupCustomRespawningSystem()
-    call BJDebugMsg("5")
     // Movement Trigger
     if (udg_UseRucksackSystem) then
         set udg_RucksackTrigger = CreateTrigger()
