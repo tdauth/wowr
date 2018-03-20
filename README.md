@@ -12,7 +12,14 @@ This version provides several new features compared to the original map:
 * Increased boss levels.
 * New heroes from the TFT expansions are available.
 * Translation into German.
+* Trees have 5000 hitpoints which allows longer harvesting before restoring the trees.
+* Night Elves workers harvest 10 lumber per interval as balance.
+* The race item can be dropped.
+* Naga can build a shop.
+* Naga villagers can walk on water.
+* Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
 
 It does also fix several bugs of the original map:
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
+* Summoned units won't respawn again like regular creeps.
