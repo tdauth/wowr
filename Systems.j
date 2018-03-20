@@ -216,7 +216,6 @@ function ChangeCharacterForPlayer takes integer PlayerNumber, integer Number ret
     local player SelectionPlayer = Player(PlayerNumber)
     local integer UnitType = udg_CharacterUnitType[Number]
     local string Animation = udg_CharacterAnimation[Number]
-    local string Description = udg_CharacterDescription[Number]
     set udg_PlayerSelectedCharacter[PlayerNumber] = Number
     if (udg_ViewCharacter[PlayerNumber] != null) then
         call RemoveUnit(udg_ViewCharacter[PlayerNumber])
@@ -231,7 +230,6 @@ function ChangeCharacterForPlayer takes integer PlayerNumber, integer Number ret
     call MakeCharactersInvisible(PlayerNumber)
     call SetUnitAnimation(udg_ViewCharacter[PlayerNumber], Animation)
 
-    call DisplayTimedTextToPlayer(SelectionPlayer, 0.00, 0.00, 8.00, Description)
     set SelectionPlayer = null
 endfunction
 
