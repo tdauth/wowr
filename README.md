@@ -1,5 +1,6 @@
 # World of Warcraft The Second Rebirth
 This is a map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been made by the user DeMoNiKuS.
+He himself modified the map World of Warcraft by the user EvilPitlord.
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 
 This version provides several new features compared to the original map:
@@ -18,6 +19,8 @@ This version provides several new features compared to the original map:
 * Naga can build a shop.
 * Naga villagers can walk on water.
 * Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
+* Added outland area with a new boss.
+* "-nowin" replaced "nodefeat". The game can be won by killing the final boss in the outland area.
 
 It does also fix several bugs of the original map:
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
