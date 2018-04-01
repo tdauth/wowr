@@ -135,7 +135,7 @@ function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns 
         endif
     endif
     set RucksackPage = udg_RucksackPageNumber[PlayerNumber]
-    call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Rucksack-Seite " + I2S(RucksackPage + 1) + " geöffnet."))
+    call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Open Bag " + I2S(RucksackPage + 1) + "."))
     // Create All Items From Next/Last Page
     set I0 = 0
     loop
@@ -447,8 +447,8 @@ function SetupRPGSystems takes nothing returns nothing
 endfunction
 
 function SetupCustomCharacterSelection takes nothing returns nothing
-    set udg_Info1 = "Drücken Sie die 'V' oder 'N', um den angezeigten Helden zu wechseln."
-    set udg_Info2 = "Drücken Sie die 'W', um den angezeigten Helden auszuwählen."
+    set udg_Info1 = "Press 'V' or 'N' to change the shown hero."
+    set udg_Info2 = "Press 'C' to choose the shown hero."
 endfunction
 
 function SetupCustomRucksackSystem takes nothing returns nothing

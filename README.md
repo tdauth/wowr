@@ -3,6 +3,7 @@ This is a map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/t
 He himself modified the map World of Warcraft by the user EvilPitlord.
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 
+## New Features
 This version provides several new features compared to the original map:
 * 12 players instead of 10.
 * Backpack system.
@@ -22,7 +23,12 @@ This version provides several new features compared to the original map:
 * Added outland area with a new boss.
 * "-nowin" replaced "nodefeat". The game can be won by killing the final boss in the outland area.
 
+## Bugfixes
 It does also fix several bugs of the original map:
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
 * Summoned units won't respawn again like regular creeps.
+
+## Links
+* [German inWarcraft.de Thread](https://warcraft.ingame.de/forum/threads/215354-World-of-Warcraft-The-Second-Rebirth)
+* [English Blog](https://diemachtdesfeuers.wordpress.com/)
