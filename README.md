@@ -30,5 +30,6 @@ It does also fix several bugs of the original map:
 * Summoned units won't respawn again like regular creeps.
 
 ## Links
+* [English Map on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [German inWarcraft.de Thread](https://warcraft.ingame.de/forum/threads/215354-World-of-Warcraft-The-Second-Rebirth)
 * [English Blog](https://diemachtdesfeuers.wordpress.com/)
