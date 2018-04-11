@@ -3,7 +3,14 @@ This is a map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/t
 He himself modified the map World of Warcraft by the user EvilPitlord.
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 
-## New Features
+## Normal Versions of the Map
+* [Version 1.3](./World%20Of%20Warcraft%20The%20Second%20Rebirth.w3x) which works with patch 1.28.
+* [Version 1.4 (Public Test Realm version)](./World%20Of%20Warcraft%20The%20Second%20Rebirth%20PTR.w3x) which works with patch 1.29.
+
+## Optimized Versions of the Map
+* [Version 1.3](./releases/wowtsr1.3.w3x) which works with patch 1.28.
+
+## New Features (Version 1.4)
 This version provides several new features compared to the original map:
 * 24 players instead of 10.
 * Backpack system.
@@ -20,8 +27,12 @@ This version provides several new features compared to the original map:
 * Naga villagers can walk on water.
 * Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
 * Added Outland area with a new boss.
+* New Outland area with four goldmines and four quests.
+* Outland portals all over the map.
 * "-nowin" replaced "nodefeat". The game can be won by killing the final boss in the Outland area.
 * Hand of God at level 35.
+* Ability 'Reward Freelancer' in all main buildings.
+* Ability 'Give Units to Another Allied Player' in all main buildings.
 
 ## Bugfixes
 It does also fix several bugs of the original map:
