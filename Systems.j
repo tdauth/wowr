@@ -72,6 +72,24 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
     return IsOnline
 endfunction
 
+function DropRucksackForPlayer takes integer PlayerNumber, rect whichRect returns nothing
+    local integer I0
+    local integer I1
+    local item whichItem
+    set I0 = 0
+    loop
+        exitwhen(I0 == udg_RucksackMaxPages)
+        set I1 = 0
+        loop
+            exitwhen(I1 == 6)
+            set whichItem = CreateItem(udg_RucksackItemType[Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, 6)], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            call SetItemCharges(whichItem, udg_RucksackItemCharges[Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, 6)])
+            set I1 = I1 + 1
+        endloop
+        set I0 = I0 + 1
+    endloop
+endfunction
+
 function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
     local integer I0
     local integer I1
