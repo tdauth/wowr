@@ -3,9 +3,8 @@ This is a map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/t
 He himself modified the map World of Warcraft by the user EvilPitlord.
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 
-## Normal Versions of the Map
-* [Version 1.3](./World%20Of%20Warcraft%20The%20Second%20Rebirth.w3x) which works with patch 1.28.
-* [Version 1.4 (Public Test Realm version)](./World%20Of%20Warcraft%20The%20Second%20Rebirth%20PTR.w3x) which works with patch 1.29.
+## Normal Version of the Map
+* [Version 1.4](./World%20Of%20Warcraft%20The%20Second%20Rebirth.w3x) which works with patch 1.29.
 
 ## Optimized Versions of the Map
 * [Version 1.3](./releases/wowtsr1.3.w3x) which works with patch 1.28.

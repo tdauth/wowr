@@ -208,10 +208,9 @@ function DestroyCharacterSelectionForPlayer takes integer PlayerNumber returns n
     set udg_ViewCharacter[PlayerNumber] = null
 endfunction
 
-function AddSelectableCharacter takes integer UnitType, string Name, string Description, string Animation, integer Strength, integer Vitality, integer Intelligence, integer SpawnPoint returns nothing
+function AddSelectableCharacter takes integer UnitType, string Animation returns nothing
     set udg_Characters = udg_Characters + 1
     set udg_CharacterUnitType[udg_Characters] = UnitType
-    set udg_CharacterDescription[udg_Characters] = Description
     set udg_CharacterAnimation[udg_Characters] = Animation
 endfunction
 
@@ -258,7 +257,12 @@ function SelectCharacterForPlayer takes integer PlayerNumber returns nothing
     local integer UnitType = udg_CharacterUnitType[Number]
     call DestroyCharacterSelectionForPlayer(PlayerNumber)
     call ClearTextMessagesBJ(PlayerForce)
-    //Create Character
+    // Random Character
+    if (UnitType == 'H00Z') then
+        // Choose Random Unit Type except for the Random Character itself
+        set UnitType = udg_CharacterUnitType[GetRandomInt(0, udg_Characters - 2)]
+    endif
+    // Create Character
     set udg_Hero[PlayerNumber] = CreateUnit(SelectionPlayer, UnitType, GetRectCenterX(gg_rct_Startortwahl), GetRectCenterY(gg_rct_Startortwahl), 0.0)
     call SetHeroXP(udg_Hero[PlayerNumber], udg_CharacterStartXP[PlayerNumber], true)
     call CreateRucksackForPlayer(PlayerNumber)
@@ -485,7 +489,7 @@ function SetupCustomRespawningSystem takes nothing returns nothing
 endfunction
 
 function GetPlayerLeavesMessage takes nothing returns string
-    return "hat das Spiel verlassen."
+    return "has left the game."
 endfunction
 
 function TriggerActionMoveRucksack takes nothing returns nothing
@@ -539,7 +543,7 @@ function TriggerActionPlayerLeaves takes nothing returns nothing
         call DestroyRucksackSystemForPlayer(GetPlayerId(triggerPlayer))
     endif
     if (udg_UseCharacterSelection) then
-        //Player Is In Selection
+        // Player Is In Selection
         if (udg_PlayerSelectionIsEnabled[GetPlayerId(triggerPlayer)]) then
             call DestroyCharacterSelectionForPlayer(GetPlayerId(triggerPlayer))
         endif
