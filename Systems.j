@@ -583,3 +583,20 @@ function InitCustomSystems takes nothing returns nothing
     endloop
     call TriggerAddAction(LeaveTrigger, function TriggerActionPlayerLeaves)
 endfunction
+
+function ForGroupRemoveUnit takes nothing returns nothing
+    call RemoveUnit(GetEnumUnit())
+endfunction
+
+function PreloadClasses takes rect whichRect returns nothing
+    local group classesGroup = CreateGroup()
+    local integer I0 = 0
+    loop
+        exitwhen (I0 == udg_Characters)
+        call GroupAddUnit(classesGroup, CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), udg_CharacterUnitType[I0], GetRectCenterX(whichRect), GetRectCenterY(whichRect), 0.00))
+        set I0 = I0 + 1
+    endloop
+    call ForGroup(classesGroup, function ForGroupRemoveUnit)
+    call DestroyGroup(classesGroup)
+    set classesGroup = null
+endfunction
