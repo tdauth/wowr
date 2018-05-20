@@ -1,6 +1,6 @@
 # World of Warcraft The Second Rebirth
-This is a map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been made by the user DeMoNiKuS.
-He himself modified the map World of Warcraft by the user EvilPitlord.
+This is a Warcraft III: The Frozen Throne map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been made by the users DeMoNiKuS.
+DeMoNiKuS modified the map World of Warcraft by the user EvilPitlord.
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 
 ## Normal Version of the Map
@@ -32,6 +32,8 @@ This version provides several new features compared to the original map:
 * Hand of God at level 35.
 * Ability 'Reward Freelancer' in all main buildings.
 * Ability 'Give Units to Another Allied Player' in all main buildings.
+* Random hero support.
+* Freelancers gain more experience from killing units.
 
 ## Bugfixes
 It does also fix several bugs of the original map:
