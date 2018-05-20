@@ -260,7 +260,7 @@ function SelectCharacterForPlayer takes integer PlayerNumber returns nothing
     // Random Character
     if (UnitType == 'H00Z') then
         // Choose Random Unit Type except for the Random Character itself
-        set UnitType = udg_CharacterUnitType[GetRandomInt(0, udg_Characters - 2)]
+        set UnitType = udg_CharacterUnitType[GetRandomInt(1, udg_Characters - 1)]
     endif
     // Create Character
     set udg_Hero[PlayerNumber] = CreateUnit(SelectionPlayer, UnitType, GetRectCenterX(gg_rct_Startortwahl), GetRectCenterY(gg_rct_Startortwahl), 0.0)

@@ -13,12 +13,12 @@ The original map had no trigger data, so all triggers had to be recreated based 
 This version provides several new features compared to the original map:
 * 24 players instead of 10.
 * Backpack system.
-* Repicking hero with the chat command "-repick".
+* Repicking your hero with the chat command '-repick'.
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
-* Every hero has the ability "Attribute Bonus".
-* Increased boss levels.
-* New heroes from the TFT expansions are available.
+* Every hero can learn the ability 'Attribute Bonus'.
+* Increased boss hero levels.
+* New heroes from the TFT patches are available.
 * Trees have 5000 hitpoints which allows longer harvesting before restoring the trees.
 * Night Elves workers harvest 10 lumber per interval as balance.
 * The race item can be dropped.
@@ -28,7 +28,7 @@ This version provides several new features compared to the original map:
 * Added Outland area with a new boss.
 * New Outland area with four goldmines and four quests.
 * Outland portals all over the map.
-* "-nowin" replaced "nodefeat". The game can be won by killing the final boss in the Outland area.
+* '-nowin' replaced 'nodefeat'. The game can be won by killing the final boss in the Outland area.
 * Hand of God at level 35.
 * Ability 'Reward Freelancer' in all main buildings.
 * Ability 'Give Units to Another Allied Player' in all main buildings.
