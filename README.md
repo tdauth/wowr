@@ -40,7 +40,7 @@ This version provides several new features compared to the original map:
 * Ability 'Reward Freelancer' in all main buildings.
 * Ability 'Give Units to Another Allied Player' in all main buildings.
 * Random hero support.
-* Freelancers gain more experience from killing hostile units.
+* Freelancers gain more experience than warlords from killing hostile units.
 
 ## Bugfixes
 It does also fix several bugs of the original map:
