@@ -41,7 +41,6 @@ This version provides several new features compared to the original map:
 * Ability 'Give Units to Another Allied Player' in all main buildings.
 * Random hero support.
 * Freelancers gain more experience than warlords from killing hostile units.
-* Fixed dropping quest items even from backpacks on hero deaths.
 
 ## Bugfixes
 It does also fix several bugs of the original map:
