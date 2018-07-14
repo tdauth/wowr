@@ -1,9 +1,9 @@
 # World of Warcraft The Second Rebirth
-This is a Warcraft III: The Frozen Throne map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been made by the users DeMoNiKuS.
+This is a Warcraft III: The Frozen Throne map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been made by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by the user EvilPitlord.
-It is an RPG map where every player chooses a hero in the beginning and can either play as warlord or as freelancer.
+It is an RPG map where every player chooses a hero in the beginning and can play either as warlord or as freelancer.
 Warlords can build a base, collect resources and reward freelancers for their work.
-Freelancers have more start attributes and gain faster experience but cannot build a base or collect resources.
+Freelancers have higher start attributes and gain faster experience but cannot build a base or collect resources.
 Alliances can be forged between players and quests can be solved which are rewarded with useful items.
 Usually, the map has a very long play time since players build their bases and defeat the bosses after some time.
 The map can only be won by killing the final boss.
@@ -11,7 +11,7 @@ The map can only be won by killing the final boss.
 ## Normal Version of the Map
 * [Version 1.4](./wowtsr.w3x) which works with patch 1.29.
 
-## Optimized Versions of the Map
+## Optimized older Versions of the Map
 * [Version 1.3](./releases/wowtsr1.3.w3x) which works with patch 1.28.
 * [Version 1.2](./releases/wowtsr1.2.w3x)
 * [Version 1.1](./releases/wowtsr1.1.w3x)
@@ -41,6 +41,7 @@ This version provides several new features compared to the original map:
 * Ability 'Give Units to Another Allied Player' in all main buildings.
 * Random hero support.
 * Freelancers gain more experience than warlords from killing hostile units.
+* Fixed dropping quest items even from backpacks on hero deaths.
 
 ## Bugfixes
 It does also fix several bugs of the original map:
