@@ -97,39 +97,40 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
     local integer I1 = 0
     local integer index = 0
     local item whichItem = null
-    set I0 = 0
+    // Check the hero inventory
+    set I1 = 0
     loop
-        exitwhen(I0 == udg_RucksackMaxPages)
-        set I1 = 0
-        loop
-            exitwhen(I1 == bj_MAX_INVENTORY)
-            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            if (udg_RucksackItemType[index] == itemTypeId) then
-                if (udg_RucksackPageNumber[PlayerNumber] == I1) then
-                    call UnitRemoveItemFromSlot(udg_Rucksack[PlayerNumber], I1)
-                endif
-                set udg_RucksackItemType[index] = 0
-                set udg_RucksackItemCharges[index] = 0
-                set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-                call SetItemInvulnerable(whichItem, true)
-                exitwhen (true)
-            endif
-            set I1 = I1 + 1
-        endloop
-        set I0 = I0 + 1
+        exitwhen(I1 == bj_MAX_INVENTORY)
+        if (GetItemTypeId(UnitItemInSlot(udg_Hero[PlayerNumber], I1)) == itemTypeId) then
+            call UnitRemoveItemFromSlot(udg_Hero[PlayerNumber], I1)
+            set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            call SetItemInvulnerable(whichItem, true)
+            exitwhen (true)
+        endif
+        set I1 = I1 + 1
     endloop
-
+    // Check the backpack
     if (whichItem == null) then
-        set I1 = 0
+        set I0 = 0
         loop
-            exitwhen(I1 == bj_MAX_INVENTORY)
-            if (GetItemTypeId(UnitItemInSlot(udg_Hero[PlayerNumber], I1)) == itemTypeId) then
-                call UnitRemoveItemFromSlot(udg_Hero[PlayerNumber], I1)
-                set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-                call SetItemInvulnerable(whichItem, true)
-                exitwhen (true)
-            endif
-            set I1 = I1 + 1
+            exitwhen(I0 == udg_RucksackMaxPages)
+            set I1 = 0
+            loop
+                exitwhen(I1 == bj_MAX_INVENTORY)
+                set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+                if (udg_RucksackItemType[index] == itemTypeId) then
+                    if (udg_RucksackPageNumber[PlayerNumber] == I1) then
+                        call UnitRemoveItemFromSlot(udg_Rucksack[PlayerNumber], I1)
+                    endif
+                    set udg_RucksackItemType[index] = 0
+                    set udg_RucksackItemCharges[index] = 0
+                    set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+                    call SetItemInvulnerable(whichItem, true)
+                    exitwhen (true)
+                endif
+                set I1 = I1 + 1
+            endloop
+            set I0 = I0 + 1
         endloop
     endif
 
@@ -529,7 +530,7 @@ function SetupCustomRucksackSystem takes nothing returns nothing
     set udg_RucksackAbility1 = 'A02L'
     set	udg_RucksackAbility2 = 'A02M'
     set	udg_RucksackNoneItemType = 'I028'
-    set	udg_RucksackMaxPages = 100
+    set	udg_RucksackMaxPages = 30
     set udg_RucksackMoveTime = 0.10
 endfunction
 
