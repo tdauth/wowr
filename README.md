@@ -32,6 +32,7 @@ This version provides several new features compared to the original map:
 * Naga can build a shop.
 * Naga villagers can walk on water.
 * Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
+* New race: Demon.
 * Added Outland area with a new boss.
 * New Outland area with four goldmines and four quests.
 * Outland portals all over the map.
