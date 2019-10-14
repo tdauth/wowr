@@ -164,13 +164,41 @@ function DestroyRucksackSystemForPlayer takes integer PlayerNumber returns nothi
     call ClearRucksackForPlayer(PlayerNumber)
 endfunction
 
+function RefreshRucksackPage takes integer PlayerNumber returns nothing
+    local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
+    local item SlotItem = null
+    local integer CarriedItemType = 0
+    local integer I0 = 0
+    local integer index = 0
+    // Create All Items From Next/Previous Page
+    set I0 = 0
+    loop
+        exitwhen(I0 == bj_MAX_INVENTORY)
+        set index = Index3D(PlayerNumber, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        call UnitAddItemByIdSwapped(udg_RucksackItemType[index], udg_Rucksack[PlayerNumber])
+        set I0 = I0 + 1
+    endloop
+    // Remove All None Items
+    set I0 = 0
+    loop
+        exitwhen(I0 == bj_MAX_INVENTORY)
+        set SlotItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
+        set CarriedItemType = GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0))
+        if (CarriedItemType == udg_RucksackNoneItemType) then
+            call RemoveItem(SlotItem)
+        endif
+        set SlotItem = null
+        set I0 = I0 + 1
+    endloop
+endfunction
+
 function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns nothing
     local integer I0 = 0
     local integer index = 0
     local player RucksackOwner = Player(PlayerNumber)
     local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
     local item SlotItem = null
-    local integer CarriedItemType
+    local integer CarriedItemType = 0
     // Save All Items
     set I0 = 0
     loop
@@ -205,26 +233,7 @@ function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns 
     endif
     set RucksackPage = udg_RucksackPageNumber[PlayerNumber]
     call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Open Bag " + I2S(RucksackPage + 1) + "."))
-    // Create All Items From Next/Previous Page
-    set I0 = 0
-    loop
-        exitwhen(I0 == bj_MAX_INVENTORY)
-        set index = Index3D(PlayerNumber, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-        call UnitAddItemByIdSwapped(udg_RucksackItemType[index], udg_Rucksack[PlayerNumber])
-        set I0 = I0 + 1
-    endloop
-    // Remove All None Items
-    set I0 = 0
-    loop
-        exitwhen(I0 == bj_MAX_INVENTORY)
-        set SlotItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
-        set CarriedItemType = GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0))
-        if (CarriedItemType == udg_RucksackNoneItemType) then
-            call RemoveItem(SlotItem)
-        endif
-        set SlotItem = null
-        set I0 = I0 + 1
-    endloop
+    call RefreshRucksackPage(PlayerNumber)
     set RucksackOwner = null
 endfunction
 
@@ -246,6 +255,19 @@ function CreateRucksackForPlayer takes integer PlayerNumber returns nothing
     call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTrigger[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_SPELL_CHANNEL, null)
     call TriggerAddAction(udg_PlayerRucksackTrigger[PlayerNumber], function TriggerFunctionChangeRucksackPage)
     // Remove All
+    set RucksackPlayer = null
+endfunction
+
+function RefreshRucksackForPlayer takes integer PlayerNumber returns nothing
+    local player RucksackPlayer = Player(PlayerNumber)
+    if (udg_Rucksack[PlayerNumber] != null) then
+        call RemoveUnit(udg_Rucksack[PlayerNumber])
+        set udg_Rucksack[PlayerNumber] = null
+        set udg_Rucksack[PlayerNumber] = CreateUnit(RucksackPlayer, udg_RucksackUnitType, GetUnitX(udg_Hero[PlayerNumber]), GetUnitY(udg_Hero[PlayerNumber]), 0.00)
+        call SuspendHeroXPBJ(false, udg_Rucksack[PlayerNumber])
+        call SetUnitInvulnerable(udg_Rucksack[PlayerNumber], true)
+        call RefreshRucksackPage(PlayerNumber)
+    endif
     set RucksackPlayer = null
 endfunction
 
