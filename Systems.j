@@ -317,6 +317,24 @@ function ChangeCharacterForPlayer takes integer PlayerNumber, integer Number ret
     call UnitAddAbility(udg_ViewCharacter[PlayerNumber], 'A03Y')
     call UnitAddAbility(udg_ViewCharacter[PlayerNumber], 'A03X')
     call UnitAddAbility(udg_ViewCharacter[PlayerNumber], 'A03Z')
+
+    // Mount abilities:
+    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A023') > 0) then
+        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A023', true, true)
+    endif
+    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A022') > 0) then
+        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A022', true, true)
+    endif
+    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A021') > 0) then
+        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A021', true, true)
+    endif
+    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A024') > 0) then
+        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A024', true, true)
+    endif
+    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A01P') > 0) then
+        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A01P', true, true)
+    endif
+
     call ModifyHeroSkillPoints(udg_ViewCharacter[PlayerNumber], bj_MODIFYMETHOD_SET, 0)
     call MakeCharactersInvisible(PlayerNumber)
     call SetUnitAnimation(udg_ViewCharacter[PlayerNumber], Animation)
