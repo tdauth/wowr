@@ -488,3 +488,35 @@ function InitCustomSystems takes nothing returns nothing
     endloop
     call TriggerAddAction(LeaveTrigger, function TriggerActionPlayerLeaves)
 endfunction
+
+function GetPlayerColorString takes player p, string text returns string
+//Credits to Andrewgosu from TH for the color codes//
+    local playercolor c = GetPlayerColor(p)
+    if c == PLAYER_COLOR_RED then
+        return "|cffFF0202" + text + "|r"
+    elseif c == PLAYER_COLOR_BLUE then
+        return "|cff0041FF" + text + "|r"
+    elseif c == PLAYER_COLOR_CYAN then
+        return "|cff1BE5B8" + text + "|r"
+    elseif c == PLAYER_COLOR_PURPLE then
+        return "|cff530080" + text + "|r"
+    elseif c == PLAYER_COLOR_YELLOW then
+        return "|cffFFFC00" + text + "|r"
+    elseif c == PLAYER_COLOR_ORANGE then
+        return "|cffFE890D" + text + "|r"
+    elseif c == PLAYER_COLOR_GREEN then
+        return "|cff1FBF00" + text + "|r"
+    elseif c == PLAYER_COLOR_PINK then
+        return "|cffE45AAF" + text + "|r"
+    elseif c == PLAYER_COLOR_LIGHT_GRAY then
+        return "|cff949596" + text + "|r"
+    elseif c == PLAYER_COLOR_LIGHT_BLUE then
+        return "|cff7DBEF1" + text + "|r"
+    elseif c == PLAYER_COLOR_AQUA then
+        return "|cff0F6145" + text + "|r"
+    elseif c == PLAYER_COLOR_BROWN then
+        return "|cff4D2903" + text + "|r"
+    else
+        return "|cffFFFFFF" + text + "|r"
+    endif
+endfunction
