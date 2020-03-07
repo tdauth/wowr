@@ -72,7 +72,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
     return IsOnline
 endfunction
 
-function DropRucksackForPlayer takes integer PlayerNumber, rect whichRect returns nothing
+function DropBackpackForPlayer takes integer PlayerNumber, rect whichRect returns nothing
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
@@ -84,8 +84,13 @@ function DropRucksackForPlayer takes integer PlayerNumber, rect whichRect return
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            set whichItem = CreateItem(udg_RucksackItemType[index], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-            call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
+                set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)), GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)))
+            else
+                set whichItem = CreateItem(udg_RucksackItemType[index], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+                call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+            endif
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
@@ -102,7 +107,7 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
     loop
         exitwhen(I1 == bj_MAX_INVENTORY)
         if (GetItemTypeId(UnitItemInSlot(udg_Hero[PlayerNumber], I1)) == itemTypeId) then
-            call UnitRemoveItemFromSlot(udg_Hero[PlayerNumber], I1)
+            call RemoveItem(UnitItemInSlot(udg_Hero[PlayerNumber], I1))
             set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
             call SetItemInvulnerable(whichItem, true)
             exitwhen (true)
@@ -118,9 +123,9 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
             loop
                 exitwhen(I1 == bj_MAX_INVENTORY)
                 set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-                if (udg_RucksackItemType[index] == itemTypeId) then
-                    if (udg_RucksackPageNumber[PlayerNumber] == I1) then
-                        call UnitRemoveItemFromSlot(udg_Rucksack[PlayerNumber], I1)
+                if (udg_RucksackItemType[index] == itemTypeId or (udg_RucksackPageNumber[PlayerNumber] == I0 and GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)) == itemTypeId)) then
+                    if (udg_RucksackPageNumber[PlayerNumber] == I0) then
+                        call RemoveItem(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1))
                     endif
                     set udg_RucksackItemType[index] = 0
                     set udg_RucksackItemCharges[index] = 0
@@ -135,6 +140,10 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
     endif
 
     return whichItem
+endfunction
+
+function DropQuestItemFromHeroAtRectByDyingUnit takes integer itemTypeId, rect whichRect returns item
+    return DropQuestItemFromHeroAtRect(GetPlayerId(GetOwningPlayer(GetTriggerUnit())), itemTypeId, whichRect)
 endfunction
 
 function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
