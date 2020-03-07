@@ -280,189 +280,6 @@ function RefreshRucksackForPlayer takes integer PlayerNumber returns nothing
     set RucksackPlayer = null
 endfunction
 
-function DestroyCharacterSelectionForPlayer takes integer PlayerNumber returns nothing
-    set udg_PlayerSelectionIsEnabled[PlayerNumber] = false
-    call DestroyTrigger(udg_SelectionTrigger[PlayerNumber])
-    set udg_SelectionTrigger[PlayerNumber] = null
-    call DestroyParameterTrigger(udg_ViewTrigger[PlayerNumber])
-    set udg_ViewTrigger[PlayerNumber] = null
-    // Remove View Character
-    call RemoveUnit(udg_ViewCharacter[PlayerNumber])
-    set udg_ViewCharacter[PlayerNumber] = null
-endfunction
-
-function AddSelectableCharacter takes integer UnitType, string Animation returns nothing
-    set udg_Characters = udg_Characters + 1
-    set udg_CharacterUnitType[udg_Characters] = UnitType
-    set udg_CharacterAnimation[udg_Characters] = Animation
-endfunction
-
-function MakeCharactersInvisible takes integer PlayerNumber returns nothing
-    local integer I0
-    local player ViewPlayer
-    set I0 = 0
-    loop
-        exitwhen(I0 == bj_MAX_PLAYERS)
-        if (I0 != PlayerNumber) then
-            set ViewPlayer = Player(I0)
-            call UnitShareVision(udg_ViewCharacter[PlayerNumber], ViewPlayer, false)
-            set ViewPlayer = null
-        endif
-        set I0 = I0 + 1
-    endloop
-endfunction
-
-function ChangeCharacterForPlayer takes integer PlayerNumber, integer Number returns nothing
-    local player SelectionPlayer = Player(PlayerNumber)
-    local integer UnitType = udg_CharacterUnitType[Number]
-    local string Animation = udg_CharacterAnimation[Number]
-    set udg_PlayerSelectedCharacter[PlayerNumber] = Number
-    if (udg_ViewCharacter[PlayerNumber] != null) then
-        call RemoveUnit(udg_ViewCharacter[PlayerNumber])
-    endif
-    set udg_ViewCharacter[PlayerNumber] = CreateUnit(SelectionPlayer, UnitType, GetLocationX(GetPlayerStartLocationLoc(SelectionPlayer)), GetLocationY(GetPlayerStartLocationLoc(SelectionPlayer)), 270.00)
-    call SetUnitPropWindow(udg_ViewCharacter[PlayerNumber], 0.0)
-    call SetUnitInvulnerable(udg_ViewCharacter[PlayerNumber], true)
-    call UnitAddAbility(udg_ViewCharacter[PlayerNumber], 'A03Y')
-    call UnitAddAbility(udg_ViewCharacter[PlayerNumber], 'A03X')
-    call UnitAddAbility(udg_ViewCharacter[PlayerNumber], 'A03Z')
-
-    // Mount abilities:
-    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A023') > 0) then
-        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A023', true, true)
-    endif
-    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A022') > 0) then
-        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A022', true, true)
-    endif
-    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A021') > 0) then
-        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A021', true, true)
-    endif
-    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A024') > 0) then
-        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A024', true, true)
-    endif
-    if (GetUnitAbilityLevel(udg_ViewCharacter[PlayerNumber], 'A01P') > 0) then
-        call BlzUnitDisableAbility(udg_ViewCharacter[PlayerNumber], 'A01P', true, true)
-    endif
-
-    call ModifyHeroSkillPoints(udg_ViewCharacter[PlayerNumber], bj_MODIFYMETHOD_SET, 0)
-    call MakeCharactersInvisible(PlayerNumber)
-    call SetUnitAnimation(udg_ViewCharacter[PlayerNumber], Animation)
-
-    set SelectionPlayer = null
-endfunction
-
-function SelectCharacterForPlayer takes integer PlayerNumber returns nothing
-    local player SelectionPlayer = Player(PlayerNumber)
-    local force PlayerForce = GetForceOfPlayer(SelectionPlayer)
-    local integer Number = udg_PlayerSelectedCharacter[PlayerNumber]
-    local integer UnitType = udg_CharacterUnitType[Number]
-    call DestroyCharacterSelectionForPlayer(PlayerNumber)
-    call ClearTextMessagesBJ(PlayerForce)
-    // Random Character
-    if (UnitType == 'H00Z') then
-        // Choose Random Unit Type except for the Random Character itself
-        set UnitType = udg_CharacterUnitType[GetRandomInt(1, udg_Characters - 1)]
-    endif
-    // Create Character
-    set udg_Hero[PlayerNumber] = CreateUnit(SelectionPlayer, UnitType, GetRectCenterX(gg_rct_Startortwahl), GetRectCenterY(gg_rct_Startortwahl), 0.0)
-    call SetHeroXP(udg_Hero[PlayerNumber], udg_CharacterStartXP[PlayerNumber], true)
-    call CreateRucksackForPlayer(PlayerNumber)
-    call SelectUnitForPlayerSingle(udg_Hero[PlayerNumber], SelectionPlayer)
-    call ResetToGameCameraForPlayer(SelectionPlayer, 0.00)
-    call PanCameraToTimedForPlayer(SelectionPlayer, GetUnitX(udg_Hero[PlayerNumber]), GetUnitY(udg_Hero[PlayerNumber]), 0.00)
-    call SetUnitInvulnerable(udg_Hero[PlayerNumber], true)
-    set SelectionPlayer = null
-    set PlayerForce = null
-endfunction
-
-function TriggerConditionPlayerIsInSelection takes nothing returns boolean
-    return udg_PlayerSelectionIsEnabled[GetPlayerId(GetTriggerPlayer())] and GetTriggerUnit() == udg_ViewCharacter[GetPlayerId(GetTriggerPlayer())]
-endfunction
-
-function TriggerActionChangeCharacterToRight takes nothing returns nothing
-    local player triggerPlayer = GetTriggerPlayer()
-    local integer ActiveNumber = (udg_PlayerSelectedCharacter[GetPlayerId(triggerPlayer)] + 1)
-    local integer MaximumCharacters = udg_Characters
-    if (ActiveNumber > MaximumCharacters) then
-        call ChangeCharacterForPlayer(GetPlayerId(triggerPlayer), 1)
-    else
-        call ChangeCharacterForPlayer(GetPlayerId(triggerPlayer), ActiveNumber)
-    endif
-    set triggerPlayer = null
-endfunction
-
-function TriggerActionChangeCharacterToLeft takes nothing returns nothing
-    local player triggerPlayer = GetTriggerPlayer()
-    local integer ActiveNumber = (udg_PlayerSelectedCharacter[GetPlayerId(triggerPlayer)] - 1)
-    local integer MaximumCharacters = udg_Characters
-    if (ActiveNumber == 0) then
-        call ChangeCharacterForPlayer(GetPlayerId(triggerPlayer), MaximumCharacters)
-    else
-        call ChangeCharacterForPlayer(GetPlayerId(triggerPlayer), ActiveNumber)
-    endif
-    set triggerPlayer = null
-endfunction
-
-function TriggerActionSelectCharacter takes nothing returns nothing
-    local player triggerPlayer = GetTriggerPlayer()
-    if (GetSpellAbilityId() == 'A03Z') then
-        call SelectCharacterForPlayer(GetPlayerId(triggerPlayer))
-    elseif (GetSpellAbilityId() == 'A03X') then
-        call TriggerActionChangeCharacterToRight()
-    elseif (GetSpellAbilityId() == 'A03Y') then
-        call TriggerActionChangeCharacterToLeft()
-    endif
-    set triggerPlayer = null
-endfunction
-
-function GetViewTimeout takes nothing returns real
-    return 0.10
-endfunction
-
-function TriggerActionSetupView takes nothing returns nothing
-    local trigger triggeringTrigger = GetTriggeringTrigger()
-    local integer PlayerNumber = LoadTriggerParameterInteger(triggeringTrigger, "PlayerNumber")
-    local player ViewPlayer = Player(PlayerNumber)
-    call CameraSetupApplyForPlayer(false, gg_cam_Klassenauswahl, ViewPlayer, GetViewTimeout())
-    call PanCameraToTimedForPlayer(ViewPlayer, GetUnitX(udg_ViewCharacter[PlayerNumber]), GetUnitY(udg_ViewCharacter[PlayerNumber]), GetViewTimeout())
-
-    // Select View Character
-    if (not IsUnitSelected(udg_ViewCharacter[PlayerNumber], ViewPlayer)) then
-        call SelectUnitForPlayerSingle(udg_ViewCharacter[PlayerNumber], ViewPlayer)
-    endif
-
-    set triggeringTrigger = null
-    set ViewPlayer = null
-endfunction
-
-function CreateCharacterSelectionForPlayer takes player SelectionPlayer returns nothing
-    local integer PlayerNumber = GetPlayerId(SelectionPlayer)
-    local force PlayerForce = GetForceOfPlayer(SelectionPlayer)
-    // Save Player Data
-    set udg_PlayerSelectionIsEnabled[PlayerNumber] = true
-    set udg_PlayerSelectedCharacter[PlayerNumber] = 0
-    // Selection Trigger Select
-    set udg_SelectionTrigger[PlayerNumber] = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(udg_SelectionTrigger[PlayerNumber], EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(udg_SelectionTrigger[PlayerNumber], Condition(function TriggerConditionPlayerIsInSelection))
-    call TriggerAddAction(udg_SelectionTrigger[PlayerNumber], function TriggerActionSelectCharacter)
-    // View Trigger
-    set udg_ViewTrigger[PlayerNumber] = CreateTrigger()
-    call TriggerRegisterTimerEvent(udg_ViewTrigger[PlayerNumber], GetViewTimeout(), true)
-    call TriggerAddAction(udg_ViewTrigger[PlayerNumber], function TriggerActionSetupView)
-    call SaveTriggerParameterInteger(udg_ViewTrigger[PlayerNumber], "PlayerNumber", PlayerNumber)
-
-    call ChangeCharacterForPlayer(PlayerNumber, 1)
-    call SetUserControlForceOn(PlayerForce)
-
-    // Display Information
-    call DisplayTimedTextToPlayer(SelectionPlayer, 0.00, 0.00, 999999.00, udg_Info1)
-    call DisplayTimedTextToPlayer(SelectionPlayer, 0.00, 0.00, 999999.00, udg_Info2)
-
-    set SelectionPlayer = null
-    set PlayerForce = null
-endfunction
-
 function GetRespawnBuildingSize takes nothing returns real
     return 1200.0
 endfunction
@@ -564,14 +381,8 @@ function RespawnAllGroups takes nothing returns nothing
 endfunction
 
 function SetupRPGSystems takes nothing returns nothing
-    set udg_UseCharacterSelection = true
     set udg_UseRucksackSystem = true
     set udg_UseRespawningSystem = true
-endfunction
-
-function SetupCustomCharacterSelection takes nothing returns nothing
-    set udg_Info1 = "Press 'V' or 'N' to change the shown hero."
-    set udg_Info2 = "Press 'C' to choose the shown hero."
 endfunction
 
 function SetupCustomRucksackSystem takes nothing returns nothing
@@ -643,12 +454,6 @@ function TriggerActionPlayerLeaves takes nothing returns nothing
     if (udg_UseRucksackSystem) then
         call DestroyRucksackSystemForPlayer(GetPlayerId(triggerPlayer))
     endif
-    if (udg_UseCharacterSelection) then
-        // Player Is In Selection
-        if (udg_PlayerSelectionIsEnabled[GetPlayerId(triggerPlayer)]) then
-            call DestroyCharacterSelectionForPlayer(GetPlayerId(triggerPlayer))
-        endif
-    endif
     set triggerPlayer = null
     set AllPlayers = null
 endfunction
@@ -658,7 +463,6 @@ function InitCustomSystems takes nothing returns nothing
     local trigger LeaveTrigger = null
     set udg_DB = InitHashtable()
     call SetupRPGSystems()
-    call SetupCustomCharacterSelection()
     call SetupCustomRucksackSystem()
     call SetupCustomRespawningSystem()
     // Movement Trigger
@@ -683,21 +487,4 @@ function InitCustomSystems takes nothing returns nothing
         set I0 = I0 + 1
     endloop
     call TriggerAddAction(LeaveTrigger, function TriggerActionPlayerLeaves)
-endfunction
-
-function ForGroupRemoveUnit takes nothing returns nothing
-    call RemoveUnit(GetEnumUnit())
-endfunction
-
-function PreloadClasses takes rect whichRect returns nothing
-    local group classesGroup = CreateGroup()
-    local integer I0 = 0
-    loop
-        exitwhen (I0 == udg_Characters)
-        call GroupAddUnit(classesGroup, CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), udg_CharacterUnitType[I0], GetRectCenterX(whichRect), GetRectCenterY(whichRect), 0.00))
-        set I0 = I0 + 1
-    endloop
-    call ForGroup(classesGroup, function ForGroupRemoveUnit)
-    call DestroyGroup(classesGroup)
-    set classesGroup = null
 endfunction
