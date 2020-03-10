@@ -516,7 +516,55 @@ function GetPlayerColorString takes player p, string text returns string
         return "|cff0F6145" + text + "|r"
     elseif c == PLAYER_COLOR_BROWN then
         return "|cff4D2903" + text + "|r"
+    elseif c == PLAYER_COLOR_MAROON then
+        return "|cff9B0000" + text + "|r"
+    elseif c == PLAYER_COLOR_NAVY then
+        return "|cff0000C3" + text + "|r"
+    elseif c == PLAYER_COLOR_TURQUOISE then
+        return "|cff00EAFF" + text + "|r"
+    elseif c == PLAYER_COLOR_VIOLET then
+        return "|cffBE00FE" + text + "|r"
+    elseif c == PLAYER_COLOR_WHEAT then
+        return "|cffEBCD87" + text + "|r"
+    elseif c == PLAYER_COLOR_PEACH then
+        return "|cffF8A48B" + text + "|r"
+    elseif c == PLAYER_COLOR_MINT then
+        return "|cffBFFF80" + text + "|r"
+    elseif c == PLAYER_COLOR_LAVENDER then
+        return "|cffDCB9EB" + text + "|r"
+    elseif c == PLAYER_COLOR_COAL then
+        return "|cff282828" + text + "|r"
+    elseif c == PLAYER_COLOR_SNOW then
+        return "|cffEBF0FF" + text + "|r"
+    elseif c == PLAYER_COLOR_EMERALD then
+        return "|cff00781E" + text + "|r"
+    elseif c == PLAYER_COLOR_PEANUT then
+        return "|cffA46F33" + text + "|r"
     else
         return "|cffFFFFFF" + text + "|r"
     endif
+endfunction
+
+function ChooseHeroSkillForPlayer takes player whichPlayer, integer level returns integer
+    local unit hero = udg_Hero[GetPlayerId(whichPlayer)]
+    local integer curHero = GetUnitTypeId(hero)
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    // Paladin
+    if (curHero == 'Hpal') then
+        if (skillUlti) then
+            return 'AHre' // resurrection
+        elseif (mod == 0) then
+            return 'AHhb'
+        elseif (mod == 1) then
+            return 'AHds'
+        elseif (mod == 2) then
+           return 'Aamk'
+        elseif (mod == 3) then
+            return 'AHad'
+        endif
+    // TODO Add all hero types!
+    endif
+    return 'Aamk'
 endfunction
