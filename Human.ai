@@ -30,15 +30,218 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 1) then
             return 'AHds'
         elseif (mod == 2) then
-           return 'Aamk'
-        elseif (mod == 3) then
             return 'AHad'
+        endif
+    // Arch mage
+    elseif (curHero == 'Hamg') then
+        if (skillUlti) then
+            return 'AHmt' // mass teleport
+        elseif (mod == 0) then
+            return 'AHbz'
+        elseif (mod == 1) then
+            return 'AHab'
+        elseif (mod == 2) then
+            return 'AHwe'
+        endif
+    // Mountain King
+    elseif (curHero == 'Hmkg') then
+        if (skillUlti) then
+            return 'AHav' // avatar
+        elseif (mod == 0) then
+            return 'AHtc'
+        elseif (mod == 1) then
+            return 'AHtb'
+        elseif (mod == 2) then
+            return 'AHbh'
+        endif
+    // Blood Mage
+    elseif (curHero == 'Hblm') then
+        if (skillUlti) then
+            return 'AHpx' // phoenix
+        elseif (mod == 0) then
+            return 'AHfs'
+        elseif (mod == 1) then
+            return 'AHbn'
+        elseif (mod == 2) then
+            return 'AHdr'
         endif
     // TODO Add all hero types!
     endif
     return 'Aamk'
 endfunction
 
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, TOWN_HALL )
+    call SetBuildUnit( 10, PEASANT )
+    call SetBuildUnit( 4, 'n00E' ) // Human Citizen (Male)
+    call SetBuildUnit( 3, HOUSE )
+    call SetBuildUnit( 3, 'h00R' ) // Human Housing
+    call SetBuildUnit( 2, BARRACKS )
+    call SetBuildUnit( 1, HUMAN_ALTAR )
+    call SetBuildUnit( 1, LUMBER_MILL )
+    call SetBuildUnit( 1, BLACKSMITH )
+    call SetBuildUnit( 1, ARCANE_VAULT )
+    call CampaignDefenderEx( 2, 2, 3, FOOTMAN )
+    call CampaignDefenderEx( 1, 1, 1, RIFLEMAN )
+    // Tier 2 buildings
+    call SetBuildUnit( 1, KEEP )
+    call SetBuildUnit( 1, BLACKSMITH )
+    call SetBuildUnit( 1, ARCANE_SANCTUM )
+    call SetBuildUnit( 4, HOUSE )
+    call SetBuildUnit( 5, PEASANT )
+    call SetBuildUnit( 4, 'n00F' ) // Human Citizen (Female)
+    call SetBuildUnit( 4, WATCH_TOWER )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, CASTLE )
+    call SetBuildUnit( 1, AVIARY )
+    call SetBuildUnit( 5, HOUSE )
+    call SetBuildUnit( 2, ARCANE_TOWER )
+    call SetBuildUnit( 2, GUARD_TOWER )
+    call SetBuildUnit( 4, 'n00E' ) // Human Citizen (Male)
+    call SetBuildUnit( 20, PEASANT )
+    call SetBuildUnit( 5, 'h00R' ) // Human Housing
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    local unit crp = null
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    set crp = GetCreepCamp( 0, 9, false ) // Stores the target unit
+    call CampaignAttackerEx( 2, 3, 3, FOOTMAN )
+    call CampaignAttackerEx( 0, 1, 2, RIFLEMAN )
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call AttackMoveKillA(crp) // Order assault group to attack that unit
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, FOOTMAN )
+    call CampaignAttackerEx( 0, 1, 2, RIFLEMAN )
+    call SuicideOnPlayerEx( M2, M3, M3, Player(0) )
+
+    //*** WAVE 2 *** Between 2 or 3 minutes after Wave 1
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 3 *** Between 2 or 3 minutes after Wave 2
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 4 *** Between 2 or 3 minutes after Wave 3
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 5 *** Between 2 or 3 minutes after Wave 4
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 6 *** Between 2 or 3 minutes after Wave 5
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 7 *** Between 2 or 3 minutes after Wave 6
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 8 *** Between 2 or 3 minutes after Wave 7
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 9 *** Between 2 or 3 minutes after Wave 8
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 2, 2, 3, GRYPHON )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    //*** WAVE 10 *** Between 2 or 3 minutes after Wave 9
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
+    call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 2, 2, 3, GRYPHON )
+    call CampaignAttackerEx( 2, 2, 3, TANK )
+    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 *** Between 2 or 3 minutes after Wave 10
+        call InitAssaultGroup()
+        call CampaignAttackerEx( 20, 30, 40, FOOTMAN )
+        call CampaignAttackerEx( 10, 20, 30, RIFLEMAN )
+        call CampaignAttackerEx( 10, 20, 30, KNIGHT )
+        call CampaignAttackerEx( 10, 20, 30, MORTAR )
+        call CampaignAttackerEx( 10, 20, 30, PRIEST )
+        call CampaignAttackerEx( 10, 20, 30, SORCERESS )
+        call CampaignAttackerEx( 10, 20, 30, SPELL_BREAKER )
+        call CampaignAttackerEx( 10, 20, 30, GRYPHON )
+        call CampaignAttackerEx( 10, 20, 30, TANK )
+        call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    endloop
+endfunction
+
 function main takes nothing returns nothing
     call CampaignAI( HOUSE, function ChooseHeroSkill )
+    call ConfigureAI( )
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
 endfunction
