@@ -544,27 +544,3 @@ function GetPlayerColorString takes player p, string text returns string
         return "|cffFFFFFF" + text + "|r"
     endif
 endfunction
-
-function ChooseHeroSkillForPlayer takes player whichPlayer, integer level returns integer
-    local unit hero = udg_Hero[GetPlayerId(whichPlayer)]
-    local integer curHero = GetUnitTypeId(hero)
-    local integer mod = ModuloInteger(level, 4)
-    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
-
-    // Paladin
-    if (curHero == 'Hpal') then
-        if (skillUlti) then
-            return 'AHre' // resurrection
-        elseif (mod == 0) then
-            return 'AHhb'
-        elseif (mod == 1) then
-            return 'AHds'
-        elseif (mod == 2) then
-           return 'Aamk'
-        elseif (mod == 3) then
-            return 'AHad'
-        endif
-    // TODO Add all hero types!
-    endif
-    return 'Aamk'
-endfunction
