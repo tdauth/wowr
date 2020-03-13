@@ -68,6 +68,7 @@ The original map script has been added to this repository as well as the origina
 
 ## Links
 
+* [Discord](https://discord.gg/eM34z36)
 * [English Map on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Old German Thread on inWarcraft.de](https://warcraft.ingame.de/forum/threads/215354-World-of-Warcraft-The-Second-Rebirth)
 * [English Blog](https://diemachtdesfeuers.wordpress.com/)
