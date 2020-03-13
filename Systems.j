@@ -166,10 +166,10 @@ function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
 endfunction
 
 function DestroyRucksackSystemForPlayer takes integer PlayerNumber returns nothing
-    call RemoveUnit(udg_Rucksack[PlayerNumber])
-    set udg_Rucksack[PlayerNumber] = null
-    call DestroyTrigger(udg_PlayerRucksackTrigger[PlayerNumber])
-    set udg_PlayerRucksackTrigger[PlayerNumber] = null
+    if (udg_Rucksack[PlayerNumber] != null) then
+        call RemoveUnit(udg_Rucksack[PlayerNumber])
+        set udg_Rucksack[PlayerNumber] = null
+    endif
     call ClearRucksackForPlayer(PlayerNumber)
 endfunction
 
@@ -260,9 +260,11 @@ function CreateRucksackForPlayer takes integer PlayerNumber returns nothing
     call SuspendHeroXPBJ(false, udg_Rucksack[PlayerNumber])
     call SetUnitInvulnerable(udg_Rucksack[PlayerNumber], true)
     // Change Ruckack Page Trigger
-    set udg_PlayerRucksackTrigger[PlayerNumber] = CreateTrigger()
-    call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTrigger[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_SPELL_CHANNEL, null)
-    call TriggerAddAction(udg_PlayerRucksackTrigger[PlayerNumber], function TriggerFunctionChangeRucksackPage)
+    if (udg_PlayerRucksackTrigger[PlayerNumber] == null) then
+        set udg_PlayerRucksackTrigger[PlayerNumber] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTrigger[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_SPELL_CHANNEL, null)
+        call TriggerAddAction(udg_PlayerRucksackTrigger[PlayerNumber], function TriggerFunctionChangeRucksackPage)
+    endif
     // Remove All
     set RucksackPlayer = null
 endfunction
