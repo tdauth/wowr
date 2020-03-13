@@ -50,6 +50,13 @@ This version provides several new features compared to the original map:
 * Freelancers gain more experience than warlords from killing hostile units.
 * Basic support for computer-controlled players.
 
+## Crashes
+
+At the moment the map seems to end after some time. We played some games for one hour and suddenly the game ended and all players saw the score screen.
+Hence, I am trying to collect replays with the game ending to reconstruct the bug.
+
+[crashes](./crashes) contains folders with map and replay files of the corresponding games.
+
 ## Bug Fixes
 
 It does also fix several bugs of the original map:
