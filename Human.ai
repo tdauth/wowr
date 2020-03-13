@@ -120,34 +120,120 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
 function AttackWaves takes nothing returns nothing
-    local unit crp = null
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    set crp = GetCreepCamp( 0, 9, false ) // Stores the target unit
     call CampaignAttackerEx( 2, 3, 3, FOOTMAN )
     call CampaignAttackerEx( 0, 1, 2, RIFLEMAN )
     call Sleep( M3 ) // Waits 3 minutes before attacking
-    call AttackMoveKillA(crp) // Order assault group to attack that unit
+    call LaunchAttack()
 
     //*** WAVE 1 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, FOOTMAN )
     call CampaignAttackerEx( 0, 1, 2, RIFLEMAN )
-    call SuicideOnPlayerEx( M2, M3, M3, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 2 *** Between 2 or 3 minutes after Wave 1
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 3 *** Between 2 or 3 minutes after Wave 2
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 4 *** Between 2 or 3 minutes after Wave 3
     call InitAssaultGroup()
@@ -155,7 +241,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 5 *** Between 2 or 3 minutes after Wave 4
     call InitAssaultGroup()
@@ -164,7 +250,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 6 *** Between 2 or 3 minutes after Wave 5
     call InitAssaultGroup()
@@ -173,7 +259,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 7 *** Between 2 or 3 minutes after Wave 6
     call InitAssaultGroup()
@@ -183,7 +269,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 8 *** Between 2 or 3 minutes after Wave 7
     call InitAssaultGroup()
@@ -194,7 +280,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 9 *** Between 2 or 3 minutes after Wave 8
     call InitAssaultGroup()
@@ -206,7 +292,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 2, 2, 3, GRYPHON )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     //*** WAVE 10 *** Between 2 or 3 minutes after Wave 9
     call InitAssaultGroup()
@@ -219,7 +305,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 2, 2, 3, GRYPHON )
     call CampaignAttackerEx( 2, 2, 3, TANK )
-    call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+    call LaunchAttack()
 
     loop //Init the infinite attack loop
         //*** WAVE 11 *** Between 2 or 3 minutes after Wave 10
@@ -233,7 +319,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 10, 20, 30, SPELL_BREAKER )
         call CampaignAttackerEx( 10, 20, 30, GRYPHON )
         call CampaignAttackerEx( 10, 20, 30, TANK )
-        call SuicideOnPlayerEx( M3, M2, M2, Player(0) )
+        call LaunchAttack()
     endloop
 endfunction
 
