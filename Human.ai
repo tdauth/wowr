@@ -21,51 +21,48 @@ function ChooseHeroSkill takes nothing returns integer
     local integer mod = ModuloInteger(level, 4)
     local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
 
-    // Paladin
-    if (curHero == 'Hpal') then
+    if (curHero == PALADIN) then
         if (skillUlti) then
-            return 'AHre' // resurrection
+            return RESURRECTION
         elseif (mod == 0) then
-            return 'AHhb'
+            return HOLY_BOLT
         elseif (mod == 1) then
-            return 'AHds'
+            return DIVINE_SHIELD
         elseif (mod == 2) then
-            return 'AHad'
+            return DEVOTION_AURA
         endif
-    // Arch mage
-    elseif (curHero == 'Hamg') then
+    elseif (curHero == ARCHMAGE) then
         if (skillUlti) then
-            return 'AHmt' // mass teleport
+            return MASS_TELEPORT
         elseif (mod == 0) then
-            return 'AHbz'
+            return BLIZZARD
         elseif (mod == 1) then
-            return 'AHab'
+            return BRILLIANCE_AURA
         elseif (mod == 2) then
-            return 'AHwe'
+            return WATER_ELEMENTAL
         endif
-    // Mountain King
-    elseif (curHero == 'Hmkg') then
+    elseif (curHero == MTN_KING) then
         if (skillUlti) then
-            return 'AHav' // avatar
+            return AVATAR
         elseif (mod == 0) then
-            return 'AHtc'
+            return THUNDER_CLAP
         elseif (mod == 1) then
-            return 'AHtb'
+            return THUNDER_BOLT
         elseif (mod == 2) then
-            return 'AHbh'
+            return BASH
         endif
-    // Blood Mage
-    elseif (curHero == 'Hblm') then
+    elseif (curHero == BLOOD_MAGE) then
         if (skillUlti) then
-            return 'AHpx' // phoenix
+            return SUMMON_PHOENIX
         elseif (mod == 0) then
-            return 'AHfs'
+            return FLAME_STRIKE
         elseif (mod == 1) then
-            return 'AHbn'
+            return BANISH
         elseif (mod == 2) then
-            return 'AHdr'
+            return SIPHON_MANA
         endif
     endif
+
     return 'Aamk'
 endfunction
 
