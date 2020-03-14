@@ -49,6 +49,10 @@ This version provides several new features compared to the original map:
 * Random hero support.
 * Freelancers gain more experience than warlords from killing hostile units.
 * Basic support for computer-controlled players.
+* Chat command '-players'.
+* The number of towers is limited for all players.
+* Hero selection has been moved to the Outland area.
+* Secret chamber at level 40 for special heroes.
 
 ## Crashes
 
