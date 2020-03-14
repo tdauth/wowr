@@ -72,6 +72,18 @@ function ChooseHeroSkill takes nothing returns integer
     return 'Aamk'
 endfunction
 
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(DEMON_HUNTER) > 0) then
+        set hero_id = DEMON_HUNTER
+    elseif (GetUnitCountDone(KEEPER) > 0) then
+        set hero_id = KEEPER
+    elseif (GetUnitCountDone(MOON_CHICK) > 0) then
+        set hero_id = MOON_CHICK
+    elseif (GetUnitCountDone(WARDEN) > 0) then
+        set hero_id = WARDEN
+    endif
+endfunction
+
 function ConfigureAI takes nothing returns nothing
     call SetTargetHeroes( true )
     call SetUnitsFlee( true )
@@ -360,6 +372,7 @@ endfunction
 function main takes nothing returns nothing
     call CampaignAI( WISP, function ChooseHeroSkill )
     call ConfigureAI( )
+    call InitHero( )
 
     call BuildingStrategy( )
 

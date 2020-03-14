@@ -72,6 +72,18 @@ function ChooseHeroSkill takes nothing returns integer
     return 'Aamk'
 endfunction
 
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(PALADIN) > 0) then
+        set hero_id = PALADIN
+    elseif (GetUnitCountDone(ARCHMAGE) > 0) then
+        set hero_id = ARCHMAGE
+    elseif (GetUnitCountDone(MTN_KING) > 0) then
+        set hero_id = MTN_KING
+    elseif (GetUnitCountDone(BLOOD_MAGE) > 0) then
+        set hero_id = BLOOD_MAGE
+    endif
+endfunction
+
 function ConfigureAI takes nothing returns nothing
     call SetTargetHeroes( true )
     call SetUnitsFlee( true )
@@ -361,6 +373,7 @@ endfunction
 function main takes nothing returns nothing
     call CampaignAI( HOUSE, function ChooseHeroSkill )
     call ConfigureAI( )
+    call InitHero( )
 
     call BuildingStrategy( )
 
