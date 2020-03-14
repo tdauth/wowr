@@ -79,6 +79,7 @@ The following files are imported into the map whenever it is updated. They conta
 
 * [Human.ai](./Human.ai)
 * [Orc.ai](./Orc.ai)
+* [NightElf.ai](./NightElf.ai)
 
 Computer players start with a town hall and five workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.

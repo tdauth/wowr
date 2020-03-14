@@ -99,6 +99,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, VOODOO_LOUNGE )
     call CampaignDefenderEx( 2, 2, 3, GRUNT )
     call CampaignDefenderEx( 1, 1, 1, HEAD_HUNTER )
+    call SetBuildUpgr( 1, UPG_ORC_BURROWS )
+    call SetBuildUpgr( 1, UPG_ORC_SPIKES )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, STRONGHOLD )
@@ -106,11 +108,11 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, LODGE )
     call SetBuildUnit( 1, BESTIARY )
     call SetBuildUnit( 4, BURROW )
-    call SetBuildUnit( 5, PEASANT )
+    call SetBuildUnit( 5, PEON )
     call SetBuildUnit( 4, ORC_CITIZEN_FEMALE )
     call SetBuildUnit( 4, ORC_WATCH_TOWER )
-    call SetBuildUpgr( 1, UPG_WOOD )
-    call SetBuildUpgr( 1, UPG_MASONRY )
+    call SetBuildUpgr( 1, UPG_ORC_BURROWS )
+    call SetBuildUpgr( 1, UPG_ORC_SPIKES )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, FORTRESS )
@@ -118,8 +120,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 5, BURROW )
     call SetBuildUnit( 4, ORC_WATCH_TOWER )
     call SetBuildUnit( 2, ORC_CITIZEN_MALE )
-    call SetBuildUnit( 10, PEASANT )
     call SetBuildUnit( 3, ORC_HOUSING )
+    call SetBuildUpgr( 1, UPG_ORC_BURROWS )
+    call SetBuildUpgr( 1, UPG_ORC_SPIKES )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
