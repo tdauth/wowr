@@ -73,6 +73,12 @@ The original map script has been added to this repository as well as the origina
 * [war3map.j](./original_map/war3map.j)
 * [war3map.wts](./translations/war3map.wts)
 
+## Computer AI
+
+[Human.ai](./Human.ai) is imported into the map whenever it is updated. It contains a very basic AI for human computer players.
+Computer players start with a town hall and five workers besides their hero.
+Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
+
 ## Links
 
 * [Discord](https://discord.gg/eM34z36)
