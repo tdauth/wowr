@@ -65,7 +65,6 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return 'AHdr'
         endif
-    // TODO Add all hero types!
     endif
     return 'Aamk'
 endfunction
@@ -77,6 +76,7 @@ function ConfigureAI takes nothing returns nothing
     call SetPeonsRepair( true )
     call SetHeroesBuyItems( true )
     call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -87,7 +87,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, TOWN_HALL )
     call SetBuildUnit( 10, PEASANT )
-    call SetBuildUnit( 4, 'n00E' ) // Human Citizen (Male)
+    call SetBuildUnit( 2, 'n00E' ) // Human Citizen (Male)
     call SetBuildUnit( 3, HOUSE )
     call SetBuildUnit( 3, 'h00R' ) // Human Housing
     call SetBuildUnit( 2, BARRACKS )
@@ -97,6 +97,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ARCANE_VAULT )
     call CampaignDefenderEx( 2, 2, 3, FOOTMAN )
     call CampaignDefenderEx( 1, 1, 1, RIFLEMAN )
+
     // Tier 2 buildings
     call SetBuildUnit( 1, KEEP )
     call SetBuildUnit( 1, BLACKSMITH )
@@ -105,6 +106,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 5, PEASANT )
     call SetBuildUnit( 4, 'n00F' ) // Human Citizen (Female)
     call SetBuildUnit( 4, WATCH_TOWER )
+    call SetBuildUpgr( 1, UPG_WOOD )
+    call SetBuildUpgr( 1, UPG_MASONRY )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, CASTLE )
@@ -112,9 +115,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 5, HOUSE )
     call SetBuildUnit( 2, ARCANE_TOWER )
     call SetBuildUnit( 2, GUARD_TOWER )
-    call SetBuildUnit( 4, 'n00E' ) // Human Citizen (Male)
-    call SetBuildUnit( 20, PEASANT )
-    call SetBuildUnit( 5, 'h00R' ) // Human Housing
+    call SetBuildUnit( 2, 'n00E' ) // Human Citizen (Male)
+    call SetBuildUnit( 10, PEASANT )
+    call SetBuildUnit( 3, 'h00R' ) // Human Housing
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -216,52 +219,77 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
+    call SetBuildUpgrEx( 1, 2, 3, UPG_MELEE )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_RANGED )
+    call SetBuildUpgr( 1, UPG_DEFEND )
+
     //*** WAVE 1 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, FOOTMAN )
     call CampaignAttackerEx( 0, 1, 2, RIFLEMAN )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 2 *** Between 2 or 3 minutes after Wave 1
+    call SetBuildUpgr( 1, UPG_GUN_RANGE )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_LEATHER )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_ARMOR )
+
+    //*** WAVE 2 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
+    call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
-    //*** WAVE 3 *** Between 2 or 3 minutes after Wave 2
+    //*** WAVE 3 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 4 *** Between 2 or 3 minutes after Wave 3
+    call SetBuildUpgr( 1, UPG_BREEDING )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_MELEE )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_RANGED )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_LEATHER )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_ARMOR )
+
+    //*** WAVE 4 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 5 *** Between 2 or 3 minutes after Wave 4
+    call SetBuildUpgrEx( 1, 2, 3, UPG_MELEE )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_RANGED )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_LEATHER )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_LEATHER )
+
+    //*** WAVE 5 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 6 *** Between 2 or 3 minutes after Wave 5
+    //*** WAVE 6 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, KNIGHT )
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 7 *** Between 2 or 3 minutes after Wave 6
+    //*** WAVE 7 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
@@ -269,9 +297,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 8 *** Between 2 or 3 minutes after Wave 7
+    //*** WAVE 8 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
@@ -280,9 +309,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 9 *** Between 2 or 3 minutes after Wave 8
+    //*** WAVE 9 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
@@ -292,9 +322,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 2, 2, 3, GRYPHON )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    //*** WAVE 10 *** Between 2 or 3 minutes after Wave 9
+    //*** WAVE 10 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FOOTMAN )
     call CampaignAttackerEx( 1, 2, 3, RIFLEMAN )
@@ -305,10 +336,11 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 2, 2, 3, GRYPHON )
     call CampaignAttackerEx( 2, 2, 3, TANK )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     loop //Init the infinite attack loop
-        //*** WAVE 11 *** Between 2 or 3 minutes after Wave 10
+        //*** WAVE 11 ***
         call InitAssaultGroup()
         call CampaignAttackerEx( 20, 30, 40, FOOTMAN )
         call CampaignAttackerEx( 10, 20, 30, RIFLEMAN )
@@ -319,6 +351,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 10, 20, 30, SPELL_BREAKER )
         call CampaignAttackerEx( 10, 20, 30, GRYPHON )
         call CampaignAttackerEx( 10, 20, 30, TANK )
+        call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
 endfunction
