@@ -75,7 +75,11 @@ The original map script has been added to this repository as well as the origina
 
 ## Computer AI
 
-[Human.ai](./Human.ai) is imported into the map whenever it is updated. It contains a very basic AI for human computer players.
+The following files are imported into the map whenever it is updated. They contain a very basic AI for computer players:
+
+* [Human.ai](./Human.ai)
+* [Orc.ai](./Orc.ai)
+
 Computer players start with a town hall and five workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
 
