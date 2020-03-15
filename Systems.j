@@ -429,13 +429,16 @@ function TriggerActionRespawnMonster takes nothing returns nothing
     local integer Group = GetRespawnGroupOfUnit(triggerUnit)
     local real RandomNumber = 0.0
     local location ItemSpawnLocation = null
+    local item whichItem = null
     if (Group  != -1) then
         call GroupRemoveUnit(udg_RespawnGroup[Group], triggerUnit)
+        call AddUnitToAllStock(GetUnitTypeId(triggerUnit), 0, 1)
         if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group]) == true) then
             set RandomNumber = GetRandomReal(0.00, 100.00)
             if (RandomNumber <= udg_RespawnItemChance) then
                 set ItemSpawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-                call CreateItem(udg_RespawnItemType[Group], GetLocationX(ItemSpawnLocation), GetLocationY(ItemSpawnLocation))
+                set whichItem = CreateItem(udg_RespawnItemType[Group], GetLocationX(ItemSpawnLocation), GetLocationY(ItemSpawnLocation))
+                call AddItemToAllStock(GetItemTypeId(whichItem), 0, 1)
                 call RemoveLocation(ItemSpawnLocation)
                 set ItemSpawnLocation = null
             endif
