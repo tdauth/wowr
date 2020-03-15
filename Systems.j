@@ -402,10 +402,6 @@ function SetupCustomRespawningSystem takes nothing returns nothing
     set udg_RespawnItemChance = 50.00
 endfunction
 
-function GetPlayerLeavesMessage takes nothing returns string
-    return "has left the game."
-endfunction
-
 function TriggerActionMoveRucksack takes nothing returns nothing
     local integer I0 = 0
     local player RucksackOwner = GetTriggerPlayer()
@@ -449,20 +445,8 @@ function TriggerActionRespawnMonster takes nothing returns nothing
     set triggerUnit = null
 endfunction
 
-function TriggerActionPlayerLeaves takes nothing returns nothing
-    local player triggerPlayer = GetTriggerPlayer()
-    local force AllPlayers = GetPlayersAll()
-    call DisplayTimedTextToForce(AllPlayers, 4.00, (GetPlayerName(triggerPlayer) + " " + GetPlayerLeavesMessage()))
-    if (udg_UseRucksackSystem) then
-        call DestroyRucksackSystemForPlayer(GetPlayerId(triggerPlayer))
-    endif
-    set triggerPlayer = null
-    set AllPlayers = null
-endfunction
-
 function InitCustomSystems takes nothing returns nothing
     local integer I0 = 0
-    local trigger LeaveTrigger = null
     set udg_DB = InitHashtable()
     call SetupRPGSystems()
     call SetupCustomRucksackSystem()
@@ -479,16 +463,6 @@ function InitCustomSystems takes nothing returns nothing
         call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
         call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
     endif
-    // Leave Trigger
-    set LeaveTrigger = CreateTrigger()
-    loop
-        exitwhen(I0 == bj_MAX_PLAYERS)
-        if (PlayerIsOnlineUser(I0)) then
-            call TriggerRegisterPlayerEvent(LeaveTrigger, Player(I0), EVENT_PLAYER_LEAVE)
-        endif
-        set I0 = I0 + 1
-    endloop
-    call TriggerAddAction(LeaveTrigger, function TriggerActionPlayerLeaves)
 endfunction
 
 function GetPlayerColorString takes player p, string text returns string
