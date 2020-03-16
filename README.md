@@ -53,6 +53,12 @@ This version provides several new features compared to the original map:
 * The number of towers is limited for all players.
 * Hero selection has been moved to the Outland area.
 * Secret chamber at level 40 for special heroes.
+* Chat command '-ping'.
+* Acolytes can build goldmines on Undead housings.
+* Spell books for crafting have no cooldown after crafting items.
+* Citizens can build harbours.
+* Ships and Zeppelins cost food to keep their number limited.
+* Theramore contains a market with killed creeps and dropped items.
 
 ## Crashes
 
@@ -68,6 +74,7 @@ It does also fix several bugs of the original map:
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
 * Summoned units won't respawn again like regular creeps.
+* Undead housings can be used as Undead goldmines.
 
 ## Reconstruction
 
