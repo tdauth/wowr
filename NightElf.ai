@@ -229,6 +229,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, ARCHER )
     call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -240,6 +241,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, ARCHER )
     call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -251,6 +253,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, ARCHER )
     call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -261,6 +264,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, ARCHER )
     call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -275,6 +279,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -289,6 +294,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -299,6 +305,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -310,6 +317,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -322,6 +330,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -335,6 +344,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -349,6 +359,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
     call CampaignAttackerEx( 2, 2, 3, CHIMAERA )
+    call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -364,6 +375,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 10, 20, 30, HIPPO )
         call CampaignAttackerEx( 10, 20, 30, MOUNTAIN_GIANT )
         call CampaignAttackerEx( 10, 20, 30, CHIMAERA )
+        call CampaignAttackerEx( 1, 1, 1, hero_id )
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
