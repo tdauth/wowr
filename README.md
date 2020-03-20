@@ -86,14 +86,24 @@ The original map script has been added to this repository as well as the origina
 
 ## Computer AI
 
-The following files are imported into the map whenever it is updated. They contain a very basic AI for computer players:
+The map uses Warcraft's AI for computer players.
+
+### Warlords
+
+The following files are imported into the map whenever they are updated. They contain a very basic warlord AI for computer players:
 
 * [Human.ai](./Human.ai)
 * [Orc.ai](./Orc.ai)
 * [NightElf.ai](./NightElf.ai)
 
-Computer players start with a town hall and five workers besides their hero.
+Warlord computer players start with a town hall and five workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
+
+### Freelancers
+
+The following files are imported into the map whenever they are updated. They contain a very basic freelancer AI for computer players:
+
+* [HumanFreelancer.ai](./HumanFreelancer.ai)
 
 ## Replays
 
