@@ -1,0 +1,196 @@
+//===========================================================================
+// Calculate the modulus/remainder of (dividend) divided by (divisor).
+// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
+//
+function ModuloInteger takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+
+    // If the dividend was negative, the above modulus calculation will
+    // be negative, but within (-divisor..0).  We can add (divisor) to
+    // shift this result into the desired range of (0..divisor).
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function ChooseHeroSkill takes nothing returns integer
+    local integer curHero = GetHeroId()
+    local integer level = GetHeroLevelAI()
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    if (curHero == BLADE_MASTER) then
+        if (skillUlti) then
+            return BLADE_STORM
+        elseif (mod == 0) then
+            return CRITICAL_STRIKE
+        elseif (mod == 1) then
+            return MIRROR_IMAGE
+        elseif (mod == 2) then
+            return WIND_WALK
+        endif
+    elseif (curHero == FAR_SEER) then
+        if (skillUlti) then
+            return EARTHQUAKE
+        elseif (mod == 0) then
+            return CHAIN_LIGHTNING
+        elseif (mod == 1) then
+            return FAR_SIGHT
+        elseif (mod == 2) then
+            return SPIRIT_WOLF
+        endif
+    elseif (curHero == TAUREN_CHIEF) then
+        if (skillUlti) then
+            return REINCARNATION
+        elseif (mod == 0) then
+            return ENDURANE_AURA
+        elseif (mod == 1) then
+            return SHOCKWAVE
+        elseif (mod == 2) then
+            return WAR_STOMP
+        endif
+    elseif (curHero == SHADOW_HUNTER) then
+        if (skillUlti) then
+            return VOODOO
+        elseif (mod == 0) then
+            return HEALING_WAVE
+        elseif (mod == 1) then
+            return HEX
+        elseif (mod == 2) then
+            return SERPENT_WARD
+        endif
+    endif
+
+    return 'Aamk'
+endfunction
+
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(BLADE_MASTER) > 0) then
+        set hero_id = BLADE_MASTER
+    elseif (GetUnitCountDone(FAR_SEER) > 0) then
+        set hero_id = FAR_SEER
+    elseif (GetUnitCountDone(TAUREN_CHIEF) > 0) then
+        set hero_id = TAUREN_CHIEF
+    elseif (GetUnitCountDone(SHADOW_HUNTER) > 0) then
+        set hero_id = SHADOW_HUNTER
+    endif
+endfunction
+
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
+endfunction
+
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    loop
+        call InitAssaultGroup()
+        call CampaignAttackerEx( 1, 1, 1, hero_id )
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( 0, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction

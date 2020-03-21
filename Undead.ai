@@ -1,7 +1,7 @@
 globals
-    constant integer ELF_CITIZEN_MALE       = 'n00O'
-    constant integer ELF_CITIZEN_FEMALE     = 'n00P'
-    constant integer ELF_HOUSING            = 'h00S'
+    constant integer UNDEAD_CITIZEN_MALE       = 'n00G'
+    constant integer UNDEAD_CITIZEN_FEMALE     = 'n00H'
+    constant integer UNDEAD_HOUSING            = 'h00U'
 endglobals
 
 //===========================================================================
@@ -27,45 +27,45 @@ function ChooseHeroSkill takes nothing returns integer
     local integer mod = ModuloInteger(level, 4)
     local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
 
-    if (curHero == DEMON_HUNTER) then
+    if (curHero == DEATH_KNIGHT) then
         if (skillUlti) then
-            return METAMORPHOSIS
+            return ANIM_DEAD
         elseif (mod == 0) then
-            return EVASION
+            return DEATH_COIL
         elseif (mod == 1) then
-            return MANA_BURN
+            return DEATH_PACT
         elseif (mod == 2) then
-            return IMMOLATION
+            return UNHOLY_AURA
         endif
-    elseif (curHero == KEEPER) then
+    elseif (curHero == DREAD_LORD) then
         if (skillUlti) then
-            return TRANQUILITY
+            return INFERNO
         elseif (mod == 0) then
-            return THORNS_AURA
+            return SLEEP
         elseif (mod == 1) then
-            return FORCE_NATURE
+            return VAMP_AURA
         elseif (mod == 2) then
-            return ENT_ROOTS
+            return CARRION_SWARM
         endif
-    elseif (curHero == MOON_CHICK) then
+    elseif (curHero == LICH) then
         if (skillUlti) then
-            return STARFALL
+            return DEATH_DECAY
         elseif (mod == 0) then
-            return SCOUT
+            return DARK_RITUAL
         elseif (mod == 1) then
-            return TRUESHOT
+            return FROST_ARMOR
         elseif (mod == 2) then
-            return SEARING_ARROWS
+            return FROST_NOVA
         endif
-    elseif (curHero == WARDEN) then
+    elseif (curHero == CRYPT_LORD) then
         if (skillUlti) then
-            return VENGEANCE
+            return LOCUST_SWARM
         elseif (mod == 0) then
-            return SHADOW_TOUCH
+            return CARRION_SCARAB
         elseif (mod == 1) then
-            return FAN_KNIVES
+            return IMPALE
         elseif (mod == 2) then
-            return BLINK
+            return THORNY_SHIELD
         endif
     endif
 
@@ -73,14 +73,14 @@ function ChooseHeroSkill takes nothing returns integer
 endfunction
 
 function InitHero takes nothing returns nothing
-    if (GetUnitCountDone(DEMON_HUNTER) > 0) then
-        set hero_id = DEMON_HUNTER
-    elseif (GetUnitCountDone(KEEPER) > 0) then
-        set hero_id = KEEPER
-    elseif (GetUnitCountDone(MOON_CHICK) > 0) then
-        set hero_id = MOON_CHICK
-    elseif (GetUnitCountDone(WARDEN) > 0) then
-        set hero_id = WARDEN
+    if (GetUnitCountDone(DEATH_KNIGHT) > 0) then
+        set hero_id = DEATH_KNIGHT
+    elseif (GetUnitCountDone(DREAD_LORD) > 0) then
+        set hero_id = DREAD_LORD
+    elseif (GetUnitCountDone(LICH) > 0) then
+        set hero_id = LICH
+    elseif (GetUnitCountDone(CRYPT_LORD) > 0) then
+        set hero_id = CRYPT_LORD
     endif
 endfunction
 
@@ -100,42 +100,40 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, TREE_LIFE )
-    call SetBuildUnit( 1, ELF_MINE )
-    call SetBuildUnit( 10, WISP )
-    call SetBuildUnit( 2, ELF_CITIZEN_MALE )
-    call SetBuildUnit( 3, MOON_WELL )
-    call SetBuildUnit( 3, ELF_HOUSING )
-    call SetBuildUnit( 3, TREE_LIFE )
-    call SetBuildUnit( 3, ELF_MINE )
-    call SetBuildUnit( 2, ANCIENT_WAR )
-    call SetBuildUnit( 1, ELF_ALTAR )
-    call SetBuildUnit( 1, HUNTERS_HALL )
-    call SetBuildUnit( 1, DEN_OF_WONDERS )
-    call CampaignDefenderEx( 2, 2, 3, ARCHER )
-    call CampaignDefenderEx( 1, 1, 1, HUNTRESS )
+    call SetBuildUnit( 1, NECROPOLIS_1 )
+    call SetBuildUnit( 1, UNDEAD_MINE )
+    call SetBuildUnit( 6, ACOLYTE )
+    call SetBuildUnit( 5, GHOUL )
+    call SetBuildUnit( 2, UNDEAD_CITIZEN_MALE )
+    call SetBuildUnit( 3, ZIGGURAT_1 )
+    call SetBuildUnit( 3, UNDEAD_HOUSING )
+    call SetBuildUnit( 3, UNDEAD_MINE )
+    call SetBuildUnit( 2, CRYPT )
+    call SetBuildUnit( 1, UNDEAD_ALTAR )
+    call SetBuildUnit( 1, GRAVEYARD )
+    call SetBuildUnit( 1, TOMB_OF_RELICS )
+    call CampaignDefenderEx( 2, 2, 3, GHOUL )
+    call CampaignDefenderEx( 1, 1, 1, PIT_FIEND )
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, TREE_AGES )
-    call SetBuildUnit( 1, HUNTERS_HALL )
-    call SetBuildUnit( 1, ANCIENT_WIND )
-    call SetBuildUnit( 1, ANCIENT_LORE )
-    call SetBuildUnit( 4, MOON_WELL )
-    call SetBuildUnit( 5, WISP )
-    call SetBuildUnit( 4, ELF_CITIZEN_FEMALE )
-    call SetBuildUnit( 4, ANCIENT_PROTECT )
-    call SetBuildUpgr( 1, UPG_STR_WILD )
-    call SetBuildUpgr( 1, UPG_ULTRAVISION )
+    call SetBuildUnit( 1, NECROPOLIS_2 )
+    call SetBuildUnit( 1, GRAVEYARD )
+    call SetBuildUnit( 1, DAMNED_TEMPLE )
+    call SetBuildUnit( 1, SLAUGHTERHOUSE )
+    call SetBuildUnit( 4, ZIGGURAT_1 )
+    call SetBuildUnit( 5, ACOLYTE )
+    call SetBuildUnit( 4, UNDEAD_CITIZEN_FEMALE )
+    call SetBuildUnit( 4, ZIGGURAT_2 )
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, TREE_ETERNITY )
-    call SetBuildUnit( 1, TOTEM )
-    call SetBuildUnit( 5, MOON_WELL )
-    call SetBuildUnit( 4, ANCIENT_PROTECT )
-    call SetBuildUnit( 2, ELF_CITIZEN_MALE )
-    call SetBuildUnit( 3, ELF_HOUSING )
-    call SetBuildUnit( 3, TREE_LIFE )
-    call SetBuildUnit( 3, ELF_MINE )
+    call SetBuildUnit( 1, NECROPOLIS_3 )
+    call SetBuildUnit( 1, SAC_PIT )
+    call SetBuildUnit( 2, BONEYARD )
+    call SetBuildUnit( 5, ZIGGURAT_1 )
+    call SetBuildUnit( 4, ZIGGURAT_2 )
+    call SetBuildUnit( 2, UNDEAD_CITIZEN_MALE )
+    call SetBuildUnit( 3, UNDEAD_HOUSING )
+    call SetBuildUnit( 3, UNDEAD_MINE )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -232,138 +230,138 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
+    call CampaignAttackerEx( 2, 3, 3, GHOUL )
+    call CampaignAttackerEx( 0, 1, 2, PIT_FIEND )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgr( 1, UPG_GLAIVE )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_STR )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ATTACK )
+    call SetBuildUpgr( 1, UPG_CANNIBALIZE )
 
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
+    call CampaignAttackerEx( 2, 3, 3, GHOUL )
+    call CampaignAttackerEx( 0, 1, 2, PIT_FIEND )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_MARKSMAN )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_HIDES )
+    call SetBuildUpgr( 1, UPG_FIEND_WEB )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ARMOR )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_ARMOR )
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
+    call SetBuildUpgr( 1, UPG_STONE_FORM )
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_MARK_CLAW )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_WILD )
+    call SetBuildUpgr( 1, UPG_EXHUME )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_STR )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ATTACK )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ARMOR )
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_WILD )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_STR )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ATTACK )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ARMOR )
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
+    call CampaignAttackerEx( 2, 2, 3, NECRO )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, HIPPO )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
+    call CampaignAttackerEx( 2, 2, 3, NECRO )
+    call CampaignAttackerEx( 2, 2, 3, BANSHEE )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, HIPPO )
-    call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
+    call CampaignAttackerEx( 2, 2, 3, NECRO )
+    call CampaignAttackerEx( 2, 2, 3, BANSHEE )
+    call CampaignAttackerEx( 2, 2, 3, GARGOYLE )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, HIPPO )
-    call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
-    call CampaignAttackerEx( 2, 2, 3, CHIMAERA )
+    call CampaignAttackerEx( 3, 4, 4, GHOUL )
+    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
+    call CampaignAttackerEx( 2, 2, 3, NECRO )
+    call CampaignAttackerEx( 2, 2, 3, BANSHEE )
+    call CampaignAttackerEx( 2, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 2, 2, 3, FROST_WYRM )
     call CampaignAttackerEx( 1, 1, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -371,15 +369,15 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 20, 30, 40, ARCHER )
-        call CampaignAttackerEx( 10, 20, 30, HUNTRESS )
-        call CampaignAttackerEx( 10, 20, 30, DRYAD )
-        call CampaignAttackerEx( 10, 20, 30, BALLISTA )
-        call CampaignAttackerEx( 10, 20, 30, DRUID_TALON )
-        call CampaignAttackerEx( 10, 20, 30, DRUID_CLAW )
-        call CampaignAttackerEx( 10, 20, 30, HIPPO )
-        call CampaignAttackerEx( 10, 20, 30, MOUNTAIN_GIANT )
-        call CampaignAttackerEx( 10, 20, 30, CHIMAERA )
+        call CampaignAttackerEx( 20, 30, 40, GHOUL )
+        call CampaignAttackerEx( 10, 20, 30, PIT_FIEND )
+        call CampaignAttackerEx( 10, 20, 30, GARGOYLE )
+        call CampaignAttackerEx( 10, 20, 30, MEAT_WAGON )
+        call CampaignAttackerEx( 10, 20, 30, OBSIDIAN_STATUE )
+        call CampaignAttackerEx( 10, 20, 30, NECRO )
+        call CampaignAttackerEx( 10, 20, 30, BANSHEE )
+        call CampaignAttackerEx( 10, 20, 30, GARGOYLE )
+        call CampaignAttackerEx( 10, 20, 30, FROST_WYRM )
         call CampaignAttackerEx( 1, 1, 1, hero_id )
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
@@ -387,7 +385,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( WISP, function ChooseHeroSkill )
+    call CampaignAI( ZIGGURAT_1, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
 
