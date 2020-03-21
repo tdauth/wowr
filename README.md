@@ -10,15 +10,13 @@ Alliances can be forged between players and quests can be solved which are rewar
 Usually, the map has a very long play time since players build their bases and defeat the bosses after some time.
 The map can only be won by killing the final boss.
 
-## Normal Version of the Map
+## Play the Map
 
-* [Version 1.4](./wowtsr.w3x) which works with patch 1.29.
+* [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
+* [Current development version](./wowtsr.w3x)
+* [Discord](https://discord.gg/eM34z36)
 
-## Optimized older Versions of the Map
-
-* [Version 1.3](./releases/wowtsr1.3.w3x) which works with patch 1.28.
-* [Version 1.2](./releases/wowtsr1.2.w3x)
-* [Version 1.1](./releases/wowtsr1.1.w3x)
+*Restriction to classic graphics:* The current version is restricted to SD graphics to avoid desyncs which occur more often with HD graphics and to improve the performance of games.
 
 ## New Features (Version 1.4)
 
@@ -60,13 +58,6 @@ This version provides several new features compared to the original map:
 * Ships and Zeppelins cost food to keep their number limited.
 * Theramore contains a market with killed creeps and dropped items.
 
-## Crashes
-
-At the moment the map seems to end after some time. We played some games for one hour and suddenly the game ended and all players saw the score screen.
-Hence, I am trying to collect replays with the game ending to reconstruct the bug.
-
-[crashes](./crashes) contains folders with map and replay files of the corresponding games.
-
 ## Bug Fixes
 
 It does also fix several bugs of the original map:
@@ -75,14 +66,6 @@ It does also fix several bugs of the original map:
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
 * Summoned units won't respawn again like regular creeps.
 * Undead housings can be used as Undead goldmines.
-
-## Reconstruction
-
-The original map had no trigger data, so all triggers had to be recreated based on the original map script.
-The original map script has been added to this repository as well as the original map strings:
-
-* [war3map.j](./original_map/war3map.j)
-* [war3map.wts](./translations/war3map.wts)
 
 ## Computer AI
 
@@ -109,9 +92,17 @@ The following files are imported into the map whenever they are updated. They co
 
 Some interesting replays are stored in [replays](./replays).
 
-## Links
+## Crashes
 
-* [Discord](https://discord.gg/eM34z36)
-* [English Map on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
-* [Old German Thread on inWarcraft.de](https://warcraft.ingame.de/forum/threads/215354-World-of-Warcraft-The-Second-Rebirth)
-* [English Blog](https://diemachtdesfeuers.wordpress.com/)
+At the moment the map seems to end after some time. We played some games for one hour and suddenly the game ended and all players saw the score screen.
+Hence, I am trying to collect replays with the game ending to reconstruct the bug.
+
+[crashes](./crashes) contains folders with map and replay files of the corresponding games.
+
+## Reconstruction
+
+The original map had no trigger data, so all triggers had to be recreated based on the original map script.
+The original map script has been added to this repository as well as the original map strings:
+
+* [war3map.j](./original_map/war3map.j)
+* [war3map.wts](./translations/war3map.wts)
