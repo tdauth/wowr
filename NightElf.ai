@@ -387,7 +387,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( WISP, function ChooseHeroSkill )
+    call CampaignAI( MOON_WELL, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
 

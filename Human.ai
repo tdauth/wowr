@@ -101,7 +101,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, TOWN_HALL )
-    call SetBuildUnit( 10, PEASANT )
+    call SetBuildUnit( 15, PEASANT )
     call SetBuildUnit( 2, HUMAN_CITIZEN_MALE )
     call SetBuildUnit( 3, HOUSE )
     call SetBuildUnit( 3, HUMAN_HOUSING )
@@ -117,6 +117,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, KEEP )
     call SetBuildUnit( 1, BLACKSMITH )
     call SetBuildUnit( 1, ARCANE_SANCTUM )
+    call SetBuildUnit( 1, WORKSHOP )
     call SetBuildUnit( 4, HOUSE )
     call SetBuildUnit( 5, PEASANT )
     call SetBuildUnit( 4, HUMAN_CITIZEN_FEMALE )
@@ -128,6 +129,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, CASTLE )
     call SetBuildUnit( 1, AVIARY )
     call SetBuildUnit( 5, HOUSE )
+    call SetBuildUnit( 15, PEASANT )
     call SetBuildUnit( 2, ARCANE_TOWER )
     call SetBuildUnit( 2, GUARD_TOWER )
     call SetBuildUnit( 2, HUMAN_CITIZEN_MALE )
@@ -286,7 +288,7 @@ function AttackWaves takes nothing returns nothing
     call SetBuildUpgrEx( 1, 2, 3, UPG_MELEE )
     call SetBuildUpgrEx( 1, 2, 3, UPG_RANGED )
     call SetBuildUpgrEx( 1, 2, 3, UPG_LEATHER )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_LEATHER )
+    call SetBuildUpgrEx( 1, 2, 3, UPG_ARMOR )
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
