@@ -180,7 +180,7 @@ function AttackWaves takes nothing returns nothing
     loop
         call InitAssaultGroup()
         call CampaignAttackerEx( 1, 1, 1, hero_id )
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep( 10 ) // Waits 10 seconds before attacking
         call LaunchAttack()
     endloop
 endfunction
@@ -189,8 +189,6 @@ function main takes nothing returns nothing
     call CampaignAI( 0, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-
-    call BuildingStrategy( )
 
     call AttackWaves( )
 endfunction
