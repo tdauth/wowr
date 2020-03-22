@@ -18,7 +18,7 @@ The map can only be won by killing the final boss.
 
 *Restriction to classic graphics:* The current version is restricted to SD graphics to avoid desyncs which occur more often with HD graphics and to improve the performance of games.
 
-## New Features (Version 1.4)
+## New Features
 
 This version provides several new features compared to the original map:
 
@@ -75,9 +75,10 @@ The map uses Warcraft's AI for computer players.
 
 The following files are imported into the map whenever they are updated. They contain a very basic warlord AI for computer players:
 
-* [Human.ai](./Human.ai)
-* [Orc.ai](./Orc.ai)
-* [NightElf.ai](./NightElf.ai)
+* [Human.ai](./ai/Human.ai)
+* [Orc.ai](./ai/Orc.ai)
+* [Undead.ai](./ai/Undead.ai)
+* [NightElf.ai](./ai/NightElf.ai)
 
 Warlord computer players start with a town hall and five workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
@@ -86,7 +87,10 @@ Whenever they lose all workers and town halls, they will get a new town hall aut
 
 The following files are imported into the map whenever they are updated. They contain a very basic freelancer AI for computer players:
 
-* [HumanFreelancer.ai](./HumanFreelancer.ai)
+* [HumanFreelancer.ai](./ai/HumanFreelancer.ai)
+* [OrcFreelancer.ai](./ai/OrcFreelancer.ai)
+* [UndeadFreelancer.ai](./ai/UndeadFreelancer.ai)
+* [NightElfFreelancer.ai](./ai/NightElfFreelancer.ai)
 
 ## Replays
 
