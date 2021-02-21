@@ -1,6 +1,6 @@
 # World of Warcraft The Second Rebirth
 
-Warcraft III: The Frozen Throne map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
+Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
 It is an open world RPG map in which each player chooses a hero in the beginning and can play either as warlord or as freelancer.
 Warlords can build a base, collect resources and reward freelancers for their work.
@@ -12,9 +12,9 @@ The map can only be won by killing the final boss.
 
 ## Play the Map
 
+* [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Current development version](./wowtsr.w3x)
-* [Discord](https://discord.gg/eM34z36)
 
 *Restriction to classic graphics:* The current version is restricted to SD graphics to avoid desyncs which occur more often with HD graphics and to improve the performance of games.
 

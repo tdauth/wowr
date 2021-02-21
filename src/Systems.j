@@ -303,45 +303,10 @@ function AssignUnitToGroup takes unit whichUnit, integer Group returns nothing
     call SaveUnitParameterInteger(whichUnit, 0, Group)
 endfunction
 
-// TODO Returns twice the same unit when it has the same unit type
-function GetLastMemberOfGroup takes group whichGroup returns unit
-    local group tmpGroup = CreateGroup()
-    local unit tmpLast = null
-    local unit last = null
-    call GroupAddGroup(whichGroup, tmpGroup)
-    loop
-        set tmpLast = FirstOfGroup(tmpGroup)
-        exitwhen (tmpLast == null)
-        set last = tmpLast
-        call GroupRemoveUnit(tmpGroup, last)
-    endloop
-    call DestroyGroup(tmpGroup)
-    set tmpGroup = null
-    set tmpLast = null
-    return last
-endfunction
-
-function GetLastIndexOfGroup takes group whichGroup returns integer
-    local group tmpGroup = CreateGroup()
-    local unit tmpLast = null
-    local integer last = -1
-    call GroupAddGroup(whichGroup, tmpGroup)
-    loop
-        set tmpLast = FirstOfGroup(tmpGroup)
-        exitwhen (tmpLast == null)
-        call GroupRemoveUnit(tmpGroup, tmpLast)
-        set last = last + 1
-    endloop
-    call DestroyGroup(tmpGroup)
-    set tmpGroup = null
-    set tmpLast = null
-    return last
-endfunction
-
 function AssignUnitToCurrentGroup takes nothing returns nothing
-    local integer lastIndex = GetLastIndexOfGroup(udg_RespawnGroup[udg_TmpGroupIndex])
+    local integer lastIndex = CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex]) - 1
     local integer memberIndex = Index2D(udg_TmpGroupIndex, lastIndex, udg_RespawnGroupMaxMembers)
-    local unit lastMember = GetLastMemberOfGroup(udg_RespawnGroup[udg_TmpGroupIndex])
+    local unit lastMember = udg_LastAddedUnitToGroup
     debug call BJDebugMsg("Assign to unit " + GetUnitName(lastMember) + " with handle ID " + I2S(GetHandleId(lastMember)) + " with index " + I2S(lastIndex) + " the current group " + I2S(udg_TmpGroupIndex) + " the unit group has a size of " + I2S(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])))
     set udg_RespawnUnitType[memberIndex] = GetUnitTypeId(lastMember)
     set udg_RespawnLocationPerUnit[memberIndex] = GetUnitLoc(lastMember)
@@ -564,3 +529,9 @@ function GetPlayerColorString takes player p, string text returns string
         return "|cffFFFFFF" + text + "|r"
     endif
 endfunction
+
+function HookAddUnitToGroup takes unit whichUnit, group whichGroup returns nothing
+    set udg_LastAddedUnitToGroup = whichUnit
+endfunction
+
+hook GroupAddUnitSimple HookAddUnitToGroup
