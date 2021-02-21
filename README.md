@@ -12,7 +12,7 @@ The map can only be won by killing the final boss.
 
 ## Play the Map
 
-* [Discord Server](https://discord.gg/eM34z36)
+* [Discord Server](https://discord.gg/Y4Pj8GR)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Current development version](./wowtsr.w3x)
 
