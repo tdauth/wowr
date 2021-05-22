@@ -14,7 +14,7 @@ The map can only be won by killing the final boss.
 
 * [Discord Server](https://discord.gg/Y4Pj8GR)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
-* [Current development version](./wowtsr.w3x)
+* [Current development version](./wowtsr1.5.w3x)
 
 *Restriction to classic graphics:* The current version is restricted to SD graphics to avoid desyncs which occur more often with HD graphics and to improve the performance of games.
 
@@ -57,6 +57,7 @@ This version provides several new features compared to the original map:
 * Citizens can build harbours.
 * Ships and Zeppelins cost food to keep their number limited.
 * Theramore contains a market with killed creeps and dropped items.
+* Bonus heroes can be chosen at level 40.
 
 ## Bug Fixes
 
@@ -110,3 +111,12 @@ The original map script has been added to this repository as well as the origina
 
 * [war3map.j](./original_map/war3map.j)
 * [war3map.wts](./translations/war3map.wts)
+
+## Old Versions
+
+**Note:** Some of these versions might have been optimized:
+
+* [wowtsr1.4.w3x](./releases/wowtsr1.4.w3x)
+* [wowtsr1.3.w3x](./releases/wowtsr1.3.w3x)
+* [wowtsr1.2.w3x](./releases/wowtsr1.2.w3x)
+* [wowtsr1.1.w3x](./releases/wowtsr1.1.w3x)
