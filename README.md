@@ -61,7 +61,7 @@ This version provides several new features compared to the original map:
 
 ## Bug Fixes
 
-It does also fix several bugs of the original map:
+This version contains fixes of several bugs from the original map:
 
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
