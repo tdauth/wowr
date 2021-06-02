@@ -101,13 +101,9 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, TREE_LIFE )
-    call SetBuildUnit( 1, ELF_MINE )
+	call SetBuildUnit( 1, ELF_MINE )
     call SetBuildUnit( 10, WISP )
-    call SetBuildUnit( 2, ELF_CITIZEN_MALE )
     call SetBuildUnit( 3, MOON_WELL )
-    call SetBuildUnit( 3, ELF_HOUSING )
-    call SetBuildUnit( 3, TREE_LIFE )
-    call SetBuildUnit( 3, ELF_MINE )
     call SetBuildUnit( 2, ANCIENT_WAR )
     call SetBuildUnit( 1, ELF_ALTAR )
     call SetBuildUnit( 1, HUNTERS_HALL )
@@ -122,7 +118,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ANCIENT_LORE )
     call SetBuildUnit( 4, MOON_WELL )
     call SetBuildUnit( 5, WISP )
-    call SetBuildUnit( 4, ELF_CITIZEN_FEMALE )
     call SetBuildUnit( 4, ANCIENT_PROTECT )
     call SetBuildUpgr( 1, UPG_STR_WILD )
     call SetBuildUpgr( 1, UPG_ULTRAVISION )
@@ -132,10 +127,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, TOTEM )
     call SetBuildUnit( 5, MOON_WELL )
     call SetBuildUnit( 4, ANCIENT_PROTECT )
-    call SetBuildUnit( 2, ELF_CITIZEN_MALE )
-    call SetBuildUnit( 3, ELF_HOUSING )
-    call SetBuildUnit( 3, TREE_LIFE )
-    call SetBuildUnit( 3, ELF_MINE )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
