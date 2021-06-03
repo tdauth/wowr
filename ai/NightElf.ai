@@ -108,8 +108,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ELF_ALTAR )
     call SetBuildUnit( 1, HUNTERS_HALL )
     call SetBuildUnit( 1, DEN_OF_WONDERS )
-    call CampaignDefenderEx( 2, 2, 3, ARCHER )
-    call CampaignDefenderEx( 1, 1, 1, HUNTRESS )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, TREE_AGES )
@@ -118,15 +116,23 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ANCIENT_LORE )
     call SetBuildUnit( 4, MOON_WELL )
     call SetBuildUnit( 5, WISP )
-    call SetBuildUnit( 4, ANCIENT_PROTECT )
     call SetBuildUpgr( 1, UPG_STR_WILD )
     call SetBuildUpgr( 1, UPG_ULTRAVISION )
+	call SetBuildUpgr( 1, UPG_SCOUT )
+	call SetBuildUpgr( 1, UPG_MARKSMAN )
+	call SetBuildUpgr( 1, UPG_WELL_SPRING )
+	call SetBuildUpgr( 1, UPG_BLESSING )
+	call SetBuildUpgr( 1, UPG_GLAIVE )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, TREE_ETERNITY )
     call SetBuildUnit( 1, TOTEM )
     call SetBuildUnit( 5, MOON_WELL )
-    call SetBuildUnit( 4, ANCIENT_PROTECT )
+    call SetBuildUnit( 2, ANCIENT_PROTECT )
+	call SetBuildUpgr( 1, UPG_WELL_SPRING )
+	call SetBuildUpgr( 1, UPG_HARD_SKIN )
+	call SetBuildUpgr( 1, UPG_RESIST_SKIN )
+	call SetBuildUpgr( 1, UPG_CHIM_ACID )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -225,7 +231,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, ARCHER )
     call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -237,7 +243,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, ARCHER )
     call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -249,7 +255,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, ARCHER )
     call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -260,7 +266,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, ARCHER )
     call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -275,7 +281,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -290,7 +296,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -301,7 +307,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -313,7 +319,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -326,7 +332,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -340,7 +346,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -355,14 +361,14 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
     call CampaignAttackerEx( 2, 2, 3, CHIMAERA )
-    call CampaignAttackerEx( 1, 1, 1, hero_id )
+    call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 20, 30, 40, ARCHER )
+		call CampaignAttackerEx( 10, 20, 30, ARCHER )
         call CampaignAttackerEx( 10, 20, 30, HUNTRESS )
         call CampaignAttackerEx( 10, 20, 30, DRYAD )
         call CampaignAttackerEx( 10, 20, 30, BALLISTA )
@@ -371,7 +377,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 10, 20, 30, HIPPO )
         call CampaignAttackerEx( 10, 20, 30, MOUNTAIN_GIANT )
         call CampaignAttackerEx( 10, 20, 30, CHIMAERA )
-        call CampaignAttackerEx( 1, 1, 1, hero_id )
+        call CampaignAttacker( 0, 1, hero_id )
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
