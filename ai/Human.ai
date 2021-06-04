@@ -371,14 +371,14 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 12 ***
 		call InitAssaultGroup()
-		call CampaignAttackerEx( 10, 20, 30, FOOTMAN )
-		call CampaignAttackerEx( 10, 20, 30, RIFLEMAN )
-		call CampaignAttackerEx( 10, 20, 30, KNIGHT )
-		call CampaignAttackerEx( 10, 20, 30, MORTAR )
-		call CampaignAttackerEx( 10, 20, 30, PRIEST )
-		call CampaignAttackerEx( 10, 20, 30, SORCERESS )
-		call CampaignAttackerEx( 10, 20, 30, GRYPHON )
-		call CampaignAttackerEx( 10, 20, 30, TANK )
+		call CampaignAttackerEx( 5, 10, 15, FOOTMAN )
+		call CampaignAttackerEx( 5, 10, 15, RIFLEMAN )
+		call CampaignAttackerEx( 5, 10, 15, KNIGHT )
+		call CampaignAttackerEx( 5, 10, 15, MORTAR )
+		call CampaignAttackerEx( 5, 10, 15, PRIEST )
+		call CampaignAttackerEx( 5, 10, 15, SORCERESS )
+		call CampaignAttackerEx( 5, 10, 15, GRYPHON )
+		call CampaignAttackerEx( 5, 10, 15, TANK )
 		call CampaignAttacker( 0, 1, hero_id )
 		call Sleep( M2 ) // Waits 2 minutes before attacking
 		call LaunchAttack()
