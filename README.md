@@ -96,9 +96,11 @@ The following files are imported into the map whenever they are updated. They co
 * [Undead.ai](./ai/Undead.ai)
 * [NightElf.ai](./ai/NightElf.ai)
 * [Naga.ai](./ai/Naga.ai)
+* [BloodElf.ai](./ai/BloodElf.ai)
 
 The face is determined from the race set in the lobby of the game.
 If the race is Night Elf it will either be Night Elf or Naga.
+If the race is Human it will either be Human or Blood Elf.
 Warlord computer players start with a town hall and workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
 

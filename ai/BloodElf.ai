@@ -1,17 +1,31 @@
 globals
-    constant integer FORKED_LIGHTNING        = 'ANfl'
-    constant integer FROST_ARROWS            = 'ANfa'
-    constant integer MANA_SHIELD             = 'ANms'
-    constant integer TORNADO                 = 'ANto'
+	constant integer BLOOD_ELF_ARCANE_SACNTUM     = 'h00E' // arcane
+	constant integer BLOOD_ELF_ARCANE_VAULT       = 'h00H' // shop
+	constant integer BLOOD_ELF_BARRACKS           = 'h00C' // barracks
+	constant integer BLOOD_ELF_BLACK_SMITH        = 'h00D' // blacksmith
+	constant integer BLOOD_ELF_CASTLE             = 'h00B' // castle
+	constant integer BLOOD_ELF_KEEP               = 'h00A' // keep
+	constant integer BLOOD_ELF_LUMBER_MILL        = 'h00F' // lumber mill
+	constant integer BLOOD_ELF_TOWN_HALL          = 'h009' // town hall
+	constant integer BLOOD_ELF_SCOUT_TOWER        = 'h00I' // tower
 	
-	constant integer NAGA_MURLOC_HUT         = 'o008' // lumber mill and blacksmith
-	constant integer NAGA_FISH_MARKET        = 'h00X' // shop
-	
-	constant integer UPG_NAGA_SUBMERGE       = 'Rnsb'
+	constant integer UPG_BLOOD_ELF_BREEDING       = 'R000'
+	constant integer UPG_BLOOD_ELF_BOWS           = 'R009'
+	constant integer UPG_BLOOD_ELF_WOOD           = 'R006'
+	constant integer UPG_BLOOD_ELF_MASONRY        = 'R003'
+	constant integer UPG_BLOOD_ELF_MELEE          = 'R001'
+	constant integer UPG_BLOOD_ELF_ARMOR          = 'R002'
+	constant integer UPG_BLOOD_ELF_MARKSMAN       = 'R00A'
+	constant integer UPG_BLOOD_ELF_MOON_ARMOR     = 'R004'
+	constant integer UPG_BLOOD_ELF_PRAYING        = 'R007'
+	constant integer UPG_BLOOD_ELF_STR_MOON       = 'R008'
+	constant integer UPG_BLOOD_ELF_LEATHER        = 'R005'
 
-    constant integer NAGA_CITIZEN_MALE       = 'n00M'
-    constant integer NAGA_CITIZEN_FEMALE     = 'n00N'
-    constant integer NAGA_HOUSING            = 'h00Q'
+    constant integer BLOOD_ELF_PRIEST             = 'h00G'
+
+    constant integer BLOOD_ELF_CITIZEN_MALE       = 'n00K'
+    constant integer BLOOD_ELF_CITIZEN_FEMALE     = 'n00L'
+    constant integer BLOOD_ELF_HOUSING            = 'h00T'
 endglobals
 
 //===========================================================================
@@ -37,15 +51,15 @@ function ChooseHeroSkill takes nothing returns integer
     local integer mod = ModuloInteger(level, 4)
     local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
 
-    if (curHero == NAGA_SORCERESS) then
+    if (curHero == BLOOD_MAGE) then
         if (skillUlti) then
-            return TORNADO
+            return SUMMON_PHOENIX
         elseif (mod == 0) then
-            return FORKED_LIGHTNING
+            return BANISH
         elseif (mod == 1) then
-            return FROST_ARROWS
+            return FLAME_STRIKE
         elseif (mod == 2) then
-            return MANA_SHIELD
+            return SIPHON_MANA
         endif
     endif
 
@@ -53,8 +67,8 @@ function ChooseHeroSkill takes nothing returns integer
 endfunction
 
 function InitHero takes nothing returns nothing
-    if (GetUnitCountDone(NAGA_SORCERESS) > 0) then
-        set hero_id = NAGA_SORCERESS
+    if (GetUnitCountDone(BLOOD_MAGE) > 0) then
+        set hero_id = BLOOD_MAGE
     endif
 endfunction
 
@@ -74,35 +88,51 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
 	call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, NAGA_TEMPLE )
-	call SetBuildUnit( 15, NAGA_SLAVE )
-	call SetBuildUnit( 2, NAGA_CITIZEN_MALE )
-	call SetBuildUnit( 3, NAGA_CORAL )
-	call SetBuildUnit( 2, NAGA_HOUSING )
-	call SetBuildUnit( 2, NAGA_SPAWNING )
-	call SetBuildUnit( 1, NAGA_ALTAR )
-	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
-	call SetBuildUnit( 1, NAGA_FISH_MARKET )
-	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
-	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
+	call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
+	call SetBuildUnit( 15, BLOOD_PEASANT )
+	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
+	call SetBuildUnit( 3, HOUSE )
+	call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
+	call SetBuildUnit( 2, BLOOD_ELF_BARRACKS )
+	call SetBuildUnit( 1, HUMAN_ALTAR )
+	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
+	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
+	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
+	call SetBuildUpgr( 1, UPG_DEFEND )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
 
     // Tier 2 buildings
-	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
-	call SetBuildUnit( 1, NAGA_SHRINE )
-	call SetBuildUnit( 4, NAGA_CORAL )
-	call SetBuildUnit( 5, NAGA_SLAVE )
-	call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
-	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
-	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
-	call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
-	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
+	call SetBuildUnit( 1, BLOOD_ELF_KEEP )
+	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
+	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
+	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
+	call SetBuildUnit( 4, HOUSE )
+	call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
+	call SetBuildUnit( 5, BLOOD_PEASANT )
+	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
 	
     // Tier 3 buildings
-	call SetBuildUnit( 5, NAGA_CORAL )
-	call SetBuildUnit( 5, NAGA_SLAVE )
-	call SetBuildUnit( 2, NAGA_GUARDIAN )
-	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
-	call SetBuildUpgr( 1, UPG_SIREN )
+	call SetBuildUnit( 1, BLOOD_ELF_CASTLE )
+	call SetBuildUnit( 5, HOUSE )
+	call SetBuildUnit( 5, BLOOD_PEASANT )
+	call SetBuildUnit( 1, ELF_GUARD_TOWER )
+	call SetBuildUnit( 1, ARCANE_TOWER )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
+	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
+	call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
+	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
+	call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -199,115 +229,115 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
-    call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
-    call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+	call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
-    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
+    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+	call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -315,13 +345,13 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
 		//*** WAVE 12 ***
 		call InitAssaultGroup()
-		call CampaignAttackerEx( 4, 8, 12, NAGA_REAVER )
-		call CampaignAttackerEx( 4, 8, 12, NAGA_SNAP_DRAGON )
-		call CampaignAttackerEx( 3, 4, 5, NAGA_MYRMIDON )
-		call CampaignAttackerEx( 3, 4, 5, NAGA_TURTLE )
-		call CampaignAttackerEx( 3, 4, 5, NAGA_SIREN )
-		call CampaignAttackerEx( 3, 4, 5, NAGA_COUATL )
-		call CampaignAttackerEx( 3, 4, 5, NAGA_ROYAL )
+		call CampaignAttackerEx( 4, 8, 12, HIGH_SWORDMAN )
+		call CampaignAttackerEx( 4, 8, 12, HIGH_ARCHER )
+		call CampaignAttackerEx( 4, 8, 12, HIGH_ARCHER )
+		call CampaignAttackerEx( 3, 4, 5, SPELL_BREAKER )
+		call CampaignAttackerEx( 3, 4, 5, BLOOD_ELF_PRIEST )
+		call CampaignAttackerEx( 3, 4, 5, HUMAN_DRAGON_HAWK )
+		call CampaignAttackerEx( 3, 4, 5, HUMAN_DRAGON_HAWK )
 		call CampaignAttacker( 0, 1, hero_id )
 		call Sleep( M2 ) // Waits 2 minutes before attacking
 		call LaunchAttack()
@@ -329,7 +359,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( NAGA_CORAL, function ChooseHeroSkill )
+    call CampaignAI( HOUSE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
 
