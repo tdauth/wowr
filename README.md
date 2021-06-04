@@ -18,6 +18,21 @@ The map can only be won by killing the final boss.
 
 *Restriction to classic graphics:* The current version is restricted to SD graphics to avoid desyncs which occur more often with HD graphics and to improve the performance of games.
 
+## How to Play
+
+Usually, it is the best to ally one Freelancer with one Warlord from the beginning.
+The Warlord can support the Freelancer with units, resources and XP and the Freelancer can level faster.
+Alliances can be made via Warcraft's menu. Build many custom goldmines as Warlords to collect gold much faster.
+Defend your base with towers and close the gates if necessary.
+Strong bases are almost impossible to conquer.
+Find some good creep spots or enemies (maybe Warlord AI) to level your hero constantly.
+A big army helps leveling much faster, so either train and upgrade units or get support from a Warlord.
+Prevent hostile players from leveling and completing quests by hunting them down constantly.
+However, this could lead to making them leave quickly and it's not the best strategy if you want to play a long game.
+You can change alliances and offer others your services to get an alliance in return.
+This strategy works best for new players who need some support in the beginning.
+Killing bosses and completing quests will give you better items and a big advantage during fights.
+
 ## New Features
 
 This version provides several new features compared to the original map:
@@ -80,8 +95,11 @@ The following files are imported into the map whenever they are updated. They co
 * [Orc.ai](./ai/Orc.ai)
 * [Undead.ai](./ai/Undead.ai)
 * [NightElf.ai](./ai/NightElf.ai)
+* [Naga.ai](./ai/Naga.ai)
 
-Warlord computer players start with a town hall and five workers besides their hero.
+The face is determined from the race set in the lobby of the game.
+If the race is Night Elf it will either be Night Elf or Naga.
+Warlord computer players start with a town hall and workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
 
 ### Freelancers
@@ -92,6 +110,8 @@ The following files are imported into the map whenever they are updated. They co
 * [OrcFreelancer.ai](./ai/OrcFreelancer.ai)
 * [UndeadFreelancer.ai](./ai/UndeadFreelancer.ai)
 * [NightElfFreelancer.ai](./ai/NightElfFreelancer.ai)
+
+Currently, the freelancer AI mode is disabled. All computer players will choose the game mode warlord.
 
 ## Replays
 

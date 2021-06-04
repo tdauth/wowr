@@ -1,0 +1,341 @@
+globals
+    constant integer FORKED_LIGHTNING        = 'ANfl'
+    constant integer FROST_ARROWS            = 'ANfa'
+    constant integer MANA_SHIELD             = 'ANms'
+    constant integer TORNADO                 = 'ANto'
+	
+	constant integer NAGA_MURLOC_HUT         = 'o008' // lumber mill and blacksmith
+	constant integer NAGA_FISH_MARKET        = 'h00X' // shop
+	
+	constant integer UPG_NAGA_SUBMERGE       = 'Rnsb'
+
+    constant integer NAGA_CITIZEN_MALE       = 'n00M'
+    constant integer NAGA_CITIZEN_FEMALE     = 'n00N'
+    constant integer NAGA_HOUSING            = 'h00Q'
+endglobals
+
+//===========================================================================
+// Calculate the modulus/remainder of (dividend) divided by (divisor).
+// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
+//
+function ModuloInteger takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+
+    // If the dividend was negative, the above modulus calculation will
+    // be negative, but within (-divisor..0).  We can add (divisor) to
+    // shift this result into the desired range of (0..divisor).
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function ChooseHeroSkill takes nothing returns integer
+    local integer curHero = GetHeroId()
+    local integer level = GetHeroLevelAI()
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    if (curHero == NAGA_SORCERESS) then
+        if (skillUlti) then
+            return TORNADO
+        elseif (mod == 0) then
+            return FORKED_LIGHTNING
+        elseif (mod == 1) then
+            return FROST_ARROWS
+        elseif (mod == 2) then
+            return MANA_SHIELD
+        endif
+    endif
+
+    return 'Aamk'
+endfunction
+
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(NAGA_SORCERESS) > 0) then
+        set hero_id = NAGA_SORCERESS
+    endif
+endfunction
+
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+	call SetReplacements( 1, 2, 3 )
+	call SetBuildUnit( 1, NAGA_TEMPLE )
+	call SetBuildUnit( 15, NAGA_SLAVE )
+	call SetBuildUnit( 2, NAGA_CITIZEN_MALE )
+	call SetBuildUnit( 3, NAGA_CORAL )
+	call SetBuildUnit( 2, NAGA_HOUSING )
+	call SetBuildUnit( 2, NAGA_SPAWNING )
+	call SetBuildUnit( 1, NAGA_ALTAR )
+	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
+	call SetBuildUnit( 1, NAGA_FISH_MARKET )
+	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
+	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
+
+    // Tier 2 buildings
+	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
+	call SetBuildUnit( 1, NAGA_SHRINE )
+	call SetBuildUnit( 4, NAGA_CORAL )
+	call SetBuildUnit( 5, NAGA_SLAVE )
+	call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
+	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
+	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
+	call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
+	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
+	
+    // Tier 3 buildings
+	call SetBuildUnit( 5, NAGA_CORAL )
+	call SetBuildUnit( 5, NAGA_SLAVE )
+	call SetBuildUnit( 2, NAGA_GUARDIAN )
+	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
+	call SetBuildUpgr( 1, UPG_SIREN )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
+    call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
+    call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
+	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 11 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
+    call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
+	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+		//*** WAVE 12 ***
+		call InitAssaultGroup()
+		call CampaignAttackerEx( 4, 8, 12, NAGA_REAVER )
+		call CampaignAttackerEx( 4, 8, 12, NAGA_SNAP_DRAGON )
+		call CampaignAttackerEx( 3, 4, 5, NAGA_MYRMIDON )
+		call CampaignAttackerEx( 3, 4, 5, NAGA_TURTLE )
+		call CampaignAttackerEx( 3, 4, 5, NAGA_SIREN )
+		call CampaignAttackerEx( 3, 4, 5, NAGA_COUATL )
+		call CampaignAttackerEx( 3, 4, 5, NAGA_ROYAL )
+		call CampaignAttacker( 0, 1, hero_id )
+		call Sleep( M2 ) // Waits 2 minutes before attacking
+		call LaunchAttack()
+		call Sleep( M2 ) // Waits 2 minutes before attacking
+		call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( NAGA_CORAL, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction
