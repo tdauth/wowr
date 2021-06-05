@@ -109,6 +109,12 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, UNDEAD_ALTAR )
     call SetBuildUnit( 1, GRAVEYARD )
     call SetBuildUnit( 1, TOMB_OF_RELICS )
+	
+	call SetBuildUpgr( 1, UPG_UNHOLY_STR )
+	call SetBuildUpgr( 1, UPG_UNHOLY_ARMOR )
+    call SetBuildUpgr( 1, UPG_CR_ATTACK )
+	call SetBuildUpgr( 1, UPG_CR_ARMOR )
+	call SetBuildUpgr( 1, UPG_FIEND_WEB )
 	call SetBuildUpgr( 1, UPG_CANNIBALIZE )
 
     // Tier 2 buildings
@@ -119,9 +125,15 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 4, ZIGGURAT_1 )
     call SetBuildUnit( 5, ACOLYTE )
     call SetBuildUnit( 4, ZIGGURAT_2 )
+	
+	call SetBuildUpgr( 2, UPG_UNHOLY_STR )
+	call SetBuildUpgr( 2, UPG_UNHOLY_ARMOR )
+    call SetBuildUpgr( 2, UPG_CR_ATTACK )
+	call SetBuildUpgr( 2, UPG_CR_ARMOR )
 	call SetBuildUpgr( 1, UPG_MEAT_WAGON )
 	call SetBuildUpgr( 1, UPG_FIEND_WEB )
 	call SetBuildUpgr( 1, UPG_BANSHEE )
+	call SetBuildUpgr( 1, UPG_NECROS )
 	call SetBuildUpgr( 1, UPG_SKEL_LIFE )
 	call SetBuildUpgr( 1, UPG_SKEL_MASTERY )
 
@@ -131,9 +143,22 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, BONEYARD )
     call SetBuildUnit( 5, ZIGGURAT_1 )
     call SetBuildUnit( 4, ZIGGURAT_2 )
+	
+	call SetBuildUpgr( 3, UPG_UNHOLY_STR )
+	call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )
+    call SetBuildUpgr( 3, UPG_CR_ATTACK )
+	call SetBuildUpgr( 3, UPG_CR_ARMOR )
+	call SetBuildUpgr( 2, UPG_BANSHEE )
+	call SetBuildUpgr( 2, UPG_NECROS )
 	call SetBuildUpgr( 1, UPG_SACRIFICE )
 	call SetBuildUpgr( 1, UPG_PLAGUE )
 	call SetBuildUpgr( 1, UPG_BURROWING )
+	call SetBuildUpgr( 1, UPG_STONE_FORM )
+	call SetBuildUpgr( 1, UPG_EXHUME )
+	call SetBuildUpgr( 1, UPG_GHOUL_FRENZY )
+	call SetBuildUpgr( 1, UPG_BLK_SPHINX )
+	call SetBuildUpgr( 1, UPG_WYRM_BREATH )
+	call SetBuildUpgr( 1, 'Rupm' ) // backpack
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -236,10 +261,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_STR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ATTACK )
-    call SetBuildUpgr( 1, UPG_CANNIBALIZE )
-
     //*** WAVE 1 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, GHOUL )
@@ -248,10 +269,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_FIEND_WEB )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_ARMOR )
-
     //*** WAVE 2 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GHOUL )
@@ -259,8 +276,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
-
-    call SetBuildUpgr( 1, UPG_STONE_FORM )
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
@@ -271,10 +286,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_EXHUME )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_STR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ATTACK )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ARMOR )
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
@@ -285,10 +296,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
-
-    call SetBuildUpgrEx( 1, 2, 3, UPG_UNHOLY_STR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ATTACK )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_CR_ARMOR )
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
@@ -369,15 +376,15 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 5, 10, 15, GHOUL )
-        call CampaignAttackerEx( 5, 10, 15, PIT_FIEND )
-        call CampaignAttackerEx( 5, 10, 15, GARGOYLE )
-        call CampaignAttackerEx( 5, 10, 15, MEAT_WAGON )
-        call CampaignAttackerEx( 5, 10, 15, OBSIDIAN_STATUE )
-        call CampaignAttackerEx( 5, 10, 15, NECRO )
-        call CampaignAttackerEx( 5, 10, 15, BANSHEE )
-        call CampaignAttackerEx( 5, 10, 15, GARGOYLE )
-        call CampaignAttackerEx( 5, 10, 15, FROST_WYRM )
+        call CampaignAttackerEx( 4, 8, 12, GHOUL )
+        call CampaignAttackerEx( 4, 8, 12, PIT_FIEND )
+        call CampaignAttackerEx( 4, 8, 12, GARGOYLE )
+        call CampaignAttackerEx( 2, 4, 8, MEAT_WAGON )
+        call CampaignAttackerEx( 2, 4, 8, OBSIDIAN_STATUE )
+        call CampaignAttackerEx( 3, 6, 9, NECRO )
+        call CampaignAttackerEx( 3, 6, 9, BANSHEE )
+        call CampaignAttackerEx( 3, 6, 9, GARGOYLE )
+        call CampaignAttackerEx( 2, 3, 6, FROST_WYRM )
         call CampaignAttacker( 0, 1, hero_id )
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()

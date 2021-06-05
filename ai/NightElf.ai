@@ -108,6 +108,12 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ELF_ALTAR )
     call SetBuildUnit( 1, HUNTERS_HALL )
     call SetBuildUnit( 1, DEN_OF_WONDERS )
+	
+	call SetBuildUpgr( 1, UPG_STR_MOON )
+	call SetBuildUpgr( 1, UPG_STR_WILD )
+	call SetBuildUpgr( 1, UPG_HIDES )
+    call SetBuildUpgr( 1, UPG_MOON_ARMOR )
+	call SetBuildUpgr( 1, UPG_GLAIVE )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, TREE_AGES )
@@ -116,23 +122,37 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ANCIENT_LORE )
     call SetBuildUnit( 4, MOON_WELL )
     call SetBuildUnit( 5, WISP )
-    call SetBuildUpgr( 1, UPG_STR_WILD )
+	
+    call SetBuildUpgr( 2, UPG_STR_MOON )
+	call SetBuildUpgr( 2, UPG_STR_WILD )
+	call SetBuildUpgr( 2, UPG_HIDES )
+    call SetBuildUpgr( 2, UPG_MOON_ARMOR )
     call SetBuildUpgr( 1, UPG_ULTRAVISION )
 	call SetBuildUpgr( 1, UPG_SCOUT )
 	call SetBuildUpgr( 1, UPG_MARKSMAN )
 	call SetBuildUpgr( 1, UPG_WELL_SPRING )
 	call SetBuildUpgr( 1, UPG_BLESSING )
-	call SetBuildUpgr( 1, UPG_GLAIVE )
+	call SetBuildUpgr( 1, UPG_MARK_CLAW )
+	call SetBuildUpgr( 1, UPG_DRUID_CLAW )
+	call SetBuildUpgr( 1, UPG_DRUID_TALON )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, TREE_ETERNITY )
     call SetBuildUnit( 1, TOTEM )
     call SetBuildUnit( 5, MOON_WELL )
     call SetBuildUnit( 2, ANCIENT_PROTECT )
-	call SetBuildUpgr( 1, UPG_WELL_SPRING )
+	
+	call SetBuildUpgr( 3, UPG_STR_MOON )
+	call SetBuildUpgr( 3, UPG_STR_WILD )
+	call SetBuildUpgr( 3, UPG_HIDES )
+    call SetBuildUpgr( 3, UPG_MOON_ARMOR )
 	call SetBuildUpgr( 1, UPG_HARD_SKIN )
 	call SetBuildUpgr( 1, UPG_RESIST_SKIN )
 	call SetBuildUpgr( 1, UPG_CHIM_ACID )
+	call SetBuildUpgr( 1, UPG_HIPPO_TAME )
+	call SetBuildUpgr( 2, UPG_DRUID_CLAW )
+	call SetBuildUpgr( 2, UPG_DRUID_TALON )
+	call SetBuildUpgr( 1, UPG_BOWS )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -235,10 +255,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgr( 1, UPG_GLAIVE )
-
     //*** WAVE 1 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, ARCHER )
@@ -247,10 +263,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_MARKSMAN )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_HIDES )
-
     //*** WAVE 2 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, ARCHER )
@@ -258,8 +270,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
-
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
@@ -270,11 +280,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_MARK_CLAW )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_WILD )
-
     //*** WAVE 4 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, ARCHER )
@@ -284,10 +289,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
-
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_MOON )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_MOON_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_STR_WILD )
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
@@ -368,15 +369,15 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-		call CampaignAttackerEx( 5, 10, 15, ARCHER )
-        call CampaignAttackerEx( 5, 10, 15, HUNTRESS )
-        call CampaignAttackerEx( 5, 10, 15, DRYAD )
-        call CampaignAttackerEx( 5, 10, 15, BALLISTA )
-        call CampaignAttackerEx( 5, 10, 15, DRUID_TALON )
-        call CampaignAttackerEx( 5, 10, 15, DRUID_CLAW )
-        call CampaignAttackerEx( 5, 10, 15, HIPPO )
-        call CampaignAttackerEx( 5, 10, 15, MOUNTAIN_GIANT )
-        call CampaignAttackerEx( 5, 10, 15, CHIMAERA )
+		call CampaignAttackerEx( 4, 8, 12, ARCHER )
+        call CampaignAttackerEx( 5, 10, 12, HUNTRESS )
+        call CampaignAttackerEx( 5, 10, 12, DRYAD )
+        call CampaignAttackerEx( 2, 4, 8, BALLISTA )
+        call CampaignAttackerEx( 4, 8, 12, DRUID_TALON )
+        call CampaignAttackerEx( 4, 8, 12, DRUID_CLAW )
+        call CampaignAttackerEx( 4, 8, 12, HIPPO )
+        call CampaignAttackerEx( 2, 4, 8, MOUNTAIN_GIANT )
+        call CampaignAttackerEx( 2, 4, 8, CHIMAERA )
         call CampaignAttacker( 0, 1, hero_id )
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
