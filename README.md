@@ -61,7 +61,7 @@ This version provides several new features compared to the original map:
 * Ability 'Give Units to Another Allied Player' in all main buildings.
 * Random hero support.
 * Freelancers gain more experience than warlords from killing hostile units.
-* Basic support for computer-controlled players.
+* Basic support AI for computer-controlled warlord players.
 * Chat command '-players'.
 * The number of towers is limited for all players.
 * Hero selection has been moved to the Outland area.
@@ -73,6 +73,10 @@ This version provides several new features compared to the original map:
 * Ships and Zeppelins cost food to keep their number limited.
 * Theramore contains a market with killed creeps and dropped items.
 * Bonus heroes can be chosen at level 40.
+* XP bonus from Tier 2 and Tier 3 for every hero.
+* No Chaos damage for Naga and Blood Elf anymore.
+* Blood Elf can train Sorceress.
+* Blood Elf upgrades are not visible to Human anymore.
 
 ## Bug Fixes
 
