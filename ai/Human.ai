@@ -116,6 +116,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_ARMOR )
 	call SetBuildUpgr( 1, UPG_LEATHER )
     call SetBuildUpgr( 1, UPG_DEFEND )
+	call SetBuildUpgr( 1, UPG_MASONRY )
 
     // Tier 2 buildings
 	call SetBuildUnit( 1, KEEP )
@@ -131,7 +132,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 2, UPG_ARMOR )
 	call SetBuildUpgr( 2, UPG_LEATHER )
 	call SetBuildUpgr( 1, UPG_WOOD )
-	call SetBuildUpgr( 1, UPG_MASONRY )
+	call SetBuildUpgr( 2, UPG_MASONRY )
 	call SetBuildUpgr( 1, UPG_SENTINEL )
 	call SetBuildUpgr( 1, UPG_GUN_RANGE )
 	call SetBuildUpgr( 1, UPG_PRAYING )
@@ -153,7 +154,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_ARMOR )
 	call SetBuildUpgr( 3, UPG_LEATHER )
 	call SetBuildUpgr( 2, UPG_WOOD )
-	call SetBuildUpgr( 2, UPG_MASONRY )
+	call SetBuildUpgr( 3, UPG_MASONRY )
 	call SetBuildUpgr( 1, 'Rhpm' ) // backpack
 	call SetBuildUpgr( 2, UPG_PRAYING )
 	call SetBuildUpgr( 2, UPG_SORCERY )

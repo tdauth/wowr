@@ -102,6 +102,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DEFEND )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
 
     // Tier 2 buildings
 	call SetBuildUnit( 1, BLOOD_ELF_KEEP )
@@ -118,7 +119,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
+	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
 	call SetBuildUpgr( 1, UPG_SORCERY )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BOWS )
@@ -135,7 +136,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_BLOOD_ELF_ARMOR )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
+	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MASONRY )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
 	call SetBuildUpgr( 2, UPG_SORCERY )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
