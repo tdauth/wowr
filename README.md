@@ -77,6 +77,8 @@ This version provides several new features compared to the original map:
 * No Chaos damage for Naga and Blood Elf anymore.
 * Blood Elf can train Sorceress.
 * Blood Elf upgrades are not visible to Human anymore.
+* New race: Draenei.
+* New hero: Akama.
 
 ## Bug Fixes
 
