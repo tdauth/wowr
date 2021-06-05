@@ -83,6 +83,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, NAGA_ALTAR )
 	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
 	call SetBuildUnit( 1, NAGA_FISH_MARKET )
+	
 	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
 
@@ -92,6 +93,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 4, NAGA_CORAL )
 	call SetBuildUnit( 5, NAGA_SLAVE )
 	call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
+	
 	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
 	call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
@@ -101,8 +103,12 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, NAGA_CORAL )
 	call SetBuildUnit( 5, NAGA_SLAVE )
 	call SetBuildUnit( 2, NAGA_GUARDIAN )
+	
+	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
+	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
 	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
-	call SetBuildUpgr( 1, UPG_SIREN )
+	call SetBuildUpgr( 2, UPG_SIREN )
+	call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

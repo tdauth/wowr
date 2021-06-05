@@ -109,6 +109,12 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ORC_ALTAR )
     call SetBuildUnit( 1, FORGE )
     call SetBuildUnit( 1, VOODOO_LOUNGE )
+	
+	call SetBuildUpgr( 1, UPG_ORC_MELEE )
+    call SetBuildUpgr( 1, UPG_ORC_RANGED )
+    call SetBuildUpgr( 1, UPG_ORC_ARMOR )
+	call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
+    call SetBuildUpgr( 1, UPG_ORC_BERSERK )
     call SetBuildUpgr( 1, UPG_ORC_BURROWS )
     call SetBuildUpgr( 1, UPG_ORC_SPIKES )
 	call SetBuildUpgr( 1, UPG_ORC_REGEN )
@@ -121,12 +127,18 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 4, BURROW )
     call SetBuildUnit( 5, PEON )
     call SetBuildUnit( 2, ORC_CITIZEN_FEMALE )
+	
+	call SetBuildUpgr( 1, UPG_ORC_MELEE )
+    call SetBuildUpgr( 1, UPG_ORC_RANGED )
+    call SetBuildUpgr( 1, UPG_ORC_ARMOR )
     call SetBuildUpgr( 1, UPG_ORC_BURROWS )
     call SetBuildUpgr( 1, UPG_ORC_SPIKES )
 	call SetBuildUpgr( 1, UPG_ORC_PILLAGE )
 	call SetBuildUpgr( 1, UPG_ORC_ENSNARE )
 	call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
 	call SetBuildUpgr( 1, UPG_ORC_FIRE )
+	call SetBuildUpgr( 1, UPG_ORC_SHAMAN )
+	call SetBuildUpgr( 1, UPG_ORC_DOCS )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, FORTRESS )
@@ -135,10 +147,20 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, PEON )
     call SetBuildUnit( 2, ORC_WATCH_TOWER )
     call SetBuildUnit( 2, ORC_CITIZEN_MALE )
+	
+	call SetBuildUpgr( 1, UPG_ORC_MELEE )
+    call SetBuildUpgr( 1, UPG_ORC_RANGED )
+    call SetBuildUpgr( 1, UPG_ORC_ARMOR )
+	call SetBuildUpgr( 1, UPG_ORC_SHAMAN )
+	call SetBuildUpgr( 1, UPG_ORC_DOCS )
     call SetBuildUpgr( 1, UPG_ORC_BURROWS )
     call SetBuildUpgr( 1, UPG_ORC_SPIKES )
 	call SetBuildUpgr( 1, UPG_ORC_ENSNARE )
 	call SetBuildUpgr( 1, UPG_ORC_SWALKER )
+	call SetBuildUpgr( 1, UPG_ORC_PULVERIZE )
+	call SetBuildUpgr( 1, UPG_ORC_VENOM )
+	call SetBuildUpgr( 1, UPG_ORC_WAR_DRUMS )
+	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -241,10 +263,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_MELEE )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_RANGED )
-    call SetBuildUpgr( 1, UPG_ORC_BERSERK )
-
     //*** WAVE 1 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, GRUNT )
@@ -253,10 +271,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_ORC_REGEN )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_ARMOR )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ARMOR )
-
     //*** WAVE 2 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GRUNT )
@@ -264,8 +278,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
-
-    call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
@@ -276,11 +288,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
-    call SetBuildUpgr( 1, UPG_ORC_ENSNARE )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_MELEE )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_RANGED )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_ARMOR )
-
     //*** WAVE 4 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GRUNT )
@@ -290,10 +297,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
-
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_MELEE )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_RANGED )
-    call SetBuildUpgrEx( 1, 2, 3, UPG_ORC_ARMOR )
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
@@ -367,6 +370,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, KODO_BEAST )
     call CampaignAttackerEx( 2, 2, 3, WYVERN )
     call CampaignAttackerEx( 2, 2, 3, TAUREN )
+	call CampaignAttackerEx( 2, 2, 3, SPIRIT_WALKER )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -374,15 +378,16 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 5, 10, 15, GRUNT )
-        call CampaignAttackerEx( 5, 10, 15, HEAD_HUNTER )
-        call CampaignAttackerEx( 5, 10, 15, RAIDER )
-        call CampaignAttackerEx( 5, 10, 15, CATAPULT )
-        call CampaignAttackerEx( 5, 10, 15, WITCH_DOCTOR )
-        call CampaignAttackerEx( 5, 10, 15, SHAMAN )
-        call CampaignAttackerEx( 5, 10, 15, KODO_BEAST )
-        call CampaignAttackerEx( 5, 10, 15, WYVERN )
-        call CampaignAttackerEx( 5, 10, 15, TAUREN )
+        call CampaignAttackerEx( 4, 8, 12, GRUNT )
+        call CampaignAttackerEx( 4, 8, 12, HEAD_HUNTER )
+        call CampaignAttackerEx( 4, 8, 12, RAIDER )
+        call CampaignAttackerEx( 4, 8, 12, CATAPULT )
+        call CampaignAttackerEx( 4, 8, 12, WITCH_DOCTOR )
+        call CampaignAttackerEx( 4, 8, 12, SHAMAN )
+        call CampaignAttackerEx( 4, 8, 12, KODO_BEAST )
+        call CampaignAttackerEx( 4, 8, 12, WYVERN )
+        call CampaignAttackerEx( 4, 8, 12, TAUREN )
+		call CampaignAttackerEx( 4, 8, 12, SPIRIT_WALKER )
         call CampaignAttacker( 0, 1, hero_id )
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()

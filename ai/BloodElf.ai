@@ -98,6 +98,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
 	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
 	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
+	
 	call SetBuildUpgr( 1, UPG_DEFEND )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
@@ -111,12 +112,16 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
 	call SetBuildUnit( 5, BLOOD_PEASANT )
 	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
+	
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
+	call SetBuildUpgr( 1, UPG_SORCERY )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BOWS )
 	
     // Tier 3 buildings
 	call SetBuildUnit( 1, BLOOD_ELF_CASTLE )
@@ -124,15 +129,20 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, BLOOD_PEASANT )
 	call SetBuildUnit( 1, ELF_GUARD_TOWER )
 	call SetBuildUnit( 1, ARCANE_TOWER )
+	
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
+	call SetBuildUpgr( 1, UPG_SORCERY )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
+	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
+	call SetBuildUpgr( 1, UPG_SENTINEL )
+	call SetBuildUpgr( 1, UPG_CLOUD )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -276,7 +286,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -287,6 +297,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -299,6 +310,7 @@ function AttackWaves takes nothing returns nothing
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -311,6 +323,7 @@ function AttackWaves takes nothing returns nothing
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -323,6 +336,7 @@ function AttackWaves takes nothing returns nothing
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
 	call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
@@ -336,6 +350,7 @@ function AttackWaves takes nothing returns nothing
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
 	call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
     call CampaignAttacker( 0, 1, hero_id )
@@ -350,6 +365,7 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 4, 8, 12, HIGH_ARCHER )
 		call CampaignAttackerEx( 3, 4, 5, SPELL_BREAKER )
 		call CampaignAttackerEx( 3, 4, 5, BLOOD_ELF_PRIEST )
+		call CampaignAttackerEx( 3, 4, 5, SORCERESS )
 		call CampaignAttackerEx( 3, 4, 5, HUMAN_DRAGON_HAWK )
 		call CampaignAttackerEx( 3, 4, 5, HUMAN_DRAGON_HAWK )
 		call CampaignAttacker( 0, 1, hero_id )
