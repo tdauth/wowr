@@ -103,6 +103,7 @@ The following files are imported into the map whenever they are updated. They co
 * [NightElf.ai](./ai/NightElf.ai)
 * [Naga.ai](./ai/Naga.ai)
 * [BloodElf.ai](./ai/BloodElf.ai)
+* [Demon.ai](./ai/Demon.ai)
 
 The face is determined from the race set in the lobby of the game.
 If the race is Night Elf it will either be Night Elf or Naga.
