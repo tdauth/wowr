@@ -1,0 +1,326 @@
+globals
+    constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
+	constant integer DRAENEI_BARRACKS                                = 'ndh3'
+	constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
+	constant integer DRAENEI_SHOP                                    = 'n01N'
+	constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
+	constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
+	
+	constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
+	constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
+	constant integer DRAENEI_STALKER                                 = 'ndrt' // knight
+	constant integer DRAENEI_SALAMANDER                              = 'ndsa' // pit fiend
+	constant integer DRAENEI_SEER                                    = 'ndrs' // priest
+	constant integer DRAENEI_HARBINGER                               = 'ndrh' // sorceress
+	constant integer DRAENEI_DEMOLISHER                              = 'ncat' // mortar
+	
+	constant integer AKAMA                                           = 'N01K'
+
+    constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
+    constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
+    constant integer DRAENEI_HOUSING                                 = 'h011'
+endglobals
+
+//===========================================================================
+// Calculate the modulus/remainder of (dividend) divided by (divisor).
+// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
+//
+function ModuloInteger takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+
+    // If the dividend was negative, the above modulus calculation will
+    // be negative, but within (-divisor..0).  We can add (divisor) to
+    // shift this result into the desired range of (0..divisor).
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function ChooseHeroSkill takes nothing returns integer
+    local integer curHero = GetHeroId()
+    local integer level = GetHeroLevelAI()
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    if (curHero == AKAMA) then
+        if (skillUlti) then
+            return REINCARNATION
+        elseif (mod == 0) then
+            return SPIRIT_WOLF
+        elseif (mod == 1) then
+            return CHAIN_LIGHTNING
+        elseif (mod == 2) then
+            return SHADOW_TOUCH
+        endif
+    endif
+
+    return 'Aamk'
+endfunction
+
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(AKAMA) > 0) then
+        set hero_id = AKAMA
+    endif
+endfunction
+
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 - 3 Buildings
+    call SetReplacements( 1, 2, 3 )
+	call SetBuildUnit( 1, DRAENEI_HAVEN )
+    call SetBuildUnit( 15, DRAENEI_LABORER )
+	call SetBuildUnit( 2, DRAENEI_CITIZEN_MALE )
+	call SetBuildUnit( 2, DRAENEI_HOUSING )
+	call SetBuildUnit( 2, DRAENEI_BARRACKS )
+    call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
+    call SetBuildUnit( 1, DRAENEI_SHOP )
+	call SetBuildUnit( 1, DRAENEI_BOULDER_TOWER )
+	call SetBuildUnit( 4, DRAENEI_ADVANCED_BOULDER_TOWER )
+	
+	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 0, 1, 2, DRAENEI_STALKER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 0, 1, 2, DRAENEI_STALKER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_SEER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_SEER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_SEER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_HARBINGER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_SEER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_HARBINGER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_SEER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_HARBINGER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DRAENEI_VINDICATOR )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_SALAMANDER )
+    call CampaignAttackerEx( 1, 2, 3, DRAENEI_DEMOLISHER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_SEER )
+    call CampaignAttackerEx( 2, 2, 3, DRAENEI_HARBINGER )
+    call CampaignAttacker( 0, 1, hero_id )
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 ***
+        call InitAssaultGroup()
+        call CampaignAttackerEx( 4, 8, 12, DRAENEI_VINDICATOR )
+        call CampaignAttackerEx( 4, 8, 12, DRAENEI_STALKER )
+        call CampaignAttackerEx( 4, 8, 12, DRAENEI_SALAMANDER )
+        call CampaignAttackerEx( 2, 4, 8, DRAENEI_DEMOLISHER )
+        call CampaignAttackerEx( 2, 4, 8, DRAENEI_SEER )
+        call CampaignAttackerEx( 3, 6, 9, DRAENEI_HARBINGER )
+        call CampaignAttacker( 0, 1, hero_id )
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( DRAENEI_BARRACKS, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction
