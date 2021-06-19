@@ -8,6 +8,8 @@ globals
 	constant integer NAGA_FISH_MARKET        = 'h00X' // shop
 	
 	constant integer UPG_NAGA_SUBMERGE       = 'Rnsb'
+	
+	constant integer UPG_EVOLUTION           = 'R00U'
 
     constant integer NAGA_CITIZEN_MALE       = 'n00M'
     constant integer NAGA_CITIZEN_FEMALE     = 'n00N'
@@ -109,6 +111,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 2, UPG_NAGA_ABOLISH )
 	call SetBuildUpgr( 2, UPG_SIREN )
 	call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
+	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

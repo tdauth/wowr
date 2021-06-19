@@ -20,6 +20,8 @@ globals
 	constant integer UPG_BLOOD_ELF_PRAYING        = 'R007'
 	constant integer UPG_BLOOD_ELF_STR_MOON       = 'R008'
 	constant integer UPG_BLOOD_ELF_LEATHER        = 'R005'
+	
+	constant integer UPG_EVOLUTION                = 'R00U'
 
     constant integer BLOOD_ELF_PRIEST             = 'h00G'
 	constant integer BLOOD_ELF_LIEUTENANT         = 'nbel'
@@ -146,6 +148,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
 	call SetBuildUpgr( 1, UPG_SENTINEL )
 	call SetBuildUpgr( 1, UPG_CLOUD )
+	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
