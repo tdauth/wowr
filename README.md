@@ -79,6 +79,7 @@ This version provides several new features compared to the original map:
 * Blood Elf upgrades are not visible to Human anymore.
 * New race: Draenei.
 * New hero: Akama.
+* New upgrade: Evolution.
 
 ## Bug Fixes
 
