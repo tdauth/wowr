@@ -126,7 +126,9 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, DEMON_GATE_1 )
+	if (((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0))) then
+		call SetBuildUnit( 1, DEMON_GATE_1 )
+	endif
     call SetBuildUnit( 6, DEMON_IMP )
 	call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
 	call SetBuildUnit( 2, DEMON_HOUSING )
@@ -143,7 +145,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DEMON_WEB )
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, DEMON_GATE_2 )
+	if (((GetUnitCount(DEMON_GATE_3) == 0))) then
+		call SetBuildUnit( 1, DEMON_GATE_2 )
+	endif
     call SetBuildUnit( 1, DEMON_DUNGEON_OF_PAIN )
     call SetBuildUnit( 1, DEMON_PORTAL )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )

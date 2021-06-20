@@ -92,7 +92,9 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
 	call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
+	if (((GetUnitCount(BLOOD_ELF_KEEP) == 0) and (GetUnitCount(BLOOD_ELF_CASTLE) == 0))) then
+		call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
+	endif
 	call SetBuildUnit( 15, BLOOD_PEASANT )
 	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
 	call SetBuildUnit( 3, HOUSE )
@@ -109,7 +111,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
 
     // Tier 2 buildings
-	call SetBuildUnit( 1, BLOOD_ELF_KEEP )
+	if (((GetUnitCount(BLOOD_ELF_CASTLE) == 0))) then
+		call SetBuildUnit( 1, BLOOD_ELF_KEEP )
+	endif
 	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
 	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
 	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
