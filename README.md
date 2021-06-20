@@ -1,4 +1,4 @@
-# World of Warcraft The Second Rebirth
+# World of Warcraft Reforged
 
 Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
