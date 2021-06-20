@@ -80,6 +80,7 @@ This version provides several new features compared to the original map:
 * New race: Draenei.
 * New hero: Akama.
 * New upgrade: Evolution.
+* New Forsaken quest: Legendary Items.
 
 ## Bug Fixes
 
@@ -152,3 +153,11 @@ The original map script has been added to this repository as well as the origina
 * [wowtsr1.3.w3x](./releases/wowtsr1.3.w3x)
 * [wowtsr1.2.w3x](./releases/wowtsr1.2.w3x)
 * [wowtsr1.1.w3x](./releases/wowtsr1.1.w3x)
+
+## Credits
+
+* Baradé: Creator.
+* Deranor: Tests.
+* Runeblade14: Tests.
+* EvilPitlord: Original map.
+* DeMoNiKuS: Original map.
