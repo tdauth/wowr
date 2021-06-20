@@ -81,6 +81,7 @@ This version provides several new features compared to the original map:
 * New hero: Akama.
 * New upgrade: Evolution.
 * New Forsaken quest: Legendary Items.
+* New Lich King quest: The Burning Legion.
 
 ## Bug Fixes
 
