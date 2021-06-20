@@ -8,6 +8,7 @@ globals
 	constant integer BLOOD_ELF_LUMBER_MILL        = 'h00F' // lumber mill
 	constant integer BLOOD_ELF_TOWN_HALL          = 'h009' // town hall
 	constant integer BLOOD_ELF_SCOUT_TOWER        = 'h00I' // tower
+	constant integer BLOOD_ELF_WORKSHOP           = 'h013' // workshop
 	
 	constant integer UPG_BLOOD_ELF_BREEDING       = 'R000'
 	constant integer UPG_BLOOD_ELF_BOWS           = 'R009'
@@ -20,12 +21,16 @@ globals
 	constant integer UPG_BLOOD_ELF_PRAYING        = 'R007'
 	constant integer UPG_BLOOD_ELF_STR_MOON       = 'R008'
 	constant integer UPG_BLOOD_ELF_LEATHER        = 'R005'
+	constant integer UPG_BLOOD_ELF_BURNING_OIL    = 'R00Y'
+	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE = 'R00Z'
 	
 	constant integer UPG_EVOLUTION                = 'R00U'
 
     constant integer BLOOD_ELF_PRIEST             = 'h00G'
 	constant integer BLOOD_ELF_LIEUTENANT         = 'nbel'
 	constant integer BLOOD_ELF_WAGON              = 'h012'
+	constant integer BLOOD_ELF_BALLISTA           = 'e00C'
+	constant integer BLOOD_ELF_CAGE               = 'e00D'
 
     constant integer BLOOD_ELF_CITIZEN_MALE       = 'n00K'
     constant integer BLOOD_ELF_CITIZEN_FEMALE     = 'n00L'
@@ -138,6 +143,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, BLOOD_PEASANT )
 	call SetBuildUnit( 1, ELF_GUARD_TOWER )
 	call SetBuildUnit( 1, ARCANE_TOWER )
+	call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )
 	
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
 	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
@@ -147,6 +153,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MASONRY )
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
 	call SetBuildUpgr( 2, UPG_SORCERY )
+	call SetBuildUpgr( 3, UPG_BLOOD_ELF_IMPROVED_SIEGE )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
 	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
@@ -379,6 +386,8 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 3, 4, 5, HUMAN_DRAGON_HAWK )
 		call CampaignAttackerEx( 3, 4, 5, BLOOD_ELF_LIEUTENANT )
 		call CampaignAttackerEx( 3, 4, 5, BLOOD_ELF_WAGON )
+		call CampaignAttackerEx( 3, 4, 5, BLOOD_ELF_BALLISTA )
+		call CampaignAttackerEx( 3, 4, 5, BLOOD_ELF_CAGE )
 		call CampaignAttacker( 0, 1, hero_id )
 		call Sleep( M2 ) // Waits 2 minutes before attacking
 		call LaunchAttack()
