@@ -370,6 +370,9 @@ function RespawnGroup takes integer Group returns nothing
                     set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
                 endif
                 set GroupMember = CreateUnit(NeutralAggressivePlayer, udg_RespawnUnitType[index], GetLocationX(RespawnLocation), GetLocationY(RespawnLocation), GetRandomReal(0.00, 360.00))
+				if (GetPlayerTechCountSimple('R00U', NeutralAggressivePlayer) > 0) then
+					call BlzSetUnitIntegerFieldBJ(GroupMember, UNIT_IF_LEVEL, (BlzGetUnitIntegerField(GroupMember, UNIT_IF_LEVEL) + GetPlayerTechCountSimple('R00U', NeutralAggressivePlayer)))
+				endif
                 call AssignUnitToGroup(GroupMember, Group)
                 call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
                 if (udg_RespawnLocationPerUnit[index] == null) then

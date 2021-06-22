@@ -83,6 +83,7 @@ This version provides several new features compared to the original map:
 * New Forsaken quest: Legendary Items.
 * New Lich King quest: The Burning Legion.
 * New building Workshop with units Ballista, Cage and Wagon for Blood Elves.
+* Male citizens can build Portals.
 
 ## Bug Fixes
 
