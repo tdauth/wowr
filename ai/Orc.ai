@@ -1,9 +1,10 @@
 globals
-    constant integer UPG_EVOLUTION          = 'R00U'
+    constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+    constant integer UPG_EVOLUTION                                   = 'R00U'
 
-    constant integer ORC_CITIZEN_MALE       = 'n00I'
-    constant integer ORC_CITIZEN_FEMALE     = 'n00J'
-    constant integer ORC_HOUSING            = 'h00V'
+    constant integer ORC_CITIZEN_MALE                                = 'n00I'
+    constant integer ORC_CITIZEN_FEMALE                              = 'n00J'
+    constant integer ORC_HOUSING                                     = 'h00V'
 endglobals
 
 //===========================================================================
@@ -161,6 +162,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_ORC_VENOM )
 	call SetBuildUpgr( 1, UPG_ORC_WAR_DRUMS )
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *

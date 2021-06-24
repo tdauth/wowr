@@ -1,40 +1,41 @@
 globals
-	constant integer BLOOD_ELF_ARCANE_SACNTUM     = 'h00E' // arcane
-	constant integer BLOOD_ELF_ARCANE_VAULT       = 'h00H' // shop
-	constant integer BLOOD_ELF_BARRACKS           = 'h00C' // barracks
-	constant integer BLOOD_ELF_BLACK_SMITH        = 'h00D' // blacksmith
-	constant integer BLOOD_ELF_CASTLE             = 'h00B' // castle
-	constant integer BLOOD_ELF_KEEP               = 'h00A' // keep
-	constant integer BLOOD_ELF_LUMBER_MILL        = 'h00F' // lumber mill
-	constant integer BLOOD_ELF_TOWN_HALL          = 'h009' // town hall
-	constant integer BLOOD_ELF_SCOUT_TOWER        = 'h00I' // tower
-	constant integer BLOOD_ELF_WORKSHOP           = 'h013' // workshop
+	constant integer BLOOD_ELF_ARCANE_SACNTUM                     = 'h00E' // arcane
+	constant integer BLOOD_ELF_ARCANE_VAULT                       = 'h00H' // shop
+	constant integer BLOOD_ELF_BARRACKS                           = 'h00C' // barracks
+	constant integer BLOOD_ELF_BLACK_SMITH                        = 'h00D' // blacksmith
+	constant integer BLOOD_ELF_CASTLE                             = 'h00B' // castle
+	constant integer BLOOD_ELF_KEEP                               = 'h00A' // keep
+	constant integer BLOOD_ELF_LUMBER_MILL                        = 'h00F' // lumber mill
+	constant integer BLOOD_ELF_TOWN_HALL                          = 'h009' // town hall
+	constant integer BLOOD_ELF_SCOUT_TOWER                        = 'h00I' // tower
+	constant integer BLOOD_ELF_WORKSHOP                           = 'h013' // workshop
 	
-	constant integer UPG_BLOOD_ELF_BREEDING       = 'R000'
-	constant integer UPG_BLOOD_ELF_BOWS           = 'R009'
-	constant integer UPG_BLOOD_ELF_WOOD           = 'R006'
-	constant integer UPG_BLOOD_ELF_MASONRY        = 'R003'
-	constant integer UPG_BLOOD_ELF_MELEE          = 'R001'
-	constant integer UPG_BLOOD_ELF_ARMOR          = 'R002'
-	constant integer UPG_BLOOD_ELF_MARKSMAN       = 'R00A'
-	constant integer UPG_BLOOD_ELF_MOON_ARMOR     = 'R004'
-	constant integer UPG_BLOOD_ELF_PRAYING        = 'R007'
-	constant integer UPG_BLOOD_ELF_STR_MOON       = 'R008'
-	constant integer UPG_BLOOD_ELF_LEATHER        = 'R005'
-	constant integer UPG_BLOOD_ELF_BURNING_OIL    = 'R00Y'
-	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE = 'R00Z'
+	constant integer UPG_BLOOD_ELF_BREEDING                       = 'R000'
+	constant integer UPG_BLOOD_ELF_BOWS                           = 'R009'
+	constant integer UPG_BLOOD_ELF_WOOD                           = 'R006'
+	constant integer UPG_BLOOD_ELF_MASONRY                        = 'R003'
+	constant integer UPG_BLOOD_ELF_MELEE                          = 'R001'
+	constant integer UPG_BLOOD_ELF_ARMOR                          = 'R002'
+	constant integer UPG_BLOOD_ELF_MARKSMAN                       = 'R00A'
+	constant integer UPG_BLOOD_ELF_MOON_ARMOR                     = 'R004'
+	constant integer UPG_BLOOD_ELF_PRAYING                        = 'R007'
+	constant integer UPG_BLOOD_ELF_STR_MOON                       = 'R008'
+	constant integer UPG_BLOOD_ELF_LEATHER                        = 'R005'
+	constant integer UPG_BLOOD_ELF_BURNING_OIL                    = 'R00Y'
+	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                 = 'R00Z'
 	
-	constant integer UPG_EVOLUTION                = 'R00U'
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS            = 'R00B'
+	constant integer UPG_EVOLUTION                                = 'R00U'
 
-    constant integer BLOOD_ELF_PRIEST             = 'h00G'
-	constant integer BLOOD_ELF_LIEUTENANT         = 'nbel'
-	constant integer BLOOD_ELF_WAGON              = 'h012'
-	constant integer BLOOD_ELF_BALLISTA           = 'e00C'
-	constant integer BLOOD_ELF_CAGE               = 'e00D'
+    constant integer BLOOD_ELF_PRIEST                             = 'h00G'
+	constant integer BLOOD_ELF_LIEUTENANT                         = 'nbel'
+	constant integer BLOOD_ELF_WAGON                              = 'h012'
+	constant integer BLOOD_ELF_BALLISTA                           = 'e00C'
+	constant integer BLOOD_ELF_CAGE                               = 'e00D'
 
-    constant integer BLOOD_ELF_CITIZEN_MALE       = 'n00K'
-    constant integer BLOOD_ELF_CITIZEN_FEMALE     = 'n00L'
-    constant integer BLOOD_ELF_HOUSING            = 'h00T'
+    constant integer BLOOD_ELF_CITIZEN_MALE                       = 'n00K'
+    constant integer BLOOD_ELF_CITIZEN_FEMALE                     = 'n00L'
+    constant integer BLOOD_ELF_HOUSING                            = 'h00T'
 endglobals
 
 //===========================================================================
@@ -159,6 +160,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
 	call SetBuildUpgr( 1, UPG_SENTINEL )
 	call SetBuildUpgr( 1, UPG_CLOUD )
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *

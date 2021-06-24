@@ -14,6 +14,7 @@ globals
 	constant integer DRAENEI_HARBINGER                               = 'ndrh' // sorceress
 	constant integer DRAENEI_DEMOLISHER                              = 'ncat' // mortar
 	
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 	
 	constant integer AKAMA                                           = 'N01K'
@@ -94,6 +95,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 4, DRAENEI_ADVANCED_BOULDER_TOWER )
 	
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *

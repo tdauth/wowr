@@ -1,9 +1,10 @@
 globals
-    constant integer UPG_EVOLUTION             = 'R00U'
+    constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+    constant integer UPG_EVOLUTION                                   = 'R00U'
 
-    constant integer UNDEAD_CITIZEN_MALE       = 'n00G'
-    constant integer UNDEAD_CITIZEN_FEMALE     = 'n00H'
-    constant integer UNDEAD_HOUSING            = 'h00U'
+    constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
+    constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
+    constant integer UNDEAD_HOUSING                                  = 'h00U'
 endglobals
 
 //===========================================================================
@@ -161,6 +162,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BLK_SPHINX )
 	call SetBuildUpgr( 1, UPG_WYRM_BREATH )
 	call SetBuildUpgr( 1, 'Rupm' ) // backpack
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *

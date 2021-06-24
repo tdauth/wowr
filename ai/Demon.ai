@@ -41,6 +41,7 @@ globals
 	constant integer UPG_DEMON_HARDENED_SKIN                         = 'R00K'
 	constant integer UPG_DEMON_BACKPACK                              = 'R00G'
 	
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 
 	constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
@@ -185,6 +186,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DEMON_PERMANENT_IMMOLATION )
 	call SetBuildUpgr( 1, UPG_DEMON_HARDENED_SKIN )
 	call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
