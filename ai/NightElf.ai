@@ -123,7 +123,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, HUNTERS_HALL )
     call SetBuildUnit( 1, ANCIENT_WIND )
     call SetBuildUnit( 1, ANCIENT_LORE )
-    call SetBuildUnit( 4, MOON_WELL )
+    call SetBuildUnit( 3, MOON_WELL )
     call SetBuildUnit( 5, WISP )
 	
     call SetBuildUpgr( 2, UPG_STR_MOON )
@@ -141,8 +141,8 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 buildings
     call SetBuildUnit( 1, TREE_ETERNITY )
-    call SetBuildUnit( 1, TOTEM )
-    call SetBuildUnit( 5, MOON_WELL )
+    call SetBuildUnit( 2, CHIMAERA_ROOST )
+    call SetBuildUnit( 2, MOON_WELL )
     call SetBuildUnit( 2, ANCIENT_PROTECT )
 	
 	call SetBuildUpgr( 3, UPG_STR_MOON )
