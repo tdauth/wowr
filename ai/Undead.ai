@@ -5,6 +5,7 @@ globals
     constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
     constant integer UNDEAD_HOUSING                                  = 'h00U'
+	constant integer PORTAL                                          = 'h014'
 endglobals
 
 //===========================================================================
@@ -125,9 +126,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, GRAVEYARD )
     call SetBuildUnit( 1, DAMNED_TEMPLE )
     call SetBuildUnit( 1, SLAUGHTERHOUSE )
-    call SetBuildUnit( 4, ZIGGURAT_1 )
     call SetBuildUnit( 5, ACOLYTE )
-    call SetBuildUnit( 4, ZIGGURAT_2 )
+    call SetBuildUnit( 3, ZIGGURAT_2 )
 	
 	call SetBuildUpgr( 2, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 2, UPG_UNHOLY_ARMOR )
@@ -144,8 +144,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, NECROPOLIS_3 )
     call SetBuildUnit( 1, SAC_PIT )
     call SetBuildUnit( 2, BONEYARD )
-    call SetBuildUnit( 5, ZIGGURAT_1 )
-    call SetBuildUnit( 4, ZIGGURAT_2 )
+    call SetBuildUnit( 2, ZIGGURAT_FROST )
+    call SetBuildUnit( 1, ZIGGURAT_2 )
+	call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )

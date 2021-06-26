@@ -22,6 +22,7 @@ globals
     constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
     constant integer DRAENEI_HOUSING                                 = 'h011'
+	constant integer PORTAL                                          = 'h014'
 endglobals
 
 //===========================================================================
@@ -91,8 +92,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 2, DRAENEI_BARRACKS )
     call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
     call SetBuildUnit( 1, DRAENEI_SHOP )
-	call SetBuildUnit( 1, DRAENEI_BOULDER_TOWER )
-	call SetBuildUnit( 4, DRAENEI_ADVANCED_BOULDER_TOWER )
+	call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
 	
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
