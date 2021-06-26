@@ -163,7 +163,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_WYRM_BREATH )
 	call SetBuildUpgr( 1, 'Rupm' ) // backpack
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

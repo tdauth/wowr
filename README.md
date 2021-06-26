@@ -85,6 +85,7 @@ This version provides several new features compared to the original map:
 * New building Workshop with units Ballista, Cage and Wagon for Blood Elves.
 * Male citizens can build Portals.
 * More different alliance chat commands.
+* Hideouts have Portal abilities from the new Portal buildings.
 
 ## Bug Fixes
 

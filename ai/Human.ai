@@ -166,7 +166,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BOMBS )
 	call SetBuildUpgr( 1, 'Rhsb' ) // sundering blades
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

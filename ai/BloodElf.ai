@@ -161,7 +161,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_SENTINEL )
 	call SetBuildUpgr( 1, UPG_CLOUD )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

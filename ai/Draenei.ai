@@ -96,7 +96,7 @@ function BuildingStrategy takes nothing returns nothing
 	
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
