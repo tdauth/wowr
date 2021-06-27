@@ -6,6 +6,13 @@ globals
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
     constant integer UNDEAD_HOUSING                                  = 'h00U'
 	constant integer PORTAL                                          = 'h014'
+	
+	constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
+	constant integer DARK_RANGER_SILENCE                             = 'ANsi'
+	constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
+	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
+	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
+
 endglobals
 
 //===========================================================================
@@ -41,15 +48,15 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return UNHOLY_AURA
         endif
-    elseif (curHero == DREAD_LORD) then
+    elseif (curHero == DARK_RANGER_NEUTRAL) then
         if (skillUlti) then
-            return INFERNO
+            return DARK_RANGER_UNHOLY_SPIRITS
         elseif (mod == 0) then
-            return SLEEP
+            return DARK_RANGER_SILENCE
         elseif (mod == 1) then
-            return VAMP_AURA
+            return DARK_RANGER_DARK_PORTAL
         elseif (mod == 2) then
-            return CARRION_SWARM
+            return DARK_RANGER_LIFE_DRAIN
         endif
     elseif (curHero == LICH) then
         if (skillUlti) then
@@ -79,8 +86,8 @@ endfunction
 function InitHero takes nothing returns nothing
     if (GetUnitCountDone(DEATH_KNIGHT) > 0) then
         set hero_id = DEATH_KNIGHT
-    elseif (GetUnitCountDone(DREAD_LORD) > 0) then
-        set hero_id = DREAD_LORD
+    elseif (GetUnitCountDone(DARK_RANGER_NEUTRAL) > 0) then
+        set hero_id = DARK_RANGER_NEUTRAL
     elseif (GetUnitCountDone(LICH) > 0) then
         set hero_id = LICH
     elseif (GetUnitCountDone(CRYPT_LORD) > 0) then

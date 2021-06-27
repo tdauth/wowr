@@ -49,6 +49,12 @@ globals
 	constant integer HOWL_OF_TERROR                                  = 'ANht'
 	constant integer CLEAVING_ATTACK                                 = 'ANca'
 	constant integer DEMON_MASTER                                    = 'A01R'
+	
+	constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
+	constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
+	constant integer EREDAR_WARLOCK_MANA_SHIELD                      = 'ANms'
+	constant integer EREDAR_WARLOCK_BASH                             = 'A061'
+	constant integer EREDAR_FINGER_OF_DEATH                          = 'A060'
 
     constant integer DEMON_CITIZEN_MALE                              = 'n016'
     constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
@@ -105,7 +111,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return CARRION_SWARM
         endif
-    endif
+	elseif (curHero == EREDAR_WARLOCK_NEUTRAL) then
+		if (skillUlti) then
+            return EREDAR_FINGER_OF_DEATH
+        elseif (mod == 0) then
+            return EREDAR_WARLOCK_FIRE_BOLT
+        elseif (mod == 1) then
+            return EREDAR_WARLOCK_MANA_SHIELD
+        elseif (mod == 2) then
+            return EREDAR_WARLOCK_BASH
+        endif
+	endif
 
     return 'Aamk'
 endfunction
@@ -115,6 +131,8 @@ function InitHero takes nothing returns nothing
         set hero_id = PIT_LORD_NEUTRAL
     elseif (GetUnitCountDone(DREAD_LORD) > 0) then
         set hero_id = DREAD_LORD
+	elseif (GetUnitCountDone(EREDAR_WARLOCK_NEUTRAL) > 0) then
+		set hero_id = EREDAR_WARLOCK_NEUTRAL
     endif
 endfunction
 
