@@ -153,7 +153,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, BONEYARD )
     call SetBuildUnit( 2, ZIGGURAT_FROST )
     call SetBuildUnit( 1, ZIGGURAT_2 )
-	call SetBuildUnit( 1, PORTAL )
+	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )

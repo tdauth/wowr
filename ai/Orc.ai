@@ -149,7 +149,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, PEON )
     call SetBuildUnit( 2, ORC_WATCH_TOWER )
     call SetBuildUnit( 2, ORC_CITIZEN_MALE )
-	call SetBuildUnit( 1, PORTAL )
+	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_ORC_MELEE )
     call SetBuildUpgr( 3, UPG_ORC_RANGED )

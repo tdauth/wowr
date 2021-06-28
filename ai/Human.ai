@@ -151,8 +151,9 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
 	call SetBuildUnit( 1, CASTLE )
 	call SetBuildUnit( 1, AVIARY )
+	call SetBuildUnit( 2, WATCH_TOWER )
 	call SetBuildUnit( 2, GUARD_TOWER )
-	call SetBuildUnit( 1, PORTAL )
+	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_MELEE )
     call SetBuildUpgr( 3, UPG_RANGED )

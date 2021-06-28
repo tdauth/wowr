@@ -136,6 +136,22 @@ function InitHero takes nothing returns nothing
     endif
 endfunction
 
+function UpdateWorkers takes nothing returns nothing
+	loop
+		if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
+			call SetGoldPeons(5)
+			call SetWoodPeons(3)
+		elseif (GetUnitCount(DEMON_GATE_3) == 0) then
+			call SetGoldPeons(6)
+			call SetWoodPeons(4)
+		else
+			call SetGoldPeons(8)
+			call SetWoodPeons(5)
+		endif
+		call Sleep(1)
+	endloop
+endfunction
+
 function ConfigureAI takes nothing returns nothing
     call SetTargetHeroes( true )
     call SetUnitsFlee( true )
@@ -149,9 +165,6 @@ function ConfigureAI takes nothing returns nothing
 	call SetGroupsFlee( true )
 	//call SetCaptainChanges ( true )
 	call SetSmartArtillery ( true )
-	
-	call SetGoldPeons(8)
-	call SetWoodPeons(5)
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -160,12 +173,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	if (((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0))) then
+	if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
 		call SetBuildUnit( 1, DEMON_GATE_1 )
 	else
 		call SetBuildUnit( 0, DEMON_GATE_1 )
 	endif
-	call SetBuildUnit( 2, DEMON_IMP )
+	call SetBuildUnit( 13, DEMON_IMP )
 	call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
 	call SetBuildUnit( 2, DEMON_HOUSING )
 	call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )
@@ -173,7 +186,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
     call SetBuildUnit( 1, DEMON_ALTAR )
     call SetBuildUnit( 1, DEMON_OBELISK )
-	call SetBuildUnit( 7, DEMON_IMP )
 	
 	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_STR )
 	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_ARMOR )
@@ -182,7 +194,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DEMON_WEB )
 
     // Tier 2 buildings
-	if (((GetUnitCount(DEMON_GATE_3) == 0))) then
+	if (GetUnitCount(DEMON_GATE_3) == 0) then
 		call SetBuildUnit( 1, DEMON_GATE_2 )
 	else
 		call SetBuildUnit( 0, DEMON_GATE_2 )
@@ -190,7 +202,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DEMON_DUNGEON_OF_PAIN )
     call SetBuildUnit( 1, DEMON_PORTAL )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
-    call SetBuildUnit( 5, DEMON_IMP )
 	call SetBuildUnit( 2, DEMON_CITIZEN_FEMALE )
 	
 	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_STR )
@@ -213,7 +224,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DEMON_GATE_3 )
     call SetBuildUnit( 2, DEMON_SHRINE )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
-	call SetBuildUnit( 1, PORTAL )
+	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
@@ -248,6 +259,12 @@ function AttackWithMount takes nothing returns nothing
 	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
 		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
 	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
 endfunction
 
 //===========================================================================
@@ -343,9 +360,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
     call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -353,8 +368,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
     call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
-	call PurchaseZeppelin()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -362,9 +376,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -373,9 +385,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -386,9 +396,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -399,9 +407,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -412,9 +418,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -426,9 +430,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -441,9 +443,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -457,9 +457,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
     call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -474,9 +472,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
     call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL )
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -492,9 +488,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 3, 4, 6, DEMON_SUCCUBUS )
         call CampaignAttackerEx( 3, 4, 6, DEMON_NETHER_DRAKE )
         call CampaignAttackerEx( 3, 4, 6, DEMON_INFERNAL )
-		call PurchaseZeppelin()
-		call AttackWithMount()
-        call CampaignAttacker( 0, 1, hero_id )
+		call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
@@ -504,6 +498,7 @@ function main takes nothing returns nothing
     call CampaignAI( DEMON_FORTIFIED_INFERNAL_MACHINE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
+	call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

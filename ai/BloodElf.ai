@@ -146,7 +146,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, ELF_GUARD_TOWER )
 	call SetBuildUnit( 1, ARCANE_TOWER )
 	call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )
-	call SetBuildUnit( 1, PORTAL )
+	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
 	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )

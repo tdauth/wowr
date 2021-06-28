@@ -93,6 +93,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
     call SetBuildUnit( 1, DRAENEI_SHOP )
 	call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
+	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
