@@ -224,7 +224,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DEMON_GATE_3 )
     call SetBuildUnit( 2, DEMON_SHRINE )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
-	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )

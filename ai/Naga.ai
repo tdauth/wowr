@@ -105,7 +105,6 @@ function BuildingStrategy takes nothing returns nothing
 	
     // Tier 3 buildings
 	call SetBuildUnit( 3, NAGA_GUARDIAN )
-	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 3, UPG_NAGA_ATTACK )

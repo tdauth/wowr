@@ -153,7 +153,6 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, AVIARY )
 	call SetBuildUnit( 2, WATCH_TOWER )
 	call SetBuildUnit( 2, GUARD_TOWER )
-	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_MELEE )
     call SetBuildUpgr( 3, UPG_RANGED )

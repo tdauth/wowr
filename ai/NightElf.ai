@@ -146,7 +146,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, CHIMAERA_ROOST )
     call SetBuildUnit( 2, MOON_WELL )
     call SetBuildUnit( 2, ANCIENT_PROTECT )
-	//call SetBuildUnit( 1, PORTAL )
 	
 	call SetBuildUpgr( 3, UPG_STR_MOON )
 	call SetBuildUpgr( 3, UPG_STR_WILD )

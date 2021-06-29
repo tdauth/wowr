@@ -134,7 +134,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DAMNED_TEMPLE )
     call SetBuildUnit( 1, SLAUGHTERHOUSE )
     call SetBuildUnit( 5, ACOLYTE )
-    call SetBuildUnit( 3, ZIGGURAT_2 )
+    call SetBuildUnit( 2, ZIGGURAT_1 )
 	
 	call SetBuildUpgr( 2, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 2, UPG_UNHOLY_ARMOR )
@@ -152,8 +152,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, SAC_PIT )
     call SetBuildUnit( 2, BONEYARD )
     call SetBuildUnit( 2, ZIGGURAT_FROST )
-    call SetBuildUnit( 1, ZIGGURAT_2 )
-	//call SetBuildUnit( 1, PORTAL )
+    call SetBuildUnit( 2, ZIGGURAT_2 )
 	
 	call SetBuildUpgr( 3, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )
