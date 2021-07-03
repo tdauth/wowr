@@ -88,6 +88,20 @@ function InitHero takes nothing returns nothing
     endif
 endfunction
 
+function UpdateWorkers takes nothing returns nothing
+	loop
+		call SetGoldPeons(5 + GetUnitCount(ORC_HOUSING) * 3)
+		if ((GetUnitCount(STRONGHOLD) == 0) and (GetUnitCount(FORTRESS) == 0)) then
+			call SetWoodPeons(3)
+		elseif (GetUnitCount(FORTRESS) == 0) then
+			call SetWoodPeons(4)
+		else
+			call SetWoodPeons(5)
+		endif
+		call Sleep(1)
+	endloop
+endfunction
+
 function ConfigureAI takes nothing returns nothing
     call SetTargetHeroes( true )
     call SetUnitsFlee( true )
@@ -96,6 +110,11 @@ function ConfigureAI takes nothing returns nothing
     call SetHeroesBuyItems( true )
     call SetHeroesTakeItems( true )
     call SetSlowChopping( false )
+	call SetWatchMegaTargets( true )
+	call SetIgnoreInjured( false )
+	call SetGroupsFlee( true )
+	//call SetCaptainChanges ( true )
+	call SetSmartArtillery ( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -169,6 +188,30 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // *    End Building Strategy       *
     // **********************************
+endfunction
+
+function AttackWithMount takes nothing returns nothing
+	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+	endif
+	if (GetUnitCount(WYVERN_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+	endif
+	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+	endif
+	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+	endif
+	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
 endfunction
 
 //===========================================================================
@@ -264,7 +307,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, GRUNT )
     call CampaignAttackerEx( 0, 1, 2, HEAD_HUNTER )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -272,7 +315,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, GRUNT )
     call CampaignAttackerEx( 0, 1, 2, HEAD_HUNTER )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -280,7 +323,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GRUNT )
     call CampaignAttackerEx( 1, 2, 3, HEAD_HUNTER )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -289,7 +332,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, GRUNT )
     call CampaignAttackerEx( 1, 2, 3, HEAD_HUNTER )
     call CampaignAttackerEx( 1, 2, 3, RAIDER )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -299,7 +342,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, HEAD_HUNTER )
     call CampaignAttackerEx( 1, 2, 3, RAIDER )
     call CampaignAttackerEx( 1, 2, 3, CATAPULT )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -310,7 +353,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, RAIDER )
     call CampaignAttackerEx( 1, 2, 3, CATAPULT )
     call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -321,7 +364,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, RAIDER )
     call CampaignAttackerEx( 1, 2, 3, CATAPULT )
     call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -333,7 +376,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, CATAPULT )
     call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
     call CampaignAttackerEx( 2, 2, 3, SHAMAN )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -346,7 +389,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
     call CampaignAttackerEx( 2, 2, 3, SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, KODO_BEAST )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -360,7 +403,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, KODO_BEAST )
     call CampaignAttackerEx( 2, 2, 3, WYVERN )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -376,7 +419,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, WYVERN )
     call CampaignAttackerEx( 2, 2, 3, TAUREN )
 	call CampaignAttackerEx( 2, 2, 3, SPIRIT_WALKER )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -393,7 +436,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 8, 12, WYVERN )
         call CampaignAttackerEx( 4, 8, 12, TAUREN )
 		call CampaignAttackerEx( 4, 8, 12, SPIRIT_WALKER )
-        call CampaignAttacker( 0, 1, hero_id )
+        call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
@@ -403,6 +446,7 @@ function main takes nothing returns nothing
     call CampaignAI( BURROW, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
+	call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

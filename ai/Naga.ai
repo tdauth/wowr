@@ -62,6 +62,14 @@ function InitHero takes nothing returns nothing
     endif
 endfunction
 
+function UpdateWorkers takes nothing returns nothing
+	loop
+		call SetGoldPeons(5 + GetUnitCount(NAGA_HOUSING) * 3)
+		call SetWoodPeons(5)
+		call Sleep(1)
+	endloop
+endfunction
+
 function ConfigureAI takes nothing returns nothing
     call SetTargetHeroes( true )
     call SetUnitsFlee( true )
@@ -70,6 +78,11 @@ function ConfigureAI takes nothing returns nothing
     call SetHeroesBuyItems( true )
     call SetHeroesTakeItems( true )
     call SetSlowChopping( false )
+	call SetWatchMegaTargets( true )
+	call SetIgnoreInjured( false )
+	call SetGroupsFlee( true )
+	//call SetCaptainChanges ( true )
+	call SetSmartArtillery ( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -116,6 +129,30 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // *    End Building Strategy       *
     // **********************************
+endfunction
+
+function AttackWithMount takes nothing returns nothing
+	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+	endif
+	if (GetUnitCount(WYVERN_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+	endif
+	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+	endif
+	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+	endif
+	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
 endfunction
 
 //===========================================================================
@@ -211,7 +248,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
     call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -219,7 +256,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
     call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -227,7 +264,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
     call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -236,7 +273,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
     call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
     call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -246,7 +283,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
     call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -257,7 +294,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -268,7 +305,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_MYRMIDON )
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -280,7 +317,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -292,7 +329,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -305,7 +342,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
 	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -318,7 +355,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
 	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
-    call CampaignAttacker( 0, 1, hero_id )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -332,7 +369,7 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 3, 4, 5, NAGA_SIREN )
 		call CampaignAttackerEx( 3, 4, 5, NAGA_COUATL )
 		call CampaignAttackerEx( 3, 4, 5, NAGA_ROYAL )
-		call CampaignAttacker( 0, 1, hero_id )
+		call AddStandardUnitsToAttackWave()
 		call Sleep( M2 ) // Waits 2 minutes before attacking
 		call LaunchAttack()
     endloop
@@ -342,6 +379,7 @@ function main takes nothing returns nothing
     call CampaignAI( NAGA_CORAL, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
+	call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

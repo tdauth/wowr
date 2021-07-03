@@ -138,14 +138,12 @@ endfunction
 
 function UpdateWorkers takes nothing returns nothing
 	loop
+		call SetGoldPeons(5 + GetUnitCount(DEMON_HOUSING) * 3)
 		if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
-			call SetGoldPeons(5)
 			call SetWoodPeons(3)
 		elseif (GetUnitCount(DEMON_GATE_3) == 0) then
-			call SetGoldPeons(6)
 			call SetWoodPeons(4)
 		else
-			call SetGoldPeons(8)
 			call SetWoodPeons(5)
 		endif
 		call Sleep(1)
@@ -223,7 +221,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
     call SetBuildUnit( 1, DEMON_GATE_3 )
     call SetBuildUnit( 2, DEMON_SHRINE )
-    call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
+    call SetBuildUnit( 1, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
 	
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
