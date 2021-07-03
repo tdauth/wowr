@@ -6,6 +6,12 @@ globals
     constant integer ORC_CITIZEN_FEMALE                              = 'n00J'
     constant integer ORC_HOUSING                                     = 'h00V'
 	constant integer PORTAL                                          = 'h014'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 endglobals
 
 //===========================================================================
@@ -124,7 +130,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, GREAT_HALL )
-    call SetBuildUnit( 15, PEON )
+    call SetBuildUnit( 17, PEON )
     call SetBuildUnit( 2, ORC_CITIZEN_MALE )
     call SetBuildUnit( 3, BURROW )
     call SetBuildUnit( 2, ORC_HOUSING )
@@ -148,7 +154,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, LODGE )
     call SetBuildUnit( 1, BESTIARY )
     call SetBuildUnit( 4, BURROW )
-    call SetBuildUnit( 5, PEON )
     call SetBuildUnit( 2, ORC_CITIZEN_FEMALE )
 	
 	call SetBuildUpgr( 2, UPG_ORC_MELEE )

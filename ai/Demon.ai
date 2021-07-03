@@ -176,7 +176,7 @@ function BuildingStrategy takes nothing returns nothing
 	else
 		call SetBuildUnit( 0, DEMON_GATE_1 )
 	endif
-	call SetBuildUnit( 13, DEMON_IMP )
+	call SetBuildUnit( 17, DEMON_IMP )
 	call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
 	call SetBuildUnit( 2, DEMON_HOUSING )
 	call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )

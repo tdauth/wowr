@@ -9,10 +9,19 @@ globals
 	constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
 	constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
 	constant integer DRAENEI_STALKER                                 = 'ndrt' // knight
-	constant integer DRAENEI_SALAMANDER                              = 'ndsa' // pit fiend
-	constant integer DRAENEI_SEER                                    = 'ndrs' // priest
-	constant integer DRAENEI_HARBINGER                               = 'ndrh' // sorceress
+	constant integer DRAENEI_SALAMANDER                              = 'n01W' // pit fiend
+	constant integer DRAENEI_SEER                                    = 'n01U' // priest
+	constant integer DRAENEI_HARBINGER                               = 'n01V' // sorceress
 	constant integer DRAENEI_DEMOLISHER                              = 'ncat' // mortar
+	
+	constant integer UPG_DRAENEI_DEVOUR                              = 'R018'
+	constant integer UPG_DRAENEI_DEMON_FIRE                          = 'R017'
+	constant integer UPG_DRAENEI_HARBRINGER_ADEPT                    = 'R015'
+	constant integer UPG_DRAENEI_SEER_ADEPT                          = 'R014'
+	constant integer UPG_DRAENEI_IMPROVED_MASONRY                    = 'R016'
+	constant integer UPG_DRAENEI_STEEL_ARMOR                         = 'R013'
+	constant integer UPG_DRAENEI_STEEL_MELEE_WEAPONS                 = 'R011'
+	constant integer UPG_DRAENEI_STEEL_RANGED_WEAPONS                = 'R012'
 	
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
@@ -23,6 +32,12 @@ globals
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
     constant integer DRAENEI_HOUSING                                 = 'h011'
 	constant integer PORTAL                                          = 'h014'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 endglobals
 
 //===========================================================================
@@ -99,7 +114,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 - 3 Buildings
     call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, DRAENEI_HAVEN )
-    call SetBuildUnit( 15, DRAENEI_LABORER )
+    call SetBuildUnit( 17, DRAENEI_LABORER )
 	call SetBuildUnit( 2, DRAENEI_CITIZEN_MALE )
 	call SetBuildUnit( 2, DRAENEI_HOUSING )
 	call SetBuildUnit( 2, DRAENEI_BARRACKS )
@@ -108,7 +123,15 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, DRAENEI_BOULDER_TOWER )
 	call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
 	
+	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_ARMOR )
+	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_MELEE_WEAPONS )
+	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_RANGED_WEAPONS )
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+	call SetBuildUpgr( 2, UPG_DRAENEI_HARBRINGER_ADEPT )
+	call SetBuildUpgr( 2, UPG_DRAENEI_SEER_ADEPT )
+	call SetBuildUpgr( 3, UPG_DRAENEI_IMPROVED_MASONRY )
+	call SetBuildUpgr( 1, UPG_DRAENEI_DEVOUR )
+	call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )	
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************

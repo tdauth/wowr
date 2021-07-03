@@ -37,6 +37,12 @@ globals
     constant integer BLOOD_ELF_CITIZEN_FEMALE                     = 'n00L'
     constant integer BLOOD_ELF_HOUSING                            = 'h00T'
 	constant integer PORTAL                                       = 'h014'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 endglobals
 
 //===========================================================================
@@ -121,7 +127,7 @@ function BuildingStrategy takes nothing returns nothing
 	if (((GetUnitCount(BLOOD_ELF_KEEP) == 0) and (GetUnitCount(BLOOD_ELF_CASTLE) == 0))) then
 		call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
 	endif
-	call SetBuildUnit( 15, BLOOD_PEASANT )
+	call SetBuildUnit( 17, BLOOD_PEASANT )
 	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
 	call SetBuildUnit( 3, HOUSE )
 	call SetBuildUnit( 2, BLOOD_ELF_HOUSING )

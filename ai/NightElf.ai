@@ -6,6 +6,12 @@ globals
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
     constant integer ELF_HOUSING                                     = 'h00S'
 	constant integer PORTAL                                          = 'h014'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 endglobals
 
 //===========================================================================
@@ -92,11 +98,11 @@ function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + GetUnitCount(ELF_HOUSING) * 3)
 		if ((GetUnitCount(TREE_AGES) == 0) and (GetUnitCount(TREE_ETERNITY) == 0)) then
-			call SetWoodPeons(3)
-		elseif (GetUnitCount(TREE_ETERNITY) == 0) then
-			call SetWoodPeons(4)
-		else
 			call SetWoodPeons(5)
+		elseif (GetUnitCount(TREE_ETERNITY) == 0) then
+			call SetWoodPeons(6)
+		else
+			call SetWoodPeons(8)
 		endif
 		call Sleep(1)
 	endloop
@@ -125,7 +131,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, TREE_LIFE )
 	call SetBuildUnit( 1, ELF_MINE )
-    call SetBuildUnit( 10, WISP )
+    call SetBuildUnit( 13, WISP )
     call SetBuildUnit( 3, MOON_WELL )
     call SetBuildUnit( 2, ANCIENT_WAR )
     call SetBuildUnit( 1, ELF_ALTAR )
@@ -144,7 +150,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ANCIENT_WIND )
     call SetBuildUnit( 1, ANCIENT_LORE )
     call SetBuildUnit( 3, MOON_WELL )
-    call SetBuildUnit( 5, WISP )
 	
     call SetBuildUpgr( 2, UPG_STR_MOON )
 	call SetBuildUpgr( 2, UPG_STR_WILD )

@@ -12,6 +12,12 @@ globals
 	constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
 	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
 	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 
 endglobals
 
@@ -152,7 +158,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, GRAVEYARD )
     call SetBuildUnit( 1, DAMNED_TEMPLE )
     call SetBuildUnit( 1, SLAUGHTERHOUSE )
-    call SetBuildUnit( 5, ACOLYTE )
 	
 	call SetBuildUpgr( 2, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 2, UPG_UNHOLY_ARMOR )

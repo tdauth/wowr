@@ -16,6 +16,12 @@ globals
     constant integer NAGA_CITIZEN_FEMALE                             = 'n00N'
     constant integer NAGA_HOUSING                                    = 'h00Q'
 	constant integer PORTAL                                          = 'h014'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 endglobals
 
 //===========================================================================
@@ -92,7 +98,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
 	call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, NAGA_TEMPLE )
-	call SetBuildUnit( 10, NAGA_SLAVE )
+	call SetBuildUnit( 17, NAGA_SLAVE )
 	call SetBuildUnit( 2, NAGA_CITIZEN_MALE )
 	call SetBuildUnit( 3, NAGA_CORAL )
 	call SetBuildUnit( 2, NAGA_HOUSING )
