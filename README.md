@@ -174,3 +174,4 @@ The original map script has been added to this repository as well as the origina
 * Runeblade14: Tests.
 * EvilPitlord: Original map.
 * DeMoNiKuS: Original map.
+* [World of Warcraft logo](https://unrealitymag.com/the-evolution-of-the-world-of-warcraft-logo/)
