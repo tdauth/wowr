@@ -1,0 +1,505 @@
+globals
+    constant integer DEMON_GATE_1                                    = 'u005' // tier 1
+	constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
+	constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
+	constant integer DEMON_ALTAR                                     = 'u008'
+	constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
+	constant integer DEMON_DUNGEON_OF_PAIN                           = 'u00C' // sanctum/damned temple
+	constant integer DEMON_FLOATING_ROCKS                            = 'u009' // lumber will and blacksmith
+	constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and farm
+	constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
+	constant integer DEMON_OBELISK                                   = 'u00G' // shop
+	constant integer DEMON_PORTAL                                    = 'u00B' // slaughterhouse/barracks for stronger units at tier 2
+	constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
+	
+	constant integer DEMON_IMP                                       = 'u006' // worker
+	constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
+	constant integer DEMON_FEL_STALKER                               = 'n019' // pit fiend
+	constant integer DEMON_NETHER_DRAKE                              = 'n01B' // gargoyle
+	constant integer DEMON_INFERNAL_MACHINE                          = 'n01C' // meat wagon
+	constant integer DEMON_GREATER_VOID_WALKER                       = 'n01E' // obsidian statue
+	constant integer DEMON_EREDAR_SORCERER                           = 'n014' // necromancer
+	constant integer DEMON_SUCCUBUS                                  = 'n015' // banshee
+	constant integer DEMON_INFERNAL                                  = 'n012' // frost wyrm/tauren
+	
+	constant integer UPG_DEMON_UNHOLY_STR                            = 'R00H'
+	constant integer UPG_DEMON_UNHOLY_ARMOR                          = 'R00R'
+	constant integer UPG_DEMON_CR_ATTACK                             = 'R00S'
+	constant integer UPG_DEMON_CR_ARMOR                              = 'R00T'
+	constant integer UPG_DEMON_WEB                                   = 'R00I'
+	constant integer UPG_DEMON_CLEAVING_ATTACK                       = 'R00L'
+	constant integer UPG_DEMON_DEVOUR_MAGIC                          = 'R00J'
+	constant integer UPG_DEMON_FIRE                                  = 'R00M'
+	constant integer UPG_DEMON_RAIN_OF_FIRE                          = 'R00P'
+	constant integer UPG_DEMON_DEFEND                                = 'R00N'
+	constant integer UPG_DEMON_CRIPPLE                               = 'R00O'
+	constant integer UPG_DEMON_SLOW                                  = 'R00Q'
+	constant integer UPG_DEMON_SUCCUBUS                              = 'R00F'
+	constant integer UPG_DEMON_EREDAR_SORCERER                       = 'R00E'
+	constant integer UPG_DEMON_RESISTANT_SKIN                        = 'R00D'
+	constant integer UPG_DEMON_PERMANENT_IMMOLATION                  = 'R00C'
+	constant integer UPG_DEMON_HARDENED_SKIN                         = 'R00K'
+	constant integer UPG_DEMON_BACKPACK                              = 'R00G'
+	
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+	constant integer UPG_EVOLUTION                                   = 'R00U'
+
+	constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
+	constant integer RAIN_OF_FIRE                                    = 'Anrf'
+	constant integer HOWL_OF_TERROR                                  = 'ANht'
+	constant integer CLEAVING_ATTACK                                 = 'ANca'
+	constant integer DEMON_MASTER                                    = 'A01R'
+	
+	constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
+	constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
+	constant integer EREDAR_WARLOCK_MANA_SHIELD                      = 'ANms'
+	constant integer EREDAR_WARLOCK_BASH                             = 'A061'
+	constant integer EREDAR_FINGER_OF_DEATH                          = 'A060'
+
+    constant integer DEMON_CITIZEN_MALE                              = 'n016'
+    constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
+    constant integer DEMON_HOUSING                                   = 'h00Y'
+	constant integer PORTAL                                          = 'h014'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+endglobals
+
+//===========================================================================
+// Calculate the modulus/remainder of (dividend) divided by (divisor).
+// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
+//
+function ModuloInteger takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+
+    // If the dividend was negative, the above modulus calculation will
+    // be negative, but within (-divisor..0).  We can add (divisor) to
+    // shift this result into the desired range of (0..divisor).
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function ChooseHeroSkill takes nothing returns integer
+    local integer curHero = GetHeroId()
+    local integer level = GetHeroLevelAI()
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    if (curHero == PIT_LORD_NEUTRAL) then
+        if (skillUlti) then
+            return DEMON_MASTER
+        elseif (mod == 0) then
+            return CLEAVING_ATTACK
+        elseif (mod == 1) then
+            return HOWL_OF_TERROR
+        elseif (mod == 2) then
+            return RAIN_OF_FIRE
+        endif
+    elseif (curHero == DREAD_LORD) then
+        if (skillUlti) then
+            return INFERNO
+        elseif (mod == 0) then
+            return SLEEP
+        elseif (mod == 1) then
+            return VAMP_AURA
+        elseif (mod == 2) then
+            return CARRION_SWARM
+        endif
+	elseif (curHero == EREDAR_WARLOCK_NEUTRAL) then
+		if (skillUlti) then
+            return EREDAR_FINGER_OF_DEATH
+        elseif (mod == 0) then
+            return EREDAR_WARLOCK_FIRE_BOLT
+        elseif (mod == 1) then
+            return EREDAR_WARLOCK_MANA_SHIELD
+        elseif (mod == 2) then
+            return EREDAR_WARLOCK_BASH
+        endif
+	endif
+
+    return 'Aamk'
+endfunction
+
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(PIT_LORD_NEUTRAL) > 0) then
+        set hero_id = PIT_LORD_NEUTRAL
+    elseif (GetUnitCountDone(DREAD_LORD) > 0) then
+        set hero_id2 = DREAD_LORD
+	elseif (GetUnitCountDone(EREDAR_WARLOCK_NEUTRAL) > 0) then
+		set hero_id3 = EREDAR_WARLOCK_NEUTRAL
+    endif
+endfunction
+
+function UpdateWorkers takes nothing returns nothing
+	loop
+		call SetGoldPeons(10 + GetUnitCount(DEMON_HOUSING) * 3)
+		if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
+			call SetWoodPeons(6)
+		elseif (GetUnitCount(DEMON_GATE_3) == 0) then
+			call SetWoodPeons(8)
+		else
+			call SetWoodPeons(10)
+		endif
+		call Sleep(1)
+	endloop
+endfunction
+
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
+	call SetWatchMegaTargets( true )
+	call SetIgnoreInjured( false )
+	call SetGroupsFlee( true )
+	//call SetCaptainChanges ( true )
+	call SetSmartArtillery ( true )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+	if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
+		call SetBuildUnit( 1, DEMON_GATE_1 )
+	else
+		call SetBuildUnit( 0, DEMON_GATE_1 )
+	endif
+	call SetBuildUnit( 26, DEMON_IMP )
+	call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
+	call SetBuildUnit( 2, DEMON_HOUSING )
+	call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )
+    call SetBuildUnit( 1, DEMON_FLOATING_ROCKS )
+    call SetBuildUnit( 4, DEMON_FORTIFIED_INFERNAL_MACHINE )
+    call SetBuildUnit( 1, DEMON_ALTAR )
+    call SetBuildUnit( 1, DEMON_OBELISK )
+	
+	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_STR )
+	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_ARMOR )
+    call SetBuildUpgr( 1, UPG_DEMON_CR_ATTACK )
+	call SetBuildUpgr( 1, UPG_DEMON_CR_ARMOR )
+	call SetBuildUpgr( 1, UPG_DEMON_WEB )
+
+    // Tier 2 buildings
+	if (GetUnitCount(DEMON_GATE_3) == 0) then
+		call SetBuildUnit( 1, DEMON_GATE_2 )
+	else
+		call SetBuildUnit( 0, DEMON_GATE_2 )
+	endif
+    call SetBuildUnit( 1, DEMON_DUNGEON_OF_PAIN )
+    call SetBuildUnit( 1, DEMON_PORTAL )
+    call SetBuildUnit( 4, DEMON_FORTIFIED_INFERNAL_MACHINE )
+	call SetBuildUnit( 2, DEMON_CITIZEN_FEMALE )
+	
+	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_STR )
+	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_ARMOR )
+    call SetBuildUpgr( 2, UPG_DEMON_CR_ATTACK )
+	call SetBuildUpgr( 2, UPG_DEMON_CR_ARMOR )
+	
+	call SetBuildUpgr( 1, UPG_DEMON_CLEAVING_ATTACK )
+	call SetBuildUpgr( 1, UPG_DEMON_DEVOUR_MAGIC )
+	call SetBuildUpgr( 1, UPG_DEMON_FIRE )
+	
+	call SetBuildUpgr( 1, UPG_DEMON_RAIN_OF_FIRE )
+	call SetBuildUpgr( 1, UPG_DEMON_DEFEND )
+	call SetBuildUpgr( 1, UPG_DEMON_CRIPPLE )
+	call SetBuildUpgr( 1, UPG_DEMON_SLOW )
+	call SetBuildUpgr( 1, UPG_DEMON_SUCCUBUS )
+	call SetBuildUpgr( 1, UPG_DEMON_EREDAR_SORCERER )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, DEMON_GATE_3 )
+    call SetBuildUnit( 2, DEMON_SHRINE )
+    call SetBuildUnit( 1, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
+	
+	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
+	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
+    call SetBuildUpgr( 3, UPG_DEMON_CR_ATTACK )
+	call SetBuildUpgr( 3, UPG_DEMON_CR_ARMOR )
+	call SetBuildUpgr( 2, UPG_DEMON_SUCCUBUS )
+	call SetBuildUpgr( 2, UPG_DEMON_EREDAR_SORCERER )
+	call SetBuildUpgr( 1, UPG_DEMON_RESISTANT_SKIN )
+	call SetBuildUpgr( 1, UPG_DEMON_PERMANENT_IMMOLATION )
+	call SetBuildUpgr( 1, UPG_DEMON_HARDENED_SKIN )
+	call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 100, UPG_EVOLUTION )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function AttackWithMount takes nothing returns nothing
+	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+		call CampaignAttacker( 0, GetUnitCount(GRYPHON_MOUNT), GRYPHON_MOUNT )
+	endif
+	if (GetUnitCount(WYVERN_MOUNT) > 0) then
+		call CampaignAttacker( 0, GetUnitCount(WYVERN_MOUNT), WYVERN_MOUNT )
+	endif
+	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+		call CampaignAttacker( 0, GetUnitCount(FROST_WYRM_MOUNT), FROST_WYRM_MOUNT )
+	endif
+	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+		call CampaignAttacker( 0, GetUnitCount(CHIMAERA_MOUNT), CHIMAERA_MOUNT )
+	endif
+	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+		call CampaignAttacker( 0, GetUnitCount(NETHER_DRAKE_MOUNT), NETHER_DRAKE_MOUNT )
+	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
+	call CampaignAttacker( 0, 1, hero_id2 )
+	call CampaignAttacker( 0, 1, hero_id3 )
+endfunction
+
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
+    call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
+    call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 ***
+        call InitAssaultGroup()
+        call CampaignAttackerEx( 4, 6, 8, DEMON_OVERLORD )
+        call CampaignAttackerEx( 4, 6, 8, DEMON_FEL_STALKER )
+        call CampaignAttackerEx( 4, 6, 8, DEMON_NETHER_DRAKE )
+        call CampaignAttackerEx( 2, 4, 6, DEMON_INFERNAL_MACHINE )
+        call CampaignAttackerEx( 2, 4, 6, DEMON_GREATER_VOID_WALKER )
+        call CampaignAttackerEx( 3, 4, 6, DEMON_EREDAR_SORCERER )
+        call CampaignAttackerEx( 3, 4, 6, DEMON_SUCCUBUS )
+        call CampaignAttackerEx( 3, 4, 6, DEMON_NETHER_DRAKE )
+        call CampaignAttackerEx( 3, 4, 6, DEMON_INFERNAL )
+		call AddStandardUnitsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( DEMON_FORTIFIED_INFERNAL_MACHINE, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+	call StartThread(function UpdateWorkers)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction
