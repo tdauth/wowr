@@ -341,6 +341,10 @@ function AssignUnitToCurrentGroup takes nothing returns nothing
     debug call BJDebugMsg("Assign to unit " + GetUnitName(lastMember) + " with handle ID " + I2S(GetHandleId(lastMember)) + " with index " + I2S(lastIndex) + " the current group " + I2S(udg_TmpGroupIndex) + " the unit group has a size of " + I2S(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])))
     set udg_RespawnUnitType[memberIndex] = GetUnitTypeId(lastMember)
     set udg_RespawnLocationPerUnit[memberIndex] = GetUnitLoc(lastMember)
+	// set the rect for the building check
+	if (udg_RespawnRect[udg_TmpGroupIndex] == null) then
+		set udg_RespawnRect[udg_TmpGroupIndex] = RectFromCenterSizeBJ(GetUnitLoc(lastMember), 200.00, 200.00)
+	endif
     call AssignUnitToGroup(lastMember, udg_TmpGroupIndex)
     set lastMember = null
 endfunction
