@@ -13,6 +13,8 @@ globals
 	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
 	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
 	
+	constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
+	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
 	constant integer FROST_WYRM_MOUNT                                = 'u004'
@@ -46,7 +48,7 @@ function ChooseHeroSkill takes nothing returns integer
 
     if (curHero == DEATH_KNIGHT) then
         if (skillUlti) then
-            return ANIM_DEAD
+            return DEATH_KNIGHT_SHADOW_WORD_DEATH
         elseif (mod == 0) then
             return DEATH_COIL
         elseif (mod == 1) then

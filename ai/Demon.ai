@@ -45,7 +45,7 @@ globals
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 
 	constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
-	constant integer RAIN_OF_FIRE                                    = 'Anrf'
+	constant integer RAIN_OF_FIRE                                    = 'ANrf'
 	constant integer HOWL_OF_TERROR                                  = 'ANht'
 	constant integer CLEAVING_ATTACK                                 = 'ANca'
 	constant integer DEMON_MASTER                                    = 'A01R'

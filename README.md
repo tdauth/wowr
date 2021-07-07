@@ -167,6 +167,12 @@ The original map script has been added to this repository as well as the origina
 * [wowtsr1.2.w3x](./releases/wowtsr1.2.w3x)
 * [wowtsr1.1.w3x](./releases/wowtsr1.1.w3x)
 
+## Other Modified Versions
+
+* [World of War in Warcraft 2.03b](https://www.epicwar.com/maps/2673/)
+* [World of Warcraft Reborn 2](https://www.epicwar.com/maps/40351/)
+* [World of Warcraft 1.8](https://www.epicwar.com/maps/228752)
+
 ## Credits
 
 * Baradé: Creator.
