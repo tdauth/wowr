@@ -87,6 +87,7 @@ This version provides several new features compared to the original map:
 * More different alliance chat commands.
 * Hideouts have Portal abilities from the new Portal buildings.
 * Computer AI player The Burning Legion with Demon race.
+* Different game types.
 
 ## Bug Fixes
 
