@@ -14,7 +14,7 @@ The map can only be won by killing the final boss.
 
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
-* [Current development version](./wowr1.7.w3x)
+* [Current development version](./wowr1.8.w3x)
 
 *Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues.
 
@@ -160,6 +160,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowtsr1.7.w3x](./releases/wowtsr1.7.w3x)
 * [wowtsr1.6.w3x](./releases/wowtsr1.6.w3x)
 * [wowtsr1.5.w3x](./releases/wowtsr1.5.w3x)
 * [wowtsr1.4.w3x](./releases/wowtsr1.4.w3x)
