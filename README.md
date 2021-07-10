@@ -88,6 +88,7 @@ This version provides several new features compared to the original map:
 * Hideouts have Portal abilities from the new Portal buildings.
 * Computer AI player The Burning Legion with Demon race.
 * Different game types.
+* Bosses respawn.
 
 ## Bug Fixes
 

@@ -346,50 +346,106 @@ function AssignUnitToCurrentGroup takes nothing returns nothing
 		set udg_RespawnRect[udg_TmpGroupIndex] = RectFromCenterSizeBJ(GetUnitLoc(lastMember), 200.00, 200.00)
 	endif
     call AssignUnitToGroup(lastMember, udg_TmpGroupIndex)
+	if (IsUnitType(lastMember, UNIT_TYPE_HERO)) then
+		call GroupAddUnitSimple(lastMember, udg_RespawnGroupHeroes[udg_TmpGroupIndex])
+	endif
     set lastMember = null
 endfunction
 
 function InitCurrentGroup takes nothing returns nothing
     set udg_TmpGroupIndex = udg_TmpGroupIndex + 1
     set udg_RespawnGroup[udg_TmpGroupIndex] = CreateGroup()
+	set udg_RespawnGroupHeroes[udg_TmpGroupIndex] = CreateGroup()
+endfunction
+
+function GetHeroUnitMatching takes integer Group, integer unitTypeId, group revivedHeroes returns unit
+	local unit first = null
+	local unit hero = null
+	local group tmpGroup = CreateGroup()
+	call GroupAddGroup(udg_RespawnGroupHeroes[Group], tmpGroup)
+	loop
+		set first = FirstOfGroup(tmpGroup)
+		exitwhen (first == null or hero != null)
+		if (GetUnitTypeId(first) == unitTypeId and not IsUnitInGroup(first, revivedHeroes)) then
+			set hero = first
+		endif
+		call GroupRemoveUnit(tmpGroup, first)
+	endloop
+	
+	call GroupClear(tmpGroup)
+	call DestroyGroup(tmpGroup)
+	set tmpGroup = null
+	set first = null
+	
+	return hero
 endfunction
 
 function RespawnGroup takes integer Group returns nothing
     local integer I0 = 0
     local integer index = 0
-    local player NeutralAggressivePlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+	local integer I1 = 0
     local location RespawnLocation
     local unit GroupMember = null
-    //call BJDebugMsg("Respawn group: " + I2S(Group))
+	local group revivedHeroes = CreateGroup()
+    debug call BJDebugMsg("Respawn group: " + I2S(Group))
     if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
-        //call BJDebugMsg("Is empty: " + I2S(Group))
+        debug call BJDebugMsg("Is empty: " + I2S(Group))
         set I0 = 0
         loop
             exitwhen(I0 == udg_RespawnGroupMaxMembers)
             set index = Index2D(Group, I0, udg_RespawnGroupMaxMembers)
             if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
-                if (udg_RespawnLocationPerUnit[index] != null) then
-                    set RespawnLocation = udg_RespawnLocationPerUnit[index]
-                else
-                    set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-                endif
-                set GroupMember = CreateUnit(NeutralAggressivePlayer, udg_RespawnUnitType[index], GetLocationX(RespawnLocation), GetLocationY(RespawnLocation), GetRandomReal(0.00, 360.00))
-				if (GetPlayerTechCountSimple('R00U', NeutralAggressivePlayer) > 0) then
-					call BlzSetUnitIntegerFieldBJ(GroupMember, UNIT_IF_LEVEL, (BlzGetUnitIntegerField(GroupMember, UNIT_IF_LEVEL) + GetPlayerTechCountSimple('R00U', NeutralAggressivePlayer)))
+				if (not IsUnitGroupEmptyBJ(udg_RespawnGroupHeroes[Group])) then
+					set GroupMember = GetHeroUnitMatching(Group, udg_RespawnUnitType[index], revivedHeroes)
+					debug call BJDebugMsg("Group " + I2S(Group) + " has heroes and the member is " + GetUnitName(GroupMember) ) 
+				else
+					set GroupMember = null
+					debug call BJDebugMsg("Group " + I2S(Group) + " has no heroes")
 				endif
-                call AssignUnitToGroup(GroupMember, Group)
-                call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
-                if (udg_RespawnLocationPerUnit[index] == null) then
-                    call RemoveLocation(RespawnLocation)
-                endif
-                set RespawnLocation = null
+				
+				if (GroupMember == null) then
+					if (udg_RespawnLocationPerUnit[index] != null) then
+						set RespawnLocation = udg_RespawnLocationPerUnit[index]
+					else
+						set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
+					endif
+					set GroupMember = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_RespawnUnitType[index], GetLocationX(RespawnLocation), GetLocationY(RespawnLocation), GetRandomReal(0.00, 360.00))
+					if (GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) > 0) then
+						call BlzSetUnitIntegerFieldBJ(GroupMember, UNIT_IF_LEVEL, (BlzGetUnitIntegerField(GroupMember, UNIT_IF_LEVEL) + GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE))))
+					endif
+					call AssignUnitToGroup(GroupMember, Group)
+					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
+					if (udg_RespawnLocationPerUnit[index] == null) then
+						call RemoveLocation(RespawnLocation)
+					endif
+					set RespawnLocation = null
+				else
+					// hero creeps should keep their XP
+					if (udg_RespawnLocationPerUnit[index] != null) then
+						set RespawnLocation = udg_RespawnLocationPerUnit[index]
+					else
+						set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
+					endif
+					debug call PingMinimapLocForForce(GetPlayersAll(), RespawnLocation, 5)
+					call ReviveHeroLoc(GroupMember, RespawnLocation, true)
+					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
+					call GroupAddUnit(revivedHeroes, GroupMember)
+					debug call BJDebugMsg("Group " + I2S(Group) + " revive hero: " + GetUnitName(GroupMember)) 
+					if (udg_RespawnLocationPerUnit[index] == null) then
+						call RemoveLocation(RespawnLocation)
+					endif
+					set RespawnLocation = null
+				endif
             else
                 exitwhen(true)
             endif
             set I0 = I0 + 1
         endloop
-        set NeutralAggressivePlayer = null
     endif
+	
+	call GroupClear(revivedHeroes)
+	call DestroyGroup(revivedHeroes)
+	set revivedHeroes = null
 endfunction
 
 function TriggerConditionNoBuilding takes nothing returns boolean
@@ -441,7 +497,7 @@ endfunction
 function SetupCustomRespawningSystem takes nothing returns nothing
     set udg_RespawnGroupMaxMembers = 22
     set udg_RespawnTime = 100.00
-    set udg_RespawnItemChance = 50.00
+    set udg_RespawnItemChance = 30.00
 endfunction
 
 function TriggerActionMoveRucksack takes nothing returns nothing
@@ -466,6 +522,15 @@ function TriggerActionMoveRucksack takes nothing returns nothing
     endloop
 endfunction
 
+function DropAllItemsFromHero takes unit hero returns nothing
+	local integer i = 0
+	loop
+		exitwhen (i == bj_MAX_INVENTORY)
+		call UnitRemoveItemFromSlotSwapped(i, hero)
+		set i = i + 1
+	endloop
+endfunction
+
 function TriggerActionRespawnMonster takes nothing returns nothing
     local unit triggerUnit = GetTriggerUnit()
     local integer Group = GetRespawnGroupOfUnit(triggerUnit)
@@ -475,8 +540,12 @@ function TriggerActionRespawnMonster takes nothing returns nothing
     debug call BJDebugMsg("Respawn monster with group " + I2S(Group) + " handle ID: " + I2S(GetHandleId(triggerUnit)))
     if (Group != -1) then
         call GroupRemoveUnit(udg_RespawnGroup[Group], triggerUnit)
-        call FlushUnitParameters(triggerUnit)
-        call AddUnitToAllStock(GetUnitTypeId(triggerUnit), 1, 1)
+        if (IsUnitType(triggerUnit, UNIT_TYPE_HERO)) then
+			call DropAllItemsFromHero(triggerUnit)
+		else
+			call FlushUnitParameters(triggerUnit)
+			call AddUnitToAllStock(GetUnitTypeId(triggerUnit), 1, 1)
+		endif
         if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
             set RandomNumber = GetRandomReal(0.00, 100.00)
             if (RandomNumber <= udg_RespawnItemChance) then
@@ -508,6 +577,7 @@ function InitCustomSystems takes nothing returns nothing
     if (udg_UseRespawningSystem) then
         set udg_RespawnTrigger = CreateTrigger()
         call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
+		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_Bosses, EVENT_PLAYER_UNIT_DEATH, null)
         call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
     endif
 endfunction
@@ -566,6 +636,10 @@ function GetPlayerColorString takes player p, string text returns string
     else
         return "|cffFFFFFF" + text + "|r"
     endif
+endfunction
+
+function GetPlayerNameColored takes player whichPlayer returns string
+	return "[" + I2S(GetPlayerId(whichPlayer) + 1) + "]" + GetPlayerColorString(whichPlayer, GetPlayerName(whichPlayer))
 endfunction
 
 function HookAddUnitToGroup takes unit whichUnit, group whichGroup returns nothing
