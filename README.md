@@ -1,14 +1,18 @@
 # World of Warcraft Reforged
 
-Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
-DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
-It is an open world RPG map in which each player chooses a hero in the beginning and can play either as warlord or as freelancer.
+Warcraft III: Reforged is an open world RPG funmap for Warcraft III: Reforged featuring computer AI support which allows you to play the map offline.
+The player has to choose a game type in the beginning which determines how hard and fast the game will be.
+Then the player has to pick a hero and can play either as Warlord or Freelancer.
 Warlords can build a base, collect resources and reward freelancers for their work.
 Freelancers have higher start attributes and gain faster experience but cannot build a base or collect resources.
 However, they can be rewarded by warlords and build a hideout.
-Alliances can be forged between players and quests can be solved which are rewarded with useful items.
+The computer AI will always start as Warlord with a base somewhere on the map.
+Alliances can be forged between players and quests can be completed which are rewarded with useful items.
+The map contains many different locations from World of Warcraft with strong bosses and creeps.
+It provides different bases with goldmines to start as a Warlord.
 Usually, the map has a very long play time since players build their bases and defeat the bosses after some time.
-The map can only be won by killing the final boss.
+The map can only be won by killing the final boss or in the hard game type by destroying the town hall of an enemy player.
+For faster games you can choose a different game type.
 
 ## Play the Map
 
@@ -149,6 +153,11 @@ At the moment the map seems to end after some time. We played some games for one
 Hence, I am trying to collect replays with the game ending to reconstruct the bug.
 
 [crashes](./crashes) contains folders with map and replay files of the corresponding games.
+
+## History of the Map
+
+Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
+DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
 
 ## Reconstruction
 
