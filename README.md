@@ -97,6 +97,8 @@ This version provides several new features compared to the original map:
 * New item: Magical Creep Summoner.
 * New profession: Sorcerer.
 * Second profession.
+* New profession: Runeforger.
+* New profession: Dragon Breeder.
 
 ## Bug Fixes
 
