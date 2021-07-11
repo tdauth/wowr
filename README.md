@@ -99,6 +99,7 @@ This version provides several new features compared to the original map:
 * Second profession.
 * New profession: Runeforger.
 * New profession: Dragon Breeder.
+* New hero: Furbolg Ursa Warrior.
 
 ## Bug Fixes
 
