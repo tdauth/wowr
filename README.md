@@ -93,6 +93,10 @@ This version provides several new features compared to the original map:
 * Computer AI player The Burning Legion with Demon race.
 * Different game types.
 * Bosses respawn.
+* New item: Magical Cutter.
+* New item: Magical Creep Summoner.
+* New profession: Sorcerer.
+* Second profession.
 
 ## Bug Fixes
 

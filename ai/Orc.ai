@@ -97,13 +97,7 @@ endfunction
 function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + GetUnitCount(ORC_HOUSING) * 3)
-		if ((GetUnitCount(STRONGHOLD) == 0) and (GetUnitCount(FORTRESS) == 0)) then
-			call SetWoodPeons(3)
-		elseif (GetUnitCount(FORTRESS) == 0) then
-			call SetWoodPeons(4)
-		else
-			call SetWoodPeons(5)
-		endif
+		call SetWoodPeons(5)
 		call Sleep(1)
 	endloop
 endfunction
@@ -170,7 +164,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, FORTRESS )
     call SetBuildUnit( 1, TOTEM )
     call SetBuildUnit( 5, BURROW )
-	call SetBuildUnit( 5, PEON )
     call SetBuildUnit( 2, ORC_WATCH_TOWER )
     call SetBuildUnit( 2, ORC_CITIZEN_MALE )
 	

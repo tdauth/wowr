@@ -380,7 +380,8 @@ function GetHeroUnitMatching takes integer Group, integer unitTypeId, group revi
 	return hero
 endfunction
 
-function RespawnGroup takes integer Group returns nothing
+function RespawnGroup takes integer Group returns boolean
+	local boolean result = false
     local integer I0 = 0
     local integer index = 0
 	local integer I1 = 0
@@ -441,11 +442,29 @@ function RespawnGroup takes integer Group returns nothing
             endif
             set I0 = I0 + 1
         endloop
+		
+		set result = true
     endif
 	
 	call GroupClear(revivedHeroes)
 	call DestroyGroup(revivedHeroes)
 	set revivedHeroes = null
+	
+	return result
+endfunction
+
+function RespawnAllGroupsInRange takes real x, real y, real range returns integer
+	local location tmpLocation = Location(x, y)
+	local integer result = 0
+	local integer i = 0
+	loop
+		exitwhen (i == udg_TmpGroupIndex + 1)
+		if (DistanceBetweenPoints(GetRectCenter(udg_RespawnRect[i]), tmpLocation) <= range and RespawnGroup(i)) then
+			set result = result + 1
+		endif
+		set i = i + 1
+	endloop
+	return result
 endfunction
 
 function TriggerConditionNoBuilding takes nothing returns boolean

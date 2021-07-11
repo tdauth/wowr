@@ -92,13 +92,7 @@ endfunction
 function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + GetUnitCount(BLOOD_ELF_HOUSING) * 3)
-		if ((GetUnitCount(BLOOD_ELF_KEEP) == 0) and (GetUnitCount(BLOOD_ELF_CASTLE) == 0)) then
-			call SetWoodPeons(3)
-		elseif (GetUnitCount(BLOOD_ELF_CASTLE) == 0) then
-			call SetWoodPeons(4)
-		else
-			call SetWoodPeons(5)
-		endif
+		call SetWoodPeons(5)
 		call Sleep(1)
 	endloop
 endfunction
@@ -154,7 +148,6 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
 	call SetBuildUnit( 4, HOUSE )
 	call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
-	call SetBuildUnit( 5, BLOOD_PEASANT )
 	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
 	
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )
@@ -171,7 +164,6 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
 	call SetBuildUnit( 1, BLOOD_ELF_CASTLE )
 	call SetBuildUnit( 5, HOUSE )
-	call SetBuildUnit( 5, BLOOD_PEASANT )
 	call SetBuildUnit( 1, ELF_GUARD_TOWER )
 	call SetBuildUnit( 1, ARCANE_TOWER )
 	call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )

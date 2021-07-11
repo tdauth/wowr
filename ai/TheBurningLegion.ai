@@ -139,13 +139,7 @@ endfunction
 function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(10 + GetUnitCount(DEMON_HOUSING) * 3)
-		if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
-			call SetWoodPeons(6)
-		elseif (GetUnitCount(DEMON_GATE_3) == 0) then
-			call SetWoodPeons(8)
-		else
-			call SetWoodPeons(10)
-		endif
+		call SetWoodPeons(10)
 		call Sleep(1)
 	endloop
 endfunction
