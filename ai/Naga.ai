@@ -8,6 +8,7 @@ globals
 	constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
 	
 	constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
+	constant integer UPG_NAGA_BACKPACK                               = 'R01E'
 	
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
@@ -121,6 +122,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 2, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 2, UPG_NAGA_ATTACK )
 	call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
+	call SetBuildUpgr( 1, UPG_NAGA_BACKPACK )
 	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
 	
     // Tier 3 buildings
