@@ -6,6 +6,7 @@ globals
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
     constant integer ELF_HOUSING                                     = 'h00S'
 	constant integer PORTAL                                          = 'h014'
+	constant integer POWER_GENERATOR                                 = 'n025'
 	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
@@ -164,6 +165,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, CHIMAERA_ROOST )
     call SetBuildUnit( 2, MOON_WELL )
     call SetBuildUnit( 2, ANCIENT_PROTECT )
+	call SetBuildUnit( 1, POWER_GENERATOR )
 	
 	call SetBuildUpgr( 3, UPG_STR_MOON )
 	call SetBuildUpgr( 3, UPG_STR_WILD )

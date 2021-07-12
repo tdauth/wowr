@@ -101,6 +101,8 @@ This version provides several new features compared to the original map:
 * New profession: Runeforger.
 * New profession: Dragon Breeder.
 * New hero: Furbolg Ursa Warrior.
+* New building: Power Generator.
+* New race: Furbolg.
 
 ## Bug Fixes
 

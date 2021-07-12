@@ -6,6 +6,7 @@ globals
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
     constant integer HUMAN_HOUSING                                   = 'h00R'
 	constant integer PORTAL                                          = 'h014'
+	constant integer POWER_GENERATOR                                 = 'n025'
 	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
@@ -170,6 +171,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, AVIARY )
 	call SetBuildUnit( 2, GUARD_TOWER )
 	call SetBuildUnit( 1, CANNON_TOWER )
+	call SetBuildUnit( 1, POWER_GENERATOR )
 	
 	call SetBuildUpgr( 3, UPG_MELEE )
     call SetBuildUpgr( 3, UPG_RANGED )

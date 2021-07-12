@@ -60,6 +60,7 @@ globals
     constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
     constant integer DEMON_HOUSING                                   = 'h00Y'
 	constant integer PORTAL                                          = 'h014'
+	constant integer POWER_GENERATOR                                 = 'n025'
 	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
@@ -216,6 +217,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DEMON_GATE_3 )
     call SetBuildUnit( 2, DEMON_SHRINE )
     call SetBuildUnit( 1, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
+	call SetBuildUnit( 1, POWER_GENERATOR )
 	
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
