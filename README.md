@@ -103,6 +103,7 @@ This version provides several new features compared to the original map:
 * New hero: Furbolg Ursa Warrior.
 * New building: Power Generator.
 * New race: Furbolg.
+* Camera distance chat commands.
 
 ## Bug Fixes
 
