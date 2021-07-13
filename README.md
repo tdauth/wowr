@@ -104,6 +104,7 @@ This version provides several new features compared to the original map:
 * New building: Power Generator.
 * New race: Furbolg.
 * Camera distance chat commands.
+* Chat command for hero suicide.
 
 ## Bug Fixes
 
