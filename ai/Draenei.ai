@@ -3,8 +3,6 @@ globals
 	constant integer DRAENEI_BARRACKS                                = 'ndh3'
 	constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
 	constant integer DRAENEI_SHOP                                    = 'n01N'
-	constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
-	constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
 	
 	constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
 	constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman

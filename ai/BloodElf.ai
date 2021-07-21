@@ -3,10 +3,7 @@ globals
 	constant integer BLOOD_ELF_ARCANE_VAULT                       = 'h00H' // shop
 	constant integer BLOOD_ELF_BARRACKS                           = 'h00C' // barracks
 	constant integer BLOOD_ELF_BLACK_SMITH                        = 'h00D' // blacksmith
-	constant integer BLOOD_ELF_CASTLE                             = 'h00B' // castle
-	constant integer BLOOD_ELF_KEEP                               = 'h00A' // keep
 	constant integer BLOOD_ELF_LUMBER_MILL                        = 'h00F' // lumber mill
-	constant integer BLOOD_ELF_TOWN_HALL                          = 'h009' // town hall
 	constant integer BLOOD_ELF_SCOUT_TOWER                        = 'h00I' // tower
 	constant integer BLOOD_ELF_WORKSHOP                           = 'h013' // workshop
 	

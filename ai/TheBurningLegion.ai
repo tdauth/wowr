@@ -1,7 +1,4 @@
 globals
-    constant integer DEMON_GATE_1                                    = 'u005' // tier 1
-	constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
-	constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
 	constant integer DEMON_ALTAR                                     = 'u008'
 	constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
 	constant integer DEMON_DUNGEON_OF_PAIN                           = 'u00C' // sanctum/damned temple
@@ -49,6 +46,10 @@ globals
 	constant integer HOWL_OF_TERROR                                  = 'ANht'
 	constant integer CLEAVING_ATTACK                                 = 'ANca'
 	constant integer DEMON_MASTER                                    = 'A01R'
+	
+	constant integer ARCHIMONDE_BOSS                                 = 'N011'
+	
+	constant integer DREAD_LORD_RAIN_OF_CHAOS                        = 'A07V'
 	
 	constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
 	constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
@@ -104,7 +105,7 @@ function ChooseHeroSkill takes nothing returns integer
         endif
     elseif (curHero == DREAD_LORD) then
         if (skillUlti) then
-            return INFERNO
+            return DREAD_LORD_RAIN_OF_CHAOS
         elseif (mod == 0) then
             return SLEEP
         elseif (mod == 1) then
@@ -130,9 +131,11 @@ endfunction
 function InitHero takes nothing returns nothing
     if (GetUnitCountDone(PIT_LORD_NEUTRAL) > 0) then
         set hero_id = PIT_LORD_NEUTRAL
-    elseif (GetUnitCountDone(DREAD_LORD) > 0) then
+    endif
+	if (GetUnitCountDone(DREAD_LORD) > 0) then
         set hero_id2 = DREAD_LORD
-	elseif (GetUnitCountDone(EREDAR_WARLOCK_NEUTRAL) > 0) then
+	endif
+	if (GetUnitCountDone(EREDAR_WARLOCK_NEUTRAL) > 0) then
 		set hero_id3 = EREDAR_WARLOCK_NEUTRAL
     endif
 endfunction
@@ -166,6 +169,9 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
+	
+	call CampaignDefender(0, 1, ARCHIMONDE_BOSS)
+	
 	if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
 		call SetBuildUnit( 1, DEMON_GATE_1 )
 	else

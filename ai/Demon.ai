@@ -1,13 +1,8 @@
 globals
-    constant integer DEMON_GATE_1                                    = 'u005' // tier 1
-	constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
-	constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
 	constant integer DEMON_ALTAR                                     = 'u008'
 	constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
 	constant integer DEMON_DUNGEON_OF_PAIN                           = 'u00C' // sanctum/damned temple
 	constant integer DEMON_FLOATING_ROCKS                            = 'u009' // lumber will and blacksmith
-	constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and farm
-	constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
 	constant integer DEMON_OBELISK                                   = 'u00G' // shop
 	constant integer DEMON_PORTAL                                    = 'u00B' // slaughterhouse/barracks for stronger units at tier 2
 	constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
@@ -49,6 +44,8 @@ globals
 	constant integer HOWL_OF_TERROR                                  = 'ANht'
 	constant integer CLEAVING_ATTACK                                 = 'ANca'
 	constant integer DEMON_MASTER                                    = 'A01R'
+	
+	constant integer DREAD_LORD_RAIN_OF_CHAOS                        = 'A07V'
 	
 	constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
 	constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
@@ -104,7 +101,7 @@ function ChooseHeroSkill takes nothing returns integer
         endif
     elseif (curHero == DREAD_LORD) then
         if (skillUlti) then
-            return INFERNO
+            return DREAD_LORD_RAIN_OF_CHAOS
         elseif (mod == 0) then
             return SLEEP
         elseif (mod == 1) then
