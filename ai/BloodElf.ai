@@ -4,7 +4,6 @@ globals
 	constant integer BLOOD_ELF_BARRACKS                           = 'h00C' // barracks
 	constant integer BLOOD_ELF_BLACK_SMITH                        = 'h00D' // blacksmith
 	constant integer BLOOD_ELF_LUMBER_MILL                        = 'h00F' // lumber mill
-	constant integer BLOOD_ELF_SCOUT_TOWER                        = 'h00I' // tower
 	constant integer BLOOD_ELF_WORKSHOP                           = 'h013' // workshop
 	
 	constant integer UPG_BLOOD_ELF_BREEDING                       = 'R000'
