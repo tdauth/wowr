@@ -156,9 +156,10 @@ function ConfigureAI takes nothing returns nothing
     call SetSlowChopping( false )
 	call SetWatchMegaTargets( true )
 	call SetIgnoreInjured( false )
-	call SetGroupsFlee( true )
-	//call SetCaptainChanges ( true )
+	call SetGroupsFlee( false )
+	call SetCaptainChanges ( false )
 	call SetSmartArtillery ( true )
+    call GroupTimedLife ( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -167,8 +168,6 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	
-	call CampaignDefender(0, 1, ARCHIMONDE_BOSS)
 	
 	if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
 		call SetBuildUnit( 1, DEMON_GATE_1 )

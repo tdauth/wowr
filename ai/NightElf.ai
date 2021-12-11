@@ -113,8 +113,8 @@ function ConfigureAI takes nothing returns nothing
     call SetSlowChopping( false )
 	call SetWatchMegaTargets( true )
 	call SetIgnoreInjured( false )
-	call SetGroupsFlee( true )
-	//call SetCaptainChanges ( true )
+	call SetGroupsFlee( false )
+	call SetCaptainChanges ( false )
 	call SetSmartArtillery ( true )
 endfunction
 
@@ -302,15 +302,7 @@ function LaunchAttack takes nothing returns nothing
     endif
 endfunction
 
-function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
-    call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
+function AttackWaves takes nothing returns nothing 
     //*** WAVE 1 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, ARCHER )
@@ -387,7 +379,9 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON_M )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
+    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW_M )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -400,7 +394,9 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON_M ) 
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
+    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW_M )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
     call AddStandardUnitsToAttackWave()
@@ -414,7 +410,9 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON_M )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
+    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW_M )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
     call CampaignAttackerEx( 2, 2, 3, CHIMAERA )
@@ -430,7 +428,9 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 5, 10, 12, DRYAD )
         call CampaignAttackerEx( 2, 4, 8, BALLISTA )
         call CampaignAttackerEx( 4, 8, 12, DRUID_TALON )
+        call CampaignAttackerEx( 2, 4, 8, DRUID_TALON_M )
         call CampaignAttackerEx( 4, 8, 12, DRUID_CLAW )
+        call CampaignAttackerEx( 2, 4, 8, DRUID_CLAW_M )
         call CampaignAttackerEx( 4, 8, 12, HIPPO )
         call CampaignAttackerEx( 2, 4, 8, MOUNTAIN_GIANT )
         call CampaignAttackerEx( 2, 4, 8, CHIMAERA )

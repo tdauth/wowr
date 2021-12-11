@@ -122,9 +122,10 @@ function ConfigureAI takes nothing returns nothing
     call SetSlowChopping( false )
 	call SetWatchMegaTargets( true )
 	call SetIgnoreInjured( false )
-	call SetGroupsFlee( true )
-	//call SetCaptainChanges ( true )
+	call SetGroupsFlee( false )
+	call SetCaptainChanges ( false )
 	call SetSmartArtillery ( true )
+    call GroupTimedLife ( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -413,6 +414,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, NECRO )
     call CampaignAttackerEx( 2, 2, 3, BANSHEE )
     call CampaignAttackerEx( 2, 2, 3, GARGOYLE )
+    call CampaignAttackerEx( 1, 1, 2, BLK_SPHINX )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -428,6 +430,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, BANSHEE )
     call CampaignAttackerEx( 2, 2, 3, GARGOYLE )
     call CampaignAttackerEx( 2, 2, 3, FROST_WYRM )
+    call CampaignAttackerEx( 1, 1, 2, BLK_SPHINX )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -444,6 +447,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 3, 6, 9, BANSHEE )
         call CampaignAttackerEx( 3, 6, 9, GARGOYLE )
         call CampaignAttackerEx( 2, 3, 6, FROST_WYRM )
+        call CampaignAttackerEx( 1, 2, 3, BLK_SPHINX )
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()

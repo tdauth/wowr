@@ -101,9 +101,10 @@ function ConfigureAI takes nothing returns nothing
     call SetSlowChopping( false )
 	call SetWatchMegaTargets( true )
 	call SetIgnoreInjured( false )
-	call SetGroupsFlee( true )
-	//call SetCaptainChanges ( true )
+	call SetGroupsFlee( false )
+	call SetCaptainChanges ( false  )
 	call SetSmartArtillery ( true )
+    call GroupTimedLife ( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing

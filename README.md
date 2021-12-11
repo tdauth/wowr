@@ -19,7 +19,7 @@ For faster games you can choose a different game type.
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr1.8.w3x)
+* [Current development version](./wowr1.8.2.w3x)
 
 *Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues.
 
@@ -105,6 +105,14 @@ This version provides several new features compared to the original map:
 * New race: Furbolg.
 * Camera distance chat commands.
 * Chat command for hero suicide.
+* Chat command to enable/disable hero death sounds.
+* Life and mana regeneration auras of citizens do not stack anymore.
+* Dark Ranger has Black Arrow again instead of Dark Portal.
+* Death Knight has Animate Dead again instead of Shadow Word Death.
+* Demons summoned by Demon Master have timed life now.
+* No annoying global sound for Demon Master anymore.
+* Dark Ranger has Charm again instead of Unholy Spirits.
+* Charm kills worker units instead of changing their owner.
 
 ## Bug Fixes
 
@@ -183,6 +191,8 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowtsr1.8.1.w3x](./wowtsr1.8.1.w3x)
+* [wowtsr1.8.w3x](./wowtsr1.8.w3x)
 * [wowtsr1.7.w3x](./releases/wowtsr1.7.w3x)
 * [wowtsr1.6.w3x](./releases/wowtsr1.6.w3x)
 * [wowtsr1.5.w3x](./releases/wowtsr1.5.w3x)
@@ -192,6 +202,9 @@ The original map script has been added to this repository as well as the origina
 * [wowtsr1.1.w3x](./releases/wowtsr1.1.w3x)
 
 ## Other Modified Versions
+
+Look into the folder [original_map_modified](./original_map_modified) where some of the modified versions of the original map are stored.
+Here is a list of some modified versions online:
 
 * [World of War in Warcraft 2.03b](https://www.epicwar.com/maps/2673/)
 * [World of Warcraft Reborn 2](https://www.epicwar.com/maps/40351/)
