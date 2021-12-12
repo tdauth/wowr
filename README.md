@@ -113,6 +113,8 @@ This version provides several new features compared to the original map:
 * No annoying global sound for Demon Master anymore.
 * Dark Ranger has Charm again instead of Unholy Spirits.
 * Charm kills worker units instead of changing their owner.
+* Votekick chat commands.
+* Item Pickpocketing.
 
 ## Bug Fixes
 
