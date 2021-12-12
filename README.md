@@ -1,18 +1,6 @@
 # World of Warcraft Reforged
 
-Warcraft III: Reforged is an open world RPG funmap for Warcraft III: Reforged featuring computer AI support which allows you to play the map offline.
-The player has to choose a game type in the beginning which determines how hard and fast the game will be.
-Then the player has to pick a hero and can play either as Warlord or Freelancer.
-Warlords can build a base, collect resources and reward freelancers for their work.
-Freelancers have higher start attributes and gain faster experience but cannot build a base or collect resources.
-However, they can be rewarded by warlords and build a hideout.
-The computer AI will always start as Warlord with a base somewhere on the map.
-Alliances can be forged between players and quests can be completed which are rewarded with useful items.
-The map contains many different locations from World of Warcraft with strong bosses and creeps.
-It provides different bases with goldmines to start as a Warlord.
-Usually, the map has a very long play time since players build their bases and defeat the bosses after some time.
-The map can only be won by killing the final boss or in the hard game type by destroying the town hall of an enemy player.
-For faster games you can choose a different game type.
+Open world role-playing game funmap for Warcraft III: Reforged featuring computer AI support which allows you to play the map offline.
 
 ## Play the Map
 
@@ -37,6 +25,7 @@ However, this could lead to making them leave quickly and it's not the best stra
 You can change alliances and offer others your services to get an alliance in return.
 This strategy works best for new players who need some support in the beginning.
 Killing bosses and completing quests will give you better items and a big advantage during fights.
+It is always more fun if you communicate with other players and think of your own stories and quests.
 
 ## New Features
 
