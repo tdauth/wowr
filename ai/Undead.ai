@@ -13,6 +13,8 @@ globals
 	constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
 	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
 	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
+	constant integer DARK_RANGER_CHARM                               = 'ANch'
+	constant integer DARK_RANGER_BLACK_ARROW                         = 'ANba'
 	
 	constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 	
@@ -49,7 +51,7 @@ function ChooseHeroSkill takes nothing returns integer
 
     if (curHero == DEATH_KNIGHT) then
         if (skillUlti) then
-            return DEATH_KNIGHT_SHADOW_WORD_DEATH
+            return ANIM_DEAD
         elseif (mod == 0) then
             return DEATH_COIL
         elseif (mod == 1) then
@@ -59,11 +61,11 @@ function ChooseHeroSkill takes nothing returns integer
         endif
     elseif (curHero == DARK_RANGER_NEUTRAL) then
         if (skillUlti) then
-            return DARK_RANGER_UNHOLY_SPIRITS
+            return DARK_RANGER_CHARM
         elseif (mod == 0) then
             return DARK_RANGER_SILENCE
         elseif (mod == 1) then
-            return DARK_RANGER_DARK_PORTAL
+            return DARK_RANGER_BLACK_ARROW
         elseif (mod == 2) then
             return DARK_RANGER_LIFE_DRAIN
         endif
