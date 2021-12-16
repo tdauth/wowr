@@ -105,6 +105,7 @@ This version provides several new features compared to the original map:
 * Votekick chat commands.
 * Item Pickpocketing.
 * Second race for Warlords at level 30.
+* Mask of Death is only available as unique item.
 
 ## Bug Fixes
 
@@ -131,6 +132,7 @@ The following files are imported into the map whenever they are updated. They co
 * [BloodElf.ai](./ai/BloodElf.ai)
 * [Demon.ai](./ai/Demon.ai)
 * [Draenei.ai](./ai/Draenei.ai)
+* [Furbolg.ai](./ai/Furbolg.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 
 The race is determined from the race set in the lobby of the game:
@@ -138,7 +140,7 @@ The race is determined from the race set in the lobby of the game:
 * If the race is Human it will either be Human or Blood Elf.
 * If the race is Orc it will either be Orc or Draenei.
 * If the race is Undead it will either be Undead or Demon.
-* If the race is Night Elf it will either be Night Elf or Naga.
+* If the race is Night Elf it will either be Night Elf, Naga or Furbolg.
 
 Warlord computer players start with a town hall and workers besides their hero.
 Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
@@ -183,6 +185,9 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowtsr1.8.4.w3x](./wowtsr1.8.4.w3x)
+* [wowtsr1.8.3.w3x](./wowtsr1.8.3.w3x)
+* [wowtsr1.8.2.w3x](./wowtsr1.8.2.w3x)
 * [wowtsr1.8.1.w3x](./wowtsr1.8.1.w3x)
 * [wowtsr1.8.w3x](./wowtsr1.8.w3x)
 * [wowtsr1.7.w3x](./releases/wowtsr1.7.w3x)
