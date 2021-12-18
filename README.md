@@ -106,6 +106,7 @@ This version provides several new features compared to the original map:
 * Item Pickpocketing.
 * Second race for Warlords at level 30.
 * Mask of Death is only available as unique item.
+* Disable Undead/non-Undead restrictions for quests.
 
 ## Bug Fixes
 
