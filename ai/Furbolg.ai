@@ -1,5 +1,5 @@
 globals
-	constant integer FURBOLG_TRIBAL_CENTER                           = 'u026' // altar and tier 1
+	constant integer FURBOLG_TRIBAL_CENTER                           = 'u026' // altar and tier 1-3
 	constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
 	constant integer FURBOLG_DEFILED_FOUNTAIN                        = 'n02B' // sanctum/damned temple
 	constant integer FURBOLG_LUMBER_CAMP                             = 'h017' // lumber will and blacksmith
@@ -11,52 +11,49 @@ globals
 	constant integer GUARDING_FURBOLG                                = 'h016' // tower
 	
 	constant integer YOUNG_FURBOLG                                   = 'u00P' // worker
-	constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
-	constant integer DEMON_FEL_STALKER                               = 'n019' // pit fiend
-	constant integer DEMON_NETHER_DRAKE                              = 'n01B' // gargoyle
-	constant integer DEMON_INFERNAL_MACHINE                          = 'n01C' // meat wagon
-	constant integer DEMON_GREATER_VOID_WALKER                       = 'n01E' // obsidian statue
-	constant integer DEMON_EREDAR_SORCERER                           = 'n014' // necromancer
-	constant integer DEMON_SUCCUBUS                                  = 'n015' // banshee
-	constant integer DEMON_INFERNAL                                  = 'n012' // frost wyrm/tauren
+	constant integer FURBOLG_EX                                      = 'n02E'
+	constant integer FURBOLG_CHAMPION_EX                             = 'n02F'
+	constant integer FURBOLG_ELDER_SHAMAN                            = 'n02G'
+	constant integer FURBOLG_SHAMAN_EX                               = 'n02H
+	constant integer FURBOLG_TRACKER_EX                              = 'n02I'
+	constant integer FURBOLG_URSA_WARRIOR                            = 'n02J' // tauren
+	constant integer GREEN_DRAKE                                     = 'n02S' // frost wyrm
+	constant integer POLAR_FURBOLG                                   = 'n02K'
+	constant integer POLAR_FURBOLG_CHAMPION                          = 'n02L'
+	constant integer TIMBER_WOLF                                     = 'n02O'
+	constant integer GIANT_WOLF                                      = 'n02M'
+	constant integer DIRE_WOLF                                       = 'n02N'
 	
-	constant integer UPG_DEMON_UNHOLY_STR                            = 'R00H'
-	constant integer UPG_DEMON_UNHOLY_ARMOR                          = 'R00R'
-	constant integer UPG_DEMON_CR_ATTACK                             = 'R00S'
-	constant integer UPG_DEMON_CR_ARMOR                              = 'R00T'
-	constant integer UPG_DEMON_WEB                                   = 'R00I'
-	constant integer UPG_DEMON_CLEAVING_ATTACK                       = 'R00L'
-	constant integer UPG_DEMON_DEVOUR_MAGIC                          = 'R00J'
-	constant integer UPG_DEMON_FIRE                                  = 'R00M'
-	constant integer UPG_DEMON_RAIN_OF_FIRE                          = 'R00P'
-	constant integer UPG_DEMON_DEFEND                                = 'R00N'
-	constant integer UPG_DEMON_CRIPPLE                               = 'R00O'
-	constant integer UPG_DEMON_SLOW                                  = 'R00Q'
-	constant integer UPG_DEMON_SUCCUBUS                              = 'R00F'
-	constant integer UPG_DEMON_EREDAR_SORCERER                       = 'R00E'
-	constant integer UPG_DEMON_RESISTANT_SKIN                        = 'R00D'
-	constant integer UPG_DEMON_PERMANENT_IMMOLATION                  = 'R00C'
-	constant integer UPG_DEMON_HARDENED_SKIN                         = 'R00K'
-	constant integer UPG_DEMON_BACKPACK                              = 'R00G'
+	constant integer CORRUPTED_FURBOLG                               = 'n02P'
+
+	constant integer UPG_FURBOLG_WEB                                 = 'R01Q'
+	constant integer UPG_FURBOLG_STEEL_RWEAPONS                      = 'R01G'
+	constant integer UPG_FURBOLG_STEEL_WEAPONS                       = 'R01F'
+	constant integer UPG_FURBOLG_STEEL_ARMOR                         = 'R01H'
+	constant integer UPG_FURBOLG_LUMBER                              = 'R01S'
+	constant integer UPG_FURBOLG_SHAMAN                              = 'R01K'
+	constant integer UPG_FURBOLG_ELDER_SHAMAN                        = 'R01L'
+	constant integer UPG_FURBOLG_FAERIE_FIRE                         = 'R01N'
+	constant integer UPG_FURBOLG_ENSNARE                             = 'R01M'
+	constant integer UPG_FURBOLG_CR_ARMOR                            = 'R01J'
+	constant integer UPG_FURBOLG_CR_ATTACK                           = 'R01I'
+	constant integer UPG_FURBOLG_CORRUPTION                          = 'R01R'
+	constant integer UPG_FURBOLG_BLOOD_LUST                          = 'R01O'
+	constant integer UPG_FURBOLG_BASH                                = 'R01P'
+	constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
 	
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 
 	constant integer FURBOLG_URSA_WARRIOR                            = 'E00E'
-	constant integer RAIN_OF_FIRE                                    = 'ANrf'
-	constant integer HOWL_OF_TERROR                                  = 'ANht'
-	constant integer CLEAVING_ATTACK                                 = 'ANca'
-	constant integer DEMON_MASTER                                    = 'A01R'
-	
-	constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
-	constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
-	constant integer EREDAR_WARLOCK_MANA_SHIELD                      = 'ANms'
-	constant integer EREDAR_WARLOCK_BASH                             = 'A061'
-	constant integer EREDAR_FINGER_OF_DEATH                          = 'A060'
+	constant integer FURBOLG_REJUVENATION                            = 'A06X'
+	constant integer FURBOLG_FAERIE_FIRE                             = 'A06Y'
+	constant integer FURBOLG_COMMAND_AURA                            = 'A06Z'
+	constant integer FURBOLG_CORRUPTION                              = 'A070'
 
-    constant integer DEMON_CITIZEN_MALE                              = 'n016'
-    constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
-    constant integer DEMON_HOUSING                                   = 'h00Y'
+    constant integer FURBOLG_CITIZEN_MALE                            = 'n029'
+    constant integer FURBOLG_CITIZEN_FEMALE                          = 'n02A'
+    constant integer FURBOLG_HOUSING                                 = 'h015'
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
 	
@@ -92,13 +89,13 @@ function ChooseHeroSkill takes nothing returns integer
 
     if (curHero == FURBOLG_URSA_WARRIOR) then
         if (skillUlti) then
-            return DEMON_MASTER
+            return FURBOLG_CORRUPTION
         elseif (mod == 0) then
-            return CLEAVING_ATTACK
+            return FURBOLG_COMMAND_AURA
         elseif (mod == 1) then
-            return HOWL_OF_TERROR
+            return FURBOLG_FAERIE_FIRE
         elseif (mod == 2) then
-            return RAIN_OF_FIRE
+            return FURBOLG_REJUVENATION
         endif
 	endif
 
@@ -141,69 +138,41 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	if ((GetUnitCount(DEMON_GATE_2) == 0) and (GetUnitCount(DEMON_GATE_3) == 0)) then
-		call SetBuildUnit( 1, DEMON_GATE_1 )
-	else
-		call SetBuildUnit( 0, DEMON_GATE_1 )
-	endif
-	call SetBuildUnit( 17, DEMON_IMP )
-	call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
-	call SetBuildUnit( 2, DEMON_HOUSING )
-	call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )
-    call SetBuildUnit( 1, DEMON_FLOATING_ROCKS )
-    call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
-    call SetBuildUnit( 1, DEMON_ALTAR )
-    call SetBuildUnit( 1, DEMON_OBELISK )
-	
-	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_STR )
-	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_ARMOR )
-    call SetBuildUpgr( 1, UPG_DEMON_CR_ATTACK )
-	call SetBuildUpgr( 1, UPG_DEMON_CR_ARMOR )
-	call SetBuildUpgr( 1, UPG_DEMON_WEB )
-
-    // Tier 2 buildings
-	if (GetUnitCount(DEMON_GATE_3) == 0) then
-		call SetBuildUnit( 1, DEMON_GATE_2 )
-	else
-		call SetBuildUnit( 0, DEMON_GATE_2 )
-	endif
-    call SetBuildUnit( 1, DEMON_DUNGEON_OF_PAIN )
-    call SetBuildUnit( 1, DEMON_PORTAL )
-    call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
-	call SetBuildUnit( 2, DEMON_CITIZEN_FEMALE )
-	
-	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_STR )
-	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_ARMOR )
-    call SetBuildUpgr( 2, UPG_DEMON_CR_ATTACK )
-	call SetBuildUpgr( 2, UPG_DEMON_CR_ARMOR )
-	
-	call SetBuildUpgr( 1, UPG_DEMON_CLEAVING_ATTACK )
-	call SetBuildUpgr( 1, UPG_DEMON_DEVOUR_MAGIC )
-	call SetBuildUpgr( 1, UPG_DEMON_FIRE )
-	
-	call SetBuildUpgr( 1, UPG_DEMON_RAIN_OF_FIRE )
-	call SetBuildUpgr( 1, UPG_DEMON_DEFEND )
-	call SetBuildUpgr( 1, UPG_DEMON_CRIPPLE )
-	call SetBuildUpgr( 1, UPG_DEMON_SLOW )
-	call SetBuildUpgr( 1, UPG_DEMON_SUCCUBUS )
-	call SetBuildUpgr( 1, UPG_DEMON_EREDAR_SORCERER )
-
-    // Tier 3 buildings
-    call SetBuildUnit( 1, DEMON_GATE_3 )
-    call SetBuildUnit( 2, DEMON_SHRINE )
-    call SetBuildUnit( 1, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
+	call SetBuildUnit( 1, FURBOLG_TRIBAL_CENTER )
+	call SetBuildUnit( 17, YOUNG_FURBOLG )
+	call SetBuildUnit( 4, FURBOLG_HUT )
+	call SetBuildUnit( 2, FURBOLG_CITIZEN_MALE )
+	call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
+	call SetBuildUnit( 2, FURBOLG_HOUSING )
+	call SetBuildUnit( 2, FURBOLG_BARRACKS )
+    call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
 	call SetBuildUnit( 1, POWER_GENERATOR )
+    call SetBuildUnit( 2, GUARDING_FURBOLG )
+    call SetBuildUnit( 1, FURBOLG_MARKETPLACE )
+	call SetBuildUnit( 1, FURBOLG_WOLVES_CAGE )
+	call SetBuildUnit( 1, FURBOLG_POLAR_HUT )
+	call SetBuildUnit( 1, FURBOLG_DEFILED_FOUNTAIN )
+	call SetBuildUnit( 1, FURBOLG_GREEN_DRAGON_ROOST )
 	
-	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
-	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
-    call SetBuildUpgr( 3, UPG_DEMON_CR_ATTACK )
-	call SetBuildUpgr( 3, UPG_DEMON_CR_ARMOR )
-	call SetBuildUpgr( 2, UPG_DEMON_SUCCUBUS )
-	call SetBuildUpgr( 2, UPG_DEMON_EREDAR_SORCERER )
-	call SetBuildUpgr( 1, UPG_DEMON_RESISTANT_SKIN )
-	call SetBuildUpgr( 1, UPG_DEMON_PERMANENT_IMMOLATION )
-	call SetBuildUpgr( 1, UPG_DEMON_HARDENED_SKIN )
-	call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
+	call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
+	
+	call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_RWEAPONS )
+	call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_WEAPONS )
+    call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_ARMOR )
+	call SetBuildUpgr( 3, UPG_FURBOLG_CR_ARMOR )
+	call SetBuildUpgr( 3, UPG_FURBOLG_CR_ATTACK )
+	
+	call SetBuildUpgr( 2, UPG_FURBOLG_SHAMAN )
+	call SetBuildUpgr( 2, UPG_FURBOLG_ELDER_SHAMAN )
+	call SetBuildUpgr( 1, UPG_FURBOLG_FAERIE_FIRE )
+	call SetBuildUpgr( 1, UPG_FURBOLG_WEB )
+	call SetBuildUpgr( 1, UPG_FURBOLG_ENSNARE )
+	call SetBuildUpgr( 1, UPG_FURBOLG_BLOOD_LUST )
+	call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
+	call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
+	
+	call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
+	
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************
@@ -326,33 +295,33 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
-    call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 2, 3, 3, FURBOLG_EX )
+    call CampaignAttackerEx( 0, 1, 2, FURBOLG_TRACKER_EX )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
-    call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 2, 3, 3, FURBOLG_EX )
+    call CampaignAttackerEx( 0, 1, 2, FURBOLG_TRACKER_EX )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -360,86 +329,92 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
+    call CampaignAttackerEx( 2, 2, 3, FURBOLG_ELDER_SHAMAN )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
+    call CampaignAttackerEx( 2, 2, 3, FURBOLG_ELDER_SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, FURBOLG_CHAMPION_EX )
+	call CampaignAttackerEx( 2, 2, 3, TIMBER_WOLF )
+	call CampaignAttackerEx( 2, 2, 3, GIANT_WOLF )
+	call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL )
+    call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
+    call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
+    call CampaignAttackerEx( 2, 2, 3, FURBOLG_ELDER_SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, FURBOLG_CHAMPION_EX )
+    call CampaignAttackerEx( 2, 2, 3, FURBOLG_SHAMAN_EX )
+	call CampaignAttackerEx( 2, 2, 3, TIMBER_WOLF )
+	call CampaignAttackerEx( 2, 2, 3, GIANT_WOLF )
+	call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -447,15 +422,19 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 4, 6, 8, DEMON_OVERLORD )
-        call CampaignAttackerEx( 4, 6, 8, DEMON_FEL_STALKER )
-        call CampaignAttackerEx( 4, 6, 8, DEMON_NETHER_DRAKE )
-        call CampaignAttackerEx( 2, 4, 6, DEMON_INFERNAL_MACHINE )
-        call CampaignAttackerEx( 2, 4, 6, DEMON_GREATER_VOID_WALKER )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_EREDAR_SORCERER )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_SUCCUBUS )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_NETHER_DRAKE )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_INFERNAL )
+        call CampaignAttackerEx( 4, 6, 8, FURBOLG_EX )
+        call CampaignAttackerEx( 4, 6, 8, FURBOLG_TRACKER_EX )
+        call CampaignAttackerEx( 4, 6, 8, FURBOLG_CHAMPION_EX )
+        call CampaignAttackerEx( 2, 4, 6, FURBOLG_URSA_WARRIOR )
+        call CampaignAttackerEx( 2, 4, 6, POLAR_FURBOLG )
+        call CampaignAttackerEx( 3, 4, 6, POLAR_FURBOLG_CHAMPION )
+        call CampaignAttackerEx( 3, 4, 6, FURBOLG_ELDER_SHAMAN )
+        call CampaignAttackerEx( 3, 4, 6, FURBOLG_CHAMPION_EX )
+        call CampaignAttackerEx( 3, 4, 6, FURBOLG_SHAMAN_EX )
+		call CampaignAttackerEx( 3, 4, 6, TIMBER_WOLF )
+		call CampaignAttackerEx( 3, 4, 6, GIANT_WOLF )
+		call CampaignAttackerEx( 3, 4, 6, DIRE_WOLF )
+		call CampaignAttackerEx( 3, 4, 6, GREEN_DRAKE )
 		call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()

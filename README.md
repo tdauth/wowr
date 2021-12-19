@@ -7,7 +7,7 @@ Open world role-playing game funmap for Warcraft III: Reforged featuring compute
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr1.8.5.w3x)
+* [Current development version](./wowr1.8.6.w3x)
 
 *Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues.
 
@@ -107,6 +107,10 @@ This version provides several new features compared to the original map:
 * Second race for Warlords at level 30.
 * Mask of Death is only available as unique item.
 * Disable Undead/non-Undead restrictions for quests.
+* VIPs.
+* Random events for gold.
+* Neutral Citizens.
+* One additional hero later in the game.
 
 ## Bug Fixes
 
