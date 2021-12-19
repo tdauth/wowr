@@ -1,5 +1,5 @@
 globals
-	constant integer FURBOLG_TRIBAL_CENTER                           = 'u026' // altar and tier 1-3
+	constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // altar and tier 1-3
 	constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
 	constant integer FURBOLG_DEFILED_FOUNTAIN                        = 'n02B' // sanctum/damned temple
 	constant integer FURBOLG_LUMBER_CAMP                             = 'h017' // lumber will and blacksmith
@@ -10,11 +10,11 @@ globals
 	constant integer FURBOLG_HUT                                     = 'n028' // farm
 	constant integer GUARDING_FURBOLG                                = 'h016' // tower
 	
-	constant integer YOUNG_FURBOLG                                   = 'u00P' // worker
+	constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
 	constant integer FURBOLG_EX                                      = 'n02E'
 	constant integer FURBOLG_CHAMPION_EX                             = 'n02F'
 	constant integer FURBOLG_ELDER_SHAMAN                            = 'n02G'
-	constant integer FURBOLG_SHAMAN_EX                               = 'n02H
+	constant integer FURBOLG_SHAMAN_EX                               = 'n02H'
 	constant integer FURBOLG_TRACKER_EX                              = 'n02I'
 	constant integer FURBOLG_URSA_WARRIOR                            = 'n02J' // tauren
 	constant integer GREEN_DRAKE                                     = 'n02S' // frost wyrm
@@ -45,7 +45,7 @@ globals
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 
-	constant integer FURBOLG_URSA_WARRIOR                            = 'E00E'
+	constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
 	constant integer FURBOLG_REJUVENATION                            = 'A06X'
 	constant integer FURBOLG_FAERIE_FIRE                             = 'A06Y'
 	constant integer FURBOLG_COMMAND_AURA                            = 'A06Z'
@@ -87,7 +87,7 @@ function ChooseHeroSkill takes nothing returns integer
     local integer mod = ModuloInteger(level, 4)
     local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
 
-    if (curHero == FURBOLG_URSA_WARRIOR) then
+    if (curHero == FURBOLG_URSA_WARRIOR_HERO) then
         if (skillUlti) then
             return FURBOLG_CORRUPTION
         elseif (mod == 0) then
@@ -103,14 +103,14 @@ function ChooseHeroSkill takes nothing returns integer
 endfunction
 
 function InitHero takes nothing returns nothing
-    if (GetUnitCountDone(FURBOLG_URSA_WARRIOR) > 0) then
-        set hero_id = FURBOLG_URSA_WARRIOR
+    if (GetUnitCountDone(FURBOLG_URSA_WARRIOR_HERO) > 0) then
+        set hero_id = FURBOLG_URSA_WARRIOR_HERO
     endif
 endfunction
 
 function UpdateWorkers takes nothing returns nothing
 	loop
-		call SetGoldPeons(5 + GetUnitCount(DEMON_HOUSING) * 3)
+		call SetGoldPeons(5 + GetUnitCount(FURBOLG_HOUSING) * 3)
 		call SetWoodPeons(5)
 		call Sleep(1)
 	endloop
@@ -140,21 +140,21 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, FURBOLG_TRIBAL_CENTER )
 	call SetBuildUnit( 17, YOUNG_FURBOLG )
-	call SetBuildUnit( 4, FURBOLG_HUT )
+	call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
+	call SetBuildUnit( 2, FURBOLG_HUT )
 	call SetBuildUnit( 2, FURBOLG_CITIZEN_MALE )
-	call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
 	call SetBuildUnit( 2, FURBOLG_HOUSING )
+	call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
 	call SetBuildUnit( 2, FURBOLG_BARRACKS )
-    call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
-	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
     call SetBuildUnit( 2, GUARDING_FURBOLG )
+	call SetBuildUnit( 1, POWER_GENERATOR )
     call SetBuildUnit( 1, FURBOLG_MARKETPLACE )
 	call SetBuildUnit( 1, FURBOLG_WOLVES_CAGE )
 	call SetBuildUnit( 1, FURBOLG_POLAR_HUT )
 	call SetBuildUnit( 1, FURBOLG_DEFILED_FOUNTAIN )
+	call SetBuildUpgr( 2, UPG_FURBOLG_LUMBER )
 	call SetBuildUnit( 1, FURBOLG_GREEN_DRAGON_ROOST )
-	
-	call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
 	
 	call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_RWEAPONS )
 	call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_WEAPONS )
@@ -171,9 +171,10 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
 	call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
 	
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	
 	call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
 	
-	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
     // **********************************
     // *    End Building Strategy       *
