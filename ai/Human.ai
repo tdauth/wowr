@@ -1,6 +1,7 @@
 globals
     constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
     constant integer UPG_EVOLUTION                                   = 'R00U'
+	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
@@ -189,6 +190,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, 'Rhsb' ) // sundering blades
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

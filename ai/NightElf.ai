@@ -1,6 +1,7 @@
 globals
     constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
     constant integer UPG_EVOLUTION                                   = 'R00U'
+	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
@@ -185,6 +186,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, 'Repm' ) // backpack
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
