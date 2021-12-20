@@ -111,6 +111,8 @@ This version provides several new features compared to the original map:
 * Random events for gold.
 * Neutral Citizens.
 * One additional hero later in the game.
+* Fountain of Blood which trains Fel Orcs.
+* Hidden bases at level 35.
 
 ## Bug Fixes
 
