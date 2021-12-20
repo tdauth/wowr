@@ -26,6 +26,9 @@ globals
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	
 	constant integer AKAMA                                           = 'N01K'
+	constant integer REINCARNATION_AKAMA                             = 'A08K'
+	constant integer SPIRIT_WOLF_AKAMA                               = 'A08I'
+    constant integer SHADOW_TOUCH_AKAMA                              = 'A08G'
 
     constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
@@ -67,11 +70,11 @@ function ChooseHeroSkill takes nothing returns integer
         if (skillUlti) then
             return REINCARNATION
         elseif (mod == 0) then
-            return SPIRIT_WOLF
+            return SPIRIT_WOLF_AKAMA
         elseif (mod == 1) then
             return CHAIN_LIGHTNING
         elseif (mod == 2) then
-            return SHADOW_TOUCH
+            return SHADOW_TOUCH_AKAMA
         endif
     endif
 
