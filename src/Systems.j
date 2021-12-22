@@ -119,6 +119,20 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
         endif
         set I1 = I1 + 1
     endloop
+	// Check second hero inventory
+	if (udg_Hero2[PlayerNumber] != null) then
+		set I1 = 0
+    		loop
+        		exitwhen(I1 == bj_MAX_INVENTORY)
+        		if (GetItemTypeId(UnitItemInSlot(udg_Hero2[PlayerNumber], I1)) == itemTypeId) then
+            			call RemoveItem(UnitItemInSlot(udg_Hero2[PlayerNumber], I1))
+            			set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            			call SetItemInvulnerable(whichItem, true)
+            			exitwhen (true)
+        		endif
+        		set I1 = I1 + 1
+		endloop
+	endif
     // Check the backpack
     if (whichItem == null) then
         set I0 = 0
@@ -412,7 +426,11 @@ function RespawnGroup takes integer Group returns boolean
 					endif
 					set GroupMember = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_RespawnUnitType[index], GetLocationX(RespawnLocation), GetLocationY(RespawnLocation), GetRandomReal(0.00, 360.00))
 					if (GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) > 0) then
-						call BlzSetUnitIntegerFieldBJ(GroupMember, UNIT_IF_LEVEL, (BlzGetUnitIntegerField(GroupMember, UNIT_IF_LEVEL) + GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE))))
+						    set udg_TmpUnit = GroupMember
+						    set udg_TmpInteger = ( GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) / 10 )
+						    set udg_TmpInteger2 = ( GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) / 10 )
+						    set udg_TmpReal = I2R(udg_TmpInteger2)
+						    call ConditionalTriggerExecute( gg_trg_Evolution_Add_Unit_Level_And_Defense )
 					endif
 					call AssignUnitToGroup(GroupMember, Group)
 					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
@@ -542,10 +560,104 @@ function TriggerActionMoveRucksack takes nothing returns nothing
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns nothing
+	local integer i = 1
+	loop
+		exitwhen (i > bj_MAX_INVENTORY)
+		call UnitRemoveItemFromSlotSwapped(i, hero)
+		set i = i + 1
+	endloop
+endfunction
+
+function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns item
+	local integer level0Percentage = 100 / 10
+	local integer level4Percentage = 100 / 16
+	local integer level6Percentage = 100 / 5
+	local integer level8Percentage = 100 / 6
+	call RandomDistReset()
+	if (highestCreepLevel > 8) then
+		call RandomDistAddItem('infs', level8Percentage)
+		call RandomDistAddItem('scav', level8Percentage)
+		call RandomDistAddItem('rej6', level8Percentage)
+		call RandomDistAddItem('shar', level8Percentage)
+		call RandomDistAddItem('engr', level8Percentage)
+		call RandomDistAddItem('ankh', level8Percentage)
+	elseif (highestCreepLevel > 5) then
+		call RandomDistAddItem('will', level6Percentage)
+		call RandomDistAddItem('fgdg', level6Percentage)
+		call RandomDistAddItem('rej3', level6Percentage)
+		call RandomDistAddItem('sand', level6Percentage)
+		call RandomDistAddItem('lmbr', level6Percentage)
+	elseif (highestCreepLevel > 5) then
+		call RandomDistAddItem('hslv', level4Percentage)
+	        call RandomDistAddItem('rhe2', level4Percentage)
+	        call RandomDistAddItem('rma2', level4Percentage)
+	        call RandomDistAddItem('totw', level4Percentage)
+	        call RandomDistAddItem('shea', level4Percentage)
+	        call RandomDistAddItem('whwd', level4Percentage)
+	        call RandomDistAddItem('fgrg', level4Percentage)
+	        call RandomDistAddItem('wswd', level4Percentage)
+	        call RandomDistAddItem('rman', level4Percentage)
+	        call RandomDistAddItem('gold', level4Percentage)
+	        call RandomDistAddItem('shar', level4Percentage)
+	        call RandomDistAddItem('fgrd', level4Percentage)
+	        call RandomDistAddItem('fgfh', level4Percentage)
+	        call RandomDistAddItem('sres', level4Percentage)
+	        call RandomDistAddItem('sror', level4Percentage)
+	        call RandomDistAddItem('pinv', level4Percentage)
+	else
+	        call RandomDistAddItem('hslv', level0Percentage)
+	        call RandomDistAddItem('rhe2', level0Percentage)
+	        call RandomDistAddItem('pman', level0Percentage)
+	        call RandomDistAddItem('pclr', level0Percentage)
+	        call RandomDistAddItem('rspd', level0Percentage)
+	        call RandomDistAddItem('sreg', level0Percentage)
+	        call RandomDistAddItem('rspl', level0Percentage)
+	        call RandomDistAddItem('rnec', level0Percentage)
+	        call RandomDistAddItem('rsps', level0Percentage)
+	        call RandomDistAddItem('rdis', level0Percentage)
+	endif
+	return UnitDropItem(whichUnit, RandomDistChoose())
+endfunction
+
+function GetUnitLevelByType takes integer unitTypeId returns integer
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local integer result = BlzGetUnitIntegerField(GetTriggerUnit(), UNIT_IF_LEVEL)
+	call RemoveUnit(dummy)
+	set dummy = null
+	return result
+endfunction
+
+function GetHighestLevelFromGroup takes integer Group returns integer
+	local integer result = 0
+	local integer index = 0
+	local integer level = 0
+	local integer i = 0
+        loop
+		exitwhen(i == udg_RespawnGroupMaxMembers)
+		set index = Index2D(Group, i, udg_RespawnGroupMaxMembers)
+		if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
+			set level = GetUnitLevelByType(udg_RespawnUnitType[index])
+			if (level > result) then
+				set result = level
+			endif	
+		endif
+		set i = i + 1
+	endloop
+	return result
+endfunction
+
+function DropRandomItemForGroup takes unit whichUnit, integer Group returns item
+	return DropRandomItem(whichUnit, GetHighestLevelFromGroup(Group))
+endfunction
+
+function DropRandomItemForGroupNTimes takes unit whichUnit, integer Group returns nothing
+	local integer n = GetRandomInt(0, 2)
+	local item whichItem = null
 	local integer i = 0
 	loop
-		exitwhen (i == bj_MAX_INVENTORY)
-		call UnitRemoveItemFromSlotSwapped(i, hero)
+		exitwhen (i == n)
+		set whichItem = DropRandomItemForGroup(whichUnit, Group)
+                call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
 		set i = i + 1
 	endloop
 endfunction
@@ -568,11 +680,12 @@ function TriggerActionRespawnMonster takes nothing returns nothing
         if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
             set RandomNumber = GetRandomReal(0.00, 100.00)
             if (RandomNumber <= udg_RespawnItemChance) then
-                set ItemSpawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-                set whichItem = CreateItem(udg_RespawnItemType[Group], GetLocationX(ItemSpawnLocation), GetLocationY(ItemSpawnLocation))
-                call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
-                call RemoveLocation(ItemSpawnLocation)
-                set ItemSpawnLocation = null
+                //set ItemSpawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
+                //set whichItem = CreateItem(udg_RespawnItemType[Group], GetLocationX(ItemSpawnLocation), GetLocationY(ItemSpawnLocation))
+		call DropRandomItemForGroupNTimes(triggerUnit, Group)
+                //call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
+                //call RemoveLocation(ItemSpawnLocation)
+                //set ItemSpawnLocation = null
             endif
             call RespawnGroupTimed(Group)
         endif
@@ -596,7 +709,7 @@ function InitCustomSystems takes nothing returns nothing
     if (udg_UseRespawningSystem) then
         set udg_RespawnTrigger = CreateTrigger()
         call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
-		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_Bosses, EVENT_PLAYER_UNIT_DEATH, null)
+		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_DEATH, null)
         call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
     endif
 endfunction
@@ -666,3 +779,93 @@ function HookAddUnitToGroup takes unit whichUnit, group whichGroup returns nothi
 endfunction
 
 hook GroupAddUnitSimple HookAddUnitToGroup
+
+function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profession returns integer
+	local unit hero = udg_Held[GetConvertedPlayerId(whichPlayer)]
+	if (profession == 0) then // Herbalism
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
+			return 'I025'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 600.0) then
+			return 'pnvu'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 400.0) then
+			return 'hlst'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
+			return 'pghe'
+		endif
+		
+	endif
+	if (profession == 1) then // Alchemy
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
+			return 'I024'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 600.0) then
+			return 'woms'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 400.0) then
+			return 'mnst'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
+			return 'pgma'
+		endif
+		
+	endif
+	if (profession == 2) then // Weapon Smith
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
+			return 'I00R'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 600.0) then
+			return 'I00Q'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 400.0) then
+			return 'I00P'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
+			return 'I00O'
+		endif
+		
+	endif
+	if (profession == 3) then // Armourer
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
+			return 'I00N'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 600.0) then
+			return 'I00M'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 400.0) then
+			return 'I00L'
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
+			return 'I00K'
+		endif
+		
+	endif
+	if (profession == 4) then // Engineer
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
+			return 'I00S' // tiny death tower
+		endif
+//		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 600.0) then
+			//return 'I00M' // 2 gobline sappers
+//		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 400.0) then
+			return 'I00U' // tiny cold tower
+		endif
+		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
+			return 'I00T' // tiny flame tower
+		endif
+		
+	endif
+	return 0
+endfunction
+
+function GetNextCraftedProfessionItem takes player whichPlayer returns integer
+	local integer profession = udg_PlayerProfession[GetConvertedPlayerId(whichPlayer)]
+	return GetNextCraftedProfessionItemEx(whichPlayer, profession)
+endfunction
+
+function GetNextCraftedProfession2Item takes player whichPlayer returns integer
+	local integer profession = udg_PlayerProfession2[GetConvertedPlayerId(whichPlayer)]
+	return GetNextCraftedProfessionItemEx(whichPlayer, profession)
+endfunction

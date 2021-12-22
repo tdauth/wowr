@@ -14,6 +14,11 @@ globals
 	constant integer FROST_WYRM_MOUNT                                = 'u004'
 	constant integer CHIMAERA_MOUNT                                  = 'e005'
 	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+	
+	constant integer COMMAND_ATTACK_ENEMY_PLAYERS_ON                 = 1
+	constant integer COMMAND_ATTACK_ENEMY_PLAYERS_OFF                = 2
+	
+	boolean attackEnemyPlayers = true
 endglobals
 
 //===========================================================================
@@ -100,7 +105,27 @@ function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + GetUnitCount(HUMAN_HOUSING) * 3)
 		call SetWoodPeons(5)
-		call Sleep(1)
+		call Sleep(10)
+	endloop
+endfunction
+
+function ReceiveCommands takes nothing returns nothing
+	local integer i
+	loop
+		loop
+			exitwhen (CommandsWaiting() <= 0) then
+			if (GetLastCommand() == COMMAND_ATTACK_ENEMY_PLAYERS_ON) then
+				//native GetLastCommand       takes nothing                               returns integer
+				//native GetLastData          takes nothing                               returns integer
+				set attackEnemyPlayers = true
+				call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
+			elseif (GetLastCommand() == COMMAND_ATTACK_ENEMY_PLAYERS_OFF) then
+				set attackEnemyPlayers = false
+				call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
+			endif
+			call PopLastCommand()
+		endloop
+		call Sleep(10)
 	endloop
 endfunction
 
@@ -250,44 +275,46 @@ function LaunchAttack takes nothing returns nothing
         return
     endif
 
-    // Target Priority #1
-    if (target == null) then
-        set target = GetAllianceTarget()
-        if (target != null) then
-            set setAlly = false
-        endif
-    endif
+	if (attackEnemyPlayers) then
+		// Target Priority #1
+		if (target == null) then
+			set target = GetAllianceTarget()
+			if (target != null) then
+				set setAlly = false
+			endif
+		endif
 
-    // Target Priority #2
-    if (target == null) then
-        set target = GetExpansionFoe()
-        if (target != null) then
-            set take_exp = false
-        endif
-    endif
+		// Target Priority #2
+		if (target == null) then
+			set target = GetExpansionFoe()
+			if (target != null) then
+				set take_exp = false
+			endif
+		endif
 
-    // Target Priority #3
-    if (target == null) then
-        set target = GetMegaTarget()
-    endif
+		// Target Priority #3
+		if (target == null) then
+			set target = GetMegaTarget()
+		endif
 
-    // Target Priority #4
-    if (target == null) then
-        set target = GetEnemyExpansion()
-    endif
+		// Target Priority #4
+		if (target == null) then
+			set target = GetEnemyExpansion()
+		endif
 
-    // Target Priority #5
-    if (target == null) then
-        set target = GetEnemyExpansion()
-        if (target == null) then
-            call StartGetEnemyBase(  )
-            loop
-                exitwhen (not WaitGetEnemyBase())
-                call SuicideSleep( 1 )
-            endloop
-            set target = GetEnemyBase()
-        endif
-    endif
+		// Target Priority #5
+		if (target == null) then
+			set target = GetEnemyExpansion()
+			if (target == null) then
+				call StartGetEnemyBase(  )
+				loop
+					exitwhen (not WaitGetEnemyBase())
+					call SuicideSleep( 1 )
+				endloop
+				set target = GetEnemyBase()
+			endif
+		endif
+	endif
 
     // Target Priority #6
     if (target == null) then
@@ -447,6 +474,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
 	call StartThread(function UpdateWorkers)
+	call StartThread(function ReceiveCommands)
 
     call BuildingStrategy( )
 
