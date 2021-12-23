@@ -114,6 +114,7 @@ This version provides several new features compared to the original map:
 * Fountain of Blood which trains Fel Orcs.
 * Hidden bases at level 35.
 * World Tree for Night Elves.
+* Lich King for Undead.
 
 ## Bug Fixes
 
