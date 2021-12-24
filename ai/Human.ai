@@ -108,16 +108,10 @@ function InitHero takes nothing returns nothing
     endif
 endfunction
 
-function UpdateWorkers takes nothing returns nothing
+function UpdateWorkersAndReceiveCommands takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + GetUnitCount(HUMAN_HOUSING) * 3)
 		call SetWoodPeons(5)
-		call Sleep(10)
-	endloop
-endfunction
-
-function ReceiveCommands takes nothing returns nothing
-	loop
 		loop
 			exitwhen (CommandsWaiting() <= 0) then
 			if (GetLastCommand() == COMMAND_ATTACK_PLAYERS_ON) then
@@ -140,7 +134,6 @@ function ReceiveCommands takes nothing returns nothing
 			call PopLastCommand()
 			call Sleep(5)
 		endloop
-		// wait for retry
 		call Sleep(10)
 	endloop
 endfunction
@@ -497,7 +490,7 @@ function FilterFunctionUnitIsNextToWaterArea takes nothing returns boolean
 	local boolean result = false
 	call RegionAddRect(whichRegion, gg_rct_Lordearon_1)
 	call RegionAddRect(whichRegion, gg_rct_Ort_Ogrimmar)
-	set result = IsUnitType(GetEnumUnit(), unittype UNIT_TYPE_TOWNHALL) and IsUnitInRegion(regionWaterAreas, GetEnumUnit())
+	set result = IsUnitType(GetEnumUnit(), UNIT_TYPE_TOWNHALL) and IsUnitInRegion(regionWaterAreas, GetEnumUnit())
 	call RemoveRegion(whichRegion)
 	set whichRegion = null
 	return result
@@ -514,14 +507,13 @@ function TownHallIsNextToWater takes nothing returns boolean
 endfunction
 
 function main takes nothing returns nothing
-	call DoAiScriptDebug()
+	//call DoAiScriptDebug()
 	set attackEnemyPlayers = MeleeDifficulty() == MELEE_INSANE
 	set buildShips = TownHallIsNextToWater()
     call CampaignAI( HOUSE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-	call StartThread(function UpdateWorkers)
-	call StartThread(function ReceiveCommands)
+	call StartThread(function UpdateWorkersAndReceiveCommands)
 
     call BuildingStrategy( )
 
