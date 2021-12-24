@@ -9,16 +9,23 @@ globals
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
 	
+	constant integer HUMAN_SHIPYARD                                  = 'h010'
+	constant integer HUMAN_TRANSPORT_SHIP                            = 'hbot'
+	constant integer HUMAN_BATTLESHIP                                = 'hbsh'
+	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
 	constant integer FROST_WYRM_MOUNT                                = 'u004'
 	constant integer CHIMAERA_MOUNT                                  = 'e005'
 	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
 	
-	constant integer COMMAND_ATTACK_ENEMY_PLAYERS_ON                 = 1
-	constant integer COMMAND_ATTACK_ENEMY_PLAYERS_OFF                = 2
+	constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1
+	constant integer COMMAND_ATTACK_PLAYERS_OFF                      = 2
+	constant integer COMMAND_GIVE_GOLD                               = 3
+	constant integer COMMAND_GIVE_WOOD                               = 4
 	
 	boolean attackEnemyPlayers = true
+	boolean buildShips = false
 endglobals
 
 //===========================================================================
@@ -110,21 +117,30 @@ function UpdateWorkers takes nothing returns nothing
 endfunction
 
 function ReceiveCommands takes nothing returns nothing
-	local integer i
 	loop
 		loop
 			exitwhen (CommandsWaiting() <= 0) then
-			if (GetLastCommand() == COMMAND_ATTACK_ENEMY_PLAYERS_ON) then
-				//native GetLastCommand       takes nothing                               returns integer
-				//native GetLastData          takes nothing                               returns integer
+			if (GetLastCommand() == COMMAND_ATTACK_PLAYERS_ON) then
 				set attackEnemyPlayers = true
-				call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
-			elseif (GetLastCommand() == COMMAND_ATTACK_ENEMY_PLAYERS_OFF) then
+				//call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
+			elseif (GetLastCommand() == COMMAND_ATTACK_PLAYERS_OFF) then
 				set attackEnemyPlayers = false
-				call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
+				//call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
+			elseif (GetLastCommand() == COMMAND_GIVE_GOLD) then
+                call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
+                call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
+				//call DisplayText(GetAiPlayer(), "Here, take my gold!")
+            elseif (GetLastCommand() == COMMAND_GIVE_WOOD) then
+                call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER))
+                call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER, 0)
+				//call DisplayText(GetAiPlayer(), "Here, take my wood!")
+			else
+				//call DisplayText(GetAiPlayer(), "I received an unknown AI command: " + I2S(GetLastCommand()))
 			endif
 			call PopLastCommand()
+			call Sleep(5)
 		endloop
+		// wait for retry
 		call Sleep(10)
 	endloop
 endfunction
@@ -143,6 +159,7 @@ function ConfigureAI takes nothing returns nothing
 	call SetCaptainChanges ( false )
 	call SetSmartArtillery ( true )
     call GroupTimedLife ( true )
+	call SetAmphibious( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -199,6 +216,12 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 2, GUARD_TOWER )
 	call SetBuildUnit( 1, CANNON_TOWER )
 	call SetBuildUnit( 1, POWER_GENERATOR )
+	
+	if (buildShips) then
+		call SetBuildUnit( 1, HUMAN_SHIPYARD )
+		call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
+		call SetBuildUnit( 2, HUMAN_BATTLESHIP )
+	endif
 	
 	call SetBuildUpgr( 3, UPG_MELEE )
     call SetBuildUpgr( 3, UPG_RANGED )
@@ -469,7 +492,31 @@ function AttackWaves takes nothing returns nothing
     endloop
 endfunction
 
+function FilterFunctionUnitIsNextToWaterArea takes nothing returns boolean
+	local region whichRegion = CreateRegion()
+	local boolean result = false
+	call RegionAddRect(whichRegion, gg_rct_Lordearon_1)
+	call RegionAddRect(whichRegion, gg_rct_Ort_Ogrimmar)
+	set result = IsUnitType(GetEnumUnit(), unittype UNIT_TYPE_TOWNHALL) and IsUnitInRegion(regionWaterAreas, GetEnumUnit())
+	call RemoveRegion(whichRegion)
+	set whichRegion = null
+	return result
+endfunction
+
+function TownHallIsNextToWater takes nothing returns boolean
+	local group whichGroup = CreateGroup()
+	local boolean result = false
+	call GroupEnumUnitsOfPlayer(whichGroup, Player(GetAiPlayer()), function FilterFunctionUnitIsNextToWaterArea)
+	set result = FirstOfGroup(whichGroup) != null
+	call DestroyGroup(whichGroup)
+	set whichGroup = null
+	return result
+endfunction
+
 function main takes nothing returns nothing
+	call DoAiScriptDebug()
+	set attackEnemyPlayers = MeleeDifficulty() == MELEE_INSANE
+	set buildShips = TownHallIsNextToWater()
     call CampaignAI( HOUSE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )

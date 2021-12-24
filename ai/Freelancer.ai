@@ -1,3 +1,14 @@
+globals
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+	
+	constant integer FOUNTAIN_OF_LIFE                                = 'h007'
+	constant integer HIDEOUT                                         = 'h00J'
+endglobals
+
 //===========================================================================
 // Calculate the modulus/remainder of (dividend) divided by (divisor).
 // Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
@@ -61,6 +72,46 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SIPHON_MANA
         endif
+	elseif (curHero == BLADE_MASTER) then
+        if (skillUlti) then
+            return BLADE_STORM
+        elseif (mod == 0) then
+            return CRITICAL_STRIKE
+        elseif (mod == 1) then
+            return MIRROR_IMAGE
+        elseif (mod == 2) then
+            return WIND_WALK
+        endif
+    elseif (curHero == FAR_SEER) then
+        if (skillUlti) then
+            return EARTHQUAKE
+        elseif (mod == 0) then
+            return CHAIN_LIGHTNING
+        elseif (mod == 1) then
+            return FAR_SIGHT
+        elseif (mod == 2) then
+            return SPIRIT_WOLF
+        endif
+    elseif (curHero == TAUREN_CHIEF) then
+        if (skillUlti) then
+            return REINCARNATION
+        elseif (mod == 0) then
+            return ENDURANE_AURA
+        elseif (mod == 1) then
+            return SHOCKWAVE
+        elseif (mod == 2) then
+            return WAR_STOMP
+        endif
+    elseif (curHero == SHADOW_HUNTER) then
+        if (skillUlti) then
+            return VOODOO
+        elseif (mod == 0) then
+            return HEALING_WAVE
+        elseif (mod == 1) then
+            return HEX
+        elseif (mod == 2) then
+            return SERPENT_WARD
+        endif
     endif
 
     return 'Aamk'
@@ -75,6 +126,14 @@ function InitHero takes nothing returns nothing
         set hero_id = MTN_KING
     elseif (GetUnitCountDone(BLOOD_MAGE) > 0) then
         set hero_id = BLOOD_MAGE
+    elseif (GetUnitCountDone(BLADE_MASTER) > 0) then
+        set hero_id = BLADE_MASTER
+    elseif (GetUnitCountDone(FAR_SEER) > 0) then
+        set hero_id = FAR_SEER
+    elseif (GetUnitCountDone(TAUREN_CHIEF) > 0) then
+        set hero_id = TAUREN_CHIEF
+    elseif (GetUnitCountDone(SHADOW_HUNTER) > 0) then
+        set hero_id = SHADOW_HUNTER
     endif
 endfunction
 
@@ -86,6 +145,19 @@ function ConfigureAI takes nothing returns nothing
     call SetHeroesBuyItems( true )
     call SetHeroesTakeItems( true )
     call SetSlowChopping( false )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+	call SetReplacements( 1, 2, 3 )
+	call SetBuildUnit( 1, FOUNTAIN_OF_LIFE )
+	call SetBuildUnit( 1, HIDEOUT )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
 endfunction
 
 //===========================================================================
@@ -105,6 +177,30 @@ function AttackTarget takes unit target, boolean addAlliance returns nothing
     endif
 endfunction
 
+function AttackWithMount takes nothing returns nothing
+	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+	endif
+	if (GetUnitCount(WYVERN_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+	endif
+	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+	endif
+	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+	endif
+	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
+endfunction
+
 //===========================================================================
 // Initiates an attack based on target priorities
 //===========================================================================
@@ -116,45 +212,6 @@ function LaunchAttack takes nothing returns nothing
     if (TownThreatened()) then
         call Sleep( 2 )
         return
-    endif
-
-    // Target Priority #1
-    if (target == null) then
-        set target = GetAllianceTarget()
-        if (target != null) then
-            set setAlly = false
-        endif
-    endif
-
-    // Target Priority #2
-    if (target == null) then
-        set target = GetExpansionFoe()
-        if (target != null) then
-            set take_exp = false
-        endif
-    endif
-
-    // Target Priority #3
-    if (target == null) then
-        set target = GetMegaTarget()
-    endif
-
-    // Target Priority #4
-    if (target == null) then
-        set target = GetEnemyExpansion()
-    endif
-
-    // Target Priority #5
-    if (target == null) then
-        set target = GetEnemyExpansion()
-        if (target == null) then
-            call StartGetEnemyBase(  )
-            loop
-                exitwhen (not WaitGetEnemyBase())
-                call SuicideSleep( 1 )
-            endloop
-            set target = GetEnemyBase()
-        endif
     endif
 
     // Target Priority #6
@@ -179,9 +236,10 @@ endfunction
 function AttackWaves takes nothing returns nothing
     loop
         call InitAssaultGroup()
-        call CampaignAttackerEx( 1, 1, 1, hero_id )
+        call AddStandardUnitsToAttackWave()
         call Sleep( 10 ) // Waits 10 seconds before attacking
         call LaunchAttack()
+		call Sleep( M1 )
     endloop
 endfunction
 
@@ -189,6 +247,8 @@ function main takes nothing returns nothing
     call CampaignAI( 0, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
+	
+	call BuildingStrategy( )
 
     call AttackWaves( )
 endfunction

@@ -115,6 +115,8 @@ This version provides several new features compared to the original map:
 * Hidden bases at level 35.
 * World Tree for Night Elves.
 * Lich King for Undead.
+* Magic Vault for Blood Elves.
+* Player stats multiboard.
 
 ## Bug Fixes
 
@@ -157,14 +159,7 @@ This prevents ending the game for an AI.
 
 ### Freelancers
 
-The following files are imported into the map whenever they are updated. They contain a very basic freelancer AI for computer players:
-
-* [HumanFreelancer.ai](./ai/HumanFreelancer.ai)
-* [OrcFreelancer.ai](./ai/OrcFreelancer.ai)
-* [UndeadFreelancer.ai](./ai/UndeadFreelancer.ai)
-* [NightElfFreelancer.ai](./ai/NightElfFreelancer.ai)
-
-Currently, the freelancer AI mode is disabled. All computer players will choose the game mode warlord.
+The file [Freelancer.ai](./ai/Freelancer.ai) is imported into the map whenever it is updated. It contains a very basic freelancer AI for computer players.
 
 ## Replays
 
