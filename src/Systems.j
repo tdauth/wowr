@@ -385,12 +385,12 @@ function GetHeroUnitMatching takes integer Group, integer unitTypeId, group revi
 		endif
 		call GroupRemoveUnit(tmpGroup, first)
 	endloop
-	
+
 	call GroupClear(tmpGroup)
 	call DestroyGroup(tmpGroup)
 	set tmpGroup = null
 	set first = null
-	
+
 	return hero
 endfunction
 
@@ -412,12 +412,12 @@ function RespawnGroup takes integer Group returns boolean
             if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
 				if (not IsUnitGroupEmptyBJ(udg_RespawnGroupHeroes[Group])) then
 					set GroupMember = GetHeroUnitMatching(Group, udg_RespawnUnitType[index], revivedHeroes)
-					debug call BJDebugMsg("Group " + I2S(Group) + " has heroes and the member is " + GetUnitName(GroupMember) ) 
+					debug call BJDebugMsg("Group " + I2S(Group) + " has heroes and the member is " + GetUnitName(GroupMember) )
 				else
 					set GroupMember = null
 					debug call BJDebugMsg("Group " + I2S(Group) + " has no heroes")
 				endif
-				
+
 				if (GroupMember == null) then
 					if (udg_RespawnLocationPerUnit[index] != null) then
 						set RespawnLocation = udg_RespawnLocationPerUnit[index]
@@ -449,7 +449,7 @@ function RespawnGroup takes integer Group returns boolean
 					call ReviveHeroLoc(GroupMember, RespawnLocation, true)
 					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
 					call GroupAddUnit(revivedHeroes, GroupMember)
-					debug call BJDebugMsg("Group " + I2S(Group) + " revive hero: " + GetUnitName(GroupMember)) 
+					debug call BJDebugMsg("Group " + I2S(Group) + " revive hero: " + GetUnitName(GroupMember))
 					if (udg_RespawnLocationPerUnit[index] == null) then
 						call RemoveLocation(RespawnLocation)
 					endif
@@ -460,14 +460,14 @@ function RespawnGroup takes integer Group returns boolean
             endif
             set I0 = I0 + 1
         endloop
-		
+
 		set result = true
     endif
-	
+
 	call GroupClear(revivedHeroes)
 	call DestroyGroup(revivedHeroes)
 	set revivedHeroes = null
-	
+
 	return result
 endfunction
 
@@ -569,25 +569,37 @@ function DropAllItemsFromHero takes unit hero returns nothing
 endfunction
 
 function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns item
-	local integer level0Percentage = 100 / 10
-	local integer level4Percentage = 100 / 16
-	local integer level6Percentage = 100 / 5
-	local integer level8Percentage = 100 / 6
+	local integer level0Percentage = 100
+	local integer level4Percentage = 100
+	local integer level6Percentage = 100
+	local integer level8Percentage = 100
+	local integer i
 	call RandomDistReset()
+
 	if (highestCreepLevel > 8) then
 		call RandomDistAddItem('infs', level8Percentage)
+		call RandomDistAddItem('hval', level8Percentage)
 		call RandomDistAddItem('scav', level8Percentage)
 		call RandomDistAddItem('rej6', level8Percentage)
 		call RandomDistAddItem('shar', level8Percentage)
 		call RandomDistAddItem('engr', level8Percentage)
 		call RandomDistAddItem('ankh', level8Percentage)
-	elseif (highestCreepLevel > 5) then
+		call RandomDistAddItem('sor5', level8Percentage)
+	endif
+
+	if (highestCreepLevel > 5) then
 		call RandomDistAddItem('will', level6Percentage)
 		call RandomDistAddItem('fgdg', level6Percentage)
 		call RandomDistAddItem('rej3', level6Percentage)
+		call RandomDistAddItem('rej4', level6Percentage)
 		call RandomDistAddItem('sand', level6Percentage)
 		call RandomDistAddItem('lmbr', level6Percentage)
-	elseif (highestCreepLevel > 5) then
+		call RandomDistAddItem('rat6', level6Percentage)
+		call RandomDistAddItem('rat6', level6Percentage)
+		call RandomDistAddItem('fgun', level6Percentage)
+	endif
+
+	if (highestCreepLevel > 5) then
 		call RandomDistAddItem('hslv', level4Percentage)
 	        call RandomDistAddItem('rhe2', level4Percentage)
 	        call RandomDistAddItem('rma2', level4Percentage)
@@ -604,24 +616,50 @@ function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns 
 	        call RandomDistAddItem('sres', level4Percentage)
 	        call RandomDistAddItem('sror', level4Percentage)
 	        call RandomDistAddItem('pinv', level4Percentage)
-	else
-	        call RandomDistAddItem('hslv', level0Percentage)
-	        call RandomDistAddItem('rhe2', level0Percentage)
-	        call RandomDistAddItem('pman', level0Percentage)
-	        call RandomDistAddItem('pclr', level0Percentage)
-	        call RandomDistAddItem('rspd', level0Percentage)
-	        call RandomDistAddItem('sreg', level0Percentage)
-	        call RandomDistAddItem('rspl', level0Percentage)
-	        call RandomDistAddItem('rnec', level0Percentage)
-	        call RandomDistAddItem('rsps', level0Percentage)
-	        call RandomDistAddItem('rdis', level0Percentage)
 	endif
+	// low level general stuff
+	call RandomDistAddItem('rnec', level0Percentage)
+	call RandomDistAddItem('skul', level0Percentage)
+	call RandomDistAddItem('silk', level0Percentage)
+	call RandomDistAddItem('hslv', level0Percentage)
+	call RandomDistAddItem('rhe2', level0Percentage)
+	call RandomDistAddItem('pman', level0Percentage)
+	call RandomDistAddItem('pclr', level0Percentage)
+	call RandomDistAddItem('rspd', level0Percentage)
+	call RandomDistAddItem('sreg', level0Percentage)
+	call RandomDistAddItem('rspl', level0Percentage)
+	call RandomDistAddItem('rnec', level0Percentage)
+	call RandomDistAddItem('rsps', level0Percentage)
+	call RandomDistAddItem('rdis', level0Percentage)
+
+	set i = 0
+	loop
+		exitwhen (i == bj_randDistCount)
+		set bj_randDistChance[i] = 100 / bj_randDistCount
+		set i = i + 1
+	endloop
 	return UnitDropItem(whichUnit, RandomDistChoose())
 endfunction
 
 function GetUnitLevelByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitIntegerField(GetTriggerUnit(), UNIT_IF_LEVEL)
+	call RemoveUnit(dummy)
+	set dummy = null
+	return result
+endfunction
+
+function GetUnitDamageTypeByType takes integer unitTypeId returns integer
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local integer result = BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0)
+	call RemoveUnit(dummy)
+	set dummy = null
+	return result
+endfunction
+
+function GetUnitMovementTypeByType takes integer unitTypeId returns integer
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local integer result = BlzGetUnitIntegerField(GetTriggerUnit(), UNIT_IF_MOVE_TYPE)
 	call RemoveUnit(dummy)
 	set dummy = null
 	return result
@@ -639,7 +677,7 @@ function GetHighestLevelFromGroup takes integer Group returns integer
 			set level = GetUnitLevelByType(udg_RespawnUnitType[index])
 			if (level > result) then
 				set result = level
-			endif	
+			endif
 		endif
 		set i = i + 1
 	endloop
@@ -795,7 +833,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
 			return 'pghe'
 		endif
-		
+
 	endif
 	if (profession == 1) then // Alchemy
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
@@ -810,7 +848,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
 			return 'pgma'
 		endif
-		
+
 	endif
 	if (profession == 2) then // Weapon Smith
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
@@ -825,7 +863,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
 			return 'I00O'
 		endif
-		
+
 	endif
 	if (profession == 3) then // Armourer
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
@@ -840,7 +878,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
 			return 'I00K'
 		endif
-		
+
 	endif
 	if (profession == 4) then // Engineer
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
@@ -855,7 +893,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 200.0) then
 			return 'I00T' // tiny flame tower
 		endif
-		
+
 	endif
 	return 0
 endfunction

@@ -7,6 +7,11 @@ globals
 	
 	constant integer FOUNTAIN_OF_LIFE                                = 'h007'
 	constant integer HIDEOUT                                         = 'h00J'
+	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
+	constant integer GUARDIANS_CITADEL                               = 'h00L'
+
+	constant integer TEMPLE_BLUEPRINTS                               = 'R00B'
+	constant integer IMPROVED_MASONRY                                = 'R00W'
 endglobals
 
 //===========================================================================
@@ -155,6 +160,12 @@ function BuildingStrategy takes nothing returns nothing
 	call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, FOUNTAIN_OF_LIFE )
 	call SetBuildUnit( 1, HIDEOUT )
+	call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
+	call SetBuildUnit( 1, GUARDIANS_CITADEL )
+
+	call SetBuildUpgr( 1, UPG_SENTINEL )
+	call SetBuildUpgr( 1, TEMPLE_BLUEPRINTS )
+	call SetBuildUpgr( 100, IMPROVED_MASONRY )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
