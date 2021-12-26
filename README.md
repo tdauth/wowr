@@ -123,6 +123,8 @@ This version provides several new features compared to the original map:
 * New boss Keeper of Frostmourne.
 * Arcane Observatory for Humans.
 * Book of Summoning Pedestal for Demons.
+* Paladin on Theramore heals non-Undead units.
+* New hero: Mountain Giant.
 
 ## Bug Fixes
 

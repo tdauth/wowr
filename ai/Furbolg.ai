@@ -1,5 +1,5 @@
 globals
-	constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // altar and tier 1-3
+	constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // tier 1-3
 	constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
 	constant integer FURBOLG_DEFILED_FOUNTAIN                        = 'n02B' // sanctum/damned temple
 	constant integer FURBOLG_LUMBER_CAMP                             = 'h017' // lumber will and blacksmith
@@ -9,6 +9,7 @@ globals
 	constant integer FURBOLG_GREEN_DRAGON_ROOST                      = 'n02R' // totem/strong units at tier 3
 	constant integer FURBOLG_HUT                                     = 'n028' // farm
 	constant integer GUARDING_FURBOLG                                = 'h016' // tower
+	constant integer RESURRECTION_STONE                              = 'h01R' // altar
 	
 	constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
 	constant integer FURBOLG_EX                                      = 'n02E'
@@ -142,6 +143,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, FURBOLG_TRIBAL_CENTER )
 	call SetBuildUnit( 17, YOUNG_FURBOLG )
 	call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
+	call SetBuildUnit( 1, RESURRECTION_STONE )
 	call SetBuildUnit( 2, FURBOLG_HUT )
 	call SetBuildUnit( 2, FURBOLG_CITIZEN_MALE )
 	call SetBuildUnit( 2, FURBOLG_HOUSING )

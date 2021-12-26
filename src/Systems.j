@@ -643,7 +643,7 @@ endfunction
 
 function GetUnitLevelByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
-	local integer result = BlzGetUnitIntegerField(GetTriggerUnit(), UNIT_IF_LEVEL)
+	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_LEVEL)
 	call RemoveUnit(dummy)
 	set dummy = null
 	return result
@@ -651,7 +651,7 @@ endfunction
 
 function GetUnitDamageTypeByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
-	local integer result = BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0)
+	local integer result = BlzGetUnitWeaponIntegerField(dummy , UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0)
 	call RemoveUnit(dummy)
 	set dummy = null
 	return result
@@ -659,7 +659,7 @@ endfunction
 
 function GetUnitMovementTypeByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
-	local integer result = BlzGetUnitIntegerField(GetTriggerUnit(), UNIT_IF_MOVE_TYPE)
+	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_MOVE_TYPE)
 	call RemoveUnit(dummy)
 	set dummy = null
 	return result
