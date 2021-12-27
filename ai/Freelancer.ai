@@ -10,8 +10,9 @@ globals
 	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
 	constant integer GUARDIANS_CITADEL                               = 'h00L'
 
-	constant integer TEMPLE_BLUEPRINTS                               = 'R00B'
-	constant integer IMPROVED_MASONRY                                = 'R00W'
+	constant integer UPG_TEMPLE_BLUEPRINTS                           = 'R00B'
+	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
+	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
 endglobals
 
 //===========================================================================
@@ -164,8 +165,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, GUARDIANS_CITADEL )
 
 	call SetBuildUpgr( 1, UPG_SENTINEL )
-	call SetBuildUpgr( 1, TEMPLE_BLUEPRINTS )
-	call SetBuildUpgr( 100, IMPROVED_MASONRY )
+	call SetBuildUpgr( 1, UPG_TEMPLE_BLUEPRINTS )
+	call SetBuildUpgr( 100, UPG_IMPROVED_MASONRY )
+	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

@@ -24,6 +24,7 @@ globals
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
+	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
 	
 	constant integer AKAMA                                           = 'N01K'
 	constant integer REINCARNATION_AKAMA                             = 'A08K'
@@ -140,6 +141,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
 	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
+	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

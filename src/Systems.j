@@ -820,7 +820,7 @@ hook GroupAddUnitSimple HookAddUnitToGroup
 
 function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profession returns integer
 	local unit hero = udg_Held[GetConvertedPlayerId(whichPlayer)]
-	if (profession == 0) then // Herbalism
+	if (profession == udg_ProfessionHerbalist) then // Herbalism
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
 			return 'I025'
 		endif
@@ -835,7 +835,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		endif
 
 	endif
-	if (profession == 1) then // Alchemy
+	if (profession == udg_ProfessionAlchemist) then // Alchemy
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
 			return 'I024'
 		endif
@@ -850,7 +850,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		endif
 
 	endif
-	if (profession == 2) then // Weapon Smith
+	if (profession == udg_ProfessionWeaponSmith) then // Weapon Smith
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
 			return 'I00R'
 		endif
@@ -865,7 +865,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		endif
 
 	endif
-	if (profession == 3) then // Armourer
+	if (profession == udg_ProfessionArmourer) then // Armourer
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
 			return 'I00N'
 		endif
@@ -880,7 +880,7 @@ function GetNextCraftedProfessionItemEx takes player whichPlayer, integer profes
 		endif
 
 	endif
-	if (profession == 4) then // Engineer
+	if (profession == udg_ProfessionEngineer) then // Engineer
 		if (GetUnitStateSwap(UNIT_STATE_MANA, hero) >= 800.0) then
 			return 'I00S' // tiny death tower
 		endif
