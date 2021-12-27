@@ -114,6 +114,8 @@ function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + GetUnitCount(FURBOLG_HOUSING) * 3)
 		call SetWoodPeons(5)
+		call HarvestGold(0, 5 + GetUnitCount(FURBOLG_HOUSING) * 3)
+        call HarvestWood(0, 5)
 		call Sleep(1)
 	endloop
 endfunction
@@ -141,10 +143,10 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, FURBOLG_TRIBAL_CENTER )
-	call SetBuildUnit( 17, YOUNG_FURBOLG )
+	call SetBuildUnit( 22, YOUNG_FURBOLG )
 	call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
 	call SetBuildUnit( 1, RESURRECTION_STONE )
-	call SetBuildUnit( 2, FURBOLG_HUT )
+	call SetBuildUnit( 5, FURBOLG_HUT )
 	call SetBuildUnit( 2, FURBOLG_CITIZEN_MALE )
 	call SetBuildUnit( 2, FURBOLG_HOUSING )
 	call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
