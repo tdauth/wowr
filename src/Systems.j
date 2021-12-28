@@ -46,6 +46,34 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
     return GetPlayerController(Player(PlayerNumber)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(PlayerNumber)) == PLAYER_SLOT_STATE_PLAYING
 endfunction
 
+function BackpackCountItemsOfItemTypeForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
+	local integer I0 = 0
+    local integer I1 = 0
+    local integer index = 0
+    local integer result = 0
+    set I0 = 0
+    loop
+        exitwhen(I0 == udg_RucksackMaxPages)
+        set I1 = 0
+        loop
+            exitwhen(I1 == bj_MAX_INVENTORY)
+            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
+				if (UnitItemInSlot(udg_Rucksack[PlayerNumber], I1) != null and GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)) == itemTypeId) then
+					set result = result + 1
+				endif
+            else
+				if (udg_RucksackItemType[index] == itemTypeId) then
+					set result = result + 1
+				endif
+            endif
+            set I1 = I1 + 1
+        endloop
+        set I0 = I0 + 1
+    endloop
+	return result
+endfunction
+
 function RemoveAllBackpackItemTypesForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
 	local integer I0 = 0
     local integer I1 = 0
@@ -165,6 +193,19 @@ function DropQuestItemFromHeroAtRectByDyingUnit takes integer itemTypeId, rect w
     return DropQuestItemFromHeroAtRect(GetPlayerId(GetOwningPlayer(GetTriggerUnit())), itemTypeId, whichRect)
 endfunction
 
+function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns nothing
+    local integer I1 = 0
+    local integer index = 0
+        set I1 = 0
+        loop
+            exitwhen(I1 == bj_MAX_INVENTORY)
+            set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set udg_RucksackItemType[index] = 0
+            set udg_RucksackItemCharges[index] = 0
+            set I1 = I1 + 1
+        endloop
+endfunction
+
 function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
     local integer I0 = 0
     local integer I1 = 0
@@ -198,6 +239,7 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
     local integer CarriedItemType = 0
     local integer I0 = 0
     local integer index = 0
+	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
     // Create All Items From Next/Previous Page
     set I0 = 0
     loop
@@ -206,6 +248,7 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
         call UnitAddItemByIdSwapped(udg_RucksackItemType[index], udg_Rucksack[PlayerNumber])
         set I0 = I0 + 1
     endloop
+	call EnableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
     // Remove All None Items
     set I0 = 0
     loop
@@ -227,6 +270,7 @@ function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns 
     local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
     local item SlotItem = null
     local integer CarriedItemType = 0
+	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Drop)
     // Save All Items
     set I0 = 0
     loop
@@ -245,6 +289,7 @@ function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns 
         set SlotItem = null
         set I0 = I0 + 1
     endloop
+	call EnableTrigger(gg_trg_Legendary_Artifact_Counter_Drop)
     // Change Page
     if (Forward) then
         if (RucksackPage != (udg_RucksackMaxPages - 1)) then
@@ -906,4 +951,49 @@ endfunction
 function GetNextCraftedProfession2Item takes player whichPlayer returns integer
 	local integer profession = udg_PlayerProfession2[GetConvertedPlayerId(whichPlayer)]
 	return GetNextCraftedProfessionItemEx(whichPlayer, profession)
+endfunction
+
+globals
+	string array raceIcons[500]
+	string array professionIcons[500]
+	hashtable UnitTypeIconsHashTable = InitHashtable()
+endglobals
+
+function AddRaceIcon takes integer whichRace, string icon returns nothing
+    set raceIcons[whichRace] = icon
+endfunction
+
+function GetIconByRace takes integer whichRace returns string
+    local string result = raceIcons[whichRace]
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
+    endif
+
+    return result
+endfunction
+
+function AddProfessionIcon takes integer profession, string icon returns nothing
+    set professionIcons[profession] = icon
+endfunction
+
+function GetIconByProfession takes integer profession returns string
+    local string result = professionIcons[profession]
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
+    endif
+
+    return result
+endfunction
+
+function AddUnitTypeIcon takes integer unitTypeId, string icon returns nothing
+	 call SaveStr(UnitTypeIconsHashTable, unitTypeId, 0, icon)
+endfunction
+
+function GetIconByUnitType takes integer unitTypeId returns string
+	local string result = LoadStr(UnitTypeIconsHashTable, unitTypeId, 0)
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
+    endif
+
+    return result
 endfunction
