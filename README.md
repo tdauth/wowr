@@ -125,6 +125,7 @@ This version provides several new features compared to the original map:
 * Book of Summoning Pedestal for Demons.
 * Paladin on Theramore heals non-Undead units.
 * New hero: Mountain Giant.
+* New hero: Wizard.
 
 ## Bug Fixes
 

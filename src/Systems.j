@@ -193,6 +193,22 @@ function DropQuestItemFromHeroAtRectByDyingUnit takes integer itemTypeId, rect w
     return DropQuestItemFromHeroAtRect(GetPlayerId(GetOwningPlayer(GetTriggerUnit())), itemTypeId, whichRect)
 endfunction
 
+function DropQuestItemFromCreepHeroAtRect takes unit hero, integer itemTypeId, rect whichRect returns item
+    	local item whichItem = null
+	local integer i = 0
+	loop
+		exitwhen (i == bj_MAX_INVENTORY)
+        	if (GetItemTypeId(UnitItemInSlot(hero, i)) == itemTypeId) then
+            		call RemoveItem(UnitItemInSlot(hero, i))
+           		set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            		call SetItemInvulnerable(whichItem, true)
+            		exitwhen (true)
+        	endif
+		set i = i + 1
+	endloop
+	return whichItem
+endfunction
+
 function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns nothing
     local integer I1 = 0
     local integer index = 0
@@ -393,8 +409,7 @@ function AssignUnitToGroup takes unit whichUnit, integer Group returns nothing
     call SaveUnitParameterInteger(whichUnit, 0, Group)
 endfunction
 
-function AssignUnitToCurrentGroup takes nothing returns nothing
-    local integer lastIndex = CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex]) - 1
+function AssignUnitToCurrentGroupEx takes integer lastIndex returns nothing
     local integer memberIndex = Index2D(udg_TmpGroupIndex, lastIndex, udg_RespawnGroupMaxMembers)
     local unit lastMember = udg_LastAddedUnitToGroup
     debug call BJDebugMsg("Assign to unit " + GetUnitName(lastMember) + " with handle ID " + I2S(GetHandleId(lastMember)) + " with index " + I2S(lastIndex) + " the current group " + I2S(udg_TmpGroupIndex) + " the unit group has a size of " + I2S(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])))
@@ -408,7 +423,12 @@ function AssignUnitToCurrentGroup takes nothing returns nothing
 	if (IsUnitType(lastMember, UNIT_TYPE_HERO)) then
 		call GroupAddUnitSimple(lastMember, udg_RespawnGroupHeroes[udg_TmpGroupIndex])
 	endif
+	set udg_RespawnGroupMembers[udg_TmpGroupIndex] = lastIndex + 1
     set lastMember = null
+endfunction
+
+function AssignUnitToCurrentGroup takes nothing returns nothing
+    call AssignUnitToCurrentGroupEx(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex]) - 1)
 endfunction
 
 function InitCurrentGroup takes nothing returns nothing
@@ -444,15 +464,19 @@ function RespawnGroup takes integer Group returns boolean
     local integer I0 = 0
     local integer index = 0
 	local integer I1 = 0
+	local integer maxMembers = udg_RespawnGroupMaxMembers
     local location RespawnLocation
     local unit GroupMember = null
 	local group revivedHeroes = CreateGroup()
     debug call BJDebugMsg("Respawn group: " + I2S(Group))
-    if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
+    if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group]) or (udg_RespawnGroupMembers[Group] > 0 and CountUnitsInGroup(udg_RespawnGroup[Group]) < udg_RespawnGroupMembers[Group])) then
         debug call BJDebugMsg("Is empty: " + I2S(Group))
+        if (udg_RespawnGroupMembers[Group] > 0) then
+            set maxMembers = udg_RespawnGroupMembers[Group]
+        endif
         set I0 = 0
         loop
-            exitwhen(I0 == udg_RespawnGroupMaxMembers)
+            exitwhen(I0 == maxMembers)
             set index = Index2D(Group, I0, udg_RespawnGroupMaxMembers)
             if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
 				if (not IsUnitGroupEmptyBJ(udg_RespawnGroupHeroes[Group])) then
@@ -483,7 +507,7 @@ function RespawnGroup takes integer Group returns boolean
 						call RemoveLocation(RespawnLocation)
 					endif
 					set RespawnLocation = null
-				else
+				elseif (not IsUnitInGroup(GroupMember, udg_RespawnGroup[Group])) then // the hero could be still alive and in the group
 					// hero creeps should keep their XP
 					if (udg_RespawnLocationPerUnit[index] != null) then
 						set RespawnLocation = udg_RespawnLocationPerUnit[index]
@@ -531,18 +555,14 @@ function RespawnAllGroupsInRange takes real x, real y, real range returns intege
 endfunction
 
 function TriggerConditionNoBuilding takes nothing returns boolean
-    local trigger triggeringTrigger = GetTriggeringTrigger()
-    local integer Group = LoadTriggerParameterInteger(triggeringTrigger, 0)
-    set triggeringTrigger = null
+    local integer Group = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
     return RespawnRectContainsNoBuilding(Group)
 endfunction
 
 function TriggerActionRespawnGroup takes nothing returns nothing
-    local trigger triggeringTrigger = GetTriggeringTrigger()
-    local integer Group = LoadTriggerParameterInteger(triggeringTrigger, 0)
+    local integer Group = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
     call RespawnGroup(Group)
-    call DestroyParameterTrigger(triggeringTrigger)
-    set triggeringTrigger = null
+    call DestroyParameterTrigger(GetTriggeringTrigger())
 endfunction
 
 function RespawnGroupTimed takes integer Group returns nothing
@@ -745,6 +765,10 @@ function DropRandomItemForGroupNTimes takes unit whichUnit, integer Group return
 	endloop
 endfunction
 
+function TriggerConditionRespawnMonster takes nothing returns boolean
+    return GetRespawnGroupOfUnit(GetTriggerUnit()) != -1
+endfunction
+
 function TriggerActionRespawnMonster takes nothing returns nothing
     local unit triggerUnit = GetTriggerUnit()
     local integer Group = GetRespawnGroupOfUnit(triggerUnit)
@@ -754,18 +778,16 @@ function TriggerActionRespawnMonster takes nothing returns nothing
     debug call BJDebugMsg("Respawn monster with group " + I2S(Group) + " handle ID: " + I2S(GetHandleId(triggerUnit)))
     if (Group != -1) then
         call GroupRemoveUnit(udg_RespawnGroup[Group], triggerUnit)
-        if (IsUnitType(triggerUnit, UNIT_TYPE_HERO)) then
-			call DropAllItemsFromHero(triggerUnit)
-		else
+        if (not IsUnitType(triggerUnit, UNIT_TYPE_HERO)) then
 			call FlushUnitParameters(triggerUnit)
 			call AddUnitToAllStock(GetUnitTypeId(triggerUnit), 1, 1)
 		endif
-        if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
+		if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
             set RandomNumber = GetRandomReal(0.00, 100.00)
             if (RandomNumber <= udg_RespawnItemChance) then
                 //set ItemSpawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
                 //set whichItem = CreateItem(udg_RespawnItemType[Group], GetLocationX(ItemSpawnLocation), GetLocationY(ItemSpawnLocation))
-		call DropRandomItemForGroupNTimes(triggerUnit, Group)
+                call DropRandomItemForGroupNTimes(triggerUnit, Group)
                 //call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
                 //call RemoveLocation(ItemSpawnLocation)
                 //set ItemSpawnLocation = null
@@ -793,6 +815,9 @@ function InitCustomSystems takes nothing returns nothing
         set udg_RespawnTrigger = CreateTrigger()
         call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
 		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_DEATH, null)
+		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
+		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
+		call TriggerAddCondition(udg_RespawnTrigger, Condition(function TriggerConditionRespawnMonster))
         call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
     endif
 endfunction
