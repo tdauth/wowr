@@ -185,7 +185,7 @@ Hence, I am trying to collect replays with the game ending to reconstruct the bu
 ## Testing
 
 It enables several cheats if you play as WorldEdit player.
-This is a useful savecode as player WorldEdit playing Freelancer with hero level 60 in singleplayer: `vlRJzXBXwXs7oX1H1wIr`.
+This is a useful savecode as player WorldEdit playing Freelancer with hero level 60 in singleplayer: `vlRJzXBXX9cXs7oXt1ivRX`.
 
 ## History of the Map
 

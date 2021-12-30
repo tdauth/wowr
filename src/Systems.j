@@ -1004,9 +1004,12 @@ endfunction
 globals
     //constant string SAVE_CODE_SYMBOLS = "0123456789ABCDEF"
     constant string SAVE_CODE_SYMBOLS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE"
-    constant string SAVE_CODE_SEPARATOR = "X"
+    constant string SAVE_CODE_SEPARATOR = "X" // must not be part of SAVE_CODE_SYMBOLS
 endglobals
 
+/**
+ * Returns the base for the custom number system.
+ */
 function GetMaxSaveCodeSymbols takes nothing returns integer
     return StringLength(SAVE_CODE_SYMBOLS)
 endfunction
@@ -1015,31 +1018,22 @@ function ConvertDigitToSaveCodeSymbol takes integer digit returns string
     return SubString(SAVE_CODE_SYMBOLS, digit, digit + 1)
 endfunction
 
-function ReverseString takes string in returns string
-    local string result = ""
-    local integer i = StringLength(in)
-    loop
-        exitwhen (i == 0)
-        set result = result + SubString(in, i - 1, i)
-        set i = i - 1
-    endloop
-    return result
-endfunction
-
 function ConvertIntegerToSaveCodeSymbol takes integer number returns string
     local string result = ""
+    local integer start = number
+    local integer base = GetMaxSaveCodeSymbols()
     local integer mod = 0
-    //call BJDebugMsg("Converting number " + I2S(number))
+    //call BJDebugMsg("Converting number " + I2S(start))
     loop
-        set mod = ModuloInteger(number, GetMaxSaveCodeSymbols())
-        //call BJDebugMsg("Mod " + I2S(mod) + " when dividing by " + I2S(GetMaxSaveCodeSymbols()))
-        set result = result + ConvertDigitToSaveCodeSymbol(mod)
+        //call BJDebugMsg("Dividing number " + I2S(start) + " by " + I2S(base))
+        set mod = ModuloInteger(start, base)
+        exitwhen (mod == 0)
+        set start = start / base
+        set result = ConvertDigitToSaveCodeSymbol(mod) + result
         //call BJDebugMsg("Result: " + result)
-        set number = number / GetMaxSaveCodeSymbols()
-        exitwhen (number == 0)
     endloop
 
-    return ReverseString(result) + SAVE_CODE_SEPARATOR
+    return result + SAVE_CODE_SEPARATOR
 endfunction
 
 function IndexOfString takes string symbol, string source returns integer
@@ -1114,7 +1108,7 @@ function ConvertSaveCodeSymbolToInteger takes string symbol, integer n returns i
         //call BJDebugMsg("Index " + I2S(index) +  " for symbol " + symbol + " pow " + I2S(GetMaxSaveCodeSymbols()) + ", " + I2S(n))
         return index * PowI(GetMaxSaveCodeSymbols(), n)
     endif
-    //call BJDebugMsg("Cannot find symbol: " + symbol)
+    //call BJDebugMsg("Cannot find symbol: " + symbol + " with n: " + I2S(n))
     return 0
 endfunction
 
@@ -1126,7 +1120,7 @@ function GetSaveCodeUntil takes string saveCode, integer excludedIndex returns s
         exitwhen (separatorCounter >= excludedIndex or i == StringLength(saveCode))
         if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEPARATOR) then
             set separatorCounter = separatorCounter + 1
-            set index = i
+            set index = i + 1 // include the separator character!
         endif
         set i = i + 1
     endloop
@@ -1134,11 +1128,14 @@ function GetSaveCodeUntil takes string saveCode, integer excludedIndex returns s
     return SubString(saveCode, 0, index)
 endfunction
 
+/**
+ * Extracts the part of a save code with index and converts it into a decimal number.
+ */
 function ConvertSaveCodeSymbolToIntegerFromSaveCode takes string saveCode, integer index returns integer
     local string substr = ""
     local integer result = 0
     local integer separatorCounter = 0
-    local integer n = 0
+    local integer n = -1
     local integer i = 0
     loop
         exitwhen (separatorCounter > index or i == StringLength(saveCode))
@@ -1146,16 +1143,17 @@ function ConvertSaveCodeSymbolToIntegerFromSaveCode takes string saveCode, integ
             set separatorCounter = separatorCounter + 1
         elseif (separatorCounter == index) then
             set substr = substr + SubString(saveCode, i, i + 1)
+            set n = n + 1
         endif
         set i = i + 1
     endloop
     // convert into decimal number
     //call BJDebugMsg("Calculate number back " + substr)
-    set n = StringLength(substr) - 1
     set i = 0
     loop
         exitwhen (i == StringLength(substr))
         set result = result + ConvertSaveCodeSymbolToInteger(SubString(substr, i, i + 1), n)
+        //call BJDebugMsg("Result " + I2S(result))
         set n = n - 1
         set i = i + 1
     endloop
@@ -1167,30 +1165,10 @@ function IsInSinglePlayer takes nothing returns boolean
     return CountPlayersInForceBJ(GetPlayersByMapControl(MAP_CONTROL_USER)) == 1
 endfunction
 
-function CompressSaveCode takes string saveCode returns string
-    local string result = ""
-    local integer compressedLength = StringLength(saveCode)
-    local integer i = compressedLength
-    loop
-        exitwhen (i == 0)
-        if (SubString(saveCode, i - 1, i) == SAVE_CODE_SEPARATOR) then
-            set compressedLength = i - 1
-        else
-            exitwhen (true)
-        endif
-        set i = i - 1
-    endloop
-    set i = 0
-    loop
-        exitwhen (i == compressedLength)
-        set result = result + SubString(saveCode, i, i + 1)
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
 // We don't want to handle negative numbers.
 function AbsStringHash takes string whichString returns integer
+    // TODO Besides we want short save codes with maximum 3 digits.
+    //return ModuloInteger(IAbsBJ(StringHash(whichString)), GetMaxSaveCodeSymbols() * 3)
     return IAbsBJ(StringHash(whichString))
 endfunction
 
@@ -1209,6 +1187,7 @@ function GetSaveCode takes player whichPlayer returns string
     local boolean isSinglePlayer = IsInSinglePlayer()
     local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
     local integer gameType = udg_GameType
+    local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
     local integer xp = GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])
     local string result = ConvertIntegerToSaveCodeSymbol(playerNameHash)
 
@@ -1231,26 +1210,29 @@ function GetSaveCode takes player whichPlayer returns string
     endif
 
     set result = result + ConvertIntegerToSaveCodeSymbol(gameType)
+    set result = result + ConvertIntegerToSaveCodeSymbol(xpRate)
     set result = result + ConvertIntegerToSaveCodeSymbol(xp)
 
     //call BJDebugMsg("Compressed result: " + CompressSaveCode(result))
-    //call BJDebugMsg("Checksum: " + I2S(AbsStringHash(CompressSaveCode(result))))
-    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(CompressSaveCode(result))))
+    //call BJDebugMsg("Checksum: " + I2S(AbsStringHash(result)))
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
+    //call BJDebugMsg("Checked save code part: " + result)
 
-    set result = result + ConvertIntegerToSaveCodeSymbol(AbsStringHash(CompressSaveCode(result))) // checksum
+    set result = result + ConvertIntegerToSaveCodeSymbol(AbsStringHash(result)) // checksum
 
-    return CompressSaveCode(result)
+    return result
 endfunction
 
 function ApplySaveCode takes player whichPlayer, string saveCode returns boolean
     local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
     local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
     local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
-    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local integer xpRate = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
     local boolean isWarlord = false
-    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 4)
-    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 5)
+    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 5)
 
     //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
@@ -1278,7 +1260,7 @@ function ApplySaveCode takes player whichPlayer, string saveCode returns boolean
         set isWarlord = false
     endif
 
-    if (checksum == AbsStringHash(checkedSaveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+    if (checksum == AbsStringHash(checkedSaveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
         call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
 
         return true
@@ -1291,12 +1273,13 @@ function GetSaveCodeErrors takes player whichPlayer, string saveCode returns str
     local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
     local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
     local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
-    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local integer xpRate = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
     local boolean isWarlord = false
     local string result = ""
-    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 4)
-    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 5)
+    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 5)
 
     if (checksum != AbsStringHash(checkedSaveCode)) then
         set result = result + "Expected different checksum!"
@@ -1357,6 +1340,14 @@ function GetSaveCodeErrors takes player whichPlayer, string saveCode returns str
         endif
     endif
 
+    if (xpRate != R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Expected XP rate: " + I2S(xpRate)
+    endif
+
     if (xp <= GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
         if (StringLength(result) > 0) then
             set result = result + ", "
@@ -1365,7 +1356,7 @@ function GetSaveCodeErrors takes player whichPlayer, string saveCode returns str
         set result = result + "Expected more XP than your current!"
     endif
 
-    if (checksum == AbsStringHash(saveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+    if (checksum == AbsStringHash(saveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
         set result = "None errors detected. Stored " + I2S(xp) + "XP."
     endif
 
@@ -1376,14 +1367,15 @@ function GetSaveCodeInfos takes player whichPlayer, string saveCode returns stri
     local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
     local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
     local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
-    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local integer xpRate = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
     local boolean isWarlord = false
     local string result = ""
-    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 4)
-    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 5)
+    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 5)
 
-    if (checksum != AbsStringHash(saveCode)) then
+    if (checksum != AbsStringHash(checkedSaveCode)) then
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
@@ -1392,7 +1384,7 @@ function GetSaveCodeInfos takes player whichPlayer, string saveCode returns stri
     endif
 
 
-    if (playerNameHash == AbsStringHash(GetPlayerName(whichPlayer))) then
+    if (playerNameHash != AbsStringHash(GetPlayerName(whichPlayer))) then
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
@@ -1447,9 +1439,16 @@ function GetSaveCodeInfos takes player whichPlayer, string saveCode returns stri
         set result = result + ", "
     endif
      set result = result + "Game type: " + I2S(gameType)
+
+    if (StringLength(result) > 0) then
+        set result = result + ", "
+    endif
+    set result = result + "XP rate: " + I2S(xpRate)
+
      if (StringLength(result) > 0) then
         set result = result + ", "
     endif
+
      set result = result + "XP: " + I2S(xp)
 
     return result
@@ -1486,9 +1485,12 @@ endfunction
 function FormatTimeString takes integer seconds returns string
     local integer minutes = seconds / 60
     local integer hours = minutes / 60
+    local integer hoursInMinutes = hours * 60
+    local integer hoursInSeconds = hoursInMinutes * 60
+    local integer minutesInSeconds = minutes * 60
 
-    set minutes = minutes - hours * 60
-    set seconds = seconds - minutes * 60
+    set minutes = minutes - hoursInMinutes
+    set seconds = seconds - (hoursInSeconds + minutesInSeconds)
 
     if (hours > 0) then
         return FormatIntegerToTwoDigits(hours) + ":" + FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
