@@ -26,6 +26,9 @@ globals
 	constant integer FROST_WYRM_MOUNT                                = 'u004'
 	constant integer CHIMAERA_MOUNT                                  = 'e005'
 	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+
+	constant integer SHREDDER                                        = 'ngir'
+	constant integer AI_LABORATORY                                   = 'h01T'
 endglobals
 
 //===========================================================================
@@ -96,6 +99,8 @@ function ConfigureAI takes nothing returns nothing
 	call SetCaptainChanges ( false )
 	call SetSmartArtillery ( true )
     call GroupTimedLife ( true )
+    call SetRandomPaths( true )
+    call SetDefendPlayer( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -107,6 +112,8 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, NAGA_TEMPLE )
 	call SetBuildUnit( 22, NAGA_SLAVE )
 	call SetBuildUnit( 2, NAGA_CITIZEN_MALE )
+	call SetBuildUnit( 1, AI_LABORATORY )
+	call SetBuildUnit( 1, SHREDDER )
 	call SetBuildUnit( 5, NAGA_CORAL )
 	call SetBuildUnit( 2, NAGA_HOUSING )
 	call SetBuildUnit( 2, NAGA_SPAWNING )

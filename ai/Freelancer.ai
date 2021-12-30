@@ -9,10 +9,24 @@ globals
 	constant integer HIDEOUT                                         = 'h00J'
 	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
 	constant integer GUARDIANS_CITADEL                               = 'h00L'
+	constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
+
+    constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
+	constant integer DARK_RANGER_SILENCE                             = 'ANsi'
+	constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
+	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
+	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
+	constant integer DARK_RANGER_CHARM                               = 'ANch'
+	constant integer DARK_RANGER_BLACK_ARROW                         = 'ANba'
+
+	constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
 	constant integer UPG_TEMPLE_BLUEPRINTS                           = 'R00B'
 	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
+
+	constant integer SHREDDER                                        = 'ngir'
+	constant integer AI_LABORATORY                                   = 'h01T'
 endglobals
 
 //===========================================================================
@@ -38,6 +52,7 @@ function ChooseHeroSkill takes nothing returns integer
     local integer mod = ModuloInteger(level, 4)
     local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
 
+    // Human
     if (curHero == PALADIN) then
         if (skillUlti) then
             return RESURRECTION
@@ -78,6 +93,7 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SIPHON_MANA
         endif
+    // Orc
 	elseif (curHero == BLADE_MASTER) then
         if (skillUlti) then
             return BLADE_STORM
@@ -118,12 +134,95 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SERPENT_WARD
         endif
+    // Night Elf
+     elseif (curHero == DEMON_HUNTER) then
+        if (skillUlti) then
+            return METAMORPHOSIS
+        elseif (mod == 0) then
+            return EVASION
+        elseif (mod == 1) then
+            return MANA_BURN
+        elseif (mod == 2) then
+            return IMMOLATION
+        endif
+    elseif (curHero == KEEPER) then
+        if (skillUlti) then
+            return TRANQUILITY
+        elseif (mod == 0) then
+            return THORNS_AURA
+        elseif (mod == 1) then
+            return FORCE_NATURE
+        elseif (mod == 2) then
+            return ENT_ROOTS
+        endif
+    elseif (curHero == MOON_CHICK) then
+        if (skillUlti) then
+            return STARFALL
+        elseif (mod == 0) then
+            return SCOUT
+        elseif (mod == 1) then
+            return TRUESHOT
+        elseif (mod == 2) then
+            return SEARING_ARROWS
+        endif
+    elseif (curHero == WARDEN) then
+        if (skillUlti) then
+            return VENGEANCE
+        elseif (mod == 0) then
+            return SHADOW_TOUCH
+        elseif (mod == 1) then
+            return FAN_KNIVES
+        elseif (mod == 2) then
+            return BLINK
+        endif
+    // Undead
+    elseif (curHero == DEATH_KNIGHT) then
+        if (skillUlti) then
+            return ANIM_DEAD
+        elseif (mod == 0) then
+            return DEATH_COIL
+        elseif (mod == 1) then
+            return DEATH_PACT
+        elseif (mod == 2) then
+            return UNHOLY_AURA
+        endif
+    elseif (curHero == DARK_RANGER_NEUTRAL) then
+        if (skillUlti) then
+            return DARK_RANGER_CHARM
+        elseif (mod == 0) then
+            return DARK_RANGER_SILENCE
+        elseif (mod == 1) then
+            return DARK_RANGER_BLACK_ARROW
+        elseif (mod == 2) then
+            return DARK_RANGER_LIFE_DRAIN
+        endif
+    elseif (curHero == LICH) then
+        if (skillUlti) then
+            return DEATH_DECAY
+        elseif (mod == 0) then
+            return DARK_RITUAL
+        elseif (mod == 1) then
+            return FROST_ARMOR
+        elseif (mod == 2) then
+            return FROST_NOVA
+        endif
+    elseif (curHero == CRYPT_LORD) then
+        if (skillUlti) then
+            return LOCUST_SWARM
+        elseif (mod == 0) then
+            return CARRION_SCARAB
+        elseif (mod == 1) then
+            return IMPALE
+        elseif (mod == 2) then
+            return THORNY_SHIELD
+        endif
     endif
 
     return 'Aamk'
 endfunction
 
 function InitHero takes nothing returns nothing
+    // Human
     if (GetUnitCountDone(PALADIN) > 0) then
         set hero_id = PALADIN
     elseif (GetUnitCountDone(ARCHMAGE) > 0) then
@@ -132,6 +231,7 @@ function InitHero takes nothing returns nothing
         set hero_id = MTN_KING
     elseif (GetUnitCountDone(BLOOD_MAGE) > 0) then
         set hero_id = BLOOD_MAGE
+    // Orc
     elseif (GetUnitCountDone(BLADE_MASTER) > 0) then
         set hero_id = BLADE_MASTER
     elseif (GetUnitCountDone(FAR_SEER) > 0) then
@@ -140,7 +240,35 @@ function InitHero takes nothing returns nothing
         set hero_id = TAUREN_CHIEF
     elseif (GetUnitCountDone(SHADOW_HUNTER) > 0) then
         set hero_id = SHADOW_HUNTER
+    // Night Elf
+    elseif (GetUnitCountDone(DEMON_HUNTER) > 0) then
+        set hero_id = DEMON_HUNTER
+    elseif (GetUnitCountDone(KEEPER) > 0) then
+        set hero_id = KEEPER
+    elseif (GetUnitCountDone(MOON_CHICK) > 0) then
+        set hero_id = MOON_CHICK
+    elseif (GetUnitCountDone(WARDEN) > 0) then
+        set hero_id = WARDEN
+    // Undead
+    elseif (GetUnitCountDone(DEATH_KNIGHT) > 0) then
+        set hero_id = DEATH_KNIGHT
+    elseif (GetUnitCountDone(DARK_RANGER_NEUTRAL) > 0) then
+        set hero_id = DARK_RANGER_NEUTRAL
+    elseif (GetUnitCountDone(LICH) > 0) then
+        set hero_id = LICH
+    elseif (GetUnitCountDone(CRYPT_LORD) > 0) then
+        set hero_id = CRYPT_LORD
     endif
+endfunction
+
+function UpdateWorkers takes nothing returns nothing
+	loop
+		call SetGoldPeons(2)
+		call SetWoodPeons(1)
+		call HarvestGold(0, 2)
+        call HarvestWood(0, 1)
+		call Sleep(1)
+	endloop
 endfunction
 
 function ConfigureAI takes nothing returns nothing
@@ -151,6 +279,8 @@ function ConfigureAI takes nothing returns nothing
     call SetHeroesBuyItems( true )
     call SetHeroesTakeItems( true )
     call SetSlowChopping( false )
+    call SetRandomPaths( true )
+    call SetDefendPlayer( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -161,6 +291,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, FOUNTAIN_OF_LIFE )
 	call SetBuildUnit( 1, HIDEOUT )
+	call SetBuildUnit( 1, AI_LABORATORY)
+	call SetBuildUnit( 3, NEUTRAL_CITIZEN )
+	call SetBuildUnit( 1, SHREDDER )
 	call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
 	call SetBuildUnit( 1, GUARDIANS_CITADEL )
 
@@ -260,6 +393,7 @@ function main takes nothing returns nothing
     call CampaignAI( 0, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
+    call StartThread(function UpdateWorkers)
 	
 	call BuildingStrategy( )
 

@@ -19,6 +19,9 @@ globals
 	constant integer FROST_WYRM_MOUNT                                = 'u004'
 	constant integer CHIMAERA_MOUNT                                  = 'e005'
 	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+
+	constant integer SHREDDER                                        = 'ngir'
+	constant integer AI_LABORATORY                                   = 'h01T'
 	
 	constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1
 	constant integer COMMAND_ATTACK_PLAYERS_OFF                      = 2
@@ -176,6 +179,8 @@ function ConfigureAI takes nothing returns nothing
 	call SetSmartArtillery ( true )
     call GroupTimedLife ( true )
 	call SetAmphibious()
+    call SetRandomPaths( true )
+    call SetDefendPlayer( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
@@ -187,6 +192,8 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, TOWN_HALL )
 	call SetBuildUnit( 17, PEASANT )
 	call SetBuildUnit( 2, HUMAN_CITIZEN_MALE )
+	call SetBuildUnit( 1, AI_LABORATORY )
+    call SetBuildUnit( 1, SHREDDER )
 	call SetBuildUnit( 3, HOUSE )
 	call SetBuildUnit( 2, HUMAN_HOUSING )
 	call SetBuildUnit( 2, BARRACKS )

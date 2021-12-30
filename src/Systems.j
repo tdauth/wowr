@@ -363,7 +363,7 @@ function RefreshRucksackForPlayer takes integer PlayerNumber returns nothing
 endfunction
 
 function GetRespawnBuildingSize takes nothing returns real
-    return 1200.0
+    return 1400.0
 endfunction
 
 function GetRespawnGroupOfUnit takes unit Unit returns integer
@@ -386,7 +386,7 @@ function RespawnRectContainsNoBuilding takes integer Group returns boolean
         exitwhen(IsUnitGroupEmptyBJ(BuildingGroup))
         set FirstOfBuildingGroup = FirstOfGroup(BuildingGroup)
         set OwningPlayer = GetOwningPlayer(FirstOfBuildingGroup)
-        if (IsUnitType(FirstOfBuildingGroup, UNIT_TYPE_STRUCTURE) and PlayerIsOnlineUser(GetPlayerId(OwningPlayer))) then
+        if (IsUnitType(FirstOfBuildingGroup, UNIT_TYPE_STRUCTURE) and OwningPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and OwningPlayer != Player(PLAYER_NEUTRAL_PASSIVE)) then
             set BuildingDoesNotExist = false
             set FirstOfBuildingGroup = null
             set OwningPlayer = null
@@ -421,7 +421,7 @@ function AssignUnitToCurrentGroupEx takes integer lastIndex returns nothing
 	endif
     call AssignUnitToGroup(lastMember, udg_TmpGroupIndex)
 	if (IsUnitType(lastMember, UNIT_TYPE_HERO)) then
-		call GroupAddUnitSimple(lastMember, udg_RespawnGroupHeroes[udg_TmpGroupIndex])
+		set udg_RespawnHero[memberIndex] = lastMember
 	endif
 	set udg_RespawnGroupMembers[udg_TmpGroupIndex] = lastIndex + 1
     set lastMember = null
@@ -434,29 +434,6 @@ endfunction
 function InitCurrentGroup takes nothing returns nothing
     set udg_TmpGroupIndex = udg_TmpGroupIndex + 1
     set udg_RespawnGroup[udg_TmpGroupIndex] = CreateGroup()
-	set udg_RespawnGroupHeroes[udg_TmpGroupIndex] = CreateGroup()
-endfunction
-
-function GetHeroUnitMatching takes integer Group, integer unitTypeId, group revivedHeroes returns unit
-	local unit first = null
-	local unit hero = null
-	local group tmpGroup = CreateGroup()
-	call GroupAddGroup(udg_RespawnGroupHeroes[Group], tmpGroup)
-	loop
-		set first = FirstOfGroup(tmpGroup)
-		exitwhen (first == null or hero != null)
-		if (GetUnitTypeId(first) == unitTypeId and not IsUnitInGroup(first, revivedHeroes)) then
-			set hero = first
-		endif
-		call GroupRemoveUnit(tmpGroup, first)
-	endloop
-
-	call GroupClear(tmpGroup)
-	call DestroyGroup(tmpGroup)
-	set tmpGroup = null
-	set first = null
-
-	return hero
 endfunction
 
 function RespawnGroup takes integer Group returns boolean
@@ -467,7 +444,6 @@ function RespawnGroup takes integer Group returns boolean
 	local integer maxMembers = udg_RespawnGroupMaxMembers
     local location RespawnLocation
     local unit GroupMember = null
-	local group revivedHeroes = CreateGroup()
     debug call BJDebugMsg("Respawn group: " + I2S(Group))
     if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group]) or (udg_RespawnGroupMembers[Group] > 0 and CountUnitsInGroup(udg_RespawnGroup[Group]) < udg_RespawnGroupMembers[Group])) then
         debug call BJDebugMsg("Is empty: " + I2S(Group))
@@ -479,15 +455,26 @@ function RespawnGroup takes integer Group returns boolean
             exitwhen(I0 == maxMembers)
             set index = Index2D(Group, I0, udg_RespawnGroupMaxMembers)
             if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
-				if (not IsUnitGroupEmptyBJ(udg_RespawnGroupHeroes[Group])) then
-					set GroupMember = GetHeroUnitMatching(Group, udg_RespawnUnitType[index], revivedHeroes)
-					debug call BJDebugMsg("Group " + I2S(Group) + " has heroes and the member is " + GetUnitName(GroupMember) )
-				else
-					set GroupMember = null
-					debug call BJDebugMsg("Group " + I2S(Group) + " has no heroes")
-				endif
-
-				if (GroupMember == null) then
+                if (udg_RespawnHero[index] != null) then // hero
+                    set GroupMember = udg_RespawnHero[index]
+                    if (not IsUnitInGroup(GroupMember, udg_RespawnGroup[Group])) then // the hero could be still alive and in the group
+                        // hero creeps should keep their XP
+                        if (udg_RespawnLocationPerUnit[index] != null) then
+                            set RespawnLocation = udg_RespawnLocationPerUnit[index]
+                        else
+                            set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
+                        endif
+                        debug call PingMinimapLocForForce(GetPlayersAll(), RespawnLocation, 5)
+                        call ReviveHeroLoc(GroupMember, RespawnLocation, true)
+                        call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
+                        debug call BJDebugMsg("Group " + I2S(Group) + " revive hero: " + GetUnitName(GroupMember))
+                        if (udg_RespawnLocationPerUnit[index] == null) then
+                            call RemoveLocation(RespawnLocation)
+                        endif
+                        set RespawnLocation = null
+                    endif
+                    set GroupMember = null
+                else // regular unit
 					if (udg_RespawnLocationPerUnit[index] != null) then
 						set RespawnLocation = udg_RespawnLocationPerUnit[index]
 					else
@@ -507,24 +494,9 @@ function RespawnGroup takes integer Group returns boolean
 						call RemoveLocation(RespawnLocation)
 					endif
 					set RespawnLocation = null
-				elseif (not IsUnitInGroup(GroupMember, udg_RespawnGroup[Group])) then // the hero could be still alive and in the group
-					// hero creeps should keep their XP
-					if (udg_RespawnLocationPerUnit[index] != null) then
-						set RespawnLocation = udg_RespawnLocationPerUnit[index]
-					else
-						set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-					endif
-					debug call PingMinimapLocForForce(GetPlayersAll(), RespawnLocation, 5)
-					call ReviveHeroLoc(GroupMember, RespawnLocation, true)
-					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
-					call GroupAddUnit(revivedHeroes, GroupMember)
-					debug call BJDebugMsg("Group " + I2S(Group) + " revive hero: " + GetUnitName(GroupMember))
-					if (udg_RespawnLocationPerUnit[index] == null) then
-						call RemoveLocation(RespawnLocation)
-					endif
-					set RespawnLocation = null
 				endif
             else
+                // if one type is not set we assume the group has no more members
                 exitwhen(true)
             endif
             set I0 = I0 + 1
@@ -532,10 +504,6 @@ function RespawnGroup takes integer Group returns boolean
 
 		set result = true
     endif
-
-	call GroupClear(revivedHeroes)
-	call DestroyGroup(revivedHeroes)
-	set revivedHeroes = null
 
 	return result
 endfunction
@@ -551,6 +519,8 @@ function RespawnAllGroupsInRange takes real x, real y, real range returns intege
 		endif
 		set i = i + 1
 	endloop
+	call RemoveLocation(tmpLocation)
+	set tmpLocation = null
 	return result
 endfunction
 
@@ -717,6 +687,14 @@ endfunction
 function GetUnitDamageTypeByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitWeaponIntegerField(dummy , UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0)
+	call RemoveUnit(dummy)
+	set dummy = null
+	return result
+endfunction
+
+function GetUnitDefenseTypeByType takes integer unitTypeId returns integer
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_DEFENSE_TYPE)
 	call RemoveUnit(dummy)
 	set dummy = null
 	return result
@@ -1021,4 +999,502 @@ function GetIconByUnitType takes integer unitTypeId returns string
     endif
 
     return result
+endfunction
+
+globals
+    //constant string SAVE_CODE_SYMBOLS = "0123456789ABCDEF"
+    constant string SAVE_CODE_SYMBOLS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE"
+    constant string SAVE_CODE_SEPARATOR = "X"
+endglobals
+
+function GetMaxSaveCodeSymbols takes nothing returns integer
+    return StringLength(SAVE_CODE_SYMBOLS)
+endfunction
+
+function ConvertDigitToSaveCodeSymbol takes integer digit returns string
+    return SubString(SAVE_CODE_SYMBOLS, digit, digit + 1)
+endfunction
+
+function ReverseString takes string in returns string
+    local string result = ""
+    local integer i = StringLength(in)
+    loop
+        exitwhen (i == 0)
+        set result = result + SubString(in, i - 1, i)
+        set i = i - 1
+    endloop
+    return result
+endfunction
+
+function ConvertIntegerToSaveCodeSymbol takes integer number returns string
+    local string result = ""
+    local integer mod = 0
+    //call BJDebugMsg("Converting number " + I2S(number))
+    loop
+        set mod = ModuloInteger(number, GetMaxSaveCodeSymbols())
+        //call BJDebugMsg("Mod " + I2S(mod) + " when dividing by " + I2S(GetMaxSaveCodeSymbols()))
+        set result = result + ConvertDigitToSaveCodeSymbol(mod)
+        //call BJDebugMsg("Result: " + result)
+        set number = number / GetMaxSaveCodeSymbols()
+        exitwhen (number == 0)
+    endloop
+
+    return ReverseString(result) + SAVE_CODE_SEPARATOR
+endfunction
+
+function IndexOfString takes string symbol, string source returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(source))
+        if (SubString(source, i, i + 1) == symbol) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+
+    return -1
+endfunction
+
+
+function IndexOfSaveCodeSymbol takes string symbol returns integer
+    return IndexOfString(symbol, SAVE_CODE_SYMBOLS)
+endfunction
+
+/**
+ * Use a hash value (like the player name's hash) to move the symbol table. This might prevent reproducing savecodes too easily.
+ */
+function GetHashedSaveCodeSymbols takes integer hash returns string
+    local integer splitPosition = ModuloInteger(hash, GetMaxSaveCodeSymbols())
+    return SubString(SAVE_CODE_SYMBOLS, splitPosition, GetMaxSaveCodeSymbols()) + SubString(SAVE_CODE_SYMBOLS, 0, splitPosition)
+endfunction
+
+function ConvertSaveCodeToHashedVersion takes string saveCode, integer hash returns string
+    local string hashedSaveCodeSymbols = GetHashedSaveCodeSymbols(hash)
+    local integer index = -1
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(saveCode))
+        set index = IndexOfSaveCodeSymbol(SubString(saveCode, i, i + 1))
+        if (index != -1) then
+            set result = result + SubString(hashedSaveCodeSymbols, index, index + 1)
+        else
+            set result = result + "?"
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function ConvertSaveCodeFromHashedVersion takes string saveCode, integer hash returns string
+    local string hashedSaveCodeSymbols = GetHashedSaveCodeSymbols(hash)
+    local integer index = -1
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(saveCode))
+        set index = IndexOfString(SubString(saveCode, i, i + 1), hashedSaveCodeSymbols)
+        if (index != -1) then
+            set result = result + SubString(SAVE_CODE_SYMBOLS, index, index + 1)
+        else
+            set result = result + "?"
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function PowI takes integer x, integer y returns integer
+    return R2I(Pow(I2R(x), I2R(y)))
+endfunction
+
+function ConvertSaveCodeSymbolToInteger takes string symbol, integer n returns integer
+    local integer index = IndexOfSaveCodeSymbol(symbol)
+    if (index != -1) then
+        //call BJDebugMsg("Index " + I2S(index) +  " for symbol " + symbol + " pow " + I2S(GetMaxSaveCodeSymbols()) + ", " + I2S(n))
+        return index * PowI(GetMaxSaveCodeSymbols(), n)
+    endif
+    //call BJDebugMsg("Cannot find symbol: " + symbol)
+    return 0
+endfunction
+
+function GetSaveCodeUntil takes string saveCode, integer excludedIndex returns string
+    local integer separatorCounter = 0
+    local integer index = StringLength(saveCode)
+    local integer i = 0
+    loop
+        exitwhen (separatorCounter >= excludedIndex or i == StringLength(saveCode))
+        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEPARATOR) then
+            set separatorCounter = separatorCounter + 1
+            set index = i
+        endif
+        set i = i + 1
+    endloop
+
+    return SubString(saveCode, 0, index)
+endfunction
+
+function ConvertSaveCodeSymbolToIntegerFromSaveCode takes string saveCode, integer index returns integer
+    local string substr = ""
+    local integer result = 0
+    local integer separatorCounter = 0
+    local integer n = 0
+    local integer i = 0
+    loop
+        exitwhen (separatorCounter > index or i == StringLength(saveCode))
+        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEPARATOR) then
+            set separatorCounter = separatorCounter + 1
+        elseif (separatorCounter == index) then
+            set substr = substr + SubString(saveCode, i, i + 1)
+        endif
+        set i = i + 1
+    endloop
+    // convert into decimal number
+    //call BJDebugMsg("Calculate number back " + substr)
+    set n = StringLength(substr) - 1
+    set i = 0
+    loop
+        exitwhen (i == StringLength(substr))
+        set result = result + ConvertSaveCodeSymbolToInteger(SubString(substr, i, i + 1), n)
+        set n = n - 1
+        set i = i + 1
+    endloop
+
+    return result
+endfunction
+
+function IsInSinglePlayer takes nothing returns boolean
+    return CountPlayersInForceBJ(GetPlayersByMapControl(MAP_CONTROL_USER)) == 1
+endfunction
+
+function CompressSaveCode takes string saveCode returns string
+    local string result = ""
+    local integer compressedLength = StringLength(saveCode)
+    local integer i = compressedLength
+    loop
+        exitwhen (i == 0)
+        if (SubString(saveCode, i - 1, i) == SAVE_CODE_SEPARATOR) then
+            set compressedLength = i - 1
+        else
+            exitwhen (true)
+        endif
+        set i = i - 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i == compressedLength)
+        set result = result + SubString(saveCode, i, i + 1)
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+// We don't want to handle negative numbers.
+function AbsStringHash takes string whichString returns integer
+    return IAbsBJ(StringHash(whichString))
+endfunction
+
+/**
+ * Simple Save/Load system which converts decimal numbers into numbers from SAVE_CODE_SYMBOLS.
+ * It starts with the player name's hash, so you can only use your own savecodes in multiplayer games etc.
+ * Besides, the settings are stored. All numbers are separated by a separator character.
+ * It adds a final checksum of the savecode to make it harder to fake any savecode by just replacing certain values of it.
+ * If it ends with separators it will be compressed by removing separator characters from the end.
+ * TODO If we only store the level value, the save code gets MUCH shorter.
+ * TODO Permutate the positions of the characters using the player name's hash, so you cannot easily generate a save code just replacing the initial player's hash.
+ * TODO Store stats for the multiboard to show what a player has achieved. This could also be useful for online leaderboards.
+ */
+function GetSaveCode takes player whichPlayer returns string
+    local integer playerNameHash = AbsStringHash(GetPlayerName(whichPlayer))
+    local boolean isSinglePlayer = IsInSinglePlayer()
+    local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
+    local integer gameType = udg_GameType
+    local integer xp = GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])
+    local string result = ConvertIntegerToSaveCodeSymbol(playerNameHash)
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayer and isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 0")
+        set result = result + ConvertIntegerToSaveCodeSymbol(0)
+    elseif (isSinglePlayer and not isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 1")
+        set result = result + ConvertIntegerToSaveCodeSymbol(1)
+    elseif (not isSinglePlayer and isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 2")
+        set result = result + ConvertIntegerToSaveCodeSymbol(2)
+    else
+        //call BJDebugMsg("Save code single player and mode 3")
+        set result = result + ConvertIntegerToSaveCodeSymbol(3)
+    endif
+
+    set result = result + ConvertIntegerToSaveCodeSymbol(gameType)
+    set result = result + ConvertIntegerToSaveCodeSymbol(xp)
+
+    //call BJDebugMsg("Compressed result: " + CompressSaveCode(result))
+    //call BJDebugMsg("Checksum: " + I2S(AbsStringHash(CompressSaveCode(result))))
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(CompressSaveCode(result))))
+
+    set result = result + ConvertIntegerToSaveCodeSymbol(AbsStringHash(CompressSaveCode(result))) // checksum
+
+    return CompressSaveCode(result)
+endfunction
+
+function ApplySaveCode takes player whichPlayer, string saveCode returns boolean
+    local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
+    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = false
+    local boolean isWarlord = false
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 4)
+    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayerAndWarlord == 0) then
+        //call BJDebugMsg("Save code single player and mode 0")
+        set isSinglePlayer = true
+        set isWarlord = true
+    elseif (isSinglePlayerAndWarlord == 1) then
+        //call BJDebugMsg("Save code single player and mode 1")
+        set isSinglePlayer = true
+        set isWarlord = false
+    elseif (isSinglePlayerAndWarlord == 2) then
+        //call BJDebugMsg("Save code single player and mode 2")
+        set isSinglePlayer = false
+        set isWarlord = true
+    else
+        //call BJDebugMsg("Save code single player and mode 3")
+        set isSinglePlayer = false
+        set isWarlord = false
+    endif
+
+    if (checksum == AbsStringHash(checkedSaveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+        call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
+
+        return true
+    endif
+
+    return false
+endfunction
+
+function GetSaveCodeErrors takes player whichPlayer, string saveCode returns string
+    local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
+    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = false
+    local boolean isWarlord = false
+    local string result = ""
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 4)
+    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+
+    if (checksum != AbsStringHash(checkedSaveCode)) then
+        set result = result + "Expected different checksum!"
+    endif
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayerAndWarlord == 0) then
+        set isSinglePlayer = true
+        set isWarlord = true
+    elseif (isSinglePlayerAndWarlord == 1) then
+        set isSinglePlayer = true
+        set isWarlord = false
+    elseif (isSinglePlayerAndWarlord == 2) then
+        set isSinglePlayer = false
+        set isWarlord = true
+    else
+        set isSinglePlayer = false
+        set isWarlord = false
+    endif
+
+    if (playerNameHash != AbsStringHash(GetPlayerName(whichPlayer))) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Expected different player name!"
+    endif
+
+    if (isSinglePlayer != IsInSinglePlayer()) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        if (isSinglePlayer) then
+            set result = result + "Expected singleplayer!"
+        else
+            set result = result + "Expected multiplayer!"
+        endif
+    endif
+
+    if (gameType != udg_GameType) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Expected game type: " + I2S(gameType)
+    endif
+
+    if (isWarlord != udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        if (isWarlord) then
+            set result = result + "Expected game mode Warlord!"
+        else
+            set result = result + "Expected game mode Freelancer!"
+        endif
+    endif
+
+    if (xp <= GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Expected more XP than your current!"
+    endif
+
+    if (checksum == AbsStringHash(saveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+        set result = "None errors detected. Stored " + I2S(xp) + "XP."
+    endif
+
+    return result
+endfunction
+
+function GetSaveCodeInfos takes player whichPlayer, string saveCode returns string
+    local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
+    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = false
+    local boolean isWarlord = false
+    local string result = ""
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, 4)
+    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+
+    if (checksum != AbsStringHash(saveCode)) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Invalid checksum"
+    endif
+
+
+    if (playerNameHash == AbsStringHash(GetPlayerName(whichPlayer))) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Invalid player name checksum"
+    endif
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayerAndWarlord == 0) then
+        set isSinglePlayer = true
+        set isWarlord = true
+    elseif (isSinglePlayerAndWarlord == 1) then
+        set isSinglePlayer = true
+        set isWarlord = false
+    elseif (isSinglePlayerAndWarlord == 2) then
+        set isSinglePlayer = false
+        set isWarlord = true
+    else
+        set isSinglePlayer = false
+        set isWarlord = false
+    endif
+
+    if (isSinglePlayer) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Singleplayer"
+    else
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Multiplayer"
+    endif
+
+    if (isWarlord) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Warlord"
+    else
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Freelancer"
+    endif
+
+    if (StringLength(result) > 0) then
+        set result = result + ", "
+    endif
+     set result = result + "Game type: " + I2S(gameType)
+     if (StringLength(result) > 0) then
+        set result = result + ", "
+    endif
+     set result = result + "XP: " + I2S(xp)
+
+    return result
+endfunction
+
+function IsCharacterUpperCase takes string letter returns boolean
+    return letter == "A" or letter == "B" or letter == "C" or letter == "D" or letter == "E" or letter == "F" or letter == "G" or letter == "H" or letter == "I" or letter == "J" or letter == "K" or letter == "L" or letter == "M" or letter == "N" or letter == "O" or letter == "P" or letter == "Q" or letter == "R" or letter == "S" or letter == "T" or letter == "U" or letter == "V" or letter == "W" or letter == "X" or letter == "Y" or letter == "Z"
+endfunction
+
+function ColoredSaveCode takes string saveCode returns string
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(saveCode))
+        if (IsCharacterUpperCase(SubString(saveCode, i, i + 1))) then
+            set result = result + "|cffffcc00" + SubString(saveCode, i, i + 1) + "|r"
+        else
+            set result = result + SubString(saveCode, i, i + 1)
+        endif
+        set i = i + 1
+    endloop
+
+    return result
+endfunction
+
+function FormatIntegerToTwoDigits takes integer value returns string
+    if (value > 9) then
+        return I2S(value)
+    else
+        return "0" + I2S(value)
+    endif
+endfunction
+
+function FormatTimeString takes integer seconds returns string
+    local integer minutes = seconds / 60
+    local integer hours = minutes / 60
+
+    set minutes = minutes - hours * 60
+    set seconds = seconds - minutes * 60
+
+    if (hours > 0) then
+        return FormatIntegerToTwoDigits(hours) + ":" + FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
+    elseif (minutes > 0) then
+        return FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
+    else
+        return I2S(seconds) + " seconds "
+    endif
 endfunction

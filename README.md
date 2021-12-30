@@ -7,7 +7,7 @@ Open world role-playing game funmap for Warcraft III: Reforged featuring compute
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr1.9.3.w3x)
+* [Current development version](./wowr1.9.4.w3x)
 
 *Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues.
 
@@ -126,6 +126,7 @@ This version provides several new features compared to the original map:
 * Paladin on Theramore heals non-Undead units.
 * New hero: Mountain Giant.
 * New hero: Wizard.
+* Save/load system.
 
 ## Bug Fixes
 
@@ -181,6 +182,11 @@ Hence, I am trying to collect replays with the game ending to reconstruct the bu
 
 [crashes](./crashes) contains folders with map and replay files of the corresponding games.
 
+## Testing
+
+It enables several cheats if you play as WorldEdit player.
+This is a useful savecode as player WorldEdit playing Freelancer with hero level 60 in singleplayer: `vlRJzXBXwXs7oX1H1wIr`.
+
 ## History of the Map
 
 Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
@@ -198,6 +204,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowtsr1.9.3.w3x](./wowtsr1.9.3.w3x)
 * [wowtsr1.9.2.w3x](./wowtsr1.9.2.w3x)
 * [wowtsr1.9.1.w3x](./wowtsr1.9.1.w3x)
 * [wowtsr1.9.0.w3x](./wowtsr1.9.0.w3x)
