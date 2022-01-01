@@ -1001,77 +1001,153 @@ function GetIconByUnitType takes integer unitTypeId returns string
     return result
 endfunction
 
+
+/**
+ * Barade's save code system.
+ *
+ * save code digit - a digit of the number system used for a save code. This can be decimal, hexadecimal or custom.
+ * save code segment - a savecode consists of multiple segments storing information about specific properties.
+ * save code segment separator - the segments are separated by a special digit which is not used in the save code's digit to identify where a new segment starts
+ * save code - a save code using the digits of a sepcific number system consisting of one or several segments.
+ * string hash - a decimal value generated from a string using a one way function which cannot be converted back into its original string. We only use positive hash values to keep it simple.
+ * player name hash - a hash value from the player name used to verify that the savecode belongs to the using player
+ * save code checksum - a checksum of the save code in form of ea save code segment created by hashing the string up to excluding the checksum segment itself. This is used to verify that the savecode was not created manually although it could be faked.
+ *
+ * Our save code looks the following way:
+ * <player name hash segment>X<game mode/single or multiplayer flag>X<game type>X<hero XP rate>X<hero XP>X<checksum>
+ *
+ * Obfuscation: Since it is pretty easy to know which segment has which information using these save code segments, we want to obfuscate the final generated save code a bit.
+ * We can do this by shifting the used digits using the player name hash since it will also be the same when the player loads the save code. By shifting the digits we might get different digits for different player name hashs.
+ *
+ * Compression: We want to keep the savecodes as short as possible. Hence, we combine flags like game mode and single/multiplayer in one number. We could go even further as long as we know the maximum number of a value.
+ * Another form of compression is to make the string hashes much shorter by using the modulo operation. This comes with the risk of having less different string hashes for different player names or as checksums but as long
+ * as there are enough possibilities it is hard enough to fake the correct string hash value.
+ */
+
 globals
-    //constant string SAVE_CODE_SYMBOLS = "0123456789ABCDEF"
-    constant string SAVE_CODE_SYMBOLS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE"
-    constant string SAVE_CODE_SEPARATOR = "X" // must not be part of SAVE_CODE_SYMBOLS
+    //constant string SAVE_CODE_DIGITS = "0123456789ABCDEF" // hexadecimal digits
+    constant string SAVE_CODE_DIGITS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE"
+    constant string SAVE_CODE_SEGMENT_SEPARATOR = "X" // must not be part of SAVE_CODE_DIGITS
+    constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
+    constant boolean SAVE_CODE_OBFUSCATE = true
 endglobals
+
+function CheckStringForDuplicatedCharacters takes string source returns nothing
+    local boolean foundDuplicated = false
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == StringLength(source))
+        set j = 0
+        loop
+            exitwhen (j == StringLength(source))
+            if (i != j and SubString(source, i, i + 1) == SubString(source, j, j + 1)) then
+                set foundDuplicated = true
+                call BJDebugMsg("Duplicated digit at " + I2S(i) + " and " + I2S(j) + ": " + SubString(source, i, i + 1))
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+    if (not foundDuplicated) then
+        call BJDebugMsg("No duplicates have been found!")
+    endif
+endfunction
+
+function CheckSaveCodeDigitsUnique takes nothing returns nothing
+    call CheckStringForDuplicatedCharacters(SAVE_CODE_DIGITS)
+endfunction
 
 /**
  * Returns the base for the custom number system.
  */
-function GetMaxSaveCodeSymbols takes nothing returns integer
-    return StringLength(SAVE_CODE_SYMBOLS)
+function GetMaxSaveCodeDigits takes nothing returns integer
+    return StringLength(SAVE_CODE_DIGITS)
 endfunction
 
-function ConvertDigitToSaveCodeSymbol takes integer digit returns string
-    return SubString(SAVE_CODE_SYMBOLS, digit, digit + 1)
+function ConvertDecimalDigitToSaveCodeDigit takes integer digit returns string
+    return SubString(SAVE_CODE_DIGITS, digit, digit + 1)
 endfunction
 
-function ConvertIntegerToSaveCodeSymbol takes integer number returns string
+
+/**
+ * Convert a decimal number into our number system.
+ */
+function ConvertDecimalNumberToSaveCodeSegment takes integer number returns string
     local string result = ""
     local integer start = number
-    local integer base = GetMaxSaveCodeSymbols()
+    local integer base = GetMaxSaveCodeDigits()
     local integer mod = 0
     //call BJDebugMsg("Converting number " + I2S(start))
     loop
         //call BJDebugMsg("Dividing number " + I2S(start) + " by " + I2S(base))
         set mod = ModuloInteger(start, base)
-        exitwhen (mod == 0)
         set start = start / base
-        set result = ConvertDigitToSaveCodeSymbol(mod) + result
+        set result = ConvertDecimalDigitToSaveCodeDigit(mod) + result
+        exitwhen (start == 0)
         //call BJDebugMsg("Result: " + result)
     endloop
 
-    return result + SAVE_CODE_SEPARATOR
+    return result + SAVE_CODE_SEGMENT_SEPARATOR
 endfunction
 
 function IndexOfString takes string symbol, string source returns integer
     local integer i = 0
+    //call BJDebugMsg("Checking for symbol: " + symbol + " in source " + source)
     loop
         exitwhen (i == StringLength(source))
         if (SubString(source, i, i + 1) == symbol) then
+            //call BJDebugMsg("Index: " + I2S(i))
             return i
         endif
         set i = i + 1
     endloop
 
+    call BJDebugMsg("Missing symbol " + symbol + " in source " + source)
+
     return -1
 endfunction
 
 
-function IndexOfSaveCodeSymbol takes string symbol returns integer
-    return IndexOfString(symbol, SAVE_CODE_SYMBOLS)
+function IndexOfSaveCodeDigit takes string symbol returns integer
+    return IndexOfString(symbol, SAVE_CODE_DIGITS)
+endfunction
+
+function GetObfuscationSaveCodeDigits takes nothing returns string
+    // we want to have the separator in it so we can obfuscate the whole save code with separators.
+    return SAVE_CODE_DIGITS + SAVE_CODE_SEGMENT_SEPARATOR
+endfunction
+
+function GetMaxObfuscationSaveCodeDigits takes nothing returns integer
+    return GetMaxSaveCodeDigits() + 1
+endfunction
+
+function GetShiftedSaveCodeSplitPosition takes integer n returns integer
+    return ModuloInteger(n, GetMaxObfuscationSaveCodeDigits())
 endfunction
 
 /**
  * Use a hash value (like the player name's hash) to move the symbol table. This might prevent reproducing savecodes too easily.
  */
-function GetHashedSaveCodeSymbols takes integer hash returns string
-    local integer splitPosition = ModuloInteger(hash, GetMaxSaveCodeSymbols())
-    return SubString(SAVE_CODE_SYMBOLS, splitPosition, GetMaxSaveCodeSymbols()) + SubString(SAVE_CODE_SYMBOLS, 0, splitPosition)
+function GetShiftedSaveCodeDigits takes integer n returns string
+    local integer max = GetMaxObfuscationSaveCodeDigits()
+    local string saveCodeDigits = GetObfuscationSaveCodeDigits()
+    local integer splitPosition = GetShiftedSaveCodeSplitPosition(n)
+    return SubString(saveCodeDigits, splitPosition, GetMaxObfuscationSaveCodeDigits()) + SubString(saveCodeDigits, 0, splitPosition)
 endfunction
 
-function ConvertSaveCodeToHashedVersion takes string saveCode, integer hash returns string
-    local string hashedSaveCodeSymbols = GetHashedSaveCodeSymbols(hash)
+function ConvertSaveCodeToObfuscatedVersion takes string saveCode, integer hash returns string
+    local string shiftedSaveCodeDigits = GetShiftedSaveCodeDigits(hash)
+    local string saveCodeDigits = GetObfuscationSaveCodeDigits()
     local integer index = -1
     local string result = ""
     local integer i = 0
+    //call BJDebugMsg("Shifted digits: " + shiftedSaveCodeDigits)
     loop
         exitwhen (i == StringLength(saveCode))
-        set index = IndexOfSaveCodeSymbol(SubString(saveCode, i, i + 1))
+        set index = IndexOfString(SubString(saveCode, i, i + 1), saveCodeDigits)
         if (index != -1) then
-            set result = result + SubString(hashedSaveCodeSymbols, index, index + 1)
+            set result = result + SubString(shiftedSaveCodeDigits, index, index + 1)
         else
             set result = result + "?"
         endif
@@ -1080,16 +1156,19 @@ function ConvertSaveCodeToHashedVersion takes string saveCode, integer hash retu
     return result
 endfunction
 
-function ConvertSaveCodeFromHashedVersion takes string saveCode, integer hash returns string
-    local string hashedSaveCodeSymbols = GetHashedSaveCodeSymbols(hash)
-    local integer index = -1
+function ConvertSaveCodeFromObfuscatedVersion takes string saveCode, integer hash returns string
+    local string shiftedSaveCodeDigits = GetShiftedSaveCodeDigits(hash)
+    local integer splitPosition = GetShiftedSaveCodeSplitPosition(hash)
+    local integer shiftedIndex = -1
+    local integer originalIndex = -1
     local string result = ""
     local integer i = 0
+    //call BJDebugMsg("Shifted digits: " + shiftedSaveCodeDigits)
     loop
         exitwhen (i == StringLength(saveCode))
-        set index = IndexOfString(SubString(saveCode, i, i + 1), hashedSaveCodeSymbols)
-        if (index != -1) then
-            set result = result + SubString(SAVE_CODE_SYMBOLS, index, index + 1)
+        set shiftedIndex = IndexOfString(SubString(saveCode, i, i + 1), shiftedSaveCodeDigits)
+        if (shiftedIndex != -1) then
+            set result = result + SubString(GetObfuscationSaveCodeDigits(), shiftedIndex, shiftedIndex + 1)
         else
             set result = result + "?"
         endif
@@ -1099,26 +1178,38 @@ function ConvertSaveCodeFromHashedVersion takes string saveCode, integer hash re
 endfunction
 
 function PowI takes integer x, integer y returns integer
-    return R2I(Pow(I2R(x), I2R(y)))
+    local integer result = 1
+    local integer i = 0
+    loop
+        exitwhen (i == y)
+        set result = result * x
+        set i = i + 1
+    endloop
+
+    return result
 endfunction
 
-function ConvertSaveCodeSymbolToInteger takes string symbol, integer n returns integer
-    local integer index = IndexOfSaveCodeSymbol(symbol)
+/**
+ * Convert our number system into the decimal system number.
+ */
+function ConvertSaveCodeSegmentIntoDecimalNumber takes string symbol, integer n returns integer
+    local integer index = IndexOfSaveCodeDigit(symbol)
     if (index != -1) then
-        //call BJDebugMsg("Index " + I2S(index) +  " for symbol " + symbol + " pow " + I2S(GetMaxSaveCodeSymbols()) + ", " + I2S(n))
-        return index * PowI(GetMaxSaveCodeSymbols(), n)
+        //call BJDebugMsg("Index " + I2S(index) +  " for symbol " + symbol + " pow " + I2S(GetMaxSaveCodeDigits()) + ", " + I2S(n))
+        return index * PowI(GetMaxSaveCodeDigits(), n)
     endif
     //call BJDebugMsg("Cannot find symbol: " + symbol + " with n: " + I2S(n))
     return 0
 endfunction
 
+// includes the separator character!
 function GetSaveCodeUntil takes string saveCode, integer excludedIndex returns string
     local integer separatorCounter = 0
     local integer index = StringLength(saveCode)
     local integer i = 0
     loop
         exitwhen (separatorCounter >= excludedIndex or i == StringLength(saveCode))
-        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEPARATOR) then
+        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEGMENT_SEPARATOR) then
             set separatorCounter = separatorCounter + 1
             set index = i + 1 // include the separator character!
         endif
@@ -1131,15 +1222,15 @@ endfunction
 /**
  * Extracts the part of a save code with index and converts it into a decimal number.
  */
-function ConvertSaveCodeSymbolToIntegerFromSaveCode takes string saveCode, integer index returns integer
+function ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode takes string saveCode, integer index returns integer
     local string substr = ""
     local integer result = 0
     local integer separatorCounter = 0
-    local integer n = -1
+    local integer n = -1 // start with n - 1 and end with 0
     local integer i = 0
     loop
         exitwhen (separatorCounter > index or i == StringLength(saveCode))
-        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEPARATOR) then
+        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEGMENT_SEPARATOR) then
             set separatorCounter = separatorCounter + 1
         elseif (separatorCounter == index) then
             set substr = substr + SubString(saveCode, i, i + 1)
@@ -1152,7 +1243,7 @@ function ConvertSaveCodeSymbolToIntegerFromSaveCode takes string saveCode, integ
     set i = 0
     loop
         exitwhen (i == StringLength(substr))
-        set result = result + ConvertSaveCodeSymbolToInteger(SubString(substr, i, i + 1), n)
+        set result = result + ConvertSaveCodeSegmentIntoDecimalNumber(SubString(substr, i, i + 1), n)
         //call BJDebugMsg("Result " + I2S(result))
         set n = n - 1
         set i = i + 1
@@ -1161,35 +1252,44 @@ function ConvertSaveCodeSymbolToIntegerFromSaveCode takes string saveCode, integ
     return result
 endfunction
 
+function FilterPlayerFunctionUsedUser takes nothing returns boolean
+    return GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER and GetPlayerSlotState(GetFilterPlayer()) != PLAYER_SLOT_STATE_EMPTY
+endfunction
+
 function IsInSinglePlayer takes nothing returns boolean
-    return CountPlayersInForceBJ(GetPlayersByMapControl(MAP_CONTROL_USER)) == 1
+    return CountPlayersInForceBJ(GetPlayersMatching(Condition(function FilterPlayerFunctionUsedUser))) == 1
 endfunction
 
 // We don't want to handle negative numbers.
 function AbsStringHash takes string whichString returns integer
-    // TODO Besides we want short save codes with maximum 3 digits.
-    //return ModuloInteger(IAbsBJ(StringHash(whichString)), GetMaxSaveCodeSymbols() * 3)
     return IAbsBJ(StringHash(whichString))
 endfunction
 
+function CompressedAbsStringHash takes string whichString returns integer
+    local integer absStringHash = AbsStringHash(whichString)
+    if (SAVE_CODE_COMPRESS_STRING_HASHS) then
+        return ModuloInteger(absStringHash, GetMaxSaveCodeDigits() * 3)
+    endif
+    return absStringHash
+endfunction
+
 /**
- * Simple Save/Load system which converts decimal numbers into numbers from SAVE_CODE_SYMBOLS.
+ * Simple Save/Load system which converts decimal numbers into numbers from SAVE_CODE_DIGITS.
  * It starts with the player name's hash, so you can only use your own savecodes in multiplayer games etc.
  * Besides, the settings are stored. All numbers are separated by a separator character.
  * It adds a final checksum of the savecode to make it harder to fake any savecode by just replacing certain values of it.
  * If it ends with separators it will be compressed by removing separator characters from the end.
  * TODO If we only store the level value, the save code gets MUCH shorter.
- * TODO Permutate the positions of the characters using the player name's hash, so you cannot easily generate a save code just replacing the initial player's hash.
  * TODO Store stats for the multiboard to show what a player has achieved. This could also be useful for online leaderboards.
  */
 function GetSaveCode takes player whichPlayer returns string
-    local integer playerNameHash = AbsStringHash(GetPlayerName(whichPlayer))
+    local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
     local boolean isSinglePlayer = IsInSinglePlayer()
     local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
     local integer gameType = udg_GameType
     local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
     local integer xp = GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])
-    local string result = ConvertIntegerToSaveCodeSymbol(playerNameHash)
+    local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
@@ -1197,42 +1297,62 @@ function GetSaveCode takes player whichPlayer returns string
     // use one single symbol to store these two flags
     if (isSinglePlayer and isWarlord) then
         //call BJDebugMsg("Save code single player and mode 0")
-        set result = result + ConvertIntegerToSaveCodeSymbol(0)
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
     elseif (isSinglePlayer and not isWarlord) then
         //call BJDebugMsg("Save code single player and mode 1")
-        set result = result + ConvertIntegerToSaveCodeSymbol(1)
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(1)
     elseif (not isSinglePlayer and isWarlord) then
         //call BJDebugMsg("Save code single player and mode 2")
-        set result = result + ConvertIntegerToSaveCodeSymbol(2)
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(2)
     else
         //call BJDebugMsg("Save code single player and mode 3")
-        set result = result + ConvertIntegerToSaveCodeSymbol(3)
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(3)
     endif
 
-    set result = result + ConvertIntegerToSaveCodeSymbol(gameType)
-    set result = result + ConvertIntegerToSaveCodeSymbol(xpRate)
-    set result = result + ConvertIntegerToSaveCodeSymbol(xp)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(gameType)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(xpRate)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(xp)
 
-    //call BJDebugMsg("Compressed result: " + CompressSaveCode(result))
-    //call BJDebugMsg("Checksum: " + I2S(AbsStringHash(result)))
+    //call BJDebugMsg("Compressed result: " + result)
+    //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
     //call BJDebugMsg("Checked save code part: " + result)
 
-    set result = result + ConvertIntegerToSaveCodeSymbol(AbsStringHash(result)) // checksum
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result)) // checksum
+
+    if (SAVE_CODE_OBFUSCATE) then
+        //call BJDebugMsg("Non-obfuscated save code: " + result)
+        return ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
+    endif
 
     return result
 endfunction
 
-function ApplySaveCode takes player whichPlayer, string saveCode returns boolean
-    local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
-    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
-    local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
-    local integer xpRate = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
-    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+function ReadSaveCode takes string saveCode, integer hash returns string
+    if (SAVE_CODE_OBFUSCATE) then
+        //call BJDebugMsg("Deobfuscating with the hash!")
+        return ConvertSaveCodeFromObfuscatedVersion(saveCode, hash)
+    endif
+
+    //call BJDebugMsg("Just returning!")
+
+    return saveCode
+endfunction
+
+function ApplySaveCode takes player whichPlayer, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
     local boolean isWarlord = false
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, 5)
-    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 5)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
 
     //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
@@ -1260,7 +1380,7 @@ function ApplySaveCode takes player whichPlayer, string saveCode returns boolean
         set isWarlord = false
     endif
 
-    if (checksum == AbsStringHash(checkedSaveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
         call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
 
         return true
@@ -1269,19 +1389,20 @@ function ApplySaveCode takes player whichPlayer, string saveCode returns boolean
     return false
 endfunction
 
-function GetSaveCodeErrors takes player whichPlayer, string saveCode returns string
-    local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
-    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
-    local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
-    local integer xpRate = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
-    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+function GetSaveCodeErrors takes player whichPlayer, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
     local boolean isWarlord = false
     local string result = ""
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, 5)
-    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 5)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
 
-    if (checksum != AbsStringHash(checkedSaveCode)) then
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
         set result = result + "Expected different checksum!"
     endif
 
@@ -1300,7 +1421,7 @@ function GetSaveCodeErrors takes player whichPlayer, string saveCode returns str
         set isWarlord = false
     endif
 
-    if (playerNameHash != AbsStringHash(GetPlayerName(whichPlayer))) then
+    if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
@@ -1356,26 +1477,27 @@ function GetSaveCodeErrors takes player whichPlayer, string saveCode returns str
         set result = result + "Expected more XP than your current!"
     endif
 
-    if (checksum == AbsStringHash(saveCode) and playerNameHash == AbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+    if (checksum == CompressedAbsStringHash(saveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
         set result = "None errors detected. Stored " + I2S(xp) + "XP."
     endif
 
     return result
 endfunction
 
-function GetSaveCodeInfos takes player whichPlayer, string saveCode returns string
-    local integer playerNameHash = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 0)
-    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 1)
-    local integer gameType = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 2)
-    local integer xpRate = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 3)
-    local integer xp = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 4)
+function GetSaveCodeInfos takes player whichPlayer, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
     local boolean isWarlord = false
     local string result = ""
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, 5)
-    local integer checksum = ConvertSaveCodeSymbolToIntegerFromSaveCode(saveCode, 5)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
 
-    if (checksum != AbsStringHash(checkedSaveCode)) then
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
@@ -1384,7 +1506,7 @@ function GetSaveCodeInfos takes player whichPlayer, string saveCode returns stri
     endif
 
 
-    if (playerNameHash != AbsStringHash(GetPlayerName(whichPlayer))) then
+    if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
