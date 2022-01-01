@@ -386,7 +386,7 @@ function RespawnRectContainsNoBuilding takes integer Group returns boolean
         exitwhen(IsUnitGroupEmptyBJ(BuildingGroup))
         set FirstOfBuildingGroup = FirstOfGroup(BuildingGroup)
         set OwningPlayer = GetOwningPlayer(FirstOfBuildingGroup)
-        if (IsUnitType(FirstOfBuildingGroup, UNIT_TYPE_STRUCTURE) and OwningPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and OwningPlayer != Player(PLAYER_NEUTRAL_PASSIVE)) then
+        if (IsUnitType(FirstOfBuildingGroup, UNIT_TYPE_STRUCTURE) and OwningPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and OwningPlayer != Player(PLAYER_NEUTRAL_PASSIVE) and OwningPlayer != udg_TheBurningLegion) then
             set BuildingDoesNotExist = false
             set FirstOfBuildingGroup = null
             set OwningPlayer = null
@@ -1273,22 +1273,8 @@ function CompressedAbsStringHash takes string whichString returns integer
     return absStringHash
 endfunction
 
-/**
- * Simple Save/Load system which converts decimal numbers into numbers from SAVE_CODE_DIGITS.
- * It starts with the player name's hash, so you can only use your own savecodes in multiplayer games etc.
- * Besides, the settings are stored. All numbers are separated by a separator character.
- * It adds a final checksum of the savecode to make it harder to fake any savecode by just replacing certain values of it.
- * If it ends with separators it will be compressed by removing separator characters from the end.
- * TODO If we only store the level value, the save code gets MUCH shorter.
- * TODO Store stats for the multiboard to show what a player has achieved. This could also be useful for online leaderboards.
- */
-function GetSaveCode takes player whichPlayer returns string
-    local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
-    local boolean isSinglePlayer = IsInSinglePlayer()
-    local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
-    local integer gameType = udg_GameType
-    local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
-    local integer xp = GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])
+function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer xp returns string
+    local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
@@ -1326,6 +1312,26 @@ function GetSaveCode takes player whichPlayer returns string
     endif
 
     return result
+endfunction
+
+/**
+ * Simple Save/Load system which converts decimal numbers into numbers from SAVE_CODE_DIGITS.
+ * It starts with the player name's hash, so you can only use your own savecodes in multiplayer games etc.
+ * Besides, the settings are stored. All numbers are separated by a separator character.
+ * It adds a final checksum of the savecode to make it harder to fake any savecode by just replacing certain values of it.
+ * If it ends with separators it will be compressed by removing separator characters from the end.
+ * TODO If we only store the level value, the save code gets MUCH shorter.
+ * TODO Store stats for the multiboard to show what a player has achieved. This could also be useful for online leaderboards.
+ */
+function GetSaveCode takes player whichPlayer returns string
+    local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
+    local boolean isSinglePlayer = IsInSinglePlayer()
+    local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
+    local integer gameType = udg_GameType
+    local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
+    local integer xp = GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])
+
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, xp)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -1608,11 +1614,10 @@ function FormatTimeString takes integer seconds returns string
     local integer minutes = seconds / 60
     local integer hours = minutes / 60
     local integer hoursInMinutes = hours * 60
-    local integer hoursInSeconds = hoursInMinutes * 60
     local integer minutesInSeconds = minutes * 60
 
     set minutes = minutes - hoursInMinutes
-    set seconds = seconds - (hoursInSeconds + minutesInSeconds)
+    set seconds = seconds - minutesInSeconds
 
     if (hours > 0) then
         return FormatIntegerToTwoDigits(hours) + ":" + FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
