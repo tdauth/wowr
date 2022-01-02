@@ -1268,7 +1268,7 @@ function ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode takes string saveCo
 endfunction
 
 function FilterPlayerFunctionUsedUser takes nothing returns boolean
-    return GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER and GetPlayerSlotState(GetFilterPlayer()) != PLAYER_SLOT_STATE_EMPTY
+    return GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER and GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING
 endfunction
 
 function IsInSinglePlayer takes nothing returns boolean
@@ -1448,8 +1448,20 @@ function GetSaveCode takes player whichPlayer returns string
     return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills)
 endfunction
 
-function GetSaveCodeBarade takes nothing returns string
+function GetSaveCodeBaradeStrongFreelancer takes nothing returns string
     return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
+endfunction
+
+function GetSaveCodeBaradeStrongWarlord takes nothing returns string
+    return GetSaveCodeEx("Barade#2569", true, false, udg_GameTypeNormal, 130, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
+endfunction
+
+function GetSaveCodeBaradeNormalFreelancer takes nothing returns string
+    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
+endfunction
+
+function GetSaveCodeBaradeNormalWarlord takes nothing returns string
+    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
