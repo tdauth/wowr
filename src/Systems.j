@@ -800,6 +800,176 @@ function InitCustomSystems takes nothing returns nothing
     endif
 endfunction
 
+function GetPlayerColorRed takes player p returns integer
+    local playercolor c = GetPlayerColor(p)
+    if c == PLAYER_COLOR_RED then
+        return 0xFF
+    elseif c == PLAYER_COLOR_BLUE then
+        return 0x00
+    elseif c == PLAYER_COLOR_CYAN then
+        return 0x1B
+    elseif c == PLAYER_COLOR_PURPLE then
+        return 0x53
+    elseif c == PLAYER_COLOR_YELLOW then
+        return 0xFF
+    elseif c == PLAYER_COLOR_ORANGE then
+        return 0xFE
+    elseif c == PLAYER_COLOR_GREEN then
+        return 0x1F
+    elseif c == PLAYER_COLOR_PINK then
+        return 0xE4
+    elseif c == PLAYER_COLOR_LIGHT_GRAY then
+        return 0x94
+    elseif c == PLAYER_COLOR_LIGHT_BLUE then
+        return 0x7D
+    elseif c == PLAYER_COLOR_AQUA then
+        return 0x0F
+    elseif c == PLAYER_COLOR_BROWN then
+        return 0x4D
+    elseif c == PLAYER_COLOR_MAROON then
+        return 0x9B
+    elseif c == PLAYER_COLOR_NAVY then
+        return 0x00
+    elseif c == PLAYER_COLOR_TURQUOISE then
+        return 0x00
+    elseif c == PLAYER_COLOR_VIOLET then
+        return 0xBE
+    elseif c == PLAYER_COLOR_WHEAT then
+        return 0xEB
+    elseif c == PLAYER_COLOR_PEACH then
+        return 0xF8
+    elseif c == PLAYER_COLOR_MINT then
+        return 0xBF
+    elseif c == PLAYER_COLOR_LAVENDER then
+        return 0xDC
+    elseif c == PLAYER_COLOR_COAL then
+        return 0x28
+    elseif c == PLAYER_COLOR_SNOW then
+        return 0xEB
+    elseif c == PLAYER_COLOR_EMERALD then
+        return 0x00
+    elseif c == PLAYER_COLOR_PEANUT then
+        return 0xA4
+    else
+        return 0xFF
+    endif
+    return 0
+endfunction
+
+function GetPlayerColorGreen takes player p returns integer
+    local playercolor c = GetPlayerColor(p)
+    if c == PLAYER_COLOR_RED then
+        return 0x02
+    elseif c == PLAYER_COLOR_BLUE then
+        return 0x41
+    elseif c == PLAYER_COLOR_CYAN then
+        return 0xE5
+    elseif c == PLAYER_COLOR_PURPLE then
+        return 0x00
+    elseif c == PLAYER_COLOR_YELLOW then
+        return 0xFC
+    elseif c == PLAYER_COLOR_ORANGE then
+        return 0x89
+    elseif c == PLAYER_COLOR_GREEN then
+        return 0xBF
+    elseif c == PLAYER_COLOR_PINK then
+        return 0x5A
+    elseif c == PLAYER_COLOR_LIGHT_GRAY then
+        return 0x95
+    elseif c == PLAYER_COLOR_LIGHT_BLUE then
+        return 0xBE
+    elseif c == PLAYER_COLOR_AQUA then
+        return 0x61
+    elseif c == PLAYER_COLOR_BROWN then
+        return 0x29
+    elseif c == PLAYER_COLOR_MAROON then
+        return 0x00
+    elseif c == PLAYER_COLOR_NAVY then
+        return 0x00
+    elseif c == PLAYER_COLOR_TURQUOISE then
+        return 0xEA
+    elseif c == PLAYER_COLOR_VIOLET then
+        return 0x00
+    elseif c == PLAYER_COLOR_WHEAT then
+        return 0xCD
+    elseif c == PLAYER_COLOR_PEACH then
+        return 0xA4
+    elseif c == PLAYER_COLOR_MINT then
+        return 0xFF
+    elseif c == PLAYER_COLOR_LAVENDER then
+        return 0xB9
+    elseif c == PLAYER_COLOR_COAL then
+        return 0x28
+    elseif c == PLAYER_COLOR_SNOW then
+        return 0xF0
+    elseif c == PLAYER_COLOR_EMERALD then
+        return 0x78
+    elseif c == PLAYER_COLOR_PEANUT then
+        return 0x6F
+    else
+        return 0xFF
+    endif
+endfunction
+
+function GetPlayerColorBlue takes player p returns integer
+    local playercolor c = GetPlayerColor(p)
+    if c == PLAYER_COLOR_RED then
+        return 0x02
+    elseif c == PLAYER_COLOR_BLUE then
+        return 0xFF
+    elseif c == PLAYER_COLOR_CYAN then
+        return 0xB8
+    elseif c == PLAYER_COLOR_PURPLE then
+        return 0x80
+    elseif c == PLAYER_COLOR_YELLOW then
+        return 0x00
+    elseif c == PLAYER_COLOR_ORANGE then
+        return 0x0D
+    elseif c == PLAYER_COLOR_GREEN then
+        return 0x00
+    elseif c == PLAYER_COLOR_PINK then
+        return 0xAF
+    elseif c == PLAYER_COLOR_LIGHT_GRAY then
+        return 0x96
+    elseif c == PLAYER_COLOR_LIGHT_BLUE then
+        return 0xF1
+    elseif c == PLAYER_COLOR_AQUA then
+        return 0x45
+    elseif c == PLAYER_COLOR_BROWN then
+        return 0x03
+    elseif c == PLAYER_COLOR_MAROON then
+        return 0x00
+    elseif c == PLAYER_COLOR_NAVY then
+        return 0xC3
+    elseif c == PLAYER_COLOR_TURQUOISE then
+        return 0xFF
+    elseif c == PLAYER_COLOR_VIOLET then
+        return 0xFE
+    elseif c == PLAYER_COLOR_WHEAT then
+        return 0x87
+    elseif c == PLAYER_COLOR_PEACH then
+        return 0x8B
+    elseif c == PLAYER_COLOR_MINT then
+        return 0x80
+    elseif c == PLAYER_COLOR_LAVENDER then
+        return 0xEB
+    elseif c == PLAYER_COLOR_COAL then
+        return 0x28
+    elseif c == PLAYER_COLOR_SNOW then
+        return 0xFF
+    elseif c == PLAYER_COLOR_EMERALD then
+        return 0x1E
+    elseif c == PLAYER_COLOR_PEANUT then
+        return 0x33
+    else
+        return 0xFF
+    endif
+endfunction
+
+function IntToPrecentage takes integer v, integer max returns real
+    return I2R(v) / I2R(max) * 100.0
+endfunction
+
 function GetPlayerColorString takes player p, string text returns string
 //Credits to Andrewgosu from TH for the color codes//
     local playercolor c = GetPlayerColor(p)
@@ -1292,7 +1462,7 @@ function AppendFileContent takes string content returns string
     return "\r\n\t\t\t\t" + content
 endfunction
 
-function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, string saveCode returns nothing
+function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string gameMode = "Freelancer"
@@ -1321,9 +1491,21 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call PreloadGenStart()
 
     set content = content + AppendFileContent("Code: -load " + saveCode)
-    set content = content + AppendFileContent("Player: " + playerName + "\r\n\t\t\t\t" + "Singleplayer: " + singleplayer + "\r\n\t\t\t\t" + "Game Mode: " + gameMode + "\r\n\t\t\t\t" + "Game Type: " + gameType + "\r\n\t\t\t\t" + "XP rate: " + I2S(xpRate) + "\r\n\t\t\t\t" + "XP: " + I2S(xp))
+    set content = content + AppendFileContent("Player: " + playerName)
+    set content = content + AppendFileContent("Singleplayer: " + singleplayer)
+    set content = content + AppendFileContent("Game Mode: " + gameMode)
+    set content = content + AppendFileContent("Game Type: " + gameType)
+    set content = content + AppendFileContent("XP rate: " + I2S(xpRate))
+    set content = content + AppendFileContent("Hero Level: " + I2S(heroLevel))
+    set content = content + AppendFileContent("XP: " + I2S(xp))
     set content = content + AppendFileContent("Gold: " + I2S(gold))
     set content = content + AppendFileContent("Lumber: " + I2S(lumber))
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    set content = ""
     set content = content + AppendFileContent("Evolution: " + I2S(evolutionLevel))
     set content = content + AppendFileContent("Improved Power Generator: " + I2S(powerGeneratorLevel))
     set content = content + AppendFileContent("Hand of God: " + I2S(handOfGodLevel))
@@ -1341,10 +1523,10 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-xp" + I2S(xp) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel" + I2S(heroLevel) + "-xp" + I2S(xp) + ".txt")
 endfunction
 
-function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills returns string
+function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -1402,13 +1584,14 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
     endif
 
-    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, result)
+    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, result)
 
     return result
 endfunction
 
 globals
     constant integer UPG_EVOLUTION                                   = 'R00U'
+    constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
 	constant integer UPG_IMPROVED_HAND_OF_GOD                        = 'R00V'
@@ -1430,6 +1613,7 @@ function GetSaveCode takes player whichPlayer returns string
     local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
     local integer gameType = udg_GameType
     local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
+    local integer heroLevel = GetHeroLevel(udg_Held[GetConvertedPlayerId(whichPlayer)])
     local integer xp = GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])
     local integer gold = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
     local integer lumber = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER)
@@ -1445,23 +1629,23 @@ function GetSaveCode takes player whichPlayer returns string
     local integer buildingsRazed = GetPlayerScore(whichPlayer, PLAYER_SCORE_STRUCT_RAZED)
     local integer totalBossKills = udg_BossKills[GetConvertedPlayerId(whichPlayer)]
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills)
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills)
 endfunction
 
 function GetSaveCodeBaradeStrongFreelancer takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
+    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
 endfunction
 
 function GetSaveCodeBaradeStrongWarlord takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", true, false, udg_GameTypeNormal, 130, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
+    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
 endfunction
 
 function GetSaveCodeBaradeNormalFreelancer takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
+    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
 endfunction
 
 function GetSaveCodeBaradeNormalWarlord takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
+    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -1536,6 +1720,7 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
         call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
         call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
         call SetPlayerTechResearched(whichPlayer, UPG_EVOLUTION, evolutionLevel)
+        call SetPlayerTechResearched(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
         call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
         call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
         call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
