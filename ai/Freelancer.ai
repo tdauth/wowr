@@ -21,12 +21,27 @@ globals
 
 	constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
+	constant integer CREEP_DARK_WIZARD                               = 'nwzd'
+	constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
+	constant integer CREEP_DOOM_GUARD                                = 'nbal'
+	constant integer CREEP_WRAITH                                    = 'ngh2'
+	constant integer CREEP_SPIDER_CRAB                               = 'nsc2'
+	constant integer CREEP_HARPY                                     = 'nhrh'
+	constant integer CREEP_GREEN_DRAGON                              = 'ngrd'
+
 	constant integer UPG_TEMPLE_BLUEPRINTS                           = 'R00B'
 	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
+	constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
+	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
+
+	constant integer POWER_GENERATOR                                 = 'n025'
 
 	constant integer SHREDDER                                        = 'ngir'
 	constant integer AI_LABORATORY                                   = 'h01T'
+	constant integer FREELANCER_LABORATORY                           = 'h01V'
+	constant integer FREELANCER_SHOP                                 = 'h01S'
+	constant integer FREELANCER_MERCENARY_CAMP                       = 'h01U'
 endglobals
 
 //===========================================================================
@@ -294,13 +309,19 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, AI_LABORATORY)
 	call SetBuildUnit( 3, NEUTRAL_CITIZEN )
 	call SetBuildUnit( 1, SHREDDER )
+	call SetBuildUnit( 1, FREELANCER_LABORATORY )
+	call SetBuildUnit( 1, FREELANCER_SHOP )
+	call SetBuildUnit( 1, FREELANCER_MERCENARY_CAMP )
 	call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
 	call SetBuildUnit( 1, GUARDIANS_CITADEL )
+	call SetBuildUnit( 1, POWER_GENERATOR )
 
 	call SetBuildUpgr( 1, UPG_SENTINEL )
 	call SetBuildUpgr( 1, UPG_TEMPLE_BLUEPRINTS )
 	call SetBuildUpgr( 100, UPG_IMPROVED_MASONRY )
 	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
+	call SetBuildUpgr( 100, UPG_CHEAP_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -382,7 +403,13 @@ endfunction
 function AttackWaves takes nothing returns nothing
     loop
         call InitAssaultGroup()
+        call CampaignAttacker( 1, CREEP_DARK_WIZARD )
+        call CampaignAttacker( 1, CREEP_UNBROKEN_DARK_WEAVER )
+        call CampaignAttacker( 1, CREEP_DOOM_GUARD )
+        call CampaignAttacker( 1, CREEP_HARPY )
+        call CampaignAttacker( 1, CREEP_GREEN_DRAGON )
         call AddStandardUnitsToAttackWave()
+
         call Sleep( 10 ) // Waits 10 seconds before attacking
         call LaunchAttack()
 		call Sleep( M1 )
