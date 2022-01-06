@@ -241,6 +241,35 @@ function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
     endloop
 endfunction
 
+function AddItemToBackpackForPlayer takes integer PlayerNumber, item whichItem returns boolean
+    local integer I0 = 0
+    local integer I1 = 0
+    local integer index = 0
+    set I0 = 0
+    loop
+        exitwhen(I0 == udg_RucksackMaxPages)
+        exitwhen (whichItem == null)
+        set I1 = 0
+        loop
+            exitwhen(I1 == bj_MAX_INVENTORY)
+            exitwhen (whichItem == null)
+            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackItemType[index] == 0) then
+                set udg_RucksackItemType[index] = GetItemTypeId(whichItem)
+                set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
+                call RemoveItem(whichItem)
+                set whichItem = null
+
+                return true
+            endif
+            set I1 = I1 + 1
+        endloop
+        set I0 = I0 + 1
+    endloop
+
+    return false
+endfunction
+
 function DestroyRucksackSystemForPlayer takes integer PlayerNumber returns nothing
     if (udg_Rucksack[PlayerNumber] != null) then
         call RemoveUnit(udg_Rucksack[PlayerNumber])
