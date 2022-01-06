@@ -403,11 +403,11 @@ endfunction
 function AttackWaves takes nothing returns nothing
     loop
         call InitAssaultGroup()
-        call CampaignAttacker( 1, CREEP_DARK_WIZARD )
-        call CampaignAttacker( 1, CREEP_UNBROKEN_DARK_WEAVER )
-        call CampaignAttacker( 1, CREEP_DOOM_GUARD )
-        call CampaignAttacker( 1, CREEP_HARPY )
-        call CampaignAttacker( 1, CREEP_GREEN_DRAGON )
+        call CampaignAttacker( 0, 1, CREEP_DARK_WIZARD )
+        call CampaignAttacker( 0, 1, CREEP_UNBROKEN_DARK_WEAVER )
+        call CampaignAttacker( 0, 1, CREEP_DOOM_GUARD )
+        call CampaignAttacker( 0, 1, CREEP_HARPY )
+        call CampaignAttacker( 0, 1, CREEP_GREEN_DRAGON )
         call AddStandardUnitsToAttackWave()
 
         call Sleep( 10 ) // Waits 10 seconds before attacking
