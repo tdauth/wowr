@@ -2001,3 +2001,248 @@ function FormatTimeString takes integer seconds returns string
         return I2S(seconds) + " seconds "
     endif
 endfunction
+
+
+globals
+    string array SaveObjectName[5000]
+    integer array SaveObjectId[5000]
+    integer SaveObjectTypeCounter = 0
+endglobals
+
+function AddSaveObjectType takes string name, integer id returns integer
+    local integer index = SaveObjectTypeCounter
+    set SaveObjectName[index] = name
+    set SaveObjectId[index] = id
+    set SaveObjectTypeCounter = SaveObjectTypeCounter + 1
+    return index
+endfunction
+
+globals
+    integer SaveObjectTypeXP = 0
+    integer SaveObjectTypeGold = 1
+    integer SaveObjectTypeGreenDragon = 2
+    integer SaveObjectTypeBowOfFire = 3
+    integer SaveObjectTypeGuardTower = 4
+endglobals
+
+function AddSaveObjectTypes takes nothing returns nothing
+    set SaveObjectTypeXP = AddSaveObjectType("XP", 0)
+    set SaveObjectTypeGold = AddSaveObjectType("Gold", 0)
+    set SaveObjectTypeGreenDragon = AddSaveObjectType("Green Dragon", 'ngrd')
+    set SaveObjectTypeBowOfFire = AddSaveObjectType("Bow of Fire", 'I00O')
+    set SaveObjectTypeGuardTower = AddSaveObjectType("Guard Tower", 'hgtw')
+endfunction
+
+function GetSaveObjectType takes integer id returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == SaveObjectTypeCounter)
+        if (SaveObjectId[i] == id) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function GetSaveObjectId takes integer number returns integer
+    return SaveObjectId[number]
+endfunction
+
+function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string saveCode returns nothing
+    local string singleplayer = "no"
+    local string singlePlayerFileName = "Multiplayer"
+    local string gameMode = "Freelancer"
+    local string gameType = "Normal"
+    local string content = ""
+
+    if (isSinglePlayer) then
+        set singleplayer = "yes"
+        set singlePlayerFileName = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set gameMode = "Warlord"
+    endif
+
+    if (gameTypeNumber == udg_GameTypeEasy) then
+        set gameType = "Easy"
+    elseif (gameTypeNumber == udg_GameTypeFast) then
+        set gameType = "Fast"
+    elseif (gameTypeNumber == udg_GameTypeHardcore) then
+        set gameType = "Hardcore"
+    endif
+
+
+    call PreloadGenClear()
+    call PreloadGenStart()
+
+    set content = content + AppendFileContent("Code: -load " + saveCode)
+    set content = content + AppendFileContent("Buildings: " + I2S(buildings))
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    // The line below creates the file at the specified location
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-buildings-" + I2S(buildings) + ".txt")
+endfunction
+
+globals
+    constant integer SAVE_CODE_MAX_BUILDINGS = 5
+endglobals
+
+function FilterIsLivingBuildingToBeSaved takes nothing returns boolean
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectType(GetUnitTypeId(GetEnumUnit())) != -1
+endfunction
+
+function GetPlayerBuildingsOrderedByPriority takes player whichPlayer returns group
+    local group whichGroup = CreateGroup()
+    call GroupEnumUnitsOfPlayer(whichGroup, whichPlayer, Filter(function FilterIsLivingBuildingToBeSaved))
+    // TODO order by priority and cut all above maximum
+    return whichGroup
+endfunction
+
+function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
+    local integer playerNameHash = CompressedAbsStringHash(playerName)
+    local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
+    local group buildings = GetPlayerBuildingsOrderedByPriority(owner)
+    local unit first = null
+    local integer id = -1
+    local integer i = 0
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayer and isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 0")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
+    elseif (isSinglePlayer and not isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 1")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(1)
+    elseif (not isSinglePlayer and isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 2")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(2)
+    else
+        //call BJDebugMsg("Save code single player and mode 3")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(3)
+    endif
+
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(gameType)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(xpRate)
+
+    // 5 buildings with their locations
+    set i = 0
+    loop
+        exitwhen (i > SAVE_CODE_MAX_BUILDINGS)
+        set first = FirstOfGroup(buildings)
+        exitwhen (first == null)
+        set id = GetSaveObjectType(GetUnitTypeId(first))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(R2I(GetUnitX(first)))
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(R2I(GetUnitY(first)))
+        else
+            call BJDebugMsg("Not registered save object type for " + GetUnitName(first))
+        endif
+        call GroupRemoveUnit(buildings, first)
+        set first = null
+        set i = i + 1
+    endloop
+
+    call GroupClear(buildings)
+    call DestroyGroup(buildings)
+    set buildings = null
+
+
+    //call BJDebugMsg("Compressed result: " + result)
+    //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
+    //call BJDebugMsg("Checked save code part: " + result)
+
+    // checksum
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
+
+    if (SAVE_CODE_OBFUSCATE) then
+        //call BJDebugMsg("Non-obfuscated save code: " + result)
+        set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
+    endif
+
+    call CreateSaveCodeBuildingsTextFile(playerName, isSinglePlayer, isWarlord, gameType, SAVE_CODE_MAX_BUILDINGS, result)
+
+    return result
+endfunction
+
+
+function GetSaveCodeBuildings takes player whichPlayer returns string
+    local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
+    local boolean isSinglePlayer = IsInSinglePlayer()
+    local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
+    local integer gameType = udg_GameType
+    local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
+
+    return GetSaveCodeBuildingsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, whichPlayer)
+endfunction
+
+function ApplySaveCodeBuildings takes player whichPlayer, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = false
+    local boolean isWarlord = false
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local integer i = 0
+    local integer pos = 5
+    local integer saveObject = 0
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayerAndWarlord == 0) then
+        //call BJDebugMsg("Save code single player and mode 0")
+        set isSinglePlayer = true
+        set isWarlord = true
+    elseif (isSinglePlayerAndWarlord == 1) then
+        //call BJDebugMsg("Save code single player and mode 1")
+        set isSinglePlayer = true
+        set isWarlord = false
+    elseif (isSinglePlayerAndWarlord == 2) then
+        //call BJDebugMsg("Save code single player and mode 2")
+        set isSinglePlayer = false
+        set isWarlord = true
+    else
+        //call BJDebugMsg("Save code single player and mode 3")
+        set isSinglePlayer = false
+        set isWarlord = false
+    endif
+
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+        set i = 0
+        loop
+            exitwhen (i == SAVE_CODE_MAX_BUILDINGS)
+            set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+            if (saveObject > 0) then
+                call CreateUnit(whichPlayer, GetSaveObjectId(saveObject), I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)), I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)), bj_UNIT_FACING)
+            endif
+            set i = i + 1
+            set pos = pos + 3
+        endloop
+
+        return true
+    endif
+
+    return false
+endfunction
