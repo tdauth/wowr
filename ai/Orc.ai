@@ -1,5 +1,6 @@
 globals
     constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+    constant integer UPG_STORM_PROTECTION                            = 'R029'
     constant integer UPG_EVOLUTION                                   = 'R00U'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
@@ -197,6 +198,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
 	call SetBuildUpgr( 1, 'Ropm' )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
 	call SetBuildUpgr( 1, UPG_FEL )
 	call SetBuildUnit( 1, FOUNTAIN_OF_BLOOD )
 	call SetBuildUnit( 3, CHAOS_PEON )
@@ -447,20 +449,23 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 4, 8, 12, GRUNT )
-        call CampaignAttackerEx( 4, 8, 12, HEAD_HUNTER )
-        call CampaignAttackerEx( 4, 8, 12, RAIDER )
-        call CampaignAttackerEx( 4, 8, 12, CATAPULT )
-        call CampaignAttackerEx( 4, 8, 12, WITCH_DOCTOR )
-        call CampaignAttackerEx( 4, 8, 12, SHAMAN )
-        call CampaignAttackerEx( 4, 8, 12, KODO_BEAST )
-        call CampaignAttackerEx( 4, 8, 12, WYVERN )
-        call CampaignAttackerEx( 4, 8, 12, TAUREN )
-		call CampaignAttackerEx( 4, 8, 12, SPIRIT_WALKER )
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, HEAD_HUNTER )
+        call CampaignAttackerEx( 2, 2, 2, CATAPULT )
+        call CampaignAttackerEx( 2, 2, 2, WITCH_DOCTOR )
+        call CampaignAttackerEx( 2, 2, 2, SHAMAN )
+        call CampaignAttackerEx( 2, 2, 2, TAUREN )
+		call CampaignAttackerEx( 2, 2, 2, SPIRIT_WALKER )
 		call CampaignAttackerEx( 4, 4, 4, CHAOS_GRUNT )
 		call CampaignAttackerEx( 4, 4, 4, CHAOS_WARLOCK )
 		call CampaignAttackerEx( 4, 4, 4, CHAOS_RAIDER )
 		call CampaignAttackerEx( 2, 2, 2, CHAOS_KODO )
+		
+		 // big air army
+		call CampaignAttackerEx( 8, 10, 12, WYVERN )
+		call CampaignAttackerEx( 8, 10, 12, BATRIDER )
+		call CampaignAttackerEx( 6, 8, 10, ORC_DRAGON)
 		
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking

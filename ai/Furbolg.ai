@@ -44,6 +44,7 @@ globals
 	constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
 	
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+	constant integer UPG_STORM_PROTECTION                            = 'R029'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
@@ -185,6 +186,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
 	
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
 	
 	call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
 	
@@ -438,19 +440,24 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 4, 6, 8, FURBOLG_EX )
-        call CampaignAttackerEx( 4, 6, 8, FURBOLG_TRACKER_EX )
-        call CampaignAttackerEx( 4, 6, 8, FURBOLG_CHAMPION_EX )
-        call CampaignAttackerEx( 2, 4, 6, FURBOLG_URSA_WARRIOR )
-        call CampaignAttackerEx( 2, 4, 6, POLAR_FURBOLG )
-        call CampaignAttackerEx( 3, 4, 6, POLAR_FURBOLG_CHAMPION )
-        call CampaignAttackerEx( 3, 4, 6, FURBOLG_ELDER_SHAMAN )
-        call CampaignAttackerEx( 3, 4, 6, FURBOLG_CHAMPION_EX )
-        call CampaignAttackerEx( 3, 4, 6, FURBOLG_SHAMAN_EX )
-		call CampaignAttackerEx( 3, 4, 6, TIMBER_WOLF )
-		call CampaignAttackerEx( 3, 4, 6, GIANT_WOLF )
-		call CampaignAttackerEx( 3, 4, 6, DIRE_WOLF )
-		call CampaignAttackerEx( 3, 4, 6, GREEN_DRAKE )
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_EX )
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_TRACKER_EX )
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_CHAMPION_EX )
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_URSA_WARRIOR )
+        call CampaignAttackerEx( 2, 2, 2, POLAR_FURBOLG )
+        call CampaignAttackerEx( 2, 2, 2, POLAR_FURBOLG_CHAMPION )
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_ELDER_SHAMAN )
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_CHAMPION_EX )
+        call CampaignAttackerEx( 2, 2, 2, FURBOLG_SHAMAN_EX )
+		call CampaignAttackerEx( 2, 2, 2, TIMBER_WOLF )
+		call CampaignAttackerEx( 2, 2, 2, GIANT_WOLF )
+		call CampaignAttackerEx( 2, 2, 2, DIRE_WOLF )
+		
+		// big air army
+        call CampaignAttackerEx( 15, 20, 25, GREEN_DRAKE )
+		
 		call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()

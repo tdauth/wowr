@@ -127,6 +127,19 @@ This version provides several new features compared to the original map:
 * New hero: Mountain Giant.
 * New hero: Wizard.
 * Save/load system.
+* Undead and Night Elf citizens can directly build their goldmines instead of housings.
+* Walls from start bases are invulnerable.
+* Research Improved Mount.
+* Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers.
+* Bosses have orbs to attack air units.
+* Engineer who can construct gates, walls and bridges.
+* Water Gold Mines.
+* Engineer Ships which can collect gold from Water Gold Mines and return it to shipyards.
+* Research Storm Protection to avoid death in Maelstrom.
+* Outland Dimensional Gate for Demons.
+* Statue of Azshara for Naga.
+* Corrupted Ancient Protector for Furbolg.
+* Draenei Prison for Draenei.
 
 ## Bug Fixes
 

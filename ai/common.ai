@@ -749,6 +749,10 @@ globals
 	
 	constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
 	constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
+	
+	constant integer HIDEOUT                                         = 'h00J'
+	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
+	constant integer GUARDIANS_CITADEL                               = 'h00L'
 endglobals
 
 //============================================================================
@@ -1189,7 +1193,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 		
 	elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
-
+    
+    elseif unitid == HIDEOUT then
+        set have_qty = have_qty  + GetUnitCountEx(FORTIFIED_HIDEOUT,false,townid) + GetUnitCountEx(GUARDIANS_CITADEL,false,townid)
+    elseif unitid == FORTIFIED_HIDEOUT then
+        set have_qty = have_qty  + GetUnitCountEx(GUARDIANS_CITADEL,false,townid)
+        
     endif
     return have_qty
 endfunction

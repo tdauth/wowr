@@ -1,8 +1,15 @@
 globals
     constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+    constant integer UPG_STORM_PROTECTION                            = 'R029'
     constant integer UPG_EVOLUTION                                   = 'R00U'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
+	
+	constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
+	constant integer MOUNTAIN_GIANT_TAUNT                            = 'A098'
+	constant integer MOUNTAIN_GIANT_HARDENED_SKIN                    = 'A099'
+	constant integer MOUNTAIN_GIANT_EAT_TREE                         = 'A09B'
+	constant integer MOUNTAIN_GIANT_WAR_CLUB                         = 'A09A'
 
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
@@ -83,6 +90,16 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return BLINK
         endif
+    elseif (curHero == MOUNTAIN_GIANT_HERO) then
+        if (skillUlti) then
+            return MOUNTAIN_GIANT_WAR_CLUB
+        elseif (mod == 0) then
+            return MOUNTAIN_GIANT_TAUNT
+        elseif (mod == 1) then
+            return MOUNTAIN_GIANT_HARDENED_SKIN
+        elseif (mod == 2) then
+            return MOUNTAIN_GIANT_EAT_TREE
+        endif
     endif
 
     return 'Aamk'
@@ -97,6 +114,8 @@ function InitHero takes nothing returns nothing
         set hero_id = MOON_CHICK
     elseif (GetUnitCountDone(WARDEN) > 0) then
         set hero_id = WARDEN
+    elseif (GetUnitCountDone(MOUNTAIN_GIANT_HERO) > 0) then
+        set hero_id = MOUNTAIN_GIANT_HERO
     endif
 endfunction
 
@@ -191,6 +210,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BOWS )
 	call SetBuildUpgr( 1, 'Repm' ) // backpack
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
 	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
 	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
@@ -388,9 +408,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON_M )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW_M )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -403,9 +421,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON_M ) 
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW_M )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
     call AddStandardUnitsToAttackWave()
@@ -419,9 +435,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DRYAD )
     call CampaignAttackerEx( 1, 2, 3, BALLISTA )
     call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON_M )
     call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW_M )
     call CampaignAttackerEx( 2, 2, 3, HIPPO )
     call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
     call CampaignAttackerEx( 2, 2, 3, CHIMAERA )
@@ -432,17 +446,20 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-		call CampaignAttackerEx( 4, 8, 12, ARCHER )
-        call CampaignAttackerEx( 5, 10, 12, HUNTRESS )
-        call CampaignAttackerEx( 5, 10, 12, DRYAD )
-        call CampaignAttackerEx( 2, 4, 8, BALLISTA )
-        call CampaignAttackerEx( 4, 8, 12, DRUID_TALON )
-        call CampaignAttackerEx( 2, 4, 8, DRUID_TALON_M )
-        call CampaignAttackerEx( 4, 8, 12, DRUID_CLAW )
-        call CampaignAttackerEx( 2, 4, 8, DRUID_CLAW_M )
-        call CampaignAttackerEx( 4, 8, 12, HIPPO )
-        call CampaignAttackerEx( 2, 4, 8, MOUNTAIN_GIANT )
-        call CampaignAttackerEx( 2, 4, 8, CHIMAERA )
+        
+        // small ground army
+		call CampaignAttackerEx( 4, 4, 4, ARCHER )
+        call CampaignAttackerEx( 2, 2, 2, HUNTRESS )
+        call CampaignAttackerEx( 2, 2, 2, DRYAD )
+        call CampaignAttackerEx( 2, 2, 2, BALLISTA )
+        call CampaignAttackerEx( 2, 2, 2, DRUID_TALON )
+        call CampaignAttackerEx( 3, 3, 3, DRUID_CLAW )
+        call CampaignAttackerEx( 3, 3, 3, MOUNTAIN_GIANT )
+        
+        // big air army
+        call CampaignAttackerEx( 10, 15, 20, HIPPO )
+        call CampaignAttackerEx( 15, 20, 25, CHIMAERA )
+        
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()

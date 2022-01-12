@@ -37,6 +37,7 @@ globals
 	constant integer UPG_DEMON_BACKPACK                              = 'R00G'
 	
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+	constant integer UPG_STORM_PROTECTION                            = 'R029'
 	constant integer UPG_EVOLUTION                                   = 'R00U'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
@@ -242,6 +243,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DEMON_HARDENED_SKIN )
 	call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
 	call SetBuildUpgr( 100, UPG_EVOLUTION )
 	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
 	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
@@ -488,15 +490,19 @@ function AttackWaves takes nothing returns nothing
     loop //Init the infinite attack loop
         //*** WAVE 11 ***
         call InitAssaultGroup()
-        call CampaignAttackerEx( 4, 6, 8, DEMON_OVERLORD )
-        call CampaignAttackerEx( 4, 6, 8, DEMON_FEL_STALKER )
-        call CampaignAttackerEx( 4, 6, 8, DEMON_NETHER_DRAKE )
-        call CampaignAttackerEx( 2, 4, 6, DEMON_INFERNAL_MACHINE )
-        call CampaignAttackerEx( 2, 4, 6, DEMON_GREATER_VOID_WALKER )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_EREDAR_SORCERER )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_SUCCUBUS )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_NETHER_DRAKE )
-        call CampaignAttackerEx( 3, 4, 6, DEMON_INFERNAL )
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, DEMON_OVERLORD )
+        call CampaignAttackerEx( 2, 2, 2, DEMON_FEL_STALKER )
+        call CampaignAttackerEx( 2, 2, 2, DEMON_INFERNAL_MACHINE )
+        call CampaignAttackerEx( 2, 2, 2, DEMON_GREATER_VOID_WALKER )
+        call CampaignAttackerEx( 2, 2, 2, DEMON_EREDAR_SORCERER )
+        call CampaignAttackerEx( 2, 2, 2, DEMON_SUCCUBUS )
+        call CampaignAttackerEx( 2, 2, 2, DEMON_INFERNAL )
+        
+         // big air army
+         call CampaignAttackerEx( 20, 25, 30, DEMON_NETHER_DRAKE )
+        
 		call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
