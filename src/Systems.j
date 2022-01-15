@@ -1158,7 +1158,7 @@ endfunction
 globals
 	string array raceIcons
 	string array professionIcons
-	hashtable ObjectIdIconsHashTable = InitHashtable()
+	//hashtable ObjectIdIconsHashTable = InitHashtable()
 endglobals
 
 function AddRaceIcon takes integer whichRace, string icon returns nothing
@@ -1188,15 +1188,16 @@ function GetIconByProfession takes integer profession returns string
 endfunction
 
 function AddUnitTypeIcon takes integer unitTypeId, string icon returns nothing
-	 call SaveStr(ObjectIdIconsHashTable, unitTypeId, 0, icon)
+	 //call SaveStr(ObjectIdIconsHashTable, unitTypeId, 0, icon)
 endfunction
 
 function AddItemTypeIcon takes integer itemTypeId, string icon returns nothing
-	 call SaveStr(ObjectIdIconsHashTable, itemTypeId, 0, icon)
+	 //call SaveStr(ObjectIdIconsHashTable, itemTypeId, 0, icon)
 endfunction
 
 function GetIconByUnitType takes integer unitTypeId returns string
-	local string result = LoadStr(ObjectIdIconsHashTable, unitTypeId, 0)
+	//local string result = LoadStr(ObjectIdIconsHashTable, unitTypeId, 0)
+	local string result = BlzGetAbilityIcon(unitTypeId)
     if (result == null or result == "") then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
     endif
@@ -1205,7 +1206,8 @@ function GetIconByUnitType takes integer unitTypeId returns string
 endfunction
 
 function GetIconByItemType takes integer itemTypeId returns string
-	local string result = LoadStr(ObjectIdIconsHashTable, itemTypeId, 0)
+	//local string result = LoadStr(ObjectIdIconsHashTable, itemTypeId, 0)
+	local string result = BlzGetAbilityIcon(itemTypeId)
     if (result == null or result == "") then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp"
     endif
@@ -2832,12 +2834,16 @@ endfunction
 globals
     framehandle array BackpackBackgroundFrame
     framehandle array BackpackItemFrame
+    framehandle array BackpackItemChargesFrame
     trigger array BackpackItemTrigger
     trigger array BackpackItemTooltipOnTrigger
     trigger array BackpackItemTooltipOffTrigger
     framehandle array BackpackTooltipFrame
     framehandle array BackpackCloseButton
     trigger array BackpackCloseTrigger
+    constant real BACKPACK_UI_BUTTON_SIZE = 0.02818
+    constant real BACKPACK_UI_CHARGES_POS = 0.005
+    constant real BACKPACK_UI_BUTTON_SPACE = 0.01
 endglobals
 
 function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
@@ -2853,20 +2859,50 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
             call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
             set j = j + 1
         endloop
-        set j = j + 1
+        set i = i + 1
     endloop
 endfunction
 
 function ShowBackpackUI takes player whichPlayer returns nothing
+    local integer i = 0
+    local integer j = 0
+    local integer index = 0
     call UpdateItemsForBackpackUI(whichPlayer)
-    //if (whichPlayer == GetLocalPlayer()) then
+    if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], true)
-    //endif
+        set i = 0
+        loop
+            exitwhen (i == udg_RucksackMaxPages)
+            set j = 0
+            loop
+                exitwhen (j == bj_MAX_INVENTORY)
+                call BlzFrameSetVisible(BackpackItemFrame[index], true)
+                call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
+                set j = j + 1
+            endloop
+            set i = i + 1
+        endloop
+    endif
 endfunction
 
 function HideBackpackUI takes player whichPlayer returns nothing
+    local integer i = 0
+    local integer j = 0
+    local integer index = 0
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
+        set i = 0
+        loop
+            exitwhen (i == udg_RucksackMaxPages)
+            set j = 0
+            loop
+                exitwhen (j == bj_MAX_INVENTORY)
+                call BlzFrameSetVisible(BackpackItemFrame[index], false)
+                call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
+                set j = j + 1
+            endloop
+            set i = i + 1
+        endloop
     endif
 endfunction
 
@@ -2885,7 +2921,6 @@ function BackpackCloseFunction takes nothing returns nothing
     call HideBackpackUI(Player(playerId))
 endfunction
 
-
 function CreateBackpackUI takes player whichPlayer returns nothing
     local integer i = 0
     local integer j = 0
@@ -2893,9 +2928,11 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     local real y = 0.0
     local integer index = 0
     set BackpackBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0)
-    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.000414400, 0.601100)
-    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.800514, 0.00000)
+    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0578800, 0.531500)
+    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.761780, 0.191700)
 
+    set x = 0.0175400
+    set y = 0.566980
     set i = 0
     loop
         exitwhen (i == udg_RucksackMaxPages)
@@ -2903,10 +2940,13 @@ function CreateBackpackUI takes player whichPlayer returns nothing
         loop
             exitwhen (j == bj_MAX_INVENTORY)
             set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            set BackpackItemFrame[index] = BlzCreateFrameByType("BACKDROP", "Frame025", BackpackBackgroundFrame[GetPlayerId(whichPlayer)], "", 1)
+            set BackpackItemFrame[index] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_TOPLEFT, x, y)
-            call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + 0.03, y + 0.03)
-            call BlzFrameSetTexture(BackpackItemFrame[index], "", 0, true)
+            call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_BUTTON_SIZE, y - BACKPACK_UI_BUTTON_SIZE)
+            call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(0), 0, true)
+            call BlzFrameSetText(BackpackItemFrame[index], I2S(index))
+            call BlzFrameSetScale(BackpackItemFrame[index], 1.00)
+            call BlzFrameSetVisible(BackpackItemFrame[index], false)
 
             set BackpackItemTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTrigger[index], BackpackItemFrame[index], FRAMEEVENT_CONTROL_CLICK)
@@ -2924,12 +2964,25 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             call TriggerAddAction(BackpackItemTooltipOffTrigger[index], function BackpackLeaveItemFunction)
             call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 0, index)
 
-            set x = x + 0.04
+            set BackpackItemChargesFrame[index] = BlzCreateFrameByType("TEXT", "charges" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+            call BlzFrameSetAbsPoint(BackpackItemChargesFrame[index], FRAMEPOINT_TOPLEFT, x + BACKPACK_UI_CHARGES_POS, y - BACKPACK_UI_CHARGES_POS)
+            call BlzFrameSetAbsPoint(BackpackItemChargesFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_BUTTON_SIZE, y - BACKPACK_UI_BUTTON_SIZE)
+            call BlzFrameSetText(BackpackItemChargesFrame[index], "|cffFFFFFFCharges|r")
+            call BlzFrameSetScale(BackpackItemChargesFrame[index], 1.00)
+            call BlzFrameSetTextAlignment(BackpackItemChargesFrame[index], TEXT_JUSTIFY_BOTTOM, TEXT_JUSTIFY_RIGHT)
+            call BlzFrameSetScale(BackpackItemChargesFrame[index], 0.572)
+            call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
+
+            set x = x + BACKPACK_UI_BUTTON_SIZE + BACKPACK_UI_BUTTON_SPACE
 
             set j = j + 1
         endloop
 
-        set y = y + 0.04
+        // every 3 bags start another line
+        if (ModuloInteger(i, 3) == 0) then
+            set x = 0.0175400
+            set y = y - BACKPACK_UI_BUTTON_SIZE - BACKPACK_UI_BUTTON_SPACE
+        endif
 
         set i = i + 1
     endloop
@@ -2940,8 +2993,8 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.737500, 0.326500)
 
     set BackpackCloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
-    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.349100, 0.0867400)
-    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.449100, 0.0585600)
+    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.351300, 0.252510)
+    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.470700, 0.228200)
     call BlzFrameSetText(BackpackCloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
     call BlzFrameSetScale(BackpackCloseButton[GetPlayerId(whichPlayer)], 1.00)
 
