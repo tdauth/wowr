@@ -46,6 +46,124 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
     return GetPlayerController(Player(PlayerNumber)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(PlayerNumber)) == PLAYER_SLOT_STATE_PLAYING
 endfunction
 
+globals
+	string array raceIcons
+	string array professionIcons
+	//hashtable ObjectIdIconsHashTable = InitHashtable()
+endglobals
+
+function AddRaceIcon takes integer whichRace, string icon returns nothing
+    set raceIcons[whichRace] = icon
+endfunction
+
+function GetIconByRace takes integer whichRace returns string
+    local string result = raceIcons[whichRace]
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
+    endif
+
+    return result
+endfunction
+
+function AddProfessionIcon takes integer profession, string icon returns nothing
+    set professionIcons[profession] = icon
+endfunction
+
+function GetIconByProfession takes integer profession returns string
+    local string result = professionIcons[profession]
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
+    endif
+
+    return result
+endfunction
+
+function AddUnitTypeIcon takes integer unitTypeId, string icon returns nothing
+	 //call SaveStr(ObjectIdIconsHashTable, unitTypeId, 0, icon)
+endfunction
+
+function AddItemTypeIcon takes integer itemTypeId, string icon returns nothing
+	 //call SaveStr(ObjectIdIconsHashTable, itemTypeId, 0, icon)
+endfunction
+
+function GetIconByUnitType takes integer unitTypeId returns string
+	//local string result = LoadStr(ObjectIdIconsHashTable, unitTypeId, 0)
+	local string result = BlzGetAbilityIcon(unitTypeId)
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
+    endif
+
+    return result
+endfunction
+
+function GetIconByItemType takes integer itemTypeId returns string
+	//local string result = LoadStr(ObjectIdIconsHashTable, itemTypeId, 0)
+	local string result = BlzGetAbilityIcon(itemTypeId)
+    if (result == null or result == "") then
+        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp"
+    endif
+
+    return result
+endfunction
+
+// https://www.hiveworkshop.com/threads/detecting-item-price.120355/
+function GetUnitShop takes nothing returns integer
+    return 'ngme'                                                               // This is the raw code for the goblin shop
+endfunction
+
+function GetUnitSell takes nothing returns integer
+    return 'Hpal'                                                               // This is the raw code for the paladin
+endfunction
+
+function GetItemValueGold takes integer i returns integer
+    local real x   = 0                                                          // This is the x position where we create the dummy units. Dont place it in the water.
+    local real y   = 0                                                          // This is the y position where we create the dummy units. Dont place it in the water.
+    local unit u1  = CreateUnit(Player(12),GetUnitShop(),x,y,0)
+    local unit u2  = CreateUnit(Player(12),GetUnitSell(),x,y-100,90)
+    local item a   = UnitAddItemByIdSwapped(i,u2)
+    local integer g1 = GetPlayerState(Player(12),PLAYER_STATE_RESOURCE_GOLD)
+    local integer g2 = 0
+    call UnitDropItemTarget(u2,a,u1)
+    set g2 = GetPlayerState(Player(12),PLAYER_STATE_RESOURCE_GOLD) - g1
+    call SetPlayerState(Player(12),PLAYER_STATE_RESOURCE_GOLD,GetPlayerState(Player(12),PLAYER_STATE_RESOURCE_GOLD)-g2)
+
+    call RemoveUnit(u1)
+    call RemoveUnit(u2)
+    set u1 = null
+    set u2 = null
+    set a  = null
+    return g2
+endfunction
+
+function GetItemValueLumber takes integer i returns integer
+    local real x   = 0                                                          // This is the x position where we create the dummy units. Dont place it in the water.
+    local real y   = 0                                                          // This is the y position where we create the dummy units. Dont place it in the water.
+    local unit u1  = CreateUnit(Player(12),GetUnitShop(),x,y,0)
+    local unit u2  = CreateUnit(Player(12),GetUnitSell(),x,y-100,90)
+    local item a   = UnitAddItemByIdSwapped(i,u2)
+    local integer g1 = GetPlayerState(Player(12),PLAYER_STATE_RESOURCE_LUMBER)
+    local integer g2 = 0
+    call UnitDropItemTarget(u2,a,u1)
+    set g2 = GetPlayerState(Player(12),PLAYER_STATE_RESOURCE_LUMBER) - g1
+    call SetPlayerState(Player(12),PLAYER_STATE_RESOURCE_LUMBER,GetPlayerState(Player(12),PLAYER_STATE_RESOURCE_LUMBER)-g2)
+
+    call RemoveUnit(u1)
+    call RemoveUnit(u2)
+    set u1 = null
+    set u2 = null
+    set a  = null
+    return g2
+endfunction
+
+function GetItemTypePerishable takes integer i returns boolean
+    local item tmpItem = CreateItem(i, 0.0, 0.0)
+    local boolean result = BlzGetItemBooleanField(tmpItem, ITEM_BF_PERISHABLE)
+    call RemoveItem(tmpItem)
+    set tmpItem = null
+
+    return result
+endfunction
+
 function BackpackCountItemsOfItemTypeForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
 	local integer I0 = 0
     local integer I1 = 0
@@ -194,19 +312,19 @@ function DropQuestItemFromHeroAtRectByDyingUnit takes integer itemTypeId, rect w
 endfunction
 
 function DropQuestItemFromCreepHeroAtRect takes unit hero, integer itemTypeId, rect whichRect returns item
-    	local item whichItem = null
-	local integer i = 0
-	loop
-		exitwhen (i == bj_MAX_INVENTORY)
-        	if (GetItemTypeId(UnitItemInSlot(hero, i)) == itemTypeId) then
-            		call RemoveItem(UnitItemInSlot(hero, i))
-           		set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-            		call SetItemInvulnerable(whichItem, true)
-            		exitwhen (true)
-        	endif
-		set i = i + 1
-	endloop
-	return whichItem
+    local item whichItem = null
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (GetItemTypeId(UnitItemInSlot(hero, i)) == itemTypeId) then
+            call RemoveItem(UnitItemInSlot(hero, i))
+            set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            call SetItemInvulnerable(whichItem, true)
+            exitwhen (true)
+        endif
+        set i = i + 1
+    endloop
+    return whichItem
 endfunction
 
 function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns nothing
@@ -216,6 +334,7 @@ function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns no
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            //call BJDebugMsg("Clearing item at index " + I2S(index))
             set udg_RucksackItemType[index] = 0
             set udg_RucksackItemCharges[index] = 0
             set I1 = I1 + 1
@@ -233,6 +352,7 @@ function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            //call BJDebugMsg("Clearing item at index " + I2S(index))
             set udg_RucksackItemType[index] = 0
             set udg_RucksackItemCharges[index] = 0
             set I1 = I1 + 1
@@ -280,79 +400,119 @@ endfunction
 
 function RefreshRucksackPage takes integer PlayerNumber returns nothing
     local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
-    local item SlotItem = null
-    local integer CarriedItemType = 0
     local integer I0 = 0
     local integer index = 0
 	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
+	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
+	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
     // Create All Items From Next/Previous Page
     set I0 = 0
     loop
         exitwhen(I0 == bj_MAX_INVENTORY)
         set index = Index3D(PlayerNumber, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-        call UnitAddItemByIdSwapped(udg_RucksackItemType[index], udg_Rucksack[PlayerNumber])
+        if (udg_RucksackItemType[index] != 0) then
+            //call BJDebugMsg("Item type " + GetObjectName(udg_RucksackItemType[index]) + " at index " + I2S(index))
+            call UnitAddItemToSlotById(udg_Rucksack[PlayerNumber], udg_RucksackItemType[index], I0)
+            call SetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemCharges[index])
+            call SetItemPawnable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemPawnable[index])
+            call SetItemInvulnerable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemInvulnerable[index])
+        //else
+            //call BJDebugMsg("Empty at index " + I2S(index))
+        endif
         set I0 = I0 + 1
     endloop
 	call EnableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
-    // Remove All None Items
-    set I0 = 0
-    loop
-        exitwhen(I0 == bj_MAX_INVENTORY)
-        set SlotItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
-        set CarriedItemType = GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0))
-        if (CarriedItemType == udg_RucksackNoneItemType) then
-            call RemoveItem(SlotItem)
-        endif
-        set SlotItem = null
-        set I0 = I0 + 1
-    endloop
+	call EnableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
+	call EnableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
 endfunction
 
-function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns nothing
+function ChangeRucksackPageEx takes integer PlayerNumber, integer newRucksackPage returns nothing
     local integer I0 = 0
     local integer index = 0
     local player RucksackOwner = Player(PlayerNumber)
-    local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
     local item SlotItem = null
-    local integer CarriedItemType = 0
 	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Drop)
+	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
+	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
     // Save All Items
     set I0 = 0
     loop
         exitwhen(I0 == bj_MAX_INVENTORY)
+        set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
         set SlotItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
-        set CarriedItemType = GetItemTypeId(SlotItem)
-        set index = Index3D(PlayerNumber, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-        if (CarriedItemType != null) then
-            set udg_RucksackItemType[index] = CarriedItemType
+        if (SlotItem != null) then
+            set udg_RucksackItemType[index] = GetItemTypeId(SlotItem)
             set udg_RucksackItemCharges[index] = GetItemCharges(SlotItem)
+            set udg_RucksackItemPawnable[index] = IsItemPawnable(SlotItem)
+            set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(SlotItem)
+            //call BJDebugMsg("Storing at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
+            call RemoveItem(SlotItem)
+            set SlotItem = null
         else
-            set udg_RucksackItemType[index] = udg_RucksackNoneItemType
+            //call BJDebugMsg("Storing empty at index " + I2S(index))
+            set udg_RucksackItemType[index] = 0
             set udg_RucksackItemCharges[index] = 0
         endif
-        call RemoveItem(SlotItem)
-        set SlotItem = null
         set I0 = I0 + 1
     endloop
 	call EnableTrigger(gg_trg_Legendary_Artifact_Counter_Drop)
-    // Change Page
+	call EnableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
+	call EnableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
+	// change page
+    set udg_RucksackPageNumber[PlayerNumber] = newRucksackPage
+    call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Open Bag " + I2S(newRucksackPage + 1) + "."))
+    call RefreshRucksackPage(PlayerNumber)
+    set RucksackOwner = null
+endfunction
+
+function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns nothing
+    local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
+    local integer newRucksackPage = 0
     if (Forward) then
         if (RucksackPage != (udg_RucksackMaxPages - 1)) then
-            set udg_RucksackPageNumber[PlayerNumber] = (udg_RucksackPageNumber[PlayerNumber] + 1)
+            set newRucksackPage = RucksackPage + 1
         else
-            set udg_RucksackPageNumber[PlayerNumber] = 0
+            set newRucksackPage = 0
         endif
     else
         if (RucksackPage != 0) then
-            set udg_RucksackPageNumber[PlayerNumber] = (udg_RucksackPageNumber[PlayerNumber] - 1)
+            set newRucksackPage = RucksackPage - 1
         else
-            set udg_RucksackPageNumber[PlayerNumber] = (udg_RucksackMaxPages - 1)
+            set newRucksackPage = udg_RucksackMaxPages - 1
         endif
     endif
-    set RucksackPage = udg_RucksackPageNumber[PlayerNumber]
-    call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Open Bag " + I2S(RucksackPage + 1) + "."))
-    call RefreshRucksackPage(PlayerNumber)
-    set RucksackOwner = null
+    call ChangeRucksackPageEx(PlayerNumber, newRucksackPage)
+endfunction
+
+function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
+    local integer index = 0
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_RucksackMaxPages)
+        set j = 0
+        loop
+            exitwhen (j == bj_MAX_INVENTORY)
+            set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            //call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
+            call BlzFrameSetText(BackpackItemChargesFrame[index], I2S(udg_RucksackItemCharges[index]))
+            if (udg_RucksackItemType[index] == 0) then
+                call BlzFrameSetTexture(BackpackItemBackdropFrame[index], "UI\\Widgets\\Console\\Human\\human-inventory-slotfiller.blp", 0, true)
+                call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
+            else
+                call BlzFrameSetTexture(BackpackItemBackdropFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
+                if (BackpackUIVisible[GetPlayerId(whichPlayer)] and GetItemTypePerishable(udg_RucksackItemType[index])) then
+                    call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
+                endif
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+endfunction
+
+function TriggerConditionChangeRucksackPage takes nothing returns boolean
+    return GetSpellAbilityId() == udg_RucksackAbility1 or GetSpellAbilityId() == udg_RucksackAbility2
 endfunction
 
 function TriggerFunctionChangeRucksackPage takes nothing returns nothing
@@ -361,6 +521,114 @@ function TriggerFunctionChangeRucksackPage takes nothing returns nothing
     elseif (GetSpellAbilityId() == udg_RucksackAbility2) then
         call ChangeRucksackPage(GetPlayerId(GetTriggerPlayer()), false)
     endif
+    call UpdateItemsForBackpackUI(GetTriggerPlayer())
+endfunction
+
+function TriggerConditionPickupRucksackItem takes nothing returns boolean
+    return GetTriggerUnit() == udg_Rucksack[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]
+endfunction
+
+
+function TriggerFunctionPickupRucksackItem takes nothing returns nothing
+    local integer PlayerNumber = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    local item whichItem = GetManipulatedItem()
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer index = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (UnitItemInSlot(GetTriggerUnit(), i) != null and UnitItemInSlot(GetTriggerUnit(), i) == whichItem) then
+            set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set udg_RucksackItemType[index] = itemTypeId
+            set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
+            set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
+            set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(whichItem)
+            //call BJDebugMsg("Picking item up at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
+            exitwhen (true)
+        endif
+        set i = i + 1
+    endloop
+    call UpdateItemsForBackpackUI(GetOwningPlayer(GetTriggerUnit()))
+    set whichItem = null
+endfunction
+
+function TriggerConditionDropRucksackItem takes nothing returns boolean
+    return GetTriggerUnit() == udg_Rucksack[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]
+endfunction
+
+
+function TriggerFunctionDropRucksackItem takes nothing returns nothing
+    local unit triggerUnit = GetTriggerUnit()
+    local player owner = GetOwningPlayer(triggerUnit)
+    local integer PlayerNumber = GetPlayerId(owner)
+    local integer index = 0
+    local integer i = 0
+    call TriggerSleepAction(0.0) // TODO Apparently the item is still there without sleeping.
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (UnitItemInSlot(triggerUnit, i) == null) then
+            set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            //call BJDebugMsg("Dropping item at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
+            set udg_RucksackItemType[index] = 0
+            set udg_RucksackItemCharges[index] = 0
+        endif
+        set i = i + 1
+    endloop
+    call UpdateItemsForBackpackUI(owner)
+    set owner = null
+    set triggerUnit = null
+endfunction
+
+globals
+        constant integer A_ORDER_ID_MOVE_SLOT_0 = 852002
+		constant integer A_ORDER_ID_MOVE_SLOT_1 = 852003
+		constant integer A_ORDER_ID_MOVE_SLOT_2 = 852004
+		constant integer A_ORDER_ID_MOVE_SLOT_3 = 852005
+		constant integer A_ORDER_ID_MOVE_SLOT_4 = 852006
+		constant integer A_ORDER_ID_MOVE_SLOT_5 = 852007
+		constant integer A_ORDER_ID_USE_SLOT_0 = 852008
+		constant integer A_ORDER_ID_USE_SLOT_1 = 852009
+		constant integer A_ORDER_ID_USE_SLOT_2 = 852010
+		constant integer A_ORDER_ID_USE_SLOT_3 = 852011
+		constant integer A_ORDER_ID_USE_SLOT_4 = 852012
+		constant integer A_ORDER_ID_USE_SLOT_5 = 852013
+endglobals
+
+function TriggerConditionMoveRucksackItem takes nothing returns boolean
+    return GetIssuedOrderId() >= A_ORDER_ID_MOVE_SLOT_0 and GetIssuedOrderId() <= A_ORDER_ID_MOVE_SLOT_5
+endfunction
+
+
+function TriggerFunctionMoveRucksackItem takes nothing returns nothing
+    local unit triggerUnit = GetTriggerUnit()
+    local player owner = GetOwningPlayer(triggerUnit)
+    local integer PlayerNumber = GetPlayerId(owner)
+    local integer i = 0
+    local item whichItem = null
+    local integer index = 0
+    call TriggerSleepAction(0.0) // TODO Apparently the item is still there without sleeping.
+    //call BJDebugMsg("Moved item!")
+    // update all items of the current bag after moving the item
+    set i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(triggerUnit, i)
+        if (whichItem == null) then
+            //call BJDebugMsg("Dropping item at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
+            set udg_RucksackItemType[index] = 0
+            set udg_RucksackItemCharges[index] = 0
+        else
+            set udg_RucksackItemType[index] = GetItemTypeId(whichItem)
+            set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
+            set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
+            set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(whichItem)
+        endif
+        set i = i + 1
+    endloop
+    call UpdateItemsForBackpackUI(owner)
+    set owner = null
+    set triggerUnit = null
 endfunction
 
 function CreateRucksackForPlayer takes integer PlayerNumber returns nothing
@@ -372,7 +640,26 @@ function CreateRucksackForPlayer takes integer PlayerNumber returns nothing
     if (udg_PlayerRucksackTrigger[PlayerNumber] == null) then
         set udg_PlayerRucksackTrigger[PlayerNumber] = CreateTrigger()
         call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTrigger[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_SPELL_CHANNEL, null)
+        call TriggerAddCondition(udg_PlayerRucksackTrigger[PlayerNumber], Condition(function TriggerConditionChangeRucksackPage))
         call TriggerAddAction(udg_PlayerRucksackTrigger[PlayerNumber], function TriggerFunctionChangeRucksackPage)
+    endif
+    if (udg_PlayerRucksackTriggerPickup[PlayerNumber] == null) then
+        set udg_PlayerRucksackTriggerPickup[PlayerNumber] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerPickup[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_PICKUP_ITEM, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerPickup[PlayerNumber], Condition(function TriggerConditionPickupRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerPickup[PlayerNumber], function TriggerFunctionPickupRucksackItem)
+    endif
+    if (udg_PlayerRucksackTriggerDrop[PlayerNumber] == null) then
+        set udg_PlayerRucksackTriggerDrop[PlayerNumber] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerDrop[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_DROP_ITEM, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerDrop[PlayerNumber], Condition(function TriggerConditionDropRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerDrop[PlayerNumber], function TriggerFunctionDropRucksackItem)
+    endif
+    if (udg_PlayerRucksackTriggerMove[PlayerNumber] == null) then
+        set udg_PlayerRucksackTriggerMove[PlayerNumber] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerMove[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerMove[PlayerNumber], Condition(function TriggerConditionMoveRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerMove[PlayerNumber], function TriggerFunctionMoveRucksackItem)
     endif
     // Remove All
     set RucksackPlayer = null
@@ -590,7 +877,6 @@ function SetupCustomRucksackSystem takes nothing returns nothing
     set	udg_RucksackUnitType = 'E008'
     set udg_RucksackAbility1 = 'A02L'
     set	udg_RucksackAbility2 = 'A02M'
-    set	udg_RucksackNoneItemType = 'I028'
     set	udg_RucksackMaxPages = 30
     set udg_RucksackMoveTime = 0.10
 endfunction
@@ -1153,66 +1439,6 @@ endfunction
 function GetNextCraftedProfession2Item takes player whichPlayer returns integer
 	local integer profession = udg_PlayerProfession2[GetConvertedPlayerId(whichPlayer)]
 	return GetNextCraftedProfessionItemEx(whichPlayer, profession)
-endfunction
-
-globals
-	string array raceIcons
-	string array professionIcons
-	//hashtable ObjectIdIconsHashTable = InitHashtable()
-endglobals
-
-function AddRaceIcon takes integer whichRace, string icon returns nothing
-    set raceIcons[whichRace] = icon
-endfunction
-
-function GetIconByRace takes integer whichRace returns string
-    local string result = raceIcons[whichRace]
-    if (result == null or result == "") then
-        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
-    endif
-
-    return result
-endfunction
-
-function AddProfessionIcon takes integer profession, string icon returns nothing
-    set professionIcons[profession] = icon
-endfunction
-
-function GetIconByProfession takes integer profession returns string
-    local string result = professionIcons[profession]
-    if (result == null or result == "") then
-        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
-    endif
-
-    return result
-endfunction
-
-function AddUnitTypeIcon takes integer unitTypeId, string icon returns nothing
-	 //call SaveStr(ObjectIdIconsHashTable, unitTypeId, 0, icon)
-endfunction
-
-function AddItemTypeIcon takes integer itemTypeId, string icon returns nothing
-	 //call SaveStr(ObjectIdIconsHashTable, itemTypeId, 0, icon)
-endfunction
-
-function GetIconByUnitType takes integer unitTypeId returns string
-	//local string result = LoadStr(ObjectIdIconsHashTable, unitTypeId, 0)
-	local string result = BlzGetAbilityIcon(unitTypeId)
-    if (result == null or result == "") then
-        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
-    endif
-
-    return result
-endfunction
-
-function GetIconByItemType takes integer itemTypeId returns string
-	//local string result = LoadStr(ObjectIdIconsHashTable, itemTypeId, 0)
-	local string result = BlzGetAbilityIcon(itemTypeId)
-    if (result == null or result == "") then
-        return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp"
-    endif
-
-    return result
 endfunction
 
 
@@ -2832,52 +3058,54 @@ endfunction
  */
 
 globals
+    boolean array BackpackUIVisible
     framehandle array BackpackBackgroundFrame
+    framehandle array BackpackTitleFrame
     framehandle array BackpackItemFrame
+    framehandle array BackpackItemBackdropFrame
     framehandle array BackpackItemChargesFrame
     trigger array BackpackItemTrigger
+    trigger array BackpackItemMouseDownTrigger
+    trigger array BackpackItemMouseUpTrigger
     trigger array BackpackItemTooltipOnTrigger
     trigger array BackpackItemTooltipOffTrigger
     framehandle array BackpackTooltipFrame
+    framehandle array BackpackItemGoldFrame
+    framehandle array BackpackItemGoldIconFrame
+    framehandle array BackpackTooltipText
     framehandle array BackpackCloseButton
     trigger array BackpackCloseTrigger
+    constant real BACKPACK_UI_SIZE_X = 0.80
+    constant real BACKPACK_UI_SIZE_Y = 0.42
     constant real BACKPACK_UI_BUTTON_SIZE = 0.02818
-    constant real BACKPACK_UI_CHARGES_POS = 0.005
-    constant real BACKPACK_UI_BUTTON_SPACE = 0.01
+    constant real BACKPACK_UI_CHARGES_POS = 0.003
+    constant real BACKPACK_UI_CHARGES_SIZE = 0.02
+    constant real BACKPACK_UI_BUTTON_SPACE = 0.005
 endglobals
-
-function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
-    local integer index = 0
-    local integer i = 0
-    local integer j = 0
-    loop
-        exitwhen (i == udg_RucksackMaxPages)
-        set j = 0
-        loop
-            exitwhen (j == bj_MAX_INVENTORY)
-            set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
-            set j = j + 1
-        endloop
-        set i = i + 1
-    endloop
-endfunction
 
 function ShowBackpackUI takes player whichPlayer returns nothing
     local integer i = 0
     local integer j = 0
     local integer index = 0
+    set BackpackUIVisible[GetPlayerId(whichPlayer)] = true
     call UpdateItemsForBackpackUI(whichPlayer)
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], true)
+        call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], true)
+        //call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], true)
+        //call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], true)
         set i = 0
         loop
             exitwhen (i == udg_RucksackMaxPages)
             set j = 0
             loop
                 exitwhen (j == bj_MAX_INVENTORY)
+                set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
                 call BlzFrameSetVisible(BackpackItemFrame[index], true)
-                call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
+                call BlzFrameSetVisible(BackpackItemBackdropFrame[index], true)
+                if (udg_RucksackItemType[index] != 0 and GetItemTypePerishable(udg_RucksackItemType[index])) then
+                    call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
+                endif
                 set j = j + 1
             endloop
             set i = i + 1
@@ -2889,15 +3117,21 @@ function HideBackpackUI takes player whichPlayer returns nothing
     local integer i = 0
     local integer j = 0
     local integer index = 0
+    set BackpackUIVisible[GetPlayerId(whichPlayer)] = false
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
+        call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], false)
+        //call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], false)
+        //call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], false)
         set i = 0
         loop
             exitwhen (i == udg_RucksackMaxPages)
             set j = 0
             loop
                 exitwhen (j == bj_MAX_INVENTORY)
+                set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
                 call BlzFrameSetVisible(BackpackItemFrame[index], false)
+                call BlzFrameSetVisible(BackpackItemBackdropFrame[index], false)
                 call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
                 set j = j + 1
             endloop
@@ -2907,13 +3141,88 @@ function HideBackpackUI takes player whichPlayer returns nothing
 endfunction
 
 function BackpackClickItemFunction takes nothing returns nothing
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+    local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
+    local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
+    //call BJDebugMsg("Clicking on item " + I2S(index))
+
+    call ChangeRucksackPageEx(playerId, bag)
+endfunction
+
+function BackpackMouseDownItemFunction takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+endfunction
+
+function BackpackMouseUpItemFunction takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+
+    if (BlzGetTriggerPlayerMouseButton() == MOUSE_BUTTON_TYPE_RIGHT) then
+        // https://www.hiveworkshop.com/threads/how-to-fake-the-cursor-dragging-an-item.337534/
+        // TODO Create a fake drag cursor.
+    endif
+endfunction
+
+function GetItemTypeTooltip takes integer itemTypeId returns string
+    local item tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
+    local string tooltip = BlzGetItemTooltip(tmpItem)
+    call RemoveItem(tmpItem)
+    set tmpItem = null
+
+    return tooltip
+endfunction
+
+function GetItemTypeExtendedTooltip takes integer itemTypeId returns string
+    local item tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
+    local string tooltip = BlzGetItemExtendedTooltip(tmpItem)
+    call RemoveItem(tmpItem)
+    set tmpItem = null
+
+    return tooltip
 endfunction
 
 function BackpackEnterItemFunction takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+    local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
+    local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
+    local string tooltip = "Empty slot " + I2S(slot + 1) + " at bag " + I2S(bag + 1) + "."
+    //call BJDebugMsg("Entering item " + I2S(index))
+
+    if (udg_RucksackItemType[index] != 0) then
+        if (udg_RucksackItemPawnable[index]) then
+            set tooltip = GetObjectName(udg_RucksackItemType[index]) + "|n"
+
+            if (GetItemValueGold(udg_RucksackItemType[index]) > 0) then
+                set tooltip = tooltip + "|cffFCD20D" + I2S(GetItemValueGold(udg_RucksackItemType[index])) + " Gold|r"
+            endif
+
+            if (GetItemValueLumber(udg_RucksackItemType[index]) > 0) then
+                if (GetItemValueGold(udg_RucksackItemType[index]) > 0) then
+                    set tooltip = tooltip + " "
+                endif
+
+                set tooltip = tooltip + "|cffFCD20D" + I2S(GetItemValueLumber(udg_RucksackItemType[index])) + " Lumber|r"
+            endif
+
+            set tooltip = tooltip + "|n|cff808080Drop item on shop to sell|R|n" + GetItemTypeExtendedTooltip(udg_RucksackItemType[index])
+        else
+            set tooltip = GetObjectName(udg_RucksackItemType[index]) + "|n|n" + GetItemTypeExtendedTooltip(udg_RucksackItemType[index])
+        endif
+    endif
+
+    set tooltip = tooltip + "|n|cff808080Click to open the bag.|R|n"
+
+    call BlzFrameSetText(BackpackTooltipText[playerId], tooltip)
 endfunction
 
 function BackpackLeaveItemFunction takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+    //call BJDebugMsg("Leave item " + I2S(index))
+    call BlzFrameSetText(BackpackTooltipText[playerId], "")
 endfunction
 
 function BackpackCloseFunction takes nothing returns nothing
@@ -2927,12 +3236,21 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     local real x = 0.0
     local real y = 0.0
     local integer index = 0
-    set BackpackBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0)
-    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0578800, 0.531500)
-    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.761780, 0.191700)
 
-    set x = 0.0175400
-    set y = 0.566980
+    set BackpackBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0)
+    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
+    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
+
+    set BackpackTitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "BackpackTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(BackpackTitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
+    call BlzFrameSetAbsPoint(BackpackTitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
+    call BlzFrameSetText(BackpackTitleFrame[GetPlayerId(whichPlayer)], "Backpack")
+    call BlzFrameSetTextAlignment(BackpackTitleFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(BackpackTitleFrame[GetPlayerId(whichPlayer)], 1.0)
+    call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], false)
+
+    set x = 0.03
+    set y = 0.53
     set i = 0
     loop
         exitwhen (i == udg_RucksackMaxPages)
@@ -2943,58 +3261,108 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             set BackpackItemFrame[index] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_TOPLEFT, x, y)
             call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_BUTTON_SIZE, y - BACKPACK_UI_BUTTON_SIZE)
-            call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(0), 0, true)
-            call BlzFrameSetText(BackpackItemFrame[index], I2S(index))
+            //call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(0), 0, true)
+            //call BlzFrameSetText(BackpackItemFrame[index], I2S(index))
             call BlzFrameSetScale(BackpackItemFrame[index], 1.00)
             call BlzFrameSetVisible(BackpackItemFrame[index], false)
+
+            set BackpackItemBackdropFrame[index] = BlzCreateFrameByType("BACKDROP", "BackdropFrame" + I2S(index), BackpackItemFrame[index], "", 1)
+            call BlzFrameSetAllPoints(BackpackItemBackdropFrame[index], BackpackItemFrame[index])
+            call BlzFrameSetTexture(BackpackItemBackdropFrame[index], "UI\\Widgets\\Console\\Human\\human-inventory-slotfiller.blp", 0, true)
+            call BlzFrameSetVisible(BackpackItemBackdropFrame[index], false)
 
             set BackpackItemTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTrigger[index], BackpackItemFrame[index], FRAMEEVENT_CONTROL_CLICK)
             call TriggerAddAction(BackpackItemTrigger[index], function BackpackClickItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 0, index)
+            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 1, index)
+            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 2, i)
+            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 3, j)
+
+            set BackpackItemMouseDownTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(BackpackItemMouseDownTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_DOWN)
+            call TriggerAddAction(BackpackItemMouseDownTrigger[index], function BackpackMouseDownItemFunction)
+            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 1, index)
+            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 2, i)
+            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 3, j)
+
+            set BackpackItemMouseUpTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(BackpackItemMouseUpTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_UP)
+            call TriggerAddAction(BackpackItemMouseUpTrigger[index], function BackpackMouseUpItemFunction)
+            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 1, index)
+            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 2, i)
+            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 3, j)
 
             set BackpackItemTooltipOnTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOnTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_ENTER)
             call TriggerAddAction(BackpackItemTooltipOnTrigger[index], function BackpackEnterItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 0, index)
-
+            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 1, index)
+            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 2, i)
+            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 3, j)
 
             set BackpackItemTooltipOffTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOffTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_LEAVE)
             call TriggerAddAction(BackpackItemTooltipOffTrigger[index], function BackpackLeaveItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 0, index)
+            call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 1, index)
 
-            set BackpackItemChargesFrame[index] = BlzCreateFrameByType("TEXT", "charges" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-            call BlzFrameSetAbsPoint(BackpackItemChargesFrame[index], FRAMEPOINT_TOPLEFT, x + BACKPACK_UI_CHARGES_POS, y - BACKPACK_UI_CHARGES_POS)
-            call BlzFrameSetAbsPoint(BackpackItemChargesFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_BUTTON_SIZE, y - BACKPACK_UI_BUTTON_SIZE)
+            // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
+
+            set BackpackItemChargesFrame[index] = BlzCreateFrameByType("TEXT", "charges" + I2S(index), BackpackItemFrame[index], "", 0)
+            call BlzFrameSetAllPoints(BackpackItemChargesFrame[index], BackpackItemFrame[index])
             call BlzFrameSetText(BackpackItemChargesFrame[index], "|cffFFFFFFCharges|r")
-            call BlzFrameSetScale(BackpackItemChargesFrame[index], 1.00)
             call BlzFrameSetTextAlignment(BackpackItemChargesFrame[index], TEXT_JUSTIFY_BOTTOM, TEXT_JUSTIFY_RIGHT)
-            call BlzFrameSetScale(BackpackItemChargesFrame[index], 0.572)
+            call BlzFrameSetScale(BackpackItemChargesFrame[index], 1.0)
             call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
+            call BlzFrameSetEnable(BackpackItemChargesFrame[index], false)
 
             set x = x + BACKPACK_UI_BUTTON_SIZE + BACKPACK_UI_BUTTON_SPACE
 
             set j = j + 1
         endloop
 
+        set i = i + 1
+
         // every 3 bags start another line
         if (ModuloInteger(i, 3) == 0) then
-            set x = 0.0175400
+            set x = 0.03
             set y = y - BACKPACK_UI_BUTTON_SIZE - BACKPACK_UI_BUTTON_SPACE
         endif
-
-        set i = i + 1
     endloop
 
 
     set BackpackTooltipFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BackpackBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
-    call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.637500, 0.555800)
-    call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.737500, 0.326500)
+    call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.62, 0.54)
+    call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.78, 0.20)
+
+    set BackpackItemGoldFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.65, 0.50)
+    call BlzFrameSetAbsPoint(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.67, 0.48)
+    //call BlzFrameSetAllPoints(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], BackpackBackgroundFrame[GetPlayerId(whichPlayer)])
+    call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], false)
+
+    set BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("BACKDROP", "BackdropFrameGoldIcon" + I2S(GetPlayerId(whichPlayer)), BackpackItemGoldFrame[GetPlayerId(whichPlayer)], "", 1)
+    call BlzFrameSetAllPoints(BackpackItemGoldIconFrame[index], BackpackItemGoldFrame[index])
+    call BlzFrameSetTexture(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], "UI\\Feedback\\Resources\\ResourceGold.blp", 0, true)
+    call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], false)
+
+    set BackpackTooltipText[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "BackpackTooltipText" + I2S(GetPlayerId(whichPlayer)),  BackpackBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
+    call BlzFrameSetAbsPoint(BackpackTooltipText[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.65, 0.505800)
+    call BlzFrameSetAbsPoint(BackpackTooltipText[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.74, 0.236500)
+    call BlzFrameSetText(BackpackTooltipText[GetPlayerId(whichPlayer)], "")
+    call BlzFrameSetEnable(BackpackTooltipText[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetScale(BackpackTooltipText[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetTextAlignment(BackpackTooltipText[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    //call BlzFrameSetTooltip(Frame05, BackpackTooltipText[GetPlayerId(whichPlayer)])
 
     set BackpackCloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
-    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.351300, 0.252510)
-    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.470700, 0.228200)
+    set x = 0.34
+    set y = 0.204
+    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
+    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
     call BlzFrameSetText(BackpackCloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
     call BlzFrameSetScale(BackpackCloseButton[GetPlayerId(whichPlayer)], 1.00)
 

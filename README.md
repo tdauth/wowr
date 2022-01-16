@@ -140,6 +140,7 @@ This version provides several new features compared to the original map:
 * Statue of Azshara for Naga.
 * Corrupted Ancient Protector for Furbolg.
 * Draenei Prison for Draenei.
+* Save Masters in Goblin Laboratories.
 
 ## Bug Fixes
 
