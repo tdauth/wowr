@@ -89,7 +89,7 @@ endfunction
 function GetIconByUnitType takes integer unitTypeId returns string
 	//local string result = LoadStr(ObjectIdIconsHashTable, unitTypeId, 0)
 	local string result = BlzGetAbilityIcon(unitTypeId)
-    if (result == null or result == "") then
+    if (unitTypeId == 0 or result == null or result == "") then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
     endif
 
@@ -99,7 +99,7 @@ endfunction
 function GetIconByItemType takes integer itemTypeId returns string
 	//local string result = LoadStr(ObjectIdIconsHashTable, itemTypeId, 0)
 	local string result = BlzGetAbilityIcon(itemTypeId)
-    if (result == null or result == "") then
+    if (itemTypeId == 0 or result == null or result == "") then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp"
     endif
 
@@ -3360,7 +3360,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
 
     set BackpackCloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
     set x = 0.34
-    set y = 0.204
+    set y = 0.202
     call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
     call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
     call BlzFrameSetText(BackpackCloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
