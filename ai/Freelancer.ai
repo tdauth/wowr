@@ -583,7 +583,7 @@ function AttackWaves takes nothing returns nothing
         //call CampaignAttacker( 0, 1, CREEP_DARK_WIZARD )
         //call CampaignAttacker( 0, 1, CREEP_UNBROKEN_DARK_WEAVER )
         //call CampaignAttacker( 0, 1, CREEP_DOOM_GUARD )
-        //call CampaignAttacker( 0, 2, CREEP_HARPY ) // TODO something here leads to a crash
+        //call CampaignAttacker( 0, 2, CREEP_HARPY )
         //call CampaignAttacker( 0, 2, CREEP_GREEN_DRAGON )
         call AddStandardUnitsToAttackWave()
 
