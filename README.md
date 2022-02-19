@@ -141,6 +141,8 @@ This version provides several new features compared to the original map:
 * Corrupted Ancient Protector for Furbolg.
 * Draenei Prison for Draenei.
 * Save Masters in Goblin Laboratories.
+* New island with Murloc Sorcerer on the sea.
+* Gnomish Submarines.
 
 ## Bug Fixes
 
@@ -261,3 +263,5 @@ Here is a list of some modified versions online:
 * EvilPitlord: Original map.
 * DeMoNiKuS: Original map.
 * [World of Warcraft logo](https://unrealitymag.com/the-evolution-of-the-world-of-warcraft-logo/)
+* Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
+* Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)

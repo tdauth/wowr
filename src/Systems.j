@@ -242,6 +242,10 @@ function DropBackpackForPlayer takes integer PlayerNumber, rect whichRect return
                 set whichItem = CreateItem(udg_RucksackItemType[index], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
                 call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
             endif
+
+            call SetItemPawnable(whichItem, udg_RucksackItemPawnable[index])
+            call SetItemInvulnerable(whichItem, udg_RucksackItemInvulnerable[index])
+            call SetItemDroppable(whichItem, true)
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
@@ -377,6 +381,7 @@ function AddItemToBackpackForPlayer takes integer PlayerNumber, item whichItem r
             if (udg_RucksackItemType[index] == 0) then
                 set udg_RucksackItemType[index] = GetItemTypeId(whichItem)
                 set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
+                set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
                 call RemoveItem(whichItem)
                 set whichItem = null
 
@@ -415,6 +420,7 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
             call UnitAddItemToSlotById(udg_Rucksack[PlayerNumber], udg_RucksackItemType[index], I0)
             call SetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemCharges[index])
             call SetItemPawnable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemPawnable[index])
+            call SetItemDroppable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), true) // all items must be droppable in the backpack!
             call SetItemInvulnerable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemInvulnerable[index])
         //else
             //call BJDebugMsg("Empty at index " + I2S(index))
@@ -992,7 +998,7 @@ function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns 
 endfunction
 
 function GetUnitLevelByType takes integer unitTypeId returns integer
-	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_LEVEL)
 	call RemoveUnit(dummy)
 	set dummy = null
@@ -1000,7 +1006,7 @@ function GetUnitLevelByType takes integer unitTypeId returns integer
 endfunction
 
 function GetUnitDamageTypeByType takes integer unitTypeId returns integer
-	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitWeaponIntegerField(dummy , UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0)
 	call RemoveUnit(dummy)
 	set dummy = null
@@ -1008,7 +1014,7 @@ function GetUnitDamageTypeByType takes integer unitTypeId returns integer
 endfunction
 
 function GetUnitDefenseTypeByType takes integer unitTypeId returns integer
-	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_DEFENSE_TYPE)
 	call RemoveUnit(dummy)
 	set dummy = null
@@ -1016,7 +1022,7 @@ function GetUnitDefenseTypeByType takes integer unitTypeId returns integer
 endfunction
 
 function GetUnitMovementTypeByType takes integer unitTypeId returns integer
-	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_MOVE_TYPE)
 	call RemoveUnit(dummy)
 	set dummy = null
@@ -1733,7 +1739,7 @@ function AppendFileContent takes string content returns string
     return "\r\n\t\t\t\t" + content
 endfunction
 
-function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, string saveCode returns nothing
+function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string gameMode = "Freelancer"
@@ -1793,11 +1799,15 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     // The line below creates the log
     call Preload(content)
 
+    set content = ""
+    set content = content + AppendFileContent("Hero Level 2: " + I2S(heroLevel2))
+    set content = content + AppendFileContent("XP 2: " + I2S(xp2))
+
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel" + I2S(heroLevel) + "-xp" + I2S(xp) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel" + I2S(heroLevel) + "-xp" + I2S(xp) + "-heroLevel2" + I2S(heroLevel2) + "-xp2" + I2S(xp2) + ".txt")
 endfunction
 
-function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills returns string
+function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2 returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -1842,6 +1852,9 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
     set result = result + ConvertDecimalNumberToSaveCodeSegment(buildingsRazed)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(totalBossKills)
 
+    // hero 2
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(xp2)
+
     //call BJDebugMsg("Compressed result: " + result)
     //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
@@ -1855,7 +1868,7 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
     endif
 
-    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, result)
+    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, result)
 
     return result
 endfunction
@@ -1899,8 +1912,15 @@ function GetSaveCode takes player whichPlayer returns string
     local integer unitDeaths =  udg_UnitsLost[GetConvertedPlayerId(whichPlayer)]
     local integer buildingsRazed = GetPlayerScore(whichPlayer, PLAYER_SCORE_STRUCT_RAZED)
     local integer totalBossKills = udg_BossKills[GetConvertedPlayerId(whichPlayer)]
+    local integer heroLevel2 = GetHeroLevel(udg_Held2[GetConvertedPlayerId(whichPlayer)])
+    local integer xp2 = GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills)
+    if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null) then
+        set xp2 = udg_Held2XP[GetConvertedPlayerId(whichPlayer)]
+        set heroLevel2 = 0 // TODO Set hero level by XP
+    endif
+
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -1936,6 +1956,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
     local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
     local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer heroLevel2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -1986,6 +2008,14 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
         set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
         set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
         set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
+
+        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
+            call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
+        endif
+
+        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
+            set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
+        endif
 
         return true
     endif
@@ -3038,19 +3068,19 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
 endfunction
 
 function GetSaveCodeBaradeStrongFreelancer takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
+    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
 endfunction
 
 function GetSaveCodeBaradeStrongWarlord takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000)
+    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
 endfunction
 
 function GetSaveCodeBaradeNormalFreelancer takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
+    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
 endfunction
 
 function GetSaveCodeBaradeNormalWarlord takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10)
+    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
 endfunction
 
 /**
@@ -3372,4 +3402,82 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     call SaveTriggerParameterInteger(BackpackCloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
 
     call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
+endfunction
+
+globals
+    framehandle array SaveCodeUIBackgroundFrame
+    framehandle array SaveCodeUIEditBox
+    trigger array SaveCodeUITrigger
+    framehandle array SaveCodeUICloseButton
+    trigger array SaveCodeUICloseTrigger
+endglobals
+
+function ShowSaveCodekUI takes player whichPlayer returns nothing
+    if (whichPlayer == GetLocalPlayer()) then
+        call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], true)
+        call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], true)
+    endif
+endfunction
+
+function HideSaveCodekUI takes player whichPlayer returns nothing
+    if (whichPlayer == GetLocalPlayer()) then
+        call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], false)
+        call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
+    endif
+endfunction
+
+function SetSaveCodeUIText takes player whichPlayer, string txt returns nothing
+    call BlzFrameSetText(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], txt)
+endfunction
+
+function SaveCodeUIEditBoxEnter takes nothing returns nothing
+    // print("EditBoxEnter:")
+    // print(BlzGetTriggerFrameText())
+    // print(GetPlayerName(GetTriggerPlayer()))
+    // udg_UserInput[GetConvertedPlayerId(GetTriggerPlayer())] = BlzGetTriggerFrameText() --save the text of the local player in a synced manner.
+    // --print("TEXT_CHANGED")
+    // --print(BlzGetTriggerFrameText())
+    // --print(GetPlayerName(GetTriggerPlayer()))
+    call BJDebugMsg("Entered: " + BlzGetTriggerFrameText())
+endfunction
+
+function SaveCodeUICloseFunction takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    call HideSaveCodekUI(Player(playerId))
+endfunction
+
+function CreateSaveCodeUI takes player whichPlayer returns nothing
+    local real x
+    local real y
+    set SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
+    call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
+
+    set SaveCodeUIEditBox[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBox[GetPlayerId(whichPlayer)] , FRAMEPOINT_CENTER, 0.4, 0.3)
+    call BlzFrameSetSize(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], 0.2, 0.03)
+
+    set SaveCodeUITrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITrigger[GetPlayerId(whichPlayer)], function SaveCodeUIEditBoxEnter)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITrigger[GetPlayerId(whichPlayer)], SaveCodeUIEditBox[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+
+    //eventHandler = CreateTrigger() --Create the FRAMEEVENT_EDITBOX_TEXT_CHANGED trigger
+    //TriggerAddAction(eventHandler, TEXT_CHANGED)
+    //BlzTriggerRegisterFrameEvent(eventHandler, editbox, FRAMEEVENT_EDITBOX_TEXT_CHANGED)
+
+    set SaveCodeUICloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
+    set x = 0.34
+    set y = 0.202
+    call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
+    call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
+    call BlzFrameSetText(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
+    call BlzFrameSetScale(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], function SaveCodeUICloseFunction)
+    call SaveTriggerParameterInteger(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
+
+    call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
