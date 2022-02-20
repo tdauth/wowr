@@ -223,6 +223,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowtsr1.9.8.w3x](./wowtsr1.9.8.w3x)
 * [wowtsr1.9.7.w3x](./wowtsr1.9.7.w3x)
 * [wowtsr1.9.6.w3x](./wowtsr1.9.6.w3x)
 * [wowtsr1.9.5.w3x](./wowtsr1.9.5.w3x)
