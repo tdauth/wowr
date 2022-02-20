@@ -1803,8 +1803,11 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     set content = content + AppendFileContent("Hero Level 2: " + I2S(heroLevel2))
     set content = content + AppendFileContent("XP 2: " + I2S(xp2))
 
+    // The line below creates the log
+    call Preload(content)
+
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel" + I2S(heroLevel) + "-xp" + I2S(xp) + "-heroLevel2" + I2S(heroLevel2) + "-xp2" + I2S(xp2) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + ".txt")
 endfunction
 
 function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2 returns string

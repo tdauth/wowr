@@ -143,6 +143,8 @@ This version provides several new features compared to the original map:
 * Save Masters in Goblin Laboratories.
 * New island with Murloc Sorcerer on the sea.
 * Gnomish Submarines.
+* New island with The Eye of Sargeras on the sea.
+* Computer AI player The Alliance with Naga and Blood Elf races.
 
 ## Bug Fixes
 
@@ -171,6 +173,7 @@ The following files are imported into the map whenever they are updated. They co
 * [Draenei.ai](./ai/Draenei.ai)
 * [Furbolg.ai](./ai/Furbolg.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
+* [TheAlliance.ai](./ai/TheAlliance.ai)
 
 The race is determined from the race set in the lobby of the game:
 
@@ -265,3 +268,5 @@ Here is a list of some modified versions online:
 * [World of Warcraft logo](https://unrealitymag.com/the-evolution-of-the-world-of-warcraft-logo/)
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
+* PROXY, ~Nightmare: [Sargeras](https://www.hiveworkshop.com/threads/sargeras.294982/)
+* LordGandulfo88: [Sargeras](https://www.hiveworkshop.com/threads/sargeras.303195/)
