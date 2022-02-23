@@ -728,6 +728,10 @@ function RespawnRectContainsNoBuilding takes integer Group returns boolean
 endfunction
 
 function AssignUnitToGroup takes unit whichUnit, integer Group returns nothing
+    if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
+        // avoids permanent removal if too many heroes from the same player died
+        call BlzSetUnitRealField(whichUnit, UNIT_RF_DEATH_TIME, 99999999.0)
+    endif
     call SaveUnitParameterInteger(whichUnit, 0, Group)
 endfunction
 
@@ -2373,11 +2377,11 @@ function GetPlayerBuildingsOrderedByPriority takes player whichPlayer returns gr
     endloop
 
     call GroupRemoveGroup(udg_SaveCodeExcludedUnits[GetConvertedPlayerId(whichPlayer)], whichGroup)
-    
+
     call GroupClear(buildingsToBeSaved)
     call DestroyGroup(buildingsToBeSaved)
     set buildingsToBeSaved = null
-    
+
     return whichGroup
 endfunction
 
@@ -2390,7 +2394,7 @@ function GetAbsCoordinateX takes real coordinate returns real
     local real x = GetAbsCoordinate(coordinate, GetRectMinX(worldBounds))
     call RemoveRect(worldBounds)
     set worldBounds = null
-    
+
     return x
 endfunction
 
@@ -2399,7 +2403,7 @@ function GetAbsCoordinateY takes real coordinate returns real
     local real y = GetAbsCoordinate(coordinate, GetRectMinY(worldBounds))
     call RemoveRect(worldBounds)
     set worldBounds = null
-    
+
     return y
 endfunction
 
@@ -2412,7 +2416,7 @@ function ConvertAbsCoordinateX takes real coordinate returns real
     local real x = ConvertAbsCoordinate(coordinate, GetRectMinX(worldBounds))
     call RemoveRect(worldBounds)
     set worldBounds = null
-    
+
     return x
 endfunction
 
@@ -2421,7 +2425,7 @@ function ConvertAbsCoordinateY takes real coordinate returns real
     local real y = ConvertAbsCoordinate(coordinate, GetRectMinY(worldBounds))
     call RemoveRect(worldBounds)
     set worldBounds = null
-    
+
     return y
 endfunction
 
@@ -2437,7 +2441,7 @@ function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer,
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
-    
+
     //call BJDebugMsg("Size of buildings: " + I2S(CountUnitsInGroup(buildings)))
 
     // use one single symbol to store these two flags
@@ -2800,11 +2804,11 @@ function CountUnitsOfTypeFromGroup takes group whichGroup, integer unitTypeId re
         endif
         call GroupRemoveUnit(tmpGroup, first)
     endloop
-    
+
     call GroupClear(tmpGroup)
     call DestroyGroup(tmpGroup)
     set tmpGroup = null
-    
+
     return i
 endfunction
 
@@ -2820,11 +2824,11 @@ function DistinctGroup takes group whichGroup returns group
         endif
         call GroupRemoveUnit(tmpGroup, first)
     endloop
-    
+
     call GroupClear(tmpGroup)
     call DestroyGroup(tmpGroup)
     set tmpGroup = null
-    
+
     return result
 endfunction
 
@@ -2843,21 +2847,21 @@ function GetPlayerUnitsOrderedByPriority takes player whichPlayer returns group
         call GroupRemoveUnit(livingUnitsToBeSaved, first)
     endloop
     call GroupRemoveGroup(udg_SaveCodeExcludedUnits[GetConvertedPlayerId(whichPlayer)], whichGroup)
-    
+
     //call BJDebugMsg("Size of units before distinct: " + I2S(CountUnitsInGroup(whichGroup)))
-    
+
     set result = DistinctGroup(whichGroup)
-    
+
     //call BJDebugMsg("Size of units after distinct: " + I2S(CountUnitsInGroup(result)))
-    
+
     call GroupClear(whichGroup)
     call DestroyGroup(whichGroup)
     set whichGroup = null
-    
+
     call GroupClear(livingUnitsToBeSaved)
     call DestroyGroup(livingUnitsToBeSaved)
     set livingUnitsToBeSaved = null
-    
+
     return result
 endfunction
 
@@ -2912,7 +2916,7 @@ function GetSaveCodeUnitsEx takes string playerName, boolean isSinglePlayer, boo
     local group tmpGroup = null
     local integer count = 0
     local string unitNames = ""
-    
+
     //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
@@ -2961,7 +2965,7 @@ function GetSaveCodeUnitsEx takes string playerName, boolean isSinglePlayer, boo
         call GroupRemoveUnit(units, first)
         set i = i + 1
     endloop
-    
+
     call GroupClear(units)
     call DestroyGroup(units)
     set units = null
@@ -3057,13 +3061,13 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
             set i = i + 1
             set pos = pos + 2
         endloop
-        
+
         call RemoveLocation(tmpLocation)
         set tmpLocation = null
 
         return true
     endif
-    
+
     call RemoveLocation(tmpLocation)
     set tmpLocation = null
 
