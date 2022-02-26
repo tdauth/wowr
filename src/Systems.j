@@ -735,9 +735,8 @@ function AssignUnitToGroup takes unit whichUnit, integer Group returns nothing
     call SaveUnitParameterInteger(whichUnit, 0, Group)
 endfunction
 
-function AssignUnitToCurrentGroupEx takes integer lastIndex returns nothing
+function AssignUnitToCurrentGroupEx takes integer lastIndex, unit lastMember returns nothing
     local integer memberIndex = Index2D(udg_TmpGroupIndex, lastIndex, udg_RespawnGroupMaxMembers)
-    local unit lastMember = udg_LastAddedUnitToGroup
     debug call BJDebugMsg("Assign to unit " + GetUnitName(lastMember) + " with handle ID " + I2S(GetHandleId(lastMember)) + " with index " + I2S(lastIndex) + " the current group " + I2S(udg_TmpGroupIndex) + " the unit group has a size of " + I2S(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])))
     set udg_RespawnUnitType[memberIndex] = GetUnitTypeId(lastMember)
     set udg_RespawnLocationPerUnit[memberIndex] = GetUnitLoc(lastMember)
@@ -750,16 +749,39 @@ function AssignUnitToCurrentGroupEx takes integer lastIndex returns nothing
 		set udg_RespawnHero[memberIndex] = lastMember
 	endif
 	set udg_RespawnGroupMembers[udg_TmpGroupIndex] = lastIndex + 1
-    set lastMember = null
 endfunction
 
 function AssignUnitToCurrentGroup takes nothing returns nothing
-    call AssignUnitToCurrentGroupEx(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex]) - 1)
+    call AssignUnitToCurrentGroupEx(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex]) - 1, udg_LastAddedUnitToGroup)
+endfunction
+
+function CopyGroup takes group whichGroup returns group
+    local group tmpGroup = CreateGroup()
+    call GroupAddGroup(whichGroup, tmpGroup)
+    return tmpGroup
+endfunction
+
+function AssignAllUnitsToCurrentGroup takes nothing returns nothing
+    local integer count = CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])
+    local group copy = CopyGroup(udg_RespawnGroup[udg_TmpGroupIndex])
+    local integer i = 0
+    local unit first = null
+    loop
+        set first = FirstOfGroup(copy)
+        exitwhen (first == null)
+        call AssignUnitToCurrentGroupEx(i, first)
+        call GroupRemoveUnit(copy, first)
+        set first = null
+        set i = i + 1
+    endloop
+    call GroupClear(copy)
+    call DestroyGroup(copy)
 endfunction
 
 function InitCurrentGroup takes nothing returns nothing
     set udg_TmpGroupIndex = udg_TmpGroupIndex + 1
     set udg_RespawnGroup[udg_TmpGroupIndex] = CreateGroup()
+    set udg_CurrentRespawnGroup = udg_RespawnGroup[udg_TmpGroupIndex]
 endfunction
 
 function RespawnGroup takes integer Group returns boolean
@@ -2784,12 +2806,6 @@ endglobals
 
 function FilterIsLivingUnitToBeSaved takes nothing returns boolean
     return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_ANCIENT) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectType(GetUnitTypeId(GetFilterUnit())) != -1
-endfunction
-
-function CopyGroup takes group whichGroup returns group
-    local group tmpGroup = CreateGroup()
-    call GroupAddGroup(whichGroup, tmpGroup)
-    return tmpGroup
 endfunction
 
 function CountUnitsOfTypeFromGroup takes group whichGroup, integer unitTypeId returns integer
