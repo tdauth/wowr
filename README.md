@@ -147,6 +147,8 @@ This version provides several new features compared to the original map:
 * Computer AI player The Alliance with Naga and Blood Elf races.
 * New island with boss fights on the sea.
 * New island with Spider Crab Behemoth on the sea.
+* Chat command "-wrapup" which converts your buildings into tiny items.
+* Chat command "-passive" which enables passive mode against enemy players.
 
 ## Bug Fixes
 
@@ -213,7 +215,7 @@ This is a useful savecode as player WorldEdit playing Freelancer with hero level
 Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
 
-## Reconstruction
+### Reconstruction
 
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 The original map script has been added to this repository as well as the original map strings:
@@ -221,7 +223,7 @@ The original map script has been added to this repository as well as the origina
 * [war3map.j](./original_map/war3map.j)
 * [war3map.wts](./translations/war3map.wts)
 
-## Old Versions
+### Old Versions
 
 **Note:** Some of these versions might have been optimized:
 
@@ -253,7 +255,7 @@ The original map script has been added to this repository as well as the origina
 * [wowtsr1.2.w3x](./releases/wowtsr1.2.w3x)
 * [wowtsr1.1.w3x](./releases/wowtsr1.1.w3x)
 
-## Other Modified Versions
+### Other Modified Versions
 
 Look into the folder [original_map_modified](./original_map_modified) where some of the modified versions of the original map are stored.
 Here is a list of some modified versions online:
@@ -261,6 +263,12 @@ Here is a list of some modified versions online:
 * [World of War in Warcraft 2.03b](https://www.epicwar.com/maps/2673/)
 * [World of Warcraft Reborn 2](https://www.epicwar.com/maps/40351/)
 * [World of Warcraft 1.8](https://www.epicwar.com/maps/228752)
+
+### Other Variants
+
+Some maps are not really based on the original map World of Warcraft Reborn but a complete revision of the map:
+
+* [WoW Reanimated](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/wow-reanimated): This map has many more dungeons, professions, heroes and races but no AI support and is missing lots of features from this map.
 
 ## Credits
 

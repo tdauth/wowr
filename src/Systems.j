@@ -3488,3 +3488,183 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
+
+
+function GetTier1BuildingID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'htow'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'ogre'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'unpl'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'etol'
+    endif
+
+    return 0
+endfunction
+
+function IsTier1BuildingID takes integer buildingID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (buildingID == GetTier1BuildingID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+
+function GetTier2BuildingID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hkee'
+    endif
+
+    return 0
+endfunction
+
+function IsTier2BuildingID takes integer buildingID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (buildingID == GetTier2BuildingID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+function GetBuildingRace takes integer buildingID returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        if (GetTier1BuildingID(i) == buildingID or GetTier2BuildingID(i) == buildingID) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+
+    return udg_RaceNone
+endfunction
+
+function GetTier1ItemID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'I02P'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'tgrh'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'I02K'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'I02J'
+    elseif (whichRace == udg_RaceNaga) then
+        return 'I02M'
+    elseif (whichRace == udg_RaceBloodElf) then
+        return 'I02L'
+    elseif (whichRace == udg_RaceDemon) then
+        return 'I02N'
+    elseif (whichRace == udg_RaceDraenei) then
+        return 'I02O'
+    elseif (whichRace == udg_RaceFurbolg) then
+        return 'I03A'
+    endif
+
+    return 0
+endfunction
+
+function GetTier2ItemID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'tcas'
+    endif
+
+    return 0
+endfunction
+
+function GetItemRace takes integer itemID returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        if (GetTier1ItemID(i) == itemID or GetTier2ItemID(i) == itemID) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+
+    return udg_RaceNone
+endfunction
+
+function MapBuildingID takes integer buildingID, integer targetRace returns integer
+    if (IsTier1BuildingID(buildingID)) then
+        return GetTier1BuildingID(targetRace)
+    elseif (IsTier2BuildingID(buildingID)) then
+        return GetTier2BuildingID(targetRace)
+    endif
+
+    return 0
+endfunction
+
+// TODO does depend on the food produced, some farms might be converted into more farms.
+function MapBuildingNumber takes integer buildingID, integer targetRace returns integer
+    return 1
+endfunction
+
+function MapBuildingIDToItemID takes integer buildingID, integer targetRace returns integer
+    if (IsTier1BuildingID(buildingID)) then
+        return GetTier1ItemID(targetRace)
+    elseif (IsTier2BuildingID(buildingID)) then
+        return GetTier2ItemID(targetRace)
+    endif
+
+    return 0
+endfunction
+
+function FilterIsBuilding takes nothing returns boolean
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
+endfunction
+
+// TODO Group created items by their ID with more charges per item.
+function WrapUpAllBuildings takes player whichPlayer, real x, real y returns integer
+    local group allBuildings = CreateGroup()
+    local unit first = null
+    local integer itemTypeId = 0
+    local integer targetRace = udg_RaceNone
+    local item whichItem = null
+    local integer counter = 0
+    local boolean remove = false
+    call GroupEnumUnitsOfPlayer(allBuildings, whichPlayer, Filter(function FilterIsBuilding))
+    loop
+        set first = FirstOfGroup(allBuildings)
+        exitwhen (first == null)
+        set remove = false
+        set targetRace = GetBuildingRace(GetUnitTypeId(first))
+        call BJDebugMsg("Building " + GetUnitName(first) + " has target race " + I2S(targetRace))
+        if (targetRace != udg_RaceNone) then
+            set itemTypeId = MapBuildingIDToItemID(GetUnitTypeId(first), targetRace)
+            call BJDebugMsg("Building " + GetUnitName(first) + " has target item type " + GetObjectName(itemTypeId))
+            if (itemTypeId != 0) then
+                set whichItem = CreateItem(itemTypeId, x, y)
+                call SetItemCharges(whichItem, MapBuildingNumber(GetUnitTypeId(first), targetRace))
+                set counter = counter + 1
+                set remove = true
+            endif
+        endif
+        call GroupRemoveUnit(allBuildings, first)
+
+        if (remove) then
+            call RemoveUnit(first)
+        endif
+
+        set first = null
+    endloop
+    call GroupClear(allBuildings)
+    call DestroyGroup(allBuildings)
+    set allBuildings = null
+
+    return counter
+endfunction
