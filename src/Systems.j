@@ -3429,8 +3429,13 @@ endfunction
 
 globals
     framehandle array SaveCodeUIBackgroundFrame
+    framehandle array SaveCodeUILabelFrame
     framehandle array SaveCodeUIEditBox
     trigger array SaveCodeUITrigger
+    framehandle array SaveCodeUIUpdateButtonFrame
+    trigger array SaveCodeUIUpdateTrigger
+    framehandle array SaveCodeUILoadButtonFrame
+    trigger array SaveCodeUILoadTrigger
     framehandle array SaveCodeUICloseButton
     trigger array SaveCodeUICloseTrigger
 endglobals
@@ -3464,6 +3469,14 @@ function SaveCodeUIEditBoxEnter takes nothing returns nothing
     call BJDebugMsg("Entered: " + BlzGetTriggerFrameText())
 endfunction
 
+function SaveCodeUIUpdateFunction takes nothing returns nothing
+    call BJDebugMsg("Click update")
+endfunction
+
+function SaveCodeUILoadFunction takes nothing returns nothing
+    call BJDebugMsg("Click load")
+endfunction
+
 function SaveCodeUICloseFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
     call HideSaveCodekUI(Player(playerId))
@@ -3476,19 +3489,51 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
 
+    set SaveCodeUILabelFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "name" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0473810, 0.548614)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.117555, 0.523200)
+    call BlzFrameSetText(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], "|cffFFCC00Load:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+
     set SaveCodeUIEditBox[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIEditBox[GetPlayerId(whichPlayer)] , FRAMEPOINT_CENTER, 0.4, 0.3)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.723710, 0.513260)
     call BlzFrameSetSize(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], 0.2, 0.03)
+    call BlzFrameSetText(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], "-load xxx")
+    call BlzFrameSetScale(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], 1.00)
 
     set SaveCodeUITrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
     call TriggerAddAction(SaveCodeUITrigger[GetPlayerId(whichPlayer)], function SaveCodeUIEditBoxEnter)
     call BlzTriggerRegisterFrameEvent(SaveCodeUITrigger[GetPlayerId(whichPlayer)], SaveCodeUIEditBox[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
 
+    set SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0468290, 0.492262)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.146839, 0.460770)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUIUpdateTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTrigger[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTrigger[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunction)
+
+    set SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.154020, 0.492814)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.276130, 0.456350)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUILoadTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTrigger[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTrigger[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunction)
+
+
     //eventHandler = CreateTrigger() --Create the FRAMEEVENT_EDITBOX_TEXT_CHANGED trigger
     //TriggerAddAction(eventHandler, TEXT_CHANGED)
     //BlzTriggerRegisterFrameEvent(eventHandler, editbox, FRAMEEVENT_EDITBOX_TEXT_CHANGED)
 
-    set SaveCodeUICloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
+    set SaveCodeUICloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
     set x = 0.34
     set y = 0.202
     call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
@@ -3504,7 +3549,6 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
-
 
 function GetTier1BuildingID takes integer whichRace returns integer
     if (whichRace == udg_RaceHuman) then
