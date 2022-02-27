@@ -484,16 +484,16 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 2, 2, 2, DEMON_OVERLORD )
-        call CampaignAttackerEx( 2, 2, 2, DEMON_FEL_STALKER )
-        call CampaignAttackerEx( 2, 2, 2, DEMON_INFERNAL_MACHINE )
-        call CampaignAttackerEx( 2, 2, 2, DEMON_GREATER_VOID_WALKER )
-        call CampaignAttackerEx( 2, 2, 2, DEMON_EREDAR_SORCERER )
-        call CampaignAttackerEx( 2, 2, 2, DEMON_SUCCUBUS )
-        call CampaignAttackerEx( 2, 2, 2, DEMON_INFERNAL )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_OVERLORD )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_FEL_STALKER )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_INFERNAL_MACHINE )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_GREATER_VOID_WALKER )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_EREDAR_SORCERER )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_SUCCUBUS )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_INFERNAL )
         
         // big air army
-        call CampaignAttackerEx( 20, 25, 30, DEMON_NETHER_DRAKE )
+        call CampaignAttackerEx( 15, 20, 25, DEMON_NETHER_DRAKE )
         
 		call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking

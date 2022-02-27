@@ -3604,9 +3604,111 @@ endfunction
 
 function GetItemRace takes integer itemID returns integer
     local integer i = 0
+    if (itemID != 0) then
+        loop
+            exitwhen (i == udg_Max_Voelker)
+            if (GetTier1ItemID(i) == itemID or GetTier2ItemID(i) == itemID) then
+                call BJDebugMsg("Got race " + I2S(i) + " for item " + GetObjectName(itemID))
+
+                return i
+            endif
+            set i = i + 1
+        endloop
+    endif
+
+    return udg_RaceNone
+endfunction
+
+function GetFootmanUnitID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hfoo'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'ogru'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'ugho'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'earc'
+    endif
+
+    return 0
+endfunction
+
+function IsFootmanUnitID takes integer unitID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (unitID == GetFootmanUnitID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+function GetRiflemanUnitID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hrif'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'ohun'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'ucry'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'esen'
+    endif
+
+    return 0
+endfunction
+
+function IsRiflemanUnitID takes integer unitID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (unitID == GetRiflemanUnitID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+function GetKnightUnitID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hkni'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'orai'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'uabo'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'edoc'
+    endif
+
+    return 0
+endfunction
+
+function IsKnightUnitID takes integer unitID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (unitID == GetRiflemanUnitID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+
+function GetUnitIDRace takes integer unitID returns integer
+    local integer i = 0
     loop
         exitwhen (i == udg_Max_Voelker)
-        if (GetTier1ItemID(i) == itemID or GetTier2ItemID(i) == itemID) then
+        if (GetFootmanUnitID(i) == unitID or GetRiflemanUnitID(i) == unitID or GetKnightUnitID(i) == unitID) then
             return i
         endif
         set i = i + 1
@@ -3638,6 +3740,23 @@ function MapBuildingIDToItemID takes integer buildingID, integer targetRace retu
     endif
 
     return 0
+endfunction
+
+function MapUnitID takes integer unitID, integer targetRace returns integer
+    if (IsFootmanUnitID(unitID)) then
+        return GetFootmanUnitID(targetRace)
+    elseif (IsRiflemanUnitID(unitID)) then
+        return GetRiflemanUnitID(targetRace)
+    elseif (IsKnightUnitID(unitID)) then
+        return GetKnightUnitID(targetRace)
+    endif
+
+    return 0
+endfunction
+
+// TODO does depend on the food produced, some farms might be converted into more farms.
+function MapUnitNumber takes integer unitID, integer targetRace returns integer
+    return 1
 endfunction
 
 function FilterIsBuilding takes nothing returns boolean
