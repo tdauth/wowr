@@ -2289,25 +2289,36 @@ endfunction
 
 
 globals
+    constant integer SAVE_OBJECT_CLASSIFICATION_VALUE = 0
+    constant integer SAVE_OBJECT_CLASSIFICATION_UNIT = 1
+    constant integer SAVE_OBJECT_CLASSIFICATION_ITEM = 2
+    constant integer SAVE_OBJECT_CLASSIFICATION_RESEARCH = 3
+
     string array SaveObjectName
     integer array SaveObjectId
+    integer array SaveCodeObjectClassification
     integer SaveObjectTypeCounter = 0
 endglobals
 
-function AddSaveObjectType takes string name, integer id returns integer
+function AddSaveObjectType takes string name, integer id, integer classification returns integer
     local integer index = SaveObjectTypeCounter
     set SaveObjectName[index] = name
     set SaveObjectId[index] = id
+    set SaveCodeObjectClassification[index] = classification
     set SaveObjectTypeCounter = SaveObjectTypeCounter + 1
     return index
 endfunction
 
 function AddSaveObjectUnitType takes nothing returns integer
-    return AddSaveObjectType(GetObjectName(udg_TmpUnitType), udg_TmpUnitType)
+    return AddSaveObjectType(GetObjectName(udg_TmpUnitType), udg_TmpUnitType, SAVE_OBJECT_CLASSIFICATION_UNIT)
 endfunction
 
 function AddSaveObjectItemType takes nothing returns integer
-    return AddSaveObjectType(GetObjectName(udg_TmpItemTypeId), udg_TmpItemTypeId)
+    return AddSaveObjectType(GetObjectName(udg_TmpItemTypeId), udg_TmpItemTypeId, SAVE_OBJECT_CLASSIFICATION_ITEM)
+endfunction
+
+function AddSaveObjectResearch takes nothing returns integer
+    return AddSaveObjectType(GetObjectName(udg_TmpTechType), udg_TmpTechType, SAVE_OBJECT_CLASSIFICATION_RESEARCH)
 endfunction
 
 globals
@@ -2316,8 +2327,8 @@ globals
 endglobals
 
 function AddStandardSaveObjectTypes takes nothing returns nothing
-    set SaveObjectTypeXP = AddSaveObjectType("XP", 0)
-    set SaveObjectTypeGold = AddSaveObjectType("Gold", 0)
+    set SaveObjectTypeXP = AddSaveObjectType("XP", 0, SAVE_OBJECT_CLASSIFICATION_VALUE)
+    set SaveObjectTypeGold = AddSaveObjectType("Gold", 0, SAVE_OBJECT_CLASSIFICATION_VALUE)
 endfunction
 
 function GetSaveObjectType takes integer id returns integer
@@ -2334,6 +2345,10 @@ endfunction
 
 function GetSaveObjectId takes integer number returns integer
     return SaveObjectId[number]
+endfunction
+
+function GetSaveObjectClassification takes integer number returns integer
+    return SaveCodeObjectClassification[number]
 endfunction
 
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
@@ -3086,6 +3101,198 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
 
     call RemoveLocation(tmpLocation)
     set tmpLocation = null
+
+    return false
+endfunction
+
+globals
+    constant integer SAVE_CODE_MAX_RESEARCHES = 10
+endglobals
+
+function CreateSaveCodeResearchesTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer researches, string researchNames, string saveCode returns nothing
+    local string singleplayer = "no"
+    local string singlePlayerFileName = "Multiplayer"
+    local string gameMode = "Freelancer"
+    local string gameType = "Normal"
+    local string content = ""
+
+    if (isSinglePlayer) then
+        set singleplayer = "yes"
+        set singlePlayerFileName = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set gameMode = "Warlord"
+    endif
+
+    if (gameTypeNumber == udg_GameTypeEasy) then
+        set gameType = "Easy"
+    elseif (gameTypeNumber == udg_GameTypeFast) then
+        set gameType = "Fast"
+    elseif (gameTypeNumber == udg_GameTypeHardcore) then
+        set gameType = "Hardcore"
+    endif
+
+
+    call PreloadGenClear()
+    call PreloadGenStart()
+
+    set content = content + AppendFileContent("Code: -loadr " + saveCode)
+    set content = content + AppendFileContent("Researches: " + I2S(researches))
+    set content = content + AppendFileContent("Research Names: " + researchNames)
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    // The line below creates the file at the specified location
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-researches-" + I2S(researches)  + "-" + researchNames + ".txt")
+endfunction
+
+function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
+    local integer playerNameHash = CompressedAbsStringHash(playerName)
+    local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
+    local integer id = -1
+    local integer i = 0
+    local integer researchesCounter = 0
+    local integer count = 0
+    local string researchNames = ""
+
+    //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayer and isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 0")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
+    elseif (isSinglePlayer and not isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 1")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(1)
+    elseif (not isSinglePlayer and isWarlord) then
+        //call BJDebugMsg("Save code single player and mode 2")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(2)
+    else
+        //call BJDebugMsg("Save code single player and mode 3")
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(3)
+    endif
+
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(gameType)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(xpRate)
+
+    set i = 0
+    loop
+        exitwhen (researchesCounter == SAVE_CODE_MAX_RESEARCHES or i == SaveObjectTypeCounter)
+        if (GetSaveObjectClassification(i) == SAVE_OBJECT_CLASSIFICATION_RESEARCH) then
+            set id = GetSaveObjectId(i)
+            set count = GetPlayerTechCountSimple(id, owner)
+            if (id != -1 and count > 0) then
+                set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+                set result = result + ConvertDecimalNumberToSaveCodeSegment(GetPlayerTechCountSimple(id, owner))
+                if (researchNames != "") then
+                    set researchNames = researchNames + ","
+                endif
+                set researchNames = researchNames + I2S(count) + GetObjectName(id)
+                set researchesCounter = researchesCounter + 1
+            endif
+        endif
+        set i = i + 1
+    endloop
+
+    //call BJDebugMsg("Compressed result: " + result)
+    //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
+    //call BJDebugMsg("Checked save code part: " + result)
+
+    // checksum
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
+
+    if (SAVE_CODE_OBFUSCATE) then
+        //call BJDebugMsg("Non-obfuscated save code: " + result)
+        set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
+    endif
+
+    call CreateSaveCodeResearchesTextFile(playerName, isSinglePlayer, isWarlord, gameType, researchesCounter, researchNames, result)
+
+    return result
+endfunction
+
+
+function GetSaveCodeResearches takes player whichPlayer returns string
+    local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
+    local boolean isSinglePlayer = IsInSinglePlayer()
+    local boolean isWarlord = udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
+    local integer gameType = udg_GameType
+    local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
+
+    return GetSaveCodeResearchesEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, whichPlayer)
+endfunction
+
+function ApplySaveCodeResearches takes player whichPlayer, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = false
+    local boolean isWarlord = false
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local integer i = 0
+    local integer pos = 4
+    local integer saveObject = 0
+    local integer saveObjectId = 0
+    local integer count = 0
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    // use one single symbol to store these two flags
+    if (isSinglePlayerAndWarlord == 0) then
+        //call BJDebugMsg("Save code single player and mode 0")
+        set isSinglePlayer = true
+        set isWarlord = true
+    elseif (isSinglePlayerAndWarlord == 1) then
+        //call BJDebugMsg("Save code single player and mode 1")
+        set isSinglePlayer = true
+        set isWarlord = false
+    elseif (isSinglePlayerAndWarlord == 2) then
+        //call BJDebugMsg("Save code single player and mode 2")
+        set isSinglePlayer = false
+        set isWarlord = true
+    else
+        //call BJDebugMsg("Save code single player and mode 3")
+        set isSinglePlayer = false
+        set isWarlord = false
+    endif
+
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+        set i = 0
+        loop
+            exitwhen (i == SAVE_CODE_MAX_RESEARCHES)
+            set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+            //call BJDebugMsg("Loading save object: " + I2S(saveObject))
+            if (saveObject > 0) then
+                set saveObjectId = GetSaveObjectId(saveObject)
+                set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+                //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
+                call SetPlayerTechResearchedSwap(saveObjectId, count, whichPlayer)
+            endif
+            set i = i + 1
+            set pos = pos + 2
+        endloop
+
+        return true
+    endif
 
     return false
 endfunction
