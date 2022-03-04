@@ -2673,11 +2673,10 @@ function CreateSaveCodeItemsTextFile takes string playerName, boolean isSinglePl
     call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-items-" + I2S(items)  + "-" + itemNames + ".txt")
 endfunction
 
-function GetSaveCodeItemsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, unit hero returns string
+function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, item itemSlot0, item itemSlot1, item itemSlot2, item itemSlot3, item itemSlot4, item itemSlot5 returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
     local integer id = -1
-    local integer i = 0
     local integer itemCounter = 0
     local string itemNames = ""
 
@@ -2702,25 +2701,95 @@ function GetSaveCodeItemsEx takes string playerName, boolean isSinglePlayer, boo
     set result = result + ConvertDecimalNumberToSaveCodeSegment(gameType)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(xpRate)
 
-    set i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        if (UnitItemInSlot(hero, i) != null) then
-            set id = GetSaveObjectType(GetItemTypeId(UnitItemInSlot(hero, i)))
-            if (id != -1) then
-                set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
-                set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(UnitItemInSlot(hero, i)))
-                set itemCounter = itemCounter + 1
-                if (itemNames != "") then
-                    set itemNames = itemNames + ","
-                endif
-                set itemNames = itemNames + GetItemName(UnitItemInSlot(hero, i))
-            else
-                //call BJDebugMsg("Not registered save object type for " + GetItemName(UnitItemInSlot(hero, i)))
+    if (itemSlot0 != null) then
+        set id = GetSaveObjectType(GetItemTypeId(itemSlot0))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot0))
+            set itemCounter = itemCounter + 1
+            if (itemNames != "") then
+                set itemNames = itemNames + ","
             endif
+            set itemNames = itemNames + GetItemName(itemSlot0)
+        else
+            //call BJDebugMsg("Not registered save object type for " + GetItemName(itemSlot0))
         endif
-        set i = i + 1
-    endloop
+    endif
+
+    if (itemSlot1 != null) then
+        set id = GetSaveObjectType(GetItemTypeId(itemSlot1))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot1))
+            set itemCounter = itemCounter + 1
+            if (itemNames != "") then
+                set itemNames = itemNames + ","
+            endif
+            set itemNames = itemNames + GetItemName(itemSlot1)
+        else
+            //call BJDebugMsg("Not registered save object type for " + GetItemName(itemSlot1))
+        endif
+    endif
+
+    if (itemSlot2 != null) then
+        set id = GetSaveObjectType(GetItemTypeId(itemSlot2))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot2))
+            set itemCounter = itemCounter + 1
+            if (itemNames != "") then
+                set itemNames = itemNames + ","
+            endif
+            set itemNames = itemNames + GetItemName(itemSlot2)
+        else
+            //call BJDebugMsg("Not registered save object type for " + GetItemName(itemSlot2))
+        endif
+    endif
+
+    if (itemSlot3 != null) then
+        set id = GetSaveObjectType(GetItemTypeId(itemSlot3))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot3))
+            set itemCounter = itemCounter + 1
+            if (itemNames != "") then
+                set itemNames = itemNames + ","
+            endif
+            set itemNames = itemNames + GetItemName(itemSlot3)
+        else
+            //call BJDebugMsg("Not registered save object type for " + GetItemName(itemSlot3))
+        endif
+    endif
+
+    if (itemSlot4 != null) then
+        set id = GetSaveObjectType(GetItemTypeId(itemSlot4))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot4))
+            set itemCounter = itemCounter + 1
+            if (itemNames != "") then
+                set itemNames = itemNames + ","
+            endif
+            set itemNames = itemNames + GetItemName(itemSlot4)
+        else
+            //call BJDebugMsg("Not registered save object type for " + GetItemName(itemSlot4))
+        endif
+    endif
+
+    if (itemSlot5 != null) then
+        set id = GetSaveObjectType(GetItemTypeId(itemSlot5))
+        if (id != -1) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot5))
+            set itemCounter = itemCounter + 1
+            if (itemNames != "") then
+                set itemNames = itemNames + ","
+            endif
+            set itemNames = itemNames + GetItemName(itemSlot5)
+        else
+            //call BJDebugMsg("Not registered save object type for " + GetItemName(itemSlot5))
+        endif
+    endif
 
     //call BJDebugMsg("Compressed result: " + result)
     //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
@@ -2738,6 +2807,10 @@ function GetSaveCodeItemsEx takes string playerName, boolean isSinglePlayer, boo
     call CreateSaveCodeItemsTextFile(playerName, isSinglePlayer, isWarlord, gameType, itemCounter, itemNames, result)
 
     return result
+endfunction
+
+function GetSaveCodeItemsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, unit hero returns string
+    return GetSaveCodeItemsEx2(playerName, isSinglePlayer, isWarlord, gameType, xpRate, UnitItemInSlot(hero, 0), UnitItemInSlot(hero, 1), UnitItemInSlot(hero, 2), UnitItemInSlot(hero, 3), UnitItemInSlot(hero, 4), UnitItemInSlot(hero, 5))
 endfunction
 
 
@@ -2936,10 +3009,10 @@ function CreateSaveCodeUnitsTextFile takes string playerName, boolean isSinglePl
     call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-units-" + I2S(units)  + "-" + unitNames + ".txt")
 endfunction
 
-function GetSaveCodeUnitsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
+function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner, group source returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
-    local group units = GetPlayerUnitsOrderedByPriority(owner)
+    local group units = CopyGroup(source)
     local unit first = null
     local integer id = -1
     local integer i = 0
@@ -3019,6 +3092,17 @@ function GetSaveCodeUnitsEx takes string playerName, boolean isSinglePlayer, boo
     return result
 endfunction
 
+function GetSaveCodeUnitsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
+    local group units = GetPlayerUnitsOrderedByPriority(owner)
+    local string result = GetSaveCodeUnitsEx2(playerName, isSinglePlayer, isWarlord, gameType, xpRate, owner, units)
+
+    call GroupClear(units)
+    call DestroyGroup(units)
+    set units = null
+
+    return result
+endfunction
+
 
 function GetSaveCodeUnits takes player whichPlayer returns string
     local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
@@ -3042,6 +3126,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
     local integer i = 0
+    local integer j = 0
     local integer pos = 4
     local integer saveObject = 0
     local integer saveObjectId = 0
@@ -3087,7 +3172,17 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                 set saveObjectId = GetSaveObjectId(saveObject)
                 set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
                 //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
-                call CreateNUnitsAtLoc(count, saveObjectId, whichPlayer, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                set j = 0
+                loop
+                    exitwhen (j == count)
+                    // the player does not have to build all farms before but the limit should not be exceeded
+                    if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(saveObjectId) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
+                        call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                    else
+                        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetObjectName(saveObjectId) + " exceeds your food maximum and hence is not loaded.")
+                    endif
+                    set j = j + 1
+                endloop
             endif
             set i = i + 1
             set pos = pos + 2
@@ -3311,6 +3406,111 @@ endfunction
 
 function GetSaveCodeBaradeNormalWarlord takes nothing returns string
     return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
+endfunction
+
+function ForGroupRemoveUnit takes nothing returns nothing
+    call RemoveUnit(GetEnumUnit())
+endfunction
+
+function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns string
+    local location tmpLocation = Location(0.0, 0.0)
+    local group redDragons = CreateNUnitsAtLoc(10, 'nrwm', whichPlayer, tmpLocation, 0.0)
+    local group greenDragons = CreateNUnitsAtLoc(10, 'ngrd', whichPlayer, tmpLocation, 0.0)
+    local group blackDragons = CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0)
+    local group blueDragons = CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0)
+    local group bronzeDragons = CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0)
+    local group allDragons = CreateGroup()
+    local string result
+    call GroupAddGroup(redDragons, allDragons)
+    call GroupAddGroup(greenDragons, allDragons)
+    call GroupAddGroup(blackDragons, allDragons)
+    call GroupAddGroup(blueDragons, allDragons)
+    call GroupAddGroup(bronzeDragons, allDragons)
+
+    set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragons)
+
+    call ForGroupBJ(allDragons, function ForGroupRemoveUnit)
+
+    call GroupClear(redDragons)
+    call DestroyGroup(redDragons)
+    set redDragons = null
+
+    call GroupClear(greenDragons)
+    call DestroyGroup(greenDragons)
+    set greenDragons = null
+
+    call GroupClear(blackDragons)
+    call DestroyGroup(blackDragons)
+    set blackDragons = null
+
+    call GroupClear(blueDragons)
+    call DestroyGroup(blueDragons)
+    set blueDragons = null
+
+    call GroupClear(bronzeDragons)
+    call DestroyGroup(bronzeDragons)
+    set bronzeDragons = null
+
+    call GroupClear(allDragons)
+    call DestroyGroup(allDragons)
+    set allDragons = null
+
+    call RemoveLocation(tmpLocation)
+    set tmpLocation = null
+
+    return result
+endfunction
+
+function GetSaveCodeBaradeWarlordGoodItems takes nothing returns string
+    local item item0 = CreateItem('gcel', 0.0, 0.0)
+    local item item1 = CreateItem('pnvu', 0.0, 0.0)
+    local item item2 = CreateItem('sres', 0.0, 0.0)
+    local item item3 = CreateItem('ankh', 0.0, 0.0)
+    local item item4 = CreateItem('whwd', 0.0, 0.0)
+    local item item5 = CreateItem('hlst', 0.0, 0.0)
+    local string result
+
+    call SetItemCharges(item0, 100)
+    call SetItemCharges(item1, 100)
+    call SetItemCharges(item2, 100)
+    call SetItemCharges(item3, 100)
+    call SetItemCharges(item4, 100)
+    call SetItemCharges(item5, 100)
+
+    set result = GetSaveCodeItemsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, item0, item1, item2, item3, item4, item5)
+
+    call RemoveItem(item0)
+    set item0 = null
+
+    call RemoveItem(item1)
+    set item1 = null
+
+    call RemoveItem(item2)
+    set item2 = null
+
+    call RemoveItem(item3)
+    set item3 = null
+
+    call RemoveItem(item4)
+    set item4 = null
+
+    call RemoveItem(item5)
+    set item5 = null
+
+    return result
+endfunction
+
+function GetSaveCodeBaradeWarlordHumanUpgrades takes player whichPlayer returns string
+    local integer ironForgedSwordsLevel = GetPlayerTechCountSimple('Rhme', whichPlayer)
+    local string result
+
+    call SetPlayerTechResearched(whichPlayer, 'Rhme', 3)
+
+    set result = GetSaveCodeResearchesEx("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer)
+
+    call SetPlayerTechResearched(whichPlayer, 'Rhme', ironForgedSwordsLevel)
+
+    return result
 endfunction
 
 /**
@@ -3636,36 +3836,42 @@ endfunction
 
 globals
     framehandle array SaveCodeUIBackgroundFrame
-    framehandle array SaveCodeUILabelFrame
-    framehandle array SaveCodeUIEditBox
-    trigger array SaveCodeUITrigger
-    framehandle array SaveCodeUIUpdateButtonFrame
-    trigger array SaveCodeUIUpdateTrigger
-    framehandle array SaveCodeUILoadButtonFrame
-    trigger array SaveCodeUILoadTrigger
+    framehandle array SaveCodeUITitleFrame
+
+    framehandle array SaveCodeUILabelFrameHeroes
+    framehandle array SaveCodeUIEditBoxHeroes
+    trigger array SaveCodeUITriggerEditBoxHeroes
+    framehandle array SaveCodeUIUpdateButtonFrameHeroes
+    trigger array SaveCodeUIUpdateTriggerHeroes
+    framehandle array SaveCodeUILoadButtonFrameHeroes
+    trigger array SaveCodeUILoadTriggerHeroes
+    framehandle array SaveCodeUIWriteIntoFileButtonFrameHeroes
+    trigger array SaveCodeUIWriteIntoFileTriggerHeroes
+
+
     framehandle array SaveCodeUICloseButton
     trigger array SaveCodeUICloseTrigger
 endglobals
 
 function ShowSaveCodekUI takes player whichPlayer returns nothing
     if (whichPlayer == GetLocalPlayer()) then
-        call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], true)
+        call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], true)
         call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], true)
     endif
 endfunction
 
 function HideSaveCodekUI takes player whichPlayer returns nothing
     if (whichPlayer == GetLocalPlayer()) then
-        call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], false)
+        call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], false)
         call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
     endif
 endfunction
 
-function SetSaveCodeUIText takes player whichPlayer, string txt returns nothing
-    call BlzFrameSetText(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], txt)
+function SetSaveCodeUIHeroesText takes player whichPlayer, string txt returns nothing
+    call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], txt)
 endfunction
 
-function SaveCodeUIEditBoxEnter takes nothing returns nothing
+function SaveCodeUIEditBoxEnterHeroes takes nothing returns nothing
     // print("EditBoxEnter:")
     // print(BlzGetTriggerFrameText())
     // print(GetPlayerName(GetTriggerPlayer()))
@@ -3673,15 +3879,20 @@ function SaveCodeUIEditBoxEnter takes nothing returns nothing
     // --print("TEXT_CHANGED")
     // --print(BlzGetTriggerFrameText())
     // --print(GetPlayerName(GetTriggerPlayer()))
-    call BJDebugMsg("Entered: " + BlzGetTriggerFrameText())
+    call BJDebugMsg("Entered: " + BlzGetTriggerFrameText() + " into heroes edit box")
 endfunction
 
-function SaveCodeUIUpdateFunction takes nothing returns nothing
+function SaveCodeUIUpdateFunctionHeroes takes nothing returns nothing
     call BJDebugMsg("Click update")
+    call SetSaveCodeUIHeroesText(GetTriggerPlayer(), "-load " + GetSaveCode(GetTriggerPlayer()))
 endfunction
 
-function SaveCodeUILoadFunction takes nothing returns nothing
+function SaveCodeUILoadFunctionHeroes takes nothing returns nothing
     call BJDebugMsg("Click load")
+endfunction
+
+function SaveCodeUIWriteIntoFileFunctionHeroes takes nothing returns nothing
+    call BJDebugMsg("Click write into file")
 endfunction
 
 function SaveCodeUICloseFunction takes nothing returns nothing
@@ -3692,48 +3903,67 @@ endfunction
 function CreateSaveCodeUI takes player whichPlayer returns nothing
     local real x
     local real y
+
+    call BlzLoadTOCFile("war3mapImported\\saveTOC.toc")
+
     set SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
 
-    set SaveCodeUILabelFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "name" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0473810, 0.548614)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.117555, 0.523200)
-    call BlzFrameSetText(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], "|cffFFCC00Load:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    set SaveCodeUITitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
+    call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
+    call BlzFrameSetText(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], "Save Codes")
+    call BlzFrameSetTextAlignment(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], 1.0)
+    call BlzFrameSetVisible(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], false)
 
-    set SaveCodeUIEditBox[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBox[GetPlayerId(whichPlayer)] , FRAMEPOINT_CENTER, 0.4, 0.3)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.723710, 0.513260)
-    call BlzFrameSetSize(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], 0.2, 0.03)
-    call BlzFrameSetText(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], "-load xxx")
-    call BlzFrameSetScale(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "name" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0623000, 0.532379)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.146840, 0.497020)
+    call BlzFrameSetText(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], "|cffFFCC00Load Heroes:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 
-    set SaveCodeUITrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITrigger[GetPlayerId(whichPlayer)], function SaveCodeUIEditBoxEnter)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITrigger[GetPlayerId(whichPlayer)], SaveCodeUIEditBox[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.150710, 0.535847)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.736970, 0.496620)
+    call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], "-load xxx")
 
-    set SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0468290, 0.492262)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.146839, 0.460770)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIEditBoxEnterHeroes)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIUpdateTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTrigger[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrame[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTrigger[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunction)
+    set SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0468290, 0.492262)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.146839, 0.460770)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
 
-    set SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.154020, 0.492814)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.276130, 0.456350)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionHeroes)
 
-    set SaveCodeUILoadTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTrigger[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrame[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTrigger[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunction)
+    set SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.154020, 0.492814)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.276130, 0.456350)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionHeroes)
+
+    set SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.154020, 0.492814)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.276130, 0.456350)
+    call BlzFrameSetText(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Into File|r")
+    call BlzFrameSetScale(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUIWriteIntoFileTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteIntoFileTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIWriteIntoFileTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIWriteIntoFileFunctionHeroes)
 
 
     //eventHandler = CreateTrigger() --Create the FRAMEEVENT_EDITBOX_TEXT_CHANGED trigger
@@ -3753,7 +3983,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call TriggerAddAction(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], function SaveCodeUICloseFunction)
     call SaveTriggerParameterInteger(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
 
-    call BlzFrameSetVisible(SaveCodeUIEditBox[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
 
