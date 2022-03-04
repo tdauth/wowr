@@ -149,6 +149,8 @@ This version provides several new features compared to the original map:
 * New island with Spider Crab Behemoth on the sea.
 * Chat command "-wrapup" which converts your buildings into tiny items.
 * Chat command "-passive" which enables passive mode against enemy players.
+* New island Kezan with boss Rumblefitz.
+* New race Goblins.
 
 ## Bug Fixes
 

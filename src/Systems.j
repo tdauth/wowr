@@ -3021,7 +3021,7 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
     local integer count = 0
     local string unitNames = ""
 
-    //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
+    call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
@@ -3063,8 +3063,9 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
             call DestroyGroup(tmpGroup)
             set tmpGroup = null
             set unitsCounter = unitsCounter + 1
+            call BJDebugMsg("Added " + GetUnitName(first) + " with count " + I2S(count))
         else
-            //call BJDebugMsg("Not registered save object type for " + GetUnitName(first))
+            call BJDebugMsg("Not registered save object type for " + GetUnitName(first))
         endif
         call GroupRemoveUnit(units, first)
         set i = i + 1
