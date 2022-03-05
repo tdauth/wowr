@@ -3826,7 +3826,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     call BlzFrameSetTextAlignment(BackpackTooltipText[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
     //call BlzFrameSetTooltip(Frame05, BackpackTooltipText[GetPlayerId(whichPlayer)])
 
-    set BackpackCloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
+    set BackpackCloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
     set x = 0.34
     set y = 0.202
     call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
@@ -3842,10 +3842,41 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
 
+/**
+ * Savecode GUI which helps to copy & paste savecodes.
+ */
 globals
+    constant real SAVECODE_UI_LABEL_X = 0.075009
+    constant real SAVECODE_UI_LABEL_WIDTH = 0.058018
+
+    constant real SAVECODE_UI_LINEEDIT_X = 0.13800
+    constant real SAVECODE_UI_LINEEDIT_WIDTH = 0.33319
+
+    constant real SAVECODE_UI_UPDATE_BUTTON_X = 0.47837
+    constant real SAVECODE_UI_UPDATE_BUTTON_WIDTH = 0.059123
+
+    constant real SAVECODE_UI_LOAD_BUTTON_X = 0.54136
+    constant real SAVECODE_UI_LOAD_BUTTON_WIDTH = 0.059123
+
+    constant real SAVECODE_UI_LINE_START_Y = 0.49971
+    constant real SAVECODE_UI_LINE_HEIGHT = 0.029282
+
+    constant real SAVECODE_UI_TOOLTIP_X = 0.68834
+    constant real SAVECODE_UI_TOOLTIP_WIDTH = 0.070174
+    constant real SAVECODE_UI_TOOLTIP_HEIGHT = 0.22265
+
+    constant real SAVECODE_UI_TOOLTIP_LABEL_X = 0.687790
+    constant real SAVECODE_UI_TOOLTIP_LABEL_Y = 0.507740
+    constant real SAVECODE_UI_TOOLTIP_LABEL_WIDTH = 0.070174
+    constant real SAVECODE_UI_TOOLTIP_LABEL_HEIGHT = 0.22265
+
     framehandle array SaveCodeUIBackgroundFrame
     framehandle array SaveCodeUITitleFrame
 
+    framehandle array SaveCodeUITooltipBackgroundFrame
+    framehandle array SaveCodeUITooltipLabelFrame
+
+    // line 1: heroes savecode
     framehandle array SaveCodeUILabelFrameHeroes
     framehandle array SaveCodeUIEditBoxHeroes
     trigger array SaveCodeUITriggerEditBoxHeroes
@@ -3853,30 +3884,47 @@ globals
     trigger array SaveCodeUIUpdateTriggerHeroes
     framehandle array SaveCodeUILoadButtonFrameHeroes
     trigger array SaveCodeUILoadTriggerHeroes
-    framehandle array SaveCodeUIWriteIntoFileButtonFrameHeroes
-    trigger array SaveCodeUIWriteIntoFileTriggerHeroes
-
 
     framehandle array SaveCodeUICloseButton
     trigger array SaveCodeUICloseTrigger
 endglobals
 
-function ShowSaveCodekUI takes player whichPlayer returns nothing
+function SetSaveCodeUIHeroesText takes player whichPlayer, string txt returns nothing
+    call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], txt)
+endfunction
+
+function GetSaveCodeUIHeroesText takes player whichPlayer returns string
+    return BlzFrameGetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)])
+endfunction
+
+function UpdateSaveCodeUIHeroesText takes player whichPlayer returns nothing
+    call SetSaveCodeUIHeroesText(whichPlayer, "-load " + GetSaveCode(whichPlayer))
+endfunction
+
+function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns nothing
     if (whichPlayer == GetLocalPlayer()) then
-        call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], true)
-        call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], true)
+        call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], visible)
     endif
+
+    if (visible) then
+        call UpdateSaveCodeUIHeroesText(whichPlayer)
+    endif
+endfunction
+
+function ShowSaveCodekUI takes player whichPlayer returns nothing
+    call SetSaveCodeUIVisible(whichPlayer, true)
 endfunction
 
 function HideSaveCodekUI takes player whichPlayer returns nothing
-    if (whichPlayer == GetLocalPlayer()) then
-        call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], false)
-        call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
-    endif
-endfunction
-
-function SetSaveCodeUIHeroesText takes player whichPlayer, string txt returns nothing
-    call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], txt)
+    call SetSaveCodeUIVisible(whichPlayer, false)
 endfunction
 
 function SaveCodeUIEditBoxEnterHeroes takes nothing returns nothing
@@ -3892,19 +3940,17 @@ endfunction
 
 function SaveCodeUIUpdateFunctionHeroes takes nothing returns nothing
     call BJDebugMsg("Click update")
-    call SetSaveCodeUIHeroesText(GetTriggerPlayer(), "-load " + GetSaveCode(GetTriggerPlayer()))
+    call UpdateSaveCodeUIHeroesText(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUILoadFunctionHeroes takes nothing returns nothing
     call BJDebugMsg("Click load")
-endfunction
-
-function SaveCodeUIWriteIntoFileFunctionHeroes takes nothing returns nothing
-    call BJDebugMsg("Click write into file")
+    call ApplySaveCode(GetTriggerPlayer(), GetSaveCodeUIHeroesText(GetTriggerPlayer()))
 endfunction
 
 function SaveCodeUICloseFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    call BJDebugMsg("Click close")
     call HideSaveCodekUI(Player(playerId))
 endfunction
 
@@ -3918,7 +3964,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
 
-    set SaveCodeUITitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set SaveCodeUITitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiTitle" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
     call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
     call BlzFrameSetText(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], "Save Codes")
@@ -3926,17 +3972,32 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetScale(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], false)
 
-    set SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "name" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0623000, 0.532379)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.146840, 0.497020)
+    set SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_TOOLTIP_X, SAVECODE_UI_LINE_START_Y)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_TOOLTIP_X + SAVECODE_UI_TOOLTIP_WIDTH, SAVECODE_UI_LINE_START_Y + SAVECODE_UI_TOOLTIP_HEIGHT)
+
+    set SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiTooltipLabel" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_TOOLTIP_LABEL_X, SAVECODE_UI_TOOLTIP_LABEL_Y)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_TOOLTIP_LABEL_X + SAVECODE_UI_TOOLTIP_LABEL_WIDTH, SAVECODE_UI_TOOLTIP_LABEL_Y + SAVECODE_UI_TOOLTIP_LABEL_HEIGHT)
+    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Save Code Info")
+    call BlzFrameSetEnable(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetScale(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+
+    // line 1
+    set y = SAVECODE_UI_LINE_START_Y
+
+    set SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelHeroes" + I2S(GetPlayerId(whichPlayer)), SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y + SAVECODE_UI_LINE_HEIGHT)
     call BlzFrameSetText(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], "|cffFFCC00Load Heroes:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 
     set SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.150710, 0.535847)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.736970, 0.496620)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y + SAVECODE_UI_LINE_HEIGHT)
     call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], "-load xxx")
 
     set SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
@@ -3944,8 +4005,8 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
 
     set SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0468290, 0.492262)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.146839, 0.460770)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y + SAVECODE_UI_LINE_HEIGHT)
     call BlzFrameSetText(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
     call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
 
@@ -3954,25 +4015,14 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call TriggerAddAction(SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionHeroes)
 
     set SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.154020, 0.492814)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.276130, 0.456350)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y + SAVECODE_UI_LINE_HEIGHT)
     call BlzFrameSetText(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
     call BlzFrameSetScale(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
 
     set SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionHeroes)
-
-    set SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.154020, 0.492814)
-    call BlzFrameSetAbsPoint(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.276130, 0.456350)
-    call BlzFrameSetText(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Into File|r")
-    call BlzFrameSetScale(SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
-
-    set SaveCodeUIWriteIntoFileTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteIntoFileTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUIWriteIntoFileButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIWriteIntoFileTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIWriteIntoFileFunctionHeroes)
-
 
     //eventHandler = CreateTrigger() --Create the FRAMEEVENT_EDITBOX_TEXT_CHANGED trigger
     //TriggerAddAction(eventHandler, TEXT_CHANGED)
@@ -3991,408 +4041,259 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call TriggerAddAction(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], function SaveCodeUICloseFunction)
     call SaveTriggerParameterInteger(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
 
-    call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], false)
 endfunction
 
-function GetFarmBuildingID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hhou'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'otrb'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'uzig'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'emow'
-    endif
+globals
+    // BUILDINGS
+    constant integer RACE_OBJECT_TYPE_FARM = 0
+    constant integer RACE_OBJECT_TYPE_ALTAR = 1
+    constant integer RACE_OBJECT_TYPE_MILL = 2
+    constant integer RACE_OBJECT_TYPE_BLACK_SMITH = 3
+    constant integer RACE_OBJECT_TYPE_BARRACKS = 4
+    constant integer RACE_OBJECT_TYPE_SHOP = 5
+    constant integer RACE_OBJECT_TYPE_GUARD_TOWER = 6
+    constant integer RACE_OBJECT_TYPE_ARCANE_SANCTUM = 7
+    constant integer RACE_OBJECT_TYPE_GRYPHON_AVIARY = 8
+    constant integer RACE_OBJECT_TYPE_TIER_1 = 9
+    constant integer RACE_OBJECT_TYPE_TIER_2 = 10
+    constant integer RACE_OBJECT_TYPE_TIER_3 = 11
+    // ITEMS
+    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 12
+    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 13
+    // UNITS
+    constant integer RACE_OBJECT_TYPE_WORKER = 14
+    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 15
+    constant integer RACE_OBJECT_TYPE_FOOTMAN = 16
+    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 17
+    constant integer RACE_OBJECT_TYPE_KNIGHT = 18
+
+    constant integer RACE_MAX_OBJECT_TYPES = 19
+
+    integer array raceObjectType
+endglobals
+
+function SetRaceObjectType takes integer whichRace, integer unitType, integer objectTypeId returns nothing
+    set raceObjectType[Index2D(whichRace, unitType, RACE_MAX_OBJECT_TYPES)] = objectTypeId
+endfunction
+
+function GetRaceObjectType takes integer whichRace, integer unitType returns integer
+    return raceObjectType[Index2D(whichRace, unitType, RACE_MAX_OBJECT_TYPES)]
+endfunction
+
+function GetObjectRace takes integer objectTypeId returns integer
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        set j = 0
+        loop
+            exitwhen (j == RACE_MAX_OBJECT_TYPES)
+            if (GetRaceObjectType(i, j) == objectTypeId) then
+                return i
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+
+    return udg_RaceNone
+endfunction
+
+function GetObjectRaceType takes integer objectTypeId returns integer
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        set j = 0
+        loop
+            exitwhen (j == RACE_MAX_OBJECT_TYPES)
+            if (GetRaceObjectType(i, j) == objectTypeId) then
+                return j
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+
+    return -1
+endfunction
+
+function MapRaceObjectType takes integer objectTypeId, integer targetRace returns integer
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        set j = 0
+        loop
+            exitwhen (j == RACE_MAX_OBJECT_TYPES)
+            if (GetRaceObjectType(i, j) == objectTypeId) then
+                return GetRaceObjectType(targetRace, j)
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
 
     return 0
 endfunction
 
-function IsFarmBuildingID takes integer buildingID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (buildingID == GetFarmBuildingID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
+function InitStandardRaceObjectTypes takes nothing returns nothing
+    // BUILDINGS
 
-    return matched
-endfunction
+    // farms
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_FARM, 'hhou')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_FARM, 'otrb')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_FARM, 'uzig')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_FARM, 'emow')
 
-function GetAltarBuildingID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'halt'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'oalt'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'uaod'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'eate'
-    endif
+    // altars
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_ALTAR, 'halt')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_ALTAR, 'oalt')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_ALTAR, 'uaod')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_ALTAR, 'eate')
 
-    return 0
-endfunction
+    // mills
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_MILL, 'hlum')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_MILL, 'ofor')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_MILL, 'ugrv')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_MILL, 'edob')
 
-function IsAltarBuildingID takes integer buildingID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (buildingID == GetAltarBuildingID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
+    // black smiths
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_BLACK_SMITH, 'hbla')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_BLACK_SMITH, 'ofor')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_BLACK_SMITH, 'ugrv')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_BLACK_SMITH, 'edob')
 
-    return matched
-endfunction
+    // barracks
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_BARRACKS, 'hbar')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_BARRACKS, 'obar')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_BARRACKS, 'usep')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_BARRACKS, 'eaom')
 
-function GetMillBuildingID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hlum'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'ofor'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'ugrv'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'edob'
-    endif
+    // shops
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_SHOP, 'hars')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_SHOP, 'ovln')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_SHOP, 'utom')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_SHOP, 'eden')
 
-    return 0
-endfunction
+    // guard tower
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_GUARD_TOWER, 'hgtw')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_GUARD_TOWER, 'owtw')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_GUARD_TOWER, 'uzg1')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_GUARD_TOWER, 'etrp')
 
-function IsMillBuildingID takes integer buildingID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (buildingID == GetMillBuildingID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
+    // arcane sanctum
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'hars')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'osld')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'utod')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'eaoe')
 
-    return matched
-endfunction
+    // gryphon aviary
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'hgra')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'otto')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'ubon')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'edos')
 
-function GetBarracksBuildingID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hbar'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'obar'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'usep'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'eaom'
-    endif
+    // tier 1
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_1, 'htow')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_1, 'ogre')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_1, 'unpl')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_1, 'etol')
 
-    return 0
-endfunction
+    // tier 2
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2, 'hkee')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_2, 'ostr')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_2, 'unp1')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_2, 'etoa')
 
-function IsBarracksBuildingID takes integer buildingID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (buildingID == GetBarracksBuildingID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
+    // tier 3
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_3, 'hcas')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_3, 'ofrt')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_3, 'unp2')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_3, 'etoe')
 
-    return matched
-endfunction
+    // ITEMS
 
-function GetTier1BuildingID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'htow'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'ogre'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'unpl'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'etol'
-    endif
+    // tier 1 item
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02P')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_1_ITEM, 'tgrh')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02K')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02J')
+    call SetRaceObjectType(udg_RaceNaga, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02M')
+    call SetRaceObjectType(udg_RaceBloodElf, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02L')
+    call SetRaceObjectType(udg_RaceDemon, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02N')
+    call SetRaceObjectType(udg_RaceDraenei, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02O')
+    call SetRaceObjectType(udg_RaceFurbolg, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
 
-    return 0
-endfunction
+   // tier 2 item
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2_ITEM, 'tcas')
 
-function IsTier1BuildingID takes integer buildingID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (buildingID == GetTier1BuildingID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
+   // UNITS
 
-    return matched
-endfunction
+   // worker
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_WORKER, 'hpea')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_WORKER, 'opeo')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_WORKER, 'uaco')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_WORKER, 'ewsp')
 
+   // male citizen
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00E')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00I')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00G')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00O')
 
-function GetTier2BuildingID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hkee'
-    endif
+   // footman
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_FOOTMAN, 'hfoo')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_FOOTMAN, 'ogru')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_FOOTMAN, 'ugho')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_FOOTMAN, 'earc')
 
-    return 0
-endfunction
+   // rifleman
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_RIFLEMAN, 'hrif')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_RIFLEMAN, 'ohun')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_RIFLEMAN, 'ucry')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_RIFLEMAN, 'esen')
 
-function IsTier2BuildingID takes integer buildingID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (buildingID == GetTier2BuildingID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
-
-    return matched
+   // knight
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_KNIGHT, 'hkni')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_KNIGHT, 'orai')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_KNIGHT, 'uabo')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_KNIGHT, 'edoc')
 endfunction
 
 function GetBuildingRace takes integer buildingID returns integer
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker)
-        if (GetFarmBuildingID(i) == buildingID or GetAltarBuildingID(i) == buildingID or GetMillBuildingID(i) == buildingID or GetBarracksBuildingID(i) == buildingID or GetTier1BuildingID(i) == buildingID or GetTier2BuildingID(i) == buildingID) then
-            return i
-        endif
-        set i = i + 1
-    endloop
-
-    return udg_RaceNone
+    return GetObjectRace(buildingID)
 endfunction
 
-function GetTier1ItemID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'I02P'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'tgrh'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'I02K'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'I02J'
-    elseif (whichRace == udg_RaceNaga) then
-        return 'I02M'
-    elseif (whichRace == udg_RaceBloodElf) then
-        return 'I02L'
-    elseif (whichRace == udg_RaceDemon) then
-        return 'I02N'
-    elseif (whichRace == udg_RaceDraenei) then
-        return 'I02O'
-    elseif (whichRace == udg_RaceFurbolg) then
-        return 'I03A'
+// exclude certain buildings since every race can build them
+function IsBuildingAllRaces takes integer buildingID returns boolean
+    if (buildingID == 'n025') then // power generator
+        return true
+    elseif (buildingID == 'h00N') then // Temple of Darkness
+        return true
+    elseif (buildingID == 'h00M') then // Temple of Light
+        return true
+    elseif (buildingID == 'h020') then // Gate horizontal closed
+        return true
+    elseif (buildingID == 'h021') then // Gate horizontal open
+        return true
     endif
 
-    return 0
-endfunction
-
-function GetTier2ItemID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'tcas'
-    endif
-
-    return 0
+    return false
 endfunction
 
 function GetItemRace takes integer itemID returns integer
-    local integer i = 0
-    if (itemID != 0) then
-        loop
-            exitwhen (i == udg_Max_Voelker)
-            if (GetTier1ItemID(i) == itemID or GetTier2ItemID(i) == itemID) then
-                call BJDebugMsg("Got race " + I2S(i) + " for item " + GetObjectName(itemID))
-
-                return i
-            endif
-            set i = i + 1
-        endloop
-    endif
-
-    return udg_RaceNone
+    return GetObjectRace(itemID)
 endfunction
-
-
-function GetWorkerUnitID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hpea'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'opeo'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'uaco'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'ewsp'
-    endif
-
-    return 0
-endfunction
-
-function IsWorkerUnitID takes integer unitID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (unitID == GetWorkerUnitID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
-
-    return matched
-endfunction
-
-
-function GetMaleCitizenUnitID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'n00E'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'n00I'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'n00G'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'n00O'
-    endif
-
-    return 0
-endfunction
-
-function IsMaleCitizenUnitID takes integer unitID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (unitID == GetMaleCitizenUnitID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
-
-    return matched
-endfunction
-
-
-function GetFootmanUnitID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hfoo'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'ogru'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'ugho'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'earc'
-    endif
-
-    return 0
-endfunction
-
-function IsFootmanUnitID takes integer unitID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (unitID == GetFootmanUnitID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
-
-    return matched
-endfunction
-
-function GetRiflemanUnitID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hrif'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'ohun'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'ucry'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'esen'
-    endif
-
-    return 0
-endfunction
-
-function IsRiflemanUnitID takes integer unitID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (unitID == GetRiflemanUnitID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
-
-    return matched
-endfunction
-
-function GetKnightUnitID takes integer whichRace returns integer
-    if (whichRace == udg_RaceHuman) then
-        return 'hkni'
-    elseif (whichRace == udg_RaceOrc) then
-        return 'orai'
-    elseif (whichRace == udg_RaceUndead) then
-        return 'uabo'
-    elseif (whichRace == udg_RaceNightElf) then
-        return 'edoc'
-    endif
-
-    return 0
-endfunction
-
-function IsKnightUnitID takes integer unitID returns boolean
-    local boolean matched = false
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker or matched)
-        if (unitID == GetRiflemanUnitID(i)) then
-            set matched = true
-        endif
-        set i = i + 1
-    endloop
-
-    return matched
-endfunction
-
 
 function GetUnitIDRace takes integer unitID returns integer
-    local integer i = 0
-    loop
-        exitwhen (i == udg_Max_Voelker)
-        if (GetWorkerUnitID(i) == unitID or GetMaleCitizenUnitID(i) == unitID or GetFootmanUnitID(i) == unitID or GetRiflemanUnitID(i) == unitID or GetKnightUnitID(i) == unitID) then
-            return i
-        endif
-        set i = i + 1
-    endloop
-
-    return udg_RaceNone
+    return GetObjectRace(unitID)
 endfunction
 
 function MapBuildingID takes integer buildingID, integer targetRace returns integer
-    if (IsFarmBuildingID(buildingID)) then
-        return GetFarmBuildingID(targetRace)
-    elseif (IsAltarBuildingID(buildingID)) then
-        return GetAltarBuildingID(targetRace)
-    elseif (IsMillBuildingID(buildingID)) then
-        return GetMillBuildingID(targetRace)
-    elseif (IsBarracksBuildingID(buildingID)) then
-        return GetBarracksBuildingID(targetRace)
-    elseif (IsTier1BuildingID(buildingID)) then
-        return GetTier1BuildingID(targetRace)
-    elseif (IsTier2BuildingID(buildingID)) then
-        return GetTier2BuildingID(targetRace)
-    endif
-
-    return 0
+    return MapRaceObjectType(buildingID, targetRace)
 endfunction
 
 // TODO does depend on the food produced, some farms might be converted into more farms.
@@ -4401,33 +4302,28 @@ function MapBuildingNumber takes integer buildingID, integer targetRace returns 
 endfunction
 
 function MapBuildingIDToItemID takes integer buildingID, integer targetRace returns integer
-    if (IsTier1BuildingID(buildingID)) then
-        return GetTier1ItemID(targetRace)
-    elseif (IsTier2BuildingID(buildingID)) then
-        return GetTier2ItemID(targetRace)
+    local integer raceType = GetObjectRaceType(buildingID)
+
+    if (raceType == RACE_OBJECT_TYPE_TIER_1) then
+        return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
+    elseif (raceType == RACE_OBJECT_TYPE_TIER_2) then
+        return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_2_ITEM)
     endif
 
     return 0
 endfunction
 
 function MapUnitID takes integer unitID, integer targetRace, boolean includingWorkers returns integer
-    if (includingWorkers) then
-        if (IsWorkerUnitID(unitID)) then
-            return GetWorkerUnitID(targetRace)
-        elseif (IsMaleCitizenUnitID(unitID)) then
-            return GetMaleCitizenUnitID(targetRace)
+    local integer raceType = -1
+    if (not includingWorkers) then
+        set raceType = GetObjectRaceType(unitID)
+
+        if (raceType == RACE_OBJECT_TYPE_WORKER or raceType == RACE_OBJECT_TYPE_MALE_CITIZEN) then
+            return 0
         endif
     endif
 
-    if (IsFootmanUnitID(unitID)) then
-        return GetFootmanUnitID(targetRace)
-    elseif (IsRiflemanUnitID(unitID)) then
-        return GetRiflemanUnitID(targetRace)
-    elseif (IsKnightUnitID(unitID)) then
-        return GetKnightUnitID(targetRace)
-    endif
-
-    return 0
+    return MapRaceObjectType(unitID, targetRace)
 endfunction
 
 // TODO does depend on the food produced, some farms might be converted into more farms.

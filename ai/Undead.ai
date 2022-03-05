@@ -10,6 +10,7 @@ globals
     constant integer UNDEAD_HOUSING                                  = 'h00U'
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
+	constant integer RESEARCH_TENT                                   = 'n042'
 	
 	constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
 	constant integer DARK_RANGER_SILENCE                             = 'ANsi'
@@ -188,6 +189,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, ZIGGURAT_2 )
 	
 	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
 	
 	call SetBuildUpgr( 3, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )

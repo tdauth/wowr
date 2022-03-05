@@ -60,6 +60,7 @@ globals
     constant integer FURBOLG_HOUSING                                 = 'h015'
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
+	constant integer RESEARCH_TENT                                   = 'n042'
 	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
@@ -163,6 +164,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
     call SetBuildUnit( 2, GUARDING_FURBOLG )
 	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
     call SetBuildUnit( 1, FURBOLG_MARKETPLACE )
 	call SetBuildUnit( 1, FURBOLG_WOLVES_CAGE )
 	call SetBuildUnit( 1, FURBOLG_POLAR_HUT )

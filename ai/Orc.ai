@@ -11,6 +11,8 @@ globals
     constant integer ORC_HOUSING                                     = 'h00V'
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
+	constant integer RESEARCH_TENT                                   = 'n042'
+
 	constant integer FOUNTAIN_OF_BLOOD                               = 'o00F'
 	constant integer FEL_DRAGON_ROOST                                = 'ndrb'
 	
@@ -182,6 +184,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, ORC_WATCH_TOWER )
     call SetBuildUnit( 2, ORC_CITIZEN_MALE )
 	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
 	
 	call SetBuildUpgr( 3, UPG_ORC_MELEE )
     call SetBuildUpgr( 3, UPG_ORC_RANGED )

@@ -152,6 +152,7 @@ This version provides several new features compared to the original map [World o
 * New island Kezan with boss Rumblefitz.
 * New race Goblins.
 * Chat command "-racerepick" to repick your first race as Warlord.
+* New building Research Tent for all races.
 
 ## Bug Fixes
 

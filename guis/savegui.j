@@ -19,6 +19,14 @@ framehandle Frame02CopyCopyCopyCopy = null
 trigger TriggerFrame02CopyCopyCopyCopy = null 
 framehandle Frame06CopyCopy = null 
 trigger TriggerFrame06CopyCopy = null 
+framehandle Frame06Copy1 = null 
+trigger TriggerFrame06Copy1 = null 
+framehandle Frame06Copy1Copy = null 
+trigger TriggerFrame06Copy1Copy = null 
+framehandle Frame06Copy1CopyCopy = null 
+trigger TriggerFrame06Copy1CopyCopy = null 
+framehandle Frame06Copy1CopyCopyCopy = null 
+trigger TriggerFrame06Copy1CopyCopyCopy = null 
 framehandle Frame04 = null 
 trigger TriggerFrame04 = null 
 framehandle Frame04Copy = null 
@@ -65,6 +73,26 @@ call BlzFrameSetEnable(Frame06CopyCopy, false)
 call BlzFrameSetEnable(Frame06CopyCopy, true) 
 endfunction 
  
+function Frame06Copy1Func takes nothing returns nothing 
+call BlzFrameSetEnable(Frame06Copy1, false) 
+call BlzFrameSetEnable(Frame06Copy1, true) 
+endfunction 
+ 
+function Frame06Copy1CopyFunc takes nothing returns nothing 
+call BlzFrameSetEnable(Frame06Copy1Copy, false) 
+call BlzFrameSetEnable(Frame06Copy1Copy, true) 
+endfunction 
+ 
+function Frame06Copy1CopyCopyFunc takes nothing returns nothing 
+call BlzFrameSetEnable(Frame06Copy1CopyCopy, false) 
+call BlzFrameSetEnable(Frame06Copy1CopyCopy, true) 
+endfunction 
+ 
+function Frame06Copy1CopyCopyCopyFunc takes nothing returns nothing 
+call BlzFrameSetEnable(Frame06Copy1CopyCopyCopy, false) 
+call BlzFrameSetEnable(Frame06Copy1CopyCopyCopy, true) 
+endfunction 
+ 
 function Frame011Func takes nothing returns nothing 
 call BlzFrameSetEnable(Frame011, false) 
 call BlzFrameSetEnable(Frame011, true) 
@@ -79,13 +107,13 @@ private function init takes nothing returns nothing
 
 call BlzLoadTOCFile(".toc")
 set Frame02 = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame02, FRAMEPOINT_TOPLEFT, 0.137450, 0.527022) 
- call BlzFrameSetAbsPoint(Frame02, FRAMEPOINT_BOTTOMRIGHT, 0.470640, 0.497740) 
+ call BlzFrameSetAbsPoint(Frame02, FRAMEPOINT_TOPLEFT, 0.138000, 0.528122) 
+ call BlzFrameSetAbsPoint(Frame02, FRAMEPOINT_BOTTOMRIGHT, 0.471190, 0.498840) 
  call BlzFrameSetText(Frame02, "|cffffffff-load xxxx|r") 
 
 set Frame06 = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame06, FRAMEPOINT_TOPLEFT, 0.477820, 0.527022) 
- call BlzFrameSetAbsPoint(Frame06, FRAMEPOINT_BOTTOMRIGHT, 0.536943, 0.497740) 
+ call BlzFrameSetAbsPoint(Frame06, FRAMEPOINT_TOPLEFT, 0.477820, 0.528122) 
+ call BlzFrameSetAbsPoint(Frame06, FRAMEPOINT_BOTTOMRIGHT, 0.536943, 0.498840) 
  call BlzFrameSetText(Frame06, "|cffFCD20DUpdate|r") 
 call BlzFrameSetScale(Frame06, 1.00) 
  set TriggerFrame06 = CreateTrigger() 
@@ -93,8 +121,8 @@ call BlzFrameSetScale(Frame06, 1.00)
  call TriggerAddAction(TriggerFrame06, function Frame06Func) 
 
 set Frame08 = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame08, FRAMEPOINT_TOPLEFT, 0.540810, 0.527022) 
- call BlzFrameSetAbsPoint(Frame08, FRAMEPOINT_BOTTOMRIGHT, 0.599933, 0.497740) 
+ call BlzFrameSetAbsPoint(Frame08, FRAMEPOINT_TOPLEFT, 0.540810, 0.528122) 
+ call BlzFrameSetAbsPoint(Frame08, FRAMEPOINT_BOTTOMRIGHT, 0.599933, 0.498840) 
  call BlzFrameSetText(Frame08, "|cffFCD20DLoad|r") 
 call BlzFrameSetScale(Frame08, 1.00) 
  set TriggerFrame08 = CreateTrigger() 
@@ -111,8 +139,8 @@ call BlzFrameSetScale(Frame010, 1.00)
  call TriggerAddAction(TriggerFrame010, function Frame010Func) 
 
 set Frame06Copy = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame06Copy, FRAMEPOINT_TOPLEFT, 0.601040, 0.526469) 
- call BlzFrameSetAbsPoint(Frame06Copy, FRAMEPOINT_BOTTOMRIGHT, 0.660163, 0.497740) 
+ call BlzFrameSetAbsPoint(Frame06Copy, FRAMEPOINT_TOPLEFT, 0.601040, 0.528122) 
+ call BlzFrameSetAbsPoint(Frame06Copy, FRAMEPOINT_BOTTOMRIGHT, 0.660163, 0.498840) 
  call BlzFrameSetText(Frame06Copy, "|cffFCD20DSave Into File|r") 
 call BlzFrameSetScale(Frame06Copy, 1.00) 
  set TriggerFrame06Copy = CreateTrigger() 
@@ -120,23 +148,23 @@ call BlzFrameSetScale(Frame06Copy, 1.00)
  call TriggerAddAction(TriggerFrame06Copy, function Frame06CopyFunc) 
 
 set Frame02Copy = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame02Copy, FRAMEPOINT_TOPLEFT, 0.134680, 0.485017) 
- call BlzFrameSetAbsPoint(Frame02Copy, FRAMEPOINT_BOTTOMRIGHT, 0.468970, 0.445790) 
+ call BlzFrameSetAbsPoint(Frame02Copy, FRAMEPOINT_TOPLEFT, 0.137450, 0.475072) 
+ call BlzFrameSetAbsPoint(Frame02Copy, FRAMEPOINT_BOTTOMRIGHT, 0.470640, 0.445790) 
  call BlzFrameSetText(Frame02Copy, "|cffffffff-loadi xxxx|r") 
 
 set Frame02CopyCopy = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame02CopyCopy, FRAMEPOINT_TOPLEFT, 0.135240, 0.437497) 
- call BlzFrameSetAbsPoint(Frame02CopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.472300, 0.398270) 
+ call BlzFrameSetAbsPoint(Frame02CopyCopy, FRAMEPOINT_TOPLEFT, 0.137450, 0.427552) 
+ call BlzFrameSetAbsPoint(Frame02CopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.470640, 0.398270) 
  call BlzFrameSetText(Frame02CopyCopy, "|cffffffff-loadu xxxx|r") 
 
 set Frame02CopyCopyCopy = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame02CopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.133580, 0.391087) 
- call BlzFrameSetAbsPoint(Frame02CopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.472290, 0.351860) 
+ call BlzFrameSetAbsPoint(Frame02CopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.137450, 0.395532) 
+ call BlzFrameSetAbsPoint(Frame02CopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.470640, 0.366250) 
  call BlzFrameSetText(Frame02CopyCopyCopy, "|cffffffff-loadb xxxx|r") 
 
 set Frame02CopyCopyCopyCopy = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
- call BlzFrameSetAbsPoint(Frame02CopyCopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.130820, 0.343577) 
- call BlzFrameSetAbsPoint(Frame02CopyCopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.475060, 0.304350) 
+ call BlzFrameSetAbsPoint(Frame02CopyCopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.137450, 0.333632) 
+ call BlzFrameSetAbsPoint(Frame02CopyCopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.470640, 0.304350) 
  call BlzFrameSetText(Frame02CopyCopyCopyCopy, "|cffffffff-loadr xxxx|r") 
 
 set Frame06CopyCopy = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
@@ -148,41 +176,77 @@ call BlzFrameSetScale(Frame06CopyCopy, 1.00)
  call BlzTriggerRegisterFrameEvent(TriggerFrame06CopyCopy, Frame06CopyCopy, FRAMEEVENT_CONTROL_CLICK) 
  call TriggerAddAction(TriggerFrame06CopyCopy, function Frame06CopyCopyFunc) 
 
+set Frame06Copy1 = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
+ call BlzFrameSetAbsPoint(Frame06Copy1, FRAMEPOINT_TOPLEFT, 0.477820, 0.478952) 
+ call BlzFrameSetAbsPoint(Frame06Copy1, FRAMEPOINT_BOTTOMRIGHT, 0.536943, 0.449670) 
+ call BlzFrameSetText(Frame06Copy1, "|cffFCD20DUpdate|r") 
+call BlzFrameSetScale(Frame06Copy1, 1.00) 
+ set TriggerFrame06Copy1 = CreateTrigger() 
+ call BlzTriggerRegisterFrameEvent(TriggerFrame06Copy1, Frame06Copy1, FRAMEEVENT_CONTROL_CLICK) 
+ call TriggerAddAction(TriggerFrame06Copy1, function Frame06Copy1Func) 
+
+set Frame06Copy1Copy = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
+ call BlzFrameSetAbsPoint(Frame06Copy1Copy, FRAMEPOINT_TOPLEFT, 0.479480, 0.432542) 
+ call BlzFrameSetAbsPoint(Frame06Copy1Copy, FRAMEPOINT_BOTTOMRIGHT, 0.538603, 0.403260) 
+ call BlzFrameSetText(Frame06Copy1Copy, "|cffFCD20DUpdate|r") 
+call BlzFrameSetScale(Frame06Copy1Copy, 1.00) 
+ set TriggerFrame06Copy1Copy = CreateTrigger() 
+ call BlzTriggerRegisterFrameEvent(TriggerFrame06Copy1Copy, Frame06Copy1Copy, FRAMEEVENT_CONTROL_CLICK) 
+ call TriggerAddAction(TriggerFrame06Copy1Copy, function Frame06Copy1CopyFunc) 
+
+set Frame06Copy1CopyCopy = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
+ call BlzFrameSetAbsPoint(Frame06Copy1CopyCopy, FRAMEPOINT_TOPLEFT, 0.480030, 0.393322) 
+ call BlzFrameSetAbsPoint(Frame06Copy1CopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.539153, 0.364040) 
+ call BlzFrameSetText(Frame06Copy1CopyCopy, "|cffFCD20DUpdate|r") 
+call BlzFrameSetScale(Frame06Copy1CopyCopy, 1.00) 
+ set TriggerFrame06Copy1CopyCopy = CreateTrigger() 
+ call BlzTriggerRegisterFrameEvent(TriggerFrame06Copy1CopyCopy, Frame06Copy1CopyCopy, FRAMEEVENT_CONTROL_CLICK) 
+ call TriggerAddAction(TriggerFrame06Copy1CopyCopy, function Frame06Copy1CopyCopyFunc) 
+
+set Frame06Copy1CopyCopyCopy = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0) 
+ call BlzFrameSetAbsPoint(Frame06Copy1CopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.479480, 0.335312) 
+ call BlzFrameSetAbsPoint(Frame06Copy1CopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.538603, 0.306030) 
+ call BlzFrameSetText(Frame06Copy1CopyCopyCopy, "|cffFCD20DUpdate|r") 
+call BlzFrameSetScale(Frame06Copy1CopyCopyCopy, 1.00) 
+ set TriggerFrame06Copy1CopyCopyCopy = CreateTrigger() 
+ call BlzTriggerRegisterFrameEvent(TriggerFrame06Copy1CopyCopyCopy, Frame06Copy1CopyCopyCopy, FRAMEEVENT_CONTROL_CLICK) 
+ call TriggerAddAction(TriggerFrame06Copy1CopyCopyCopy, function Frame06Copy1CopyCopyCopyFunc) 
+
 set Frame04 = BlzCreateFrameByType("TEXT", "name", Frame02, "", 0) 
-call BlzFrameSetAbsPoint(Frame04, FRAMEPOINT_TOPLEFT, 0.0540120, 0.527022) 
-call BlzFrameSetAbsPoint(Frame04, FRAMEPOINT_BOTTOMRIGHT, 0.112030, 0.497740) 
+call BlzFrameSetAbsPoint(Frame04, FRAMEPOINT_TOPLEFT, 0.0750090, 0.528122) 
+call BlzFrameSetAbsPoint(Frame04, FRAMEPOINT_BOTTOMRIGHT, 0.133027, 0.498840) 
 call BlzFrameSetText(Frame04, "|cffFFCC00Load Heroes:\n|r") 
 call BlzFrameSetEnable(Frame04, false) 
 call BlzFrameSetScale(Frame04, 1.00) 
 call BlzFrameSetTextAlignment(Frame04, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT) 
 
 set Frame04Copy = BlzCreateFrameByType("TEXT", "name", Frame02, "", 0) 
-call BlzFrameSetAbsPoint(Frame04Copy, FRAMEPOINT_TOPLEFT, 0.0562220, 0.482809) 
-call BlzFrameSetAbsPoint(Frame04Copy, FRAMEPOINT_BOTTOMRIGHT, 0.114240, 0.447450) 
+call BlzFrameSetAbsPoint(Frame04Copy, FRAMEPOINT_TOPLEFT, 0.0739040, 0.487242) 
+call BlzFrameSetAbsPoint(Frame04Copy, FRAMEPOINT_BOTTOMRIGHT, 0.131922, 0.457960) 
 call BlzFrameSetText(Frame04Copy, "|cffFFCC00Load Items:\n|r") 
 call BlzFrameSetEnable(Frame04Copy, false) 
 call BlzFrameSetScale(Frame04Copy, 1.00) 
 call BlzFrameSetTextAlignment(Frame04Copy, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT) 
 
 set Frame04CopyCopy = BlzCreateFrameByType("TEXT", "name", Frame02, "", 0) 
-call BlzFrameSetAbsPoint(Frame04CopyCopy, FRAMEPOINT_TOPLEFT, 0.0562220, 0.438059) 
-call BlzFrameSetAbsPoint(Frame04CopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.114240, 0.402700) 
+call BlzFrameSetAbsPoint(Frame04CopyCopy, FRAMEPOINT_TOPLEFT, 0.0744560, 0.438182) 
+call BlzFrameSetAbsPoint(Frame04CopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.132474, 0.408900) 
 call BlzFrameSetText(Frame04CopyCopy, "|cffFFCC00Load Units:\n|r") 
 call BlzFrameSetEnable(Frame04CopyCopy, false) 
 call BlzFrameSetScale(Frame04CopyCopy, 1.00) 
 call BlzFrameSetTextAlignment(Frame04CopyCopy, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT) 
 
 set Frame04CopyCopyCopy = BlzCreateFrameByType("TEXT", "name", Frame02, "", 0) 
-call BlzFrameSetAbsPoint(Frame04CopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.0567740, 0.394409) 
-call BlzFrameSetAbsPoint(Frame04CopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.114792, 0.359050) 
+call BlzFrameSetAbsPoint(Frame04CopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.0744560, 0.395532) 
+call BlzFrameSetAbsPoint(Frame04CopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.132474, 0.366250) 
 call BlzFrameSetText(Frame04CopyCopyCopy, "|cffFFCC00Load Buildings:\n|r") 
 call BlzFrameSetEnable(Frame04CopyCopyCopy, false) 
 call BlzFrameSetScale(Frame04CopyCopyCopy, 1.00) 
 call BlzFrameSetTextAlignment(Frame04CopyCopyCopy, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT) 
 
 set Frame04CopyCopyCopyCopy = BlzCreateFrameByType("TEXT", "name", Frame02, "", 0) 
-call BlzFrameSetAbsPoint(Frame04CopyCopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.0584320, 0.342479) 
-call BlzFrameSetAbsPoint(Frame04CopyCopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.116450, 0.307120) 
+call BlzFrameSetAbsPoint(Frame04CopyCopyCopyCopy, FRAMEPOINT_TOPLEFT, 0.0744560, 0.344092) 
+call BlzFrameSetAbsPoint(Frame04CopyCopyCopyCopy, FRAMEPOINT_BOTTOMRIGHT, 0.132474, 0.314810) 
 call BlzFrameSetText(Frame04CopyCopyCopyCopy, "|cffFFCC00Load Researches:\n|r") 
 call BlzFrameSetEnable(Frame04CopyCopyCopyCopy, false) 
 call BlzFrameSetScale(Frame04CopyCopyCopyCopy, 1.00) 

@@ -21,6 +21,7 @@ globals
     constant integer NAGA_HOUSING                                    = 'h00Q'
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
+	constant integer RESEARCH_TENT                                   = 'n042'
 	
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
@@ -139,6 +140,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
 	call SetBuildUnit( 3, NAGA_GUARDIAN )
 	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
 	
 	call SetBuildUpgr( 3, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 3, UPG_NAGA_ATTACK )
