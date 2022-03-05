@@ -153,6 +153,7 @@ This version provides several new features compared to the original map [World o
 * New race Goblins.
 * Chat command "-racerepick" to repick your first race as Warlord.
 * New building Research Tent for all races.
+* Chat command "-savec" to generate savecodes into files without printing information for a long time.
 
 ## Bug Fixes
 
@@ -313,3 +314,12 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Kuhneghetz: [Female Goblin](https://www.hiveworkshop.com/threads/female-goblin.178045/)
 * Blizzard Entertainment, skymarshall: [Goblin Factory](https://www.hiveworkshop.com/threads/goblin-factory.266460/)
 * Hayate: [Ogre Goblin Cannon Squad](https://www.hiveworkshop.com/threads/ogre-goblin-cannon-squad.286291/)
+* donut3.5: [Goblin Mobile Turret](https://www.hiveworkshop.com/threads/goblin-mobile-turret.48613/)
+* donut3.5: [Goblin Steamroller](https://www.hiveworkshop.com/threads/goblin-steamroller.48702/)
+* Shardeth: [Gatling Canon](https://www.hiveworkshop.com/threads/gatling-canon.305397/)
+* SantoRayo[iP]: [bohrturm](https://www.hiveworkshop.com/threads/bohrturm.49544/)
+* SantoRayo[iP]: [bohrturm](https://www.hiveworkshop.com/threads/bohrturm.49544/)
+* 8512590215848: [BTNOilStation](https://www.hiveworkshop.com/threads/btnoilstation.231515/)
+* kellym0, MiniMage: [GoblinHammerheadSubmarine](https://www.hiveworkshop.com/threads/goblinhammerheadsubmarine.253628/)
+* donut3.5: [Goblin Rocket Rider 2](https://www.hiveworkshop.com/threads/goblin-rocket-rider-2.48352/)
+* General Frank: [Goblin Bewm Bewm Tank - The Boomer Retooled](https://www.hiveworkshop.com/threads/goblin-bewm-bewm-tank-the-boomer-retooled.264088/)

@@ -3415,11 +3415,11 @@ endfunction
 
 function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns string
     local location tmpLocation = Location(0.0, 0.0)
-    local group redDragons = CreateNUnitsAtLoc(10, 'nrwm', whichPlayer, tmpLocation, 0.0)
-    local group greenDragons = CreateNUnitsAtLoc(10, 'ngrd', whichPlayer, tmpLocation, 0.0)
-    local group blackDragons = CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0)
-    local group blueDragons = CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0)
-    local group bronzeDragons = CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0)
+    local group redDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nrwm', whichPlayer, tmpLocation, 0.0))
+    local group greenDragons = CopyGroup(CreateNUnitsAtLoc(10, 'ngrd', whichPlayer, tmpLocation, 0.0))
+    local group blackDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0))
+    local group blueDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0))
+    local group bronzeDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0))
     local group allDragons = CreateGroup()
     local group allDragonsDistinct
     local string result
@@ -3429,7 +3429,11 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     call GroupAddGroup(blueDragons, allDragons)
     call GroupAddGroup(bronzeDragons, allDragons)
 
+    call BJDebugMsg("All dragons group with size " + I2S(CountUnitsInGroup(allDragons)))
+
     set allDragonsDistinct = DistinctGroup(allDragons)
+
+    call BJDebugMsg("All dragons distinct group with size " + I2S(CountUnitsInGroup(allDragonsDistinct)))
 
     set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
 
@@ -4226,6 +4230,7 @@ function InitStandardRaceObjectTypes takes nothing returns nothing
     call SetRaceObjectType(udg_RaceDemon, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02N')
     call SetRaceObjectType(udg_RaceDraenei, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02O')
     call SetRaceObjectType(udg_RaceFurbolg, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
+    call SetRaceObjectType(udg_RaceGoblin, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
 
    // tier 2 item
    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2_ITEM, 'tcas')
