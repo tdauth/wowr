@@ -10,9 +10,11 @@ globals
 
 	constant integer NAGA_MURLOC_HUT                                 = 'o008' // lumber mill and blacksmith
 	constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
+	constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
 
 	constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
 	constant integer UPG_NAGA_BACKPACK                               = 'R01E'
+	constant integer UPG_STATUE_OF_AZSHARA                           = 'R02B' // special building
 
     constant integer NAGA_CITIZEN_MALE                               = 'n00M'
     constant integer NAGA_CITIZEN_FEMALE                             = 'n00N'
@@ -259,6 +261,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 2, UPG_NAGA_ABOLISH )
 	call SetBuildUpgr( 2, UPG_SIREN )
 	call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
+    call SetBuildUpgr( 1, UPG_STATUE_OF_AZSHARA )
+	call SetBuildUnit( 1, NAGA_STATUE_OF_ASZHARA )
+
 
 	call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
 	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
