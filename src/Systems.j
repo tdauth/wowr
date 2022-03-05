@@ -3421,6 +3421,7 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     local group blueDragons = CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0)
     local group bronzeDragons = CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0)
     local group allDragons = CreateGroup()
+    local group allDragonsDistinct
     local string result
     call GroupAddGroup(redDragons, allDragons)
     call GroupAddGroup(greenDragons, allDragons)
@@ -3428,7 +3429,9 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     call GroupAddGroup(blueDragons, allDragons)
     call GroupAddGroup(bronzeDragons, allDragons)
 
-    set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragons)
+    set allDragonsDistinct = DistinctGroup(allDragons)
+
+    set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
 
     call ForGroupBJ(allDragons, function ForGroupRemoveUnit)
 
@@ -3455,6 +3458,10 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     call GroupClear(allDragons)
     call DestroyGroup(allDragons)
     set allDragons = null
+
+    call GroupClear(allDragonsDistinct)
+    call DestroyGroup(allDragonsDistinct)
+    set allDragonsDistinct = null
 
     call RemoveLocation(tmpLocation)
     set tmpLocation = null
@@ -3988,6 +3995,62 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
 
+function GetFarmBuildingID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hhou'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'otrb'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'uzig'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'emow'
+    endif
+
+    return 0
+endfunction
+
+function IsFarmBuildingID takes integer buildingID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (buildingID == GetFarmBuildingID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+function GetAltarBuildingID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'halt'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'oalt'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'uaod'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'eate'
+    endif
+
+    return 0
+endfunction
+
+function IsAltarBuildingID takes integer buildingID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (buildingID == GetAltarBuildingID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
 function GetTier1BuildingID takes integer whichRace returns integer
     if (whichRace == udg_RaceHuman) then
         return 'htow'
@@ -4043,7 +4106,7 @@ function GetBuildingRace takes integer buildingID returns integer
     local integer i = 0
     loop
         exitwhen (i == udg_Max_Voelker)
-        if (GetTier1BuildingID(i) == buildingID or GetTier2BuildingID(i) == buildingID) then
+        if (GetFarmBuildingID(i) == buildingID or GetAltarBuildingID(i) == buildingID or GetTier1BuildingID(i) == buildingID or GetTier2BuildingID(i) == buildingID) then
             return i
         endif
         set i = i + 1
@@ -4100,6 +4163,65 @@ function GetItemRace takes integer itemID returns integer
 
     return udg_RaceNone
 endfunction
+
+
+function GetWorkerUnitID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hpea'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'opeo'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'uaco'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'ewsp'
+    endif
+
+    return 0
+endfunction
+
+function IsWorkerUnitID takes integer unitID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (unitID == GetWorkerUnitID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+
+function GetMaleCitizenUnitID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'n00E'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'n00I'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'n00G'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'n00O'
+    endif
+
+    return 0
+endfunction
+
+function IsMaleCitizenUnitID takes integer unitID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (unitID == GetMaleCitizenUnitID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
 
 function GetFootmanUnitID takes integer whichRace returns integer
     if (whichRace == udg_RaceHuman) then
@@ -4190,7 +4312,7 @@ function GetUnitIDRace takes integer unitID returns integer
     local integer i = 0
     loop
         exitwhen (i == udg_Max_Voelker)
-        if (GetFootmanUnitID(i) == unitID or GetRiflemanUnitID(i) == unitID or GetKnightUnitID(i) == unitID) then
+        if (GetWorkerUnitID(i) == unitID or GetMaleCitizenUnitID(i) == unitID or GetFootmanUnitID(i) == unitID or GetRiflemanUnitID(i) == unitID or GetKnightUnitID(i) == unitID) then
             return i
         endif
         set i = i + 1
@@ -4200,7 +4322,11 @@ function GetUnitIDRace takes integer unitID returns integer
 endfunction
 
 function MapBuildingID takes integer buildingID, integer targetRace returns integer
-    if (IsTier1BuildingID(buildingID)) then
+    if (IsFarmBuildingID(buildingID)) then
+        return GetFarmBuildingID(targetRace)
+    elseif (IsAltarBuildingID(buildingID)) then
+        return GetAltarBuildingID(targetRace)
+    elseif (IsTier1BuildingID(buildingID)) then
         return GetTier1BuildingID(targetRace)
     elseif (IsTier2BuildingID(buildingID)) then
         return GetTier2BuildingID(targetRace)
@@ -4224,7 +4350,15 @@ function MapBuildingIDToItemID takes integer buildingID, integer targetRace retu
     return 0
 endfunction
 
-function MapUnitID takes integer unitID, integer targetRace returns integer
+function MapUnitID takes integer unitID, integer targetRace, boolean includingWorkers returns integer
+    if (includingWorkers) then
+        if (IsWorkerUnitID(unitID)) then
+            return GetWorkerUnitID(targetRace)
+        elseif (IsMaleCitizenUnitID(unitID)) then
+            return GetMaleCitizenUnitID(targetRace)
+        endif
+    endif
+
     if (IsFootmanUnitID(unitID)) then
         return GetFootmanUnitID(targetRace)
     elseif (IsRiflemanUnitID(unitID)) then

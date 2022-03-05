@@ -1,6 +1,6 @@
 # World of Warcraft Reforged
 
-Open world role-playing game funmap for Warcraft III: Reforged featuring computer AI support which allows you to play the map offline.
+Open world role-playing game funmap for Warcraft III: Reforged based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/) featuring computer AI support which allows you to play the map offline.
 
 ## Play the Map
 
@@ -9,7 +9,7 @@ Open world role-playing game funmap for Warcraft III: Reforged featuring compute
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
 * [Current development version](./wowr2.0.w3x)
 
-*Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues.
+*Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
 ## How to Play
 
@@ -29,7 +29,7 @@ It is always more fun if you communicate with other players and think of your ow
 
 ## New Features
 
-This version provides several new features compared to the original map:
+This version provides several new features compared to the original map [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/):
 
 * 24 players instead of 10.
 * Backpack system.
@@ -151,6 +151,7 @@ This version provides several new features compared to the original map:
 * Chat command "-passive" which enables passive mode against enemy players.
 * New island Kezan with boss Rumblefitz.
 * New race Goblins.
+* Chat command "-racerepick" to repick your first race as Warlord.
 
 ## Bug Fixes
 
