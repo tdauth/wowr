@@ -154,6 +154,7 @@ This version provides several new features compared to the original map [World o
 * Chat command "-racerepick" to repick your first race as Warlord.
 * New building Research Tent for all races.
 * Chat command "-savec" to generate savecodes into files without printing information for a long time.
+* Chat commands "-saveautoon/off" to auto save the hero.
 
 ## Bug Fixes
 
