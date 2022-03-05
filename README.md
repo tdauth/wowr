@@ -155,7 +155,7 @@ This version provides several new features compared to the original map [World o
 
 ## Bug Fixes
 
-This version contains fixes of several bugs from the original map:
+This version contains fixes of several bugs from the original map [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/):
 
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
