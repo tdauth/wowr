@@ -4051,6 +4051,62 @@ function IsAltarBuildingID takes integer buildingID returns boolean
     return matched
 endfunction
 
+function GetMillBuildingID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hlum'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'ofor'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'ugrv'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'edob'
+    endif
+
+    return 0
+endfunction
+
+function IsMillBuildingID takes integer buildingID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (buildingID == GetMillBuildingID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
+function GetBarracksBuildingID takes integer whichRace returns integer
+    if (whichRace == udg_RaceHuman) then
+        return 'hbar'
+    elseif (whichRace == udg_RaceOrc) then
+        return 'obar'
+    elseif (whichRace == udg_RaceUndead) then
+        return 'usep'
+    elseif (whichRace == udg_RaceNightElf) then
+        return 'eaom'
+    endif
+
+    return 0
+endfunction
+
+function IsBarracksBuildingID takes integer buildingID returns boolean
+    local boolean matched = false
+    local integer i = 0
+    loop
+        exitwhen (i == udg_Max_Voelker or matched)
+        if (buildingID == GetBarracksBuildingID(i)) then
+            set matched = true
+        endif
+        set i = i + 1
+    endloop
+
+    return matched
+endfunction
+
 function GetTier1BuildingID takes integer whichRace returns integer
     if (whichRace == udg_RaceHuman) then
         return 'htow'
@@ -4106,7 +4162,7 @@ function GetBuildingRace takes integer buildingID returns integer
     local integer i = 0
     loop
         exitwhen (i == udg_Max_Voelker)
-        if (GetFarmBuildingID(i) == buildingID or GetAltarBuildingID(i) == buildingID or GetTier1BuildingID(i) == buildingID or GetTier2BuildingID(i) == buildingID) then
+        if (GetFarmBuildingID(i) == buildingID or GetAltarBuildingID(i) == buildingID or GetMillBuildingID(i) == buildingID or GetBarracksBuildingID(i) == buildingID or GetTier1BuildingID(i) == buildingID or GetTier2BuildingID(i) == buildingID) then
             return i
         endif
         set i = i + 1
@@ -4326,6 +4382,10 @@ function MapBuildingID takes integer buildingID, integer targetRace returns inte
         return GetFarmBuildingID(targetRace)
     elseif (IsAltarBuildingID(buildingID)) then
         return GetAltarBuildingID(targetRace)
+    elseif (IsMillBuildingID(buildingID)) then
+        return GetMillBuildingID(targetRace)
+    elseif (IsBarracksBuildingID(buildingID)) then
+        return GetBarracksBuildingID(targetRace)
     elseif (IsTier1BuildingID(buildingID)) then
         return GetTier1BuildingID(targetRace)
     elseif (IsTier2BuildingID(buildingID)) then
