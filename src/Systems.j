@@ -3021,7 +3021,7 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
     local integer count = 0
     local string unitNames = ""
 
-    call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
+    //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
@@ -3063,9 +3063,9 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
             call DestroyGroup(tmpGroup)
             set tmpGroup = null
             set unitsCounter = unitsCounter + 1
-            call BJDebugMsg("Added " + GetUnitName(first) + " with count " + I2S(count))
+            //call BJDebugMsg("Added " + GetUnitName(first) + " with count " + I2S(count))
         else
-            call BJDebugMsg("Not registered save object type for " + GetUnitName(first))
+            //call BJDebugMsg("Not registered save object type for " + GetUnitName(first))
         endif
         call GroupRemoveUnit(units, first)
         set i = i + 1
@@ -3420,6 +3420,7 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     local group blackDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0))
     local group blueDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0))
     local group bronzeDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0))
+    local group netherDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nndr', whichPlayer, tmpLocation, 0.0))
     local group allDragons = CreateGroup()
     local group allDragonsDistinct
     local string result
@@ -3428,12 +3429,9 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     call GroupAddGroup(blackDragons, allDragons)
     call GroupAddGroup(blueDragons, allDragons)
     call GroupAddGroup(bronzeDragons, allDragons)
-
-    call BJDebugMsg("All dragons group with size " + I2S(CountUnitsInGroup(allDragons)))
+    call GroupAddGroup(netherDragons, allDragons)
 
     set allDragonsDistinct = DistinctGroup(allDragons)
-
-    call BJDebugMsg("All dragons distinct group with size " + I2S(CountUnitsInGroup(allDragonsDistinct)))
 
     set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
 
@@ -3458,6 +3456,10 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     call GroupClear(bronzeDragons)
     call DestroyGroup(bronzeDragons)
     set bronzeDragons = null
+
+    call GroupClear(netherDragons)
+    call DestroyGroup(netherDragons)
+    set netherDragons = null
 
     call GroupClear(allDragons)
     call DestroyGroup(allDragons)
