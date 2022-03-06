@@ -1,0 +1,1120 @@
+3/5 23:17:46.781  GameMain Started
+3/5 23:17:46.781  Command Line: "C:\Program Files (x86)\Warcraft III\_retail_\x86_64\Warcraft III.exe" -launch -uid w3
+3/5 23:17:46.781  Current Directory: "C:\Program Files (x86)\Warcraft III\_retail_"
+3/5 23:17:47.472  prism: Info: name: NVIDIA GeForce RTX 3070
+3/5 23:17:47.472  prism: Info: driverVersion: 0x00000000000e1c70
+3/5 23:17:47.472  prism: Info: vendorId: NVidia
+3/5 23:17:47.472  prism: Info: deviceId: 0x2484
+3/5 23:17:47.472  prism: Info: subsystemVendorId: 0x174b
+3/5 23:17:47.472  prism: Info: subsystemId: 0xa617
+3/5 23:17:47.472  prism: Info: revisionId: 0xa1
+3/5 23:17:47.472  prism: Info: type: Discrete
+3/5 23:17:47.472  prism: Info: luid: 00000000000102d4
+3/5 23:17:47.472  prism: Info: index: 0
+3/5 23:17:47.472  prism: Info: api: Dx11
+3/5 23:17:47.472  prism: Info: vendorId: NVidia
+3/5 23:17:47.472  prism: Info: deviceId: 0x2484
+3/5 23:17:47.472  prism: Info: nvidia.family: Turing
+3/5 23:17:47.472  prism: Info: nvidia.driverVersion: 472.80
+3/5 23:17:47.472  prism: Info: windowsVersion: 10
+3/5 23:17:47.472  prism: Info: windowsBuildNumber: 19043
+3/5 23:17:47.472  prism: Info: dxFeatureLevel: 11.1
+3/5 23:17:47.472  prism: Info: typedUavLoadAdditionalFormats: 1
+3/5 23:17:47.472  prism: Info: preferredShaderModel: Dx50
+3/5 23:17:47.472  prism: Info: supportedShaderModels:
+3/5 23:17:47.472  prism: Info:   Dx40Level91
+3/5 23:17:47.472  prism: Info:   Dx40Level93
+3/5 23:17:47.472  prism: Info:   Dx40
+3/5 23:17:47.472  prism: Info:   Dx41
+3/5 23:17:47.472  prism: Info:   Dx50
+3/5 23:17:47.472  prism: Info: maxBufferSize: 2107637760
+3/5 23:17:47.472  prism: Info: max1dTextureSize: 16384
+3/5 23:17:47.472  prism: Info: max2dTextureSize: 16384
+3/5 23:17:47.472  prism: Info: maxCubeTextureSize: 16384
+3/5 23:17:47.472  prism: Info: max3dTextureSize: 2048
+3/5 23:17:47.472  prism: Info: maxArrayLayers: 2048
+3/5 23:17:47.472  prism: Info: maxConstantBufferRange: 65536
+3/5 23:17:47.472  prism: Info: maxTypedBufferRange: 2107637760
+3/5 23:17:47.472  prism: Info: maxStructuredBufferRange: 2107637760
+3/5 23:17:47.472  prism: Info: constantBufferOffsetAlign: 256
+3/5 23:17:47.472  prism: Info: typedBufferOffsetAlign: 16
+3/5 23:17:47.472  prism: Info: structuredBufferOffsetAlign: 16
+3/5 23:17:47.472  prism: Info: drawIndirectArgsAlign: 4
+3/5 23:17:47.472  prism: Info: dispatchIndirectArgsAlign: 4
+3/5 23:17:47.472  prism: Info: bufferTextureCopyRowPitchAlign: 256
+3/5 23:17:47.472  prism: Info: bufferTextureCopyOffsetAlign: 1024
+3/5 23:17:47.472  prism: Info: maxAnisotropy: 16
+3/5 23:17:47.472  prism: Info: maxColorAttachments: 8
+3/5 23:17:47.472  prism: Info: maxVertexShaderAttributes: 32
+3/5 23:17:47.472  prism: Info: maxViewportExtent: 65535x65535
+3/5 23:17:47.472  prism: Info: minViewportBounds: -32768
+3/5 23:17:47.472  prism: Info: maxViewportBounds: 32767
+3/5 23:17:47.472  prism: Info: minLodBias: -16
+3/5 23:17:47.472  prism: Info: maxLodBias: 15.99
+3/5 23:17:47.472  prism: Info: maxLodSnap: 0
+3/5 23:17:47.472  prism: Info: shaderRWTier: 5
+3/5 23:17:47.472  prism: Info: resourceBindingTier: 0
+3/5 23:17:47.472  prism: Info: resourceHeapTier: 0
+3/5 23:17:47.472  prism: Info: raytracingTier: 0
+3/5 23:17:47.472  prism: Info: minMaxFilterOps: 1
+3/5 23:17:47.472  prism: Info: mirrorOnce: 1
+3/5 23:17:47.472  prism: Info: borderColor: 1
+3/5 23:17:47.472  prism: Info: minLod: 1
+3/5 23:17:47.472  prism: Info: maxLod: 1
+3/5 23:17:47.472  prism: Info: fractionalMinLod: 1
+3/5 23:17:47.472  prism: Info: lodBias: 1
+3/5 23:17:47.472  prism: Info: dualSrcBlend: 1
+3/5 23:17:47.472  prism: Info: separateAlphaBlend: 1
+3/5 23:17:47.472  prism: Info: alphaToCoverage: 1
+3/5 23:17:47.472  prism: Info: independentBlend: 1
+3/5 23:17:47.472  prism: Info: wireframe: 1
+3/5 23:17:47.472  prism: Info: depthBiasClamp: 1
+3/5 23:17:47.472  prism: Info: depthClamp: 1
+3/5 23:17:47.472  prism: Info: depthBoundsTest: 1
+3/5 23:17:47.472  prism: Info: geometryShader: 1
+3/5 23:17:47.472  prism: Info: tessellationShader: 1
+3/5 23:17:47.472  prism: Info: computeShader: 1
+3/5 23:17:47.472  prism: Info: programmableSamplePositions: 0
+3/5 23:17:47.472  prism: Info: instancing: 1
+3/5 23:17:47.472  prism: Info: baseVertex: 1
+3/5 23:17:47.472  prism: Info: baseInstance: 1
+3/5 23:17:47.472  prism: Info: drawIndirect: 1
+3/5 23:17:47.472  prism: Info: drawIndirectBaseInstance: 1
+3/5 23:17:47.472  prism: Info: deviceLocalConstantBufferOffsets: 1
+3/5 23:17:47.472  prism: Info: occlusionQueries: 1
+3/5 23:17:47.472  prism: Info: countingOcclusionQueries: 1
+3/5 23:17:47.472  prism: Info: rasterOrderViews: 1
+3/5 23:17:47.472  prism: Info: exclusiveFullscreen: 1
+3/5 23:17:47.472  prism: Info: uma: 0
+3/5 23:17:47.606  Searching for display mode: { display: 0, width: 3840, height: 2160, bpp: 32, refreshrate: 60 }
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 800, height: 600, bpp: 32, refreshrate: 60 }, err: 18874430
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 800, height: 600, bpp: 32, refreshrate: 75 }, err: 18875390
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1024, height: 768, bpp: 32, refreshrate: 60 }, err: 17301566
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1024, height: 768, bpp: 32, refreshrate: 75 }, err: 17302526
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1152, height: 864, bpp: 32, refreshrate: 75 }, err: 16385022
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1176, height: 664, bpp: 32, refreshrate: 60 }, err: 17104958
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 720, bpp: 32, refreshrate: 60 }, err: 16449598
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 768, bpp: 32, refreshrate: 60 }, err: 16252990
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 768, bpp: 32, refreshrate: 75 }, err: 16253950
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 800, bpp: 32, refreshrate: 60 }, err: 16121918
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 800, bpp: 32, refreshrate: 75 }, err: 16122878
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 960, bpp: 32, refreshrate: 60 }, err: 15466558
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1280, height: 960, bpp: 32, refreshrate: 75 }, err: 15467518
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1360, height: 768, bpp: 32, refreshrate: 60 }, err: 15925310
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1366, height: 768, bpp: 32, refreshrate: 60 }, err: 15859774
+3/5 23:17:47.623  Testing Display Mode: { display: 0, width: 1600, height: 900, bpp: 32, refreshrate: 60 }, err: 14352446
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1600, height: 1024, bpp: 32, refreshrate: 24 }, err: 13895998
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1600, height: 1024, bpp: 32, refreshrate: 25 }, err: 13895934
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1600, height: 1024, bpp: 32, refreshrate: 50 }, err: 13894334
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1600, height: 1024, bpp: 32, refreshrate: 60 }, err: 13893694
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1600, height: 1200, bpp: 32, refreshrate: 60 }, err: 13172798
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1680, height: 1050, bpp: 32, refreshrate: 24 }, err: 13437246
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1680, height: 1050, bpp: 32, refreshrate: 25 }, err: 13437182
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1680, height: 1050, bpp: 32, refreshrate: 50 }, err: 13435582
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1680, height: 1050, bpp: 32, refreshrate: 60 }, err: 13434942
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1920, height: 1080, bpp: 32, refreshrate: 24 }, err: 12323134
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1920, height: 1080, bpp: 32, refreshrate: 25 }, err: 12323070
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1920, height: 1080, bpp: 32, refreshrate: 50 }, err: 12321470
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1920, height: 1080, bpp: 32, refreshrate: 60 }, err: 12320830
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1920, height: 1200, bpp: 32, refreshrate: 60 }, err: 11862078
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 1920, height: 1440, bpp: 32, refreshrate: 60 }, err: 10879038
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2048, height: 1280, bpp: 32, refreshrate: 60 }, err: 11010110
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2048, height: 1536, bpp: 32, refreshrate: 24 }, err: 9963838
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2048, height: 1536, bpp: 32, refreshrate: 25 }, err: 9963774
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2048, height: 1536, bpp: 32, refreshrate: 30 }, err: 9963454
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2048, height: 1536, bpp: 32, refreshrate: 60 }, err: 9961534
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2560, height: 1440, bpp: 32, refreshrate: 60 }, err: 8257598
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2560, height: 1600, bpp: 32, refreshrate: 24 }, err: 7604542
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2560, height: 1600, bpp: 32, refreshrate: 25 }, err: 7604478
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2560, height: 1600, bpp: 32, refreshrate: 30 }, err: 7604158
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 2560, height: 1600, bpp: 32, refreshrate: 60 }, err: 7602238
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 3840, height: 2160, bpp: 32, refreshrate: 24 }, err: 2366
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 3840, height: 2160, bpp: 32, refreshrate: 25 }, err: 2302
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 3840, height: 2160, bpp: 32, refreshrate: 30 }, err: 1982
+3/5 23:17:47.625  Testing Display Mode: { display: 0, width: 3840, height: 2160, bpp: 32, refreshrate: 60 }, err: 62
+3/5 23:17:48.234  Error (UI\FrameDef\UI\CommandBar.fdf:66): Expected ",", but found "}"
+3/5 23:17:49.008  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(1)Jetpack_100b.w3x
+3/5 23:17:49.008  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(7)GodsLand.w3x
+3/5 23:17:49.008  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(7)MTG-SC_Version154(1).w3x
+3/5 23:17:49.008  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(7)MTG-SC_Version154.w3x
+3/5 23:17:49.008  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(8) Uther Party vUltima-Q.w3x
+3/5 23:17:49.008  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/- World Of Warcraft - V1.4e.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/04f67595a98141f0dbf9951401866fd100367124/(3)NomadIsles.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/0d72662ca44399bd0e211e089246a31c56759477/(8)Sanctuary_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/14fd6ed089d6cc07166d5d5f429f0fab83f5e46b/(2)ConcealedHill.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/180b80ffa19d78f30b486ae9b696512c03a79240/(2)TerenasStand_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/1e663c44e3e4e85f4e1845ef763b0a35ed98bf2c/(4)TurtleRock.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/30fe439c6ce8fb110265241544a5cb9a5486031e/(8)TwilightRuins_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/31ab2f9b640c5e610e06238e7027c78290a483ad/(8)NorthernFelwood.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/3269a413f617e7630eecb6c2fb8b331e54d0a457/(8)GolemsInTheMist_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/38f93342c0803a02b1c7f5c3cc4e18178f09079c/(4)FurbolgMountain.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/456c74ace47d8d18360b48484df975638b970c66/(2)EchoIsles.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/61c8151356b2ea5142cfb5d338a5920f2e1892d1/(8)GoldRush.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/671ef2d674b962d8dab57b148c30fdf050a247e5/(4)LostTemple_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/6bd4ebfb9bc64a9f7ce845909d815cd23a91f18f/(6)Guardians.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/71fcb4b3973a24301317662a50c7a34defdbff74/(6)Monsoon_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/7274776a3f6585f2530e42c342d77449dbb959d9/(6)StranglethornVale.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/7749df523f535f03c3f5b5e1e663338363b04d05/(8)MarketSquare.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/7a03d4e8419270792d3b09102f757794fc00861d/(6)NeonCity.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/7b993b67bdfe4048d37fab6040fad3f93437f4b2/(2)SwampedTemple.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/83d506c3d526410cb32295b6501d3f7384b70b31/(8)Northshire_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/8649aae5ea520dc14f7f695d19ede773f1d0c2ef/(8)NerubianPassage.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/885d951a51ed4486cc1c9d355e8ab3596ec5318d/(4)TwistedMeadows.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/8b6cb2b88c0eb1e06bad6b9c0ba323ae7fcf97fe/(6)RuinsOfStratholme.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/8bc17c27af6833214866898bc5162ba1a9a97aaf/(8)Mur'gulOasis_LV.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/8ed916737dc5d566db70723b4962f0c0c2bb90a9/(4)HillsbradCreek.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/90c1f3c8a9837ce71f38211a1595a2dfa875e2b1/(6)SilverpineForest.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/93cda6f77054b8b071dae5f60b25d4e08a0e9822/(4)FountainOfManipulation.w3x
+3/5 23:17:49.015  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/951946975093b63d3501396f9e6f33966d22f75f/(6)UpperKingdom.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/9524abb8e35ce7b158bfa4d4b8734234d6073ca5/(2)LastRefuge.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/956c309e026f97f16304f1673ee4d6bca4668ccc/(2)NorthernIsles.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/98288ddc4f333ee0324afd3b8f207ee07caec858/(4)TidewaterGlades_LV.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/9c8963d07e5d9df69a4ad8ef2e6dce1ae15cfeef/(4)CentaurGrove.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/a10c4d07968c27fddfe886cfd3fa9be37e9e9514/(8)Feralas_LV.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ab2ddfdd2593d95f99a1761614a4e38f487a2e34/(4)SynergyBigPaved.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ac729696e5728a111279cd3e398501ecc40f41c1/(6)BloodstoneMesa_LV.w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/AOM-Mythical Arena(v1.6).w3x
+3/5 23:17:49.031  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Azeroth_R-1.05d hotfix.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/b0de93f0f2b12eb280e31d1604d8a29cbefd93a3/(6)GnollWood.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/baed33b772e0406de75c6b9e0f8ae7f99e4bd3fd/(6)TimbermawHold.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Battle of Normandy 1.3.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/bea03c728fc5adfc6833a432d26fa323977e5d44/(5)CircleofFallenHeroes.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/c997162a57be71fe13d67339e9da39514e4edeb0/(8)Deadlock_LV.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/c9cd9e731e68d7cc7567de6bb51d21ff2b816d2a/(4)Avalanche_LV.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/cad0aa8d51c6c228332fdb2b70507bed1836f7b4/(2)BrightwaterOasis.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ce90bcf9fda3b4cecc38652d49c41147b21280a7/(8)Battleground_LV.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/d8aa425e619005400682a680409c13a446e6a308/(4)GreenvilleWoods.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ddee38acb17ca0c372e271ef0dbe684a78d42eb4/(2)Amazonia.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/DisRPGv.B3.07F ENG.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/DotA_v6.86.25.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/e513dcef1fca2cdb22b1f61764dc1779783ed439/(4)Deathrose.w3x
+3/5 23:17:49.052  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Empire Earth 2.3.w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/f1a2bb6d1a8849c78178d8e88a79272ba5050ea2/(6)ThunderLake_LV.w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Favor V4 for Warcraft 3.1.w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/GaiasORPG_v1_2D(5).w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Gods Land Xtreme v1.2.w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Helms Deep/Helm's Deep 6.1b.w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Island Conquest 1.24.w3x
+3/5 23:17:49.067  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/LordaeronWOW (1).w3x
+3/5 23:17:49.088  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/lotr - Dom [20].w3x
+3/5 23:17:49.088  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ManhattanProject2.w3x
+3/5 23:17:49.088  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/minastirith/TheSiegeOfMinasTirith0.6.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Minotaurs-Labyrinth-v1.6.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Moria/Balin's Tomb 2.8.08.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Moria/Curse of Moria - Addon Version.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Moria/Moria-A Journey In The Dark.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Moria/The Mines of Moria.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Naval Battle v1.39d opt.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/roman/PromotionProtected1.24.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/roman/Rome II Total War 1.0.w3x
+3/5 23:17:49.103  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/roman/Travian War v1.02.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/squidgame0.1.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/squidgame1.0.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/opt-STARWARS betka.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/STAR WARS - Defense 1.1.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/Star Wars Battle in Hoth Parte II.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/Star Wars Battle in Hoth.w3x
+3/5 23:17:49.109  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/Star Wars ORPG v1.4.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/Star Wars Revenge.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/StarWarsAoS v2.5.2.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Star Wars/StarWarsTatooine-Final.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewarfare0.1.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewarfare0.2.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewarfare0.3.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewars.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/HeroScoreFrame/HeroScoreFrame 1.5a.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/Talent Jui/Talent Jui V1.35b.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/Talent Jui/Talent Lui V1.36a.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/TasItemshop/TasItemShopUI V4f.w3x
+3/5 23:17:49.127  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/TasItemshop/TasItemShopUI V4k jass.w3x
+3/5 23:17:49.140  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/Unit Info Panels/UnitInfoPanelsV4b jass.w3x
+3/5 23:17:49.140  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/systems/Unit Info Panels/UnitInfoPanelsV4b.w3x
+3/5 23:17:49.140  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/talras1.0.w3x
+3/5 23:17:49.169  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/talras1.1.w3x
+3/5 23:17:49.200  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/tenet0.9.w3x
+3/5 23:17:49.200  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/tenet1.0.w3x
+3/5 23:17:49.202  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TheBigFellowshipQuest 5.0f.w3x
+3/5 23:17:49.202  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TheSiegeOfMinasTirith0.6.w3x
+3/5 23:17:49.222  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TheSiegeOfMinasTirith0.7.w3x
+3/5 23:17:49.222  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Trojan Wall V. 2.0b.w3x
+3/5 23:17:49.222  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UFA Race.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(10)UB_DustwallowKeys_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(10)UB_RagingStream_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(12)UB_DivideAndConquer_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(12)UB_EmeraldGardens_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(12)UB_IceCrown_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(2)UB_BootyBay_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(2)UB_EchoIsles_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(4)UB_DevilsCauldron_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(4)UB_LostTemple_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(4)UB_TwistedMeadows_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(6)UB_Andorhal_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UltimateBattle/(6)UB_GnollWood_slk.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Under Water War (UWW) v1.03(1).w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Under Water War (UWW) v1.03.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/W3ACS v1.0.5.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/War of the Third Age 4.3.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Warcraft Soccer 7.49c.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Warcraft_2_Reforged_(8)Taiga_v126f(1).w3m
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Water War - Submerged.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wc3idleiconsystem.w3x
+3/5 23:17:49.234  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World of War in Warcarft 2.03b.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 2.32 D.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 2.34G.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 2.37B.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 3.6.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reborn.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WorldOfWarcraftTFT1.8.w3x
+3/5 23:17:49.250  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WoW Reanimated 4.2b.w3x
+3/5 23:17:49.272  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.7.w3x
+3/5 23:17:49.287  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.2.w3x
+3/5 23:17:49.306  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.3.w3x
+3/5 23:17:49.325  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.4.w3x
+3/5 23:17:49.343  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.5.w3x
+3/5 23:17:49.362  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.6.w3x
+3/5 23:17:49.383  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.7.w3x
+3/5 23:17:49.403  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.8.w3x
+3/5 23:17:49.423  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.9.w3x
+3/5 23:17:49.443  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.w3x
+3/5 23:17:49.459  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.0.w3x
+3/5 23:17:49.478  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.1.w3x
+3/5 23:17:49.497  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.2.w3x
+3/5 23:17:49.516  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.3.w3x
+3/5 23:17:49.539  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.4.w3x
+3/5 23:17:49.563  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.5.w3x
+3/5 23:17:49.592  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.6.w3x
+3/5 23:17:49.619  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.7.w3x
+3/5 23:17:49.647  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.8.w3x
+3/5 23:17:49.674  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.9.w3x
+3/5 23:17:49.701  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr2.0.w3x
+3/5 23:17:49.766  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowtsr1.5.w3x
+3/5 23:17:49.766  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowtsr1.6.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/X Hero Siege 4.80.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Amazonia.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Arathor.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_AutumnLeaves_v2-0.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Avalanche_LV.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_BanditsRetreat_v1.1.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Battleground.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_BoomTown.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_CircleOfFallenHeroes.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_ConcealedHill.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_dalarangarden.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Deadlock_LV.w3x
+3/5 23:17:49.790  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_DejaVu_v1.43.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_DragonFalls.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_EchoIsles.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_featherville.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Feralas_LV.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_ferocity.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_FountainOfManipulation.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_FrozenMarshlands.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_FullScaleAssault.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_GnollWood.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_GoldRush.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Goldshire.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_GolemsInTheMist_LV.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_GreenvilleWoods.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_HillsbradCreek.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_ImaginaryFriends.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Kal'drassil.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_KingAndCountry.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_LastRefuge.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_LostTemple_LV.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_MarketSquare.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_MesonDeLaTaberna.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Mur'gulOasis_LV.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_NeonCity.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_NerubianPassage.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Nightopia.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_NorthernFelwood.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_NorthernIsles.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_NorthmarshRuin.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Northshire_LV.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_PaintedWorld.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_PhantomGrove_W3C.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_royalgardens.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_RuinsOfAzshara.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Sanctuary_LV.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_ShallowGrave_v1.4.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_ShatteredExile_v2-07.w3x
+3/5 23:17:49.796  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_ShatteredExile_v2.06.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_SilverpineForest.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_Snowblind_v1.1.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_synergy.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_TerenasStand_LV.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_TheConsortium.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_tidehunters.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_tidewaterglades.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_TurtleRock.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_TwilightRuins.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_TwilightRuins_LV.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_TwistedMeadows.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_vilereef.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v10/w3c_WellspringTemple.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Amazonia.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Arathor.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_AutumnLeaves_v2-0.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Avalanche_LV.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_BanditsRetreat_v1.1.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Battleground.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_BoomTown.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_CircleOfFallenHeroes.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_ConcealedHill.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_dalarangarden.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Deadlock_LV.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_DragonFalls.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_EchoIsles.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_featherville.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Feralas_LV.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_ferocity.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_FountainOfManipulation.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_FrozenMarshlands.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_FullScaleAssault.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_GnollWood.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_GoldRush.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Goldshire.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_GolemsInTheMist_LV.w3x
+3/5 23:17:49.812  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_GreenvilleWoods.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_HillsbradCreek.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_ImaginaryFriends.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Kal'drassil.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_KingAndCountry.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_LastRefuge.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_LostTemple_LV.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_MarketSquare.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_MesonDeLaTaberna.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_Mur'gulOasis_LV.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_NeonCity.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_NerubianPassage.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/W3Champions/v9/w3c_NorthernFelwood.w3x
+3/5 23:17:49.827  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Trojan Wall V. 2.0b.w3x
+3/5 23:17:49.845  Activating WebUI
+3/5 23:17:51.586  Opening map - Maps/(10)dustwallowkeys.w3m
+3/5 23:17:51.595  Opening map - Maps/(12)divideandconquer.w3m
+3/5 23:17:51.595  Opening map - Maps/(12)icecrown.w3m
+3/5 23:17:51.595  Opening map - Maps/(2)bootybay.w3m
+3/5 23:17:51.595  Opening map - Maps/(2)harrow.w3m
+3/5 23:17:51.611  Opening map - Maps/(2)hillsofglory.w3m
+3/5 23:17:51.611  Opening map - Maps/(2)ogremound.w3m
+3/5 23:17:51.611  Opening map - Maps/(2)plunderisle.w3m
+3/5 23:17:51.611  Opening map - Maps/(3)forestwalk.w3m
+3/5 23:17:51.611  Opening map - Maps/(3)isleofdread.w3m
+3/5 23:17:51.625  Opening map - Maps/(3)nighthaven.w3m
+3/5 23:17:51.625  Opening map - Maps/(4)adrenaline.w3m
+3/5 23:17:51.625  Opening map - Maps/(4)borderlands.w3m
+3/5 23:17:51.625  Opening map - Maps/(4)deadlock.w3m
+3/5 23:17:51.625  Opening map - Maps/(4)deadwaterdrop.w3m
+3/5 23:17:51.625  Opening map - Maps/(4)dragonmountain.w3m
+3/5 23:17:51.625  Opening map - Maps/(4)duskwood.w3m
+3/5 23:17:51.642  Opening map - Maps/(4)frostsabre.w3m
+3/5 23:17:51.642  Opening map - Maps/(4)harvestmoon.w3m
+3/5 23:17:51.642  Opening map - Maps/(4)hearttoheart.w3m
+3/5 23:17:51.642  Opening map - Maps/(4)legends.w3m
+3/5 23:17:51.656  Opening map - Maps/(4)losttemple.w3m
+3/5 23:17:51.656  Opening map - Maps/(4)mysticisles.w3m
+3/5 23:17:51.656  Opening map - Maps/(4)tranquilpaths.w3m
+3/5 23:17:51.656  Opening map - Maps/(5)theglaive.w3m
+3/5 23:17:51.673  Opening map - Maps/(6)darkforest.w3m
+3/5 23:17:51.673  Opening map - Maps/(6)dragonfire.w3m
+3/5 23:17:51.673  Opening map - Maps/(6)drywatergulch.w3m
+3/5 23:17:51.673  Opening map - Maps/(6)gnollwood.w3m
+3/5 23:17:51.688  Opening map - Maps/(6)moonglade.w3m
+3/5 23:17:51.688  Opening map - Maps/(6)scorchedbasin.w3m
+3/5 23:17:51.688  Opening map - Maps/(6)stromguarde.w3m
+3/5 23:17:51.688  Opening map - Maps/(6)swampofsorrows.w3m
+3/5 23:17:51.688  Opening map - Maps/(6)timbermawhold.w3m
+3/5 23:17:51.703  Opening map - Maps/(8)battleground.w3m
+3/5 23:17:51.703  Opening map - Maps/(8)blastedlands.w3m
+3/5 23:17:51.703  Opening map - Maps/(8)bloodvenomfalls.w3m
+3/5 23:17:51.703  Opening map - Maps/(8)gardenofwar.w3m
+3/5 23:17:51.703  Opening map - Maps/(8)golemsinthemist.w3m
+3/5 23:17:51.719  Opening map - Maps/(8)petrifiedforest.w3m
+3/5 23:17:51.719  Opening map - Maps/(8)plaguelands.w3m
+3/5 23:17:51.719  Opening map - Maps/(8)plainsofsnow.w3m
+3/5 23:17:51.719  Opening map - Maps/(8)richmansgarden.w3m
+3/5 23:17:51.736  Opening map - Maps/(8)thecrucible.w3m
+3/5 23:17:51.736  Opening map - Maps/(9)riverrun.w3m
+3/5 23:17:53.999  Activating WebUI
+3/5 23:17:55.832  Activating WebUI
+3/5 23:17:55.907  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ddee38acb17ca0c372e271ef0dbe684a78d42eb4/(2)Amazonia.w3x
+3/5 23:17:55.907  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/9524abb8e35ce7b158bfa4d4b8734234d6073ca5/(2)LastRefuge.w3x
+3/5 23:17:55.923  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/956c309e026f97f16304f1673ee4d6bca4668ccc/(2)NorthernIsles.w3x
+3/5 23:17:55.923  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/456c74ace47d8d18360b48484df975638b970c66/(2)EchoIsles.w3x
+3/5 23:17:55.923  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/1e663c44e3e4e85f4e1845ef763b0a35ed98bf2c/(4)TurtleRock.w3x
+3/5 23:17:55.923  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/cad0aa8d51c6c228332fdb2b70507bed1836f7b4/(2)BrightwaterOasis.w3x
+3/5 23:17:55.941  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/7b993b67bdfe4048d37fab6040fad3f93437f4b2/(2)SwampedTemple.w3x
+3/5 23:17:55.941  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/180b80ffa19d78f30b486ae9b696512c03a79240/(2)TerenasStand_LV.w3x
+3/5 23:17:55.953  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/885d951a51ed4486cc1c9d355e8ab3596ec5318d/(4)TwistedMeadows.w3x
+3/5 23:17:55.953  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/14fd6ed089d6cc07166d5d5f429f0fab83f5e46b/(2)ConcealedHill.w3x
+3/5 23:17:55.953  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/04f67595a98141f0dbf9951401866fd100367124/(3)NomadIsles.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ART OF DEFENSE V104g.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Circle_TD_Trollforged_3.2.0.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/PumpkinTD_v1.21-ENG~2.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Hero Wars Icelands v2.22.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion_TD_9.0c_Team_OZE.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Civilization Wars v3.9.4.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Green Circle TD Mega 12.0.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/MiniDota_Tournament_Map_Fix.w3x
+3/5 23:18:00.492  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/DotA_v6.86.25.w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Circle Mini TD 0.25 v2.w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Reforged_Footmen_Frenzy_v5.8.8.w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Catch the Tree!vXI r7.w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion-TD-Mega-4.7d_OZ3-x20Sx3-mirror (2).w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Battle_Tanks_9.14.w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Broken Alliances 6.6a.w3x
+3/5 23:18:00.543  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/GreenCircleTeamTDv3.1a.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion_TD_9.0c_Team_OZE.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/A Song of Ice and Fire 7.11E PROT.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/[AR]_RATankD_423.0.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/HM RPG v8.31 Eng_slk.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/City_TD_Team_v4.9.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/RabbitsVsSheeps3.0.37~1.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WarcraftLegacy1.03~1.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/[AR]_RATankD_423.0.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Custom_Castle_Defense_v10.4.0p.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/LineTowerWarsR_6.8bP.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion-TD-Mega-4.7d_OZ3-x20nolag~5.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/SurvivalChaos3_9p.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion_TD_6.4_Team_OZE.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Vampirism_Zero_TEST_VERSION.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WoWArena1.4.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(10)World Enviroment.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Zwuckel 2 TD 3.0.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Squid_Game_v1_2_5.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/X3v3.59Hotfix-970f.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Pokemaul Emerald V10.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/HeroWarsLeaguev1.3.5.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/DotA_v6.86k.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/HELLHALT v5.0.80 (1).w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Reforged_Footmen_Frenzy_v5.8.8~1.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/LOTR-The Last Alliance v4.0.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Reforged_Footmen_Frenzy_v5.8.8.w3x
+3/5 23:18:00.547  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Upgrade_RPG_7.4H_Reporged.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/DiabloDuel v3.7.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion_TD_6.4_Team_OZE.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WarChasers Nightmare 2020 v27.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/creeps_attack_a1.w3m
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion TD 1.7 09.21.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Direct_Strike_Reforged_V2.0.2.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Zombie_Defense_0.21u_w3pro.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Warhammer_Tides_of_ChaosV1.61test.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wintermaul 3.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TCoM ORPG v10.4a ENG-FIX3.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion-TD-Mega-4.7d_OZ3-x20Sx3-mirror (2).w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Zombie_Defense_0.21u_w3pro.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/SnowZone TD 2.7.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/LOTR-Last Alliance v4.0.w3x
+3/5 23:18:00.562  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Legion_TD_9.3b.w3x
+3/5 23:18:00.755  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Vampirism_Zero_TEST_VERSION.w3x
+3/5 23:18:00.755  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Vampirism_Zero_TEST_VERSION.w3x
+3/5 23:18:00.781  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Vampirism_Zero_TEST_VERSION.w3x
+3/5 23:18:00.781  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Vampirism_Zero_TEST_VERSION.w3x
+3/5 23:18:01.613  Opening map - Maps/(2)bootybay.w3m
+3/5 23:18:02.876  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(1)Jetpack_100b.w3x
+3/5 23:18:02.876  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(7)GodsLand.w3x
+3/5 23:18:02.890  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(7)MTG-SC_Version154(1).w3x
+3/5 23:18:02.890  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(7)MTG-SC_Version154.w3x
+3/5 23:18:02.890  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(8) Uther Party vUltima-Q.w3x
+3/5 23:18:02.906  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/- World Of Warcraft - V1.4e.w3x
+3/5 23:18:02.906  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/AOM-Mythical Arena(v1.6).w3x
+3/5 23:18:02.906  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Azeroth_R-1.05d hotfix.w3x
+3/5 23:18:02.958  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Battle of Normandy 1.3.w3x
+3/5 23:18:02.968  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/DisRPGv.B3.07F ENG.w3x
+3/5 23:18:03.053  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Empire Earth 2.3.w3x
+3/5 23:18:03.104  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Favor V4 for Warcraft 3.1.w3x
+3/5 23:18:03.149  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/GaiasORPG_v1_2D(5).w3x
+3/5 23:18:03.215  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Gods Land Xtreme v1.2.w3x
+3/5 23:18:03.215  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Island Conquest 1.24.w3x
+3/5 23:18:03.220  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/LordaeronWOW (1).w3x
+3/5 23:18:03.363  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/lotr - Dom [20].w3x
+3/5 23:18:03.363  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/ManhattanProject2.w3x
+3/5 23:18:03.384  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Minotaurs-Labyrinth-v1.6.w3x
+3/5 23:18:03.391  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Naval Battle v1.39d opt.w3x
+3/5 23:18:03.391  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/squidgame0.1.w3x
+3/5 23:18:03.409  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/squidgame1.0.w3x
+3/5 23:18:03.409  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewarfare0.1.w3x
+3/5 23:18:03.444  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewarfare0.2.w3x
+3/5 23:18:03.469  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewarfare0.3.w3x
+3/5 23:18:03.493  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/submarinewars.w3x
+3/5 23:18:03.493  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/talras1.0.w3x
+3/5 23:18:03.694  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/talras1.1.w3x
+3/5 23:18:03.828  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/tenet0.9.w3x
+3/5 23:18:03.845  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/tenet1.0.w3x
+3/5 23:18:03.862  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TheBigFellowshipQuest 5.0f.w3x
+3/5 23:18:03.926  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TheSiegeOfMinasTirith0.6.w3x
+3/5 23:18:03.957  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/TheSiegeOfMinasTirith0.7.w3x
+3/5 23:18:03.989  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Trojan Wall V. 2.0b.w3x
+3/5 23:18:03.989  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Trojan Wall V. 2.0b.w3x.part
+3/5 23:18:03.989  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/UFA Race.w3x
+3/5 23:18:03.989  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Under Water War (UWW) v1.03(1).w3x
+3/5 23:18:03.999  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Under Water War (UWW) v1.03.w3x
+3/5 23:18:03.999  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/W3ACS v1.0.5.w3x
+3/5 23:18:03.999  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/War of the Third Age 4.3.w3x
+3/5 23:18:03.999  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Warcraft Soccer 7.49c.w3x
+3/5 23:18:03.999  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Warcraft_2_Reforged_(8)Taiga_v126f(1).w3m
+3/5 23:18:04.098  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/Water War - Submerged.w3x
+3/5 23:18:04.098  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wc3idleiconsystem.w3x
+3/5 23:18:04.098  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World of War in Warcarft 2.03b.w3x
+3/5 23:18:04.098  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 2.32 D.w3x
+3/5 23:18:04.098  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 2.34G.w3x
+3/5 23:18:04.110  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 2.37B.w3x
+3/5 23:18:04.110  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reanimated 3.6.w3x
+3/5 23:18:04.110  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/World Of Warcraft Reborn.w3x
+3/5 23:18:04.110  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WorldOfWarcraftTFT1.8.w3x
+3/5 23:18:04.110  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/WoW Reanimated 4.2b.w3x
+3/5 23:18:04.137  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.7.w3x
+3/5 23:18:04.150  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.2.w3x
+3/5 23:18:04.167  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.3.w3x
+3/5 23:18:04.184  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.4.w3x
+3/5 23:18:04.200  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.5.w3x
+3/5 23:18:04.220  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.6.w3x
+3/5 23:18:04.237  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.7.w3x
+3/5 23:18:04.255  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.8.w3x
+3/5 23:18:04.273  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.9.w3x
+3/5 23:18:04.290  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.8.w3x
+3/5 23:18:04.306  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.0.w3x
+3/5 23:18:04.324  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.1.w3x
+3/5 23:18:04.342  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.2.w3x
+3/5 23:18:04.360  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.3.w3x
+3/5 23:18:04.386  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.4.w3x
+3/5 23:18:04.413  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.5.w3x
+3/5 23:18:04.438  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.6.w3x
+3/5 23:18:04.461  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.7.w3x
+3/5 23:18:04.487  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.8.w3x
+3/5 23:18:04.511  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr1.9.9.w3x
+3/5 23:18:04.536  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr2.0.w3x
+3/5 23:18:04.602  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowtsr1.5.w3x
+3/5 23:18:04.613  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowtsr1.6.w3x
+3/5 23:18:04.626  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/X Hero Siege 4.80.w3x
+3/5 23:18:04.645  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/(1)Jetpack_100b.w3x
+3/5 23:18:12.494  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr2.0.w3x
+3/5 23:18:24.079  Opening map - Maps/Download/wowr2.0.w3x
+3/5 23:43:28.331  Activating WebUI
+3/5 23:43:28.331  Opening map - C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr2.0.w3x
+3/5 23:44:59.952  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:44:59.952  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:44:59.984  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.028  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.064  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.107  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.141  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.179  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.215  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.251  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.288  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.324  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.364  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.402  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.443  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.485  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.525  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonBackdropTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonPushedBackdropTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonDisabledBackdropTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonDisabledPushedBackdropTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuControlBackdropTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonMouseOverHighlightTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuButtonTextTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuInfoTextTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuTitleTextTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuLabelTextTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuLabelTextSmallTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuSliderTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuScrollBarTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuPopupMenuMenuTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuPopupMenuTitleTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuPopupMenuArrowTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuPopupMenuTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuCheckBoxTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuRadioButtonTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuEditBoxTextTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuEditBoxBackdropTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuEditBoxTemplate" already encountered!
+3/5 23:45:00.564  Error, frame "EscMenuTextAreaTemplate" already encountered!
+3/5 23:46:04.063  Deactivating WebUI
+3/5 23:46:04.091  Deactivating WebUI
+3/5 23:46:19.022  model creation failed - 
+3/5 23:46:46.027  Solid texture substituted - Textures\Black.blp
+3/5 23:46:46.031  model creation failed - 
+3/5 23:47:21.903  model creation failed - 
+3/5 23:48:12.950  model creation failed - 
+3/5 23:48:30.023  model creation failed - 
+3/5 23:52:34.245  model creation failed - 
+3/5 23:53:52.017  Solid texture substituted - Textures\Black.blp
+3/5 23:54:05.605  model creation failed - Abilities\Spells\Other\SpikedShell\SpikedShellTargetChestRight.mdl
+3/5 23:54:05.605  model creation failed - Abilities\Spells\Other\SpikedShell\SpikedShellTargetChestLeft.mdl
+3/6 00:04:33.314  model creation failed - 
+3/6 00:15:54.537  Played C:/Users/Tamino/Documents/Warcraft III/Maps/Download/wowr2.0.w3x
+
+3/6 00:15:54.537  Difficulty 
+3/6 00:15:54.537  Normal
+
+3/6 00:15:54.537  GameSpeed 
+3/6 00:15:54.537  Fast
+
+3/6 00:15:54.537  Placement 
+3/6 00:15:54.537   Teams Together
+
+3/6 00:15:54.537  CanChangeAlliances      true
+
+3/6 00:15:54.537  CanChangeGameSpeed      true
+
+3/6 00:15:54.537  CanResourceTrade        true
+
+3/6 00:15:54.537  ResourceTradeAlliesOnly true
+
+3/6 00:15:54.537  UseFixedRandomSeed      false
+
+3/6 00:15:54.537  Player  0 Barade#2569       	Race Human	StartLoc  0
+
+3/6 00:15:54.537  Player  1 noxYQ#2546        	Race Human	StartLoc  1
+
+3/6 00:15:54.537  Player  2 klexioworld#2899  	Race Human	StartLoc  2
+
+3/6 00:15:54.537  Player  3 Sheepy#2950       	Race Human	StartLoc  3
+
+3/6 00:15:54.537  Player  4 hahaxdok#2572     	Race Human	StartLoc  4
+
+3/6 00:15:54.537  Player  5                   	Race Human	StartLoc  5
+
+3/6 00:15:54.537  Player  6 AI 7              	Race Human	StartLoc  6
+
+3/6 00:15:54.537  Player  7 AI 8              	Race Human	StartLoc  7
+
+3/6 00:15:54.537  Player  8 AI 9              	Race Orc	StartLoc  8
+
+3/6 00:15:54.537  Player  9                   	Race Orc	StartLoc  9
+
+3/6 00:15:54.537  Player 10                   	Race Orc	StartLoc 10
+
+3/6 00:15:54.537  Player 11                   	Race NightElf	StartLoc 11
+
+3/6 00:15:54.537  Player 12                   	Race NightElf	StartLoc 12
+
+3/6 00:15:54.537  Player 13                   	Race NightElf	StartLoc 13
+
+3/6 00:15:54.537  Player 14                   	Race Undead	StartLoc 14
+
+3/6 00:15:54.537  Player 15                   	Race Human	StartLoc 15
+
+3/6 00:15:54.537  Player 16                   	Race Orc	StartLoc 16
+
+3/6 00:15:54.537  Player 17                   	Race Orc	StartLoc 17
+
+3/6 00:15:54.537  Player 18                   	Race Undead	StartLoc 18
+
+3/6 00:15:54.537  Player 19                   	Race Undead	StartLoc 19
+
+3/6 00:15:54.537  Player 20                   	Race NightElf	StartLoc 20
+
+3/6 00:15:54.537  Player 21 The Alliance      	Race Human	StartLoc 21
+
+3/6 00:15:54.537  Player 22 Bosses            	Race Undead	StartLoc 22
+
+3/6 00:15:54.537  Player 23 The Burning Legion	Race Undead	StartLoc 23
+
+3/6 00:15:54.537  NGDP Diagnostic Log:
+3/6 00:15:54.537  [20220305T23:17:47] {4224} INF: adding network address 104.124.11.72:443 for server https://blzddist1-a.akamaihd.net/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 8.238.29.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 8.238.30.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 8.241.80.126:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 8.241.88.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 8.253.204.40:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 8.241.90.41:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:22:47] {4224} INF: adding network address 67.26.82.30:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.238.36.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.248.131.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 67.27.158.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.248.139.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.253.204.120:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.253.204.249:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 2.22.242.10:443 for server https://blzddist1-a.akamaihd.net/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 2.22.242.138:443 for server https://blzddist1-a.akamaihd.net/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.241.89.41:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:27:47] {4224} INF: adding network address 8.253.204.169:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:32:47] {4224} INF: adding network address 67.27.159.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:32:47] {4224} INF: adding network address 8.241.78.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:32:47] {4224} INF: adding network address 67.27.157.126:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:32:47] {4224} INF: adding network address 67.26.80.30:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:37:47] {4224} INF: adding network address 8.241.9.126:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:42:48] {4224} INF: adding network address 8.241.78.126:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:42:48] {4224} INF: adding network address 8.248.130.20:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:47:48] {4224} INF: adding network address 8.248.149.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:47:48] {4224} INF: adding network address 67.27.159.129:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:47:48] {4224} INF: adding network address 8.241.78.41:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:47:48] {4224} INF: adding network address 8.238.29.169:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:52:48] {4224} INF: adding network address 8.241.9.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:52:48] {4224} INF: adding network address 67.27.157.254:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:52:48] {4224} INF: adding network address 8.241.11.126:80 for server http://level3.blizzard.com/
+3/6 00:15:54.537  [20220305T23:52:48] {4224} INF: adding network address 8.238.30.169:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:52:48] {4224} INF: adding network address 67.27.157.129:443 for server https://level3.ssl.blizzard.com/
+3/6 00:15:54.537  [20220305T23:57:48] {4224} INF: adding network address 67.26.75.254:80 for server http://level3.blizzard.com/
