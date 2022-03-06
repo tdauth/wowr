@@ -4470,7 +4470,7 @@ function RandomizeString takes string source returns string
     loop
         exitwhen (i == StringLength(source))
         set sourcePosition = GetRandomInt(0, StringLength(source) - 1)
-        set result = result + SubString(source, sourcePosition, 1)
+        set result = result + SubString(source, sourcePosition, sourcePosition + 1)
         set source = SubString(source, 0, sourcePosition) + SubString(source, sourcePosition + 1, StringLength(source))
         set i = i + 1
     endloop
