@@ -155,6 +155,9 @@ This version provides several new features compared to the original map [World o
 * New building Research Tent for all races.
 * Chat command "-savec" to generate savecodes into files without printing information for a long time.
 * Chat commands "-saveautoon/off" to auto save the hero.
+* Chat command "-help/-h" which lists chat commands.
+* Becoming a demigod requires a Nether Dragon.
+* Chat command "-pingdragons" to ping all Dragon Roosts.
 
 ## Bug Fixes
 
@@ -182,6 +185,7 @@ The following files are imported into the map whenever they are updated. They co
 * [Demon.ai](./ai/Demon.ai)
 * [Draenei.ai](./ai/Draenei.ai)
 * [Furbolg.ai](./ai/Furbolg.ai)
+* [Goblin.ai](./ai/Goblin.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 
@@ -302,7 +306,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Snirou: [Shredder-Flamethrower](https://www.hiveworkshop.com/threads/shredder-flamethrower.325110/)
 * induwer: [Goblin Tower](https://www.hiveworkshop.com/threads/goblin-tower.309021/)
 * skymarshall: [Goblin Outpost](https://www.hiveworkshop.com/threads/goblin-outpost.266280/)
-* tillinghast: [Goblin warlock](https://www.hiveworkshop.com/threads/goblin-warlock.338034/)
 * Kuhneghetz: [Goblin Mage (Variation 1)](https://www.hiveworkshop.com/threads/goblin-mage-variation-1.142634/)
 * skymarshall: [Goblin Barracks](https://www.hiveworkshop.com/threads/goblin-barracks.266575/)
 * tillinghast: [Goblin sorceress](https://www.hiveworkshop.com/threads/goblin-sorceress.332956/)
@@ -324,3 +327,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * kellym0, MiniMage: [GoblinHammerheadSubmarine](https://www.hiveworkshop.com/threads/goblinhammerheadsubmarine.253628/)
 * donut3.5: [Goblin Rocket Rider 2](https://www.hiveworkshop.com/threads/goblin-rocket-rider-2.48352/)
 * General Frank: [Goblin Bewm Bewm Tank - The Boomer Retooled](https://www.hiveworkshop.com/threads/goblin-bewm-bewm-tank-the-boomer-retooled.264088/)
+* Direfury, KILLCIDE, Mr.Goblin: [Goblin Artist](https://www.hiveworkshop.com/threads/goblin-artist.301848/)

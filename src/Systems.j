@@ -4462,3 +4462,18 @@ function Bounty takes force whichForce, real x, real y, integer bounty returns n
     set whichEffect = null
     call ShowBountyTextTagForForce(whichForce, x, y, bounty)
 endfunction
+
+function RandomizeString takes string source returns string
+    local string result = ""
+    local integer sourcePosition = 0
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(source))
+        set sourcePosition = GetRandomInt(0, StringLength(source) - 1)
+        set result = result + SubString(source, sourcePosition, 1)
+        set source = SubString(source, 0, sourcePosition) + SubString(source, sourcePosition + 1, StringLength(source))
+        set i = i + 1
+    endloop
+
+    return result
+endfunction

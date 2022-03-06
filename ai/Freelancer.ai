@@ -62,9 +62,32 @@ globals
     constant integer SUMMON_HAWK                                     = 'ANsw'
     
     constant integer ALCHEMIST                                       = 'Nalc'
+
+    constant integer TRANSMUTE                                       = 'ANtm'
+    constant integer HEALING_SPRAY                                   = 'ANhs'
+    constant integer ACID_BOMB                                       = 'ANab'
+    constant integer CHEMICAL_RAGE                                   = 'ANcr'
+
     constant integer TINKER                                          = 'Ntin'
+
+    constant integer ROBO_GOBLIN                                     = 'ANrg'
+    constant integer CLUSTER_ROCKETS                                 = 'ANcs'
+    constant integer ENGINEERING                                     = 'ANeg'
+    constant integer POCKET_FACTORY                                  = 'ANsy'
+
     constant integer BREWMASTER                                      = 'Npbm'
+
+    constant integer STORM_EARTH_AND_FIRE                            = 'ANef'
+    constant integer BREATH_OF_FIRE                                  = 'ANbf'
+    constant integer DRUNKEN_HAZE                                    = 'ANdh'
+    constant integer DRUNKEN_BRAWLER                                 = 'ANdb'
+
     constant integer FIRELORD                                        = 'Nfir'
+
+    constant integer VOLCANO                                         = 'ANvc'
+    constant integer INCINERATE                                      = 'ANic'
+    constant integer SOUL_BURN                                       = 'ANso'
+    constant integer SUMMON_LAVA_SPAWN                               = 'ANlm'
 
 	constant integer CREEP_DARK_WIZARD                               = 'nwzd'
 	constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
@@ -332,13 +355,45 @@ function ChooseHeroSkill takes nothing returns integer
             return SUMMON_HAWK
         endif
     elseif (curHero == ALCHEMIST) then
-        // TODO add skills
+        if (skillUlti) then
+            return TRANSMUTE
+        elseif (mod == 0) then
+            return HEALING_SPRAY
+        elseif (mod == 1) then
+            return ACID_BOMB
+        elseif (mod == 2) then
+            return CHEMICAL_RAGE
+        endif
     elseif (curHero == TINKER) then
-        // TODO add skills
+        if (skillUlti) then
+            return ROBO_GOBLIN
+        elseif (mod == 0) then
+            return CLUSTER_ROCKETS
+        elseif (mod == 1) then
+            return ENGINEERING
+        elseif (mod == 2) then
+            return POCKET_FACTORY
+        endif
     elseif (curHero == BREWMASTER) then
-        // TODO add skills
+        if (skillUlti) then
+            return STORM_EARTH_AND_FIRE
+        elseif (mod == 0) then
+            return BREATH_OF_FIRE
+        elseif (mod == 1) then
+            return DRUNKEN_HAZE
+        elseif (mod == 2) then
+            return DRUNKEN_BRAWLER
+        endif
     elseif (curHero == FIRELORD) then
-        // TODO add skills
+        if (skillUlti) then
+            return VOLCANO
+        elseif (mod == 0) then
+            return INCINERATE
+        elseif (mod == 1) then
+            return SOUL_BURN
+        elseif (mod == 2) then
+            return SUMMON_LAVA_SPAWN
+        endif
     endif
 
     return 'Aamk'
