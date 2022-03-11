@@ -3855,7 +3855,7 @@ globals
     constant real SAVECODE_UI_LABEL_X = 0.075009
     constant real SAVECODE_UI_LABEL_WIDTH = 0.058018
 
-    constant real SAVECODE_UI_LINEEDIT_X = 0.13800
+    constant real SAVECODE_UI_LINEEDIT_X = 0.138000
     constant real SAVECODE_UI_LINEEDIT_WIDTH = 0.33319
 
     constant real SAVECODE_UI_UPDATE_BUTTON_X = 0.47837
@@ -3864,8 +3864,8 @@ globals
     constant real SAVECODE_UI_LOAD_BUTTON_X = 0.54136
     constant real SAVECODE_UI_LOAD_BUTTON_WIDTH = 0.059123
 
-    constant real SAVECODE_UI_LINE_START_Y = 0.49971
-    constant real SAVECODE_UI_LINE_HEIGHT = 0.029282
+    constant real SAVECODE_UI_LINE_START_Y = 0.528122
+    constant real SAVECODE_UI_LINE_HEIGHT = 0.03
 
     constant real SAVECODE_UI_TOOLTIP_X = 0.68834
     constant real SAVECODE_UI_TOOLTIP_WIDTH = 0.070174
@@ -4000,11 +4000,13 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], true)
 
     set SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y + SAVECODE_UI_LINE_HEIGHT)
     call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], "-load xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], true)
 
     set SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
     call TriggerAddAction(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIEditBoxEnterHeroes)
