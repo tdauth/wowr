@@ -322,7 +322,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * donut3.5: [Goblin Steamroller](https://www.hiveworkshop.com/threads/goblin-steamroller.48702/)
 * Shardeth: [Gatling Canon](https://www.hiveworkshop.com/threads/gatling-canon.305397/)
 * SantoRayo[iP]: [bohrturm](https://www.hiveworkshop.com/threads/bohrturm.49544/)
-* SantoRayo[iP]: [bohrturm](https://www.hiveworkshop.com/threads/bohrturm.49544/)
 * 8512590215848: [BTNOilStation](https://www.hiveworkshop.com/threads/btnoilstation.231515/)
 * kellym0, MiniMage: [GoblinHammerheadSubmarine](https://www.hiveworkshop.com/threads/goblinhammerheadsubmarine.253628/)
 * donut3.5: [Goblin Rocket Rider 2](https://www.hiveworkshop.com/threads/goblin-rocket-rider-2.48352/)
