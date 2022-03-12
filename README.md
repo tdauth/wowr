@@ -327,3 +327,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * donut3.5: [Goblin Rocket Rider 2](https://www.hiveworkshop.com/threads/goblin-rocket-rider-2.48352/)
 * General Frank: [Goblin Bewm Bewm Tank - The Boomer Retooled](https://www.hiveworkshop.com/threads/goblin-bewm-bewm-tank-the-boomer-retooled.264088/)
 * Direfury, KILLCIDE, Mr.Goblin: [Goblin Artist](https://www.hiveworkshop.com/threads/goblin-artist.301848/)
+* Marcos DAB: [BTNGoblinFuelSpill](https://www.hiveworkshop.com/threads/btngoblinfuelspill.231355/)
+* Eagle XI: [BTNGoblinDerrick](https://www.hiveworkshop.com/threads/btngoblinderrick.271618/)
+* NFWar: [BTNAlembic](https://www.hiveworkshop.com/threads/btnalembic.168823/)
+* Blizzard Entertainment, Darkfang: [BTNIncome](https://www.hiveworkshop.com/threads/btnincome.256755/)

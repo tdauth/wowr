@@ -2291,51 +2291,56 @@ endfunction
 globals
     constant integer SAVE_OBJECT_CLASSIFICATION_VALUE = 0
     constant integer SAVE_OBJECT_CLASSIFICATION_UNIT = 1
-    constant integer SAVE_OBJECT_CLASSIFICATION_ITEM = 2
-    constant integer SAVE_OBJECT_CLASSIFICATION_RESEARCH = 3
+    constant integer SAVE_OBJECT_CLASSIFICATION_BUILDING = 2
+    constant integer SAVE_OBJECT_CLASSIFICATION_ITEM = 3
+    constant integer SAVE_OBJECT_CLASSIFICATION_RESEARCH = 4
 
-    string array SaveObjectName
-    integer array SaveObjectId
-    integer array SaveCodeObjectClassification
-    integer SaveObjectTypeCounter = 0
+    string array SaveObjectNameUnit
+    integer array SaveObjectIdUnit
+    integer SaveObjectUnitCounter = 0
+
+    string array SaveObjectNameBuilding
+    integer array SaveObjectIdBuilding
+    integer SaveObjectBuildingCounter = 0
+
+    string array SaveObjectNameItem
+    integer array SaveObjectIdItem
+    integer SaveObjectItemCounter = 0
+
+    string array SaveObjectNameResearch
+    integer array SaveObjectIdResearch
+    integer SaveObjectResearchCounter = 0
 endglobals
 
-function AddSaveObjectType takes string name, integer id, integer classification returns integer
-    local integer index = SaveObjectTypeCounter
-    set SaveObjectName[index] = name
-    set SaveObjectId[index] = id
-    set SaveCodeObjectClassification[index] = classification
-    set SaveObjectTypeCounter = SaveObjectTypeCounter + 1
+function AddSaveObjectUnitTypeEx takes string name, integer id returns integer
+    local integer index = SaveObjectUnitCounter
+    set SaveObjectNameUnit[index] = name
+    set SaveObjectIdUnit[index] = id
+    set SaveObjectUnitCounter = SaveObjectUnitCounter + 1
+    return index
+endfunction
+
+function AddSaveObjectBuildingTypeEx takes string name, integer id returns integer
+    local integer index = SaveObjectBuildingCounter
+    set SaveObjectNameBuilding[index] = name
+    set SaveObjectIdBuilding[index] = id
+    set SaveObjectBuildingCounter = SaveObjectBuildingCounter + 1
     return index
 endfunction
 
 function AddSaveObjectUnitType takes nothing returns integer
-    return AddSaveObjectType(GetObjectName(udg_TmpUnitType), udg_TmpUnitType, SAVE_OBJECT_CLASSIFICATION_UNIT)
+    if (IsUnitIdType(udg_TmpUnitType, UNIT_TYPE_STRUCTURE)) then
+        return AddSaveObjectBuildingTypeEx(GetObjectName(udg_TmpUnitType), udg_TmpUnitType)
+    else
+        return AddSaveObjectUnitTypeEx(GetObjectName(udg_TmpUnitType), udg_TmpUnitType)
+    endif
 endfunction
 
-function AddSaveObjectItemType takes nothing returns integer
-    return AddSaveObjectType(GetObjectName(udg_TmpItemTypeId), udg_TmpItemTypeId, SAVE_OBJECT_CLASSIFICATION_ITEM)
-endfunction
-
-function AddSaveObjectResearch takes nothing returns integer
-    return AddSaveObjectType(GetObjectName(udg_TmpTechType), udg_TmpTechType, SAVE_OBJECT_CLASSIFICATION_RESEARCH)
-endfunction
-
-globals
-    integer SaveObjectTypeXP = 0
-    integer SaveObjectTypeGold = 1
-endglobals
-
-function AddStandardSaveObjectTypes takes nothing returns nothing
-    set SaveObjectTypeXP = AddSaveObjectType("XP", 0, SAVE_OBJECT_CLASSIFICATION_VALUE)
-    set SaveObjectTypeGold = AddSaveObjectType("Gold", 0, SAVE_OBJECT_CLASSIFICATION_VALUE)
-endfunction
-
-function GetSaveObjectType takes integer id returns integer
+function GetSaveObjectUnitType takes integer id returns integer
     local integer i = 0
     loop
-        exitwhen (i == SaveObjectTypeCounter)
-        if (SaveObjectId[i] == id) then
+        exitwhen (i == SaveObjectUnitCounter)
+        if (SaveObjectIdUnit[i] == id) then
             return i
         endif
         set i = i + 1
@@ -2343,12 +2348,83 @@ function GetSaveObjectType takes integer id returns integer
     return -1
 endfunction
 
-function GetSaveObjectId takes integer number returns integer
-    return SaveObjectId[number]
+function GetSaveObjectUnitId takes integer number returns integer
+    return SaveObjectIdUnit[number]
 endfunction
 
-function GetSaveObjectClassification takes integer number returns integer
-    return SaveCodeObjectClassification[number]
+function GetSaveObjectBuildingType takes integer id returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == SaveObjectBuildingCounter)
+        if (SaveObjectIdBuilding[i] == id) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function GetSaveObjectBuildingId takes integer number returns integer
+    return SaveObjectIdBuilding[number]
+endfunction
+
+function AddSaveObjectItemTypeEx takes string name, integer id returns integer
+    local integer index = SaveObjectItemCounter
+    set SaveObjectNameItem[index] = name
+    set SaveObjectIdItem[index] = id
+    set SaveObjectItemCounter = SaveObjectItemCounter + 1
+    return index
+endfunction
+
+function AddSaveObjectItemType takes nothing returns integer
+    return AddSaveObjectItemTypeEx(GetObjectName(udg_TmpItemTypeId), udg_TmpItemTypeId)
+endfunction
+
+function GetSaveObjectItemType takes integer id returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == SaveObjectItemCounter)
+        if (SaveObjectIdItem[i] == id) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function GetSaveObjectItemId takes integer number returns integer
+    return SaveObjectIdItem[number]
+endfunction
+
+function AddSaveObjectResearchTypeEx takes string name, integer id returns integer
+    local integer index = SaveObjectResearchCounter
+    set SaveObjectNameResearch[index] = name
+    set SaveObjectIdResearch[index] = id
+    set SaveObjectResearchCounter = SaveObjectResearchCounter + 1
+    return index
+endfunction
+
+function AddSaveObjectResearch takes nothing returns integer
+    return AddSaveObjectResearchTypeEx(GetObjectName(udg_TmpTechType), udg_TmpTechType)
+endfunction
+
+function GetSaveObjectResearchType takes integer id returns integer
+    local integer i = 0
+    loop
+        exitwhen (i == SaveObjectItemCounter)
+        if (SaveObjectIdResearch[i] == id) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function GetSaveObjectResearchId takes integer number returns integer
+    return SaveObjectIdResearch[number]
+endfunction
+
+function AddStandardSaveObjectTypes takes nothing returns nothing
 endfunction
 
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
@@ -2396,7 +2472,7 @@ globals
 endglobals
 
 function FilterIsLivingBuildingToBeSaved takes nothing returns boolean
-    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectType(GetUnitTypeId(GetFilterUnit())) != -1
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectBuildingType(GetUnitTypeId(GetFilterUnit())) != -1
 endfunction
 
 function GetPlayerBuildingsOrderedByPriority takes player whichPlayer returns group
@@ -2466,10 +2542,9 @@ function ConvertAbsCoordinateY takes real coordinate returns real
     return y
 endfunction
 
-function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
+function GetSaveCodeBuildingsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner, group buildings returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
-    local group buildings = GetPlayerBuildingsOrderedByPriority(owner)
     local unit first = null
     local integer id = -1
     local integer i = 0
@@ -2505,7 +2580,7 @@ function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer,
         exitwhen (i == SAVE_CODE_MAX_BUILDINGS)
         set first = FirstOfGroup(buildings)
         exitwhen (first == null)
-        set id = GetSaveObjectType(GetUnitTypeId(first))
+        set id = GetSaveObjectBuildingType(GetUnitTypeId(first))
         if (id != -1) then
             //call BJDebugMsg("Saving building: " + GetObjectName(GetUnitTypeId(first)))
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
@@ -2530,11 +2605,6 @@ function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer,
         set i = i + 1
     endloop
 
-    call GroupClear(buildings)
-    call DestroyGroup(buildings)
-    set buildings = null
-
-
     //call BJDebugMsg("Compressed result: " + result)
     //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
@@ -2549,6 +2619,17 @@ function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer,
     endif
 
     call CreateSaveCodeBuildingsTextFile(playerName, isSinglePlayer, isWarlord, gameType, buildingsCounter, buildingNames, result)
+
+    return result
+endfunction
+
+function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
+    local group buildings = GetPlayerBuildingsOrderedByPriority(owner)
+    local string result = GetSaveCodeBuildingsEx2(playerName, isSinglePlayer, isWarlord, gameType, xpRate, owner, buildings)
+
+    call GroupClear(buildings)
+    call DestroyGroup(buildings)
+    set buildings = null
 
     return result
 endfunction
@@ -2617,7 +2698,7 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
             exitwhen (i == SAVE_CODE_MAX_BUILDINGS)
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectId(saveObject)
+                set saveObjectId = GetSaveObjectBuildingId(saveObject)
                 set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
                 set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
                 //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
@@ -2702,7 +2783,7 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
     set result = result + ConvertDecimalNumberToSaveCodeSegment(xpRate)
 
     if (itemSlot0 != null) then
-        set id = GetSaveObjectType(GetItemTypeId(itemSlot0))
+        set id = GetSaveObjectItemType(GetItemTypeId(itemSlot0))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot0))
@@ -2717,7 +2798,7 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
     endif
 
     if (itemSlot1 != null) then
-        set id = GetSaveObjectType(GetItemTypeId(itemSlot1))
+        set id = GetSaveObjectItemType(GetItemTypeId(itemSlot1))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot1))
@@ -2732,7 +2813,7 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
     endif
 
     if (itemSlot2 != null) then
-        set id = GetSaveObjectType(GetItemTypeId(itemSlot2))
+        set id = GetSaveObjectItemType(GetItemTypeId(itemSlot2))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot2))
@@ -2747,7 +2828,7 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
     endif
 
     if (itemSlot3 != null) then
-        set id = GetSaveObjectType(GetItemTypeId(itemSlot3))
+        set id = GetSaveObjectItemType(GetItemTypeId(itemSlot3))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot3))
@@ -2762,7 +2843,7 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
     endif
 
     if (itemSlot4 != null) then
-        set id = GetSaveObjectType(GetItemTypeId(itemSlot4))
+        set id = GetSaveObjectItemType(GetItemTypeId(itemSlot4))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot4))
@@ -2777,7 +2858,7 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
     endif
 
     if (itemSlot5 != null) then
-        set id = GetSaveObjectType(GetItemTypeId(itemSlot5))
+        set id = GetSaveObjectItemType(GetItemTypeId(itemSlot5))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set result = result + ConvertDecimalNumberToSaveCodeSegment(GetItemCharges(itemSlot5))
@@ -2875,7 +2956,7 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
             exitwhen (i == bj_MAX_INVENTORY)
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             if (saveObject > 0) then
-                call UnitAddItemByIdSwapped(GetSaveObjectId(saveObject), hero)
+                call UnitAddItemByIdSwapped(GetSaveObjectItemId(saveObject), hero)
                 call SetItemCharges(bj_lastCreatedItem, ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1))
             endif
             set i = i + 1
@@ -2893,7 +2974,7 @@ globals
 endglobals
 
 function FilterIsLivingUnitToBeSaved takes nothing returns boolean
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_ANCIENT) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectType(GetUnitTypeId(GetFilterUnit())) != -1
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_ANCIENT) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectUnitType(GetUnitTypeId(GetFilterUnit())) != -1
 endfunction
 
 function CountUnitsOfTypeFromGroup takes group whichGroup, integer unitTypeId returns integer
@@ -3049,7 +3130,7 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
         exitwhen (unitsCounter == SAVE_CODE_MAX_UNITS)
         set first = FirstOfGroup(units)
         exitwhen (first == null)
-        set id = GetSaveObjectType(GetUnitTypeId(first))
+        set id = GetSaveObjectUnitType(GetUnitTypeId(first))
         if (id != -1) then
             set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
             set tmpGroup = GetUnitsOfPlayerAndTypeId(owner, GetUnitTypeId(first))
@@ -3170,7 +3251,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             //call BJDebugMsg("Loading save object: " + I2S(saveObject))
             if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectId(saveObject)
+                set saveObjectId = GetSaveObjectUnitId(saveObject)
                 set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
                 //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
                 set j = 0
@@ -3279,19 +3360,17 @@ function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer
 
     set i = 0
     loop
-        exitwhen (researchesCounter == SAVE_CODE_MAX_RESEARCHES or i == SaveObjectTypeCounter)
-        if (GetSaveObjectClassification(i) == SAVE_OBJECT_CLASSIFICATION_RESEARCH) then
-            set id = GetSaveObjectId(i)
-            set count = GetPlayerTechCountSimple(id, owner)
-            if (id != -1 and count > 0) then
-                set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
-                set result = result + ConvertDecimalNumberToSaveCodeSegment(GetPlayerTechCountSimple(id, owner))
-                if (researchNames != "") then
-                    set researchNames = researchNames + ","
-                endif
-                set researchNames = researchNames + I2S(count) + GetObjectName(id)
-                set researchesCounter = researchesCounter + 1
+        exitwhen (researchesCounter == SAVE_CODE_MAX_RESEARCHES or i == SaveObjectResearchCounter)
+        set id = GetSaveObjectResearchType(i)
+        set count = GetPlayerTechCountSimple(id, owner)
+        if (id != -1 and count > 0) then
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(id)
+            set result = result + ConvertDecimalNumberToSaveCodeSegment(GetPlayerTechCountSimple(id, owner))
+            if (researchNames != "") then
+                set researchNames = researchNames + ","
             endif
+            set researchNames = researchNames + I2S(count) + GetObjectName(id)
+            set researchesCounter = researchesCounter + 1
         endif
         set i = i + 1
     endloop
@@ -3378,7 +3457,7 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             //call BJDebugMsg("Loading save object: " + I2S(saveObject))
             if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectId(saveObject)
+                set saveObjectId = GetSaveObjectResearchId(saveObject)
                 set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
                 //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
                 call SetPlayerTechResearchedSwap(saveObjectId, count, whichPlayer)
@@ -3413,53 +3492,45 @@ function ForGroupRemoveUnit takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
 
+function GetSaveCodeBaradeWarlordBase takes player whichPlayer returns string
+    local location tmpLocation = Location(0.0, 0.0)
+    local group allBuildings = CreateGroup()
+    local string result
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'htow', GetRectCenterX(gg_rct_Save_Code_Town_Hall), GetRectCenterY(gg_rct_Save_Code_Town_Hall), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hgtw', GetRectCenterX(gg_rct_Save_Code_Guard_Tower_1), GetRectCenterY(gg_rct_Save_Code_Guard_Tower_1), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hgtw', GetRectCenterX(gg_rct_Save_Code_Guard_Tower_2), GetRectCenterY(gg_rct_Save_Code_Guard_Tower_2), bj_UNIT_FACING))
+
+    set result = GetSaveCodeBuildingsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allBuildings)
+
+    call ForGroupBJ(allBuildings, function ForGroupRemoveUnit)
+
+    call GroupClear(allBuildings)
+    call DestroyGroup(allBuildings)
+    set allBuildings = null
+
+    call RemoveLocation(tmpLocation)
+    set tmpLocation = null
+
+    return result
+endfunction
+
 function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns string
     local location tmpLocation = Location(0.0, 0.0)
-    local group redDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nrwm', whichPlayer, tmpLocation, 0.0))
-    local group greenDragons = CopyGroup(CreateNUnitsAtLoc(10, 'ngrd', whichPlayer, tmpLocation, 0.0))
-    local group blackDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0))
-    local group blueDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0))
-    local group bronzeDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0))
-    local group netherDragons = CopyGroup(CreateNUnitsAtLoc(10, 'nndr', whichPlayer, tmpLocation, 0.0))
     local group allDragons = CreateGroup()
     local group allDragonsDistinct
     local string result
-    call GroupAddGroup(redDragons, allDragons)
-    call GroupAddGroup(greenDragons, allDragons)
-    call GroupAddGroup(blackDragons, allDragons)
-    call GroupAddGroup(blueDragons, allDragons)
-    call GroupAddGroup(bronzeDragons, allDragons)
-    call GroupAddGroup(netherDragons, allDragons)
+    call GroupAddGroup(CreateNUnitsAtLoc(10, 'nrwm', whichPlayer, tmpLocation, 0.0), allDragons)
+    call GroupAddGroup(CreateNUnitsAtLoc(10, 'ngrd', whichPlayer, tmpLocation, 0.0), allDragons)
+    call GroupAddGroup(CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0), allDragons)
+    call GroupAddGroup(CreateNUnitsAtLoc(10, 'nadr', whichPlayer, tmpLocation, 0.0), allDragons)
+    call GroupAddGroup(CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0), allDragons)
+    call GroupAddGroup(CreateNUnitsAtLoc(10, 'nndr', whichPlayer, tmpLocation, 0.0), allDragons)
 
     set allDragonsDistinct = DistinctGroup(allDragons)
 
     set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
 
     call ForGroupBJ(allDragons, function ForGroupRemoveUnit)
-
-    call GroupClear(redDragons)
-    call DestroyGroup(redDragons)
-    set redDragons = null
-
-    call GroupClear(greenDragons)
-    call DestroyGroup(greenDragons)
-    set greenDragons = null
-
-    call GroupClear(blackDragons)
-    call DestroyGroup(blackDragons)
-    set blackDragons = null
-
-    call GroupClear(blueDragons)
-    call DestroyGroup(blueDragons)
-    set blueDragons = null
-
-    call GroupClear(bronzeDragons)
-    call DestroyGroup(bronzeDragons)
-    set bronzeDragons = null
-
-    call GroupClear(netherDragons)
-    call DestroyGroup(netherDragons)
-    set netherDragons = null
 
     call GroupClear(allDragons)
     call DestroyGroup(allDragons)
@@ -4474,13 +4545,11 @@ endfunction
 function RandomizeString takes string source returns string
     local string result = ""
     local integer sourcePosition = 0
-    local integer i = 0
     loop
-        exitwhen (i == StringLength(source))
+        exitwhen (StringLength(result) == StringLength(source))
         set sourcePosition = GetRandomInt(0, StringLength(source) - 1)
         set result = result + SubString(source, sourcePosition, sourcePosition + 1)
         set source = SubString(source, 0, sourcePosition) + SubString(source, sourcePosition + 1, StringLength(source))
-        set i = i + 1
     endloop
 
     return result

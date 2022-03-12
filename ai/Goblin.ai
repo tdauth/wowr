@@ -27,6 +27,7 @@ globals
 	constant integer GOBLIN_SAPPER                                   = 'n03V'
 	constant integer OGRE_GOBLIN_SQUAD                               = 'o01C'
 	constant integer GOBLIN_EMPEROR                                  = 'h02E' // tauren
+	constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // Obsidian Statue
 
 	//constant integer UPG_FURBOLG_WEB                                 = 'R01Q'
 	//constant integer UPG_FURBOLG_STEEL_RWEAPONS                      = 'R01G'
@@ -436,7 +437,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_FLAME_TANK )
 	call CampaignAttackerEx( 2, 2, 3, OGRE_GOBLIN_SQUAD )
 	call CampaignAttackerEx( 2, 2, 3, GOBLIN_EMPEROR )
-	//call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
+	call CampaignAttackerEx( 2, 2, 3, GOBLIN_STEAM_ROLLER )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -454,7 +455,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_SORCERESS )
 	call CampaignAttackerEx( 2, 2, 3, OGRE_GOBLIN_SQUAD )
 	call CampaignAttackerEx( 2, 2, 3, GOBLIN_EMPEROR )
-	//call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
+	call CampaignAttackerEx( 2, 2, 3, GOBLIN_STEAM_ROLLER )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -474,7 +475,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, GOBLIN_SORCERESS )
 		call CampaignAttackerEx( 2, 2, 2, OGRE_GOBLIN_SQUAD )
 		call CampaignAttackerEx( 2, 2, 2, GOBLIN_EMPEROR )
-		//call CampaignAttackerEx( 2, 2, 2, DIRE_WOLF )
+		call CampaignAttackerEx( 2, 2, 2, GOBLIN_STEAM_ROLLER )
 		
 		// big air army
         call CampaignAttackerEx( 6, 12, 18, GOBLIN_WAR_ZEPPELIN )
