@@ -3964,7 +3964,8 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     local real x
     local real y
 
-    call BlzLoadTOCFile("war3mapImported\\saveTOC.toc")
+    call BlzLoadTOCFile("war3mapImported\\saveguiTOC.toc")
+    call BlzLoadTOCFile(".toc")
 
     set SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
@@ -4076,8 +4077,13 @@ globals
     constant integer RACE_OBJECT_TYPE_FOOTMAN = 16
     constant integer RACE_OBJECT_TYPE_RIFLEMAN = 17
     constant integer RACE_OBJECT_TYPE_KNIGHT = 18
+    constant integer RACE_OBJECT_TYPE_PRIEST = 19
+    constant integer RACE_OBJECT_TYPE_SORCERESS = 20
+    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 21
+    constant integer RACE_OBJECT_TYPE_MORTAR = 22
+    constant integer RACE_OBJECT_TYPE_GRYPHON = 23
 
-    constant integer RACE_MAX_OBJECT_TYPES = 19
+    constant integer RACE_MAX_OBJECT_TYPES = 24
 
     integer array raceObjectType
 endglobals
