@@ -761,6 +761,10 @@ function CopyGroup takes group whichGroup returns group
     return tmpGroup
 endfunction
 
+function AssignDestructibleToCurrentGroup takes nothing returns nothing
+    set udg_RespawnGroupDestructible[udg_TmpGroupIndex] = udg_CurrentRespawnDestructible
+endfunction
+
 function AssignAllUnitsToCurrentGroup takes nothing returns nothing
     local integer count = CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])
     local group copy = CopyGroup(udg_RespawnGroup[udg_TmpGroupIndex])
@@ -776,6 +780,7 @@ function AssignAllUnitsToCurrentGroup takes nothing returns nothing
     endloop
     call GroupClear(copy)
     call DestroyGroup(copy)
+    call AssignDestructibleToCurrentGroup()
 endfunction
 
 function InitCurrentGroup takes nothing returns nothing
@@ -849,6 +854,11 @@ function RespawnGroup takes integer Group returns boolean
             endif
             set I0 = I0 + 1
         endloop
+
+        if (udg_RespawnGroupDestructible[Group] != null and not GetDestructableLife(udg_RespawnGroupDestructible[Group]) <= 0.0) then
+            call DestructableRestoreLife(udg_RespawnGroupDestructible[Group], GetDestructableMaxLife(udg_RespawnGroupDestructible[Group]), true)
+        endif
+        endif
 
 		set result = true
     endif
@@ -1471,6 +1481,349 @@ endfunction
 function GetNextCraftedProfession2Item takes player whichPlayer returns integer
 	local integer profession = udg_PlayerProfession2[GetConvertedPlayerId(whichPlayer)]
 	return GetNextCraftedProfessionItemEx(whichPlayer, profession)
+endfunction
+
+/**
+ * Race system.
+ *
+ * All unit, building and item types might belong to a specific race. This information can be useful when replacing units, buildings or items or preventing players from using them since
+ * they have chosen different races.
+ */
+globals
+    // BUILDINGS
+    constant integer RACE_OBJECT_TYPE_FARM = 0
+    constant integer RACE_OBJECT_TYPE_ALTAR = 1
+    constant integer RACE_OBJECT_TYPE_MILL = 2
+    constant integer RACE_OBJECT_TYPE_BLACK_SMITH = 3
+    constant integer RACE_OBJECT_TYPE_BARRACKS = 4
+    constant integer RACE_OBJECT_TYPE_SHOP = 5
+    constant integer RACE_OBJECT_TYPE_GUARD_TOWER = 6
+    constant integer RACE_OBJECT_TYPE_ARCANE_SANCTUM = 7
+    constant integer RACE_OBJECT_TYPE_GRYPHON_AVIARY = 8
+    constant integer RACE_OBJECT_TYPE_TIER_1 = 9
+    constant integer RACE_OBJECT_TYPE_TIER_2 = 10
+    constant integer RACE_OBJECT_TYPE_TIER_3 = 11
+    // ITEMS
+    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 12
+    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 13
+    // UNITS
+    constant integer RACE_OBJECT_TYPE_WORKER = 14
+    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 15
+    constant integer RACE_OBJECT_TYPE_FOOTMAN = 16
+    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 17
+    constant integer RACE_OBJECT_TYPE_KNIGHT = 18
+    constant integer RACE_OBJECT_TYPE_PRIEST = 19
+    constant integer RACE_OBJECT_TYPE_SORCERESS = 20
+    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 21
+    constant integer RACE_OBJECT_TYPE_MORTAR = 22
+    constant integer RACE_OBJECT_TYPE_GRYPHON = 23
+
+    constant integer RACE_MAX_OBJECT_TYPES = 24
+
+    integer array raceObjectType
+endglobals
+
+function SetRaceObjectType takes integer whichRace, integer unitType, integer objectTypeId returns nothing
+    set raceObjectType[Index2D(whichRace, unitType, RACE_MAX_OBJECT_TYPES)] = objectTypeId
+endfunction
+
+function GetRaceObjectType takes integer whichRace, integer unitType returns integer
+    return raceObjectType[Index2D(whichRace, unitType, RACE_MAX_OBJECT_TYPES)]
+endfunction
+
+function GetObjectRace takes integer objectTypeId returns integer
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        set j = 0
+        loop
+            exitwhen (j == RACE_MAX_OBJECT_TYPES)
+            if (GetRaceObjectType(i, j) == objectTypeId) then
+                return i
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+
+    return udg_RaceNone
+endfunction
+
+function GetObjectRaceType takes integer objectTypeId returns integer
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        set j = 0
+        loop
+            exitwhen (j == RACE_MAX_OBJECT_TYPES)
+            if (GetRaceObjectType(i, j) == objectTypeId) then
+                return j
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+
+    return -1
+endfunction
+
+function MapRaceObjectType takes integer objectTypeId, integer targetRace returns integer
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == udg_Max_Voelker)
+        set j = 0
+        loop
+            exitwhen (j == RACE_MAX_OBJECT_TYPES)
+            if (GetRaceObjectType(i, j) == objectTypeId) then
+                return GetRaceObjectType(targetRace, j)
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+
+    return 0
+endfunction
+
+function InitStandardRaceObjectTypes takes nothing returns nothing
+    // BUILDINGS
+
+    // farms
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_FARM, 'hhou')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_FARM, 'otrb')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_FARM, 'uzig')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_FARM, 'emow')
+
+    // altars
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_ALTAR, 'halt')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_ALTAR, 'oalt')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_ALTAR, 'uaod')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_ALTAR, 'eate')
+
+    // mills
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_MILL, 'hlum')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_MILL, 'ofor')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_MILL, 'ugrv')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_MILL, 'edob')
+
+    // black smiths
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_BLACK_SMITH, 'hbla')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_BLACK_SMITH, 'ofor')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_BLACK_SMITH, 'ugrv')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_BLACK_SMITH, 'edob')
+
+    // barracks
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_BARRACKS, 'hbar')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_BARRACKS, 'obar')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_BARRACKS, 'usep')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_BARRACKS, 'eaom')
+
+    // shops
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_SHOP, 'hars')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_SHOP, 'ovln')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_SHOP, 'utom')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_SHOP, 'eden')
+
+    // guard tower
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_GUARD_TOWER, 'hgtw')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_GUARD_TOWER, 'owtw')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_GUARD_TOWER, 'uzg1')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_GUARD_TOWER, 'etrp')
+
+    // arcane sanctum
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'hars')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'osld')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'utod')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'eaoe')
+
+    // gryphon aviary
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'hgra')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'otto')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'ubon')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'edos')
+
+    // tier 1
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_1, 'htow')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_1, 'ogre')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_1, 'unpl')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_1, 'etol')
+
+    // tier 2
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2, 'hkee')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_2, 'ostr')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_2, 'unp1')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_2, 'etoa')
+
+    // tier 3
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_3, 'hcas')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_3, 'ofrt')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_3, 'unp2')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_3, 'etoe')
+
+    // ITEMS
+
+    // tier 1 item
+    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02P')
+    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_1_ITEM, 'tgrh')
+    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02K')
+    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02J')
+    call SetRaceObjectType(udg_RaceNaga, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02M')
+    call SetRaceObjectType(udg_RaceBloodElf, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02L')
+    call SetRaceObjectType(udg_RaceDemon, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02N')
+    call SetRaceObjectType(udg_RaceDraenei, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02O')
+    call SetRaceObjectType(udg_RaceFurbolg, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
+    call SetRaceObjectType(udg_RaceGoblin, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
+
+   // tier 2 item
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2_ITEM, 'tcas')
+
+   // UNITS
+
+   // worker
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_WORKER, 'hpea')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_WORKER, 'opeo')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_WORKER, 'uaco')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_WORKER, 'ewsp')
+
+   // male citizen
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00E')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00I')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00G')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00O')
+
+   // footman
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_FOOTMAN, 'hfoo')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_FOOTMAN, 'ogru')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_FOOTMAN, 'ugho')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_FOOTMAN, 'earc')
+
+   // rifleman
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_RIFLEMAN, 'hrif')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_RIFLEMAN, 'ohun')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_RIFLEMAN, 'ucry')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_RIFLEMAN, 'esen')
+
+   // knight
+   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_KNIGHT, 'hkni')
+   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_KNIGHT, 'orai')
+   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_KNIGHT, 'uabo')
+   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_KNIGHT, 'edoc')
+endfunction
+
+function GetBuildingRace takes integer buildingID returns integer
+    return GetObjectRace(buildingID)
+endfunction
+
+// exclude certain buildings since every race can build them
+function IsBuildingAllRaces takes integer buildingID returns boolean
+    if (buildingID == 'n025') then // power generator
+        return true
+    elseif (buildingID == 'h00N') then // Temple of Darkness
+        return true
+    elseif (buildingID == 'h00M') then // Temple of Light
+        return true
+    elseif (buildingID == 'h020') then // Gate horizontal closed
+        return true
+    elseif (buildingID == 'h021') then // Gate horizontal open
+        return true
+    endif
+
+    return false
+endfunction
+
+function GetItemRace takes integer itemID returns integer
+    return GetObjectRace(itemID)
+endfunction
+
+function GetUnitIDRace takes integer unitID returns integer
+    return GetObjectRace(unitID)
+endfunction
+
+function MapBuildingID takes integer buildingID, integer targetRace returns integer
+    return MapRaceObjectType(buildingID, targetRace)
+endfunction
+
+// TODO does depend on the food produced, some farms might be converted into more farms.
+function MapBuildingNumber takes integer buildingID, integer targetRace returns integer
+    return 1
+endfunction
+
+function MapBuildingIDToItemID takes integer buildingID, integer targetRace returns integer
+    local integer raceType = GetObjectRaceType(buildingID)
+
+    if (raceType == RACE_OBJECT_TYPE_TIER_1) then
+        return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
+    elseif (raceType == RACE_OBJECT_TYPE_TIER_2) then
+        return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_2_ITEM)
+    endif
+
+    return 0
+endfunction
+
+function MapUnitID takes integer unitID, integer targetRace, boolean includingWorkers returns integer
+    local integer raceType = -1
+    if (not includingWorkers) then
+        set raceType = GetObjectRaceType(unitID)
+
+        if (raceType == RACE_OBJECT_TYPE_WORKER or raceType == RACE_OBJECT_TYPE_MALE_CITIZEN) then
+            return 0
+        endif
+    endif
+
+    return MapRaceObjectType(unitID, targetRace)
+endfunction
+
+// TODO does depend on the food produced, some farms might be converted into more farms.
+function MapUnitNumber takes integer unitID, integer targetRace returns integer
+    return 1
+endfunction
+
+function FilterIsBuilding takes nothing returns boolean
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
+endfunction
+
+// TODO Group created items by their ID with more charges per item.
+function WrapUpAllBuildings takes player whichPlayer, real x, real y returns integer
+    local group allBuildings = CreateGroup()
+    local unit first = null
+    local integer itemTypeId = 0
+    local integer targetRace = udg_RaceNone
+    local item whichItem = null
+    local integer counter = 0
+    local boolean remove = false
+    call GroupEnumUnitsOfPlayer(allBuildings, whichPlayer, Filter(function FilterIsBuilding))
+    loop
+        set first = FirstOfGroup(allBuildings)
+        exitwhen (first == null)
+        set remove = false
+        set targetRace = GetBuildingRace(GetUnitTypeId(first))
+        call BJDebugMsg("Building " + GetUnitName(first) + " has target race " + I2S(targetRace))
+        if (targetRace != udg_RaceNone) then
+            set itemTypeId = MapBuildingIDToItemID(GetUnitTypeId(first), targetRace)
+            call BJDebugMsg("Building " + GetUnitName(first) + " has target item type " + GetObjectName(itemTypeId))
+            if (itemTypeId != 0) then
+                set whichItem = CreateItem(itemTypeId, x, y)
+                call SetItemCharges(whichItem, MapBuildingNumber(GetUnitTypeId(first), targetRace))
+                set counter = counter + 1
+                set remove = true
+            endif
+        endif
+        call GroupRemoveUnit(allBuildings, first)
+
+        if (remove) then
+            call RemoveUnit(first)
+        endif
+
+        set first = null
+    endloop
+    call GroupClear(allBuildings)
+    call DestroyGroup(allBuildings)
+    set allBuildings = null
+
+    return counter
 endfunction
 
 
@@ -2289,28 +2642,29 @@ endfunction
 
 
 globals
-    constant integer SAVE_OBJECT_CLASSIFICATION_VALUE = 0
-    constant integer SAVE_OBJECT_CLASSIFICATION_UNIT = 1
-    constant integer SAVE_OBJECT_CLASSIFICATION_BUILDING = 2
-    constant integer SAVE_OBJECT_CLASSIFICATION_ITEM = 3
-    constant integer SAVE_OBJECT_CLASSIFICATION_RESEARCH = 4
-
     string array SaveObjectNameUnit
     integer array SaveObjectIdUnit
-    integer SaveObjectUnitCounter = 0
+    integer SaveObjectUnitCounter = 1 // start with 1 so 0 won't lead to anything
 
     string array SaveObjectNameBuilding
     integer array SaveObjectIdBuilding
-    integer SaveObjectBuildingCounter = 0
+    integer SaveObjectBuildingCounter = 1 // start with 1 so 0 won't lead to anything
 
     string array SaveObjectNameItem
     integer array SaveObjectIdItem
-    integer SaveObjectItemCounter = 0
+    integer SaveObjectItemCounter = 1 // start with 1 so 0 won't lead to anything
 
     string array SaveObjectNameResearch
     integer array SaveObjectIdResearch
-    integer SaveObjectResearchCounter = 0
+    integer SaveObjectResearchCounter = 1 // start with 1 so 0 won't lead to anything
 endglobals
+
+function DisplaySaveObjectCounters takes nothing returns nothing
+    call BJDebugMsg("Save Object Unit Counter: " + I2S(SaveObjectUnitCounter))
+    call BJDebugMsg("Save Object Building Counter: " + I2S(SaveObjectBuildingCounter))
+    call BJDebugMsg("Save Object Item Counter: " + I2S(SaveObjectItemCounter))
+    call BJDebugMsg("Save Object Research Counter: " + I2S(SaveObjectResearchCounter))
+endfunction
 
 function AddSaveObjectUnitTypeEx takes string name, integer id returns integer
     local integer index = SaveObjectUnitCounter
@@ -2542,9 +2896,10 @@ function ConvertAbsCoordinateY takes real coordinate returns real
     return y
 endfunction
 
-function GetSaveCodeBuildingsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner, group buildings returns string
+function GetSaveCodeBuildingsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner, group b returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
+    local group buildings = CopyGroup(b)
     local unit first = null
     local integer id = -1
     local integer i = 0
@@ -2605,6 +2960,10 @@ function GetSaveCodeBuildingsEx2 takes string playerName, boolean isSinglePlayer
         set i = i + 1
     endloop
 
+    call GroupClear(buildings)
+    call DestroyGroup(buildings)
+    set buildings = null
+
     //call BJDebugMsg("Compressed result: " + result)
     //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
@@ -2634,7 +2993,6 @@ function GetSaveCodeBuildingsEx takes string playerName, boolean isSinglePlayer,
     return result
 endfunction
 
-
 function GetSaveCodeBuildings takes player whichPlayer returns string
     local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
     local boolean isSinglePlayer = IsInSinglePlayer()
@@ -2643,6 +3001,15 @@ function GetSaveCodeBuildings takes player whichPlayer returns string
     local integer xpRate = R2I(GetPlayerHandicapXPBJ(whichPlayer))
 
     return GetSaveCodeBuildingsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, whichPlayer)
+endfunction
+
+function IsObjectFromPlayerRace takes integer objectID, player whichPlayer returns boolean
+    local integer objectRace = GetObjectRace(objectID)
+    return objectRace == udg_RaceNone or objectRace == udg_PlayerRace[GetConvertedPlayerId(whichPlayer)] or objectRace == udg_PlayerRace2[GetConvertedPlayerId(whichPlayer)]
+endfunction
+
+function DisplayObjectRaceLoadError takes integer objectID, player whichPlayer returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 8.0, "Unable to load " + GetObjectName(objectID) + " since it does not belong to your chosen race(s)!")
 endfunction
 
 function ApplySaveCodeBuildings takes player whichPlayer, string s returns boolean
@@ -2699,10 +3066,14 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             if (saveObject > 0) then
                 set saveObjectId = GetSaveObjectBuildingId(saveObject)
-                set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
-                set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
-                //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
-                call CreateUnit(whichPlayer, saveObjectId, x, y, bj_UNIT_FACING)
+                if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                    set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
+                    set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
+                    //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
+                    call CreateUnit(whichPlayer, saveObjectId, x, y, bj_UNIT_FACING)
+                else
+                    call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                endif
             endif
             set i = i + 1
             set pos = pos + 3
@@ -2919,6 +3290,7 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
     local integer i = 0
     local integer pos = 4
     local integer saveObject = 0
+    local integer saveObjectId = 0
     local unit hero = udg_Hero[GetPlayerId(whichPlayer)]
 
     //call BJDebugMsg("Obfuscated save code: " + s)
@@ -2956,8 +3328,13 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
             exitwhen (i == bj_MAX_INVENTORY)
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             if (saveObject > 0) then
-                call UnitAddItemByIdSwapped(GetSaveObjectItemId(saveObject), hero)
-                call SetItemCharges(bj_lastCreatedItem, ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1))
+                set saveObjectId = GetSaveObjectItemId(saveObject)
+                if (IsObjectFromPlayerRace(saveObject, whichPlayer)) then
+                    call UnitAddItemByIdSwapped(saveObjectId, hero)
+                    call SetItemCharges(bj_lastCreatedItem, ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1))
+                else
+                    call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                endif
             endif
             set i = i + 1
             set pos = pos + 2
@@ -3259,7 +3636,11 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                     exitwhen (j == count)
                     // the player does not have to build all farms before but the limit should not be exceeded
                     if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(saveObjectId) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
-                        call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                        if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                            call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                        else
+                            call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                        endif
                     else
                         call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetObjectName(saveObjectId) + " exceeds your food maximum and hence is not loaded.")
                     endif
@@ -3458,9 +3839,13 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
             //call BJDebugMsg("Loading save object: " + I2S(saveObject))
             if (saveObject > 0) then
                 set saveObjectId = GetSaveObjectResearchId(saveObject)
-                set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
-                //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
-                call SetPlayerTechResearchedSwap(saveObjectId, count, whichPlayer)
+                if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                    set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+                    //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
+                    call SetPlayerTechResearchedSwap(saveObjectId, count, whichPlayer)
+                else
+                    call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                endif
             endif
             set i = i + 1
             set pos = pos + 2
@@ -4125,343 +4510,6 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], false)
 endfunction
 
-globals
-    // BUILDINGS
-    constant integer RACE_OBJECT_TYPE_FARM = 0
-    constant integer RACE_OBJECT_TYPE_ALTAR = 1
-    constant integer RACE_OBJECT_TYPE_MILL = 2
-    constant integer RACE_OBJECT_TYPE_BLACK_SMITH = 3
-    constant integer RACE_OBJECT_TYPE_BARRACKS = 4
-    constant integer RACE_OBJECT_TYPE_SHOP = 5
-    constant integer RACE_OBJECT_TYPE_GUARD_TOWER = 6
-    constant integer RACE_OBJECT_TYPE_ARCANE_SANCTUM = 7
-    constant integer RACE_OBJECT_TYPE_GRYPHON_AVIARY = 8
-    constant integer RACE_OBJECT_TYPE_TIER_1 = 9
-    constant integer RACE_OBJECT_TYPE_TIER_2 = 10
-    constant integer RACE_OBJECT_TYPE_TIER_3 = 11
-    // ITEMS
-    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 12
-    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 13
-    // UNITS
-    constant integer RACE_OBJECT_TYPE_WORKER = 14
-    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 15
-    constant integer RACE_OBJECT_TYPE_FOOTMAN = 16
-    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 17
-    constant integer RACE_OBJECT_TYPE_KNIGHT = 18
-    constant integer RACE_OBJECT_TYPE_PRIEST = 19
-    constant integer RACE_OBJECT_TYPE_SORCERESS = 20
-    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 21
-    constant integer RACE_OBJECT_TYPE_MORTAR = 22
-    constant integer RACE_OBJECT_TYPE_GRYPHON = 23
-
-    constant integer RACE_MAX_OBJECT_TYPES = 24
-
-    integer array raceObjectType
-endglobals
-
-function SetRaceObjectType takes integer whichRace, integer unitType, integer objectTypeId returns nothing
-    set raceObjectType[Index2D(whichRace, unitType, RACE_MAX_OBJECT_TYPES)] = objectTypeId
-endfunction
-
-function GetRaceObjectType takes integer whichRace, integer unitType returns integer
-    return raceObjectType[Index2D(whichRace, unitType, RACE_MAX_OBJECT_TYPES)]
-endfunction
-
-function GetObjectRace takes integer objectTypeId returns integer
-    local integer i = 0
-    local integer j = 0
-    loop
-        exitwhen (i == udg_Max_Voelker)
-        set j = 0
-        loop
-            exitwhen (j == RACE_MAX_OBJECT_TYPES)
-            if (GetRaceObjectType(i, j) == objectTypeId) then
-                return i
-            endif
-            set j = j + 1
-        endloop
-        set i = i + 1
-    endloop
-
-    return udg_RaceNone
-endfunction
-
-function GetObjectRaceType takes integer objectTypeId returns integer
-    local integer i = 0
-    local integer j = 0
-    loop
-        exitwhen (i == udg_Max_Voelker)
-        set j = 0
-        loop
-            exitwhen (j == RACE_MAX_OBJECT_TYPES)
-            if (GetRaceObjectType(i, j) == objectTypeId) then
-                return j
-            endif
-            set j = j + 1
-        endloop
-        set i = i + 1
-    endloop
-
-    return -1
-endfunction
-
-function MapRaceObjectType takes integer objectTypeId, integer targetRace returns integer
-    local integer i = 0
-    local integer j = 0
-    loop
-        exitwhen (i == udg_Max_Voelker)
-        set j = 0
-        loop
-            exitwhen (j == RACE_MAX_OBJECT_TYPES)
-            if (GetRaceObjectType(i, j) == objectTypeId) then
-                return GetRaceObjectType(targetRace, j)
-            endif
-            set j = j + 1
-        endloop
-        set i = i + 1
-    endloop
-
-    return 0
-endfunction
-
-function InitStandardRaceObjectTypes takes nothing returns nothing
-    // BUILDINGS
-
-    // farms
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_FARM, 'hhou')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_FARM, 'otrb')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_FARM, 'uzig')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_FARM, 'emow')
-
-    // altars
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_ALTAR, 'halt')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_ALTAR, 'oalt')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_ALTAR, 'uaod')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_ALTAR, 'eate')
-
-    // mills
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_MILL, 'hlum')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_MILL, 'ofor')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_MILL, 'ugrv')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_MILL, 'edob')
-
-    // black smiths
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_BLACK_SMITH, 'hbla')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_BLACK_SMITH, 'ofor')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_BLACK_SMITH, 'ugrv')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_BLACK_SMITH, 'edob')
-
-    // barracks
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_BARRACKS, 'hbar')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_BARRACKS, 'obar')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_BARRACKS, 'usep')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_BARRACKS, 'eaom')
-
-    // shops
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_SHOP, 'hars')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_SHOP, 'ovln')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_SHOP, 'utom')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_SHOP, 'eden')
-
-    // guard tower
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_GUARD_TOWER, 'hgtw')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_GUARD_TOWER, 'owtw')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_GUARD_TOWER, 'uzg1')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_GUARD_TOWER, 'etrp')
-
-    // arcane sanctum
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'hars')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'osld')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'utod')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_ARCANE_SANCTUM, 'eaoe')
-
-    // gryphon aviary
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'hgra')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'otto')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'ubon')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_GRYPHON_AVIARY, 'edos')
-
-    // tier 1
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_1, 'htow')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_1, 'ogre')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_1, 'unpl')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_1, 'etol')
-
-    // tier 2
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2, 'hkee')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_2, 'ostr')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_2, 'unp1')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_2, 'etoa')
-
-    // tier 3
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_3, 'hcas')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_3, 'ofrt')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_3, 'unp2')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_3, 'etoe')
-
-    // ITEMS
-
-    // tier 1 item
-    call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02P')
-    call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_TIER_1_ITEM, 'tgrh')
-    call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02K')
-    call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02J')
-    call SetRaceObjectType(udg_RaceNaga, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02M')
-    call SetRaceObjectType(udg_RaceBloodElf, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02L')
-    call SetRaceObjectType(udg_RaceDemon, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02N')
-    call SetRaceObjectType(udg_RaceDraenei, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I02O')
-    call SetRaceObjectType(udg_RaceFurbolg, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
-    call SetRaceObjectType(udg_RaceGoblin, RACE_OBJECT_TYPE_TIER_1_ITEM, 'I03A')
-
-   // tier 2 item
-   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_TIER_2_ITEM, 'tcas')
-
-   // UNITS
-
-   // worker
-   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_WORKER, 'hpea')
-   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_WORKER, 'opeo')
-   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_WORKER, 'uaco')
-   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_WORKER, 'ewsp')
-
-   // male citizen
-   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00E')
-   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00I')
-   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00G')
-   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_MALE_CITIZEN, 'n00O')
-
-   // footman
-   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_FOOTMAN, 'hfoo')
-   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_FOOTMAN, 'ogru')
-   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_FOOTMAN, 'ugho')
-   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_FOOTMAN, 'earc')
-
-   // rifleman
-   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_RIFLEMAN, 'hrif')
-   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_RIFLEMAN, 'ohun')
-   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_RIFLEMAN, 'ucry')
-   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_RIFLEMAN, 'esen')
-
-   // knight
-   call SetRaceObjectType(udg_RaceHuman, RACE_OBJECT_TYPE_KNIGHT, 'hkni')
-   call SetRaceObjectType(udg_RaceOrc, RACE_OBJECT_TYPE_KNIGHT, 'orai')
-   call SetRaceObjectType(udg_RaceUndead, RACE_OBJECT_TYPE_KNIGHT, 'uabo')
-   call SetRaceObjectType(udg_RaceNightElf, RACE_OBJECT_TYPE_KNIGHT, 'edoc')
-endfunction
-
-function GetBuildingRace takes integer buildingID returns integer
-    return GetObjectRace(buildingID)
-endfunction
-
-// exclude certain buildings since every race can build them
-function IsBuildingAllRaces takes integer buildingID returns boolean
-    if (buildingID == 'n025') then // power generator
-        return true
-    elseif (buildingID == 'h00N') then // Temple of Darkness
-        return true
-    elseif (buildingID == 'h00M') then // Temple of Light
-        return true
-    elseif (buildingID == 'h020') then // Gate horizontal closed
-        return true
-    elseif (buildingID == 'h021') then // Gate horizontal open
-        return true
-    endif
-
-    return false
-endfunction
-
-function GetItemRace takes integer itemID returns integer
-    return GetObjectRace(itemID)
-endfunction
-
-function GetUnitIDRace takes integer unitID returns integer
-    return GetObjectRace(unitID)
-endfunction
-
-function MapBuildingID takes integer buildingID, integer targetRace returns integer
-    return MapRaceObjectType(buildingID, targetRace)
-endfunction
-
-// TODO does depend on the food produced, some farms might be converted into more farms.
-function MapBuildingNumber takes integer buildingID, integer targetRace returns integer
-    return 1
-endfunction
-
-function MapBuildingIDToItemID takes integer buildingID, integer targetRace returns integer
-    local integer raceType = GetObjectRaceType(buildingID)
-
-    if (raceType == RACE_OBJECT_TYPE_TIER_1) then
-        return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
-    elseif (raceType == RACE_OBJECT_TYPE_TIER_2) then
-        return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_2_ITEM)
-    endif
-
-    return 0
-endfunction
-
-function MapUnitID takes integer unitID, integer targetRace, boolean includingWorkers returns integer
-    local integer raceType = -1
-    if (not includingWorkers) then
-        set raceType = GetObjectRaceType(unitID)
-
-        if (raceType == RACE_OBJECT_TYPE_WORKER or raceType == RACE_OBJECT_TYPE_MALE_CITIZEN) then
-            return 0
-        endif
-    endif
-
-    return MapRaceObjectType(unitID, targetRace)
-endfunction
-
-// TODO does depend on the food produced, some farms might be converted into more farms.
-function MapUnitNumber takes integer unitID, integer targetRace returns integer
-    return 1
-endfunction
-
-function FilterIsBuilding takes nothing returns boolean
-    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
-endfunction
-
-// TODO Group created items by their ID with more charges per item.
-function WrapUpAllBuildings takes player whichPlayer, real x, real y returns integer
-    local group allBuildings = CreateGroup()
-    local unit first = null
-    local integer itemTypeId = 0
-    local integer targetRace = udg_RaceNone
-    local item whichItem = null
-    local integer counter = 0
-    local boolean remove = false
-    call GroupEnumUnitsOfPlayer(allBuildings, whichPlayer, Filter(function FilterIsBuilding))
-    loop
-        set first = FirstOfGroup(allBuildings)
-        exitwhen (first == null)
-        set remove = false
-        set targetRace = GetBuildingRace(GetUnitTypeId(first))
-        call BJDebugMsg("Building " + GetUnitName(first) + " has target race " + I2S(targetRace))
-        if (targetRace != udg_RaceNone) then
-            set itemTypeId = MapBuildingIDToItemID(GetUnitTypeId(first), targetRace)
-            call BJDebugMsg("Building " + GetUnitName(first) + " has target item type " + GetObjectName(itemTypeId))
-            if (itemTypeId != 0) then
-                set whichItem = CreateItem(itemTypeId, x, y)
-                call SetItemCharges(whichItem, MapBuildingNumber(GetUnitTypeId(first), targetRace))
-                set counter = counter + 1
-                set remove = true
-            endif
-        endif
-        call GroupRemoveUnit(allBuildings, first)
-
-        if (remove) then
-            call RemoveUnit(first)
-        endif
-
-        set first = null
-    endloop
-    call GroupClear(allBuildings)
-    call DestroyGroup(allBuildings)
-    set allBuildings = null
-
-    return counter
-endfunction
-
 function ShowTextTagForForce takes force whichForce, texttag textTag, boolean show returns nothing
     if (IsPlayerInForce(GetLocalPlayer(), whichForce)) then
         call SetTextTagVisibility(textTag, true)
@@ -4546,7 +4594,7 @@ function RandomizeString takes string source returns string
     local string result = ""
     local integer sourcePosition = 0
     loop
-        exitwhen (StringLength(result) == StringLength(source))
+        exitwhen (StringLength(source) == 0)
         set sourcePosition = GetRandomInt(0, StringLength(source) - 1)
         set result = result + SubString(source, sourcePosition, sourcePosition + 1)
         set source = SubString(source, 0, sourcePosition) + SubString(source, sourcePosition + 1, StringLength(source))
