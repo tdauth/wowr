@@ -855,9 +855,8 @@ function RespawnGroup takes integer Group returns boolean
             set I0 = I0 + 1
         endloop
 
-        if (udg_RespawnGroupDestructible[Group] != null and not GetDestructableLife(udg_RespawnGroupDestructible[Group]) <= 0.0) then
+        if (udg_RespawnGroupDestructible[Group] != null and GetDestructableLife(udg_RespawnGroupDestructible[Group]) <= 0.0) then
             call DestructableRestoreLife(udg_RespawnGroupDestructible[Group], GetDestructableMaxLife(udg_RespawnGroupDestructible[Group]), true)
-        endif
         endif
 
 		set result = true
@@ -3857,35 +3856,40 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
     return false
 endfunction
 
-function GetSaveCodeBaradeStrongFreelancer takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
+function GetSaveCodeStrongFreelancer takes string playerName returns string
+    return GetSaveCodeEx(playerName, false, false, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
 endfunction
 
-function GetSaveCodeBaradeStrongWarlord takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
+function GetSaveCodeStrongWarlord takes string playerName returns string
+    return GetSaveCodeEx(playerName, false, true, udg_GameTypeNormal, 100, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
 endfunction
 
-function GetSaveCodeBaradeNormalFreelancer takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, false, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
+function GetSaveCodeNormalFreelancer takes string playerName returns string
+    return GetSaveCodeEx(playerName, false, false, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
 endfunction
 
-function GetSaveCodeBaradeNormalWarlord takes nothing returns string
-    return GetSaveCodeEx("Barade#2569", false, true, udg_GameTypeNormal, 100, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
+function GetSaveCodeNormalWarlord takes string playerName returns string
+    return GetSaveCodeEx(playerName, false, true, udg_GameTypeNormal, 100, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
 endfunction
 
 function ForGroupRemoveUnit takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
 
-function GetSaveCodeBaradeWarlordBase takes player whichPlayer returns string
+function GetSaveCodeWarlordBase takes player whichPlayer, string playerName returns string
     local location tmpLocation = Location(0.0, 0.0)
     local group allBuildings = CreateGroup()
     local string result
     call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'htow', GetRectCenterX(gg_rct_Save_Code_Town_Hall), GetRectCenterY(gg_rct_Save_Code_Town_Hall), bj_UNIT_FACING))
     call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hgtw', GetRectCenterX(gg_rct_Save_Code_Guard_Tower_1), GetRectCenterY(gg_rct_Save_Code_Guard_Tower_1), bj_UNIT_FACING))
     call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hgtw', GetRectCenterX(gg_rct_Save_Code_Guard_Tower_2), GetRectCenterY(gg_rct_Save_Code_Guard_Tower_2), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'halt', GetRectCenterX(gg_rct_Save_Code_Altar), GetRectCenterY(gg_rct_Save_Code_Altar), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hlum', GetRectCenterX(gg_rct_Save_Code_Lumber_Mill), GetRectCenterY(gg_rct_Save_Code_Lumber_Mill), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hvlt', GetRectCenterX(gg_rct_Save_Code_Arcane_Vault), GetRectCenterY(gg_rct_Save_Code_Arcane_Vault), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'harm', GetRectCenterX(gg_rct_Save_Code_Workshop), GetRectCenterY(gg_rct_Save_Code_Workshop), bj_UNIT_FACING))
+    call GroupAddUnit(allBuildings, CreateUnit(whichPlayer, 'hbar', GetRectCenterX(gg_rct_Save_Code_Barracks), GetRectCenterY(gg_rct_Save_Code_Barracks), bj_UNIT_FACING))
 
-    set result = GetSaveCodeBuildingsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allBuildings)
+    set result = GetSaveCodeBuildingsEx2(playerName, false, true, udg_GameTypeNormal, 100, whichPlayer, allBuildings)
 
     call ForGroupBJ(allBuildings, function ForGroupRemoveUnit)
 
@@ -3899,7 +3903,7 @@ function GetSaveCodeBaradeWarlordBase takes player whichPlayer returns string
     return result
 endfunction
 
-function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns string
+function GetSaveCodeWarlordDragonUnits takes player whichPlayer, string playerName returns string
     local location tmpLocation = Location(0.0, 0.0)
     local group allDragons = CreateGroup()
     local group allDragonsDistinct
@@ -3913,7 +3917,7 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
 
     set allDragonsDistinct = DistinctGroup(allDragons)
 
-    set result = GetSaveCodeUnitsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
+    set result = GetSaveCodeUnitsEx2(playerName, false, true, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
 
     call ForGroupBJ(allDragons, function ForGroupRemoveUnit)
 
@@ -3931,7 +3935,7 @@ function GetSaveCodeBaradeWarlordDragonUnits takes player whichPlayer returns st
     return result
 endfunction
 
-function GetSaveCodeBaradeWarlordGoodItems takes nothing returns string
+function GetSaveCodeWarlordGoodItems takes string playerName returns string
     local item item0 = CreateItem('gcel', 0.0, 0.0)
     local item item1 = CreateItem('pnvu', 0.0, 0.0)
     local item item2 = CreateItem('sres', 0.0, 0.0)
@@ -3947,7 +3951,7 @@ function GetSaveCodeBaradeWarlordGoodItems takes nothing returns string
     call SetItemCharges(item4, 100)
     call SetItemCharges(item5, 100)
 
-    set result = GetSaveCodeItemsEx2("Barade#2569", false, true, udg_GameTypeNormal, 100, item0, item1, item2, item3, item4, item5)
+    set result = GetSaveCodeItemsEx2(playerName, false, true, udg_GameTypeNormal, 100, item0, item1, item2, item3, item4, item5)
 
     call RemoveItem(item0)
     set item0 = null
@@ -3970,17 +3974,37 @@ function GetSaveCodeBaradeWarlordGoodItems takes nothing returns string
     return result
 endfunction
 
-function GetSaveCodeBaradeWarlordHumanUpgrades takes player whichPlayer returns string
+function GetSaveCodeWarlordHumanUpgrades takes player whichPlayer, string playerName returns string
     local integer ironForgedSwordsLevel = GetPlayerTechCountSimple('Rhme', whichPlayer)
     local string result
 
     call SetPlayerTechResearched(whichPlayer, 'Rhme', 3)
 
-    set result = GetSaveCodeResearchesEx("Barade#2569", false, true, udg_GameTypeNormal, 100, whichPlayer)
+    set result = GetSaveCodeResearchesEx(playerName, false, true, udg_GameTypeNormal, 100, whichPlayer)
 
     call SetPlayerTechResearched(whichPlayer, 'Rhme', ironForgedSwordsLevel)
 
     return result
+endfunction
+
+function GenerateSaveCodes takes player whichPlayer returns nothing
+    local integer size = 2
+    local string array playerName
+    local integer i = 0
+    set playerName[0] = "Barade#2569"
+    set playerName[1] = "WorldEdit"
+    loop
+        exitwhen (i == size)
+        call GetSaveCodeStrongFreelancer(playerName[i])
+        call GetSaveCodeStrongWarlord(playerName[i])
+        call GetSaveCodeNormalFreelancer(playerName[i])
+        call GetSaveCodeNormalWarlord(playerName[i])
+        call GetSaveCodeWarlordBase(whichPlayer, playerName[i])
+        call GetSaveCodeWarlordDragonUnits(whichPlayer, playerName[i])
+        call GetSaveCodeWarlordGoodItems(playerName[i])
+        call GetSaveCodeWarlordHumanUpgrades(whichPlayer, playerName[i])
+        set i = i + 1
+    endloop
 endfunction
 
 /**
