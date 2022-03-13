@@ -38,6 +38,18 @@ function UnitParameterIntegerExists takes unit whichUnit, integer ParameterKey r
     return HaveSavedInteger(udg_DB, GetHandleId(whichUnit), ParameterKey)
 endfunction
 
+function SaveDestructableParameterInteger takes destructable whichDestructable, integer ParameterKey, integer Value returns nothing
+    call SaveInteger(udg_DB, GetHandleId(whichDestructable), ParameterKey, Value)
+endfunction
+
+function LoadDestructableParameterInteger takes destructable whichDestructable, integer ParameterKey returns integer
+    return LoadInteger(udg_DB, GetHandleId(whichDestructable), ParameterKey)
+endfunction
+
+function DestructableParameterIntegerExists takes destructable whichDestructable, integer ParameterKey returns boolean
+    return HaveSavedInteger(udg_DB, GetHandleId(whichDestructable), ParameterKey)
+endfunction
+
 function FlushUnitParameters takes unit whichUnit returns nothing
     call FlushChildHashtable(udg_DB, GetHandleId(whichUnit))
 endfunction
@@ -697,6 +709,15 @@ function GetRespawnGroupOfUnit takes unit Unit returns integer
     return -1
 endfunction
 
+function GetRespawnGroupOfDestructable takes destructable whichDestructable returns integer
+    if (DestructableParameterIntegerExists(whichDestructable, 0)) then
+        debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has a group!")
+        return LoadDestructableParameterInteger(whichDestructable, 0)
+    endif
+    debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has no group!")
+    return -1
+endfunction
+
 function RespawnRectContainsNoBuilding takes integer Group returns boolean
     local location RespawnRectCenter = GetRectCenter(udg_RespawnRect[Group])
     local rect BuildingRect = RectFromCenterSizeBJ(RespawnRectCenter, GetRespawnBuildingSize(), GetRespawnBuildingSize())
@@ -761,8 +782,10 @@ function CopyGroup takes group whichGroup returns group
     return tmpGroup
 endfunction
 
-function AssignDestructibleToCurrentGroup takes nothing returns nothing
-    set udg_RespawnGroupDestructible[udg_TmpGroupIndex] = udg_CurrentRespawnDestructible
+function AssignDestructableToCurrentGroup takes nothing returns nothing
+    set udg_RespawnGroupDestructable[udg_TmpGroupIndex] = udg_CurrentRespawnDestructable
+    call TriggerRegisterDeathEvent(udg_RespawnDestructableTrigger, udg_CurrentRespawnDestructable)
+    call SaveDestructableParameterInteger(udg_CurrentRespawnDestructable, 0, udg_TmpGroupIndex)
 endfunction
 
 function AssignAllUnitsToCurrentGroup takes nothing returns nothing
@@ -780,7 +803,7 @@ function AssignAllUnitsToCurrentGroup takes nothing returns nothing
     endloop
     call GroupClear(copy)
     call DestroyGroup(copy)
-    call AssignDestructibleToCurrentGroup()
+    call AssignDestructableToCurrentGroup()
 endfunction
 
 function InitCurrentGroup takes nothing returns nothing
@@ -855,8 +878,8 @@ function RespawnGroup takes integer Group returns boolean
             set I0 = I0 + 1
         endloop
 
-        if (udg_RespawnGroupDestructible[Group] != null and GetDestructableLife(udg_RespawnGroupDestructible[Group]) <= 0.0) then
-            call DestructableRestoreLife(udg_RespawnGroupDestructible[Group], GetDestructableMaxLife(udg_RespawnGroupDestructible[Group]), true)
+        if (udg_RespawnGroupDestructable[Group] != null and GetDestructableLife(udg_RespawnGroupDestructable[Group]) <= 0.0) then
+            call DestructableRestoreLife(udg_RespawnGroupDestructable[Group], GetDestructableMaxLife(udg_RespawnGroupDestructable[Group]), true)
         endif
 
 		set result = true
@@ -959,8 +982,8 @@ function DropAllItemsFromHero takes unit hero returns nothing
 	endloop
 endfunction
 
-function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns item
-	local integer level0Percentage = 100
+function PrepareRandomDist takes integer highestCreepLevel returns nothing
+    local integer level0Percentage = 100
 	local integer level4Percentage = 100
 	local integer level6Percentage = 100
 	local integer level8Percentage = 100
@@ -1029,7 +1052,16 @@ function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns 
 		set bj_randDistChance[i] = 100 / bj_randDistCount
 		set i = i + 1
 	endloop
+endfunction
+
+function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns item
+    call PrepareRandomDist(highestCreepLevel)
 	return UnitDropItem(whichUnit, RandomDistChoose())
+endfunction
+
+function DropRandomItemFromWidget takes widget inWidget, integer highestCreepLevel returns item
+    call PrepareRandomDist(highestCreepLevel)
+    return WidgetDropItem(inWidget, RandomDistChoose())
 endfunction
 
 function GetUnitLevelByType takes integer unitTypeId returns integer
@@ -1087,6 +1119,10 @@ function DropRandomItemForGroup takes unit whichUnit, integer Group returns item
 	return DropRandomItem(whichUnit, GetHighestLevelFromGroup(Group))
 endfunction
 
+function DropRandomItemForGroupFromWidget takes widget inWidget, integer Group returns item
+	return DropRandomItemFromWidget(inWidget, GetHighestLevelFromGroup(Group))
+endfunction
+
 function DropRandomItemForGroupNTimes takes unit whichUnit, integer Group returns nothing
 	local integer n = GetRandomInt(0, 2)
 	local item whichItem = null
@@ -1094,7 +1130,19 @@ function DropRandomItemForGroupNTimes takes unit whichUnit, integer Group return
 	loop
 		exitwhen (i == n)
 		set whichItem = DropRandomItemForGroup(whichUnit, Group)
-                call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
+        call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
+		set i = i + 1
+	endloop
+endfunction
+
+function DropRandomItemForGroupNTimesFromWidget takes widget inWidget, integer Group returns nothing
+	local integer n = GetRandomInt(0, 2)
+	local item whichItem = null
+	local integer i = 0
+	loop
+		exitwhen (i == n)
+		set whichItem = DropRandomItemForGroupFromWidget(inWidget, Group)
+        call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
 		set i = i + 1
 	endloop
 endfunction
@@ -1132,6 +1180,11 @@ function TriggerActionRespawnMonster takes nothing returns nothing
     set triggerUnit = null
 endfunction
 
+function TriggerActionDestructableDrops takes nothing returns nothing
+    local integer Group = GetRespawnGroupOfDestructable(GetDyingDestructable())
+    call DropRandomItemForGroupNTimesFromWidget(GetDyingDestructable(), Group)
+endfunction
+
 function InitCustomSystems takes nothing returns nothing
     local integer I0 = 0
     set udg_DB = InitHashtable()
@@ -1153,6 +1206,9 @@ function InitCustomSystems takes nothing returns nothing
 		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
 		call TriggerAddCondition(udg_RespawnTrigger, Condition(function TriggerConditionRespawnMonster))
         call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
+
+        set udg_RespawnDestructableTrigger = CreateTrigger()
+        call TriggerAddAction(udg_RespawnDestructableTrigger, function TriggerActionDestructableDrops)
     endif
 endfunction
 
@@ -1496,28 +1552,36 @@ globals
     constant integer RACE_OBJECT_TYPE_BLACK_SMITH = 3
     constant integer RACE_OBJECT_TYPE_BARRACKS = 4
     constant integer RACE_OBJECT_TYPE_SHOP = 5
-    constant integer RACE_OBJECT_TYPE_GUARD_TOWER = 6
-    constant integer RACE_OBJECT_TYPE_ARCANE_SANCTUM = 7
-    constant integer RACE_OBJECT_TYPE_GRYPHON_AVIARY = 8
-    constant integer RACE_OBJECT_TYPE_TIER_1 = 9
-    constant integer RACE_OBJECT_TYPE_TIER_2 = 10
-    constant integer RACE_OBJECT_TYPE_TIER_3 = 11
+    constant integer RACE_OBJECT_TYPE_SCOUT_TOWER = 6
+    constant integer RACE_OBJECT_TYPE_GUARD_TOWER = 7
+    constant integer RACE_OBJECT_TYPE_CANNON_TOWER = 8
+    constant integer RACE_OBJECT_TYPE_ARCANE_TOWER = 9
+    constant integer RACE_OBJECT_TYPE_ARCANE_SANCTUM = 10
+    constant integer RACE_OBJECT_TYPE_WORKSHOP = 11
+    constant integer RACE_OBJECT_TYPE_GRYPHON_AVIARY = 12
+    constant integer RACE_OBJECT_TYPE_TIER_1 = 13
+    constant integer RACE_OBJECT_TYPE_TIER_2 = 14
+    constant integer RACE_OBJECT_TYPE_TIER_3 = 15
+    constant integer RACE_OBJECT_TYPE_HOUSING = 16
+    constant integer RACE_OBJECT_TYPE_SHIPYARD = 17
     // ITEMS
-    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 12
-    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 13
+    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 18
+    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 19
     // UNITS
-    constant integer RACE_OBJECT_TYPE_WORKER = 14
-    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 15
-    constant integer RACE_OBJECT_TYPE_FOOTMAN = 16
-    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 17
-    constant integer RACE_OBJECT_TYPE_KNIGHT = 18
-    constant integer RACE_OBJECT_TYPE_PRIEST = 19
-    constant integer RACE_OBJECT_TYPE_SORCERESS = 20
-    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 21
-    constant integer RACE_OBJECT_TYPE_MORTAR = 22
-    constant integer RACE_OBJECT_TYPE_GRYPHON = 23
+    constant integer RACE_OBJECT_TYPE_WORKER = 20
+    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 21
+    constant integer RACE_OBJECT_TYPE_FEMALE_CITIZEN = 22
+    constant integer RACE_OBJECT_TYPE_PET = 23
+    constant integer RACE_OBJECT_TYPE_FOOTMAN = 24
+    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 25
+    constant integer RACE_OBJECT_TYPE_KNIGHT = 26
+    constant integer RACE_OBJECT_TYPE_PRIEST = 27
+    constant integer RACE_OBJECT_TYPE_SORCERESS = 28
+    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 29
+    constant integer RACE_OBJECT_TYPE_MORTAR = 30
+    constant integer RACE_OBJECT_TYPE_GRYPHON = 31
 
-    constant integer RACE_MAX_OBJECT_TYPES = 24
+    constant integer RACE_MAX_OBJECT_TYPES = 32
 
     integer array raceObjectType
 endglobals
@@ -2665,6 +2729,62 @@ function DisplaySaveObjectCounters takes nothing returns nothing
     call BJDebugMsg("Save Object Research Counter: " + I2S(SaveObjectResearchCounter))
 endfunction
 
+function DisplayDuplicateSaveObjects takes nothing returns nothing
+    local integer j
+    local integer i = 0
+    loop
+        exitwhen (i == SaveObjectUnitCounter)
+        set j = 0
+        loop
+            exitwhen (j == SaveObjectUnitCounter)
+            if (i != j and SaveObjectIdUnit[i] == SaveObjectIdUnit[j]) then
+                call BJDebugMsg("Duplicated save object " + GetObjectName(SaveObjectIdUnit[i]) + " with indices " + I2S(i) + " and " + I2S(j))
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i == SaveObjectBuildingCounter)
+        set j = 0
+        loop
+            exitwhen (j == SaveObjectBuildingCounter)
+            if (i != j and SaveObjectIdBuilding[i] == SaveObjectIdBuilding[j]) then
+                call BJDebugMsg("Duplicated save object " + GetObjectName(SaveObjectIdBuilding[i]) + " with indices " + I2S(i) + " and " + I2S(j))
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i == SaveObjectItemCounter)
+        set j = 0
+        loop
+            exitwhen (j == SaveObjectItemCounter)
+            if (i != j and SaveObjectIdItem[i] == SaveObjectIdItem[j]) then
+                call BJDebugMsg("Duplicated save object " + GetObjectName(SaveObjectIdItem[i]) + " with indices " + I2S(i) + " and " + I2S(j))
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i == SaveObjectResearchCounter)
+        set j = 0
+        loop
+            exitwhen (j == SaveObjectResearchCounter)
+            if (i != j and SaveObjectIdResearch[i] == SaveObjectIdResearch[j]) then
+                call BJDebugMsg("Duplicated save object " + GetObjectName(SaveObjectIdResearch[i]) + " with indices " + I2S(i) + " and " + I2S(j))
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+endfunction
+
 function AddSaveObjectUnitTypeEx takes string name, integer id returns integer
     local integer index = SaveObjectUnitCounter
     set SaveObjectNameUnit[index] = name
@@ -2775,9 +2895,6 @@ endfunction
 
 function GetSaveObjectResearchId takes integer number returns integer
     return SaveObjectIdResearch[number]
-endfunction
-
-function AddStandardSaveObjectTypes takes nothing returns nothing
 endfunction
 
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
