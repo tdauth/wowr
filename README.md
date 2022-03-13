@@ -215,11 +215,6 @@ Hence, I am trying to collect replays with the game ending to reconstruct the bu
 
 [crashes](./crashes) contains folders with map and replay files of the corresponding games.
 
-## Testing
-
-It enables several cheats if you play as WorldEdit player.
-This is a useful savecode as player WorldEdit playing Freelancer with hero level 60 in singleplayer: `vlRJzXBXX9cXs7oXt1ivRX`.
-
 ## History of the Map
 
 Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
