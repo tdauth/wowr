@@ -2181,7 +2181,7 @@ function AppendFileContent takes string content returns string
     return "\r\n\t\t\t\t" + content
 endfunction
 
-function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, string saveCode returns nothing
+function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer improvedNavyLevel, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string gameMode = "Freelancer"
@@ -2230,6 +2230,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     set content = content + AppendFileContent("Hand of God: " + I2S(handOfGodLevel))
     set content = content + AppendFileContent("Improved Mount: " + I2S(mountLevel))
     set content = content + AppendFileContent("Improved Masonry: " + I2S(masonryLevel))
+    set content = content + AppendFileContent("Improved Navy: " + I2S(improvedNavyLevel))
     set content = content + AppendFileContent("Hero Kills: " + I2S(heroKills))
     set content = content + AppendFileContent("Hero Deaths: " + I2S(heroDeaths))
     set content = content + AppendFileContent("Unit Kills: " + I2S(unitKills))
@@ -2252,7 +2253,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + ".txt")
 endfunction
 
-function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2 returns string
+function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer improvedNavyLevel returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -2305,6 +2306,9 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
     //call BJDebugMsg("Checked save code part: " + result)
 
+    // upgrades
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedNavyLevel)
+
     // checksum
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
 
@@ -2313,7 +2317,7 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
     endif
 
-    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, result)
+    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, improvedNavyLevel, result)
 
     return result
 endfunction
@@ -2325,6 +2329,7 @@ globals
 	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
 	constant integer UPG_IMPROVED_HAND_OF_GOD                        = 'R00V'
 	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
+	constant integer UPG_IMPROVED_NAVY                               = 'R035'
 endglobals
 
 /**
@@ -2359,13 +2364,14 @@ function GetSaveCode takes player whichPlayer returns string
     local integer totalBossKills = udg_BossKills[GetConvertedPlayerId(whichPlayer)]
     local integer heroLevel2 = GetHeroLevel(udg_Held2[GetConvertedPlayerId(whichPlayer)])
     local integer xp2 = GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])
+    local integer improvedNavyLevel = GetPlayerTechCountSimple(UPG_IMPROVED_NAVY, whichPlayer)
 
     if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null) then
         set xp2 = udg_Held2XP[GetConvertedPlayerId(whichPlayer)]
         set heroLevel2 = 0 // TODO Set hero level by XP
     endif
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2)
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, improvedNavyLevel)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -2377,6 +2383,15 @@ function ReadSaveCode takes string saveCode, integer hash returns string
     //call BJDebugMsg("Just returning!")
 
     return saveCode
+endfunction
+
+function SetPlayerTechResearchedIfHigher takes player whichPlayer, integer techId, integer level returns boolean
+    if (level > GetPlayerTechCountSimple(techId, whichPlayer)) then
+        call SetPlayerTechResearched(whichPlayer, techId, level)
+        return true
+    endif
+
+    return false
 endfunction
 
 function ApplySaveCode takes player whichPlayer, string s returns boolean
@@ -2401,8 +2416,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
     local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
     local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
-    local integer heroLevel2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
-    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -2441,12 +2456,14 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
 
         call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
         call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
-        call SetPlayerTechResearched(whichPlayer, UPG_EVOLUTION, evolutionLevel)
-        call SetPlayerTechResearched(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
-        call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
-        call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
-        call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
-        call SetPlayerTechResearched(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_NAVY, improvedNavyLevel)
+
         set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
         set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
         set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
@@ -2564,35 +2581,67 @@ function GetSaveCodeErrors takes player whichPlayer, string s returns string
     return result
 endfunction
 
+function GetGameTypeName takes integer gameType returns string
+    if (gameType == udg_GameTypeEasy) then
+        return "Easy"
+    elseif (gameType == udg_GameTypeHardcore) then
+        return "Hardcore"
+    elseif (gameType == udg_GameTypeFast) then
+        return "Fast"
+    endif
+
+    return "Normal"
+endfunction
+
+function AppendSaveCodeInfo takes string result, string appended returns string
+    if (StringLength(result) > 0) then
+        set result = result + "|n"
+    endif
+
+    return result + appended
+endfunction
+
 function GetSaveCodeInfos takes player whichPlayer, string s returns string
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerName = GetPlayerName(whichPlayer)
     local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
     local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
     local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
     local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = false
+    local string singlePlayerStatus = "Multiplayer"
     local boolean isWarlord = false
+    local string warlordStatus = "Freelancer"
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local string result = ""
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string checksumStatus = "Valid"
 
     if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
-        if (StringLength(result) > 0) then
-            set result = result + ", "
-        endif
-
-        set result = result + "Invalid checksum"
+        set checksumStatus = "Invalid"
     endif
 
 
     if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
-        if (StringLength(result) > 0) then
-            set result = result + ", "
-        endif
-
-        set result = result + "Invalid player name checksum"
+        set playerName = "Not yours"
     endif
 
     // use one single symbol to store these two flags
@@ -2611,48 +2660,35 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     endif
 
     if (isSinglePlayer) then
-        if (StringLength(result) > 0) then
-            set result = result + ", "
-        endif
-
-        set result = result + "Singleplayer"
-    else
-        if (StringLength(result) > 0) then
-            set result = result + ", "
-        endif
-
-        set result = result + "Multiplayer"
+        set singlePlayerStatus = "Singleplayer"
     endif
 
     if (isWarlord) then
-        if (StringLength(result) > 0) then
-            set result = result + ", "
-        endif
-
-        set result = result + "Warlord"
-    else
-        if (StringLength(result) > 0) then
-            set result = result + ", "
-        endif
-
-        set result = result + "Freelancer"
+        set warlordStatus = "Warlord"
     endif
 
-    if (StringLength(result) > 0) then
-        set result = result + ", "
-    endif
-     set result = result + "Game type: " + I2S(gameType)
-
-    if (StringLength(result) > 0) then
-        set result = result + ", "
-    endif
-    set result = result + "XP rate: " + I2S(xpRate)
-
-     if (StringLength(result) > 0) then
-        set result = result + ", "
-    endif
-
-     set result = result + "XP: " + I2S(xp)
+    set result = AppendSaveCodeInfo(result, "Checksum: " + checksumStatus)
+    set result = AppendSaveCodeInfo(result, "Game: " + singlePlayerStatus)
+    set result = AppendSaveCodeInfo(result, "Game Mode: " + warlordStatus)
+    set result = AppendSaveCodeInfo(result, "Player Name: " + playerName)
+    set result = AppendSaveCodeInfo(result, "Game Type: " + gameTypeName)
+    set result = AppendSaveCodeInfo(result, "XP rate: " + I2S(xpRate))
+    set result = AppendSaveCodeInfo(result, "XP: " + I2S(xp))
+    set result = AppendSaveCodeInfo(result, "XP 2: " + I2S(xp2))
+    set result = AppendSaveCodeInfo(result, "Gold: " + I2S(gold))
+    set result = AppendSaveCodeInfo(result, "Lumber: " + I2S(lumber))
+    set result = AppendSaveCodeInfo(result, "Evolution: " + I2S(evolutionLevel))
+    set result = AppendSaveCodeInfo(result, "Power Generator: " + I2S(powerGeneratorLevel))
+    set result = AppendSaveCodeInfo(result, "Hand of God: " + I2S(handOfGodLevel))
+    set result = AppendSaveCodeInfo(result, "Mount: " + I2S(mountLevel))
+    set result = AppendSaveCodeInfo(result, "Masonry: " + I2S(masonryLevel))
+    set result = AppendSaveCodeInfo(result, "Navy: " + I2S(improvedNavyLevel))
+    set result = AppendSaveCodeInfo(result, "Hero Kills: " + I2S(heroKills))
+    set result = AppendSaveCodeInfo(result, "Hero Deaths: " + I2S(heroDeaths))
+    set result = AppendSaveCodeInfo(result, "Hero Kills: " + I2S(unitKills))
+    set result = AppendSaveCodeInfo(result, "Unit Deaths: " + I2S(unitDeaths))
+    set result = AppendSaveCodeInfo(result, "Buildings Razed: " + I2S(buildingsRazed))
+    set result = AppendSaveCodeInfo(result, "Boss kills: " + I2S(totalBossKills))
 
     return result
 endfunction
@@ -2895,6 +2931,16 @@ endfunction
 
 function GetSaveObjectResearchId takes integer number returns integer
     return SaveObjectIdResearch[number]
+endfunction
+
+function DisplaySaveCodeErrorAtLeastOne takes player whichPlayer, boolean atLeastOne returns nothing
+    if (not atLeastOne) then
+        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Empty savecode!")
+    endif
+endfunction
+
+function DisplaySaveCodeErrorLowerResearch takes player whichPlayer, integer techId returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Not loading research " + GetObjectName(techId) + " since your current level is higher!")
 endfunction
 
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
@@ -3154,6 +3200,7 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
     local integer saveObjectId = 0
     local real x = 0.0
     local real y = 0.0
+    local boolean atLeastOne = false
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -3196,6 +3243,7 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
                     set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
                     //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
                     call CreateUnit(whichPlayer, saveObjectId, x, y, bj_UNIT_FACING)
+                    set atLeastOne = true
                 else
                     call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                 endif
@@ -3204,7 +3252,9 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
             set pos = pos + 3
         endloop
 
-        return true
+        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+        return atLeastOne
     endif
 
     return false
@@ -3417,6 +3467,7 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
     local integer saveObject = 0
     local integer saveObjectId = 0
     local unit hero = udg_Hero[GetPlayerId(whichPlayer)]
+    local boolean atLeastOne = false
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -3457,6 +3508,7 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
                 if (IsObjectFromPlayerRace(saveObject, whichPlayer)) then
                     call UnitAddItemByIdSwapped(saveObjectId, hero)
                     call SetItemCharges(bj_lastCreatedItem, ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1))
+                    set atLeastOne = true
                 else
                     call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                 endif
@@ -3465,7 +3517,9 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
             set pos = pos + 2
         endloop
 
-        return true
+        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+        return atLeastOne
     endif
 
     return false
@@ -3724,6 +3778,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
     local integer saveObjectId = 0
     local integer count = 0
     local location tmpLocation = Location(GetUnitX(udg_Hero[GetPlayerId(whichPlayer)]), GetUnitY(udg_Hero[GetPlayerId(whichPlayer)]))
+    local boolean atLeastOne = false
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -3771,6 +3826,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                     if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(saveObjectId) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
                         if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
                             call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                            set atLeastOne = true
                         else
                             call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                         endif
@@ -3787,7 +3843,9 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
         call RemoveLocation(tmpLocation)
         set tmpLocation = null
 
-        return true
+        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+        return atLeastOne
     endif
 
     call RemoveLocation(tmpLocation)
@@ -3942,6 +4000,7 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
     local integer saveObject = 0
     local integer saveObjectId = 0
     local integer count = 0
+    local boolean atLeastOne = false
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -3983,7 +4042,10 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
                 if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
                     set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
                     //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
-                    call SetPlayerTechResearchedSwap(saveObjectId, count, whichPlayer)
+                    if (not SetPlayerTechResearchedIfHigher(whichPlayer, saveObjectId, count)) then
+                        call DisplaySaveCodeErrorLowerResearch(whichPlayer, saveObjectId)
+                    endif
+                    set atLeastOne = true
                 else
                     call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                 endif
@@ -3992,18 +4054,20 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
             set pos = pos + 2
         endloop
 
-        return true
+        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+        return atLeastOne
     endif
 
     return false
 endfunction
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 100)
 endfunction
 
 function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 20)
 endfunction
 
 function ForGroupRemoveUnit takes nothing returns nothing
@@ -4504,11 +4568,11 @@ endfunction
  * Savecode GUI which helps to copy & paste savecodes.
  */
 globals
-    constant real SAVECODE_UI_LABEL_X = 0.075009
+    constant real SAVECODE_UI_LABEL_X = 0.055
     constant real SAVECODE_UI_LABEL_WIDTH = 0.058018
 
-    constant real SAVECODE_UI_LINEEDIT_X = 0.138000
-    constant real SAVECODE_UI_LINEEDIT_WIDTH = 0.33319
+    constant real SAVECODE_UI_LINEEDIT_X = SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH + 0.02
+    constant real SAVECODE_UI_LINEEDIT_WIDTH = 0.35
 
     constant real SAVECODE_UI_UPDATE_BUTTON_X = 0.47837
     constant real SAVECODE_UI_UPDATE_BUTTON_WIDTH = 0.060
@@ -4517,10 +4581,10 @@ globals
     constant real SAVECODE_UI_LOAD_BUTTON_WIDTH = 0.060
 
     constant real SAVECODE_UI_LOAD_AUTO_BUTTON_X = 0.3
-    constant real SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH = 0.060
+    constant real SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH = 0.066
 
     constant real SAVECODE_UI_WRITE_AUTO_BUTTON_X = 0.4
-    constant real SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH = 0.060
+    constant real SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH = 0.066
 
     constant real SAVECODE_UI_LINE_START_Y = 0.528122
     constant real SAVECODE_UI_LINE_HEIGHT = 0.03
@@ -4532,7 +4596,7 @@ globals
 
     constant real SAVECODE_UI_TOOLTIP_LABEL_X = 0.64
     constant real SAVECODE_UI_TOOLTIP_LABEL_Y = 0.49
-    constant real SAVECODE_UI_TOOLTIP_LABEL_WIDTH = 0.15
+    constant real SAVECODE_UI_TOOLTIP_LABEL_WIDTH = 0.10
     constant real SAVECODE_UI_TOOLTIP_LABEL_HEIGHT = 0.32
 
     framehandle array SaveCodeUIBackgroundFrame
@@ -4549,6 +4613,7 @@ globals
     trigger array SaveCodeUIUpdateTriggerHeroes
     framehandle array SaveCodeUILoadButtonFrameHeroes
     trigger array SaveCodeUILoadTriggerHeroes
+    trigger array SaveCodeUIEnterTriggerHeroes
 
     // line 2: items savecode
     framehandle array SaveCodeUILabelFrameItems
@@ -4624,6 +4689,19 @@ function StringRemoveFromStart takes string source, string start returns string
     return source
 endfunction
 
+function SetSaveCodeUITooltip takes player whichPlayer, string tooltip returns nothing
+    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], tooltip)
+endfunction
+
+function FormattedSaveCodeHeroes takes string saveCode returns string
+    //call BJDebugMsg("Click load heroes")
+    if (StringStartsWith(saveCode, "-load ")) then
+        return StringRemoveFromStart(saveCode, "-load ")
+    endif
+
+    return saveCode
+endfunction
+
 function SetSaveCodeUIHeroesText takes player whichPlayer, string txt returns nothing
     call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], txt)
 endfunction
@@ -4634,6 +4712,11 @@ endfunction
 
 function UpdateSaveCodeUIHeroesText takes player whichPlayer returns nothing
     call SetSaveCodeUIHeroesText(whichPlayer, "-load " + GetSaveCode(whichPlayer))
+endfunction
+
+function SetSaveCodeUITooltipHeroesSaveCodeInfo takes player whichPlayer returns nothing
+    local string saveCode = FormattedSaveCodeHeroes(GetSaveCodeUIHeroesText(whichPlayer))
+    call SetSaveCodeUITooltip(whichPlayer, "Heroes:|n" + GetSaveCodeInfos(whichPlayer, saveCode))
 endfunction
 
 function SetSaveCodeUIItemsText takes player whichPlayer, string txt returns nothing
@@ -4738,23 +4821,20 @@ function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns 
     endif
 endfunction
 
-function ShowSaveCodekUI takes player whichPlayer returns nothing
+function ShowSaveCodeUI takes player whichPlayer returns nothing
     call SetSaveCodeUIVisible(whichPlayer, true)
 endfunction
 
-function HideSaveCodekUI takes player whichPlayer returns nothing
+function HideSaveCodeUI takes player whichPlayer returns nothing
     call SetSaveCodeUIVisible(whichPlayer, false)
 endfunction
 
 function SaveCodeUIEditBoxEnterHeroes takes nothing returns nothing
-    // print("EditBoxEnter:")
-    // print(BlzGetTriggerFrameText())
-    // print(GetPlayerName(GetTriggerPlayer()))
-    // udg_UserInput[GetConvertedPlayerId(GetTriggerPlayer())] = BlzGetTriggerFrameText() --save the text of the local player in a synced manner.
-    // --print("TEXT_CHANGED")
-    // --print(BlzGetTriggerFrameText())
-    // --print(GetPlayerName(GetTriggerPlayer()))
-    call BJDebugMsg("Entered: " + BlzGetTriggerFrameText() + " into heroes edit box")
+    call SetSaveCodeUITooltipHeroesSaveCodeInfo(GetTriggerPlayer())
+endfunction
+
+function SaveCodeEnterFunctionHeroes takes nothing returns nothing
+    call SetSaveCodeUITooltipHeroesSaveCodeInfo(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUIUpdateFunctionHeroes takes nothing returns nothing
@@ -4764,15 +4844,12 @@ function SaveCodeUIUpdateFunctionHeroes takes nothing returns nothing
 endfunction
 
 function SaveCodeUILoadHeroes takes player whichPlayer returns nothing
-    local string saveCode = GetSaveCodeUIHeroesText(whichPlayer)
+    local string saveCode = FormattedSaveCodeHeroes(GetSaveCodeUIHeroesText(whichPlayer))
     //call BJDebugMsg("Click load heroes")
-    if (StringStartsWith(saveCode, "-load ")) then
-        set saveCode = StringRemoveFromStart(saveCode, "-load ")
-    endif
     if (ApplySaveCode(whichPlayer, saveCode)) then
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
     else
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
     endif
 endfunction
 
@@ -4781,13 +4858,7 @@ function SaveCodeUILoadFunctionHeroes takes nothing returns nothing
 endfunction
 
 function SaveCodeUIEditBoxEnterItems takes nothing returns nothing
-    // print("EditBoxEnter:")
-    // print(BlzGetTriggerFrameText())
-    // print(GetPlayerName(GetTriggerPlayer()))
-    // udg_UserInput[GetConvertedPlayerId(GetTriggerPlayer())] = BlzGetTriggerFrameText() --save the text of the local player in a synced manner.
-    // --print("TEXT_CHANGED")
-    // --print(BlzGetTriggerFrameText())
-    // --print(GetPlayerName(GetTriggerPlayer()))
+
     call BJDebugMsg("Entered: " + BlzGetTriggerFrameText() + " into items edit box")
 endfunction
 
@@ -4804,9 +4875,9 @@ function SaveCodeUILoadItems takes player whichPlayer returns nothing
         set saveCode = StringRemoveFromStart(saveCode, "-loadi ")
     endif
     if (ApplySaveCodeItems(whichPlayer, saveCode)) then
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
     else
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
     endif
 endfunction
 
@@ -4815,13 +4886,7 @@ function SaveCodeUILoadFunctionItems takes nothing returns nothing
 endfunction
 
 function SaveCodeUIEditBoxEnterUnits takes nothing returns nothing
-    // print("EditBoxEnter:")
-    // print(BlzGetTriggerFrameText())
-    // print(GetPlayerName(GetTriggerPlayer()))
-    // udg_UserInput[GetConvertedPlayerId(GetTriggerPlayer())] = BlzGetTriggerFrameText() --save the text of the local player in a synced manner.
-    // --print("TEXT_CHANGED")
-    // --print(BlzGetTriggerFrameText())
-    // --print(GetPlayerName(GetTriggerPlayer()))
+
     call BJDebugMsg("Entered: " + BlzGetTriggerFrameText() + " into units edit box")
 endfunction
 
@@ -4838,9 +4903,9 @@ function SaveCodeUILoadUnits takes player whichPlayer returns nothing
         set saveCode = StringRemoveFromStart(saveCode, "-loadu ")
     endif
     if (ApplySaveCodeUnits(whichPlayer, saveCode)) then
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
     else
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
     endif
 endfunction
 
@@ -4849,13 +4914,7 @@ function SaveCodeUILoadFunctionUnits takes nothing returns nothing
 endfunction
 
 function SaveCodeUIEditBoxEnterResearches takes nothing returns nothing
-    // print("EditBoxEnter:")
-    // print(BlzGetTriggerFrameText())
-    // print(GetPlayerName(GetTriggerPlayer()))
-    // udg_UserInput[GetConvertedPlayerId(GetTriggerPlayer())] = BlzGetTriggerFrameText() --save the text of the local player in a synced manner.
-    // --print("TEXT_CHANGED")
-    // --print(BlzGetTriggerFrameText())
-    // --print(GetPlayerName(GetTriggerPlayer()))
+
     call BJDebugMsg("Entered: " + BlzGetTriggerFrameText() + " into units researches box")
 endfunction
 
@@ -4872,9 +4931,9 @@ function SaveCodeUILoadResearches takes player whichPlayer returns nothing
         set saveCode = StringRemoveFromStart(saveCode, "-loadr ")
     endif
     if (ApplySaveCodeResearches(whichPlayer, saveCode)) then
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
     else
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
     endif
 endfunction
 
@@ -4883,13 +4942,7 @@ function SaveCodeUILoadFunctionResearches takes nothing returns nothing
 endfunction
 
 function SaveCodeUIEditBoxEnterBuildings takes nothing returns nothing
-    // print("EditBoxEnter:")
-    // print(BlzGetTriggerFrameText())
-    // print(GetPlayerName(GetTriggerPlayer()))
-    // udg_UserInput[GetConvertedPlayerId(GetTriggerPlayer())] = BlzGetTriggerFrameText() --save the text of the local player in a synced manner.
-    // --print("TEXT_CHANGED")
-    // --print(BlzGetTriggerFrameText())
-    // --print(GetPlayerName(GetTriggerPlayer()))
+
     call BJDebugMsg("Entered: " + BlzGetTriggerFrameText() + " into units buildings box")
 endfunction
 
@@ -4906,9 +4959,9 @@ function SaveCodeUILoadBuildings takes player whichPlayer returns nothing
         set saveCode = StringRemoveFromStart(saveCode, "-loadb ")
     endif
     if (ApplySaveCodeBuildings(whichPlayer, saveCode)) then
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
     else
-        call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
     endif
 endfunction
 
@@ -4947,7 +5000,7 @@ endfunction
 function SaveCodeUICloseFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
     //call BJDebugMsg("Click close")
-    call HideSaveCodekUI(Player(playerId))
+    call HideSaveCodeUI(Player(playerId))
 endfunction
 
 function CreateSaveCodeUI takes player whichPlayer returns nothing
@@ -5001,6 +5054,10 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
     call TriggerAddAction(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIEditBoxEnterHeroes)
     call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+
+    set SaveCodeUIEnterTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionHeroes)
 
     set SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
@@ -5418,25 +5475,29 @@ function GetAngleByGoblinTunnelDirection takes integer direction returns real
 endfunction
 
 function FilterFunctionIsLivingGoblinTunnel takes nothing returns boolean
-    return GetUnitTypeId(GetEnumUnit()) == 'o00P' and IsUnitAliveBJ(GetEnumUnit())
+    return GetUnitTypeId(GetFilterUnit()) == 'o00P' and IsUnitAliveBJ(GetFilterUnit())
 endfunction
 
-function GetNextGoblinTunnel takes unit start, integer direction returns unit
+function GetNextGoblinTunnelEx takes unit start, integer direction, group connectedParts, integer recursionLevel returns unit
     local real angle = GetAngleByGoblinTunnelDirection(direction)
-    local real dist = 100.0
+    local real dist = 150.0
     local real x = GetUnitX(start) + dist * Cos(angle * bj_DEGTORAD)
     local real y = GetUnitY(start) + dist * Sin(angle * bj_DEGTORAD)
     local group neighbours = CreateGroup()
     local group neighboursOfOwner = CreateGroup()
     local unit first = null
     local unit neighbour = null
-    call GroupEnumUnitsInRange(neighbours, x, y, 100.0, Filter(function FilterFunctionIsLivingGoblinTunnel))
+    call GroupEnumUnitsInRange(neighbours, x, y, 90.0, Filter(function FilterFunctionIsLivingGoblinTunnel))
 
     loop
         set first = FirstOfGroup(neighbours)
+        call BJDebugMsg("First tunnel " + GetUnitName(first))
         exitwhen (first == null)
-        if (GetOwningPlayer(first) == GetOwningPlayer(start)) then
+        if (GetOwningPlayer(first) == GetOwningPlayer(start) and first != start) then
             call GroupAddUnit(neighboursOfOwner, first)
+            if (connectedParts != null) then
+                call GroupAddUnit(connectedParts, first)
+            endif
         endif
         call GroupRemoveUnit(neighbours, first)
     endloop
@@ -5451,9 +5512,44 @@ function GetNextGoblinTunnel takes unit start, integer direction returns unit
     call DestroyGroup(neighboursOfOwner)
     set neighboursOfOwner = null
 
+    call BJDebugMsg("First result tunnel " + GetUnitName(first) + " with recursion level " + I2S(recursionLevel))
+
+    if (recursionLevel > 1000) then
+        return null
+    endif
+
+    // TODO Call linear not recursively.
     if (first != null) then
-        return GetNextGoblinTunnel(first, direction)
+        return GetNextGoblinTunnelEx(first, direction, connectedParts, recursionLevel + 1)
     else
+        call BJDebugMsg("Return start")
+
         return start
     endif
+endfunction
+
+function GetNextGoblinTunnel takes unit start, integer direction returns unit
+    return GetNextGoblinTunnelEx(start, direction, null, 0)
+endfunction
+
+function GetAllConnectedGoblinTunnelParts takes unit start returns group
+    local group result = CreateGroup()
+    call GetNextGoblinTunnelEx(start, GOBLIN_TUNNEL_DIRECTION_NORTH, result, 0)
+    call GetNextGoblinTunnelEx(start, GOBLIN_TUNNEL_DIRECTION_SOUTH, result, 0)
+    call GetNextGoblinTunnelEx(start, GOBLIN_TUNNEL_DIRECTION_WEST, result, 0)
+    call GetNextGoblinTunnelEx(start, GOBLIN_TUNNEL_DIRECTION_EAST, result, 0)
+
+    return result
+endfunction
+
+function ForGroupFunctionKill takes nothing returns nothing
+    call KillUnit(GetEnumUnit())
+endfunction
+
+function KillAllConnectedGoblinTunnelParts takes unit start returns nothing
+    local group connected = CreateGroup()
+    call ForGroup(connected, function ForGroupFunctionKill)
+    call GroupClear(connected)
+    call DestroyGroup(connected)
+    set connected = null
 endfunction
