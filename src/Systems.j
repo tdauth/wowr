@@ -4571,7 +4571,7 @@ globals
     constant real SAVECODE_UI_LABEL_X = 0.055
     constant real SAVECODE_UI_LABEL_WIDTH = 0.058018
 
-    constant real SAVECODE_UI_LINEEDIT_X = SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH + 0.02
+    constant real SAVECODE_UI_LINEEDIT_X = SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH + 0.01
     constant real SAVECODE_UI_LINEEDIT_WIDTH = 0.35
 
     constant real SAVECODE_UI_UPDATE_BUTTON_X = 0.47837
@@ -5039,7 +5039,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelHeroes" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], "|cffFFCC00Load Heroes:|r")
+    call BlzFrameSetText(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], "|cffFFCC00Heroes:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -5085,7 +5085,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelItems" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], "|cffFFCC00Load Items:|r")
+    call BlzFrameSetText(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], "|cffFFCC00Items:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -5127,7 +5127,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelUnits" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], "|cffFFCC00Load Units:|r")
+    call BlzFrameSetText(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], "|cffFFCC00Units:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -5169,7 +5169,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelResearches" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], "|cffFFCC00Load Researches:|r")
+    call BlzFrameSetText(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], "|cffFFCC00Researches:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -5211,7 +5211,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelBuildings" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], "|cffFFCC00Load Buildings:|r")
+    call BlzFrameSetText(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], "|cffFFCC00Buildings:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -5254,7 +5254,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelAll" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], "|cffFFCC00Load All:|r")
+    call BlzFrameSetText(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], "|cffFFCC00All:|r")
     call BlzFrameSetEnable(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetScale(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], 1.00)
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -5263,7 +5263,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_AUTO_BUTTON_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_AUTO_BUTTON_X + SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad Auto All|r")
+    call BlzFrameSetText(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad Auto|r")
     call BlzFrameSetScale(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
     set SaveCodeUILoadAutoTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
@@ -5273,7 +5273,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Auto All|r")
+    call BlzFrameSetText(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Auto|r")
     call BlzFrameSetScale(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
     set SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
@@ -5283,7 +5283,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate All|r")
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
     call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
     set SaveCodeUIUpdateTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
@@ -5293,7 +5293,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     set SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
     call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad All|r")
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
     call BlzFrameSetScale(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
     set SaveCodeUILoadTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
@@ -5309,7 +5309,7 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
 
     set SaveCodeUICloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     set x = 0.34
-    set y = 0.202
+    set y = 0.22
     call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
     call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
     call BlzFrameSetText(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
