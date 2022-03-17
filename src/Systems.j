@@ -3592,7 +3592,7 @@ globals
 endglobals
 
 function FilterIsLivingUnitToBeSaved takes nothing returns boolean
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_ANCIENT) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetSaveObjectUnitType(GetUnitTypeId(GetFilterUnit())) != -1
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_ANCIENT) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and IsUnitAliveBJ(GetFilterUnit()) and GetUnitTypeId(GetFilterUnit()) != 'o018' and GetUnitTypeId(GetFilterUnit()) != 'o00P' and GetSaveObjectUnitType(GetUnitTypeId(GetFilterUnit())) != -1
 endfunction
 
 function CountUnitsOfTypeFromGroup takes group whichGroup, integer unitTypeId returns integer
@@ -5706,54 +5706,28 @@ function GetAngleByGoblinTunnelDirection takes integer direction returns real
     return 0.0
 endfunction
 
+function GetNextGoblinTunnelPart takes unit whichUnit, integer direction returns unit
+    return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), direction)
+endfunction
+
+function GetPreviousGoblinTunnelPart takes unit whichUnit returns unit
+    return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), 4)
+endfunction
+
 function FilterFunctionIsLivingGoblinTunnel takes nothing returns boolean
     return GetUnitTypeId(GetFilterUnit()) == 'o00P' and IsUnitAliveBJ(GetFilterUnit())
 endfunction
 
-function GetNextGoblinTunnelEx takes unit start, integer direction, group connectedParts, integer recursionLevel returns unit
-    local real angle = GetAngleByGoblinTunnelDirection(direction)
-    local real dist = 150.0
-    local real x = GetUnitX(start) + dist * Cos(angle * bj_DEGTORAD)
-    local real y = GetUnitY(start) + dist * Sin(angle * bj_DEGTORAD)
-    local group neighbours = CreateGroup()
-    local group neighboursOfOwner = CreateGroup()
-    local unit first = null
-    local unit neighbour = null
-    call GroupEnumUnitsInRange(neighbours, x, y, 90.0, Filter(function FilterFunctionIsLivingGoblinTunnel))
 
-    loop
-        set first = FirstOfGroup(neighbours)
-        call BJDebugMsg("First tunnel " + GetUnitName(first))
-        exitwhen (first == null)
-        if (GetOwningPlayer(first) == GetOwningPlayer(start) and first != start) then
-            call GroupAddUnit(neighboursOfOwner, first)
-            if (connectedParts != null) then
-                call GroupAddUnit(connectedParts, first)
-            endif
+function GetNextGoblinTunnelEx takes unit start, integer direction, group allConnected, integer recursionLevel returns unit
+    local unit next = GetNextGoblinTunnelPart(start, direction)
+
+    if (next != null) then
+        if (allConnected != null) then
+            call GroupAddUnit(allConnected, next)
         endif
-        call GroupRemoveUnit(neighbours, first)
-    endloop
 
-    call GroupClear(neighbours)
-    call DestroyGroup(neighbours)
-    set neighbours = null
-
-    set first = FirstOfGroup(neighboursOfOwner)
-
-    call GroupClear(neighboursOfOwner)
-    call DestroyGroup(neighboursOfOwner)
-    set neighboursOfOwner = null
-
-    call BJDebugMsg("First result tunnel " + GetUnitName(first) + " with recursion level " + I2S(recursionLevel))
-
-    // maximum number of pieces
-    if (recursionLevel > 30) then
-        return null
-    endif
-
-    // TODO Call linear not recursively.
-    if (first != null) then
-        return GetNextGoblinTunnelEx(first, direction, connectedParts, recursionLevel + 1)
+        return GetNextGoblinTunnelEx(next, direction, allConnected, recursionLevel + 1)
     else
         call BJDebugMsg("Return start")
 
@@ -5762,7 +5736,15 @@ function GetNextGoblinTunnelEx takes unit start, integer direction, group connec
 endfunction
 
 function GetNextGoblinTunnel takes unit start, integer direction returns unit
-    return GetNextGoblinTunnelEx(start, direction, null, 0)
+    local unit next = GetNextGoblinTunnelEx(start, direction, null, 0)
+
+    if (next != null) then
+        return next
+    else
+        call BJDebugMsg("Return start")
+
+        return start
+    endif
 endfunction
 
 function GetAllConnectedGoblinTunnelParts takes unit start returns group
@@ -5780,7 +5762,7 @@ function ForGroupFunctionKill takes nothing returns nothing
 endfunction
 
 function KillAllConnectedGoblinTunnelParts takes unit start returns nothing
-    local group connected = CreateGroup()
+    local group connected = GetAllConnectedGoblinTunnelParts(start)
     call ForGroup(connected, function ForGroupFunctionKill)
     call GroupClear(connected)
     call DestroyGroup(connected)
