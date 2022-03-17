@@ -5729,7 +5729,7 @@ function GetNextGoblinTunnelEx takes unit start, integer direction, group allCon
 
         return GetNextGoblinTunnelEx(next, direction, allConnected, recursionLevel + 1)
     else
-        call BJDebugMsg("Return start")
+        //call BJDebugMsg("Return start")
 
         return start
     endif
@@ -5741,7 +5741,7 @@ function GetNextGoblinTunnel takes unit start, integer direction returns unit
     if (next != null) then
         return next
     else
-        call BJDebugMsg("Return start")
+        //call BJDebugMsg("Return start")
 
         return start
     endif
