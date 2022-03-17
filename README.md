@@ -192,7 +192,7 @@ The following files are imported into the map whenever they are updated. They co
 The race is determined from the race set in the lobby of the game:
 
 * If the race is Human it will either be Human or Blood Elf.
-* If the race is Orc it will either be Orc or Draenei.
+* If the race is Orc it will either be Orc, Draenei or Goblin.
 * If the race is Undead it will either be Undead or Demon.
 * If the race is Night Elf it will either be Night Elf, Naga or Furbolg.
 
