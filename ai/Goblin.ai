@@ -14,9 +14,9 @@ globals
 	constant integer GOBLIN_ALTAR                                    = 'o00T' // altar
 	constant integer GOBLIN_HEAVY_TANK                               = 'o01G' // special building
 	
-	constant integer GOBLIN_LABORER                                  = 'o00N' // worker
+	constant integer GOBLIN_LABORER                                  = 'h02L' // worker
 	constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
-	constant integer GOBLIN_FLAMETHROWER                                      = 'o013'
+	constant integer GOBLIN_FLAMETHROWER                             = 'o013'
 	constant integer GOBLIN_FLAME_TANK                               = 'h02D'
 	constant integer GOBLIN_MAGE                                     = 'o010'
 	constant integer GOBLIN_SORCERESS                                = 'o012'

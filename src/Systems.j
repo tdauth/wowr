@@ -2188,7 +2188,7 @@ function ConvertSaveCodeDemigodValueToInfo takes integer value returns string
         return "Dark Demigod"
     endif
 
-    return "no"
+    return "No Demigod"
 endfunction
 
 function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer improvedNavyLevel, integer demigodValue, string saveCode returns nothing
@@ -2261,7 +2261,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + "-" + ConvertSaveCodeDemigodValueToInfo(demigodValue) + ".txt")
 endfunction
 
 // use one single symbol to store these two flags
@@ -2789,6 +2789,7 @@ endfunction
 function DisplayDuplicateSaveObjects takes nothing returns nothing
     local integer j
     local integer i = 0
+    call BJDebugMsg("Save Object Duplicates:")
     loop
         exitwhen (i == SaveObjectUnitCounter)
         set j = 0
@@ -4970,7 +4971,7 @@ function UpdateSaveCodeUIResearchesText takes player whichPlayer returns nothing
 endfunction
 
 function SetSaveCodeUITooltipResearchesSaveCodeInfo takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeUnits(GetSaveCodeUIUnitsText(whichPlayer))
+    local string saveCode = FormattedSaveCodeResearches(GetSaveCodeUIUnitsText(whichPlayer))
     call SetSaveCodeUITooltip(whichPlayer, "Researches:|n" + GetSaveCodeInfosResearches(whichPlayer, saveCode))
 endfunction
 
@@ -5106,11 +5107,7 @@ function SaveCodeUIUpdateFunctionItems takes nothing returns nothing
 endfunction
 
 function SaveCodeUILoadItems takes player whichPlayer returns nothing
-    local string saveCode = GetSaveCodeUIItemsText(whichPlayer)
-    //call BJDebugMsg("Click load heroes")
-    if (StringStartsWith(saveCode, "-loadi ")) then
-        set saveCode = StringRemoveFromStart(saveCode, "-loadi ")
-    endif
+    local string saveCode = FormattedSaveCodeItems(GetSaveCodeUIItemsText(whichPlayer))
 
     if (TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
         if (ApplySaveCodeItems(whichPlayer, saveCode)) then
@@ -5120,7 +5117,7 @@ function SaveCodeUILoadItems takes player whichPlayer returns nothing
             call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
         endif
     else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load item savecodes in: " + FormatTimeString(TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)])))
+        call SetSaveCodeUITooltip(whichPlayer, "You can load item savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)]))))
     endif
 endfunction
 
@@ -5143,17 +5140,17 @@ function SaveCodeUIUpdateFunctionUnits takes nothing returns nothing
 endfunction
 
 function SaveCodeUILoadUnits takes player whichPlayer returns nothing
-    local string saveCode = GetSaveCodeUIUnitsText(whichPlayer)
-    //call BJDebugMsg("Click load units")
-    if (StringStartsWith(saveCode, "-loadu ")) then
-        set saveCode = StringRemoveFromStart(saveCode, "-loadu ")
-    endif
+    local string saveCode = FormattedSaveCodeUnits(GetSaveCodeUIUnitsText(whichPlayer))
 
-    // TODO Check and Apply cooldowns!
-    if (ApplySaveCodeUnits(whichPlayer, saveCode)) then
-        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+    if (TimerGetRemaining(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeUnits(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
     else
-        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "You can load unit savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)]))))
     endif
 endfunction
 
@@ -5176,17 +5173,17 @@ function SaveCodeUIUpdateFunctionResearches takes nothing returns nothing
 endfunction
 
 function SaveCodeUILoadResearches takes player whichPlayer returns nothing
-    local string saveCode = GetSaveCodeUIResearchesText(whichPlayer)
-    //call BJDebugMsg("Click load researches")
-    if (StringStartsWith(saveCode, "-loadr ")) then
-        set saveCode = StringRemoveFromStart(saveCode, "-loadr ")
-    endif
+    local string saveCode = FormattedSaveCodeResearches(GetSaveCodeUIResearchesText(whichPlayer))
 
-    // TODO Check and Apply cooldowns!
-    if (ApplySaveCodeResearches(whichPlayer, saveCode)) then
-        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+    if (TimerGetRemaining(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeResearches(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
     else
-        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "You can load research savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)]))))
     endif
 endfunction
 
@@ -5212,11 +5209,15 @@ function SaveCodeUILoadBuildings takes player whichPlayer returns nothing
     local string saveCode = FormattedSaveCodeBuildings(GetSaveCodeUIBuildingsText(whichPlayer))
     //call BJDebugMsg("Click load buildings")
 
-    // TODO Check and Apply cooldowns!
-    if (ApplySaveCodeBuildings(whichPlayer, saveCode)) then
-        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+    if (TimerGetRemaining(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeBuildings(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
     else
-        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "You can load building savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)]))))
     endif
 endfunction
 
@@ -5806,4 +5807,112 @@ function KillAllConnectedGoblinTunnelParts takes unit start returns nothing
     call GroupClear(connected)
     call DestroyGroup(connected)
     set connected = null
+endfunction
+
+function RemoveHeroAbility takes unit hero, integer abilityId returns boolean
+    local integer level = GetUnitAbilityLevel(hero, abilityId)
+    local integer skillPoints = GetHeroSkillPoints(hero)
+    local integer diff = 100 - level
+    local integer i = 0
+    // TODO Do we need to increase the hero level as well for skip requirements?
+    if (diff > 0) then
+        call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_ADD, diff)
+        set i = 0
+        loop
+            exitwhen (i == diff)
+            call SelectHeroSkill(hero, abilityId)
+            set i = i + 1
+        endloop
+        call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_SET, skillPoints)
+    endif
+
+    return UnitRemoveAbility(hero, abilityId)
+endfunction
+
+function AutoSkillHero takes unit hero returns integer
+    local integer level = GetHeroLevel(hero)
+    local integer skillPoints = GetHeroSkillPoints(hero)
+    local integer start = level - skillPoints
+    local integer modulo = 0
+    local boolean matched = false
+    local integer remaining = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= skillPoints)
+        set matched = false
+        set modulo = ModuloInteger(start + i, 5)
+        if (GetUnitTypeId(hero) == 'N01O') then // Kil'jaeden
+            if (modulo == 0 and GetUnitAbilityLevel(hero, 'AEim') < 100) then // Immolation
+                call SelectHeroSkill(hero, 'AEim')
+                set matched = true
+            elseif (modulo == 1 and GetUnitAbilityLevel(hero, 'AHbn') < 100) then // Bash
+                call SelectHeroSkill(hero, 'AHbn')
+                set matched = true
+            elseif (modulo == 3 and GetUnitAbilityLevel(hero, 'A01F') < 100) then // Rain of Chaos Destroyer
+                call SelectHeroSkill(hero, 'A01F')
+                set matched = true
+            elseif (modulo == 4 and GetUnitAbilityLevel(hero, 'A05B') < 1) then // Demon Storm Kil'jaeden
+                call SelectHeroSkill(hero, 'A05B')
+                set matched = true
+            elseif (modulo == 4 and GetUnitAbilityLevel(hero, 'A01R') < 100) then // Demon Master
+                call SelectHeroSkill(hero, 'A01R')
+                set matched = true
+            endif
+        endif
+
+        if (not matched) then
+            if (GetUnitAbilityLevel(hero, 'Aamk') < 100) then // Attribute Bonus
+                call SelectHeroSkill(hero, 'Aamk')
+            else
+                set remaining = remaining + 1
+            endif
+        endif
+        set i = i + 1
+    endloop
+
+    return remaining
+endfunction
+
+globals
+    constant integer EVOLUTION_0_100 = 'R00U'
+    constant integer EVOLUTION_101_201 = 'R03A'
+    constant integer EVOLUTION_202_302 = 'R03B'
+    constant integer EVOLUTION_303_403 = 'R03C'
+    constant integer EVOLUTION_404_504 = 'R03D'
+endglobals
+
+function SetEvolutionLevelOfPlayer takes player whichPlayer, integer level returns nothing
+    if (level > 403) then
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_404_504, level - 403)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_303_403, 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_202_302, 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
+    elseif (level > 302) then
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_303_403, level - 302)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_202_302, 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
+    elseif (level > 201) then
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_202_302, level - 201)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
+    elseif (level > 100) then
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, level - 100)
+        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
+    endif
+    call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, level)
+endfunction
+
+function GetEvolutionLevelOfPlayer takes player whichPlayer returns integer
+    if (GetPlayerTechCountSimple(EVOLUTION_404_504, whichPlayer) > 0) then
+        return GetPlayerTechCountSimple(EVOLUTION_404_504, whichPlayer) + 403
+    elseif (GetPlayerTechCountSimple(EVOLUTION_303_403, whichPlayer) > 0) then
+        return GetPlayerTechCountSimple(EVOLUTION_303_403, whichPlayer) + 302
+    elseif (GetPlayerTechCountSimple(EVOLUTION_202_302, whichPlayer) > 0) then
+        return GetPlayerTechCountSimple(EVOLUTION_202_302, whichPlayer) + 201
+    elseif (GetPlayerTechCountSimple(EVOLUTION_101_201, whichPlayer) > 0) then
+        return GetPlayerTechCountSimple(EVOLUTION_101_201, whichPlayer) + 100
+    endif
+    return GetPlayerTechCountSimple(EVOLUTION_0_100, whichPlayer)
 endfunction
