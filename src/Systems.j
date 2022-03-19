@@ -4070,6 +4070,7 @@ function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer
     endloop
 
     // fill rest
+    set i = researchesCounter
     loop
         exitwhen (i >= SAVE_CODE_MAX_RESEARCHES)
         set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
