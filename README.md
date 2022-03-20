@@ -158,6 +158,26 @@ This version provides several new features compared to the original map [World o
 * Chat command "-help/-h" which lists chat commands.
 * Becoming a demigod requires a Nether Dragon.
 * Chat command "-pingdragons" to ping all Dragon Roosts.
+* New dungeon with Avatar of Sargeras.
+* New portal room connecting sea dungeons.
+* Water portals connecting parts of the sea.
+* Chat command "-savegui" which shows a custom savecode GUI.
+* New research Improved Air Transport for all races.
+* New research Improved Navy for all races.
+* New boss Mathog.
+* Allow deactivating Divine Shield.
+* New boss Gul'dan.
+* Arcane Academy of Theramore sells mana related items.
+* New island next to Maelstrom with new boss Sea Witch.
+* Play Naga or Blood Elf Theme if you choose the corresponding races.
+* Hall of Fame.
+* Invisibility and Berserk have 100 levels now and are set to the hero's level up to level 100.
+* Fixed Computer player Gaia who provides some units on the map which can be rescued.
+* Chat command "-pingkeys" for ping secret keys on the map.
+* New research Improved Creep Hunter which increases the maximum creep level of certain unit abilities.
+* New item Feed made by the Research Tent which increases the hero level of all bosses.
+* More than one hero can be played by one single player.
+* Reveal neutral buildings for Freelancers from start.
 
 ## Bug Fixes
 

@@ -1579,23 +1579,24 @@ globals
     constant integer RACE_OBJECT_TYPE_HOUSING = 16
     constant integer RACE_OBJECT_TYPE_SHIPYARD = 17
     // ITEMS
-    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 18
-    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 19
+    constant integer RACE_OBJECT_TYPE_SCEPTER_ITEM = 18
+    constant integer RACE_OBJECT_TYPE_TIER_1_ITEM = 19
+    constant integer RACE_OBJECT_TYPE_TIER_2_ITEM = 20
     // UNITS
-    constant integer RACE_OBJECT_TYPE_WORKER = 20
-    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 21
-    constant integer RACE_OBJECT_TYPE_FEMALE_CITIZEN = 22
-    constant integer RACE_OBJECT_TYPE_PET = 23
-    constant integer RACE_OBJECT_TYPE_FOOTMAN = 24
-    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 25
-    constant integer RACE_OBJECT_TYPE_KNIGHT = 26
-    constant integer RACE_OBJECT_TYPE_PRIEST = 27
-    constant integer RACE_OBJECT_TYPE_SORCERESS = 28
-    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 29
-    constant integer RACE_OBJECT_TYPE_MORTAR = 30
-    constant integer RACE_OBJECT_TYPE_GRYPHON = 31
+    constant integer RACE_OBJECT_TYPE_WORKER = 21
+    constant integer RACE_OBJECT_TYPE_MALE_CITIZEN = 22
+    constant integer RACE_OBJECT_TYPE_FEMALE_CITIZEN = 23
+    constant integer RACE_OBJECT_TYPE_PET = 24
+    constant integer RACE_OBJECT_TYPE_FOOTMAN = 25
+    constant integer RACE_OBJECT_TYPE_RIFLEMAN = 26
+    constant integer RACE_OBJECT_TYPE_KNIGHT = 27
+    constant integer RACE_OBJECT_TYPE_PRIEST = 28
+    constant integer RACE_OBJECT_TYPE_SORCERESS = 29
+    constant integer RACE_OBJECT_TYPE_SIEGE_ENGINE = 30
+    constant integer RACE_OBJECT_TYPE_MORTAR = 31
+    constant integer RACE_OBJECT_TYPE_GRYPHON = 32
 
-    constant integer RACE_MAX_OBJECT_TYPES = 32
+    constant integer RACE_MAX_OBJECT_TYPES = 33
 
     integer array raceObjectType
 endglobals
@@ -2475,6 +2476,76 @@ function SetPlayerTechResearchedIfHigher takes player whichPlayer, integer techI
     return false
 endfunction
 
+function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+        call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
+
+        call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
+        call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
+        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
+
+        set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
+        set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
+        set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
+        set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
+        set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
+        set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
+
+        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
+            call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
+        endif
+
+        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
+            set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
+        endif
+
+        return true
+    endif
+
+    return false
+endfunction
+
 function ApplySaveCode takes player whichPlayer, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
@@ -2562,7 +2633,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
         return true
     endif
 
-    return false
+    // for savecodes from older versions of the map
+    return ApplySaveCodeOld(whichPlayer, s)
 endfunction
 
 function GetSaveCodeErrors takes player whichPlayer, string s returns string
@@ -4172,7 +4244,7 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
     if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
         set i = 0
         loop
-            exitwhen (i == SAVE_CODE_MAX_RESEARCHES)
+            exitwhen (i >= SAVE_CODE_MAX_RESEARCHES)
             set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
             //call BJDebugMsg("Loading save object: " + I2S(saveObject))
             if (saveObject > 0) then
@@ -4249,7 +4321,7 @@ function GetSaveCodeInfosResearches takes player whichPlayer, string s returns s
 
     set i = 0
     loop
-        exitwhen (i == SAVE_CODE_MAX_RESEARCHES)
+        exitwhen (i >= SAVE_CODE_MAX_RESEARCHES)
         set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
         if (saveObject > 0) then
             set saveObjectId = GetSaveObjectResearchId(saveObject)
@@ -4272,7 +4344,7 @@ function GetSaveCodeInfosResearches takes player whichPlayer, string s returns s
 endfunction
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 100, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 2)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 2)
 endfunction
 
 function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord returns string
@@ -5006,7 +5078,7 @@ function UpdateSaveCodeUIResearchesText takes player whichPlayer returns nothing
 endfunction
 
 function SetSaveCodeUITooltipResearchesSaveCodeInfo takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeResearches(GetSaveCodeUIUnitsText(whichPlayer))
+    local string saveCode = FormattedSaveCodeResearches(GetSaveCodeUIResearchesText(whichPlayer))
     call SetSaveCodeUITooltip(whichPlayer, "Researches:|n" + GetSaveCodeInfosResearches(whichPlayer, saveCode))
 endfunction
 
@@ -5844,12 +5916,59 @@ function KillAllConnectedGoblinTunnelParts takes unit start returns nothing
     set connected = null
 endfunction
 
+globals
+    hashtable HeroAbilitiesHashTable = InitHashtable()
+    hashtable HeroAbilitiesMaximumLevelHashTable = InitHashtable()
+endglobals
+
+function GetHeroAbilityMaximum takes integer unitTypeId returns integer
+    return LoadInteger(HeroAbilitiesHashTable, unitTypeId, 0) + 1
+endfunction
+
+function GetHeroAbility takes integer unitTypeId, integer index returns integer
+    return LoadInteger(HeroAbilitiesHashTable, unitTypeId, index)
+endfunction
+
+function GetHeroAbilityMaximumLevel takes integer unitTypeId, integer index returns integer
+    return LoadInteger(HeroAbilitiesMaximumLevelHashTable, unitTypeId, index)
+endfunction
+
+function GetHeroAbilityIndex takes integer unitTypeId, integer abilityId returns integer
+    local integer i = 1
+    local integer max = GetHeroAbilityMaximum(unitTypeId)
+    loop
+        exitwhen (i >= max)
+        if (GetHeroAbility(unitTypeId, i) == abilityId) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function RegisterHeroAbilityEx takes integer unitTypeId, integer abilityId, integer maxLevel returns integer
+    local integer maxIndex = GetHeroAbilityMaximum(unitTypeId)
+    call SaveInteger(HeroAbilitiesHashTable, unitTypeId, 0, maxIndex)
+    call SaveInteger(HeroAbilitiesHashTable, unitTypeId, maxIndex, abilityId)
+    call SaveInteger(HeroAbilitiesMaximumLevelHashTable, unitTypeId, maxIndex, maxLevel)
+
+    return maxIndex
+endfunction
+
+function RegisterHeroAbility takes nothing returns integer
+    return RegisterHeroAbilityEx(udg_TmpUnitType, udg_TmpAbilityCode, udg_TmpInteger)
+endfunction
+
 function RemoveHeroAbility takes unit hero, integer abilityId returns boolean
     local integer level = GetUnitAbilityLevel(hero, abilityId)
     local integer skillPoints = GetHeroSkillPoints(hero)
-    local integer diff = 100 - level
+    local integer index = GetHeroAbilityIndex(GetUnitTypeId(hero), abilityId)
+    local integer diff = GetHeroAbilityMaximumLevel(GetUnitTypeId(hero), index) - level
     local integer i = 0
-    // TODO Do we need to increase the hero level as well for skip requirements?
+    if (index < 1) then
+        call BJDebugMsg("Invalid ability index " + I2S(index) + " for hero ability " + GetObjectName(abilityId) + " for unit type " + GetObjectName(GetUnitTypeId(hero)))
+    endif
+    // TODO Do we need to increase the hero level as well for skip requirements? We will have to disable ALL triggers which react to a gain level event!
     if (diff > 0) then
         call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_ADD, diff)
         set i = 0
@@ -5864,90 +5983,67 @@ function RemoveHeroAbility takes unit hero, integer abilityId returns boolean
     return UnitRemoveAbility(hero, abilityId)
 endfunction
 
+function RemoveAllHeroAbilities takes unit hero returns nothing
+    local integer max = GetHeroAbilityMaximum(GetUnitTypeId(hero))
+    local integer i = 1
+    loop
+        exitwhen (i >= max)
+        call RemoveHeroAbility(hero, GetHeroAbility(GetUnitTypeId(hero), i))
+        set i = i + 1
+    endloop
+endfunction
+
+function AddAllHeroAbilities takes unit hero returns nothing
+    local integer max = GetHeroAbilityMaximum(GetUnitTypeId(hero))
+    local integer i = 1
+    loop
+        exitwhen (i >= max)
+        call UnitAddAbility(hero, GetHeroAbility(GetUnitTypeId(hero), i))
+        set i = i + 1
+    endloop
+endfunction
+
 function AutoSkillHero takes unit hero returns integer
     local integer level = GetHeroLevel(hero)
     local integer skillPoints = GetHeroSkillPoints(hero)
     local integer start = level - skillPoints
-    local integer modulo = 0
+    //local integer modulo = 0
     local boolean matched = false
-    local integer remaining = 0
+    local integer remaining = skillPoints
+    local integer index = 1
+    local integer max = 0
+    local integer abilityId = 0
+    local integer abilityMaxLevel = 0
+    local integer j = 0
     local integer i = 0
     loop
         exitwhen (i >= skillPoints)
         set matched = false
-        set modulo = ModuloInteger(start + i, 5)
-        if (GetUnitTypeId(hero) == 'N01O') then // Kil'jaeden
-            if (modulo == 0 and GetUnitAbilityLevel(hero, 'AEim') < 100) then // Immolation
-                call SelectHeroSkill(hero, 'AEim')
-                set matched = true
-            elseif (modulo == 1 and GetUnitAbilityLevel(hero, 'AHbn') < 100) then // Bash
-                call SelectHeroSkill(hero, 'AHbn')
-                set matched = true
-            elseif (modulo == 3 and GetUnitAbilityLevel(hero, 'A01F') < 100) then // Rain of Chaos Destroyer
-                call SelectHeroSkill(hero, 'A01F')
-                set matched = true
-            elseif (modulo == 4 and GetUnitAbilityLevel(hero, 'A05B') < 1) then // Demon Storm Kil'jaeden
-                call SelectHeroSkill(hero, 'A05B')
-                set matched = true
-            elseif (modulo == 4 and GetUnitAbilityLevel(hero, 'A01R') < 100) then // Demon Master
-                call SelectHeroSkill(hero, 'A01R')
+        //set modulo = ModuloInteger(start + i, 5)
+        set max = GetHeroAbilityMaximum(GetUnitTypeId(hero))
+        set index = 1
+        loop
+            exitwhen (index >= max or matched)
+            set abilityId = GetHeroAbility(GetUnitTypeId(hero), index)
+            set abilityMaxLevel = GetHeroAbilityMaximumLevel(GetUnitTypeId(hero), index)
+            if (GetUnitAbilityLevel(hero, abilityId) < abilityMaxLevel) then
+                call SelectHeroSkill(hero, abilityId)
+                set remaining = remaining - 1
                 set matched = true
             endif
-        endif
-
-        if (not matched) then
-            if (GetUnitAbilityLevel(hero, 'Aamk') < 100) then // Attribute Bonus
-                call SelectHeroSkill(hero, 'Aamk')
-            else
-                set remaining = remaining + 1
-            endif
-        endif
+            set index = index + 1
+        endloop
+        exitwhen (not matched)
         set i = i + 1
     endloop
 
     return remaining
 endfunction
 
-globals
-    constant integer EVOLUTION_0_100 = 'R00U'
-    constant integer EVOLUTION_101_201 = 'R03A'
-    constant integer EVOLUTION_202_302 = 'R03B'
-    constant integer EVOLUTION_303_403 = 'R03C'
-    constant integer EVOLUTION_404_504 = 'R03D'
-endglobals
-
 function SetEvolutionLevelOfPlayer takes player whichPlayer, integer level returns nothing
-    if (level > 403) then
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_404_504, level - 403)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_303_403, 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_202_302, 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
-    elseif (level > 302) then
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_303_403, level - 302)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_202_302, 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
-    elseif (level > 201) then
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_202_302, level - 201)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
-    elseif (level > 100) then
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_101_201, level - 100)
-        call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, 100)
-    endif
-    call SetPlayerTechResearched(whichPlayer, EVOLUTION_0_100, level)
+    call SetPlayerTechResearched(whichPlayer, UPG_EVOLUTION, level)
 endfunction
 
 function GetEvolutionLevelOfPlayer takes player whichPlayer returns integer
-    if (GetPlayerTechCountSimple(EVOLUTION_404_504, whichPlayer) > 0) then
-        return GetPlayerTechCountSimple(EVOLUTION_404_504, whichPlayer) + 403
-    elseif (GetPlayerTechCountSimple(EVOLUTION_303_403, whichPlayer) > 0) then
-        return GetPlayerTechCountSimple(EVOLUTION_303_403, whichPlayer) + 302
-    elseif (GetPlayerTechCountSimple(EVOLUTION_202_302, whichPlayer) > 0) then
-        return GetPlayerTechCountSimple(EVOLUTION_202_302, whichPlayer) + 201
-    elseif (GetPlayerTechCountSimple(EVOLUTION_101_201, whichPlayer) > 0) then
-        return GetPlayerTechCountSimple(EVOLUTION_101_201, whichPlayer) + 100
-    endif
-    return GetPlayerTechCountSimple(EVOLUTION_0_100, whichPlayer)
+    return GetPlayerTechCountSimple(UPG_EVOLUTION, whichPlayer)
 endfunction
