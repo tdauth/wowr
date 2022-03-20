@@ -11,6 +11,8 @@ Open world role-playing game funmap for Warcraft III: Reforged based on [World o
 
 *Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
+![World of Warcraft Logo](./war3mapPreview.tga)
+
 ## How to Play
 
 Usually, it is the best to ally one Freelancer with one Warlord from the beginning.
@@ -234,6 +236,12 @@ At the moment the map seems to end after some time. We played some games for one
 Hence, I am trying to collect replays with the game ending to reconstruct the bug.
 
 [crashes](./crashes) contains folders with map and replay files of the corresponding games.
+
+### Known Reasons for Crashing
+
+* Missing pathing for buildings constructed by the AI.
+* Lower number for maximum number than minimum number of summoned units for Dark Portal based abilities.
+* Training of certain unit types by the AI.
 
 ## History of the Map
 

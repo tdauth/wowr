@@ -6047,3 +6047,41 @@ endfunction
 function GetEvolutionLevelOfPlayer takes player whichPlayer returns integer
     return GetPlayerTechCountSimple(UPG_EVOLUTION, whichPlayer)
 endfunction
+
+globals
+    trigger orderTrigger
+endglobals
+
+function TriggerConditionDebugOrder takes nothing returns boolean
+    local string order = OrderId2String(GetIssuedOrderId())
+    return order != "move" and order != "harvest" and order != "stop" and order != "attack" and order != "resumeharvesting" and order != "smart" and order != "unsubmerge"
+endfunction
+
+function TriggerActionDebugOrder takes nothing returns nothing
+    if (GetOrderTargetUnit() != null) then
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target unit " + GetUnitName(GetOrderTargetUnit()))
+    elseif (GetOrderTargetDestructable() != null) then
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target destructible " + GetDestructableName(GetOrderTargetDestructable()))
+    elseif (GetOrderTargetItem() != null) then
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target item " + GetItemName(GetOrderTargetItem()))
+    else
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()))
+    endif
+endfunction
+
+function InitOrderDebugger takes nothing returns nothing
+    set orderTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerAddAction(orderTrigger, function TriggerActionDebugOrder)
+    call DisableTrigger(orderTrigger)
+endfunction
+
+function EnableOrderDebugger takes nothing returns nothing
+    call EnableTrigger(orderTrigger)
+endfunction
+
+function DisableOrderDebugger takes nothing returns nothing
+    call DisableTrigger(orderTrigger)
+endfunction
