@@ -11,8 +11,6 @@ Open world role-playing game funmap for Warcraft III: Reforged based on [World o
 
 *Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
-![World of Warcraft Logo](./war3mapPreview.tga)
-
 ## How to Play
 
 Usually, it is the best to ally one Freelancer with one Warlord from the beginning.

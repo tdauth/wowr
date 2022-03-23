@@ -5837,6 +5837,18 @@ globals
     constant integer GOBLIN_TUNNEL_DIRECTION_SOUTH = 1
     constant integer GOBLIN_TUNNEL_DIRECTION_WEST = 2
     constant integer GOBLIN_TUNNEL_DIRECTION_EAST = 3
+    constant integer GOBLIN_TUNNEL_DIRECTION_PREVIOUS = 4
+    constant integer GOBLIN_TUNNEL_DIRECTION_NORTH_START = 5
+    constant integer GOBLIN_TUNNEL_DIRECTION_SOUTH_START = 6
+    constant integer GOBLIN_TUNNEL_DIRECTION_WEST_START = 7
+    constant integer GOBLIN_TUNNEL_DIRECTION_EAST_START = 8
+
+    constant integer GOBLIN_TUNNEL_SYSTEM = 'o018'
+    constant integer GOBLIN_TUNNEL = 'o00P'
+    constant real GOBLIN_TUNNEL_EXPAND_DISTANCE = 100.0
+
+    constant integer GOBLIN_TUNNEL_START_ABILITY_ID = 'A0CS'
+    constant integer GOBLIN_TUNNEL_END_ABILITY_ID = 'A0CT'
 endglobals
 
 function GetAngleByGoblinTunnelDirection takes integer direction returns real
@@ -5853,12 +5865,43 @@ function GetAngleByGoblinTunnelDirection takes integer direction returns real
     return 0.0
 endfunction
 
+function SetNextGoblinTunnelPart takes unit whichUnit, integer direction, unit part returns nothing
+    call SaveUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), direction, part)
+endfunction
+
 function GetNextGoblinTunnelPart takes unit whichUnit, integer direction returns unit
     return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), direction)
 endfunction
 
+function SetPreviousGoblinTunnelPart takes unit whichUnit, unit part returns nothing
+    call SaveUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), GOBLIN_TUNNEL_DIRECTION_PREVIOUS, part)
+endfunction
+
 function GetPreviousGoblinTunnelPart takes unit whichUnit returns unit
-    return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), 4)
+    return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), GOBLIN_TUNNEL_DIRECTION_PREVIOUS)
+endfunction
+
+function GetGoblinTunnelSystem takes unit whichUnit returns unit
+    local unit tmpUnit = whichUnit
+    loop
+        set tmpUnit = GetPreviousGoblinTunnelPart(whichUnit)
+        exitwhen (tmpUnit == null)
+        set whichUnit = tmpUnit
+    endloop
+
+    if (GetUnitTypeId(whichUnit) == GOBLIN_TUNNEL_SYSTEM) then
+        return whichUnit
+    endif
+
+    return null
+endfunction
+
+function SetGoblinTunnelSystemStart takes unit whichUnit, integer direction, unit start returns nothing
+    call SaveUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), direction + GOBLIN_TUNNEL_DIRECTION_PREVIOUS + 1, start)
+endfunction
+
+function GetGoblinTunnelSystemStart takes unit whichUnit, integer direction returns unit
+    return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), direction + GOBLIN_TUNNEL_DIRECTION_PREVIOUS + 1)
 endfunction
 
 function FilterFunctionIsLivingGoblinTunnel takes nothing returns boolean
@@ -5891,6 +5934,79 @@ function GetNextGoblinTunnel takes unit start, integer direction returns unit
         //call BJDebugMsg("Return start")
 
         return start
+    endif
+endfunction
+
+function PolarProjectionX takes real x, real angle, real distance returns real
+    return x + distance * Cos(angle * bj_DEGTORAD)
+endfunction
+
+function PolarProjectionY takes real y, real angle, real distance returns real
+    return y + distance * Sin(angle * bj_DEGTORAD)
+endfunction
+
+function ExpandGoblinTunnel takes unit start, integer direction returns unit
+    local real angle = GetAngleByGoblinTunnelDirection(direction)
+    local unit previous = GetNextGoblinTunnel(start, direction)
+    local unit expanded = null
+    local unit system = null
+    if (previous != null and GetNextGoblinTunnelPart(previous, direction) == null) then
+        set expanded = CreateUnit(GetOwningPlayer(start), GOBLIN_TUNNEL, PolarProjectionX(GetUnitX(start), direction, GOBLIN_TUNNEL_EXPAND_DISTANCE), PolarProjectionY(GetUnitY(start), direction, GOBLIN_TUNNEL_EXPAND_DISTANCE), bj_UNIT_FACING)
+        call SetNextGoblinTunnelPart(previous, direction, expanded)
+        call SetPreviousGoblinTunnelPart(expanded, previous)
+        call GroupAddUnit(udg_GoblinTunnels, expanded)
+
+        if (GetUnitTypeId(previous) == GOBLIN_TUNNEL_SYSTEM) then
+            call SetGoblinTunnelSystemStart(previous, direction, expanded)
+            call WaygateActivate(expanded, true)
+            call WaygateSetDestination(expanded, GetUnitX(expanded), GetUnitY(expanded))
+            call UnitAddAbility(expanded, GOBLIN_TUNNEL_START_ABILITY_ID)
+        else
+            call WaygateActivate(previous, false)
+            call UnitRemoveAbility(previous, GOBLIN_TUNNEL_END_ABILITY_ID)
+
+            set system = GetGoblinTunnelSystem(expanded)
+            if (system != null) then
+                set system = GetGoblinTunnelSystemStart(system, direction)
+                if (system != null) then
+                    call WaygateActivate(system, true)
+                    call WaygateSetDestination(system, GetUnitX(expanded), GetUnitY(expanded))
+                    call UnitAddAbility(expanded, GOBLIN_TUNNEL_END_ABILITY_ID)
+                    call WaygateActivate(expanded, true)
+                    call WaygateSetDestination(expanded, GetUnitX(system), GetUnitY(system))
+                endif
+            endif
+        endif
+    else
+        call BJDebugMsg("Previous: " + GetUnitName(previous) + " and next existing part " + GetUnitName(GetNextGoblinTunnelPart(previous, direction)))
+    endif
+
+    return expanded
+endfunction
+
+function UpdateDeadGoblinTunnelPart takes unit whichUnit returns nothing
+    local unit previous = GetPreviousGoblinTunnelPart(whichUnit)
+    local unit next = null
+    local integer i = 0
+    loop
+        exitwhen (i == GOBLIN_TUNNEL_DIRECTION_EAST + 1)
+        set next = GetNextGoblinTunnelPart(whichUnit, i)
+        if (next != null) then
+            call SetPreviousGoblinTunnelPart(next, null)
+        endif
+        set i = i + 1
+    endloop
+    if (previous != null) then
+        set i = 0
+        loop
+            exitwhen (i == GOBLIN_TUNNEL_DIRECTION_EAST + 1)
+            set next = GetNextGoblinTunnelPart(previous, i)
+            if (next == whichUnit) then
+                call SetNextGoblinTunnelPart(previous, i, null)
+                exitwhen (true)
+            endif
+            set i = i + 1
+        endloop
     endif
 endfunction
 
@@ -6057,15 +6173,25 @@ function TriggerConditionDebugOrder takes nothing returns boolean
     return order != "move" and order != "harvest" and order != "stop" and order != "attack" and order != "resumeharvesting" and order != "smart" and order != "unsubmerge"
 endfunction
 
+function GetOrderName takes integer orderId returns string
+    if (UnitId2String(orderId) != "" and UnitId2String(orderId) != null) then
+        return UnitId2String(orderId)
+    elseif (AbilityId2String(orderId) != "" and AbilityId2String(orderId) != null) then
+        return AbilityId2String(orderId)
+    endif
+
+     return OrderId2String(orderId)
+endfunction
+
 function TriggerActionDebugOrder takes nothing returns nothing
     if (GetOrderTargetUnit() != null) then
-        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target unit " + GetUnitName(GetOrderTargetUnit()))
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + GetOrderName(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target unit " + GetUnitName(GetOrderTargetUnit()))
     elseif (GetOrderTargetDestructable() != null) then
-        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target destructible " + GetDestructableName(GetOrderTargetDestructable()))
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + GetOrderName(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target destructible " + GetDestructableName(GetOrderTargetDestructable()))
     elseif (GetOrderTargetItem() != null) then
-        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target item " + GetItemName(GetOrderTargetItem()))
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + GetOrderName(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()) + " for target item " + GetItemName(GetOrderTargetItem()))
     else
-        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + OrderId2String(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()))
+        call BJDebugMsg(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit())) + ": Issuing order with ID " + I2S(GetIssuedOrderId()) + " with name " + GetOrderName(GetIssuedOrderId()) + " for unit " + GetUnitName(GetTriggerUnit()))
     endif
 endfunction
 
@@ -6074,6 +6200,7 @@ function InitOrderDebugger takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionDebugOrder))
     call TriggerAddAction(orderTrigger, function TriggerActionDebugOrder)
     call DisableTrigger(orderTrigger)
 endfunction

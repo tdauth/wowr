@@ -208,7 +208,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, FEL_DRAGON_ROOST )
 	call SetBuildUnit( 2, PIG_FARM )
 	call SetBuildUnit( 2, CHAOS_BURROW )
-	call SetBuildUpgr( 100, UPG_EVOLUTION )
+	call SetBuildUpgr( 1000, UPG_EVOLUTION )
 	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
 	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
     // **********************************

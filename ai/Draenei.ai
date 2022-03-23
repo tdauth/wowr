@@ -151,7 +151,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )	
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-	call SetBuildUpgr( 100, UPG_EVOLUTION )
+	call SetBuildUpgr( 1000, UPG_EVOLUTION )
 	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
 	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
     // **********************************
