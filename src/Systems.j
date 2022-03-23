@@ -5951,7 +5951,7 @@ function ExpandGoblinTunnel takes unit start, integer direction returns unit
     local unit expanded = null
     local unit system = null
     if (previous != null and GetNextGoblinTunnelPart(previous, direction) == null) then
-        set expanded = CreateUnit(GetOwningPlayer(start), GOBLIN_TUNNEL, PolarProjectionX(GetUnitX(start), direction, GOBLIN_TUNNEL_EXPAND_DISTANCE), PolarProjectionY(GetUnitY(start), direction, GOBLIN_TUNNEL_EXPAND_DISTANCE), bj_UNIT_FACING)
+        set expanded = CreateUnit(GetOwningPlayer(start), GOBLIN_TUNNEL, PolarProjectionX(GetUnitX(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), PolarProjectionY(GetUnitY(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), bj_UNIT_FACING)
         call SetNextGoblinTunnelPart(previous, direction, expanded)
         call SetPreviousGoblinTunnelPart(expanded, previous)
         call GroupAddUnit(udg_GoblinTunnels, expanded)
