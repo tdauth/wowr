@@ -4345,6 +4345,9 @@ endfunction
 
 globals
     constant integer SAVE_CODE_MAX_CLAN_MEMBERS = 6
+
+    constant integer UPG_IMPROVED_CLAN_HALL = 'R03C'
+    constant integer UPG_IMPROVED_CLAN = 'R03B'
 endglobals
 
 function GetClanRankName takes integer rank returns string
@@ -4357,7 +4360,7 @@ function GetClanRankName takes integer rank returns string
     endif
 endfunction
 
-function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer gold, integer lumber, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
+function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string leader = ""
@@ -4463,6 +4466,8 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     set content = content + AppendFileContent("Members: " + members)
     set content = content + AppendFileContent("Gold: " + I2S(gold))
     set content = content + AppendFileContent("Lumber: " + I2S(lumber))
+    set content = content + AppendFileContent("Improved Clan Hall Level: " + I2S(improvedClanHallLevel))
+    set content = content + AppendFileContent("Improved Clan Level: " + I2S(improvedClanLevel))
     set content = content + AppendFileContent("")
 
     // The line below creates the log
@@ -4472,7 +4477,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
-function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer gold, integer lumber, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
     local string result = ""
 
     //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
@@ -4488,6 +4493,8 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer go
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name))
     set result = result + ConvertDecimalNumberToSaveCodeSegment(gold)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(lumber)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanHallLevel)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanLevel)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName0))
     set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank0)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName1))
@@ -4511,7 +4518,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer go
         set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(name))
     endif
 
-    call CreateSaveCodeClanTextFile(isSinglePlayer, name, gold, lumber, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
+    call CreateSaveCodeClanTextFile(isSinglePlayer, name, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
 
     return result
 endfunction
@@ -4531,11 +4538,16 @@ function GetSaveCodeClan takes integer clan returns string
      local integer playerRank5 = udg_ClanRankMember
      local string playerName6 = ""
      local integer playerRank6 = udg_ClanRankMember
+     local integer improvedClanHallLevel = 0
+     local integer improvedClanLevel = 0
      local integer clanMemberCounter = 0
      local integer i = 0
      loop
         exitwhen (i == bj_MAX_PLAYERS)
         if (IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+            set improvedClanHallLevel = IMaxBJ(GetPlayerTechCountSimple(UPG_IMPROVED_CLAN_HALL, Player(i)), improvedClanHallLevel)
+            set improvedClanLevel = IMaxBJ(GetPlayerTechCountSimple(UPG_IMPROVED_CLAN, Player(i)), improvedClanLevel)
+
             if (clanMemberCounter == 0) then
                 set playerName0 = GetPlayerName(Player(i))
                 set playerRank0 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
@@ -4563,7 +4575,7 @@ function GetSaveCodeClan takes integer clan returns string
         set i = i + 1
     endloop
 
-    return GetSaveCodeClanEx(bj_isSinglePlayer, udg_ClanName[clan], udg_ClanGold[clan], udg_ClanLumber[clan], playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+    return GetSaveCodeClanEx(bj_isSinglePlayer, udg_ClanName[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
 endfunction
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
