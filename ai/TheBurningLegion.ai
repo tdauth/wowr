@@ -167,7 +167,7 @@ function ConfigureAI takes nothing returns nothing
 	call SetCaptainChanges ( false )
 	call SetSmartArtillery ( true )
     call GroupTimedLife ( true )
-    //call SetRandomPaths( true )
+    call SetRandomPaths( true )
     call SetDefendPlayer( true )
 endfunction
 
@@ -410,7 +410,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
 	call AddStandardUnitsToAttackWave()
-    //call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 5 ***
