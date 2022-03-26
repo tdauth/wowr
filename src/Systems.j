@@ -4343,6 +4343,229 @@ function GetSaveCodeInfosResearches takes player whichPlayer, string s returns s
     return result
 endfunction
 
+globals
+    constant integer SAVE_CODE_MAX_CLAN_MEMBERS = 6
+endglobals
+
+function GetClanRankName takes integer rank returns string
+    if (rank == udg_ClanRankLeader) then
+        return "Leader"
+    elseif (rank == udg_ClanRankCaptain) then
+        return "Captain"
+    else
+        return "Member"
+    endif
+endfunction
+
+function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer gold, integer lumber, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
+    local string singleplayer = "no"
+    local string singlePlayerFileName = "Multiplayer"
+    local string leader = ""
+    local string members = ""
+    local string content = ""
+
+    if (isSinglePlayer) then
+        set singleplayer = "yes"
+        set singlePlayerFileName = "Singleplayer"
+    endif
+
+    if (StringLength(playerName0) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName0 + "_" + GetClanRankName(playerRank0)
+
+        if (playerRank0 == udg_ClanRankLeader) then
+            set leader = playerName0
+        endif
+    endif
+
+    if (StringLength(playerName1) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName1 + "_" + GetClanRankName(playerRank1)
+
+        if (playerRank1 == udg_ClanRankLeader) then
+            set leader = playerName1
+        endif
+    endif
+
+    if (StringLength(playerName2) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName2 + "_" + GetClanRankName(playerRank2)
+
+        if (playerRank2 == udg_ClanRankLeader) then
+            set leader = playerName2
+        endif
+    endif
+
+    if (StringLength(playerName3) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName3 + "_" + GetClanRankName(playerRank3)
+
+        if (playerRank3 == udg_ClanRankLeader) then
+            set leader = playerName3
+        endif
+    endif
+
+    if (StringLength(playerName4) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName4 + "_" + GetClanRankName(playerRank4)
+
+        if (playerRank4 == udg_ClanRankLeader) then
+            set leader = playerName4
+        endif
+    endif
+
+
+    if (StringLength(playerName5) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName5 + "_" + GetClanRankName(playerRank5)
+
+        if (playerRank5 == udg_ClanRankLeader) then
+            set leader = playerName5
+        endif
+    endif
+
+    if (StringLength(playerName6) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        set members = members + playerName6 + "_" + GetClanRankName(playerRank6)
+
+        if (playerRank6 == udg_ClanRankLeader) then
+            set leader = playerName6
+        endif
+    endif
+
+    call PreloadGenClear()
+    call PreloadGenStart()
+
+    set content = content + AppendFileContent("Code: -loadc " + saveCode)
+    set content = content + AppendFileContent("Name: " + name)
+    set content = content + AppendFileContent("Leader: " + leader)
+    set content = content + AppendFileContent("Members: " + members)
+    set content = content + AppendFileContent("Gold: " + I2S(gold))
+    set content = content + AppendFileContent("Lumber: " + I2S(lumber))
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    // The line below creates the file at the specified location
+    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
+endfunction
+
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer gold, integer lumber, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+    local string result = ""
+
+    //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (isSinglePlayer) then
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
+    else
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(1)
+    endif
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(gold)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(lumber)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName0))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank0)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName1))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank1)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName2))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank2)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName3))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank3)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName4))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank4)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName5))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank5)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName6))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank6)
+
+    // checksum
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
+
+    if (SAVE_CODE_OBFUSCATE) then
+        //call BJDebugMsg("Non-obfuscated save code: " + result)
+        set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(name))
+    endif
+
+    call CreateSaveCodeClanTextFile(isSinglePlayer, name, gold, lumber, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
+
+    return result
+endfunction
+
+function GetSaveCodeClan takes integer clan returns string
+     local string playerName0 = ""
+     local integer playerRank0 = udg_ClanRankMember
+     local string playerName1 = ""
+     local integer playerRank1 = udg_ClanRankMember
+     local string playerName2 = ""
+     local integer playerRank2 = udg_ClanRankMember
+     local string playerName3 = ""
+     local integer playerRank3 = udg_ClanRankMember
+     local string playerName4 = ""
+     local integer playerRank4 = udg_ClanRankMember
+     local string playerName5 = ""
+     local integer playerRank5 = udg_ClanRankMember
+     local string playerName6 = ""
+     local integer playerRank6 = udg_ClanRankMember
+     local integer clanMemberCounter = 0
+     local integer i = 0
+     loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+            if (clanMemberCounter == 0) then
+                set playerName0 = GetPlayerName(Player(i))
+                set playerRank0 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            elseif (clanMemberCounter == 1) then
+                set playerName1 = GetPlayerName(Player(i))
+                set playerRank1 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            elseif (clanMemberCounter == 2) then
+                set playerName2 = GetPlayerName(Player(i))
+                set playerRank2 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            elseif (clanMemberCounter == 3) then
+                set playerName3 = GetPlayerName(Player(i))
+                set playerRank3 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            elseif (clanMemberCounter == 4) then
+                set playerName4 = GetPlayerName(Player(i))
+                set playerRank4 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            elseif (clanMemberCounter == 5) then
+                set playerName5 = GetPlayerName(Player(i))
+                set playerRank5 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            elseif (clanMemberCounter == 6) then
+                set playerName6 = GetPlayerName(Player(i))
+                set playerRank6 = udg_ClanPlayerRank[GetConvertedPlayerId(Player(i))]
+            endif
+            set clanMemberCounter = clanMemberCounter + 1
+        endif
+        set i = i + 1
+    endloop
+
+    return GetSaveCodeClanEx(bj_isSinglePlayer, udg_ClanName[clan], udg_ClanGold[clan], udg_ClanLumber[clan], playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+endfunction
+
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
     return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 2)
 endfunction

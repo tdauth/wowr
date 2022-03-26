@@ -178,6 +178,7 @@ This version provides several new features compared to the original map [World o
 * New item Feed made by the Research Tent which increases the hero level of all bosses.
 * More than one hero can be played by one single player.
 * Reveal neutral buildings for Freelancers from start.
+* Clans.
 
 ## Bug Fixes
 
