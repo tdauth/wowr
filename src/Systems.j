@@ -4481,8 +4481,14 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
 
     set content = content + AppendFileContent("Code: -loadc " + saveCode)
     set content = content + AppendFileContent("Name: " + name)
-    set content = content + AppendFileContent("Icon: " + GetIconByUnitType(icon))
+    set content = content + AppendFileContent("Icon: " + GetObjectName(icon))
     set content = content + AppendFileContent("Leader: " + leader)
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    set content = ""
     set content = content + AppendFileContent("Members: " + members)
     set content = content + AppendFileContent("Gold: " + I2S(gold))
     set content = content + AppendFileContent("Lumber: " + I2S(lumber))
@@ -6492,7 +6498,10 @@ function AddAllHeroAbilities takes unit hero returns nothing
     loop
         exitwhen (i >= max)
         call BJDebugMsg("Adding hero ability " + GetObjectName(GetHeroAbility(GetUnitTypeId(hero), i)))
-        call UnitAddAbility(hero, GetHeroAbility(GetUnitTypeId(hero), i))
+        if (GetUnitAbilityLevel(hero, GetHeroAbility(GetUnitTypeId(hero), i)) <= 0) then
+            call UnitAddAbility(hero, GetHeroAbility(GetUnitTypeId(hero), i))
+            call SetUnitAbilityLevel(hero, GetHeroAbility(GetUnitTypeId(hero), i), 0)
+        endif
         set i = i + 1
     endloop
 endfunction
