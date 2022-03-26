@@ -176,6 +176,37 @@ function GetItemTypePerishable takes integer i returns boolean
     return result
 endfunction
 
+function ClearRucksackItem takes integer index returns nothing
+    set udg_RucksackItemType[index] = 0
+    set udg_RucksackItemCharges[index] = 0
+    set udg_RucksackItemName[index] = ""
+    set udg_RucksackItemDescription[index] = ""
+    set udg_RucksackItemTooltip[index] = ""
+    set udg_RucksackItemTooltipExtended[index] = ""
+endfunction
+
+function SetRucksackItemFromItem takes item whichItem, integer index returns nothing
+    set udg_RucksackItemType[index] = GetItemTypeId(whichItem)
+    set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
+    set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
+    set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(whichItem)
+    set udg_RucksackItemName[index] = GetItemName(whichItem)
+    set udg_RucksackItemDescription[index] = BlzGetItemDescription(whichItem)
+    set udg_RucksackItemTooltip[index] = BlzGetItemTooltip(whichItem)
+    set udg_RucksackItemTooltipExtended[index] = BlzGetItemExtendedTooltip(whichItem)
+endfunction
+
+function ApplyRucksackItem takes item whichItem, integer index returns nothing
+    call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+    call SetItemPawnable(whichItem, udg_RucksackItemPawnable[index])
+    call SetItemDroppable(whichItem, true) // all items must be droppable in the backpack!
+    call SetItemInvulnerable(whichItem, udg_RucksackItemInvulnerable[index])
+    call BlzSetItemName(whichItem, udg_RucksackItemName[index])
+    call BlzSetItemDescription(whichItem, udg_RucksackItemDescription[index])
+    call BlzSetItemTooltip(whichItem, udg_RucksackItemTooltip[index])
+    call BlzSetItemExtendedTooltip(whichItem, udg_RucksackItemTooltipExtended[index])
+endfunction
+
 function BackpackCountItemsOfItemTypeForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
 	local integer I0 = 0
     local integer I1 = 0
@@ -223,8 +254,7 @@ function RemoveAllBackpackItemTypesForPlayer takes integer PlayerNumber, integer
 				endif
             else
 				if (udg_RucksackItemType[index] == itemTypeId) then
-					set udg_RucksackItemType[index] = 0
-					set udg_RucksackItemCharges[index] = 0
+                    call ClearRucksackItem(index)
 					set result = result + 1
 				endif
             endif
@@ -249,15 +279,17 @@ function DropBackpackForPlayer takes integer PlayerNumber, rect whichRect return
             set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             if (udg_RucksackPageNumber[PlayerNumber] == I0) then
                 set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)), GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)))
             else
                 set whichItem = CreateItem(udg_RucksackItemType[index], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-                call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
             endif
 
-            call SetItemPawnable(whichItem, udg_RucksackItemPawnable[index])
-            call SetItemInvulnerable(whichItem, udg_RucksackItemInvulnerable[index])
-            call SetItemDroppable(whichItem, true)
+            call ApplyRucksackItem(whichItem, index)
+
+            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
+                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)))
+            else
+                call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+            endif
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
@@ -322,8 +354,7 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
                     if (udg_RucksackPageNumber[PlayerNumber] == I0) then
                         call RemoveItem(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1))
                     endif
-                    set udg_RucksackItemType[index] = 0
-                    set udg_RucksackItemCharges[index] = 0
+                    call ClearRucksackItem(index)
                     set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
                     call SetItemInvulnerable(whichItem, true)
                     exitwhen (true)
@@ -365,8 +396,7 @@ function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns no
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             //call BJDebugMsg("Clearing item at index " + I2S(index))
-            set udg_RucksackItemType[index] = 0
-            set udg_RucksackItemCharges[index] = 0
+            call ClearRucksackItem(index)
             set I1 = I1 + 1
         endloop
 endfunction
@@ -383,8 +413,7 @@ function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             //call BJDebugMsg("Clearing item at index " + I2S(index))
-            set udg_RucksackItemType[index] = 0
-            set udg_RucksackItemCharges[index] = 0
+            call ClearRucksackItem(index)
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
@@ -405,9 +434,7 @@ function AddItemToBackpackForPlayer takes integer PlayerNumber, item whichItem r
             exitwhen (whichItem == null)
             set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             if (udg_RucksackItemType[index] == 0) then
-                set udg_RucksackItemType[index] = GetItemTypeId(whichItem)
-                set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
-                set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
+                call SetRucksackItemFromItem(whichItem, index)
                 call RemoveItem(whichItem)
                 set whichItem = null
 
@@ -433,6 +460,7 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
     local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
     local integer I0 = 0
     local integer index = 0
+    local item whichItem = null
 	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
 	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
 	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
@@ -444,10 +472,8 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
         if (udg_RucksackItemType[index] != 0) then
             //call BJDebugMsg("Item type " + GetObjectName(udg_RucksackItemType[index]) + " at index " + I2S(index))
             call UnitAddItemToSlotById(udg_Rucksack[PlayerNumber], udg_RucksackItemType[index], I0)
-            call SetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemCharges[index])
-            call SetItemPawnable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemPawnable[index])
-            call SetItemDroppable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), true) // all items must be droppable in the backpack!
-            call SetItemInvulnerable(UnitItemInSlot(udg_Rucksack[PlayerNumber], I0), udg_RucksackItemInvulnerable[index])
+            set whichItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
+            call ApplyRucksackItem(whichItem, index)
         //else
             //call BJDebugMsg("Empty at index " + I2S(index))
         endif
@@ -473,17 +499,13 @@ function ChangeRucksackPageEx takes integer PlayerNumber, integer newRucksackPag
         set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
         set SlotItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
         if (SlotItem != null) then
-            set udg_RucksackItemType[index] = GetItemTypeId(SlotItem)
-            set udg_RucksackItemCharges[index] = GetItemCharges(SlotItem)
-            set udg_RucksackItemPawnable[index] = IsItemPawnable(SlotItem)
-            set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(SlotItem)
+            call SetRucksackItemFromItem(SlotItem, index)
             //call BJDebugMsg("Storing at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
             call RemoveItem(SlotItem)
             set SlotItem = null
         else
             //call BJDebugMsg("Storing empty at index " + I2S(index))
-            set udg_RucksackItemType[index] = 0
-            set udg_RucksackItemCharges[index] = 0
+            call ClearRucksackItem(index)
         endif
         set I0 = I0 + 1
     endloop
@@ -571,10 +593,7 @@ function TriggerFunctionPickupRucksackItem takes nothing returns nothing
         exitwhen (i == bj_MAX_INVENTORY)
         if (UnitItemInSlot(GetTriggerUnit(), i) != null and UnitItemInSlot(GetTriggerUnit(), i) == whichItem) then
             set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            set udg_RucksackItemType[index] = itemTypeId
-            set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
-            set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
-            set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(whichItem)
+            call SetRucksackItemFromItem(whichItem, index)
             //call BJDebugMsg("Picking item up at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
             exitwhen (true)
         endif
@@ -648,13 +667,9 @@ function TriggerFunctionMoveRucksackItem takes nothing returns nothing
         set whichItem = UnitItemInSlot(triggerUnit, i)
         if (whichItem == null) then
             //call BJDebugMsg("Dropping item at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
-            set udg_RucksackItemType[index] = 0
-            set udg_RucksackItemCharges[index] = 0
+            call ClearRucksackItem(index)
         else
-            set udg_RucksackItemType[index] = GetItemTypeId(whichItem)
-            set udg_RucksackItemCharges[index] = GetItemCharges(whichItem)
-            set udg_RucksackItemPawnable[index] = IsItemPawnable(whichItem)
-            set udg_RucksackItemInvulnerable[index] = IsItemInvulnerable(whichItem)
+            call SetRucksackItemFromItem(whichItem, index)
         endif
         set i = i + 1
     endloop
@@ -3061,14 +3076,18 @@ function GetSaveObjectResearchId takes integer number returns integer
     return SaveObjectIdResearch[number]
 endfunction
 
+function DisplaySaveCodeError takes player whichPlayer, string message returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, message)
+endfunction
+
 function DisplaySaveCodeErrorAtLeastOne takes player whichPlayer, boolean atLeastOne returns nothing
     if (not atLeastOne) then
-        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Empty savecode!")
+        call DisplaySaveCodeError(whichPlayer, "Empty savecode!")
     endif
 endfunction
 
 function DisplaySaveCodeErrorLowerResearch takes player whichPlayer, integer techId returns nothing
-    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Not loading research " + GetObjectName(techId) + " since your current level is higher or equal!")
+    call DisplaySaveCodeError(whichPlayer, "Not loading research " + GetObjectName(techId) + " since your current level is higher or equal!")
 endfunction
 
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
@@ -4360,7 +4379,7 @@ function GetClanRankName takes integer rank returns string
     endif
 endfunction
 
-function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
+function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer icon, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string leader = ""
@@ -4462,10 +4481,17 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
 
     set content = content + AppendFileContent("Code: -loadc " + saveCode)
     set content = content + AppendFileContent("Name: " + name)
+    set content = content + AppendFileContent("Icon: " + GetIconByUnitType(icon))
     set content = content + AppendFileContent("Leader: " + leader)
     set content = content + AppendFileContent("Members: " + members)
     set content = content + AppendFileContent("Gold: " + I2S(gold))
     set content = content + AppendFileContent("Lumber: " + I2S(lumber))
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    set content = ""
     set content = content + AppendFileContent("Improved Clan Hall Level: " + I2S(improvedClanHallLevel))
     set content = content + AppendFileContent("Improved Clan Level: " + I2S(improvedClanLevel))
     set content = content + AppendFileContent("")
@@ -4477,7 +4503,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
-function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
     local string result = ""
 
     //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
@@ -4491,6 +4517,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer go
         set result = result + ConvertDecimalNumberToSaveCodeSegment(1)
     endif
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name))
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(icon)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(gold)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(lumber)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanHallLevel)
@@ -4518,7 +4545,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer go
         set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(name))
     endif
 
-    call CreateSaveCodeClanTextFile(isSinglePlayer, name, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
+    call CreateSaveCodeClanTextFile(isSinglePlayer, name, icon, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
 
     return result
 endfunction
@@ -4575,7 +4602,110 @@ function GetSaveCodeClan takes integer clan returns string
         set i = i + 1
     endloop
 
-    return GetSaveCodeClanEx(bj_isSinglePlayer, udg_ClanName[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+    return GetSaveCodeClanEx(bj_isSinglePlayer, udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+endfunction
+
+function ApplySaveCodeClan takes player whichPlayer, string name, string s returns boolean
+    local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local integer isSinglePlayerFlag = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local boolean isSinglePlayer = isSinglePlayerFlag == 0
+    local integer nameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local boolean atLeastOne = false
+    local integer clan = 0
+    local integer i = 0
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and nameHash == CompressedAbsStringHash(name) and isSinglePlayer == IsInSinglePlayer()) then
+        if (playerNameHash == playerNameHash0 or playerNameHash == playerNameHash1 or playerNameHash == playerNameHash2 or playerNameHash == playerNameHash3 or playerNameHash == playerNameHash4 or playerNameHash == playerNameHash5 or playerNameHash == playerNameHash6) then
+            set i = 1
+            loop
+                exitwhen (i > udg_ClanCounter)
+                if (StringLength(udg_ClanName[i]) > 0 and udg_ClanName[i] == name) then
+                    set clan = i
+                endif
+                set i = i + 1
+            endloop
+
+            if (clan == 0) then
+                set udg_ClanName[udg_ClanCounter] = name
+                set udg_ClanGold[udg_ClanCounter] = gold
+                set udg_ClanLumber[udg_ClanCounter] = lumber
+                set udg_ClanCounter = udg_ClanCounter + 1
+
+            endif
+
+            set i = 0
+            loop
+                exitwhen (i == bj_MAX_PLAYERS)
+
+                if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
+                    set atLeastOne = true
+                    if (not IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+                        call ForceAddPlayer(udg_ClanPlayers[clan], Player(i))
+                    endif
+                    set udg_ClanPlayerClan[i + 1] = clan
+                    call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
+                    call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
+                endif
+
+                if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank0
+                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank1
+                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank2
+                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank3
+                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank4
+                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank5
+                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
+                    set udg_ClanPlayerRank[i + 1] = playerRank6
+                endif
+                set i = i + 1
+            endloop
+
+            call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+            return atLeastOne
+        else
+            call DisplaySaveCodeError(whichPlayer, "You are not a member of this clan!")
+        endif
+    endif
+
+    return false
 endfunction
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
@@ -4701,6 +4831,10 @@ function GetSaveCodeHumanUpgrades takes player whichPlayer, string playerName, b
     return result
 endfunction
 
+function GetSaveCodeStrongClan takes boolean singlePlayer, string playerName returns string
+    return GetSaveCodeClanEx(singlePlayer, "StrongClan", 'I04S', 100000, 100000, 100, 100, playerName, udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "Toasty", udg_ClanRankCaptain, "", 0, "", 0, "", 0, "", 0)
+endfunction
+
 function GenerateSaveCodes takes player whichPlayer returns nothing
     local integer playerNameSize = 2
     local string array playerName
@@ -4717,14 +4851,15 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
     set singlePlayer[1] = false
     set warlord[0] = true
     set warlord[1] = false
+    set i = 0
     loop
-        exitwhen (i == playerNameSize)
+        exitwhen (i >= playerNameSize)
         set j = 0
         loop
-            exitwhen (j == singlePlayerSize)
+            exitwhen (j >= singlePlayerSize)
             set k = 0
             loop
-                exitwhen (k == warlordSize)
+                exitwhen (k >= warlordSize)
                 call GetSaveCodeStrong(playerName[i], singlePlayer[j], warlord[k])
                 call GetSaveCodeNormal(playerName[i], singlePlayer[j], warlord[k])
                 call GetSaveCodeBase(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
@@ -4733,6 +4868,7 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
                 call GetSaveCodeHumanUpgrades(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
                 set k = k  + 1
             endloop
+            call GetSaveCodeStrongClan(singlePlayer[j], playerName[i])
             set j = j + 1
         endloop
         set i = i + 1
@@ -6319,6 +6455,7 @@ function RemoveHeroAbility takes unit hero, integer abilityId returns boolean
     if (index < 1) then
         call BJDebugMsg("Invalid ability index " + I2S(index) + " for hero ability " + GetObjectName(abilityId) + " for unit type " + GetObjectName(GetUnitTypeId(hero)))
     endif
+    call BJDebugMsg("Removing hero ability " + GetObjectName(abilityId) + " by adding " + I2S(diff) + " skill points and skilling the ability to its max level which currently has level " + I2S(level) + " (readded as skill points) to remove it.")
     // TODO Do we need to increase the hero level as well for skip requirements? We will have to disable ALL triggers which react to a gain level event!
     if (diff > 0) then
         call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_ADD, diff)
@@ -6329,6 +6466,11 @@ function RemoveHeroAbility takes unit hero, integer abilityId returns boolean
             set i = i + 1
         endloop
         call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_SET, skillPoints)
+    endif
+
+    // give all skill points back
+    if (level > 0) then
+        call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_ADD, level)
     endif
 
     return UnitRemoveAbility(hero, abilityId)
@@ -6349,6 +6491,7 @@ function AddAllHeroAbilities takes unit hero returns nothing
     local integer i = 1
     loop
         exitwhen (i >= max)
+        call BJDebugMsg("Adding hero ability " + GetObjectName(GetHeroAbility(GetUnitTypeId(hero), i)))
         call UnitAddAbility(hero, GetHeroAbility(GetUnitTypeId(hero), i))
         set i = i + 1
     endloop
@@ -6446,4 +6589,25 @@ endfunction
 
 function DisableOrderDebugger takes nothing returns nothing
     call DisableTrigger(orderTrigger)
+endfunction
+
+function StringToken takes string source, integer index returns string
+    local string result = ""
+    local boolean inWhitespace = false
+    local integer currentIndex = 0
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(source) or currentIndex > index)
+        if (SubString(source, i, i + 1) == " ") then
+            if (not inWhitespace) then
+                set inWhitespace = true
+                set currentIndex = currentIndex + 1
+            endif
+        elseif (currentIndex == index) then
+            set result = result + SubString(source, i, i + 1)
+        endif
+        set i = i + 1
+    endloop
+
+    return result
 endfunction

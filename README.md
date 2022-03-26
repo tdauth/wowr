@@ -179,6 +179,8 @@ This version provides several new features compared to the original map [World o
 * More than one hero can be played by one single player.
 * Reveal neutral buildings for Freelancers from start.
 * Clans.
+* Bounties.
+* Goblin Bank.
 
 ## Bug Fixes
 
