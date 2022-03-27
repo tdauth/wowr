@@ -4512,6 +4512,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenStart()
 
     set content = content + AppendFileContent("Code: -loadc " + saveCode + " " + name)
+    set content = content + AppendFileContent("Singleplayer: " + singleplayer)
     set content = content + AppendFileContent("Name: " + name)
     set content = content + AppendFileContent("Icon: " + GetObjectName(icon))
     set content = content + AppendFileContent("Leader: " + leader)
