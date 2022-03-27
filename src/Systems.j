@@ -1822,9 +1822,39 @@ function IsBuildingAllRaces takes integer buildingID returns boolean
         return true
     elseif (buildingID == 'h021') then // Gate horizontal open
         return true
+    elseif (buildingID == 'nft1') then // Flame Tower
+        return true
+    elseif (buildingID == 'nft2') then // Advanced Flame Tower
+        return true
+    elseif (buildingID == 'ndt1') then // Cold Tower
+        return true
+    elseif (buildingID == 'ndt2') then // Advanced Cold Tower
+        return true
+    elseif (buildingID == 'ntt1') then // Death Tower
+        return true
+    elseif (buildingID == 'ntx2') then // Advanced Death Tower
+        return true
     endif
 
     return false
+endfunction
+
+function MapAllRacesBuildingIDToItemID takes integer buildingID returns integer
+    if (buildingID == 'nft1') then // Flame Tower
+        return 'I00T'
+    elseif (buildingID == 'nft2') then // Advanced Flame Tower
+        return 'I00T'
+    elseif (buildingID == 'ndt1') then // Cold Tower
+        return 'I00U'
+    elseif (buildingID == 'ndt2') then // Advanced Cold Tower
+        return 'I00U'
+     elseif (buildingID == 'ntt1') then // Death Tower
+        return 'I00S'
+    elseif (buildingID == 'ntx2') then // Advanced Death Tower
+        return 'I00S'
+    endif
+
+    return 0
 endfunction
 
 function GetItemRace takes integer itemID returns integer
@@ -1847,7 +1877,9 @@ endfunction
 function MapBuildingIDToItemID takes integer buildingID, integer targetRace returns integer
     local integer raceType = GetObjectRaceType(buildingID)
 
-    if (raceType == RACE_OBJECT_TYPE_TIER_1) then
+    if (IsBuildingAllRaces(buildingID)) then
+        return MapAllRacesBuildingIDToItemID(buildingID)
+    elseif (raceType == RACE_OBJECT_TYPE_TIER_1) then
         return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
     elseif (raceType == RACE_OBJECT_TYPE_TIER_2) then
         return GetRaceObjectType(targetRace, RACE_OBJECT_TYPE_TIER_2_ITEM)
@@ -1893,10 +1925,10 @@ function WrapUpAllBuildings takes player whichPlayer, real x, real y returns int
         exitwhen (first == null)
         set remove = false
         set targetRace = GetBuildingRace(GetUnitTypeId(first))
-        call BJDebugMsg("Building " + GetUnitName(first) + " has target race " + I2S(targetRace))
-        if (targetRace != udg_RaceNone) then
+        //call BJDebugMsg("Building " + GetUnitName(first) + " has target race " + I2S(targetRace))
+        if (targetRace != udg_RaceNone or IsBuildingAllRaces(GetUnitTypeId(first))) then
             set itemTypeId = MapBuildingIDToItemID(GetUnitTypeId(first), targetRace)
-            call BJDebugMsg("Building " + GetUnitName(first) + " has target item type " + GetObjectName(itemTypeId))
+            //call BJDebugMsg("Building " + GetUnitName(first) + " has target item type " + GetObjectName(itemTypeId))
             if (itemTypeId != 0) then
                 set whichItem = CreateItem(itemTypeId, x, y)
                 call SetItemCharges(whichItem, MapBuildingNumber(GetUnitTypeId(first), targetRace))
