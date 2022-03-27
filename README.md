@@ -149,7 +149,7 @@ This version provides several new features compared to the original map [World o
 * New island with Spider Crab Behemoth on the sea.
 * Chat command "-wrapup" which converts your buildings into tiny items.
 * Chat command "-passive" which enables passive mode against enemy players.
-* New island Kezan with boss Rumblefitz.
+* New island Kezan with bosses Rumblefitz and Tinkerer Gizlock.
 * New race Goblins.
 * Chat command "-racerepick" to repick your first race as Warlord.
 * New building Research Tent for all races.
