@@ -4714,6 +4714,93 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
     return false
 endfunction
 
+function GetClanPlayerName takes integer playerNameHash returns string
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash) then
+            return GetPlayerName(Player(i))
+        endif
+        set i = i + 1
+    endloop
+
+    return "Unknown"
+endfunction
+
+function GetSaveCodeInfosClan takes string name, string s returns string
+    local string result = ""
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local integer isSinglePlayerFlag = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local boolean isSinglePlayer = isSinglePlayerFlag == 0
+    local string singlePlayerStatus = "Multiplayer"
+    local integer nameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string checksumStatus = "Valid"
+    local boolean atLeastOne = false
+    local integer clan = 0
+    local integer i = 0
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "Singleplayer"
+    endif
+
+    set result = AppendSaveCodeInfo(result, "Checksum: " + checksumStatus)
+    set result = AppendSaveCodeInfo(result, "Game: " + singlePlayerStatus)
+    set result = AppendSaveCodeInfo(result, "Name: " + name)
+    set result = AppendSaveCodeInfo(result, "Gold: " + I2S(gold))
+    set result = AppendSaveCodeInfo(result, "Lumber: " + I2S(lumber))
+    set result = AppendSaveCodeInfo(result, "Improved Clan Hall: " + I2S(improvedClanHallLevel))
+    set result = AppendSaveCodeInfo(result, "Improved Clan: " + I2S(improvedClanLevel))
+    set result = AppendSaveCodeInfo(result, "Player 1 Name: " + GetClanPlayerName(playerNameHash0))
+    set result = AppendSaveCodeInfo(result, "Player 1 Rank: " + GetClanRankName(playerRank0))
+    set result = AppendSaveCodeInfo(result, "Player 2 Name: " + GetClanPlayerName(playerNameHash1))
+    set result = AppendSaveCodeInfo(result, "Player 2 Rank: " + GetClanRankName(playerRank1))
+    set result = AppendSaveCodeInfo(result, "Player 3 Name: " + GetClanPlayerName(playerNameHash2))
+    set result = AppendSaveCodeInfo(result, "Player 3 Rank: " + GetClanRankName(playerRank2))
+    set result = AppendSaveCodeInfo(result, "Player 4 Name: " + GetClanPlayerName(playerNameHash3))
+    set result = AppendSaveCodeInfo(result, "Player 4 Rank: " + GetClanRankName(playerRank3))
+    set result = AppendSaveCodeInfo(result, "Player 5 Name: " + GetClanPlayerName(playerNameHash4))
+    set result = AppendSaveCodeInfo(result, "Player 5 Rank: " + GetClanRankName(playerRank4))
+    set result = AppendSaveCodeInfo(result, "Player 6 Name: " + GetClanPlayerName(playerNameHash5))
+    set result = AppendSaveCodeInfo(result, "Player 6 Rank: " + GetClanRankName(playerRank5))
+
+    return result
+endfunction
+
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
     return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 2)
 endfunction
@@ -4753,11 +4840,9 @@ function GetSaveCodeBase takes player whichPlayer, string playerName, boolean si
     return result
 endfunction
 
-function GetSaveCodeDragonUnits takes player whichPlayer, string playerName, boolean singlePlayer, boolean warlord returns string
+function CreateAllDragons takes player whichPlayer returns group
     local location tmpLocation = Location(0.0, 0.0)
     local group allDragons = CreateGroup()
-    local group allDragonsDistinct
-    local string result
     call GroupAddGroup(CreateNUnitsAtLoc(10, 'nrwm', whichPlayer, tmpLocation, 0.0), allDragons)
     call GroupAddGroup(CreateNUnitsAtLoc(10, 'ngrd', whichPlayer, tmpLocation, 0.0), allDragons)
     call GroupAddGroup(CreateNUnitsAtLoc(10, 'nbwm', whichPlayer, tmpLocation, 0.0), allDragons)
@@ -4765,9 +4850,17 @@ function GetSaveCodeDragonUnits takes player whichPlayer, string playerName, boo
     call GroupAddGroup(CreateNUnitsAtLoc(10, 'nbzd', whichPlayer, tmpLocation, 0.0), allDragons)
     call GroupAddGroup(CreateNUnitsAtLoc(10, 'nndr', whichPlayer, tmpLocation, 0.0), allDragons)
 
-    set allDragonsDistinct = DistinctGroup(allDragons)
+    call RemoveLocation(tmpLocation)
+    set tmpLocation = null
 
-    set result = GetSaveCodeUnitsEx2(playerName, singlePlayer, warlord, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
+    return allDragons
+endfunction
+
+function GetSaveCodeDragonUnits takes player whichPlayer, string playerName, boolean singlePlayer, boolean warlord returns string
+    local location tmpLocation = Location(0.0, 0.0)
+    local group allDragons = CreateAllDragons(whichPlayer)
+    local group allDragonsDistinct = DistinctGroup(allDragons)
+    local string result = GetSaveCodeUnitsEx2(playerName, singlePlayer, warlord, udg_GameTypeNormal, 100, whichPlayer, allDragonsDistinct)
 
     call ForGroupBJ(allDragons, function ForGroupRemoveUnit)
 
@@ -4863,6 +4956,7 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
         set j = 0
         loop
             exitwhen (j >= singlePlayerSize)
+            call GetSaveCodeStrongClan(singlePlayer[j], playerName[i])
             set k = 0
             loop
                 exitwhen (k >= warlordSize)
@@ -4874,7 +4968,6 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
                 call GetSaveCodeHumanUpgrades(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
                 set k = k  + 1
             endloop
-            call GetSaveCodeStrongClan(singlePlayer[j], playerName[i])
             set j = j + 1
         endloop
         set i = i + 1
@@ -5313,6 +5406,17 @@ globals
     trigger array SaveCodeUILoadTriggerBuildings
     trigger array SaveCodeUIEnterTriggerBuildings
 
+
+    // line 6: clan savecode
+    framehandle array SaveCodeUILabelFrameClan
+    framehandle array SaveCodeUIEditBoxClan
+    trigger array SaveCodeUITriggerEditBoxClan
+    framehandle array SaveCodeUIUpdateButtonFrameClan
+    trigger array SaveCodeUIUpdateTriggerClan
+    framehandle array SaveCodeUILoadButtonFrameClan
+    trigger array SaveCodeUILoadTriggerClan
+    trigger array SaveCodeUIEnterTriggerClan
+
     // end line: all save codes
     framehandle array SaveCodeUILabelFrameAll
     framehandle array SaveCodeUIWriteAutoButtonFrameAll
@@ -5349,6 +5453,27 @@ function StringRemoveFromStart takes string source, string start returns string
     endif
 
     return source
+endfunction
+
+function StringToken takes string source, integer index returns string
+    local string result = ""
+    local boolean inWhitespace = false
+    local integer currentIndex = 0
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(source) or currentIndex > index)
+        if (SubString(source, i, i + 1) == " ") then
+            if (not inWhitespace) then
+                set inWhitespace = true
+                set currentIndex = currentIndex + 1
+            endif
+        elseif (currentIndex == index) then
+            set result = result + SubString(source, i, i + 1)
+        endif
+        set i = i + 1
+    endloop
+
+    return result
 endfunction
 
 function SetSaveCodeUITooltip takes player whichPlayer, string tooltip returns nothing
@@ -5484,12 +5609,49 @@ function SetSaveCodeUITooltipBuildingsSaveCodeInfo takes player whichPlayer retu
     call SetSaveCodeUITooltip(whichPlayer, "Buildings:|n" + GetSaveCodeInfosBuildings(whichPlayer, saveCode))
 endfunction
 
+function FormattedSaveCodeClan takes string saveCode returns string
+    if (StringStartsWith(saveCode, "-loadc ")) then
+        return StringToken(saveCode, 1)
+    endif
+
+    return StringToken(saveCode, 0)
+endfunction
+
+function FormattedSaveCodeClanName takes string saveCode returns string
+    if (StringStartsWith(saveCode, "-loadc ")) then
+        return StringToken(saveCode, 2)
+    endif
+
+    return StringToken(saveCode, 1)
+endfunction
+
+function SetSaveCodeUIClanText takes player whichPlayer, string txt returns nothing
+    call BlzFrameSetText(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], txt)
+endfunction
+
+function GetSaveCodeUIClanText takes player whichPlayer returns string
+    return BlzFrameGetText(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)])
+endfunction
+
+function UpdateSaveCodeUIClanText takes player whichPlayer returns nothing
+    if (udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)] > 0) then
+        call SetSaveCodeUIClanText(whichPlayer, "-loadc " + GetSaveCodeClan(udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]))
+    endif
+endfunction
+
+function SetSaveCodeUITooltipClanSaveCodeInfo takes player whichPlayer returns nothing
+    local string saveCode = FormattedSaveCodeClan(GetSaveCodeUIClanText(whichPlayer))
+    local string clanName = FormattedSaveCodeClanName(GetSaveCodeUIClanText(whichPlayer))
+    call SetSaveCodeUITooltip(whichPlayer, "Clan:|n" + GetSaveCodeInfosClan(clanName, saveCode))
+endfunction
+
 function SaveCodeUIUpdateAll takes player whichPlayer returns nothing
     call UpdateSaveCodeUIHeroesText(whichPlayer)
     call UpdateSaveCodeUIItemsText(whichPlayer)
     call UpdateSaveCodeUIUnitsText(whichPlayer)
     call UpdateSaveCodeUIResearchesText(whichPlayer)
     call UpdateSaveCodeUIBuildingsText(whichPlayer)
+    call UpdateSaveCodeUIClanText(whichPlayer)
 endfunction
 
 function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns nothing
@@ -5523,6 +5685,11 @@ function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns 
         call BlzFrameSetVisible(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], visible)
+        // clan
+        call BlzFrameSetVisible(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], visible)
         // all
         call BlzFrameSetVisible(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], visible)
         //call BlzFrameSetVisible(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], visible)
@@ -5709,6 +5876,41 @@ function SaveCodeUILoadFunctionBuildings takes nothing returns nothing
     call SaveCodeUILoadBuildings(GetTriggerPlayer())
 endfunction
 
+function SaveCodeUIEditBoxEnterClan takes player whichPlayer returns nothing
+    call SetSaveCodeUITooltipClanSaveCodeInfo(whichPlayer)
+endfunction
+
+function SaveCodeEnterFunctionClan takes nothing returns nothing
+    call SaveCodeUIEditBoxEnterClan(GetTriggerPlayer())
+endfunction
+
+function SaveCodeUIUpdateFunctionClan takes nothing returns nothing
+    //call BJDebugMsg("Click update buildings")
+    call UpdateSaveCodeUIClanText(GetTriggerPlayer())
+    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Updated savecode for clan.")
+endfunction
+
+function SaveCodeUILoadClan takes player whichPlayer returns nothing
+    local string saveCode = FormattedSaveCodeClan(GetSaveCodeUIClanText(whichPlayer))
+    local string clanName = FormattedSaveCodeClanName(GetSaveCodeUIClanText(whichPlayer))
+    //call BJDebugMsg("Click load buildings")
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeClan(whichPlayer, clanName, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load clan savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUILoadFunctionClan takes nothing returns nothing
+    call SaveCodeUILoadClan(GetTriggerPlayer())
+endfunction
+
 function SaveCodeUILoadAutoFunctionAll takes nothing returns nothing
     //call BJDebugMsg("Click load auto")
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to load auto savecodes.")
@@ -5734,6 +5936,7 @@ function SaveCodeUILoadFunctionAll takes nothing returns nothing
     call SaveCodeUILoadUnits(GetTriggerPlayer())
     call SaveCodeUILoadResearches(GetTriggerPlayer())
     call SaveCodeUILoadBuildings(GetTriggerPlayer())
+    call SaveCodeUILoadClan(GetTriggerPlayer())
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to load all savecodes.")
 endfunction
 
@@ -6003,6 +6206,52 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerBuildings[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(SaveCodeUILoadTriggerBuildings[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionBuildings)
 
+    // line 5: clan
+    set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
+
+    set SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelClan" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], "|cffFFCC00Clan:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], true)
+
+    set SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], "-loadc xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], true)
+
+    set SaveCodeUITriggerEditBoxClan[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxClan[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionClan)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxClan[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+
+    set SaveCodeUIEnterTriggerClan[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerClan[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerClan[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionClan)
+
+    set SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUIUpdateTriggerClan[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerClan[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerClan[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionClan)
+
+    set SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], 1.00)
+
+    set SaveCodeUILoadTriggerClan[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerClan[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerClan[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionClan)
+
 
     // final line: all
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
@@ -6106,6 +6355,11 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], false)
+    // clan
+    call BlzFrameSetVisible(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], false)
     // all
     call BlzFrameSetVisible(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], false)
@@ -6598,25 +6852,4 @@ endfunction
 
 function DisableOrderDebugger takes nothing returns nothing
     call DisableTrigger(orderTrigger)
-endfunction
-
-function StringToken takes string source, integer index returns string
-    local string result = ""
-    local boolean inWhitespace = false
-    local integer currentIndex = 0
-    local integer i = 0
-    loop
-        exitwhen (i == StringLength(source) or currentIndex > index)
-        if (SubString(source, i, i + 1) == " ") then
-            if (not inWhitespace) then
-                set inWhitespace = true
-                set currentIndex = currentIndex + 1
-            endif
-        elseif (currentIndex == index) then
-            set result = result + SubString(source, i, i + 1)
-        endif
-        set i = i + 1
-    endloop
-
-    return result
 endfunction
