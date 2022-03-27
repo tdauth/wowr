@@ -4640,7 +4640,7 @@ function GetSaveCodeClan takes integer clan returns string
         set i = i + 1
     endloop
 
-    return GetSaveCodeClanEx(bj_isSinglePlayer, udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
 endfunction
 
 function ApplySaveCodeClan takes player whichPlayer, string name, string s returns boolean
