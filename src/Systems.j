@@ -4511,7 +4511,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenClear()
     call PreloadGenStart()
 
-    set content = content + AppendFileContent("Code: -loadc " + saveCode)
+    set content = content + AppendFileContent("Code: -loadc " + saveCode + " " + name)
     set content = content + AppendFileContent("Name: " + name)
     set content = content + AppendFileContent("Icon: " + GetObjectName(icon))
     set content = content + AppendFileContent("Leader: " + leader)
@@ -4661,12 +4661,12 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
     local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
     local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
     local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
-    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
-    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
-    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
-    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -5668,14 +5668,19 @@ endfunction
 
 function UpdateSaveCodeUIClanText takes player whichPlayer returns nothing
     if (udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)] > 0) then
-        call SetSaveCodeUIClanText(whichPlayer, "-loadc " + GetSaveCodeClan(udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]))
+        call SetSaveCodeUIClanText(whichPlayer, "-loadc " + GetSaveCodeClan(udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]) + " " + udg_ClanName[udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]])
     endif
 endfunction
 
 function SetSaveCodeUITooltipClanSaveCodeInfo takes player whichPlayer returns nothing
     local string saveCode = FormattedSaveCodeClan(GetSaveCodeUIClanText(whichPlayer))
     local string clanName = FormattedSaveCodeClanName(GetSaveCodeUIClanText(whichPlayer))
-    call SetSaveCodeUITooltip(whichPlayer, "Clan:|n" + GetSaveCodeInfosClan(clanName, saveCode))
+    call BJDebugMsg("Clan name: " + clanName)
+    if (StringLength(clanName) > 0) then
+        call SetSaveCodeUITooltip(whichPlayer, "Clan:|n" + GetSaveCodeInfosClan(clanName, saveCode))
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "Missing clan name! Enter \"-loadc XXX <Clan Name>\"")
+    endif
 endfunction
 
 function SaveCodeUIUpdateAll takes player whichPlayer returns nothing
