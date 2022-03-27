@@ -4750,7 +4750,7 @@ function GetClanPlayerName takes integer playerNameHash returns string
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
-        if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash) then
+        if (StringLength(GetPlayerName(Player(i))) > 0 and CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash) then
             return GetPlayerName(Player(i))
         endif
         set i = i + 1
@@ -5499,8 +5499,10 @@ function StringToken takes string source, integer index returns string
                 set inWhitespace = true
                 set currentIndex = currentIndex + 1
             endif
-        elseif (currentIndex == index) then
-            set result = result + SubString(source, i, i + 1)
+        else
+            if (currentIndex == index) then
+                set result = result + SubString(source, i, i + 1)
+            endif
             set inWhitespace = false
         endif
         set i = i + 1
@@ -5675,7 +5677,7 @@ endfunction
 function SetSaveCodeUITooltipClanSaveCodeInfo takes player whichPlayer returns nothing
     local string saveCode = FormattedSaveCodeClan(GetSaveCodeUIClanText(whichPlayer))
     local string clanName = FormattedSaveCodeClanName(GetSaveCodeUIClanText(whichPlayer))
-    call BJDebugMsg("Clan name: " + clanName)
+    //call BJDebugMsg("Clan name: " + clanName)
     if (StringLength(clanName) > 0) then
         call SetSaveCodeUITooltip(whichPlayer, "Clan:|n" + GetSaveCodeInfosClan(clanName, saveCode))
     else
