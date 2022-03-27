@@ -5469,6 +5469,7 @@ function StringToken takes string source, integer index returns string
             endif
         elseif (currentIndex == index) then
             set result = result + SubString(source, i, i + 1)
+            set inWhitespace = false
         endif
         set i = i + 1
     endloop
