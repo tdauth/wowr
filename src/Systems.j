@@ -1818,6 +1818,8 @@ function IsBuildingAllRaces takes integer buildingID returns boolean
         return true
     elseif (buildingID == 'h00M') then // Temple of Light
         return true
+    elseif (buildingID == 'h02M') then // Clan Hall
+        return true
     elseif (buildingID == 'h020') then // Gate horizontal closed
         return true
     elseif (buildingID == 'h021') then // Gate horizontal open
@@ -1840,7 +1842,9 @@ function IsBuildingAllRaces takes integer buildingID returns boolean
 endfunction
 
 function MapAllRacesBuildingIDToItemID takes integer buildingID returns integer
-    if (buildingID == 'nft1') then // Flame Tower
+    if (buildingID == 'h02M') then // Clan Hall
+        return 'I04I'
+    elseif (buildingID == 'nft1') then // Flame Tower
         return 'I00T'
     elseif (buildingID == 'nft2') then // Advanced Flame Tower
         return 'I00T'
@@ -4399,7 +4403,39 @@ globals
 
     constant integer UPG_IMPROVED_CLAN_HALL = 'R03C'
     constant integer UPG_IMPROVED_CLAN = 'R03B'
+
+    sound array clanSound
+    string array clanSoundFilePath
+    integer clanSoundIndex = 0
 endglobals
+
+function AddClanSoundEx takes sound whichSound, string soundPath returns integer
+    set clanSoundIndex = clanSoundIndex + 1
+    set clanSound[clanSoundIndex] = whichSound
+    set clanSoundFilePath[clanSoundIndex] = soundPath
+
+    return clanSoundIndex
+endfunction
+
+function AddClanSound takes nothing returns integer
+    return AddClanSoundEx(udg_TmpSound, udg_TmpString)
+endfunction
+
+function GetClanSoundIndex takes sound whichSound returns integer
+    local integer i = 0
+    loop
+        exitwhen (i > clanSoundIndex)
+        if (clanSound[i] == whichSound) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return 0
+endfunction
+
+function GetClanSoundName takes integer whichSound returns string
+    return clanSoundFilePath[whichSound]
+endfunction
 
 function GetClanRankName takes integer rank returns string
     if (rank == udg_ClanRankLeader) then
@@ -4411,7 +4447,7 @@ function GetClanRankName takes integer rank returns string
     endif
 endfunction
 
-function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer icon, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
+function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer icon, integer clanSoundIndex, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string leader = ""
@@ -4515,6 +4551,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     set content = content + AppendFileContent("Singleplayer: " + singleplayer)
     set content = content + AppendFileContent("Name: " + name)
     set content = content + AppendFileContent("Icon: " + GetObjectName(icon))
+    set content = content + AppendFileContent("Sound: " + GetClanSoundName(clanSoundIndex))
     set content = content + AppendFileContent("Leader: " + leader)
     set content = content + AppendFileContent("")
 
@@ -4542,8 +4579,9 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
-function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, sound whichSound, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
     local string result = ""
+    local integer clanSoundIndex = GetClanSoundIndex(whichSound)
 
     //call BJDebugMsg("Size of units: " + I2S(CountUnitsInGroup(units)))
 
@@ -4557,6 +4595,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
     endif
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name))
     set result = result + ConvertDecimalNumberToSaveCodeSegment(icon)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(clanSoundIndex)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(gold)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(lumber)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanHallLevel)
@@ -4584,7 +4623,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
         set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(name))
     endif
 
-    call CreateSaveCodeClanTextFile(isSinglePlayer, name, icon, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
+    call CreateSaveCodeClanTextFile(isSinglePlayer, name, icon, clanSoundIndex, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
 
     return result
 endfunction
@@ -4641,7 +4680,7 @@ function GetSaveCodeClan takes integer clan returns string
         set i = i + 1
     endloop
 
-    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanSound[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
 endfunction
 
 function ApplySaveCodeClan takes player whichPlayer, string name, string s returns boolean
@@ -4650,24 +4689,26 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
     local integer isSinglePlayerFlag = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local boolean isSinglePlayer = isSinglePlayerFlag == 0
     local integer nameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
-    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
-    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
-    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
-    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
-    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
-    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
-    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
-    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
-    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
-    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
-    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
-    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
-    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
-    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
-    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
-    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
-    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer icon = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer clanSoundIndex = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4698,10 +4739,11 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
 
             if (clan == 0) then
                 set udg_ClanName[udg_ClanCounter] = name
+                set udg_ClanIcon[udg_ClanCounter] = icon
+                set udg_ClanSound[udg_ClanCounter] = clanSound[clanSoundIndex]
                 set udg_ClanGold[udg_ClanCounter] = gold
                 set udg_ClanLumber[udg_ClanCounter] = lumber
                 set udg_ClanCounter = udg_ClanCounter + 1
-
             endif
 
             set i = 0
@@ -4767,24 +4809,26 @@ function GetSaveCodeInfosClan takes string name, string s returns string
     local boolean isSinglePlayer = isSinglePlayerFlag == 0
     local string singlePlayerStatus = "Multiplayer"
     local integer nameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
-    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
-    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
-    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
-    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
-    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
-    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
-    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
-    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
-    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
-    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
-    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
-    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
-    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
-    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
-    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
-    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer icon = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer clanSoundIndex = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4814,6 +4858,8 @@ function GetSaveCodeInfosClan takes string name, string s returns string
     set result = AppendSaveCodeInfo(result, "Checksum: " + checksumStatus)
     set result = AppendSaveCodeInfo(result, "Game: " + singlePlayerStatus)
     set result = AppendSaveCodeInfo(result, "Name: " + name)
+    set result = AppendSaveCodeInfo(result, "Icon: " + GetObjectName(icon))
+    set result = AppendSaveCodeInfo(result, "Sound: " + GetClanSoundName(clanSoundIndex))
     set result = AppendSaveCodeInfo(result, "Gold: " + I2S(gold))
     set result = AppendSaveCodeInfo(result, "Lumber: " + I2S(lumber))
     set result = AppendSaveCodeInfo(result, "Improved Clan Hall: " + I2S(improvedClanHallLevel))
@@ -4964,7 +5010,7 @@ function GetSaveCodeHumanUpgrades takes player whichPlayer, string playerName, b
 endfunction
 
 function GetSaveCodeStrongClan takes boolean singlePlayer, string playerName returns string
-    return GetSaveCodeClanEx(singlePlayer, "StrongClan", 'I04S', 100000, 100000, 100, 100, playerName, udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "Toasty", udg_ClanRankCaptain, "", 0, "", 0, "", 0, "", 0)
+    return GetSaveCodeClanEx(singlePlayer, "StrongClan", 'I04S', clanSound[1], 100000, 100000, 100, 100, playerName, udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "Toasty", udg_ClanRankCaptain, "", 0, "", 0, "", 0, "", 0)
 endfunction
 
 function GenerateSaveCodes takes player whichPlayer returns nothing
