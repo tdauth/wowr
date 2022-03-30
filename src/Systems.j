@@ -2247,6 +2247,30 @@ function AppendFileContent takes string content returns string
     return "\r\n\t\t\t\t" + content
 endfunction
 
+globals
+    // store all generated save codes during a game to prevent loading them immediately and duplicating stuff
+    string array generatedSaveCodes
+    integer generatedSaveCodesCounter = 0
+endglobals
+
+function AddGeneratedSaveCode takes string saveCode returns integer
+    set generatedSaveCodes[generatedSaveCodesCounter] = saveCode
+    set generatedSaveCodesCounter = generatedSaveCodesCounter + 1
+    return generatedSaveCodesCounter
+endfunction
+
+function IsGeneratedSaveCode takes string saveCode returns boolean
+    local integer i = 0
+    loop
+        exitwhen (i >= generatedSaveCodesCounter)
+        if (saveCode == generatedSaveCodes[i]) then
+            return false
+        endif
+        set i = i + 1
+    endloop
+    return false
+endfunction
+
 function ConvertSaveCodeDemigodValueToInfo takes integer value returns string
     if (value == 1) then
         return "Light Demigod"
@@ -2440,6 +2464,8 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
 
     call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, demigodValue, result)
 
+    call AddGeneratedSaveCode(result)
+
     return result
 endfunction
 
@@ -2526,6 +2552,26 @@ function SetPlayerTechResearchedIfHigher takes player whichPlayer, integer techI
 
     return false
 endfunction
+
+
+function DisplaySaveCodeError takes player whichPlayer, string message returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, message)
+endfunction
+
+function DisplaySaveCodeErrorAtLeastOne takes player whichPlayer, boolean atLeastOne returns nothing
+    if (not atLeastOne) then
+        call DisplaySaveCodeError(whichPlayer, "Empty savecode!")
+    endif
+endfunction
+
+function DisplaySaveCodeErrorLowerResearch takes player whichPlayer, integer techId returns nothing
+    call DisplaySaveCodeError(whichPlayer, "Not loading research " + GetObjectName(techId) + " since your current level is higher or equal!")
+endfunction
+
+function DisplaySaveCodeErrorSameGame takes player whichPlayer returns nothing
+    call DisplaySaveCodeError(whichPlayer, "Savecode from the same game!")
+endfunction
+
 
 function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
@@ -2637,51 +2683,55 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
-        call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+            call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
 
-        if (demigodValue == 1) then
-            set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
-            call TriggerExecute(gg_trg_Become_Demigod_Light)
-        elseif (demigodValue == 2) then
-            set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
-            call TriggerExecute(gg_trg_Become_Demigod_Dark)
+            if (demigodValue == 1) then
+                set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                call TriggerExecute(gg_trg_Become_Demigod_Light)
+            elseif (demigodValue == 2) then
+                set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                call TriggerExecute(gg_trg_Become_Demigod_Dark)
+            endif
+
+            call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
+            call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_NAVY, improvedNavyLevel)
+
+            set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
+            set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
+            set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
+            set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
+            set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
+            set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
+
+            if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
+                call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
+            endif
+
+            if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
+                set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
+            endif
+
+            if (udg_Held3[GetConvertedPlayerId(whichPlayer)] != null and xp3 > GetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)])) then
+                call SetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)], xp3, true)
+            endif
+
+            if (udg_Held3[GetConvertedPlayerId(whichPlayer)] == null and xp3 > udg_Held3XP[GetConvertedPlayerId(whichPlayer)]) then
+                set udg_Held3XP[GetConvertedPlayerId(whichPlayer)] = xp3
+            endif
+
+            return true
         endif
-
-        call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
-        call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_NAVY, improvedNavyLevel)
-
-        set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
-        set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
-        set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
-        set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
-        set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
-        set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
-
-        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
-            call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
-        endif
-
-        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
-            set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
-        endif
-
-        if (udg_Held3[GetConvertedPlayerId(whichPlayer)] != null and xp3 > GetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)])) then
-            call SetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)], xp3, true)
-        endif
-
-        if (udg_Held3[GetConvertedPlayerId(whichPlayer)] == null and xp3 > udg_Held3XP[GetConvertedPlayerId(whichPlayer)]) then
-            set udg_Held3XP[GetConvertedPlayerId(whichPlayer)] = xp3
-        endif
-
-        return true
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
     // for savecodes from older versions of the map
@@ -3112,20 +3162,6 @@ function GetSaveObjectResearchId takes integer number returns integer
     return SaveObjectIdResearch[number]
 endfunction
 
-function DisplaySaveCodeError takes player whichPlayer, string message returns nothing
-    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, message)
-endfunction
-
-function DisplaySaveCodeErrorAtLeastOne takes player whichPlayer, boolean atLeastOne returns nothing
-    if (not atLeastOne) then
-        call DisplaySaveCodeError(whichPlayer, "Empty savecode!")
-    endif
-endfunction
-
-function DisplaySaveCodeErrorLowerResearch takes player whichPlayer, integer techId returns nothing
-    call DisplaySaveCodeError(whichPlayer, "Not loading research " + GetObjectName(techId) + " since your current level is higher or equal!")
-endfunction
-
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
@@ -3319,6 +3355,8 @@ function GetSaveCodeBuildingsEx2 takes string playerName, boolean isSinglePlayer
 
     call CreateSaveCodeBuildingsTextFile(playerName, isSinglePlayer, isWarlord, gameType, buildingsCounter, buildingNames, result)
 
+    call AddGeneratedSaveCode(result)
+
     return result
 endfunction
 
@@ -3381,30 +3419,34 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
-        set i = 0
-        loop
-            exitwhen (i == SAVE_CODE_MAX_BUILDINGS)
-            set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
-            if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectBuildingId(saveObject)
-                if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
-                    set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
-                    set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
-                    //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
-                    call CreateUnit(whichPlayer, saveObjectId, x, y, bj_UNIT_FACING)
-                    set atLeastOne = true
-                else
-                    call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+            set i = 0
+            loop
+                exitwhen (i == SAVE_CODE_MAX_BUILDINGS)
+                set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+                if (saveObject > 0) then
+                    set saveObjectId = GetSaveObjectBuildingId(saveObject)
+                    if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                        set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
+                        set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
+                        //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
+                        call CreateUnit(whichPlayer, saveObjectId, x, y, bj_UNIT_FACING)
+                        set atLeastOne = true
+                    else
+                        call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                    endif
                 endif
-            endif
-            set i = i + 1
-            set pos = pos + 3
-        endloop
+                set i = i + 1
+                set pos = pos + 3
+            endloop
 
-        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+            call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
 
-        return atLeastOne
+            return atLeastOne
+        endif
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
     return false
@@ -3641,6 +3683,8 @@ function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, bo
 
     call CreateSaveCodeItemsTextFile(playerName, isSinglePlayer, isWarlord, gameType, itemCounter, itemNames, result)
 
+    call AddGeneratedSaveCode(result)
+
     return result
 endfunction
 
@@ -3687,28 +3731,32 @@ function ApplySaveCodeItems takes player whichPlayer, string s returns boolean
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
-        set i = 0
-        loop
-            exitwhen (i == bj_MAX_INVENTORY)
-            set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
-            if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectItemId(saveObject)
-                if (IsObjectFromPlayerRace(saveObject, whichPlayer)) then
-                    call UnitAddItemByIdSwapped(saveObjectId, hero)
-                    call SetItemCharges(bj_lastCreatedItem, ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1))
-                    set atLeastOne = true
-                else
-                    call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+            set i = 0
+            loop
+                exitwhen (i == bj_MAX_INVENTORY)
+                set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+                if (saveObject > 0) then
+                    set saveObjectId = GetSaveObjectItemId(saveObject)
+                    if (IsObjectFromPlayerRace(saveObject, whichPlayer)) then
+                        call UnitAddItemByIdSwapped(saveObjectId, hero)
+                        call SetItemCharges(bj_lastCreatedItem, ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1))
+                        set atLeastOne = true
+                    else
+                        call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                    endif
                 endif
-            endif
-            set i = i + 1
-            set pos = pos + 2
-        endloop
+                set i = i + 1
+                set pos = pos + 2
+            endloop
 
-        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+            call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
 
-        return atLeastOne
+            return atLeastOne
+        endif
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
     return false
@@ -3980,6 +4028,8 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
 
     call CreateSaveCodeUnitsTextFile(playerName, isSinglePlayer, isWarlord, gameType, unitsCounter, unitNames, result)
 
+    call AddGeneratedSaveCode(result)
+
     return result
 endfunction
 
@@ -4035,43 +4085,47 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
-        set i = 0
-        loop
-            exitwhen (i == SAVE_CODE_MAX_UNITS)
-            set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
-            //call BJDebugMsg("Loading save object: " + I2S(saveObject))
-            if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectUnitId(saveObject)
-                set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
-                //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
-                set j = 0
-                loop
-                    exitwhen (j == count)
-                    // the player does not have to build all farms before but the limit should not be exceeded
-                    if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(saveObjectId) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
-                        if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
-                            call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
-                            set atLeastOne = true
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+            set i = 0
+            loop
+                exitwhen (i == SAVE_CODE_MAX_UNITS)
+                set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+                //call BJDebugMsg("Loading save object: " + I2S(saveObject))
+                if (saveObject > 0) then
+                    set saveObjectId = GetSaveObjectUnitId(saveObject)
+                    set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+                    //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
+                    set j = 0
+                    loop
+                        exitwhen (j == count)
+                        // the player does not have to build all farms before but the limit should not be exceeded
+                        if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(saveObjectId) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
+                            if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                                call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                                set atLeastOne = true
+                            else
+                                call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                            endif
                         else
-                            call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
+                            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetObjectName(saveObjectId) + " exceeds your food maximum and hence is not loaded.")
                         endif
-                    else
-                        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetObjectName(saveObjectId) + " exceeds your food maximum and hence is not loaded.")
-                    endif
-                    set j = j + 1
-                endloop
-            endif
-            set i = i + 1
-            set pos = pos + 2
-        endloop
+                        set j = j + 1
+                    endloop
+                endif
+                set i = i + 1
+                set pos = pos + 2
+            endloop
 
-        call RemoveLocation(tmpLocation)
-        set tmpLocation = null
+            call RemoveLocation(tmpLocation)
+            set tmpLocation = null
 
-        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+            call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
 
-        return atLeastOne
+            return atLeastOne
+        endif
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
     call RemoveLocation(tmpLocation)
@@ -4254,6 +4308,8 @@ function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer
 
     call CreateSaveCodeResearchesTextFile(playerName, isSinglePlayer, isWarlord, gameType, researchesCounter, researchNames, result)
 
+    call AddGeneratedSaveCode(result)
+
     return result
 endfunction
 
@@ -4296,37 +4352,40 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
-        set i = 0
-        loop
-            exitwhen (i >= SAVE_CODE_MAX_RESEARCHES)
-            set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
-            //call BJDebugMsg("Loading save object: " + I2S(saveObject))
-            if (saveObject > 0) then
-                set saveObjectId = GetSaveObjectResearchId(saveObject)
-                if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
-                    set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
-                    //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
-                    if (not SetPlayerTechResearchedIfHigher(whichPlayer, saveObjectId, count)) then
-                        call DisplaySaveCodeErrorLowerResearch(whichPlayer, saveObjectId)
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))) then
+            set i = 0
+            loop
+                exitwhen (i >= SAVE_CODE_MAX_RESEARCHES)
+                set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+                //call BJDebugMsg("Loading save object: " + I2S(saveObject))
+                if (saveObject > 0) then
+                    set saveObjectId = GetSaveObjectResearchId(saveObject)
+                    if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                        set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+                        //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
+                        if (not SetPlayerTechResearchedIfHigher(whichPlayer, saveObjectId, count)) then
+                            call DisplaySaveCodeErrorLowerResearch(whichPlayer, saveObjectId)
+                        endif
+                        set atLeastOne = true
+                    else
+                        call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                     endif
-                    set atLeastOne = true
-                else
-                    call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                 endif
-            endif
-            set i = i + 1
-            set pos = pos + 2
-        endloop
+                set i = i + 1
+                set pos = pos + 2
+            endloop
 
-        call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+            call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
 
-        return atLeastOne
+            return atLeastOne
+        endif
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
     return false
 endfunction
-
 
 function GetSaveCodeInfosResearches takes player whichPlayer, string s returns string
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
@@ -4595,6 +4654,8 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
 
     call CreateSaveCodeClanTextFile(isSinglePlayer, name, icon, clanSoundIndex, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
 
+    call AddGeneratedSaveCode(result)
+
     return result
 endfunction
 
@@ -4696,64 +4757,68 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and nameHash == CompressedAbsStringHash(name) and isSinglePlayer == IsInSinglePlayer()) then
-        if (playerNameHash == playerNameHash0 or playerNameHash == playerNameHash1 or playerNameHash == playerNameHash2 or playerNameHash == playerNameHash3 or playerNameHash == playerNameHash4 or playerNameHash == playerNameHash5 or playerNameHash == playerNameHash6) then
-            set i = 1
-            loop
-                exitwhen (i > udg_ClanCounter)
-                if (StringLength(udg_ClanName[i]) > 0 and udg_ClanName[i] == name) then
-                    set clan = i
-                endif
-                set i = i + 1
-            endloop
-
-            if (clan == 0) then
-                set udg_ClanName[udg_ClanCounter] = name
-                set udg_ClanIcon[udg_ClanCounter] = icon
-                set udg_ClanSound[udg_ClanCounter] = clanSound[clanSoundIndex]
-                set udg_ClanGold[udg_ClanCounter] = gold
-                set udg_ClanLumber[udg_ClanCounter] = lumber
-                set udg_ClanCounter = udg_ClanCounter + 1
-            endif
-
-            set i = 0
-            loop
-                exitwhen (i == bj_MAX_PLAYERS)
-
-                if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
-                    set atLeastOne = true
-                    if (not IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
-                        call ForceAddPlayer(udg_ClanPlayers[clan], Player(i))
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and nameHash == CompressedAbsStringHash(name) and isSinglePlayer == IsInSinglePlayer()) then
+            if (playerNameHash == playerNameHash0 or playerNameHash == playerNameHash1 or playerNameHash == playerNameHash2 or playerNameHash == playerNameHash3 or playerNameHash == playerNameHash4 or playerNameHash == playerNameHash5 or playerNameHash == playerNameHash6) then
+                set i = 1
+                loop
+                    exitwhen (i > udg_ClanCounter)
+                    if (StringLength(udg_ClanName[i]) > 0 and udg_ClanName[i] == name) then
+                        set clan = i
                     endif
-                    set udg_ClanPlayerClan[i + 1] = clan
-                    call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
-                    call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
+                    set i = i + 1
+                endloop
+
+                if (clan == 0) then
+                    set udg_ClanName[udg_ClanCounter] = name
+                    set udg_ClanIcon[udg_ClanCounter] = icon
+                    set udg_ClanSound[udg_ClanCounter] = clanSound[clanSoundIndex]
+                    set udg_ClanGold[udg_ClanCounter] = gold
+                    set udg_ClanLumber[udg_ClanCounter] = lumber
+                    set udg_ClanCounter = udg_ClanCounter + 1
                 endif
 
-                if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank0
-                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank1
-                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank2
-                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank3
-                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank4
-                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank5
-                elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
-                    set udg_ClanPlayerRank[i + 1] = playerRank6
-                endif
-                set i = i + 1
-            endloop
+                set i = 0
+                loop
+                    exitwhen (i == bj_MAX_PLAYERS)
 
-            call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+                    if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
+                        set atLeastOne = true
+                        if (not IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+                            call ForceAddPlayer(udg_ClanPlayers[clan], Player(i))
+                        endif
+                        set udg_ClanPlayerClan[i + 1] = clan
+                        call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
+                        call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
+                    endif
 
-            return atLeastOne
-        else
-            call DisplaySaveCodeError(whichPlayer, "You are not a member of this clan!")
+                    if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank0
+                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank1
+                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank2
+                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank3
+                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank4
+                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank5
+                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
+                        set udg_ClanPlayerRank[i + 1] = playerRank6
+                    endif
+                    set i = i + 1
+                endloop
+
+                call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+                return atLeastOne
+            else
+                call DisplaySaveCodeError(whichPlayer, "You are not a member of this clan!")
+            endif
         endif
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
     return false
