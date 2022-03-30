@@ -4447,6 +4447,18 @@ function GetClanRankName takes integer rank returns string
     endif
 endfunction
 
+function AppendClanSaveCodeMember takes string members, string playerName, integer playerRank returns string
+    if (StringLength(playerName) > 0) then
+        if (StringLength(members) > 0) then
+            set members = members + ", "
+        endif
+
+        return members + playerName + "_" + GetClanRankName(playerRank)
+    endif
+
+    return members
+endfunction
+
 function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer icon, integer clanSoundIndex, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
@@ -4459,89 +4471,47 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
         set singlePlayerFileName = "Singleplayer"
     endif
 
-    if (StringLength(playerName0) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName0, playerRank0)
 
-        set members = members + playerName0 + "_" + GetClanRankName(playerRank0)
-
-        if (playerRank0 == udg_ClanRankLeader) then
-            set leader = playerName0
-        endif
+    if (playerRank0 == udg_ClanRankLeader) then
+        set leader = playerName0
     endif
 
-    if (StringLength(playerName1) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName1, playerRank1)
 
-        set members = members + playerName1 + "_" + GetClanRankName(playerRank1)
-
-        if (playerRank1 == udg_ClanRankLeader) then
-            set leader = playerName1
-        endif
+    if (playerRank1 == udg_ClanRankLeader) then
+        set leader = playerName1
     endif
 
-    if (StringLength(playerName2) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName2, playerRank2)
 
-        set members = members + playerName2 + "_" + GetClanRankName(playerRank2)
-
-        if (playerRank2 == udg_ClanRankLeader) then
-            set leader = playerName2
-        endif
+    if (playerRank2 == udg_ClanRankLeader) then
+        set leader = playerName2
     endif
 
-    if (StringLength(playerName3) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName3, playerRank3)
 
-        set members = members + playerName3 + "_" + GetClanRankName(playerRank3)
-
-        if (playerRank3 == udg_ClanRankLeader) then
-            set leader = playerName3
-        endif
+    if (playerRank3 == udg_ClanRankLeader) then
+        set leader = playerName3
     endif
 
-    if (StringLength(playerName4) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName4, playerRank4)
 
-        set members = members + playerName4 + "_" + GetClanRankName(playerRank4)
+    if (playerRank4 == udg_ClanRankLeader) then
+        set leader = playerName4
+    endif
 
-        if (playerRank4 == udg_ClanRankLeader) then
-            set leader = playerName4
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName5, playerRank5)
+
+    if (playerRank5 == udg_ClanRankLeader) then
+        set leader = playerName5
     endif
 
 
-    if (StringLength(playerName5) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
+    set members = AppendClanSaveCodeMember(members, playerName6, playerRank6)
 
-        set members = members + playerName5 + "_" + GetClanRankName(playerRank5)
-
-        if (playerRank5 == udg_ClanRankLeader) then
-            set leader = playerName5
-        endif
-    endif
-
-    if (StringLength(playerName6) > 0) then
-        if (StringLength(members) > 0) then
-            set members = members + ", "
-        endif
-
-        set members = members + playerName6 + "_" + GetClanRankName(playerRank6)
-
-        if (playerRank6 == udg_ClanRankLeader) then
-            set leader = playerName6
-        endif
+    if (playerRank6 == udg_ClanRankLeader) then
+        set leader = playerName6
     endif
 
     call PreloadGenClear()
@@ -4589,31 +4559,31 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
     //call BJDebugMsg("Save code XP " + I2S(xp))
 
     if (isSinglePlayer) then
-        set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(0) // 0
     else
-        set result = result + ConvertDecimalNumberToSaveCodeSegment(1)
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(1) // 0
     endif
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(icon)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(clanSoundIndex)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(gold)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(lumber)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanHallLevel)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanLevel)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName0))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank0)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName1))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank1)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName2))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank2)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName3))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank3)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName4))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank4)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName5))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank5)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName6))
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank6)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name)) // 1
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(icon) // 2
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(clanSoundIndex) // 3
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(gold) // 4
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(lumber) // 5
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanHallLevel) // 6
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedClanLevel) // 7
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName0)) // 8
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank0) // 9
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName1)) // 10
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank1) // 11
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName2)) // 12
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank2) // 13
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName3)) // 14
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank3) // 15
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName4)) // 16
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank4) // 17
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName5)) // 18
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank5) // 19
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName6)) // 20
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank6) // 21
 
     // checksum
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
