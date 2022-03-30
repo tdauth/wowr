@@ -355,3 +355,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Eagle XI: [BTNGoblinDerrick](https://www.hiveworkshop.com/threads/btngoblinderrick.271618/)
 * NFWar: [BTNAlembic](https://www.hiveworkshop.com/threads/btnalembic.168823/)
 * Blizzard Entertainment, Darkfang: [BTNIncome](https://www.hiveworkshop.com/threads/btnincome.256755/)
+* FerSZ: [Fel/Shadow Shivarra](https://www.hiveworkshop.com/threads/fel-shadow-shivarra.297940/)
+* 67chrome: [BTNShivarraby67chrome](https://www.hiveworkshop.com/threads/btnshivarraby67chrome.193379/)
