@@ -361,3 +361,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment, Darkfang: [BTNIncome](https://www.hiveworkshop.com/threads/btnincome.256755/)
 * FerSZ: [Fel/Shadow Shivarra](https://www.hiveworkshop.com/threads/fel-shadow-shivarra.297940/)
 * 67chrome: [BTNShivarraby67chrome](https://www.hiveworkshop.com/threads/btnshivarraby67chrome.193379/)
+* Villagerino: [Dwarven Miner (variative)](https://www.hiveworkshop.com/threads/dwarven-miner-variative.334521/)
+* Mike: [Mines](https://www.hiveworkshop.com/threads/mines.275791/)
