@@ -5088,7 +5088,7 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
     endloop
 endfunction
 
-function CreateSaveCodeAutoTextFile takes string playerName, string saveCode, string saveCodeItems, string saveCodeUnits, string saveCodeResearches, string saveCodeBuildings returns nothing
+function CreateSaveCodeAutoTextFile takes string playerName, string saveCode, string saveCodeItems, string saveCodeUnits, string saveCodeResearches, string saveCodeBuildings, string saveCodeClan returns nothing
     local string content = ""
     call PreloadGenClear()
     call PreloadGenStart()
@@ -5099,6 +5099,13 @@ function CreateSaveCodeAutoTextFile takes string playerName, string saveCode, st
     set content = content + AppendFileContent("-loadu " + saveCodeUnits)
     set content = content + AppendFileContent("-loadr " + saveCodeResearches)
     set content = content + AppendFileContent("-loadb " + saveCodeBuildings)
+
+    if (saveCodeClan != null) then
+        set content = content + AppendFileContent("-loadc " + saveCodeClan)
+    else
+        set content = content + AppendFileContent("No Clan")
+    endif
+
     set content = content + AppendFileContent("")
 
     // The line below creates the log
@@ -5453,7 +5460,7 @@ globals
 
     constant real SAVECODE_UI_LINE_START_Y = 0.528122
     constant real SAVECODE_UI_LINE_HEIGHT = 0.03
-    constant real SAVECODE_UI_LINE_SPACING = 0.02
+    constant real SAVECODE_UI_LINE_SPACING = 0.01
 
     constant real SAVECODE_UI_TOOLTIP_X = 0.61
     constant real SAVECODE_UI_TOOLTIP_WIDTH = 0.17
@@ -5814,7 +5821,7 @@ function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns 
         call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], visible)
         // all
         call BlzFrameSetVisible(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], visible)
-        //call BlzFrameSetVisible(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], visible)
         //call BlzFrameSetVisible(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], visible)
@@ -6040,7 +6047,11 @@ endfunction
 
 function SaveCodeUIWriteAutoFunctionAll takes nothing returns nothing
     //call BJDebugMsg("Click write auto")
-    call CreateSaveCodeAutoTextFile(GetPlayerName(GetTriggerPlayer()), GetSaveCode(GetTriggerPlayer()), GetSaveCodeItems(GetTriggerPlayer()), GetSaveCodeUnits(GetTriggerPlayer()), GetSaveCodeResearches(GetTriggerPlayer()), GetSaveCodeBuildings(GetTriggerPlayer()))
+    local string clanSaveCode = null
+    if (udg_ClanPlayerClan[GetConvertedPlayerId(GetTriggerPlayer())] > 0) then
+        set clanSaveCode = GetSaveCodeClan(udg_ClanPlayerClan[GetConvertedPlayerId(GetTriggerPlayer())])
+    endif
+    call CreateSaveCodeAutoTextFile(GetPlayerName(GetTriggerPlayer()), GetSaveCode(GetTriggerPlayer()), GetSaveCodeItems(GetTriggerPlayer()), GetSaveCodeUnits(GetTriggerPlayer()), GetSaveCodeResearches(GetTriggerPlayer()), GetSaveCodeBuildings(GetTriggerPlayer()), clanSaveCode)
 
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to save auto savecodes.")
 endfunction
@@ -6397,15 +6408,15 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     //call BlzTriggerRegisterFrameEvent(SaveCodeUILoadAutoTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
     //call TriggerAddAction(SaveCodeUILoadAutoTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUILoadAutoFunctionAll)
 
-    //set SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    //call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
-    //call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    //call BlzFrameSetText(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Auto|r")
-    //call BlzFrameSetScale(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Auto|r")
+    call BlzFrameSetScale(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
-    //set SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    //call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    //call TriggerAddAction(SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUIWriteAutoFunctionAll)
+    set SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUIWriteAutoFunctionAll)
 
     set SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)

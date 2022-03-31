@@ -47,7 +47,7 @@ This version provides several new features compared to the original map [World o
 * Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
 * New race: Demon.
 * Added Outland area with a new boss.
-* New Outland area with four goldmines and four quests.
+* New Outland area with new start locations, quests and bosses.
 * Outland portals all over the map.
 * '-nowin' replaced 'nodefeat'. The game can be won by killing the final boss in the Outland area.
 * Hand of God at level 35.
@@ -181,6 +181,10 @@ This version provides several new features compared to the original map [World o
 * Clans.
 * Bounties.
 * Goblin Bank.
+* Enable Warcraft's Item Stacking.
+* New hero: Antonidas.
+* New hero: Fel Beast.
+* New creep: Shivarra.
 
 ## Bug Fixes
 
