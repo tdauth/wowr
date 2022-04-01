@@ -2282,26 +2282,68 @@ function FormatTimeString takes integer seconds returns string
     elseif (minutes > 0) then
         return FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
     else
-        return I2S(seconds) + " seconds "
+        return I2S(seconds) + " seconds"
     endif
 endfunction
 
+// look into the exported war3map.j script
+function GetMapName takes nothing returns string
+    return GetLocalizedString("TRIGSTR_001")
+endfunction
+
+function GetSinglePlayerStatus takes boolean isSinglePlayer returns string
+    if (isSinglePlayer) then
+        return "Singleplayer"
+    endif
+
+    return "Multiplayer"
+endfunction
+
+function GetGameTypeName takes integer gameType returns string
+    if (gameType == udg_GameTypeEasy) then
+        return "Easy"
+    elseif (gameType == udg_GameTypeHardcore) then
+        return "Hardcore"
+    elseif (gameType == udg_GameTypeFast) then
+        return "Fast"
+    endif
+
+    return "Normal"
+endfunction
+
 function GetSaveCodeFolderNameEx takes force whichForce, real duration, integer seed returns string
-    local string result = ""
+    local string result = GetMapName() + "-" + GetSinglePlayerStatus(IsInSinglePlayer()) + "-" + GetGameTypeName(udg_GameType)
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
         if (IsPlayerInForce(Player(i), whichForce)) then
-            set result = result + GetPlayerName(Player(i)) + "-" + I2S(GetHighestHeroLevel(Player(i)))
+            if (StringLength(result) > 0) then
+                set result = result + "-"
+            endif
+            set result = result + GetPlayerName(Player(i)) + "_" + I2S(GetHighestHeroLevel(Player(i)))
         endif
         set i = i + 1
     endloop
 
-    return result + "-" + FormatTimeString(R2I(duration)) + "-" + I2S(gameSeed)
+    return result + "-" + FormatTimeString(R2I(duration)) + "-GameSeed_" + I2S(gameSeed)
 endfunction
 
 function GetSaveCodeFolderName takes nothing returns string
-    return GetSaveCodeFolderNameEx(GetPlayersAll(), udg_GameTime, gameSeed)
+    local force whichForce = CreateForce()
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if GetPlayerController(Player(i)) == MAP_CONTROL_USER and (GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_LEFT) then
+            call ForceAddPlayer(whichForce, Player(i))
+        endif
+        set i = i + 1
+    endloop
+    set result = GetSaveCodeFolderNameEx(whichForce, udg_GameTime, gameSeed)
+    call ForceClear(whichForce)
+    call DestroyForce(whichForce)
+    set whichForce = null
+    return result
 endfunction
 
 function AppendFileContent takes string content returns string
@@ -2415,7 +2457,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + "-heroLevel3-" + I2S(heroLevel3) + "-xp3-" + I2S(xp3) + "-" + ConvertSaveCodeDemigodValueToInfo(demigodValue) + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + "-heroLevel3-" + I2S(heroLevel3) + "-xp3-" + I2S(xp3) + "-" + ConvertSaveCodeDemigodValueToInfo(demigodValue) + ".txt")
 endfunction
 
 // use one single symbol to store these two flags
@@ -2633,7 +2675,7 @@ function DisplaySaveCodeErrorSameGame takes player whichPlayer returns nothing
     call DisplaySaveCodeError(whichPlayer, "Savecode from the same game!")
 endfunction
 
-
+// wowr1.9.9.w3x
 function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
@@ -2878,18 +2920,6 @@ function GetSaveCodeErrors takes player whichPlayer, string s returns string
     endif
 
     return result
-endfunction
-
-function GetGameTypeName takes integer gameType returns string
-    if (gameType == udg_GameTypeEasy) then
-        return "Easy"
-    elseif (gameType == udg_GameTypeHardcore) then
-        return "Hardcore"
-    elseif (gameType == udg_GameTypeFast) then
-        return "Fast"
-    endif
-
-    return "Normal"
 endfunction
 
 function AppendSaveCodeInfo takes string result, string appended returns string
@@ -3233,7 +3263,7 @@ function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSing
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-buildings-" + I2S(buildings) + "-" + buildingNames + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-buildings-" + I2S(buildings) + "-" + buildingNames + ".txt")
 endfunction
 
 globals
@@ -3595,7 +3625,7 @@ function CreateSaveCodeItemsTextFile takes string playerName, boolean isSinglePl
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-items-" + I2S(items)  + "-" + itemNames + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-items-" + I2S(items)  + "-" + itemNames + ".txt")
 endfunction
 
 function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, item itemSlot0, item itemSlot1, item itemSlot2, item itemSlot3, item itemSlot4, item itemSlot5 returns string
@@ -3984,7 +4014,7 @@ function CreateSaveCodeUnitsTextFile takes string playerName, boolean isSinglePl
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-units-" + I2S(units)  + "-" + unitNames + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-units-" + I2S(units)  + "-" + unitNames + ".txt")
 endfunction
 
 function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner, group source returns string
@@ -4280,7 +4310,7 @@ function CreateSaveCodeResearchesTextFile takes string playerName, boolean isSin
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-researches-" + I2S(researches)  + "-" + researchNames + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-researches-" + I2S(researches)  + "-" + researchNames + ".txt")
 endfunction
 
 function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
@@ -4639,7 +4669,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
 function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, sound whichSound, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
@@ -5122,7 +5152,7 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
     endloop
 endfunction
 
-function CreateSaveCodeAutoTextFile takes string playerName, string saveCode, string saveCodeItems, string saveCodeUnits, string saveCodeResearches, string saveCodeBuildings, string saveCodeClan returns nothing
+function CreateSaveCodeAllTextFileEx takes string playerName, string saveCode, string saveCodeItems, string saveCodeUnits, string saveCodeResearches, string saveCodeBuildings, string saveCodeClan returns nothing
     local string content = ""
     call PreloadGenClear()
     call PreloadGenStart()
@@ -5146,7 +5176,15 @@ function CreateSaveCodeAutoTextFile takes string playerName, string saveCode, st
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-auto.txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-all.txt")
+endfunction
+
+function CreateSaveCodeAllTextFile takes player whichPlayer returns nothing
+    local string clanSaveCode = null
+    if (udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)] > 0) then
+        set clanSaveCode = GetSaveCodeClan(udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)])
+    endif
+    call CreateSaveCodeAllTextFileEx(GetPlayerName(whichPlayer), GetSaveCode(whichPlayer), GetSaveCodeItems(whichPlayer), GetSaveCodeUnits(whichPlayer), GetSaveCodeResearches(whichPlayer), GetSaveCodeBuildings(whichPlayer), clanSaveCode)
 endfunction
 
 /**
@@ -5574,10 +5612,10 @@ globals
 
     // end line: all save codes
     framehandle array SaveCodeUILabelFrameAll
-    framehandle array SaveCodeUIWriteAutoButtonFrameAll
-    trigger array SaveCodeUIWriteAutoTriggerAll
-    framehandle array SaveCodeUILoadAutoButtonFrameAll
-    trigger array SaveCodeUILoadAutoTriggerAll
+    framehandle array SaveCodeUIWriteAllButtonFrameAll
+    trigger array SaveCodeUIWriteAllTriggerAll
+    framehandle array SaveCodeUILoadAllButtonFrameAll
+    trigger array SaveCodeUILoadAllTriggerAll
     framehandle array SaveCodeUIUpdateButtonFrameAll
     trigger array SaveCodeUIUpdateTriggerAll
     framehandle array SaveCodeUILoadButtonFrameAll
@@ -5855,8 +5893,8 @@ function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns 
         call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], visible)
         // all
         call BlzFrameSetVisible(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], visible)
-        call BlzFrameSetVisible(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], visible)
-        //call BlzFrameSetVisible(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], visible)
+        //call BlzFrameSetVisible(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], visible)
         // close
@@ -6074,20 +6112,20 @@ function SaveCodeUILoadFunctionClan takes nothing returns nothing
     call SaveCodeUILoadClan(GetTriggerPlayer())
 endfunction
 
-function SaveCodeUILoadAutoFunctionAll takes nothing returns nothing
+function SaveCodeUILoadAllFunctionAll takes nothing returns nothing
     //call BJDebugMsg("Click load auto")
-    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to load auto savecodes.")
+    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to load all savecodes.")
 endfunction
 
-function SaveCodeUIWriteAutoFunctionAll takes nothing returns nothing
+function SaveCodeUIWriteAllFunctionAll takes nothing returns nothing
     //call BJDebugMsg("Click write auto")
     local string clanSaveCode = null
     if (udg_ClanPlayerClan[GetConvertedPlayerId(GetTriggerPlayer())] > 0) then
         set clanSaveCode = GetSaveCodeClan(udg_ClanPlayerClan[GetConvertedPlayerId(GetTriggerPlayer())])
     endif
-    call CreateSaveCodeAutoTextFile(GetPlayerName(GetTriggerPlayer()), GetSaveCode(GetTriggerPlayer()), GetSaveCodeItems(GetTriggerPlayer()), GetSaveCodeUnits(GetTriggerPlayer()), GetSaveCodeResearches(GetTriggerPlayer()), GetSaveCodeBuildings(GetTriggerPlayer()), clanSaveCode)
+    call CreateSaveCodeAllTextFile(GetTriggerPlayer())
 
-    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to save auto savecodes.")
+    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Saved all save codes into \"XXX-all.txt\".")
 endfunction
 
 function SaveCodeUIUpdateFunctionAll takes nothing returns nothing
@@ -6432,25 +6470,25 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetTextAlignment(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
     call BlzFrameSetEnable(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], true)
 
-    //set SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    //call BlzFrameSetAbsPoint(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_AUTO_BUTTON_X, y)
-    //call BlzFrameSetAbsPoint(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_AUTO_BUTTON_X + SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    //call BlzFrameSetText(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad Auto|r")
-    //call BlzFrameSetScale(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    //set SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    //call BlzFrameSetAbsPoint(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_AUTO_BUTTON_X, y)
+    //call BlzFrameSetAbsPoint(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_AUTO_BUTTON_X + SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    //call BlzFrameSetText(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad All|r")
+    //call BlzFrameSetScale(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
-    //set SaveCodeUILoadAutoTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    //call BlzTriggerRegisterFrameEvent(SaveCodeUILoadAutoTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    //call TriggerAddAction(SaveCodeUILoadAutoTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUILoadAutoFunctionAll)
+    //set SaveCodeUILoadAllTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
+    //call BlzTriggerRegisterFrameEvent(SaveCodeUILoadAllTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    //call TriggerAddAction(SaveCodeUILoadAllTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUILoadAllFunctionAll)
 
-    set SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite Auto|r")
-    call BlzFrameSetScale(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite All|r")
+    call BlzFrameSetScale(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
 
-    set SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIWriteAutoTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUIWriteAutoFunctionAll)
+    set SaveCodeUIWriteAllTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteAllTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIWriteAllTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUIWriteAllFunctionAll)
 
     set SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
@@ -6529,8 +6567,8 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], false)
     // all
     call BlzFrameSetVisible(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIWriteAutoButtonFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadAutoButtonFrameAll[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], false)
     // close
