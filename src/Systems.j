@@ -2243,6 +2243,67 @@ function CompressedAbsStringHash takes string whichString returns integer
     return absStringHash
 endfunction
 
+function GetHighestHeroLevel takes player whichPlayer returns integer
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+
+    if (udg_Held[playerId] != null and (udg_Held2[playerId] != null or GetHeroLevel(udg_Held2[playerId]) < GetHeroLevel(udg_Held[playerId])) and (udg_Held3[playerId] != null or GetHeroLevel(udg_Held3[playerId]) < GetHeroLevel(udg_Held[playerId]))) then
+        return GetHeroLevel(udg_Held[playerId])
+    endif
+
+    // TODO Other heroes
+    // TODO Check XP on repick instead of level
+
+    return 0
+endfunction
+
+globals
+    integer gameSeed = GetRandomInt(0, 100000)
+endglobals
+
+function FormatIntegerToTwoDigits takes integer value returns string
+    if (value > 9) then
+        return I2S(value)
+    else
+        return "0" + I2S(value)
+    endif
+endfunction
+
+function FormatTimeString takes integer seconds returns string
+    local integer minutes = seconds / 60
+    local integer hours = minutes / 60
+    local integer hoursInMinutes = hours * 60
+    local integer minutesInSeconds = minutes * 60
+
+    set minutes = minutes - hoursInMinutes
+    set seconds = seconds - minutesInSeconds
+
+    if (hours > 0) then
+        return FormatIntegerToTwoDigits(hours) + ":" + FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
+    elseif (minutes > 0) then
+        return FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
+    else
+        return I2S(seconds) + " seconds "
+    endif
+endfunction
+
+function GetSaveCodeFolderNameEx takes force whichForce, real duration, integer seed returns string
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (IsPlayerInForce(Player(i), whichForce)) then
+            set result = result + GetPlayerName(Player(i)) + "-" + I2S(GetHighestHeroLevel(Player(i)))
+        endif
+        set i = i + 1
+    endloop
+
+    return result + "-" + FormatTimeString(R2I(duration)) + "-" + I2S(gameSeed)
+endfunction
+
+function GetSaveCodeFolderName takes nothing returns string
+    return GetSaveCodeFolderNameEx(GetPlayersAll(), udg_GameTime, gameSeed)
+endfunction
+
 function AppendFileContent takes string content returns string
     return "\r\n\t\t\t\t" + content
 endfunction
@@ -2940,33 +3001,6 @@ function ColoredSaveCode takes string saveCode returns string
 
     return result
 endfunction
-
-function FormatIntegerToTwoDigits takes integer value returns string
-    if (value > 9) then
-        return I2S(value)
-    else
-        return "0" + I2S(value)
-    endif
-endfunction
-
-function FormatTimeString takes integer seconds returns string
-    local integer minutes = seconds / 60
-    local integer hours = minutes / 60
-    local integer hoursInMinutes = hours * 60
-    local integer minutesInSeconds = minutes * 60
-
-    set minutes = minutes - hoursInMinutes
-    set seconds = seconds - minutesInSeconds
-
-    if (hours > 0) then
-        return FormatIntegerToTwoDigits(hours) + ":" + FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
-    elseif (minutes > 0) then
-        return FormatIntegerToTwoDigits(minutes) + ":" + FormatIntegerToTwoDigits(seconds)
-    else
-        return I2S(seconds) + " seconds "
-    endif
-endfunction
-
 
 globals
     string array SaveObjectNameUnit
