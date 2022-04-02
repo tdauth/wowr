@@ -150,7 +150,7 @@ This version provides several new features compared to the original map [World o
 * Chat command "-wrapup" which converts your buildings into tiny items.
 * Chat command "-passive" which enables passive mode against enemy players.
 * New island Kezan with bosses Rumblefitz and Tinkerer Gizlock.
-* New race Goblins.
+* New race: Goblin.
 * Chat command "-racerepick" to repick your first race as Warlord.
 * New building Research Tent for all races.
 * Chat command "-savec" to generate savecodes into files without printing information for a long time.
@@ -185,6 +185,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Antonidas.
 * New hero: Fel Beast.
 * New creep: Shivarra.
+* New race: Dwarf.
 
 ## Bug Fixes
 
@@ -366,3 +367,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * SeW: [tory3](https://www.hiveworkshop.com/threads/tory3.48970/)
 * SeW: [tory2](https://www.hiveworkshop.com/threads/tory2.48971/)
 * ossus: [WarWagon](https://www.hiveworkshop.com/threads/warwagon.159507/)
+* Direfury: [Dwarven Workers](https://www.hiveworkshop.com/threads/dwarven-workers.252827/)
+* Sephiroth_VII: [Dwarven Rail Tank](https://www.hiveworkshop.com/threads/dwarven-rail-tank.133334/)
+* Urkdrengi: [Rifleman](https://www.hiveworkshop.com/threads/rifleman.49632/)
+* Hayate: [Gryphon](https://www.hiveworkshop.com/threads/gryphon.249076/)
+* Tranquil: [Dwarven Rider](https://www.hiveworkshop.com/threads/dwarven-rider.230958/)
