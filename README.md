@@ -375,3 +375,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Fuzzyfury: [Dwarven Mining Cart](https://www.hiveworkshop.com/threads/dwarven-mining-cart.250982/)
 * Tamplier: [Dwarven Barracks (WOTR style)](https://www.hiveworkshop.com/threads/dwarven-barracks-wotr-style.308471/)
 * bakr: [Dwarven Buildings (Bronzebeard)](https://www.hiveworkshop.com/threads/dwarven-buildings-bronzebeard.338590/)
+* Ket: [Kurdran Academy](https://www.hiveworkshop.com/threads/kurdran-academy.228176/)
