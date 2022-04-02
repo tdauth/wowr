@@ -2647,6 +2647,16 @@ function ReadSaveCode takes string saveCode, integer hash returns string
     return saveCode
 endfunction
 
+function SetPlayerStateIfHigher takes player whichPlayer, playerstate playerState, integer value returns boolean
+    if (value > GetPlayerState(whichPlayer, playerState)) then
+        call SetPlayerStateBJ(whichPlayer, playerState, value)
+        return true
+    endif
+
+    return false
+endfunction
+
+
 function SetPlayerTechResearchedIfHigher takes player whichPlayer, integer techId, integer level returns boolean
     if (level > GetPlayerTechCountSimple(techId, whichPlayer)) then
         call SetPlayerTechResearched(whichPlayer, techId, level)
@@ -2716,8 +2726,8 @@ function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
     if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
         call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
 
-        call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
-        call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
+        call SetPlayerStateIfHigher(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
+        call SetPlayerStateIfHigher(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
         call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
         call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
         call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
