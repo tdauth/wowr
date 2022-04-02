@@ -372,3 +372,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Urkdrengi: [Rifleman](https://www.hiveworkshop.com/threads/rifleman.49632/)
 * Hayate: [Gryphon](https://www.hiveworkshop.com/threads/gryphon.249076/)
 * Tranquil: [Dwarven Rider](https://www.hiveworkshop.com/threads/dwarven-rider.230958/)
+* Fuzzyfury: [Dwarven Mining Cart](https://www.hiveworkshop.com/threads/dwarven-mining-cart.250982/)
+* Tamplier: [Dwarven Barracks (WOTR style)](https://www.hiveworkshop.com/threads/dwarven-barracks-wotr-style.308471/)
+* bakr: [Dwarven Buildings (Bronzebeard)](https://www.hiveworkshop.com/threads/dwarven-buildings-bronzebeard.338590/)
