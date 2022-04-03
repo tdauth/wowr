@@ -378,3 +378,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ket: [Kurdran Academy](https://www.hiveworkshop.com/threads/kurdran-academy.228176/)
 * Tranquil: [Dwarven Battlepriest](https://www.hiveworkshop.com/threads/dwarven-battlepriest.165437/)
 * erwtenpeller: [BTNTrollSlayer](https://www.hiveworkshop.com/threads/btntrollslayer.56586/)
+* Tranquil: [Hero Geomancer](https://www.hiveworkshop.com/threads/hero-geomancer.199982/)
+* GreyArchon: [Dwarven Runecaster](https://www.hiveworkshop.com/threads/dwarven-runecaster.149668/)
+* General Frank: [Steam Fortress - The Vapourizer](https://www.hiveworkshop.com/threads/steam-fortress-the-vapourizer.103882/)
