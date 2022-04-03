@@ -6688,6 +6688,7 @@ globals
     constant integer GOBLIN_TUNNEL_DIRECTION_SOUTH_START = 6
     constant integer GOBLIN_TUNNEL_DIRECTION_WEST_START = 7
     constant integer GOBLIN_TUNNEL_DIRECTION_EAST_START = 8
+    constant integer GOBLIN_TUNNEL_DIRECTION_USER_1 = 9
 
     constant integer GOBLIN_TUNNEL_SYSTEM = 'o018'
     constant integer GOBLIN_TUNNEL = 'o00P'
@@ -6725,6 +6726,14 @@ endfunction
 
 function GetPreviousGoblinTunnelPart takes unit whichUnit returns unit
     return LoadUnitHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), GOBLIN_TUNNEL_DIRECTION_PREVIOUS)
+endfunction
+
+function SetUserGoblinTunnelPartDestructable takes unit whichUnit, destructable part returns nothing
+    call SaveDestructableHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), GOBLIN_TUNNEL_DIRECTION_USER_1, part)
+endfunction
+
+function GetUserGoblinTunnelPartDestructable takes unit whichUnit returns destructable
+    return LoadDestructableHandle(udg_GoblinTunnelsUnits, GetHandleId(whichUnit), GOBLIN_TUNNEL_DIRECTION_USER_1)
 endfunction
 
 function GetGoblinTunnelSystem takes unit whichUnit returns unit
@@ -6791,22 +6800,27 @@ function PolarProjectionY takes real y, real angle, real distance returns real
     return y + distance * Sin(angle * bj_DEGTORAD)
 endfunction
 
-function ExpandGoblinTunnel takes unit start, integer direction returns unit
+function ExpandGoblinTunnelEx takes unit start, integer direction, integer unitTypeId, boolean waygate, integer endAbilityId returns unit
     local real angle = GetAngleByGoblinTunnelDirection(direction)
     local unit previous = GetNextGoblinTunnel(start, direction)
     local unit expanded = null
     local unit system = null
     if (previous != null and GetNextGoblinTunnelPart(previous, direction) == null) then
-        set expanded = CreateUnit(GetOwningPlayer(start), GOBLIN_TUNNEL, PolarProjectionX(GetUnitX(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), PolarProjectionY(GetUnitY(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), bj_UNIT_FACING)
+        set expanded = CreateUnit(GetOwningPlayer(start), unitTypeId, PolarProjectionX(GetUnitX(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), PolarProjectionY(GetUnitY(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), bj_UNIT_FACING)
         call SetNextGoblinTunnelPart(previous, direction, expanded)
         call SetPreviousGoblinTunnelPart(expanded, previous)
         call GroupAddUnit(udg_GoblinTunnels, expanded)
 
         if (GetUnitTypeId(previous) == GOBLIN_TUNNEL_SYSTEM) then
             call SetGoblinTunnelSystemStart(previous, direction, expanded)
-            call WaygateActivate(expanded, true)
-            call WaygateSetDestination(expanded, GetUnitX(expanded), GetUnitY(expanded))
-            call UnitAddAbility(expanded, GOBLIN_TUNNEL_START_ABILITY_ID)
+            if (waygate) then
+                call WaygateActivate(expanded, true)
+                call WaygateSetDestination(expanded, GetUnitX(expanded), GetUnitY(expanded))
+            endif
+
+            if (endAbilityId != 0) then
+                call UnitAddAbility(expanded, endAbilityId)
+            endif
         else
             call WaygateActivate(previous, false)
             call UnitRemoveAbility(previous, GOBLIN_TUNNEL_END_ABILITY_ID)
@@ -6815,11 +6829,19 @@ function ExpandGoblinTunnel takes unit start, integer direction returns unit
             if (system != null) then
                 set system = GetGoblinTunnelSystemStart(system, direction)
                 if (system != null) then
-                    call WaygateActivate(system, true)
-                    call WaygateSetDestination(system, GetUnitX(expanded), GetUnitY(expanded))
-                    call UnitAddAbility(expanded, GOBLIN_TUNNEL_END_ABILITY_ID)
-                    call WaygateActivate(expanded, true)
-                    call WaygateSetDestination(expanded, GetUnitX(system), GetUnitY(system))
+                    if (waygate) then
+                        call WaygateActivate(system, true)
+                        call WaygateSetDestination(system, GetUnitX(expanded), GetUnitY(expanded))
+                    endif
+
+                    if (endAbilityId != 0) then
+                        call UnitAddAbility(expanded, endAbilityId)
+                    endif
+
+                    if (waygate) then
+                        call WaygateActivate(expanded, true)
+                        call WaygateSetDestination(expanded, GetUnitX(system), GetUnitY(system))
+                    endif
                 endif
             endif
         endif
@@ -6828,6 +6850,10 @@ function ExpandGoblinTunnel takes unit start, integer direction returns unit
     endif
 
     return expanded
+endfunction
+
+function ExpandGoblinTunnel takes unit start, integer direction returns unit
+    return ExpandGoblinTunnelEx(start, direction, GOBLIN_TUNNEL, true, GOBLIN_TUNNEL_END_ABILITY_ID)
 endfunction
 
 function UpdateDeadGoblinTunnelPart takes unit whichUnit returns nothing
