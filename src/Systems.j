@@ -6956,7 +6956,7 @@ function RemoveHeroAbility takes unit hero, integer abilityId returns boolean
     if (index < 1) then
         call BJDebugMsg("Invalid ability index " + I2S(index) + " for hero ability " + GetObjectName(abilityId) + " for unit type " + GetObjectName(GetUnitTypeId(hero)))
     endif
-    call BJDebugMsg("Removing hero ability " + GetObjectName(abilityId) + " by adding " + I2S(diff) + " skill points and skilling the ability to its max level which currently has level " + I2S(level) + " (readded as skill points) to remove it.")
+    //call BJDebugMsg("Removing hero ability " + GetObjectName(abilityId) + " by adding " + I2S(diff) + " skill points and skilling the ability to its max level which currently has level " + I2S(level) + " (readded as skill points) to remove it.")
     // TODO Do we need to increase the hero level as well for skip requirements? We will have to disable ALL triggers which react to a gain level event!
     if (diff > 0) then
         call ModifyHeroSkillPoints(hero, bj_MODIFYMETHOD_ADD, diff)

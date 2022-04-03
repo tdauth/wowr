@@ -381,3 +381,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Tranquil: [Hero Geomancer](https://www.hiveworkshop.com/threads/hero-geomancer.199982/)
 * GreyArchon: [Dwarven Runecaster](https://www.hiveworkshop.com/threads/dwarven-runecaster.149668/)
 * General Frank: [Steam Fortress - The Vapourizer](https://www.hiveworkshop.com/threads/steam-fortress-the-vapourizer.103882/)
+* Deolrin, Kwaliti: [Elite Siege Engine - The Übertank](https://www.hiveworkshop.com/threads/elite-siege-engine-the-%C3%9Cbertank.178202/)
+* Mr.Goblin: [BTNEliteSeigeTank](https://www.hiveworkshop.com/threads/btneliteseigetank.181170/)
+* communist_orc: [Gold Bars](https://www.hiveworkshop.com/threads/gold-bars.90227/)
