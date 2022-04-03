@@ -6800,13 +6800,13 @@ function PolarProjectionY takes real y, real angle, real distance returns real
     return y + distance * Sin(angle * bj_DEGTORAD)
 endfunction
 
-function ExpandGoblinTunnelEx takes unit start, integer direction, integer unitTypeId, boolean waygate, integer endAbilityId returns unit
+function ExpandGoblinTunnelEx takes unit start, integer direction, integer unitTypeId, boolean waygate, integer endAbilityId, real distance returns unit
     local real angle = GetAngleByGoblinTunnelDirection(direction)
     local unit previous = GetNextGoblinTunnel(start, direction)
     local unit expanded = null
     local unit system = null
     if (previous != null and GetNextGoblinTunnelPart(previous, direction) == null) then
-        set expanded = CreateUnit(GetOwningPlayer(start), unitTypeId, PolarProjectionX(GetUnitX(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), PolarProjectionY(GetUnitY(previous), angle, GOBLIN_TUNNEL_EXPAND_DISTANCE), bj_UNIT_FACING)
+        set expanded = CreateUnit(GetOwningPlayer(start), unitTypeId, PolarProjectionX(GetUnitX(previous), angle, distance), PolarProjectionY(GetUnitY(previous), angle, distance), bj_UNIT_FACING)
         call SetNextGoblinTunnelPart(previous, direction, expanded)
         call SetPreviousGoblinTunnelPart(expanded, previous)
         call GroupAddUnit(udg_GoblinTunnels, expanded)
@@ -6853,7 +6853,7 @@ function ExpandGoblinTunnelEx takes unit start, integer direction, integer unitT
 endfunction
 
 function ExpandGoblinTunnel takes unit start, integer direction returns unit
-    return ExpandGoblinTunnelEx(start, direction, GOBLIN_TUNNEL, true, GOBLIN_TUNNEL_END_ABILITY_ID)
+    return ExpandGoblinTunnelEx(start, direction, GOBLIN_TUNNEL, true, GOBLIN_TUNNEL_END_ABILITY_ID, GOBLIN_TUNNEL_EXPAND_DISTANCE)
 endfunction
 
 function UpdateDeadGoblinTunnelPart takes unit whichUnit returns nothing
