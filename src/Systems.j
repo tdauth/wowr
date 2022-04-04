@@ -2293,24 +2293,26 @@ endfunction
 
 function GetSinglePlayerStatus takes boolean isSinglePlayer returns string
     if (isSinglePlayer) then
-        return "Singleplayer"
+        return "S"
     endif
 
-    return "Multiplayer"
+    return "M"
 endfunction
 
 function GetGameTypeName takes integer gameType returns string
     if (gameType == udg_GameTypeEasy) then
-        return "Easy"
+        return "E"
     elseif (gameType == udg_GameTypeHardcore) then
-        return "Hardcore"
+        return "H"
     elseif (gameType == udg_GameTypeFast) then
-        return "Fast"
+        return "F"
     endif
 
-    return "Normal"
+    return "N"
 endfunction
 
+// keep the folder name short
+// otherwise there won't be any folder
 function GetSaveCodeFolderNameEx takes force whichForce, real duration, integer seed returns string
     local string result = GetMapName() + "-" + GetSinglePlayerStatus(IsInSinglePlayer()) + "-" + GetGameTypeName(udg_GameType)
     local integer i = 0
@@ -2325,7 +2327,7 @@ function GetSaveCodeFolderNameEx takes force whichForce, real duration, integer 
         set i = i + 1
     endloop
 
-    return result + "-" + FormatTimeString(R2I(duration)) + "-GameSeed_" + I2S(gameSeed)
+    return result + "-" + FormatTimeString(R2I(duration)) + "-S_" + I2S(gameSeed)
 endfunction
 
 function GetSaveCodeFolderName takes nothing returns string
