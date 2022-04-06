@@ -461,7 +461,7 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
     local integer I0 = 0
     local integer index = 0
     local item whichItem = null
-	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
+	call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
 	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
 	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
     // Create All Items From Next/Previous Page
@@ -479,7 +479,7 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
         endif
         set I0 = I0 + 1
     endloop
-	call EnableTrigger(gg_trg_Legendary_Artifact_Counter_Pickup)
+	call EnableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
 	call EnableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
 	call EnableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
 endfunction
@@ -489,7 +489,7 @@ function ChangeRucksackPageEx takes integer PlayerNumber, integer newRucksackPag
     local integer index = 0
     local player RucksackOwner = Player(PlayerNumber)
     local item SlotItem = null
-	call DisableTrigger(gg_trg_Legendary_Artifact_Counter_Drop)
+	call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Drop)
 	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
 	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
     // Save All Items
@@ -509,7 +509,7 @@ function ChangeRucksackPageEx takes integer PlayerNumber, integer newRucksackPag
         endif
         set I0 = I0 + 1
     endloop
-	call EnableTrigger(gg_trg_Legendary_Artifact_Counter_Drop)
+	call EnableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Drop)
 	call EnableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
 	call EnableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
 	// change page
@@ -2497,7 +2497,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-heroLevel-" + I2S(heroLevel) + "-xp-" + I2S(xp) + "-heroLevel2-" + I2S(heroLevel2) + "-xp2-" + I2S(xp2) + "-heroLevel3-" + I2S(heroLevel3) + "-xp3-" + I2S(xp3) + "-" + ConvertSaveCodeDemigodValueToInfo(demigodValue) + ".txt")
+    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-level1-" + I2S(heroLevel) + "-level2-" + I2S(heroLevel2) + "-level3-" + I2S(heroLevel3) + ".txt")
 endfunction
 
 // use one single symbol to store these two flags
@@ -7161,4 +7161,121 @@ endfunction
 
 function DisableOrderDebugger takes nothing returns nothing
     call DisableTrigger(orderTrigger)
+endfunction
+
+function IsDestructableTree takes destructable whichDestructable returns boolean
+     if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ATtr' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ATtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'BTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'BTtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'KTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTst' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTft' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTwt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTct' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'JTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'DTsh' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'CTtr' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'CTtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ITtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ITtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'WTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'NTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'WTst' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'OTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ZTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ZTtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'GTsh' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'VTlt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'FTtw' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function EnumLivingTreeDestructablesInCircleFilter takes nothing returns boolean
+    local boolean result = IsDestructableAliveBJ(GetFilterDestructable()) and IsDestructableTree(GetFilterDestructable())
+    local location destLoc = null
+
+    if (result) then
+        set destLoc = GetDestructableLoc(GetFilterDestructable())
+        set result = DistanceBetweenPoints(destLoc, bj_enumDestructableCenter) <= bj_enumDestructableRadius
+        call RemoveLocation(destLoc)
+        set destLoc = null
+    endif
+
+    return result
+endfunction
+
+function RandomLivingTreeDestructableInCircle takes real radius, location loc returns destructable
+    local boolexpr whichFilter= Filter(function EnumLivingTreeDestructablesInCircleFilter)
+    local rect r
+
+    if (radius >= 0) then
+        set bj_enumDestructableCenter = loc
+        set bj_enumDestructableRadius = radius
+        set bj_destRandomConsidered = 0
+        set bj_destRandomCurrentPick = null
+        set r = GetRectFromCircleBJ(loc, radius)
+        call EnumDestructablesInRect(r, whichFilter, function RandomDestructableInRectBJEnum)
+        call RemoveRect(r)
+        set r = null
+    endif
+
+    call DestroyBoolExpr(whichFilter)
+    set whichFilter = null
+
+    return bj_destRandomCurrentPick
 endfunction
