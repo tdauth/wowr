@@ -2024,10 +2024,6 @@ function ConvertDecimalDigitToSaveCodeDigit takes integer digit returns string
     return SubString(SAVE_CODE_DIGITS, digit, digit + 1)
 endfunction
 
-
-/**
- * Convert a decimal number into our number system.
- */
 function ConvertDecimalNumberToSaveCodeSegment takes integer number returns string
     local string result = ""
     local integer start = number
@@ -2043,6 +2039,17 @@ function ConvertDecimalNumberToSaveCodeSegment takes integer number returns stri
         //call BJDebugMsg("Result: " + result)
     endloop
 
+    return result + SAVE_CODE_SEGMENT_SEPARATOR
+endfunction
+
+function ConvertStringToSaveCodeSegment takes string whichString returns string
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(whichString))
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(S2I(SubString(whichString, i, i + 1)))
+        set i = i + 1
+    endloop
     return result + SAVE_CODE_SEGMENT_SEPARATOR
 endfunction
 
@@ -2214,6 +2221,37 @@ function ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode takes string saveCo
     loop
         exitwhen (i == StringLength(substr))
         set result = result + ConvertSaveCodeSegmentIntoDecimalNumber(SubString(substr, i, i + 1), n)
+        //call BJDebugMsg("Result " + I2S(result))
+        set n = n - 1
+        set i = i + 1
+    endloop
+
+    return result
+endfunction
+
+// TODO How many symbols form one character?
+function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, integer index returns string
+    local string substr = ""
+    local string result = ""
+    local integer separatorCounter = 0
+    local integer n = -1 // start with n - 1 and end with 0
+    local integer i = 0
+    loop
+        exitwhen (separatorCounter > index or i == StringLength(saveCode))
+        if (SubString(saveCode, i, i + 1) == SAVE_CODE_SEGMENT_SEPARATOR) then
+            set separatorCounter = separatorCounter + 1
+        elseif (separatorCounter == index) then
+            set substr = substr + SubString(saveCode, i, i + 1)
+            set n = n + 1
+        endif
+        set i = i + 1
+    endloop
+    // convert into decimal number
+    //call BJDebugMsg("Calculate number back " + substr)
+    set i = 0
+    loop
+        exitwhen (i == StringLength(substr))
+        set result = result + I2S(ConvertSaveCodeSegmentIntoDecimalNumber(SubString(substr, i, i + 1), n))
         //call BJDebugMsg("Result " + I2S(result))
         set n = n - 1
         set i = i + 1
@@ -4987,6 +5025,34 @@ function GetSaveCodeInfosClan takes string name, string s returns string
     set result = AppendSaveCodeInfo(result, "Player 5 Rank: " + GetClanRankName(playerRank4))
     set result = AppendSaveCodeInfo(result, "Player 6 Name: " + GetClanPlayerName(playerNameHash5))
     set result = AppendSaveCodeInfo(result, "Player 6 Rank: " + GetClanRankName(playerRank5))
+
+    return result
+endfunction
+
+
+function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns string
+    local integer playerNameToHash = CompressedAbsStringHash(playerNameTo)
+    local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameToHash)
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(StringLength(playerNameFrom))
+    set result = result + ConvertStringToSaveCodeSegment(playerNameFrom)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(StringLength(message))
+    set result = result + ConvertStringToSaveCodeSegment(message)
+
+    // checksum
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
+
+    if (SAVE_CODE_OBFUSCATE) then
+        //call BJDebugMsg("Non-obfuscated save code: " + result)
+        set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameToHash)
+    endif
+
+    //call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, demigodValue, result)
+
+    call AddGeneratedSaveCode(result)
 
     return result
 endfunction

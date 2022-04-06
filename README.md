@@ -384,3 +384,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Deolrin, Kwaliti: [Elite Siege Engine - The Übertank](https://www.hiveworkshop.com/threads/elite-siege-engine-the-%C3%9Cbertank.178202/)
 * Mr.Goblin: [BTNEliteSeigeTank](https://www.hiveworkshop.com/threads/btneliteseigetank.181170/)
 * communist_orc: [Gold Bars](https://www.hiveworkshop.com/threads/gold-bars.90227/)
+* The_Silent: [Medieval Wall](https://www.hiveworkshop.com/threads/medieval-wall.336600/)
+* Deolrin, ike_ike: [Human Mailbox](https://www.hiveworkshop.com/threads/human-mailbox.159694/)
