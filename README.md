@@ -392,3 +392,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Stefan.K: [Hero_Khadgar](https://www.hiveworkshop.com/threads/hero_khadgar.298518/)
 * loktar: [Khadgar](https://www.hiveworkshop.com/threads/khadgar.327433/)
 * xw1995327www: [Dark Portal <Azeroth>](https://www.hiveworkshop.com/threads/dark-portal-azeroth.338833/)
+* Mike: [All types castle (on standart textures)](https://www.hiveworkshop.com/threads/all-types-castle-on-standart-textures.273222/)
+* Mr. Bob: [Norse Hall](https://www.hiveworkshop.com/threads/norse-hall.127049/)
