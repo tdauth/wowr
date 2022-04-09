@@ -1,0 +1,493 @@
+globals
+	constant integer DWARF_TIER_1                                    = 'h02R' // tier 1
+	constant integer DWARF_TIER_2                                    = 'h030' // tier 2
+	constant integer DWARF_TIER_3                                    = 'h031' // tier 3
+	constant integer DWARF_BARRACKS                                  = 'h02V' // barracks
+	constant integer DWARF_MYSTICAL_HALL                             = 'h037' // sanctum/damned temple
+	constant integer DWARF_BLACKSMITH                                = 'h02X' // lumber will and blacksmith
+	constant integer DWARF_TAVERN                                    = 'h03E' // shop
+	constant integer DWARF_WORKSHOP                                  = 'o00Z' // slaughterhouse/barracks for stronger units at tier 2
+	constant integer DWARF_BEASTIARY                                 = 'o00R' // totem/strong units at tier 3
+	constant integer DWARF_HOUSE                                     = 'h036' // farm
+	constant integer DWARF_TOWER                                     = 'h039' // tower
+	constant integer DWARF_TOWER_GUN                                 = 'h03B' // tower 1
+	constant integer DWARF_TOWER_GUARD                               = 'h03C' // tower 2
+	constant integer DWARF_TOWER_CANNON                              = 'h03D' // tower 3
+	constant integer DWARF_ALTAR                                     = 'h033' // altar
+	constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
+	
+	constant integer DWARF_MINER                                     = 'h02Q' // worker
+	constant integer DWARF_TROLL_SLAYER                              = 'h02U'
+	constant integer DWARF_RIFLEMAN                                  = 'h02W'
+	constant integer DWARF_BATTLEPRIEST                              = 'h03A'
+	constant integer DWARF_RUNECASTER                                = 'o01L'
+	constant integer DWARF_RIDER                                     = 'h02Y' // knight
+	constant integer DWARF_MORTAR                                    = 'h03H'
+	constant integer DWARF_POLAR_BEAR                                = 'n04T' // tauren
+	constant integer DWARF_GRYPHON_RIDER                             = 'h035'
+	constant integer DWARF_GRYPHON                                   = 'n04U'
+	constant integer DWARF_FLYING_MACHINE                            = 'h03I'
+	constant integer DWARF_SIEGE_ENGINE                              = 'h03G'
+	constant integer DWARF_STEAM_FORTRESS                            = 'h03F'
+
+	constant integer UPG_DWARF_RANGED                                = 'R043'
+	constant integer UPG_DWARF_MELEE                                 = 'R040'
+	constant integer UPG_DWARF_ARMOR                                 = 'R041'
+	constant integer UPG_DWARF_LEATHER                               = 'R042'
+	constant integer UPG_DWARF_BERSERK                               = 'R03N'
+	constant integer UPG_GOBLIN_BARRAGE                              = 'R02N'
+	constant integer UPG_GOBLIN_CHEMISTRY                            = 'R02L'
+	constant integer UPG_GOBLIN_CLUSTER_ROCKETS                      = 'R02Y'
+	constant integer UPG_GOBLIN_CUT_DOWN_TREES                       = 'R039'
+	constant integer UPG_GOBLIN_DEMOLISH                             = 'R02R'
+	constant integer UPG_GOBLIN_ENGINEERING                          = 'R02S'
+	constant integer UPG_GOBLIN_EXPLOSIVE_BARREL                     = 'R02W'
+	constant integer UPG_GOBLIN_EXPLOSIVES                           = 'R02J'
+	constant integer UPG_GOBLIN_FLAME_GRENADES                       = 'R02T'
+	constant integer UPG_DWARF_MITHRIL                               = 'R03O'
+	constant integer UPG_DWARF_POLAR_BEAR_BOMBS                      = 'R034'
+	constant integer UPG_GOBLIN_IMPROVED_CONSTRUCTION                = 'R030'
+	constant integer UPG_GOBLIN_MOBILE_TURRET                        = 'R02U'
+	constant integer UPG_GOBLIN_OBSERVATORY                          = 'R02I'
+	constant integer UPG_GOBLIN_OIL_DRILLING                         = 'R02V'
+	constant integer UPG_GOBLIN_REPAIR                               = 'R02K'
+	constant integer UPG_GOBLIN_BANKING                              = 'R02P'
+	constant integer UPG_DWARF_LUMBER                                = 'R03S'
+	constant integer UPG_DWARF_BACKPACK                              = 'R03H'
+	
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+	constant integer UPG_STORM_PROTECTION                            = 'R029'
+	constant integer UPG_EVOLUTION                                   = 'R00U'
+	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
+	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
+
+    constant integer DWARF_CITIZEN_MALE                              = 'n04S'
+    constant integer DWARF_CITIZEN_FEMALE                            = 'n050'
+    constant integer DWARF_HOUSING                                   = 'h02H'
+	constant integer PORTAL                                          = 'h014'
+	constant integer POWER_GENERATOR                                 = 'n025'
+	constant integer RESEARCH_TENT                                   = 'n042'
+	
+	constant integer GRYPHON_MOUNT                                   = 'h004'
+	constant integer WYVERN_MOUNT                                    = 'o003'
+	constant integer FROST_WYRM_MOUNT                                = 'u004'
+	constant integer CHIMAERA_MOUNT                                  = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+
+	constant integer SHREDDER                                        = 'ngir'
+	constant integer AI_LABORATORY                                   = 'h01T'
+endglobals
+
+//===========================================================================
+// Calculate the modulus/remainder of (dividend) divided by (divisor).
+// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
+//
+function ModuloInteger takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+
+    // If the dividend was negative, the above modulus calculation will
+    // be negative, but within (-divisor..0).  We can add (divisor) to
+    // shift this result into the desired range of (0..divisor).
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function ChooseHeroSkill takes nothing returns integer
+    local integer curHero = GetHeroId()
+    local integer level = GetHeroLevelAI()
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    if (curHero == MTN_KING) then
+        if (skillUlti) then
+            return AVATAR
+        elseif (mod == 0) then
+            return THUNDER_CLAP
+        elseif (mod == 1) then
+            return THUNDER_BOLT
+        elseif (mod == 2) then
+            return BASH
+        endif
+    endif
+
+    return 'Aamk'
+endfunction
+
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(ALCHEMIST) > 0) then
+        set hero_id = ALCHEMIST
+    elseif (GetUnitCountDone(TINKER) > 0) then
+        set hero_id = TINKER
+    endif
+endfunction
+
+function UpdateWorkers takes nothing returns nothing
+	loop
+		call SetGoldPeons(5 + GetUnitCount(DWARF_HOUSING) * 3)
+		call SetWoodPeons(5)
+		call HarvestGold(0, 5 + GetUnitCount(DWARF_HOUSING) * 3)
+        call HarvestWood(0, 5)
+		call Sleep(1)
+	endloop
+endfunction
+
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
+	call SetWatchMegaTargets( true )
+	call SetIgnoreInjured( false )
+	call SetGroupsFlee( false )
+	call SetCaptainChanges ( false )
+	call SetSmartArtillery ( true )
+    call GroupTimedLife ( true )
+    call SetRandomPaths( true )
+    call SetDefendPlayer( true )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+	call SetBuildUnit( 1, DWARF_TIER_1 )
+	call SetBuildUnit( 22, DWARF_MINER )
+	call SetBuildUnit( 1, DWARF_BLACKSMITH )
+	call SetBuildUnit( 1, DWARF_ALTAR )
+	call SetBuildUnit( 5, DWARF_HOUSE )
+	call SetBuildUnit( 2, DWARF_CITIZEN_MALE )
+	call SetBuildUnit( 1, AI_LABORATORY )
+	call SetBuildUnit( 2, DWARF_HOUSING )
+	call SetBuildUnit( 2, DWARF_CITIZEN_FEMALE )
+	call SetBuildUnit( 2, DWARF_BARRACKS )
+    call SetBuildUnit( 2, DWARF_TOWER )
+	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
+    call SetBuildUnit( 1, DWARF_TAVERN )
+	call SetBuildUnit( 1, DWARF_MYSTICAL_HALL )
+	call SetBuildUnit( 1, DWARF_WORKSHOP )
+	call SetBuildUnit( 1, DWARF_BEASTIARY )
+	
+	call SetBuildUpgr( 2, UPG_DWARF_LUMBER )
+	call SetBuildUpgr( 2, UPG_GOBLIN_BANKING )
+	call SetBuildUpgr( 3, UPG_GOBLIN_IMPROVED_CONSTRUCTION )
+	call SetBuildUpgr( 3, UPG_DWARF_RANGED )
+	call SetBuildUpgr( 3, UPG_DWARF_MELEE )
+    call SetBuildUpgr( 3, UPG_DWARF_ARMOR )
+    call SetBuildUpgr( 3, UPG_DWARF_LEATHER )
+
+    call SetBuildUpgr( 1, UPG_GOBLIN_OBSERVATORY )
+    call SetBuildUpgr( 1, UPG_DWARF_MITHRIL )
+    call SetBuildUpgr( 1, UPG_GOBLIN_CHEMISTRY )
+    call SetBuildUpgr( 1, UPG_GOBLIN_REPAIR )
+    call SetBuildUpgr( 1, UPG_GOBLIN_ENGINEERING )
+
+    call SetBuildUpgr( 1, UPG_GOBLIN_MOBILE_TURRET )
+    call SetBuildUpgr( 1, UPG_GOBLIN_EXPLOSIVES )
+    call SetBuildUpgr( 1, UPG_GOBLIN_FLAME_GRENADES )
+    call SetBuildUpgr( 1, UPG_GOBLIN_BARRAGE )
+    call SetBuildUpgr( 1, UPG_GOBLIN_CLUSTER_ROCKETS )
+    call SetBuildUpgr( 1, UPG_GOBLIN_DEMOLISH )
+    call SetBuildUpgr( 1, UPG_DWARF_BERSERK )
+    call SetBuildUpgr( 1, UPG_DWARF_POLAR_BEAR_BOMBS )
+    call SetBuildUpgr( 1, UPG_GOBLIN_EXPLOSIVE_BARREL )
+    call SetBuildUpgr( 1, UPG_GOBLIN_CUT_DOWN_TREES )
+    call SetBuildUpgr( 1, UPG_GOBLIN_OIL_DRILLING )
+	
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
+	
+	call SetBuildUpgr( 1, UPG_DWARF_BACKPACK )
+	
+	call SetBuildUpgr( 1000, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
+	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function AttackWithMount takes nothing returns nothing
+	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+	endif
+	if (GetUnitCount(WYVERN_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+	endif
+	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+	endif
+	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+	endif
+	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
+endfunction
+
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 0, 1, 2, DWARF_RIDER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 0, 1, 2, DWARF_RIDER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_BATTLEPRIEST )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_BATTLEPRIEST )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_RIFLEMAN )
+	call CampaignAttackerEx( 2, 2, 3, DWARF_FLYING_MACHINE )
+	call CampaignAttackerEx( 2, 2, 3, DWARF_SIEGE_ENGINE )
+	call CampaignAttackerEx( 2, 2, 3, DWARF_STEAM_FORTRESS )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_BATTLEPRIEST )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_RIFLEMAN )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_RUNECASTER )
+	call CampaignAttackerEx( 2, 2, 3, DWARF_FLYING_MACHINE )
+	call CampaignAttackerEx( 2, 2, 3, DWARF_SIEGE_ENGINE )
+	call CampaignAttackerEx( 2, 2, 3, DWARF_STEAM_FORTRESS )
+	call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 ***
+        call InitAssaultGroup()
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, DWARF_TROLL_SLAYER )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_RIDER )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_RIFLEMAN )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_MORTAR )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_GRYPHON )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_BATTLEPRIEST )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_RIFLEMAN )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_RUNECASTER )
+		call CampaignAttackerEx( 2, 2, 2, DWARF_FLYING_MACHINE )
+		call CampaignAttackerEx( 2, 2, 2, DWARF_SIEGE_ENGINE )
+		call CampaignAttackerEx( 2, 2, 2, DWARF_STEAM_FORTRESS )
+		
+		// big air army
+        call CampaignAttackerEx( 6, 12, 18, DWARF_POLAR_BEAR )
+        call CampaignAttackerEx( 15, 20, 25, DWARF_GRYPHON_RIDER )
+		
+		call AddStandardUnitsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( DWARF_HOUSE, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+	call StartThread(function UpdateWorkers)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction

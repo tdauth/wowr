@@ -324,7 +324,7 @@ function ChooseHeroSkill takes nothing returns integer
     // Draenei
     elseif (curHero == AKAMA) then
         if (skillUlti) then
-            return REINCARNATION
+            return REINCARNATION_AKAMA
         elseif (mod == 0) then
             return SPIRIT_WOLF_AKAMA
         elseif (mod == 1) then

@@ -2352,20 +2352,18 @@ endfunction
 // keep the folder name short
 // otherwise there won't be any folder
 function GetSaveCodeFolderNameEx takes force whichForce, real duration, integer seed returns string
-    local string result = GetMapName() + "-" + GetSinglePlayerStatus(IsInSinglePlayer()) + "-" + GetGameTypeName(udg_GameType)
+    local string result = "wowr-" + GetSinglePlayerStatus(IsInSinglePlayer()) + "-" + GetGameTypeName(udg_GameType)
+    local integer playerCounter = 0
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
         if (IsPlayerInForce(Player(i), whichForce)) then
-            if (StringLength(result) > 0) then
-                set result = result + "-"
-            endif
-            set result = result + GetPlayerName(Player(i)) + "_" + I2S(GetHighestHeroLevel(Player(i)))
+            set playerCounter = playerCounter + 1
         endif
         set i = i + 1
     endloop
 
-    return result + "-" + FormatTimeString(R2I(duration)) + "-S_" + I2S(gameSeed)
+    return result + "-" + I2S(playerCounter) + "-" + FormatTimeString(R2I(duration)) + "-S_" + I2S(gameSeed)
 endfunction
 
 function GetSaveCodeFolderName takes nothing returns string
@@ -6868,6 +6866,10 @@ function PolarProjectionY takes real y, real angle, real distance returns real
     return y + distance * Sin(angle * bj_DEGTORAD)
 endfunction
 
+function AngleBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
+    return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
+endfunction
+
 function ExpandGoblinTunnelEx takes unit start, integer direction, integer unitTypeId, boolean waygate, integer endAbilityId, real distance returns unit
     local real angle = GetAngleByGoblinTunnelDirection(direction)
     local unit previous = GetNextGoblinTunnel(start, direction)
@@ -6970,6 +6972,40 @@ function KillAllConnectedGoblinTunnelParts takes unit start returns nothing
     call GroupClear(connected)
     call DestroyGroup(connected)
     set connected = null
+endfunction
+
+function FilterFunctionIsRailroad takes nothing returns boolean
+    return (GetUnitTypeId(GetEnumUnit()) == 'o01N' or GetUnitTypeId(GetEnumUnit()) == 'o01K') and IsUnitAliveBJ(GetEnumUnit())
+endfunction
+
+function GetRailroad takes unit train, real angle returns unit
+    local group whichGroup = CreateGroup()
+    local unit result = null
+    local unit first = null
+    call GroupEnumUnitsInRange(whichGroup, PolarProjectionX(GetUnitX(train), angle, 40.0), PolarProjectionY(GetUnitY(train), angle, 40.0), 200.0, Filter(function FilterFunctionIsRailroad))
+    loop
+        exitwhen (result != null)
+        set first = FirstOfGroup(whichGroup)
+        exitwhen (first == null)
+        if (GetOwningPlayer(first) == GetOwningPlayer(train) or IsUnitAlly(first, GetOwningPlayer(train))) then
+            set result = first
+        endif
+        call GroupRemoveUnit(whichGroup, first)
+    endloop
+
+    call GroupClear(whichGroup)
+    call DestroyGroup(whichGroup)
+    set whichGroup = null
+
+    return result
+endfunction
+
+function GetNextRailroad takes unit source returns unit
+    return GetRailroad(source, 90.0)
+endfunction
+
+function GetPreviousRailroad takes unit source returns unit
+    return GetRailroad(source, 270.0)
 endfunction
 
 globals
