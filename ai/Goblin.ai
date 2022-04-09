@@ -32,6 +32,8 @@ globals
 	constant integer UPG_GOBLIN_STEEL_RWEAPONS                       = 'R033'
 	constant integer UPG_GOBLIN_STEEL_WEAPONS                        = 'R02M'
 	constant integer UPG_GOBLIN_STEEL_ARMOR                          = 'R031'
+	constant integer UPG_GOBLIN_ALCHEMIST_ADEPT                      = 'R036'
+	constant integer UPG_GOBLIN_MAGE_ADEPT                           = 'R037'
 	constant integer UPG_GOBLIN_AIR_SUPPLIES                         = 'R02H'
 	constant integer UPG_GOBLIN_BARRAGE                              = 'R02N'
 	constant integer UPG_GOBLIN_CHEMISTRY                            = 'R02L'
@@ -205,6 +207,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_RWEAPONS )
 	call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_WEAPONS )
     call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_ARMOR )
+
+    call SetBuildUpgr( 2, UPG_GOBLIN_ALCHEMIST_ADEPT )
+	call SetBuildUpgr( 2, UPG_GOBLIN_MAGE_ADEPT )
 
     call SetBuildUpgr( 1, UPG_GOBLIN_OBSERVATORY )
     call SetBuildUpgr( 1, UPG_GOBLIN_FUEL )

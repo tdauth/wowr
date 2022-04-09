@@ -34,24 +34,26 @@ globals
 	constant integer UPG_DWARF_MELEE                                 = 'R040'
 	constant integer UPG_DWARF_ARMOR                                 = 'R041'
 	constant integer UPG_DWARF_LEATHER                               = 'R042'
+	constant integer UPG_DWARF_BATTLEPRIEST_ADEPT                    = 'R03U'
+	constant integer UPG_DWARF_RUNECASTER_ADEPT                      = 'R03T'
 	constant integer UPG_DWARF_BERSERK                               = 'R03N'
-	constant integer UPG_GOBLIN_BARRAGE                              = 'R02N'
-	constant integer UPG_GOBLIN_CHEMISTRY                            = 'R02L'
-	constant integer UPG_GOBLIN_CLUSTER_ROCKETS                      = 'R02Y'
-	constant integer UPG_GOBLIN_CUT_DOWN_TREES                       = 'R039'
-	constant integer UPG_GOBLIN_DEMOLISH                             = 'R02R'
-	constant integer UPG_GOBLIN_ENGINEERING                          = 'R02S'
-	constant integer UPG_GOBLIN_EXPLOSIVE_BARREL                     = 'R02W'
-	constant integer UPG_GOBLIN_EXPLOSIVES                           = 'R02J'
-	constant integer UPG_GOBLIN_FLAME_GRENADES                       = 'R02T'
+	constant integer UPG_DWARF_SLAM                                  = 'R03K'
+	constant integer UPG_DWARF_SLEEP_FORM                            = 'R03V'
+	constant integer UPG_DWARF_ANIMAL_WAR_TRAINING                   = 'R044'
+	constant integer UPG_DWARF_BARRAGE                               = 'R03P'
+	constant integer UPG_DWARF_BREEDING                              = 'R03I'
+	constant integer UPG_DWARF_DEVOUR                                = 'R03L'
+	constant integer UPG_DWARF_ELITE_SIEGE_TANK                      = 'R03Q'
+	constant integer UPG_DWARF_FLAK_CANNONS                          = 'R03W'
+	constant integer UPG_DWARF_FLARE                                 = 'R03Z'
 	constant integer UPG_DWARF_MITHRIL                               = 'R03O'
 	constant integer UPG_DWARF_POLAR_BEAR_BOMBS                      = 'R034'
-	constant integer UPG_GOBLIN_IMPROVED_CONSTRUCTION                = 'R030'
-	constant integer UPG_GOBLIN_MOBILE_TURRET                        = 'R02U'
-	constant integer UPG_GOBLIN_OBSERVATORY                          = 'R02I'
-	constant integer UPG_GOBLIN_OIL_DRILLING                         = 'R02V'
-	constant integer UPG_GOBLIN_REPAIR                               = 'R02K'
-	constant integer UPG_GOBLIN_BANKING                              = 'R02P'
+	constant integer UPG_DWARF_FLYING_MACHINE_BOMBS                  = 'R03X'
+	constant integer UPG_DWARF_FRAGMENTATION_SHARDS                  = 'R03Y'
+	constant integer UPG_DWARF_LONG_RIFLES                           = 'R03M'
+	constant integer UPG_DWARF_STORM_HAMMERS                         = 'R045'
+	constant integer UPG_DWARF_MASONRY                               = 'R03R'
+	constant integer UPG_DWARF_LUMBER_MILL                           = 'R03J'
 	constant integer UPG_DWARF_LUMBER                                = 'R03S'
 	constant integer UPG_DWARF_BACKPACK                              = 'R03H'
 	
@@ -117,10 +119,8 @@ function ChooseHeroSkill takes nothing returns integer
 endfunction
 
 function InitHero takes nothing returns nothing
-    if (GetUnitCountDone(ALCHEMIST) > 0) then
-        set hero_id = ALCHEMIST
-    elseif (GetUnitCountDone(TINKER) > 0) then
-        set hero_id = TINKER
+    if (GetUnitCountDone(MTN_KING) > 0) then
+        set hero_id = MTN_KING
     endif
 endfunction
 
@@ -177,30 +177,33 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, DWARF_BEASTIARY )
 	
 	call SetBuildUpgr( 2, UPG_DWARF_LUMBER )
-	call SetBuildUpgr( 2, UPG_GOBLIN_BANKING )
-	call SetBuildUpgr( 3, UPG_GOBLIN_IMPROVED_CONSTRUCTION )
+	call SetBuildUpgr( 2, UPG_DWARF_LUMBER_MILL )
+	call SetBuildUpgr( 3, UPG_DWARF_FLYING_MACHINE_BOMBS )
 	call SetBuildUpgr( 3, UPG_DWARF_RANGED )
 	call SetBuildUpgr( 3, UPG_DWARF_MELEE )
     call SetBuildUpgr( 3, UPG_DWARF_ARMOR )
     call SetBuildUpgr( 3, UPG_DWARF_LEATHER )
 
-    call SetBuildUpgr( 1, UPG_GOBLIN_OBSERVATORY )
-    call SetBuildUpgr( 1, UPG_DWARF_MITHRIL )
-    call SetBuildUpgr( 1, UPG_GOBLIN_CHEMISTRY )
-    call SetBuildUpgr( 1, UPG_GOBLIN_REPAIR )
-    call SetBuildUpgr( 1, UPG_GOBLIN_ENGINEERING )
+    call SetBuildUpgr( 2, UPG_DWARF_BATTLEPRIEST_ADEPT )
+	call SetBuildUpgr( 2, UPG_DWARF_RUNECASTER_ADEPT )
 
-    call SetBuildUpgr( 1, UPG_GOBLIN_MOBILE_TURRET )
-    call SetBuildUpgr( 1, UPG_GOBLIN_EXPLOSIVES )
-    call SetBuildUpgr( 1, UPG_GOBLIN_FLAME_GRENADES )
-    call SetBuildUpgr( 1, UPG_GOBLIN_BARRAGE )
-    call SetBuildUpgr( 1, UPG_GOBLIN_CLUSTER_ROCKETS )
-    call SetBuildUpgr( 1, UPG_GOBLIN_DEMOLISH )
+    call SetBuildUpgr( 1, UPG_DWARF_LONG_RIFLES )
+    call SetBuildUpgr( 1, UPG_DWARF_MITHRIL )
+    call SetBuildUpgr( 1, UPG_DWARF_SLEEP_FORM )
+    call SetBuildUpgr( 3, UPG_DWARF_MASONRY )
+    call SetBuildUpgr( 1, UPG_DWARF_DEVOUR )
+
+    call SetBuildUpgr( 1, UPG_DWARF_FRAGMENTATION_SHARDS )
+    call SetBuildUpgr( 1, UPG_DWARF_FLAK_CANNONS )
+    call SetBuildUpgr( 1, UPG_DWARF_FLARE )
+    call SetBuildUpgr( 1, UPG_DWARF_SLAM )
+    call SetBuildUpgr( 1, UPG_DWARF_ANIMAL_WAR_TRAINING )
+    call SetBuildUpgr( 1, UPG_DWARF_BREEDING )
     call SetBuildUpgr( 1, UPG_DWARF_BERSERK )
     call SetBuildUpgr( 1, UPG_DWARF_POLAR_BEAR_BOMBS )
-    call SetBuildUpgr( 1, UPG_GOBLIN_EXPLOSIVE_BARREL )
-    call SetBuildUpgr( 1, UPG_GOBLIN_CUT_DOWN_TREES )
-    call SetBuildUpgr( 1, UPG_GOBLIN_OIL_DRILLING )
+    call SetBuildUpgr( 1, UPG_DWARF_ELITE_SIEGE_TANK )
+    call SetBuildUpgr( 1, UPG_DWARF_BARRAGE )
+    call SetBuildUpgr( 1, UPG_DWARF_STORM_HAMMERS )
 	
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)

@@ -186,6 +186,8 @@ This version provides several new features compared to the original map [World o
 * New hero: Fel Beast.
 * New creep: Shivarra.
 * New race: Dwarf.
+* New hero: Dwarf Mage.
+* New hero: Khadgar.
 
 ## Bug Fixes
 
@@ -387,3 +389,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * communist_orc: [Gold Bars](https://www.hiveworkshop.com/threads/gold-bars.90227/)
 * The_Silent: [Medieval Wall](https://www.hiveworkshop.com/threads/medieval-wall.336600/)
 * Deolrin, ike_ike: [Human Mailbox](https://www.hiveworkshop.com/threads/human-mailbox.159694/)
+* Stefan.K: [Hero_Khadgar](https://www.hiveworkshop.com/threads/hero_khadgar.298518/)
+* loktar: [Khadgar](https://www.hiveworkshop.com/threads/khadgar.327433/)

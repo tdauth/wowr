@@ -1812,13 +1812,19 @@ endfunction
 
 // exclude certain buildings since every race can build them
 function IsBuildingAllRaces takes integer buildingID returns boolean
-    if (buildingID == 'n025') then // power generator
+    if (buildingID == 'n025') then // Power Generator
+        return true
+    elseif (buildingID == 'h014') then // Portal
         return true
     elseif (buildingID == 'h00N') then // Temple of Darkness
         return true
     elseif (buildingID == 'h00M') then // Temple of Light
         return true
     elseif (buildingID == 'h02M') then // Clan Hall
+        return true
+    elseif (buildingID == 'n04N') then // Clan Tower
+        return true
+    elseif (buildingID == 'n04M') then // Advanced Clan Tower
         return true
     elseif (buildingID == 'h020') then // Gate horizontal closed
         return true
@@ -1842,8 +1848,16 @@ function IsBuildingAllRaces takes integer buildingID returns boolean
 endfunction
 
 function MapAllRacesBuildingIDToItemID takes integer buildingID returns integer
-    if (buildingID == 'h02M') then // Clan Hall
+    if (buildingID == 'n025') then // Power Generator
+        return 'I05C'
+    elseif (buildingID == 'h014') then // Portal
+        return 'I05B'
+    elseif (buildingID == 'h02M') then // Clan Hall
         return 'I04I'
+    elseif (buildingID == 'n04N') then // Clan Tower
+        return 'I05A'
+    elseif (buildingID == 'n04M') then // Advanced Clan Tower
+        return 'I05A'
     elseif (buildingID == 'nft1') then // Flame Tower
         return 'I00T'
     elseif (buildingID == 'nft2') then // Advanced Flame Tower
@@ -2495,7 +2509,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-level1-" + I2S(heroLevel) + "-level2-" + I2S(heroLevel2) + "-level3-" + I2S(heroLevel3) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-level1-" + I2S(heroLevel) + "-level2-" + I2S(heroLevel2) + "-level3-" + I2S(heroLevel3) + ".txt")
 endfunction
 
 // use one single symbol to store these two flags
@@ -3311,7 +3325,7 @@ function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSing
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-buildings-" + I2S(buildings) + "-" + buildingNames + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-buildings-" + I2S(buildings) + "-" + buildingNames + ".txt")
 endfunction
 
 globals
@@ -3673,7 +3687,7 @@ function CreateSaveCodeItemsTextFile takes string playerName, boolean isSinglePl
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-items-" + I2S(items)  + "-" + itemNames + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-items-" + I2S(items)  + "-" + itemNames + ".txt")
 endfunction
 
 function GetSaveCodeItemsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, item itemSlot0, item itemSlot1, item itemSlot2, item itemSlot3, item itemSlot4, item itemSlot5 returns string
@@ -4062,7 +4076,7 @@ function CreateSaveCodeUnitsTextFile takes string playerName, boolean isSinglePl
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-units-" + I2S(units)  + "-" + unitNames + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-units-" + I2S(units)  + "-" + unitNames + ".txt")
 endfunction
 
 function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner, group source returns string
@@ -4358,7 +4372,7 @@ function CreateSaveCodeResearchesTextFile takes string playerName, boolean isSin
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-researches-" + I2S(researches)  + "-" + researchNames + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-researches-" + I2S(researches)  + "-" + researchNames + ".txt")
 endfunction
 
 function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, player owner returns string
@@ -4717,7 +4731,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
 function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, sound whichSound, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
@@ -5252,7 +5266,7 @@ function CreateSaveCodeAllTextFileEx takes string playerName, string saveCode, s
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd(GetSaveCodeFolderName() + "\\WorldOfWarcraftReforged-" + playerName + "-all.txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-all.txt")
 endfunction
 
 function CreateSaveCodeAllTextFile takes player whichPlayer returns nothing
