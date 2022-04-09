@@ -2509,7 +2509,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-level1-" + I2S(heroLevel) + "-level2-" + I2S(heroLevel2) + "-level3-" + I2S(heroLevel3) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerName + "-" + singlePlayerFileName + "-" + gameType + "-" + gameMode + "-level1-" + I2S(heroLevel) + "-level2-" + I2S(heroLevel2) + "-level3-" + I2S(heroLevel3) + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + ".txt")
 endfunction
 
 // use one single symbol to store these two flags
