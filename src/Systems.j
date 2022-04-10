@@ -1040,6 +1040,7 @@ function PrepareRandomDist takes integer highestCreepLevel returns nothing
 		call RandomDistAddItem('rat6', level6Percentage)
 		call RandomDistAddItem('rat6', level6Percentage)
 		call RandomDistAddItem('fgun', level6Percentage)
+		call RandomDistAddItem('stwp', level6Percentage)
 	endif
 
 	if (highestCreepLevel > 5) then
