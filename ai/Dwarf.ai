@@ -15,6 +15,7 @@ globals
 	constant integer DWARF_TOWER_CANNON                              = 'h03D' // tower 3
 	constant integer DWARF_ALTAR                                     = 'h033' // altar
 	constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
+	constant integer DWARF_MINE                                      = 'u00Y'
 	
 	constant integer DWARF_MINER                                     = 'h02Q' // worker
 	constant integer DWARF_TROLL_SLAYER                              = 'h02U'
@@ -65,7 +66,7 @@ globals
 
     constant integer DWARF_CITIZEN_MALE                              = 'n04S'
     constant integer DWARF_CITIZEN_FEMALE                            = 'n050'
-    constant integer DWARF_HOUSING                                   = 'h02H'
+    constant integer DWARF_HOUSING                                   = 'h02S'
 	constant integer PORTAL                                          = 'h014'
 	constant integer POWER_GENERATOR                                 = 'n025'
 	constant integer RESEARCH_TENT                                   = 'n042'
@@ -159,6 +160,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
 	call SetBuildUnit( 1, DWARF_TIER_1 )
+	call SetBuildUnit( 1, DWARF_MINE )
 	call SetBuildUnit( 22, DWARF_MINER )
 	call SetBuildUnit( 1, DWARF_BLACKSMITH )
 	call SetBuildUnit( 1, DWARF_ALTAR )
