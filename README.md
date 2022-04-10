@@ -175,7 +175,8 @@ This version provides several new features compared to the original map [World o
 * Fixed Computer player Gaia who provides some units on the map which can be rescued.
 * Chat command "-pingkeys" for ping secret keys on the map.
 * New research Improved Creep Hunter which increases the maximum creep level of certain unit abilities.
-* New item Feed made by the Research Tent which increases the hero level of all bosses.
+* New item Feed Bosses which increases the hero level of all bosses.
+* New item Feed AI which increases the hero level of all AI players.
 * More than one hero can be played by one single player.
 * Reveal neutral buildings for Freelancers from start.
 * Clans.
