@@ -5390,24 +5390,6 @@ function BackpackMouseUpItemFunction takes nothing returns nothing
     endif
 endfunction
 
-function GetItemTypeTooltip takes integer itemTypeId returns string
-    local item tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
-    local string tooltip = BlzGetItemTooltip(tmpItem)
-    call RemoveItem(tmpItem)
-    set tmpItem = null
-
-    return tooltip
-endfunction
-
-function GetItemTypeExtendedTooltip takes integer itemTypeId returns string
-    local item tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
-    local string tooltip = BlzGetItemExtendedTooltip(tmpItem)
-    call RemoveItem(tmpItem)
-    set tmpItem = null
-
-    return tooltip
-endfunction
-
 function BackpackEnterItemFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
     local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
@@ -5432,9 +5414,9 @@ function BackpackEnterItemFunction takes nothing returns nothing
                 set tooltip = tooltip + "|cffFCD20D" + I2S(GetItemValueLumber(udg_RucksackItemType[index])) + " Lumber|r"
             endif
 
-            set tooltip = tooltip + "|n|cff808080Drop item on shop to sell|R|n" + GetItemTypeExtendedTooltip(udg_RucksackItemType[index])
+            set tooltip = tooltip + "|n|cff808080Drop item on shop to sell|R|n" + udg_RucksackItemTooltipExtended(index)
         else
-            set tooltip = GetObjectName(udg_RucksackItemType[index]) + "|n|n" + GetItemTypeExtendedTooltip(udg_RucksackItemType[index])
+            set tooltip = GetObjectName(udg_RucksackItemType[index]) + "|n|n" + udg_RucksackItemTooltipExtended(index)
         endif
     endif
 
