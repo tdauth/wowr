@@ -110,7 +110,7 @@ This version provides several new features compared to the original map [World o
 * VIPs.
 * Random events for gold.
 * Neutral Citizens.
-* One additional hero later in the game.
+* Additional heroes later in the game.
 * Fountain of Blood which trains Fel Orcs.
 * Hidden bases at level 35.
 * World Tree for Night Elves.
@@ -188,6 +188,7 @@ This version provides several new features compared to the original map [World o
 * New race: Dwarf.
 * New hero: Dwarf Mage.
 * New hero: Khadgar.
+* New hero: Carsten.
 
 ## Bug Fixes
 
@@ -394,3 +395,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * xw1995327www: [Dark Portal <Azeroth>](https://www.hiveworkshop.com/threads/dark-portal-azeroth.338833/)
 * Mike: [All types castle (on standart textures)](https://www.hiveworkshop.com/threads/all-types-castle-on-standart-textures.273222/)
 * Mr. Bob: [Norse Hall](https://www.hiveworkshop.com/threads/norse-hall.127049/)
+* Rhapsodie: [Legends of Arkain - BloodStone Dwarfs](https://www.hiveworkshop.com/threads/legends-of-arkain-bloodstone-dwarfs.338535)

@@ -803,7 +803,9 @@ endfunction
 
 function InitCurrentGroup takes nothing returns nothing
     set udg_TmpGroupIndex = udg_TmpGroupIndex + 1
-    set udg_RespawnGroup[udg_TmpGroupIndex] = CreateGroup()
+    if (udg_RespawnGroup[udg_TmpGroupIndex] == null) then
+        set udg_RespawnGroup[udg_TmpGroupIndex] = CreateGroup()
+    endif
     set udg_CurrentRespawnGroup = udg_RespawnGroup[udg_TmpGroupIndex]
 endfunction
 
