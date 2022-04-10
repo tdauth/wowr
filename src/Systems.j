@@ -296,59 +296,42 @@ function DropBackpackForPlayer takes integer PlayerNumber, rect whichRect return
     endloop
 endfunction
 
+function DropQuestItemFromCreepHeroAtRect takes unit hero, integer itemTypeId, rect whichRect returns item
+    local item whichItem = null
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY or whichItem != null)
+        if (GetItemTypeId(UnitItemInSlot(hero, i)) == itemTypeId) then
+            call RemoveItem(UnitItemInSlot(hero, i))
+            set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            call SetItemInvulnerable(whichItem, true)
+        endif
+        set i = i + 1
+    endloop
+    return whichItem
+endfunction
+
 function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTypeId, rect whichRect returns item
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
-    local item whichItem = null
-    // Check the hero inventory
-    set I1 = 0
-    loop
-        exitwhen(I1 == bj_MAX_INVENTORY)
-        if (GetItemTypeId(UnitItemInSlot(udg_Hero[PlayerNumber], I1)) == itemTypeId) then
-            call RemoveItem(UnitItemInSlot(udg_Hero[PlayerNumber], I1))
-            set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-            call SetItemInvulnerable(whichItem, true)
-            exitwhen (true)
-        endif
-        set I1 = I1 + 1
-    endloop
+    local item whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero[PlayerNumber], itemTypeId, whichRect)
 	// Check second hero inventory
-	if (udg_Hero2[PlayerNumber] != null) then
-		set I1 = 0
-    		loop
-        		exitwhen(I1 == bj_MAX_INVENTORY)
-        		if (GetItemTypeId(UnitItemInSlot(udg_Hero2[PlayerNumber], I1)) == itemTypeId) then
-            			call RemoveItem(UnitItemInSlot(udg_Hero2[PlayerNumber], I1))
-            			set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-            			call SetItemInvulnerable(whichItem, true)
-            			exitwhen (true)
-        		endif
-        		set I1 = I1 + 1
-		endloop
+	if (whichItem == null and udg_Hero2[PlayerNumber] != null) then
+        set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero2[PlayerNumber], itemTypeId, whichRect)
 	endif
 	// Check third hero inventory
-	if (udg_Hero3[PlayerNumber] != null) then
-		set I1 = 0
-    		loop
-        		exitwhen(I1 == bj_MAX_INVENTORY)
-        		if (GetItemTypeId(UnitItemInSlot(udg_Hero3[PlayerNumber], I1)) == itemTypeId) then
-                    call RemoveItem(UnitItemInSlot(udg_Hero3[PlayerNumber], I1))
-                    set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-                    call SetItemInvulnerable(whichItem, true)
-                    exitwhen (true)
-        		endif
-        		set I1 = I1 + 1
-		endloop
+	if (whichItem == null and udg_Hero3[PlayerNumber] != null) then
+		set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero3[PlayerNumber], itemTypeId, whichRect)
 	endif
     // Check the backpack
     if (whichItem == null) then
         set I0 = 0
         loop
-            exitwhen(I0 == udg_RucksackMaxPages)
+            exitwhen(I0 == udg_RucksackMaxPages or whichItem != null)
             set I1 = 0
             loop
-                exitwhen(I1 == bj_MAX_INVENTORY)
+                exitwhen(I1 == bj_MAX_INVENTORY or whichItem != null)
                 set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
                 if (udg_RucksackItemType[index] == itemTypeId or (udg_RucksackPageNumber[PlayerNumber] == I0 and GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)) == itemTypeId)) then
                     if (udg_RucksackPageNumber[PlayerNumber] == I0) then
@@ -357,7 +340,6 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
                     call ClearRucksackItem(index)
                     set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
                     call SetItemInvulnerable(whichItem, true)
-                    exitwhen (true)
                 endif
                 set I1 = I1 + 1
             endloop
@@ -370,22 +352,6 @@ endfunction
 
 function DropQuestItemFromHeroAtRectByDyingUnit takes integer itemTypeId, rect whichRect returns item
     return DropQuestItemFromHeroAtRect(GetPlayerId(GetOwningPlayer(GetTriggerUnit())), itemTypeId, whichRect)
-endfunction
-
-function DropQuestItemFromCreepHeroAtRect takes unit hero, integer itemTypeId, rect whichRect returns item
-    local item whichItem = null
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        if (GetItemTypeId(UnitItemInSlot(hero, i)) == itemTypeId) then
-            call RemoveItem(UnitItemInSlot(hero, i))
-            set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
-            call SetItemInvulnerable(whichItem, true)
-            exitwhen (true)
-        endif
-        set i = i + 1
-    endloop
-    return whichItem
 endfunction
 
 function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns nothing
