@@ -5414,9 +5414,9 @@ function BackpackEnterItemFunction takes nothing returns nothing
                 set tooltip = tooltip + "|cffFCD20D" + I2S(GetItemValueLumber(udg_RucksackItemType[index])) + " Lumber|r"
             endif
 
-            set tooltip = tooltip + "|n|cff808080Drop item on shop to sell|R|n" + udg_RucksackItemTooltipExtended(index)
+            set tooltip = tooltip + "|n|cff808080Drop item on shop to sell|R|n" + udg_RucksackItemTooltipExtended[index]
         else
-            set tooltip = GetObjectName(udg_RucksackItemType[index]) + "|n|n" + udg_RucksackItemTooltipExtended(index)
+            set tooltip = GetObjectName(udg_RucksackItemType[index]) + "|n|n" + udg_RucksackItemTooltipExtended[index]
         endif
     endif
 
