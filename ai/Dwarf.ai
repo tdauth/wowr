@@ -1,7 +1,4 @@
 globals
-	constant integer DWARF_TIER_1                                    = 'h02R' // tier 1
-	constant integer DWARF_TIER_2                                    = 'h030' // tier 2
-	constant integer DWARF_TIER_3                                    = 'h031' // tier 3
 	constant integer DWARF_BARRACKS                                  = 'h02V' // barracks
 	constant integer DWARF_MYSTICAL_HALL                             = 'h037' // sanctum/damned temple
 	constant integer DWARF_BLACKSMITH                                = 'h02X' // lumber will and blacksmith
@@ -15,7 +12,7 @@ globals
 	constant integer DWARF_TOWER_CANNON                              = 'h03D' // tower 3
 	constant integer DWARF_ALTAR                                     = 'h033' // altar
 	constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
-	constant integer DWARF_MINE                                      = 'u00Y'
+	constant integer DWARF_MINE                                      = 'u011'
 	
 	constant integer DWARF_MINER                                     = 'h02Q' // worker
 	constant integer DWARF_TROLL_SLAYER                              = 'h02U'
