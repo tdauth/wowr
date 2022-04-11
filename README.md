@@ -183,6 +183,7 @@ This version provides several new features compared to the original map [World o
 * Bounties.
 * Goblin Bank.
 * Enable Warcraft's Item Stacking.
+* [Custom Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/).
 * New hero: Antonidas.
 * New hero: Fel Beast.
 * New creep: Shivarra.

@@ -4601,6 +4601,86 @@ function GetClanRankName takes integer rank returns string
     endif
 endfunction
 
+globals
+    timer clanResourceTimer = CreateTimer()
+    boolean clanResourceTimerStarted = false
+endglobals
+
+function TimerFunctionClanResources takes nothing returns nothing
+    local integer i = 0
+    local integer j = 0
+    local integer gold = 0
+    local integer lumber = 0
+    loop
+        exitwhen (i == udg_ClanCounter)
+        if (udg_ClanAIPlayer[i] != null) then
+            set gold = IMinBJ(100, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD))
+            set lumber = IMinBJ(100, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER))
+
+            set j = 0
+            loop
+                exitwhen (j == bj_MAX_PLAYERS)
+                if (IsPlayerInForce(Player(j), udg_ClanPlayers[i])) then
+                    if (gold > 0) then
+                        call SetPlayerStateBJ(Player(j), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(j), PLAYER_STATE_RESOURCE_GOLD) + gold / CountPlayersInForceBJ(udg_ClanPlayers[i]))
+                    endif
+                    if (lumber > 0) then
+                        call SetPlayerStateBJ(Player(j), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(j), PLAYER_STATE_RESOURCE_LUMBER) + lumber / CountPlayersInForceBJ(udg_ClanPlayers[i]))
+                    endif
+                    if (udg_ClanShowAIResourcesMessage[GetConvertedPlayerId(Player(i))] and gold > 0 or lumber > 0) then
+                        call DisplayTextToPlayer(Player(j), 0, 0, GetPlayerNameColored(udg_ClanAIPlayer[i]) + " gave your clan " + I2S(gold) + " gold and " + I2S(lumber) + " lumber which has been split amongst all online clan players. Enter \"-clanaioff\" to hide these messages.")
+                    endif
+                endif
+                set j = j + 1
+            endloop
+
+            if (gold > 0) then
+                call SetPlayerStateBJ(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD) - gold)
+            endif
+            if (lumber > 0) then
+                call SetPlayerStateBJ(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER) - lumber)
+            endif
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+
+/**
+ * Chooses one AI player to share gold and lumber with all clan players every X seconds.
+ */
+function PickClanAIPlayer takes integer clan returns player
+    local player result = null
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (Player(i) != udg_BossesPlayer and Player(i) != udg_TheBurningLegion and Player(i) != udg_TheAlliance and GetPlayerController(Player(i)) == MAP_CONTROL_COMPUTER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) then
+            if (result == null) then
+                set result = Player(i)
+            // prefer warlords due to more gold and lumber
+            elseif (result != null and udg_PlayerIsWarlord[GetConvertedPlayerId(Player(i))] and not udg_PlayerIsWarlord[GetConvertedPlayerId(result)]) then
+                set result = Player(i)
+            endif
+        endif
+        set i = i + 1
+    endloop
+
+    if (result != null) then
+        set udg_ClanAIPlayer[clan] = result
+        call TimerStart(clanResourceTimer, 30.0, true, function TimerFunctionClanResources)
+        set i = 0
+        loop
+            exitwhen (i == bj_MAX_PLAYERS)
+            if (IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+                set udg_ClanShowAIResourcesMessage[GetConvertedPlayerId(Player(i))] = true
+            endif
+            set i = i + 1
+        endloop
+    endif
+
+    return result
+endfunction
+
 function AppendClanSaveCodeMember takes string members, string playerName, integer playerRank returns string
     if (StringLength(playerName) > 0) then
         if (StringLength(members) > 0) then
@@ -4703,7 +4783,7 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
-function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, sound whichSound, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, sound whichSound, integer gold, integer lumber, boolean hasAIPlayer, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
     local string result = ""
     local integer clanSoundIndex = GetClanSoundIndex(whichSound)
 
@@ -4738,6 +4818,12 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
     set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank5) // 19
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(playerName6)) // 20
     set result = result + ConvertDecimalNumberToSaveCodeSegment(playerRank6) // 21
+
+    if (hasAIPlayer) then
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(1) // 22
+    else
+        set result = result + ConvertDecimalNumberToSaveCodeSegment(0) // 22
+    endif
 
     // checksum
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
@@ -4806,7 +4892,7 @@ function GetSaveCodeClan takes integer clan returns string
         set i = i + 1
     endloop
 
-    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanSound[clan], udg_ClanGold[clan], udg_ClanLumber[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanSound[clan], udg_ClanGold[clan], udg_ClanLumber[clan], udg_ClanHasAIPlayer[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
 endfunction
 
 function ApplySaveCodeClan takes player whichPlayer, string name, string s returns boolean
@@ -4835,6 +4921,7 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
     local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
     local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer clanHasAIPlayer = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4885,6 +4972,10 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
                         set udg_ClanPlayerClan[i + 1] = clan
                         call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
                         call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
+
+                        if (clanHasAIPlayer == 1) then
+                            call SetPlayerTechResearchedSwap('R046', 0, Player(i))
+                        endif
                     endif
 
                     if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0) then
@@ -4906,6 +4997,10 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
                 endloop
 
                 call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
+
+                if (atLeastOne) then
+                    call PickClanAIPlayer(clan)
+                endif
 
                 return atLeastOne
             else
@@ -5168,7 +5263,7 @@ function GetSaveCodeHumanUpgrades takes player whichPlayer, string playerName, b
 endfunction
 
 function GetSaveCodeStrongClan takes boolean singlePlayer, string playerName returns string
-    return GetSaveCodeClanEx(singlePlayer, "StrongClan", 'I04S', clanSound[1], 100000, 100000, 100, 100, playerName, udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "Toasty", udg_ClanRankCaptain, "", 0, "", 0, "", 0, "", 0)
+    return GetSaveCodeClanEx(singlePlayer, "StrongClan", 'I04S', clanSound[1], 100000, 100000, true, 100, 100, playerName, udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "Toasty", udg_ClanRankCaptain, "", 0, "", 0, "", 0, "", 0)
 endfunction
 
 function GenerateSaveCodes takes player whichPlayer returns nothing
@@ -7279,4 +7374,89 @@ function RandomLivingTreeDestructableInCircle takes real radius, location loc re
     set whichFilter = null
 
     return bj_destRandomCurrentPick
+endfunction
+
+// Baradé's Item Unstack System
+//
+// Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
+//
+// Usage:
+// - Enable Warcraft's native stack system in the "Advanced - Gameplay Constants - Inventory - Enable Item Stacking".
+// - Give certain item types a maximum stack value: "Stats - Max Stacks". Note that some of them like Wards do already have specified some values greater than 0 here.
+// - Copy this code into your map script.
+// - Call the function InitItemUnstackSystem during the map initialization.
+//
+// Recommended (optional):
+// - Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell - Double right click item to unstack|R" to guide the player.
+
+function ItemUnstackApplyItemProperties takes item sourceItem, item targetItem returns nothing
+    call BlzSetItemName(targetItem, GetItemName(sourceItem))
+    call BlzSetItemDescription(targetItem, BlzGetItemDescription(sourceItem))
+    call BlzSetItemTooltip(targetItem, BlzGetItemTooltip(sourceItem))
+    call BlzSetItemExtendedTooltip(targetItem, BlzGetItemExtendedTooltip(sourceItem))
+    //call BlzSetItemIconPath(targetItem, BlzGetItemIconPath(sourceItem)) // seems broken
+    call SetItemPawnable(targetItem, IsItemPawnable(sourceItem))
+    call SetItemInvulnerable(targetItem, IsItemInvulnerable(sourceItem))
+    if (GetItemPlayer(sourceItem) != null) then
+        call SetItemPlayer(targetItem, GetItemPlayer(sourceItem), false)
+    endif
+endfunction
+
+function TriggerConditionItemUnstack takes nothing returns boolean
+    return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetItemCharges(GetOrderTargetItem()) > 1 //and BlzGetItemIntegerField(GetOrderTargetItem(), ConvertItemIntegerField('ista')) > 1
+endfunction
+
+function TriggerActionItemUnstack takes nothing returns nothing
+    local unit hero = GetTriggerUnit()
+    local item whichItem = GetOrderTargetItem()
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer sourceSlot = -1
+    local item unstackedItem = null
+    local integer i = 0
+    loop
+        if (UnitItemInSlot(hero, i) == whichItem) then
+            set sourceSlot = i
+        endif
+        set i = i + 1
+        exitwhen (sourceSlot != -1 or i == bj_MAX_INVENTORY)
+    endloop
+    // should never happen
+    if (sourceSlot != -1) then
+        // complete the order
+        call TriggerSleepAction(0.0)
+        // item does still exist and was dropped on its previous slot
+        if (whichItem != null and GetWidgetLife(whichItem) > 0.0 and GetItemCharges(whichItem) > 0 and UnitItemInSlot(hero, sourceSlot) == whichItem) then
+            call SetItemCharges(whichItem, GetItemCharges(whichItem) - 1)
+            // search for a free slot to unstack the item
+            set i = 0
+            loop
+                if (UnitItemInSlot(hero, i) == null) then
+                    call UnitAddItemToSlotById(hero, itemTypeId, i)
+                    set unstackedItem = UnitItemInSlot(hero, i)
+                    call SetItemCharges(unstackedItem, 1)
+                    call ItemUnstackApplyItemProperties(whichItem, unstackedItem)
+                endif
+                set i = i + 1
+                exitwhen (unstackedItem != null or i == bj_MAX_INVENTORY)
+            endloop
+            // create the item for the hero with one slot if all slots are used
+            if (unstackedItem == null) then
+                set unstackedItem = CreateItem(itemTypeId, GetUnitX(hero), GetUnitY(hero))
+                call SetItemCharges(unstackedItem, 1)
+                call ItemUnstackApplyItemProperties(whichItem, unstackedItem)
+            endif
+
+            set unstackedItem = null
+        endif
+    endif
+
+    set hero = null
+    set whichItem = null
+endfunction
+
+function InitItemUnstackSystem takes nothing returns nothing
+    local trigger whichTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(whichTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddCondition(whichTrigger, Condition(function TriggerConditionItemUnstack))
+    call TriggerAddAction(whichTrigger, function TriggerActionItemUnstack)
 endfunction
