@@ -7376,7 +7376,7 @@ function RandomLivingTreeDestructableInCircle takes real radius, location loc re
     return bj_destRandomCurrentPick
 endfunction
 
-// Baradé's Item Unstack System
+// Baradé's Item Unstack System 1.1
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
 //
@@ -7387,14 +7387,29 @@ endfunction
 // - Call the function InitItemUnstackSystem during the map initialization.
 //
 // Recommended (optional):
-// - Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell - Double right click item to unstack|R" to guide the player.
+// - Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell|NDouble right click item to unstack|R" to guide the player.
+//
+// Download:
+// https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-1.339109/
+//
+// Change Log:
+//
+// 1.1 2022-04-11:
+// - Split into multiple functions.
+// - Do not apply item name, tooltip and icon path on unstacking since it is broken.
+// - Prefer the nearest empty slot on unstacking.
+// - Add a line break to the unstacking hint.
+// - Add some items with custom names and descriptions to test stacking/unstacking them.
+// - Move system code into converted trigger.
+// - Update preview image.
 
 function ItemUnstackApplyItemProperties takes item sourceItem, item targetItem returns nothing
-    call BlzSetItemName(targetItem, GetItemName(sourceItem))
+    // some seem broken
+    //call BlzSetItemName(targetItem, GetItemName(sourceItem))
     call BlzSetItemDescription(targetItem, BlzGetItemDescription(sourceItem))
-    call BlzSetItemTooltip(targetItem, BlzGetItemTooltip(sourceItem))
+    //call BlzSetItemTooltip(targetItem, BlzGetItemTooltip(sourceItem))
     call BlzSetItemExtendedTooltip(targetItem, BlzGetItemExtendedTooltip(sourceItem))
-    //call BlzSetItemIconPath(targetItem, BlzGetItemIconPath(sourceItem)) // seems broken
+    //call BlzSetItemIconPath(targetItem, BlzGetItemIconPath(sourceItem))
     call SetItemPawnable(targetItem, IsItemPawnable(sourceItem))
     call SetItemInvulnerable(targetItem, IsItemInvulnerable(sourceItem))
     if (GetItemPlayer(sourceItem) != null) then
@@ -7402,16 +7417,8 @@ function ItemUnstackApplyItemProperties takes item sourceItem, item targetItem r
     endif
 endfunction
 
-function TriggerConditionItemUnstack takes nothing returns boolean
-    return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetItemCharges(GetOrderTargetItem()) > 1 //and BlzGetItemIntegerField(GetOrderTargetItem(), ConvertItemIntegerField('ista')) > 1
-endfunction
-
-function TriggerActionItemUnstack takes nothing returns nothing
-    local unit hero = GetTriggerUnit()
-    local item whichItem = GetOrderTargetItem()
-    local integer itemTypeId = GetItemTypeId(whichItem)
+function ItemUnstackGetItemSlot takes unit hero, item whichItem returns integer
     local integer sourceSlot = -1
-    local item unstackedItem = null
     local integer i = 0
     loop
         if (UnitItemInSlot(hero, i) == whichItem) then
@@ -7420,38 +7427,68 @@ function TriggerActionItemUnstack takes nothing returns nothing
         set i = i + 1
         exitwhen (sourceSlot != -1 or i == bj_MAX_INVENTORY)
     endloop
-    // should never happen
-    if (sourceSlot != -1) then
-        // complete the order
-        call TriggerSleepAction(0.0)
-        // item does still exist and was dropped on its previous slot
-        if (whichItem != null and GetWidgetLife(whichItem) > 0.0 and GetItemCharges(whichItem) > 0 and UnitItemInSlot(hero, sourceSlot) == whichItem) then
-            call SetItemCharges(whichItem, GetItemCharges(whichItem) - 1)
-            // search for a free slot to unstack the item
-            set i = 0
-            loop
-                if (UnitItemInSlot(hero, i) == null) then
-                    call UnitAddItemToSlotById(hero, itemTypeId, i)
-                    set unstackedItem = UnitItemInSlot(hero, i)
-                    call SetItemCharges(unstackedItem, 1)
-                    call ItemUnstackApplyItemProperties(whichItem, unstackedItem)
-                endif
-                set i = i + 1
-                exitwhen (unstackedItem != null or i == bj_MAX_INVENTORY)
-            endloop
-            // create the item for the hero with one slot if all slots are used
-            if (unstackedItem == null) then
-                set unstackedItem = CreateItem(itemTypeId, GetUnitX(hero), GetUnitY(hero))
-                call SetItemCharges(unstackedItem, 1)
-                call ItemUnstackApplyItemProperties(whichItem, unstackedItem)
-            endif
+    return sourceSlot
+endfunction
 
-            set unstackedItem = null
+function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId, integer sourceSlot returns item
+    // we need to specify the target slot explicitly to prevent stacking the items again
+    // we prefer empty slots next to the unstacked item
+    local item unstackedItem = null
+    local integer i = sourceSlot + 1
+    local integer j = sourceSlot - 1
+    loop
+        if (i < bj_MAX_INVENTORY and UnitItemInSlot(hero, i) == null) then
+            call UnitAddItemToSlotById(hero, itemTypeId, i)
+            set unstackedItem = UnitItemInSlot(hero, i)
+        elseif (j >= 0 and UnitItemInSlot(hero, j) == null) then
+            call UnitAddItemToSlotById(hero, itemTypeId, j)
+            set unstackedItem = UnitItemInSlot(hero, j)
         endif
+        set i = i + 1
+        set j = j - 1
+        exitwhen (unstackedItem != null or (i >= bj_MAX_INVENTORY and j < 0))
+    endloop
+    return unstackedItem
+endfunction
+
+function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer itemTypeId, integer sourceSlot returns item
+    // search for a free slot to unstack the item
+    local item unstackedItem = ItemUnstackAddItemToNearestFreeSlot(hero, itemTypeId, sourceSlot)
+    // create the item for the hero with one slot if all slots are used
+    if (unstackedItem == null) then
+        set unstackedItem = CreateItem(itemTypeId, GetUnitX(hero), GetUnitY(hero))
+    endif
+
+    return unstackedItem
+endfunction
+
+function ItemUnstackAddItemToNearestFreeSlotOrGroundUnstack takes unit hero, integer itemTypeId, integer sourceSlot, item sourceItem returns nothing
+    local item unstackedItem = ItemUnstackAddItemToNearestFreeSlotOrGround(hero, itemTypeId, sourceSlot)
+    call SetItemCharges(unstackedItem, 1)
+    call ItemUnstackApplyItemProperties(sourceItem, unstackedItem)
+    set unstackedItem = null
+endfunction
+
+function TriggerConditionItemUnstack takes nothing returns boolean
+    return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetItemCharges(GetOrderTargetItem()) > 1 and ItemUnstackGetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
+endfunction
+
+function TriggerActionItemUnstack takes nothing returns nothing
+    local unit hero = GetTriggerUnit()
+    local item sourceItem = GetOrderTargetItem()
+    local integer sourceItemTypeId = GetItemTypeId(sourceItem)
+    local integer sourceSlot = ItemUnstackGetItemSlot(hero, sourceItem)
+    // wait for completing the order or the item is not at the target slot
+    call TriggerSleepAction(0.0)
+    // item does still exist and was dropped on its previous slot
+    // we are not sure if this works when the item is removed via triggers since the value of the variable becomes an invalid reference
+    if (sourceItem != null and GetWidgetLife(sourceItem) > 0.0 and GetItemCharges(sourceItem) > 0 and UnitItemInSlot(hero, sourceSlot) == sourceItem) then
+        call SetItemCharges(sourceItem, GetItemCharges(sourceItem) - 1)
+        call ItemUnstackAddItemToNearestFreeSlotOrGroundUnstack(hero, sourceItemTypeId, sourceSlot, sourceItem)
     endif
 
     set hero = null
-    set whichItem = null
+    set sourceItem = null
 endfunction
 
 function InitItemUnstackSystem takes nothing returns nothing
