@@ -2405,7 +2405,7 @@ function ConvertSaveCodeDemigodValueToInfo takes integer value returns string
     return "No Demigod"
 endfunction
 
-function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer demigodValue, string saveCode returns nothing
+function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string gameMode = "Freelancer"
@@ -2456,6 +2456,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     set content = content + AppendFileContent("Improved Mount: " + I2S(mountLevel))
     set content = content + AppendFileContent("Improved Masonry: " + I2S(masonryLevel))
     set content = content + AppendFileContent("Improved Navy: " + I2S(improvedNavyLevel))
+    set content = content + AppendFileContent("Improved Creep Hunter: " + I2S(improvedCreepHunterLevel))
     set content = content + AppendFileContent("Hero Kills: " + I2S(heroKills))
     set content = content + AppendFileContent("Hero Deaths: " + I2S(heroDeaths))
     set content = content + AppendFileContent("Unit Kills: " + I2S(unitKills))
@@ -2530,7 +2531,7 @@ function GetWarlordFromSaveCodeSegment takes integer saveCodeSegment returns boo
     return false
 endfunction
 
-function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer demigodValue returns string
+function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -2574,6 +2575,7 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
 
     // upgrades
     set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedNavyLevel)
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(improvedCreepHunterLevel)
 
     // demigod
     set result = result + ConvertDecimalNumberToSaveCodeSegment(demigodValue)
@@ -2586,7 +2588,7 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
     endif
 
-    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, demigodValue, result)
+    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, demigodValue, result)
 
     call AddGeneratedSaveCode(result)
 
@@ -2601,6 +2603,7 @@ globals
 	constant integer UPG_IMPROVED_HAND_OF_GOD                        = 'R00V'
 	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
 	constant integer UPG_IMPROVED_NAVY                               = 'R035'
+	constant integer UPG_IMPROVED_CREEP_HUNTER                       = 'R02Z'
 endglobals
 
 function GetSaveCodeDemigodValue takes integer unitTypeId returns integer
@@ -2648,13 +2651,14 @@ function GetSaveCode takes player whichPlayer returns string
     local integer heroLevel3 = GetHeroLevel(udg_Held3[GetConvertedPlayerId(whichPlayer)])
     local integer xp3 = GetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)])
     local integer improvedNavyLevel = GetPlayerTechCountSimple(UPG_IMPROVED_NAVY, whichPlayer)
+    local integer improvedCreepHunterLevel = GetPlayerTechCountSimple(UPG_IMPROVED_CREEP_HUNTER, whichPlayer)
 
     if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null) then
         set xp2 = udg_Held2XP[GetConvertedPlayerId(whichPlayer)]
         set heroLevel2 = 0 // TODO Set hero level by XP
     endif
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, GetSaveCodeDemigodValue(GetUnitTypeId(udg_Held[GetConvertedPlayerId(whichPlayer)])))
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(GetUnitTypeId(udg_Held[GetConvertedPlayerId(whichPlayer)])))
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -2802,7 +2806,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
     local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
-    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -2838,6 +2843,7 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
             call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
             call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
             call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_NAVY, improvedNavyLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_CREEP_HUNTER, improvedCreepHunterLevel)
 
             set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
             set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
@@ -2990,7 +2996,8 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
     local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
-    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
     local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
     local string result = ""
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
@@ -3033,6 +3040,7 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     set result = AppendSaveCodeInfo(result, "Mount: " + I2S(mountLevel))
     set result = AppendSaveCodeInfo(result, "Masonry: " + I2S(masonryLevel))
     set result = AppendSaveCodeInfo(result, "Navy: " + I2S(improvedNavyLevel))
+    set result = AppendSaveCodeInfo(result, "Creep Hunter: " + I2S(improvedCreepHunterLevel))
     set result = AppendSaveCodeInfo(result, "Hero Kills: " + I2S(heroKills))
     set result = AppendSaveCodeInfo(result, "Hero Deaths: " + I2S(heroDeaths))
     set result = AppendSaveCodeInfo(result, "Hero Kills: " + I2S(unitKills))
@@ -5134,11 +5142,11 @@ function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, str
 endfunction
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 2)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2)
 endfunction
 
 function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 0)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0)
 endfunction
 
 function ForGroupRemoveUnit takes nothing returns nothing
