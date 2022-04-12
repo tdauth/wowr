@@ -191,6 +191,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Dwarf Mage.
 * New hero: Khadgar.
 * New hero: Carsten.
+* New hero: Ranger.
 
 ## Bug Fixes
 
