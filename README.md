@@ -192,6 +192,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Khadgar.
 * New hero: Carsten.
 * New hero: Ranger.
+* New race: High Elf.
 
 ## Bug Fixes
 
@@ -399,3 +400,10 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mike: [All types castle (on standart textures)](https://www.hiveworkshop.com/threads/all-types-castle-on-standart-textures.273222/)
 * Mr. Bob: [Norse Hall](https://www.hiveworkshop.com/threads/norse-hall.127049/)
 * Rhapsodie: [Legends of Arkain - BloodStone Dwarfs](https://www.hiveworkshop.com/threads/legends-of-arkain-bloodstone-dwarfs.338535)
+* MatiS: [High Elven Buildings](https://www.hiveworkshop.com/threads/high-elven-buildings.285905/)
+* Chen: [RiderlessDragonhawk](https://www.hiveworkshop.com/threads/riderlessdragonhawk.241745/)
+* garfield: [RiddenWarEagle](https://www.hiveworkshop.com/threads/riddenwareagle.49258/)
+* supertoinkz: [Elven Ranger](https://www.hiveworkshop.com/threads/elven-ranger.181402/)
+* Elenai: [ElvenArchCleric](https://www.hiveworkshop.com/threads/elvenarchcleric.48586/)
+* bakr: [Elf Village Buildings](https://www.hiveworkshop.com/threads/elf-village-buildings.336692/)
+* Cavman, Hawkwing, Mr.Goblin: [High Elf Judicator](https://www.hiveworkshop.com/threads/high-elf-judicator.121803/)
