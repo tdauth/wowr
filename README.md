@@ -193,6 +193,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Carsten.
 * New hero: Ranger.
 * New race: High Elf.
+* [Custom Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
 
 ## Bug Fixes
 
