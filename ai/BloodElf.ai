@@ -5,6 +5,7 @@ globals
 	constant integer BLOOD_ELF_BLACK_SMITH                        = 'h00D' // blacksmith
 	constant integer BLOOD_ELF_LUMBER_MILL                        = 'h00F' // lumber mill
 	constant integer BLOOD_ELF_WORKSHOP                           = 'h013' // workshop
+	constant integer BLOOD_ELF_PHOENIX_EGG                        = 'h04P' // aviary
 	constant integer BLOOD_ELF_MAGIC_VAULT                        = 'n038' // special building
 	
 	constant integer UPG_BLOOD_ELF_BREEDING                       = 'R000'
@@ -20,7 +21,9 @@ globals
 	constant integer UPG_BLOOD_ELF_LEATHER                        = 'R005'
 	constant integer UPG_BLOOD_ELF_BURNING_OIL                    = 'R00Y'
 	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                 = 'R00Z'
-	
+    constant integer UPG_BLOOD_ELF_CONT_MAGIC                     = 'R04A'
+    constant integer UPG_BLOOD_ELF_CLOUD                          = 'R04B'
+
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS            = 'R00B'
 	constant integer UPG_STORM_PROTECTION                         = 'R029'
 	constant integer UPG_EVOLUTION                                = 'R00U'
@@ -33,6 +36,9 @@ globals
 	constant integer BLOOD_ELF_WAGON                              = 'h012'
 	constant integer BLOOD_ELF_BALLISTA                           = 'e00C'
 	constant integer BLOOD_ELF_CAGE                               = 'e00D'
+	constant integer BLOOD_ELF_DRAGON_HAWK                        = 'h04M'
+	constant integer BLOOD_ELF_SPELL_BREAKER                      = 'h04N'
+	constant integer BLOOD_ELF_PHOENIX                            = 'h04O'
 
     constant integer BLOOD_ELF_CITIZEN_MALE                       = 'n00K'
     constant integer BLOOD_ELF_CITIZEN_FEMALE                     = 'n00L'
@@ -173,6 +179,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 5, HOUSE )
 	call SetBuildUnit( 1, ELF_GUARD_TOWER )
 	call SetBuildUnit( 1, ARCANE_TOWER )
+	call SetBuildUnit( 1, BLOOD_ELF_PHOENIX_EGG )
 	call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )
 	call SetBuildUnit( 1, POWER_GENERATOR )
 	call SetBuildUnit( 1, RESEARCH_TENT )
@@ -190,9 +197,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BURNING_OIL )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
-	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
 	call SetBuildUpgr( 1, UPG_SENTINEL )
-	call SetBuildUpgr( 1, UPG_CLOUD )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
 	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
 	call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
 
@@ -346,7 +353,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -355,7 +362,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -365,7 +372,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
     call CampaignAttackerEx( 1, 2, 3, SORCERESS )
     call AddStandardUnitsToAttackWave()
@@ -376,10 +383,10 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
 	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -389,10 +396,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
 	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -402,10 +409,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
 	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -415,10 +422,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
 	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
 	call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -429,10 +436,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
     call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
 	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
+    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
     call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
 	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
 	call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -446,7 +453,7 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 4, 4, 4, HIGH_SWORDMAN )
 		call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
 		call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-		call CampaignAttackerEx( 4, 4, 4, SPELL_BREAKER )
+		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_SPELL_BREAKER )
 		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_PRIEST )
 		call CampaignAttackerEx( 4, 4, 4, SORCERESS )
 		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_LIEUTENANT )
@@ -455,7 +462,8 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
 		
 		// big air army
-        call CampaignAttackerEx( 15, 20, 25, HUMAN_DRAGON_HAWK )
+        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_DRAGON_HAWK )
+        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_PHOENIX )
 
 		call AddStandardUnitsToAttackWave()
 		call Sleep( M2 ) // Waits 2 minutes before attacking

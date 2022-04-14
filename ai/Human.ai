@@ -257,6 +257,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BREEDING )
 	call SetBuildUpgr( 1, UPG_HAMMERS )
 	call SetBuildUpgr( 1, UPG_BOMBS )
+	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
+	call SetBuildUpgr( 1, UPG_CLOUD )
+
 	call SetBuildUpgr( 1, 'Rhsb' ) // sundering blades
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
@@ -468,6 +471,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -480,6 +484,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 2, 2, 3, GRYPHON )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -493,6 +498,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, MORTAR )
     call CampaignAttackerEx( 2, 2, 3, PRIEST )
     call CampaignAttackerEx( 2, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
     call CampaignAttackerEx( 2, 2, 3, GRYPHON )
     call CampaignAttackerEx( 2, 2, 3, TANK )
     call AddStandardUnitsToAttackWave()
@@ -510,10 +516,12 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 3, 3, 3, MORTAR )
 		call CampaignAttackerEx( 3, 3, 3, PRIEST )
 		call CampaignAttackerEx( 3, 3, 3, SORCERESS )
+		call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
 		call CampaignAttackerEx( 3, 3, 3, TANK )
 		
 		// big air army
-        call CampaignAttackerEx( 15, 20, 25, GRYPHON )
+        call CampaignAttackerEx( 8, 12, 18, GRYPHON )
+        call CampaignAttackerEx( 8, 12, 18, HUMAN_DRAGON_HAWK )
         
 		call AddStandardUnitsToAttackWave()
 		call Sleep( M2 ) // Waits 2 minutes before attacking
