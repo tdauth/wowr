@@ -7807,3 +7807,89 @@ function InitBlackArrowSystem takes nothing returns nothing
     call BlackArrowAddStandardObjectData()
     call BlackArrowAddAllUnitsWithOrbs()
 endfunction
+
+// Wall System
+
+globals
+    hashtable WallHashTable = InitHashtable()
+
+    constant integer WALL_DIRECTION_WEST = 0
+    constant integer WALL_DIRECTION_EAST = 1
+    constant integer WALL_DIRECTION_NORTH = 2
+    constant integer WALL_DIRECTION_SOUTH = 3
+
+    constant integer WALL_STRAIGHT_HORIZONTAL = 'h04R'
+    constant integer WALL_END_WEST = 'h04S'
+endglobals
+
+function GetAngleFromWallDirection takes integer direction returns real
+    if (direction == WALL_DIRECTION_WEST) then
+        return 180.0
+    elseif (direction == WALL_DIRECTION_EAST) then
+        return 0.0
+    elseif (direction == WALL_DIRECTION_NORTH) then
+        return 90.0
+    elseif (direction == WALL_DIRECTION_SOUTH) then
+        return 270.0
+    endif
+    return 0.0
+endfunction
+
+function FilterFunctionWall takes nothing returns boolean
+    return GetUnitTypeId(GetFilterUnit()) == WALL_STRAIGHT_HORIZONTAL or GetUnitTypeId(GetFilterUnit()) == WALL_END_WEST
+endfunction
+
+function GetWallNeighbour takes unit wall, integer direction returns unit
+    local group whichGroup = CreateGroup()
+    local real angle = GetAngleFromWallDirection(direction)
+    local real x = PolarProjectionX(GetUnitX(wall), angle, 128.0)
+    local real y = PolarProjectionY(GetUnitY(wall), angle, 128.0)
+    local unit first = null
+    local unit result = null
+    call GroupEnumUnitsInRange(whichGroup, x, y, 128.0, Filter(function FilterFunctionWall))
+    loop
+        set first = FirstOfGroup(whichGroup)
+        exitwhen (first == null)
+        call GroupRemoveUnit(whichGroup, first)
+        if (GetOwningPlayer(wall) == GetOwningPlayer(first)) then
+            set result = first
+        endif
+    endloop
+
+    call GroupClear(whichGroup)
+    call DestroyGroup(whichGroup)
+    set whichGroup = null
+
+    return result
+endfunction
+
+function GetWallType takes unit wall returns integer
+    local unit west = GetWallNeighbour(wall, WALL_DIRECTION_WEST)
+    local unit east = GetWallNeighbour(wall, WALL_DIRECTION_EAST)
+    local unit north = GetWallNeighbour(wall, WALL_DIRECTION_NORTH)
+    local unit south = GetWallNeighbour(wall, WALL_DIRECTION_SOUTH)
+
+    // TODO The type should depend on the rest of types.
+
+    return WALL_STRAIGHT_HORIZONTAL
+endfunction
+
+function ConstructWall takes unit wall returns unit
+    local destructable invisiblePlatform = CreateDestructable('B004', GetUnitX(wall), GetUnitY(wall), bj_UNIT_FACING, 1.0, 0)
+    call SetDestructableInvulnerable(invisiblePlatform, true)
+    call ChangeElevatorHeight(invisiblePlatform, 2)
+    call ChangeElevatorWalls(false, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
+    call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_NORTH, invisiblePlatform)
+    call SaveDestructableHandle(WallHashTable, GetHandleId(wall), 0, invisiblePlatform)
+    // TODO Replace the unit and change the walls depending on the other stuff
+    return ReplaceUnitBJ(wall, WALL_STRAIGHT_HORIZONTAL, bj_UNIT_STATE_METHOD_RELATIVE)
+endfunction
+
+function RemoveWall takes unit wall returns nothing
+    local destructable invisiblePlatform = LoadDestructableHandle(WallHashTable, GetHandleId(wall), 0)
+    call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
+    call RemoveDestructable(invisiblePlatform)
+    set invisiblePlatform = null
+    call RemoveUnit(wall)
+    set wall = null
+endfunction

@@ -197,6 +197,7 @@ This version provides several new features compared to the original map [World o
 * Dragonhawk Mounts.
 * Human can train Spellbreakers and Dragonhawk Riders.
 * Phoenix Egg building for Blood Elf.
+* Walls.
 
 ## Bug Fixes
 
@@ -411,3 +412,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Elenai: [ElvenArchCleric](https://www.hiveworkshop.com/threads/elvenarchcleric.48586/)
 * bakr: [Elf Village Buildings](https://www.hiveworkshop.com/threads/elf-village-buildings.336692/)
 * Cavman, Hawkwing, Mr.Goblin: [High Elf Judicator](https://www.hiveworkshop.com/threads/high-elf-judicator.121803/)
+* Em!: [Birdiepult](https://www.hiveworkshop.com/threads/birdiepult.291386/)
+* The_Silent: [Medieval Wall](https://www.hiveworkshop.com/threads/medieval-wall.336600/)
+* Eagle XI: [BTNStonewall](https://www.hiveworkshop.com/threads/btnstonewall.275743/)
