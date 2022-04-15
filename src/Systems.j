@@ -5827,6 +5827,10 @@ function StringToken takes string source, integer index returns string
     return result
 endfunction
 
+function StringTokenEnteredChatMessage takes integer index returns string
+    return StringToken(GetEventPlayerChatString(), index)
+endfunction
+
 function SetSaveCodeUITooltip takes player whichPlayer, string tooltip returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], tooltip)
 endfunction
