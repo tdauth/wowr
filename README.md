@@ -418,3 +418,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Em!: [Birdiepult](https://www.hiveworkshop.com/threads/birdiepult.291386/)
 * The_Silent: [Medieval Wall](https://www.hiveworkshop.com/threads/medieval-wall.336600/)
 * Eagle XI: [BTNStonewall](https://www.hiveworkshop.com/threads/btnstonewall.275743/)
+* Darkfang: [Orb of the Sun](https://www.hiveworkshop.com/threads/orb-of-the-sun.288765/)
+* General Frank: [Orb of Fire](https://www.hiveworkshop.com/threads/orb-of-fire.106241/#resource-26079)

@@ -5062,6 +5062,8 @@ function GetSaveCodeInfosClan takes string name, string s returns string
     local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
     local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
     local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer clanHasAIPlayer = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local string clanHasAIPlayerText = "No AI player"
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -5088,6 +5090,10 @@ function GetSaveCodeInfosClan takes string name, string s returns string
         set singlePlayerStatus = "Singleplayer"
     endif
 
+    if (clanHasAIPlayer == 1) then
+        set clanHasAIPlayerText = "Has AI player"
+    endif
+
     set result = AppendSaveCodeInfo(result, "Checksum: " + checksumStatus)
     set result = AppendSaveCodeInfo(result, "Game: " + singlePlayerStatus)
     set result = AppendSaveCodeInfo(result, "Name: " + name)
@@ -5097,6 +5103,7 @@ function GetSaveCodeInfosClan takes string name, string s returns string
     set result = AppendSaveCodeInfo(result, "Lumber: " + I2S(lumber))
     set result = AppendSaveCodeInfo(result, "Improved Clan Hall: " + I2S(improvedClanHallLevel))
     set result = AppendSaveCodeInfo(result, "Improved Clan: " + I2S(improvedClanLevel))
+    set result = AppendSaveCodeInfo(result, "Clan has AI player: " + clanHasAIPlayerText)
     set result = AppendSaveCodeInfo(result, "Player 1 Name: " + GetClanPlayerName(playerNameHash0))
     set result = AppendSaveCodeInfo(result, "Player 1 Rank: " + GetClanRankName(playerRank0))
     set result = AppendSaveCodeInfo(result, "Player 2 Name: " + GetClanPlayerName(playerNameHash1))
