@@ -198,6 +198,8 @@ This version provides several new features compared to the original map [World o
 * Human can train Spellbreakers and Dragonhawk Riders.
 * Phoenix Egg building for Blood Elf.
 * Walls.
+* Automatically improve summoned units per hero ability level.
+* Easter Egg.
 
 ## Bug Fixes
 
