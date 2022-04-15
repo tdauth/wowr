@@ -5141,12 +5141,12 @@ function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, str
     return result
 endfunction
 
-function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2)
+function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2)
 endfunction
 
-function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, 130, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0)
+function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0)
 endfunction
 
 function ForGroupRemoveUnit takes nothing returns nothing
@@ -5281,6 +5281,7 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
     local boolean array singlePlayer
     local integer warlordSize = 2
     local boolean array warlord
+    local integer xpRate = 100
     local integer i = 0
     local integer j = 0
     local integer k = 0
@@ -5300,8 +5301,11 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
             set k = 0
             loop
                 exitwhen (k >= warlordSize)
-                call GetSaveCodeStrong(playerName[i], singlePlayer[j], warlord[k])
-                call GetSaveCodeNormal(playerName[i], singlePlayer[j], warlord[k])
+                if (not warlord[k]) then
+                    set xpRate = 130
+                endif
+                call GetSaveCodeStrong(playerName[i], singlePlayer[j], warlord[k], xpRate)
+                call GetSaveCodeNormal(playerName[i], singlePlayer[j], warlord[k], xpRate)
                 call GetSaveCodeBase(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
                 call GetSaveCodeDragonUnits(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
                 call GetSaveCodeGoodItems(playerName[i], singlePlayer[j], warlord[k])
@@ -6076,11 +6080,15 @@ function SaveCodeUILoadHeroes takes player whichPlayer returns nothing
     local string saveCode = FormattedSaveCodeHeroes(GetSaveCodeUIHeroesText(whichPlayer))
     //call BJDebugMsg("Click load heroes")
 
-    // TODO Check and Apply cooldowns!
-    if (ApplySaveCode(whichPlayer, saveCode)) then
-        call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+    if (TimerGetRemaining(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCode(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownHeroes)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        endif
     else
-        call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        call SetSaveCodeUITooltip(whichPlayer, "You can load hero savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)]))))
     endif
 endfunction
 
@@ -7876,13 +7884,13 @@ endfunction
 
 function ConstructWall takes unit wall returns unit
     local destructable invisiblePlatform = CreateDestructable('B004', GetUnitX(wall), GetUnitY(wall), bj_UNIT_FACING, 1.0, 0)
+    local unit result = ReplaceUnitBJ(wall, WALL_STRAIGHT_HORIZONTAL, bj_UNIT_STATE_METHOD_RELATIVE) // TODO Replace the unit and change the walls depending on the other stuff
     call SetDestructableInvulnerable(invisiblePlatform, true)
     call ChangeElevatorHeight(invisiblePlatform, 2)
     call ChangeElevatorWalls(false, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
     call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_NORTH, invisiblePlatform)
-    call SaveDestructableHandle(WallHashTable, GetHandleId(wall), 0, invisiblePlatform)
-    // TODO Replace the unit and change the walls depending on the other stuff
-    return ReplaceUnitBJ(wall, WALL_STRAIGHT_HORIZONTAL, bj_UNIT_STATE_METHOD_RELATIVE)
+    call SaveDestructableHandle(WallHashTable, GetHandleId(result), 0, invisiblePlatform)
+    return result
 endfunction
 
 function RemoveWall takes unit wall returns nothing
