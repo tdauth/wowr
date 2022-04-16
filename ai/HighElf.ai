@@ -1,0 +1,498 @@
+globals
+    constant integer HIGH_ELF_FARM                                = 'h04B' // farm
+	constant integer HIGH_ELF_MAGE_TOWER                          = 'h043' // arcane
+	constant integer HIGH_ELF_ALTAR                               = 'h042' // altar
+	constant integer HIGH_ELF_BAZAAR                              = 'h04D' // shop
+	constant integer HIGH_ELF_BARRACKS                            = 'h044' // barracks
+	constant integer HIGH_ELF_ENCHANTER_TOWER                     = 'h04I' // blacksmith/lumber mill
+	constant integer HIGH_ELF_STABLES                             = 'h04F' // barracks 2/workshop
+	constant integer HIGH_ELF_AVIARY                              = 'h045' // aviary
+	constant integer HIGH_ELF_DRAGON_NEXUS                        = 'h04J' // boneyard
+	constant integer HIGH_ELF_SUNWELL                             = 'n05F' // special building
+
+	constant integer UPG_BLOOD_ELF_BREEDING                       = 'R000'
+	constant integer UPG_HIGH_ELF_BOWS                            = 'R04G'
+	constant integer UPG_HIGH_ELF_WOOD                            = 'R04H'
+	constant integer UPG_HIGH_ELF_MASONRY                         = 'R04K'
+	constant integer UPG_HIGH_ELF_MELEE                           = 'R04M'
+	constant integer UPG_HIGH_ELF_ARMOR                           = 'R04N'
+	constant integer UPG_HIGH_ELF_MARKSMAN                        = 'R04D'
+	constant integer UPG_HIGH_ELF_LEATHER_ARMOR                   = 'R04O'
+	constant integer UPG_HIGH_ELF_PRAYING                         = 'R04J'
+	constant integer UPG_HIGH_ELF_LEATHER                         = 'R04O'
+	constant integer UPG_BLOOD_ELF_BURNING_OIL                    = 'R00Y'
+	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                 = 'R00Z'
+    constant integer UPG_BLOOD_ELF_CONT_MAGIC                     = 'R04A'
+    constant integer UPG_BLOOD_ELF_CLOUD                          = 'R04B'
+
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS            = 'R00B'
+	constant integer UPG_STORM_PROTECTION                         = 'R029'
+	constant integer UPG_EVOLUTION                                = 'R00U'
+	constant integer UPG_IMPROVED_POWER_GENERATOR                 = 'R01T'
+	constant integer UPG_IMPROVED_MOUNT                           = 'R024'
+	constant integer UPG_HIGH_ELF_SUNWELL                         = 'R047' // special building
+
+	constant integer HIGH_ELF_ENGINEER                            = 'n05D' // worker
+    constant integer HIGH_ELF_ARCHER                              = 'n05G'
+    constant integer HIGH_ELF_RANGER                              = 'n05H'
+    constant integer HIGH_ELF_SWORDMAN                            = 'h04A'
+	constant integer HIGH_ELF_LIEUTENANT                          = 'h049'
+    constant integer HIGH_ELF_PRIEST                              = 'h047'
+    constant integer HIGH_ELF_SORCERESS                           = 'h048'
+	constant integer HIGH_ELF_BIRDIEPULT                          = 'e00N'
+	constant integer HIGH_ELF_KNIGHT                              = 'h04E'
+	constant integer HIGH_ELF_EAGLE                               = 'e00M'
+	constant integer HIGH_ELF_DRAGON_HAWK                         = 'h046'
+	constant integer HIGH_ELF_ARCH_CLERIC                         = 'h04C'
+	constant integer HIGH_ELF_DRAGON                              = 'n05L'
+
+    constant integer HIGH_ELF_CITIZEN_MALE                        = 'n05E'
+    constant integer HIGH_ELF_CITIZEN_FEMALE                      = 'n05J'
+    constant integer HIGH_ELF_HOUSING                             = 'h04H'
+	constant integer PORTAL                                       = 'h014'
+	constant integer POWER_GENERATOR                              = 'n025'
+	constant integer RESEARCH_TENT                                = 'n042'
+
+	constant integer RANGER                                       = 'H03Y'
+	constant integer COLD_ARROWS                                  = 'AHca'
+
+	constant integer GRYPHON_MOUNT                                = 'h004'
+	constant integer WYVERN_MOUNT                                 = 'o003'
+	constant integer FROST_WYRM_MOUNT                             = 'u004'
+	constant integer CHIMAERA_MOUNT                               = 'e005'
+	constant integer NETHER_DRAKE_MOUNT                           = 'n007'
+	constant integer DRAGONHAWK_MOUNT                             = 'h04L'
+
+	constant integer SHREDDER                                     = 'ngir'
+	constant integer AI_LABORATORY                                = 'h01T'
+endglobals
+
+//===========================================================================
+// Calculate the modulus/remainder of (dividend) divided by (divisor).
+// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
+//
+function ModuloInteger takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+
+    // If the dividend was negative, the above modulus calculation will
+    // be negative, but within (-divisor..0).  We can add (divisor) to
+    // shift this result into the desired range of (0..divisor).
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function ChooseHeroSkill takes nothing returns integer
+    local integer curHero = GetHeroId()
+    local integer level = GetHeroLevelAI()
+    local integer mod = ModuloInteger(level, 4)
+    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+
+    if (curHero == RANGER) then
+        if (skillUlti) then
+            return STARFALL
+        elseif (mod == 0) then
+            return SCOUT
+        elseif (mod == 1) then
+            return COLD_ARROWS
+        elseif (mod == 2) then
+            return TRUESHOT
+        endif
+    endif
+
+    return 'Aamk'
+endfunction
+
+function InitHero takes nothing returns nothing
+    if (GetUnitCountDone(RANGER) > 0) then
+        set hero_id = RANGER
+    endif
+endfunction
+
+function UpdateWorkers takes nothing returns nothing
+	loop
+		call SetGoldPeons(5 + GetUnitCount(HIGH_ELF_HOUSING) * 3)
+		call SetWoodPeons(5)
+		call Sleep(1)
+	endloop
+endfunction
+
+function ConfigureAI takes nothing returns nothing
+    call SetTargetHeroes( true )
+    call SetUnitsFlee( true )
+    call SetHeroesFlee( true )
+    call SetPeonsRepair( true )
+    call SetHeroesBuyItems( true )
+    call SetHeroesTakeItems( true )
+    call SetSlowChopping( false )
+	call SetWatchMegaTargets( true )
+	call SetIgnoreInjured( false )
+	call SetGroupsFlee( false )
+	call SetCaptainChanges ( false )
+	call SetSmartArtillery ( true )
+    call GroupTimedLife ( true )
+    call SetRandomPaths( true )
+    call SetDefendPlayer( true )
+endfunction
+
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+	call SetReplacements( 1, 2, 3 )
+	call SetBuildUnit( 1, HIGH_ELF_TIER_1 )
+	call SetBuildUnit( 17, HIGH_ELF_ENGINEER )
+	call SetBuildUnit( 2, HIGH_ELF_CITIZEN_MALE )
+	call SetBuildUnit( 1, AI_LABORATORY )
+	call SetBuildUnit( 1, SHREDDER )
+	call SetBuildUnit( 3, HIGH_ELF_FARM )
+	call SetBuildUnit( 2, HIGH_ELF_HOUSING )
+	call SetBuildUnit( 2, HIGH_ELF_BARRACKS )
+	call SetBuildUnit( 1, HIGH_ELF_ALTAR )
+	call SetBuildUnit( 1, HIGH_ELF_ENCHANTER_TOWER )
+	call SetBuildUnit( 1, HIGH_ELF_BAZAAR )
+
+	call SetBuildUpgr( 1, UPG_DEFEND )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_MELEE )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_ARMOR )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_LEATHER )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_LEATHER_ARMOR )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_MASONRY )
+
+    // Tier 2 buildings
+	call SetBuildUnit( 1, HIGH_ELF_TIER_2 )
+	call SetBuildUnit( 1, HIGH_ELF_STABLES )
+	call SetBuildUnit( 1, HIGH_ELF_ENCHANTER_TOWER )
+	call SetBuildUnit( 1, HIGH_ELF_MAGE_TOWER )
+	call SetBuildUnit( 4, HIGH_ELF_FARM )
+	call SetBuildUnit( 2, HIGH_ELF_OUTPOST )
+	call SetBuildUnit( 2, HIGH_ELF_CITIZEN_FEMALE )
+
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_MELEE )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_ARMOR )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_LEATHER )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_LEATHER_ARMOR )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_WOOD )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_MASONRY )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_PRAYING )
+	call SetBuildUpgr( 1, UPG_SORCERY )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_BOWS )
+
+    // Tier 3 buildings
+	call SetBuildUnit( 1, HIGH_ELF_TIER_3 )
+	call SetBuildUnit( 5, HIGH_ELF_FARM )
+	call SetBuildUnit( 2, HIGH_ELF_GUARD_TOWER )
+	call SetBuildUnit( 1, HIGH_ELF_DRAGON_NEXUS )
+	call SetBuildUnit( 1, HIGH_ELF_AVIARY )
+	call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
+
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_WOOD )
+	call SetBuildUpgr( 3, UPG_HIGH_ELF_MELEE )
+	call SetBuildUpgr( 3, UPG_HIGH_ELF_ARMOR )
+	call SetBuildUpgr( 3, UPG_HIGH_ELF_LEATHER )
+	call SetBuildUpgr( 3, UPG_HIGH_ELF_LEATHER_ARMOR )
+	call SetBuildUpgr( 3, UPG_HIGH_ELF_MASONRY )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_PRAYING )
+	call SetBuildUpgr( 2, UPG_SORCERY )
+	call SetBuildUpgr( 3, UPG_BLOOD_ELF_IMPROVED_SIEGE )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BURNING_OIL )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_MARKSMAN )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
+	call SetBuildUpgr( 1, UPG_SENTINEL )
+	call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_SUNWELL )
+	call SetBuildUnit( 1, HIGH_ELF_SUNWELL )
+
+	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
+	call SetBuildUpgr( 1000, UPG_EVOLUTION )
+	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function AttackWithMount takes nothing returns nothing
+	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+	endif
+	if (GetUnitCount(WYVERN_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+	endif
+	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+	endif
+	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+	endif
+	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+	endif
+	if (GetUnitCount(DRAGONHAWK_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, DRAGONHAWK_MOUNT )
+	endif
+endfunction
+
+function AddStandardUnitsToAttackWave takes nothing returns nothing
+	call PurchaseZeppelin()
+	call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
+endfunction
+
+//===========================================================================
+// Basic attack functionality
+//===========================================================================
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        return
+    endif
+    if (addAlliance) then
+        call SetAllianceTarget( target )
+    endif
+    call FormGroup( 3, true )
+    call AttackMoveKillA( target )
+    if (not addAlliance) then
+        call SetAllianceTarget( null )
+    endif
+endfunction
+
+//===========================================================================
+// Initiates an attack based on target priorities
+//===========================================================================
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Sleep( 2 )
+        return
+    endif
+
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        if (target != null) then
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        if (target != null) then
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        set target = GetEnemyExpansion()
+        if (target == null) then
+            call StartGetEnemyBase(  )
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep( 1 )
+            endloop
+            set target = GetEnemyBase()
+        endif
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        set target = GetCreepCamp( 0, 9, false )
+    endif
+
+    // Target Priority #7
+    if (target == null) then
+        set target = GetCreepCamp( 10, 100, true )
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call AttackTarget( target, setAlly )
+    else
+        // If no target was found, sleep a bit before trying again
+        call Sleep( 20 )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+	call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+	call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+	call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+	call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_LIEUTENANT )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 11 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, HIGH_ELF_SWORDMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+	call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+	call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+	call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_LIEUTENANT )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+		//*** WAVE 12 ***
+		call InitAssaultGroup()
+
+		// small ground army
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_SWORDMAN )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_ARCHER )
+		call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_RANGER )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_ARCH_CLERIC )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_PRIEST )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_SORCERESS )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_LIEUTENANT )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_BIRDIEPULT )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_KNIGHT )
+		call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_EAGLE )
+
+		// big air army
+        call CampaignAttackerEx( 8, 12, 18, HIGH_ELF_DRAGON_HAWK )
+        call CampaignAttackerEx( 8, 12, 18, HIGH_ELF_DRAGON )
+
+		call AddStandardUnitsToAttackWave()
+		call Sleep( M2 ) // Waits 2 minutes before attacking
+		call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( HIGH_ELF_FARM, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+	call StartThread(function UpdateWorkers)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction

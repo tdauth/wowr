@@ -52,6 +52,7 @@ globals
 	constant integer FROST_WYRM_MOUNT                                = 'u004'
 	constant integer CHIMAERA_MOUNT                                  = 'e005'
 	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+	constant integer DRAGONHAWK_MOUNT                             = 'h04L'
 
 	constant integer SHREDDER                                        = 'ngir'
 	constant integer AI_LABORATORY                                   = 'h01T'
@@ -227,6 +228,9 @@ function AttackWithMount takes nothing returns nothing
 	endif
 	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
 		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+	endif
+	if (GetUnitCount(DRAGONHAWK_MOUNT) > 0) then
+		call CampaignAttacker( 0, 1, DRAGONHAWK_MOUNT )
 	endif
 endfunction
 
