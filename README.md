@@ -230,12 +230,13 @@ The following files are imported into the map whenever they are updated. They co
 * [Furbolg.ai](./ai/Furbolg.ai)
 * [Goblin.ai](./ai/Goblin.ai)
 * [Dwarf.ai](./ai/Dwarf.ai)
+* [HighElf.ai](./ai/HighElf.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 
 The race is determined from the race set in the lobby of the game:
 
-* If the race is Human it will either be Human, Blood Elf or Dwarf.
+* If the race is Human it will either be Human, Blood Elf, Dwarf or High Elf.
 * If the race is Orc it will either be Orc, Draenei or Goblin.
 * If the race is Undead it will either be Undead or Demon.
 * If the race is Night Elf it will either be Night Elf, Naga or Furbolg.

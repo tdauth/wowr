@@ -89,6 +89,9 @@ globals
     constant integer SOUL_BURN                                       = 'ANso'
     constant integer SUMMON_LAVA_SPAWN                               = 'ANlm'
 
+    constant integer RANGER                                          = 'H03Y'
+	constant integer COLD_ARROWS                                     = 'AHca'
+
 	constant integer CREEP_DARK_WIZARD                               = 'nwzd'
 	constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
 	constant integer CREEP_DOOM_GUARD                                = 'nbal'
@@ -394,6 +397,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SUMMON_LAVA_SPAWN
         endif
+    // High Elf
+    elseif (curHero == RANGER) then
+        if (skillUlti) then
+            return STARFALL
+        elseif (mod == 0) then
+            return SCOUT
+        elseif (mod == 1) then
+            return COLD_ARROWS
+        elseif (mod == 2) then
+            return TRUESHOT
+        endif
     endif
 
     return 'Aamk'
@@ -465,6 +479,9 @@ function InitHero takes nothing returns nothing
         set hero_id = BREWMASTER
     elseif (GetUnitCountDone(FIRELORD) > 0) then
         set hero_id = FIRELORD
+    // High Elf
+    elseif (GetUnitCountDone(RANGER) > 0) then
+        set hero_id = RANGER
     endif
 endfunction
 

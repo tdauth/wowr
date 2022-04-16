@@ -7403,7 +7403,7 @@ function RandomLivingTreeDestructableInCircle takes real radius, location loc re
     return bj_destRandomCurrentPick
 endfunction
 
-// Baradé's Item Unstack System 1.2
+// Baradé's Item Unstack System 1.3
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
 //
@@ -7411,7 +7411,7 @@ endfunction
 // - Enable Warcraft's native stack system in the "Advanced - Gameplay Constants - Inventory - Enable Item Stacking".
 // - Give certain item types a maximum stack value: "Stats - Max Stacks". Note that some of them like Wards do already have specified some values greater than 0 here.
 // - Copy this code into your map script.
-// - Call the function InitItemUnstackSystem during the map initialization.
+// - Call the function ItemUnstackSystemInit during the map initialization.
 //
 // Recommended (optional):
 // - Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell|NDouble right click item to unstack|R" to guide the player.
@@ -7420,6 +7420,9 @@ endfunction
 // https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-1.339109/
 //
 // Change Log:
+//
+// 1.3 2022-04-16:
+// - Refactor function names.
 //
 // 1.2 2022-04-13:
 // - Use UnitInventorySize instead of bj_MAX_INVENTORY to support different inventory sizes.
@@ -7434,7 +7437,7 @@ endfunction
 // - Move system code into converted trigger.
 // - Update preview image.
 
-function ItemUnstackApplyItemProperties takes item sourceItem, item targetItem returns nothing
+function ItemUnstackCopyItemProps takes item sourceItem, item targetItem returns nothing
     // some seem broken
     //call BlzSetItemName(targetItem, GetItemName(sourceItem))
     call BlzSetItemDescription(targetItem, BlzGetItemDescription(sourceItem))
@@ -7482,7 +7485,7 @@ function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId
     return unstackedItem
 endfunction
 
-function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer itemTypeId, integer sourceSlot returns item
+function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer itemTypeId, integer sourceSlot, item sourceItem returns nothing
     // search for a free slot to unstack the item
     local item unstackedItem = ItemUnstackAddItemToNearestFreeSlot(hero, itemTypeId, sourceSlot)
     // create the item for the hero with one slot if all slots are used
@@ -7490,21 +7493,17 @@ function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer it
         set unstackedItem = CreateItem(itemTypeId, GetUnitX(hero), GetUnitY(hero))
     endif
 
-    return unstackedItem
-endfunction
-
-function ItemUnstackAddItemToNearestFreeSlotOrGroundUnstack takes unit hero, integer itemTypeId, integer sourceSlot, item sourceItem returns nothing
-    local item unstackedItem = ItemUnstackAddItemToNearestFreeSlotOrGround(hero, itemTypeId, sourceSlot)
     call SetItemCharges(unstackedItem, 1)
-    call ItemUnstackApplyItemProperties(sourceItem, unstackedItem)
+    call ItemUnstackCopyItemProps(sourceItem, unstackedItem)
+
     set unstackedItem = null
 endfunction
 
-function TriggerConditionItemUnstack takes nothing returns boolean
+function ItemUnstackTriggerCondition takes nothing returns boolean
     return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetItemCharges(GetOrderTargetItem()) > 1 and ItemUnstackGetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
 endfunction
 
-function TriggerActionItemUnstack takes nothing returns nothing
+function ItemUnstackTriggerAction takes nothing returns nothing
     local unit hero = GetTriggerUnit()
     local item sourceItem = GetOrderTargetItem()
     local integer sourceItemTypeId = GetItemTypeId(sourceItem)
@@ -7515,21 +7514,21 @@ function TriggerActionItemUnstack takes nothing returns nothing
     // we are not sure if this works when the item is removed via triggers since the value of the variable becomes an invalid reference
     if (sourceItem != null and GetWidgetLife(sourceItem) > 0.0 and GetItemCharges(sourceItem) > 0 and UnitItemInSlot(hero, sourceSlot) == sourceItem) then
         call SetItemCharges(sourceItem, GetItemCharges(sourceItem) - 1)
-        call ItemUnstackAddItemToNearestFreeSlotOrGroundUnstack(hero, sourceItemTypeId, sourceSlot, sourceItem)
+        call ItemUnstackAddItemToNearestFreeSlotOrGround(hero, sourceItemTypeId, sourceSlot, sourceItem)
     endif
 
     set hero = null
     set sourceItem = null
 endfunction
 
-function InitItemUnstackSystem takes nothing returns nothing
+function ItemUnstackSystemInit takes nothing returns nothing
     local trigger whichTrigger = CreateTrigger()
     call TriggerRegisterAnyUnitEventBJ(whichTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
-    call TriggerAddCondition(whichTrigger, Condition(function TriggerConditionItemUnstack))
-    call TriggerAddAction(whichTrigger, function TriggerActionItemUnstack)
+    call TriggerAddCondition(whichTrigger, Condition(function ItemUnstackTriggerCondition))
+    call TriggerAddAction(whichTrigger, function ItemUnstackTriggerAction)
 endfunction
 
-// Baradé's Black Arrow System 1.0
+// Baradé's Black Arrow System 1.1
 //
 // Supports Black Arrow abilities for units with levels greater than 5.
 //
@@ -7537,9 +7536,14 @@ endfunction
 // - Copy the custom buff ability and custom buff into your map.
 // - Copy this code into your map script.
 // - Adapt the raw code ID of the constant to the one in your map.
-// - Call the function InitItemUnstackSystem during the map initialization.
+// - Call the function BlackArrowSystemInit during the map initialization.
 // - Optional: Use the API functions to register custom abilities and items.
 // - Optional: Register all auto casters.
+// - Optional: Create triggers and register Black Arrow events for further actions.
+//
+// 1.1 2022-04-16:
+// - Add event handling functions which allow adding actions to Black Arrow events.
+// - Refactor some functions.
 
 globals
     constant integer BLACK_ARROW_BUFF_ABILITY_ID = 'A0FU'
@@ -7570,7 +7574,31 @@ globals
     trigger BlackArrowOrderTrigger = CreateTrigger()
     trigger BlackArrowItemPickupTrigger = CreateTrigger()
     trigger BlackArrowItemDropTrigger = CreateTrigger()
+
+    // callbacks
+    unit BlackArrowCaster = null
+    unit BlackArrowTarget = null
+    group BlackArrowSummonedUnits = null
+    trigger array BlackArrowCallbackTrigger
+    integer BlackArrowCallbackTriggerCounter = 0
 endglobals
+
+function GetTriggerBlackArrowCaster takes nothing returns unit
+    return BlackArrowCaster
+endfunction
+
+function GetTriggerBlackArrowTarget takes nothing returns unit
+    return BlackArrowTarget
+endfunction
+
+function GetTriggerBlackArrowSummonedUnits takes nothing returns group
+    return BlackArrowSummonedUnits
+endfunction
+
+function TriggerRegisterBlackArrowEvent takes trigger whichTrigger returns nothing
+    set BlackArrowCallbackTrigger[BlackArrowCallbackTriggerCounter] = whichTrigger
+    set BlackArrowCallbackTriggerCounter = BlackArrowCallbackTriggerCounter + 1
+endfunction
 
 function BlackArrowAddAbility takes integer abilityId, integer level, integer summonedUnitTypeId, integer summonedUnitsCount, real summonedUnitDuration, real durationHero, real durationUnit, integer buffId returns integer
     set BlackArrowAbiliyId[BlackArrowAbilityCounter] = abilityId
@@ -7673,25 +7701,40 @@ function BlackArrowMarkTarget takes integer abilityIndex, unit source, unit targ
     endif
 endfunction
 
+function BlackArrowExecuteCallbackTriggers takes unit source, unit target, group summonedUnits returns nothing
+    local integer i = 0
+    set BlackArrowCaster = source
+    set BlackArrowTarget = target
+    set BlackArrowSummonedUnits = summonedUnits
+    loop
+        exitwhen (i == BlackArrowCallbackTriggerCounter)
+        call TriggerExecute(BlackArrowCallbackTrigger[i])
+        set i = i + 1
+    endloop
+endfunction
+
 function BlackArrowSummonEffect takes integer abilityIndex, unit source, unit target returns group
     local location tmpLocation = GetUnitLoc(target)
-    local group result = CreateNUnitsAtLoc(BlackArrowAbiliySummonedUnitsCount[abilityIndex],  BlackArrowAbiliySummonedUnitTypeId[abilityIndex], GetOwningPlayer(source), tmpLocation, GetUnitFacing(target))
+    // Does not leak since it uses bj_lastCreatedGroup:
+    local group summonedUnits = CreateNUnitsAtLoc(BlackArrowAbiliySummonedUnitsCount[abilityIndex],  BlackArrowAbiliySummonedUnitTypeId[abilityIndex], GetOwningPlayer(source), tmpLocation, GetUnitFacing(target))
     local integer i = 0
     loop
-        exitwhen (i == BlzGroupGetSize(result))
-        call SetUnitAnimation(BlzGroupUnitAt(result, i), "Birth")
-        call UnitApplyTimedLife(BlzGroupUnitAt(result, i), BlackArrowAbiliyBuffId[abilityIndex], BlackArrowAbiliySummonedUnitDuration[abilityIndex])
+        exitwhen (i == BlzGroupGetSize(summonedUnits))
+        call SetUnitAnimation(BlzGroupUnitAt(summonedUnits, i), "Birth")
+        call UnitApplyTimedLife(BlzGroupUnitAt(summonedUnits, i), BlackArrowAbiliyBuffId[abilityIndex], BlackArrowAbiliySummonedUnitDuration[abilityIndex])
         set i = i + 1
     endloop
 
-    return result
+    call BlackArrowExecuteCallbackTriggers(source, target, summonedUnits)
+
+    return summonedUnits
 endfunction
 
 function BlackArrowEffect takes unit target returns group
      local timer whichTimer = LoadTimerHandle(BlackArrowHashTable, GetHandleId(target), 0)
      local unit source = LoadUnitHandle(BlackArrowHashTable, GetHandleId(target), 1)
      local integer abilityIndex = LoadInteger(BlackArrowHashTable, GetHandleId(target), 2)
-     local group result = BlackArrowSummonEffect(abilityIndex, source, target)
+     local group summonedUnits = BlackArrowSummonEffect(abilityIndex, source, target)
 
      //call BJDebugMsg("Black Arrow effect on target " + GetUnitName(target) + " with ability level " + I2S(BlackArrowAbiliyLevel[abilityIndex]) + " summoning units of type " + GetObjectName(BlackArrowAbiliySummonedUnitTypeId[abilityIndex]))
 
@@ -7712,10 +7755,10 @@ function BlackArrowEffect takes unit target returns group
 
     set source = null
 
-    return result
+    return summonedUnits
 endfunction
 
-function TriggerConditionBlackArrowDamage takes nothing returns boolean
+function BlackArrowTriggerConditionDamage takes nothing returns boolean
     return not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_RESISTANT) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MAGIC_IMMUNE) and GetUnitLevel(GetTriggerUnit()) > 5 and ((IsUnitInGroup(GetEventDamageSource(), BlackArrowCasters) and GetMatchingBlackArrowAbilityIndex(GetEventDamageSource()) > 0) or IsUnitInGroup(GetEventDamageSource(), BlackArrowItemUnits))
 endfunction
 
@@ -7731,7 +7774,7 @@ function BlackArrowUnitGetOrbItem takes unit whichUnit, item excludeItem returns
     return -1
 endfunction
 
-function TriggerActionBlackArrowDamage takes nothing returns nothing
+function BlackArrowTriggerActionDamage takes nothing returns nothing
     local integer itemIndex = BlackArrowUnitGetOrbItem(GetEventDamageSource(), null)
     local integer abilityIndex = GetMatchingBlackArrowAbilityIndex(GetEventDamageSource())
     if (itemIndex != -1 and abilityIndex == 0) then
@@ -7741,19 +7784,19 @@ function TriggerActionBlackArrowDamage takes nothing returns nothing
     endif
 endfunction
 
-function TriggerConditionBlackArrowDeath takes nothing returns boolean
+function BlackArrowTriggerConditionDeath takes nothing returns boolean
     return IsUnitInGroup(GetTriggerUnit(), BlackArrowTargets)
 endfunction
 
-function TriggerActionBlackArrowDeath takes nothing returns nothing
+function BlackArrowTriggerActionDeath takes nothing returns nothing
     call BlackArrowEffect(GetTriggerUnit())
 endfunction
 
-function TriggerConditionBlackArrowOrder takes nothing returns boolean
+function BlackArrowTriggerConditionOrder takes nothing returns boolean
     return GetIssuedOrderId() == OrderId(BLACK_ARROW_ORDER_ON) or GetIssuedOrderId() == OrderId(BLACK_ARROW_ORDER_OFF)
 endfunction
 
-function TriggerActionBlackArrowOrder takes nothing returns nothing
+function BlackArrowTriggerActionOrder takes nothing returns nothing
     if (GetIssuedOrderId() == OrderId(BLACK_ARROW_ORDER_ON)) then
         call BlackArrowAddAutoCaster(GetTriggerUnit())
     else
@@ -7764,16 +7807,16 @@ function TriggerActionBlackArrowOrder takes nothing returns nothing
     endif
 endfunction
 
-function TriggerConditionBlackArrowPickupItem takes nothing returns boolean
+function BlackArrowTriggerConditionPickupItem takes nothing returns boolean
     return not IsUnitInGroup(GetTriggerUnit(), BlackArrowItemUnits) and GetMatchingBlackArrowItemTypeIndex(GetItemTypeId(GetManipulatedItem())) > 0
 endfunction
 
-function TriggerActionBlackArrowPickupItem takes nothing returns nothing
+function BlackArrowTriggerActionPickupItem takes nothing returns nothing
     call GroupAddUnit(BlackArrowItemUnits, GetTriggerUnit())
     //call BJDebugMsg("Unit " + GetUnitName(GetTriggerUnit()) + " picked up a Black Arrow orb item.")
 endfunction
 
-function TriggerConditionBlackArrowDropItem takes nothing returns boolean
+function BlackArrowTriggerConditionDropItem takes nothing returns boolean
     local boolean result = IsUnitInGroup(GetTriggerUnit(), BlackArrowItemUnits) and GetMatchingBlackArrowItemTypeIndex(GetItemTypeId(GetManipulatedItem())) > 0
 
     if (result) then
@@ -7784,44 +7827,44 @@ function TriggerConditionBlackArrowDropItem takes nothing returns boolean
     return result
 endfunction
 
-function TriggerActionBlackArrowDropItem takes nothing returns nothing
+function BlackArrowTriggerActionDropItem takes nothing returns nothing
     call GroupRemoveUnit(BlackArrowItemUnits, GetTriggerUnit())
     //call BJDebugMsg("Unit " + GetUnitName(GetTriggerUnit()) + " dropped the final Black Arrow orb item.")
 endfunction
 
-function FilterBlackArrowForUnitWithOrb takes nothing returns boolean
+function BlackArrowFilterForUnitWithOrb takes nothing returns boolean
     return UnitInventorySize(GetFilterUnit()) > 0 and BlackArrowUnitGetOrbItem(GetFilterUnit(), null) != -1
 endfunction
 
 function BlackArrowAddAllUnitsWithOrbs takes nothing returns nothing
     local group whichGroup = CreateGroup()
-    call GroupEnumUnitsInRect(whichGroup, GetPlayableMapRect(), Filter(function FilterBlackArrowForUnitWithOrb))
+    call GroupEnumUnitsInRect(whichGroup, GetPlayableMapRect(), Filter(function BlackArrowFilterForUnitWithOrb))
     set bj_wantDestroyGroup = true
     call GroupAddGroup(whichGroup, BlackArrowItemUnits)
     //call BJDebugMsg("Units with orbs size " + I2S(CountUnitsInGroup(BlackArrowItemUnits)))
     set whichGroup = null
 endfunction
 
-function InitBlackArrowSystem takes nothing returns nothing
+function BlackArrowSystemInit takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(BlackArrowDamageTrigger, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(BlackArrowDamageTrigger, Condition(function TriggerConditionBlackArrowDamage))
-    call TriggerAddAction(BlackArrowDamageTrigger, function TriggerActionBlackArrowDamage)
+    call TriggerAddCondition(BlackArrowDamageTrigger, Condition(function BlackArrowTriggerConditionDamage))
+    call TriggerAddAction(BlackArrowDamageTrigger, function BlackArrowTriggerActionDamage)
 
     call TriggerRegisterAnyUnitEventBJ(BlackArrowDeathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(BlackArrowDeathTrigger, Condition(function TriggerConditionBlackArrowDeath))
-    call TriggerAddAction(BlackArrowDeathTrigger, function TriggerActionBlackArrowDeath)
+    call TriggerAddCondition(BlackArrowDeathTrigger, Condition(function BlackArrowTriggerConditionDeath))
+    call TriggerAddAction(BlackArrowDeathTrigger, function BlackArrowTriggerActionDeath)
 
     call TriggerRegisterAnyUnitEventBJ(BlackArrowOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
-    call TriggerAddCondition(BlackArrowOrderTrigger, Condition(function TriggerConditionBlackArrowOrder))
-    call TriggerAddAction(BlackArrowOrderTrigger, function TriggerActionBlackArrowOrder)
+    call TriggerAddCondition(BlackArrowOrderTrigger, Condition(function BlackArrowTriggerConditionOrder))
+    call TriggerAddAction(BlackArrowOrderTrigger, function BlackArrowTriggerActionOrder)
 
     call TriggerRegisterAnyUnitEventBJ(BlackArrowItemPickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    call TriggerAddCondition(BlackArrowItemPickupTrigger, Condition(function TriggerConditionBlackArrowPickupItem))
-    call TriggerAddAction(BlackArrowItemPickupTrigger, function TriggerActionBlackArrowPickupItem)
+    call TriggerAddCondition(BlackArrowItemPickupTrigger, Condition(function BlackArrowTriggerConditionPickupItem))
+    call TriggerAddAction(BlackArrowItemPickupTrigger, function BlackArrowTriggerActionPickupItem)
 
     call TriggerRegisterAnyUnitEventBJ(BlackArrowItemDropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
-    call TriggerAddCondition(BlackArrowItemDropTrigger, Condition(function TriggerConditionBlackArrowDropItem))
-    call TriggerAddAction(BlackArrowItemDropTrigger, function TriggerActionBlackArrowDropItem)
+    call TriggerAddCondition(BlackArrowItemDropTrigger, Condition(function BlackArrowTriggerConditionDropItem))
+    call TriggerAddAction(BlackArrowItemDropTrigger, function BlackArrowTriggerActionDropItem)
 
     call BlackArrowAddStandardObjectData()
     call BlackArrowAddAllUnitsWithOrbs()

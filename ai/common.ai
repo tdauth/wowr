@@ -753,6 +753,12 @@ globals
 	constant integer DWARF_TIER_1                                    = 'h02R' // tier 1
 	constant integer DWARF_TIER_2                                    = 'h030' // tier 2
 	constant integer DWARF_TIER_3                                    = 'h031' // tier 3
+
+	constant integer HIGH_ELF_TIER_1                                 = 'h040' // tier 1
+	constant integer HIGH_ELF_TIER_2                                 = 'h03Z' // tier 2
+	constant integer HIGH_ELF_TIER_3                                 = 'h041' // tier 3
+	constant integer HIGH_ELF_OUTPOST                                = 'h04G' // scout tower
+	constant integer HIGH_ELF_GUARD_TOWER                            = 'n05I' // guard tower
 	
 	constant integer HIDEOUT                                         = 'h00J'
 	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
@@ -1199,6 +1205,16 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_2,false,townid) + GetUnitCountEx(DWARF_TIER_3,false,townid)
     elseif unitid == DWARF_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(DWARF_TIER_3,false,townid)
+
+
+    elseif unitid == HIGH_ELF_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(HIGH_ELF_TIER_2,false,townid) + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
+    elseif unitid == HIGH_ELF_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
+
+
+    elseif unitid == HIGH_ELF_OUTPOST then
+        set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_GUARD_TOWER,false,townid)
 
 	elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
