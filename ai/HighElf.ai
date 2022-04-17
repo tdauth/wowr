@@ -10,20 +10,22 @@ globals
 	constant integer HIGH_ELF_DRAGON_NEXUS                        = 'h04J' // boneyard
 	constant integer HIGH_ELF_SUNWELL                             = 'n05F' // special building
 
-	constant integer UPG_BLOOD_ELF_BREEDING                       = 'R000'
 	constant integer UPG_HIGH_ELF_BOWS                            = 'R04G'
 	constant integer UPG_HIGH_ELF_WOOD                            = 'R04H'
 	constant integer UPG_HIGH_ELF_MASONRY                         = 'R04K'
 	constant integer UPG_HIGH_ELF_MELEE                           = 'R04M'
 	constant integer UPG_HIGH_ELF_ARMOR                           = 'R04N'
-	constant integer UPG_HIGH_ELF_MARKSMAN                        = 'R04D'
-	constant integer UPG_HIGH_ELF_LEATHER_ARMOR                   = 'R04O'
-	constant integer UPG_HIGH_ELF_PRAYING                         = 'R04J'
+	constant integer UPG_HIGH_ELF_STR_MOON                        = 'R04Q'
 	constant integer UPG_HIGH_ELF_LEATHER                         = 'R04O'
-	constant integer UPG_BLOOD_ELF_BURNING_OIL                    = 'R00Y'
-	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                 = 'R00Z'
-    constant integer UPG_BLOOD_ELF_CONT_MAGIC                     = 'R04A'
-    constant integer UPG_BLOOD_ELF_CLOUD                          = 'R04B'
+	constant integer UPG_HIGH_ELF_MARKSMAN                        = 'R04D'
+	constant integer UPG_HIGH_ELF_PRAYING                         = 'R04J'
+	constant integer UPG_HIGH_ELF_PRAYING_CLERIC                  = 'R04L'
+	constant integer UPG_HIGH_ELF_ANIMAL                          = 'R04F'
+    constant integer UPG_HIGH_ELF_ANTIMAGIC                       = 'R04C'
+    constant integer UPG_HIGH_ELF_CLOUD                           = 'R04E'
+    constant integer UPG_HIGH_ELF_TAMING                          = 'R04I'
+    constant integer UPG_HIGH_ELF_BACKPACK                        = 'R048'
+    constant integer UPG_HIGH_ELF_MAGIC_SENTRY                    = 'R049'
 
 	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS            = 'R00B'
 	constant integer UPG_STORM_PROTECTION                         = 'R029'
@@ -159,7 +161,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_MELEE )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_ARMOR )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_LEATHER )
-	call SetBuildUpgr( 1, UPG_HIGH_ELF_LEATHER_ARMOR )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_STR_MOON )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_MASONRY )
 
     // Tier 2 buildings
@@ -174,10 +176,11 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 2, UPG_HIGH_ELF_MELEE )
 	call SetBuildUpgr( 2, UPG_HIGH_ELF_ARMOR )
 	call SetBuildUpgr( 2, UPG_HIGH_ELF_LEATHER )
-	call SetBuildUpgr( 2, UPG_HIGH_ELF_LEATHER_ARMOR )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_STR_MOON )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_WOOD )
 	call SetBuildUpgr( 2, UPG_HIGH_ELF_MASONRY )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_PRAYING )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_PRAYING_CLERIC )
 	call SetBuildUpgr( 1, UPG_SORCERY )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_BOWS )
 
@@ -194,19 +197,20 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_HIGH_ELF_MELEE )
 	call SetBuildUpgr( 3, UPG_HIGH_ELF_ARMOR )
 	call SetBuildUpgr( 3, UPG_HIGH_ELF_LEATHER )
-	call SetBuildUpgr( 3, UPG_HIGH_ELF_LEATHER_ARMOR )
+	call SetBuildUpgr( 3, UPG_HIGH_ELF_STR_MOON )
 	call SetBuildUpgr( 3, UPG_HIGH_ELF_MASONRY )
 	call SetBuildUpgr( 2, UPG_HIGH_ELF_PRAYING )
+	call SetBuildUpgr( 2, UPG_HIGH_ELF_PRAYING_CLERIC )
 	call SetBuildUpgr( 2, UPG_SORCERY )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_IMPROVED_SIEGE )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BURNING_OIL )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_MARKSMAN )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
-	call SetBuildUpgr( 1, UPG_SENTINEL )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_MAGIC_SENTRY )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_ANIMAL )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_ANTIMAGIC )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_CLOUD )
+	call SetBuildUpgr( 1, UPG_HIGH_ELF_TAMING )
 	call SetBuildUpgr( 1, UPG_HIGH_ELF_SUNWELL )
 	call SetBuildUnit( 1, HIGH_ELF_SUNWELL )
+	call SetBuildUnit( 1, UPG_HIGH_ELF_BACKPACK )
 
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)

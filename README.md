@@ -201,6 +201,8 @@ This version provides several new features compared to the original map [World o
 * Automatically improve summoned units per hero ability level.
 * Easter Egg.
 * Chat command "-discord" shows the Discord server URL.
+* PvP Arena.
+* Crafting Stashes.
 
 ## Bug Fixes
 

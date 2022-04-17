@@ -2248,7 +2248,10 @@ function FilterPlayerFunctionUsedUser takes nothing returns boolean
 endfunction
 
 function IsInSinglePlayer takes nothing returns boolean
-    return CountPlayersInForceBJ(GetPlayersMatching(Condition(function FilterPlayerFunctionUsedUser))) == 1
+    //return CountPlayersInForceBJ(GetPlayersMatching(Condition(function FilterPlayerFunctionUsedUser))) == 1
+    // https://www.hiveworkshop.com/threads/how-to-detect-single-player.161490/
+    // Even works when all players except one have left the game:
+    return ReloadGameCachesFromDisk()
 endfunction
 
 // We don't want to handle negative numbers.
