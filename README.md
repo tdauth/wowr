@@ -424,3 +424,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Eagle XI: [BTNStonewall](https://www.hiveworkshop.com/threads/btnstonewall.275743/)
 * Darkfang: [Orb of the Sun](https://www.hiveworkshop.com/threads/orb-of-the-sun.288765/)
 * General Frank: [Orb of Fire](https://www.hiveworkshop.com/threads/orb-of-fire.106241/#resource-26079)
+* Ujimasa Hojo: [Shipyard (Night Elf) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-night-elf-and-derivatives.230445/)
