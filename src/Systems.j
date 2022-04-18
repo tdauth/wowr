@@ -855,11 +855,8 @@ function RespawnGroup takes integer Group returns boolean
 					endif
 					set GroupMember = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_RespawnUnitType[index], GetLocationX(RespawnLocation), GetLocationY(RespawnLocation), GetRandomReal(0.00, 360.00))
 					if (GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) > 0) then
-						    set udg_TmpUnit = GroupMember
-						    set udg_TmpInteger = ( GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) / 10 )
-						    set udg_TmpInteger2 = ( GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) / 10 )
-						    set udg_TmpReal = I2R(udg_TmpInteger2)
-						    call ConditionalTriggerExecute( gg_trg_Evolution_Add_Unit_Level_And_Defense )
+                        set udg_TmpUnit = GroupMember
+                        call TriggerExecute( gg_trg_Evolution_Add_Unit_Level_And_Defense_By_Unit )
 					endif
 					call AssignUnitToGroup(GroupMember, Group)
 					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
@@ -4161,6 +4158,11 @@ function GetSaveCodeUnits takes player whichPlayer returns string
     return GetSaveCodeUnitsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, whichPlayer)
 endfunction
 
+function ForGroupApplyLoadedUnitEvolution takes nothing returns nothing
+    set udg_TmpUnit = GetEnumUnit()
+    call TriggerExecute(gg_trg_Evolution_Add_Unit_Level_And_Defense_By_Unit)
+endfunction
+
 function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
@@ -4180,6 +4182,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
     local integer count = 0
     local location tmpLocation = Location(GetUnitX(udg_Hero[GetPlayerId(whichPlayer)]), GetUnitY(udg_Hero[GetPlayerId(whichPlayer)]))
     local boolean atLeastOne = false
+    local group createdUnits = CreateGroup()
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -4209,6 +4212,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                         if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(saveObjectId) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
                             if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
                                 call CreateUnitAtLocSaveLast(whichPlayer, saveObjectId, tmpLocation, GetUnitFacing(udg_Hero[GetPlayerId(whichPlayer)]))
+                                call GroupAddUnit(createdUnits, bj_lastCreatedUnit)
                                 set atLeastOne = true
                             else
                                 call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
@@ -4223,6 +4227,11 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                 set pos = pos + 2
             endloop
 
+            call ForGroupBJ(createdUnits, function ForGroupApplyLoadedUnitEvolution)
+            call GroupClear(createdUnits)
+            call DestroyGroup(createdUnits)
+            set createdUnits = null
+
             call RemoveLocation(tmpLocation)
             set tmpLocation = null
 
@@ -4236,6 +4245,11 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
 
     call RemoveLocation(tmpLocation)
     set tmpLocation = null
+
+    call ForGroupBJ(createdUnits, function ForGroupApplyLoadedUnitEvolution)
+    call GroupClear(createdUnits)
+    call DestroyGroup(createdUnits)
+    set createdUnits = null
 
     return false
 endfunction
@@ -7957,4 +7971,17 @@ function RemoveWall takes unit wall returns nothing
     set invisiblePlatform = null
     call RemoveUnit(wall)
     set wall = null
+endfunction
+
+function SimError takes player whichPlayer, string msg returns nothing
+    local sound error = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
+    if (GetLocalPlayer() == whichPlayer) then
+        if (msg != "" and  msg != null) then
+            call ClearTextMessages()
+            call DisplayTimedTextToPlayer(whichPlayer, 0.52, - 1.00, 2.00, "|cffffcc00" + msg + "|r")
+        endif
+        call StartSound(error)
+    endif
+    call KillSoundWhenDone(error)
+    set error = null
 endfunction
