@@ -203,6 +203,7 @@ This version provides several new features compared to the original map [World o
 * Chat command "-discord" shows the Discord server URL.
 * PvP Arena.
 * Crafting Stashes.
+* Chat commands "-camlockon/off".
 
 ## Bug Fixes
 
