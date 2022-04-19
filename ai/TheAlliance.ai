@@ -191,9 +191,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
 	call SetBuildUnit( 1, NAGA_FISH_MARKET )
 
-	if (((GetUnitCount(BLOOD_ELF_KEEP) == 0) and (GetUnitCount(BLOOD_ELF_CASTLE) == 0))) then
-		call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
-	endif
+    call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
 	call SetBuildUnit( 17, BLOOD_PEASANT )
 	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
 	call SetBuildUnit( 1, SHREDDER )
@@ -221,9 +219,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, NAGA_SHRINE )
 	call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
 
-	if (((GetUnitCount(BLOOD_ELF_CASTLE) == 0))) then
-		call SetBuildUnit( 1, BLOOD_ELF_KEEP )
-	endif
+    call SetBuildUnit( 1, BLOOD_ELF_KEEP )
 	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
 	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
 	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
