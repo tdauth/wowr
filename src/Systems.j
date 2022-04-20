@@ -7985,3 +7985,23 @@ function SimError takes player whichPlayer, string msg returns nothing
     call KillSoundWhenDone(error)
     set error = null
 endfunction
+
+globals
+    constant real PING_DURATION = 5.0
+endglobals
+
+function PingUnitForPlayer takes unit whichUnit, player whichPlayer returns nothing
+    call PingMinimapForPlayer(whichPlayer, GetUnitX(whichUnit), GetUnitY(whichUnit), PING_DURATION)
+endfunction
+
+function PingItemForPlayer takes item whichItem, player whichPlayer returns nothing
+    call PingMinimapForPlayer(whichPlayer, GetItemX(whichItem), GetItemY(whichItem), PING_DURATION)
+endfunction
+
+function PingRectForPlayer takes rect whichRect, player whichPlayer returns nothing
+    call PingMinimapForPlayer(whichPlayer, GetRectCenterX(whichRect), GetRectCenterY(whichRect), PING_DURATION)
+endfunction
+
+function PingDestructableForPlayer takes destructable whichDestructable, player whichPlayer returns nothing
+    call PingMinimapForPlayer(whichPlayer, GetDestructableX(whichDestructable), GetDestructableY(whichDestructable), PING_DURATION)
+endfunction
