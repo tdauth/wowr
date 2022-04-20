@@ -204,6 +204,11 @@ This version provides several new features compared to the original map [World o
 * PvP Arena.
 * Crafting Stashes.
 * Chat commands "-camlockon/off".
+* 3 Naga Tier buildings.
+* Naga Shipyard.
+* Naga Pyramid of Serpant.
+* Coral Golem.
+* Naga Whaler.
 
 ## Bug Fixes
 
@@ -426,3 +431,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darkfang: [Orb of the Sun](https://www.hiveworkshop.com/threads/orb-of-the-sun.288765/)
 * General Frank: [Orb of Fire](https://www.hiveworkshop.com/threads/orb-of-fire.106241/#resource-26079)
 * Ujimasa Hojo: [Shipyard (Night Elf) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-night-elf-and-derivatives.230445/)
+* Retera: [Tiered Temple of Tides (from Heaven's Fall)](https://www.hiveworkshop.com/threads/tiered-temple-of-tides-from-heavens-fall.302776/)
+* cleavinghammer: [Coral Golem](https://www.hiveworkshop.com/threads/coral-golem.320084/)
+* Retera: [Treasury of the Tides](https://www.hiveworkshop.com/threads/treasury-of-the-tides.302779/)
+* Retera: [Pyramid of the Serpent](https://www.hiveworkshop.com/threads/pyramid-of-the-serpent.302773/)
+* -Grendel: [Naga Whaler](https://www.hiveworkshop.com/threads/naga-whaler.295123/)

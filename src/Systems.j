@@ -8005,3 +8005,34 @@ endfunction
 function PingDestructableForPlayer takes destructable whichDestructable, player whichPlayer returns nothing
     call PingMinimapForPlayer(whichPlayer, GetDestructableX(whichDestructable), GetDestructableY(whichDestructable), PING_DURATION)
 endfunction
+
+function DropAllItemsNotFromRaceForHero takes unit hero returns nothing
+    local player owner = GetOwningPlayer(hero)
+    local integer playerRace1 = udg_PlayerRace[GetConvertedPlayerId(owner)]
+    local integer playerRace2 = udg_PlayerRace2[GetConvertedPlayerId(owner)]
+    local integer itemRace = udg_RaceNone
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (UnitItemInSlot(hero, i) != null) then
+            set itemRace = GetItemRace(GetItemTypeId(UnitItemInSlot(hero, i)))
+             if (itemRace != udg_RaceNone and itemRace != playerRace1 and itemRace != playerRace2) then
+                call UnitRemoveItemFromSlot(hero, i)
+             endif
+        endif
+        set i = i + 1
+    endloop
+    set owner = null
+endfunction
+
+function DropAllItemsNotFromRace takes player whichPlayer returns nothing
+    if (udg_Hero[GetPlayerId(whichPlayer)] != null) then
+        call DropAllItemsNotFromRaceForHero(udg_Hero[GetPlayerId(whichPlayer)])
+    endif
+    if (udg_Hero2[GetPlayerId(whichPlayer)] != null) then
+        call DropAllItemsNotFromRaceForHero(udg_Hero2[GetPlayerId(whichPlayer)])
+    endif
+    if (udg_Hero3[GetPlayerId(whichPlayer)] != null) then
+        call DropAllItemsNotFromRaceForHero(udg_Hero3[GetPlayerId(whichPlayer)])
+    endif
+endfunction
