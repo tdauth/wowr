@@ -8036,3 +8036,13 @@ function DropAllItemsNotFromRace takes player whichPlayer returns nothing
         call DropAllItemsNotFromRaceForHero(udg_Hero3[GetPlayerId(whichPlayer)])
     endif
 endfunction
+
+function DropItemAtRectFromHeroByItemType takes unit hero, integer itemTypeId, rect whichRect returns nothing
+    local player owner = GetOwningPlayer(hero)
+    if (hero == udg_Held[GetPlayerId(owner)]) then
+        call DropQuestItemFromHeroAtRect(GetPlayerId(owner), itemTypeId, whichRect)
+    else
+        call DropQuestItemFromCreepHeroAtRect(hero, itemTypeId, whichRect)
+    endif
+    set owner = null
+endfunction

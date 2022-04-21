@@ -436,3 +436,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Retera: [Treasury of the Tides](https://www.hiveworkshop.com/threads/treasury-of-the-tides.302779/)
 * Retera: [Pyramid of the Serpent](https://www.hiveworkshop.com/threads/pyramid-of-the-serpent.302773/)
 * -Grendel: [Naga Whaler](https://www.hiveworkshop.com/threads/naga-whaler.295123/)
+* Villagerino: [Divine Golem (variative)](https://www.hiveworkshop.com/threads/divine-golem-variative.337087/)
