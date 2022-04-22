@@ -8046,3 +8046,247 @@ function DropItemAtRectFromHeroByItemType takes unit hero, integer itemTypeId, r
     endif
     set owner = null
 endfunction
+
+// Baradé's Layer System 1.0
+//
+// Supports walking ground units on different layers on top of each other.
+//
+// Usage:
+// - Copy the code into a trigger in your map.
+// - Create unit types with movement type flying for all supported ground unit types.
+// - Create Storm Crow based abilities for the passive unit transformation into ground and flying unit types.
+// - Register all rects for layers during the map initialization.
+// - Optional: Create bridge destructibles without any pathing texture and with "Is Walkable" set to "false" and place them at the layer rects in your map.
+//
+// Dependencies (integrated):
+// - GetTerrainZ and GetUnitZ: https://www.hiveworkshop.com/threads/snippet-getterrainz-unitz.236942/
+//
+// Known issues:
+// - You have to add unit types and two abilities per unit type to allow morphing into and unmorphing from an air unit type. This is required since the movement type and classification cannot be changed via natives.
+// - Units on layers cannot attack and cannot be attack by ground units next to the layer. They are classified as air units to avoid attacks from ground units below the layer and have disabled attacks to prevent them from attacking real air units.
+// - Pathfinding won't work with layers. It would work with fake Way Gates but on entering the Way Gate redirecting the unit to the layer and at the end of the layer back to the original destination which is too complicated to implement.
+// - TerrainZ does not return the exact Z and hence the units on layers are often too low.
+
+globals
+    region array LayerRegion
+    integer array LayerCliffLevel
+    real array LayerFlyHeight
+    trigger array LayerLeaveTrigger // recognize leave event before enter event
+    trigger array LayerEnterTrigger
+    group array LayerGroup
+    group array LayerGroupFlyingUnits
+    integer LayerCounter = 0
+
+    integer array LayerUnitTypeId
+    integer array LayerCrowFormMorphAbilityId
+    integer array LayerCrowFormUnmorphAbilityId
+    integer LayerUnitTypeIdCounter = 0
+
+    hashtable LayerHashTable = InitHashtable()
+    timer LayerFlyingHeightTimer = CreateTimer()
+    boolean LayerFlyingHeightTimerStarted = false
+    integer LayerTotalUnitsCounter = 0
+
+    constant location LayerL = Location(0, 0)
+endglobals
+
+function LayerAddUnitType takes integer unitTypeId, integer morphAbilityId, integer unmorphAbilityId returns integer
+    local integer index = LayerUnitTypeIdCounter
+    set LayerUnitTypeId[index] = unitTypeId
+    set LayerCrowFormMorphAbilityId[index] = morphAbilityId
+    set LayerCrowFormUnmorphAbilityId[index] = unmorphAbilityId
+    set LayerUnitTypeIdCounter = LayerUnitTypeIdCounter + 1
+    return index
+endfunction
+
+function LayerGetUnitType takes integer unitTypeId returns integer
+    local integer i = 0
+    loop
+        exitwhen (i >= LayerUnitTypeIdCounter)
+        if (LayerUnitTypeId[i] == unitTypeId) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function LayerGetTerrainZ takes real x, real y returns real
+    call MoveLocation(LayerL, x, y)
+    return GetLocationZ(LayerL)
+endfunction
+
+function LayerGetUnitZ takes unit u returns real
+    return LayerGetTerrainZ(GetUnitX(u), GetUnitY(u)) + GetUnitFlyHeight(u)
+endfunction
+
+function LayerSetUnitZ takes unit u, real z returns nothing
+    call SetUnitFlyHeight(u, z - LayerGetTerrainZ(GetUnitX(u), GetUnitY(u)), 0)
+endfunction
+
+
+function LayerPolarProjectionX takes real x, real angle, real distance returns real
+    return x + distance * Cos(angle * bj_DEGTORAD)
+endfunction
+
+function LayerPolarProjectionY takes real y, real angle, real distance returns real
+    return y + distance * Sin(angle * bj_DEGTORAD)
+endfunction
+
+function LayerStopUnitAndMoveBack takes unit whichUnit returns nothing
+    local real angle = ModuloReal(GetUnitFacing(whichUnit) - 180.0, 360.0)
+    call SetUnitPosition(whichUnit, LayerPolarProjectionX(GetUnitX(whichUnit), angle, 10.0), LayerPolarProjectionY(GetUnitY(whichUnit), angle, 300.0))
+    call IssueImmediateOrder(whichUnit, "stop")
+    //call BJDebugMsg(GetUnitName(GetTriggerUnit()) + " was moved back and stopped")
+endfunction
+
+function LayerTimerFunctionUpdateFlyingHeight takes nothing returns nothing
+    local unit whichUnit = null
+    local integer j = 0
+    local integer i = 0
+    loop
+        exitwhen (i == LayerCounter)
+        set j = 0
+        loop
+            exitwhen (j == BlzGroupGetSize(LayerGroup[i]))
+            set whichUnit = BlzGroupUnitAt(LayerGroup[i], j)
+            call LayerSetUnitZ(whichUnit, LayerFlyHeight[i])
+            set whichUnit = null
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+endfunction
+
+function LayerStartUpdateFlyingHeightTimer takes nothing returns nothing
+    if (not LayerFlyingHeightTimerStarted) then
+        call TimerStart(LayerFlyingHeightTimer, 0.01, true, function LayerTimerFunctionUpdateFlyingHeight)
+        set LayerFlyingHeightTimerStarted = true
+    endif
+endfunction
+
+function LayerStopUpdateFlyingHeightTimer takes nothing returns nothing
+    if (LayerTotalUnitsCounter <= 0) then
+        call PauseTimer(LayerFlyingHeightTimer)
+        set LayerFlyingHeightTimerStarted = false
+    endif
+endfunction
+
+function LayerTriggerConditionEnter takes nothing returns boolean
+    local integer layer = LoadInteger(LayerHashTable, GetHandleId(GetTriggeringTrigger()), 0)
+    local integer cliffLevel = GetTerrainCliffLevel(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
+
+    //call BJDebugMsg(GetUnitName(GetTriggerUnit()) + " entering layer " + I2S(layer) + " with cliff level " + I2S(LayerCliffLevel[layer]) + " having cliff level " + I2S(cliffLevel))
+
+    if (not IsUnitType(GetTriggerUnit(), UNIT_TYPE_FLYING)) then
+        if (not IsUnitInGroup(GetTriggerUnit(), LayerGroup[layer])) then
+            if (LayerGetUnitType(GetUnitTypeId(GetTriggerUnit())) != -1) then
+                if (cliffLevel == LayerCliffLevel[layer]) then
+                    return true
+                else
+                    call LayerStopUnitAndMoveBack(GetTriggerUnit())
+                endif
+            endif
+        endif
+    elseif (not IsUnitInGroup(GetTriggerUnit(), LayerGroupFlyingUnits[layer])) then
+        call GroupAddUnit(LayerGroupFlyingUnits[layer], GetTriggerUnit())
+        set LayerTotalUnitsCounter = LayerTotalUnitsCounter + 1
+        call LayerStartUpdateFlyingHeightTimer()
+    endif
+
+    return false
+endfunction
+
+function LayerTriggerActionEnter takes nothing returns nothing
+    local integer layer = LoadInteger(LayerHashTable, GetHandleId(GetTriggeringTrigger()), 0)
+    local integer unitTypeIndex = LayerGetUnitType(GetUnitTypeId(GetTriggerUnit()))
+
+    call GroupAddUnit(LayerGroup[layer], GetTriggerUnit())
+    set LayerTotalUnitsCounter = LayerTotalUnitsCounter + 1
+
+    if (UnitAddAbility(GetTriggerUnit(), LayerCrowFormMorphAbilityId[unitTypeIndex])) then // Amrf
+        call UnitRemoveAbility(GetTriggerUnit(), LayerCrowFormMorphAbilityId[unitTypeIndex])
+    endif
+    call LayerStartUpdateFlyingHeightTimer()
+endfunction
+
+function LayerTriggerConditionLeave takes nothing returns boolean
+    local integer layer = LoadInteger(LayerHashTable, GetHandleId(GetTriggeringTrigger()), 0)
+
+    //call BJDebugMsg(GetUnitName(GetTriggerUnit()) + " leaving layer " + I2S(layer))
+
+    if (IsUnitInGroup(GetTriggerUnit(), LayerGroup[layer])) then
+        return true
+    elseif (IsUnitInGroup(GetTriggerUnit(), LayerGroupFlyingUnits[layer])) then
+        call GroupRemoveUnit(LayerGroupFlyingUnits[layer], GetTriggerUnit())
+        set LayerTotalUnitsCounter = LayerTotalUnitsCounter - 1
+        call LayerStopUpdateFlyingHeightTimer()
+    endif
+
+    return false
+endfunction
+
+function LayerTriggerActionLeave takes nothing returns nothing
+    local integer layer = LoadInteger(LayerHashTable, GetHandleId(GetTriggeringTrigger()), 0)
+    local integer unitTypeIndex = LayerGetUnitType(GetUnitTypeId(GetTriggerUnit()))
+    local integer cliffLevel = GetTerrainCliffLevel(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
+
+    //call BJDebugMsg(GetUnitName(GetTriggerUnit()) + " leaving layer " + I2S(layer) + " with cliff level " + I2S(LayerCliffLevel[layer]) + " having cliff level " + I2S(cliffLevel))
+
+    if (cliffLevel < LayerCliffLevel[layer]) then
+        // keeps the unit in the layer region
+        call LayerStopUnitAndMoveBack(GetTriggerUnit())
+    else
+        call GroupRemoveUnit(LayerGroup[layer], GetTriggerUnit())
+        set LayerTotalUnitsCounter = LayerTotalUnitsCounter - 1
+        call SetUnitFlyHeight(GetTriggerUnit(), 0.0, 0.0)
+        if (UnitAddAbility(GetTriggerUnit(), LayerCrowFormUnmorphAbilityId[unitTypeIndex])) then // Amrf
+            call UnitRemoveAbility(GetTriggerUnit(), LayerCrowFormUnmorphAbilityId[unitTypeIndex])
+        endif
+
+        call LayerStopUpdateFlyingHeightTimer()
+    endif
+endfunction
+
+function LayerAdd takes region whichRegion, integer cliffLevel returns integer
+    local integer index = LayerCounter
+    set LayerRegion[index] = whichRegion
+    set LayerCliffLevel[index] = cliffLevel
+    //set LayerFlyHeight[index] = R2I(cliffLevel) * bj_CLIFFHEIGHT
+    set LayerFlyHeight[index] = R2I(cliffLevel) * 42.0
+    set LayerEnterTrigger[index] = CreateTrigger()
+    call TriggerRegisterEnterRegion(LayerEnterTrigger[index], whichRegion, null)
+    call TriggerAddCondition(LayerEnterTrigger[index], Condition(function LayerTriggerConditionEnter))
+    call TriggerAddAction(LayerEnterTrigger[index], function LayerTriggerActionEnter)
+    call SaveInteger(LayerHashTable, GetHandleId(LayerEnterTrigger[index]), 0, index)
+    set LayerLeaveTrigger[index] = CreateTrigger()
+    call TriggerRegisterLeaveRegion(LayerLeaveTrigger[index], whichRegion, null)
+    call TriggerAddCondition(LayerLeaveTrigger[index], Condition(function LayerTriggerConditionLeave))
+    call TriggerAddAction(LayerLeaveTrigger[index], function LayerTriggerActionLeave)
+    call SaveInteger(LayerHashTable, GetHandleId(LayerLeaveTrigger[index]), 0, index)
+    set LayerGroup[index] = CreateGroup()
+    set LayerGroupFlyingUnits[index] = CreateGroup()
+    set LayerCounter = LayerCounter + 1
+    return index
+endfunction
+
+function LayerAddRect takes rect r, integer cliffLevel returns integer
+    local region rectRegion = CreateRegion()
+    call RegionAddRect(rectRegion, r)
+    return LayerAdd(rectRegion, cliffLevel)
+endfunction
+
+function LayerAddRectSimple takes rect r returns integer
+    local integer cliffLevel = GetTerrainCliffLevel(GetRectMaxX(r), GetRectMaxY(r))
+    return LayerAddRect(r, cliffLevel)
+endfunction
+
+function LayerEnable takes integer layer returns nothing
+    call EnableTrigger(LayerEnterTrigger[layer])
+    call EnableTrigger(LayerLeaveTrigger[layer])
+endfunction
+
+function LayerDisable takes integer layer returns nothing
+    call DisableTrigger(LayerEnterTrigger[layer])
+    call DisableTrigger(LayerLeaveTrigger[layer])
+endfunction
