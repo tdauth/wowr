@@ -437,3 +437,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Retera: [Pyramid of the Serpent](https://www.hiveworkshop.com/threads/pyramid-of-the-serpent.302773/)
 * -Grendel: [Naga Whaler](https://www.hiveworkshop.com/threads/naga-whaler.295123/)
 * Villagerino: [Divine Golem (variative)](https://www.hiveworkshop.com/threads/divine-golem-variative.337087/)
+* Ujimasa Hojo: [Arcane Observatory and Derivatives](https://www.hiveworkshop.com/threads/arcane-observatory-and-derivatives.224634/)
+* Ujimasa Hojo: [Archer (Dragonhawk Mount) and Derivatives](https://www.hiveworkshop.com/threads/archer-dragonhawk-mount-and-derivatives.307950/)
