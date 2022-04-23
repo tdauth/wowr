@@ -3051,6 +3051,28 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     return result
 endfunction
 
+function GetHeroLevelMaxXP takes integer heroLevel returns integer
+    local integer result = 0 // level 1 XP
+    local integer i = 2
+    loop
+        exitwhen (i > heroLevel + 1)
+        set result = result + i * 100
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetHeroLevelByXP takes integer xp returns integer
+    local integer maxXP = 0
+    local integer i = 1
+    loop
+        set maxXP = GetHeroLevelMaxXP(i)
+        exitwhen (i > 10000 or xp < maxXP)
+        set i = i + 1
+    endloop
+    return i
+endfunction
+
 function GetSaveCodeShortInfos takes string playerName, string s returns string
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
@@ -3104,7 +3126,49 @@ function GetSaveCodeShortInfos takes string playerName, string s returns string
         set warlordStatus = "Warlord"
     endif
 
-    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-XP1_" + I2S(xp) + "-XP2_" + I2S(xp2) + "-XP3_" + I2S(xp3) + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-evo_" + I2S(evolutionLevel)
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-level1_" + I2S(GetHeroLevelByXP(xp)) + "-level2_" + I2S(GetHeroLevelByXP(xp2)) + "-level3_" + I2S(GetHeroLevelByXP(xp3)) + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-evo_" + I2S(evolutionLevel)
+endfunction
+
+function GetSaveCodeMaxHeroLevel takes string playerName, string s returns integer
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+
+    if (xp2 > xp and xp2 > xp3) then
+        return GetHeroLevelByXP(xp2)
+    elseif (xp3 > xp and xp3 > xp2) then
+        return GetHeroLevelByXP(xp3)
+    endif
+
+    return GetHeroLevelByXP(xp)
 endfunction
 
 function IsCharacterUpperCase takes string letter returns boolean
@@ -6827,16 +6891,26 @@ function AddPrestoredSaveCode takes string playerName, string saveCode returns i
     return index
 endfunction
 
-function GetPrestoredSaveCode takes string playerName returns string
+
+function GetPrestoredSaveCodePlayerNameByIndex takes integer index returns string
+    return PrestoredSaveCodePlayerName[index]
+endfunction
+
+function GetPrestoredSaveCodeByIndex takes integer index returns string
+    return PrestoredSaveCode[index]
+endfunction
+
+function GetPrestoredSaveCodeCounter takes string playerName returns integer
+    local integer counter = 0
     local integer i = 0
     loop
         exitwhen (i == PrestoredSaveCodeCounter)
         if (PrestoredSaveCodePlayerName[i] == playerName) then
-            return PrestoredSaveCode[i]
+            set counter = counter + 1
         endif
         set i = i + 1
     endloop
-    return null
+    return counter
 endfunction
 
 function GetPrestoredSaveCodeIndices takes string playerName returns string
@@ -6857,7 +6931,6 @@ function GetPrestoredSaveCodeIndices takes string playerName returns string
     return result
 endfunction
 
-
 function GetPrestoredSaveCodeInfos takes string playerName returns string
     local string result = ""
     local integer counter = 0
@@ -6873,6 +6946,24 @@ function GetPrestoredSaveCodeInfos takes string playerName returns string
         endif
         set i = i + 1
     endloop
+    return result
+endfunction
+
+function GetPrestoredSaveCodeMaxLevelIndex takes string skipPlayerName1, string skipPlayerName2, string skipPlayerName3 returns integer
+    local integer maxLevel = 0
+    local integer tmpMaxLevel = 0
+    local integer result = -1
+    local integer i = 0
+    loop
+        exitwhen (i == PrestoredSaveCodeCounter)
+        set tmpMaxLevel = GetSaveCodeMaxHeroLevel(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
+        if (tmpMaxLevel > maxLevel) then
+            set maxLevel = tmpMaxLevel
+            set result = i
+        endif
+        set i = i + 1
+    endloop
+
     return result
 endfunction
 
