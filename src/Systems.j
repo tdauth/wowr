@@ -6917,7 +6917,7 @@ function GetPrestoredSaveCodeCounter takes string playerName returns integer
     local integer counter = 0
     local integer i = 0
     loop
-        exitwhen (i == PrestoredSaveCodeCounter)
+        exitwhen (i >= PrestoredSaveCodeCounter)
         if (PrestoredSaveCodePlayerName[i] == playerName) then
             set counter = counter + 1
         endif
@@ -6931,7 +6931,7 @@ function GetPrestoredSaveCodeIndices takes string playerName returns string
     local integer counter = 0
     local integer i = 0
     loop
-        exitwhen (i == PrestoredSaveCodeCounter)
+        exitwhen (i >= PrestoredSaveCodeCounter)
         if (PrestoredSaveCodePlayerName[i] == playerName) then
             if (counter > 0) then
                 set result = result + "\n"
@@ -6949,7 +6949,7 @@ function GetPrestoredSaveCodeInfos takes string playerName returns string
     local integer counter = 0
     local integer i = 0
     loop
-        exitwhen (i == PrestoredSaveCodeCounter)
+        exitwhen (i >= PrestoredSaveCodeCounter)
         if (PrestoredSaveCodePlayerName[i] == playerName) then
             if (counter > 0) then
                 set result = result + "\n"
@@ -6968,7 +6968,7 @@ function GetPrestoredSaveCodeMaxLevelIndex takes string skipPlayerName1, string 
     local integer result = -1
     local integer i = 0
     loop
-        exitwhen (i == PrestoredSaveCodeCounter)
+        exitwhen (i >= PrestoredSaveCodeCounter)
         if ((skipPlayerName1 == null or GetPrestoredSaveCodePlayerNameByIndex(i) != skipPlayerName1) and (skipPlayerName2 == null or GetPrestoredSaveCodePlayerNameByIndex(i) != skipPlayerName2) and (skipPlayerName3 == null or GetPrestoredSaveCodePlayerNameByIndex(i) != skipPlayerName3)) then
             set tmpMaxLevel = GetSaveCodeMaxHeroLevel(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
             if (tmpMaxLevel > maxLevel) then
@@ -8546,5 +8546,5 @@ function LayerDisable takes integer layer returns nothing
 endfunction
 
 function LayerGetUnitLayer takes unit whichUnit returns integer
-    return LoadInteger(LayerHashTable, GetHandleId(GetTriggerUnit()), 0)
+    return LoadInteger(LayerHashTable, GetHandleId(whichUnit), 0)
 endfunction
