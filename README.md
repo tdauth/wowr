@@ -209,6 +209,7 @@ This version provides several new features compared to the original map [World o
 * Naga Pyramid of Serpant.
 * Coral Golem.
 * Naga Whaler.
+* New hero Razormane Chieftain.
 
 ## Bug Fixes
 

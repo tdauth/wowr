@@ -3051,6 +3051,62 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     return result
 endfunction
 
+function GetSaveCodeShortInfos takes string playerName, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string singlePlayerStatus = "Multiplayer"
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string warlordStatus = "Freelancer"
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string checksumStatus = "Valid"
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+
+    if (playerNameHash != CompressedAbsStringHash(playerName)) then
+        set playerName = "Not yours"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set warlordStatus = "Warlord"
+    endif
+
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-XP1_" + I2S(xp) + "-XP2_" + I2S(xp2) + "-XP3_" + I2S(xp3) + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-evo_" + I2S(evolutionLevel)
+endfunction
+
 function IsCharacterUpperCase takes string letter returns boolean
     return letter == "A" or letter == "B" or letter == "C" or letter == "D" or letter == "E" or letter == "F" or letter == "G" or letter == "H" or letter == "I" or letter == "J" or letter == "K" or letter == "L" or letter == "M" or letter == "N" or letter == "O" or letter == "P" or letter == "Q" or letter == "R" or letter == "S" or letter == "T" or letter == "U" or letter == "V" or letter == "W" or letter == "X" or letter == "Y" or letter == "Z"
 endfunction
@@ -6755,6 +6811,73 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], false)
 endfunction
 
+// Prestored Savecodes
+
+globals
+    string array PrestoredSaveCodePlayerName
+    string array PrestoredSaveCode
+    integer PrestoredSaveCodeCounter = 0
+endglobals
+
+function AddPrestoredSaveCode takes string playerName, string saveCode returns integer
+    local integer index = PrestoredSaveCodeCounter
+    set PrestoredSaveCodePlayerName[index] = playerName
+    set PrestoredSaveCode[index] = saveCode
+    set PrestoredSaveCodeCounter = PrestoredSaveCodeCounter + 1
+    return index
+endfunction
+
+function GetPrestoredSaveCode takes string playerName returns string
+    local integer i = 0
+    loop
+        exitwhen (i == PrestoredSaveCodeCounter)
+        if (PrestoredSaveCodePlayerName[i] == playerName) then
+            return PrestoredSaveCode[i]
+        endif
+        set i = i + 1
+    endloop
+    return null
+endfunction
+
+function GetPrestoredSaveCodeIndices takes string playerName returns string
+    local string result = ""
+    local integer counter = 0
+    local integer i = 0
+    loop
+        exitwhen (i == PrestoredSaveCodeCounter)
+        if (PrestoredSaveCodePlayerName[i] == playerName) then
+            if (counter > 0) then
+                set result = result + "\n"
+            endif
+            set result = result + "- " + I2S(i)
+            set counter = counter + 1
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+
+function GetPrestoredSaveCodeInfos takes string playerName returns string
+    local string result = ""
+    local integer counter = 0
+    local integer i = 0
+    loop
+        exitwhen (i == PrestoredSaveCodeCounter)
+        if (PrestoredSaveCodePlayerName[i] == playerName) then
+            if (counter > 0) then
+                set result = result + "\n"
+            endif
+            set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
+            set counter = counter + 1
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+// Floating Text Utility Functions
+
 function ShowTextTagForForce takes force whichForce, texttag textTag, boolean show returns nothing
     if (IsPlayerInForce(GetLocalPlayer(), whichForce)) then
         call SetTextTagVisibility(textTag, true)
@@ -6847,6 +6970,8 @@ function RandomizeString takes string source returns string
 
     return result
 endfunction
+
+// Goblin Tunnel System
 
 globals
     constant integer GOBLIN_TUNNEL_DIRECTION_NORTH = 0
@@ -7078,6 +7203,8 @@ function KillAllConnectedGoblinTunnelParts takes unit start returns nothing
     set connected = null
 endfunction
 
+// Railroad System
+
 function FilterFunctionIsRailroad takes nothing returns boolean
     return (GetUnitTypeId(GetEnumUnit()) == 'o01N' or GetUnitTypeId(GetEnumUnit()) == 'o01K') and IsUnitAliveBJ(GetEnumUnit())
 endfunction
@@ -7111,6 +7238,8 @@ endfunction
 function GetPreviousRailroad takes unit source returns unit
     return GetRailroad(source, 270.0)
 endfunction
+
+// Hero Ability System
 
 globals
     hashtable HeroAbilitiesHashTable = InitHashtable()
@@ -7254,6 +7383,8 @@ function GetEvolutionLevelOfPlayer takes player whichPlayer returns integer
     return GetPlayerTechCountSimple(UPG_EVOLUTION, whichPlayer)
 endfunction
 
+// Order Record System
+
 globals
     trigger orderTrigger
 endglobals
@@ -7302,6 +7433,8 @@ endfunction
 function DisableOrderDebugger takes nothing returns nothing
     call DisableTrigger(orderTrigger)
 endfunction
+
+// Tree Finding System
 
 function IsDestructableTree takes destructable whichDestructable returns boolean
      if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
@@ -7380,6 +7513,16 @@ function IsDestructableTree takes destructable whichDestructable returns boolean
         return true
     endif
     if ( ( GetDestructableTypeId(whichDestructable) == 'FTtw' ) ) then
+        return true
+    endif
+    // Easter Trees
+    if ( ( GetDestructableTypeId(whichDestructable) == 'B005' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'B006' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'B006' ) ) then
         return true
     endif
     return false
@@ -8204,6 +8347,8 @@ function LayerTriggerActionEnter takes nothing returns nothing
     call GroupAddUnit(LayerGroup[layer], GetTriggerUnit())
     set LayerTotalUnitsCounter = LayerTotalUnitsCounter + 1
 
+    call SaveInteger(LayerHashTable, GetHandleId(GetTriggerUnit()), 0, layer)
+
     if (UnitAddAbility(GetTriggerUnit(), LayerCrowFormMorphAbilityId[unitTypeIndex])) then // Amrf
         call UnitRemoveAbility(GetTriggerUnit(), LayerCrowFormMorphAbilityId[unitTypeIndex])
     endif
@@ -8239,6 +8384,9 @@ function LayerTriggerActionLeave takes nothing returns nothing
     else
         call GroupRemoveUnit(LayerGroup[layer], GetTriggerUnit())
         set LayerTotalUnitsCounter = LayerTotalUnitsCounter - 1
+
+        call FlushChildHashtable(LayerHashTable, GetHandleId(GetTriggerUnit()))
+
         call SetUnitFlyHeight(GetTriggerUnit(), 0.0, 0.0)
         if (UnitAddAbility(GetTriggerUnit(), LayerCrowFormUnmorphAbilityId[unitTypeIndex])) then // Amrf
             call UnitRemoveAbility(GetTriggerUnit(), LayerCrowFormUnmorphAbilityId[unitTypeIndex])
@@ -8289,4 +8437,8 @@ endfunction
 function LayerDisable takes integer layer returns nothing
     call DisableTrigger(LayerEnterTrigger[layer])
     call DisableTrigger(LayerLeaveTrigger[layer])
+endfunction
+
+function LayerGetUnitLayer takes unit whichUnit returns integer
+    return LoadInteger(LayerHashTable, GetHandleId(GetTriggerUnit()), 0)
 endfunction
