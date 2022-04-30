@@ -2400,6 +2400,8 @@ function ConvertSaveCodeDemigodValueToInfo takes integer value returns string
         return "Light Demigod"
     elseif (value == 2) then
         return "Dark Demigod"
+    elseif (value == 3) then
+        return "Any Demigod"
     endif
 
     return "No Demigod"
@@ -2606,11 +2608,14 @@ globals
 	constant integer UPG_IMPROVED_CREEP_HUNTER                       = 'R02Z'
 endglobals
 
-function GetSaveCodeDemigodValue takes integer unitTypeId returns integer
+function GetSaveCodeDemigodValue takes player whichPlayer returns integer
+    local integer unitTypeId = GetUnitTypeId(udg_Held[GetConvertedPlayerId(whichPlayer)])
     if (unitTypeId == 'H003') then
         return 1
     elseif (unitTypeId == 'H002') then
         return 2
+    elseif (GetPlayerTechCountSimple('R04S', whichPlayer) > 0) then
+        return 3
     endif
 
     return 0
@@ -2658,7 +2663,7 @@ function GetSaveCode takes player whichPlayer returns string
         set heroLevel2 = 0 // TODO Set hero level by XP
     endif
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(GetUnitTypeId(udg_Held[GetConvertedPlayerId(whichPlayer)])))
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(whichPlayer))
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -2787,6 +2792,29 @@ function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
     return false
 endfunction
 
+function GetHeroLevelMaxXP takes integer heroLevel returns integer
+    local integer result = 0 // level 1 XP
+    local integer i = 2
+    loop
+        exitwhen (i > heroLevel + 1)
+        set result = result + i * 100
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetHeroLevelByXP takes integer xp returns integer
+    local integer heroLevel = 1
+    local integer i = 2
+    loop
+        set xp = xp - i * 100
+        exitwhen (xp < 0)
+        set heroLevel = heroLevel + 1
+        set i = i + 1
+    endloop
+    return heroLevel
+endfunction
+
 function ApplySaveCode takes player whichPlayer, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
@@ -2836,6 +2864,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
             elseif (demigodValue == 2) then
                 set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
                 call TriggerExecute(gg_trg_Become_Demigod_Dark)
+            elseif (demigodValue == 3) then
+                call SetPlayerTechResearchedIfHigher(whichPlayer, 'R04S', 1)
             endif
 
             call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
@@ -2862,6 +2892,9 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
 
             if (udg_Held[GetConvertedPlayerId(whichPlayer)] == null and xp > udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)]) then
                 set udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)] = xp
+                set udg_TmpPlayer = whichPlayer
+                set udg_TmpInteger = GetHeroLevelByXP(xp)
+                call TriggerExecute(gg_trg_Hero_Journey_Update_from_Level)
             endif
 
             if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
@@ -3061,29 +3094,6 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     set result = AppendSaveCodeInfo(result, "Boss kills: " + I2S(totalBossKills))
 
     return result
-endfunction
-
-function GetHeroLevelMaxXP takes integer heroLevel returns integer
-    local integer result = 0 // level 1 XP
-    local integer i = 2
-    loop
-        exitwhen (i > heroLevel + 1)
-        set result = result + i * 100
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
-function GetHeroLevelByXP takes integer xp returns integer
-    local integer heroLevel = 1
-    local integer i = 2
-    loop
-        set xp = xp - i * 100
-        exitwhen (xp < 0)
-        set heroLevel = heroLevel + 1
-        set i = i + 1
-    endloop
-    return heroLevel
 endfunction
 
 function GetSaveCodeShortInfos takes string playerName, string s returns string
