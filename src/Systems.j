@@ -8296,6 +8296,42 @@ function DropAllItemsNotFromRace takes player whichPlayer returns nothing
     endif
 endfunction
 
+function DropAllItemsNotFromProfessionForHero takes unit hero returns nothing
+    local player owner = GetOwningPlayer(hero)
+    local integer playerProfession1 = udg_PlayerProfession[GetConvertedPlayerId(owner)]
+    local integer playerProfession2 = udg_PlayerProfession2[GetConvertedPlayerId(owner)]
+    local integer j = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (UnitItemInSlot(hero, i) != null) then
+            set j = 0
+            loop
+                exitwhen (j == udg_Max_Berufe)
+                if (udg_ProfessionItemType[j] == GetItemTypeId(UnitItemInSlot(hero, i)) and playerProfession1 != j and playerProfession2 != j) then
+                    call UnitRemoveItemFromSlot(hero, i)
+                    exitwhen (true)
+                endif
+                set j = j + 1
+            endloop
+        endif
+        set i = i + 1
+    endloop
+    set owner = null
+endfunction
+
+function DropAllItemsNotFromProfession takes player whichPlayer returns nothing
+    if (udg_Hero[GetPlayerId(whichPlayer)] != null) then
+        call DropAllItemsNotFromProfessionForHero(udg_Hero[GetPlayerId(whichPlayer)])
+    endif
+    if (udg_Hero2[GetPlayerId(whichPlayer)] != null) then
+        call DropAllItemsNotFromProfessionForHero(udg_Hero2[GetPlayerId(whichPlayer)])
+    endif
+    if (udg_Hero3[GetPlayerId(whichPlayer)] != null) then
+        call DropAllItemsNotFromProfessionForHero(udg_Hero3[GetPlayerId(whichPlayer)])
+    endif
+endfunction
+
 function DropItemAtRectFromHeroByItemType takes unit hero, integer itemTypeId, rect whichRect returns nothing
     local player owner = GetOwningPlayer(hero)
     if (hero == udg_Held[GetPlayerId(owner)]) then
