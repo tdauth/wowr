@@ -740,6 +740,9 @@ globals
 	constant integer BLOOD_ELF_KEEP                                  = 'h00A' // keep
 	constant integer BLOOD_ELF_CASTLE                                = 'h00B' // castle
 	constant integer BLOOD_ELF_SCOUT_TOWER                           = 'h00I' // tower
+
+	constant integer NAGA_TEMPLE_1                                   = 'n05M'
+	constant integer NAGA_TEMPLE_3                                   = 'n05N'
 	
 	constant integer DEMON_GATE_1                                    = 'u005' // tier 1
 	constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
@@ -1193,6 +1196,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
 	elseif unitid == BLOOD_ELF_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(ELF_GUARD_TOWER,false,townid) + GetUnitCountEx(ARCANE_TOWER,false,townid)
+
+    elseif unitid == NAGA_TEMPLE_1 then
+        set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE,false,townid) + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
+    elseif unitid == NAGA_TEMPLE then
+        set have_qty = have_qty  + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
 
 	elseif unitid == DEMON_GATE_1 then
         set have_qty = have_qty + GetUnitCountEx(DEMON_GATE_2,false,townid) + GetUnitCountEx(DEMON_GATE_3,false,townid)

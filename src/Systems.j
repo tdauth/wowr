@@ -968,12 +968,24 @@ function TriggerActionMoveRucksack takes nothing returns nothing
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns nothing
-	local integer i = 1
+	local integer i = 0
 	loop
-		exitwhen (i > bj_MAX_INVENTORY)
-		call UnitRemoveItemFromSlotSwapped(i, hero)
+		exitwhen (i >= bj_MAX_INVENTORY)
+		call UnitRemoveItemFromSlot(hero, i)
 		set i = i + 1
 	endloop
+endfunction
+
+function DropAllItemsFromHero1 takes player whichPlayer returns nothing
+    call DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
+endfunction
+
+function DropAllItemsFromHero2 takes player whichPlayer returns nothing
+    call DropAllItemsFromHero(udg_Hero2[GetPlayerId(whichPlayer)])
+endfunction
+
+function DropAllItemsFromHero3 takes player whichPlayer returns nothing
+    call DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
 endfunction
 
 function PrepareRandomDist takes integer highestCreepLevel returns nothing

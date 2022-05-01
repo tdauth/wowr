@@ -210,6 +210,7 @@ This version provides several new features compared to the original map [World o
 * Coral Golem.
 * Naga Whaler.
 * New hero Razormane Chieftain.
+* New player selection.
 
 ## Bug Fixes
 
@@ -341,6 +342,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Baradé: Creator.
 * Deranor: Tests.
 * Runeblade14: Tests.
+* Toasty Toast UwU: Tests.
 * EvilPitlord: Original map.
 * DeMoNiKuS: Original map.
 * [World of Warcraft logo](https://unrealitymag.com/the-evolution-of-the-world-of-warcraft-logo/)

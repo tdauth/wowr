@@ -168,12 +168,18 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 2, DWARF_CITIZEN_FEMALE )
 	call SetBuildUnit( 2, DWARF_BARRACKS )
     call SetBuildUnit( 2, DWARF_TOWER )
-	call SetBuildUnit( 1, POWER_GENERATOR )
-	call SetBuildUnit( 1, RESEARCH_TENT )
+
+    // Tier 2 Buildings
+    call SetBuildUnit( 1, DWARF_TIER_2 )
     call SetBuildUnit( 1, DWARF_TAVERN )
 	call SetBuildUnit( 1, DWARF_MYSTICAL_HALL )
 	call SetBuildUnit( 1, DWARF_WORKSHOP )
 	call SetBuildUnit( 1, DWARF_BEASTIARY )
+
+	// Tier 3 Buildings
+	call SetBuildUnit( 1, DWARF_TIER_3 )
+    call SetBuildUnit( 1, POWER_GENERATOR )
+	call SetBuildUnit( 1, RESEARCH_TENT )
 	
 	call SetBuildUpgr( 2, UPG_DWARF_LUMBER )
 	call SetBuildUpgr( 2, UPG_DWARF_LUMBER_MILL )
