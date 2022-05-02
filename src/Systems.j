@@ -683,11 +683,11 @@ function RefreshRucksackForPlayer takes integer PlayerNumber returns nothing
     if (udg_Rucksack[PlayerNumber] != null) then
         call RemoveUnit(udg_Rucksack[PlayerNumber])
         set udg_Rucksack[PlayerNumber] = null
-        set udg_Rucksack[PlayerNumber] = CreateUnit(RucksackPlayer, udg_RucksackUnitType, GetUnitX(udg_Hero[PlayerNumber]), GetUnitY(udg_Hero[PlayerNumber]), 0.00)
-        call SuspendHeroXPBJ(false, udg_Rucksack[PlayerNumber])
-        call SetUnitInvulnerable(udg_Rucksack[PlayerNumber], true)
-        call RefreshRucksackPage(PlayerNumber)
     endif
+    set udg_Rucksack[PlayerNumber] = CreateUnit(RucksackPlayer, udg_RucksackUnitType, GetUnitX(udg_Hero[PlayerNumber]), GetUnitY(udg_Hero[PlayerNumber]), 0.00)
+    call SuspendHeroXPBJ(false, udg_Rucksack[PlayerNumber])
+    call SetUnitInvulnerable(udg_Rucksack[PlayerNumber], true)
+    call RefreshRucksackPage(PlayerNumber)
     set RucksackPlayer = null
 endfunction
 
