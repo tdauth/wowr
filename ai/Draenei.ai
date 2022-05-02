@@ -1,125 +1,3 @@
-globals
-    constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
-	constant integer DRAENEI_BARRACKS                                = 'ndh3'
-	constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
-	constant integer DRAENEI_SHOP                                    = 'n01N'
-	
-	constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
-	constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
-	constant integer DRAENEI_STALKER                                 = 'ndrt' // knight
-	constant integer DRAENEI_SALAMANDER                              = 'n01W' // pit fiend
-	constant integer DRAENEI_SEER                                    = 'n01U' // priest
-	constant integer DRAENEI_HARBINGER                               = 'n01V' // sorceress
-	constant integer DRAENEI_DEMOLISHER                              = 'ncat' // mortar
-	constant integer DRAENEI_NETHER_DRAKE                            = 'n01Q' // gryphon
-	
-	constant integer UPG_DRAENEI_DEVOUR                              = 'R018'
-	constant integer UPG_DRAENEI_DEMON_FIRE                          = 'R017'
-	constant integer UPG_DRAENEI_HARBRINGER_ADEPT                    = 'R015'
-	constant integer UPG_DRAENEI_SEER_ADEPT                          = 'R014'
-	constant integer UPG_DRAENEI_IMPROVED_MASONRY                    = 'R016'
-	constant integer UPG_DRAENEI_STEEL_ARMOR                         = 'R013'
-	constant integer UPG_DRAENEI_STEEL_MELEE_WEAPONS                 = 'R011'
-	constant integer UPG_DRAENEI_STEEL_RANGED_WEAPONS                = 'R012'
-	
-	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
-	constant integer UPG_STORM_PROTECTION                         = 'R029'
-	constant integer UPG_EVOLUTION                                   = 'R00U'
-	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
-	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
-	
-	constant integer AKAMA                                           = 'N01K'
-	constant integer REINCARNATION_AKAMA                             = 'A08K'
-	constant integer SPIRIT_WOLF_AKAMA                               = 'A08I'
-    constant integer SHADOW_TOUCH_AKAMA                              = 'A08G'
-
-    constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
-    constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
-    constant integer DRAENEI_HOUSING                                 = 'h011'
-	constant integer PORTAL                                          = 'h014'
-	constant integer POWER_GENERATOR                                 = 'n025'
-	constant integer RESEARCH_TENT                                   = 'n042'
-	
-	constant integer GRYPHON_MOUNT                                   = 'h004'
-	constant integer WYVERN_MOUNT                                    = 'o003'
-	constant integer FROST_WYRM_MOUNT                                = 'u004'
-	constant integer CHIMAERA_MOUNT                                  = 'e005'
-	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
-
-	constant integer SHREDDER                                        = 'ngir'
-	constant integer AI_LABORATORY                                   = 'h01T'
-endglobals
-
-//===========================================================================
-// Calculate the modulus/remainder of (dividend) divided by (divisor).
-// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
-//
-function ModuloInteger takes integer dividend, integer divisor returns integer
-    local integer modulus = dividend - (dividend / divisor) * divisor
-
-    // If the dividend was negative, the above modulus calculation will
-    // be negative, but within (-divisor..0).  We can add (divisor) to
-    // shift this result into the desired range of (0..divisor).
-    if (modulus < 0) then
-        set modulus = modulus + divisor
-    endif
-
-    return modulus
-endfunction
-
-function ChooseHeroSkill takes nothing returns integer
-    local integer curHero = GetHeroId()
-    local integer level = GetHeroLevelAI()
-    local integer mod = ModuloInteger(level, 4)
-    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
-
-    if (curHero == AKAMA) then
-        if (skillUlti) then
-            return REINCARNATION_AKAMA
-        elseif (mod == 0) then
-            return SPIRIT_WOLF_AKAMA
-        elseif (mod == 1) then
-            return CHAIN_LIGHTNING
-        elseif (mod == 2) then
-            return SHADOW_TOUCH_AKAMA
-        endif
-    endif
-
-    return 'Aamk'
-endfunction
-
-function InitHero takes nothing returns nothing
-    if (GetUnitCountDone(AKAMA) > 0) then
-        set hero_id = AKAMA
-    endif
-endfunction
-
-function UpdateWorkers takes nothing returns nothing
-	loop
-		call SetGoldPeons(5 + GetUnitCount(DRAENEI_HOUSING) * 3)
-		call SetWoodPeons(5)
-		call Sleep(1)
-	endloop
-endfunction
-
-function ConfigureAI takes nothing returns nothing
-    call SetTargetHeroes( true )
-    call SetUnitsFlee( true )
-    call SetHeroesFlee( true )
-    call SetPeonsRepair( true )
-    call SetHeroesBuyItems( true )
-    call SetHeroesTakeItems( true )
-    call SetSlowChopping( false )
-	call SetWatchMegaTargets( true )
-	call SetIgnoreInjured( false )
-	call SetGroupsFlee( false )
-	call SetCaptainChanges ( false  )
-	call SetSmartArtillery ( true )
-    call GroupTimedLife ( true )
-    call SetRandomPaths( true )
-    call SetDefendPlayer( true )
-endfunction
-
 function BuildingStrategy takes nothing returns nothing
     // **********************************
     // *      Building Strategy         *
@@ -129,16 +7,15 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, DRAENEI_HAVEN )
     call SetBuildUnit( 17, DRAENEI_LABORER )
 	call SetBuildUnit( 2, DRAENEI_CITIZEN_MALE )
-	call SetBuildUnit( 1, AI_LABORATORY )
-    call SetBuildUnit( 1, SHREDDER )
+
+	call BuildingStrategyStandardTier1()
+
 	call SetBuildUnit( 2, DRAENEI_HOUSING )
 	call SetBuildUnit( 2, DRAENEI_BARRACKS )
     call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
     call SetBuildUnit( 1, DRAENEI_SHOP )
 	call SetBuildUnit( 5, DRAENEI_BOULDER_TOWER )
 	call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
-	call SetBuildUnit( 1, POWER_GENERATOR )
-	call SetBuildUnit( 1, RESEARCH_TENT )
 	
 	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_ARMOR )
 	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_MELEE_WEAPONS )
@@ -149,126 +26,11 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_DRAENEI_IMPROVED_MASONRY )
 	call SetBuildUpgr( 1, UPG_DRAENEI_DEVOUR )
 	call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )	
-	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-	call SetBuildUpgr( 1000, UPG_EVOLUTION )
-	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
-	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
+
+	call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
-endfunction
-
-function AttackWithMount takes nothing returns nothing
-	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
-	endif
-	if (GetUnitCount(WYVERN_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
-	endif
-	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
-	endif
-	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
-	endif
-	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
-	endif
-endfunction
-
-function AddStandardUnitsToAttackWave takes nothing returns nothing
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
-endfunction
-
-//===========================================================================
-// Basic attack functionality
-//===========================================================================
-function AttackTarget takes unit target, boolean addAlliance returns nothing
-    if (target == null) then
-        return
-    endif
-    if (addAlliance) then
-        call SetAllianceTarget( target )
-    endif
-    call FormGroup( 3, true )
-    call AttackMoveKillA( target )
-    if (not addAlliance) then
-        call SetAllianceTarget( null )
-    endif
-endfunction
-
-//===========================================================================
-// Initiates an attack based on target priorities
-//===========================================================================
-function LaunchAttack takes nothing returns nothing
-    local unit target = null
-    local boolean setAlly = true
-
-    // Don't launch any attack while town is threatened
-    if (TownThreatened()) then
-        call Sleep( 2 )
-        return
-    endif
-
-    // Target Priority #1
-    if (target == null) then
-        set target = GetAllianceTarget()
-        if (target != null) then
-            set setAlly = false
-        endif
-    endif
-
-    // Target Priority #2
-    if (target == null) then
-        set target = GetExpansionFoe()
-        if (target != null) then
-            set take_exp = false
-        endif
-    endif
-
-    // Target Priority #3
-    if (target == null) then
-        set target = GetMegaTarget()
-    endif
-
-    // Target Priority #4
-    if (target == null) then
-        set target = GetEnemyExpansion()
-    endif
-
-    // Target Priority #5
-    if (target == null) then
-        set target = GetEnemyExpansion()
-        if (target == null) then
-            call StartGetEnemyBase(  )
-            loop
-                exitwhen (not WaitGetEnemyBase())
-                call SuicideSleep( 1 )
-            endloop
-            set target = GetEnemyBase()
-        endif
-    endif
-
-    // Target Priority #6
-    if (target == null) then
-        set target = GetCreepCamp( 0, 9, false )
-    endif
-
-    // Target Priority #7
-    if (target == null) then
-        set target = GetCreepCamp( 10, 100, true )
-    endif
-
-    // Attack the target and increment attack wave
-    if (target != null) then
-        call AttackTarget( target, setAlly )
-    else
-        // If no target was found, sleep a bit before trying again
-        call Sleep( 20 )
-    endif
 endfunction
 
 function AttackWaves takes nothing returns nothing

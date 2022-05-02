@@ -1,143 +1,3 @@
-globals
-    constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
-    constant integer UPG_STORM_PROTECTION                            = 'R029'
-    constant integer UPG_EVOLUTION                                   = 'R00U'
-	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
-	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
-
-    constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
-    constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
-    constant integer UNDEAD_HOUSING                                  = 'h00U'
-	constant integer PORTAL                                          = 'h014'
-	constant integer POWER_GENERATOR                                 = 'n025'
-	constant integer RESEARCH_TENT                                   = 'n042'
-	
-	constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
-	constant integer DARK_RANGER_SILENCE                             = 'ANsi'
-	constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
-	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
-	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
-	constant integer DARK_RANGER_CHARM                               = 'ANch'
-	constant integer DARK_RANGER_BLACK_ARROW                         = 'ANba'
-	
-	constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
-	
-	constant integer GRYPHON_MOUNT                                   = 'h004'
-	constant integer WYVERN_MOUNT                                    = 'o003'
-	constant integer FROST_WYRM_MOUNT                                = 'u004'
-	constant integer CHIMAERA_MOUNT                                  = 'e005'
-	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
-
-	constant integer SHREDDER                                        = 'ngir'
-	constant integer AI_LABORATORY                                   = 'h01T'
-endglobals
-
-//===========================================================================
-// Calculate the modulus/remainder of (dividend) divided by (divisor).
-// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
-//
-function ModuloInteger takes integer dividend, integer divisor returns integer
-    local integer modulus = dividend - (dividend / divisor) * divisor
-
-    // If the dividend was negative, the above modulus calculation will
-    // be negative, but within (-divisor..0).  We can add (divisor) to
-    // shift this result into the desired range of (0..divisor).
-    if (modulus < 0) then
-        set modulus = modulus + divisor
-    endif
-
-    return modulus
-endfunction
-
-function ChooseHeroSkill takes nothing returns integer
-    local integer curHero = GetHeroId()
-    local integer level = GetHeroLevelAI()
-    local integer mod = ModuloInteger(level, 4)
-    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
-
-    if (curHero == DEATH_KNIGHT) then
-        if (skillUlti) then
-            return ANIM_DEAD
-        elseif (mod == 0) then
-            return DEATH_COIL
-        elseif (mod == 1) then
-            return DEATH_PACT
-        elseif (mod == 2) then
-            return UNHOLY_AURA
-        endif
-    elseif (curHero == DARK_RANGER_NEUTRAL) then
-        if (skillUlti) then
-            return DARK_RANGER_CHARM
-        elseif (mod == 0) then
-            return DARK_RANGER_SILENCE
-        elseif (mod == 1) then
-            return DARK_RANGER_BLACK_ARROW
-        elseif (mod == 2) then
-            return DARK_RANGER_LIFE_DRAIN
-        endif
-    elseif (curHero == LICH) then
-        if (skillUlti) then
-            return DEATH_DECAY
-        elseif (mod == 0) then
-            return DARK_RITUAL
-        elseif (mod == 1) then
-            return FROST_ARMOR
-        elseif (mod == 2) then
-            return FROST_NOVA
-        endif
-    elseif (curHero == CRYPT_LORD) then
-        if (skillUlti) then
-            return LOCUST_SWARM
-        elseif (mod == 0) then
-            return CARRION_SCARAB
-        elseif (mod == 1) then
-            return IMPALE
-        elseif (mod == 2) then
-            return THORNY_SHIELD
-        endif
-    endif
-
-    return 'Aamk'
-endfunction
-
-function InitHero takes nothing returns nothing
-    if (GetUnitCountDone(DEATH_KNIGHT) > 0) then
-        set hero_id = DEATH_KNIGHT
-    elseif (GetUnitCountDone(DARK_RANGER_NEUTRAL) > 0) then
-        set hero_id = DARK_RANGER_NEUTRAL
-    elseif (GetUnitCountDone(LICH) > 0) then
-        set hero_id = LICH
-    elseif (GetUnitCountDone(CRYPT_LORD) > 0) then
-        set hero_id = CRYPT_LORD
-    endif
-endfunction
-
-function UpdateWorkers takes nothing returns nothing
-	loop
-		call SetGoldPeons(5 + GetUnitCount(UNDEAD_HOUSING) * 3)
-		call SetWoodPeons(5)
-		call Sleep(1)
-	endloop
-endfunction
-
-function ConfigureAI takes nothing returns nothing
-    call SetTargetHeroes( true )
-    call SetUnitsFlee( true )
-    call SetHeroesFlee( true )
-    call SetPeonsRepair( true )
-    call SetHeroesBuyItems( true )
-    call SetHeroesTakeItems( true )
-    call SetSlowChopping( false )
-	call SetWatchMegaTargets( true )
-	call SetIgnoreInjured( false )
-	call SetGroupsFlee( false )
-	call SetCaptainChanges ( false )
-	call SetSmartArtillery ( true )
-    call GroupTimedLife ( true )
-    call SetRandomPaths( true )
-    call SetDefendPlayer( true )
-endfunction
-
 function BuildingStrategy takes nothing returns nothing
     // **********************************
     // *      Building Strategy         *
@@ -148,8 +8,9 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, UNDEAD_MINE )
     call SetBuildUnit( 6, ACOLYTE )
     call SetBuildUnit( 2, UNDEAD_CITIZEN_MALE )
-    call SetBuildUnit( 1, AI_LABORATORY )
-    call SetBuildUnit( 1, SHREDDER )
+
+    call BuildingStrategyStandardTier1()
+
     call SetBuildUnit( 2, CRYPT )
     call SetBuildUnit( 5, GHOUL )
     call SetBuildUnit( 4, ZIGGURAT_1 )
@@ -188,9 +49,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, ZIGGURAT_FROST )
     call SetBuildUnit( 2, ZIGGURAT_2 )
 	
-	call SetBuildUnit( 1, POWER_GENERATOR )
-	call SetBuildUnit( 1, RESEARCH_TENT )
-	
 	call SetBuildUpgr( 3, UPG_UNHOLY_STR )
 	call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )
     call SetBuildUpgr( 3, UPG_CR_ATTACK )
@@ -206,126 +64,11 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_BLK_SPHINX )
 	call SetBuildUpgr( 1, UPG_WYRM_BREATH )
 	call SetBuildUpgr( 1, 'Rupm' ) // backpack
-	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-	call SetBuildUpgr( 1000, UPG_EVOLUTION )
-	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
-	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
+
+	call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
-endfunction
-
-function AttackWithMount takes nothing returns nothing
-	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
-	endif
-	if (GetUnitCount(WYVERN_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
-	endif
-	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
-	endif
-	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
-	endif
-	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
-	endif
-endfunction
-
-function AddStandardUnitsToAttackWave takes nothing returns nothing
-	call PurchaseZeppelin()
-	call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
-endfunction
-
-//===========================================================================
-// Basic attack functionality
-//===========================================================================
-function AttackTarget takes unit target, boolean addAlliance returns nothing
-    if (target == null) then
-        return
-    endif
-    if (addAlliance) then
-        call SetAllianceTarget( target )
-    endif
-    call FormGroup( 3, true )
-    call AttackMoveKillA( target )
-    if (not addAlliance) then
-        call SetAllianceTarget( null )
-    endif
-endfunction
-
-//===========================================================================
-// Initiates an attack based on target priorities
-//===========================================================================
-function LaunchAttack takes nothing returns nothing
-    local unit target = null
-    local boolean setAlly = true
-
-    // Don't launch any attack while town is threatened
-    if (TownThreatened()) then
-        call Sleep( 2 )
-        return
-    endif
-
-    // Target Priority #1
-    if (target == null) then
-        set target = GetAllianceTarget()
-        if (target != null) then
-            set setAlly = false
-        endif
-    endif
-
-    // Target Priority #2
-    if (target == null) then
-        set target = GetExpansionFoe()
-        if (target != null) then
-            set take_exp = false
-        endif
-    endif
-
-    // Target Priority #3
-    if (target == null) then
-        set target = GetMegaTarget()
-    endif
-
-    // Target Priority #4
-    if (target == null) then
-        set target = GetEnemyExpansion()
-    endif
-
-    // Target Priority #5
-    if (target == null) then
-        set target = GetEnemyExpansion()
-        if (target == null) then
-            call StartGetEnemyBase(  )
-            loop
-                exitwhen (not WaitGetEnemyBase())
-                call SuicideSleep( 1 )
-            endloop
-            set target = GetEnemyBase()
-        endif
-    endif
-
-    // Target Priority #6
-    if (target == null) then
-        set target = GetCreepCamp( 0, 9, false )
-    endif
-
-    // Target Priority #7
-    if (target == null) then
-        set target = GetCreepCamp( 10, 100, true )
-    endif
-
-    // Attack the target and increment attack wave
-    if (target != null) then
-        call AttackTarget( target, setAlly )
-    else
-        // If no target was found, sleep a bit before trying again
-        call Sleep( 20 )
-    endif
 endfunction
 
 function AttackWaves takes nothing returns nothing
