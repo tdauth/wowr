@@ -1201,10 +1201,10 @@ globals
 	constant integer FURBOLG_CORRUPTION                              = 'A070'
 
     constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
-	constant integer MOUNTAIN_GIANT_TAUNT                            = 'A098'
+	constant integer MOUNTAIN_GIANT_BOULDER                          = 'A0A6'
 	constant integer MOUNTAIN_GIANT_HARDENED_SKIN                    = 'A099'
 	constant integer MOUNTAIN_GIANT_EAT_TREE                         = 'A09B'
-	constant integer MOUNTAIN_GIANT_WAR_CLUB                         = 'A09A'
+	constant integer MOUNTAIN_GIANT_DEMOLISH                         = 'A0A7'
 
 	constant integer AKAMA                                           = 'N01K'
 	constant integer REINCARNATION_AKAMA                             = 'A08K'
@@ -3322,9 +3322,9 @@ function ChooseHeroSkill takes nothing returns integer
         endif
     elseif (curHero == MOUNTAIN_GIANT_HERO) then
         if (skillUlti) then
-            return MOUNTAIN_GIANT_WAR_CLUB
+            return MOUNTAIN_GIANT_DEMOLISH
         elseif (mod == 0) then
-            return MOUNTAIN_GIANT_TAUNT
+            return MOUNTAIN_GIANT_BOULDER
         elseif (mod == 1) then
             return MOUNTAIN_GIANT_HARDENED_SKIN
         elseif (mod == 2) then
@@ -3381,6 +3381,37 @@ function ChooseHeroSkill takes nothing returns integer
             return FURBOLG_FAERIE_FIRE
         elseif (mod == 2) then
             return FURBOLG_REJUVENATION
+        endif
+    // Demon
+    elseif (curHero == PIT_LORD_NEUTRAL) then
+        if (skillUlti) then
+            return DEMON_MASTER
+        elseif (mod == 0) then
+            return CLEAVING_ATTACK
+        elseif (mod == 1) then
+            return HOWL_OF_TERROR
+        elseif (mod == 2) then
+            return RAIN_OF_FIRE
+        endif
+    elseif (curHero == DREAD_LORD) then
+        if (skillUlti) then
+            return DREAD_LORD_RAIN_OF_CHAOS
+        elseif (mod == 0) then
+            return SLEEP
+        elseif (mod == 1) then
+            return VAMP_AURA
+        elseif (mod == 2) then
+            return CARRION_SWARM
+        endif
+    elseif (curHero == EREDAR_WARLOCK_NEUTRAL) then
+        if (skillUlti) then
+            return EREDAR_FINGER_OF_DEATH
+        elseif (mod == 0) then
+            return EREDAR_WARLOCK_FIRE_BOLT
+        elseif (mod == 1) then
+            return EREDAR_WARLOCK_MANA_SHIELD
+        elseif (mod == 2) then
+            return EREDAR_WARLOCK_BASH
         endif
     // Draenei
     elseif (curHero == AKAMA) then
