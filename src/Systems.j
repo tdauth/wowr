@@ -5535,7 +5535,6 @@ endfunction
 /**
  * Baradé's Backpack UI system.
  */
-
 globals
     boolean array BackpackUIVisible
     framehandle array BackpackBackgroundFrame
