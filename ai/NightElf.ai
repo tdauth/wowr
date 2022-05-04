@@ -195,8 +195,9 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 3, 3, 3, MOUNTAIN_GIANT )
         
         // big air army
-        call CampaignAttackerEx( 10, 15, 20, HIPPO )
-        call CampaignAttackerEx( 15, 20, 25, CHIMAERA )
+        call CampaignAttackerEx( 8, 10, 12, HIPPO )
+        call CampaignAttackerEx( 8, 10, 12, CHIMAERA )
+        call CampaignAttackerEx( 8, 10, 12, FAERIE_DRAGON )
         
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking

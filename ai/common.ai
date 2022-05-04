@@ -3808,12 +3808,33 @@ function BuildingStrategyStandardTier1 takes nothing returns nothing
 	call SetBuildUnit( 2, SHREDDER )
 endfunction
 
+function ResearchHighLevelTier3Researches takes nothing returns nothing
+    local integer evolutionLevel = 0
+    local integer improvedPowerGeneratorLevel = 0
+    local integer improvedMountLevel = 0
+    loop
+        set evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
+        set improvedPowerGeneratorLevel = GetUpgradeLevel(UPG_IMPROVED_POWER_GENERATOR)
+        set improvedMountLevel = GetUpgradeLevel(UPG_IMPROVED_MOUNT)
+
+        if (ModuloInteger(evolutionLevel, 10) == 0 and evolutionLevel - improvedMountLevel > 10) then
+            call SetBuildUpgr( improvedMountLevel + 1, UPG_IMPROVED_MOUNT )
+        else
+            if (evolutionLevel < improvedPowerGeneratorLevel) then
+                call SetBuildUpgr( evolutionLevel + 1, UPG_EVOLUTION )
+            else
+                call SetBuildUpgr( improvedPowerGeneratorLevel + 1, UPG_IMPROVED_POWER_GENERATOR )
+            endif
+        endif
+
+        call Sleep(M1)
+    endloop
+endfunction
+
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, POWER_GENERATOR )
 	call SetBuildUnit( 1, RESEARCH_TENT )
 	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-	call SetBuildUpgr( 500, UPG_EVOLUTION )
-	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
-	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
+	call StartThread(function ResearchHighLevelTier3Researches)
 endfunction
