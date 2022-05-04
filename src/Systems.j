@@ -5292,6 +5292,67 @@ function GetSaveCodeInfosClan takes string name, string s returns string
     return result
 endfunction
 
+function GetSaveCodeShortInfosClan takes string name, string s returns string
+    local string result = ""
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local integer isSinglePlayerFlag = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local boolean isSinglePlayer = isSinglePlayerFlag == 0
+    local string singlePlayerStatus = "M"
+    local integer nameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer icon = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer clanSoundIndex = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer improvedClanHallLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer improvedClanLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer playerNameHash0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer playerRank0 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer playerNameHash1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer playerRank1 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer playerNameHash2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer playerRank2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer playerNameHash3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer playerRank3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer playerNameHash4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer playerRank4 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer playerNameHash5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer playerRank5 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer playerNameHash6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer playerRank6 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer clanHasAIPlayer = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local string clanHasAIPlayerText = "No AI player"
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string checksumStatus = "Valid"
+    local boolean atLeastOne = false
+    local integer clan = 0
+    local integer i = 0
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "S"
+    endif
+
+    if (clanHasAIPlayer == 1) then
+        set clanHasAIPlayerText = "Has AI player"
+    endif
+
+    return name + "-" + singlePlayerStatus + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-p1_" + GetClanPlayerName(playerNameHash0) + "-p2_" + GetClanPlayerName(playerNameHash1) + "-p3_" + GetClanPlayerName(playerNameHash2)
+endfunction
 
 function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns string
     local integer playerNameToHash = CompressedAbsStringHash(playerNameTo)
@@ -6912,19 +6973,31 @@ endfunction
 // Prestored Savecodes
 
 globals
-    string array PrestoredSaveCodePlayerName
+    constant integer PRESTORED_SAVECODE_TYPE_HEROES = 0
+    constant integer PRESTORED_SAVECODE_TYPE_CLANS = 1
+
+    string array PrestoredSaveCodePlayerName // can also be the clan name
     string array PrestoredSaveCode
+    integer array PrestoredSaveCodeType
     integer PrestoredSaveCodeCounter = 0
 endglobals
 
-function AddPrestoredSaveCode takes string playerName, string saveCode returns integer
+function AddPrestoredSaveCodeEx takes integer saveCodeType, string playerName, string saveCode returns integer
     local integer index = PrestoredSaveCodeCounter
     set PrestoredSaveCodePlayerName[index] = playerName
     set PrestoredSaveCode[index] = saveCode
+    set PrestoredSaveCodeType[index] = saveCodeType
     set PrestoredSaveCodeCounter = PrestoredSaveCodeCounter + 1
     return index
 endfunction
 
+function AddPrestoredSaveCode takes string playerName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_HEROES, playerName, saveCode)
+endfunction
+
+function AddPrestoredSaveCodeClan takes string clanName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_CLANS, clanName, saveCode)
+endfunction
 
 function GetPrestoredSaveCodePlayerNameByIndex takes integer index returns string
     return PrestoredSaveCodePlayerName[index]
@@ -6976,6 +7049,24 @@ function GetPrestoredSaveCodeInfos takes string playerName returns string
                 set result = result + "\n"
             endif
             set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
+            set counter = counter + 1
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetPrestoredSaveCodeInfosClans takes nothing returns string
+    local string result = ""
+    local integer counter = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= PrestoredSaveCodeCounter)
+        if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_CLANS) then
+            if (counter > 0) then
+                set result = result + "\n"
+            endif
+            set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosClan(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
             set counter = counter + 1
         endif
         set i = i + 1
