@@ -47,7 +47,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
     call SetBuildUnit( 1, NAGA_TEMPLE_3 )
 	call SetBuildUnit( 3, NAGA_GUARDIAN )
-	all SetBuildUnit( 1, NAGA_SERPENT_PYRAMID )
+	call SetBuildUnit( 1, NAGA_SERPENT_PYRAMID )
 
 	call SetBuildUpgr( 3, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 3, UPG_NAGA_ATTACK )
