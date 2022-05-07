@@ -29,27 +29,10 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
 	call SetBuildUnit( 1, NAGA_FISH_MARKET )
 
-    call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
-	call SetBuildUnit( 17, BLOOD_PEASANT )
-	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
-	call SetBuildUnit( 3, HOUSE )
-	call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
-	call SetBuildUnit( 2, BLOOD_ELF_BARRACKS )
-	call SetBuildUnit( 1, HUMAN_ALTAR )
-	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
-	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
-	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
-
 	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
 
 	call SetBuildUpgr( 1, UPG_DEFEND )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_LEATHER )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, NAGA_TEMPLE )
@@ -57,68 +40,23 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, NAGA_SHRINE )
 	call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
 
-    call SetBuildUnit( 1, BLOOD_ELF_KEEP )
-	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
-	call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
-	call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
-	call SetBuildUnit( 4, HOUSE )
-	call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
-	call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
-
 	call SetBuildUpgr( 2, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 2, UPG_NAGA_ATTACK )
 	call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
 	call SetBuildUpgr( 1, UPG_NAGA_BACKPACK )
 	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
 
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_ARMOR )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_LEATHER )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
-	call SetBuildUpgr( 1, UPG_SORCERY )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BOWS )
-
     // Tier 3 buildings
     call SetBuildUnit( 1, NAGA_TEMPLE_3 )
 	call SetBuildUnit( 3, NAGA_GUARDIAN )
-
-	call SetBuildUnit( 1, BLOOD_ELF_CASTLE )
-	call SetBuildUnit( 5, HOUSE )
-	call SetBuildUnit( 1, ELF_GUARD_TOWER )
-	call SetBuildUnit( 1, ARCANE_TOWER )
-	call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )
 
 	call SetBuildUpgr( 3, UPG_NAGA_ARMOR )
 	call SetBuildUpgr( 3, UPG_NAGA_ATTACK )
 	call SetBuildUpgr( 2, UPG_NAGA_ABOLISH )
 	call SetBuildUpgr( 2, UPG_SIREN )
 	call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
-    //call SetBuildUpgr( 1, UPG_STATUE_OF_AZSHARA )
-	//call SetBuildUnit( 1, NAGA_STATUE_OF_ASZHARA )
-
-
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_ARMOR )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_LEATHER )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MOON_ARMOR )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_STR_MOON )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_MASONRY )
-	call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
-	call SetBuildUpgr( 2, UPG_SORCERY )
-	call SetBuildUpgr( 3, UPG_BLOOD_ELF_IMPROVED_SIEGE )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BURNING_OIL )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
-	call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
-	call SetBuildUpgr( 1, UPG_CONT_MAGIC )
-	call SetBuildUpgr( 1, UPG_SENTINEL )
-	call SetBuildUpgr( 1, UPG_CLOUD )
-	//call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
-	//call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
+    call SetBuildUpgr( 1, UPG_STATUE_OF_AZSHARA )
+	call SetBuildUnit( 1, NAGA_STATUE_OF_ASZHARA )
 
 	call BuildingStrategyStandardTier3()
 
@@ -142,8 +80,6 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
     call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
@@ -152,8 +88,6 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, NAGA_REAVER )
     call CampaignAttackerEx( 0, 1, 2, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -162,8 +96,6 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, NAGA_REAVER )
     call CampaignAttackerEx( 1, 2, 3, NAGA_SNAP_DRAGON )
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
@@ -229,15 +161,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
-
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -251,16 +174,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
 	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
-
-	call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
-	call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
-
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -274,16 +187,6 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
 	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
-
-	call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-	call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-	call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, HUMAN_DRAGON_HAWK )
-	call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
-
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -300,21 +203,8 @@ function AttackWaves takes nothing returns nothing
 		call CampaignAttackerEx( 2, 2, 2, NAGA_SIREN )
 		call CampaignAttackerEx( 4, 4, 4, NAGA_ROYAL )
 
-		call CampaignAttackerEx( 4, 4, 4, HIGH_SWORDMAN )
-		call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-		call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-		call CampaignAttackerEx( 4, 4, 4, SPELL_BREAKER )
-		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_PRIEST )
-		call CampaignAttackerEx( 4, 4, 4, SORCERESS )
-		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_LIEUTENANT )
-		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_WAGON )
-		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_BALLISTA )
-		call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
-
 		// big air army
 		call CampaignAttackerEx( 7, 10, 12, NAGA_COUATL )
-
-		call CampaignAttackerEx( 7, 10, 12, HUMAN_DRAGON_HAWK )
 
 		call AddStandardUnitsToAttackWaveTheAlliance()
 		call Sleep( M2 ) // Waits 2 minutes before attacking

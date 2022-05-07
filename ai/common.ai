@@ -822,6 +822,7 @@ globals
 	constant integer NAGA_TEMPLE_3                                   = 'n05N'
 	constant integer NAGA_MURLOC_HUT                                 = 'o008' // lumber mill and blacksmith
 	constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
+	constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
 	constant integer NAGA_SERPENT_PYRAMID                            = 'n05P'
 	constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
 
