@@ -453,3 +453,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Explobomb: [Galleon](https://www.hiveworkshop.com/threads/galleon.321779/)
 * Cavman: [BTNSailor](https://www.hiveworkshop.com/threads/btnsailor.58624/)
 * ViralHatred: [Pirate Battleship (Hexed)](https://www.hiveworkshop.com/threads/pirate-battleship-hexed.48895/)
+* Asssssvi: [Rifleman Kul-Tiras HD](https://www.hiveworkshop.com/threads/rifleman-kul-tiras-hd.321942/)
+* Asssssvi: [Knight Kul-Tiras HD](https://www.hiveworkshop.com/threads/knight-kul-tiras-hd.321062/)
+* Ujimasa Hojo: [Battleship and Derivatives](https://www.hiveworkshop.com/threads/battleship-and-derivatives.246696/)
