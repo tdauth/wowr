@@ -2618,6 +2618,7 @@ globals
 	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
 	constant integer UPG_IMPROVED_NAVY                               = 'R035'
 	constant integer UPG_IMPROVED_CREEP_HUNTER                       = 'R02Z'
+	constant integer UPG_DEMIGOD                                     = 'R04S'
 endglobals
 
 function GetSaveCodeDemigodValue takes player whichPlayer returns integer
@@ -2626,7 +2627,7 @@ function GetSaveCodeDemigodValue takes player whichPlayer returns integer
         return 1
     elseif (unitTypeId == 'H002') then
         return 2
-    elseif (GetPlayerTechCountSimple('R04S', whichPlayer) > 0) then
+    elseif (GetPlayerTechCountSimple(UPG_DEMIGOD, whichPlayer) > 0) then
         return 3
     endif
 
@@ -2871,13 +2872,19 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     if (not IsGeneratedSaveCode(s)) then
         if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
             if (demigodValue == 1) then
-                set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
-                call TriggerExecute(gg_trg_Become_Demigod_Light)
+                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
+                if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
+                    set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                    call TriggerExecute(gg_trg_Become_Demigod_Light)
+                endif
             elseif (demigodValue == 2) then
-                set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
-                call TriggerExecute(gg_trg_Become_Demigod_Dark)
+                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
+                if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
+                    set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                    call TriggerExecute(gg_trg_Become_Demigod_Dark)
+                endif
             elseif (demigodValue == 3) then
-                call SetPlayerTechResearchedIfHigher(whichPlayer, 'R04S', 1)
+                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
             endif
 
             call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
