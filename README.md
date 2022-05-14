@@ -211,6 +211,9 @@ This version provides several new features compared to the original map [World o
 * Naga Whaler.
 * New hero Razormane Chieftain.
 * New player selection.
+* Chat command "-info X" to show info about a player.
+* New hero: Ner'Zhul.
+* New hero: Blackhand.
 
 ## Bug Fixes
 
@@ -456,3 +459,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Asssssvi: [Rifleman Kul-Tiras HD](https://www.hiveworkshop.com/threads/rifleman-kul-tiras-hd.321942/)
 * Asssssvi: [Knight Kul-Tiras HD](https://www.hiveworkshop.com/threads/knight-kul-tiras-hd.321062/)
 * Ujimasa Hojo: [Battleship and Derivatives](https://www.hiveworkshop.com/threads/battleship-and-derivatives.246696/)
+* Tauer: [Ner'Zhul](https://www.hiveworkshop.com/threads/nerzhul.48865/)
+* Tauer: [BTNNerzhul](https://www.hiveworkshop.com/threads/btnnerzhul.58772/)
+* Tauer: [Blackhand](https://www.hiveworkshop.com/threads/blackhand.250052/)

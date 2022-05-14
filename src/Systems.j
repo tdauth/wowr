@@ -8703,3 +8703,94 @@ endfunction
 function LayerGetUnitLayer takes unit whichUnit returns integer
     return LoadInteger(LayerHashTable, GetHandleId(whichUnit), 0)
 endfunction
+
+
+// ---------------------------
+
+function GetPlayerInfo takes player whichPlayer returns string
+    local integer playerId = GetPlayerId(whichPlayer)
+    local string result = GetPlayerNameColored(whichPlayer)
+
+    if (udg_PlayerIsWarlord[playerId]) then
+        set result = result + "\n" + "Warlord"
+    else
+        set result = result + "\n" + "Freelancer"
+    endif
+
+    if (udg_Hero[playerId] != null) then
+        set result = result + "\n" + "Hero: " + GetUnitName(udg_Hero[playerId])
+        set result = result + "\n" + "Hero Level: " + I2S(GetHeroLevel(udg_Hero[playerId]))
+    endif
+
+    if (udg_Hero2[playerId] != null) then
+        set result = result + "\n" + "Hero 2: " + GetUnitName(udg_Hero2[playerId])
+        set result = result + "\n" + "Hero 2 Level: " + I2S(GetHeroLevel(udg_Hero2[playerId]))
+    endif
+
+    if (udg_Hero3[playerId] != null) then
+        set result = result + "\n" + "Hero 3: " + GetUnitName(udg_Hero3[playerId])
+        set result = result + "\n" + "Hero 3 Level: " + I2S(GetHeroLevel(udg_Hero3[playerId]))
+    endif
+
+    if (udg_PlayerProfession[playerId] != udg_ProfessionNone) then
+        set result = result + "\n" + "Profession 1: " + udg_ProfessionName[udg_PlayerProfession[playerId]]
+    else
+        set result = result + "\n" + "Profession 1: None"
+    endif
+
+    if (udg_PlayerProfession2[playerId] != udg_ProfessionNone) then
+        set result = result + "\n" + "Profession 2: " + udg_ProfessionName[udg_PlayerProfession2[playerId]]
+    else
+        set result = result + "\n" + "Profession 2: None"
+    endif
+
+    return result
+endfunction
+
+globals
+    string array PlayerColorNames
+endglobals
+
+function InitPlayerColorNames takes nothing returns nothing
+    set PlayerColorNames[0] = "RED"
+    set PlayerColorNames[1] = "BLUE"
+    set PlayerColorNames[2] = "CYAN"
+    set PlayerColorNames[3] = "PURPLE"
+    set PlayerColorNames[4] = "YELLOW"
+    set PlayerColorNames[5] = "ORANGE"
+    set PlayerColorNames[6] = "GREEN"
+    set PlayerColorNames[7] = "PINK"
+    set PlayerColorNames[8] = "LIGHT_GRAY"
+    set PlayerColorNames[9] = "LIGHT_BLUE"
+    set PlayerColorNames[10] = "AQUA"
+    set PlayerColorNames[11] = "BROWN"
+    set PlayerColorNames[12] = "MAROON"
+    set PlayerColorNames[13] = "NAVY"
+    set PlayerColorNames[14] = "TURQUOISE"
+    set PlayerColorNames[15] = "VIOLET"
+    set PlayerColorNames[16] = "WHEAT"
+    set PlayerColorNames[17] = "PEACH"
+    set PlayerColorNames[18] = "MINT"
+    set PlayerColorNames[19] = "LAVENDER"
+    set PlayerColorNames[20] = "COAL"
+    set PlayerColorNames[21] = "SNOW"
+    set PlayerColorNames[22] = "EMERALD"
+    set PlayerColorNames[23] = "PEANUT"
+endfunction
+
+function GetPlayerColorName takes player whichPlayer returns string
+    return StringCase(PlayerColorNames[GetPlayerId(whichPlayer)], false)
+endfunction
+
+function GetPlayerFromString takes string whichString returns player
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (whichString == I2S(i + 1) or (PlayerColorNames[i] != null and StringLength(PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorNames[i]) or StringStartsWith(GetPlayerName(Player(i)), whichString)) then
+            return Player(i)
+        endif
+        set i = i + 1
+    endloop
+
+    return null
+endfunction
