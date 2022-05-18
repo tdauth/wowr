@@ -475,3 +475,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * GolluM_KoMe, olofmoleman, purparisien: [Ancient Ships](https://www.hiveworkshop.com/threads/ancient-ships.319180/)
 * Tykkimies: [Temppeli skinillalowpoly](https://www.hiveworkshop.com/threads/temppeli-skinillalowpoly.49727/)
 * !!GORO!!: [Tower1](https://www.hiveworkshop.com/threads/tower1.49722/)
+* Kwaliti: [Deathwing](https://www.hiveworkshop.com/threads/deathwing.200374/)
+* XenoStalker: [BTNDeathwing](https://www.hiveworkshop.com/threads/btndeathwing.186057/)
+* Mc!: [FireElementalByMc](https://www.hiveworkshop.com/threads/fireelementalbymc.47638/)
+* Blizzard Entertainment: [Fire Elemental](https://www.hiveworkshop.com/threads/fire-elemental.307530/)
