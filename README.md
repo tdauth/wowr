@@ -479,3 +479,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * XenoStalker: [BTNDeathwing](https://www.hiveworkshop.com/threads/btndeathwing.186057/)
 * Mc!: [FireElementalByMc](https://www.hiveworkshop.com/threads/fireelementalbymc.47638/)
 * Blizzard Entertainment: [Fire Elemental](https://www.hiveworkshop.com/threads/fire-elemental.307530/)
+* emmpsych: [Queen Azshara Naga](https://www.hiveworkshop.com/threads/queen-azshara-naga.329469/)
+* Explobomb: [Old God Pack](https://www.hiveworkshop.com/threads/old-god-pack.334166/)
