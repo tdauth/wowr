@@ -214,6 +214,9 @@ This version provides several new features compared to the original map [World o
 * Chat command "-info X" to show info about a player.
 * New hero: Ner'Zhul.
 * New hero: Blackhand.
+* New hero: Samuro.
+* New boss: Queen Azshara.
+* New bosses: Old Gods.
 
 ## Bug Fixes
 
