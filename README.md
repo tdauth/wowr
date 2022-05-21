@@ -217,6 +217,8 @@ This version provides several new features compared to the original map [World o
 * New hero: Samuro.
 * New boss: Queen Azshara.
 * New bosses: Old Gods.
+* New hero: Goblin War Zeppelin.
+* Custom Turret System which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
 
 ## Bug Fixes
 
@@ -485,3 +487,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * emmpsych: [Queen Azshara Naga](https://www.hiveworkshop.com/threads/queen-azshara-naga.329469/)
 * Explobomb: [Old God Pack](https://www.hiveworkshop.com/threads/old-god-pack.334166/)
 * CRAZYRUSSIAN: [BTN_CR_Heart_of_Gold](https://www.hiveworkshop.com/threads/btn_cr_heart_of_gold.58148/)
+* ikillforeyou: [Goblin War Zeppelin](https://www.hiveworkshop.com/threads/goblin-war-zeppelin.162935/)
+* Shardeth: [Net Launcher Turret](https://www.hiveworkshop.com/threads/net-launcher-turret.330923/)
+* ILH: [Nuclear Silo and Missile](https://www.hiveworkshop.com/threads/nuclear-silo-and-missile.298792/)
