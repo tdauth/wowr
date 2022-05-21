@@ -484,3 +484,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [Fire Elemental](https://www.hiveworkshop.com/threads/fire-elemental.307530/)
 * emmpsych: [Queen Azshara Naga](https://www.hiveworkshop.com/threads/queen-azshara-naga.329469/)
 * Explobomb: [Old God Pack](https://www.hiveworkshop.com/threads/old-god-pack.334166/)
+* CRAZYRUSSIAN: [BTN_CR_Heart_of_Gold](https://www.hiveworkshop.com/threads/btn_cr_heart_of_gold.58148/)
