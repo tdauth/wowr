@@ -218,6 +218,7 @@ This version provides several new features compared to the original map [World o
 * New boss: Queen Azshara.
 * New bosses: Old Gods.
 * New hero: Goblin War Zeppelin.
+* New hero: Goblin Heavy Tank.
 * Custom Turret System which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
 
 ## Bug Fixes
