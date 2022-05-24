@@ -220,6 +220,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Goblin War Zeppelin.
 * New hero: Goblin Heavy Tank.
 * Custom Turret System which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
+* New hero: Void Lord.
 
 ## Bug Fixes
 
@@ -491,3 +492,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * ikillforeyou: [Goblin War Zeppelin](https://www.hiveworkshop.com/threads/goblin-war-zeppelin.162935/)
 * Shardeth: [Net Launcher Turret](https://www.hiveworkshop.com/threads/net-launcher-turret.330923/)
 * ILH: [Nuclear Silo and Missile](https://www.hiveworkshop.com/threads/nuclear-silo-and-missile.298792/)
+* Callahan: [The Void Lord](https://www.hiveworkshop.com/threads/the-void-lord.48554/)
