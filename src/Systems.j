@@ -5115,6 +5115,7 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
     local boolean atLeastOne = false
     local integer clan = 0
     local integer i = 0
+    local integer currentPlayerNameHash = 0
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -5144,41 +5145,47 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
                     set udg_ClanSound[udg_ClanCounter] = clanSound[clanSoundIndex]
                     set udg_ClanGold[udg_ClanCounter] = gold
                     set udg_ClanLumber[udg_ClanCounter] = lumber
+                    set clan = udg_ClanCounter
                     set udg_ClanCounter = udg_ClanCounter + 1
+                    //call BJDebugMsg("Creating new clan " + name)
                 endif
 
                 set i = 0
                 loop
                     exitwhen (i == bj_MAX_PLAYERS)
+                    if (GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) then
+                        //call BJDebugMsg("Checking for player " + GetPlayerName(Player(i)))
+                        set currentPlayerNameHash = CompressedAbsStringHash(GetPlayerName(Player(i)))
+                        if (currentPlayerNameHash == playerNameHash0 or currentPlayerNameHash == playerNameHash1 or currentPlayerNameHash == playerNameHash2 or currentPlayerNameHash == playerNameHash3 or currentPlayerNameHash == playerNameHash4 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5 or currentPlayerNameHash == playerNameHash6) then
+                            //call BJDebugMsg("Got clan player " + GetPlayerName(Player(i)))
+                            set atLeastOne = true
+                            if (not IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+                                call ForceAddPlayer(udg_ClanPlayers[clan], Player(i))
+                            endif
+                            set udg_ClanPlayerClan[i + 1] = clan
+                            call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
+                            call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
 
-                    if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5 or CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
-                        set atLeastOne = true
-                        if (not IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
-                            call ForceAddPlayer(udg_ClanPlayers[clan], Player(i))
+                            if (clanHasAIPlayer == 1) then
+                                call SetPlayerTechResearchedSwap('R046', 0, Player(i))
+                            endif
                         endif
-                        set udg_ClanPlayerClan[i + 1] = clan
-                        call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
-                        call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
 
-                        if (clanHasAIPlayer == 1) then
-                            call SetPlayerTechResearchedSwap('R046', 0, Player(i))
+                        if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank0
+                        elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank1
+                        elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank2
+                        elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank3
+                        elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank4
+                        elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank5
+                        elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
+                            set udg_ClanPlayerRank[i + 1] = playerRank6
                         endif
-                    endif
-
-                    if (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash0) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank0
-                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash1) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank1
-                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash2) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank2
-                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash3) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank3
-                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash4) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank4
-                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash5) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank5
-                    elseif (CompressedAbsStringHash(GetPlayerName(Player(i))) == playerNameHash6) then
-                        set udg_ClanPlayerRank[i + 1] = playerRank6
                     endif
                     set i = i + 1
                 endloop
@@ -5187,6 +5194,9 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
 
                 if (atLeastOne) then
                     call PickClanAIPlayer(clan)
+                 
+                    call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_UNITACQUIRED, GetPlayerNameColored(whichPlayer) + " has created a new clan " + udg_ClanName[clan] + "!")
+                    call PlaySoundBJ(gg_snd_ClanInvitation)
                 endif
 
                 return atLeastOne
@@ -5517,8 +5527,8 @@ function GetSaveCodeHumanUpgrades takes player whichPlayer, string playerName, b
     return result
 endfunction
 
-function GetSaveCodeStrongClan takes boolean singlePlayer, string playerName returns string
-    return GetSaveCodeClanEx(singlePlayer, "StrongClan", 'I04S', clanSound[1], 100000, 100000, true, 100, 100, playerName, udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "Toasty", udg_ClanRankCaptain, "", 0, "", 0, "", 0, "", 0)
+function GetSaveCodeTheElvenClan takes boolean singlePlayer, string playerName returns string
+    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", 'I04S', clanSound[1], 100000, 100000, true, 100, 100, "Barade#2569", udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "", 0, "", 0)
 endfunction
 
 function GenerateSaveCodes takes player whichPlayer returns nothing
@@ -5544,7 +5554,7 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
         set j = 0
         loop
             exitwhen (j >= singlePlayerSize)
-            call GetSaveCodeStrongClan(singlePlayer[j], playerName[i])
+            call GetSaveCodeTheElvenClan(singlePlayer[j], playerName[i])
             set k = 0
             loop
                 exitwhen (k >= warlordSize)
@@ -6982,19 +6992,97 @@ endfunction
 globals
     constant integer PRESTORED_SAVECODE_TYPE_HEROES = 0
     constant integer PRESTORED_SAVECODE_TYPE_CLANS = 1
+    
+    constant integer PRESTORED_SAVECODE_MAX_CLAN_MEMBERS = 20
 
     string array PrestoredSaveCodePlayerName // can also be the clan name
     string array PrestoredSaveCode
     integer array PrestoredSaveCodeType
+    boolean array PrestoredSaveCodeMultiplayer
+    string array PrestoredSaveCodePlayerNames // only for clan save codes
+    integer array PrestoredSaveCodePlayerRanks // only for clan save codes
+    integer array PrestoredSaveCodePlayerNamesCounter // only for clan save codes
     integer PrestoredSaveCodeCounter = 0
+    
+    integer lastAddedPrestoredClan = 0
+    
+    force prestoredElvenClanMembers = CreateForce()
 endglobals
+
+function GetPrestoredClanSaveCodeMatchingPlayer takes integer saveCodeIndex returns player
+    local player result = null
+    local integer playerRank = -1
+    local integer index = 0
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i >= bj_MAX_PLAYERS)
+        if (GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) then
+            set j = 0
+            loop
+                exitwhen (j >= PrestoredSaveCodePlayerNamesCounter[saveCodeIndex])
+                set index = Index2D(saveCodeIndex, j, PRESTORED_SAVECODE_MAX_CLAN_MEMBERS)
+                //call BJDebugMsg("Comparing player name " + PrestoredSaveCodePlayerNames[index] + " to online player name " + GetPlayerName(Player(i)))
+                if (GetPlayerName(Player(i)) == PrestoredSaveCodePlayerNames[index] and PrestoredSaveCodePlayerRanks[index] > playerRank) then
+                    set result = Player(i)
+                    set playerRank = PrestoredSaveCodePlayerRanks[index]
+                endif
+                set j = j + 1
+            endloop
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function LoadPrestoredClanSaveCodes takes nothing returns nothing
+    local player matchingPlayer = null
+    local boolean foundElvenClan = false
+    local integer j = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= PrestoredSaveCodeCounter)
+        if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_CLANS) then
+            if (PrestoredSaveCodePlayerName[i] == "TheElvenClan" and PrestoredSaveCodeMultiplayer[i] == not IsInSinglePlayer()) then
+                set foundElvenClan = true
+                set matchingPlayer = GetPrestoredClanSaveCodeMatchingPlayer(i)
+                if (matchingPlayer != null) then
+                    //call BJDebugMsg("Applying TheElvenClan savecode for player " + GetPlayerName(matchingPlayer))
+                    call ApplySaveCodeClan(matchingPlayer, "TheElvenClan", PrestoredSaveCode[i])
+                    set j = 0
+                    loop
+                        exitwhen (j >= bj_MAX_PLAYERS)
+                        if (GetPlayerController(Player(j)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(j)) == PLAYER_SLOT_STATE_PLAYING and udg_ClanPlayerClan[j + 1] > 0 and udg_ClanName[udg_ClanPlayerClan[j + 1]] == "TheElvenClan") then
+                            //call BJDebugMsg("Adding player to TheElvenClan")
+                            call ForceAddPlayer(prestoredElvenClanMembers, Player(j))
+                        endif
+                        set j = j + 1
+                    endloop
+                endif
+            endif
+        endif
+        set i = i + 1
+    endloop
+    if (not foundElvenClan) then
+        //call BJDebugMsg("Did not find TheElvenClan")
+    endif
+    if (matchingPlayer == null) then
+        //call BJDebugMsg("No player of TheElvenClan is online")
+    endif
+endfunction
+
+function PlayerIsInElvenClan takes player whichPlayer returns boolean
+    return IsPlayerInForce(whichPlayer, prestoredElvenClanMembers)
+endfunction
 
 function AddPrestoredSaveCodeEx takes integer saveCodeType, string playerName, string saveCode returns integer
     local integer index = PrestoredSaveCodeCounter
     set PrestoredSaveCodePlayerName[index] = playerName
     set PrestoredSaveCode[index] = saveCode
     set PrestoredSaveCodeType[index] = saveCodeType
+    set PrestoredSaveCodePlayerNamesCounter[index] = 0
     set PrestoredSaveCodeCounter = PrestoredSaveCodeCounter + 1
+    set lastAddedPrestoredClan = index
     return index
 endfunction
 
@@ -7002,8 +7090,19 @@ function AddPrestoredSaveCode takes string playerName, string saveCode returns i
     return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_HEROES, playerName, saveCode)
 endfunction
 
-function AddPrestoredSaveCodeClan takes string clanName, string saveCode returns integer
-    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_CLANS, clanName, saveCode)
+function AddPrestoredSaveCodeClan takes string clanName, boolean isSinglePlayer, string saveCode returns integer
+    local integer result = AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_CLANS, clanName, saveCode)
+    set PrestoredSaveCodeMultiplayer[result] = not isSinglePlayer
+    return result
+endfunction
+
+function AddPrestoredSaveCodeClanPlayer takes string playerName, integer playerRank returns integer
+    local integer saveCodePlayerIndex = PrestoredSaveCodePlayerNamesCounter[lastAddedPrestoredClan]
+    local integer index = Index2D(lastAddedPrestoredClan, saveCodePlayerIndex, PRESTORED_SAVECODE_MAX_CLAN_MEMBERS)
+    set PrestoredSaveCodePlayerNames[index] = playerName
+    set PrestoredSaveCodePlayerRanks[index] = playerRank
+    set PrestoredSaveCodePlayerNamesCounter[lastAddedPrestoredClan] = PrestoredSaveCodePlayerNamesCounter[lastAddedPrestoredClan] + 1
+    return saveCodePlayerIndex
 endfunction
 
 function GetPrestoredSaveCodePlayerNameByIndex takes integer index returns string
