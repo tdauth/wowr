@@ -947,6 +947,7 @@ endfunction
 
 function TriggerActionMoveRucksack takes nothing returns nothing
     local integer I0 = 0
+    local integer j = 0
     local player RucksackOwner = GetTriggerPlayer()
     local location HeroPosition = GetUnitLoc(udg_Hero[GetPlayerId(RucksackOwner)])
     set RucksackOwner = null
@@ -958,6 +959,12 @@ function TriggerActionMoveRucksack takes nothing returns nothing
             if (udg_Rucksack[I0] != null) then
                 set HeroPosition = GetUnitLoc(udg_Hero[I0])
                 call SetUnitPosition(udg_Rucksack[I0], GetLocationX(HeroPosition), GetLocationY(HeroPosition))
+                set j = 0
+                loop
+                    exitwhen (j == BlzGroupGetSize(udg_EquipmentBags[I0 + 1]))
+                    call SetUnitPosition(BlzGroupUnitAt(udg_EquipmentBags[I0], j), GetLocationX(HeroPosition), GetLocationY(HeroPosition))
+                    set j = j + 1
+                endloop
                 call RemoveLocation(HeroPosition)
                 set HeroPosition = null
             endif
@@ -9878,3 +9885,59 @@ function TurretSystemInit takes nothing returns nothing
 endfunction
 
 hook RemoveUnit TurretSystemRemoveVehicle
+
+// Equipment Bag System
+
+globals
+    hashtable EquipmentBagSystemHashTable = InitHashtable()
+endglobals
+
+function EquipmentBagSetAbilityCount takes integer itemTypeId, integer count returns nothing
+    call SaveInteger(EquipmentBagSystemHashTable, itemTypeId, 0, count)
+endfunction
+
+function EquipmentBagGetAbilityCount takes integer itemTypeId returns integer
+    return LoadInteger(EquipmentBagSystemHashTable, itemTypeId, 0)
+endfunction
+
+function EquipmentBagGetAbilityId takes integer itemTypeId, integer index returns integer
+    return LoadInteger(EquipmentBagSystemHashTable, itemTypeId, index)
+endfunction
+
+function EquipmentBagRegisterAbilityEx takes integer itemTypeId, integer abilityId returns nothing
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId) + 1
+    call SaveInteger(EquipmentBagSystemHashTable, itemTypeId, count, abilityId)
+    call EquipmentBagSetAbilityCount(itemTypeId, count)
+endfunction
+
+function EquipmentBagRegisterAbility takes nothing returns nothing
+    call EquipmentBagRegisterAbilityEx(udg_TmpItemTypeId, udg_TmpAbilityCode)
+endfunction
+
+function EquipmentBagAddAbilities takes unit bag, item whichItem returns nothing
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer i = 1
+    if (udg_Hero[GetPlayerId(GetOwningPlayer(bag))] != null) then
+        loop
+            exitwhen (i > count)
+            // TODO Check Stacking.
+            call UnitAddAbility(udg_Hero[GetPlayerId(GetOwningPlayer(bag))], EquipmentBagGetAbilityId(itemTypeId, i))
+            set i = i + 1
+        endloop
+    endif
+endfunction
+
+function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns nothing
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer i = 1
+    if (udg_Hero[GetPlayerId(GetOwningPlayer(bag))] != null) then
+        loop
+            exitwhen (i > count)
+            // TODO Check Stacking.
+            call UnitRemoveAbility(udg_Hero[GetPlayerId(GetOwningPlayer(bag))], EquipmentBagGetAbilityId(itemTypeId, i))
+            set i = i + 1
+        endloop
+    endif
+endfunction
