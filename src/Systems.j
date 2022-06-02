@@ -3648,7 +3648,7 @@ endfunction
 
 function IsObjectFromPlayerRace takes integer objectID, player whichPlayer returns boolean
     local integer objectRace = GetObjectRace(objectID)
-    return objectRace == udg_RaceNone or objectRace == udg_PlayerRace[GetConvertedPlayerId(whichPlayer)] or objectRace == udg_PlayerRace2[GetConvertedPlayerId(whichPlayer)]
+    return objectRace == udg_RaceNone or udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(whichPlayer)] or objectRace == udg_PlayerRace[GetConvertedPlayerId(whichPlayer)] or objectRace == udg_PlayerRace2[GetConvertedPlayerId(whichPlayer)]
 endfunction
 
 function DisplayObjectRaceLoadError takes integer objectID, player whichPlayer returns nothing
@@ -4891,7 +4891,7 @@ function GetClanPlayerNames takes integer clan returns string
 endfunction
 
 function GetClansInfo takes nothing returns string
-    local string result = "Clans (playing):\n"
+    local string result = "Clans:\n"
     local integer i = 1
     loop
         exitwhen (i >= udg_ClanCounter)
@@ -8509,20 +8509,23 @@ endfunction
 
 function DropAllItemsNotFromRaceForHero takes unit hero returns nothing
     local player owner = GetOwningPlayer(hero)
+    local boolean playerUnlockedAllRaces = udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(owner)]
     local integer playerRace1 = udg_PlayerRace[GetConvertedPlayerId(owner)]
     local integer playerRace2 = udg_PlayerRace2[GetConvertedPlayerId(owner)]
     local integer itemRace = udg_RaceNone
     local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        if (UnitItemInSlot(hero, i) != null) then
-            set itemRace = GetItemRace(GetItemTypeId(UnitItemInSlot(hero, i)))
-             if (itemRace != udg_RaceNone and itemRace != playerRace1 and itemRace != playerRace2) then
-                call UnitRemoveItemFromSlot(hero, i)
-             endif
-        endif
-        set i = i + 1
-    endloop
+    if (not playerUnlockedAllRaces) then
+        loop
+            exitwhen (i == bj_MAX_INVENTORY)
+            if (UnitItemInSlot(hero, i) != null) then
+                set itemRace = GetItemRace(GetItemTypeId(UnitItemInSlot(hero, i)))
+                if (itemRace != udg_RaceNone and itemRace != playerRace1 and itemRace != playerRace2) then
+                    call UnitRemoveItemFromSlot(hero, i)
+                endif
+            endif
+            set i = i + 1
+        endloop
+    endif
     set owner = null
 endfunction
 
