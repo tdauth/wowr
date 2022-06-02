@@ -4739,11 +4739,15 @@ function GetSaveCodeInfosResearches takes player whichPlayer, string s returns s
     return result
 endfunction
 
+// Clan System
+
 globals
     constant integer SAVE_CODE_MAX_CLAN_MEMBERS = 6
 
+    constant integer UPG_HERO_CLAN = 'R03D'
     constant integer UPG_IMPROVED_CLAN_HALL = 'R03C'
     constant integer UPG_IMPROVED_CLAN = 'R03B'
+    constant integer UPG_CLAN_HAS_NO_AI_PLAYER = 'R046'
 
     sound array clanSound
     string array clanSoundFilePath
@@ -4865,6 +4869,35 @@ function PickClanAIPlayer takes integer clan returns player
         endloop
     endif
 
+    return result
+endfunction
+
+function GetClanPlayerNames takes integer clan returns string
+    local string result = ""
+    local integer counter = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (IsPlayerInForce(Player(i), udg_ClanPlayers[clan])) then
+            if (counter > 0) then
+                set result = result + ", "
+            endif
+            set result = result + GetPlayerNameColored(Player(i))
+            set counter = counter + 1
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetClansInfo takes nothing returns string
+    local string result = "Clans (playing):\n"
+    local integer i = 1
+    loop
+        exitwhen (i >= udg_ClanCounter)
+        set result = result + "- " + udg_ClanName[i] + " (" + I2S(CountPlayersInForceBJ(udg_ClanPlayers[i])) + " players: " + GetClanPlayerNames(i) + ")\n"
+        set i = i + 1
+    endloop
     return result
 endfunction
 
@@ -5163,11 +5196,12 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
                                 call ForceAddPlayer(udg_ClanPlayers[clan], Player(i))
                             endif
                             set udg_ClanPlayerClan[i + 1] = clan
+                            call SetPlayerTechResearchedIfHigher(Player(i), UPG_HERO_CLAN, 1)
                             call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN_HALL, improvedClanHallLevel)
                             call SetPlayerTechResearchedIfHigher(Player(i), UPG_IMPROVED_CLAN, improvedClanLevel)
 
                             if (clanHasAIPlayer == 1) then
-                                call SetPlayerTechResearchedSwap('R046', 0, Player(i))
+                                call SetPlayerTechResearchedSwap(UPG_CLAN_HAS_NO_AI_PLAYER, 0, Player(i))
                             endif
                         endif
 
