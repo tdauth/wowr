@@ -8547,21 +8547,23 @@ function DropAllItemsNotFromProfessionForHero takes unit hero returns nothing
     local integer playerProfession2 = udg_PlayerProfession2[GetConvertedPlayerId(owner)]
     local integer j = 0
     local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        if (UnitItemInSlot(hero, i) != null) then
-            set j = 0
-            loop
-                exitwhen (j == udg_Max_Berufe)
-                if (udg_ProfessionItemType[j] == GetItemTypeId(UnitItemInSlot(hero, i)) and playerProfession1 != j and playerProfession2 != j) then
-                    call UnitRemoveItemFromSlot(hero, i)
-                    exitwhen (true)
-                endif
-                set j = j + 1
-            endloop
-        endif
-        set i = i + 1
-    endloop
+    if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(owner)]) then
+        loop
+            exitwhen (i == bj_MAX_INVENTORY)
+            if (UnitItemInSlot(hero, i) != null) then
+                set j = 0
+                loop
+                    exitwhen (j == udg_Max_Berufe)
+                    if (udg_ProfessionItemType[j] == GetItemTypeId(UnitItemInSlot(hero, i)) and playerProfession1 != j and playerProfession2 != j) then
+                        call UnitRemoveItemFromSlot(hero, i)
+                        exitwhen (true)
+                    endif
+                    set j = j + 1
+                endloop
+            endif
+            set i = i + 1
+        endloop
+    endif
     set owner = null
 endfunction
 
