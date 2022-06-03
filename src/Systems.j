@@ -946,31 +946,35 @@ function SetupCustomRespawningSystem takes nothing returns nothing
 endfunction
 
 function TriggerActionMoveRucksack takes nothing returns nothing
-    local integer I0 = 0
+    local integer i = 0
+    local real x = 0.0
+    local real y = 0.0
     local integer j = 0
-    local player RucksackOwner = GetTriggerPlayer()
-    local location HeroPosition = GetUnitLoc(udg_Hero[GetPlayerId(RucksackOwner)])
-    set RucksackOwner = null
-    set I0 = 0
+    local unit bag = null
     loop
-        exitwhen(I0 == bj_MAX_PLAYERS)
-        set RucksackOwner = Player(I0)
-        if (PlayerIsOnlineUser(I0)) then
-            if (udg_Rucksack[I0] != null) then
-                set HeroPosition = GetUnitLoc(udg_Hero[I0])
-                call SetUnitPosition(udg_Rucksack[I0], GetLocationX(HeroPosition), GetLocationY(HeroPosition))
-                set j = 0
-                loop
-                    exitwhen (j == BlzGroupGetSize(udg_EquipmentBags[I0 + 1]))
-                    call SetUnitPosition(BlzGroupUnitAt(udg_EquipmentBags[I0], j), GetLocationX(HeroPosition), GetLocationY(HeroPosition))
-                    set j = j + 1
-                endloop
-                call RemoveLocation(HeroPosition)
-                set HeroPosition = null
+        exitwhen(i == bj_MAX_PLAYERS)
+        if (PlayerIsOnlineUser(i)) then
+            set x = GetUnitX(udg_Hero[i])
+            set y = GetUnitY(udg_Hero[i])
+
+            if (udg_Rucksack[i] != null) then
+                set bag = udg_Rucksack[i]
+                call SetUnitX(bag, x)
+                call SetUnitY(bag, y)
+                set bag = null
             endif
+
+            set j = 0
+            loop
+                exitwhen (j == BlzGroupGetSize(udg_EquipmentBags[i + 1]))
+                set bag = BlzGroupUnitAt(udg_EquipmentBags[i + 1], j)
+                call SetUnitX(bag, x)
+                call SetUnitY(bag, y)
+                set bag = null
+                set j = j + 1
+            endloop
         endif
-        set RucksackOwner = null
-        set I0 = I0 + 1
+        set i = i + 1
     endloop
 endfunction
 
@@ -2426,7 +2430,7 @@ function ConvertSaveCodeDemigodValueToInfo takes integer value returns string
     return "No Demigod"
 endfunction
 
-function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, string saveCode returns nothing
+function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, integer equipmentBags, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string gameMode = "Freelancer"
@@ -2478,6 +2482,7 @@ function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer,
     set content = content + AppendFileContent("Improved Masonry: " + I2S(masonryLevel))
     set content = content + AppendFileContent("Improved Navy: " + I2S(improvedNavyLevel))
     set content = content + AppendFileContent("Improved Creep Hunter: " + I2S(improvedCreepHunterLevel))
+    set content = content + AppendFileContent("Equipment Bags: " + I2S(equipmentBags))
     set content = content + AppendFileContent("Hero Kills: " + I2S(heroKills))
     set content = content + AppendFileContent("Hero Deaths: " + I2S(heroDeaths))
     set content = content + AppendFileContent("Unit Kills: " + I2S(unitKills))
@@ -2552,7 +2557,7 @@ function GetWarlordFromSaveCodeSegment takes integer saveCodeSegment returns boo
     return false
 endfunction
 
-function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue returns string
+function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, integer equipmentBags returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -2601,6 +2606,8 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
     // demigod
     set result = result + ConvertDecimalNumberToSaveCodeSegment(demigodValue)
 
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(equipmentBags)
+
     // checksum
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
 
@@ -2609,7 +2616,7 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
     endif
 
-    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, demigodValue, result)
+    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, demigodValue, equipmentBags, result)
 
     call AddGeneratedSaveCode(result)
 
@@ -2677,13 +2684,14 @@ function GetSaveCode takes player whichPlayer returns string
     local integer xp3 = GetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)])
     local integer improvedNavyLevel = GetPlayerTechCountSimple(UPG_IMPROVED_NAVY, whichPlayer)
     local integer improvedCreepHunterLevel = GetPlayerTechCountSimple(UPG_IMPROVED_CREEP_HUNTER, whichPlayer)
+    local integer equipmentBags = CountUnitsInGroup(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
 
     if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null) then
         set xp2 = udg_Held2XP[GetConvertedPlayerId(whichPlayer)]
         set heroLevel2 = 0 // TODO Set hero level by XP
     endif
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(whichPlayer))
+    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(whichPlayer), equipmentBags)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -2835,7 +2843,8 @@ function GetHeroLevelByXP takes integer xp returns integer
     return heroLevel
 endfunction
 
-function ApplySaveCode takes player whichPlayer, string s returns boolean
+// 2.0 and 2.1 in development
+function ApplySaveCodeOld2 takes player whichPlayer, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
@@ -2938,6 +2947,163 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
             if (udg_Held3[GetConvertedPlayerId(whichPlayer)] == null and xp3 > udg_Held3XP[GetConvertedPlayerId(whichPlayer)]) then
                 set udg_Held3XP[GetConvertedPlayerId(whichPlayer)] = xp3
             endif
+
+            return true
+        endif
+    else
+        call DisplaySaveCodeErrorSameGame(whichPlayer)
+    endif
+
+    // for savecodes from older versions of the map
+    return ApplySaveCodeOld(whichPlayer, s)
+endfunction
+
+function RemoveEquipmentBags takes player whichPlayer returns nothing
+    local integer max = BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    local unit member = null
+    local integer i = 0
+    loop
+        exitwhen (i >= max)
+        set member = BlzGroupUnitAt(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], i)
+        call DropAllItemsFromHero(member)
+        call GroupRemoveUnit(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], member)
+        call RemoveUnit(member)
+        set member = null
+        set i = i + 1
+    endloop
+    call GroupClear(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+endfunction
+
+function CreateEquipmentBags takes player whichPlayer, integer equipmentBags returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+    local unit equipmentBag = null
+    local string equipmentBagName = ""
+    local integer i = 0
+    loop
+        exitwhen (i >= equipmentBags)
+        set equipmentBag = CreateUnit(whichPlayer, 'E00R', GetUnitX(udg_Hero[playerId]),  GetUnitY(udg_Hero[playerId]), bj_UNIT_FACING)
+        call SuspendHeroXPBJ(false, equipmentBag)
+        call GroupAddUnit(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], equipmentBag)
+        call UnitRemoveAbility(equipmentBag, 'A02N')
+        call UnitAddAbility(equipmentBag, 'AInv')
+        set equipmentBagName = "Equipment Backpack " + I2S(CountUnitsInGroup(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)]))
+        call BlzSetUnitName(equipmentBag, equipmentBagName)
+        call BlzSetHeroProperName(equipmentBag, equipmentBagName)
+        set i = i + 1
+    endloop
+endfunction
+
+function RecreateEquipmentBags takes player whichPlayer, integer equipmentBags returns nothing
+    call RemoveEquipmentBags(whichPlayer)
+    call CreateEquipmentBags(whichPlayer, equipmentBags)
+endfunction
+
+function ApplySaveCode takes player whichPlayer, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local integer equipmentBags = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 23)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (not IsGeneratedSaveCode(s)) then
+        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+            if (demigodValue == 1) then
+                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
+                if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
+                    set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                    call TriggerExecute(gg_trg_Become_Demigod_Light)
+                endif
+            elseif (demigodValue == 2) then
+                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
+                if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
+                    set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                    call TriggerExecute(gg_trg_Become_Demigod_Dark)
+                endif
+            elseif (demigodValue == 3) then
+                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
+            endif
+
+            call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
+            call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_NAVY, improvedNavyLevel)
+            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_CREEP_HUNTER, improvedCreepHunterLevel)
+
+            set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
+            set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
+            set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
+            set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
+            set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
+            set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
+
+            if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
+                call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
+            endif
+
+            if (udg_Held[GetConvertedPlayerId(whichPlayer)] == null and xp > udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)]) then
+                set udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)] = xp
+                set udg_TmpPlayer = whichPlayer
+                set udg_TmpInteger = GetHeroLevelByXP(xp)
+                call TriggerExecute(gg_trg_Hero_Journey_Update_from_Level)
+            endif
+
+            if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
+                call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
+            endif
+
+            if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
+                set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
+            endif
+
+            if (udg_Held3[GetConvertedPlayerId(whichPlayer)] != null and xp3 > GetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)])) then
+                call SetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)], xp3, true)
+            endif
+
+            if (udg_Held3[GetConvertedPlayerId(whichPlayer)] == null and xp3 > udg_Held3XP[GetConvertedPlayerId(whichPlayer)]) then
+                set udg_Held3XP[GetConvertedPlayerId(whichPlayer)] = xp3
+            endif
+
+            call RecreateEquipmentBags(whichPlayer, equipmentBags)
 
             return true
         endif
@@ -3070,6 +3236,7 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
     local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
     local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
+    local integer equipmentBags = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 23)
     local string result = ""
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
@@ -3112,6 +3279,7 @@ function GetSaveCodeInfos takes player whichPlayer, string s returns string
     set result = AppendSaveCodeInfo(result, "Masonry: " + I2S(masonryLevel))
     set result = AppendSaveCodeInfo(result, "Navy: " + I2S(improvedNavyLevel))
     set result = AppendSaveCodeInfo(result, "Creep Hunter: " + I2S(improvedCreepHunterLevel))
+    set result = AppendSaveCodeInfo(result, "Equipment Bags: " + I2S(equipmentBags))
     set result = AppendSaveCodeInfo(result, "Hero Kills: " + I2S(heroKills))
     set result = AppendSaveCodeInfo(result, "Hero Deaths: " + I2S(heroDeaths))
     set result = AppendSaveCodeInfo(result, "Hero Kills: " + I2S(unitKills))
@@ -3152,6 +3320,7 @@ function GetSaveCodeShortInfos takes string playerName, string s returns string
     local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
     local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
     local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local integer equipmentBags = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 23)
     local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
@@ -3207,6 +3376,7 @@ function GetSaveCodeMaxHeroLevel takes string playerName, string s returns integ
     local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
     local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
     local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
+    local integer equipmentBags = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 23)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4902,7 +5072,7 @@ function GetClansInfo takes nothing returns string
     local integer i = 1
     loop
         exitwhen (i >= udg_ClanCounter)
-        set result = result + "- " + udg_ClanName[i] + " (" + I2S(CountPlayersInForceBJ(udg_ClanPlayers[i])) + " players: " + GetClanPlayerNames(i) + ")\n"
+        set result = result + "- " + udg_ClanName[i] + " (" + I2S(CountPlayersInForceBJ(udg_ClanPlayers[i])) + " player(s): " + GetClanPlayerNames(i) + ")\n"
         set i = i + 1
     endloop
     return result
@@ -5440,11 +5610,11 @@ function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, str
 endfunction
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2, 3)
 endfunction
 
 function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0)
+    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0, 2)
 endfunction
 
 function ForGroupRemoveUnit takes nothing returns nothing
@@ -9890,6 +10060,7 @@ hook RemoveUnit TurretSystemRemoveVehicle
 
 globals
     hashtable EquipmentBagSystemHashTable = InitHashtable()
+    hashtable EquipmentBagSystemStackingHashTable = InitHashtable()
 endglobals
 
 function EquipmentBagSetAbilityCount takes integer itemTypeId, integer count returns nothing
@@ -9904,39 +10075,121 @@ function EquipmentBagGetAbilityId takes integer itemTypeId, integer index return
     return LoadInteger(EquipmentBagSystemHashTable, itemTypeId, index)
 endfunction
 
-function EquipmentBagRegisterAbilityEx takes integer itemTypeId, integer abilityId returns nothing
+function EquipmentBagGetAbilityIdStacking takes integer itemTypeId, integer abilityId returns boolean
+    return LoadBoolean(EquipmentBagSystemStackingHashTable, itemTypeId, abilityId)
+endfunction
+
+function EquipmentBagRegisterAbilityEx takes integer itemTypeId, integer abilityId, boolean stacking returns nothing
     local integer count = EquipmentBagGetAbilityCount(itemTypeId) + 1
     call SaveInteger(EquipmentBagSystemHashTable, itemTypeId, count, abilityId)
+    call SaveBoolean(EquipmentBagSystemStackingHashTable, itemTypeId, abilityId, stacking)
     call EquipmentBagSetAbilityCount(itemTypeId, count)
 endfunction
 
 function EquipmentBagRegisterAbility takes nothing returns nothing
-    call EquipmentBagRegisterAbilityEx(udg_TmpItemTypeId, udg_TmpAbilityCode)
+    call EquipmentBagRegisterAbilityEx(udg_TmpItemTypeId, udg_TmpAbilityCode, udg_TmpBoolean)
 endfunction
 
 function EquipmentBagAddAbilities takes unit bag, item whichItem returns nothing
+    local integer playerId = GetPlayerId(GetOwningPlayer(bag))
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer abilityId = 0
+    local boolean stacking = false
+    local unit hero = udg_Hero[playerId]
     local integer i = 1
-    if (udg_Hero[GetPlayerId(GetOwningPlayer(bag))] != null) then
+    if (hero != null) then
         loop
             exitwhen (i > count)
-            // TODO Check Stacking.
-            call UnitAddAbility(udg_Hero[GetPlayerId(GetOwningPlayer(bag))], EquipmentBagGetAbilityId(itemTypeId, i))
+            set abilityId = EquipmentBagGetAbilityId(itemTypeId, i)
+            set stacking = EquipmentBagGetAbilityIdStacking(itemTypeId, abilityId)
+
+            if (stacking or GetUnitAbilityLevel(hero, abilityId) <= 0) then
+                call UnitAddAbility(hero, abilityId)
+            endif
+            set i = i + 1
+        endloop
+    endif
+    set hero = null
+endfunction
+
+function CountItemsOfTypeFromHero takes unit hero, integer itemTypeId returns integer
+    local item whichItem = null
+    local integer count = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(hero, i)
+        if (whichItem != null and GetItemTypeId(whichItem) == itemTypeId) then
+            set count = count + 1
+        endif
+        set whichItem = null
+        set i = i + 1
+    endloop
+    return count
+endfunction
+
+function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns nothing
+    local integer playerId = GetPlayerId(GetOwningPlayer(bag))
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer abilityId = 0
+    local boolean stacking = false
+    local unit hero = udg_Hero[playerId]
+    local integer i = 1
+    if (hero != null) then
+        loop
+            exitwhen (i > count)
+            set abilityId = EquipmentBagGetAbilityId(itemTypeId, i)
+            set stacking = EquipmentBagGetAbilityIdStacking(itemTypeId, abilityId)
+
+            if (stacking or CountItemsOfTypeFromHero(hero, itemTypeId) == 0) then
+                call UnitRemoveAbility(hero, abilityId)
+            endif
+            set i = i + 1
+        endloop
+    endif
+    set hero = null
+endfunction
+
+// Enchanter System
+
+function EnchanterAddItemBonus takes item whichItem, integer abilityId, integer bonus returns nothing
+    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
+    local abilityintegerlevelfield whichAbilityIntegerLevelField = ABILITY_ILF_RESTORED_LIFE // GetAbilityRealField(whichItem, abilityId)
+    call BlzSetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1, BlzGetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1) + bonus)
+    // TODO Store the bonus
+endfunction
+
+function EnchanterRemoveItemBonus takes item whichItem, integer abilityId, integer bonus returns nothing
+    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
+    local abilityintegerlevelfield whichAbilityIntegerLevelField = ABILITY_ILF_RESTORED_LIFE // GetAbilityRealField(whichItem, abilityId)
+    call BlzSetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1, BlzGetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1) - bonus)
+endfunction
+
+function EnchanterAddItemBonuses takes unit hero, item whichItem returns nothing
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer enchantingBonus = 10 // TODO get from enchanting items
+    local integer i = 1
+    if (enchantingBonus > 0) then
+        loop
+            exitwhen (i > count)
+            call EnchanterAddItemBonus(whichItem,  EquipmentBagGetAbilityId(itemTypeId, i), enchantingBonus)
             set i = i + 1
         endloop
     endif
 endfunction
 
-function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns nothing
+function EnchanterRemoveItemBonuses takes unit hero, item whichItem returns nothing
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer enchantingBonus = 10 // TODO get from enchanting items
     local integer i = 1
-    if (udg_Hero[GetPlayerId(GetOwningPlayer(bag))] != null) then
+    if (enchantingBonus > 0) then
         loop
             exitwhen (i > count)
-            // TODO Check Stacking.
-            call UnitRemoveAbility(udg_Hero[GetPlayerId(GetOwningPlayer(bag))], EquipmentBagGetAbilityId(itemTypeId, i))
+            call EnchanterRemoveItemBonus(whichItem,  EquipmentBagGetAbilityId(itemTypeId, i), enchantingBonus)
             set i = i + 1
         endloop
     endif
