@@ -495,3 +495,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Callahan: [The Void Lord](https://www.hiveworkshop.com/threads/the-void-lord.48554/)
 * Anitarf: [Arrow Key System](http://www.wc3c.net/showthread.php?t=101271)
 * Opossum: [Third Person Camera System](http://www.wc3c.net/showthread.php?t=104786)
+* Remixer: [Pandarian Harvester](https://www.hiveworkshop.com/threads/pandarian-harvester.316782/)
