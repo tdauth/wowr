@@ -9389,7 +9389,7 @@ function TurretSystemTurretsCountUnitTypeId takes unit vehicle, integer unitType
 endfunction
 
 function TurretSystemUnselectGroupEnum takes nothing returns nothing
-    call SelectUnit( GetEnumUnit(), false )
+    call SelectUnit(GetEnumUnit(), false)
 endfunction
 
 function TurretSystemSelectionAddTurrets takes player whichPlayer, unit vehicle returns nothing
