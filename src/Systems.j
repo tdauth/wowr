@@ -2652,13 +2652,35 @@ function GetSaveCodeDemigodValue takes player whichPlayer returns integer
     return 0
 endfunction
 
+function GetHeroLevelMaxXP takes integer heroLevel returns integer
+    local integer result = 0 // level 1 XP
+    local integer i = 2
+    loop
+        exitwhen (i > heroLevel + 1)
+        set result = result + i * 100
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetHeroLevelByXP takes integer xp returns integer
+    local integer heroLevel = 1
+    local integer i = 2
+    loop
+        set xp = xp - i * 100
+        exitwhen (xp < 0)
+        set heroLevel = heroLevel + 1
+        set i = i + 1
+    endloop
+    return heroLevel
+endfunction
+
 /**
  * Simple Save/Load system which converts decimal numbers into numbers from SAVE_CODE_DIGITS.
  * It starts with the player name's hash, so you can only use your own savecodes in multiplayer games etc.
  * Besides, the settings are stored. All numbers are separated by a separator character.
  * It adds a final checksum of the savecode to make it harder to fake any savecode by just replacing certain values of it.
  * If it ends with separators it will be compressed by removing separator characters from the end.
- * TODO If we only store the level value, the save code gets MUCH shorter.
  * TODO Store stats for the multiboard to show what a player has achieved. This could also be useful for online leaderboards.
  */
 function GetSaveCode takes player whichPlayer returns string
@@ -2690,9 +2712,19 @@ function GetSaveCode takes player whichPlayer returns string
     local integer improvedCreepHunterLevel = GetPlayerTechCountSimple(UPG_IMPROVED_CREEP_HUNTER, whichPlayer)
     local integer equipmentBags = CountUnitsInGroup(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
 
+    if (udg_Held[GetConvertedPlayerId(whichPlayer)] == null) then
+        set xp = udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)]
+        set heroLevel = GetHeroLevelByXP(xp)
+    endif
+
     if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null) then
         set xp2 = udg_Held2XP[GetConvertedPlayerId(whichPlayer)]
-        set heroLevel2 = 0 // TODO Set hero level by XP
+        set heroLevel2 = GetHeroLevelByXP(xp2)
+    endif
+
+    if (udg_Held3[GetConvertedPlayerId(whichPlayer)] == null) then
+        set xp3 = udg_Held3XP[GetConvertedPlayerId(whichPlayer)]
+        set heroLevel3 = GetHeroLevelByXP(xp3)
     endif
 
     return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(whichPlayer), equipmentBags)
@@ -2822,29 +2854,6 @@ function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
     endif
 
     return false
-endfunction
-
-function GetHeroLevelMaxXP takes integer heroLevel returns integer
-    local integer result = 0 // level 1 XP
-    local integer i = 2
-    loop
-        exitwhen (i > heroLevel + 1)
-        set result = result + i * 100
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
-function GetHeroLevelByXP takes integer xp returns integer
-    local integer heroLevel = 1
-    local integer i = 2
-    loop
-        set xp = xp - i * 100
-        exitwhen (xp < 0)
-        set heroLevel = heroLevel + 1
-        set i = i + 1
-    endloop
-    return heroLevel
 endfunction
 
 // 2.0 and 2.1 in development
