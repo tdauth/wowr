@@ -58,6 +58,10 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
     return GetPlayerController(Player(PlayerNumber)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(PlayerNumber)) == PLAYER_SLOT_STATE_PLAYING
 endfunction
 
+function GetHelpText takes nothing returns string
+    return "-h, -help, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp X, -loadclanp X, -save, -savec, -savegui, -load X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels"
+endfunction
+
 globals
 	string array raceIcons
 	string array professionIcons
@@ -5002,21 +5006,19 @@ function TimerFunctionClanResources takes nothing returns nothing
                 set j = j + 1
             endloop
 
-            if (gold > 0) then
-                call SetPlayerStateBJ(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD) - gold)
-            endif
-            if (lumber > 0) then
-                call SetPlayerStateBJ(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER) - lumber)
-            endif
+            // do not remove the resources to limit the player
+            //if (gold > 0) then
+                //call SetPlayerStateBJ(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_GOLD) - gold)
+            //endif
+            //if (lumber > 0) then
+                //call SetPlayerStateBJ(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(udg_ClanAIPlayer[i], PLAYER_STATE_RESOURCE_LUMBER) - lumber)
+            //endif
         endif
         set i = i + 1
     endloop
 endfunction
 
-
-/**
- * Chooses one AI player to share gold and lumber with all clan players every X seconds.
- */
+// Chooses one AI player to share gold and lumber with all clan players every X seconds.
 function PickClanAIPlayer takes integer clan returns player
     local player result = null
     local integer i = 0
@@ -5035,7 +5037,7 @@ function PickClanAIPlayer takes integer clan returns player
 
     if (result != null) then
         set udg_ClanAIPlayer[clan] = result
-        call TimerStart(clanResourceTimer, 30.0, true, function TimerFunctionClanResources)
+        call TimerStart(clanResourceTimer, 300.0, true, function TimerFunctionClanResources)
         set i = 0
         loop
             exitwhen (i == bj_MAX_PLAYERS)
@@ -9024,9 +9026,10 @@ endfunction
 
 function GetPlayerInfo takes player whichPlayer returns string
     local integer playerId = GetPlayerId(whichPlayer)
+    local integer playerIdConverted = GetConvertedPlayerId(whichPlayer)
     local string result = GetPlayerNameColored(whichPlayer)
 
-    if (udg_PlayerIsWarlord[playerId]) then
+    if (udg_PlayerIsWarlord[playerIdConverted]) then
         set result = result + "\n" + "Warlord"
     else
         set result = result + "\n" + "Freelancer"
@@ -9047,17 +9050,33 @@ function GetPlayerInfo takes player whichPlayer returns string
         set result = result + "\n" + "Hero 3 Level: " + I2S(GetHeroLevel(udg_Hero3[playerId]))
     endif
 
-    if (udg_PlayerProfession[playerId] != udg_ProfessionNone) then
-        set result = result + "\n" + "Profession 1: " + udg_ProfessionName[udg_PlayerProfession[playerId]]
+    if (udg_PlayerProfession[playerIdConverted] != udg_ProfessionNone) then
+        set result = result + "\n" + "Profession 1: " + udg_ProfessionName[udg_PlayerProfession[playerIdConverted]]
     else
         set result = result + "\n" + "Profession 1: None"
     endif
 
-    if (udg_PlayerProfession2[playerId] != udg_ProfessionNone) then
-        set result = result + "\n" + "Profession 2: " + udg_ProfessionName[udg_PlayerProfession2[playerId]]
+    if (udg_PlayerProfession2[playerIdConverted] != udg_ProfessionNone) then
+        set result = result + "\n" + "Profession 2: " + udg_ProfessionName[udg_PlayerProfession2[playerIdConverted]]
     else
         set result = result + "\n" + "Profession 2: None"
     endif
+
+    if (udg_PlayerIsWarlord[playerIdConverted]) then
+        if (udg_PlayerRace[playerIdConverted] != udg_RaceNone) then
+            set result = result + "\n" + "Race 1: " + udg_RaceName[udg_PlayerRace[playerIdConverted]]
+        endif
+
+        if (udg_PlayerRace2[playerIdConverted] != udg_RaceNone) then
+            set result = result + "\n" + "Race 2: " + udg_RaceName[udg_PlayerRace2[playerIdConverted]]
+        endif
+    endif
+
+    if (udg_ClanPlayerClan[playerIdConverted] != 0) then
+        set result = result + "\n" + "Clan: " + udg_ClanName[udg_ClanPlayerClan[playerIdConverted]]
+    endif
+
+    set result = result + "\n" + "PvP Wins: " + I2S(udg_PlayerPvPWins[playerIdConverted])
 
     return result
 endfunction
@@ -10154,43 +10173,914 @@ endfunction
 
 // Enchanter System
 
-function EnchanterAddItemBonus takes item whichItem, integer abilityId, integer bonus returns nothing
-    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    local abilityintegerlevelfield whichAbilityIntegerLevelField = ABILITY_ILF_RESTORED_LIFE // GetAbilityRealField(whichItem, abilityId)
-    call BlzSetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1, BlzGetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1) + bonus)
-    // TODO Store the bonus
+globals
+    hashtable EnchanterSystemHashTable = InitHashtable()
+    constant integer ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS = 1
+    constant integer ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS = 2
+    constant integer ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS = 3
+endglobals
+
+function EnchanterSystemSaveBonus takes unit hero, integer bonusType, integer bonus returns nothing
+    call SaveInteger(EnchanterSystemHashTable, GetHandleId(hero), bonusType, bonus)
 endfunction
 
-function EnchanterRemoveItemBonus takes item whichItem, integer abilityId, integer bonus returns nothing
+function EnchanterSystemLoadBonus takes unit hero, integer bonusType returns integer
+    return LoadInteger(EnchanterSystemHashTable, GetHandleId(hero), bonusType)
+endfunction
+
+function EnchanterSystemSaveBonusReal takes unit hero, integer bonusType, real bonus returns nothing
+    call SaveReal(EnchanterSystemHashTable, GetHandleId(hero), bonusType, bonus)
+endfunction
+
+function EnchanterSystemLoadBonusReal takes unit hero, integer bonusType returns real
+    return LoadReal(EnchanterSystemHashTable, GetHandleId(hero), bonusType)
+endfunction
+
+function EnchanterAddItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
     local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    local abilityintegerlevelfield whichAbilityIntegerLevelField = ABILITY_ILF_RESTORED_LIFE // GetAbilityRealField(whichItem, abilityId)
-    call BlzSetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1, BlzGetAbilityIntegerLevelField(whichAbility, whichAbilityIntegerLevelField, 1) - bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1) + bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1) + bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1) + bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1) + bonus)
+endfunction
+
+function EnchanterRemoveItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
+    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1) - bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1) - bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1) - bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1) - bonus)
+endfunction
+
+function EnchanterAddItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
+    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
+    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) + bonus)
+endfunction
+
+function EnchanterRemoveItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
+    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
+    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) - bonus)
+endfunction
+
+function EnchanterGetHeroStatsAndDefenseBonus takes unit hero returns integer
+    local integer result = 0
+    local item whichItem = null
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(hero, i)
+        if (whichItem != null and GetItemTypeId(whichItem) == 'I07F') then
+            set result = result + 1
+        endif
+        set whichItem = null
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function EnchanterGetDamageBonus takes unit hero returns real
+    local real result = 0.0
+    local item whichItem = null
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(hero, i)
+        if (whichItem != null and GetItemTypeId(whichItem) == 'I07F') then
+            set result = result + 3.0
+        endif
+        set whichItem = null
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function EnchanterAddItemBonusesEx takes unit hero, item whichItem, integer bonusHeroStatsAndDefense, real bonusDamage returns nothing
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer i = 1
+    loop
+        exitwhen (i > count)
+        call EnchanterAddItemBonusHeroStatsAndDefense(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusHeroStatsAndDefense)
+        call EnchanterAddItemBonusDamage(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusDamage)
+        set i = i + 1
+    endloop
 endfunction
 
 function EnchanterAddItemBonuses takes unit hero, item whichItem returns nothing
-    local integer itemTypeId = GetItemTypeId(whichItem)
-    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
-    local integer enchantingBonus = 10 // TODO get from enchanting items
-    local integer i = 1
-    if (enchantingBonus > 0) then
-        loop
-            exitwhen (i > count)
-            call EnchanterAddItemBonus(whichItem,  EquipmentBagGetAbilityId(itemTypeId, i), enchantingBonus)
-            set i = i + 1
-        endloop
-    endif
+    call EnchanterAddItemBonusesEx(hero, whichItem, EnchanterGetHeroStatsAndDefenseBonus(hero), EnchanterGetDamageBonus(hero))
 endfunction
 
 function EnchanterRemoveItemBonuses takes unit hero, item whichItem returns nothing
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer count = EquipmentBagGetAbilityCount(itemTypeId)
-    local integer enchantingBonus = 10 // TODO get from enchanting items
+    local integer bonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
+    local real bonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
     local integer i = 1
-    if (enchantingBonus > 0) then
-        loop
-            exitwhen (i > count)
-            call EnchanterRemoveItemBonus(whichItem,  EquipmentBagGetAbilityId(itemTypeId, i), enchantingBonus)
-            set i = i + 1
-        endloop
-    endif
+    loop
+        exitwhen (i > count)
+        call EnchanterRemoveItemBonusHeroStatsAndDefense(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusHeroStatAndDefense)
+        call EnchanterRemoveItemBonusDamage(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusDamage)
+        set i = i + 1
+    endloop
 endfunction
+
+function EnchanterRecalculateItemBonuses takes unit hero, item whichItem returns nothing
+    local integer itemTypeId = GetItemTypeId(whichItem)
+    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer oldEnchantingBonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
+    local integer updatedEnchantingBonusHeroStatAndDefense = EnchanterGetHeroStatsAndDefenseBonus(hero)
+    local integer enchantingBonusHeroStatAndDefenseDiff = updatedEnchantingBonusHeroStatAndDefense - oldEnchantingBonusHeroStatAndDefense
+    local real oldEnchantingBonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
+    local real updatedEnchantingBonusDamage = EnchanterGetDamageBonus(hero)
+    local real enchantingBonusDamageDiff = updatedEnchantingBonusDamage - oldEnchantingBonusDamage
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(hero, i)
+        if (whichItem != null) then
+            call EnchanterAddItemBonusesEx(hero, whichItem, enchantingBonusHeroStatAndDefenseDiff, enchantingBonusDamageDiff)
+        endif
+        set whichItem = null
+        set i = i + 1
+    endloop
+    call EnchanterSystemSaveBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS, updatedEnchantingBonusHeroStatAndDefense)
+    call EnchanterSystemSaveBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS, updatedEnchantingBonusDamage)
+endfunction
+
+function EnchanterSystemRemoveUnit takes unit whichUnit returns nothing
+    call FlushChildHashtable(EnchanterSystemHashTable, GetHandleId(whichUnit))
+endfunction
+
+hook RemoveUnit EnchanterSystemRemoveUnit
+
+// Arrow Key System by Anitarf
+
+library AStructCoreInterfaceArrowKeys
+
+	/**
+	 * Functions following this function interface can be used as keypress event responses.
+	 * \param key Parameter values: \p AArrowKeys.keyUp, \p AArrowKeys.keyDown, \p AArrowKeys.keyLeft, \p AArrowKeys.keyRight
+	 * \param pressed true-key was pressed, false-key was released
+	 */
+	function interface AArrowKeysOnPressAction takes AArrowKeys arrowKeys, integer key, boolean pressed returns nothing
+
+	/**
+	 * Use \ref playerArrowKeys() to refer to each player's instance.
+	 * \author Anitarf
+	 * \author Baradé (adaption for World of Warcraft Reforged)
+	 * <a href="http://www.wc3c.net/showthread.php?t=101271">source</a>
+	 */
+	struct AArrowKeys
+		public static constant integer keyUp = 0
+		public static constant integer keyDown = 1
+		public static constant integer keyLeft = 2
+		public static constant integer keyRight = 3
+		/**
+		* the following constant determines the behaviour of the vertical and horizontal
+		* variables. For example, if a player presses the up key and then presses the down
+		* key afterwards while still holding the up key, the vertical variable will be set
+		* to -1. Then, if the player releases the down key while still keeping the up key
+		* pressed, if RESUME_PREVIOUS_KEY is true the vertical variable will be set back
+		* to 1, else it will be set to 0.
+		*/
+		// static construction members
+		private static boolean m_resumePreviousKey
+		// static dynamic members
+		/**
+		* these are the external functions that get called when an arrow key is pressed/released
+		* you can set these variables to your functions that follow the Event function interface
+		* you don't need a different function for each event, you can set all these variables to
+		* a single function, since the function's parameters tell you what event occured.
+		*/
+		private static AArrowKeysOnPressAction m_onPressUpAction
+		private static AArrowKeysOnPressAction m_onReleaseUpAction
+		private static AArrowKeysOnPressAction m_onPressDownAction
+		private static AArrowKeysOnPressAction m_onReleaseDownAction
+		private static AArrowKeysOnPressAction m_onPressLeftAction
+		private static AArrowKeysOnPressAction m_onReleaseLeftAction
+		private static AArrowKeysOnPressAction m_onPressRightAction
+		private static AArrowKeysOnPressAction m_onReleaseRightAction
+		// static members
+		private static trigger m_pressUpTrigger
+		private static trigger m_releaseUpTrigger
+		private static trigger m_pressDownTrigger
+		private static trigger m_releaseDownTrigger
+		private static trigger m_pressLeftTrigger
+		private static trigger m_releaseLeftTrigger
+		private static trigger m_pressRightTrigger
+		private static trigger m_releaseRightTrigger
+		private static thistype array m_playerArrowKeys[28] /// \todo Use \ref bj_MAX_PLAYERS, vJass bug.
+		// dynamic members
+		// these are the "quick press" variables. They work similarly to the variables above,
+		// except that they aren't set to 0/false when a key is released. If you are checking
+		// the above variables on a periodic timer, you could miss a keypress if a player
+		// quickly presses and releases a key, the variables below allow you to catch such
+		// quick keypresses. Note that you must set these variables to 0/false yourself once
+		// you check them or they'll remain permanently set to 1/-1/true. Basicaly these
+		// variables tell you if a key has been pressed since you last set them to 0/false.
+		private integer m_verticalQuickPress
+		private integer m_horizontalQuickPress
+		private boolean m_upQuickPress
+		private boolean m_downQuickPress
+		private boolean m_leftQuickPress
+		private boolean m_rightQuickPress
+		// construction members
+		private player m_player
+		//members
+		// this tells you the status of the arrow keys in the two directions for each player
+		// index 0 holds the values for player 1 (red), index 11 for player 12 (brown)
+		// a value of 0 means no keys pressed, 1 means right/up, -1 means left/down
+		 // do not change the value of these variables
+		private integer m_vertical
+		private integer m_horizontal
+		// this tells you the status of each arrow key individualy for each player
+		// index 0 holds the values for player 1 (red), index 11 for player 12 (brown)
+		// this is basicaly the same as vertical/horizontal, you can use whichever you want
+		// do not change the value of these variables
+		private boolean m_up
+		private boolean m_down
+		private boolean m_left
+		private boolean m_right
+
+		// dynamic members
+
+		public method setVerticalQuickPress takes integer verticalQuickPress returns nothing
+			set this.m_verticalQuickPress = verticalQuickPress
+		endmethod
+
+		public method verticalQuickPress takes nothing returns integer
+			return this.m_verticalQuickPress
+		endmethod
+
+		public method setHorizontalQuickPress takes integer horizontalQuickPress returns nothing
+			set this.m_horizontalQuickPress = horizontalQuickPress
+		endmethod
+
+		public method horizontalQuickPress takes nothing returns integer
+			return this.m_horizontalQuickPress
+		endmethod
+
+		public method setUpQuickPress takes boolean upQuickPress returns nothing
+			set this.m_upQuickPress = upQuickPress
+		endmethod
+
+		public method upQuickPress takes nothing returns boolean
+			return this.m_upQuickPress
+		endmethod
+
+		public method setDownQuickPress takes boolean downQuickPress returns nothing
+			set this.m_downQuickPress = downQuickPress
+		endmethod
+
+		public method downQuickPress takes nothing returns boolean
+			return this.m_downQuickPress
+		endmethod
+
+		public method setLeftQuickPress takes boolean leftQuickPress returns nothing
+			set this.m_leftQuickPress = leftQuickPress
+		endmethod
+
+		public method leftQuickPress takes nothing returns boolean
+			return this.m_leftQuickPress
+		endmethod
+
+		public method setRightQuickPress takes boolean rightQuickPress returns nothing
+			set this.m_rightQuickPress = rightQuickPress
+		endmethod
+
+		public method rightQuickPress takes nothing returns boolean
+			return this.m_rightQuickPress
+		endmethod
+
+		// construction members
+
+		public method player takes nothing returns player
+			return this.m_player
+		endmethod
+
+		// members
+
+		public method vertical takes nothing returns integer
+			return this.m_vertical
+		endmethod
+
+		public method horizontal takes nothing returns integer
+			return this.m_horizontal
+		endmethod
+
+		public method up takes nothing returns boolean
+			return this.m_up
+		endmethod
+
+		public method down takes nothing returns boolean
+			return this.m_down
+		endmethod
+
+		public method left takes nothing returns boolean
+			return this.m_left
+		endmethod
+
+		public method right takes nothing returns boolean
+			return this.m_right
+		endmethod
+
+		public static method create takes player user returns thistype
+			local thistype this = thistype.allocate()
+			// dynamic members
+			set this.m_verticalQuickPress = 0
+			set this.m_horizontalQuickPress = 0
+			set this.m_upQuickPress = false
+			set this.m_downQuickPress = false
+			set this.m_leftQuickPress = false
+			set this.m_rightQuickPress = false
+			// construction members
+			set this.m_player = user
+			// members
+			set this.m_vertical = 0
+			set this.m_horizontal = 0
+			set this.m_up = false
+			set this.m_down = false
+			set this.m_left = false
+			set this.m_right = false
+			return this
+		endmethod
+
+		// members
+
+		private static method triggerActionKeyPressDown takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_down = true
+			set this.m_vertical = -1
+			set this.m_downQuickPress = true
+			set this.m_verticalQuickPress = -1
+			if (thistype.m_onPressDownAction != 0) then
+				call thistype.m_onPressDownAction.execute(this, thistype.keyDown, true)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyReleaseDown takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_down = false
+			if (thistype.m_resumePreviousKey and this.m_up) then
+				set this.m_vertical = 1
+			else
+				set this.m_vertical = 0
+			endif
+			if (thistype.m_onReleaseDownAction != 0) then
+				call thistype.m_onReleaseDownAction.execute(this, thistype.keyDown, false)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyPressUp takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_up = true
+			set this.m_vertical = 1
+			set this.m_upQuickPress = true
+			set this.m_verticalQuickPress = 1
+			if (thistype.m_onPressUpAction != 0) then
+				call thistype.m_onPressUpAction.execute(this, thistype.keyUp, true)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyReleaseUp takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_up = false
+			if (thistype.m_resumePreviousKey and this.m_down) then
+				set this.m_vertical = -1
+			else
+				set this.m_vertical = 0
+			endif
+			if (thistype.m_onReleaseUpAction != 0) then
+				call thistype.m_onReleaseUpAction.execute(this, thistype.keyUp, false)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyPressLeft takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_left = true
+			set this.m_horizontal = -1
+			set this.m_leftQuickPress = true
+			set this.m_horizontalQuickPress = -1
+			if (thistype.m_onPressLeftAction != 0) then
+				call thistype.m_onPressLeftAction.execute(this, thistype.keyLeft, true)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyReleaseLeft takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_left = false
+			if (thistype.m_resumePreviousKey and this.m_right) then
+				set this.m_horizontal = 1
+			else
+				set this.m_horizontal = 0
+			endif
+			if (thistype.m_onReleaseLeftAction != 0) then
+				call thistype.m_onReleaseLeftAction.execute(this, thistype.keyLeft, false)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyPressRight takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_right = true
+			set this.m_horizontal = 1
+			set this.m_rightQuickPress = true
+			set this.m_horizontalQuickPress = 1
+			if (thistype.m_onPressRightAction != 0) then
+				call thistype.m_onPressRightAction.execute(this, thistype.keyRight, true)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		private static method triggerActionKeyReleaseRight takes nothing returns nothing
+			local player triggerPlayer = GetTriggerPlayer()
+			local thistype this = thistype.m_playerArrowKeys[GetPlayerId(triggerPlayer)]
+			set this.m_right = false
+			if (thistype.m_resumePreviousKey and this.m_left) then
+				set this.m_horizontal = -1
+			else
+				set this.m_horizontal = 0
+			endif
+			if (thistype.m_onReleaseRightAction != 0) then
+				call thistype.m_onReleaseRightAction.execute(this, thistype.keyRight, false)
+			endif
+			set triggerPlayer = null
+		endmethod
+
+		public static method init takes boolean resumePreviousKey returns nothing
+			local triggeraction triggerAction
+			local integer i
+			local player user
+			local event triggerEvent
+			// static dynamic members
+			set thistype.m_onPressUpAction = 0
+			set thistype.m_onReleaseUpAction = 0
+			set thistype.m_onPressDownAction = 0
+			set thistype.m_onReleaseDownAction = 0
+			set thistype.m_onPressLeftAction = 0
+			set thistype.m_onReleaseLeftAction = 0
+			set thistype.m_onPressRightAction = 0
+			set thistype.m_onReleaseRightAction = 0
+			// static construction members
+			set thistype.m_resumePreviousKey = resumePreviousKey
+			// static members
+			set thistype.m_pressUpTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_pressUpTrigger, function thistype.triggerActionKeyPressUp)
+			set triggerAction = null
+			set thistype.m_releaseUpTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_releaseUpTrigger, function thistype.triggerActionKeyReleaseUp)
+			set triggerAction = null
+			set thistype.m_pressDownTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_pressDownTrigger, function thistype.triggerActionKeyPressDown)
+			set triggerAction = null
+			set thistype.m_releaseDownTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_releaseDownTrigger, function thistype.triggerActionKeyReleaseDown)
+			set triggerAction = null
+			set thistype.m_pressLeftTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_pressLeftTrigger, function thistype.triggerActionKeyPressLeft)
+			set triggerAction = null
+			set thistype.m_releaseLeftTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_releaseLeftTrigger, function thistype.triggerActionKeyReleaseLeft)
+			set triggerAction = null
+			set thistype.m_pressRightTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_pressRightTrigger, function thistype.triggerActionKeyPressRight)
+			set triggerAction = null
+			set thistype.m_releaseRightTrigger = CreateTrigger()
+			set triggerAction = TriggerAddAction(thistype.m_releaseRightTrigger, function thistype.triggerActionKeyReleaseRight)
+			set triggerAction = null
+			set i = 0
+			loop
+				exitwhen (i == bj_MAX_PLAYERS)
+				set user = Player(i)
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_pressUpTrigger, user, EVENT_PLAYER_ARROW_UP_DOWN)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_releaseUpTrigger, user, EVENT_PLAYER_ARROW_UP_UP)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_pressDownTrigger, user, EVENT_PLAYER_ARROW_DOWN_DOWN)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_releaseDownTrigger, user, EVENT_PLAYER_ARROW_DOWN_UP)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_pressLeftTrigger, user, EVENT_PLAYER_ARROW_LEFT_DOWN)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_releaseLeftTrigger, user, EVENT_PLAYER_ARROW_LEFT_UP)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_pressRightTrigger, user, EVENT_PLAYER_ARROW_RIGHT_DOWN)
+				set triggerEvent = null
+				set triggerEvent = TriggerRegisterPlayerEvent(thistype.m_releaseRightTrigger, user, EVENT_PLAYER_ARROW_RIGHT_UP)
+				set triggerEvent = null
+				set user = null
+				set thistype.m_playerArrowKeys[i] = thistype.create(user)
+				set i = i + 1
+			endloop
+		endmethod
+
+		public static method cleanUp takes nothing returns nothing
+			local integer i
+			// static members
+			call DestroyTrigger(thistype.m_pressUpTrigger)
+			set thistype.m_pressUpTrigger = null
+			call DestroyTrigger(thistype.m_releaseUpTrigger)
+			set thistype.m_releaseUpTrigger = null
+			call DestroyTrigger(thistype.m_pressDownTrigger)
+			set thistype.m_pressDownTrigger = null
+			call DestroyTrigger(thistype.m_releaseDownTrigger)
+			set thistype.m_releaseDownTrigger = null
+			call DestroyTrigger(thistype.m_pressLeftTrigger)
+			set thistype.m_pressLeftTrigger = null
+			call DestroyTrigger(thistype.m_releaseLeftTrigger)
+			set thistype.m_releaseLeftTrigger = null
+			call DestroyTrigger(thistype.m_pressRightTrigger)
+			set thistype.m_pressRightTrigger = null
+			call DestroyTrigger(thistype.m_releaseRightTrigger)
+			set thistype.m_releaseRightTrigger = null
+			set i = 0
+			loop
+				exitwhen (i == bj_MAX_PLAYERS)
+				if (thistype.m_playerArrowKeys[i] != 0) then
+					call thistype.m_playerArrowKeys[i].destroy()
+					set thistype.m_playerArrowKeys[i] = 0
+				endif
+				set i = i + 1
+			endloop
+		endmethod
+
+		// static dynamic members
+
+		public static method setOnPressUpAction takes AArrowKeysOnPressAction onPressUpAction returns nothing
+			set thistype.m_onPressUpAction = onPressUpAction
+		endmethod
+
+		public static method onPressUpAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onPressUpAction
+		endmethod
+
+		public static method setOnReleaseUpAction takes AArrowKeysOnPressAction onReleaseUpAction returns nothing
+			set thistype.m_onReleaseUpAction = onReleaseUpAction
+		endmethod
+
+		public static method onReleaseUpAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onReleaseUpAction
+		endmethod
+
+		public static method setOnPressDownAction takes AArrowKeysOnPressAction onPressDownAction returns nothing
+			set thistype.m_onPressDownAction = onPressDownAction
+		endmethod
+
+		public static method onPressDownAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onPressDownAction
+		endmethod
+
+		public static method setOnReleaseDownAction takes AArrowKeysOnPressAction onReleaseDownAction returns nothing
+			set thistype.m_onReleaseDownAction = onReleaseDownAction
+		endmethod
+
+		public static method onReleaseDownAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onReleaseDownAction
+		endmethod
+
+		public static method setOnPressLeftAction takes AArrowKeysOnPressAction onPressLeftAction returns nothing
+			set thistype.m_onPressLeftAction = onPressLeftAction
+		endmethod
+
+		public static method onPressLeftAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onPressLeftAction
+		endmethod
+
+		public static method setOnReleaseLeftAction takes AArrowKeysOnPressAction onReleaseLeftAction returns nothing
+			set thistype.m_onReleaseLeftAction = onReleaseLeftAction
+		endmethod
+
+		public static method onReleaseLeftAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onReleaseLeftAction
+		endmethod
+
+		public static method setOnPressRightAction takes AArrowKeysOnPressAction onPressRightAction returns nothing
+			set thistype.m_onPressRightAction = onPressRightAction
+		endmethod
+
+		public static method onPressRightAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onPressRightAction
+		endmethod
+
+		public static method setOnReleaseRightAction takes AArrowKeysOnPressAction onReleaseRightAction returns nothing
+			set thistype.m_onReleaseRightAction = onReleaseRightAction
+		endmethod
+
+		public static method onReleaseRightAction takes nothing returns AArrowKeysOnPressAction
+			return thistype.m_onReleaseRightAction
+		endmethod
+
+		// static methods
+
+		public static method playerArrowKeys takes player user returns thistype
+			return thistype.m_playerArrowKeys[GetPlayerId(user)]
+		endmethod
+    endstruct
+
+endlibrary
+
+// Third person camera system by Opossum
+
+library AStructCoreInterfaceThirdPersonCamera requires AStructCoreInterfaceArrowKeys
+
+	/**
+	 * \brief Adds a dynamic third person camera to the game.
+	 * Its main purpose is to enable the user a highly configurable camera without the usual
+	 * limitations of third person cameras. Using this camera you can basically use any kind
+	 * of terrain on your map without caring about the cam falling below the terrain or
+	 * clipping parts of the terrain.
+	 * Note that you have to initialize \ref AArrowKeys before initializing this structure.
+	 * Thanks to Wc3C.net user Opossum for this great system!
+	 * \author Opossum
+	 * \author Baradé (adaption for World of Warcraft Reforged)
+	 * <a href="http://www.wc3c.net/showthread.php?t=104786">Wc3C.net thread</a>
+	 */
+	struct AThirdPersonCamera
+		private static constant real distanceAoaMin = -15.0
+		private static constant real distanceDistanceMin = 300.0
+		private static constant real distanceAoaMax = -65.0
+		private static constant real distanceDistanceMax = 500.0
+		private static constant real offsetAoaMin = -35.0
+		private static constant real offsetOffsetMin = 0.0
+		private static constant real offsetAoaMax = -70.0
+		private static constant real offsetOffsetMax = 150.0
+		private static constant real zOffset = 100.0
+		private static constant real timeout = 0.1
+		private static constant real terrainSampling = 32
+		private static constant real panDuration = 0.5
+		private static constant real angleAboveTerrain = 15.0
+		private static constant real defaultAoa = -20.0
+		private static constant real defaultRot = 0.0
+		private static constant real fieldOfView = 120.0
+		private static constant real farZ = 5000.0
+		private static constant real cliffDistance = 500.0
+		// key settings
+		private static constant boolean inverted = false
+		private static constant real minAoa = -65.0
+		private static constant real maxAoa = 0.0
+		private static constant real maxRot = 105.0
+		private static constant real aoaInterval = 3.0
+		private static constant real rotInterval = 7.5
+		// static construction members
+		private static boolean m_useArrowKeys
+		// static members
+		private static thistype array m_playerThirdPersonCamera[28] /// \todo bj_MAX_PLAYERS
+		private static location m_location
+		private static real m_distanceM
+		private static real m_distanceT
+		private static real m_offsetM
+		private static real m_offsetT
+		private static timer m_timer
+		// dynamic members
+		private real m_camAoa
+		private real m_camRot
+		// construction members
+		private player m_player
+		// members
+		private unit m_unit
+		private boolean m_isEnabled
+		private timer m_firstPan
+
+		// dynamic members
+
+		public method setCamAoa takes real camAoa returns nothing
+			set this.m_camAoa = camAoa
+		endmethod
+
+		public method camAoa takes nothing returns real
+			return this.m_camAoa
+		endmethod
+
+		public method setCamRot takes real camRot returns nothing
+			set this.m_camRot = camRot
+		endmethod
+
+		public method camRot takes nothing returns real
+			return this.m_camRot
+		endmethod
+
+		// construction members
+
+		public method player takes nothing returns player
+			return this.m_player
+		endmethod
+
+		// members
+
+		public method unit takes nothing returns unit
+			return this.m_unit
+		endmethod
+
+		public method isEnabled takes nothing returns boolean
+			return this.m_isEnabled
+		endmethod
+
+		//methods
+
+		public method disable takes nothing returns nothing
+			if (TimerGetRemaining(this.m_firstPan) > 0.0) then
+				call PauseTimer(this.m_firstPan)
+			endif
+			set this.m_unit = null
+			set this.m_isEnabled = false
+		endmethod
+
+		/// Functions for distance and offset. These are linear mathematical functions y = mx+t.
+		private static method interpolateDistance takes real angleOfAttack returns real
+			if (angleOfAttack <= thistype.distanceAoaMax * bj_DEGTORAD) then
+				return thistype.distanceDistanceMax
+			elseif (angleOfAttack >= thistype.distanceAoaMin * bj_DEGTORAD) then
+				return thistype.distanceDistanceMin
+			endif
+			return thistype.m_distanceM * angleOfAttack + thistype.m_distanceT
+		endmethod
+
+		private static method interpolateOffset takes real angleOfAttack returns real
+			if (angleOfAttack <= thistype.offsetAoaMax * bj_DEGTORAD) then
+				return thistype.offsetOffsetMax
+			elseif (angleOfAttack >= thistype.offsetAoaMin * bj_DEGTORAD) then
+				return thistype.offsetOffsetMin
+			endif
+			return thistype.m_offsetM * angleOfAttack + thistype.m_offsetT
+		endmethod
+
+		private static method cappedReal takes real r, real lowBound, real highBound returns real
+			if r < lowBound then
+				return lowBound
+			elseif r > highBound then
+				return highBound
+			endif
+			return r
+		endmethod
+
+		private method applyCam takes real duration returns nothing
+			local real aoa = GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK) - 2 * bj_PI
+			local real offset = thistype.interpolateOffset(aoa)
+			local real newaoa
+			local real maxd
+			local real tarz
+			local real newx
+			local real newy
+			local real newm
+			local real maxm = -1
+			local real r = thistype.terrainSampling
+			local real dx
+			local real dy
+
+			if (thistype.m_useArrowKeys) then
+				if (thistype.inverted) then
+					set this.m_camRot = thistype.cappedReal(this.m_camRot + (AArrowKeys.playerArrowKeys(this.m_player).horizontal() + AArrowKeys.playerArrowKeys(this.m_player).horizontalQuickPress()) * thistype.rotInterval, -thistype.maxRot, thistype.maxRot)
+				else
+					set this.m_camRot = thistype.cappedReal(this.m_camRot - (AArrowKeys.playerArrowKeys(this.m_player).horizontal() + AArrowKeys.playerArrowKeys(this.m_player).horizontalQuickPress()) * thistype.rotInterval, -thistype.maxRot, thistype.maxRot)
+				endif
+				call AArrowKeys.playerArrowKeys(this.m_player).setHorizontalQuickPress(0)
+				set this.m_camAoa = thistype.cappedReal(this.m_camAoa - (AArrowKeys.playerArrowKeys(this.m_player).vertical() + AArrowKeys.playerArrowKeys(this.m_player).verticalQuickPress()) * thistype.aoaInterval, thistype.minAoa, thistype.maxAoa)
+				call AArrowKeys.playerArrowKeys(this.m_player).setVerticalQuickPress(0)
+			endif
+
+			call SetCameraField(CAMERA_FIELD_ROTATION, GetUnitFacing(this.m_unit) + this.m_camRot, duration)
+			call SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, thistype.fieldOfView, duration)
+			call SetCameraField(CAMERA_FIELD_FARZ, thistype.farZ, duration)
+			call SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, thistype.interpolateDistance(aoa), duration)
+
+			call PanCameraToTimed(GetUnitX(this.m_unit) + offset * Cos(bj_DEGTORAD*GetUnitFacing(this.m_unit)), GetUnitY(this.m_unit) + offset * Sin(bj_DEGTORAD*GetUnitFacing(this.m_unit)), duration)
+
+			set newx = GetCameraTargetPositionX()
+			set newy = GetCameraTargetPositionY()
+			set maxd = thistype.cliffDistance + GetCameraField(CAMERA_FIELD_TARGET_DISTANCE)
+			set dx = -Cos(GetCameraField(CAMERA_FIELD_ROTATION))*r
+			set dy = -Sin(GetCameraField(CAMERA_FIELD_ROTATION))*r
+
+			call MoveLocation(thistype.m_location, newx, newy)
+			set tarz = GetCameraTargetPositionZ()
+			call SetCameraField(CAMERA_FIELD_ZOFFSET, GetCameraField(CAMERA_FIELD_ZOFFSET) + GetLocationZ(thistype.m_location) + thistype.zOffset + GetUnitFlyHeight(this.m_unit) - tarz, duration)
+
+			loop
+				exitwhen (r > maxd)
+				set newx = newx + dx
+				set newy = newy + dy
+				call MoveLocation(thistype.m_location, newx, newy)
+				set newm = (GetLocationZ(thistype.m_location) - tarz) / r
+				if (newm > maxm) then
+					set maxm = newm
+				endif
+				set r = r + thistype.terrainSampling
+			endloop
+			set newaoa = - Atan(maxm) * bj_RADTODEG - thistype.angleAboveTerrain
+			if (this.m_camAoa < newaoa) then
+				set newaoa = this.m_camAoa
+			endif
+			call SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, newaoa, duration)
+		endmethod
+
+		public method enable takes unit whichUnit, real firstPan returns nothing
+			if (this.isEnabled()) then
+				call this.disable()
+			endif
+			set this.m_unit = whichUnit
+			set this.m_isEnabled = true
+			call TimerStart(this.m_firstPan, firstPan, false, null)
+			if (GetLocalPlayer() == this.m_player) then
+				call StopCamera()
+				if (whichUnit != null) then
+					call this.applyCam(firstPan)
+				endif
+			endif
+		endmethod
+
+		public method pause takes nothing returns nothing
+			call PauseTimer(this.m_firstPan)
+			set this.m_isEnabled = false
+		endmethod
+
+		public method resume takes nothing returns nothing
+			call ResumeTimer(this.m_firstPan)
+			set this.m_isEnabled = true
+		endmethod
+
+		public method resetCamAoa takes nothing returns nothing
+			set this.m_camAoa = thistype.defaultAoa
+		endmethod
+
+		public method resetCamRot takes nothing returns nothing
+			set this.m_camRot = thistype.defaultRot
+		endmethod
+
+		private static method create takes player usedPlayer returns thistype
+			local thistype this = thistype.allocate()
+			// dynamic members
+			set this.m_camAoa = thistype.defaultAoa
+			set this.m_camRot = thistype.defaultRot
+			// construction members
+			set this.m_player = usedPlayer
+			// members
+			set this.m_unit = null
+			set this.m_isEnabled = false
+			set this.m_firstPan = CreateTimer()
+			return this
+		endmethod
+
+		public method onDestroy takes nothing returns nothing
+			// construction members
+			set this.m_player = null
+			// members
+			set this.m_unit = null
+			call PauseTimer(this.m_firstPan)
+			call DestroyTimer(this.m_firstPan)
+			set this.m_firstPan = null
+		endmethod
+
+		private static method timerFunctionRefresh takes nothing returns nothing
+			local player localPlayer = GetLocalPlayer()
+			local integer playerId = GetPlayerId(localPlayer)
+			if (thistype.m_playerThirdPersonCamera[playerId] != 0 and thistype.m_playerThirdPersonCamera[playerId].m_isEnabled) then
+				if (TimerGetRemaining(thistype.m_playerThirdPersonCamera[playerId].m_firstPan) <= thistype.panDuration) then
+					call thistype.m_playerThirdPersonCamera[playerId].applyCam(thistype.panDuration)
+				else
+					call thistype.m_playerThirdPersonCamera[playerId].applyCam(TimerGetRemaining(thistype.m_playerThirdPersonCamera[playerId].m_firstPan))
+				endif
+			endif
+		endmethod
+
+		public static method init takes boolean useArrowKeys returns nothing
+			// static construction members
+			set thistype.m_useArrowKeys = useArrowKeys
+			// static members
+			set thistype.m_location = Location(0,0)
+			set thistype.m_distanceM = (thistype.distanceDistanceMax-thistype.distanceDistanceMin)/((thistype.distanceAoaMax - thistype.distanceAoaMin)*bj_DEGTORAD)
+			set thistype.m_distanceT = thistype.distanceDistanceMin-thistype.distanceAoaMin*bj_DEGTORAD*thistype.m_distanceM
+			set thistype.m_offsetM = (thistype.offsetOffsetMax-thistype.offsetOffsetMin)/((thistype.offsetAoaMax-thistype.offsetAoaMin)*bj_DEGTORAD)
+			set thistype.m_offsetT = thistype.offsetOffsetMin-thistype.offsetAoaMin*bj_DEGTORAD* thistype.m_offsetM
+			set thistype.m_timer = CreateTimer()
+			call TimerStart(thistype.m_timer, thistype.timeout, true, function thistype.timerFunctionRefresh)
+		endmethod
+
+		public static method cleanUp takes nothing returns nothing
+			call PauseTimer(thistype.m_timer)
+			call RemoveLocation(thistype.m_location)
+			set thistype.m_location = null
+			call DestroyTimer(thistype.m_timer)
+			set thistype.m_timer = null
+		endmethod
+
+		public static method playerThirdPersonCamera takes player user returns thistype
+			if (thistype.m_playerThirdPersonCamera[GetPlayerId(user)] == 0) then
+				set thistype.m_playerThirdPersonCamera[GetPlayerId(user)] = thistype.create(user)
+			endif
+			return thistype.m_playerThirdPersonCamera[GetPlayerId(user)]
+		endmethod
+	endstruct
+
+endlibrary

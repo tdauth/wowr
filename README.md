@@ -493,3 +493,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Shardeth: [Net Launcher Turret](https://www.hiveworkshop.com/threads/net-launcher-turret.330923/)
 * ILH: [Nuclear Silo and Missile](https://www.hiveworkshop.com/threads/nuclear-silo-and-missile.298792/)
 * Callahan: [The Void Lord](https://www.hiveworkshop.com/threads/the-void-lord.48554/)
+* Anitarf: [Arrow Key System](http://www.wc3c.net/showthread.php?t=101271)
+* Opossum: [Third Person Camera System](http://www.wc3c.net/showthread.php?t=104786)
