@@ -4086,6 +4086,71 @@ function GetSaveCodeInfosBuildings takes player whichPlayer, string s returns st
     return result
 endfunction
 
+function GetSaveCodeShortInfosBuildings takes player whichPlayer, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local string playerName = GetPlayerName(whichPlayer)
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string singlePlayerStatus = "Multiplayer"
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string warlordStatus = "Freelancer"
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local integer i = 0
+    local integer pos = 4
+    local integer saveObject = 0
+    local integer saveObjectId = 0
+    local real x = 0.0
+    local real y = 0.0
+    local string checksumStatus = "Valid"
+    local string result = ""
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
+        set playerName = "Not yours"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set warlordStatus = "Warlord"
+    endif
+
+    set i = 0
+    loop
+        exitwhen (i == SAVE_CODE_MAX_BUILDINGS)
+        set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+        set result = result + "-"
+        if (saveObject > 0) then
+            set saveObjectId = GetSaveObjectBuildingId(saveObject)
+            set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
+            set y = ConvertAbsCoordinateY(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 2)))
+            if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                set result = result + GetObjectName(saveObjectId)
+            else
+                set result = result + GetObjectName(saveObjectId) + " (not your race!)"
+            endif
+        elseif (saveObject == 0) then
+            set result = result + "Empty Building Slot"
+        else
+            set result = result + "Invalid Building with ID "
+        endif
+        set i = i + 1
+        set pos = pos + 3
+    endloop
+
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + result
+endfunction
 
 function CreateSaveCodeItemsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer items, string itemNames, string saveCode returns nothing
     local string singleplayer = "no"
@@ -4392,6 +4457,70 @@ function GetSaveCodeInfosItems takes player whichPlayer, string s returns string
     endloop
 
     return result
+endfunction
+
+function GetSaveCodeShortInfosItems takes player whichPlayer, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local string playerName = GetPlayerName(whichPlayer)
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string singlePlayerStatus = "Multiplayer"
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string warlordStatus = "Freelancer"
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local integer i = 0
+    local integer pos = 4
+    local integer saveObject = 0
+    local integer saveObjectId = 0
+    local integer charges = 0
+    local string checksumStatus = "Valid"
+    local string result = ""
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
+        set playerName = "Not yours"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set warlordStatus = "Warlord"
+    endif
+
+    set i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+        set result = result + "-"
+        if (saveObject > 0) then
+            set saveObjectId = GetSaveObjectItemId(saveObject)
+            set charges = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+            if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                set result = result + GetObjectName(saveObjectId) + " (" + I2S(charges) + ")"
+            else
+                set result = result + GetObjectName(saveObjectId) + " (not your race!) (" + I2S(charges) + ")"
+            endif
+        elseif (saveObject == 0) then
+            set result = result + "Empty Item Slot"
+        else
+            set result = result + "Invalid Item with ID " + I2S(saveObject)
+        endif
+        set i = i + 1
+        set pos = pos + 2
+    endloop
+
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + result
 endfunction
 
 globals
@@ -4784,6 +4913,71 @@ function GetSaveCodeInfosUnits takes player whichPlayer, string s returns string
     return result
 endfunction
 
+function GetSaveCodeShortInfosUnits takes player whichPlayer, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local string playerName = GetPlayerName(whichPlayer)
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string singlePlayerStatus = "Multiplayer"
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string warlordStatus = "Freelancer"
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local integer i = 0
+    local integer pos = 4
+    local integer saveObject = 0
+    local integer saveObjectId = 0
+    local integer count = 0
+    local string checksumStatus = "Valid"
+    local string result = ""
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
+        set playerName = "Not yours"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set warlordStatus = "Warlord"
+    endif
+
+    set i = 0
+    loop
+        exitwhen (i == SAVE_CODE_MAX_UNITS)
+        set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+        set result = result + "-"
+        //call BJDebugMsg("Loading save object: " + I2S(saveObject))
+        if (saveObject > 0) then
+            set saveObjectId = GetSaveObjectUnitId(saveObject)
+            set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+            if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                set result = result + GetObjectName(saveObjectId) + " (" + I2S(count) + ")"
+            else
+                set result = result + GetObjectName(saveObjectId) + " (not your race!) (" + I2S(count) + ")"
+            endif
+        elseif (saveObject == 0) then
+            set result = result + "Empty Unit Slot"
+        else
+            set result = result + "Invalid Item with ID " + I2S(saveObject)
+        endif
+        set i = i + 1
+        set pos = pos + 2
+    endloop
+
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + result
+endfunction
+
 globals
     constant integer SAVE_CODE_MAX_RESEARCHES = 10
 endglobals
@@ -5034,6 +5228,70 @@ function GetSaveCodeInfosResearches takes player whichPlayer, string s returns s
     endloop
 
     return result
+endfunction
+
+function GetSaveCodeShortInfosResearches takes player whichPlayer, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local string playerName = GetPlayerName(whichPlayer)
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string singlePlayerStatus = "Multiplayer"
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string warlordStatus = "Freelancer"
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local integer i = 0
+    local integer pos = 4
+    local integer saveObject = 0
+    local integer saveObjectId = 0
+    local integer level = 0
+    local string checksumStatus = "Valid"
+    local string result = ""
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    if (playerNameHash != CompressedAbsStringHash(GetPlayerName(whichPlayer))) then
+        set playerName = "Not yours"
+    endif
+
+    if (isSinglePlayer) then
+        set singlePlayerStatus = "Singleplayer"
+    endif
+
+    if (isWarlord) then
+        set warlordStatus = "Warlord"
+    endif
+
+    set i = 0
+    loop
+        exitwhen (i >= SAVE_CODE_MAX_RESEARCHES)
+        set saveObject = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos)
+        set result = result + "-"
+        if (saveObject > 0) then
+            set saveObjectId = GetSaveObjectResearchId(saveObject)
+            set level = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
+            if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
+                set result = result + GetObjectName(saveObjectId) + " (" + I2S(level) + ")"
+            else
+                set result = result + GetObjectName(saveObjectId) + " (not your race!) (" + I2S(level) + ")"
+            endif
+        elseif (saveObject == 0) then
+            set result = result + "Empty Research Slot"
+        else
+            set result = result + "Invalid Research with ID " + I2S(saveObject)
+        endif
+        set i = i + 1
+        set pos = pos + 2
+    endloop
+
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + result
 endfunction
 
 // Clan System
@@ -7320,7 +7578,11 @@ endfunction
 
 globals
     constant integer PRESTORED_SAVECODE_TYPE_HEROES = 0
-    constant integer PRESTORED_SAVECODE_TYPE_CLANS = 1
+    constant integer PRESTORED_SAVECODE_TYPE_ITEMS = 1
+    constant integer PRESTORED_SAVECODE_TYPE_UNITS = 2
+    constant integer PRESTORED_SAVECODE_TYPE_BUILDINGS = 3
+    constant integer PRESTORED_SAVECODE_TYPE_RESEARCHES = 4
+    constant integer PRESTORED_SAVECODE_TYPE_CLANS = 5
     
     constant integer PRESTORED_SAVECODE_MAX_CLAN_MEMBERS = 20
 
@@ -7419,6 +7681,23 @@ function AddPrestoredSaveCode takes string playerName, string saveCode returns i
     return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_HEROES, playerName, saveCode)
 endfunction
 
+function AddPrestoredSaveCodeItems takes string playerName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_ITEMS, playerName, saveCode)
+endfunction
+
+
+function AddPrestoredSaveCodeUnits takes string playerName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_UNITS, playerName, saveCode)
+endfunction
+
+function AddPrestoredSaveCodeBuildings takes string playerName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_BUILDINGS, playerName, saveCode)
+endfunction
+
+function AddPrestoredSaveCodeResearches takes string playerName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_RESEARCHES, playerName, saveCode)
+endfunction
+
 function AddPrestoredSaveCodeClan takes string clanName, boolean isSinglePlayer, string saveCode returns integer
     local integer result = AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_CLANS, clanName, saveCode)
     set PrestoredSaveCodeMultiplayer[result] = not isSinglePlayer
@@ -7473,7 +7752,8 @@ function GetPrestoredSaveCodeIndices takes string playerName returns string
     return result
 endfunction
 
-function GetPrestoredSaveCodeInfos takes string playerName returns string
+function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
+    local string playerName = GetPlayerName(whichPlayer)
     local string result = ""
     local integer counter = 0
     local integer i = 0
@@ -7483,7 +7763,17 @@ function GetPrestoredSaveCodeInfos takes string playerName returns string
             if (counter > 0) then
                 set result = result + "\n"
             endif
-            set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
+            if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_HEROES) then
+                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
+            elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_ITEMS) then
+                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosItems(whichPlayer, PrestoredSaveCode[i])
+            elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_UNITS) then
+                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosUnits(whichPlayer, PrestoredSaveCode[i])
+            elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_BUILDINGS) then
+                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosBuildings(whichPlayer, PrestoredSaveCode[i])
+            elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_RESEARCHES) then
+                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
+            endif
             set counter = counter + 1
         endif
         set i = i + 1
@@ -10324,21 +10614,18 @@ function EnchanterAddItemBonusHeroStatsAndDefense takes item whichItem, integer 
 endfunction
 
 function EnchanterRemoveItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
-    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1) - bonus)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1) - bonus)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1) - bonus)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1) - bonus)
+    call EnchanterAddItemBonusHeroStatsAndDefense(whichItem, abilityId, -bonus)
 endfunction
 
 function EnchanterAddItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
     local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) + bonus)
+    //call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) + bonus)
+    // orb ability
+    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_BONUS_IDAM, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_BONUS_IDAM, 1) + bonus)
 endfunction
 
 function EnchanterRemoveItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
-    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) - bonus)
+    call EnchanterAddItemBonusDamage(whichItem, abilityId, -bonus)
 endfunction
 
 function EnchanterGetHeroStatsAndDefenseBonus takes unit hero returns integer
