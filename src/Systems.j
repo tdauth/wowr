@@ -59,7 +59,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h, -help, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp X, -loadclanp X, -save, -savec, -savegui, -load X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels"
+    return "-h, -help, -sel, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp X, -loadclanp X, -save, -savec, -savegui, -load X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
 endfunction
 
 globals
@@ -2291,17 +2291,147 @@ function CompressedAbsStringHash takes string whichString returns integer
     return absStringHash
 endfunction
 
-function GetHighestHeroLevel takes player whichPlayer returns integer
+function GetHeroLevelMaxXP takes integer heroLevel returns integer
+    local integer result = 0 // level 1 XP
+    local integer i = 2
+    loop
+        exitwhen (i > heroLevel + 1)
+        set result = result + i * 100
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetHeroLevelByXP takes integer xp returns integer
+    local integer heroLevel = 1
+    local integer i = 2
+    loop
+        set xp = xp - i * 100
+        exitwhen (xp < 0)
+        set heroLevel = heroLevel + 1
+        set i = i + 1
+    endloop
+    return heroLevel
+endfunction
+
+function GetHeroLevel1 takes player whichPlayer returns integer
     local integer playerId = GetConvertedPlayerId(whichPlayer)
 
-    if (udg_Held[playerId] != null and (udg_Held2[playerId] != null or GetHeroLevel(udg_Held2[playerId]) < GetHeroLevel(udg_Held[playerId])) and (udg_Held3[playerId] != null or GetHeroLevel(udg_Held3[playerId]) < GetHeroLevel(udg_Held[playerId]))) then
+    if (udg_Held[playerId] != null) then
         return GetHeroLevel(udg_Held[playerId])
     endif
 
-    // TODO Other heroes
-    // TODO Check XP on repick instead of level
+    return GetHeroLevelByXP(udg_CharacterStartXP[playerId])
+endfunction
 
-    return 0
+function GetHeroLevel2 takes player whichPlayer returns integer
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+
+    if (udg_Held2[playerId] != null) then
+        return GetHeroLevel(udg_Held2[playerId])
+    endif
+
+    return GetHeroLevelByXP(udg_Held2XP[playerId])
+endfunction
+
+function GetHeroLevel3 takes player whichPlayer returns integer
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+
+    if (udg_Held3[playerId] != null) then
+        return GetHeroLevel(udg_Held3[playerId])
+    endif
+
+    return GetHeroLevelByXP(udg_Held3XP[playerId])
+endfunction
+
+function GetHighestHeroLevel takes player whichPlayer returns integer
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+    local integer heroLevel1 = GetHeroLevel1(whichPlayer)
+    local integer heroLevel2 = GetHeroLevel2(whichPlayer)
+    local integer heroLevel3 = GetHeroLevel3(whichPlayer)
+
+    if (heroLevel1 > heroLevel2 and heroLevel1 > heroLevel3) then
+        return heroLevel1
+    elseif (heroLevel2 > heroLevel1 and heroLevel2 > heroLevel3) then
+        return heroLevel2
+    endif
+
+    return heroLevel3
+endfunction
+
+function GetHighestHeroLevelFromAllPlayingUsers takes nothing returns integer
+    local player whichPlayer = null
+    local integer heroLevel = 0
+    local integer result = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set whichPlayer = Player(i)
+        if (GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            set heroLevel = GetHighestHeroLevel(whichPlayer)
+            if (heroLevel > result) then
+                set result = heroLevel
+            endif
+        endif
+        set whichPlayer = null
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetLowestHeroLevel takes player whichPlayer returns integer
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+    local integer heroLevel1 = GetHeroLevel1(whichPlayer)
+    local integer heroLevel2 = GetHeroLevel2(whichPlayer)
+    local integer heroLevel3 = GetHeroLevel3(whichPlayer)
+
+    if (heroLevel1 < heroLevel2 and heroLevel1 < heroLevel3) then
+        return heroLevel1
+    elseif (heroLevel2 < heroLevel1 and heroLevel2 < heroLevel3) then
+        return heroLevel2
+    endif
+
+    return heroLevel3
+endfunction
+
+function GetLowestHeroLevelFromAllPlayingUsers takes nothing returns integer
+    local player whichPlayer = null
+    local integer heroLevel = 0
+    local integer result = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set whichPlayer = Player(i)
+        if (GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            set heroLevel = GetLowestHeroLevel(whichPlayer)
+            if (heroLevel < result) then
+                set result = heroLevel
+            endif
+        endif
+        set whichPlayer = null
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetLowestHeroLevel1FromAllPlayingUsers takes nothing returns integer
+    local player whichPlayer = null
+    local integer heroLevel = 0
+    local integer result = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set whichPlayer = Player(i)
+        if (GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            set heroLevel = GetHeroLevel1(whichPlayer)
+            if (heroLevel == 0 or heroLevel < result) then
+                set result = heroLevel
+            endif
+        endif
+        set whichPlayer = null
+        set i = i + 1
+    endloop
+    return result
 endfunction
 
 globals
@@ -2650,29 +2780,6 @@ function GetSaveCodeDemigodValue takes player whichPlayer returns integer
     endif
 
     return 0
-endfunction
-
-function GetHeroLevelMaxXP takes integer heroLevel returns integer
-    local integer result = 0 // level 1 XP
-    local integer i = 2
-    loop
-        exitwhen (i > heroLevel + 1)
-        set result = result + i * 100
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
-function GetHeroLevelByXP takes integer xp returns integer
-    local integer heroLevel = 1
-    local integer i = 2
-    loop
-        set xp = xp - i * 100
-        exitwhen (xp < 0)
-        set heroLevel = heroLevel + 1
-        set i = i + 1
-    endloop
-    return heroLevel
 endfunction
 
 /**
@@ -9394,9 +9501,12 @@ endfunction
 
 function TurretSystemSelectionAddTurrets takes player whichPlayer, unit vehicle returns nothing
     local group turrets = TurretSystemGetTurrets(vehicle)
+    call SyncSelections() // avoid desyncs
     if (GetLocalPlayer() == GetTriggerPlayer()) then
+        // Use only local code (no net traffic) within this block to avoid desyncs.
         call ForGroup(turrets, function SelectGroupBJEnum)
     endif
+    call SyncSelections() // avoid desyncs
     call GroupClear(turrets)
     call DestroyGroup(turrets)
     set turrets = null
