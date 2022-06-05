@@ -3125,7 +3125,7 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     endif
 
     // for savecodes from older versions of the map
-    return ApplySaveCodeOld(whichPlayer, s)
+    return ApplySaveCodeOld2(whichPlayer, s)
 endfunction
 
 function GetSaveCodeErrors takes player whichPlayer, string s returns string
