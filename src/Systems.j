@@ -59,7 +59,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h, -help, -sel, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp X, -loadclanp X, -save, -savec, -savegui, -load X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
+    return "-h, -help, -sel, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
 endfunction
 
 globals
@@ -2031,6 +2031,7 @@ function ConvertDecimalDigitToSaveCodeDigit takes integer digit returns string
     return SubString(SAVE_CODE_DIGITS, digit, digit + 1)
 endfunction
 
+// TODO Can be slow for big numbers. Maybe move into a separate trigger with a new OpLimit.
 function ConvertDecimalNumberToSaveCodeSegment takes integer number returns string
     local string result = ""
     local integer start = number
@@ -2424,7 +2425,7 @@ function GetLowestHeroLevel1FromAllPlayingUsers takes nothing returns integer
         set whichPlayer = Player(i)
         if (GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING) then
             set heroLevel = GetHeroLevel1(whichPlayer)
-            if (heroLevel == 0 or heroLevel < result) then
+            if (result == 0 or heroLevel < result) then
                 set result = heroLevel
             endif
         endif
@@ -3419,9 +3420,9 @@ function GetSaveCodeShortInfos takes string playerName, string s returns string
     local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
     local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
     local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string singlePlayerStatus = "Multiplayer"
+    local string singlePlayerStatus = "M"
     local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string warlordStatus = "Freelancer"
+    local string warlordStatus = "F"
     local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
     local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
     local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
@@ -3457,11 +3458,11 @@ function GetSaveCodeShortInfos takes string playerName, string s returns string
     endif
 
     if (isSinglePlayer) then
-        set singlePlayerStatus = "Singleplayer"
+        set singlePlayerStatus = "S"
     endif
 
     if (isWarlord) then
-        set warlordStatus = "Warlord"
+        set warlordStatus = "W"
     endif
 
     return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-level1_" + I2S(GetHeroLevelByXP(xp)) + "-level2_" + I2S(GetHeroLevelByXP(xp2)) + "-level3_" + I2S(GetHeroLevelByXP(xp3)) + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-evo_" + I2S(evolutionLevel)
@@ -4095,9 +4096,9 @@ function GetSaveCodeShortInfosBuildings takes player whichPlayer, string s retur
     local string gameTypeName = GetGameTypeName(gameType)
     local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
     local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string singlePlayerStatus = "Multiplayer"
+    local string singlePlayerStatus = "M"
     local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string warlordStatus = "Freelancer"
+    local string warlordStatus = "F"
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4119,11 +4120,11 @@ function GetSaveCodeShortInfosBuildings takes player whichPlayer, string s retur
     endif
 
     if (isSinglePlayer) then
-        set singlePlayerStatus = "Singleplayer"
+        set singlePlayerStatus = "S"
     endif
 
     if (isWarlord) then
-        set warlordStatus = "Warlord"
+        set warlordStatus = "W"
     endif
 
     set i = 0
@@ -4468,9 +4469,9 @@ function GetSaveCodeShortInfosItems takes player whichPlayer, string s returns s
     local string gameTypeName = GetGameTypeName(gameType)
     local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
     local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string singlePlayerStatus = "Multiplayer"
+    local string singlePlayerStatus = "M"
     local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string warlordStatus = "Freelancer"
+    local string warlordStatus = "F"
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4491,11 +4492,11 @@ function GetSaveCodeShortInfosItems takes player whichPlayer, string s returns s
     endif
 
     if (isSinglePlayer) then
-        set singlePlayerStatus = "Singleplayer"
+        set singlePlayerStatus = "S"
     endif
 
     if (isWarlord) then
-        set warlordStatus = "Warlord"
+        set warlordStatus = "W"
     endif
 
     set i = 0
@@ -4922,9 +4923,9 @@ function GetSaveCodeShortInfosUnits takes player whichPlayer, string s returns s
     local string gameTypeName = GetGameTypeName(gameType)
     local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
     local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string singlePlayerStatus = "Multiplayer"
+    local string singlePlayerStatus = "M"
     local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string warlordStatus = "Freelancer"
+    local string warlordStatus = "F"
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -4945,11 +4946,11 @@ function GetSaveCodeShortInfosUnits takes player whichPlayer, string s returns s
     endif
 
     if (isSinglePlayer) then
-        set singlePlayerStatus = "Singleplayer"
+        set singlePlayerStatus = "S"
     endif
 
     if (isWarlord) then
-        set warlordStatus = "Warlord"
+        set warlordStatus = "W"
     endif
 
     set i = 0
@@ -5239,9 +5240,9 @@ function GetSaveCodeShortInfosResearches takes player whichPlayer, string s retu
     local string gameTypeName = GetGameTypeName(gameType)
     local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
     local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string singlePlayerStatus = "Multiplayer"
+    local string singlePlayerStatus = "M"
     local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local string warlordStatus = "Freelancer"
+    local string warlordStatus = "F"
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -5262,11 +5263,11 @@ function GetSaveCodeShortInfosResearches takes player whichPlayer, string s retu
     endif
 
     if (isSinglePlayer) then
-        set singlePlayerStatus = "Singleplayer"
+        set singlePlayerStatus = "S"
     endif
 
     if (isWarlord) then
-        set warlordStatus = "Warlord"
+        set warlordStatus = "W"
     endif
 
     set i = 0
@@ -5466,7 +5467,7 @@ function AppendClanSaveCodeMember takes string members, string playerName, integ
     return members
 endfunction
 
-function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, integer icon, integer clanSoundIndex, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
+function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string clanName, integer icon, integer clanSoundIndex, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string leader = ""
@@ -5524,9 +5525,9 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call PreloadGenClear()
     call PreloadGenStart()
 
-    set content = content + AppendFileContent("Code: -loadc " + saveCode + " " + name)
+    set content = content + AppendFileContent("Code: -loadc " + saveCode + " " + clanName)
     set content = content + AppendFileContent("Singleplayer: " + singleplayer)
-    set content = content + AppendFileContent("Name: " + name)
+    set content = content + AppendFileContent("Name: " + clanName)
     set content = content + AppendFileContent("Icon: " + GetObjectName(icon))
     set content = content + AppendFileContent("Sound: " + GetClanSoundName(clanSoundIndex))
     set content = content + AppendFileContent("Leader: " + leader)
@@ -5553,10 +5554,10 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string name, i
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + name + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + clanName + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
 endfunction
 
-function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer icon, sound whichSound, integer gold, integer lumber, boolean hasAIPlayer, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string clanName, integer icon, sound whichSound, integer gold, integer lumber, boolean hasAIPlayer, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
     local string result = ""
     local integer clanSoundIndex = GetClanSoundIndex(whichSound)
 
@@ -5570,7 +5571,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
     else
         set result = result + ConvertDecimalNumberToSaveCodeSegment(1) // 0
     endif
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(name)) // 1
+    set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(clanName)) // 1
     set result = result + ConvertDecimalNumberToSaveCodeSegment(icon) // 2
     set result = result + ConvertDecimalNumberToSaveCodeSegment(clanSoundIndex) // 3
     set result = result + ConvertDecimalNumberToSaveCodeSegment(gold) // 4
@@ -5603,10 +5604,10 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string name, integer ic
 
     if (SAVE_CODE_OBFUSCATE) then
         //call BJDebugMsg("Non-obfuscated save code: " + result)
-        set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(name))
+        set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(clanName))
     endif
 
-    call CreateSaveCodeClanTextFile(isSinglePlayer, name, icon, clanSoundIndex, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
+    call CreateSaveCodeClanTextFile(isSinglePlayer, clanName, icon, clanSoundIndex, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
 
     call AddGeneratedSaveCode(result)
 
@@ -6115,7 +6116,43 @@ function GetSaveCodeHumanUpgrades takes player whichPlayer, string playerName, b
 endfunction
 
 function GetSaveCodeTheElvenClan takes boolean singlePlayer, string playerName returns string
-    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", 'I04S', clanSound[1], 100000, 100000, true, 100, 100, "Barade#2569", udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "", 0, "", 0)
+    // there seems to be an issue if we pass these values directly as literals
+    local integer clanIcon = 0 // TODO Leads to stopping the code execution 'I04S'
+    local integer gold = 10000
+    local integer lumber = 10000
+    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 100, 100, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "", 0, "", 0)
+endfunction
+
+globals
+    player generateSaveCodePlayer
+    string generateSaveCodePlayerName
+    boolean generateSaveCodeSinglePlayer
+    boolean generateSaveCodeWarlord
+    integer generateSaveCodeXpRate
+
+    boolean generateSaveCodeClanSinglePlayer
+    string generateSaveCodeClanPlayerName
+endglobals
+
+function NewOpLimit takes code callback returns nothing
+    call ForForce(bj_FORCE_PLAYER[0], callback)
+endfunction
+
+function GenerateSaveCode takes player whichPlayer, string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns nothing
+    call GetSaveCodeStrong(playerName, singlePlayer, warlord, xpRate)
+    call GetSaveCodeNormal(playerName, singlePlayer, warlord, xpRate)
+    call GetSaveCodeBase(whichPlayer, playerName, singlePlayer, warlord)
+    call GetSaveCodeDragonUnits(whichPlayer, playerName, singlePlayer, warlord)
+    call GetSaveCodeGoodItems(playerName, singlePlayer, warlord)
+    call GetSaveCodeHumanUpgrades(whichPlayer, playerName, singlePlayer, warlord)
+endfunction
+
+function GenerateSaveCodeNewOpLimit takes nothing returns nothing
+    call GenerateSaveCode(generateSaveCodePlayer, generateSaveCodePlayerName, generateSaveCodeSinglePlayer, generateSaveCodeWarlord, generateSaveCodeXpRate)
+endfunction
+
+function GetSaveCodeTheElvenClanNewOpLimit takes nothing returns nothing
+    call GetSaveCodeTheElvenClan(generateSaveCodeClanSinglePlayer, generateSaveCodeClanPlayerName)
 endfunction
 
 function GenerateSaveCodes takes player whichPlayer returns nothing
@@ -6141,21 +6178,39 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
         set j = 0
         loop
             exitwhen (j >= singlePlayerSize)
-            call GetSaveCodeTheElvenClan(singlePlayer[j], playerName[i])
             set k = 0
             loop
                 exitwhen (k >= warlordSize)
                 if (not warlord[k]) then
                     set xpRate = 130
+                else
+                    set xpRate = 100
                 endif
-                call GetSaveCodeStrong(playerName[i], singlePlayer[j], warlord[k], xpRate)
-                call GetSaveCodeNormal(playerName[i], singlePlayer[j], warlord[k], xpRate)
-                call GetSaveCodeBase(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
-                call GetSaveCodeDragonUnits(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
-                call GetSaveCodeGoodItems(playerName[i], singlePlayer[j], warlord[k])
-                call GetSaveCodeHumanUpgrades(whichPlayer, playerName[i], singlePlayer[j], warlord[k])
+                call BJDebugMsg("Generating savecodes for player name " + playerName[i])
+                if (singlePlayer[j]) then
+                    call BJDebugMsg("Singleplayer")
+                else
+                    call BJDebugMsg("Multiplayer")
+                endif
+                if (warlord[k]) then
+                    call BJDebugMsg("Warlord")
+                else
+                    call BJDebugMsg("Freelancer")
+                endif
+
+                set generateSaveCodePlayer = whichPlayer
+                set generateSaveCodePlayerName = playerName[i]
+                set generateSaveCodeSinglePlayer = singlePlayer[j]
+                set generateSaveCodeWarlord = warlord[k]
+                set generateSaveCodeXpRate = xpRate
+                call NewOpLimit(function GenerateSaveCodeNewOpLimit)
                 set k = k  + 1
             endloop
+            call BJDebugMsg("Clan Save Code")
+            set generateSaveCodeClanSinglePlayer = singlePlayer[j]
+            set generateSaveCodeClanPlayerName = playerName[i]
+            call NewOpLimit(function GetSaveCodeTheElvenClanNewOpLimit)
+            call BJDebugMsg("After Generating Clan Save Code")
             set j = j + 1
         endloop
         set i = i + 1
@@ -7764,15 +7819,15 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
                 set result = result + "\n"
             endif
             if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_HEROES) then
-                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
+                set result = result  + "-loadp " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_ITEMS) then
-                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosItems(whichPlayer, PrestoredSaveCode[i])
+                set result = result  + "-loadpi " + I2S(i) + ": " + GetSaveCodeShortInfosItems(whichPlayer, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_UNITS) then
-                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosUnits(whichPlayer, PrestoredSaveCode[i])
+                set result = result  + "-loadpu " + I2S(i) + ": " + GetSaveCodeShortInfosUnits(whichPlayer, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_BUILDINGS) then
-                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosBuildings(whichPlayer, PrestoredSaveCode[i])
+                set result = result  + "-loadpb " + I2S(i) + ": " + GetSaveCodeShortInfosBuildings(whichPlayer, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_RESEARCHES) then
-                set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
+                set result = result  + "-loadpr " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
             endif
             set counter = counter + 1
         endif
@@ -10410,7 +10465,10 @@ function TurretSystemTriggerActionIssueOrder takes nothing returns nothing
                 set vehicleTypeIndex = TurretSystemGetIndex(GetUnitTypeId(GetOrderedUnit()))
 
                 if (vehicleTypeIndex == -1 or not TurretSystemVehicleCanAttack[vehicleTypeIndex]) then
+                    call BJDebugMsg("Resume previous order for " + GetUnitName(GetOrderedUnit()) + " with vehicle type index "  + I2S(vehicleTypeIndex))
                     call TurretSystemRestorePreviousOrder(GetOrderedUnit())
+                else
+                    call BJDebugMsg("Do not previous order for " + GetUnitName(GetOrderedUnit()) + " with vehicle type index "  + I2S(vehicleTypeIndex))
                 endif
             // store this order as previous order
             else
