@@ -6120,7 +6120,7 @@ function GetSaveCodeTheElvenClan takes boolean singlePlayer, string playerName r
     local integer clanIcon = 0 // TODO Leads to stopping the code execution 'I04S'
     local integer gold = 10000
     local integer lumber = 10000
-    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 100, 100, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "", 0, "", 0)
+    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 10, 10, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "", 0, "", 0)
 endfunction
 
 globals
@@ -9679,8 +9679,9 @@ endfunction
 // target to none.
 //
 // Turrets can be configured to be selectable and destructable. Selecting the turrets of a vehicle
-// is done by triple clicking the vehicle. Selecting the turrets helps to see their actual weapon
-// type (range, damage type etc.) and to prioritize different targets for each turret of a vehicle.
+// is must be triggered manually, for example with some custom ability. Selecting the turrets helps
+// to see their actual weapon type (range, damage type etc.) and to prioritize different targets for
+// each turret of a vehicle.
 //
 // TODOS:
 // - Fix saving and restoring all orders for vehicles.
@@ -9691,14 +9692,11 @@ endfunction
 globals
     // user-specified configuration
     constant real TURRET_SYSTEM_UPDATE_INTERVAL = 0.01
-    constant boolean TURRET_SYSTEM_SELECT_TURRETS_BY_TRIPLE_CLICK = true
-    constant real TURRET_SYSTEM_DOUBLE_CLICK_TIMEOUT = 4.0
 
     // vehicle keys
     constant integer TURRET_SYSTEM_KEY_TURRETS = 0
     constant integer TURRET_SYSTEM_KEY_TARGET = 1
     constant integer TURRET_SYSTEM_KEY_HAS_SELECTABLE_TURRET = 7
-    constant integer TURRET_SYSTEM_KEY_DESELECTION_TIMER = 8
 
     // turret keys
     constant integer TURRET_SYSTEM_KEY_VEHICLE = 0
@@ -9732,10 +9730,6 @@ globals
     string array TurretSystemVehicleFacingBone
     integer TurretSystemVehicleCounter = 0
 
-    group array TurretSystemPlayerSelection
-    group array TurretSystemPlayerSelection2
-    group array TurretSystemPlayerSelection3
-
     // callbacks
     trigger array TurretSystemCallbackAutoTargetTriggers
     integer TurretSystemCallbackAutoTargetTriggersCounter = 0
@@ -9753,8 +9747,6 @@ globals
     trigger TurretSystemAttackTrigger = CreateTrigger()
     trigger TurretSystemDeathTrigger = CreateTrigger()
     trigger TurretSystemReviveTrigger = CreateTrigger()
-    trigger TurretSystemSelectionTrigger = CreateTrigger()
-    trigger TurretSystemDeselectionTrigger = CreateTrigger()
     trigger TurretSystemOrderTrigger = CreateTrigger()
 endglobals
 
@@ -9859,9 +9851,11 @@ endfunction
 
 function TurretSystemSelectionRemoveTurrets takes player whichPlayer, unit vehicle returns nothing
     local group turrets = TurretSystemGetTurrets(vehicle)
+    call SyncSelections() // avoid desyncs
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         call ForGroup(turrets, function TurretSystemUnselectGroupEnum)
     endif
+    call SyncSelections() // avoid desyncs
     call GroupClear(turrets)
     call DestroyGroup(turrets)
     set turrets = null
@@ -9876,29 +9870,11 @@ function TurretSystemFlushVehicle takes unit vehicle returns nothing
         call GroupClear(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
         call DestroyGroup(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
     endif
-    if (TURRET_SYSTEM_SELECT_TURRETS_BY_TRIPLE_CLICK and HaveSavedHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_DESELECTION_TIMER)) then
-        call PauseTimer(LoadTimerHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_DESELECTION_TIMER))
-        call DestroyTimer(LoadTimerHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_DESELECTION_TIMER))
-    endif
     call FlushChildHashtable(TurretSystemHashTable, GetHandleId(vehicle))
 endfunction
 
 function TurretSystemFlushTurret takes unit turret returns nothing
     call FlushChildHashtable(TurretSystemHashTable, GetHandleId(turret))
-endfunction
-
-function TurretSystemRemoveVehicleFromAllPlayerSelections takes unit vehicle returns nothing
-    local integer i
-    if (TurretSystemVehicleHasSelectableTurret(vehicle)) then
-        set i = 0
-        loop
-            exitwhen (i == bj_MAX_PLAYERS)
-            call GroupRemoveUnit(TurretSystemPlayerSelection[i], vehicle)
-            call GroupRemoveUnit(TurretSystemPlayerSelection2[i], vehicle)
-            call GroupRemoveUnit(TurretSystemPlayerSelection3[i], vehicle)
-            set i = i + 1
-        endloop
-    endif
 endfunction
 
 function TurretSystemIsTurretEnabled takes unit turret returns boolean
@@ -10146,9 +10122,6 @@ function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, rea
 
     if (selectable) then
         call SaveBoolean(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_HAS_SELECTABLE_TURRET, true)
-        if (TURRET_SYSTEM_SELECT_TURRETS_BY_TRIPLE_CLICK and not HaveSavedHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_DESELECTION_TIMER)) then
-            call SaveTimerHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_DESELECTION_TIMER, CreateTimer())
-        endif
     endif
 
     if (TurretSystemUpdatedTimerPaused) then
@@ -10206,7 +10179,6 @@ function TurretSystemRemoveVehicle takes unit vehicle returns boolean
         call TurretSystemRemoveAllTurrets(vehicle)
         call TurretSystemFlushVehicle(vehicle)
         call GroupRemoveUnit(TurretSystemAllVehicles, vehicle)
-        call TurretSystemRemoveVehicleFromAllPlayerSelections(vehicle)
         return true
     endif
 
@@ -10288,63 +10260,6 @@ function TurretSystemTriggerActionRevive takes nothing returns nothing
     call GroupClear(turrets)
     call DestroyGroup(turrets)
     set turrets = null
-endfunction
-
-function TurretSystemTriggerConditionIsVehicleWithSelectableTurret takes nothing returns boolean
-    return TURRET_SYSTEM_SELECT_TURRETS_BY_TRIPLE_CLICK and TurretSystemIsVehicle(GetTriggerUnit()) and TurretSystemVehicleHasSelectableTurret(GetTriggerUnit())
-endfunction
-
-function TurretSystemStoreSelections takes player whichPlayer, unit vehicle returns nothing
-    local real deselectionTime = TimerGetElapsed(LoadTimerHandle(TurretSystemHashTable, GetHandleId(GetTriggerUnit()), TURRET_SYSTEM_KEY_DESELECTION_TIMER))
-    local integer playerId = GetPlayerId(whichPlayer)
-
-    if (IsUnitInGroup(vehicle, TurretSystemPlayerSelection2[playerId])) then
-        //call BJDebugMsg("Moving vehicle to selection group 1: " + GetUnitName(vehicle))
-        if (deselectionTime < TURRET_SYSTEM_DOUBLE_CLICK_TIMEOUT) then
-            call GroupAddUnit(TurretSystemPlayerSelection[playerId], vehicle)
-        endif
-        call GroupRemoveUnit(TurretSystemPlayerSelection2[playerId], vehicle)
-    endif
-
-    if (IsUnitInGroup(vehicle, TurretSystemPlayerSelection3[playerId])) then
-        //call BJDebugMsg("Moving vehicle to selection group 2: " + GetUnitName(vehicle))
-        if (deselectionTime < TURRET_SYSTEM_DOUBLE_CLICK_TIMEOUT) then
-            call GroupAddUnit(TurretSystemPlayerSelection2[playerId], vehicle)
-        else
-            //call BJDebugMsg("Seems that the selection time has expired for: " + GetUnitName(vehicle))
-        endif
-        call GroupRemoveUnit(TurretSystemPlayerSelection3[playerId], vehicle)
-    endif
-
-    call SyncSelections()
-    if (IsUnitSelected(vehicle, whichPlayer)) then
-        //call BJDebugMsg("Moving vehicle to selection group 3: " + GetUnitName(vehicle))
-        call GroupAddUnit(TurretSystemPlayerSelection3[playerId], vehicle)
-    endif
-
-    call TimerStart(LoadTimerHandle(TurretSystemHashTable, GetHandleId(GetTriggerUnit()), TURRET_SYSTEM_KEY_DESELECTION_TIMER), TURRET_SYSTEM_DOUBLE_CLICK_TIMEOUT, false, null)
-endfunction
-
-function TurretSystemTriggerActionSelectVehicle takes nothing returns nothing
-    //call BJDebugMsg("Selected vehicle: " + GetUnitName(GetTriggerUnit()))
-
-    call TurretSystemStoreSelections(GetTriggerPlayer(), GetTriggerUnit())
-
-    if (IsUnitInGroup(GetTriggerUnit(), TurretSystemPlayerSelection[GetPlayerId(GetTriggerPlayer())]) and IsUnitInGroup(GetTriggerUnit(), TurretSystemPlayerSelection2[GetPlayerId(GetTriggerPlayer())]) and IsUnitInGroup(GetTriggerUnit(), TurretSystemPlayerSelection3[GetPlayerId(GetTriggerPlayer())])) then
-        //call BJDebugMsg("Player selected with tipple click vehicle " + GetUnitName(GetTriggerUnit()))
-        call TurretSystemSelectionAddTurrets(GetTriggerPlayer(), GetTriggerUnit())
-    // unselect all turrets
-    else
-        //call BJDebugMsg("Player selected vehicle without tripple click " + GetUnitName(GetTriggerUnit()))
-        //call TurretSystemSelectionRemoveTurrets(GetTriggerPlayer(), GetTriggerUnit())
-    endif
-endfunction
-
-
-function TurretSystemTriggerActionDeselectVehicle takes nothing returns nothing
-    call TimerStart(LoadTimerHandle(TurretSystemHashTable, GetHandleId(GetTriggerUnit()), TURRET_SYSTEM_KEY_DESELECTION_TIMER), TURRET_SYSTEM_DOUBLE_CLICK_TIMEOUT, false, null)
-
-    //call BJDebugMsg("Player deselected vehicle " + GetUnitName(GetTriggerUnit()))
 endfunction
 
 function TurretSystemSaveOrderUnit takes unit vehicle, unit target returns nothing
@@ -10465,10 +10380,10 @@ function TurretSystemTriggerActionIssueOrder takes nothing returns nothing
                 set vehicleTypeIndex = TurretSystemGetIndex(GetUnitTypeId(GetOrderedUnit()))
 
                 if (vehicleTypeIndex == -1 or not TurretSystemVehicleCanAttack[vehicleTypeIndex]) then
-                    call BJDebugMsg("Resume previous order for " + GetUnitName(GetOrderedUnit()) + " with vehicle type index "  + I2S(vehicleTypeIndex))
+                    //call BJDebugMsg("Resume previous order for " + GetUnitName(GetOrderedUnit()) + " with vehicle type index "  + I2S(vehicleTypeIndex))
                     call TurretSystemRestorePreviousOrder(GetOrderedUnit())
                 else
-                    call BJDebugMsg("Do not previous order for " + GetUnitName(GetOrderedUnit()) + " with vehicle type index "  + I2S(vehicleTypeIndex))
+                    //call BJDebugMsg("Do not previous order for " + GetUnitName(GetOrderedUnit()) + " with vehicle type index "  + I2S(vehicleTypeIndex))
                 endif
             // store this order as previous order
             else
@@ -10504,15 +10419,6 @@ function TurretSystemTriggerActionIssueOrder takes nothing returns nothing
 endfunction
 
 function TurretSystemInit takes nothing returns nothing
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_PLAYERS)
-        set TurretSystemPlayerSelection[i] = CreateGroup()
-        set TurretSystemPlayerSelection2[i] = CreateGroup()
-        set TurretSystemPlayerSelection3[i] = CreateGroup()
-        set i = i + 1
-    endloop
-
     call TriggerRegisterAnyUnitEventBJ(TurretSystemAttackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(TurretSystemAttackTrigger, Condition(function TurretSystemTriggerConditionAttack))
     call TriggerAddAction(TurretSystemAttackTrigger, function TurretSystemTriggerActionAttack)
@@ -10524,14 +10430,6 @@ function TurretSystemInit takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(TurretSystemReviveTrigger, EVENT_PLAYER_HERO_REVIVE_FINISH)
     call TriggerAddCondition(TurretSystemReviveTrigger, Condition(function TurretSystemTriggerConditionIsVehicle))
     call TriggerAddAction(TurretSystemReviveTrigger, function TurretSystemTriggerActionRevive)
-
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemSelectionTrigger, EVENT_PLAYER_UNIT_SELECTED)
-    call TriggerAddCondition(TurretSystemSelectionTrigger, Condition(function TurretSystemTriggerConditionIsVehicleWithSelectableTurret))
-    call TriggerAddAction(TurretSystemSelectionTrigger, function TurretSystemTriggerActionSelectVehicle)
-
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemDeselectionTrigger, EVENT_PLAYER_UNIT_SELECTED)
-    call TriggerAddCondition(TurretSystemDeselectionTrigger, Condition(function TurretSystemTriggerConditionIsVehicleWithSelectableTurret))
-    call TriggerAddAction(TurretSystemDeselectionTrigger, function TurretSystemTriggerActionDeselectVehicle)
 
     call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
