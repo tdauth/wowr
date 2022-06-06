@@ -328,6 +328,15 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
 	if (whichItem == null and udg_Hero3[PlayerNumber] != null) then
 		set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero3[PlayerNumber], itemTypeId, whichRect)
 	endif
+	// Check Equipment Bags
+	if (whichItem == null) then
+        set I0 = 0
+        loop
+            exitwhen(I0 == BlzGroupGetSize(udg_EquipmentBags[PlayerNumber + 1]) or whichItem != null)
+            set whichItem = DropQuestItemFromCreepHeroAtRect(BlzGroupUnitAt(udg_EquipmentBags[PlayerNumber + 1], I0), itemTypeId, whichRect)
+            set I0 = I0 + 1
+        endloop
+	endif
     // Check the backpack
     if (whichItem == null) then
         set I0 = 0
@@ -9686,7 +9695,6 @@ endfunction
 // TODOS:
 // - Fix saving and restoring all orders for vehicles.
 // - Disable turrets when the unit is loaded/transported.
-// - Support selecting turrets by triple clicking on the vehicle.
 // - Use custom icons in the demo map.
 
 globals
@@ -10111,7 +10119,14 @@ function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, rea
         call GroupAddUnit(TurretSystemAllVehicles, vehicle)
     endif
 
+    // prevent memory leaks
+    if (HaveSavedHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS)) then
+        call GroupClear(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
+        call DestroyGroup(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
+    endif
+
     call SaveGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS, turrets)
+    set turrets = null
     call SaveUnitHandle(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE, vehicle)
     call SaveReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_X, offsetX)
     call SaveReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_Y, offsetY)
@@ -10119,6 +10134,7 @@ function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, rea
     call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_AUTO_ATTACK, autoAttack)
     call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE_DAMAGE, vehicleDamage)
     call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ENABLED, true)
+    set turret = null
 
     if (selectable) then
         call SaveBoolean(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_HAS_SELECTABLE_TURRET, true)
@@ -10132,21 +10148,28 @@ function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, rea
 endfunction
 
 function TurretSystemRemoveTurret takes unit vehicle, unit turret returns nothing
-     local group turrets = TurretSystemGetTurrets(vehicle)
+    local group turrets = TurretSystemGetTurrets(vehicle)
 
-     call TurretSystemFlushTurret(turret)
-     call GroupRemoveUnit(turrets, turret)
-     call GroupRemoveUnit(TurretSystemAllTurrets, turret)
-     call RemoveUnit(turret)
-     set turret = null
+    call TurretSystemFlushTurret(turret)
+    call GroupRemoveUnit(turrets, turret)
+    call GroupRemoveUnit(TurretSystemAllTurrets, turret)
+    call RemoveUnit(turret)
+    set turret = null
 
-     if (TurretSystemIsVehicle(vehicle)) then
+    if (TurretSystemIsVehicle(vehicle)) then
+        // prevent memory leaks
+        if (HaveSavedHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS)) then
+            call GroupClear(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
+            call DestroyGroup(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
+        endif
+
         call SaveGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS, turrets)
+    else
+        // prevent memory leaks
+        call GroupClear(turrets)
+        call DestroyGroup(turrets)
+        set turrets = null
      endif
-
-    call GroupClear(turrets)
-    call DestroyGroup(turrets)
-    set turrets = null
 
     if (BlzGroupGetSize(TurretSystemAllTurrets) == 0) then
         call TurretSystemPause(true)
