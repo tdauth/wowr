@@ -496,3 +496,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Anitarf: [Arrow Key System](http://www.wc3c.net/showthread.php?t=101271)
 * Opossum: [Third Person Camera System](http://www.wc3c.net/showthread.php?t=104786)
 * Remixer: [Pandarian Harvester](https://www.hiveworkshop.com/threads/pandarian-harvester.316782/)
+* PROXY: [PandarenTemple01](https://www.hiveworkshop.com/threads/pandarentemple01.220886/)
