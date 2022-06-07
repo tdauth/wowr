@@ -497,3 +497,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Opossum: [Third Person Camera System](http://www.wc3c.net/showthread.php?t=104786)
 * Remixer: [Pandarian Harvester](https://www.hiveworkshop.com/threads/pandarian-harvester.316782/)
 * PROXY: [PandarenTemple01](https://www.hiveworkshop.com/threads/pandarentemple01.220886/)
+* PROXY: [HeroGoblinGunner](https://www.hiveworkshop.com/threads/herogoblingunner.227827/)
+* Tiberius_XXVII: [BTNGobGunner](https://www.hiveworkshop.com/threads/btngobgunner.56665/)
