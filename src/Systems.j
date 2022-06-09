@@ -11649,3 +11649,83 @@ function MovementSystemInit takes nothing returns nothing
     call TriggerAddCondition(MovementSystemLeftStopTrigger, Condition(function MovementSystemTriggerConditionMovementLeftStop))
     call TriggerAddAction(MovementSystemLeftStopTrigger, function MovementSystemTriggerActionRotateLeftStop)
 endfunction
+
+
+// Baradé's Mount System
+
+globals
+    hashtable MountHashTable = InitHashtable()
+endglobals
+
+function MountGet takes unit hero returns unit
+    return LoadUnitHandle(MountHashTable, GetHandleId(hero), 0)
+endfunction
+
+function MountClear takes unit hero returns nothing
+    call FlushChildHashtable(MountHashTable, GetHandleId(hero))
+endfunction
+
+function MountKill takes unit hero returns nothing
+    local unit mount = MountGet(hero)
+    if (mount != null) then
+        call KillUnit(mount) // in case there are transported units
+    endif
+    set mount = null
+    call MountClear(hero)
+endfunction
+
+function MountReplace takes unit hero, unit mount returns nothing
+    call MountKill(hero)
+    call SaveUnitHandle(MountHashTable, GetHandleId(hero), 0, mount)
+endfunction
+
+function MountGetAll takes player whichPlayer returns group
+    local group result = CreateGroup()
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (udg_Hero[playerId] != null and MountGet(udg_Hero[playerId]) != null) then
+        call GroupAddUnit(result, udg_Hero[playerId])
+    endif
+
+    if (udg_Hero2[playerId] != null and MountGet(udg_Hero2[playerId]) != null) then
+        call GroupAddUnit(result, udg_Hero2[playerId])
+    endif
+
+    if (udg_Hero3[playerId] != null and MountGet(udg_Hero3[playerId]) != null) then
+        call GroupAddUnit(result, udg_Hero3[playerId])
+    endif
+
+    return result
+endfunction
+
+function MountKillAll takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (udg_Hero[playerId] != null and MountGet(udg_Hero[playerId]) != null) then
+        call MountKill(udg_Hero[playerId])
+    endif
+
+    if (udg_Hero2[playerId] != null and MountGet(udg_Hero2[playerId]) != null) then
+        call MountKill(udg_Hero2[playerId])
+    endif
+
+    if (udg_Hero3[playerId] != null and MountGet(udg_Hero3[playerId]) != null) then
+        call MountKill(udg_Hero[playerId])
+    endif
+endfunction
+
+function MountClearAll takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (udg_Hero[playerId] != null) then
+        call MountClear(udg_Hero[playerId])
+    endif
+
+    if (udg_Hero2[playerId] != null) then
+        call MountClear(udg_Hero2[playerId])
+    endif
+
+    if (udg_Hero3[playerId] != null) then
+        call MountClear(udg_Hero[playerId])
+    endif
+endfunction

@@ -501,3 +501,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Tiberius_XXVII: [BTNGobGunner](https://www.hiveworkshop.com/threads/btngobgunner.56665/)
 * UgoUgo: [BTNBShipCannon1](https://www.hiveworkshop.com/threads/btnbshipcannon1.245647/)
 * Sylvie: [BTNCannonIcon](https://www.hiveworkshop.com/threads/btncannonicon.261384/)
+* UgoUgo: [Bamboo](https://www.hiveworkshop.com/threads/bamboo.233143/)
