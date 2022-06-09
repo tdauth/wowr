@@ -502,3 +502,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * UgoUgo: [BTNBShipCannon1](https://www.hiveworkshop.com/threads/btnbshipcannon1.245647/)
 * Sylvie: [BTNCannonIcon](https://www.hiveworkshop.com/threads/btncannonicon.261384/)
 * UgoUgo: [Bamboo](https://www.hiveworkshop.com/threads/bamboo.233143/)
+* Asssssvi: [Ship's Doctor Kul-Tiras HD](https://www.hiveworkshop.com/threads/ships-doctor-kul-tiras-hd.324634/)
+* Asssssvi: [Storm Sorcerer Kul-Tiras HD](https://www.hiveworkshop.com/threads/storm-sorcerer-kul-tiras-hd.324722/)
