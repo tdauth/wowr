@@ -11481,14 +11481,17 @@ globals
     constant real MOVEMENT_SYSTEM_ROTATION_PER_INTERVAL = 12.0
 
     unit array MovementSystemUnit
-    boolean array MovementSystemControlOn
     boolean array MovementSystemMoveForward
+    boolean array MovementSystemMoveBackward
+    boolean array MovementSystemMoveUp
     boolean array MovementSystemRotateRight
     boolean array MovementSystemRotateLeft
-    trigger MovementSystemControlOnTrigger = CreateTrigger()
-    trigger MovementSystemControlOffTrigger = CreateTrigger()
     trigger MovementSystemForwardTrigger = CreateTrigger()
     trigger MovementSystemForwardStopTrigger = CreateTrigger()
+    trigger MovementSystemBackwardTrigger = CreateTrigger()
+    trigger MovementSystemBackwardStopTrigger = CreateTrigger()
+    trigger MovementSystemUpTrigger = CreateTrigger()
+    trigger MovementSystemUpStopTrigger = CreateTrigger()
     trigger MovementSystemRightTrigger = CreateTrigger()
     trigger MovementSystemRightStopTrigger = CreateTrigger()
     trigger MovementSystemLeftTrigger = CreateTrigger()
@@ -11508,26 +11511,8 @@ function MovementSystemGetPlayerUnit takes player whichPlayer returns unit
     return MovementSystemUnit[GetPlayerId(whichPlayer)]
 endfunction
 
-function MovementSystemTriggerConditionControlOn takes nothing returns boolean
-    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null and not MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())]
-endfunction
-
-function MovementSystemTriggerActionControlOn takes nothing returns nothing
-    //call BJDebugMsg("Enable control key")
-    set MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())] = true
-endfunction
-
-function MovementSystemTriggerConditionControlOff takes nothing returns boolean
-    return MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())]
-endfunction
-
-function MovementSystemTriggerActionControlOff takes nothing returns nothing
-    //call BJDebugMsg("Disable control key")
-    set MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())] = false
-endfunction
-
 function MovementSystemTriggerConditionMovementForward takes nothing returns boolean
-    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null and MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())]
+    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null
 endfunction
 
 function MovementSystemTriggerActionMoveForward takes nothing returns nothing
@@ -11542,8 +11527,40 @@ function MovementSystemTriggerActionMoveForwardStop takes nothing returns nothin
     set MovementSystemMoveForward[GetPlayerId(GetTriggerPlayer())] = false
 endfunction
 
+function MovementSystemTriggerConditionMovementBackward takes nothing returns boolean
+    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null
+endfunction
+
+function MovementSystemTriggerActionMoveBackward takes nothing returns nothing
+    set MovementSystemMoveBackward[GetPlayerId(GetTriggerPlayer())] = true
+endfunction
+
+function MovementSystemTriggerConditionMovementBackwardStop takes nothing returns boolean
+    return MovementSystemMoveBackward[GetPlayerId(GetTriggerPlayer())]
+endfunction
+
+function MovementSystemTriggerActionMoveBackwardStop takes nothing returns nothing
+    set MovementSystemMoveBackward[GetPlayerId(GetTriggerPlayer())] = false
+endfunction
+
+function MovementSystemTriggerConditionMovementUp takes nothing returns boolean
+    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null
+endfunction
+
+function MovementSystemTriggerActionMoveUp takes nothing returns nothing
+    set MovementSystemMoveUp[GetPlayerId(GetTriggerPlayer())] = true
+endfunction
+
+function MovementSystemTriggerConditionMovementUpStop takes nothing returns boolean
+    return MovementSystemMoveUp[GetPlayerId(GetTriggerPlayer())]
+endfunction
+
+function MovementSystemTriggerActionMoveUpStop takes nothing returns nothing
+    set MovementSystemMoveUp[GetPlayerId(GetTriggerPlayer())] = false
+endfunction
+
 function MovementSystemTriggerConditionMovementRight takes nothing returns boolean
-    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null and MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())]
+    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null
 endfunction
 
 function MovementSystemTriggerActionRotateRight takes nothing returns nothing
@@ -11559,7 +11576,7 @@ function MovementSystemTriggerActionRotateRightStop takes nothing returns nothin
 endfunction
 
 function MovementSystemTriggerConditionMovementLeft takes nothing returns boolean
-    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null and MovementSystemControlOn[GetPlayerId(GetTriggerPlayer())]
+    return MovementSystemGetPlayerUnit(GetTriggerPlayer()) != null
 endfunction
 
 function MovementSystemTriggerActionRotateLeft takes nothing returns nothing
@@ -11583,13 +11600,15 @@ function MovementSystemTimerFunctionUpdate takes nothing returns nothing
     loop
         exitwhen (i == bj_MAX_PLAYERS)
         set whichUnit = MovementSystemGetPlayerUnit(Player(i))
-        if (whichUnit != null) then
+        if (whichUnit != null and IsUnitAliveBJ(whichUnit)) then
             if (MovementSystemRotateRight[i]) then
                 set facing = ModuloReal(GetUnitFacing(whichUnit) - MOVEMENT_SYSTEM_ROTATION_PER_INTERVAL, 360.0)
             elseif (MovementSystemRotateLeft[i]) then
                 set facing = ModuloReal(GetUnitFacing(whichUnit) + MOVEMENT_SYSTEM_ROTATION_PER_INTERVAL, 360.0)
-            else
+            elseif (MovementSystemMoveForward[i]) then
                 set facing = GetUnitFacing(whichUnit)
+            elseif (MovementSystemMoveBackward[i]) then
+                set facing =  ModuloReal(GetUnitFacing(whichUnit) - 360.0, 360.0)
             endif
 
             if (MovementSystemMoveForward[i]) then
@@ -11598,8 +11617,18 @@ function MovementSystemTimerFunctionUpdate takes nothing returns nothing
                     set y = PolarProjectionY(GetUnitY(whichUnit), facing, 100.0)
                     call IssuePointOrder(whichUnit, "move", x, y)
                 endif
+            elseif (MovementSystemMoveBackward[i]) then
+                if (GetUnitCurrentOrder(whichUnit) == OrderId("idle")) then
+                    set x = PolarProjectionX(GetUnitX(whichUnit), facing, 5.0)
+                    set y = PolarProjectionY(GetUnitY(whichUnit), facing, 5.0)
+                    call SetUnitPosition(whichUnit, x, y)
+                endif
             elseif (MovementSystemRotateRight[i] or MovementSystemRotateLeft[i]) then
                 call SetUnitFacing(whichUnit, facing)
+            endif
+
+            if (MovementSystemMoveUp[i] and IsUnitType(whichUnit, UNIT_TYPE_FLYING)) then
+                call SetUnitFlyHeight(whichUnit, RMinBJ(GetUnitFlyHeight(whichUnit) + 3.0, 500.0), 0.0)
             endif
         endif
         set whichUnit = null
@@ -11619,25 +11648,32 @@ function MovementSystemInit takes nothing returns nothing
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemControlOnTrigger, Player(i), OSKEY_SPACE, 0, true)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemControlOffTrigger, Player(i), OSKEY_SPACE, 0, false)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemForwardTrigger, Player(i), OSKEY_W, 0, true)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemForwardStopTrigger, Player(i), OSKEY_W, 0, false)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemRightTrigger, Player(i), OSKEY_D, 0, true)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemRightStopTrigger, Player(i), OSKEY_D, 0, false)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemLeftTrigger, Player(i), OSKEY_A, 0, true)
-        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemLeftStopTrigger, Player(i), OSKEY_A, 0, false)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemForwardTrigger, Player(i), OSKEY_I, 0, true)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemForwardStopTrigger, Player(i), OSKEY_I, 0, false)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemUpTrigger, Player(i), OSKEY_SPACE, 0, true)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemUpStopTrigger, Player(i), OSKEY_SPACE, 0, false)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemBackwardTrigger, Player(i), OSKEY_K, 0, true)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemBackwardStopTrigger, Player(i), OSKEY_K, 0, false)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemRightTrigger, Player(i), OSKEY_L, 0, true)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemRightStopTrigger, Player(i), OSKEY_L, 0, false)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemLeftTrigger, Player(i), OSKEY_J, 0, true)
+        call BlzTriggerRegisterPlayerKeyEvent(MovementSystemLeftStopTrigger, Player(i), OSKEY_J, 0, false)
         set i = i + 1
     endloop
-    call TriggerAddCondition(MovementSystemControlOnTrigger, Condition(function MovementSystemTriggerConditionControlOn))
-    call TriggerAddAction(MovementSystemControlOnTrigger, function MovementSystemTriggerActionControlOn)
-    call TriggerAddCondition(MovementSystemControlOffTrigger, Condition(function MovementSystemTriggerConditionControlOff))
-    call TriggerAddAction(MovementSystemControlOffTrigger, function MovementSystemTriggerActionControlOff)
-
     call TriggerAddCondition(MovementSystemForwardTrigger, Condition(function MovementSystemTriggerConditionMovementForward))
     call TriggerAddAction(MovementSystemForwardTrigger, function MovementSystemTriggerActionMoveForward)
     call TriggerAddCondition(MovementSystemForwardStopTrigger, Condition(function MovementSystemTriggerConditionMovementForwardStop))
     call TriggerAddAction(MovementSystemForwardStopTrigger, function MovementSystemTriggerActionMoveForwardStop)
+
+    call TriggerAddCondition(MovementSystemUpTrigger, Condition(function MovementSystemTriggerConditionMovementUp))
+    call TriggerAddAction(MovementSystemUpTrigger, function MovementSystemTriggerActionMoveUp)
+    call TriggerAddCondition(MovementSystemUpStopTrigger, Condition(function MovementSystemTriggerConditionMovementUpStop))
+    call TriggerAddAction(MovementSystemUpStopTrigger, function MovementSystemTriggerActionMoveUpStop)
+
+    call TriggerAddCondition(MovementSystemBackwardTrigger, Condition(function MovementSystemTriggerConditionMovementBackward))
+    call TriggerAddAction(MovementSystemBackwardTrigger, function MovementSystemTriggerActionMoveBackward)
+    call TriggerAddCondition(MovementSystemBackwardStopTrigger, Condition(function MovementSystemTriggerConditionMovementBackwardStop))
+    call TriggerAddAction(MovementSystemBackwardStopTrigger, function MovementSystemTriggerActionMoveBackwardStop)
 
     call TriggerAddCondition(MovementSystemRightTrigger, Condition(function MovementSystemTriggerConditionMovementRight))
     call TriggerAddAction(MovementSystemRightTrigger, function MovementSystemTriggerActionRotateRight)
