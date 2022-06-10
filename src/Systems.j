@@ -3518,7 +3518,7 @@ function GetSaveCodeIsMatching takes player whichPlayer, string s returns boolea
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
 
-    return checksum == CompressedAbsStringHash(saveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))
+    return isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))
 endfunction
 
 function GetSaveCodeMaxHeroLevel takes string playerName, string s returns integer
@@ -7869,19 +7869,35 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
     loop
         exitwhen (i >= PrestoredSaveCodeCounter)
         if (PrestoredSaveCodePlayerName[i] == playerName) then
-            if (counter > 0) then
-                set result = result + "\n"
-            endif
             if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_HEROES and GetSaveCodeIsMatching(whichPlayer, PrestoredSaveCode[i])) then
-                // TODO Only show matching?
+                if (counter > 0) then
+                    set result = result + "\n"
+                endif
+
                 set result = result  + "-loadp " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_ITEMS) then
+                if (counter > 0) then
+                    set result = result + "\n"
+                endif
+
                 set result = result  + "-loadpi " + I2S(i) + ": " + GetSaveCodeShortInfosItems(whichPlayer, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_UNITS) then
+                if (counter > 0) then
+                    set result = result + "\n"
+                endif
+
                 set result = result  + "-loadpu " + I2S(i) + ": " + GetSaveCodeShortInfosUnits(whichPlayer, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_BUILDINGS) then
+                if (counter > 0) then
+                    set result = result + "\n"
+                endif
+
                 set result = result  + "-loadpb " + I2S(i) + ": " + GetSaveCodeShortInfosBuildings(whichPlayer, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_RESEARCHES) then
+                if (counter > 0) then
+                    set result = result + "\n"
+                endif
+
                 set result = result  + "-loadpr " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
             endif
             set counter = counter + 1
