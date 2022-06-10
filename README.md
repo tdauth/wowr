@@ -288,7 +288,7 @@ Hence, I am trying to collect replays with the game ending to reconstruct the bu
 
 ## History of the Map
 
-Warcraft III: Reforged fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
+Warcraft III: Reforged is a fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
 
 ### Reconstruction
