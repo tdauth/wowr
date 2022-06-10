@@ -3481,6 +3481,46 @@ function GetSaveCodeShortInfos takes string playerName, string s returns string
     return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-level1_" + I2S(GetHeroLevelByXP(xp)) + "-level2_" + I2S(GetHeroLevelByXP(xp2)) + "-level3_" + I2S(GetHeroLevelByXP(xp3)) + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-evo_" + I2S(evolutionLevel)
 endfunction
 
+function GetSaveCodeIsMatching takes player whichPlayer, string s returns boolean
+    local string playerName = GetPlayerName(whichPlayer)
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
+    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
+    local string gameTypeName = GetGameTypeName(gameType)
+    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
+    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
+    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string singlePlayerStatus = "M"
+    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
+    local string warlordStatus = "F"
+    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
+    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
+    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
+    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
+    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
+    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
+    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
+    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
+    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
+    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
+    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
+    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
+    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
+    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
+    local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
+    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
+    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
+    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
+    local integer equipmentBags = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 23)
+    local string demigodValueInfo = ConvertSaveCodeDemigodValueToInfo(demigodValue)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+
+    return checksum == CompressedAbsStringHash(saveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer))
+endfunction
+
 function GetSaveCodeMaxHeroLevel takes string playerName, string s returns integer
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
@@ -7820,6 +7860,7 @@ function GetPrestoredSaveCodeIndices takes string playerName returns string
     return result
 endfunction
 
+// only shows matching savecodes to keep the number limited
 function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
     local string playerName = GetPlayerName(whichPlayer)
     local string result = ""
@@ -7831,7 +7872,7 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
             if (counter > 0) then
                 set result = result + "\n"
             endif
-            if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_HEROES) then
+            if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_HEROES and GetSaveCodeIsMatching(whichPlayer, PrestoredSaveCode[i])) then
                 // TODO Only show matching?
                 set result = result  + "-loadp " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_ITEMS) then
