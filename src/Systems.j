@@ -59,7 +59,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h, -help, -revive, -sel, -players, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
+    return "-h, -help, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
 endfunction
 
 globals
@@ -7929,6 +7929,86 @@ function GetPrestoredSaveCodeIndices takes string playerName returns string
         endif
         set i = i + 1
     endloop
+    return result
+endfunction
+
+function GetPrestoredSaveCodeAccounts takes nothing returns string
+    local string result = ""
+    local string array onlinePlayers
+    local player array onlinePlayersMatching
+    local integer onlinePlayersCounter = 0
+    local string array offlinePlayers
+    local integer offlinePlayersCounter = 0
+    local player matchingPlayer = null
+    local boolean add = true
+    local integer counter = 0
+    local integer j = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= PrestoredSaveCodeCounter)
+        set add = true
+        set matchingPlayer = null
+        set j = 0
+        loop
+            exitwhen (j >= bj_MAX_PLAYERS or matchingPlayer != null)
+            if (GetPlayerName(Player(j)) == PrestoredSaveCodePlayerName[i]) then
+                set matchingPlayer = Player(j)
+            endif
+            set j = j + 1
+        endloop
+        if (matchingPlayer != null) then
+            set j = 0
+            loop
+                exitwhen (j >= onlinePlayersCounter or not add)
+                if (onlinePlayers[j] == PrestoredSaveCodePlayerName[i]) then
+                    set add = false
+                endif
+                set j = j + 1
+            endloop
+            if (add) then
+                set onlinePlayers[onlinePlayersCounter] = PrestoredSaveCodePlayerName[i]
+                set onlinePlayersMatching[onlinePlayersCounter] = matchingPlayer
+                set onlinePlayersCounter = onlinePlayersCounter + 1
+            endif
+        else
+            set j = 0
+            loop
+                exitwhen (j >= offlinePlayersCounter or not add)
+                if (offlinePlayers[j] == PrestoredSaveCodePlayerName[i]) then
+                    set add = false
+                endif
+                set j = j + 1
+            endloop
+            if (add) then
+                set offlinePlayers[offlinePlayersCounter] = PrestoredSaveCodePlayerName[i]
+                set offlinePlayersCounter = offlinePlayersCounter + 1
+            endif
+        endif
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i >= onlinePlayersCounter)
+        if (counter > 0) then
+            set result = result + "\n"
+        endif
+
+        set result = result + GetPlayerNameColored(onlinePlayersMatching[i])
+        set counter = counter + 1
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i >= offlinePlayersCounter)
+        if (counter > 0) then
+            set result = result + "\n"
+        endif
+
+        set result = result  + offlinePlayers[i] + " (offline)"
+        set counter = counter + 1
+        set i = i + 1
+    endloop
+
     return result
 endfunction
 
