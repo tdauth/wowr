@@ -11663,6 +11663,7 @@ endfunction
 
 function MovementSystemTriggerActionMoveForwardStop takes nothing returns nothing
     set MovementSystemMoveForward[GetPlayerId(GetTriggerPlayer())] = false
+    call ResetUnitAnimation(MovementSystemGetPlayerUnit(GetTriggerPlayer()))
 endfunction
 
 function MovementSystemTriggerConditionMovementBackward takes nothing returns boolean
@@ -11679,6 +11680,7 @@ endfunction
 
 function MovementSystemTriggerActionMoveBackwardStop takes nothing returns nothing
     set MovementSystemMoveBackward[GetPlayerId(GetTriggerPlayer())] = false
+    call ResetUnitAnimation(MovementSystemGetPlayerUnit(GetTriggerPlayer()))
 endfunction
 
 function MovementSystemTriggerConditionMovementUp takes nothing returns boolean
@@ -11753,13 +11755,15 @@ function MovementSystemTimerFunctionUpdate takes nothing returns nothing
                 if (GetUnitCurrentOrder(whichUnit) == OrderId("idle")) then
                     set x = PolarProjectionX(GetUnitX(whichUnit), facing, 100.0)
                     set y = PolarProjectionY(GetUnitY(whichUnit), facing, 100.0)
-                    call IssuePointOrder(whichUnit, "move", x, y)
+                    call SetUnitPosition(whichUnit, x, y)
+                    call SetUnitAnimation(whichUnit, "stand")
                 endif
             elseif (MovementSystemMoveBackward[i]) then
                 if (GetUnitCurrentOrder(whichUnit) == OrderId("idle")) then
                     set x = PolarProjectionX(GetUnitX(whichUnit), facing, 5.0)
                     set y = PolarProjectionY(GetUnitY(whichUnit), facing, 5.0)
                     call SetUnitPosition(whichUnit, x, y)
+                    call SetUnitAnimation(whichUnit, "stand")
                 endif
             elseif (MovementSystemRotateRight[i] or MovementSystemRotateLeft[i]) then
                 call SetUnitFacing(whichUnit, facing)
