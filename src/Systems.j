@@ -59,7 +59,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h, -help, -sel, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
+    return "-h, -help, -revive, -sel, -players, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
 endfunction
 
 globals
@@ -7947,32 +7947,41 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
                 endif
 
                 set result = result  + "-loadp " + I2S(i) + ": " + GetSaveCodeShortInfos(playerName, PrestoredSaveCode[i])
+
+                set counter = counter + 1
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_ITEMS) then
                 if (counter > 0) then
                     set result = result + "\n"
                 endif
 
                 set result = result  + "-loadpi " + I2S(i) + ": " + GetSaveCodeShortInfosItems(whichPlayer, PrestoredSaveCode[i])
+
+                set counter = counter + 1
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_UNITS) then
                 if (counter > 0) then
                     set result = result + "\n"
                 endif
 
                 set result = result  + "-loadpu " + I2S(i) + ": " + GetSaveCodeShortInfosUnits(whichPlayer, PrestoredSaveCode[i])
+
+                set counter = counter + 1
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_BUILDINGS) then
                 if (counter > 0) then
                     set result = result + "\n"
                 endif
 
                 set result = result  + "-loadpb " + I2S(i) + ": " + GetSaveCodeShortInfosBuildings(whichPlayer, PrestoredSaveCode[i])
+
+                set counter = counter + 1
             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_RESEARCHES) then
                 if (counter > 0) then
                     set result = result + "\n"
                 endif
 
                 set result = result  + "-loadpr " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
+
+                set counter = counter + 1
             endif
-            set counter = counter + 1
         endif
         set i = i + 1
     endloop
@@ -11604,7 +11613,7 @@ library AStructCoreInterfaceThirdPersonCamera requires AStructCoreInterfaceArrow
 
 endlibrary
 
-// Barade's 'WASD Movement System 1.0
+// Barade's IJKL Movement System 1.0
 
 globals
     constant real MOVEMENT_SYSTEM_ROTATION_PER_INTERVAL = 12.0
@@ -11737,7 +11746,7 @@ function MovementSystemTimerFunctionUpdate takes nothing returns nothing
             elseif (MovementSystemMoveForward[i]) then
                 set facing = GetUnitFacing(whichUnit)
             elseif (MovementSystemMoveBackward[i]) then
-                set facing =  ModuloReal(GetUnitFacing(whichUnit) - 360.0, 360.0)
+                set facing =  ModuloReal(GetUnitFacing(whichUnit) - 180.0, 360.0)
             endif
 
             if (MovementSystemMoveForward[i]) then
