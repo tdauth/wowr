@@ -239,6 +239,78 @@ function BackpackCountItemsOfItemTypeForPlayer takes integer PlayerNumber, integ
 	return result
 endfunction
 
+function HeroCountItemsOfItemType takes unit hero, integer itemTypeId returns integer
+    local integer result = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (GetItemTypeId(UnitItemInSlot(hero, i)) == itemTypeId) then
+            set result = result + 1
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function Hero1CountItemsOfItemType takes unit hero, integer itemTypeId returns integer
+    local integer convertedPlayerId = GetConvertedPlayerId(GetOwningPlayer(hero))
+    local integer result = HeroCountItemsOfItemType(hero, itemTypeId)
+    local integer i = 0
+    loop
+        exitwhen (i == BlzGroupGetSize(udg_EquipmentBags[convertedPlayerId]))
+        set result = result + HeroCountItemsOfItemType(BlzGroupUnitAt(udg_EquipmentBags[convertedPlayerId], i), itemTypeId)
+        set i = i + 1
+    endloop
+	return result
+endfunction
+
+function HeroDropRandomItem takes unit hero returns item
+    local integer playerId = GetPlayerId(GetOwningPlayer(hero))
+    local integer convertedPlayerId = GetConvertedPlayerId(GetOwningPlayer(hero))
+    local unit array heroes
+    local integer array slots
+    local integer counter = 0
+    local unit bag = null
+    local integer maxBags = 0
+    local integer i = 0
+    local integer j = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        if (UnitItemInSlot(hero, i) != null) then
+            set heroes[counter] = hero
+            set slots[counter] = i
+            set counter = counter + 1
+        endif
+        set i = i + 1
+    endloop
+    if (hero == udg_Hero[playerId]) then
+        set maxBags = BlzGroupGetSize(udg_EquipmentBags[convertedPlayerId])
+        set i = 0
+        loop
+            exitwhen(i == maxBags)
+            set bag = BlzGroupUnitAt(udg_EquipmentBags[convertedPlayerId], i)
+            set j = 0
+            loop
+                exitwhen (j == bj_MAX_INVENTORY)
+                if (UnitItemInSlot(bag, j) != null) then
+                    set heroes[counter] = bag
+                    set slots[counter] = j
+                    set counter = counter + 1
+                endif
+                set j = j + 1
+            endloop
+            set bag = null
+            set i = i + 1
+        endloop
+    endif
+    if (counter > 0) then
+        set i = GetRandomInt(0, counter)
+        return UnitRemoveItemFromSlot(heroes[i], slots[i])
+    endif
+
+    return null
+endfunction
+
 function RemoveAllBackpackItemTypesForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
 	local integer I0 = 0
     local integer I1 = 0
@@ -11821,4 +11893,34 @@ function MountClearAll takes player whichPlayer returns nothing
     if (udg_Hero3[playerId] != null) then
         call MountClear(udg_Hero[playerId])
     endif
+endfunction
+
+// Barade's Pickpocketing System
+
+globals
+    constant real PICKPOCKETING_CHANCE = 45.0
+    constant integer PICKPOCKETING_ITEM_TYPE_ID = 'I03F'
+endglobals
+
+function PickpocketingStealItem takes unit hero, unit target returns item
+    local integer countStealingItem = 0
+    local real random = 0.0
+    local item stolenItem = null
+    if (hero == udg_Hero[GetPlayerId(GetOwningPlayer(hero))]) then
+        set countStealingItem = Hero1CountItemsOfItemType(hero, PICKPOCKETING_ITEM_TYPE_ID)
+    else
+        set countStealingItem = HeroCountItemsOfItemType(hero, PICKPOCKETING_ITEM_TYPE_ID)
+    endif
+    if (countStealingItem > 0) then
+        set random = GetRandomReal(0.0, 100.0)
+        if (random <= PICKPOCKETING_CHANCE) then
+            set stolenItem = HeroDropRandomItem(target)
+            call UnitAddItem(hero, stolenItem)
+            call DisplayTextToPlayer(GetOwningPlayer(hero), 0.0, 0.0, "Stole item " + GetItemName(stolenItem) + " from " + GetUnitName(target) + "!")
+
+            return stolenItem
+        endif
+    endif
+
+    return null
 endfunction
