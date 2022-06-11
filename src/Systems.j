@@ -3550,7 +3550,7 @@ function GetSaveCodeShortInfos takes string playerName, string s returns string
         set warlordStatus = "W"
     endif
 
-    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-level1_" + I2S(GetHeroLevelByXP(xp)) + "-level2_" + I2S(GetHeroLevelByXP(xp2)) + "-level3_" + I2S(GetHeroLevelByXP(xp3)) + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-evo_" + I2S(evolutionLevel)
+    return singlePlayerStatus + "-" + gameTypeName + "-" + warlordStatus + "-l1_" + I2S(GetHeroLevelByXP(xp)) + "-l2_" + I2S(GetHeroLevelByXP(xp2)) + "-l3_" + I2S(GetHeroLevelByXP(xp3)) + "-g_" + I2S(gold) + "-l_" + I2S(lumber) + "-e_" + I2S(evolutionLevel)
 endfunction
 
 function GetSaveCodeIsMatching takes player whichPlayer, string s returns boolean
