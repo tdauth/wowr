@@ -12008,9 +12008,11 @@ function PickpocketingStealItem takes unit hero, unit target returns item
         set random = GetRandomReal(0.0, 100.0)
         if (random <= PICKPOCKETING_CHANCE) then
             set stolenItem = HeroDropRandomItem(target)
-            call UnitAddItem(hero, stolenItem)
-            call DisplayTextToPlayer(GetOwningPlayer(target), 0.0, 0.0, GetUnitName(hero) + " has stolen the item " + GetItemName(stolenItem) + " from your unit " + GetUnitName(target) + "!")
-            call DisplayTextToPlayer(GetOwningPlayer(hero), 0.0, 0.0, "Stole item " + GetItemName(stolenItem) + " from " + GetUnitName(target) + "!")
+            if (stolenItem != null) then
+                call UnitAddItem(hero, stolenItem)
+                call DisplayTextToPlayer(GetOwningPlayer(target), 0.0, 0.0, GetUnitName(hero) + " has stolen the item " + GetItemName(stolenItem) + " from your unit " + GetUnitName(target) + "!")
+                call DisplayTextToPlayer(GetOwningPlayer(hero), 0.0, 0.0, "Stole item " + GetItemName(stolenItem) + " from " + GetUnitName(target) + "!")
+            endif
 
             return stolenItem
         endif
