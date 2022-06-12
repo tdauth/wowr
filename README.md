@@ -515,3 +515,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * NFWar: [BTNPieceOfShip](https://www.hiveworkshop.com/threads/btnpieceofship.176222/)
 * raft_pl: [BTNGate](https://www.hiveworkshop.com/threads/btngate.58423/)
 * raft_pl: [BTNGateOpened](https://www.hiveworkshop.com/threads/btngateopened.58424/)
+* Bribe: [Snippet Ascii](https://www.hiveworkshop.com/threads/snippet-ascii.190746/)
