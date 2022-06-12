@@ -510,3 +510,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 𝓚𝓪𝓭𝓸𝓿𝓲𝓨𝓲ツ: [BTNHighElf Sanctuary2](https://www.hiveworkshop.com/threads/btnhighelf-sanctuary2.335877/)
 * Remixer: [Pandarian Sanctuary (Advanced Research Center)](https://www.hiveworkshop.com/threads/pandarian-sanctuary-advanced-research-center.308296/)
 * Remixer: [Pandarian Shelter](https://www.hiveworkshop.com/threads/pandarian-shelter.308292/)
+* Blizzard Entertainment, 𝓚𝓪𝓭𝓸𝓿𝓲𝓨𝓲ツ: [Lordaeron Summer Doodads](https://www.hiveworkshop.com/threads/lordaeron-summer-doodads.338175/)
+* Solu9: [BTNSimpleCompass12](https://www.hiveworkshop.com/threads/btnsimplecompass12.254423/)
+* NFWar: [BTNPieceOfShip](https://www.hiveworkshop.com/threads/btnpieceofship.176222/)
