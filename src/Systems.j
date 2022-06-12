@@ -59,7 +59,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h, -help, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
+    return "-h/-help, -clear, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y"
 endfunction
 
 globals
@@ -6101,7 +6101,7 @@ function CreateSaveCodeLetterTextFile takes string playerNameFrom, string player
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerNameFrom + "-" + playerNameTo + "-" + I2S(StringLength(message)) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-letter-from_" + playerNameFrom + "-to_" + playerNameTo + "-messageLength_" + I2S(StringLength(message)) + ".txt")
 endfunction
 
 function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns string
@@ -6193,7 +6193,7 @@ function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns
         set checksumStatus = "Invalid"
     endif
 
-    return playerNameFrom + "-" + playerNameToText + "-m_" + I2S(StringLength(message))
+    return "f_" + playerNameFrom + "-t_" + playerNameToText + "-m_" + I2S(StringLength(message))
 endfunction
 
 // Generated Save Codes
@@ -8044,7 +8044,7 @@ function GetPrestoredSaveCodeAccounts takes nothing returns string
         set j = 0
         loop
             exitwhen (j >= bj_MAX_PLAYERS or matchingPlayer != null)
-            if (GetPlayerName(Player(j)) == PrestoredSaveCodePlayerName[i]) then
+            if (GetPlayerName(Player(j)) == PrestoredSaveCodePlayerName[i] or (udg_ClanPlayerClan[j + 1] > 0 and udg_ClanName[udg_ClanPlayerClan[j + 1]] == PrestoredSaveCodePlayerName[i])) then
                 set matchingPlayer = Player(j)
             endif
             set j = j + 1
