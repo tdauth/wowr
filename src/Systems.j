@@ -5212,7 +5212,6 @@ function GetSaveCodeResearchesEx takes string playerName, boolean isSinglePlayer
     return result
 endfunction
 
-
 function GetSaveCodeResearches takes player whichPlayer returns string
     local integer playerNameHash = CompressedAbsStringHash(GetPlayerName(whichPlayer))
     local boolean isSinglePlayer = IsInSinglePlayer()
@@ -6084,16 +6083,32 @@ function GetSaveCodeShortInfosClan takes string name, string s returns string
     return name + "-" + singlePlayerStatus + "-gold_" + I2S(gold) + "-lumber_" + I2S(lumber) + "-p1_" + GetClanPlayerName(playerNameHash0) + "-p2_" + GetClanPlayerName(playerNameHash1) + "-p3_" + GetClanPlayerName(playerNameHash2)
 endfunction
 
+// Mailbox System
+
+function CreateSaveCodeLetterTextFile takes string playerNameFrom, string playerNameTo, string message, string saveCode returns nothing
+    local string content = ""
+
+    call PreloadGenClear()
+    call PreloadGenStart()
+
+    set content = content + AppendFileContent("Code: -loadl " + saveCode)
+    set content = content + AppendFileContent("From: " + playerNameFrom)
+    set content = content + AppendFileContent("To: " + playerNameTo)
+    set content = content + AppendFileContent("Message Length: " + StringLength(message))
+    set content = content + AppendFileContent("")
+
+    // The line below creates the log
+    call Preload(content)
+
+    // The line below creates the file at the specified location
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerNameFrom + "-" + playerNameTo + "-" + StringLength(message) + ".txt")
+endfunction
+
 function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns string
     local integer playerNameToHash = CompressedAbsStringHash(playerNameTo)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameToHash)
 
-    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
-    //call BJDebugMsg("Save code XP " + I2S(xp))
-
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(StringLength(playerNameFrom))
     set result = result + ConvertStringToSaveCodeSegment(playerNameFrom)
-    set result = result + ConvertDecimalNumberToSaveCodeSegment(StringLength(message))
     set result = result + ConvertStringToSaveCodeSegment(message)
 
     // checksum
@@ -6104,12 +6119,84 @@ function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, str
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameToHash)
     endif
 
-    //call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, demigodValue, result)
+    call CreateSaveCodeLetterTextFile(playerNameFrom, playerNameTo, message, result)
 
     call AddGeneratedSaveCode(result)
 
     return result
 endfunction
+
+function GetSaveCodeInfosLetter takes string playerNameTo, string s returns string
+    local string result = ""
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerNameToText = playerNameTo
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string checksumStatus = "Valid"
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (playerNameToHash != CompressedAbsStringHash(playerNameTo)) then
+        set playerNameToText = "Invalid"
+    endif
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    set result = AppendSaveCodeInfo(result, "Checksum: " + checksumStatus)
+    set result = AppendSaveCodeInfo(result, "To: " + playerNameToText)
+    set result = AppendSaveCodeInfo(result, "From: " + playerNameFrom)
+    set result = AppendSaveCodeInfo(result, "Message: " + message)
+
+    return result
+endfunction
+
+function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerNameToText = playerNameTo
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string checksumStatus = "Valid"
+
+    //call BJDebugMsg("Obfuscated save code: " + s)
+    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
+
+    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
+    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
+    //call BJDebugMsg("Checksum: " + I2S(checksum))
+
+    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
+    //call BJDebugMsg("Save code XP " + I2S(xp))
+
+    if (playerNameToHash != CompressedAbsStringHash(playerNameTo)) then
+        set playerNameToText = "Invalid"
+    endif
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set checksumStatus = "Invalid"
+    endif
+
+    return playerNameFrom + "-" + playerNameToText + "-m_" + I2S(StringLength(message))
+endfunction
+
+// Generated Save Codes
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
     return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2, 3)
@@ -6270,6 +6357,7 @@ function GenerateSaveCode takes player whichPlayer, string playerName, boolean s
     call GetSaveCodeDragonUnits(whichPlayer, playerName, singlePlayer, warlord)
     call GetSaveCodeGoodItems(playerName, singlePlayer, warlord)
     call GetSaveCodeHumanUpgrades(whichPlayer, playerName, singlePlayer, warlord)
+    call GetSaveCodeLetter(playerName, playerName, "Hello World!")
 endfunction
 
 function GenerateSaveCodeNewOpLimit takes nothing returns nothing
@@ -7763,6 +7851,7 @@ globals
     constant integer PRESTORED_SAVECODE_TYPE_BUILDINGS = 3
     constant integer PRESTORED_SAVECODE_TYPE_RESEARCHES = 4
     constant integer PRESTORED_SAVECODE_TYPE_CLANS = 5
+    constant integer PRESTORED_SAVECODE_TYPE_LETTER = 6
     
     constant integer PRESTORED_SAVECODE_MAX_CLAN_MEMBERS = 20
 
@@ -7876,6 +7965,10 @@ endfunction
 
 function AddPrestoredSaveCodeResearches takes string playerName, string saveCode returns integer
     return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_RESEARCHES, playerName, saveCode)
+endfunction
+
+function AddPrestoredSaveCodeLetter takes string playerName, string saveCode returns integer
+    return AddPrestoredSaveCodeEx(PRESTORED_SAVECODE_TYPE_LETTER, playerName, saveCode)
 endfunction
 
 function AddPrestoredSaveCodeClan takes string clanName, boolean isSinglePlayer, string saveCode returns integer
@@ -8059,6 +8152,14 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
                 endif
 
                 set result = result  + "-loadpr " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
+
+                set counter = counter + 1
+            elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_LETTER) then
+                if (counter > 0) then
+                    set result = result + "\n"
+                endif
+
+                set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(whichPlayer, PrestoredSaveCode[i])
 
                 set counter = counter + 1
             endif
