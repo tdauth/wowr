@@ -350,11 +350,11 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 ## Credits
 
 * Baradé: Creator.
-* Deranor: Tests.
-* Runeblade14: Tests.
-* Toasty Toast UwU: Tests.
 * EvilPitlord: Original map.
 * DeMoNiKuS: Original map.
+* Runeblade14: Tests.
+* Toasty Toast UwU: Tests.
+* Deranor: Tests.
 * [World of Warcraft logo](https://unrealitymag.com/the-evolution-of-the-world-of-warcraft-logo/)
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
