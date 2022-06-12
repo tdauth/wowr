@@ -59,7 +59,7 @@ function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h, -help, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
+    return "-h, -help, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -clear, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off"
 endfunction
 
 globals
@@ -6094,14 +6094,14 @@ function CreateSaveCodeLetterTextFile takes string playerNameFrom, string player
     set content = content + AppendFileContent("Code: -loadl " + saveCode)
     set content = content + AppendFileContent("From: " + playerNameFrom)
     set content = content + AppendFileContent("To: " + playerNameTo)
-    set content = content + AppendFileContent("Message Length: " + StringLength(message))
+    set content = content + AppendFileContent("Message Length: " + I2S(StringLength(message)))
     set content = content + AppendFileContent("")
 
     // The line below creates the log
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerNameFrom + "-" + playerNameTo + "-" + StringLength(message) + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-" + playerNameFrom + "-" + playerNameTo + "-" + I2S(StringLength(message)) + ".txt")
 endfunction
 
 function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns string
@@ -6128,7 +6128,7 @@ endfunction
 
 function GetSaveCodeInfosLetter takes string playerNameTo, string s returns string
     local string result = ""
-    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerNameTo))
     local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local string playerNameToText = playerNameTo
     local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
@@ -6165,7 +6165,7 @@ function GetSaveCodeInfosLetter takes string playerNameTo, string s returns stri
 endfunction
 
 function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns string
-    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerNameTo))
     local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local string playerNameToText = playerNameTo
     local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
@@ -8159,7 +8159,7 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
                     set result = result + "\n"
                 endif
 
-                set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(whichPlayer, PrestoredSaveCode[i])
+                set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(playerName, PrestoredSaveCode[i])
 
                 set counter = counter + 1
             endif
@@ -8180,6 +8180,25 @@ function GetPrestoredSaveCodeInfosClans takes nothing returns string
                 set result = result + "\n"
             endif
             set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosClan(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
+            set counter = counter + 1
+        endif
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function GetPrestoredSaveCodeInfosLetters takes player whichPlayer returns string
+    local string result = ""
+    local string playerName = GetPlayerName(whichPlayer)
+    local integer counter = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= PrestoredSaveCodeCounter)
+        if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_LETTER and (PrestoredSaveCodePlayerName[i] == playerName or (udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)] > 0 and udg_ClanName[udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]] == PrestoredSaveCodePlayerName[i]))) then
+            if (counter > 0) then
+                set result = result + "\n"
+            endif
+            set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
             set counter = counter + 1
         endif
         set i = i + 1
@@ -10792,7 +10811,23 @@ hook RemoveUnit TurretSystemRemoveVehicle
 globals
     hashtable EquipmentBagSystemHashTable = InitHashtable()
     hashtable EquipmentBagSystemStackingHashTable = InitHashtable()
+    integer array EquipmentBagRegisteredItemTypeIds
+    integer EquipmentBagRegisteredItemTypeIdsCounter = 0
 endglobals
+
+function EquipmentBagListItemTypeIds takes nothing returns string
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i >= EquipmentBagRegisteredItemTypeIdsCounter)
+        if (i > 0) then
+            set result = result + "\n"
+        endif
+        set result = result + "- " + GetObjectName(EquipmentBagRegisteredItemTypeIds[i])
+        set i = i + 1
+    endloop
+    return result
+endfunction
 
 function EquipmentBagSetAbilityCount takes integer itemTypeId, integer count returns nothing
     call SaveInteger(EquipmentBagSystemHashTable, itemTypeId, 0, count)
@@ -10811,10 +10846,24 @@ function EquipmentBagGetAbilityIdStacking takes integer itemTypeId, integer abil
 endfunction
 
 function EquipmentBagRegisterAbilityEx takes integer itemTypeId, integer abilityId, boolean stacking returns nothing
+    local integer i = 0
+    local boolean found = false
     local integer count = EquipmentBagGetAbilityCount(itemTypeId) + 1
     call SaveInteger(EquipmentBagSystemHashTable, itemTypeId, count, abilityId)
     call SaveBoolean(EquipmentBagSystemStackingHashTable, itemTypeId, abilityId, stacking)
     call EquipmentBagSetAbilityCount(itemTypeId, count)
+    // we store all item type IDs for player information
+    loop
+        exitwhen (i >= EquipmentBagRegisteredItemTypeIdsCounter or found)
+        if (EquipmentBagRegisteredItemTypeIds[i] == itemTypeId) then
+            set found = true
+        endif
+        set i = i + 1
+    endloop
+    if (not found) then
+        set EquipmentBagRegisteredItemTypeIds[EquipmentBagRegisteredItemTypeIdsCounter] = itemTypeId
+        set EquipmentBagRegisteredItemTypeIdsCounter = EquipmentBagRegisteredItemTypeIdsCounter + 1
+    endif
 endfunction
 
 function EquipmentBagRegisterAbility takes nothing returns nothing
