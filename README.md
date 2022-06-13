@@ -517,3 +517,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * raft_pl: [BTNGateOpened](https://www.hiveworkshop.com/threads/btngateopened.58424/)
 * Bribe: [Snippet Ascii](https://www.hiveworkshop.com/threads/snippet-ascii.190746/)
 * TriggerHappy: [FileIO](https://www.hiveworkshop.com/threads/fileio.307568/)
+* Wildfire: [Torch](https://www.hiveworkshop.com/threads/torch.306664/)

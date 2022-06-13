@@ -54,6 +54,53 @@ function FlushUnitParameters takes unit whichUnit returns nothing
     call FlushChildHashtable(udg_DB, GetHandleId(whichUnit))
 endfunction
 
+function StringStartsWith takes string source, string start returns boolean
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(start) or i >= StringLength(source))
+
+        if (SubString(source, i, i + 1) != SubString(start, i, i + 1)) then
+            return false
+        endif
+
+        set i = i + 1
+    endloop
+
+    return i == StringLength(start)
+endfunction
+
+function StringRemoveFromStart takes string source, string start returns string
+    if (StringStartsWith(source, start)) then
+        return SubString(source, StringLength(start), StringLength(source))
+    endif
+
+    return source
+endfunction
+
+function StringToken takes string source, integer index returns string
+    local string result = ""
+    local boolean inWhitespace = false
+    local integer currentIndex = 0
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(source) or currentIndex > index)
+        if (SubString(source, i, i + 1) == " ") then
+            if (not inWhitespace) then
+                set inWhitespace = true
+                set currentIndex = currentIndex + 1
+            endif
+        else
+            if (currentIndex == index) then
+                set result = result + SubString(source, i, i + 1)
+            endif
+            set inWhitespace = false
+        endif
+        set i = i + 1
+    endloop
+
+    return result
+endfunction
+
 function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
     return GetPlayerController(Player(PlayerNumber)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(PlayerNumber)) == PLAYER_SLOT_STATE_PLAYING
 endfunction
@@ -7030,24 +7077,111 @@ library FileIO
     endfunction
 endlibrary
 
-// Save and Load
+// Save and Load Auto
+
+globals
+    constant string SAVE_AND_LOAD_AUTO_PREFIX = "SaveAndLoadAuto"
+    trigger SaveAndLoadAutoSyncTrigger = CreateTrigger()
+    integer array SaveAndLoadAutoSyncCounter
+endglobals
+
+function GetAllPlayingUsers takes nothing returns force
+    local player whichPlayer = null
+    local force result = CreateForce()
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set whichPlayer = Player(i)
+        if (GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            call ForceAddPlayer(result, whichPlayer)
+        endif
+        set whichPlayer = null
+        set i = i + 1
+    endloop
+    return result
+endfunction
+
+function SaveAndLoadAutoGetPlayerFromSyncData takes string source returns player
+    return Player(S2I(StringToken(source, 0)))
+endfunction
+
+function SaveAndLoadAutoGetContentFromSyncData takes string source returns string
+    return StringToken(source, 1)
+endfunction
+
+function SaveAndLoadAutoTriggerAction takes nothing returns nothing
+    local string syncData = BlzGetTriggerSyncData()
+    local player sourcePlayer = SaveAndLoadAutoGetPlayerFromSyncData(syncData)
+    local string content = SaveAndLoadAutoGetContentFromSyncData(syncData)
+    call BJDebugMsg("Syncing data from player " + GetPlayerName(sourcePlayer) + ": " + content)
+    set SaveAndLoadAutoSyncCounter[GetPlayerId(sourcePlayer)] = SaveAndLoadAutoSyncCounter[GetPlayerId(sourcePlayer)] + 1
+endfunction
+
+function SaveAndLoadAutoInit takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        call BlzTriggerRegisterPlayerSyncEvent(SaveAndLoadAutoSyncTrigger, Player(i), SAVE_AND_LOAD_AUTO_PREFIX, false)
+        set i = i + 1
+    endloop
+    call TriggerAddAction(SaveAndLoadAutoSyncTrigger, function SaveAndLoadAutoTriggerAction)
+endfunction
+
+function LoadFileForAllPlayers takes File file, player whichPlayer returns string
+    local force allPlayingUsers = null
+    local string content = ""
+    local boolean synced = false
+    local real timeout = 0.0
+    set SaveAndLoadAutoSyncCounter[GetPlayerId(whichPlayer)] = 0
+    if (GetLocalPlayer() == whichPlayer) then
+        set content = file.read()
+        call BlzSendSyncData(SAVE_AND_LOAD_AUTO_PREFIX, I2S(GetPlayerId(whichPlayer)) + " " + content)
+    endif
+
+    loop
+        set allPlayingUsers = GetAllPlayingUsers()
+        set synced = SaveAndLoadAutoSyncCounter[GetPlayerId(whichPlayer)] >= CountPlayersInForceBJ(allPlayingUsers)
+        call ForceClear(allPlayingUsers)
+        call DestroyForce(allPlayingUsers)
+        set allPlayingUsers = null
+        exitwhen (timeout >= 5.0 or synced)
+        call TriggerSleepAction(1.0)
+        set timeout = timeout + 1.0
+    endloop
+
+    if (synced) then
+        return content
+    endif
+
+    return null
+endfunction
 
 function LoadAutoLoadSaveCode takes player whichPlayer returns nothing
     local string playerName = GetPlayerName(whichPlayer)
     local File file = File.open("WorldOfWarcraftReforged-" + playerName + "-auto.txt")
-    local string content = file.readAndClose()
-    local integer indexOfLoad = IndexOfString(content, "-load ")
-    if (indexOfLoad != -1) then
-        call BJDebugMsg("Found savecode")
-        call ApplySaveCode(whichPlayer, content)
+    local string content = LoadFileForAllPlayers(file, whichPlayer)
+    local integer indexOfLoad = -1
+    local boolean result = true
+
+    if (content != null) then
+        set indexOfLoad = IndexOfString(content, "-load ")
+        if (indexOfLoad != -1) then
+            call BJDebugMsg("Found savecode")
+            call ApplySaveCode(whichPlayer, content)
+        else
+            call BJDebugMsg("Found no savecode")
+        endif
+    else
+        set result = false
+        call BJDebugMsg("Error on syncing savecode")
     endif
+    call file.close()
 endfunction
 
 function WriteAutoLoadSaveCodes takes player whichPlayer returns nothing
     local string playerName = GetPlayerName(whichPlayer)
     local File file = File.open("WorldOfWarcraftReforged-" + playerName + "-auto.txt")
-    call file.write("-load " + GetSaveCode(whichPlayer) + "\n")
-    call file.write("-loadi " + GetSaveCodeItems(whichPlayer) + "\n")
+    call file.write("-load " + GetSaveCode(whichPlayer))
     call file.close()
 endfunction
 
@@ -7738,53 +7872,6 @@ globals
     framehandle array SaveCodeUICloseButton
     trigger array SaveCodeUICloseTrigger
 endglobals
-
-function StringStartsWith takes string source, string start returns boolean
-    local integer i = 0
-    loop
-        exitwhen (i == StringLength(start) or i >= StringLength(source))
-
-        if (SubString(source, i, i + 1) != SubString(start, i, i + 1)) then
-            return false
-        endif
-
-        set i = i + 1
-    endloop
-
-    return i == StringLength(start)
-endfunction
-
-function StringRemoveFromStart takes string source, string start returns string
-    if (StringStartsWith(source, start)) then
-        return SubString(source, StringLength(start), StringLength(source))
-    endif
-
-    return source
-endfunction
-
-function StringToken takes string source, integer index returns string
-    local string result = ""
-    local boolean inWhitespace = false
-    local integer currentIndex = 0
-    local integer i = 0
-    loop
-        exitwhen (i == StringLength(source) or currentIndex > index)
-        if (SubString(source, i, i + 1) == " ") then
-            if (not inWhitespace) then
-                set inWhitespace = true
-                set currentIndex = currentIndex + 1
-            endif
-        else
-            if (currentIndex == index) then
-                set result = result + SubString(source, i, i + 1)
-            endif
-            set inWhitespace = false
-        endif
-        set i = i + 1
-    endloop
-
-    return result
-endfunction
 
 function StringTokenEnteredChatMessage takes integer index returns string
     return StringToken(GetEventPlayerChatString(), index)
