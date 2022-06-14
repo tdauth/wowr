@@ -1,0 +1,68 @@
+IncludeFile "UI/FrameDef/UI/EscMenuTemplates.fdf",
+
+Frame "POPUPMENU" "MyPopupTemplate" {
+    Width 0.19625,
+    Height 0.03,
+    PopupButtonInset 0.01, // -x offset for PopupArrowFrame from RIGHT of the POPUPMENU
+
+    // Background Enabled
+    ControlBackdrop "MyPopupTemplateBackdropTemplate",
+    Frame "BACKDROP" "MyPopupTemplateBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+    }
+
+    // Background Disabled
+    ControlDisabledBackdrop "MyPopupTemplateDisabledBackdropTemplate",
+    Frame "BACKDROP" "MyPopupTemplateDisabledBackdropTemplate" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+    }
+
+    // Text markup for the current selected Text, also can be used with a FrameEvent to know when someone starts selecting.
+    PopupTitleFrame "PopupMenuTitleTemplate",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitleTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+    }
+
+    // the Arrow at the right
+    PopupArrowFrame "PopupMenuArrowTemplate",
+    Frame "BUTTON" "PopupMenuArrowTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" {
+    }
+
+	// The Container for the selectable options
+	// actulay it is smarter to not define this in the Template.
+    //PopupMenuFrame "TestPopupMenu",
+    //Frame "MENU" "TestPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+//
+//	}
+}
+
+Frame "POPUPMENU" "TestPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    // The Container for the selectable options
+    PopupMenuFrame "TestPopupMenu",
+    Frame "MENU" "TestPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        // the selectable options
+		// they will try to load a Localized String
+        MenuItem "TestA",     -2,
+        MenuItem "TestB",     -2,
+        MenuItem "TestC",     -2,
+        MenuItem "TestD",     -2,
+    }
+}
+
+Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "HeroesPopupMenu",
+    Frame "MENU" "HeroesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "COLON_GOLD",     -2,
+        MenuItem "COLON_LUMBER",     -2,
+        MenuItem "COLON_FOOD",     -2,
+    }
+}
+
+Frame "EDITBOX" "HeroesEditBox" INHERITS WITHCHILDREN "EscMenuEditBoxTemplate" {
+    Width 0.15,
+    Height 0.037,
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.015, "",
+    SetPoint TOPLEFT, "HeroesPopup", TOPRIGHT, 0.0, 0.0,
+
+    EditTextFrame "CustomCommandsEditBoxText",
+    Frame "TEXT" "CustomCommandsEditBoxText" INHERITS "EscMenuEditBoxTextTemplate" {
+    }
+}

@@ -7757,6 +7757,119 @@ function CreateBackpackUI takes player whichPlayer returns nothing
 endfunction
 
 /**
+ * AI Players GUI which helps to configure AI players.
+ */
+globals
+    constant real AI_PLAYERS_UI_SIZE_X = 0.80
+    constant real AI_PLAYERS_UI_SIZE_Y = 0.42
+
+    constant real AI_PLAYERS_UI_LABEL_X = 0.055
+    constant real AI_PLAYERS_UI_LABEL_WIDTH = 0.058018
+
+    constant real AI_PLAYERS_UI_LINEEDIT_X = AI_PLAYERS_UI_LABEL_X + AI_PLAYERS_UI_LABEL_WIDTH + 0.01
+    constant real AI_PLAYERS_UI_LINEEDIT_WIDTH = 0.35
+
+    constant real AI_PLAYERS_UI_UPDATE_BUTTON_X = 0.47837
+    constant real AI_PLAYERS_UI_UPDATE_BUTTON_WIDTH = 0.060
+
+    constant real AI_PLAYERS_UI_LOAD_BUTTON_X = 0.54136
+    constant real AI_PLAYERS_UI_LOAD_BUTTON_WIDTH = 0.060
+
+    constant real AI_PLAYERS_UI_LOAD_AUTO_BUTTON_X = 0.3
+    constant real AI_PLAYERS_UI_LOAD_AUTO_BUTTON_WIDTH = 0.066
+
+    constant real AI_PLAYERS_UI_WRITE_AUTO_BUTTON_X = 0.4
+    constant real AI_PLAYERS_UI_WRITE_AUTO_BUTTON_WIDTH = 0.066
+
+    constant real AI_PLAYERS_UI_LINE_START_Y = 0.528122
+    constant real AI_PLAYERS_UI_LINE_HEIGHT = 0.03
+    constant real AI_PLAYERS_UI_LINE_SPACING = 0.01
+
+    constant real AI_PLAYERS_UI_TOOLTIP_X = 0.61
+    constant real AI_PLAYERS_UI_TOOLTIP_WIDTH = 0.17
+    constant real AI_PLAYERS_UI_TOOLTIP_HEIGHT = 0.34
+
+    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_X = 0.64
+    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_Y = 0.49
+    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_WIDTH = 0.10
+    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_HEIGHT = 0.32
+
+    framehandle array AiPlayersUIBackgroundFrame
+    framehandle array AiPlayersUITitleFrame
+
+    // header line
+    framehandle array AiPlayersUILabelFrameColumnPlayerName
+    framehandle array AiPlayersUILabelFrameColumnHero
+
+    framehandle array AiPlayersUICloseButton
+    trigger array AiPlayersUICloseTrigger
+endglobals
+
+function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns nothing
+    if (whichPlayer == GetLocalPlayer()) then
+        call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], visible)
+    endif
+endfunction
+
+function ShowAiPlayersUI takes player whichPlayer returns nothing
+    call SetAiPlayersUIVisible(whichPlayer, true)
+endfunction
+
+function HideAiPlayersUI takes player whichPlayer returns nothing
+    call SetAiPlayersUIVisible(whichPlayer, false)
+endfunction
+
+function AiPlayersUICloseFunction takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    //call BJDebugMsg("Click close")
+    call HideAiPlayersUI(Player(playerId))
+endfunction
+
+function CreateAiPlayersUI takes player whichPlayer returns nothing
+    local real x
+    local real y
+
+    call BlzLoadTOCFile("war3mapImported\\saveguiTOC.toc")
+    //call BlzLoadTOCFile("war3mapImported\\aiplayersTOC.toc")
+
+    set AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
+    call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_SIZE_X, 0.57 - AI_PLAYERS_UI_SIZE_Y)
+
+    set AiPlayersUITitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
+    call BlzFrameSetAbsPoint(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_SIZE_X, 0.54 - 0.1)
+    call BlzFrameSetText(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], "AI Players")
+    call BlzFrameSetTextAlignment(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], 1.0)
+    call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], false)
+
+    // close button
+
+    //eventHandler = CreateTrigger() --Create the FRAMEEVENT_EDITBOX_TEXT_CHANGED trigger
+    //TriggerAddAction(eventHandler, TEXT_CHANGED)
+    //BlzTriggerRegisterFrameEvent(eventHandler, editbox, FRAMEEVENT_EDITBOX_TEXT_CHANGED)
+
+    set AiPlayersUICloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    set x = 0.34
+    set y = 0.22
+    call BlzFrameSetAbsPoint(AiPlayersUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
+    call BlzFrameSetAbsPoint(AiPlayersUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
+    call BlzFrameSetText(AiPlayersUICloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
+    call BlzFrameSetScale(AiPlayersUICloseButton[GetPlayerId(whichPlayer)], 1.00)
+
+    set AiPlayersUICloseTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(AiPlayersUICloseTrigger[GetPlayerId(whichPlayer)], AiPlayersUICloseButton[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(AiPlayersUICloseTrigger[GetPlayerId(whichPlayer)], function AiPlayersUICloseFunction)
+    call SaveTriggerParameterInteger(AiPlayersUICloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
+
+    // hide
+    call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
+endfunction
+
+/**
  * Savecode GUI which helps to copy & paste savecodes.
  */
 globals
