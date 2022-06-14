@@ -8981,42 +8981,44 @@ function GetPrestoredSaveCodeAccounts takes nothing returns string
     local integer i = 0
     loop
         exitwhen (i >= PrestoredSaveCodeCounter)
-        set add = true
-        set matchingPlayer = null
-        set j = 0
-        loop
-            exitwhen (j >= bj_MAX_PLAYERS or matchingPlayer != null)
-            if (GetPlayerName(Player(j)) == PrestoredSaveCodePlayerName[i] or (udg_ClanPlayerClan[j + 1] > 0 and udg_ClanName[udg_ClanPlayerClan[j + 1]] == PrestoredSaveCodePlayerName[i])) then
-                set matchingPlayer = Player(j)
-            endif
-            set j = j + 1
-        endloop
-        if (matchingPlayer != null) then
+        if (PrestoredSaveCodeType[i] != PRESTORED_SAVECODE_TYPE_CLANS) then
+            set add = true
+            set matchingPlayer = null
             set j = 0
             loop
-                exitwhen (j >= onlinePlayersCounter or not add)
-                if (onlinePlayers[j] == PrestoredSaveCodePlayerName[i]) then
-                    set add = false
+                exitwhen (j >= bj_MAX_PLAYERS or matchingPlayer != null)
+                if (GetPlayerName(Player(j)) == PrestoredSaveCodePlayerName[i]) then
+                    set matchingPlayer = Player(j)
                 endif
                 set j = j + 1
             endloop
-            if (add) then
-                set onlinePlayers[onlinePlayersCounter] = PrestoredSaveCodePlayerName[i]
-                set onlinePlayersMatching[onlinePlayersCounter] = matchingPlayer
-                set onlinePlayersCounter = onlinePlayersCounter + 1
-            endif
-        else
-            set j = 0
-            loop
-                exitwhen (j >= offlinePlayersCounter or not add)
-                if (offlinePlayers[j] == PrestoredSaveCodePlayerName[i]) then
-                    set add = false
+            if (matchingPlayer != null) then
+                set j = 0
+                loop
+                    exitwhen (j >= onlinePlayersCounter or not add)
+                    if (onlinePlayers[j] == PrestoredSaveCodePlayerName[i]) then
+                        set add = false
+                    endif
+                    set j = j + 1
+                endloop
+                if (add) then
+                    set onlinePlayers[onlinePlayersCounter] = PrestoredSaveCodePlayerName[i]
+                    set onlinePlayersMatching[onlinePlayersCounter] = matchingPlayer
+                    set onlinePlayersCounter = onlinePlayersCounter + 1
                 endif
-                set j = j + 1
-            endloop
-            if (add) then
-                set offlinePlayers[offlinePlayersCounter] = PrestoredSaveCodePlayerName[i]
-                set offlinePlayersCounter = offlinePlayersCounter + 1
+            else
+                set j = 0
+                loop
+                    exitwhen (j >= offlinePlayersCounter or not add)
+                    if (offlinePlayers[j] == PrestoredSaveCodePlayerName[i]) then
+                        set add = false
+                    endif
+                    set j = j + 1
+                endloop
+                if (add) then
+                    set offlinePlayers[offlinePlayersCounter] = PrestoredSaveCodePlayerName[i]
+                    set offlinePlayersCounter = offlinePlayersCounter + 1
+                endif
             endif
         endif
         set i = i + 1
