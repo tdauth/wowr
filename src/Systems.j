@@ -7872,7 +7872,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], false)
 
     // header line
-    set AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLinePlayerName" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], "Player Name")
@@ -7880,7 +7880,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], false)
 
-    set AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHero" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], "Hero")
@@ -7888,7 +7888,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], false)
 
-    set AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHeroStartLevel" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], "Hero Start Level")
@@ -7896,7 +7896,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], false)
 
-    set AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLocation" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)], "Start Location")
@@ -7904,7 +7904,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocation[GetPlayerId(whichPlayer)], false)
 
-    set AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineRace" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)], "Race")
@@ -7912,7 +7912,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRace[GetPlayerId(whichPlayer)], false)
 
-    set AiPlayersUILabelFrameColumnProfession[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    set AiPlayersUILabelFrameColumnProfession[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineProfession" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfession[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfession[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(AiPlayersUILabelFrameColumnProfession[GetPlayerId(whichPlayer)], "Profession")
