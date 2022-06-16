@@ -6455,7 +6455,7 @@ function ApplySaveCodeClan takes player whichPlayer, string name, string s retur
 
                 if (atLeastOne) then
                     call PickClanAIPlayer(clan)
-                 
+
                     call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_UNITACQUIRED, GetPlayerNameColored(whichPlayer) + " has created a new clan " + udg_ClanName[clan] + "!")
                     call PlaySoundBJ(gg_snd_ClanInvitation)
                 endif
@@ -7760,30 +7760,24 @@ endfunction
  * AI Players GUI which helps to configure AI players.
  */
 globals
+    constant real AI_PLAYERS_UI_X = 0.0
+    constant real AI_PLAYERS_UI_Y = 0.55
     constant real AI_PLAYERS_UI_SIZE_X = 0.80
-    constant real AI_PLAYERS_UI_SIZE_Y = 0.42
+    constant real AI_PLAYERS_UI_SIZE_Y = 0.40
 
-    constant real AI_PLAYERS_UI_LABEL_X = 0.055
-    constant real AI_PLAYERS_UI_LABEL_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_LINE_HEADERS_Y = AI_PLAYERS_UI_Y - 0.06
+    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.02
 
-    constant real AI_PLAYERS_UI_LINEEDIT_X = AI_PLAYERS_UI_LABEL_X + AI_PLAYERS_UI_LABEL_WIDTH + 0.01
-    constant real AI_PLAYERS_UI_LINEEDIT_WIDTH = 0.35
+    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X = AI_PLAYERS_UI_X + 0.05
+    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH = 0.058018
 
-    constant real AI_PLAYERS_UI_UPDATE_BUTTON_X = 0.47837
-    constant real AI_PLAYERS_UI_UPDATE_BUTTON_WIDTH = 0.060
+    constant real AI_PLAYERS_UI_COLUMN_SPACING_X = 0.02
 
-    constant real AI_PLAYERS_UI_LOAD_BUTTON_X = 0.54136
-    constant real AI_PLAYERS_UI_LOAD_BUTTON_WIDTH = 0.060
+    constant real AI_PLAYERS_UI_COLUMN_HERO_X = AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_HERO_WIDTH = 0.058018
 
-    constant real AI_PLAYERS_UI_LOAD_AUTO_BUTTON_X = 0.3
-    constant real AI_PLAYERS_UI_LOAD_AUTO_BUTTON_WIDTH = 0.066
-
-    constant real AI_PLAYERS_UI_WRITE_AUTO_BUTTON_X = 0.4
-    constant real AI_PLAYERS_UI_WRITE_AUTO_BUTTON_WIDTH = 0.066
-
-    constant real AI_PLAYERS_UI_LINE_START_Y = 0.528122
-    constant real AI_PLAYERS_UI_LINE_HEIGHT = 0.03
-    constant real AI_PLAYERS_UI_LINE_SPACING = 0.01
+    constant real AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X = AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH = 0.058018
 
     constant real AI_PLAYERS_UI_TOOLTIP_X = 0.61
     constant real AI_PLAYERS_UI_TOOLTIP_WIDTH = 0.17
@@ -7800,6 +7794,8 @@ globals
     // header line
     framehandle array AiPlayersUILabelFrameColumnPlayerName
     framehandle array AiPlayersUILabelFrameColumnHero
+    framehandle array AiPlayersUILabelFrameColumnHeroStartLevel
+    framehandle array AiPlayersUILabelFrameColumnHeroProfession1
 
     framehandle array AiPlayersUICloseButton
     trigger array AiPlayersUICloseTrigger
@@ -7808,6 +7804,9 @@ endglobals
 function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns nothing
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], visible)
+        call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], visible)
         call BlzFrameSetVisible(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], visible)
     endif
 endfunction
@@ -7834,8 +7833,8 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     //call BlzLoadTOCFile("war3mapImported\\aiplayersTOC.toc")
 
     set AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
-    call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_SIZE_X, 0.57 - AI_PLAYERS_UI_SIZE_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_X, AI_PLAYERS_UI_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_X + AI_PLAYERS_UI_SIZE_X, AI_PLAYERS_UI_Y - AI_PLAYERS_UI_SIZE_Y)
 
     set AiPlayersUITitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
@@ -7844,6 +7843,31 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetTextAlignment(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetScale(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], 1.0)
     call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], false)
+
+    // header line
+    set AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], "Player Name")
+    call BlzFrameSetTextAlignment(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], 1.0)
+    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerName[GetPlayerId(whichPlayer)], false)
+
+    set AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], "Hero")
+    call BlzFrameSetTextAlignment(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], 1.0)
+    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHero[GetPlayerId(whichPlayer)], false)
+
+    set AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLine" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], "Hero Start Level")
+    call BlzFrameSetTextAlignment(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], 1.0)
+    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevel[GetPlayerId(whichPlayer)], false)
 
     // close button
 
@@ -7865,7 +7889,6 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call SaveTriggerParameterInteger(AiPlayersUICloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
 
     // hide
-    call BlzFrameSetVisible(AiPlayersUITitleFrame[GetPlayerId(whichPlayer)], false)
     call BlzFrameSetVisible(AiPlayersUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
 endfunction
 
@@ -8907,7 +8930,7 @@ globals
     constant integer PRESTORED_SAVECODE_TYPE_RESEARCHES = 4
     constant integer PRESTORED_SAVECODE_TYPE_CLANS = 5
     constant integer PRESTORED_SAVECODE_TYPE_LETTER = 6
-    
+
     constant integer PRESTORED_SAVECODE_MAX_CLAN_MEMBERS = 20
 
     string array PrestoredSaveCodePlayerName // can also be the clan name
@@ -8918,9 +8941,9 @@ globals
     integer array PrestoredSaveCodePlayerRanks // only for clan save codes
     integer array PrestoredSaveCodePlayerNamesCounter // only for clan save codes
     integer PrestoredSaveCodeCounter = 0
-    
+
     integer lastAddedPrestoredClan = 0
-    
+
     force prestoredElvenClanMembers = CreateForce()
 endglobals
 

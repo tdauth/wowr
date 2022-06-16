@@ -219,7 +219,7 @@ This version provides several new features compared to the original map [World o
 * New bosses: Old Gods.
 * New hero: Goblin War Zeppelin.
 * New hero: Goblin Heavy Tank.
-* Custom Turret System which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
+* Custom Turret System which is [part of this repository](./systems/).
 * New hero: Void Lord.
 
 ## Bug Fixes
