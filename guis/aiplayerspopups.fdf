@@ -39,9 +39,9 @@ Frame "POPUPMENU" "TestPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     Frame "MENU" "TestPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
         // the selectable options
 		// they will try to load a Localized String
-        MenuItem "TestA",     -2,
-        MenuItem "TestB",     -2,
-        MenuItem "TestC",     -2,
+        MenuItem "Random",     -2,
+        MenuItem "Random Human",     -2,
+        MenuItem "Mountain King",     -2,
         MenuItem "TestD",     -2,
     }
 }
@@ -49,9 +49,9 @@ Frame "POPUPMENU" "TestPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
 Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "HeroesPopupMenu",
     Frame "MENU" "HeroesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
-        MenuItem "COLON_GOLD",     -2,
-        MenuItem "COLON_LUMBER",     -2,
-        MenuItem "COLON_FOOD",     -2,
+        MenuItem "Random",     -2,
+        MenuItem "Random Human",     -2,
+        MenuItem "Mountain King",     -2,
     }
 }
 
@@ -64,5 +64,32 @@ Frame "EDITBOX" "HeroesEditBox" INHERITS WITHCHILDREN "EscMenuEditBoxTemplate" {
 
     EditTextFrame "CustomCommandsEditBoxText",
     Frame "TEXT" "CustomCommandsEditBoxText" INHERITS "EscMenuEditBoxTextTemplate" {
+    }
+}
+
+Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "StartLocationsPopupMenu",
+    Frame "MENU" "StartLocationsPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Random",     -2,
+        MenuItem "New Stormwind",     -2,
+        MenuItem "Orgrimmar",     -2,
+    }
+}
+
+Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "RacesPopupMenu",
+    Frame "MENU" "RacesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Freelancer",     -2,
+        MenuItem "Random",     -2,
+        MenuItem "Human",     -2,
+    }
+}
+
+Frame "POPUPMENU" "ProfessionsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "ProfessionsPopupMenu",
+    Frame "MENU" "ProfessionsPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Random",     -2,
+        MenuItem "Herbalist",     -2,
+        MenuItem "Alchemist",     -2,
     }
 }
