@@ -519,3 +519,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * TriggerHappy: [FileIO](https://www.hiveworkshop.com/threads/fileio.307568/)
 * Wildfire: [Torch](https://www.hiveworkshop.com/threads/torch.306664/)
 * Explobomb: [Fel Reaver](https://www.hiveworkshop.com/threads/fel-reaver.325698/)
+* Mr. Bob: [Library](https://www.hiveworkshop.com/threads/library.135790/)

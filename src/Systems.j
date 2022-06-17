@@ -13485,3 +13485,32 @@ function PickpocketingStealItem takes unit hero, unit target returns item
 
     return null
 endfunction
+
+// Baradé's Vote System
+globals
+    constant real VOTE_SYSTEM_DEFAULT_TIMEOUT = 15.0
+
+    dialog array VoteSystemVoteDialog
+    trigger array VoteSystemVoteButtonClickTrigger
+    timer array VoteSystemVoteTimer
+    timerdialog array VoteSystemVoteTimerDialog
+    boolean array VoteSystemVoteIsRunning
+    integer array VoteSystemVoteVotes
+    // choices
+    button array VoteSystemVoteDialogButton
+    trigger array VoteSystemVoteChoiceCallbackTrigger
+
+    integer VoteSystemVotesCounter = 0
+
+    trigger VoteSystemPlayerLeavesTrigger = CreateTrigger()
+endglobals
+
+function VoteCreate takes string title returns integer
+    return 0
+endfunction
+
+function VoteAddChoice takes string name, code callback returns nothing
+endfunction
+
+function VoteStart takes integer vote returns nothing
+endfunction
