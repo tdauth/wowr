@@ -231,6 +231,12 @@ This version contains fixes of several bugs from the original map [World of Warc
 * Summoned units won't respawn again like regular creeps.
 * Undead housings can be used as Undead goldmines.
 
+## Code
+
+The code used in the map script can be found in [Systems.j](./src/Systems.j).
+It is copied into the map script whenever it is updated.
+All systems are put into one file to make it searchable.
+
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
