@@ -528,3 +528,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mr. Bob: [Library](https://www.hiveworkshop.com/threads/library.135790/)
 * Missing Shadowsong, YourArthas, Zorrot: [Elune The Night Goddess](https://www.hiveworkshop.com/threads/elune-the-night-goddess.339911/)
 * Vensedouh: [Elune's Vision](https://www.hiveworkshop.com/threads/elunes-vision.329082/)
+* Alethos: [Envoy of the Goddess / Vicaress of Elune](https://www.hiveworkshop.com/threads/envoy-of-the-goddess-vicaress-of-elune.303229/)
