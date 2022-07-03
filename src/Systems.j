@@ -13381,8 +13381,8 @@ function MovementSystemTimerFunctionUpdate takes nothing returns nothing
 
             if (MovementSystemMoveForward[i]) then
                 if (GetUnitCurrentOrder(whichUnit) == OrderId("idle")) then
-                    set x = PolarProjectionX(GetUnitX(whichUnit), facing, 100.0)
-                    set y = PolarProjectionY(GetUnitY(whichUnit), facing, 100.0)
+                    set x = PolarProjectionX(GetUnitX(whichUnit), facing, 5.0)
+                    set y = PolarProjectionY(GetUnitY(whichUnit), facing, 5.0)
                     call SetUnitPosition(whichUnit, x, y)
                     call SetUnitAnimation(whichUnit, "stand")
                 endif
