@@ -1,7 +1,7 @@
 IncludeFile "UI/FrameDef/UI/EscMenuTemplates.fdf",
 
 Frame "POPUPMENU" "MyPopupTemplate" {
-    Width 0.19625,
+    Width 0.11,
     Height 0.03,
     PopupButtonInset 0.01, // -x offset for PopupArrowFrame from RIGHT of the POPUPMENU
 

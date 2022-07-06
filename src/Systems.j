@@ -7984,9 +7984,6 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     local real y
     local integer playerId = GetPlayerId(whichPlayer)
 
-    //call BlzLoadTOCFile("war3mapImported\\saveguiTOC.toc")
-    call BlzLoadTOCFile("war3mapImported\\aiplayersTOC.toc")
-
     set AiPlayersUIBackgroundFrame[playerId] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[playerId], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_X, AI_PLAYERS_UI_Y)
     call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_X + AI_PLAYERS_UI_SIZE_X, AI_PLAYERS_UI_Y - AI_PLAYERS_UI_SIZE_Y)
@@ -8118,21 +8115,21 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
 
                 set AiPlayersUILabelFrameColumnStartLocationEdit[index] = BlzCreateFrame("StartLocationsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
                 //call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLocationEdit[index], "AI " + I2S(i + 1))
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartLocationEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnRaceEdit[index] = BlzCreateFrame("RacesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_RACE_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
                 //call BlzFrameSetText(AiPlayersUILabelFrameColumnRaceEdit[index], "AI " + I2S(i + 1))
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnRaceEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRaceEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnProfessionEdit[index] = BlzCreateFrame("ProfessionsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PROFESSION_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
                 //call BlzFrameSetText(AiPlayersUILabelFrameColumnProfessionEdit[index], "AI " + I2S(i + 1))
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnProfessionEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnProfessionEdit[index], false)
@@ -8817,8 +8814,6 @@ endfunction
 function CreateSaveCodeUI takes player whichPlayer returns nothing
     local real x
     local real y
-
-    call BlzLoadTOCFile("war3mapImported\\saveguiTOC.toc")
 
     set SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
@@ -13454,6 +13449,13 @@ function MovementSystemInit takes nothing returns nothing
     call TriggerAddAction(MovementSystemLeftTrigger, function MovementSystemTriggerActionRotateLeft)
     call TriggerAddCondition(MovementSystemLeftStopTrigger, Condition(function MovementSystemTriggerConditionMovementLeftStop))
     call TriggerAddAction(MovementSystemLeftStopTrigger, function MovementSystemTriggerActionRotateLeftStop)
+endfunction
+
+// TOC files
+
+function LoadTOCFiles takes nothing returns nothing
+    call BlzLoadTOCFile("war3mapImported\\saveguiTOC.toc")
+    call BlzLoadTOCFile("war3mapImported\\aiplayersTOC.toc")
 endfunction
 
 
