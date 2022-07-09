@@ -529,3 +529,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Missing Shadowsong, YourArthas, Zorrot: [Elune The Night Goddess](https://www.hiveworkshop.com/threads/elune-the-night-goddess.339911/)
 * Vensedouh: [Elune's Vision](https://www.hiveworkshop.com/threads/elunes-vision.329082/)
 * Alethos: [Envoy of the Goddess / Vicaress of Elune](https://www.hiveworkshop.com/threads/envoy-of-the-goddess-vicaress-of-elune.303229/)
+* Blizzard Entertainment: [BTNINV_Misc_Bag_09](https://www.hiveworkshop.com/threads/btninv_misc_bag_09.55166/)
+* Direfury: [†-Revellion-†'s Goblin Engineer](https://www.hiveworkshop.com/threads/%E2%80%A0-revellion-%E2%80%A0s-goblin-engineer.135478/)
