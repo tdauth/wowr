@@ -10306,7 +10306,7 @@ function RandomLivingTreeDestructableInCircle takes real radius, location loc re
     return bj_destRandomCurrentPick
 endfunction
 
-// Baradé's Item Unstack System 1.3
+// Baradé's Item Unstack System 1.4
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
 //
@@ -10315,6 +10315,7 @@ endfunction
 // - Give certain item types a maximum stack value: "Stats - Max Stacks". Note that some of them like Wards do already have specified some values greater than 0 here.
 // - Copy this code into your map script.
 // - Call the function ItemUnstackSystemInit during the map initialization.
+// - Customize the system by changing the values returned by ItemUnstackMaximumCharges and ItemUnstackAllowStackingNextItem.
 //
 // Recommended (optional):
 // - Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell|NDouble right click item to unstack|R" to guide the player.
@@ -10323,6 +10324,11 @@ endfunction
 // https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-1.339109/
 //
 // Change Log:
+//
+// 1.4 2022-07-09:
+// - ItemUnstackMaximumCharges allows changing the number of unstacked charges.
+// - ItemUnstackAllowStackingNextItem allows stacking the unstacked item to the next item with the same type instead of only using a free slot.
+// - ItemUnstackItemGetMaxStacks to check if the item is even stackable and to make sure item charges will not be over the maximum.
 //
 // 1.3 2022-04-16:
 // - Refactor function names.
@@ -10339,6 +10345,20 @@ endfunction
 // - Add some items with custom names and descriptions to test stacking/unstacking them.
 // - Move system code into converted trigger.
 // - Update preview image.
+
+constant function ItemUnstackMaximumCharges takes nothing returns integer
+    return 1
+endfunction
+
+constant function ItemUnstackAllowStackingNextItem takes nothing returns boolean
+    return true
+endfunction
+
+function ItemUnstackItemGetMaxStacks takes item whichItem returns integer
+    // TODO 'ista' cannot be extracted.
+    //return BlzGetItemIntegerField(whichItem, ConvertItemIntegerField('ista'))
+    return 100
+endfunction
 
 function ItemUnstackCopyItemProps takes item sourceItem, item targetItem returns nothing
     // some seem broken
@@ -10367,43 +10387,80 @@ function ItemUnstackGetItemSlot takes unit hero, item whichItem returns integer
     return sourceSlot
 endfunction
 
-function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId, integer sourceSlot returns item
+function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId, integer charges, integer sourceSlot, item sourceItem returns item
+    local item itemInNextSlot = null
+    local item itemInPreviousSlot = null
+    local boolean addedToFreeSlot = false
     // we need to specify the target slot explicitly to prevent stacking the items again
     // we prefer empty slots next to the unstacked item
     local item unstackedItem = null
     local integer i = sourceSlot + 1
     local integer j = sourceSlot - 1
-    loop
-        if (i < UnitInventorySize(hero) and UnitItemInSlot(hero, i) == null) then
-            call UnitAddItemToSlotById(hero, itemTypeId, i)
-            set unstackedItem = UnitItemInSlot(hero, i)
-        elseif (j >= 0 and UnitItemInSlot(hero, j) == null) then
-            call UnitAddItemToSlotById(hero, itemTypeId, j)
-            set unstackedItem = UnitItemInSlot(hero, j)
-        endif
-        set i = i + 1
-        set j = j - 1
-        exitwhen (unstackedItem != null or (i >= UnitInventorySize(hero) and j < 0))
-    endloop
+    // check for a slot with an item with the same type and free stacks
+    if (ItemUnstackAllowStackingNextItem()) then
+        loop
+            set itemInNextSlot = UnitItemInSlot(hero, i)
+            if (i < UnitInventorySize(hero)) then
+                if (itemInNextSlot == null) then
+                    set addedToFreeSlot = true
+                    call UnitAddItemToSlotById(hero, itemTypeId, i)
+                    set unstackedItem = UnitItemInSlot(hero, i)
+                elseif (GetItemTypeId(itemInNextSlot) == itemTypeId and GetItemCharges(itemInNextSlot) < ItemUnstackItemGetMaxStacks(itemInNextSlot)) then
+                    set unstackedItem = itemInNextSlot
+                endif
+            endif
+            set i = i + 1
+            exitwhen (unstackedItem != null or i >= UnitInventorySize(hero))
+        endloop
+    endif
+
+    // check for a free slot
+    if (unstackedItem == null) then
+        set i = sourceSlot + 1
+        set j = sourceSlot - 1
+        loop
+            set itemInNextSlot = UnitItemInSlot(hero, i)
+            set itemInPreviousSlot = UnitItemInSlot(hero, j)
+            if (i < UnitInventorySize(hero) and itemInNextSlot == null) then
+                set addedToFreeSlot = true
+                call UnitAddItemToSlotById(hero, itemTypeId, i)
+                set unstackedItem = UnitItemInSlot(hero, i)
+            elseif (j >= 0 and itemInPreviousSlot == null) then
+                set addedToFreeSlot = true
+                call UnitAddItemToSlotById(hero, itemTypeId, j)
+                set unstackedItem = UnitItemInSlot(hero, j)
+            endif
+            set i = i + 1
+            set j = j - 1
+            exitwhen (unstackedItem != null or (i >= UnitInventorySize(hero) and j < 0))
+        endloop
+    endif
+
+    if (addedToFreeSlot) then
+        call SetItemCharges(unstackedItem, charges)
+        call ItemUnstackCopyItemProps(sourceItem, unstackedItem)
+    else
+        call SetItemCharges(unstackedItem, GetItemCharges(unstackedItem) + charges)
+    endif
+
     return unstackedItem
 endfunction
 
-function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer itemTypeId, integer sourceSlot, item sourceItem returns nothing
+function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer itemTypeId, integer charges, integer sourceSlot, item sourceItem returns nothing
     // search for a free slot to unstack the item
-    local item unstackedItem = ItemUnstackAddItemToNearestFreeSlot(hero, itemTypeId, sourceSlot)
+    local item unstackedItem = ItemUnstackAddItemToNearestFreeSlot(hero, itemTypeId, charges, sourceSlot, sourceItem)
     // create the item for the hero with one slot if all slots are used
     if (unstackedItem == null) then
         set unstackedItem = CreateItem(itemTypeId, GetUnitX(hero), GetUnitY(hero))
+        call SetItemCharges(unstackedItem, charges)
+        call ItemUnstackCopyItemProps(sourceItem, unstackedItem)
     endif
-
-    call SetItemCharges(unstackedItem, 1)
-    call ItemUnstackCopyItemProps(sourceItem, unstackedItem)
 
     set unstackedItem = null
 endfunction
 
 function ItemUnstackTriggerCondition takes nothing returns boolean
-    return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetItemCharges(GetOrderTargetItem()) > 1 and ItemUnstackGetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
+    return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and ItemUnstackItemGetMaxStacks(GetOrderTargetItem()) > 0 and GetItemCharges(GetOrderTargetItem()) > 1 and ItemUnstackGetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
 endfunction
 
 function ItemUnstackTriggerAction takes nothing returns nothing
@@ -10411,13 +10468,15 @@ function ItemUnstackTriggerAction takes nothing returns nothing
     local item sourceItem = GetOrderTargetItem()
     local integer sourceItemTypeId = GetItemTypeId(sourceItem)
     local integer sourceSlot = ItemUnstackGetItemSlot(hero, sourceItem)
+    local integer charges = 1
     // wait for completing the order or the item is not at the target slot
     call TriggerSleepAction(0.0)
     // item does still exist and was dropped on its previous slot
     // we are not sure if this works when the item is removed via triggers since the value of the variable becomes an invalid reference
     if (sourceItem != null and GetWidgetLife(sourceItem) > 0.0 and GetItemCharges(sourceItem) > 0 and UnitItemInSlot(hero, sourceSlot) == sourceItem) then
-        call SetItemCharges(sourceItem, GetItemCharges(sourceItem) - 1)
-        call ItemUnstackAddItemToNearestFreeSlotOrGround(hero, sourceItemTypeId, sourceSlot, sourceItem)
+        set charges = IMinBJ(GetItemCharges(sourceItem), ItemUnstackMaximumCharges())
+        call SetItemCharges(sourceItem, GetItemCharges(sourceItem) - charges)
+        call ItemUnstackAddItemToNearestFreeSlotOrGround(hero, sourceItemTypeId, charges, sourceSlot, sourceItem)
     endif
 
     set hero = null
