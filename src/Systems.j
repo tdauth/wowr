@@ -2421,10 +2421,11 @@ endfunction
 
 function GetHeroLevelMaxXP takes integer heroLevel returns integer
     local integer result = 0 // level 1 XP
-    local integer i = 5
+    local integer levelFactor = 2
+    local integer i = 3
     loop
         exitwhen (i > heroLevel + 1)
-        set result = result + i * 1000
+        set result = result + i * 1000 * levelFactor
         set i = i + 1
     endloop
     return result
@@ -2432,9 +2433,10 @@ endfunction
 
 function GetHeroLevelByXP takes integer xp returns integer
     local integer heroLevel = 1
-    local integer i = 5
+    local integer levelFactor = 2
+    local integer i = 3
     loop
-        set xp = xp - i * 1000
+        set xp = xp - i * 1000 * levelFactor
         exitwhen (xp < 0)
         set heroLevel = heroLevel + 1
         set i = i + 1
@@ -11641,12 +11643,11 @@ endfunction
 
 function TurretSystemSelectionAddTurrets takes player whichPlayer, unit vehicle returns nothing
     local group turrets = TurretSystemGetTurrets(vehicle)
-    call SyncSelections() // avoid desyncs
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         // Use only local code (no net traffic) within this block to avoid desyncs.
+        call SyncSelections() // avoid desyncs
         call ForGroup(turrets, function SelectGroupBJEnum)
     endif
-    call SyncSelections() // avoid desyncs
     call GroupClear(turrets)
     call DestroyGroup(turrets)
     set turrets = null
@@ -11654,11 +11655,11 @@ endfunction
 
 function TurretSystemSelectionRemoveTurrets takes player whichPlayer, unit vehicle returns nothing
     local group turrets = TurretSystemGetTurrets(vehicle)
-    call SyncSelections() // avoid desyncs
     if (GetLocalPlayer() == GetTriggerPlayer()) then
+        // Use only local code (no net traffic) within this block to avoid desyncs.
+        call SyncSelections() // avoid desyncs
         call ForGroup(turrets, function TurretSystemUnselectGroupEnum)
     endif
-    call SyncSelections() // avoid desyncs
     call GroupClear(turrets)
     call DestroyGroup(turrets)
     set turrets = null
