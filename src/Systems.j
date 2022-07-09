@@ -2421,11 +2421,10 @@ endfunction
 
 function GetHeroLevelMaxXP takes integer heroLevel returns integer
     local integer result = 0 // level 1 XP
-    local integer levelFactor = 2
     local integer i = 3
     loop
         exitwhen (i > heroLevel + 1)
-        set result = result + i * 1000 * levelFactor
+        set result = result + i * 1000
         set i = i + 1
     endloop
     return result
@@ -2433,10 +2432,9 @@ endfunction
 
 function GetHeroLevelByXP takes integer xp returns integer
     local integer heroLevel = 1
-    local integer levelFactor = 2
     local integer i = 3
     loop
-        set xp = xp - i * 1000 * levelFactor
+        set xp = xp - i * 1000
         exitwhen (xp < 0)
         set heroLevel = heroLevel + 1
         set i = i + 1
