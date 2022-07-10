@@ -10306,61 +10306,88 @@ function RandomLivingTreeDestructableInCircle takes real radius, location loc re
     return bj_destRandomCurrentPick
 endfunction
 
-// Baradé's Item Unstack System 1.4
+// Baradé's Item Unstack System 1.5
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
 //
 // Usage:
 // - Enable Warcraft's native stack system in the "Advanced - Gameplay Constants - Inventory - Enable Item Stacking".
 // - Give certain item types a maximum stack value: "Stats - Max Stacks". Note that some of them like Wards do already have specified some values greater than 0 here.
-// - Copy this code into your map script.
-// - Call the function ItemUnstackSystemInit during the map initialization.
-// - Customize the system by changing the values returned by ItemUnstackMaximumCharges and ItemUnstackAllowStackingNextItem.
-//
-// Recommended (optional):
-// - Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell|NDouble right click item to unstack|R" to guide the player.
+// - Copy this code into your map script or a trigger converted into code.
+// - Optional: Adapt the values of the constants for your map.
+// - Optional: Redefine ItemUnstackItemGetMaxStacks if necessary.
+// - Optional (recommended): Change the "Advanced - Game Interface - Text - General" from "|cff808080Drop item on shop to sell|R" into "|cff808080Drop item on shop to sell|NDouble right click item to unstack|R" to guide the player.
 //
 // Download:
 // https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-1.339109/
-//
-// Change Log:
-//
-// 1.4 2022-07-09:
-// - ItemUnstackMaximumCharges allows changing the number of unstacked charges.
-// - ItemUnstackAllowStackingNextItem allows stacking the unstacked item to the next item with the same type instead of only using a free slot.
-// - ItemUnstackItemGetMaxStacks to check if the item is even stackable and to make sure item charges will not be over the maximum.
-//
-// 1.3 2022-04-16:
-// - Refactor function names.
-//
-// 1.2 2022-04-13:
-// - Use UnitInventorySize instead of bj_MAX_INVENTORY to support different inventory sizes.
-// - Place Footmen with unit inventories to check different inventory sizes.
-//
-// 1.1 2022-04-11:
-// - Split into multiple functions.
-// - Do not apply item name, tooltip and icon path on unstacking since it is broken.
-// - Prefer the nearest empty slot on unstacking.
-// - Add a line break to the unstacking hint.
-// - Add some items with custom names and descriptions to test stacking/unstacking them.
-// - Move system code into converted trigger.
-// - Update preview image.
 
-constant function ItemUnstackMaximumCharges takes nothing returns integer
-    return 1
+// Define this function, to return custom values. It is only used if CHECK_MAX_STACKS is false.
+constant function ItemUnstackItemGetMaxStacks takes integer itemTypeId returns integer
+    return 1000
 endfunction
 
-constant function ItemUnstackAllowStackingNextItem takes nothing returns boolean
-    return true
+library ItemUnstackSystem initializer Init
+
+globals
+    // The number of charges which are unstacked at maximum if available.
+    private constant integer MAX_UNSTACKED_CHARGES = 1
+    // Overwrites the previous value if set to true. It always unstacks the half of charges. For uneven numbers it will unstack the lower value. For example, for 3 it will unstack 1 charge.
+    private constant boolean UNSTACK_HALF_CHARGES = false
+    // Unstacking an item can be moved to the next slot if it has the same item type and stack with it.
+    private constant boolean ALLOW_STACKING_NEXT_ITEM = true
+    // Checks for the maximum possible stacks for every item type. Otherwise, ItemUnstackItemGetMaxStacks is used.
+    private constant boolean CHECK_MAX_STACKS = true
+    // This dummy is created and hidden once only if CHECK_MAX_STACKS is set to true. It requires an inventory with at least 2 slots.
+    private constant integer DUMMY_UNIT_TYPE_MAX_CHECKS = 'Hpal'
+    // Warcraft III has a limit of number of stacks for the field "Stats - Max Stacks".
+    private constant integer MAX_STACKS_ALLOWED = 1000
+
+    private trigger orderTrigger = CreateTrigger()
+    private trigger stackItemTrigger = CreateTrigger()
+    private unit stackItemDummy = null
+    private integer stackCounter = 0
+    private hashtable stackHashTable = InitHashtable()
+endglobals
+
+public function GetStackItemDummy takes nothing returns unit
+    return stackItemDummy
 endfunction
 
-function ItemUnstackItemGetMaxStacks takes item whichItem returns integer
-    // TODO 'ista' cannot be extracted.
-    //return BlzGetItemIntegerField(whichItem, ConvertItemIntegerField('ista'))
-    return 100
+public function GetMaxStacksByItemTypeId takes integer itemTypeId returns integer
+static if (CHECK_MAX_STACKS) then
+    local integer i = 0
+    local item tmpItem = null
+
+    if (HaveSavedInteger(stackHashTable, itemTypeId, 0)) then
+        return LoadInteger(stackHashTable, itemTypeId, 0)
+    endif
+    set stackCounter = 1
+    set tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
+    call SetItemCharges(tmpItem, 1)
+    call UnitAddItem(stackItemDummy, tmpItem)
+    set i = 1
+    loop
+        set tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
+        call SetItemCharges(tmpItem, 1)
+        call UnitAddItem(stackItemDummy, tmpItem)
+        exitwhen (stackCounter <= i)
+        set i = i + 1
+        exitwhen (i >= MAX_STACKS_ALLOWED)
+    endloop
+    if (UnitItemInSlot(stackItemDummy, 0) != null) then
+        call RemoveItem(UnitItemInSlot(stackItemDummy, 0))
+    endif
+    if (UnitItemInSlot(stackItemDummy, 1) != null) then
+        call RemoveItem(UnitItemInSlot(stackItemDummy, 1))
+    endif
+    call SaveInteger(stackHashTable, itemTypeId, 0, stackCounter)
+    return stackCounter
+else
+    return ItemUnstackItemGetMaxStacks(itemTypeId)
+endif
 endfunction
 
-function ItemUnstackCopyItemProps takes item sourceItem, item targetItem returns nothing
+private function CopyItemProps takes item sourceItem, item targetItem returns nothing
     // some seem broken
     //call BlzSetItemName(targetItem, GetItemName(sourceItem))
     call BlzSetItemDescription(targetItem, BlzGetItemDescription(sourceItem))
@@ -10374,7 +10401,7 @@ function ItemUnstackCopyItemProps takes item sourceItem, item targetItem returns
     endif
 endfunction
 
-function ItemUnstackGetItemSlot takes unit hero, item whichItem returns integer
+private function GetItemSlot takes unit hero, item whichItem returns integer
     local integer sourceSlot = -1
     local integer i = 0
     loop
@@ -10387,7 +10414,7 @@ function ItemUnstackGetItemSlot takes unit hero, item whichItem returns integer
     return sourceSlot
 endfunction
 
-function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId, integer charges, integer sourceSlot, item sourceItem returns item
+private function AddUnstackedItem takes unit hero, integer itemTypeId, integer charges, integer sourceSlot, item sourceItem returns nothing
     local item itemInNextSlot = null
     local item itemInPreviousSlot = null
     local boolean addedToFreeSlot = false
@@ -10397,7 +10424,7 @@ function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId
     local integer i = sourceSlot + 1
     local integer j = sourceSlot - 1
     // check for a slot with an item with the same type and free stacks
-    if (ItemUnstackAllowStackingNextItem()) then
+    if (ALLOW_STACKING_NEXT_ITEM) then
         loop
             set itemInNextSlot = UnitItemInSlot(hero, i)
             if (i < UnitInventorySize(hero)) then
@@ -10405,7 +10432,7 @@ function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId
                     set addedToFreeSlot = true
                     call UnitAddItemToSlotById(hero, itemTypeId, i)
                     set unstackedItem = UnitItemInSlot(hero, i)
-                elseif (GetItemTypeId(itemInNextSlot) == itemTypeId and GetItemCharges(itemInNextSlot) < ItemUnstackItemGetMaxStacks(itemInNextSlot)) then
+                elseif (GetItemTypeId(itemInNextSlot) == itemTypeId and GetItemCharges(itemInNextSlot) < GetMaxStacksByItemTypeId(itemTypeId)) then
                     set unstackedItem = itemInNextSlot
                 endif
             endif
@@ -10438,57 +10465,104 @@ function ItemUnstackAddItemToNearestFreeSlot takes unit hero, integer itemTypeId
 
     if (addedToFreeSlot) then
         call SetItemCharges(unstackedItem, charges)
-        call ItemUnstackCopyItemProps(sourceItem, unstackedItem)
+        call CopyItemProps(sourceItem, unstackedItem)
     else
         call SetItemCharges(unstackedItem, GetItemCharges(unstackedItem) + charges)
     endif
 
-    return unstackedItem
-endfunction
-
-function ItemUnstackAddItemToNearestFreeSlotOrGround takes unit hero, integer itemTypeId, integer charges, integer sourceSlot, item sourceItem returns nothing
-    // search for a free slot to unstack the item
-    local item unstackedItem = ItemUnstackAddItemToNearestFreeSlot(hero, itemTypeId, charges, sourceSlot, sourceItem)
     // create the item for the hero with one slot if all slots are used
     if (unstackedItem == null) then
         set unstackedItem = CreateItem(itemTypeId, GetUnitX(hero), GetUnitY(hero))
         call SetItemCharges(unstackedItem, charges)
-        call ItemUnstackCopyItemProps(sourceItem, unstackedItem)
+        call CopyItemProps(sourceItem, unstackedItem)
     endif
 
     set unstackedItem = null
 endfunction
 
-function ItemUnstackTriggerCondition takes nothing returns boolean
-    return GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and ItemUnstackItemGetMaxStacks(GetOrderTargetItem()) > 0 and GetItemCharges(GetOrderTargetItem()) > 1 and ItemUnstackGetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
+private function TriggerConditionOrderUnstack takes nothing returns boolean
+    return (GetStackItemDummy() == null or GetTriggerUnit() != GetStackItemDummy()) and GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetMaxStacksByItemTypeId(GetItemTypeId(GetOrderTargetItem())) > 0 and GetItemCharges(GetOrderTargetItem()) > 1 and GetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
 endfunction
 
-function ItemUnstackTriggerAction takes nothing returns nothing
+private function TriggerActionOrderUnstack takes nothing returns nothing
     local unit hero = GetTriggerUnit()
     local item sourceItem = GetOrderTargetItem()
     local integer sourceItemTypeId = GetItemTypeId(sourceItem)
-    local integer sourceSlot = ItemUnstackGetItemSlot(hero, sourceItem)
+    local integer sourceSlot = GetItemSlot(hero, sourceItem)
     local integer charges = 1
     // wait for completing the order or the item is not at the target slot
     call TriggerSleepAction(0.0)
     // item does still exist and was dropped on its previous slot
     // we are not sure if this works when the item is removed via triggers since the value of the variable becomes an invalid reference
     if (sourceItem != null and GetWidgetLife(sourceItem) > 0.0 and GetItemCharges(sourceItem) > 0 and UnitItemInSlot(hero, sourceSlot) == sourceItem) then
-        set charges = IMinBJ(GetItemCharges(sourceItem), ItemUnstackMaximumCharges())
+        if (UNSTACK_HALF_CHARGES) then
+            set charges = IMaxBJ(GetItemCharges(sourceItem) / 2, 1)
+        else
+            set charges = IMinBJ(GetItemCharges(sourceItem), MAX_UNSTACKED_CHARGES)
+        endif
         call SetItemCharges(sourceItem, GetItemCharges(sourceItem) - charges)
-        call ItemUnstackAddItemToNearestFreeSlotOrGround(hero, sourceItemTypeId, charges, sourceSlot, sourceItem)
+        call AddUnstackedItem(hero, sourceItemTypeId, charges, sourceSlot, sourceItem)
     endif
 
     set hero = null
     set sourceItem = null
 endfunction
 
-function ItemUnstackSystemInit takes nothing returns nothing
-    local trigger whichTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(whichTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
-    call TriggerAddCondition(whichTrigger, Condition(function ItemUnstackTriggerCondition))
-    call TriggerAddAction(whichTrigger, function ItemUnstackTriggerAction)
+private function TriggerActionStack takes nothing returns nothing
+    set stackCounter = stackCounter + 1
 endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrderUnstack))
+    call TriggerAddAction(orderTrigger, function TriggerActionOrderUnstack)
+
+static if (CHECK_MAX_STACKS) then
+    set stackItemDummy = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), DUMMY_UNIT_TYPE_MAX_CHECKS, 0.0, 0.0, 0.0)
+    call SetUnitInvulnerable(stackItemDummy, true)
+    if (IsUnitType(stackItemDummy, UNIT_TYPE_HERO)) then
+        call SuspendHeroXP(stackItemDummy, true)
+    endif
+    call SetUnitUseFood(stackItemDummy, false)
+    call ShowUnit(stackItemDummy, false)
+    call BlzSetUnitWeaponBooleanField(stackItemDummy, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
+    call BlzSetUnitWeaponBooleanField(stackItemDummy, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
+    call TriggerRegisterUnitEvent(stackItemTrigger, stackItemDummy, EVENT_UNIT_STACK_ITEM)
+    call TriggerAddAction(stackItemTrigger, function TriggerActionStack)
+endif
+endfunction
+
+// Change Log:
+//
+// 1.5 2022-07-10:
+// - Use vJass since we have two triggers now, can use the initializer and use static ifs.
+// - Use constants instead of constant functions for the options of the system.
+// - Calculate the max stacks per item type with the help of a dummy if enabled.
+// - Increase the max stacks possible to 1000 since this is the maximum possible value in the object editor.
+// - Add option UNSTACK_HALF_CHARGES.
+//
+// 1.4 2022-07-09:
+// - ItemUnstackMaximumCharges allows changing the number of unstacked charges.
+// - ItemUnstackAllowStackingNextItem allows stacking the unstacked item to the next item with the same type instead of only using a free slot.
+// - ItemUnstackItemGetMaxStacks to check if the item is even stackable and to make sure item charges will not be over the maximum.
+//
+// 1.3 2022-04-16:
+// - Refactor function names.
+//
+// 1.2 2022-04-13:
+// - Use UnitInventorySize instead of bj_MAX_INVENTORY to support different inventory sizes.
+// - Place Footmen with unit inventories to check different inventory sizes.
+//
+// 1.1 2022-04-11:
+// - Split into multiple functions.
+// - Do not apply item name, tooltip and icon path on unstacking since it is broken.
+// - Prefer the nearest empty slot on unstacking.
+// - Add a line break to the unstacking hint.
+// - Add some items with custom names and descriptions to test stacking/unstacking them.
+// - Move system code into converted trigger.
+// - Update preview image.
+
+endlibrary
 
 // Baradé's Black Arrow System 1.1
 //
@@ -12383,6 +12457,91 @@ function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns noth
     set hero = null
 endfunction
 
+// Ability Field System
+// Stores all fields which can be used to apply bonuses to.
+// This is required by the Enchanter profession and for Evolution Stones.
+
+globals
+    hashtable AbilityFieldHashTable = InitHashtable()
+    hashtable AbilityFieldCountersHashTable = InitHashtable()
+
+    constant integer ABILITY_FIELD_TYPE_DEFENSE_INTEGER = 0
+    constant integer ABILITY_FIELD_TYPE_HERO_STATS_INTEGER = 1
+    constant integer ABILITY_FIELD_TYPE_DURATION_REAL = 2
+    constant integer ABILITY_FIELD_TYPE_DAMAGE_REAL = 3
+    constant integer ABILITY_FIELD_TYPE_LIFE_REAL = 4
+    constant integer ABILITY_FIELD_TYPE_MANA_REAL = 5
+endglobals
+
+function RegisterAbilityFieldEx takes integer abilityId, integer fieldId, integer fieldType returns integer
+    local integer counter = LoadInteger(AbilityFieldCountersHashTable, abilityId, 0) + 1
+    call SaveInteger(AbilityFieldHashTable, abilityId, fieldId, fieldType)
+    call SaveInteger(AbilityFieldCountersHashTable, abilityId, counter, fieldId)
+    call SaveInteger(AbilityFieldCountersHashTable, abilityId, 0, counter)
+    return counter
+endfunction
+
+function RegisterAbilityField takes nothing returns integer
+    return RegisterAbilityFieldEx(udg_TmpAbilityCode, udg_TmpInteger, udg_TmpInteger2)
+endfunction
+
+function GetMaxAbilityFields takes integer abilityId returns integer
+    return LoadInteger(AbilityFieldCountersHashTable, abilityId, 0)
+endfunction
+
+function GetAbilityFieldId takes integer abilityId, integer index returns integer
+    return LoadInteger(AbilityFieldCountersHashTable, abilityId, index + 1)
+endfunction
+
+function GetAbilityFieldType takes integer abilityId, integer index returns integer
+    local integer fieldId = GetAbilityFieldId(abilityId, index)
+    return LoadInteger(AbilityFieldHashTable, abilityId, fieldId)
+endfunction
+
+function GetAbilityFieldTypeByFieldId takes integer abilityId, integer fieldId returns integer
+    return LoadInteger(AbilityFieldHashTable, abilityId, fieldId)
+endfunction
+
+function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeBonus, real manaBonus returns nothing
+    local integer max = GetMaxAbilityFields(abilityId)
+    local integer fieldType = 0
+    local integer fieldId = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= max)
+        set fieldId = GetAbilityFieldId(abilityId, i)
+        set fieldType = GetAbilityFieldTypeByFieldId(abilityId, fieldId)
+        if (fieldType == ABILITY_FIELD_TYPE_DEFENSE_INTEGER and defenseBonus > 0) then
+            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + defenseBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_HERO_STATS_INTEGER and heroStatsBonus > 0) then
+            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + heroStatsBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_DURATION_REAL and durationBonus > 0.0) then
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + durationBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_DAMAGE_REAL and damageBonus > 0.0) then
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + damageBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REAL and lifeBonus > 0.0) then
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + lifeBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_MANA_REAL and manaBonus > 0.0) then
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + manaBonus)
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+/*
+
+
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1) + bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1) + bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1) + bonus)
+    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1) + bonus)
+    //call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) + bonus)
+    // orb ability
+    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_BONUS_IDAM, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_BONUS_IDAM, 1) + bonus)
+
+*/
+
+
 // Enchanter System
 
 globals
@@ -12410,10 +12569,8 @@ endfunction
 
 function EnchanterAddItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
     local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_STRENGTH_BONUS_ISTR, 1) + bonus)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_AGILITY_BONUS, 1) + bonus)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_INTELLIGENCE_BONUS, 1) + bonus)
-    call BlzSetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1, BlzGetAbilityIntegerLevelField(whichAbility, ABILITY_ILF_DEFENSE_BONUS_IDEF, 1) + bonus)
+
+    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, bonus, bonus, 0.0, 0.0, 0.0, 0.0)
 endfunction
 
 function EnchanterRemoveItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
@@ -12422,9 +12579,8 @@ endfunction
 
 function EnchanterAddItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
     local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-    //call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_INCREASE, 1) + bonus)
-    // orb ability
-    call BlzSetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_BONUS_IDAM, 1, BlzGetAbilityRealLevelField(whichAbility, ABILITY_RLF_DAMAGE_BONUS_IDAM, 1) + bonus)
+
+    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, 0, 0, 0.0, bonus, 0.0, 0.0)
 endfunction
 
 function EnchanterRemoveItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
@@ -13656,4 +13812,45 @@ function VoteAddChoice takes string name, code callback returns nothing
 endfunction
 
 function VoteStart takes integer vote returns nothing
+endfunction
+
+// Baradé's Evolution Stone System
+
+function EvolutionStoneSet takes unit hero, integer level returns nothing
+    local integer unitTypeId = GetUnitTypeId(hero)
+    local integer abilityId = 0
+    local ability whichAbility = null
+    local integer maxAbilityLevel = 0
+    local integer defenseBonus = level * 2
+    local integer heroStatsBonus = level * 2
+    local real durationBonus = level * 2.0
+    local real damageBonus = level * 5.0
+    local real lifeBonus = level * 100.0
+    local real manaBonus = level * 100.0
+    local integer i = 1
+    local integer j = 0
+    local integer max = GetHeroAbilityMaximum(unitTypeId)
+    // TODO Reskill hero to restore the base values of the abilities.
+    loop
+        exitwhen (i >= max)
+        set abilityId = GetHeroAbility(unitTypeId, i)
+        set whichAbility = BlzGetUnitAbility(hero, abilityId)
+        set maxAbilityLevel = GetHeroAbilityMaximumLevel(unitTypeId, i)
+        set j = 1
+        loop
+            exitwhen (j >= maxAbilityLevel)
+            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus)
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+    // TODO Restore basic hero stats
+    // apply increased hero stats
+    call ModifyHeroStat(bj_HEROSTAT_STR, hero, bj_MODIFYMETHOD_ADD, heroStatsBonus)
+    call ModifyHeroStat(bj_HEROSTAT_AGI, hero, bj_MODIFYMETHOD_ADD, heroStatsBonus)
+    call ModifyHeroStat(bj_HEROSTAT_INT, hero, bj_MODIFYMETHOD_ADD, heroStatsBonus)
+endfunction
+
+function EvolutionStoneReset takes unit hero returns nothing
+    call EvolutionStoneSet(hero, 0)
 endfunction
