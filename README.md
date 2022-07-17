@@ -221,6 +221,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Goblin Heavy Tank.
 * Custom Turret System which is [part of this repository](./systems/).
 * New hero: Void Lord.
+* [Custom Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/).
 * TODO Many 2.1 features are not listed yet.
 
 ## Bug Fixes
