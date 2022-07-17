@@ -101,8 +101,21 @@ function StringToken takes string source, integer index returns string
     return result
 endfunction
 
-function PlayerIsOnlineUser takes integer PlayerNumber returns boolean
-    return GetPlayerController(Player(PlayerNumber)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(PlayerNumber)) == PLAYER_SLOT_STATE_PLAYING
+function SimError takes player whichPlayer, string msg returns nothing
+    local sound error = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
+    if (GetLocalPlayer() == whichPlayer) then
+        if (msg != "" and  msg != null) then
+            call ClearTextMessages()
+            call DisplayTimedTextToPlayer(whichPlayer, 0.52, - 1.00, 2.00, "|cffffcc00" + msg + "|r")
+        endif
+        call StartSound(error)
+    endif
+    call KillSoundWhenDone(error)
+    set error = null
+endfunction
+
+function PlayerIsOnlineUser takes integer playerId returns boolean
+    return GetPlayerController(Player(playerId)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(playerId)) == PLAYER_SLOT_STATE_PLAYING
 endfunction
 
 function GetHelpText takes nothing returns string
@@ -112,7 +125,6 @@ endfunction
 globals
 	string array raceIcons
 	string array professionIcons
-	//hashtable ObjectIdIconsHashTable = InitHashtable()
 endglobals
 
 function AddRaceIcon takes integer whichRace, string icon returns nothing
@@ -142,15 +154,12 @@ function GetIconByProfession takes integer profession returns string
 endfunction
 
 function AddUnitTypeIcon takes integer unitTypeId, string icon returns nothing
-	 //call SaveStr(ObjectIdIconsHashTable, unitTypeId, 0, icon)
 endfunction
 
 function AddItemTypeIcon takes integer itemTypeId, string icon returns nothing
-	 //call SaveStr(ObjectIdIconsHashTable, itemTypeId, 0, icon)
 endfunction
 
 function GetIconByUnitType takes integer unitTypeId returns string
-	//local string result = LoadStr(ObjectIdIconsHashTable, unitTypeId, 0)
 	local string result = BlzGetAbilityIcon(unitTypeId)
     if (unitTypeId == 0 or result == null or result == "") then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
@@ -160,7 +169,6 @@ function GetIconByUnitType takes integer unitTypeId returns string
 endfunction
 
 function GetIconByItemType takes integer itemTypeId returns string
-	//local string result = LoadStr(ObjectIdIconsHashTable, itemTypeId, 0)
 	local string result = BlzGetAbilityIcon(itemTypeId)
     if (itemTypeId == 0 or result == null or result == "") then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp"
@@ -258,7 +266,7 @@ function ApplyRucksackItem takes item whichItem, integer index returns nothing
     call BlzSetItemExtendedTooltip(whichItem, udg_RucksackItemTooltipExtended[index])
 endfunction
 
-function BackpackCountItemsOfItemTypeForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
+function BackpackCountItemsOfItemTypeForPlayer takes integer playerId, integer itemTypeId returns integer
 	local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
@@ -269,9 +277,9 @@ function BackpackCountItemsOfItemTypeForPlayer takes integer PlayerNumber, integ
         set I1 = 0
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
-            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
-				if (UnitItemInSlot(udg_Rucksack[PlayerNumber], I1) != null and GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)) == itemTypeId) then
+            set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackPageNumber[playerId] == I0) then
+				if (UnitItemInSlot(udg_Rucksack[playerId], I1) != null and GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)) == itemTypeId) then
 					set result = result + 1
 				endif
             else
@@ -358,7 +366,7 @@ function HeroDropRandomItem takes unit hero returns item
     return null
 endfunction
 
-function RemoveAllBackpackItemTypesForPlayer takes integer PlayerNumber, integer itemTypeId returns integer
+function RemoveAllBackpackItemTypesForPlayer takes integer playerId, integer itemTypeId returns integer
 	local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
@@ -369,10 +377,10 @@ function RemoveAllBackpackItemTypesForPlayer takes integer PlayerNumber, integer
         set I1 = 0
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
-            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
-				if (UnitItemInSlot(udg_Rucksack[PlayerNumber], I1) != null and GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)) == itemTypeId) then
-					call RemoveItem(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1))
+            set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackPageNumber[playerId] == I0) then
+				if (UnitItemInSlot(udg_Rucksack[playerId], I1) != null and GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)) == itemTypeId) then
+					call RemoveItem(UnitItemInSlot(udg_Rucksack[playerId], I1))
 					set result = result + 1
 				endif
             else
@@ -388,7 +396,7 @@ function RemoveAllBackpackItemTypesForPlayer takes integer PlayerNumber, integer
 	return result
 endfunction
 
-function DropBackpackForPlayer takes integer PlayerNumber, rect whichRect returns nothing
+function DropBackpackForPlayer takes integer playerId, rect whichRect returns nothing
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
@@ -399,17 +407,17 @@ function DropBackpackForPlayer takes integer PlayerNumber, rect whichRect return
         set I1 = 0
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
-            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
-                set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)), GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackPageNumber[playerId] == I0) then
+                set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)), GetRectCenterX(whichRect), GetRectCenterY(whichRect))
             else
                 set whichItem = CreateItem(udg_RucksackItemType[index], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
             endif
 
             call ApplyRucksackItem(whichItem, index)
 
-            if (udg_RucksackPageNumber[PlayerNumber] == I0) then
-                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)))
+            if (udg_RucksackPageNumber[playerId] == I0) then
+                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[playerId], I1)))
             else
                 call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
             endif
@@ -434,25 +442,25 @@ function DropQuestItemFromCreepHeroAtRect takes unit hero, integer itemTypeId, r
     return whichItem
 endfunction
 
-function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTypeId, rect whichRect returns item
+function DropQuestItemFromHeroAtRect takes integer playerId, integer itemTypeId, rect whichRect returns item
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
-    local item whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero[PlayerNumber], itemTypeId, whichRect)
+    local item whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero[playerId], itemTypeId, whichRect)
 	// Check second hero inventory
-	if (whichItem == null and udg_Hero2[PlayerNumber] != null) then
-        set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero2[PlayerNumber], itemTypeId, whichRect)
+	if (whichItem == null and udg_Hero2[playerId] != null) then
+        set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero2[playerId], itemTypeId, whichRect)
 	endif
 	// Check third hero inventory
-	if (whichItem == null and udg_Hero3[PlayerNumber] != null) then
-		set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero3[PlayerNumber], itemTypeId, whichRect)
+	if (whichItem == null and udg_Hero3[playerId] != null) then
+		set whichItem = DropQuestItemFromCreepHeroAtRect(udg_Hero3[playerId], itemTypeId, whichRect)
 	endif
 	// Check Equipment Bags
 	if (whichItem == null) then
         set I0 = 0
         loop
-            exitwhen(I0 == BlzGroupGetSize(udg_EquipmentBags[PlayerNumber + 1]) or whichItem != null)
-            set whichItem = DropQuestItemFromCreepHeroAtRect(BlzGroupUnitAt(udg_EquipmentBags[PlayerNumber + 1], I0), itemTypeId, whichRect)
+            exitwhen(I0 == BlzGroupGetSize(udg_EquipmentBags[playerId + 1]) or whichItem != null)
+            set whichItem = DropQuestItemFromCreepHeroAtRect(BlzGroupUnitAt(udg_EquipmentBags[playerId + 1], I0), itemTypeId, whichRect)
             set I0 = I0 + 1
         endloop
 	endif
@@ -464,10 +472,10 @@ function DropQuestItemFromHeroAtRect takes integer PlayerNumber, integer itemTyp
             set I1 = 0
             loop
                 exitwhen(I1 == bj_MAX_INVENTORY or whichItem != null)
-                set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-                if (udg_RucksackItemType[index] == itemTypeId or (udg_RucksackPageNumber[PlayerNumber] == I0 and GetItemTypeId(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1)) == itemTypeId)) then
-                    if (udg_RucksackPageNumber[PlayerNumber] == I0) then
-                        call RemoveItem(UnitItemInSlot(udg_Rucksack[PlayerNumber], I1))
+                set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+                if (udg_RucksackItemType[index] == itemTypeId or (udg_RucksackPageNumber[playerId] == I0 and GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)) == itemTypeId)) then
+                    if (udg_RucksackPageNumber[playerId] == I0) then
+                        call RemoveItem(UnitItemInSlot(udg_Rucksack[playerId], I1))
                     endif
                     call ClearRucksackItem(index)
                     set whichItem = CreateItem(itemTypeId, GetRectCenterX(whichRect), GetRectCenterY(whichRect))
@@ -486,20 +494,20 @@ function DropQuestItemFromHeroAtRectByDyingUnit takes integer itemTypeId, rect w
     return DropQuestItemFromHeroAtRect(GetPlayerId(GetOwningPlayer(GetTriggerUnit())), itemTypeId, whichRect)
 endfunction
 
-function ClearCurrentRucksackPageForPlayer takes integer PlayerNumber returns nothing
+function ClearCurrentRucksackPageForPlayer takes integer playerId returns nothing
     local integer I1 = 0
     local integer index = 0
         set I1 = 0
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
-            set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, udg_RucksackPageNumber[playerId], I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             //call BJDebugMsg("Clearing item at index " + I2S(index))
             call ClearRucksackItem(index)
             set I1 = I1 + 1
         endloop
 endfunction
 
-function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
+function ClearRucksackForPlayer takes integer playerId returns nothing
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
@@ -509,7 +517,7 @@ function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
         set I1 = 0
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
-            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             //call BJDebugMsg("Clearing item at index " + I2S(index))
             call ClearRucksackItem(index)
             set I1 = I1 + 1
@@ -518,7 +526,7 @@ function ClearRucksackForPlayer takes integer PlayerNumber returns nothing
     endloop
 endfunction
 
-function AddItemToBackpackForPlayer takes integer PlayerNumber, item whichItem returns boolean
+function AddItemToBackpackForPlayer takes integer playerId, item whichItem returns boolean
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
@@ -530,9 +538,19 @@ function AddItemToBackpackForPlayer takes integer PlayerNumber, item whichItem r
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
             exitwhen (whichItem == null)
-            set index = Index3D(PlayerNumber, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            // empty slot
             if (udg_RucksackItemType[index] == 0) then
+                call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
                 call SetRucksackItemFromItem(whichItem, index)
+                call RemoveItem(whichItem)
+                set whichItem = null
+
+                return true
+            // stack
+            elseif (GetItemTypeId(whichItem) == udg_RucksackItemType[index] and GetMaxStacksByItemTypeId(udg_RucksackItemType[index]) >= udg_RucksackItemCharges[index] + GetItemCharges(whichItem)) then
+                call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
+                set udg_RucksackItemCharges[index] = udg_RucksackItemCharges[index] + GetItemCharges(whichItem)
                 call RemoveItem(whichItem)
                 set whichItem = null
 
@@ -546,31 +564,31 @@ function AddItemToBackpackForPlayer takes integer PlayerNumber, item whichItem r
     return false
 endfunction
 
-function DestroyRucksackSystemForPlayer takes integer PlayerNumber returns nothing
-    if (udg_Rucksack[PlayerNumber] != null) then
-        call RemoveUnit(udg_Rucksack[PlayerNumber])
-        set udg_Rucksack[PlayerNumber] = null
+function DestroyRucksackSystemForPlayer takes integer playerId returns nothing
+    if (udg_Rucksack[playerId] != null) then
+        call RemoveUnit(udg_Rucksack[playerId])
+        set udg_Rucksack[playerId] = null
     endif
-    call ClearRucksackForPlayer(PlayerNumber)
+    call ClearRucksackForPlayer(playerId)
 endfunction
 
-function RefreshRucksackPage takes integer PlayerNumber returns nothing
-    local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
+function RefreshRucksackPage takes integer playerId returns nothing
+    local integer RucksackPage = udg_RucksackPageNumber[playerId]
     local integer I0 = 0
     local integer index = 0
     local item whichItem = null
 	call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
-	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
-	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
+	call DisableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
+	call DisableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
     // Create All Items From Next/Previous Page
     set I0 = 0
     loop
         exitwhen(I0 == bj_MAX_INVENTORY)
-        set index = Index3D(PlayerNumber, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        set index = Index3D(playerId, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
         if (udg_RucksackItemType[index] != 0) then
             //call BJDebugMsg("Item type " + GetObjectName(udg_RucksackItemType[index]) + " at index " + I2S(index))
-            call UnitAddItemToSlotById(udg_Rucksack[PlayerNumber], udg_RucksackItemType[index], I0)
-            set whichItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
+            call UnitAddItemToSlotById(udg_Rucksack[playerId], udg_RucksackItemType[index], I0)
+            set whichItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
             call ApplyRucksackItem(whichItem, index)
         //else
             //call BJDebugMsg("Empty at index " + I2S(index))
@@ -578,24 +596,24 @@ function RefreshRucksackPage takes integer PlayerNumber returns nothing
         set I0 = I0 + 1
     endloop
 	call EnableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
-	call EnableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
-	call EnableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
+	call EnableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
+	call EnableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
 endfunction
 
-function ChangeRucksackPageEx takes integer PlayerNumber, integer newRucksackPage returns nothing
+function ChangeRucksackPageEx takes integer playerId, integer newRucksackPage returns nothing
     local integer I0 = 0
     local integer index = 0
-    local player RucksackOwner = Player(PlayerNumber)
+    local player RucksackOwner = Player(playerId)
     local item SlotItem = null
 	call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Drop)
-	call DisableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
-	call DisableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
+	call DisableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
+	call DisableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
     // Save All Items
     set I0 = 0
     loop
         exitwhen(I0 == bj_MAX_INVENTORY)
-        set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-        set SlotItem = UnitItemInSlot(udg_Rucksack[PlayerNumber], I0)
+        set index = Index3D(playerId, udg_RucksackPageNumber[playerId], I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        set SlotItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
         if (SlotItem != null) then
             call SetRucksackItemFromItem(SlotItem, index)
             //call BJDebugMsg("Storing at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
@@ -608,17 +626,17 @@ function ChangeRucksackPageEx takes integer PlayerNumber, integer newRucksackPag
         set I0 = I0 + 1
     endloop
 	call EnableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Drop)
-	call EnableTrigger(udg_PlayerRucksackTriggerPickup[PlayerNumber])
-	call EnableTrigger(udg_PlayerRucksackTriggerDrop[PlayerNumber])
+	call EnableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
+	call EnableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
 	// change page
-    set udg_RucksackPageNumber[PlayerNumber] = newRucksackPage
+    set udg_RucksackPageNumber[playerId] = newRucksackPage
     call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Open Bag " + I2S(newRucksackPage + 1) + "."))
-    call RefreshRucksackPage(PlayerNumber)
+    call RefreshRucksackPage(playerId)
     set RucksackOwner = null
 endfunction
 
-function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns nothing
-    local integer RucksackPage = udg_RucksackPageNumber[PlayerNumber]
+function ChangeRucksackPage takes integer playerId, boolean Forward returns nothing
+    local integer RucksackPage = udg_RucksackPageNumber[playerId]
     local integer newRucksackPage = 0
     if (Forward) then
         if (RucksackPage != (udg_RucksackMaxPages - 1)) then
@@ -633,7 +651,7 @@ function ChangeRucksackPage takes integer PlayerNumber, boolean Forward returns 
             set newRucksackPage = udg_RucksackMaxPages - 1
         endif
     endif
-    call ChangeRucksackPageEx(PlayerNumber, newRucksackPage)
+    call ChangeRucksackPageEx(playerId, newRucksackPage)
 endfunction
 
 function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
@@ -668,21 +686,23 @@ function TriggerConditionChangeRucksackPage takes nothing returns boolean
 endfunction
 
 function TriggerFunctionChangeRucksackPage takes nothing returns nothing
+    local integer playerId = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     if (GetSpellAbilityId() == udg_RucksackAbility1) then
-        call ChangeRucksackPage(GetPlayerId(GetTriggerPlayer()), true)
+        call ChangeRucksackPage(playerId, true)
     elseif (GetSpellAbilityId() == udg_RucksackAbility2) then
-        call ChangeRucksackPage(GetPlayerId(GetTriggerPlayer()), false)
+        call ChangeRucksackPage(playerId, false)
     endif
-    call UpdateItemsForBackpackUI(GetTriggerPlayer())
+    call UpdateItemsForBackpackUI(GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 function TriggerConditionPickupRucksackItem takes nothing returns boolean
-    return GetTriggerUnit() == udg_Rucksack[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]
+    local integer playerId = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    return GetTriggerUnit() == udg_Rucksack[playerId]
 endfunction
 
 
 function TriggerFunctionPickupRucksackItem takes nothing returns nothing
-    local integer PlayerNumber = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    local integer playerId = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local item whichItem = GetManipulatedItem()
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer index = 0
@@ -690,7 +710,7 @@ function TriggerFunctionPickupRucksackItem takes nothing returns nothing
     loop
         exitwhen (i == bj_MAX_INVENTORY)
         if (UnitItemInSlot(GetTriggerUnit(), i) != null and UnitItemInSlot(GetTriggerUnit(), i) == whichItem) then
-            set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, udg_RucksackPageNumber[playerId], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             call SetRucksackItemFromItem(whichItem, index)
             //call BJDebugMsg("Picking item up at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
             exitwhen (true)
@@ -709,14 +729,14 @@ endfunction
 function TriggerFunctionDropRucksackItem takes nothing returns nothing
     local unit triggerUnit = GetTriggerUnit()
     local player owner = GetOwningPlayer(triggerUnit)
-    local integer PlayerNumber = GetPlayerId(owner)
+    local integer playerId = GetPlayerId(owner)
     local integer index = 0
     local integer i = 0
     call TriggerSleepAction(0.0) // TODO Apparently the item is still there without sleeping.
     loop
         exitwhen (i == bj_MAX_INVENTORY)
         if (UnitItemInSlot(triggerUnit, i) == null) then
-            set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, udg_RucksackPageNumber[playerId], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             //call BJDebugMsg("Dropping item at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
             set udg_RucksackItemType[index] = 0
             set udg_RucksackItemCharges[index] = 0
@@ -729,6 +749,7 @@ function TriggerFunctionDropRucksackItem takes nothing returns nothing
 endfunction
 
 globals
+        constant integer A_ORDER_ID_SMART = 851971
         constant integer A_ORDER_ID_MOVE_SLOT_0 = 852002
 		constant integer A_ORDER_ID_MOVE_SLOT_1 = 852003
 		constant integer A_ORDER_ID_MOVE_SLOT_2 = 852004
@@ -744,14 +765,13 @@ globals
 endglobals
 
 function TriggerConditionMoveRucksackItem takes nothing returns boolean
-    return GetIssuedOrderId() >= A_ORDER_ID_MOVE_SLOT_0 and GetIssuedOrderId() <= A_ORDER_ID_MOVE_SLOT_5
+    return GetTriggerUnit() == udg_Rucksack[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] and GetIssuedOrderId() >= A_ORDER_ID_MOVE_SLOT_0 and GetIssuedOrderId() <= A_ORDER_ID_MOVE_SLOT_5
 endfunction
-
 
 function TriggerFunctionMoveRucksackItem takes nothing returns nothing
     local unit triggerUnit = GetTriggerUnit()
     local player owner = GetOwningPlayer(triggerUnit)
-    local integer PlayerNumber = GetPlayerId(owner)
+    local integer playerId = GetPlayerId(owner)
     local integer i = 0
     local item whichItem = null
     local integer index = 0
@@ -761,7 +781,7 @@ function TriggerFunctionMoveRucksackItem takes nothing returns nothing
     set i = 0
     loop
         exitwhen (i == bj_MAX_INVENTORY)
-        set index = Index3D(PlayerNumber, udg_RucksackPageNumber[PlayerNumber], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        set index = Index3D(playerId, udg_RucksackPageNumber[playerId], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
         set whichItem = UnitItemInSlot(triggerUnit, i)
         if (whichItem == null) then
             //call BJDebugMsg("Dropping item at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
@@ -776,51 +796,131 @@ function TriggerFunctionMoveRucksackItem takes nothing returns nothing
     set triggerUnit = null
 endfunction
 
-function CreateRucksackForPlayer takes integer PlayerNumber returns nothing
-    local player RucksackPlayer = Player(PlayerNumber)
-    set udg_Rucksack[PlayerNumber] = CreateUnit(RucksackPlayer, udg_RucksackUnitType, GetUnitX(udg_Hero[PlayerNumber]), GetUnitY(udg_Hero[PlayerNumber]), 0.00)
-    call SuspendHeroXPBJ(false, udg_Rucksack[PlayerNumber])
-    call SetUnitInvulnerable(udg_Rucksack[PlayerNumber], true)
+function InventoryIsFull takes unit whichUnit, integer itemTypeId returns boolean
+    local integer size = UnitInventorySize(whichUnit)
+    local item whichItem = null
+    local integer i = 0
+    loop
+        exitwhen (i == size)
+        set whichItem = UnitItemInSlot(whichUnit, i)
+        if (whichItem == null or GetItemTypeId(whichItem) == itemTypeId and GetMaxStacksByItemTypeId(itemTypeId) > GetItemCharges(whichItem)) then
+            return false
+        endif
+        set i = i + 1
+    endloop
+    return true
+endfunction
+
+function TriggerConditionOrderRucksackItem takes nothing returns boolean
+    return udg_Hero[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] == GetTriggerUnit() and GetIssuedOrderId() == A_ORDER_ID_SMART and GetOrderTargetItem() != null and not IsItemPowerup(GetOrderTargetItem()) and InventoryIsFull(GetTriggerUnit(), GetItemTypeId(GetOrderTargetItem()))
+endfunction
+
+// This code is directly taken from the system "EasyItemStacknSplit v2.7.4" and allows picking up items even if the inventory is full.
+function TimerFunctionPickupItem takes nothing returns nothing
+    local integer i = 0
+    local unit backpack = null
+    local item targetItem = null
+    local boolean noTargets = true
+    local unit whichUnit = null
+    local real x = 0.0
+    local real y = 0.0
+    local integer order = 0
+    set i = 0
+    loop
+        exitwhen (i >= bj_MAX_PLAYERS)
+        set backpack = udg_Rucksack[i]
+        set targetItem = udg_RucksackTargetItem[i]
+        if (backpack != null and targetItem != null) then
+            set whichUnit = udg_Rucksack[i]
+            if (GetWidgetLife(whichUnit) > 0.0 and GetWidgetLife(targetItem) > 0.0) then
+                if (GetUnitCurrentOrder(whichUnit) == 851986) then
+                    set x = GetItemX(targetItem) - GetUnitX(whichUnit)
+                    set y = GetItemY(targetItem) - GetUnitY(whichUnit)
+
+                    if (x * x + y * y <= 22500) then
+                        call IssueImmediateOrder(whichUnit, "stop")
+                        // TODO play fake sound
+                        call SetUnitFacing(whichUnit, bj_RADTODEG * Atan2(GetItemY(targetItem) - GetUnitY(whichUnit), GetItemX(targetItem) - GetUnitX(whichUnit)))
+                        if (not AddItemToBackpackForPlayer(i, udg_RucksackTargetItem[i])) then
+                            call SimError(Player(i), "Inventory is full.")
+                        endif
+                        set udg_RucksackTargetItem[i] = null
+                    endif
+                endif
+            else
+                set udg_RucksackTargetItem[i] = null
+            endif
+            set whichUnit = null
+
+            if (udg_RucksackTargetItem[i] != null) then
+                set noTargets = false
+            endif
+        endif
+        set backpack = null
+        set targetItem = null
+        set i = i + 1
+    endloop
+    if (noTargets) then
+        set udg_RucksackPickupTimerHasStarted = false
+        call PauseTimer(GetExpiredTimer())
+    endif
+endfunction
+
+function TriggerFunctionOrderRucksackItem takes nothing returns nothing
+		set udg_RucksackTargetItem[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetOrderTargetItem()
+		if (not udg_RucksackPickupTimerHasStarted) then
+			set udg_RucksackPickupTimerHasStarted = true
+			call TimerStart(udg_RucksackPickupTimer, 0.05, true, function TimerFunctionPickupItem)
+		endif
+		call IssuePointOrder(GetTriggerUnit(), "move", GetItemX(GetOrderTargetItem()), GetItemY(GetOrderTargetItem()))
+endfunction
+
+function CreateRucksackForPlayer takes integer playerId returns nothing
+    local player RucksackPlayer = Player(playerId)
+    set udg_Rucksack[playerId] = CreateUnit(RucksackPlayer, udg_RucksackUnitType, GetUnitX(udg_Hero[playerId]), GetUnitY(udg_Hero[playerId]), 0.00)
+    call SuspendHeroXP(udg_Rucksack[playerId], true)
+    call SetUnitInvulnerable(udg_Rucksack[playerId], true)
     // Change Ruckack Page Trigger
-    if (udg_PlayerRucksackTrigger[PlayerNumber] == null) then
-        set udg_PlayerRucksackTrigger[PlayerNumber] = CreateTrigger()
-        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTrigger[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_SPELL_CHANNEL, null)
-        call TriggerAddCondition(udg_PlayerRucksackTrigger[PlayerNumber], Condition(function TriggerConditionChangeRucksackPage))
-        call TriggerAddAction(udg_PlayerRucksackTrigger[PlayerNumber], function TriggerFunctionChangeRucksackPage)
+    if (udg_PlayerRucksackTrigger[playerId] == null) then
+        set udg_PlayerRucksackTrigger[playerId] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTrigger[playerId], RucksackPlayer, EVENT_PLAYER_UNIT_SPELL_CHANNEL, null)
+        call TriggerAddCondition(udg_PlayerRucksackTrigger[playerId], Condition(function TriggerConditionChangeRucksackPage))
+        call TriggerAddAction(udg_PlayerRucksackTrigger[playerId], function TriggerFunctionChangeRucksackPage)
     endif
-    if (udg_PlayerRucksackTriggerPickup[PlayerNumber] == null) then
-        set udg_PlayerRucksackTriggerPickup[PlayerNumber] = CreateTrigger()
-        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerPickup[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_PICKUP_ITEM, null)
-        call TriggerAddCondition(udg_PlayerRucksackTriggerPickup[PlayerNumber], Condition(function TriggerConditionPickupRucksackItem))
-        call TriggerAddAction(udg_PlayerRucksackTriggerPickup[PlayerNumber], function TriggerFunctionPickupRucksackItem)
+    if (udg_PlayerRucksackTriggerPickup[playerId] == null) then
+        set udg_PlayerRucksackTriggerPickup[playerId] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerPickup[playerId], RucksackPlayer, EVENT_PLAYER_UNIT_PICKUP_ITEM, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerPickup[playerId], Condition(function TriggerConditionPickupRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerPickup[playerId], function TriggerFunctionPickupRucksackItem)
     endif
-    if (udg_PlayerRucksackTriggerDrop[PlayerNumber] == null) then
-        set udg_PlayerRucksackTriggerDrop[PlayerNumber] = CreateTrigger()
-        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerDrop[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_DROP_ITEM, null)
-        call TriggerAddCondition(udg_PlayerRucksackTriggerDrop[PlayerNumber], Condition(function TriggerConditionDropRucksackItem))
-        call TriggerAddAction(udg_PlayerRucksackTriggerDrop[PlayerNumber], function TriggerFunctionDropRucksackItem)
+    if (udg_PlayerRucksackTriggerDrop[playerId] == null) then
+        set udg_PlayerRucksackTriggerDrop[playerId] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerDrop[playerId], RucksackPlayer, EVENT_PLAYER_UNIT_DROP_ITEM, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerDrop[playerId], Condition(function TriggerConditionDropRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerDrop[playerId], function TriggerFunctionDropRucksackItem)
     endif
-    if (udg_PlayerRucksackTriggerMove[PlayerNumber] == null) then
-        set udg_PlayerRucksackTriggerMove[PlayerNumber] = CreateTrigger()
-        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerMove[PlayerNumber], RucksackPlayer, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, null)
-        call TriggerAddCondition(udg_PlayerRucksackTriggerMove[PlayerNumber], Condition(function TriggerConditionMoveRucksackItem))
-        call TriggerAddAction(udg_PlayerRucksackTriggerMove[PlayerNumber], function TriggerFunctionMoveRucksackItem)
+    if (udg_PlayerRucksackTriggerMove[playerId] == null) then
+        set udg_PlayerRucksackTriggerMove[playerId] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerMove[playerId], RucksackPlayer, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerMove[playerId], Condition(function TriggerConditionMoveRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerMove[playerId], function TriggerFunctionMoveRucksackItem)
     endif
-    // Remove All
+    if (udg_PlayerRucksackTriggerOrder[playerId] == null) then
+        set udg_PlayerRucksackTriggerOrder[playerId] = CreateTrigger()
+        call TriggerRegisterPlayerUnitEvent(udg_PlayerRucksackTriggerOrder[playerId], RucksackPlayer, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER, null)
+        call TriggerAddCondition(udg_PlayerRucksackTriggerOrder[playerId], Condition(function TriggerConditionOrderRucksackItem))
+        call TriggerAddAction(udg_PlayerRucksackTriggerOrder[playerId], function TriggerFunctionOrderRucksackItem)
+    endif
     set RucksackPlayer = null
 endfunction
 
-function RefreshRucksackForPlayer takes integer PlayerNumber returns nothing
-    local player RucksackPlayer = Player(PlayerNumber)
-    if (udg_Rucksack[PlayerNumber] != null) then
-        call RemoveUnit(udg_Rucksack[PlayerNumber])
-        set udg_Rucksack[PlayerNumber] = null
+function RefreshRucksackForPlayer takes integer playerId returns nothing
+     if (udg_Rucksack[playerId] != null) then
+        call RemoveUnit(udg_Rucksack[playerId])
+        set udg_Rucksack[playerId] = null
     endif
-    set udg_Rucksack[PlayerNumber] = CreateUnit(RucksackPlayer, udg_RucksackUnitType, GetUnitX(udg_Hero[PlayerNumber]), GetUnitY(udg_Hero[PlayerNumber]), 0.00)
-    call SuspendHeroXPBJ(false, udg_Rucksack[PlayerNumber])
-    call SetUnitInvulnerable(udg_Rucksack[PlayerNumber], true)
-    call RefreshRucksackPage(PlayerNumber)
-    set RucksackPlayer = null
+    call CreateRucksackForPlayer(playerId)
+    call RefreshRucksackPage(playerId)
 endfunction
 
 function GetRespawnBuildingSize takes nothing returns real
@@ -1056,11 +1156,6 @@ function RespawnAllGroups takes nothing returns nothing
         call RespawnGroup(i)
         set i = i + 1
     endloop
-endfunction
-
-function SetupRPGSystems takes nothing returns nothing
-    set udg_UseRucksackSystem = true
-    set udg_UseRespawningSystem = true
 endfunction
 
 function SetupCustomRucksackSystem takes nothing returns nothing
@@ -1305,7 +1400,6 @@ function TriggerActionRespawnMonster takes nothing returns nothing
     local unit triggerUnit = GetTriggerUnit()
     local integer Group = GetRespawnGroupOfUnit(triggerUnit)
     local real RandomNumber = 0.0
-    local location ItemSpawnLocation = null
     local item whichItem = null
     debug call BJDebugMsg("Respawn monster with group " + I2S(Group) + " handle ID: " + I2S(GetHandleId(triggerUnit)))
     if (Group != -1) then
@@ -1317,12 +1411,7 @@ function TriggerActionRespawnMonster takes nothing returns nothing
 		if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
             set RandomNumber = GetRandomReal(0.00, 100.00)
             if (RandomNumber <= udg_RespawnItemChance) then
-                //set ItemSpawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-                //set whichItem = CreateItem(udg_RespawnItemType[Group], GetLocationX(ItemSpawnLocation), GetLocationY(ItemSpawnLocation))
                 call DropRandomItemForGroupNTimes(triggerUnit, Group)
-                //call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
-                //call RemoveLocation(ItemSpawnLocation)
-                //set ItemSpawnLocation = null
             endif
             call RespawnGroupTimed(Group)
         endif
@@ -1338,28 +1427,216 @@ endfunction
 function InitCustomSystems takes nothing returns nothing
     local integer I0 = 0
     set udg_DB = InitHashtable()
-    call SetupRPGSystems()
     call SetupCustomRucksackSystem()
     call SetupCustomRespawningSystem()
     // Movement Trigger
-    if (udg_UseRucksackSystem) then
-        set udg_RucksackTrigger = CreateTrigger()
-        call TriggerRegisterTimerEvent(udg_RucksackTrigger, udg_RucksackMoveTime, true)
-        call TriggerAddAction(udg_RucksackTrigger, function TriggerActionMoveRucksack)
-    endif
-    // Respawn Trigger
-    if (udg_UseRespawningSystem) then
-        set udg_RespawnTrigger = CreateTrigger()
-        call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
-		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_DEATH, null)
-		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
-		call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
-		call TriggerAddCondition(udg_RespawnTrigger, Condition(function TriggerConditionRespawnMonster))
-        call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
+    set udg_RucksackTrigger = CreateTrigger()
+    call TriggerRegisterTimerEvent(udg_RucksackTrigger, udg_RucksackMoveTime, true)
+    call TriggerAddAction(udg_RucksackTrigger, function TriggerActionMoveRucksack)
 
-        set udg_RespawnDestructableTrigger = CreateTrigger()
-        call TriggerAddAction(udg_RespawnDestructableTrigger, function TriggerActionDestructableDrops)
+    set udg_RespawnTrigger = CreateTrigger()
+    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
+    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_DEATH, null)
+    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
+    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
+    call TriggerAddCondition(udg_RespawnTrigger, Condition(function TriggerConditionRespawnMonster))
+    call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
+
+    set udg_RespawnDestructableTrigger = CreateTrigger()
+    call TriggerAddAction(udg_RespawnDestructableTrigger, function TriggerActionDestructableDrops)
+endfunction
+
+// Baradé's Item Respawn System 1.0
+//
+// Allows picked up or destroyed items to respawn after some time.
+//
+// Usage:
+// - Copy this code into your map script or a trigger converted into code.
+// - Place some items on the map.
+// - Call AddRespawnItem with the specified items on the map.
+library ItemRespawnSystem initializer Init
+
+globals
+    public constant real DEFAULT_TIMEOUT = 30.0
+
+    private integer respawnItemCounter = 0
+    private item array respawnItemItem
+    private integer array respawnItemHandleId
+    private integer array respawnItemItemTypeId
+    private real array respawnItemX
+    private real array respawnItemY
+    private timer array respawnItemTimer
+    private real array respawnItemTimeout
+    private boolean array respawnItemEnabled
+    private trigger array respawnItemDeathTrigger
+
+    private integer callbackTriggersCounter = 0
+    private trigger array callbackTriggers
+
+    private item callbackItem = null
+    private integer callbackIndex = -1
+
+    private trigger pickupItemTrigger = CreateTrigger()
+    private hashtable respawnItemHashTable = InitHashtable()
+    private integer evaluateIndex = -1
+    private trigger refreshEvaluateTrigger = CreateTrigger()
+endglobals
+
+function GetTriggerRespawnItem takes nothing returns item
+    return callbackItem
+endfunction
+
+function GetTriggerItemRespawn takes nothing returns integer
+    return callbackIndex
+endfunction
+
+function TriggerRegisterItemRespawnEvent takes trigger whichTrigger returns nothing
+    local integer index = callbackTriggersCounter
+    set callbackTriggers[index] = whichTrigger
+    set callbackTriggersCounter = callbackTriggersCounter + 1
+endfunction
+
+private function EvaluateAndExecuteCallbackTriggers takes integer index returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= callbackTriggersCounter)
+        set callbackItem = respawnItemItem[index]
+        set callbackIndex = index
+        call ConditionalTriggerExecute(callbackTriggers[i])
+        set i = i + 1
+    endloop
+endfunction
+
+function GetItemRespawn takes item whichItem returns integer
+    local integer i = 0
+    loop
+        exitwhen (i >= respawnItemCounter)
+        if (GetManipulatedItem() == respawnItemItem[i]) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+private function GetItemRespawnByHandleID takes integer handleID returns integer
+    local integer i = 0
+    loop
+        exitwhen (i >= respawnItemCounter)
+        if (handleID == respawnItemHandleId[i]) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function RespawnItem takes integer index returns nothing
+    set respawnItemItem[index] = CreateItem(respawnItemItemTypeId[index], respawnItemX[index], respawnItemY[index])
+    set respawnItemHandleId[index] = GetHandleId(respawnItemItem[index])
+    set evaluateIndex = index
+    call TriggerEvaluate(refreshEvaluateTrigger)
+    call EvaluateAndExecuteCallbackTriggers(index)
+endfunction
+
+function RespawnAllItems takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= respawnItemCounter)
+        if (respawnItemItem[i] == null) then
+            call RespawnItem(i)
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+private function TimerFunctionRespawnItem takes nothing returns nothing
+    local integer index = LoadInteger(respawnItemHashTable, GetHandleId(GetExpiredTimer()), 0)
+    call RespawnItem(index)
+endfunction
+
+function StartItemRespawn takes integer index returns nothing
+    set respawnItemItem[index] = null
+    set respawnItemHandleId[index] = 0
+    call TimerStart(respawnItemTimer[index], respawnItemTimeout[index], false, function TimerFunctionRespawnItem)
+endfunction
+
+private function TriggerActionDeath takes nothing returns nothing
+    local integer index = GetItemRespawnByHandleID(GetHandleId(GetTriggerWidget()))
+    call StartItemRespawn(index)
+endfunction
+
+private function RefreshDeathTrigger takes integer index returns nothing
+    if (respawnItemDeathTrigger[index] != null) then
+        call DestroyTrigger(respawnItemDeathTrigger[index])
+        set respawnItemDeathTrigger[index] = null
     endif
+
+    set respawnItemDeathTrigger[index] = CreateTrigger()
+    call TriggerRegisterDeathEvent(respawnItemDeathTrigger[index], respawnItemItem[index])
+    call TriggerAddAction(respawnItemDeathTrigger[index], function TriggerActionDeath)
+endfunction
+
+private function RefreshDeathTriggerEvaluate takes nothing returns boolean
+    call RefreshDeathTrigger(evaluateIndex)
+    return false
+endfunction
+
+function AddRespawnItemEx takes item whichItem, real timeout returns integer
+    local integer index = respawnItemCounter
+    set respawnItemItem[index] = whichItem
+    set respawnItemHandleId[index] = GetHandleId(whichItem)
+    set respawnItemItemTypeId[index] = GetItemTypeId(whichItem)
+    set respawnItemX[index] = GetItemX(whichItem)
+    set respawnItemY[index] = GetItemY(whichItem)
+    set respawnItemTimer[index] = CreateTimer()
+    set respawnItemTimeout[index] = timeout
+    call SaveInteger(respawnItemHashTable, GetHandleId(respawnItemTimer[index]), 0, index)
+    set respawnItemEnabled[index] = true
+    call RefreshDeathTrigger(index)
+
+    set respawnItemCounter = respawnItemCounter + 1
+    return index
+endfunction
+
+function AddRespawnItem takes item whichItem returns integer
+    return AddRespawnItemEx(whichItem, DEFAULT_TIMEOUT)
+endfunction
+
+function SetRespawnItemEnabled takes integer index, boolean enabled returns nothing
+    set respawnItemEnabled[index] = enabled
+endfunction
+
+function IsRespawnItemEnabled takes integer index returns boolean
+    return respawnItemEnabled[index]
+endfunction
+
+function GetRespawnItemTimer takes integer index returns timer
+    return respawnItemTimer[index]
+endfunction
+
+private function TriggerConditionRespawnItem takes nothing returns boolean
+    local integer index = GetItemRespawn(GetManipulatedItem())
+    return index != -1 and IsRespawnItemEnabled(index)
+endfunction
+
+private function TriggerActionRespawnItem takes nothing returns nothing
+    local integer index = GetItemRespawn(GetManipulatedItem())
+    call StartItemRespawn(index)
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionRespawnItem))
+    call TriggerAddAction(pickupItemTrigger, function TriggerActionRespawnItem)
+
+    call TriggerAddCondition(refreshEvaluateTrigger, Condition(function RefreshDeathTriggerEvaluate))
+endfunction
+
+endlibrary
+
+function AddRespawnItemWoWReforged takes nothing returns integer
+    return AddRespawnItem(udg_TmpItem)
 endfunction
 
 function GetPlayerColorRed takes player p returns integer
@@ -2090,32 +2367,37 @@ function WrapUpAllBuildings takes player whichPlayer, real x, real y returns int
     return counter
 endfunction
 
+// World of Warcraft Reforged savecodes:
+//constant string SAVE_CODE_DIGITS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE" // 1.9.6
+//constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O [k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII
 
-/**
- * Barade's save code system.
- *
- * save code digit - a digit of the number system used for a save code. This can be decimal, hexadecimal or custom.
- * save code segment - a savecode consists of multiple segments storing information about specific properties.
- * save code segment separator - the segments are separated by a special digit which is not used in the save code's digit to identify where a new segment starts
- * save code - a save code using the digits of a sepcific number system consisting of one or several segments.
- * string hash - a decimal value generated from a string using a one way function which cannot be converted back into its original string. We only use positive hash values to keep it simple.
- * player name hash - a hash value from the player name used to verify that the savecode belongs to the using player
- * save code checksum - a checksum of the save code in form of ea save code segment created by hashing the string up to excluding the checksum segment itself. This is used to verify that the savecode was not created manually although it could be faked.
- *
- * Our save code looks the following way:
- * <player name hash segment>X<game mode/single or multiplayer flag>X<game type>X<hero XP rate>X<hero XP>X<checksum>
- *
- * Obfuscation: Since it is pretty easy to know which segment has which information using these save code segments, we want to obfuscate the final generated save code a bit.
- * We can do this by shifting the used digits using the player name hash since it will also be the same when the player loads the save code. By shifting the digits we might get different digits for different player name hashs.
- *
- * Compression: We want to keep the savecodes as short as possible. Hence, we combine flags like game mode and single/multiplayer in one number. We could go even further as long as we know the maximum number of a value.
- * Another form of compression is to make the string hashes much shorter by using the modulo operation. This comes with the risk of having less different string hashes for different player names or as checksums but as long
- * as there are enough possibilities it is hard enough to fake the correct string hash value.
- */
+
+// Barade's Save Code System 1.0
+//
+// Allows storing and loading custom save codes which contain any information.
+//
+// Details:
+// save code digit - a digit of the number system used for a save code. This can be decimal, hexadecimal or custom.
+// save code segment - a savecode consists of multiple segments storing information about specific properties.
+// save code segment separator - the segments are separated by a special digit which is not used in the save code's digit to identify where a new segment starts
+// save code - a save code using the digits of a sepcific number system consisting of one or several segments.
+// string hash - a decimal value generated from a string using a one way function which cannot be converted back into its original string. We only use positive hash values to keep it simple.
+// player name hash - a hash value from the player name used to verify that the savecode belongs to the using player
+// save code checksum - a checksum of the save code in form of ea save code segment created by hashing the string up to excluding the checksum segment itself. This is used to verify that the savecode was not created manually although it could be faked.
+//
+// A save code could look the following way:
+// <player name hash segment>X<game mode/single or multiplayer flag>X<game type>X<hero XP rate>X<hero XP>X<checksum>
+//
+// Obfuscation: Since it is pretty easy to know which segment has which information using these save code segments, we want to obfuscate the final generated save code a bit.
+// We can do this by shifting the used digits using the player name hash since it will also be the same when the player loads the save code. By shifting the digits we might get different digits for different player name hashs.
+//
+// Compression: We want to keep the savecodes as short as possible. Hence, we combine flags like game mode and single/multiplayer in one number. We could go even further as long as we know the maximum number of a value.
+// Another form of compression is to make the string hashes much shorter by using the modulo operation. This comes with the risk of having less different string hashes for different player names or as checksums but as long
+// as there are enough possibilities it is hard enough to fake the correct string hash value.
+library SaveCodeSystem
 
 globals
-    //constant string SAVE_CODE_DIGITS = "0123456789ABCDEF" // hexadecimal digits
-    constant string SAVE_CODE_DIGITS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE" // 1.9.6
+    constant string SAVE_CODE_DIGITS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE"
     //constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O [k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII
     constant string SAVE_CODE_SEGMENT_SEPARATOR = "X" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
@@ -2148,9 +2430,7 @@ function CheckSaveCodeDigitsUnique takes nothing returns nothing
     call CheckStringForDuplicatedCharacters(SAVE_CODE_DIGITS)
 endfunction
 
-/**
- * Returns the base for the custom number system.
- */
+// Returns the base for the custom number system.
 function GetMaxSaveCodeDigits takes nothing returns integer
     return StringLength(SAVE_CODE_DIGITS)
 endfunction
@@ -2224,9 +2504,7 @@ function GetShiftedSaveCodeSplitPosition takes integer n returns integer
     return ModuloInteger(n, GetMaxObfuscationSaveCodeDigits())
 endfunction
 
-/**
- * Use a hash value (like the player name's hash) to move the symbol table. This might prevent reproducing savecodes too easily.
- */
+// Use a hash value (like the player name's hash) to move the symbol table. This might prevent reproducing savecodes too easily.
 function GetShiftedSaveCodeDigits takes integer n returns string
     local integer max = GetMaxObfuscationSaveCodeDigits()
     local string saveCodeDigits = GetObfuscationSaveCodeDigits()
@@ -2287,9 +2565,7 @@ function PowI takes integer x, integer y returns integer
     return result
 endfunction
 
-/**
- * Convert our number system into the decimal system number.
- */
+// Convert our number system into the decimal system number.
 function ConvertSaveCodeSegmentIntoDecimalNumber takes string symbol, integer n returns integer
     local integer index = IndexOfSaveCodeDigit(symbol)
     if (index != -1) then
@@ -2395,17 +2671,6 @@ function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, int
     return result
 endfunction
 
-function FilterPlayerFunctionUsedUser takes nothing returns boolean
-    return GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER and GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING
-endfunction
-
-function IsInSinglePlayer takes nothing returns boolean
-    //return CountPlayersInForceBJ(GetPlayersMatching(Condition(function FilterPlayerFunctionUsedUser))) == 1
-    // https://www.hiveworkshop.com/threads/how-to-detect-single-player.161490/
-    // Even works when all players except one have left the game:
-    return ReloadGameCachesFromDisk()
-endfunction
-
 // We don't want to handle negative numbers.
 function AbsStringHash takes string whichString returns integer
     return IAbsBJ(StringHash(whichString))
@@ -2417,6 +2682,63 @@ function CompressedAbsStringHash takes string whichString returns integer
         return ModuloInteger(absStringHash, GetMaxSaveCodeDigits() * 3)
     endif
     return absStringHash
+endfunction
+
+function IsCharacterUpperCase takes string letter returns boolean
+    return letter == "A" or letter == "B" or letter == "C" or letter == "D" or letter == "E" or letter == "F" or letter == "G" or letter == "H" or letter == "I" or letter == "J" or letter == "K" or letter == "L" or letter == "M" or letter == "N" or letter == "O" or letter == "P" or letter == "Q" or letter == "R" or letter == "S" or letter == "T" or letter == "U" or letter == "V" or letter == "W" or letter == "X" or letter == "Y" or letter == "Z"
+endfunction
+
+function ColoredSaveCode takes string saveCode returns string
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(saveCode))
+        if (IsCharacterUpperCase(SubString(saveCode, i, i + 1))) then
+            set result = result + "|cffffcc00" + SubString(saveCode, i, i + 1) + "|r"
+        else
+            set result = result + SubString(saveCode, i, i + 1)
+        endif
+        set i = i + 1
+    endloop
+
+    return result
+endfunction
+
+function AppendFileContent takes string content returns string
+    return "\r\n\t\t\t\t" + content
+endfunction
+
+function CreateSaveCodeTextFile takes string playerName, string info, string fileName, string saveCode returns nothing
+    local string singleplayer = "no"
+    local string singlePlayerFileName = "Multiplayer"
+    local string gameMode = "Freelancer"
+    local string gameType = "Normal"
+    local string content = ""
+
+    call PreloadGenClear()
+    call PreloadGenStart()
+
+    set content = content + AppendFileContent("Code: -load " + saveCode)
+    set content = content + AppendFileContent(info)
+    set content = content + AppendFileContent("")
+
+    call Preload(content)
+
+    // The line below creates the file at the specified location
+    call PreloadGenEnd(fileName)
+endfunction
+
+endlibrary
+
+function FilterPlayerFunctionUsedUser takes nothing returns boolean
+    return GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER and GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING
+endfunction
+
+function IsInSinglePlayer takes nothing returns boolean
+    //return CountPlayersInForceBJ(GetPlayersMatching(Condition(function FilterPlayerFunctionUsedUser))) == 1
+    // https://www.hiveworkshop.com/threads/how-to-detect-single-player.161490/
+    // Even works when all players except one have left the game:
+    return ReloadGameCachesFromDisk()
 endfunction
 
 function GetHeroLevelMaxXP takes integer heroLevel returns integer
@@ -2652,10 +2974,6 @@ function GetSaveCodeFolderName takes nothing returns string
     return result
 endfunction
 
-function AppendFileContent takes string content returns string
-    return "\r\n\t\t\t\t" + content
-endfunction
-
 globals
     // store all generated save codes during a game to prevent loading them immediately and duplicating stuff
     string array generatedSaveCodes
@@ -2692,7 +3010,7 @@ function ConvertSaveCodeDemigodValueToInfo takes integer value returns string
     return "No Demigod"
 endfunction
 
-function CreateSaveCodeTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, integer equipmentBags, string saveCode returns nothing
+function CreateSaveCodeTextFileHeroes takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, integer equipmentBags, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string gameMode = "Freelancer"
@@ -2819,7 +3137,7 @@ function GetWarlordFromSaveCodeSegment takes integer saveCodeSegment returns boo
     return false
 endfunction
 
-function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, integer equipmentBags returns string
+function GetSaveCodeEx takes player whichPlayer, string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameType, integer xpRate, integer heroLevel, integer xp, integer gold, integer lumber, integer evolutionLevel, integer powerGeneratorLevel, integer handOfGodLevel, integer mountLevel, integer masonryLevel, integer heroKills, integer heroDeaths, integer unitKills, integer unitDeaths, integer buildingsRazed, integer totalBossKills, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer improvedNavyLevel, integer improvedCreepHunterLevel, integer demigodValue, integer equipmentBags returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -2878,7 +3196,10 @@ function GetSaveCodeEx takes string playerName, boolean isSinglePlayer, boolean 
         set result = ConvertSaveCodeToObfuscatedVersion(result, playerNameHash)
     endif
 
-    call CreateSaveCodeTextFile(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, demigodValue, equipmentBags, result)
+    // never store savecode files of other players on the disk
+    if (GetLocalPlayer() == whichPlayer) then
+        call CreateSaveCodeTextFileHeroes(playerName, isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, demigodValue, equipmentBags, result)
+    endif
 
     call AddGeneratedSaveCode(result)
 
@@ -3467,7 +3788,7 @@ function GetSaveCode takes player whichPlayer returns string
         set heroLevel3 = GetHeroLevelByXP(xp3)
     endif
 
-    return GetSaveCodeEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(whichPlayer), equipmentBags)
+    return GetSaveCodeEx(whichPlayer, GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, gameType, xpRate, heroLevel, xp, gold, lumber, evolutionLevel, powerGeneratorLevel, handOfGodLevel, mountLevel, masonryLevel, heroKills, heroDeaths, unitKills, unitDeaths, buildingsRazed, totalBossKills, heroLevel2, xp2, heroLevel3, xp3, improvedNavyLevel, improvedCreepHunterLevel, GetSaveCodeDemigodValue(whichPlayer), equipmentBags)
 endfunction
 
 function ReadSaveCode takes string saveCode, integer hash returns string
@@ -4185,26 +4506,7 @@ function GetSaveCodeMaxHeroLevel takes string playerName, string s returns integ
     return GetHeroLevelByXP(xp)
 endfunction
 
-function IsCharacterUpperCase takes string letter returns boolean
-    return letter == "A" or letter == "B" or letter == "C" or letter == "D" or letter == "E" or letter == "F" or letter == "G" or letter == "H" or letter == "I" or letter == "J" or letter == "K" or letter == "L" or letter == "M" or letter == "N" or letter == "O" or letter == "P" or letter == "Q" or letter == "R" or letter == "S" or letter == "T" or letter == "U" or letter == "V" or letter == "W" or letter == "X" or letter == "Y" or letter == "Z"
-endfunction
-
-function ColoredSaveCode takes string saveCode returns string
-    local string result = ""
-    local integer i = 0
-    loop
-        exitwhen (i == StringLength(saveCode))
-        if (IsCharacterUpperCase(SubString(saveCode, i, i + 1))) then
-            set result = result + "|cffffcc00" + SubString(saveCode, i, i + 1) + "|r"
-        else
-            set result = result + SubString(saveCode, i, i + 1)
-        endif
-        set i = i + 1
-    endloop
-
-    return result
-endfunction
-
+// TODO Create a system SaveCodeObjectSystem depending on the SaveCodeSystem which allows registering any IDs in a 2D array.
 globals
     string array SaveObjectNameUnit
     integer array SaveObjectIdUnit
@@ -7188,11 +7490,11 @@ endfunction
 // Generated Save Codes
 
 function GetSaveCodeStrong takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2, 3)
+    return GetSaveCodeEx(GetTriggerPlayer(), playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 1000, 50049900, 800000, 800000, 1000, 100, 100, 100, 100, 8000, 0, 20000, 0, 20000, 5000, 1000, 50049900, 1000, 50049900, 100, 100, 2, 3)
 endfunction
 
 function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns string
-    return GetSaveCodeEx(playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0, 2)
+    return GetSaveCodeEx(GetTriggerPlayer(), playerName, singlePlayer, warlord, udg_GameTypeNormal, xpRate, 30, 50000, 100000, 100000, 20, 20, 20, 20, 20, 30, 0, 2000, 0, 800, 10, 30, 50000, 30, 50000, 20, 20, 0, 2)
 endfunction
 
 function ForGroupRemoveUnit takes nothing returns nothing
@@ -10306,7 +10608,7 @@ function RandomLivingTreeDestructableInCircle takes real radius, location loc re
     return bj_destRandomCurrentPick
 endfunction
 
-// Baradé's Item Unstack System 1.5
+// Baradé's Item Unstack System 1.6
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
 //
@@ -10326,7 +10628,7 @@ constant function ItemUnstackItemGetMaxStacks takes integer itemTypeId returns i
     return 1000
 endfunction
 
-library ItemUnstackSystem initializer Init
+library ItemUnstackSystem initializer Init requires optional MaxItemStacks
 
 globals
     // The number of charges which are unstacked at maximum if available.
@@ -10337,51 +10639,13 @@ globals
     private constant boolean ALLOW_STACKING_NEXT_ITEM = true
     // Checks for the maximum possible stacks for every item type. Otherwise, ItemUnstackItemGetMaxStacks is used.
     private constant boolean CHECK_MAX_STACKS = true
-    // This dummy is created and hidden once only if CHECK_MAX_STACKS is set to true. It requires an inventory with at least 2 slots.
-    private constant integer DUMMY_UNIT_TYPE_MAX_CHECKS = 'Hpal'
-    // Warcraft III has a limit of number of stacks for the field "Stats - Max Stacks".
-    private constant integer MAX_STACKS_ALLOWED = 1000
 
     private trigger orderTrigger = CreateTrigger()
-    private trigger stackItemTrigger = CreateTrigger()
-    private unit stackItemDummy = null
-    private integer stackCounter = 0
-    private hashtable stackHashTable = InitHashtable()
 endglobals
 
-public function GetStackItemDummy takes nothing returns unit
-    return stackItemDummy
-endfunction
-
-public function GetMaxStacksByItemTypeId takes integer itemTypeId returns integer
+private function GetMaxStacksByItemTypeIdIntern takes integer itemTypeId returns integer
 static if (CHECK_MAX_STACKS) then
-    local integer i = 0
-    local item tmpItem = null
-
-    if (HaveSavedInteger(stackHashTable, itemTypeId, 0)) then
-        return LoadInteger(stackHashTable, itemTypeId, 0)
-    endif
-    set stackCounter = 1
-    set tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
-    call SetItemCharges(tmpItem, 1)
-    call UnitAddItem(stackItemDummy, tmpItem)
-    set i = 1
-    loop
-        set tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
-        call SetItemCharges(tmpItem, 1)
-        call UnitAddItem(stackItemDummy, tmpItem)
-        exitwhen (stackCounter <= i)
-        set i = i + 1
-        exitwhen (i >= MAX_STACKS_ALLOWED)
-    endloop
-    if (UnitItemInSlot(stackItemDummy, 0) != null) then
-        call RemoveItem(UnitItemInSlot(stackItemDummy, 0))
-    endif
-    if (UnitItemInSlot(stackItemDummy, 1) != null) then
-        call RemoveItem(UnitItemInSlot(stackItemDummy, 1))
-    endif
-    call SaveInteger(stackHashTable, itemTypeId, 0, stackCounter)
-    return stackCounter
+    return GetMaxStacksByItemTypeId(itemTypeId)
 else
     return ItemUnstackItemGetMaxStacks(itemTypeId)
 endif
@@ -10432,7 +10696,7 @@ private function AddUnstackedItem takes unit hero, integer itemTypeId, integer c
                     set addedToFreeSlot = true
                     call UnitAddItemToSlotById(hero, itemTypeId, i)
                     set unstackedItem = UnitItemInSlot(hero, i)
-                elseif (GetItemTypeId(itemInNextSlot) == itemTypeId and GetItemCharges(itemInNextSlot) < GetMaxStacksByItemTypeId(itemTypeId)) then
+                elseif (GetItemTypeId(itemInNextSlot) == itemTypeId and GetItemCharges(itemInNextSlot) < GetMaxStacksByItemTypeIdIntern(itemTypeId)) then
                     set unstackedItem = itemInNextSlot
                 endif
             endif
@@ -10481,7 +10745,12 @@ private function AddUnstackedItem takes unit hero, integer itemTypeId, integer c
 endfunction
 
 private function TriggerConditionOrderUnstack takes nothing returns boolean
-    return (GetStackItemDummy() == null or GetTriggerUnit() != GetStackItemDummy()) and GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetMaxStacksByItemTypeId(GetItemTypeId(GetOrderTargetItem())) > 0 and GetItemCharges(GetOrderTargetItem()) > 1 and GetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
+static if (CHECK_MAX_STACKS) then
+    local boolean isNotStackDummy = GetTriggerUnit() != MaxItemStacks_GetStackItemDummy()
+else
+    local boolean isNotStackDummy = true
+endif
+    return isNotStackDummy and GetIssuedOrderId() >= 852002 and GetIssuedOrderId() <= 852007 and GetOrderTargetItem() != null and GetMaxStacksByItemTypeIdIntern(GetItemTypeId(GetOrderTargetItem())) > 0 and GetItemCharges(GetOrderTargetItem()) > 1 and GetItemSlot(GetTriggerUnit(), GetOrderTargetItem()) == GetIssuedOrderId() - 852002
 endfunction
 
 private function TriggerActionOrderUnstack takes nothing returns nothing
@@ -10508,31 +10777,16 @@ private function TriggerActionOrderUnstack takes nothing returns nothing
     set sourceItem = null
 endfunction
 
-private function TriggerActionStack takes nothing returns nothing
-    set stackCounter = stackCounter + 1
-endfunction
-
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrderUnstack))
     call TriggerAddAction(orderTrigger, function TriggerActionOrderUnstack)
-
-static if (CHECK_MAX_STACKS) then
-    set stackItemDummy = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), DUMMY_UNIT_TYPE_MAX_CHECKS, 0.0, 0.0, 0.0)
-    call SetUnitInvulnerable(stackItemDummy, true)
-    if (IsUnitType(stackItemDummy, UNIT_TYPE_HERO)) then
-        call SuspendHeroXP(stackItemDummy, true)
-    endif
-    call SetUnitUseFood(stackItemDummy, false)
-    call ShowUnit(stackItemDummy, false)
-    call BlzSetUnitWeaponBooleanField(stackItemDummy, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
-    call BlzSetUnitWeaponBooleanField(stackItemDummy, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
-    call TriggerRegisterUnitEvent(stackItemTrigger, stackItemDummy, EVENT_UNIT_STACK_ITEM)
-    call TriggerAddAction(stackItemTrigger, function TriggerActionStack)
-endif
 endfunction
 
 // Change Log:
+//
+// 1.6 2022-07-15:
+// - Add separate library MaxItemStacks.
 //
 // 1.5 2022-07-10:
 // - Use vJass since we have two triggers now, can use the initializer and use static ifs.
@@ -10561,6 +10815,89 @@ endfunction
 // - Add some items with custom names and descriptions to test stacking/unstacking them.
 // - Move system code into converted trigger.
 // - Update preview image.
+endlibrary
+
+// Baradé's Max Item Stacks System 1.0
+//
+// Supports the missing Warcraft III feature of calculating the value of 'ista' per item type ID.
+//
+// Usage:
+// - Copy this code into your map script or a trigger converted into code.
+// - Use the function GetMaxStacksByItemTypeId to get the value of 'ista' per item type ID.
+//
+// Download:
+// https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-1.339109/
+library MaxItemStacks initializer Init
+
+globals
+    // This dummy is created and hidden once only if CHECK_MAX_STACKS is set to true. It requires an inventory with at least 2 slots.
+    private constant integer DUMMY_UNIT_TYPE_MAX_CHECKS = 'Hpal'
+    // Warcraft III has a limit of number of stacks for the field "Stats - Max Stacks" ('ista').
+    private constant integer MAX_STACKS_ALLOWED = 1000
+    private constant real DUMMY_X = 0.0
+    private constant real DUMMY_Y = 0.0
+
+    private integer stackCounter = 0
+    private hashtable stackHashTable = InitHashtable()
+    private unit stackItemDummy = null
+    private trigger stackItemTrigger = CreateTrigger()
+endglobals
+
+public function GetStackItemDummy takes nothing returns unit
+    return stackItemDummy
+endfunction
+
+function GetMaxStacksByItemTypeId takes integer itemTypeId returns integer
+    local integer i = 0
+    local item tmpItem = null
+
+    if (HaveSavedInteger(stackHashTable, itemTypeId, 0)) then
+        return LoadInteger(stackHashTable, itemTypeId, 0)
+    endif
+    set stackCounter = 1
+    set tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
+    call SetItemCharges(tmpItem, 1)
+    call UnitAddItem(stackItemDummy, tmpItem)
+    set i = 1
+    loop
+        set tmpItem = CreateItem(itemTypeId, 0.0, 0.0)
+        call SetItemCharges(tmpItem, 1)
+        call UnitAddItem(stackItemDummy, tmpItem)
+        exitwhen (stackCounter <= i)
+        set i = i + 1
+        exitwhen (i >= MAX_STACKS_ALLOWED)
+    endloop
+    if (UnitItemInSlot(stackItemDummy, 0) != null) then
+        call RemoveItem(UnitItemInSlot(stackItemDummy, 0))
+    endif
+    if (UnitItemInSlot(stackItemDummy, 1) != null) then
+        call RemoveItem(UnitItemInSlot(stackItemDummy, 1))
+    endif
+    call SaveInteger(stackHashTable, itemTypeId, 0, stackCounter)
+    return stackCounter
+endfunction
+
+
+private function TriggerConditionStack takes nothing returns boolean
+    set stackCounter = stackCounter + 1
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    set stackItemDummy = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), DUMMY_UNIT_TYPE_MAX_CHECKS, DUMMY_X, DUMMY_Y, 0.0)
+    call SetUnitInvulnerable(stackItemDummy, true)
+    if (IsUnitType(stackItemDummy, UNIT_TYPE_HERO)) then
+        call SuspendHeroXP(stackItemDummy, true)
+    endif
+    call SetUnitUseFood(stackItemDummy, false)
+    call ShowUnit(stackItemDummy, false)
+    call BlzSetUnitWeaponBooleanField(stackItemDummy, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
+    call BlzSetUnitWeaponBooleanField(stackItemDummy, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
+    call SetUnitPathing(stackItemDummy, false)
+    call SetUnitMoveSpeed(stackItemDummy, 0.0)
+    call TriggerRegisterUnitEvent(stackItemTrigger, stackItemDummy, EVENT_UNIT_STACK_ITEM)
+    call TriggerAddCondition(stackItemTrigger, Condition(function TriggerConditionStack))
+endfunction
 
 endlibrary
 
@@ -10990,19 +11327,6 @@ function RemoveWall takes unit wall returns nothing
     set invisiblePlatform = null
     call RemoveUnit(wall)
     set wall = null
-endfunction
-
-function SimError takes player whichPlayer, string msg returns nothing
-    local sound error = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
-    if (GetLocalPlayer() == whichPlayer) then
-        if (msg != "" and  msg != null) then
-            call ClearTextMessages()
-            call DisplayTimedTextToPlayer(whichPlayer, 0.52, - 1.00, 2.00, "|cffffcc00" + msg + "|r")
-        endif
-        call StartSound(error)
-    endif
-    call KillSoundWhenDone(error)
-    set error = null
 endfunction
 
 globals

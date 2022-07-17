@@ -221,6 +221,7 @@ This version provides several new features compared to the original map [World o
 * New hero: Goblin Heavy Tank.
 * Custom Turret System which is [part of this repository](./systems/).
 * New hero: Void Lord.
+* TODO Many 2.1 features are not listed yet.
 
 ## Bug Fixes
 
@@ -531,3 +532,12 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Alethos: [Envoy of the Goddess / Vicaress of Elune](https://www.hiveworkshop.com/threads/envoy-of-the-goddess-vicaress-of-elune.303229/)
 * Blizzard Entertainment: [BTNINV_Misc_Bag_09](https://www.hiveworkshop.com/threads/btninv_misc_bag_09.55166/)
 * Direfury: [†-Revellion-†'s Goblin Engineer](https://www.hiveworkshop.com/threads/%E2%80%A0-revellion-%E2%80%A0s-goblin-engineer.135478/)
+* Dangerb0y: [Easy Item Stack 'n Split v2.7.4](https://www.hiveworkshop.com/threads/easy-item-stack-n-split-v2-7-4.153287/) as reference for the unstack and pickup item systems.
+* MeKC: [GetItemValue](https://www.hiveworkshop.com/threads/detecting-item-price.120355/#post-1045229) as reference for item gold and lumber value system.
+* Ergius: [IronOre](https://www.hiveworkshop.com/threads/ironore.90713/)
+* Ergius: [SilverOre](https://www.hiveworkshop.com/threads/silverore.90710/)
+* Ergius: [GoldOre](https://www.hiveworkshop.com/threads/goldore.90703/)
+* Blizzard Entertainment: [BTNINV_Ore_Iron_01](https://www.hiveworkshop.com/threads/btninv_ore_iron_01.54864/)
+* Blizzard Entertainment: [BTNINV_Ore_Mithril_01](https://www.hiveworkshop.com/threads/btninv_ore_mithril_01.54863/)
+* Blizzard Entertainment: [BTNINV_Ore_Copper_01](https://www.hiveworkshop.com/threads/btninv_ore_copper_01.54865/)
+* KelThuzad: [BTNGoldBar](https://www.hiveworkshop.com/threads/btngoldbar.110288/)
