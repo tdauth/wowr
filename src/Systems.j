@@ -115,7 +115,10 @@ function SimError takes player whichPlayer, string msg returns nothing
 endfunction
 
 function PlayerIsOnlineUser takes integer playerId returns boolean
-    return GetPlayerController(Player(playerId)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(playerId)) == PLAYER_SLOT_STATE_PLAYING
+    local player whichPlayer = Player(playerId)
+    local boolean result = GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING
+    set whichPlayer = null
+    return result
 endfunction
 
 function GetHelpText takes nothing returns string
@@ -12130,6 +12133,8 @@ function GetPlayerFromString takes string whichString returns player
     return null
 endfunction
 
+library TurretSystemConfig
+
 function TurretSystemGetAttackAnimation takes unit vehicle, unit turret returns string
     // Goblin War Zeppelin
     if (GetUnitTypeId(vehicle) == 'N06M') then
@@ -12164,25 +12169,31 @@ function TurretSystemApplyWeaponStatsAfter takes unit vehicle, unit turret retur
     endif
 endfunction
 
+endlibrary
+
 // Baradé's Turret System 1.0
 //
 // Usage:
 // - Copy this code into one of your triggers or the map script.
-// - Provide a function which returns the animations like:
+// - Provide the library TurretSystemConfig with the following functions:
 // function TurretSystemGetAttackAnimation takes unit vehicle, unit turret returns string
 //    return "attack"
 //endfunction
+//
+// function TurretSystemApplyWeaponStatsBefore takes unit vehicle, unit turret returns nothing
+//
+// function TurretSystemApplyWeaponStatsAfter takes unit vehicle, unit turret returns nothing
+//
 // - Initialize the system during the map initialization with:
 // Actions
 //     -------- Turret System --------
-//     Custom script:   call TurretSystemInit()
-//     Custom script:   call TurretSystemAddVehicleUnitType('H002', true, "bone_turret")
-//     Custom script:   call TurretSystemAddVehicleUnitType('H003', true, "Turret")
+//     Custom script:   call TurretSystemAddVehicleUnitType('H002', true, true, "bone_turret")
+//     Custom script:   call TurretSystemAddVehicleUnitType('H003', true, true, "Turret")
 // - Add turrets at the beginning of the game and start the system like this:
 // Actions
 //     -------- Turret System --------
 //     Set VariableSet TmpUnit = Tank 0001 <gen>
-//     Custom script:   call TurretSystemAddTurret(udg_TmpUnit, 'h001', 40.0, 0.0, false)
+//     Custom script:   call TurretSystemAddTurret(udg_TmpUnit, 'h001', 40.0, 0.0, false, true, false)
 //
 // Turrets are independently attacking components of a unit.
 // A unit with at least one turret is called vehicle.
@@ -12226,7 +12237,21 @@ endfunction
 // TODOS:
 // - Fix saving and restoring all orders for vehicles.
 // - Disable turrets when the unit is loaded/transported.
+// - Fix selecting and unselecting turrets without desync.
+// - Remove the selectable flag for turrets.
+// - Add offset Z for turrets and use the unit flying height to achieve it. It can also be set by a fixed flying height for the unit type which is much easier.
+// - You cannot order the vehicle to move with the turrets selected in the demo map. Fix the movement type and speed of the turrets so they match the vehicle.
+// - Allow simplified registering of turret unit types for vehicle unit types which includes training or summoning of new units as well as the destruction, their death and hero revival.
+// - Improve the performance for too many turrets in the map: Only move turrets if the position has changed. Only update the target search if the current target is out of range or dead. Changing the priority target also should update the target.
+// - Disable auto target search for the vehicles in the demo map which only use turrets. Their acquision range should be either low or they should never be able to attack an enemy with the attack order.
+// - Fix the tooltips of turrets and vehicles in the demo map (shown in the selection).
+// - Fix the bombs model in the demo map.
+// - Let the bombs auto bomb the ground all the time except you stop the turret.
 // - Use custom icons in the demo map.
+// - Add some Sith and Jedi to the demo map.
+// - Add some ground soldiers to the demo map.
+// - Add some water area with battle ships and sub marines to the demo map.
+library TurretSystem requires TurretSystemConfig
 
 globals
     // user-specified configuration
@@ -12263,30 +12288,30 @@ globals
     constant integer TURRET_SYSTEM_ORDER_TYPE_DESTRUCTABLE_TARGET = 3
     constant integer TURRET_SYSTEM_ORDER_TYPE_POINT_TARGET = 4
 
-    integer array TurretSystemVehicleUnitTypeId
-    boolean array TurretSystemVehicleCanAttack
-    boolean array TurretSystemVehicleChangeFacing
-    string array TurretSystemVehicleFacingBone
-    integer TurretSystemVehicleCounter = 0
+    private integer array TurretSystemVehicleUnitTypeId
+    private boolean array TurretSystemVehicleCanAttack
+    private boolean array TurretSystemVehicleChangeFacing
+    private string array TurretSystemVehicleFacingBone
+    private integer TurretSystemVehicleCounter = 0
 
     // callbacks
-    trigger array TurretSystemCallbackAutoTargetTriggers
-    integer TurretSystemCallbackAutoTargetTriggersCounter = 0
-    unit TurretSystemTriggerVehicle = null
-    unit TurretSystemTriggerTurret = null
-    unit TurretSystemTriggerTargetUnit = null
-    item TurretSystemTriggerTargetItem = null
-    destructable TurretSystemTriggerTargetDestructable = null
+    private trigger array TurretSystemCallbackAutoTargetTriggers
+    private integer TurretSystemCallbackAutoTargetTriggersCounter = 0
+    private unit TurretSystemTriggerVehicle = null
+    private unit TurretSystemTriggerTurret = null
+    private unit TurretSystemTriggerTargetUnit = null
+    private item TurretSystemTriggerTargetItem = null
+    private destructable TurretSystemTriggerTargetDestructable = null
 
-    hashtable TurretSystemHashTable = InitHashtable()
-    group TurretSystemAllVehicles = CreateGroup()
-    group TurretSystemAllTurrets = CreateGroup()
-    timer TurretSystemUpdateTimer = CreateTimer()
-    boolean TurretSystemUpdatedTimerPaused = true
-    trigger TurretSystemAttackTrigger = CreateTrigger()
-    trigger TurretSystemDeathTrigger = CreateTrigger()
-    trigger TurretSystemReviveTrigger = CreateTrigger()
-    trigger TurretSystemOrderTrigger = CreateTrigger()
+    private hashtable TurretSystemHashTable = InitHashtable()
+    private group TurretSystemAllVehicles = CreateGroup()
+    private group TurretSystemAllTurrets = CreateGroup()
+    private timer TurretSystemUpdateTimer = CreateTimer()
+    private boolean TurretSystemUpdatedTimerPaused = true
+    private trigger TurretSystemAttackTrigger = CreateTrigger()
+    private trigger TurretSystemDeathTrigger = CreateTrigger()
+    private trigger TurretSystemReviveTrigger = CreateTrigger()
+    private trigger TurretSystemOrderTrigger = CreateTrigger()
 endglobals
 
 function TurretSystemAddVehicleUnitType takes integer unitTypeId, boolean canAttack, boolean changeFacing, string facingBone returns integer
@@ -12311,7 +12336,7 @@ function TurretSystemGetIndex takes integer unitTypeId returns integer
     return -1
 endfunction
 
-function TurretSystemCopyGroup takes group whichGroup returns group
+private function TurretSystemCopyGroup takes group whichGroup returns group
     local group tmpGroup = CreateGroup()
     call GroupAddGroup(whichGroup, tmpGroup)
     return tmpGroup
@@ -12371,15 +12396,14 @@ function TurretSystemTurretsCountUnitTypeId takes unit vehicle, integer unitType
     return count
 endfunction
 
-function TurretSystemUnselectGroupEnum takes nothing returns nothing
+private function TurretSystemUnselectGroupEnum takes nothing returns nothing
     call SelectUnit(GetEnumUnit(), false)
 endfunction
 
 function TurretSystemSelectionAddTurrets takes player whichPlayer, unit vehicle returns nothing
     local group turrets = TurretSystemGetTurrets(vehicle)
-    if (GetLocalPlayer() == GetTriggerPlayer()) then
+    if (GetLocalPlayer() == whichPlayer) then
         // Use only local code (no net traffic) within this block to avoid desyncs.
-        call SyncSelections() // avoid desyncs
         call ForGroup(turrets, function SelectGroupBJEnum)
     endif
     call GroupClear(turrets)
@@ -12389,9 +12413,8 @@ endfunction
 
 function TurretSystemSelectionRemoveTurrets takes player whichPlayer, unit vehicle returns nothing
     local group turrets = TurretSystemGetTurrets(vehicle)
-    if (GetLocalPlayer() == GetTriggerPlayer()) then
+    if (GetLocalPlayer() == whichPlayer) then
         // Use only local code (no net traffic) within this block to avoid desyncs.
-        call SyncSelections() // avoid desyncs
         call ForGroup(turrets, function TurretSystemUnselectGroupEnum)
     endif
     call GroupClear(turrets)
@@ -12403,7 +12426,7 @@ function TurretSystemGetVehicle takes unit turret returns unit
     return LoadUnitHandle(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE)
 endfunction
 
-function TurretSystemFlushVehicle takes unit vehicle returns nothing
+private function TurretSystemFlushVehicle takes unit vehicle returns nothing
     if (HaveSavedHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS)) then
         call GroupClear(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
         call DestroyGroup(LoadGroupHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_TURRETS))
@@ -12411,7 +12434,7 @@ function TurretSystemFlushVehicle takes unit vehicle returns nothing
     call FlushChildHashtable(TurretSystemHashTable, GetHandleId(vehicle))
 endfunction
 
-function TurretSystemFlushTurret takes unit turret returns nothing
+private function TurretSystemFlushTurret takes unit turret returns nothing
     call FlushChildHashtable(TurretSystemHashTable, GetHandleId(turret))
 endfunction
 
@@ -12425,19 +12448,19 @@ function TurretSystemSetTurretEnabled takes unit turret, boolean enabled returns
     //call SetUnitInvulnerable(turret, true)
 endfunction
 
-function TurretSystemPolarProjectionX takes real x, real angle, real distance returns real
+private function TurretSystemPolarProjectionX takes real x, real angle, real distance returns real
     return x + distance * Cos(angle * bj_DEGTORAD)
 endfunction
 
-function TurretSystemPolarProjectionY takes real y, real angle, real distance returns real
+private function TurretSystemPolarProjectionY takes real y, real angle, real distance returns real
     return y + distance * Sin(angle * bj_DEGTORAD)
 endfunction
 
-function TurretSystemAngleBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
+private function TurretSystemAngleBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
 endfunction
 
-function TurretSystemDistanceBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
+private function TurretSystemDistanceBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
     local real dx = x2 - x1
     local real dy = y2 - y1
     return SquareRoot(dx * dx + dy * dy)
@@ -12492,7 +12515,7 @@ function TurretSystemGetTriggerTargetDestructable takes nothing returns destruct
     return TurretSystemTriggerTargetDestructable
 endfunction
 
-function TurretSystemExecuteCallbackTurretAutoTarget takes unit vehicle, unit turret, unit targetUnit, item targetItem, destructable targetDestructable returns nothing
+private function TurretSystemExecuteCallbackTurretAutoTarget takes unit vehicle, unit turret, unit targetUnit, item targetItem, destructable targetDestructable returns nothing
     local integer i = 0
     set TurretSystemTriggerVehicle = vehicle
     set TurretSystemTriggerTurret = turret
@@ -12506,7 +12529,7 @@ function TurretSystemExecuteCallbackTurretAutoTarget takes unit vehicle, unit tu
     endloop
 endfunction
 
-function TurretSystemApplyWeaponStats takes unit sourceUnit, unit targetUnit returns nothing
+private function TurretSystemApplyWeaponStats takes unit sourceUnit, unit targetUnit returns nothing
     call BlzSetUnitWeaponIntegerField(targetUnit, UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0, BlzGetUnitWeaponIntegerField(sourceUnit, UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0))
     call BlzSetUnitWeaponIntegerField(targetUnit, UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, BlzGetUnitWeaponIntegerField(sourceUnit, UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0))
     call BlzSetUnitWeaponIntegerField(targetUnit, UNIT_WEAPON_IF_ATTACK_DAMAGE_NUMBER_OF_DICE, 0, BlzGetUnitWeaponIntegerField(sourceUnit, UNIT_WEAPON_IF_ATTACK_DAMAGE_NUMBER_OF_DICE, 0))
@@ -12518,7 +12541,7 @@ function TurretSystemApplyWeaponStats takes unit sourceUnit, unit targetUnit ret
     call BlzSetUnitAttackCooldown(targetUnit, BlzGetUnitAttackCooldown(sourceUnit, 0), 0)
 endfunction
 
-function TurretSystemUpdate takes nothing returns nothing
+private function TurretSystemUpdate takes nothing returns nothing
     local unit turret = null
     local unit vehicle = null
     local unit target = null
@@ -12738,11 +12761,11 @@ function TurretSystemRemoveVehicle takes unit vehicle returns boolean
     return false
 endfunction
 
-function TurretSystemTriggerConditionAttack takes nothing returns boolean
+private function TurretSystemTriggerConditionAttack takes nothing returns boolean
     return TurretSystemIsTurret(GetAttacker()) or TurretSystemIsVehicle(GetAttacker())
 endfunction
 
-function TurretSystemTurretAttacksTarget takes nothing returns nothing
+private function TurretSystemTurretAttacksTarget takes nothing returns nothing
     local unit vehicle = TurretSystemGetVehicle(GetAttacker())
     local integer index = TurretSystemGetIndex(GetUnitTypeId(vehicle))
     local string attackAnimation = null
@@ -12768,7 +12791,7 @@ function TurretSystemTurretAttacksTarget takes nothing returns nothing
     set vehicle = null
 endfunction
 
-function TurretSystemTriggerActionAttack takes nothing returns nothing
+private function TurretSystemTriggerActionAttack takes nothing returns nothing
     if (TurretSystemIsTurret(GetAttacker())) then
         call TurretSystemTurretAttacksTarget()
     else
@@ -12779,19 +12802,19 @@ function TurretSystemTriggerActionAttack takes nothing returns nothing
     endif
 endfunction
 
-function TurretSystemTriggerConditionIsVehicle takes nothing returns boolean
+private function TurretSystemTriggerConditionIsVehicle takes nothing returns boolean
     return TurretSystemIsVehicle(GetTriggerUnit())
 endfunction
 
-function TurretSystemDisableTurretUnit takes nothing returns nothing
+private function TurretSystemDisableTurretUnit takes nothing returns nothing
     call TurretSystemSetTurretEnabled(GetEnumUnit(), false)
 endfunction
 
-function TurretSystemEnableTurretUnit takes nothing returns nothing
+private function TurretSystemEnableTurretUnit takes nothing returns nothing
     call TurretSystemSetTurretEnabled(GetEnumUnit(), true)
 endfunction
 
-function TurretSystemTriggerActionDeath takes nothing returns nothing
+private function TurretSystemTriggerActionDeath takes nothing returns nothing
     local group turrets = TurretSystemGetTurrets(GetTriggerUnit())
 
     if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) then
@@ -12843,7 +12866,7 @@ function TurretSystemStopTurrets takes unit vehicle returns nothing
     endif
 endfunction
 
-function TurretSystemPriorityTargetUnit takes unit vehicle, integer orderId, unit target returns boolean
+private function TurretSystemPriorityTargetUnit takes unit vehicle, integer orderId, unit target returns boolean
     local group turrets = TurretSystemGetTurrets(vehicle)
     local unit turret = null
     local boolean result = false
@@ -12866,27 +12889,27 @@ function TurretSystemPriorityTargetUnit takes unit vehicle, integer orderId, uni
     return result
 endfunction
 
-function TurretSystemSaveOrderItem takes unit vehicle, item target returns nothing
+private function TurretSystemSaveOrderItem takes unit vehicle, item target returns nothing
     call SaveInteger(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TYPE, TURRET_SYSTEM_ORDER_TYPE_ITEM_TARGET)
     call SaveItemHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TARGET, target)
 endfunction
 
-function TurretSystemSaveOrderDestructable takes unit vehicle, destructable target returns nothing
+private function TurretSystemSaveOrderDestructable takes unit vehicle, destructable target returns nothing
     call SaveInteger(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TYPE, TURRET_SYSTEM_ORDER_TYPE_DESTRUCTABLE_TARGET)
     call SaveDestructableHandle(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TARGET, target)
 endfunction
 
-function TurretSystemSaveOrderPoint takes unit vehicle, real x, real y returns nothing
+private function TurretSystemSaveOrderPoint takes unit vehicle, real x, real y returns nothing
     call SaveInteger(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TYPE, TURRET_SYSTEM_ORDER_TYPE_POINT_TARGET)
     call SaveReal(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TARGET_X, x)
     call SaveReal(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TARGET_Y, y)
 endfunction
 
-function TurretSystemSaveOrder takes unit vehicle returns nothing
+private function TurretSystemSaveOrder takes unit vehicle returns nothing
     call SaveInteger(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TYPE, TURRET_SYSTEM_ORDER_TYPE_NO_TARGET)
 endfunction
 
-function TurretSystemRestorePreviousOrder takes unit vehicle returns nothing
+private function TurretSystemRestorePreviousOrder takes unit vehicle returns nothing
     local integer orderType = LoadInteger(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER_TYPE)
     local integer orderId = LoadInteger(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_ORDER)
     if (orderType == TURRET_SYSTEM_ORDER_TYPE_NO_TARGET) then
@@ -12903,12 +12926,12 @@ function TurretSystemRestorePreviousOrder takes unit vehicle returns nothing
     endif
 endfunction
 
-function TurretSystemTriggerConditionIsVehicleOrTurret takes nothing returns boolean
+private function TurretSystemTriggerConditionIsVehicleOrTurret takes nothing returns boolean
     return TurretSystemIsVehicle(GetTriggerUnit()) or TurretSystemIsTurret(GetTriggerUnit())
 endfunction
 
 // TURRET_SYSTEM_KEY_TURRET_CURRENT_TARGET
-function TurretSystemTriggerActionIssueOrder takes nothing returns nothing
+private function TurretSystemTriggerActionIssueOrder takes nothing returns nothing
     local boolean matchingTarget = false
     local integer vehicleTypeIndex = -1
 
@@ -12971,27 +12994,36 @@ function TurretSystemTriggerActionIssueOrder takes nothing returns nothing
     endif
 endfunction
 
-function TurretSystemInit takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemAttackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(TurretSystemAttackTrigger, Condition(function TurretSystemTriggerConditionAttack))
-    call TriggerAddAction(TurretSystemAttackTrigger, function TurretSystemTriggerActionAttack)
+private module Init
 
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemDeathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(TurretSystemDeathTrigger, Condition(function TurretSystemTriggerConditionIsVehicle))
-    call TriggerAddAction(TurretSystemDeathTrigger, function TurretSystemTriggerActionDeath)
+    private static method onInit takes nothing returns nothing
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemAttackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
+        call TriggerAddCondition(TurretSystemAttackTrigger, Condition(function TurretSystemTriggerConditionAttack))
+        call TriggerAddAction(TurretSystemAttackTrigger, function TurretSystemTriggerActionAttack)
 
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemReviveTrigger, EVENT_PLAYER_HERO_REVIVE_FINISH)
-    call TriggerAddCondition(TurretSystemReviveTrigger, Condition(function TurretSystemTriggerConditionIsVehicle))
-    call TriggerAddAction(TurretSystemReviveTrigger, function TurretSystemTriggerActionRevive)
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemDeathTrigger, EVENT_PLAYER_UNIT_DEATH)
+        call TriggerAddCondition(TurretSystemDeathTrigger, Condition(function TurretSystemTriggerConditionIsVehicle))
+        call TriggerAddAction(TurretSystemDeathTrigger, function TurretSystemTriggerActionDeath)
 
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
-    call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
-    call TriggerAddCondition(TurretSystemOrderTrigger, Condition(function TurretSystemTriggerConditionIsVehicleOrTurret))
-    call TriggerAddAction(TurretSystemOrderTrigger, function TurretSystemTriggerActionIssueOrder)
-endfunction
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemReviveTrigger, EVENT_PLAYER_HERO_REVIVE_FINISH)
+        call TriggerAddCondition(TurretSystemReviveTrigger, Condition(function TurretSystemTriggerConditionIsVehicle))
+        call TriggerAddAction(TurretSystemReviveTrigger, function TurretSystemTriggerActionRevive)
+
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+        call TriggerAddCondition(TurretSystemOrderTrigger, Condition(function TurretSystemTriggerConditionIsVehicleOrTurret))
+        call TriggerAddAction(TurretSystemOrderTrigger, function TurretSystemTriggerActionIssueOrder)
+    endmethod
+endmodule
+
+private struct S
+    implement Init
+endstruct
 
 hook RemoveUnit TurretSystemRemoveVehicle
+
+endlibrary
 
 // Equipment Bag System
 
