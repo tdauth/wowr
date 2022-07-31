@@ -550,3 +550,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [BTNDarthVader](https://www.hiveworkshop.com/threads/btndarthvader.56698/)
 * olofmoleman: [Marine](https://www.hiveworkshop.com/threads/marine.49802/)
 * Fingolfin: [Fingolfins Separatist Fleet Pack](https://www.hiveworkshop.com/threads/fingolfins-separatist-fleet-pack.264210/)
+* olofmoleman: [Geonosian](https://www.hiveworkshop.com/threads/geonosian.49785/)
