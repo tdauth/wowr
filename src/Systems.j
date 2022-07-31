@@ -12135,6 +12135,13 @@ endfunction
 
 library TurretSystemConfig
 
+globals
+    constant real TURRET_SYSTEM_UPDATE_INTERVAL = 0.01
+    constant boolean TURRET_SYSTEM_USE_SELECT_TURRETS_ABILITY = true
+    constant integer TURRET_SYSTEM_SELECT_TURRETS_ABILITY_ID = 'A0J1'
+    constant boolean TURRET_SYSTEM_APPLY_MOVEMENT_SETTINGS = true
+endglobals
+
 function TurretSystemGetAttackAnimation takes unit vehicle, unit turret returns string
     // Goblin War Zeppelin
     if (GetUnitTypeId(vehicle) == 'N06M') then
@@ -12174,8 +12181,19 @@ endlibrary
 // Baradé's Turret System 1.0
 //
 // Usage:
+// - Create some custom unit types for turrets and if necessary for vehicles:
+// Usually, turret unit types should be invulnerable, have no valid model to be invisible since most turrets are shown on the vehicle's model.
+// Turret unit types have the Locust ability if you want them to be unselectable.
+// Give them a matching damage type, damage amount and missiles. The Z coordinate can be configured setting their flying height
+// Make sure that their movement settings and sight range match the vehicle. Otherwise, you cannot order your vehicle when selecting all the turrets.
+// If the turret's missile depends on the scale and team color, you can change those settings as well since you probably do not want to see the turret's model anyway.
 // - Copy this code into one of your triggers or the map script.
-// - Provide the library TurretSystemConfig with the following functions:
+// - Provide the library TurretSystemConfig with the following constants and functions:
+//
+// constant real TURRET_SYSTEM_UPDATE_INTERVAL = 0.01
+// constant boolean TURRET_SYSTEM_USE_SELECT_TURRETS_ABILITY = true
+// constant integer TURRET_SYSTEM_SELECT_TURRETS_ABILITY_ID = 'A000'
+//
 // function TurretSystemGetAttackAnimation takes unit vehicle, unit turret returns string
 //    return "attack"
 //endfunction
@@ -12193,7 +12211,24 @@ endlibrary
 // Actions
 //     -------- Turret System --------
 //     Set VariableSet TmpUnit = Tank 0001 <gen>
-//     Custom script:   call TurretSystemAddTurret(udg_TmpUnit, 'h001', 40.0, 0.0, false, true, false)
+//     Custom script:   call TurretSystemAddTurret(udg_TmpUnit, 'h001', 40.0, 0.0, true, false)
+//
+// - Note: Vehicle unit types do not have to be registered with TurretSystemAddVehicleUnitType except you want to specify one of the values.
+//
+// API:
+//
+// function TurretSystemAddVehicleUnitType takes integer unitTypeId, boolean canAttack, boolean changeFacing, string facingBone returns integer
+//
+// Configures the specified unit type ID as vehicle type with the given settings.
+//
+// function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, real offsetX, real offsetY, boolean autoAttack, boolean vehicleDamage returns unit
+//
+// Adds a turret with the given unit type ID, offsets and settings to the specified vehicle. The turret will automatically search for targets and attack them if autoAttack is true.
+// The turret will get applied the vehicle unit*s damage automatically periodically if vehicleDamage is true. This will call the two callbacks TurretSystemApplyWeaponStatsBefore
+// and TurretSystemApplyWeaponStatsAfter.
+//
+//
+// Detailed description:
 //
 // Turrets are independently attacking components of a unit.
 // A unit with at least one turret is called vehicle.
@@ -12236,7 +12271,7 @@ endlibrary
 //
 // TODOS:
 // - Fix saving and restoring all orders for vehicles.
-// - Disable turrets when the unit is loaded/transported.
+// - Disable turrets when the unit is loaded/transported. Just check with a flag during the attack.
 // - Fix selecting and unselecting turrets without desync.
 // - Remove the selectable flag for turrets.
 // - Add offset Z for turrets and use the unit flying height to achieve it. It can also be set by a fixed flying height for the unit type which is much easier.
@@ -12251,42 +12286,39 @@ endlibrary
 // - Add some Sith and Jedi to the demo map.
 // - Add some ground soldiers to the demo map.
 // - Add some water area with battle ships and sub marines to the demo map.
+// - Allow turret groups to be sync with each other to attack the same target or not attack if not in range. This would allow double cannons to always attack the same target. IS this already possible if the vehicle can still attack?
+// - Do not update the bone turret's target everytime when it has not changed. It leads to weird rotation animations.
 library TurretSystem requires TurretSystemConfig
 
 globals
-    // user-specified configuration
-    constant real TURRET_SYSTEM_UPDATE_INTERVAL = 0.01
-
     // vehicle keys
-    constant integer TURRET_SYSTEM_KEY_TURRETS = 0
-    constant integer TURRET_SYSTEM_KEY_TARGET = 1
-    constant integer TURRET_SYSTEM_KEY_HAS_SELECTABLE_TURRET = 7
+    private constant integer TURRET_SYSTEM_KEY_TURRETS = 0
+    private constant integer TURRET_SYSTEM_KEY_TARGET = 1
 
     // turret keys
-    constant integer TURRET_SYSTEM_KEY_VEHICLE = 0
-    constant integer TURRET_SYSTEM_KEY_OFFSET_X = 1
-    constant integer TURRET_SYSTEM_KEY_OFFSET_Y = 2
-    constant integer TURRET_SYSTEM_KEY_SELECTABLE = 3
-    constant integer TURRET_SYSTEM_KEY_AUTO_ATTACK = 4
-    constant integer TURRET_SYSTEM_KEY_VEHICLE_DAMAGE = 5
-    constant integer TURRET_SYSTEM_KEY_ENABLED = 6
-    constant integer TURRET_SYSTEM_KEY_TURRET_TARGET = 7
-    constant integer TURRET_SYSTEM_KEY_TURRET_PRIORITY_TARGET_TYPE = 8
-    constant integer TURRET_SYSTEM_KEY_TURRET_PRIORITY_TARGET = 9
+    private constant integer TURRET_SYSTEM_KEY_VEHICLE = 0
+    private constant integer TURRET_SYSTEM_KEY_OFFSET_X = 1
+    private constant integer TURRET_SYSTEM_KEY_OFFSET_Y = 2
+    private constant integer TURRET_SYSTEM_KEY_AUTO_ATTACK = 3
+    private constant integer TURRET_SYSTEM_KEY_VEHICLE_DAMAGE = 4
+    private constant integer TURRET_SYSTEM_KEY_ENABLED = 5
+    private constant integer TURRET_SYSTEM_KEY_TURRET_TARGET = 6
+    private constant integer TURRET_SYSTEM_KEY_TURRET_PRIORITY_TARGET_TYPE = 7
+    private constant integer TURRET_SYSTEM_KEY_TURRET_PRIORITY_TARGET = 8
 
     // vehicle and turret keys
-    constant integer TURRET_SYSTEM_KEY_ORDER_TYPE = 10
-    constant integer TURRET_SYSTEM_KEY_ORDER = 11
-    constant integer TURRET_SYSTEM_KEY_ORDER_TARGET = 12
-    constant integer TURRET_SYSTEM_KEY_ORDER_TARGET_X = 13
-    constant integer TURRET_SYSTEM_KEY_ORDER_TARGET_Y = 14
+    private constant integer TURRET_SYSTEM_KEY_ORDER_TYPE = 9
+    private constant integer TURRET_SYSTEM_KEY_ORDER = 10
+    private constant integer TURRET_SYSTEM_KEY_ORDER_TARGET = 11
+    private constant integer TURRET_SYSTEM_KEY_ORDER_TARGET_X = 12
+    private constant integer TURRET_SYSTEM_KEY_ORDER_TARGET_Y = 13
 
     // order types
-    constant integer TURRET_SYSTEM_ORDER_TYPE_NO_TARGET = 0
-    constant integer TURRET_SYSTEM_ORDER_TYPE_UNIT_TARGET = 1
-    constant integer TURRET_SYSTEM_ORDER_TYPE_ITEM_TARGET = 2
-    constant integer TURRET_SYSTEM_ORDER_TYPE_DESTRUCTABLE_TARGET = 3
-    constant integer TURRET_SYSTEM_ORDER_TYPE_POINT_TARGET = 4
+    private constant integer TURRET_SYSTEM_ORDER_TYPE_NO_TARGET = 0
+    private constant integer TURRET_SYSTEM_ORDER_TYPE_UNIT_TARGET = 1
+    private constant integer TURRET_SYSTEM_ORDER_TYPE_ITEM_TARGET = 2
+    private constant integer TURRET_SYSTEM_ORDER_TYPE_DESTRUCTABLE_TARGET = 3
+    private constant integer TURRET_SYSTEM_ORDER_TYPE_POINT_TARGET = 4
 
     private integer array TurretSystemVehicleUnitTypeId
     private boolean array TurretSystemVehicleCanAttack
@@ -12312,6 +12344,7 @@ globals
     private trigger TurretSystemDeathTrigger = CreateTrigger()
     private trigger TurretSystemReviveTrigger = CreateTrigger()
     private trigger TurretSystemOrderTrigger = CreateTrigger()
+    private trigger TurretSystemSelectionTrigger = CreateTrigger()
 endglobals
 
 function TurretSystemAddVehicleUnitType takes integer unitTypeId, boolean canAttack, boolean changeFacing, string facingBone returns integer
@@ -12352,10 +12385,6 @@ endfunction
 
 function TurretSystemIsVehicle takes unit vehicle returns boolean
     return IsUnitInGroup(vehicle, TurretSystemAllVehicles)
-endfunction
-
-function TurretSystemVehicleHasSelectableTurret takes unit vehicle returns boolean
-    return LoadBoolean(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_HAS_SELECTABLE_TURRET)
 endfunction
 
 function TurretSystemIsTurret takes unit turret returns boolean
@@ -12541,6 +12570,10 @@ private function TurretSystemApplyWeaponStats takes unit sourceUnit, unit target
     call BlzSetUnitAttackCooldown(targetUnit, BlzGetUnitAttackCooldown(sourceUnit, 0), 0)
 endfunction
 
+private function TurretSystemApplyMovementSettings takes unit sourceUnit, unit targetUnit returns nothing
+    call SetUnitMoveSpeed(targetUnit, GetUnitMoveSpeed(sourceUnit))
+endfunction
+
 private function TurretSystemUpdate takes nothing returns nothing
     local unit turret = null
     local unit vehicle = null
@@ -12565,82 +12598,92 @@ private function TurretSystemUpdate takes nothing returns nothing
     loop
         exitwhen (i == BlzGroupGetSize(TurretSystemAllTurrets))
         set turret = BlzGroupUnitAt(TurretSystemAllTurrets, i)
-        if (TurretSystemIsTurretEnabled(turret)) then
+        if (TurretSystemIsTurretEnabled(turret) and not IsUnitDeadBJ(turret) and not IsUnitPaused(turret) and not IsUnitLoaded(turret)) then
             set vehicle = TurretSystemGetVehicle(turret)
-            set target = TurretSystemGetTurretTarget(turret)
-            //call BJDebugMsg("Updating turret position for " + GetUnitName(turret) + " with vehicle " + GetUnitName(vehicle))
-            set offsetX = LoadReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_X)
-            set offsetY = LoadReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_Y)
-            //call BJDebugMsg("2 Updating turret position for " + GetUnitName(turret))
-            //set x = GetUnitX(vehicle)
-            //set y = GetUnitY(vehicle)
-            if (target == null) then
-                set turretFacing = GetUnitFacing(vehicle)
-            else
-                set turretFacing = TurretSystemAngleBetweenCoordinates(GetUnitX(vehicle), GetUnitY(vehicle), GetUnitX(target), GetUnitY(target))
-            endif
-            set x = TurretSystemPolarProjectionX(GetUnitX(vehicle), turretFacing, offsetX)
-            set y = TurretSystemPolarProjectionY(GetUnitY(vehicle), turretFacing, offsetX)
-            //call BJDebugMsg("3 Updating turret position for " + GetUnitName(turret))
-            set rotationForY = ModuloReal(turretFacing + 90, 360.0)
-            set x = TurretSystemPolarProjectionX(x, rotationForY, offsetY)
-            set y = TurretSystemPolarProjectionY(y, rotationForY, offsetY)
-            // do not use SetUnitPosition since it would interrupt the attack
-            call SetUnitX(turret, x)
-            call SetUnitY(turret, y)
+            if (not IsUnitDeadBJ(vehicle) and not IsUnitPaused(vehicle) and not IsUnitLoaded(vehicle)) then
+                set target = TurretSystemGetTurretTarget(turret)
+                //call BJDebugMsg("Updating turret position for " + GetUnitName(turret) + " with vehicle " + GetUnitName(vehicle))
+                set offsetX = LoadReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_X)
+                set offsetY = LoadReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_Y)
+                //call BJDebugMsg("2 Updating turret position for " + GetUnitName(turret))
+                //set x = GetUnitX(vehicle)
+                //set y = GetUnitY(vehicle)
+                if (target == null) then
+                    set turretFacing = GetUnitFacing(vehicle)
+                else
+                    set turretFacing = TurretSystemAngleBetweenCoordinates(GetUnitX(vehicle), GetUnitY(vehicle), GetUnitX(target), GetUnitY(target))
+                endif
+                set x = TurretSystemPolarProjectionX(GetUnitX(vehicle), turretFacing, offsetX)
+                set y = TurretSystemPolarProjectionY(GetUnitY(vehicle), turretFacing, offsetX)
+                //call BJDebugMsg("3 Updating turret position for " + GetUnitName(turret))
+                set rotationForY = ModuloReal(turretFacing + 90, 360.0)
+                set x = TurretSystemPolarProjectionX(x, rotationForY, offsetY)
+                set y = TurretSystemPolarProjectionY(y, rotationForY, offsetY)
+                // do not use SetUnitPosition since it would interrupt the attack
+                call SetUnitX(turret, x)
+                call SetUnitY(turret, y)
 
-            set turretUsesVehicleDamage = LoadBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE_DAMAGE)
+static if (TURRET_SYSTEM_APPLY_MOVEMENT_SETTINGS) then
+                call TurretSystemApplyMovementSettings(vehicle, target)
+endif
 
-            if (turretUsesVehicleDamage) then
-                call TurretSystemApplyWeaponStatsBefore(vehicle, target)
-                call TurretSystemApplyWeaponStats(vehicle, target)
-                call TurretSystemApplyWeaponStatsAfter(vehicle, target)
-            endif
+                set turretUsesVehicleDamage = LoadBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE_DAMAGE)
 
-            // TODO This slows everything down massively! Just order wants every X seconds or check if the orders are like move or smart something
-            // TODO Maybe catch the orders in a separate trigger to check the state (faster)
-            // TODO Sometimes the turrets want to attack some target outside their range and hence already have an attack order!
-            // TODO Catch smart orders from the vehicle and continue with the previous order but let the turrets attack the target.
-            // prevent stopping the attacks
-            set priorityTargetUnit = TurretSystemGetTurretPriorityTargetUnit(turret)
-            set priorityTargetItem = TurretSystemGetTurretPriorityTargetItem(turret)
-            set priorityTargetDestructable = TurretSystemGetTurretPriorityTargetDestructable(turret)
-            set turretHasAttack = LoadBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_AUTO_ATTACK) and BlzGetUnitWeaponBooleanField(turret, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0)
-
-            if (turretHasAttack) then
-                set turretRange = BlzGetUnitWeaponRealField(turret, UNIT_WEAPON_RF_ATTACK_RANGE, 0) // TODO Support both attack types and check targets?
-
-                if (priorityTargetUnit != null) then
-                    set priorityTargetX = GetUnitX(priorityTargetUnit)
-                    set priorityTargetY = GetUnitY(priorityTargetUnit)
-                elseif (priorityTargetItem != null) then
-                    set priorityTargetX = GetItemX(priorityTargetItem)
-                    set priorityTargetY = GetItemY(priorityTargetItem)
-                elseif (priorityTargetDestructable != null) then
-                    set priorityTargetX = GetDestructableX(priorityTargetDestructable)
-                    set priorityTargetY = GetDestructableY(priorityTargetDestructable)
+                if (turretUsesVehicleDamage) then
+                    call TurretSystemApplyWeaponStatsBefore(vehicle, target)
+                    call TurretSystemApplyWeaponStats(vehicle, target)
+                    call TurretSystemApplyWeaponStatsAfter(vehicle, target)
                 endif
 
-                set turretOrderType = LoadInteger(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ORDER_TYPE)
-                set turretOrderId = LoadInteger(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ORDER)
+                // TODO This slows everything down massively! Just order wants every X seconds or check if the orders are like move or smart something
+                // TODO Maybe catch the orders in a separate trigger to check the state (faster)
+                // TODO Sometimes the turrets want to attack some target outside their range and hence already have an attack order!
+                // TODO Catch smart orders from the vehicle and continue with the previous order but let the turrets attack the target.
+                // prevent stopping the attacks
+                set priorityTargetUnit = TurretSystemGetTurretPriorityTargetUnit(turret)
+                set priorityTargetItem = TurretSystemGetTurretPriorityTargetItem(turret)
+                set priorityTargetDestructable = TurretSystemGetTurretPriorityTargetDestructable(turret)
+                set turretHasAttack = LoadBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_AUTO_ATTACK) and BlzGetUnitWeaponBooleanField(turret, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0)
 
-                if (priorityTargetUnit != null and (turretOrderId != OrderId("attack") or turretOrderType != TURRET_SYSTEM_ORDER_TYPE_UNIT_TARGET or LoadUnitHandle(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ORDER_TARGET) != priorityTargetUnit) and IsUnitAliveBJ(priorityTargetUnit) and IsUnitVisible(priorityTargetUnit, GetOwningPlayer(turret)) and turretRange >= TurretSystemDistanceBetweenCoordinates(x, y, priorityTargetX, priorityTargetY)) then
-                    call IssueTargetOrder(turret, "attack", priorityTargetUnit)
-                elseif (priorityTargetItem != null and not IsItemInvulnerable(priorityTargetItem) and GetWidgetLife(priorityTargetItem) > 0.0 and IsItemVisible(priorityTargetItem) and turretRange >= TurretSystemDistanceBetweenCoordinates(x, y, priorityTargetX, priorityTargetY)) then
-                    call IssueTargetOrder(turret, "attack", priorityTargetItem)
-                elseif (priorityTargetDestructable != null and not IsDestructableInvulnerable(priorityTargetDestructable) and turretRange >= TurretSystemDistanceBetweenCoordinates(x, y, priorityTargetX, priorityTargetY)) then
-                    call IssueTargetOrder(turret, "attack", priorityTargetDestructable)
-                elseif (GetUnitCurrentOrder(turret) == OrderId("move") or GetUnitCurrentOrder(turret) == OrderId("patrol") and GetUnitCurrentOrder(vehicle) != OrderId("stop")) then
-                    call IssuePointOrder(turret, "attack", GetUnitX(turret), GetUnitY(turret))
+                if (turretHasAttack) then
+                    set turretRange = BlzGetUnitWeaponRealField(turret, UNIT_WEAPON_RF_ATTACK_RANGE, 0) // TODO Support both attack types and check targets?
+
+                    if (priorityTargetUnit != null) then
+                        set priorityTargetX = GetUnitX(priorityTargetUnit)
+                        set priorityTargetY = GetUnitY(priorityTargetUnit)
+                    elseif (priorityTargetItem != null) then
+                        set priorityTargetX = GetItemX(priorityTargetItem)
+                        set priorityTargetY = GetItemY(priorityTargetItem)
+                    elseif (priorityTargetDestructable != null) then
+                        set priorityTargetX = GetDestructableX(priorityTargetDestructable)
+                        set priorityTargetY = GetDestructableY(priorityTargetDestructable)
+                    endif
+
+                    set turretOrderType = LoadInteger(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ORDER_TYPE)
+                    set turretOrderId = LoadInteger(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ORDER)
+
+                    if (priorityTargetUnit != null and (turretOrderId != OrderId("attack") or turretOrderType != TURRET_SYSTEM_ORDER_TYPE_UNIT_TARGET or LoadUnitHandle(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ORDER_TARGET) != priorityTargetUnit) and IsUnitAliveBJ(priorityTargetUnit) and IsUnitVisible(priorityTargetUnit, GetOwningPlayer(turret)) and turretRange >= TurretSystemDistanceBetweenCoordinates(x, y, priorityTargetX, priorityTargetY)) then
+                        call IssueTargetOrder(turret, "attack", priorityTargetUnit)
+                    elseif (priorityTargetItem != null and not IsItemInvulnerable(priorityTargetItem) and GetWidgetLife(priorityTargetItem) > 0.0 and IsItemVisible(priorityTargetItem) and turretRange >= TurretSystemDistanceBetweenCoordinates(x, y, priorityTargetX, priorityTargetY)) then
+                        call IssueTargetOrder(turret, "attack", priorityTargetItem)
+                    elseif (priorityTargetDestructable != null and not IsDestructableInvulnerable(priorityTargetDestructable) and turretRange >= TurretSystemDistanceBetweenCoordinates(x, y, priorityTargetX, priorityTargetY)) then
+                        call IssueTargetOrder(turret, "attack", priorityTargetDestructable)
+                    elseif (GetUnitCurrentOrder(turret) == OrderId("move") or GetUnitCurrentOrder(turret) == OrderId("patrol") and GetUnitCurrentOrder(vehicle) != OrderId("stop")) then
+                        call IssuePointOrder(turret, "attack", GetUnitX(turret), GetUnitY(turret))
+                    elseif (GetUnitCurrentOrder(vehicle) == OrderId("stop")) then
+                        call IssueImmediateOrder(turret, "stop")
+                    endif
                 elseif (GetUnitCurrentOrder(vehicle) == OrderId("stop")) then
                     call IssueImmediateOrder(turret, "stop")
                 endif
-            elseif (GetUnitCurrentOrder(vehicle) == OrderId("stop")) then
+                call TurretSystemExecuteCallbackTurretAutoTarget(vehicle, turret, priorityTargetUnit, priorityTargetItem, priorityTargetDestructable)
+                set vehicle = null
+                set target = null
+            else
                 call IssueImmediateOrder(turret, "stop")
             endif
-            call TurretSystemExecuteCallbackTurretAutoTarget(vehicle, turret, priorityTargetUnit, priorityTargetItem, priorityTargetDestructable)
-            set vehicle = null
-            set target = null
+        else
+            call IssueImmediateOrder(turret, "stop")
         endif
         set turret = null
         set i = i + 1
@@ -12662,7 +12705,7 @@ function TurretSystemPause takes boolean pause returns nothing
     endif
 endfunction
 
-function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, real offsetX, real offsetY, boolean selectable, boolean autoAttack, boolean vehicleDamage returns unit
+function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, real offsetX, real offsetY, boolean autoAttack, boolean vehicleDamage returns unit
     local group turrets = TurretSystemGetTurrets(vehicle)
     local unit turret = CreateUnit(GetOwningPlayer(vehicle), turretUnitTypeId, GetUnitX(vehicle), GetUnitY(vehicle), GetUnitFacing(vehicle))
     call GroupAddUnit(turrets, turret)
@@ -12683,15 +12726,10 @@ function TurretSystemAddTurret takes unit vehicle, integer turretUnitTypeId, rea
     call SaveUnitHandle(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE, vehicle)
     call SaveReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_X, offsetX)
     call SaveReal(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_OFFSET_Y, offsetY)
-    call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_SELECTABLE, selectable)
     call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_AUTO_ATTACK, autoAttack)
     call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_VEHICLE_DAMAGE, vehicleDamage)
     call SaveBoolean(TurretSystemHashTable, GetHandleId(turret), TURRET_SYSTEM_KEY_ENABLED, true)
     set turret = null
-
-    if (selectable) then
-        call SaveBoolean(TurretSystemHashTable, GetHandleId(vehicle), TURRET_SYSTEM_KEY_HAS_SELECTABLE_TURRET, true)
-    endif
 
     if (TurretSystemUpdatedTimerPaused) then
         call TurretSystemPause(false)
@@ -12978,6 +13016,7 @@ private function TurretSystemTriggerActionIssueOrder takes nothing returns nothi
                 call SaveInteger(TurretSystemHashTable, GetHandleId(GetOrderedUnit()), TURRET_SYSTEM_KEY_ORDER, GetIssuedOrderId())
             endif
         endif
+    // turret
     else
         if (GetOrderTargetUnit() != null) then
             call TurretSystemSaveOrderUnit(GetOrderedUnit(), GetOrderTargetUnit())
@@ -12988,11 +13027,28 @@ private function TurretSystemTriggerActionIssueOrder takes nothing returns nothi
         elseif (GetTriggerEventId() == EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER) then
             call TurretSystemSaveOrderPoint(GetOrderedUnit(), GetOrderPointX(), GetOrderPointY())
         elseif (GetTriggerEventId() == EVENT_PLAYER_UNIT_ISSUED_ORDER) then
-            call TurretSystemSaveOrder(GetOrderedUnit())
+            // prevents slow movement when the turrets and the vehicle are selected together
+            if (GetIssuedOrderId() == OrderId("move")) then
+                call TurretSystemRestorePreviousOrder(GetOrderedUnit())
+            else
+                call TurretSystemSaveOrder(GetOrderedUnit())
+            endif
         endif
         call SaveInteger(TurretSystemHashTable, GetHandleId(GetOrderedUnit()), TURRET_SYSTEM_KEY_ORDER, GetIssuedOrderId())
     endif
 endfunction
+
+static if (TURRET_SYSTEM_USE_SELECT_TURRETS_ABILITY) then
+private function TurretSystemTriggerConditionIsSelectionAbility takes nothing returns boolean
+    return GetSpellAbilityId() == TURRET_SYSTEM_SELECT_TURRETS_ABILITY_ID and TurretSystemIsVehicle(GetTriggerUnit())
+endfunction
+
+private function TurretSystemTriggerActionSelectAllTurrets takes nothing returns nothing
+    local unit vehicle = GetTriggerUnit()
+    call TurretSystemSelectionAddTurrets(GetOwningPlayer(vehicle), vehicle)
+    set vehicle = null
+endfunction
+endif
 
 private module Init
 
@@ -13014,6 +13070,12 @@ private module Init
         call TriggerRegisterAnyUnitEventBJ(TurretSystemOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
         call TriggerAddCondition(TurretSystemOrderTrigger, Condition(function TurretSystemTriggerConditionIsVehicleOrTurret))
         call TriggerAddAction(TurretSystemOrderTrigger, function TurretSystemTriggerActionIssueOrder)
+
+static if (TURRET_SYSTEM_USE_SELECT_TURRETS_ABILITY) then
+        call TriggerRegisterAnyUnitEventBJ(TurretSystemSelectionTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+        call TriggerAddCondition(TurretSystemSelectionTrigger, Condition(function TurretSystemTriggerConditionIsSelectionAbility))
+        call TriggerAddAction(TurretSystemSelectionTrigger, function TurretSystemTriggerActionSelectAllTurrets)
+endif
     endmethod
 endmodule
 
