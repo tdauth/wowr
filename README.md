@@ -551,3 +551,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [Marine](https://www.hiveworkshop.com/threads/marine.49802/)
 * Fingolfin: [Fingolfins Separatist Fleet Pack](https://www.hiveworkshop.com/threads/fingolfins-separatist-fleet-pack.264210/)
 * olofmoleman: [Geonosian](https://www.hiveworkshop.com/threads/geonosian.49785/)
+* Illidan(Evil)X: [Imperial Shuttle](https://www.hiveworkshop.com/threads/imperial-shuttle.50239/)
+* Kwaliti: [Jedi](https://www.hiveworkshop.com/threads/jedi.108826/)
+* olofmoleman, Yoda: [Yoda](https://www.hiveworkshop.com/threads/yoda.49775/)
