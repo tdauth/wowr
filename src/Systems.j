@@ -1602,6 +1602,10 @@ endlibrary
 // Returns the corresponding index of the unit respawn from the respawned unit or unit for which the respawn timer has been started of the
 // evaluated or executed trigger.
 //
+// function PreventUnitRespawn takes unit whichUnit returns nothing
+//
+// Can be called in a trigger which is executed on the respawn event to prevent the actual respawn. It removes the respawned unit. The respawn has to be started manually.
+//
 // function GetUnitRespawnUnitIndex takes unit whichUnit returns integer
 //
 // Returns the corresponding index of the unit respawn matching the passed unit. If there is none, it returns -1.
@@ -1691,10 +1695,9 @@ globals
 
     private trigger unitDeathOrCharmTrigger = CreateTrigger()
     private hashtable respawnUnitHashTable = InitHashtable()
-    private integer evaluateIndex = -1
-    private trigger refreshEvaluateTrigger = CreateTrigger()
 
     private player filterOwner = null
+    private unit filterUnit = null
 endglobals
 
 function GetTriggerRespawnUnit takes nothing returns unit
@@ -1780,20 +1783,32 @@ function IsRespawnUnitValid takes integer index returns boolean
     return respawnUnitIsValid[index]
 endfunction
 
+function IsRespawnUnitGroupValid takes integer index returns boolean
+    if (index < 0) then
+        return false
+    endif
+    return respawnUnitGroupIsValid[index]
+endfunction
+
 function RespawnUnit takes integer index returns boolean
+    local boolean add = false
+    local integer groupIndex = respawnUnitGroupIndex[index]
     if (not IsRespawnUnitValid(index)) then
         return false
     endif
     if (respawnUnitType[index] == UNIT_RESPAWN_TYPE_UNIT) then
-        if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
+        if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO) and respawnUnitUnit[index] != null) then
             call ReviveHero(respawnUnitUnit[index], respawnUnitX[index], respawnUnitY[index], UnitGroupRespawnSystemConfig_HERO_RESPAWN_DO_EYECANDY)
         else
             set respawnUnitUnit[index] = CreateUnit(respawnUnitOwner[index], respawnUnitUnitTypeId[index], respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
+            set add = true
         endif
     elseif (respawnUnitType[index] == UNIT_RESPAWN_TYPE_UNITPOOL) then
         set respawnUnitUnit[index] = PlaceRandomUnit(respawnUnitPool[index], respawnUnitOwner[index], respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
+        set add = true
     elseif (respawnUnitType[index] == UNIT_RESPAWN_TYPE_RANDOM_CREEP_LEVEL) then
         set respawnUnitUnit[index] = CreateUnit(respawnUnitOwner[index], ChooseRandomCreep(respawnUnitRandomCreepLevel[index]), respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
+        set add = true
     endif
 static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
     if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
@@ -1802,8 +1817,11 @@ static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
 endif
     set respawnUnitHandleId[index] = GetHandleId(respawnUnitUnit[index])
     call SaveInteger(respawnUnitHashTable, respawnUnitHandleId[index], 0, index)
-    set evaluateIndex = index
-    call TriggerEvaluate(refreshEvaluateTrigger)
+
+    if (add and IsRespawnUnitGroupValid(groupIndex)) then
+        call GroupAddUnit(respawnUnitGroup[groupIndex], respawnUnitUnit[index])
+    endif
+
     call EvaluateAndExecuteCallbackRespawnTriggers(index)
     return true
 endfunction
@@ -1822,10 +1840,14 @@ endfunction
 function PreventUnitRespawn takes unit whichUnit returns nothing
     local integer index = GetUnitRespawnUnitIndex(whichUnit)
     if (IsRespawnUnitValid(index)) then
-        call ClearRespawnUnitIndex(respawnUnitHandleId[index])
-        set respawnUnitHandleId[index] = 0
-        call RemoveUnit(whichUnit)
-        set whichUnit = null
+        if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
+            call KillUnit(whichUnit)
+        else
+            call ClearRespawnUnitIndex(respawnUnitHandleId[index])
+            set respawnUnitHandleId[index] = 0
+            call RemoveUnit(whichUnit)
+            set whichUnit = null
+        endif
     endif
 endfunction
 
@@ -2057,13 +2079,6 @@ function GetRespawnUnitGroupCounter takes nothing returns integer
     return respawnUnitGroupCounter
 endfunction
 
-function IsRespawnUnitGroupValid takes integer index returns boolean
-    if (index < 0) then
-        return false
-    endif
-    return respawnUnitGroupIsValid[index]
-endfunction
-
 function SetRespawnUnitGroupIndex takes integer index, integer groupIndex returns nothing
     if (IsRespawnUnitGroupValid(groupIndex)) then
         if (IsRespawnUnitGroupValid(respawnUnitGroupIndex[index]) and respawnUnitUnit[index] != null) then
@@ -2104,7 +2119,7 @@ function AddRespawnUnitGroup takes nothing returns integer
 endfunction
 
 private function IsLivingUnitWithRespawn takes nothing returns boolean
-    return IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetOwningPlayer(GetFilterUnit()) == filterOwner and IsRespawnUnitValid(GetUnitRespawnUnitIndex(GetFilterUnit())) and IsRespawnUnitGroupValid(GetRespawnUnitGroupIndex(GetUnitRespawnUnitIndex(GetFilterUnit())))
+    return GetFilterUnit() != filterUnit and IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetOwningPlayer(GetFilterUnit()) == filterOwner and IsRespawnUnitValid(GetUnitRespawnUnitIndex(GetFilterUnit())) and IsRespawnUnitGroupValid(GetRespawnUnitGroupIndex(GetUnitRespawnUnitIndex(GetFilterUnit())))
 endfunction
 
 function AddRespawnUnitGroupFromUnit takes unit whichUnit returns integer
@@ -2113,8 +2128,10 @@ function AddRespawnUnitGroupFromUnit takes unit whichUnit returns integer
     local integer groupIndex = -1
     local integer index = -1
     set filterOwner = GetOwningPlayer(whichUnit)
+    set filterUnit = whichUnit
     call GroupEnumUnitsInRange(allNearbyUnitsFromTheSameOwner, GetUnitX(whichUnit), GetUnitY(whichUnit), UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_MAX_DISTANCE, Filter(function IsLivingUnitWithRespawn))
     set filterOwner = null
+    set filterUnit = null
     set first = FirstOfGroup(allNearbyUnitsFromTheSameOwner)
     call GroupClear(allNearbyUnitsFromTheSameOwner)
     call DestroyGroup(allNearbyUnitsFromTheSameOwner)
@@ -2222,19 +2239,17 @@ function GetRespawnUnitGroupUnits takes integer index returns group
 endfunction
 
 function RespawnUnitGroup takes integer index returns boolean
-    local integer memberIndex = - 1
     local integer i = 0
     if (not IsRespawnUnitGroupValid(index)) then
         return false
     endif
+    // We do not know the members anymore since we have removed them from the group. Hence, we need to find all matching respawns.
     set i = 0
     loop
-        exitwhen (i == BlzGroupGetSize(respawnUnitGroup[index]))
-        set memberIndex = GetRespawnUnitIndexByHandleID(GetHandleId(BlzGroupUnitAt(respawnUnitGroup[index], i)))
-        if (respawnUnitHandleId[memberIndex] != 0) then
-            call ClearRespawnUnitIndex(respawnUnitHandleId[memberIndex])
+        exitwhen (i == GetRespawnUnitCounter())
+        if (IsRespawnUnitValid(i) and GetRespawnUnitGroupIndex(i) == index) then
+            call RespawnUnit(i)
         endif
-        call RespawnUnit(memberIndex)
         set i = i + 1
     endloop
 
@@ -2247,14 +2262,39 @@ private function TimerFunctionRespawnUnitGroup takes nothing returns nothing
 endfunction
 
 function StartUnitGroupRespawn takes integer index returns nothing
+    local unit member = null
     local integer memberIndex = -1
     local integer i = 0
     loop
         exitwhen (i == BlzGroupGetSize(respawnUnitGroup[index]))
-        set memberIndex = GetRespawnUnitIndexByHandleID(GetHandleId(BlzGroupUnitAt(respawnUnitGroup[index], i)))
+        set member = BlzGroupUnitAt(respawnUnitGroup[index], i)
+        set memberIndex = GetRespawnUnitIndexByHandleID(GetHandleId(member))
+        set member = null
         call EvaluateAndExecuteCallbackRespawnStartsTriggers(memberIndex)
         set i = i + 1
     endloop
+
+    // Cleanup since we do not know how long the unit will decay etc.
+    set i = 0
+    loop
+        exitwhen (i == BlzGroupGetSize(respawnUnitGroup[index]))
+        set member = BlzGroupUnitAt(respawnUnitGroup[index], i)
+        set memberIndex = GetRespawnUnitIndexByHandleID(GetHandleId(member))
+
+        if (not IsUnitType(member, UNIT_TYPE_HERO)) then
+            if (respawnUnitHandleId[memberIndex] != 0) then
+                call ClearRespawnUnitIndex(respawnUnitHandleId[memberIndex])
+            endif
+            set respawnUnitUnit[memberIndex] = null
+            set respawnUnitHandleId[memberIndex] = 0
+        endif
+
+        set member = null
+        set i = i + 1
+    endloop
+
+    call GroupClear(respawnUnitGroup[index])
+
     call TimerStart(respawnUnitGroupTimer[index], respawnUnitGroupTimeout[index], false, function TimerFunctionRespawnUnitGroup)
 endfunction
 
@@ -2263,6 +2303,7 @@ private function TriggerConditionRespawnUnit takes nothing returns boolean
     return IsRespawnUnitValid(index) and IsRespawnUnitEnabled(index)
 endfunction
 
+static if (UnitGroupRespawnSystemConfig_GET_UNIT_LEVEL_BY_TYPE) then
 private function GetUnitLevelByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, 0.0, 0.0, 0.0)
 	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_LEVEL)
@@ -2270,6 +2311,7 @@ private function GetUnitLevelByType takes integer unitTypeId returns integer
 	set dummy = null
 	return result
 endfunction
+endif
 
 private function GetMaxUnitLevelFromGroup takes group whichGroup returns integer
     local integer maxLevel = 0
