@@ -574,3 +574,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [Aat](https://www.hiveworkshop.com/threads/aat.50055/)
 * olofmoleman: [DarthRevan](https://www.hiveworkshop.com/threads/darthrevan.47910/)
 * Mechanical Man: [Star wars Clone war vehicles](https://www.hiveworkshop.com/threads/star-wars-clone-war-vehicles.290428/)
+* Illidan(Evil)X: [Death Star (high-res) IngameSkin](https://www.hiveworkshop.com/threads/death-star-high-res-ingameskin.50323/)
+* Illidan(Evil)X: [DBLightsaber3D](https://www.hiveworkshop.com/threads/dblightsaber3d.49844/)
