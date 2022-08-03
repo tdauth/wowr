@@ -576,3 +576,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mechanical Man: [Star wars Clone war vehicles](https://www.hiveworkshop.com/threads/star-wars-clone-war-vehicles.290428/)
 * Illidan(Evil)X: [Death Star (high-res) IngameSkin](https://www.hiveworkshop.com/threads/death-star-high-res-ingameskin.50323/)
 * Illidan(Evil)X: [DBLightsaber3D](https://www.hiveworkshop.com/threads/dblightsaber3d.49844/)
+* Illidan(Evil)X: [LightSaberHilt](https://www.hiveworkshop.com/threads/lightsaberhilt.49825/)
+* Illidan(Evil)X: [ObiWans Lightsaber RotS](https://www.hiveworkshop.com/threads/obiwans-lightsaber-rots.50230/)
+* Rolo: [Factory](https://www.hiveworkshop.com/threads/factory.311932/)
