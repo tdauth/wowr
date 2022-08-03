@@ -222,6 +222,8 @@ This version provides several new features compared to the original map [World o
 * Custom Turret System which is [part of this repository](./systems/).
 * New hero: Void Lord.
 * [Custom Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/).
+* Tomes game option.
+* Themes game option.
 * TODO Many 2.1 features are not listed yet.
 
 ## Bug Fixes
@@ -562,3 +564,13 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mc !: [Laser](https://www.hiveworkshop.com/threads/laser.47871/)
 * olofmoleman: [Droideka](https://www.hiveworkshop.com/threads/droideka.50059/)
 * olofmoleman: [Rancor](https://www.hiveworkshop.com/threads/rancor.49850/)
+* olofmoleman: [TuskenRaider](https://www.hiveworkshop.com/threads/tuskenraider.50190/)
+* Fingolfin: [Multi Troop Transport](https://www.hiveworkshop.com/threads/multi-troop-transport.263953/)
+* olofmoleman: [Hail Fire Droid](https://www.hiveworkshop.com/threads/hail-fire-droid.50017/)
+* olofmoleman: [Super Battle Droid](https://www.hiveworkshop.com/threads/super-battle-droid.48313/)
+* olofmoleman: [Dwarf Spider Droid](https://www.hiveworkshop.com/threads/dwarf-spider-droid.47726/)
+* olofmoleman: [DroidStarFighter](https://www.hiveworkshop.com/threads/droidstarfighter.49834/)
+* olofmoleman: [TechnoUnionShip](https://www.hiveworkshop.com/threads/technounionship.50495/)
+* olofmoleman: [Aat](https://www.hiveworkshop.com/threads/aat.50055/)
+* olofmoleman: [DarthRevan](https://www.hiveworkshop.com/threads/darthrevan.47910/)
+* Mechanical Man: [Star wars Clone war vehicles](https://www.hiveworkshop.com/threads/star-wars-clone-war-vehicles.290428/)

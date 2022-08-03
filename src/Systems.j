@@ -121,6 +121,12 @@ function PlayerIsOnlineUser takes integer playerId returns boolean
     return result
 endfunction
 
+function CopyGroup takes group whichGroup returns group
+    local group copy = CreateGroup()
+    call GroupAddGroup(whichGroup, copy)
+    return copy
+endfunction
+
 function GetHelpText takes nothing returns string
     return "-h/-help, -clear, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X"
 endfunction
@@ -752,19 +758,19 @@ function TriggerFunctionDropRucksackItem takes nothing returns nothing
 endfunction
 
 globals
-        constant integer A_ORDER_ID_SMART = 851971
-        constant integer A_ORDER_ID_MOVE_SLOT_0 = 852002
-		constant integer A_ORDER_ID_MOVE_SLOT_1 = 852003
-		constant integer A_ORDER_ID_MOVE_SLOT_2 = 852004
-		constant integer A_ORDER_ID_MOVE_SLOT_3 = 852005
-		constant integer A_ORDER_ID_MOVE_SLOT_4 = 852006
-		constant integer A_ORDER_ID_MOVE_SLOT_5 = 852007
-		constant integer A_ORDER_ID_USE_SLOT_0 = 852008
-		constant integer A_ORDER_ID_USE_SLOT_1 = 852009
-		constant integer A_ORDER_ID_USE_SLOT_2 = 852010
-		constant integer A_ORDER_ID_USE_SLOT_3 = 852011
-		constant integer A_ORDER_ID_USE_SLOT_4 = 852012
-		constant integer A_ORDER_ID_USE_SLOT_5 = 852013
+    constant integer A_ORDER_ID_SMART = 851971
+    constant integer A_ORDER_ID_MOVE_SLOT_0 = 852002
+    constant integer A_ORDER_ID_MOVE_SLOT_1 = 852003
+    constant integer A_ORDER_ID_MOVE_SLOT_2 = 852004
+    constant integer A_ORDER_ID_MOVE_SLOT_3 = 852005
+    constant integer A_ORDER_ID_MOVE_SLOT_4 = 852006
+    constant integer A_ORDER_ID_MOVE_SLOT_5 = 852007
+    constant integer A_ORDER_ID_USE_SLOT_0 = 852008
+    constant integer A_ORDER_ID_USE_SLOT_1 = 852009
+    constant integer A_ORDER_ID_USE_SLOT_2 = 852010
+    constant integer A_ORDER_ID_USE_SLOT_3 = 852011
+    constant integer A_ORDER_ID_USE_SLOT_4 = 852012
+    constant integer A_ORDER_ID_USE_SLOT_5 = 852013
 endglobals
 
 function TriggerConditionMoveRucksackItem takes nothing returns boolean
@@ -870,12 +876,12 @@ function TimerFunctionPickupItem takes nothing returns nothing
 endfunction
 
 function TriggerFunctionOrderRucksackItem takes nothing returns nothing
-		set udg_RucksackTargetItem[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetOrderTargetItem()
-		if (not udg_RucksackPickupTimerHasStarted) then
-			set udg_RucksackPickupTimerHasStarted = true
-			call TimerStart(udg_RucksackPickupTimer, 0.05, true, function TimerFunctionPickupItem)
-		endif
-		call IssuePointOrder(GetTriggerUnit(), "move", GetItemX(GetOrderTargetItem()), GetItemY(GetOrderTargetItem()))
+    set udg_RucksackTargetItem[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetOrderTargetItem()
+    if (not udg_RucksackPickupTimerHasStarted) then
+        set udg_RucksackPickupTimerHasStarted = true
+        call TimerStart(udg_RucksackPickupTimer, 0.05, true, function TimerFunctionPickupItem)
+    endif
+    call IssuePointOrder(GetTriggerUnit(), "move", GetItemX(GetOrderTargetItem()), GetItemY(GetOrderTargetItem()))
 endfunction
 
 function CreateRucksackForPlayer takes integer playerId returns nothing
@@ -926,253 +932,12 @@ function RefreshRucksackForPlayer takes integer playerId returns nothing
     call RefreshRucksackPage(playerId)
 endfunction
 
-function GetRespawnBuildingSize takes nothing returns real
-    return 1400.0
-endfunction
-
-function GetRespawnGroupOfUnit takes unit Unit returns integer
-    if (UnitParameterIntegerExists(Unit, 0)) then
-        debug call BJDebugMsg("Unit " + GetUnitName(Unit) + " has a group!")
-        return LoadUnitParameterInteger(Unit, 0)
-    endif
-    debug call BJDebugMsg("Unit " + GetUnitName(Unit) + " has no group!")
-    return -1
-endfunction
-
-function GetRespawnGroupOfDestructable takes destructable whichDestructable returns integer
-    if (DestructableParameterIntegerExists(whichDestructable, 0)) then
-        debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has a group!")
-        return LoadDestructableParameterInteger(whichDestructable, 0)
-    endif
-    debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has no group!")
-    return -1
-endfunction
-
-function RespawnRectContainsNoBuilding takes integer Group returns boolean
-    local location RespawnRectCenter = GetRectCenter(udg_RespawnRect[Group])
-    local rect BuildingRect = RectFromCenterSizeBJ(RespawnRectCenter, GetRespawnBuildingSize(), GetRespawnBuildingSize())
-    local group BuildingGroup = GetUnitsInRectAll(BuildingRect)
-    local unit FirstOfBuildingGroup
-    local player OwningPlayer
-    local boolean BuildingDoesNotExist = true
-    loop
-        exitwhen(IsUnitGroupEmptyBJ(BuildingGroup))
-        set FirstOfBuildingGroup = FirstOfGroup(BuildingGroup)
-        set OwningPlayer = GetOwningPlayer(FirstOfBuildingGroup)
-        if (IsUnitType(FirstOfBuildingGroup, UNIT_TYPE_STRUCTURE) and OwningPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and OwningPlayer != Player(PLAYER_NEUTRAL_PASSIVE) and OwningPlayer != udg_TheBurningLegion) then
-            set BuildingDoesNotExist = false
-            set FirstOfBuildingGroup = null
-            set OwningPlayer = null
-            exitwhen(true)
-        endif
-        call GroupRemoveUnit(BuildingGroup, FirstOfBuildingGroup)
-        set FirstOfBuildingGroup = null
-        set OwningPlayer = null
-    endloop
-    call DestroyGroup(BuildingGroup)
-    set BuildingGroup = null
-    call RemoveLocation(RespawnRectCenter)
-    set RespawnRectCenter = null
-    call RemoveRect(BuildingRect)
-    set BuildingRect = null
-    return BuildingDoesNotExist
-endfunction
-
-function AssignUnitToGroup takes unit whichUnit, integer Group returns nothing
-    if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
-        // avoids permanent removal if too many heroes from the same player died
-        call BlzSetUnitRealField(whichUnit, UNIT_RF_DEATH_TIME, 99999999.0)
-    endif
-    call SaveUnitParameterInteger(whichUnit, 0, Group)
-endfunction
-
-function AssignUnitToCurrentGroupEx takes integer lastIndex, unit lastMember returns nothing
-    local integer memberIndex = Index2D(udg_TmpGroupIndex, lastIndex, udg_RespawnGroupMaxMembers)
-    debug call BJDebugMsg("Assign to unit " + GetUnitName(lastMember) + " with handle ID " + I2S(GetHandleId(lastMember)) + " with index " + I2S(lastIndex) + " the current group " + I2S(udg_TmpGroupIndex) + " the unit group has a size of " + I2S(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])))
-    set udg_RespawnUnitType[memberIndex] = GetUnitTypeId(lastMember)
-    set udg_RespawnLocationPerUnit[memberIndex] = GetUnitLoc(lastMember)
-	// set the rect for the building check
-	if (udg_RespawnRect[udg_TmpGroupIndex] == null) then
-		set udg_RespawnRect[udg_TmpGroupIndex] = RectFromCenterSizeBJ(GetUnitLoc(lastMember), 200.00, 200.00)
-	endif
-    call AssignUnitToGroup(lastMember, udg_TmpGroupIndex)
-	if (IsUnitType(lastMember, UNIT_TYPE_HERO)) then
-		set udg_RespawnHero[memberIndex] = lastMember
-	endif
-	set udg_RespawnGroupMembers[udg_TmpGroupIndex] = lastIndex + 1
-endfunction
-
-function AssignUnitToCurrentGroup takes nothing returns nothing
-    call AssignUnitToCurrentGroupEx(CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex]) - 1, udg_LastAddedUnitToGroup)
-endfunction
-
-function CopyGroup takes group whichGroup returns group
-    local group tmpGroup = CreateGroup()
-    call GroupAddGroup(whichGroup, tmpGroup)
-    return tmpGroup
-endfunction
-
-function AssignDestructableToCurrentGroup takes nothing returns nothing
-    set udg_RespawnGroupDestructable[udg_TmpGroupIndex] = udg_CurrentRespawnDestructable
-    call TriggerRegisterDeathEvent(udg_RespawnDestructableTrigger, udg_CurrentRespawnDestructable)
-    call SaveDestructableParameterInteger(udg_CurrentRespawnDestructable, 0, udg_TmpGroupIndex)
-endfunction
-
-function AssignAllUnitsToCurrentGroup takes nothing returns nothing
-    local integer count = CountUnitsInGroup(udg_RespawnGroup[udg_TmpGroupIndex])
-    local group copy = CopyGroup(udg_RespawnGroup[udg_TmpGroupIndex])
-    local integer i = 0
-    local unit first = null
-    loop
-        set first = FirstOfGroup(copy)
-        exitwhen (first == null)
-        call AssignUnitToCurrentGroupEx(i, first)
-        call GroupRemoveUnit(copy, first)
-        set first = null
-        set i = i + 1
-    endloop
-    call GroupClear(copy)
-    call DestroyGroup(copy)
-    call AssignDestructableToCurrentGroup()
-endfunction
-
-function InitCurrentGroup takes nothing returns nothing
-    set udg_TmpGroupIndex = udg_TmpGroupIndex + 1
-    if (udg_RespawnGroup[udg_TmpGroupIndex] == null) then
-        set udg_RespawnGroup[udg_TmpGroupIndex] = CreateGroup()
-    endif
-    set udg_CurrentRespawnGroup = udg_RespawnGroup[udg_TmpGroupIndex]
-endfunction
-
-function RespawnGroup takes integer Group returns boolean
-	local boolean result = false
-    local integer I0 = 0
-    local integer index = 0
-	local integer I1 = 0
-	local integer maxMembers = udg_RespawnGroupMaxMembers
-    local location RespawnLocation
-    local unit GroupMember = null
-    debug call BJDebugMsg("Respawn group: " + I2S(Group))
-    if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group]) or (udg_RespawnGroupMembers[Group] > 0 and CountUnitsInGroup(udg_RespawnGroup[Group]) < udg_RespawnGroupMembers[Group])) then
-        debug call BJDebugMsg("Is empty: " + I2S(Group))
-        if (udg_RespawnGroupMembers[Group] > 0) then
-            set maxMembers = udg_RespawnGroupMembers[Group]
-        endif
-        set I0 = 0
-        loop
-            exitwhen(I0 == maxMembers)
-            set index = Index2D(Group, I0, udg_RespawnGroupMaxMembers)
-            if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
-                if (udg_RespawnHero[index] != null) then // hero
-                    set GroupMember = udg_RespawnHero[index]
-                    if (not IsUnitInGroup(GroupMember, udg_RespawnGroup[Group])) then // the hero could be still alive and in the group
-                        // hero creeps should keep their XP
-                        if (udg_RespawnLocationPerUnit[index] != null) then
-                            set RespawnLocation = udg_RespawnLocationPerUnit[index]
-                        else
-                            set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-                        endif
-                        debug call PingMinimapLocForForce(GetPlayersAll(), RespawnLocation, 5)
-                        call ReviveHeroLoc(GroupMember, RespawnLocation, true)
-                        call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
-                        debug call BJDebugMsg("Group " + I2S(Group) + " revive hero: " + GetUnitName(GroupMember))
-                        if (udg_RespawnLocationPerUnit[index] == null) then
-                            call RemoveLocation(RespawnLocation)
-                        endif
-                        set RespawnLocation = null
-                    endif
-                    set GroupMember = null
-                else // regular unit
-					if (udg_RespawnLocationPerUnit[index] != null) then
-						set RespawnLocation = udg_RespawnLocationPerUnit[index]
-					else
-						set RespawnLocation = GetRandomLocInRect(udg_RespawnRect[Group])
-					endif
-					set GroupMember = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_RespawnUnitType[index], GetLocationX(RespawnLocation), GetLocationY(RespawnLocation), GetRandomReal(0.00, 360.00))
-					if (GetPlayerTechCountSimple('R00U', Player(PLAYER_NEUTRAL_AGGRESSIVE)) > 0) then
-                        set udg_TmpUnit = GroupMember
-                        call TriggerExecute( gg_trg_Evolution_Add_Unit_Level_And_Defense_By_Unit )
-					endif
-					call AssignUnitToGroup(GroupMember, Group)
-					call GroupAddUnit(udg_RespawnGroup[Group], GroupMember)
-					if (udg_RespawnLocationPerUnit[index] == null) then
-						call RemoveLocation(RespawnLocation)
-					endif
-					set RespawnLocation = null
-				endif
-            else
-                // if one type is not set we assume the group has no more members
-                exitwhen(true)
-            endif
-            set I0 = I0 + 1
-        endloop
-
-        if (udg_RespawnGroupDestructable[Group] != null and GetDestructableLife(udg_RespawnGroupDestructable[Group]) <= 0.0) then
-            call DestructableRestoreLife(udg_RespawnGroupDestructable[Group], GetDestructableMaxLife(udg_RespawnGroupDestructable[Group]), true)
-        endif
-
-		set result = true
-    endif
-
-	return result
-endfunction
-
-function RespawnAllGroupsInRange takes real x, real y, real range returns integer
-	local location tmpLocation = Location(x, y)
-	local integer result = 0
-	local integer i = 0
-	loop
-		exitwhen (i == udg_TmpGroupIndex + 1)
-		if (DistanceBetweenPoints(GetRectCenter(udg_RespawnRect[i]), tmpLocation) <= range and RespawnGroup(i)) then
-			set result = result + 1
-		endif
-		set i = i + 1
-	endloop
-	call RemoveLocation(tmpLocation)
-	set tmpLocation = null
-	return result
-endfunction
-
-function TriggerConditionNoBuilding takes nothing returns boolean
-    local integer Group = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    return RespawnRectContainsNoBuilding(Group)
-endfunction
-
-function TriggerActionRespawnGroup takes nothing returns nothing
-    local integer Group = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    call RespawnGroup(Group)
-    call DestroyParameterTrigger(GetTriggeringTrigger())
-endfunction
-
-function RespawnGroupTimed takes integer Group returns nothing
-    set udg_RespawnGroupTrigger[Group] = CreateTrigger()
-    call TriggerRegisterTimerEvent(udg_RespawnGroupTrigger[Group], udg_RespawnTime, true)
-    call TriggerAddCondition(udg_RespawnGroupTrigger[Group], Condition(function TriggerConditionNoBuilding))
-    call TriggerAddAction(udg_RespawnGroupTrigger[Group], function TriggerActionRespawnGroup)
-    call SaveTriggerParameterInteger(udg_RespawnGroupTrigger[Group], 0, Group)
-endfunction
-
-function RespawnAllGroups takes nothing returns nothing
-    local integer i = 0
-    loop
-        exitwhen(i == udg_MaxRespawnGroups)
-        call RespawnGroup(i)
-        set i = i + 1
-    endloop
-endfunction
-
 function SetupCustomRucksackSystem takes nothing returns nothing
     set	udg_RucksackUnitType = 'E008'
     set udg_RucksackAbility1 = 'A02L'
     set	udg_RucksackAbility2 = 'A02M'
     set	udg_RucksackMaxPages = 30
     set udg_RucksackMoveTime = 0.10
-endfunction
-
-function SetupCustomRespawningSystem takes nothing returns nothing
-    set udg_RespawnGroupMaxMembers = 22
-    set udg_RespawnTime = 100.00
-    set udg_RespawnItemChance = 30.00
 endfunction
 
 function TriggerActionMoveRucksack takes nothing returns nothing
@@ -1229,89 +994,6 @@ function DropAllItemsFromHero3 takes player whichPlayer returns nothing
     call DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
 endfunction
 
-function PrepareRandomDist takes integer highestCreepLevel returns nothing
-    local integer level0Percentage = 100
-	local integer level4Percentage = 100
-	local integer level6Percentage = 100
-	local integer level8Percentage = 100
-	local integer i
-	call RandomDistReset()
-
-	if (highestCreepLevel > 8) then
-		call RandomDistAddItem('infs', level8Percentage)
-		call RandomDistAddItem('hval', level8Percentage)
-		call RandomDistAddItem('scav', level8Percentage)
-		call RandomDistAddItem('rej6', level8Percentage)
-		call RandomDistAddItem('shar', level8Percentage)
-		call RandomDistAddItem('engr', level8Percentage)
-		call RandomDistAddItem('ankh', level8Percentage)
-		call RandomDistAddItem('sor5', level8Percentage)
-	endif
-
-	if (highestCreepLevel > 5) then
-		call RandomDistAddItem('will', level6Percentage)
-		call RandomDistAddItem('fgdg', level6Percentage)
-		call RandomDistAddItem('rej3', level6Percentage)
-		call RandomDistAddItem('rej4', level6Percentage)
-		call RandomDistAddItem('sand', level6Percentage)
-		call RandomDistAddItem('lmbr', level6Percentage)
-		call RandomDistAddItem('rat6', level6Percentage)
-		call RandomDistAddItem('rat6', level6Percentage)
-		call RandomDistAddItem('fgun', level6Percentage)
-		call RandomDistAddItem('stwp', level6Percentage)
-	endif
-
-	if (highestCreepLevel > 5) then
-        call RandomDistAddItem('hslv', level4Percentage)
-        call RandomDistAddItem('rhe2', level4Percentage)
-        call RandomDistAddItem('rma2', level4Percentage)
-        call RandomDistAddItem('totw', level4Percentage)
-        call RandomDistAddItem('shea', level4Percentage)
-        call RandomDistAddItem('whwd', level4Percentage)
-        call RandomDistAddItem('fgrg', level4Percentage)
-        call RandomDistAddItem('wswd', level4Percentage)
-        call RandomDistAddItem('rman', level4Percentage)
-        call RandomDistAddItem('gold', level4Percentage)
-        call RandomDistAddItem('shar', level4Percentage)
-        call RandomDistAddItem('fgrd', level4Percentage)
-        call RandomDistAddItem('fgfh', level4Percentage)
-        call RandomDistAddItem('sres', level4Percentage)
-        call RandomDistAddItem('sror', level4Percentage)
-        call RandomDistAddItem('pinv', level4Percentage)
-	endif
-	// low level general stuff
-	call RandomDistAddItem('rnec', level0Percentage)
-	call RandomDistAddItem('skul', level0Percentage)
-	call RandomDistAddItem('silk', level0Percentage)
-	call RandomDistAddItem('hslv', level0Percentage)
-	call RandomDistAddItem('rhe2', level0Percentage)
-	call RandomDistAddItem('pman', level0Percentage)
-	call RandomDistAddItem('pclr', level0Percentage)
-	call RandomDistAddItem('rspd', level0Percentage)
-	call RandomDistAddItem('sreg', level0Percentage)
-	call RandomDistAddItem('rspl', level0Percentage)
-	call RandomDistAddItem('rnec', level0Percentage)
-	call RandomDistAddItem('rsps', level0Percentage)
-	call RandomDistAddItem('rdis', level0Percentage)
-
-	set i = 0
-	loop
-		exitwhen (i == bj_randDistCount)
-		set bj_randDistChance[i] = 100 / bj_randDistCount
-		set i = i + 1
-	endloop
-endfunction
-
-function DropRandomItem takes unit whichUnit, integer highestCreepLevel returns item
-    call PrepareRandomDist(highestCreepLevel)
-	return UnitDropItem(whichUnit, RandomDistChoose())
-endfunction
-
-function DropRandomItemFromWidget takes widget inWidget, integer highestCreepLevel returns item
-    call PrepareRandomDist(highestCreepLevel)
-    return WidgetDropItem(inWidget, RandomDistChoose())
-endfunction
-
 function GetUnitLevelByType takes integer unitTypeId returns integer
 	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), 0.0)
 	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_LEVEL)
@@ -1344,109 +1026,14 @@ function GetUnitMovementTypeByType takes integer unitTypeId returns integer
 	return result
 endfunction
 
-function GetHighestLevelFromGroup takes integer Group returns integer
-	local integer result = 0
-	local integer index = 0
-	local integer level = 0
-	local integer i = 0
-        loop
-		exitwhen(i == udg_RespawnGroupMaxMembers)
-		set index = Index2D(Group, i, udg_RespawnGroupMaxMembers)
-		if (udg_RespawnUnitType[index] != null and udg_RespawnUnitType[index] != 0) then
-			set level = GetUnitLevelByType(udg_RespawnUnitType[index])
-			if (level > result) then
-				set result = level
-			endif
-		endif
-		set i = i + 1
-	endloop
-	return result
-endfunction
-
-function DropRandomItemForGroup takes unit whichUnit, integer Group returns item
-	return DropRandomItem(whichUnit, GetHighestLevelFromGroup(Group))
-endfunction
-
-function DropRandomItemForGroupFromWidget takes widget inWidget, integer Group returns item
-	return DropRandomItemFromWidget(inWidget, GetHighestLevelFromGroup(Group))
-endfunction
-
-function DropRandomItemForGroupNTimes takes unit whichUnit, integer Group returns nothing
-	local integer n = GetRandomInt(0, 2)
-	local item whichItem = null
-	local integer i = 0
-	loop
-		exitwhen (i == n)
-		set whichItem = DropRandomItemForGroup(whichUnit, Group)
-        call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
-		set i = i + 1
-	endloop
-endfunction
-
-function DropRandomItemForGroupNTimesFromWidget takes widget inWidget, integer Group returns nothing
-	local integer n = GetRandomInt(0, 2)
-	local item whichItem = null
-	local integer i = 0
-	loop
-		exitwhen (i == n)
-		set whichItem = DropRandomItemForGroupFromWidget(inWidget, Group)
-        call AddItemToAllStock(GetItemTypeId(whichItem), 1, 1)
-		set i = i + 1
-	endloop
-endfunction
-
-function TriggerConditionRespawnMonster takes nothing returns boolean
-    return GetRespawnGroupOfUnit(GetTriggerUnit()) != -1
-endfunction
-
-function TriggerActionRespawnMonster takes nothing returns nothing
-    local unit triggerUnit = GetTriggerUnit()
-    local integer Group = GetRespawnGroupOfUnit(triggerUnit)
-    local real RandomNumber = 0.0
-    local item whichItem = null
-    debug call BJDebugMsg("Respawn monster with group " + I2S(Group) + " handle ID: " + I2S(GetHandleId(triggerUnit)))
-    if (Group != -1) then
-        call GroupRemoveUnit(udg_RespawnGroup[Group], triggerUnit)
-        if (not IsUnitType(triggerUnit, UNIT_TYPE_HERO)) then
-			call FlushUnitParameters(triggerUnit)
-			call AddUnitToAllStock(GetUnitTypeId(triggerUnit), 1, 1)
-		endif
-		if (IsUnitGroupEmptyBJ(udg_RespawnGroup[Group])) then
-            set RandomNumber = GetRandomReal(0.00, 100.00)
-            if (RandomNumber <= udg_RespawnItemChance) then
-                call DropRandomItemForGroupNTimes(triggerUnit, Group)
-            endif
-            call RespawnGroupTimed(Group)
-        endif
-    endif
-    set triggerUnit = null
-endfunction
-
-function TriggerActionDestructableDrops takes nothing returns nothing
-    local integer Group = GetRespawnGroupOfDestructable(GetDyingDestructable())
-    call DropRandomItemForGroupNTimesFromWidget(GetDyingDestructable(), Group)
-endfunction
-
 function InitCustomSystems takes nothing returns nothing
     local integer I0 = 0
     set udg_DB = InitHashtable()
     call SetupCustomRucksackSystem()
-    call SetupCustomRespawningSystem()
     // Movement Trigger
     set udg_RucksackTrigger = CreateTrigger()
     call TriggerRegisterTimerEvent(udg_RucksackTrigger, udg_RucksackMoveTime, true)
     call TriggerAddAction(udg_RucksackTrigger, function TriggerActionMoveRucksack)
-
-    set udg_RespawnTrigger = CreateTrigger()
-    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH, null)
-    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_DEATH, null)
-    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
-    call TriggerRegisterPlayerUnitEvent(udg_RespawnTrigger, udg_BossesPlayer, EVENT_PLAYER_UNIT_CHANGE_OWNER, null)
-    call TriggerAddCondition(udg_RespawnTrigger, Condition(function TriggerConditionRespawnMonster))
-    call TriggerAddAction(udg_RespawnTrigger, function TriggerActionRespawnMonster)
-
-    set udg_RespawnDestructableTrigger = CreateTrigger()
-    call TriggerAddAction(udg_RespawnDestructableTrigger, function TriggerActionDestructableDrops)
 endfunction
 
 // Baradé's Item Respawn System 1.1
@@ -1468,7 +1055,7 @@ endfunction
 // function TriggerRegisterItemRespawnStartsEvent takes trigger whichTrigger returns nothing
 //
 // Registers an item respawn start event for the specified trigger. This means that the trigger is evaluated and executed if
-// the condition is true whenever any item respawn timer is started by this system. You can access the previously pickedup or destroyed item
+// the condition is true whenever any item respawn timer is started by this system. You can access the previously picked up or destroyed item
 // and index from the system via functions.
 //
 // function GetTriggerRespawnItem takes nothing returns item
@@ -1979,6 +1566,849 @@ hook RemoveItem RemoveItemCleanup
 // - Add functions AddRespawnItemPool, AddRespawnItemRandom and AddRespawnItemRandomEx, RemoveRespawnItem, IsRespawnItemValid, TriggerRegisterItemRespawnStartsEvent and many setters and getters.
 // - Add constants for the different types.
 endlibrary
+
+// Baradé's Unit Group Respawn System 1.0
+//
+// Allows killed or charmed units from a group to respawn after some time.
+// Respawning groups are determined from preplaced creeps next to each other owned by player neutral aggressive by default.
+//
+// Usage:
+// - Copy this code into your map script or a trigger converted into code.
+// - Place some creeps on the map.
+//
+// You can change this default configuration by changing the constants.
+//
+// API:
+//
+// function TriggerRegisterUnitRespawnEvent takes trigger whichTrigger returns nothing
+//
+// Registers an unit respawn event for the specified trigger. This means that the trigger is evaluated and executed if
+// the condition is true whenever any unit is respawned by this system. You can access the triggering respawning unit
+// and index from the system via functions.
+//
+// function TriggerRegisterUnitRespawnStartsEvent takes trigger whichTrigger returns nothing
+//
+// Registers an unit respawn start event for the specified trigger. This means that the trigger is evaluated and executed if
+// the condition is true whenever any unit respawn timer is started by this system. You can access the previously killed or charmed unit
+// and index from the system via functions.
+//
+// function GetTriggerRespawnUnit takes nothing returns unit
+//
+// Returns the triggering respawned unit from a trigger which was evaluated or executed due to a respawn event.
+// Returns the triggering killed or charmed previously respawned unit if the event is a respawn starts event.
+//
+// function GetTriggerRespawnUnitIndex takes nothing returns integer
+//
+// Returns the corresponding index of the unit respawn from the respawned unit or unit for which the respawn timer has been started of the
+// evaluated or executed trigger.
+//
+// function GetUnitRespawnUnitIndex takes unit whichUnit returns integer
+//
+// Returns the corresponding index of the unit respawn matching the passed unit. If there is none, it returns -1.
+//
+// function GetUnitRespawnCounter takes nothing returns integer
+//
+// Returns the maximum number of item respawn indices. Note that not every index in between has to be valid. This function might help integer
+// loops to go through all existing item respawns. Please use IsRespawnItemValid to check if an index in between 0 and the return value of
+// this function is actually used.
+library UnitGroupRespawnSystemConfig
+
+    globals
+        // The default delay until a unit will be respawned.
+        public constant real DEFAULT_TIMEOUT = 30.0
+        // All preplaced units owned by the CREEPS_OWNER player on the map will automatically respawn if this value is true. Otherwise, you will have to add them manually.
+        public constant boolean AUTO_ADD_ALL_PREPLACED_CREEPS = true
+        // Creates unit group respawns from preplaced creeps next to each other if this value is true. Otherwise, it will create separate unit respawns per creep.
+        public constant boolean AUTO_ADDED_GROUPS = true
+        // Defines the maximum distance between preplaced creep units to belong to the same respawn group if AUTO_ADDED_GROUPS is true.
+        public constant real AUTO_ADDED_GROUP_MAX_DISTANCE = 800.0
+        // All auto added unit respawns and respawn groups will drop random items when the whole group has been killed or charmed when this value is true. The level of the dropped item will be the maximum unit level of the group.
+        // Make sure that all item types have set the field "Stats - Include As Random Choice" to the correct value in the object editor.
+        public constant boolean AUTO_ADDED_DROP_RANDOM_ITEMS = true
+        // Determines a unit's level by its unit type rather than the actual unit. This helps to get a lower level if the unit levels are changed manually during the game.
+        public constant boolean GET_UNIT_LEVEL_BY_TYPE = true
+        // Shows the eyecandy on respawning hero revivals if set to true. Otherwise, the effect is not shown.
+        public constant boolean HERO_RESPAWN_DO_EYECANDY = true
+        // Avoids permanent removal if too many heroes from the same player died.
+        public constant boolean SET_MAX_DEATH_TIME_TO_UNITS = true
+    endglobals
+
+    // The following code must be defined if AUTO_ADD_ALL_PREPLACED_CREEPS is set to true:
+
+    private function IsUnitLivingNonStructure takes nothing returns boolean
+        return IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
+    endfunction
+
+    // Redefine this function to add different preplaced creeps.
+    public function AddAllUserSpecifiedPreplacedCreeps takes group allCreeps returns nothing
+        call GroupEnumUnitsOfPlayer(allCreeps, Player(PLAYER_NEUTRAL_AGGRESSIVE), Filter(function IsUnitLivingNonStructure))
+    endfunction
+
+endlibrary
+
+library UnitGroupRespawnSystem requires UnitGroupRespawnSystemConfig
+
+globals
+    public constant integer UNIT_RESPAWN_TYPE_UNIT = 0
+    public constant integer UNIT_RESPAWN_TYPE_UNITPOOL = 1
+    public constant integer UNIT_RESPAWN_TYPE_RANDOM_CREEP_LEVEL = 2
+
+    private integer respawnUnitCounter = 0
+    private integer respawnUnitFreeIndex = 0
+    private boolean array respawnUnitIsValid
+    private integer array respawnUnitType
+    private unit array respawnUnitUnit
+    private integer array respawnUnitHandleId
+    private integer array respawnUnitUnitTypeId
+    private unitpool array respawnUnitPool
+    private integer array respawnUnitRandomCreepLevel
+    private player array respawnUnitOwner
+    private real array respawnUnitFacing
+    private real array respawnUnitX
+    private real array respawnUnitY
+    private boolean array respawnUnitUseDyingLoc
+    private timer array respawnUnitTimer
+    private real array respawnUnitTimeout
+    private boolean array respawnUnitEnabled
+    private integer array respawnUnitGroupIndex
+
+    private integer callbackRespawnTriggersCounter = 0
+    private trigger array callbackRespawnTriggers
+
+    private integer callbackRespawnStartsTriggersCounter = 0
+    private trigger array callbackRespawnStartsTriggers
+
+    private unit callbackUnit = null
+    private integer callbackIndex = -1
+
+    private integer respawnUnitGroupCounter = 0
+    private integer respawnUnitGroupFreeIndex = 0
+    private boolean array respawnUnitGroupIsValid
+    private group array respawnUnitGroup
+    private timer array respawnUnitGroupTimer
+    private real array respawnUnitGroupTimeout
+    private boolean array respawnUnitGroupEnabled
+
+    private trigger unitDeathOrCharmTrigger = CreateTrigger()
+    private hashtable respawnUnitHashTable = InitHashtable()
+    private integer evaluateIndex = -1
+    private trigger refreshEvaluateTrigger = CreateTrigger()
+
+    private player filterOwner = null
+endglobals
+
+function GetTriggerRespawnUnit takes nothing returns unit
+    return callbackUnit
+endfunction
+
+function GetTriggerRespawnUnitIndex takes nothing returns integer
+    return callbackIndex
+endfunction
+
+function TriggerRegisterUnitRespawnEvent takes trigger whichTrigger returns nothing
+    local integer index = callbackRespawnTriggersCounter
+    set callbackRespawnTriggers[index] = whichTrigger
+    set callbackRespawnTriggersCounter = callbackRespawnTriggersCounter + 1
+endfunction
+
+private function EvaluateAndExecuteCallbackRespawnTriggers takes integer index returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= callbackRespawnTriggersCounter)
+        set callbackUnit = respawnUnitUnit[index]
+        set callbackIndex = index
+        call ConditionalTriggerExecute(callbackRespawnTriggers[i])
+        set i = i + 1
+    endloop
+endfunction
+
+function TriggerRegisterUnitRespawnStartsEvent takes trigger whichTrigger returns nothing
+    local integer index = callbackRespawnStartsTriggersCounter
+    set callbackRespawnStartsTriggers[index] = whichTrigger
+    set callbackRespawnStartsTriggersCounter = callbackRespawnStartsTriggersCounter + 1
+endfunction
+
+private function EvaluateAndExecuteCallbackRespawnStartsTriggers takes integer index returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= callbackRespawnStartsTriggersCounter)
+        set callbackUnit = respawnUnitUnit[index]
+        set callbackIndex = index
+        call ConditionalTriggerExecute(callbackRespawnStartsTriggers[i])
+        set i = i + 1
+    endloop
+endfunction
+
+private function ClearRespawnUnitIndex takes integer handleID returns nothing
+    if (HaveSavedInteger(respawnUnitHashTable, handleID, 0)) then
+        call FlushChildHashtable(respawnUnitHashTable, handleID)
+    endif
+endfunction
+
+private function GetRespawnUnitIndexByHandleID takes integer handleID returns integer
+    if (HaveSavedInteger(respawnUnitHashTable, handleID, 0)) then
+        return LoadInteger(respawnUnitHashTable, handleID, 0)
+    endif
+
+    return -1
+endfunction
+
+private function GetUnitRespawnGroupIndexByHandleID takes integer handleID returns integer
+    if (HaveSavedInteger(respawnUnitHashTable, handleID, 1)) then
+        return LoadInteger(respawnUnitHashTable, handleID, 1)
+    endif
+
+    return -1
+endfunction
+
+function GetUnitRespawnUnitIndex takes unit whichUnit returns integer
+    return GetRespawnUnitIndexByHandleID(GetHandleId(whichUnit))
+endfunction
+
+function GetUnitRespawnGroupIndex takes unit whichUnit returns integer
+    return GetUnitRespawnGroupIndexByHandleID(GetHandleId(whichUnit))
+endfunction
+
+function GetRespawnUnitCounter takes nothing returns integer
+    return respawnUnitCounter
+endfunction
+
+function IsRespawnUnitValid takes integer index returns boolean
+    if (index < 0) then
+        return false
+    endif
+    return respawnUnitIsValid[index]
+endfunction
+
+function RespawnUnit takes integer index returns boolean
+    if (not IsRespawnUnitValid(index)) then
+        return false
+    endif
+    if (respawnUnitType[index] == UNIT_RESPAWN_TYPE_UNIT) then
+        if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
+            call ReviveHero(respawnUnitUnit[index], respawnUnitX[index], respawnUnitY[index], UnitGroupRespawnSystemConfig_HERO_RESPAWN_DO_EYECANDY)
+        else
+            set respawnUnitUnit[index] = CreateUnit(respawnUnitOwner[index], respawnUnitUnitTypeId[index], respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
+        endif
+    elseif (respawnUnitType[index] == UNIT_RESPAWN_TYPE_UNITPOOL) then
+        set respawnUnitUnit[index] = PlaceRandomUnit(respawnUnitPool[index], respawnUnitOwner[index], respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
+    elseif (respawnUnitType[index] == UNIT_RESPAWN_TYPE_RANDOM_CREEP_LEVEL) then
+        set respawnUnitUnit[index] = CreateUnit(respawnUnitOwner[index], ChooseRandomCreep(respawnUnitRandomCreepLevel[index]), respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
+    endif
+static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
+    if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
+        call BlzSetUnitRealField(respawnUnitUnit[index], UNIT_RF_DEATH_TIME, 99999999.0)
+    endif
+endif
+    set respawnUnitHandleId[index] = GetHandleId(respawnUnitUnit[index])
+    call SaveInteger(respawnUnitHashTable, respawnUnitHandleId[index], 0, index)
+    set evaluateIndex = index
+    call TriggerEvaluate(refreshEvaluateTrigger)
+    call EvaluateAndExecuteCallbackRespawnTriggers(index)
+    return true
+endfunction
+
+function RespawnAllUnits takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= GetRespawnUnitCounter())
+        if (IsRespawnUnitValid(i) and respawnUnitUnit[i] == null) then
+            call RespawnUnit(i)
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+function PreventUnitRespawn takes unit whichUnit returns nothing
+    local integer index = GetUnitRespawnUnitIndex(whichUnit)
+    if (IsRespawnUnitValid(index)) then
+        call ClearRespawnUnitIndex(respawnUnitHandleId[index])
+        set respawnUnitHandleId[index] = 0
+        call RemoveUnit(whichUnit)
+        set whichUnit = null
+    endif
+endfunction
+
+private function TimerFunctionRespawnUnit takes nothing returns nothing
+    local integer index = LoadInteger(respawnUnitHashTable, GetHandleId(GetExpiredTimer()), 0)
+    call RespawnUnit(index)
+endfunction
+
+function StartUnitRespawn takes integer index returns nothing
+    call EvaluateAndExecuteCallbackRespawnStartsTriggers(index)
+
+    if (respawnUnitHandleId[index] != 0) then
+        call ClearRespawnUnitIndex(respawnUnitHandleId[index])
+    endif
+    set respawnUnitUnit[index] = null
+    set respawnUnitHandleId[index] = 0
+    call TimerStart(respawnUnitTimer[index], respawnUnitTimeout[index], false, function TimerFunctionRespawnUnit)
+endfunction
+
+function StartAllUnitRespawnsNotRunning takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= GetRespawnUnitCounter())
+        if (IsRespawnUnitValid(i) and respawnUnitUnit[i] == null and TimerGetElapsed(respawnUnitTimer[i]) <= 0.0) then
+            call StartUnitRespawn(i)
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+private function AddRespawnUnitDefault takes integer index, real x, real y returns nothing
+    set respawnUnitIsValid[index] = true
+    set respawnUnitX[index] = x
+    set respawnUnitY[index] = y
+    set respawnUnitFacing[index] = GetRandomDirectionDeg()
+    set respawnUnitUseDyingLoc[index] = false
+    set respawnUnitOwner[index] = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    set respawnUnitTimer[index] = CreateTimer()
+    set respawnUnitTimeout[index] = UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT
+    call SaveInteger(respawnUnitHashTable, GetHandleId(respawnUnitTimer[index]), 0, index)
+    set respawnUnitEnabled[index] = true
+    set respawnUnitGroupIndex[index] = -1
+
+    loop
+        set respawnUnitFreeIndex = respawnUnitFreeIndex + 1
+        exitwhen (not IsRespawnUnitValid(respawnUnitFreeIndex))
+    endloop
+
+    if (respawnUnitFreeIndex >= JASS_MAX_ARRAY_SIZE) then
+        call BJDebugMsg("Warning: Reached Warcraft maximum array size for respawn units: " + I2S(respawnUnitFreeIndex))
+    endif
+
+    if (index >= respawnUnitCounter) then
+        set respawnUnitCounter = index + 1
+    endif
+endfunction
+
+function AddRespawnUnit takes unit whichUnit returns integer
+    local integer index = respawnUnitFreeIndex
+    set respawnUnitType[index] = UNIT_RESPAWN_TYPE_UNIT
+    set respawnUnitUnit[index] = whichUnit
+static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
+    if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
+        call BlzSetUnitRealField(respawnUnitUnit[index], UNIT_RF_DEATH_TIME, 99999999.0)
+    endif
+endif
+    set respawnUnitHandleId[index] = GetHandleId(whichUnit)
+    set respawnUnitUnitTypeId[index] = GetUnitTypeId(whichUnit)
+    set respawnUnitPool[index] = null
+    call AddRespawnUnitDefault(index, GetUnitX(whichUnit), GetUnitY(whichUnit))
+    set respawnUnitFacing[index] = GetUnitFacing(whichUnit)
+    set respawnUnitOwner[index] = GetOwningPlayer(whichUnit)
+
+    call SaveInteger(respawnUnitHashTable, respawnUnitHandleId[index], 0, index)
+
+    return index
+endfunction
+
+function AddRespawnUnitPool takes unitpool whichUnitPool, real x, real y returns integer
+    local integer index = respawnUnitFreeIndex
+    set respawnUnitType[index] = UNIT_RESPAWN_TYPE_UNITPOOL
+    set respawnUnitUnit[index] = null
+    set respawnUnitHandleId[index] = 0
+    set respawnUnitUnitTypeId[index] = 0
+    set respawnUnitPool[index] = whichUnitPool
+    call AddRespawnUnitDefault(index, x, y)
+
+    call RespawnUnit(index)
+
+    return index
+endfunction
+
+function AddRespawnUnitRandomCreep takes integer level, real x, real y returns integer
+    local integer index = respawnUnitFreeIndex
+    set respawnUnitType[index] = UNIT_RESPAWN_TYPE_RANDOM_CREEP_LEVEL
+    set respawnUnitUnit[index] = null
+    set respawnUnitHandleId[index] = 0
+    set respawnUnitUnitTypeId[index] = 0
+    set respawnUnitPool[index] = null
+    set respawnUnitRandomCreepLevel[index] = level
+    call AddRespawnUnitDefault(index, x, y)
+
+    call RespawnUnit(index)
+
+    return index
+endfunction
+
+function RemoveRespawnUnit takes integer index returns boolean
+    if (IsRespawnUnitValid(index)) then
+        set respawnUnitIsValid[index] = false
+
+        if (respawnUnitUnit[index] != null) then
+            call ClearRespawnUnitIndex(GetHandleId(respawnUnitUnit[index]))
+        endif
+
+        set respawnUnitTimeout[index] = 0
+        set respawnUnitType[index] = 0
+        set respawnUnitUnit[index] = null
+        set respawnUnitHandleId[index] = 0
+        set respawnUnitUnitTypeId[index] = 0
+        set respawnUnitPool[index] = null
+        set respawnUnitRandomCreepLevel[index] = 0
+        set respawnUnitUseDyingLoc[index] = false
+
+        call PauseTimer(respawnUnitTimer[index])
+        call FlushChildHashtable(respawnUnitHashTable, GetHandleId(respawnUnitTimer[index]))
+        call DestroyTimer(respawnUnitTimer[index])
+
+        set respawnUnitFreeIndex = index
+
+        if (index == respawnUnitCounter - 1) then
+            set respawnUnitCounter = respawnUnitCounter - 1
+        endif
+
+        return true
+    endif
+
+    return false
+endfunction
+
+function SetRespawnUnitEnabled takes integer index, boolean enabled returns nothing
+    set respawnUnitEnabled[index] = enabled
+endfunction
+
+function IsRespawnUnitEnabled takes integer index returns boolean
+    return respawnUnitEnabled[index]
+endfunction
+
+function GetRespawnUnitTimer takes integer index returns timer
+    return respawnUnitTimer[index]
+endfunction
+
+function GetRespawnUnitType takes integer index returns integer
+    return respawnUnitType[index]
+endfunction
+
+function SetRespawnUnitTimeout takes integer index, real timeout returns nothing
+    set respawnUnitTimeout[index] = timeout
+endfunction
+
+function GetRespawnUnitTimeout takes integer index returns real
+    return respawnUnitTimeout[index]
+endfunction
+
+function SetRespawnUnitOwner takes integer index, player owner returns nothing
+    set respawnUnitOwner[index] = owner
+endfunction
+
+function GetRespawnUnitOwner takes integer index returns player
+    return respawnUnitOwner[index]
+endfunction
+function SetRespawnUnitFacing takes integer index, real facing returns nothing
+    set respawnUnitFacing[index] = facing
+endfunction
+
+function GetRespawnUnitFacing takes integer index returns real
+    return respawnUnitFacing[index]
+endfunction
+
+function SetRespawnUnitX takes integer index, real x returns nothing
+    set respawnUnitX[index] = x
+endfunction
+
+function GetRespawnUnitX takes integer index returns real
+    return respawnUnitX[index]
+endfunction
+
+function SetRespawnUnitY takes integer index, real y returns nothing
+    set respawnUnitX[index] = y
+endfunction
+
+function GetRespawnUnitY takes integer index returns real
+    return respawnUnitY[index]
+endfunction
+
+function SetRespawnUnitUseDyingLoc takes integer index, boolean use returns nothing
+    set respawnUnitUseDyingLoc[index] = use
+endfunction
+
+function GetRespawnUnitUseDyingLoc takes integer index returns boolean
+    return respawnUnitUseDyingLoc[index]
+endfunction
+
+function SetRespawnUnit takes integer index, unit whichUnit returns nothing
+    set respawnUnitUnit[index] = whichUnit
+endfunction
+
+function GetRespawnUnit takes integer index returns unit
+    return respawnUnitUnit[index]
+endfunction
+
+function SetRespawnUnitPool takes integer index, unitpool whichUnitPool returns nothing
+    set respawnUnitPool[index] = whichUnitPool
+endfunction
+
+function GetRespawnUnitPool takes integer index returns unitpool
+    return respawnUnitPool[index]
+endfunction
+
+function SetRespawnUnitLevel takes integer index, integer level returns nothing
+    set respawnUnitRandomCreepLevel[index] = level
+endfunction
+
+function GetRespawnUnitLevel takes integer index returns integer
+    return respawnUnitRandomCreepLevel[index]
+endfunction
+
+function GetRespawnUnitGroupCounter takes nothing returns integer
+    return respawnUnitGroupCounter
+endfunction
+
+function IsRespawnUnitGroupValid takes integer index returns boolean
+    if (index < 0) then
+        return false
+    endif
+    return respawnUnitGroupIsValid[index]
+endfunction
+
+function SetRespawnUnitGroupIndex takes integer index, integer groupIndex returns nothing
+    if (IsRespawnUnitGroupValid(groupIndex)) then
+        if (IsRespawnUnitGroupValid(respawnUnitGroupIndex[index]) and respawnUnitUnit[index] != null) then
+            call GroupRemoveUnit(respawnUnitGroup[respawnUnitGroupIndex[index]], respawnUnitUnit[index])
+        endif
+        set respawnUnitGroupIndex[index] = groupIndex
+        call GroupAddUnit(respawnUnitGroup[groupIndex], respawnUnitUnit[index])
+    endif
+endfunction
+
+function GetRespawnUnitGroupIndex takes integer index returns integer
+    return respawnUnitGroupIndex[index]
+endfunction
+
+function AddRespawnUnitGroup takes nothing returns integer
+    local integer index = respawnUnitGroupFreeIndex
+    set respawnUnitGroupIsValid[index] = true
+    set respawnUnitGroup[index] = CreateGroup()
+    set respawnUnitGroupTimer[index] = CreateTimer()
+    set respawnUnitGroupTimeout[index] = UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT
+    call SaveInteger(respawnUnitHashTable, GetHandleId(respawnUnitGroupTimer[index]), 0, index)
+    set respawnUnitGroupEnabled[index] = true
+
+    loop
+        set respawnUnitGroupFreeIndex = respawnUnitGroupFreeIndex + 1
+        exitwhen (not IsRespawnUnitGroupValid(respawnUnitGroupFreeIndex))
+    endloop
+
+    if (respawnUnitGroupFreeIndex >= JASS_MAX_ARRAY_SIZE) then
+        call BJDebugMsg("Warning: Reached Warcraft maximum array size for respawn units: " + I2S(respawnUnitGroupFreeIndex))
+    endif
+
+    if (index >= respawnUnitGroupCounter) then
+        set respawnUnitGroupCounter = index + 1
+    endif
+
+    return index
+endfunction
+
+private function IsLivingUnitWithRespawn takes nothing returns boolean
+    return IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetOwningPlayer(GetFilterUnit()) == filterOwner and IsRespawnUnitValid(GetUnitRespawnUnitIndex(GetFilterUnit())) and IsRespawnUnitGroupValid(GetRespawnUnitGroupIndex(GetUnitRespawnUnitIndex(GetFilterUnit())))
+endfunction
+
+function AddRespawnUnitGroupFromUnit takes unit whichUnit returns integer
+    local group allNearbyUnitsFromTheSameOwner = CreateGroup()
+    local unit first = null
+    local integer groupIndex = -1
+    local integer index = -1
+    set filterOwner = GetOwningPlayer(whichUnit)
+    call GroupEnumUnitsInRange(allNearbyUnitsFromTheSameOwner, GetUnitX(whichUnit), GetUnitY(whichUnit), UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_MAX_DISTANCE, Filter(function IsLivingUnitWithRespawn))
+    set filterOwner = null
+    set first = FirstOfGroup(allNearbyUnitsFromTheSameOwner)
+    call GroupClear(allNearbyUnitsFromTheSameOwner)
+    call DestroyGroup(allNearbyUnitsFromTheSameOwner)
+    set allNearbyUnitsFromTheSameOwner = null
+    if (first != null) then
+        set groupIndex = GetRespawnUnitGroupIndex(GetUnitRespawnUnitIndex(first))
+        set first = null
+    else
+        set groupIndex = AddRespawnUnitGroup()
+    endif
+    set index = AddRespawnUnit(whichUnit)
+    call SetRespawnUnitGroupIndex(index, groupIndex)
+    return groupIndex
+endfunction
+
+private function PolarProjectionX takes real x, real dist, real angle returns real
+    return x + dist * Cos(angle * bj_DEGTORAD)
+endfunction
+
+private function PolarProjectionY takes real y, real dist, real angle returns real
+    return y + dist * Sin(angle * bj_DEGTORAD)
+endfunction
+
+private function GetRandomLocInRange takes real x, real y, real range returns location
+    local real dist = GetRandomReal(0.0, range)
+    local real angle = GetRandomDirectionDeg()
+    return Location(PolarProjectionX(x, dist, angle), PolarProjectionY(y, dist, angle))
+endfunction
+
+function AddRespawnUnitGroupFromUnitPool takes unitpool whichUnitPool, integer countMembers, real x, real y, real range returns integer
+    local integer groupIndex = AddRespawnUnitGroup()
+    local location whichLocation = null
+    local integer i = 0
+    loop
+        exitwhen (i == countMembers)
+        set whichLocation = GetRandomLocInRange(x, y, range)
+        call SetRespawnUnitGroupIndex(AddRespawnUnitPool(whichUnitPool, GetLocationY(whichLocation), GetLocationY(whichLocation)), groupIndex)
+        call RemoveLocation(whichLocation)
+        set whichLocation = null
+        set i = i + 1
+    endloop
+    return groupIndex
+endfunction
+
+function AddRespawnUnitGroupFromRandomCreepLevel takes integer minCreepLevel, integer maxCreepLevel, integer countMembers, real x, real y, real range returns integer
+    local integer groupIndex = AddRespawnUnitGroup()
+    local location whichLocation = null
+    local integer i = 0
+    loop
+        exitwhen (i == countMembers)
+        set whichLocation = GetRandomLocInRange(x, y, range)
+        call SetRespawnUnitGroupIndex(AddRespawnUnitRandomCreep(GetRandomInt(minCreepLevel, maxCreepLevel), GetLocationY(whichLocation), GetLocationY(whichLocation)), groupIndex)
+        call RemoveLocation(whichLocation)
+        set whichLocation = null
+        set i = i + 1
+    endloop
+    return groupIndex
+endfunction
+
+function RemoveRespawnUnitGroup takes integer index returns boolean
+    if (IsRespawnUnitValid(index)) then
+        set respawnUnitGroupIsValid[index] = false
+        set respawnUnitGroupEnabled[index] = false
+
+        if (respawnUnitGroup[index] != null) then
+            call GroupClear(respawnUnitGroup[index])
+            call DestroyGroup(respawnUnitGroup[index])
+            set respawnUnitGroup[index] = null
+        endif
+
+        call PauseTimer(respawnUnitGroupTimer[index])
+        call FlushChildHashtable(respawnUnitHashTable, GetHandleId(respawnUnitGroupTimer[index]))
+        call DestroyTimer(respawnUnitGroupTimer[index])
+
+        set respawnUnitFreeIndex = index
+
+        if (index == respawnUnitCounter - 1) then
+            set respawnUnitCounter = respawnUnitCounter - 1
+        endif
+
+        return true
+    endif
+
+    return false
+endfunction
+
+function SetRespawnUnitGroupTimeout takes integer index, real timeout returns nothing
+    set respawnUnitGroupTimeout[index] = timeout
+endfunction
+
+function GetRespawnUnitGroupTimeout takes integer index returns real
+    return respawnUnitGroupTimeout[index]
+endfunction
+
+function SetRespawnUnitGroupEnabled takes integer index, boolean enabled returns nothing
+    set respawnUnitGroupEnabled[index] = enabled
+endfunction
+
+function IsRespawnUnitGroupEnabled takes integer index returns boolean
+    return respawnUnitGroupEnabled[index]
+endfunction
+
+function GetRespawnUnitGroupUnits takes integer index returns group
+    return respawnUnitGroup[index]
+endfunction
+
+function RespawnUnitGroup takes integer index returns boolean
+    local integer memberIndex = - 1
+    local integer i = 0
+    if (not IsRespawnUnitGroupValid(index)) then
+        return false
+    endif
+    set i = 0
+    loop
+        exitwhen (i == BlzGroupGetSize(respawnUnitGroup[index]))
+        set memberIndex = GetRespawnUnitIndexByHandleID(GetHandleId(BlzGroupUnitAt(respawnUnitGroup[index], i)))
+        if (respawnUnitHandleId[memberIndex] != 0) then
+            call ClearRespawnUnitIndex(respawnUnitHandleId[memberIndex])
+        endif
+        call RespawnUnit(memberIndex)
+        set i = i + 1
+    endloop
+
+    return true
+endfunction
+
+private function TimerFunctionRespawnUnitGroup takes nothing returns nothing
+    local integer index = LoadInteger(respawnUnitHashTable, GetHandleId(GetExpiredTimer()), 0)
+    call RespawnUnitGroup(index)
+endfunction
+
+function StartUnitGroupRespawn takes integer index returns nothing
+    local integer memberIndex = -1
+    local integer i = 0
+    loop
+        exitwhen (i == BlzGroupGetSize(respawnUnitGroup[index]))
+        set memberIndex = GetRespawnUnitIndexByHandleID(GetHandleId(BlzGroupUnitAt(respawnUnitGroup[index], i)))
+        call EvaluateAndExecuteCallbackRespawnStartsTriggers(memberIndex)
+        set i = i + 1
+    endloop
+    call TimerStart(respawnUnitGroupTimer[index], respawnUnitGroupTimeout[index], false, function TimerFunctionRespawnUnitGroup)
+endfunction
+
+private function TriggerConditionRespawnUnit takes nothing returns boolean
+    local integer index = GetUnitRespawnUnitIndex(GetTriggerUnit())
+    return IsRespawnUnitValid(index) and IsRespawnUnitEnabled(index)
+endfunction
+
+private function GetUnitLevelByType takes integer unitTypeId returns integer
+	local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, 0.0, 0.0, 0.0)
+	local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_LEVEL)
+	call RemoveUnit(dummy)
+	set dummy = null
+	return result
+endfunction
+
+private function GetMaxUnitLevelFromGroup takes group whichGroup returns integer
+    local integer maxLevel = 0
+    local integer unitLevel = 0
+    local integer i = 0
+    loop
+        exitwhen (i == BlzGroupGetSize(whichGroup))
+static if (UnitGroupRespawnSystemConfig_GET_UNIT_LEVEL_BY_TYPE) then
+        set unitLevel = GetUnitLevelByType(GetUnitTypeId(BlzGroupUnitAt(whichGroup, i)))
+else
+        set unitLevel = GetUnitLevel(BlzGroupUnitAt(whichGroup, i))
+endif
+        set maxLevel = IMaxBJ(unitLevel, maxLevel)
+        set i = i + 1
+    endloop
+    return maxLevel
+endfunction
+
+private function TriggerActionRespawnUnit takes nothing returns nothing
+    local unit triggerUnit = GetTriggerUnit()
+    local integer index = GetUnitRespawnUnitIndex(triggerUnit)
+    local integer groupIndex = GetRespawnUnitGroupIndex(index)
+
+    if (GetRespawnUnitUseDyingLoc(index)) then
+        call SetRespawnUnitFacing(index, GetUnitFacing(triggerUnit))
+        call SetRespawnUnitX(index, GetUnitX(triggerUnit))
+        call SetRespawnUnitY(index, GetUnitY(triggerUnit))
+    endif
+
+    if (IsRespawnUnitGroupValid(groupIndex) and IsRespawnUnitGroupEnabled(groupIndex)) then
+        if (IsUnitGroupDeadBJ(GetRespawnUnitGroupUnits(groupIndex))) then
+static if (UnitGroupRespawnSystemConfig_AUTO_ADDED_DROP_RANDOM_ITEMS) then
+            call UnitDropItem(triggerUnit, ChooseRandomItem(GetMaxUnitLevelFromGroup(GetRespawnUnitGroupUnits(groupIndex))))
+endif
+            call StartUnitGroupRespawn(groupIndex)
+        endif
+    else
+        call StartUnitRespawn(index)
+    endif
+    set triggerUnit = null
+endfunction
+
+private function AddRespawnUnitGroupFromEnumUnit takes nothing returns nothing
+static if (UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUPS) then
+    call AddRespawnUnitGroupFromUnit(GetEnumUnit())
+else
+    call AddRespawnUnit(GetEnumUnit())
+endif
+endfunction
+
+static if (UnitGroupRespawnSystemConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
+private function AddAllPreplacedCreeps takes nothing returns nothing
+    local group allCreeps = CreateGroup()
+    call UnitGroupRespawnSystemConfig_AddAllUserSpecifiedPreplacedCreeps(allCreeps)
+    call ForGroup(allCreeps, function AddRespawnUnitGroupFromEnumUnit)
+    call GroupClear(allCreeps)
+    call DestroyGroup(allCreeps)
+    set allCreeps = null
+endfunction
+endif
+
+private module Init
+
+    private static method onInit takes nothing returns nothing
+        call TriggerRegisterAnyUnitEventBJ(unitDeathOrCharmTrigger, EVENT_PLAYER_UNIT_DEATH)
+        call TriggerRegisterAnyUnitEventBJ(unitDeathOrCharmTrigger, EVENT_PLAYER_UNIT_CHANGE_OWNER)
+        call TriggerAddCondition(unitDeathOrCharmTrigger, Condition(function TriggerConditionRespawnUnit))
+        call TriggerAddAction(unitDeathOrCharmTrigger, function TriggerActionRespawnUnit)
+
+static if (UnitGroupRespawnSystemConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
+        call AddAllPreplacedCreeps()
+endif
+    endmethod
+endmodule
+
+private struct S
+    implement Init
+endstruct
+
+private function RemoveUnitCleanup takes unit whichUnit returns nothing
+    local integer handleID = GetHandleId(whichUnit)
+    call ClearRespawnUnitIndex(handleID)
+endfunction
+
+hook RemoveUnit RemoveUnitCleanup
+
+endlibrary
+
+// TODO Add System DestructableRespawnSystem with all preplaced boxes etc. dropping random items.
+
+// World of Warcraft Reforged Unit Respawns
+
+function GetRespawnBuildingSize takes nothing returns real
+    return 1400.0
+endfunction
+
+function GetRespawnGroupOfDestructable takes destructable whichDestructable returns integer
+    if (DestructableParameterIntegerExists(whichDestructable, 0)) then
+        debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has a group!")
+        return LoadDestructableParameterInteger(whichDestructable, 0)
+    endif
+    debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has no group!")
+    return -1
+endfunction
+
+function FilterFunctionIsBuilding takes nothing returns boolean
+    local unit filterUnit = GetFilterUnit()
+    local player owner = GetOwningPlayer(filterUnit)
+    local boolean result = IsUnitType(filterUnit, UNIT_TYPE_STRUCTURE) and owner != Player(PLAYER_NEUTRAL_AGGRESSIVE) and owner != Player(PLAYER_NEUTRAL_PASSIVE) and owner != udg_TheBurningLegion
+    set owner = null
+    set filterUnit = null
+    return result
+endfunction
+
+function RespawnRectContainsNoBuilding takes location respawnCenter returns boolean
+    local group BuildingGroup = GetUnitsInRangeOfLocMatching(GetRespawnBuildingSize(), respawnCenter, Filter(function FilterFunctionIsBuilding))
+    set bj_wantDestroyGroup = true
+    return IsUnitGroupEmptyBJ(BuildingGroup)
+endfunction
+
+function DistanceBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
+    local real dx = x2 - x1
+    local real dy = y2 - y1
+    return SquareRoot(dx * dx + dy * dy)
+endfunction
+
+function RespawnAllGroupsInRange takes real x, real y, real range returns integer
+	local integer result = 0
+	local integer i = 0
+	loop
+		exitwhen (i == GetRespawnUnitCounter())
+		if (IsRespawnUnitValid(i) and DistanceBetweenCoordinates(x, y, GetRespawnUnitX(i), GetRespawnUnitY(i)) <= range) then
+            call RespawnUnit(i)
+			set result = result + 1
+		endif
+		set i = i + 1
+	endloop
+	return result
+endfunction
 
 function GetPlayerColorRed takes player p returns integer
     local playercolor c = GetPlayerColor(p)
