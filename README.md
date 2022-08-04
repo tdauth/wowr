@@ -579,3 +579,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Illidan(Evil)X: [LightSaberHilt](https://www.hiveworkshop.com/threads/lightsaberhilt.49825/)
 * Illidan(Evil)X: [ObiWans Lightsaber RotS](https://www.hiveworkshop.com/threads/obiwans-lightsaber-rots.50230/)
 * Rolo: [Factory](https://www.hiveworkshop.com/threads/factory.311932/)
+* Nasrudin: [Jedi](https://www.hiveworkshop.com/threads/jedi.50599/)
+* Wojannnn: [Star Wars Sith pack](https://wc3modding.info/6439/star-wars-sith-pack/)
