@@ -581,3 +581,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Rolo: [Factory](https://www.hiveworkshop.com/threads/factory.311932/)
 * Nasrudin: [Jedi](https://www.hiveworkshop.com/threads/jedi.50599/)
 * Wojannnn: [Star Wars Sith pack](https://wc3modding.info/6439/star-wars-sith-pack/)
+* Jack_Sparrow93: [BTNGreenLightsaber](https://www.hiveworkshop.com/threads/btngreenlightsaber.157824/)
+* Jack_Sparrow93: [BTNGreenLightsaber](https://www.hiveworkshop.com/threads/btngreenlightsaber.157824/)
+* Jack_Sparrow93: [BTNRedLightsaber4](https://www.hiveworkshop.com/threads/btnredlightsaber4.156322/)
+* olofmoleman: [BTNLightsaberBlock](https://www.hiveworkshop.com/threads/btnlightsaberblock.56759/)
