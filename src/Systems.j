@@ -128,7 +128,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X"
+    return "-h/-help, -clear, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X, -lightsabercolor X Y, -lightsabertype X"
 endfunction
 
 globals
@@ -1626,6 +1626,8 @@ library UnitGroupRespawnSystemConfig
         public constant boolean AUTO_ADDED_GROUPS = true
         // Defines the maximum distance between preplaced creep units to belong to the same respawn group if AUTO_ADDED_GROUPS is true.
         public constant real AUTO_ADDED_GROUP_MAX_DISTANCE = 800.0
+        // All players who preplaced units are added as respawning groups for.
+        public constant force AUTO_ADDED_GROUP_PLAYERS = CreateForce()
         // All auto added unit respawns and respawn groups will drop random items when the whole group has been killed or charmed when this value is true. The level of the dropped item will be the maximum unit level of the group.
         // Make sure that all item types have set the field "Stats - Include As Random Choice" to the correct value in the object editor.
         public constant boolean AUTO_ADDED_DROP_RANDOM_ITEMS = true
@@ -1637,7 +1639,7 @@ library UnitGroupRespawnSystemConfig
         public constant boolean SET_MAX_DEATH_TIME_TO_UNITS = true
     endglobals
 
-    // The following code must be defined if AUTO_ADD_ALL_PREPLACED_CREEPS is set to true:
+static if (AUTO_ADD_ALL_PREPLACED_CREEPS) then
 
     private function IsUnitLivingNonStructure takes nothing returns boolean
         return IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
@@ -1646,7 +1648,21 @@ library UnitGroupRespawnSystemConfig
     // Redefine this function to add different preplaced creeps.
     public function AddAllUserSpecifiedPreplacedCreeps takes group allCreeps returns nothing
         call GroupEnumUnitsOfPlayer(allCreeps, Player(PLAYER_NEUTRAL_AGGRESSIVE), Filter(function IsUnitLivingNonStructure))
+        call GroupEnumUnitsOfPlayer(allCreeps, udg_BossesPlayer, Filter(function IsUnitLivingNonStructure))
     endfunction
+
+    private module Init
+
+        private static method onInit takes nothing returns nothing
+            call ForceAddPlayer(AUTO_ADDED_GROUP_PLAYERS, Player(PLAYER_NEUTRAL_AGGRESSIVE))
+            call ForceAddPlayer(AUTO_ADDED_GROUP_PLAYERS, udg_BossesPlayer)
+        endmethod
+    endmodule
+
+    private struct S
+        implement Init
+    endstruct
+endif
 
 endlibrary
 
@@ -1696,7 +1712,6 @@ globals
     private trigger unitDeathOrCharmTrigger = CreateTrigger()
     private hashtable respawnUnitHashTable = InitHashtable()
 
-    private player filterOwner = null
     private unit filterUnit = null
 endglobals
 
@@ -2119,7 +2134,7 @@ function AddRespawnUnitGroup takes nothing returns integer
 endfunction
 
 private function IsLivingUnitWithRespawn takes nothing returns boolean
-    return GetFilterUnit() != filterUnit and IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetOwningPlayer(GetFilterUnit()) == filterOwner and IsRespawnUnitValid(GetUnitRespawnUnitIndex(GetFilterUnit())) and IsRespawnUnitGroupValid(GetRespawnUnitGroupIndex(GetUnitRespawnUnitIndex(GetFilterUnit())))
+    return GetFilterUnit() != filterUnit and IsUnitAliveBJ(GetFilterUnit()) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and IsPlayerInForce(GetOwningPlayer(GetFilterUnit()), UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS) and IsRespawnUnitValid(GetUnitRespawnUnitIndex(GetFilterUnit())) and IsRespawnUnitGroupValid(GetRespawnUnitGroupIndex(GetUnitRespawnUnitIndex(GetFilterUnit())))
 endfunction
 
 function AddRespawnUnitGroupFromUnit takes unit whichUnit returns integer
@@ -2127,10 +2142,8 @@ function AddRespawnUnitGroupFromUnit takes unit whichUnit returns integer
     local unit first = null
     local integer groupIndex = -1
     local integer index = -1
-    set filterOwner = GetOwningPlayer(whichUnit)
     set filterUnit = whichUnit
     call GroupEnumUnitsInRange(allNearbyUnitsFromTheSameOwner, GetUnitX(whichUnit), GetUnitY(whichUnit), UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_MAX_DISTANCE, Filter(function IsLivingUnitWithRespawn))
-    set filterOwner = null
     set filterUnit = null
     set first = FirstOfGroup(allNearbyUnitsFromTheSameOwner)
     call GroupClear(allNearbyUnitsFromTheSameOwner)
@@ -15082,3 +15095,57 @@ endfunction
 function EvolutionStoneReset takes unit hero returns nothing
     call EvolutionStoneSet(hero, 0)
 endfunction
+
+// Jedi Academy
+
+function StringTokenToLightSaberColor takes string token returns player
+    local string lowerToken = StringCase(token, false)
+    if (lowerToken == "red" or lowerToken == "r" or lowerToken == "1") then
+        return Player(0)
+    elseif (lowerToken == "blue" or lowerToken == "b" or lowerToken == "2") then
+        return Player(1)
+    elseif (lowerToken == "purple" or lowerToken == "p" or lowerToken == "4") then
+        return Player(3)
+    elseif (lowerToken == "yellow" or lowerToken == "y" or lowerToken == "5") then
+        return Player(4)
+    elseif (lowerToken == "orange" or lowerToken == "o" or lowerToken == "6") then
+        return Player(5)
+    elseif (lowerToken == "green" or lowerToken == "g" or lowerToken == "7") then
+        return Player(6)
+    endif
+    return null
+endfunction
+
+function GetLightSaberColorHelpText takes nothing returns string
+    return "Available Light Saber Colors (the second number Y is optional and can specify which of the two light sabers should be changed):\n- red/r/1\n- blue/b/2\n- purple/p/4\n- yellow/y/5\n- orange/o/6\n- green/g/7"
+endfunction
+
+
+function StringTokenToLightSaberType takes string token returns integer
+    local string lowerToken = StringCase(token, false)
+    if (lowerToken == "single" or lowerToken == "s" or lowerToken == "1") then
+        return 0
+    elseif (lowerToken == "two" or lowerToken == "t" or lowerToken == "2") then
+        return 1
+    elseif (lowerToken == "double" or lowerToken == "d" or lowerToken == "3") then
+        return 2
+    elseif (lowerToken == "hilt" or lowerToken == "h" or lowerToken == "4") then
+        return 3
+    elseif (lowerToken == "obiwan" or lowerToken == "o" or lowerToken == "5") then
+        return 4
+    elseif (lowerToken == "anakin" or lowerToken == "a" or lowerToken == "6") then
+        return 5
+    endif
+    return -1
+endfunction
+
+function GetLightSaberTypeHelpText takes nothing returns string
+    return "Available Light Saber Types:\n- single/s/1\n- two/t/2\n- double/d/3\n- hilt/h/3\n- obiwan/o/5\n- anakin/a/6"
+endfunction
+
+function RemoveJedi takes unit whichUnit returns nothing
+    set udg_TmpUnit = whichUnit
+    call ConditionalTriggerExecute(gg_trg_Jedi_Academy_Hero_Leaves)
+endfunction
+
+hook RemoveUnit RemoveJedi
