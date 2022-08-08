@@ -603,3 +603,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [BanthawithRider](https://www.hiveworkshop.com/threads/banthawithrider.50229/)
 * olofmoleman: [ArcTrooper](https://www.hiveworkshop.com/threads/arctrooper.50165/)
 * Illidan(Evil)X: [Arc - 170](https://www.hiveworkshop.com/threads/arc-170.50198/)
+* RightField: [laser](https://www.hiveworkshop.com/threads/laser.47521/)
