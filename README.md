@@ -222,6 +222,7 @@ This version provides several new features compared to the original map [World o
 * Custom Turret System which is [part of this repository](./systems/).
 * New hero: Void Lord.
 * [Custom Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/).
+* [Custom Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/).
 * Tomes game option.
 * Themes game option.
 * TODO Many 2.1 features are not listed yet.
