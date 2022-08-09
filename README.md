@@ -605,3 +605,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [ArcTrooper](https://www.hiveworkshop.com/threads/arctrooper.50165/)
 * Illidan(Evil)X: [Arc - 170](https://www.hiveworkshop.com/threads/arc-170.50198/)
 * RightField: [laser](https://www.hiveworkshop.com/threads/laser.47521/)
+* olofmoleman: [Gran](https://www.hiveworkshop.com/threads/gran.50238/)
+* Kricz: [Knockback v1.01b](https://www.hiveworkshop.com/threads/knockback-v1-01b.174502/)

@@ -1567,9 +1567,9 @@ hook RemoveItem RemoveItemCleanup
 // - Add constants for the different types.
 endlibrary
 
-// Baradé's Unit Group Respawn System 1.0
+// Baradé's Unit Group Respawn System 1.1
 //
-// Allows killed or charmed units from a group or individually to respawn after some time.
+// Allows dying or charmed units from a group or individually to respawn after some time.
 // Respawning groups are automatically determined by default from preplaced creeps next to each other owned by player neutral aggressive.
 //
 // Usage:
@@ -1631,11 +1631,19 @@ endlibrary
 //
 // function IsRespawnUnitValid takes integer index returns boolean
 //
+// Returns if the given index belongs to a valid respawn unit or not.
+//
 // function IsRespawnUnitGroupValid takes integer index returns boolean
+//
+// Returns if the given index belongs to a valid respawn unit group or not.
 //
 // function RespawnUnit takes integer index returns boolean
 //
+// Immediately respawns the unit of the respawn unit with the given index.
+//
 // function RespawnAllUnits takes nothing returns nothing
+//
+// Immediately respawns all units from all respawn units.
 //
 // function StartUnitRespawn takes integer index returns nothing
 //
@@ -1727,7 +1735,7 @@ library UnitGroupRespawnSystemConfig
 
     globals
         // The default delay until a unit will be respawned.
-        public constant real DEFAULT_TIMEOUT = 30.0
+        public constant real DEFAULT_TIMEOUT = 90.0
         // All preplaced units owned by the CREEPS_OWNER player on the map will automatically respawn if this value is true. Otherwise, you will have to add them manually.
         public constant boolean AUTO_ADD_ALL_PREPLACED_CREEPS = true
         // Creates unit group respawns from preplaced creeps next to each other if this value is true. Otherwise, it will create separate unit respawns per creep.
@@ -2192,6 +2200,7 @@ function SetRespawnUnit takes integer index, unit whichUnit returns nothing
     endif
     set respawnUnitUnit[index] = whichUnit
     set respawnUnitHandleId[index] = handleId
+    set respawnUnitType[index] = GetUnitTypeId(whichUnit)
     call SaveInteger(respawnUnitHashTable, handleId, 0, index)
     set respawnUnitReadyForRespawn[index] = false
     if (validRespawnUnitGroup) then
@@ -2563,6 +2572,13 @@ private function RemoveUnitCleanup takes unit whichUnit returns nothing
 endfunction
 
 hook RemoveUnit RemoveUnitCleanup
+
+// ChangeLog:
+//
+// 1.1:
+// - Fix changing the unit type when changing the unit.
+// - Improve API documentation.
+// - Increase default timeout from 30 to 90 seconds.
 
 endlibrary
 
@@ -5017,7 +5033,6 @@ function RemoveEquipmentBags takes player whichPlayer returns nothing
         exitwhen (i >= max)
         set member = BlzGroupUnitAt(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], i)
         call DropAllItemsFromHero(member)
-        call GroupRemoveUnit(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], member)
         call RemoveUnit(member)
         set member = null
         set i = i + 1
@@ -5051,6 +5066,11 @@ endfunction
 function RecreateEquipmentBags takes player whichPlayer, integer equipmentBags returns nothing
     call RemoveEquipmentBags(whichPlayer)
     call CreateEquipmentBags(whichPlayer, equipmentBags)
+endfunction
+
+function RecreateAllEquipmentBags takes player whichPlayer returns nothing
+    local integer count = CountUnitsInGroup(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    call RecreateEquipmentBags(whichPlayer, count)
 endfunction
 
 function ApplySaveCode takes player whichPlayer, string s returns boolean
@@ -5486,6 +5506,8 @@ function GetSaveCodeMaxHeroLevel takes string playerName, string s returns integ
 endfunction
 
 // TODO Create a system SaveCodeObjectSystem depending on the SaveCodeSystem which allows registering any IDs in a 2D array.
+library SaveCodeObjectSystem requires SaveCodeSystem
+
 globals
     string array SaveObjectNameUnit
     integer array SaveObjectIdUnit
@@ -5679,6 +5701,8 @@ endfunction
 function GetSaveObjectResearchId takes integer number returns integer
     return SaveObjectIdResearch[number]
 endfunction
+
+endlibrary
 
 function CreateSaveCodeBuildingsTextFile takes string playerName, boolean isSinglePlayer, boolean isWarlord, integer gameTypeNumber, integer buildings, string buildingNames, string saveCode returns nothing
     local string singleplayer = "no"
