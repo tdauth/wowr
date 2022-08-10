@@ -8792,7 +8792,6 @@ globals
     constant real BACKPACK_UI_BUTTON_SPACE = 0.005
 endglobals
 
-
 function BackpackUIExists takes player whichPlayer returns boolean
     return BackpackBackgroundFrame[GetPlayerId(whichPlayer)] != null
 endfunction
@@ -8834,6 +8833,9 @@ function HideBackpackUI takes player whichPlayer returns nothing
     local integer i = 0
     local integer j = 0
     local integer index = 0
+    if (not BackpackUIExists(whichPlayer)) then
+        return
+    endif
     set BackpackUIVisible[GetPlayerId(whichPlayer)] = false
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
