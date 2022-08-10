@@ -1,6 +1,8 @@
 //TESH.scrollpos=400
 //TESH.alwaysfold=0
 
+library WoWReforgedUtils
+
 function Index2D takes integer Value1, integer Value2, integer MaxValue2 returns integer
     return ((Value1 * MaxValue2) + Value2)
 endfunction
@@ -130,6 +132,8 @@ endfunction
 function GetHelpText takes nothing returns string
     return "-h/-help, -clear, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X, -lightsabercolor X Y, -lightsabertype X"
 endfunction
+
+endlibrary
 
 globals
 	string array raceIcons
