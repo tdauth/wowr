@@ -8792,10 +8792,18 @@ globals
     constant real BACKPACK_UI_BUTTON_SPACE = 0.005
 endglobals
 
+
+function BackpackUIExists takes player whichPlayer returns boolean
+    return BackpackBackgroundFrame[GetPlayerId(whichPlayer)] != null
+endfunction
+
 function ShowBackpackUI takes player whichPlayer returns nothing
     local integer i = 0
     local integer j = 0
     local integer index = 0
+    if (not BackpackUIExists(whichPlayer)) then
+        return
+    endif
     set BackpackUIVisible[GetPlayerId(whichPlayer)] = true
     call UpdateItemsForBackpackUI(whichPlayer)
     if (whichPlayer == GetLocalPlayer()) then
@@ -8927,18 +8935,19 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     local real x = 0.0
     local real y = 0.0
     local integer index = 0
+    local integer playerId = GetPlayerId(whichPlayer)
 
-    set BackpackBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0)
-    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
-    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
+    set BackpackBackgroundFrame[playerId] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0)
+    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
+    call BlzFrameSetAbsPoint(BackpackBackgroundFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
 
-    set BackpackTitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "BackpackTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(BackpackTitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
-    call BlzFrameSetAbsPoint(BackpackTitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
-    call BlzFrameSetText(BackpackTitleFrame[GetPlayerId(whichPlayer)], "Backpack")
-    call BlzFrameSetTextAlignment(BackpackTitleFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
-    call BlzFrameSetScale(BackpackTitleFrame[GetPlayerId(whichPlayer)], 1.0)
-    call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], false)
+    set BackpackTitleFrame[playerId] = BlzCreateFrameByType("TEXT", "BackpackTitle" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(BackpackTitleFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
+    call BlzFrameSetAbsPoint(BackpackTitleFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
+    call BlzFrameSetText(BackpackTitleFrame[playerId], "Backpack")
+    call BlzFrameSetTextAlignment(BackpackTitleFrame[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(BackpackTitleFrame[playerId], 1.0)
+    call BlzFrameSetVisible(BackpackTitleFrame[playerId], false)
 
     set x = 0.03
     set y = 0.53
@@ -8948,7 +8957,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
         set j = 0
         loop
             exitwhen (j == bj_MAX_INVENTORY)
-            set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             set BackpackItemFrame[index] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_TOPLEFT, x, y)
             call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_BUTTON_SIZE, y - BACKPACK_UI_BUTTON_SIZE)
@@ -8965,7 +8974,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             set BackpackItemTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTrigger[index], BackpackItemFrame[index], FRAMEEVENT_CONTROL_CLICK)
             call TriggerAddAction(BackpackItemTrigger[index], function BackpackClickItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 0, playerId)
             call SaveTriggerParameterInteger(BackpackItemTrigger[index], 1, index)
             call SaveTriggerParameterInteger(BackpackItemTrigger[index], 2, i)
             call SaveTriggerParameterInteger(BackpackItemTrigger[index], 3, j)
@@ -8973,7 +8982,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             set BackpackItemMouseDownTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemMouseDownTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_DOWN)
             call TriggerAddAction(BackpackItemMouseDownTrigger[index], function BackpackMouseDownItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 0, playerId)
             call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 1, index)
             call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 2, i)
             call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 3, j)
@@ -8981,7 +8990,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             set BackpackItemMouseUpTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemMouseUpTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_UP)
             call TriggerAddAction(BackpackItemMouseUpTrigger[index], function BackpackMouseUpItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 0, playerId)
             call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 1, index)
             call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 2, i)
             call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 3, j)
@@ -8989,7 +8998,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             set BackpackItemTooltipOnTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOnTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_ENTER)
             call TriggerAddAction(BackpackItemTooltipOnTrigger[index], function BackpackEnterItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 0, playerId)
             call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 1, index)
             call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 2, i)
             call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 3, j)
@@ -8997,7 +9006,7 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             set BackpackItemTooltipOffTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOffTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_LEAVE)
             call TriggerAddAction(BackpackItemTooltipOffTrigger[index], function BackpackLeaveItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 0, GetPlayerId(whichPlayer))
+            call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 0, playerId)
             call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 1, index)
 
             // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
@@ -9025,44 +9034,115 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     endloop
 
 
-    set BackpackTooltipFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BackpackBackgroundFrame[GetPlayerId(whichPlayer)],0,0)
-    call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.62, 0.54)
-    call BlzFrameSetAbsPoint(BackpackTooltipFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.78, 0.20)
+    set BackpackTooltipFrame[playerId] = BlzCreateFrame("EscMenuBackdrop", BackpackBackgroundFrame[playerId],0,0)
+    call BlzFrameSetAbsPoint(BackpackTooltipFrame[playerId], FRAMEPOINT_TOPLEFT, 0.62, 0.54)
+    call BlzFrameSetAbsPoint(BackpackTooltipFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, 0.78, 0.20)
 
-    set BackpackItemGoldFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.65, 0.50)
-    call BlzFrameSetAbsPoint(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.67, 0.48)
-    //call BlzFrameSetAllPoints(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], BackpackBackgroundFrame[GetPlayerId(whichPlayer)])
-    call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], false)
+    set BackpackItemGoldFrame[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(BackpackItemGoldFrame[playerId], FRAMEPOINT_TOPLEFT, 0.65, 0.50)
+    call BlzFrameSetAbsPoint(BackpackItemGoldFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, 0.67, 0.48)
+    //call BlzFrameSetAllPoints(BackpackItemGoldFrame[playerId], BackpackBackgroundFrame[playerId])
+    call BlzFrameSetVisible(BackpackItemGoldFrame[playerId], false)
 
-    set BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("BACKDROP", "BackdropFrameGoldIcon" + I2S(GetPlayerId(whichPlayer)), BackpackItemGoldFrame[GetPlayerId(whichPlayer)], "", 1)
+    set BackpackItemGoldIconFrame[playerId] = BlzCreateFrameByType("BACKDROP", "BackdropFrameGoldIcon" + I2S(playerId), BackpackItemGoldFrame[playerId], "", 1)
     call BlzFrameSetAllPoints(BackpackItemGoldIconFrame[index], BackpackItemGoldFrame[index])
-    call BlzFrameSetTexture(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], "UI\\Feedback\\Resources\\ResourceGold.blp", 0, true)
-    call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetTexture(BackpackItemGoldIconFrame[playerId], "UI\\Feedback\\Resources\\ResourceGold.blp", 0, true)
+    call BlzFrameSetVisible(BackpackItemGoldIconFrame[playerId], false)
 
-    set BackpackTooltipText[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "BackpackTooltipText" + I2S(GetPlayerId(whichPlayer)),  BackpackBackgroundFrame[GetPlayerId(whichPlayer)], "", 0)
-    call BlzFrameSetAbsPoint(BackpackTooltipText[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.65, 0.505800)
-    call BlzFrameSetAbsPoint(BackpackTooltipText[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, 0.74, 0.236500)
-    call BlzFrameSetText(BackpackTooltipText[GetPlayerId(whichPlayer)], "")
-    call BlzFrameSetEnable(BackpackTooltipText[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(BackpackTooltipText[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(BackpackTooltipText[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    //call BlzFrameSetTooltip(Frame05, BackpackTooltipText[GetPlayerId(whichPlayer)])
+    set BackpackTooltipText[playerId] = BlzCreateFrameByType("TEXT", "BackpackTooltipText" + I2S(playerId),  BackpackBackgroundFrame[playerId], "", 0)
+    call BlzFrameSetAbsPoint(BackpackTooltipText[playerId], FRAMEPOINT_TOPLEFT, 0.65, 0.505800)
+    call BlzFrameSetAbsPoint(BackpackTooltipText[playerId], FRAMEPOINT_BOTTOMRIGHT, 0.74, 0.236500)
+    call BlzFrameSetText(BackpackTooltipText[playerId], "")
+    call BlzFrameSetEnable(BackpackTooltipText[playerId], false)
+    call BlzFrameSetScale(BackpackTooltipText[playerId], 1.00)
+    call BlzFrameSetTextAlignment(BackpackTooltipText[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    //call BlzFrameSetTooltip(Frame05, BackpackTooltipText[playerId])
 
-    set BackpackCloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[GetPlayerId(whichPlayer)], 0, 0)
+    set BackpackCloseButton[playerId] = BlzCreateFrame("ScriptDialogButton", BackpackBackgroundFrame[playerId], 0, 0)
     set x = 0.34
     set y = 0.202
-    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
-    call BlzFrameSetAbsPoint(BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
-    call BlzFrameSetText(BackpackCloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
-    call BlzFrameSetScale(BackpackCloseButton[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetAbsPoint(BackpackCloseButton[playerId], FRAMEPOINT_TOPLEFT, x, y)
+    call BlzFrameSetAbsPoint(BackpackCloseButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
+    call BlzFrameSetText(BackpackCloseButton[playerId], "|cffFCD20DClose|r")
+    call BlzFrameSetScale(BackpackCloseButton[playerId], 1.00)
 
-    set BackpackCloseTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(BackpackCloseTrigger[GetPlayerId(whichPlayer)], BackpackCloseButton[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(BackpackCloseTrigger[GetPlayerId(whichPlayer)], function BackpackCloseFunction)
-    call SaveTriggerParameterInteger(BackpackCloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
+    set BackpackCloseTrigger[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(BackpackCloseTrigger[playerId], BackpackCloseButton[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(BackpackCloseTrigger[playerId], function BackpackCloseFunction)
+    call SaveTriggerParameterInteger(BackpackCloseTrigger[playerId], 0, playerId)
 
-    call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(BackpackBackgroundFrame[playerId], false)
+endfunction
+
+function DestroyBackpackUI takes player whichPlayer returns nothing
+    local integer i = 0
+    local integer j = 0
+    local integer index = 0
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    call BlzDestroyFrame(BackpackBackgroundFrame[playerId])
+    set BackpackBackgroundFrame[playerId] = null
+
+    call BlzDestroyFrame(BackpackTitleFrame[playerId])
+    set BackpackTitleFrame[playerId] = null
+
+    set i = 0
+    loop
+        exitwhen (i == udg_RucksackMaxPages)
+        set j = 0
+        loop
+            exitwhen (j == bj_MAX_INVENTORY)
+            set index = Index3D(playerId, i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            call BlzDestroyFrame(BackpackItemFrame[index])
+            set BackpackItemFrame[index] = null
+
+            call BlzDestroyFrame(BackpackItemBackdropFrame[index])
+            set BackpackItemBackdropFrame[index] = null
+
+            call DestroyParameterTrigger(BackpackItemTrigger[index])
+            set BackpackItemTrigger[index] = null
+
+            call DestroyParameterTrigger(BackpackItemMouseDownTrigger[index])
+            set BackpackItemMouseDownTrigger[index] = null
+
+            call DestroyParameterTrigger(BackpackItemMouseUpTrigger[index])
+            set BackpackItemMouseUpTrigger[index] = null
+
+            call DestroyParameterTrigger(BackpackItemTooltipOnTrigger[index])
+            set BackpackItemTooltipOnTrigger[index] = null
+
+            call DestroyParameterTrigger(BackpackItemTooltipOffTrigger[index])
+            set BackpackItemTooltipOffTrigger[index] = null
+
+            call DestroyParameterTrigger(BackpackItemTooltipOffTrigger[index])
+            set BackpackItemTooltipOffTrigger[index] = null
+
+            call BlzDestroyFrame(BackpackItemChargesFrame[index])
+            set BackpackItemChargesFrame[index] = null
+            set j = j + 1
+        endloop
+
+        set i = i + 1
+    endloop
+
+
+    call BlzDestroyFrame(BackpackTooltipFrame[playerId])
+    set BackpackTooltipFrame[playerId] = null
+
+    call BlzDestroyFrame(BackpackItemGoldFrame[playerId])
+    set BackpackItemGoldFrame[playerId] = null
+
+    call BlzDestroyFrame(BackpackItemGoldIconFrame[playerId])
+    set BackpackItemGoldIconFrame[playerId] = null
+
+    call BlzDestroyFrame(BackpackTooltipText[playerId])
+    set BackpackTooltipText[playerId] = null
+
+    call BlzDestroyFrame(BackpackCloseButton[playerId])
+    set BackpackCloseButton[playerId] = null
+
+    call DestroyParameterTrigger(BackpackCloseTrigger[playerId])
+    set BackpackCloseTrigger[playerId] = null
 endfunction
 
 /**
