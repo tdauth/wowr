@@ -79,6 +79,9 @@ function StringRemoveFromStart takes string source, string start returns string
     return source
 endfunction
 
+/**
+ * Useful for getting parts of a chat message to implement chat commands.
+ */
 function StringToken takes string source, integer index returns string
     local string result = ""
     local boolean inWhitespace = false
@@ -11990,59 +11993,95 @@ endfunction
 
 endlibrary
 
-// Baradé's Black Arrow System 1.1
+// Baradé's Black Arrow System 1.2
 //
-// Supports Black Arrow abilities for units with levels greater than 5.
+// Supports Black Arrow abilities for target units with levels greater than 5.
+// The standard Black Arrow abilities from Warcraft only work with target units up to level 5.
 //
 // Usage:
-// - Copy the custom buff ability and custom buff into your map.
-// - Copy this code into your map script.
-// - Adapt the raw code ID of the constant to the one in your map.
-// - Call the function BlackArrowSystemInit during the map initialization.
-// - Optional: Use the API functions to register custom abilities and items.
-// - Optional: Register all auto casters.
-// - Optional: Create triggers and register Black Arrow events for further actions.
+// - Copy this code into your map script or a trigger converted into code.
+// - Copy the custom buff ability "Black Arrow Buff" (A000) into your map and adapt the raw code in the constant BUFF_ABILITY_ID to the new raw code in your map.
+// - Optional: Use the API functions to register custom abilities and item types.
+// - Optional: Create triggers and register Black Arrow events for further custom actions.
 //
-// 1.1 2022-04-16:
-// - Add event handling functions which allow adding actions to Black Arrow events.
-// - Refactor some functions.
+// Design:
+// Auto casters are detected by issued orders. Preplaced units are created in the generated map script function CreateAllUnits which is called in the generated
+// method main before the initialization of this system. This means that issued orders from preplaced units won't be detected by the system's order triggers.
+// Hence, we have to hook the function IssueImmediateOrder to detect the orders of preplaced units.
+//
+// API:
+//
+// function BlackArrowAddAbility takes integer abilityId, integer level, integer summonedUnitTypeId, integer summonedUnitsCount, real summonedUnitDuration, real durationHero, real durationUnit, integer buffId returns integer
+//
+// Adds another custom ability to the system with the given configuration. Whenever a unit with the added ability at the given level kills a target with a level greater than 5, it will automatically summon the minions
+// with the given unit type for the given amount of time.
+// The function returns a unique index refering to the added ability. The first index starts at 1.
+//
+// function BlackArrowAddItemTypeId takes integer itemTypeId, integer abilityIndex returns integer
+//
+// Adds an item type which has the Black Arrow ability with the given index. You can combine this function with BlackArrowAddAbility and directly add the ability when adding the item type.
+// Whenever a unit with carrying an item with the added item type kills a target unit with a level greater than 5, it will automatically summon the minions with the given configuration from the given ability.
+// The function returns a unique index refering to the added item type. The first index starts at 1.
+//
+// function TriggerRegisterBlackArrowEvent takes trigger whichTrigger returns nothing
+//
+// Registers a Black Arrow event for the given callback trigger. This means that the trigger is evaluated and executed whenever an added Black Arrow ability is casted for a target unit above level 5.
+// For the standard ability casts, you have to use the standard ability cast events instead.
+//
+// function GetTriggerBlackArrowCaster takes nothing returns unit
+//
+// Returns the casting unit for the current callback trigger.
+//
+// function GetTriggerBlackArrowTarget takes nothing returns unit
+//
+// Returns the target unit for the current callback trigger.
+//
+// function GetTriggerBlackArrowSummonedUnits takes nothing returns group
+//
+// Returns all summoned minions for the current callback trigger. Never destroy this group since it is basically bj_lastCreatedGroup and does not leak.
+//
+library BlackArrowSystem
 
 globals
-    constant integer BLACK_ARROW_BUFF_ABILITY_ID = 'A0FU'
-    //constant integer BLACK_ARROW_BUFF_ABILITY_ID = 'A000'
-    constant string BLACK_ARROW_ORDER_ON = "blackarrowon"
-    constant string BLACK_ARROW_ORDER_OFF = "blackarrowoff"
+    public constant integer BUFF_ABILITY_ID = 'A0FU'
+    //public constant integer BUFF_ABILITY_ID = 'A000'
+    public constant string ORDER_ON = "blackarrowon"
+    public constant string ORDER_OFF = "blackarrowoff"
+    public constant boolean ADD_STANDARD_OBJECT_DATA = true
+    public constant boolean ADD_ALL_UNITS_WITH_ORBS = true
 
-    integer array BlackArrowAbiliyId
-    integer array BlackArrowAbiliyLevel
-    integer array BlackArrowAbiliySummonedUnitTypeId
-    integer array BlackArrowAbiliySummonedUnitsCount
-    real array BlackArrowAbiliySummonedUnitDuration
-    real array BlackArrowAbiliyDurationHero
-    real array BlackArrowAbiliyDurationUnit
-    integer array BlackArrowAbiliyBuffId
-    integer BlackArrowAbilityCounter = 1
+    private integer array BlackArrowAbiliyId
+    private integer array BlackArrowAbiliyLevel
+    private integer array BlackArrowAbiliySummonedUnitTypeId
+    private integer array BlackArrowAbiliySummonedUnitsCount
+    private real array BlackArrowAbiliySummonedUnitDuration
+    private real array BlackArrowAbiliyDurationHero
+    private real array BlackArrowAbiliyDurationUnit
+    private integer array BlackArrowAbiliyBuffId
+    private integer BlackArrowAbilityCounter = 1
 
-    integer array BlackArrowItemTypeId
-    integer array BlackArrowItemTypeAbilityIndex
-    integer BlackArrowItemTypeCounter = 1
+    private integer array BlackArrowItemTypeId
+    private integer array BlackArrowItemTypeAbilityIndex
+    private integer BlackArrowItemTypeCounter = 1
 
-    hashtable BlackArrowHashTable = InitHashtable()
-    group BlackArrowTargets = CreateGroup()
-    group BlackArrowCasters = CreateGroup()
-    group BlackArrowItemUnits = CreateGroup()
-    trigger BlackArrowDamageTrigger = CreateTrigger()
-    trigger BlackArrowDeathTrigger = CreateTrigger()
-    trigger BlackArrowOrderTrigger = CreateTrigger()
-    trigger BlackArrowItemPickupTrigger = CreateTrigger()
-    trigger BlackArrowItemDropTrigger = CreateTrigger()
+    private hashtable BlackArrowHashTable = InitHashtable()
+    private group BlackArrowTargets = CreateGroup()
+    private group BlackArrowCasters = CreateGroup()
+    private group BlackArrowItemUnits = CreateGroup()
+    private trigger BlackArrowDamageTrigger = CreateTrigger()
+    private trigger BlackArrowDeathTrigger = CreateTrigger()
+    private trigger BlackArrowOrderTrigger = CreateTrigger()
+    private trigger BlackArrowItemPickupTrigger = CreateTrigger()
+    private trigger BlackArrowItemDropTrigger = CreateTrigger()
 
     // callbacks
-    unit BlackArrowCaster = null
-    unit BlackArrowTarget = null
-    group BlackArrowSummonedUnits = null
-    trigger array BlackArrowCallbackTrigger
-    integer BlackArrowCallbackTriggerCounter = 0
+    private unit BlackArrowCaster = null
+    private unit BlackArrowTarget = null
+    private group BlackArrowSummonedUnits = null
+    private trigger array BlackArrowCallbackTrigger
+    private integer BlackArrowCallbackTriggerCounter = 0
+
+    private boolean hookEnabled = true
 endglobals
 
 function GetTriggerBlackArrowCaster takes nothing returns unit
@@ -12077,7 +12116,22 @@ function BlackArrowAddAbility takes integer abilityId, integer level, integer su
     return BlackArrowAbilityCounter - 1
 endfunction
 
-function GetMatchingBlackArrowAbilityIndex takes unit caster returns integer
+function BlackArrowAddItemTypeId takes integer itemTypeId, integer abilityIndex returns integer
+    set BlackArrowItemTypeId[BlackArrowItemTypeCounter] = itemTypeId
+    set BlackArrowItemTypeAbilityIndex[BlackArrowItemTypeCounter] = abilityIndex
+
+    set BlackArrowItemTypeCounter = BlackArrowItemTypeCounter + 1
+
+    return BlackArrowItemTypeCounter - 1
+endfunction
+
+function BlackArrowPrintDebug takes nothing returns nothing
+    call BJDebugMsg("Targets: " + I2S(CountUnitsInGroup(BlackArrowTargets)))
+    call BJDebugMsg("Casters: " + I2S(CountUnitsInGroup(BlackArrowCasters)))
+    call BJDebugMsg("Item Units: " + I2S(CountUnitsInGroup(BlackArrowItemUnits)))
+endfunction
+
+private function GetMatchingBlackArrowAbilityIndex takes unit caster returns integer
     local integer result = 0
     local integer i = 1
     loop
@@ -12091,16 +12145,7 @@ function GetMatchingBlackArrowAbilityIndex takes unit caster returns integer
     return result
 endfunction
 
-function BlackArrowAddItemTypeId takes integer itemTypeId, integer abilityIndex returns integer
-    set BlackArrowItemTypeId[BlackArrowItemTypeCounter] = itemTypeId
-    set BlackArrowItemTypeAbilityIndex[BlackArrowItemTypeCounter] = abilityIndex
-
-    set BlackArrowItemTypeCounter = BlackArrowItemTypeCounter + 1
-
-    return BlackArrowItemTypeCounter - 1
-endfunction
-
-function GetMatchingBlackArrowItemTypeIndex takes integer itemTypeId returns integer
+private function GetMatchingBlackArrowItemTypeIndex takes integer itemTypeId returns integer
     local integer result = 0
     local integer i = 1
     loop
@@ -12114,30 +12159,15 @@ function GetMatchingBlackArrowItemTypeIndex takes integer itemTypeId returns int
     return result
 endfunction
 
-function BlackArrowAddStandardObjectData takes nothing returns nothing
-    call BlackArrowAddAbility('ANba', 1, 'ndr1', 1, 80.0, 0.0, 2.0, 'BNdm')
-    call BlackArrowAddAbility('ANba', 2, 'ndr2', 1, 80.0, 0.0, 2.0, 'BNdm')
-    call BlackArrowAddAbility('ANba', 3, 'ndr3', 1, 80.0, 0.0, 2.0, 'BNdm')
-    call BlackArrowAddAbility('ACbk', 1, 'ndr1', 1, 80.0, 0.0, 2.0, 'BNdm')
-    call BlackArrowAddItemTypeId('odef', BlackArrowAddAbility('ANbs', 1, 'ndr1', 1, 80.0, 0.0, 2.0, 'BNdm'))
-endfunction
-
-function BlackArrowAddAutoCaster takes unit caster returns nothing
-    if (not IsUnitInGroup(caster, BlackArrowCasters)) then
-        call GroupAddUnit(BlackArrowCasters, caster)
-        //call BJDebugMsg("Adding unit " + GetUnitName(caster) + " to casters.")
-    endif
-endfunction
-
-function TimerFunctionBlackArrowBuffExpires takes nothing returns nothing
+private function TimerFunctionBlackArrowBuffExpires takes nothing returns nothing
     local unit target = LoadUnitHandle(BlackArrowHashTable, GetHandleId(GetExpiredTimer()), 0)
     call FlushChildHashtable(BlackArrowHashTable, GetHandleId(target))
-    call UnitRemoveAbility(target, BLACK_ARROW_BUFF_ABILITY_ID)
+    call UnitRemoveAbility(target, BUFF_ABILITY_ID)
     call GroupRemoveUnit(BlackArrowTargets, target)
     set target = null
 endfunction
 
-function BlackArrowMarkTarget takes integer abilityIndex, unit source, unit target returns nothing
+private function MarkTarget takes integer abilityIndex, unit source, unit target returns nothing
     local timer whichTimer = LoadTimerHandle(BlackArrowHashTable, 0, GetHandleId(target))
 
     //call BJDebugMsg("Marking Black Arrow target " + GetUnitName(GetTriggerUnit()))
@@ -12154,16 +12184,20 @@ function BlackArrowMarkTarget takes integer abilityIndex, unit source, unit targ
     call SaveTimerHandle(BlackArrowHashTable, GetHandleId(target), 0, whichTimer)
     call SaveUnitHandle(BlackArrowHashTable, GetHandleId(target), 1, source)
     call SaveInteger(BlackArrowHashTable, GetHandleId(target), 2, abilityIndex)
-    call TimerStart(whichTimer, BlackArrowAbiliyDurationUnit[abilityIndex], false, function TimerFunctionBlackArrowBuffExpires)
+    if (IsUnitType(target, UNIT_TYPE_HERO)) then
+        call TimerStart(whichTimer, BlackArrowAbiliyDurationHero[abilityIndex], false, function TimerFunctionBlackArrowBuffExpires)
+    else
+        call TimerStart(whichTimer, BlackArrowAbiliyDurationUnit[abilityIndex], false, function TimerFunctionBlackArrowBuffExpires)
+    endif
 
-    call UnitAddAbility(target, BLACK_ARROW_BUFF_ABILITY_ID)
+    call UnitAddAbility(target, BUFF_ABILITY_ID)
 
     if (not IsUnitInGroup(target, BlackArrowTargets)) then
         call GroupAddUnit(BlackArrowTargets, target)
     endif
 endfunction
 
-function BlackArrowExecuteCallbackTriggers takes unit source, unit target, group summonedUnits returns nothing
+private function ExecuteCallbackTriggers takes unit source, unit target, group summonedUnits returns nothing
     local integer i = 0
     set BlackArrowCaster = source
     set BlackArrowTarget = target
@@ -12175,7 +12209,7 @@ function BlackArrowExecuteCallbackTriggers takes unit source, unit target, group
     endloop
 endfunction
 
-function BlackArrowSummonEffect takes integer abilityIndex, unit source, unit target returns group
+private function SummonEffect takes integer abilityIndex, unit source, unit target returns group
     local location tmpLocation = GetUnitLoc(target)
     // Does not leak since it uses bj_lastCreatedGroup:
     local group summonedUnits = CreateNUnitsAtLoc(BlackArrowAbiliySummonedUnitsCount[abilityIndex],  BlackArrowAbiliySummonedUnitTypeId[abilityIndex], GetOwningPlayer(source), tmpLocation, GetUnitFacing(target))
@@ -12187,16 +12221,16 @@ function BlackArrowSummonEffect takes integer abilityIndex, unit source, unit ta
         set i = i + 1
     endloop
 
-    call BlackArrowExecuteCallbackTriggers(source, target, summonedUnits)
+    call ExecuteCallbackTriggers(source, target, summonedUnits)
 
     return summonedUnits
 endfunction
 
-function BlackArrowEffect takes unit target returns group
+private function Effect takes unit target returns group
      local timer whichTimer = LoadTimerHandle(BlackArrowHashTable, GetHandleId(target), 0)
      local unit source = LoadUnitHandle(BlackArrowHashTable, GetHandleId(target), 1)
      local integer abilityIndex = LoadInteger(BlackArrowHashTable, GetHandleId(target), 2)
-     local group summonedUnits = BlackArrowSummonEffect(abilityIndex, source, target)
+     local group summonedUnits = SummonEffect(abilityIndex, source, target)
 
      //call BJDebugMsg("Black Arrow effect on target " + GetUnitName(target) + " with ability level " + I2S(BlackArrowAbiliyLevel[abilityIndex]) + " summoning units of type " + GetObjectName(BlackArrowAbiliySummonedUnitTypeId[abilityIndex]))
 
@@ -12208,7 +12242,7 @@ function BlackArrowEffect takes unit target returns group
     endif
 
     call FlushChildHashtable(BlackArrowHashTable, GetHandleId(target))
-    call UnitRemoveAbility(target, BLACK_ARROW_BUFF_ABILITY_ID)
+    call UnitRemoveAbility(target, BUFF_ABILITY_ID)
     call GroupRemoveUnit(BlackArrowTargets, target)
 
     // remove the decaying corpse
@@ -12220,7 +12254,7 @@ function BlackArrowEffect takes unit target returns group
     return summonedUnits
 endfunction
 
-function BlackArrowTriggerConditionDamage takes nothing returns boolean
+private function TriggerConditionDamage takes nothing returns boolean
     return not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_RESISTANT) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MAGIC_IMMUNE) and GetUnitLevel(GetTriggerUnit()) > 5 and ((IsUnitInGroup(GetEventDamageSource(), BlackArrowCasters) and GetMatchingBlackArrowAbilityIndex(GetEventDamageSource()) > 0) or IsUnitInGroup(GetEventDamageSource(), BlackArrowItemUnits))
 endfunction
 
@@ -12236,31 +12270,34 @@ function BlackArrowUnitGetOrbItem takes unit whichUnit, item excludeItem returns
     return -1
 endfunction
 
-function BlackArrowTriggerActionDamage takes nothing returns nothing
+private function TriggerActionDamage takes nothing returns nothing
     local integer itemIndex = BlackArrowUnitGetOrbItem(GetEventDamageSource(), null)
     local integer abilityIndex = GetMatchingBlackArrowAbilityIndex(GetEventDamageSource())
     if (itemIndex != -1 and abilityIndex == 0) then
-        call BlackArrowMarkTarget(BlackArrowItemTypeAbilityIndex[itemIndex], GetEventDamageSource(), GetTriggerUnit())
+        call MarkTarget(BlackArrowItemTypeAbilityIndex[itemIndex], GetEventDamageSource(), GetTriggerUnit())
     else
-        call BlackArrowMarkTarget(abilityIndex, GetEventDamageSource(), GetTriggerUnit())
+        call MarkTarget(abilityIndex, GetEventDamageSource(), GetTriggerUnit())
     endif
 endfunction
 
-function BlackArrowTriggerConditionDeath takes nothing returns boolean
+private function TriggerConditionDeath takes nothing returns boolean
     return IsUnitInGroup(GetTriggerUnit(), BlackArrowTargets)
 endfunction
 
-function BlackArrowTriggerActionDeath takes nothing returns nothing
-    call BlackArrowEffect(GetTriggerUnit())
+private function TriggerActionDeath takes nothing returns nothing
+    call Effect(GetTriggerUnit())
 endfunction
 
-function BlackArrowTriggerConditionOrder takes nothing returns boolean
-    return GetIssuedOrderId() == OrderId(BLACK_ARROW_ORDER_ON) or GetIssuedOrderId() == OrderId(BLACK_ARROW_ORDER_OFF)
+private function TriggerConditionOrder takes nothing returns boolean
+    return GetIssuedOrderId() == OrderId(ORDER_ON) or GetIssuedOrderId() == OrderId(ORDER_OFF)
 endfunction
 
-function BlackArrowTriggerActionOrder takes nothing returns nothing
-    if (GetIssuedOrderId() == OrderId(BLACK_ARROW_ORDER_ON)) then
-        call BlackArrowAddAutoCaster(GetTriggerUnit())
+private function TriggerActionOrder takes nothing returns nothing
+    if (GetIssuedOrderId() == OrderId(ORDER_ON)) then
+        if (not IsUnitInGroup(GetTriggerUnit(), BlackArrowCasters)) then
+            call GroupAddUnit(BlackArrowCasters, GetTriggerUnit())
+        //call BJDebugMsg("Adding unit " + GetUnitName(caster) + " to casters.")
+        endif
     else
         if (IsUnitInGroup(GetTriggerUnit(), BlackArrowCasters)) then
             call GroupRemoveUnit(BlackArrowCasters, GetTriggerUnit())
@@ -12269,16 +12306,16 @@ function BlackArrowTriggerActionOrder takes nothing returns nothing
     endif
 endfunction
 
-function BlackArrowTriggerConditionPickupItem takes nothing returns boolean
+private function TriggerConditionPickupItem takes nothing returns boolean
     return not IsUnitInGroup(GetTriggerUnit(), BlackArrowItemUnits) and GetMatchingBlackArrowItemTypeIndex(GetItemTypeId(GetManipulatedItem())) > 0
 endfunction
 
-function BlackArrowTriggerActionPickupItem takes nothing returns nothing
+private function TriggerActionPickupItem takes nothing returns nothing
     call GroupAddUnit(BlackArrowItemUnits, GetTriggerUnit())
     //call BJDebugMsg("Unit " + GetUnitName(GetTriggerUnit()) + " picked up a Black Arrow orb item.")
 endfunction
 
-function BlackArrowTriggerConditionDropItem takes nothing returns boolean
+private function TriggerConditionDropItem takes nothing returns boolean
     local boolean result = IsUnitInGroup(GetTriggerUnit(), BlackArrowItemUnits) and GetMatchingBlackArrowItemTypeIndex(GetItemTypeId(GetManipulatedItem())) > 0
 
     if (result) then
@@ -12289,48 +12326,93 @@ function BlackArrowTriggerConditionDropItem takes nothing returns boolean
     return result
 endfunction
 
-function BlackArrowTriggerActionDropItem takes nothing returns nothing
+private function TriggerActionDropItem takes nothing returns nothing
     call GroupRemoveUnit(BlackArrowItemUnits, GetTriggerUnit())
     //call BJDebugMsg("Unit " + GetUnitName(GetTriggerUnit()) + " dropped the final Black Arrow orb item.")
 endfunction
 
-function BlackArrowFilterForUnitWithOrb takes nothing returns boolean
+private function AddStandardObjectData takes nothing returns nothing
+    call BlackArrowAddAbility('ANba', 1, 'ndr1', 1, 80.0, 0.0, 2.0, 'BNdm')
+    call BlackArrowAddAbility('ANba', 2, 'ndr2', 1, 80.0, 0.0, 2.0, 'BNdm')
+    call BlackArrowAddAbility('ANba', 3, 'ndr3', 1, 80.0, 0.0, 2.0, 'BNdm')
+    call BlackArrowAddAbility('ACbk', 1, 'ndr1', 1, 80.0, 0.0, 2.0, 'BNdm')
+    call BlackArrowAddItemTypeId('odef', BlackArrowAddAbility('ANbs', 1, 'ndr1', 1, 80.0, 0.0, 2.0, 'BNdm'))
+endfunction
+
+private function FilterForUnitWithOrb takes nothing returns boolean
     return UnitInventorySize(GetFilterUnit()) > 0 and BlackArrowUnitGetOrbItem(GetFilterUnit(), null) != -1
 endfunction
 
-function BlackArrowAddAllUnitsWithOrbs takes nothing returns nothing
+private function AddAllUnitsWithOrbs takes nothing returns nothing
     local group whichGroup = CreateGroup()
-    call GroupEnumUnitsInRect(whichGroup, GetPlayableMapRect(), Filter(function BlackArrowFilterForUnitWithOrb))
+    call GroupEnumUnitsInRect(whichGroup, GetPlayableMapRect(), Filter(function FilterForUnitWithOrb))
     set bj_wantDestroyGroup = true
     call GroupAddGroup(whichGroup, BlackArrowItemUnits)
     //call BJDebugMsg("Units with orbs size " + I2S(CountUnitsInGroup(BlackArrowItemUnits)))
     set whichGroup = null
 endfunction
 
-function BlackArrowSystemInit takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(BlackArrowDamageTrigger, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(BlackArrowDamageTrigger, Condition(function BlackArrowTriggerConditionDamage))
-    call TriggerAddAction(BlackArrowDamageTrigger, function BlackArrowTriggerActionDamage)
+private module Init
 
-    call TriggerRegisterAnyUnitEventBJ(BlackArrowDeathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(BlackArrowDeathTrigger, Condition(function BlackArrowTriggerConditionDeath))
-    call TriggerAddAction(BlackArrowDeathTrigger, function BlackArrowTriggerActionDeath)
+    private static method onInit takes nothing returns nothing
+        call TriggerRegisterAnyUnitEventBJ(BlackArrowDamageTrigger, EVENT_PLAYER_UNIT_DAMAGED)
+        call TriggerAddCondition(BlackArrowDamageTrigger, Condition(function TriggerConditionDamage))
+        call TriggerAddAction(BlackArrowDamageTrigger, function TriggerActionDamage)
 
-    call TriggerRegisterAnyUnitEventBJ(BlackArrowOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
-    call TriggerAddCondition(BlackArrowOrderTrigger, Condition(function BlackArrowTriggerConditionOrder))
-    call TriggerAddAction(BlackArrowOrderTrigger, function BlackArrowTriggerActionOrder)
+        call TriggerRegisterAnyUnitEventBJ(BlackArrowDeathTrigger, EVENT_PLAYER_UNIT_DEATH)
+        call TriggerAddCondition(BlackArrowDeathTrigger, Condition(function TriggerConditionDeath))
+        call TriggerAddAction(BlackArrowDeathTrigger, function TriggerActionDeath)
 
-    call TriggerRegisterAnyUnitEventBJ(BlackArrowItemPickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    call TriggerAddCondition(BlackArrowItemPickupTrigger, Condition(function BlackArrowTriggerConditionPickupItem))
-    call TriggerAddAction(BlackArrowItemPickupTrigger, function BlackArrowTriggerActionPickupItem)
+        call TriggerRegisterAnyUnitEventBJ(BlackArrowOrderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+        call TriggerAddCondition(BlackArrowOrderTrigger, Condition(function TriggerConditionOrder))
+        call TriggerAddAction(BlackArrowOrderTrigger, function TriggerActionOrder)
 
-    call TriggerRegisterAnyUnitEventBJ(BlackArrowItemDropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
-    call TriggerAddCondition(BlackArrowItemDropTrigger, Condition(function BlackArrowTriggerConditionDropItem))
-    call TriggerAddAction(BlackArrowItemDropTrigger, function BlackArrowTriggerActionDropItem)
+        call TriggerRegisterAnyUnitEventBJ(BlackArrowItemPickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+        call TriggerAddCondition(BlackArrowItemPickupTrigger, Condition(function TriggerConditionPickupItem))
+        call TriggerAddAction(BlackArrowItemPickupTrigger, function TriggerActionPickupItem)
 
-    call BlackArrowAddStandardObjectData()
-    call BlackArrowAddAllUnitsWithOrbs()
+        call TriggerRegisterAnyUnitEventBJ(BlackArrowItemDropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
+        call TriggerAddCondition(BlackArrowItemDropTrigger, Condition(function TriggerConditionDropItem))
+        call TriggerAddAction(BlackArrowItemDropTrigger, function TriggerActionDropItem)
+
+static if (ADD_STANDARD_OBJECT_DATA) then
+        call AddStandardObjectData()
+endif
+static if (ADD_ALL_UNITS_WITH_ORBS) then
+        call AddAllUnitsWithOrbs()
+endif
+        set hookEnabled = false
+    endmethod
+endmodule
+
+private struct S
+    implement Init
+endstruct
+
+private function IssueImmediateOrderHook takes unit whichUnit, string order returns nothing
+    if (hookEnabled and order == ORDER_ON) then
+        if (not IsUnitInGroup(whichUnit, BlackArrowCasters)) then
+            call GroupAddUnit(BlackArrowCasters, whichUnit)
+        //call BJDebugMsg("Adding unit " + GetUnitName(caster) + " to casters.")
+        endif
+    endif
 endfunction
+
+hook IssueImmediateOrder IssueImmediateOrderHook
+
+// ChangeLog:
+//
+// 1.2 2022-08-20:
+// - Use vJass and a library, many private declarations and with early automatic initialization in a module.
+// - Add options ADD_STANDARD_OBJECT_DATA and ADD_ALL_UNITS_WITH_ORBS.
+// - Remove BlackArrowAddAutoCaster since the hook should detect the orders of preplaced units now.
+// - BlackArrowAbiliyDurationHero is used for target heroes now.
+// - Add API documentation with usable functions.
+//
+// 1.1 2022-04-16:
+// - Add event handling functions which allow adding actions to Black Arrow events.
+// - Refactor some functions.
+endlibrary
 
 // Wall System
 
@@ -15361,6 +15443,8 @@ endfunction
 
 // Jedi Academy
 
+library WoWReforgedJediSystem
+
 function StringTokenToLightSaberColor takes string token returns player
     local string lowerToken = StringCase(token, false)
     if (lowerToken == "red" or lowerToken == "r" or lowerToken == "1") then
@@ -15412,3 +15496,456 @@ function RemoveJedi takes unit whichUnit returns nothing
 endfunction
 
 hook RemoveUnit RemoveJedi
+
+endlibrary
+
+library GroupSystem
+// Baradé's Group System 1.0
+//
+// Group support for all kinds of types.
+//
+// Usage:
+// - Copy this code into your map script or a trigger converted into code.
+// - Configure the system by changing the values of the constants. Only enable group types which you really need in your map. Adapt the limits to your map.
+//
+// API:
+// The following API functions exist for the type item. Similar functions except for the Enum helper functions provided especially for items should be available for the other supported types.
+//
+// function GetGroupFilterItem takes nothing returns item
+//
+// Returns the current filtered item for all functions like ItemGroupEnumItemsInRect.
+// You can also use GetFilterItem for items since this Blizzard native exists.
+//
+// function GetGroupEnumItem takes nothing returns item
+//
+// Returns the current enumerated item for ForItemGroup.
+// Do not use Blizzard's GetEnumItem here. It is only usable in Blizzard's native EnumItemsInRect.
+//
+// function IsItemInItemGroup takes item whichItem, ItemGroup whichGroup returns boolean
+//
+// Checks if the given item belongs to the given group and returns true if this is the case or returns false if the item does not belong to the given group.
+//
+// function CreateItemGroup takes nothing returns ItemGroup
+//
+// Creates a new item group which must be destroyed at some point or it will leak.
+//
+// function DestroyItemGroup takes ItemGroup whichGroup returns nothing
+//
+// Destroys the given item group to prevent leaks.
+//
+// function ItemGroupAddItem takes ItemGroup whichGroup, item whichItem returns boolean
+//
+// Adds the givem item to the given item group which makes it a member of the group. Returns only true if it is newly added. If CHECK_UNIQUE is enabled and the group does already
+// contain the given item, it won't add it a second time and return false.
+//
+// function ItemGroupRemoveItem takes ItemGroup whichGroup, item whichItem returns boolean
+//
+// Removes the given item from the given group and only returns true if the given item was a member of the given group. Otherwise, nothing happens and it returns false.
+//
+// function BlzItemGroupAddItemGroupFast takes ItemGroup whichGroup, ItemGroup addGroup returns integer
+//
+// Adds all members of the group addGroup to the group whichGroup.
+//
+// function BlzGroupRemoveGroupFast takes ItemGroup whichGroup, ItemGroup removeGroup returns integer
+//
+// Removes all members of the group removeGroup from the group whichGroup.
+//
+// function ItemGroupClear takes ItemGroup whichGroup returns nothing
+//
+// Clears the given group which changes the number of members to 0.
+//
+// function BlzItemGroupGetSize takes ItemGroup whichGroup returns integer
+//
+// Returns the number of members from the given group.
+//
+// function BlzItemGroupItemAt takes ItemGroup whichGroup, integer index returns item
+//
+// Returns the item at the given index from the given group. Make sure that the index is valid. Otherwise, it might return null or some previous member.
+//
+// function ForItemGroup takes ItemGroup whichGroup, code callback returns nothing
+//
+// Executes the given callback per member of the given group. You can access the enumerated item with GetGroupEnumItem.
+//
+// function FirstOfItemGroup takes ItemGroup whichGroup returns item
+//
+// Returns the first item of the group or null if the group is empty.
+//
+// function ItemGroupEnumItemsOfType takes ItemGroup whichGroup, integer itemTypeId, boolexpr filter returns nothing
+//
+// Fills the given group with all items placed on the map which have the given item type ID and match the given filter.
+// Use GetGroupFilterItem in the filter to access the filtered item.
+// Note that this function does not enumerate items in inventories of units since it uses the Blizzard native EnumItemsInRect with the playable map rect.
+//
+// function ItemGroupEnumItemsOfPlayer takes ItemGroup whichGroup, player whichPlayer, boolexpr filter returns nothing
+//
+// Fills the given group with all items placed on the map which have the given owner and match the given filter.
+// Use GetGroupFilterItem in the filter to access the filtered item.
+// Note that this function does not enumerate items in inventories of units since it uses the Blizzard native EnumItemsInRect with the playable map rect.
+//
+// function ItemGroupEnumItemsInRect takes ItemGroup whichGroup, rect r, boolexpr filter returns nothing
+//
+// Fills the given group with all items placed in the given rect and match the given filter.
+// Use GetGroupFilterItem in the filter to access the filtered item.
+//
+// function ItemGroupEnumItemsInRange takes ItemGroup whichGroup, real x, real y, real radius, boolexpr filter returns nothing
+//
+// Fills the given group with all items placed on the map which have a distance with the maximum of radius from the given coordiantes and match the given filter.
+// Use GetGroupFilterItem in the filter to access the filtered item.
+// Note that this function does not enumerate items in inventories of units since it uses the Blizzard native EnumItemsInRect with the playable map rect.
+//
+// Design:
+// The provided API is based on Blizzard's Group, Force, Destructable and Item API.
+// This system is designed to provide many helper functions to simplify your code.
+// It is not intended to make your code faster.
+//
+// By default, no unit or player groups are supported because of the native types group and force.
+// Only primitive types and handle based types are supported for which it makes sense to have groups because of either unique values or because they are placable on the map.
+// For IntegerGroups 0 is the null value and means no member.
+// However, you can easily use the textmacro to support different types.
+// It is recommended that you simply use an IntegerGroup for struct based types.
+//
+// Adding new members to a group can be faster if CHECK_UNIQUE is disabled but removing members takes longer since the member must be found in the group.
+// This could be made faster in the future by storing the index per member per group in a hashtable or using something faster than a JASS array.
+
+    globals
+        // The maximum number of group instances per type.
+        public constant integer MAX_INSTANCES = 5000
+        // The maxmimum number of members per group.
+        public constant integer MAX_MEMBERS = 5000
+        // Checks if a member does already belong to a group and only adds it if it does not belong to the group yet if this value is true.
+        // Otherwise, it won't check and the operation will be faster.
+        public constant boolean CHECK_UNIQUE = true
+        // types with movable stuff:
+        public constant boolean SUPPORT_ITEM_GROUPS = true
+        public constant boolean SUPPORT_DESTRUCTABLE_GROUPS = true
+        public constant boolean SUPPORT_FOGMODIFIER_GROUPS = false
+        public constant boolean SUPPORT_TEXTTAG_GROUPS = false
+        public constant boolean SUPPORT_WEATHEREFFECT_GROUPS = false
+        public constant boolean SUPPORT_TERRAINDEFORMATION_GROUPS = false
+        public constant boolean SUPPORT_EFFECT_GROUPS = false
+        public constant boolean SUPPORT_LIGHTNING_GROUPS = false
+        public constant boolean SUPPORT_IMAGE_GROUPS = false
+        public constant boolean SUPPORT_UBERSPLAT_GROUPS = false
+        // basic types:
+        public constant boolean SUPPORT_INTEGER_GROUPS = false
+        public constant boolean SUPPORT_STRING_GROUPS = false
+        public constant boolean SUPPORT_HANDLE_GROUPS = false
+        public constant boolean SUPPORT_WIDGET_GROUPS = false
+        public constant boolean SUPPORT_TRIGGER_GROUPS = false
+    endglobals
+
+    //! textmacro HANDLE_GROUP_SYSTEM takes NAME, TYPE, NULLVALUE
+        globals
+            private $TYPE$ filter$NAME$ = $NULLVALUE$
+            private $TYPE$ enum$NAME$ = $NULLVALUE$
+        endglobals
+
+        function GetGroupFilter$NAME$ takes nothing returns $TYPE$
+            return filter$NAME$
+        endfunction
+
+        function GetGroupEnum$NAME$ takes nothing returns $TYPE$
+            return enum$NAME$
+        endfunction
+
+        struct $NAME$Group[MAX_INSTANCES]
+            private $TYPE$ array members[MAX_MEMBERS]
+            private integer count = 0
+
+            public method add takes $TYPE$ which$NAME$ returns boolean
+static if (CHECK_UNIQUE) then
+                local integer i = 0
+                loop
+                    exitwhen (i >= count)
+                    if (members[i] == which$NAME$) then
+                        return false
+                    endif
+                    set i = i + 1
+                endloop
+endif
+                set members[count] = which$NAME$
+                set count = count + 1
+                return true
+            endmethod
+
+            public method remove takes $TYPE$ which$NAME$ returns boolean
+                local integer j = 0
+                local integer i = 0
+                loop
+                    exitwhen (i >= count)
+                    if (members[i] == which$NAME$) then
+                        set members[i] = $NULLVALUE$
+
+                        set j = i + 1
+                        loop
+                            exitwhen (j >= count)
+                            set members[j - 1] = members[j]
+                            set j = j + 1
+                        endloop
+                        set count = count - 1
+
+                        return true
+                    endif
+                    set i = i + 1
+                endloop
+
+                return false
+            endmethod
+
+            public method addGroup takes $NAME$Group addGroup returns integer
+                local integer i = 0
+                loop
+                    exitwhen (i >= addGroup.count)
+                    call add(addGroup.members[i])
+                    set i = i + 1
+                endloop
+                return count
+            endmethod
+
+            public method removeGroup takes $NAME$Group removeGroup returns integer
+                local integer i = 0
+                loop
+                    exitwhen (i >= removeGroup.count)
+                    call remove(removeGroup.members[i])
+                    set i = i + 1
+                endloop
+                return count
+            endmethod
+
+            public method contains takes $TYPE$ which$NAME$ returns boolean
+                local integer i = 0
+                loop
+                    exitwhen (i >= count)
+                    if (members[i] == which$NAME$) then
+                        return true
+                    endif
+                    set i = i + 1
+                endloop
+                return false
+            endmethod
+
+            public method clear takes nothing returns nothing
+                set count = 0
+            endmethod
+
+            public method size takes nothing returns integer
+                return count
+            endmethod
+
+            public method forEach takes code callback returns nothing
+                local integer i = 0
+                loop
+                    exitwhen (i >= count)
+                    set enum$NAME$ = members[i]
+                    call ForForce(bj_FORCE_PLAYER[0], callback)
+                    set i = i + 1
+                endloop
+            endmethod
+
+            public method operator[] takes integer index returns $TYPE$
+                return members[index]
+            endmethod
+
+            public method first takes nothing returns $TYPE$
+                if (count == 0) then
+                    return $NULLVALUE$
+                endif
+                return members[0]
+            endmethod
+        endstruct
+
+        function Is$NAME$In$NAME$Group takes $TYPE$ which$NAME$, $NAME$Group whichGroup returns boolean
+            return whichGroup.contains(which$NAME$)
+        endfunction
+
+        function Create$NAME$Group takes nothing returns $NAME$Group
+            return $NAME$Group.create()
+        endfunction
+
+        function Destroy$NAME$Group takes $NAME$Group whichGroup returns nothing
+            call whichGroup.destroy()
+        endfunction
+
+        function $NAME$GroupAdd$NAME$ takes $NAME$Group whichGroup, $TYPE$ which$NAME$ returns boolean
+            return whichGroup.add(which$NAME$)
+        endfunction
+
+        function $NAME$GroupRemove$NAME$ takes $NAME$Group whichGroup, $TYPE$ which$NAME$ returns boolean
+            return whichGroup.remove(which$NAME$)
+        endfunction
+
+        function $NAME$GroupAdd$NAME$GroupFast takes $NAME$Group whichGroup, $NAME$Group addGroup returns integer
+            return whichGroup.addGroup(addGroup)
+        endfunction
+
+        function $NAME$GroupRemove$NAME$GroupFast takes $NAME$Group whichGroup, $NAME$Group removeGroup returns integer
+            return whichGroup.removeGroup(removeGroup)
+        endfunction
+
+        function $NAME$GroupClear takes $NAME$Group whichGroup returns nothing
+            call whichGroup.clear()
+        endfunction
+
+        function Blz$NAME$GroupGetSize takes $NAME$Group whichGroup returns integer
+            return whichGroup.size()
+        endfunction
+
+        function Blz$NAME$Group$NAME$At takes $NAME$Group whichGroup, integer index returns $TYPE$
+            return whichGroup[index]
+        endfunction
+
+        function For$NAME$Group takes $NAME$Group whichGroup, code callback returns nothing
+            call whichGroup.forEach(callback)
+        endfunction
+
+        function FirstOf$NAME$Group takes $NAME$Group whichGroup returns $TYPE$
+            return whichGroup.first()
+        endfunction
+    //! endtextmacro
+
+static if (SUPPORT_ITEM_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Item", "item", "null")
+
+    globals
+        private ItemGroup enumItemGroup = 0
+        private integer filterItemTypeId = 0
+        private player filterOwner = null
+        private real filterX = 0.0
+        private real filterY = 0.0
+        private real filterRadius = 0.0
+    endglobals
+
+    private function FilterChangeFilterItem takes nothing returns boolean
+        set filterItem = GetFilterItem()
+        return true
+    endfunction
+
+    private function AddEnumItemToGroup takes nothing returns nothing
+        call ItemGroupAddItem(enumItemGroup, GetEnumItem())
+    endfunction
+
+    function ItemGroupEnumItemsInRect takes ItemGroup whichGroup, rect r, boolexpr filter returns nothing
+        local boolexpr combinedFilters = And(function FilterChangeFilterItem, filter)
+        set enumItemGroup = whichGroup
+        call EnumItemsInRect(r, combinedFilters, function AddEnumItemToGroup)
+        set enumItemGroup = 0
+        call DestroyBoolExpr(combinedFilters)
+        set combinedFilters = null
+    endfunction
+
+    private function FilterItemTypeMatches takes nothing returns boolean
+        return GetItemTypeId(GetGroupFilterItem()) == filterItemTypeId
+    endfunction
+
+    function ItemGroupEnumItemsOfType takes ItemGroup whichGroup, integer itemTypeId, boolexpr filter returns nothing
+        local boolexpr combinedFilters = And(function FilterItemTypeMatches, filter)
+        set filterItemTypeId = itemTypeId
+        call ItemGroupEnumItemsInRect(whichGroup, GetPlayableMapRect(), combinedFilters)
+        call DestroyBoolExpr(combinedFilters)
+        set combinedFilters = null
+    endfunction
+
+    private function FilterOwnerMatches takes nothing returns boolean
+        return GetItemPlayer(GetGroupFilterItem()) == filterOwner
+    endfunction
+
+    function ItemGroupEnumItemsOfPlayer takes ItemGroup whichGroup, player whichPlayer, boolexpr filter returns nothing
+        local boolexpr combinedFilters = And(function FilterItemTypeMatches, filter)
+        set filterOwner = whichPlayer
+        call ItemGroupEnumItemsInRect(whichGroup, GetPlayableMapRect(), combinedFilters)
+        call DestroyBoolExpr(combinedFilters)
+        set combinedFilters = null
+    endfunction
+
+    private function DistanceBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
+        local real dx = x2 - x1
+        local real dy = y2 - y1
+        return SquareRoot(dx * dx + dy * dy)
+    endfunction
+
+    private function FilterRangeMatches takes nothing returns boolean
+        return DistanceBetweenCoordinates(GetItemX(GetGroupFilterItem()), GetItemY(GetGroupFilterItem()), filterX, filterY) <= filterRadius
+    endfunction
+
+    function ItemGroupEnumItemsInRange takes ItemGroup whichGroup, real x, real y, real radius, boolexpr filter returns nothing
+        local boolexpr combinedFilters = And(function FilterItemTypeMatches, filter)
+        set filterX = x
+        set filterY = y
+        set filterRadius = radius
+        call ItemGroupEnumItemsInRect(whichGroup, GetPlayableMapRect(), combinedFilters)
+        call DestroyBoolExpr(combinedFilters)
+        set combinedFilters = null
+    endfunction
+endif
+
+static if (SUPPORT_DESTRUCTABLE_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Destructable", "destructable", "null")
+
+    globals
+        private DestructableGroup enumDestructableGroup = 0
+    endglobals
+
+    private function AddEnumDestructableToGroup takes nothing returns nothing
+        call DestructableGroupAddDestructable(enumDestructableGroup, GetEnumDestructable())
+    endfunction
+
+    function DestructableGroupEnumDestructablesInRect takes ItemGroup whichGroup, rect r, boolexpr filter returns nothing
+        set enumDestructableGroup = whichGroup
+        call EnumDestructablesInRect(r, filter, function AddEnumDestructableToGroup)
+        set enumDestructableGroup = 0
+    endfunction
+endif
+
+static if (SUPPORT_FOGMODIFIER_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("FogModifier", "fogmodifier", "null")
+endif
+
+static if (SUPPORT_TEXTTAG_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("TextTag", "texttag", "null")
+endif
+
+static if (SUPPORT_WEATHEREFFECT_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("WeatherEffect", "weathereffect", "null")
+endif
+
+static if (SUPPORT_WEATHEREFFECT_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("TerrainDeformation", "terraindeformation", "null")
+endif
+
+static if (SUPPORT_EFFECT_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Effect", "effect", "null")
+endif
+
+static if (SUPPORT_LIGHTNING_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Lightning", "lightning", "null")
+endif
+
+static if (SUPPORT_IMAGE_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Image", "image", "null")
+endif
+
+static if (SUPPORT_UBERSPLAT_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Ubersplat", "ubersplat", "null")
+endif
+
+static if (SUPPORT_INTEGER_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Integer", "integer", "0")
+endif
+
+static if (SUPPORT_STRING_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("String", "string", "null")
+endif
+
+static if (SUPPORT_STRING_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Handle", "handle", "null")
+endif
+
+static if (SUPPORT_WIDGET_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Widget", "widget", "null")
+endif
+
+static if (SUPPORT_TRIGGER_GROUPS) then
+    //! runtextmacro HANDLE_GROUP_SYSTEM("Trigger", "trigger", "null")
+endif
+
+endlibrary

@@ -225,6 +225,7 @@ This version provides several new features compared to the original map [World o
 * [Custom Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/).
 * Tomes game option.
 * Themes game option.
+* Custom Group System which is [part of this repository](./systems/).
 * TODO Many 2.1 features are not listed yet.
 
 ## Bug Fixes
