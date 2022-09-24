@@ -145,7 +145,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X, -lightsabercolor X Y, -lightsabertype X"
+    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X"
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns nothing
@@ -3758,6 +3758,10 @@ endfunction
 
 function AppendFileContent takes string content returns string
     return "\r\n\t\t\t\t" + content
+endfunction
+
+function AppendFileContentLeft takes string content returns string
+    return "\r\n" + content
 endfunction
 
 function CreateSaveCodeTextFile takes string playerName, string info, string fileName, string saveCode returns nothing
@@ -8008,7 +8012,8 @@ function CreateSaveCodeLetterTextFile takes string playerNameFrom, string player
     call PreloadGenClear()
     call PreloadGenStart()
 
-    set content = content + AppendFileContent("Code: -loadl " + saveCode)
+    set content = content + AppendFileContent("Code:")
+    set content = content + AppendFileContentLeft("-loadl " + saveCode)
     set content = content + AppendFileContent("From: " + playerNameFrom)
     set content = content + AppendFileContent("To: " + playerNameTo)
     set content = content + AppendFileContent("Message Length: " + I2S(StringLength(message)))
@@ -8113,8 +8118,8 @@ function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns
     return "f_" + playerNameFrom + "-t_" + playerNameToText + "-m_" + I2S(StringLength(message))
 endfunction
 
-function ApplySaveCodeLetter takes player whichPlayer, string s returns boolean
-    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+function ApplySaveCodeLetter takes player whichPlayer, string playerName, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
     local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
     local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
@@ -8122,13 +8127,43 @@ function ApplySaveCodeLetter takes player whichPlayer, string s returns boolean
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and (playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) or playerNameHash == CompressedAbsStringHash("all"))) then
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(playerName)) then
         call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 40.0, "Letter from " + playerNameFrom + ": " + message)
 
         return true
     endif
 
     return false
+endfunction
+
+function GetSaveCodeErrorsLetter takes player whichPlayer, string playerName, string s returns string
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local string result = ""
+
+
+    if (checksum != CompressedAbsStringHash(checkedSaveCode)) then
+        set result = result + "Expected different checksum!"
+    endif
+
+    if (playerNameHash != CompressedAbsStringHash(playerName)) then
+        if (StringLength(result) > 0) then
+            set result = result + ", "
+        endif
+
+        set result = result + "Expected different player name!"
+    endif
+
+    if (StringLength(result) == 0) then
+        set result = "None errors detected."
+    endif
+
+    return result
 endfunction
 
 library FileIO
@@ -11011,14 +11046,14 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
                 set result = result  + "-loadpr " + I2S(i) + ": " + GetSaveCodeShortInfosResearches(whichPlayer, PrestoredSaveCode[i])
 
                 set counter = counter + 1
-            elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_LETTER) then
-                if (counter > 0) then
-                    set result = result + "\n"
-                endif
-
-                set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
-
-                set counter = counter + 1
+//             elseif (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_LETTER) then
+//                 if (counter > 0) then
+//                     set result = result + "\n"
+//                 endif
+//
+//                 set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
+//
+//                 set counter = counter + 1
             endif
         endif
         set i = i + 1
