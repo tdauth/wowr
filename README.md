@@ -608,3 +608,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * RightField: [laser](https://www.hiveworkshop.com/threads/laser.47521/)
 * olofmoleman: [Gran](https://www.hiveworkshop.com/threads/gran.50238/)
 * Kricz: [Knockback v1.01b](https://www.hiveworkshop.com/threads/knockback-v1-01b.174502/)
+* Jab1z: [Zeus Lord of Olympus](https://www.hiveworkshop.com/threads/zeus-lord-of-olympus.341085/)
+* purparisien: [Ancient Barracks](https://www.hiveworkshop.com/threads/ancient-barracks.321483/)
+* Fingolfin: [Roman Heavy Cavalry](https://www.hiveworkshop.com/threads/roman-heavy-cavalry.339258/)

@@ -82,14 +82,14 @@ endfunction
 /**
  * Useful for getting parts of a chat message to implement chat commands.
  */
-function StringToken takes string source, integer index returns string
+function StringTokenEx takes string source, integer index, boolean toTheEnd returns string
     local string result = ""
     local boolean inWhitespace = false
     local integer currentIndex = 0
     local integer i = 0
     loop
         exitwhen (i == StringLength(source) or currentIndex > index)
-        if (SubString(source, i, i + 1) == " ") then
+        if (SubString(source, i, i + 1) == " " and (not toTheEnd or currentIndex < index)) then
             if (not inWhitespace) then
                 set inWhitespace = true
                 set currentIndex = currentIndex + 1
@@ -104,6 +104,18 @@ function StringToken takes string source, integer index returns string
     endloop
 
     return result
+endfunction
+
+function StringToken takes string source, integer index returns string
+    return StringTokenEx(source, index, false)
+endfunction
+
+function StringTokenEnteredChatMessageEx takes integer index, boolean toTheEnd returns string
+    return StringTokenEx(GetEventPlayerChatString(), index, toTheEnd)
+endfunction
+
+function StringTokenEnteredChatMessage takes integer index returns string
+    return StringToken(GetEventPlayerChatString(), index)
 endfunction
 
 function SimError takes player whichPlayer, string msg returns nothing
@@ -133,7 +145,28 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -discord, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X, -lightsabercolor X Y, -lightsabertype X"
+    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -dice X, -lightsabercolor X Y, -lightsabertype X"
+endfunction
+
+function DropAllItemsFromHero takes unit hero returns nothing
+	local integer i = 0
+	loop
+		exitwhen (i >= bj_MAX_INVENTORY)
+		call UnitRemoveItemFromSlot(hero, i)
+		set i = i + 1
+	endloop
+endfunction
+
+function DropAllItemsFromHero1 takes player whichPlayer returns nothing
+    call DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
+endfunction
+
+function DropAllItemsFromHero2 takes player whichPlayer returns nothing
+    call DropAllItemsFromHero(udg_Hero2[GetPlayerId(whichPlayer)])
+endfunction
+
+function DropAllItemsFromHero3 takes player whichPlayer returns nothing
+    call DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
 endfunction
 
 endlibrary
@@ -412,6 +445,8 @@ function RemoveAllBackpackItemTypesForPlayer takes integer playerId, integer ite
 	return result
 endfunction
 
+
+// This does not clear the backpack inventory!
 function DropBackpackForPlayer takes integer playerId, rect whichRect returns nothing
     local integer I0 = 0
     local integer I1 = 0
@@ -428,6 +463,42 @@ function DropBackpackForPlayer takes integer playerId, rect whichRect returns no
                 set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)), GetRectCenterX(whichRect), GetRectCenterY(whichRect))
             else
                 set whichItem = CreateItem(udg_RucksackItemType[index], GetRectCenterX(whichRect), GetRectCenterY(whichRect))
+            endif
+
+            call ApplyRucksackItem(whichItem, index)
+
+            if (udg_RucksackPageNumber[playerId] == I0) then
+                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[playerId], I1)))
+            else
+                call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+            endif
+            set I1 = I1 + 1
+        endloop
+        set I0 = I0 + 1
+    endloop
+endfunction
+
+function DropBackpack takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+    local integer I0 = 0
+    local integer I1 = 0
+    local integer index = 0
+    local item whichItem = null
+    local real x = GetUnitX(udg_Rucksack[playerId])
+    local real y = GetUnitY(udg_Rucksack[playerId])
+    // drop before so they won't have to be cleared or removed
+    call DropAllItemsFromHero(udg_Rucksack[playerId])
+    set I0 = 0
+    loop
+        exitwhen(I0 == udg_RucksackMaxPages)
+        set I1 = 0
+        loop
+            exitwhen(I1 == bj_MAX_INVENTORY)
+            set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackPageNumber[playerId] == I0) then
+                set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)), x, y)
+            else
+                set whichItem = CreateItem(udg_RucksackItemType[index], x, y)
             endif
 
             call ApplyRucksackItem(whichItem, index)
@@ -978,27 +1049,6 @@ function TriggerActionMoveRucksack takes nothing returns nothing
         endif
         set i = i + 1
     endloop
-endfunction
-
-function DropAllItemsFromHero takes unit hero returns nothing
-	local integer i = 0
-	loop
-		exitwhen (i >= bj_MAX_INVENTORY)
-		call UnitRemoveItemFromSlot(hero, i)
-		set i = i + 1
-	endloop
-endfunction
-
-function DropAllItemsFromHero1 takes player whichPlayer returns nothing
-    call DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
-endfunction
-
-function DropAllItemsFromHero2 takes player whichPlayer returns nothing
-    call DropAllItemsFromHero(udg_Hero2[GetPlayerId(whichPlayer)])
-endfunction
-
-function DropAllItemsFromHero3 takes player whichPlayer returns nothing
-    call DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
 endfunction
 
 function GetUnitLevelByType takes integer unitTypeId returns integer
@@ -5935,6 +5985,10 @@ function IsObjectFromPlayerRace takes integer objectID, player whichPlayer retur
     return objectRace == udg_RaceNone or udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(whichPlayer)] or objectRace == udg_PlayerRace[GetConvertedPlayerId(whichPlayer)] or objectRace == udg_PlayerRace2[GetConvertedPlayerId(whichPlayer)]
 endfunction
 
+function DisplayObjectRaceLoadSuccess takes integer objectID, player whichPlayer returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 8.0, "Successfully loaded " + GetObjectName(objectID) + "!")
+endfunction
+
 function DisplayObjectRaceLoadError takes integer objectID, player whichPlayer returns nothing
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 8.0, "Unable to load " + GetObjectName(objectID) + " since it does not belong to your chosen race(s)!")
 endfunction
@@ -5982,6 +6036,8 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
                         //call BJDebugMsg("Loading building " + GetObjectName(saveObjectId) + " at " + R2S(x) + "|" + R2S(y))
                         call CreateUnit(whichPlayer, saveObjectId, x, y, bj_UNIT_FACING)
                         set atLeastOne = true
+                        call PingMinimapForPlayer(whichPlayer, x, y, 4.0)
+                        call DisplayObjectRaceLoadSuccess(saveObjectId, whichPlayer)
                     else
                         call DisplayObjectRaceLoadError(saveObjectId, whichPlayer)
                     endif
@@ -8057,6 +8113,24 @@ function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns
     return "f_" + playerNameFrom + "-t_" + playerNameToText + "-m_" + I2S(StringLength(message))
 endfunction
 
+function ApplySaveCodeLetter takes player whichPlayer, string s returns boolean
+    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
+    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
+    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
+    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and (playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) or playerNameHash == CompressedAbsStringHash("all"))) then
+        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 40.0, "Letter from " + playerNameFrom + ": " + message)
+
+        return true
+    endif
+
+    return false
+endfunction
+
 library FileIO
 /***************************************************************
 *
@@ -9718,10 +9792,6 @@ globals
     trigger array SaveCodeUICloseTrigger
 endglobals
 
-function StringTokenEnteredChatMessage takes integer index returns string
-    return StringToken(GetEventPlayerChatString(), index)
-endfunction
-
 function SetSaveCodeUITooltip takes player whichPlayer, string tooltip returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], tooltip)
 endfunction
@@ -10900,7 +10970,7 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
     local integer i = 0
     loop
         exitwhen (i >= PrestoredSaveCodeCounter)
-        if (PrestoredSaveCodePlayerName[i] == playerName) then
+        if (PrestoredSaveCodePlayerName[i] == playerName or PrestoredSaveCodePlayerName[i] == "all") then
             if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_HEROES and GetSaveCodeIsMatching(whichPlayer, PrestoredSaveCode[i])) then
                 if (counter > 0) then
                     set result = result + "\n"
@@ -10946,7 +11016,7 @@ function GetPrestoredSaveCodeInfos takes player whichPlayer returns string
                     set result = result + "\n"
                 endif
 
-                set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(playerName, PrestoredSaveCode[i])
+                set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
 
                 set counter = counter + 1
             endif
@@ -10981,11 +11051,11 @@ function GetPrestoredSaveCodeInfosLetters takes player whichPlayer returns strin
     local integer i = 0
     loop
         exitwhen (i >= PrestoredSaveCodeCounter)
-        if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_LETTER and (PrestoredSaveCodePlayerName[i] == playerName or (udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)] > 0 and udg_ClanName[udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]] == PrestoredSaveCodePlayerName[i]))) then
+        if (PrestoredSaveCodeType[i] == PRESTORED_SAVECODE_TYPE_LETTER and (PrestoredSaveCodePlayerName[i] == playerName or PrestoredSaveCodePlayerName[i] == "all" or (udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)] > 0 and udg_ClanName[udg_ClanPlayerClan[GetConvertedPlayerId(whichPlayer)]] == PrestoredSaveCodePlayerName[i]))) then
             if (counter > 0) then
                 set result = result + "\n"
             endif
-            set result = result  + "- " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
+            set result = result  + "-loadpl " + I2S(i) + ": " + GetSaveCodeShortInfosLetter(PrestoredSaveCodePlayerName[i], PrestoredSaveCode[i])
             set counter = counter + 1
         endif
         set i = i + 1
