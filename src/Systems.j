@@ -145,7 +145,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X"
+    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X"
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns nothing
@@ -15397,15 +15397,15 @@ function MountGetAll takes player whichPlayer returns group
     local integer playerId = GetPlayerId(whichPlayer)
 
     if (udg_Hero[playerId] != null and MountGet(udg_Hero[playerId]) != null) then
-        call GroupAddUnit(result, udg_Hero[playerId])
+        call GroupAddUnit(result, MountGet(udg_Hero[playerId]))
     endif
 
     if (udg_Hero2[playerId] != null and MountGet(udg_Hero2[playerId]) != null) then
-        call GroupAddUnit(result, udg_Hero2[playerId])
+        call GroupAddUnit(result, MountGet(udg_Hero2[playerId]))
     endif
 
     if (udg_Hero3[playerId] != null and MountGet(udg_Hero3[playerId]) != null) then
-        call GroupAddUnit(result, udg_Hero3[playerId])
+        call GroupAddUnit(result, MountGet(udg_Hero3[playerId]))
     endif
 
     return result
