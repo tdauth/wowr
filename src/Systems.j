@@ -79,6 +79,23 @@ function StringRemoveFromStart takes string source, string start returns string
     return source
 endfunction
 
+function IndexOfString takes string symbol, string source returns integer
+    local integer i = 0
+    //call BJDebugMsg("Checking for symbol: " + symbol + " in source " + source)
+    loop
+        exitwhen (i == StringLength(source))
+        if (SubString(source, i, i + 1) == symbol) then
+            //call BJDebugMsg("Index: " + I2S(i))
+            return i
+        endif
+        set i = i + 1
+    endloop
+
+    //call BJDebugMsg("Missing symbol " + symbol + " in source " + source)
+
+    return -1
+endfunction
+
 /**
  * Useful for getting parts of a chat message to implement chat commands.
  */
@@ -167,6 +184,135 @@ endfunction
 
 function DropAllItemsFromHero3 takes player whichPlayer returns nothing
     call DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
+endfunction
+
+// Tree Finding System
+
+function IsDestructableTree takes destructable whichDestructable returns boolean
+     if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ATtr' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ATtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'BTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'BTtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'KTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTst' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTft' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTwt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'YTct' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'JTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'DTsh' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'CTtr' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'CTtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ITtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ITtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'WTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'NTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'WTst' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'OTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ZTtw' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'ZTtc' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'GTsh' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'VTlt' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'FTtw' ) ) then
+        return true
+    endif
+    // Easter Trees
+    if ( ( GetDestructableTypeId(whichDestructable) == 'B005' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'B006' ) ) then
+        return true
+    endif
+    if ( ( GetDestructableTypeId(whichDestructable) == 'B006' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function EnumLivingTreeDestructablesInCircleFilter takes nothing returns boolean
+    local boolean result = IsDestructableAliveBJ(GetFilterDestructable()) and IsDestructableTree(GetFilterDestructable())
+    local location destLoc = null
+
+    if (result) then
+        set destLoc = GetDestructableLoc(GetFilterDestructable())
+        set result = DistanceBetweenPoints(destLoc, bj_enumDestructableCenter) <= bj_enumDestructableRadius
+        call RemoveLocation(destLoc)
+        set destLoc = null
+    endif
+
+    return result
+endfunction
+
+function RandomLivingTreeDestructableInCircle takes real radius, location loc returns destructable
+    local boolexpr whichFilter= Filter(function EnumLivingTreeDestructablesInCircleFilter)
+    local rect r
+
+    if (radius >= 0) then
+        set bj_enumDestructableCenter = loc
+        set bj_enumDestructableRadius = radius
+        set bj_destRandomConsidered = 0
+        set bj_destRandomCurrentPick = null
+        set r = GetRectFromCircleBJ(loc, radius)
+        call EnumDestructablesInRect(r, whichFilter, function RandomDestructableInRectBJEnum)
+        call RemoveRect(r)
+        set r = null
+    endif
+
+    call DestroyBoolExpr(whichFilter)
+    set whichFilter = null
+
+    return bj_destRandomCurrentPick
 endfunction
 
 endlibrary
@@ -495,19 +641,9 @@ function DropBackpack takes player whichPlayer returns nothing
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            if (udg_RucksackPageNumber[playerId] == I0) then
-                set whichItem = CreateItem(GetItemTypeId(UnitItemInSlot(udg_Rucksack[playerId], I1)), x, y)
-            else
-                set whichItem = CreateItem(udg_RucksackItemType[index], x, y)
-            endif
-
+            set whichItem = CreateItem(udg_RucksackItemType[index], x, y)
             call ApplyRucksackItem(whichItem, index)
-
-            if (udg_RucksackPageNumber[playerId] == I0) then
-                call SetItemCharges(whichItem, GetItemCharges(UnitItemInSlot(udg_Rucksack[playerId], I1)))
-            else
-                call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
-            endif
+            call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
@@ -794,13 +930,12 @@ function TriggerFunctionPickupRucksackItem takes nothing returns nothing
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer index = 0
     local integer i = 0
+    // update the backpack items from the current inventory
     loop
         exitwhen (i == bj_MAX_INVENTORY)
-        if (UnitItemInSlot(GetTriggerUnit(), i) != null and UnitItemInSlot(GetTriggerUnit(), i) == whichItem) then
+        if (UnitItemInSlot(GetTriggerUnit(), i) != null) then
             set index = Index3D(playerId, udg_RucksackPageNumber[playerId], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             call SetRucksackItemFromItem(whichItem, index)
-            //call BJDebugMsg("Picking item up at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
-            exitwhen (true)
         endif
         set i = i + 1
     endloop
@@ -3419,11 +3554,6 @@ function WrapUpAllBuildings takes player whichPlayer, real x, real y returns int
     return counter
 endfunction
 
-// World of Warcraft Reforged savecodes:
-//constant string SAVE_CODE_DIGITS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE" // 1.9.6
-//constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O [k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII
-
-
 // Barade's Save Code System 1.0
 //
 // Allows storing and loading custom save codes which contain any information.
@@ -3446,12 +3576,11 @@ endfunction
 // Compression: We want to keep the savecodes as short as possible. Hence, we combine flags like game mode and single/multiplayer in one number. We could go even further as long as we know the maximum number of a value.
 // Another form of compression is to make the string hashes much shorter by using the modulo operation. This comes with the risk of having less different string hashes for different player names or as checksums but as long
 // as there are enough possibilities it is hard enough to fake the correct string hash value.
-library SaveCodeSystem
+library SaveCodeSystem requires WoWReforgedUtils
 
 globals
-    constant string SAVE_CODE_DIGITS = "w19B2hj5c74LHlWmAKrvGPopUuSNeRzIDkCFVQ8Y6OqdytiTJsnx0g3bMafZE"
-    //constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O [k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII
-    constant string SAVE_CODE_SEGMENT_SEPARATOR = "X" // must not be part of SAVE_CODE_DIGITS
+    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O [k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII
+    constant string SAVE_CODE_SEGMENT_SEPARATOR = "Ä" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
     constant boolean SAVE_CODE_OBFUSCATE = true
 endglobals
@@ -3491,54 +3620,6 @@ function ConvertDecimalDigitToSaveCodeDigit takes integer digit returns string
     return SubString(SAVE_CODE_DIGITS, digit, digit + 1)
 endfunction
 
-// TODO Can be slow for big numbers. Maybe move into a separate trigger with a new OpLimit.
-function ConvertDecimalNumberToSaveCodeSegment takes integer number returns string
-    local string result = ""
-    local integer start = number
-    local integer base = GetMaxSaveCodeDigits()
-    local integer mod = 0
-    //call BJDebugMsg("Converting number " + I2S(start))
-    loop
-        //call BJDebugMsg("Dividing number " + I2S(start) + " by " + I2S(base))
-        set mod = ModuloInteger(start, base)
-        set start = start / base
-        set result = ConvertDecimalDigitToSaveCodeDigit(mod) + result
-        exitwhen (start == 0)
-        //call BJDebugMsg("Result: " + result)
-    endloop
-
-    return result + SAVE_CODE_SEGMENT_SEPARATOR
-endfunction
-
-function ConvertStringToSaveCodeSegment takes string whichString returns string
-    local string result = ""
-    local integer i = 0
-    loop
-        exitwhen (i == StringLength(whichString))
-        set result = result + ConvertDecimalNumberToSaveCodeSegment(Char2Ascii(SubString(whichString, i, i + 1)))
-        set i = i + 1
-    endloop
-    return result + SAVE_CODE_SEGMENT_SEPARATOR
-endfunction
-
-function IndexOfString takes string symbol, string source returns integer
-    local integer i = 0
-    //call BJDebugMsg("Checking for symbol: " + symbol + " in source " + source)
-    loop
-        exitwhen (i == StringLength(source))
-        if (SubString(source, i, i + 1) == symbol) then
-            //call BJDebugMsg("Index: " + I2S(i))
-            return i
-        endif
-        set i = i + 1
-    endloop
-
-    call BJDebugMsg("Missing symbol " + symbol + " in source " + source)
-
-    return -1
-endfunction
-
-
 function IndexOfSaveCodeDigit takes string symbol returns integer
     return IndexOfString(symbol, SAVE_CODE_DIGITS)
 endfunction
@@ -3562,6 +3643,25 @@ function GetShiftedSaveCodeDigits takes integer n returns string
     local string saveCodeDigits = GetObfuscationSaveCodeDigits()
     local integer splitPosition = GetShiftedSaveCodeSplitPosition(n)
     return SubString(saveCodeDigits, splitPosition, GetMaxObfuscationSaveCodeDigits()) + SubString(saveCodeDigits, 0, splitPosition)
+endfunction
+
+// TODO Can be slow for big numbers. Maybe move into a separate trigger with a new OpLimit.
+function ConvertDecimalNumberToSaveCodeSegment takes integer number returns string
+    local string result = ""
+    local integer start = number
+    local integer base = GetMaxSaveCodeDigits()
+    local integer mod = 0
+    //call BJDebugMsg("Converting number " + I2S(start))
+    loop
+        //call BJDebugMsg("Dividing number " + I2S(start) + " by " + I2S(base))
+        set mod = ModuloInteger(start, base)
+        set start = start / base
+        set result = ConvertDecimalDigitToSaveCodeDigit(mod) + result
+        exitwhen (start == 0)
+        //call BJDebugMsg("Result: " + result)
+    endloop
+
+    return result + SAVE_CODE_SEGMENT_SEPARATOR
 endfunction
 
 function ConvertSaveCodeToObfuscatedVersion takes string saveCode, integer hash returns string
@@ -3693,7 +3793,21 @@ function ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode takes string saveCo
     return result
 endfunction
 
-function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, integer index returns string
+// Strings are just obfuscated per character.
+// Otherwise, we would need to store the length per character.
+// The characters must be in the savecode alphabet. Otherwise, they will become a ? character.
+function ConvertStringToSaveCodeSegment takes string whichString, integer hash returns string
+    local string result = ""
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(whichString))
+        set result = result + ConvertSaveCodeToObfuscatedVersion(SubString(whichString, i, i + 1), hash)
+        set i = i + 1
+    endloop
+    return result + SAVE_CODE_SEGMENT_SEPARATOR
+endfunction
+
+function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, integer index, integer hash returns string
     local string substr = ""
     local string result = ""
     local integer separatorCounter = 0
@@ -3714,7 +3828,7 @@ function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, int
     set i = 0
     loop
         exitwhen (i == StringLength(substr))
-        set result = result + Ascii2Char(ConvertSaveCodeSegmentIntoDecimalNumber(SubString(substr, i, i + 1), n))
+        set result = result + ConvertSaveCodeFromObfuscatedVersion(SubString(substr, i, i + 1), hash)
         //call BJDebugMsg("Result " + I2S(result))
         set n = n - 1
         set i = i + 1
@@ -4894,198 +5008,6 @@ function DisplaySaveCodeErrorSameGame takes player whichPlayer returns nothing
     call DisplaySaveCodeError(whichPlayer, "Savecode from the same game!")
 endfunction
 
-// wowr1.9.9.w3x
-function ApplySaveCodeOld takes player whichPlayer, string s returns boolean
-    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
-    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
-    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
-    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
-    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
-    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
-    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
-    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
-    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
-    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
-    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
-    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
-    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
-    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
-    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
-    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
-    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
-    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
-    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
-    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
-    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
-    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
-
-    //call BJDebugMsg("Obfuscated save code: " + s)
-    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
-
-    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
-    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
-    //call BJDebugMsg("Checksum: " + I2S(checksum))
-
-    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
-    //call BJDebugMsg("Save code XP " + I2S(xp))
-
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
-        call SetPlayerStateIfHigher(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
-        call SetPlayerStateIfHigher(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
-        call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
-
-        set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
-        set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
-        set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
-        set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
-        set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
-        set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
-
-        if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
-            call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
-        endif
-
-        if (udg_Held[GetConvertedPlayerId(whichPlayer)] == null and xp > udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)]) then
-            set udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)] = xp
-        endif
-
-        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
-            call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
-        endif
-
-        if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
-            set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
-        endif
-
-        return true
-    endif
-
-    return false
-endfunction
-
-// 2.0 and 2.1 in development
-function ApplySaveCodeOld2 takes player whichPlayer, string s returns boolean
-    local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(GetPlayerName(whichPlayer)))
-    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
-    local integer isSinglePlayerAndWarlord = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 1)
-    local integer gameType = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 2)
-    local integer xpRate = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 3)
-    local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 4)
-    local boolean isSinglePlayer = GetSinglePlayerFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local boolean isWarlord = GetWarlordFromSaveCodeSegment(isSinglePlayerAndWarlord)
-    local integer gold = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 5)
-    local integer lumber = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 6)
-    local integer evolutionLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 7)
-    local integer powerGeneratorLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 8)
-    local integer handOfGodLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 9)
-    local integer mountLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 10)
-    local integer masonryLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 11)
-    local integer heroKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 12)
-    local integer heroDeaths = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 13)
-    local integer unitKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 14)
-    local integer unitDeaths =  ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 15)
-    local integer buildingsRazed = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 16)
-    local integer totalBossKills = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 17)
-    local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 18)
-    local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 19)
-    local integer improvedNavyLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 20)
-    local integer improvedCreepHunterLevel = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 21)
-    local integer demigodValue = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 22)
-    local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
-    local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
-    local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
-
-    //call BJDebugMsg("Obfuscated save code: " + s)
-    //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
-
-    //call BJDebugMsg("Checked save code part: " + checkedSaveCode)
-    //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(checkedSaveCode)))
-    //call BJDebugMsg("Checksum: " + I2S(checksum))
-
-    //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
-    //call BJDebugMsg("Save code XP " + I2S(xp))
-
-    if (not IsGeneratedSaveCode(s)) then
-        if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(GetPlayerName(whichPlayer)) and isSinglePlayer == IsInSinglePlayer() and gameType == udg_GameType and isWarlord == udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)] and xpRate == R2I(GetPlayerHandicapXPBJ(whichPlayer)) and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
-            if (demigodValue == 1) then
-                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
-                if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
-                    set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
-                    call TriggerExecute(gg_trg_Become_Demigod_Light)
-                endif
-            elseif (demigodValue == 2) then
-                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
-                if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
-                    set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
-                    call TriggerExecute(gg_trg_Become_Demigod_Dark)
-                endif
-            elseif (demigodValue == 3) then
-                call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
-            endif
-
-            call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
-            call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_POWER_GENERATOR, powerGeneratorLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_HAND_OF_GOD, handOfGodLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MOUNT, mountLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_MASONRY, masonryLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_NAVY, improvedNavyLevel)
-            call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_IMPROVED_CREEP_HUNTER, improvedCreepHunterLevel)
-
-            set udg_HeroKills[GetConvertedPlayerId(whichPlayer)] = heroKills
-            set udg_HeroDeaths[GetConvertedPlayerId(whichPlayer)] = heroDeaths
-            set udg_UnitKills[GetConvertedPlayerId(whichPlayer)] = unitKills
-            set udg_UnitsLost[GetConvertedPlayerId(whichPlayer)] = unitDeaths
-            set udg_BuildingsRazed[GetConvertedPlayerId(whichPlayer)] = buildingsRazed
-            set udg_BossKills[GetConvertedPlayerId(whichPlayer)] = totalBossKills
-
-            if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null and xp > GetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)])) then
-                call SetHeroXP(udg_Held[GetConvertedPlayerId(whichPlayer)], xp, true)
-            endif
-
-            if (udg_Held[GetConvertedPlayerId(whichPlayer)] == null and xp > udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)]) then
-                set udg_CharacterStartXP[GetConvertedPlayerId(whichPlayer)] = xp
-                set udg_TmpPlayer = whichPlayer
-                set udg_TmpInteger = GetHeroLevelByXP(xp)
-                call TriggerExecute(gg_trg_Hero_Journey_Update_from_Level)
-            endif
-
-            if (udg_Held2[GetConvertedPlayerId(whichPlayer)] != null and xp2 > GetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)])) then
-                call SetHeroXP(udg_Held2[GetConvertedPlayerId(whichPlayer)], xp2, true)
-            endif
-
-            if (udg_Held2[GetConvertedPlayerId(whichPlayer)] == null and xp2 > udg_Held2XP[GetConvertedPlayerId(whichPlayer)]) then
-                set udg_Held2XP[GetConvertedPlayerId(whichPlayer)] = xp2
-            endif
-
-            if (udg_Held3[GetConvertedPlayerId(whichPlayer)] != null and xp3 > GetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)])) then
-                call SetHeroXP(udg_Held3[GetConvertedPlayerId(whichPlayer)], xp3, true)
-            endif
-
-            if (udg_Held3[GetConvertedPlayerId(whichPlayer)] == null and xp3 > udg_Held3XP[GetConvertedPlayerId(whichPlayer)]) then
-                set udg_Held3XP[GetConvertedPlayerId(whichPlayer)] = xp3
-            endif
-
-            return true
-        endif
-    else
-        call DisplaySaveCodeErrorSameGame(whichPlayer)
-    endif
-
-    // for savecodes from older versions of the map
-    return ApplySaveCodeOld(whichPlayer, s)
-endfunction
-
 function RemoveEquipmentBags takes player whichPlayer returns nothing
     local integer max = BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
     local unit member = null
@@ -5247,8 +5169,7 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
         call DisplaySaveCodeErrorSameGame(whichPlayer)
     endif
 
-    // for savecodes from older versions of the map
-    return ApplySaveCodeOld2(whichPlayer, s)
+    return false
 endfunction
 
 function GetSaveCodeErrors takes player whichPlayer, string s returns string
@@ -8030,8 +7951,8 @@ function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, str
     local integer playerNameToHash = CompressedAbsStringHash(playerNameTo)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameToHash)
 
-    set result = result + ConvertStringToSaveCodeSegment(playerNameFrom)
-    set result = result + ConvertStringToSaveCodeSegment(message)
+    set result = result + ConvertStringToSaveCodeSegment(playerNameFrom, playerNameToHash)
+    set result = result + ConvertStringToSaveCodeSegment(message, playerNameToHash)
 
     // checksum
     set result = result + ConvertDecimalNumberToSaveCodeSegment(CompressedAbsStringHash(result))
@@ -8053,8 +7974,8 @@ function GetSaveCodeInfosLetter takes string playerNameTo, string s returns stri
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerNameTo))
     local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local string playerNameToText = playerNameTo
-    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
-    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1, playerNameToHash)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2, playerNameToHash)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -8090,8 +8011,8 @@ function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerNameTo))
     local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local string playerNameToText = playerNameTo
-    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
-    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1, playerNameToHash)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2, playerNameToHash)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -8120,14 +8041,14 @@ endfunction
 
 function ApplySaveCodeLetter takes player whichPlayer, string playerName, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
-    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
-    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
-    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1, playerNameToHash)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2, playerNameToHash)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
 
-    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameHash == CompressedAbsStringHash(playerName)) then
+    if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameToHash == CompressedAbsStringHash(playerName)) then
         call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 40.0, "Letter from " + playerNameFrom + ": " + message)
 
         return true
@@ -8138,9 +8059,9 @@ endfunction
 
 function GetSaveCodeErrorsLetter takes player whichPlayer, string playerName, string s returns string
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
-    local integer playerNameHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
-    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1)
-    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2)
+    local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
+    local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1, playerNameToHash)
+    local string message = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 2, playerNameToHash)
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
@@ -8151,7 +8072,7 @@ function GetSaveCodeErrorsLetter takes player whichPlayer, string playerName, st
         set result = result + "Expected different checksum!"
     endif
 
-    if (playerNameHash != CompressedAbsStringHash(playerName)) then
+    if (playerNameToHash != CompressedAbsStringHash(playerName)) then
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
@@ -11676,135 +11597,6 @@ function DisableOrderDebugger takes nothing returns nothing
     call DisableTrigger(orderTrigger)
 endfunction
 
-// Tree Finding System
-
-function IsDestructableTree takes destructable whichDestructable returns boolean
-     if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'ATtr' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'ATtc' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'BTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'BTtc' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'KTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'YTst' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'YTft' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'YTwt' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'YTct' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'JTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'DTsh' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'CTtr' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'CTtc' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'ITtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'ITtc' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'LTlt' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'WTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'NTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'WTst' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'OTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'ZTtw' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'ZTtc' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'GTsh' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'VTlt' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'FTtw' ) ) then
-        return true
-    endif
-    // Easter Trees
-    if ( ( GetDestructableTypeId(whichDestructable) == 'B005' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'B006' ) ) then
-        return true
-    endif
-    if ( ( GetDestructableTypeId(whichDestructable) == 'B006' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function EnumLivingTreeDestructablesInCircleFilter takes nothing returns boolean
-    local boolean result = IsDestructableAliveBJ(GetFilterDestructable()) and IsDestructableTree(GetFilterDestructable())
-    local location destLoc = null
-
-    if (result) then
-        set destLoc = GetDestructableLoc(GetFilterDestructable())
-        set result = DistanceBetweenPoints(destLoc, bj_enumDestructableCenter) <= bj_enumDestructableRadius
-        call RemoveLocation(destLoc)
-        set destLoc = null
-    endif
-
-    return result
-endfunction
-
-function RandomLivingTreeDestructableInCircle takes real radius, location loc returns destructable
-    local boolexpr whichFilter= Filter(function EnumLivingTreeDestructablesInCircleFilter)
-    local rect r
-
-    if (radius >= 0) then
-        set bj_enumDestructableCenter = loc
-        set bj_enumDestructableRadius = radius
-        set bj_destRandomConsidered = 0
-        set bj_destRandomCurrentPick = null
-        set r = GetRectFromCircleBJ(loc, radius)
-        call EnumDestructablesInRect(r, whichFilter, function RandomDestructableInRectBJEnum)
-        call RemoveRect(r)
-        set r = null
-    endif
-
-    call DestroyBoolExpr(whichFilter)
-    set whichFilter = null
-
-    return bj_destRandomCurrentPick
-endfunction
-
 // Baradé's Item Unstack System 1.6
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
@@ -12098,7 +11890,7 @@ endfunction
 
 endlibrary
 
-// Baradé's Black Arrow System 1.2
+// Baradé's Black Arrow System 1.1
 //
 // Supports Black Arrow abilities for target units with levels greater than 5.
 // The standard Black Arrow abilities from Warcraft only work with target units up to level 5.
@@ -12106,13 +11898,14 @@ endlibrary
 // Usage:
 // - Copy this code into your map script or a trigger converted into code.
 // - Copy the custom buff ability "Black Arrow Buff" (A000) into your map and adapt the raw code in the constant BUFF_ABILITY_ID to the new raw code in your map.
+// - Optional: Add all preplaced units in your map with enabled Black Arrow auto casting using the function BlackArrowAddAutoCaster.
 // - Optional: Use the API functions to register custom abilities and item types.
 // - Optional: Create triggers and register Black Arrow events for further custom actions.
 //
 // Design:
 // Auto casters are detected by issued orders. Preplaced units are created in the generated map script function CreateAllUnits which is called in the generated
 // method main before the initialization of this system. This means that issued orders from preplaced units won't be detected by the system's order triggers.
-// Hence, we have to hook the function IssueImmediateOrder to detect the orders of preplaced units.
+// Hence, you have to use the function BlackArrowAddAutoCaster to add all preplaced units in your map with enabled Black Arrow auto casting.
 //
 // API:
 //
@@ -12127,6 +11920,20 @@ endlibrary
 // Adds an item type which has the Black Arrow ability with the given index. You can combine this function with BlackArrowAddAbility and directly add the ability when adding the item type.
 // Whenever a unit with carrying an item with the added item type kills a target unit with a level greater than 5, it will automatically summon the minions with the given configuration from the given ability.
 // The function returns a unique index refering to the added item type. The first index starts at 1.
+//
+//
+// function BlackArrowAddAutoCaster takes unit whichUnit returns nothing
+//
+// Adds the given unit as auto caster. This is required to detect damage caused by auto casters and cast the Black Arrow effect.
+// All preplaced units with an enabled Black Arrow ability in the map must be added manually with this function.
+//
+// function BlackArrowRemoveAutoCaster takes unit whichUnit returns nothing
+//
+// Removes the given unit from the group of auto casters.
+//
+// function BlackArrowIsAutoCaster takes unit which returns boolean
+//
+// Returns true if the given unit is an auto caster. Otherwise, it returns false.
 //
 // function TriggerRegisterBlackArrowEvent takes trigger whichTrigger returns nothing
 //
@@ -12144,6 +11951,10 @@ endlibrary
 // function GetTriggerBlackArrowSummonedUnits takes nothing returns group
 //
 // Returns all summoned minions for the current callback trigger. Never destroy this group since it is basically bj_lastCreatedGroup and does not leak.
+//
+// function GetTriggerBlackArrowAbilityId takes nothing returns integer
+//
+// Returns the ability ID of the casted Black Arrow ability.
 //
 library BlackArrowSystem
 
@@ -12171,7 +11982,7 @@ globals
 
     private hashtable BlackArrowHashTable = InitHashtable()
     private group BlackArrowTargets = CreateGroup()
-    private group BlackArrowCasters = CreateGroup()
+    private group BlackArrowAutoCasters = CreateGroup()
     private group BlackArrowItemUnits = CreateGroup()
     private trigger BlackArrowDamageTrigger = CreateTrigger()
     private trigger BlackArrowDeathTrigger = CreateTrigger()
@@ -12183,6 +11994,7 @@ globals
     private unit BlackArrowCaster = null
     private unit BlackArrowTarget = null
     private group BlackArrowSummonedUnits = null
+    private integer BlackArrowAbilityId = 0
     private trigger array BlackArrowCallbackTrigger
     private integer BlackArrowCallbackTriggerCounter = 0
 
@@ -12199,6 +12011,10 @@ endfunction
 
 function GetTriggerBlackArrowSummonedUnits takes nothing returns group
     return BlackArrowSummonedUnits
+endfunction
+
+function GetTriggerBlackArrowAbilityId takes nothing returns integer
+    return BlackArrowAbilityId
 endfunction
 
 function TriggerRegisterBlackArrowEvent takes trigger whichTrigger returns nothing
@@ -12230,9 +12046,21 @@ function BlackArrowAddItemTypeId takes integer itemTypeId, integer abilityIndex 
     return BlackArrowItemTypeCounter - 1
 endfunction
 
+function BlackArrowAddAutoCaster takes unit whichUnit returns nothing
+    call GroupAddUnit(BlackArrowAutoCasters, whichUnit)
+endfunction
+
+function BlackArrowRemoveAutoCaster takes unit whichUnit returns nothing
+    call GroupRemoveUnit(BlackArrowAutoCasters, whichUnit)
+endfunction
+
+function BlackArrowIsAutoCaster takes unit which returns boolean
+    return IsUnitInGroup(which, BlackArrowAutoCasters)
+endfunction
+
 function BlackArrowPrintDebug takes nothing returns nothing
     call BJDebugMsg("Targets: " + I2S(CountUnitsInGroup(BlackArrowTargets)))
-    call BJDebugMsg("Casters: " + I2S(CountUnitsInGroup(BlackArrowCasters)))
+    call BJDebugMsg("Auto Casters: " + I2S(CountUnitsInGroup(BlackArrowAutoCasters)))
     call BJDebugMsg("Item Units: " + I2S(CountUnitsInGroup(BlackArrowItemUnits)))
 endfunction
 
@@ -12302,11 +12130,12 @@ private function MarkTarget takes integer abilityIndex, unit source, unit target
     endif
 endfunction
 
-private function ExecuteCallbackTriggers takes unit source, unit target, group summonedUnits returns nothing
+private function ExecuteCallbackTriggers takes unit source, unit target, group summonedUnits, integer abilityId returns nothing
     local integer i = 0
     set BlackArrowCaster = source
     set BlackArrowTarget = target
     set BlackArrowSummonedUnits = summonedUnits
+    set BlackArrowAbilityId = abilityId
     loop
         exitwhen (i == BlackArrowCallbackTriggerCounter)
         call TriggerExecute(BlackArrowCallbackTrigger[i])
@@ -12326,7 +12155,7 @@ private function SummonEffect takes integer abilityIndex, unit source, unit targ
         set i = i + 1
     endloop
 
-    call ExecuteCallbackTriggers(source, target, summonedUnits)
+    call ExecuteCallbackTriggers(source, target, summonedUnits, BlackArrowAbiliyId[abilityIndex])
 
     return summonedUnits
 endfunction
@@ -12360,7 +12189,7 @@ private function Effect takes unit target returns group
 endfunction
 
 private function TriggerConditionDamage takes nothing returns boolean
-    return not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_RESISTANT) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MAGIC_IMMUNE) and GetUnitLevel(GetTriggerUnit()) > 5 and ((IsUnitInGroup(GetEventDamageSource(), BlackArrowCasters) and GetMatchingBlackArrowAbilityIndex(GetEventDamageSource()) > 0) or IsUnitInGroup(GetEventDamageSource(), BlackArrowItemUnits))
+    return not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_RESISTANT) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_MAGIC_IMMUNE) and GetUnitLevel(GetTriggerUnit()) > 5 and ((IsUnitInGroup(GetEventDamageSource(), BlackArrowAutoCasters) and GetMatchingBlackArrowAbilityIndex(GetEventDamageSource()) > 0) or IsUnitInGroup(GetEventDamageSource(), BlackArrowItemUnits))
 endfunction
 
 function BlackArrowUnitGetOrbItem takes unit whichUnit, item excludeItem returns integer
@@ -12399,13 +12228,13 @@ endfunction
 
 private function TriggerActionOrder takes nothing returns nothing
     if (GetIssuedOrderId() == OrderId(ORDER_ON)) then
-        if (not IsUnitInGroup(GetTriggerUnit(), BlackArrowCasters)) then
-            call GroupAddUnit(BlackArrowCasters, GetTriggerUnit())
+        if (not BlackArrowIsAutoCaster(GetTriggerUnit())) then
+            call BlackArrowAddAutoCaster(GetTriggerUnit())
         //call BJDebugMsg("Adding unit " + GetUnitName(caster) + " to casters.")
         endif
     else
-        if (IsUnitInGroup(GetTriggerUnit(), BlackArrowCasters)) then
-            call GroupRemoveUnit(BlackArrowCasters, GetTriggerUnit())
+        if (BlackArrowIsAutoCaster(GetTriggerUnit())) then
+            call BlackArrowRemoveAutoCaster(GetTriggerUnit())
             //call BJDebugMsg("Removing unit " + GetUnitName(GetTriggerUnit()) + " from casters.")
         endif
     endif
@@ -12486,7 +12315,6 @@ endif
 static if (ADD_ALL_UNITS_WITH_ORBS) then
         call AddAllUnitsWithOrbs()
 endif
-        set hookEnabled = false
     endmethod
 endmodule
 
@@ -12494,27 +12322,14 @@ private struct S
     implement Init
 endstruct
 
-private function IssueImmediateOrderHook takes unit whichUnit, string order returns nothing
-    if (hookEnabled and order == ORDER_ON) then
-        if (not IsUnitInGroup(whichUnit, BlackArrowCasters)) then
-            call GroupAddUnit(BlackArrowCasters, whichUnit)
-        //call BJDebugMsg("Adding unit " + GetUnitName(caster) + " to casters.")
-        endif
-    endif
-endfunction
-
-hook IssueImmediateOrder IssueImmediateOrderHook
-
 // ChangeLog:
 //
-// 1.2 2022-08-20:
+// 1.1 2022-09-24:
 // - Use vJass and a library, many private declarations and with early automatic initialization in a module.
 // - Add options ADD_STANDARD_OBJECT_DATA and ADD_ALL_UNITS_WITH_ORBS.
-// - Remove BlackArrowAddAutoCaster since the hook should detect the orders of preplaced units now.
+// - Add function BlackArrowIsAutoCaster.
 // - BlackArrowAbiliyDurationHero is used for target heroes now.
 // - Add API documentation with usable functions.
-//
-// 1.1 2022-04-16:
 // - Add event handling functions which allow adding actions to Black Arrow events.
 // - Refactor some functions.
 endlibrary
@@ -16054,3 +15869,161 @@ static if (SUPPORT_TRIGGER_GROUPS) then
 endif
 
 endlibrary
+
+// Baradé's Item Crafting System 1.0
+//
+// Allows crafting items by using the items in the unit inventory.
+// The required items can change a research required for the item to be sold.
+//
+library ItemCraftingSystem
+
+globals
+    public constant integer MAX_REQUIREMENTS = 6
+
+    private integer array recipesItemTypeIds
+    private integer array recipesRequirementCounters
+    private trigger array recipesRequirementTriggers
+    private integer array recipesRequirementItemTypeIds
+    private integer array recipesRequirementCharges
+    private integer array recipesRequirementUIResearchIds
+    private integer recipesCounter = 0
+
+    private group itemCraftingUnits = CreateGroup()
+endglobals
+
+function AddRecipe takes integer itemTypeId returns integer
+    local integer index = recipesCounter
+    set recipesItemTypeIds[index] = itemTypeId
+    set recipesRequirementCounters[index] = 0
+    set recipesCounter = recipesCounter + 1
+    return index
+endfunction
+
+function AddReceipeRequirementTrigger takes integer receipe, trigger whichTrigger returns nothing
+endfunction
+
+function AddReceipeRequirementItem takes integer recipe, integer itemTypeId, integer charges, integer uiResearchId returns nothing
+endfunction
+
+function EnableItemCraftingUnit takes unit whichUnit returns nothing
+    call GroupAddUnit(itemCraftingUnits, whichUnit)
+endfunction
+
+function DisableItemCraftingUnit takes unit whichUnit returns nothing
+    call GroupRemoveUnit(itemCraftingUnits, whichUnit)
+endfunction
+
+function IsItemCraftingUnitEnabled takes unit whichUnit returns boolean
+    return IsUnitInGroup(whichUnit, itemCraftingUnits)
+endfunction
+
+endlibrary
+
+// Add all prestored savecodes into this function
+function InitPrestoredSaveCodes takes nothing returns nothing
+    // ##############################################################
+    // all
+    // Hello citizens!
+    call AddPrestoredSaveCodeLetter("all", "?bGl~x:RVRY)Gwu::~T?Y)Y%u43oG?WG")
+    // ##############################################################
+    call AddPrestoredSaveCode("Razuqze#1414", "WNHAHlHmPHWSyHRbHK4UHmHlHlHlHlHlHlHmmHrHvHlHlHlHlHlHlHWjH")
+    // ##############################################################
+    // Runeblade14#2451
+    call AddPrestoredSaveCode("Runeblade14#2451", "nVTxTJTnMTlAsHTgUldTsHl9TRT0TPT4TaTlTST38TxTZTndT2dXTJTJTJTJTnlT")
+    call AddPrestoredSaveCode("Runeblade14#2451", "nVTnTJTsuT3wrsTeKNTsR81TsbT0TPT4TaTnTUTxATnTsTxxT2dXTJTJTJTJTCT")
+    call AddPrestoredSaveCode("Runeblade14#2451", "nVTxTJTnMTIvjATZLM9TnhCQTCT0TpT4TaT3TeTkTnTJTgXT2dXTJTJTJTJTsJT")
+    // ##############################################################
+    // WorldEdit
+    call AddPrestoredSaveCode("WorldEdit", "zZeReRezjeKpgxRebkeF1eReReReReReIeRe5eIezezeReReReReReIxe")
+    call AddPrestoredSaveCode("WorldEdit", "zZezeReIQeD2Z5YeykqneyFudekeReReReReReReReIeReReReReReReRez3e")
+    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Freelancer-items-4-Green Dragon Whelp Egg,Green Drake Egg,Green Dragon Whelp Egg,Green Drake Egg.txt
+    call AddPrestoredSaveCodeItems("WorldEdit", "zZezeReIQeXezewezeXezewezeIRe")
+    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Warlord-items-5-Orb of Fire,Orb of Fire,Orb of Fire,Orb of Fire,Orb of Fire.txt
+    call AddPrestoredSaveCodeItems("WorldEdit", "zZeReRezjezqeRezqeRezqeRezqeRezqeReISe")
+    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Warlord-buildings-8-Dragonhawk Aviary,Mage Tower,Mage Tower,High Elven Guard Tower,High Elf Stables,Enchanter Tower,Bazaar,High Elf Barracks.txt
+    call AddPrestoredSaveCodeBuildings("WorldEdit", "zZeReRezjezreI6ye8wTezleI0re8jBezleIgPeYFpezAeIxme8XyezHeIxme8N9ezLeI1se8SXezmeIiwe8Z8ez4eIOTe8jBezke")
+    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Warlord-units-10-8Arch Cleric,3Archer,2Ranger,4Captain,2Swordsman,2War Eagle,3Dragonhawk,2Dragonhawk Rider,1Birdiepult,2High Elf Knight
+    call AddPrestoredSaveCodeBuildings("WorldEdit", "zZeReRezjezreQez7eDez4eIezHekezLeIezmeIezWeDezPeIezlezezKeIeI7e")
+    // ##############################################################
+    // Barade#2569
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Freelancer-level1-1000-level2-1000-level3-1000-gold-800000-lumber-800000.txt
+    call AddPrestoredSaveCode("Barade#2569", "06sgsns0fsgureEsgvJCsgvJCs2HsxNsxNsxNsxNs0ZZsnsb4Osnsb4OsxcTsgureEsgureEsxNsxNs0sgszs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-level1-1000-level2-1000-level3-1000-gold-800000-lumber-800000.txt
+    call AddPrestoredSaveCode("Barade#2569", "06s0snsxNsgureEsgvJCsgvJCs2HsxNsxNsxNsxNs0ZZsnsb4Osnsb4OsxcTsgureEsgureEsxNsxNs0sgsxQs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-level1-1000-level2-1000-level3-1000-gold-800000-lumber-800000.txt
+    call AddPrestoredSaveCode("Barade#2569", "06s0snsxNsgureEsgvJCsgvJCs2HsxNsxNsxNsxNs0ZZsnsb4Osnsb4OsxcTsgureEsgureEsxNsxNs0sgsxQs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-level1-13-level2-1-level3-1-gold-8897-lumber-95445.txt
+    call AddPrestoredSaveCode("Barade#2569", "06s0snsxNs0mFs0L6slNRsnsnsnsnsnsasxsgCs0sxsxsnsnsnsnsnsnsxcs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-items-6-Gloves of Haste,Potion of Invulnerability,Scroll of Restoration,Ankh of Reincarnation,Healing Wards,Health Stone.txt
+    call AddPrestoredSaveCodeItems("Barade#2569", "06s0snsxNsTsxNsgsxNs7sxNsLsxNsxusxNs0sxNsxns")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-items-4-Bow of Fire,Bow of Fire,Bow of Fire,Mithril Long Sword.txt
+    call AddPrestoredSaveCodeItems("Barade#2569", "06s0snsxNsZsnsZsnsZsnsEsnsts")
+    // WorldOfWarcraftReforged-Barade#2569-Singleplayer-Normal-Freelancer-items-6-Gloves of Haste,Potion of Invulnerability,Scroll of Restoration,Ankh of Reincarnation,Healing Wards,Health Stone.txt
+    call AddPrestoredSaveCodeItems("Barade#2569", "06sxsnsxNsTsxNsgsxNs7sxNsLsxNsxusxNs0sxNsUs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-buildings-8-Outpost,Outpost,Outpost,Outpost,Dragonhawk Aviary,Dragonhawk Aviary,Mage Tower,Mage Tower.txt
+    call AddPrestoredSaveCodeBuildings("Barade#2569", "06s0snsxNsx8sfRYs3LPsx8sfRYs3AVsx8sfwAs3o0sx8sfzqs3nAsxYsfeVs3bIsxYsfa1s31gsxCsfc6s3HUsxCsflgs30osEs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-units-6-10Clan Emissary,2Blue Drake,1Black Dragon,1Blood Elf Lieutenant,3High Elf Knight,1Archer.txt
+    call AddPrestoredSaveCodeUnits("Barade#2569", "06s0snsxNsbasEsxys0s0asxstsxsxYsgsxIsxsnsnsnsnsnsnsnsns0bs")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-units-6-30Red Dragon,30Green Dragon,30Black Dragon,30Blue Dragon,30Bronze Dragon,30Nether Dragon
+    call AddPrestoredSaveCodeUnits("Barade#2569", "06s0snsxNs0EsrsxTsrs0asrs01srs0xsrs03srsnsnsnsnsnsnsnsnsxs")
+    // ##############################################################
+    // AntiDenseMan#1202
+    // WorldOfWarcraftReforged-AntiDenseMan#1202-Multiplayer-Normal-Warlord-level1-4-level2-0-level3-0-gold-37077-lumber-27049
+    call AddPrestoredSaveCode("AntiDenseMan#1202", "NgueuSuNButduFoWukq0uSuSuSuSuSuSuNu4uzuSuSuSuSuSuSuSu3u")
+    // WorldOfWarcraftReforged-AntiDenseMan#1202-Multiplayer-Normal-Warlord-units-3-1Heavy Tank,4Assault Tank,3Goblin War Zeppelin
+    call AddPrestoredSaveCodeUnits("AntiDenseMan#1202", "NgueuSuNBuNZuNuNbuzuNjuRuSuSuSuSuSuSuSuSuSuSuSuSuSuSuku")
+    // WorldOfWarcraftReforged-AntiDenseMan#1202-Multiplayer-Normal-Warlord-items-6-Bow of Fire,Bow of Fire,Bow of Fire,Bow of Fire,Bow of Fire,Bow of Fire.txt
+    call AddPrestoredSaveCodeItems("AntiDenseMan#1202", "NgueuSuNBuFuSuFuSuFuSuFuSuFuSuFuSuedu")
+    // ##############################################################
+    // MeowPeow#21783
+    // WorldOfWarcraftReforged-MeowPeow#21783-Multiplayer-Normal-Warlord-level1-7-level2-1-level3-1-gold-13570-lumber-17369.txt
+    call AddPrestoredSaveCode("MeowPeow#21783", "Wj7j5jcijbRj4iFjLT0j5j5j5j5j5jcjcjcRjvj5j5j5j5j5j5j5j5jEj")
+    // WorldOfWarcraftReforged-MeowPeow#21783-Multiplayer-Normal-Warlord-buildings-8-Slaughterhouse,Slaughterhouse,Graveyard,Graveyard,Temple of the Damned,Temple of the Damned,Spirit Tower,Spirit Tower.txt
+    call AddPrestoredSaveCodeBuildings("MeowPeow#21783", "Wj7j5jcijqjWB3jm1YjqjWfkjm1YjOjmASjAoFjOjmLLjAAKjdjWfkjA7EjdjWB3jA7EjJjWztjmbTjJjWNVjmagjczj")
+    // ##############################################################
+    // StiX#1311
+    // WorldOfWarcraftReforged-StiX#1311-Multiplayer-Normal-Freelancer-level1-10-level2-1-level3-1-gold-1144-lumber-0.txt
+    call AddPrestoredSaveCode("StiX#1311", "bTgag3gMwgbPUg48g3g3g3g3g3g3g3gbgMLgag3g3g3g3g3g3g3g3g2g")
+    // WorldOfWarcraftReforged-StiX#1311-Multiplayer-Normal-Freelancer-items-3-Khadgar's Pipe of Insight,Scourge Bone Chimes,Ancient Janggo of Endurance.txt
+    call AddPrestoredSaveCodeItems("StiX#1311", "bTgag3gMwg8g3gOg3gQg3gbEg")
+    // ##############################################################
+    // Rhum#11986
+    // WorldOfWarcraftReforged-Rhum#11986-Multiplayer-Normal-Warlord-level1-9-level2-1-level3-1-gold-19998-lumber-18444.txt
+    call AddPrestoredSaveCode("Rhum#11986", "4252h2jy2jKm24NM271N2h2h2h2h2h2j252jj2c2h2h2h2h2h2h2h2h2jH2")
+    // ##############################################################
+    // BobElDonuts#2355
+    // WorldOfWarcraftReforged-BobElDonuts#2355-Multiplayer-Normal-Freelancer-level1-14-level2-1-level3-1-gold-2403-lumber-0.txt
+    call AddPrestoredSaveCode("BobElDonuts#2355", "qxbx0x3Ex3TPxRWx0x0x0x0x0x0x0x0x3ZxMx0x0x0x0x0x0x0x0xQx")
+    // ##############################################################
+    // Cryingbandi#2663
+    // WorldOfWarcraftReforged-Cryingbandi#2663-Multiplayer-Normal-Warlord-level1-20-level2-1-level3-1-gold-26279-lumber-3791.txt
+    call AddPrestoredSaveCode("Cryingbandi#2663", "8HF8FVFQlFqQtFdYpFQQtFOFQFVFVFVF8F6FYaF6F6FQFVFVFYFqFVFVF9F")
+    // ##############################################################
+    // Dragon#18628
+    // WorldOfWarcraftReforged-Dragon#18628-Multiplayer-Normal-Warlord-level1-9-level2-0-level3-0-gold-10783-lumber-9960.txt
+    call AddPrestoredSaveCode("Dragon#18628", "VJxJsJnSJn7PJxOCJxe2JsJnJsJsJsJsJ0JgTJgJsJsJsJsJsJsJxCJ")
+    // ##############################################################
+    // Racnel#1228
+    // WorldOfWarcraftReforged-Racnel#1228-Multiplayer-Normal-Warlord-level1-9-level2-1-level3-1-gold-17506-lumber-10826.txt
+    call AddPrestoredSaveCode("Racnel#1228", "bi0b0g03z03ht0akx0biG0g0g0g0g0g0f0a0aj0f0f0a0g0g0g0g0g0g0bS0")
+    // ##############################################################
+    // CLANS
+    // MULTIPLAYER
+    // TheElvenClan
+    // WorldOfWarcraftReforged-Clan-TheElvenClan-WorldEdit-Multiplayer-gold-10000-lumber-10000-WorldEdit_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain.txt
+    call AddPrestoredSaveCodeClan("TheElvenClan", false, ">c!cMc>c>uKc>uKcucuc>;cMc>;cMc>icMc@c>c>Ec>cMcMcMcMc>cic")
+    call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
+    call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
+    call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
+    call AddPrestoredSaveCodeClanPlayer("Runeblade14#2451", udg_ClanRankCaptain)
+    call AddPrestoredSaveCodeClanPlayer("AntiDenseMan#1202", udg_ClanRankCaptain)
+    // SINGLEPLAYER
+    // TheElvenClan
+    // WorldOfWarcraftReforged-Clan-TheElvenClan-WorldEdit-Singleplayer-gold-10000-lumber-10000-WorldEdit_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain.txt
+    call AddPrestoredSaveCodeClan("TheElvenClan", true, "Mc!cMc>c>uKc>uKcucuc>;cMc>;cMc>icMc@c>c>Ec>cMcMcMcMc>c>*c")
+    call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
+    call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
+    call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
+    call AddPrestoredSaveCodeClanPlayer("Runeblade14#2451", udg_ClanRankCaptain)
+    call AddPrestoredSaveCodeClanPlayer("AntiDenseMan#1202", udg_ClanRankCaptain)
+endfunction

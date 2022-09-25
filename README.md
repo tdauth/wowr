@@ -611,3 +611,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Jab1z: [Zeus Lord of Olympus](https://www.hiveworkshop.com/threads/zeus-lord-of-olympus.341085/)
 * purparisien: [Ancient Barracks](https://www.hiveworkshop.com/threads/ancient-barracks.321483/)
 * Fingolfin: [Roman Heavy Cavalry](https://www.hiveworkshop.com/threads/roman-heavy-cavalry.339258/)
+* Maker: [Jump System v. 1.0.1.6](https://www.hiveworkshop.com/threads/jump-system-v-1-0-1-6.230294/)
+* bakr: [Assorted Farm Buildings](https://www.hiveworkshop.com/threads/assorted-farm-buildings.336611/)
+* bakr: [Kultiras Structures and Doodads](https://www.hiveworkshop.com/threads/kultiras-structures-and-doodads.338876/)
+* RightField: [Branch](https://www.hiveworkshop.com/threads/branch.49481/)
