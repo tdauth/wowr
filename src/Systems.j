@@ -7947,7 +7947,28 @@ function CreateSaveCodeLetterTextFile takes string playerNameFrom, string player
     call PreloadGenEnd("WorldOfWarcraftReforged-letter-from_" + playerNameFrom + "-to_" + playerNameTo + "-messageLength_" + I2S(StringLength(message)) + ".txt")
 endfunction
 
+function AddGeneratedSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns nothing
+    local integer index = 0
+    local integer i = 0
+    loop
+        exitwhen(i == bj_MAX_PLAYERS)
+        if (GetPlayerName(Player(i)) == playerNameTo) then
+            call DisplayTimedTextToPlayer(Player(i), 0.0, 0.0, 40.0, "You received a letter from " + playerNameFrom + ". Use \"-mailbox\" to list all letters.")
+            exitwhen (true)
+        endif
+        set i = i + 1
+    endloop
+    set index = PrestoredSaveCodeCounter
+    set PrestoredSaveCodePlayerName[index] = playerNameTo
+    set PrestoredSaveCode[index] = message
+    set PrestoredSaveCodeType[index] = PRESTORED_SAVECODE_TYPE_LETTER
+    set PrestoredSaveCodePlayerNamesCounter[index] = 0
+    set PrestoredSaveCodeCounter = PrestoredSaveCodeCounter + 1
+    set lastAddedPrestoredClan = index
+endfunction
+
 function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, string message returns string
+    local integer i = 0
     local integer playerNameToHash = CompressedAbsStringHash(playerNameTo)
     local string result = ConvertDecimalNumberToSaveCodeSegment(playerNameToHash)
 
@@ -7965,6 +7986,7 @@ function GetSaveCodeLetter takes string playerNameFrom, string playerNameTo, str
     call CreateSaveCodeLetterTextFile(playerNameFrom, playerNameTo, message, result)
 
     call AddGeneratedSaveCode(result)
+    call AddGeneratedSaveCodeLetter(playerNameFrom, playerNameTo, message)
 
     return result
 endfunction
