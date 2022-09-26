@@ -634,6 +634,13 @@ function DropBackpack takes player whichPlayer returns nothing
     local real y = GetUnitY(udg_Rucksack[playerId])
     // drop before so they won't have to be cleared or removed
     call DropAllItemsFromHero(udg_Rucksack[playerId])
+    set I1 = 0
+    loop
+        exitwhen (I1 == bj_MAX_INVENTORY)
+        set index = Index3D(playerId, udg_RucksackPageNumber[playerId], I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        call ClearRucksackItem(index)
+        set I1 = I1 + 1
+    endloop
     set I0 = 0
     loop
         exitwhen(I0 == udg_RucksackMaxPages)
@@ -644,6 +651,7 @@ function DropBackpack takes player whichPlayer returns nothing
             set whichItem = CreateItem(udg_RucksackItemType[index], x, y)
             call ApplyRucksackItem(whichItem, index)
             call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+            call ClearRucksackItem(index)
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
