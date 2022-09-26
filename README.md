@@ -615,3 +615,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * bakr: [Assorted Farm Buildings](https://www.hiveworkshop.com/threads/assorted-farm-buildings.336611/)
 * bakr: [Kultiras Structures and Doodads](https://www.hiveworkshop.com/threads/kultiras-structures-and-doodads.338876/)
 * RightField: [Branch](https://www.hiveworkshop.com/threads/branch.49481/)
+* Mephestrial: [Gan'arg Engineer](https://www.hiveworkshop.com/threads/ganarg-engineer.158134/)
+* Explobomb: [Core Hound](https://www.hiveworkshop.com/threads/core-hound.331564/)
+* Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.318737/)
+* Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.326594/)
+* The Panda: [BTNBlastHammer](https://www.hiveworkshop.com/threads/btnblasthammer.327759/)

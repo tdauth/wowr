@@ -2826,6 +2826,20 @@ function RespawnAllGroupsInRange takes real x, real y, real range returns intege
 	return result
 endfunction
 
+function RespawnAllItemsInRange takes real x, real y, real range returns integer
+	local integer result = 0
+	local integer i = 0
+	loop
+		exitwhen (i == GetItemRespawnCounter())
+		if (IsRespawnItemValid(i) and DistanceBetweenCoordinates(x, y, GetRespawnItemX(i), GetRespawnItemY(i)) <= range) then
+            call RespawnItem(i)
+			set result = result + 1
+		endif
+		set i = i + 1
+	endloop
+	return result
+endfunction
+
 function GetPlayerColorRed takes player p returns integer
     local playercolor c = GetPlayerColor(p)
     if c == PLAYER_COLOR_RED then
@@ -3579,7 +3593,7 @@ endfunction
 library SaveCodeSystem requires WoWReforgedUtils
 
 globals
-    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O [k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII
+    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII without space
     constant string SAVE_CODE_SEGMENT_SEPARATOR = "Ä" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
     constant boolean SAVE_CODE_OBFUSCATE = true
@@ -3798,10 +3812,15 @@ endfunction
 // The characters must be in the savecode alphabet. Otherwise, they will become a ? character.
 function ConvertStringToSaveCodeSegment takes string whichString, integer hash returns string
     local string result = ""
+    local string character = ""
     local integer i = 0
     loop
         exitwhen (i == StringLength(whichString))
-        set result = result + ConvertSaveCodeToObfuscatedVersion(SubString(whichString, i, i + 1), hash)
+        set character = SubString(whichString, i, i + 1)
+        if (character == " ") then
+            set character = "_"
+        endif
+        set result = result + ConvertSaveCodeToObfuscatedVersion(character, hash)
         set i = i + 1
     endloop
     return result + SAVE_CODE_SEGMENT_SEPARATOR
@@ -3809,6 +3828,7 @@ endfunction
 
 function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, integer index, integer hash returns string
     local string substr = ""
+    local string character = ""
     local string result = ""
     local integer separatorCounter = 0
     local integer n = -1 // start with n - 1 and end with 0
@@ -3828,7 +3848,11 @@ function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, int
     set i = 0
     loop
         exitwhen (i == StringLength(substr))
-        set result = result + ConvertSaveCodeFromObfuscatedVersion(SubString(substr, i, i + 1), hash)
+        set character = ConvertSaveCodeFromObfuscatedVersion(SubString(substr, i, i + 1), hash)
+        if (character == "_") then
+            set character = " "
+        endif
+        set result = result + character
         //call BJDebugMsg("Result " + I2S(result))
         set n = n - 1
         set i = i + 1
