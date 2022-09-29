@@ -226,6 +226,7 @@ This version provides several new features compared to the original map [World o
 * Tomes game option.
 * Themes game option.
 * Custom Group System which is [part of this repository](./systems/).
+* Custom Item Crafting System.
 * TODO Many 2.1 features are not listed yet.
 
 ## Bug Fixes
@@ -315,27 +316,27 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
-* [wowtsr2.0.w3x](./wowtsr2.0.w3x)
-* [wowtsr1.9.9.w3x](./wowtsr1.9.9.w3x)
-* [wowtsr1.9.8.w3x](./wowtsr1.9.8.w3x)
-* [wowtsr1.9.7.w3x](./wowtsr1.9.7.w3x)
-* [wowtsr1.9.6.w3x](./wowtsr1.9.6.w3x)
-* [wowtsr1.9.5.w3x](./wowtsr1.9.5.w3x)
-* [wowtsr1.9.4.w3x](./wowtsr1.9.4.w3x)
-* [wowtsr1.9.3.w3x](./wowtsr1.9.3.w3x)
-* [wowtsr1.9.2.w3x](./wowtsr1.9.2.w3x)
-* [wowtsr1.9.1.w3x](./wowtsr1.9.1.w3x)
-* [wowtsr1.9.0.w3x](./wowtsr1.9.0.w3x)
-* [wowtsr1.8.9.w3x](./wowtsr1.8.9.w3x)
-* [wowtsr1.8.8.w3x](./wowtsr1.8.8.w3x)
-* [wowtsr1.8.7.w3x](./wowtsr1.8.7.w3x)
-* [wowtsr1.8.6.w3x](./wowtsr1.8.6.w3x)
-* [wowtsr1.8.5.w3x](./wowtsr1.8.5.w3x)
-* [wowtsr1.8.4.w3x](./wowtsr1.8.4.w3x)
-* [wowtsr1.8.3.w3x](./wowtsr1.8.3.w3x)
-* [wowtsr1.8.2.w3x](./wowtsr1.8.2.w3x)
-* [wowtsr1.8.1.w3x](./wowtsr1.8.1.w3x)
-* [wowtsr1.8.w3x](./wowtsr1.8.w3x)
+* [wowr2.0.w3x](./wowr2.0.w3x)
+* [wowr1.9.9.w3x](./wowr1.9.9.w3x)
+* [wowr1.9.8.w3x](./wowr1.9.8.w3x)
+* [wowr1.9.7.w3x](./wowr1.9.7.w3x)
+* [wowr1.9.6.w3x](./wowr1.9.6.w3x)
+* [wowr1.9.5.w3x](./wowr1.9.5.w3x)
+* [wowr1.9.4.w3x](./wowr1.9.4.w3x)
+* [wowr1.9.3.w3x](./wowr1.9.3.w3x)
+* [wowr1.9.2.w3x](./wowr1.9.2.w3x)
+* [wowr1.9.1.w3x](./wowr1.9.1.w3x)
+* [wowr1.9.0.w3x](./wowr1.9.0.w3x)
+* [wowr1.8.9.w3x](./wowr1.8.9.w3x)
+* [wowr1.8.8.w3x](./wowr1.8.8.w3x)
+* [wowr1.8.7.w3x](./wowr1.8.7.w3x)
+* [wowr1.8.6.w3x](./wowr1.8.6.w3x)
+* [wowr1.8.5.w3x](./wowr1.8.5.w3x)
+* [wowr1.8.4.w3x](./wowr1.8.4.w3x)
+* [wowr1.8.3.w3x](./wowr1.8.3.w3x)
+* [wowr1.8.2.w3x](./wowr1.8.2.w3x)
+* [wowr1.8.1.w3x](./wowr1.8.1.w3x)
+* [wowr1.8.w3x](./wowr1.8.w3x)
 * [wowtsr1.7.w3x](./releases/wowtsr1.7.w3x)
 * [wowtsr1.6.w3x](./releases/wowtsr1.6.w3x)
 * [wowtsr1.5.w3x](./releases/wowtsr1.5.w3x)
