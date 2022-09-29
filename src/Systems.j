@@ -2839,7 +2839,7 @@ function RespawnAllItemsInRange takes real x, real y, real range returns integer
 	local integer i = 0
 	loop
 		exitwhen (i == GetItemRespawnCounter())
-		if (IsRespawnItemValid(i) and DistanceBetweenCoordinates(x, y, GetRespawnItemX(i), GetRespawnItemY(i)) <= range) then
+		if (IsRespawnItemValid(i) and GetRespawnItem(i) == null and DistanceBetweenCoordinates(x, y, GetRespawnItemX(i), GetRespawnItemY(i)) <= range) then
             call RespawnItem(i)
 			set result = result + 1
 		endif
@@ -16161,7 +16161,7 @@ function CheckAllRecipesRequirements takes unit whichUnit returns integer
         if (requirementCheckCounter > 0) then
             set result = result + 1
             if (recipesUIItemTypeIds[i] != 0) then
-                call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " to unit " + GetUnitName(whichUnit))
+                //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " to unit " + GetUnitName(whichUnit))
                 call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[i])
                 call AddItemToStock(whichUnit, recipesUIItemTypeIds[i], requirementCheckCounter, requirementCheckCounter)
             endif
