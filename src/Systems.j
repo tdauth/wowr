@@ -1347,7 +1347,7 @@ library ItemRespawnSystem
 
 globals
     // The default delay until an item will be respawned.
-    public constant real DEFAULT_TIMEOUT = 30.0
+    public constant real DEFAULT_TIMEOUT = 180.0
     // All preplaced items on the map will automatically respawn if this value is true. Otherwise, you will have to add them manually.
     public constant boolean AUTO_ADD_ALL_PREPLACED_ITEMS = true
 
@@ -15936,11 +15936,12 @@ library ItemCraftingSystem initializer Init
 function interface ItemCraftingSystemRequirementCallback takes integer recipe, unit craftingUnit returns integer
 
 globals
-    public constant integer MAX_REQUIREMENTS = 6
+    public constant integer MAX_REQUIREMENTS = 15
 
     private integer array recipesItemTypeIds
     private integer array recipesUIItemTypeIds
     private boolean array recipesHideUIItemOnNotAvailable
+    private integer array recipesMinRequirements
     private integer array recipesRequirementCounters
     private integer array recipesRequirementItemTypeIds
     private integer array recipesRequirementCharges
@@ -15970,6 +15971,7 @@ function AddRecipe takes integer itemTypeId, integer uiItemTypeId returns intege
     set recipesItemTypeIds[index] = itemTypeId
     set recipesUIItemTypeIds[index] = uiItemTypeId
     set recipesHideUIItemOnNotAvailable[index] = false
+    set recipesMinRequirements[index] = 0
     set recipesRequirementCounters[index] = 0
     set recipesCounter = recipesCounter + 1
     return index
@@ -15980,12 +15982,17 @@ function AddRecipeRequirementItem takes integer recipe, integer itemTypeId, inte
     local integer index = Index2D(recipe, counter, MAX_REQUIREMENTS)
     set recipesRequirementItemTypeIds[index] = itemTypeId
     set recipesRequirementCharges[index] = charges
-    set recipesRequirementCounters[recipe] = recipesRequirementCounters[recipe] + 1
+    set recipesRequirementCounters[recipe] = counter + 1
+    set recipesMinRequirements[recipe] = counter + 1
     return counter
 endfunction
 
 function SetRecipeHideUIItemOnNotAvailable takes integer recipe, boolean hide returns nothing
     set recipesHideUIItemOnNotAvailable[recipe] = hide
+endfunction
+
+function SetRecipeMinRequirements takes integer recipe, integer minRequirements returns nothing
+    set recipesMinRequirements[recipe] = minRequirements
 endfunction
 
 function SetRecipeRequirementCallback takes ItemCraftingSystemRequirementCallback callback returns nothing
@@ -16060,9 +16067,9 @@ function ConsumeRecipeRequirement takes integer recipe, integer requirement, int
             exitwhen (i == bj_MAX_INVENTORY)
             set slotItem = UnitItemInSlot(whichUnit, i)
             if (slotItem != null and GetItemTypeId(slotItem) == requiredItemTypeId) then
-                set reducedCharges = charges / recipesRequirementCharges[index]
+                set reducedCharges = charges * recipesRequirementCharges[index]
                 set matchingCharges = matchingCharges + reducedCharges
-                call BJDebugMsg("Consuming " + I2S(reducedCharges) + " of item " + GetItemName(slotItem) + " from unit " + GetUnitName(whichUnit) + ".")
+                //call BJDebugMsg("Consuming " + I2S(reducedCharges) + " of item " + GetItemName(slotItem) + " from unit " + GetUnitName(whichUnit) + ".")
                 set reducedCharges = GetItemCharges(slotItem) - reducedCharges
                 if (reducedCharges > 0) then
                     call SetItemCharges(slotItem, reducedCharges)
@@ -16081,6 +16088,8 @@ function CheckRecipeRequirements takes integer recipe, unit whichUnit returns in
     local integer requirementCheckCounter = 0
     local integer result = 0
     local boolean resultInitialized = false
+    local integer matchingRequirements = 0
+    local integer minRequirements = recipesMinRequirements[recipe]
     local integer counter = recipesRequirementCounters[recipe]
     local integer i = 0
 
@@ -16104,13 +16113,16 @@ function CheckRecipeRequirements takes integer recipe, unit whichUnit returns in
     endif
 
     loop
-        exitwhen (i == counter)
+        exitwhen (i == counter or matchingRequirements >= minRequirements)
         set requirementCheckCounter = CheckRecipeRequirement(recipe, i, whichUnit)
         if (not resultInitialized) then
             set result = requirementCheckCounter
             set resultInitialized = true
         else
             set result = IMinBJ(result, requirementCheckCounter)
+        endif
+        if (requirementCheckCounter > 0) then
+            set matchingRequirements = matchingRequirements + 1
         endif
         set i = i + 1
     endloop
@@ -16120,10 +16132,17 @@ endfunction
 function ConsumeRecipeRequirements takes integer recipe, integer charges, unit whichUnit returns integer
     local integer result = 0
     local integer counter = recipesRequirementCounters[recipe]
+    local integer matchingRequirements = 0
+    local integer minRequirements = recipesMinRequirements[recipe]
+    local integer consumedRequirements = 0
     local integer i = 0
     loop
-        exitwhen (i == counter)
-        set result = result + ConsumeRecipeRequirement(recipe, i, charges, whichUnit)
+        exitwhen (i == counter or matchingRequirements >= minRequirements)
+        set consumedRequirements = ConsumeRecipeRequirement(recipe, i, charges, whichUnit)
+        set result = result + consumedRequirements
+        if (consumedRequirements > 0) then
+            set matchingRequirements = matchingRequirements + 1
+        endif
         set i = i + 1
     endloop
     return result
@@ -16134,11 +16153,11 @@ function CheckAllRecipesRequirements takes unit whichUnit returns integer
     local integer counter = recipesCounter
     local integer requirementCheckCounter = 0
     local integer i = 0
-    call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
+    //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
     loop
         exitwhen (i == counter)
         set requirementCheckCounter = CheckRecipeRequirements(i, whichUnit)
-        call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
+        //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
         if (requirementCheckCounter > 0) then
             set result = result + 1
             if (recipesUIItemTypeIds[i] != 0) then
@@ -16148,7 +16167,7 @@ function CheckAllRecipesRequirements takes unit whichUnit returns integer
             endif
         else
             if (recipesUIItemTypeIds[i] != 0) then
-                call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(whichUnit))
+                //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(whichUnit))
                 call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[i])
                 if (not recipesHideUIItemOnNotAvailable[i]) then
                     call AddItemToStock(whichUnit, recipesUIItemTypeIds[i], 0, 0)
@@ -16169,14 +16188,16 @@ function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit return
     loop
         exitwhen (i == counter and craftedItem != null)
         if (recipesUIItemTypeIds[i] != 0 and recipesUIItemTypeIds[i] == soldItemTypeId) then
-            set craftedItem = UnitAddItemById(buyingUnit, recipesItemTypeIds[i])
+            set craftedItem = CreateItem(recipesItemTypeIds[i], GetUnitX(buyingUnit), GetUnitY(buyingUnit))
             set charges = CheckRecipeRequirements(i, GetSellingUnit())
             call SetItemCharges(craftedItem, charges)
-            call BJDebugMsg("Crafted item " + GetItemName(craftedItem) + " with " + I2S(charges))
+            //call BJDebugMsg("Crafted item " + GetItemName(craftedItem) + " with " + I2S(charges))
             call RemoveItem(soldItem)
             set soldItem = null
-            call ConsumeRecipeRequirements(i, charges, sellingUnit)
             call ExecuteCraftingCallbacks(i, buyingUnit, craftedItem)
+            // add item after callbacks since it might lead to stacking and the crafted item may become null
+            call UnitAddItem(buyingUnit, craftedItem)
+            call ConsumeRecipeRequirements(i, charges, sellingUnit)
         endif
         set i = i + 1
     endloop
@@ -16202,7 +16223,7 @@ private function TriggerConditionIsItemCraftingUnitEnabled takes nothing returns
 endfunction
 
 private function TriggerActionCheckAllRecipesRequirements takes nothing returns nothing
-    call BJDebugMsg("Crafter " + GetUnitName(GetTriggerUnit()) + " picks up or drops an item.")
+    //call BJDebugMsg("Crafter " + GetUnitName(GetTriggerUnit()) + " picks up or drops an item.")
     call CheckAllRecipesRequirements(GetTriggerUnit())
 endfunction
 
@@ -16226,11 +16247,18 @@ endlibrary
 function AddRecipeWoWReforged takes nothing returns integer
     set udg_TmpInteger = AddRecipe(udg_TmpItemTypeId, udg_TmpItemTypeId2)
     call SetRecipeHideUIItemOnNotAvailable(udg_TmpInteger, true)
+    set udg_TmpInteger2 = 1
     return udg_TmpInteger
 endfunction
 
 function AddRecipeRequirementWoWReforged takes nothing returns integer
-    return AddRecipeRequirementItem(udg_TmpInteger, udg_TmpItemTypeId, udg_TmpInteger2)
+    local integer requirement = AddRecipeRequirementItem(udg_TmpInteger, udg_TmpItemTypeId, udg_TmpInteger2)
+    set udg_TmpInteger2 = 1
+    return requirement
+endfunction
+
+function SetRecipeMinRequirementsWoWReforged takes nothing returns nothing
+    call SetRecipeMinRequirements(udg_TmpInteger, udg_TmpInteger2)
 endfunction
 
 // Add all prestored savecodes into this function

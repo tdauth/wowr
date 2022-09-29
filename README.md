@@ -1,6 +1,7 @@
 # World of Warcraft Reforged
 
 Open world role-playing game funmap for Warcraft III: Reforged based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/) featuring computer AI support which allows you to play the map offline.
+This map is not a recreation of the game World of Warcraft but is inspired and uses some lore from the game.
 
 ## Play the Map
 
