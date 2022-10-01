@@ -10906,7 +10906,7 @@ function GetPrestoredSaveCodeAccounts takes nothing returns string
     local integer i = 0
     loop
         exitwhen (i >= PrestoredSaveCodeCounter)
-        if (PrestoredSaveCodeType[i] != PRESTORED_SAVECODE_TYPE_CLANS) then
+        if (PrestoredSaveCodeType[i] != PRESTORED_SAVECODE_TYPE_CLANS and PrestoredSaveCodePlayerName[i] != "all") then
             set add = true
             set matchingPlayer = null
             set j = 0
