@@ -934,21 +934,21 @@ endfunction
 
 function TriggerFunctionPickupRucksackItem takes nothing returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    local item whichItem = GetManipulatedItem()
-    local integer itemTypeId = GetItemTypeId(whichItem)
+    local item whichItem = null
     local integer index = 0
     local integer i = 0
     // update the backpack items from the current inventory
     loop
         exitwhen (i == bj_MAX_INVENTORY)
-        if (UnitItemInSlot(GetTriggerUnit(), i) != null) then
+        set whichItem = UnitItemInSlot(GetTriggerUnit(), i)
+        if (whichItem != null) then
             set index = Index3D(playerId, udg_RucksackPageNumber[playerId], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             call SetRucksackItemFromItem(whichItem, index)
+            set whichItem = null
         endif
         set i = i + 1
     endloop
     call UpdateItemsForBackpackUI(GetOwningPlayer(GetTriggerUnit()))
-    set whichItem = null
 endfunction
 
 function TriggerConditionDropRucksackItem takes nothing returns boolean
@@ -12479,6 +12479,8 @@ endfunction
 globals
     constant real PING_DURATION = 5.0
 endglobals
+
+// Non leaking ping functions:
 
 function PingUnitForPlayer takes unit whichUnit, player whichPlayer returns nothing
     call PingMinimapForPlayer(whichPlayer, GetUnitX(whichUnit), GetUnitY(whichUnit), PING_DURATION)

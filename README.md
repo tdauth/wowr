@@ -623,3 +623,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.326594/)
 * The Panda: [BTNBlastHammer](https://www.hiveworkshop.com/threads/btnblasthammer.327759/)
 * Murlocologist: [Ashbringer](https://www.hiveworkshop.com/threads/ashbringer.328960/)
+* Eagle XI: [Goblin Building Icons](https://www.hiveworkshop.com/threads/goblin-building-icons.275807/)
+* Ceterai: [BTNGoblinTower](https://www.hiveworkshop.com/threads/btngoblintower.332439/)
+* Darkfang: [Mage Orb](https://www.hiveworkshop.com/threads/mage-orb.288271/)
+* lelyanra: [BTNDigArtifact](https://www.hiveworkshop.com/threads/btndigartifact.164559/)
+* Blizzard Entertainment: [BTNAbility_Hunter_BeastCall](https://www.hiveworkshop.com/threads/btnability_hunter_beastcall.55496/)

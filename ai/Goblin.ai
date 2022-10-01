@@ -4,7 +4,7 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, GOBLIN_TOWN_HALL )
+	call SetBuildUnit( 1, GOBLIN_TIER_1 )
 	call SetBuildUnit( 22, GOBLIN_LABORER )
 	call SetBuildUnit( 4, GOBLIN_SHREDDER )
 	call SetBuildUnit( 1, GOBLIN_FUEL_PUMP )
@@ -17,6 +17,8 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 2, GOBLIN_BARRACKS )
     call SetBuildUnit( 2, GOBLIN_TOWER )
     call SetBuildUnit( 1, GOBLIN_SHOP )
+    call SetBuildUnit( 1, GOBLIN_TIER_2 )
+    call SetBuildUnit( 1, GOBLIN_TIER_3 )
 	call SetBuildUnit( 1, GOBLIN_ARCANE_LABORATORY )
 	call SetBuildUnit( 1, GOBLIN_TANK_FACTORY )
 	call SetBuildUnit( 1, GOBLIN_AIR_FIELD )
@@ -44,6 +46,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_GOBLIN_BARRAGE )
     call SetBuildUpgr( 1, UPG_GOBLIN_CLUSTER_ROCKETS )
     call SetBuildUpgr( 1, UPG_GOBLIN_DEMOLISH )
+    call SetBuildUpgr( 1, UPG_GOBLIN_BURNING_OIL )
     call SetBuildUpgr( 1, UPG_GOBLIN_AIR_SUPPLIES )
     call SetBuildUpgr( 1, UPG_GOBLIN_WAR_ZEPPELIN_BOMBS )
     call SetBuildUpgr( 1, UPG_GOBLIN_EXPLOSIVE_BARREL )

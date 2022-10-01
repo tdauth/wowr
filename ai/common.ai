@@ -961,7 +961,9 @@ globals
     constant integer FURBOLG_HOUSING                                 = 'h015'
 
     // Goblin
-    constant integer GOBLIN_TOWN_HALL                                = 'o00O' // tier 1-3
+    constant integer GOBLIN_TIER_1                                   = 'o00O' // tier 1
+    constant integer GOBLIN_TIER_2                                   = 'o022' // tier 2
+    constant integer GOBLIN_TIER_3                                   = 'o023' // tier 3
 	constant integer GOBLIN_BARRACKS                                 = 'o011' // barracks
 	constant integer GOBLIN_ARCANE_LABORATORY                        = 'o014' // sanctum/damned temple
 	constant integer GOBLIN_FUEL_PUMP                                = 'o00S' // lumber will and blacksmith
@@ -1007,6 +1009,7 @@ globals
 	constant integer UPG_GOBLIN_EXPLOSIVE_BARREL                     = 'R02W'
 	constant integer UPG_GOBLIN_EXPLOSIVES                           = 'R02J'
 	constant integer UPG_GOBLIN_FLAME_GRENADES                       = 'R02T'
+	constant integer UPG_GOBLIN_BURNING_OIL                          = 'R04P'
 	constant integer UPG_GOBLIN_FUEL                                 = 'R02Q'
 	constant integer UPG_GOBLIN_WAR_ZEPPELIN_BOMBS                   = 'R034'
 	constant integer UPG_GOBLIN_IMPROVED_CONSTRUCTION                = 'R030'
@@ -1724,6 +1727,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(DEMON_GATE_3,false,townid)
 	elseif unitid == DEMON_FORTIFIED_INFERNAL_MACHINE then
         set have_qty = have_qty  + GetUnitCountEx(DEMON_FORTIFIED_INFERNAL_JUGGERNAUT,false,townid)
+
+    elseif unitid == GOBLIN_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_TIER_2,false,townid) + GetUnitCountEx(GOBLIN_TIER_3,false,townid)
+    elseif unitid == GOBLIN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(GOBLIN_TIER_3,false,townid)
 
     elseif unitid == DWARF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_2,false,townid) + GetUnitCountEx(DWARF_TIER_3,false,townid)
