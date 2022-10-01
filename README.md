@@ -622,3 +622,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.318737/)
 * Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.326594/)
 * The Panda: [BTNBlastHammer](https://www.hiveworkshop.com/threads/btnblasthammer.327759/)
+* Murlocologist: [Ashbringer](https://www.hiveworkshop.com/threads/ashbringer.328960/)

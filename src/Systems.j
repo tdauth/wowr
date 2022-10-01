@@ -15937,6 +15937,10 @@ function interface ItemCraftingSystemRequirementCallback takes integer recipe, u
 
 globals
     public constant integer MAX_REQUIREMENTS = 15
+    public constant boolean ENABLE_PAGING = true
+    public constant integer MAX_RECIPES_PER_PAGE = 9
+    public constant integer NEXT_RECIPES_ABILITY_ID = 'A0MD'
+    public constant integer PREVIOUS_RECIPES_ABILITY_ID = 'A0ME'
 
     private integer array recipesItemTypeIds
     private integer array recipesUIItemTypeIds
@@ -15960,6 +15964,15 @@ globals
     private group itemCraftingUnits = CreateGroup()
     private trigger itemCheckTrigger = CreateTrigger()
     private trigger itemCraftTrigger = CreateTrigger()
+
+    private hashtable itemCraftingUnitsHashTable = InitHashtable()
+    private trigger itemCraftingNextRecipesTrigger = CreateTrigger()
+    private trigger itemCraftingPreviousRecipesTrigger = CreateTrigger()
+    private timer itemCraftingStockUpdateTimer = CreateTimer()
+
+    private constant integer HASHTABLE_KEY_PAGE = 0
+    //private constant integer HASHTABLE_KEY_GROUP = 1 // for linking multiple crafting units
+    //private constant integer HASHTABLE_KEY_DISABLED_RECIPES = 2 // disable recipes per unit
 endglobals
 
 private function Index2D takes integer Value1, integer Value2, integer MaxValue2 returns integer
@@ -16108,7 +16121,7 @@ function CheckRecipeRequirements takes integer recipe, unit whichUnit returns in
         set triggerCraftingUnit = whichUnit
         set triggerCraftedItem = null
         if (not TriggerEvaluate(recipeRequirementCallbackTrigger)) then
-            return 1
+            return -1
         endif
     endif
 
@@ -16170,7 +16183,7 @@ function CheckAllRecipesRequirements takes unit whichUnit returns integer
                 //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(whichUnit))
                 call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[i])
                 if (not recipesHideUIItemOnNotAvailable[i]) then
-                    call AddItemToStock(whichUnit, recipesUIItemTypeIds[i], 0, 0)
+                    call AddItemToStock(whichUnit, recipesUIItemTypeIds[i], 0, 1)
                 endif
             endif
         endif
@@ -16179,7 +16192,79 @@ function CheckAllRecipesRequirements takes unit whichUnit returns integer
     return result
 endfunction
 
+function ClearAllRecipesForPage takes unit whichUnit, integer page, integer recipesPerPage returns integer
+    local integer result = 0
+    local integer counter = recipesCounter
+    local integer requirementCheckCounter = 0
+    local integer recipe = page * recipesPerPage
+    local integer i = 0
+    //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
+    loop
+        exitwhen (i == recipesPerPage and recipe >= counter)
+        if (recipesUIItemTypeIds[recipe] != 0) then
+            //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(whichUnit))
+            call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[recipe])
+        endif
+        set i = i + 1
+        set recipe = recipe + 1
+    endloop
+    return result
+endfunction
+
+function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, integer recipesPerPage returns integer
+    local integer result = 0
+    local integer counter = recipesCounter
+    local integer requirementCheckCounter = 0
+    local integer recipe = page * recipesPerPage
+    local integer i = 0
+    call ClearAllRecipesForPage(whichUnit, page, recipesPerPage)
+    //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
+    loop
+        exitwhen (i == recipesPerPage and recipe >= counter)
+        set requirementCheckCounter = CheckRecipeRequirements(recipe, whichUnit)
+        //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
+        if (requirementCheckCounter > 0) then
+            set result = result + 1
+            if (recipesUIItemTypeIds[recipe] != 0) then
+                //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " to unit " + GetUnitName(whichUnit))
+                call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[recipe])
+                call AddItemToStock(whichUnit, recipesUIItemTypeIds[recipe], requirementCheckCounter, requirementCheckCounter)
+            endif
+        else
+            if (recipesUIItemTypeIds[recipe] != 0) then
+                //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " from unit " + GetUnitName(whichUnit))
+                call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[recipe])
+                call AddItemToStock(whichUnit, recipesUIItemTypeIds[recipe], 0, 1)
+            endif
+        endif
+        set i = i + 1
+        set recipe = recipe + 1
+    endloop
+    return result
+endfunction
+
+function GetMaxRecipesPages takes integer recipesPerPage returns integer
+    return recipesCounter / recipesPerPage + 1
+endfunction
+
+static if (ENABLE_PAGING) then
+private function ClearItemCraftingUnit takes unit whichUnit returns nothing
+    call FlushChildHashtable(itemCraftingUnitsHashTable, GetHandleId(whichUnit))
+endfunction
+
+private function SetItemCraftingUnitPage takes unit whichUnit, integer page returns nothing
+    call SaveInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_PAGE, page)
+endfunction
+
+private function GetItemCraftingUnitPage takes unit whichUnit returns integer
+    return LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_PAGE)
+endfunction
+endif
+
 function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit returns item
+static if (ENABLE_PAGING) then
+    local integer page = GetItemCraftingUnitPage(sellingUnit)
+endif
     local integer soldItemTypeId = GetItemTypeId(soldItem)
     local integer charges = 0
     local item craftedItem = null
@@ -16188,30 +16273,76 @@ function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit return
     loop
         exitwhen (i == counter and craftedItem != null)
         if (recipesUIItemTypeIds[i] != 0 and recipesUIItemTypeIds[i] == soldItemTypeId) then
-            set craftedItem = CreateItem(recipesItemTypeIds[i], GetUnitX(buyingUnit), GetUnitY(buyingUnit))
             set charges = CheckRecipeRequirements(i, GetSellingUnit())
-            call SetItemCharges(craftedItem, charges)
-            //call BJDebugMsg("Crafted item " + GetItemName(craftedItem) + " with " + I2S(charges))
-            call RemoveItem(soldItem)
-            set soldItem = null
-            call ExecuteCraftingCallbacks(i, buyingUnit, craftedItem)
-            // add item after callbacks since it might lead to stacking and the crafted item may become null
-            call UnitAddItem(buyingUnit, craftedItem)
-            call ConsumeRecipeRequirements(i, charges, sellingUnit)
+            if (charges > 0) then
+                // TODO Check if the item type is stackable or create n items.
+                set craftedItem = CreateItem(recipesItemTypeIds[i], GetUnitX(buyingUnit), GetUnitY(buyingUnit))
+                call SetItemCharges(craftedItem, charges)
+                //call BJDebugMsg("Crafted item " + GetItemName(craftedItem) + " with " + I2S(charges))
+                call RemoveItem(soldItem)
+                set soldItem = null
+                call ExecuteCraftingCallbacks(i, buyingUnit, craftedItem)
+                // add item after callbacks since it might lead to stacking and the crafted item may become null
+                call UnitAddItem(buyingUnit, craftedItem)
+                call ConsumeRecipeRequirements(i, charges, sellingUnit)
+            endif
         endif
         set i = i + 1
     endloop
+static if (ENABLE_PAGING) then
+    call CheckAllRecipesRequirementsForPage(sellingUnit, page, MAX_RECIPES_PER_PAGE)
+else
     call CheckAllRecipesRequirements(sellingUnit)
+endif
     return craftedItem
 endfunction
 
+private function ForGroupUpdateStocks takes nothing returns nothing
+static if (ENABLE_PAGING) then
+    local integer page = GetItemCraftingUnitPage(GetEnumUnit())
+    local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
+    call CheckAllRecipesRequirementsForPage(GetEnumUnit(), page, MAX_RECIPES_PER_PAGE)
+else
+    call CheckAllRecipesRequirements(GetEnumUnit())
+endif
+endfunction
+
+private function TimerFunctionUpdateItemCraftingStocks takes nothing returns nothing
+    call ForGroup(itemCraftingUnits, function ForGroupUpdateStocks)
+endfunction
+
 function EnableItemCraftingUnit takes unit whichUnit returns nothing
+static if (ENABLE_PAGING) then
+    local integer page = GetItemCraftingUnitPage(whichUnit)
+    local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
+endif
     call GroupAddUnit(itemCraftingUnits, whichUnit)
+static if (ENABLE_PAGING) then
+    call CheckAllRecipesRequirementsForPage(whichUnit, page, MAX_RECIPES_PER_PAGE)
+else
     call CheckAllRecipesRequirements(whichUnit)
+endif
+
+    if (BlzGroupGetSize(itemCraftingUnits) == 1) then
+        // This timer is required since we can only set the maximum time to 3600 seconds.
+        call TimerStart(itemCraftingStockUpdateTimer, 15.0, true, function TimerFunctionUpdateItemCraftingStocks)
+    endif
 endfunction
 
 function DisableItemCraftingUnit takes unit whichUnit returns nothing
+static if (ENABLE_PAGING) then
+    local integer page = GetItemCraftingUnitPage(whichUnit)
+    local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
+endif
     call GroupRemoveUnit(itemCraftingUnits, whichUnit)
+static if (ENABLE_PAGING) then
+    call ClearAllRecipesForPage(whichUnit, page, MAX_RECIPES_PER_PAGE)
+    call ClearItemCraftingUnit(whichUnit)
+endif
+
+    if (BlzGroupGetSize(itemCraftingUnits) == 0) then
+        call PauseTimer(itemCraftingStockUpdateTimer)
+    endif
 endfunction
 
 function IsItemCraftingUnitEnabled takes unit whichUnit returns boolean
@@ -16224,12 +16355,56 @@ endfunction
 
 private function TriggerActionCheckAllRecipesRequirements takes nothing returns nothing
     //call BJDebugMsg("Crafter " + GetUnitName(GetTriggerUnit()) + " picks up or drops an item.")
+static if (ENABLE_PAGING) then
+    local integer page = GetItemCraftingUnitPage(GetTriggerUnit())
+    local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
+    call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
+else
     call CheckAllRecipesRequirements(GetTriggerUnit())
+endif
 endfunction
 
 private function TriggerActionCraftItem takes nothing returns nothing
     call CraftItem(GetSoldItem(), GetSellingUnit(), GetBuyingUnit())
 endfunction
+
+static if (ENABLE_PAGING) then
+private function TriggerConditionNextRecipes takes nothing returns boolean
+    return GetSpellAbilityId() == NEXT_RECIPES_ABILITY_ID and IsItemCraftingUnitEnabled(GetTriggerUnit())
+endfunction
+
+private function DisplayRecipesPage takes player whichPlayer, integer page returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Changed to recipes page " + I2S(page + 1) + ".")
+endfunction
+
+private function TriggerActionNextRecipes takes nothing returns nothing
+    local integer page = GetItemCraftingUnitPage(GetTriggerUnit())
+    local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
+    call ClearAllRecipesForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
+    set page = page + 1
+    if (page >= maxPages) then
+        set page = 0
+    endif
+    call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
+    call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page)
+endfunction
+
+private function TriggerConditionPreviousRecipes takes nothing returns boolean
+    return GetSpellAbilityId() == PREVIOUS_RECIPES_ABILITY_ID and IsItemCraftingUnitEnabled(GetTriggerUnit())
+endfunction
+
+private function TriggerActionPreviousRecipes takes nothing returns nothing
+    local integer page = GetItemCraftingUnitPage(GetTriggerUnit())
+    local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
+    call ClearAllRecipesForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
+    set page = page - 1
+    if (page < 0) then
+        set page = maxPages - 1
+    endif
+    call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
+    call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page)
+endfunction
+endif
 
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(itemCheckTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
@@ -16240,6 +16415,16 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(itemCraftTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
     call TriggerAddCondition(itemCraftTrigger, Condition(function TriggerConditionIsItemCraftingUnitEnabled))
     call TriggerAddAction(itemCraftTrigger, function TriggerActionCraftItem)
+
+static if (ENABLE_PAGING) then
+    call TriggerRegisterAnyUnitEventBJ(itemCraftingNextRecipesTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(itemCraftingNextRecipesTrigger, Condition(function TriggerConditionNextRecipes))
+    call TriggerAddAction(itemCraftingNextRecipesTrigger, function TriggerActionNextRecipes)
+
+    call TriggerRegisterAnyUnitEventBJ(itemCraftingPreviousRecipesTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(itemCraftingPreviousRecipesTrigger, Condition(function TriggerConditionPreviousRecipes))
+    call TriggerAddAction(itemCraftingPreviousRecipesTrigger, function TriggerActionPreviousRecipes)
+endif
 endfunction
 
 endlibrary
