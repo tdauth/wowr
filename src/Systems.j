@@ -12426,7 +12426,7 @@ function FilterFunctionWall takes nothing returns boolean
     return GetUnitTypeId(GetFilterUnit()) == WALL_STRAIGHT_HORIZONTAL or GetUnitTypeId(GetFilterUnit()) == WALL_END_WEST
 endfunction
 
-function GetWallNeighbour takes player owner, real x, real y, integer direction returns unit
+function GetWallNeighbour takes unit wall, player owner, real x, real y, integer direction returns unit
     local group whichGroup = CreateGroup()
     local real angle = GetAngleFromWallDirection(direction)
     local real neighbourX = PolarProjectionX(x, angle, WALL_WIDTH)
@@ -12438,7 +12438,7 @@ function GetWallNeighbour takes player owner, real x, real y, integer direction 
         set first = FirstOfGroup(whichGroup)
         exitwhen (first == null)
         call GroupRemoveUnit(whichGroup, first)
-        if (owner == GetOwningPlayer(first)) then
+        if (owner == GetOwningPlayer(first) and wall != first) then
             set result = first
         endif
     endloop
@@ -12451,10 +12451,10 @@ function GetWallNeighbour takes player owner, real x, real y, integer direction 
 endfunction
 
 function GetUnitTypeIdFromWallDirection takes player owner, real x, real y, integer direction returns integer
-    local unit west = GetWallNeighbour(owner, x, y, WALL_DIRECTION_WEST)
-    local unit east = GetWallNeighbour(owner, x, y, WALL_DIRECTION_EAST)
-    local unit north = GetWallNeighbour(owner, x, y, WALL_DIRECTION_NORTH)
-    local unit south = GetWallNeighbour(owner, x, y, WALL_DIRECTION_SOUTH)
+    local unit west = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_WEST)
+    local unit east = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_EAST)
+    local unit north = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_NORTH)
+    local unit south = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_SOUTH)
 
     if (west != null and east != null and north != null and south != null) then
         return WALL_CROSS_SECTION
@@ -12480,7 +12480,7 @@ function GetUnitTypeIdFromWallDirection takes player owner, real x, real y, inte
 endfunction
 
 function ExpandWall takes unit wall, integer direction returns unit
-    local unit neighbour = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), direction)
+    local unit neighbour = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), direction)
     local real angle = GetAngleFromWallDirection(direction)
     local real x = PolarProjectionX(GetUnitX(wall), angle, WALL_WIDTH)
     local real y = PolarProjectionY(GetUnitY(wall), angle, WALL_WIDTH)
@@ -12495,10 +12495,10 @@ function ExpandWall takes unit wall, integer direction returns unit
 endfunction
 
 function GetWallType takes unit wall returns integer
-    local unit west = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_WEST)
-    local unit east = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_EAST)
-    local unit north = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_NORTH)
-    local unit south = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_SOUTH)
+    local unit west = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_WEST)
+    local unit east = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_EAST)
+    local unit north = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_NORTH)
+    local unit south = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_SOUTH)
 
     // TODO The type should depend on the rest of types.
 
