@@ -12399,8 +12399,13 @@ globals
     constant integer WALL_DIRECTION_EAST = 1
     constant integer WALL_DIRECTION_NORTH = 2
     constant integer WALL_DIRECTION_SOUTH = 3
+    constant real WALL_WIDTH = 128.0
 
     constant integer WALL_STRAIGHT_HORIZONTAL = 'h04R'
+    constant integer WALL_CROSS_SECTION = 'h092'
+    constant integer WALL_END_NORTH = 'h094'
+    constant integer WALL_END_SOUTH = 'h095'
+    constant integer WALL_END_EAST = 'h093'
     constant integer WALL_END_WEST = 'h04S'
 endglobals
 
@@ -12421,19 +12426,19 @@ function FilterFunctionWall takes nothing returns boolean
     return GetUnitTypeId(GetFilterUnit()) == WALL_STRAIGHT_HORIZONTAL or GetUnitTypeId(GetFilterUnit()) == WALL_END_WEST
 endfunction
 
-function GetWallNeighbour takes unit wall, integer direction returns unit
+function GetWallNeighbour takes player owner, real x, real y, integer direction returns unit
     local group whichGroup = CreateGroup()
     local real angle = GetAngleFromWallDirection(direction)
-    local real x = PolarProjectionX(GetUnitX(wall), angle, 128.0)
-    local real y = PolarProjectionY(GetUnitY(wall), angle, 128.0)
+    local real neighbourX = PolarProjectionX(x, angle, WALL_WIDTH)
+    local real neighbourY = PolarProjectionY(y, angle, WALL_WIDTH)
     local unit first = null
     local unit result = null
-    call GroupEnumUnitsInRange(whichGroup, x, y, 128.0, Filter(function FilterFunctionWall))
+    call GroupEnumUnitsInRange(whichGroup, neighbourX, neighbourY, WALL_WIDTH, Filter(function FilterFunctionWall))
     loop
         set first = FirstOfGroup(whichGroup)
         exitwhen (first == null)
         call GroupRemoveUnit(whichGroup, first)
-        if (GetOwningPlayer(wall) == GetOwningPlayer(first)) then
+        if (owner == GetOwningPlayer(first)) then
             set result = first
         endif
     endloop
@@ -12445,11 +12450,55 @@ function GetWallNeighbour takes unit wall, integer direction returns unit
     return result
 endfunction
 
+function GetUnitTypeIdFromWallDirection takes player owner, real x, real y, integer direction returns integer
+    local unit west = GetWallNeighbour(owner, x, y, WALL_DIRECTION_WEST)
+    local unit east = GetWallNeighbour(owner, x, y, WALL_DIRECTION_EAST)
+    local unit north = GetWallNeighbour(owner, x, y, WALL_DIRECTION_NORTH)
+    local unit south = GetWallNeighbour(owner, x, y, WALL_DIRECTION_SOUTH)
+
+    if (west != null and east != null and north != null and south != null) then
+        return WALL_CROSS_SECTION
+    endif
+
+    if (west == null and east != null) then
+        return WALL_END_WEST
+    endif
+
+    if (east == null and west != null) then
+        return WALL_END_EAST
+    endif
+
+    if (north == null and south != null) then
+        return WALL_END_NORTH
+    endif
+
+    if (south == null and north != null) then
+        return WALL_END_SOUTH
+    endif
+
+    return WALL_STRAIGHT_HORIZONTAL
+endfunction
+
+function ExpandWall takes unit wall, integer direction returns unit
+    local unit neighbour = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), direction)
+    local real angle = GetAngleFromWallDirection(direction)
+    local real x = PolarProjectionX(GetUnitX(wall), angle, WALL_WIDTH)
+    local real y = PolarProjectionY(GetUnitY(wall), angle, WALL_WIDTH)
+    local integer unitTypeId = GetUnitTypeIdFromWallDirection(GetOwningPlayer(wall), x, y, direction)
+
+    // TODO slow recursion. Store neighbours in a hashtable like for the Goblin Tunnel System. Maybe create one single unit network system for this, Goblin Tunnels and Railroads.
+    if (neighbour != null) then
+        return ExpandWall(neighbour, direction)
+    endif
+
+    return CreateUnit(GetOwningPlayer(wall), unitTypeId, x, y, bj_UNIT_FACING)
+endfunction
+
 function GetWallType takes unit wall returns integer
-    local unit west = GetWallNeighbour(wall, WALL_DIRECTION_WEST)
-    local unit east = GetWallNeighbour(wall, WALL_DIRECTION_EAST)
-    local unit north = GetWallNeighbour(wall, WALL_DIRECTION_NORTH)
-    local unit south = GetWallNeighbour(wall, WALL_DIRECTION_SOUTH)
+    local unit west = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_WEST)
+    local unit east = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_EAST)
+    local unit north = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_NORTH)
+    local unit south = GetWallNeighbour(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_SOUTH)
 
     // TODO The type should depend on the rest of types.
 
@@ -12457,19 +12506,19 @@ function GetWallType takes unit wall returns integer
 endfunction
 
 function ConstructWall takes unit wall returns unit
-    local destructable invisiblePlatform = CreateDestructable('B004', GetUnitX(wall), GetUnitY(wall), bj_UNIT_FACING, 1.0, 0)
+    local destructable invisiblePlatform = CreateDestructable('OTis', GetUnitX(wall), GetUnitY(wall), bj_UNIT_FACING, 1.0, 0) // small invisible platform
     local unit result = ReplaceUnitBJ(wall, WALL_STRAIGHT_HORIZONTAL, bj_UNIT_STATE_METHOD_RELATIVE) // TODO Replace the unit and change the walls depending on the other stuff
     call SetDestructableInvulnerable(invisiblePlatform, true)
-    call ChangeElevatorHeight(invisiblePlatform, 2)
-    call ChangeElevatorWalls(false, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
-    call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_NORTH, invisiblePlatform)
+    //call ChangeElevatorHeight(invisiblePlatform, 2)
+    //call ChangeElevatorWalls(false, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
+    //call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_NORTH, invisiblePlatform)
     call SaveDestructableHandle(WallHashTable, GetHandleId(result), 0, invisiblePlatform)
     return result
 endfunction
 
 function RemoveWall takes unit wall returns nothing
     local destructable invisiblePlatform = LoadDestructableHandle(WallHashTable, GetHandleId(wall), 0)
-    call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
+    //call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
     call RemoveDestructable(invisiblePlatform)
     set invisiblePlatform = null
     call RemoveUnit(wall)
@@ -16246,7 +16295,14 @@ function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, 
 endfunction
 
 function GetMaxRecipesPages takes integer recipesPerPage returns integer
-    return recipesCounter / recipesPerPage + 1
+    local integer result = recipesCounter / recipesPerPage
+    local integer modulo = ModuloInteger(recipesCounter, recipesPerPage)
+
+    if (modulo > 0) then
+        return result + 1
+    endif
+
+    return result
 endfunction
 
 static if (ENABLE_PAGING) then
@@ -16387,6 +16443,7 @@ private function TriggerActionNextRecipes takes nothing returns nothing
     if (page >= maxPages) then
         set page = 0
     endif
+    call SetItemCraftingUnitPage(GetTriggerUnit(), page)
     call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
     call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page)
 endfunction
@@ -16403,6 +16460,7 @@ private function TriggerActionPreviousRecipes takes nothing returns nothing
     if (page < 0) then
         set page = maxPages - 1
     endif
+    call SetItemCraftingUnitPage(GetTriggerUnit(), page)
     call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
     call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page)
 endfunction
