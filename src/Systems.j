@@ -14200,6 +14200,9 @@ globals
     constant integer ABILITY_FIELD_TYPE_DAMAGE_REAL = 3
     constant integer ABILITY_FIELD_TYPE_LIFE_REAL = 4
     constant integer ABILITY_FIELD_TYPE_MANA_REAL = 5
+    constant integer ABILITY_FIELD_TYPE_LIFE_REGENRATION_INTEGER = 6
+    constant integer ABILITY_FIELD_TYPE_CHANCE_REAL = 7
+    constant integer ABILITY_FIELD_TYPE_DEFENSE_REAL = 8
 endglobals
 
 function RegisterAbilityFieldEx takes integer abilityId, integer fieldId, integer fieldType returns integer
@@ -14231,7 +14234,7 @@ function GetAbilityFieldTypeByFieldId takes integer abilityId, integer fieldId r
     return LoadInteger(AbilityFieldHashTable, abilityId, fieldId)
 endfunction
 
-function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeBonus, real manaBonus returns nothing
+function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeBonus, real manaBonus, integer lifeRegenerationBonus, real chanceRealBonus, real defenseRealBonus returns nothing
     local integer max = GetMaxAbilityFields(abilityId)
     local integer fieldType = 0
     local integer fieldId = 0
@@ -14252,6 +14255,12 @@ function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, i
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + lifeBonus)
         elseif (fieldType == ABILITY_FIELD_TYPE_MANA_REAL and manaBonus > 0.0) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + manaBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REGENRATION_INTEGER and lifeRegenerationBonus > 0) then
+            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + lifeRegenerationBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_CHANCE_REAL and chanceRealBonus > 0.0) then
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + chanceRealBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_DEFENSE_REAL and defenseRealBonus > 0.0) then
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + defenseRealBonus)
         endif
         set i = i + 1
     endloop
@@ -14299,7 +14308,7 @@ endfunction
 function EnchanterAddItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
     local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
 
-    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, bonus, bonus, 0.0, 0.0, 0.0, 0.0)
+    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, bonus, bonus, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0)
 endfunction
 
 function EnchanterRemoveItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
@@ -14309,7 +14318,7 @@ endfunction
 function EnchanterAddItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
     local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
 
-    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, 0, 0, 0.0, bonus, 0.0, 0.0)
+    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, 0, 0, 0.0, bonus, 0.0, 0.0, 0, 0.0, 0.0)
 endfunction
 
 function EnchanterRemoveItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
@@ -15556,6 +15565,10 @@ function EvolutionStoneSet takes unit hero, integer level returns nothing
     local real damageBonus = level * 5.0
     local real lifeBonus = level * 100.0
     local real manaBonus = level * 100.0
+    local integer lifeRegenerationBonus = level
+    local real chanceRealBonus = level * 0.01
+    local real defenseRealBonus = level * 2.0
+
     local integer i = 1
     local integer j = 0
     local integer max = GetHeroAbilityMaximum(unitTypeId)
@@ -15568,7 +15581,7 @@ function EvolutionStoneSet takes unit hero, integer level returns nothing
         set j = 1
         loop
             exitwhen (j >= maxAbilityLevel)
-            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus)
+            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus, lifeRegenerationBonus, chanceRealBonus, defenseRealBonus)
             set j = j + 1
         endloop
         set i = i + 1
