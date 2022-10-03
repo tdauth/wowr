@@ -902,7 +902,7 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
                 call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
             else
                 call BlzFrameSetTexture(BackpackItemBackdropFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
-                if (BackpackUIVisible[GetPlayerId(whichPlayer)] and GetItemTypePerishable(udg_RucksackItemType[index])) then
+                if (BackpackUIVisible[GetPlayerId(whichPlayer)] and (GetItemTypePerishable(udg_RucksackItemType[index]) or udg_RucksackItemCharges[index] > 0)) then
                     call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
                 endif
             endif
@@ -910,6 +910,58 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
         endloop
         set i = i + 1
     endloop
+endfunction
+
+function OrderBackpack takes player whichPlayer returns nothing
+    local integer index1 = 0
+    local integer index2 = 0
+    local integer maxCharges = 0
+    local integer charges = 0
+    local integer stackedCharges = 0
+    local integer i = 0
+    local integer j = 0
+    local integer k = 0
+    local integer l = 0
+    loop
+        exitwhen (i == udg_RucksackMaxPages)
+        set j = 0
+        loop
+            exitwhen (j == bj_MAX_INVENTORY)
+            set index1 = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (udg_RucksackItemType[index1] != 0) then
+                set charges = udg_RucksackItemCharges[index1]
+                set maxCharges = GetMaxStacksByItemTypeId(udg_RucksackItemType[index1])
+                if (charges < maxCharges) then
+                    set k = i
+                    loop
+                        exitwhen (k == udg_RucksackMaxPages or charges >= maxCharges)
+                        set l = j
+                        loop
+                            exitwhen (l == bj_MAX_INVENTORY or charges >= maxCharges)
+                            set index2 = Index3D(GetPlayerId(whichPlayer), k, l, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+                            if (udg_RucksackItemType[index2] == udg_RucksackItemType[index2]) then
+                                set stackedCharges = IMinBJ(udg_RucksackItemCharges[index2], maxCharges - charges)
+                                set charges = charges + stackedCharges
+
+                                if (stackedCharges == udg_RucksackItemCharges[index2]) then
+                                    call ClearRucksackItem(index2)
+                                else
+                                    set udg_RucksackItemCharges[index2] = udg_RucksackItemCharges[index2] - stackedCharges
+                                endif
+                            endif
+                            set l = l + 1
+                        endloop
+                        set k = k + 1
+                    endloop
+                endif
+                set udg_RucksackItemCharges[index1] = charges
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+    call RefreshRucksackPage(GetPlayerId(whichPlayer))
+    call UpdateItemsForBackpackUI(whichPlayer)
 endfunction
 
 function TriggerConditionChangeRucksackPage takes nothing returns boolean
@@ -12390,23 +12442,28 @@ endstruct
 // - Refactor some functions.
 endlibrary
 
-// Wall System
+library WallSystem initializer Init
 
 globals
-    hashtable WallHashTable = InitHashtable()
-
     constant integer WALL_DIRECTION_WEST = 0
     constant integer WALL_DIRECTION_EAST = 1
     constant integer WALL_DIRECTION_NORTH = 2
     constant integer WALL_DIRECTION_SOUTH = 3
-    constant real WALL_WIDTH = 128.0
+    constant real WALL_WIDTH = bj_CELLWIDTH
+    constant real WALL_RANGE = 30.0
 
+    constant integer WALL_CONSTRUCTED = 'h04Q'
     constant integer WALL_STRAIGHT_HORIZONTAL = 'h04R'
+    constant integer WALL_STRAIGHT_VERTICAL = 'h096'
     constant integer WALL_CROSS_SECTION = 'h092'
     constant integer WALL_END_NORTH = 'h094'
     constant integer WALL_END_SOUTH = 'h095'
     constant integer WALL_END_EAST = 'h093'
     constant integer WALL_END_WEST = 'h04S'
+
+    private group walls = CreateGroup()
+    private trigger constructionTrigger = CreateTrigger()
+    private trigger deathTrigger = CreateTrigger()
 endglobals
 
 function GetAngleFromWallDirection takes integer direction returns real
@@ -12423,7 +12480,16 @@ function GetAngleFromWallDirection takes integer direction returns real
 endfunction
 
 function FilterFunctionWall takes nothing returns boolean
-    return GetUnitTypeId(GetFilterUnit()) == WALL_STRAIGHT_HORIZONTAL or GetUnitTypeId(GetFilterUnit()) == WALL_END_WEST
+    local integer unitTypeId = GetUnitTypeId(GetFilterUnit())
+    return unitTypeId == WALL_STRAIGHT_HORIZONTAL or unitTypeId == WALL_STRAIGHT_VERTICAL or unitTypeId == WALL_CROSS_SECTION or unitTypeId == WALL_END_NORTH or unitTypeId == WALL_END_SOUTH or unitTypeId == WALL_END_EAST or unitTypeId == WALL_END_WEST
+endfunction
+
+private function PolarProjectionX takes real x, real dist, real angle returns real
+    return x + dist * Cos(angle * bj_DEGTORAD)
+endfunction
+
+private function PolarProjectionY takes real y, real dist, real angle returns real
+    return y + dist * Sin(angle * bj_DEGTORAD)
 endfunction
 
 function GetWallNeighbour takes unit wall, player owner, real x, real y, integer direction returns unit
@@ -12433,7 +12499,7 @@ function GetWallNeighbour takes unit wall, player owner, real x, real y, integer
     local real neighbourY = PolarProjectionY(y, angle, WALL_WIDTH)
     local unit first = null
     local unit result = null
-    call GroupEnumUnitsInRange(whichGroup, neighbourX, neighbourY, WALL_WIDTH, Filter(function FilterFunctionWall))
+    call GroupEnumUnitsInRange(whichGroup, neighbourX, neighbourY, WALL_RANGE, Filter(function FilterFunctionWall))
     loop
         set first = FirstOfGroup(whichGroup)
         exitwhen (first == null)
@@ -12450,7 +12516,7 @@ function GetWallNeighbour takes unit wall, player owner, real x, real y, integer
     return result
 endfunction
 
-function GetUnitTypeIdFromWallDirection takes player owner, real x, real y, integer direction returns integer
+function GetWallUnitTypeId takes player owner, real x, real y returns integer
     local unit west = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_WEST)
     local unit east = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_EAST)
     local unit north = GetWallNeighbour(null, owner, x, y, WALL_DIRECTION_NORTH)
@@ -12468,6 +12534,10 @@ function GetUnitTypeIdFromWallDirection takes player owner, real x, real y, inte
         return WALL_END_EAST
     endif
 
+    if (west != null and east != null) then
+        return WALL_STRAIGHT_HORIZONTAL
+    endif
+
     if (north == null and south != null) then
         return WALL_END_NORTH
     endif
@@ -12476,7 +12546,51 @@ function GetUnitTypeIdFromWallDirection takes player owner, real x, real y, inte
         return WALL_END_SOUTH
     endif
 
-    return WALL_STRAIGHT_HORIZONTAL
+    if (south != null and north != null) then
+        return WALL_STRAIGHT_VERTICAL
+    endif
+
+    return WALL_CROSS_SECTION
+endfunction
+
+function UpdateWallUnitType takes unit wall returns unit
+    local integer unitTypeId = GetWallUnitTypeId(GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall))
+    if (GetUnitTypeId(wall) != unitTypeId) then
+        call GroupRemoveUnit(walls, wall)
+        set wall = ReplaceUnitBJ(wall, unitTypeId, bj_UNIT_STATE_METHOD_RELATIVE)
+        call GroupAddUnit(walls, wall)
+    endif
+
+    return wall
+endfunction
+
+function UpdateWallNeighbours takes unit wall returns nothing
+    local player owner = GetOwningPlayer(wall)
+    local real x = GetUnitX(wall)
+    local real y = GetUnitY(wall)
+    local unit west = GetWallNeighbour(wall, owner, x, y, WALL_DIRECTION_WEST)
+    local unit east = GetWallNeighbour(wall, owner, x, y, WALL_DIRECTION_EAST)
+    local unit north = GetWallNeighbour(wall, owner, x, y, WALL_DIRECTION_NORTH)
+    local unit south = GetWallNeighbour(wall, owner, x, y, WALL_DIRECTION_SOUTH)
+    set owner = null
+
+    call UpdateWallUnitType(wall)
+
+    if (west != null) then
+        call UpdateWallNeighbours(west)
+    endif
+
+    if (east != null) then
+        call UpdateWallNeighbours(east)
+    endif
+
+    if (north != null) then
+        call UpdateWallNeighbours(north)
+    endif
+
+    if (south != null) then
+        call UpdateWallNeighbours(south)
+    endif
 endfunction
 
 function ExpandWall takes unit wall, integer direction returns unit
@@ -12484,46 +12598,48 @@ function ExpandWall takes unit wall, integer direction returns unit
     local real angle = GetAngleFromWallDirection(direction)
     local real x = PolarProjectionX(GetUnitX(wall), angle, WALL_WIDTH)
     local real y = PolarProjectionY(GetUnitY(wall), angle, WALL_WIDTH)
-    local integer unitTypeId = GetUnitTypeIdFromWallDirection(GetOwningPlayer(wall), x, y, direction)
+    local integer unitTypeId = GetWallUnitTypeId(GetOwningPlayer(wall), x, y)
 
     // TODO slow recursion. Store neighbours in a hashtable like for the Goblin Tunnel System. Maybe create one single unit network system for this, Goblin Tunnels and Railroads.
     if (neighbour != null) then
         return ExpandWall(neighbour, direction)
     endif
 
-    return CreateUnit(GetOwningPlayer(wall), unitTypeId, x, y, bj_UNIT_FACING)
+    set wall = CreateUnit(GetOwningPlayer(wall), unitTypeId, x, y, bj_UNIT_FACING)
+    call UpdateWallNeighbours(wall)
+
+    return wall
 endfunction
 
-function GetWallType takes unit wall returns integer
-    local unit west = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_WEST)
-    local unit east = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_EAST)
-    local unit north = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_NORTH)
-    local unit south = GetWallNeighbour(wall, GetOwningPlayer(wall), GetUnitX(wall), GetUnitY(wall), WALL_DIRECTION_SOUTH)
-
-    // TODO The type should depend on the rest of types.
-
-    return WALL_STRAIGHT_HORIZONTAL
+function TriggerConditionConstruction takes nothing returns boolean
+    return GetUnitTypeId(GetConstructedStructure()) == WALL_CONSTRUCTED
 endfunction
 
-function ConstructWall takes unit wall returns unit
-    local destructable invisiblePlatform = CreateDestructable('OTis', GetUnitX(wall), GetUnitY(wall), bj_UNIT_FACING, 1.0, 0) // small invisible platform
-    local unit result = ReplaceUnitBJ(wall, WALL_STRAIGHT_HORIZONTAL, bj_UNIT_STATE_METHOD_RELATIVE) // TODO Replace the unit and change the walls depending on the other stuff
-    call SetDestructableInvulnerable(invisiblePlatform, true)
-    //call ChangeElevatorHeight(invisiblePlatform, 2)
-    //call ChangeElevatorWalls(false, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
-    //call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_NORTH, invisiblePlatform)
-    call SaveDestructableHandle(WallHashTable, GetHandleId(result), 0, invisiblePlatform)
-    return result
+function TriggerActionConstruction takes nothing returns nothing
+    call GroupAddUnit(walls, GetConstructedStructure())
+    call UpdateWallNeighbours(GetConstructedStructure())
 endfunction
 
-function RemoveWall takes unit wall returns nothing
-    local destructable invisiblePlatform = LoadDestructableHandle(WallHashTable, GetHandleId(wall), 0)
-    //call ChangeElevatorWalls(true, bj_ELEVATOR_WALL_TYPE_ALL, invisiblePlatform)
-    call RemoveDestructable(invisiblePlatform)
-    set invisiblePlatform = null
-    call RemoveUnit(wall)
-    set wall = null
+function TriggerConditionDeath takes nothing returns boolean
+    return IsUnitInGroup(GetTriggerUnit(), walls)
 endfunction
+
+function TriggerActionDeath takes nothing returns nothing
+    call UpdateWallNeighbours(GetTriggerUnit())
+    call GroupRemoveUnit(walls, GetTriggerUnit())
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(constructionTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructionTrigger, Condition(function TriggerConditionConstruction))
+    call TriggerAddAction(constructionTrigger, function TriggerActionConstruction)
+
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+    call TriggerAddAction(deathTrigger, function TriggerActionDeath)
+endfunction
+
+endlibrary
 
 globals
     constant real PING_DURATION = 5.0
@@ -16431,8 +16547,8 @@ private function TriggerConditionNextRecipes takes nothing returns boolean
     return GetSpellAbilityId() == NEXT_RECIPES_ABILITY_ID and IsItemCraftingUnitEnabled(GetTriggerUnit())
 endfunction
 
-private function DisplayRecipesPage takes player whichPlayer, integer page returns nothing
-    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Changed to recipes page " + I2S(page + 1) + ".")
+private function DisplayRecipesPage takes player whichPlayer, integer page, integer maxPages returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Changed to recipes page " + I2S(page + 1) + "/" + I2S(maxPages) + ".")
 endfunction
 
 private function TriggerActionNextRecipes takes nothing returns nothing
@@ -16445,7 +16561,7 @@ private function TriggerActionNextRecipes takes nothing returns nothing
     endif
     call SetItemCraftingUnitPage(GetTriggerUnit(), page)
     call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
-    call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page)
+    call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page, maxPages)
 endfunction
 
 private function TriggerConditionPreviousRecipes takes nothing returns boolean
@@ -16462,7 +16578,7 @@ private function TriggerActionPreviousRecipes takes nothing returns nothing
     endif
     call SetItemCraftingUnitPage(GetTriggerUnit(), page)
     call CheckAllRecipesRequirementsForPage(GetTriggerUnit(), page, MAX_RECIPES_PER_PAGE)
-    call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page)
+    call DisplayRecipesPage(GetOwningPlayer(GetTriggerUnit()), page, maxPages)
 endfunction
 endif
 
