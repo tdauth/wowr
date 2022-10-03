@@ -761,6 +761,23 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
+    local item slotItem = null
+    local integer convertedPlayerId = playerId + 1
+    // try to add it to the inventory first
+    set I0 = 0
+    loop
+        exitwhen(I1 == bj_MAX_INVENTORY)
+        exitwhen (whichItem == null)
+        set slotItem = UnitItemInSlot(udg_Rucksack[convertedPlayerId], I0)
+        if (slotItem == null or (GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
+            call UnitAddItem(udg_Rucksack[convertedPlayerId], slotItem)
+            set whichItem = null
+            return true
+        endif
+        set slotItem = null
+        set I0 = I0 + 1
+    endloop
+    // try adding it to another bag then
     set I0 = 0
     loop
         exitwhen(I0 == udg_RucksackMaxPages)
@@ -16633,6 +16650,52 @@ endfunction
 
 function SetRecipeMinRequirementsWoWReforged takes nothing returns nothing
     call SetRecipeMinRequirements(udg_TmpInteger, udg_TmpInteger2)
+endfunction
+
+function ShowPlayers takes player to returns nothing
+    local player listedPlayer = null
+    local integer i = 0
+    loop
+        exitwhen (i >= bj_MAX_PLAYERS)
+        set listedPlayer = Player(i)
+        if (GetPlayerSlotState(listedPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            call DisplayTextToPlayer(to, 0, 0, GetPlayerColorString(listedPlayer, GetPlayerName(listedPlayer)) + ": " + I2S(i + 1) + " - " + GetPlayerColorName(listedPlayer) + " - Team " + I2S(GetPlayerTeam(listedPlayer) + 1))
+        endif
+        set listedPlayer = null
+        set i = i + 1
+    endloop
+endfunction
+
+function GetItemProfession takes integer itemTypeId returns integer
+    local integer i = 0
+    loop
+        exitwhen (i >= udg_Max_Berufe)
+        if (udg_ProfessionItemType[i] == itemTypeId) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return udg_ProfessionNone
+endfunction
+
+// TODO Make this function faster by caching item type races and professions!
+function CanItemTypeIdBePickedUp takes integer itemTypeId, player whichPlayer returns boolean
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+    local integer itemRace = udg_RaceNone
+    local integer itemProfession = udg_ProfessionNone
+    if (udg_PlayerUnlockedAllRaces[playerId]) then
+        return true
+    endif
+    set itemRace = GetItemRace(itemTypeId)
+    set itemProfession = GetItemProfession(itemTypeId)
+    return (itemRace == udg_RaceNone or itemRace == udg_PlayerRace[playerId] or itemRace == udg_PlayerRace2[playerId]) and (itemProfession == udg_ProfessionNone or itemProfession == udg_PlayerProfession[playerId] or itemProfession == udg_PlayerProfession2[playerId])
+endfunction
+
+function CanItemBePickedUp takes item whichItem, player whichPlayer returns boolean
+    local player owner = GetItemPlayer(whichItem)
+    local boolean result = owner == null or owner == whichPlayer or CanItemTypeIdBePickedUp(GetItemTypeId(whichItem), whichPlayer)
+    set owner = null
+    return result
 endfunction
 
 // Add all prestored savecodes into this function
