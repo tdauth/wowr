@@ -16691,9 +16691,38 @@ function CanItemTypeIdBePickedUp takes integer itemTypeId, player whichPlayer re
     return (itemRace == udg_RaceNone or itemRace == udg_PlayerRace[playerId] or itemRace == udg_PlayerRace2[playerId]) and (itemProfession == udg_ProfessionNone or itemProfession == udg_PlayerProfession[playerId] or itemProfession == udg_PlayerProfession2[playerId])
 endfunction
 
+function GetItemTypeIdPickupErrorReason takes integer itemTypeId, player whichPlayer returns string
+    local integer playerId = GetConvertedPlayerId(whichPlayer)
+    local integer itemRace = udg_RaceNone
+    local integer itemProfession = udg_ProfessionNone
+    if (not udg_PlayerUnlockedAllRaces[playerId]) then
+        set itemRace = GetItemRace(itemTypeId)
+        if (itemRace != udg_RaceNone and itemRace != udg_PlayerRace[playerId] and itemRace != udg_PlayerRace2[playerId]) then
+            return "Belongs to race " + udg_RaceName[itemRace] + "!"
+        endif
+        set itemProfession = GetItemProfession(itemTypeId)
+        if (itemProfession != udg_ProfessionNone and itemProfession != udg_PlayerProfession[playerId] and itemProfession != udg_PlayerProfession2[playerId]) then
+            return "Belongs to profession " + udg_ProfessionName[itemProfession] + "!"
+        endif
+    endif
+    return null
+endfunction
+
 function CanItemBePickedUp takes item whichItem, player whichPlayer returns boolean
     local player owner = GetItemPlayer(whichItem)
-    local boolean result = owner == null or owner == whichPlayer or CanItemTypeIdBePickedUp(GetItemTypeId(whichItem), whichPlayer)
+    local boolean result = (owner == null or owner == Player(PLAYER_NEUTRAL_PASSIVE) or owner == whichPlayer) and CanItemTypeIdBePickedUp(GetItemTypeId(whichItem), whichPlayer)
+    set owner = null
+    return result
+endfunction
+
+function GetItemPickupErrorReason takes item whichItem, player whichPlayer returns string
+    local player owner = GetItemPlayer(whichItem)
+    local string result = null
+    if (owner != null and owner != Player(PLAYER_NEUTRAL_PASSIVE) and owner != whichPlayer) then
+        set result = "Owner is " + GetPlayerNameColored(owner) + "!"
+    else
+        set result = GetItemTypeIdPickupErrorReason(GetItemTypeId(whichItem), whichPlayer)
+    endif
     set owner = null
     return result
 endfunction
