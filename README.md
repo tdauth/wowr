@@ -629,3 +629,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * lelyanra: [BTNDigArtifact](https://www.hiveworkshop.com/threads/btndigartifact.164559/)
 * Blizzard Entertainment: [BTNAbility_Hunter_BeastCall](https://www.hiveworkshop.com/threads/btnability_hunter_beastcall.55496/)
 * Mike: [Turret](https://www.hiveworkshop.com/threads/turret.266656/)
+* Blizzard Entertainment: [BTNINV_Misc_Bag_10](https://www.hiveworkshop.com/threads/btninv_misc_bag_10.55161/)
