@@ -16962,12 +16962,17 @@ endfunction
 
 function DisplayStats takes player to, player from returns nothing
     local integer playerId = GetConvertedPlayerId(from)
-    local integer heroLevel = GetHeroLevel1(from)
+    local integer heroLevel1 = GetHeroLevel1(from)
+    local integer heroLevel2 = GetHeroLevel2(from)
+    local integer heroLevel3 = GetHeroLevel3(from)
     local integer heroKills = udg_HeroKills[playerId]
     local integer heroDeaths = udg_HeroDeaths[playerId]
     local integer unitKills = udg_UnitKills[playerId]
     local integer unitsLost = udg_UnitsLost[playerId]
-    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Hero Level: " + I2S(heroLevel) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost))
+    local integer buildingsRazed = udg_BuildingsRazed[playerId]
+    local string profession1 = udg_ProfessionName[udg_PlayerProfession[playerId]]
+    local string profession2 = udg_ProfessionName[udg_PlayerProfession2[playerId]]
+    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Hero Levels: " + I2S(heroLevel1) + "/" + I2S(heroLevel2) + "/" + I2S(heroLevel3) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost) + "\n- Buildings razed " + I2S(buildingsRazed) + "\n- Profession 1: " + profession1  + "\n- Profession 2: " + profession2)
 endfunction
 
 // Add all prestored savecodes into this function
