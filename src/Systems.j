@@ -437,6 +437,7 @@ function ClearRucksackItem takes integer index returns nothing
     set udg_RucksackItemDescription[index] = ""
     set udg_RucksackItemTooltip[index] = ""
     set udg_RucksackItemTooltipExtended[index] = ""
+    set udg_RucksackItemPlayer[index] = null
 endfunction
 
 function SetRucksackItemFromItem takes item whichItem, integer index returns nothing
@@ -448,6 +449,7 @@ function SetRucksackItemFromItem takes item whichItem, integer index returns not
     set udg_RucksackItemDescription[index] = BlzGetItemDescription(whichItem)
     set udg_RucksackItemTooltip[index] = BlzGetItemTooltip(whichItem)
     set udg_RucksackItemTooltipExtended[index] = BlzGetItemExtendedTooltip(whichItem)
+    set udg_RucksackItemPlayer[index] = GetItemPlayer(whichItem)
 endfunction
 
 function ApplyRucksackItem takes item whichItem, integer index returns nothing
@@ -459,6 +461,7 @@ function ApplyRucksackItem takes item whichItem, integer index returns nothing
     call BlzSetItemDescription(whichItem, udg_RucksackItemDescription[index])
     call BlzSetItemTooltip(whichItem, udg_RucksackItemTooltip[index])
     call BlzSetItemExtendedTooltip(whichItem, udg_RucksackItemTooltipExtended[index])
+    call SetItemPlayer(whichItem, udg_RucksackItemPlayer[index], false)
 endfunction
 
 function BackpackCountItemsOfItemTypeForPlayer takes integer playerId, integer itemTypeId returns integer
@@ -3670,8 +3673,8 @@ endfunction
 library SaveCodeSystem requires WoWReforgedUtils
 
 globals
-    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2~^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII without space
-    constant string SAVE_CODE_SEGMENT_SEPARATOR = "Ä" // must not be part of SAVE_CODE_DIGITS
+    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII without space and ~
+    constant string SAVE_CODE_SEGMENT_SEPARATOR = "~" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
     constant boolean SAVE_CODE_OBFUSCATE = true
 endglobals
@@ -5147,6 +5150,8 @@ function CreateEquipmentBags takes player whichPlayer, integer equipmentBags ret
         call EnableItemCraftingUnit(equipmentBag)
         set i = i + 1
     endloop
+
+    call LinkItemCraftingGroupInventories(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
 endfunction
 
 function RecreateEquipmentBags takes player whichPlayer, integer equipmentBags returns nothing
@@ -8164,7 +8169,7 @@ function GetSaveCodeShortInfosLetter takes string playerNameTo, string s returns
     return "f_" + playerNameFrom + "-t_" + playerNameToText + "-m_" + I2S(StringLength(message))
 endfunction
 
-function ApplySaveCodeLetter takes player whichPlayer, string playerName, string s returns boolean
+function ApplySaveCodeLetterEx takes player whichPlayer, string playerName, string s returns boolean
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(playerName))
     local integer playerNameToHash = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, 0)
     local string playerNameFrom = ConvertSaveCodeSegmentIntoStringFromSaveCode(saveCode, 1, playerNameToHash)
@@ -8174,12 +8179,16 @@ function ApplySaveCodeLetter takes player whichPlayer, string playerName, string
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
 
     if (checksum == CompressedAbsStringHash(checkedSaveCode) and playerNameToHash == CompressedAbsStringHash(playerName)) then
-        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 40.0, "Letter from " + playerNameFrom + ": " + message)
+        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 120.0, "Letter from " + playerNameFrom + ": " + message)
 
         return true
     endif
 
     return false
+endfunction
+
+function ApplySaveCodeLetter takes player whichPlayer, string playerName, string s returns boolean
+    return ApplySaveCodeLetterEx(whichPlayer, "all", s) or ApplySaveCodeLetterEx(whichPlayer, playerName, s)
 endfunction
 
 function GetSaveCodeErrorsLetter takes player whichPlayer, string playerName, string s returns string
@@ -8813,7 +8822,7 @@ function GenerateSaveCode takes player whichPlayer, string playerName, boolean s
     call GetSaveCodeDragonUnits(whichPlayer, playerName, singlePlayer, warlord)
     call GetSaveCodeGoodItems(playerName, singlePlayer, warlord)
     call GetSaveCodeHumanUpgrades(whichPlayer, playerName, singlePlayer, warlord)
-    call GetSaveCodeLetter(playerName, playerName, "Hello World!")
+    call GetSaveCodeLetter(playerName, "all", "Hello citizens!")
 endfunction
 
 function GenerateSaveCodeNewOpLimit takes nothing returns nothing
@@ -16128,6 +16137,12 @@ endlibrary
 // Allows crafting items by using the items in the unit inventory.
 // The required items can change add an item to the inventory to be sold as crafting button.
 //
+// Features:
+// - Sellable items with stocks to craft items.
+// - Multipages.
+// - Linking multiple inventories.
+// - Minimum requirements.
+// - Customized requirements via callbacks.
 library ItemCraftingSystem initializer Init
 
 function interface ItemCraftingSystemRequirementCallback takes integer recipe, unit craftingUnit returns integer
@@ -16135,7 +16150,7 @@ function interface ItemCraftingSystemRequirementCallback takes integer recipe, u
 globals
     public constant integer MAX_REQUIREMENTS = 15
     public constant boolean ENABLE_PAGING = true
-    public constant integer MAX_RECIPES_PER_PAGE = 9
+    public constant integer MAX_RECIPES_PER_PAGE = 8
     public constant integer NEXT_RECIPES_ABILITY_ID = 'A0MD'
     public constant integer PREVIOUS_RECIPES_ABILITY_ID = 'A0ME'
 
@@ -16168,8 +16183,8 @@ globals
     private timer itemCraftingStockUpdateTimer = CreateTimer()
 
     private constant integer HASHTABLE_KEY_PAGE = 0
-    //private constant integer HASHTABLE_KEY_GROUP = 1 // for linking multiple crafting units
-    //private constant integer HASHTABLE_KEY_DISABLED_RECIPES = 2 // disable recipes per unit
+    private constant integer HASHTABLE_KEY_GROUP = 1 // For linking multiple crafting units.
+    private constant integer HASHTABLE_KEY_DISABLED_RECIPES = 2 // Disable recipes per unit. This has to be the last key. All following keys are the disabled recipes.
 endglobals
 
 private function Index2D takes integer Value1, integer Value2, integer MaxValue2 returns integer
@@ -16244,6 +16259,29 @@ private function ExecuteCraftingCallbacks takes integer recipe, unit craftingUni
     endloop
 endfunction
 
+private function SetItemCraftingUnitGroup takes unit whichUnit, group whichGroup returns nothing
+    call SaveGroupHandle(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_GROUP, whichGroup)
+endfunction
+
+private function GetItemCraftingUnitGroup takes unit whichUnit returns group
+    return LoadGroupHandle(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_GROUP)
+endfunction
+
+function IsItemCraftingRecipeEnabled takes unit whichUnit, integer recipe returns boolean
+    local integer counter = LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES)
+    local integer disabledRecipe = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= counter)
+        set disabledRecipe = LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES + i)
+        if (disabledRecipe == recipe) then
+            return false
+        endif
+        set i = i + 1
+    endloop
+    return true
+endfunction
+
 function CheckRecipeRequirement takes integer recipe, integer requirement, unit whichUnit returns integer
     local integer index = Index2D(recipe, requirement, MAX_REQUIREMENTS)
     local integer requiredItemTypeId = recipesRequirementItemTypeIds[index]
@@ -16272,24 +16310,36 @@ function ConsumeRecipeRequirement takes integer recipe, integer requirement, int
     local integer reducedCharges = 0
     local item slotItem = null
     local integer i = 0
+    local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
+    local integer j = 0
+    local unit groupUnit = null
     if (requiredItemTypeId != 0) then
+        set j = 0
         loop
-            exitwhen (i == bj_MAX_INVENTORY)
-            set slotItem = UnitItemInSlot(whichUnit, i)
-            if (slotItem != null and GetItemTypeId(slotItem) == requiredItemTypeId) then
-                set reducedCharges = charges * recipesRequirementCharges[index]
-                set matchingCharges = matchingCharges + reducedCharges
-                //call BJDebugMsg("Consuming " + I2S(reducedCharges) + " of item " + GetItemName(slotItem) + " from unit " + GetUnitName(whichUnit) + ".")
-                set reducedCharges = GetItemCharges(slotItem) - reducedCharges
-                if (reducedCharges > 0) then
-                    call SetItemCharges(slotItem, reducedCharges)
-                else
-                    call UnitRemoveItemFromSlot(whichUnit, i)
+            exitwhen (j >= BlzGroupGetSize(whichGroup))
+            set groupUnit = BlzGroupUnitAt(whichGroup, j)
+            loop
+                exitwhen (i == bj_MAX_INVENTORY)
+                set slotItem = UnitItemInSlot(groupUnit, i)
+                if (slotItem != null and GetItemTypeId(slotItem) == requiredItemTypeId) then
+                    set reducedCharges = charges * recipesRequirementCharges[index]
+                    set matchingCharges = matchingCharges + reducedCharges
+                    //call BJDebugMsg("Consuming " + I2S(reducedCharges) + " of item " + GetItemName(slotItem) + " from unit " + GetUnitName(groupUnit) + ".")
+                    set reducedCharges = GetItemCharges(slotItem) - reducedCharges
+                    if (reducedCharges > 0) then
+                        call SetItemCharges(slotItem, reducedCharges)
+                    else
+                        call UnitRemoveItemFromSlot(groupUnit, i)
+                    endif
                 endif
-            endif
-            set i = i + 1
+                set i = i + 1
+            endloop
+            set groupUnit = null
+            set j = j + 1
         endloop
     endif
+
+    set whichGroup = null
 
     return reducedCharges
 endfunction
@@ -16302,6 +16352,8 @@ function CheckRecipeRequirements takes integer recipe, unit whichUnit returns in
     local integer minRequirements = recipesMinRequirements[recipe]
     local integer counter = recipesRequirementCounters[recipe]
     local integer i = 0
+    local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
+    local integer j = 0
 
     if (recipeRequirementCallback != 0) then
         set result = recipeRequirementCallback.evaluate(recipe, whichUnit)
@@ -16324,18 +16376,24 @@ function CheckRecipeRequirements takes integer recipe, unit whichUnit returns in
 
     loop
         exitwhen (i == counter or matchingRequirements >= minRequirements)
-        set requirementCheckCounter = CheckRecipeRequirement(recipe, i, whichUnit)
-        if (not resultInitialized) then
-            set result = requirementCheckCounter
-            set resultInitialized = true
-        else
-            set result = IMinBJ(result, requirementCheckCounter)
-        endif
-        if (requirementCheckCounter > 0) then
-            set matchingRequirements = matchingRequirements + 1
-        endif
+        set j = 0
+        loop
+            exitwhen (j >= BlzGroupGetSize(whichGroup) or matchingRequirements >= minRequirements)
+            set requirementCheckCounter = CheckRecipeRequirement(recipe, i, BlzGroupUnitAt(whichGroup, j))
+            if (not resultInitialized) then
+                set result = requirementCheckCounter
+                set resultInitialized = true
+            else
+                set result = IMinBJ(result, requirementCheckCounter)
+            endif
+            if (requirementCheckCounter > 0) then
+                set matchingRequirements = matchingRequirements + 1
+            endif
+            set j = j + 1
+        endloop
         set i = i + 1
     endloop
+    set whichGroup = null
     return result
 endfunction
 
@@ -16363,29 +16421,43 @@ function CheckAllRecipesRequirements takes unit whichUnit returns integer
     local integer counter = recipesCounter
     local integer requirementCheckCounter = 0
     local integer i = 0
+    local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
+    local integer j = 0
+    local unit groupUnit = null
     //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
     loop
         exitwhen (i == counter)
         set requirementCheckCounter = CheckRecipeRequirements(i, whichUnit)
-        //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
-        if (requirementCheckCounter > 0) then
-            set result = result + 1
-            if (recipesUIItemTypeIds[i] != 0) then
-                //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " to unit " + GetUnitName(whichUnit))
-                call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[i])
-                call AddItemToStock(whichUnit, recipesUIItemTypeIds[i], requirementCheckCounter, requirementCheckCounter)
-            endif
-        else
-            if (recipesUIItemTypeIds[i] != 0) then
-                //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(whichUnit))
-                call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[i])
-                if (not recipesHideUIItemOnNotAvailable[i]) then
-                    call AddItemToStock(whichUnit, recipesUIItemTypeIds[i], 0, 1)
+        set j = 0
+        loop
+            exitwhen (j == BlzGroupGetSize(whichGroup))
+            set groupUnit = BlzGroupUnitAt(whichGroup, j)
+            if (IsItemCraftingRecipeEnabled(groupUnit, i)) then
+                //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
+                if (requirementCheckCounter > 0) then
+                    set result = result + 1
+                    if (recipesUIItemTypeIds[i] != 0) then
+                        //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " to unit " + GetUnitName(groupUnit))
+                        call RemoveItemFromStock(groupUnit, recipesUIItemTypeIds[i])
+                        call AddItemToStock(groupUnit, recipesUIItemTypeIds[i], requirementCheckCounter, requirementCheckCounter)
+                    endif
+                else
+                    if (recipesUIItemTypeIds[i] != 0) then
+                        //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(groupUnit))
+                        call RemoveItemFromStock(groupUnit, recipesUIItemTypeIds[i])
+                        if (not recipesHideUIItemOnNotAvailable[i]) then
+                            call AddItemToStock(groupUnit, recipesUIItemTypeIds[i], 0, 1)
+                        endif
+                    endif
                 endif
             endif
-        endif
+            set groupUnit = null
+            set j = j + 1
+        endloop
         set i = i + 1
     endloop
+
+    set whichGroup = null
     return result
 endfunction
 
@@ -16395,16 +16467,24 @@ function ClearAllRecipesForPage takes unit whichUnit, integer page, integer reci
     local integer requirementCheckCounter = 0
     local integer recipe = page * recipesPerPage
     local integer i = 0
+    local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
+    local integer j = 0
     //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
     loop
         exitwhen (i == recipesPerPage and recipe >= counter)
-        if (recipesUIItemTypeIds[recipe] != 0) then
-            //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(whichUnit))
-            call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[recipe])
-        endif
+        set j = 0
+        loop
+            exitwhen (j >= BlzGroupGetSize(whichGroup))
+            if (recipesUIItemTypeIds[recipe] != 0) then
+                //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(BlzGroupUnitAt(whichGroup, j)))
+                call RemoveItemFromStock(BlzGroupUnitAt(whichGroup, j), recipesUIItemTypeIds[recipe])
+            endif
+            set j = j + 1
+        endloop
         set i = i + 1
         set recipe = recipe + 1
     endloop
+    set whichGroup = null
     return result
 endfunction
 
@@ -16414,29 +16494,42 @@ function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, 
     local integer requirementCheckCounter = 0
     local integer recipe = page * recipesPerPage
     local integer i = 0
+    local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
+    local integer j = 0
+    local unit groupUnit = null
     call ClearAllRecipesForPage(whichUnit, page, recipesPerPage)
     //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
     loop
         exitwhen (i == recipesPerPage and recipe >= counter)
         set requirementCheckCounter = CheckRecipeRequirements(recipe, whichUnit)
-        //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
-        if (requirementCheckCounter > 0) then
-            set result = result + 1
-            if (recipesUIItemTypeIds[recipe] != 0) then
-                //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " to unit " + GetUnitName(whichUnit))
-                call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[recipe])
-                call AddItemToStock(whichUnit, recipesUIItemTypeIds[recipe], requirementCheckCounter, requirementCheckCounter)
+        set j = 0
+        loop
+            exitwhen (j >= BlzGroupGetSize(whichGroup))
+            //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
+            set groupUnit = BlzGroupUnitAt(whichGroup, j)
+            if (IsItemCraftingRecipeEnabled(groupUnit, i)) then
+                if (requirementCheckCounter > 0) then
+                    set result = result + 1
+                    if (recipesUIItemTypeIds[recipe] != 0) then
+                        //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " to unit " + GetUnitName(groupUnit))
+                        call RemoveItemFromStock(groupUnit, recipesUIItemTypeIds[recipe])
+                        call AddItemToStock(groupUnit, recipesUIItemTypeIds[recipe], requirementCheckCounter, requirementCheckCounter)
+                    endif
+                else
+                    if (recipesUIItemTypeIds[recipe] != 0) then
+                        //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " from unit " + GetUnitName(groupUnit))
+                        call RemoveItemFromStock(groupUnit, recipesUIItemTypeIds[recipe])
+                        call AddItemToStock(groupUnit, recipesUIItemTypeIds[recipe], 0, 1)
+                    endif
+                endif
             endif
-        else
-            if (recipesUIItemTypeIds[recipe] != 0) then
-                //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " from unit " + GetUnitName(whichUnit))
-                call RemoveItemFromStock(whichUnit, recipesUIItemTypeIds[recipe])
-                call AddItemToStock(whichUnit, recipesUIItemTypeIds[recipe], 0, 1)
-            endif
-        endif
+            set groupUnit = null
+            set j = j + 1
+        endloop
         set i = i + 1
         set recipe = recipe + 1
     endloop
+    set whichGroup = null
     return result
 endfunction
 
@@ -16451,11 +16544,21 @@ function GetMaxRecipesPages takes integer recipesPerPage returns integer
     return result
 endfunction
 
-static if (ENABLE_PAGING) then
 private function ClearItemCraftingUnit takes unit whichUnit returns nothing
+    local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
+    if (whichGroup != null) then
+        call GroupRemoveUnit(whichGroup, whichUnit)
+        if (BlzGroupGetSize(whichGroup) == 0) then
+            call GroupClear(whichGroup)
+            call DestroyGroup(whichGroup)
+        endif
+        set whichGroup = null
+    endif
+
     call FlushChildHashtable(itemCraftingUnitsHashTable, GetHandleId(whichUnit))
 endfunction
 
+static if (ENABLE_PAGING) then
 private function SetItemCraftingUnitPage takes unit whichUnit, integer page returns nothing
     call SaveInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_PAGE, page)
 endfunction
@@ -16464,6 +16567,50 @@ private function GetItemCraftingUnitPage takes unit whichUnit returns integer
     return LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_PAGE)
 endfunction
 endif
+
+function SetItemCraftingRecipeEnabled takes unit whichUnit, integer recipe, boolean enabled returns nothing
+static if (ENABLE_PAGING) then
+    local integer page = GetItemCraftingUnitPage(whichUnit)
+endif
+    local integer counter = LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES)
+    local integer disabledRecipe = 0
+    local boolean found = false
+    local integer i = 0
+    if (enabled) then
+        loop
+            exitwhen (i >= counter)
+            set disabledRecipe = LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES + i)
+            if (found == true) then
+                call SaveInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES + i - 1, disabledRecipe)
+            endif
+            if (disabledRecipe == recipe) then
+                set found = true
+            endif
+            set i = i + 1
+        endloop
+        if (found) then
+            call SaveInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES, counter - 1)
+        endif
+    else
+        loop
+            exitwhen (i >= counter)
+            set disabledRecipe = LoadInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES + i)
+            if (disabledRecipe == recipe) then
+                set found = true
+            endif
+            set i = i + 1
+        endloop
+        if (not found) then
+            call SaveInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES + counter, recipe)
+            call SaveInteger(itemCraftingUnitsHashTable, GetHandleId(whichUnit), HASHTABLE_KEY_DISABLED_RECIPES, counter + 1)
+        endif
+    endif
+static if (ENABLE_PAGING) then
+    call CheckAllRecipesRequirementsForPage(whichUnit, page, MAX_RECIPES_PER_PAGE)
+else
+    call CheckAllRecipesRequirements(whichUnit)
+endif
+endfunction
 
 function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit returns item
 static if (ENABLE_PAGING) then
@@ -16520,7 +16667,10 @@ static if (ENABLE_PAGING) then
     local integer page = GetItemCraftingUnitPage(whichUnit)
     local integer maxPages = GetMaxRecipesPages(MAX_RECIPES_PER_PAGE)
 endif
+    local group whichGroup = CreateGroup()
+    call GroupAddUnit(whichGroup, whichUnit)
     call GroupAddUnit(itemCraftingUnits, whichUnit)
+    call SetItemCraftingUnitGroup(whichUnit, whichGroup)
 static if (ENABLE_PAGING) then
     call CheckAllRecipesRequirementsForPage(whichUnit, page, MAX_RECIPES_PER_PAGE)
 else
@@ -16541,8 +16691,9 @@ endif
     call GroupRemoveUnit(itemCraftingUnits, whichUnit)
 static if (ENABLE_PAGING) then
     call ClearAllRecipesForPage(whichUnit, page, MAX_RECIPES_PER_PAGE)
-    call ClearItemCraftingUnit(whichUnit)
 endif
+
+    call ClearItemCraftingUnit(whichUnit)
 
     if (BlzGroupGetSize(itemCraftingUnits) == 0) then
         call PauseTimer(itemCraftingStockUpdateTimer)
@@ -16551,6 +16702,84 @@ endfunction
 
 function IsItemCraftingUnitEnabled takes unit whichUnit returns boolean
     return IsUnitInGroup(whichUnit, itemCraftingUnits)
+endfunction
+
+function LinkItemCraftingUnitInventories takes unit whichUnit0, unit whichUnit1 returns group
+    local group whichGroup0 = GetItemCraftingUnitGroup(whichUnit0)
+    local group whichGroup1 = GetItemCraftingUnitGroup(whichUnit1)
+    local integer i = 0
+
+    if (whichGroup0 == null) then
+        set whichGroup0 = CreateGroup()
+        call GroupAddUnit(whichGroup0, whichUnit0)
+    endif
+
+    if (whichGroup1 == null) then
+        set whichGroup1 = CreateGroup()
+        call GroupAddUnit(whichGroup1, whichUnit1)
+    endif
+
+    if (whichGroup0 != null and whichGroup1 != null) then
+        call GroupAddGroup(whichGroup1, whichGroup0)
+
+        set i = 0
+        loop
+            exitwhen (i == BlzGroupGetSize(whichGroup0))
+            call SetItemCraftingUnitGroup(BlzGroupUnitAt(whichGroup0, i), whichGroup0)
+            set i = i + 1
+        endloop
+        call GroupClear(whichGroup1)
+        call DestroyGroup(whichGroup1)
+        set whichGroup1 = null
+    endif
+
+    return whichGroup0
+endfunction
+
+function LinkItemCraftingGroupInventories takes group source returns group
+    local unit first = FirstOfGroup(source)
+    local integer i = 1
+    if (first != null) then
+        loop
+            exitwhen (i == BlzGroupGetSize(source))
+            call LinkItemCraftingUnitInventories(BlzGroupUnitAt(source, i), first)
+            set i = i + 1
+        endloop
+        set first = null
+        return GetItemCraftingUnitGroup(first)
+    endif
+    return null
+endfunction
+
+function UnlinkItemCraftingUnitInventories takes unit whichUnit0, unit whichUnit1 returns group
+    local group whichGroup0 = GetItemCraftingUnitGroup(whichUnit0)
+    local group whichGroup1 = GetItemCraftingUnitGroup(whichUnit1)
+
+    if (whichGroup0 != null) then
+        call GroupRemoveUnit(whichGroup0, whichUnit1)
+    endif
+
+    if (whichGroup1 != null and IsUnitInGroup(whichUnit1, whichGroup1)) then
+        call GroupRemoveUnit(whichGroup1, whichUnit1)
+        if (BlzGroupGetSize(whichGroup1) == 0) then
+            call GroupClear(whichGroup1)
+            call DestroyGroup(whichGroup1)
+            set whichGroup1 = null
+        endif
+    endif
+
+    set whichGroup1 = CreateGroup()
+    call GroupAddUnit(whichGroup1, whichUnit1)
+
+    call SetItemCraftingUnitGroup(whichUnit1, whichGroup1)
+
+    return whichGroup1
+endfunction
+
+function ItemCraftingUnitInventoriesAreLinked takes unit whichUnit0, unit whichUnit1 returns boolean
+    local group whichGroup0 = GetItemCraftingUnitGroup(whichUnit0)
+
+    return IsUnitInGroup(whichUnit1, whichGroup0)
 endfunction
 
 private function TriggerConditionIsItemCraftingUnitEnabled takes nothing returns boolean
@@ -16727,99 +16956,38 @@ function GetItemPickupErrorReason takes item whichItem, player whichPlayer retur
     return result
 endfunction
 
+function DisplayStats takes player to, player from returns nothing
+    local integer playerId = GetConvertedPlayerId(from)
+    local integer heroLevel = GetHeroLevel1(from)
+    local integer heroKills = udg_HeroKills[playerId]
+    local integer heroDeaths = udg_HeroDeaths[playerId]
+    local integer unitKills = udg_UnitKills[playerId]
+    local integer unitsLost = udg_UnitsLost[playerId]
+    call DisplayTextToPlayer(to, 0, 0, GetPlayerColorName(from) + ":\n- Hero Level: " + I2S(heroLevel) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost))
+endfunction
+
 // Add all prestored savecodes into this function
 function InitPrestoredSaveCodes takes nothing returns nothing
     // ##############################################################
     // all
     // Hello citizens!
-    call AddPrestoredSaveCodeLetter("all", "?bGl~x:RVRY)Gwu::~T?Y)Y%u43oG?WG")
-    // ##############################################################
-    call AddPrestoredSaveCode("Razuqze#1414", "WNHAHlHmPHWSyHRbHK4UHmHlHlHlHlHlHlHmmHrHvHlHlHlHlHlHlHWjH")
-    // ##############################################################
-    // Runeblade14#2451
-    call AddPrestoredSaveCode("Runeblade14#2451", "nVTxTJTnMTlAsHTgUldTsHl9TRT0TPT4TaTlTST38TxTZTndT2dXTJTJTJTJTnlT")
-    call AddPrestoredSaveCode("Runeblade14#2451", "nVTnTJTsuT3wrsTeKNTsR81TsbT0TPT4TaTnTUTxATnTsTxxT2dXTJTJTJTJTCT")
-    call AddPrestoredSaveCode("Runeblade14#2451", "nVTxTJTnMTIvjATZLM9TnhCQTCT0TpT4TaT3TeTkTnTJTgXT2dXTJTJTJTJTsJT")
-    // ##############################################################
-    // WorldEdit
-    call AddPrestoredSaveCode("WorldEdit", "zZeReRezjeKpgxRebkeF1eReReReReReIeRe5eIezezeReReReReReIxe")
-    call AddPrestoredSaveCode("WorldEdit", "zZezeReIQeD2Z5YeykqneyFudekeReReReReReReReIeReReReReReReRez3e")
-    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Freelancer-items-4-Green Dragon Whelp Egg,Green Drake Egg,Green Dragon Whelp Egg,Green Drake Egg.txt
-    call AddPrestoredSaveCodeItems("WorldEdit", "zZezeReIQeXezewezeXezewezeIRe")
-    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Warlord-items-5-Orb of Fire,Orb of Fire,Orb of Fire,Orb of Fire,Orb of Fire.txt
-    call AddPrestoredSaveCodeItems("WorldEdit", "zZeReRezjezqeRezqeRezqeRezqeRezqeReISe")
-    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Warlord-buildings-8-Dragonhawk Aviary,Mage Tower,Mage Tower,High Elven Guard Tower,High Elf Stables,Enchanter Tower,Bazaar,High Elf Barracks.txt
-    call AddPrestoredSaveCodeBuildings("WorldEdit", "zZeReRezjezreI6ye8wTezleI0re8jBezleIgPeYFpezAeIxme8XyezHeIxme8N9ezLeI1se8SXezmeIiwe8Z8ez4eIOTe8jBezke")
-    // WorldOfWarcraftReforged-WorldEdit-Singleplayer-Normal-Warlord-units-10-8Arch Cleric,3Archer,2Ranger,4Captain,2Swordsman,2War Eagle,3Dragonhawk,2Dragonhawk Rider,1Birdiepult,2High Elf Knight
-    call AddPrestoredSaveCodeBuildings("WorldEdit", "zZeReRezjezreQez7eDez4eIezHekezLeIezmeIezWeDezPeIezlezezKeIeI7e")
+    call AddPrestoredSaveCodeLetter("all", "TLj`kOkQ~PM_rJj@~aaBD3L8Lx~]y#jdj")
     // ##############################################################
     // Barade#2569
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Freelancer-level1-1000-level2-1000-level3-1000-gold-800000-lumber-800000.txt
-    call AddPrestoredSaveCode("Barade#2569", "06sgsns0fsgureEsgvJCsgvJCs2HsxNsxNsxNsxNs0ZZsnsb4Osnsb4OsxcTsgureEsgureEsxNsxNs0sgszs")
     // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-level1-1000-level2-1000-level3-1000-gold-800000-lumber-800000.txt
-    call AddPrestoredSaveCode("Barade#2569", "06s0snsxNsgureEsgvJCsgvJCs2HsxNsxNsxNsxNs0ZZsnsb4Osnsb4OsxcTsgureEsgureEsxNsxNs0sgsxQs")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-level1-1000-level2-1000-level3-1000-gold-800000-lumber-800000.txt
-    call AddPrestoredSaveCode("Barade#2569", "06s0snsxNsgureEsgvJCsgvJCs2HsxNsxNsxNsxNs0ZZsnsb4Osnsb4OsxcTsgureEsgureEsxNsxNs0sgsxQs")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-level1-13-level2-1-level3-1-gold-8897-lumber-95445.txt
-    call AddPrestoredSaveCode("Barade#2569", "06s0snsxNs0mFs0L6slNRsnsnsnsnsnsasxsgCs0sxsxsnsnsnsnsnsnsxcs")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-items-6-Gloves of Haste,Potion of Invulnerability,Scroll of Restoration,Ankh of Reincarnation,Healing Wards,Health Stone.txt
-    call AddPrestoredSaveCodeItems("Barade#2569", "06s0snsxNsTsxNsgsxNs7sxNsLsxNsxusxNs0sxNsxns")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-items-4-Bow of Fire,Bow of Fire,Bow of Fire,Mithril Long Sword.txt
-    call AddPrestoredSaveCodeItems("Barade#2569", "06s0snsxNsZsnsZsnsZsnsEsnsts")
-    // WorldOfWarcraftReforged-Barade#2569-Singleplayer-Normal-Freelancer-items-6-Gloves of Haste,Potion of Invulnerability,Scroll of Restoration,Ankh of Reincarnation,Healing Wards,Health Stone.txt
-    call AddPrestoredSaveCodeItems("Barade#2569", "06sxsnsxNsTsxNsgsxNs7sxNsLsxNsxusxNs0sxNsUs")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-buildings-8-Outpost,Outpost,Outpost,Outpost,Dragonhawk Aviary,Dragonhawk Aviary,Mage Tower,Mage Tower.txt
-    call AddPrestoredSaveCodeBuildings("Barade#2569", "06s0snsxNsx8sfRYs3LPsx8sfRYs3AVsx8sfwAs3o0sx8sfzqs3nAsxYsfeVs3bIsxYsfa1s31gsxCsfc6s3HUsxCsflgs30osEs")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-units-6-10Clan Emissary,2Blue Drake,1Black Dragon,1Blood Elf Lieutenant,3High Elf Knight,1Archer.txt
-    call AddPrestoredSaveCodeUnits("Barade#2569", "06s0snsxNsbasEsxys0s0asxstsxsxYsgsxIsxsnsnsnsnsnsnsnsns0bs")
-    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-units-6-30Red Dragon,30Green Dragon,30Black Dragon,30Blue Dragon,30Bronze Dragon,30Nether Dragon
-    call AddPrestoredSaveCodeUnits("Barade#2569", "06s0snsxNs0EsrsxTsrs0asrs01srs0xsrs03srsnsnsnsnsnsnsnsnsxs")
-    // ##############################################################
-    // AntiDenseMan#1202
-    // WorldOfWarcraftReforged-AntiDenseMan#1202-Multiplayer-Normal-Warlord-level1-4-level2-0-level3-0-gold-37077-lumber-27049
-    call AddPrestoredSaveCode("AntiDenseMan#1202", "NgueuSuNButduFoWukq0uSuSuSuSuSuSuNu4uzuSuSuSuSuSuSuSu3u")
-    // WorldOfWarcraftReforged-AntiDenseMan#1202-Multiplayer-Normal-Warlord-units-3-1Heavy Tank,4Assault Tank,3Goblin War Zeppelin
-    call AddPrestoredSaveCodeUnits("AntiDenseMan#1202", "NgueuSuNBuNZuNuNbuzuNjuRuSuSuSuSuSuSuSuSuSuSuSuSuSuSuku")
-    // WorldOfWarcraftReforged-AntiDenseMan#1202-Multiplayer-Normal-Warlord-items-6-Bow of Fire,Bow of Fire,Bow of Fire,Bow of Fire,Bow of Fire,Bow of Fire.txt
-    call AddPrestoredSaveCodeItems("AntiDenseMan#1202", "NgueuSuNBuFuSuFuSuFuSuFuSuFuSuFuSuedu")
-    // ##############################################################
-    // MeowPeow#21783
-    // WorldOfWarcraftReforged-MeowPeow#21783-Multiplayer-Normal-Warlord-level1-7-level2-1-level3-1-gold-13570-lumber-17369.txt
-    call AddPrestoredSaveCode("MeowPeow#21783", "Wj7j5jcijbRj4iFjLT0j5j5j5j5j5jcjcjcRjvj5j5j5j5j5j5j5j5jEj")
-    // WorldOfWarcraftReforged-MeowPeow#21783-Multiplayer-Normal-Warlord-buildings-8-Slaughterhouse,Slaughterhouse,Graveyard,Graveyard,Temple of the Damned,Temple of the Damned,Spirit Tower,Spirit Tower.txt
-    call AddPrestoredSaveCodeBuildings("MeowPeow#21783", "Wj7j5jcijqjWB3jm1YjqjWfkjm1YjOjmASjAoFjOjmLLjAAKjdjWfkjA7EjdjWB3jA7EjJjWztjmbTjJjWNVjmagjczj")
-    // ##############################################################
-    // StiX#1311
-    // WorldOfWarcraftReforged-StiX#1311-Multiplayer-Normal-Freelancer-level1-10-level2-1-level3-1-gold-1144-lumber-0.txt
-    call AddPrestoredSaveCode("StiX#1311", "bTgag3gMwgbPUg48g3g3g3g3g3g3g3gbgMLgag3g3g3g3g3g3g3g3g2g")
-    // WorldOfWarcraftReforged-StiX#1311-Multiplayer-Normal-Freelancer-items-3-Khadgar's Pipe of Insight,Scourge Bone Chimes,Ancient Janggo of Endurance.txt
-    call AddPrestoredSaveCodeItems("StiX#1311", "bTgag3gMwg8g3gOg3gQg3gbEg")
-    // ##############################################################
-    // Rhum#11986
-    // WorldOfWarcraftReforged-Rhum#11986-Multiplayer-Normal-Warlord-level1-9-level2-1-level3-1-gold-19998-lumber-18444.txt
-    call AddPrestoredSaveCode("Rhum#11986", "4252h2jy2jKm24NM271N2h2h2h2h2h2j252jj2c2h2h2h2h2h2h2h2h2jH2")
-    // ##############################################################
-    // BobElDonuts#2355
-    // WorldOfWarcraftReforged-BobElDonuts#2355-Multiplayer-Normal-Freelancer-level1-14-level2-1-level3-1-gold-2403-lumber-0.txt
-    call AddPrestoredSaveCode("BobElDonuts#2355", "qxbx0x3Ex3TPxRWx0x0x0x0x0x0x0x0x3ZxMx0x0x0x0x0x0x0x0xQx")
-    // ##############################################################
-    // Cryingbandi#2663
-    // WorldOfWarcraftReforged-Cryingbandi#2663-Multiplayer-Normal-Warlord-level1-20-level2-1-level3-1-gold-26279-lumber-3791.txt
-    call AddPrestoredSaveCode("Cryingbandi#2663", "8HF8FVFQlFqQtFdYpFQQtFOFQFVFVFVF8F6FYaF6F6FQFVFVFYFqFVFVF9F")
-    // ##############################################################
-    // Dragon#18628
-    // WorldOfWarcraftReforged-Dragon#18628-Multiplayer-Normal-Warlord-level1-9-level2-0-level3-0-gold-10783-lumber-9960.txt
-    call AddPrestoredSaveCode("Dragon#18628", "VJxJsJnSJn7PJxOCJxe2JsJnJsJsJsJsJ0JgTJgJsJsJsJsJsJsJxCJ")
-    // ##############################################################
-    // Racnel#1228
-    // WorldOfWarcraftReforged-Racnel#1228-Multiplayer-Normal-Warlord-level1-9-level2-1-level3-1-gold-17506-lumber-10826.txt
-    call AddPrestoredSaveCode("Racnel#1228", "bi0b0g03z03ht0akx0biG0g0g0g0g0g0f0a0aj0f0f0a0g0g0g0g0g0g0bS0")
+    call AddPrestoredSaveCode("Barade#2569", "}+RDR:R}JR8VMhRp`@Rp`@R4=R}JR}JR}JR}JR-DR:RD&vR:RD&vRgcR8VMhR8VMhR}JR}JRDRKRDDR")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-items-6-Gloves of Haste,Potion of Invulnerability,Scroll of Restoration,Ankh of Reincarnation,Healing Wards,Health Stone
+    call AddPrestoredSaveCodeItems("Barade#2569", "}+RDR:R}JR{R}JRKR}JRfR}JRmR}JR}vR}JRDR}JR}?R")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-buildings-7-Guard Tower,Guard Tower,Altar of Kings,Lumber Mill,Arcane Vault,Workshop,Barracks
+    call AddPrestoredSaveCodeBuildings("Barade#2569", "}+RDR:R}JR&RKH$R}MUR&RKH$R}ULRfRK.8R}qcRmRK`eR}>uR2RK8YR}=>R6RK8YR}]lRtRK%DR}/4RCR")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Freelancer-units-6-40Red Dragon,40Green Dragon,40Black Dragon,40Blue Dragon,40Bronze Dragon,40Nether Dragon
+    call AddPrestoredSaveCodeUnits("Barade#2569", "}+RKR:R}JR}+RwR}lRwR}nRwR}|RwR}bRwR}^RwR:R:R:R:R:R:R:R:R$R")
     // ##############################################################
     // CLANS
     // MULTIPLAYER
     // TheElvenClan
-    // WorldOfWarcraftReforged-Clan-TheElvenClan-WorldEdit-Multiplayer-gold-10000-lumber-10000-WorldEdit_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain.txt
-    call AddPrestoredSaveCodeClan("TheElvenClan", false, ">c!cMc>c>uKc>uKcucuc>;cMc>;cMc>icMc@c>c>Ec>cMcMcMcMc>cic")
+    // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Multiplayer-gold-10000-lumber-10000-Barade#2569_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
+    call AddPrestoredSaveCodeClan("TheElvenClan", false, "/U/OUqU/U/:\"U/:\"UhUhU/6UqUrUqUu4UqUSU/UvU/UqUqUqUqU/U/WU")
     call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
@@ -16827,8 +16995,8 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     call AddPrestoredSaveCodeClanPlayer("AntiDenseMan#1202", udg_ClanRankCaptain)
     // SINGLEPLAYER
     // TheElvenClan
-    // WorldOfWarcraftReforged-Clan-TheElvenClan-WorldEdit-Singleplayer-gold-10000-lumber-10000-WorldEdit_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain.txt
-    call AddPrestoredSaveCodeClan("TheElvenClan", true, "Mc!cMc>c>uKc>uKcucuc>;cMc>;cMc>icMc@c>c>Ec>cMcMcMcMc>c>*c")
+    // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Singleplayer-gold-10000-lumber-10000-Barade#2569_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
+    call AddPrestoredSaveCodeClan("TheElvenClan", true, "qU/OUqU/U/:\"U/:\"UhUhU/6UqUrUqUu4UqUSU/UvU/UqUqUqUqU/U/5U")
     call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
