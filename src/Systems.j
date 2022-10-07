@@ -162,7 +162,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X"
+    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns nothing
@@ -13084,11 +13084,13 @@ function GetPlayerInfo takes player whichPlayer returns string
     return result
 endfunction
 
+library PlayerColorNames initializer Init requires WoWReforgedUtils
+
 globals
-    string array PlayerColorNames
+    private string array PlayerColorNames
 endglobals
 
-function InitPlayerColorNames takes nothing returns nothing
+private function Init takes nothing returns nothing
     set PlayerColorNames[0] = "RED"
     set PlayerColorNames[1] = "BLUE"
     set PlayerColorNames[2] = "CYAN"
@@ -13131,6 +13133,8 @@ function GetPlayerFromString takes string whichString returns player
 
     return null
 endfunction
+
+endlibrary
 
 library TurretSystemConfig
 
@@ -16963,7 +16967,7 @@ function DisplayStats takes player to, player from returns nothing
     local integer heroDeaths = udg_HeroDeaths[playerId]
     local integer unitKills = udg_UnitKills[playerId]
     local integer unitsLost = udg_UnitsLost[playerId]
-    call DisplayTextToPlayer(to, 0, 0, GetPlayerColorName(from) + ":\n- Hero Level: " + I2S(heroLevel) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost))
+    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Hero Level: " + I2S(heroLevel) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost))
 endfunction
 
 // Add all prestored savecodes into this function
