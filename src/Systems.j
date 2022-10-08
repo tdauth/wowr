@@ -9686,6 +9686,22 @@ function AiPlayersUIGetHeroStartLevel takes player whichPlayer, player owner ret
     return 1
 endfunction
 
+
+function ChooseComputerStartLocation takes integer startIndex returns integer
+    local integer i = startIndex
+    loop
+        exitwhen (i >= udg_Max_TownHalls)
+        if (not udg_ComputerStartLocationTaken[i]) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    if (startIndex > 0) then
+        return ChooseComputerStartLocation(0)
+    endif
+    return -1
+endfunction
+
 function AiPlayersUIGetPlayerWarlord takes player whichPlayer, player owner returns boolean
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
     local integer random = GetRandomInt(0, 1)
@@ -9696,10 +9712,10 @@ function AiPlayersUIGetPlayerWarlord takes player whichPlayer, player owner retu
             return false
         endif
 
-        return true
+        return ChooseComputerStartLocation(0) > -1
     endif
 
-    return random == 0 or not udg_AIFreelancers and udg_AIWarlords
+    return random == 0 or (not udg_AIFreelancers and udg_AIWarlords) and ChooseComputerStartLocation(0) > -1
 endfunction
 
 function AiPlayersUIGetPlayerRace takes player whichPlayer, player owner returns integer
@@ -9827,21 +9843,6 @@ function AiPlayersUIGetPlayerProfession takes player whichPlayer, player owner r
     endif
 
     return GetRandomInt(0, 4) // all useful professions for AI
-endfunction
-
-function ChooseComputerStartLocation takes integer startIndex returns integer
-    local integer i = startIndex
-    loop
-        exitwhen (i >= udg_Max_TownHalls)
-        if (not udg_ComputerStartLocationTaken[i]) then
-            return i
-        endif
-        set i = i + 1
-    endloop
-    if (startIndex > 0) then
-        return ChooseComputerStartLocation(0)
-    endif
-    return -1
 endfunction
 
 
