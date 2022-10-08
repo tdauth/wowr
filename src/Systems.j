@@ -9326,9 +9326,11 @@ globals
     constant real AI_PLAYERS_UI_SIZE_Y = 0.38
 
     constant real AI_PLAYERS_UI_LINE_HEADERS_Y = AI_PLAYERS_UI_Y - 0.06
-    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.03
+    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.04
 
-    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X = AI_PLAYERS_UI_X + 0.02
+    constant real AI_PLAYERS_UI_LINE_HEIGHT = 0.03
+
+    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X = AI_PLAYERS_UI_X + 0.03
     constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH = 0.09
 
     constant real AI_PLAYERS_UI_COLUMN_SPACING_X = 0.007
@@ -9500,6 +9502,10 @@ function CountAiPlayers takes nothing returns integer
 endfunction
 
 function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns nothing
+    local integer page = AiPlayersUIPage[GetPlayerId(whichPlayer)]
+    local integer counterStart = IMaxBJ((page - 1) * AI_PLAYERS_UI_MAX_PLAYERS, 0)
+    local integer counterEnd = page + AI_PLAYERS_UI_MAX_PLAYERS -1
+    local integer counter = 0
     local integer playerId = GetPlayerId(whichPlayer)
     local integer i = 0
     local integer index = 0
@@ -9522,17 +9528,21 @@ function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns
             exitwhen (i >= bj_MAX_PLAYERS)
             set index = Index2D(i, playerId, bj_MAX_PLAYERS)
             if (AiPlayersUILabelFrameColumnPlayerNameEdit[index] != null) then
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerNameEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeamEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRaceEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnProfessionEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartGoldEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLumberEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnFoodLimitEdit[index], visible)
-                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], visible)
+                if (counter >= counterStart and counter <= counterEnd) then
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerNameEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeamEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRaceEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnProfessionEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartGoldEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLumberEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnFoodLimitEdit[index], visible)
+                    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], visible)
+                endif
+
+                set counter = counter + 1
             endif
             set i = i + 1
         endloop
@@ -9894,36 +9904,15 @@ endfunction
 
 function AiPlayersUINextPageFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    local boolean atEnd = AiPlayersUICounter[playerId] - AiPlayersUIPage[playerId] * AI_PLAYERS_UI_MAX_PLAYERS <= 0
-    local integer startCounter = 0
-    local integer endCounter = 0
-    local integer i = 0
-    local integer counter = 0
-    local player aiPlayer = null
-    local integer index = 0
-    if (atEnd) then
+
+    if (AiPlayersUIPage[playerId] == AiPlayersUIMaxPages[playerId] - 1) then
         set AiPlayersUIPage[playerId] = 0
     else
         set AiPlayersUIPage[playerId] = AiPlayersUIPage[playerId] + 1
     endif
-    set startCounter = AiPlayersUIPage[playerId] * AI_PLAYERS_UI_MAX_PLAYERS
-    set endCounter = IMinBJ(startCounter + AI_PLAYERS_UI_MAX_PLAYERS, AiPlayersUICounter[playerId])
-    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (1/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
-    set i = 0
-    loop
-        exitwhen (i == bj_MAX_PLAYERS)
-        set aiPlayer = Player(i)
-        if (IsPlayerInForce(aiPlayer, AiPlayersUIForce[playerId])) then
-            if (counter >= startCounter and counter <= endCounter) then
-                set index = Index2D(counter - startCounter, playerId, bj_MAX_PLAYERS)
-                call BlzFrameSetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index], GetPlayerName(aiPlayer))
-                // TODO Set all fields
-            endif
-            set counter = counter + 1
-        endif
-        set aiPlayer = null
-        set i = i + 1
-    endloop
+
+    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (" + I2S(AiPlayersUIPage[playerId]) + "/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
+    call SetAiPlayersUIVisible(Player(playerId), true)
 endfunction
 
 function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns nothing
@@ -10053,82 +10042,82 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
 
                 set AiPlayersUILabelFrameColumnPlayerNameEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index], GetPlayerName(aiPlayer))
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnPlayerNameEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerNameEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnTeamEdit[index] = BlzCreateFrame("TeamPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_TEAM_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_TEAM_X + AI_PLAYERS_UI_COLUMN_TEAM_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_TEAM_X + AI_PLAYERS_UI_COLUMN_TEAM_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetValue(AiPlayersUILabelFrameColumnTeamEdit[index], IMinBJ(3, GetPlayerTeam(aiPlayer)))
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnTeamEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeamEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnHeroEdit[index] = BlzCreateFrame("HeroesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetValue(AiPlayersUILabelFrameColumnHeroEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnHeroEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnHeroStartLevelEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetText(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], "1")
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnStartLocationEdit[index] = BlzCreateFrame("StartLocationsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetValue(AiPlayersUILabelFrameColumnStartLocationEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartLocationEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnRaceEdit[index] = BlzCreateFrame("RacesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_RACE_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetValue(AiPlayersUILabelFrameColumnRaceEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnRaceEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRaceEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnProfessionEdit[index] = BlzCreateFrame("ProfessionsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PROFESSION_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetValue(AiPlayersUILabelFrameColumnProfessionEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnProfessionEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnProfessionEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnStartGoldEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartGoldEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_GOLD_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartGoldEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_GOLD_X + AI_PLAYERS_UI_COLUMN_START_GOLD_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartGoldEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_GOLD_X + AI_PLAYERS_UI_COLUMN_START_GOLD_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetText(AiPlayersUILabelFrameColumnStartGoldEdit[index], "500")
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartGoldEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartGoldEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnStartLumberEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLumberEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LUMBER_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLumberEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LUMBER_X + AI_PLAYERS_UI_COLUMN_START_LUMBER_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLumberEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LUMBER_X + AI_PLAYERS_UI_COLUMN_START_LUMBER_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLumberEdit[index], "400")
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartLumberEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLumberEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnFoodLimitEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X + AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X + AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetText(AiPlayersUILabelFrameColumnFoodLimitEdit[index], "300")
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnFoodLimitEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnFoodLimitEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnStartEvolutionEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X, y)
-                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X + AI_PLAYERS_UI_COLUMN_START_EVOLUTION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X + AI_PLAYERS_UI_COLUMN_START_EVOLUTION_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
                 call BlzFrameSetText(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], "1")
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], false)
 
-                set y = y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT - AI_PLAYERS_UI_LINE_SPACING_Y
+                set y = y - AI_PLAYERS_UI_LINE_HEIGHT - AI_PLAYERS_UI_LINE_SPACING_Y
             endif
         endif
         set aiPlayer = null
