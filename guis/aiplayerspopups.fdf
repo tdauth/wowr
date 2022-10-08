@@ -46,6 +46,7 @@ Frame "POPUPMENU" "TeamPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
 Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "HeroesPopupMenu",
     Frame "MENU" "HeroesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Random Matching Race",     -2,
         MenuItem "Random",     -2,
         MenuItem "Random Human",     -2,
         MenuItem "Random Orc",     -2,

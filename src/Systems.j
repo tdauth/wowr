@@ -9318,7 +9318,7 @@ endfunction
  * AI Players GUI which helps to configure AI players.
  */
 globals
-    constant integer AI_PLAYERS_UI_MAX_PLAYERS = 5
+    constant integer AI_PLAYERS_UI_MAX_PLAYERS = 6
 
     constant real AI_PLAYERS_UI_X = 0.0
     constant real AI_PLAYERS_UI_Y = 0.55
@@ -9326,7 +9326,7 @@ globals
     constant real AI_PLAYERS_UI_SIZE_Y = 0.38
 
     constant real AI_PLAYERS_UI_LINE_HEADERS_Y = AI_PLAYERS_UI_Y - 0.06
-    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.04
+    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.03
 
     constant real AI_PLAYERS_UI_LINE_HEIGHT = 0.03
 
@@ -9335,7 +9335,7 @@ globals
 
     constant real AI_PLAYERS_UI_COLUMN_SPACING_X = 0.007
 
-    constant real AI_PLAYERS_UI_LINE_SPACING_Y = 0.02
+    constant real AI_PLAYERS_UI_LINE_SPACING_Y = 0.01
 
     constant real AI_PLAYERS_UI_COLUMN_TEAM_X = AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
     constant real AI_PLAYERS_UI_COLUMN_TEAM_WIDTH = 0.04
@@ -9376,24 +9376,18 @@ globals
     constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_NAVY_X = AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_X + AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
     constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_NAVY_WIDTH = 0.04
 
-    constant real AI_PLAYERS_UI_TOOLTIP_X = 0.61
-    constant real AI_PLAYERS_UI_TOOLTIP_WIDTH = 0.17
-    constant real AI_PLAYERS_UI_TOOLTIP_HEIGHT = 0.34
-
-    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_X = 0.64
-    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_Y = 0.49
-    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_WIDTH = 0.10
-    constant real AI_PLAYERS_UI_TOOLTIP_LABEL_HEIGHT = 0.32
+    constant real AI_PLAYERS_UI_BUTTONS_Y = 0.22
 
     // HeroesPopupMenu
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM = 0
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_HUMAN = 1
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_ORC = 2
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_UNDEAD = 3
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_NIGHT_ELF = 4
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_BLOOD_ELF = 5
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_NAGA = 6
-    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_MOUNTAIN_KING = 7
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_MATCHING_RACE = 0
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM = 1
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_HUMAN = 2
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_ORC = 3
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_UNDEAD = 4
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_NIGHT_ELF = 5
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_BLOOD_ELF = 6
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_NAGA = 7
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_MOUNTAIN_KING = 8
 
     // StartLocationsPopupMenu
     constant integer AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM = 0
@@ -9502,9 +9496,9 @@ function CountAiPlayers takes nothing returns integer
 endfunction
 
 function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns nothing
-    local integer page = AiPlayersUIPage[GetPlayerId(whichPlayer)]
-    local integer counterStart = IMaxBJ((page - 1) * AI_PLAYERS_UI_MAX_PLAYERS, 0)
-    local integer counterEnd = page + AI_PLAYERS_UI_MAX_PLAYERS -1
+    local integer currentPage = AiPlayersUIPage[GetPlayerId(whichPlayer)]
+    local integer counterStart = currentPage * AI_PLAYERS_UI_MAX_PLAYERS
+    local integer counterEnd = counterStart + AI_PLAYERS_UI_MAX_PLAYERS -1
     local integer counter = 0
     local integer playerId = GetPlayerId(whichPlayer)
     local integer i = 0
@@ -9671,7 +9665,9 @@ function AiPlayersUIGetHero takes player whichPlayer, player owner returns integ
 
     if (bj_isSinglePlayer and index != -1) then
         set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnHeroEdit[index]))
-        if (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM) then
+        if (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_MATCHING_RACE) then
+            return ChooseRandomHeroFromRace(udg_PlayerRace[GetConvertedPlayerId(whichPlayer)])
+        elseif (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM) then
             return GetRandomInt(0, udg_MaxHeroUnitTypes - 1)
         elseif (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_HUMAN) then
             return ChooseRandomHeroFromRace(udg_RaceHuman)
@@ -9911,7 +9907,8 @@ function AiPlayersUINextPageFunction takes nothing returns nothing
         set AiPlayersUIPage[playerId] = AiPlayersUIPage[playerId] + 1
     endif
 
-    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (" + I2S(AiPlayersUIPage[playerId]) + "/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
+    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (" + I2S(AiPlayersUIPage[playerId] + 1) + "/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
+    call SetAiPlayersUIVisible(Player(playerId), false)
     call SetAiPlayersUIVisible(Player(playerId), true)
 endfunction
 
@@ -10025,7 +10022,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnStartEvolution[playerId], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartEvolution[playerId], false)
 
-    set y = AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_SPACING_Y
+    set y = AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT - AI_PLAYERS_UI_LINE_SPACING_Y
     set AiPlayersUIForce[playerId] = CreateForce()
 
     // players
@@ -10034,7 +10031,6 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
         exitwhen (i >= bj_MAX_PLAYERS)
         set aiPlayer = Player(i)
         if (IsPlayerInForce(aiPlayer, aiPlayers)) then
-            set counter = counter + 1
             call ForceAddPlayer(AiPlayersUIForce[playerId], aiPlayer)
 
             if (counter < AI_PLAYERS_UI_MAX_PLAYERS) then
@@ -10118,6 +10114,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], false)
 
                 set y = y - AI_PLAYERS_UI_LINE_HEIGHT - AI_PLAYERS_UI_LINE_SPACING_Y
+                set counter = counter + 1
             endif
         endif
         set aiPlayer = null
@@ -10135,9 +10132,8 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
 
     set AiPlayersUIApplyButton[playerId] = BlzCreateFrame("ScriptDialogButton", AiPlayersUIBackgroundFrame[playerId], 0, 0)
     set x = 0.34
-    set y = 0.24
-    call BlzFrameSetAbsPoint(AiPlayersUIApplyButton[playerId], FRAMEPOINT_TOPLEFT, x, y)
-    call BlzFrameSetAbsPoint(AiPlayersUIApplyButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
+    call BlzFrameSetAbsPoint(AiPlayersUIApplyButton[playerId], FRAMEPOINT_TOPLEFT, x, AI_PLAYERS_UI_BUTTONS_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUIApplyButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, AI_PLAYERS_UI_BUTTONS_Y - 0.03)
     call BlzFrameSetText(AiPlayersUIApplyButton[playerId], "|cffFCD20DApply|r")
     call BlzFrameSetScale(AiPlayersUIApplyButton[playerId], 1.00)
 
@@ -10151,9 +10147,8 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
 
     set AiPlayersUINextPageButton[playerId] = BlzCreateFrame("ScriptDialogButton", AiPlayersUIBackgroundFrame[playerId], 0, 0)
     set x = 0.50
-    set y = 0.24
-    call BlzFrameSetAbsPoint(AiPlayersUINextPageButton[playerId], FRAMEPOINT_TOPLEFT, x, y)
-    call BlzFrameSetAbsPoint(AiPlayersUINextPageButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
+    call BlzFrameSetAbsPoint(AiPlayersUINextPageButton[playerId], FRAMEPOINT_TOPLEFT, x, AI_PLAYERS_UI_BUTTONS_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUINextPageButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, AI_PLAYERS_UI_BUTTONS_Y - 0.03)
     call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (1/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
     call BlzFrameSetScale(AiPlayersUINextPageButton[playerId], 1.00)
     call BlzFrameSetEnable(AiPlayersUINextPageButton[playerId], counter > AI_PLAYERS_UI_MAX_PLAYERS)
@@ -17381,6 +17376,12 @@ function DisplayStats takes player to, player from returns nothing
     local integer buildingsRazed = udg_BuildingsRazed[playerId]
     local string profession1 = udg_ProfessionName[udg_PlayerProfession[playerId]]
     local string profession2 = udg_ProfessionName[udg_PlayerProfession2[playerId]]
+    if (udg_PlayerProfession[playerId] == udg_ProfessionNone) then
+        set profession1 = "-"
+    endif
+    if (udg_PlayerProfession2[playerId] == udg_ProfessionNone) then
+        set profession2 = "-"
+    endif
     call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Hero Levels: " + I2S(heroLevel1) + "/" + I2S(heroLevel2) + "/" + I2S(heroLevel3) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost) + "\n- Buildings razed " + I2S(buildingsRazed) + "\n- Profession 1: " + profession1  + "\n- Profession 2: " + profession2)
 endfunction
 
