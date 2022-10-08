@@ -9326,29 +9326,32 @@ globals
     constant real AI_PLAYERS_UI_SIZE_Y = 0.38
 
     constant real AI_PLAYERS_UI_LINE_HEADERS_Y = AI_PLAYERS_UI_Y - 0.06
-    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.027
+    constant real AI_PLAYERS_UI_LINE_HEADERS_HEIGHT = 0.03
 
-    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X = AI_PLAYERS_UI_X + 0.05
-    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH = 0.07
+    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X = AI_PLAYERS_UI_X + 0.02
+    constant real AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH = 0.09
 
     constant real AI_PLAYERS_UI_COLUMN_SPACING_X = 0.007
 
-    constant real AI_PLAYERS_UI_LINE_SPACING_Y = 0.007
+    constant real AI_PLAYERS_UI_LINE_SPACING_Y = 0.02
 
-    constant real AI_PLAYERS_UI_COLUMN_HERO_X = AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_HERO_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_TEAM_X = AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_TEAM_WIDTH = 0.04
+
+    constant real AI_PLAYERS_UI_COLUMN_HERO_X = AI_PLAYERS_UI_COLUMN_TEAM_X + AI_PLAYERS_UI_COLUMN_TEAM_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_HERO_WIDTH = 0.07
 
     constant real AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X = AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH = 0.04
 
     constant real AI_PLAYERS_UI_COLUMN_START_LOCATION_X = AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH = 0.07
 
     constant real AI_PLAYERS_UI_COLUMN_RACE_X = AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_RACE_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_RACE_WIDTH = 0.07
 
     constant real AI_PLAYERS_UI_COLUMN_PROFESSION_X = AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH = 0.07
 
     constant real AI_PLAYERS_UI_COLUMN_START_GOLD_X = AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
     constant real AI_PLAYERS_UI_COLUMN_START_GOLD_WIDTH = 0.058018
@@ -9357,10 +9360,19 @@ globals
     constant real AI_PLAYERS_UI_COLUMN_START_LUMBER_WIDTH = 0.058018
 
     constant real AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X = AI_PLAYERS_UI_COLUMN_START_LUMBER_X + AI_PLAYERS_UI_COLUMN_START_LUMBER_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_WIDTH = 0.04
 
     constant real AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X = AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X + AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
-    constant real AI_PLAYERS_UI_COLUMN_START_EVOLUTION_WIDTH = 0.058018
+    constant real AI_PLAYERS_UI_COLUMN_START_EVOLUTION_WIDTH = 0.04
+
+    constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_POWER_GENERATOR_X = AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X + AI_PLAYERS_UI_COLUMN_START_EVOLUTION_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_POWER_GENERATOR_WIDTH = 0.04
+
+    constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_X = AI_PLAYERS_UI_COLUMN_START_IMPROVED_POWER_GENERATOR_X + AI_PLAYERS_UI_COLUMN_START_IMPROVED_POWER_GENERATOR_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_WIDTH = 0.04
+
+    constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_NAVY_X = AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_X + AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
+    constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_NAVY_WIDTH = 0.04
 
     constant real AI_PLAYERS_UI_TOOLTIP_X = 0.61
     constant real AI_PLAYERS_UI_TOOLTIP_WIDTH = 0.17
@@ -9371,6 +9383,47 @@ globals
     constant real AI_PLAYERS_UI_TOOLTIP_LABEL_WIDTH = 0.10
     constant real AI_PLAYERS_UI_TOOLTIP_LABEL_HEIGHT = 0.32
 
+    // HeroesPopupMenu
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM = 0
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_HUMAN = 1
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_ORC = 2
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_UNDEAD = 3
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_NIGHT_ELF = 4
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_BLOOD_ELF = 5
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_NAGA = 6
+    constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_MOUNTAIN_KING = 7
+
+    // StartLocationsPopupMenu
+    constant integer AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM = 0
+
+    // RacesPopupMenu
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_WARLORD = 2
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_ALLIANCE = 3
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_HORDE = 4
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_HUMAN = 5
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_ORC = 6
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_UNDEAD = 7
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_NIGHT_ELF = 8
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_BLOOD_ELF = 9
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_NAGA = 10
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_DRAENEI = 11
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_DEMON = 12
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_FURBOLG = 13
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_DWARF = 14
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_GOBLIN = 15
+    constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_HIGH_ELF = 16
+
+    // ProfessionsPopupMenu
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_RANDOM = 0
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_HERBALIST = 1
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_ALCHEMIST = 2
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_WEAPON_SMITH = 3
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_ARMORER = 4
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_ENGINEER = 5
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_DRAGON_BREEDER = 6
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_LORE_MASTER = 7
+    constant integer AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_RUNE_FORGER = 8
+
     integer array AiPlayersUICounter
     force array AiPlayersUIForce
     integer array AiPlayersUIPage
@@ -9380,6 +9433,7 @@ globals
 
     // header line
     framehandle array AiPlayersUILabelFrameColumnPlayerName
+    framehandle array AiPlayersUILabelFrameColumnTeam
     framehandle array AiPlayersUILabelFrameColumnHero
     framehandle array AiPlayersUILabelFrameColumnHeroStartLevel
     framehandle array AiPlayersUILabelFrameColumnStartLocation
@@ -9395,6 +9449,7 @@ globals
 
     // player lines
     framehandle array AiPlayersUILabelFrameColumnPlayerNameEdit
+    framehandle array AiPlayersUILabelFrameColumnTeamEdit
     framehandle array AiPlayersUILabelFrameColumnHeroEdit
     framehandle array AiPlayersUILabelFrameColumnHeroStartLevelEdit
     framehandle array AiPlayersUILabelFrameColumnStartLocationEdit
@@ -9404,13 +9459,9 @@ globals
     framehandle array AiPlayersUILabelFrameColumnStartLumberEdit
     framehandle array AiPlayersUILabelFrameColumnFoodLimitEdit
     framehandle array AiPlayersUILabelFrameColumnStartEvolutionEdit
-
-    // player settings
-    string array AiPlayersUIPlayerName
-    integer array AiPlayersUIHero
-    integer array AiPlayersUIHeroStartLevel
-    integer array AiPlayersUIHeroStartLocation
-    integer array AiPlayersUIHeroStartRace
+    framehandle array AiPlayersUILabelFrameColumnStartImprovedPowerGeneratorEdit
+    framehandle array AiPlayersUILabelFrameColumnStartImprovedCreepHunterEdit
+    framehandle array AiPlayersUILabelFrameColumnStartImprovedNavyEdit
 
     // bottom buttons
 
@@ -9419,28 +9470,33 @@ globals
 
     framehandle array AiPlayersUIApplyButton
     trigger array AiPlayersUIApplyTrigger
+
+    integer array AiPlayersUIMaxPages
 endglobals
 
-function CountAiPlayers takes nothing returns integer
+function GetAiPlayers takes nothing returns force
     local player aiPlayer = null
-    local integer counter = 0
+    local force result = CreateForce()
     local integer i = 0
     loop
         exitwhen (i >= bj_MAX_PLAYERS)
         set aiPlayer = Player(i)
         if (GetPlayerController(aiPlayer) == MAP_CONTROL_COMPUTER and GetPlayerSlotState(aiPlayer) == PLAYER_SLOT_STATE_PLAYING and aiPlayer != udg_BossesPlayer and aiPlayer != udg_TheBurningLegion and aiPlayer != udg_TheAlliance) then
-            set counter = counter + 1
+            call ForceAddPlayer(result, aiPlayer)
         endif
         set aiPlayer = null
         set i = i + 1
     endloop
-    return counter
+    return result
 endfunction
 
-function AiPlayersUIGetPlayerName takes integer playerId, integer counter returns string
-    local integer index = Index2D(counter, playerId, bj_MAX_PLAYERS)
-
-    return BlzFrameGetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index])
+function CountAiPlayers takes nothing returns integer
+    local force aiPlayers = GetAiPlayers()
+    local integer result = CountPlayersInForceBJ(aiPlayers)
+    call ForceClear(aiPlayers)
+    call DestroyForce(aiPlayers)
+    set aiPlayers = null
+    return result
 endfunction
 
 function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns nothing
@@ -9450,6 +9506,7 @@ function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(AiPlayersUITitleFrame[playerId], visible)
         call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerName[playerId], visible)
+        call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeam[playerId], visible)
         call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHero[playerId], visible)
         call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevel[playerId], visible)
         call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocation[playerId], visible)
@@ -9466,6 +9523,7 @@ function SetAiPlayersUIVisible takes player whichPlayer, boolean visible returns
             set index = Index2D(i, playerId, bj_MAX_PLAYERS)
             if (AiPlayersUILabelFrameColumnPlayerNameEdit[index] != null) then
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerNameEdit[index], visible)
+                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeamEdit[index], visible)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroEdit[index], visible)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], visible)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], visible)
@@ -9497,7 +9555,341 @@ function AiPlayersUIApplyFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
     //call BJDebugMsg("Click close")
     call HideAiPlayersUI(Player(playerId))
+    set udg_TmpPlayer2 = Player(playerId)
     call ConditionalTriggerExecute(gg_trg_Computer_Start_Lobby_Settings)
+endfunction
+
+function AiPlayersUIGetPlayerIndex takes player whichPlayer, player owner returns integer
+    local integer playerId = GetPlayerId(owner)
+    local integer index = 0
+    local integer i = 0
+    loop
+        exitwhen (i >= bj_MAX_PLAYERS)
+        if (IsPlayerInForce(Player(i), AiPlayersUIForce[playerId])) then
+            if (Player(i) == whichPlayer) then
+                return Index2D(index, GetPlayerId(owner), bj_MAX_PLAYERS)
+            else
+                set index = index + 1
+            endif
+        endif
+        set i = i + 1
+    endloop
+    return -1
+endfunction
+
+function AiPlayersUIGetPlayerName takes player whichPlayer, player owner returns string
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+
+    if (bj_isSinglePlayer and index != -1) then
+        return BlzFrameGetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index])
+    endif
+
+    return GetPlayerName(whichPlayer)
+endfunction
+
+function AiPlayersUIGetTeam takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    if (bj_isSinglePlayer and index != -1) then
+        return R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnTeamEdit[index]))
+    endif
+
+    return GetPlayerTeam(whichPlayer)
+endfunction
+
+function ChooseRandomHeroFromRace takes integer whichRace returns integer
+    local integer random = 0
+    if (whichRace == udg_RaceHuman) then
+        return GetRandomInt(0, 2)
+    elseif (whichRace == udg_RaceOrc) then
+        return GetRandomInt(4, 7)
+    elseif (whichRace == udg_RaceUndead) then
+        set random = GetRandomInt(0, 4)
+        if (random == 0) then
+            return 8 // Death Knight
+        elseif (random == 1) then
+            return 9 // Lich
+        elseif (random == 2) then
+            return 11 // Crypt Lord
+        else
+            return 21 // Dark Ranger
+        endif
+     elseif (whichRace == udg_RaceNightElf) then
+        set random = GetRandomInt(0, 1)
+        if (random == 0) then
+            return GetRandomInt(0, 1)
+        elseif (random == 1) then
+            return GetRandomInt(12, 15)
+        else
+            return udg_HeroUnitTypeMountainGiant
+        endif
+     elseif (whichRace == udg_RaceBloodElf) then
+        return 3 // Blood Mage
+    elseif (whichRace == udg_RaceNaga) then
+        return 17 // Sea Witch
+    elseif (whichRace == udg_RaceDemon) then
+        set random = GetRandomInt(0, 3)
+        if (random == 0) then
+            return 10 // Dread Lord
+        elseif (random == 1) then
+            return 23 // Pit Lord
+        elseif (random == 2) then
+            return 24 // Eredar Warlock
+        endif
+    elseif (whichRace == udg_RaceDraenei) then
+        return 25 // Akama
+    elseif (whichRace == udg_RaceFurbolg) then
+        return 26 // Furbolg
+    elseif (whichRace == udg_RaceGoblin) then
+        set random = GetRandomInt(0, 1)
+        if (random == 0) then
+            return 16 // Alchemist
+        else
+            return 18 // Tinker
+        endif
+    elseif (whichRace == udg_RaceDwarf) then
+        return 2 // Mountain King
+    elseif (whichRace == udg_RaceHighElf) then
+        return 28 // Ranger
+    endif
+
+    return GetRandomInt(0, udg_MaxHeroUnitTypes - 1)
+endfunction
+
+function AiPlayersUIGetHero takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    local integer frameValue = 0
+
+    if (bj_isSinglePlayer and index != -1) then
+        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnHeroEdit[index]))
+        if (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM) then
+            return GetRandomInt(0, udg_MaxHeroUnitTypes - 1)
+        elseif (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_HUMAN) then
+            return ChooseRandomHeroFromRace(udg_RaceHuman)
+        endif
+    endif
+
+    return ChooseRandomHeroFromRace(udg_PlayerRace[GetConvertedPlayerId(whichPlayer)])
+endfunction
+
+function AiPlayersUIGetHeroStartLevel takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    if (bj_isSinglePlayer and index != -1) then
+        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index]))
+    endif
+
+    return 1
+endfunction
+
+function AiPlayersUIGetPlayerWarlord takes player whichPlayer, player owner returns boolean
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    local integer random = GetRandomInt(0, 1)
+    if (bj_isSinglePlayer and index != -1 and udg_AIFreelancers and udg_AIWarlords) then
+        if (BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]) == 0) then
+            return random == 0
+        elseif (BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]) == 1) then
+            return false
+        endif
+
+        return true
+    endif
+
+    return random == 0 or not udg_AIFreelancers and udg_AIWarlords
+endfunction
+
+function AiPlayersUIGetPlayerRace takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    local integer frameValue = 0
+    local integer random = 0
+    local race whichRace = GetPlayerRace(whichPlayer)
+
+    if (bj_isSinglePlayer and index != -1) then
+        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]))
+        if (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_WARLORD) then
+            return GetRandomInt(0, udg_RaceHighElf) // all races supported with AI scripts
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_ALLIANCE) then
+            set random = GetRandomInt(0, 6)
+            if (random == 0) then
+                return udg_RaceHuman
+            elseif (random == 1) then
+                return udg_RaceBloodElf
+            elseif (random == 2) then
+                return udg_RaceDwarf
+            elseif (random == 3) then
+                return udg_RaceHighElf
+            elseif (random == 4) then
+                return udg_RaceDraenei
+            elseif (random == 5) then
+                return udg_RaceNightElf
+            elseif (random == 6) then
+                return udg_RaceFurbolg
+            endif
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_HORDE) then
+            set random = GetRandomInt(0, 4)
+            if (random == 0) then
+                return udg_RaceOrc
+            elseif (random == 1) then
+                return udg_RaceBloodElf
+            elseif (random == 2) then
+                return udg_RaceUndead
+            elseif (random == 3) then
+                return udg_RaceDemon
+            elseif (random == 4) then
+                return udg_RaceNaga
+            endif
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_HUMAN) then
+            return udg_RaceHuman
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_ORC) then
+            return udg_RaceOrc
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_UNDEAD) then
+            return udg_RaceUndead
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_NIGHT_ELF) then
+            return udg_RaceNightElf
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_BLOOD_ELF) then
+            return udg_RaceBloodElf
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_NAGA) then
+            return udg_RaceNaga
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_DRAENEI) then
+            return udg_RaceDraenei
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_DEMON) then
+            return udg_RaceDemon
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_FURBOLG) then
+            return udg_RaceFurbolg
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_DWARF) then
+            return udg_RaceDwarf
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_GOBLIN) then
+            return udg_RaceGoblin
+        elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_HIGH_ELF) then
+            return udg_RaceHighElf
+        endif
+    endif
+
+    // use player lobby settings instead
+    if (whichRace == RACE_HUMAN) then
+        set random = GetRandomInt(0, 3)
+        if (random == 0) then
+            return udg_RaceHuman
+        elseif (random == 1) then
+            return udg_RaceBloodElf
+        elseif (random == 2) then
+            return udg_RaceDwarf
+        else
+            return udg_RaceHighElf
+        endif
+    elseif (whichRace == RACE_ORC) then
+        set random = GetRandomInt(0, 2)
+        if (random == 0) then
+            return udg_RaceOrc
+        elseif (random == 1) then
+            return udg_RaceDraenei
+        else
+            return udg_RaceGoblin
+        endif
+    elseif (whichRace == RACE_UNDEAD) then
+        set random = GetRandomInt(0, 1)
+        if (random == 0) then
+            return udg_RaceUndead
+        else
+            return udg_RaceDemon
+        endif
+    elseif (whichRace == RACE_NIGHTELF) then
+        set random = GetRandomInt(0, 2)
+        if (random == 0) then
+            return udg_RaceNightElf
+        elseif (random == 1) then
+            return udg_RaceNaga
+        else
+            return udg_RaceFurbolg
+        endif
+    endif
+
+    return udg_RaceNone
+endfunction
+
+function AiPlayersUIGetPlayerProfession takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    local integer frameValue = 0
+    local integer random = 0
+    local race whichRace = GetPlayerRace(whichPlayer)
+
+    if (bj_isSinglePlayer and index != -1) then
+        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnProfessionEdit[index]))
+        if (frameValue == AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_RANDOM) then
+            return GetRandomInt(0, 7) // all possible menu items
+        else
+            return frameValue - 1
+        endif
+    endif
+
+    return GetRandomInt(0, 4) // all useful professions for AI
+endfunction
+
+function ChooseComputerStartLocation takes integer startIndex returns integer
+    local integer i = startIndex
+    loop
+        exitwhen (i >= udg_Max_TownHalls)
+        if (not udg_ComputerStartLocationTaken[i]) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    if (startIndex > 0) then
+        return ChooseComputerStartLocation(0)
+    endif
+    return -1
+endfunction
+
+
+function AiPlayersUIGetStartLocation takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    local integer frameValue = 0
+
+    if (bj_isSinglePlayer and index != -1) then
+        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnStartLocationEdit[index]))
+        if (frameValue == AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM) then
+            return ChooseComputerStartLocation(GetRandomInt(0, udg_Max_TownHalls - 1))
+        else
+            return ChooseComputerStartLocation(frameValue - 1)
+        endif
+    endif
+
+    return ChooseComputerStartLocation(0)
+endfunction
+
+
+function AiPlayersUIGetStartGold takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    if (bj_isSinglePlayer and index != -1) then
+        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnStartGoldEdit[index]))
+    endif
+
+    return 500
+endfunction
+
+function AiPlayersUIGetStartLumber takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    if (bj_isSinglePlayer and index != -1) then
+        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnStartLumberEdit[index]))
+    endif
+
+    return 400
+endfunction
+
+function AiPlayersUIGetFoodLimit takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    if (bj_isSinglePlayer and index != -1) then
+        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnFoodLimitEdit[index]))
+    endif
+
+    return 300
+endfunction
+
+function AiPlayersUIGetStartEvolution takes player whichPlayer, player owner returns integer
+    local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
+    if (bj_isSinglePlayer and index != -1) then
+        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnStartEvolutionEdit[index]))
+    endif
+
+    return 1
 endfunction
 
 function AiPlayersUINextPageFunction takes nothing returns nothing
@@ -9516,6 +9908,7 @@ function AiPlayersUINextPageFunction takes nothing returns nothing
     endif
     set startCounter = AiPlayersUIPage[playerId] * AI_PLAYERS_UI_MAX_PLAYERS
     set endCounter = IMinBJ(startCounter + AI_PLAYERS_UI_MAX_PLAYERS, AiPlayersUICounter[playerId])
+    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (1/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
     set i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
@@ -9533,7 +9926,7 @@ function AiPlayersUINextPageFunction takes nothing returns nothing
     endloop
 endfunction
 
-function CreateAiPlayersUI takes player whichPlayer returns nothing
+function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns nothing
     local integer i = 0
     local integer counter = 0
     local player aiPlayer = null
@@ -9562,6 +9955,14 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     call BlzFrameSetTextAlignment(AiPlayersUILabelFrameColumnPlayerName[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnPlayerName[playerId], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerName[playerId], false)
+
+    set AiPlayersUILabelFrameColumnTeam[playerId] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineTeam" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeam[playerId], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_TEAM_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
+    call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeam[playerId], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_TEAM_X + AI_PLAYERS_UI_COLUMN_TEAM_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(AiPlayersUILabelFrameColumnTeam[playerId], "Team")
+    call BlzFrameSetTextAlignment(AiPlayersUILabelFrameColumnTeam[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(AiPlayersUILabelFrameColumnTeam[playerId], 1.0)
+    call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeam[playerId], false)
 
     set AiPlayersUILabelFrameColumnHero[playerId] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHero" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHero[playerId], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
@@ -9643,7 +10044,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     loop
         exitwhen (i >= bj_MAX_PLAYERS)
         set aiPlayer = Player(i)
-        if (GetPlayerController(aiPlayer) == MAP_CONTROL_COMPUTER and GetPlayerSlotState(aiPlayer) == PLAYER_SLOT_STATE_PLAYING and aiPlayer != udg_BossesPlayer and aiPlayer != udg_TheBurningLegion and aiPlayer != udg_TheAlliance) then
+        if (IsPlayerInForce(aiPlayer, aiPlayers)) then
             set counter = counter + 1
             call ForceAddPlayer(AiPlayersUIForce[playerId], aiPlayer)
 
@@ -9657,10 +10058,17 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnPlayerNameEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerNameEdit[index], false)
 
+                set AiPlayersUILabelFrameColumnTeamEdit[index] = BlzCreateFrame("TeamPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_TEAM_X, y)
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_TEAM_X + AI_PLAYERS_UI_COLUMN_TEAM_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetValue(AiPlayersUILabelFrameColumnTeamEdit[index], IMinBJ(3, GetPlayerTeam(aiPlayer)))
+                call BlzFrameSetEnable(AiPlayersUILabelFrameColumnTeamEdit[index], true)
+                call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeamEdit[index], false)
+
                 set AiPlayersUILabelFrameColumnHeroEdit[index] = BlzCreateFrame("HeroesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_X, y)
-                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
-                //call BlzFrameSetText(AiPlayersUILabelFrameColumnHeroEdit[index], "AI " + I2S(i + 1))
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetValue(AiPlayersUILabelFrameColumnHeroEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnHeroEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroEdit[index], false)
 
@@ -9673,22 +10081,22 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
 
                 set AiPlayersUILabelFrameColumnStartLocationEdit[index] = BlzCreateFrame("StartLocationsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X, y)
-                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
-                //call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLocationEdit[index], "AI " + I2S(i + 1))
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetValue(AiPlayersUILabelFrameColumnStartLocationEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartLocationEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnRaceEdit[index] = BlzCreateFrame("RacesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_RACE_X, y)
-                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
-                //call BlzFrameSetText(AiPlayersUILabelFrameColumnRaceEdit[index], "AI " + I2S(i + 1))
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetValue(AiPlayersUILabelFrameColumnRaceEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnRaceEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRaceEdit[index], false)
 
                 set AiPlayersUILabelFrameColumnProfessionEdit[index] = BlzCreateFrame("ProfessionsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                 call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PROFESSION_X, y)
-                //call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
-                //call BlzFrameSetText(AiPlayersUILabelFrameColumnProfessionEdit[index], "AI " + I2S(i + 1))
+                call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
+                call BlzFrameSetValue(AiPlayersUILabelFrameColumnProfessionEdit[index], 0)
                 call BlzFrameSetEnable(AiPlayersUILabelFrameColumnProfessionEdit[index], true)
                 call BlzFrameSetVisible(AiPlayersUILabelFrameColumnProfessionEdit[index], false)
 
@@ -9728,6 +10136,11 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     endloop
 
     set AiPlayersUICounter[playerId] = counter
+    set AiPlayersUIMaxPages[playerId] = counter / AI_PLAYERS_UI_MAX_PLAYERS
+
+    if (ModuloInteger(counter, AI_PLAYERS_UI_MAX_PLAYERS) > 0) then
+        set AiPlayersUIMaxPages[playerId] = AiPlayersUIMaxPages[playerId] + 1
+    endif
 
     // apply button
 
@@ -9752,7 +10165,7 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
     set y = 0.24
     call BlzFrameSetAbsPoint(AiPlayersUINextPageButton[playerId], FRAMEPOINT_TOPLEFT, x, y)
     call BlzFrameSetAbsPoint(AiPlayersUINextPageButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
-    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page|r")
+    call BlzFrameSetText(AiPlayersUINextPageButton[playerId], "|cffFCD20DNext Page (1/" + I2S(AiPlayersUIMaxPages[playerId]) + ")|r")
     call BlzFrameSetScale(AiPlayersUINextPageButton[playerId], 1.00)
     call BlzFrameSetEnable(AiPlayersUINextPageButton[playerId], counter > AI_PLAYERS_UI_MAX_PLAYERS)
 
@@ -9763,6 +10176,14 @@ function CreateAiPlayersUI takes player whichPlayer returns nothing
 
     // hide
     call BlzFrameSetVisible(AiPlayersUIBackgroundFrame[playerId], false)
+endfunction
+
+function CreateAiPlayersUI takes player whichPlayer returns nothing
+    local force aiPlayers = GetAiPlayers()
+    call CreateAiPlayersUIEx(whichPlayer, aiPlayers)
+    call ForceClear(aiPlayers)
+    call DestroyForce(aiPlayers)
+    set aiPlayers = null
 endfunction
 
 /**
@@ -15436,8 +15857,7 @@ endfunction
 // TOC files
 
 function LoadTOCFiles takes nothing returns nothing
-    call BlzLoadTOCFile("war3mapImported\\saveguiTOC.toc")
-    call BlzLoadTOCFile("war3mapImported\\aiplayersTOC.toc")
+    call BlzLoadTOCFile("war3mapImported\\wowrTOC.toc")
 endfunction
 
 
