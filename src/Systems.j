@@ -3334,7 +3334,7 @@ function GetObjectRace takes integer objectTypeId returns integer
     local integer i = 0
     local integer j = 0
     loop
-        exitwhen (i == udg_Max_Voelker)
+        exitwhen (i == udg_MaxRaces)
         set j = 0
         loop
             exitwhen (j == RACE_MAX_OBJECT_TYPES)
@@ -3353,7 +3353,7 @@ function GetObjectRaceType takes integer objectTypeId returns integer
     local integer i = 0
     local integer j = 0
     loop
-        exitwhen (i == udg_Max_Voelker)
+        exitwhen (i == udg_MaxRaces)
         set j = 0
         loop
             exitwhen (j == RACE_MAX_OBJECT_TYPES)
@@ -3372,7 +3372,7 @@ function MapRaceObjectType takes integer objectTypeId, integer targetRace return
     local integer i = 0
     local integer j = 0
     loop
-        exitwhen (i == udg_Max_Voelker)
+        exitwhen (i == udg_MaxRaces)
         set j = 0
         loop
             exitwhen (j == RACE_MAX_OBJECT_TYPES)
