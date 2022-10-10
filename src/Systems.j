@@ -17568,14 +17568,16 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     call AddPrestoredSaveCodeItems("Barade#2569", "}+RDR:R}JR{R}JRKR}JRfR}JRmR}JR}vR}JRDR}JR}?R")
     // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-buildings-7-Guard Tower,Guard Tower,Altar of Kings,Lumber Mill,Arcane Vault,Workshop,Barracks
     call AddPrestoredSaveCodeBuildings("Barade#2569", "}+RDR:R}JR&RKH$R}MUR&RKH$R}ULRfRK.8R}qcRmRK`eR}>uR2RK8YR}=>R6RK8YR}]lRtRK%DR}/4RCR")
+    // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Warlord-buildings-8-Research Tent,Bazaar,High Elven Guard Tower,Mage Tower,High Elf Stables,High Elf Barracks,Enchanter Tower,Altar of Sun.txt
+    call AddPrestoredSaveCodeBuildings("Barade#2569", "}+RDR:R}JR}RDHiRL[*R}bRDunRLLwR}YRDT!RLLwR}ZRDjERLKvR}lRDqbRK)5R}6RDjERKpCR}dRDP[RLeGR}&RDjURK!kRYR")
     // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Freelancer-units-6-40Red Dragon,40Green Dragon,40Black Dragon,40Blue Dragon,40Bronze Dragon,40Nether Dragon
     call AddPrestoredSaveCodeUnits("Barade#2569", "}+RKR:R}JR}+RwR}lRwR}nRwR}|RwR}bRwR}^RwR:R:R:R:R:R:R:R:R$R")
     // ##############################################################
     // CLANS
     // MULTIPLAYER
     // TheElvenClan
-    // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Multiplayer-gold-10000-lumber-10000-Barade#2569_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
-    call AddPrestoredSaveCodeClan("TheElvenClan", false, "/U/OUqU/U/:\"U/:\"UhUhU/6UqUrUqUu4UqUSU/UvU/UqUqUqUqU/U/WU")
+    // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Multiplayer-gold-17000-lumber-24000-Barade#2569_Leader.txt, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
+    call AddPrestoredSaveCodeClan("TheElvenClan", false, "/U/OUqU/U/joUui-UhUhU/6UqUqUuUqUuUqUuUqUuUqUuUqUuUqU/JU")
     call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
