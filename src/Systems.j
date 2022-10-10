@@ -1,7 +1,7 @@
 //TESH.scrollpos=400
 //TESH.alwaysfold=0
 
-library WoWReforgedUtils
+library WoWReforgedUtils initializer Init
 
 function Index2D takes integer Value1, integer Value2, integer MaxValue2 returns integer
     return ((Value1 * MaxValue2) + Value2)
@@ -56,6 +56,33 @@ function FlushUnitParameters takes unit whichUnit returns nothing
     call FlushChildHashtable(udg_DB, GetHandleId(whichUnit))
 endfunction
 
+globals
+    private player Host = null
+endglobals
+
+function InitHost takes nothing returns nothing
+    local gamecache g = InitGameCache("Map.w3v")
+    call StoreInteger ( g, "Map", "Host", GetPlayerId(GetLocalPlayer ())+1)
+    call TriggerSyncStart ()
+    call SyncStoredInteger ( g, "Map", "Host" )
+    call TriggerSyncReady ()
+    set Host = Player( GetStoredInteger ( g, "Map", "Host" )-1)
+    call FlushGameCache( g )
+    set g = null
+endfunction
+
+private function Init takes nothing returns nothing
+    call InitHost()
+endfunction
+
+function GetHost takes nothing returns player
+    if (GetPlayerSlotState(Host) != PLAYER_SLOT_STATE_PLAYING) then
+        call InitHost()
+    endif
+
+    return Host
+endfunction
+
 function StringStartsWith takes string source, string start returns boolean
     local integer i = 0
     loop
@@ -84,7 +111,7 @@ function IndexOfString takes string symbol, string source returns integer
     //call BJDebugMsg("Checking for symbol: " + symbol + " in source " + source)
     loop
         exitwhen (i == StringLength(source))
-        if (SubString(source, i, i + 1) == symbol) then
+        if (SubString(source, i, i + StringLength(symbol)) == symbol) then
             //call BJDebugMsg("Index: " + I2S(i))
             return i
         endif
@@ -99,14 +126,14 @@ endfunction
 /**
  * Useful for getting parts of a chat message to implement chat commands.
  */
-function StringTokenEx takes string source, integer index, boolean toTheEnd returns string
+function StringTokenEx takes string source, integer index, string separators, boolean toTheEnd returns string
     local string result = ""
     local boolean inWhitespace = false
     local integer currentIndex = 0
     local integer i = 0
     loop
         exitwhen (i == StringLength(source) or currentIndex > index)
-        if (SubString(source, i, i + 1) == " " and (not toTheEnd or currentIndex < index)) then
+        if (IndexOfString(SubString(source, i, i + 1), separators) != -1 and (not toTheEnd or currentIndex < index)) then
             if (not inWhitespace) then
                 set inWhitespace = true
                 set currentIndex = currentIndex + 1
@@ -124,11 +151,11 @@ function StringTokenEx takes string source, integer index, boolean toTheEnd retu
 endfunction
 
 function StringToken takes string source, integer index returns string
-    return StringTokenEx(source, index, false)
+    return StringTokenEx(source, index, " ", false)
 endfunction
 
 function StringTokenEnteredChatMessageEx takes integer index, boolean toTheEnd returns string
-    return StringTokenEx(GetEventPlayerChatString(), index, toTheEnd)
+    return StringTokenEx(GetEventPlayerChatString(), index, " ", toTheEnd)
 endfunction
 
 function StringTokenEnteredChatMessage takes integer index returns string
@@ -162,7 +189,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -discord, -revive, -sel, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
+    return "-h/-help, -clear, -discord, -revive, -sel, -host, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns nothing
@@ -9376,7 +9403,11 @@ globals
     constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_NAVY_X = AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_X + AI_PLAYERS_UI_COLUMN_START_IMPROVED_CREEP_HUNTER_WIDTH + AI_PLAYERS_UI_COLUMN_SPACING_X
     constant real AI_PLAYERS_UI_COLUMN_START_IMPROVED_NAVY_WIDTH = 0.04
 
-    constant real AI_PLAYERS_UI_BUTTONS_Y = 0.22
+    constant real AI_PLAYERS_UI_BUTTONS_Y = 0.23
+
+    // default values
+    constant integer AI_PLAYERS_UI_START_GOLD = 500
+    constant integer AI_PLAYERS_UI_START_LUMBER = 400
 
     // HeroesPopupMenu
     constant integer AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_MATCHING_RACE = 0
@@ -9442,6 +9473,22 @@ globals
     framehandle array AiPlayersUILabelFrameColumnStartImprovedPowerGenerator
     framehandle array AiPlayersUILabelFrameColumnStartImprovedCreepHunter
     framehandle array AiPlayersUILabelFrameColumnStartImprovedNavy
+
+    // sync data
+    string array AiPlayersUIPlayerNames
+    integer array AiPlayersUITeams
+    integer array AiPlayersUIHeroes
+    integer array AiPlayersUIHeroStartLevels
+    integer array AiPlayersUIStartLocations
+    integer array AiPlayersUIRaces
+    integer array AiPlayersUIProfessions
+    integer array AiPlayersUIStartGold
+    integer array AiPlayersUIStartLumber
+    integer array AiPlayersUIFoodLimit
+    integer array AiPlayersUIStartEvolution
+    boolean array AiPlayersUISyncDone
+
+    trigger array AiPlayersUISyncTrigger
 
     // player lines
     framehandle array AiPlayersUILabelFrameColumnPlayerNameEdit
@@ -9555,10 +9602,83 @@ function HideAiPlayersUI takes player whichPlayer returns nothing
     call SetAiPlayersUIVisible(whichPlayer, false)
 endfunction
 
+function AiPlayersUITriggerActionSyncData takes nothing returns nothing
+    local player triggerPlayer = GetTriggerPlayer()
+    local string prefix = BlzGetTriggerSyncPrefix()
+    local string data = BlzGetTriggerSyncData()
+    local integer playerId = GetPlayerId(triggerPlayer)
+    local string indexString = StringTokenEx(data, 1, "_", false)
+    local integer index = S2I(indexString)
+    local string actualData = StringTokenEx(data, 2, "_", false)
+    //call BJDebugMsg("Synced data " + data + " with prefix " + prefix + " leading to index " + I2S(index) + " and actual data: " + actualData + ".")
+    if (data == "AiPlayersUIDone") then
+        set AiPlayersUISyncDone[playerId] = true
+        //call BJDebugMsg("Synced done")
+    elseif (StringStartsWith(data, "AiPlayersUIPlayerName")) then
+        set AiPlayersUIPlayerNames[index] = actualData
+    elseif (StringStartsWith(data, "AiPlayersUITeam")) then
+        set AiPlayersUITeams[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIHeroStartLevel")) then
+        set AiPlayersUIHeroStartLevels[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIHero")) then
+        set AiPlayersUIHeroes[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIStartLocation")) then
+        set AiPlayersUIStartLocations[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIRaces")) then
+        set AiPlayersUIRaces[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIProfession")) then
+        set AiPlayersUIProfessions[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIStartGold")) then
+        set AiPlayersUIStartGold[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIStartLumber")) then
+        set AiPlayersUIStartLumber[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIFoodLimit")) then
+        set AiPlayersUIFoodLimit[index] = S2I(actualData)
+    elseif (StringStartsWith(data, "AiPlayersUIStartEvolution")) then
+        set AiPlayersUIStartEvolution[index] = S2I(actualData)
+    endif
+    set triggerPlayer = null
+endfunction
+
+function AiPlayersUISyncData takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+    local integer index = 0
+    local integer counter = AiPlayersUICounter[playerId]
+    local integer i = 0
+    loop
+        exitwhen (i >= counter)
+        set index = Index2D(i, playerId, bj_MAX_PLAYERS)
+        if (GetLocalPlayer() == whichPlayer) then
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIPlayerName_" + I2S(index) + "_" + BlzFrameGetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index]))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUITeam_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnTeamEdit[index]))))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIHero_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnHeroEdit[index]))))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIHeroStartLevel_" + I2S(index) + "_" + BlzFrameGetText(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index]))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIStartLocation_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnStartLocationEdit[index]))))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIRaces_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]))))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIProfession_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnProfessionEdit[index]))))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIStartGold_" + I2S(index) + "_" + BlzFrameGetText(AiPlayersUILabelFrameColumnStartGoldEdit[index]))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIStartLumber_" + I2S(index) + "_" + BlzFrameGetText(AiPlayersUILabelFrameColumnStartLumberEdit[index]))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIFoodLimit_" + I2S(index) + "_" + BlzFrameGetText(AiPlayersUILabelFrameColumnFoodLimitEdit[index]))
+            call BlzSendSyncData("AiPlayersUI", "AiPlayersUIStartEvolution_" + I2S(index) + "_" + BlzFrameGetText(AiPlayersUILabelFrameColumnStartEvolutionEdit[index]))
+        endif
+        set i = i + 1
+    endloop
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("AiPlayersUI", "AiPlayersUIDone")
+    endif
+    // wait for sync is done
+    loop
+        exitwhen (AiPlayersUISyncDone[playerId])
+        call TriggerSleepAction(1.0)
+        //call BJDebugMsg("Polling")
+    endloop
+    set AiPlayersUISyncDone[playerId] = false
+endfunction
+
 function AiPlayersUIApplyFunction takes nothing returns nothing
     local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    //call BJDebugMsg("Click close")
     call HideAiPlayersUI(Player(playerId))
+    call AiPlayersUISyncData(Player(playerId))
     set udg_TmpPlayer2 = Player(playerId)
     call ConditionalTriggerExecute(gg_trg_Computer_Start_Lobby_Settings)
 endfunction
@@ -9584,8 +9704,8 @@ endfunction
 function AiPlayersUIGetPlayerName takes player whichPlayer, player owner returns string
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
 
-    if (bj_isSinglePlayer and index != -1) then
-        return BlzFrameGetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index])
+    if (index != -1) then
+        return AiPlayersUIPlayerNames[index]
     endif
 
     return GetPlayerName(whichPlayer)
@@ -9593,8 +9713,9 @@ endfunction
 
 function AiPlayersUIGetTeam takes player whichPlayer, player owner returns integer
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
-    if (bj_isSinglePlayer and index != -1) then
-        return R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnTeamEdit[index]))
+
+    if (index != -1) then
+        return AiPlayersUITeams[index]
     endif
 
     return GetPlayerTeam(whichPlayer)
@@ -9636,7 +9757,7 @@ function ChooseRandomHeroFromRace takes integer whichRace returns integer
             return 10 // Dread Lord
         elseif (random == 1) then
             return 23 // Pit Lord
-        elseif (random == 2) then
+        else
             return 24 // Eredar Warlock
         endif
     elseif (whichRace == udg_RaceDraenei) then
@@ -9663,8 +9784,8 @@ function AiPlayersUIGetHero takes player whichPlayer, player owner returns integ
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
     local integer frameValue = 0
 
-    if (bj_isSinglePlayer and index != -1) then
-        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnHeroEdit[index]))
+    if (index != -1) then
+        set frameValue = AiPlayersUIHeroes[index]
         if (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_MATCHING_RACE) then
             return ChooseRandomHeroFromRace(udg_PlayerRace[GetConvertedPlayerId(whichPlayer)])
         elseif (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM) then
@@ -9679,8 +9800,8 @@ endfunction
 
 function AiPlayersUIGetHeroStartLevel takes player whichPlayer, player owner returns integer
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
-    if (bj_isSinglePlayer and index != -1) then
-        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index]))
+    if (index != -1) then
+        return AiPlayersUIHeroStartLevels[index]
     endif
 
     return 1
@@ -9705,10 +9826,12 @@ endfunction
 function AiPlayersUIGetPlayerWarlord takes player whichPlayer, player owner returns boolean
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
     local integer random = GetRandomInt(0, 1)
-    if (bj_isSinglePlayer and index != -1 and udg_AIFreelancers and udg_AIWarlords) then
-        if (BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]) == 0) then
+    local integer frameValue = 0
+    if (index != -1 and udg_AIFreelancers and udg_AIWarlords) then
+        set frameValue = AiPlayersUIRaces[index]
+        if (frameValue == 0) then
             return random == 0
-        elseif (BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]) == 1) then
+        elseif (frameValue == 1) then
             return false
         endif
 
@@ -9724,8 +9847,8 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, player owner returns
     local integer random = 0
     local race whichRace = GetPlayerRace(whichPlayer)
 
-    if (bj_isSinglePlayer and index != -1) then
-        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnRaceEdit[index]))
+    if (index != -1) then
+        set frameValue = AiPlayersUIRaces[index]
         if (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_WARLORD) then
             return GetRandomInt(0, udg_RaceHighElf) // all races supported with AI scripts
         elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_ALLIANCE) then
@@ -9833,8 +9956,8 @@ function AiPlayersUIGetPlayerProfession takes player whichPlayer, player owner r
     local integer random = 0
     local race whichRace = GetPlayerRace(whichPlayer)
 
-    if (bj_isSinglePlayer and index != -1) then
-        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnProfessionEdit[index]))
+    if (index != -1) then
+        set frameValue = AiPlayersUIProfessions[index]
         if (frameValue == AI_PLAYERS_UI_PROFESSIONS_MENU_ITEM_RANDOM) then
             return GetRandomInt(0, 7) // all possible menu items
         else
@@ -9850,8 +9973,8 @@ function AiPlayersUIGetStartLocation takes player whichPlayer, player owner retu
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
     local integer frameValue = 0
 
-    if (bj_isSinglePlayer and index != -1) then
-        set frameValue = R2I(BlzFrameGetValue(AiPlayersUILabelFrameColumnStartLocationEdit[index]))
+    if (index != -1) then
+        set frameValue = AiPlayersUIStartLocations[index]
         if (frameValue == AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM) then
             return ChooseComputerStartLocation(GetRandomInt(0, udg_Max_TownHalls - 1))
         else
@@ -9865,26 +9988,26 @@ endfunction
 
 function AiPlayersUIGetStartGold takes player whichPlayer, player owner returns integer
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
-    if (bj_isSinglePlayer and index != -1) then
-        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnStartGoldEdit[index]))
+    if (index != -1) then
+        return AiPlayersUIStartGold[index]
     endif
 
-    return 500
+    return AI_PLAYERS_UI_START_GOLD
 endfunction
 
 function AiPlayersUIGetStartLumber takes player whichPlayer, player owner returns integer
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
-    if (bj_isSinglePlayer and index != -1) then
-        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnStartLumberEdit[index]))
+    if (index != -1) then
+        return AiPlayersUIStartLumber[index]
     endif
 
-    return 400
+    return AI_PLAYERS_UI_START_LUMBER
 endfunction
 
 function AiPlayersUIGetFoodLimit takes player whichPlayer, player owner returns integer
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
-    if (bj_isSinglePlayer and index != -1) then
-        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnFoodLimitEdit[index]))
+    if (index != -1) then
+        return AiPlayersUIFoodLimit[index]
     endif
 
     return 300
@@ -9892,8 +10015,8 @@ endfunction
 
 function AiPlayersUIGetStartEvolution takes player whichPlayer, player owner returns integer
     local integer index = AiPlayersUIGetPlayerIndex(whichPlayer, owner)
-    if (bj_isSinglePlayer and index != -1) then
-        return S2I(BlzFrameGetText(AiPlayersUILabelFrameColumnStartEvolutionEdit[index]))
+    if (index != -1) then
+        return AiPlayersUIStartEvolution[index]
     endif
 
     return 1
@@ -9921,6 +10044,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
     local real x
     local real y
     local integer playerId = GetPlayerId(whichPlayer)
+    local integer team = 0
 
     set AiPlayersUIBackgroundFrame[playerId] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(AiPlayersUIBackgroundFrame[playerId], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_X, AI_PLAYERS_UI_Y)
@@ -9970,7 +10094,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
     set AiPlayersUILabelFrameColumnStartLocation[playerId] = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLocation" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocation[playerId], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X, AI_PLAYERS_UI_LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocation[playerId], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, AI_PLAYERS_UI_LINE_HEADERS_Y - AI_PLAYERS_UI_LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLocation[playerId], "Start Location")
+    call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLocation[playerId], "Start Location (Warlord only)")
     call BlzFrameSetTextAlignment(AiPlayersUILabelFrameColumnStartLocation[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetScale(AiPlayersUILabelFrameColumnStartLocation[playerId], 1.0)
     call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocation[playerId], false)
@@ -10040,13 +10164,16 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PLAYER_NAME_X + AI_PLAYERS_UI_COLUMN_PLAYER_NAME_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetText(AiPlayersUILabelFrameColumnPlayerNameEdit[index], GetPlayerName(aiPlayer))
+            set AiPlayersUIPlayerNames[index] = GetPlayerName(aiPlayer)
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnPlayerNameEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnPlayerNameEdit[index], false)
 
             set AiPlayersUILabelFrameColumnTeamEdit[index] = BlzCreateFrame("TeamPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_TEAM_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnTeamEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_TEAM_X + AI_PLAYERS_UI_COLUMN_TEAM_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
-            call BlzFrameSetValue(AiPlayersUILabelFrameColumnTeamEdit[index], IMinBJ(3, GetPlayerTeam(aiPlayer)))
+            set team = IMinBJ(3, GetPlayerTeam(aiPlayer))
+            call BlzFrameSetValue(AiPlayersUILabelFrameColumnTeamEdit[index], team)
+            set AiPlayersUITeams[index] = team
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnTeamEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnTeamEdit[index], false)
 
@@ -10054,6 +10181,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_X + AI_PLAYERS_UI_COLUMN_HERO_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetValue(AiPlayersUILabelFrameColumnHeroEdit[index], 0)
+            set AiPlayersUIHeroes[index] = 0
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnHeroEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroEdit[index], false)
 
@@ -10061,6 +10189,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_X + AI_PLAYERS_UI_COLUMN_HERO_START_LEVEL_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetText(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], "1")
+            set AiPlayersUIHeroStartLevels[index] = 1
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnHeroStartLevelEdit[index], false)
 
@@ -10068,6 +10197,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LOCATION_X + AI_PLAYERS_UI_COLUMN_START_LOCATION_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetValue(AiPlayersUILabelFrameColumnStartLocationEdit[index], 0)
+            set AiPlayersUIStartLocations[index] = 0
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartLocationEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLocationEdit[index], false)
 
@@ -10075,6 +10205,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_RACE_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_RACE_X + AI_PLAYERS_UI_COLUMN_RACE_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetValue(AiPlayersUILabelFrameColumnRaceEdit[index], 0)
+            set AiPlayersUIRaces[index] = 0
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnRaceEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnRaceEdit[index], false)
 
@@ -10082,20 +10213,23 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_PROFESSION_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_PROFESSION_X + AI_PLAYERS_UI_COLUMN_PROFESSION_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetValue(AiPlayersUILabelFrameColumnProfessionEdit[index], 0)
+            set AiPlayersUIProfessions[index] = 0
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnProfessionEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnProfessionEdit[index], false)
 
             set AiPlayersUILabelFrameColumnStartGoldEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartGoldEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_GOLD_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartGoldEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_GOLD_X + AI_PLAYERS_UI_COLUMN_START_GOLD_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
-            call BlzFrameSetText(AiPlayersUILabelFrameColumnStartGoldEdit[index], "500")
+            call BlzFrameSetText(AiPlayersUILabelFrameColumnStartGoldEdit[index], I2S(AI_PLAYERS_UI_START_GOLD))
+            set AiPlayersUIStartGold[index] = AI_PLAYERS_UI_START_GOLD
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartGoldEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartGoldEdit[index], false)
 
             set AiPlayersUILabelFrameColumnStartLumberEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLumberEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_LUMBER_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartLumberEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_LUMBER_X + AI_PLAYERS_UI_COLUMN_START_LUMBER_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
-            call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLumberEdit[index], "400")
+            call BlzFrameSetText(AiPlayersUILabelFrameColumnStartLumberEdit[index], I2S(AI_PLAYERS_UI_START_LUMBER))
+            set AiPlayersUIStartLumber[index] = AI_PLAYERS_UI_START_LUMBER
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartLumberEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartLumberEdit[index], false)
 
@@ -10103,6 +10237,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_X + AI_PLAYERS_UI_COLUMN_FOOD_LIMIT_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetText(AiPlayersUILabelFrameColumnFoodLimitEdit[index], "300")
+            set AiPlayersUIFoodLimit[index] = 300
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnFoodLimitEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnFoodLimitEdit[index], false)
 
@@ -10110,6 +10245,7 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_TOPLEFT, AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X, y)
             call BlzFrameSetAbsPoint(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_BOTTOMRIGHT, AI_PLAYERS_UI_COLUMN_START_EVOLUTION_X + AI_PLAYERS_UI_COLUMN_START_EVOLUTION_WIDTH, y - AI_PLAYERS_UI_LINE_HEIGHT)
             call BlzFrameSetText(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], "1")
+            set AiPlayersUIStartEvolution[index] = 1
             call BlzFrameSetEnable(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], true)
             call BlzFrameSetVisible(AiPlayersUILabelFrameColumnStartEvolutionEdit[index], false)
 
@@ -10160,6 +10296,11 @@ function CreateAiPlayersUIEx takes player whichPlayer, force aiPlayers returns n
     call BlzTriggerRegisterFrameEvent(AiPlayersUINextPageTrigger[playerId], AiPlayersUINextPageButton[playerId], FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(AiPlayersUINextPageTrigger[playerId], function AiPlayersUINextPageFunction)
     call SaveTriggerParameterInteger(AiPlayersUINextPageTrigger[playerId], 0, playerId)
+
+    // sync trigger
+    set AiPlayersUISyncTrigger[playerId] = CreateTrigger()
+    call BlzTriggerRegisterPlayerSyncEvent(AiPlayersUISyncTrigger[playerId], Player(playerId), "AiPlayersUI", false)
+    call TriggerAddAction(AiPlayersUISyncTrigger[playerId], function AiPlayersUITriggerActionSyncData)
 
     // hide
     call BlzFrameSetVisible(AiPlayersUIBackgroundFrame[playerId], false)
@@ -17373,9 +17514,9 @@ function DisplayStats takes player to, player from returns nothing
     local string heroName1 = GetUnitName(udg_Hero[playerId])
     local string heroName2 = GetUnitName(udg_Hero2[playerId])
     local string heroName3 = GetUnitName(udg_Hero3[playerId])
-    local integer heroLevel1 = GetHeroLevel1(from)
-    local integer heroLevel2 = GetHeroLevel2(from)
-    local integer heroLevel3 = GetHeroLevel3(from)
+    local string heroLevel1 = I2S(GetHeroLevel1(from))
+    local string heroLevel2 = I2S(GetHeroLevel2(from))
+    local string heroLevel3 = I2S(GetHeroLevel3(from))
     local integer heroKills = udg_HeroKills[convertedPlayerId]
     local integer heroDeaths = udg_HeroDeaths[convertedPlayerId]
     local integer unitKills = udg_UnitKills[convertedPlayerId]
@@ -17383,13 +17524,34 @@ function DisplayStats takes player to, player from returns nothing
     local integer buildingsRazed = udg_BuildingsRazed[convertedPlayerId]
     local string profession1 = udg_ProfessionName[udg_PlayerProfession[convertedPlayerId]]
     local string profession2 = udg_ProfessionName[udg_PlayerProfession2[convertedPlayerId]]
+    local integer gold = GetPlayerState(from, PLAYER_STATE_RESOURCE_GOLD)
+    local integer lumber = GetPlayerState(from, PLAYER_STATE_RESOURCE_LUMBER)
+    local integer foodUsed = GetPlayerState(from, PLAYER_STATE_RESOURCE_FOOD_USED)
+    local integer foodMax = GetPlayerState(from, PLAYER_STATE_RESOURCE_FOOD_CAP)
+    local integer evolutionLevel = GetPlayerTechCountSimple(UPG_EVOLUTION, from)
+    local integer powerGeneratorLevel = GetPlayerTechCountSimple(UPG_IMPROVED_POWER_GENERATOR, from)
+    local integer handOfGodLevel = GetPlayerTechCountSimple(UPG_IMPROVED_HAND_OF_GOD, from)
+    local integer mountLevel = GetPlayerTechCountSimple(UPG_IMPROVED_MOUNT, from)
+    local integer masonryLevel = GetPlayerTechCountSimple(UPG_IMPROVED_MASONRY, from)
+    if (heroName1 == null or heroName1 == "") then
+        set heroName1 = "-"
+        set heroLevel1 = "-"
+    endif
+    if (heroName2 == null or heroName2 == "") then
+        set heroName2 = "-"
+        set heroLevel2 = "-"
+    endif
+    if (heroName3 == null or heroName3 == "") then
+        set heroName3 = "-"
+        set heroLevel3 = "-"
+    endif
     if (udg_PlayerProfession[convertedPlayerId] == udg_ProfessionNone) then
         set profession1 = "-"
     endif
     if (udg_PlayerProfession2[convertedPlayerId] == udg_ProfessionNone) then
         set profession2 = "-"
     endif
-    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Heroes: " + heroName1 + "/" + heroName2 + "/" + heroName3 + ":\n- Hero Levels: " + I2S(heroLevel1) + "/" + I2S(heroLevel2) + "/" + I2S(heroLevel3) + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost) + "\n- Buildings razed " + I2S(buildingsRazed) + "\n- Profession 1: " + profession1  + "\n- Profession 2: " + profession2)
+    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Heroes: " + heroName1 + "/" + heroName2 + "/" + heroName3 + "\n- Hero Levels: " + heroLevel1 + "/" + heroLevel2 + "/" + heroLevel3 + "\n- Hero kills " + I2S(heroKills) + "\n- Hero deaths " + I2S(heroDeaths) + "\n- Unit kills " + I2S(unitKills) + "\n- Units lost " + I2S(unitsLost) + "\n- Buildings razed " + I2S(buildingsRazed) + "\n- Profession 1: " + profession1  + "\n- Profession 2: " + profession2 + "\n- Gold: " + I2S(gold) + "\n- Lumber: " + I2S(lumber) + "\n- Food: " + I2S(foodUsed) + "/" + I2S(foodMax) + "\n- Evolution: " + I2S(evolutionLevel) + "\n- Improved Power Generator: " + I2S(powerGeneratorLevel) + "\n- Hand of God: " + I2S(handOfGodLevel) + "\n- Improved Mount: " + I2S(mountLevel) + "\n- Improved Masonry: " + I2S(masonryLevel))
 endfunction
 
 // Add all prestored savecodes into this function
