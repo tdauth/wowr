@@ -3702,6 +3702,7 @@ library SaveCodeSystem requires WoWReforgedUtils
 globals
     constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII without space and ~
     constant string SAVE_CODE_SEGMENT_SEPARATOR = "~" // must not be part of SAVE_CODE_DIGITS
+    constant string SAVE_CODE_SYMBOL_UNKNOWN = "~" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
     constant boolean SAVE_CODE_OBFUSCATE = true
 endglobals
@@ -3798,7 +3799,7 @@ function ConvertSaveCodeToObfuscatedVersion takes string saveCode, integer hash 
         if (index != -1) then
             set result = result + SubString(shiftedSaveCodeDigits, index, index + 1)
         else
-            set result = result + "?"
+            set result = result + SAVE_CODE_SYMBOL_UNKNOWN
         endif
         set i = i + 1
     endloop
@@ -3819,7 +3820,7 @@ function ConvertSaveCodeFromObfuscatedVersion takes string saveCode, integer has
         if (shiftedIndex != -1) then
             set result = result + SubString(GetObfuscationSaveCodeDigits(), shiftedIndex, shiftedIndex + 1)
         else
-            set result = result + "?"
+            set result = result + SAVE_CODE_SYMBOL_UNKNOWN
         endif
         set i = i + 1
     endloop
@@ -3924,6 +3925,7 @@ function ConvertStringToSaveCodeSegment takes string whichString, integer hash r
     loop
         exitwhen (i == StringLength(whichString))
         set character = SubString(whichString, i, i + 1)
+        // no space characters please
         if (character == " ") then
             set character = "_"
         endif
@@ -3956,6 +3958,7 @@ function ConvertSaveCodeSegmentIntoStringFromSaveCode takes string saveCode, int
     loop
         exitwhen (i == StringLength(substr))
         set character = ConvertSaveCodeFromObfuscatedVersion(SubString(substr, i, i + 1), hash)
+        // underscores are space characters by default
         if (character == "_") then
             set character = " "
         endif
@@ -8824,7 +8827,7 @@ function GetSaveCodeTheElvenClan takes boolean singlePlayer, string playerName r
     local integer clanIcon = 0 // TODO Leads to stopping the code execution 'I04S'
     local integer gold = 10000
     local integer lumber = 10000
-    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 10, 10, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "", 0, "", 0)
+    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 10, 10, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade#2569", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "Chaoskrieger#21738", udg_ClanRankCaptain, "", 0)
 endfunction
 
 globals
@@ -17598,6 +17601,13 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     call AddPrestoredSaveCodeBuildings("Barade#2569", "}+RDR:R}JR}RDHiRL[*R}bRDunRLLwR}YRDT!RLLwR}ZRDjERLKvR}lRDqbRK)5R}6RDjERKpCR}dRDP[RLeGR}&RDjURK!kRYR")
     // WorldOfWarcraftReforged-Barade#2569-Multiplayer-Normal-Freelancer-units-6-40Red Dragon,40Green Dragon,40Black Dragon,40Blue Dragon,40Bronze Dragon,40Nether Dragon
     call AddPrestoredSaveCodeUnits("Barade#2569", "}+RKR:R}JR}+RwR}lRwR}nRwR}|RwR}bRwR}^RwR:R:R:R:R:R:R:R:R$R")
+    // WorldOfWarcraftReforged-Chaoskrieger21738-Multiplayer-Normal-Freelancer-level1-21-level2-1-level3-1-gold-2073442-lumber-90.txt
+    call AddPrestoredSaveCode("Chaoskrieger#21738", "k94@4O4[`45DH4k_c:4B4O4O4O4O4O4e4k4@>4@4<4O4O4O4O4O4O4O4[D4")
+    // WorldOfWarcraftReforged-Chaoskrieger21738-Singleplayer-Normal-Freelancer-level1-19-level2-1-level3-1-gold-12075-lumber-2590.txt
+    call AddPrestoredSaveCode("Chaoskrieger#21738", "k94[4O4[`4e0J4[sg4x84O4O4O4O4O454k4e#4k4[4[4O4O4O4O4O4O4[$4")
+    // WorldOfWarcraftReforged-Chaoskrieger21738-Singleplayer-Normal-Freelancer-items-4-BlitzkugelPickpocketingUralte_Janggo_der_AusdauerKnochenglocken_der_Geiel.txt
+    // TODO Shown as empty items.
+    call AddPrestoredSaveCodeItems("Chaoskrieger#21738", "k94[4O4[`4)4O4`4O4Ã4O4{4O4km4")
     // ##############################################################
     // CLANS
     // MULTIPLAYER
@@ -17609,6 +17619,7 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Runeblade14#2451", udg_ClanRankCaptain)
     call AddPrestoredSaveCodeClanPlayer("AntiDenseMan#1202", udg_ClanRankCaptain)
+    call AddPrestoredSaveCodeClanPlayer("Chaoskrieger#21738", udg_ClanRankCaptain)
     // SINGLEPLAYER
     // TheElvenClan
     // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Singleplayer-gold-10000-lumber-10000-Barade#2569_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
@@ -17618,4 +17629,5 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Runeblade14#2451", udg_ClanRankCaptain)
     call AddPrestoredSaveCodeClanPlayer("AntiDenseMan#1202", udg_ClanRankCaptain)
+    call AddPrestoredSaveCodeClanPlayer("Chaoskrieger#21738", udg_ClanRankCaptain)
 endfunction
