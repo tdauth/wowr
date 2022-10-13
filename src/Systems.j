@@ -799,7 +799,7 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
         exitwhen(I1 == bj_MAX_INVENTORY)
         exitwhen (whichItem == null)
         set slotItem = UnitItemInSlot(udg_Rucksack[convertedPlayerId], I0)
-        if (slotItem == null or (GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
+        if (slotItem == null or (GetItemCharges(slotItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
             call UnitAddItem(udg_Rucksack[convertedPlayerId], slotItem)
             set whichItem = null
             return true
@@ -826,7 +826,7 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
 
                 return true
             // stack
-            elseif (GetItemTypeId(whichItem) == udg_RucksackItemType[index] and GetMaxStacksByItemTypeId(udg_RucksackItemType[index]) >= udg_RucksackItemCharges[index] + GetItemCharges(whichItem)) then
+            elseif (GetItemCharges(whichItem) > 0 and GetItemTypeId(whichItem) == udg_RucksackItemType[index] and GetMaxStacksByItemTypeId(udg_RucksackItemType[index]) >= udg_RucksackItemCharges[index] + GetItemCharges(whichItem)) then
                 call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
                 set udg_RucksackItemCharges[index] = udg_RucksackItemCharges[index] + GetItemCharges(whichItem)
                 call RemoveItem(whichItem)
@@ -17506,6 +17506,32 @@ function GetItemPickupErrorReason takes item whichItem, player whichPlayer retur
     endif
     set owner = null
     return result
+endfunction
+
+globals
+    integer pickedupItemsCounter = 0
+    player pickedupItemsPlayer
+endglobals
+
+function ActionFunctionPickupItem takes nothing returns nothing
+    if (CanItemBePickedUp(GetEnumItem(), pickedupItemsPlayer)) then
+        set pickedupItemsCounter= pickedupItemsCounter + 1
+        call AddItemToBackpackForPlayer(GetPlayerId(pickedupItemsPlayer), GetEnumItem())
+    endif
+endfunction
+
+function PickupAllItemsAround takes unit hero returns integer
+    local location tmpLocation = GetUnitLoc(hero)
+    local rect tmpRect = RectFromCenterSizeBJ(tmpLocation, 2200.00, 2200.00)
+    set pickedupItemsCounter = 0
+    set pickedupItemsPlayer = GetOwningPlayer(hero)
+    call EnumItemsInRect(tmpRect, null, function ActionFunctionPickupItem)
+    call DisplayTextToPlayer(GetOwningPlayer(hero), 0, 0,  "Picked up " + I2S(pickedupItemsCounter) + " items.")
+    call RemoveRect(tmpRect)
+    set tmpRect = null
+    call RemoveLocation(tmpLocation)
+    set tmpLocation = null
+    return pickedupItemsCounter
 endfunction
 
 function DisplayStats takes player to, player from returns nothing
