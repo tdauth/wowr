@@ -638,3 +638,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Em!: [Giant Bat](https://www.hiveworkshop.com/threads/giant-bat.307985/)
 * Jaccouille: [Blood Troll Mage](https://www.hiveworkshop.com/threads/blood-troll-mage.326962/)
 * johnwar: [Troll Hexer](https://www.hiveworkshop.com/threads/troll-hexer.335128/)
+* bakr: [Tauren Buildings](https://www.hiveworkshop.com/threads/tauren-buildings.328637/)
+* apaka: [Tauren Worker](https://www.hiveworkshop.com/threads/tauren-worker.92627/)

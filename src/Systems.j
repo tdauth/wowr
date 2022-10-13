@@ -4005,7 +4005,7 @@ function ColoredSaveCode takes string saveCode returns string
 endfunction
 
 function AppendFileContent takes string content returns string
-    return "\r\n\t\t\t\t" + content
+    return "\r\n" + content
 endfunction
 
 function AppendFileContentLeft takes string content returns string
@@ -7571,7 +7571,7 @@ function AppendClanSaveCodeMember takes string members, string playerName, integ
     return members
 endfunction
 
-function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string clanName, integer icon, integer clanSoundIndex, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, string saveCode returns nothing
+function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string clanName, integer icon, integer clanSoundIndex, integer gold, integer lumber, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, integer memberCounter, string saveCode returns nothing
     local string singleplayer = "no"
     local string singlePlayerFileName = "Multiplayer"
     local string leader = ""
@@ -7658,10 +7658,10 @@ function CreateSaveCodeClanTextFile takes boolean isSinglePlayer, string clanNam
     call Preload(content)
 
     // The line below creates the file at the specified location
-    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + clanName + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-" + members + ".txt")
+    call PreloadGenEnd("WorldOfWarcraftReforged-Clan-" + clanName + "-" + playerName0 + "-" + singlePlayerFileName + "-gold-" + I2S(gold) + "-lumber-" + I2S(lumber) + "-members-" + I2S(memberCounter) + ".txt")
 endfunction
 
-function GetSaveCodeClanEx takes boolean isSinglePlayer, string clanName, integer icon, sound whichSound, integer gold, integer lumber, boolean hasAIPlayer, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6 returns string
+function GetSaveCodeClanEx takes boolean isSinglePlayer, string clanName, integer icon, sound whichSound, integer gold, integer lumber, boolean hasAIPlayer, integer improvedClanHallLevel, integer improvedClanLevel, string playerName0, integer playerRank0, string playerName1, integer playerRank1, string playerName2, integer playerRank2, string playerName3, integer playerRank3, string playerName4, integer playerRank4, string playerName5, integer playerRank5, string playerName6, integer playerRank6, integer membersCounter returns string
     local string result = ""
     local integer clanSoundIndex = GetClanSoundIndex(whichSound)
 
@@ -7711,7 +7711,7 @@ function GetSaveCodeClanEx takes boolean isSinglePlayer, string clanName, intege
         set result = ConvertSaveCodeToObfuscatedVersion(result, CompressedAbsStringHash(clanName))
     endif
 
-    call CreateSaveCodeClanTextFile(isSinglePlayer, clanName, icon, clanSoundIndex, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, result)
+    call CreateSaveCodeClanTextFile(isSinglePlayer, clanName, icon, clanSoundIndex, gold, lumber, improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, membersCounter, result)
 
     call AddGeneratedSaveCode(result)
 
@@ -7770,7 +7770,7 @@ function GetSaveCodeClan takes integer clan returns string
         set i = i + 1
     endloop
 
-    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanSound[clan], udg_ClanGold[clan], udg_ClanLumber[clan], udg_ClanHasAIPlayer[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6)
+    return GetSaveCodeClanEx(IsInSinglePlayer(), udg_ClanName[clan], udg_ClanIcon[clan], udg_ClanSound[clan], udg_ClanGold[clan], udg_ClanLumber[clan], udg_ClanHasAIPlayer[clan], improvedClanHallLevel, improvedClanLevel, playerName0, playerRank0, playerName1, playerRank1, playerName2, playerRank2, playerName3, playerRank3, playerName4, playerRank4, playerName5, playerRank5, playerName6, playerRank6, clanMemberCounter)
 endfunction
 
 function ApplySaveCodeClan takes player whichPlayer, string name, string s returns boolean
@@ -8825,9 +8825,9 @@ endfunction
 function GetSaveCodeTheElvenClan takes boolean singlePlayer, string playerName returns string
     // there seems to be an issue if we pass these values directly as literals
     local integer clanIcon = 0 // TODO Leads to stopping the code execution 'I04S'
-    local integer gold = 10000
-    local integer lumber = 10000
-    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 10, 10, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade#2569", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "Chaoskrieger#21738", udg_ClanRankCaptain, "", 0)
+    local integer gold = 40000
+    local integer lumber = 40000
+    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, clanSound[1], gold, lumber, true, 10, 10, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade#2569", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "Chaoskrieger#21738", udg_ClanRankCaptain, "", 0, 5)
 endfunction
 
 globals
@@ -8860,7 +8860,9 @@ function GenerateSaveCodeNewOpLimit takes nothing returns nothing
 endfunction
 
 function GetSaveCodeTheElvenClanNewOpLimit takes nothing returns nothing
+    call BJDebugMsg("Generating savecodes for TheElvenClan")
     call GetSaveCodeTheElvenClan(generateSaveCodeClanSinglePlayer, generateSaveCodeClanPlayerName)
+    call BJDebugMsg("Done generating savecodes for TheElvenClan")
 endfunction
 
 function GenerateSaveCodes takes player whichPlayer returns nothing
@@ -17613,7 +17615,7 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     // MULTIPLAYER
     // TheElvenClan
     // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Multiplayer-gold-17000-lumber-24000-Barade#2569_Leader.txt, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
-    call AddPrestoredSaveCodeClan("TheElvenClan", false, "/U/OUqU/U/joUui-UhUhU/6UqUqUuUqUuUqUuUqUuUqUuUqUuUqU/JU")
+    call AddPrestoredSaveCodeClan("TheElvenClan", false, "/U/OUqU/UyshUyshUhUhU/6UqUrUqU/6UqUSU/UvU/UufU/UqUqU/UuVU")
     call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
@@ -17623,7 +17625,7 @@ function InitPrestoredSaveCodes takes nothing returns nothing
     // SINGLEPLAYER
     // TheElvenClan
     // WorldOfWarcraftReforged-Clan-TheElvenClan-Barade#2569-Singleplayer-gold-10000-lumber-10000-Barade#2569_Leader, WorldEdit_Leader, Barade_Leader, Runeblade14#2451_Captain, AntiDenseMan#1202_Captain
-    call AddPrestoredSaveCodeClan("TheElvenClan", true, "qU/OUqU/U/:\"U/:\"UhUhU/6UqUrUqUu4UqUSU/UvU/UqUqUqUqU/U/5U")
+    call AddPrestoredSaveCodeClan("TheElvenClan", true, "qU/OUqU/UyshUyshUhUhU/6UqUrUqU/6UqUSU/UvU/UufU/UqUqU/UjU")
     call AddPrestoredSaveCodeClanPlayer("Barade#2569", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("WorldEdit", udg_ClanRankLeader)
     call AddPrestoredSaveCodeClanPlayer("Barade", udg_ClanRankLeader)
