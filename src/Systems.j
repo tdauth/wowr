@@ -850,48 +850,54 @@ function DestroyRucksackSystemForPlayer takes integer playerId returns nothing
     call ClearRucksackForPlayer(playerId)
 endfunction
 
-function RefreshRucksackPage takes integer playerId returns nothing
-    local integer RucksackPage = udg_RucksackPageNumber[playerId]
-    local integer I0 = 0
-    local integer index = 0
-    local item whichItem = null
-	call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
+function DisableItemPickupTriggers takes integer playerId returns nothing
+    call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
 	call DisableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
 	call DisableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
-    // Create All Items From Next/Previous Page
-    set I0 = 0
-    loop
-        exitwhen(I0 == bj_MAX_INVENTORY)
-        set index = Index3D(playerId, RucksackPage, I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-        if (udg_RucksackItemType[index] != 0) then
-            //call BJDebugMsg("Item type " + GetObjectName(udg_RucksackItemType[index]) + " at index " + I2S(index))
-            call UnitAddItemToSlotById(udg_Rucksack[playerId], udg_RucksackItemType[index], I0)
-            set whichItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
-            call ApplyRucksackItem(whichItem, index)
-        //else
-            //call BJDebugMsg("Empty at index " + I2S(index))
-        endif
-        set I0 = I0 + 1
-    endloop
+endfunction
+
+function EnableItemPickupTriggers takes integer playerId returns nothing
 	call EnableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Pickup)
 	call EnableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
 	call EnableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
 endfunction
 
+function RefreshRucksackPage takes integer playerId returns nothing
+    local integer RucksackPage = udg_RucksackPageNumber[playerId]
+    local integer i = 0
+    local integer index = 0
+    local item whichItem = null
+	call DisableItemPickupTriggers(playerId)
+    // Create All Items From Next/Previous Page
+    set i = 0
+    loop
+        exitwhen(i == bj_MAX_INVENTORY)
+        set index = Index3D(playerId, RucksackPage, i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        if (udg_RucksackItemType[index] != 0) then
+            //call BJDebugMsg("Item type " + GetObjectName(udg_RucksackItemType[index]) + " at index " + I2S(index))
+            call UnitAddItemToSlotById(udg_Rucksack[playerId], udg_RucksackItemType[index], i)
+            set whichItem = UnitItemInSlot(udg_Rucksack[playerId], i)
+            call ApplyRucksackItem(whichItem, index)
+        //else
+            //call BJDebugMsg("Empty at index " + I2S(index))
+        endif
+        set i = i + 1
+    endloop
+	call EnableItemPickupTriggers(playerId)
+endfunction
+
 function ChangeRucksackPageEx takes integer playerId, integer newRucksackPage returns nothing
-    local integer I0 = 0
+    local integer i = 0
     local integer index = 0
     local player RucksackOwner = Player(playerId)
     local item SlotItem = null
-	call DisableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Drop)
-	call DisableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
-	call DisableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
+	call DisableItemPickupTriggers(playerId)
     // Save All Items
-    set I0 = 0
+    set i = 0
     loop
-        exitwhen(I0 == bj_MAX_INVENTORY)
-        set index = Index3D(playerId, udg_RucksackPageNumber[playerId], I0, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-        set SlotItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
+        exitwhen(i == bj_MAX_INVENTORY)
+        set index = Index3D(playerId, udg_RucksackPageNumber[playerId], i, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+        set SlotItem = UnitItemInSlot(udg_Rucksack[playerId], i)
         if (SlotItem != null) then
             call SetRucksackItemFromItem(SlotItem, index)
             //call BJDebugMsg("Storing at index " + I2S(index) + " with type " + GetObjectName(udg_RucksackItemType[index]))
@@ -901,11 +907,9 @@ function ChangeRucksackPageEx takes integer playerId, integer newRucksackPage re
             //call BJDebugMsg("Storing empty at index " + I2S(index))
             call ClearRucksackItem(index)
         endif
-        set I0 = I0 + 1
+        set i = i + 1
     endloop
-	call EnableTrigger(gg_trg_Stats_Legendary_Artifact_Counter_Drop)
-	call EnableTrigger(udg_PlayerRucksackTriggerPickup[playerId])
-	call EnableTrigger(udg_PlayerRucksackTriggerDrop[playerId])
+	call EnableItemPickupTriggers(playerId)
 	// change page
     set udg_RucksackPageNumber[playerId] = newRucksackPage
     call DisplayTimedTextToPlayer(RucksackOwner, 0.00, 0.00, 4.00, ("Open Bag " + I2S(newRucksackPage + 1) + "."))
@@ -8972,9 +8976,8 @@ globals
     framehandle array BackpackItemFrame
     framehandle array BackpackItemBackdropFrame
     framehandle array BackpackItemChargesFrame
+    framehandle array BackpackItemBagFrame
     trigger array BackpackItemTrigger
-    trigger array BackpackItemMouseDownTrigger
-    trigger array BackpackItemMouseUpTrigger
     trigger array BackpackItemTooltipOnTrigger
     trigger array BackpackItemTooltipOffTrigger
     framehandle array BackpackTooltipFrame
@@ -8983,6 +8986,8 @@ globals
     framehandle array BackpackTooltipText
     framehandle array BackpackCloseButton
     trigger array BackpackCloseTrigger
+    trigger array BackpackSyncTrigger
+
     constant real BACKPACK_UI_SIZE_X = 0.80
     constant real BACKPACK_UI_SIZE_Y = 0.42
     constant real BACKPACK_UI_BUTTON_SIZE = 0.02818
@@ -8993,6 +8998,25 @@ endglobals
 
 function BackpackUIExists takes player whichPlayer returns boolean
     return BackpackBackgroundFrame[GetPlayerId(whichPlayer)] != null
+endfunction
+
+function BackpackUITriggerActionSyncData takes nothing returns nothing
+    local player whichPlayer = GetTriggerPlayer()
+    local string prefix = BlzGetTriggerSyncPrefix()
+    local string data = BlzGetTriggerSyncData()
+    local integer playerId = GetPlayerId(whichPlayer)
+    local integer bag = S2I(data)
+    call ChangeRucksackPageEx(playerId, bag)
+    set whichPlayer = null
+endfunction
+
+function BackpackUISyncBag takes player whichPlayer, integer bag returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+    call BlzFrameSetText(BackpackTooltipText[playerId], "Changed to bag " + I2S(bag + 1) + ".")
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("BackpackUI", I2S(bag))
+    endif
 endfunction
 
 function ShowBackpackUI takes player whichPlayer returns nothing
@@ -9021,6 +9045,7 @@ function ShowBackpackUI takes player whichPlayer returns nothing
                 if (udg_RucksackItemType[index] != 0 and GetItemTypePerishable(udg_RucksackItemType[index])) then
                     call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
                 endif
+                call BlzFrameSetVisible(BackpackItemBagFrame[index], true)
                 set j = j + 1
             endloop
             set i = i + 1
@@ -9051,6 +9076,7 @@ function HideBackpackUI takes player whichPlayer returns nothing
                 call BlzFrameSetVisible(BackpackItemFrame[index], false)
                 call BlzFrameSetVisible(BackpackItemBackdropFrame[index], false)
                 call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
+                call BlzFrameSetVisible(BackpackItemBagFrame[index], false)
                 set j = j + 1
             endloop
             set i = i + 1
@@ -9063,24 +9089,8 @@ function BackpackClickItemFunction takes nothing returns nothing
     local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
     local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
     local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
-    //call BJDebugMsg("Clicking on item " + I2S(index))
 
-    call ChangeRucksackPageEx(playerId, bag)
-endfunction
-
-function BackpackMouseDownItemFunction takes nothing returns nothing
-    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
-endfunction
-
-function BackpackMouseUpItemFunction takes nothing returns nothing
-    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
-
-    if (BlzGetTriggerPlayerMouseButton() == MOUSE_BUTTON_TYPE_RIGHT) then
-        // https://www.hiveworkshop.com/threads/how-to-fake-the-cursor-dragging-an-item.337534/
-        // TODO Create a fake drag cursor.
-    endif
+    call BackpackUISyncBag(Player(playerId), bag)
 endfunction
 
 function BackpackEnterItemFunction takes nothing returns nothing
@@ -9142,9 +9152,10 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     call BlzFrameSetAbsPoint(BackpackBackgroundFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
     call BlzFrameSetAbsPoint(BackpackBackgroundFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
 
+    set y = 0.54
     set BackpackTitleFrame[playerId] = BlzCreateFrameByType("TEXT", "BackpackTitle" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(BackpackTitleFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
-    call BlzFrameSetAbsPoint(BackpackTitleFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
+    call BlzFrameSetAbsPoint(BackpackTitleFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, y)
+    call BlzFrameSetAbsPoint(BackpackTitleFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, y - 0.1)
     call BlzFrameSetText(BackpackTitleFrame[playerId], "Backpack")
     call BlzFrameSetTextAlignment(BackpackTitleFrame[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetScale(BackpackTitleFrame[playerId], 1.0)
@@ -9180,22 +9191,6 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             call SaveTriggerParameterInteger(BackpackItemTrigger[index], 2, i)
             call SaveTriggerParameterInteger(BackpackItemTrigger[index], 3, j)
 
-            set BackpackItemMouseDownTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(BackpackItemMouseDownTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_DOWN)
-            call TriggerAddAction(BackpackItemMouseDownTrigger[index], function BackpackMouseDownItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 0, playerId)
-            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 1, index)
-            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 2, i)
-            call SaveTriggerParameterInteger(BackpackItemMouseDownTrigger[index], 3, j)
-
-            set BackpackItemMouseUpTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(BackpackItemMouseUpTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_UP)
-            call TriggerAddAction(BackpackItemMouseUpTrigger[index], function BackpackMouseUpItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 0, playerId)
-            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 1, index)
-            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 2, i)
-            call SaveTriggerParameterInteger(BackpackItemMouseUpTrigger[index], 3, j)
-
             set BackpackItemTooltipOnTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOnTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_ENTER)
             call TriggerAddAction(BackpackItemTooltipOnTrigger[index], function BackpackEnterItemFunction)
@@ -9219,6 +9214,14 @@ function CreateBackpackUI takes player whichPlayer returns nothing
             call BlzFrameSetScale(BackpackItemChargesFrame[index], 1.0)
             call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
             call BlzFrameSetEnable(BackpackItemChargesFrame[index], false)
+
+            set BackpackItemBagFrame[index] = BlzCreateFrameByType("TEXT", "bag" + I2S(index), BackpackItemFrame[index], "", 0)
+            call BlzFrameSetAllPoints(BackpackItemBagFrame[index], BackpackItemFrame[index])
+            call BlzFrameSetText(BackpackItemBagFrame[index], I2S(i + 1))
+            call BlzFrameSetTextAlignment(BackpackItemBagFrame[index], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+            call BlzFrameSetScale(BackpackItemBagFrame[index], 1.0)
+            call BlzFrameSetVisible(BackpackItemBagFrame[index], false)
+            call BlzFrameSetEnable(BackpackItemBagFrame[index], false)
 
             set x = x + BACKPACK_UI_BUTTON_SIZE + BACKPACK_UI_BUTTON_SPACE
 
@@ -9272,6 +9275,11 @@ function CreateBackpackUI takes player whichPlayer returns nothing
     call TriggerAddAction(BackpackCloseTrigger[playerId], function BackpackCloseFunction)
     call SaveTriggerParameterInteger(BackpackCloseTrigger[playerId], 0, playerId)
 
+    // sync trigger
+    set BackpackSyncTrigger[playerId] = CreateTrigger()
+    call BlzTriggerRegisterPlayerSyncEvent(BackpackSyncTrigger[playerId], Player(playerId), "BackpackUI", false)
+    call TriggerAddAction(BackpackSyncTrigger[playerId], function BackpackUITriggerActionSyncData)
+
     call BlzFrameSetVisible(BackpackBackgroundFrame[playerId], false)
 endfunction
 
@@ -9303,12 +9311,6 @@ function DestroyBackpackUI takes player whichPlayer returns nothing
             call DestroyParameterTrigger(BackpackItemTrigger[index])
             set BackpackItemTrigger[index] = null
 
-            call DestroyParameterTrigger(BackpackItemMouseDownTrigger[index])
-            set BackpackItemMouseDownTrigger[index] = null
-
-            call DestroyParameterTrigger(BackpackItemMouseUpTrigger[index])
-            set BackpackItemMouseUpTrigger[index] = null
-
             call DestroyParameterTrigger(BackpackItemTooltipOnTrigger[index])
             set BackpackItemTooltipOnTrigger[index] = null
 
@@ -9320,6 +9322,10 @@ function DestroyBackpackUI takes player whichPlayer returns nothing
 
             call BlzDestroyFrame(BackpackItemChargesFrame[index])
             set BackpackItemChargesFrame[index] = null
+
+            call BlzDestroyFrame(BackpackItemBagFrame[index])
+            set BackpackItemBagFrame[index] = null
+
             set j = j + 1
         endloop
 
@@ -10350,7 +10356,7 @@ globals
     constant real SAVECODE_UI_TOOLTIP_HEIGHT = 0.34
 
     constant real SAVECODE_UI_TOOLTIP_LABEL_X = 0.64
-    constant real SAVECODE_UI_TOOLTIP_LABEL_Y = 0.49
+    constant real SAVECODE_UI_TOOLTIP_LABEL_Y = 0.50
     constant real SAVECODE_UI_TOOLTIP_LABEL_WIDTH = 0.10
     constant real SAVECODE_UI_TOOLTIP_LABEL_HEIGHT = 0.32
 
@@ -10434,19 +10440,12 @@ globals
 
     framehandle array SaveCodeUICloseButton
     trigger array SaveCodeUICloseTrigger
+
+    trigger array SaveCodeUISyncTrigger
 endglobals
 
 function SetSaveCodeUITooltip takes player whichPlayer, string tooltip returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], tooltip)
-endfunction
-
-function FormattedSaveCodeHeroes takes string saveCode returns string
-    //call BJDebugMsg("Click load heroes")
-    if (StringStartsWith(saveCode, "-load ")) then
-        return StringRemoveFromStart(saveCode, "-load ")
-    endif
-
-    return saveCode
 endfunction
 
 function SetSaveCodeUIHeroesText takes player whichPlayer, string txt returns nothing
@@ -10459,6 +10458,15 @@ endfunction
 
 function UpdateSaveCodeUIHeroesText takes player whichPlayer returns nothing
     call SetSaveCodeUIHeroesText(whichPlayer, "-load " + GetSaveCode(whichPlayer))
+endfunction
+
+function FormattedSaveCodeHeroes takes string saveCode returns string
+    //call BJDebugMsg("Click load heroes")
+    if (StringStartsWith(saveCode, "-load ")) then
+        return StringRemoveFromStart(saveCode, "-load ")
+    endif
+
+    return saveCode
 endfunction
 
 function SetSaveCodeUITooltipHeroesSaveCodeInfo takes player whichPlayer returns nothing
@@ -10619,6 +10627,173 @@ function SaveCodeUIUpdateAll takes player whichPlayer returns nothing
     call UpdateSaveCodeUIClanText(whichPlayer)
 endfunction
 
+function SaveCodeUILoadHeroes takes player whichPlayer, string input returns nothing
+    local string saveCode = FormattedSaveCodeHeroes(input)
+    //call BJDebugMsg("Click load heroes")
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCode(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownHeroes)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load hero savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUILoadItems takes player whichPlayer, string input returns nothing
+    local string saveCode = FormattedSaveCodeItems(input)
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeItems(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load item savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUILoadUnits takes player whichPlayer, string input returns nothing
+    local string saveCode = FormattedSaveCodeUnits(input)
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeUnits(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load unit savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUILoadResearches takes player whichPlayer, string input returns nothing
+    local string saveCode = FormattedSaveCodeResearches(input)
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeResearches(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load research savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUILoadBuildings takes player whichPlayer, string input returns nothing
+    local string saveCode = FormattedSaveCodeBuildings(input)
+    //call BJDebugMsg("Click load buildings")
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeBuildings(whichPlayer, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load building savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUILoadClan takes player whichPlayer, string input returns nothing
+    local string saveCode = FormattedSaveCodeClan(input)
+    local string clanName = FormattedSaveCodeClanName(input)
+    //call BJDebugMsg("Click load buildings")
+
+    if (TimerGetRemaining(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
+        if (ApplySaveCodeClan(whichPlayer, clanName, saveCode)) then
+            call StartTimerBJ(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
+            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
+        else
+            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
+        endif
+    else
+        call SetSaveCodeUITooltip(whichPlayer, "You can load clan savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)]))))
+    endif
+endfunction
+
+function SaveCodeUITriggerActionSyncData takes nothing returns nothing
+    local player whichPlayer = GetTriggerPlayer()
+    local string prefix = BlzGetTriggerSyncPrefix()
+    local string data = BlzGetTriggerSyncData()
+    local string input = StringTokenEx(data, 1, "_", false)
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    //call BJDebugMsg("Sync save code data " + data + " with prefix " + prefix + " with input " + input)
+
+    if (StringStartsWith(data, "LoadHeroes")) then
+        call SaveCodeUILoadHeroes(whichPlayer, input)
+    elseif (StringStartsWith(data, "LoadItems")) then
+        call SaveCodeUILoadItems(whichPlayer, input)
+    elseif (StringStartsWith(data, "LoadUnits")) then
+        call SaveCodeUILoadUnits(whichPlayer, input)
+    elseif (StringStartsWith(data, "LoadResearches")) then
+        call SaveCodeUILoadResearches(whichPlayer, input)
+    elseif (StringStartsWith(data, "LoadBuildings")) then
+        call SaveCodeUILoadBuildings(whichPlayer, input)
+    elseif (StringStartsWith(data, "LoadClan")) then
+        call SaveCodeUILoadClan(whichPlayer, input)
+    endif
+    set whichPlayer = null
+endfunction
+
+function SaveCodeUISyncLoadHeroes takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("SaveCodeUI", "LoadHeroes_" + GetSaveCodeUIHeroesText(whichPlayer))
+    endif
+endfunction
+
+function SaveCodeUISyncLoadItems takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("SaveCodeUI", "LoadItems_" + GetSaveCodeUIItemsText(whichPlayer))
+    endif
+endfunction
+
+function SaveCodeUISyncLoadUnits takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("SaveCodeUI", "LoadUnits_" + GetSaveCodeUIUnitsText(whichPlayer))
+    endif
+endfunction
+
+function SaveCodeUISyncLoadResearches takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("SaveCodeUI", "LoadResearches_" + GetSaveCodeUIResearchesText(whichPlayer))
+    endif
+endfunction
+
+function SaveCodeUISyncLoadBuildings takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("SaveCodeUI", "LoadBuildings_" + GetSaveCodeUIBuildingsText(whichPlayer))
+    endif
+endfunction
+
+function SaveCodeUISyncLoadClan takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+
+    if (GetLocalPlayer() == whichPlayer) then
+        call BlzSendSyncData("SaveCodeUI", "LoadClan_" + GetSaveCodeUIClanText(whichPlayer))
+    endif
+endfunction
+
 function SetSaveCodeUIVisible takes player whichPlayer, boolean visible returns nothing
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], visible)
@@ -10692,24 +10867,8 @@ function SaveCodeUIUpdateFunctionHeroes takes nothing returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Updated savecode for heroes.")
 endfunction
 
-function SaveCodeUILoadHeroes takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeHeroes(GetSaveCodeUIHeroesText(whichPlayer))
-    //call BJDebugMsg("Click load heroes")
-
-    if (TimerGetRemaining(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
-        if (ApplySaveCode(whichPlayer, saveCode)) then
-            call StartTimerBJ(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownHeroes)
-            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
-        else
-            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: "  + ColoredSaveCode(saveCode))
-        endif
-    else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load hero savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownHeroTimer[GetConvertedPlayerId(whichPlayer)]))))
-    endif
-endfunction
-
 function SaveCodeUILoadFunctionHeroes takes nothing returns nothing
-    call SaveCodeUILoadHeroes(GetTriggerPlayer())
+    call SaveCodeUISyncLoadHeroes(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUIEditBoxEnterItems takes player whichPlayer returns nothing
@@ -10726,23 +10885,8 @@ function SaveCodeUIUpdateFunctionItems takes nothing returns nothing
     call SetSaveCodeUITooltip(GetTriggerPlayer(), "Updated savecode for items.")
 endfunction
 
-function SaveCodeUILoadItems takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeItems(GetSaveCodeUIItemsText(whichPlayer))
-
-    if (TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
-        if (ApplySaveCodeItems(whichPlayer, saveCode)) then
-            call StartTimerBJ(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
-            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
-        else
-            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
-        endif
-    else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load item savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownItemsTimer[GetConvertedPlayerId(whichPlayer)]))))
-    endif
-endfunction
-
 function SaveCodeUILoadFunctionItems takes nothing returns nothing
-    call SaveCodeUILoadItems(GetTriggerPlayer())
+    call SaveCodeUISyncLoadItems(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUIEditBoxEnterUnits takes player whichPlayer returns nothing
@@ -10759,23 +10903,8 @@ function SaveCodeUIUpdateFunctionUnits takes nothing returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Updated savecode for units.")
 endfunction
 
-function SaveCodeUILoadUnits takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeUnits(GetSaveCodeUIUnitsText(whichPlayer))
-
-    if (TimerGetRemaining(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
-        if (ApplySaveCodeUnits(whichPlayer, saveCode)) then
-            call StartTimerBJ(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
-            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
-        else
-            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
-        endif
-    else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load unit savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownUnitsTimer[GetConvertedPlayerId(whichPlayer)]))))
-    endif
-endfunction
-
 function SaveCodeUILoadFunctionUnits takes nothing returns nothing
-    call SaveCodeUILoadUnits(GetTriggerPlayer())
+    call SaveCodeUISyncLoadUnits(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUIEditBoxEnterResearches takes player whichPlayer returns nothing
@@ -10792,23 +10921,8 @@ function SaveCodeUIUpdateFunctionResearches takes nothing returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Updated savecode for researches.")
 endfunction
 
-function SaveCodeUILoadResearches takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeResearches(GetSaveCodeUIResearchesText(whichPlayer))
-
-    if (TimerGetRemaining(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
-        if (ApplySaveCodeResearches(whichPlayer, saveCode)) then
-            call StartTimerBJ(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
-            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
-        else
-            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
-        endif
-    else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load research savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownResearchesTime[GetConvertedPlayerId(whichPlayer)]))))
-    endif
-endfunction
-
 function SaveCodeUILoadFunctionResearches takes nothing returns nothing
-    call SaveCodeUILoadResearches(GetTriggerPlayer())
+    call SaveCodeUISyncLoadResearches(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUIEditBoxEnterBuildings takes player whichPlayer returns nothing
@@ -10825,24 +10939,8 @@ function SaveCodeUIUpdateFunctionBuildings takes nothing returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Updated savecode for buildings.")
 endfunction
 
-function SaveCodeUILoadBuildings takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeBuildings(GetSaveCodeUIBuildingsText(whichPlayer))
-    //call BJDebugMsg("Click load buildings")
-
-    if (TimerGetRemaining(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
-        if (ApplySaveCodeBuildings(whichPlayer, saveCode)) then
-            call StartTimerBJ(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
-            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
-        else
-            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
-        endif
-    else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load building savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownBuildingsTimer[GetConvertedPlayerId(whichPlayer)]))))
-    endif
-endfunction
-
 function SaveCodeUILoadFunctionBuildings takes nothing returns nothing
-    call SaveCodeUILoadBuildings(GetTriggerPlayer())
+    call SaveCodeUISyncLoadBuildings(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUIEditBoxEnterClan takes player whichPlayer returns nothing
@@ -10859,25 +10957,8 @@ function SaveCodeUIUpdateFunctionClan takes nothing returns nothing
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Updated savecode for clan.")
 endfunction
 
-function SaveCodeUILoadClan takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeClan(GetSaveCodeUIClanText(whichPlayer))
-    local string clanName = FormattedSaveCodeClanName(GetSaveCodeUIClanText(whichPlayer))
-    //call BJDebugMsg("Click load buildings")
-
-    if (TimerGetRemaining(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)]) <= 0.0) then
-        if (ApplySaveCodeClan(whichPlayer, clanName, saveCode)) then
-            call StartTimerBJ(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)], false, udg_SaveCodeCooldownObjects)
-            call SetSaveCodeUITooltip(whichPlayer, "Successfully loaded the savecode: " + ColoredSaveCode(saveCode))
-        else
-            call SetSaveCodeUITooltip(whichPlayer, "Error on loading the savecode: " + ColoredSaveCode(saveCode))
-        endif
-    else
-        call SetSaveCodeUITooltip(whichPlayer, "You can load clan savecodes in: " + FormatTimeString(R2I(TimerGetRemaining(udg_SaveCodeCooldownClanTimer[GetConvertedPlayerId(whichPlayer)]))))
-    endif
-endfunction
-
 function SaveCodeUILoadFunctionClan takes nothing returns nothing
-    call SaveCodeUILoadClan(GetTriggerPlayer())
+    call SaveCodeUISyncLoadClan(GetTriggerPlayer())
 endfunction
 
 function SaveCodeUILoadAllFunctionAll takes nothing returns nothing
@@ -10904,12 +10985,12 @@ endfunction
 
 function SaveCodeUILoadFunctionAll takes nothing returns nothing
     //call BJDebugMsg("Click load all")
-    call SaveCodeUILoadHeroes(GetTriggerPlayer())
-    call SaveCodeUILoadItems(GetTriggerPlayer())
-    call SaveCodeUILoadUnits(GetTriggerPlayer())
-    call SaveCodeUILoadResearches(GetTriggerPlayer())
-    call SaveCodeUILoadBuildings(GetTriggerPlayer())
-    call SaveCodeUILoadClan(GetTriggerPlayer())
+    call SaveCodeUISyncLoadHeroes(GetTriggerPlayer())
+    call SaveCodeUISyncLoadItems(GetTriggerPlayer())
+    call SaveCodeUISyncLoadUnits(GetTriggerPlayer())
+    call SaveCodeUISyncLoadResearches(GetTriggerPlayer())
+    call SaveCodeUISyncLoadBuildings(GetTriggerPlayer())
+    call SaveCodeUISyncLoadClan(GetTriggerPlayer())
     call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(GetTriggerPlayer())], "Tried to load all savecodes.")
 endfunction
 
@@ -10920,361 +11001,362 @@ function SaveCodeUICloseFunction takes nothing returns nothing
 endfunction
 
 function CreateSaveCodeUI takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
     local real x
     local real y
 
-    set SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
-    call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
+    set SaveCodeUIBackgroundFrame[playerId] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, 0.57)
+    call BlzFrameSetAbsPoint(SaveCodeUIBackgroundFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.57 - BACKPACK_UI_SIZE_Y)
 
-    set SaveCodeUITitleFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiTitle" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
-    call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
-    call BlzFrameSetText(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], "Save Codes")
-    call BlzFrameSetTextAlignment(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
-    call BlzFrameSetScale(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], 1.0)
-    call BlzFrameSetVisible(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], false)
+    set SaveCodeUITitleFrame[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiTitle" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[playerId], FRAMEPOINT_TOPLEFT, 0.0, 0.54)
+    call BlzFrameSetAbsPoint(SaveCodeUITitleFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, BACKPACK_UI_SIZE_X, 0.54 - 0.1)
+    call BlzFrameSetText(SaveCodeUITitleFrame[playerId], "Save Codes")
+    call BlzFrameSetTextAlignment(SaveCodeUITitleFrame[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    call BlzFrameSetScale(SaveCodeUITitleFrame[playerId], 1.0)
+    call BlzFrameSetVisible(SaveCodeUITitleFrame[playerId], false)
 
-    set SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_TOOLTIP_X, SAVECODE_UI_LINE_START_Y)
-    call BlzFrameSetAbsPoint(SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_TOOLTIP_X + SAVECODE_UI_TOOLTIP_WIDTH, SAVECODE_UI_LINE_START_Y - SAVECODE_UI_TOOLTIP_HEIGHT)
+    set SaveCodeUITooltipBackgroundFrame[playerId] = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipBackgroundFrame[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_TOOLTIP_X, SAVECODE_UI_LINE_START_Y)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipBackgroundFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_TOOLTIP_X + SAVECODE_UI_TOOLTIP_WIDTH, SAVECODE_UI_LINE_START_Y - SAVECODE_UI_TOOLTIP_HEIGHT)
 
-    set SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiTooltipLabel" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_TOOLTIP_LABEL_X, SAVECODE_UI_TOOLTIP_LABEL_Y)
-    call BlzFrameSetAbsPoint(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_TOOLTIP_LABEL_X + SAVECODE_UI_TOOLTIP_LABEL_WIDTH, SAVECODE_UI_TOOLTIP_LABEL_Y - SAVECODE_UI_TOOLTIP_LABEL_HEIGHT)
-    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], "Save Code Info")
-    call BlzFrameSetEnable(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    set SaveCodeUITooltipLabelFrame[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiTooltipLabel" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipLabelFrame[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_TOOLTIP_LABEL_X, SAVECODE_UI_TOOLTIP_LABEL_Y)
+    call BlzFrameSetAbsPoint(SaveCodeUITooltipLabelFrame[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_TOOLTIP_LABEL_X + SAVECODE_UI_TOOLTIP_LABEL_WIDTH, SAVECODE_UI_TOOLTIP_LABEL_Y - SAVECODE_UI_TOOLTIP_LABEL_HEIGHT)
+    call BlzFrameSetText(SaveCodeUITooltipLabelFrame[playerId], "Save Code Info")
+    call BlzFrameSetEnable(SaveCodeUITooltipLabelFrame[playerId], false)
+    call BlzFrameSetScale(SaveCodeUITooltipLabelFrame[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUITooltipLabelFrame[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 
     // line 1: heroes
     set y = SAVECODE_UI_LINE_START_Y
 
-    set SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelHeroes" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], "|cffFFCC00Heroes:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameHeroes[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelHeroes" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameHeroes[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameHeroes[playerId], "|cffFFCC00Heroes:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameHeroes[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameHeroes[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameHeroes[playerId], true)
 
-    set SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], "-load xxx")
-    call BlzFrameSetEnable(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUIEditBoxHeroes[playerId] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxHeroes[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxHeroes[playerId], "-load xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxHeroes[playerId], true)
 
-    set SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionHeroes)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxHeroes[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUITriggerEditBoxHeroes[playerId] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxHeroes[playerId], function SaveCodeEnterFunctionHeroes)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxHeroes[playerId], SaveCodeUIEditBoxHeroes[playerId], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIEnterTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(SaveCodeUIEnterTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionHeroes)
+    set SaveCodeUIEnterTriggerHeroes[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerHeroes[playerId], SaveCodeUIEditBoxHeroes[playerId], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerHeroes[playerId], function SaveCodeEnterFunctionHeroes)
 
-    set SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameHeroes[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameHeroes[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameHeroes[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameHeroes[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionHeroes)
+    set SaveCodeUIUpdateTriggerHeroes[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerHeroes[playerId], SaveCodeUIUpdateButtonFrameHeroes[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerHeroes[playerId], function SaveCodeUIUpdateFunctionHeroes)
 
-    set SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameHeroes[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameHeroes[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameHeroes[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameHeroes[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerHeroes[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionHeroes)
+    set SaveCodeUILoadTriggerHeroes[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerHeroes[playerId], SaveCodeUILoadButtonFrameHeroes[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerHeroes[playerId], function SaveCodeUILoadFunctionHeroes)
 
     // line 2: items
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
 
-    set SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelItems" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], "|cffFFCC00Items:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameItems[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelItems" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameItems[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameItems[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameItems[playerId], "|cffFFCC00Items:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameItems[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameItems[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameItems[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameItems[playerId], true)
 
-    set SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], "-load xxx")
-    call BlzFrameSetEnable(SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUIEditBoxItems[playerId] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxItems[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxItems[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxItems[playerId], "-load xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxItems[playerId], true)
 
-    set SaveCodeUITriggerEditBoxItems[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITriggerEditBoxItems[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionItems)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxItems[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUITriggerEditBoxItems[playerId] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxItems[playerId], function SaveCodeEnterFunctionItems)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxItems[playerId], SaveCodeUIEditBoxItems[playerId], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIEnterTriggerItems[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerItems[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(SaveCodeUIEnterTriggerItems[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionItems)
+    set SaveCodeUIEnterTriggerItems[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerItems[playerId], SaveCodeUIEditBoxItems[playerId], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerItems[playerId], function SaveCodeEnterFunctionItems)
 
-    set SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameItems[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameItems[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameItems[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameItems[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameItems[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerItems[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerItems[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerItems[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionItems)
+    set SaveCodeUIUpdateTriggerItems[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerItems[playerId], SaveCodeUIUpdateButtonFrameItems[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerItems[playerId], function SaveCodeUIUpdateFunctionItems)
 
-    set SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameItems[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameItems[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameItems[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameItems[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameItems[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerItems[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerItems[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerItems[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionItems)
+    set SaveCodeUILoadTriggerItems[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerItems[playerId], SaveCodeUILoadButtonFrameItems[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerItems[playerId], function SaveCodeUILoadFunctionItems)
 
     // line 3: units
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
 
-    set SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelUnits" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], "|cffFFCC00Units:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameUnits[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelUnits" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameUnits[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameUnits[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameUnits[playerId], "|cffFFCC00Units:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameUnits[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameUnits[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameUnits[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameUnits[playerId], true)
 
-    set SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], "-load xxx")
-    call BlzFrameSetEnable(SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUIEditBoxUnits[playerId] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxUnits[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxUnits[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxUnits[playerId], "-load xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxUnits[playerId], true)
 
-    set SaveCodeUITriggerEditBoxUnits[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITriggerEditBoxUnits[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionUnits)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxUnits[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUITriggerEditBoxUnits[playerId] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxUnits[playerId], function SaveCodeEnterFunctionUnits)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxUnits[playerId], SaveCodeUIEditBoxUnits[playerId], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIEnterTriggerUnits[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerUnits[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(SaveCodeUIEnterTriggerUnits[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionUnits)
+    set SaveCodeUIEnterTriggerUnits[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerUnits[playerId], SaveCodeUIEditBoxUnits[playerId], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerUnits[playerId], function SaveCodeEnterFunctionUnits)
 
-    set SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameUnits[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameUnits[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameUnits[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameUnits[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameUnits[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerUnits[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerUnits[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerUnits[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionUnits)
+    set SaveCodeUIUpdateTriggerUnits[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerUnits[playerId], SaveCodeUIUpdateButtonFrameUnits[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerUnits[playerId], function SaveCodeUIUpdateFunctionUnits)
 
-    set SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameUnits[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameUnits[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameUnits[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameUnits[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameUnits[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerUnits[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerUnits[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerUnits[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionUnits)
+    set SaveCodeUILoadTriggerUnits[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerUnits[playerId], SaveCodeUILoadButtonFrameUnits[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerUnits[playerId], function SaveCodeUILoadFunctionUnits)
 
     // line 4: researches
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
 
-    set SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelResearches" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], "|cffFFCC00Researches:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameResearches[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelResearches" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameResearches[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameResearches[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameResearches[playerId], "|cffFFCC00Researches:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameResearches[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameResearches[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameResearches[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameResearches[playerId], true)
 
-    set SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], "-load xxx")
-    call BlzFrameSetEnable(SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUIEditBoxResearches[playerId] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxResearches[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxResearches[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxResearches[playerId], "-load xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxResearches[playerId], true)
 
-    set SaveCodeUITriggerEditBoxResearches[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITriggerEditBoxResearches[GetPlayerId(whichPlayer)], function SaveCodeUIEnterFunctionResearches)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxResearches[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUITriggerEditBoxResearches[playerId] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxResearches[playerId], function SaveCodeUIEnterFunctionResearches)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxResearches[playerId], SaveCodeUIEditBoxResearches[playerId], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIEnterTriggerResearches[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerResearches[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(SaveCodeUIEnterTriggerResearches[GetPlayerId(whichPlayer)], function SaveCodeUIEnterFunctionResearches)
+    set SaveCodeUIEnterTriggerResearches[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerResearches[playerId], SaveCodeUIEditBoxResearches[playerId], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerResearches[playerId], function SaveCodeUIEnterFunctionResearches)
 
-    set SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameResearches[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameResearches[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameResearches[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameResearches[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameResearches[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerResearches[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerResearches[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerResearches[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionResearches)
+    set SaveCodeUIUpdateTriggerResearches[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerResearches[playerId], SaveCodeUIUpdateButtonFrameResearches[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerResearches[playerId], function SaveCodeUIUpdateFunctionResearches)
 
-    set SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameResearches[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameResearches[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameResearches[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameResearches[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameResearches[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerResearches[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerResearches[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerResearches[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionResearches)
+    set SaveCodeUILoadTriggerResearches[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerResearches[playerId], SaveCodeUILoadButtonFrameResearches[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerResearches[playerId], function SaveCodeUILoadFunctionResearches)
 
     // line 4: buildings
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
 
-    set SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelBuildings" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], "|cffFFCC00Buildings:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameBuildings[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelBuildings" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameBuildings[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameBuildings[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameBuildings[playerId], "|cffFFCC00Buildings:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameBuildings[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameBuildings[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameBuildings[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameBuildings[playerId], true)
 
-    set SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], "-load xxx")
-    call BlzFrameSetEnable(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUIEditBoxBuildings[playerId] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxBuildings[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxBuildings[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxBuildings[playerId], "-load xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxBuildings[playerId], true)
 
-    set SaveCodeUITriggerEditBoxBuildings[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITriggerEditBoxBuildings[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionBuildings)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxBuildings[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUITriggerEditBoxBuildings[playerId] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxBuildings[playerId], function SaveCodeEnterFunctionBuildings)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxBuildings[playerId], SaveCodeUIEditBoxBuildings[playerId], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIEnterTriggerBuildings[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerBuildings[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(SaveCodeUIEnterTriggerBuildings[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionBuildings)
+    set SaveCodeUIEnterTriggerBuildings[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerBuildings[playerId], SaveCodeUIEditBoxBuildings[playerId], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerBuildings[playerId], function SaveCodeEnterFunctionBuildings)
 
-    set SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameBuildings[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameBuildings[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameBuildings[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameBuildings[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameBuildings[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerBuildings[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerBuildings[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerBuildings[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionBuildings)
+    set SaveCodeUIUpdateTriggerBuildings[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerBuildings[playerId], SaveCodeUIUpdateButtonFrameBuildings[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerBuildings[playerId], function SaveCodeUIUpdateFunctionBuildings)
 
-    set SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameBuildings[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameBuildings[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameBuildings[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameBuildings[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameBuildings[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerBuildings[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerBuildings[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerBuildings[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionBuildings)
+    set SaveCodeUILoadTriggerBuildings[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerBuildings[playerId], SaveCodeUILoadButtonFrameBuildings[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerBuildings[playerId], function SaveCodeUILoadFunctionBuildings)
 
     // line 5: clan
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
 
-    set SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelClan" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], "|cffFFCC00Clan:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameClan[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelClan" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameClan[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameClan[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameClan[playerId], "|cffFFCC00Clan:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameClan[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameClan[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameClan[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameClan[playerId], true)
 
-    set SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], "-loadc xxx")
-    call BlzFrameSetEnable(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUIEditBoxClan[playerId] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxClan[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LINEEDIT_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIEditBoxClan[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LINEEDIT_X + SAVECODE_UI_LINEEDIT_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIEditBoxClan[playerId], "-loadc xxx")
+    call BlzFrameSetEnable(SaveCodeUIEditBoxClan[playerId], true)
 
-    set SaveCodeUITriggerEditBoxClan[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call TriggerAddAction(SaveCodeUITriggerEditBoxClan[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionClan)
-    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxClan[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEEVENT_EDITBOX_ENTER)
+    set SaveCodeUITriggerEditBoxClan[playerId] = CreateTrigger()
+    call TriggerAddAction(SaveCodeUITriggerEditBoxClan[playerId], function SaveCodeEnterFunctionClan)
+    call BlzTriggerRegisterFrameEvent(SaveCodeUITriggerEditBoxClan[playerId], SaveCodeUIEditBoxClan[playerId], FRAMEEVENT_EDITBOX_ENTER)
 
-    set SaveCodeUIEnterTriggerClan[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerClan[GetPlayerId(whichPlayer)], SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(SaveCodeUIEnterTriggerClan[GetPlayerId(whichPlayer)], function SaveCodeEnterFunctionClan)
+    set SaveCodeUIEnterTriggerClan[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIEnterTriggerClan[playerId], SaveCodeUIEditBoxClan[playerId], FRAMEEVENT_MOUSE_ENTER)
+    call TriggerAddAction(SaveCodeUIEnterTriggerClan[playerId], function SaveCodeEnterFunctionClan)
 
-    set SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameClan[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameClan[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameClan[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameClan[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameClan[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerClan[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerClan[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerClan[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionClan)
+    set SaveCodeUIUpdateTriggerClan[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerClan[playerId], SaveCodeUIUpdateButtonFrameClan[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerClan[playerId], function SaveCodeUIUpdateFunctionClan)
 
-    set SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameClan[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameClan[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameClan[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameClan[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameClan[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerClan[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerClan[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerClan[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionClan)
+    set SaveCodeUILoadTriggerClan[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerClan[playerId], SaveCodeUILoadButtonFrameClan[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerClan[playerId], function SaveCodeUILoadFunctionClan)
 
 
     // final line: all
     set y = y - SAVECODE_UI_LINE_HEIGHT - SAVECODE_UI_LINE_SPACING
 
-    set SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrameByType("TEXT", "SaveGuiLabelAll" + I2S(GetPlayerId(whichPlayer)), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], "|cffFFCC00All:|r")
-    call BlzFrameSetEnable(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetScale(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], 1.00)
-    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetEnable(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], true)
+    set SaveCodeUILabelFrameAll[playerId] = BlzCreateFrameByType("TEXT", "SaveGuiLabelAll" + I2S(playerId), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameAll[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LABEL_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILabelFrameAll[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LABEL_X + SAVECODE_UI_LABEL_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILabelFrameAll[playerId], "|cffFFCC00All:|r")
+    call BlzFrameSetEnable(SaveCodeUILabelFrameAll[playerId], false)
+    call BlzFrameSetScale(SaveCodeUILabelFrameAll[playerId], 1.00)
+    call BlzFrameSetTextAlignment(SaveCodeUILabelFrameAll[playerId], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetEnable(SaveCodeUILabelFrameAll[playerId], true)
 
-    //set SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    //call BlzFrameSetAbsPoint(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_AUTO_BUTTON_X, y)
-    //call BlzFrameSetAbsPoint(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_AUTO_BUTTON_X + SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    //call BlzFrameSetText(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad All|r")
-    //call BlzFrameSetScale(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    //set SaveCodeUILoadAllButtonFrameAll[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    //call BlzFrameSetAbsPoint(SaveCodeUILoadAllButtonFrameAll[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_AUTO_BUTTON_X, y)
+    //call BlzFrameSetAbsPoint(SaveCodeUILoadAllButtonFrameAll[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_AUTO_BUTTON_X + SAVECODE_UI_LOAD_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    //call BlzFrameSetText(SaveCodeUILoadAllButtonFrameAll[playerId], "|cffFCD20DLoad All|r")
+    //call BlzFrameSetScale(SaveCodeUILoadAllButtonFrameAll[playerId], 1.00)
 
-    //set SaveCodeUILoadAllTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    //call BlzTriggerRegisterFrameEvent(SaveCodeUILoadAllTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    //call TriggerAddAction(SaveCodeUILoadAllTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUILoadAllFunctionAll)
+    //set SaveCodeUILoadAllTriggerAll[playerId] = CreateTrigger()
+    //call BlzTriggerRegisterFrameEvent(SaveCodeUILoadAllTriggerAll[playerId], SaveCodeUILoadAllButtonFrameAll[playerId], FRAMEEVENT_CONTROL_CLICK)
+    //call TriggerAddAction(SaveCodeUILoadAllTriggerAll[playerId], function SaveCodeUILoadAllFunctionAll)
 
-    set SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DWrite All|r")
-    call BlzFrameSetScale(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIWriteAllButtonFrameAll[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteAllButtonFrameAll[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_WRITE_AUTO_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIWriteAllButtonFrameAll[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_WRITE_AUTO_BUTTON_X + SAVECODE_UI_WRITE_AUTO_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIWriteAllButtonFrameAll[playerId], "|cffFCD20DWrite All|r")
+    call BlzFrameSetScale(SaveCodeUIWriteAllButtonFrameAll[playerId], 1.00)
 
-    set SaveCodeUIWriteAllTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteAllTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIWriteAllTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUIWriteAllFunctionAll)
+    set SaveCodeUIWriteAllTriggerAll[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIWriteAllTriggerAll[playerId], SaveCodeUIWriteAllButtonFrameAll[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIWriteAllTriggerAll[playerId], function SaveCodeUIWriteAllFunctionAll)
 
-    set SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DUpdate|r")
-    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUIUpdateButtonFrameAll[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_UPDATE_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUIUpdateButtonFrameAll[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_UPDATE_BUTTON_X + SAVECODE_UI_UPDATE_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUIUpdateButtonFrameAll[playerId], "|cffFCD20DUpdate|r")
+    call BlzFrameSetScale(SaveCodeUIUpdateButtonFrameAll[playerId], 1.00)
 
-    set SaveCodeUIUpdateTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUIUpdateTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUIUpdateFunctionAll)
+    set SaveCodeUIUpdateTriggerAll[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUIUpdateTriggerAll[playerId], SaveCodeUIUpdateButtonFrameAll[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUIUpdateTriggerAll[playerId], function SaveCodeUIUpdateFunctionAll)
 
-    set SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
-    call BlzFrameSetText(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], "|cffFCD20DLoad|r")
-    call BlzFrameSetScale(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], 1.00)
+    set SaveCodeUILoadButtonFrameAll[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameAll[playerId], FRAMEPOINT_TOPLEFT, SAVECODE_UI_LOAD_BUTTON_X, y)
+    call BlzFrameSetAbsPoint(SaveCodeUILoadButtonFrameAll[playerId], FRAMEPOINT_BOTTOMRIGHT, SAVECODE_UI_LOAD_BUTTON_X + SAVECODE_UI_LOAD_BUTTON_WIDTH, y - SAVECODE_UI_LINE_HEIGHT)
+    call BlzFrameSetText(SaveCodeUILoadButtonFrameAll[playerId], "|cffFCD20DLoad|r")
+    call BlzFrameSetScale(SaveCodeUILoadButtonFrameAll[playerId], 1.00)
 
-    set SaveCodeUILoadTriggerAll[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerAll[GetPlayerId(whichPlayer)], SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUILoadTriggerAll[GetPlayerId(whichPlayer)], function SaveCodeUILoadFunctionAll)
+    set SaveCodeUILoadTriggerAll[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUILoadTriggerAll[playerId], SaveCodeUILoadButtonFrameAll[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUILoadTriggerAll[playerId], function SaveCodeUILoadFunctionAll)
 
     // close button
 
@@ -11283,62 +11365,68 @@ function CreateSaveCodeUI takes player whichPlayer returns nothing
     //TriggerAddAction(eventHandler, TEXT_CHANGED)
     //BlzTriggerRegisterFrameEvent(eventHandler, editbox, FRAMEEVENT_EDITBOX_TEXT_CHANGED)
 
-    set SaveCodeUICloseButton[GetPlayerId(whichPlayer)] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    set SaveCodeUICloseButton[playerId] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     set x = 0.34
     set y = 0.22
-    call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_TOPLEFT, x, y)
-    call BlzFrameSetAbsPoint(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
-    call BlzFrameSetText(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], "|cffFCD20DClose|r")
-    call BlzFrameSetScale(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], 1.00)
+    call BlzFrameSetAbsPoint(SaveCodeUICloseButton[playerId], FRAMEPOINT_TOPLEFT, x, y)
+    call BlzFrameSetAbsPoint(SaveCodeUICloseButton[playerId], FRAMEPOINT_BOTTOMRIGHT, x + 0.12, y - 0.03)
+    call BlzFrameSetText(SaveCodeUICloseButton[playerId], "|cffFCD20DClose|r")
+    call BlzFrameSetScale(SaveCodeUICloseButton[playerId], 1.00)
 
-    set SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)] = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], SaveCodeUICloseButton[GetPlayerId(whichPlayer)], FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], function SaveCodeUICloseFunction)
-    call SaveTriggerParameterInteger(SaveCodeUICloseTrigger[GetPlayerId(whichPlayer)], 0, GetPlayerId(whichPlayer))
+    set SaveCodeUICloseTrigger[playerId] = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(SaveCodeUICloseTrigger[playerId], SaveCodeUICloseButton[playerId], FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(SaveCodeUICloseTrigger[playerId], function SaveCodeUICloseFunction)
+    call SaveTriggerParameterInteger(SaveCodeUICloseTrigger[playerId], 0, playerId)
 
-    call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUITitleFrame[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUITooltipBackgroundFrame[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUITooltipLabelFrame[GetPlayerId(whichPlayer)], false)
+    // sync trigger
+    set SaveCodeUISyncTrigger[playerId] = CreateTrigger()
+    call BlzTriggerRegisterPlayerSyncEvent(SaveCodeUISyncTrigger[playerId], Player(playerId), "SaveCodeUI", false)
+    call TriggerAddAction(SaveCodeUISyncTrigger[playerId], function SaveCodeUITriggerActionSyncData)
+
+    // hide for all players
+    call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIBackgroundFrame[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUITitleFrame[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUITooltipBackgroundFrame[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUITooltipLabelFrame[playerId], false)
     // heroes
-    call BlzFrameSetVisible(SaveCodeUILabelFrameHeroes[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameHeroes[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameHeroes[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameHeroes[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxHeroes[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameHeroes[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameHeroes[playerId], false)
     // items
-    call BlzFrameSetVisible(SaveCodeUILabelFrameItems[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIEditBoxItems[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameItems[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameItems[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameItems[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxItems[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameItems[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameItems[playerId], false)
     // units
-    call BlzFrameSetVisible(SaveCodeUILabelFrameUnits[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIEditBoxUnits[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameUnits[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameUnits[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameUnits[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxUnits[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameUnits[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameUnits[playerId], false)
     // researches
-    call BlzFrameSetVisible(SaveCodeUILabelFrameResearches[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIEditBoxResearches[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameResearches[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameResearches[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameResearches[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxResearches[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameResearches[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameResearches[playerId], false)
     // buildings
-    call BlzFrameSetVisible(SaveCodeUILabelFrameBuildings[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIEditBoxBuildings[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameBuildings[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameBuildings[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameBuildings[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxBuildings[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameBuildings[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameBuildings[playerId], false)
     // clan
-    call BlzFrameSetVisible(SaveCodeUILabelFrameClan[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIEditBoxClan[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameClan[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameClan[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIEditBoxClan[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameClan[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameClan[playerId], false)
     // all
-    call BlzFrameSetVisible(SaveCodeUILabelFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIWriteAllButtonFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadAllButtonFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameAll[GetPlayerId(whichPlayer)], false)
-    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameAll[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUILabelFrameAll[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIWriteAllButtonFrameAll[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadAllButtonFrameAll[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUIUpdateButtonFrameAll[playerId], false)
+    call BlzFrameSetVisible(SaveCodeUILoadButtonFrameAll[playerId], false)
     // close
-    call BlzFrameSetVisible(SaveCodeUICloseButton[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(SaveCodeUICloseButton[playerId], false)
 endfunction
 
 // Prestored Savecodes
