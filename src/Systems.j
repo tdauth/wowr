@@ -192,25 +192,31 @@ function GetHelpText takes nothing returns string
     return "-h/-help, -clear, -discord, -revive, -sel, -host, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
 endfunction
 
-function DropAllItemsFromHero takes unit hero returns nothing
+function DropAllItemsFromHero takes unit hero returns integer
+    local integer result = 0
 	local integer i = 0
 	loop
 		exitwhen (i >= bj_MAX_INVENTORY)
-		call UnitRemoveItemFromSlot(hero, i)
+		if (UnitItemInSlot(hero, i) != null) then
+            call UnitRemoveItemFromSlot(hero, i)
+            set result = result + 1
+        endif
 		set i = i + 1
 	endloop
+
+	return result
 endfunction
 
-function DropAllItemsFromHero1 takes player whichPlayer returns nothing
-    call DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
+function DropAllItemsFromHero1 takes player whichPlayer returns integer
+    return DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
 endfunction
 
-function DropAllItemsFromHero2 takes player whichPlayer returns nothing
-    call DropAllItemsFromHero(udg_Hero2[GetPlayerId(whichPlayer)])
+function DropAllItemsFromHero2 takes player whichPlayer returns integer
+    return DropAllItemsFromHero(udg_Hero2[GetPlayerId(whichPlayer)])
 endfunction
 
-function DropAllItemsFromHero3 takes player whichPlayer returns nothing
-    call DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
+function DropAllItemsFromHero3 takes player whichPlayer returns integer
+    return DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
 endfunction
 
 // Tree Finding System
@@ -654,7 +660,7 @@ function DropBackpackForPlayer takes integer playerId, rect whichRect returns no
     endloop
 endfunction
 
-function DropBackpack takes player whichPlayer returns nothing
+function DropBackpack takes player whichPlayer returns integer
     local integer playerId = GetPlayerId(whichPlayer)
     local integer I0 = 0
     local integer I1 = 0
@@ -662,8 +668,9 @@ function DropBackpack takes player whichPlayer returns nothing
     local item whichItem = null
     local real x = GetUnitX(udg_Rucksack[playerId])
     local real y = GetUnitY(udg_Rucksack[playerId])
+    local integer result = 0
     // drop before so they won't have to be cleared or removed
-    call DropAllItemsFromHero(udg_Rucksack[playerId])
+    set result = DropAllItemsFromHero(udg_Rucksack[playerId])
     set I1 = 0
     loop
         exitwhen (I1 == bj_MAX_INVENTORY)
@@ -678,14 +685,19 @@ function DropBackpack takes player whichPlayer returns nothing
         loop
             exitwhen(I1 == bj_MAX_INVENTORY)
             set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-            set whichItem = CreateItem(udg_RucksackItemType[index], x, y)
-            call ApplyRucksackItem(whichItem, index)
-            call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
-            call ClearRucksackItem(index)
+            if (udg_RucksackItemType[index] != 0) then
+                set whichItem = CreateItem(udg_RucksackItemType[index], x, y)
+                call ApplyRucksackItem(whichItem, index)
+                call SetItemCharges(whichItem, udg_RucksackItemCharges[index])
+                call ClearRucksackItem(index)
+                set result = result + 1
+            endif
             set I1 = I1 + 1
         endloop
         set I0 = I0 + 1
     endloop
+
+    return result
 endfunction
 
 function DropQuestItemFromCreepHeroAtRect takes unit hero, integer itemTypeId, rect whichRect returns item
@@ -792,16 +804,15 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
     local integer I1 = 0
     local integer index = 0
     local item slotItem = null
-    local integer convertedPlayerId = playerId + 1
     // try to add it to the inventory first
     set I0 = 0
     loop
         exitwhen(I1 == bj_MAX_INVENTORY)
         exitwhen (whichItem == null)
-        set slotItem = UnitItemInSlot(udg_Rucksack[convertedPlayerId], I0)
+        set slotItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
         if (slotItem == null or (GetItemCharges(slotItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
             call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(udg_RucksackPageNumber[playerId] + 1) + " ."))
-            call UnitAddItem(udg_Rucksack[convertedPlayerId], whichItem)
+            call UnitAddItem(udg_Rucksack[playerId], whichItem)
             set whichItem = null
             return true
         endif
