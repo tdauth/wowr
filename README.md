@@ -640,3 +640,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * johnwar: [Troll Hexer](https://www.hiveworkshop.com/threads/troll-hexer.335128/)
 * bakr: [Tauren Buildings](https://www.hiveworkshop.com/threads/tauren-buildings.328637/)
 * apaka: [Tauren Worker](https://www.hiveworkshop.com/threads/tauren-worker.92627/)
+* Cavman: [Forest Troll Female](https://www.hiveworkshop.com/threads/forest-troll-female.104295/)
+* Deolrin: [Jungle Troll - Altar of Blood](https://www.hiveworkshop.com/threads/jungle-troll-altar-of-blood.126964/)
+* Ujimasa Hojo: [Shipyard (Undead) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-undead-and-derivatives.225668/)

@@ -12163,7 +12163,7 @@ endfunction
 // Railroad System
 
 function FilterFunctionIsRailroad takes nothing returns boolean
-    return (GetUnitTypeId(GetEnumUnit()) == 'o01N' or GetUnitTypeId(GetEnumUnit()) == 'o01K') and IsUnitAliveBJ(GetEnumUnit())
+    return IsUnitAliveBJ(GetFilterUnit()) and (GetUnitTypeId(GetFilterUnit()) == 'o01N' or GetUnitTypeId(GetFilterUnit()) == 'o01K' or GetUnitTypeId(GetFilterUnit()) == 'o01H')
 endfunction
 
 function GetRailroad takes unit train, real angle returns unit
