@@ -5246,6 +5246,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
+    local real demigodX = GetRectCenterX(gg_rct_redirect_forbidden_zone)
+    local real demigodY = GetRectCenterY(gg_rct_redirect_forbidden_zone)
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -5263,13 +5265,19 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
                 call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
                 if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
                     set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                    set demigodX = GetUnitX(udg_TmpUnit)
+                    set demigodY = GetUnitY(udg_TmpUnit)
                     call TriggerExecute(gg_trg_Become_Demigod_Light)
+                    call SetUnitPosition(udg_Held[GetConvertedPlayerId(whichPlayer)], demigodX, demigodY)
                 endif
             elseif (demigodValue == 2) then
                 call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
                 if (udg_Held[GetConvertedPlayerId(whichPlayer)] != null) then
                     set udg_TmpUnit = udg_Held[GetConvertedPlayerId(whichPlayer)]
+                    set demigodX = GetUnitX(udg_TmpUnit)
+                    set demigodY = GetUnitY(udg_TmpUnit)
                     call TriggerExecute(gg_trg_Become_Demigod_Dark)
+                    call SetUnitPosition(udg_Held[GetConvertedPlayerId(whichPlayer)], demigodX, demigodY)
                 endif
             elseif (demigodValue == 3) then
                 call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_DEMIGOD, 1)
