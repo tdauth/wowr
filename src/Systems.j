@@ -949,6 +949,7 @@ function ChangeRucksackPage takes integer playerId, boolean Forward returns noth
 endfunction
 
 function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
     local integer index = 0
     local integer i = 0
     local integer j = 0
@@ -957,7 +958,7 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
         set j = 0
         loop
             exitwhen (j == bj_MAX_INVENTORY)
-            set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            set index = Index3D(playerId, i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             //call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
             call BlzFrameSetText(BackpackItemChargesFrame[index], I2S(udg_RucksackItemCharges[index]))
             if (udg_RucksackItemType[index] == 0) then
@@ -965,8 +966,10 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
                 call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
             else
                 call BlzFrameSetTexture(BackpackItemBackdropFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
-                if (BackpackUIVisible[GetPlayerId(whichPlayer)] and (GetItemTypePerishable(udg_RucksackItemType[index]) or udg_RucksackItemCharges[index] > 0)) then
-                    call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
+                if (BackpackUIVisible[playerId] and (GetItemTypePerishable(udg_RucksackItemType[index]) or udg_RucksackItemCharges[index] > 0)) then
+                    if (whichPlayer == GetLocalPlayer()) then
+                        call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
+                    endif
                 endif
             endif
             set j = j + 1
@@ -9045,24 +9048,30 @@ function ShowBackpackUI takes player whichPlayer returns nothing
         call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], true)
         //call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], true)
         //call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], true)
-        set i = 0
+    endif
+    set i = 0
+    loop
+        exitwhen (i == udg_RucksackMaxPages)
+        set j = 0
         loop
-            exitwhen (i == udg_RucksackMaxPages)
-            set j = 0
-            loop
-                exitwhen (j == bj_MAX_INVENTORY)
-                set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            exitwhen (j == bj_MAX_INVENTORY)
+            set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            if (whichPlayer == GetLocalPlayer()) then
                 call BlzFrameSetVisible(BackpackItemFrame[index], true)
                 call BlzFrameSetVisible(BackpackItemBackdropFrame[index], true)
-                if (udg_RucksackItemType[index] != 0 and GetItemTypePerishable(udg_RucksackItemType[index])) then
+            endif
+            if (udg_RucksackItemType[index] != 0 and GetItemTypePerishable(udg_RucksackItemType[index])) then
+                if (whichPlayer == GetLocalPlayer()) then
                     call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
                 endif
+            endif
+            if (whichPlayer == GetLocalPlayer()) then
                 call BlzFrameSetVisible(BackpackItemBagFrame[index], true)
-                set j = j + 1
-            endloop
-            set i = i + 1
+            endif
+            set j = j + 1
         endloop
-    endif
+        set i = i + 1
+    endloop
 endfunction
 
 function HideBackpackUI takes player whichPlayer returns nothing
@@ -9073,27 +9082,25 @@ function HideBackpackUI takes player whichPlayer returns nothing
         return
     endif
     set BackpackUIVisible[GetPlayerId(whichPlayer)] = false
-    if (whichPlayer == GetLocalPlayer()) then
-        call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
-        call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], false)
-        //call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], false)
-        //call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], false)
-        set i = 0
+    call BlzFrameSetVisible(BackpackBackgroundFrame[GetPlayerId(whichPlayer)], false)
+    call BlzFrameSetVisible(BackpackTitleFrame[GetPlayerId(whichPlayer)], false)
+    //call BlzFrameSetVisible(BackpackItemGoldFrame[GetPlayerId(whichPlayer)], false)
+    //call BlzFrameSetVisible(BackpackItemGoldIconFrame[GetPlayerId(whichPlayer)], false)
+    set i = 0
+    loop
+        exitwhen (i == udg_RucksackMaxPages)
+        set j = 0
         loop
-            exitwhen (i == udg_RucksackMaxPages)
-            set j = 0
-            loop
-                exitwhen (j == bj_MAX_INVENTORY)
-                set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-                call BlzFrameSetVisible(BackpackItemFrame[index], false)
-                call BlzFrameSetVisible(BackpackItemBackdropFrame[index], false)
-                call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
-                call BlzFrameSetVisible(BackpackItemBagFrame[index], false)
-                set j = j + 1
-            endloop
-            set i = i + 1
+            exitwhen (j == bj_MAX_INVENTORY)
+            set index = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+            call BlzFrameSetVisible(BackpackItemFrame[index], false)
+            call BlzFrameSetVisible(BackpackItemBackdropFrame[index], false)
+            call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
+            call BlzFrameSetVisible(BackpackItemBagFrame[index], false)
+            set j = j + 1
         endloop
-    endif
+        set i = i + 1
+    endloop
 endfunction
 
 function BackpackClickItemFunction takes nothing returns nothing
