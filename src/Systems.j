@@ -800,7 +800,8 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
         exitwhen (whichItem == null)
         set slotItem = UnitItemInSlot(udg_Rucksack[convertedPlayerId], I0)
         if (slotItem == null or (GetItemCharges(slotItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
-            call UnitAddItem(udg_Rucksack[convertedPlayerId], slotItem)
+            call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(udg_RucksackPageNumber[playerId] + 1) + " ."))
+            call UnitAddItem(udg_Rucksack[convertedPlayerId], whichItem)
             set whichItem = null
             return true
         endif
@@ -7482,7 +7483,7 @@ function TimerFunctionClanResources takes nothing returns nothing
                     if (lumber > 0) then
                         call SetPlayerStateBJ(Player(j), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(j), PLAYER_STATE_RESOURCE_LUMBER) + lumber / CountPlayersInForceBJ(udg_ClanPlayers[i]))
                     endif
-                    if (udg_ClanShowAIResourcesMessage[GetConvertedPlayerId(Player(i))] and gold > 0 or lumber > 0) then
+                    if (udg_ClanShowAIResourcesMessage[GetConvertedPlayerId(Player(j))] and gold > 0 or lumber > 0) then
                         call DisplayTextToPlayer(Player(j), 0, 0, GetPlayerNameColored(udg_ClanAIPlayer[i]) + " gave your clan " + I2S(gold) + " gold and " + I2S(lumber) + " lumber which has been split amongst all online clan players. Enter \"-clanaioff\" to hide these messages.")
                     endif
                 endif
@@ -17604,9 +17605,8 @@ globals
 endglobals
 
 function ActionFunctionPickupItem takes nothing returns nothing
-    if (CanItemBePickedUp(GetEnumItem(), pickedupItemsPlayer)) then
+    if (CanItemBePickedUp(GetEnumItem(), pickedupItemsPlayer) and AddItemToBackpackForPlayer(GetPlayerId(pickedupItemsPlayer), GetEnumItem())) then
         set pickedupItemsCounter= pickedupItemsCounter + 1
-        call AddItemToBackpackForPlayer(GetPlayerId(pickedupItemsPlayer), GetEnumItem())
     endif
 endfunction
 
