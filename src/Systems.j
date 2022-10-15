@@ -9010,13 +9010,13 @@ function BackpackUITriggerActionSyncData takes nothing returns nothing
     set whichPlayer = null
 endfunction
 
-function BackpackUISyncBag takes player whichPlayer, integer bag returns nothing
-    local integer playerId = GetPlayerId(whichPlayer)
+function BackpackUISyncBag takes nothing returns nothing
+    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+    local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
+    local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
     call BlzFrameSetText(BackpackTooltipText[playerId], "Changed to bag " + I2S(bag + 1) + ".")
-
-    if (GetLocalPlayer() == whichPlayer) then
-        call BlzSendSyncData("BackpackUI", I2S(bag))
-    endif
+    call BlzSendSyncData("BackpackUI", I2S(bag))
 endfunction
 
 function ShowBackpackUI takes player whichPlayer returns nothing
@@ -9085,12 +9085,9 @@ function HideBackpackUI takes player whichPlayer returns nothing
 endfunction
 
 function BackpackClickItemFunction takes nothing returns nothing
-    local integer playerId = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
-    local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
-    local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
-
-    call BackpackUISyncBag(Player(playerId), bag)
+    if (GetLocalPlayer() == GetTriggerPlayer()) then
+        call BackpackUISyncBag()
+    endif
 endfunction
 
 function BackpackEnterItemFunction takes nothing returns nothing
@@ -9680,7 +9677,7 @@ function AiPlayersUISyncData takes player whichPlayer returns nothing
     // wait for sync is done
     loop
         exitwhen (AiPlayersUISyncDone[playerId])
-        call TriggerSleepAction(1.0)
+        call TriggerSleepAction(5.0)
         //call BJDebugMsg("Polling")
     endloop
     set AiPlayersUISyncDone[playerId] = false
