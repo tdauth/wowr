@@ -189,7 +189,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -clear, -discord, -revive, -sel, -host, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
+    return "-h/-help, -c/-clear, -discord, -revive, -sel, -host, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -pingaistarts, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns integer
@@ -810,7 +810,7 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
         exitwhen(I1 == bj_MAX_INVENTORY)
         exitwhen (whichItem == null)
         set slotItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
-        if (slotItem == null or (GetItemCharges(slotItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
+        if (slotItem == null or (GetItemCharges(whichItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
             call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(udg_RucksackPageNumber[playerId] + 1) + " ."))
             call UnitAddItem(udg_Rucksack[playerId], whichItem)
             set whichItem = null
@@ -996,29 +996,31 @@ function OrderBackpack takes player whichPlayer returns nothing
             set index1 = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             if (udg_RucksackItemType[index1] != 0) then
                 set charges = udg_RucksackItemCharges[index1]
-                set maxCharges = GetMaxStacksByItemTypeId(udg_RucksackItemType[index1])
-                if (charges < maxCharges) then
-                    set k = i
-                    loop
-                        exitwhen (k == udg_RucksackMaxPages or charges >= maxCharges)
-                        set l = j
+                if (charges > 0) then
+                    set maxCharges = GetMaxStacksByItemTypeId(udg_RucksackItemType[index1])
+                    if (charges < maxCharges) then
+                        set k = i
                         loop
-                            exitwhen (l == bj_MAX_INVENTORY or charges >= maxCharges)
-                            set index2 = Index3D(GetPlayerId(whichPlayer), k, l, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-                            if (udg_RucksackItemType[index2] == udg_RucksackItemType[index2]) then
-                                set stackedCharges = IMinBJ(udg_RucksackItemCharges[index2], maxCharges - charges)
-                                set charges = charges + stackedCharges
+                            exitwhen (k == udg_RucksackMaxPages or charges >= maxCharges)
+                            set l = j
+                            loop
+                                exitwhen (l == bj_MAX_INVENTORY or charges >= maxCharges)
+                                set index2 = Index3D(GetPlayerId(whichPlayer), k, l, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+                                if (udg_RucksackItemType[index2] == udg_RucksackItemType[index2]) then
+                                    set stackedCharges = IMinBJ(udg_RucksackItemCharges[index2], maxCharges - charges)
+                                    set charges = charges + stackedCharges
 
-                                if (stackedCharges == udg_RucksackItemCharges[index2]) then
-                                    call ClearRucksackItem(index2)
-                                else
-                                    set udg_RucksackItemCharges[index2] = udg_RucksackItemCharges[index2] - stackedCharges
+                                    if (stackedCharges == udg_RucksackItemCharges[index2]) then
+                                        call ClearRucksackItem(index2)
+                                    else
+                                        set udg_RucksackItemCharges[index2] = udg_RucksackItemCharges[index2] - stackedCharges
+                                    endif
                                 endif
-                            endif
-                            set l = l + 1
+                                set l = l + 1
+                            endloop
+                            set k = k + 1
                         endloop
-                        set k = k + 1
-                    endloop
+                    endif
                 endif
                 set udg_RucksackItemCharges[index1] = charges
             endif
@@ -17624,7 +17626,7 @@ endglobals
 
 function ActionFunctionPickupItem takes nothing returns nothing
     if (CanItemBePickedUp(GetEnumItem(), pickedupItemsPlayer) and AddItemToBackpackForPlayer(GetPlayerId(pickedupItemsPlayer), GetEnumItem())) then
-        set pickedupItemsCounter= pickedupItemsCounter + 1
+        set pickedupItemsCounter = pickedupItemsCounter + 1
     endif
 endfunction
 
@@ -17634,7 +17636,11 @@ function PickupAllItemsAround takes unit hero returns integer
     set pickedupItemsCounter = 0
     set pickedupItemsPlayer = GetOwningPlayer(hero)
     call EnumItemsInRect(tmpRect, null, function ActionFunctionPickupItem)
-    call DisplayTextToPlayer(GetOwningPlayer(hero), 0, 0,  "Picked up " + I2S(pickedupItemsCounter) + " items.")
+    if (pickedupItemsCounter == 1) then
+        call DisplayTextToPlayer(GetOwningPlayer(hero), 0, 0,  "Picked up 1 item.")
+    else
+        call DisplayTextToPlayer(GetOwningPlayer(hero), 0, 0,  "Picked up " + I2S(pickedupItemsCounter) + " items.")
+    endif
     call RemoveRect(tmpRect)
     set tmpRect = null
     call RemoveLocation(tmpLocation)
