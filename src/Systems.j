@@ -17165,15 +17165,15 @@ function ClearAllRecipesForPage takes unit whichUnit, integer page, integer reci
     local integer i = 0
     local group whichGroup = GetItemCraftingUnitGroup(whichUnit)
     local integer j = 0
-    call BJDebugMsg("Clearing all recipes for page " + I2S(page) + " for unit " + GetUnitName(whichUnit) + " at page " + I2S(page) + " with " + I2S(recipesPerPage) + " recipes per page and group size " + I2S(BlzGroupGetSize(whichGroup)))
+    //call BJDebugMsg("Clearing all recipes for page " + I2S(page) + " for unit " + GetUnitName(whichUnit) + " at page " + I2S(page) + " with " + I2S(recipesPerPage) + " recipes per page and group size " + I2S(BlzGroupGetSize(whichGroup)))
     //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
     loop
         exitwhen (i == recipesPerPage or recipe >= counter)
-        call BJDebugMsg("Recipe " + I2S(recipe) + " and index " + I2S(i) + " with total recipes " + I2S(counter))
+        //call BJDebugMsg("Recipe " + I2S(recipe) + " and index " + I2S(i) + " with total recipes " + I2S(counter))
         set j = 0
         loop
             exitwhen (j >= BlzGroupGetSize(whichGroup))
-            call BJDebugMsg("Unit with index " + I2S(j))
+            //call BJDebugMsg("Unit with index " + I2S(j))
             if (recipesUIItemTypeIds[recipe] != 0) then
                 //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[i]) + " from unit " + GetUnitName(BlzGroupUnitAt(whichGroup, j)))
                 call RemoveItemFromStock(BlzGroupUnitAt(whichGroup, j), recipesUIItemTypeIds[recipe])
@@ -17197,17 +17197,17 @@ function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, 
     local integer j = 0
     local unit groupUnit = null
     call ClearAllRecipesForPage(whichUnit, page, recipesPerPage)
-    call BJDebugMsg("Checking " + I2S(counter) + " recipes for unit " + GetUnitName(whichUnit) + " at page " + I2S(page) + " with " + I2S(recipesPerPage) + " recipes per page.")
+    //call BJDebugMsg("Checking " + I2S(counter) + " recipes for unit " + GetUnitName(whichUnit) + " at page " + I2S(page) + " with " + I2S(recipesPerPage) + " recipes per page.")
     loop
         exitwhen (i == recipesPerPage or recipe >= counter)
         set requirementCheckCounter = CheckRecipeRequirements(recipe, whichUnit)
-        call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter) + " and group size " + I2S(BlzGroupGetSize(whichGroup)))
+        //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter) + " and group size " + I2S(BlzGroupGetSize(whichGroup)))
         set j = 0
         loop
             exitwhen (j >= BlzGroupGetSize(whichGroup))
             set groupUnit = BlzGroupUnitAt(whichGroup, j)
             if (IsItemCraftingRecipeEnabled(groupUnit, i)) then
-                call BJDebugMsg("Item crafting is enabled." )
+                //call BJDebugMsg("Item crafting is enabled." )
                 if (requirementCheckCounter > 0) then
                     set result = result + 1
                     if (recipesUIItemTypeIds[recipe] != 0) then
@@ -17222,8 +17222,8 @@ function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, 
                         call AddItemToStock(groupUnit, recipesUIItemTypeIds[recipe], 0, 1)
                     endif
                 endif
-            else
-                call BJDebugMsg("Item crafting is disabled." )
+            //else
+                //call BJDebugMsg("Item crafting is disabled." )
             endif
             set groupUnit = null
             set j = j + 1
@@ -17373,7 +17373,7 @@ endif
     call GroupAddUnit(whichGroup, whichUnit)
     call GroupAddUnit(itemCraftingUnits, whichUnit)
     call SetItemCraftingUnitGroup(whichUnit, whichGroup)
-    call BJDebugMsg("Enable crafting for unit " + GetUnitName(whichUnit))
+    //call BJDebugMsg("Enable crafting for unit " + GetUnitName(whichUnit))
 static if (ENABLE_PAGING) then
     call CheckAllRecipesRequirementsForPage(whichUnit, page, MAX_RECIPES_PER_PAGE)
 else
