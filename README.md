@@ -644,3 +644,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Deolrin: [Jungle Troll - Altar of Blood](https://www.hiveworkshop.com/threads/jungle-troll-altar-of-blood.126964/)
 * Ujimasa Hojo: [Shipyard (Undead) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-undead-and-derivatives.225668/)
 * The Panda: [BTNWindOrb](https://www.hiveworkshop.com/threads/btnwindorb.308033/)
+* warhog: [BTNLantern](https://www.hiveworkshop.com/threads/btnlantern.176526/)

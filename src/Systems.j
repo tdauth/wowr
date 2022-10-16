@@ -803,6 +803,7 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
     local integer I0 = 0
     local integer I1 = 0
     local integer index = 0
+    local integer itemRespawn = -1
     local item slotItem = null
     // try to add it to the inventory first
     set I0 = 0
@@ -833,16 +834,24 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
             if (udg_RucksackItemType[index] == 0) then
                 call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
                 call SetRucksackItemFromItem(whichItem, index)
+                set itemRespawn = GetItemRespawnIndex(whichItem)
                 call RemoveItem(whichItem)
                 set whichItem = null
+                if (itemRespawn != -1) then
+                    call StartItemRespawn(itemRespawn)
+                endif
 
                 return true
             // stack
             elseif (GetItemCharges(whichItem) > 0 and GetItemTypeId(whichItem) == udg_RucksackItemType[index] and GetMaxStacksByItemTypeId(udg_RucksackItemType[index]) >= udg_RucksackItemCharges[index] + GetItemCharges(whichItem)) then
                 call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
                 set udg_RucksackItemCharges[index] = udg_RucksackItemCharges[index] + GetItemCharges(whichItem)
+                set itemRespawn = GetItemRespawnIndex(whichItem)
                 call RemoveItem(whichItem)
                 set whichItem = null
+                if (itemRespawn != -1) then
+                    call StartItemRespawn(itemRespawn)
+                endif
 
                 return true
             endif
@@ -3721,7 +3730,8 @@ endfunction
 library SaveCodeSystem requires WoWReforgedUtils
 
 globals
-    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#\"nx'+wG|?s`E1$;.0gW" // ASCII without space, \ and ~. The character \ caused issues and was duplicated by Warcraft.
+    // ASCII without space, \ and ~. The character \ caused issues and was duplicated by Warcraft:
+    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#\"nx'+wG|?s`E1$;.0gW"
     constant string SAVE_CODE_SEGMENT_SEPARATOR = "~" // must not be part of SAVE_CODE_DIGITS
     constant string SAVE_CODE_SYMBOL_UNKNOWN = "~" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
@@ -17184,16 +17194,17 @@ function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, 
     local integer j = 0
     local unit groupUnit = null
     call ClearAllRecipesForPage(whichUnit, page, recipesPerPage)
-    //call BJDebugMsg("Checking " + I2S(counter) + " recipes.")
+    call BJDebugMsg("Checking " + I2S(counter) + " recipes for unit " + GetUnitName(whichUnit) + " at page " + I2S(page) + " with " + I2S(recipesPerPage) + " recipes per page.")
     loop
         exitwhen (i == recipesPerPage and recipe >= counter)
         set requirementCheckCounter = CheckRecipeRequirements(recipe, whichUnit)
+        call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter) + " and group size " + I2S(BlzGroupGetSize(whichGroup)))
         set j = 0
         loop
             exitwhen (j >= BlzGroupGetSize(whichGroup))
-            //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter))
             set groupUnit = BlzGroupUnitAt(whichGroup, j)
             if (IsItemCraftingRecipeEnabled(groupUnit, i)) then
+                call BJDebugMsg("Item crafting is enabled." )
                 if (requirementCheckCounter > 0) then
                     set result = result + 1
                     if (recipesUIItemTypeIds[recipe] != 0) then
@@ -17208,6 +17219,8 @@ function CheckAllRecipesRequirementsForPage takes unit whichUnit, integer page, 
                         call AddItemToStock(groupUnit, recipesUIItemTypeIds[recipe], 0, 1)
                     endif
                 endif
+            else
+                call BJDebugMsg("Item crafting is disabled." )
             endif
             set groupUnit = null
             set j = j + 1
