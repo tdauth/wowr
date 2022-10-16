@@ -643,3 +643,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Cavman: [Forest Troll Female](https://www.hiveworkshop.com/threads/forest-troll-female.104295/)
 * Deolrin: [Jungle Troll - Altar of Blood](https://www.hiveworkshop.com/threads/jungle-troll-altar-of-blood.126964/)
 * Ujimasa Hojo: [Shipyard (Undead) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-undead-and-derivatives.225668/)
+* The Panda: [BTNWindOrb](https://www.hiveworkshop.com/threads/btnwindorb.308033/)

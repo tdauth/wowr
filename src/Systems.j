@@ -3721,7 +3721,7 @@ endfunction
 library SaveCodeSystem requires WoWReforgedUtils
 
 globals
-    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#\"nx'+wG|?s\\`E1$;.0gW" // ASCII without space and ~
+    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#\"nx'+wG|?s`E1$;.0gW" // ASCII without space, \ and ~. The character \ caused issues and was duplicated by Warcraft.
     constant string SAVE_CODE_SEGMENT_SEPARATOR = "~" // must not be part of SAVE_CODE_DIGITS
     constant string SAVE_CODE_SYMBOL_UNKNOWN = "~" // must not be part of SAVE_CODE_DIGITS
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
@@ -9795,8 +9795,6 @@ function ChooseRandomHeroFromRace takes integer whichRace returns integer
      elseif (whichRace == udg_RaceNightElf) then
         set random = GetRandomInt(0, 1)
         if (random == 0) then
-            return GetRandomInt(0, 1)
-        elseif (random == 1) then
             return GetRandomInt(12, 15)
         else
             return udg_HeroUnitTypeMountainGiant
