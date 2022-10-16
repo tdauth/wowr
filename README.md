@@ -645,3 +645,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ujimasa Hojo: [Shipyard (Undead) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-undead-and-derivatives.225668/)
 * The Panda: [BTNWindOrb](https://www.hiveworkshop.com/threads/btnwindorb.308033/)
 * warhog: [BTNLantern](https://www.hiveworkshop.com/threads/btnlantern.176526/)
+* Cynon_Ironsmith: [BTNEyeOfDalaran](https://www.hiveworkshop.com/threads/btneyeofdalaran.56242/)
+* Ujimasa Hojo: [Granary and Derivatives](https://www.hiveworkshop.com/threads/granary-and-derivatives.287993/)
+* Sin'dorei300: [Blood Elf Villager](https://www.hiveworkshop.com/threads/blood-elf-villager.266684/)
+* Sin'dorei300: [Night Elf Villager](https://www.hiveworkshop.com/threads/night-elf-villager.266203/)
