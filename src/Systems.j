@@ -3750,8 +3750,21 @@ function CheckStringForDuplicatedCharacters takes string source returns nothing
     endif
 endfunction
 
+function CheckStringForNonAsciiCharacters takes string source returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == StringLength(source))
+        call Char2Ascii(SubString(source, i, i + 1))
+        set i = i + 1
+    endloop
+endfunction
+
 function CheckSaveCodeDigitsUnique takes nothing returns nothing
     call CheckStringForDuplicatedCharacters(SAVE_CODE_DIGITS)
+endfunction
+
+function CheckSaveCodeDigitsAscii takes nothing returns nothing
+    call CheckStringForNonAsciiCharacters(SAVE_CODE_DIGITS)
 endfunction
 
 // Returns the base for the custom number system.
@@ -3997,6 +4010,7 @@ function AbsStringHash takes string whichString returns integer
     return IAbsBJ(StringHash(whichString))
 endfunction
 
+// If the string hash value is too big, the savecodes get too long.
 function CompressedAbsStringHash takes string whichString returns integer
     local integer absStringHash = AbsStringHash(whichString)
     if (SAVE_CODE_COMPRESS_STRING_HASHS) then
@@ -4532,6 +4546,9 @@ function GetSaveCodeEx takes player whichPlayer, string playerName, boolean isSi
 endfunction
 
 globals
+    constant integer DEMIGOD_LIGHT                                   = 'H003'
+    constant integer DEMIGOD_DARK                                    = 'H002'
+
     constant integer UPG_EVOLUTION                                   = 'R00U'
     constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
 	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
@@ -4545,9 +4562,9 @@ endglobals
 
 function GetSaveCodeDemigodValue takes player whichPlayer returns integer
     local integer unitTypeId = GetUnitTypeId(udg_Held[GetConvertedPlayerId(whichPlayer)])
-    if (unitTypeId == 'H003') then
+    if (unitTypeId == DEMIGOD_LIGHT) then
         return 1
-    elseif (unitTypeId == 'H002') then
+    elseif (unitTypeId == DEMIGOD_DARK) then
         return 2
     elseif (GetPlayerTechCountSimple(UPG_DEMIGOD, whichPlayer) > 0) then
         return 3
