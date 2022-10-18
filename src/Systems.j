@@ -1010,8 +1010,12 @@ function OrderBackpack takes player whichPlayer returns nothing
                     if (charges < maxCharges) then
                         set k = i
                         loop
-                            exitwhen (k == udg_RucksackMaxPages or charges >= maxCharges)
-                            set l = j
+                            exitwhen (k >= udg_RucksackMaxPages or charges >= maxCharges)
+                            if (k == i) then
+                                set l = j
+                            else
+                                set l = 0
+                            endif
                             loop
                                 exitwhen (l == bj_MAX_INVENTORY or charges >= maxCharges)
                                 set index2 = Index3D(GetPlayerId(whichPlayer), k, l, udg_RucksackMaxPages, bj_MAX_INVENTORY)
