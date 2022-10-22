@@ -16894,6 +16894,8 @@ function DisplayStats takes player to, player from returns nothing
     local integer buildingsRazed = udg_BuildingsRazed[convertedPlayerId]
     local integer bossesKilled = udg_BossKills[convertedPlayerId]
     local integer bossesMax = BlzGroupGetSize(udg_Bosses)
+    local string race1 = udg_RaceName[udg_PlayerRace[convertedPlayerId]]
+    local string race2 = udg_RaceName[udg_PlayerRace2[convertedPlayerId]]
     local string profession1 = udg_ProfessionName[udg_PlayerProfession[convertedPlayerId]]
     local string profession2 = udg_ProfessionName[udg_PlayerProfession2[convertedPlayerId]]
     local integer gold = GetPlayerState(from, PLAYER_STATE_RESOURCE_GOLD)
@@ -16917,13 +16919,19 @@ function DisplayStats takes player to, player from returns nothing
         set heroName3 = "-"
         set heroLevel3 = "-"
     endif
+    if (udg_PlayerRace[convertedPlayerId] == udg_RaceNone) then
+        set race1 = "-"
+    endif
+    if (udg_PlayerRace2[convertedPlayerId] == udg_RaceNone) then
+        set race2 = "-"
+    endif
     if (udg_PlayerProfession[convertedPlayerId] == udg_ProfessionNone) then
         set profession1 = "-"
     endif
     if (udg_PlayerProfession2[convertedPlayerId] == udg_ProfessionNone) then
         set profession2 = "-"
     endif
-    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Heroes: " + heroName1 + "(" + heroLevel1 + ")/" + heroName2 + " (" + heroLevel2 + ")" + "/" + heroName3 + " (" + heroLevel3 + ")" + "\n- Hero kills: " + I2S(heroKills) + "\n- Hero deaths: " + I2S(heroDeaths) + "\n- Unit kills: " + I2S(unitKills) + "\n- Units lost: " + I2S(unitsLost) + "\n- Buildings razed: " + I2S(buildingsRazed)  + "\n- Bosses killed: " + I2S(bossesKilled) + "/" + I2S(bossesMax) + "\n- Profession 1: " + profession1  + "\n- Profession 2: " + profession2 + "\n- Gold: " + I2S(gold) + "\n- Lumber: " + I2S(lumber) + "\n- Food: " + I2S(foodUsed) + "/" + I2S(foodMax) + "\n- Evolution: " + I2S(evolutionLevel) + "\n- Improved Power Generator: " + I2S(powerGeneratorLevel) + "\n- Hand of God: " + I2S(handOfGodLevel) + "\n- Improved Mount: " + I2S(mountLevel) + "\n- Improved Masonry: " + I2S(masonryLevel))
+    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Heroes: " + heroName1 + "(" + heroLevel1 + ")/" + heroName2 + " (" + heroLevel2 + ")" + "/" + heroName3 + " (" + heroLevel3 + ")" + "\n- HK " + I2S(heroKills) + "/HD " + I2S(heroDeaths) + "/UK " + I2S(unitKills) + "/UL " + I2S(unitsLost) + "/R " + I2S(buildingsRazed) + "/BK " + I2S(bossesKilled) + "/" + I2S(bossesMax) + "\n- Races: " + race1  + "/" + race2 + "\n- Professions: " + profession1  + "/" + profession2 + "\n- G: " + I2S(gold) + "/L: " + I2S(lumber) + "/F: " + I2S(foodUsed) + "/" + I2S(foodMax) + "\n- Evolution: " + I2S(evolutionLevel) + "\n- Improved Power Generator: " + I2S(powerGeneratorLevel) + "\n- Hand of God: " + I2S(handOfGodLevel) + "\n- Improved Mount: " + I2S(mountLevel) + "\n- Improved Masonry: " + I2S(masonryLevel))
 endfunction
 
 // Add all prestored savecodes into this function
