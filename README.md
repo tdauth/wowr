@@ -649,3 +649,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ujimasa Hojo: [Granary and Derivatives](https://www.hiveworkshop.com/threads/granary-and-derivatives.287993/)
 * Sin'dorei300: [Blood Elf Villager](https://www.hiveworkshop.com/threads/blood-elf-villager.266684/)
 * Sin'dorei300: [Night Elf Villager](https://www.hiveworkshop.com/threads/night-elf-villager.266203/)
+* General Frank: [Chaos: Altar of Terror](https://www.hiveworkshop.com/threads/chaos-altar-of-terror.48265/)
+* Vinz: [Cosmic Elven Wings](https://www.hiveworkshop.com/threads/cosmic-elven-wings.315167/)
+* Paladon: [BTNPAngelWings](https://www.hiveworkshop.com/threads/btnpangelwings.139269/)
