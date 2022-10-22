@@ -1000,6 +1000,7 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
     endloop
 endfunction
 
+// Starts from left to right and tries to stack all items of the same type which can be stacked or move items to empty slots.
 function OrderBackpack takes player whichPlayer returns nothing
     local integer index1 = 0
     local integer index2 = 0
@@ -1011,6 +1012,7 @@ function OrderBackpack takes player whichPlayer returns nothing
     local integer j = 0
     local integer k = 0
     local integer l = 0
+    local boolean done = false
     loop
         exitwhen (i == udg_RucksackMaxPages)
         set j = 0
@@ -1019,43 +1021,45 @@ function OrderBackpack takes player whichPlayer returns nothing
             set index1 = Index3D(GetPlayerId(whichPlayer), i, j, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             set itemTypeId = udg_RucksackItemType[index1]
             set charges = udg_RucksackItemCharges[index1]
-            if (charges > 0) then
-                set maxCharges = GetMaxStacksByItemTypeId(udg_RucksackItemType[index1])
-                if (charges < maxCharges) then
-                    set k = i
-                    loop
-                        exitwhen (k >= udg_RucksackMaxPages or charges >= maxCharges)
-                        if (k == i) then
-                            set l = j
-                        else
-                            set l = 0
-                        endif
-                        loop
-                            exitwhen (l == bj_MAX_INVENTORY or charges >= maxCharges)
-                            set index2 = Index3D(GetPlayerId(whichPlayer), k, l, udg_RucksackMaxPages, bj_MAX_INVENTORY)
-                            if (itemTypeId != 0 and udg_RucksackItemType[index2] == udg_RucksackItemType[index2]) then
-                                set stackedCharges = IMinBJ(udg_RucksackItemCharges[index2], maxCharges - charges)
-                                set charges = charges + stackedCharges
-
-                                if (stackedCharges == udg_RucksackItemCharges[index2]) then
-                                    call ClearRucksackItem(index2)
-                                else
-                                    set udg_RucksackItemCharges[index2] = udg_RucksackItemCharges[index2] - stackedCharges
-                                endif
-                            elseif (itemTypeId == 0) then
-                                set itemTypeId = udg_RucksackItemType[index2]
-                                set charges = udg_RucksackItemCharges[index2]
-
-                                call SetRucksackItemFromIndex(index1, index2)
-                                call ClearRucksackItem(index2)
-                            endif
-                            set l = l + 1
-                        endloop
-                        set k = k + 1
-                    endloop
+            set maxCharges = GetMaxStacksByItemTypeId(udg_RucksackItemType[index1])
+            set done = false
+            set k = i
+            loop
+                exitwhen (k >= udg_RucksackMaxPages or done)
+                if (k == i) then
+                    set l = j + 1
+                else
+                    set l = 0
                 endif
-            endif
-            set udg_RucksackItemCharges[index1] = charges
+                loop
+                    exitwhen (l >= bj_MAX_INVENTORY or done)
+                    set index2 = Index3D(GetPlayerId(whichPlayer), k, l, udg_RucksackMaxPages, bj_MAX_INVENTORY)
+                    if (itemTypeId != 0 and udg_RucksackItemType[index2] == udg_RucksackItemType[index2] and charges > 0) then
+                        set stackedCharges = IMinBJ(udg_RucksackItemCharges[index2], maxCharges - charges)
+                        set charges = charges + stackedCharges
+                        set udg_RucksackItemCharges[index1] = charges
+
+                        if (stackedCharges == udg_RucksackItemCharges[index2]) then
+                            call ClearRucksackItem(index2)
+                        else
+                            set udg_RucksackItemCharges[index2] = udg_RucksackItemCharges[index2] - stackedCharges
+                        endif
+
+                        set done = charges >= maxCharges
+                    // move the item to this empty slot
+                    elseif (itemTypeId == 0) then
+                        set itemTypeId = udg_RucksackItemType[index2]
+                        set charges = udg_RucksackItemCharges[index2]
+
+                        call SetRucksackItemFromIndex(index1, index2)
+                        call ClearRucksackItem(index2)
+
+                        set done = true
+                    endif
+                    set l = l + 1
+                endloop
+                set k = k + 1
+            endloop
             set j = j + 1
         endloop
         set i = i + 1
