@@ -655,3 +655,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * icewolf055, MiniMage: [SandElemental](https://www.hiveworkshop.com/threads/sandelemental.244919/)
 * exN: [BTNSand](https://www.hiveworkshop.com/threads/btnsand.55669/)
 * Ujimasa Hojo: [Sacrificial Altar and Derivarives](https://www.hiveworkshop.com/threads/sacrificial-altar-and-derivarives.248050/)
+* Wandering Soul: [Pikeman](https://www.hiveworkshop.com/threads/pikeman.221645/)
+* Kitabatake: [Fire Mage](https://www.hiveworkshop.com/threads/fire-mage.165394/)
+* acolyteofdoom: [HeroArchMage](https://www.hiveworkshop.com/threads/heroarchmage.49732/)
