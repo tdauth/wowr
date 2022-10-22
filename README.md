@@ -652,3 +652,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [Chaos: Altar of Terror](https://www.hiveworkshop.com/threads/chaos-altar-of-terror.48265/)
 * Vinz: [Cosmic Elven Wings](https://www.hiveworkshop.com/threads/cosmic-elven-wings.315167/)
 * Paladon: [BTNPAngelWings](https://www.hiveworkshop.com/threads/btnpangelwings.139269/)
+* icewolf055, MiniMage: [SandElemental](https://www.hiveworkshop.com/threads/sandelemental.244919/)
+* exN: [BTNSand](https://www.hiveworkshop.com/threads/btnsand.55669/)
+* Ujimasa Hojo: [Sacrificial Altar and Derivarives](https://www.hiveworkshop.com/threads/sacrificial-altar-and-derivarives.248050/)
