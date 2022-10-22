@@ -185,6 +185,9 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
     call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL_REAVER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_VOID_REAVER )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_FEL_REAVER )
 	call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -201,6 +204,9 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 3, 3, 3, DEMON_EREDAR_SORCERER )
         call CampaignAttackerEx( 3, 3, 3, DEMON_SUCCUBUS )
         call CampaignAttackerEx( 3, 3, 3, DEMON_INFERNAL )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_INFERNAL_REAVER )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_VOID_REAVER )
+        call CampaignAttackerEx( 3, 3, 3, DEMON_FEL_REAVER )
         
         // big air army
         call CampaignAttackerEx( 15, 20, 25, DEMON_NETHER_DRAKE )

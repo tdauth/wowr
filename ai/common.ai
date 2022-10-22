@@ -857,6 +857,9 @@ globals
 	constant integer DEMON_EREDAR_SORCERER                           = 'n014' // necromancer
 	constant integer DEMON_SUCCUBUS                                  = 'n015' // banshee
 	constant integer DEMON_INFERNAL                                  = 'n012' // frost wyrm/tauren
+	constant integer DEMON_INFERNAL_REAVER                           = 'n07R'
+	constant integer DEMON_VOID_REAVER                               = 'n07S'
+	constant integer DEMON_FEL_REAVER                                = 'n07Q'
 
 	constant integer UPG_DEMON_UNHOLY_STR                            = 'R00H'
 	constant integer UPG_DEMON_UNHOLY_ARMOR                          = 'R00R'
