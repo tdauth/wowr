@@ -669,3 +669,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Vexorian: [SimError](http://www.wc3c.net/showthread.php?t=101260)
 * Henry_AC: [BTNPowerGenerator with different colors](https://www.hiveworkshop.com/threads/btnpowergenerator-with-different-colors.342387/)
 * JollyD: [BTNLightingElemental](https://www.hiveworkshop.com/threads/btnlightingelemental.220839/)
+* BoatyMcBoatface300: [Villager Kazotsky Kick Dance](https://www.hiveworkshop.com/threads/villager-kazotsky-kick-dance.326330/)
