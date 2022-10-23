@@ -808,11 +808,11 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
     // try to add it to the inventory first
     set I0 = 0
     loop
-        exitwhen(I1 == bj_MAX_INVENTORY)
+        exitwhen(I0 == bj_MAX_INVENTORY)
         exitwhen (whichItem == null)
         set slotItem = UnitItemInSlot(udg_Rucksack[playerId], I0)
         if (slotItem == null or (GetItemCharges(whichItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
-            call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(udg_RucksackPageNumber[playerId] + 1) + " ."))
+            call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(udg_RucksackPageNumber[playerId] + 1) + " by stacking it to slot " + I2S(I0 + 1) + "."))
             call UnitAddItem(udg_Rucksack[playerId], whichItem)
             set whichItem = null
             return true
@@ -832,7 +832,7 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
             set index = Index3D(playerId, I0, I1, udg_RucksackMaxPages, bj_MAX_INVENTORY)
             // empty slot
             if (udg_RucksackItemType[index] == 0) then
-                call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
+                call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " to empty slot " + I2S(I1 + 1) + "."))
                 call SetRucksackItemFromItem(whichItem, index)
                 set itemRespawn = GetItemRespawnIndex(whichItem)
                 call RemoveItem(whichItem)
@@ -844,7 +844,7 @@ function AddItemToBackpackForPlayer takes integer playerId, item whichItem retur
                 return true
             // stack
             elseif (GetItemCharges(whichItem) > 0 and GetItemTypeId(whichItem) == udg_RucksackItemType[index] and GetMaxStacksByItemTypeId(udg_RucksackItemType[index]) >= udg_RucksackItemCharges[index] + GetItemCharges(whichItem)) then
-                call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " ."))
+                call DisplayTimedTextToPlayer(Player(playerId), 0.00, 0.00, 4.00, ("Added " + GetItemName(whichItem) + " to backpack bag " + I2S(I0 + 1) + " by stacking it to slot " + I2S(I1 + 1) + "."))
                 set udg_RucksackItemCharges[index] = udg_RucksackItemCharges[index] + GetItemCharges(whichItem)
                 set itemRespawn = GetItemRespawnIndex(whichItem)
                 call RemoveItem(whichItem)

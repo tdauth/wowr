@@ -670,3 +670,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Henry_AC: [BTNPowerGenerator with different colors](https://www.hiveworkshop.com/threads/btnpowergenerator-with-different-colors.342387/)
 * JollyD: [BTNLightingElemental](https://www.hiveworkshop.com/threads/btnlightingelemental.220839/)
 * BoatyMcBoatface300: [Villager Kazotsky Kick Dance](https://www.hiveworkshop.com/threads/villager-kazotsky-kick-dance.326330/)
+* -Grendel: [Void Walker](https://www.hiveworkshop.com/threads/void-walker.270358/)
+* Vinz: [Void Rain](https://www.hiveworkshop.com/threads/void-rain.316011/)
+* Vinz: [Void Disc](https://www.hiveworkshop.com/threads/void-disc.315937/)
+* Eldin HawkWing: [BTNArcaneVoid](https://www.hiveworkshop.com/threads/btnarcanevoid.277879/)
