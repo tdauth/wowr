@@ -162,19 +162,6 @@ function StringTokenEnteredChatMessage takes integer index returns string
     return StringToken(GetEventPlayerChatString(), index)
 endfunction
 
-function SimError takes player whichPlayer, string msg returns nothing
-    local sound error = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
-    if (GetLocalPlayer() == whichPlayer) then
-        if (msg != "" and  msg != null) then
-            call ClearTextMessages()
-            call DisplayTimedTextToPlayer(whichPlayer, 0.52, - 1.00, 2.00, "|cffffcc00" + msg + "|r")
-        endif
-        call StartSound(error)
-    endif
-    call KillSoundWhenDone(error)
-    set error = null
-endfunction
-
 function PlayerIsOnlineUser takes integer playerId returns boolean
     local player whichPlayer = Player(playerId)
     local boolean result = GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING

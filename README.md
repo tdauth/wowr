@@ -665,3 +665,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * icewolf055: [Poison Elemental](https://www.hiveworkshop.com/threads/poison-elemental.310391/)
 * jigrael: [BTNLightingElemental](https://www.hiveworkshop.com/threads/btnlightingelemental.107240/)
 * Darkfang: [Elemental Convergence](https://www.hiveworkshop.com/threads/elemental-convergence.337666/)
+* Ujimasa Hojo: [Gold Mine and Derivatives](https://www.hiveworkshop.com/threads/gold-mine-and-derivatives.245385/)
+* Vexorian: [SimError](http://www.wc3c.net/showthread.php?t=101260)
+* Henry_AC: [BTNPowerGenerator with different colors](https://www.hiveworkshop.com/threads/btnpowergenerator-with-different-colors.342387/)
+* JollyD: [BTNLightingElemental](https://www.hiveworkshop.com/threads/btnlightingelemental.220839/)
