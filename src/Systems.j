@@ -1603,7 +1603,7 @@ function IsRespawnItemValid takes integer index returns boolean
 endfunction
 
 function RespawnItem takes integer index returns boolean
-    if (not IsRespawnItemValid(index)) then
+    if (not IsRespawnItemValid(index) or respawnItemItem[index] != null) then
         return false
     endif
     if (respawnItemType[index] == ITEM_RESPAWN_TYPE_ITEM) then
