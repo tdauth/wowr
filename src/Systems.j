@@ -15311,13 +15311,18 @@ endfunction
 
 
 // Baradé's Mount System
+library WoWReforgedMountSystem
 
 globals
     hashtable MountHashTable = InitHashtable()
 endglobals
 
 function MountGet takes unit hero returns unit
-    return LoadUnitHandle(MountHashTable, GetHandleId(hero), 0)
+    if (HaveSavedHandle(MountHashTable, GetHandleId(hero), 0)) then
+        return LoadUnitHandle(MountHashTable, GetHandleId(hero), 0)
+    endif
+
+    return null
 endfunction
 
 function MountClear takes unit hero returns nothing
@@ -15331,6 +15336,18 @@ function MountKill takes unit hero returns nothing
     endif
     set mount = null
     call MountClear(hero)
+endfunction
+
+function MountKill1 takes player whichPlayer returns nothing
+    call MountKill(udg_Hero[GetPlayerId(whichPlayer)])
+endfunction
+
+function MountKill2 takes player whichPlayer returns nothing
+    call MountKill(udg_Hero2[GetPlayerId(whichPlayer)])
+endfunction
+
+function MountKill3 takes player whichPlayer returns nothing
+    call MountKill(udg_Hero3[GetPlayerId(whichPlayer)])
 endfunction
 
 function MountReplace takes unit hero, unit mount returns nothing
@@ -15388,6 +15405,8 @@ function MountClearAll takes player whichPlayer returns nothing
         call MountClear(udg_Hero[playerId])
     endif
 endfunction
+
+endlibrary
 
 // Barade's Pickpocketing System
 

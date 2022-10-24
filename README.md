@@ -248,6 +248,7 @@ All systems are put into one file to make it searchable.
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
+The map contains the modified [common.ai](./ai/common.ai) which is used by all custom AI scripts.
 
 ### Warlords
 
