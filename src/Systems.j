@@ -3,6 +3,11 @@
 
 library WoWReforgedUtils initializer Init
 
+globals
+     constant integer BACK_PACK = 'E008'
+     constant integer EQUIPMENT_BAG = 'E00R'
+endglobals
+
 function Index2D takes integer Value1, integer Value2, integer MaxValue2 returns integer
     return ((Value1 * MaxValue2) + Value2)
 endfunction
@@ -1297,7 +1302,7 @@ function RefreshRucksackForPlayer takes integer playerId returns nothing
 endfunction
 
 function SetupCustomRucksackSystem takes nothing returns nothing
-    set	udg_RucksackUnitType = 'E008'
+    set	udg_RucksackUnitType = BACK_PACK
     set udg_RucksackAbility1 = 'A02L'
     set	udg_RucksackAbility2 = 'A02M'
     set	udg_RucksackMaxPages = 30
@@ -4726,7 +4731,7 @@ function CreateEquipmentBags takes player whichPlayer, integer equipmentBags ret
     local integer i = 0
     loop
         exitwhen (i >= equipmentBags or i >= MAX_EQUIPMENT_BAGS)
-        set equipmentBag = CreateUnit(whichPlayer, 'E00R', GetUnitX(udg_Hero[playerId]),  GetUnitY(udg_Hero[playerId]), bj_UNIT_FACING)
+        set equipmentBag = CreateUnit(whichPlayer, EQUIPMENT_BAG, GetUnitX(udg_Hero[playerId]),  GetUnitY(udg_Hero[playerId]), bj_UNIT_FACING)
         call SuspendHeroXPBJ(false, equipmentBag)
         call GroupAddUnit(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], equipmentBag)
         call UnitRemoveAbility(equipmentBag, 'A02N')
@@ -13961,12 +13966,13 @@ hook RemoveUnit TurretSystemRemoveVehicle
 endlibrary
 
 // Equipment Bag System
+library WoWReforgedEquipmentBagSystem
 
 globals
-    hashtable EquipmentBagSystemHashTable = InitHashtable()
-    hashtable EquipmentBagSystemStackingHashTable = InitHashtable()
-    integer array EquipmentBagRegisteredItemTypeIds
-    integer EquipmentBagRegisteredItemTypeIdsCounter = 0
+    private hashtable EquipmentBagSystemHashTable = InitHashtable()
+    private hashtable EquipmentBagSystemStackingHashTable = InitHashtable()
+    private integer array EquipmentBagRegisteredItemTypeIds
+    private integer EquipmentBagRegisteredItemTypeIdsCounter = 0
 endglobals
 
 function EquipmentBagListItemTypeIds takes nothing returns string
@@ -13975,9 +13981,9 @@ function EquipmentBagListItemTypeIds takes nothing returns string
     loop
         exitwhen (i >= EquipmentBagRegisteredItemTypeIdsCounter)
         if (i > 0) then
-            set result = result + "\n"
+            set result = result + ", "
         endif
-        set result = result + "- " + GetObjectName(EquipmentBagRegisteredItemTypeIds[i])
+        set result = result + GetObjectName(EquipmentBagRegisteredItemTypeIds[i])
         set i = i + 1
     endloop
     return result
@@ -14086,13 +14092,19 @@ function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns noth
     set hero = null
 endfunction
 
+endlibrary
+
 // Ability Field System
 // Stores all fields which can be used to apply bonuses to.
 // This is required by the Enchanter profession and for Evolution Stones.
+// Not all field changes work in Reforged:
+// https://www.hiveworkshop.com/threads/blzsetabilityreallevelfield-is-not-working.339882/
+// https://www.hiveworkshop.com/pastebin/b2769ab71109c3634b3115937deaa34a.24187
+library WoWReforgedAbilityFieldSystem
 
 globals
-    hashtable AbilityFieldHashTable = InitHashtable()
-    hashtable AbilityFieldCountersHashTable = InitHashtable()
+    private hashtable AbilityFieldHashTable = InitHashtable()
+    private hashtable AbilityFieldCountersHashTable = InitHashtable()
 
     constant integer ABILITY_FIELD_TYPE_DEFENSE_INTEGER = 0
     constant integer ABILITY_FIELD_TYPE_HERO_STATS_INTEGER = 1
@@ -14103,6 +14115,7 @@ globals
     constant integer ABILITY_FIELD_TYPE_LIFE_REGENRATION_INTEGER = 6
     constant integer ABILITY_FIELD_TYPE_CHANCE_REAL = 7
     constant integer ABILITY_FIELD_TYPE_DEFENSE_REAL = 8
+    constant integer ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER = 9
 endglobals
 
 function RegisterAbilityFieldEx takes integer abilityId, integer fieldId, integer fieldType returns integer
@@ -14134,37 +14147,56 @@ function GetAbilityFieldTypeByFieldId takes integer abilityId, integer fieldId r
     return LoadInteger(AbilityFieldHashTable, abilityId, fieldId)
 endfunction
 
-function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeBonus, real manaBonus, integer lifeRegenerationBonus, real chanceRealBonus, real defenseRealBonus returns nothing
+function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeBonus, real manaBonus, integer lifeRegenerationBonus, real chanceRealBonus, real defenseRealBonus, integer summonedUnitsBonus returns nothing
     local integer max = GetMaxAbilityFields(abilityId)
     local integer fieldType = 0
     local integer fieldId = 0
+    local boolean result = false
     local integer i = 0
     loop
         exitwhen (i >= max)
         set fieldId = GetAbilityFieldId(abilityId, i)
         set fieldType = GetAbilityFieldTypeByFieldId(abilityId, fieldId)
-        if (fieldType == ABILITY_FIELD_TYPE_DEFENSE_INTEGER and defenseBonus > 0) then
-            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + defenseBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_HERO_STATS_INTEGER and heroStatsBonus > 0) then
+        if (fieldType == ABILITY_FIELD_TYPE_DEFENSE_INTEGER) then
+            //call BJDebugMsg("Adding defense bonus to field " + I2S(fieldId) + " of " + I2S(defenseBonus) + " for level " + I2S(level) + " with previous defense " + I2S(BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level)) + " expected field ID " + I2S('Idef'))
+            set result = BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + defenseBonus)
+            //call BJDebugMsg("Current defense of field " + I2S(fieldId) + ": " + I2S(BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level)))
+            //if (result) then
+                //call BJDebugMsg("Result is true.")
+            //else
+                //call BJDebugMsg("Result is false.")
+            //endif
+        elseif (fieldType == ABILITY_FIELD_TYPE_HERO_STATS_INTEGER) then
             call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + heroStatsBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_DURATION_REAL and durationBonus > 0.0) then
+        elseif (fieldType == ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER) then
+            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + summonedUnitsBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_DURATION_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + durationBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_DAMAGE_REAL and damageBonus > 0.0) then
-            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + damageBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REAL and lifeBonus > 0.0) then
+        elseif (fieldType == ABILITY_FIELD_TYPE_DAMAGE_REAL) then
+            //call BJDebugMsg("Adding damage bonus to field " + I2S(fieldId) + " of " + R2S(damageBonus) + " for level " + I2S(level) + " with previous damage " + R2S(BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level)) + " expected field ID " + I2S('Idam'))
+            set result = BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + damageBonus)
+            //call BJDebugMsg("Current damage of field " + I2S(fieldId) + ": " + R2S(BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level)))
+            //if (result) then
+                //call BJDebugMsg("Result is true.")
+            //else
+                //call BJDebugMsg("Result is false.")
+            //endif
+        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + lifeBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_MANA_REAL and manaBonus > 0.0) then
+        elseif (fieldType == ABILITY_FIELD_TYPE_MANA_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + manaBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REGENRATION_INTEGER and lifeRegenerationBonus > 0) then
+        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REGENRATION_INTEGER) then
             call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + lifeRegenerationBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_CHANCE_REAL and chanceRealBonus > 0.0) then
+        elseif (fieldType == ABILITY_FIELD_TYPE_CHANCE_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + chanceRealBonus)
-        elseif (fieldType == ABILITY_FIELD_TYPE_DEFENSE_REAL and defenseRealBonus > 0.0) then
+        elseif (fieldType == ABILITY_FIELD_TYPE_DEFENSE_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + defenseRealBonus)
         endif
         set i = i + 1
     endloop
 endfunction
+
+endlibrary
 
 /*
 
@@ -14179,14 +14211,35 @@ endfunction
 
 */
 
-
-// Enchanter System
+library WoWReforgedEnchanterSystem initializer Init requires WoWReforgedAbilityFieldSystem, WoWReforgedEquipmentBagSystem
 
 globals
-    hashtable EnchanterSystemHashTable = InitHashtable()
+    private hashtable EnchanterSystemHashTable = InitHashtable()
+    private group EnchantedUnits = CreateGroup()
+
     constant integer ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS = 1
     constant integer ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS = 2
     constant integer ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS = 3
+
+    constant integer ENCHANTER_ITEM_TYPE_ID_NOVICE = 'I07F'
+    constant integer ENCHANTER_STAT_BONUS_NOVICE = 1
+    constant integer ENCHANTER_DAMAGE_BONUS_NOVICE = 3
+    constant integer ENCHANTER_HIT_POINTS_BONUS_NOVICE = 50
+    constant integer ENCHANTER_ITEM_TYPE_ID_ADVANCED = 'I07H'
+    constant integer ENCHANTER_STAT_BONUS_ADVANCED = 2
+    constant integer ENCHANTER_DAMAGE_BONUS_ADVANCED = 5
+    constant integer ENCHANTER_HIT_POINTS_BONUS_ADVANCED = 100
+    constant integer ENCHANTER_ITEM_TYPE_ID_ADEPT = 'I07I'
+    constant integer ENCHANTER_STAT_BONUS_ADEPT = 3
+    constant integer ENCHANTER_DAMAGE_BONUS_ADEPT = 7
+    constant integer ENCHANTER_HIT_POINTS_BONUS_ADEPT = 150
+    constant integer ENCHANTER_ITEM_TYPE_ID_MASTER = 'I07J'
+    constant integer ENCHANTER_STAT_BONUS_MASTER = 4
+    constant integer ENCHANTER_DAMAGE_BONUS_MASTER = 9
+    constant integer ENCHANTER_HIT_POINTS_BONUS_MASTER = 200
+
+    private trigger pickupItemTrigger = CreateTrigger()
+    private trigger dropItemTrigger = CreateTrigger()
 endglobals
 
 function EnchanterSystemSaveBonus takes unit hero, integer bonusType, integer bonus returns nothing
@@ -14205,119 +14258,176 @@ function EnchanterSystemLoadBonusReal takes unit hero, integer bonusType returns
     return LoadReal(EnchanterSystemHashTable, GetHandleId(hero), bonusType)
 endfunction
 
-function EnchanterAddItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
-    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-
-    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, bonus, bonus, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0)
-endfunction
-
-function EnchanterRemoveItemBonusHeroStatsAndDefense takes item whichItem, integer abilityId, integer bonus returns nothing
-    call EnchanterAddItemBonusHeroStatsAndDefense(whichItem, abilityId, -bonus)
-endfunction
-
-function EnchanterAddItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
-    local ability whichAbility = BlzGetItemAbility(whichItem, abilityId)
-
-    call AddAbilityFieldBonuses(abilityId, whichAbility, 1, 0, 0, 0.0, bonus, 0.0, 0.0, 0, 0.0, 0.0)
-endfunction
-
-function EnchanterRemoveItemBonusDamage takes item whichItem, integer abilityId, real bonus returns nothing
-    call EnchanterAddItemBonusDamage(whichItem, abilityId, -bonus)
-endfunction
-
-function EnchanterGetHeroStatsAndDefenseBonus takes unit hero returns integer
-    local integer result = 0
-    local item whichItem = null
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        set whichItem = UnitItemInSlot(hero, i)
-        if (whichItem != null and GetItemTypeId(whichItem) == 'I07F') then
-            set result = result + 1
-        endif
-        set whichItem = null
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
-function EnchanterGetDamageBonus takes unit hero returns real
-    local real result = 0.0
-    local item whichItem = null
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        set whichItem = UnitItemInSlot(hero, i)
-        if (whichItem != null and GetItemTypeId(whichItem) == 'I07F') then
-            set result = result + 3.0
-        endif
-        set whichItem = null
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
-function EnchanterAddItemBonusesEx takes unit hero, item whichItem, integer bonusHeroStatsAndDefense, real bonusDamage returns nothing
+function EnchanterAddItemBonusesEx takes unit hero, item whichItem, integer bonusHeroStatsAndDefense, real bonusDamage, real bonusHitPoints returns nothing
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer count = EquipmentBagGetAbilityCount(itemTypeId)
+    local integer abilityId = 0
+    local ability whichAbility = null
     local integer i = 1
     loop
         exitwhen (i > count)
-        call EnchanterAddItemBonusHeroStatsAndDefense(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusHeroStatsAndDefense)
-        call EnchanterAddItemBonusDamage(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusDamage)
+        set abilityId = EquipmentBagGetAbilityId(itemTypeId, i)
+        set whichAbility = BlzGetItemAbility(whichItem, abilityId)
+        //call BJDebugMsg("Adding bonus to ability " + GetObjectName(abilityId) + " of item " + GetItemName(whichItem))
+        call AddAbilityFieldBonuses(abilityId, whichAbility, 0, bonusHeroStatsAndDefense, bonusHeroStatsAndDefense, 0.0, bonusDamage, bonusHitPoints, bonusHitPoints, 0, 0.0, I2R(bonusHeroStatsAndDefense), bonusHeroStatsAndDefense)
         set i = i + 1
     endloop
 endfunction
 
-function EnchanterAddItemBonuses takes unit hero, item whichItem returns nothing
-    call EnchanterAddItemBonusesEx(hero, whichItem, EnchanterGetHeroStatsAndDefenseBonus(hero), EnchanterGetDamageBonus(hero))
+function IsHeroEnchanted takes unit hero returns boolean
+    return IsUnitInGroup(hero, EnchantedUnits)
 endfunction
 
-function EnchanterRemoveItemBonuses takes unit hero, item whichItem returns nothing
-    local integer itemTypeId = GetItemTypeId(whichItem)
-    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
-    local integer bonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
-    local real bonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
-    local integer i = 1
-    loop
-        exitwhen (i > count)
-        call EnchanterRemoveItemBonusHeroStatsAndDefense(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusHeroStatAndDefense)
-        call EnchanterRemoveItemBonusDamage(whichItem, EquipmentBagGetAbilityId(itemTypeId, i), bonusDamage)
-        set i = i + 1
-    endloop
-endfunction
-
-function EnchanterRecalculateItemBonuses takes unit hero, item whichItem returns nothing
-    local integer itemTypeId = GetItemTypeId(whichItem)
-    local integer count = EquipmentBagGetAbilityCount(itemTypeId)
-    local integer oldEnchantingBonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
-    local integer updatedEnchantingBonusHeroStatAndDefense = EnchanterGetHeroStatsAndDefenseBonus(hero)
-    local integer enchantingBonusHeroStatAndDefenseDiff = updatedEnchantingBonusHeroStatAndDefense - oldEnchantingBonusHeroStatAndDefense
-    local real oldEnchantingBonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
-    local real updatedEnchantingBonusDamage = EnchanterGetDamageBonus(hero)
-    local real enchantingBonusDamageDiff = updatedEnchantingBonusDamage - oldEnchantingBonusDamage
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_INVENTORY)
-        set whichItem = UnitItemInSlot(hero, i)
-        if (whichItem != null) then
-            call EnchanterAddItemBonusesEx(hero, whichItem, enchantingBonusHeroStatAndDefenseDiff, enchantingBonusDamageDiff)
-        endif
-        set whichItem = null
-        set i = i + 1
-    endloop
-    call EnchanterSystemSaveBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS, updatedEnchantingBonusHeroStatAndDefense)
-    call EnchanterSystemSaveBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS, updatedEnchantingBonusDamage)
-endfunction
-
-function EnchanterSystemRemoveUnit takes unit whichUnit returns nothing
+private function EnchanterSystemRemoveUnit takes unit whichUnit returns nothing
     call FlushChildHashtable(EnchanterSystemHashTable, GetHandleId(whichUnit))
 endfunction
 
 hook RemoveUnit EnchanterSystemRemoveUnit
 
-// Arrow Key System by Anitarf
+function EnchanterSetHeroBonus takes unit hero returns integer
+    local item whichItem = null
+    local integer oldEnchantingBonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
+    local real oldEnchantingBonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
+    local real oldEnchantingBonusHitPoints = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS)
+    local integer enchantingItemsCounter = 0
+    local integer heroStatsAndDefenseBonus = 0
+    local real damageBonus = 0
+    local real hitPointsBonus = 0
+    local integer heroStatsAndDefenseBonusDiff = 0
+    local real damageBonusDiff = 0
+    local real hitPointsBonusDiff = 0
+    local integer itemTypeId = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(hero, i)
+        if (whichItem != null) then
+            set itemTypeId = GetItemTypeId(whichItem)
+            if (itemTypeId == ENCHANTER_ITEM_TYPE_ID_NOVICE) then
+                set heroStatsAndDefenseBonus = heroStatsAndDefenseBonus + ENCHANTER_STAT_BONUS_NOVICE
+                set damageBonus = damageBonus + ENCHANTER_DAMAGE_BONUS_NOVICE
+                set hitPointsBonus = hitPointsBonus + ENCHANTER_HIT_POINTS_BONUS_NOVICE
+                set enchantingItemsCounter = enchantingItemsCounter + 1
+            elseif (itemTypeId == ENCHANTER_ITEM_TYPE_ID_ADVANCED) then
+                set heroStatsAndDefenseBonus = heroStatsAndDefenseBonus + ENCHANTER_STAT_BONUS_ADVANCED
+                set damageBonus = damageBonus + ENCHANTER_DAMAGE_BONUS_ADVANCED
+                set hitPointsBonus = hitPointsBonus + ENCHANTER_HIT_POINTS_BONUS_ADVANCED
+                set enchantingItemsCounter = enchantingItemsCounter + 1
+            elseif (itemTypeId == ENCHANTER_ITEM_TYPE_ID_ADEPT) then
+                set heroStatsAndDefenseBonus = heroStatsAndDefenseBonus + ENCHANTER_STAT_BONUS_ADEPT
+                set damageBonus = damageBonus + ENCHANTER_DAMAGE_BONUS_ADEPT
+                set hitPointsBonus = hitPointsBonus + ENCHANTER_HIT_POINTS_BONUS_ADEPT
+                set enchantingItemsCounter = enchantingItemsCounter + 1
+            elseif (itemTypeId == ENCHANTER_ITEM_TYPE_ID_MASTER) then
+                set heroStatsAndDefenseBonus = heroStatsAndDefenseBonus + ENCHANTER_STAT_BONUS_MASTER
+                set damageBonus = damageBonus + ENCHANTER_DAMAGE_BONUS_MASTER
+                set hitPointsBonus = hitPointsBonus + ENCHANTER_HIT_POINTS_BONUS_MASTER
+                set enchantingItemsCounter = enchantingItemsCounter + 1
+            endif
+        endif
+        set whichItem = null
+        set i = i + 1
+    endloop
 
+    //call BJDebugMsg("Old Hero stats and defense bonus " + I2S(oldEnchantingBonusHeroStatAndDefense) + " and damage bonus " + R2S(oldEnchantingBonusDamage) + " and hit points bonus " + R2S(oldEnchantingBonusHitPoints))
+
+    set heroStatsAndDefenseBonusDiff = heroStatsAndDefenseBonus - oldEnchantingBonusHeroStatAndDefense
+    set damageBonusDiff = damageBonus - oldEnchantingBonusDamage
+    set hitPointsBonusDiff = hitPointsBonus - oldEnchantingBonusHitPoints
+
+    //call BJDebugMsg("Hero stats and defense bonus " + I2S(heroStatsAndDefenseBonusDiff) + " and damage bonus " + R2S(damageBonusDiff) + " and hit points bonus " + R2S(hitPointsBonusDiff))
+
+    set i = 0
+    loop
+        exitwhen (i == bj_MAX_INVENTORY)
+        set whichItem = UnitItemInSlot(hero, i)
+        if (whichItem != null) then
+            call EnchanterAddItemBonusesEx(hero, whichItem, heroStatsAndDefenseBonusDiff, damageBonusDiff, hitPointsBonusDiff)
+        endif
+        set whichItem = null
+        set i = i + 1
+    endloop
+
+    if (enchantingItemsCounter > 0) then
+        call EnchanterSystemSaveBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS, heroStatsAndDefenseBonus)
+        call EnchanterSystemSaveBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS, damageBonus)
+        call EnchanterSystemSaveBonusReal(hero, ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS, hitPointsBonus)
+        if (not IsUnitInGroup(hero, EnchantedUnits)) then
+            call GroupAddUnit(EnchantedUnits, hero)
+        endif
+    elseif (IsUnitInGroup(hero, EnchantedUnits)) then
+        call EnchanterSystemRemoveUnit(hero)
+        call GroupRemoveUnit(EnchantedUnits, hero)
+    endif
+
+    return enchantingItemsCounter
+endfunction
+
+function EnchanterAddItemBonus takes unit hero, item whichItem returns nothing
+    local integer oldEnchantingBonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
+    local real oldEnchantingBonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
+    local real oldEnchantingBonusHitPoints = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS)
+
+    //call BJDebugMsg("Add old Hero stats and defense bonus " + I2S(oldEnchantingBonusHeroStatAndDefense) + " and damage bonus " + R2S(oldEnchantingBonusDamage) + " and hit points bonus " + R2S(oldEnchantingBonusHitPoints) + " to picked up item " + GetItemName(whichItem))
+
+    call EnchanterAddItemBonusesEx(hero, whichItem, oldEnchantingBonusHeroStatAndDefense, oldEnchantingBonusDamage, oldEnchantingBonusHitPoints)
+endfunction
+
+
+function EnchanterRemoveItemBonus takes unit hero, item whichItem returns nothing
+    local integer oldEnchantingBonusHeroStatAndDefense = -EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
+    local real oldEnchantingBonusDamage = -EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
+    local real oldEnchantingBonusHitPoints = -EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS)
+
+    //call BJDebugMsg("Remove old Hero stats and defense bonus " + I2S(oldEnchantingBonusHeroStatAndDefense) + " and damage bonus " + R2S(oldEnchantingBonusDamage) + " and hit points bonus " + R2S(oldEnchantingBonusHitPoints) + " from dropped item " + GetItemName(whichItem))
+
+    call EnchanterAddItemBonusesEx(hero, whichItem, oldEnchantingBonusHeroStatAndDefense, oldEnchantingBonusDamage, oldEnchantingBonusHitPoints)
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    if (IsHeroEnchanted(GetTriggerUnit())) then
+        return true
+    endif
+
+    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetUnitTypeId(GetTriggerUnit()) != BACK_PACK and GetUnitTypeId(GetTriggerUnit()) != EQUIPMENT_BAG and (GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_NOVICE or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_ADEPT or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_MASTER)
+endfunction
+
+private function TriggerActionSetHeroBonus takes nothing returns nothing
+    if (GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_NOVICE or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_ADEPT or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_MASTER) then
+        call EnchanterSetHeroBonus(GetTriggerUnit())
+    endif
+    call EnchanterAddItemBonus(GetTriggerUnit(), GetManipulatedItem())
+endfunction
+
+private function TriggerConditionDropItem takes nothing returns boolean
+    return IsHeroEnchanted(GetTriggerUnit())
+endfunction
+
+private function TriggerActionSetHeroBonusDrop takes nothing returns nothing
+    local unit triggerUnit = GetTriggerUnit()
+    local item droppedItem = GetManipulatedItem()
+    call EnchanterRemoveItemBonus(triggerUnit, GetManipulatedItem())
+    call TriggerSleepAction(0.0)
+    if (GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_NOVICE or GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_ADEPT or GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_MASTER) then
+        call EnchanterSetHeroBonus(triggerUnit)
+    endif
+    set droppedItem = null
+    set triggerUnit = null
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+    call TriggerAddAction(pickupItemTrigger, function TriggerActionSetHeroBonus)
+
+    call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
+    call TriggerAddCondition(dropItemTrigger, Condition(function TriggerConditionDropItem))
+    call TriggerAddAction(dropItemTrigger, function TriggerActionSetHeroBonusDrop)
+endfunction
+
+endlibrary
+
+// Arrow Key System by Anitarf
 library AStructCoreInterfaceArrowKeys
 
 	/**
@@ -14795,7 +14905,6 @@ library AStructCoreInterfaceArrowKeys
 endlibrary
 
 // Third person camera system by Opossum
-
 library AStructCoreInterfaceThirdPersonCamera requires AStructCoreInterfaceArrowKeys
 
 	/**
@@ -15309,12 +15418,10 @@ function LoadTOCFiles takes nothing returns nothing
     call BlzLoadTOCFile("war3mapImported\\wowrTOC.toc")
 endfunction
 
-
-// Baradé's Mount System
 library WoWReforgedMountSystem
 
 globals
-    hashtable MountHashTable = InitHashtable()
+    private hashtable MountHashTable = InitHashtable()
 endglobals
 
 function MountGet takes unit hero returns unit
@@ -15486,6 +15593,7 @@ function EvolutionStoneSet takes unit hero, integer level returns nothing
     local integer lifeRegenerationBonus = level
     local real chanceRealBonus = level * 0.01
     local real defenseRealBonus = level * 2.0
+    local integer summonedUnitsBonus = level * 2
 
     local integer i = 1
     local integer j = 0
@@ -15499,7 +15607,7 @@ function EvolutionStoneSet takes unit hero, integer level returns nothing
         set j = 1
         loop
             exitwhen (j >= maxAbilityLevel)
-            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus, lifeRegenerationBonus, chanceRealBonus, defenseRealBonus)
+            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus, lifeRegenerationBonus, chanceRealBonus, defenseRealBonus, summonedUnitsBonus)
             set j = j + 1
         endloop
         set i = i + 1
