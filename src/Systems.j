@@ -6119,9 +6119,13 @@ function GetSaveCodeInfosItems takes player whichPlayer, string s returns string
             set saveObjectId = GetSaveObjectItemId(saveObject)
             set charges = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
             if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
-                set result = AppendSaveCodeInfo(result, I2S(i + 1) + " - " + GetObjectName(saveObjectId) + " (" + I2S(charges) + ")")
+                set result = AppendSaveCodeInfo(result, I2S(i + 1) + " - " + GetObjectName(saveObjectId))
             else
-                set result = AppendSaveCodeInfo(result, I2S(i + 1) + " - " + GetObjectName(saveObjectId) + " (not your race!) (" + I2S(charges) + ")")
+                set result = AppendSaveCodeInfo(result, I2S(i + 1) + " - " + GetObjectName(saveObjectId) + " (not your race!)")
+            endif
+
+            if (charges > 0) then
+                set result = result + " (" + I2S(charges) + ")"
             endif
         elseif (saveObject == 0) then
             set result = AppendSaveCodeInfo(result, I2S(i + 1) + " - " + "Empty Item Slot")
@@ -6183,9 +6187,12 @@ function GetSaveCodeShortInfosItems takes player whichPlayer, string s returns s
             set saveObjectId = GetSaveObjectItemId(saveObject)
             set charges = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
             if (IsObjectFromPlayerRace(saveObjectId, whichPlayer)) then
-                set result = result + GetObjectName(saveObjectId) + " (" + I2S(charges) + ")"
+                set result = result + GetObjectName(saveObjectId)
             else
-                set result = result + GetObjectName(saveObjectId) + " (not your race!) (" + I2S(charges) + ")"
+                set result = result + GetObjectName(saveObjectId) + " (not your race!)"
+            endif
+            if (charges > 0) then
+                set result = result + " (" + I2S(charges) + ")"
             endif
         elseif (saveObject == 0) then
             set result = result + "Empty Item Slot"
@@ -14400,9 +14407,9 @@ endfunction
 private function TriggerActionSetHeroBonus takes nothing returns nothing
     if (GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_NOVICE or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_ADEPT or GetItemTypeId(GetManipulatedItem()) == ENCHANTER_ITEM_TYPE_ID_MASTER) then
         call EnchanterSetHeroBonus(GetTriggerUnit())
+        call DisplayEnchanterHeroInfo(GetOwningPlayer(GetTriggerUnit()), GetTriggerUnit())
     endif
     call EnchanterAddItemBonus(GetTriggerUnit(), GetManipulatedItem())
-    call DisplayEnchanterHeroInfo(GetOwningPlayer(GetTriggerUnit()), GetTriggerUnit())
 endfunction
 
 private function TriggerConditionDropItem takes nothing returns boolean
