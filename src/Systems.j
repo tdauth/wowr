@@ -513,6 +513,36 @@ globals
      constant integer EQUIPMENT_BAG = 'E00R'
 endglobals
 
+function GetPlayerHero1 takes player whichPlayer returns unit
+    return udg_Hero[GetPlayerId(whichPlayer)]
+endfunction
+
+function GetPlayerHero2 takes player whichPlayer returns unit
+    return udg_Hero2[GetPlayerId(whichPlayer)]
+endfunction
+
+function GetPlayerHero3 takes player whichPlayer returns unit
+    return udg_Hero3[GetPlayerId(whichPlayer)]
+endfunction
+
+function GetPlayerHeroes takes player whichPlayer returns group
+    local group heroes = CreateGroup()
+
+    if (GetPlayerHero1(whichPlayer) != null) then
+        call GroupAddUnit(heroes, GetPlayerHero1(whichPlayer))
+    endif
+
+    if (GetPlayerHero2(whichPlayer) != null) then
+        call GroupAddUnit(heroes, GetPlayerHero2(whichPlayer))
+    endif
+
+    if (GetPlayerHero3(whichPlayer) != null) then
+        call GroupAddUnit(heroes, GetPlayerHero3(whichPlayer))
+    endif
+
+    return heroes
+endfunction
+
 function Index2D takes integer Value1, integer Value2, integer MaxValue2 returns integer
     return ((Value1 * MaxValue2) + Value2)
 endfunction
@@ -14672,7 +14702,7 @@ endlibrary
 
 */
 
-library WoWReforgedEnchanterSystem initializer Init requires WoWReforgedAbilityFieldSystem, WoWReforgedEquipmentBagSystem
+library WoWReforgedEnchanterSystem initializer Init requires WoWReforgedAbilityFieldSystem, WoWReforgedEquipmentBagSystem, WoWReforgedUtils
 
 globals
     private hashtable EnchanterSystemHashTable = InitHashtable()
@@ -14862,14 +14892,15 @@ endfunction
 
 function EnchanterInfo takes player whichPlayer returns string
     local string text = "Enchantable items: " + EquipmentBagListItemTypeIds()
-    local group selectedUnits = GetUnitsSelectedAll(whichPlayer)
+    //local group heroes = GetUnitsSelectedAll(whichPlayer) // TODO Desync.
+    local group heroes = GetPlayerHeroes(whichPlayer)
     local unit hero = null
     local string heroTxt = ""
     local string txt = null
     local integer i = 0
     loop
-        exitwhen (i >= BlzGroupGetSize(selectedUnits))
-        set hero = BlzGroupUnitAt(selectedUnits, i)
+        exitwhen (i >= BlzGroupGetSize(heroes))
+        set hero = BlzGroupUnitAt(heroes, i)
         if (IsUnitType(hero, UNIT_TYPE_HERO)) then
             set txt = EnchanterHeroInfo(hero)
             if (txt != null) then
@@ -14883,9 +14914,9 @@ function EnchanterInfo takes player whichPlayer returns string
         set hero = null
         set i = i + 1
     endloop
-    call GroupClear(selectedUnits)
-    call DestroyGroup(selectedUnits)
-    set selectedUnits = null
+    call GroupClear(heroes)
+    call DestroyGroup(heroes)
+    set heroes = null
 
     if (heroTxt != "") then
         return heroTxt + ", " + text
