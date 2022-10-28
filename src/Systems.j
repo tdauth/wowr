@@ -181,7 +181,7 @@ function CopyGroup takes group whichGroup returns group
 endfunction
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -c/-clear, -discord, -revive, -sel, -host, -players, -accounts, -info X, -repick, -fullrepick, -enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -pingaistarts, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X, -stats X"
+    return "-h/-help, -c/-clear, -discord, -r/-revive, -sel, -host, -players, -accounts, -i/-info/-stats X, -repick, -fullrepick, -e/-enchanter, -profession2, -professionrepick -race2, -racerepick, -racerepick2, -secondrepick, -thirdrepick, -passive -suicide, -anim X, -ping, -pingh, -pingl, -pingm, -pingportals, -pingkeys, -pingdragons, -pinggoldmines, -pingaistarts, -bounty X Y Z, -bounties, -presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -far, close, -camdistance X, -camlockon/off, -camrpgon/off, -votekick X, -yes, -aion/off X, -wrapup, -goblindeposit, -clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off, -friends, -friendsv, -friendsvuf, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X, -maxbosslevels, -zoneson/off, -letter X Y, -mailbox, -dice X, -lightsabercolor X Y, -lightsabertype X"
 endfunction
 
 function DropAllItemsFromHero takes unit hero returns integer
@@ -12902,63 +12902,6 @@ endfunction
 
 // ---------------------------
 
-function GetPlayerInfo takes player whichPlayer returns string
-    local integer playerId = GetPlayerId(whichPlayer)
-    local integer playerIdConverted = GetConvertedPlayerId(whichPlayer)
-    local string result = GetPlayerNameColored(whichPlayer)
-
-    if (udg_PlayerIsWarlord[playerIdConverted]) then
-        set result = result + "\n" + "Warlord"
-    else
-        set result = result + "\n" + "Freelancer"
-    endif
-
-    if (udg_Hero[playerId] != null) then
-        set result = result + "\n" + "Hero: " + GetUnitName(udg_Hero[playerId])
-        set result = result + "\n" + "Hero Level: " + I2S(GetHeroLevel(udg_Hero[playerId]))
-    endif
-
-    if (udg_Hero2[playerId] != null) then
-        set result = result + "\n" + "Hero 2: " + GetUnitName(udg_Hero2[playerId])
-        set result = result + "\n" + "Hero 2 Level: " + I2S(GetHeroLevel(udg_Hero2[playerId]))
-    endif
-
-    if (udg_Hero3[playerId] != null) then
-        set result = result + "\n" + "Hero 3: " + GetUnitName(udg_Hero3[playerId])
-        set result = result + "\n" + "Hero 3 Level: " + I2S(GetHeroLevel(udg_Hero3[playerId]))
-    endif
-
-    if (udg_PlayerProfession[playerIdConverted] != udg_ProfessionNone) then
-        set result = result + "\n" + "Profession 1: " + udg_ProfessionName[udg_PlayerProfession[playerIdConverted]]
-    else
-        set result = result + "\n" + "Profession 1: None"
-    endif
-
-    if (udg_PlayerProfession2[playerIdConverted] != udg_ProfessionNone) then
-        set result = result + "\n" + "Profession 2: " + udg_ProfessionName[udg_PlayerProfession2[playerIdConverted]]
-    else
-        set result = result + "\n" + "Profession 2: None"
-    endif
-
-    if (udg_PlayerIsWarlord[playerIdConverted]) then
-        if (udg_PlayerRace[playerIdConverted] != udg_RaceNone) then
-            set result = result + "\n" + "Race 1: " + udg_RaceName[udg_PlayerRace[playerIdConverted]]
-        endif
-
-        if (udg_PlayerRace2[playerIdConverted] != udg_RaceNone) then
-            set result = result + "\n" + "Race 2: " + udg_RaceName[udg_PlayerRace2[playerIdConverted]]
-        endif
-    endif
-
-    if (udg_ClanPlayerClan[playerIdConverted] != 0) then
-        set result = result + "\n" + "Clan: " + udg_ClanName[udg_ClanPlayerClan[playerIdConverted]]
-    endif
-
-    set result = result + "\n" + "PvP Wins: " + I2S(udg_PlayerPvPWins[playerIdConverted])
-
-    return result
-endfunction
-
 library PlayerColorNames initializer Init requires WoWReforgedUtils
 
 globals
@@ -14116,6 +14059,8 @@ globals
     constant integer ABILITY_FIELD_TYPE_CHANCE_REAL = 7
     constant integer ABILITY_FIELD_TYPE_DEFENSE_REAL = 8
     constant integer ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER = 9
+    constant integer ABILITY_FIELD_TYPE_LIFE_INTEGER = 10
+    constant integer ABILITY_FIELD_TYPE_MANA_INTEGER = 111
 endglobals
 
 function RegisterAbilityFieldEx takes integer abilityId, integer fieldId, integer fieldType returns integer
@@ -14147,7 +14092,7 @@ function GetAbilityFieldTypeByFieldId takes integer abilityId, integer fieldId r
     return LoadInteger(AbilityFieldHashTable, abilityId, fieldId)
 endfunction
 
-function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeBonus, real manaBonus, integer lifeRegenerationBonus, real chanceRealBonus, real defenseRealBonus, integer summonedUnitsBonus returns nothing
+function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, integer level, integer defenseBonus, integer heroStatsBonus, real durationBonus, real damageBonus, real lifeRealBonus, real manaRealBonus, integer lifeRegenerationBonus, real chanceRealBonus, real defenseRealBonus, integer summonedUnitsBonus, integer lifeBonus, integer manaBonus returns nothing
     local integer max = GetMaxAbilityFields(abilityId)
     local integer fieldType = 0
     local integer fieldId = 0
@@ -14182,15 +14127,19 @@ function AddAbilityFieldBonuses takes integer abilityId, ability whichAbility, i
                 //call BJDebugMsg("Result is false.")
             //endif
         elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REAL) then
-            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + lifeBonus)
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + lifeRealBonus)
         elseif (fieldType == ABILITY_FIELD_TYPE_MANA_REAL) then
-            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + manaBonus)
+            call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + manaRealBonus)
         elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_REGENRATION_INTEGER) then
             call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + lifeRegenerationBonus)
         elseif (fieldType == ABILITY_FIELD_TYPE_CHANCE_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + chanceRealBonus)
         elseif (fieldType == ABILITY_FIELD_TYPE_DEFENSE_REAL) then
             call BlzSetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level, BlzGetAbilityRealLevelField(whichAbility, ConvertAbilityRealLevelField(fieldId), level) + defenseRealBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_LIFE_INTEGER) then
+            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + lifeBonus)
+        elseif (fieldType == ABILITY_FIELD_TYPE_MANA_INTEGER) then
+            call BlzSetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level, BlzGetAbilityIntegerLevelField(whichAbility, ConvertAbilityIntegerLevelField(fieldId), level) + manaBonus)
         endif
         set i = i + 1
     endloop
@@ -14269,7 +14218,10 @@ function EnchanterAddItemBonusesEx takes unit hero, item whichItem, integer bonu
         set abilityId = EquipmentBagGetAbilityId(itemTypeId, i)
         set whichAbility = BlzGetItemAbility(whichItem, abilityId)
         //call BJDebugMsg("Adding bonus to ability " + GetObjectName(abilityId) + " of item " + GetItemName(whichItem))
-        call AddAbilityFieldBonuses(abilityId, whichAbility, 0, bonusHeroStatsAndDefense, bonusHeroStatsAndDefense, 0.0, bonusDamage, bonusHitPoints, bonusHitPoints, 0, 0.0, I2R(bonusHeroStatsAndDefense), bonusHeroStatsAndDefense)
+        call AddAbilityFieldBonuses(abilityId, whichAbility, 0, bonusHeroStatsAndDefense, bonusHeroStatsAndDefense, 0.0, bonusDamage, bonusHitPoints, bonusHitPoints, 0, 0.0, I2R(bonusHeroStatsAndDefense), bonusHeroStatsAndDefense, R2I(bonusHitPoints), R2I(bonusHitPoints))
+        // Required for all entries where "Set works by set level" is 1 but "Set works directly" is 0: https://www.hiveworkshop.com/pastebin/b2769ab71109c3634b3115937deaa34a.24187
+        call IncUnitAbilityLevel(hero, abilityId)
+        call DecUnitAbilityLevel(hero, abilityId)
         set i = i + 1
     endloop
 endfunction
@@ -14384,6 +14336,59 @@ function EnchanterRemoveItemBonus takes unit hero, item whichItem returns nothin
     call EnchanterAddItemBonusesEx(hero, whichItem, oldEnchantingBonusHeroStatAndDefense, oldEnchantingBonusDamage, oldEnchantingBonusHitPoints)
 endfunction
 
+function EnchanterHeroInfo takes unit hero returns string
+    local integer oldEnchantingBonusHeroStatAndDefense = EnchanterSystemLoadBonus(hero, ENCHANTER_SYSTEM_KEY_HERO_STATS_AND_DEFENSE_BONUS)
+    local real oldEnchantingBonusDamage = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_DAMAGE_BONUS)
+    local real oldEnchantingBonusHitPoints = EnchanterSystemLoadBonusReal(hero, ENCHANTER_SYSTEM_KEY_HIT_POINTS_AND_MANA_BONUS)
+
+    if (oldEnchantingBonusHeroStatAndDefense > 0) then
+        return GetUnitName(hero) + " hs/d/su " + I2S(oldEnchantingBonusHeroStatAndDefense) + ", d " + I2S(R2I(oldEnchantingBonusDamage)) + ", hp/m " + I2S(R2I(oldEnchantingBonusHitPoints))
+    endif
+
+    return null
+endfunction
+
+function EnchanterInfo takes player whichPlayer returns string
+    local string text = "Enchantable items: " + EquipmentBagListItemTypeIds()
+    local group selectedUnits = GetUnitsSelectedAll(whichPlayer)
+    local unit hero = null
+    local string heroTxt = ""
+    local string txt = null
+    local integer i = 0
+    loop
+        exitwhen (i >= BlzGroupGetSize(selectedUnits))
+        set hero = BlzGroupUnitAt(selectedUnits, i)
+        if (IsUnitType(hero, UNIT_TYPE_HERO)) then
+            set txt = EnchanterHeroInfo(hero)
+            if (txt != null) then
+                if (heroTxt != "") then
+                    set heroTxt = heroTxt + ", "
+                endif
+
+                set heroTxt = heroTxt + txt
+            endif
+        endif
+        set hero = null
+        set i = i + 1
+    endloop
+    call GroupClear(selectedUnits)
+    call DestroyGroup(selectedUnits)
+    set selectedUnits = null
+
+    if (heroTxt != "") then
+        return heroTxt + ", " + text
+    endif
+
+    return text
+endfunction
+
+function DisplayEnchanterHeroInfo takes player whichPlayer, unit hero returns nothing
+    local string txt = EnchanterHeroInfo(hero)
+    if (txt != null) then
+        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, txt)
+    endif
+endfunction
+
 private function TriggerConditionPickupItem takes nothing returns boolean
     if (IsHeroEnchanted(GetTriggerUnit())) then
         return true
@@ -14397,6 +14402,7 @@ private function TriggerActionSetHeroBonus takes nothing returns nothing
         call EnchanterSetHeroBonus(GetTriggerUnit())
     endif
     call EnchanterAddItemBonus(GetTriggerUnit(), GetManipulatedItem())
+    call DisplayEnchanterHeroInfo(GetOwningPlayer(GetTriggerUnit()), GetTriggerUnit())
 endfunction
 
 private function TriggerConditionDropItem takes nothing returns boolean
@@ -14405,14 +14411,17 @@ endfunction
 
 private function TriggerActionSetHeroBonusDrop takes nothing returns nothing
     local unit triggerUnit = GetTriggerUnit()
+    local player owner = GetOwningPlayer(GetTriggerUnit())
     local item droppedItem = GetManipulatedItem()
     call EnchanterRemoveItemBonus(triggerUnit, GetManipulatedItem())
     call TriggerSleepAction(0.0)
     if (GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_NOVICE or GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_ADEPT or GetItemTypeId(droppedItem) == ENCHANTER_ITEM_TYPE_ID_MASTER) then
         call EnchanterSetHeroBonus(triggerUnit)
+        call DisplayEnchanterHeroInfo(owner, triggerUnit)
     endif
     set droppedItem = null
     set triggerUnit = null
+    set owner = null
 endfunction
 
 private function Init takes nothing returns nothing
@@ -15607,7 +15616,7 @@ function EvolutionStoneSet takes unit hero, integer level returns nothing
         set j = 1
         loop
             exitwhen (j >= maxAbilityLevel)
-            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus, lifeRegenerationBonus, chanceRealBonus, defenseRealBonus, summonedUnitsBonus)
+            call AddAbilityFieldBonuses(abilityId, whichAbility, j, defenseBonus, heroStatsBonus, durationBonus, damageBonus, lifeBonus, manaBonus, lifeRegenerationBonus, chanceRealBonus, defenseRealBonus, summonedUnitsBonus, R2I(lifeBonus), R2I(manaBonus))
             set j = j + 1
         endloop
         set i = i + 1
@@ -16995,6 +17004,8 @@ endfunction
 function DisplayStats takes player to, player from returns nothing
     local integer playerId = GetPlayerId(from)
     local integer convertedPlayerId = GetConvertedPlayerId(from)
+    local string warlord = "Warlord"
+    local string clanName = ""
     local string heroName1 = GetUnitName(udg_Hero[playerId])
     local string heroName2 = GetUnitName(udg_Hero2[playerId])
     local string heroName3 = GetUnitName(udg_Hero3[playerId])
@@ -17021,6 +17032,12 @@ function DisplayStats takes player to, player from returns nothing
     local integer handOfGodLevel = GetPlayerTechCountSimple(UPG_IMPROVED_HAND_OF_GOD, from)
     local integer mountLevel = GetPlayerTechCountSimple(UPG_IMPROVED_MOUNT, from)
     local integer masonryLevel = GetPlayerTechCountSimple(UPG_IMPROVED_MASONRY, from)
+    if (not udg_PlayerIsWarlord[convertedPlayerId]) then
+        set warlord = "Freelancer"
+    endif
+    if (udg_ClanPlayerClan[convertedPlayerId] != 0) then
+        set clanName = "Clan: " + udg_ClanName[udg_ClanPlayerClan[convertedPlayerId]]
+    endif
     if (heroName1 == null or heroName1 == "") then
         set heroName1 = "-"
         set heroLevel1 = "-"
@@ -17045,7 +17062,7 @@ function DisplayStats takes player to, player from returns nothing
     if (udg_PlayerProfession2[convertedPlayerId] == udg_ProfessionNone) then
         set profession2 = "-"
     endif
-    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + ":\n- Heroes: " + heroName1 + "(" + heroLevel1 + ")/" + heroName2 + " (" + heroLevel2 + ")" + "/" + heroName3 + " (" + heroLevel3 + ")" + "\n- HK " + I2S(heroKills) + "/HD " + I2S(heroDeaths) + "/UK " + I2S(unitKills) + "/UL " + I2S(unitsLost) + "/R " + I2S(buildingsRazed) + "/BK " + I2S(bossesKilled) + "/" + I2S(bossesMax) + "\n- Races: " + race1  + "/" + race2 + "\n- Professions: " + profession1  + "/" + profession2 + "\n- G: " + I2S(gold) + "/L: " + I2S(lumber) + "/F: " + I2S(foodUsed) + "/" + I2S(foodMax) + "\n- Evolution: " + I2S(evolutionLevel) + "\n- Improved Power Generator: " + I2S(powerGeneratorLevel) + "\n- Hand of God: " + I2S(handOfGodLevel) + "\n- Improved Mount: " + I2S(mountLevel) + "\n- Improved Masonry: " + I2S(masonryLevel))
+    call DisplayTextToPlayer(to, 0, 0, GetPlayerNameColored(from) + "(" + warlord + clanName + "):\n- Heroes: " + heroName1 + "(" + heroLevel1 + ")/" + heroName2 + " (" + heroLevel2 + ")" + "/" + heroName3 + " (" + heroLevel3 + ")" + "\n- HK " + I2S(heroKills) + "/HD " + I2S(heroDeaths) + "/UK " + I2S(unitKills) + "/UL " + I2S(unitsLost) + "/R " + I2S(buildingsRazed) + "/BK " + I2S(bossesKilled) + "/" + I2S(bossesMax) + "\n- Races: " + race1  + "/" + race2 + "\n- Professions: " + profession1  + "/" + profession2 + "\n- G: " + I2S(gold) + "/L: " + I2S(lumber) + "/F: " + I2S(foodUsed) + "/" + I2S(foodMax) + "\n- Evolution: " + I2S(evolutionLevel) + "\n- Improved Power Generator: " + I2S(powerGeneratorLevel) + "\n- Hand of God: " + I2S(handOfGodLevel) + "\n- Improved Mount: " + I2S(mountLevel) + "\n- Improved Masonry: " + I2S(masonryLevel))
 endfunction
 
 // Add all prestored savecodes into this function
