@@ -239,12 +239,6 @@ This version contains fixes of several bugs from the original map [World of Warc
 * Summoned units won't respawn again like regular creeps.
 * Undead housings can be used as Undead goldmines.
 
-## Code
-
-The code used in the map script can be found in [Systems.j](./src/Systems.j).
-It is copied into the map script whenever it is updated.
-All systems are put into one file to make it searchable.
-
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
@@ -675,3 +669,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Vinz: [Void Rain](https://www.hiveworkshop.com/threads/void-rain.316011/)
 * Vinz: [Void Disc](https://www.hiveworkshop.com/threads/void-disc.315937/)
 * Eldin HawkWing: [BTNArcaneVoid](https://www.hiveworkshop.com/threads/btnarcanevoid.277879/)
+* CRAZYRUSSIAN: [BTNBK_Blue_Book](https://www.hiveworkshop.com/threads/btnbk_blue_book.57364/)
