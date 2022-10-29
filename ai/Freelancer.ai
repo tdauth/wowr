@@ -42,10 +42,10 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_SENTINEL )
     call SetBuildUpgr( 1, UPG_TEMPLE_BLUEPRINTS )
 	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-    call SetBuildUpgr( 100, UPG_IMPROVED_MASONRY )
-	call SetBuildUpgr( 100, UPG_IMPROVED_MOUNT )
-	call SetBuildUpgr( 500, UPG_CHEAP_EVOLUTION )
-	call SetBuildUpgr( 100, UPG_IMPROVED_POWER_GENERATOR )
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MASONRY )
+	call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
+	call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_CHEAP_EVOLUTION )
+	call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
     // **********************************
     // *    End Building Strategy       *
     // **********************************

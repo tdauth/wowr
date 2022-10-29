@@ -1151,21 +1151,25 @@ globals
     constant integer SHREDDER                                        = 'ngir'
 	constant integer AI_LABORATORY                                   = 'h01T'
 
-	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS            = 'R00B'
-	constant integer UPG_STORM_PROTECTION                         = 'R029'
+	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+	constant integer UPG_STORM_PROTECTION                            = 'R029'
 	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
-	constant integer UPG_EVOLUTION                                = 'R00U'
+	constant integer UPG_EVOLUTION                                   = 'R00U'
 	constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
-	constant integer UPG_IMPROVED_POWER_GENERATOR                 = 'R01T'
-	constant integer UPG_IMPROVED_MOUNT                           = 'R024'
+	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
+	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
+	constant integer UPG_IMPROVED_NAVY                               = 'R035'
+
+	constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
+	constant integer MAX_WOWR_HERO_LEVEL                             = 75
 	
 	constant integer HIDEOUT                                         = 'h00J'
 	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
 	constant integer GUARDIANS_CITADEL                               = 'h00L'
 
-	constant integer PORTAL                                       = 'h014'
-	constant integer POWER_GENERATOR                              = 'n025'
-	constant integer RESEARCH_TENT                                = 'n042'
+	constant integer PORTAL                                          = 'h014'
+	constant integer POWER_GENERATOR                                 = 'n025'
+	constant integer RESEARCH_TENT                                   = 'n042'
 
 	constant integer GRYPHON_MOUNT                                   = 'h004'
 	constant integer WYVERN_MOUNT                                    = 'o003'
@@ -3207,7 +3211,7 @@ function ChooseHeroSkill takes nothing returns integer
     local integer curHero = GetHeroId()
     local integer level = GetHeroLevelAI()
     local integer mod = ModuloInteger(level, 4)
-    local boolean skillUlti = ModuloInteger(level, 6) == 0 and level / 6 <= 9
+    local boolean skillUlti = ModuloInteger(level, 6) == 0
 
     // Human
     if (curHero == PALADIN) then
@@ -3824,23 +3828,29 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
     local integer evolutionLevel = 0
     local integer improvedPowerGeneratorLevel = 0
     local integer improvedMountLevel = 0
+    local integer lowest = 0
     loop
         set evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
         set improvedPowerGeneratorLevel = GetUpgradeLevel(UPG_IMPROVED_POWER_GENERATOR)
         set improvedMountLevel = GetUpgradeLevel(UPG_IMPROVED_MOUNT)
 
-        if (ModuloInteger(evolutionLevel, 10) == 0 and evolutionLevel - improvedMountLevel > 10) then
-            call SetBuildUpgr( improvedMountLevel + 1, UPG_IMPROVED_MOUNT )
-        else
-            if (evolutionLevel < improvedPowerGeneratorLevel) then
-                call SetBuildUpgr( evolutionLevel + 1, UPG_EVOLUTION )
-            else
-                call SetBuildUpgr( improvedPowerGeneratorLevel + 1, UPG_IMPROVED_POWER_GENERATOR )
-            endif
-        endif
+        set lowest = Min(evolutionLevel, improvedPowerGeneratorLevel)
+
+        exitwhen (lowest >= MAX_WOWR_RESEARCH_LEVEL)
+
+        set lowest = lowest + 1
+
+        call SetBuildUpgr( lowest, UPG_EVOLUTION )
+        call SetBuildUpgr( lowest, UPG_IMPROVED_POWER_GENERATOR )
+        call SetBuildUpgr( lowest / 10, UPG_IMPROVED_MOUNT )
 
         call Sleep(M1)
     endloop
+
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION )
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
+    //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
 endfunction
 
 function BuildingStrategyStandardTier3 takes nothing returns nothing
