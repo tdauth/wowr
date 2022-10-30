@@ -670,3 +670,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Vinz: [Void Disc](https://www.hiveworkshop.com/threads/void-disc.315937/)
 * Eldin HawkWing: [BTNArcaneVoid](https://www.hiveworkshop.com/threads/btnarcanevoid.277879/)
 * CRAZYRUSSIAN: [BTNBK_Blue_Book](https://www.hiveworkshop.com/threads/btnbk_blue_book.57364/)
+* Remixer: [Pandarian Elemental Shrine](https://www.hiveworkshop.com/threads/pandarian-elemental-shrine.312368/)
+* Athur12A2: [Wooden Bridges](https://www.hiveworkshop.com/threads/wooden-bridges.292602/)
+* Skipper: [FireworkTeam](https://www.hiveworkshop.com/threads/fireworkteam.202942/)
+* Coinblin: [BTNFirework](https://www.hiveworkshop.com/threads/btnfirework.138265/)
+* PROXY: [Pandaren Sage](https://www.hiveworkshop.com/threads/pandaren-sage.340032/)
