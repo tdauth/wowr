@@ -682,3 +682,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mr.Goblin: [BTNPandaVillager](https://www.hiveworkshop.com/threads/btnpandavillager.134875/)
 * killst4r: [Pandaren Building2](https://www.hiveworkshop.com/threads/pandaren-building2.49753/)
 * Stefan.K: [Pandaren Warlord](https://www.hiveworkshop.com/threads/pandaren-warlord.308836/)
+* Mephestrial: [LegionTeleporter](https://www.hiveworkshop.com/threads/legionteleporter.167395/)
+* Vinz: [Eldritch Covenant](https://www.hiveworkshop.com/threads/eldritch-covenant.328093/)
+* FerSZ: [Jailer](https://www.hiveworkshop.com/threads/jailer.290533/)
+* Alexen: [Jailer. Base + Blue + Red](https://www.hiveworkshop.com/threads/jailer-base-blue-red.325185/)
+* FerSZ: [Inquisitor](https://www.hiveworkshop.com/threads/inquisitor.292820/)
