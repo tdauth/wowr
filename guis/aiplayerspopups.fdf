@@ -54,7 +54,22 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Random Night Elf",     -2,
         MenuItem "Random Blood Elf",     -2,
         MenuItem "Random Naga",     -2,
+        MenuItem "Paladin",     -2,
+        MenuItem "Archmage",     -2,
         MenuItem "Mountain King",     -2,
+        MenuItem "Blood Mage",     -2,
+        MenuItem "Blademaster",     -2,
+        MenuItem "Far Seer",     -2,
+        MenuItem "Tauren Chieftain",     -2,
+        MenuItem "Shadow Hunter",     -2,
+        MenuItem "Death Knight",     -2,
+        MenuItem "Lich",     -2,
+        MenuItem "Dreadlord",     -2,
+        MenuItem "Crypt Lord",     -2,
+        MenuItem "Keeper of the Grove",     -2,
+        MenuItem "Priestess of the Moon",     -2,
+        MenuItem "Demon Hunter",     -2,
+        MenuItem "Warden",     -2,
     }
 }
 
@@ -116,5 +131,9 @@ Frame "POPUPMENU" "ProfessionsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Dragon Breeder",     -2,
         MenuItem "Lore Master",     -2,
         MenuItem "Rune Forger",     -2,
+        MenuItem "Sorcerer",     -2,
+        MenuItem "Jewelcrafter",     -2,
+        MenuItem "Archaeologist",     -2,
+        MenuItem "Witch Doctor",     -2,
     }
 }
