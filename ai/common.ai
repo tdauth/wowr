@@ -3816,7 +3816,7 @@ function ConfigureAI takes nothing returns nothing
 	call SetWatchMegaTargets( true )
 	call SetIgnoreInjured( false )
 	call SetGroupsFlee( false )
-	call SetCaptainChanges ( false )
+	call SetCaptainChanges ( true )
 	call SetSmartArtillery ( true )
     call GroupTimedLife ( true )
 	call SetAmphibious()
