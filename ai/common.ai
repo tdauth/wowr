@@ -3813,20 +3813,20 @@ function ConfigureAI takes nothing returns nothing
     call SetHeroesBuyItems( true )
     call SetHeroesTakeItems( true )
     call SetSlowChopping( false )
-	call SetWatchMegaTargets( true )
-	call SetIgnoreInjured( false )
-	call SetGroupsFlee( false )
-	call SetCaptainChanges ( true )
-	call SetSmartArtillery ( true )
+    call SetWatchMegaTargets( true )
+    call SetIgnoreInjured( false )
+    call SetGroupsFlee( false )
+    call SetCaptainChanges ( false )
+    call SetSmartArtillery ( true )
     call GroupTimedLife ( true )
-	call SetAmphibious()
+    call SetAmphibious()
     call SetRandomPaths( true )
     call SetDefendPlayer( true )
 endfunction
 
 function BuildingStrategyStandardTier1 takes nothing returns nothing
-	call SetBuildUnit( 1, AI_LABORATORY )
-	call SetBuildUnit( 2, SHREDDER )
+    call SetBuildUnit( 1, AI_LABORATORY )
+    call SetBuildUnit( 2, SHREDDER )
 endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing

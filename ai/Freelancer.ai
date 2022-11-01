@@ -18,11 +18,6 @@ function ConfigureAIFreelancer takes nothing returns nothing
     call SetSlowChopping( false )
     call SetRandomPaths( true )
     call SetDefendPlayer( true )
-    call SetWatchMegaTargets( true )
-    call SetIgnoreInjured( false )
-    call SetGroupsFlee( true )
-    call SetCaptainChanges ( false )
-    call SetSmartArtillery ( true )
 endfunction
 
 function BuildingStrategy takes nothing returns nothing
