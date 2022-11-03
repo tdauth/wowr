@@ -687,3 +687,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * FerSZ: [Jailer](https://www.hiveworkshop.com/threads/jailer.290533/)
 * Alexen: [Jailer. Base + Blue + Red](https://www.hiveworkshop.com/threads/jailer-base-blue-red.325185/)
 * FerSZ: [Inquisitor](https://www.hiveworkshop.com/threads/inquisitor.292820/)
+* The_Silent: [BTNCinematicLever](https://www.hiveworkshop.com/threads/btncinematiclever.273831/)
