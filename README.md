@@ -689,3 +689,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * FerSZ: [Inquisitor](https://www.hiveworkshop.com/threads/inquisitor.292820/)
 * The_Silent: [BTNCinematicLever](https://www.hiveworkshop.com/threads/btncinematiclever.273831/)
 * Blizzard Entertainment: [BTNINV_Misc_Rock_01](https://www.hiveworkshop.com/threads/btninv_misc_rock_01.54883/)
+* prizraknadache: [BTNsteelcage](https://www.hiveworkshop.com/threads/btnsteelcage.277908/)
