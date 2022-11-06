@@ -228,6 +228,7 @@ This version provides several new features compared to the original map [World o
 * Themes game option.
 * Custom Group System which is [part of this repository](./systems/).
 * Custom Item Crafting System.
+* Custom Vote System.
 * TODO Many 2.1 features are not listed yet.
 
 ## Bug Fixes
