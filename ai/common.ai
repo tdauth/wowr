@@ -884,6 +884,7 @@ globals
 	constant integer UPG_DEMON_HARDENED_SKIN                         = 'R00K'
 	constant integer UPG_DEMON_WAR_STOMP                             = 'R06D'
 	constant integer UPG_DEMON_IMPROVED_DEVOUR                       = 'R06F'
+	constant integer UPG_DEMON_ANTI_MAGIC_SHELL                      = 'R06G'
 	constant integer UPG_DEMON_BACKPACK                              = 'R00G'
 
     constant integer DEMON_CITIZEN_MALE                              = 'n016'
