@@ -690,3 +690,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Silent: [BTNCinematicLever](https://www.hiveworkshop.com/threads/btncinematiclever.273831/)
 * Blizzard Entertainment: [BTNINV_Misc_Rock_01](https://www.hiveworkshop.com/threads/btninv_misc_rock_01.54883/)
 * prizraknadache: [BTNsteelcage](https://www.hiveworkshop.com/threads/btnsteelcage.277908/)
+* Blizzard Entertainment, Xetanth87: [BTNEntangledGoldMine](https://www.hiveworkshop.com/threads/btnentangledgoldmine.336786/)
