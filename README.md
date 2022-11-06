@@ -10,7 +10,7 @@ This map is not a recreation of the game World of Warcraft but is inspired and u
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
 * [Current development version](./wowr2.1.w3x)
 
-*Restriction to SD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
+*Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
 ## How to Play
 
