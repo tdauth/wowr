@@ -691,3 +691,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [BTNINV_Misc_Rock_01](https://www.hiveworkshop.com/threads/btninv_misc_rock_01.54883/)
 * prizraknadache: [BTNsteelcage](https://www.hiveworkshop.com/threads/btnsteelcage.277908/)
 * Blizzard Entertainment, Xetanth87: [BTNEntangledGoldMine](https://www.hiveworkshop.com/threads/btnentangledgoldmine.336786/)
+* bakr: [Assorted City Buildings](https://www.hiveworkshop.com/threads/assorted-city-buildings.336823/)
+* Blizzard Entertainment, genin32: [BTNMurlocHut1](https://www.hiveworkshop.com/threads/btnmurlochut1.251635/)
