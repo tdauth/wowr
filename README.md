@@ -694,3 +694,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment, Xetanth87: [BTNEntangledGoldMine](https://www.hiveworkshop.com/threads/btnentangledgoldmine.336786/)
 * bakr: [Assorted City Buildings](https://www.hiveworkshop.com/threads/assorted-city-buildings.336823/)
 * Blizzard Entertainment, genin32: [BTNMurlocHut1](https://www.hiveworkshop.com/threads/btnmurlochut1.251635/)
+* Ziadoma: [Jedi Drone](https://www.hiveworkshop.com/threads/jedi-drone.341054/)
+* PrMosquito: [ManaWard](https://www.hiveworkshop.com/threads/manaward.50073/)
+* RightField: [webward](https://www.hiveworkshop.com/threads/webward.49471/)
