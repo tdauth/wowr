@@ -698,3 +698,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * PrMosquito: [ManaWard](https://www.hiveworkshop.com/threads/manaward.50073/)
 * RightField: [webward](https://www.hiveworkshop.com/threads/webward.49471/)
 * Uncle Fester: [MinigunTower](https://www.hiveworkshop.com/threads/miniguntower.224871/)
+* Eagle XI: [Highelf Building Icons](https://www.hiveworkshop.com/threads/highelf-building-icons.291719/)
+* Eagle XI: [BTNBlueDragonNexus](https://www.hiveworkshop.com/threads/btnbluedragonnexus.291697/)
