@@ -697,3 +697,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ziadoma: [Jedi Drone](https://www.hiveworkshop.com/threads/jedi-drone.341054/)
 * PrMosquito: [ManaWard](https://www.hiveworkshop.com/threads/manaward.50073/)
 * RightField: [webward](https://www.hiveworkshop.com/threads/webward.49471/)
+* Uncle Fester: [MinigunTower](https://www.hiveworkshop.com/threads/miniguntower.224871/)
