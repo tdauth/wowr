@@ -722,3 +722,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * PROXY: [Pandaren Honorguard](https://www.hiveworkshop.com/threads/pandaren-honorguard.340010/)
 * PROXY: [Hero Shado Pan](https://www.hiveworkshop.com/threads/hero-shado-pan.340012/)
 * PROXY: [Hero Iron Fist](https://www.hiveworkshop.com/threads/hero-iron-fist.340014/)
+* PrinceYaser: [BTNMedievalHelmet](https://www.hiveworkshop.com/threads/btnmedievalhelmet.317929/)
