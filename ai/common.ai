@@ -3824,6 +3824,9 @@ function ConfigureAI takes nothing returns nothing
     call SetAmphibious()
     call SetRandomPaths( true )
     call SetDefendPlayer( true )
+    
+    set attackEnemyPlayers = MeleeDifficulty() == MELEE_INSANE
+    set buildShips = false
 endfunction
 
 function BuildingStrategyStandardTier1 takes nothing returns nothing

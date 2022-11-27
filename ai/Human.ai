@@ -229,9 +229,6 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-	//call DoAiScriptDebug()
-	set attackEnemyPlayers = MeleeDifficulty() == MELEE_INSANE
-	set buildShips = false
     call CampaignAI( HOUSE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
