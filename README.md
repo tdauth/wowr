@@ -753,3 +753,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Miseracord: [Crusader-Miseracord](https://www.hiveworkshop.com/threads/crusader-miseracord.47821/)
 * Mike: [Tents](https://www.hiveworkshop.com/threads/tents.275471/)
 * Mike: [Pier](https://www.hiveworkshop.com/threads/pier.239819/)
+* Mike: [RoyalOrb](https://www.hiveworkshop.com/threads/royalorb.244368/)
+* Mike: [Wagon](https://www.hiveworkshop.com/threads/wagon.250916/)
