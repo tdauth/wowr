@@ -749,3 +749,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * IamMclovin: [Human Wizard](https://www.hiveworkshop.com/threads/human-wizard.48909/)
 * Hemske: [BTNWizardHat](https://www.hiveworkshop.com/threads/btnwizardhat.257780/)
 * Explobomb: [Battle Elephant](https://www.hiveworkshop.com/threads/battle-elephant.320783/)
+* Em!: [Petard](https://www.hiveworkshop.com/threads/petard.212674/)
+* Miseracord: [Crusader-Miseracord](https://www.hiveworkshop.com/threads/crusader-miseracord.47821/)
+* Mike: [Tents](https://www.hiveworkshop.com/threads/tents.275471/)
+* Mike: [Pier](https://www.hiveworkshop.com/threads/pier.239819/)
