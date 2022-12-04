@@ -755,3 +755,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mike: [Pier](https://www.hiveworkshop.com/threads/pier.239819/)
 * Mike: [RoyalOrb](https://www.hiveworkshop.com/threads/royalorb.244368/)
 * Mike: [Wagon](https://www.hiveworkshop.com/threads/wagon.250916/)
+* expresso, Tranquil: [Angel](https://www.hiveworkshop.com/threads/angel.65292/)
+* Mike: [Chalice](https://www.hiveworkshop.com/threads/chalice.244829/)
+* CRAZYRUSSIAN: [BTNHL_Holy_Grail](https://www.hiveworkshop.com/threads/btnhl_holy_grail.57330/)
