@@ -261,6 +261,7 @@ The following files are imported into the map whenever they are updated. They co
 * [Goblin.ai](./ai/Goblin.ai)
 * [Dwarf.ai](./ai/Dwarf.ai)
 * [HighElf.ai](./ai/HighElf.ai)
+* [Dalaran.ai](./ai/Dalaran.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 

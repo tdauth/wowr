@@ -1153,6 +1153,72 @@ globals
     constant integer HIGH_ELF_CITIZEN_FEMALE                      = 'n05J'
     constant integer HIGH_ELF_HOUSING                             = 'h04H'
 
+    // Dalaran
+    constant integer DALARAN_TIER_1                               = 'h051' // tier 1
+	constant integer DALARAN_TIER_2                               = 'h099' // tier 2
+	constant integer DALARAN_TIER_3                               = 'h09A' // tier 3
+	constant integer DALARAN_GUARD_TOWER_1                        = 'n085' // guard tower 1
+	constant integer DALARAN_GUARD_TOWER_2                        = 'n08E' // guard tower 2
+    constant integer DALARAN_POWER_GENERATOR                      = 'h053' // farm
+	constant integer DALARAN_ARCANE_SANCTUM                       = 'h09N' // arcane
+	constant integer DALARAN_ALTAR                                = 'h09L' // altar
+	constant integer DALARAN_SHOP                                 = 'h09M' // shop
+	constant integer DALARAN_BARRACKS                             = 'h055' // barracks
+	constant integer DALARAN_BLACKSMITH                           = 'h09P' // blacksmith/lumber mill
+	constant integer DALARAN_ZOO                                  = 'h09O' // barracks 2/workshop
+	constant integer DALARAN_AVIARY                               = 'h0A0' // aviary
+	constant integer DALARAN_ELEMENTAL_SANCTUARY_1                = 'h09F' // boneyard 1
+	constant integer DALARAN_ELEMENTAL_SANCTUARY_2                = 'h09X' // boneyard 2
+	constant integer DALARAN_VIOLET_CITADEL                       = 'h09J' // special building
+	constant integer DALARAN_MINE                                 = 'u018' // goldmine
+
+	constant integer UPG_DALARAN_GOLD                             = 'R063'
+	constant integer UPG_DALARAN_MELEE                            = 'R069'
+	constant integer UPG_DALARAN_ARMOR                            = 'R06A'
+	constant integer UPG_DALARAN_CR_ATTACK                        = 'R06H'
+	constant integer UPG_DALARAN_CR_ARMOR                         = 'R068'
+	constant integer UPG_DALARAN_DEFEND                           = 'R05U'
+	constant integer UPG_DALARAN_WIZARD                           = 'R05X'
+	constant integer UPG_DALARAN_FIRE_MAGE                        = 'R065'
+	constant integer UPG_DALARAN_ANIMAL                           = 'R066'
+    constant integer UPG_DALARAN_CLOUD                            = 'R067'
+    constant integer UPG_DALARAN_BACKPACK                         = 'R05T'
+    constant integer UPG_DALARAN_MAGIC_SENTRY                     = 'R05W'
+    constant integer UPG_DALARAN_BLINK                            = 'R05Y'
+    constant integer UPG_DALARAN_MANA_SHIELD                      = 'R061'
+    constant integer UPG_DALARAN_SPAWN_FIRE_ELEMENTALS            = 'R05Z'
+    constant integer UPG_DALARAN_SHIELD                           = 'R05R'
+    constant integer UPG_DALARAN_ELEMENTAL                        = 'R060'
+    constant integer UPG_DALARAN_FEEDBACK                         = 'R05V'
+    constant integer UPG_DALARAN_FLYING_CITY                      = 'R062'
+	constant integer UPG_DALARAN_VIOLET_CITADEL                   = 'R05S' // special building
+
+	constant integer DALARAN_WORKER                               = 'h052' // worker
+    constant integer DALARAN_PIKEMAN                              = 'h09Q'
+    constant integer DALARAN_APPRENTICE_WIZARD                    = 'n087'
+    constant integer DALARAN_SUPPLY_CART                          = 'h09S'
+    constant integer DALARAN_WIZARD                               = 'n086'
+    constant integer DALARAN_SORCERESS                            = 'h0A2'
+    constant integer DALARAN_FIRE_MAGE                            = 'h09R'
+    constant integer DALARAN_MUTANT                               = 'n08D'
+	constant integer DALARAN_REJECT                               = 'n089'
+	constant integer DALARAN_GUARDIAN_GOLEM                       = 'n08A'
+	constant integer DALARAN_FLESH_GOLEM                          = 'n088'
+	constant integer DALARAN_DRAGON_HAWK                          = 'h0A1'
+	constant integer DALARAN_AIR_ELEMENTAL                        = 'h09U'
+	constant integer DALARAN_FIRE_ELEMENTAL                       = 'h09I'
+	constant integer DALARAN_FROST_ELEMENTAL                      = 'h09V'
+	constant integer DALARAN_LIGHTNING_ELEMENTAL                  = 'h09K'
+	constant integer DALARAN_POISON_ELEMENTAL                     = 'h09W'
+	constant integer DALARAN_VOID_ELEMENTAL                       = 'h09Z'
+	constant integer DALARAN_SAND_ELEMENTAL                       = 'h09G'
+	constant integer DALARAN_WATER_ELEMENTAL                      = 'h09H'
+	constant integer DALARAN_SEA_ELEMENTAL                        = 'n084'
+
+    constant integer DALARAN_CITIZEN_MALE                         = 'n082'
+    constant integer DALARAN_CITIZEN_FEMALE                       = 'n08B'
+    constant integer DALARAN_HOUSING                              = 'h09E'
+
     // All Races
 
     constant integer SHREDDER                                        = 'ngir'
@@ -1270,7 +1336,16 @@ globals
     constant integer SUMMON_LAVA_SPAWN                               = 'ANlm'
 
     constant integer RANGER                                          = 'H03Y'
-	constant integer COLD_ARROWS                                     = 'AHca'
+    constant integer COLD_ARROWS                                     = 'AHca'
+
+    constant integer WIZARD                                          = 'H00W'
+    constant integer SIPHON_MANA_WIZARD                              = 'A0DQ'
+    constant integer MANA_SHIELD_WIZARD                              = 'A0DR'
+    constant integer SORCERESS_HERO                                  = 'H0B2'
+    constant integer MASS_POLYMORPH                                  = 'A0QS'
+    constant integer MASS_INVISIBILITY                               = 'A0QD'
+    constant integer MASS_SLOW                                       = 'A0QF'
+
 
 	// The Alliance
     constant integer LADY_VASHJ_BONUS_HERO                           = 'H02B'
@@ -1758,9 +1833,16 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == HIGH_ELF_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
 
-
     elseif unitid == HIGH_ELF_OUTPOST then
         set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_GUARD_TOWER,false,townid)
+
+
+    elseif unitid == DALARAN_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(DALARAN_TIER_2,false,townid) + GetUnitCountEx(DALARAN_TIER_3,false,townid)
+    elseif unitid == DALARAN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(DALARAN_TIER_3,false,townid)
+    elseif unitid == DALARAN_GUARD_TOWER_1 then
+        set have_qty = have_qty  + GetUnitCountEx(DALARAN_GUARD_TOWER_2,false,townid)
 
 	elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
@@ -3520,6 +3602,27 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return TRUESHOT
         endif
+    // Dalaran
+    elseif (curHero == WIZARD) then
+        if (skillUlti) then
+            return MASS_TELEPORT
+        elseif (mod == 0) then
+            return SIPHON_MANA_WIZARD
+        elseif (mod == 1) then
+            return MANA_SHIELD_WIZARD
+        elseif (mod == 2) then
+            return BRILLIANCE_AURA
+        endif
+    elseif (curHero == SORCERESS_HERO) then
+        if (skillUlti) then
+            return MASS_POLYMORPH
+        elseif (mod == 0) then
+            return MASS_INVISIBILITY
+        elseif (mod == 1) then
+            return MASS_SLOW
+        elseif (mod == 2) then
+            return BRILLIANCE_AURA
+        endif
     // The Alliance
     elseif (curHero == LADY_VASHJ_BONUS_HERO) then
         if (skillUlti) then
@@ -3625,6 +3728,11 @@ function InitHero takes nothing returns nothing
     // High Elf
     elseif (GetUnitCountDone(RANGER) > 0) then
         set hero_id = RANGER
+    // Dalaran
+    elseif (GetUnitCountDone(WIZARD) > 0) then
+        set hero_id = WIZARD
+    elseif (GetUnitCountDone(SORCERESS_HERO) > 0) then
+        set hero_id = SORCERESS_HERO
     // The Alliance
     elseif (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
         set hero_id = LADY_VASHJ_BONUS_HERO
