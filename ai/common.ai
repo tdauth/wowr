@@ -1255,6 +1255,7 @@ globals
 	constant integer UPG_KULTIRAS_SORCERER                        = 'R05J'
 	constant integer UPG_KULTIRAS_HYDROMANCER                     = 'R05L'
 	constant integer UPG_KULTIRAS_CLEAVING_ATTACK                 = 'R06R'
+	constant integer UPG_KULTIRAS_SUNDERING_BLADES                = 'R070'
 	constant integer UPG_KULTIRAS_ANIMAL                          = 'R05O'
 	constant integer UPG_KULTIRAS_DEVOUR                          = 'R06X'
 	constant integer UPG_KULTIRAS_ENSNARE                         = 'R06Q'
