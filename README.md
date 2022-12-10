@@ -262,6 +262,7 @@ The following files are imported into the map whenever they are updated. They co
 * [Dwarf.ai](./ai/Dwarf.ai)
 * [HighElf.ai](./ai/HighElf.ai)
 * [Dalaran.ai](./ai/Dalaran.ai)
+* [KulTiras.ai](./ai/KulTiras.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 
@@ -767,3 +768,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Null: [BTNKul Tiras Defend](https://www.hiveworkshop.com/threads/btnkul-tiras-defend.320275/)
 * supertoinkz: [Gnome Ark](https://www.hiveworkshop.com/threads/gnome-ark.159515/)
 * Эльрат: [AT-RT](https://xgm.guru/p/wc3/atrt)
+* Bloody_Turds: [Naga Dragon](https://www.hiveworkshop.com/threads/naga-dragon.144931/)
+* olofmoleman: [PeregrinFalcon](https://www.hiveworkshop.com/threads/peregrinfalcon.49888/)

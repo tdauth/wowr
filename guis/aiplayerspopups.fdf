@@ -55,6 +55,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Random Blood Elf",     -2,
         MenuItem "Random Naga",     -2,
         MenuItem "Random Dalaran",     -2,
+        MenuItem "Random Kul Tiras",     -2,
         MenuItem "Paladin",     -2,
         MenuItem "Archmage",     -2,
         MenuItem "Mountain King",     -2,
@@ -118,6 +119,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Goblin",     -2,
         MenuItem "High Elf",     -2,
         MenuItem "Dalaran",     -2,
+        MenuItem "Kul Tiras",     -2,
     }
 }
 

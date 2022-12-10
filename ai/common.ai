@@ -1220,6 +1220,74 @@ globals
     constant integer DALARAN_CITIZEN_FEMALE                       = 'n08B'
     constant integer DALARAN_HOUSING                              = 'h09E'
 
+    // Kul Tiras
+    constant integer KULTIRAS_TIER_1                              = 'h057' // tier 1
+	constant integer KULTIRAS_TIER_2                              = 'h05I' // tier 2
+	constant integer KULTIRAS_TIER_3                              = 'h05J' // tier 3
+	constant integer KULTIRAS_WATCH_TOWER                         = 'h06H' // scout tower
+	constant integer KULTIRAS_GUARD_TOWER                         = 'h06L' // guard tower
+	constant integer KULTIRAS_CANNON_TOWER                        = 'h06M' // cannon tower
+	constant integer KULTIRAS_ARCANE_TOWER                        = 'h06N' // arcane tower
+    constant integer KULTIRAS_HOUSE                               = 'h05B' // farm
+	constant integer KULTIRAS_ARCANE_SANCTUM                      = 'h06G' // arcane
+	constant integer KULTIRAS_ALTAR                               = 'h05A' // altar
+	constant integer KULTIRAS_SHOP                                = 'h05Q' // shop
+	constant integer KULTIRAS_BARRACKS_1                          = 'h05C' // barracks 1
+	constant integer KULTIRAS_BARRACKS_2                          = 'h0BQ' // barracks 2
+	constant integer KULTIRAS_LUMBER_MILL                         = 'h05P' // lumber mill
+	constant integer KULTIRAS_BLACKSMITH                          = 'h05O' // blacksmith
+	constant integer KULTIRAS_WORKSHOP                            = 'h05H' // workshop
+	constant integer KULTIRAS_AVIARY                              = 'h06I' // aviary
+	constant integer KULTIRAS_CRANE                               = 'o021' // citizens building on shallow water for extra resources
+	constant integer KULTIRAS_PROUDMOORE_KEEP                     = 'h08Z' // special building
+
+	constant integer UPG_KULTIRAS_LUMBER                          = 'R05M'
+	constant integer UPG_KULTIRAS_MASONRY                         = 'R05N'
+	constant integer UPG_KULTIRAS_MELEE                           = 'R06T'
+	constant integer UPG_KULTIRAS_ARMOR                           = 'R06U'
+	constant integer UPG_KULTIRAS_RANGED                          = 'R058'
+	constant integer UPG_KULTIRAS_LEATHER                         = 'R06V'
+	constant integer UPG_KULTIRAS_DEFEND                          = 'R06P'
+	constant integer UPG_KULTIRAS_LONG_RIFLES                     = 'R058'
+	constant integer UPG_KULTIRAS_BACKPACK                        = 'R06Z'
+	constant integer UPG_KULTIRAS_TRUE_SIGHT                      = 'R06Y'
+	constant integer UPG_KULTIRAS_SHIP_DOCTOR                     = 'R05K'
+	constant integer UPG_KULTIRAS_SORCERER                        = 'R05J'
+	constant integer UPG_KULTIRAS_HYDROMANCER                     = 'R05L'
+	constant integer UPG_KULTIRAS_CLEAVING_ATTACK                 = 'R06R'
+	constant integer UPG_KULTIRAS_ANIMAL                          = 'R05O'
+	constant integer UPG_KULTIRAS_DEVOUR                          = 'R06X'
+	constant integer UPG_KULTIRAS_ENSNARE                         = 'R06Q'
+	constant integer UPG_KULTIRAS_GHOSTS                          = 'R06O'
+    constant integer UPG_KULTIRAS_MAGIC_SENTRY                    = 'R06S'
+    constant integer UPG_KULTIRAS_LAND_CANNONS                    = 'R056'
+    constant integer UPG_KULTIRAS_SHIP_CANNONS                    = 'R055'
+    constant integer UPG_KULTIRAS_SHIPYARD_REPAIR                 = 'R059'
+    constant integer UPG_KULTIRAS_TRANSPORTERS                    = 'R057'
+	constant integer UPG_KULTIRAS_PROUDMOORE_KEEP                 = 'R05I' // special building
+
+	constant integer KULTIRAS_WORKER                              = 'h058' // worker
+	constant integer KULTIRAS_FOOTMAN                             = 'h054'
+    constant integer KULTIRAS_RIFLEMAN                            = 'h05E'
+    constant integer KULTIRAS_KNIGHT                              = 'h05F'
+    constant integer KULTIRAS_GUARDSMAN                           = 'h05D'
+    constant integer KULTIRAS_FLIBUSTIER                          = 'h05L'
+    constant integer KULTIRAS_FLIBUSTIER_GUN                      = 'h05M'
+    constant integer KULTIRAS_ROYAL_GUARD                         = 'h0BP'
+    constant integer KULTIRAS_CANONEER_TEAM                       = 'h00Z'
+    constant integer KULTIRAS_STORM_SORCERER                      = 'h06K'
+    constant integer KULTIRAS_SHIP_DOCTOR                         = 'h06J'
+    constant integer KULTIRAS_HYDROMANCER                         = 'n06X'
+    constant integer KULTIRAS_LAND_SHIP                           = 'h0BT'
+    constant integer KULTIRAS_GUNSHIP                             = 'h0BR'
+    constant integer KULTIRAS_WATER_DRAGON                        = 'n09O'
+    constant integer KULTIRAS_PEREGRIN_FALCON                     = 'n09P'
+    constant integer KULTIRAS_FLYING_DREADNOUGHT                  = 'h0BW'
+
+    constant integer KULTIRAS_CITIZEN_MALE                        = 'n066'
+    constant integer KULTIRAS_CITIZEN_FEMALE                      = 'n00F'
+    constant integer KULTIRAS_HOUSING                             = 'h090'
+
     // All Races
 
     constant integer SHREDDER                                        = 'ngir'
@@ -1346,6 +1414,11 @@ globals
     constant integer MASS_POLYMORPH                                  = 'A0QS'
     constant integer MASS_INVISIBILITY                               = 'A0QD'
     constant integer MASS_SLOW                                       = 'A0QF'
+
+    constant integer HYDROMANCER                                     = 'H06F'
+    constant integer SUMMON_SEA_ELEMENTAL                            = 'A08Z'
+    constant integer CYCLONE                                         = 'A0JC'
+    constant integer MONSOON                                         = 'A024'
 
 
 	// The Alliance
@@ -1844,6 +1917,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(DALARAN_TIER_3,false,townid)
     elseif unitid == DALARAN_GUARD_TOWER_1 then
         set have_qty = have_qty  + GetUnitCountEx(DALARAN_GUARD_TOWER_2,false,townid)
+
+    elseif unitid == KULTIRAS_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(KULTIRAS_TIER_2,false,townid) + GetUnitCountEx(KULTIRAS_TIER_3,false,townid)
+    elseif unitid == KULTIRAS_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_TIER_3,false,townid)
+    elseif unitid == KULTIRAS_WATCH_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_GUARD_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_CANNON_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_ARCANE_TOWER,false,townid)
 
 	elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
@@ -3624,6 +3704,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return BRILLIANCE_AURA
         endif
+    // Kul Tiras
+    elseif (curHero == HYDROMANCER) then
+        if (skillUlti) then
+            return MONSOON
+        elseif (mod == 0) then
+            return FORKED_LIGHTNING
+        elseif (mod == 1) then
+            return SUMMON_SEA_ELEMENTAL
+        elseif (mod == 2) then
+            return CYCLONE
+        endif
     // The Alliance
     elseif (curHero == LADY_VASHJ_BONUS_HERO) then
         if (skillUlti) then
@@ -3734,6 +3825,9 @@ function InitHero takes nothing returns nothing
         set hero_id = WIZARD
     elseif (GetUnitCountDone(SORCERESS_HERO) > 0) then
         set hero_id = SORCERESS_HERO
+    // Kul Tiras
+    elseif (GetUnitCountDone(HYDROMANCER) > 0) then
+        set hero_id = HYDROMANCER
     // The Alliance
     elseif (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
         set hero_id = LADY_VASHJ_BONUS_HERO
