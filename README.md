@@ -770,3 +770,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Эльрат: [AT-RT](https://xgm.guru/p/wc3/atrt)
 * Bloody_Turds: [Naga Dragon](https://www.hiveworkshop.com/threads/naga-dragon.144931/)
 * olofmoleman: [PeregrinFalcon](https://www.hiveworkshop.com/threads/peregrinfalcon.49888/)
+* Cavman: [Kul'Tiras Sailor](https://www.hiveworkshop.com/threads/kultiras-sailor.48685/)
