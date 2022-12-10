@@ -771,3 +771,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Bloody_Turds: [Naga Dragon](https://www.hiveworkshop.com/threads/naga-dragon.144931/)
 * olofmoleman: [PeregrinFalcon](https://www.hiveworkshop.com/threads/peregrinfalcon.49888/)
 * Cavman: [Kul'Tiras Sailor](https://www.hiveworkshop.com/threads/kultiras-sailor.48685/)
+* Fingolfin: [Wheat Field](https://www.hiveworkshop.com/threads/wheat-field.307321/)
+* Alethos: [Old Witch](https://www.hiveworkshop.com/threads/old-witch.300931/)
