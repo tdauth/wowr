@@ -1265,6 +1265,8 @@ globals
     constant integer UPG_KULTIRAS_SHIP_CANNONS                    = 'R055'
     constant integer UPG_KULTIRAS_SHIPYARD_REPAIR                 = 'R059'
     constant integer UPG_KULTIRAS_TRANSPORTERS                    = 'R057'
+    constant integer UPG_KULTIRAS_FRAGS                           = 'R071'
+    constant integer UPG_KULTIRAS_FLARE                           = 'R072'
 	constant integer UPG_KULTIRAS_PROUDMOORE_KEEP                 = 'R05I' // special building
 
 	constant integer KULTIRAS_WORKER                              = 'h058' // worker

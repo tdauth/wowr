@@ -8,6 +8,8 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 17, KULTIRAS_WORKER )
 	call SetBuildUnit( 2, KULTIRAS_CITIZEN_MALE )
 
+	call BuildingStrategyStandardTier1()
+
 	call SetBuildUnit( 4, KULTIRAS_HOUSE )
 	call SetBuildUnit( 2, KULTIRAS_HOUSING )
 	call SetBuildUnit( 1, KULTIRAS_BARRACKS_1 )
@@ -53,6 +55,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, KULTIRAS_ARCANE_TOWER )
 	call SetBuildUnit( 2, KULTIRAS_AVIARY )
 
+	call SetBuildUpgr( 3, UPG_KULTIRAS_MASONRY )
 	call SetBuildUpgr( 3, UPG_KULTIRAS_MELEE )
 	call SetBuildUpgr( 3, UPG_KULTIRAS_ARMOR )
 	call SetBuildUpgr( 3, UPG_KULTIRAS_LEATHER )
@@ -68,6 +71,8 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_KULTIRAS_DEVOUR )
 	call SetBuildUpgr( 1, UPG_KULTIRAS_MAGIC_SENTRY )
 	call SetBuildUpgr( 1, UPG_KULTIRAS_PROUDMOORE_KEEP )
+	call SetBuildUpgr( 1, UPG_KULTIRAS_FRAGS )
+	call SetBuildUpgr( 1, UPG_KULTIRAS_FLARE )
 	call SetBuildUnit( 1, KULTIRAS_PROUDMOORE_KEEP )
 	call SetBuildUnit( 1, UPG_KULTIRAS_BACKPACK )
 
