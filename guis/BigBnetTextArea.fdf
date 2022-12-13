@@ -1,0 +1,7 @@
+IncludeFile "UI\FrameDef\glue\battlenettemplates.fdf",
+
+Frame "TEXTAREA" "BigBnetTextArea" INHERITS WITHCHILDREN "BattleNetTextAreaTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.020, "",
+    TextAreaLineHeight 0.015,
+}

@@ -1,0 +1,24 @@
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+IncludeFile "UI\FrameDef\UI\QuestDialog.fdf",
+
+Frame "TEXTAREA" "MyTextArea" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.020, "",
+
+    TextAreaLineHeight 0.018, //Should fit used font Size, a high difference shows no text or much space between lines.
+
+    TextAreaLineGap 0.00,     //adds that much space between 2 Lines, addtional to TextAreaLineHeight.
+
+    TextAreaInset 0.035,      //Moves the Text and the scrollbar into the middle from all sides by this amount. This increases the min size for game crash.
+
+    TextAreaMaxLines 20,      //Only that amount of lines are displayed, if more lines are added oldest are removed.
+
+    TextAreaScrollBar "MyTextAreaScrollBar",
+    Frame "SCROLLBAR" "MyTextAreaScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+    }
+
+    ControlBackdrop "MyTextAreaBackdrop",
+    Frame "BACKDROP" "MyTextAreaBackdrop" INHERITS "QuestButtonBaseTemplate" {
+    }
+}
+
