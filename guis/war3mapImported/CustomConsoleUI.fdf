@@ -1,0 +1,127 @@
+
+Frame "SIMPLEFRAME" "CustomConsoleUI" {
+	DecorateFileNames,
+    Layer "BACKGROUND" {
+        Texture "CustomConsoleUIClock" {
+            File "ui\console\human\humanuitile-timeindicatorframe",
+            Width 0.128,
+            Height 0.064,
+            AlphaMode "ALPHAKEY",
+            Anchor TOP, 0.0, 0.00,
+        }
+        // The top of the UI console
+        Texture "CustomConsoleUI5T" {
+            File "ConsoleTexture05",
+            Width 0.256,
+            Height 0.032,
+            TexCoord 0, 1, 0, 0.125
+            AlphaMode "ALPHAKEY",
+            Anchor TOPLEFT,-0.256,0,
+        }
+        Texture "CustomConsoleUI1T" {
+            File "ConsoleTexture01",
+            Width 0.256,
+            Height 0.032,
+            TexCoord 0, 1, 0, 0.125,
+            AlphaMode "ALPHAKEY",
+            Anchor TOPLEFT,0,0,
+        }
+        Texture "CustomConsoleUI2TL" {
+            File "ConsoleTexture02",
+            Width 0.087,
+            Height 0.032,
+            TexCoord 0, 0.33984375, 0, 0.125,
+            AlphaMode "ALPHAKEY",
+            Anchor TOPLEFT,0.256, 0,
+        }
+        Texture "CustomConsoleUI2TR" {
+            File "ConsoleTexture02",
+            Width 0.053,
+            Height 0.032,
+            TexCoord 0.79296875, 1, 0, 0.125,
+            AlphaMode "ALPHAKEY",
+            Anchor TOPRIGHT,-0.288, 0,
+        } 
+        Texture "CustomConsoleUI3T" {
+            File "ConsoleTexture03",
+            Width 0.256,
+            Height 0.032,
+            TexCoord 0, 1, 0, 0.125,
+            AlphaMode "ALPHAKEY",
+            Anchor TOPRIGHT,-0.032, 0,
+        }
+        Texture "CustomConsoleUI4T" {
+            File "ConsoleTexture04",
+            Width 0.032,
+            Height 0.032,
+            TexCoord 0, 1, 0, 0.125,
+            AlphaMode "ALPHAKEY",
+            Anchor TOPRIGHT,0,0,
+        }
+        Texture "CustomConsoleUI6T" {
+            File "ConsoleTexture06",
+            Width 0.256,
+            Height 0.032,
+            TexCoord 0, 1, 0, 0.125,
+            AlphaMode "ALPHAKEY",
+            Anchor TOPRIGHT,0.256,0,
+        }
+
+        // The bottom of the UI console
+        Texture "CustomConsoleUI5B" {
+            File "ConsoleTexture05",
+            Width 0.256,
+            Height 0.176,
+            AlphaMode "ALPHAKEY",
+            TexCoord 0, 1, 0.3125, 1,
+            Anchor BOTTOMLEFT,-0.256,0,
+        }
+        Texture "CustomConsoleUI1B" {
+            File "ConsoleTexture01",
+            Width 0.256,
+            Height 0.176,
+            TexCoord 0, 1, 0.3125, 1,
+            AlphaMode "ALPHAKEY",
+            Anchor BOTTOMLEFT,0,0,
+        }
+        Texture "CustomConsoleUI2B" {
+            File "ConsoleTexture02",
+            Width 0.256,
+            Height 0.15,
+            TexCoord 0, 1, 0.4140625, 1,
+            AlphaMode "ALPHAKEY",
+            Anchor BOTTOMLEFT,0.256,0,
+        }
+        Texture "CustomConsoleUI3B" {
+            File "ConsoleTexture03",
+            Width 0.256,
+            Height 0.176,
+            TexCoord 0, 1, 0.3125, 1,
+            AlphaMode "ALPHAKEY",
+            Anchor BOTTOMRIGHT,-0.032,0.0,
+        }
+        Texture "CustomConsoleUI4B" {
+            File "ConsoleTexture04",
+            Width 0.032,
+            Height 0.176,
+            TexCoord 0, 1, 0.3125, 1,
+            AlphaMode "ALPHAKEY",
+            Anchor BOTTOMRIGHT,0,0,
+        }
+        Texture "CustomConsoleUI6B" {
+            File "ConsoleTexture06",
+            Width 0.256,
+            Height 0.176,
+            TexCoord 0, 1, 0.3125, 1,
+            AlphaMode "ALPHAKEY",
+            Anchor BOTTOMRIGHT,0.256,0,
+        }
+    }
+
+}
+
+Frame "SIMPLEFRAME" "SimpleTextureFrame" {
+    Layer "BACKGROUND" {
+        Texture "SimpleTextureFrameValue" {}
+    }
+}
