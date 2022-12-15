@@ -798,3 +798,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * viiva: [HumanUITile-InventoryCover.blp](https://www.hiveworkshop.com/threads/humanuitile-inventorycover-blp.121512/)
 * viiva: [HumanUITile-TimeIndicatorFrame.blp](https://www.hiveworkshop.com/threads/humanuitile-timeindicatorframe-blp.121513/)
 * Spellbound, Unwirklich: [Demon UI - Widescreen](https://www.hiveworkshop.com/threads/demon-ui-widescreen.312995/)
+* I3lackDeath: [Sin'dorei UI by I3lackDeath](https://www.hiveworkshop.com/threads/sindorei-ui-by-i3lackdeath.245052)
+* CRAZYRUSSIAN and, MiniMage: [GoblinUITile2.blp](https://www.hiveworkshop.com/threads/goblinuitile2-blp.193800/)
+* Solu9: [SPuiBETA_Tile_01.blp](https://www.hiveworkshop.com/threads/spuibeta_tile_01-blp.273794/)
