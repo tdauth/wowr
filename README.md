@@ -33,199 +33,88 @@ It is always more fun if you communicate with other players and think of your ow
 This version provides several new features compared to the original map [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/):
 
 * 24 players instead of 10.
-* Backpack system.
-* Repicking your hero with the chat command '-repick'.
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
+* Backpack system.
+* New neutral buildings: Outland portals on land and sea all over the map connecting the whole world, Arcane Academy of Theramore, Clan House, Goblin Bank.
+* Multiple heroes, professions and races at higher hero level.
+* Allow repicking your game mode, hero, race and profession.
+* New chat commands: help, repicking, discord, alliances, camera settings, hero suicide, enable/disable hero death sounds, player info, pings, votekick, convert buildings into tiny items, passive mode, save/load
 * Every hero can learn the ability 'Attribute Bonus'.
 * Increased boss hero levels.
-* New heroes from the TFT patches are available.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Razormane Chieftain, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Goblin Heavy Tank, Void Lord.
 * Trees have 5000 hitpoints which allows longer harvesting before restoring the trees.
 * Night Elves workers harvest 10 lumber per interval as balance.
-* The race item can be dropped.
-* Naga can build a shop.
+* Race scepter items can be dropped.
+* New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Water Gold Mine, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash.
+* New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
 * Naga villagers can walk on water.
 * Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
-* New race: Demon.
+* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf.
 * Added Outland area with a new boss.
 * New Outland area with new start locations, quests and bosses.
-* Outland portals all over the map.
 * '-nowin' replaced 'nodefeat'. The game can be won by killing the final boss in the Outland area.
-* Hand of God at level 35.
+* Hand of God at higher hero level.
 * Ability 'Reward Freelancer' in all main buildings.
 * Ability 'Give Units to Another Allied Player' in all main buildings.
-* Random hero support.
 * Freelancers gain more experience than warlords from killing hostile units.
 * Basic support AI for computer-controlled warlord players.
-* Chat command '-players'.
-* The number of towers is limited for all players.
-* Hero selection has been moved to the Outland area.
-* Secret chamber at level 40 for special heroes.
-* Chat command '-ping'.
+* Unit limits: towers, housings, special buildings and Power Generators.
+* Bonus heroes at higher hero level.
 * Acolytes can build goldmines on Undead housings.
-* Spell books for crafting have no cooldown after crafting items.
-* Citizens can build harbours.
 * Ships and Zeppelins cost food to keep their number limited.
 * Theramore contains a market with killed creeps and dropped items.
-* Bonus heroes can be chosen at level 40.
 * XP bonus from Tier 2 and Tier 3 for every hero.
 * No Chaos damage for Naga and Blood Elf anymore.
-* Blood Elf can train Sorceress.
-* Blood Elf upgrades are not visible to Human anymore.
-* New race: Draenei.
-* New hero: Akama.
-* New upgrade: Evolution.
-* New Forsaken quest: Legendary Items.
-* New Lich King quest: The Burning Legion.
-* New building Workshop with units Ballista, Cage and Wagon for Blood Elves.
-* Male citizens can build Portals.
-* More different alliance chat commands.
+* New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizens, Engineer, Engineer Ships, Save Masters, Coral Golem, Naga Whaler, Gnomish Submarines, Spellbreakers and Dragonhawk Riders for Human.
+* Blood Elf researches are not visible to Human anymore.
+* New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter
+* New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
 * Hideouts have Portal abilities from the new Portal buildings.
-* Computer AI player The Burning Legion with Demon race.
-* Different game types.
+* Default Computer players The Burning Legion with Demon race, The Alliance with Naga/Blood Elf race and Gaia with rescuable units.
 * Bosses respawn.
-* New item: Magical Cutter.
-* New item: Magical Creep Summoner.
-* New profession: Sorcerer.
-* Second profession.
-* New profession: Runeforger.
-* New profession: Dragon Breeder.
-* New hero: Furbolg Ursa Warrior.
-* New building: Power Generator.
-* New race: Furbolg.
-* Camera distance chat commands.
-* Chat command for hero suicide.
-* Chat command to enable/disable hero death sounds.
+* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI.
+* New professions: Sorcerer, Runeforger, Dragon Breeder.
 * Life and mana regeneration auras of citizens do not stack anymore.
-* Dark Ranger has Black Arrow again instead of Dark Portal.
+* Dark Ranger has Black Arrow again instead of Dark Portal based on a [Custom Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
 * Death Knight has Animate Dead again instead of Shadow Word Death.
 * Demons summoned by Demon Master have timed life now.
 * No annoying global sound for Demon Master anymore.
 * Dark Ranger has Charm again instead of Unholy Spirits.
 * Charm kills worker units instead of changing their owner.
-* Votekick chat commands.
 * Item Pickpocketing.
-* Second race for Warlords at level 30.
 * Mask of Death is only available as unique item.
 * Disable Undead/non-Undead restrictions for quests.
 * VIPs.
-* Random events for gold.
-* Neutral Citizens.
-* Additional heroes later in the game.
-* Fountain of Blood which trains Fel Orcs.
-* Hidden bases at level 35.
-* World Tree for Night Elves.
-* Lich King for Undeads.
-* Magic Vault for Blood Elves.
+* Random events.
+* Hidden bases.
 * Player stats multiboard.
-* New boss Kil'Jaeden.
-* New boss Nether Dragon.
-* New boss Sea Giant.
-* New boss Keeper of Frostmourne.
-* Arcane Observatory for Humans.
-* Book of Summoning Pedestal for Demons.
+* New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods.
 * Paladin on Theramore heals non-Undead units.
-* New hero: Mountain Giant.
-* New hero: Wizard.
 * Save/load system.
 * Undead and Night Elf citizens can directly build their goldmines instead of housings.
 * Walls from start bases are invulnerable.
-* Research Improved Mount.
-* Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers.
 * Bosses have orbs to attack air units.
-* Engineer who can construct gates, walls and bridges.
-* Water Gold Mines.
-* Engineer Ships which can collect gold from Water Gold Mines and return it to shipyards.
-* Research Storm Protection to avoid death in Maelstrom.
-* Outland Dimensional Gate for Demons.
-* Statue of Azshara for Naga.
-* Corrupted Ancient Protector for Furbolg.
-* Draenei Prison for Draenei.
-* Save Masters in Goblin Laboratories.
-* New island with Murloc Sorcerer on the sea.
-* Gnomish Submarines.
-* New island with The Eye of Sargeras on the sea.
-* Computer AI player The Alliance with Naga and Blood Elf races.
-* New island with boss fights on the sea.
-* New island with Spider Crab Behemoth on the sea.
-* Chat command "-wrapup" which converts your buildings into tiny items.
-* Chat command "-passive" which enables passive mode against enemy players.
-* New island Kezan with bosses Rumblefitz and Tinkerer Gizlock.
-* New race: Goblin.
-* Chat command "-racerepick" to repick your first race as Warlord.
-* New building Research Tent for all races.
-* Chat command "-savec" to generate savecodes into files without printing information for a long time.
-* Chat commands "-saveautoon/off" to auto save the hero.
-* Chat command "-help/-h" which lists chat commands.
+* New areas: Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, New island next to Maelstrom with new boss Sea Witch.
 * Becoming a demigod requires a Nether Dragon.
-* Chat command "-pingdragons" to ping all Dragon Roosts.
-* New dungeon with Avatar of Sargeras.
-* New portal room connecting sea dungeons.
-* Water portals connecting parts of the sea.
-* Chat command "-savegui" which shows a custom savecode GUI.
-* New research Improved Air Transport for all races.
-* New research Improved Navy for all races.
-* New boss Mathog.
 * Allow deactivating Divine Shield.
-* New boss Gul'dan.
-* Arcane Academy of Theramore sells mana related items.
-* New island next to Maelstrom with new boss Sea Witch.
-* Play Naga or Blood Elf Theme if you choose the corresponding races.
+* Improved custom race support with different music themes and UIs.
 * Hall of Fame.
-* Invisibility and Berserk have 100 levels now and are set to the hero's level up to level 100.
-* Fixed Computer player Gaia who provides some units on the map which can be rescued.
-* Chat command "-pingkeys" for ping secret keys on the map.
-* New research Improved Creep Hunter which increases the maximum creep level of certain unit abilities.
-* New item Feed Bosses which increases the hero level of all bosses.
-* New item Feed AI which increases the hero level of all AI players.
-* More than one hero can be played by one single player.
+* Standard hero abilities like Invisibility and Berserk have a level matching the hero's level now.
 * Reveal neutral buildings for Freelancers from start.
 * Clans.
 * Bounties.
-* Goblin Bank.
-* Enable Warcraft's Item Stacking.
-* [Custom Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/).
-* New hero: Antonidas.
-* New hero: Fel Beast.
-* New creep: Shivarra.
-* New race: Dwarf.
-* New hero: Dwarf Mage.
-* New hero: Khadgar.
-* New hero: Carsten.
-* New hero: Ranger.
-* New race: High Elf.
-* [Custom Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
-* Dragonhawk Mounts.
-* Human can train Spellbreakers and Dragonhawk Riders.
-* Phoenix Egg building for Blood Elf.
-* Walls.
+* Item Stacking: Enable Warcraft's Item Stacking and [Custom Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/).
+* New creeps: Shivarra.
+* New mounts: Dragonhawk Mounts.
 * Automatically improve summoned units per hero ability level.
 * Easter Egg.
-* Chat command "-discord" shows the Discord server URL.
 * PvP Arena.
-* Crafting Stashes.
-* Chat commands "-camlockon/off".
-* 3 Naga Tier buildings.
-* Naga Shipyard.
-* Naga Pyramid of Serpant.
-* Coral Golem.
-* Naga Whaler.
-* New hero Razormane Chieftain.
-* New player selection.
-* Chat command "-info X" to show info about a player.
-* New hero: Ner'Zhul.
-* New hero: Blackhand.
-* New hero: Samuro.
-* New boss: Queen Azshara.
-* New bosses: Old Gods.
-* New hero: Goblin War Zeppelin.
-* New hero: Goblin Heavy Tank.
+* New player selection based on Taverns with random support moved to the Outland area.
 * Custom Turret System which is [part of this repository](./systems/).
-* New hero: Void Lord.
 * [Custom Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/).
 * [Custom Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/).
-* Tomes game option.
-* Themes game option.
+* New game options at the start of the game: Game Types, Tomes, Themes.
 * Custom Group System which is [part of this repository](./systems/).
 * Custom Item Crafting System.
 * Custom Vote System.
@@ -266,20 +155,25 @@ The following files are imported into the map whenever they are updated. They co
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 
-The race is determined from the race set in the lobby of the game:
+The race is can be determined from the race set in the lobby of the game:
 
-* If the race is Human it will either be Human, Blood Elf, Dwarf or High Elf.
+* If the race is Human it will either be Human, Blood Elf, Dwarf, High Elf, Dalaran or Kul Tiras.
 * If the race is Orc it will either be Orc, Draenei or Goblin.
 * If the race is Undead it will either be Undead or Demon.
 * If the race is Night Elf it will either be Night Elf, Naga or Furbolg.
 
 Warlord computer players start with a town hall and workers besides their hero.
-Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base.
+Whenever they lose all workers and town halls, they will get a new town hall automatically to rebuild their base if the auto respawn is enabled.
 This prevents ending the game for an AI.
 
 ### Freelancers
 
-The file [Freelancer.ai](./ai/Freelancer.ai) is imported into the map whenever it is updated. It contains a very basic freelancer AI for computer players.
+The file [Freelancer.ai](./ai/Freelancer.ai) is imported into the map whenever it is updated.
+It contains a very basic freelancer AI for computer players.
+
+### Professions
+
+Every AI is assigned their professions automatically and the crafted items are added to the hero's inventory automatically as well like the hero would craft them.
 
 ## Replays
 
