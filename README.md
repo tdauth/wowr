@@ -696,3 +696,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * CRAZYRUSSIAN and, MiniMage: [GoblinUITile2.blp](https://www.hiveworkshop.com/threads/goblinuitile2-blp.193800/)
 * Solu9: [SPuiBETA_Tile_01.blp](https://www.hiveworkshop.com/threads/spuibeta_tile_01-blp.273794/)
 * CRAZYRUSSIAN: [BTNDH_Revive](https://www.hiveworkshop.com/threads/btndh_revive.57297/)
+* KelThuzad: [BTNCharge](https://www.hiveworkshop.com/threads/btncharge.109842/)
