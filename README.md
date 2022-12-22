@@ -704,3 +704,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [BTNINV_Letter_09](https://www.hiveworkshop.com/threads/btninv_letter_09.55227/)
 * Blizzard Entertainment: [BTNINV_Letter_03](https://www.hiveworkshop.com/threads/btninv_letter_03.55233/)
 * Akolyt0r: [BTNAquamarineRing](https://www.hiveworkshop.com/threads/btnaquamarinering.119456/)
+* olofmoleman: [R2d2](https://www.hiveworkshop.com/threads/r2d2.50330/)
+* olofmoleman: [C-3po](https://www.hiveworkshop.com/threads/c-3po.47748/)
+* Flowerman: [General Grevious](https://www.epicwar.com/maps/233531/)
+* olofmoleman: [BTNGeneralGrievous](https://www.hiveworkshop.com/threads/btngeneralgrievous.56863/)
