@@ -709,3 +709,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Flowerman: [General Grevious](https://www.epicwar.com/maps/233531/)
 * olofmoleman: [BTNGeneralGrievous](https://www.hiveworkshop.com/threads/btngeneralgrievous.56863/)
 * Mike: [Ballista(Catapult)](https://www.hiveworkshop.com/threads/ballista-catapult.244642/)
+* Just_Spectating: [VillagerTauren2.1](https://www.hiveworkshop.com/threads/villagertauren2-1.176765/)
