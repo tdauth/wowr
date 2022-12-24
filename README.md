@@ -32,7 +32,8 @@ It is always more fun if you communicate with other players and think of your ow
 
 This version provides several new features compared to the original map [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/):
 
-* Increased player number with different player forces.
+* Increased player number.
+* Added different teams to the lobby.
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.

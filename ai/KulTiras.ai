@@ -59,7 +59,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUpgr( 3, UPG_KULTIRAS_MELEE )
 	call SetBuildUpgr( 3, UPG_KULTIRAS_ARMOR )
 	call SetBuildUpgr( 3, UPG_KULTIRAS_LEATHER )
-	call SetBuildUpgr( 3, UPG_KULTIRAS_RANGED
+	call SetBuildUpgr( 3, UPG_KULTIRAS_RANGED )
 	call SetBuildUpgr( 1, UPG_KULTIRAS_SUNDERING_BLADES )
 	call SetBuildUpgr( 2, UPG_DALARAN_GOLEM )
 	call SetBuildUpgr( 2, UPG_KULTIRAS_SHIP_DOCTOR )
