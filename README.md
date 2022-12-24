@@ -42,8 +42,7 @@ This version provides several new features compared to the original map [World o
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
 * New hero standard abilities: Magic Sentry, Repair, Dark Summoning.
-* New areas: Outland, Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, New island next to Maelstrom with new boss Sea Witch, Pandaria, Dalaran, Sylvanas Windrunner's place, Elune's place.
-* New start locations: Ironforge, Clan Island
+* New areas: Outland, Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, new island next to Maelstrom with new boss Sea Witch, Clan Island, Pandaria, Dalaran, Sylvanas Windrunner's place, Elune's place.
 * New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
 * New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant
 * New mounts: Dragonhawk Mounts, Kodo Beast, Horse.
