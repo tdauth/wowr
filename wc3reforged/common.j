@@ -538,6 +538,14 @@ globals
     constant volumegroup        SOUND_VOLUMEGROUP_AMBIENTSOUNDS     = ConvertVolumeGroup(6)
     constant volumegroup        SOUND_VOLUMEGROUP_FIRE              = ConvertVolumeGroup(7)
 
+    //1.33
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_GENERAL         = ConvertVolumeGroup(8)
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_AMBIENT         = ConvertVolumeGroup(9)
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_MUSIC           = ConvertVolumeGroup(10)
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_DIALOGUE        = ConvertVolumeGroup(11)
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_SOUND_EFFECTS_1 = ConvertVolumeGroup(12)
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_SOUND_EFFECTS_2 = ConvertVolumeGroup(13)
+    constant volumegroup        SOUND_VOLUMEGROUP_CINEMATIC_SOUND_EFFECTS_3 = ConvertVolumeGroup(14)
 
 //===================================================
 // Game, Player, and Unit States
@@ -729,48 +737,48 @@ globals
     constant unitevent EVENT_UNIT_HIDDEN                                = ConvertUnitEvent(56)
     constant unitevent EVENT_UNIT_SELECTED                              = ConvertUnitEvent(57)
     constant unitevent EVENT_UNIT_DESELECTED                            = ConvertUnitEvent(58)
-                                                                        
-    constant unitevent EVENT_UNIT_STATE_LIMIT                           = ConvertUnitEvent(59)                                                                        
 
-    // Events which may have a filter for the "other unit"              
-    //                                                                  
+    constant unitevent EVENT_UNIT_STATE_LIMIT                           = ConvertUnitEvent(59)
+
+    // Events which may have a filter for the "other unit"
+    //
     constant unitevent EVENT_UNIT_ACQUIRED_TARGET                       = ConvertUnitEvent(60)
     constant unitevent EVENT_UNIT_TARGET_IN_RANGE                       = ConvertUnitEvent(61)
     constant unitevent EVENT_UNIT_ATTACKED                              = ConvertUnitEvent(62)
     constant unitevent EVENT_UNIT_RESCUED                               = ConvertUnitEvent(63)
-                                                                        
+
     constant unitevent EVENT_UNIT_CONSTRUCT_CANCEL                      = ConvertUnitEvent(64)
     constant unitevent EVENT_UNIT_CONSTRUCT_FINISH                      = ConvertUnitEvent(65)
-                                                                        
+
     constant unitevent EVENT_UNIT_UPGRADE_START                         = ConvertUnitEvent(66)
     constant unitevent EVENT_UNIT_UPGRADE_CANCEL                        = ConvertUnitEvent(67)
     constant unitevent EVENT_UNIT_UPGRADE_FINISH                        = ConvertUnitEvent(68)
-                                                                        
-    // Events which involve the specified unit performing               
-    // training of other units                                          
-    //                                                                  
+
+    // Events which involve the specified unit performing
+    // training of other units
+    //
     constant unitevent EVENT_UNIT_TRAIN_START                           = ConvertUnitEvent(69)
     constant unitevent EVENT_UNIT_TRAIN_CANCEL                          = ConvertUnitEvent(70)
     constant unitevent EVENT_UNIT_TRAIN_FINISH                          = ConvertUnitEvent(71)
-                                                                        
+
     constant unitevent EVENT_UNIT_RESEARCH_START                        = ConvertUnitEvent(72)
     constant unitevent EVENT_UNIT_RESEARCH_CANCEL                       = ConvertUnitEvent(73)
     constant unitevent EVENT_UNIT_RESEARCH_FINISH                       = ConvertUnitEvent(74)
-                                                                        
+
     constant unitevent EVENT_UNIT_ISSUED_ORDER                          = ConvertUnitEvent(75)
     constant unitevent EVENT_UNIT_ISSUED_POINT_ORDER                    = ConvertUnitEvent(76)
     constant unitevent EVENT_UNIT_ISSUED_TARGET_ORDER                   = ConvertUnitEvent(77)
-                                                                       
+
     constant unitevent EVENT_UNIT_HERO_LEVEL                            = ConvertUnitEvent(78)
     constant unitevent EVENT_UNIT_HERO_SKILL                            = ConvertUnitEvent(79)
-                                                                        
+
     constant unitevent EVENT_UNIT_HERO_REVIVABLE                        = ConvertUnitEvent(80)
     constant unitevent EVENT_UNIT_HERO_REVIVE_START                     = ConvertUnitEvent(81)
     constant unitevent EVENT_UNIT_HERO_REVIVE_CANCEL                    = ConvertUnitEvent(82)
     constant unitevent EVENT_UNIT_HERO_REVIVE_FINISH                    = ConvertUnitEvent(83)
-                                                                        
+
     constant unitevent EVENT_UNIT_SUMMON                                = ConvertUnitEvent(84)
-                                                                        
+
     constant unitevent EVENT_UNIT_DROP_ITEM                             = ConvertUnitEvent(85)
     constant unitevent EVENT_UNIT_PICKUP_ITEM                           = ConvertUnitEvent(86)
     constant unitevent EVENT_UNIT_USE_ITEM                              = ConvertUnitEvent(87)
@@ -786,8 +794,8 @@ globals
     // Frozen Throne Expansion Events
     // Need to be added here to preserve compat
     //===================================================
-   
-    //===================================================    
+
+    //===================================================
     // For use with TriggerRegisterGameEvent
     //===================================================
 
@@ -1233,7 +1241,7 @@ globals
 //===================================================
 // Instanced Object Operation API constants
 //===================================================
-    
+
     // Ability
     constant abilityintegerfield ABILITY_IF_BUTTON_POSITION_NORMAL_X        = ConvertAbilityIntegerField('abpx')
     constant abilityintegerfield ABILITY_IF_BUTTON_POSITION_NORMAL_Y        = ConvertAbilityIntegerField('abpy')
@@ -1247,7 +1255,7 @@ globals
     constant abilityintegerfield ABILITY_IF_PRIORITY                        = ConvertAbilityIntegerField('apri')
     constant abilityintegerfield ABILITY_IF_LEVELS                          = ConvertAbilityIntegerField('alev')
     constant abilityintegerfield ABILITY_IF_REQUIRED_LEVEL                  = ConvertAbilityIntegerField('arlv')
-    constant abilityintegerfield ABILITY_IF_LEVEL_SKIP_REQUIREMENT          = ConvertAbilityIntegerField('alsk') 
+    constant abilityintegerfield ABILITY_IF_LEVEL_SKIP_REQUIREMENT          = ConvertAbilityIntegerField('alsk')
 
     constant abilitybooleanfield ABILITY_BF_HERO_ABILITY                    = ConvertAbilityBooleanField('aher') // Get only
     constant abilitybooleanfield ABILITY_BF_ITEM_ABILITY                    = ConvertAbilityBooleanField('aite')
@@ -1620,7 +1628,7 @@ globals
     constant abilityreallevelfield ABILITY_RLF_EXTRA_DAMAGE_POA1                                 = ConvertAbilityRealLevelField('Poa1')
     constant abilityreallevelfield ABILITY_RLF_DAMAGE_PER_SECOND_POA2                            = ConvertAbilityRealLevelField('Poa2')
     constant abilityreallevelfield ABILITY_RLF_ATTACK_SPEED_FACTOR_POA3                          = ConvertAbilityRealLevelField('Poa3')
-    constant abilityreallevelfield ABILITY_RLF_MOVEMENT_SPEED_FACTOR_POA4                        = ConvertAbilityRealLevelField('Poa4')   
+    constant abilityreallevelfield ABILITY_RLF_MOVEMENT_SPEED_FACTOR_POA4                        = ConvertAbilityRealLevelField('Poa4')
     constant abilityreallevelfield ABILITY_RLF_DAMAGE_AMPLIFICATION                              = ConvertAbilityRealLevelField('Pos2')
     constant abilityreallevelfield ABILITY_RLF_CHANCE_TO_STOMP_PERCENT                           = ConvertAbilityRealLevelField('War1')
     constant abilityreallevelfield ABILITY_RLF_DAMAGE_DEALT_WAR2                                 = ConvertAbilityRealLevelField('War2')
@@ -2109,7 +2117,7 @@ globals
     constant unitweaponbooleanfield UNIT_WEAPON_BF_ATTACK_SHOW_UI                   = ConvertUnitWeaponBooleanField('uwu1')
     constant unitweaponbooleanfield UNIT_WEAPON_BF_ATTACKS_ENABLED                  = ConvertUnitWeaponBooleanField('uaen')
     constant unitweaponbooleanfield UNIT_WEAPON_BF_ATTACK_PROJECTILE_HOMING_ENABLED = ConvertUnitWeaponBooleanField('umh1')
-    
+
     constant unitweaponstringfield UNIT_WEAPON_SF_ATTACK_PROJECTILE_ART             = ConvertUnitWeaponStringField('ua1m')
 
     // Move Type
@@ -2121,7 +2129,7 @@ globals
     constant movetype       MOVE_TYPE_FLOAT                 = ConvertMoveType(16)
     constant movetype       MOVE_TYPE_AMPHIBIOUS            = ConvertMoveType(32)
     constant movetype       MOVE_TYPE_UNBUILDABLE           = ConvertMoveType(64)
-    
+
     // Target Flag
     constant targetflag     TARGET_FLAG_NONE                = ConvertTargetFlag(1)
     constant targetflag     TARGET_FLAG_GROUND              = ConvertTargetFlag(2)
@@ -4109,7 +4117,7 @@ native DestroyCommandButtonEffect                  takes commandbuttoneffect whi
 // Bit Operations
 native BlzBitOr                                    takes integer x, integer y returns integer
 native BlzBitAnd                                   takes integer x, integer y returns integer
-native BlzBitXor                                   takes integer x, integer y returns integer 
+native BlzBitXor                                   takes integer x, integer y returns integer
 
 // Intanced Object Operations
 // Ability
@@ -4146,7 +4154,7 @@ native BlzRemoveAbilityIntegerLevelArrayField      takes ability whichAbility, a
 native BlzRemoveAbilityRealLevelArrayField         takes ability whichAbility, abilityreallevelarrayfield whichField, integer level, real value returns boolean
 native BlzRemoveAbilityStringLevelArrayField       takes ability whichAbility, abilitystringlevelarrayfield whichField, integer level, string value returns boolean
 
-// Item 
+// Item
 native BlzGetItemAbilityByIndex                    takes item whichItem, integer index returns ability
 native BlzGetItemAbility                           takes item whichItem, integer abilCode returns ability
 native BlzItemAddAbility                           takes item whichItem, integer abilCode returns boolean
@@ -4160,7 +4168,7 @@ native BlzSetItemRealField                         takes item whichItem, itemrea
 native BlzSetItemStringField                       takes item whichItem, itemstringfield whichField, string value returns boolean
 native BlzItemRemoveAbility                        takes item whichItem, integer abilCode returns boolean
 
-// Unit 
+// Unit
 native BlzGetUnitBooleanField                      takes unit whichUnit, unitbooleanfield whichField returns boolean
 native BlzGetUnitIntegerField                      takes unit whichUnit, unitintegerfield whichField returns integer
 native BlzGetUnitRealField                         takes unit whichUnit, unitrealfield whichField returns real
@@ -4195,3 +4203,21 @@ native BlzCreateDestructableZWithSkin              takes integer objectid, real 
 native BlzCreateDeadDestructableWithSkin           takes integer objectid, real x, real y, real face, real scale, integer variation, integer skinId returns destructable
 native BlzCreateDeadDestructableZWithSkin          takes integer objectid, real x, real y, real z, real face, real scale, integer variation, integer skinId returns destructable
 native BlzGetPlayerTownHallCount                   takes player whichPlayer returns integer
+
+
+// 1.33
+
+native BlzQueueImmediateOrderById      takes unit whichUnit, integer order returns boolean
+native BlzQueuePointOrderById          takes unit whichUnit, integer order, real x, real y returns boolean
+native BlzQueueTargetOrderById         takes unit whichUnit, integer order, widget targetWidget returns boolean
+native BlzQueueInstantPointOrderById   takes unit whichUnit, integer order, real x, real y, widget instantTargetWidget returns boolean
+native BlzQueueInstantTargetOrderById  takes unit whichUnit, integer order, widget targetWidget, widget instantTargetWidget returns boolean
+native BlzQueueBuildOrderById          takes unit whichPeon, integer unitId, real x, real y returns boolean
+native BlzQueueNeutralImmediateOrderById   takes player forWhichPlayer,unit neutralStructure, integer unitId returns boolean
+native BlzQueueNeutralPointOrderById       takes player forWhichPlayer,unit neutralStructure, integer unitId, real x, real y returns boolean
+native BlzQueueNeutralTargetOrderById      takes player forWhichPlayer,unit neutralStructure, integer unitId, widget target returns boolean
+native BlzGetUnitOrderCount takes unit whichUnit returns integer
+native BlzUnitClearOrders takes unit whichUnit, boolean onlyQueued returns nothing
+native BlzUnitForceStopOrder takes unit whichUnit, boolean clearQueue returns nothing
+native StartSoundEx takes sound soundHandle, boolean fadeIn returns nothing
+native BlzGetAbilityId                             takes ability whichAbility returns integer
