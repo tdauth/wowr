@@ -8,7 +8,7 @@ This map is not a recreation of the game World of Warcraft but is inspired and u
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr2.1.w3x)
+* [Current development version](./wowr3.0.w3x)
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
@@ -32,27 +32,40 @@ It is always more fun if you communicate with other players and think of your ow
 
 This version provides several new features compared to the original map [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/):
 
-* 24 players instead of 10.
+* Increased player number with different player forces.
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.
-* New neutral buildings: Outland portals on land and sea all over the map connecting the whole world, Arcane Academy of Theramore, Clan House, Goblin Bank.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous.
+* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge
+* New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
+* New appearing bosses: Deathwing, Cenarius.
+* New hero standard abilities: Magic Sentry, Repair, Dark Summoning.
+* New areas: Outland, Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, New island next to Maelstrom with new boss Sea Witch, Pandaria, Dalaran, Sylvanas Windrunner's place, Elune's place.
+* New start locations: Ironforge, Clan Island
+* New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
+* New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant
+* New mounts: Dragonhawk Mounts, Kodo Beast, Horse.
+* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren.
+* New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse.
+* New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost
+* New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
+* New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter, Improved Trading
+* New neutral buildings: Outland portals on land and sea all over the map connecting the whole world, Arcane Academy of Theramore, Clan House, Goblin Bank, Water Gold Mine, Tomes Library, Zoo, Bonus Book Shop, Goblin Merchant for Star Wars, Thieves Guild.
+* New creeps: Shivarra, Pirate Battleship, Reaver, Core Hound
+* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI, Potion of Greater Restoration, Restoration Stone, Gold Bar, Board, Branch, Rock, Healing Herb, Mana Herb, Ore, Gold Bar, Magical Item Summoner, Exchange Lumber for Gold, Beast Whistle, Item Locker, Magical Rune Wards, Stasis Traps, Locked Item Summoner, Orb of Wind, Dragon Egg, Jedi Drone, Mana Ward, Orb of Royality, Scroll of the Ghosts of the Sea, Unlimited Bag of Gold, Escape Portal
+* New chat commands: help, repicking, discord, alliances, camera settings, hero suicide, enable/disable hero death sounds, player info, pings, votekick, convert buildings into tiny items, passive mode, save/load, info, camlockon/off, presave, loadp, loadpclan, presaveclans, clans, maxbosslevels, anim, camrpgon/off, sel, zoneson/off, revive, pingm, accounts, enchanter, asave, aload, dice, lightsabercolor, lightsabertype, pingportals, host, pingaistarts, vips, items, pickup, order, h1/2/3, p1/2, r1/2, cooldowns, gaiaon/off, ffa, lobby, auto, unlock, lock, helpping, helpclan, gold, lumber, grail, dig, raceui, baginfoon/off, baguion/off
+* Cheats for testing: orbs, legendary, aicraft, respawnall, idleworker, items, craft
+* New custom systems created only for this map: [Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which is [part of this repository](./systems/), Turret System which is [part of this repository](./systems/). [Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/), [Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/), Group System which is [part of this repository](./systems/), Item Crafting System, [Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/), Jump System, Vote System.
 * Multiple heroes, professions and races at higher hero level.
 * Allow repicking your game mode, hero, race and profession.
-* New chat commands: help, repicking, discord, alliances, camera settings, hero suicide, enable/disable hero death sounds, player info, pings, votekick, convert buildings into tiny items, passive mode, save/load
 * Every hero can learn the ability 'Attribute Bonus'.
 * Increased boss hero levels.
-* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Razormane Chieftain, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Goblin Heavy Tank, Void Lord.
 * Trees have 5000 hitpoints which allows longer harvesting before restoring the trees.
 * Night Elves workers harvest 10 lumber per interval as balance.
 * Race scepter items can be dropped.
-* New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Water Gold Mine, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash.
-* New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
 * Naga villagers can walk on water.
 * Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
-* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf.
-* Added Outland area with a new boss.
-* New Outland area with new start locations, quests and bosses.
 * '-nowin' replaced 'nodefeat'. The game can be won by killing the final boss in the Outland area.
 * Hand of God at higher hero level.
 * Ability 'Reward Freelancer' in all main buildings.
@@ -66,15 +79,10 @@ This version provides several new features compared to the original map [World o
 * Theramore contains a market with killed creeps and dropped items.
 * XP bonus from Tier 2 and Tier 3 for every hero.
 * No Chaos damage for Naga and Blood Elf anymore.
-* New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizens, Engineer, Engineer Ships, Save Masters, Coral Golem, Naga Whaler, Gnomish Submarines, Spellbreakers and Dragonhawk Riders for Human.
 * Blood Elf researches are not visible to Human anymore.
-* New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter
-* New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
 * Hideouts have Portal abilities from the new Portal buildings.
 * Default Computer players The Burning Legion with Demon race, The Alliance with Naga/Blood Elf race and Gaia with rescuable units.
 * Bosses respawn.
-* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI.
-* New professions: Sorcerer, Runeforger, Dragon Breeder.
 * Life and mana regeneration auras of citizens do not stack anymore.
 * Dark Ranger has Black Arrow again instead of Dark Portal based on a [Custom Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
 * Death Knight has Animate Dead again instead of Shadow Word Death.
@@ -89,13 +97,11 @@ This version provides several new features compared to the original map [World o
 * Random events.
 * Hidden bases.
 * Player stats multiboard.
-* New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods.
 * Paladin on Theramore heals non-Undead units.
 * Save/load system.
 * Undead and Night Elf citizens can directly build their goldmines instead of housings.
 * Walls from start bases are invulnerable.
 * Bosses have orbs to attack air units.
-* New areas: Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, New island next to Maelstrom with new boss Sea Witch.
 * Becoming a demigod requires a Nether Dragon.
 * Allow deactivating Divine Shield.
 * Improved custom race support with different music themes and UIs.
@@ -105,20 +111,65 @@ This version provides several new features compared to the original map [World o
 * Clans.
 * Bounties.
 * Item Stacking: Enable Warcraft's Item Stacking and [Custom Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/).
-* New creeps: Shivarra.
-* New mounts: Dragonhawk Mounts.
 * Automatically improve summoned units per hero ability level.
 * Easter Egg.
 * PvP Arena.
-* New player selection based on Taverns with random support moved to the Outland area.
-* Custom Turret System which is [part of this repository](./systems/).
-* [Custom Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/).
-* [Custom Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/).
+* New player selection based on Taverns with random selection support moved to the Outland area.
 * New game options at the start of the game: Game Types, Tomes, Themes.
-* Custom Group System which is [part of this repository](./systems/).
-* Custom Item Crafting System.
-* Custom Vote System.
-* TODO Many 2.1 features are not listed yet.
+* Different Game Modes.
+* Show highest known hero level in Hall of Fame floating text.
+* Balancing changes.
+* New quest log entries describing the game.
+* Increase space for the base at Malfurion.
+* Block certain areas from construction structures like portals.
+* Change hero ability hotkeys to QWER and A for Attribute Bonus.
+* Arcane Academy of Theramore allows changing standard hero ability.
+* Do not highlight hotkeys in the tooltips anymore.
+* Unlock all races and professions at maximum hero level for all heroes.
+* Equipment Bags at higher hero level.
+* Prestored savecodes.
+* RPG key movement system.
+* Feed Boss Heroes.
+* Mailbox on Theramore.
+* Replacing hero abilities for certain heroes.
+* Game setting Tomes.
+* Increase required XP per level.
+* Themes game option.
+* Change model and icon of Human housing to a granary.
+* Neutral building Goblin Merchant at every possible base.
+* Increased stocks of Bundle of Lumber and reduced stock interval.
+* All bosses carry orbs now to attack air units.
+* Creeps do not die in Maelstrom anymore.
+* Stonemaul Arena Master has ability Resistant Skin.
+* Changing the owner of enemies in the arena drops items as well now.
+* Freelancers can collect gold, construct structures and train units.
+* Creep Stormreaver Warlock gets its original abilities back.
+* Reset stats of Undead heroes to default.
+* Creeps spawning in arena do never sleep at night.
+* Custom models for Blood Elf and Night Elf Female Citizens.
+* Citizens have a hotkey now.
+* Give Captured Maiev Spell Immunity to avoid using it as teleport target.
+* Make Undead citizens actually Undead and give them the Restore ability.
+* Fix cooldown of Roar of Stonemaul Arena Master Belt.
+* Pets have a hotkey now.
+* Use hidden icons from Warcraft.
+* Add hero glow to Hand of Destruction.
+* Use a custom treasure model with hero glow and hence a visible team color for items.
+* Neutral Cages buildings "drop" Wind Riders.
+* New building Lever to open/close gates and bridges which won't be used by AI.
+* Added a gate to the World Tree base.
+* Night Elf Runners can cast Reveal now.
+* Add ability Enable Wander to all citizens, pets and summoned Scouts.
+* Disable Wander ability for all citizens and pets by default.
+* Entangled Gold Mine uses a custom icon.
+* Creeps drop items.
+* Fix Shroud of Protection area.
+* Holy Grail.
+* Fix icon of heroes Berserk buff.
+* Custom UIs for different races based on [CustomConsoleUI](https://www.hiveworkshop.com/threads/customconsoleui.328354/) by Tasyen.
+* Add creep spot with blue dragons to Northrend.
+* Customized Engineering Upgrade.
+* Reduced build time of Haunted, Entangled and Enchanted Gold Mines to balance initial mining time.
 
 ## Bug Fixes
 
@@ -127,7 +178,7 @@ This version contains fixes of several bugs from the original map [World of Warc
 * When placing a building at creep spawns, the creeps will respawn when the building is destroyed. In the original map the creeps did never respawn again.
 * The quest with Maiev was bugged in the original map. Maiev could not be moved.
 * Summoned units won't respawn again like regular creeps.
-* Undead housings can be used as Undead goldmines.
+* Undead housings are Haunted Gold Mines.
 
 ## Computer AI
 
@@ -209,6 +260,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowr2.1.w3x](./wowr2.1.w3x) (development version pre 3.0)
 * [wowr2.0.w3x](./wowr2.0.w3x)
 * [wowr1.9.9.w3x](./wowr1.9.9.w3x)
 * [wowr1.9.8.w3x](./wowr1.9.8.w3x)
