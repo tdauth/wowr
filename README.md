@@ -8,7 +8,7 @@ This map is not a recreation of the game World of Warcraft but is inspired and u
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr3.0.w3x)
+* [Current development version](./wowr3.1.w3x)
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
@@ -260,6 +260,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowr3.0.w3x](./wowr3.0.w3x) (final release after a long time developing on 2.1)
 * [wowr2.1.w3x](./wowr2.1.w3x) (development version pre 3.0)
 * [wowr2.0.w3x](./wowr2.0.w3x)
 * [wowr1.9.9.w3x](./wowr1.9.9.w3x)
@@ -762,3 +763,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [BTNGeneralGrievous](https://www.hiveworkshop.com/threads/btngeneralgrievous.56863/)
 * Mike: [Ballista(Catapult)](https://www.hiveworkshop.com/threads/ballista-catapult.244642/)
 * Just_Spectating: [VillagerTauren2.1](https://www.hiveworkshop.com/threads/villagertauren2-1.176765/)
+* Blood Raven: [Bronze Set](https://www.hiveworkshop.com/threads/bronze-set.273293/)
+* HerrDave: [Warcraft Crusader](https://www.hiveworkshop.com/threads/warcraft-crusader.286460/)
+* Mechanical Man: [Hussar](https://www.hiveworkshop.com/threads/hussar.192300/)
