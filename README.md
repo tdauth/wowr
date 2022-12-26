@@ -766,3 +766,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blood Raven: [Bronze Set](https://www.hiveworkshop.com/threads/bronze-set.273293/)
 * HerrDave: [Warcraft Crusader](https://www.hiveworkshop.com/threads/warcraft-crusader.286460/)
 * Mechanical Man: [Hussar](https://www.hiveworkshop.com/threads/hussar.192300/)
+* Spellbound: [UnitEventEx](https://www.hiveworkshop.com/threads/uniteventex.306289/)
+* TriggerHappy: [UnitDex](https://www.hiveworkshop.com/threads/system-unitdex-unit-indexer.248209/)
+* Bannar: [RegisterNativeEvent/RegisterPlayerUnitEvent](https://www.hiveworkshop.com/threads/snippet-registerevent-pack.250266/)
+* Almia: [World Bounds v1.3](https://github.com/nestharus/JASS/blob/master/jass/Systems/WorldBounds/script.j)
