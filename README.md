@@ -37,7 +37,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.
-* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun.
 * New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
@@ -770,3 +770,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * TriggerHappy: [UnitDex](https://www.hiveworkshop.com/threads/system-unitdex-unit-indexer.248209/)
 * Bannar: [RegisterNativeEvent/RegisterPlayerUnitEvent](https://www.hiveworkshop.com/threads/snippet-registerevent-pack.250266/)
 * Almia: [World Bounds v1.3](https://github.com/nestharus/JASS/blob/master/jass/Systems/WorldBounds/script.j)
+* Gottfrei: [Leprechaun](https://www.hiveworkshop.com/threads/leprechaun.114638/)
+* BLazeKraze: [BTNLeprechaun](https://www.hiveworkshop.com/threads/btnleprechaun.251435/)
+* RightField: [rainbow](https://www.hiveworkshop.com/threads/rainbow.47642/)
+* dhguardianes: [Rainbow](https://www.hiveworkshop.com/threads/rainbow.272647/)
+* 8512590215848: [BTNRainbowNegation](https://www.hiveworkshop.com/threads/btnrainbownegation.198259/)
