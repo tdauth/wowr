@@ -790,3 +790,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HerrDave: [Aragorn (WotR)](https://www.hiveworkshop.com/threads/aragorn-wotr.301021/)
 * HerrDave: [Tolkien Elf Heroes (War of the Ring)](https://www.hiveworkshop.com/threads/tolkien-elf-heroes-war-of-the-ring.313957/)
 * HerrDave: [Gimli (War of the Ring)](https://www.hiveworkshop.com/threads/gimli-war-of-the-ring.312429/)
+* HerrDave: [Gondor House](https://www.hiveworkshop.com/threads/gondor-house.340568/)
+* Hantoo: [Chinese Soldier](https://www.hiveworkshop.com/threads/chinese-soldier.264721/)
+* San: [Pick Lock](https://www.hiveworkshop.com/threads/pick-lock.295820/)
