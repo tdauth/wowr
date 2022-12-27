@@ -8,7 +8,7 @@ This map is not a recreation of the game World of Warcraft but is inspired and u
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr3.1.w3x)
+* [Current development version](./wowr3.2.w3x)
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
@@ -37,7 +37,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.
-* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli.
 * New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
@@ -46,7 +46,7 @@ This version provides several new features compared to the original map [World o
 * New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
 * New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant
 * New mounts: Dragonhawk Mounts, Kodo Beast, Horse.
-* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren.
+* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth.
 * New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse.
 * New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost
 * New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
@@ -260,6 +260,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowr3.0.w3x](./wowr3.1.w3x)
 * [wowr3.0.w3x](./wowr3.0.w3x) (final release after a long time developing on 2.1)
 * [wowr2.1.w3x](./wowr2.1.w3x) (development version pre 3.0)
 * [wowr2.0.w3x](./wowr2.0.w3x)
@@ -775,3 +776,17 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * RightField: [rainbow](https://www.hiveworkshop.com/threads/rainbow.47642/)
 * dhguardianes: [Rainbow](https://www.hiveworkshop.com/threads/rainbow.272647/)
 * 8512590215848: [BTNRainbowNegation](https://www.hiveworkshop.com/threads/btnrainbownegation.198259/)
+* HerrDave: [Hobbit Hole](https://www.hiveworkshop.com/threads/hobbit-hole.340566/)
+* HerrDave: [Hobbit Pack (Lotr)](https://www.hiveworkshop.com/threads/hobbit-pack-lotr.337169/)
+* HerrDave: [Gondorian Pack](https://www.hiveworkshop.com/threads/gondorian-pack.315889/)
+* HerrDave, Tamplier: [Gondor Barracks (WotR)](https://www.hiveworkshop.com/threads/gondor-barracks-wotr.309418/)
+* HerrDave: [Fountain Guard](https://www.hiveworkshop.com/threads/fountain-guard.315695/)
+* HerrDave: [LotR Tower Pack](https://www.hiveworkshop.com/threads/lotr-tower-pack.340567/)
+* HerrDave: [Wilderness Outpost](https://www.hiveworkshop.com/threads/wilderness-outpost.314346/)
+* HerrDave: [Rohan Doodads](https://www.hiveworkshop.com/threads/rohan-doodads.318118/)
+* HerrDave: [Riders of Rohan (War of the Ring)](https://www.hiveworkshop.com/threads/riders-of-rohan-war-of-the-ring.314623/)
+* HerrDave: [Rohan Archer (War of the Ring)](https://www.hiveworkshop.com/threads/rohan-archer-war-of-the-ring.291677/)
+* HerrDave: [Men of the West: Heroes (War of the Ring)](https://www.hiveworkshop.com/threads/men-of-the-west-heroes-war-of-the-ring.314379/)
+* HerrDave: [Aragorn (WotR)](https://www.hiveworkshop.com/threads/aragorn-wotr.301021/)
+* HerrDave: [Tolkien Elf Heroes (War of the Ring)](https://www.hiveworkshop.com/threads/tolkien-elf-heroes-war-of-the-ring.313957/)
+* HerrDave: [Gimli (War of the Ring)](https://www.hiveworkshop.com/threads/gimli-war-of-the-ring.312429/)
