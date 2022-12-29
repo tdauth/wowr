@@ -835,3 +835,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * mikeisman2: [BTNNuclearExplosion](https://www.hiveworkshop.com/threads/btnnuclearexplosion.200971/)
 * General Frank: [BTNTerranBunker](https://www.hiveworkshop.com/threads/btnterranbunker.57174/)
 * HerrDave: [American Officer Pack](https://www.hiveworkshop.com/threads/american-officer-pack.316910/)
+* HerrDave: [Breeland Militia (Lord of the Rings Online)](https://www.hiveworkshop.com/threads/breeland-militia-lord-of-the-rings-online.311794/)
+* HerrDave: [Forge (WotR)](https://www.hiveworkshop.com/threads/forge-wotr.309419/)
+* HerrDave: [RoyalDwarf](https://www.hiveworkshop.com/threads/royaldwarf.262722/)
+* Mister_Haudrauf: [Monument Of Honor / Altar of Honor](https://www.hiveworkshop.com/threads/monument-of-honor-altar-of-honor.292154/)
