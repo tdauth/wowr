@@ -37,7 +37,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.
-* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins, U. S. General.
 * New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
@@ -821,3 +821,16 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Fingolfin: [Su-35 Super Flanker](https://www.hiveworkshop.com/threads/su-35-super-flanker.265708/)
 * Illidan(Evil)X: [T-90S Modernized](https://www.hiveworkshop.com/threads/t-90s-modernized.258521/)
 * Illidan(Evil)X: [Rocket Launcher Vehicle](https://www.hiveworkshop.com/threads/rocket-launcher-vehicle.50445/)
+* Kofi_Banan: [Humvee](https://www.hiveworkshop.com/threads/humvee.48319/)
+* Kofi_Banan: [CargoHeliV2](https://www.hiveworkshop.com/threads/cargoheliv2.48272/)
+* Mr. Bob: [Shipyard](https://www.hiveworkshop.com/threads/shipyard.97479/)
+* Illidan(Evil)X: [Upgradeable Missile Launcher](https://www.hiveworkshop.com/threads/upgradeable-missile-launcher.50343/)
+* Illidan(Evil)X: [Cobra Attack Helicopter](https://www.hiveworkshop.com/threads/cobra-attack-helicopter.48640/)
+* Afronight_76: [FlyingMachine](https://www.hiveworkshop.com/threads/flyingmachine.47845/)
+* Kofi_Banan: [Sam-Rocket](https://www.hiveworkshop.com/threads/sam-rocket.51668/)
+* Illidan(Evil)X: [Aircraft Carrier](https://www.hiveworkshop.com/threads/aircraft-carrier.50054/)
+* killst4r: [Nuclear Silo2](https://www.hiveworkshop.com/threads/nuclear-silo2.47314/)
+* WILL THE ALMIGHTY: [NuclearExplosion](https://www.hiveworkshop.com/threads/nuclearexplosion.51829/)
+* mikeisman2: [BTNNuclearExplosion](https://www.hiveworkshop.com/threads/btnnuclearexplosion.200971/)
+* General Frank: [BTNTerranBunker](https://www.hiveworkshop.com/threads/btnterranbunker.57174/)
+* HerrDave: [American Officer Pack](https://www.hiveworkshop.com/threads/american-officer-pack.316910/)
