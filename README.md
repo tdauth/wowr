@@ -839,3 +839,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HerrDave: [Forge (WotR)](https://www.hiveworkshop.com/threads/forge-wotr.309419/)
 * HerrDave: [RoyalDwarf](https://www.hiveworkshop.com/threads/royaldwarf.262722/)
 * Mister_Haudrauf: [Monument Of Honor / Altar of Honor](https://www.hiveworkshop.com/threads/monument-of-honor-altar-of-honor.292154/)
+* The_Silent: [BTNMetallurgy](https://www.hiveworkshop.com/threads/btnmetallurgy.323984/)
