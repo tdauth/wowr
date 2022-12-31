@@ -38,7 +38,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero ability levels.
 * Backpack system.
 * New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins, U. S. General.
-* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament.
+* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
 * New hero standard abilities: Magic Sentry, Repair, Dark Summoning.
@@ -53,7 +53,7 @@ This version provides several new features compared to the original map [World o
 * New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter, Improved Trading
 * New neutral buildings: Outland portals on land and sea all over the map connecting the whole world, Arcane Academy of Theramore, Clan House, Goblin Bank, Water Gold Mine, Tomes Library, Zoo, Bonus Book Shop, Goblin Merchant for Star Wars, Thieves Guild, Chest.
 * New creeps: Shivarra, Pirate Battleship, Reaver, Core Hound.
-* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI, Potion of Greater Restoration, Restoration Stone, Gold Bar, Board, Branch, Rock, Healing Herb, Mana Herb, Ore, Gold Bar, Magical Item Summoner, Exchange Lumber for Gold, Beast Whistle, Item Locker, Magical Rune Wards, Stasis Traps, Locked Item Summoner, Orb of Wind, Dragon Egg, Jedi Drone, Mana Ward, Orb of Royality, Scroll of the Ghosts of the Sea, Unlimited Bag of Gold, Escape Portal, Random Artifact, Lock Pick.
+* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI, Potion of Greater Restoration, Restoration Stone, Gold Bar, Board, Branch, Rock, Healing Herb, Mana Herb, Ore, Gold Bar, Magical Item Summoner, Exchange Lumber for Gold, Beast Whistle, Item Locker, Magical Rune Wards, Stasis Traps, Locked Item Summoner, Orb of Wind, Dragon Egg, Jedi Drone, Mana Ward, Orb of Royality, Scroll of the Ghosts of the Sea, Unlimited Bag of Gold, Escape Portal, Random Artifact, Lock Pick, Spell Book.
 * New chat commands: help, repicking, discord, alliances, camera settings, hero suicide, enable/disable hero death sounds, player info, pings, votekick, convert buildings into tiny items, passive mode, save/load, info, camlockon/off, presave, loadp, loadpclan, presaveclans, clans, maxbosslevels, anim, camrpgon/off, sel, zoneson/off, revive, pingm, accounts, enchanter, asave, aload, dice, lightsabercolor, lightsabertype, pingportals, host, pingaistarts, vips, items, pickup, order, h1/2/3, p1/2, r1/2, cooldowns, gaiaon/off, ffa, lobby, auto, unlock, lock, helpping, helpclan, gold, lumber, grail, dig, raceui, baginfoon/off, baguion/off, playercolor, rename, scale, tomes, notomes.
 * New custom systems created only for this map: [Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which is [part of this repository](./systems/), Turret System which is [part of this repository](./systems/). [Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/), [Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/), Group System which is [part of this repository](./systems/), Item Crafting System, [Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/), Jump System, Vote System.
 * Multiple heroes, professions and races at higher hero level.
@@ -842,3 +842,15 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Silent: [BTNMetallurgy](https://www.hiveworkshop.com/threads/btnmetallurgy.323984/)
 * Kuhneghetz: [BTNRun](https://www.hiveworkshop.com/threads/btnrun.168817/)
 * Kuhneghetz: [White Tiger](https://www.hiveworkshop.com/threads/white-tiger.92913/)
+* ILH: [Satelite](https://www.hiveworkshop.com/threads/satelite.269840/)
+* WILL THE ALMIGHTY: [Laser Strike](https://www.hiveworkshop.com/threads/laser-strike.51830/)
+* WILL THE ALMIGHTY: [BTNLaser](https://www.hiveworkshop.com/threads/btnlaser.58583/)
+* kola: [BTNEarthFixed](https://www.hiveworkshop.com/threads/btnearthfixed.154070/)
+* The_Silent: [Flamethrower Turret](https://www.hiveworkshop.com/threads/flamethrower-turret.199707/)
+* Zombie: [BTNmachinegun](https://www.hiveworkshop.com/threads/btnmachinegun.123807/)
+* Burning_Dragoon5: [Guardmen medic](https://www.hiveworkshop.com/threads/guardmen-medic.99950/)
+* www.icrc.org: [Red Cross](https://en.wikipedia.org/wiki/International_Red_Cross_and_Red_Crescent_Movement#/media/File:Red_Cross,_Red_Crescent,_Red_Crystal_logo.svg), [Red Cross](https://www.hiveworkshop.com/threads/red-cross.346737/)
+* Illidan(Evil)X: [BTNJeep](https://www.hiveworkshop.com/threads/btnjeep.57658/)
+* Deon: [BTNHeli](https://www.hiveworkshop.com/threads/btnheli.120259/)
+* Blizzard Entertainment, genin32: [BTNTent](https://www.hiveworkshop.com/threads/btntent.251632/)
+* lieutang: [BTNAirFighterPilot](https://www.hiveworkshop.com/threads/btnairfighterpilot.123344/)
