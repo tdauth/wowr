@@ -38,7 +38,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero ability levels.
 * Backpack system.
 * New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins, U. S. General.
-* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura.
+* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
 * New hero standard abilities: Magic Sentry, Repair, Dark Summoning.
@@ -50,7 +50,7 @@ This version provides several new features compared to the original map [World o
 * New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse.
 * New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost, Anti Air Wall, Spell Book.
 * New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
-* New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter, Improved Trading
+* New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter, Improved Trading, Dragon Roost.
 * New neutral buildings: Outland portals on land and sea all over the map connecting the whole world, Arcane Academy of Theramore, Clan House, Goblin Bank, Water Gold Mine, Tomes Library, Zoo, Bonus Book Shop, Goblin Merchant for Star Wars, Thieves Guild, Chest.
 * New creeps: Shivarra, Pirate Battleship, Reaver, Core Hound.
 * New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI, Potion of Greater Restoration, Restoration Stone, Gold Bar, Board, Branch, Rock, Healing Herb, Mana Herb, Ore, Gold Bar, Magical Item Summoner, Exchange Lumber for Gold, Beast Whistle, Item Locker, Magical Rune Wards, Stasis Traps, Locked Item Summoner, Orb of Wind, Dragon Egg, Jedi Drone, Mana Ward, Orb of Royality, Scroll of the Ghosts of the Sea, Unlimited Bag of Gold, Escape Portal, Random Artifact, Lock Pick, Spell Book.
@@ -163,6 +163,7 @@ This version provides several new features compared to the original map [World o
 * Entangled Gold Mine uses a custom icon.
 * Creeps drop items.
 * Fix Shroud of Protection area.
+* Hero spells can be customized for certain heroes.
 * Holy Grail.
 * Fix icon of heroes Berserk buff.
 * Custom UIs for different races based on [CustomConsoleUI](https://www.hiveworkshop.com/threads/customconsoleui.328354/) by Tasyen.
@@ -873,3 +874,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Zombie: [BTNsatchel](https://www.hiveworkshop.com/threads/btnsatchel.121971/)
 * oh_snap: [Btnm24](https://www.hiveworkshop.com/threads/btnm24.123740/)
 * Kofi_Banan: [Apache](https://www.hiveworkshop.com/threads/apache.53305/)
+* Mc !: [Arcane Tome](https://www.hiveworkshop.com/threads/arcane-tome.47636/)
