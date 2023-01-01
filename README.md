@@ -869,3 +869,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Fingolfin: [Flashbang](https://www.hiveworkshop.com/threads/flashbang.250123/)
 * ChirusHighwind: [BTNTarget](https://www.hiveworkshop.com/threads/btntarget.57131/)
 * The_Silent: [Survival Ministructure: Shelter](https://www.hiveworkshop.com/threads/survival-ministructure-shelter.289994/)
+* Kitabatake: [Grenade (attachment)](https://www.hiveworkshop.com/threads/grenade-attachment.88697/)
+* Zombie: [BTNsatchel](https://www.hiveworkshop.com/threads/btnsatchel.121971/)
+* oh_snap: [Btnm24](https://www.hiveworkshop.com/threads/btnm24.123740/)
+* Kofi_Banan: [Apache](https://www.hiveworkshop.com/threads/apache.53305/)
