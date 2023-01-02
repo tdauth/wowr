@@ -204,6 +204,7 @@ The following files are imported into the map whenever they are updated. They co
 * [HighElf.ai](./ai/HighElf.ai)
 * [Dalaran.ai](./ai/Dalaran.ai)
 * [KulTiras.ai](./ai/KulTiras.ai)
+* [ModernWarfare.ai](./ai/ModernWarfare.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 
@@ -887,3 +888,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Kofi_Banan: [Vulcan](https://www.hiveworkshop.com/threads/vulcan.51632/)
 * BLazeKraze: [Bandit Hide](https://www.hiveworkshop.com/threads/bandit-hide.289286/)
 * WILL THE ALMIGHTY: [Ultimate Explosion --- Ground-based explosion](https://www.hiveworkshop.com/threads/ultimate-explosion-ground-based-explosion.48747/)
+* olofmoleman: [AT-AT Walker](https://www.hiveworkshop.com/threads/at-at-model.65011/#post-581847)
+* JB_McKnight: [Formal Villager](https://www.hiveworkshop.com/threads/formal-villager.234866/)
