@@ -884,3 +884,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Silent: [BTNMotor](https://www.hiveworkshop.com/threads/btnmotor.122969/)
 * purparisien: [Brick Tower](https://www.hiveworkshop.com/threads/brick-tower.332844/)
 * Kofi_Banan: [Vulcan](https://www.hiveworkshop.com/threads/vulcan.51632/)
+* BLazeKraze: [Bandit Hide](https://www.hiveworkshop.com/threads/bandit-hide.289286/)
+* WILL THE ALMIGHTY: [Ultimate Explosion --- Ground-based explosion](https://www.hiveworkshop.com/threads/ultimate-explosion-ground-based-explosion.48747/)
