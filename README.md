@@ -8,7 +8,7 @@ This map is not a recreation of the game World of Warcraft but is inspired and u
 * [Discord Server](https://discord.gg/eM34z36)
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr3.3.w3x)
+* [Current development version](./wowr3.4.w3x)
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
@@ -261,6 +261,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowr3.2.w3x](./wowr3.3.w3x)
 * [wowr3.2.w3x](./wowr3.2.w3x)
 * [wowr3.1.w3x](./wowr3.1.w3x)
 * [wowr3.0.w3x](./wowr3.0.w3x) (final release after a long time developing on 2.1)
