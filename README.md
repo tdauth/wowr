@@ -890,3 +890,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * WILL THE ALMIGHTY: [Ultimate Explosion --- Ground-based explosion](https://www.hiveworkshop.com/threads/ultimate-explosion-ground-based-explosion.48747/)
 * olofmoleman: [AT-AT Walker](https://www.hiveworkshop.com/threads/at-at-model.65011/#post-581847)
 * JB_McKnight: [Formal Villager](https://www.hiveworkshop.com/threads/formal-villager.234866/)
+* Fleck: [BTNHerrDaveIndustrialWorker](https://www.hiveworkshop.com/threads/icon-for-industrial-era-worker.346735/#post-3563694)
