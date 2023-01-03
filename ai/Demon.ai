@@ -11,8 +11,8 @@ function BuildingStrategy takes nothing returns nothing
 	call BuildingStrategyStandardTier1()
 
 	call SetBuildUnit( 2, DEMON_HOUSING )
+	call SetBuildUnit( 1, DEMON_FLOATING_ROCKS )
 	call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )
-    call SetBuildUnit( 1, DEMON_FLOATING_ROCKS )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
     call SetBuildUnit( 1, DEMON_ALTAR )
     call SetBuildUnit( 1, DEMON_OBELISK )

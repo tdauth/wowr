@@ -771,7 +771,7 @@ globals
 	// Night ELF
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
-    constant integer ELF_HOUSING                                     = 'h00S'
+    constant integer ELF_HOUSING                                     = 'e016'
 
 	// Blood Elf
 	constant integer BLOOD_ELF_TOWN_HALL                             = 'h009' // town hall	
@@ -1517,9 +1517,12 @@ globals
 	constant integer COMMAND_GIVE_WOOD                               = 4
 	constant integer COMMAND_SHIPS_ON                                = 5
 	constant integer COMMAND_SHIPS_OFF                               = 6
+	constant integer COMMAND_EXPANSIONS                              = 7
 
 	boolean attackEnemyPlayers = true
 	boolean buildShips = false
+	integer townHall = 0
+	integer expansions = 0
 endglobals
 
 //============================================================================
@@ -3941,6 +3944,16 @@ function BuildingStrategyShips takes nothing returns nothing
 	endif
 endfunction
 
+function NotifyOtherPlayers takes string message returns nothing
+    local integer i = 0
+    loop
+        call BlzDisplayChatMessage(Player(GetAiPlayer()),i, message)
+        set i = i + 1
+        exitwhen (i == GetBJMaxPlayers())
+    endloop
+    call DisplayText(GetAiPlayer(), message)
+endfunction
+
 function UpdateWorkers takes nothing returns nothing
 	loop
 		call SetGoldPeons(5 + CountHousings() * 3)
@@ -3949,28 +3962,29 @@ function UpdateWorkers takes nothing returns nothing
 			exitwhen (CommandsWaiting() <= 0)
 			if (GetLastCommand() == COMMAND_ATTACK_PLAYERS_ON) then
 				set attackEnemyPlayers = true
-				call DisplayText(GetAiPlayer(), "I will attack enemy players from now on!")
-				call BlzDisplayChatMessage(Player(GetAiPlayer()), GetLastData(), "I will attack enemy players from now on!")
+				call NotifyOtherPlayers("I will attack enemy players from now on!")
 			elseif (GetLastCommand() == COMMAND_ATTACK_PLAYERS_OFF) then
 				set attackEnemyPlayers = false
-				call DisplayText(GetAiPlayer(), "I won't attack enemy players anymore!")
-				call BlzDisplayChatMessage(Player(GetAiPlayer()), GetLastData(), "I won't attack enemy players anymore!")
+				call NotifyOtherPlayers("I won't attack enemy players anymore!")
 			elseif (GetLastCommand() == COMMAND_GIVE_GOLD) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
-				call DisplayText(GetAiPlayer(), "Here, take my gold!")
+				call NotifyOtherPlayers("Here, take my gold!")
             elseif (GetLastCommand() == COMMAND_GIVE_WOOD) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER, 0)
-				call DisplayText(GetAiPlayer(), "Here, take my wood!")
+				call NotifyOtherPlayers("Here, take my wood!")
             elseif (GetLastCommand() == COMMAND_SHIPS_ON) then
                 set buildShips = true
                 call BuildingStrategyShips()
-                call DisplayText(GetAiPlayer(), "I will start building ships!")
+                call NotifyOtherPlayers("I will start building ships!")
             elseif (GetLastCommand() == COMMAND_SHIPS_OFF) then
                 set buildShips = false
                 call BuildingStrategyShips()
-                call DisplayText(GetAiPlayer(), "I will stop building ships!")
+                call NotifyOtherPlayers("I will stop building ships!")
+            elseif (GetLastCommand() == COMMAND_EXPANSIONS) then
+                set expansions = GetLastData()
+                call NotifyOtherPlayers("I will build " + I2S(expansions) + "expansions!")
 			else
 				//call DisplayText(GetAiPlayer(), "I received an unknown AI command: " + I2S(GetLastCommand()))
 			endif
@@ -3980,7 +3994,6 @@ function UpdateWorkers takes nothing returns nothing
 		call Sleep(10)
 	endloop
 endfunction
-
 
 function AttackWithMount takes nothing returns nothing
 	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
@@ -4155,7 +4168,6 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
     //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
 endfunction
 
-
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, POWER_GENERATOR )
     call SetBuildUnit( 1, ANTIMAGIC_WARD )
@@ -4167,4 +4179,19 @@ function BuildingStrategyStandardTier3 takes nothing returns nothing
 	call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
 	call SetBuildUnit( 1, DRAGON_ROOST )
 	call StartThread(function ResearchHighLevelTier3Researches)
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, townHall)
+        endif
+
+        call Sleep(M1)
+    endloop
+endfunction
+
+function BuildingStrategyStandardExpansions takes integer t returns nothing
+    set townHall = t
+    call StartThread(function BuildExpansions)
 endfunction

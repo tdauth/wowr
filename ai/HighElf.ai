@@ -10,11 +10,11 @@ function BuildingStrategy takes nothing returns nothing
 
 	call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 3, HIGH_ELF_FARM )
 	call SetBuildUnit( 2, HIGH_ELF_HOUSING )
+	call SetBuildUnit( 1, HIGH_ELF_ENCHANTER_TOWER )
+	call SetBuildUnit( 3, HIGH_ELF_FARM )
 	call SetBuildUnit( 2, HIGH_ELF_BARRACKS )
 	call SetBuildUnit( 1, HIGH_ELF_ALTAR )
-	call SetBuildUnit( 1, HIGH_ELF_ENCHANTER_TOWER )
 	call SetBuildUnit( 1, HIGH_ELF_BAZAAR )
 
 	call SetBuildUpgr( 1, UPG_DEFEND )

@@ -22,11 +22,11 @@ function BuildingStrategy takes nothing returns nothing
 
 	call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 5, NAGA_CORAL )
 	call SetBuildUnit( 2, NAGA_HOUSING )
+	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
+	call SetBuildUnit( 5, NAGA_CORAL )
 	call SetBuildUnit( 2, NAGA_SPAWNING )
 	call SetBuildUnit( 1, NAGA_ALTAR )
-	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
 	call SetBuildUnit( 1, NAGA_FISH_MARKET )
 
 	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )

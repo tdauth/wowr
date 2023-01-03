@@ -10,11 +10,11 @@ function BuildingStrategy takes nothing returns nothing
 
 	call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 3, HOUSE )
 	call SetBuildUnit( 2, HUMAN_HOUSING )
+	call SetBuildUnit( 1, LUMBER_MILL )
+	call SetBuildUnit( 3, HOUSE )
 	call SetBuildUnit( 2, BARRACKS )
 	call SetBuildUnit( 1, HUMAN_ALTAR )
-	call SetBuildUnit( 1, LUMBER_MILL )
 	call SetBuildUnit( 1, BLACKSMITH )
 	call SetBuildUnit( 1, ARCANE_VAULT )
 	
@@ -78,6 +78,7 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 1, HUMAN_ARCANE_OBSERVATORY )
 
 	call BuildingStrategyStandardTier3()
+	call BuildingStrategyStandardExpansions(TOWN_HALL)
     // **********************************
     // *    End Building Strategy       *
     // **********************************

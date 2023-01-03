@@ -10,11 +10,11 @@ function BuildingStrategy takes nothing returns nothing
 
 	call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 4, MODERNWARFARE_BUNKER )
 	call SetBuildUnit( 2, MODERNWARFARE_HOUSING )
+	call SetBuildUnit( 1, MODERNWARFARE_FACTORY )
+	call SetBuildUnit( 4, MODERNWARFARE_BUNKER )
 	call SetBuildUnit( 1, MODERNWARFARE_BARRACKS )
 	call SetBuildUnit( 1, MODERNWARFARE_ALTAR )
-	call SetBuildUnit( 1, MODERNWARFARE_FACTORY )
 	call SetBuildUnit( 1, MODERNWARFARE_SHOP )
 
 	call SetBuildUpgr( 1, UPG_MODERNWARFARE_MASONRY )
@@ -27,6 +27,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 2 buildings
 	call SetBuildUnit( 1, MODERNWARFARE_VEHICLE_FACTORY )
 	call SetBuildUnit( 1, MODERNWARFARE_HELIPORT )
+	call SetBuildUnit( 3, MODERNWARFARE_RADIO_TOWER )
 	call SetBuildUnit( 2, MODERNWARFARE_MINIGUN_TOWER )
 	call SetBuildUnit( 2, MODERNWARFARE_CITIZEN_FEMALE )
 	call SetBuildUpgr( 2, UPG_MODERNWARFARE_MASONRY )

@@ -9,8 +9,8 @@ function BuildingStrategy takes nothing returns nothing
 	call SetBuildUnit( 17, DALARAN_WORKER )
 	call SetBuildUnit( 2, DALARAN_CITIZEN_MALE )
 
-	call SetBuildUnit( 3, DALARAN_POWER_GENERATOR )
 	call SetBuildUnit( 2, DALARAN_HOUSING )
+	call SetBuildUnit( 3, DALARAN_POWER_GENERATOR )
 	call SetBuildUnit( 2, DALARAN_BARRACKS )
 	call SetBuildUnit( 1, DALARAN_ALTAR )
 	call SetBuildUnit( 1, DALARAN_BLACKSMITH )

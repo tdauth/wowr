@@ -10,8 +10,8 @@ function BuildingStrategy takes nothing returns nothing
 
 	call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 3, HOUSE )
 	call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
+	call SetBuildUnit( 3, HOUSE )
 	call SetBuildUnit( 2, BLOOD_ELF_BARRACKS )
 	call SetBuildUnit( 1, HUMAN_ALTAR )
 	call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )

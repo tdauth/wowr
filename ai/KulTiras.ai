@@ -10,12 +10,12 @@ function BuildingStrategy takes nothing returns nothing
 
 	call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 4, KULTIRAS_HOUSE )
 	call SetBuildUnit( 2, KULTIRAS_HOUSING )
+	call SetBuildUnit( 1, KULTIRAS_LUMBER_MILL )
+	call SetBuildUnit( 4, KULTIRAS_HOUSE )
 	call SetBuildUnit( 1, KULTIRAS_BARRACKS_1 )
 	call SetBuildUnit( 1, KULTIRAS_BARRACKS_2 )
 	call SetBuildUnit( 1, KULTIRAS_ALTAR )
-	call SetBuildUnit( 1, KULTIRAS_LUMBER_MILL )
 	call SetBuildUnit( 1, KULTIRAS_BLACKSMITH )
 	call SetBuildUnit( 1, KULTIRAS_SHOP )
 

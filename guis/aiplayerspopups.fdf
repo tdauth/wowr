@@ -56,6 +56,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Random Naga",     -2,
         MenuItem "Random Dalaran",     -2,
         MenuItem "Random Kul Tiras",     -2,
+        MenuItem "Random Modern Warfare",     -2,
         MenuItem "Paladin",     -2,
         MenuItem "Archmage",     -2,
         MenuItem "Mountain King",     -2,

@@ -10,11 +10,11 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 3, BURROW )
     call SetBuildUnit( 2, ORC_HOUSING )
+    call SetBuildUnit( 1, FORGE )
+    call SetBuildUnit( 3, BURROW )
     call SetBuildUnit( 2, ORC_BARRACKS )
     call SetBuildUnit( 1, ORC_ALTAR )
-    call SetBuildUnit( 1, FORGE )
     call SetBuildUnit( 1, VOODOO_LOUNGE )
 	
 	call SetBuildUpgr( 1, UPG_ORC_MELEE )
