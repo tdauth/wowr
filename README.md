@@ -38,7 +38,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero ability levels.
 * Backpack system.
 * New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins, U. S. General.
-* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes.
+* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes, Shrink.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune
 * New appearing bosses: Deathwing, Cenarius.
 * New hero standard abilities: Magic Sentry, Repair, Dark Summoning.
@@ -171,6 +171,7 @@ This version provides several new features compared to the original map [World o
 * Customized Engineering Upgrade.
 * Reduced build time of Haunted, Entangled and Enchanted Gold Mines to balance initial mining time.
 * Cheats for testing.
+* Custom idle worker detection which is [part of this repository](./systems/).
 
 ## Bug Fixes
 
@@ -891,3 +892,14 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [AT-AT Walker](https://www.hiveworkshop.com/threads/at-at-model.65011/#post-581847)
 * JB_McKnight: [Formal Villager](https://www.hiveworkshop.com/threads/formal-villager.234866/)
 * Fleck: [BTNHerrDaveIndustrialWorker](https://www.hiveworkshop.com/threads/icon-for-industrial-era-worker.346735/#post-3563694)
+* Fingolfin: [Fingolfins Greek Building Pack](https://www.hiveworkshop.com/threads/fingolfins-greek-building-pack.262409/)
+* Bioautomaton: [BTNShrink](https://www.hiveworkshop.com/threads/btnshrink.55531/)
+* Matilda_Knights: [Time Rune](https://www.hiveworkshop.com/threads/time-rune.48644/)
+* terrio: [Time Passing Sound Effect](https://pixabay.com/sound-effects/time-passing-sound-effect-fast-clock-108403/)
+* OgeRfaCes: [BTN.TimeUp](https://www.hiveworkshop.com/threads/btn-timeup.57302/)
+* Blizzard Entertainment: [BTNSpell_Nature_TimeStop](https://www.hiveworkshop.com/threads/btnspell_nature_timestop.54596/)
+* Sellenisko: [NozdormuTheTimelessOne](https://www.hiveworkshop.com/threads/nozdormuthetimelessone.239153/)
+* Sin'dorei300: [BTNNozdormu](https://www.hiveworkshop.com/threads/btnnozdormu.241120/)
+* Golden-Drake: [BTNWingedClock](https://www.hiveworkshop.com/threads/btnwingedclock.171646/)
+* www.textures4photoshop.com: Turnstile texture
+* Kino: [RuneClock](https://www.hiveworkshop.com/threads/runeclock.240537/)
