@@ -2,11 +2,11 @@ function InitHeroTheAlliance takes nothing returns nothing
     if (GetUnitCountDone(ILLIDAN_BONUS_HERO) > 0) then
         set hero_id = ILLIDAN_BONUS_HERO
     endif
-	if (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
+    if (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
         set hero_id2 = LADY_VASHJ_BONUS_HERO
-	endif
-	if (GetUnitCountDone(KAEL_BONUS_HERO) > 0) then
-		set hero_id3 = KAEL_BONUS_HERO
+    endif
+    if (GetUnitCountDone(KAEL_BONUS_HERO) > 0) then
+        set hero_id3 = KAEL_BONUS_HERO
     endif
 endfunction
 
@@ -15,57 +15,57 @@ function BuildingStrategy takes nothing returns nothing
     // *      Building Strategy         *
     // **********************************
     // Tier 1 Buildings
-	call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, NAGA_TEMPLE_1 )
-	call SetBuildUnit( 22, NAGA_SLAVE )
-	call SetBuildUnit( 2, NAGA_CITIZEN_MALE )
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, NAGA_TEMPLE_1 )
+    call SetBuildUnit( 22, NAGA_SLAVE )
+    call SetBuildUnit( 2, NAGA_CITIZEN_MALE )
 
-	call BuildingStrategyStandardTier1()
+    call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 2, NAGA_HOUSING )
-	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
-	call SetBuildUnit( 5, NAGA_CORAL )
-	call SetBuildUnit( 2, NAGA_SPAWNING )
-	call SetBuildUnit( 1, NAGA_ALTAR )
-	call SetBuildUnit( 1, NAGA_FISH_MARKET )
+    call SetBuildUnit( 2, NAGA_HOUSING )
+    call SetBuildUnit( 1, NAGA_MURLOC_HUT )
+    call SetBuildUnit( 5, NAGA_CORAL )
+    call SetBuildUnit( 2, NAGA_SPAWNING )
+    call SetBuildUnit( 1, NAGA_ALTAR )
+    call SetBuildUnit( 1, NAGA_FISH_MARKET )
 
-	call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
-	call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
+    call SetBuildUpgr( 1, UPG_NAGA_ARMOR )
+    call SetBuildUpgr( 1, UPG_NAGA_ATTACK )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, NAGA_TEMPLE )
-	call SetBuildUnit( 1, NAGA_MURLOC_HUT )
-	call SetBuildUnit( 1, NAGA_SHRINE )
-	call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
+    call SetBuildUnit( 1, NAGA_MURLOC_HUT )
+    call SetBuildUnit( 1, NAGA_SHRINE )
+    call SetBuildUnit( 2, NAGA_CITIZEN_FEMALE )
 
-	call SetBuildUpgr( 2, UPG_NAGA_ARMOR )
-	call SetBuildUpgr( 2, UPG_NAGA_ATTACK )
-	call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
-	call SetBuildUpgr( 1, UPG_NAGA_BACKPACK )
-	call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
+    call SetBuildUpgr( 2, UPG_NAGA_ARMOR )
+    call SetBuildUpgr( 2, UPG_NAGA_ATTACK )
+    call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
+    call SetBuildUpgr( 1, UPG_NAGA_BACKPACK )
+    call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, NAGA_TEMPLE_3 )
-	call SetBuildUnit( 3, NAGA_GUARDIAN )
-	call SetBuildUnit( 1, NAGA_SERPENT_PYRAMID )
+    call SetBuildUnit( 3, NAGA_GUARDIAN )
+    call SetBuildUnit( 1, NAGA_SERPENT_PYRAMID )
 
-	call SetBuildUpgr( 3, UPG_NAGA_ARMOR )
-	call SetBuildUpgr( 3, UPG_NAGA_ATTACK )
-	call SetBuildUpgr( 2, UPG_NAGA_ABOLISH )
-	call SetBuildUpgr( 2, UPG_SIREN )
-	call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
+    call SetBuildUpgr( 3, UPG_NAGA_ARMOR )
+    call SetBuildUpgr( 3, UPG_NAGA_ATTACK )
+    call SetBuildUpgr( 2, UPG_NAGA_ABOLISH )
+    call SetBuildUpgr( 2, UPG_SIREN )
+    call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
     call SetBuildUpgr( 1, UPG_STATUE_OF_AZSHARA )
-	call SetBuildUnit( 1, NAGA_STATUE_OF_ASZHARA )
+    call SetBuildUnit( 1, NAGA_STATUE_OF_ASZHARA )
 
-	call BuildingStrategyStandardTier3()
+    call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
 endfunction
 
 function AddStandardUnitsToAttackWaveTheAlliance takes nothing returns nothing
-	call PurchaseZeppelin()
-	call AttackWithMount()
+    call PurchaseZeppelin()
+    call AttackWithMount()
     call CampaignAttacker( 0, 1, hero_id )
     call CampaignAttacker( 0, 1, hero_id2 )
     call CampaignAttacker( 0, 1, hero_id3 )
@@ -169,7 +169,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -182,29 +182,29 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, NAGA_TURTLE )
     call CampaignAttackerEx( 2, 2, 3, NAGA_SIREN )
     call CampaignAttackerEx( 2, 2, 3, NAGA_COUATL )
-	call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
+    call CampaignAttackerEx( 2, 2, 3, NAGA_ROYAL )
     call AddStandardUnitsToAttackWaveTheAlliance()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     loop //Init the infinite attack loop
-		//*** WAVE 12 ***
-		call InitAssaultGroup()
+        //*** WAVE 12 ***
+        call InitAssaultGroup()
 
-		// small ground army
-		call CampaignAttackerEx( 2, 2, 2, NAGA_REAVER )
-		call CampaignAttackerEx( 2, 2, 2, NAGA_SNAP_DRAGON )
-		call CampaignAttackerEx( 2, 2, 2, NAGA_MYRMIDON )
-		call CampaignAttackerEx( 2, 2, 2, NAGA_TURTLE )
-		call CampaignAttackerEx( 2, 2, 2, NAGA_SIREN )
-		call CampaignAttackerEx( 4, 4, 4, NAGA_ROYAL )
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, NAGA_REAVER )
+        call CampaignAttackerEx( 2, 2, 2, NAGA_SNAP_DRAGON )
+        call CampaignAttackerEx( 2, 2, 2, NAGA_MYRMIDON )
+        call CampaignAttackerEx( 2, 2, 2, NAGA_TURTLE )
+        call CampaignAttackerEx( 2, 2, 2, NAGA_SIREN )
+        call CampaignAttackerEx( 4, 4, 4, NAGA_ROYAL )
 
-		// big air army
-		call CampaignAttackerEx( 15, 20, 25, NAGA_COUATL )
+        // big air army
+        call CampaignAttackerEx( 15, 20, 25, NAGA_COUATL )
 
-		call AddStandardUnitsToAttackWaveTheAlliance()
-		call Sleep( M2 ) // Waits 2 minutes before attacking
-		call LaunchAttack()
+        call AddStandardUnitsToAttackWaveTheAlliance()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
     endloop
 endfunction
 
@@ -212,7 +212,7 @@ function main takes nothing returns nothing
     call CampaignAI( NAGA_CORAL, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHeroTheAlliance( )
-	call StartThread(function UpdateWorkers)
+    call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

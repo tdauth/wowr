@@ -1,11 +1,11 @@
 function UpdateWorkersFreelancer takes nothing returns nothing
-	loop
-		call SetGoldPeons(2)
-		call SetWoodPeons(1)
-		call HarvestGold(0, 2)
+    loop
+        call SetGoldPeons(2)
+        call SetWoodPeons(1)
+        call HarvestGold(0, 2)
         call HarvestWood(0, 1)
-		call Sleep(1)
-	endloop
+        call Sleep(1)
+    endloop
 endfunction
 
 function ConfigureAIFreelancer takes nothing returns nothing
@@ -24,37 +24,37 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // *      Building Strategy         *
     // **********************************
-	call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, FOUNTAIN_OF_LIFE )
-	call SetBuildUnit( 1, HIDEOUT )
-	call SetBuildUnit( 3, NEUTRAL_CITIZEN )
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, FOUNTAIN_OF_LIFE )
+    call SetBuildUnit( 1, HIDEOUT )
+    call SetBuildUnit( 3, NEUTRAL_CITIZEN )
 
-	call SetBuildUnit( 2, SHREDDER )
+    call SetBuildUnit( 2, SHREDDER )
 
-	//call SetBuildUnit( 1, FREELANCER_LABORATORY ) // TODO Leads to a crash!
-	//call SetBuildUnit( 1, FREELANCER_SHOP )
-	//call SetBuildUnit( 1, FREELANCER_MERCENARY_CAMP )
-	call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
-	call SetBuildUnit( 1, GUARDIANS_CITADEL )
-	//call SetBuildUnit( 1, POWER_GENERATOR )
-	//call SetBuildUnit( 1, RESEARCH_TENT )
+    //call SetBuildUnit( 1, FREELANCER_LABORATORY ) // TODO Leads to a crash!
+    //call SetBuildUnit( 1, FREELANCER_SHOP )
+    //call SetBuildUnit( 1, FREELANCER_MERCENARY_CAMP )
+    call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
+    call SetBuildUnit( 1, GUARDIANS_CITADEL )
+    //call SetBuildUnit( 1, POWER_GENERATOR )
+    //call SetBuildUnit( 1, RESEARCH_TENT )
 
-	call SetBuildUpgr( 1, UPG_SENTINEL )
+    call SetBuildUpgr( 1, UPG_SENTINEL )
     call SetBuildUpgr( 1, UPG_TEMPLE_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
+    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
     call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MASONRY )
-	call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
-	call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_CHEAP_EVOLUTION )
-	call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_CHEAP_EVOLUTION )
+    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
     // **********************************
     // *    End Building Strategy       *
     // **********************************
 endfunction
 
 function AddStandardUnitsToAttackWaveFreelancer takes nothing returns nothing
-	//call PurchaseZeppelin()
-	call AttackWithMount()
-	call CampaignAttacker( 0, 1, hero_id )
+    //call PurchaseZeppelin()
+    call AttackWithMount()
+    call CampaignAttacker( 0, 1, hero_id )
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -78,8 +78,8 @@ function main takes nothing returns nothing
     call ConfigureAIFreelancer( )
     call InitHero( )
     call StartThread(function UpdateWorkersFreelancer)
-	
-	call BuildingStrategy( )
+    
+    call BuildingStrategy( )
 
     call AttackWaves( )
 endfunction

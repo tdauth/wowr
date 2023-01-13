@@ -734,101 +734,101 @@ globals
     boolean trace_on                = true
     boolean zep_next_wave           = false
     boolean form_group_timeouts     = true
-	
-	// World of Warcraft Reforged
+    
+    // World of Warcraft Reforged
 
-	// Human
+    // Human
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
     constant integer HUMAN_HOUSING                                   = 'h00R'
 
-	constant integer HUMAN_SHIPYARD                                  = 'h010'
-	constant integer HUMAN_TRANSPORT_SHIP                            = 'hbot'
-	constant integer HUMAN_BATTLESHIP                                = 'hbsh'
+    constant integer HUMAN_SHIPYARD                                  = 'h010'
+    constant integer HUMAN_TRANSPORT_SHIP                            = 'hbot'
+    constant integer HUMAN_BATTLESHIP                                = 'hbsh'
 
-	constant integer UPG_HUMAN_BACKPACK                              = 'Rhpm'
-	constant integer UPG_HUMAN_SUNDERING_BLADES                      = 'Rhsb'
-	constant integer UPG_HUMAN_FLARE                                 = 'Rhfl'
-	constant integer UPG_HUMAN_ARCANE_OBSERVATORY                    = 'R022'
+    constant integer UPG_HUMAN_BACKPACK                              = 'Rhpm'
+    constant integer UPG_HUMAN_SUNDERING_BLADES                      = 'Rhsb'
+    constant integer UPG_HUMAN_FLARE                                 = 'Rhfl'
+    constant integer UPG_HUMAN_ARCANE_OBSERVATORY                    = 'R022'
 
-	constant integer HUMAN_ARCANE_OBSERVATORY                        = 'h01Q' // special building
+    constant integer HUMAN_ARCANE_OBSERVATORY                        = 'h01Q' // special building
 
-	// Orc
-	constant integer UPG_FEL                                         = 'R01Y'
+    // Orc
+    constant integer UPG_FEL                                         = 'R01Y'
 
     constant integer ORC_CITIZEN_MALE                                = 'n00I'
     constant integer ORC_CITIZEN_FEMALE                              = 'n00J'
     constant integer ORC_HOUSING                                     = 'h00V'
 
-	constant integer FOUNTAIN_OF_BLOOD                               = 'o00F' // special building
-	constant integer FEL_DRAGON_ROOST                                = 'ndrb'
+    constant integer FOUNTAIN_OF_BLOOD                               = 'o00F' // special building
+    constant integer FEL_DRAGON_ROOST                                = 'ndrb'
 
-	// Undead
+    // Undead
     constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
     constant integer UNDEAD_HOUSING                                  = 'h00U'
 
-	// Night ELF
+    // Night ELF
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
     constant integer ELF_HOUSING                                     = 'e016'
 
-	// Blood Elf
-	constant integer BLOOD_ELF_TOWN_HALL                             = 'h009' // town hall	
-	constant integer BLOOD_ELF_KEEP                                  = 'h00A' // keep
-	constant integer BLOOD_ELF_CASTLE                                = 'h00B' // castle
-	constant integer BLOOD_ELF_SCOUT_TOWER                           = 'h00I' // tower
-	constant integer BLOOD_ELF_ARCANE_SACNTUM                     = 'h00E' // arcane
-	constant integer BLOOD_ELF_ARCANE_VAULT                       = 'h00H' // shop
-	constant integer BLOOD_ELF_BARRACKS                           = 'h00C' // barracks
-	constant integer BLOOD_ELF_BLACK_SMITH                        = 'h00D' // blacksmith
-	constant integer BLOOD_ELF_LUMBER_MILL                        = 'h00F' // lumber mill
-	constant integer BLOOD_ELF_WORKSHOP                           = 'h013' // workshop
-	constant integer BLOOD_ELF_PHOENIX_EGG                        = 'h04P' // aviary
-	constant integer BLOOD_ELF_MAGIC_VAULT                        = 'n038' // special building
+    // Blood Elf
+    constant integer BLOOD_ELF_TOWN_HALL                             = 'h009' // town hall    
+    constant integer BLOOD_ELF_KEEP                                  = 'h00A' // keep
+    constant integer BLOOD_ELF_CASTLE                                = 'h00B' // castle
+    constant integer BLOOD_ELF_SCOUT_TOWER                           = 'h00I' // tower
+    constant integer BLOOD_ELF_ARCANE_SACNTUM                        = 'h00E' // arcane
+    constant integer BLOOD_ELF_ARCANE_VAULT                          = 'h00H' // shop
+    constant integer BLOOD_ELF_BARRACKS                              = 'h00C' // barracks
+    constant integer BLOOD_ELF_BLACK_SMITH                           = 'h00D' // blacksmith
+    constant integer BLOOD_ELF_LUMBER_MILL                           = 'h00F' // lumber mill
+    constant integer BLOOD_ELF_WORKSHOP                              = 'h013' // workshop
+    constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h04P' // aviary
+    constant integer BLOOD_ELF_MAGIC_VAULT                           = 'n038' // special building
 
-	constant integer UPG_BLOOD_ELF_BREEDING                       = 'R000'
-	constant integer UPG_BLOOD_ELF_BOWS                           = 'R009'
-	constant integer UPG_BLOOD_ELF_WOOD                           = 'R006'
-	constant integer UPG_BLOOD_ELF_MASONRY                        = 'R003'
-	constant integer UPG_BLOOD_ELF_MELEE                          = 'R001'
-	constant integer UPG_BLOOD_ELF_ARMOR                          = 'R002'
-	constant integer UPG_BLOOD_ELF_MARKSMAN                       = 'R00A'
-	constant integer UPG_BLOOD_ELF_MOON_ARMOR                     = 'R004'
-	constant integer UPG_BLOOD_ELF_PRAYING                        = 'R007'
-	constant integer UPG_BLOOD_ELF_STR_MOON                       = 'R008'
-	constant integer UPG_BLOOD_ELF_LEATHER                        = 'R005'
-	constant integer UPG_BLOOD_ELF_BURNING_OIL                    = 'R00Y'
-	constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                 = 'R00Z'
-    constant integer UPG_BLOOD_ELF_CONT_MAGIC                     = 'R04A'
-    constant integer UPG_BLOOD_ELF_CLOUD                          = 'R04B'
-    constant integer UPG_BLOOD_ELF_MAGIC_VAULT                    = 'R021' // special building
+    constant integer UPG_BLOOD_ELF_BREEDING                          = 'R000'
+    constant integer UPG_BLOOD_ELF_BOWS                              = 'R009'
+    constant integer UPG_BLOOD_ELF_WOOD                              = 'R006'
+    constant integer UPG_BLOOD_ELF_MASONRY                           = 'R003'
+    constant integer UPG_BLOOD_ELF_MELEE                             = 'R001'
+    constant integer UPG_BLOOD_ELF_ARMOR                             = 'R002'
+    constant integer UPG_BLOOD_ELF_MARKSMAN                          = 'R00A'
+    constant integer UPG_BLOOD_ELF_MOON_ARMOR                        = 'R004'
+    constant integer UPG_BLOOD_ELF_PRAYING                           = 'R007'
+    constant integer UPG_BLOOD_ELF_STR_MOON                          = 'R008'
+    constant integer UPG_BLOOD_ELF_LEATHER                           = 'R005'
+    constant integer UPG_BLOOD_ELF_BURNING_OIL                       = 'R00Y'
+    constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                    = 'R00Z'
+    constant integer UPG_BLOOD_ELF_CONT_MAGIC                        = 'R04A'
+    constant integer UPG_BLOOD_ELF_CLOUD                             = 'R04B'
+    constant integer UPG_BLOOD_ELF_MAGIC_VAULT                       = 'R021' // special building
 
-    constant integer BLOOD_ELF_PRIEST                             = 'h00G'
-	constant integer BLOOD_ELF_LIEUTENANT                         = 'nbel'
-	constant integer BLOOD_ELF_WAGON                              = 'h012'
-	constant integer BLOOD_ELF_BALLISTA                           = 'e00C'
-	constant integer BLOOD_ELF_CAGE                               = 'e00D'
-	constant integer BLOOD_ELF_DRAGON_HAWK                        = 'h04M'
-	constant integer BLOOD_ELF_SPELL_BREAKER                      = 'h04N'
-	constant integer BLOOD_ELF_PHOENIX                            = 'h04O'
+    constant integer BLOOD_ELF_PRIEST                                = 'h00G'
+    constant integer BLOOD_ELF_LIEUTENANT                            = 'nbel'
+    constant integer BLOOD_ELF_WAGON                                 = 'h012'
+    constant integer BLOOD_ELF_BALLISTA                              = 'e00C'
+    constant integer BLOOD_ELF_CAGE                                  = 'e00D'
+    constant integer BLOOD_ELF_DRAGON_HAWK                           = 'h04M'
+    constant integer BLOOD_ELF_SPELL_BREAKER                         = 'h04N'
+    constant integer BLOOD_ELF_PHOENIX                               = 'h04O'
 
-    constant integer BLOOD_ELF_CITIZEN_MALE                       = 'n00K'
-    constant integer BLOOD_ELF_CITIZEN_FEMALE                     = 'n00L'
-    constant integer BLOOD_ELF_HOUSING                            = 'h00T'
+    constant integer BLOOD_ELF_CITIZEN_MALE                          = 'n00K'
+    constant integer BLOOD_ELF_CITIZEN_FEMALE                        = 'n00L'
+    constant integer BLOOD_ELF_HOUSING                               = 'h00T'
 
     // Naga
     constant integer NAGA_TEMPLE_1                                   = 'n05M'
-	constant integer NAGA_TEMPLE_3                                   = 'n05N'
-	constant integer NAGA_MURLOC_HUT                                 = 'o008' // lumber mill and blacksmith
-	constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
-	constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
-	constant integer NAGA_SERPENT_PYRAMID                            = 'n05P'
-	constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
+    constant integer NAGA_TEMPLE_3                                   = 'n05N'
+    constant integer NAGA_MURLOC_HUT                                 = 'o008' // lumber mill and blacksmith
+    constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
+    constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
+    constant integer NAGA_SERPENT_PYRAMID                            = 'n05P'
+    constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
 
-	constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
-	constant integer UPG_NAGA_BACKPACK                               = 'R01E'
-	constant integer UPG_STATUE_OF_AZSHARA                           = 'R02B' // special building
+    constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
+    constant integer UPG_NAGA_BACKPACK                               = 'R01E'
+    constant integer UPG_STATUE_OF_AZSHARA                           = 'R02B' // special building
 
     constant integer NAGA_CITIZEN_MALE                               = 'n00M'
     constant integer NAGA_CITIZEN_FEMALE                             = 'n00N'
@@ -836,56 +836,56 @@ globals
 
     // Demon
     constant integer DEMON_GATE_1                                    = 'u005' // tier 1
-	constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
-	constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
-	constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and farm
-	constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
+    constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
+    constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
+    constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and farm
+    constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
     constant integer DEMON_ALTAR                                     = 'u008'
-	constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
-	constant integer DEMON_DUNGEON_OF_PAIN                           = 'u00C' // sanctum/damned temple
-	constant integer DEMON_FLOATING_ROCKS                            = 'u009' // lumber will and blacksmith
-	constant integer DEMON_OBELISK                                   = 'u00G' // shop
-	constant integer DEMON_PORTAL                                    = 'u00B' // slaughterhouse/barracks for stronger units at tier 2
-	constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
-	constant integer DEMON_LEGION_TRANSPORTER                        = 'u019'
-	constant integer DEMON_SACRIFICAL_PIT                            = 'u01A'
+    constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
+    constant integer DEMON_DUNGEON_OF_PAIN                           = 'u00C' // sanctum/damned temple
+    constant integer DEMON_FLOATING_ROCKS                            = 'u009' // lumber will and blacksmith
+    constant integer DEMON_OBELISK                                   = 'u00G' // shop
+    constant integer DEMON_PORTAL                                    = 'u00B' // slaughterhouse/barracks for stronger units at tier 2
+    constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
+    constant integer DEMON_LEGION_TRANSPORTER                        = 'u019'
+    constant integer DEMON_SACRIFICAL_PIT                            = 'u01A'
 
-	constant integer DEMON_IMP                                       = 'u006' // worker
-	constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
-	constant integer DEMON_FEL_STALKER                               = 'n019' // pit fiend
-	constant integer DEMON_NETHER_DRAKE                              = 'n01B' // gargoyle
-	constant integer DEMON_INFERNAL_MACHINE                          = 'n01C' // meat wagon
-	constant integer DEMON_GREATER_VOID_WALKER                       = 'n01E' // obsidian statue
-	constant integer DEMON_EREDAR_SORCERER                           = 'n014' // necromancer
-	constant integer DEMON_SUCCUBUS                                  = 'n015' // banshee
-	constant integer DEMON_INFERNAL                                  = 'n012' // frost wyrm/tauren
-	constant integer DEMON_INFERNAL_REAVER                           = 'n07R'
-	constant integer DEMON_VOID_REAVER                               = 'n07S'
-	constant integer DEMON_FEL_REAVER                                = 'n07Q'
-	constant integer DEMON_JAILER                                    = 'n08O'
-	constant integer DEMON_INQUISITOR                                = 'n08P'
+    constant integer DEMON_IMP                                       = 'u006' // worker
+    constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
+    constant integer DEMON_FEL_STALKER                               = 'n019' // pit fiend
+    constant integer DEMON_NETHER_DRAKE                              = 'n01B' // gargoyle
+    constant integer DEMON_INFERNAL_MACHINE                          = 'n01C' // meat wagon
+    constant integer DEMON_GREATER_VOID_WALKER                       = 'n01E' // obsidian statue
+    constant integer DEMON_EREDAR_SORCERER                           = 'n014' // necromancer
+    constant integer DEMON_SUCCUBUS                                  = 'n015' // banshee
+    constant integer DEMON_INFERNAL                                  = 'n012' // frost wyrm/tauren
+    constant integer DEMON_INFERNAL_REAVER                           = 'n07R'
+    constant integer DEMON_VOID_REAVER                               = 'n07S'
+    constant integer DEMON_FEL_REAVER                                = 'n07Q'
+    constant integer DEMON_JAILER                                    = 'n08O'
+    constant integer DEMON_INQUISITOR                                = 'n08P'
 
-	constant integer UPG_DEMON_UNHOLY_STR                            = 'R00H'
-	constant integer UPG_DEMON_UNHOLY_ARMOR                          = 'R00R'
-	constant integer UPG_DEMON_CR_ATTACK                             = 'R00S'
-	constant integer UPG_DEMON_CR_ARMOR                              = 'R00T'
-	constant integer UPG_DEMON_WEB                                   = 'R00I'
-	constant integer UPG_DEMON_CLEAVING_ATTACK                       = 'R00L'
-	constant integer UPG_DEMON_DEVOUR_MAGIC                          = 'R00J'
-	constant integer UPG_DEMON_FIRE                                  = 'R00M'
-	constant integer UPG_DEMON_RAIN_OF_FIRE                          = 'R00P'
-	constant integer UPG_DEMON_DEFEND                                = 'R00N'
-	constant integer UPG_DEMON_CRIPPLE                               = 'R00O'
-	constant integer UPG_DEMON_SLOW                                  = 'R00Q'
-	constant integer UPG_DEMON_SUCCUBUS                              = 'R00F'
-	constant integer UPG_DEMON_EREDAR_SORCERER                       = 'R00E'
-	constant integer UPG_DEMON_RESISTANT_SKIN                        = 'R00D'
-	constant integer UPG_DEMON_PERMANENT_IMMOLATION                  = 'R00C'
-	constant integer UPG_DEMON_HARDENED_SKIN                         = 'R00K'
-	constant integer UPG_DEMON_WAR_STOMP                             = 'R06D'
-	constant integer UPG_DEMON_IMPROVED_DEVOUR                       = 'R06F'
-	constant integer UPG_DEMON_ANTI_MAGIC_SHELL                      = 'R06G'
-	constant integer UPG_DEMON_BACKPACK                              = 'R00G'
+    constant integer UPG_DEMON_UNHOLY_STR                            = 'R00H'
+    constant integer UPG_DEMON_UNHOLY_ARMOR                          = 'R00R'
+    constant integer UPG_DEMON_CR_ATTACK                             = 'R00S'
+    constant integer UPG_DEMON_CR_ARMOR                              = 'R00T'
+    constant integer UPG_DEMON_WEB                                   = 'R00I'
+    constant integer UPG_DEMON_CLEAVING_ATTACK                       = 'R00L'
+    constant integer UPG_DEMON_DEVOUR_MAGIC                          = 'R00J'
+    constant integer UPG_DEMON_FIRE                                  = 'R00M'
+    constant integer UPG_DEMON_RAIN_OF_FIRE                          = 'R00P'
+    constant integer UPG_DEMON_DEFEND                                = 'R00N'
+    constant integer UPG_DEMON_CRIPPLE                               = 'R00O'
+    constant integer UPG_DEMON_SLOW                                  = 'R00Q'
+    constant integer UPG_DEMON_SUCCUBUS                              = 'R00F'
+    constant integer UPG_DEMON_EREDAR_SORCERER                       = 'R00E'
+    constant integer UPG_DEMON_RESISTANT_SKIN                        = 'R00D'
+    constant integer UPG_DEMON_PERMANENT_IMMOLATION                  = 'R00C'
+    constant integer UPG_DEMON_HARDENED_SKIN                         = 'R00K'
+    constant integer UPG_DEMON_WAR_STOMP                             = 'R06D'
+    constant integer UPG_DEMON_IMPROVED_DEVOUR                       = 'R06F'
+    constant integer UPG_DEMON_ANTI_MAGIC_SHELL                      = 'R06G'
+    constant integer UPG_DEMON_BACKPACK                              = 'R00G'
 
     constant integer DEMON_CITIZEN_MALE                              = 'n016'
     constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
@@ -893,78 +893,78 @@ globals
 
     // Draenei
     constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
-	constant integer DRAENEI_BARRACKS                                = 'ndh3'
-	constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
-	constant integer DRAENEI_SHOP                                    = 'n01N'
-	constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
-	constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
+    constant integer DRAENEI_BARRACKS                                = 'ndh3'
+    constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
+    constant integer DRAENEI_SHOP                                    = 'n01N'
+    constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
+    constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
 
-	constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
-	constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
-	constant integer DRAENEI_STALKER                                 = 'ndrt' // knight
-	constant integer DRAENEI_SALAMANDER                              = 'n01W' // pit fiend
-	constant integer DRAENEI_SEER                                    = 'n01U' // priest
-	constant integer DRAENEI_HARBINGER                               = 'n01V' // sorceress
-	constant integer DRAENEI_DEMOLISHER                              = 'ncat' // mortar
-	constant integer DRAENEI_NETHER_DRAKE                            = 'n01Q' // gryphon
+    constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
+    constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
+    constant integer DRAENEI_STALKER                                 = 'ndrt' // knight
+    constant integer DRAENEI_SALAMANDER                              = 'n01W' // pit fiend
+    constant integer DRAENEI_SEER                                    = 'n01U' // priest
+    constant integer DRAENEI_HARBINGER                               = 'n01V' // sorceress
+    constant integer DRAENEI_DEMOLISHER                              = 'ncat' // mortar
+    constant integer DRAENEI_NETHER_DRAKE                            = 'n01Q' // gryphon
 
-	constant integer UPG_DRAENEI_DEVOUR                              = 'R018'
-	constant integer UPG_DRAENEI_DEMON_FIRE                          = 'R017'
-	constant integer UPG_DRAENEI_HARBRINGER_ADEPT                    = 'R015'
-	constant integer UPG_DRAENEI_SEER_ADEPT                          = 'R014'
-	constant integer UPG_DRAENEI_IMPROVED_MASONRY                    = 'R016'
-	constant integer UPG_DRAENEI_STEEL_ARMOR                         = 'R013'
-	constant integer UPG_DRAENEI_STEEL_MELEE_WEAPONS                 = 'R011'
-	constant integer UPG_DRAENEI_STEEL_RANGED_WEAPONS                = 'R012'
+    constant integer UPG_DRAENEI_DEVOUR                              = 'R018'
+    constant integer UPG_DRAENEI_DEMON_FIRE                          = 'R017'
+    constant integer UPG_DRAENEI_HARBRINGER_ADEPT                    = 'R015'
+    constant integer UPG_DRAENEI_SEER_ADEPT                          = 'R014'
+    constant integer UPG_DRAENEI_IMPROVED_MASONRY                    = 'R016'
+    constant integer UPG_DRAENEI_STEEL_ARMOR                         = 'R013'
+    constant integer UPG_DRAENEI_STEEL_MELEE_WEAPONS                 = 'R011'
+    constant integer UPG_DRAENEI_STEEL_RANGED_WEAPONS                = 'R012'
 
     constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
     constant integer DRAENEI_HOUSING                                 = 'h011'
 
     // Furbolg
-	constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // tier 1-3
-	constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
-	constant integer FURBOLG_DEFILED_FOUNTAIN                        = 'n02B' // sanctum/damned temple
-	constant integer FURBOLG_LUMBER_CAMP                             = 'h017' // lumber will and blacksmith
-	constant integer FURBOLG_MARKETPLACE                             = 'u00Q' // shop
-	constant integer FURBOLG_WOLVES_CAGE                             = 'n02C' // slaughterhouse/barracks for stronger units at tier 2
-	constant integer FURBOLG_POLAR_HUT                               = 'n02D' // totem/strong units at tier 3
-	constant integer FURBOLG_GREEN_DRAGON_ROOST                      = 'n02R' // totem/strong units at tier 3
-	constant integer FURBOLG_HUT                                     = 'n028' // farm
-	constant integer GUARDING_FURBOLG                                = 'h016' // tower
-	constant integer RESURRECTION_STONE                              = 'h01R' // altar
+    constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // tier 1-3
+    constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
+    constant integer FURBOLG_DEFILED_FOUNTAIN                        = 'n02B' // sanctum/damned temple
+    constant integer FURBOLG_LUMBER_CAMP                             = 'h017' // lumber will and blacksmith
+    constant integer FURBOLG_MARKETPLACE                             = 'u00Q' // shop
+    constant integer FURBOLG_WOLVES_CAGE                             = 'n02C' // slaughterhouse/barracks for stronger units at tier 2
+    constant integer FURBOLG_POLAR_HUT                               = 'n02D' // totem/strong units at tier 3
+    constant integer FURBOLG_GREEN_DRAGON_ROOST                      = 'n02R' // totem/strong units at tier 3
+    constant integer FURBOLG_HUT                                     = 'n028' // farm
+    constant integer GUARDING_FURBOLG                                = 'h016' // tower
+    constant integer RESURRECTION_STONE                              = 'h01R' // altar
 
-	constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
-	constant integer FURBOLG_EX                                      = 'n02E'
-	constant integer FURBOLG_CHAMPION_EX                             = 'n02F'
-	constant integer FURBOLG_ELDER_SHAMAN                            = 'n02G'
-	constant integer FURBOLG_SHAMAN_EX                               = 'n02H'
-	constant integer FURBOLG_TRACKER_EX                              = 'n02I'
-	constant integer FURBOLG_URSA_WARRIOR                            = 'n02J' // tauren
-	constant integer GREEN_DRAKE                                     = 'n02S' // frost wyrm
-	constant integer POLAR_FURBOLG                                   = 'n02K'
-	constant integer POLAR_FURBOLG_CHAMPION                          = 'n02L'
-	constant integer TIMBER_WOLF                                     = 'n02O'
-	constant integer GIANT_WOLF                                      = 'n02M'
-	constant integer DIRE_WOLF                                       = 'n02N'
+    constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
+    constant integer FURBOLG_EX                                      = 'n02E'
+    constant integer FURBOLG_CHAMPION_EX                             = 'n02F'
+    constant integer FURBOLG_ELDER_SHAMAN                            = 'n02G'
+    constant integer FURBOLG_SHAMAN_EX                               = 'n02H'
+    constant integer FURBOLG_TRACKER_EX                              = 'n02I'
+    constant integer FURBOLG_URSA_WARRIOR                            = 'n02J' // tauren
+    constant integer GREEN_DRAKE                                     = 'n02S' // frost wyrm
+    constant integer POLAR_FURBOLG                                   = 'n02K'
+    constant integer POLAR_FURBOLG_CHAMPION                          = 'n02L'
+    constant integer TIMBER_WOLF                                     = 'n02O'
+    constant integer GIANT_WOLF                                      = 'n02M'
+    constant integer DIRE_WOLF                                       = 'n02N'
 
-	constant integer CORRUPTED_FURBOLG                               = 'n02P'
+    constant integer CORRUPTED_FURBOLG                               = 'n02P'
 
-	constant integer UPG_FURBOLG_WEB                                 = 'R01Q'
-	constant integer UPG_FURBOLG_STEEL_RWEAPONS                      = 'R01G'
-	constant integer UPG_FURBOLG_STEEL_WEAPONS                       = 'R01F'
-	constant integer UPG_FURBOLG_STEEL_ARMOR                         = 'R01H'
-	constant integer UPG_FURBOLG_LUMBER                              = 'R01S'
-	constant integer UPG_FURBOLG_SHAMAN                              = 'R01K'
-	constant integer UPG_FURBOLG_ELDER_SHAMAN                        = 'R01L'
-	constant integer UPG_FURBOLG_FAERIE_FIRE                         = 'R01N'
-	constant integer UPG_FURBOLG_ENSNARE                             = 'R01M'
-	constant integer UPG_FURBOLG_CR_ARMOR                            = 'R01J'
-	constant integer UPG_FURBOLG_CR_ATTACK                           = 'R01I'
-	constant integer UPG_FURBOLG_CORRUPTION                          = 'R01R'
-	constant integer UPG_FURBOLG_BLOOD_LUST                          = 'R01O'
-	constant integer UPG_FURBOLG_BASH                                = 'R01P'
-	constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
+    constant integer UPG_FURBOLG_WEB                                 = 'R01Q'
+    constant integer UPG_FURBOLG_STEEL_RWEAPONS                      = 'R01G'
+    constant integer UPG_FURBOLG_STEEL_WEAPONS                       = 'R01F'
+    constant integer UPG_FURBOLG_STEEL_ARMOR                         = 'R01H'
+    constant integer UPG_FURBOLG_LUMBER                              = 'R01S'
+    constant integer UPG_FURBOLG_SHAMAN                              = 'R01K'
+    constant integer UPG_FURBOLG_ELDER_SHAMAN                        = 'R01L'
+    constant integer UPG_FURBOLG_FAERIE_FIRE                         = 'R01N'
+    constant integer UPG_FURBOLG_ENSNARE                             = 'R01M'
+    constant integer UPG_FURBOLG_CR_ARMOR                            = 'R01J'
+    constant integer UPG_FURBOLG_CR_ATTACK                           = 'R01I'
+    constant integer UPG_FURBOLG_CORRUPTION                          = 'R01R'
+    constant integer UPG_FURBOLG_BLOOD_LUST                          = 'R01O'
+    constant integer UPG_FURBOLG_BASH                                = 'R01P'
+    constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
 
     constant integer FURBOLG_CITIZEN_MALE                            = 'n029'
     constant integer FURBOLG_CITIZEN_FEMALE                          = 'n02A'
@@ -974,62 +974,62 @@ globals
     constant integer GOBLIN_TIER_1                                   = 'o00O' // tier 1
     constant integer GOBLIN_TIER_2                                   = 'o022' // tier 2
     constant integer GOBLIN_TIER_3                                   = 'o023' // tier 3
-	constant integer GOBLIN_BARRACKS                                 = 'o011' // barracks
-	constant integer GOBLIN_ARCANE_LABORATORY                        = 'o014' // sanctum/damned temple
-	constant integer GOBLIN_FUEL_PUMP                                = 'o00S' // lumber will and blacksmith
-	constant integer GOBLIN_SHOP                                     = 'o01A' // shop
-	constant integer GOBLIN_TANK_FACTORY                             = 'o00Z' // slaughterhouse/barracks for stronger units at tier 2
-	constant integer GOBLIN_AIR_FIELD                                = 'o00R' // totem/strong units at tier 3
-	constant integer GOBLIN_HUT                                      = 'o019' // farm
-	constant integer GOBLIN_TOWER                                    = 'o00U' // tower
-	constant integer GOBLIN_ROCKET_TOWER_1                           = 'o00W' // tower 1
-	constant integer GOBLIN_ROCKET_TOWER_2                           = 'o00X' // tower 2
-	constant integer GOBLIN_ROCKET_TOWER_3                           = 'o00Y' // tower 3
-	constant integer GOBLIN_ALTAR                                    = 'o00T' // altar
-	constant integer GOBLIN_HEAVY_TANK                               = 'o01G' // special building
+    constant integer GOBLIN_BARRACKS                                 = 'o011' // barracks
+    constant integer GOBLIN_ARCANE_LABORATORY                        = 'o014' // sanctum/damned temple
+    constant integer GOBLIN_FUEL_PUMP                                = 'o00S' // lumber will and blacksmith
+    constant integer GOBLIN_SHOP                                     = 'o01A' // shop
+    constant integer GOBLIN_TANK_FACTORY                             = 'o00Z' // slaughterhouse/barracks for stronger units at tier 2
+    constant integer GOBLIN_AIR_FIELD                                = 'o00R' // totem/strong units at tier 3
+    constant integer GOBLIN_HUT                                      = 'o019' // farm
+    constant integer GOBLIN_TOWER                                    = 'o00U' // tower
+    constant integer GOBLIN_ROCKET_TOWER_1                           = 'o00W' // tower 1
+    constant integer GOBLIN_ROCKET_TOWER_2                           = 'o00X' // tower 2
+    constant integer GOBLIN_ROCKET_TOWER_3                           = 'o00Y' // tower 3
+    constant integer GOBLIN_ALTAR                                    = 'o00T' // altar
+    constant integer GOBLIN_HEAVY_TANK                               = 'o01G' // special building
 
-	constant integer GOBLIN_LABORER                                  = 'h02L' // worker
-	constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
-	constant integer GOBLIN_FLAMETHROWER                             = 'o013'
-	constant integer GOBLIN_FLAME_TANK                               = 'h02D'
-	constant integer GOBLIN_MAGE                                     = 'o010'
-	constant integer GOBLIN_SORCERESS                                = 'o012'
-	constant integer GOBLIN_FLAME_SHREDDER                           = 'o00V'
-	constant integer GOBLIN_ASSAULT_TANK                             = 'h02F'
-	constant integer GOBLIN_WAR_ZEPPELIN                             = 'n03T' // frost wyrm
-	constant integer GOBLIN_AIR_DRONE                                = 'h02G'
-	constant integer GOBLIN_SAPPER                                   = 'n03V'
-	constant integer OGRE_GOBLIN_SQUAD                               = 'o01C'
-	constant integer GOBLIN_EMPEROR                                  = 'h02E' // tauren
-	constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // Obsidian Statue
+    constant integer GOBLIN_LABORER                                  = 'h02L' // worker
+    constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
+    constant integer GOBLIN_FLAMETHROWER                             = 'o013'
+    constant integer GOBLIN_FLAME_TANK                               = 'h02D'
+    constant integer GOBLIN_MAGE                                     = 'o010'
+    constant integer GOBLIN_SORCERESS                                = 'o012'
+    constant integer GOBLIN_FLAME_SHREDDER                           = 'o00V'
+    constant integer GOBLIN_ASSAULT_TANK                             = 'h02F'
+    constant integer GOBLIN_WAR_ZEPPELIN                             = 'n03T' // frost wyrm
+    constant integer GOBLIN_AIR_DRONE                                = 'h02G'
+    constant integer GOBLIN_SAPPER                                   = 'n03V'
+    constant integer OGRE_GOBLIN_SQUAD                               = 'o01C'
+    constant integer GOBLIN_EMPEROR                                  = 'h02E' // tauren
+    constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // Obsidian Statue
 
-	constant integer UPG_GOBLIN_STEEL_RWEAPONS                       = 'R033'
-	constant integer UPG_GOBLIN_STEEL_WEAPONS                        = 'R02M'
-	constant integer UPG_GOBLIN_STEEL_ARMOR                          = 'R031'
-	constant integer UPG_GOBLIN_ALCHEMIST_ADEPT                      = 'R036'
-	constant integer UPG_GOBLIN_MAGE_ADEPT                           = 'R037'
-	constant integer UPG_GOBLIN_SORCERESS_ADEPT                      = 'R038'
-	constant integer UPG_GOBLIN_AIR_SUPPLIES                         = 'R02H'
-	constant integer UPG_GOBLIN_BARRAGE                              = 'R02N'
-	constant integer UPG_GOBLIN_CHEMISTRY                            = 'R02L'
-	constant integer UPG_GOBLIN_CLUSTER_ROCKETS                      = 'R02Y'
-	constant integer UPG_GOBLIN_CUT_DOWN_TREES                       = 'R039'
-	constant integer UPG_GOBLIN_DEMOLISH                             = 'R02R'
-	constant integer UPG_GOBLIN_ENGINEERING                          = 'R02S'
-	constant integer UPG_GOBLIN_EXPLOSIVE_BARREL                     = 'R02W'
-	constant integer UPG_GOBLIN_EXPLOSIVES                           = 'R02J'
-	constant integer UPG_GOBLIN_FLAME_GRENADES                       = 'R02T'
-	constant integer UPG_GOBLIN_BURNING_OIL                          = 'R04P'
-	constant integer UPG_GOBLIN_FUEL                                 = 'R02Q'
-	constant integer UPG_GOBLIN_WAR_ZEPPELIN_BOMBS                   = 'R034'
-	constant integer UPG_GOBLIN_IMPROVED_CONSTRUCTION                = 'R030'
-	constant integer UPG_GOBLIN_MOBILE_TURRET                        = 'R02U'
-	constant integer UPG_GOBLIN_OBSERVATORY                          = 'R02I'
-	constant integer UPG_GOBLIN_OIL_DRILLING                         = 'R02V'
-	constant integer UPG_GOBLIN_REPAIR                               = 'R02K'
-	constant integer UPG_GOBLIN_BANKING                              = 'R02P'
-	constant integer UPG_GOBLIN_LUMBER                               = 'R02O'
-	constant integer UPG_GOBLIN_BACKPACK                             = 'R02G'
+    constant integer UPG_GOBLIN_STEEL_RWEAPONS                       = 'R033'
+    constant integer UPG_GOBLIN_STEEL_WEAPONS                        = 'R02M'
+    constant integer UPG_GOBLIN_STEEL_ARMOR                          = 'R031'
+    constant integer UPG_GOBLIN_ALCHEMIST_ADEPT                      = 'R036'
+    constant integer UPG_GOBLIN_MAGE_ADEPT                           = 'R037'
+    constant integer UPG_GOBLIN_SORCERESS_ADEPT                      = 'R038'
+    constant integer UPG_GOBLIN_AIR_SUPPLIES                         = 'R02H'
+    constant integer UPG_GOBLIN_BARRAGE                              = 'R02N'
+    constant integer UPG_GOBLIN_CHEMISTRY                            = 'R02L'
+    constant integer UPG_GOBLIN_CLUSTER_ROCKETS                      = 'R02Y'
+    constant integer UPG_GOBLIN_CUT_DOWN_TREES                       = 'R039'
+    constant integer UPG_GOBLIN_DEMOLISH                             = 'R02R'
+    constant integer UPG_GOBLIN_ENGINEERING                          = 'R02S'
+    constant integer UPG_GOBLIN_EXPLOSIVE_BARREL                     = 'R02W'
+    constant integer UPG_GOBLIN_EXPLOSIVES                           = 'R02J'
+    constant integer UPG_GOBLIN_FLAME_GRENADES                       = 'R02T'
+    constant integer UPG_GOBLIN_BURNING_OIL                          = 'R04P'
+    constant integer UPG_GOBLIN_FUEL                                 = 'R02Q'
+    constant integer UPG_GOBLIN_WAR_ZEPPELIN_BOMBS                   = 'R034'
+    constant integer UPG_GOBLIN_IMPROVED_CONSTRUCTION                = 'R030'
+    constant integer UPG_GOBLIN_MOBILE_TURRET                        = 'R02U'
+    constant integer UPG_GOBLIN_OBSERVATORY                          = 'R02I'
+    constant integer UPG_GOBLIN_OIL_DRILLING                         = 'R02V'
+    constant integer UPG_GOBLIN_REPAIR                               = 'R02K'
+    constant integer UPG_GOBLIN_BANKING                              = 'R02P'
+    constant integer UPG_GOBLIN_LUMBER                               = 'R02O'
+    constant integer UPG_GOBLIN_BACKPACK                             = 'R02G'
 
     constant integer GOBLIN_CITIZEN_MALE                             = 'n03Y'
     constant integer GOBLIN_CITIZEN_FEMALE                           = 'n03Z'
@@ -1037,63 +1037,63 @@ globals
 
     // Dwarf
     constant integer DWARF_TIER_1                                    = 'h02R' // tier 1
-	constant integer DWARF_TIER_2                                    = 'h030' // tier 2
-	constant integer DWARF_TIER_3                                    = 'h031' // tier 3
+    constant integer DWARF_TIER_2                                    = 'h030' // tier 2
+    constant integer DWARF_TIER_3                                    = 'h031' // tier 3
     constant integer DWARF_BARRACKS                                  = 'h02V' // barracks
-	constant integer DWARF_MYSTICAL_HALL                             = 'h037' // sanctum/damned temple
-	constant integer DWARF_BLACKSMITH                                = 'h02X' // lumber will and blacksmith
-	constant integer DWARF_TAVERN                                    = 'h03E' // shop
-	constant integer DWARF_WORKSHOP                                  = 'h032' // slaughterhouse/barracks for stronger units at tier 2
-	constant integer DWARF_BEASTIARY                                 = 'h02Z' // totem/strong units at tier 3
-	constant integer DWARF_HOUSE                                     = 'h036' // farm
-	constant integer DWARF_TOWER                                     = 'h039' // tower
-	constant integer DWARF_TOWER_GUN                                 = 'h03B' // tower 1
-	constant integer DWARF_TOWER_GUARD                               = 'h03C' // tower 2
-	constant integer DWARF_TOWER_CANNON                              = 'h03D' // tower 3
-	constant integer DWARF_ALTAR                                     = 'h033' // altar
-	constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
-	constant integer DWARF_MINE                                      = 'u011'
+    constant integer DWARF_MYSTICAL_HALL                             = 'h037' // sanctum/damned temple
+    constant integer DWARF_BLACKSMITH                                = 'h02X' // lumber will and blacksmith
+    constant integer DWARF_TAVERN                                    = 'h03E' // shop
+    constant integer DWARF_WORKSHOP                                  = 'h032' // slaughterhouse/barracks for stronger units at tier 2
+    constant integer DWARF_BEASTIARY                                 = 'h02Z' // totem/strong units at tier 3
+    constant integer DWARF_HOUSE                                     = 'h036' // farm
+    constant integer DWARF_TOWER                                     = 'h039' // tower
+    constant integer DWARF_TOWER_GUN                                 = 'h03B' // tower 1
+    constant integer DWARF_TOWER_GUARD                               = 'h03C' // tower 2
+    constant integer DWARF_TOWER_CANNON                              = 'h03D' // tower 3
+    constant integer DWARF_ALTAR                                     = 'h033' // altar
+    constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
+    constant integer DWARF_MINE                                      = 'u011'
 
-	constant integer DWARF_MINER                                     = 'h02Q' // worker
-	constant integer DWARF_TROLL_SLAYER                              = 'h02U'
-	constant integer DWARF_RIFLEMAN                                  = 'h02W'
-	constant integer DWARF_BATTLEPRIEST                              = 'h03A'
-	constant integer DWARF_RUNECASTER                                = 'o01L'
-	constant integer DWARF_RIDER                                     = 'h02Y' // knight
-	constant integer DWARF_MORTAR                                    = 'h03H'
-	constant integer DWARF_POLAR_BEAR                                = 'n04T' // tauren
-	constant integer DWARF_GRYPHON_RIDER                             = 'h035'
-	constant integer DWARF_GRYPHON                                   = 'n04U'
-	constant integer DWARF_FLYING_MACHINE                            = 'h03I'
-	constant integer DWARF_SIEGE_ENGINE                              = 'h03G'
-	constant integer DWARF_STEAM_FORTRESS                            = 'h03F'
+    constant integer DWARF_MINER                                     = 'h02Q' // worker
+    constant integer DWARF_TROLL_SLAYER                              = 'h02U'
+    constant integer DWARF_RIFLEMAN                                  = 'h02W'
+    constant integer DWARF_BATTLEPRIEST                              = 'h03A'
+    constant integer DWARF_RUNECASTER                                = 'o01L'
+    constant integer DWARF_RIDER                                     = 'h02Y' // knight
+    constant integer DWARF_MORTAR                                    = 'h03H'
+    constant integer DWARF_POLAR_BEAR                                = 'n04T' // tauren
+    constant integer DWARF_GRYPHON_RIDER                             = 'h035'
+    constant integer DWARF_GRYPHON                                   = 'n04U'
+    constant integer DWARF_FLYING_MACHINE                            = 'h03I'
+    constant integer DWARF_SIEGE_ENGINE                              = 'h03G'
+    constant integer DWARF_STEAM_FORTRESS                            = 'h03F'
 
-	constant integer UPG_DWARF_RANGED                                = 'R043'
-	constant integer UPG_DWARF_MELEE                                 = 'R040'
-	constant integer UPG_DWARF_ARMOR                                 = 'R041'
-	constant integer UPG_DWARF_LEATHER                               = 'R042'
-	constant integer UPG_DWARF_BATTLEPRIEST_ADEPT                    = 'R03U'
-	constant integer UPG_DWARF_RUNECASTER_ADEPT                      = 'R03T'
-	constant integer UPG_DWARF_BERSERK                               = 'R03N'
-	constant integer UPG_DWARF_SLAM                                  = 'R03K'
-	constant integer UPG_DWARF_SLEEP_FORM                            = 'R03V'
-	constant integer UPG_DWARF_ANIMAL_WAR_TRAINING                   = 'R044'
-	constant integer UPG_DWARF_BARRAGE                               = 'R03P'
-	constant integer UPG_DWARF_BREEDING                              = 'R03I'
-	constant integer UPG_DWARF_DEVOUR                                = 'R03L'
-	constant integer UPG_DWARF_ELITE_SIEGE_TANK                      = 'R03Q'
-	constant integer UPG_DWARF_FLAK_CANNONS                          = 'R03W'
-	constant integer UPG_DWARF_FLARE                                 = 'R03Z'
-	constant integer UPG_DWARF_MITHRIL                               = 'R03O'
-	constant integer UPG_DWARF_POLAR_BEAR_BOMBS                      = 'R034'
-	constant integer UPG_DWARF_FLYING_MACHINE_BOMBS                  = 'R03X'
-	constant integer UPG_DWARF_FRAGMENTATION_SHARDS                  = 'R03Y'
-	constant integer UPG_DWARF_LONG_RIFLES                           = 'R03M'
-	constant integer UPG_DWARF_STORM_HAMMERS                         = 'R045'
-	constant integer UPG_DWARF_MASONRY                               = 'R03R'
-	constant integer UPG_DWARF_LUMBER_MILL                           = 'R03J'
-	constant integer UPG_DWARF_LUMBER                                = 'R03S'
-	constant integer UPG_DWARF_BACKPACK                              = 'R03H'
+    constant integer UPG_DWARF_RANGED                                = 'R043'
+    constant integer UPG_DWARF_MELEE                                 = 'R040'
+    constant integer UPG_DWARF_ARMOR                                 = 'R041'
+    constant integer UPG_DWARF_LEATHER                               = 'R042'
+    constant integer UPG_DWARF_BATTLEPRIEST_ADEPT                    = 'R03U'
+    constant integer UPG_DWARF_RUNECASTER_ADEPT                      = 'R03T'
+    constant integer UPG_DWARF_BERSERK                               = 'R03N'
+    constant integer UPG_DWARF_SLAM                                  = 'R03K'
+    constant integer UPG_DWARF_SLEEP_FORM                            = 'R03V'
+    constant integer UPG_DWARF_ANIMAL_WAR_TRAINING                   = 'R044'
+    constant integer UPG_DWARF_BARRAGE                               = 'R03P'
+    constant integer UPG_DWARF_BREEDING                              = 'R03I'
+    constant integer UPG_DWARF_DEVOUR                                = 'R03L'
+    constant integer UPG_DWARF_ELITE_SIEGE_TANK                      = 'R03Q'
+    constant integer UPG_DWARF_FLAK_CANNONS                          = 'R03W'
+    constant integer UPG_DWARF_FLARE                                 = 'R03Z'
+    constant integer UPG_DWARF_MITHRIL                               = 'R03O'
+    constant integer UPG_DWARF_POLAR_BEAR_BOMBS                      = 'R034'
+    constant integer UPG_DWARF_FLYING_MACHINE_BOMBS                  = 'R03X'
+    constant integer UPG_DWARF_FRAGMENTATION_SHARDS                  = 'R03Y'
+    constant integer UPG_DWARF_LONG_RIFLES                           = 'R03M'
+    constant integer UPG_DWARF_STORM_HAMMERS                         = 'R045'
+    constant integer UPG_DWARF_MASONRY                               = 'R03R'
+    constant integer UPG_DWARF_LUMBER_MILL                           = 'R03J'
+    constant integer UPG_DWARF_LUMBER                                = 'R03S'
+    constant integer UPG_DWARF_BACKPACK                              = 'R03H'
 
     constant integer DWARF_CITIZEN_MALE                              = 'n04S'
     constant integer DWARF_CITIZEN_FEMALE                            = 'n050'
@@ -1101,87 +1101,87 @@ globals
 
     // High Elf
     constant integer HIGH_ELF_TIER_1                                 = 'h040' // tier 1
-	constant integer HIGH_ELF_TIER_2                                 = 'h03Z' // tier 2
-	constant integer HIGH_ELF_TIER_3                                 = 'h041' // tier 3
-	constant integer HIGH_ELF_OUTPOST                                = 'h04G' // scout tower
-	constant integer HIGH_ELF_GUARD_TOWER                            = 'n05I' // guard tower
-    constant integer HIGH_ELF_FARM                                = 'h04B' // farm
-	constant integer HIGH_ELF_MAGE_TOWER                          = 'h043' // arcane
-	constant integer HIGH_ELF_ALTAR                               = 'h042' // altar
-	constant integer HIGH_ELF_BAZAAR                              = 'h04D' // shop
-	constant integer HIGH_ELF_BARRACKS                            = 'h044' // barracks
-	constant integer HIGH_ELF_ENCHANTER_TOWER                     = 'h04I' // blacksmith/lumber mill
-	constant integer HIGH_ELF_STABLES                             = 'h04F' // barracks 2/workshop
-	constant integer HIGH_ELF_AVIARY                              = 'h045' // aviary
-	constant integer HIGH_ELF_DRAGON_NEXUS                        = 'h04J' // boneyard
-	constant integer HIGH_ELF_SUNWELL                             = 'n05F' // special building
+    constant integer HIGH_ELF_TIER_2                                 = 'h03Z' // tier 2
+    constant integer HIGH_ELF_TIER_3                                 = 'h041' // tier 3
+    constant integer HIGH_ELF_OUTPOST                                = 'h04G' // scout tower
+    constant integer HIGH_ELF_GUARD_TOWER                            = 'n05I' // guard tower
+    constant integer HIGH_ELF_FARM                                   = 'h04B' // farm
+    constant integer HIGH_ELF_MAGE_TOWER                             = 'h043' // arcane
+    constant integer HIGH_ELF_ALTAR                                  = 'h042' // altar
+    constant integer HIGH_ELF_BAZAAR                                 = 'h04D' // shop
+    constant integer HIGH_ELF_BARRACKS                               = 'h044' // barracks
+    constant integer HIGH_ELF_ENCHANTER_TOWER                        = 'h04I' // blacksmith/lumber mill
+    constant integer HIGH_ELF_STABLES                                = 'h04F' // barracks 2/workshop
+    constant integer HIGH_ELF_AVIARY                                 = 'h045' // aviary
+    constant integer HIGH_ELF_DRAGON_NEXUS                           = 'h04J' // boneyard
+    constant integer HIGH_ELF_SUNWELL                                = 'n05F' // special building
 
-	constant integer UPG_HIGH_ELF_BOWS                            = 'R04G'
-	constant integer UPG_HIGH_ELF_WOOD                            = 'R04H'
-	constant integer UPG_HIGH_ELF_MASONRY                         = 'R04K'
-	constant integer UPG_HIGH_ELF_MELEE                           = 'R04M'
-	constant integer UPG_HIGH_ELF_ARMOR                           = 'R04N'
-	constant integer UPG_HIGH_ELF_STR_MOON                        = 'R04Q'
-	constant integer UPG_HIGH_ELF_LEATHER                         = 'R04O'
-	constant integer UPG_HIGH_ELF_MARKSMAN                        = 'R04D'
-	constant integer UPG_HIGH_ELF_PRAYING                         = 'R04J'
-	constant integer UPG_HIGH_ELF_PRAYING_CLERIC                  = 'R04L'
-	constant integer UPG_HIGH_ELF_ANIMAL                          = 'R04F'
-    constant integer UPG_HIGH_ELF_ANTIMAGIC                       = 'R04C'
-    constant integer UPG_HIGH_ELF_CLOUD                           = 'R04E'
-    constant integer UPG_HIGH_ELF_TAMING                          = 'R04I'
-    constant integer UPG_HIGH_ELF_BACKPACK                        = 'R048'
-    constant integer UPG_HIGH_ELF_MAGIC_SENTRY                    = 'R049'
-    constant integer UPG_HIGH_ELF_DRAGONHAWL_TAMING               = 'R04R'
-	constant integer UPG_HIGH_ELF_SUNWELL                         = 'R047' // special building
+    constant integer UPG_HIGH_ELF_BOWS                               = 'R04G'
+    constant integer UPG_HIGH_ELF_WOOD                               = 'R04H'
+    constant integer UPG_HIGH_ELF_MASONRY                            = 'R04K'
+    constant integer UPG_HIGH_ELF_MELEE                              = 'R04M'
+    constant integer UPG_HIGH_ELF_ARMOR                              = 'R04N'
+    constant integer UPG_HIGH_ELF_STR_MOON                           = 'R04Q'
+    constant integer UPG_HIGH_ELF_LEATHER                            = 'R04O'
+    constant integer UPG_HIGH_ELF_MARKSMAN                           = 'R04D'
+    constant integer UPG_HIGH_ELF_PRAYING                            = 'R04J'
+    constant integer UPG_HIGH_ELF_PRAYING_CLERIC                     = 'R04L'
+    constant integer UPG_HIGH_ELF_ANIMAL                             = 'R04F'
+    constant integer UPG_HIGH_ELF_ANTIMAGIC                          = 'R04C'
+    constant integer UPG_HIGH_ELF_CLOUD                              = 'R04E'
+    constant integer UPG_HIGH_ELF_TAMING                             = 'R04I'
+    constant integer UPG_HIGH_ELF_BACKPACK                           = 'R048'
+    constant integer UPG_HIGH_ELF_MAGIC_SENTRY                       = 'R049'
+    constant integer UPG_HIGH_ELF_DRAGONHAWL_TAMING                  = 'R04R'
+    constant integer UPG_HIGH_ELF_SUNWELL                            = 'R047' // special building
 
-	constant integer HIGH_ELF_ENGINEER                            = 'n05D' // worker
-    constant integer HIGH_ELF_ARCHER                              = 'n05G'
-    constant integer HIGH_ELF_RANGER                              = 'n05H'
-    constant integer HIGH_ELF_SWORDMAN                            = 'h04A'
-	constant integer HIGH_ELF_LIEUTENANT                          = 'h049'
-    constant integer HIGH_ELF_PRIEST                              = 'h047'
-    constant integer HIGH_ELF_SORCERESS                           = 'h048'
-	constant integer HIGH_ELF_BIRDIEPULT                          = 'e00N'
-	constant integer HIGH_ELF_KNIGHT                              = 'h04E'
-	constant integer HIGH_ELF_EAGLE                               = 'e00M'
-	constant integer HIGH_ELF_DRAGON_HAWK                         = 'h046'
-	constant integer HIGH_ELF_ARCH_CLERIC                         = 'h04C'
-	constant integer HIGH_ELF_DRAGON                              = 'n05L'
+    constant integer HIGH_ELF_ENGINEER                               = 'n05D' // worker
+    constant integer HIGH_ELF_ARCHER                                 = 'n05G'
+    constant integer HIGH_ELF_RANGER                                 = 'n05H'
+    constant integer HIGH_ELF_SWORDMAN                               = 'h04A'
+    constant integer HIGH_ELF_LIEUTENANT                             = 'h049'
+    constant integer HIGH_ELF_PRIEST                                 = 'h047'
+    constant integer HIGH_ELF_SORCERESS                              = 'h048'
+    constant integer HIGH_ELF_BIRDIEPULT                             = 'e00N'
+    constant integer HIGH_ELF_KNIGHT                                 = 'h04E'
+    constant integer HIGH_ELF_EAGLE                                  = 'e00M'
+    constant integer HIGH_ELF_DRAGON_HAWK                            = 'h046'
+    constant integer HIGH_ELF_ARCH_CLERIC                            = 'h04C'
+    constant integer HIGH_ELF_DRAGON                                 = 'n05L'
 
-    constant integer HIGH_ELF_CITIZEN_MALE                        = 'n05E'
-    constant integer HIGH_ELF_CITIZEN_FEMALE                      = 'n05J'
-    constant integer HIGH_ELF_HOUSING                             = 'h04H'
+    constant integer HIGH_ELF_CITIZEN_MALE                           = 'n05E'
+    constant integer HIGH_ELF_CITIZEN_FEMALE                         = 'n05J'
+    constant integer HIGH_ELF_HOUSING                                = 'h04H'
 
     // Dalaran
-    constant integer DALARAN_TIER_1                               = 'h051' // tier 1
-	constant integer DALARAN_TIER_2                               = 'h099' // tier 2
-	constant integer DALARAN_TIER_3                               = 'h09A' // tier 3
-	constant integer DALARAN_GUARD_TOWER_1                        = 'n085' // guard tower 1
-	constant integer DALARAN_GUARD_TOWER_2                        = 'n08E' // guard tower 2
-    constant integer DALARAN_POWER_GENERATOR                      = 'h053' // farm
-	constant integer DALARAN_ARCANE_SANCTUM                       = 'h09N' // arcane
-	constant integer DALARAN_ALTAR                                = 'h09L' // altar
-	constant integer DALARAN_SHOP                                 = 'h09M' // shop
-	constant integer DALARAN_BARRACKS                             = 'h055' // barracks
-	constant integer DALARAN_BLACKSMITH                           = 'h09P' // blacksmith/lumber mill
-	constant integer DALARAN_ZOO                                  = 'h09O' // barracks 2/workshop
-	constant integer DALARAN_AVIARY                               = 'h0A0' // aviary
-	constant integer DALARAN_ELEMENTAL_SANCTUARY_1                = 'h09F' // boneyard 1
-	constant integer DALARAN_ELEMENTAL_SANCTUARY_2                = 'h09X' // boneyard 2
-	constant integer DALARAN_VIOLET_CITADEL                       = 'h09J' // special building
-	constant integer DALARAN_MINE                                 = 'u018' // goldmine
+    constant integer DALARAN_TIER_1                                  = 'h051' // tier 1
+    constant integer DALARAN_TIER_2                                  = 'h099' // tier 2
+    constant integer DALARAN_TIER_3                                  = 'h09A' // tier 3
+    constant integer DALARAN_GUARD_TOWER_1                           = 'n085' // guard tower 1
+    constant integer DALARAN_GUARD_TOWER_2                           = 'n08E' // guard tower 2
+    constant integer DALARAN_POWER_GENERATOR                         = 'h053' // farm
+    constant integer DALARAN_ARCANE_SANCTUM                          = 'h09N' // arcane
+    constant integer DALARAN_ALTAR                                   = 'h09L' // altar
+    constant integer DALARAN_SHOP                                    = 'h09M' // shop
+    constant integer DALARAN_BARRACKS                                = 'h055' // barracks
+    constant integer DALARAN_BLACKSMITH                              = 'h09P' // blacksmith/lumber mill
+    constant integer DALARAN_ZOO                                     = 'h09O' // barracks 2/workshop
+    constant integer DALARAN_AVIARY                                  = 'h0A0' // aviary
+    constant integer DALARAN_ELEMENTAL_SANCTUARY_1                   = 'h09F' // boneyard 1
+    constant integer DALARAN_ELEMENTAL_SANCTUARY_2                   = 'h09X' // boneyard 2
+    constant integer DALARAN_VIOLET_CITADEL                          = 'h09J' // special building
+    constant integer DALARAN_MINE                                    = 'u018' // goldmine
 
-	constant integer UPG_DALARAN_GOLD                             = 'R063'
-	constant integer UPG_DALARAN_MELEE                            = 'R069'
-	constant integer UPG_DALARAN_ARMOR                            = 'R06A'
-	constant integer UPG_DALARAN_CR_ATTACK                        = 'R06H'
-	constant integer UPG_DALARAN_CR_ARMOR                         = 'R068'
-	constant integer UPG_DALARAN_DEFEND                           = 'R05U'
-	constant integer UPG_DALARAN_WIZARD                           = 'R05X'
-	constant integer UPG_DALARAN_FIRE_MAGE                        = 'R065'
-	constant integer UPG_DALARAN_GOLEM                            = 'R06N'
-	constant integer UPG_DALARAN_ANIMAL                           = 'R066'
+    constant integer UPG_DALARAN_GOLD                                = 'R063'
+    constant integer UPG_DALARAN_MELEE                               = 'R069'
+    constant integer UPG_DALARAN_ARMOR                               = 'R06A'
+    constant integer UPG_DALARAN_CR_ATTACK                           = 'R06H'
+    constant integer UPG_DALARAN_CR_ARMOR                            = 'R068'
+    constant integer UPG_DALARAN_DEFEND                           = 'R05U'
+    constant integer UPG_DALARAN_WIZARD                           = 'R05X'
+    constant integer UPG_DALARAN_FIRE_MAGE                        = 'R065'
+    constant integer UPG_DALARAN_GOLEM                            = 'R06N'
+    constant integer UPG_DALARAN_ANIMAL                           = 'R066'
     constant integer UPG_DALARAN_CLOUD                            = 'R067'
     constant integer UPG_DALARAN_BACKPACK                         = 'R05T'
     constant integer UPG_DALARAN_MAGIC_SENTRY                     = 'R05W'
@@ -1192,9 +1192,9 @@ globals
     constant integer UPG_DALARAN_ELEMENTAL                        = 'R060'
     constant integer UPG_DALARAN_FEEDBACK                         = 'R05V'
     constant integer UPG_DALARAN_FLYING_CITY                      = 'R062'
-	constant integer UPG_DALARAN_VIOLET_CITADEL                   = 'R05S' // special building
+    constant integer UPG_DALARAN_VIOLET_CITADEL                   = 'R05S' // special building
 
-	constant integer DALARAN_WORKER                               = 'h052' // worker
+    constant integer DALARAN_WORKER                               = 'h052' // worker
     constant integer DALARAN_PIKEMAN                              = 'h09Q'
     constant integer DALARAN_APPRENTICE_WIZARD                    = 'n087'
     constant integer DALARAN_SUPPLY_CART                          = 'h09S'
@@ -1202,19 +1202,19 @@ globals
     constant integer DALARAN_SORCERESS                            = 'h0A2'
     constant integer DALARAN_FIRE_MAGE                            = 'h09R'
     constant integer DALARAN_MUTANT                               = 'n08D'
-	constant integer DALARAN_REJECT                               = 'n089'
-	constant integer DALARAN_GUARDIAN_GOLEM                       = 'n08A'
-	constant integer DALARAN_FLESH_GOLEM                          = 'n088'
-	constant integer DALARAN_DRAGON_HAWK                          = 'h0A1'
-	constant integer DALARAN_AIR_ELEMENTAL                        = 'h09U'
-	constant integer DALARAN_FIRE_ELEMENTAL                       = 'h09I'
-	constant integer DALARAN_FROST_ELEMENTAL                      = 'h09V'
-	constant integer DALARAN_LIGHTNING_ELEMENTAL                  = 'h09K'
-	constant integer DALARAN_POISON_ELEMENTAL                     = 'h09W'
-	constant integer DALARAN_VOID_ELEMENTAL                       = 'h09Z'
-	constant integer DALARAN_SAND_ELEMENTAL                       = 'h09G'
-	constant integer DALARAN_WATER_ELEMENTAL                      = 'h09H'
-	constant integer DALARAN_SEA_ELEMENTAL                        = 'n084'
+    constant integer DALARAN_REJECT                               = 'n089'
+    constant integer DALARAN_GUARDIAN_GOLEM                       = 'n08A'
+    constant integer DALARAN_FLESH_GOLEM                          = 'n088'
+    constant integer DALARAN_DRAGON_HAWK                          = 'h0A1'
+    constant integer DALARAN_AIR_ELEMENTAL                        = 'h09U'
+    constant integer DALARAN_FIRE_ELEMENTAL                       = 'h09I'
+    constant integer DALARAN_FROST_ELEMENTAL                      = 'h09V'
+    constant integer DALARAN_LIGHTNING_ELEMENTAL                  = 'h09K'
+    constant integer DALARAN_POISON_ELEMENTAL                     = 'h09W'
+    constant integer DALARAN_VOID_ELEMENTAL                       = 'h09Z'
+    constant integer DALARAN_SAND_ELEMENTAL                       = 'h09G'
+    constant integer DALARAN_WATER_ELEMENTAL                      = 'h09H'
+    constant integer DALARAN_SEA_ELEMENTAL                        = 'n084'
 
     constant integer DALARAN_CITIZEN_MALE                         = 'n082'
     constant integer DALARAN_CITIZEN_FEMALE                       = 'n08B'
@@ -1222,44 +1222,44 @@ globals
 
     // Kul Tiras
     constant integer KULTIRAS_TIER_1                              = 'h057' // tier 1
-	constant integer KULTIRAS_TIER_2                              = 'h05I' // tier 2
-	constant integer KULTIRAS_TIER_3                              = 'h05J' // tier 3
-	constant integer KULTIRAS_WATCH_TOWER                         = 'h06H' // scout tower
-	constant integer KULTIRAS_GUARD_TOWER                         = 'h06L' // guard tower
-	constant integer KULTIRAS_CANNON_TOWER                        = 'h06M' // cannon tower
-	constant integer KULTIRAS_ARCANE_TOWER                        = 'h06N' // arcane tower
+    constant integer KULTIRAS_TIER_2                              = 'h05I' // tier 2
+    constant integer KULTIRAS_TIER_3                              = 'h05J' // tier 3
+    constant integer KULTIRAS_WATCH_TOWER                         = 'h06H' // scout tower
+    constant integer KULTIRAS_GUARD_TOWER                         = 'h06L' // guard tower
+    constant integer KULTIRAS_CANNON_TOWER                        = 'h06M' // cannon tower
+    constant integer KULTIRAS_ARCANE_TOWER                        = 'h06N' // arcane tower
     constant integer KULTIRAS_HOUSE                               = 'h05B' // farm
-	constant integer KULTIRAS_ARCANE_SANCTUM                      = 'h06G' // arcane
-	constant integer KULTIRAS_ALTAR                               = 'h05A' // altar
-	constant integer KULTIRAS_SHOP                                = 'h05Q' // shop
-	constant integer KULTIRAS_BARRACKS_1                          = 'h05C' // barracks 1
-	constant integer KULTIRAS_BARRACKS_2                          = 'h0BQ' // barracks 2
-	constant integer KULTIRAS_LUMBER_MILL                         = 'h05P' // lumber mill
-	constant integer KULTIRAS_BLACKSMITH                          = 'h05O' // blacksmith
-	constant integer KULTIRAS_WORKSHOP                            = 'h05H' // workshop
-	constant integer KULTIRAS_AVIARY                              = 'h06I' // aviary
-	constant integer KULTIRAS_CRANE                               = 'o021' // citizens building on shallow water for extra resources
-	constant integer KULTIRAS_PROUDMOORE_KEEP                     = 'h08Z' // special building
+    constant integer KULTIRAS_ARCANE_SANCTUM                      = 'h06G' // arcane
+    constant integer KULTIRAS_ALTAR                               = 'h05A' // altar
+    constant integer KULTIRAS_SHOP                                = 'h05Q' // shop
+    constant integer KULTIRAS_BARRACKS_1                          = 'h05C' // barracks 1
+    constant integer KULTIRAS_BARRACKS_2                          = 'h0BQ' // barracks 2
+    constant integer KULTIRAS_LUMBER_MILL                         = 'h05P' // lumber mill
+    constant integer KULTIRAS_BLACKSMITH                          = 'h05O' // blacksmith
+    constant integer KULTIRAS_WORKSHOP                            = 'h05H' // workshop
+    constant integer KULTIRAS_AVIARY                              = 'h06I' // aviary
+    constant integer KULTIRAS_CRANE                               = 'o021' // citizens building on shallow water for extra resources
+    constant integer KULTIRAS_PROUDMOORE_KEEP                     = 'h08Z' // special building
 
-	constant integer UPG_KULTIRAS_LUMBER                          = 'R05M'
-	constant integer UPG_KULTIRAS_MASONRY                         = 'R05N'
-	constant integer UPG_KULTIRAS_MELEE                           = 'R06T'
-	constant integer UPG_KULTIRAS_ARMOR                           = 'R06U'
-	constant integer UPG_KULTIRAS_RANGED                          = 'R058'
-	constant integer UPG_KULTIRAS_LEATHER                         = 'R06V'
-	constant integer UPG_KULTIRAS_DEFEND                          = 'R06P'
-	constant integer UPG_KULTIRAS_LONG_RIFLES                     = 'R058'
-	constant integer UPG_KULTIRAS_BACKPACK                        = 'R06Z'
-	constant integer UPG_KULTIRAS_TRUE_SIGHT                      = 'R06Y'
-	constant integer UPG_KULTIRAS_SHIP_DOCTOR                     = 'R05K'
-	constant integer UPG_KULTIRAS_SORCERER                        = 'R05J'
-	constant integer UPG_KULTIRAS_HYDROMANCER                     = 'R05L'
-	constant integer UPG_KULTIRAS_CLEAVING_ATTACK                 = 'R06R'
-	constant integer UPG_KULTIRAS_SUNDERING_BLADES                = 'R070'
-	constant integer UPG_KULTIRAS_ANIMAL                          = 'R05O'
-	constant integer UPG_KULTIRAS_DEVOUR                          = 'R06X'
-	constant integer UPG_KULTIRAS_ENSNARE                         = 'R06Q'
-	constant integer UPG_KULTIRAS_GHOSTS                          = 'R06O'
+    constant integer UPG_KULTIRAS_LUMBER                          = 'R05M'
+    constant integer UPG_KULTIRAS_MASONRY                         = 'R05N'
+    constant integer UPG_KULTIRAS_MELEE                           = 'R06T'
+    constant integer UPG_KULTIRAS_ARMOR                           = 'R06U'
+    constant integer UPG_KULTIRAS_RANGED                          = 'R058'
+    constant integer UPG_KULTIRAS_LEATHER                         = 'R06V'
+    constant integer UPG_KULTIRAS_DEFEND                          = 'R06P'
+    constant integer UPG_KULTIRAS_LONG_RIFLES                     = 'R058'
+    constant integer UPG_KULTIRAS_BACKPACK                        = 'R06Z'
+    constant integer UPG_KULTIRAS_TRUE_SIGHT                      = 'R06Y'
+    constant integer UPG_KULTIRAS_SHIP_DOCTOR                     = 'R05K'
+    constant integer UPG_KULTIRAS_SORCERER                        = 'R05J'
+    constant integer UPG_KULTIRAS_HYDROMANCER                     = 'R05L'
+    constant integer UPG_KULTIRAS_CLEAVING_ATTACK                 = 'R06R'
+    constant integer UPG_KULTIRAS_SUNDERING_BLADES                = 'R070'
+    constant integer UPG_KULTIRAS_ANIMAL                          = 'R05O'
+    constant integer UPG_KULTIRAS_DEVOUR                          = 'R06X'
+    constant integer UPG_KULTIRAS_ENSNARE                         = 'R06Q'
+    constant integer UPG_KULTIRAS_GHOSTS                          = 'R06O'
     constant integer UPG_KULTIRAS_MAGIC_SENTRY                    = 'R06S'
     constant integer UPG_KULTIRAS_LAND_CANNONS                    = 'R056'
     constant integer UPG_KULTIRAS_SHIP_CANNONS                    = 'R055'
@@ -1267,10 +1267,10 @@ globals
     constant integer UPG_KULTIRAS_TRANSPORTERS                    = 'R057'
     constant integer UPG_KULTIRAS_FRAGS                           = 'R071'
     constant integer UPG_KULTIRAS_FLARE                           = 'R072'
-	constant integer UPG_KULTIRAS_PROUDMOORE_KEEP                 = 'R05I' // special building
+    constant integer UPG_KULTIRAS_PROUDMOORE_KEEP                 = 'R05I' // special building
 
-	constant integer KULTIRAS_WORKER                              = 'h058' // worker
-	constant integer KULTIRAS_FOOTMAN                             = 'h054'
+    constant integer KULTIRAS_WORKER                              = 'h058' // worker
+    constant integer KULTIRAS_FOOTMAN                             = 'h054'
     constant integer KULTIRAS_RIFLEMAN                            = 'h05E'
     constant integer KULTIRAS_KNIGHT                              = 'h05F'
     constant integer KULTIRAS_GUARDSMAN                           = 'h05D'
@@ -1293,44 +1293,44 @@ globals
 
     // Modern Warfare
     constant integer MODERNWARFARE_TOWN_HALL                      = 'h0DJ' // tier 1-3
-	constant integer MODERNWARFARE_RADIO_TOWER                    = 'h0E2' // scout tower
-	constant integer MODERNWARFARE_FLAME_TOWER                    = 'h0FE' // guard tower
-	constant integer MODERNWARFARE_MINIGUN_TOWER                  = 'h0FN' // cannon tower
-	constant integer MODERNWARFARE_MISSILE_TOWER                  = 'h0EG' // arcane tower
+    constant integer MODERNWARFARE_RADIO_TOWER                    = 'h0E2' // scout tower
+    constant integer MODERNWARFARE_FLAME_TOWER                    = 'h0FE' // guard tower
+    constant integer MODERNWARFARE_MINIGUN_TOWER                  = 'h0FN' // cannon tower
+    constant integer MODERNWARFARE_MISSILE_TOWER                  = 'h0EG' // arcane tower
     constant integer MODERNWARFARE_BUNKER                         = 'o03K' // farm
-	constant integer MODERNWARFARE_HELIPORT                       = 'h0E4' // arcane
-	constant integer MODERNWARFARE_ALTAR                          = 'h0E8' // altar
-	constant integer MODERNWARFARE_SHOP                           = 'h0FG' // shop
-	constant integer MODERNWARFARE_BARRACKS                       = 'h0E3' // barracks
-	constant integer MODERNWARFARE_FACTORY                        = 'h0DX' // blacksmith and lumber mill
-	constant integer MODERNWARFARE_NUCLEAR_SILO                   = 'h0F1' // lumber mill
-	constant integer MODERNWARFARE_VEHICLE_FACTORY                = 'h0DL' // workshop
-	constant integer MODERNWARFARE_AIRBASE                        = 'h0E1' // aviary
-	constant integer MODERNWARFARE_UN_BUILDING                    = 'h0E6' // special building
+    constant integer MODERNWARFARE_HELIPORT                       = 'h0E4' // arcane
+    constant integer MODERNWARFARE_ALTAR                          = 'h0E8' // altar
+    constant integer MODERNWARFARE_SHOP                           = 'h0FG' // shop
+    constant integer MODERNWARFARE_BARRACKS                       = 'h0E3' // barracks
+    constant integer MODERNWARFARE_FACTORY                        = 'h0DX' // blacksmith and lumber mill
+    constant integer MODERNWARFARE_NUCLEAR_SILO                   = 'h0F1' // lumber mill
+    constant integer MODERNWARFARE_VEHICLE_FACTORY                = 'h0DL' // workshop
+    constant integer MODERNWARFARE_AIRBASE                        = 'h0E1' // aviary
+    constant integer MODERNWARFARE_UN_BUILDING                    = 'h0E6' // special building
 
-	constant integer UPG_MODERNWARFARE_ENGINE                     = 'R07R'
-	constant integer UPG_MODERNWARFARE_MASONRY                    = 'R07S'
-	constant integer UPG_MODERNWARFARE_MACHINE_GUNS               = 'R07K'
-	constant integer UPG_MODERNWARFARE_HELMETS                    = 'R07E'
-	constant integer UPG_MODERNWARFARE_VEHICLE_GUNS               = 'R07X'
-	constant integer UPG_MODERNWARFARE_METAL_PLATING              = 'R07Q'
-	constant integer UPG_MODERNWARFARE_CAMOUFLAGE                 = 'R07L'
-	constant integer UPG_MODERNWARFARE_CLUSTER_ROCKETS            = 'R07U'
-	constant integer UPG_MODERNWARFARE_BACKPACK                   = 'R07Z'
-	constant integer UPG_MODERNWARFARE_FAST_RELOAD                = 'R07D'
-	constant integer UPG_MODERNWARFARE_FLARES                     = 'R07T'
-	constant integer UPG_MODERNWARFARE_FLASHBANGS                 = 'R07O'
-	constant integer UPG_MODERNWARFARE_GRENADES                   = 'R07N'
-	constant integer UPG_MODERNWARFARE_HEADSHOT                   = 'R07P'
-	constant integer UPG_MODERNWARFARE_LOAD                       = 'R07V'
-	constant integer UPG_MODERNWARFARE_RADAR                      = 'R07W'
-	constant integer UPG_MODERNWARFARE_RADIO                      = 'R07M'
-	constant integer UPG_MODERNWARFARE_REPAIR_AURA                = 'R07Y'
-	constant integer UPG_MODERNWARFARE_UN_BUILDING                = 'R07F' // special building
+    constant integer UPG_MODERNWARFARE_ENGINE                     = 'R07R'
+    constant integer UPG_MODERNWARFARE_MASONRY                    = 'R07S'
+    constant integer UPG_MODERNWARFARE_MACHINE_GUNS               = 'R07K'
+    constant integer UPG_MODERNWARFARE_HELMETS                    = 'R07E'
+    constant integer UPG_MODERNWARFARE_VEHICLE_GUNS               = 'R07X'
+    constant integer UPG_MODERNWARFARE_METAL_PLATING              = 'R07Q'
+    constant integer UPG_MODERNWARFARE_CAMOUFLAGE                 = 'R07L'
+    constant integer UPG_MODERNWARFARE_CLUSTER_ROCKETS            = 'R07U'
+    constant integer UPG_MODERNWARFARE_BACKPACK                   = 'R07Z'
+    constant integer UPG_MODERNWARFARE_FAST_RELOAD                = 'R07D'
+    constant integer UPG_MODERNWARFARE_FLARES                     = 'R07T'
+    constant integer UPG_MODERNWARFARE_FLASHBANGS                 = 'R07O'
+    constant integer UPG_MODERNWARFARE_GRENADES                   = 'R07N'
+    constant integer UPG_MODERNWARFARE_HEADSHOT                   = 'R07P'
+    constant integer UPG_MODERNWARFARE_LOAD                       = 'R07V'
+    constant integer UPG_MODERNWARFARE_RADAR                      = 'R07W'
+    constant integer UPG_MODERNWARFARE_RADIO                      = 'R07M'
+    constant integer UPG_MODERNWARFARE_REPAIR_AURA                = 'R07Y'
+    constant integer UPG_MODERNWARFARE_UN_BUILDING                = 'R07F' // special building
 
-	constant integer MODERNWARFARE_WORKER                         = 'h0DK' // worker
-	constant integer MODERNWARFARE_BULLDOZER                      = 'n09H' // shredder
-	constant integer MODERNWARFARE_RANGER                         = 'n0AG'
+    constant integer MODERNWARFARE_WORKER                         = 'h0DK' // worker
+    constant integer MODERNWARFARE_BULLDOZER                      = 'n09H' // shredder
+    constant integer MODERNWARFARE_RANGER                         = 'n0AG'
     constant integer MODERNWARFARE_MARINE                         = 'n0AH'
     constant integer MODERNWARFARE_SNIPER                         = 'n0AJ'
     constant integer MODERNWARFARE_MEDIC                          = 'h0FF'
@@ -1346,90 +1346,90 @@ globals
     constant integer MODERNWARFARE_SATELITE                       = 'h0FD'
     constant integer MODERNWARFARE_CIA_AGENT                      = 'z000'
 
-    constant integer MODERNWARFARE_CITIZEN_MALE                   = 'n0AF'
-    constant integer MODERNWARFARE_CITIZEN_FEMALE                 = 'n09M'
-    constant integer MODERNWARFARE_HOUSING                        = 'h0DY'
+    constant integer MODERNWARFARE_CITIZEN_MALE                      = 'n0AF'
+    constant integer MODERNWARFARE_CITIZEN_FEMALE                    = 'n09M'
+    constant integer MODERNWARFARE_HOUSING                           = 'h0DY'
 
     // All Races
 
     constant integer SHREDDER                                        = 'ngir'
-	constant integer AI_LABORATORY                                   = 'h01T'
+    constant integer AI_LABORATORY                                   = 'h01T'
 
-	constant integer MARKETPLACE                                     = 'nmrk'
-	constant integer THIEVES_GUILD                                   = 'n09D'
-	constant integer DRAGON_ROOST                                    = 'n09L'
-	constant integer ANTIMAGIC_WARD                                  = 'o01Z'
+    constant integer MARKETPLACE                                     = 'nmrk'
+    constant integer THIEVES_GUILD                                   = 'n09D'
+    constant integer DRAGON_ROOST                                    = 'n09L'
+    constant integer ANTIMAGIC_WARD                                  = 'o01Z'
 
-	constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
-	constant integer UPG_STORM_PROTECTION                            = 'R029'
-	constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
-	constant integer UPG_EVOLUTION                                   = 'R00U'
-	constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
-	constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
-	constant integer UPG_IMPROVED_MOUNT                              = 'R024'
-	constant integer UPG_IMPROVED_NAVY                               = 'R035'
-	constant integer UPG_DRAGON_ROOST                                = 'R06M'
+    constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+    constant integer UPG_STORM_PROTECTION                            = 'R029'
+    constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
+    constant integer UPG_EVOLUTION                                   = 'R00U'
+    constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
+    constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
+    constant integer UPG_IMPROVED_MOUNT                              = 'R024'
+    constant integer UPG_IMPROVED_NAVY                               = 'R035'
+    constant integer UPG_DRAGON_ROOST                                = 'R06M'
 
-	constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
-	constant integer MAX_WOWR_HERO_LEVEL                             = 75
-	
-	constant integer HIDEOUT                                         = 'h00J'
-	constant integer FORTIFIED_HIDEOUT                               = 'h00K'
-	constant integer GUARDIANS_CITADEL                               = 'h00L'
+    constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
+    constant integer MAX_WOWR_HERO_LEVEL                             = 75
+    
+    constant integer HIDEOUT                                         = 'h00J'
+    constant integer FORTIFIED_HIDEOUT                               = 'h00K'
+    constant integer GUARDIANS_CITADEL                               = 'h00L'
 
-	constant integer PORTAL                                          = 'h014'
-	constant integer POWER_GENERATOR                                 = 'n025'
-	constant integer RESEARCH_TENT                                   = 'n042'
+    constant integer PORTAL                                          = 'h014'
+    constant integer POWER_GENERATOR                                 = 'n025'
+    constant integer RESEARCH_TENT                                   = 'n042'
 
-	constant integer GRYPHON_MOUNT                                   = 'h004'
-	constant integer WYVERN_MOUNT                                    = 'o003'
-	constant integer FROST_WYRM_MOUNT                                = 'u004'
-	constant integer CHIMAERA_MOUNT                                  = 'e005'
-	constant integer NETHER_DRAKE_MOUNT                              = 'n007'
-	constant integer DRAGONHAWK_MOUNT                                = 'h04L'
+    constant integer GRYPHON_MOUNT                                   = 'h004'
+    constant integer WYVERN_MOUNT                                    = 'o003'
+    constant integer FROST_WYRM_MOUNT                                = 'u004'
+    constant integer CHIMAERA_MOUNT                                  = 'e005'
+    constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+    constant integer DRAGONHAWK_MOUNT                                = 'h04L'
 
-	constant integer FOUNTAIN_OF_LIFE                                = 'h007'
-	constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
+    constant integer FOUNTAIN_OF_LIFE                                = 'h007'
+    constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
 
     constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
-	constant integer DARK_RANGER_SILENCE                             = 'ANsi'
-	constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
-	constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
-	constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
-	constant integer DARK_RANGER_CHARM                               = 'ANch'
-	constant integer DARK_RANGER_BLACK_ARROW                         = 'ANba'
+    constant integer DARK_RANGER_SILENCE                             = 'ANsi'
+    constant integer DARK_RANGER_DARK_PORTAL                         = 'A01T'
+    constant integer DARK_RANGER_LIFE_DRAIN                          = 'ANdr'
+    constant integer DARK_RANGER_UNHOLY_SPIRITS                      = 'A01S'
+    constant integer DARK_RANGER_CHARM                               = 'ANch'
+    constant integer DARK_RANGER_BLACK_ARROW                         = 'ANba'
 
-	constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
+    constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
-	constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
-	constant integer RAIN_OF_FIRE                                    = 'ANrf'
-	constant integer HOWL_OF_TERROR                                  = 'ANht'
-	constant integer CLEAVING_ATTACK                                 = 'ANca'
-	constant integer DEMON_MASTER                                    = 'A01R'
+    constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
+    constant integer RAIN_OF_FIRE                                    = 'ANrf'
+    constant integer HOWL_OF_TERROR                                  = 'ANht'
+    constant integer CLEAVING_ATTACK                                 = 'ANca'
+    constant integer DEMON_MASTER                                    = 'A01R'
 
-	constant integer DREAD_LORD_RAIN_OF_CHAOS                        = 'A07V'
+    constant integer DREAD_LORD_RAIN_OF_CHAOS                        = 'A07V'
 
-	constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
-	constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
-	constant integer EREDAR_WARLOCK_MANA_SHIELD                      = 'ANms'
-	constant integer EREDAR_WARLOCK_BASH                             = 'A061'
-	constant integer EREDAR_FINGER_OF_DEATH                          = 'A060'
+    constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
+    constant integer EREDAR_WARLOCK_FIRE_BOLT                        = 'ANfb'
+    constant integer EREDAR_WARLOCK_MANA_SHIELD                      = 'ANms'
+    constant integer EREDAR_WARLOCK_BASH                             = 'A061'
+    constant integer EREDAR_FINGER_OF_DEATH                          = 'A060'
 
-	constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
-	constant integer FURBOLG_REJUVENATION                            = 'A06X'
-	constant integer FURBOLG_FAERIE_FIRE                             = 'A06Y'
-	constant integer FURBOLG_COMMAND_AURA                            = 'A06Z'
-	constant integer FURBOLG_CORRUPTION                              = 'A070'
+    constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
+    constant integer FURBOLG_REJUVENATION                            = 'A06X'
+    constant integer FURBOLG_FAERIE_FIRE                             = 'A06Y'
+    constant integer FURBOLG_COMMAND_AURA                            = 'A06Z'
+    constant integer FURBOLG_CORRUPTION                              = 'A070'
 
     constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
-	constant integer MOUNTAIN_GIANT_BOULDER                          = 'A0A6'
-	constant integer MOUNTAIN_GIANT_HARDENED_SKIN                    = 'A099'
-	constant integer MOUNTAIN_GIANT_EAT_TREE                         = 'A09B'
-	constant integer MOUNTAIN_GIANT_DEMOLISH                         = 'A0A7'
+    constant integer MOUNTAIN_GIANT_BOULDER                          = 'A0A6'
+    constant integer MOUNTAIN_GIANT_HARDENED_SKIN                    = 'A099'
+    constant integer MOUNTAIN_GIANT_EAT_TREE                         = 'A09B'
+    constant integer MOUNTAIN_GIANT_DEMOLISH                         = 'A0A7'
 
-	constant integer AKAMA                                           = 'N01K'
-	constant integer REINCARNATION_AKAMA                             = 'A08K'
-	constant integer SPIRIT_WOLF_AKAMA                               = 'A08I'
+    constant integer AKAMA                                           = 'N01K'
+    constant integer REINCARNATION_AKAMA                             = 'A08K'
+    constant integer SPIRIT_WOLF_AKAMA                               = 'A08I'
     constant integer SHADOW_TOUCH_AKAMA                              = 'A08G'
 
     constant integer FORKED_LIGHTNING                                = 'ANfl'
@@ -1493,36 +1493,44 @@ globals
     constant integer MECHANICAL_REPAIR                              = 'A0IF'
 
 
-	// The Alliance
+    // The Alliance
     constant integer LADY_VASHJ_BONUS_HERO                           = 'H02B'
     constant integer KAEL_BONUS_HERO                                 = 'H02C'
     constant integer ILLIDAN_BONUS_HERO                              = 'E00A'
 
     // Freelancer
-	constant integer CREEP_DARK_WIZARD                               = 'nwzd'
-	constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
-	constant integer CREEP_DOOM_GUARD                                = 'nbal'
-	constant integer CREEP_WRAITH                                    = 'ngh2'
-	constant integer CREEP_SPIDER_CRAB                               = 'nsc2'
-	constant integer CREEP_HARPY                                     = 'nhrh'
+    constant integer CREEP_DARK_WIZARD                               = 'nwzd'
+    constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
+    constant integer CREEP_DOOM_GUARD                                = 'nbal'
+    constant integer CREEP_WRAITH                                    = 'ngh2'
+    constant integer CREEP_SPIDER_CRAB                               = 'nsc2'
+    constant integer CREEP_HARPY                                     = 'nhrh'
 
-	constant integer FREELANCER_LABORATORY                           = 'h01V'
-	constant integer FREELANCER_SHOP                                 = 'h01S'
-	constant integer FREELANCER_MERCENARY_CAMP                       = 'h01U'
+    constant integer FREELANCER_LABORATORY                           = 'h01V'
+    constant integer FREELANCER_SHOP                                 = 'h01S'
+    constant integer FREELANCER_MERCENARY_CAMP                       = 'h01U'
 
-	// AI commands
+    // AI commands
     constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1
-	constant integer COMMAND_ATTACK_PLAYERS_OFF                      = 2
-	constant integer COMMAND_GIVE_GOLD                               = 3
-	constant integer COMMAND_GIVE_WOOD                               = 4
-	constant integer COMMAND_SHIPS_ON                                = 5
-	constant integer COMMAND_SHIPS_OFF                               = 6
-	constant integer COMMAND_EXPANSIONS                              = 7
+    constant integer COMMAND_ATTACK_PLAYERS_OFF                      = 2
+    constant integer COMMAND_GIVE_GOLD                               = 3
+    constant integer COMMAND_GIVE_LUMBER                             = 4
+    constant integer COMMAND_SHIPS_ON                                = 5
+    constant integer COMMAND_SHIPS_OFF                               = 6
+    constant integer COMMAND_EXPANSIONS                              = 7
+    constant integer COMMAND_INFO                                    = 8
+    constant integer COMMAND_ATTACK_TARGET_ON                        = 9
+    constant integer COMMAND_ATTACK_TARGET_OFF                       = 10
+    constant integer COMMAND_ATTACK_TARGET_X                         = 11
+    constant integer COMMAND_ATTACK_TARGET_Y                         = 12
 
-	boolean attackEnemyPlayers = true
-	boolean buildShips = false
-	integer townHall = 0
-	integer expansions = 0
+    boolean attackEnemyPlayers = true
+    boolean buildShips = false
+    integer townHall = 0
+    integer expansions = 0
+    boolean attackTargetLocation = false
+    integer attackTargetLocationX = 0
+    integer attackTargetLocationY = 0
 endglobals
 
 //============================================================================
@@ -1945,13 +1953,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == ILLIDAN then
         set have_qty = have_qty + GetUnitCountEx(ILLIDAN_DEMON,false,townid)
-		
-	// World of Warcraft Reforged
-	elseif unitid == BLOOD_ELF_TOWN_HALL then
+        
+    // World of Warcraft Reforged
+    elseif unitid == BLOOD_ELF_TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(BLOOD_ELF_KEEP,false,townid) + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
     elseif unitid == BLOOD_ELF_KEEP then
         set have_qty = have_qty  + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
-	elseif unitid == BLOOD_ELF_SCOUT_TOWER then
+    elseif unitid == BLOOD_ELF_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(ELF_GUARD_TOWER,false,townid) + GetUnitCountEx(ARCANE_TOWER,false,townid)
 
     elseif unitid == NAGA_TEMPLE_1 then
@@ -1959,11 +1967,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == NAGA_TEMPLE then
         set have_qty = have_qty  + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
 
-	elseif unitid == DEMON_GATE_1 then
+    elseif unitid == DEMON_GATE_1 then
         set have_qty = have_qty + GetUnitCountEx(DEMON_GATE_2,false,townid) + GetUnitCountEx(DEMON_GATE_3,false,townid)
     elseif unitid == DEMON_GATE_2 then
         set have_qty = have_qty  + GetUnitCountEx(DEMON_GATE_3,false,townid)
-	elseif unitid == DEMON_FORTIFIED_INFERNAL_MACHINE then
+    elseif unitid == DEMON_FORTIFIED_INFERNAL_MACHINE then
         set have_qty = have_qty  + GetUnitCountEx(DEMON_FORTIFIED_INFERNAL_JUGGERNAUT,false,townid)
 
     elseif unitid == GOBLIN_TIER_1 then
@@ -2001,7 +2009,7 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == MODERNWARFARE_RADIO_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_FLAME_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MINIGUN_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MISSILE_TOWER,false,townid)
 
-	elseif unitid == DRAENEI_BOULDER_TOWER then
+    elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
     
     elseif unitid == HIDEOUT then
@@ -3434,7 +3442,7 @@ function PickMeleeHero takes race raceid returns integer
     return hero_id
 endfunction
 
- // World of Warcraft Reforged
+// World of Warcraft Reforged
 
 //===========================================================================
 // Calculate the modulus/remainder of (dividend) divided by (divisor).
@@ -3501,7 +3509,7 @@ function ChooseHeroSkill takes nothing returns integer
             return SIPHON_MANA
         endif
     // Orc
-	elseif (curHero == BLADE_MASTER) then
+    elseif (curHero == BLADE_MASTER) then
         if (skillUlti) then
             return BLADE_STORM
         elseif (mod == 0) then
@@ -3934,91 +3942,40 @@ endfunction
 
 function BuildingStrategyShips takes nothing returns nothing
     if (buildShips) then
-		call SetBuildUnit( 1, HUMAN_SHIPYARD )
-		call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
-		call SetBuildUnit( 2, HUMAN_BATTLESHIP )
+        call SetBuildUnit( 1, HUMAN_SHIPYARD )
+        call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
     else
         call SetBuildUnit( 0, HUMAN_SHIPYARD )
-		call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
-		call SetBuildUnit( 0, HUMAN_BATTLESHIP )
-	endif
-endfunction
-
-function NotifyOtherPlayers takes string message returns nothing
-    local integer i = 0
-    loop
-        call BlzDisplayChatMessage(Player(GetAiPlayer()),i, message)
-        set i = i + 1
-        exitwhen (i == GetBJMaxPlayers())
-    endloop
-    call DisplayText(GetAiPlayer(), message)
-endfunction
-
-function UpdateWorkers takes nothing returns nothing
-	loop
-		call SetGoldPeons(5 + CountHousings() * 3)
-		call SetWoodPeons(5)
-		loop
-			exitwhen (CommandsWaiting() <= 0)
-			if (GetLastCommand() == COMMAND_ATTACK_PLAYERS_ON) then
-				set attackEnemyPlayers = true
-				call NotifyOtherPlayers("I will attack enemy players from now on!")
-			elseif (GetLastCommand() == COMMAND_ATTACK_PLAYERS_OFF) then
-				set attackEnemyPlayers = false
-				call NotifyOtherPlayers("I won't attack enemy players anymore!")
-			elseif (GetLastCommand() == COMMAND_GIVE_GOLD) then
-                call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
-                call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
-				call NotifyOtherPlayers("Here, take my gold!")
-            elseif (GetLastCommand() == COMMAND_GIVE_WOOD) then
-                call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER))
-                call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER, 0)
-				call NotifyOtherPlayers("Here, take my wood!")
-            elseif (GetLastCommand() == COMMAND_SHIPS_ON) then
-                set buildShips = true
-                call BuildingStrategyShips()
-                call NotifyOtherPlayers("I will start building ships!")
-            elseif (GetLastCommand() == COMMAND_SHIPS_OFF) then
-                set buildShips = false
-                call BuildingStrategyShips()
-                call NotifyOtherPlayers("I will stop building ships!")
-            elseif (GetLastCommand() == COMMAND_EXPANSIONS) then
-                set expansions = GetLastData()
-                call NotifyOtherPlayers("I will build " + I2S(expansions) + "expansions!")
-			else
-				//call DisplayText(GetAiPlayer(), "I received an unknown AI command: " + I2S(GetLastCommand()))
-			endif
-			call PopLastCommand()
-			call Sleep(5)
-		endloop
-		call Sleep(10)
-	endloop
+        call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, HUMAN_BATTLESHIP )
+    endif
 endfunction
 
 function AttackWithMount takes nothing returns nothing
-	if (GetUnitCount(GRYPHON_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
-	endif
-	if (GetUnitCount(WYVERN_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, WYVERN_MOUNT )
-	endif
-	if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
-	endif
-	if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
-	endif
-	if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
-	endif
-	if (GetUnitCount(DRAGONHAWK_MOUNT) > 0) then
-		call CampaignAttacker( 0, 1, DRAGONHAWK_MOUNT )
-	endif
+    if (GetUnitCount(GRYPHON_MOUNT) > 0) then
+        call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+    endif
+    if (GetUnitCount(WYVERN_MOUNT) > 0) then
+        call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+    endif
+    if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
+        call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+    endif
+    if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
+        call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+    endif
+    if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
+        call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+    endif
+    if (GetUnitCount(DRAGONHAWK_MOUNT) > 0) then
+        call CampaignAttacker( 0, 1, DRAGONHAWK_MOUNT )
+    endif
 endfunction
 
 function AddStandardUnitsToAttackWave takes nothing returns nothing
-	call PurchaseZeppelin()
-	call AttackWithMount()
+    call PurchaseZeppelin()
+    call AttackWithMount()
     call CampaignAttacker( 0, 1, hero_id )
 endfunction
 
@@ -4051,47 +4008,49 @@ function LaunchAttack takes nothing returns nothing
         call Sleep( 2 )
         return
     endif
+    
+    if (attackTargetLocation) then
+        call AttackMoveXYA(attackTargetLocationX, attackTargetLocationY)
+    elseif (attackEnemyPlayers) then
+        // Target Priority #1
+        if (target == null) then
+            set target = GetAllianceTarget()
+            if (target != null) then
+                set setAlly = false
+            endif
+        endif
 
-	if (attackEnemyPlayers) then
-		// Target Priority #1
-		if (target == null) then
-			set target = GetAllianceTarget()
-			if (target != null) then
-				set setAlly = false
-			endif
-		endif
+        // Target Priority #2
+        if (target == null) then
+            set target = GetExpansionFoe()
+            if (target != null) then
+                set take_exp = false
+            endif
+        endif
 
-		// Target Priority #2
-		if (target == null) then
-			set target = GetExpansionFoe()
-			if (target != null) then
-				set take_exp = false
-			endif
-		endif
+        // Target Priority #3
+        if (target == null) then
+            set target = GetMegaTarget()
+        endif
 
-		// Target Priority #3
-		if (target == null) then
-			set target = GetMegaTarget()
-		endif
+        // Target Priority #4
+        if (target == null) then
+            set target = GetEnemyExpansion()
+        endif
 
-		// Target Priority #4
-		if (target == null) then
-			set target = GetEnemyExpansion()
-		endif
-
-		// Target Priority #5
-		if (target == null) then
-			set target = GetEnemyExpansion()
-			if (target == null) then
-				call StartGetEnemyBase(  )
-				loop
-					exitwhen (not WaitGetEnemyBase())
-					call SuicideSleep( 1 )
-				endloop
-				set target = GetEnemyBase()
-			endif
-		endif
-	endif
+        // Target Priority #5
+        if (target == null) then
+            set target = GetEnemyExpansion()
+            if (target == null) then
+                call StartGetEnemyBase(  )
+                loop
+                    exitwhen (not WaitGetEnemyBase())
+                    call SuicideSleep( 1 )
+                endloop
+                set target = GetEnemyBase()
+            endif
+        endif
+    endif
 
     // Target Priority #6
     if (target == null) then
@@ -4110,6 +4069,110 @@ function LaunchAttack takes nothing returns nothing
         // If no target was found, sleep a bit before trying again
         call Sleep( 20 )
     endif
+endfunction
+
+function NotifySpecificPlayer takes integer playerIndex, string message returns nothing
+    call BlzDisplayChatMessage(Player(GetAiPlayer()), playerIndex, message)
+    call DisplayText(GetAiPlayer(), message)
+endfunction
+
+function NotifyOtherPlayers takes string message returns nothing
+    local integer i = 0
+    loop
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), i, message)
+        set i = i + 1
+        exitwhen (i == GetBJMaxPlayers())
+    endloop
+    call DisplayText(GetAiPlayer(), message)
+endfunction
+
+function GetPlayerInfoText takes nothing returns string
+    local string msg = "I "
+    
+    if (attackEnemyPlayers) then
+        set msg = msg + "attack enemy players"
+    else
+        set msg = msg + "do not attack enemy players"
+    endif
+    
+    set msg = msg + ", "
+    
+    if (buildShips) then
+        set msg = msg + "build ships"
+    else
+        set msg = msg + "do not build ships"
+    endif
+    
+    set msg = msg + " and "
+    
+    set msg = msg + "will have " + I2S(expansions) + " expansions"
+    
+    if (attackTargetLocation) then
+        set msg = msg + " and "
+    
+        set msg = msg + "attack a specific location"
+    endif
+    
+    set msg = msg + "."
+    
+    return msg
+endfunction
+
+function UpdateWorkers takes nothing returns nothing
+    local integer c = 0
+    loop
+        call SetGoldPeons(5 + CountHousings() * 3)
+        call SetWoodPeons(5)
+        loop
+            exitwhen (CommandsWaiting() <= 0)
+            set c = GetLastCommand()
+            if (c == COMMAND_ATTACK_PLAYERS_ON) then
+                set attackEnemyPlayers = true
+                call NotifyOtherPlayers("I will attack enemy players from now on!")
+            elseif (c == COMMAND_ATTACK_PLAYERS_OFF) then
+                set attackEnemyPlayers = false
+                call NotifyOtherPlayers("I won't attack enemy players anymore!")
+            elseif (c == COMMAND_GIVE_GOLD) then
+                call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
+                call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
+                call NotifySpecificPlayer(GetLastData(), "Here, take my gold!")
+            elseif (c == COMMAND_GIVE_LUMBER) then
+                call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER))
+                call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER, 0)
+                call NotifySpecificPlayer(GetLastData(), "Here, take my lumber!")
+            elseif (c == COMMAND_SHIPS_ON) then
+                set buildShips = true
+                call BuildingStrategyShips()
+                call NotifyOtherPlayers("I will start building ships!")
+            elseif (c == COMMAND_SHIPS_OFF) then
+                set buildShips = false
+                call BuildingStrategyShips()
+                call NotifyOtherPlayers("I will stop building ships!")
+            elseif (c == COMMAND_EXPANSIONS) then
+                set expansions = GetLastData()
+                call NotifyOtherPlayers("I will build " + I2S(expansions) + "expansions!")
+            elseif (c == COMMAND_INFO) then
+                call NotifySpecificPlayer(GetLastData(), GetPlayerInfoText())
+            elseif (c == COMMAND_ATTACK_TARGET_ON) then
+                set attackTargetLocation = true
+                call NotifyOtherPlayers("I will attack your specified target location!")
+            elseif (c == COMMAND_ATTACK_TARGET_OFF) then
+                set attackTargetLocation = false
+                call NotifyOtherPlayers("I will stop attacking your specified target location and attack regular targets now!")
+            elseif (c == COMMAND_ATTACK_TARGET_X) then
+                set attackTargetLocationX = GetLastData()
+                call NotifyOtherPlayers("I will use a location with coordiante X " + I2S(attackTargetLocationX) + " when attacking a location.")
+            elseif (c == COMMAND_ATTACK_TARGET_Y) then
+                set attackTargetLocationY = GetLastData()
+                call NotifyOtherPlayers("I will use a location with coordiante Y " + I2S(attackTargetLocationY) + " when attacking a location.")
+            else
+                call NotifyOtherPlayers("I received an unknown AI command: " + I2S(c))
+            endif
+            call PopLastCommand()
+            call Sleep(5)
+        endloop
+        call Sleep(10)
+    endloop
 endfunction
 
 function ConfigureAI takes nothing returns nothing
@@ -4171,14 +4234,14 @@ endfunction
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, POWER_GENERATOR )
     call SetBuildUnit( 1, ANTIMAGIC_WARD )
-	call SetBuildUnit( 1, RESEARCH_TENT )
-	call SetBuildUnit( 1, MARKETPLACE )
-	call SetBuildUnit( 1, THIEVES_GUILD )
-	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-	call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
-	call SetBuildUnit( 1, DRAGON_ROOST )
-	call StartThread(function ResearchHighLevelTier3Researches)
+    call SetBuildUnit( 1, RESEARCH_TENT )
+    call SetBuildUnit( 1, MARKETPLACE )
+    call SetBuildUnit( 1, THIEVES_GUILD )
+    call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
+    call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
+    call SetBuildUnit( 1, DRAGON_ROOST )
+    call StartThread(function ResearchHighLevelTier3Researches)
 endfunction
 
 function BuildExpansions takes nothing returns nothing

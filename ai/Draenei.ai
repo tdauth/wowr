@@ -4,30 +4,30 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 - 3 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, DRAENEI_HAVEN )
+    call SetBuildUnit( 1, DRAENEI_HAVEN )
     call SetBuildUnit( 17, DRAENEI_LABORER )
-	call SetBuildUnit( 2, DRAENEI_CITIZEN_MALE )
+    call SetBuildUnit( 2, DRAENEI_CITIZEN_MALE )
 
-	call BuildingStrategyStandardTier1()
+    call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 2, DRAENEI_HOUSING )
-	call SetBuildUnit( 2, DRAENEI_BARRACKS )
+    call SetBuildUnit( 2, DRAENEI_HOUSING )
+    call SetBuildUnit( 2, DRAENEI_BARRACKS )
     call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
     call SetBuildUnit( 1, DRAENEI_SHOP )
-	call SetBuildUnit( 5, DRAENEI_BOULDER_TOWER )
-	call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
-	
-	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_ARMOR )
-	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_MELEE_WEAPONS )
-	call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_RANGED_WEAPONS )
-	call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
-	call SetBuildUpgr( 2, UPG_DRAENEI_HARBRINGER_ADEPT )
-	call SetBuildUpgr( 2, UPG_DRAENEI_SEER_ADEPT )
-	call SetBuildUpgr( 3, UPG_DRAENEI_IMPROVED_MASONRY )
-	call SetBuildUpgr( 1, UPG_DRAENEI_DEVOUR )
-	call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )	
+    call SetBuildUnit( 5, DRAENEI_BOULDER_TOWER )
+    call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
+    
+    call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_ARMOR )
+    call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_MELEE_WEAPONS )
+    call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_RANGED_WEAPONS )
+    call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+    call SetBuildUpgr( 2, UPG_DRAENEI_HARBRINGER_ADEPT )
+    call SetBuildUpgr( 2, UPG_DRAENEI_SEER_ADEPT )
+    call SetBuildUpgr( 3, UPG_DRAENEI_IMPROVED_MASONRY )
+    call SetBuildUpgr( 1, UPG_DRAENEI_DEVOUR )
+    call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )    
 
-	call BuildingStrategyStandardTier3()
+    call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -173,7 +173,7 @@ function main takes nothing returns nothing
     call CampaignAI( DRAENEI_BARRACKS, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-	call StartThread(function UpdateWorkers)
+    call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

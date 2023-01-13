@@ -4,35 +4,35 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, GOBLIN_TIER_1 )
-	call SetBuildUnit( 22, GOBLIN_LABORER )
-	call SetBuildUnit( 4, GOBLIN_SHREDDER )
-	call SetBuildUnit( 2, GOBLIN_HOUSING )
-	call SetBuildUnit( 1, GOBLIN_FUEL_PUMP )
-	call SetBuildUnit( 1, GOBLIN_ALTAR )
-	call SetBuildUnit( 5, GOBLIN_HUT )
-	call SetBuildUnit( 2, GOBLIN_CITIZEN_MALE )
-	call SetBuildUnit( 1, AI_LABORATORY )
-	call SetBuildUnit( 2, GOBLIN_CITIZEN_FEMALE )
-	call SetBuildUnit( 2, GOBLIN_BARRACKS )
+    call SetBuildUnit( 1, GOBLIN_TIER_1 )
+    call SetBuildUnit( 22, GOBLIN_LABORER )
+    call SetBuildUnit( 4, GOBLIN_SHREDDER )
+    call SetBuildUnit( 2, GOBLIN_HOUSING )
+    call SetBuildUnit( 1, GOBLIN_FUEL_PUMP )
+    call SetBuildUnit( 1, GOBLIN_ALTAR )
+    call SetBuildUnit( 5, GOBLIN_HUT )
+    call SetBuildUnit( 2, GOBLIN_CITIZEN_MALE )
+    call SetBuildUnit( 1, AI_LABORATORY )
+    call SetBuildUnit( 2, GOBLIN_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, GOBLIN_BARRACKS )
     call SetBuildUnit( 2, GOBLIN_TOWER )
     call SetBuildUnit( 1, GOBLIN_SHOP )
     call SetBuildUnit( 1, GOBLIN_TIER_2 )
     call SetBuildUnit( 1, GOBLIN_TIER_3 )
-	call SetBuildUnit( 1, GOBLIN_ARCANE_LABORATORY )
-	call SetBuildUnit( 1, GOBLIN_TANK_FACTORY )
-	call SetBuildUnit( 1, GOBLIN_AIR_FIELD )
-	
-	call SetBuildUpgr( 2, UPG_GOBLIN_LUMBER )
-	call SetBuildUpgr( 2, UPG_GOBLIN_BANKING )
-	call SetBuildUpgr( 3, UPG_GOBLIN_IMPROVED_CONSTRUCTION )
-	call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_RWEAPONS )
-	call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_WEAPONS )
+    call SetBuildUnit( 1, GOBLIN_ARCANE_LABORATORY )
+    call SetBuildUnit( 1, GOBLIN_TANK_FACTORY )
+    call SetBuildUnit( 1, GOBLIN_AIR_FIELD )
+    
+    call SetBuildUpgr( 2, UPG_GOBLIN_LUMBER )
+    call SetBuildUpgr( 2, UPG_GOBLIN_BANKING )
+    call SetBuildUpgr( 3, UPG_GOBLIN_IMPROVED_CONSTRUCTION )
+    call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_RWEAPONS )
+    call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_WEAPONS )
     call SetBuildUpgr( 3, UPG_GOBLIN_STEEL_ARMOR )
 
     call SetBuildUpgr( 2, UPG_GOBLIN_ALCHEMIST_ADEPT )
-	call SetBuildUpgr( 2, UPG_GOBLIN_MAGE_ADEPT )
-	call SetBuildUpgr( 2, UPG_GOBLIN_SORCERESS_ADEPT )
+    call SetBuildUpgr( 2, UPG_GOBLIN_MAGE_ADEPT )
+    call SetBuildUpgr( 2, UPG_GOBLIN_SORCERESS_ADEPT )
 
     call SetBuildUpgr( 1, UPG_GOBLIN_OBSERVATORY )
     call SetBuildUpgr( 1, UPG_GOBLIN_FUEL )
@@ -52,10 +52,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_GOBLIN_EXPLOSIVE_BARREL )
     call SetBuildUpgr( 1, UPG_GOBLIN_CUT_DOWN_TREES )
     call SetBuildUpgr( 1, UPG_GOBLIN_OIL_DRILLING )
-	
-	call SetBuildUpgr( 1, UPG_GOBLIN_BACKPACK )
-	
-	call BuildingStrategyStandardTier3()
+    
+    call SetBuildUpgr( 1, UPG_GOBLIN_BACKPACK )
+    
+    call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -66,7 +66,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, GOBLIN_FLAMETHROWER )
     call CampaignAttackerEx( 0, 1, 2, GOBLIN_FLAME_SHREDDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -74,7 +74,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, GOBLIN_FLAMETHROWER )
     call CampaignAttackerEx( 0, 1, 2, GOBLIN_FLAME_SHREDDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -82,7 +82,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GOBLIN_FLAMETHROWER )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_SHREDDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -91,7 +91,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, GOBLIN_FLAMETHROWER )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_SHREDDER )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_TANK )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -102,7 +102,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_SHREDDER )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_TANK )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_ASSAULT_TANK )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -113,7 +113,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_TANK )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_ASSAULT_TANK )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_AIR_DRONE )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -124,7 +124,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_FLAME_TANK )
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_ASSAULT_TANK )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_AIR_DRONE )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -136,7 +136,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, GOBLIN_ASSAULT_TANK )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_AIR_DRONE )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_SAPPER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -149,7 +149,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_AIR_DRONE )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_SAPPER )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_MAGE )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -163,10 +163,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_SAPPER )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_MAGE )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_FLAME_TANK )
-	call CampaignAttackerEx( 2, 2, 3, OGRE_GOBLIN_SQUAD )
-	call CampaignAttackerEx( 2, 2, 3, GOBLIN_EMPEROR )
-	call CampaignAttackerEx( 2, 2, 3, GOBLIN_STEAM_ROLLER )
-	call AddStandardUnitsToAttackWave()
+    call CampaignAttackerEx( 2, 2, 3, OGRE_GOBLIN_SQUAD )
+    call CampaignAttackerEx( 2, 2, 3, GOBLIN_EMPEROR )
+    call CampaignAttackerEx( 2, 2, 3, GOBLIN_STEAM_ROLLER )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -181,10 +181,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_MAGE )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_FLAME_TANK )
     call CampaignAttackerEx( 2, 2, 3, GOBLIN_SORCERESS )
-	call CampaignAttackerEx( 2, 2, 3, OGRE_GOBLIN_SQUAD )
-	call CampaignAttackerEx( 2, 2, 3, GOBLIN_EMPEROR )
-	call CampaignAttackerEx( 2, 2, 3, GOBLIN_STEAM_ROLLER )
-	call AddStandardUnitsToAttackWave()
+    call CampaignAttackerEx( 2, 2, 3, OGRE_GOBLIN_SQUAD )
+    call CampaignAttackerEx( 2, 2, 3, GOBLIN_EMPEROR )
+    call CampaignAttackerEx( 2, 2, 3, GOBLIN_STEAM_ROLLER )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -201,15 +201,15 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, GOBLIN_MAGE )
         call CampaignAttackerEx( 2, 2, 2, GOBLIN_FLAME_TANK )
         call CampaignAttackerEx( 2, 2, 2, GOBLIN_SORCERESS )
-		call CampaignAttackerEx( 2, 2, 2, OGRE_GOBLIN_SQUAD )
-		call CampaignAttackerEx( 2, 2, 2, GOBLIN_EMPEROR )
-		call CampaignAttackerEx( 2, 2, 2, GOBLIN_STEAM_ROLLER )
-		
-		// big air army
+        call CampaignAttackerEx( 2, 2, 2, OGRE_GOBLIN_SQUAD )
+        call CampaignAttackerEx( 2, 2, 2, GOBLIN_EMPEROR )
+        call CampaignAttackerEx( 2, 2, 2, GOBLIN_STEAM_ROLLER )
+        
+        // big air army
         call CampaignAttackerEx( 6, 12, 18, GOBLIN_WAR_ZEPPELIN )
         call CampaignAttackerEx( 15, 20, 25, GOBLIN_AIR_DRONE )
-		
-		call AddStandardUnitsToAttackWave()
+        
+        call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
@@ -219,7 +219,7 @@ function main takes nothing returns nothing
     call CampaignAI( GOBLIN_HUT, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-	call StartThread(function UpdateWorkers)
+    call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

@@ -4,47 +4,47 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, FURBOLG_TRIBAL_CENTER )
-	call SetBuildUnit( 22, YOUNG_FURBOLG )
-	call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
-	call SetBuildUnit( 1, RESURRECTION_STONE )
-	call SetBuildUnit( 5, FURBOLG_HUT )
-	call SetBuildUnit( 2, FURBOLG_CITIZEN_MALE )
+    call SetBuildUnit( 1, FURBOLG_TRIBAL_CENTER )
+    call SetBuildUnit( 22, YOUNG_FURBOLG )
+    call SetBuildUnit( 1, FURBOLG_LUMBER_CAMP )
+    call SetBuildUnit( 1, RESURRECTION_STONE )
+    call SetBuildUnit( 5, FURBOLG_HUT )
+    call SetBuildUnit( 2, FURBOLG_CITIZEN_MALE )
 
-	call BuildingStrategyStandardTier1()
+    call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 2, FURBOLG_HOUSING )
-	call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
-	call SetBuildUnit( 2, FURBOLG_BARRACKS )
-	call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
+    call SetBuildUnit( 2, FURBOLG_HOUSING )
+    call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, FURBOLG_BARRACKS )
+    call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
     call SetBuildUnit( 2, GUARDING_FURBOLG )
-	call SetBuildUnit( 1, POWER_GENERATOR )
-	call SetBuildUnit( 1, RESEARCH_TENT )
+    call SetBuildUnit( 1, POWER_GENERATOR )
+    call SetBuildUnit( 1, RESEARCH_TENT )
     call SetBuildUnit( 1, FURBOLG_MARKETPLACE )
-	call SetBuildUnit( 1, FURBOLG_WOLVES_CAGE )
-	call SetBuildUnit( 1, FURBOLG_POLAR_HUT )
-	call SetBuildUnit( 1, FURBOLG_DEFILED_FOUNTAIN )
-	call SetBuildUpgr( 2, UPG_FURBOLG_LUMBER )
-	call SetBuildUnit( 1, FURBOLG_GREEN_DRAGON_ROOST )
-	
-	call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_RWEAPONS )
-	call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_WEAPONS )
+    call SetBuildUnit( 1, FURBOLG_WOLVES_CAGE )
+    call SetBuildUnit( 1, FURBOLG_POLAR_HUT )
+    call SetBuildUnit( 1, FURBOLG_DEFILED_FOUNTAIN )
+    call SetBuildUpgr( 2, UPG_FURBOLG_LUMBER )
+    call SetBuildUnit( 1, FURBOLG_GREEN_DRAGON_ROOST )
+    
+    call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_RWEAPONS )
+    call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_WEAPONS )
     call SetBuildUpgr( 3, UPG_FURBOLG_STEEL_ARMOR )
-	call SetBuildUpgr( 3, UPG_FURBOLG_CR_ARMOR )
-	call SetBuildUpgr( 3, UPG_FURBOLG_CR_ATTACK )
-	
-	call SetBuildUpgr( 2, UPG_FURBOLG_SHAMAN )
-	call SetBuildUpgr( 2, UPG_FURBOLG_ELDER_SHAMAN )
-	call SetBuildUpgr( 1, UPG_FURBOLG_FAERIE_FIRE )
-	call SetBuildUpgr( 1, UPG_FURBOLG_WEB )
-	call SetBuildUpgr( 1, UPG_FURBOLG_ENSNARE )
-	call SetBuildUpgr( 1, UPG_FURBOLG_BLOOD_LUST )
-	call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
-	call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
-	
-	call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
-	
-	call BuildingStrategyStandardTier3()
+    call SetBuildUpgr( 3, UPG_FURBOLG_CR_ARMOR )
+    call SetBuildUpgr( 3, UPG_FURBOLG_CR_ATTACK )
+    
+    call SetBuildUpgr( 2, UPG_FURBOLG_SHAMAN )
+    call SetBuildUpgr( 2, UPG_FURBOLG_ELDER_SHAMAN )
+    call SetBuildUpgr( 1, UPG_FURBOLG_FAERIE_FIRE )
+    call SetBuildUpgr( 1, UPG_FURBOLG_WEB )
+    call SetBuildUpgr( 1, UPG_FURBOLG_ENSNARE )
+    call SetBuildUpgr( 1, UPG_FURBOLG_BLOOD_LUST )
+    call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
+    call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
+    
+    call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
+    
+    call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -55,7 +55,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, FURBOLG_EX )
     call CampaignAttackerEx( 0, 1, 2, FURBOLG_TRACKER_EX )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -63,7 +63,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, FURBOLG_EX )
     call CampaignAttackerEx( 0, 1, 2, FURBOLG_TRACKER_EX )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -71,7 +71,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -80,7 +80,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, FURBOLG_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -91,7 +91,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_TRACKER_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -102,7 +102,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -113,7 +113,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_CHAMPION_EX )
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -125,7 +125,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, FURBOLG_URSA_WARRIOR )
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -138,7 +138,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG )
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
     call CampaignAttackerEx( 2, 2, 3, FURBOLG_ELDER_SHAMAN )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -152,10 +152,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, POLAR_FURBOLG_CHAMPION )
     call CampaignAttackerEx( 2, 2, 3, FURBOLG_ELDER_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, FURBOLG_CHAMPION_EX )
-	call CampaignAttackerEx( 2, 2, 3, TIMBER_WOLF )
-	call CampaignAttackerEx( 2, 2, 3, GIANT_WOLF )
-	call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
-	call AddStandardUnitsToAttackWave()
+    call CampaignAttackerEx( 2, 2, 3, TIMBER_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, GIANT_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -170,10 +170,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, FURBOLG_ELDER_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, FURBOLG_CHAMPION_EX )
     call CampaignAttackerEx( 2, 2, 3, FURBOLG_SHAMAN_EX )
-	call CampaignAttackerEx( 2, 2, 3, TIMBER_WOLF )
-	call CampaignAttackerEx( 2, 2, 3, GIANT_WOLF )
-	call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
-	call AddStandardUnitsToAttackWave()
+    call CampaignAttackerEx( 2, 2, 3, TIMBER_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, GIANT_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, DIRE_WOLF )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -191,14 +191,14 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, FURBOLG_ELDER_SHAMAN )
         call CampaignAttackerEx( 2, 2, 2, FURBOLG_CHAMPION_EX )
         call CampaignAttackerEx( 2, 2, 2, FURBOLG_SHAMAN_EX )
-		call CampaignAttackerEx( 2, 2, 2, TIMBER_WOLF )
-		call CampaignAttackerEx( 2, 2, 2, GIANT_WOLF )
-		call CampaignAttackerEx( 2, 2, 2, DIRE_WOLF )
-		
-		// big air army
+        call CampaignAttackerEx( 2, 2, 2, TIMBER_WOLF )
+        call CampaignAttackerEx( 2, 2, 2, GIANT_WOLF )
+        call CampaignAttackerEx( 2, 2, 2, DIRE_WOLF )
+        
+        // big air army
         call CampaignAttackerEx( 15, 20, 25, GREEN_DRAKE )
-		
-		call AddStandardUnitsToAttackWave()
+        
+        call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
@@ -208,7 +208,7 @@ function main takes nothing returns nothing
     call CampaignAI( FURBOLG_HUT, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-	call StartThread(function UpdateWorkers)
+    call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

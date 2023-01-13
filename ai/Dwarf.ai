@@ -4,43 +4,43 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, DWARF_TIER_1 )
-	//call SetBuildUnit( 1, DWARF_MINE ) // AI does not know how to construct. We preplaced one.
-	call SetBuildUnit( 22, DWARF_MINER )
-	call SetBuildUnit( 1, DWARF_BLACKSMITH )
-	call SetBuildUnit( 1, DWARF_ALTAR )
-	call SetBuildUnit( 5, DWARF_HOUSE )
-	call SetBuildUnit( 2, DWARF_CITIZEN_MALE )
+    call SetBuildUnit( 1, DWARF_TIER_1 )
+    //call SetBuildUnit( 1, DWARF_MINE ) // AI does not know how to construct. We preplaced one.
+    call SetBuildUnit( 22, DWARF_MINER )
+    call SetBuildUnit( 1, DWARF_BLACKSMITH )
+    call SetBuildUnit( 1, DWARF_ALTAR )
+    call SetBuildUnit( 5, DWARF_HOUSE )
+    call SetBuildUnit( 2, DWARF_CITIZEN_MALE )
 
-	call BuildingStrategyStandardTier1()
+    call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 2, DWARF_HOUSING )
-	call SetBuildUnit( 2, DWARF_CITIZEN_FEMALE )
-	call SetBuildUnit( 2, DWARF_BARRACKS )
+    call SetBuildUnit( 2, DWARF_HOUSING )
+    call SetBuildUnit( 2, DWARF_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, DWARF_BARRACKS )
     call SetBuildUnit( 2, DWARF_TOWER )
 
     // Tier 2 Buildings
     call SetBuildUnit( 1, DWARF_TIER_2 )
     call SetBuildUnit( 1, DWARF_TAVERN )
-	call SetBuildUnit( 1, DWARF_MYSTICAL_HALL )
-	call SetBuildUnit( 1, DWARF_WORKSHOP )
-	call SetBuildUnit( 1, DWARF_BEASTIARY )
+    call SetBuildUnit( 1, DWARF_MYSTICAL_HALL )
+    call SetBuildUnit( 1, DWARF_WORKSHOP )
+    call SetBuildUnit( 1, DWARF_BEASTIARY )
 
-	// Tier 3 Buildings
-	call SetBuildUnit( 1, DWARF_TIER_3 )
+    // Tier 3 Buildings
+    call SetBuildUnit( 1, DWARF_TIER_3 )
     call SetBuildUnit( 1, POWER_GENERATOR )
-	call SetBuildUnit( 1, RESEARCH_TENT )
-	
-	call SetBuildUpgr( 2, UPG_DWARF_LUMBER )
-	call SetBuildUpgr( 2, UPG_DWARF_LUMBER_MILL )
-	call SetBuildUpgr( 3, UPG_DWARF_FLYING_MACHINE_BOMBS )
-	call SetBuildUpgr( 3, UPG_DWARF_RANGED )
-	call SetBuildUpgr( 3, UPG_DWARF_MELEE )
+    call SetBuildUnit( 1, RESEARCH_TENT )
+    
+    call SetBuildUpgr( 2, UPG_DWARF_LUMBER )
+    call SetBuildUpgr( 2, UPG_DWARF_LUMBER_MILL )
+    call SetBuildUpgr( 3, UPG_DWARF_FLYING_MACHINE_BOMBS )
+    call SetBuildUpgr( 3, UPG_DWARF_RANGED )
+    call SetBuildUpgr( 3, UPG_DWARF_MELEE )
     call SetBuildUpgr( 3, UPG_DWARF_ARMOR )
     call SetBuildUpgr( 3, UPG_DWARF_LEATHER )
 
     call SetBuildUpgr( 2, UPG_DWARF_BATTLEPRIEST_ADEPT )
-	call SetBuildUpgr( 2, UPG_DWARF_RUNECASTER_ADEPT )
+    call SetBuildUpgr( 2, UPG_DWARF_RUNECASTER_ADEPT )
 
     call SetBuildUpgr( 1, UPG_DWARF_LONG_RIFLES )
     call SetBuildUpgr( 1, UPG_DWARF_MITHRIL )
@@ -59,13 +59,13 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_DWARF_ELITE_SIEGE_TANK )
     call SetBuildUpgr( 1, UPG_DWARF_BARRAGE )
     call SetBuildUpgr( 1, UPG_DWARF_STORM_HAMMERS )
-	
-	call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-	call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-	
-	call SetBuildUpgr( 1, UPG_DWARF_BACKPACK )
-	
-	call BuildingStrategyStandardTier3()
+    
+    call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
+    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
+    
+    call SetBuildUpgr( 1, UPG_DWARF_BACKPACK )
+    
+    call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -76,7 +76,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, DWARF_TROLL_SLAYER )
     call CampaignAttackerEx( 0, 1, 2, DWARF_RIDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -84,7 +84,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, DWARF_TROLL_SLAYER )
     call CampaignAttackerEx( 0, 1, 2, DWARF_RIDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -92,7 +92,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -101,7 +101,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, DWARF_TROLL_SLAYER )
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -112,7 +112,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIDER )
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -123,7 +123,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -134,7 +134,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DWARF_RIFLEMAN )
     call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -146,7 +146,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DWARF_MORTAR )
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -159,7 +159,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON_RIDER )
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
     call CampaignAttackerEx( 2, 2, 3, DWARF_BATTLEPRIEST )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -173,10 +173,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DWARF_GRYPHON )
     call CampaignAttackerEx( 2, 2, 3, DWARF_BATTLEPRIEST )
     call CampaignAttackerEx( 2, 2, 3, DWARF_RIFLEMAN )
-	call CampaignAttackerEx( 2, 2, 3, DWARF_FLYING_MACHINE )
-	call CampaignAttackerEx( 2, 2, 3, DWARF_SIEGE_ENGINE )
-	call CampaignAttackerEx( 2, 2, 3, DWARF_STEAM_FORTRESS )
-	call AddStandardUnitsToAttackWave()
+    call CampaignAttackerEx( 2, 2, 3, DWARF_FLYING_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_SIEGE_ENGINE )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_STEAM_FORTRESS )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -191,10 +191,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DWARF_BATTLEPRIEST )
     call CampaignAttackerEx( 2, 2, 3, DWARF_RIFLEMAN )
     call CampaignAttackerEx( 2, 2, 3, DWARF_RUNECASTER )
-	call CampaignAttackerEx( 2, 2, 3, DWARF_FLYING_MACHINE )
-	call CampaignAttackerEx( 2, 2, 3, DWARF_SIEGE_ENGINE )
-	call CampaignAttackerEx( 2, 2, 3, DWARF_STEAM_FORTRESS )
-	call AddStandardUnitsToAttackWave()
+    call CampaignAttackerEx( 2, 2, 3, DWARF_FLYING_MACHINE )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_SIEGE_ENGINE )
+    call CampaignAttackerEx( 2, 2, 3, DWARF_STEAM_FORTRESS )
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -211,15 +211,15 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, DWARF_BATTLEPRIEST )
         call CampaignAttackerEx( 2, 2, 2, DWARF_RIFLEMAN )
         call CampaignAttackerEx( 2, 2, 2, DWARF_RUNECASTER )
-		call CampaignAttackerEx( 2, 2, 2, DWARF_FLYING_MACHINE )
-		call CampaignAttackerEx( 2, 2, 2, DWARF_SIEGE_ENGINE )
-		call CampaignAttackerEx( 2, 2, 2, DWARF_STEAM_FORTRESS )
-		
-		// big air army
+        call CampaignAttackerEx( 2, 2, 2, DWARF_FLYING_MACHINE )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_SIEGE_ENGINE )
+        call CampaignAttackerEx( 2, 2, 2, DWARF_STEAM_FORTRESS )
+        
+        // big air army
         call CampaignAttackerEx( 6, 12, 18, DWARF_POLAR_BEAR )
         call CampaignAttackerEx( 15, 20, 25, DWARF_GRYPHON_RIDER )
-		
-		call AddStandardUnitsToAttackWave()
+        
+        call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
@@ -229,7 +229,7 @@ function main takes nothing returns nothing
     call CampaignAI( DWARF_HOUSE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-	call StartThread(function UpdateWorkers)
+    call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 

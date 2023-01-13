@@ -4,70 +4,70 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-	call SetBuildUnit( 1, DEMON_GATE_1 )
-	call SetBuildUnit( 17, DEMON_IMP )
-	call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
+    call SetBuildUnit( 1, DEMON_GATE_1 )
+    call SetBuildUnit( 17, DEMON_IMP )
+    call SetBuildUnit( 2, DEMON_CITIZEN_MALE )
 
-	call BuildingStrategyStandardTier1()
+    call BuildingStrategyStandardTier1()
 
-	call SetBuildUnit( 2, DEMON_HOUSING )
-	call SetBuildUnit( 1, DEMON_FLOATING_ROCKS )
-	call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )
+    call SetBuildUnit( 2, DEMON_HOUSING )
+    call SetBuildUnit( 1, DEMON_FLOATING_ROCKS )
+    call SetBuildUnit( 2, DEMON_DIMENSIONAL_GATE )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
     call SetBuildUnit( 1, DEMON_ALTAR )
     call SetBuildUnit( 1, DEMON_OBELISK )
-	
-	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_STR )
-	call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_ARMOR )
+    
+    call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_STR )
+    call SetBuildUpgr( 1, UPG_DEMON_UNHOLY_ARMOR )
     call SetBuildUpgr( 1, UPG_DEMON_CR_ATTACK )
-	call SetBuildUpgr( 1, UPG_DEMON_CR_ARMOR )
-	call SetBuildUpgr( 1, UPG_DEMON_WEB )
+    call SetBuildUpgr( 1, UPG_DEMON_CR_ARMOR )
+    call SetBuildUpgr( 1, UPG_DEMON_WEB )
 
     // Tier 2 buildings
-	call SetBuildUnit( 1, DEMON_GATE_2 )
+    call SetBuildUnit( 1, DEMON_GATE_2 )
     call SetBuildUnit( 1, DEMON_DUNGEON_OF_PAIN )
     call SetBuildUnit( 1, DEMON_PORTAL )
     call SetBuildUnit( 2, DEMON_LEGION_TRANSPORTER )
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
     call SetBuildUnit( 1, DEMON_SACRIFICAL_PIT )
-	call SetBuildUnit( 2, DEMON_CITIZEN_FEMALE )
-	
-	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_STR )
-	call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_ARMOR )
+    call SetBuildUnit( 2, DEMON_CITIZEN_FEMALE )
+    
+    call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_STR )
+    call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_ARMOR )
     call SetBuildUpgr( 2, UPG_DEMON_CR_ATTACK )
-	call SetBuildUpgr( 2, UPG_DEMON_CR_ARMOR )
-	
-	call SetBuildUpgr( 1, UPG_DEMON_CLEAVING_ATTACK )
-	call SetBuildUpgr( 1, UPG_DEMON_DEVOUR_MAGIC )
-	call SetBuildUpgr( 1, UPG_DEMON_FIRE )
-	
-	call SetBuildUpgr( 1, UPG_DEMON_RAIN_OF_FIRE )
-	call SetBuildUpgr( 1, UPG_DEMON_DEFEND )
-	call SetBuildUpgr( 1, UPG_DEMON_CRIPPLE )
-	call SetBuildUpgr( 1, UPG_DEMON_SLOW )
-	call SetBuildUpgr( 1, UPG_DEMON_SUCCUBUS )
-	call SetBuildUpgr( 1, UPG_DEMON_EREDAR_SORCERER )
+    call SetBuildUpgr( 2, UPG_DEMON_CR_ARMOR )
+    
+    call SetBuildUpgr( 1, UPG_DEMON_CLEAVING_ATTACK )
+    call SetBuildUpgr( 1, UPG_DEMON_DEVOUR_MAGIC )
+    call SetBuildUpgr( 1, UPG_DEMON_FIRE )
+    
+    call SetBuildUpgr( 1, UPG_DEMON_RAIN_OF_FIRE )
+    call SetBuildUpgr( 1, UPG_DEMON_DEFEND )
+    call SetBuildUpgr( 1, UPG_DEMON_CRIPPLE )
+    call SetBuildUpgr( 1, UPG_DEMON_SLOW )
+    call SetBuildUpgr( 1, UPG_DEMON_SUCCUBUS )
+    call SetBuildUpgr( 1, UPG_DEMON_EREDAR_SORCERER )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, DEMON_GATE_3 )
     call SetBuildUnit( 2, DEMON_SHRINE )
     call SetBuildUnit( 1, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT )
-	
-	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
-	call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
+    
+    call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_STR )
+    call SetBuildUpgr( 3, UPG_DEMON_UNHOLY_ARMOR )
     call SetBuildUpgr( 3, UPG_DEMON_CR_ATTACK )
-	call SetBuildUpgr( 3, UPG_DEMON_CR_ARMOR )
-	call SetBuildUpgr( 2, UPG_DEMON_SUCCUBUS )
-	call SetBuildUpgr( 2, UPG_DEMON_EREDAR_SORCERER )
-	call SetBuildUpgr( 1, UPG_DEMON_RESISTANT_SKIN )
-	call SetBuildUpgr( 1, UPG_DEMON_PERMANENT_IMMOLATION )
-	call SetBuildUpgr( 1, UPG_DEMON_HARDENED_SKIN )
-	call SetBuildUpgr( 1, UPG_DEMON_WAR_STOMP )
-	call SetBuildUpgr( 1, UPG_DEMON_IMPROVED_DEVOUR )
-	call SetBuildUpgr( 1, UPG_DEMON_ANTI_MAGIC_SHELL )
-	call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
+    call SetBuildUpgr( 3, UPG_DEMON_CR_ARMOR )
+    call SetBuildUpgr( 2, UPG_DEMON_SUCCUBUS )
+    call SetBuildUpgr( 2, UPG_DEMON_EREDAR_SORCERER )
+    call SetBuildUpgr( 1, UPG_DEMON_RESISTANT_SKIN )
+    call SetBuildUpgr( 1, UPG_DEMON_PERMANENT_IMMOLATION )
+    call SetBuildUpgr( 1, UPG_DEMON_HARDENED_SKIN )
+    call SetBuildUpgr( 1, UPG_DEMON_WAR_STOMP )
+    call SetBuildUpgr( 1, UPG_DEMON_IMPROVED_DEVOUR )
+    call SetBuildUpgr( 1, UPG_DEMON_ANTI_MAGIC_SHELL )
+    call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
 
-	call BuildingStrategyStandardTier3()
+    call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
@@ -78,7 +78,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
     call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
@@ -86,7 +86,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 2, 3, 3, DEMON_OVERLORD )
     call CampaignAttackerEx( 0, 1, 2, DEMON_FEL_STALKER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -94,7 +94,7 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
@@ -103,7 +103,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -114,7 +114,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -125,7 +125,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -136,7 +136,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -148,7 +148,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -161,7 +161,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -177,7 +177,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_JAILER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_INQUISITOR )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -197,7 +197,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL_REAVER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_VOID_REAVER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_FEL_REAVER )
-	call AddStandardUnitsToAttackWave()
+    call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
@@ -222,7 +222,7 @@ function AttackWaves takes nothing returns nothing
         // big air army
         call CampaignAttackerEx( 15, 20, 25, DEMON_NETHER_DRAKE )
         
-		call AddStandardUnitsToAttackWave()
+        call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
@@ -232,7 +232,7 @@ function main takes nothing returns nothing
     call CampaignAI( DEMON_FORTIFIED_INFERNAL_MACHINE, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
-	call StartThread(function UpdateWorkers)
+    call StartThread(function UpdateWorkers)
 
     call BuildingStrategy( )
 
