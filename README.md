@@ -229,18 +229,9 @@ It contains a very basic freelancer AI for computer players.
 
 Every AI is assigned their professions automatically and the crafted items are added to the hero's inventory automatically as well like the hero would craft them.
 
-## Replays
+## Known Reasons for Crashes
 
-Some interesting replays are stored in [replays](./replays).
-
-## Crashes
-
-At the moment the map seems to end after some time. We played some games for one hour and suddenly the game ended and all players saw the score screen.
-Hence, I am trying to collect replays with the game ending to reconstruct the bug.
-
-[crashes](./crashes) contains folders with map and replay files of the corresponding games.
-
-### Known Reasons for Crashing
+Sometimes versions of this map might lead to crashing but since it is really hard to debug Warcraft maps, there are only some possible known reasons for crashes we have experienced so far:
 
 * Missing pathing for buildings constructed by the AI.
 * Lower number for maximum number than minimum number of summoned units for Dark Portal based abilities.
