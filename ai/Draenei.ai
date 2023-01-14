@@ -33,6 +33,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, DRAENEI_HAVEN)
+    call SetBuildExpa(count, DRAENEI_SEERS_DEN)
+    call SetBuildExpa(count, DRAENEI_ADVANCED_BOULDER_TOWER)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

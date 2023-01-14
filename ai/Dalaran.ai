@@ -74,6 +74,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, DALARAN_TIER_3)
+    call SetBuildExpa(count, DALARAN_BLACKSMITH)
+    call SetBuildExpa(count, DALARAN_GUARD_TOWER_2)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

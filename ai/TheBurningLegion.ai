@@ -85,6 +85,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, DEMON_GATE_3)
+    call SetBuildExpa(count, DEMON_FLOATING_ROCKS)
+    call SetBuildExpa(count, DEMON_FORTIFIED_INFERNAL_MACHINE)
+endfunction
+
 function AddStandardUnitsToAttackWaveTheBurningLegion takes nothing returns nothing
     call PurchaseZeppelin()
     call AttackWithMount()

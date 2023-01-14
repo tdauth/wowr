@@ -78,6 +78,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, FORTRESS)
+    call SetBuildExpa(count, FORGE)
+    call SetBuildExpa(count, ORC_WATCH_TOWER)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

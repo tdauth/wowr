@@ -73,6 +73,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, DEMON_GATE_3)
+    call SetBuildExpa(count, DEMON_FLOATING_ROCKS)
+    call SetBuildExpa(count, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

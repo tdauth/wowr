@@ -77,6 +77,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, HIGH_ELF_TIER_3)
+    call SetBuildExpa(count, HIGH_ELF_ENCHANTER_TOWER)
+    call SetBuildExpa(count, HIGH_ELF_GUARD_TOWER)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

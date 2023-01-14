@@ -72,6 +72,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, NECROPOLIS_3)
+    call SetBuildExpa(count, GRAVEYARD)
+    call SetBuildExpa(count, ZIGGURAT_2)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

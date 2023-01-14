@@ -12,7 +12,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, GOBLIN_ALTAR )
     call SetBuildUnit( 5, GOBLIN_HUT )
     call SetBuildUnit( 2, GOBLIN_CITIZEN_MALE )
-    call SetBuildUnit( 1, AI_LABORATORY )
     call SetBuildUnit( 2, GOBLIN_CITIZEN_FEMALE )
     call SetBuildUnit( 2, GOBLIN_BARRACKS )
     call SetBuildUnit( 2, GOBLIN_TOWER )
@@ -22,6 +21,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, GOBLIN_ARCANE_LABORATORY )
     call SetBuildUnit( 1, GOBLIN_TANK_FACTORY )
     call SetBuildUnit( 1, GOBLIN_AIR_FIELD )
+    call SetBuildUnit( 4, GOBLIN_ROCKET_TOWER_3 )
     
     call SetBuildUpgr( 2, UPG_GOBLIN_LUMBER )
     call SetBuildUpgr( 2, UPG_GOBLIN_BANKING )
@@ -59,6 +59,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // *    End Building Strategy       *
     // **********************************
+endfunction
+
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, GOBLIN_TIER_3)
+    call SetBuildExpa(count, GOBLIN_FUEL_PUMP)
+    call SetBuildExpa(count, GOBLIN_ROCKET_TOWER_3)
 endfunction
 
 function AttackWaves takes nothing returns nothing

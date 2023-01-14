@@ -70,6 +70,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, TREE_ETERNITY)
+    call SetBuildExpa(count, HUNTERS_HALL)
+    call SetBuildExpa(count, ANCIENT_PROTECT)
+endfunction
+
 function AttackWaves takes nothing returns nothing 
     //*** WAVE 1 ***
     call InitAssaultGroup()

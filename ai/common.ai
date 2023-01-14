@@ -1528,7 +1528,6 @@ globals
 
     boolean attackEnemyPlayers = true
     boolean buildShips = false
-    integer townHall = 0
     integer expansions = 0
     boolean attackTargetLocation = false
     integer attackTargetLocationX = 0
@@ -4237,6 +4236,17 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
     //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
 endfunction
 
+function BuildExpansionsLoop takes nothing returns nothing
+    loop
+        if (expansions > 0) then
+            // This function is expected in every AI script.
+            call BuildExpansions(expansions)
+        endif
+
+        call Sleep(M1)
+    endloop
+endfunction
+
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, POWER_GENERATOR )
     call SetBuildUnit( 1, ANTIMAGIC_WARD )
@@ -4248,19 +4258,5 @@ function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
     call SetBuildUnit( 1, DRAGON_ROOST )
     call StartThread(function ResearchHighLevelTier3Researches)
-endfunction
-
-function BuildExpansions takes nothing returns nothing
-    loop
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, townHall)
-        endif
-
-        call Sleep(M1)
-    endloop
-endfunction
-
-function BuildingStrategyStandardExpansions takes integer t returns nothing
-    set townHall = t
-    call StartThread(function BuildExpansions)
+    call StartThread(function BuildExpansionsLoop)
 endfunction

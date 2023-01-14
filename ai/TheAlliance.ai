@@ -63,6 +63,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, NAGA_TEMPLE_3)
+    call SetBuildExpa(count, NAGA_MURLOC_HUT)
+    call SetBuildExpa(count, NAGA_GUARDIAN)
+endfunction
+
 function AddStandardUnitsToAttackWaveTheAlliance takes nothing returns nothing
     call PurchaseZeppelin()
     call AttackWithMount()

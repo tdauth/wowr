@@ -82,6 +82,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, KULTIRAS_TIER_3)
+    call SetBuildExpa(count, KULTIRAS_LUMBER_MILL)
+    call SetBuildExpa(count, KULTIRAS_CANNON_TOWER)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()

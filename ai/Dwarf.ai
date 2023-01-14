@@ -28,8 +28,10 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 Buildings
     call SetBuildUnit( 1, DWARF_TIER_3 )
-    call SetBuildUnit( 1, POWER_GENERATOR )
-    call SetBuildUnit( 1, RESEARCH_TENT )
+
+    call SetBuildUnit( 1, DWARF_TOWER_GUN )
+    call SetBuildUnit( 1, DWARF_TOWER_GUARD )
+    call SetBuildUnit( 1, DWARF_TOWER_CANNON )
     
     call SetBuildUpgr( 2, UPG_DWARF_LUMBER )
     call SetBuildUpgr( 2, UPG_DWARF_LUMBER_MILL )
@@ -60,15 +62,18 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_DWARF_BARRAGE )
     call SetBuildUpgr( 1, UPG_DWARF_STORM_HAMMERS )
     
-    call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-    
     call SetBuildUpgr( 1, UPG_DWARF_BACKPACK )
     
     call BuildingStrategyStandardTier3()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
+endfunction
+
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, DWARF_TIER_3)
+    call SetBuildExpa(count, DWARF_BLACKSMITH)
+    call SetBuildExpa(count, DWARF_TOWER_CANNON)
 endfunction
 
 function AttackWaves takes nothing returns nothing

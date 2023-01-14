@@ -80,6 +80,12 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
+function BuildExpansions takes integer count returns nothing
+    call SetBuildExpa(count, BLOOD_ELF_CASTLE)
+    call SetBuildExpa(count, BLOOD_ELF_LUMBER_MILL)
+    call SetBuildExpa(count, ELF_GUARD_TOWER)
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
