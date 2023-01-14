@@ -897,3 +897,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HerrDave: [O'Connor](https://www.hiveworkshop.com/threads/oconnor.285771/)
 * HerrDave: [Mordor Great Hall](https://www.hiveworkshop.com/threads/mordor-great-hall.339407/)
 * HerrDave: [LotR Orc Pack](https://www.hiveworkshop.com/threads/lotr-orc-pack.346944/)
+* chopinski: [New Bonus](https://www.hiveworkshop.com/threads/new-bonus-vjass-lua.324058/)
+* HerrDave: [Troll Den (WotR)](https://www.hiveworkshop.com/threads/troll-den-wotr.307486/)
+* HerrDave: [Lotr Troll Pack](https://www.hiveworkshop.com/threads/lotr-troll-pack.340287/)
