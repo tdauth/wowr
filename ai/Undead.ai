@@ -72,10 +72,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, NECROPOLIS_3)
-    call SetBuildExpa(count, GRAVEYARD)
-    call SetBuildExpa(count, ZIGGURAT_2)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, NECROPOLIS_3)
+    call SetBuildExpa(expansions, GRAVEYARD)
+    call SetBuildExpa(expansions, ZIGGURAT_2)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -233,6 +233,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

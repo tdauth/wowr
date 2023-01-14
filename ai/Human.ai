@@ -78,16 +78,15 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, HUMAN_ARCANE_OBSERVATORY )
 
     call BuildingStrategyStandardTier3()
-    call BuildingStrategyStandardExpansions(TOWN_HALL)
     // **********************************
     // *    End Building Strategy       *
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, CASTLE)
-    call SetBuildExpa(count, LUMBER_MILL)
-    call SetBuildExpa(count, WATCH_TOWER)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, CASTLE)
+    call SetBuildExpa(expansions, LUMBER_MILL)
+    call SetBuildExpa(expansions, WATCH_TOWER)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -240,6 +239,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

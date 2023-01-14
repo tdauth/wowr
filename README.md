@@ -64,7 +64,7 @@ This version provides several new features compared to the original map [World o
 * Night Elves workers harvest 10 lumber per interval as balance.
 * Race scepter items can be dropped.
 * Naga villagers can walk on water.
-* Increased the maximum supply to 300 and the supply cost levels to 100 and 200.
+* Increased the maximum supply and supply cost levels.
 * '-nowin' replaced 'nodefeat'. The game can be won by killing the final boss in the Outland area.
 * Hand of God at higher hero level.
 * Ability 'Reward Freelancer' in all main buildings.

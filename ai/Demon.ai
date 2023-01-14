@@ -73,10 +73,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, DEMON_GATE_3)
-    call SetBuildExpa(count, DEMON_FLOATING_ROCKS)
-    call SetBuildExpa(count, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, DEMON_GATE_3)
+    call SetBuildExpa(expansions, DEMON_FLOATING_ROCKS)
+    call SetBuildExpa(expansions, DEMON_FORTIFIED_INFERNAL_JUGGERNAUT)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -239,6 +239,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

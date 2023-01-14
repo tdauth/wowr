@@ -33,10 +33,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, DRAENEI_HAVEN)
-    call SetBuildExpa(count, DRAENEI_SEERS_DEN)
-    call SetBuildExpa(count, DRAENEI_ADVANCED_BOULDER_TOWER)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, DRAENEI_HAVEN)
+    call SetBuildExpa(expansions, DRAENEI_SEERS_DEN)
+    call SetBuildExpa(expansions, DRAENEI_ADVANCED_BOULDER_TOWER)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -180,6 +180,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

@@ -36,22 +36,11 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUnit( 1, FREELANCER_MERCENARY_CAMP )
     call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
     call SetBuildUnit( 1, GUARDIANS_CITADEL )
-    //call SetBuildUnit( 1, POWER_GENERATOR )
-    //call SetBuildUnit( 1, RESEARCH_TENT )
 
-    call SetBuildUpgr( 1, UPG_SENTINEL )
-    call SetBuildUpgr( 1, UPG_TEMPLE_BLUEPRINTS )
-    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MASONRY )
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_CHEAP_EVOLUTION )
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
+    call BuildingStrategyStandardTier3Freelancer()
     // **********************************
     // *    End Building Strategy       *
     // **********************************
-endfunction
-
-function BuildExpansions takes integer count returns nothing
 endfunction
 
 function AddStandardUnitsToAttackWaveFreelancer takes nothing returns nothing

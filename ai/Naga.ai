@@ -52,10 +52,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, NAGA_TEMPLE_3)
-    call SetBuildExpa(count, NAGA_MURLOC_HUT)
-    call SetBuildExpa(count, NAGA_GUARDIAN)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, NAGA_TEMPLE_3)
+    call SetBuildExpa(expansions, NAGA_MURLOC_HUT)
+    call SetBuildExpa(expansions, NAGA_GUARDIAN)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -200,6 +200,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

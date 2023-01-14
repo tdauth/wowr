@@ -82,10 +82,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, KULTIRAS_TIER_3)
-    call SetBuildExpa(count, KULTIRAS_LUMBER_MILL)
-    call SetBuildExpa(count, KULTIRAS_CANNON_TOWER)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, KULTIRAS_TIER_3)
+    call SetBuildExpa(expansions, KULTIRAS_LUMBER_MILL)
+    call SetBuildExpa(expansions, KULTIRAS_CANNON_TOWER)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -250,6 +250,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

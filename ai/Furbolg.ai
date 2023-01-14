@@ -48,10 +48,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, FURBOLG_TRIBAL_CENTER)
-    call SetBuildExpa(count, FURBOLG_LUMBER_CAMP)
-    call SetBuildExpa(count, GUARDING_FURBOLG)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, FURBOLG_TRIBAL_CENTER)
+    call SetBuildExpa(expansions, FURBOLG_LUMBER_CAMP)
+    call SetBuildExpa(expansions, GUARDING_FURBOLG)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -213,6 +213,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 

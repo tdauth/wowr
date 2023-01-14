@@ -78,10 +78,10 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
 endfunction
 
-function BuildExpansions takes integer count returns nothing
-    call SetBuildExpa(count, FORTRESS)
-    call SetBuildExpa(count, FORGE)
-    call SetBuildExpa(count, ORC_WATCH_TOWER)
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, FORTRESS)
+    call SetBuildExpa(expansions, FORGE)
+    call SetBuildExpa(expansions, ORC_WATCH_TOWER)
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -237,6 +237,7 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
 
     call BuildingStrategy( )
 
