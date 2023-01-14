@@ -1292,7 +1292,9 @@ globals
     constant integer KULTIRAS_HOUSING                             = 'h090'
 
     // Modern Warfare
-    constant integer MODERNWARFARE_TOWN_HALL                      = 'h0DJ' // tier 1-3
+    constant integer MODERNWARFARE_TIER_1                         = 'h0DJ' // tier 1
+    constant integer MODERNWARFARE_TIER_2                         = 'h0FR' // tier 2
+    constant integer MODERNWARFARE_TIER_3                         = 'h0FS' // tier 3
     constant integer MODERNWARFARE_RADIO_TOWER                    = 'h0E2' // scout tower
     constant integer MODERNWARFARE_FLAME_TOWER                    = 'h0FE' // guard tower
     constant integer MODERNWARFARE_MINIGUN_TOWER                  = 'h0FN' // cannon tower
@@ -1344,7 +1346,7 @@ globals
     constant integer MODERNWARFARE_SUPER_FLANKER                  = 'h0E9'
     constant integer MODERNWARFARE_STEALTH_BOMBER                 = 'h0EI'
     constant integer MODERNWARFARE_SATELITE                       = 'h0FD'
-    constant integer MODERNWARFARE_CIA_AGENT                      = 'z000'
+    constant integer MODERNWARFARE_SPY                            = 'z000'
 
     constant integer MODERNWARFARE_CITIZEN_MALE                      = 'n0AF'
     constant integer MODERNWARFARE_CITIZEN_FEMALE                    = 'n09M'
@@ -2006,6 +2008,10 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == KULTIRAS_WATCH_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_GUARD_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_CANNON_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_ARCANE_TOWER,false,townid)
 
+    elseif unitid == MODERNWARFARE_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
+    elseif unitid == MODERNWARFARE_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
     elseif unitid == MODERNWARFARE_RADIO_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_FLAME_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MINIGUN_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MISSILE_TOWER,false,townid)
 
