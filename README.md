@@ -37,7 +37,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.
-* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins, U. S. General, Samwise Gamgee, Peregrin Took, Meriadoc Brandybuck, Void Lord Commander.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli,  Darth Maul, Gandalf, Frodo Baggins, U. S. General, Samwise Gamgee, Peregrin Took, Meriadoc Brandybuck, Void Lord Commander, Sauron.
 * New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes, Shrink.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune.
 * New appearing bosses: Deathwing, Cenarius.
@@ -901,3 +901,13 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HerrDave: [Troll Den (WotR)](https://www.hiveworkshop.com/threads/troll-den-wotr.307486/)
 * HerrDave: [Lotr Troll Pack](https://www.hiveworkshop.com/threads/lotr-troll-pack.340287/)
 * PurgeandFire: [Libram v3.0.0.0](https://www.hiveworkshop.com/threads/libram-v3-0-0-0.193521/)
+* bakr, HerrDave: [Haradrim Barracks (Lotr)](https://www.hiveworkshop.com/threads/haradrim-barracks-lotr.339702/)
+* HerrDave: [Mûmak](https://www.hiveworkshop.com/threads/m%C3%BBmak.263272/)
+* olofmoleman: [Barad'dur](https://www.hiveworkshop.com/threads/baraddur.50087/)
+* HerrDave, Tamplier: [Orc Slaughterhouse (War of the Ring)](https://www.hiveworkshop.com/threads/orc-slaughterhouse-war-of-the-ring.311409/)
+* HerrDave, Tamplier: [Orc Mound](https://www.hiveworkshop.com/threads/orc-mound.310885/)
+* HerrDave: [Pack - Men of Rhûn](https://www.hiveworkshop.com/threads/pack-men-of-rh%C3%BBn.291624/)
+* HerrDave: [Warg Rider (War of the Ring)](https://www.hiveworkshop.com/threads/warg-rider-war-of-the-ring.311410/)
+* Uncle Fester: [HaradrimRider](https://www.hiveworkshop.com/threads/haradrimrider.217508/)
+* olofmoleman: [Sauron](https://www.hiveworkshop.com/threads/sauron.50132/)
+* olofmoleman: [SauronsMace](https://www.hiveworkshop.com/threads/sauronsmace.50133/)
