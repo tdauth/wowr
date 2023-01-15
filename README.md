@@ -911,3 +911,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Uncle Fester: [HaradrimRider](https://www.hiveworkshop.com/threads/haradrimrider.217508/)
 * olofmoleman: [Sauron](https://www.hiveworkshop.com/threads/sauron.50132/)
 * olofmoleman: [SauronsMace](https://www.hiveworkshop.com/threads/sauronsmace.50133/)
+* The_Silent: [HQ Victrola](https://www.hiveworkshop.com/threads/hq-victrola.273782/)
+* Darkfang: [BTNHolyNote](https://www.hiveworkshop.com/threads/btnholynote.94260/)
+* Advent Chamber Orchestra: [Mozart - Eine Kleine Nachtmusik allegro](https://freemusicarchive.org/music/Advent_Chamber_Orchestra/Selections_from_the_2005-2006_Season/Advent_Chamber_Orchestra_-_04_-_Mozart_-_A_Little_Night_Music_allegro/)
