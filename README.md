@@ -914,3 +914,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Silent: [HQ Victrola](https://www.hiveworkshop.com/threads/hq-victrola.273782/)
 * Darkfang: [BTNHolyNote](https://www.hiveworkshop.com/threads/btnholynote.94260/)
 * Advent Chamber Orchestra: [Mozart - Eine Kleine Nachtmusik allegro](https://freemusicarchive.org/music/Advent_Chamber_Orchestra/Selections_from_the_2005-2006_Season/Advent_Chamber_Orchestra_-_04_-_Mozart_-_A_Little_Night_Music_allegro/)
+* Shaysonio: Roman icons
