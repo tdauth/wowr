@@ -254,7 +254,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
-* [wowr3.2.w3x](./wowr3.3.w3x)
+* [wowr3.3.w3x](./wowr3.3.w3x)
 * [wowr3.2.w3x](./wowr3.2.w3x)
 * [wowr3.1.w3x](./wowr3.1.w3x)
 * [wowr3.0.w3x](./wowr3.0.w3x) (final release after a long time developing on 2.1)
