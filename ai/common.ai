@@ -1364,6 +1364,8 @@ globals
     constant integer ROMANEMPIRE_GUARD_TOWER                         = 'h060' // guard tower
     constant integer ROMANEMPIRE_MARKETPLACE                         = 'h0GB' // shop
 
+    constant integer UPG_ROMANEMPIRE_DEFEND                          = 'R081'
+
     constant integer ROMANEMPIRE_LEGIONARY                           = 'h05S' // worker
     constant integer ROMANEMPIRE_CENTURION                           = 'h08U'
     constant integer ROMANEMPIRE_ARCHER                              = 'h08T'
@@ -1518,9 +1520,12 @@ globals
     constant integer CYCLONE                                         = 'A0JC'
     constant integer MONSOON                                         = 'A024'
 
-    constant integer US_GENERAL                                     = 'H0F2'
-    constant integer REPAIR_AURA                                    = 'A0WC'
-    constant integer MECHANICAL_REPAIR                              = 'A0IF'
+    constant integer US_GENERAL                                      = 'H0F2'
+    constant integer REPAIR_AURA                                     = 'A0WC'
+    constant integer MECHANICAL_REPAIR                               = 'A0IF'
+
+    constant integer MILITARY_TRIBUNE                                = 'H0CK'
+    constant integer ROMAN_LEGION                                    = 'A0U6'
 
 
     // The Alliance
@@ -3841,6 +3846,17 @@ function ChooseHeroSkill takes nothing returns integer
             return MECHANICAL_REPAIR
         elseif (mod == 0) then
             return REPAIR_AURA
+        elseif (mod == 1) then
+            return DIVINE_SHIELD
+        elseif (mod == 2) then
+            return FURBOLG_COMMAND_AURA
+        endif
+    // Roman Empire
+    elseif (curHero == MILITARY_TRIBUNE) then
+        if (skillUlti) then
+            return ROMAN_LEGION
+        elseif (mod == 0) then
+            return HOLY_BOLT
         elseif (mod == 1) then
             return DIVINE_SHIELD
         elseif (mod == 2) then

@@ -18,7 +18,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, ROMANEMPIRE_COLISEUM )
     call SetBuildUnit( 1, ROMANEMPIRE_MARKETPLACE )
     
-    call SetBuildUpgr( 1, UPG_DEFEND )
+    call SetBuildUpgr( 1, UPG_ROMANEMPIRE_DEFEND )
     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
     call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
     call SetBuildUpgr( 1, UPG_BLOOD_ELF_LEATHER )
