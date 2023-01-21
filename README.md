@@ -923,3 +923,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * purparisien: [Ancient Workshop](https://www.hiveworkshop.com/threads/ancient-workshop.331567/)
 * MassiveMaster: [Fortification buildings](https://www.hiveworkshop.com/threads/fortification-buildings.213196/)
 * 67chrome: [BTNTeleport](https://www.hiveworkshop.com/threads/btnteleport.170353/)
+* Marcos DAB: [BTNKingdomFlag](https://www.hiveworkshop.com/threads/btnkingdomflag.249211/)
+* darkdeathknight: [BTNCamera](https://www.hiveworkshop.com/threads/btncamera.191010/)
