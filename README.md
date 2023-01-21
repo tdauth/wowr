@@ -207,6 +207,7 @@ The following files are imported into the map whenever they are updated. They co
 * [KulTiras.ai](./ai/KulTiras.ai)
 * [ModernWarfare.ai](./ai/ModernWarfare.ai)
 * [RomanEmpire.ai](./ai/RomanEmpire.ai)
+* [FreePeopleOfMiddleEarth.ai](./ai/FreePeopleOfMiddleEarth.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 

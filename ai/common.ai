@@ -1353,25 +1353,27 @@ globals
     constant integer MODERNWARFARE_HOUSING                           = 'h0DY'
 
     // Roman Empire
-    constant integer ROMANEMPIRE_TIER_1                              = 'h05R' // tier 1
+    constant integer ROMANEMPIRE_TIER_1                              = 'h05R' // tier 1-3
     constant integer ROMANEMPIRE_TENT                                = 'h072' // farm
     constant integer ROMANEMPIRE_VALETUDINARIUM                      = 'h08R' // altar
     constant integer ROMANEMPIRE_BARRACKS                            = 'h08S' // barracks
     constant integer ROMANEMPIRE_COLISEUM                            = 'h05U' // blacksmith
     constant integer ROMANEMPIRE_VILLA                               = 'h05Y' // lumber mill
-    constant integer ROMANEMPIRE_TEMPLE                              = 'h05Z' // arcane sanctuary
+    constant integer ROMANEMPIRE_TEMPLE                              = 'h05Z' // arcane sanctum
     constant integer ROMANEMPIRE_WORKSHOP                            = 'h08W' // workshop
     constant integer ROMANEMPIRE_GUARD_TOWER                         = 'h060' // guard tower
+    constant integer ROMANEMPIRE_CIRCUS_MAXIMUMS                     = 'h05T' // gryphon aviary
+
     constant integer ROMANEMPIRE_MARKETPLACE                         = 'h0GB' // shop
 
     constant integer UPG_ROMANEMPIRE_DEFEND                          = 'R081'
 
     constant integer ROMANEMPIRE_LEGIONARY                           = 'h05S' // worker
-    constant integer ROMANEMPIRE_CENTURION                           = 'h08U'
-    constant integer ROMANEMPIRE_ARCHER                              = 'h08T'
+    constant integer ROMANEMPIRE_CENTURION                           = 'h08U' // footman
+    constant integer ROMANEMPIRE_ARCHER                              = 'h08T' // rifleman
     constant integer ROMANEMPIRE_PRAETORIAN                          = 'h0CJ'
-    constant integer ROMANEMPIRE_EQUES                               = 'h08V'
-    constant integer ROMANEMPIRE_CHARIOT                             = 'h0GA' // Tauren
+    constant integer ROMANEMPIRE_EQUES                               = 'h08V' // knight
+    constant integer ROMANEMPIRE_CHARIOT                             = 'h0GA' // tauren
     constant integer ROMANEMPIRE_LION_MALE                           = 'h05W'
     constant integer ROMANEMPIRE_LION_FEMALE                         = 'h05X'
     constant integer ROMANEMPIRE_GLADIATOR                           = 'h05V'
@@ -1381,6 +1383,39 @@ globals
     constant integer ROMANEMPIRE_CITIZEN_MALE                        = 'n09Y'
     constant integer ROMANEMPIRE_CITIZEN_FEMALE                      = 'n0AS'
     constant integer ROMANEMPIRE_HOUSING                             = 'h0G5'
+
+    // Free People of Middle Earth
+    constant integer FREEPEOPLE_TIER_1                               = 'h0CT' // tier 1-3
+    constant integer FREEPEOPLE_GONDOR_HOUSE                         = 'h0DA' // farm
+    constant integer FREEPEOPLE_GONDOR_BARRACKS                      = 'h0CU' // barracks
+    constant integer FREEPEOPLE_ROHAN_STABLES                        = 'h0D3' // beastiary
+    constant integer FREEPEOPLE_ROHAN_SCOUT_TOWER                    = 'h0CZ' // scout tower
+    constant integer FREEPEOPLE_GONDORIAN_GUARD_TOWER                = 'h0D0' // guard tower
+    constant integer FREEPEOPLE_ALTAR                                = 'h0F7' // altar
+    constant integer FREEPEOPLE_DWARVEN_FORGE                        = 'h0D4' // blacksmith/lumber mill
+    constant integer FREEPEOPLE_ELVEN_OUTPOST                        = 'h0D1' // arcane sanctum
+    constant integer FREEPEOPLE_ENCHANTED_TREE                       = 'h0D2' // tauren totem
+    constant integer FREEPEOPLE_MERCENARY_CAMP                       = 'h0F4' // gryphon aviary
+    constant integer FREEPEOPLE_SHOP                                 = 'h0F8' // arcane vault
+
+    constant integer FREEPEOPLE_HOBBIT                               = 'h0CX' // worker
+    constant integer FREEPEOPLE_GONDORIAN_SOLDIER                    = 'h0CV' // footman
+    constant integer FREEPEOPLE_GONDORIAN_ARCHER                     = 'h0A1' // rifleman
+    constant integer FREEPEOPLE_RANGER                               = 'n0A2' // archer
+    constant integer FREEPEOPLE_FOUNTAIN_GUARD                       = 'h0CW' // grunt
+    constant integer FREEPEOPLE_ROHAN_ARCHER                         = 'n0A7' // archer
+    constant integer FREEPEOPLE_RIDER_OF_ROHAN                       = 'h0D5' // knight
+    constant integer FREEPEOPLE_ELVEN_CAVALRY                        = 'h0DD' // knight
+    constant integer FREEPEOPLE_DWARVEN_ROYAL_GUARD                  = 'h0F6' // footman
+    constant integer FREEPEOPLE_SINDAR_ARCHER                        = 'n0AC' // archer
+    constant integer FREEPEOPLE_SINDAR_SPEARMAN                      = 'h0DC' // footman
+    constant integer FREEPEOPLE_SINDAR_SWORDSMAN                     = 'h0DB' // footman
+    constant integer FREEPEOPLE_EAGLE                                = 'n0A8' // gryphon
+    constant integer FREEPEOPLE_ENT                                  = 'e017' // tauren
+
+    constant integer FREEPEOPLE_CITIZEN_MALE                         = 'n0A5'
+    constant integer FREEPEOPLE_CITIZEN_FEMALE                       = 'n0A6'
+    constant integer FREEPEOPLE_HOUSING                              = 'n0F3'
 
     // All Races
 
@@ -1526,6 +1561,9 @@ globals
 
     constant integer MILITARY_TRIBUNE                                = 'H0CK'
     constant integer ROMAN_LEGION                                    = 'A0U6'
+
+    constant integer GANDALF                                         = 'H0DF'
+    constant integer MITHRANDIR                                      = 'A03H'
 
 
     // The Alliance
@@ -2049,6 +2087,9 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
     elseif unitid == MODERNWARFARE_RADIO_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_FLAME_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MINIGUN_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MISSILE_TOWER,false,townid)
+
+    elseif unitid == FREEPEOPLE_ROHAN_SCOUT_TOWER then
+        set have_qty = have_qty + GetUnitCountEx(FREEPEOPLE_GONDORIAN_GUARD_TOWER,false,townid)
 
     elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
@@ -3862,6 +3903,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return FURBOLG_COMMAND_AURA
         endif
+    // Free People of Middle Earth
+    elseif (curHero == GANDALF) then
+        if (skillUlti) then
+            return MITHRANDIR
+        elseif (mod == 0) then
+            return FLAME_STRIKE
+        elseif (mod == 1) then
+            return BANISH
+        elseif (mod == 2) then
+            return SIPHON_MANA
+        endif
     // The Alliance
     elseif (curHero == LADY_VASHJ_BONUS_HERO) then
         if (skillUlti) then
@@ -3978,6 +4030,12 @@ function InitHero takes nothing returns nothing
     // Modern Warfare
     elseif (GetUnitCountDone(US_GENERAL) > 0) then
         set hero_id = US_GENERAL
+    // Roman Empire
+    elseif (GetUnitCountDone(MILITARY_TRIBUNE) > 0) then
+        set hero_id = MILITARY_TRIBUNE
+    // Free People of Middle Earth
+    elseif (GetUnitCountDone(GANDALF) > 0) then
+        set hero_id = GANDALF
     // The Alliance
     elseif (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
         set hero_id = LADY_VASHJ_BONUS_HERO
