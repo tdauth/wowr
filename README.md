@@ -206,6 +206,7 @@ The following files are imported into the map whenever they are updated. They co
 * [Dalaran.ai](./ai/Dalaran.ai)
 * [KulTiras.ai](./ai/KulTiras.ai)
 * [ModernWarfare.ai](./ai/ModernWarfare.ai)
+* [RomanEmpire.ai](./ai/RomanEmpire.ai)
 * [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
 * [TheAlliance.ai](./ai/TheAlliance.ai)
 
@@ -529,6 +530,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Jack_Sparrow93: [BTNGreenLightsaber](https://www.hiveworkshop.com/threads/btngreenlightsaber.157824/)
 * Jack_Sparrow93: [BTNRedLightsaber4](https://www.hiveworkshop.com/threads/btnredlightsaber4.156322/)
 * olofmoleman: [BTNLightsaberBlock](https://www.hiveworkshop.com/threads/btnlightsaberblock.56759/)
+* purparisien: [Ancient Shipyard](https://www.hiveworkshop.com/threads/ancient-shipyard.321677/)
 * Fingolfin: [Acclamator Class Assault Ship](https://www.hiveworkshop.com/threads/acclamator-class-assault-ship.258696/)
 * olofmoleman: [Gungan](https://www.hiveworkshop.com/threads/gungan.50184/)
 * Illidan(Evil)X: [NabooBuilding02](https://www.hiveworkshop.com/threads/naboobuilding02.50234/)
@@ -915,3 +917,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darkfang: [BTNHolyNote](https://www.hiveworkshop.com/threads/btnholynote.94260/)
 * Advent Chamber Orchestra: [Mozart - Eine Kleine Nachtmusik allegro](https://freemusicarchive.org/music/Advent_Chamber_Orchestra/Selections_from_the_2005-2006_Season/Advent_Chamber_Orchestra_-_04_-_Mozart_-_A_Little_Night_Music_allegro/)
 * Shaysonio: Roman icons
+* Mike: [Ballista(Scorpion)](https://www.hiveworkshop.com/threads/ballista-scorpion.245474/)
+* Mister_Haudrauf: [Battle Chariot](https://www.hiveworkshop.com/threads/battle-chariot.292219/)
+* purparisien: [Ancient Workshop](https://www.hiveworkshop.com/threads/ancient-workshop.331567/)
+* MassiveMaster: [Fortification buildings](https://www.hiveworkshop.com/threads/fortification-buildings.213196/)

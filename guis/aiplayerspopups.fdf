@@ -122,6 +122,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Dalaran",     -2,
         MenuItem "Kul Tiras",     -2,
         MenuItem "Modern Warfare",     -2,
+        MenuItem "Roman Empire",     -2,
     }
 }
 
