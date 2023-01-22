@@ -925,3 +925,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 67chrome: [BTNTeleport](https://www.hiveworkshop.com/threads/btnteleport.170353/)
 * Marcos DAB: [BTNKingdomFlag](https://www.hiveworkshop.com/threads/btnkingdomflag.249211/)
 * darkdeathknight: [BTNCamera](https://www.hiveworkshop.com/threads/btncamera.191010/)
+* Mephestrial: [LogBridgeSmall45](https://www.hiveworkshop.com/threads/logbridgesmall45.96009/)

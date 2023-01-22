@@ -70,6 +70,8 @@ function BuildingStrategy takes nothing returns nothing
 //     call SetBuildUpgr( 1, UPG_HUMAN_BACKPACK )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
 //     call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
+    call SetBuildUpgr( 1, UPG_ROMANEMPIRE_TRIUMPHAL_ARCH )
+    call SetBuildUnit( 1, ROMANEMPIRE_TRIUMPHAL_ARCH )
 
     call BuildingStrategyStandardTier3()
     // **********************************

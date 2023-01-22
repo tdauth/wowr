@@ -1363,10 +1363,12 @@ globals
     constant integer ROMANEMPIRE_WORKSHOP                            = 'h08W' // workshop
     constant integer ROMANEMPIRE_GUARD_TOWER                         = 'h060' // guard tower
     constant integer ROMANEMPIRE_CIRCUS_MAXIMUMS                     = 'h05T' // gryphon aviary
+    constant integer ROMANEMPIRE_TRIUMPHAL_ARCH                      = 'h0CL' // special building
 
     constant integer ROMANEMPIRE_MARKETPLACE                         = 'h0GB' // shop
 
     constant integer UPG_ROMANEMPIRE_DEFEND                          = 'R081'
+    constant integer UPG_ROMANEMPIRE_TRIUMPHAL_ARCH                  = 'R076'
 
     constant integer ROMANEMPIRE_LEGIONARY                           = 'h05S' // worker
     constant integer ROMANEMPIRE_CENTURION                           = 'h08U' // footman
