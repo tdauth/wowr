@@ -121,6 +121,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "High Elf",     -2,
         MenuItem "Dalaran",     -2,
         MenuItem "Kul Tiras",     -2,
+        MenuItem "Pandaren",     -2,
         MenuItem "Modern Warfare",     -2,
         MenuItem "Roman Empire",     -2,
         MenuItem "Free People of Middle Earth",     -2,

@@ -11,9 +11,9 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier1()
 
     call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
-    call SetBuildUnit( 3, HOUSE )
+    call SetBuildUnit( 3, BLOOD_ELF_FARM )
     call SetBuildUnit( 2, BLOOD_ELF_BARRACKS )
-    call SetBuildUnit( 1, HUMAN_ALTAR )
+    call SetBuildUnit( 1, BLOOD_ELF_ALTAR )
     call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
     call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
     call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
@@ -31,7 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
     call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
     call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
-    call SetBuildUnit( 4, HOUSE )
+    call SetBuildUnit( 4, BLOOD_ELF_FARM )
     call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
     call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
     
@@ -48,7 +48,7 @@ function BuildingStrategy takes nothing returns nothing
     
     // Tier 3 buildings
     call SetBuildUnit( 1, BLOOD_ELF_CASTLE )
-    call SetBuildUnit( 5, HOUSE )
+    call SetBuildUnit( 5, BLOOD_ELF_FARM )
     call SetBuildUnit( 1, ELF_GUARD_TOWER )
     call SetBuildUnit( 1, ARCANE_TOWER )
     call SetBuildUnit( 1, BLOOD_ELF_PHOENIX_EGG )
@@ -234,7 +234,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( HOUSE, function ChooseHeroSkill )
+    call CampaignAI( BLOOD_ELF_FARM, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)

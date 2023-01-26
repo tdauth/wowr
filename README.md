@@ -205,6 +205,7 @@ The following files are imported into the map whenever they are updated. They co
 * [HighElf.ai](./ai/HighElf.ai)
 * [Dalaran.ai](./ai/Dalaran.ai)
 * [KulTiras.ai](./ai/KulTiras.ai)
+* [Pandaren.ai](./ai/Pandaren.ai)
 * [ModernWarfare.ai](./ai/ModernWarfare.ai)
 * [RomanEmpire.ai](./ai/RomanEmpire.ai)
 * [FreePeopleOfMiddleEarth.ai](./ai/FreePeopleOfMiddleEarth.ai)
@@ -926,3 +927,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Marcos DAB: [BTNKingdomFlag](https://www.hiveworkshop.com/threads/btnkingdomflag.249211/)
 * darkdeathknight: [BTNCamera](https://www.hiveworkshop.com/threads/btncamera.191010/)
 * Mephestrial: [LogBridgeSmall45](https://www.hiveworkshop.com/threads/logbridgesmall45.96009/)
+* Itius Leurn Freim: [ElfAltar](https://www.hiveworkshop.com/threads/elfaltar.294651/)
