@@ -1297,20 +1297,14 @@ globals
     constant integer PANDAREN_TIER_1                                 = 'h06D' // tier 1
     constant integer PANDAREN_TIER_2                                 = 'h0AC' // tier 2
     constant integer PANDAREN_TIER_3                                 = 'h0AD' // tier 3
-    constant integer KULTIRAS_WATCH_TOWER                            = 'h06H' // scout tower
-    constant integer KULTIRAS_GUARD_TOWER                            = 'h06L' // guard tower
-    constant integer KULTIRAS_CANNON_TOWER                           = 'h06M' // cannon tower
-    constant integer KULTIRAS_ARCANE_TOWER                           = 'h06N' // arcane tower
     constant integer PANDAREN_SHELTER                                = 'h06R' // farm
     constant integer PANDAREN_ELEMENTAL_SANCTUARY                    = 'h0AB' // arcane
     constant integer PANDAREN_ALTAR                                  = 'h0A7' // altar
-    constant integer KULTIRAS_SHOP                                   = 'h05Q' // shop
     constant integer PANDAREN_WAR_ACADEMY                            = 'h0AH' // barracks
     constant integer PANDAREN_LUMBER_MILL                            = 'h0AE' // lumber mill
     constant integer PANDAREN_SANCTUARY                              = 'h06Q' // blacksmith
     constant integer PANDAREN_WORKSHOP                               = 'h0A9' // workshop
     constant integer PANDAREN_STORM_SPIRE                            = 'h0AF' // aviary
-    constant integer KULTIRAS_PROUDMOORE_KEEP                        = 'h08Z' // special building
 
 //     constant integer UPG_KULTIRAS_LUMBER                             = 'R05M'
 //     constant integer UPG_KULTIRAS_MASONRY                            = 'R05N'
@@ -1341,26 +1335,13 @@ globals
 //     constant integer UPG_KULTIRAS_PROUDMOORE_KEEP                    = 'R05I' // special building
 
     constant integer PANDAREN_WOODCUTTER                             = 'h067' // worker
-    constant integer KULTIRAS_FOOTMAN                                = 'h054'
     constant integer PANDAREN_ARCHER                                 = 'h0B0'
     constant integer PANDAREN_HONORGUARD                             = 'h0B1'
-    constant integer KULTIRAS_GUARDSMAN                              = 'h05D'
-    constant integer KULTIRAS_FLIBUSTIER                             = 'h05L'
-    constant integer KULTIRAS_FLIBUSTIER_GUN                         = 'h05M'
     constant integer PANDAREN_WARLORD                                = 'h0AG'
-    constant integer KULTIRAS_CANONEER_TEAM                          = 'h00Z'
     constant integer PANDAREN_SAGE                                   = 'h0AA'
-    constant integer KULTIRAS_SHIP_DOCTOR                            = 'h06J'
-    constant integer KULTIRAS_HYDROMANCER                            = 'n06X'
-    constant integer KULTIRAS_LAND_SHIP                              = 'h0BT'
-    constant integer KULTIRAS_GUNSHIP                                = 'h0BR'
-    constant integer KULTIRAS_WATER_DRAGON                           = 'n09O'
-    constant integer KULTIRAS_PEREGRIN_FALCON                        = 'n09P'
-    constant integer KULTIRAS_FLYING_DREADNOUGHT                     = 'h0BW'
 
     constant integer PANDAREN_CITIZEN_MALE                           = 'n08M'
     constant integer PANDAREN_CITIZEN_FEMALE                         = 'n08N'
-    constant integer KULTIRAS_HOUSING                                = 'h090'
 
 
     // Modern Warfare
