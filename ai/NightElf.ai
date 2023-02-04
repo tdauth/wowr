@@ -7,7 +7,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, TREE_LIFE )
     call SetBuildUnit( 1, ELF_MINE )
     call SetBuildUnit( 19, WISP )
-    call SetBuildUnit( 2, ELF_HOUSING )
+    //call SetBuildUnit( 2, ELF_HOUSING )
     call SetBuildUnit( 3, MOON_WELL )
     call SetBuildUnit( 2, ANCIENT_WAR )
     call SetBuildUnit( 1, ELF_ALTAR )

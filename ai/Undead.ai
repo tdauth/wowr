@@ -12,7 +12,7 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, UNDEAD_HOUSING )
+    //call SetBuildUnit( 2, UNDEAD_HOUSING )
     call SetBuildUnit( 1, GRAVEYARD )
     call SetBuildUnit( 2, CRYPT )
     call SetBuildUnit( 4, ZIGGURAT_1 )
