@@ -138,9 +138,6 @@ native GetLastData          takes nothing                               returns 
 native PopLastCommand       takes nothing                               returns nothing
 native MeleeDifficulty      takes nothing                               returns integer
 
-// World of Warcraft Reforged
-native I2S  takes integer i returns string
-
 //============================================================================
 //  Globals for all AI scripts
 //============================================================================
