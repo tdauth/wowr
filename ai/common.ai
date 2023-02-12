@@ -1473,6 +1473,40 @@ globals
     constant integer FREEPEOPLE_CITIZEN_FEMALE                       = 'n0A6'
     constant integer FREEPEOPLE_HOUSING                              = 'n0F3'
 
+    // CIS
+    constant integer CIS_DROID_CONTROL_SHIP                          = 'h07A' // tier 1-3
+    constant integer CIS_DROID_CONTROL_SHIP_PRODUCING                = 'h07B' // tier 1-3
+    constant integer CIS_DROID_FACTORY                               = 'h07V' // barracks
+    constant integer CIS_HEAVY_DROID_VEHICLE_FACTORY                 = 'h07U' // workshop
+    constant integer CIS_HEAVY_SHIP_FACTORY                          = 'h07Y' // aviary
+    constant integer CIS_SITH_TEMPLE                                 = 'h07R' // arcane sanctum
+    constant integer CIS_TECHNO_UNION_SHIP                           = 'h07O' // farm
+    constant integer CIS_DEATH_STAR                                  = 'h07T' // special building
+
+    constant integer UPG_CIS_DEATH_STAR                              = 'R05C'
+
+    constant integer CIS_WORKER                                      = 'h079'
+    constant integer CIS_BATTLE_DROID                                = 'h077'
+    constant integer CIS_SUPER_BATTLE_DROID                          = 'h07L'
+    constant integer CIS_DROIDEKA                                    = 'h07F'
+    constant integer CIS_AAT                                         = 'h07P'
+    constant integer CIS_MTT                                         = 'h07H'
+    constant integer CIS_DROID_STARFIGHTER                           = 'h07N'
+    constant integer CIS_DROID_GUNSHIP                               = 'h07W'
+    constant integer CIS_DROID_TRIFIGHTER                            = 'h07X'
+    constant integer CIS_DWARF_SPIDER_DROID                          = 'h07M'
+    constant integer CIS_HALLFIRE_DROID                              = 'h07J'
+    constant integer CIS_HOMING_SPIDER_DROID                         = 'h07S'
+    constant integer CIS_MUNIFICIENT_CLASS_FRIGATE                   = 'h07Z'
+    constant integer CIS_PROVIDENCE_CLASS_DESTROYER                  = 'h07K'
+    constant integer CIS_SITH                                        = 'h07Q'
+
+
+    constant integer CIS_CITIZEN_MALE                                = 'n0A0'
+    //constant integer FREEPEOPLE_CITIZEN_FEMALE                       = 'n0A6'
+    //constant integer FREEPEOPLE_HOUSING                              = 'n0F3'
+
+
     // All Races
 
     constant integer SHREDDER                                        = 'ngir'
@@ -1595,9 +1629,11 @@ globals
     constant integer SOUL_BURN                                       = 'ANso'
     constant integer SUMMON_LAVA_SPAWN                               = 'ANlm'
 
+    // High Elf
     constant integer RANGER                                          = 'H03Y'
     constant integer COLD_ARROWS                                     = 'AHca'
 
+    // Dalaran
     constant integer WIZARD                                          = 'H00W'
     constant integer SIPHON_MANA_WIZARD                              = 'A0DQ'
     constant integer MANA_SHIELD_WIZARD                              = 'A0DR'
@@ -1606,21 +1642,35 @@ globals
     constant integer MASS_INVISIBILITY                               = 'A0QD'
     constant integer MASS_SLOW                                       = 'A0QF'
 
+    // Kul Tiras
     constant integer HYDROMANCER                                     = 'H06F'
     constant integer SUMMON_SEA_ELEMENTAL                            = 'A08Z'
     constant integer CYCLONE                                         = 'A0JC'
     constant integer MONSOON                                         = 'A024'
 
+    // Modern Warfare
     constant integer US_GENERAL                                      = 'H0F2'
     constant integer REPAIR_AURA                                     = 'A0WC'
     constant integer MECHANICAL_REPAIR                               = 'A0IF'
 
+    // Roman Empire
     constant integer MILITARY_TRIBUNE                                = 'H0CK'
     constant integer ROMAN_LEGION                                    = 'A0U6'
 
     constant integer GANDALF                                         = 'H0DF'
     constant integer MITHRANDIR                                      = 'A03H'
 
+    // CIS
+    constant integer GENERAL_GRIEVOUS                                = 'H0CO'
+    constant integer COMBAT_MASTER                                   = 'A0UM'
+    constant integer GENERAL_GRIEVOUS_BLADESTORM                     = 'A0UK'
+    constant integer FOUR_LIGHT_SABERS                               = 'A0UL'
+
+    constant integer COUNT_DOOKU                                     = 'H081'
+    constant integer THROW_LIGHT_SABER                               = 'A0L6'
+    constant integer FORCE_POWERS                                    = 'A0KT'
+    constant integer LIGHT_SABER_COMBAT                              = 'A0KS'
+    constant integer FORCE_MASTER                                    = 'A0L7'
 
     // The Alliance
     constant integer LADY_VASHJ_BONUS_HERO                           = 'H02B'
@@ -3970,6 +4020,27 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SIPHON_MANA
         endif
+    // CIS
+    elseif (curHero == GENERAL_GRIEVOUS) then
+        if (skillUlti) then
+            return FOUR_LIGHT_SABERS
+        elseif (mod == 0) then
+            return COMBAT_MASTER
+        elseif (mod == 1) then
+            return GENERAL_GRIEVOUS_BLADESTORM
+        elseif (mod == 2) then
+            return LIGHT_SABER_COMBAT
+        endif
+    elseif (curHero == COUNT_DOOKU) then
+        if (skillUlti) then
+            return FORCE_MASTER
+        elseif (mod == 0) then
+            return THROW_LIGHT_SABER
+        elseif (mod == 1) then
+            return FORCE_POWERS
+        elseif (mod == 2) then
+            return LIGHT_SABER_COMBAT
+        endif
     // The Alliance
     elseif (curHero == LADY_VASHJ_BONUS_HERO) then
         if (skillUlti) then
@@ -4092,6 +4163,11 @@ function InitHero takes nothing returns nothing
     // Free People of Middle Earth
     elseif (GetUnitCountDone(GANDALF) > 0) then
         set hero_id = GANDALF
+    // CIS
+    elseif (GetUnitCountDone(GENERAL_GRIEVOUS) > 0) then
+        set hero_id = GENERAL_GRIEVOUS
+    elseif (GetUnitCountDone(COUNT_DOOKU) > 0) then
+        set hero_id = COUNT_DOOKU
     // The Alliance
     elseif (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
         set hero_id = LADY_VASHJ_BONUS_HERO
