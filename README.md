@@ -942,3 +942,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
 * infrenus, Kam, Sellenisko: [Ironclad Submarine](https://www.hiveworkshop.com/threads/ironclad-submarine.332379/)
 * Zombie: [BTNrocket](https://www.hiveworkshop.com/threads/btnrocket.122490/)
+* GreyArchon: [Goblin Sheep Processor](https://www.hiveworkshop.com/threads/goblin-sheep-processor.47525/page-2)
