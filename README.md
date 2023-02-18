@@ -945,3 +945,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Zombie: [BTNrocket](https://www.hiveworkshop.com/threads/btnrocket.122490/)
 * GreyArchon: [Goblin Sheep Processor](https://www.hiveworkshop.com/threads/goblin-sheep-processor.47525/page-2)
 * Pvt.Toma: [Gnome Engineer](https://www.hiveworkshop.com/threads/gnome-engineer.242302/)
+* Champara Bros: [Flame Thrower](https://www.hiveworkshop.com/threads/flame-thrower.112931/)
