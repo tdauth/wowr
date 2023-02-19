@@ -947,3 +947,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Pvt.Toma: [Gnome Engineer](https://www.hiveworkshop.com/threads/gnome-engineer.242302/)
 * Champara Bros: [Flame Thrower](https://www.hiveworkshop.com/threads/flame-thrower.112931/)
 * MiniMage: [Goblin Tinker Turret Flamethrower](https://www.hiveworkshop.com/threads/goblin-tinker-turret-flamethrower.292812/)
+* Kofi_Banan: [RocketMissile-2-](https://www.hiveworkshop.com/threads/rocketmissile-2.48839/)
