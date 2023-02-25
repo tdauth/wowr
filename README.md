@@ -928,3 +928,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Kofi_Banan: [RocketMissile-2-](https://www.hiveworkshop.com/threads/rocketmissile-2.48839/)
 * Tarrasque: [Naga Royal Guard](https://www.hiveworkshop.com/threads/naga-royal-guard.195511/)
 * Tarrasque: [warqueen](https://www.hiveworkshop.com/threads/warqueen.49873/)
+* Sun gate: [Scream of terror](https://www.hiveworkshop.com/threads/scream-of-terror.327156/)
