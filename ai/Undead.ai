@@ -7,7 +7,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, NECROPOLIS_1 )
     call SetBuildUnit( 1, UNDEAD_MINE )
     call SetBuildUnit( 6, ACOLYTE )
-    call SetBuildUnit( 5, GHOUL )
     call SetBuildUnit( 2, UNDEAD_CITIZEN_MALE )
 
     call BuildingStrategyStandardTier1()
@@ -15,6 +14,7 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUnit( 2, UNDEAD_HOUSING )
     call SetBuildUnit( 1, GRAVEYARD )
     call SetBuildUnit( 2, CRYPT )
+    call SetBuildUnit( 5, GHOUL ) // after crypt!
     call SetBuildUnit( 4, ZIGGURAT_1 )
     call SetBuildUnit( 1, UNDEAD_ALTAR )
     call SetBuildUnit( 1, TOMB_OF_RELICS )
