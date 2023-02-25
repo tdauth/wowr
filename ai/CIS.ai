@@ -6,7 +6,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, CIS_DROID_CONTROL_SHIP_PRODUCING )
     call SetBuildUnit( 22, CIS_WORKER )
-    ca//ll SetBuildUnit( 1, RESURRECTION_STONE )
+    //call SetBuildUnit( 1, RESURRECTION_STONE )
     call SetBuildUnit( 5, CIS_TECHNO_UNION_SHIP )
     call SetBuildUnit( 2, CIS_CITIZEN_MALE )
 
