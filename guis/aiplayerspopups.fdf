@@ -125,6 +125,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Modern Warfare",     -2,
         MenuItem "Roman Empire",     -2,
         MenuItem "Free People of Middle Earth",     -2,
+        MenuItem "Sauron's Forces",     -2,
         MenuItem "CIS",     -2,
         MenuItem "Galactic Republic",     -2,
     }

@@ -1,0 +1,245 @@
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, SAURONSFORCES_TIER_1 )
+    call SetBuildUnit( 17, SAURONSFORCES_ORC_WORKER )
+    call SetBuildUnit( 2, SAURONSFORCES_CITIZEN_MALE )
+
+    call BuildingStrategyStandardTier1()
+
+    call SetBuildUnit( 2, SAURONSFORCES_HOUSING )
+    call SetBuildUnit( 1, SAURONSFORCES_WAR_MILL )
+    call SetBuildUnit( 3, SAURONSFORCES_SLAUGHTERHOUSE )
+    call SetBuildUnit( 2, SAURONSFORCES_ORC_MOUND )
+    call SetBuildUnit( 1, SAURONSFORCES_ALTAR )
+    call SetBuildUnit( 1, SAURONSFORCES_SHOP )
+    
+//     call SetBuildUpgr( 1, UPG_ROMANEMPIRE_DEFEND )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_LEATHER )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
+
+    // Tier 2 buildings
+    call SetBuildUnit( 1, SAURONSFORCES_TIER_2 )
+    call SetBuildUnit( 4, SAURONSFORCES_SLAUGHTERHOUSE )
+
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_ARMOR )
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_LEATHER )
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
+//     call SetBuildUpgr( 1, UPG_SORCERY )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_BOWS )
+    
+    // Tier 3 buildings
+    call SetBuildUnit( 1, SAURONSFORCES_TIER_3 )
+    call SetBuildUnit( 1, SAURONSFORCES_TENT_OF_RHUN )
+    call SetBuildUnit( 1, SAURONSFORCES_HARADRIM_BARRACKS )
+    call SetBuildUnit( 1, SAURONSFORCES_TROLL_DEN )
+    call SetBuildUnit( 2, SAURONSFORCES_HARADRIM_WATCH_TOWER )
+
+    call SetBuildUpgr( 1, UPG_SAURONSFORCE_BARAD_DUR )
+    call SetBuildUpgr( 1, UPG_SAURONSFORCE_ORTHANC )
+
+    call SetBuildUnit( 1, SAURONSFORCES_BARAD_DUR )
+    call SetBuildUnit( 1, SAURONSFORCES_ORTHANC )
+
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_ARMOR )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_LEATHER )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MOON_ARMOR )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_STR_MOON )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MASONRY )
+//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
+//     call SetBuildUpgr( 2, UPG_SORCERY )
+//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_IMPROVED_SIEGE )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_BURNING_OIL )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
+//     call SetBuildUpgr( 1, UPG_SENTINEL )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
+//     call SetBuildUpgr( 1, UPG_HUMAN_BACKPACK )
+//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
+//     call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
+
+    call BuildingStrategyStandardTier3()
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, SAURONSFORCES_TIER_3)
+    call SetBuildExpa(expansions, SAURONSFORCES_WAR_MILL)
+    call SetBuildExpa(expansions, SAURONSFORCES_HARADRIM_WATCH_TOWER)
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 0, 1, 2, SAURONSFORCES_ORC_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 0, 1, 2, SAURONSFORCES_ORC_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_ARCHER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_RHUN_BANNERCARRIER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_ARCHER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_RHUN_BANNERCARRIER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_ARCHER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_RHUN_BANNERCARRIER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_ARCHER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_RHUN_BANNERCARRIER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_TROLL_DRUMMER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 11 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_ORC_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_WARG_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, SAURONSFORCES_RHUN_ARCHER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_RHUN_BANNERCARRIER )
+    call CampaignAttackerEx( 2, 2, 3, SAURONSFORCES_TROLL_DRUMMER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 12 ***
+        call InitAssaultGroup()
+        
+        // small ground army
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_ORC_WARRIOR )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_ORC_ARCHER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_ORC_ARCHER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_WARG_RIDER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_RHUN_WARRIOR )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_RHUN_ARCHER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_RHUN_BANNERCARRIER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_TROLL_DRUMMER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_WAR_TROLL )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_HARADRIM_RIDER )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_MUMAK )
+
+        // big air army
+        call CampaignAttackerEx( 8, 12, 18, SAURONSFORCES_FELLBEAST )
+
+        call AddStandardUnitsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( SAURONSFORCES_SLAUGHTERHOUSE, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+    call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction
