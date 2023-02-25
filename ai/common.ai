@@ -1507,6 +1507,36 @@ globals
     //constant integer FREEPEOPLE_HOUSING                              = 'n0F3'
 
 
+    // Galactic Republic
+    constant integer GALACTIC_REPUBLIC_ACCLAMATOR                    = 'h08M' // tier 1-3
+    constant integer GALACTIC_REPUBLIC_ACCLAMATOR_PRODUCING          = 'h083' // tier 1-3
+    constant integer GALACTIC_REPUBLIC_BARRACKS                      = 'h088' // barracks
+    constant integer GALACTIC_REPUBLIC_JEDI_TEMPLE                   = 'h089' // arcane sanctum
+    constant integer GALACTIC_REPUBLIC_NABOO_TRAINING_CENTER         = 'h085' // tauren totem
+    constant integer GALACTIC_REPUBLIC_SPACEPORT                     = 'h08C' // aviary
+    constant integer GALACTIC_REPUBLIC_VEHICLE_FACTORY               = 'h08F' // workshop
+    constant integer GALACTIC_REPUBLIC_TURBOLAZER                    = 'o020' // watch tower/farm
+    constant integer GALACTIC_REPUBLIC_CORUSCANT                     = 'h08K' // special building
+
+    constant integer UPG_GALACTIC_REPUBLIC_CORUSCANT                 = 'R05D'
+
+    constant integer GALACTIC_REPUBLIC_WORKER                        = 'h084'
+    constant integer GALACTIC_REPUBLIC_ARC170                        = 'h08O'
+    constant integer GALACTIC_REPUBLIC_ATAP                          = 'h08H'
+    constant integer GALACTIC_REPUBLIC_ATRT                          = 'h0BU'
+    constant integer GALACTIC_REPUBLIC_ATTE                          = 'h08E'
+    constant integer GALACTIC_REPUBLIC_ARC_TROOPER                   = 'h08N'
+    constant integer GALACTIC_REPUBLIC_CLONE_TROOPER                 = 'h087'
+    constant integer GALACTIC_REPUBLIC_CLONE_TURBO_TANK              = 'h08G'
+    constant integer GALACTIC_REPUBLIC_CONSULAR_CLASS_CRUISER        = 'h08I'
+    constant integer GALACTIC_REPUBLIC_JEDI                          = 'h08A'
+    constant integer GALACTIC_REPUBLIC_KAMINOAN                      = 'h08L'
+    constant integer GALACTIC_REPUBLIC_NABOO_STAR_FIGHTER            = 'h086'
+    constant integer GALACTIC_REPUBLIC_GUNSHIP                       = 'h08B'
+    constant integer GALACTIC_REPUBLIC_VWING                         = 'h08J'
+
+    constant integer GALACTIC_REPUBLIC_CITIZEN_MALE                  = 'n07J'
+
     // All Races
 
     constant integer SHREDDER                                        = 'ngir'
@@ -1671,6 +1701,9 @@ globals
     constant integer FORCE_POWERS                                    = 'A0KT'
     constant integer LIGHT_SABER_COMBAT                              = 'A0KS'
     constant integer FORCE_MASTER                                    = 'A0L7'
+
+    // Galactic Republic
+    constant integer YODA                                            = 'H07D'
 
     // The Alliance
     constant integer LADY_VASHJ_BONUS_HERO                           = 'H02B'
@@ -4041,6 +4074,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return LIGHT_SABER_COMBAT
         endif
+    // Galactic Republic
+    elseif (curHero == YODA) then
+        if (skillUlti) then
+            return FORCE_MASTER
+        elseif (mod == 0) then
+            return THROW_LIGHT_SABER
+        elseif (mod == 1) then
+            return FORCE_POWERS
+        elseif (mod == 2) then
+            return LIGHT_SABER_COMBAT
+        endif
     // The Alliance
     elseif (curHero == LADY_VASHJ_BONUS_HERO) then
         if (skillUlti) then
@@ -4168,6 +4212,9 @@ function InitHero takes nothing returns nothing
         set hero_id = GENERAL_GRIEVOUS
     elseif (GetUnitCountDone(COUNT_DOOKU) > 0) then
         set hero_id = COUNT_DOOKU
+    // Galactic Republic
+    elseif (GetUnitCountDone(YODA) > 0) then
+        set hero_id = YODA
     // The Alliance
     elseif (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
         set hero_id = LADY_VASHJ_BONUS_HERO

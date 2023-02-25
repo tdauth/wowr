@@ -126,6 +126,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Roman Empire",     -2,
         MenuItem "Free People of Middle Earth",     -2,
         MenuItem "CIS",     -2,
+        MenuItem "Galactic Republic",     -2,
     }
 }
 

@@ -189,29 +189,7 @@ The map contains the modified [common.ai](./ai/common.ai) which is used by all c
 
 ### Warlords
 
-The following files are imported into the map whenever they are updated. They contain a very basic warlord AI for computer players:
-
-* [Human.ai](./ai/Human.ai)
-* [Orc.ai](./ai/Orc.ai)
-* [Undead.ai](./ai/Undead.ai)
-* [NightElf.ai](./ai/NightElf.ai)
-* [Naga.ai](./ai/Naga.ai)
-* [BloodElf.ai](./ai/BloodElf.ai)
-* [Demon.ai](./ai/Demon.ai)
-* [Draenei.ai](./ai/Draenei.ai)
-* [Furbolg.ai](./ai/Furbolg.ai)
-* [Goblin.ai](./ai/Goblin.ai)
-* [Dwarf.ai](./ai/Dwarf.ai)
-* [HighElf.ai](./ai/HighElf.ai)
-* [Dalaran.ai](./ai/Dalaran.ai)
-* [KulTiras.ai](./ai/KulTiras.ai)
-* [Pandaren.ai](./ai/Pandaren.ai)
-* [ModernWarfare.ai](./ai/ModernWarfare.ai)
-* [RomanEmpire.ai](./ai/RomanEmpire.ai)
-* [FreePeopleOfMiddleEarth.ai](./ai/FreePeopleOfMiddleEarth.ai)
-* [CIS.ai](./ai/CIS.ai)
-* [TheBurningLegion.ai](./ai/TheBurningLegion.ai)
-* [TheAlliance.ai](./ai/TheAlliance.ai)
+The following AI files from the [ai](./ai/) folder are imported into the map whenever they are updated. They contain a very basic warlord AI for computer players.
 
 The race is can be determined from the race set in the lobby of the game:
 

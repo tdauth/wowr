@@ -15,6 +15,10 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUnit( 2, FURBOLG_HOUSING )
     //call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
     call SetBuildUnit( 2, CIS_DROID_FACTORY )
+    call SetBuildUnit( 2, CIS_HEAVY_DROID_VEHICLE_FACTORY )
+    call SetBuildUnit( 1, CIS_SITH_TEMPLE )
+    call SetBuildUnit( 2, CIS_HEAVY_SHIP_FACTORY )
+
 //    call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
     //call SetBuildUnit( 2, GUARDING_FURBOLG )
     //call SetBuildUnit( 1, FURBOLG_MARKETPLACE )
