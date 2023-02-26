@@ -1515,6 +1515,7 @@ globals
     constant integer CIS_HEAVY_SHIP_FACTORY                          = 'h07Y' // aviary
     constant integer CIS_SITH_TEMPLE                                 = 'h07R' // arcane sanctum
     constant integer CIS_TECHNO_UNION_SHIP                           = 'h07O' // farm
+    constant integer CIS_ALTAR                                       = 'h0H0' // altar
     constant integer CIS_DEATH_STAR                                  = 'h07T' // special building
 
     constant integer UPG_CIS_BLASTERS                                = 'R084'
@@ -1553,12 +1554,16 @@ globals
     constant integer GALACTIC_REPUBLIC_SPACEPORT                     = 'h08C' // aviary
     constant integer GALACTIC_REPUBLIC_VEHICLE_FACTORY               = 'h08F' // workshop
     constant integer GALACTIC_REPUBLIC_TURBOLAZER                    = 'o020' // watch tower/farm
+    constant integer GALACTIC_REPUBLIC_ALTAR                         = 'h0GZ' // altar
     constant integer GALACTIC_REPUBLIC_CORUSCANT                     = 'h08K' // special building
 
     constant integer UPG_GALACTIC_REPUBLIC_BLASTERS                  = 'R087'
     constant integer UPG_GALACTIC_REPUBLIC_IRON_PLATING              = 'R086'
     constant integer UPG_GALACTIC_REPUBLIC_JEDI                      = 'R089'
     constant integer UPG_GALACTIC_REPUBLIC_JEDI_INTERCEPTORS         = 'R088'
+    constant integer UPG_GALACTIC_REPUBLIC_HYPERSPACE                = 'R05F'
+    constant integer UPG_GALACTIC_REPUBLIC_ROCKETS                   = 'R05E'
+    constant integer UPG_GALACTIC_REPUBLIC_TORPEDOES                 = 'R08B'
     constant integer UPG_GALACTIC_REPUBLIC_CORUSCANT                 = 'R05D'
 
     constant integer GALACTIC_REPUBLIC_WORKER                        = 'h084'
