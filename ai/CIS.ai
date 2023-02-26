@@ -43,6 +43,9 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
     //call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
 
+    call SetBuildUpgr( 3, UPG_CIS_BLASTERS )
+    call SetBuildUpgr( 3, UPG_CIS_IRON_PLATING )
+    call SetBuildUpgr( 2, UPG_CIS_SITH )
     call SetBuildUpgr( 1, UPG_CIS_DEATH_STAR )
     call SetBuildUnit( 1, CIS_DEATH_STAR )
     

@@ -1517,6 +1517,9 @@ globals
     constant integer CIS_TECHNO_UNION_SHIP                           = 'h07O' // farm
     constant integer CIS_DEATH_STAR                                  = 'h07T' // special building
 
+    constant integer UPG_CIS_BLASTERS                                = 'R084'
+    constant integer UPG_CIS_IRON_PLATING                            = 'R085'
+    constant integer UPG_CIS_SITH                                    = 'R08A'
     constant integer UPG_CIS_DEATH_STAR                              = 'R05C'
 
     constant integer CIS_WORKER                                      = 'h079'
@@ -1552,6 +1555,10 @@ globals
     constant integer GALACTIC_REPUBLIC_TURBOLAZER                    = 'o020' // watch tower/farm
     constant integer GALACTIC_REPUBLIC_CORUSCANT                     = 'h08K' // special building
 
+    constant integer UPG_GALACTIC_REPUBLIC_BLASTERS                  = 'R087'
+    constant integer UPG_GALACTIC_REPUBLIC_IRON_PLATING              = 'R086'
+    constant integer UPG_GALACTIC_REPUBLIC_JEDI                      = 'R089'
+    constant integer UPG_GALACTIC_REPUBLIC_JEDI_INTERCEPTORS         = 'R088'
     constant integer UPG_GALACTIC_REPUBLIC_CORUSCANT                 = 'R05D'
 
     constant integer GALACTIC_REPUBLIC_WORKER                        = 'h084'
@@ -1568,6 +1575,8 @@ globals
     constant integer GALACTIC_REPUBLIC_NABOO_STAR_FIGHTER            = 'h086'
     constant integer GALACTIC_REPUBLIC_GUNSHIP                       = 'h08B'
     constant integer GALACTIC_REPUBLIC_VWING                         = 'h08J'
+    constant integer GALACTIC_REPUBLIC_JEDI_STARFIGHTER              = 'h0GX'
+    constant integer GALACTIC_REPUBLIC_JEDI_INTERCEPTOR              = 'h0GY'
 
     constant integer GALACTIC_REPUBLIC_CITIZEN_MALE                  = 'n07J'
 

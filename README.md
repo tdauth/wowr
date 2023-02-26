@@ -508,7 +508,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Nasrudin: [Jedi](https://www.hiveworkshop.com/threads/jedi.50599/)
 * Wojannnn: [Star Wars Sith pack](https://wc3modding.info/6439/star-wars-sith-pack/)
 * Jack_Sparrow93: [BTNGreenLightsaber](https://www.hiveworkshop.com/threads/btngreenlightsaber.157824/)
-* Jack_Sparrow93: [BTNGreenLightsaber](https://www.hiveworkshop.com/threads/btngreenlightsaber.157824/)
 * Jack_Sparrow93: [BTNRedLightsaber4](https://www.hiveworkshop.com/threads/btnredlightsaber4.156322/)
 * olofmoleman: [BTNLightsaberBlock](https://www.hiveworkshop.com/threads/btnlightsaberblock.56759/)
 * purparisien: [Ancient Shipyard](https://www.hiveworkshop.com/threads/ancient-shipyard.321677/)
@@ -938,3 +937,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Alok: [BTNUruk-haiPikeman, Elven and Uruk Icons](https://www.hiveworkshop.com/threads/btnuruk-haipikeman.287305/#post-3169740)
 * HerrDave: [Saruman (War of the Ring)](https://www.hiveworkshop.com/threads/saruman-war-of-the-ring.311128/)
 * The Lord of the Rings movies: BTNSaruman, BTNSarumansStaff
+* NFWar: [BTNGunFire](https://www.hiveworkshop.com/threads/btngunfire.176571/)
+* Blizzard Entertainment: [BTNINV_Ingot_Iron](https://www.hiveworkshop.com/threads/btninv_ingot_iron.55261/)
+* Blood Raven: [Ingot](https://www.hiveworkshop.com/threads/ingot.279211/)
+* olofmoleman: [BTNJediStarFighter](https://www.hiveworkshop.com/threads/btnjedistarfighter.56824/)

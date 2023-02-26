@@ -44,6 +44,10 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
     //call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
 
+    call SetBuildUpgr( 3, UPG_GALACTIC_REPUBLIC_BLASTERS )
+    call SetBuildUpgr( 3, UPG_GALACTIC_REPUBLIC_IRON_PLATING )
+    call SetBuildUpgr( 2, UPG_GALACTIC_REPUBLIC_JEDI )
+    call SetBuildUpgr( 1, UPG_GALACTIC_REPUBLIC_JEDI_INTERCEPTORS )
     call SetBuildUpgr( 1, UPG_GALACTIC_REPUBLIC_CORUSCANT )
     call SetBuildUnit( 1, GALACTIC_REPUBLIC_CORUSCANT )
     
@@ -183,6 +187,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_REPUBLIC_GUNSHIP )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_REPUBLIC_NABOO_STAR_FIGHTER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_REPUBLIC_VWING )
+    call CampaignAttackerEx( 2, 2, 3, GALACTIC_REPUBLIC_JEDI_STARFIGHTER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_REPUBLIC_CONSULAR_CLASS_CRUISER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -204,6 +209,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, GALACTIC_REPUBLIC_GUNSHIP )
         call CampaignAttackerEx( 2, 2, 2, GALACTIC_REPUBLIC_NABOO_STAR_FIGHTER )
         call CampaignAttackerEx( 2, 2, 2, GALACTIC_REPUBLIC_VWING )
+        call CampaignAttackerEx( 2, 2, 2, GALACTIC_REPUBLIC_JEDI_STARFIGHTER )
         call CampaignAttackerEx( 2, 2, 2, GALACTIC_REPUBLIC_CONSULAR_CLASS_CRUISER )
         
         // big air army
