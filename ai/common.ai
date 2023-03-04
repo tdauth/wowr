@@ -1290,7 +1290,7 @@ globals
     constant integer KULTIRAS_FLYING_DREADNOUGHT                     = 'h0BW'
 
     constant integer KULTIRAS_CITIZEN_MALE                           = 'n066'
-    constant integer KULTIRAS_CITIZEN_FEMALE                         = 'n00F'
+    constant integer KULTIRAS_CITIZEN_FEMALE                         = 'n0BL'
     constant integer KULTIRAS_HOUSING                                = 'h090'
 
     // Pandaren
@@ -1505,6 +1505,7 @@ globals
     constant integer SAURONSFORCES_FELLBEAST                         = 'o049' // wyvern
 
     constant integer SAURONSFORCES_CITIZEN_MALE                      = 'n0AO'
+    constant integer SAURONSFORCES_CITIZEN_FEMALE                    = 'n0BR'
     constant integer SAURONSFORCES_HOUSING                           = 'h0GW'
 
     // CIS
@@ -1541,8 +1542,8 @@ globals
 
 
     constant integer CIS_CITIZEN_MALE                                = 'n0A0'
-    //constant integer FREEPEOPLE_CITIZEN_FEMALE                       = 'n0A6'
-    //constant integer FREEPEOPLE_HOUSING                              = 'n0F3'
+    constant integer CIS_CITIZEN_FEMALE                              = 'n0BQ'
+    constant integer CIS_HOUSING                                     = 'h0H3'
 
 
     // Galactic Republic
@@ -1584,6 +1585,8 @@ globals
     constant integer GALACTIC_REPUBLIC_JEDI_INTERCEPTOR              = 'h0GY'
 
     constant integer GALACTIC_REPUBLIC_CITIZEN_MALE                  = 'n07J'
+    constant integer GALACTIC_REPUBLIC_CITIZEN_FEMALE                = 'n0BP'
+    constant integer GALACTIC_REPUBLIC_HOUSING                       = 'h0H2'
 
     // All Races
 

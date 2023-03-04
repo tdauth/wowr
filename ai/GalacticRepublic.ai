@@ -12,8 +12,8 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
-    //call SetBuildUnit( 2, FURBOLG_HOUSING )
-    //call SetBuildUnit( 2, FURBOLG_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, GALACTIC_REPUBLIC_HOUSING )
+    call SetBuildUnit( 2, GALACTIC_REPUBLIC_CITIZEN_FEMALE )
     call SetBuildUnit( 2, GALACTIC_REPUBLIC_BARRACKS )
     call SetBuildUnit( 1, GALACTIC_REPUBLIC_JEDI_TEMPLE )
     call SetBuildUnit( 1, GALACTIC_REPUBLIC_VEHICLE_FACTORY )
