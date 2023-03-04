@@ -1,11 +1,11 @@
 # World of Warcraft Reforged
 
 Open world role-playing game funmap for Warcraft III: Reforged based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/) featuring computer AI support which allows you to play the map offline.
-This map is not a recreation of the game World of Warcraft but is inspired and uses some lore from the game.
+This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
 
 ## Play the Map
 
-* [Discord Server](https://discord.gg/eM34z36)
+* [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
 * [Current development version](./wowr3.4.w3x)
@@ -16,7 +16,8 @@ This map is not a recreation of the game World of Warcraft but is inspired and u
 
 Usually, it is the best to ally one Freelancer with one Warlord from the beginning.
 The Warlord can support the Freelancer with units, resources and XP and the Freelancer can level faster.
-Alliances can be made via Warcraft's menu. Build many custom goldmines as Warlords to collect gold much faster.
+Alliances can be forged via Warcraft's menu or chat commands.
+Build many custom goldmines as Warlords to collect gold much faster.
 Defend your base with towers and close the gates if necessary.
 Strong bases are almost impossible to conquer.
 Find some good creep spots or enemies (maybe Warlord AI) to level your hero constantly.
@@ -80,7 +81,7 @@ This version provides several new features compared to the original map [World o
 * No Chaos damage for Naga and Blood Elf anymore.
 * Blood Elf researches are not visible to Human anymore.
 * Hideouts have Portal abilities from the new Portal buildings.
-* Default Computer players The Burning Legion with Demon race, The Alliance with Naga/Blood Elf race and Gaia with rescuable units.
+* Default Computer players The Burning Legion with Demon race and Gaia with rescuable units.
 * Bosses respawn.
 * Life and mana regeneration auras of citizens do not stack anymore.
 * Dark Ranger has Black Arrow again instead of Dark Portal based on a [Custom Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which supports targets with unit levels greater than 5 and which is [part of this repository](./systems/).
@@ -941,3 +942,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [BTNINV_Ingot_Iron](https://www.hiveworkshop.com/threads/btninv_ingot_iron.55261/)
 * Blood Raven: [Ingot](https://www.hiveworkshop.com/threads/ingot.279211/)
 * olofmoleman: [BTNJediStarFighter](https://www.hiveworkshop.com/threads/btnjedistarfighter.56824/)
+* Kinjal: [Aqueduct](https://www.hiveworkshop.com/threads/aqueduct.307767/)
+* Tranquil: [Monk](https://www.hiveworkshop.com/threads/monk.157280/)
+* DOTA2, Milan The Ripper: [BTNJetpack](https://www.hiveworkshop.com/threads/btnjetpack.345227/)

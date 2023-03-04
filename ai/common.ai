@@ -1422,6 +1422,12 @@ globals
     constant integer UPG_ROMANEMPIRE_DEFEND                          = 'R081'
     constant integer UPG_ROMANEMPIRE_TRIUMPHAL_ARCH                  = 'R076'
     constant integer UPG_ROMANEMPIRE_RIDE_DOWN                       = 'R082'
+    constant integer UPG_ROMANEMPIRE_AQUEDUCT                        = 'R08C'
+    constant integer UPG_ROMANEMPIRE_PILUM                           = 'R08F'
+    constant integer UPG_ROMANEMPIRE_BACKPACK                        = 'R08G'
+    constant integer UPG_ROMANEMPIRE_MASONRY                         = 'R08H'
+    constant integer UPG_ROMANEMPIRE_MELEE                           = 'R08D'
+    constant integer UPG_ROMANEMPIRE_ARMOR                           = 'R08E'
 
     constant integer ROMANEMPIRE_LEGIONARY                           = 'h05S' // worker
     constant integer ROMANEMPIRE_CENTURION                           = 'h08U' // footman
@@ -1434,6 +1440,8 @@ globals
     constant integer ROMANEMPIRE_GLADIATOR                           = 'h05V'
     constant integer ROMANEMPIRE_BALLISTA                            = 'e019'
     constant integer ROMANEMPIRE_CATAPULT                            = 'o036'
+    constant integer ROMANEMPIRE_PRIEST                              = 'h0H5'
+    constant integer ROMANEMPIRE_SENATOR                             = 'h0H6'
 
     constant integer ROMANEMPIRE_CITIZEN_MALE                        = 'n09Y'
     constant integer ROMANEMPIRE_CITIZEN_FEMALE                      = 'n0AS'
