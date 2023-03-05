@@ -1517,7 +1517,7 @@ globals
     constant integer SAURONSFORCES_HOUSING                           = 'h0GW'
 
     // CIS
-    constant integer CIS_DROID_CONTROL_SHIP                          = 'h07A' // tier 1-3
+    constant integer CIS_DROID_CONTROL_SHIP                          = 'h0H9' // tier 1-3 base unit
     constant integer CIS_DROID_CONTROL_SHIP_PRODUCING                = 'h07B' // tier 1-3
     constant integer CIS_DROID_FACTORY                               = 'h07V' // barracks
     constant integer CIS_HEAVY_DROID_VEHICLE_FACTORY                 = 'h07U' // workshop
@@ -1527,9 +1527,12 @@ globals
     constant integer CIS_ALTAR                                       = 'h0H0' // altar
     constant integer CIS_DEATH_STAR                                  = 'h07T' // special building
 
+    constant integer UPG_CIS_BACKPACK                                = 'R08K'
     constant integer UPG_CIS_BLASTERS                                = 'R084'
     constant integer UPG_CIS_IRON_PLATING                            = 'R085'
     constant integer UPG_CIS_SITH                                    = 'R08A'
+    constant integer UPG_CIS_SHIELD                                  = 'R08I'
+    constant integer UPG_CIS_BATTLE_FORMATION                        = 'R08J'
     constant integer UPG_CIS_DEATH_STAR                              = 'R05C'
 
     constant integer CIS_WORKER                                      = 'h079'

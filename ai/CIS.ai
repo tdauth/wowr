@@ -4,7 +4,7 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, CIS_DROID_CONTROL_SHIP_PRODUCING )
+    call SetBuildUnit( 1, CIS_DROID_CONTROL_SHIP )
     call SetBuildUnit( 22, CIS_WORKER )
     call SetBuildUnit( 1, CIS_ALTAR )
     call SetBuildUnit( 5, CIS_TECHNO_UNION_SHIP )
@@ -46,6 +46,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 3, UPG_CIS_BLASTERS )
     call SetBuildUpgr( 3, UPG_CIS_IRON_PLATING )
     call SetBuildUpgr( 2, UPG_CIS_SITH )
+    call SetBuildUpgr( 1, UPG_CIS_BATTLE_FORMATION )
+    call SetBuildUpgr( 1, UPG_CIS_SHIELD )
+    call SetBuildUpgr( 1, UPG_CIS_BACKPACK )
     call SetBuildUpgr( 1, UPG_CIS_DEATH_STAR )
     call SetBuildUnit( 1, CIS_DEATH_STAR )
     
@@ -58,9 +61,8 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, CIS_DROID_CONTROL_SHIP_PRODUCING)
+    call SetBuildExpa(expansions, CIS_DROID_CONTROL_SHIP)
     call SetBuildExpa(expansions, CIS_TECHNO_UNION_SHIP)
-    //call SetBuildExpa(expansions, GUARDING_FURBOLG)
 endfunction
 
 function AttackWaves takes nothing returns nothing
