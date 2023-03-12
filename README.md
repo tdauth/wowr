@@ -964,3 +964,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * EhrGhoul: [WW2 Flags](https://www.hiveworkshop.com/threads/ww2-flags.341212/)
 * The_Silent: [Bunker Wall Pieces v.1.5](https://www.hiveworkshop.com/threads/bunker-wall-pieces-v-1-5.295473/)
 * purparisien: [Brick House](https://www.hiveworkshop.com/threads/brick-house.332861/)
+* RED BARON: [Red Baron Airplane](https://www.hiveworkshop.com/threads/red-baron-airplane.48741/)
