@@ -981,3 +981,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Eagle XI: [BTNVrykulProtoDrake](https://www.hiveworkshop.com/threads/btnvrykulprotodrake.272402/)
 * Ujimasa Hojo: [Shipyard (Human) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-human-and-derivatives.233397/)
 * Eagle XI: [BTNVrykulLongboat](https://www.hiveworkshop.com/threads/btnvrykullongboat.273195/)
+* Ujimasa Hojo: [Altar of Kings and Derivarives](https://www.hiveworkshop.com/threads/altar-of-kings-and-derivarives.233461/)
