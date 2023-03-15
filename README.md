@@ -47,7 +47,7 @@ This version provides several new features compared to the original map [World o
 * New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
 * New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant
 * New mounts: Dragonhawk, Kodo Beast, Horse, Mammoth, Giant Sea Turtle, TIE Fighter, Imperial Shuttle, Jedi Starfighter, Dragon, Eagle, White Tiger, Apache, Couatl, Zeppelin WWI.
-* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth, Sauron's Forces, Modern Warfare, Germans WWII.
+* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth, Sauron's Forces, Modern Warfare, Germans WWII, Vrykul.
 * New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse, Taxi.
 * New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost, Anti Air Wall, Spell Book.
 * New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
@@ -965,3 +965,9 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Silent: [Bunker Wall Pieces v.1.5](https://www.hiveworkshop.com/threads/bunker-wall-pieces-v-1-5.295473/)
 * purparisien: [Brick House](https://www.hiveworkshop.com/threads/brick-house.332861/)
 * RED BARON: [Red Baron Airplane](https://www.hiveworkshop.com/threads/red-baron-airplane.48741/)
+* Sellenisko: [Dragons Reach](https://www.hiveworkshop.com/threads/dragons-reach.253336/)
+* Eagle XI: [BTNVrykulMain2](https://www.hiveworkshop.com/threads/btnvrykulmain2.272406/)
+* Sellenisko: [VrykulWorker](https://www.hiveworkshop.com/threads/vrykulworker.240972/)
+* Eagle XI: [BTNVrykulWorker](https://www.hiveworkshop.com/threads/btnvrykulworker.272398/)
+* Sellenisko: [VrykulFisherHouse](https://www.hiveworkshop.com/threads/vrykulfisherhouse.239861/)
+* Eagle XI: [BTNVrykulFarm](https://www.hiveworkshop.com/threads/btnvrykulfarm.272404/)
