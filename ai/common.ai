@@ -1519,6 +1519,7 @@ globals
     // CIS
     constant integer CIS_DROID_CONTROL_SHIP                          = 'h0H9' // tier 1-3 base unit
     constant integer CIS_DROID_CONTROL_SHIP_PRODUCING                = 'h07B' // tier 1-3
+    constant integer CIS_DROID_CONTROL_SHIP_FLYING                   = 'h07A' // tier 1-3
     constant integer CIS_DROID_FACTORY                               = 'h07V' // barracks
     constant integer CIS_HEAVY_DROID_VEHICLE_FACTORY                 = 'h07U' // workshop
     constant integer CIS_HEAVY_SHIP_FACTORY                          = 'h07Y' // aviary
@@ -1598,6 +1599,23 @@ globals
     constant integer GALACTIC_REPUBLIC_CITIZEN_MALE                  = 'n07J'
     constant integer GALACTIC_REPUBLIC_CITIZEN_FEMALE                = 'n0BP'
     constant integer GALACTIC_REPUBLIC_HOUSING                       = 'h0H2'
+
+    // Germans WWII
+    constant integer GERMANS_WWII_HEADQUARTERS                       = 'h0HB' // tier 1-3
+    constant integer GERMANS_WWII_BARRACKS                           = 'h0HD' // barracks
+    constant integer GERMANS_WWII_BUNKER                             = 'o04D' // farm
+    constant integer GERMANS_WWII_OFFICERS_ROOM                      = 'h0HO' // arcane sanctum
+    constant integer GERMANS_WWII_PRISON                             = 'u01J' // tauren totem
+    constant integer GERMANS_WWII_VEHICLE_FACTORY                    = 'h0HJ' // beastiary
+    constant integer GERMANS_WWII_WORKSHOP                           = 'h0HN' // workshop
+    constant integer GERMANS_WWII_WEAPONS_STORAGE                    = 'h0HL' // lumber mill/forge
+    constant integer GERMANS_WWII_AIRBASE                            = 'h0HM' // aviary
+    constant integer GERMANS_WWII_SHOP                               = 'h0I1' // shop
+
+    constant integer UPG_GERMANS_WWII_BACKPACK                       = 'R08L'
+    constant integer UPG_GERMANS_WWII_AUTOBAHN                       = 'R08S'
+
+    constant integer GERMANS_WWII_PIONEER                            = 'h0HC' // worker
 
     // All Races
 
@@ -2299,6 +2317,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == FREEPEOPLE_ROHAN_SCOUT_TOWER then
         set have_qty = have_qty + GetUnitCountEx(FREEPEOPLE_GONDORIAN_GUARD_TOWER,false,townid)
+
+    elseif unitid == CIS_DROID_CONTROL_SHIP then
+        set have_qty = have_qty + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_PRODUCING,false,townid) + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_FLYING,false,townid)
+    elseif unitid == CIS_DROID_CONTROL_SHIP_PRODUCING then
+        set have_qty = have_qty + GetUnitCountEx(CIS_DROID_CONTROL_SHIP,false,townid) + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_FLYING,false,townid)
+    elseif unitid == CIS_DROID_CONTROL_SHIP_FLYING then
+        set have_qty = have_qty  + GetUnitCountEx(CIS_DROID_CONTROL_SHIP,false,townid) + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_PRODUCING,false,townid)
 
     elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)

@@ -4,20 +4,20 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, MODERNWARFARE_TIER_1 )
-    call SetBuildUnit( 17, MODERNWARFARE_WORKER )
+    call SetBuildUnit( 1, GERMANS_WWII_HEADQUARTERS )
+    call SetBuildUnit( 17, GERMANS_WWII_PIONEER )
     call SetBuildUnit( 2, MODERNWARFARE_CITIZEN_MALE )
 
     call BuildingStrategyStandardTier1()
 
     call SetBuildUnit( 2, MODERNWARFARE_HOUSING )
-    call SetBuildUnit( 1, MODERNWARFARE_FACTORY )
+    call SetBuildUnit( 1, GERMANS_WWII_WEAPONS_STORAGE )
     call SetBuildUnit( 4, MODERNWARFARE_BUNKER )
     call SetBuildUnit( 1, MODERNWARFARE_BARRACKS )
     call SetBuildUnit( 1, MODERNWARFARE_ALTAR )
     call SetBuildUnit( 1, MODERNWARFARE_SHOP )
 
-    call SetBuildUpgr( 1, UPG_MODERNWARFARE_MASONRY )
+    call SetBuildUpgr( 1, UPG_GERMANS_WWII_AUTOBAHN )
     call SetBuildUpgr( 1, UPG_MODERNWARFARE_FAST_RELOAD )
     call SetBuildUpgr( 1, UPG_MODERNWARFARE_MACHINE_GUNS )
     call SetBuildUpgr( 1, UPG_MODERNWARFARE_HELMETS )
@@ -31,7 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 3, MODERNWARFARE_RADIO_TOWER )
     call SetBuildUnit( 2, MODERNWARFARE_MINIGUN_TOWER )
     call SetBuildUnit( 2, MODERNWARFARE_CITIZEN_FEMALE )
-    call SetBuildUpgr( 2, UPG_MODERNWARFARE_MASONRY )
+    call SetBuildUpgr( 2, UPG_GERMANS_WWII_AUTOBAHN )
     call SetBuildUpgr( 2, UPG_MODERNWARFARE_MACHINE_GUNS )
     call SetBuildUpgr( 2, UPG_MODERNWARFARE_HELMETS )
     call SetBuildUpgr( 2, UPG_MODERNWARFARE_METAL_PLATING )
@@ -49,7 +49,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, MODERNWARFARE_AIRBASE )
     call SetBuildUnit( 2, MODERNWARFARE_NUCLEAR_SILO )
 
-    call SetBuildUpgr( 3, UPG_MODERNWARFARE_MASONRY )
+    call SetBuildUpgr( 3, UPG_GERMANS_WWII_AUTOBAHN )
     call SetBuildUpgr( 3, UPG_MODERNWARFARE_MACHINE_GUNS )
     call SetBuildUpgr( 3, UPG_MODERNWARFARE_HELMETS )
     call SetBuildUpgr( 3, UPG_MODERNWARFARE_METAL_PLATING )
@@ -60,7 +60,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_MODERNWARFARE_REPAIR_AURA )
     call SetBuildUpgr( 1, UPG_MODERNWARFARE_UN_BUILDING )
     call SetBuildUnit( 1, MODERNWARFARE_UN_BUILDING )
-    call SetBuildUnit( 1, UPG_MODERNWARFARE_BACKPACK )
+    call SetBuildUnit( 1, UPG_GERMANS_WWII_BACKPACK )
 
     call BuildingStrategyStandardTier3()
     // **********************************
@@ -70,7 +70,7 @@ endfunction
 
 function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, MODERNWARFARE_TIER_3)
-    call SetBuildExpa(expansions, MODERNWARFARE_FACTORY)
+    call SetBuildExpa(expansions, GERMANS_WWII_WEAPONS_STORAGE)
     call SetBuildExpa(expansions, MODERNWARFARE_MINIGUN_TOWER)
 endfunction
 
