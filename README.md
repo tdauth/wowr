@@ -39,7 +39,7 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero ability levels.
 * Backpack system.
 * New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli, Darth Maul, Gandalf, Frodo Baggins, U. S. General, Samwise Gamgee, Peregrin Took, Meriadoc Brandybuck, Void Lord Commander, Sauron, Jesus Christ, Gnomish Submarine, Goblin Submarine, Ironclad Submarine, Submarine Pilot, Flame Shredder, Naga Royal Guard, Tyrannosaurus Rex, Saruman, Paul Bäumer, Graf von Stauffenberg, German Kaiser, Thane, Flamebinder, Wolf Rider.
-* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes, Shrink, Telekinesis, Full Regeneration, Cripple Player, Flamethrower, Burning Oil, Flamethrower Turret, Frost Bolt, Defend, Elven Cloak, Summon Dinosaur Nest, Mass Devour.
+* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes, Shrink, Telekinesis, Full Regeneration, Cripple Player, Flamethrower, Burning Oil, Flamethrower Turret, Frost Bolt, Defend, Elven Cloak, Summon Dinosaur Nest, Mass Devour, Rain of Arrows, Life Aura.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune, War Queen.
 * New appearing bosses: Deathwing, Cenarius.
 * New hero standard abilities: Magic Sentry, Repair, Dark Summoning.
@@ -985,3 +985,12 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * JollyD: [Adventure Road](https://www.hiveworkshop.com/threads/adventure-road.286971/)
 * Eagle XI: [BTNVrykulThane](https://www.hiveworkshop.com/threads/btnvrykulthane.272400/)
 * Sin'dorei300: [BTNRagnarFlamebeard](https://www.hiveworkshop.com/threads/btnragnarflamebeard.249810/)
+* Kershbob: [BTNHeroRanger](https://www.hiveworkshop.com/threads/btnheroranger.57536/)
+* Insk: [BTNRainOfArrows](https://www.hiveworkshop.com/threads/btnrainofarrows.131435/)
+* WaggaWagga: [ArrowRain](https://www.hiveworkshop.com/threads/arrowrain.50310/)
+* Cavman: [Worgen Peasant](https://www.hiveworkshop.com/threads/worgen-peasant.163454/)
+* Murlocologist: [Worgen](https://www.hiveworkshop.com/threads/worgen.318576/)
+* bakr: [Gilneas Buildings](https://www.hiveworkshop.com/threads/gilneas-buildings.336977)
+* Kimbo: [BTNWorgenMoon](https://www.hiveworkshop.com/threads/btnworgenmoon.243514/)
+* Whitewolf8: [Worgen Knight](https://www.hiveworkshop.com/threads/worgen-knight.244795/)
+* jordan10: [Worgen Druid](https://www.hiveworkshop.com/threads/worgen-druid.319273/)
