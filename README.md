@@ -46,7 +46,7 @@ This version provides several new features compared to the original map [World o
 * New areas: Outland, Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, new island next to Maelstrom with new boss Sea Witch, Clan Island, Pandaria, Dalaran, Sylvanas Windrunner's place, Elune's place.
 * New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion".
 * New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant
-* New mounts: Dragonhawk, Kodo Beast, Horse, Mammoth, Giant Sea Turtle, TIE Fighter, Imperial Shuttle, Jedi Starfighter, Dragon, Eagle, White Tiger, Apache, Couatl, Zeppelin WWI, Polar Bear, Proto Drake, Running Wild.
+* New mounts: Dragonhawk, Kodo Beast, Horse, Mammoth, Giant Sea Turtle, TIE Fighter, Imperial Shuttle, Jedi Starfighter, Dragon, Eagle, White Tiger, Apache, Couatl, Zeppelin WWI, Polar Bear, Proto Drake, Running Wild, Bear.
 * New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth, Sauron's Forces, Modern Warfare, Germans WWII, Vrykul.
 * New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse, Taxi.
 * New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost, Anti Air Wall, Spell Book, Mounts Cage.
@@ -172,7 +172,8 @@ This version provides several new features compared to the original map [World o
 * Customized Engineering Upgrade.
 * Reduced build time of Haunted, Entangled and Enchanted Gold Mines to balance initial mining time.
 * Cheats for testing.
-* Custom idle worker detection which is [part of this repository](./systems/).
+* [Custom Idle Workers System](https://www.hiveworkshop.com/threads/barad%C3%A9s-idle-workers-system-1-0.346874/) which is [part of this repository](./systems/).
+* [Custom Paged Buttons System](https://www.hiveworkshop.com/threads/barad%C3%A9s-paged-buttons-system-1-0.348173/) which is [part of this repository](./systems/).
 
 ## Bug Fixes
 
