@@ -102,6 +102,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
 Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "RacesPopupMenu",
     Frame "MENU" "RacesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Random Warcraft Warlord",     -2,
         MenuItem "Random",     -2,
         MenuItem "Random Freelancer",     -2,
         MenuItem "Random Warlord",     -2,

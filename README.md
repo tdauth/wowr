@@ -174,6 +174,7 @@ This version provides several new features compared to the original map [World o
 * Cheats for testing.
 * [Custom Idle Workers System](https://www.hiveworkshop.com/threads/barad%C3%A9s-idle-workers-system-1-0.346874/) which is [part of this repository](./systems/).
 * [Custom Paged Buttons System](https://www.hiveworkshop.com/threads/barad%C3%A9s-paged-buttons-system-1-0.348173/) which is [part of this repository](./systems/).
+* Custom models for items.
 
 ## Bug Fixes
 
@@ -1010,3 +1011,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ujimasa Hojo: [Mortar Team and Derivatives](https://www.hiveworkshop.com/threads/mortar-team-and-derivatives.295866/)
 * Ujimasa Hojo: [MortarTeam](https://www.hiveworkshop.com/threads/mortarteam.48059/)
 * Oinkerwinkle: [Telescope](https://www.hiveworkshop.com/threads/telescope.49003/)
+* Kenathorn: [Icons to Models Pack](https://www.hiveworkshop.com/threads/icons-to-models-pack.316803/)
+* republicola: [RingOfProtection](https://www.hiveworkshop.com/threads/ringofprotection.49489/)
+* Arak1da: [DwarfHero Female Woodcutter](https://www.hiveworkshop.com/threads/dwarfhero-female-woodcutter.305764/)
