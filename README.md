@@ -1024,3 +1024,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The Panda: [BTNFlameStorm](https://www.hiveworkshop.com/threads/btnflamestorm.307458/)
 * r.ace613: [Acolyte and Derivatives](https://www.hiveworkshop.com/threads/acolyte-and-derivatives.336072/)
 * Darky29: [BTNDragonEye](https://www.hiveworkshop.com/threads/btndragoneye.54555/)
+* (Darkfang), Blizzard Entertainment: [DivineArmor](https://www.hiveworkshop.com/threads/divinearmor.288821/)
