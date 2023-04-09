@@ -1685,7 +1685,7 @@ globals
 
     constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
     constant integer FURBOLG_REJUVENATION                            = 'A06X'
-    constant integer FURBOLG_FAERIE_FIRE                             = 'A06Y'
+    constant integer FURBOLG_FAERIE_FIRE                             = 'A13B'
     constant integer FURBOLG_COMMAND_AURA                            = 'A06Z'
     constant integer FURBOLG_CORRUPTION                              = 'A070'
 
