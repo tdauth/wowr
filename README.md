@@ -1031,3 +1031,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * TurieL: [RiflemanElite](https://www.hiveworkshop.com/threads/riflemanelite.49808/)
 * PrinceYaser: [BTNPlateArmor](https://www.hiveworkshop.com/threads/btnplatearmor.310470/)
 * Illidan(Evil)X: [Replaceable Banner](https://www.hiveworkshop.com/threads/replaceable-banner.278853/)
+* Blizzard Entertainment: [BTNCharge](https://www.hiveworkshop.com/threads/btncharge.323833/)
