@@ -1342,6 +1342,7 @@ globals
     constant integer PANDAREN_ARCHER                                 = 'h0B0'
     constant integer PANDAREN_HONORGUARD                             = 'h0B1'
     constant integer PANDAREN_WARLORD                                = 'h0AG'
+    constant integer PANDAREN_SHAMAN                                 = 'o04N'
     constant integer PANDAREN_SAGE                                   = 'h0AA'
 
     constant integer PANDAREN_CITIZEN_MALE                           = 'n08M'
