@@ -1313,7 +1313,10 @@ globals
 //     constant integer UPG_KULTIRAS_ARMOR                              = 'R06U'
 //     constant integer UPG_KULTIRAS_RANGED                             = 'R058'
 //     constant integer UPG_KULTIRAS_LEATHER                            = 'R06V'
-//     constant integer UPG_KULTIRAS_DEFEND                             = 'R06P'
+    constant integer UPG_PANDAREN_DEFEND                             = 'R06I'
+    constant integer UPG_PANDAREN_IMPROVED_BOWS                      = 'R090'
+    constant integer UPG_PANDAREN_BACKPACK                           = 'R08Z'
+    constant integer UPG_PANDAREN_DRUNK_PANDA                        = 'R091'
 //     constant integer UPG_KULTIRAS_LONG_RIFLES                        = 'R058'
 //     constant integer UPG_KULTIRAS_BACKPACK                           = 'R06Z'
 //     constant integer UPG_KULTIRAS_TRUE_SIGHT                         = 'R06Y'
@@ -1343,6 +1346,7 @@ globals
 
     constant integer PANDAREN_CITIZEN_MALE                           = 'n08M'
     constant integer PANDAREN_CITIZEN_FEMALE                         = 'n08N'
+    constant integer PANDAREN_HOUSING                                = 'h0JU'
 
 
     // Modern Warfare
