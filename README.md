@@ -1039,3 +1039,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mouseketeer: [BTNDraeneiProphet](https://www.hiveworkshop.com/threads/btndraeneiprophet.347392/)
 * Pvt.Toma: [Gnome Castle](https://www.hiveworkshop.com/threads/gnome-castle.253044/)
 * Pvt.Toma: [Gnome Worker](https://www.hiveworkshop.com/threads/gnome-worker.253100/)
+* Blizzard Entertainment, Sellenisko: [DarkVal'kyrSvH](https://www.hiveworkshop.com/threads/darkvalkyrsvh.239866/)
+* Sellenisko: [Golden Val'Kyr](https://www.hiveworkshop.com/threads/golden-valkyr.307868/)
