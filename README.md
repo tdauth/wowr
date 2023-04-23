@@ -1037,3 +1037,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Alok: [Furbolg Worker](https://www.hiveworkshop.com/threads/furbolg-worker.292559/)
 * Stefan.K: [Prophet Velen](https://www.hiveworkshop.com/threads/prophet-velen.292240/)
 * Mouseketeer: [BTNDraeneiProphet](https://www.hiveworkshop.com/threads/btndraeneiprophet.347392/)
+* Pvt.Toma: [Gnome Castle](https://www.hiveworkshop.com/threads/gnome-castle.253044/)
+* Pvt.Toma: [Gnome Worker](https://www.hiveworkshop.com/threads/gnome-worker.253100/)
