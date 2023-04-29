@@ -66,6 +66,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_DEMON_IMPROVED_DEVOUR )
     call SetBuildUpgr( 1, UPG_DEMON_ANTI_MAGIC_SHELL )
     call SetBuildUpgr( 1, UPG_DEMON_SOUL_THEFT )
+    call SetBuildUpgr( 1, UPG_DEMON_SPACE_TRAVEL )
     call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
 
     call BuildingStrategyStandardTier3()
@@ -181,7 +182,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
-    call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_LEGION_SHIP )
     call CampaignAttackerEx( 2, 2, 3, DEMON_JAILER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_INQUISITOR )
     call AddStandardUnitsToAttackWave()
@@ -192,12 +193,13 @@ function AttackWaves takes nothing returns nothing
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, DEMON_OVERLORD )
     call CampaignAttackerEx( 1, 2, 3, DEMON_FEL_STALKER )
-    call CampaignAttackerEx( 1, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 1, 2, 3, DEMON_LEGION_SHIP )
     call CampaignAttackerEx( 1, 2, 3, DEMON_INFERNAL_MACHINE )
     call CampaignAttackerEx( 2, 2, 3, DEMON_GREATER_VOID_WALKER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_EREDAR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_SUCCUBUS )
     call CampaignAttackerEx( 2, 2, 3, DEMON_NETHER_DRAKE )
+    call CampaignAttackerEx( 2, 2, 3, DEMON_LEGION_SHIP )
     call CampaignAttackerEx( 2, 2, 3, DEMON_JAILER )
     call CampaignAttackerEx( 2, 2, 3, DEMON_INQUISITOR )
     call CampaignAttackerEx( 2, 2, 3, DEMON_INFERNAL )
@@ -227,6 +229,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 3, 3, 3, DEMON_FEL_REAVER )
         
         // big air army
+        call CampaignAttackerEx( 2, 2, 3, DEMON_LEGION_SHIP )
         call CampaignAttackerEx( 15, 20, 25, DEMON_NETHER_DRAKE )
         
         call AddStandardUnitsToAttackWave()
