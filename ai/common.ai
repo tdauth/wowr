@@ -1353,6 +1353,43 @@ globals
     constant integer PANDAREN_CITIZEN_FEMALE                         = 'n08N'
     constant integer PANDAREN_HOUSING                                = 'h0JU'
 
+    // Worgen
+    constant integer WORGEN_TOWN_HALL                                = 'h0IU'
+    constant integer WORGEN_KEEP                                     = 'h0IZ'
+    constant integer WORGEN_CASTLE                                   = 'h0IV'
+    constant integer WORGEN_BARRACKS                                 = 'h0J6'
+    constant integer WORGEN_ALTAR                                    = 'h0J0'
+    constant integer WORGEN_BLACKSMITH                               = 'h0J4'
+    constant integer WORGEN_WIZARD_TOWER                             = 'h0IY' // sanctuary
+    constant integer WORGEN_HOUSE                                    = 'h0J3' // farm
+    constant integer WORGEN_LUMBER_MILL                              = 'h0J7'
+    constant integer WORGEN_WORKSHOP                                 = 'h0JE'
+    constant integer WORGEN_MANOR                                    = 'h0J8' // aviary
+    constant integer WORGEN_TRADE_HOUSE                              = 'h0J5' // shop
+    constant integer WORGEN_SCOUT_TOWER                              = 'h0JF'
+    constant integer WORGEN_GUARD_TOWER                              = 'h0JG'
+    constant integer WORGEN_ARCANE_TOWER                             = 'h0JI'
+    constant integer WORGEN_CANNON_TOWER                             = 'h0JH'
+    constant integer WORGEN_CATHEDRAL                                = 'h0J9'
+
+    constant integer UPG_WORGEN_DRUID                                = 'R08U'
+    constant integer UPG_WORGEN_NOCTURNAL                            = 'R08X'
+    constant integer UPG_WORGEN_CURSE                                = 'R08T'
+    constant integer UPG_WORGEN_BACKPACK                             = 'R08V'
+    constant integer UPG_WORGEN_CATHEDRAL                            = 'R08W'
+
+    constant integer WORGEN_PEASANT                                  = 'h0IT'
+    constant integer WORGEN_FOOTMAN                                  = 'h0JD'
+    constant integer WORGEN_RIFLEMAN                                 = 'h0JC'
+    constant integer WORGEN_KNIGHT                                   = 'h0IW'
+    constant integer WORGEN_DRUID                                    = 'h0IX'
+
+    constant integer WORGEN_CITIZEN_MALE                             = 'n05C'
+    constant integer WORGEN_CITIZEN_FEMALE                           = 'n0C6'
+    constant integer WORGEN_HOUSING                                  = 'h0JA'
+
+    // Vrykul
+
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
@@ -2317,6 +2354,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_TIER_3,false,townid)
     elseif unitid == KULTIRAS_WATCH_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_GUARD_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_CANNON_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_ARCANE_TOWER,false,townid)
+
+    elseif unitid == WORGEN_TOWN_HALL then
+        set have_qty = have_qty + GetUnitCountEx(WORGEN_KEEP,false,townid) + GetUnitCountEx(WORGEN_CASTLE,false,townid)
+    elseif unitid == WORGEN_KEEP then
+        set have_qty = have_qty  + GetUnitCountEx(WORGEN_CASTLE,false,townid)
+    elseif unitid == WORGEN_SCOUT_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(WORGEN_GUARD_TOWER,false,townid) + GetUnitCountEx(WORGEN_CANNON_TOWER,false,townid) + GetUnitCountEx(WORGEN_ARCANE_TOWER,false,townid)
 
     elseif unitid == MODERNWARFARE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
