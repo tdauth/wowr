@@ -57,7 +57,7 @@ This version provides several new features compared to the original map [World o
 * New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter, Improved Trading, Dragon Roost.
 * New neutral buildings: Outland portals on land and sea all over the map connecting the whole world, Arcane Academy of Theramore, Clan House, Goblin Bank, Water Gold Mine, Tomes Library, Zoo, Bonus Book Shop, Goblin Merchant for Star Wars, Thieves Guild, Chest, Turnstile, Real Estate Agent, Goblin Vehicle Shop, Alchemist Lab.
 * New creeps: Shivarra, Pirate Battleship, Reaver, Core Hound, Val'kyr.
-* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI, Potion of Greater Restoration, Restoration Stone, Gold Bar, Board, Branch, Rock, Healing Herb, Mana Herb, Ore, Gold Bar, Magical Item Summoner, Exchange Lumber for Gold, Beast Whistle, Item Locker, Magical Rune Wards, Stasis Traps, Locked Item Summoner, Orb of Wind, Dragon Egg, Jedi Drone, Mana Ward, Orb of Royality, Scroll of the Ghosts of the Sea, Unlimited Bag of Gold, Escape Portal, Random Artifact, Lock Pick, Spell Book, Hourglass, Wand of Future, Winged Clock, Wand of Time Clone, Flamethrower, Advanced Goblin Night Scope, Unlimited Trees, Firework.
+* New items: Magical Cutter, Magical Creep Summoner, Feed Bosses, Feed AI, Potion of Greater Restoration, Restoration Stone, Gold Bar, Board, Branch, Rock, Healing Herb, Mana Herb, Ore, Gold Bar, Magical Item Summoner, Exchange Lumber for Gold, Beast Whistle, Item Locker, Magical Rune Wards, Stasis Traps, Locked Item Summoner, Orb of Wind, Dragon Egg, Jedi Drone, Mana Ward, Orb of Royality, Scroll of the Ghosts of the Sea, Unlimited Bag of Gold, Escape Portal, Random Artifact, Lock Pick, Spell Book, Hourglass, Wand of Future, Winged Clock, Wand of Time Clone, Flamethrower, Advanced Goblin Night Scope, Unlimited Trees, Firework, Orb of Blood, Orb of Light.
 * New chat commands: help, repicking, discord, alliances, camera settings, hero suicide, enable/disable hero death sounds, player info, pings, votekick, convert buildings into tiny items, passive mode, save/load, info, camlockon/off, presave, loadp, loadpclan, presaveclans, clans, maxbosslevels, anim, camrpgon/off, sel, zoneson/off, revive, pingm, accounts, enchanter, asave, aload, dice, lightsabercolor, lightsabertype, pingportals, host, pingaistarts, vips, items, pickup, order, h1/2/3, p1/2, r1/2, cooldowns, gaiaon/off, ffa, lobby, auto, unlock, lock, helpping, helpclan, gold, lumber, grail, dig, raceui, baginfoon/off, baguion/off, playercolor, rename, scale, tomes, notomes, aiinfo, aitargeton/off, aitarget, bossicons, nobossicons, helpvisual, teamcolor, questwards, damageon/off.
 * New custom systems created only for this map: [Black Arrow System](https://www.hiveworkshop.com/threads/barad%C3%A9s-black-arrow-system-1-0.339157/) which is [part of this repository](./systems/), Turret System which is [part of this repository](./systems/). [Item Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-respawn-system-1-0.340746/) which is [part of this repository](./systems/), [Unit Group Respawn System](https://www.hiveworkshop.com/threads/barad%C3%A9s-unit-respawn-system-1-0.341099/) which is [part of this repository](./systems/), Group System which is [part of this repository](./systems/), Item Crafting System, [Item Unstack System](https://www.hiveworkshop.com/threads/barad%C3%A9s-item-unstack-system-1-0.339109/) which is [part of this repository](./systems/), Jump System, Vote System.
 * Multiple heroes, professions and races at higher hero level.
@@ -386,7 +386,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Em!: [Birdiepult](https://www.hiveworkshop.com/threads/birdiepult.291386/)
 * Eagle XI: [BTNStonewall](https://www.hiveworkshop.com/threads/btnstonewall.275743/)
 * Darkfang: [Orb of the Sun](https://www.hiveworkshop.com/threads/orb-of-the-sun.288765/)
-* General Frank: [Orb of Fire](https://www.hiveworkshop.com/threads/orb-of-fire.106241/#resource-26079)
+* General Frank: [Orb of Fire](https://www.hiveworkshop.com/threads/orb-of-fire.106241/)
 * Ujimasa Hojo: [Shipyard (Night Elf) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-night-elf-and-derivatives.230445/)
 * Retera: [Tiered Temple of Tides (from Heaven's Fall)](https://www.hiveworkshop.com/threads/tiered-temple-of-tides-from-heavens-fall.302776/)
 * cleavinghammer: [Coral Golem](https://www.hiveworkshop.com/threads/coral-golem.320084/)
@@ -1050,3 +1050,14 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Hantoo, johnwar: [Elite Darkspear Troll Rider](https://www.hiveworkshop.com/threads/elite-darkspear-troll-rider.334472/)
 * frostwhisper: [Zandalari Throne of War](https://www.hiveworkshop.com/threads/zandalari-throne-of-war.345255/)
 * frostwhisper: [Troll Golem](https://www.hiveworkshop.com/threads/troll-golem.327025/)
+* Matarael: [Elven Boots](https://www.hiveworkshop.com/threads/elven-boots.128822/)
+* terrio: [item models](https://www.hiveworkshop.com/threads/item-models.308187/)
+* General Frank: [Orb of Darkness](https://www.hiveworkshop.com/threads/orb-of-darkness.106238/)
+* General Frank: [Orb of Ice](https://www.hiveworkshop.com/threads/orb-of-ice.106242/)
+* General Frank: [Orb of Blood (...or Orb of Emos)](https://www.hiveworkshop.com/threads/orb-of-blood-or-orb-of-emos.106236/)
+* Darkfang: [Bloodstone Orb](https://www.hiveworkshop.com/threads/bloodstone-orb.345045/)
+* doom_sheep: [Arcane Tower Missile Recolors](https://www.hiveworkshop.com/threads/arcane-tower-missile-recolors.341252/)
+* General Frank: [Orb of Poison](https://www.hiveworkshop.com/threads/orb-of-poison.106245/)
+* General Frank: [Orb of Lightning](https://www.hiveworkshop.com/threads/orb-of-lightning.106244/)
+* abcdefghstuvwxy: [BTNOrbOfLightningYellow](https://www.hiveworkshop.com/threads/btnorboflightningyellow.56216/)
+* General Frank: [Orb of Light](https://www.hiveworkshop.com/threads/orb-of-light.106243/)

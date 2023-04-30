@@ -1,0 +1,245 @@
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, TROLL_TIER_1 )
+    call SetBuildUnit( 17, TROLL_GATHERER )
+    call SetBuildUnit( 2, TROLL_CITIZEN_MALE )
+
+    call BuildingStrategyStandardTier1()
+
+    call SetBuildUnit( 2, TROLL_HOUSING )
+    call SetBuildUnit( 1, TROLL_WAR_MILL )
+    call SetBuildUnit( 3, TROLL_HUT )
+    call SetBuildUnit( 2, TROLL_BARRACKS )
+    call SetBuildUnit( 1, TROLL_ALTAR_OF_BLOOD )
+    call SetBuildUnit( 1, TROLL_VOODOO_LOUNGE )
+    
+    //call SetBuildUpgr( 1, UPG_ORC_MELEE )
+    //call SetBuildUpgr( 1, UPG_ORC_RANGED )
+    //call SetBuildUpgr( 1, UPG_ORC_ARMOR )
+    //call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
+    //call SetBuildUpgr( 1, UPG_ORC_BERSERK )
+    call SetBuildUpgr( 1, UPG_ORC_TROLL_HUTS )
+    //call SetBuildUpgr( 1, UPG_ORC_SPIKES )
+    //call SetBuildUpgr( 1, UPG_ORC_REGEN )
+
+    // Tier 2 buildings
+    call SetBuildUnit( 1, TROLL_TIER_2 )
+    call SetBuildUnit( 1, TROLL_WAR_MILL )
+    call SetBuildUnit( 1, TROLL_SPIRIT_LODGE )
+    call SetBuildUnit( 1, TROLL_BESTIARY )
+    call SetBuildUnit( 4, TROLL_HUT )
+    call SetBuildUnit( 2, TROLL_CITIZEN_FEMALE )
+    
+    //call SetBuildUpgr( 2, UPG_ORC_MELEE )
+    //call SetBuildUpgr( 2, UPG_ORC_RANGED )
+    //call SetBuildUpgr( 2, UPG_ORC_ARMOR )
+    //call SetBuildUpgr( 2, UPG_ORC_TROLL_HUTS )
+    //call SetBuildUpgr( 2, UPG_ORC_SPIKES )
+    //call SetBuildUpgr( 1, UPG_ORC_PILLAGE )
+    //call SetBuildUpgr( 1, UPG_ORC_FIRE )
+    //call SetBuildUpgr( 1, UPG_ORC_SHAMAN )
+    //call SetBuildUpgr( 1, UPG_ORC_DOCS )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, TROLL_TIER_3 )
+    call SetBuildUnit( 1, TROLL_ICE_TROLL_HUT )
+    call SetBuildUnit( 5, TROLL_HUT )
+    call SetBuildUnit( 2, TROLL_WATCH_TOWER )
+    call SetBuildUnit( 2, TROLL_CITIZEN_MALE )
+
+    //call SetBuildUpgr( 3, UPG_ORC_MELEE )
+    //call SetBuildUpgr( 3, UPG_ORC_RANGED )
+    //call SetBuildUpgr( 3, UPG_ORC_ARMOR )
+    //call SetBuildUpgr( 2, UPG_ORC_SHAMAN )
+    //call SetBuildUpgr( 2, UPG_ORC_DOCS )
+    //call SetBuildUpgr( 3, UPG_ORC_TROLL_HUTS )
+    //call SetBuildUpgr( 3, UPG_ORC_SPIKES )
+    //call SetBuildUpgr( 1, UPG_ORC_ENSNARE )
+    //call SetBuildUpgr( 2, UPG_ORC_SWALKER )
+    //call SetBuildUpgr( 1, UPG_ORC_PULVERIZE )
+    //call SetBuildUpgr( 1, UPG_ORC_VENOM )
+    //call SetBuildUpgr( 1, UPG_ORC_WAR_DRUMS )
+    //call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+    call SetBuildUpgr( 1, UPG_TROLL_BACKPACK )
+    //call SetBuildUpgr( 1, UPG_FEL )
+    //call SetBuildUnit( 1, FOUNTAIN_OF_BLOOD )
+    //call SetBuildUnit( 3, CHAOS_TROLL_GATHERER )
+    //call SetBuildUnit( 1, FEL_DRAGON_ROOST )
+    //call SetBuildUnit( 2, PIG_FARM )
+    //call SetBuildUnit( 2, CHAOS_TROLL_HUT )
+
+    call BuildingStrategyStandardTier3()
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, TROLL_TIER_3)
+    call SetBuildExpa(expansions, TROLL_WAR_MILL)
+    call SetBuildExpa(expansions, TROLL_WATCH_TOWER)
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 0, 1, 2, TROLL_HEAD_HUNTER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 0, 1, 2, TROLL_HEAD_HUNTER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
+    call CampaignAttackerEx( 2, 2, 3, SHAMAN )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
+    call CampaignAttackerEx( 2, 2, 3, SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, KODO_BEAST )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
+    call CampaignAttackerEx( 2, 2, 3, SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, KODO_BEAST )
+    call CampaignAttackerEx( 2, 2, 3, WYVERN )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TROLL_MAN_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_HEAD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, TROLL_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, CATAPULT )
+    call CampaignAttackerEx( 2, 2, 3, WITCH_DOCTOR )
+    call CampaignAttackerEx( 2, 2, 3, SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, KODO_BEAST )
+    call CampaignAttackerEx( 2, 2, 3, WYVERN )
+    call CampaignAttackerEx( 2, 2, 3, TAUREN )
+    call CampaignAttackerEx( 2, 2, 3, SPIRIT_WALKER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 ***
+        call InitAssaultGroup()
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, TROLL_HEAD_HUNTER )
+        call CampaignAttackerEx( 2, 2, 2, CATAPULT )
+        call CampaignAttackerEx( 2, 2, 2, WITCH_DOCTOR )
+        call CampaignAttackerEx( 2, 2, 2, SHAMAN )
+        call CampaignAttackerEx( 2, 2, 2, TAUREN )
+        call CampaignAttackerEx( 2, 2, 2, SPIRIT_WALKER )
+        call CampaignAttackerEx( 4, 4, 4, CHAOS_TROLL_MAN_HUNTER )
+        call CampaignAttackerEx( 4, 4, 4, CHAOS_WARLOCK )
+        call CampaignAttackerEx( 4, 4, 4, CHAOS_TROLL_RIDER )
+        call CampaignAttackerEx( 2, 2, 2, CHAOS_KODO )
+        
+         // big air army
+        call CampaignAttackerEx( 8, 10, 12, WYVERN )
+        call CampaignAttackerEx( 8, 10, 12, BATRIDER )
+        call CampaignAttackerEx( 6, 8, 10, ORC_DRAGON)
+        
+        call AddStandardUnitsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( TROLL_HUT, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+    call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction

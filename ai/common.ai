@@ -1353,6 +1353,30 @@ globals
     constant integer PANDAREN_CITIZEN_FEMALE                         = 'n08N'
     constant integer PANDAREN_HOUSING                                = 'h0JU'
 
+    // Troll
+    constant integer TROLL_TIER_1                                    = 'o029'
+    constant integer TROLL_TIER_2                                    = 'o02A'
+    constant integer TROLL_TIER_3                                    = 'o02B'
+    constant integer TROLL_HUT                                       = 'o02E' // farm
+    constant integer TROLL_WAR_MILL                                  = 'o04V' // lumber mill
+    constant integer TROLL_ALTAR_OF_BLOOD                            = 'o02P' // altar
+    constant integer TROLL_SPIRIT_LODGE                              = 'o02F' // spirit lodge
+    constant integer TROLL_ICE_TROLL_HUT                             = 'o04R' // tauren totem
+    constant integer TROLL_BESTIARY                                  = 'o02I' // beastiary
+    constant integer TROLL_WATCH_TOWER                               = 'o04X'
+    constant integer TROLL_BARRACKS                                  = 'o02D' // barracks
+    constant integer TROLL_VOODOO_LOUNGE                             = 'o04U' // shop
+
+    constant integer UPG_TROLL_BACKPACK                              = 'R099'
+
+    constant integer TROLL_GATHERER                                  = 'o02C' // worker
+    constant integer TROLL_MAN_HUNTER                                = 'o02H'
+    constant integer TROLL_HEAD_HUNTER                               = 'o04T'
+    constant integer TROLL_RIDER                                     = 'o04Q'
+
+    constant integer TROLL_CITIZEN_MALE                              = 'n07X'
+    constant integer TROLL_CITIZEN_FEMALE                            = 'n081'
+    constant integer TROLL_HOUSING                                   = 'h098'
     // Worgen
     constant integer WORGEN_TOWN_HALL                                = 'h0IU'
     constant integer WORGEN_KEEP                                     = 'h0IZ'
