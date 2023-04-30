@@ -1061,3 +1061,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [Orb of Lightning](https://www.hiveworkshop.com/threads/orb-of-lightning.106244/)
 * abcdefghstuvwxy: [BTNOrbOfLightningYellow](https://www.hiveworkshop.com/threads/btnorboflightningyellow.56216/)
 * General Frank: [Orb of Light](https://www.hiveworkshop.com/threads/orb-of-light.106243/)
+* Yours Truly: [Troll Voodoo Cannoneer](https://www.hiveworkshop.com/threads/troll-voodoo-cannoneer.329883/)
+* Uncle Fester: [TempleOfSacrifice](https://www.hiveworkshop.com/threads/templeofsacrifice.228114/)
+* Uncle Fester: [TrollTigersharkRider](https://www.hiveworkshop.com/threads/trolltigersharkrider.226465/)
