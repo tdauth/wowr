@@ -22,7 +22,7 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr( 1, UPG_ORC_ARMOR )
     //call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
     //call SetBuildUpgr( 1, UPG_ORC_BERSERK )
-    call SetBuildUpgr( 1, UPG_ORC_TROLL_HUTS )
+    //call SetBuildUpgr( 1, UPG_ORC_TROLL_HUTS )
     //call SetBuildUpgr( 1, UPG_ORC_SPIKES )
     //call SetBuildUpgr( 1, UPG_ORC_REGEN )
 
@@ -216,9 +216,9 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, SHAMAN )
         call CampaignAttackerEx( 2, 2, 2, TAUREN )
         call CampaignAttackerEx( 2, 2, 2, SPIRIT_WALKER )
-        call CampaignAttackerEx( 4, 4, 4, CHAOS_TROLL_MAN_HUNTER )
+        call CampaignAttackerEx( 4, 4, 4, TROLL_MAN_HUNTER )
         call CampaignAttackerEx( 4, 4, 4, CHAOS_WARLOCK )
-        call CampaignAttackerEx( 4, 4, 4, CHAOS_TROLL_RIDER )
+        call CampaignAttackerEx( 4, 4, 4, TROLL_RIDER )
         call CampaignAttackerEx( 2, 2, 2, CHAOS_KODO )
         
          // big air army
