@@ -1158,6 +1158,11 @@ globals
     constant integer HIGH_ELF_CITIZEN_FEMALE                         = 'n05J'
     constant integer HIGH_ELF_HOUSING                                = 'h04H'
 
+    // Gnome
+    constant integer GNOME_TIER_1                                    = 'h0JX'
+
+    constant integer GNOME_ENGINEER                                  = 'h0JY' // worker
+
     // Dalaran
     constant integer DALARAN_TIER_1                                  = 'h051' // tier 1
     constant integer DALARAN_TIER_2                                  = 'h099' // tier 2

@@ -11,7 +11,7 @@ Official website: [wowreforged.org](https://wowreforged.org)
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr3.5.w3x)
+* [Current development version](./wowr3.6.w3x)
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 
@@ -242,6 +242,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [wowr3.5.w3x](./wowr3.5.w3x)
 * [wowr3.4.w3x](./wowr3.4.w3x)
 * [wowr3.3.w3x](./wowr3.3.w3x)
 * [wowr3.2.w3x](./wowr3.2.w3x)
@@ -1064,3 +1065,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Yours Truly: [Troll Voodoo Cannoneer](https://www.hiveworkshop.com/threads/troll-voodoo-cannoneer.329883/)
 * Uncle Fester: [TempleOfSacrifice](https://www.hiveworkshop.com/threads/templeofsacrifice.228114/)
 * Uncle Fester: [TrollTigersharkRider](https://www.hiveworkshop.com/threads/trolltigersharkrider.226465/)
+* Norinrad: [Gnomish Rifleman](https://www.hiveworkshop.com/threads/gnomish-rifleman.47737/)
+* Norinrad: [Gnomish Artillery Tank](https://www.hiveworkshop.com/threads/gnomish-artillery-tank.47908/)
+* AndrewOverload519: [Mechanostrider](https://www.hiveworkshop.com/threads/mechanostrider.240037/)
+* Ujimasa Hojo: [Flying Machine, Gyrocopter, and Derivatives](https://www.hiveworkshop.com/threads/flying-machine-gyrocopter-and-derivatives.304055/)
+* Pvt.Toma: [Gnome Turret](https://www.hiveworkshop.com/threads/gnome-turret.243089/)
