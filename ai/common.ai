@@ -1373,6 +1373,21 @@ globals
     constant integer TROLL_VOODOO_LOUNGE                             = 'o04U' // shop
     constant integer TROLL_TEMPLE_OF_SACRIFICE                       = 'o050' // special building
 
+    constant integer UPG_TROLL_SPEARS                                = 'R09E'
+    constant integer UPG_TROLL_ARMOR                                 = 'R09H'
+    constant integer UPG_TROLL_CREATURE_ATTACK                       = 'R09F'
+    constant integer UPG_TROLL_CREATURE_ARMOR                        = 'R09G'
+    constant integer UPG_TROLL_TROLL_REGENEARTION                    = 'R096'
+    constant integer UPG_TROLL_ICE_TROLL_HIGH_PRIEST                 = 'R09A'
+    constant integer UPG_TROLL_TRUESHOT_AURA                         = 'R098'
+    constant integer UPG_TROLL_WAR_DRUMS                             = 'R09K'
+    constant integer UPG_TROLL_TROLL_HEXER                           = 'R09I'
+    constant integer UPG_TROLL_SHAMAN                                = 'R09J'
+    constant integer UPG_TROLL_TROLL_WITCH_DOCTOR                    = 'R09B'
+    constant integer UPG_TROLL_TROLL_BLOODMAGE                       = 'R09L'
+    constant integer UPG_TROLL_TROLL_TRIBES                          = 'R094'
+    constant integer UPG_TROLL_BERSERKER                             = 'R097'
+    constant integer UPG_TROLL_LIQUID_FIRE                           = 'R095'
     constant integer UPG_TROLL_BACKPACK                              = 'R099'
     constant integer UPG_TROLL_TEMPLE_OF_SACRIFICE                   = 'R09C'
 
