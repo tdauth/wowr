@@ -1074,3 +1074,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Chief_Death: [Shaman](https://www.hiveworkshop.com/threads/shaman.50138/)
 * frostwhisper: [Aqir](https://www.hiveworkshop.com/threads/aqir.335196/)
 * Filip95: [Troll Barrack](https://www.hiveworkshop.com/threads/troll-barrack.332950/)
+* SinisterX: [Blood Elf buildings](https://www.hiveworkshop.com/threads/blood-elves.224116)
