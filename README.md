@@ -1074,4 +1074,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Chief_Death: [Shaman](https://www.hiveworkshop.com/threads/shaman.50138/)
 * frostwhisper: [Aqir](https://www.hiveworkshop.com/threads/aqir.335196/)
 * Filip95: [Troll Barrack](https://www.hiveworkshop.com/threads/troll-barrack.332950/)
-* SinisterX: [Blood Elf buildings](https://www.hiveworkshop.com/threads/blood-elves.224116)
+* Footman16, SinisterX: [Blood Elf buildings](https://www.hiveworkshop.com/threads/blood-elves.224116)
+* General Frank: [Bloodelf 'Scorpion' Ballista](https://www.hiveworkshop.com/threads/bloodelf-scorpion-ballista.256818/)
+* General Frank: [Bloodelven Archer Maiden](https://www.hiveworkshop.com/threads/bloodelven-archer-maiden.210773/)
+* General Frank: [Bloodelven Decimator](https://www.hiveworkshop.com/threads/bloodelven-decimator.230365/)

@@ -804,6 +804,7 @@ globals
     constant integer UPG_BLOOD_ELF_IMPROVED_SIEGE                    = 'R00Z'
     constant integer UPG_BLOOD_ELF_CONT_MAGIC                        = 'R04A'
     constant integer UPG_BLOOD_ELF_CLOUD                             = 'R04B'
+    constant integer UPG_BLOOD_ELF_SIPHON_MANA                       = 'R09M'
     constant integer UPG_BLOOD_ELF_MAGIC_VAULT                       = 'R021' // special building
 
     constant integer BLOOD_ELF_PRIEST                                = 'h00G'
@@ -814,6 +815,7 @@ globals
     constant integer BLOOD_ELF_DRAGON_HAWK                           = 'h04M'
     constant integer BLOOD_ELF_SPELL_BREAKER                         = 'h04N'
     constant integer BLOOD_ELF_PHOENIX                               = 'h04O'
+    constant integer BLOOD_ELF_DECIMATOR                             = 'h0KI'
 
     constant integer BLOOD_ELF_CITIZEN_MALE                          = 'n00K'
     constant integer BLOOD_ELF_CITIZEN_FEMALE                        = 'n00L'

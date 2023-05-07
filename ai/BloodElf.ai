@@ -70,6 +70,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
     call SetBuildUpgr( 1, UPG_SENTINEL )
     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
+    call SetBuildUpgr( 1, UPG_BLOOD_ELF_SIPHON_MANA )
     call SetBuildUpgr( 1, UPG_HUMAN_BACKPACK )
     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
     call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
@@ -222,6 +223,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_WAGON )
         call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_BALLISTA )
         call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
+        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_DECIMATOR )
         
         // big air army
         call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_DRAGON_HAWK )
