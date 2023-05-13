@@ -10,7 +10,9 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
+    call SetBuildUnit( 4, DRAENEI_HUT )
     call SetBuildUnit( 2, DRAENEI_HOUSING )
+    call SetBuildUnit( 1, DRAENEI_ALTAR_OF_SEERS )
     call SetBuildUnit( 2, DRAENEI_BARRACKS )
     call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
     call SetBuildUnit( 1, DRAENEI_SHOP )
@@ -176,7 +178,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( DRAENEI_BARRACKS, function ChooseHeroSkill )
+    call CampaignAI( DRAENEI_HUT, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)

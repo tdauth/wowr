@@ -902,6 +902,8 @@ globals
     constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
     constant integer DRAENEI_BARRACKS                                = 'ndh3'
     constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
+    constant integer DRAENEI_ALTAR_OF_SEERS                          = 'o052'
+    constant integer DRAENEI_HUT                                     = 'o053'
     constant integer DRAENEI_SHOP                                    = 'n01N'
     constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
     constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
@@ -2412,6 +2414,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == HIGH_ELF_OUTPOST then
         set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_GUARD_TOWER,false,townid)
+
+    // High Elf
+    elseif unitid == GNOME_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(GNOME_TIER_2,false,townid) + GetUnitCountEx(GNOME_TIER_3,false,townid)
+    elseif unitid == GNOME_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(GNOME_TIER_3,false,townid)
 
     elseif unitid == DALARAN_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(DALARAN_TIER_2,false,townid) + GetUnitCountEx(DALARAN_TIER_3,false,townid)
@@ -4433,6 +4441,9 @@ function InitHero takes nothing returns nothing
     // High Elf
     elseif (GetUnitCountDone(RANGER) > 0) then
         set hero_id = RANGER
+    // Gnome
+    elseif (GetUnitCountDone(GNOME_ENGINEER_HERO) > 0) then
+        set hero_id = GNOME_ENGINEER_HERO
     // Dalaran
     elseif (GetUnitCountDone(WIZARD) > 0) then
         set hero_id = WIZARD
