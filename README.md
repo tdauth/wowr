@@ -1083,3 +1083,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * ChevronSeven: [OrcChild](https://www.hiveworkshop.com/threads/orcchild.49670/)
 * ChevronSeven: [TrollChild](https://www.hiveworkshop.com/threads/trollchild.49671/)
 * antiquegirl33, Cheshire: [Troll child icon](https://www.hiveworkshop.com/threads/troll-child-icon.325088/)
+* Freddyk: [Robot Factory](https://www.hiveworkshop.com/threads/robot-factory.318689/)
+* Solu9: [Gear (Rotating)](https://www.hiveworkshop.com/threads/gear-rotating.291192/)
+* kola: [BTNGear](https://www.hiveworkshop.com/threads/btngear.195795/)
