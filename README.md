@@ -51,7 +51,7 @@ This version provides several new features compared to the original map [World o
 * New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant
 * New mounts: Dragonhawk, Kodo Beast, Horse, Mammoth, Giant Sea Turtle, TIE Fighter, Imperial Shuttle, Jedi Starfighter, Dragon, Eagle, White Tiger, Apache, Couatl, Zeppelin WWI, Polar Bear, Proto Drake, Running Wild, Bear, Cloud Serpent, Bat, Mechanostrider, Flying Machine.
 * New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth, Sauron's Forces, Modern Warfare, Germans WWII, Vrykul, Worgen, Gnome.
-* New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse, Taxi, Legion Ship.
+* New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse, Taxi, Legion Ship, Child.
 * New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost, Anti Air Wall, Spell Book, Mounts Cage.
 * New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
 * New researches: Evolution, Improved Mount, Storm Protection to avoid death in Maelstrom, Improved Air Transport, Improved Navy, Improved Creep Hunter, Improved Trading, Dragon Roost.
@@ -1080,3 +1080,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [Bloodelven Decimator](https://www.hiveworkshop.com/threads/bloodelven-decimator.230365/)
 * Sin'dorei300: [BTNFemaleBE](https://www.hiveworkshop.com/threads/btnfemalebe.217490/)
 * th15: [laser](https://www.hiveworkshop.com/threads/laser.47554/)
+* ChevronSeven: [OrcChild](https://www.hiveworkshop.com/threads/orcchild.49670/)
+* ChevronSeven: [TrollChild](https://www.hiveworkshop.com/threads/trollchild.49671/)
+* antiquegirl33, Cheshire: [Troll child icon](https://www.hiveworkshop.com/threads/troll-child-icon.325088/)
