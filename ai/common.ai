@@ -1162,8 +1162,17 @@ globals
 
     // Gnome
     constant integer GNOME_TIER_1                                    = 'h0JX'
+    constant integer GNOME_TIER_2                                    = 'h0KB'
+    constant integer GNOME_TIER_3                                    = 'h0KE'
+    constant integer GNOME_GEAR                                      = 'h0KL' // farm
+    constant integer GNOME_BRASSMAN                                  = 'e01G' // barracks
+    constant integer GNOME_FACTORY                                   = 'h0KK' // forge/lumber mill
+    constant integer GNOME_TURRET                                    = 'h0KH' // watch tower
 
     constant integer GNOME_ENGINEER                                  = 'h0JY' // worker
+    constant integer GNOME_RIFLEMAN                                  = 'h0KC' // rifleman
+    constant integer GNOME_FIELD_ENGINEER                            = 'h0K8' // knight
+    constant integer GNOME_ARTILLERY_TANK                            = 'h0KD' // demolisher
 
     // Dalaran
     constant integer DALARAN_TIER_1                                  = 'h051' // tier 1
@@ -1658,7 +1667,6 @@ globals
     constant integer CIS_PROVIDENCE_CLASS_DESTROYER                  = 'h07K'
     constant integer CIS_SITH                                        = 'h07Q'
 
-
     constant integer CIS_CITIZEN_MALE                                = 'n0A0'
     constant integer CIS_CITIZEN_FEMALE                              = 'n0BQ'
     constant integer CIS_HOUSING                                     = 'h0H3'
@@ -1848,6 +1856,11 @@ globals
     // High Elf
     constant integer RANGER                                          = 'H03Y'
     constant integer COLD_ARROWS                                     = 'AHca'
+
+    // Gnome
+    constant integer GNOME_ENGINEER_HERO                             = 'N0CS'
+    constant integer HARVEST                                         = 'A0PX'
+    constant integer FLAMETHROWER                                    = 'A0Z6'
 
     // Dalaran
     constant integer WIZARD                                          = 'H00W'
@@ -4195,6 +4208,17 @@ function ChooseHeroSkill takes nothing returns integer
             return COLD_ARROWS
         elseif (mod == 2) then
             return TRUESHOT
+        endif
+    // Gnome
+    elseif (curHero == GNOME_ENGINEER_HERO) then
+        if (skillUlti) then
+            return MECHANICAL_REPAIR
+        elseif (mod == 0) then
+            return HARVEST
+        elseif (mod == 1) then
+            return FLAMETHROWER
+        elseif (mod == 2) then
+            return REPAIR_AURA
         endif
     // Dalaran
     elseif (curHero == WIZARD) then

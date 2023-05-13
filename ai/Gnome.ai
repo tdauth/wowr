@@ -1,0 +1,250 @@
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, GNOME_TIER_1 )
+    call SetBuildUnit( 17, GNOME_ENGINEER )
+    call SetBuildUnit( 2, HIGH_ELF_CITIZEN_MALE )
+
+    call BuildingStrategyStandardTier1()
+
+    call SetBuildUnit( 2, HIGH_ELF_HOUSING )
+    call SetBuildUnit( 1, GNOME_FACTORY )
+    call SetBuildUnit( 3, GNOME_GEAR )
+    call SetBuildUnit( 2, GNOME_BRASSMAN )
+    call SetBuildUnit( 1, HIGH_ELF_ALTAR )
+    call SetBuildUnit( 1, HIGH_ELF_BAZAAR )
+
+    call SetBuildUpgr( 1, UPG_DEFEND )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_MELEE )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_ARMOR )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_LEATHER )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_STR_MOON )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_MASONRY )
+
+    // Tier 2 buildings
+    call SetBuildUnit( 1, GNOME_TIER_2 )
+    call SetBuildUnit( 1, HIGH_ELF_STABLES )
+    call SetBuildUnit( 1, GNOME_FACTORY )
+    call SetBuildUnit( 1, HIGH_ELF_MAGE_TOWER )
+    call SetBuildUnit( 4, GNOME_GEAR )
+    call SetBuildUnit( 2, GNOME_TURRET )
+    call SetBuildUnit( 2, HIGH_ELF_CITIZEN_FEMALE )
+
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_MELEE )
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_ARMOR )
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_LEATHER )
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_STR_MOON )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_WOOD )
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_MASONRY )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_PRAYING )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_PRAYING_CLERIC )
+    call SetBuildUpgr( 1, UPG_SORCERY )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_BOWS )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, GNOME_TIER_3 )
+    call SetBuildUnit( 5, GNOME_GEAR )
+    call SetBuildUnit( 2, HIGH_ELF_GUARD_TOWER )
+    call SetBuildUnit( 1, HIGH_ELF_DRAGON_NEXUS )
+    call SetBuildUnit( 1, HIGH_ELF_AVIARY )
+
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_WOOD )
+    call SetBuildUpgr( 3, UPG_HIGH_ELF_MELEE )
+    call SetBuildUpgr( 3, UPG_HIGH_ELF_ARMOR )
+    call SetBuildUpgr( 3, UPG_HIGH_ELF_LEATHER )
+    call SetBuildUpgr( 3, UPG_HIGH_ELF_STR_MOON )
+    call SetBuildUpgr( 3, UPG_HIGH_ELF_MASONRY )
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_PRAYING )
+    call SetBuildUpgr( 2, UPG_HIGH_ELF_PRAYING_CLERIC )
+    call SetBuildUpgr( 2, UPG_SORCERY )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_MARKSMAN )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_MAGIC_SENTRY )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_ANIMAL )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_ANTIMAGIC )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_CLOUD )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_TAMING )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_DRAGONHAWL_TAMING )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_SUNWELL )
+    call SetBuildUnit( 1, HIGH_ELF_SUNWELL )
+    call SetBuildUnit( 1, UPG_HIGH_ELF_BACKPACK )
+
+    call BuildingStrategyStandardTier3()
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, GNOME_TIER_3)
+    call SetBuildExpa(expansions, GNOME_FACTORY)
+    call SetBuildExpa(expansions, HIGH_ELF_GUARD_TOWER)
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_LIEUTENANT )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 11 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx( 2, 2, 3, HIGH_ELF_LIEUTENANT )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 12 ***
+        call InitAssaultGroup()
+
+        // small ground army
+        call CampaignAttackerEx( 4, 4, 4, GNOME_RIFLEMAN )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_ARCHER )
+        call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_ARCH_CLERIC )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_PRIEST )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_SORCERESS )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_LIEUTENANT )
+        call CampaignAttackerEx( 4, 4, 4, GNOME_ARTILLERY_TANK )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_KNIGHT )
+        call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_EAGLE )
+
+        // big air army
+        call CampaignAttackerEx( 8, 12, 18, HIGH_ELF_DRAGON_HAWK )
+        call CampaignAttackerEx( 8, 12, 18, HIGH_ELF_DRAGON )
+
+        call AddStandardUnitsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( GNOME_GEAR, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+    call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction
