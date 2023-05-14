@@ -1093,3 +1093,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Retera: [Draenei Altar of Seers](https://www.hiveworkshop.com/threads/draenei-altar-of-seers.302753/)
 * Retera: [Draenei Hut](https://www.hiveworkshop.com/threads/draenei-hut.302759/)
 * Ujimasa Hojo: [Draenei (Lost One) and Derivatives](https://www.hiveworkshop.com/threads/draenei-lost-one-and-derivatives.234476/)
+* Ujimasa Hojo: [Villager (Kid, Gryphon Mount) and Derivatives](https://www.hiveworkshop.com/threads/villager-kid-gryphon-mount-and-derivatives.329728/)
