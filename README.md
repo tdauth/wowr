@@ -13,7 +13,11 @@ Official website: [wowreforged.org](https://wowreforged.org)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
 * [Current development version](./wowr3.6.w3x)
 
-*Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues. However, you can easily remove this restriction by opening and modifying the map with the World Editor.
+*Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues.
+However, you can easily remove this restriction by opening and modifying the map with the World Editor.
+Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
+
+![SD and HD](HD.jpg "SD and HD")
 
 ## How to Play
 
