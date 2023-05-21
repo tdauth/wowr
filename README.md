@@ -1094,4 +1094,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Retera: [Draenei Hut](https://www.hiveworkshop.com/threads/draenei-hut.302759/)
 * Ujimasa Hojo: [Draenei (Lost One) and Derivatives](https://www.hiveworkshop.com/threads/draenei-lost-one-and-derivatives.234476/)
 * Ujimasa Hojo: [Villager (Kid, Gryphon Mount) and Derivatives](https://www.hiveworkshop.com/threads/villager-kid-gryphon-mount-and-derivatives.329728/)
-* [GiantSandWorm](https://www.hiveworkshop.com/threads/giantsandworm.53977/)
+* GiantSandWorm, Sephiroth_VII: [GiantSandWorm](https://www.hiveworkshop.com/threads/giantsandworm.53977/)
+* Vinz: [Orbs of Frostcraft](https://www.hiveworkshop.com/threads/orbs-of-frostcraft.336683/)
