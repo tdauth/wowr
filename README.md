@@ -1096,3 +1096,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ujimasa Hojo: [Villager (Kid, Gryphon Mount) and Derivatives](https://www.hiveworkshop.com/threads/villager-kid-gryphon-mount-and-derivatives.329728/)
 * GiantSandWorm, Sephiroth_VII: [GiantSandWorm](https://www.hiveworkshop.com/threads/giantsandworm.53977/)
 * Vinz: [Orbs of Frostcraft](https://www.hiveworkshop.com/threads/orbs-of-frostcraft.336683/)
+* GhostThruster: [BTNlegolasHD](https://www.hiveworkshop.com/threads/btnlegolashd.253102/)
+* North Star: [GnomishHoverCopter](https://www.hiveworkshop.com/threads/gnomishhovercopter.49851/)
