@@ -45,16 +45,16 @@ This version provides several new features compared to the original map [World o
 * Increased maximum hero level.
 * Increased maximum hero ability levels.
 * Backpack system.
-* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli, Darth Maul, Gandalf, Frodo Baggins, U. S. General, Samwise Gamgee, Peregrin Took, Meriadoc Brandybuck, Void Lord Commander, Sauron, Jesus Christ, Gnomish Submarine, Goblin Submarine, Ironclad Submarine, Submarine Pilot, Flame Shredder, Naga Royal Guard, Tyrannosaurus Rex, Saruman, Paul Bäumer, Graf von Stauffenberg, German Kaiser, Thane, Flamebinder, Wolf Rider, Worgen Death Knight, Deathclaw, Herald of the Deep Mother, Mortar Team, Balrog, Doom Guard, Spirit Walker, Elite Rifleman, Velen, Spellbreaker, Witch Doctor, Human Battleship, Gnomish Engineer, Vindicator, Sand Worm, Nazgûl, Warlock (Gnome), Peasant, Ogre Lord, Centaur Khan.
-* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive Heroes, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes, Shrink, Telekinesis, Full Regeneration, Cripple Player, Flamethrower, Burning Oil, Flamethrower Turret, Frost Bolt, Defend, Elven Cloak, Summon Dinosaur Nest, Mass Devour, Rain of Arrows, Life Aura, Flare, Fragmentation Shards, Summon Telescope, Split, Spell Immunity, Spell Shield, Discharge, Revive, Bayonet Charge, Mass Cripple, Mass Faerie Fire, Phoenix Fire (hero spell), Target Divine Shield, Drunk Panda, Teleportation, Mass Holy Light, Pillage Aura, Mana Aura, Mass Death Coil, Mass Doom, Mass Sleep, Mass Hex, Mass Charm, Mass Control Magic, Sentinel, Spell Steal, Reduce Food, Sentry Ward, Stasis Trap, Mass Mana Burn, Summon Doom Guard, Stupidity, Mass Bloodlust.
+* New heroes: Standard heroes from TFT patches, Akama, Furbolg Ursa Warrior, Mountain Giant, Wizard, Antonidas, Fel Beast, Dwarf Mage, Khadgar, Carsten, Ranger, Goblin Heavy Tank, Void Lord, Razormane Chieftain, Thalorien Dawnseeker, Ner'Zhul, Blackhand, Samuro, Goblin War Zeppelin, Priest, Gunner, Hydromancer, Elune, Druid of the Claw, Druid of the Talon, Engineer, Goblin Shredder, Necromancer, Darth Vader, Yoda, Jedi, Jedi Twilek, Count Dooku, Palpatine, Jango Fett, Gran Jedi, Zeus, Warlock, Antonidas, Uther, Jaina, Arthas, Arthas wielding Frostmourne, Muradin, Kel'Thuzad in Necromancer form, Arthas (evil), Anub'arak, Maiev, Tyrande, Ghost, Illidan, Cairne Bloodhoof, Thrall, Grommash Hellscream with custom ulti Chaos, Shado Pan, Iron Fist, Sorceress, Goblin Prince, Mal'Ganis, Bishop, Dark Knight, Banshee, Abomination, Military Tribune, C-3PO, R2-D2, General Grievous, Leprechaun, Boromir, Aragorn, Legolas, Gimli, Darth Maul, Gandalf, Frodo Baggins, U. S. General, Samwise Gamgee, Peregrin Took, Meriadoc Brandybuck, Void Lord Commander, Sauron, Jesus Christ, Gnomish Submarine, Goblin Submarine, Ironclad Submarine, Submarine Pilot, Flame Shredder, Naga Royal Guard, Tyrannosaurus Rex, Saruman, Paul Bäumer, Graf von Stauffenberg, German Kaiser, Thane, Flamebinder, Wolf Rider, Worgen Death Knight, Deathclaw, Herald of the Deep Mother, Mortar Team, Balrog, Doom Guard, Spirit Walker, Elite Rifleman, Velen, Spellbreaker, Witch Doctor, Human Battleship, Gnomish Engineer, Vindicator, Sand Worm, Nazgûl, Warlock (Gnome), Peasant, Ogre Lord, Centaur Khan, Jar Jar Binks, Archimedes.
+* New spells: Evolution Stone, Selfdestruct, Mana Ward, Drain, Dark Summoning for heroes, Aura of Darkness, Lordearon Villagers, Ride Down, Open Portals, Revive Heroes, Charge, Disarmament, Mana Ward, Fountain of Power Ward, Slide, Repair Aura, Aura of Blight for heroes, Mana Flare for heroes, Shrink, Telekinesis, Full Regeneration, Cripple Player, Flamethrower, Burning Oil, Flamethrower Turret, Frost Bolt, Defend, Elven Cloak, Summon Dinosaur Nest, Mass Devour, Rain of Arrows, Life Aura, Flare, Fragmentation Shards, Summon Telescope, Split, Spell Immunity, Spell Shield, Discharge, Revive, Bayonet Charge, Mass Cripple, Mass Faerie Fire, Phoenix Fire (hero spell), Target Divine Shield, Drunk Panda, Teleportation, Mass Holy Light, Pillage Aura, Mana Aura, Mass Death Coil, Mass Doom, Mass Sleep, Mass Hex, Mass Charm, Mass Control Magic, Sentinel, Spell Steal, Reduce Food, Sentry Ward, Stasis Trap, Mass Mana Burn, Summon Doom Guard, Stupidity, Mass Bloodlust, Mass Finger of Death, Pickpocketing, Drain Resources.
 * New bosses: Archimonde, Kil'Jaeden, Nether Dragon, Sea Giant, Keeper of Ashbringer, Murloc Sorcerer, The Eye of Sargeras, Spider Crab Behemoth, Rumblefitz and Tinkerer Gizlock, Avatar of Sargeras, Mathog, Gul'dan, Sea Witch, Queen Azshara, Old Gods, Ragnaros, Antonidas, Sylvanas Windrunner, Elune, War Queen.
 * New appearing bosses: Deathwing, Cenarius.
 * New hero standard abilities: Magic Sentry, Repair, Dark Summoning, Blink, Ensnare, True Sight, Bloodlust, VIP Spell Book, Randomize.
 * New areas: Outland, Island with Murloc Sorcerer on the sea, island with The Eye of Sargeras on the sea, island with boss fights on the sea, island with Spider Crab Behemoth on the sea, island Kezan, dungeon with Avatar of Sargeras, portal room connecting sea dungeons, area in Lordearon with Mathog, new island next to Maelstrom with new boss Sea Witch, Clan Island, Pandaria, Dalaran, Sylvanas Windrunner's place, Elune's place.
 * New quests: Forsaken quest "Legendary Items", Lich King quest "The Burning Legion", Draenei quests, Demon quests, Pandaren quests, Old God quests.
 * New professions: Sorcerer, Runeforger, Dragon Breeder, Jewelcrafter, Enchanter, Pirate, Archaeologist, Witch Doctor, Merchant, Farmer.
-* New mounts: Dragonhawk, Kodo Beast, Horse, Mammoth, Giant Sea Turtle, TIE Fighter, Imperial Shuttle, Jedi Starfighter, Dragon, Eagle, White Tiger, Apache, Couatl, Zeppelin WWI, Polar Bear, Proto Drake, Running Wild, Bear, Cloud Serpent, Bat, Mechanostrider, Flying Machine.
-* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth, Sauron's Forces, Modern Warfare, Germans WWII, Vrykul, Worgen, Gnome.
+* New mounts: Dragonhawk, Kodo Beast, Horse, Mammoth, Giant Sea Turtle, TIE Interceptor, Imperial Shuttle, Jedi Starfighter, Dragon, Eagle, White Tiger, Apache, Couatl, Zeppelin WWI, Polar Bear, Proto Drake, Running Wild, Bear, Cloud Serpent, Bat, Mechanostrider, Flying Machine.
+* New races: Demon, Draenei, Furbolg, Goblin, Dwarf, High Elf, Dalaran, Kul Tiras, Roman Empire, Pandaren, CIS, Galactic Republic, Troll, Tauren, Free People of Middle Earth, Sauron's Forces, Modern Warfare, Germans WWII, Vrykul, Worgen, Gnome, Galactic Empire, Ancient Greece.
 * New units: Blood Elf Sorceress, Blood Elf Ballista, Cage, Wagon, Neutral Citizen, Engineer, Engineer Ship, Save Master, Coral Golem for Naga, Naga Whaler, Gnomish Submarine, Spellbreaker and Dragonhawk Rider for Human, Pack Horse, Taxi, Legion Ship, Child.
 * New buildings: Naga Shop, Shipyards for all races, Power Generator, Portal, Neutral Goblin Laboratory and Neutral Mercenary Camp for Freelancers, Engineer Buildings Gates, Walls and Bridges, Research Tent, Phoenix Egg building for Blood Elf, Walls, 3 Naga Tiers, Naga Shipyard, Naga Pyramid of Serpant, Crafting Stash, Trading Post, Furniture, Item Storages, Antimagic Ward, Marketplace, Dragon Roost, Anti Air Wall, Spell Book, Mounts Cage, Altar of Seers, Draenei Hut, Alchemist Lab.
 * New special buildings for Warlord races: Fountain of Blood which trains Fel Orcs, World Tree for Night Elves, Lich King for Undeads, Magic Vault for Blood Elves, Arcane Observatory for Humans, Book of Summoning Pedestal for Demons, Outland Dimensional Gate for Demons, Statue of Azshara for Naga, Corrupted Ancient Protector for Furbolg, Draenei Prison for Draenei.
@@ -274,13 +274,13 @@ The original map script has been added to this repository as well as the origina
 * [wowr1.8.2.w3x](./wowr1.8.2.w3x)
 * [wowr1.8.1.w3x](./wowr1.8.1.w3x)
 * [wowr1.8.w3x](./wowr1.8.w3x)
-* [wowtsr1.7.w3x](./releases/wowtsr1.7.w3x)
-* [wowtsr1.6.w3x](./releases/wowtsr1.6.w3x)
-* [wowtsr1.5.w3x](./releases/wowtsr1.5.w3x)
-* [wowtsr1.4.w3x](./releases/wowtsr1.4.w3x)
-* [wowtsr1.3.w3x](./releases/wowtsr1.3.w3x)
-* [wowtsr1.2.w3x](./releases/wowtsr1.2.w3x)
-* [wowtsr1.1.w3x](./releases/wowtsr1.1.w3x)
+* [wowr1.7.w3x](./wowr1.7.w3x)
+* [wowr1.6.w3x](./wowr1.6.w3x)
+* [wowr1.5.w3x](./wowr1.5.w3x)
+* [wowr1.4.w3x](./wowr1.4.w3x)
+* [wowr1.3.w3x](./wowr1.3.w3x)
+* [wowr1.2.w3x](./wowr1.2.w3x)
+* [wowr1.1.w3x](./wowr1.1.w3x)
 
 ### Other Modified Versions
 
@@ -1104,3 +1104,30 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * BLazeKraze: [BTNBrainSap](https://www.hiveworkshop.com/threads/btnbrainsap.265346/)
 * Mike: [UniversalFarm](https://www.hiveworkshop.com/threads/universalfarm.248367/)
 * Ergius: [WoodenPool](https://www.hiveworkshop.com/threads/woodenpool.90590/)
+* armel: [StarDestroyer](https://www.hiveworkshop.com/threads/stardestroyer.49797/)
+* HerrDave: [Star Wars - Stormtrooper Pack](https://www.hiveworkshop.com/threads/star-wars-stormtrooper-pack.331491/)
+* olofmoleman: [AT-ST Walker](https://www.hiveworkshop.com/threads/at-st-walker.50450/)
+* Tim: [Tie](https://www.hiveworkshop.com/threads/tie.49705/)
+* olofmoleman: [KotoBeastNoRider](https://www.hiveworkshop.com/threads/kotobeastnorider.49795/)
+* olofmoleman: [KotoBeastNoRider](https://www.hiveworkshop.com/threads/kotobeastnorider.49796/)
+* olofmoleman: [RepublicAssaultShip](https://www.hiveworkshop.com/threads/republicassaultship.50200/)
+* olofmoleman: [JarJarBinks](https://www.hiveworkshop.com/threads/jarjarbinks.50183/)
+* biridius, snorthcall2t: [Futuristic buildings](https://www.hiveworkshop.com/threads/futuristic-buildings.343907/)
+* Fingolfin: [Greek Hoplite (Corinthian)](https://www.hiveworkshop.com/threads/greek-hoplite-corinthian.339262/)
+* Fingolfin: [Greek Soldier (Corinthian)](https://www.hiveworkshop.com/threads/greek-soldier-corinthian.339261/)
+* AbstractCreativity: [BTNHopliteHelmetUPG1](https://www.hiveworkshop.com/threads/btnhoplitehelmetupg1.144081/)
+* AbstractCreativity: [BTNHopliteHelmetUPG2](https://www.hiveworkshop.com/threads/btnhoplitehelmetupg2.144083/)
+* AbstractCreativity: [BTNHopliteHelmetUPG3](https://www.hiveworkshop.com/threads/btnhoplitehelmetupg3.144084/)
+* purparisien: [Lighthouse of Alexandria](https://www.hiveworkshop.com/threads/lighthouse-of-alexandria.320217/)
+* Fingolfin: [Companion Cavalry](https://www.hiveworkshop.com/threads/companion-cavalry.339260/)
+* Wezthal: [BTNReturnResources2](https://www.hiveworkshop.com/threads/btnreturnresources2.160064/)
+* Ujimasa Hojo: [Acolyte and Derivatives](https://www.hiveworkshop.com/threads/acolyte-and-derivatives.310836/)
+* Tranquil: [Monk](https://www.hiveworkshop.com/threads/monk.157280/)
+* Painkiller91: [Old Man](https://www.hiveworkshop.com/threads/old-man.117495/)
+* eubz: [Armored_VillagerMan_Archer](https://www.hiveworkshop.com/threads/armored_villagerman_archer.226323/)
+* bakr: [Lordaeron Buildings](https://www.hiveworkshop.com/threads/lordaeron-buildings.341580/)
+* z00rtaz: [Human Slinger](https://www.hiveworkshop.com/threads/human-slinger.255779/)
+* Hoth: [Cage/Transport Chariot pack](https://www.hiveworkshop.com/threads/cage-transport-chariot-pack.331837/)
+* HerrDave: [Greek Battle Helmet](https://www.hiveworkshop.com/threads/greek-battle-helmet.275487/)
+* loktar: [Corn & Wheat Pack](https://www.hiveworkshop.com/threads/corn-wheat-pack.322892/)
+* Blizzard, MasterDragons: [BTNINVWaterBucket](https://www.hiveworkshop.com/threads/btninvwaterbucket.192174/)
