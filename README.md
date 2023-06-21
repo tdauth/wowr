@@ -1131,3 +1131,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HerrDave: [Greek Battle Helmet](https://www.hiveworkshop.com/threads/greek-battle-helmet.275487/)
 * loktar: [Corn & Wheat Pack](https://www.hiveworkshop.com/threads/corn-wheat-pack.322892/)
 * Blizzard, MasterDragons: [BTNINVWaterBucket](https://www.hiveworkshop.com/threads/btninvwaterbucket.192174/)
+* bakr: [Assorted Village Buildings](https://www.hiveworkshop.com/threads/assorted-village-buildings.336611/)
