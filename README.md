@@ -1130,3 +1130,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Asssssvi: [Mystical Knight on Pegasus Lordaeron](https://www.hiveworkshop.com/threads/mystical-knight-on-pegasus-lordaeron.318637/)
 * Tunadil: [The Seven Kingdoms of Human](https://www.hiveworkshop.com/threads/the-seven-kingdoms-of-human.349190/)
 * Kuhneghetz: [Riderless Undead Horse](https://www.hiveworkshop.com/threads/riderless-undead-horse.48398)
+* Ceterai: [Orc Taming Pack](https://www.hiveworkshop.com/threads/orc-taming-pack.317937/)
+* Walle: [BTNPickPocket](https://www.hiveworkshop.com/threads/btnpickpocket.175493/)
