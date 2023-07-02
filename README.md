@@ -1135,3 +1135,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Walle: [BTNPickPocket](https://www.hiveworkshop.com/threads/btnpickpocket.175493/)
 * Asssssvi: [Archer Lordaeron](https://www.hiveworkshop.com/threads/archer-lordaeron.316735/)
 * Asssssvi: [Knight Lordaeron](https://www.hiveworkshop.com/threads/knight-lordaeron.313148/)
+* bakr: [Lordaeron Units](https://www.hiveworkshop.com/threads/lordaeron-units.347919/)
+* Asssssvi: [Spearman Lordaeron](https://www.hiveworkshop.com/threads/spearman-lordaeron.314743/)
+* Himperion: [Lordaeron Magician](https://www.hiveworkshop.com/threads/lordaeron-magician.305746/)
