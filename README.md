@@ -1141,3 +1141,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Asssssvi: [Crossbowman Lordaeron](https://www.hiveworkshop.com/threads/crossbowman-lordaeron.314380/)
 * Arkamond: [BTNCopperCoins](https://www.hiveworkshop.com/threads/btncoppercoins.156326/)
 * NemoVonFish: [BTNSilverCoin](https://www.hiveworkshop.com/threads/btnsilvercoin.196962/)
+* MultiGod: [BTNElectricityBreakout](https://www.hiveworkshop.com/threads/btnelectricitybreakout.142009/)
+* skrab: [Noname](https://www.hiveworkshop.com/threads/noname.82968/)
+* Mephestrial: [HumanOilPlatform](https://www.hiveworkshop.com/threads/humanoilplatform.110174/)
