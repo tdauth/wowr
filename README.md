@@ -11,7 +11,7 @@ Official website: [wowreforged.org](https://wowreforged.org)
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL [https://github.com/tdauth/wowr/tree/master/wowr.w3x] to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
+* [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues.
 However, you can easily remove this restriction by opening and modifying the map with the World Editor.
