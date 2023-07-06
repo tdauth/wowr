@@ -1145,3 +1145,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * skrab: [Noname](https://www.hiveworkshop.com/threads/noname.82968/)
 * Mephestrial: [HumanOilPlatform](https://www.hiveworkshop.com/threads/humanoilplatform.110174/)
 * communist_orc: [Spike Trap](https://www.hiveworkshop.com/threads/spike-trap.88771/)
+* Heroic_Milkman: [Bee](https://www.hiveworkshop.com/threads/bee.49339/)
+* Jaccouille: [Honeycomb Item](https://www.hiveworkshop.com/threads/honeycomb-item.327548/)
+* communist_orc: [Noname](https://www.hiveworkshop.com/threads/noname.84605/)
