@@ -1157,3 +1157,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Shimrra: [BTNResourceCrystal](https://www.hiveworkshop.com/threads/btnresourcecrystal.55836/)
 * Shimrra: [BTNVespianGeyser](https://www.hiveworkshop.com/threads/btnvespiangeyser.57924/)
 * 67chrome: [BTNAstralCalander](https://www.hiveworkshop.com/threads/btnastralcalander.170325/)
+* KelThuzad: [BTNSilverBar](https://www.hiveworkshop.com/threads/btnsilverbar.110287/)
+* Ziadoma: [Ingots](https://www.hiveworkshop.com/threads/ingots.348353/)
