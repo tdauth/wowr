@@ -1156,3 +1156,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 4eNNightmare: [BTNTestOfFaith](https://www.hiveworkshop.com/threads/btntestoffaith.163111/)
 * Shimrra: [BTNResourceCrystal](https://www.hiveworkshop.com/threads/btnresourcecrystal.55836/)
 * Shimrra: [BTNVespianGeyser](https://www.hiveworkshop.com/threads/btnvespiangeyser.57924/)
+* 67chrome: [BTNAstralCalander](https://www.hiveworkshop.com/threads/btnastralcalander.170325/)
