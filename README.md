@@ -987,3 +987,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ziadoma: [Ingots](https://www.hiveworkshop.com/threads/ingots.348353/)
 * maxor_gan: [BTNFirePit](https://www.hiveworkshop.com/threads/btnfirepit.161699/)
 * Mr. Bob: [Tavern](https://www.hiveworkshop.com/threads/tavern.134347/)
+* TESCAO: [BTNLaserBeam](https://www.hiveworkshop.com/threads/btnlaserbeam.203387/)
+* jk2pach: [ScoutTower](https://www.hiveworkshop.com/threads/scouttower.181906/)
+* Cavman: [Bull and Cow](https://www.hiveworkshop.com/threads/bull-and-cow.138728/)
+* darkdeathknight: [BTNcow](https://www.hiveworkshop.com/threads/btncow.198766/)
