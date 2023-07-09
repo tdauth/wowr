@@ -985,3 +985,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 67chrome: [BTNAstralCalander](https://www.hiveworkshop.com/threads/btnastralcalander.170325/)
 * KelThuzad: [BTNSilverBar](https://www.hiveworkshop.com/threads/btnsilverbar.110287/)
 * Ziadoma: [Ingots](https://www.hiveworkshop.com/threads/ingots.348353/)
+* maxor_gan: [BTNFirePit](https://www.hiveworkshop.com/threads/btnfirepit.161699/)
+* Mr. Bob: [Tavern](https://www.hiveworkshop.com/threads/tavern.134347/)

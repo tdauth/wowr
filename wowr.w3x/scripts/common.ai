@@ -1720,6 +1720,7 @@ globals
     constant integer GERMANS_WWII_HEADQUARTERS                       = 'h0HB' // tier 1-3
     constant integer GERMANS_WWII_BARRACKS                           = 'h0HD' // barracks
     constant integer GERMANS_WWII_BUNKER                             = 'o04D' // farm
+    constant integer GERMANS_WWII_HOSPITAL_TENT                      = 'h0KU' // altar
     constant integer GERMANS_WWII_OFFICERS_ROOM                      = 'h0HO' // arcane sanctum
     constant integer GERMANS_WWII_PRISON                             = 'u01J' // tauren totem
     constant integer GERMANS_WWII_VEHICLE_FACTORY                    = 'h0HJ' // beastiary
@@ -1727,11 +1728,23 @@ globals
     constant integer GERMANS_WWII_WEAPONS_STORAGE                    = 'h0HL' // lumber mill/forge
     constant integer GERMANS_WWII_AIRBASE                            = 'h0HM' // aviary
     constant integer GERMANS_WWII_SHOP                               = 'h0I1' // shop
+    constant integer GERMANS_WWII_BERGHOF                            = 'h0N0' // special building
 
     constant integer UPG_GERMANS_WWII_BACKPACK                       = 'R08L'
     constant integer UPG_GERMANS_WWII_AUTOBAHN                       = 'R08S'
+    constant integer UPG_GERMANS_WWII_BOMBS                          = 'R08O'
+    constant integer UPG_GERMANS_WWII_BURNING_OIL                    = 'R08M'
+    constant integer UPG_GERMANS_WWII_CREW                           = 'R08P'
+    constant integer UPG_GERMANS_WWII_ENSNARE                        = 'R08Q'
+    constant integer UPG_GERMANS_WWII_FRAGMENTATION_SHARDS           = 'R08R'
+    constant integer UPG_GERMANS_WWII_HEADSHOT                       = 'R08N'
+    constant integer UPG_GERMANS_WWII_BERGHOF                        = 'R0AA'
 
     constant integer GERMANS_WWII_PIONEER                            = 'h0HC' // worker
+
+    constant integer GERMANS_WWII_CITIZEN_MALE                       = 'n0DV'
+    constant integer GERMANS_WWII_CITIZEN_FEMALE                     = 'n0DW'
+    constant integer GERMANS_WWII_HOUSING                            = 'h0MZ'
 
     // All Races
 
