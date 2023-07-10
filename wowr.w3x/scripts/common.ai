@@ -1454,12 +1454,21 @@ globals
     constant integer WORGEN_KNIGHT                                   = 'h0IW'
     constant integer WORGEN_DRUID                                    = 'h0IX'
 
-    constant integer WORGEN_CITIZEN_MALE                             = 'n05C'
+    constant integer WORGEN_CITIZEN_MALE                             = 'n0C5'
     constant integer WORGEN_CITIZEN_FEMALE                           = 'n0C6'
     constant integer WORGEN_HOUSING                                  = 'h0JA'
 
     // Vrykul
+    constant integer VRYKUL_TIER_1                                   = 'h0IA'
+    constant integer VRYKUL_TIER_2                                   = 'h0IB'
+    constant integer VRYKUL_TIER_3                                   = 'h0IC'
 
+    constant integer VRYKUL_ALTAR                                    = 'h0IP'
+    constant integer VRYKUL_FISHER_HOUSE                             = 'h0IE'
+    constant integer VRYKUL_LONGHOUSE                                = 'h0IJ'
+    constant integer VRYKUL_PROTO_DRAKE_ROOST                        = 'n0BY'
+
+     constant integer VRYKUL_WORKER                                  = 'h0ID'
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
@@ -1521,6 +1530,9 @@ globals
     constant integer MODERNWARFARE_CITIZEN_MALE                      = 'n0AF'
     constant integer MODERNWARFARE_CITIZEN_FEMALE                    = 'n09M'
     constant integer MODERNWARFARE_HOUSING                           = 'h0DY'
+
+    // Ancient Greece
+    constant integer ANCIENTGREECE_TIER_1                            = 'h0LH' // tier 1-3
 
     // Roman Empire
     constant integer ROMANEMPIRE_TIER_1                              = 'h05R' // tier 1-3
@@ -2454,6 +2466,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(WORGEN_CASTLE,false,townid)
     elseif unitid == WORGEN_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(WORGEN_GUARD_TOWER,false,townid) + GetUnitCountEx(WORGEN_CANNON_TOWER,false,townid) + GetUnitCountEx(WORGEN_ARCANE_TOWER,false,townid)
+
+    elseif unitid == VRYKUL_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(VRYKUL_TIER_2,false,townid) + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
+    elseif unitid == VRYKUL_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
 
     elseif unitid == MODERNWARFARE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
