@@ -991,3 +991,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * jk2pach: [ScoutTower](https://www.hiveworkshop.com/threads/scouttower.181906/)
 * Cavman: [Bull and Cow](https://www.hiveworkshop.com/threads/bull-and-cow.138728/)
 * darkdeathknight: [BTNcow](https://www.hiveworkshop.com/threads/btncow.198766/)
+* Frozen_Naga: [BTN.Galaxy](https://www.hiveworkshop.com/threads/btn-galaxy.57048/)
