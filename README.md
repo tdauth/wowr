@@ -992,3 +992,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Cavman: [Bull and Cow](https://www.hiveworkshop.com/threads/bull-and-cow.138728/)
 * darkdeathknight: [BTNcow](https://www.hiveworkshop.com/threads/btncow.198766/)
 * Frozen_Naga: [BTN.Galaxy](https://www.hiveworkshop.com/threads/btn-galaxy.57048/)
+* Blizzard Entertainment: [BTNINV_Misc_Food_18](https://www.hiveworkshop.com/threads/btninv_misc_food_18.55048/)
