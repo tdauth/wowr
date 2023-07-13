@@ -993,3 +993,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * darkdeathknight: [BTNcow](https://www.hiveworkshop.com/threads/btncow.198766/)
 * Frozen_Naga: [BTN.Galaxy](https://www.hiveworkshop.com/threads/btn-galaxy.57048/)
 * Blizzard Entertainment: [BTNINV_Misc_Food_18](https://www.hiveworkshop.com/threads/btninv_misc_food_18.55048/)
+* HerrDave: [Scarlet Monastery](https://www.hiveworkshop.com/threads/scarlet-monastery.339122/)
