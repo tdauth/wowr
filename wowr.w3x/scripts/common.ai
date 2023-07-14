@@ -1728,6 +1728,15 @@ globals
     constant integer GALACTIC_REPUBLIC_CITIZEN_FEMALE                = 'n0BP'
     constant integer GALACTIC_REPUBLIC_HOUSING                       = 'h0H2'
 
+    // Galactic Empire
+    constant integer GALACTIC_EMPIRE_STAR_DESTROYER_PRODUCING        = 'h0L2'
+    constant integer GALACTIC_EMPIRE_BARRACKS                        = 'h0L3'
+    constant integer GALACTIC_EMPIRE_SPACEPORT                       = 'h0L8'
+    constant integer GALACTIC_EMPIRE_TURBOLAZER                      = 'o056'
+    constant integer GALACTIC_EMPIRE_VEHICLE_FACTORY                 = 'h0L7'
+
+    constant integer GALACTIC_EMPIRE_ASTROMECH_DROID                 = 'h0L1' // worker
+
     // Germans WWII
     constant integer GERMANS_WWII_HEADQUARTERS                       = 'h0HB' // tier 1-3
     constant integer GERMANS_WWII_BARRACKS                           = 'h0HD' // barracks
