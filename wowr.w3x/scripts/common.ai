@@ -4789,23 +4789,16 @@ endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing
     local integer evolutionLevel = 0
-    local integer improvedPowerGeneratorLevel = 0
-    local integer improvedMountLevel = 0
-    local integer lowest = 0
     loop
         set evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
-        set improvedPowerGeneratorLevel = GetUpgradeLevel(UPG_IMPROVED_POWER_GENERATOR)
-        set improvedMountLevel = GetUpgradeLevel(UPG_IMPROVED_MOUNT)
 
-        set lowest = Min(evolutionLevel, improvedPowerGeneratorLevel)
+        exitwhen (evolutionLevel >= MAX_WOWR_RESEARCH_LEVEL)
 
-        exitwhen (lowest >= MAX_WOWR_RESEARCH_LEVEL)
+        set evolutionLevel = evolutionLevel + 1
 
-        set lowest = lowest + 1
-
-        call SetBuildUpgr( lowest, UPG_EVOLUTION )
-        call SetBuildUpgr( lowest, UPG_IMPROVED_POWER_GENERATOR )
-        call SetBuildUpgr( lowest / 10, UPG_IMPROVED_MOUNT )
+        call SetBuildUpgr( evolutionLevel, UPG_EVOLUTION )
+        call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_POWER_GENERATOR )
+        call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_MOUNT )
 
         call Sleep(M1)
     endloop
