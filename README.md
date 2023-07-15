@@ -994,3 +994,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Frozen_Naga: [BTN.Galaxy](https://www.hiveworkshop.com/threads/btn-galaxy.57048/)
 * Blizzard Entertainment: [BTNINV_Misc_Food_18](https://www.hiveworkshop.com/threads/btninv_misc_food_18.55048/)
 * HerrDave: [Scarlet Monastery](https://www.hiveworkshop.com/threads/scarlet-monastery.339122/)
+* olofmoleman: [Hoth Blaster](https://www.hiveworkshop.com/threads/hoth-blaster.50217/)
+* Asssssvi: [Footman Lordaeron HQ](https://www.hiveworkshop.com/threads/footman-lordaeron-hq.312783/)
+* Asssssvi: [Rifleman Lordaeron HD](https://www.hiveworkshop.com/threads/rifleman-lordaeron-hd.313452/)
+* Jiok: [Bannercarrier and Derivatives](https://www.hiveworkshop.com/threads/bannercarrier-and-derivatives.345982/)
