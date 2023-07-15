@@ -998,3 +998,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Asssssvi: [Footman Lordaeron HQ](https://www.hiveworkshop.com/threads/footman-lordaeron-hq.312783/)
 * Asssssvi: [Rifleman Lordaeron HD](https://www.hiveworkshop.com/threads/rifleman-lordaeron-hd.313452/)
 * Jiok: [Bannercarrier and Derivatives](https://www.hiveworkshop.com/threads/bannercarrier-and-derivatives.345982/)
+* Kofi_Banan, purparisien: [Wagons and Train](https://www.hiveworkshop.com/threads/wagons-and-train.318422/)
