@@ -2,29 +2,6 @@ library ObjectDataFields initializer InitObjectDataFields
 
 globals
 	constant integer MAX_OBJECT_DATA_FIELD_ENTRIES = 20
-	private integer array umki
-	private integer array umkiCount
-	private integer array usei
-	private integer array useiCount
-	private integer array urq
-	private integer array urqCount
-	private integer array urqa
-	private integer array urqaCount
-	private integer array ures
-	private integer array uresCount
-	private integer array useu
-	private integer array useuCount
-	private integer array utra
-	private integer array utraCount
-	private integer array uupt
-	private integer array uuptCount
-	private integer array upgr
-	private integer array upgrCount
-	private integer array ucam
-	private integer array uhab
-	private integer array uhabCount
-	private integer array uabi
-	private integer array uabiCount
 	private hashtable fieldsHashTable = InitHashtable()
 endglobals
 
@@ -41,7 +18,11 @@ private struct Finteger
 endstruct
 
 function GetUmki takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'umki')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'umki')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUmki takes integer objectId, integer v returns integer
@@ -54,7 +35,11 @@ function AddUmki takes integer objectId, integer v returns integer
 endfunction
 
 function GetUsei takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'usei')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'usei')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUsei takes integer objectId, integer v returns integer
@@ -67,7 +52,11 @@ function AddUsei takes integer objectId, integer v returns integer
 endfunction
 
 function GetUrq takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'urq')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'urq')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUrq takes integer objectId, integer v returns integer
@@ -80,7 +69,11 @@ function AddUrq takes integer objectId, integer v returns integer
 endfunction
 
 function GetUrqa takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'urqa')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'urqa')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUrqa takes integer objectId, integer v returns integer
@@ -93,7 +86,11 @@ function AddUrqa takes integer objectId, integer v returns integer
 endfunction
 
 function GetUres takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'ures')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'ures')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUres takes integer objectId, integer v returns integer
@@ -106,7 +103,11 @@ function AddUres takes integer objectId, integer v returns integer
 endfunction
 
 function GetUseu takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'useu')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'useu')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUseu takes integer objectId, integer v returns integer
@@ -119,7 +120,11 @@ function AddUseu takes integer objectId, integer v returns integer
 endfunction
 
 function GetUtra takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'utra')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'utra')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUtra takes integer objectId, integer v returns integer
@@ -132,7 +137,11 @@ function AddUtra takes integer objectId, integer v returns integer
 endfunction
 
 function GetUupt takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'uupt')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'uupt')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUupt takes integer objectId, integer v returns integer
@@ -145,7 +154,11 @@ function AddUupt takes integer objectId, integer v returns integer
 endfunction
 
 function GetUpgr takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'upgr')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'upgr')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUpgr takes integer objectId, integer v returns integer
@@ -158,7 +171,11 @@ function AddUpgr takes integer objectId, integer v returns integer
 endfunction
 
 function GetUcam takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'ucam')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'ucam')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUcam takes integer objectId, integer v returns integer
@@ -171,7 +188,11 @@ function AddUcam takes integer objectId, integer v returns integer
 endfunction
 
 function GetUhab takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'uhab')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'uhab')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUhab takes integer objectId, integer v returns integer
@@ -184,7 +205,11 @@ function AddUhab takes integer objectId, integer v returns integer
 endfunction
 
 function GetUabi takes integer objectId, integer index returns integer
-	return Finteger(LoadInteger(fieldsHashTable, objectId, 'uabi')).v[index]
+	local Finteger f = LoadInteger(fieldsHashTable, objectId, 'uabi')
+	if (f == 0) then
+		return 0
+	endif
+	return f.v[index]
 endfunction
 
 function AddUabi takes integer objectId, integer v returns integer
