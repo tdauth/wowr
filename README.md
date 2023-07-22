@@ -999,3 +999,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Asssssvi: [Rifleman Lordaeron HD](https://www.hiveworkshop.com/threads/rifleman-lordaeron-hd.313452/)
 * Jiok: [Bannercarrier and Derivatives](https://www.hiveworkshop.com/threads/bannercarrier-and-derivatives.345982/)
 * Kofi_Banan, purparisien: [Wagons and Train](https://www.hiveworkshop.com/threads/wagons-and-train.318422/)
+* unchips: [Fish Vending Stand](https://www.hiveworkshop.com/threads/fish-vending-stand.270535/)
