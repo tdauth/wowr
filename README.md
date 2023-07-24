@@ -1000,3 +1000,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Jiok: [Bannercarrier and Derivatives](https://www.hiveworkshop.com/threads/bannercarrier-and-derivatives.345982/)
 * Kofi_Banan, purparisien: [Wagons and Train](https://www.hiveworkshop.com/threads/wagons-and-train.318422/)
 * unchips: [Fish Vending Stand](https://www.hiveworkshop.com/threads/fish-vending-stand.270535/)
+* Sellenisko: [MoriaGoblin](https://www.hiveworkshop.com/threads/moriagoblin.261298/)
+* bakr: [Human Alliance Banners](https://www.hiveworkshop.com/threads/human-alliance-banners.347620/)
