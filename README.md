@@ -1004,3 +1004,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * bakr: [Human Alliance Banners](https://www.hiveworkshop.com/threads/human-alliance-banners.347620/)
 * Alok: [Nerubian Worker](https://www.hiveworkshop.com/threads/nerubian-worker.292850/)
 * Ujimasa Hojo: [Necropolis and Derivatives](https://www.hiveworkshop.com/threads/necropolis-and-derivatives.231889/)
+* Lender: [Web](https://www.hiveworkshop.com/threads/web.259697/)
+* Khazmo: [Altar of the Spider](https://www.hiveworkshop.com/threads/altar-of-the-spider.106147/)
+* Zion007: [SpiderAltarIconNew2](https://www.hiveworkshop.com/threads/spideraltariconnew2.160082/)

@@ -43,10 +43,10 @@ ReviveTimeFactor=1.0
 UpkeepUsage=150,250,10000,10000,10000,10000,10000,10000,10000,10000
 
 [TALT]
-DependencyOr=h0ME,o052,o02P,h0E8,h0A7,o02P,h0AT,h05A,h01R,ndh2,u008,halt,oalt,eate,uaod,nnad,o00T,h033,h042,h0GH,h007,h00K,h00J
+DependencyOr=h0OF,u01U,h0ME,o052,o02P,h0E8,h0A7,o02P,h0AT,h05A,h01R,ndh2,u008,halt,oalt,eate,uaod,nnad,o00T,h033,h042,h0GH,h007,h00K,h00J
 
 [TWN1]
-DependencyOr=h0LX,h0LH,h0L2,o029,o03L,h0CT,h0DJ,h0AN,o029,o02M,h06D,h051,h057,h05R,h08M,h083,h07A,h07B,n05M,n026,ndh2,h00J,u005,htow,ogre,etol,unpl,o00O,h02R,h040
+DependencyOr=u01Q,h0LX,h0LH,h0L2,o029,o03L,h0CT,h0DJ,h0AN,o029,o02M,h06D,h051,h057,h05R,h08M,h083,h07A,h07B,n05M,n026,ndh2,h00J,u005,htow,ogre,etol,unpl,o00O,h02R,h040
 Name=Tier 1 Hall
 
 [TWN2]
