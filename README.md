@@ -1002,3 +1002,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * unchips: [Fish Vending Stand](https://www.hiveworkshop.com/threads/fish-vending-stand.270535/)
 * Sellenisko: [MoriaGoblin](https://www.hiveworkshop.com/threads/moriagoblin.261298/)
 * bakr: [Human Alliance Banners](https://www.hiveworkshop.com/threads/human-alliance-banners.347620/)
+* Alok: [Nerubian Worker](https://www.hiveworkshop.com/threads/nerubian-worker.292850/)
+* Ujimasa Hojo: [Necropolis and Derivatives](https://www.hiveworkshop.com/threads/necropolis-and-derivatives.231889/)
