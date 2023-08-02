@@ -1008,3 +1008,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Khazmo: [Altar of the Spider](https://www.hiveworkshop.com/threads/altar-of-the-spider.106147/)
 * Zion007: [SpiderAltarIconNew2](https://www.hiveworkshop.com/threads/spideraltariconnew2.160082/)
 * Tranquil: [Door 00](https://www.hiveworkshop.com/threads/door-00.100583/)
+* Darky29: [BTNEgg](https://www.hiveworkshop.com/threads/btnegg.54493/)
