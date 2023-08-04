@@ -1011,3 +1011,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darky29: [BTNEgg](https://www.hiveworkshop.com/threads/btnegg.54493/)
 * communist_orc: [Witch Hut](https://www.hiveworkshop.com/threads/witch-hut.84638/)
 * Bioautomaton: [Human Airship](https://www.hiveworkshop.com/threads/human-airship.49093/)
+* Stefan.K: [Goblin Prince](https://www.hiveworkshop.com/threads/goblin-prince.323695/)
