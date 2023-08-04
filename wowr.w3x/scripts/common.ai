@@ -1314,6 +1314,31 @@ globals
     constant integer KULTIRAS_CITIZEN_FEMALE                         = 'n0BL'
     constant integer KULTIRAS_HOUSING                                = 'h090'
 
+    // Lordaeron
+    constant integer LORDAERON_TIER_1                                = 'h0LX'
+    constant integer LORDAERON_TIER_2                                = 'h0MC'
+    constant integer LORDAERON_TIER_3                                = 'h0MD'
+    constant integer LORDAERON_ALTAR                                 = 'h0ME'
+    constant integer LORDAERON_ARCANE_TOWER                          = 'h0NE'
+    constant integer LORDAERON_BARRACKS                              = 'h0MH'
+    constant integer LORDAERON_BLACKSMITH                            = 'h0MJ'
+    constant integer LORDAERON_CANNON_TOWER                          = 'h0NC'
+    constant integer LORDAERON_FARM                                  = 'h0MF'
+    constant integer LORDAERON_AVIARY                                = 'h0MM'
+    constant integer LORDAERON_GUARD_TOWER                           = 'h0ND'
+    constant integer LORDAERON_LUMBER_MILL                           = 'h0MK'
+    constant integer LORDAERON_SCOUT_TOWER                           = 'h0MN'
+    constant integer LORDAERON_MAGE_TOWER                            = 'h0MP'
+    constant integer LORDAERON_SCARLET_MONASTERY                     = 'h0N6'
+    constant integer LORDAERON_TRADE_HOUSE                           = 'h0ML'
+    constant integer LORDAERON_WORKSHOP                              = 'h0MO'
+
+    constant integer LORDAERON_WORKER                                = 'h0LY' // worker
+
+    constant integer LORDAERON_CITIZEN_MALE                          = 'n0DY'
+    constant integer LORDAERON_CITIZEN_FEMALE                        = 'n0E0'
+    constant integer LORDAERON_HOUSING                               = 'h0N7'
+
     // Pandaren
     constant integer PANDAREN_TIER_1                                 = 'h06D' // tier 1
     constant integer PANDAREN_TIER_2                                 = 'h0AC' // tier 2
@@ -2468,6 +2493,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_TIER_3,false,townid)
     elseif unitid == KULTIRAS_WATCH_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(KULTIRAS_GUARD_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_CANNON_TOWER,false,townid) + GetUnitCountEx(KULTIRAS_ARCANE_TOWER,false,townid)
+
+    elseif unitid == LORDAERON_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(LORDAERON_TIER_2,false,townid) + GetUnitCountEx(LORDAERON_TIER_3,false,townid)
+    elseif unitid == KULTIRAS_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(LORDAERON_TIER_3,false,townid)
+    elseif unitid == KULTIRAS_WATCH_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(LORDAERON_GUARD_TOWER,false,townid) + GetUnitCountEx(LORDAERON_CANNON_TOWER,false,townid) + GetUnitCountEx(LORDAERON_ARCANE_TOWER,false,townid)
 
     elseif unitid == WORGEN_TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(WORGEN_KEEP,false,townid) + GetUnitCountEx(WORGEN_CASTLE,false,townid)

@@ -126,6 +126,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Pandaren",     -2,
         MenuItem "Dalaran",     -2,
         MenuItem "Kul Tiras",     -2,
+        MenuItem "Lordaeron",     -2,
         MenuItem "Worgen",       -2,
         MenuItem "Vrykul",       -2,
         MenuItem "Roman Empire",     -2,
