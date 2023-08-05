@@ -1024,3 +1024,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [BTNTerranAcademy](https://www.hiveworkshop.com/threads/btnterranacademy.57176/)
 * Max666: [Battlecruiser](https://www.hiveworkshop.com/threads/battlecruiser.47611/)
 * Shimrra: [BTNBattleCruiser](https://www.hiveworkshop.com/threads/btnbattlecruiser.55861/)
+* Don Valentino: [Demon Armor Upgrade](https://www.hiveworkshop.com/threads/demon-armor-upgrade.308832/)
