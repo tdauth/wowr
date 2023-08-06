@@ -745,6 +745,7 @@ globals
     constant integer HUMAN_SHIPYARD                                  = 'h010'
     constant integer HUMAN_TRANSPORT_SHIP                            = 'hbot'
     constant integer HUMAN_BATTLESHIP                                = 'hbsh'
+    constant integer HUMAN_FRIGATE                                   = 'hdes'
 
     constant integer UPG_HUMAN_BACKPACK                              = 'Rhpm'
     constant integer UPG_HUMAN_SUNDERING_BLADES                      = 'Rhsb'
@@ -2049,6 +2050,7 @@ globals
     integer attackTargetLocationY = 0
 
     trigger expansionsTrigger = CreateTrigger()
+    trigger shipsTrigger = CreateTrigger()
 endglobals
 
 //============================================================================
@@ -4590,19 +4592,33 @@ function InitHero takes nothing returns nothing
 endfunction
 
 function CountHousings takes nothing returns integer
-    return GetUnitCount(HUMAN_HOUSING) + GetUnitCount(ORC_HOUSING) + GetUnitCount(UNDEAD_HOUSING) + GetUnitCount(ELF_HOUSING) + GetUnitCount(BLOOD_ELF_HOUSING) + GetUnitCount(NAGA_HOUSING) + GetUnitCount(DEMON_HOUSING) + GetUnitCount(DRAENEI_HOUSING) + GetUnitCount(FURBOLG_HOUSING) + GetUnitCount(GOBLIN_HOUSING) + GetUnitCount(DWARF_HOUSING) + GetUnitCount(HIGH_ELF_HOUSING)
-endfunction
+    local integer count = 0
 
-function BuildingStrategyShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, HUMAN_SHIPYARD )
-        call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
-    else
-        call SetBuildUnit( 0, HUMAN_SHIPYARD )
-        call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, HUMAN_BATTLESHIP )
-    endif
+    set count = count + GetUnitCount(HUMAN_HOUSING)
+    set count = count + GetUnitCount(ORC_HOUSING)
+    set count = count + GetUnitCount(UNDEAD_HOUSING)
+    set count = count + GetUnitCount(ELF_HOUSING)
+    set count = count + GetUnitCount(BLOOD_ELF_HOUSING)
+    set count = count + GetUnitCount(NAGA_HOUSING)
+    set count = count + GetUnitCount(DEMON_HOUSING)
+    set count = count + GetUnitCount(DRAENEI_HOUSING)
+    set count = count + GetUnitCount(FURBOLG_HOUSING)
+    set count = count + GetUnitCount(GOBLIN_HOUSING)
+    set count = count + GetUnitCount(DWARF_HOUSING)
+    set count = count + GetUnitCount(HIGH_ELF_HOUSING)
+    set count = count + GetUnitCount(TROLL_HOUSING)
+    set count = count + GetUnitCount(PANDAREN_HOUSING)
+    set count = count + GetUnitCount(DALARAN_HOUSING)
+    set count = count + GetUnitCount(KUL_TIRAS_HOUSING)
+    set count = count + GetUnitCount(LORDAERON_HOUSING)
+    set count = count + GetUnitCount(WORGEN_HOUSING)
+    set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
+    set count = count + GetUnitCount(FREEPEOPLE_HOUSING)
+    set count = count + GetUnitCount(SAURONSFORCES_HOUSING)
+    set count = count + GetUnitCount(GALACTIC_REPUBLIC_HOUSING)
+    set count = count + GetUnitCount(CIS_HOUSING)
+
+    return count
 endfunction
 
 function AttackWithMount takes nothing returns nothing
@@ -4804,11 +4820,9 @@ function UpdateWorkers takes nothing returns nothing
                 call NotifySpecificPlayer(GetLastData(), "Here, take my lumber!")
             elseif (c == COMMAND_SHIPS_ON) then
                 set buildShips = true
-                call BuildingStrategyShips()
                 call NotifyOtherPlayers("I will start building ships!")
             elseif (c == COMMAND_SHIPS_OFF) then
                 set buildShips = false
-                call BuildingStrategyShips()
                 call NotifyOtherPlayers("I will stop building ships!")
             elseif (c == COMMAND_EXPANSIONS) then
                 set expansions = GetLastData()
@@ -4896,6 +4910,13 @@ function BuildExpansionsLoop takes nothing returns nothing
     endloop
 endfunction
 
+function BuildShipsLoop takes nothing returns nothing
+    loop
+        call TriggerExecute(shipsTrigger)
+        call Sleep(M1)
+    endloop
+endfunction
+
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, POWER_GENERATOR )
     call SetBuildUnit( 1, ANTIMAGIC_WARD )
@@ -4908,6 +4929,7 @@ function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, DRAGON_ROOST )
     call StartThread(function ResearchHighLevelTier3Researches)
     call StartThread(function BuildExpansionsLoop)
+    call StartThread(function BuildShipsLoop)
 endfunction
 
 function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
@@ -4925,4 +4947,8 @@ endfunction
 
 function Expansions takes code func returns nothing
     call TriggerAddAction(expansionsTrigger, func)
+endfunction
+
+function Ships takes code func returns nothing
+    call TriggerAddAction(shipsTrigger, func)
 endfunction
