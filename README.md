@@ -1025,3 +1025,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Max666: [Battlecruiser](https://www.hiveworkshop.com/threads/battlecruiser.47611/)
 * Shimrra: [BTNBattleCruiser](https://www.hiveworkshop.com/threads/btnbattlecruiser.55861/)
 * Don Valentino: [Demon Armor Upgrade](https://www.hiveworkshop.com/threads/demon-armor-upgrade.308832/)
+* Hawkwing: [Naaru](https://www.hiveworkshop.com/threads/naaru.245883/)
+* Chen: [BTNGiftoftheNaaru](https://www.hiveworkshop.com/threads/btngiftofthenaaru.264315/)
