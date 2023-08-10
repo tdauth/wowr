@@ -19,6 +19,10 @@ Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "S
 
 ![SD and HD](HD.jpg "SD and HD")
 
+Make sure that the JassHelper and vJass are enabled:
+
+![JassHelper](JassHelper.jpg "JassHelper")
+
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
