@@ -1031,3 +1031,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Don Valentino: [Demon Armor Upgrade](https://www.hiveworkshop.com/threads/demon-armor-upgrade.308832/)
 * Hawkwing: [Naaru](https://www.hiveworkshop.com/threads/naaru.245883/)
 * Chen: [BTNGiftoftheNaaru](https://www.hiveworkshop.com/threads/btngiftofthenaaru.264315/)
+* Blood Raven: [Anvil](https://www.hiveworkshop.com/threads/anvil.273416/)
