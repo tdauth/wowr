@@ -1045,3 +1045,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mister_Haudrauf: [Spider Nest](https://www.hiveworkshop.com/threads/spider-nest.299604/)
 * MatiS: [Nerubian Watchtower/Stronghold/Palace](https://www.hiveworkshop.com/threads/nerubian-watchtower-stronghold-palace.264459/)
 * Windrunner29: [BTNNerubianPalace](https://www.hiveworkshop.com/threads/btnnerubianpalace.267139/)
+* Hellx-Magnus: [BTNNerubianScepter](https://www.hiveworkshop.com/threads/btnnerubianscepter.221201/)
