@@ -1043,3 +1043,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Burning_Dragoon5: [Nerubian Flying Bombarder by Burning_Dragoon5](https://www.hiveworkshop.com/threads/nerubian-flying-bombarder-by-burning_dragoon5.65831/)
 * Maxwell: [BTNNerubian_Bombarder](https://www.hiveworkshop.com/threads/btnnerubian_bombarder.341601/)
 * Mister_Haudrauf: [Spider Nest](https://www.hiveworkshop.com/threads/spider-nest.299604/)
+* MatiS: [Nerubian Watchtower/Stronghold/Palace](https://www.hiveworkshop.com/threads/nerubian-watchtower-stronghold-palace.264459/)
+* Windrunner29: [BTNNerubianPalace](https://www.hiveworkshop.com/threads/btnnerubianpalace.267139/)
