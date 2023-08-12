@@ -1040,3 +1040,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Markus3832: [Starcraft Larva](https://www.hiveworkshop.com/threads/starcraft-larva.48299/)
 * Shimrra: [BTNLarva](https://www.hiveworkshop.com/threads/btnlarva.55835/)
 * Ujimasa Hojo: [Shrine of Azshara and Derivatives](https://www.hiveworkshop.com/threads/shrine-of-azshara-and-derivatives.233170/)
+* Burning_Dragoon5: [Nerubian Flying Bombarder by Burning_Dragoon5](https://www.hiveworkshop.com/threads/nerubian-flying-bombarder-by-burning_dragoon5.65831/)
+* Maxwell: [BTNNerubian_Bombarder](https://www.hiveworkshop.com/threads/btnnerubian_bombarder.341601/)
+* Mister_Haudrauf: [Spider Nest](https://www.hiveworkshop.com/threads/spider-nest.299604/)
