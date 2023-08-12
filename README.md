@@ -1037,3 +1037,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * AndrewOverload519: [Crypt Drone Cocoon](https://www.hiveworkshop.com/threads/crypt-drone-cocoon.231952/)
 * Ujimasa Hojo: [Boneyard and Derivatives](https://www.hiveworkshop.com/threads/boneyard-and-derivatives.233195/)
 * Ujimasa Hojo: [Tomb of Relics and Derivatives](https://www.hiveworkshop.com/threads/tomb-of-relics-and-derivatives.235746/)
+* Markus3832: [Starcraft Larva](https://www.hiveworkshop.com/threads/starcraft-larva.48299/)
+* Shimrra: [BTNLarva](https://www.hiveworkshop.com/threads/btnlarva.55835/)
