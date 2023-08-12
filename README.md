@@ -1048,3 +1048,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Hellx-Magnus: [BTNNerubianScepter](https://www.hiveworkshop.com/threads/btnnerubianscepter.221201/)
 * The Panda: [Pack of Nerub Icons](https://www.hiveworkshop.com/threads/pack-of-nerub-icons.301537/)
 * alfredx_sotn: [CryptFiend](https://www.hiveworkshop.com/threads/cryptfiend.49553/)
+* unwirklich, Wa666r: [Nerubian UI](https://www.hiveworkshop.com/threads/war-of-the-spider-fully-voiced.346189/)
