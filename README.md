@@ -1047,3 +1047,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Windrunner29: [BTNNerubianPalace](https://www.hiveworkshop.com/threads/btnnerubianpalace.267139/)
 * Hellx-Magnus: [BTNNerubianScepter](https://www.hiveworkshop.com/threads/btnnerubianscepter.221201/)
 * The Panda: [Pack of Nerub Icons](https://www.hiveworkshop.com/threads/pack-of-nerub-icons.301537/)
+* alfredx_sotn: [CryptFiend](https://www.hiveworkshop.com/threads/cryptfiend.49553/)
