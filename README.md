@@ -1049,3 +1049,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The Panda: [Pack of Nerub Icons](https://www.hiveworkshop.com/threads/pack-of-nerub-icons.301537/)
 * alfredx_sotn: [CryptFiend](https://www.hiveworkshop.com/threads/cryptfiend.49553/)
 * unwirklich, Wa666r: [Nerubian UI](https://www.hiveworkshop.com/threads/war-of-the-spider-fully-voiced.346189/)
+* Lender: [Web animated](https://www.hiveworkshop.com/threads/web-animated.260233/)
+* Juice_F: [BTNSpiderWeb](https://www.hiveworkshop.com/threads/btnspiderweb.56461/)
