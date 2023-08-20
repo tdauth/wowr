@@ -1532,6 +1532,53 @@ globals
 
      constant integer VRYKUL_WORKER                                  = 'h0ID'
 
+    // Nerubian
+    constant integer NERUBIAN_TIER_1                                 = 'u01Q'
+    constant integer NERUBIAN_TIER_2                                 = 'u023'
+    constant integer NERUBIAN_TIER_3                                 = 'u024'
+    constant integer NERUBIAN_ALTAR                                  = 'u01U'
+    constant integer NERUBIAN_ANCIENT_SHRINE                         = 'u02B' // sanctuary
+    constant integer NERUBIAN_HATCHERY                               = 'u029' // mill/forge
+    constant integer NERUBIAN_TOWER                                  = 'u02A' // watch tower
+    constant integer NERUBIAN_TUNNEL                                 = 'u028' // sacrifical pit
+    constant integer NERUBIAN_ZIGGURAT                               = 'u01S' // farm
+    constant integer NERUBIAN_NEST                                   = 'u02D' // slaughterhouse
+    constant integer NERUBIAN_SPAWNING_GROUND                        = 'u025' // boneyard
+    constant integer NERUBIAN_SPAWNING_PIT                           = 'u01Z' // barracks
+    constant integer NERUBIAN_VAULT_OF_RELICS                        = 'u026'
+    constant integer NERUBIAN_AZJOL_NERUB                            = 'n0EH' // special building
+
+    constant integer UPG_NERUBIAN_ANCIENT_POWER                      = 'R0BC' // skeletal mastery
+    constant integer UPG_NERUBIAN_AZJOL_NERUB                        = 'R0B5' // special building
+    constant integer UPG_NERUBIAN_BACKPACK                           = 'R0B3'
+    constant integer UPG_NERUBIAN_COCOON                             = 'R0B1'
+    constant integer UPG_NERUBIAN_CORROSIVE_BREATH                   = 'R0BD'
+    constant integer UPG_NERUBIAN_IMPROVED_ANCIENT_ARCHITECTURE      = 'R0B9'
+    constant integer UPG_NERUBIAN_ARMOR                              = 'R0B7'
+    constant integer UPG_NERUBIAN_WEAPONS                            = 'R0B6'
+    constant integer UPG_NERUBIAN_WINGS                              = 'R0B8'
+    constant integer UPG_NERUBIAN_SEER                               = 'R0BA'
+    constant integer UPG_NERUBIAN_WEBSPINNER                         = 'R0BB'
+    constant integer UPG_NERUBIAN_SPAWN_SPIDERLINGS                  = 'R0B2'
+    constant integer UPG_NERUBIAN_SPIDER_EGG                         = 'R0B4'
+    constant integer UPG_NERUBIAN_SPIDER_POISON                      = 'R0AJ'
+    constant integer UPG_NERUBIAN_WEB                                = 'R0AK'
+
+    onstant integer NERUBIAN_WORKER                                  = 'u01P'
+    onstant integer NERUBIAN_CRYPT_DRONE                             = 'u021'
+    onstant integer NERUBIAN_CRYPT_FIEND                             = 'u020'
+    onstant integer NERUBIAN_FLYING_BOMBARDER                        = 'u02C'
+    onstant integer NERUBIAN_QUEEN                                   = 'n0EB'
+    onstant integer NERUBIAN_SEER                                    = 'n0EF'
+    onstant integer NERUBIAN_SPEAR_THROWER                           = 'n0EI'
+    onstant integer NERUBIAN_SPIDER_LORD                             = 'n0EG'
+    onstant integer NERUBIAN_WARRIOR                                 = 'n0E8' // footman
+    onstant integer NERUBIAN_WEBSPINNER                              = 'n0EJ'
+
+    constant integer NERUBIAN_CITIZEN_MALE                           = 'n0E9'
+    constant integer NERUBIAN_CITIZEN_FEMALE                         = 'n0EA'
+    constant integer NERUBIAN_HOUSING                                = 'h0OX'
+
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
     constant integer MODERNWARFARE_TIER_2                            = 'h0FR' // tier 2
@@ -1974,6 +2021,13 @@ globals
     constant integer SUMMON_SEA_ELEMENTAL                            = 'A08Z'
     constant integer CYCLONE                                         = 'A0JC'
     constant integer MONSOON                                         = 'A024'
+
+     // Nerubian
+     constant integer NERUBIAN_QUEEN_HERO                            = 'U027'
+     constant integer MASS_WEB                                       = 'A1CC'
+     constant integer SUMMON_SPIDER_EGG                              = 'A1CF'
+     constant integer SPIN_WEB                                       = 'A1D4'
+     constant integer NERUBIAN_ARMY                                  = 'A1D5'
 
     // Modern Warfare
     constant integer US_GENERAL                                      = 'H0F2'
@@ -2550,6 +2604,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(VRYKUL_TIER_2,false,townid) + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
     elseif unitid == VRYKUL_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
+
+    elseif unitid == NERUBIAN_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(NERUBIAN_TIER_2,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
+    elseif unitid == NERUBIAN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
 
     elseif unitid == MODERNWARFARE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
@@ -4368,6 +4427,17 @@ function ChooseHeroSkill takes nothing returns integer
             return SUMMON_SEA_ELEMENTAL
         elseif (mod == 2) then
             return CYCLONE
+        endif
+    // Nerubian
+    elseif (curHero == NERUBIAN_QUEEN_HERO) then
+        if (skillUlti) then
+            return NERUBIAN_ARMY
+        elseif (mod == 0) then
+            return MASS_WEB
+        elseif (mod == 1) then
+            return SUMMON_SPIDER_EGG
+        elseif (mod == 2) then
+            return SPIN_WEB
         endif
     // Modern Warfare
     elseif (curHero == US_GENERAL) then
