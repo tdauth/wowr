@@ -1,2 +1,2 @@
-copy C:\Users\Tamino\Documents\Projekte\wowr\releases\wowr3.10.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
+copy C:\Users\Tamino\Documents\Projekte\wowr\releases\wowr3.11.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
 pause
