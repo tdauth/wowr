@@ -1564,16 +1564,16 @@ globals
     constant integer UPG_NERUBIAN_SPIDER_POISON                      = 'R0AJ'
     constant integer UPG_NERUBIAN_WEB                                = 'R0AK'
 
-    onstant integer NERUBIAN_WORKER                                  = 'u01P'
-    onstant integer NERUBIAN_CRYPT_DRONE                             = 'u021'
-    onstant integer NERUBIAN_CRYPT_FIEND                             = 'u020'
-    onstant integer NERUBIAN_FLYING_BOMBARDER                        = 'u02C'
-    onstant integer NERUBIAN_QUEEN                                   = 'n0EB'
-    onstant integer NERUBIAN_SEER                                    = 'n0EF'
-    onstant integer NERUBIAN_SPEAR_THROWER                           = 'n0EI'
-    onstant integer NERUBIAN_SPIDER_LORD                             = 'n0EG'
-    onstant integer NERUBIAN_WARRIOR                                 = 'n0E8' // footman
-    onstant integer NERUBIAN_WEBSPINNER                              = 'n0EJ'
+    constant integer NERUBIAN_WORKER                                 = 'u01P'
+    constant integer NERUBIAN_CRYPT_DRONE                            = 'u021'
+    constant integer NERUBIAN_CRYPT_FIEND                            = 'u020'
+    constant integer NERUBIAN_FLYING_BOMBARDER                       = 'u02C'
+    constant integer NERUBIAN_QUEEN                                  = 'n0EB'
+    constant integer NERUBIAN_SEER                                   = 'n0EF'
+    constant integer NERUBIAN_SPEAR_THROWER                          = 'n0EI'
+    constant integer NERUBIAN_SPIDER_LORD                            = 'n0EG'
+    constant integer NERUBIAN_WARRIOR                                = 'n0E8' // footman
+    constant integer NERUBIAN_WEBSPINNER                             = 'n0EJ'
 
     constant integer NERUBIAN_CITIZEN_MALE                           = 'n0E9'
     constant integer NERUBIAN_CITIZEN_FEMALE                         = 'n0EA'

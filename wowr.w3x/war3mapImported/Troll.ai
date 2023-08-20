@@ -178,7 +178,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, TROLL_WITCH_DOCTOR )
     call CampaignAttackerEx( 2, 2, 3, TROLL_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TROLL_THRONE_OF_WAR )
-    call CampaignAttackerEx( 2, 2, 3, TROLL_TROLL_BAT )
+    call CampaignAttackerEx( 2, 2, 3, TROLL_BAT )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -192,7 +192,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, TROLL_WITCH_DOCTOR )
     call CampaignAttackerEx( 2, 2, 3, TROLL_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TROLL_THRONE_OF_WAR )
-    call CampaignAttackerEx( 2, 2, 3, TROLL_TROLL_BAT )
+    call CampaignAttackerEx( 2, 2, 3, TROLL_BAT )
     call CampaignAttackerEx( 2, 2, 3, TROLL_ICE_TROLL_WARLORD )
     call CampaignAttackerEx( 2, 2, 3, TROLL_ICE_TROLL_HIGH_PRIEST )
     call AddStandardUnitsToAttackWave()
@@ -216,7 +216,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, TROLL_HEXER )
         
          // big air army
-        call CampaignAttackerEx( 8, 10, 12, TROLL_TROLL_BAT )
+        call CampaignAttackerEx( 8, 10, 12, TROLL_BAT )
         call CampaignAttackerEx( 8, 10, 12, TROLL_BAT )
         
         call AddStandardUnitsToAttackWave()

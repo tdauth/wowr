@@ -44,7 +44,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_LORDAERON_LONG_RIFLES )
     call SetBuildUpgr( 1, UPG_LORDAERON_MAGE )
     call SetBuildUpgr( 1, UPG_LORDAERON_SORCERY )
-    call SetBuildUpgr( 1, UPG_LORDAERON_ALLIANCE_SIEGE_TOWER )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, LORDAERON_TIER_3 )
@@ -52,8 +51,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, LORDAERON_GUARD_TOWER )
     call SetBuildUnit( 1, LORDAERON_CANNON_TOWER )
     call SetBuildUnit( 1, LORDAERON_ARCANE_TOWER )
-    
-    call BuildingStrategyShips()
     
     call SetBuildUpgr( 3, UPG_LORDAERON_MELEE )
     call SetBuildUpgr( 3, UPG_LORDAERON_RANGED )
