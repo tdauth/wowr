@@ -63,6 +63,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_MARK_TALON )
     call SetBuildUpgr( 1, UPG_BOWS )
     call SetBuildUpgr( 1, 'Repm' ) // backpack
+    call SetBuildUpgr( 1, UPG_ELF_WORLD_TREE )
+
+    call SetBuildUnit( 1, ELF_WORLD_TREE )
 
     call BuildingStrategyStandardTier3()
     // **********************************

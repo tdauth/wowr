@@ -750,12 +750,12 @@ globals
     constant integer UPG_HUMAN_BACKPACK                              = 'Rhpm'
     constant integer UPG_HUMAN_SUNDERING_BLADES                      = 'Rhsb'
     constant integer UPG_HUMAN_FLARE                                 = 'Rhfl'
-    constant integer UPG_HUMAN_ARCANE_OBSERVATORY                    = 'R022'
+    constant integer UPG_HUMAN_ARCANE_OBSERVATORY                    = 'R022' // special building
 
     constant integer HUMAN_ARCANE_OBSERVATORY                        = 'h01Q' // special building
 
     // Orc
-    constant integer UPG_FEL                                         = 'R01Y'
+    constant integer UPG_FEL                                         = 'R01Y' // special building
 
     constant integer ORC_CITIZEN_MALE                                = 'n00I'
     constant integer ORC_CITIZEN_FEMALE                              = 'n00J'
@@ -769,10 +769,18 @@ globals
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
     constant integer UNDEAD_HOUSING                                  = 'h00U'
 
+    constant integer UPG_UNDEAD_LICH_KING                            = 'R020' // special building
+
+    constant integer UNDEAD_LICH_KING                                = 'n037' // special building
+
     // Night ELF
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
     constant integer ELF_HOUSING                                     = 'e016'
+
+    constant integer UPG_ELF_WORLD_TREE                              = 'R01Z'
+
+    constant integer ELF_WORLD_TREE                                  = 'o00G' // special building
 
     // Blood Elf
     constant integer BLOOD_ELF_TOWN_HALL                             = 'h009' // town hall    
