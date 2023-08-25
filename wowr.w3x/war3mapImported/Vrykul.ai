@@ -14,7 +14,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 3, VRYKUL_FISHER_HOUSE )
     call SetBuildUnit( 2, VRYKUL_LONGHOUSE )
     call SetBuildUnit( 1, VRYKUL_ALTAR )
-    //call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
+    call SetBuildUnit( 1, VRYKUL_BLACKSMITH )
     //call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
     //call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
     
@@ -28,8 +28,8 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 2 buildings
     call SetBuildUnit( 1, VRYKUL_TIER_2 )
-    //call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
-    //call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
+    call SetBuildUnit( 1, VRYKUL_BLACKSMITH )
+    call SetBuildUnit( 1, VRYKUL_BEASTIARY )
     call SetBuildUnit( 1, VRYKUL_VALKYR_TEMPLE )
     call SetBuildUnit( 4, VRYKUL_FISHER_HOUSE )
     //call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
@@ -82,8 +82,18 @@ endfunction
 
 function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, VRYKUL_TIER_3)
-    //call SetBuildExpa(expansions, BLOOD_ELF_LUMBER_MILL)
+    call SetBuildExpa(expansions, VRYKUL_BLACKSMITH)
     //call SetBuildExpa(expansions, ELF_GUARD_TOWER)
+endfunction
+
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, VRYKUL_SHIPYARD )
+        call SetBuildUnit( 10, VRYKUL_RAKKAR_SHIP )
+    else
+        call SetBuildUnit( 0, VRYKUL_SHIPYARD )
+        call SetBuildUnit( 0, VRYKUL_RAKKAR_SHIP )
+    endif
 endfunction
 
 function AttackWaves takes nothing returns nothing
@@ -200,6 +210,8 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
     call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
     call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_ARMORED_WOLF )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH )
     call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -216,6 +228,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, VRYKUL_MAMMOTH_RIDER )
         call CampaignAttackerEx( 4, 4, 4, VRYKUL_VALKYR_GOLDEN )
         call CampaignAttackerEx( 4, 4, 4, VRYKUL_VALKYR_DARK )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_ARMORED_WOLF )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_MAMMOTH )
         
         // big air army
         call CampaignAttackerEx( 8, 12, 18, VRYKUL_PROTO_DRAKE )
@@ -232,6 +246,7 @@ function main takes nothing returns nothing
     call InitHero( )
     call StartThread(function UpdateWorkers)
     call Expansions(function BuildExpansions)
+    call Ships(function BuildShips)
 
     call BuildingStrategy( )
 

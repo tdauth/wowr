@@ -1538,6 +1538,9 @@ globals
     constant integer VRYKUL_LONGHOUSE                                = 'h0IJ'
     constant integer VRYKUL_PROTO_DRAKE_ROOST                        = 'n0BY'
     constant integer VRYKUL_VALKYR_TEMPLE                            = 'h0P4'
+    constant integer VRYKUL_BEASTIARY                                = 'h0P5'
+    constant integer VRYKUL_BLACKSMITH                               = 'h0P6'
+    constant integer VRYKUL_SHIPYARD                                 = 'h0IN'
 
     constant integer VRYKUL_WARRIOR                                  = 'h0IK' // footman
     constant integer VRYKUL_SPEAR_CARRIER                            = 'h0IM' // rifleman
@@ -1545,6 +1548,9 @@ globals
     constant integer VRYKUL_PROTO_DRAKE                              = 'n0BZ' // gryphon rider
     constant integer VRYKUL_VALKYR_GOLDEN                            = 'n0EW' // priest
     constant integer VRYKUL_VALKYR_DARK                              = 'n0EV' // sorceress
+    constant integer VRYKUL_ARMORED_WOLF                             = 'n0EZ'
+    constant integer VRYKUL_MAMMOTH                                  = 'n0F0'
+    constant integer VRYKUL_RAKKAR_SHIP                              = 'h0IO'
 
      constant integer VRYKUL_WORKER                                  = 'h0ID'
 
