@@ -10,7 +10,7 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
+    //call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
     call SetBuildUnit( 3, VRYKUL_FISHER_HOUSE )
     call SetBuildUnit( 2, VRYKUL_LONGHOUSE )
     call SetBuildUnit( 1, VRYKUL_ALTAR )
@@ -30,7 +30,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, VRYKUL_TIER_2 )
     //call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
     //call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
-    //call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
+    call SetBuildUnit( 1, VRYKUL_VALKYR_TEMPLE )
     call SetBuildUnit( 4, VRYKUL_FISHER_HOUSE )
     //call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
     //call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
@@ -89,120 +89,118 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
+    call CampaignAttackerEx( 2, 3, 3, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 0, 1, 2, VRYKUL_SPEAR_CARRIER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
+    call CampaignAttackerEx( 2, 3, 3, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 0, 1, 2, VRYKUL_SPEAR_CARRIER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
+    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -212,20 +210,15 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 4, 4, 4, HIGH_SWORDMAN )
-        call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-        call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_SPELL_BREAKER )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_PRIEST )
-        call CampaignAttackerEx( 4, 4, 4, SORCERESS )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_LIEUTENANT )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_WAGON )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_BALLISTA )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_WARRIOR )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_SPEAR_CARRIER )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_SPEAR_CARRIER )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_MAMMOTH_RIDER )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_VALKYR_GOLDEN )
+        call CampaignAttackerEx( 4, 4, 4, VRYKUL_VALKYR_DARK )
         
         // big air army
-        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_DRAGON_HAWK )
-        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_PHOENIX )
+        call CampaignAttackerEx( 8, 12, 18, VRYKUL_PROTO_DRAKE )
 
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking

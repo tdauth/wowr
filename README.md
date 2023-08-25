@@ -1051,3 +1051,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * unwirklich, Wa666r: [Nerubian UI](https://www.hiveworkshop.com/threads/war-of-the-spider-fully-voiced.346189/)
 * Lender: [Web animated](https://www.hiveworkshop.com/threads/web-animated.260233/)
 * Juice_F: [BTNSpiderWeb](https://www.hiveworkshop.com/threads/btnspiderweb.56461/)
+* Sellenisko: [ArmoredWolf](https://www.hiveworkshop.com/threads/armoredwolf.169168/)
+* Sin'dorei300: [BTNArmoredBlackWolf](https://www.hiveworkshop.com/threads/btnarmoredblackwolf.247354/)
+* Sin'dorei300: [BTNArmoredWolf](https://www.hiveworkshop.com/threads/btnarmoredwolf.247348/)
