@@ -4682,6 +4682,7 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(KUL_TIRAS_HOUSING)
     set count = count + GetUnitCount(LORDAERON_HOUSING)
     set count = count + GetUnitCount(WORGEN_HOUSING)
+    set count = count + GetUnitCount(NERUBIAN_HOUSING)
     set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
     set count = count + GetUnitCount(FREEPEOPLE_HOUSING)
     set count = count + GetUnitCount(SAURONSFORCES_HOUSING)
