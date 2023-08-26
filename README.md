@@ -1054,3 +1054,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sellenisko: [ArmoredWolf](https://www.hiveworkshop.com/threads/armoredwolf.169168/)
 * Sin'dorei300: [BTNArmoredBlackWolf](https://www.hiveworkshop.com/threads/btnarmoredblackwolf.247354/)
 * Sin'dorei300: [BTNArmoredWolf](https://www.hiveworkshop.com/threads/btnarmoredwolf.247348/)
+* Sellenisko: [VrykulLamp](https://www.hiveworkshop.com/threads/vrykullamp.239862/)
+* Sellenisko: [UndeadVrykul](https://www.hiveworkshop.com/threads/undeadvrykul.145693/)
