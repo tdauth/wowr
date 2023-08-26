@@ -16,7 +16,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, PANDAREN_ALTAR )
     call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
     call SetBuildUnit( 1, PANDAREN_SANCTUARY )
-    call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
+    //call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
     
     call SetBuildUpgr( 1, UPG_PANDAREN_DEFEND )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
@@ -219,13 +219,13 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, PANDAREN_SHAMAN )
         call CampaignAttackerEx( 4, 4, 4, PANDAREN_DRUID )
         call CampaignAttackerEx( 4, 4, 4, PANDAREN_WARLORD )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_WAGON )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_BALLISTA )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
+        //call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_WAGON )
+        //call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_BALLISTA )
+        //call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
         
         // big air army
         call CampaignAttackerEx( 8, 12, 18, PANDAREN_CLOUD_SERPENT )
-        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_PHOENIX )
+        //call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_PHOENIX )
 
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking

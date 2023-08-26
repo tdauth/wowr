@@ -862,6 +862,8 @@ globals
     constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
     constant integer DEMON_LEGION_TRANSPORTER                        = 'u019'
     constant integer DEMON_SACRIFICAL_PIT                            = 'u01A'
+    constant integer DEMON_BOOK_OF_SUMMONING                         = 'n039' // special building
+    constant integer DEMON_OUTLAND_DIMENSIONAL_GATE                  = 'o00H' // special building
 
     constant integer DEMON_IMP                                       = 'u006' // worker
     constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
@@ -901,7 +903,10 @@ globals
     constant integer UPG_DEMON_ANTI_MAGIC_SHELL                      = 'R06G'
     constant integer UPG_DEMON_SOUL_THEFT                            = 'R08Y'
     constant integer UPG_DEMON_SPACE_TRAVEL                          = 'R093'
+    constant integer UPG_DEMON_FEL_TRANSPORTING                      = 'R06E'
     constant integer UPG_DEMON_BACKPACK                              = 'R00G'
+    constant integer UPG_DEMON_BOOK_OF_SUMMONING                     = 'R023' // special building
+    constant integer UPG_DEMON_OUTLAND_DIMENSIONAL_GATE              = 'R02A' // special building
 
     constant integer DEMON_CITIZEN_MALE                              = 'n016'
     constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
@@ -916,6 +921,7 @@ globals
     constant integer DRAENEI_SHOP                                    = 'n01N'
     constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
     constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
+    constant integer DRAENEI_PRISON                                  = 'o00K'
 
     constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
     constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
@@ -934,6 +940,7 @@ globals
     constant integer UPG_DRAENEI_STEEL_ARMOR                         = 'R013'
     constant integer UPG_DRAENEI_STEEL_MELEE_WEAPONS                 = 'R011'
     constant integer UPG_DRAENEI_STEEL_RANGED_WEAPONS                = 'R012'
+    constant integer UPG_DRAENEI_PRISON                              = 'R0D2'
 
     constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
@@ -1179,11 +1186,26 @@ globals
     constant integer GNOME_BRASSMAN                                  = 'e01G' // barracks
     constant integer GNOME_FACTORY                                   = 'h0KK' // forge/lumber mill
     constant integer GNOME_TURRET                                    = 'h0KH' // watch tower
+    constant integer GNOME_AVIARY                                    = 'h0KN' // aviary
+    constant integer GNOME_LABORATORY                                = 'h0NI' // sanctuary
+    constant integer GNOME_WORKSHOP                                  = 'h0KS' // workshop
+    constant integer GNOME_TELEPORTER                                = 'h0KT' // sacrifical pit
+
+    constant integer UPG_GNOME_BACKPACK                              = 'R09O'
+    constant integer UPG_GNOME_INVENTIONS                            = 'R09N'
 
     constant integer GNOME_ENGINEER                                  = 'h0JY' // worker
     constant integer GNOME_RIFLEMAN                                  = 'h0KC' // rifleman
     constant integer GNOME_FIELD_ENGINEER                            = 'h0K8' // knight
     constant integer GNOME_ARTILLERY_TANK                            = 'h0KD' // demolisher
+    constant integer GNOME_FLYING_MACHINE                            = 'h0KO'
+    constant integer GNOME_GRYPHON_RIDER                             = 'h0KP'
+    constant integer GNOME_HOVER_COPTER                              = 'h0KQ'
+    constant integer GNOME_MORTAR_TEAM                               = 'h0KR'
+
+    constant integer GNOME_CITIZEN_MALE                              = 'n0D0'
+    constant integer GNOME_CITIZEN_FEMALE                            = 'n0D4'
+    constant integer GNOME_HOUSING                                   = 'h04H'
 
     // Dalaran
     constant integer DALARAN_TIER_1                                  = 'h051' // tier 1
@@ -2610,10 +2632,20 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == LORDAERON_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(LORDAERON_TIER_2,false,townid) + GetUnitCountEx(LORDAERON_TIER_3,false,townid)
-    elseif unitid == KULTIRAS_TIER_2 then
+    elseif unitid == LORDAERON_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(LORDAERON_TIER_3,false,townid)
-    elseif unitid == KULTIRAS_WATCH_TOWER then
+    elseif unitid == LORDAERON_WATCH_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(LORDAERON_GUARD_TOWER,false,townid) + GetUnitCountEx(LORDAERON_CANNON_TOWER,false,townid) + GetUnitCountEx(LORDAERON_ARCANE_TOWER,false,townid)
+
+    elseif unitid == PANDAREN_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(PANDAREN_TIER_2,false,townid) + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
+    elseif unitid == PANDAREN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
+
+    elseif unitid == TROLL_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(TROLL_TIER_2,false,townid) + GetUnitCountEx(TROLL_TIER_3,false,townid)
+    elseif unitid == TROLL_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(TROLL_TIER_3,false,townid)
 
     elseif unitid == WORGEN_TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(WORGEN_KEEP,false,townid) + GetUnitCountEx(WORGEN_CASTLE,false,townid)
@@ -4698,6 +4730,7 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(GOBLIN_HOUSING)
     set count = count + GetUnitCount(DWARF_HOUSING)
     set count = count + GetUnitCount(HIGH_ELF_HOUSING)
+    set count = count + GetUnitCount(GNOME_HOUSING)
     set count = count + GetUnitCount(TROLL_HOUSING)
     set count = count + GetUnitCount(PANDAREN_HOUSING)
     set count = count + GetUnitCount(DALARAN_HOUSING)

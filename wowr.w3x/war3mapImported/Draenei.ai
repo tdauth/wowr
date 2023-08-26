@@ -27,7 +27,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 2, UPG_DRAENEI_SEER_ADEPT )
     call SetBuildUpgr( 3, UPG_DRAENEI_IMPROVED_MASONRY )
     call SetBuildUpgr( 1, UPG_DRAENEI_DEVOUR )
-    call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )    
+    call SetBuildUpgr( 1, UPG_DRAENEI_DEMON_FIRE )
+    call SetBuildUpgr( 1, UPG_DRAENEI_PRISON )
+
+    call SetBuildUnit( 1, DRAENEI_PRISON )
 
     call BuildingStrategyStandardTier3()
     // **********************************
