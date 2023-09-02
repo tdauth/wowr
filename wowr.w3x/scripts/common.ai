@@ -4705,13 +4705,6 @@ function InitHero takes nothing returns nothing
     // Galactic Republic
     elseif (GetUnitCountDone(YODA) > 0) then
         set hero_id = YODA
-    // The Alliance
-    elseif (GetUnitCountDone(LADY_VASHJ_BONUS_HERO) > 0) then
-        set hero_id = LADY_VASHJ_BONUS_HERO
-    elseif (GetUnitCountDone(KAEL_BONUS_HERO) > 0) then
-        set hero_id2 = KAEL_BONUS_HERO
-    elseif (GetUnitCountDone(ILLIDAN_BONUS_HERO) > 0) then
-        set hero_id3 = ILLIDAN_BONUS_HERO
     endif
 endfunction
 
