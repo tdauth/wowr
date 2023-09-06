@@ -1057,3 +1057,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sellenisko: [VrykulLamp](https://www.hiveworkshop.com/threads/vrykullamp.239862/)
 * Sellenisko: [UndeadVrykul](https://www.hiveworkshop.com/threads/undeadvrykul.145693/)
 * D.O.G.: [BTNIconSave](https://www.hiveworkshop.com/threads/btniconsave.123206/)
+* General Frank: [Frankster's Gems](https://www.hiveworkshop.com/threads/franksters-gems.210346/)
