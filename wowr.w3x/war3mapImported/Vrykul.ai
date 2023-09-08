@@ -16,9 +16,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, VRYKUL_ALTAR )
     call SetBuildUnit( 1, VRYKUL_BLACKSMITH )
     //call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
-    //call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
+    call SetBuildUnit( 1, VRYKUL_INN )
     
-    //call SetBuildUpgr( 1, UPG_DEFEND )
+    call SetBuildUpgr( 1, UPG_VRYKUL_DEFEND )
+    call SetBuildUpgr( 1, UPG_VRYKUL_SPIKED_SHELL )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_LEATHER )
@@ -70,7 +71,7 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
     //call SetBuildUpgr( 1, UPG_SENTINEL )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
-    //call SetBuildUpgr( 1, UPG_HUMAN_BACKPACK )
+    call SetBuildUpgr( 1, UPG_VRYKUL_BACKPACK )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
     //call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
 

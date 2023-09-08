@@ -11,6 +11,7 @@ Official website: [wowreforged.org](https://wowreforged.org)
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
 * [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
+* [Official download on Epic War](https://www.epicwar.com/maps/331473/)
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
 *Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues.
@@ -1058,3 +1059,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sellenisko: [UndeadVrykul](https://www.hiveworkshop.com/threads/undeadvrykul.145693/)
 * D.O.G.: [BTNIconSave](https://www.hiveworkshop.com/threads/btniconsave.123206/)
 * General Frank: [Frankster's Gems](https://www.hiveworkshop.com/threads/franksters-gems.210346/)
+* Cavman, Kuhneghetz: [Eversong Lynx](https://www.hiveworkshop.com/threads/eversong-lynx.124677/)
+* Mr. Bob: [Norse Stronghold](https://www.hiveworkshop.com/threads/norse-stronghold.136487/)
