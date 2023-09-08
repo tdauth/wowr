@@ -1582,7 +1582,7 @@ globals
     constant integer VRYKUL_WORKER                                   = 'h0ID'
 
     constant integer VRYKUL_CITIZEN_MALE                             = 'n0F4'
-    constant integer VRYKUL_CITIZEN_FEMALE                           = 'n0C6'
+    constant integer VRYKUL_CITIZEN_FEMALE                           = 'n0F5'
     constant integer VRYKUL_HOUSING                                  = 'h0PD'
 
     // Nerubian
