@@ -1061,3 +1061,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [Frankster's Gems](https://www.hiveworkshop.com/threads/franksters-gems.210346/)
 * Cavman, Kuhneghetz: [Eversong Lynx](https://www.hiveworkshop.com/threads/eversong-lynx.124677/)
 * Mr. Bob: [Norse Stronghold](https://www.hiveworkshop.com/threads/norse-stronghold.136487/)
+* Sin'dorei300: [BarbarianVillager](https://www.hiveworkshop.com/threads/barbarianvillager.222263/)
+* Direfury: [Norse Runecarver](https://www.hiveworkshop.com/threads/norse-runecarver.92208/)
+* Palaslayer: [BTNHorn](https://www.hiveworkshop.com/threads/btnhorn.142073/)
