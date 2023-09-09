@@ -1554,7 +1554,6 @@ globals
     constant integer VRYKUL_TIER_1                                   = 'h0IA'
     constant integer VRYKUL_TIER_2                                   = 'h0IB'
     constant integer VRYKUL_TIER_3                                   = 'h0IC'
-
     constant integer VRYKUL_ALTAR                                    = 'h0IP'
     constant integer VRYKUL_FISHER_HOUSE                             = 'h0IE'
     constant integer VRYKUL_LONGHOUSE                                = 'h0IJ'
@@ -1562,12 +1561,19 @@ globals
     constant integer VRYKUL_VALKYR_TEMPLE                            = 'h0P4'
     constant integer VRYKUL_BEASTIARY                                = 'h0P5'
     constant integer VRYKUL_BLACKSMITH                               = 'h0P6'
+    constant integer VRYKUL_LAMP                                     = 'h0P7' // scout tower
     constant integer VRYKUL_SHIPYARD                                 = 'h0IN'
     constant integer VRYKUL_INN                                      = 'h0PB' // shop
+    constant integer VRYKUL_HALL_OF_VALOR                            = 'h0PD' // special building
 
-    constant integer UPG_VRYKUL_BACKPACK                             = 'R0BG'
+    constant integer UPG_VRYKUL_BACKPACK                             = 'R0BE'
     constant integer UPG_VRYKUL_DEFEND                               = 'R0BF'
-    constant integer UPG_VRYKUL_SPIKED_SHELL                         = 'R0BE'
+    constant integer UPG_VRYKUL_DEVOUR                               = 'R0BI'
+    constant integer UPG_VRYKUL_SPIKED_SHELL                         = 'R0BG'
+    constant integer UPG_VRYKUL_VALKYR_DARK                          = 'R0BL'
+    constant integer UPG_VRYKUL_VALKYR_GOLDEN                        = 'R0BK'
+    constant integer UPG_VRYKUL_LUMBER                               = 'R0BJ'
+    constant integer UPG_VRYKUL_HALLS_OF_VALOR                       = 'R0BH' // special building
 
     constant integer VRYKUL_WARRIOR                                  = 'h0IK' // footman
     constant integer VRYKUL_SPEAR_CARRIER                            = 'h0IM' // rifleman
@@ -1575,8 +1581,11 @@ globals
     constant integer VRYKUL_PROTO_DRAKE                              = 'n0BZ' // gryphon rider
     constant integer VRYKUL_VALKYR_GOLDEN                            = 'n0EW' // priest
     constant integer VRYKUL_VALKYR_DARK                              = 'n0EV' // sorceress
+    constant integer VRYKUL_UNDEAD_VRYKUL                            = 'n0F1'
+    constant integer VRYKUL_RUNECARVER                               = 'h0IP'
     constant integer VRYKUL_ARMORED_WOLF                             = 'n0EZ'
     constant integer VRYKUL_MAMMOTH                                  = 'n0F0'
+    constant integer VRYKUL_GIANT_POLAR_BEAR                         = 'n0F6'
     constant integer VRYKUL_RAKKAR_SHIP                              = 'h0IO'
 
     constant integer VRYKUL_WORKER                                   = 'h0ID'
