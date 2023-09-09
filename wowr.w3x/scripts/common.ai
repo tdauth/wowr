@@ -1554,7 +1554,7 @@ globals
     constant integer VRYKUL_TIER_1                                   = 'h0IA'
     constant integer VRYKUL_TIER_2                                   = 'h0IB'
     constant integer VRYKUL_TIER_3                                   = 'h0IC'
-    constant integer VRYKUL_ALTAR                                    = 'h0IP'
+    constant integer VRYKUL_ALTAR                                    = 'h0OF'
     constant integer VRYKUL_FISHER_HOUSE                             = 'h0IE'
     constant integer VRYKUL_LONGHOUSE                                = 'h0IJ'
     constant integer VRYKUL_PROTO_DRAKE_ROOST                        = 'n0BY'
@@ -1592,7 +1592,7 @@ globals
 
     constant integer VRYKUL_CITIZEN_MALE                             = 'n0F4'
     constant integer VRYKUL_CITIZEN_FEMALE                           = 'n0F5'
-    constant integer VRYKUL_HOUSING                                  = 'h0PD'
+    constant integer VRYKUL_HOUSING                                  = 'h0PC'
 
     // Nerubian
     constant integer NERUBIAN_TIER_1                                 = 'u01Q'
@@ -4748,6 +4748,7 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(KULTIRAS_HOUSING)
     set count = count + GetUnitCount(LORDAERON_HOUSING)
     set count = count + GetUnitCount(WORGEN_HOUSING)
+    set count = count + GetUnitCount(VRYKUL_HOUSING)
     set count = count + GetUnitCount(NERUBIAN_HOUSING)
     set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
     set count = count + GetUnitCount(FREEPEOPLE_HOUSING)

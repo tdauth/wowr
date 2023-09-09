@@ -6,11 +6,11 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, VRYKUL_TIER_1 )
     call SetBuildUnit( 17, VRYKUL_WORKER )
-    //call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
+    call SetBuildUnit( 2, VRYKUL_CITIZEN_MALE )
 
     call BuildingStrategyStandardTier1()
 
-    //call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
+    call SetBuildUnit( 2, VRYKUL_HOUSING )
     call SetBuildUnit( 3, VRYKUL_FISHER_HOUSE )
     call SetBuildUnit( 2, VRYKUL_LONGHOUSE )
     call SetBuildUnit( 1, VRYKUL_ALTAR )
@@ -31,8 +31,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, VRYKUL_BEASTIARY )
     call SetBuildUnit( 1, VRYKUL_VALKYR_TEMPLE )
     call SetBuildUnit( 4, VRYKUL_FISHER_HOUSE )
-    //call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
-    //call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, VRYKUL_LAMP )
+    call SetBuildUnit( 2, VRYKUL_CITIZEN_FEMALE )
     
     //call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )
     //call SetBuildUpgr( 2, UPG_BLOOD_ELF_ARMOR )
