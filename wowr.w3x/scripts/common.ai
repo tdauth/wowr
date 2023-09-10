@@ -1572,8 +1572,16 @@ globals
     constant integer UPG_VRYKUL_SPIKED_SHELL                         = 'R0BG'
     constant integer UPG_VRYKUL_VALKYR_DARK                          = 'R0BL'
     constant integer UPG_VRYKUL_VALKYR_GOLDEN                        = 'R0BK'
+    constant integer UPG_VRYKUL_RUNECARVER                           = 'R0BS'
     constant integer UPG_VRYKUL_LUMBER                               = 'R0BJ'
     constant integer UPG_VRYKUL_HALLS_OF_VALOR                       = 'R0BH' // special building
+    constant integer UPG_VRYKUL_CREATURE_ATTACK                      = 'R0BP'
+    constant integer UPG_VRYKUL_CREATURE_SKIN                        = 'R0BQ'
+    constant integer UPG_VRYKUL_IRON_SWORDS                          = 'R0BN'
+    constant integer UPG_VRYKUL_IRON_PLATING                         = 'R0BO'
+    constant integer UPG_VRYKUL_RESISTANT_SKIN                       = 'R0BM'
+    constant integer UPG_VRYKUL_GIANTS                               = 'R0BR'
+    constant integer UPG_VRYKUL_ULTRAVISION                          = 'R0BT'
 
     constant integer VRYKUL_WARRIOR                                  = 'h0IK' // footman
     constant integer VRYKUL_SPEAR_CARRIER                            = 'h0IM' // rifleman
