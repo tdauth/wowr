@@ -1069,3 +1069,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * bakr: [Gilneas Units](https://www.hiveworkshop.com/threads/gilneas-units.347920/)
 * Darkfang: [Arcane Sphere Orb](https://www.hiveworkshop.com/threads/arcane-sphere-orb.337653/)
 * SovietElf: [Shadow orb](https://www.hiveworkshop.com/threads/shadow-orb.327061/)
+* Blizzard Entertainment, Darkfang: [MoonOrb](https://www.hiveworkshop.com/threads/moonorb.294242/)
