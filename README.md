@@ -1064,3 +1064,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sin'dorei300: [BarbarianVillager](https://www.hiveworkshop.com/threads/barbarianvillager.222263/)
 * Direfury: [Norse Runecarver](https://www.hiveworkshop.com/threads/norse-runecarver.92208/)
 * Palaslayer: [BTNHorn](https://www.hiveworkshop.com/threads/btnhorn.142073/)
+* Mephestrial: [GilneasGunship](https://www.hiveworkshop.com/threads/gilneasgunship.140576/)
+* Mc !: [Werewolf](https://www.hiveworkshop.com/threads/werewolf.47661/)
+* bakr: [Gilneas Units](https://www.hiveworkshop.com/threads/gilneas-units.347920/)
+* Darkfang: [Arcane Sphere Orb](https://www.hiveworkshop.com/threads/arcane-sphere-orb.337653/)
+* SovietElf: [Shadow orb](https://www.hiveworkshop.com/threads/shadow-orb.327061/)
