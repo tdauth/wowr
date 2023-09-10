@@ -1072,3 +1072,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment, Darkfang: [MoonOrb](https://www.hiveworkshop.com/threads/moonorb.294242/)
 * Mechanical Man: [Manticore](https://www.hiveworkshop.com/threads/manticore.188533/)
 * Eagle XI: [BTNManticore](https://www.hiveworkshop.com/threads/btnmanticore.271779/)
+* Worgen: [Feral Worgen & Derivatives](https://www.hiveworkshop.com/threads/feral-worgen-derivatives.300196/)
+* Sellenisko: [WorgenCage](https://www.hiveworkshop.com/threads/worgencage.160843/)
