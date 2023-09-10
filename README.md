@@ -1070,3 +1070,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darkfang: [Arcane Sphere Orb](https://www.hiveworkshop.com/threads/arcane-sphere-orb.337653/)
 * SovietElf: [Shadow orb](https://www.hiveworkshop.com/threads/shadow-orb.327061/)
 * Blizzard Entertainment, Darkfang: [MoonOrb](https://www.hiveworkshop.com/threads/moonorb.294242/)
+* Mechanical Man: [Manticore](https://www.hiveworkshop.com/threads/manticore.188533/)
+* Eagle XI: [BTNManticore](https://www.hiveworkshop.com/threads/btnmanticore.271779/)
