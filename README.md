@@ -1074,3 +1074,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Eagle XI: [BTNManticore](https://www.hiveworkshop.com/threads/btnmanticore.271779/)
 * Worgen: [Feral Worgen & Derivatives](https://www.hiveworkshop.com/threads/feral-worgen-derivatives.300196/)
 * Sellenisko: [WorgenCage](https://www.hiveworkshop.com/threads/worgencage.160843/)
+* bakr: [Transport Ships](https://www.hiveworkshop.com/threads/transport-ships.346358/)
+* bakr: [Frigates](https://www.hiveworkshop.com/threads/frigates.346329/)
+* Ujimasa Hojo: [Battleship and Derivatives](https://www.hiveworkshop.com/threads/battleship-and-derivatives.246696/)
