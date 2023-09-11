@@ -43,10 +43,11 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
     call SetBuildUnit( 1, WORGEN_CASTLE )
     call SetBuildUnit( 5, WORGEN_HOUSE )
-    call SetBuildUnit( 1, WORGEN_GUARD_TOWER )
-    call SetBuildUnit( 1, WORGEN_ARCANE_TOWER )
     call SetBuildUnit( 1, WORGEN_MANOR )
     call SetBuildUnit( 1, WORGEN_WORKSHOP )
+    call SetBuildUnit( 1, WORGEN_GUARD_TOWER )
+    call SetBuildUnit( 1, WORGEN_ARCANE_TOWER )
+    call SetBuildUnit( 1, WORGEN_CANNON_TOWER )
 
     call SetBuildUpgr( 1, UPG_WORGEN_CARGO )
     call SetBuildUpgr( 3, UPG_WORGEN_WORGEN_CLAWS )
