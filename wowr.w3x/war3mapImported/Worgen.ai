@@ -68,6 +68,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_WORGEN_BACKPACK )
     call SetBuildUpgr( 1, UPG_WORGEN_CATHEDRAL )
     call SetBuildUnit( 1, WORGEN_CATHEDRAL )
+    call SetBuildUpgr( 1, UPG_WORGEN_GREYMANE_WALL )
+    call SetBuildUnit( 1, WORGEN_GREYMANE_WALL )
 
     call BuildingStrategyStandardTier3()
     // **********************************
