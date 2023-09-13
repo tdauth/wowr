@@ -1077,3 +1077,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * bakr: [Transport Ships](https://www.hiveworkshop.com/threads/transport-ships.346358/)
 * bakr: [Frigates](https://www.hiveworkshop.com/threads/frigates.346329/)
 * Ujimasa Hojo: [Battleship and Derivatives](https://www.hiveworkshop.com/threads/battleship-and-derivatives.246696/)
+* Amigurumi: [BTNDice](https://www.hiveworkshop.com/threads/btndice.135238/)
+* Blood Raven: [Dice and Cup](https://www.hiveworkshop.com/threads/dice-and-cup.278245/)
+* Stefan.K: [Genn Greymane](https://www.hiveworkshop.com/threads/genn-greymane.291433/)
+* Sellenisko: [GreymaneWall](https://www.hiveworkshop.com/threads/greymanewall.148653/)
