@@ -1081,3 +1081,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blood Raven: [Dice and Cup](https://www.hiveworkshop.com/threads/dice-and-cup.278245/)
 * Stefan.K: [Genn Greymane](https://www.hiveworkshop.com/threads/genn-greymane.291433/)
 * Sellenisko: [GreymaneWall](https://www.hiveworkshop.com/threads/greymanewall.148653/)
+* ShadiHD: [CSW - High Elf Swordsman Soundset](https://www.hiveworkshop.com/threads/csw-high-elf-swordsman-soundset.336913/)
+* Loken Ironwolf: [Warcraft III Cenarius Soundset](https://www.hiveworkshop.com/threads/warcraft-iii-cenarius-soundset.336672/)
+* Cavman, Hawkwing: [Arakkoa](https://www.hiveworkshop.com/threads/arakkoa.121804/)
+* Ujimasa Hojo: [Harpy and Derivatives](https://www.hiveworkshop.com/threads/harpy-and-derivatives.301662/)
+* Mouseketeer: [BTNArakkoaWarrioress](https://www.hiveworkshop.com/threads/btnarakkoawarrioress.344310/)
