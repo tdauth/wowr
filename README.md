@@ -1092,3 +1092,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Cavman, Mr.Goblin: [TuskarrShaman](https://www.hiveworkshop.com/threads/tuskarrshaman.152801/)
 * Retera: [Tuskarr Mammoth Rider](https://www.hiveworkshop.com/threads/tuskarr-mammoth-rider.336325/)
 * Gen Bloodhorn: [tuskarr villager](https://www.hiveworkshop.com/threads/tuskarr-villager.204254/)
+* Retera: [Frozen Halls and derivatives](https://www.hiveworkshop.com/threads/frozen-halls-and-derivatives.336323/)
+* kola: [BTNHarpoon](https://www.hiveworkshop.com/threads/btnharpoon.173950/)
+* Retera: [Owl Moon Priestess](https://www.hiveworkshop.com/threads/owl-moon-priestess.331132/)
+* Barorque: [Druid Forms](https://www.hiveworkshop.com/threads/druid-forms.322330/)
