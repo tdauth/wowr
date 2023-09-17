@@ -1096,3 +1096,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * kola: [BTNHarpoon](https://www.hiveworkshop.com/threads/btnharpoon.173950/)
 * Retera: [Owl Moon Priestess](https://www.hiveworkshop.com/threads/owl-moon-priestess.331132/)
 * Barorque: [Druid Forms](https://www.hiveworkshop.com/threads/druid-forms.322330/)
+* UgoUgo: [MeteorStrike](https://www.hiveworkshop.com/threads/meteorstrike.229366/)
+* Aldeia: [Fire Meteor](https://www.hiveworkshop.com/threads/fire-meteor.319133/)
