@@ -1098,3 +1098,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Barorque: [Druid Forms](https://www.hiveworkshop.com/threads/druid-forms.322330/)
 * UgoUgo: [MeteorStrike](https://www.hiveworkshop.com/threads/meteorstrike.229366/)
 * Aldeia: [Fire Meteor](https://www.hiveworkshop.com/threads/fire-meteor.319133/)
+* Cavman, Kuhneghetz: [Night Elf Druid Cat Form](https://www.hiveworkshop.com/threads/night-elf-druid-cat-form.124678/)
