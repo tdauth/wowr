@@ -1099,3 +1099,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * UgoUgo: [MeteorStrike](https://www.hiveworkshop.com/threads/meteorstrike.229366/)
 * Aldeia: [Fire Meteor](https://www.hiveworkshop.com/threads/fire-meteor.319133/)
 * Cavman, Kuhneghetz: [Night Elf Druid Cat Form](https://www.hiveworkshop.com/threads/night-elf-druid-cat-form.124678/)
+* Dmitry Rommel: [Archdruid](https://www.hiveworkshop.com/threads/archdruid.49781/)
+* Blizzard Entertainment: [BTNDruidOfTheTalonBETA](https://www.hiveworkshop.com/threads/btndruidofthetalonbeta.235466/)
