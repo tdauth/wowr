@@ -1105,3 +1105,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * PetHer01c3, StonemaulMidget: [Murloc Buildings (Completed)](https://www.hiveworkshop.com/threads/murloc-buildings-completed.342340/)
 * Retera: [Dragon Turtle with Siege Mode](https://www.hiveworkshop.com/threads/dragon-turtle-with-siege-mode.302769/)
 * 67chrome: [BTNMurlocGreenWorkerby67chrome](https://www.hiveworkshop.com/threads/btnmurlocgreenworkerby67chrome.188045/)
+* CRAZYRUSSIAN: [BTNCR_Goblin_Tool_Box](https://www.hiveworkshop.com/threads/btncr_goblin_tool_box.57408/)
+* frostwhisper: [Multi-Tier Hydra](https://www.hiveworkshop.com/threads/multi-tier-hydra.330213/)
+* Murlocologist, Stefan.K: [Magni Bronzebeard](https://www.hiveworkshop.com/threads/magni-bronzebeard.303976/)
+* Retera: [Elite Armored Polar Bear](https://www.hiveworkshop.com/threads/elite-armored-polar-bear.336327/)
