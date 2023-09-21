@@ -1109,3 +1109,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * frostwhisper: [Multi-Tier Hydra](https://www.hiveworkshop.com/threads/multi-tier-hydra.330213/)
 * Murlocologist, Stefan.K: [Magni Bronzebeard](https://www.hiveworkshop.com/threads/magni-bronzebeard.303976/)
 * Retera: [Elite Armored Polar Bear](https://www.hiveworkshop.com/threads/elite-armored-polar-bear.336327/)
+* PrincePhoenix: [UI Ice CRAZYRUSSIAN Fixed By Phoenix](https://www.hiveworkshop.com/threads/ui-ice-crazyrussian-fixed-by-phoenix.304023/)
+* The_Silent: [Crossbow Turret](https://www.hiveworkshop.com/threads/crossbow-turret.275531/)
