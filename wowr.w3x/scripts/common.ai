@@ -761,6 +761,11 @@ globals
     constant integer ORC_CITIZEN_FEMALE                              = 'n00J'
     constant integer ORC_HOUSING                                     = 'h00V'
 
+    constant integer ORC_SHIPYARD                                    = 'o009'
+    constant integer ORC_TRANSPORT_SHIP                              = 'obot'
+    constant integer ORC_JUGGERNAUGHT                                = 'ojgn'
+    constant integer ORC_FRIGATE                                     = 'odes'
+
     constant integer FOUNTAIN_OF_BLOOD                               = 'o00F' // special building
     constant integer FEL_DRAGON_ROOST                                = 'ndrb'
 
@@ -1627,6 +1632,62 @@ globals
     constant integer VRYKUL_CITIZEN_FEMALE                           = 'n0F5'
     constant integer VRYKUL_HOUSING                                  = 'h0PC'
 
+    // Tuskarr
+    constant integer TUSKARR_FROZEN_HALL                             = 'o05N' // tier 1
+    constant integer TUSKARR_FROZEN_STRONGHOLD                       = 'o05Y' // tier 2
+    constant integer TUSKARR_FROZEN_FORTRESS                         = 'o05Z' // tier 3
+    constant integer TUSKARR_ALTAR_OF_ICE                            = 'o05O' // altar
+    constant integer TUSKARR_BLOCK_OF_ICE                            = 'o060' // scout/watch tower base
+    constant integer TUSKARR_ICE_WALL                                = 'o061' // cannon tower
+    constant integer TUSKARR_SPIDER_SHRINE                           = 'o062' // guard tower
+    constant integer TUSKARR_FROST_SNOWMAN                           = 'o063' // arcane tower
+    constant integer TUSKARR_HUNTERS_REST                            = 'o05Q' // beastiary/workshop
+    constant integer TUSKARR_ICE_CUTTERS_LODGE                       = 'o05W' // arcane sanctuary
+    constant integer TUSKARR_DECORATED_CAVERN                        = 'o05V' // tauren totem
+    constant integer TUSKARR_ICY_SPIRE                               = 'o05X' // lumber mill/blacksmith
+    constant integer TUSKARR_IGLOO_BARRACKS                          = 'o055' // barracks
+    constant integer TUSKARR_NORTHERN_VENDOR_SHOP                    = 'o05U' // shop
+    constant integer TUSKARR_IGLOO                                   = 'o05P' // farm
+    constant integer TUSKARR_TUSKARR_SHIPYARD                        = 'o064'
+
+    constant integer UPG_TUSKARR_BACKPACK                            = 'R0CC'
+    constant integer UPG_TUSKARR_BEAST_PROTECTION                    = 'R0CH'
+    constant integer UPG_TUSKARR_CLANS                               = 'R0CL'
+    constant integer UPG_TUSKARR_CLEAVING_ATTACK                     = 'R0CQ'
+    constant integer UPG_TUSKARR_CRITICAL_STRIKE                     = 'R0CT'
+    constant integer UPG_TUSKARR_DEVOUR                              = 'R0CM'
+    constant integer UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR            = 'R0CP'
+    constant integer UPG_TUSKARR_ENSNARE                             = 'R0CR'
+    constant integer UPG_TUSKARR_ETHERAL_BEASTS                      = 'R0CI'
+    constant integer UPG_TUSKARR_FROST_IMMUNITY                      = 'R0CE'
+    constant integer UPG_TUSKARR_IMPROVED_FISHING                    = 'R0CG'
+    constant integer UPG_TUSKARR_MAGIC_SENTRY                        = 'R0CJ'
+    constant integer UPG_TUSKARR_SHAMAN_ADEPT_TRAINING               = 'R0CN'
+    constant integer UPG_TUSKARR_TUSKARR_ARMOR                       = 'R0CF'
+    constant integer UPG_TUSKARR_HARPOONS                            = 'R0CK'
+    constant integer UPG_TUSKARR_HEALER_ADEPT_TRAINING               = 'R0CO'
+    constant integer UPG_TUSKARR_TUSKARR_WEAPONS                     = 'R0CD'
+    constant integer UPG_TUSKARR_WAR_STOMP                           = 'R0CS'
+
+    constant integer TUSKARR_WORKER                                  = 'o05M' // worker
+    constant integer TUSKARR_BLUE_DRAKE                              = 'n0FJ' // gryphon
+    constant integer TUSKARR_GIANT_FROST_WOLF                        = 'n0FI'
+    constant integer TUSKARR_ICETUSK_MAMMOTH                         = 'n0FK' // siege engine
+    constant integer TUSKARR_POLAR_BEAR                              = 'n0FL' // sieg engine
+    constant integer TUSKARR_ELITE_ARMORED_POLAR_BEAR                = 'n0FX' // elite siege engine
+    constant integer TUSKARR_CHIEFTAIN                               = 'n0FF' // tauren
+    constant integer TUSKARR_FIGHTER                                 = 'n0FD' // footman
+    constant integer TUSKARR_SPEARMAN                                = 'o0FE' // rifleman
+    constant integer TUSKARR_MAMMOTH_RIDER                           = 'o05T' // knight
+    constant integer TUSKARR_HEALER                                  = 'n0FM' // priest
+    constant integer TUSKARR_SHAMAN                                  = 'o05R' // sorceress
+    constant integer TUSKARR_FISHING_BOAT                            = 'h0PU'
+
+    constant integer TUSKARR_PET_SEAL                                = 'n0FH'
+    constant integer TUSKARR_CITIZEN_FEMALE                          = 'n0FN'
+    constant integer TUSKARR_CITIZEN_MALE                            = 'n0FG'
+    constant integer TUSKARR_HOUSING                                 = 'h0PT'
+
     // Nerubian
     constant integer NERUBIAN_TIER_1                                 = 'u01Q'
     constant integer NERUBIAN_TIER_2                                 = 'u023'
@@ -2117,12 +2178,16 @@ globals
     constant integer CYCLONE                                         = 'A0JC'
     constant integer MONSOON                                         = 'A024'
 
-     // Nerubian
-     constant integer NERUBIAN_QUEEN_HERO                            = 'U027'
-     constant integer MASS_WEB                                       = 'A1CC'
-     constant integer SUMMON_SPIDER_EGG                              = 'A1CF'
-     constant integer SPIN_WEB                                       = 'A1D4'
-     constant integer NERUBIAN_ARMY                                  = 'A1D5'
+    // Tuskarr
+    constant integer TUSKARR_CHIEFTAIN                               = 'N0FC' // hero
+    constant integer MASS_ENSNARE                                    = 'A1HV'
+
+    // Nerubian
+    constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
+    constant integer MASS_WEB                                        = 'A1CC'
+    constant integer SUMMON_SPIDER_EGG                               = 'A1CF'
+    constant integer SPIN_WEB                                        = 'A1D4'
+    constant integer NERUBIAN_ARMY                                   = 'A1D5'
 
     // Modern Warfare
     constant integer US_GENERAL                                      = 'H0F2'
@@ -2709,6 +2774,14 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(VRYKUL_TIER_2,false,townid) + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
     elseif unitid == VRYKUL_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
+
+
+    elseif unitid == TUSKARR_FROZEN_HALL then
+        set have_qty = have_qty + GetUnitCountEx(TUSKARR_FROZEN_STRONGHOLD,false,townid) + GetUnitCountEx(TUSKARR_FROZEN_FORTRESS,false,townid)
+    elseif unitid == TUSKARR_FROZEN_STRONGHOLD then
+        set have_qty = have_qty  + GetUnitCountEx(TUSKARR_FROZEN_FORTRESS,false,townid)
+    elseif unitid == TUSKARR_BLOCK_OF_ICE then
+        set have_qty = have_qty  + GetUnitCountEx(TUSKARR_ICE_WALL,false,townid) + GetUnitCountEx(TUSKARR_SPIDER_SHRINE,false,townid) + GetUnitCountEx(TUSKARR_FROST_SNOWMAN,false,townid)
 
     elseif unitid == NERUBIAN_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(NERUBIAN_TIER_2,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
@@ -4533,6 +4606,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return CYCLONE
         endif
+    // Tuskarr
+    elseif (curHero == TUSKARR_CHIEFTAIN) then
+        if (skillUlti) then
+            return AVATAR
+        elseif (mod == 0) then
+            return MASS_ENSNARE
+        elseif (mod == 1) then
+            return WAR_STOMP
+        elseif (mod == 2) then
+            return FURBOLG_COMMAND_AURA
+        endif
     // Nerubian
     elseif (curHero == NERUBIAN_QUEEN_HERO) then
         if (skillUlti) then
@@ -4782,6 +4866,7 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(LORDAERON_HOUSING)
     set count = count + GetUnitCount(WORGEN_HOUSING)
     set count = count + GetUnitCount(VRYKUL_HOUSING)
+    set count = count + GetUnitCount(TUSKARR_HOUSING)
     set count = count + GetUnitCount(NERUBIAN_HOUSING)
     set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
     set count = count + GetUnitCount(FREEPEOPLE_HOUSING)
