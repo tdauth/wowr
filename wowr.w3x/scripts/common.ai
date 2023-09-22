@@ -2181,7 +2181,7 @@ globals
     constant integer MONSOON                                         = 'A024'
 
     // Tuskarr
-    constant integer TUSKARR_CHIEFTAIN                               = 'N0FC' // hero
+    constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC' // hero
     constant integer MASS_ENSNARE                                    = 'A1HV'
 
     // Nerubian
@@ -4609,7 +4609,7 @@ function ChooseHeroSkill takes nothing returns integer
             return CYCLONE
         endif
     // Tuskarr
-    elseif (curHero == TUSKARR_CHIEFTAIN) then
+    elseif (curHero == HERO_TUSKARR_CHIEFTAIN) then
         if (skillUlti) then
             return AVATAR
         elseif (mod == 0) then
@@ -4822,6 +4822,9 @@ function InitHero takes nothing returns nothing
     // Kul Tiras
     elseif (GetUnitCountDone(HYDROMANCER) > 0) then
         set hero_id = HYDROMANCER
+    // Tuskarr
+    elseif (GetUnitCountDone(HERO_TUSKARR_CHIEFTAIN) > 0) then
+        set hero_id = HERO_TUSKARR_CHIEFTAIN
     // Modern Warfare
     elseif (GetUnitCountDone(US_GENERAL) > 0) then
         set hero_id = US_GENERAL
