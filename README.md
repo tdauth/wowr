@@ -1111,3 +1111,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Retera: [Elite Armored Polar Bear](https://www.hiveworkshop.com/threads/elite-armored-polar-bear.336327/)
 * PrincePhoenix: [UI Ice CRAZYRUSSIAN Fixed By Phoenix](https://www.hiveworkshop.com/threads/ui-ice-crazyrussian-fixed-by-phoenix.304023/)
 * The_Silent: [Crossbow Turret](https://www.hiveworkshop.com/threads/crossbow-turret.275531/)
+* Liomsi: [Murlocs models and Icons](https://www.hiveworkshop.com/threads/murlocs-models-and-icons.332375/)
