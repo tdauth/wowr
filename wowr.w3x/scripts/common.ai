@@ -1649,6 +1649,7 @@ globals
     constant integer TUSKARR_NORTHERN_VENDOR_SHOP                    = 'o05U' // shop
     constant integer TUSKARR_IGLOO                                   = 'o05P' // farm
     constant integer TUSKARR_TUSKARR_SHIPYARD                        = 'o064'
+    constant integer TUSKARR_BURIAL_PLACE                            = 'n0FY' // special building
 
     constant integer UPG_TUSKARR_BACKPACK                            = 'R0CC'
     constant integer UPG_TUSKARR_BEAST_PROTECTION                    = 'R0CH'
@@ -1668,9 +1669,10 @@ globals
     constant integer UPG_TUSKARR_HEALER_ADEPT_TRAINING               = 'R0CO'
     constant integer UPG_TUSKARR_TUSKARR_WEAPONS                     = 'R0CD'
     constant integer UPG_TUSKARR_WAR_STOMP                           = 'R0CS'
+    constant integer UPG_TUSKARR_BURIAL_PLACE                        = 'R0CU' // special building
 
     constant integer TUSKARR_WORKER                                  = 'o05M' // worker
-    constant integer TUSKARR_BLUE_DRAKE                              = 'n0FJ' // gryphon
+    constant integer TUSKARR_GIANT_SNOWY_OWL                         = 'n0FJ' // gryphon
     constant integer TUSKARR_GIANT_FROST_WOLF                        = 'n0FI'
     constant integer TUSKARR_ICETUSK_MAMMOTH                         = 'n0FK' // siege engine
     constant integer TUSKARR_POLAR_BEAR                              = 'n0FL' // sieg engine

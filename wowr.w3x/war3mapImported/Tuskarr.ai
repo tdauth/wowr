@@ -69,6 +69,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_TUSKARR_CLEAVING_ATTACK )
     call SetBuildUpgr( 1, UPG_TUSKARR_MAGIC_SENTRY )
     call SetBuildUpgr( 1, UPG_TUSKARR_BACKPACK )
+    call SetBuildUpgr( 1, UPG_TUSKARR_BURIAL_PLACE )
+    call SetBuildUnit( 1, TUSKARR_BURIAL_PLACE )
 
     call BuildingStrategyStandardTier3()
     // **********************************
@@ -198,7 +200,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_BLUE_DRAKE )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -212,7 +214,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_BLUE_DRAKE )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_CHIEFTAIN )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_ELITE_ARMORED_POLAR_BEAR )
     call AddStandardUnitsToAttackWave()
@@ -235,7 +237,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, TUSKARR_MAMMOTH_RIDER )
         
          // big air army
-        call CampaignAttackerEx( 8, 10, 12, TUSKARR_BLUE_DRAKE )
+        call CampaignAttackerEx( 8, 10, 12, TUSKARR_GIANT_SNOWY_OWL )
         
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
