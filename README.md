@@ -1119,3 +1119,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Zephyrius2412: [Murloc & Mur'gul - Variations - Shadowcaster](https://www.hiveworkshop.com/threads/murloc-murgul-variations-shadowcaster.292200/)
 * Marcos DAB: [BTNWaterPearlStaff](https://www.hiveworkshop.com/threads/btnwaterpearlstaff.234287/)
 * Mr.Goblin: [BTNShaman](https://www.hiveworkshop.com/threads/btnshaman.150909/)
+* HerrDave: [Captain James Hook](https://www.hiveworkshop.com/threads/captain-james-hook.276655/)
