@@ -1120,3 +1120,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Marcos DAB: [BTNWaterPearlStaff](https://www.hiveworkshop.com/threads/btnwaterpearlstaff.234287/)
 * Mr.Goblin: [BTNShaman](https://www.hiveworkshop.com/threads/btnshaman.150909/)
 * HerrDave: [Captain James Hook](https://www.hiveworkshop.com/threads/captain-james-hook.276655/)
+* CRAZYRUSSIAN: [BTNBK_Black_Book](https://www.hiveworkshop.com/threads/btnbk_black_book.57393/)
