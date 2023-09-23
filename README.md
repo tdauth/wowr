@@ -1118,3 +1118,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 00110000: [Murloc Air / Bubble Mage](https://www.hiveworkshop.com/threads/murloc-air-bubble-mage.324772/)
 * Zephyrius2412: [Murloc & Mur'gul - Variations - Shadowcaster](https://www.hiveworkshop.com/threads/murloc-murgul-variations-shadowcaster.292200/)
 * Marcos DAB: [BTNWaterPearlStaff](https://www.hiveworkshop.com/threads/btnwaterpearlstaff.234287/)
+* Mr.Goblin: [BTNShaman](https://www.hiveworkshop.com/threads/btnshaman.150909/)
