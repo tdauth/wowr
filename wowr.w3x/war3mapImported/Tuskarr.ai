@@ -22,7 +22,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_ARMOR )
     call SetBuildUpgr( 1, UPG_TUSKARR_BEAST_PROTECTION )
     call SetBuildUpgr( 1, UPG_TUSKARR_ENSNARE )
-    call SetBuildUpgr( 1, UPG_ORC_TUSKARR_IGLOOS )
     call SetBuildUpgr( 1, UPG_TUSKARR_IMPROVED_FISHING )
 
     // Tier 2 buildings
@@ -38,11 +37,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 2, UPG_TUSKARR_HARPOONS )
     call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_ARMOR )
     call SetBuildUpgr( 2, UPG_TUSKARR_BEAST_PROTECTION )
-    call SetBuildUpgr( 2, UPG_ORC_TUSKARR_IGLOOS )
     call SetBuildUpgr( 2, UPG_TUSKARR_IMPROVED_FISHING )
     call SetBuildUpgr( 1, UPG_TUSKARR_FROST_IMMUNITY )
     call SetBuildUpgr( 1, UPG_TUSKARR_ETHERAL_BEASTS )
-    call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_SHAMAN_ADEPT_TRAINING )
+    call SetBuildUpgr( 1, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
     call SetBuildUpgr( 1, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
 
     // Tier 3 buildings
@@ -58,7 +56,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 3, UPG_TUSKARR_HARPOONS )
     call SetBuildUpgr( 3, UPG_TUSKARR_TUSKARR_ARMOR )
     call SetBuildUpgr( 3, UPG_TUSKARR_BEAST_PROTECTION )
-    call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_SHAMAN_ADEPT_TRAINING )
+    call SetBuildUpgr( 2, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
     call SetBuildUpgr( 2, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
     call SetBuildUpgr( 3, UPG_TUSKARR_DEVOUR )
     call SetBuildUpgr( 3, UPG_TUSKARR_IMPROVED_FISHING )
