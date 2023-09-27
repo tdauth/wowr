@@ -1163,6 +1163,7 @@ globals
     constant integer UPG_HIGH_ELF_BACKPACK                           = 'R048'
     constant integer UPG_HIGH_ELF_MAGIC_SENTRY                       = 'R049'
     constant integer UPG_HIGH_ELF_DRAGONHAWL_TAMING                  = 'R04R'
+    constant integer UPG_HIGH_ELF_DIURNAL                            = 'R0D2'
     constant integer UPG_HIGH_ELF_SUNWELL                            = 'R047' // special building
 
     constant integer HIGH_ELF_ENGINEER                               = 'n05D' // worker

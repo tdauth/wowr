@@ -1122,3 +1122,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HerrDave: [Captain James Hook](https://www.hiveworkshop.com/threads/captain-james-hook.276655/)
 * CRAZYRUSSIAN: [BTNBK_Black_Book](https://www.hiveworkshop.com/threads/btnbk_black_book.57393/)
 * Mc !: [Tome Of Retraining](https://www.hiveworkshop.com/threads/tome-of-retraining.47637/)
+* Blizzard Entertainment, Zephyrius2412: [High Elven Upgrades](https://www.hiveworkshop.com/threads/high-elven-upgrades.300433/)

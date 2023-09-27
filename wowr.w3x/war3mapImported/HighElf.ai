@@ -67,6 +67,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_HIGH_ELF_CLOUD )
     call SetBuildUpgr( 1, UPG_HIGH_ELF_TAMING )
     call SetBuildUpgr( 1, UPG_HIGH_ELF_DRAGONHAWL_TAMING )
+    call SetBuildUpgr( 1, UPG_HIGH_ELF_DIURNAL )
     call SetBuildUpgr( 1, UPG_HIGH_ELF_SUNWELL )
     call SetBuildUnit( 1, HIGH_ELF_SUNWELL )
     call SetBuildUpgr( 1, UPG_HIGH_ELF_BACKPACK )
