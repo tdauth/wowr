@@ -1123,3 +1123,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * CRAZYRUSSIAN: [BTNBK_Black_Book](https://www.hiveworkshop.com/threads/btnbk_black_book.57393/)
 * Mc !: [Tome Of Retraining](https://www.hiveworkshop.com/threads/tome-of-retraining.47637/)
 * Blizzard Entertainment, Zephyrius2412: [High Elven Upgrades](https://www.hiveworkshop.com/threads/high-elven-upgrades.300433/)
+* CRAZYRUSSIAN: [BTNHL_Holy_Book](https://www.hiveworkshop.com/threads/btnhl_holy_book.57329/)
