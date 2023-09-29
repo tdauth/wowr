@@ -1136,3 +1136,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Stefan.K: [Female Tauren Druid](https://www.hiveworkshop.com/threads/female-tauren-druid.319201/)
 * Cavman, Kuhneghetz: [Tauren Druid Cat Form](https://www.hiveworkshop.com/threads/tauren-druid-cat-form.124679/)
 * b17rider: [BTNBlackTaurenShaman](https://www.hiveworkshop.com/threads/btnblacktaurenshaman.55744/)
+* johnwar: [Elite Tauren (Re-Classic)](https://www.hiveworkshop.com/threads/elite-tauren-re-classic.335312/)
