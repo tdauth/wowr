@@ -1138,3 +1138,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * b17rider: [BTNBlackTaurenShaman](https://www.hiveworkshop.com/threads/btnblacktaurenshaman.55744/)
 * johnwar: [Elite Tauren (Re-Classic)](https://www.hiveworkshop.com/threads/elite-tauren-re-classic.335312/)
 * Taur: [TaurenSpearThrower](https://www.hiveworkshop.com/threads/taurenspearthrower.49684/)
+* Fingolfin: [Totem Pole](https://www.hiveworkshop.com/threads/totem-pole.290299/)
+* Wildfire: [BTNTaurenTotem](https://www.hiveworkshop.com/threads/btntaurentotem.304253/)
