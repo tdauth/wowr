@@ -129,7 +129,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Runeblade14: Tests.
 * Toasty Toast UwU: Tests.
 * Deranor: Tests.
-* [World of Warcraft logo](https://unrealitymag.com/the-evolution-of-the-world-of-warcraft-logo/)
+* Axxa's World of Warcraft Logo Creator: Logo.
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
 * PROXY, ~Nightmare: [Sargeras](https://www.hiveworkshop.com/threads/sargeras.294982/)
@@ -730,7 +730,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [SauronsMace](https://www.hiveworkshop.com/threads/sauronsmace.50133/)
 * The_Silent: [HQ Victrola](https://www.hiveworkshop.com/threads/hq-victrola.273782/)
 * Darkfang: [BTNHolyNote](https://www.hiveworkshop.com/threads/btnholynote.94260/)
-* Advent Chamber Orchestra: [Mozart - Eine Kleine Nachtmusik allegro](https://freemusicarchive.org/music/Advent_Chamber_Orchestra/Selections_from_the_2005-2006_Season/Advent_Chamber_Orchestra_-_04_-_Mozart_-_A_Little_Night_Music_allegro/)
 * Shaysonio: Roman icons
 * Mike: [Ballista(Scorpion)](https://www.hiveworkshop.com/threads/ballista-scorpion.245474/)
 * Mister_Haudrauf: [Battle Chariot](https://www.hiveworkshop.com/threads/battle-chariot.292219/)
