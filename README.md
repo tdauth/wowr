@@ -1142,3 +1142,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Wildfire: [BTNTaurenTotem](https://www.hiveworkshop.com/threads/btntaurentotem.304253/)
 * Blizzard Entertainment, HerrDave: [Teamcolored Kodo](https://www.hiveworkshop.com/threads/teamcolored-kodo.271229/)
 * apaka: [TaurenKodoBeast](https://www.hiveworkshop.com/threads/taurenkodobeast.93342/)
+* Direfury: [Gnome Arcanist](https://www.hiveworkshop.com/threads/gnome-arcanist.270739/)
+* Sin'dorei300: [Black Wizard](https://www.hiveworkshop.com/threads/black-wizard.289713/)
+* Norinrad: [Gnomish Bombardier](https://www.hiveworkshop.com/threads/gnomish-bombardier.47863/)
