@@ -1140,3 +1140,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Taur: [TaurenSpearThrower](https://www.hiveworkshop.com/threads/taurenspearthrower.49684/)
 * Fingolfin: [Totem Pole](https://www.hiveworkshop.com/threads/totem-pole.290299/)
 * Wildfire: [BTNTaurenTotem](https://www.hiveworkshop.com/threads/btntaurentotem.304253/)
+* Blizzard Entertainment, HerrDave: [Teamcolored Kodo](https://www.hiveworkshop.com/threads/teamcolored-kodo.271229/)
+* apaka: [TaurenKodoBeast](https://www.hiveworkshop.com/threads/taurenkodobeast.93342/)
