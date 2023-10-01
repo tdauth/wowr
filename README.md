@@ -1144,3 +1144,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Direfury: [Gnome Arcanist](https://www.hiveworkshop.com/threads/gnome-arcanist.270739/)
 * Sin'dorei300: [Black Wizard](https://www.hiveworkshop.com/threads/black-wizard.289713/)
 * Norinrad: [Gnomish Bombardier](https://www.hiveworkshop.com/threads/gnomish-bombardier.47863/)
+* darkdeathknight: [BTNCamera](https://www.hiveworkshop.com/threads/btncamera.191010/)
+* darkdeathknight: [BTNCameraReset](https://www.hiveworkshop.com/threads/btncamerareset.200663/)
+* darkdeathknight: [BTNCameraRight](https://www.hiveworkshop.com/threads/btncameraright.200662/)
+* darkdeathknight: [BTNCameraLeft](https://www.hiveworkshop.com/threads/btncameraleft.200661/)
