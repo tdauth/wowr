@@ -1148,3 +1148,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * darkdeathknight: [BTNCameraReset](https://www.hiveworkshop.com/threads/btncamerareset.200663/)
 * darkdeathknight: [BTNCameraRight](https://www.hiveworkshop.com/threads/btncameraright.200662/)
 * darkdeathknight: [BTNCameraLeft](https://www.hiveworkshop.com/threads/btncameraleft.200661/)
+* darkdeathknight: [BTNCameraClose](https://www.hiveworkshop.com/threads/btncameraclose.200659/)
+* darkdeathknight: [BTNCameraFar](https://www.hiveworkshop.com/threads/btncamerafar.200660/)
+* r.ace613: [Tauren and Derivatives](https://www.hiveworkshop.com/threads/tauren-and-derivatives.335064/)
