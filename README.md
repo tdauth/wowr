@@ -1151,3 +1151,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * darkdeathknight: [BTNCameraClose](https://www.hiveworkshop.com/threads/btncameraclose.200659/)
 * darkdeathknight: [BTNCameraFar](https://www.hiveworkshop.com/threads/btncamerafar.200660/)
 * r.ace613: [Tauren and Derivatives](https://www.hiveworkshop.com/threads/tauren-and-derivatives.335064/)
+* ChevronSeven: [BTNOrbOfNature](https://www.hiveworkshop.com/threads/btnorbofnature.56797/)
+* Sin'dorei300: [Heart Amulet](https://www.hiveworkshop.com/threads/heart-amulet.289805/)
