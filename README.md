@@ -1153,3 +1153,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * r.ace613: [Tauren and Derivatives](https://www.hiveworkshop.com/threads/tauren-and-derivatives.335064/)
 * ChevronSeven: [BTNOrbOfNature](https://www.hiveworkshop.com/threads/btnorbofnature.56797/)
 * Sin'dorei300: [Heart Amulet](https://www.hiveworkshop.com/threads/heart-amulet.289805/)
+* Lord_T: [Lord_T's Ogre Drummer](https://www.hiveworkshop.com/threads/lord_ts-ogre-drummer.97354/)
+* Kitabatake: [Ogre Stone Thrower](https://www.hiveworkshop.com/threads/ogre-stone-thrower.121020/)
+* Red XIII: [WCIIOgreMound](https://www.hiveworkshop.com/threads/wciiogremound.139953/)
