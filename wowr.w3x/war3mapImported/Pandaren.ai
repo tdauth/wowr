@@ -15,8 +15,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, PANDAREN_WAR_ACADEMY )
     call SetBuildUnit( 1, PANDAREN_ALTAR )
     call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
-    call SetBuildUnit( 1, PANDAREN_SANCTUARY )
-    //call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
+    call SetBuildUnit( 1, PANDAREN_BREWERY )
     
     call SetBuildUpgr( 1, UPG_PANDAREN_DEFEND )
     //call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
@@ -29,10 +28,9 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 2 buildings
     call SetBuildUnit( 1, PANDAREN_TIER_2 )
     call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
-    call SetBuildUnit( 1, PANDAREN_SANCTUARY )
     call SetBuildUnit( 1, PANDAREN_ELEMENTAL_SANCTUARY )
     call SetBuildUnit( 4, PANDAREN_SHELTER )
-    //call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
+    call SetBuildUnit( 2, PANDAREN_LANTERN )
     call SetBuildUnit( 2, PANDAREN_CITIZEN_FEMALE )
     
     //call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )

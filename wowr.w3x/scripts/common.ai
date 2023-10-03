@@ -1421,10 +1421,10 @@ globals
     constant integer PANDAREN_ALTAR                                  = 'h0A7' // altar
     constant integer PANDAREN_WAR_ACADEMY                            = 'h0AH' // barracks
     constant integer PANDAREN_LUMBER_MILL                            = 'h0AE' // lumber mill
-    constant integer PANDAREN_SANCTUARY                              = 'h06Q' // blacksmith
     constant integer PANDAREN_WORKSHOP                               = 'h0A9' // workshop
     constant integer PANDAREN_STORM_SPIRE                            = 'h0AF' // aviary
-
+    constant integer PANDAREN_BREWERY                                = 'h0QH' // shop
+    constant integer PANDAREN_LANTERN                                = 'h06Q' scout tower
 //     constant integer UPG_KULTIRAS_LUMBER                             = 'R05M'
 //     constant integer UPG_KULTIRAS_MASONRY                            = 'R05N'
 //     constant integer UPG_KULTIRAS_MELEE                              = 'R06T'
