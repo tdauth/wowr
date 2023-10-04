@@ -1165,3 +1165,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * FrIkY: [BTNPandaArmorUpg2](https://www.hiveworkshop.com/threads/btnpandaarmorupg2.116708/)
 * FrIkY: [BTNPandaArmorUpg2](https://www.hiveworkshop.com/threads/btnpandaarmorupg3.116709/)
 * killst4r: [Pandaren Building7](https://www.hiveworkshop.com/threads/pandaren-building7.49755/)
+* Spellbound, Unwirklich: [Pandaren UI - Widescreen version](https://www.hiveworkshop.com/threads/pandaren-ui-widescreen-version.303704/)
