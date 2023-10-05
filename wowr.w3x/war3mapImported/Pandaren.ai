@@ -20,6 +20,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_PANDAREN_DEFEND )
     call SetBuildUpgr( 1, UPG_PANDAREN_MELEE )
     call SetBuildUpgr( 1, UPG_PANDAREN_ARMOR )
+    call SetBuildUpgr( 1, UPG_PANDAREN_DRINK )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, PANDAREN_TIER_2 )
@@ -32,6 +33,7 @@ function BuildingStrategy takes nothing returns nothing
     
     call SetBuildUpgr( 2, UPG_PANDAREN_MELEE )
     call SetBuildUpgr( 2, UPG_PANDAREN_ARMOR )
+    call SetBuildUpgr( 2, UPG_PANDAREN_DRINK )
     call SetBuildUpgr( 1, UPG_PANDAREN_DRUID )
     call SetBuildUpgr( 1, UPG_PANDAREN_MONK )
     call SetBuildUpgr( 1, UPG_PANDAREN_SAGE )
@@ -45,6 +47,7 @@ function BuildingStrategy takes nothing returns nothing
 
     call SetBuildUpgr( 3, UPG_PANDAREN_MELEE )
     call SetBuildUpgr( 3, UPG_PANDAREN_ARMOR )
+    call SetBuildUpgr( 4, UPG_PANDAREN_DRINK )
     call SetBuildUpgr( 2, UPG_PANDAREN_DRUID )
     call SetBuildUpgr( 2, UPG_PANDAREN_MONK )
     call SetBuildUpgr( 2, UPG_PANDAREN_SAGE )
