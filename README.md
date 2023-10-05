@@ -1176,3 +1176,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * eubz: [High_Bamboo](https://www.hiveworkshop.com/threads/high_bamboo.235227/)
 * infrenus: [Pandaren Transport Ship](https://www.hiveworkshop.com/threads/pandaren-transport-ship.302683/)
 * infrenus: [Pandaren Battleship](https://www.hiveworkshop.com/threads/pandaren-battleship.303571/)
+* chr2: [BTNPandaAura](https://www.hiveworkshop.com/threads/btnpandaaura.212027/)

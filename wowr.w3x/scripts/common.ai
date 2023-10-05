@@ -774,6 +774,11 @@ globals
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
     constant integer UNDEAD_HOUSING                                  = 'h00U'
 
+    constant integer UNDEAD_SHIPYARD                                 = 'u00K'
+    constant integer UNDEAD_TRANSPORT_SHIP                           = 'ubot'
+    constant integer UNDEAD_BATTLESHIP                               = 'uubs'
+    constant integer UNDEAD_FRIGATE                                  = 'udes'
+
     constant integer UPG_UNDEAD_LICH_KING                            = 'R020' // special building
 
     constant integer UNDEAD_LICH_KING                                = 'n037' // special building
@@ -782,6 +787,11 @@ globals
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
     constant integer ELF_HOUSING                                     = 'e016'
+
+    constant integer ELF_SHIPYARD                                    = 'e009'
+    constant integer ELF_TRANSPORT_SHIP                              = 'etrs'
+    constant integer ELF_BATTLESHIP                                  = 'ebsh'
+    constant integer ELF_FRIGATE                                     = 'edes'
 
     constant integer UPG_ELF_WORLD_TREE                              = 'R01Z'
 
@@ -1424,49 +1434,51 @@ globals
     constant integer PANDAREN_WORKSHOP                               = 'h0A9' // workshop
     constant integer PANDAREN_STORM_SPIRE                            = 'h0AF' // aviary
     constant integer PANDAREN_BREWERY                                = 'h0QH' // shop
-    constant integer PANDAREN_LANTERN                                = 'h06Q' scout tower
-//     constant integer UPG_KULTIRAS_LUMBER                             = 'R05M'
-//     constant integer UPG_KULTIRAS_MASONRY                            = 'R05N'
-//     constant integer UPG_KULTIRAS_MELEE                              = 'R06T'
-//     constant integer UPG_KULTIRAS_ARMOR                              = 'R06U'
-//     constant integer UPG_KULTIRAS_RANGED                             = 'R058'
-//     constant integer UPG_KULTIRAS_LEATHER                            = 'R06V'
+    constant integer PANDAREN_LANTERN                                = 'h06Q' // scout tower
+    constant integer PANDAREN_ARCANE_LANTERN                         = 'h0QI' // arcane tower
+    constant integer PANDAREN_JADE_FOREST                            = 'n0GQ' // special building
+    constant integer PANDAREN_SHIPYARD                               = 'e01V'
+
+    constant integer UPG_PANDAREN_MELEE                              = 'R0DJ'
+    constant integer UPG_PANDAREN_ARMOR                              = 'R0DK'
+    constant integer UPG_PANDAREN_DRINK                              = 'R0DM'
     constant integer UPG_PANDAREN_DEFEND                             = 'R06I'
     constant integer UPG_PANDAREN_IMPROVED_BOWS                      = 'R090'
     constant integer UPG_PANDAREN_BACKPACK                           = 'R08Z'
     constant integer UPG_PANDAREN_DRUNK_PANDA                        = 'R091'
-//     constant integer UPG_KULTIRAS_LONG_RIFLES                        = 'R058'
-//     constant integer UPG_KULTIRAS_BACKPACK                           = 'R06Z'
-//     constant integer UPG_KULTIRAS_TRUE_SIGHT                         = 'R06Y'
-//     constant integer UPG_KULTIRAS_SHIP_DOCTOR                        = 'R05K'
     constant integer UPG_PANDAREN_DRUID                              = 'R092'
-//     constant integer UPG_KULTIRAS_HYDROMANCER                        = 'R05L'
-//     constant integer UPG_KULTIRAS_CLEAVING_ATTACK                    = 'R06R'
-//     constant integer UPG_KULTIRAS_SUNDERING_BLADES                   = 'R070'
-//     constant integer UPG_KULTIRAS_ANIMAL                             = 'R05O'
-//     constant integer UPG_KULTIRAS_DEVOUR                             = 'R06X'
-//     constant integer UPG_KULTIRAS_ENSNARE                            = 'R06Q'
-//     constant integer UPG_KULTIRAS_GHOSTS                             = 'R06O'
-//     constant integer UPG_KULTIRAS_MAGIC_SENTRY                       = 'R06S'
-//     constant integer UPG_KULTIRAS_LAND_CANNONS                       = 'R056'
-//     constant integer UPG_KULTIRAS_SHIP_CANNONS                       = 'R055'
-//     constant integer UPG_KULTIRAS_SHIPYARD_REPAIR                    = 'R059'
-//     constant integer UPG_KULTIRAS_TRANSPORTERS                       = 'R057'
-//     constant integer UPG_KULTIRAS_FRAGS                              = 'R071'
-//     constant integer UPG_KULTIRAS_FLARE                              = 'R072'
-//     constant integer UPG_KULTIRAS_PROUDMOORE_KEEP                    = 'R05I' // special building
+    constant integer UPG_PANDAREN_MONK                               = 'R0DL'
+    constant integer UPG_PANDAREN_SAGE                               = 'R0DS'
+    constant integer UPG_PANDAREN_BERSERK                            = 'R0DU'
+    constant integer UPG_PANDAREN_CHAIN_LIGHTNING                    = 'R0DO'
+    constant integer UPG_PANDAREN_CLOUD                              = 'R0DP'
+    constant integer UPG_PANDAREN_COMMAND_AURA                       = 'R0DR'
+    constant integer UPG_PANDAREN_FIREWORK                           = 'R0DN'
+    constant integer UPG_PANDAREN_FRAGMENTATION_SHARDS               = 'R0DT'
+    constant integer UPG_PANDAREN_HARDENED_SKIN                      = 'R0DV'
+    constant integer UPG_PANDAREN_JADE_FOREST                        = 'R0DQ' // special building
+    constant integer UPG_PANDAREN_MAGIC_SENTRY                       = 'R0DI'
+    constant integer UPG_PANDAREN_SPIKED_SHELL                       = 'R0DW'
 
     constant integer PANDAREN_WOODCUTTER                             = 'h067' // worker
     constant integer PANDAREN_ARCHER                                 = 'h0B0'
     constant integer PANDAREN_HONORGUARD                             = 'h0B1'
     constant integer PANDAREN_WARLORD                                = 'h0AG'
-    constant integer PANDAREN_SHAMAN                                 = 'o04N'
+    constant integer PANDAREN_SHAMAN                                 = 'o04N' // monk
     constant integer PANDAREN_SAGE                                   = 'h0AA'
     constant integer PANDAREN_DRUID                                  = 'e01E'
+    constant integer PANDAREN_DRAGON_TURTLE                          = 'n0GO'
+    constant integer PANDAREN_FIREWORK_TEAM                          = 'h0A8'
+    constant integer PANDAREN_PRIMAL_PANDAREN                        = 'n0GR'
     constant integer PANDAREN_CLOUD_SERPENT                          = 'e01D'
+    constant integer PANDAREN_GIANT_SEA_TURTLE                       = 'n0GS'
+
+    constant integer PANDAREN_TRANSPORT_SHIP                         = 'e01W'
+    constant integer PANDAREN_BATTLESHIP                             = 'e01X'
 
     constant integer PANDAREN_CITIZEN_MALE                           = 'n08M'
     constant integer PANDAREN_CITIZEN_FEMALE                         = 'n08N'
+    constant integer PANDAREN_PET                                    = 'n0GP'
     constant integer PANDAREN_HOUSING                                = 'h0JU'
 
     // Troll
@@ -2760,6 +2772,8 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(PANDAREN_TIER_2,false,townid) + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
     elseif unitid == PANDAREN_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
+    elseif unitid == PANDAREN_LANTERN then
+        set have_qty = have_qty  + GetUnitCountEx(PANDAREN_ARCANE_LANTERN,false,townid)
 
     elseif unitid == TROLL_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(TROLL_TIER_2,false,townid) + GetUnitCountEx(TROLL_TIER_3,false,townid)

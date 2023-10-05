@@ -79,6 +79,20 @@ function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, ANCIENT_PROTECT)
 endfunction
 
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, ELF_SHIPYARD )
+        call SetBuildUnit( 1, ELF_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, ELF_FRIGATE )
+        call SetBuildUnit( 2, ELF_BATTLESHIP )
+    else
+        call SetBuildUnit( 0, ELF_SHIPYARD )
+        call SetBuildUnit( 0, ELF_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, ELF_FRIGATE )
+        call SetBuildUnit( 0, ELF_BATTLESHIP )
+    endif
+endfunction
+
 function AttackWaves takes nothing returns nothing 
     //*** WAVE 1 ***
     call InitAssaultGroup()
@@ -221,6 +235,7 @@ function main takes nothing returns nothing
     call InitHero( )
     call StartThread(function UpdateWorkers)
     call Expansions(function BuildExpansions)
+    call Ships(function BuildShips)
 
     call BuildingStrategy( )
 
