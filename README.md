@@ -1177,3 +1177,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * infrenus: [Pandaren Transport Ship](https://www.hiveworkshop.com/threads/pandaren-transport-ship.302683/)
 * infrenus: [Pandaren Battleship](https://www.hiveworkshop.com/threads/pandaren-battleship.303571/)
 * chr2: [BTNPandaAura](https://www.hiveworkshop.com/threads/btnpandaaura.212027/)
+* Tauer: [Gul'dan](https://www.hiveworkshop.com/threads/guldan.295598/)
+* PrinceYaser: [BTNGul'dan](https://www.hiveworkshop.com/threads/btnguldan.301415/)
+* Tauer: [GaronaHalforcen](https://www.hiveworkshop.com/threads/garonahalforcen.268311/)
+* loktar: [Garona](https://www.hiveworkshop.com/threads/garona.327435/)
