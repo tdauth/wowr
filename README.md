@@ -1181,3 +1181,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * PrinceYaser: [BTNGul'dan](https://www.hiveworkshop.com/threads/btnguldan.301415/)
 * Tauer: [GaronaHalforcen](https://www.hiveworkshop.com/threads/garonahalforcen.268311/)
 * loktar: [Garona](https://www.hiveworkshop.com/threads/garona.327435/)
+* kola: [BTNQuestScroll](https://www.hiveworkshop.com/threads/btnquestscroll.154860/)
