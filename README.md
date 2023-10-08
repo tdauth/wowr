@@ -1182,3 +1182,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Tauer: [GaronaHalforcen](https://www.hiveworkshop.com/threads/garonahalforcen.268311/)
 * loktar: [Garona](https://www.hiveworkshop.com/threads/garona.327435/)
 * kola: [BTNQuestScroll](https://www.hiveworkshop.com/threads/btnquestscroll.154860/)
+* Just_Spectating: [Villager Druid 2.0](https://www.hiveworkshop.com/threads/villager-druid-2-0.176644/)
