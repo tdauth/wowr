@@ -1183,3 +1183,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * loktar: [Garona](https://www.hiveworkshop.com/threads/garona.327435/)
 * kola: [BTNQuestScroll](https://www.hiveworkshop.com/threads/btnquestscroll.154860/)
 * Just_Spectating: [Villager Druid 2.0](https://www.hiveworkshop.com/threads/villager-druid-2-0.176644/)
+* kola: [BTNOrange](https://www.hiveworkshop.com/threads/btnorange.191462/)
+* kola: [BTNBanana3](https://www.hiveworkshop.com/threads/btnbanana3.191463/)
+* D.O.G.: [Banana Item](https://www.hiveworkshop.com/threads/banana-item.123200/)
