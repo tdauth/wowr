@@ -1186,3 +1186,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * kola: [BTNOrange](https://www.hiveworkshop.com/threads/btnorange.191462/)
 * kola: [BTNBanana3](https://www.hiveworkshop.com/threads/btnbanana3.191463/)
 * D.O.G.: [Banana Item](https://www.hiveworkshop.com/threads/banana-item.123200/)
+* WyrWuulfe: [Satyr](https://www.hiveworkshop.com/threads/satyr.49044/)
