@@ -813,6 +813,7 @@ globals
     constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h04P' // aviary
     constant integer BLOOD_ELF_MAGIC_VAULT                           = 'n038' // special building
 
+    constant integer UPG_BLOOD_ELF_BACKPACK                          = 'R0DY'
     constant integer UPG_BLOOD_ELF_BREEDING                          = 'R000'
     constant integer UPG_BLOOD_ELF_BOWS                              = 'R009'
     constant integer UPG_BLOOD_ELF_WOOD                              = 'R006'
@@ -831,6 +832,7 @@ globals
     constant integer UPG_BLOOD_ELF_SIPHON_MANA                       = 'R09M'
     constant integer UPG_BLOOD_ELF_MAGIC_VAULT                       = 'R021' // special building
 
+    constant integer BLOOD_ELF_SORCERESS                             = 'h0QL'
     constant integer BLOOD_ELF_PRIEST                                = 'h00G'
     constant integer BLOOD_ELF_LIEUTENANT                            = 'nbel'
     constant integer BLOOD_ELF_WAGON                                 = 'h012'
