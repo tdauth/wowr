@@ -1194,3 +1194,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ujimasa Hojo: [Ancient of Wind and Derivatives](https://www.hiveworkshop.com/threads/ancient-of-wind-and-derivatives.336137/)
 * 84chrome: [Corrupted Night Elves](https://www.hiveworkshop.com/threads/corrupted-night-elves.336240/)
 * Loken Ironwolf: [Warcraft III Medivh Soundset](https://www.hiveworkshop.com/threads/warcraft-iii-medivh-soundset.337074/)
+* Technopig: [Bilgewater Building Icon Pack](https://www.hiveworkshop.com/threads/bilgewater-building-icon-pack.350928/)

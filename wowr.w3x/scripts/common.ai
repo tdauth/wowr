@@ -1208,9 +1208,16 @@ globals
     constant integer GNOME_LABORATORY                                = 'h0NI' // sanctuary
     constant integer GNOME_WORKSHOP                                  = 'h0KS' // workshop
     constant integer GNOME_TELEPORTER                                = 'h0KT' // sacrifical pit
+    constant integer GNOME_ALTAR_OF_TECHNOLOGY                       = 'h0QM' // altar
+    constant integer GNOME_TECHNOLOGY_FAIR                           = 'h0QN' // shop
 
     constant integer UPG_GNOME_BACKPACK                              = 'R09O'
     constant integer UPG_GNOME_INVENTIONS                            = 'R09N'
+    constant integer UPG_GNOME_ARCANIST                              = 'R0DH'
+    constant integer UPG_GNOME_DAMAGE                                = 'R0E0'
+    constant integer UPG_GNOME_ARMOR                                 = 'R0E1'
+    constant integer UPG_GNOME_ENGINEERING                           = 'R0E2'
+    constant integer UPG_GNOME_RESISTANT_SKIN                        = 'R0E3'
 
     constant integer GNOME_ENGINEER                                  = 'h0JY' // worker
     constant integer GNOME_RIFLEMAN                                  = 'h0KC' // rifleman
