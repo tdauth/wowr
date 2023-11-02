@@ -39,6 +39,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_FURBOLG_BLOOD_LUST )
     call SetBuildUpgr( 1, UPG_FURBOLG_BASH )
     call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTION )
+    call SetBuildUpgr( 1, UPG_FURBOLG_CORRUPTED_ANCIENT_PROTECTOR )
+    call SetBuildUnit( 1, FURBOLG_CORRUPTED_ANCIENT_PROTECTOR )
     
     call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
     

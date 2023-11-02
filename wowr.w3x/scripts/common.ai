@@ -975,6 +975,7 @@ globals
     constant integer FURBOLG_HUT                                     = 'n028' // farm
     constant integer GUARDING_FURBOLG                                = 'h016' // tower
     constant integer RESURRECTION_STONE                              = 'h01R' // altar
+    constant integer FURBOLG_CORRUPTED_ANCIENT_PROTECTOR             = 'o00J' // special building
 
     constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
     constant integer FURBOLG_EX                                      = 'n02E'
@@ -1007,6 +1008,7 @@ globals
     constant integer UPG_FURBOLG_BLOOD_LUST                          = 'R01O'
     constant integer UPG_FURBOLG_BASH                                = 'R01P'
     constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
+    constant integer UPG_FURBOLG_CORRUPTED_ANCIENT_PROTECTOR         = 'R02C'
 
     constant integer FURBOLG_CITIZEN_MALE                            = 'n029'
     constant integer FURBOLG_CITIZEN_FEMALE                          = 'n02A'
