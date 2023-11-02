@@ -15,8 +15,6 @@
 //***************************************************************************
 
 globals
-    // Generated
-    trigger                 gg_trg_Melee_Initialization = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -35,6 +33,27 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p = Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u = BlzCreateUnitWithSkin( p, 'negm', -192.0, -2368.0, 270.000, 'negm' )
+    set u = BlzCreateUnitWithSkin( p, 'negm', 320.0, -2368.0, 270.000, 'negm' )
+    set u = BlzCreateUnitWithSkin( p, 'negf', -192.0, -320.0, 270.000, 'negf' )
+    set u = BlzCreateUnitWithSkin( p, 'negf', 320.0, -320.0, 270.000, 'negf' )
+    set u = BlzCreateUnitWithSkin( p, 'nheb', 256.0, 1792.0, 270.000, 'nheb' )
+    set u = BlzCreateUnitWithSkin( p, 'nheb', -320.0, 1792.0, 270.000, 'nheb' )
+    set u = BlzCreateUnitWithSkin( p, 'nef1', -352.0, 2464.0, 270.000, 'nef1' )
+    set u = BlzCreateUnitWithSkin( p, 'nef1', 32.0, 2400.0, 270.000, 'nef1' )
+    set u = BlzCreateUnitWithSkin( p, 'nef1', 480.0, 2400.0, 270.000, 'nef1' )
+    set u = BlzCreateUnitWithSkin( p, 'nef1', 928.0, 2464.0, 270.000, 'nef1' )
+    set u = BlzCreateUnitWithSkin( p, 'nef3', 1248.0, 2272.0, 270.000, 'nef3' )
+endfunction
+
+//===========================================================================
 function CreateNeutralHostile takes nothing returns nothing
     local player p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     local unit u
@@ -42,14 +61,14 @@ function CreateNeutralHostile takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'nggr', 2311.2, -2023.7, -86.596, 'nggr' )
+    set u = BlzCreateUnitWithSkin( p, 'nggr', 2311.2, -2023.7, 273.404, 'nggr' )
     set u = BlzCreateUnitWithSkin( p, 'ngst', 2535.9, -2207.0, 249.840, 'ngst' )
-    set u = BlzCreateUnitWithSkin( p, 'ngst', 2116.9, -2221.8, -49.980, 'ngst' )
-    set u = BlzCreateUnitWithSkin( p, 'ngnv', -2612.9, -2651.2, -35.582, 'ngnv' )
-    set u = BlzCreateUnitWithSkin( p, 'ngnw', -2751.3, -2605.8, -63.467, 'ngnw' )
-    set u = BlzCreateUnitWithSkin( p, 'ngnw', -2501.2, -2433.3, -59.803, 'ngnw' )
-    set u = BlzCreateUnitWithSkin( p, 'ngnb', -2434.5, -2673.7, -41.570, 'ngnb' )
-    set u = BlzCreateUnitWithSkin( p, 'ngnb', -2601.6, -2827.1, -31.371, 'ngnb' )
+    set u = BlzCreateUnitWithSkin( p, 'ngst', 2116.9, -2221.8, 310.020, 'ngst' )
+    set u = BlzCreateUnitWithSkin( p, 'ngnv', -2508.5, -2920.6, 324.418, 'ngnv' )
+    set u = BlzCreateUnitWithSkin( p, 'ngnw', -2646.9, -2875.3, 296.533, 'ngnw' )
+    set u = BlzCreateUnitWithSkin( p, 'ngnw', -2396.7, -2702.7, 300.197, 'ngnw' )
+    set u = BlzCreateUnitWithSkin( p, 'ngnb', -2330.0, -2943.1, 318.430, 'ngnb' )
+    set u = BlzCreateUnitWithSkin( p, 'ngnb', -2497.1, -3096.6, 328.629, 'ngnb' )
 endfunction
 
 //===========================================================================
@@ -67,6 +86,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0(  )
 endfunction
 
 //===========================================================================
@@ -79,44 +99,6 @@ function CreateAllUnits takes nothing returns nothing
     call CreatePlayerBuildings(  )
     call CreateNeutralHostile(  )
     call CreatePlayerUnits(  )
-endfunction
-
-//***************************************************************************
-//*
-//*  Triggers
-//*
-//***************************************************************************
-
-//===========================================================================
-// Trigger: Melee Initialization
-//
-// Default melee game initialization for all players
-//===========================================================================
-function Trig_Melee_Initialization_Actions takes nothing returns nothing
-    call MeleeStartingVisibility(  )
-    call MeleeStartingHeroLimit(  )
-    call MeleeGrantHeroItems(  )
-    call MeleeStartingResources(  )
-    call MeleeClearExcessUnits(  )
-    call MeleeStartingUnits(  )
-    call MeleeStartingAI(  )
-    call MeleeInitVictoryDefeat(  )
-endfunction
-
-//===========================================================================
-function InitTrig_Melee_Initialization takes nothing returns nothing
-    set gg_trg_Melee_Initialization = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_Melee_Initialization, function Trig_Melee_Initialization_Actions )
-endfunction
-
-//===========================================================================
-function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_Melee_Initialization(  )
-endfunction
-
-//===========================================================================
-function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_Melee_Initialization )
 endfunction
 
 //***************************************************************************
@@ -152,6 +134,7 @@ endfunction
 function main takes nothing returns nothing
     call SetCameraBounds( -3328.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -3584.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 3328.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 3072.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -3328.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 3072.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 3328.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -3584.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM) )
     call SetDayNightModels( "Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl" )
+    call SetTerrainFogEx( 0, 3000.0, 5000.0, 0.500, 1.000, 1.000, 1.000 )
     call NewSoundEnvironment( "Default" )
     call SetAmbientDaySound( "LordaeronSummerDay" )
     call SetAmbientNightSound( "LordaeronSummerNight" )
@@ -159,8 +142,6 @@ function main takes nothing returns nothing
     call CreateAllUnits(  )
     call InitBlizzard(  )
     call InitGlobals(  )
-    call InitCustomTriggers(  )
-    call RunInitializationTriggers(  )
 
 endfunction
 
