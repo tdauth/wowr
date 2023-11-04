@@ -1209,3 +1209,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * WilliamBz: [WarCraft III Guldan soundset](https://www.hiveworkshop.com/threads/warcraft-iii-guldan-soundset.344601/)
 * Zenonoth: [Mal'Ganis Soundset](https://www.hiveworkshop.com/threads/malganis-soundset.351302/)
 * Dragunov: [Maiev Caged](https://www.hiveworkshop.com/threads/maiev-caged.257441/)
+* r.ace613: [Ancient of Wind and Derivatives](https://www.hiveworkshop.com/threads/ancient-of-wind-and-derivatives.338312/)
