@@ -1203,3 +1203,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Alfagar: [Centaur Tent Camp](https://www.hiveworkshop.com/threads/centaur-tent-camp.135275/)
 * Mephestrial: [Gnoll Race Pack](https://www.hiveworkshop.com/threads/gnoll-race-pack.65909)
 * Mephestrial: [HeroGnollAlpha](https://www.hiveworkshop.com/threads/herognollalpha.89673/)
+* Gyrosphinx: [Kobold Slave](https://www.hiveworkshop.com/threads/kobold-slave.311851/)
+* Direfury: [Wildland Storehouse/Fort\Hold](https://www.hiveworkshop.com/threads/wildland-storehouse-fort-hold.245178/)
+* Mister_Haudrauf: [Quilboar Race](https://www.hiveworkshop.com/threads/quilboar-race.300078/)
+* WilliamBz: [WarCraft III Guldan soundset](https://www.hiveworkshop.com/threads/warcraft-iii-guldan-soundset.344601/)
+* Zenonoth: [Mal'Ganis Soundset](https://www.hiveworkshop.com/threads/malganis-soundset.351302/)
