@@ -15,9 +15,2235 @@
 //***************************************************************************
 
 globals
+    // User-defined
+    dialog array            udg_GameModeSelectionDialog
+    quest array             udg_HumanQuest
+    quest array             udg_NightElfQuest
+    quest array             udg_OrcQuest
+    quest array             udg_NagaQuest
+    quest array             udg_QuestSylvanas
+    quest array             udg_QuestLichking
+    effect array            udg_Quest_Effekt
+    leaderboard array       udg_QuestLeaderboard
+    integer array           udg_Human_Quest_4_Skill_Value
+    integer array           udg_Kills_Untote
+    integer array           udg_Orc_Quest_4_Skill_Wert
+    unit                    udg_MaievCaptor            = null
+    unit                    udg_IllidanController      = null
+    integer array           udg_Kills_Paladin
+    unit                    udg_IllidanStormrage       = null
+    group                   udg_GauntleUnits           = null
+    weathereffect           udg_Felwood_Regen          = null
+    effect                  udg_CystalQuake            = null
+    fogmodifier             udg_LandingSiteSight       = null
+    boolean                 udg_VictoryByKillingArchimonde = false
+    unit array              udg_Held
+    integer                 udg_Chatbefehle_IntegerA   = 0
+    boolean array           udg_PlayerIsWarlord
+    unit array              udg_Rucksack
+    integer                 udg_IntegerA               = 0
+    integer                 udg_IntegerB               = 0
+    integer                 udg_IntegerC               = 0
+    integer                 udg_IntegerD               = 0
+    integer                 udg_IntegerE               = 0
+    integer                 udg_IntegerF               = 0
+    effect                  udg_Quest_HeilenderPaladin_Effekt = null
+    effect                  udg_Quest_HeilendeJaina_Effekt = null
+    string array            udg_RaceName
+    integer array           udg_RaceItemType
+    integer                 udg_MaxRaces               = 0
+    integer                 udg_IntegerG               = 0
+    integer                 udg_IntegerH               = 0
+    integer                 udg_IntegerI               = 0
+    integer                 udg_IntegerJ               = 0
+    string array            udg_ProfessionName
+    integer array           udg_ProfessionItemType
+    integer                 udg_Max_Berufe             = 0
+    integer                 udg_IntegerK               = 0
+    hashtable               udg_DB                     = null
+    string                  udg_Name
+    string                  udg_Attribute1
+    string                  udg_Attribute2
+    string                  udg_Attribute3
+    unit array              udg_Hero
+    integer array           udg_RucksackPageNumber
+    trigger array           udg_PlayerRucksackTrigger
+    integer array           udg_RucksackItemType
+    integer array           udg_RucksackItemCharges
+    integer                 udg_RucksackUnitType       = 0
+    integer                 udg_RucksackAbility1       = 0
+    integer                 udg_RucksackAbility2       = 0
+    integer                 udg_RucksackNoneItemType   = 0
+    real                    udg_RucksackMoveTime       = 0
+    trigger                 udg_RucksackTrigger        = null
+    string                  udg_RevivingInfo
+    string                  udg_CharacterDyingMessage
+    integer                 udg_Quest_Geber_Tyrande    = 0
+    integer                 udg_Quest_Geber_Erzmagier  = 0
+    integer                 udg_Quest_Geber_Anduin     = 0
+    integer                 udg_Quest_Geber_Malfurion  = 0
+    integer                 udg_Quest_Geber_Druide     = 0
+    integer                 udg_Quest_Geber_Paladin    = 0
+    integer                 udg_Quest_Geber_Magni      = 0
+    integer                 udg_Quest_Geber_Hueter_des_Grabs = 0
+    integer                 udg_Quest_Geber_Jaina      = 0
+    string                  udg_Cancel
+    string                  udg_AllyMessage1
+    string                  udg_AllyMessage2
+    string                  udg_UnallyMessage1
+    string                  udg_UnallyMessage2
+    string                  udg_VisionMessage1
+    string                  udg_VisionMessage2
+    string                  udg_UnvisionMessage1
+    string                  udg_UnvisionMessage2
+    string                  udg_ErrorSelf
+    integer                 udg_MaxRespawnGroups       = 0
+    integer                 udg_Quest_Geber_Rotdrache  = 0
+    integer                 udg_Quest_Geber_Brunnen    = 0
+    integer                 udg_Quest_Geber_Thrall     = 0
+    integer                 udg_Quest_Geber_Tyrande_der_Orcs = 0
+    integer                 udg_Quest_Geber_Cairne     = 0
+    integer                 udg_Quest_Geber_Harpyie    = 0
+    integer                 udg_Quest_Geber_Rexxar     = 0
+    integer                 udg_Quest_Geber_Chen       = 0
+    effect                  udg_TalktomeKilJaeden      = null
+    effect                  udg_TalktomeKael           = null
+    effect                  udg_TalktomeVashj          = null
+    effect                  udg_TalktomeIllidan2       = null
+    effect                  udg_TalktomeStormreaver    = null
+    integer                 udg_Quest_Geber_Sylvanas   = 0
+    leaderboard             udg_PaladinsSlain          = null
+    integer array           udg_palakills
+    effect                  udg_TalktomeAnubarak       = null
+    effect                  udg_TalktomeKelThuzad      = null
+    effect                  udg_TalktomeLichKing       = null
+    boolean array           udg_HasMount
+    integer array           udg_CharacterStartXP
+    integer array           udg_DemigodXP
+    timer array             udg_RepickTimer
+    boolean array           udg_HandOfGod
+    boolean array           udg_HandOfGodAvailable
+    integer array           udg_HandOfGodLoopVar
+    location array          udg_HandOfGodTarget
+    timer array             udg_RewardTimer
+    quest array             udg_Draenei_Quest
+    integer                 udg_Quest_Geber_Akama      = 0
+    effect                  udg_TalktomeAkama          = null
+    effect                  udg_TalktomeIllidan3       = null
+    group array             udg_GivenUnitsToFreelancer
+    integer array           udg_GivenUnitsToFreelancerPlayer
+    effect                  udg_TalktomeMagtheridon    = null
+    effect                  udg_TalktomeBlademaster    = null
+    effect                  udg_TalktomeDemonPortal    = null
+    unit array              udg_Hideout
+    boolean array           udg_RepickingHero
+    integer                 udg_ComputerStartRaceIndex = 0
+    integer                 udg_ComputerStartProfessionIndex = 0
+    integer                 udg_ComputerStartHeroIndex = 0
+    integer                 udg_ComputerStartLocationIndex = 0
+    integer                 udg_Max_TownHalls          = 0
+    rect array              udg_TownHallLocation
+    boolean array           udg_ComputerStartLocationTaken
+    integer                 udg_ComputerStartLocationIntegerA = 0
+    integer                 udg_TownHallCounter        = 0
+    unit                    udg_IllidanControlCircle   = null
+    player                  udg_HeroCreationPlayer     = null
+    integer array           udg_HeroUnitType
+    integer                 udg_MaxHeroUnitTypes       = 0
+    integer                 udg_HeroUnitTypeIndex      = 0
+    boolean                 udg_GiveShownSupplyMessage = false
+    integer array           udg_ComputerRace
+    group array             udg_ComputerTownHalls
+    player                  udg_ComputerTownHallPlayer = null
+    group array             udg_ComputerWorkers
+    unit                    udg_ComputerTownHallHero   = null
+    rect                    udg_ComputerTownHallTarget = null
+    item                    udg_ComputerTownHallItem   = null
+    integer array           udg_ComputerStartLocation
+    boolean                 udg_ComputerStartPickedWarlord = false
+    rect array              udg_StartLocation
+    integer                 udg_StartLocationCounter   = 0
+    integer                 udg_Max_StartLocations     = 0
+    integer                 udg_FreelancerBonusAttributes = 0
+    real                    udg_FreelancerXPRate       = 0
+    unit                    udg_LastAddedUnitToGroup   = null
+    effect                  udg_TalktomeSylavanas2     = null
+    group                   udg_AllAltars              = null
+    integer                 udg_RaceHuman              = 0
+    integer                 udg_RaceOrc                = 0
+    integer                 udg_RaceUndead             = 0
+    integer                 udg_RaceNightElf           = 0
+    integer                 udg_RaceBloodElf           = 0
+    integer                 udg_RaceNaga               = 0
+    integer                 udg_RaceDemon              = 0
+    integer                 udg_RaceDraenei            = 0
+    player                  udg_IllidanControllerOriginalOwner = null
+    integer array           udg_PlayerRace
+    integer array           udg_PlayerProfession
+    integer array           udg_RaceItemTypeTinyCastle
+    integer                 udg_HousingLimit           = 0
+    integer                 udg_TowerLimit             = 0
+    player                  udg_TmpPlayer              = null
+    integer array           udg_LegendaryItemType
+    integer                 udg_LegendaryItemTypeSize  = 0
+    integer                 udg_TmpInteger             = 0
+    group                   udg_TmpGroup               = null
+    integer                 udg_Quest_Geber_Lich_King  = 0
+    hashtable               udg_PortalsDestinationsHashTable = null
+    dialog array            udg_GameTypeDialog
+    group                   udg_PortalsGroup           = null
+    timer array             udg_HandOfGodTimer
+    button array            udg_GameTypeDialogButtonNormal
+    button array            udg_GameTypeDialogButtonFast
+    integer                 udg_GameType               = 0
+    integer                 udg_GameTypeNormal         = 0
+    integer                 udg_GameTypeFast           = 0
+    integer                 udg_GameTypeVotesFast      = 0
+    integer                 udg_GameTypeVotesNormal    = 0
+    real                    udg_GameTypeXPRateBonus    = 0
+    integer                 udg_GameTypeHardcore       = 0
+    button array            udg_GameTypeDialogButtonHardcore
+    integer                 udg_GameTypeVotesHardcore  = 0
+    player                  udg_TheBurningLegion       = null
+    quest                   udg_QuestGameType          = null
+    player                  udg_BossesPlayer           = null
+    string                  udg_TmpString
+    boolean                 udg_TmpBoolean             = false
+    integer array           udg_PlayerProfession2
+    integer                 udg_ProfessionNone         = 0
+    boolean array           udg_PlayerProfession2Info
+    integer                 udg_PowerGeneratorLimit    = 0
+    item array              udg_FreelancerItem
+    real array              udg_PlayerCameraDistance
+    unit                    udg_TmpUnit                = null
+    integer                 udg_TmpInteger2            = 0
+    boolean array           udg_DeathSoundsEnabled
+    real                    udg_TmpReal                = 0
+    boolean                 udg_AIRespawn              = false
+    dialog array            udg_AIRespawnDialog
+    button array            udg_AIRespawnButtonYes
+    button array            udg_AIRespawnButtonNo
+    integer                 udg_AIRespawnVotesYes      = 0
+    integer                 udg_AIRespawnVotesNo       = 0
+    boolean                 udg_AIRespawnVoted         = false
+    quest                   udg_QuestAI                = null
+    timer array             udg_AllianceWithTheBurningLegionTi
+    timer array             udg_VotekickCooldownPlayerTimer
+    timer                   udg_VotekickRunningTimer   = null
+    integer                 udg_VotekickVotesYesCounter = 0
+    player                  udg_VotekickTargetPlayer   = null
+    timer                   udg_VotekickCooldownTimer  = null
+    timerdialog             udg_VotekickRunningTimerWindow = null
+    string                  udg_TmpString2
+    boolean array           udg_VotekickPlayerHasVoted
+    timerdialog array       udg_AllianceWithTheBurningLegionTW
+    integer                 udg_TmpItemTypeId          = 0
+    boolean                 udg_TmpBoolean2            = false
+    integer array           udg_PlayerRace2
+    boolean array           udg_PlayerRace2Info
+    integer                 udg_RaceNone               = 0
+    boolean                 udg_VotekickIsRunning      = false
+    effect                  udg_TalktomeSaphiron       = null
+    rect                    udg_LichKingQuest3DropRect = null
+    dialog array            udg_VictoryDialog
+    button array            udg_VictoryButtonNo
+    button array            udg_VictoryButtonYes
+    boolean                 udg_VictoryVoted           = false
+    integer                 udg_VictoryVotesNo         = 0
+    integer                 udg_VictoryVotesYes        = 0
+    quest                   udg_QuestVictory           = null
+    texttag                 udg_VIPsFloatingText       = null
+    boolean array           udg_VIPOnForPlayer
+    dialog array            udg_VIPDialog
+    boolean                 udg_VIPVoted               = false
+    integer                 udg_VIPVotesNo             = 0
+    integer                 udg_VIPVotesYes            = 0
+    button array            udg_VIPButtonNo
+    button array            udg_VIPButtonYes
+    boolean                 udg_VIPs                   = false
+    quest                   udg_QuestVIPs              = null
+    rect                    udg_TmpRect                = null
+    unit array              udg_Held2
+    unit array              udg_Hero2
+    integer array           udg_Held2XP
+    integer                 udg_RaceFurbolg            = 0
+    group                   udg_Bosses                 = null
+    texttag array           udg_VIPNameFloatingText
+    group                   udg_VIPNameUnitGroup       = null
+    string array            udg_VIPNameDescriptions
+    item                    udg_TmpItem                = null
+    integer                 udg_FountainOfBloodLimit   = 0
+    integer                 udg_WorldTreeLimit         = 0
+    boolean array           udg_AllianceWithTheBurningLegionOn
+    timer                   udg_GameTypeTimer          = null
+    timerdialog             udg_GameTypeTimerWindow    = null
+    timer                   udg_AIRespawnTimer         = null
+    timerdialog             udg_AIRespawnTimerWindow   = null
+    timer                   udg_VictoryTimer           = null
+    timerdialog             udg_VictoryTimerWindow     = null
+    timer                   udg_VIPTimer               = null
+    timerdialog             udg_VIPTimerWindow         = null
+    integer                 udg_LichKingLimit          = 0
+    integer                 udg_MagicVaultLimit        = 0
+    boolean                 udg_StatsMultiboardCreated = false
+    force                   udg_TmpPlayerGroup         = null
+    integer array           udg_HeroDeaths
+    dialog array            udg_AIFreelancersDialog
+    boolean                 udg_AIFreelancers          = false
+    button array            udg_AIFreelancersButtonOnlyWarlord
+    button array            udg_AIFreelancersButtonBoth
+    timer                   udg_AIFreelancersTimer     = null
+    timerdialog             udg_AIFreelancersTimerWindow = null
+    boolean                 udg_AIFreelancersVoted     = false
+    integer                 udg_AIFreelancersVotesOnlyWarlords = 0
+    integer                 udg_AIFreelancersVotesBoth = 0
+    integer array           udg_BossKills
+    group array             udg_AIMercenaries
+    group                   udg_AIMercenariesAll       = null
+    integer                 udg_TmpInteger3            = 0
+    integer                 udg_ArcaneObservatoryLimit = 0
+    integer                 udg_BookOfSummoningPedestalLimit = 0
+    integer array           udg_UnitsLost
+    integer array           udg_RaceTechnologiesTotal
+    integer                 udg_FreelanceTechnologiesTotal = 0
+    integer array           udg_AIFreelancersPlayerVoted
+    boolean                 udg_AIFreelancersVoteIsRunning = false
+    integer array           udg_AIRespawnPlayerVoted
+    boolean                 udg_AIRespawnVoteIsRunning = false
+    integer array           udg_QuestsCompletedByPlayer
+    integer array           udg_LegendaryArtifactsCarriedByP
+    group array             udg_BossesKilledByPlayer
+    boolean array           udg_BossStormbringerKilledByPlayer
+    boolean                 udg_GameSettingsVoteIsRunning = false
+    integer array           udg_GameSettingsPlayerVoted
+    integer                 udg_ProfessionHerbalist    = 0
+    integer                 udg_ProfessionAlchemist    = 0
+    integer                 udg_ProfessionWeaponSmith  = 0
+    integer                 udg_ProfessionArmourer     = 0
+    integer                 udg_ProfessionEngineer     = 0
+    integer                 udg_ProfessionLoreMaster   = 0
+    integer                 udg_ProfessionSorcerer     = 0
+    integer                 udg_ProfessionRuneforger   = 0
+    integer                 udg_ProfessionDragonBreeder = 0
+    boolean                 udg_VIPVoteIsRunning       = false
+    integer array           udg_VIPVotePlayerVoted
+    boolean                 udg_VictoryVoteIsRunning   = false
+    integer array           udg_VictoryPlayerVoted
+    integer                 udg_PlayingUsers           = 0
+    integer                 udg_TotalUsers             = 0
+    integer array           udg_PlayerWorkers
+    integer array           udg_PlayerStructures
+    unit                    udg_TheBurningLegionHeroHighest = null
+    unit                    udg_BossesHeroHighest      = null
+    integer                 udg_TmpUnitType            = 0
+    string                  udg_TmpIcon
+    group                   udg_TheBurningLegionHeroes = null
+    integer array           udg_PlayerTierLevel
+    timer array             udg_RepickProfessionTimer
+    real                    udg_RepickProfessionTime   = 0
+    integer                 udg_GameTypeEasy           = 0
+    button array            udg_GameTypeDialogButtonEasy
+    integer                 udg_GameTypeVotesEasy      = 0
+    real                    udg_GameTypeXPRateBonusAI  = 0
+    boolean                 udg_GameTypeVoteIsRunning  = false
+    integer array           udg_GameTypePlayerVoted
+    integer                 udg_GameTime               = 0
+    integer array           udg_PlayerSaveCodeLoads
+    multiboard              udg_StatsMultiboard        = null
+    force                   udg_StatsPlayers           = null
+    effect                  udg_TalktomeSocrethar      = null
+    quest array             udg_Demon_Quest
+    effect                  udg_TalktomeCommanderOfTheCitadel = null
+    effect                  udg_TalktomeQueen          = null
+    integer array           udg_DemonQuest2CharmCounter
+    leaderboard             udg_QuestDemon2Leaderboard = null
+    effect                  udg_TmpEffect              = null
+    integer array           udg_HeroKills
+    integer array           udg_UnitKills
+    integer array           udg_BuildingsRazed
+    timer                   udg_SaveAndLoadTimer       = null
+    timerdialog             udg_SaveAndLoadTimerW      = null
+    boolean                 udg_SaveAndLoadVoteIsRunning = false
+    dialog array            udg_SaveAndLoadDialog
+    button array            udg_SaveAndLoadButtonYes
+    button array            udg_SaveAndLoadButtonNo
+    integer                 udg_SaveAndLoadVotesNo     = 0
+    integer                 udg_SaveAndLoadVotesYes    = 0
+    integer array           udg_SaveAndLoadPlayerVoted
+    boolean                 udg_SaveAndLoadVoted       = false
+    boolean                 udg_SaveAndLoadEnabled     = false
+    quest                   udg_QuestSaveAndLoad       = null
+    integer                 udg_EntangledGoldmineLimit = 0
+    real                    udg_TmpReal2               = 0
+    real                    udg_TmpReal3               = 0
+    group                   udg_Gates                  = null
+    timer array             udg_SaveCodeCooldownUnitsTimer
+    timer array             udg_SaveCodeCooldownBuildingsTimer
+    integer                 udg_HeroUnitTypeMountainGiant = 0
+    group array             udg_SaveCodeIncludedUnits
+    group array             udg_SaveCodeExcludedUnits
+    real                    udg_SaveCodeCooldownObjects = 0
+    trigger array           udg_PlayerRucksackTriggerPickup
+    trigger array           udg_PlayerRucksackTriggerDrop
+    boolean array           udg_RucksackItemPawnable
+    boolean array           udg_RucksackItemInvulnerable
+    trigger array           udg_PlayerRucksackTriggerMove
+    boolean array           udg_PlayerIsPassive
+    force array             udg_PlayerPassiveModeEnemies
+    timer array             udg_PlayerPassiveModeCooldown
+    rect array              udg_LegendaryItemDropRect
+    group                   udg_CurrentRespawnGroup    = null
+    group                   udg_GoblinTunnels          = null
+    hashtable               udg_GoblinTunnelsUnits     = null
+    timer array             udg_SaveCodeCooldownResearchesTime
+    integer                 udg_TmpTechType            = 0
+    button array            udg_AIFreelancersButtonOnlyFreelan
+    integer                 udg_AIFreelancersVotesOnlyFreelanc = 0
+    boolean                 udg_AIWarlords             = false
+    group                   udg_GoblinTunnelStarts     = null
+    timer                   udg_AISpecialTimer         = null
+    integer                 udg_AISpecial              = 0
+    dialog array            udg_AISpecialDialog
+    button array            udg_AISpecialButtonBL
+    button array            udg_AISpecialButtonBoth
+    button array            udg_AISpecialButtonNone
+    integer array           udg_AISpecialPlayerVoted
+    timerdialog             udg_AISpecialTimerWindow   = null
+    boolean                 udg_AISpecialVoted         = false
+    boolean                 udg_AISpecialVoteIsRunning = false
+    integer                 udg_AISpecialVotesBoth     = 0
+    integer                 udg_AISpecialVotesNone     = 0
+    integer                 udg_AISpecialVotesBL       = 0
+    timer array             udg_RepickRaceTimer
+    real                    udg_RepickRaceTime         = 0
+    integer array           udg_PlayerRaceBeforeRepick
+    integer                 udg_RaceGoblin             = 0
+    group                   udg_GoblinOilPlatforms     = null
+    boolean array           udg_SaveCodeAutoSave
+    boolean array           udg_SaveAndLoadAutoEnabled
+    weathereffect           udg_GuldanShield           = null
+    string                  udg_BossesGuldanCombination
+    string                  udg_BossesGuldanCombinationTried
+    group array             udg_GoblinArtistsColors
+    fogmodifier array       udg_BossGuldanVisibilityBlocker1
+    fogmodifier array       udg_BossGuldanVisibilityBlocker2
+    destructable            udg_CurrentRespawnDestructable = null
+    handle                  udg_TmpHandle              = null
+    integer                 udg_TmpInteger4            = 0
+    unit array              udg_Held3
+    integer array           udg_Held3XP
+    unit array              udg_Hero3
+    integer                 udg_TmpAbilityCode         = 0
+    unit                    udg_TmpUnit2               = null
+    unit                    udg_TmpUnit3               = null
+    timer array             udg_SaveCodeCooldownClanTimer
+    integer array           udg_PlayerBountyGold
+    integer array           udg_PlayerBountyLumber
+    string array            udg_RucksackItemName
+    string array            udg_RucksackItemDescription
+    string array            udg_RucksackItemTooltip
+    string array            udg_RucksackItemTooltipExtended
+    integer array           udg_GoblinBankDepositGold
+    integer array           udg_GoblinBankDepositLumber
+    integer array           udg_ClanInvitation
+    timer                   udg_DemonQuest4SpawnDuration = null
+    group                   udg_DemonQuest4Draenei     = null
+    sound                   udg_TmpSound               = null
+    group                   udg_TmpGroup2              = null
+    group array             udg_ComputerBuildings
+    group array             udg_ComputerUnits
+    group array             udg_ComputerHeroes
+    player                  udg_TmpPlayer2             = null
+    integer                 udg_RaceDwarf              = 0
+    integer                 udg_RaceFreelancer         = 0
+    destructable            udg_TmpDestructible        = null
+    player                  udg_Gaia                   = null
+    group                   udg_DemonQuest3Draenei     = null
+    location                udg_TmpLocation            = null
+    effect                  udg_TalktomeAkamaKillTarget = null
+    group array             udg_KhadgarCouncil
+    unit array              udg_KhadgarTimePortal
+    group array             udg_KhadgarTimePortalUnits
+    boolean array           udg_ClanHasAIPlayer
+    player array            udg_ClanAIPlayer
+    boolean array           udg_ClanShowAIResourcesMessage
+    integer                 udg_RaceHighElf            = 0
+    timer array             udg_SaveCodeCooldownHeroTimer
+    real                    udg_SaveCodeCooldownHeroes = 0
+    integer                 udg_DemonQuest4WaveCounter = 0
+    timer                   udg_ClanDepositCooldownTimer = null
+    timer                   udg_TmpTimer               = null
+    boolean array           udg_CamLockPlayerEnabled
+    unit array              udg_CamLockPlayerTarget
+    timer array             udg_RepickRace2Timer
+    real                    udg_GoblinBankInterestRate = 0
+    integer array           udg_PlayerSelectionRaceType
+    integer array           udg_PlayerSelectionProfessionType
+    integer array           udg_PlayerSelectionHeroType
+    texttag array           udg_PlayerSelectionSelectModeText
+    unit array              udg_PlayerSelectionSoul
+    integer                 udg_MaxBonusHeroUnitTypes  = 0
+    boolean array           udg_HeroJourneyShowedBonusRaces
+    integer                 udg_RaceDalaran            = 0
+    integer                 udg_RaceKulTiras           = 0
+    integer                 udg_RaceRomanEmpire        = 0
+    unit                    udg_BossDeathwing          = null
+    timer                   udg_BossDeathwingTimer     = null
+    effect                  udg_TalktomeJaina          = null
+    quest array             udg_OldGodQuest
+    integer array           udg_oldgodkills
+    leaderboard             udg_OldGodsSlain           = null
+    timer                   udg_BossCenariusTimer      = null
+    unit                    udg_BossCenarius           = null
+    boolean array           udg_PlayerUnlockedAllRaces
+    integer                 udg_ProfessionJewelcrafter = 0
+    group array             udg_EquipmentBags
+    timer array             udg_RepickProfession2Timer
+    boolean array           udg_CamRPGPlayerEnabled
+    integer                 udg_ProfessionEnchanter    = 0
+    boolean array           udg_PlayerShowZonesHints
+    group array             udg_CamLockSelectedUnits
+    integer                 udg_RacePandaren           = 0
+    integer                 udg_ProfessionPirate       = 0
+    group                   udg_AntimagicWards         = null
+    location                udg_TmpLocation2           = null
+    quest                   udg_QuestTomes             = null
+    timer                   udg_TomesTimer             = null
+    timerdialog             udg_TomesTimerWindow       = null
+    boolean                 udg_TomesVoteIsRunning     = false
+    button array            udg_TomesButtonYes
+    button array            udg_TomesButtonNo
+    dialog array            udg_TomesDialog
+    integer array           udg_TomesPlayerVoted
+    boolean                 udg_TomesVoted             = false
+    integer                 udg_TomesVotesYes          = 0
+    integer                 udg_TomesVotesNo           = 0
+    boolean                 udg_Tomes                  = false
+    real                    udg_WarlordXPRate          = 0
+    item array              udg_RucksackTargetItem
+    boolean                 udg_RucksackPickupTimerHasStarted = false
+    timer                   udg_RucksackPickupTimer    = null
+    trigger array           udg_PlayerRucksackTriggerOrder
+    dialog array            udg_ThemesDialog
+    integer                 udg_Themes                 = 0
+    integer array           udg_ThemesPlayerVoted
+    boolean                 udg_ThemesVoteIsRunning    = false
+    integer                 udg_ThemesVotesAll         = 0
+    integer                 udg_ThemesVotesStarWars    = 0
+    integer                 udg_ThemesVotesWarcraft    = 0
+    integer                 udg_ThemesVotesAncient     = 0
+    button array            udg_ThemesButtonWarcraft
+    button array            udg_ThemesButtonAll
+    button array            udg_ThemesButtonStarWars
+    button array            udg_ThemesButtonAncient
+    timer                   udg_ThemesTimer            = null
+    timerdialog             udg_ThemesTimerWindow      = null
+    boolean                 udg_ThemesVoted            = false
+    quest                   udg_QuestThemes            = null
+    integer                 udg_RaceCIS                = 0
+    boolean array           udg_BackpackDontShowUI
+    integer                 udg_RaceGalacticRepublic   = 0
+    integer                 udg_ThemeAll               = 0
+    integer                 udg_ThemeWarcraft          = 0
+    integer                 udg_ThemeStarWars          = 0
+    integer                 udg_ThemeAncient           = 0
+    integer                 udg_MaxHeroAbilityLevel    = 0
+    integer                 udg_MaxHeroLevel           = 0
+    group                   udg_Bridges                = null
+    integer                 udg_TmpItemTypeId2         = 0
+    integer                 udg_ProfessionArchaeologist = 0
+    timer                   udg_TheBurningLegionEnableWaygateT = null
+    integer                 udg_ProfessionWitchDoctor  = 0
+    player array            udg_RucksackItemPlayer
+    integer                 udg_ComputerStartHeroLevel = 0
+    integer                 udg_RaceTroll              = 0
+    integer                 udg_RaceTauren             = 0
+    integer                 udg_HeroLevelHero2         = 0
+    integer                 udg_HeroLevelHero3         = 0
+    boolean array           udg_HeroJourneyUnlockVoidLord
+    timerdialog             udg_DemonQuest4TimerWindow = null
+    boolean                 udg_AllThreeOldGodsHaveBeenKilled = false
+    texttag                 udg_UnknownDungeonFloatingText = null
+    boolean                 udg_DemonQuest4FinalWave   = false
+    integer                 udg_HeroMountainKing       = 0
+    integer                 udg_HeroArchmage           = 0
+    integer                 udg_HeroPaladin            = 0
+    integer                 udg_HeroBloodMage          = 0
+    integer array           udg_PlayerSelectionMode
+    integer                 udg_PlayerSelectionModeInitial = 0
+    integer                 udg_PlayerSelectionModeRepick = 0
+    integer                 udg_PlayerSelectionModeRepickFull = 0
+    integer                 udg_PlayerSelectionModeRepickHero1 = 0
+    integer                 udg_PlayerSelectionModeRepickHero2 = 0
+    integer                 udg_PlayerSelectionModeRepickHero3 = 0
+    integer                 udg_PlayerSelectionModeRepickProf1 = 0
+    integer                 udg_PlayerSelectionModeRepickProf2 = 0
+    integer                 udg_PlayerSelectionModeRepickRace1 = 0
+    integer                 udg_PlayerSelectionModeRepickRace2 = 0
+    integer                 udg_PlayerSelectionModeNone = 0
+    integer array           udg_PlayerSelectionGameMode
+    integer array           udg_PlayerSelectionProfession1
+    integer array           udg_PlayerSelectionProfession2
+    integer array           udg_PlayerSelectionRace1
+    integer array           udg_PlayerSelectionRace2
+    integer array           udg_PlayerSelectionStartLocation
+    real                    udg_RepickHero1Time        = 0
+    real                    udg_RepickHero2Time        = 0
+    real                    udg_RepickHero3Time        = 0
+    timer array             udg_RepickHero1Timer
+    timer array             udg_RepickHero2Timer
+    timer array             udg_RepickHero3Timer
+    integer                 udg_PlayerSelectionStartStormwind = 0
+    integer                 udg_PlayerSelectionStartOrgrimmar = 0
+    integer                 udg_PlayerSelectionStartDraktharon = 0
+    integer                 udg_PlayerSelectionStartDarnassus = 0
+    integer                 udg_PlayerSelectionStartUndercity = 0
+    integer                 udg_PlayerSelectionStartNagaRuins = 0
+    integer                 udg_PlayerSelectionStartOutland = 0
+    integer                 udg_PlayerSelectionStartPandaria = 0
+    integer                 udg_PlayerSelectionStartClanIsland = 0
+    integer                 udg_PlayerSelectionStartIronforge = 0
+    integer                 udg_PlayerSelectionStartTheramore = 0
+    texttag array           udg_PlayerSelectionSettingsText
+    force                   udg_GaiaRescuingPlayers    = null
+    integer                 udg_RaceMedieval           = 0
+    boolean                 udg_UnlockedAll            = false
+    timer array             udg_HolyGrailPingCooldownTimers
+    integer                 udg_HeroSorceress          = 0
+    integer                 udg_HeroWizard             = 0
+    integer                 udg_HeroHydromancer        = 0
+    handle                  udg_TmpHandle2             = null
+    integer                 udg_ProfessionMerchant     = 0
+    location                udg_TmpLocation3           = null
+    location                udg_TmpLocation4           = null
+    integer                 udg_RaceFreePeopleOfMiddleEarth = 0
+    playercolor             udg_TmpPlayerColor         = null
+    integer                 udg_RaceModernWarfare      = 0
+    integer                 udg_TmpUnitType2           = 0
+    integer                 udg_TmpUnitType3           = 0
+    integer                 udg_TmpAbilityCode2        = 0
+    integer                 udg_HeroUSGeneral          = 0
+    integer                 udg_RaceSauronsForces      = 0
+    integer                 udg_HeroMilitaryTribune    = 0
+    integer                 udg_HeroGandalf            = 0
+    integer                 udg_HeroBrewmaster         = 0
+    quest array             udg_Pandarian_Quest
+    effect                  udg_TalktomeChenPandaria   = null
+    integer                 udg_PlayerSelectionStartWaterBase = 0
+    integer                 udg_HeroGeneralGrievous    = 0
+    integer                 udg_HeroCountDooku         = 0
+    integer                 udg_HeroYoda               = 0
+    integer                 udg_HeroSaruman            = 0
+    integer                 udg_RaceGermansWWII        = 0
+    integer                 udg_RaceVrykul             = 0
+    integer                 udg_RaceWorgen             = 0
+    integer                 udg_TmpBuff                = 0
+    minimapicon array       udg_BossMiniMapIcons
+    integer                 udg_BossMinimapIconsCounter = 0
+    effect                  udg_TalktomeChenIngredients = null
+    integer                 udg_HeroThane              = 0
+    integer                 udg_HeroWolfRider          = 0
+    integer                 udg_HeroWorgenDeathKnight  = 0
+    integer                 udg_HeroDeathclaw          = 0
+    integer                 udg_HeroFlamebinder        = 0
+    integer array           udg_HeroRace
+    string                  udg_TmpString3
+    string                  udg_TmpString4
+    string                  udg_TmpString5
+    integer array           udg_RaceTavernItemType
+    integer array           udg_ProfessionItemTypeTavern
+    quest                   udg_QuestHeroJourney       = null
+    quest                   udg_QuestChatCommands      = null
+    quest                   udg_QuestCredits           = null
+    integer                 udg_RaceGnome              = 0
+    boolean array           udg_PlayerShowDamage
+    integer                 udg_ProfessionFarmer       = 0
+    integer                 udg_RaceGalacticEmpire     = 0
+    integer                 udg_RaceAncientGreece      = 0
+    integer                 udg_RaceLordaeron          = 0
+    integer                 udg_ResourceGemstones      = 0
+    integer                 udg_ResourceIron           = 0
+    integer                 udg_ResourceWater          = 0
+    integer                 udg_ResourceOil            = 0
+    integer                 udg_ResourceMeat           = 0
+    integer                 udg_ResourceElectricity    = 0
+    integer                 udg_ResourceMinerals       = 0
+    integer                 udg_ResourceVespeneGas     = 0
+    integer                 udg_ResourceGrain          = 0
+    integer                 udg_ResourceFavor          = 0
+    timer array             udg_SaveCodeCooldownResourcesTimer
+    integer                 udg_ProfessionTamer        = 0
+    integer                 udg_RaceNerubian           = 0
+    integer                 udg_RaceTerran             = 0
+    integer                 udg_ProfessionInscriptor   = 0
+    integer                 udg_PlayerSelectionModeRepickRace3 = 0
+    integer                 udg_PlayerSelectionModeRepickProf3 = 0
+    integer array           udg_PlayerSelectionProfession3
+    integer array           udg_PlayerSelectionRace3
+    integer array           udg_PlayerRace3
+    timer array             udg_RepickProfession3Timer
+    timer array             udg_RepickRace3Timer
+    integer array           udg_PlayerProfession3
+    boolean array           udg_HeroIsBonus
+    integer                 udg_RecipeHolyGrail        = 0
+    boolean array           udg_TownHallHasNavy
+    group                   udg_TmpGroup3              = null
+    integer                 udg_TmpAbilityCode3        = 0
+    integer                 udg_RaceTuskarr            = 0
+    integer                 udg_RaceMurloc             = 0
+    integer                 udg_AchievementDeforestation = 0
+    integer                 udg_AchievementQuestSolver = 0
+    integer                 udg_AchievementMasterQuestSolver = 0
+    integer                 udg_AchievementBossSlayer  = 0
+    integer                 udg_AchievementMasterBossSlayer = 0
+    integer                 udg_AchievementCreepSlayer = 0
+    integer                 udg_AchievementHeroSlayer  = 0
+    integer                 udg_AchievementPlayerSlayer = 0
+    integer                 udg_AchievementWithoutFriends = 0
+    integer                 udg_AchievementMasterCreepSlayer = 0
+    integer                 udg_AchievementTank        = 0
+    integer                 udg_AchievementDestroyer   = 0
+    integer                 udg_AchievementOverpopulation = 0
+    integer                 udg_AchievementDemonHunter = 0
+    integer                 udg_AchievementMasterLocksmith = 0
+    integer                 udg_AchievementSurvivor    = 0
+    integer                 udg_RaceOgre               = 0
+    integer                 udg_AchievementMasterThief = 0
+    dialog array            udg_LoadCharacterDialog
+    button array            udg_LoadCharacterButtonNo
+    button array            udg_LoadCharacterButtonYes
+    integer                 udg_ResourceBlackPowder    = 0
+    integer                 udg_ResourceRock           = 0
+    leaderboard             udg_PortalsDestroyed       = null
+    integer array           udg_portalsdestroyed
+    group                   udg_InvasionPortals        = null
+    integer array           udg_oldgodkills2
+    unit                    udg_InvasionDummy          = null
+    integer                 udg_AttributeAttributePoints = 0
+    integer                 udg_ProfessionNecromancer  = 0
+    integer                 udg_ResourceFruits         = 0
+    rect array              udg_OldGodsQuest2InfernalTargets
+    integer                 udg_OldGodsQuest2InfernalTargetsM = 0
+    integer                 udg_RaceCorruptedAncients  = 0
+    boolean array           udg_PlayerProfession3Info
+    integer                 udg_ProfessionGolemSculptor = 0
+    integer                 udg_RaceCentaur            = 0
+    integer                 udg_RaceGnoll              = 0
+    trigger                 udg_TmpTrigger             = null
+    boolean                 udg_LevelsEnabled          = false
+
+    // Generated
+    rect                    gg_rct_Zone_Elven_Clan_Palace = null
+    rect                    gg_rct_Level_Azeroth_Entry = null
+    rect                    gg_rct_Level_Azeroth_Exit  = null
+    trigger                 gg_trg_Map_Init_Zones      = null
+    trigger                 gg_trg_Map_Start_Music     = null
+    trigger                 gg_trg_Map_Init_Start_Locations = null
+    trigger                 gg_trg_Map_Init_Floating_Texts = null
+    trigger                 gg_trg_Map_Level_Changers_Azeroth = null
+    trigger                 gg_trg_Gates_Initial_Open  = null
+    trigger                 gg_trg_Gates_Close_By_Lever = null
+    trigger                 gg_trg_Gates_Open_By_Lever = null
+    trigger                 gg_trg_Gates_Move_Bridge_Down_By_Lever = null
+    trigger                 gg_trg_Gates_Move_Bridge_Up_By_Lever = null
+    unit                    gg_unit_n08R_0029          = null
+    destructable            gg_dest_LTe1_0000          = null
+    destructable            gg_dest_LT04_0001          = null
+    destructable            gg_dest_LTe1_0004          = null
+    sound                   gg_snd_LargeCityGateOpen1  = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
+    local integer i = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GameModeSelectionDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_Human_Quest_4_Skill_Value[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_Kills_Untote[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_Orc_Quest_4_Skill_Wert[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_Kills_Paladin[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_GauntleUnits = CreateGroup()
+    set udg_VictoryByKillingArchimonde = false
+    set udg_Chatbefehle_IntegerA = 0
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_PlayerIsWarlord[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_IntegerA = 0
+    set udg_IntegerB = 0
+    set udg_IntegerC = 0
+    set udg_IntegerD = 0
+    set udg_IntegerE = 0
+    set udg_IntegerF = 0
+    set i = 0
+    loop
+        exitwhen (i > 100)
+        set udg_RaceName[i] = ""
+        set i = i + 1
+    endloop
+
+    set udg_MaxRaces = 1
+    set udg_IntegerG = 0
+    set udg_IntegerH = 0
+    set udg_IntegerI = 0
+    set udg_IntegerJ = 0
+    set i = 0
+    loop
+        exitwhen (i > 100)
+        set udg_ProfessionName[i] = ""
+        set i = i + 1
+    endloop
+
+    set udg_Max_Berufe = 0
+    set udg_IntegerK = 0
+    set udg_Name = ""
+    set udg_Attribute1 = ""
+    set udg_Attribute2 = ""
+    set udg_Attribute3 = ""
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_Hero[i] = null
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RucksackPageNumber[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 1000)
+        set udg_RucksackItemCharges[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_RucksackUnitType = 0
+    set udg_RucksackAbility1 = 0
+    set udg_RucksackAbility2 = 0
+    set udg_RucksackNoneItemType = 0
+    set udg_RucksackMoveTime = 0
+    set udg_RevivingInfo = ""
+    set udg_CharacterDyingMessage = ""
+    set udg_Quest_Geber_Tyrande = 0
+    set udg_Quest_Geber_Erzmagier = 0
+    set udg_Quest_Geber_Anduin = 0
+    set udg_Quest_Geber_Malfurion = 0
+    set udg_Quest_Geber_Druide = 0
+    set udg_Quest_Geber_Paladin = 0
+    set udg_Quest_Geber_Magni = 0
+    set udg_Quest_Geber_Hueter_des_Grabs = 0
+    set udg_Quest_Geber_Jaina = 0
+    set udg_Cancel = ""
+    set udg_AllyMessage1 = ""
+    set udg_AllyMessage2 = ""
+    set udg_UnallyMessage1 = ""
+    set udg_UnallyMessage2 = ""
+    set udg_VisionMessage1 = ""
+    set udg_VisionMessage2 = ""
+    set udg_UnvisionMessage1 = ""
+    set udg_UnvisionMessage2 = ""
+    set udg_ErrorSelf = ""
+    set udg_MaxRespawnGroups = 0
+    set udg_Quest_Geber_Rotdrache = 0
+    set udg_Quest_Geber_Brunnen = 0
+    set udg_Quest_Geber_Thrall = 0
+    set udg_Quest_Geber_Tyrande_der_Orcs = 0
+    set udg_Quest_Geber_Cairne = 0
+    set udg_Quest_Geber_Harpyie = 0
+    set udg_Quest_Geber_Rexxar = 0
+    set udg_Quest_Geber_Chen = 0
+    set udg_Quest_Geber_Sylvanas = 0
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_palakills[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_HasMount[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_CharacterStartXP[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_DemigodXP[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_HandOfGod[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_HandOfGodAvailable[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_HandOfGodLoopVar[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RewardTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_Quest_Geber_Akama = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GivenUnitsToFreelancer[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_GivenUnitsToFreelancerPlayer[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_RepickingHero[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_ComputerStartRaceIndex = 0
+    set udg_ComputerStartProfessionIndex = 0
+    set udg_ComputerStartHeroIndex = 0
+    set udg_ComputerStartLocationIndex = 0
+    set udg_Max_TownHalls = 0
+    set i = 0
+    loop
+        exitwhen (i > 100)
+        set udg_ComputerStartLocationTaken[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_ComputerStartLocationIntegerA = 0
+    set udg_TownHallCounter = 0
+    set udg_MaxHeroUnitTypes = 0
+    set udg_HeroUnitTypeIndex = 0
+    set udg_GiveShownSupplyMessage = false
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_ComputerRace[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ComputerTownHalls[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ComputerWorkers[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_ComputerStartLocation[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_ComputerStartPickedWarlord = false
+    set udg_StartLocationCounter = 0
+    set udg_Max_StartLocations = 0
+    set udg_FreelancerBonusAttributes = 0
+    set udg_FreelancerXPRate = 0
+    set udg_AllAltars = CreateGroup()
+    set udg_RaceHuman = 1
+    set udg_RaceOrc = 2
+    set udg_RaceUndead = 3
+    set udg_RaceNightElf = 4
+    set udg_RaceBloodElf = 5
+    set udg_RaceNaga = 6
+    set udg_RaceDemon = 7
+    set udg_RaceDraenei = 8
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerRace[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerProfession[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_HousingLimit = 4
+    set udg_TowerLimit = 15
+    set udg_LegendaryItemTypeSize = 0
+    set udg_TmpInteger = 0
+    set udg_TmpGroup = CreateGroup()
+    set udg_Quest_Geber_Lich_King = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GameTypeDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_PortalsGroup = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_HandOfGodTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_GameType = -1
+    set udg_GameTypeNormal = 0
+    set udg_GameTypeFast = 1
+    set udg_GameTypeVotesFast = 0
+    set udg_GameTypeVotesNormal = 0
+    set udg_GameTypeXPRateBonus = 0
+    set udg_GameTypeHardcore = 2
+    set udg_GameTypeVotesHardcore = 0
+    set udg_TheBurningLegion = Player(23)
+    set udg_BossesPlayer = Player(22)
+    set udg_TmpString = ""
+    set udg_TmpBoolean = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerProfession2[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionNone = -1
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerProfession2Info[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_PowerGeneratorLimit = 1
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_FreelancerItem[i] = null
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerCameraDistance[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_TmpInteger2 = 0
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_DeathSoundsEnabled[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_TmpReal = 0
+    set udg_AIRespawn = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AIRespawnDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_AIRespawnVotesYes = 0
+    set udg_AIRespawnVotesNo = 0
+    set udg_AIRespawnVoted = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AllianceWithTheBurningLegionTi[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VotekickCooldownPlayerTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_VotekickRunningTimer = CreateTimer()
+    set udg_VotekickVotesYesCounter = 0
+    set udg_VotekickCooldownTimer = CreateTimer()
+    set udg_TmpString2 = ""
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_VotekickPlayerHasVoted[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_TmpBoolean2 = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerRace2[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerRace2Info[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_RaceNone = 0
+    set udg_VotekickIsRunning = false
+    set udg_LichKingQuest3DropRect = null
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VictoryDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_VictoryVoted = false
+    set udg_VictoryVotesNo = 0
+    set udg_VictoryVotesYes = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VIPOnForPlayer[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VIPDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_VIPVoted = false
+    set udg_VIPVotesNo = 0
+    set udg_VIPVotesYes = 0
+    set udg_VIPs = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_Hero2[i] = null
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_Held2XP[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_RaceFurbolg = 9
+    set udg_Bosses = CreateGroup()
+    set udg_VIPNameUnitGroup = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VIPNameDescriptions[i] = ""
+        set i = i + 1
+    endloop
+
+    set udg_FountainOfBloodLimit = 1
+    set udg_WorldTreeLimit = 1
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AllianceWithTheBurningLegionOn[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_GameTypeTimer = CreateTimer()
+    set udg_AIRespawnTimer = CreateTimer()
+    set udg_VictoryTimer = CreateTimer()
+    set udg_VIPTimer = CreateTimer()
+    set udg_LichKingLimit = 1
+    set udg_MagicVaultLimit = 1
+    set udg_StatsMultiboardCreated = false
+    set udg_TmpPlayerGroup = CreateForce()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_HeroDeaths[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AIFreelancersDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_AIFreelancers = false
+    set udg_AIFreelancersTimer = CreateTimer()
+    set udg_AIFreelancersVoted = false
+    set udg_AIFreelancersVotesOnlyWarlords = 0
+    set udg_AIFreelancersVotesBoth = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_BossKills[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AIMercenaries[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set udg_AIMercenariesAll = CreateGroup()
+    set udg_TmpInteger3 = 0
+    set udg_ArcaneObservatoryLimit = 1
+    set udg_BookOfSummoningPedestalLimit = 1
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_UnitsLost[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 500)
+        set udg_RaceTechnologiesTotal[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_FreelanceTechnologiesTotal = 2
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AIFreelancersPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_AIFreelancersVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AIRespawnPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_AIRespawnVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_QuestsCompletedByPlayer[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_LegendaryArtifactsCarriedByP[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_BossesKilledByPlayer[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_BossStormbringerKilledByPlayer[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_GameSettingsVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GameSettingsPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionHerbalist = 0
+    set udg_ProfessionAlchemist = 1
+    set udg_ProfessionWeaponSmith = 2
+    set udg_ProfessionArmourer = 3
+    set udg_ProfessionEngineer = 4
+    set udg_ProfessionLoreMaster = 5
+    set udg_ProfessionSorcerer = 6
+    set udg_ProfessionRuneforger = 7
+    set udg_ProfessionDragonBreeder = 8
+    set udg_VIPVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VIPVotePlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_VictoryVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_VictoryPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_PlayingUsers = 0
+    set udg_TotalUsers = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerWorkers[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerStructures[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_TmpIcon = ""
+    set udg_TheBurningLegionHeroes = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerTierLevel[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickProfessionTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_RepickProfessionTime = 600.00
+    set udg_GameTypeEasy = 3
+    set udg_GameTypeVotesEasy = 0
+    set udg_GameTypeXPRateBonusAI = 0
+    set udg_GameTypeVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GameTypePlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_GameTime = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSaveCodeLoads[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_StatsPlayers = CreateForce()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_DemonQuest2CharmCounter[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_HeroKills[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_UnitKills[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_BuildingsRazed[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_SaveAndLoadTimer = CreateTimer()
+    set udg_SaveAndLoadVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveAndLoadDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_SaveAndLoadVotesNo = 0
+    set udg_SaveAndLoadVotesYes = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveAndLoadPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_SaveAndLoadVoted = false
+    set udg_SaveAndLoadEnabled = false
+    set udg_EntangledGoldmineLimit = 6
+    set udg_TmpReal2 = 0
+    set udg_TmpReal3 = 0
+    set udg_Gates = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeCooldownUnitsTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeCooldownBuildingsTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_HeroUnitTypeMountainGiant = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeIncludedUnits[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeExcludedUnits[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set udg_SaveCodeCooldownObjects = 3600.00
+    set i = 0
+    loop
+        exitwhen (i > 1000)
+        set udg_RucksackItemPawnable[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 1000)
+        set udg_RucksackItemInvulnerable[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerIsPassive[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerPassiveModeEnemies[i] = CreateForce()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerPassiveModeCooldown[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_CurrentRespawnGroup = CreateGroup()
+    set udg_GoblinTunnels = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeCooldownResearchesTime[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_AIFreelancersVotesOnlyFreelanc = 0
+    set udg_AIWarlords = false
+    set udg_GoblinTunnelStarts = CreateGroup()
+    set udg_AISpecialTimer = CreateTimer()
+    set udg_AISpecial = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AISpecialDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_AISpecialPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_AISpecialVoted = false
+    set udg_AISpecialVoteIsRunning = false
+    set udg_AISpecialVotesBoth = 0
+    set udg_AISpecialVotesNone = 0
+    set udg_AISpecialVotesBL = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickRaceTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_RepickRaceTime = 600.00
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerRaceBeforeRepick[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_RaceGoblin = 10
+    set udg_GoblinOilPlatforms = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeAutoSave[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveAndLoadAutoEnabled[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_BossesGuldanCombination = ""
+    set udg_BossesGuldanCombinationTried = ""
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GoblinArtistsColors[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set udg_TmpInteger4 = 0
+    set i = 0
+    loop
+        exitwhen (i > 25)
+        set udg_Held3XP[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_Hero3[i] = null
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeCooldownClanTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerBountyGold[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerBountyLumber[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 1)
+        set udg_RucksackItemName[i] = ""
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 1)
+        set udg_RucksackItemDescription[i] = ""
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 1)
+        set udg_RucksackItemTooltip[i] = ""
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 1)
+        set udg_RucksackItemTooltipExtended[i] = ""
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GoblinBankDepositGold[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_GoblinBankDepositLumber[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ClanInvitation[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_DemonQuest4SpawnDuration = CreateTimer()
+    set udg_DemonQuest4Draenei = CreateGroup()
+    set udg_TmpGroup2 = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ComputerBuildings[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ComputerUnits[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ComputerHeroes[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set udg_RaceDwarf = 11
+    set udg_RaceFreelancer = 33
+    set udg_Gaia = Player(20)
+    set udg_DemonQuest3Draenei = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_KhadgarCouncil[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_KhadgarTimePortalUnits[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 100)
+        set udg_ClanHasAIPlayer[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 100)
+        set udg_ClanShowAIResourcesMessage[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_RaceHighElf = 12
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeCooldownHeroTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_SaveCodeCooldownHeroes = 3600.00
+    set udg_DemonQuest4WaveCounter = 0
+    set udg_ClanDepositCooldownTimer = CreateTimer()
+    set udg_TmpTimer = CreateTimer()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_CamLockPlayerEnabled[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickRace2Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_GoblinBankInterestRate = 0.05
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionRaceType[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionProfessionType[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionHeroType[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_MaxBonusHeroUnitTypes = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_HeroJourneyShowedBonusRaces[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_RaceDalaran = 13
+    set udg_RaceKulTiras = 14
+    set udg_RaceRomanEmpire = 20
+    set udg_BossDeathwingTimer = CreateTimer()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_oldgodkills[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_BossCenariusTimer = CreateTimer()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerUnlockedAllRaces[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionJewelcrafter = 9
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_EquipmentBags[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickProfession2Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_CamRPGPlayerEnabled[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionEnchanter = 10
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerShowZonesHints[i] = false
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_CamLockSelectedUnits[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    set udg_RacePandaren = 15
+    set udg_ProfessionPirate = 11
+    set udg_AntimagicWards = CreateGroup()
+    set udg_TomesTimer = CreateTimer()
+    set udg_TomesVoteIsRunning = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_TomesDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_TomesPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_TomesVoted = false
+    set udg_TomesVotesYes = 0
+    set udg_TomesVotesNo = 0
+    set udg_Tomes = false
+    set udg_WarlordXPRate = 0
+    set udg_RucksackPickupTimerHasStarted = false
+    set udg_RucksackPickupTimer = CreateTimer()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ThemesDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_Themes = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_ThemesPlayerVoted[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_ThemesVoteIsRunning = false
+    set udg_ThemesVotesAll = 0
+    set udg_ThemesVotesStarWars = 0
+    set udg_ThemesVotesWarcraft = 0
+    set udg_ThemesVotesAncient = 0
+    set udg_ThemesTimer = CreateTimer()
+    set udg_ThemesVoted = false
+    set udg_RaceCIS = 19
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_BackpackDontShowUI[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_RaceGalacticRepublic = 18
+    set udg_ThemeAll = 0
+    set udg_ThemeWarcraft = 1
+    set udg_ThemeStarWars = 2
+    set udg_ThemeAncient = 3
+    set udg_MaxHeroAbilityLevel = 15
+    set udg_MaxHeroLevel = 75
+    set udg_Bridges = CreateGroup()
+    set udg_ProfessionArchaeologist = 12
+    set udg_TheBurningLegionEnableWaygateT = CreateTimer()
+    set udg_ProfessionWitchDoctor = 13
+    set udg_ComputerStartHeroLevel = 0
+    set udg_RaceTroll = 16
+    set udg_RaceTauren = 17
+    set udg_HeroLevelHero2 = 45
+    set udg_HeroLevelHero3 = 65
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_HeroJourneyUnlockVoidLord[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_AllThreeOldGodsHaveBeenKilled = false
+    set udg_DemonQuest4FinalWave = false
+    set udg_HeroMountainKing = 0
+    set udg_HeroArchmage = 0
+    set udg_HeroPaladin = 0
+    set udg_HeroBloodMage = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionMode[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_PlayerSelectionModeInitial = 0
+    set udg_PlayerSelectionModeRepick = 1
+    set udg_PlayerSelectionModeRepickFull = 2
+    set udg_PlayerSelectionModeRepickHero1 = 3
+    set udg_PlayerSelectionModeRepickHero2 = 4
+    set udg_PlayerSelectionModeRepickHero3 = 5
+    set udg_PlayerSelectionModeRepickProf1 = 6
+    set udg_PlayerSelectionModeRepickProf2 = 7
+    set udg_PlayerSelectionModeRepickRace1 = 9
+    set udg_PlayerSelectionModeRepickRace2 = 10
+    set udg_PlayerSelectionModeNone = 12
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionGameMode[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionProfession1[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionProfession2[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionRace1[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionRace2[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionStartLocation[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_RepickHero1Time = 600.00
+    set udg_RepickHero2Time = 600.00
+    set udg_RepickHero3Time = 600.00
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickHero1Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickHero2Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickHero3Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_PlayerSelectionStartStormwind = 0
+    set udg_PlayerSelectionStartOrgrimmar = 1
+    set udg_PlayerSelectionStartDraktharon = 2
+    set udg_PlayerSelectionStartDarnassus = 3
+    set udg_PlayerSelectionStartUndercity = 4
+    set udg_PlayerSelectionStartNagaRuins = 5
+    set udg_PlayerSelectionStartOutland = 6
+    set udg_PlayerSelectionStartPandaria = 7
+    set udg_PlayerSelectionStartClanIsland = 8
+    set udg_PlayerSelectionStartIronforge = 9
+    set udg_PlayerSelectionStartTheramore = 10
+    set udg_GaiaRescuingPlayers = CreateForce()
+    set udg_RaceMedieval = 21
+    set udg_UnlockedAll = false
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_HolyGrailPingCooldownTimers[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_HeroSorceress = 0
+    set udg_HeroWizard = 0
+    set udg_HeroHydromancer = 0
+    set udg_ProfessionMerchant = 14
+    set udg_RaceFreePeopleOfMiddleEarth = 22
+    set udg_RaceModernWarfare = 24
+    set udg_HeroUSGeneral = 0
+    set udg_RaceSauronsForces = 23
+    set udg_HeroMilitaryTribune = 0
+    set udg_HeroGandalf = 0
+    set udg_HeroBrewmaster = 0
+    set udg_PlayerSelectionStartWaterBase = 11
+    set udg_HeroGeneralGrievous = 0
+    set udg_HeroCountDooku = 0
+    set udg_HeroYoda = 0
+    set udg_HeroSaruman = 0
+    set udg_RaceGermansWWII = 25
+    set udg_RaceVrykul = 26
+    set udg_RaceWorgen = 27
+    set udg_BossMinimapIconsCounter = 0
+    set udg_HeroThane = 0
+    set udg_HeroWolfRider = 0
+    set udg_HeroWorgenDeathKnight = 0
+    set udg_HeroDeathclaw = 0
+    set udg_HeroFlamebinder = 0
+    set i = 0
+    loop
+        exitwhen (i > 1)
+        set udg_HeroRace[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_TmpString3 = ""
+    set udg_TmpString4 = ""
+    set udg_TmpString5 = ""
+    set udg_RaceGnome = 28
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerShowDamage[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionFarmer = 15
+    set udg_RaceGalacticEmpire = 19
+    set udg_RaceAncientGreece = 21
+    set udg_RaceLordaeron = 14
+    set udg_ResourceGemstones = 0
+    set udg_ResourceIron = 0
+    set udg_ResourceWater = 0
+    set udg_ResourceOil = 0
+    set udg_ResourceMeat = 0
+    set udg_ResourceElectricity = 0
+    set udg_ResourceMinerals = 0
+    set udg_ResourceVespeneGas = 0
+    set udg_ResourceGrain = 0
+    set udg_ResourceFavor = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_SaveCodeCooldownResourcesTimer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionTamer = 16
+    set udg_RaceNerubian = 28
+    set udg_RaceTerran = 24
+    set udg_ProfessionInscriptor = 17
+    set udg_PlayerSelectionModeRepickRace3 = 11
+    set udg_PlayerSelectionModeRepickProf3 = 8
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionProfession3[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerSelectionRace3[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerRace3[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickProfession3Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_RepickRace3Timer[i] = CreateTimer()
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerProfession3[i] = 0
+        set i = i + 1
+    endloop
+
+    set i = 0
+    loop
+        exitwhen (i > 100)
+        set udg_HeroIsBonus[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_RecipeHolyGrail = 0
+    set i = 0
+    loop
+        exitwhen (i > 30)
+        set udg_TownHallHasNavy[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_TmpGroup3 = CreateGroup()
+    set udg_RaceTuskarr = 9
+    set udg_RaceMurloc = 9
+    set udg_AchievementDeforestation = 0
+    set udg_AchievementQuestSolver = 0
+    set udg_AchievementMasterQuestSolver = 0
+    set udg_AchievementBossSlayer = 0
+    set udg_AchievementMasterBossSlayer = 0
+    set udg_AchievementCreepSlayer = 0
+    set udg_AchievementHeroSlayer = 0
+    set udg_AchievementPlayerSlayer = 0
+    set udg_AchievementWithoutFriends = 0
+    set udg_AchievementMasterCreepSlayer = 0
+    set udg_AchievementTank = 0
+    set udg_AchievementDestroyer = 0
+    set udg_AchievementOverpopulation = 0
+    set udg_AchievementDemonHunter = 0
+    set udg_AchievementMasterLocksmith = 0
+    set udg_AchievementSurvivor = 0
+    set udg_RaceOgre = 9
+    set udg_AchievementMasterThief = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_LoadCharacterDialog[i] = DialogCreate()
+        set i = i + 1
+    endloop
+
+    set udg_ResourceBlackPowder = 0
+    set udg_ResourceRock = 0
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_portalsdestroyed[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_InvasionPortals = CreateGroup()
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_oldgodkills2[i] = 0
+        set i = i + 1
+    endloop
+
+    set udg_AttributeAttributePoints = 0
+    set udg_ProfessionNecromancer = 18
+    set udg_ResourceFruits = 0
+    set udg_OldGodsQuest2InfernalTargetsM = 0
+    set udg_RaceCorruptedAncients = 10
+    set i = 0
+    loop
+        exitwhen (i > 28)
+        set udg_PlayerProfession3Info[i] = false
+        set i = i + 1
+    endloop
+
+    set udg_ProfessionGolemSculptor = 18
+    set udg_RaceCentaur = 10
+    set udg_RaceGnoll = 10
+    set udg_LevelsEnabled = false
 endfunction
 
 //***************************************************************************
@@ -25,6 +2251,62 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
+//***************************************************************************
+//*  WoW Reforged Map Data
+library WoWReforgedMapData
+
+function GetMapFileName takes nothing returns string
+    return "wowr_elvenclan3.15.w3x"
+endfunction
+
+function GetMapLevelName takes nothing returns string
+    return "EC" // Elven Clan
+endfunction
+
+function GetMapStartX takes player whichPlayer, string levelFrom returns real
+    return GetRectCenterX(gg_rct_Level_Azeroth_Exit)
+endfunction
+
+function GetMapStartY takes player whichPlayer, string levelFrom returns real
+    return GetRectCenterY(gg_rct_Level_Azeroth_Exit)
+endfunction
+
+function GetMapStartFacing takes player whichPlayer, string levelFrom returns real
+    return 270.0
+endfunction
+
+function OnRestoreUnit takes player whichPlayer, unit whichUnit, string levelFrom returns nothing
+endfunction
+
+endlibrary
+
+//***************************************************************************
+//*
+//*  Sound Assets
+//*
+//***************************************************************************
+
+function InitSounds takes nothing returns nothing
+    set gg_snd_LargeCityGateOpen1 = CreateSound( "Sound/Ambient/DoodadEffects/LargeCityGateOpen1.flac", false, false, false, 0, 0, "DefaultEAXON" )
+    call SetSoundParamsFromLabel( gg_snd_LargeCityGateOpen1, "GateOpenSound" )
+    call SetSoundDuration( gg_snd_LargeCityGateOpen1, 1445 )
+    call SetSoundVolume( gg_snd_LargeCityGateOpen1, 127 )
+endfunction
+
+//***************************************************************************
+//*
+//*  Destructable Objects
+//*
+//***************************************************************************
+
+function CreateAllDestructables takes nothing returns nothing
+    local destructable d
+    local trigger t
+    local real life
+    set gg_dest_LT04_0001 = BlzCreateDestructableWithSkin( 'LT04', 32.0, -1408.0, 0.000, 1.000, 0, 'LT04' )
+    set gg_dest_LTe1_0004 = BlzCreateDestructableWithSkin( 'LTe1', 64.0, -448.0, 270.000, 0.900, 0, 'LTe1' )
+    set gg_dest_LTe1_0000 = BlzCreateDestructableWithSkin( 'LTe1', 64.0, -2496.0, 270.000, 0.900, 0, 'LTe1' )
+endfunction
 
 //***************************************************************************
 //*
@@ -78,18 +2360,20 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     local trigger t
     local real life
 
+    set u = BlzCreateUnitWithSkin( p, 'nzin', 96.0, -3360.0, 270.000, 'nzin' )
     set u = BlzCreateUnitWithSkin( p, 'ngol', 2304.0, 2368.0, 270.000, 'ngol' )
     call SetResourceAmount( u, 1000000 )
     set u = BlzCreateUnitWithSkin( p, 'nfnp', 0.0, 1088.0, 270.000, 'nfnp' )
-    set u = BlzCreateUnitWithSkin( p, 'ngol', 2688.0, 1728.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 1000000 )
     set u = BlzCreateUnitWithSkin( p, 'ngme', 704.0, 896.0, 270.000, 'ngme' )
-    set u = BlzCreateUnitWithSkin( p, 'nmer', 704.0, -3264.0, 270.000, 'nmer' )
+    set u = BlzCreateUnitWithSkin( p, 'nmer', 704.0, -2880.0, 270.000, 'nmer' )
     call SetUnitColor( u, ConvertPlayerColor(0) )
     set u = BlzCreateUnitWithSkin( p, 'ngad', 704.0, 1280.0, 270.000, 'ngad' )
     set u = BlzCreateUnitWithSkin( p, 'n07P', 704.0, 1664.0, 270.000, 'n07P' )
     set u = BlzCreateUnitWithSkin( p, 'nshp', 2176.0, 384.0, 270.000, 'nshp' )
     set u = BlzCreateUnitWithSkin( p, 'nshp', 1344.0, 384.0, 270.000, 'nshp' )
+    set gg_unit_n08R_0029 = BlzCreateUnitWithSkin( p, 'n08R', -224.0, -800.0, 270.000, 'n08R' )
+    set u = BlzCreateUnitWithSkin( p, 'n0ES', -96.0, 672.0, 270.000, 'n0ES' )
+    set u = BlzCreateUnitWithSkin( p, 'n0DF', 2752.0, 1728.0, 270.000, 'n0DF' )
 endfunction
 
 //===========================================================================
@@ -107,6 +2391,293 @@ function CreateAllUnits takes nothing returns nothing
     call CreatePlayerBuildings(  )
     call CreateNeutralHostile(  )
     call CreatePlayerUnits(  )
+endfunction
+
+//***************************************************************************
+//*
+//*  Regions
+//*
+//***************************************************************************
+
+function CreateRegions takes nothing returns nothing
+    local weathereffect we
+
+    set gg_rct_Zone_Elven_Clan_Palace = Rect( -3296.0, -992.0, 3328.0, 2976.0 )
+    set gg_rct_Level_Azeroth_Entry = Rect( -96.0, -3584.0, 224.0, -3360.0 )
+    set gg_rct_Level_Azeroth_Exit = Rect( -96.0, -3360.0, 224.0, -3136.0 )
+endfunction
+
+//***************************************************************************
+//*
+//*  Triggers
+//*
+//***************************************************************************
+
+//===========================================================================
+// Trigger: Map Init Zones
+//
+// Entering now: |cff00ff00Grove of Cenarius - Cenarius´ Grave|r
+//===========================================================================
+function Trig_Map_Init_Zones_Actions takes nothing returns nothing
+    // ###########################
+    set udg_TmpString = "Elven Clan Palace"
+    set udg_TmpRect = gg_rct_Zone_Elven_Clan_Palace
+    set udg_TmpIcon = "ReplaceableTextures\\CommandButtons\\BTNTavern.blp"
+    set udg_TmpString2 = "All players start here in the beginning of the game to pick their hero etc. and to start the game. "
+    set udg_TmpString3 = "playerselection"
+    call AddZone()
+    // ###########################
+endfunction
+
+//===========================================================================
+function InitTrig_Map_Init_Zones takes nothing returns nothing
+    set gg_trg_Map_Init_Zones = CreateTrigger(  )
+    call TriggerAddAction( gg_trg_Map_Init_Zones, function Trig_Map_Init_Zones_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Map Start Music
+//===========================================================================
+function Trig_Map_Start_Music_Actions takes nothing returns nothing
+    call PlayThematicMusicBJ( "BloodElfTheme" )
+endfunction
+
+//===========================================================================
+function InitTrig_Map_Start_Music takes nothing returns nothing
+    set gg_trg_Map_Start_Music = CreateTrigger(  )
+    call TriggerRegisterTimerEventSingle( gg_trg_Map_Start_Music, 1.00 )
+    call TriggerAddAction( gg_trg_Map_Start_Music, function Trig_Map_Start_Music_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Map Init Start Locations
+//
+// The priorities for the town hall locations goes from bottom to top. Hence, place the ones human players would use at the top.
+//===========================================================================
+function Trig_Map_Init_Start_Locations_Actions takes nothing returns nothing
+    set udg_StartLocationCounter = 0
+    set udg_Max_StartLocations = udg_StartLocationCounter
+endfunction
+
+//===========================================================================
+function InitTrig_Map_Init_Start_Locations takes nothing returns nothing
+    set gg_trg_Map_Init_Start_Locations = CreateTrigger(  )
+    call TriggerAddAction( gg_trg_Map_Init_Start_Locations, function Trig_Map_Init_Start_Locations_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Map Init Floating Texts
+//===========================================================================
+function Trig_Map_Init_Floating_Texts_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_Map_Init_Floating_Texts takes nothing returns nothing
+    set gg_trg_Map_Init_Floating_Texts = CreateTrigger(  )
+    call TriggerRegisterTimerEventSingle( gg_trg_Map_Init_Floating_Texts, 0.00 )
+    call TriggerAddAction( gg_trg_Map_Init_Floating_Texts, function Trig_Map_Init_Floating_Texts_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Map Level Changers Azeroth
+//===========================================================================
+function Trig_Map_Level_Changers_Azeroth_Conditions takes nothing returns boolean
+    if ( not ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) != 'E008' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) != 'E00R' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Map_Level_Changers_Azeroth_Actions takes nothing returns nothing
+    set udg_TmpString = "wowr"
+    call ChangeMapWoWReforged()
+endfunction
+
+//===========================================================================
+function InitTrig_Map_Level_Changers_Azeroth takes nothing returns nothing
+    set gg_trg_Map_Level_Changers_Azeroth = CreateTrigger(  )
+    call TriggerRegisterEnterRectSimple( gg_trg_Map_Level_Changers_Azeroth, gg_rct_Level_Azeroth_Entry )
+    call TriggerAddCondition( gg_trg_Map_Level_Changers_Azeroth, Condition( function Trig_Map_Level_Changers_Azeroth_Conditions ) )
+    call TriggerAddAction( gg_trg_Map_Level_Changers_Azeroth, function Trig_Map_Level_Changers_Azeroth_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Gates Initial Open
+//===========================================================================
+function Trig_Gates_Initial_Open_Actions takes nothing returns nothing
+    call ModifyGateBJ( bj_GATEOPERATION_OPEN, gg_dest_LTe1_0000 )
+    call ModifyGateBJ( bj_GATEOPERATION_OPEN, gg_dest_LTe1_0004 )
+endfunction
+
+//===========================================================================
+function InitTrig_Gates_Initial_Open takes nothing returns nothing
+    set gg_trg_Gates_Initial_Open = CreateTrigger(  )
+    call TriggerAddAction( gg_trg_Gates_Initial_Open, function Trig_Gates_Initial_Open_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Gates Close By Lever
+//===========================================================================
+function Trig_Gates_Close_By_Lever_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'o02W' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Close_By_Lever_Func003C takes nothing returns boolean
+    if ( not ( GetSellingUnit() == gg_unit_n08R_0029 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Close_By_Lever_Actions takes nothing returns nothing
+    call RemoveUnit( GetSoldUnit() )
+    call PlaySoundOnUnitBJ( gg_snd_LargeCityGateOpen1, 100, GetSellingUnit() )
+    if ( Trig_Gates_Close_By_Lever_Func003C() ) then
+        call ModifyGateBJ( bj_GATEOPERATION_CLOSE, gg_dest_LTe1_0000 )
+    else
+        call DoNothing(  )
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Gates_Close_By_Lever takes nothing returns nothing
+    set gg_trg_Gates_Close_By_Lever = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_Gates_Close_By_Lever, EVENT_PLAYER_UNIT_SELL )
+    call TriggerAddCondition( gg_trg_Gates_Close_By_Lever, Condition( function Trig_Gates_Close_By_Lever_Conditions ) )
+    call TriggerAddAction( gg_trg_Gates_Close_By_Lever, function Trig_Gates_Close_By_Lever_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Gates Open By Lever
+//===========================================================================
+function Trig_Gates_Open_By_Lever_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'o02V' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Open_By_Lever_Func003C takes nothing returns boolean
+    if ( not ( GetSellingUnit() == gg_unit_n08R_0029 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Open_By_Lever_Actions takes nothing returns nothing
+    call RemoveUnit( GetSoldUnit() )
+    call PlaySoundOnUnitBJ( gg_snd_LargeCityGateOpen1, 100, GetSellingUnit() )
+    if ( Trig_Gates_Open_By_Lever_Func003C() ) then
+        call ModifyGateBJ( bj_GATEOPERATION_OPEN, gg_dest_LTe1_0000 )
+    else
+        call DoNothing(  )
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Gates_Open_By_Lever takes nothing returns nothing
+    set gg_trg_Gates_Open_By_Lever = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_Gates_Open_By_Lever, EVENT_PLAYER_UNIT_SELL )
+    call TriggerAddCondition( gg_trg_Gates_Open_By_Lever, Condition( function Trig_Gates_Open_By_Lever_Conditions ) )
+    call TriggerAddAction( gg_trg_Gates_Open_By_Lever, function Trig_Gates_Open_By_Lever_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Gates Move Bridge Down By Lever
+//===========================================================================
+function Trig_Gates_Move_Bridge_Down_By_Lever_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'o02X' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Move_Bridge_Down_By_Lever_Func002C takes nothing returns boolean
+    if ( not ( GetSellingUnit() == gg_unit_n08R_0029 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Move_Bridge_Down_By_Lever_Actions takes nothing returns nothing
+    call RemoveUnit( GetSoldUnit() )
+    if ( Trig_Gates_Move_Bridge_Down_By_Lever_Func002C() ) then
+        call ModifyGateBJ( bj_GATEOPERATION_OPEN, gg_dest_LT04_0001 )
+    else
+        call DoNothing(  )
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Gates_Move_Bridge_Down_By_Lever takes nothing returns nothing
+    set gg_trg_Gates_Move_Bridge_Down_By_Lever = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_Gates_Move_Bridge_Down_By_Lever, EVENT_PLAYER_UNIT_SELL )
+    call TriggerAddCondition( gg_trg_Gates_Move_Bridge_Down_By_Lever, Condition( function Trig_Gates_Move_Bridge_Down_By_Lever_Conditions ) )
+    call TriggerAddAction( gg_trg_Gates_Move_Bridge_Down_By_Lever, function Trig_Gates_Move_Bridge_Down_By_Lever_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Gates Move Bridge Up By Lever
+//===========================================================================
+function Trig_Gates_Move_Bridge_Up_By_Lever_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'o02Y' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Move_Bridge_Up_By_Lever_Func002C takes nothing returns boolean
+    if ( not ( GetSellingUnit() == gg_unit_n08R_0029 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gates_Move_Bridge_Up_By_Lever_Actions takes nothing returns nothing
+    call RemoveUnit( GetSoldUnit() )
+    if ( Trig_Gates_Move_Bridge_Up_By_Lever_Func002C() ) then
+        call ModifyGateBJ( bj_GATEOPERATION_CLOSE, gg_dest_LT04_0001 )
+    else
+        call DoNothing(  )
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Gates_Move_Bridge_Up_By_Lever takes nothing returns nothing
+    set gg_trg_Gates_Move_Bridge_Up_By_Lever = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_Gates_Move_Bridge_Up_By_Lever, EVENT_PLAYER_UNIT_SELL )
+    call TriggerAddCondition( gg_trg_Gates_Move_Bridge_Up_By_Lever, Condition( function Trig_Gates_Move_Bridge_Up_By_Lever_Conditions ) )
+    call TriggerAddAction( gg_trg_Gates_Move_Bridge_Up_By_Lever, function Trig_Gates_Move_Bridge_Up_By_Lever_Actions )
+endfunction
+
+//===========================================================================
+function InitCustomTriggers takes nothing returns nothing
+    call InitTrig_Map_Init_Zones(  )
+    call InitTrig_Map_Start_Music(  )
+    call InitTrig_Map_Init_Start_Locations(  )
+    call InitTrig_Map_Init_Floating_Texts(  )
+    call InitTrig_Map_Level_Changers_Azeroth(  )
+    call InitTrig_Gates_Initial_Open(  )
+    call InitTrig_Gates_Close_By_Lever(  )
+    call InitTrig_Gates_Open_By_Lever(  )
+    call InitTrig_Gates_Move_Bridge_Down_By_Lever(  )
+    call InitTrig_Gates_Move_Bridge_Up_By_Lever(  )
+endfunction
+
+//===========================================================================
+function RunInitializationTriggers takes nothing returns nothing
+    call ConditionalTriggerExecute( gg_trg_Map_Init_Zones )
+    call ConditionalTriggerExecute( gg_trg_Map_Init_Start_Locations )
+    call ConditionalTriggerExecute( gg_trg_Gates_Initial_Open )
 endfunction
 
 //***************************************************************************
@@ -147,9 +2718,14 @@ function main takes nothing returns nothing
     call SetAmbientDaySound( "LordaeronSummerDay" )
     call SetAmbientNightSound( "LordaeronSummerNight" )
     call SetMapMusic( "Music", true, 0 )
+    call InitSounds(  )
+    call CreateRegions(  )
+    call CreateAllDestructables(  )
     call CreateAllUnits(  )
     call InitBlizzard(  )
     call InitGlobals(  )
+    call InitCustomTriggers(  )
+    call RunInitializationTriggers(  )
 
 endfunction
 
@@ -166,7 +2742,7 @@ function config takes nothing returns nothing
     call SetTeams( 1 )
     call SetGamePlacement( MAP_PLACEMENT_USE_MAP_SETTINGS )
 
-    call DefineStartLocation( 0, 64.0, -3264.0 )
+    call DefineStartLocation( 0, 64.0, -2944.0 )
 
     // Player setup
     call InitCustomPlayerSlots(  )
