@@ -1221,3 +1221,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Stanakin: [BTNOgreArmor2](https://www.hiveworkshop.com/threads/btnogrearmor2.163720/)
 * Stanakin: [BTNOgreArmor3](https://www.hiveworkshop.com/threads/btnogrearmor3.163721/)
 * Blizzard Entertainment: [BTNOgreMound](https://www.hiveworkshop.com/threads/btnogremound.56328/)
+* Marcos DAB: [BTNGiantOgreSmashingHand](https://www.hiveworkshop.com/threads/btngiantogresmashinghand.231358/)
+* Chucky: [BTNOgreBash](https://www.hiveworkshop.com/threads/btnogrebash.204552/)
+* Marcos DAB: [BlueOgre - Ambush](https://www.hiveworkshop.com/threads/blueogre-ambush.307665/)
