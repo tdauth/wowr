@@ -1226,3 +1226,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Marcos DAB: [BlueOgre - Ambush](https://www.hiveworkshop.com/threads/blueogre-ambush.307665/)
 * Champara Bros: [Holy Nova](https://www.hiveworkshop.com/threads/holy-nova.115821/)
 * 8512590215848: [BTNHolyBan](https://www.hiveworkshop.com/threads/btnholyban.198247/)
+* strongwill: [Dragon Kazan, Battle Realms](https://www.hiveworkshop.com/threads/dragon-kazan-battle-realms.314739/)
+* Vortballat: [Krush Tazsh the Ogre Warlock](https://www.hiveworkshop.com/threads/krush-tazsh-the-ogre-warlock.222586/)
+* Eagle XI: [Skeleton Ogre](https://www.hiveworkshop.com/threads/skeleton-ogre.285621/)
+* supertoinkz: [Altar of some sorts](https://www.hiveworkshop.com/threads/altar-of-some-sorts.166156/)
