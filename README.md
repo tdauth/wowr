@@ -1224,3 +1224,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Marcos DAB: [BTNGiantOgreSmashingHand](https://www.hiveworkshop.com/threads/btngiantogresmashinghand.231358/)
 * Chucky: [BTNOgreBash](https://www.hiveworkshop.com/threads/btnogrebash.204552/)
 * Marcos DAB: [BlueOgre - Ambush](https://www.hiveworkshop.com/threads/blueogre-ambush.307665/)
+* Champara Bros: [Holy Nova](https://www.hiveworkshop.com/threads/holy-nova.115821/)
+* 8512590215848: [BTNHolyBan](https://www.hiveworkshop.com/threads/btnholyban.198247/)
