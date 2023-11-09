@@ -2263,6 +2263,10 @@ globals
     constant integer SPIN_WEB                                        = 'A1D4'
     constant integer NERUBIAN_ARMY                                   = 'A1D5'
 
+    // Ogre
+    constant integer OGRE_LORD                                       = 'N0D1'
+    constant integer MASS_BLOODLUST                                  = 'A173'
+
     // Modern Warfare
     constant integer US_GENERAL                                      = 'H0F2'
     constant integer REPAIR_AURA                                     = 'A0WC'
@@ -2328,6 +2332,10 @@ globals
     constant integer COMMAND_ATTACK_TARGET_OFF                       = 10
     constant integer COMMAND_ATTACK_TARGET_X                         = 11
     constant integer COMMAND_ATTACK_TARGET_Y                         = 12
+
+    // data
+    integer array heroTypes
+    integer heroTypesCounter = 0
 
     // AI command options
     boolean attackEnemyPlayers = true
@@ -4709,6 +4717,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SPIN_WEB
         endif
+    // Ogre
+    elseif (curHero == OGRE_LORD) then
+        if (skillUlti) then
+            return REINCARNATION
+        elseif (mod == 0) then
+            return SHOCKWAVE
+        elseif (mod == 1) then
+            return MASS_BLOODLUST
+        elseif (mod == 2) then
+            return DEVOTION_AURA
+        endif
     // Modern Warfare
     elseif (curHero == US_GENERAL) then
         if (skillUlti) then
@@ -4821,110 +4840,83 @@ function ChooseHeroSkill takes nothing returns integer
     return 'Aamk'
 endfunction
 
-function InitHero takes nothing returns nothing
+function AddHeroTypes takes integer unitTypeId returns integer
+    set heroTypes[heroTypesCounter] = unitTypeId
+    set heroTypesCounter = heroTypesCounter + 1
+    return heroTypesCounter
+endfunction
+
+function InitHeroTypes takes nothing returns nothing
     // Human
-    if (GetUnitCountDone(PALADIN) > 0) then
-        set hero_id = PALADIN
-    elseif (GetUnitCountDone(ARCHMAGE) > 0) then
-        set hero_id = ARCHMAGE
-    elseif (GetUnitCountDone(MTN_KING) > 0) then
-        set hero_id = MTN_KING
-    elseif (GetUnitCountDone(BLOOD_MAGE) > 0) then
-        set hero_id = BLOOD_MAGE
+    call AddHeroTypes(PALADIN)
+    call AddHeroTypes(ARCHMAGE)
+    call AddHeroTypes(MTN_KING)
+    call AddHeroTypes(BLOOD_MAGE)
     // Orc
-    elseif (GetUnitCountDone(BLADE_MASTER) > 0) then
-        set hero_id = BLADE_MASTER
-    elseif (GetUnitCountDone(FAR_SEER) > 0) then
-        set hero_id = FAR_SEER
-    elseif (GetUnitCountDone(TAUREN_CHIEF) > 0) then
-        set hero_id = TAUREN_CHIEF
-    elseif (GetUnitCountDone(SHADOW_HUNTER) > 0) then
-        set hero_id = SHADOW_HUNTER
+    call AddHeroTypes(BLADE_MASTER)
+    call AddHeroTypes(FAR_SEER)
+    call AddHeroTypes(TAUREN_CHIEF)
+    call AddHeroTypes(SHADOW_HUNTER)
     // Night Elf
-    elseif (GetUnitCountDone(DEMON_HUNTER) > 0) then
-        set hero_id = DEMON_HUNTER
-    elseif (GetUnitCountDone(KEEPER) > 0) then
-        set hero_id = KEEPER
-    elseif (GetUnitCountDone(MOON_CHICK) > 0) then
-        set hero_id = MOON_CHICK
-    elseif (GetUnitCountDone(WARDEN) > 0) then
-        set hero_id = WARDEN
-    elseif (GetUnitCountDone(MOUNTAIN_GIANT_HERO) > 0) then
-        set hero_id = MOUNTAIN_GIANT_HERO
+    call AddHeroTypes(DEMON_HUNTER)
+    call AddHeroTypes(KEEPER)
+    call AddHeroTypes(MOON_CHICK)
+    call AddHeroTypes(WARDEN)
+    call AddHeroTypes(MOUNTAIN_GIANT_HERO)
     // Undead
-    elseif (GetUnitCountDone(DEATH_KNIGHT) > 0) then
-        set hero_id = DEATH_KNIGHT
-    elseif (GetUnitCountDone(DARK_RANGER_NEUTRAL) > 0) then
-        set hero_id = DARK_RANGER_NEUTRAL
-    elseif (GetUnitCountDone(LICH) > 0) then
-        set hero_id = LICH
-    elseif (GetUnitCountDone(CRYPT_LORD) > 0) then
-        set hero_id = CRYPT_LORD
+    call AddHeroTypes(DEATH_KNIGHT)
+    call AddHeroTypes(DARK_RANGER_NEUTRAL)
+    call AddHeroTypes(LICH)
+    call AddHeroTypes(CRYPT_LORD)
     // Demon
-    elseif (GetUnitCountDone(PIT_LORD_NEUTRAL) > 0) then
-        set hero_id = PIT_LORD_NEUTRAL
-    elseif (GetUnitCountDone(EREDAR_WARLOCK_NEUTRAL) > 0) then
-        set hero_id = EREDAR_WARLOCK_NEUTRAL
-    elseif (GetUnitCountDone(DREAD_LORD) > 0) then
-        set hero_id = DREAD_LORD
+    call AddHeroTypes(PIT_LORD_NEUTRAL)
+    call AddHeroTypes(EREDAR_WARLOCK_NEUTRAL)
+    call AddHeroTypes(DREAD_LORD)
     // Furbolg
-    elseif (GetUnitCountDone(FURBOLG_URSA_WARRIOR_HERO) > 0) then
-        set hero_id = FURBOLG_URSA_WARRIOR_HERO
+    call AddHeroTypes(FURBOLG_URSA_WARRIOR_HERO)
     // Draenei
-    elseif (GetUnitCountDone(AKAMA) > 0) then
-        set hero_id = AKAMA
+    call AddHeroTypes(AKAMA)
     // Naga
-    elseif (GetUnitCountDone(NAGA_SORCERESS) > 0) then
-        set hero_id = NAGA_SORCERESS
+    call AddHeroTypes(NAGA_SORCERESS)
     // Neutral Heroes
-    elseif (GetUnitCountDone(BEASTMASTER) > 0) then
-        set hero_id = BEASTMASTER
-    elseif (GetUnitCountDone(ALCHEMIST) > 0) then
-        set hero_id = ALCHEMIST
-    elseif (GetUnitCountDone(TINKER) > 0) then
-        set hero_id = TINKER
-    elseif (GetUnitCountDone(BREWMASTER) > 0) then
-        set hero_id = BREWMASTER
-    elseif (GetUnitCountDone(FIRELORD) > 0) then
-        set hero_id = FIRELORD
+    call AddHeroTypes(BEASTMASTER)
+    call AddHeroTypes(ALCHEMIST)
+    call AddHeroTypes(TINKER)
+    call AddHeroTypes(BREWMASTER)
+    call AddHeroTypes(FIRELORD)
+    call AddHeroTypes(BREWMASTER)
     // High Elf
-    elseif (GetUnitCountDone(RANGER) > 0) then
-        set hero_id = RANGER
+    call AddHeroTypes(RANGER)
     // Gnome
-    elseif (GetUnitCountDone(GNOME_ENGINEER_HERO) > 0) then
-        set hero_id = GNOME_ENGINEER_HERO
+    call AddHeroTypes(GNOME_ENGINEER_HERO)
     // Dalaran
-    elseif (GetUnitCountDone(WIZARD) > 0) then
-        set hero_id = WIZARD
-    elseif (GetUnitCountDone(SORCERESS_HERO) > 0) then
-        set hero_id = SORCERESS_HERO
+    call AddHeroTypes(WIZARD)
+    call AddHeroTypes(SORCERESS_HERO)
     // Kul Tiras
-    elseif (GetUnitCountDone(HYDROMANCER) > 0) then
-        set hero_id = HYDROMANCER
+    call AddHeroTypes(HYDROMANCER)
     // Tuskarr
-    elseif (GetUnitCountDone(HERO_TUSKARR_CHIEFTAIN) > 0) then
-        set hero_id = HERO_TUSKARR_CHIEFTAIN
+    call AddHeroTypes(HERO_TUSKARR_CHIEFTAIN)
+    // Nerubian
+    call AddHeroTypes(NERUBIAN_QUEEN_HERO)
+    // Ogre
+    call AddHeroTypes(OGRE_LORD)
     // Modern Warfare
-    elseif (GetUnitCountDone(US_GENERAL) > 0) then
-        set hero_id = US_GENERAL
+    call AddHeroTypes(US_GENERAL)
     // Roman Empire
-    elseif (GetUnitCountDone(MILITARY_TRIBUNE) > 0) then
-        set hero_id = MILITARY_TRIBUNE
+    call AddHeroTypes(MILITARY_TRIBUNE)
     // Free People of Middle Earth
-    elseif (GetUnitCountDone(GANDALF) > 0) then
-        set hero_id = GANDALF
+    call AddHeroTypes(GANDALF)
     // Sauron's Forces
-    elseif (GetUnitCountDone(SARUMAN) > 0) then
-        set hero_id = SARUMAN
+    call AddHeroTypes(SARUMAN)
     // CIS
-    elseif (GetUnitCountDone(GENERAL_GRIEVOUS) > 0) then
-        set hero_id = GENERAL_GRIEVOUS
-    elseif (GetUnitCountDone(COUNT_DOOKU) > 0) then
-        set hero_id = COUNT_DOOKU
+    call AddHeroTypes(GENERAL_GRIEVOUS)
+    call AddHeroTypes(COUNT_DOOKU)
     // Galactic Republic
-    elseif (GetUnitCountDone(YODA) > 0) then
-        set hero_id = YODA
-    endif
+    call AddHeroTypes(YODA)
+endfunction
+
+function InitHero takes nothing returns nothing
+    call InitHeroTypes()
 endfunction
 
 function CountHousings takes nothing returns integer
@@ -4962,31 +4954,42 @@ function CountHousings takes nothing returns integer
     return count
 endfunction
 
-function AttackWithMount takes nothing returns nothing
+function AttackWithMounts takes nothing returns nothing
     if (GetUnitCount(GRYPHON_MOUNT) > 0) then
-        call CampaignAttacker( 0, 1, GRYPHON_MOUNT )
+        call CampaignAttacker( 0, GetUnitCount(GRYPHON_MOUNT), GRYPHON_MOUNT )
     endif
     if (GetUnitCount(WYVERN_MOUNT) > 0) then
-        call CampaignAttacker( 0, 1, WYVERN_MOUNT )
+        call CampaignAttacker( 0, GetUnitCount(WYVERN_MOUNT), WYVERN_MOUNT )
     endif
     if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
-        call CampaignAttacker( 0, 1, FROST_WYRM_MOUNT )
+        call CampaignAttacker( 0, GetUnitCount(FROST_WYRM_MOUNT), FROST_WYRM_MOUNT )
     endif
     if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
-        call CampaignAttacker( 0, 1, CHIMAERA_MOUNT )
+        call CampaignAttacker( 0, GetUnitCount(CHIMAERA_MOUNT), CHIMAERA_MOUNT )
     endif
     if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
-        call CampaignAttacker( 0, 1, NETHER_DRAKE_MOUNT )
+        call CampaignAttacker( 0, GetUnitCount(NETHER_DRAKE_MOUNT), NETHER_DRAKE_MOUNT )
     endif
     if (GetUnitCount(DRAGONHAWK_MOUNT) > 0) then
-        call CampaignAttacker( 0, 1, DRAGONHAWK_MOUNT )
+        call CampaignAttacker( 0, GetUnitCount(DRAGONHAWK_MOUNT), DRAGONHAWK_MOUNT )
     endif
+endfunction
+
+function AttackWithHeroes takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= heroTypesCounter)
+        if (GetUnitCountDone(heroTypes[i]) > 0) then
+            call CampaignAttacker( 0, 1, heroTypes[i] )
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 function AddStandardUnitsToAttackWave takes nothing returns nothing
     call PurchaseZeppelin()
-    call AttackWithMount()
-    call CampaignAttacker( 0, 1, hero_id )
+    call AttackWithMounts()
+    call AttackWithHeroes()
 endfunction
 
 //===========================================================================
