@@ -234,8 +234,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, OGRE_OGRE_FIRE_BREATHER )
 
         call CampaignAttackerEx( 1, 1, 1, OGRE_KORGALL )
-        call CampaignAttackerEx( 2, 2, 2, OGRE_STONEMAUL_OGRE )
-        call CampaignAttackerEx( 2, 2, 2, OGRE_STONEMAUL_MAGI )
+        call CampaignAttackerEx( 4, 4, 4, OGRE_STONEMAUL_OGRE )
+        call CampaignAttackerEx( 4, 4, 4, OGRE_STONEMAUL_MAGI )
         
          // big air army
         call CampaignAttackerEx( 8, 10, 12, OGRE_BRONZE_DRAKE )
