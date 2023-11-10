@@ -1775,7 +1775,7 @@ globals
     constant integer NERUBIAN_NEST                                   = 'u02D' // slaughterhouse
     constant integer NERUBIAN_SPAWNING_GROUND                        = 'u025' // boneyard
     constant integer NERUBIAN_SPAWNING_PIT                           = 'u01Z' // barracks
-    constant integer NERUBIAN_VAULT_OF_RELICS                        = 'u026'
+    constant integer NERUBIAN_VAULT_OF_RELICS                        = 'u026' // shop
     constant integer NERUBIAN_AZJOL_NERUB                            = 'n0EH' // special building
 
     constant integer UPG_NERUBIAN_ANCIENT_POWER                      = 'R0BC' // skeletal mastery
@@ -1808,6 +1808,68 @@ globals
     constant integer NERUBIAN_CITIZEN_MALE                           = 'n0E9'
     constant integer NERUBIAN_CITIZEN_FEMALE                         = 'n0EA'
     constant integer NERUBIAN_HOUSING                                = 'h0OX'
+
+    // Ogre
+    constant integer OGRE_TIER_1                                     = 'o06C'
+    constant integer OGRE_TIER_2                                     = 'o073'
+    constant integer OGRE_TIER_3                                     = 'o074'
+    constant integer OGRE_ALTAR                                      = 'o07B'
+    constant integer OGRE_MAGI_LODGE                                 = 'o076' // sanctuary
+    constant integer OGRE_FORGE                                      = 'o079' // mill/forge
+    constant integer OGRE_BOULDER_TOWER                              = 'n0HR' // watch tower
+    constant integer OGRE_ADVANCED_BOULDER_TOWER                     = 'n0HS' // arcane tower
+    constant integer OGRE_TENT                                       = 'o06S' // farm
+    constant integer OGRE_BEASTIARY                                  = 'o078' // slaughterhouse
+    constant integer OGRE_ARENA                                      = 'o075' // boneyard
+    constant integer OGRE_CAVE                                       = 'o06R' // barracks
+    constant integer OGRE_DRAENOR_MERCHANT                           = 'o07A' // shop
+    constant integer OGRE_STONEMAUL_CAMP                             = 'o07D' // special building
+
+    constant integer UPG_OGRE_AMBUSH                                 = 'R0EA'
+    constant integer UPG_OGRE_BACKPACK                               = 'R0D4'
+    constant integer UPG_OGRE_BREATH_OF_FIRE                         = 'R0EE'
+    constant integer UPG_OGRE_DEMOLISH                               = 'R0EI'
+    constant integer UPG_OGRE_ENSNARE                                = 'R0E6'
+    constant integer UPG_OGRE_LIGHTNING_ATTACK                       = 'R0EJ'
+    constant integer UPG_OGRE_NECROMANCER                            = 'R0EF'
+    constant integer UPG_OGRE_ARMOR                                  = 'R0E5'
+    constant integer UPG_OGRE_MELEE                                  = 'R0E4'
+    constant integer UPG_OGRE_MAGI                                   = 'R0EB'
+    constant integer UPG_OGRE_RANGED                                 = 'R0ED'
+    constant integer UPG_OGRE_STRENGTH                               = 'R0E9'
+    constant integer UPG_OGRE_WARLOCK                                = 'R0EC'
+    constant integer UPG_OGRE_PULVERIZE                              = 'R0E7'
+    constant integer UPG_OGRE_REINCARNATION                          = 'R0EH'
+    constant integer UPG_OGRE_RESISTANT_SKIN                         = 'R0E8'
+    constant integer UPG_OGRE_ROAR                                   = 'R0EL'
+    constant integer UPG_OGRE_SUMMON_BEAR                            = 'R0EK'
+    constant integer UPG_OGRE_TAUNT                                  = 'R0EG'
+    constant integer UPG_OGRE_STONEMAUL_CAMP                         = 'R0EN'
+
+    constant integer OGRE_OGRE_SLAVE                                 = 'o06B' // worker
+    constant integer OGRE_OGRE_WARRIOR                               = 'n0GN' // footman
+    constant integer OGRE_OGRE_STONE_THROWER                         = 'n0GM' // rifleman
+    constant integer OGRE_OGRE_HUNTER                                = 'n0HQ' // raider/rifleman 2
+    constant integer OGRE_BRONZE_DRAKE                               = 'n0HP' // wind rider
+    constant integer OGRE_ZEPPELIN                                   = 'n0HX' // zeppelin
+    constant integer OGRE_CLEFTHOOF                                  = 'o077' // clefthoof
+    constant integer OGRE_OGRE_DRUMMER                               = 'n0GL' // knight
+    constant integer OGRE_OGRE_FIRE_BREATHER                         = 'n0HV' // knight 2
+    constant integer OGRE_OGRE_MAGI                                  = 'n0HN' // sorceress
+    constant integer OGRE_OGRE_WARLOCK                               = 'n0HO' // priest
+    constant integer OGRE_OGRE_NECROMANCER                           = 'n0HW' // spell breaker
+    constant integer OGRE_OGRE_LORD                                  = 'n0HM' // tauren
+    constant integer OGRE_MOKNATHAL                                  = 'n07E' // tauren 2
+
+    constant integer OGRE_KORGALL                                    = 'n071' // special unit
+    constant integer OGRE_STONEMAUL_OGRE                             = 'n0C3' // special unit
+    constant integer OGRE_STONEMAUL_MAGI                             = 'n08K' // special unit
+
+    constant integer OGRE_CITIZEN_MALE                               = 'n0GF'
+    constant integer OGRE_CITIZEN_FEMALE                             = 'n0GG'
+    constant integer OGRE_HOUSING                                    = 'h0QC'
+
+    constant integer OGRE_SHIPYARD                                   = 'o07C'
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
@@ -2864,7 +2926,6 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == VRYKUL_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(VRYKUL_TIER_3,false,townid)
 
-
     elseif unitid == TUSKARR_FROZEN_HALL then
         set have_qty = have_qty + GetUnitCountEx(TUSKARR_FROZEN_STRONGHOLD,false,townid) + GetUnitCountEx(TUSKARR_FROZEN_FORTRESS,false,townid)
     elseif unitid == TUSKARR_FROZEN_STRONGHOLD then
@@ -2876,6 +2937,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(NERUBIAN_TIER_2,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
     elseif unitid == NERUBIAN_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
+
+    elseif unitid == OGRE_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(OGRE_TIER_2,false,townid) + GetUnitCountEx(OGRE_TIER_3,false,townid)
+    elseif unitid == OGRE_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(OGRE_TIER_3,false,townid)
+     elseif unitid == OGRE_BOULDER_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(OGRE_ADVANCED_BOULDER_TOWER,false,townid)
 
     elseif unitid == MODERNWARFARE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
