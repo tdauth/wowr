@@ -28,7 +28,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, OGRE_MAGI_LODGE )
     call SetBuildUnit( 1, OGRE_BEASTIARY )
     call SetBuildUnit( 1, OGRE_ARENA )
-    call SetBuildUnit( 4, OGRE_TENT )
     call SetBuildUnit( 2, OGRE_BOULDER_TOWER )
     call SetBuildUnit( 2, OGRE_CITIZEN_FEMALE )
     
@@ -48,7 +47,6 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 buildings
     call SetBuildUnit( 1, OGRE_TIER_3 )
-    call SetBuildUnit( 5, OGRE_TENT )
     call SetBuildUnit( 2, OGRE_ADVANCED_BOULDER_TOWER )
     call SetBuildUnit( 2, OGRE_CITIZEN_MALE )
 
