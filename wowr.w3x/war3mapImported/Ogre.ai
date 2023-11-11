@@ -20,9 +20,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_OGRE_MELEE )
     call SetBuildUpgr( 1, UPG_OGRE_RANGED )
     call SetBuildUpgr( 1, UPG_OGRE_ARMOR )
-    call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
-    call SetBuildUpgr( 1, UPG_ORC_BERSERK )
-    call SetBuildUpgr( 1, UPG_ORC_OGRE_TENTS )
     call SetBuildUpgr( 1, UPG_OGRE_ENSNARE )
 
     // Tier 2 buildings
@@ -36,7 +33,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 2, UPG_OGRE_MELEE )
     call SetBuildUpgr( 2, UPG_OGRE_RANGED )
     call SetBuildUpgr( 2, UPG_OGRE_ARMOR )
-    call SetBuildUpgr( 2, UPG_ORC_OGRE_TENTS )
     call SetBuildUpgr( 1, UPG_OGRE_DEMOLISH )
     call SetBuildUpgr( 1, UPG_OGRE_AMBUSH )
     call SetBuildUpgr( 1, UPG_OGRE_MAGI )
@@ -54,7 +50,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 3, UPG_OGRE_ARMOR )
     call SetBuildUpgr( 2, UPG_OGRE_MAGI )
     call SetBuildUpgr( 2, UPG_OGRE_WARLOCK )
-    call SetBuildUpgr( 3, UPG_ORC_OGRE_TENTS )
     call SetBuildUpgr( 1, UPG_OGRE_BREATH_OF_FIRE )
     call SetBuildUpgr( 1, UPG_OGRE_LIGHTNING_ATTACK )
     call SetBuildUpgr( 2, UPG_OGRE_NECROMANCER )
