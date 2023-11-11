@@ -1232,3 +1232,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * supertoinkz: [Altar of some sorts](https://www.hiveworkshop.com/threads/altar-of-some-sorts.166156/)
 * Kam: [Ogre Reincarnation](https://www.hiveworkshop.com/threads/ogre-reincarnation.306251/)
 * Ujimasa Hojo: [Grunt and Derivatives](https://www.hiveworkshop.com/threads/grunt-and-derivatives.307931/)
+* Serbianbeast: [ElevatorPuzzle](https://www.hiveworkshop.com/threads/elevatorpuzzle.113921/)
