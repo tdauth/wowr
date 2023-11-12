@@ -60,6 +60,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_OGRE_REINCARNATION )
     call SetBuildUpgr( 1, UPG_OGRE_RESISTANT_SKIN )
     call SetBuildUpgr( 1, UPG_OGRE_SUMMON_BEAR )
+    call SetBuildUpgr( 1, UPG_OGRE_WAR_STOMP )
     call SetBuildUpgr( 1, UPG_OGRE_BACKPACK )
     call SetBuildUpgr( 1, UPG_OGRE_STONEMAUL_CAMP )
     call SetBuildUnit( 1, OGRE_STONEMAUL_CAMP )
@@ -71,6 +72,7 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function BuildExpansions takes nothing returns nothing
+    call Sleep(M10)
     loop
         if (expansions > 0) then
             call SetBuildExpa(expansions, OGRE_TIER_3)
@@ -84,6 +86,7 @@ function BuildExpansions takes nothing returns nothing
 endfunction
 
 function BuildShips takes nothing returns nothing
+    call Sleep(M10)
     loop
         if (buildShips) then
             call SetBuildUnit( 1, OGRE_SHIPYARD )
@@ -258,10 +261,13 @@ function main takes nothing returns nothing
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
-    call Ships(function BuildShips)
 
     call BuildingStrategy( )
 
+    // after building strategy
+    call StartThread(function BuildExpansions)
+    call StartThread(function BuildShips)
+
+    // blocks forever
     call AttackWaves( )
 endfunction

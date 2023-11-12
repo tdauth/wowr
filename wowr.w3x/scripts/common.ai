@@ -1844,6 +1844,7 @@ globals
     constant integer UPG_OGRE_ROAR                                   = 'R0EL'
     constant integer UPG_OGRE_SUMMON_BEAR                            = 'R0EK'
     constant integer UPG_OGRE_TAUNT                                  = 'R0EG'
+    constant integer UPG_OGRE_WAR_STOMP                              = 'R0EO'
     constant integer UPG_OGRE_STONEMAUL_CAMP                         = 'R0EN'
 
     constant integer OGRE_OGRE_SLAVE                                 = 'o06B' // worker
