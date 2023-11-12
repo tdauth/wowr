@@ -71,24 +71,34 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, OGRE_TIER_3)
-    call SetBuildExpa(expansions, OGRE_FORGE)
-    call SetBuildExpa(expansions, OGRE_BOULDER_TOWER)
-    call SetBuildExpa(expansions, OGRE_ADVANCED_BOULDER_TOWER)
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, OGRE_TIER_3)
+            call SetBuildExpa(expansions, OGRE_FORGE)
+            call SetBuildExpa(expansions, OGRE_BOULDER_TOWER)
+            call SetBuildExpa(expansions, OGRE_ADVANCED_BOULDER_TOWER)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, OGRE_SHIPYARD )
-        call SetBuildUnit( 1, ORC_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, ORC_FRIGATE )
-        call SetBuildUnit( 2, ORC_JUGGERNAUGHT )
-    else
-        call SetBuildUnit( 0, OGRE_SHIPYARD )
-        call SetBuildUnit( 0, ORC_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, ORC_FRIGATE )
-        call SetBuildUnit( 0, ORC_JUGGERNAUGHT )
-    endif
+    loop
+        if (buildShips) then
+            call SetBuildUnit( 1, OGRE_SHIPYARD )
+            call SetBuildUnit( 1, ORC_TRANSPORT_SHIP )
+            call SetBuildUnit( 2, ORC_FRIGATE )
+            call SetBuildUnit( 2, ORC_JUGGERNAUGHT )
+        else
+            call SetBuildUnit( 0, OGRE_SHIPYARD )
+            call SetBuildUnit( 0, ORC_TRANSPORT_SHIP )
+            call SetBuildUnit( 0, ORC_FRIGATE )
+            call SetBuildUnit( 0, ORC_JUGGERNAUGHT )
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing

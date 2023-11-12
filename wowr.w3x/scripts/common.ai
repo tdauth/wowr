@@ -2406,9 +2406,6 @@ globals
     boolean attackTargetLocation = false
     integer attackTargetLocationX = 0
     integer attackTargetLocationY = 0
-
-    trigger expansionsTrigger = CreateTrigger()
-    trigger shipsTrigger = CreateTrigger()
 endglobals
 
 //============================================================================
@@ -5239,6 +5236,7 @@ function UpdateWorkers takes nothing returns nothing
             elseif (c == COMMAND_EXPANSIONS) then
                 set expansions = GetLastData()
                 call NotifyOtherPlayers("I will build " + I2S(expansions) + " expansions!")
+                call TraceI("Expansions: %d", expansions)
             elseif (c == COMMAND_INFO) then
                 call NotifySpecificPlayer(GetLastData(), GetPlayerInfoText())
             elseif (c == COMMAND_ATTACK_TARGET_ON) then
@@ -5312,23 +5310,6 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
     //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
 endfunction
 
-function BuildExpansionsLoop takes nothing returns nothing
-    loop
-        if (expansions > 0) then
-            call TriggerExecute(expansionsTrigger)
-        endif
-
-        call Sleep(M1)
-    endloop
-endfunction
-
-function BuildShipsLoop takes nothing returns nothing
-    loop
-        call TriggerExecute(shipsTrigger)
-        call Sleep(M1)
-    endloop
-endfunction
-
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit( 1, POWER_GENERATOR )
     call SetBuildUnit( 1, ANTIMAGIC_WARD )
@@ -5340,8 +5321,6 @@ function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
     call SetBuildUnit( 1, DRAGON_ROOST )
     call StartThread(function ResearchHighLevelTier3Researches)
-    call StartThread(function BuildExpansionsLoop)
-    call StartThread(function BuildShipsLoop)
 endfunction
 
 function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
@@ -5358,9 +5337,9 @@ function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
 endfunction
 
 function Expansions takes code func returns nothing
-    call TriggerAddAction(expansionsTrigger, func)
+    call StartThread(func)
 endfunction
 
 function Ships takes code func returns nothing
-    call TriggerAddAction(shipsTrigger, func)
+    call StartThread(func)
 endfunction
