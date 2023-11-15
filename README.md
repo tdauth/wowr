@@ -1243,3 +1243,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * BLazeKraze: [Anduin Lothar](https://www.hiveworkshop.com/threads/anduin-lothar.289726/)
 * Tauer: [Durotan](https://www.hiveworkshop.com/threads/durotan.268006/)
 * 8512590215848: [BTNDurotan164](https://www.hiveworkshop.com/threads/btndurotan164.269396/)
+* bakr: [Stormwind Buildings](https://www.hiveworkshop.com/threads/stormwind-buildings.342290/)
