@@ -1246,3 +1246,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * bakr: [Stormwind Buildings](https://www.hiveworkshop.com/threads/stormwind-buildings.342290/)
 * Tauer: [Orgrim Doomhammer](https://www.hiveworkshop.com/threads/orgrim-doomhammer.295340/)
 * loktar: [Orgrim Doomhammer](https://www.hiveworkshop.com/threads/orgrim-doomhammer.327246/)
+* supertoinkz: [Orc Oil Tanker](https://www.hiveworkshop.com/threads/orc-oil-tanker.161474/)
+* Mephestrial: [HumanOilTanker](https://www.hiveworkshop.com/threads/humanoiltanker.62575/)
