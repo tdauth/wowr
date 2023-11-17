@@ -1250,3 +1250,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mephestrial: [HumanOilTanker](https://www.hiveworkshop.com/threads/humanoiltanker.62575/)
 * TheHuntress: [Chaplain Icon](https://www.hiveworkshop.com/threads/chaplain-icon.351543/)
 * bakr: [Cathedral of Light](https://www.hiveworkshop.com/threads/cathedral-of-light.342275/)
+* bakr: [Generic Human Units](https://www.hiveworkshop.com/threads/generic-human-units.347923/)
+* bakr: [Stormwind Units](https://www.hiveworkshop.com/threads/stormwind-units.347933/)
+ *bakr: [Gryphon Knight](https://www.hiveworkshop.com/threads/gryphon-knight.258882/)
