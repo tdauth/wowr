@@ -1249,3 +1249,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * supertoinkz: [Orc Oil Tanker](https://www.hiveworkshop.com/threads/orc-oil-tanker.161474/)
 * Mephestrial: [HumanOilTanker](https://www.hiveworkshop.com/threads/humanoiltanker.62575/)
 * TheHuntress: [Chaplain Icon](https://www.hiveworkshop.com/threads/chaplain-icon.351543/)
+* bakr: [Cathedral of Light](https://www.hiveworkshop.com/threads/cathedral-of-light.342275/)
