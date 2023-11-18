@@ -1239,6 +1239,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mc !: [BTNItemForging](https://www.hiveworkshop.com/threads/btnitemforging.56538/)
 * Stefan.K: [King Anduin Wrynn](https://www.hiveworkshop.com/threads/king-anduin-wrynn.304375/)
 * Scias: [BTNHeroAnduinWrynn](https://www.hiveworkshop.com/threads/btnheroanduinwrynn.339496/)
+* Chen: [BTNKingAnduin](https://www.hiveworkshop.com/threads/btnkinganduin.306623/)
 * Tauer: [Anduin Lothar](https://www.hiveworkshop.com/threads/anduin-lothar.286783/)
 * BLazeKraze: [Anduin Lothar](https://www.hiveworkshop.com/threads/anduin-lothar.289726/)
 * Tauer: [Durotan](https://www.hiveworkshop.com/threads/durotan.268006/)
@@ -1261,3 +1262,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * chr2, Sellenisko: [Gronn V.4](https://www.hiveworkshop.com/threads/gronn-v-4.275418/)
 * Marshmalo: [Gronn Icon](https://www.hiveworkshop.com/threads/gronn-v-4.275418/#post-3101701)
 * Hawkwing: [Blue Wild Elekk](https://www.hiveworkshop.com/threads/blue-wild-elekk.121810/)
+* Ilya Alaric: [Priest Pack](https://www.hiveworkshop.com/threads/priest-pack.337954/)
+* AndrewOverload519: [Female Human Mage][https://www.hiveworkshop.com/threads/female-human-mage.231160/)
