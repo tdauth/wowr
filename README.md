@@ -1257,3 +1257,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Moy, Stefan.K: [King Varian Wrynn](https://www.hiveworkshop.com/threads/king-varian-wrynn.295280/)
 * Scias: [BTNVarianWrynn](https://www.hiveworkshop.com/threads/btnvarianwrynn.306435/)
 * Mephestrial: [Knight Unmounted](https://www.hiveworkshop.com/threads/knight-unmounted.149954/)
+* Jiok: [Stormwind City](https://www.hiveworkshop.com/threads/jioks-simple-edit.350058/#post-3588773)
+* chr2, Sellenisko: [Gronn V.4](https://www.hiveworkshop.com/threads/gronn-v-4.275418/)
+* Marshmalo: [Gronn Icon](https://www.hiveworkshop.com/threads/gronn-v-4.275418/#post-3101701)
+* Hawkwing: [Blue Wild Elekk](https://www.hiveworkshop.com/threads/blue-wild-elekk.121810/)
