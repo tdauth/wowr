@@ -1846,6 +1846,7 @@ globals
     constant integer UPG_OGRE_TAUNT                                  = 'R0EG'
     constant integer UPG_OGRE_WAR_STOMP                              = 'R0EO'
     constant integer UPG_OGRE_STONEMAUL_CAMP                         = 'R0EN'
+    constant integer UPG_OGRE_GRONN_CLUBS                            = 'R0F3'
 
     constant integer OGRE_OGRE_SLAVE                                 = 'o06B' // worker
     constant integer OGRE_OGRE_WARRIOR                               = 'n0GN' // footman
@@ -1861,6 +1862,8 @@ globals
     constant integer OGRE_OGRE_NECROMANCER                           = 'n0HW' // spell breaker
     constant integer OGRE_OGRE_LORD                                  = 'n0HM' // tauren
     constant integer OGRE_MOKNATHAL                                  = 'n07E' // tauren 2
+    constant integer OGRE_GRONN                                      = 'n0I4' // tauren 3
+    constant integer OGRE_GRONN_WAR_CLUB                             = 'n0I5' // tauren 3
 
     constant integer OGRE_KORGALL                                    = 'n071' // special unit
     constant integer OGRE_STONEMAUL_OGRE                             = 'n0C3' // special unit

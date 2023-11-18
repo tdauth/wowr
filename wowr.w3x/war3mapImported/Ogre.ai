@@ -62,6 +62,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_OGRE_SUMMON_BEAR )
     call SetBuildUpgr( 1, UPG_OGRE_WAR_STOMP )
     call SetBuildUpgr( 1, UPG_OGRE_BACKPACK )
+    call SetBuildUpgr( 1, UPG_OGRE_GRONN_CLUBS )
     call SetBuildUpgr( 1, UPG_OGRE_STONEMAUL_CAMP )
     call SetBuildUnit( 1, OGRE_STONEMAUL_CAMP )
 
@@ -245,6 +246,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 1, 1, 1, OGRE_KORGALL )
         call CampaignAttackerEx( 4, 4, 4, OGRE_STONEMAUL_OGRE )
         call CampaignAttackerEx( 4, 4, 4, OGRE_STONEMAUL_MAGI )
+
+        call CampaignAttackerEx( 3, 3, 3, OGRE_GRONN_WAR_CLUB )
         
          // big air army
         call CampaignAttackerEx( 8, 10, 12, OGRE_BRONZE_DRAKE )
