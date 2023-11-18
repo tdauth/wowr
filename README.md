@@ -1263,4 +1263,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Marshmalo: [Gronn Icon](https://www.hiveworkshop.com/threads/gronn-v-4.275418/#post-3101701)
 * Hawkwing: [Blue Wild Elekk](https://www.hiveworkshop.com/threads/blue-wild-elekk.121810/)
 * Ilya Alaric: [Priest Pack](https://www.hiveworkshop.com/threads/priest-pack.337954/)
-* AndrewOverload519: [Female Human Mage][https://www.hiveworkshop.com/threads/female-human-mage.231160/)
+* AndrewOverload519: [Female Human Mage](https://www.hiveworkshop.com/threads/female-human-mage.231160/)
