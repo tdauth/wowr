@@ -1279,3 +1279,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [BTNOrcShipyard](https://www.hiveworkshop.com/threads/btnorcshipyard.56276/)
 * Red XIII: [WCIITempleOfDamned](https://www.hiveworkshop.com/threads/wciitempleofdamned.48408/)
 * Red XIII: [WCII Altar of Storms](https://www.hiveworkshop.com/threads/wcii-altar-of-storms.50553/)
+* LordPerenoldeII: [Oil Patch](https://www.hiveworkshop.com/threads/warcraft-2-tides-of-darkness-orcs.339668)
+* Blizzard: [BTNOrcCatapult](https://www.hiveworkshop.com/threads/btnorccatapult.56332/)
