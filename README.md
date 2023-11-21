@@ -1277,3 +1277,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Red XIII: [WCIIOrcFoundry](https://www.hiveworkshop.com/threads/wciiorcfoundry.141333/)
 * Mephestrial: [OrcOilPlatform](https://www.hiveworkshop.com/threads/orcoilplatform.172927/)
 * Blizzard Entertainment: [BTNOrcShipyard](https://www.hiveworkshop.com/threads/btnorcshipyard.56276/)
+* Red XIII: [WCIITempleOfDamned](https://www.hiveworkshop.com/threads/wciitempleofdamned.48408/)
+* Red XIII: [WCII Altar of Storms](https://www.hiveworkshop.com/threads/wcii-altar-of-storms.50553/)
