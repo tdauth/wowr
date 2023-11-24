@@ -1281,3 +1281,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Red XIII: [WCII Altar of Storms](https://www.hiveworkshop.com/threads/wcii-altar-of-storms.50553/)
 * LordPerenoldeII: [Oil Patch](https://www.hiveworkshop.com/threads/warcraft-2-tides-of-darkness-orcs.339668)
 * Blizzard: [BTNOrcCatapult](https://www.hiveworkshop.com/threads/btnorccatapult.56332/)
+* Blizzard: [BTNUpgradeShipArmorOrc](https://www.hiveworkshop.com/threads/btnupgradeshiparmororc.192566/)
+* Blizzard: [BTNUpgradeShipArmorOrc2](https://www.hiveworkshop.com/threads/btnupgradeshiparmororc2.192567/)
+* Blizzard: [BTNUpgradeCannonOrc](https://www.hiveworkshop.com/threads/btnupgradecannonorc.192560/)
+* Blizzard: [BTNUpgradeCannonOrc2](https://www.hiveworkshop.com/threads/btnupgradecannonorc2.192561/)
+* Blizzard: [BTNOrcRefinery](https://www.hiveworkshop.com/threads/btnorcrefinery.56342/)
