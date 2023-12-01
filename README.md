@@ -848,7 +848,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Kenathorn: [Pickaxe Item](https://www.hiveworkshop.com/threads/pickaxe-item.264110/)
 * Sellenisko: [Balrog Of Moria](https://www.hiveworkshop.com/threads/balrog-of-moria.261287/)
 * Grey Knight: [DUMMY](https://www.hiveworkshop.com/threads/dummy.290070/)
-* yanqi24@163.com: [Cloud Serpent](https://www.hiveworkshop.com/threads/cloud-serpent-model.274531/#post-3575081)
 * tillinghast: [Alchemist lab](https://www.hiveworkshop.com/threads/alchemist-lab.341958/)
 * Golden-Drake: [BTNGDFlameWhip](https://www.hiveworkshop.com/threads/btngdflamewhip.259262/)
 * The Panda: [BTNFlameStorm](https://www.hiveworkshop.com/threads/btnflamestorm.307458/)
@@ -1299,3 +1298,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * loktar: [Town Hall (WC2)](https://www.hiveworkshop.com/threads/town-hall-wc2.249503/)
 * Red XIII: [WCIIHumanFarm](https://www.hiveworkshop.com/threads/wciihumanfarm.143812/)
 * Blizzard: [BTNHumanFarm](https://www.hiveworkshop.com/threads/btnhumanfarm.56300/)
+* Shardeth: [Subterrain Vehicle v1.2](https://www.hiveworkshop.com/threads/subterrain-vehicle-v1-2.340393/)
+* kondoriyano: [cloud serpent](https://xgm.guru/p/wc3/cloud-serpent-78o)/[Cloud Serpent](https://www.hiveworkshop.com/threads/cloud-serpent-model.274531/#post-3598892)
