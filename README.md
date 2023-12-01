@@ -1295,3 +1295,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * leetslay: [BTNSummonAirElemental](https://www.hiveworkshop.com/threads/btnsummonairelemental.56933/)
 * Shardeth: [Subterrain Vehicle v1.2](https://www.hiveworkshop.com/threads/subterrain-vehicle-v1-2.340393/)
 * SuPa-: [Earth Elemental](https://www.hiveworkshop.com/threads/earth-elemental.198445/)
+* Red XIII: [WCIITownHall](https://www.hiveworkshop.com/threads/wciitownhall.142198/)
+* loktar: [Town Hall (WC2)](https://www.hiveworkshop.com/threads/town-hall-wc2.249503/)
+* Red XIII: [WCIIHumanFarm](https://www.hiveworkshop.com/threads/wciihumanfarm.143812/)
+* Blizzard: [BTNHumanFarm](https://www.hiveworkshop.com/threads/btnhumanfarm.56300/)
