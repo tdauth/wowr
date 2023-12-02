@@ -1300,3 +1300,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard: [BTNHumanFarm](https://www.hiveworkshop.com/threads/btnhumanfarm.56300/)
 * Shardeth: [Subterrain Vehicle v1.2](https://www.hiveworkshop.com/threads/subterrain-vehicle-v1-2.340393/)
 * kondoriyano: [cloud serpent](https://xgm.guru/p/wc3/cloud-serpent-78o)/[Cloud Serpent](https://www.hiveworkshop.com/threads/cloud-serpent-model.274531/#post-3598892)
+* PROXY: [Draenei / Eredar Pack](https://www.hiveworkshop.com/threads/draenei-eredar-pack.349488/)
+* Wa666r: [Draenei UI](https://www.hiveworkshop.com/threads/draenei-ui.256296/)
