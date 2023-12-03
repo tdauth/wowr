@@ -1302,3 +1302,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * kondoriyano: [cloud serpent](https://xgm.guru/p/wc3/cloud-serpent-78o)/[Cloud Serpent](https://www.hiveworkshop.com/threads/cloud-serpent-model.274531/#post-3598892)
 * PROXY: [Draenei / Eredar Pack](https://www.hiveworkshop.com/threads/draenei-eredar-pack.349488/)
 * Wa666r: [Draenei UI](https://www.hiveworkshop.com/threads/draenei-ui.256296/)
+* Ujimasa Hojo: [Villager (Kid) and Derivatives](https://www.hiveworkshop.com/threads/villager-kid-and-derivatives.294275/)
+* ShadiHD: [CSW - Gnomish Submarine](https://www.hiveworkshop.com/threads/csw-gnomish-submarine.339320/)
