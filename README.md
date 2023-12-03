@@ -1304,3 +1304,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Wa666r: [Draenei UI](https://www.hiveworkshop.com/threads/draenei-ui.256296/)
 * Ujimasa Hojo: [Villager (Kid) and Derivatives](https://www.hiveworkshop.com/threads/villager-kid-and-derivatives.294275/)
 * ShadiHD: [CSW - Gnomish Submarine](https://www.hiveworkshop.com/threads/csw-gnomish-submarine.339320/)
+* Verdun: [domer](https://www.hiveworkshop.com/threads/domer.199969/)
