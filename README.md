@@ -1314,3 +1314,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Illidan(Evil)X: [Replaceable Flag](https://www.hiveworkshop.com/threads/replaceable-flag.278718/)
 * TheHuntress: [Horse Upgrade](https://www.hiveworkshop.com/threads/horse-upgrade.351721/)
 * Radagast: [Apatche Mounted Archer](https://www.hiveworkshop.com/threads/apatche-mounted-archer.219339/)
+* General Frank: [Azure Dragon Judicator](https://www.hiveworkshop.com/threads/azure-dragon-judicator.50600/)
+* Muoteck: [BTN_AzureDragonJudicator](https://www.hiveworkshop.com/threads/btn_azuredragonjudicator.58940/)
+* Golden-Drake: [BTNNagaTail](https://www.hiveworkshop.com/threads/btnnagatail.158906/)
+* Hantoo, HerrDave: [Brutasaurus](https://www.hiveworkshop.com/threads/brutasaurus.325056/)
