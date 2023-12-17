@@ -1318,3 +1318,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Muoteck: [BTN_AzureDragonJudicator](https://www.hiveworkshop.com/threads/btn_azuredragonjudicator.58940/)
 * Golden-Drake: [BTNNagaTail](https://www.hiveworkshop.com/threads/btnnagatail.158906/)
 * Hantoo, HerrDave: [Brutasaurus](https://www.hiveworkshop.com/threads/brutasaurus.325056/)
+* stan0033: [Quest Exclamation + Question Mark & Variations](https://www.hiveworkshop.com/threads/quest-exclamation-question-mark-variations.304020/)
+* Grey Knight: [Staff Item](https://www.hiveworkshop.com/threads/staff-item.293455/)
