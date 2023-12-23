@@ -45,6 +45,14 @@ It contains a very basic freelancer AI for computer players.
 
 Every AI is assigned their professions automatically and the crafted items are added to the hero's inventory automatically as well like the hero would craft them.
 
+
+## Custom Systems
+
+The map uses several custom systems created by Baradé which can be used in any other map.
+They are available in [systems](./systems).
+Each system provides a prototype map which shows you how to use the system.
+Some of the systems are available on [HiveWorkshop](https://www.hiveworkshop.com/members/barade.125524/#resources) to make them public and for feedback.
+
 ## Known Reasons for Crashes
 
 Sometimes versions of this map might lead to crashing but since it is really hard to debug Warcraft maps, there are only some possible known reasons for crashes we have experienced so far:
