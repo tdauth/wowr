@@ -1333,3 +1333,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mace Windu, olofmoleman: [Hellscream](https://www.hiveworkshop.com/threads/hellscream.49805/)
 * Blood Raven: [BTNLemons](https://www.hiveworkshop.com/threads/btnlemons.191442/)
 * Cavman: [Bum Bed](https://www.hiveworkshop.com/threads/bum-bed.48465/)
+* ikillforeyou: [Crusader Sword](https://www.hiveworkshop.com/threads/crusader-sword.145975/)
+* HerrDave: [Sword](https://www.hiveworkshop.com/threads/sword.270842/)
+* Pretor: [PaladinHammer](https://www.hiveworkshop.com/threads/paladinhammer.190454/)
