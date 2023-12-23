@@ -1331,3 +1331,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mr. Bob: [Armory](https://www.hiveworkshop.com/threads/armory.133799/)
 * Kuhneghetz: [Skeletal Child](https://www.hiveworkshop.com/threads/skeletal-child.51549/)
 * Mace Windu, olofmoleman: [Hellscream](https://www.hiveworkshop.com/threads/hellscream.49805/)
+* Blood Raven: [BTNLemons](https://www.hiveworkshop.com/threads/btnlemons.191442/)
+* Cavman: [Bum Bed](https://www.hiveworkshop.com/threads/bum-bed.48465/)

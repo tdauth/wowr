@@ -9,9 +9,14 @@ InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmo
 ResearchComplete=ResearchCompleteGeneric
 TimeOfDayIndicator=war3mapImported\CustomTimeIndicator.mdx
 
+[Errors]
+Cooldownstock=TRIGSTR_48559
+Outofstock=TRIGSTR_48558
+
 [FrameDef]
 ITEM_PAWN_TOOLTIP=TRIGSTR_1171
 KEY_QUESTS=TRIGSTR_42201
+OUTOFSTOCKTOOLTIP=TRIGSTR_48560
 QUESTS=TRIGSTR_42198
 QUESTSMAIN=TRIGSTR_42202
 QUESTSOPTIONAL=TRIGSTR_42200
