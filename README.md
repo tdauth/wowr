@@ -14,7 +14,7 @@ Official website: [wowreforged.org](https://wowreforged.org)
 * [Official download on Epic War](https://www.epicwar.com/maps/331473/)
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
-*Enable HD graphics:* The map is restricted to SD graphics to avoid performance issues.
+*Enable HD graphics in older versions of the map:* Old versions of the map are restricted to SD graphics to avoid performance issues.
 However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
 
@@ -1342,3 +1342,10 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * paladinjst: [Guard_Shield](https://www.hiveworkshop.com/threads/guard_shield.178554/)
 * paladinjst: [HumanHelmetByShadow](https://www.hiveworkshop.com/threads/humanhelmetbyshadow.49784/)
 * Sunchips: [Wolf Pelt Boot by Sunchips](https://www.hiveworkshop.com/threads/wolf-pelt-boot-by-sunchips.177825/)
+* eubz: [Arrow n' Quiver](https://www.hiveworkshop.com/threads/arrow-n-quiver.211968/)
+* Mr.Goblin: [BTNQuiver](https://www.hiveworkshop.com/threads/btnquiver.114661/)
+* Blood Raven: [Studded Quiver](https://www.hiveworkshop.com/threads/studded-quiver.270391/)
+* HerrDave: [Bow](https://www.hiveworkshop.com/threads/bow.270839/)
+* KayS: [Basic Bow](https://www.hiveworkshop.com/threads/basic-bow.243056/)
+* Deolrin: [Simple Scythe](https://www.hiveworkshop.com/threads/simple-scythe.148147/)
+* KingB00ker: [BTNScythe](https://www.hiveworkshop.com/threads/btnscythe.133859/)
