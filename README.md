@@ -1373,3 +1373,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darkwind: [GoldenClaw](https://www.hiveworkshop.com/threads/goldenclaw.50040/)
 * Uncle Fester: [ElvenRangerBow](https://www.hiveworkshop.com/threads/elvenrangerbow.242386/)
 * Uncle Fester: [Naga Trident Attachment & Item Version](https://www.hiveworkshop.com/threads/naga-trident-attachment-item-version.238420/)
+* Deleted member 126647: [pistol07](https://www.hiveworkshop.com/threads/pistol07.59258/)
+* Herio-san: [Flintlock Rifle](https://www.hiveworkshop.com/threads/flintlock-rifle.48244/)
+* Blood Raven: [Diablo II Weapon Pack](https://www.hiveworkshop.com/threads/diablo-ii-weapon-pack.289982/)
+* Deleted member 126647: [piratehat01](https://www.hiveworkshop.com/threads/piratehat01.59255/)
+* Sin'dorei300: [CentaurStaff](https://www.hiveworkshop.com/threads/centaurstaff.220596/)
