@@ -1391,3 +1391,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 1223344: [demon sword](https://www.hiveworkshop.com/threads/demon-sword.49661/)
 * Hantoo: [Naginata](https://www.hiveworkshop.com/threads/naginata.264314/)
 * Black flesh: [Demon Hunter Blade](https://www.hiveworkshop.com/threads/demon-hunter-blade.85816/#post-690837)
+* Molot: [Animated smoke in three colors](https://www.hiveworkshop.com/threads/animated-smoke-in-three-colors.308037/)
