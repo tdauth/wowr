@@ -1388,3 +1388,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Hantoo: [Cutlass](https://www.hiveworkshop.com/threads/cutlass.264321/)
 * Blood Raven: [Knightly Rapier](https://www.hiveworkshop.com/threads/knightly-rapier.263638/)
 * Mainy, War_Golum: [ArcaneStaff](https://www.hiveworkshop.com/threads/arcanestaff.160904/)
+* 1223344: [demon sword](https://www.hiveworkshop.com/threads/demon-sword.49661/)
+* Hantoo: [Naginata](https://www.hiveworkshop.com/threads/naginata.264314/)
+* Black flesh: [Demon Hunter Blade](https://www.hiveworkshop.com/threads/demon-hunter-blade.85816/#post-690837)
