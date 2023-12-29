@@ -1394,3 +1394,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [It's a bear trap!](https://www.hiveworkshop.com/threads/its-a-bear-trap.231801/)
 * HerrDave: [Leather Jerkin](https://www.hiveworkshop.com/threads/leather-jerkin.271663/)
 * The_Silent: [Survival Ministructure: Skinning Rack](https://www.hiveworkshop.com/threads/survival-ministructure-skinning-rack.306822/)
+* Moy: [BTNReinforcedFireAttack](https://www.hiveworkshop.com/threads/btnreinforcedfireattack.265484/)
+* stonneash: [High Quallity Red Handled Spiked ClubV0.9](https://www.hiveworkshop.com/threads/high-quallity-red-handled-spiked-clubv0-9.227765/)
+* r.ace613: [Ogre MEGA Pack](https://www.hiveworkshop.com/threads/ogre-mega-pack.335697/)
+* HuanJuan, r.ace613: [Ogre Drummer Icon Variations](https://www.hiveworkshop.com/threads/ogre-drummer-icon-variations.351888/)
