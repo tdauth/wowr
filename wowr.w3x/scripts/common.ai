@@ -5153,6 +5153,56 @@ function LaunchAttack takes nothing returns nothing
     endif
 endfunction
 
+// https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/
+
+
+function I2C2 takes integer i returns string
+    if i == 0 then
+        return "0"
+    elseif i == 1 then
+        return "1"
+    elseif i == 2 then
+        return "2"
+    elseif i == 3 then
+        return "3"
+    elseif i == 4 then
+        return "4"
+    elseif i == 5 then
+        return "5"
+    elseif i == 6 then
+        return "6"
+    elseif i == 7 then
+        return "7"
+    elseif i == 8 then
+        return "8"
+    elseif i == 9 then
+        return "9"
+    endif
+    return ""
+endfunction
+
+function I2S2 takes integer i returns string
+    local integer j = i
+    local string s = ""
+    local integer k = 0
+    local boolean is_negative = false
+    local integer MAX_DIGITS = 20
+    if i < 0 then
+        set is_negative = true
+        set j = -j
+    endif
+    loop
+        set s = I2C2(j - (j / 10) * 10) + s
+        set j = j / 10
+        set k = k + 1
+        exitwhen j == 0 or k >= MAX_DIGITS
+    endloop
+    if is_negative then
+        set s = "-" + s
+    endif
+    return s
+endfunction
+
 // recipient: changes the type of chat channel prefix shown. It has no effect on the message's visibility.
 // 0: "All" chat prefix
 // 1: "Allies"
@@ -5191,7 +5241,7 @@ function GetPlayerInfoText takes nothing returns string
     set msg = msg + "will have "
 
     if (expansions > 0) then
-        set msg = msg + I2S(expansions)
+        set msg = msg + I2S2(expansions)
     else
         set msg = msg + "no"
     endif
@@ -5239,7 +5289,7 @@ function UpdateWorkers takes nothing returns nothing
                 call NotifyOtherPlayers("I will stop building ships!")
             elseif (c == COMMAND_EXPANSIONS) then
                 set expansions = GetLastData()
-                call NotifyOtherPlayers("I will build " + I2S(expansions) + " expansions!")
+                call NotifyOtherPlayers("I will build " + I2S2(expansions) + " expansions!")
                 call TraceI("Expansions: %d", expansions)
             elseif (c == COMMAND_INFO) then
                 call NotifySpecificPlayer(GetLastData(), GetPlayerInfoText())
@@ -5251,12 +5301,12 @@ function UpdateWorkers takes nothing returns nothing
                 call NotifyOtherPlayers("I will stop attacking your specified target location and attack regular targets now!")
             elseif (c == COMMAND_ATTACK_TARGET_X) then
                 set attackTargetLocationX = GetLastData()
-                call NotifyOtherPlayers("I will use a location with coordiante X " + I2S(attackTargetLocationX) + " when attacking a location.")
+                call NotifyOtherPlayers("I will use a location with coordiante X " + I2S2(attackTargetLocationX) + " when attacking a location.")
             elseif (c == COMMAND_ATTACK_TARGET_Y) then
                 set attackTargetLocationY = GetLastData()
-                call NotifyOtherPlayers("I will use a location with coordiante Y " + I2S(attackTargetLocationY) + " when attacking a location.")
+                call NotifyOtherPlayers("I will use a location with coordiante Y " + I2S2(attackTargetLocationY) + " when attacking a location.")
             else
-                call NotifyOtherPlayers("I received an unknown AI command: " + I2S(c))
+                call NotifyOtherPlayers("I received an unknown AI command: " + I2S2(c))
             endif
             call PopLastCommand()
             call Sleep(5)
