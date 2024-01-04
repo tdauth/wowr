@@ -1405,3 +1405,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Hantoo, Heinvers: [BTNSaddleItem](https://www.hiveworkshop.com/threads/saddle-item.256167/)
 * Blood Raven: [Cowboy Hat](https://www.hiveworkshop.com/threads/cowboy-hat.261574/)
 * xXMephistoXx: [Magic Hat](https://www.hiveworkshop.com/threads/magic-hat.50667/)
+* Kitabatake: [Samurai Dual Sword](https://www.hiveworkshop.com/threads/samurai-dual-sword.88729/)
