@@ -15,6 +15,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, PANDAREN_WAR_ACADEMY )
     call SetBuildUnit( 1, PANDAREN_ALTAR )
     call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
+    call SetBuildUnit( 1, PANDAREN_BLACKSMITH )
     call SetBuildUnit( 1, PANDAREN_BREWERY )
     
     call SetBuildUpgr( 1, UPG_PANDAREN_DEFEND )
@@ -27,7 +28,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
     call SetBuildUnit( 1, PANDAREN_ELEMENTAL_SANCTUARY )
     call SetBuildUnit( 4, PANDAREN_SHELTER )
-    call SetBuildUnit( 2, PANDAREN_LANTERN )
+    call SetBuildUnit( 1, PANDAREN_SCOUT_TOWER )
     call SetBuildUnit( 2, PANDAREN_CITIZEN_FEMALE )
     call SetBuildUnit( 2, PANDAREN_PET )
     
@@ -41,7 +42,9 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
     call SetBuildUnit( 1, PANDAREN_TIER_3 )
     call SetBuildUnit( 5, PANDAREN_SHELTER )
-    call SetBuildUnit( 1, PANDAREN_ARCANE_LANTERN )
+    call SetBuildUnit( 1, PANDAREN_GUARD_TOWER )
+    call SetBuildUnit( 1, PANDAREN_CANNON_TOWER )
+    call SetBuildUnit( 1, PANDAREN_MAGIC_TOWER )
     call SetBuildUnit( 1, PANDAREN_STORM_SPIRE )
     call SetBuildUnit( 1, PANDAREN_WORKSHOP )
 
@@ -62,6 +65,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_PANDAREN_HARDENED_SKIN )
     call SetBuildUpgr( 1, UPG_PANDAREN_SPIKED_SHELL )
     call SetBuildUpgr( 1, UPG_PANDAREN_MAGIC_SENTRY )
+    call SetBuildUpgr( 1, UPG_PANDAREN_BAMBOO_STICKS )
     call SetBuildUpgr( 1, UPG_PANDAREN_BACKPACK )
 
     call SetBuildUpgr( 1, UPG_PANDAREN_JADE_FOREST )
@@ -76,7 +80,7 @@ endfunction
 function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, PANDAREN_TIER_3)
     call SetBuildExpa(expansions, PANDAREN_LUMBER_MILL)
-    call SetBuildExpa(expansions, PANDAREN_ARCANE_LANTERN)
+    call SetBuildExpa(expansions, PANDAREN_GUARD_TOWER)
 endfunction
 
 function BuildShips takes nothing returns nothing

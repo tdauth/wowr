@@ -1445,10 +1445,13 @@ globals
     constant integer PANDAREN_WORKSHOP                               = 'h0A9' // workshop
     constant integer PANDAREN_STORM_SPIRE                            = 'h0AF' // aviary
     constant integer PANDAREN_BREWERY                                = 'h0QH' // shop
-    constant integer PANDAREN_LANTERN                                = 'h06Q' // scout tower
-    constant integer PANDAREN_ARCANE_LANTERN                         = 'h0QI' // arcane tower
+    constant integer PANDAREN_SCOUT_TOWER                            = 'h06Q' // scout tower
+    constant integer PANDAREN_GUARD_TOWER                            = 'h0TB' // guard tower
+    constant integer PANDAREN_CANNON_TOWER                           = 'h0TA' // cannon tower
+    constant integer PANDAREN_MAGIC_TOWER                            = 'h0QI' // arcane tower
     constant integer PANDAREN_JADE_FOREST                            = 'n0GQ' // special building
     constant integer PANDAREN_SHIPYARD                               = 'e01V'
+    constant integer PANDAREN_BLACKSMITH                             = 'h0TC' // blacksmith
 
     constant integer UPG_PANDAREN_MELEE                              = 'R0DJ'
     constant integer UPG_PANDAREN_ARMOR                              = 'R0DK'
@@ -1470,6 +1473,7 @@ globals
     constant integer UPG_PANDAREN_JADE_FOREST                        = 'R0DQ' // special building
     constant integer UPG_PANDAREN_MAGIC_SENTRY                       = 'R0DI'
     constant integer UPG_PANDAREN_SPIKED_SHELL                       = 'R0DW'
+    constant integer UPG_PANDAREN_BAMBOO_STICKS                      = 'R0FU'
 
     constant integer PANDAREN_WOODCUTTER                             = 'h067' // worker
     constant integer PANDAREN_ARCHER                                 = 'h0B0'
@@ -2902,8 +2906,8 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(PANDAREN_TIER_2,false,townid) + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
     elseif unitid == PANDAREN_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
-    elseif unitid == PANDAREN_LANTERN then
-        set have_qty = have_qty  + GetUnitCountEx(PANDAREN_ARCANE_LANTERN,false,townid)
+    elseif unitid == PANDAREN_SCOUT_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(PANDAREN_MAGIC_TOWER,false,townid) + GetUnitCountEx(PANDAREN_CANNON_TOWER,false,townid) + GetUnitCountEx(PANDAREN_GUARD_TOWER,false,townid)
 
     elseif unitid == TROLL_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(TROLL_TIER_2,false,townid) + GetUnitCountEx(TROLL_TIER_3,false,townid)
