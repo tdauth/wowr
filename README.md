@@ -1397,7 +1397,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Moy: [BTNReinforcedFireAttack](https://www.hiveworkshop.com/threads/btnreinforcedfireattack.265484/)
 * stonneash: [High Quallity Red Handled Spiked ClubV0.9](https://www.hiveworkshop.com/threads/high-quallity-red-handled-spiked-clubv0-9.227765/)
 * r.ace613: [Ogre MEGA Pack](https://www.hiveworkshop.com/threads/ogre-mega-pack.335697/)
-* HuanJuan, r.ace613: [Ogre Drummer Icon Variations](https://www.hiveworkshop.com/threads/ogre-drummer-icon-variations.351888/)
+* HuanJuan: [Ogre Drummer Icon Variations](https://www.hiveworkshop.com/threads/ogre-drummer-icon-variations.351888/)
 * Xetanth87: [I2S without natives for use in AI scripts](https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/)
 * bakr: [Pandaren Buildings](https://www.hiveworkshop.com/threads/pandaren-buildings.351512/)
 * Sellenisko: [Malorne, Great Stag Mount](https://www.hiveworkshop.com/threads/malorne-great-stag-mount.290545/)
