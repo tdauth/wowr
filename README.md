@@ -1412,3 +1412,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard: [BTNDeathCoil](https://www.hiveworkshop.com/threads/btndeathcoil.56361/)
 * loktar: [Fortress (WC2)](https://www.hiveworkshop.com/threads/fortress-wc2.245247/)
 * Wezthal: [BTNIncreaseIncome2](https://www.hiveworkshop.com/threads/btnincreaseincome2.159642/)
+* Blizzard: [BTNEyeOfKilrogg](https://www.hiveworkshop.com/threads/btneyeofkilrogg.56406/)
