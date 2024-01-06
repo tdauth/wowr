@@ -1407,3 +1407,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * xXMephistoXx: [Magic Hat](https://www.hiveworkshop.com/threads/magic-hat.50667/)
 * Kitabatake: [Samurai Dual Sword](https://www.hiveworkshop.com/threads/samurai-dual-sword.88729/)
 * BLazeKraze: [BTNPandarenBambooStick](https://www.hiveworkshop.com/threads/btnpandarenbamboostick.253754/)
+* Blizzard: [BTNHaste](https://www.hiveworkshop.com/threads/btnhaste.56290/)
+* Blizzard: [BTNTouchOfDarkness](https://www.hiveworkshop.com/threads/btntouchofdarkness.56288/)
+* Blizzard: [BTNDeathCoil](https://www.hiveworkshop.com/threads/btndeathcoil.56361/)
+* loktar: [Fortress (WC2)](https://www.hiveworkshop.com/threads/fortress-wc2.245247/)
+* Wezthal: [BTNIncreaseIncome2](https://www.hiveworkshop.com/threads/btnincreaseincome2.159642/)
