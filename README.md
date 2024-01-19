@@ -1427,3 +1427,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ujimasa Hojo: [Sapper and Derivatives](https://www.hiveworkshop.com/threads/sapper-and-derivatives.297236/)
 * BlinkBoy: [Wc2ElvenArcher](https://www.hiveworkshop.com/threads/wc2elvenarcher.50326/)
 * BlinkBoy: [Spanish Conquistador](https://www.hiveworkshop.com/threads/spanish-conquistador.63678/)
+* Killrogg Deadeye, BlinkBoy: [Warcraft 2 Elven Ranger](https://www.hiveworkshop.com/threads/warcraft-2-elven-ranger.195925/)
+* Blizzard: [BTNElvenRanger]( https://www.hiveworkshop.com/threads/btnelvenranger.56354/)
