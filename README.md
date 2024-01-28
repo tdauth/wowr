@@ -1429,3 +1429,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * BlinkBoy: [Spanish Conquistador](https://www.hiveworkshop.com/threads/spanish-conquistador.63678/)
 * Killrogg Deadeye, BlinkBoy: [Warcraft 2 Elven Ranger](https://www.hiveworkshop.com/threads/warcraft-2-elven-ranger.195925/)
 * Blizzard: [BTNElvenRanger]( https://www.hiveworkshop.com/threads/btnelvenranger.56354/)
+* Cavman: [Clefthoof](https://www.hiveworkshop.com/threads/need-clefthoof-model-or-talbuk.155138/#post-1435884)
