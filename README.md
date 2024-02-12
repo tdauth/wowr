@@ -1431,3 +1431,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard: [BTNElvenRanger]( https://www.hiveworkshop.com/threads/btnelvenranger.56354/)
 * Cavman: [Clefthoof](https://www.hiveworkshop.com/threads/need-clefthoof-model-or-talbuk.155138/#post-1435884)
 * Heinvers, Sellenisko: [FelLord](https://www.hiveworkshop.com/threads/fellord.290855/)
+* -Berz-: [BTNThrowingAxe](https://www.hiveworkshop.com/threads/btnthrowingaxe.160168/)
+* Lord_T: [Short Axe/Throwing Axe](https://www.hiveworkshop.com/threads/short-axe-throwing-axe.104074/)
+* Lord_T: [Item Short Axe/ Throwing Axe](https://www.hiveworkshop.com/threads/item-short-axe-throwing-axe.104075/)
+* Devine, dansaDisco: [Dice](https://www.hiveworkshop.com/threads/a-roll-dice-model.137860/#post-1240930)
