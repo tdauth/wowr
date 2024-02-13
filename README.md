@@ -1435,3 +1435,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Lord_T: [Short Axe/Throwing Axe](https://www.hiveworkshop.com/threads/short-axe-throwing-axe.104074/)
 * Lord_T: [Item Short Axe/ Throwing Axe](https://www.hiveworkshop.com/threads/item-short-axe-throwing-axe.104075/)
 * Devine, dansaDisco: [Dice](https://www.hiveworkshop.com/threads/a-roll-dice-model.137860/#post-1240930)
+* Windrunner29: [BTNGarlic](https://www.hiveworkshop.com/threads/btngarlic.270326/)
+* MeteORA: [Wooden Fishing Rod](https://www.hiveworkshop.com/threads/wooden-fishing-rod.116341/)
+* darkdeathknight: [BTNFishDish](https://www.hiveworkshop.com/threads/btnfishdish.192391/)
