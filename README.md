@@ -5,6 +5,7 @@ This map is not a recreation of the game World of Warcraft but is inspired by an
 
 
 Official website: [wowreforged.org](https://wowreforged.org)
+GitHub Repository of the official website: [wowr-website](https://github.com/tdauth/wowr-website)
 
 ## Play the Map
 
