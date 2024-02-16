@@ -1439,3 +1439,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Windrunner29: [BTNGarlic](https://www.hiveworkshop.com/threads/btngarlic.270326/)
 * MeteORA: [Wooden Fishing Rod](https://www.hiveworkshop.com/threads/wooden-fishing-rod.116341/)
 * darkdeathknight: [BTNFishDish](https://www.hiveworkshop.com/threads/btnfishdish.192391/)
+* KelThuzad: [BTNFishing1](https://www.hiveworkshop.com/threads/btnfishing1.126295/)
+* Sharks: [olofmoleman](https://www.hiveworkshop.com/threads/sharks.48326/)
+* NFWar: [BTNShark](https://www.hiveworkshop.com/threads/btnshark.166956/)
