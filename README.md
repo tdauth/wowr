@@ -1442,3 +1442,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * KelThuzad: [BTNFishing1](https://www.hiveworkshop.com/threads/btnfishing1.126295/)
 * Sharks: [olofmoleman](https://www.hiveworkshop.com/threads/sharks.48326/)
 * NFWar: [BTNShark](https://www.hiveworkshop.com/threads/btnshark.166956/)
+* Praytic: [BTNCarvingKnife](https://www.hiveworkshop.com/threads/btncarvingknife.225055/)
+* kola: [BTNRecipe](https://www.hiveworkshop.com/threads/btnrecipe.154957/)
