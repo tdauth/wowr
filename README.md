@@ -1444,3 +1444,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * NFWar: [BTNShark](https://www.hiveworkshop.com/threads/btnshark.166956/)
 * Praytic: [BTNCarvingKnife](https://www.hiveworkshop.com/threads/btncarvingknife.225055/)
 * kola: [BTNRecipe](https://www.hiveworkshop.com/threads/btnrecipe.154957/)
+* JollyD: [BTNCloverStuff](https://www.hiveworkshop.com/threads/btncloverstuff.261471/)
+* Riley: [BTNstamina](https://www.hiveworkshop.com/threads/btnstamina.58800/)
+* Hantoo: [AdvancedFirePit](https://www.hiveworkshop.com/threads/advancedfirepit.257900/)
