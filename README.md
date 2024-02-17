@@ -1447,3 +1447,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * JollyD: [BTNCloverStuff](https://www.hiveworkshop.com/threads/btncloverstuff.261471/)
 * Riley: [BTNstamina](https://www.hiveworkshop.com/threads/btnstamina.58800/)
 * Hantoo: [AdvancedFirePit](https://www.hiveworkshop.com/threads/advancedfirepit.257900/)
+* Benboncan: [Cow.wav](https://freesound.org/people/Benboncan/sounds/58277/)
