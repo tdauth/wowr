@@ -1461,3 +1461,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * FerSZ: [Eredar Witch](https://www.hiveworkshop.com/threads/eredar-witch.290652/)
 * Nightmare2077: [Eredar Witch](https://www.hiveworkshop.com/threads/eredar-witch.344724/)
 * Kuhneghetz: [Panther](https://www.hiveworkshop.com/threads/panther.51603/)
+* Alok: [Dragonspawn Worker](https://www.hiveworkshop.com/threads/dragonspawn-worker.292636/)
+* Pvt.Toma: [Altar of Dragon](https://www.hiveworkshop.com/threads/altar-of-dragon.225792/)
+* exN: [BTNFlower1](https://www.hiveworkshop.com/threads/btnflower1.54573/)
+* kellym0: [AnimatedFlowerAv.343](https://www.hiveworkshop.com/threads/animatedflowerav-343.223048/)
