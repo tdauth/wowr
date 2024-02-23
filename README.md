@@ -1465,3 +1465,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Pvt.Toma: [Altar of Dragon](https://www.hiveworkshop.com/threads/altar-of-dragon.225792/)
 * exN: [BTNFlower1](https://www.hiveworkshop.com/threads/btnflower1.54573/)
 * kellym0: [AnimatedFlowerAv.343](https://www.hiveworkshop.com/threads/animatedflowerav-343.223048/)
+* Vinz: [Sawmill / War Mill](https://www.hiveworkshop.com/threads/sawmill-war-mill.351800/)
