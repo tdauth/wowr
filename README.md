@@ -1466,3 +1466,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * exN: [BTNFlower1](https://www.hiveworkshop.com/threads/btnflower1.54573/)
 * kellym0: [AnimatedFlowerAv.343](https://www.hiveworkshop.com/threads/animatedflowerav-343.223048/)
 * Vinz: [Sawmill / War Mill](https://www.hiveworkshop.com/threads/sawmill-war-mill.351800/)
+* Tranquil: [Generators](https://www.hiveworkshop.com/threads/generators.277141/)
+* Nightmare2077: [Generator sphere](https://www.hiveworkshop.com/threads/generator-sphere.338414/)
+* Nightmare2077: [Generator crystal](https://www.hiveworkshop.com/threads/generator-crystal.338415/)
+* HappyCockroach: [Night Elven Airship](https://www.hiveworkshop.com/threads/night-elven-airship.122194/)

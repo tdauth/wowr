@@ -68,6 +68,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_DEMON_SOUL_THEFT )
     call SetBuildUpgr( 1, UPG_DEMON_SPACE_TRAVEL )
     call SetBuildUpgr( 1, UPG_DEMON_FEL_TRANSPORTING )
+    call SetBuildUpgr( 1, UPG_DEMON_INFERNO )
     call SetBuildUpgr( 1, UPG_DEMON_BACKPACK )
     call SetBuildUpgr( 1, UPG_DEMON_BOOK_OF_SUMMONING )
     call SetBuildUpgr( 1, UPG_DEMON_OUTLAND_DIMENSIONAL_GATE )

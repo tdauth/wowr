@@ -921,6 +921,7 @@ globals
     constant integer UPG_DEMON_SOUL_THEFT                            = 'R08Y'
     constant integer UPG_DEMON_SPACE_TRAVEL                          = 'R093'
     constant integer UPG_DEMON_FEL_TRANSPORTING                      = 'R06E'
+    constant integer UPG_DEMON_INFERNO                               = 'R0G6'
     constant integer UPG_DEMON_BACKPACK                              = 'R00G'
     constant integer UPG_DEMON_BOOK_OF_SUMMONING                     = 'R023' // special building
     constant integer UPG_DEMON_OUTLAND_DIMENSIONAL_GATE              = 'R02A' // special building
@@ -1432,6 +1433,67 @@ globals
     constant integer LORDAERON_CITIZEN_MALE                          = 'n0DY'
     constant integer LORDAERON_CITIZEN_FEMALE                        = 'n0E0'
     constant integer LORDAERON_HOUSING                               = 'h0N7'
+
+    // Stormwind
+    constant integer STORMWIND_TIER_1                                = 'h0QY'
+    constant integer STORMWIND_TIER_2                                = 'h0RC'
+    constant integer STORMWIND_TIER_3                                = 'h0RD'
+    constant integer STORMWIND_ALTAR                                 = 'h0R1'
+    constant integer STORMWIND_ARCANE_TOWER                          = 'h0RJ'
+    constant integer STORMWIND_BARRACKS                              = 'h0RB'
+    constant integer STORMWIND_BLACKSMITH                            = 'h0R8'
+    constant integer STORMWIND_CANNON_TOWER                          = 'h0RI'
+    constant integer STORMWIND_FARM                                  = 'h0R0'
+    constant integer STORMWIND_AVIARY                                = 'h0R9'
+    constant integer STORMWIND_GUARD_TOWER                           = 'h0RH'
+    constant integer STORMWIND_LUMBER_MILL                           = 'h0R3'
+    constant integer STORMWIND_SCOUT_TOWER                           = 'h0R4'
+    constant integer STORMWIND_MAGE_TOWER                            = 'h0RA'
+    constant integer STORMWIND_CATHEDRAL_OF_LIGHT                    = 'h0RK' // special building
+    constant integer STORMWIND_ARCANE_VAULT                          = 'h0R2'
+    constant integer STORMWIND_WORKSHOP                              = 'h0R7'
+    constant integer STORMWIND_SHIPYARD                              = 'h0RG'
+
+    constant integer UPG_STORMWIND_LUMBER                            = 'R0ES'
+    constant integer UPG_STORMWIND_MASONRY                           = 'R0ET'
+    constant integer UPG_STORMWIND_MELEE                             = 'R0EU'
+    constant integer UPG_STORMWIND_ARMOR                             = 'R0F1'
+    constant integer UPG_STORMWIND_RANGED                            = 'R0F2'
+    constant integer UPG_STORMWIND_LEATHER                           = 'R0F9'
+    constant integer UPG_STORMWIND_DEFEND                            = 'R0EV'
+    constant integer UPG_STORMWIND_BOWS                              = 'R0EW'
+    constant integer UPG_STORMWIND_MARKSMANSHIP                      = 'R0EX'
+    constant integer UPG_STORMWIND_SUNDERING_BLADES                  = 'R0FU'
+    constant integer UPG_STORMWIND_BACKPACK                          = 'R0ER'
+    constant integer UPG_STORMWIND_SORCERY                           = 'R0F6'
+    constant integer UPG_STORMWIND_MAGE                              = 'R0F5'
+    constant integer UPG_STORMWIND_PRIEST                            = 'R0F7'
+    constant integer UPG_STORMWIND_ANIMAL                            = 'R0EZ'
+    constant integer UPG_STORMWIND_UNMOUNT                           = 'R0EY'
+    constant integer UPG_STORMWIND_MAGIC_SENTRY                      = 'R0F8'
+    constant integer UPG_STORMWIND_REINFORCED_DEFENSES               = 'R0EP'
+    constant integer UPG_STORMWIND_CATHEDRAL_OF_LIGHT                = 'R0EQ' // special building
+
+    constant integer STORMWIND_WORKER                                = 'h0QZ' // worker
+    constant integer STORMWIND_FOOTMAN                               = 'h0RS'
+    constant integer STORMWIND_RANGER                                = 'n0I3'
+    constant integer STORMWIND_KNIGHT                                = 'h0RU'
+    constant integer STORMWIND_BANNER_CARRIER                        = 'h0RQ'
+    constant integer STORMWIND_GRYPHON_KNIGHT                        = 'h0RP'
+    constant integer STORMWIND_EAGLE_KNIGHT                          = 'h0S0'
+    constant integer STORMWIND_GRYPHON_RIDER                         = 'h0RZ'
+    constant integer STORMWIND_BISHOP                                = 'h0RL'
+    constant integer STORMWIND_MAGE                                  = 'h0RM'
+    constant integer STORMWIND_PRIEST                                = 'h0RX'
+    constant integer STORMWIND_SORCERESS                             = 'h0RY'
+    constant integer STORMWIND_ALLIANCE_SIEGE_TOWER                  = 'h0RE'
+    constant integer STORMWIND_CANNON                                = 'h0RV'
+
+    constant integer STORMWIND_CITIZEN_MALE                          = 'n05S'
+    constant integer STORMWIND_CITIZEN_FEMALE                        = 'n0E0'
+    constant integer STORMWIND_CHILD                                 = 'n0CV'
+    constant integer STORMWIND_PET                                   = 'n00Q'
+    constant integer STORMWIND_HOUSING                               = 'h0RF'
 
     // Pandaren
     constant integer PANDAREN_TIER_1                                 = 'h06D' // tier 1
@@ -2901,6 +2963,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(LORDAERON_TIER_3,false,townid)
     elseif unitid == LORDAERON_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(LORDAERON_GUARD_TOWER,false,townid) + GetUnitCountEx(LORDAERON_CANNON_TOWER,false,townid) + GetUnitCountEx(LORDAERON_ARCANE_TOWER,false,townid)
+
+    elseif unitid == STORMWIND_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(STORMWIND_TIER_2,false,townid) + GetUnitCountEx(STORMWIND_TIER_3,false,townid)
+    elseif unitid == STORMWIND_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(STORMWIND_TIER_3,false,townid)
+    elseif unitid == STORMWIND_SCOUT_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(STORMWIND_GUARD_TOWER,false,townid) + GetUnitCountEx(STORMWIND_CANNON_TOWER,false,townid) + GetUnitCountEx(STORMWIND_ARCANE_TOWER,false,townid)
 
     elseif unitid == PANDAREN_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(PANDAREN_TIER_2,false,townid) + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
