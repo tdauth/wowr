@@ -1470,3 +1470,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Nightmare2077: [Generator sphere](https://www.hiveworkshop.com/threads/generator-sphere.338414/)
 * Nightmare2077: [Generator crystal](https://www.hiveworkshop.com/threads/generator-crystal.338415/)
 * HappyCockroach: [Night Elven Airship](https://www.hiveworkshop.com/threads/night-elven-airship.122194/)
+* pWn3d: [Sunwell](https://www.hiveworkshop.com/threads/sunwell.86859/)
