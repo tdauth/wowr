@@ -1980,6 +1980,70 @@ globals
 
     constant integer OGRE_SHIPYARD                                   = 'o07C'
 
+    // Eredar
+    constant integer EREDAR_TIER_1                                   = 'n0IO'
+    constant integer EREDAR_TIER_2                                   = 'n0JJ'
+    constant integer EREDAR_TIER_3                                   = 'n0JK'
+    constant integer EREDAR_BARRACKS                                 = 'h0U8' // barracks
+    constant integer EREDAR_ARGUNITE_MILL                            = 'h0UK' // lumber mill
+    constant integer EREDAR_FORGE                                    = 'h0U6' // forge
+    constant integer EREDAR_MANARI_CRYSTAL                           = 'h0U7' // sanctuary
+    constant integer EREDAR_SPIRE                                    = 'h0U5' // watch tower
+    constant integer EREDAR_ALTAR                                    = 'h0UD'
+    constant integer EREDAR_SHOP                                     = 'h0UC'
+    constant integer EREDAR_WORKSHOP                                 = 'o08C'
+    constant integer EREDAR_PYLON                                    = 'o08B' // farm
+    constant integer EREDAR_EXODAR                                   = 'o08N' // special building
+
+    constant integer UPG_EREDAR_BACKPACK                             = 'R0G3'
+    constant integer UPG_EREDAR_DEFEND                               = 'R0G4'
+    constant integer UPG_EREDAR_ARKONITE_DEFENSE                     = 'R0G7' // masonry
+    constant integer UPG_EREDAR_SORCERESS                            = 'R00E'
+    constant integer UPG_EREDAR_EXODAR                               = 'R0G5'
+
+    constant integer EREDAR_ARTIFICER                                = 'n0IN' // worker
+    constant integer EREDAR_PEACEKEEPER                              = 'h0U9' // footman
+    constant integer EREDAR_RANGARI                                  = 'n0JE' // rifleman
+    constant integer EREDAR_OUTRIDER                                 = 'h0UA' // knight
+    constant integer EREDAR_ELEKK_KNIGHT                             = 'h0UB' // kodo beast
+    constant integer EREDAR_NETHER_RAY                               = 'n0JH' // gryphon rider
+    constant integer EREDAR_SUCCUBUS                                 = 'n0JD' // sorceress
+    constant integer EREDAR_SORCERER                                 = 'n0JC' // priest
+    constant integer EREDAR_VIGILANT                                 = 'n0JG' // tauren
+    constant integer EREDAR_SIEGEBREAKER                             = 'n0JF' // catapult
+
+    constant integer EREDAR_PET                                      = 'n0JN'
+    constant integer EREDAR_CITIZEN_MALE                             = 'n0JO'
+    constant integer EREDAR_CITIZEN_FEMALE                           = 'n0JP'
+    constant integer EREDAR_HOUSING                                  = 'h0UE'
+
+    // Corrupted Ancients
+    constant integer CORRUPTED_ANCIENTS_TIER_1                       = 'n0GX'
+    constant integer CORRUPTED_ANCIENTS_TIER_2                       = 'n0GY'
+    constant integer CORRUPTED_ANCIENTS_TIER_3                       = 'n0GZ'
+    constant integer CORRUPTED_ANCIENTS_ALTAR                        = 'e025'
+    constant integer CORRUPTED_ANCIENTS_MOON_WELL                    = 'n0H1' // farm
+    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_LORE              = 'e021'
+    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_WIND              = 'e022'
+    constant integer CORRUPTED_ANCIENTS_HUNTERS_HALL                 = 'e01Z' // forge
+    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_WONDERS           = 'e024' // shop
+    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_WAR               = 'n0GV' // barracks
+    constant integer CORRUPTED_ANCIENTS_ANCIENT_PROTECTOR            = 'n0GW' // tower
+    constant integer CORRUPTED_ANCIENTS_DEMON_GATE                   = 'n0H9' // aviary
+
+    constant integer CORRUPTED_ANCIENTS_WORKER                       = 'e01Y'
+    constant integer CORRUPTED_ANCIENTS_GREEN_DRAKE                  = 'n0HE'
+    constant integer CORRUPTED_ANCIENTS_CORRUPTED_TREANT             = 'n0H8'
+    constant integer CORRUPTED_ANCIENTS_GHOST                        = 'n0HB'
+    constant integer CORRUPTED_ANCIENTS_SATYR_SHADOWDANCER           = 'n0HD'
+    constant integer CORRUPTED_ANCIENTS_SATYR_HELLCALLER             = 'n0HL'
+    constant integer CORRUPTED_ANCIENTS_SLUDGE_FLINGER               = 'n0HC'
+
+    constant integer CORRUPTED_ANCIENTS_PET                          = 'n0JN'
+    constant integer CORRUPTED_ANCIENTS_CITIZEN_MALE                 = 'n0JO'
+    constant integer CORRUPTED_ANCIENTS_CITIZEN_FEMALE               = 'n0JP'
+    constant integer CORRUPTED_ANCIENTS_HOUSING                      = 'h0UE'
+
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
     constant integer MODERNWARFARE_TIER_2                            = 'h0FR' // tier 2
@@ -3057,6 +3121,16 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(OGRE_TIER_3,false,townid)
      elseif unitid == OGRE_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(OGRE_ADVANCED_BOULDER_TOWER,false,townid)
+
+    elseif unitid == EREDAR_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(EREDAR_TIER_2,false,townid) + GetUnitCountEx(EREDAR_TIER_3,false,townid)
+    elseif unitid == EREDAR_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(EREDAR_TIER_3,false,townid)
+
+    elseif unitid == CORRUPTED_ANCIENTS_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_2,false,townid) + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
+    elseif unitid == CORRUPTED_ANCIENTS_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
 
     elseif unitid == MODERNWARFARE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
@@ -5126,6 +5200,11 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(VRYKUL_HOUSING)
     set count = count + GetUnitCount(TUSKARR_HOUSING)
     set count = count + GetUnitCount(NERUBIAN_HOUSING)
+    set count = count + GetUnitCount(TUSKARR_HOUSING)
+    set count = count + GetUnitCount(MURLOC_HOUSING)
+    set count = count + GetUnitCount(OGRE_HOUSING)
+    set count = count + GetUnitCount(EREDAR_HOUSING)
+    set count = count + GetUnitCount(CORRUPTED_ANCIENTS_HOUSING)
     set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
     set count = count + GetUnitCount(FREEPEOPLE_HOUSING)
     set count = count + GetUnitCount(SAURONSFORCES_HOUSING)
