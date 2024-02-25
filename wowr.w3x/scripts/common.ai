@@ -1875,6 +1875,45 @@ globals
     constant integer NERUBIAN_CITIZEN_FEMALE                         = 'n0EA'
     constant integer NERUBIAN_HOUSING                                = 'h0OX'
 
+    // Murloc
+    constant integer MURLOC_TIER_1                                   = 'n0FP'
+    constant integer MURLOC_TIER_2                                   = 'n0G6'
+    constant integer MURLOC_TIER_3                                   = 'n0G5'
+    constant integer MURLOC_ALTAR                                    = 'n0FZ'
+    constant integer MURLOC_SHOP                                     = 'h0PZ'
+    constant integer MURLOC_HUT                                      = 'o067'
+    constant integer MURLOC_BLADEMAKING_HUT                          = 'o06A' // Forge
+    constant integer MURLOC_BARRACKS                                 = 'n0FQ'
+    constant integer MURLOC_LUMBER_KEEP                              = 'o068'
+    constant integer MURLOC_FISHER                                   = 'o069' // special building
+    constant integer MURLOC_HATCHLING_GROUNDS                        = 'n0G1' // beastiary
+    constant integer MURLOC_SORCERER_DEN                             = 'n0G0' // sanctuary
+    constant integer MURLOC_BONE_CHIPPER                             = 'n0JW' // tower
+
+    constant integer UPG_MURLOC_BACKPACK                             = 'R0CV'
+    constant integer UPG_MURLOC_DAMAGE                               = 'R0G8'
+    constant integer UPG_MURLOC_ARMOR                                = 'R0G9'
+    constant integer UPG_MURLOC_BUBBLE_MAGE                          = 'R0CY'
+    constant integer UPG_MURLOC_SHADOW_CASTER                        = 'R0CZ'
+    constant integer UPG_MURLOC_RIVER_BANK                           = 'R0D0'
+    constant integer UPG_MURLOC_EGGS                                 = 'R0CX'
+    constant integer UPG_MURLOC_SWARMING                             = 'R0D1'
+    constant integer UPG_MURLOC_FISHER                               = 'R0CW' // special building
+
+    constant integer MURLOC_WORKER                                   = 'n0FO'
+    constant integer MURLOC_TIDESRUNNER                              = 'n0FR' // footman
+    constant integer MURLOC_HUNTER                                   = 'n0G3' // rifleman
+    constant integer MURLOC_FLESH_EATER                              = 'n0G2' // knight
+    constant integer MURLOC_BUBBLE_MAGE                              = 'n0G7' // sorceress
+    constant integer MURLOC_SHADOWCASTER                             = 'n0G9' // priest
+    constant integer MURLOC_DRAGON_TURTLE                            = 'n0FS' // catapult
+    constant integer MURLOC_SEA_GIANT                                = 'n0G8' // tauren
+
+    constant integer MURLOC_CITIZEN_MALE                             = 'n0G4'
+    constant integer MURLOC_CITIZEN_FEMALE                           = 'n0JV'
+    constant integer MURLOC_PET                                      = 'n05K'
+    constant integer MURLOC_HOUSING                                  = 'h0Q0'
+
     // Ogre
     constant integer OGRE_TIER_1                                     = 'o06C'
     constant integer OGRE_TIER_2                                     = 'o073'
