@@ -2031,6 +2031,11 @@ globals
     constant integer CORRUPTED_ANCIENTS_ANCIENT_PROTECTOR            = 'n0GW' // tower
     constant integer CORRUPTED_ANCIENTS_DEMON_GATE                   = 'n0H9' // aviary
 
+    constant integer UPG_CORRUPTED_ANCIENTS_BACKPACK                 = 'R0DX'
+    constant integer UPG_CORRUPTED_ANCIENTS_STR_MOON                 = 'R0GB'
+    constant integer UPG_CORRUPTED_ANCIENTS_MOON_ARMOR               = 'R0GA'
+    constant integer UPG_CORRUPTED_ANCIENTS_SLUDGE_FLINGER           = 'R0GC'
+
     constant integer CORRUPTED_ANCIENTS_WORKER                       = 'e01Y'
     constant integer CORRUPTED_ANCIENTS_GREEN_DRAKE                  = 'n0HE'
     constant integer CORRUPTED_ANCIENTS_CORRUPTED_TREANT             = 'n0H8'

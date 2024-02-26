@@ -1,0 +1,257 @@
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, TUSKARR_FROZEN_HALL )
+    call SetBuildUnit( 17, TUSKARR_WORKER )
+    call SetBuildUnit( 2, TUSKARR_CITIZEN_MALE )
+
+    call BuildingStrategyStandardTier1()
+
+    call SetBuildUnit( 2, TUSKARR_HOUSING )
+    call SetBuildUnit( 1, TUSKARR_ICY_SPIRE )
+    call SetBuildUnit( 3, TUSKARR_IGLOO )
+    call SetBuildUnit( 2, TUSKARR_IGLOO_BARRACKS )
+    call SetBuildUnit( 1, TUSKARR_ALTAR_OF_ICE )
+    call SetBuildUnit( 1, TUSKARR_NORTHERN_VENDOR_SHOP )
+    
+    call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_WEAPONS )
+    call SetBuildUpgr( 1, UPG_TUSKARR_HARPOONS )
+    call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_ARMOR )
+    call SetBuildUpgr( 1, UPG_TUSKARR_BEAST_PROTECTION )
+    call SetBuildUpgr( 1, UPG_TUSKARR_ENSNARE )
+    call SetBuildUpgr( 1, UPG_TUSKARR_IMPROVED_FISHING )
+
+    // Tier 2 buildings
+    call SetBuildUnit( 1, TUSKARR_FROZEN_STRONGHOLD )
+    call SetBuildUnit( 1, TUSKARR_ICY_SPIRE )
+    call SetBuildUnit( 1, TUSKARR_ICE_CUTTERS_LODGE )
+    call SetBuildUnit( 1, TUSKARR_HUNTERS_REST )
+    call SetBuildUnit( 4, TUSKARR_IGLOO )
+    call SetBuildUnit( 2, TUSKARR_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, TUSKARR_PET_SEAL )
+    
+    call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_WEAPONS )
+    call SetBuildUpgr( 2, UPG_TUSKARR_HARPOONS )
+    call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_ARMOR )
+    call SetBuildUpgr( 2, UPG_TUSKARR_BEAST_PROTECTION )
+    call SetBuildUpgr( 2, UPG_TUSKARR_IMPROVED_FISHING )
+    call SetBuildUpgr( 1, UPG_TUSKARR_FROST_IMMUNITY )
+    call SetBuildUpgr( 1, UPG_TUSKARR_ETHERAL_BEASTS )
+    call SetBuildUpgr( 1, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
+    call SetBuildUpgr( 1, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, TUSKARR_FROZEN_FORTRESS )
+    call SetBuildUnit( 1, TUSKARR_DECORATED_CAVERN )
+    call SetBuildUnit( 5, TUSKARR_IGLOO )
+    call SetBuildUnit( 2, TUSKARR_BLOCK_OF_ICE )
+    call SetBuildUnit( 2, TUSKARR_SPIDER_SHRINE )
+    call SetBuildUnit( 2, TUSKARR_FROST_SNOWMAN )
+    call SetBuildUnit( 2, TUSKARR_CITIZEN_MALE )
+
+    call SetBuildUpgr( 3, UPG_TUSKARR_TUSKARR_WEAPONS )
+    call SetBuildUpgr( 3, UPG_TUSKARR_HARPOONS )
+    call SetBuildUpgr( 3, UPG_TUSKARR_TUSKARR_ARMOR )
+    call SetBuildUpgr( 3, UPG_TUSKARR_BEAST_PROTECTION )
+    call SetBuildUpgr( 2, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
+    call SetBuildUpgr( 2, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
+    call SetBuildUpgr( 3, UPG_TUSKARR_DEVOUR )
+    call SetBuildUpgr( 3, UPG_TUSKARR_IMPROVED_FISHING )
+    call SetBuildUpgr( 1, UPG_TUSKARR_WAR_STOMP )
+    call SetBuildUpgr( 1, UPG_TUSKARR_CRITICAL_STRIKE )
+    call SetBuildUpgr( 1, UPG_TUSKARR_CLANS )
+    call SetBuildUpgr( 1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+    call SetBuildUpgr( 1, UPG_TUSKARR_CLEAVING_ATTACK )
+    call SetBuildUpgr( 1, UPG_TUSKARR_MAGIC_SENTRY )
+    call SetBuildUpgr( 1, UPG_TUSKARR_BACKPACK )
+    call SetBuildUpgr( 1, UPG_TUSKARR_BURIAL_PLACE )
+    call SetBuildUnit( 1, TUSKARR_BURIAL_PLACE )
+
+    call BuildingStrategyStandardTier3()
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, TUSKARR_FROZEN_FORTRESS)
+    call SetBuildExpa(expansions, TUSKARR_ICY_SPIRE)
+    call SetBuildExpa(expansions, TUSKARR_BLOCK_OF_ICE)
+endfunction
+
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, TUSKARR_TUSKARR_SHIPYARD )
+        call SetBuildUnit( 1, TUSKARR_FISHING_BOAT )
+        call SetBuildUnit( 1, ORC_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, ORC_JUGGERNAUGHT )
+        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
+    else
+        call SetBuildUnit( 0, TUSKARR_TUSKARR_SHIPYARD )
+        call SetBuildUnit( 0, TUSKARR_FISHING_BOAT )
+        call SetBuildUnit( 0, ORC_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, ORC_FRIGATE )
+        call SetBuildUnit( 0, ORC_JUGGERNAUGHT )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 0, 1, 2, TUSKARR_SPEARMAN )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 0, 1, 2, TUSKARR_SPEARMAN )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_CHIEFTAIN )
+    call CampaignAttackerEx( 2, 2, 3, TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 ***
+        call InitAssaultGroup()
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, TUSKARR_SPEARMAN )
+        call CampaignAttackerEx( 2, 2, 2, TUSKARR_ICETUSK_MAMMOTH )
+        call CampaignAttackerEx( 2, 2, 2, TUSKARR_HEALER )
+        call CampaignAttackerEx( 2, 2, 2, TUSKARR_SHAMAN )
+        call CampaignAttackerEx( 4, 4, 4, TUSKARR_CHIEFTAIN )
+        call CampaignAttackerEx( 4, 4, 4, TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+        call CampaignAttackerEx( 4, 4, 4, TUSKARR_FIGHTER )
+        call CampaignAttackerEx( 4, 4, 4, TUSKARR_GIANT_FROST_WOLF )
+        call CampaignAttackerEx( 4, 4, 4, TUSKARR_MAMMOTH_RIDER )
+        
+         // big air army
+        call CampaignAttackerEx( 8, 10, 12, TUSKARR_GIANT_SNOWY_OWL )
+        
+        call AddStandardUnitsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( TUSKARR_IGLOO, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+    call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
+    call Ships(function BuildShips)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction
