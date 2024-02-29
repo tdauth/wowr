@@ -238,6 +238,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 3, 3, 3, STORMWIND_ALLIANCE_SIEGE_TOWER )
         call CampaignAttackerEx( 3, 3, 3, STORMWIND_CANNON )
         call CampaignAttackerEx( 3, 3, 3, STORMWIND_BISHOP )
+        call CampaignAttackerEx( 3, 3, 3, STORMWIND_LION_RIDER )
 
         // big air army
         call CampaignAttackerEx( 8, 10, 12, STORMWIND_GRYPHON_RIDER )

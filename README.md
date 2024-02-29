@@ -1472,3 +1472,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * HappyCockroach: [Night Elven Airship](https://www.hiveworkshop.com/threads/night-elven-airship.122194/)
 * pWn3d: [Sunwell](https://www.hiveworkshop.com/threads/sunwell.86859/)
 * Stormode: [Murlocs Buildings](https://www.hiveworkshop.com/threads/murlocs-buildings.352376/)
+* Stefan.K: [Lion Rider](https://www.hiveworkshop.com/threads/lion-rider.321421/)

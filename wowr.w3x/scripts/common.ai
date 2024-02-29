@@ -1482,6 +1482,7 @@ globals
     constant integer STORMWIND_GRYPHON_KNIGHT                        = 'h0RP'
     constant integer STORMWIND_EAGLE_KNIGHT                          = 'h0S0'
     constant integer STORMWIND_GRYPHON_RIDER                         = 'h0RZ'
+    constant integer STORMWIND_LION_RIDER                            = 'h0UM'
     constant integer STORMWIND_BISHOP                                = 'h0RL'
     constant integer STORMWIND_MAGE                                  = 'h0RM'
     constant integer STORMWIND_PRIEST                                = 'h0RX'
@@ -1895,6 +1896,7 @@ globals
     constant integer UPG_MURLOC_ARMOR                                = 'R0G9'
     constant integer UPG_MURLOC_BUBBLE_MAGE                          = 'R0CY'
     constant integer UPG_MURLOC_SHADOW_CASTER                        = 'R0CZ'
+    constant integer UPG_MURLOC_CULTIST                              = 'R0GE'
     constant integer UPG_MURLOC_RIVER_BANK                           = 'R0D0'
     constant integer UPG_MURLOC_EGGS                                 = 'R0CX'
     constant integer UPG_MURLOC_SWARMING                             = 'R0D1'
@@ -1906,6 +1908,7 @@ globals
     constant integer MURLOC_FLESH_EATER                              = 'n0G2' // knight
     constant integer MURLOC_BUBBLE_MAGE                              = 'n0G7' // sorceress
     constant integer MURLOC_SHADOWCASTER                             = 'n0G9' // priest
+    constant integer MURLOC_CULTIST                                  = 'n0JB' // spellbreaker
     constant integer MURLOC_DRAGON_TURTLE                            = 'n0FS' // catapult
     constant integer MURLOC_SEA_GIANT                                = 'n0G8' // tauren
 
@@ -2502,6 +2505,11 @@ globals
     constant integer SUMMON_SPIDER_EGG                               = 'A1CF'
     constant integer SPIN_WEB                                        = 'A1D4'
     constant integer NERUBIAN_ARMY                                   = 'A1D5'
+
+    // Murloc
+    constant integer MURLOC_SORCERER                                 = 'Nmsr'
+    constant integer WATERY_MINION                                   = 'ANwm'
+    constant integer CRUSHING_WAVE                                   = 'A05L'
 
     // Ogre
     constant integer OGRE_LORD                                       = 'N0D1'
@@ -3118,6 +3126,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == NERUBIAN_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(NERUBIAN_TIER_2,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
     elseif unitid == NERUBIAN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
+
+    elseif unitid == MURLOC_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(MURLOC_TIER_2,false,townid) + GetUnitCountEx(MURLOC_TIER_3,false,townid)
+    elseif unitid == MURLOC_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
 
     elseif unitid == OGRE_TIER_1 then
@@ -4977,6 +4990,17 @@ function ChooseHeroSkill takes nothing returns integer
         elseif (mod == 2) then
             return SPIN_WEB
         endif
+    // Murloc
+    elseif (curHero == MURLOC_SORCERER) then
+        if (skillUlti) then
+            return TORNADO
+        elseif (mod == 0) then
+            return RAIN_OF_FIRE
+        elseif (mod == 1) then
+            return WATERY_MINION
+        elseif (mod == 2) then
+            return CRUSHING_WAVE
+        endif
     // Ogre
     elseif (curHero == OGRE_LORD) then
         if (skillUlti) then
@@ -5158,6 +5182,8 @@ function InitHeroTypes takes nothing returns nothing
     call AddHeroTypes(HERO_TUSKARR_CHIEFTAIN)
     // Nerubian
     call AddHeroTypes(NERUBIAN_QUEEN_HERO)
+    // Murloc
+    call AddHeroTypes(MURLOC_SORCERER)
     // Ogre
     call AddHeroTypes(OGRE_LORD)
     // Modern Warfare
