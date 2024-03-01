@@ -215,6 +215,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 15, 20, 25, CIS_PROVIDENCE_CLASS_DESTROYER )
         
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop

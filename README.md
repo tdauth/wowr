@@ -1473,3 +1473,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * pWn3d: [Sunwell](https://www.hiveworkshop.com/threads/sunwell.86859/)
 * Stormode: [Murlocs Buildings](https://www.hiveworkshop.com/threads/murlocs-buildings.352376/)
 * Stefan.K: [Lion Rider](https://www.hiveworkshop.com/threads/lion-rider.321421/)
+* PROXY: [Eredar Annihilator](https://www.hiveworkshop.com/threads/eredar-annihilator.272526/)

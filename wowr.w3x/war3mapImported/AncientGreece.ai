@@ -241,6 +241,7 @@ function AttackWaves takes nothing returns nothing
         // big air army
 
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop

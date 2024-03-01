@@ -232,6 +232,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 8, 12, 18, GNOME_GRYPHON_RIDER )
 
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop

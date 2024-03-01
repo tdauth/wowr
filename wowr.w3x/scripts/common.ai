@@ -2158,6 +2158,82 @@ globals
     constant integer ROMANEMPIRE_CITIZEN_FEMALE                      = 'n0AS'
     constant integer ROMANEMPIRE_HOUSING                             = 'h0G5'
 
+    // Medieval
+    constant integer MEDIEVAL_TIER_1                                 = 'h0AN'
+    constant integer MEDIEVAL_TIER_2                                 = 'h0AV'
+    constant integer MEDIEVAL_TIER_3                                 = 'h0AW'
+    constant integer MEDIEVAL_TIER_4                                 = 'h0C0'
+    constant integer MEDIEVAL_TIER_5                                 = 'h0C1'
+    constant integer MEDIEVAL_TIER_6                                 = 'h0C2'
+    constant integer MEDIEVAL_TIER_7                                 = 'h0C3'
+    constant integer MEDIEVAL_FARM                                   = 'h0CA'
+    constant integer MEDIEVAL_HOUSE                                  = 'h0AS'
+    constant integer MEDIEVAL_STONEMASON                             = 'h0CC'
+    constant integer MEDIEVAL_PLANTATION                             = 'h0C7'
+    constant integer MEDIEVAL_STORAGE_SHED                           = 'h0CB'
+    constant integer MEDIEVAL_WATER_MILL                             = 'h0C9'
+    constant integer MEDIEVAL_TAVERN                                 = 'h0AT' // altar
+    constant integer MEDIEVAL_ARCHERY                                = 'h0AP'
+    constant integer MEDIEVAL_BARRACKS                               = 'h0CF'
+    constant integer MEDIEVAL_ENCAMPMENT                             = 'h0BJ'
+    constant integer MEDIEVAL_LUMBER_MILL                            = 'h0AU'
+    constant integer MEDIEVAL_BLACKSMITH                             = 'h0CD'
+    constant integer MEDIEVAL_STABLES                                = 'h0AZ'
+    constant integer MEDIEVAL_UNIVERSITY                             = 'h0B8'
+    constant integer MEDIEVAL_CHURCH                                 = 'h0B7'
+    constant integer MEDIEVAL_KNIGHTS_CASTLE                         = 'h0AX'
+    constant integer MEDIEVAL_SIEGE_WORKSHOP                         = 'h0AR'
+    constant integer MEDIEVAL_SCOUT_TOWER                            = 'h0BA'
+    constant integer MEDIEVAL_GUARD_TOWER                            = 'h0BI'
+    constant integer MEDIEVAL_SENTRY_TOWER                           = 'h0CE'
+    constant integer MEDIEVAL_WELL                                   = 'e015'
+    constant integer MEDIEVAL_MARKET                                 = 'h0B5' // shop
+    constant integer MEDIEVAL_CATHEDRAL                              = 'h0BC' // special building
+    constant integer MEDIEVAL_DOCK                                   = 'h0BK' // shipyard
+    //constant integer MEDIEVAL_TREBUCHET                              = 'h0C8'
+
+    constant integer UPG_MEDIEVAL_BACKPACK                           = 'R075'
+    constant integer UPG_MEDIEVAL_CAVALERY_PLATING                   = 'R07B'
+    constant integer UPG_MEDIEVAL_CROSSBOWS                          = 'R074'
+    constant integer UPG_MEDIEVAL_QUARTER                            = 'R073'
+    constant integer UPG_MEDIEVAL_FLETCHING                          = 'R077'
+    constant integer UPG_MEDIEVAL_TOWN_WATCH                         = 'R078'
+    constant integer UPG_MEDIEVAL_WHEELBARROW                        = 'R079'
+    constant integer UPG_MEDIEVAL_HERESY                             = 'R07A'
+    constant integer UPG_MEDIEVAL_CATHEDRAL                          = 'R06K'
+
+    constant integer MEDIEVAL_VILLAGER                               = 'h0AQ' // worker
+    constant integer MEDIEVAL_ORGAN_CANNON                           = 'e012'
+    constant integer MEDIEVAL_BATTLE_ELEPHANT                        = 'e013'
+    constant integer MEDIEVAL_SIEGE_TOWER                            = 'e000'
+    constant integer MEDIEVAL_SIEGE_LADDER                           = 'h0AY'
+    constant integer MEDIEVAL_CRUSADER                               = 'h0BH'
+    constant integer MEDIEVAL_KNIGHT                                 = 'h0CP'
+    constant integer MEDIEVAL_SCOUT                                  = 'h0C5'
+    constant integer MEDIEVAL_HUSSAR                                 = 'h0CQ'
+    constant integer MEDIEVAL_MOUNTED_KNIGHT                         = 'h0C6'
+    constant integer MEDIEVAL_SPANISH_CONQUISTADOR                   = 'h0TR'
+    constant integer MEDIEVAL_WAGON                                  = 'h0BM'
+    constant integer MEDIEVAL_BOMBARD                                = 'h0BB'
+    constant integer MEDIEVAL_MONK                                   = 'h0BE'
+    constant integer MEDIEVAL_WIZARD                                 = 'h0BG'
+    constant integer MEDIEVAL_WITCH                                  = 'h0C4'
+    constant integer MEDIEVAL_ARCHER                                 = 'h09I'
+    constant integer MEDIEVAL_CROSSBOWMAN                            = 'h09R'
+    constant integer MEDIEVAL_SAMURAI                                = 'h09U'
+    constant integer MEDIEVAL_SWISS_GUARD                            = 'h09T'
+    constant integer MEDIEVAL_MANTLET                                = 'o035'
+    constant integer MEDIEVAL_BATTERING_RAM                          = 'o034'
+    constant integer MEDIEVAL_CATAPULT                               = 'o033'
+    constant integer MEDIEVAL_TREBUCHET                              = 'o031'
+    constant integer MEDIEVAL_PETARD                                 = 'n09K'
+    constant integer MEDIEVAL_CHINESE_SOLDIER                        = 'h0AA'
+
+    constant integer MEDIEVAL_CITIZEN_MALE                           = 'n09J'
+    constant integer MEDIEVAL_CITIZEN_FEMALE                         = 'n0BO'
+    constant integer MEDIEVAL_PET                                    = 'n00Q'
+    constant integer MEDIEVAL_HOUSING                                = 'h0BZ'
+
     // Free People of Middle Earth
     constant integer FREEPEOPLE_TIER_1                               = 'h0CT' // tier 1-3
     constant integer FREEPEOPLE_GONDOR_HOUSE                         = 'h0DA' // farm
@@ -2353,6 +2429,12 @@ globals
 
     constant integer SHREDDER                                        = 'ngir'
     constant integer AI_LABORATORY                                   = 'h01T'
+    constant integer BLACK_DRAGON                                    = 'nbwm'
+    constant integer BRONZE_DRAGON                                   = 'nbzd'
+    constant integer BLUE_DRAGON                                     = 'nadr'
+    constant integer GREEN_DRAGON                                    = 'ngrd'
+    constant integer NETHER_DRAGON                                   = 'nndr'
+    constant integer RED_DRAGON                                      = 'nrwm'
 
     constant integer MARKETPLACE                                     = 'nmrk'
     constant integer THIEVES_GUILD                                   = 'n09D'
@@ -3149,6 +3231,21 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_2,false,townid) + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
     elseif unitid == CORRUPTED_ANCIENTS_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
+
+    elseif unitid == MEDIEVAL_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_2,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_3,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
+    elseif unitid == MEDIEVAL_TIER_2 then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_3,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
+    elseif unitid == MEDIEVAL_TIER_3 then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
+    elseif unitid == MEDIEVAL_TIER_4 then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
+    elseif unitid == MEDIEVAL_TIER_5 then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
+    elseif unitid == MEDIEVAL_TIER_6 then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
+    elseif unitid == MEDIEVAL_SCOUT_TOWER then
+        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_GUARD_TOWER,false,townid) + GetUnitCountEx(MEDIEVAL_SENTRY_TOWER,false,townid)
 
     elseif unitid == MODERNWARFARE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
@@ -5281,6 +5378,15 @@ function AddStandardUnitsToAttackWave takes nothing returns nothing
     call PurchaseZeppelin()
     call AttackWithMounts()
     call AttackWithHeroes()
+endfunction
+
+function AddDragonsToAttackWave takes nothing returns nothing
+    call CampaignAttackerEx( 1, 1, 1, BLACK_DRAGON )
+    call CampaignAttackerEx( 1, 1, 1, BRONZE_DRAGON )
+    call CampaignAttackerEx( 1, 1, 1, BLUE_DRAGON )
+    call CampaignAttackerEx( 1, 1, 1, GREEN_DRAGON )
+    call CampaignAttackerEx( 1, 1, 1, NETHER_DRAGON )
+    call CampaignAttackerEx( 1, 1, 1, RED_DRAGON )
 endfunction
 
 //===========================================================================

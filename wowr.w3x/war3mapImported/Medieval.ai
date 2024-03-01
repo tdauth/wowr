@@ -1,0 +1,291 @@
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, MEDIEVAL_TIER_1 )
+    call SetBuildUnit( 17, MEDIEVAL_VILLAGER )
+    call SetBuildUnit( 2, MEDIEVAL_CITIZEN_MALE )
+
+    call BuildingStrategyStandardTier1()
+
+    call SetBuildUnit( 2, MEDIEVAL_HOUSING )
+    call SetBuildUnit( 1, MEDIEVAL_LUMBER_MILL )
+    call SetBuildUnit( 3, MEDIEVAL_HOUSE )
+    call SetBuildUnit( 1, MEDIEVAL_BARRACKS )
+    call SetBuildUnit( 1, MEDIEVAL_TAVERN )
+    call SetBuildUnit( 1, MEDIEVAL_BLACKSMITH )
+    call SetBuildUnit( 1, MEDIEVAL_MARKET )
+    
+    call SetBuildUpgr( 1, UPG_MELEE )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_FLETCHING )
+    call SetBuildUpgr( 1, UPG_ARMOR )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_CAVALERY_PLATING )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_TOWN_WATCH )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_WHEELBARROW )
+
+    // Tier 2 buildings
+    call SetBuildUnit( 1, MEDIEVAL_TIER_2 )
+    call SetBuildUnit( 1, MEDIEVAL_CHURCH )
+    call SetBuildUnit( 1, MEDIEVAL_SIEGE_WORKSHOP )
+    call SetBuildUnit( 1, MEDIEVAL_ARCHERY )
+    call SetBuildUnit( 1, MEDIEVAL_STABLES )
+    call SetBuildUnit( 4, MEDIEVAL_HOUSE )
+    call SetBuildUnit( 2, MEDIEVAL_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, MEDIEVAL_PET )
+    
+    call SetBuildUnit( 1, MEDIEVAL_SCOUT_TOWER )
+    
+    call SetBuildUpgr( 2, UPG_MELEE )
+    call SetBuildUpgr( 2, UPG_MEDIEVAL_FLETCHING )
+    call SetBuildUpgr( 2, UPG_ARMOR )
+    call SetBuildUpgr( 2, UPG_MEDIEVAL_CAVALERY_PLATING )
+    call SetBuildUpgr( 1, UPG_WOOD )
+    call SetBuildUpgr( 2, UPG_MEDIEVAL_WHEELBARROW )
+    call SetBuildUpgr( 1, UPG_SENTINEL )
+    call SetBuildUpgr( 1, UPG_GUN_RANGE )
+    call SetBuildUpgr( 1, UPG_PRAYING )
+    call SetBuildUpgr( 1, UPG_SORCERY )
+    call SetBuildUpgr( 1, UPG_FRAGS )
+    call SetBuildUpgr( 1, UPG_FLAK )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_CROSSBOWS )
+    call SetBuildUpgr( 1, UPG_HUMAN_FLARE )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, MEDIEVAL_TIER_3 )
+    call SetBuildUnit( 1, MEDIEVAL_UNIVERSITY )
+    call SetBuildUnit( 1, MEDIEVAL_MEDIEVAL_MOUNTED_KNIGHTS_CASTLE )
+    call SetBuildUnit( 2, MEDIEVAL_GUARD_TOWER )
+    call SetBuildUnit( 1, MEDIEVAL_SENTRY_TOWER )
+    
+    call SetBuildUpgr( 3, UPG_MELEE )
+    call SetBuildUpgr( 3, UPG_MEDIEVAL_FLETCHING )
+    call SetBuildUpgr( 3, UPG_ARMOR )
+    call SetBuildUpgr( 3, UPG_MEDIEVAL_CAVALERY_PLATING )
+    call SetBuildUpgr( 2, UPG_WOOD )
+    call SetBuildUpgr( 3, UPG_MEDIEVAL_WHEELBARROW )
+    call SetBuildUpgr( 2, UPG_PRAYING )
+    call SetBuildUpgr( 2, UPG_SORCERY )
+    call SetBuildUpgr( 1, UPG_BREEDING )
+    call SetBuildUpgr( 1, UPG_HAMMERS )
+    call SetBuildUpgr( 1, UPG_BOMBS )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_HERESY )
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_QUARTER )
+
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_BACKPACK )
+    call SetBuildUpgr( 1, UPG_HUMAN_SUNDERING_BLADES )
+
+    call SetBuildUpgr( 1, UPG_MEDIEVAL_CATHEDRAL )
+    call SetBuildUnit( 1, MEDIEVAL_CATHEDRAL )
+
+    call BuildingStrategyStandardTier3()
+
+    call SetBuildUnit( 1, MEDIEVAL_TIER_4 )
+    call SetBuildUnit( 1, MEDIEVAL_TIER_5 )
+    call SetBuildUnit( 1, MEDIEVAL_TIER_6 )
+    call SetBuildUnit( 1, MEDIEVAL_TIER_7 )
+
+    call SetBuildUnit( 1, MEDIEVAL_WELL )
+    call SetBuildUnit( 1, MEDIEVAL_ENCAMPMENT )
+    call SetBuildUnit( 1, MEDIEVAL_STONEMASON )
+    call SetBuildUnit( 1, MEDIEVAL_PLANTATION )
+    call SetBuildUnit( 1, MEDIEVAL_STORAGE_SHED )
+    call SetBuildUnit( 1, MEDIEVAL_WATER_MILL )
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, MEDIEVAL_TIER_3)
+    call SetBuildExpa(expansions, MEDIEVAL_LUMBER_MILL)
+    call SetBuildExpa(expansions, MEDIEVAL_GUARD_TOWER)
+endfunction
+
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, MEDIEVAL_DOCK )
+        call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, HUMAN_FRIGATE )
+        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
+    else
+        call SetBuildUnit( 0, MEDIEVAL_DOCK )
+        call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, HUMAN_FRIGATE )
+        call SetBuildUnit( 0, HUMAN_BATTLESHIP )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 0, 1, 2, MEDIEVAL_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 0, 1, 2, MEDIEVAL_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_MONK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_MONK )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_MONK )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_WITCH )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_MONK )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_WITCH )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WIZARD )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_MONK )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_WITCH )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WIZARD )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_BATTERING_RAM )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 11 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, MEDIEVAL_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_ARCHER )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_MOUNTED_KNIGHT )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WAGON )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_MONK )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_WITCH )
+    call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WIZARD )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_BATTERING_RAM )
+    call CampaignAttackerEx( 2, 2, 3, MEDIEVAL_BOMBARD )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 12 ***
+        call InitAssaultGroup()
+        
+        // small ground army
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_KNIGHT )
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_ARCHER )
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_MOUNTED_KNIGHT )
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_WAGON )
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_MONK )
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_WITCH )
+        call CampaignAttackerEx( 1, 2, 3, MEDIEVAL_WIZARD )
+        call CampaignAttackerEx( 3, 3, 3, MEDIEVAL_BOMBARD )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_BATTERING_RAM )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_CATAPULT )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_TREBUCHET )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_BATTLE_ELEPHANT )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_ORGAN_CANNON )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SIEGE_TOWER )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SIEGE_LADDER )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_CRUSADER )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SIEGE_TOWER )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SCOUT )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_HUSSAR )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SPANISH_CONQUISTADOR )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SAMURAI )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_SWISS_GUARD )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_MANTLET )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_PETARD )
+        call CampaignAttackerEx( 2, 2, 2, MEDIEVAL_CHINESE_SOLDIER )
+        
+        // big air army
+        
+        call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( MEDIEVAL_HOUSE, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+    call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
+    call Ships(function BuildShips)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction

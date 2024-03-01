@@ -225,6 +225,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, MODERNWARFARE_SATELITE )
 
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop

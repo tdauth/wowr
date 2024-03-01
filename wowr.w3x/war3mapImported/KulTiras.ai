@@ -239,6 +239,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, KULTIRAS_GUNSHIP )
 
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
