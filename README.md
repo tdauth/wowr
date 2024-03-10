@@ -15,7 +15,7 @@ GitHub Repository of the official website: [wowr-website](https://github.com/tda
 * [Official download on Epic War](https://www.epicwar.com/maps/331473/)
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
-*Enable HD graphics in older versions of the map:* Old versions of the map are restricted to SD graphics to avoid performance issues.
+*Enable HD graphics in older versions of the map:* Older versions of the map are restricted to SD graphics to avoid performance issues.
 However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
 
@@ -53,6 +53,11 @@ The map uses several custom systems created by Baradé which can be used in any 
 They are available in [systems](./systems).
 Each system provides a prototype map which shows you how to use the system.
 Some of the systems are available on [HiveWorkshop](https://www.hiveworkshop.com/members/barade.125524/#resources) to make them public and for feedback.
+
+## Modifications with World Editor
+
+Saving the map takes some time due to the big number of objects.
+Hence, you can use the "Validate Map Triggers (F10)" action in the trigger editor before actually saving the map to make sure there won't be any syntax error.
 
 ## Known Reasons for Crashes
 
@@ -1474,3 +1479,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Stormode: [Murlocs Buildings](https://www.hiveworkshop.com/threads/murlocs-buildings.352376/)
 * Stefan.K: [Lion Rider](https://www.hiveworkshop.com/threads/lion-rider.321421/)
 * PROXY: [Eredar Annihilator](https://www.hiveworkshop.com/threads/eredar-annihilator.272526/)
+* Blizzard Entertainment, PashaFenko036: [WC2 - Orc](https://www.hiveworkshop.com/threads/wc2-orc.339449/)
