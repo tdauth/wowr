@@ -1491,3 +1491,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [BTNIceCrownOverlord](https://www.hiveworkshop.com/threads/btnicecrownoverlord.58387/)
 * Vinz: [Frost Bolt](https://www.hiveworkshop.com/threads/frost-bolt.352867/)
 * Footman16, General Frank: [Tidesage](https://www.hiveworkshop.com/threads/tidesage.352890/)
+* Sin'dorei300: [FacelessOneWorker](https://www.hiveworkshop.com/threads/facelessoneworker.226924/)
