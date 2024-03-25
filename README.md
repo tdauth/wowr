@@ -1496,3 +1496,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * D.O.G.: [Forgotten One Birth](https://www.hiveworkshop.com/threads/forgotten-one-birth.64872/)
 * Maxwell: [Faceless One Buildings](https://www.hiveworkshop.com/threads/tc-for-buildings.298537/)
 * Diegoit: [Faceless units](https://www.hiveworkshop.com/threads/faceless-units.329965/)
+* Mister_Haudrauf: [Black Empire Building Set](https://www.hiveworkshop.com/threads/black-empire-building-set.310583/)
