@@ -1492,3 +1492,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Vinz: [Frost Bolt](https://www.hiveworkshop.com/threads/frost-bolt.352867/)
 * Footman16, General Frank: [Tidesage](https://www.hiveworkshop.com/threads/tidesage.352890/)
 * Sin'dorei300: [FacelessOneWorker](https://www.hiveworkshop.com/threads/facelessoneworker.226924/)
+* AndrewOverload519: [Faceless One Tentacle Pit](https://www.hiveworkshop.com/threads/faceless-one-tentacle-pit.236922/)
+* D.O.G.: [Forgotten One Birth](https://www.hiveworkshop.com/threads/forgotten-one-birth.64872/)
+* Maxwell: [Faceless One Buildings](https://www.hiveworkshop.com/threads/tc-for-buildings.298537/)
+* Diegoit: [Faceless units](https://www.hiveworkshop.com/threads/faceless-units.329965/)
