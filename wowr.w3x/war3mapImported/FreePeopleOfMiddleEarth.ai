@@ -27,6 +27,7 @@ function BuildingStrategy takes nothing returns nothing
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
 
     // Tier 2 buildings
+    call SetBuildUnit( 1, FREEPEOPLE_TIER_2 )
     call SetBuildUnit( 1, FREEPEOPLE_DWARVEN_FORGE )
     call SetBuildUnit( 1, FREEPEOPLE_ROHAN_STABLES )
     call SetBuildUnit( 1, FREEPEOPLE_ELVEN_OUTPOST )
@@ -46,6 +47,7 @@ function BuildingStrategy takes nothing returns nothing
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_BOWS )
     
     // Tier 3 buildings
+    call SetBuildUnit( 1, FREEPEOPLE_TIER_3 )
     call SetBuildUnit( 5, FREEPEOPLE_GONDOR_HOUSE )
     call SetBuildUnit( 2, FREEPEOPLE_GONDORIAN_GUARD_TOWER )
     call SetBuildUnit( 1, FREEPEOPLE_ENCHANTED_TREE )
@@ -67,7 +69,7 @@ function BuildingStrategy takes nothing returns nothing
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
 //     call SetBuildUpgr( 1, UPG_SENTINEL )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
-//     call SetBuildUpgr( 1, UPG_HUMAN_BACKPACK )
+     call SetBuildUpgr( 1, UPG_FREEPEOPLE_BACKPACK )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
 //     call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
 

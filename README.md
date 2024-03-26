@@ -1502,3 +1502,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sin'dorei300: [FacelessOneKid](https://www.hiveworkshop.com/threads/facelessonekid.228048/)
 * Scias: [BTNFacelessOneCultist](https://www.hiveworkshop.com/threads/btnfacelessonecultist.303189/)
 * Kuhneghetz: [Raven](https://www.hiveworkshop.com/threads/raven.48257/)
+* HerrDave: [Mordor Blacksmith (LOTR)](https://www.hiveworkshop.com/threads/mordor-blacksmith-lotr.353144/)
+* HerrDave: [Rohan Town Hall (LOTR)](https://www.hiveworkshop.com/threads/rohan-town-hall-lotr.353143/)
