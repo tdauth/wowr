@@ -1497,3 +1497,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Maxwell: [Faceless One Buildings](https://www.hiveworkshop.com/threads/tc-for-buildings.298537/)
 * Diegoit: [Faceless units](https://www.hiveworkshop.com/threads/faceless-units.329965/)
 * Mister_Haudrauf: [Black Empire Building Set](https://www.hiveworkshop.com/threads/black-empire-building-set.310583/)
+* Sin'dorei300: [Faceless & Unbroken Cultists](https://www.hiveworkshop.com/threads/faceless-unbroken-cultists.228044/)
+* Radagast: [Faceless & Unbroken Pack](https://www.hiveworkshop.com/threads/faceless-unbroken-pack.117683/)
