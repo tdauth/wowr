@@ -757,6 +757,7 @@ globals
     constant integer HUMAN_ARCANE_OBSERVATORY                        = 'h01Q' // special building
 
     // Orc
+    constant integer UPG_ORC_BACKPACK                                = 'Ropm'
     constant integer UPG_FEL                                         = 'R01Y' // special building
 
     constant integer ORC_CITIZEN_MALE                                = 'n00I'
@@ -2022,6 +2023,49 @@ globals
     constant integer EREDAR_CITIZEN_FEMALE                           = 'n0JP'
     constant integer EREDAR_HOUSING                                  = 'h0UE'
 
+    // Fel Orc
+
+    // Faceless One
+    constant integer FACELESS_ONE_TIER_1                             = 'o08V'
+    constant integer FACELESS_ONE_TIER_2                             = 'o092'
+    constant integer FACELESS_ONE_TIER_3                             = 'o093'
+    constant integer FACELESS_ONE_ALTAR                              = 'n0KD'
+    constant integer FACELESS_ONE_LIBRARY                            = 'o08Z' // arcane sanctuary
+    constant integer FACELESS_ONE_CAVERN                             = 'o08W' // aviary
+    constant integer FACELESS_ONE_POOL                               = 'o08X' // workshop
+    constant integer FACELESS_ONE_PRISON                             = 'o094' // blacksmith/lumber mill
+    constant integer FACELESS_ONE_COLONY                             = 'n0K9' // barracks
+    constant integer FACELESS_ONE_TENTACLE                           = 'n0K8' // farm
+    constant integer FACELESS_ONE_TENTACLE_PIT                       = 'n0K6' // watch tower
+    constant integer FACELESS_ONE_SHOP                               = 'o08Y' // shop
+    constant integer FACELESS_ONE_FORGOTTEN_ONE                      = 'n0K7' // special building
+
+    constant integer UPG_FACELESS_ONE_BACKPACK                       = 'R0GH'
+    constant integer UPG_FACELESS_ONE_DAMAGE                         = 'R0GL'
+    constant integer UPG_FACELESS_ONE_ARMOR                          = 'R0GM'
+    constant integer UPG_FACELESS_ONE_CULTIST                        = 'R0GN'
+    constant integer UPG_FACELESS_ONE_FORGOTTEN_ONE                  = 'R0GI'
+    constant integer UPG_FACELESS_ONE_TENTACLE                       = 'R0GJ'
+    constant integer UPG_FACELESS_ONE_WITCH                          = 'R0GO'
+
+    constant integer FACELESS_ONE_WORKER                             = 'o08U'
+    constant integer FACELESS_ONE_AQIR                               = 'n0KC'
+    constant integer FACELESS_ONE_BERSERKER                          = 'n0KE'
+    constant integer FACELESS_ONE_RIDER                              = 'h0UO'
+    constant integer FACELESS_ONE_KING                               = 'n0KI'
+    constant integer FACELESS_ONE_TRICKSTER                          = 'n0KH'
+    constant integer FACELESS_ONE_UNBROCKEN_DARKHUNTER               = 'n0KA'
+    constant integer FACELESS_ONE_BONE_THROWER                       = 'o090'
+    constant integer FACELESS_ONE_WITCH                              = 'u033'
+    constant integer FACELESS_ONE_CULTIST                            = 'u034'
+    constant integer FACELESS_ONE_BALLISTA                           = 'o091'
+
+    constant integer FACELESS_ONE_PET                                = 'n0EC'
+    constant integer FACELESS_ONE_CHILD                              = 'n0KF'
+    constant integer FACELESS_ONE_CITIZEN_FEMALE                     = 'n0KG'
+    constant integer FACELESS_ONE_CITIZEN_MALE                       = 'n0KB'
+    constant integer FACELESS_ONE_HOUSING                            = 'h0UP'
+
     // Corrupted Ancients
     constant integer CORRUPTED_ANCIENTS_TIER_1                       = 'n0GX'
     constant integer CORRUPTED_ANCIENTS_TIER_2                       = 'n0GY'
@@ -3265,6 +3309,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(EREDAR_TIER_2,false,townid) + GetUnitCountEx(EREDAR_TIER_3,false,townid)
     elseif unitid == EREDAR_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(EREDAR_TIER_3,false,townid)
+
+    elseif unitid == FACELESS_ONE_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(FACELESS_ONE_TIER_2,false,townid) + GetUnitCountEx(FACELESS_ONE_TIER_3,false,townid)
+    elseif unitid == FACELESS_ONE_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(FACELESS_ONE_TIER_3,false,townid)
 
     elseif unitid == CORRUPTED_ANCIENTS_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_2,false,townid) + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)

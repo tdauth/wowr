@@ -64,7 +64,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_ORC_VENOM )
     call SetBuildUpgr( 1, UPG_ORC_WAR_DRUMS )
     call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
-    call SetBuildUpgr( 1, 'Ropm' )
+    call SetBuildUpgr( 1, UPG_ORC_BACKPACK )
     call SetBuildUpgr( 1, UPG_FEL )
     call SetBuildUnit( 1, FOUNTAIN_OF_BLOOD )
     call SetBuildUnit( 3, CHAOS_PEON )

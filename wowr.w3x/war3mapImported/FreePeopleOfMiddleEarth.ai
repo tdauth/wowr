@@ -80,7 +80,7 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, FREEPEOPLE_TIER_1)
+    call SetBuildExpa(expansions, FREEPEOPLE_TIER_3)
     call SetBuildExpa(expansions, FREEPEOPLE_DWARVEN_FORGE)
     call SetBuildExpa(expansions, FREEPEOPLE_GONDORIAN_GUARD_TOWER)
 endfunction
