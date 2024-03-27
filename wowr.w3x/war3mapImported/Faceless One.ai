@@ -196,7 +196,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_CULTIST )
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_AQIR )
-    //call CampaignAttackerEx( 2, 2, 3, WYVERN )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_NIGHTMARE_WEAVER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -210,7 +210,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_CULTIST )
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_AQIR )
-    //call CampaignAttackerEx( 2, 2, 3, WYVERN )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_NIGHTMARE_WEAVER )
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_KING )
     call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_TRICKSTER )
     call AddStandardUnitsToAttackWave()
@@ -230,8 +230,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_TRICKSTER )
         call CampaignAttackerEx( 4, 4, 4, FACELESS_ONE_BERSERKER )
         
-         // big air army
-        //call CampaignAttackerEx( 8, 10, 12, WYVERN )
+        // big air army
+        call CampaignAttackerEx( 8, 10, 12, FACELESS_ONE_NIGHTMARE_WEAVER )
         //call CampaignAttackerEx( 8, 10, 12, BATRIDER )
         //call CampaignAttackerEx( 6, 8, 10, ORC_DRAGON)
         

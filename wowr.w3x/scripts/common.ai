@@ -2059,6 +2059,7 @@ globals
     constant integer FACELESS_ONE_WITCH                              = 'u033'
     constant integer FACELESS_ONE_CULTIST                            = 'u034'
     constant integer FACELESS_ONE_BALLISTA                           = 'o091'
+    constant integer FACELESS_ONE_NIGHTMARE_WEAVER                   = 'o095'
 
     constant integer FACELESS_ONE_PET                                = 'n0EC'
     constant integer FACELESS_ONE_CHILD                              = 'n0KF'
