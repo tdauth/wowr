@@ -1515,3 +1515,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Maxwell: [BTNExample3](https://www.hiveworkshop.com/threads/btnexample3.274475/)
 * Misha: [Faceless Nightmare Weaver](https://www.hiveworkshop.com/threads/faceless-nightmare-weaver.228386/)
 * Wa666r: [Faceless Ones v1.1 - Faceless One UI](https://www.hiveworkshop.com/threads/faceless-ones-v1-1.307082/)
+* Bleeq: [Parrot (multiple varieties)](https://www.hiveworkshop.com/threads/parrot-multiple-varieties.351310/)
+* Dentothor: [General Vezax](https://www.hiveworkshop.com/threads/general-vezax.188109/)
