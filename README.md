@@ -1517,3 +1517,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Wa666r: [Faceless Ones v1.1 - Faceless One UI](https://www.hiveworkshop.com/threads/faceless-ones-v1-1.307082/)
 * Bleeq: [Parrot (multiple varieties)](https://www.hiveworkshop.com/threads/parrot-multiple-varieties.351310/)
 * Dentothor: [General Vezax](https://www.hiveworkshop.com/threads/general-vezax.188109/)
+* HerrDave: [Horde Warmachine](https://www.hiveworkshop.com/threads/horde-warmachine.337163/)
+* Dominus15: [BTNFelOrcWarlock](https://www.hiveworkshop.com/threads/btnfelorcwarlock.338596/)
