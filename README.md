@@ -1527,3 +1527,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * MasterHaosis: [Chaos Pig Farm](https://www.hiveworkshop.com/threads/chaos-pig-farm.241775/)
 * MasterHaosis: [Chaos Warlock Temple](https://www.hiveworkshop.com/threads/chaos-warlock-temple.258817/)
 * Mister_Haudrauf: [Hellfire Citadel (Outland)](https://www.hiveworkshop.com/threads/hellfire-citadel-outland.301490/)
+* Salepate: [Floppy Disk](https://www.hiveworkshop.com/threads/floppy-disk.342413/)
+* Blizzard Entertainment, KadoviYi: [Berserk Derivatives](https://www.hiveworkshop.com/threads/berserk-derivatives.337160/)
