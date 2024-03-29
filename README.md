@@ -1529,3 +1529,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mister_Haudrauf: [Hellfire Citadel (Outland)](https://www.hiveworkshop.com/threads/hellfire-citadel-outland.301490/)
 * Salepate: [Floppy Disk](https://www.hiveworkshop.com/threads/floppy-disk.342413/)
 * Blizzard Entertainment, KadoviYi: [Berserk Derivatives](https://www.hiveworkshop.com/threads/berserk-derivatives.337160/)
+* Mister_Haudrauf: [Kargath Bladefist (Fel Orc)](https://www.hiveworkshop.com/threads/kargath-bladefist-fel-orc.297662/)
