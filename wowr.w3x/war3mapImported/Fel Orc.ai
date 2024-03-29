@@ -21,7 +21,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_FEL_ORC_MELEE )
     call SetBuildUpgr( 1, UPG_FEL_ORC_RANGED )
     call SetBuildUpgr( 1, UPG_FEL_ORC_ARMOR )
-    call SetBuildUpgr( 1, UPG_ORC_FEL_ORC_PIG_FARMS )
 
     // Tier 2 buildings
     call SetBuildUnit( 1, FEL_ORC_TIER_2 )
@@ -34,7 +33,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 2, UPG_FEL_ORC_MELEE )
     call SetBuildUpgr( 2, UPG_FEL_ORC_RANGED )
     call SetBuildUpgr( 2, UPG_FEL_ORC_ARMOR )
-    call SetBuildUpgr( 2, UPG_ORC_FEL_ORC_PIG_FARMS )
     call SetBuildUpgr( 1, UPG_FEL_ORC_BURNING_OIL )
     call SetBuildUpgr( 1, UPG_FEL_ORC_ELDER )
     call SetBuildUpgr( 1, UPG_FEL_ORC_WARLOCK )
@@ -54,7 +52,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 3, UPG_FEL_ORC_ARMOR )
     call SetBuildUpgr( 2, UPG_FEL_ORC_ELDER )
     call SetBuildUpgr( 2, UPG_FEL_ORC_WARLOCK )
-    call SetBuildUpgr( 3, UPG_ORC_FEL_ORC_PIG_FARMS )
     call SetBuildUpgr( 1, UPG_FEL_ORC_ENSNARE )
     call SetBuildUpgr( 2, UPG_FEL_ORC_CULTIST )
     call SetBuildUpgr( 1, UPG_FEL_ORC_IMPROVED_CROSSBOWS )
