@@ -1530,3 +1530,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Salepate: [Floppy Disk](https://www.hiveworkshop.com/threads/floppy-disk.342413/)
 * Blizzard Entertainment, KadoviYi: [Berserk Derivatives](https://www.hiveworkshop.com/threads/berserk-derivatives.337160/)
 * Mister_Haudrauf: [Kargath Bladefist (Fel Orc)](https://www.hiveworkshop.com/threads/kargath-bladefist-fel-orc.297662/)
+* Don Valentino: [Life Burn and Fel Burn](https://www.hiveworkshop.com/threads/life-burn-and-fel-burn.307400/)
