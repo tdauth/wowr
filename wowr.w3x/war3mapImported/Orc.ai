@@ -33,6 +33,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, BESTIARY )
     call SetBuildUnit( 4, BURROW )
     call SetBuildUnit( 2, ORC_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, ORC_PET )
+    call SetBuildUnit( 2, ORC_CHILD )
     
     call SetBuildUpgr( 2, UPG_ORC_MELEE )
     call SetBuildUpgr( 2, UPG_ORC_RANGED )

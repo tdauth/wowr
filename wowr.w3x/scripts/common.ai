@@ -762,6 +762,8 @@ globals
 
     constant integer ORC_CITIZEN_MALE                                = 'n00I'
     constant integer ORC_CITIZEN_FEMALE                              = 'n00J'
+    constant integer ORC_PET                                         = 'n00U'
+    constant integer ORC_CHILD                                       = 'n0CW'
     constant integer ORC_HOUSING                                     = 'h00V'
 
     constant integer ORC_SHIPYARD                                    = 'o009'
@@ -2024,6 +2026,53 @@ globals
     constant integer EREDAR_HOUSING                                  = 'h0UE'
 
     // Fel Orc
+    constant integer FEL_ORC_TIER_1                                  = 'o08R'
+    constant integer FEL_ORC_TIER_2                                  = 'o09A'
+    constant integer FEL_ORC_TIER_3                                  = 'o09F'
+    constant integer FEL_ORC_ALTAR                                   = 'o09D'
+    constant integer FEL_ORC_BARRACKS                                = 'o097'
+    constant integer FEL_ORC_BEASTIARY                               = 'o09C'
+    constant integer FEL_ORC_SHOP                                    = 'o09B'
+    constant integer FEL_ORC_WAR_MILL                                = 'o099'
+    constant integer FEL_ORC_WARLOCK_TEMPLE                          = 'o096'
+    constant integer FEL_ORC_WATCH_TOWER                             = 'o09E'
+    constant integer FEL_ORC_DEMON_GATE                              = 'n0KO'
+    constant integer FEL_ORC_RED_DRAGON_ROOST                        = 'n0KP'
+    constant integer FEL_ORC_PIG_FARM                                = 'n0K3' // farm
+    constant integer FEL_ORC_HELLFIRE_CITADEL                        = 'o09G' // special building
+
+    constant integer UPG_FEL_ORC_BACKPACK                            = 'R0GG'
+    constant integer UPG_FEL_ORC_BURNING_OIL                         = 'R0H1'
+    constant integer UPG_FEL_ORC_DEMON_POWER                         = 'R0H4'
+    constant integer UPG_FEL_ORC_ELDER                               = 'R0GT' // Shaman
+    constant integer UPG_FEL_ORC_WARLOCK                             = 'R0GU' // Witch Doctor
+    constant integer UPG_FEL_ORC_CULTIST                             = 'R0GR' // Spirit Walker
+    constant integer UPG_FEL_ORC_ENSNARE                             = 'R0GZ'
+    constant integer UPG_FEL_ORC_FEL                                 = 'R0GS'
+    constant integer UPG_FEL_ORC_HELLFIRE_CITADEL                    = 'R0GV'
+    constant integer UPG_FEL_ORC_IMPROVED_CROSSBOWS                  = 'R0H3'
+    constant integer UPG_FEL_ORC_MARKSMANSHIP                        = 'R0H2'
+    constant integer UPG_FEL_ORC_ARMOR                               = 'R0GW'
+    constant integer UPG_FEL_ORC_MELEE                               = 'R0GX'
+    constant integer UPG_FEL_ORC_RANGED                              = 'R0GY'
+    constant integer UPG_FEL_ORC_WAR_DRUMS                           = 'R0H0'
+
+    constant integer FEL_ORC_PEON                                    = 'n0JZ' // worker
+    constant integer FEL_ORC_GRUNT                                   = 'n0KN' // footman
+    constant integer FEL_ORC_CROSSBOWMAN                             = 'o08T' // rifleman
+    constant integer FEL_ORC_ELDER                                   = 'n0K2' // Shaman
+    constant integer FEL_ORC_WARLOCK                                 = 'o0K1' // Witch Doctor
+    constant integer FEL_ORC_CULTIST                                 = 'n0K0' // Spirit Walker
+    constant integer FEL_ORC_KODO_BEAST                              = 'n0KQ'
+    constant integer FEL_ORC_RAIDER                                  = 'n0KR'
+    constant integer FEL_ORC_RED_DRAGON                              = 'n0KU'
+    constant integer FEL_ORC_LANCER                                  = 'o08S'
+    constant integer FEL_ORC_WAR_MACHINE                             = 'o098'
+
+    constant integer FEL_ORC_PET                                     = 'n00T'
+    constant integer FEL_ORC_CITIZEN_MALE                            = 'n0KS'
+    constant integer FEL_ORC_CITIZEN_FEMALE                          = 'n0KT'
+    constant integer FEL_ORC_HOUSING                                 = 'h0US'
 
     // Faceless One
     constant integer FACELESS_ONE_TIER_1                             = 'o08V'
@@ -3310,6 +3359,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(EREDAR_TIER_2,false,townid) + GetUnitCountEx(EREDAR_TIER_3,false,townid)
     elseif unitid == EREDAR_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(EREDAR_TIER_3,false,townid)
+
+
+    elseif unitid == FEL_ORC_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(FEL_ORC_TIER_2,false,townid) + GetUnitCountEx(FEL_ORC_TIER_3,false,townid)
+    elseif unitid == FEL_ORC_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(FEL_ORC_TIER_3,false,townid)
 
     elseif unitid == FACELESS_ONE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(FACELESS_ONE_TIER_2,false,townid) + GetUnitCountEx(FACELESS_ONE_TIER_3,false,townid)
