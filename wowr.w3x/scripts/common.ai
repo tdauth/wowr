@@ -2056,6 +2056,7 @@ globals
     constant integer UPG_FEL_ORC_MELEE                               = 'R0GX'
     constant integer UPG_FEL_ORC_RANGED                              = 'R0GY'
     constant integer UPG_FEL_ORC_WAR_DRUMS                           = 'R0H0'
+    constant integer UPG_FEL_ORC_PIGGERY                             = 'R0H5'
 
     constant integer FEL_ORC_PEON                                    = 'n0JZ' // worker
     constant integer FEL_ORC_GRUNT                                   = 'n0KN' // footman
