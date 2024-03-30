@@ -45,7 +45,7 @@ endfunction
 
 function AddStandardUnitsToAttackWaveFreelancer takes nothing returns nothing
     //call PurchaseZeppelin()
-    call AttackWithMount()
+    call AttackWithMounts()
     call CampaignAttacker( 0, 1, hero_id )
 endfunction
 

@@ -64,7 +64,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 2, UPG_STORMWIND_PRIEST )
     call SetBuildUpgr( 2, UPG_STORMWIND_MAGE )
     call SetBuildUpgr( 2, UPG_STORMWIND_SORCERY )
-    call SetBuildUpgr( 3, UPG_STORMWIND_ENGINEERING )
     call SetBuildUpgr( 1, UPG_STORMWIND_REINFORCED_DEFENSES )
     call SetBuildUpgr( 1, UPG_STORMWIND_MAGIC_SENTRY )
     call SetBuildUpgr( 1, UPG_STORMWIND_UNMOUNT )

@@ -29,6 +29,7 @@ Make sure that the JassHelper and vJass are enabled:
 
 The map uses Warcraft's AI for computer players.
 The map contains the modified [common.ai](./wowr.w3x/scripts/common.ai) which is used by all custom AI scripts.
+Run [checkai.bat](./checkai.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
 
 ### Warlords
 

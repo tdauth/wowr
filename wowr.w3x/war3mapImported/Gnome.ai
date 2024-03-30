@@ -124,7 +124,7 @@ function AttackWaves takes nothing returns nothing
     //*** WAVE 5 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    ca//ll CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
     call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
     //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
     //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
@@ -135,7 +135,7 @@ function AttackWaves takes nothing returns nothing
     //*** WAVE 6 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    ca//ll CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
     call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
     //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
     //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
@@ -186,7 +186,7 @@ function AttackWaves takes nothing returns nothing
     //*** WAVE 10 ***
     call InitAssaultGroup()
     call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    ca//ll CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
+    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
     call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
     //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
     //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )

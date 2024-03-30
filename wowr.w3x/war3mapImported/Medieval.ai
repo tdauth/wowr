@@ -55,7 +55,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
     call SetBuildUnit( 1, MEDIEVAL_TIER_3 )
     call SetBuildUnit( 1, MEDIEVAL_UNIVERSITY )
-    call SetBuildUnit( 1, MEDIEVAL_MEDIEVAL_MOUNTED_KNIGHTS_CASTLE )
+    call SetBuildUnit( 1, MEDIEVAL_KNIGHTS_CASTLE )
     call SetBuildUnit( 2, MEDIEVAL_GUARD_TOWER )
     call SetBuildUnit( 1, MEDIEVAL_SENTRY_TOWER )
     
