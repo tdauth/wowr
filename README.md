@@ -1532,3 +1532,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment, KadoviYi: [Berserk Derivatives](https://www.hiveworkshop.com/threads/berserk-derivatives.337160/)
 * Mister_Haudrauf: [Kargath Bladefist (Fel Orc)](https://www.hiveworkshop.com/threads/kargath-bladefist-fel-orc.297662/)
 * Don Valentino: [Life Burn and Fel Burn](https://www.hiveworkshop.com/threads/life-burn-and-fel-burn.307400/)
+* TheHuntress: [Chaos/Fel Orc Peon](https://www.hiveworkshop.com/threads/chaos-fel-orc-peon.351583/)
+* Ilya Alaric: [Peon Pack](https://www.hiveworkshop.com/threads/peon-pack.340656/)
