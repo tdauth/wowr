@@ -7,7 +7,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, FEL_ORC_TIER_1 )
     call SetBuildUnit( 17, FEL_ORC_PEON )
     call SetBuildUnit( 2, FEL_ORC_CITIZEN_MALE )
-    call SetBuildUnit( 2, FEL_ORC_CITIZEN_MALE )
 
     call BuildingStrategyStandardTier1()
 
@@ -43,7 +42,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, FEL_ORC_DEMON_GATE )
     call SetBuildUnit( 5, FEL_ORC_PIG_FARM )
     call SetBuildUnit( 2, FEL_ORC_WATCH_TOWER )
-    call SetBuildUnit( 2, FEL_ORC_CITIZEN_MALE )
     call SetBuildUnit( 2, FEL_ORC_CITIZEN_FEMALE )
     call SetBuildUnit( 2, FEL_ORC_PET )
 
