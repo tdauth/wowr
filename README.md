@@ -1534,3 +1534,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Don Valentino: [Life Burn and Fel Burn](https://www.hiveworkshop.com/threads/life-burn-and-fel-burn.307400/)
 * TheHuntress: [Chaos/Fel Orc Peon](https://www.hiveworkshop.com/threads/chaos-fel-orc-peon.351583/)
 * Ilya Alaric: [Peon Pack](https://www.hiveworkshop.com/threads/peon-pack.340656/)
+* Mainywc3sear: [BootsOfTeleport](https://www.hiveworkshop.com/threads/bootsofteleport.158480/)
