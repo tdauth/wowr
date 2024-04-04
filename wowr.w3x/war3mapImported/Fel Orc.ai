@@ -28,7 +28,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, FEL_ORC_WARLOCK_TEMPLE )
     call SetBuildUnit( 1, FEL_ORC_BEASTIARY )
     call SetBuildUnit( 4, FEL_ORC_PIG_FARM )
-    call SetBuildUnit( 2, ORC_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, FEL_ORC_CITIZEN_FEMALE )
     
     call SetBuildUpgr( 2, UPG_FEL_ORC_MELEE )
     call SetBuildUpgr( 2, UPG_FEL_ORC_RANGED )
