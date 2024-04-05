@@ -2213,6 +2213,59 @@ globals
 
     // Ancient Greece
     constant integer ANCIENTGREECE_TIER_1                            = 'h0LH' // tier 1-3
+    constant integer ANCIENTGREECE_ALTAR                             = 'h0m5'
+    constant integer ANCIENTGREECE_ARCHERY_RANGE                     = 'h0LW' // workshop
+    constant integer ANCIENTGREECE_BARRACKS                          = 'h0LJ'
+    constant integer ANCIENTGREECE_BLACKSMITH                        = 'h0LT'
+    constant integer ANCIENTGREECE_HOUSE                             = 'h0LL'
+    constant integer ANCIENTGREECE_HOUSE_URBAN_PLANNING              = 'h0M6'
+    constant integer ANCIENTGREECE_SHOP                              = 'h0LR'
+    constant integer ANCIENTGREECE_STABLES                           = 'h0LU' // gryphon aviary
+    constant integer ANCIENTGREECE_STOCKPILE                         = 'h0FP' // lumber mill
+    constant integer ANCIENTGREECE_TEMPLE                            = 'h0LQ' // arcane sanctuary
+    constant integer ANCIENTGREECE_WATCH_TOWER                       = 'h0LN'
+    constant integer ANCIENTGREECE_LIGHTHOUSE                        = 'h0LM' // special building
+    constant integer ANCIENTGREECE_DOCK                              = 'h0LZ' // shipyard
+
+
+    constant integer UPG_ANCIENTGREECE_ASTROLOGY                     = 'R09V'
+    constant integer UPG_ANCIENTGREECE_BACKPACK                      = 'R09S'
+    constant integer UPG_ANCIENTGREECE_ARMOR                         = 'R0A8'
+    constant integer UPG_ANCIENTGREECE_MELEE                         = 'R0A7'
+    constant integer UPG_ANCIENTGREECE_RANGED                        = 'R0A9'
+    constant integer UPG_ANCIENTGREECE_IMPROVED_WATER_MILL           = 'R0A1'
+    constant integer UPG_ANCIENTGREECE_CITY_STATES                   = 'R0A2'
+    constant integer UPG_ANCIENTGREECE_DEMOCRACY                     = 'R0A3'
+    constant integer UPG_ANCIENTGREECE_REINCARNATION                 = 'R0A4'
+    constant integer UPG_ANCIENTGREECE_DEFEND                        = 'R09Y'
+    constant integer UPG_ANCIENTGREECE_RIDE_DOWN                     = 'R09Z'
+    constant integer UPG_ANCIENTGREECE_SHEEP_FARMING                 = 'R09X'
+    constant integer UPG_ANCIENTGREECE_MYTHOLOGY                     = 'R09T'
+    constant integer UPG_ANCIENTGREECE_PHYSICIAN                     = 'R09W'
+    constant integer UPG_ANCIENTGREECE_PRIEST                        = 'R09U'
+    constant integer UPG_ANCIENTGREECE_URBAN_PLANNING                = 'R0A0'
+    constant integer UPG_ANCIENTGREECE_LIGHTHOUSE                    = 'R093' // special building
+
+    constant integer ANCIENTGREECE_WORKER                            = 'h0LK' // worker
+    constant integer ANCIENTGREECE_SWORDSMAN                         = 'h0LP'
+    constant integer ANCIENTGREECE_ARCHER                            = 'n0D8'
+    constant integer ANCIENTGREECE_SLINGER                           = 'h0M1'
+    constant integer ANCIENTGREECE_CATAPULT                          = 'o057'
+    constant integer ANCIENTGREECE_BATTERING_RAM                     = 'o058'
+    constant integer ANCIENTGREECE_CENTAUR_ARCHER                    = 'n0D9'
+    constant integer ANCIENTGREECE_HARPY                             = 'n0DD'
+    constant integer ANCIENTGREECE_CHARIOT                           = 'h0LV'
+    constant integer ANCIENTGREECE_COMPANION_CAVALRY                 = 'h0LO'
+    constant integer ANCIENTGREECE_HOPLITE                           = 'h0LI'
+    constant integer ANCIENTGREECE_HORSE_CART                        = 'h0M2'
+    constant integer ANCIENTGREECE_PHYSICIAN                         = 'h0M4'
+    constant integer ANCIENTGREECE_PRIEST                            = 'h0LS'
+    constant integer ANCIENTGREECE_HELEPOLIS                         = 'e01H'
+    constant integer ANCIENTGREECE_SPARTAN                           = 'h0M9'
+
+    constant integer ANCIENTGREECE_CITIZEN_MALE                      = 'n0DA'
+    constant integer ANCIENTGREECE_CITIZEN_FEMALE                    = 'n0DB'
+    constant integer ANCIENTGREECE_HOUSING                           = 'h0M3'
 
     // Roman Empire
     constant integer ROMANEMPIRE_TIER_1                              = 'h05R' // tier 1-3
@@ -3377,6 +3430,10 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_2,false,townid) + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
     elseif unitid == CORRUPTED_ANCIENTS_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
+
+
+    elseif unitid == ANCIENTGREECE_HOUSE then
+        set have_qty = have_qty + GetUnitCountEx(ANCIENTGREECE_HOUSE_URBAN_PLANNING,false,townid)
 
     elseif unitid == MEDIEVAL_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_2,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_3,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
