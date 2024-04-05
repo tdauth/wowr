@@ -59,7 +59,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_TROLL_LIQUID_FIRE )
     call SetBuildUpgr( 1, UPG_TROLL_TRUESHOT_AURA )
     call SetBuildUpgr( 1, UPG_TROLL_WAR_DRUMS )
-    call SetBuildUpgr( 1, UPG_TROLL_ICE_TROLL_HIGH_PRIEST )
+    call SetBuildUpgr( 2, UPG_TROLL_ICE_TROLL_HIGH_PRIEST )
+    call SetBuildUpgr( 1, UPG_TROLL_BARRAGE )
 
     call SetBuildUpgr( 1, UPG_TROLL_TROLL_TRIBES )
     call SetBuildUpgr( 1, UPG_TROLL_BACKPACK )

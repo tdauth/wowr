@@ -1594,6 +1594,7 @@ globals
     constant integer UPG_TROLL_TROLL_TRIBES                          = 'R094'
     constant integer UPG_TROLL_BERSERKER                             = 'R097'
     constant integer UPG_TROLL_LIQUID_FIRE                           = 'R095'
+    constant integer UPG_TROLL_BARRAGE                               = 'R09D'
     constant integer UPG_TROLL_BACKPACK                              = 'R099'
     constant integer UPG_TROLL_TEMPLE_OF_SACRIFICE                   = 'R09C'
 
