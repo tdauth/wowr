@@ -34,7 +34,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, STORMWIND_CHILD )
     call SetBuildUnit( 2, STORMWIND_PET )
 
-    call SetBuildUnit( 3, STORMWIND_GUARD_TOWER )
+    call SetBuildUnit( 3, STORMWIND_SCOUT_TOWER )
     
     call SetBuildUpgr( 2, UPG_STORMWIND_MELEE )
     call SetBuildUpgr( 2, UPG_STORMWIND_RANGED )

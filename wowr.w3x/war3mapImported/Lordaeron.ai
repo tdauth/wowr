@@ -32,7 +32,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 4, LORDAERON_FARM )
     call SetBuildUnit( 2, LORDAERON_CITIZEN_FEMALE )
     
-    call SetBuildUnit( 3, LORDAERON_GUARD_TOWER )
+    call SetBuildUnit( 3, LORDAERON_SCOUT_TOWER )
     
     call SetBuildUpgr( 2, UPG_LORDAERON_MELEE )
     call SetBuildUpgr( 2, UPG_LORDAERON_RANGED )

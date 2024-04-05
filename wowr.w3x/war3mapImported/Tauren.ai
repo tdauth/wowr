@@ -11,6 +11,7 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier1()
 
     call SetBuildUnit( 2, TAUREN_HOUSING )
+    call SetBuildUnit( 1, TAUREN_LUMBER_MILL )
     call SetBuildUnit( 3, TAUREN_TENT )
     call SetBuildUnit( 2, TAUREN_TAUREN_BARRACKS )
     call SetBuildUnit( 1, TAUREN_ALTAR )
@@ -65,6 +66,7 @@ endfunction
 function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, TAUREN_TIER_3)
     call SetBuildExpa(expansions, TAUREN_HOUSING)
+    call SetBuildExpa(expansions, TAUREN_LUMBER_MILL)
     call SetBuildExpa(expansions, TAUREN_WATCH_TOWER)
 endfunction
 
