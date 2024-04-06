@@ -4,11 +4,13 @@ Buttonpos=-2147483648,-2147483648
 
 [CmdAttack]
 Art=CommandAttack
-Buttonpos=-2147483648,-2147483648
+//Buttonpos=-2147483648,-2147483648
+Buttonpos=3,0
 
 [CmdAttackGround]
 Art=CommandAttackGround
-Buttonpos=-2147483648,-2147483648
+ButtonPos=3,1
+//Buttonpos=-2147483648,-2147483648
 
 [CmdBuild]
 Art=CommandBasicStruct
@@ -48,7 +50,8 @@ ButtonPos=3,2
 
 [CmdHoldPos]
 Art=CommandHoldPosition
-Buttonpos=-2147483648,-2147483648
+//Buttonpos=-2147483648,-2147483648
+Buttonpos=2,0
 
 [CmdPatrol]
 Art=CommandPatrol
@@ -65,12 +68,13 @@ PlacementModel=UI\Feedback\RallyPoint\RallyPoint.mdl
 
 [CmdSelectSkill]
 Art=CommandNewSkill
-//Buttonpos=3,1
-Buttonpos=-2147483648,-2147483648
+Buttonpos=3,1
+//Buttonpos=-2147483648,-2147483648
 
 [CmdStop]
 Art=CommandStop
-Buttonpos=-2147483648,-2147483648
+//Buttonpos=-2147483648,-2147483648
+Buttonpos=1,0
 
 //[CmdUnivAgi]
 //Art=

@@ -138,7 +138,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Eredar",     -2,
         MenuItem "Fel Orc",     -2,
         MenuItem "Faceless One",     -2,
-        MenuItem "Corrupted Ancients",     -2,
+        MenuItem "Satyr",     -2,
         MenuItem "Centaur",     -2,
         MenuItem "Gnoll",     -2,
         MenuItem "Kobold",     -2,
