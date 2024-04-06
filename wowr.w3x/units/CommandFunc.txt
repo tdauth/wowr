@@ -65,7 +65,8 @@ PlacementModel=UI\Feedback\RallyPoint\RallyPoint.mdl
 
 [CmdSelectSkill]
 Art=CommandNewSkill
-Buttonpos=3,1
+//Buttonpos=3,1
+Buttonpos=-2147483648,-2147483648
 
 [CmdStop]
 Art=CommandStop
