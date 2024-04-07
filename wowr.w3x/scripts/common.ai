@@ -2138,6 +2138,9 @@ globals
     constant integer UPG_CORRUPTED_ANCIENTS_SLUDGE_FLINGER           = 'R0GC'
 
     constant integer CORRUPTED_ANCIENTS_WORKER                       = 'e01Y'
+    constant integer CORRUPTED_ANCIENTS_SATYR                        = 'n0L6' // footman
+    constant integer CORRUPTED_ANCIENTS_TRICKSTER                    = 'n0L5' // archer
+    constant integer CORRUPTED_ANCIENTS_GIANT_SKELETON_WARRIOR       = 'n0L7' // knight
     constant integer CORRUPTED_ANCIENTS_GREEN_DRAKE                  = 'n0HE'
     constant integer CORRUPTED_ANCIENTS_CORRUPTED_TREANT             = 'n0H8'
     constant integer CORRUPTED_ANCIENTS_GHOST                        = 'n0HB'

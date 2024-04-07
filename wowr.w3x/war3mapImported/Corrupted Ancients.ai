@@ -232,7 +232,10 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
+        call CampaignAttackerEx( 2, 2, 2, CORRUPTED_ANCIENTS_SATYR )
+        call CampaignAttackerEx( 2, 2, 2, CORRUPTED_ANCIENTS_TRICKSTER )
         call CampaignAttackerEx( 2, 2, 2, CORRUPTED_ANCIENTS_SLUDGE_FLINGER )
+        call CampaignAttackerEx( 2, 2, 2, CORRUPTED_ANCIENTS_GIANT_SKELETON_WARRIOR )
         call CampaignAttackerEx( 2, 2, 2, CORRUPTED_ANCIENTS_GHOST )
         //call CampaignAttackerEx( 2, 2, 2, OGRE_OGRE_MAGI )
         //call CampaignAttackerEx( 2, 2, 2, OGRE_OGRE_WARLOCK )
