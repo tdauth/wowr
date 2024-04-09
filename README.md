@@ -1535,3 +1535,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * TheHuntress: [Chaos/Fel Orc Peon](https://www.hiveworkshop.com/threads/chaos-fel-orc-peon.351583/)
 * Ilya Alaric: [Peon Pack](https://www.hiveworkshop.com/threads/peon-pack.340656/)
 * Mainywc3sear: [BootsOfTeleport](https://www.hiveworkshop.com/threads/bootsofteleport.158480/)
+* BaiyuGalan: [Xe'ra Icon](https://www.hiveworkshop.com/threads/xera-icon.350257/)
