@@ -1536,3 +1536,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Ilya Alaric: [Peon Pack](https://www.hiveworkshop.com/threads/peon-pack.340656/)
 * Mainywc3sear: [BootsOfTeleport](https://www.hiveworkshop.com/threads/bootsofteleport.158480/)
 * BaiyuGalan: [Xe'ra Icon](https://www.hiveworkshop.com/threads/xera-icon.350257/)
+* Spellbound: [Spellbound's Custom Lightning Effects](https://www.hiveworkshop.com/threads/spellbounds-custom-lightning-effects.292771/)
+* Darky29: [BTNCoralStone](https://www.hiveworkshop.com/threads/btncoralstone.54554/)
+* Tarrasque: [RoyalGuard](https://www.hiveworkshop.com/threads/royalguard.49865/)
+* Mouseketeer: [BTNNagaArmoredRoyalGuard](https://www.hiveworkshop.com/threads/btnnagaarmoredroyalguard.347535/)
+* The Panda: [BTNFireIceAttack](https://www.hiveworkshop.com/threads/btnfireiceattack.312928/)
