@@ -177,3 +177,33 @@ Frame "POPUPMENU" "ProfessionsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Witch Doctor",     -2,
     }
 }
+
+Frame "POPUPMENU" "PlayerColorsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "PlayerColorsPopupMenu",
+    Frame "MENU" "PlayerColorsPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Red",     -2,
+        MenuItem "Blue",     -2,
+        MenuItem "Cyan",     -2,
+        MenuItem "Purple",     -2,
+        MenuItem "Yellow",     -2,
+        MenuItem "Orange",     -2,
+        MenuItem "Green",     -2,
+        MenuItem "Pink",     -2,
+        MenuItem "Light Gray",     -2,
+        MenuItem "Light Blue",     -2,
+        MenuItem "Aqua",     -2,
+        MenuItem "Brown",     -2,
+        MenuItem "Maroon",     -2,
+        MenuItem "Navy",     -2,
+        MenuItem "Turquoise",     -2,
+        MenuItem "Violet",     -2,
+        MenuItem "Wheat",     -2,
+        MenuItem "Peach",     -2,
+        MenuItem "Mint",     -2,
+        MenuItem "Lavender",     -2,
+        MenuItem "Coal",     -2,
+        MenuItem "Snow",     -2,
+        MenuItem "Emerald",     -2,
+        MenuItem "Peanut",     -2,
+    }
+}
