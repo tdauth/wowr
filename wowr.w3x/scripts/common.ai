@@ -2853,6 +2853,8 @@ globals
     constant integer COMMAND_ATTACK_TARGET_OFF                       = 10
     constant integer COMMAND_ATTACK_TARGET_X                         = 11
     constant integer COMMAND_ATTACK_TARGET_Y                         = 12
+    constant integer COMMAND_DISABLED_ON                             = 13
+    constant integer COMMAND_DISABLED_OFF                            = 14
 
     // data
     integer array heroTypes
@@ -2861,6 +2863,7 @@ globals
     // AI command options
     boolean attackEnemyPlayers = true
     boolean buildShips = false
+    boolean disabled = false
     integer expansions = 0
     boolean attackTargetLocation = false
     integer attackTargetLocationX = 0
@@ -5589,19 +5592,23 @@ endfunction
 
 function AttackWithHeroes takes nothing returns nothing
     local integer i = 0
-    loop
-        exitwhen (i >= heroTypesCounter)
-        if (GetUnitCountDone(heroTypes[i]) > 0) then
-            call CampaignAttacker( 0, GetUnitCountDone(heroTypes[i]), heroTypes[i] )
-        endif
-        set i = i + 1
-    endloop
+    if (not disabled) then
+        loop
+            exitwhen (i >= heroTypesCounter)
+            if (GetUnitCountDone(heroTypes[i]) > 0) then
+                call CampaignAttacker( 0, GetUnitCountDone(heroTypes[i]), heroTypes[i] )
+            endif
+            set i = i + 1
+        endloop
+    endif
 endfunction
 
 function AddStandardUnitsToAttackWave takes nothing returns nothing
-    call PurchaseZeppelin()
-    call AttackWithMounts()
-    call AttackWithHeroes()
+    if (not disabled) then
+        call PurchaseZeppelin()
+        call AttackWithMounts()
+        call AttackWithHeroes()
+    endif
 endfunction
 
 function AddDragonsToAttackWave takes nothing returns nothing
@@ -5636,6 +5643,10 @@ endfunction
 function LaunchAttack takes nothing returns nothing
     local unit target = null
     local boolean setAlly = true
+
+    if (disabled) then
+        return
+    endif
 
     // Don't launch any attack while town is threatened
     if (TownThreatened()) then
@@ -5773,6 +5784,14 @@ endfunction
 
 function GetPlayerInfoText takes nothing returns string
     local string msg = "I "
+
+    if (disabled) then
+        set msg = msg + "will do nothing (disabled)"
+    else
+        set msg = msg + "will do something (enabled)"
+    endif
+
+    set msg = msg + ", "
     
     if (attackEnemyPlayers) then
         set msg = msg + "attack enemy players"
@@ -5814,8 +5833,10 @@ endfunction
 function UpdateWorkers takes nothing returns nothing
     local integer c = 0
     loop
-        call SetGoldPeons(5 + CountHousings() * 3)
-        call SetWoodPeons(5)
+        if (not disabled) then
+            call SetGoldPeons(5 + CountHousings() * 3)
+            call SetWoodPeons(5)
+        endif
         loop
             exitwhen (CommandsWaiting() <= 0)
             set c = GetLastCommand()
@@ -5839,6 +5860,12 @@ function UpdateWorkers takes nothing returns nothing
             elseif (c == COMMAND_SHIPS_OFF) then
                 set buildShips = false
                 call NotifyOtherPlayers("I will stop building ships!")
+            elseif (c == COMMAND_DISABLED_ON) then
+                set disabled = true
+                call NotifyOtherPlayers("I will do nothing (disabled)!")
+            elseif (c == COMMAND_DISABLED_OFF) then
+                set disabled = false
+                call NotifyOtherPlayers("I will do something (enabled)!")
             elseif (c == COMMAND_EXPANSIONS) then
                 set expansions = GetLastData()
                 call NotifyOtherPlayers("I will build " + I2S2(expansions) + " expansions!")
@@ -5887,6 +5914,7 @@ function ConfigureAI takes nothing returns nothing
     
     set attackEnemyPlayers = MeleeDifficulty() == MELEE_INSANE
     set buildShips = false
+    set disabled = false
 endfunction
 
 function BuildingStrategyStandardTier1 takes nothing returns nothing
@@ -5903,17 +5931,21 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
 
         set evolutionLevel = evolutionLevel + 1
 
-        call SetBuildUpgr( evolutionLevel, UPG_EVOLUTION )
-        call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_POWER_GENERATOR )
-        call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_MOUNT )
+        if (not disabled) then
+            call SetBuildUpgr( evolutionLevel, UPG_EVOLUTION )
+            call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_POWER_GENERATOR )
+            call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_MOUNT )
+        endif
 
         call Sleep(M1)
     endloop
 
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION )
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
-    call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
-    //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
+    if (not disabled) then
+        call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION )
+        call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
+        call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
+        //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
+    endif
 endfunction
 
 function BuildingStrategyStandardTier3 takes nothing returns nothing
