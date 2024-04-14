@@ -3687,6 +3687,11 @@ function OneBuildLoop takes nothing returns nothing
     local integer id
     local integer tp
 
+    // World of Warcraft Reforged disabled AI
+    if (disabled) then
+        return
+    endif
+
     set total_gold = GetGold() - gold_buffer
     set total_wood = GetWood()
 
@@ -4680,6 +4685,11 @@ endfunction
 function CampaignBasicsA takes nothing returns nothing
     local integer food_each = GetFoodMade(racial_farm)
     local integer on_wood
+
+    // World of Warcraft Reforged disabled AI
+    if (disabled) then
+        return
+    endif
 
     call ClearHarvestAI()
 
