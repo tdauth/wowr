@@ -1542,3 +1542,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mouseketeer: [BTNNagaArmoredRoyalGuard](https://www.hiveworkshop.com/threads/btnnagaarmoredroyalguard.347535/)
 * The Panda: [BTNFireIceAttack](https://www.hiveworkshop.com/threads/btnfireiceattack.312928/)
 * Darkfang: [Shadow Capture and 3 chain and hook icons](https://www.hiveworkshop.com/threads/shadow-capture-and-3-chain-and-hook-icons.253395/)
+* AndrewOverload519: [Naga Royal Vault](https://www.hiveworkshop.com/threads/naga-royal-vault.235993/)
