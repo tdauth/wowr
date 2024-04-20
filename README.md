@@ -1544,3 +1544,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darkfang: [Shadow Capture and 3 chain and hook icons](https://www.hiveworkshop.com/threads/shadow-capture-and-3-chain-and-hook-icons.253395/)
 * AndrewOverload519: [Naga Royal Vault](https://www.hiveworkshop.com/threads/naga-royal-vault.235993/)
 * Explobomb: [Doom Lord](https://www.hiveworkshop.com/threads/doom-lord.334164/)
+* Explobomb: [Djinn/Genie](https://www.hiveworkshop.com/threads/djinn-genie.325717/)
+* Mc !: [BTNTNTBarrel](https://www.hiveworkshop.com/threads/btntntbarrel.55608/)
+* Blizzard Entertainment: [BTNGlyphV2](https://www.hiveworkshop.com/threads/btnglyphv2.235612/)
+* The_Avenger's_Return: [BTNBattleTerror](https://www.hiveworkshop.com/threads/btnbattleterror.57207/)
+* Blizzard Entertainment: [BTNAbility_Parry](https://www.hiveworkshop.com/threads/btnability_parry.55484/)
