@@ -1550,3 +1550,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Avenger's_Return: [BTNBattleTerror](https://www.hiveworkshop.com/threads/btnbattleterror.57207/)
 * Blizzard Entertainment: [BTNAbility_Parry](https://www.hiveworkshop.com/threads/btnability_parry.55484/)
 * Enmouth: [BTNTrack](https://www.hiveworkshop.com/threads/btntrack.212012/)
+* Diegoit: [Kobold barracks](https://www.hiveworkshop.com/threads/kobold-barracks.302667/)
+* komarovba: [Kobold barracks](https://www.hiveworkshop.com/threads/kobold-barracks.340705/)
+* Stormode: [Kobold Tunneler](https://www.hiveworkshop.com/threads/kobold-tunneler.352712/)
