@@ -1553,3 +1553,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Diegoit: [Kobold barracks](https://www.hiveworkshop.com/threads/kobold-barracks.302667/)
 * komarovba: [Kobold barracks](https://www.hiveworkshop.com/threads/kobold-barracks.340705/)
 * Stormode: [Kobold Tunneler](https://www.hiveworkshop.com/threads/kobold-tunneler.352712/)
+* (zerotul), Blizzard Entertainment: [Ice Troll Hut](https://www.hiveworkshop.com/threads/ice-troll-hut.288967/)
+* (zerotul), Blizzard Entertainment: [Ice Troll Hut 1](https://www.hiveworkshop.com/threads/ice-troll-hut-1.288968/)
