@@ -11,6 +11,7 @@ TimeOfDayIndicator=war3mapImported\CustomTimeIndicator.mdx
 
 [Errors]
 Cooldownstock=TRIGSTR_48559
+Inventoryfull=TRIGSTR_53126
 Outofstock=TRIGSTR_48558
 
 [FrameDef]
