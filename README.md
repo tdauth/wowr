@@ -1555,3 +1555,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Stormode: [Kobold Tunneler](https://www.hiveworkshop.com/threads/kobold-tunneler.352712/)
 * (zerotul), Blizzard Entertainment: [Ice Troll Hut](https://www.hiveworkshop.com/threads/ice-troll-hut.288967/)
 * (zerotul), Blizzard Entertainment: [Ice Troll Hut 1](https://www.hiveworkshop.com/threads/ice-troll-hut-1.288968/)
+* komarovba: [Repair](https://www.hiveworkshop.com/threads/btncr_h_repair_building.57436/)
+* Mike: [BTNSpade](https://www.hiveworkshop.com/threads/btnspade.268131/)
