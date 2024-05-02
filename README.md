@@ -1559,3 +1559,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mike: [BTNSpade](https://www.hiveworkshop.com/threads/btnspade.268131/)
 * Sunchips: [Wolf Spirit Headpiece by Sunchips](https://www.hiveworkshop.com/threads/wolf-spirit-headpiece-by-sunchips.167582/)
 * Sunchips: [InfernalDestroyer](https://www.hiveworkshop.com/threads/infernaldestroyer.152782/)
+* HerrDave, 1_Freon_1: [Oathbreaker Pack (LOTR)](https://www.hiveworkshop.com/threads/oathbreaker-pack-lotr.353142/)
