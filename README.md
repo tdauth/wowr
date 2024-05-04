@@ -7,6 +7,8 @@ This map is not a recreation of the game World of Warcraft but is inspired by an
 Official website: [wowreforged.org](https://wowreforged.org)
 GitHub Repository of the official website: [wowr-website](https://github.com/tdauth/wowr-website)
 
+The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the Warcraft III: Reforged World Editor.
+
 ## Play the Map
 
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
@@ -54,6 +56,22 @@ The map uses several custom systems created by Baradé which can be used in any 
 They are available in [systems](./systems).
 Each system provides a prototype map which shows you how to use the system.
 Some of the systems are available on [HiveWorkshop](https://www.hiveworkshop.com/members/barade.125524/#resources) to make them public and for feedback.
+
+## Release Process
+
+Open the folder [wowr.w3x](./wowr.w3x) with the World Editor and save the map as wowrX.Y.w3x.
+Use this check list when releasing a new version of the map:
+
+* Add all credits from this README to the map to make them appear in the quest log.
+* Add all changes to the ChangeLog in the quest log.
+* Use [checkai.bat](./checkai.bat) to check all AI scripts.
+* Use the cheat "-duplicatedsaveobjects" to check for duplicated save code objects.
+* Use the cheat "-checkheroskills" to check for all registered hero spells.
+* Disable triggers for debugging or generating data only like "WoW Reforged Website" which only adds more code to the map script.
+* Make sure the imported data is working and there are no corrupted or big files added by mistake. Check for imported files with a big size or 0 size.
+* Save the map as wowrX.Y.w3x and tag the repo with X.Y and create a release on GitHub based on the tag.
+* Upload the release on as many modding websites as possible.
+* Announce the new release on HIVE and Discord.
 
 ## Modifications with World Editor
 
