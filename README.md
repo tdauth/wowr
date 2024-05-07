@@ -1578,3 +1578,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sunchips: [Wolf Spirit Headpiece by Sunchips](https://www.hiveworkshop.com/threads/wolf-spirit-headpiece-by-sunchips.167582/)
 * Sunchips: [InfernalDestroyer](https://www.hiveworkshop.com/threads/infernaldestroyer.152782/)
 * HerrDave, 1_Freon_1: [Oathbreaker Pack (LOTR)](https://www.hiveworkshop.com/threads/oathbreaker-pack-lotr.353142/)
+* Blizzard Entertainment: [BTNOrcScoutTower](https://www.hiveworkshop.com/threads/btnorcscouttower.56343/)
+* Blizzard Entertainment: [BTNOrcCannonTower](https://www.hiveworkshop.com/threads/btnorccannontower.56331/)
+* Blizzard Entertainment: [BTNOrcGuardTower](https://www.hiveworkshop.com/threads/btnorcguardtower.56336/)
