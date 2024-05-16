@@ -1581,3 +1581,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [BTNOrcScoutTower](https://www.hiveworkshop.com/threads/btnorcscouttower.56343/)
 * Blizzard Entertainment: [BTNOrcCannonTower](https://www.hiveworkshop.com/threads/btnorccannontower.56331/)
 * Blizzard Entertainment: [BTNOrcGuardTower](https://www.hiveworkshop.com/threads/btnorcguardtower.56336/)
+* olofmoleman: [BobaFett](https://www.hiveworkshop.com/threads/bobafett.60976/)
+* olofmoleman: [BTNBobaFett](https://www.hiveworkshop.com/threads/btnbobafett.56664/)
+* ynosh: [Star Wars BFTF 1.12.01](https://www.hiveworkshop.com/threads/star-wars-bftf-1-12-01.148278/)
