@@ -2606,6 +2606,24 @@ globals
     constant integer GALACTIC_REPUBLIC_CITIZEN_FEMALE                = 'n0BP'
     constant integer GALACTIC_REPUBLIC_HOUSING                       = 'h0H2'
 
+    // Rebel Alliance
+    constant integer REBEL_ALLIANCE_TIER_1                           = 'h0VS'
+    constant integer REBEL_ALLIANCE_BARRACKS                         = 'h0VR'
+    constant integer REBEL_ALLIANCE_SPACEPORT                        = 'h0VU'
+    constant integer REBEL_ALLIANCE_FARM                             = 'o059'
+
+    constant integer REBEL_ALLIANCE_WORKER                           = 'h0VQ'
+    constant integer REBEL_ALLIANCE_RECRUIT                          = 'h0VP'
+    constant integer REBEL_ALLIANCE_TROOPER                          = 'h0VY'
+    constant integer REBEL_ALLIANCE_REPEATER                         = 'h0VZ'
+    constant integer REBEL_ALLIANCE_XWING                            = 'h0VT'
+    constant integer REBEL_ALLIANCE_YWING                            = 'h0VX'
+    constant integer REBEL_ALLIANCE_BWING                            = 'h0VV'
+
+    constant integer REBEL_ALLIANCE_CITIZEN_MALE                     = 'n033'
+    constant integer REBEL_ALLIANCE_CITIZEN_FEMALE                   = 'n0BP'
+    constant integer REBEL_ALLIANCE_HOUSING                          = 'h0VW'
+
     // Galactic Empire
     constant integer GALACTIC_EMPIRE_STAR_DESTROYER_PRODUCING        = 'h0L2'
     constant integer GALACTIC_EMPIRE_BARRACKS                        = 'h0L3'
