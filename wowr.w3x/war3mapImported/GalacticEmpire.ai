@@ -6,7 +6,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, GALACTIC_EMPIRE_STAR_DESTROYER_PRODUCING )
     call SetBuildUnit( 22, GALACTIC_EMPIRE_ASTROMECH_DROID )
-    call SetBuildUnit( 1, GALACTIC_REPUBLIC_ALTAR )
+    call SetBuildUnit( 1, GALACTIC_EMPIRE_ALTAR )
     call SetBuildUnit( 5, GALACTIC_EMPIRE_TURBOLAZER )
     call SetBuildUnit( 2, GALACTIC_REPUBLIC_CITIZEN_MALE )
 
@@ -15,10 +15,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, GALACTIC_REPUBLIC_HOUSING )
     call SetBuildUnit( 2, GALACTIC_REPUBLIC_CITIZEN_FEMALE )
     call SetBuildUnit( 2, GALACTIC_EMPIRE_BARRACKS )
-    call SetBuildUnit( 1, GALACTIC_REPUBLIC_JEDI_TEMPLE )
+    call SetBuildUnit( 1, GALACTIC_EMPIRE_SITH_TEMPLE )
     call SetBuildUnit( 1, GALACTIC_EMPIRE_VEHICLE_FACTORY )
     call SetBuildUnit( 1, GALACTIC_EMPIRE_SPACEPORT )
-    call SetBuildUnit( 1, GALACTIC_REPUBLIC_NABOO_TRAINING_CENTER )
+    //call SetBuildUnit( 1, GALACTIC_REPUBLIC_NABOO_TRAINING_CENTER )
 
 //    call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
     //call SetBuildUnit( 2, GUARDING_FURBOLG )

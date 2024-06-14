@@ -1591,3 +1591,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Illidan(Evil)X: [B-Wing Starfighter](https://www.hiveworkshop.com/threads/b-wing-starfighter.50214/)
 * Illidan(Evil)X: [Y-Wing Starfighter](https://www.hiveworkshop.com/threads/y-wing-starfighter.50176/)
 * Illidan(Evil)X: [Millennium Falcon](https://www.hiveworkshop.com/threads/millennium-falcon.50435/)
+* chilla_killa: [Bacta Tank by chilla_killa](https://www.hiveworkshop.com/threads/bacta-tank-by-chilla_killa.178113/)

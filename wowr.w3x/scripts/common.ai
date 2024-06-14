@@ -2609,8 +2609,10 @@ globals
     // Rebel Alliance
     constant integer REBEL_ALLIANCE_TIER_1                           = 'h0VS'
     constant integer REBEL_ALLIANCE_BARRACKS                         = 'h0VR'
+    constant integer REBEL_ALLIANCE_JEDI_ACADEMY                     = 'h0W0' // arcane sanctum
     constant integer REBEL_ALLIANCE_SPACEPORT                        = 'h0VU'
     constant integer REBEL_ALLIANCE_FARM                             = 'o059'
+    constant integer REBEL_ALLIANCE_ALTAR                            = 'h0W1'
 
     constant integer REBEL_ALLIANCE_WORKER                           = 'h0VQ'
     constant integer REBEL_ALLIANCE_RECRUIT                          = 'h0VP'
@@ -2627,12 +2629,13 @@ globals
     // Galactic Empire
     constant integer GALACTIC_EMPIRE_STAR_DESTROYER_PRODUCING        = 'h0L2'
     constant integer GALACTIC_EMPIRE_BARRACKS                        = 'h0L3'
+    constant integer GALACTIC_EMPIRE_ALTAR                           = 'h0W2'
+    constant integer GALACTIC_EMPIRE_SITH_TEMPLE                     = 'h0W3'
     constant integer GALACTIC_EMPIRE_SPACEPORT                       = 'h0L8'
     constant integer GALACTIC_EMPIRE_TURBOLAZER                      = 'o056'
     constant integer GALACTIC_EMPIRE_VEHICLE_FACTORY                 = 'h0L7'
 
     constant integer GALACTIC_EMPIRE_ASTROMECH_DROID                 = 'h0L1' // worker
-
 
     // All Races
 

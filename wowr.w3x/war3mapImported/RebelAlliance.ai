@@ -6,7 +6,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, REBEL_ALLIANCE_TIER_1 )
     call SetBuildUnit( 22, REBEL_ALLIANCE_WORKER )
-    call SetBuildUnit( 1, GALACTIC_REPUBLIC_ALTAR )
+    call SetBuildUnit( 1, REBEL_ALLIANCE_ALTAR )
     call SetBuildUnit( 5, REBEL_ALLIANCE_FARM )
     call SetBuildUnit( 2, REBEL_ALLIANCE_CITIZEN_MALE )
 
@@ -15,10 +15,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, REBEL_ALLIANCE_HOUSING )
     call SetBuildUnit( 2, REBEL_ALLIANCE_CITIZEN_FEMALE )
     call SetBuildUnit( 2, REBEL_ALLIANCE_BARRACKS )
-    call SetBuildUnit( 1, GALACTIC_REPUBLIC_JEDI_TEMPLE )
-    call SetBuildUnit( 1, GALACTIC_EMPIRE_VEHICLE_FACTORY )
+    call SetBuildUnit( 1, REBEL_ALLIANCE_JEDI_ACADEMY )
+    //call SetBuildUnit( 1, GALACTIC_EMPIRE_VEHICLE_FACTORY )
     call SetBuildUnit( 1, REBEL_ALLIANCE_SPACEPORT )
-    call SetBuildUnit( 1, GALACTIC_REPUBLIC_NABOO_TRAINING_CENTER )
+    //call SetBuildUnit( 1, GALACTIC_REPUBLIC_NABOO_TRAINING_CENTER )
 
 //    call SetBuildUpgr( 1, UPG_FURBOLG_LUMBER )
     //call SetBuildUnit( 2, GUARDING_FURBOLG )
