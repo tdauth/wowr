@@ -1594,3 +1594,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * chilla_killa: [Bacta Tank by chilla_killa](https://www.hiveworkshop.com/threads/bacta-tank-by-chilla_killa.178113/)
 * olofmoleman: [BTNJediMale1](https://www.hiveworkshop.com/threads/btnjedimale1.56869/)
 * olofmoleman: [Jedi Male](https://www.hiveworkshop.com/threads/jedi-male.50246/)
+* Mike: [Arabian inn](https://www.hiveworkshop.com/threads/arabian-inn.292275/)

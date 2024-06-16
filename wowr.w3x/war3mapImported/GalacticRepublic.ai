@@ -54,7 +54,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_GALACTIC_REPUBLIC_CORUSCANT )
     call SetBuildUnit( 1, GALACTIC_REPUBLIC_CORUSCANT )
     
-    //call SetBuildUpgr( 1, UPG_FURBOLG_BACKPACK )
+    call SetBuildUpgr( 1, UPG_GALACTIC_REPUBLIC_BACKPACK )
     
     call BuildingStrategyStandardTier3()
     // **********************************

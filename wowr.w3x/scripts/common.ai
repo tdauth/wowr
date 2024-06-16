@@ -2576,6 +2576,7 @@ globals
     constant integer GALACTIC_REPUBLIC_ALTAR                         = 'h0GZ' // altar
     constant integer GALACTIC_REPUBLIC_CORUSCANT                     = 'h08K' // special building
 
+    constant integer UPG_GALACTIC_REPUBLIC_BACKPACK                  = 'R0HJ'
     constant integer UPG_GALACTIC_REPUBLIC_BLASTERS                  = 'R087'
     constant integer UPG_GALACTIC_REPUBLIC_IRON_PLATING              = 'R086'
     constant integer UPG_GALACTIC_REPUBLIC_JEDI                      = 'R089'
@@ -2613,14 +2614,25 @@ globals
     constant integer REBEL_ALLIANCE_SPACEPORT                        = 'h0VU'
     constant integer REBEL_ALLIANCE_FARM                             = 'o059'
     constant integer REBEL_ALLIANCE_ALTAR                            = 'h0W1'
+    constant integer REBEL_ALLIANCE_SHOP                             = 'h0W5'
+    constant integer REBEL_ALLIANCE_CANTINA                          = 'h0W8' // workshop
+    constant integer REBEL_ALLIANCE_ECHO_SHIELD                      = 'h0W6' // special building
+
+    constant integer UPG_REBEL_ALLIANCE_BACKPACK                     = 'R0HE'
+    constant integer UPG_REBEL_ALLIANCE_BLASTERS                     = 'R0HH'
+    constant integer UPG_REBEL_ALLIANCE_IRON_PLATING                 = 'R0HI'
+    constant integer UPG_REBEL_ALLIANCE_JEDI                         = 'R0HF'
+    constant integer UPG_REBEL_ALLIANCE_ECHO_SHIELD                  = 'R0HG'
 
     constant integer REBEL_ALLIANCE_WORKER                           = 'h0VQ'
     constant integer REBEL_ALLIANCE_RECRUIT                          = 'h0VP'
     constant integer REBEL_ALLIANCE_TROOPER                          = 'h0VY'
     constant integer REBEL_ALLIANCE_REPEATER                         = 'h0VZ'
+    constant integer REBEL_ALLIANCE_JEDI                             = 'h0W4'
     constant integer REBEL_ALLIANCE_XWING                            = 'h0VT'
     constant integer REBEL_ALLIANCE_YWING                            = 'h0VX'
     constant integer REBEL_ALLIANCE_BWING                            = 'h0VV'
+    constant integer REBEL_ALLIANCE_TUSKEN_RAIDER                    = 'h03N'
 
     constant integer REBEL_ALLIANCE_CITIZEN_MALE                     = 'n033'
     constant integer REBEL_ALLIANCE_CITIZEN_FEMALE                   = 'n0BP'
@@ -2634,6 +2646,8 @@ globals
     constant integer GALACTIC_EMPIRE_SPACEPORT                       = 'h0L8'
     constant integer GALACTIC_EMPIRE_TURBOLAZER                      = 'o056'
     constant integer GALACTIC_EMPIRE_VEHICLE_FACTORY                 = 'h0L7'
+
+    constant integer UPG_GALACTIC_EMPIRE_BACKPACK                    = 'R09Q'
 
     constant integer GALACTIC_EMPIRE_ASTROMECH_DROID                 = 'h0L1' // worker
 
