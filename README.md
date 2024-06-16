@@ -1595,3 +1595,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [BTNJediMale1](https://www.hiveworkshop.com/threads/btnjedimale1.56869/)
 * olofmoleman: [Jedi Male](https://www.hiveworkshop.com/threads/jedi-male.50246/)
 * Mike: [Arabian inn](https://www.hiveworkshop.com/threads/arabian-inn.292275/)
+* Mike: [Arabian market](https://www.hiveworkshop.com/threads/arabian-market.292139/)
