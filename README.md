@@ -1596,3 +1596,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * olofmoleman: [Jedi Male](https://www.hiveworkshop.com/threads/jedi-male.50246/)
 * Mike: [Arabian inn](https://www.hiveworkshop.com/threads/arabian-inn.292275/)
 * Mike: [Arabian market](https://www.hiveworkshop.com/threads/arabian-market.292139/)
+* killst4r: [Factory Animated](https://www.hiveworkshop.com/threads/factory-animated.47308/)
+* General Frank: [BTNTerranFactory](https://www.hiveworkshop.com/threads/btnterranfactory.57177/)
+* General Frank: [BTNTerranBarracs](https://www.hiveworkshop.com/threads/btnterranbarracs.57173/)
+* killst4r: [Armory 2](https://www.hiveworkshop.com/threads/armory-2.47300/)
+* General Frank: [BTNTerranArmory](https://www.hiveworkshop.com/threads/btnterranarmory.57179/)
