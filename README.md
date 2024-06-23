@@ -1602,3 +1602,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * killst4r: [Armory 2](https://www.hiveworkshop.com/threads/armory-2.47300/)
 * General Frank: [BTNTerranArmory](https://www.hiveworkshop.com/threads/btnterranarmory.57179/)
 * Uncle Fester: [HaradrimBannerCarrier](https://www.hiveworkshop.com/threads/haradrimbannercarrier.227517/)
+* Blizzard Entertainment: [BTNHumanChurch](https://www.hiveworkshop.com/threads/btnhumanchurch.56299/)
