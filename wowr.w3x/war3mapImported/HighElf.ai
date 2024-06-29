@@ -32,6 +32,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 4, HIGH_ELF_FARM )
     call SetBuildUnit( 2, HIGH_ELF_OUTPOST )
     call SetBuildUnit( 2, HIGH_ELF_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, HIGH_ELF_CHILD )
+    call SetBuildUnit( 2, HIGH_ELF_PET )
 
     call SetBuildUpgr( 2, UPG_HIGH_ELF_MELEE )
     call SetBuildUpgr( 2, UPG_HIGH_ELF_ARMOR )

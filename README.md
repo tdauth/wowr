@@ -1605,4 +1605,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Blizzard Entertainment: [BTNHumanChurch](https://www.hiveworkshop.com/threads/btnhumanchurch.56299/)
 * Blizzard Entertainment, Zephyrius2412: [Blood Elven Upgrades](https://www.hiveworkshop.com/threads/blood-elven-upgrades.300406/)
 * Barade, Blizzard Entertainment: [Doodad icons](https://www.hiveworkshop.com/threads/doodad-icons.354421/)
-* Barade, Fingolfin: [Star Wars unit icons](https://www.hiveworkshop.com/threads/star-wars-unit-icons.354413/)
+* Barade, Fingolfin, HerrDave: [Star Wars unit icons](https://www.hiveworkshop.com/threads/star-wars-unit-icons.354413/)
+* NhazUl: [Dreadlord Child](https://www.hiveworkshop.com/threads/dreadlord-child.158890/)

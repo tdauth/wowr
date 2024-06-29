@@ -31,6 +31,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, DEMON_FORTIFIED_INFERNAL_MACHINE )
     call SetBuildUnit( 1, DEMON_SACRIFICAL_PIT )
     call SetBuildUnit( 2, DEMON_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, DEMON_CHILD )
+    call SetBuildUnit( 2, DEMON_PET )
     
     call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_STR )
     call SetBuildUpgr( 2, UPG_DEMON_UNHOLY_ARMOR )

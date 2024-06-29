@@ -807,6 +807,8 @@ globals
     constant integer BLOOD_ELF_KEEP                                  = 'h00A' // keep
     constant integer BLOOD_ELF_CASTLE                                = 'h00B' // castle
     constant integer BLOOD_ELF_SCOUT_TOWER                           = 'h00I' // tower
+    constant integer BLOOD_ELF_GUARD_TOWER                           = ELF_GUARD_TOWER // guard tower
+    constant integer BLOOD_ELF_ARCANE_TOWER                          = 'h0WK' // arcane tower
     constant integer BLOOD_ELF_ARCANE_SACNTUM                        = 'h00E' // arcane
     constant integer BLOOD_ELF_ALTAR                                 = 'h0GH' // altar
     constant integer BLOOD_ELF_FARM                                  = 'h0GI' // farm
@@ -850,6 +852,8 @@ globals
 
     constant integer BLOOD_ELF_CITIZEN_MALE                          = 'n00K'
     constant integer BLOOD_ELF_CITIZEN_FEMALE                        = 'n00L'
+    constant integer BLOOD_ELF_CHILD                                 = 'n05T'
+    constant integer BLOOD_ELF_PET                                   = 'n00T'
     constant integer BLOOD_ELF_HOUSING                               = 'h00T'
 
     // Naga
@@ -933,6 +937,9 @@ globals
 
     constant integer DEMON_CITIZEN_MALE                              = 'n016'
     constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
+    constant integer DEMON_CHILD                                     = 'n05X'
+    constant integer DEMON_PET                                       = 'n018'
+
     constant integer DEMON_HOUSING                                   = 'h00Y'
 
     // Draenei
@@ -1202,6 +1209,8 @@ globals
 
     constant integer HIGH_ELF_CITIZEN_MALE                           = 'n05E'
     constant integer HIGH_ELF_CITIZEN_FEMALE                         = 'n05J'
+    constant integer HIGH_ELF_CHILD                                  = 'n05W'
+    constant integer HIGH_ELF_PET                                    = 'n05K'
     constant integer HIGH_ELF_HOUSING                                = 'h04H'
 
     // Gnome
@@ -3332,7 +3341,7 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == BLOOD_ELF_KEEP then
         set have_qty = have_qty  + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
     elseif unitid == BLOOD_ELF_SCOUT_TOWER then
-        set have_qty = have_qty  + GetUnitCountEx(ELF_GUARD_TOWER,false,townid) + GetUnitCountEx(ARCANE_TOWER,false,townid)
+        set have_qty = have_qty  + GetUnitCountEx(BLOOD_ELF_GUARD_TOWER,false,townid) + GetUnitCountEx(BLOOD_ELF_ARCANE_TOWER,false,townid)
 
     elseif unitid == NAGA_TEMPLE_1 then
         set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE,false,townid) + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
