@@ -1025,6 +1025,7 @@ globals
 
     constant integer FURBOLG_CITIZEN_MALE                            = 'n029'
     constant integer FURBOLG_CITIZEN_FEMALE                          = 'n02A'
+    constant integer FURBOLG_CHILD                                   = 'n05Z'
     constant integer FURBOLG_HOUSING                                 = 'h015'
 
     // Goblin
@@ -1090,6 +1091,7 @@ globals
 
     constant integer GOBLIN_CITIZEN_MALE                             = 'n03Y'
     constant integer GOBLIN_CITIZEN_FEMALE                           = 'n03Z'
+    constant integer GOBLIN_CHILD                                    = 'n05Y'
     constant integer GOBLIN_HOUSING                                  = 'h02H'
 
     // Dwarf

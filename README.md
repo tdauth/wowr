@@ -1607,3 +1607,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Barade, Blizzard Entertainment: [Doodad icons](https://www.hiveworkshop.com/threads/doodad-icons.354421/)
 * Barade, Fingolfin, HerrDave: [Star Wars unit icons](https://www.hiveworkshop.com/threads/star-wars-unit-icons.354413/)
 * NhazUl: [Dreadlord Child](https://www.hiveworkshop.com/threads/dreadlord-child.158890/)
+* Thrikodius: [Goblin Kid](https://www.hiveworkshop.com/threads/goblin-kid.191479/)

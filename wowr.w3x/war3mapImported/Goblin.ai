@@ -13,6 +13,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 5, GOBLIN_HUT )
     call SetBuildUnit( 2, GOBLIN_CITIZEN_MALE )
     call SetBuildUnit( 2, GOBLIN_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, GOBLIN_CHILD )
     call SetBuildUnit( 2, GOBLIN_BARRACKS )
     call SetBuildUnit( 2, GOBLIN_TOWER )
     call SetBuildUnit( 1, GOBLIN_SHOP )
