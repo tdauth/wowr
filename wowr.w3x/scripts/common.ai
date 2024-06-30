@@ -948,10 +948,13 @@ globals
     constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
     constant integer DRAENEI_ALTAR_OF_SEERS                          = 'o052'
     constant integer DRAENEI_HUT                                     = 'o053'
+    constant integer DRAENEI_MILL                                    = 'n062'
     constant integer DRAENEI_SHOP                                    = 'n01N'
     constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
     constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
     constant integer DRAENEI_PRISON                                  = 'o00K'
+
+
 
     constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
     constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
@@ -974,6 +977,8 @@ globals
 
     constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
+    constant integer DRAENEI_CHILD                                   = 'n063'
+    constant integer DRAENEI_PET                                     = 'n00R'
     constant integer DRAENEI_HOUSING                                 = 'h011'
 
     // Furbolg

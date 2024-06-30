@@ -15,9 +15,14 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DRAENEI_ALTAR_OF_SEERS )
     call SetBuildUnit( 2, DRAENEI_BARRACKS )
     call SetBuildUnit( 2, DRAENEI_SEERS_DEN )
+    call SetBuildUnit( 2, DRAENEI_MILL )
     call SetBuildUnit( 1, DRAENEI_SHOP )
     call SetBuildUnit( 5, DRAENEI_BOULDER_TOWER )
     call SetBuildUnit( 5, DRAENEI_ADVANCED_BOULDER_TOWER )
+
+    call SetBuildUnit( 2, DRAENEI_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, DRAENEI_CHILD )
+    call SetBuildUnit( 2, DRAENEI_PET )
     
     call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_ARMOR )
     call SetBuildUpgr( 3, UPG_DRAENEI_STEEL_MELEE_WEAPONS )
@@ -41,6 +46,7 @@ endfunction
 function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, DRAENEI_HAVEN)
     call SetBuildExpa(expansions, DRAENEI_SEERS_DEN)
+    call SetBuildExpa(expansions, DRAENEI_MILL)
     call SetBuildExpa(expansions, DRAENEI_ADVANCED_BOULDER_TOWER)
 endfunction
 
