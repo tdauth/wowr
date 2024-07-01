@@ -1234,6 +1234,7 @@ globals
     constant integer GNOME_TELEPORTER                                = 'h0KT' // sacrifical pit
     constant integer GNOME_ALTAR_OF_TECHNOLOGY                       = 'h0QM' // altar
     constant integer GNOME_TECHNOLOGY_FAIR                           = 'h0QN' // shop
+    constant integer GNOME_SHIPYARD                                  = 'h0WN'
 
     constant integer UPG_GNOME_BACKPACK                              = 'R09O'
     constant integer UPG_GNOME_INVENTIONS                            = 'R09N'
@@ -1577,6 +1578,7 @@ globals
 
     constant integer PANDAREN_CITIZEN_MALE                           = 'n08M'
     constant integer PANDAREN_CITIZEN_FEMALE                         = 'n08N'
+    constant integer PANDAREN_CHILD                                  = 'n064'
     constant integer PANDAREN_PET                                    = 'n0GP'
     constant integer PANDAREN_HOUSING                                = 'h0JU'
 

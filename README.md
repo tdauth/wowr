@@ -1610,3 +1610,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Thrikodius: [Goblin Kid](https://www.hiveworkshop.com/threads/goblin-kid.191479/)
 * Em!: [Creep-Spawner/Basements&Tunnels/Waygates](https://www.hiveworkshop.com/threads/creep-spawner-basements-tunnels-waygates.354041/)
 * Retera: [Draenei Harvester's Mill](https://www.hiveworkshop.com/threads/draenei-harvesters-mill.302755/)
+* Mr.Goblin: [BTNPadarenKid](https://www.hiveworkshop.com/threads/btnpadarenkid.134032/)

@@ -30,6 +30,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 4, PANDAREN_SHELTER )
     call SetBuildUnit( 1, PANDAREN_SCOUT_TOWER )
     call SetBuildUnit( 2, PANDAREN_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, PANDAREN_CHILD )
     call SetBuildUnit( 2, PANDAREN_PET )
     
     call SetBuildUpgr( 2, UPG_PANDAREN_MELEE )
