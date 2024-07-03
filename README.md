@@ -18,7 +18,7 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
 
-Download and place the map file `wowr[version].w3x` into the folder `C:\Users\[YourUserName]\Documents\Warcraft III\Maps`.
+Download and place the map file `wowr[version].w3x` into the folder `C:\Users\%USERNAME%\Documents\Warcraft III\Maps\Download`.
 Start Warcraft III: Reforged and play a custom game by choosing the map.
 
 
