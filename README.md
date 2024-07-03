@@ -1,6 +1,6 @@
 # World of Warcraft Reforged
 
-Open world role-playing game funmap for Warcraft III: Reforged based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/) featuring computer AI support which allows you to play the map offline.
+Open world role-playing game funmap for Warcraft III: Reforged based on [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr) featuring computer AI support which allows you to play the map offline.
 This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
 
 
@@ -12,9 +12,9 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 ## Play the Map
 
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
-* [Official download on Hiveworkshop](https://www.hiveworkshop.com/threads/world-of-warcraft-tsr-1-4.304616/)
-* [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/world-of-warcraft-reforged-18-792265)
-* [Official download on Epic War](https://www.epicwar.com/maps/331473/)
+* [Releases](https://github.com/tdauth/wowr/releases)
+* [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/World%20of%20Warcraft%20Reforged)
+* [Official download on Epic War](https://www.epicwar.com/maps/336351/)
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
 *Enable HD graphics in older versions of the map:* Older versions of the map are restricted to SD graphics to avoid performance issues.
@@ -55,7 +55,6 @@ Every AI is assigned their professions automatically and the crafted items are a
 The map uses several custom systems created by Baradé which can be used in any other map.
 They are available in [systems](./systems).
 Each system provides a prototype map which shows you how to use the system.
-Some of the systems are available on [HiveWorkshop](https://www.hiveworkshop.com/members/barade.125524/#resources) to make them public and for feedback.
 
 ## Release Process
 
@@ -103,6 +102,7 @@ The original map script has been added to this repository as well as the origina
 
 **Note:** Some of these versions might have been optimized:
 
+* [Releases](https://github.com/tdauth/wowr/releases)
 * [wowr3.5.w3x](./wowr3.5.w3x)
 * [wowr3.4.w3x](./wowr3.4.w3x)
 * [wowr3.3.w3x](./wowr3.3.w3x)
