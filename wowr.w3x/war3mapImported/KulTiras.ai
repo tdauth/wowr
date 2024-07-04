@@ -33,6 +33,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, KULTIRAS_ARCANE_SANCTUM )
     call SetBuildUnit( 2, KULTIRAS_WATCH_TOWER )
     call SetBuildUnit( 2, KULTIRAS_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, KULTIRAS_CHILD )
+    call SetBuildUnit( 2, KULTIRAS_PET )
 
     call SetBuildUpgr( 2, UPG_KULTIRAS_LUMBER )
     call SetBuildUpgr( 2, UPG_KULTIRAS_MASONRY )

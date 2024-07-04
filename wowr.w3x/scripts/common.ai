@@ -1322,6 +1322,8 @@ globals
 
     constant integer DALARAN_CITIZEN_MALE                            = 'n082'
     constant integer DALARAN_CITIZEN_FEMALE                          = 'n08B'
+    constant integer DALARAN_CHILD                                   = 'n0CV'
+    constant integer DALARAN_PET                                     = 'n00Q'
     constant integer DALARAN_HOUSING                                 = 'h09E'
 
     // Kul Tiras
@@ -1393,6 +1395,8 @@ globals
 
     constant integer KULTIRAS_CITIZEN_MALE                           = 'n066'
     constant integer KULTIRAS_CITIZEN_FEMALE                         = 'n0BL'
+    constant integer KULTIRAS_CHILD                                  = 'n0CV'
+    constant integer KULTIRAS_PET                                    = 'n00Q'
     constant integer KULTIRAS_HOUSING                                = 'h090'
 
     // Lordaeron
@@ -1454,6 +1458,8 @@ globals
 
     constant integer LORDAERON_CITIZEN_MALE                          = 'n0DY'
     constant integer LORDAERON_CITIZEN_FEMALE                        = 'n0E0'
+    constant integer LORDAERON_CHILD                                 = 'n0CV'
+    constant integer LORDAERON_PET                                   = 'n00Q'
     constant integer LORDAERON_HOUSING                               = 'h0N7'
 
     // Stormwind

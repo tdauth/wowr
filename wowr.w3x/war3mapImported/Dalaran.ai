@@ -29,6 +29,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, DALARAN_ARCANE_SANCTUM )
     call SetBuildUnit( 2, DALARAN_GUARD_TOWER_1 )
     call SetBuildUnit( 2, DALARAN_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, DALARAN_CHILD )
+    call SetBuildUnit( 2, DALARAN_PET )
 
     call SetBuildUpgr( 2, UPG_DALARAN_MELEE )
     call SetBuildUpgr( 2, UPG_DALARAN_ARMOR )
