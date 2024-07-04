@@ -777,6 +777,8 @@ globals
     // Undead
     constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
+    constant integer UNDEAD_CHILD                                    = 'n0IT'
+    constant integer UNDEAD_PET                                      = 'n00R'
     constant integer UNDEAD_HOUSING                                  = 'h00U'
 
     constant integer UNDEAD_SHIPYARD                                 = 'u00K'
@@ -1904,6 +1906,8 @@ globals
 
     constant integer NERUBIAN_CITIZEN_MALE                           = 'n0E9'
     constant integer NERUBIAN_CITIZEN_FEMALE                         = 'n0EA'
+    constant integer NERUBIAN_CHILD                                  = 'n065'
+    constant integer NERUBIAN_PET                                    = 'n0EC'
     constant integer NERUBIAN_HOUSING                                = 'h0OX'
 
     // Murloc

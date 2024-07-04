@@ -30,6 +30,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, NERUBIAN_NEST )
 
     call SetBuildUnit( 2, NERUBIAN_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, NERUBIAN_CHILD )
+    call SetBuildUnit( 2, NERUBIAN_PET )
     
     call SetBuildUpgr( 2, UPG_NERUBIAN_WEAPONS )
     call SetBuildUpgr( 2, UPG_NERUBIAN_ARMOR )

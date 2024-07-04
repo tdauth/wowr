@@ -1616,3 +1616,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Em!: [Creep-Spawner/Basements&Tunnels/Waygates](https://www.hiveworkshop.com/threads/creep-spawner-basements-tunnels-waygates.354041/)
 * Retera: [Draenei Harvester's Mill](https://www.hiveworkshop.com/threads/draenei-harvesters-mill.302755/)
 * Mr.Goblin: [BTNPadarenKid](https://www.hiveworkshop.com/threads/btnpadarenkid.134032/)
+* Blizzard Entertainment, Ujimasa Hojo: [Shipyard (Goblin) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-goblin-and-derivatives.224722/)

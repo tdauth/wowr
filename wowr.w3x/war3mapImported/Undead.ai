@@ -31,6 +31,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, GRAVEYARD )
     call SetBuildUnit( 1, DAMNED_TEMPLE )
     call SetBuildUnit( 1, SLAUGHTERHOUSE )
+
+    call SetBuildUnit( 2, UNDEAD_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, UNDEAD_CHILD )
+    call SetBuildUnit( 2, UNDEAD_PET )
     
     call SetBuildUpgr( 2, UPG_UNHOLY_STR )
     call SetBuildUpgr( 2, UPG_UNHOLY_ARMOR )
