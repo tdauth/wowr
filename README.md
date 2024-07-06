@@ -1617,3 +1617,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Retera: [Draenei Harvester's Mill](https://www.hiveworkshop.com/threads/draenei-harvesters-mill.302755/)
 * Mr.Goblin: [BTNPadarenKid](https://www.hiveworkshop.com/threads/btnpadarenkid.134032/)
 * Blizzard Entertainment, Ujimasa Hojo: [Shipyard (Goblin) and Derivatives](https://www.hiveworkshop.com/threads/shipyard-goblin-and-derivatives.224722/)
+* BLazeKraze: [BTNTrollBatrider](https://www.hiveworkshop.com/threads/btntrollbatrider.264885/)
+* Blizzard Entertainment, zerotul: [Forest Troll Hut 0](https://www.hiveworkshop.com/threads/forest-troll-hut-0.288963/)
+* Blizzard Entertainment, zerotul: [Forest Troll Hut 1](https://www.hiveworkshop.com/threads/forest-troll-hut-1.288964/)
