@@ -1620,3 +1620,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * BLazeKraze: [BTNTrollBatrider](https://www.hiveworkshop.com/threads/btntrollbatrider.264885/)
 * Blizzard Entertainment, zerotul: [Forest Troll Hut 0](https://www.hiveworkshop.com/threads/forest-troll-hut-0.288963/)
 * Blizzard Entertainment, zerotul: [Forest Troll Hut 1](https://www.hiveworkshop.com/threads/forest-troll-hut-1.288964/)
+* Dionesiist: [Vampire Combatant](https://www.hiveworkshop.com/threads/vampire-combatant.188818/)
+* Remixer: [Stone Coffin](https://www.hiveworkshop.com/threads/stone-coffin.312485/)
+* Darkfang: [BTNDeathCoffin](https://www.hiveworkshop.com/threads/btndeathcoffin.229803/)
