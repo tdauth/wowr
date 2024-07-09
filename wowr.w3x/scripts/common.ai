@@ -2476,6 +2476,8 @@ globals
 
     constant integer GERMANS_WWII_CITIZEN_MALE                       = 'n0DV'
     constant integer GERMANS_WWII_CITIZEN_FEMALE                     = 'n0DW'
+    constant integer GERMANS_WWII_PET                                = 'n0C7'
+    constant integer GERMANS_WWII_CHILD                              = 'n0CV'
     constant integer GERMANS_WWII_HOUSING                            = 'h0MZ'
 
     // Free People of Middle Earth

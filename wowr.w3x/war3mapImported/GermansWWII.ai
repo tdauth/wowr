@@ -31,6 +31,9 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUnit( 3, MODERNWARFARE_RADIO_TOWER )
     //call SetBuildUnit( 2, MODERNWARFARE_MINIGUN_TOWER )
     call SetBuildUnit( 2, GERMANS_WWII_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, GERMANS_WWII_PET )
+    call SetBuildUnit( 2, GERMANS_WWII_CHILD )
+
     call SetBuildUpgr( 2, UPG_GERMANS_WWII_AUTOBAHN )
     //call SetBuildUpgr( 2, UPG_MODERNWARFARE_MACHINE_GUNS )
     //call SetBuildUpgr( 2, UPG_MODERNWARFARE_HELMETS )
