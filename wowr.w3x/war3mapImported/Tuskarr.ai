@@ -31,6 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, TUSKARR_HUNTERS_REST )
     call SetBuildUnit( 4, TUSKARR_IGLOO )
     call SetBuildUnit( 2, TUSKARR_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, TUSKARR_CHILD )
     call SetBuildUnit( 2, TUSKARR_PET_SEAL )
     
     call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_WEAPONS )

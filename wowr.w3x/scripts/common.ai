@@ -1859,6 +1859,7 @@ globals
     constant integer TUSKARR_PET_SEAL                                = 'n0FH'
     constant integer TUSKARR_CITIZEN_FEMALE                          = 'n0FN'
     constant integer TUSKARR_CITIZEN_MALE                            = 'n0FG'
+    constant integer TUSKARR_CHILD                                   = 'n07E'
     constant integer TUSKARR_HOUSING                                 = 'h0PT'
 
     // Nerubian
