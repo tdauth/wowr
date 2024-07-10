@@ -69,7 +69,8 @@ Use this check list when releasing a new version of the map:
 * Add all credits from this README to the map to make them appear in the quest log.
 * Add all changes to the ChangeLog in the quest log.
 * Use [checkai.bat](./checkai.bat) to check all AI scripts.
-* Use the cheat "-duplicatedsaveobjects" to check for duplicated save code objects.
+* Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
+* Use the cheat "-savecodemissing" to check for missing save code objects.
 * Use the cheat "-checkheroskills" to check for all registered hero spells.
 * Disable triggers for debugging or generating data only like "WoW Reforged Website" which only adds more code to the map script.
 * Make sure the imported data is working and there are no corrupted or big files added by mistake. Check for imported files with a big size or 0 size.
