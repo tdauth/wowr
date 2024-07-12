@@ -19,11 +19,11 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, FREEPEOPLE_SHOP )
     
 //     call SetBuildUpgr( 1, UPG_ROMANEMPIRE_DEFEND )
-//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
-//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
+     call SetBuildUpgr( 1, UPG_FREEPEOPLE_MELEE )
+     call SetBuildUpgr( 1, UPG_FREEPEOPLE_ARMOR )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_LEATHER )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
-//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
+     call SetBuildUpgr( 1, UPG_FREEPEOPLE_RANGE )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
 
     // Tier 2 buildings
@@ -35,11 +35,11 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, FREEPEOPLE_ROHAN_SCOUT_TOWER )
     call SetBuildUnit( 2, FREEPEOPLE_CITIZEN_FEMALE )
     
-//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )
-//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_ARMOR )
+     call SetBuildUpgr( 2, UPG_FREEPEOPLE_MELEE )
+     call SetBuildUpgr( 2, UPG_FREEPEOPLE_ARMOR )
 //     call SetBuildUpgr( 2, UPG_BLOOD_ELF_LEATHER )
 //     call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
-//     call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
+     call SetBuildUpgr( 2, UPG_FREEPEOPLE_RANGE )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
 //     call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
@@ -54,11 +54,11 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, FREEPEOPLE_MERCENARY_CAMP )
 
 //     call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
-//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
-//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_ARMOR )
+     call SetBuildUpgr( 3, UPG_FREEPEOPLE_MELEE )
+     call SetBuildUpgr( 3, UPG_FREEPEOPLE_ARMOR )
 //     call SetBuildUpgr( 3, UPG_BLOOD_ELF_LEATHER )
 //     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MOON_ARMOR )
-//     call SetBuildUpgr( 3, UPG_BLOOD_ELF_STR_MOON )
+     call SetBuildUpgr( 3, UPG_FREEPEOPLE_RANGE )
 //     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MASONRY )
 //     call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
 //     call SetBuildUpgr( 2, UPG_SORCERY )
@@ -68,10 +68,10 @@ function BuildingStrategy takes nothing returns nothing
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
 //     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
 //     call SetBuildUpgr( 1, UPG_SENTINEL )
-//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
+     call SetBuildUpgr( 1, UPG_FREEPEOPLE_RIDE_DOWN )
      call SetBuildUpgr( 1, UPG_FREEPEOPLE_BACKPACK )
-//     call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
-//     call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
+     call SetBuildUpgr( 1, UPG_FREEPEOPLE_MINAS_TIRITH )
+     call SetBuildUnit( 1, FREEPEOPLE_MINAS_TIRITH )
 
     call BuildingStrategyStandardTier3()
     // **********************************

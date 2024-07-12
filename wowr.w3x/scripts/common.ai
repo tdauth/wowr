@@ -2496,8 +2496,14 @@ globals
     constant integer FREEPEOPLE_ENCHANTED_TREE                       = 'h0D2' // tauren totem
     constant integer FREEPEOPLE_MERCENARY_CAMP                       = 'h0F4' // gryphon aviary
     constant integer FREEPEOPLE_SHOP                                 = 'h0F8' // arcane vault
+    constant integer FREEPEOPLE_MINAS_TIRITH                         = 'h0WR' // special building
 
     constant integer UPG_FREEPEOPLE_BACKPACK                         = 'R0GK'
+    constant integer UPG_FREEPEOPLE_MINAS_TIRITH                     = 'R0HU'
+    constant integer UPG_FREEPEOPLE_ARMOR                            = 'R07G'
+    constant integer UPG_FREEPEOPLE_RANGE                            = 'R07H'
+    constant integer UPG_FREEPEOPLE_MELEE                            = 'R07I'
+    constant integer UPG_FREEPEOPLE_RIDE_DOWN                        = 'R07J'
 
     constant integer FREEPEOPLE_HOBBIT                               = 'h0CX' // worker
     constant integer FREEPEOPLE_GONDORIAN_SOLDIER                    = 'h0CV' // footman
