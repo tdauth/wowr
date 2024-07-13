@@ -35,8 +35,9 @@ Make sure that the JassHelper and vJass are enabled:
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
+The map contains the modified [common.j](./wowr.w3x/scripts/common.j) to make constants available to map triggers AND AI scripts at once.
 The map contains the modified [common.ai](./wowr.w3x/scripts/common.ai) which is used by all custom AI scripts.
-Run [checkai.bat](./checkai.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
+Run [checkjass.bat](./checkjass.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
 
 ### Warlords
 
@@ -68,7 +69,7 @@ Use this check list when releasing a new version of the map:
 
 * Add all credits from this README to the map to make them appear in the quest log.
 * Add all changes to the ChangeLog in the quest log.
-* Use [checkai.bat](./checkai.bat) to check all AI scripts.
+* Use [checkjass.bat](./checkjass.bat) to check all JASS scripts.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
 * Use the cheat "-savecodemissing" to check for missing save code objects.
 * Use the cheat "-checkheroskills" to check for all registered hero spells.
