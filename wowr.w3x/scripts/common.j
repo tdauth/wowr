@@ -5006,13 +5006,6 @@ globals
     constant integer COMMAND_ATTACK_TARGET_Y                         = 12
     constant integer COMMAND_DISABLED_ON                             = 13
     constant integer COMMAND_DISABLED_OFF                            = 14
-
-    // properties
-    constant integer PROPERTY_NEW_STORMWIND                          = 'n07I'
-    constant integer PROPERTY_PURCHASE_NEW_STORMWIND                 = 'h0WP'
-    constant integer PROPERTY_ORGRIMMAR                              = 'n07N'
-    constant integer PROPERTY_PURCHASE_ORGRIMMAR                     = 'h0WS'
-
 endglobals
 
 //============================================================================

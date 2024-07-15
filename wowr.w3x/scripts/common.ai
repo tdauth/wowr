@@ -2926,6 +2926,7 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(SAURONSFORCES_HOUSING)
     set count = count + GetUnitCount(GALACTIC_REPUBLIC_HOUSING)
     set count = count + GetUnitCount(CIS_HOUSING)
+    set count = count + GetUnitCount(REBEL_ALLIANCE_HOUSING)
 
     return count
 endfunction
