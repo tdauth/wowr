@@ -4242,7 +4242,7 @@ globals
     constant integer FACELESS_ONE_CITIZEN_MALE                       = 'n0KB'
     constant integer FACELESS_ONE_HOUSING                            = 'h0UP'
 
-    // Corrupted Ancients
+    // Corrupted Ancients/Satyr
     constant integer CORRUPTED_ANCIENTS_TIER_1                       = 'n0GX'
     constant integer CORRUPTED_ANCIENTS_TIER_2                       = 'n0GY'
     constant integer CORRUPTED_ANCIENTS_TIER_3                       = 'n0GZ'
@@ -4276,6 +4276,17 @@ globals
     constant integer CORRUPTED_ANCIENTS_CITIZEN_MALE                 = 'n0JO'
     constant integer CORRUPTED_ANCIENTS_CITIZEN_FEMALE               = 'n0JP'
     constant integer CORRUPTED_ANCIENTS_HOUSING                      = 'h0UE'
+
+    // Kobold
+    constant integer KOBOLD_TIER_1                                   = 'o070'
+    constant integer KOBOLD_TIER_2                                   = 'o09Y'
+    constant integer KOBOLD_TIER_3                                   = 'o09Z'
+    constant integer KOBOLD_ALTAR                                    = 'o0A0'
+    constant integer KOBOLD_BARRACKS                                 = 'o09S'
+
+    constant integer UPG_KOBOLD_BACKPACK                             = 'R0DX'
+    constant integer UPG_KOBOLD_BURROW                               = 'R0GB'
+    constant integer UPG_KOBOLD_CANDLES                              = 'R0GA'
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
