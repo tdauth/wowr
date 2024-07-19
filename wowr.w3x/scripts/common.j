@@ -3911,7 +3911,7 @@ globals
     constant integer TUSKARR_ICE_CUTTERS_LODGE                       = 'o05W' // arcane sanctuary
     constant integer TUSKARR_DECORATED_CAVERN                        = 'o05V' // tauren totem
     constant integer TUSKARR_ICY_SPIRE                               = 'o05X' // lumber mill/blacksmith
-    constant integer TUSKARR_IGLOO_BARRACKS                          = 'o055' // barracks
+    constant integer TUSKARR_IGLOO_BARRACKS                          = 'o05S' // barracks
     constant integer TUSKARR_NORTHERN_VENDOR_SHOP                    = 'o05U' // shop
     constant integer TUSKARR_IGLOO                                   = 'o05P' // farm
     constant integer TUSKARR_TUSKARR_SHIPYARD                        = 'o064'
