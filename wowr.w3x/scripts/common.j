@@ -2964,10 +2964,16 @@ globals
 
     constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
     constant integer UPG_NAGA_BACKPACK                               = 'R01E'
-    constant integer UPG_STATUE_OF_AZSHARA                           = 'R02B' // special building
+    constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
+
+    constant integer NAGA_WHALER                                     = 'n05Q' // sorceress
+    constant integer NAGA_REVENANT                                   = 'n0LA' // spellbreaker
+    constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
 
     constant integer NAGA_CITIZEN_MALE                               = 'n00M'
     constant integer NAGA_CITIZEN_FEMALE                             = 'n00N'
+    constant integer NAGA_CHILD                                      = 'n0AI'
+    constant integer NAGA_PET                                        = 'n00V'
     constant integer NAGA_HOUSING                                    = 'h00Q'
 
     // Demon
