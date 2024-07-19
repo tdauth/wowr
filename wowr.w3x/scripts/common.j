@@ -4281,12 +4281,30 @@ globals
     constant integer KOBOLD_TIER_1                                   = 'o070'
     constant integer KOBOLD_TIER_2                                   = 'o09Y'
     constant integer KOBOLD_TIER_3                                   = 'o09Z'
+    constant integer KOBOLD_CAVERN                                   = 'o0A5' // farm
     constant integer KOBOLD_ALTAR                                    = 'o0A0'
     constant integer KOBOLD_BARRACKS                                 = 'o09S'
+    constant integer KOBOLD_MILL                                     = 'o0A2'
+    constant integer KOBOLD_SHOP                                     = 'o09S'
+    constant integer KOBOLD_LODGE                                    = 'o0A4'
 
     constant integer UPG_KOBOLD_BACKPACK                             = 'R0DX'
     constant integer UPG_KOBOLD_BURROW                               = 'R0GB'
     constant integer UPG_KOBOLD_CANDLES                              = 'R0GA'
+    constant integer UPG_KOBOLD_MELEE                                = 'R0GA'
+    constant integer UPG_KOBOLD_ARMOR                                = 'R0GA'
+    constant integer UPG_KOBOLD_GEOMANCER                            = 'R0GA'
+
+    constant integer KOBOLD_WORKER                                   = 'e01Y'
+    constant integer KOBOLD_WARRIOR                                  = 'n0LI' // footman
+    constant integer KOBOLD_HUNTER                                   = 'n0AD' // rifleman
+    constant integer KOBOLD_TUNNELER                                 = 'n0LJ' // knight
+    constant integer KOBOLD_GEOMANCER                                = 'n09B' // priest
+
+    constant integer KOBOLD_PET                                      = 'n04W'
+    constant integer KOBOLD_CITIZEN_MALE                             = 'n09C'
+    constant integer KOBOLD_CITIZEN_FEMALE                           = 'n0A3'
+    constant integer KOBOLD_HOUSING                                  = 'h0XA'
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1

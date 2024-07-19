@@ -4,71 +4,71 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, TUSKARR_FROZEN_HALL )
-    call SetBuildUnit( 17, TUSKARR_WORKER )
-    call SetBuildUnit( 2, TUSKARR_CITIZEN_MALE )
+    call SetBuildUnit( 1, KOBOLD_TIER_1 )
+    call SetBuildUnit( 17, KOBOLD_WORKER )
+    call SetBuildUnit( 2, KOBOLD_CITIZEN_MALE )
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, TUSKARR_HOUSING )
-    call SetBuildUnit( 1, TUSKARR_ICY_SPIRE )
-    call SetBuildUnit( 3, TUSKARR_IGLOO )
-    call SetBuildUnit( 2, TUSKARR_IGLOO_BARRACKS )
-    call SetBuildUnit( 1, TUSKARR_ALTAR_OF_ICE )
-    call SetBuildUnit( 1, TUSKARR_NORTHERN_VENDOR_SHOP )
+    call SetBuildUnit( 2, KOBOLD_HOUSING )
+    call SetBuildUnit( 1, KOBOLD_MILL )
+    call SetBuildUnit( 3, KOBOLD_CAVERN )
+    call SetBuildUnit( 2, KOBOLD_BARRACKS )
+    call SetBuildUnit( 1, KOBOLD_ALTAR )
+    call SetBuildUnit( 1, KOBOLD_SHOP )
     
-    call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_WEAPONS )
-    call SetBuildUpgr( 1, UPG_TUSKARR_HARPOONS )
-    call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_ARMOR )
-    call SetBuildUpgr( 1, UPG_TUSKARR_BEAST_PROTECTION )
-    call SetBuildUpgr( 1, UPG_TUSKARR_ENSNARE )
-    call SetBuildUpgr( 1, UPG_TUSKARR_IMPROVED_FISHING )
+    call SetBuildUpgr( 1, UPG_KOBOLD_MELEE )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_HARPOONS )
+    call SetBuildUpgr( 1, UPG_KOBOLD_ARMOR )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_BEAST_PROTECTION )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_ENSNARE )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_IMPROVED_FISHING )
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, TUSKARR_FROZEN_STRONGHOLD )
-    call SetBuildUnit( 1, TUSKARR_ICY_SPIRE )
-    call SetBuildUnit( 1, TUSKARR_ICE_CUTTERS_LODGE )
-    call SetBuildUnit( 1, TUSKARR_HUNTERS_REST )
-    call SetBuildUnit( 4, TUSKARR_IGLOO )
-    call SetBuildUnit( 2, TUSKARR_CITIZEN_FEMALE )
-    call SetBuildUnit( 2, TUSKARR_PET_SEAL )
+    call SetBuildUnit( 1, KOBOLD_TIER_2 )
+    call SetBuildUnit( 1, KOBOLD_MILL )
+    //call SetBuildUnit( 1, TUSKARR_ICE_CUTTERS_LODGE )
+    //call SetBuildUnit( 1, TUSKARR_HUNTERS_REST )
+    call SetBuildUnit( 4, KOBOLD_CAVERN )
+    call SetBuildUnit( 2, KOBOLD_CITIZEN_MALE )
+    call SetBuildUnit( 2, KOBOLD_PET )
     
-    call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_WEAPONS )
-    call SetBuildUpgr( 2, UPG_TUSKARR_HARPOONS )
-    call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_ARMOR )
-    call SetBuildUpgr( 2, UPG_TUSKARR_BEAST_PROTECTION )
-    call SetBuildUpgr( 2, UPG_TUSKARR_IMPROVED_FISHING )
-    call SetBuildUpgr( 1, UPG_TUSKARR_FROST_IMMUNITY )
-    call SetBuildUpgr( 1, UPG_TUSKARR_ETHERAL_BEASTS )
-    call SetBuildUpgr( 1, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
-    call SetBuildUpgr( 1, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
+    call SetBuildUpgr( 2, UPG_KOBOLD_MELEE )
+    //call SetBuildUpgr( 2, UPG_TUSKARR_HARPOONS )
+    call SetBuildUpgr( 2, UPG_KOBOLD_ARMOR )
+    //call SetBuildUpgr( 2, UPG_TUSKARR_BEAST_PROTECTION )
+    //call SetBuildUpgr( 2, UPG_TUSKARR_IMPROVED_FISHING )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_FROST_IMMUNITY )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_ETHERAL_BEASTS )
+    call SetBuildUpgr( 1, UPG_KOBOLD_GEOMANCER )
+    //call SetBuildUpgr( 1, UPG_KOBOLD_GEOMANCER_ADEPT_TRAINING )
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, TUSKARR_FROZEN_FORTRESS )
-    call SetBuildUnit( 1, TUSKARR_DECORATED_CAVERN )
-    call SetBuildUnit( 5, TUSKARR_IGLOO )
-    call SetBuildUnit( 2, TUSKARR_BLOCK_OF_ICE )
-    call SetBuildUnit( 2, TUSKARR_SPIDER_SHRINE )
-    call SetBuildUnit( 2, TUSKARR_FROST_SNOWMAN )
-    call SetBuildUnit( 2, TUSKARR_CITIZEN_MALE )
+    call SetBuildUnit( 1, KOBOLD_TIER_3 )
+    //call SetBuildUnit( 1, TUSKARR_DECORATED_CAVERN )
+    call SetBuildUnit( 5, KOBOLD_CAVERN )
+    //call SetBuildUnit( 2, TUSKARR_BLOCK_OF_ICE )
+    //call SetBuildUnit( 2, TUSKARR_SPIDER_SHRINE )
+    //call SetBuildUnit( 2, TUSKARR_FROST_SNOWMAN )
+    call SetBuildUnit( 2, KOBOLD_CITIZEN_FEMALE )
 
-    call SetBuildUpgr( 3, UPG_TUSKARR_TUSKARR_WEAPONS )
-    call SetBuildUpgr( 3, UPG_TUSKARR_HARPOONS )
-    call SetBuildUpgr( 3, UPG_TUSKARR_TUSKARR_ARMOR )
-    call SetBuildUpgr( 3, UPG_TUSKARR_BEAST_PROTECTION )
-    call SetBuildUpgr( 2, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
-    call SetBuildUpgr( 2, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
-    call SetBuildUpgr( 3, UPG_TUSKARR_DEVOUR )
-    call SetBuildUpgr( 3, UPG_TUSKARR_IMPROVED_FISHING )
-    call SetBuildUpgr( 1, UPG_TUSKARR_WAR_STOMP )
-    call SetBuildUpgr( 1, UPG_TUSKARR_CRITICAL_STRIKE )
-    call SetBuildUpgr( 1, UPG_TUSKARR_CLANS )
-    call SetBuildUpgr( 1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR )
-    call SetBuildUpgr( 1, UPG_TUSKARR_CLEAVING_ATTACK )
-    call SetBuildUpgr( 1, UPG_TUSKARR_MAGIC_SENTRY )
-    call SetBuildUpgr( 1, UPG_TUSKARR_BACKPACK )
-    call SetBuildUpgr( 1, UPG_TUSKARR_BURIAL_PLACE )
-    call SetBuildUnit( 1, TUSKARR_BURIAL_PLACE )
+    call SetBuildUpgr( 3, UPG_KOBOLD_MELEE )
+    //call SetBuildUpgr( 3, UPG_TUSKARR_HARPOONS )
+    call SetBuildUpgr( 3, UPG_KOBOLD_ARMOR )
+    //call SetBuildUpgr( 3, UPG_TUSKARR_BEAST_PROTECTION )
+    call SetBuildUpgr( 2, UPG_KOBOLD_GEOMANCER )
+    //call SetBuildUpgr( 2, UPG_KOBOLD_GEOMANCER_ADEPT_TRAINING )
+    //call SetBuildUpgr( 3, UPG_TUSKARR_DEVOUR )
+    //call SetBuildUpgr( 3, UPG_TUSKARR_IMPROVED_FISHING )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_WAR_STOMP )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_CRITICAL_STRIKE )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_CLANS )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+    call SetBuildUpgr( 1, UPG_KOBOLD_BURROW )
+    call SetBuildUpgr( 1, UPG_KOBOLD_CANDLES )
+    call SetBuildUpgr( 1, UPG_KOBOLD_BACKPACK )
+    //call SetBuildUpgr( 1, UPG_TUSKARR_BURIAL_PLACE )
+    //call SetBuildUnit( 1, TUSKARR_BURIAL_PLACE )
 
     call BuildingStrategyStandardTier3()
     // **********************************
@@ -77,9 +77,9 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, TUSKARR_FROZEN_FORTRESS)
-    call SetBuildExpa(expansions, TUSKARR_ICY_SPIRE)
-    call SetBuildExpa(expansions, TUSKARR_BLOCK_OF_ICE)
+    call SetBuildExpa(expansions, KOBOLD_TIER_3)
+    call SetBuildExpa(expansions, KOBOLD_MILL)
+    //call SetBuildExpa(expansions, TUSKARR_BLOCK_OF_ICE)
 endfunction
 
 function BuildShips takes nothing returns nothing
@@ -101,42 +101,42 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 0, 1, 2, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 2, 3, 3, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 0, 1, 2, KOBOLD_HUNTER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M3 ) // Waits 3 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 0, 1, 2, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 2, 3, 3, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 0, 1, 2, KOBOLD_HUNTER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M1 ) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -144,33 +144,33 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, KOBOLD_GEOMANCER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, KOBOLD_GEOMANCER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, KOBOLD_GEOMANCER )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
@@ -178,11 +178,11 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, KOBOLD_GEOMANCER )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
     call AddStandardUnitsToAttackWave()
@@ -191,11 +191,11 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, KOBOLD_GEOMANCER )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
@@ -205,11 +205,11 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, TUSKARR_FIGHTER )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_SPEARMAN )
-    call CampaignAttackerEx( 1, 2, 3, TUSKARR_MAMMOTH_RIDER )
+    call CampaignAttackerEx( 3, 4, 4, KOBOLD_WARRIOR )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_HUNTER )
+    call CampaignAttackerEx( 1, 2, 3, KOBOLD_TUNNELER )
     call CampaignAttackerEx( 1, 2, 3, TUSKARR_ICETUSK_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_HEALER )
+    call CampaignAttackerEx( 2, 2, 3, KOBOLD_GEOMANCER )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_SHAMAN )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
     call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
@@ -224,15 +224,15 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 2, 2, 2, TUSKARR_SPEARMAN )
+        call CampaignAttackerEx( 2, 2, 2, KOBOLD_HUNTER )
         call CampaignAttackerEx( 2, 2, 2, TUSKARR_ICETUSK_MAMMOTH )
-        call CampaignAttackerEx( 2, 2, 2, TUSKARR_HEALER )
+        call CampaignAttackerEx( 2, 2, 2, KOBOLD_GEOMANCER )
         call CampaignAttackerEx( 2, 2, 2, TUSKARR_SHAMAN )
         call CampaignAttackerEx( 4, 4, 4, TUSKARR_CHIEFTAIN )
         call CampaignAttackerEx( 4, 4, 4, TUSKARR_ELITE_ARMORED_POLAR_BEAR )
-        call CampaignAttackerEx( 4, 4, 4, TUSKARR_FIGHTER )
+        call CampaignAttackerEx( 4, 4, 4, KOBOLD_WARRIOR )
         call CampaignAttackerEx( 4, 4, 4, TUSKARR_GIANT_FROST_WOLF )
-        call CampaignAttackerEx( 4, 4, 4, TUSKARR_MAMMOTH_RIDER )
+        call CampaignAttackerEx( 4, 4, 4, KOBOLD_TUNNELER )
         
          // big air army
         call CampaignAttackerEx( 8, 10, 12, TUSKARR_GIANT_SNOWY_OWL )
@@ -244,7 +244,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( TUSKARR_IGLOO, function ChooseHeroSkill )
+    call CampaignAI( KOBOLD_CAVERN, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)
