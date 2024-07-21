@@ -59,12 +59,15 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_MURLOC_RIVER_BANK )
     call SetBuildUpgr( 1, UPG_MURLOC_EGGS )
     call SetBuildUpgr( 1, UPG_MURLOC_SWARMING )
-    //call SetBuildUpgr( 1, UPG_OGRE_SUMMON_BEAR )
-    //call SetBuildUpgr( 1, UPG_OGRE_WAR_STOMP )
+    call SetBuildUpgr( 1, UPG_MURLOC_PULVERIZE )
+    call SetBuildUpgr( 1, UPG_MURLOC_SIEGE_DRAGON_TURTLE )
     call SetBuildUpgr( 1, UPG_MURLOC_BACKPACK )
     //call SetBuildUpgr( 1, UPG_OGRE_GRONN_CLUBS )
     call SetBuildUpgr( 1, UPG_MURLOC_FISHER )
     call SetBuildUnit( 1, MURLOC_FISHER )
+
+
+
 
     call BuildingStrategyStandardTier3()
     // **********************************
@@ -206,7 +209,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
     call CampaignAttackerEx( 2, 2, 3, MURLOC_CULTIST )
     call CampaignAttackerEx( 2, 2, 3, MURLOC_DRAGON_TURTLE )
-    //call CampaignAttackerEx( 2, 2, 3, OGRE_BRONZE_DRAKE )
+    call CampaignAttackerEx( 2, 2, 3, MURLOC_COUATL )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -220,9 +223,9 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
     call CampaignAttackerEx( 2, 2, 3, MURLOC_CULTIST )
     call CampaignAttackerEx( 2, 2, 3, MURLOC_DRAGON_TURTLE )
-    //call CampaignAttackerEx( 2, 2, 3, OGRE_BRONZE_DRAKE )
+    //call CampaignAttackerEx( 2, 2, 3, MURLOC_COUATL )
     call CampaignAttackerEx( 2, 2, 3, MURLOC_SEA_GIANT )
-    //call CampaignAttackerEx( 2, 2, 3, OGRE_OGRE_NECROMANCER )
+    call CampaignAttackerEx( 2, 2, 3, MURLOC_SNAP_DRAGON )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -237,7 +240,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, MURLOC_SHADOWCASTER )
         call CampaignAttackerEx( 2, 2, 2, MURLOC_CULTIST )
         call CampaignAttackerEx( 2, 2, 2, MURLOC_SEA_GIANT )
-        //call CampaignAttackerEx( 2, 2, 2, OGRE_OGRE_NECROMANCER )
+        call CampaignAttackerEx( 2, 2, 2, MURLOC_SNAP_DRAGON )
         call CampaignAttackerEx( 4, 4, 4, MURLOC_TIDESRUNNER )
         //call CampaignAttackerEx( 4, 4, 4, OGRE_MOKNATHAL )
         call CampaignAttackerEx( 4, 4, 4, MURLOC_FLESH_EATER )
@@ -251,7 +254,7 @@ function AttackWaves takes nothing returns nothing
         //call CampaignAttackerEx( 3, 3, 3, OGRE_GRONN_WAR_CLUB )
         
          // big air army
-        //call CampaignAttackerEx( 8, 10, 12, OGRE_BRONZE_DRAKE )
+        call CampaignAttackerEx( 8, 10, 12, MURLOC_COUATL )
         //call CampaignAttackerEx( 6, 8, 10, OGRE_ZEPPELIN)
         
         call AddStandardUnitsToAttackWave()

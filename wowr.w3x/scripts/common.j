@@ -4036,6 +4036,8 @@ globals
     constant integer UPG_MURLOC_RIVER_BANK                           = 'R0D0'
     constant integer UPG_MURLOC_EGGS                                 = 'R0CX'
     constant integer UPG_MURLOC_SWARMING                             = 'R0D1'
+    constant integer UPG_MURLOC_PULVERIZE                            = 'R0HZ'
+    constant integer UPG_MURLOC_SIEGE_DRAGON_TURTLE                  = 'R0I1'
     constant integer UPG_MURLOC_FISHER                               = 'R0CW' // special building
 
     constant integer MURLOC_WORKER                                   = 'n0FO'
@@ -4046,6 +4048,8 @@ globals
     constant integer MURLOC_SHADOWCASTER                             = 'n0G9' // priest
     constant integer MURLOC_CULTIST                                  = 'n0JB' // spellbreaker
     constant integer MURLOC_DRAGON_TURTLE                            = 'n0FS' // catapult
+    constant integer MURLOC_SNAP_DRAGON                              = 'n0AR' // mortar
+    constant integer MURLOC_COUATL                                   =  'n0BA' // weak air
     constant integer MURLOC_SEA_GIANT                                = 'n0G8' // tauren
 
     constant integer MURLOC_CITIZEN_MALE                             = 'n0G4'
