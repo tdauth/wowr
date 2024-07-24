@@ -5045,6 +5045,10 @@ globals
     constant integer COMMAND_ATTACK_TARGET_Y                         = 12
     constant integer COMMAND_DISABLED_ON                             = 13
     constant integer COMMAND_DISABLED_OFF                            = 14
+    constant integer COMMAND_EASY                                    = 15
+    constant integer COMMAND_NORMAL                                  = 16
+    constant integer COMMAND_HARD                                    = 17
+    constant integer COMMAND_INSANE                                  = 18
 endglobals
 
 //============================================================================

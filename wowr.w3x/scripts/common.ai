@@ -3250,6 +3250,18 @@ function UpdateWorkers takes nothing returns nothing
             elseif (c == COMMAND_ATTACK_TARGET_Y) then
                 set attackTargetLocationY = GetLastData()
                 call NotifyOtherPlayers("I will use a location with coordiante Y " + I2S2(attackTargetLocationY) + " when attacking a location.")
+            elseif (c == COMMAND_EASY) then
+                set difficulty = EASY
+                call NotifyOtherPlayers("I will play EASY.")
+            elseif (c == COMMAND_NORMAL) then
+                set difficulty = NORMAL
+                call NotifyOtherPlayers("I will play NORMAL.")
+            elseif (c == COMMAND_HARD) then
+                set difficulty = HARD
+                call NotifyOtherPlayers("I will play HARD.")
+            elseif (c == COMMAND_INSANE) then
+                set difficulty = INSANE
+                call NotifyOtherPlayers("I will play INSANE.")
             else
                 call NotifyOtherPlayers("I received an unknown AI command: " + I2S2(c))
             endif

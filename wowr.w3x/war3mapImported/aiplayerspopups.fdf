@@ -208,3 +208,13 @@ Frame "POPUPMENU" "PlayerColorsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Peanut",     -2,
     }
 }
+
+Frame "POPUPMENU" "DifficultyPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "DifficultyPopupMenu",
+    Frame "MENU" "DifficultyPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Easy",     -2,
+        MenuItem "Normal",     -2,
+        MenuItem "Hard",     -2,
+        MenuItem "Insane",     -2,
+    }
+}
