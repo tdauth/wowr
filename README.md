@@ -1635,3 +1635,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * =X=EclipsE, Elf Knight-: [Demon Weapon Upg2](https://www.hiveworkshop.com/threads/demon-weapon-upg2.354625/)
 * =X=EclipsE, Elf Knight-: [Demon Weapon Upg3](https://www.hiveworkshop.com/threads/demon-weapon-upg3.354626/)
 * Darky29: [BTNMushroom1](https://www.hiveworkshop.com/threads/btnmushroom1.54497/)
+* Grey-Tuzed: [BTNCorruptedBlessing](https://www.hiveworkshop.com/threads/btncorruptedblessing.92342/)
