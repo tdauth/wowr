@@ -2784,6 +2784,20 @@ globals
     constant integer ARMORY_NEUTRAL                                  = 'n0IU'
     constant integer FRUIT_STAND_ALL_RACES                           = 'n0J7'
 
+    //clans
+    constant integer CLAN_SHOP                                       = 'n04I'
+    constant integer CLAN_HORN_SOUND                                 = 'I050'
+    constant integer CLAN_LAUGH_SOUND                                = 'I051'
+    constant integer CLAN_CREATE_CLAN                                = 'I0H4'
+    constant integer CLAN_TINY_CLAN_HALL                             = 'I04I'
+    constant integer CLAN_BANNER_NIGHT_ELF                           = 'I04U'
+    constant integer CLAN_BANNER_UNDEAD                              = 'I04V'
+    constant integer CLAN_BANNER_ORC                                 = 'I04T'
+    constant integer CLAN_BANNER_HUMAN                               = 'I04S'
+    constant integer CLAN_BANNER_PANDAREN                            = 'I11I'
+    constant integer CLAN_BANNER_DWARF                               = 'I11J'
+    constant integer CLAN_BANNER_GNOME                               = 'I11K'
+
     constant integer DEMIGOD_LIGHT                                   = 'H003'
     constant integer DEMIGOD_DARK                                    = 'H002'
 
