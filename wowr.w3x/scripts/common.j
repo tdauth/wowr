@@ -4135,7 +4135,7 @@ globals
     constant integer OGRE_STONEMAUL_MAGI                             = 'n08K' // special unit
 
     constant integer OGRE_CHILD                                      = 'n0IZ'
-    constant integer OGRE_PET                                        = 'n00U'
+    constant integer OGRE_PET                                        = 'n0LQ'
     constant integer OGRE_CITIZEN_MALE                               = 'n0GF'
     constant integer OGRE_CITIZEN_FEMALE                             = 'n0GG'
     constant integer OGRE_HOUSING                                    = 'h0QC'
