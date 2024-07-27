@@ -28,6 +28,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, TAUREN_WYVERN_ROOST )
     call SetBuildUnit( 4, TAUREN_TENT )
     call SetBuildUnit( 2, TAUREN_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, TAUREN_CHILD )
     call SetBuildUnit( 2, TAUREN_PET )
     
     call SetBuildUpgr( 2, UPG_TAUREN_MELEE )

@@ -29,6 +29,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, TROLL_BESTIARY )
     call SetBuildUnit( 4, TROLL_HUT )
     call SetBuildUnit( 2, TROLL_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, TROLL_CHILD )
+    call SetBuildUnit( 2, TROLL_PET )
     
     call SetBuildUpgr( 2, UPG_TROLL_SPEARS )
     call SetBuildUpgr( 2, UPG_TROLL_CREATURE_ATTACK )

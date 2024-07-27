@@ -30,7 +30,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, OGRE_ARENA )
     call SetBuildUnit( 2, OGRE_BOULDER_TOWER )
     call SetBuildUnit( 2, OGRE_CITIZEN_FEMALE )
-    
+    call SetBuildUnit( 2, OGRE_CHILD )
+    call SetBuildUnit( 2, OGRE_PET )
+
     call SetBuildUpgr( 2, UPG_OGRE_MELEE )
     call SetBuildUpgr( 2, UPG_OGRE_RANGED )
     call SetBuildUpgr( 2, UPG_OGRE_ARMOR )

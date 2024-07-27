@@ -3756,6 +3756,8 @@ globals
 
     constant integer TROLL_CITIZEN_MALE                              = 'n07X'
     constant integer TROLL_CITIZEN_FEMALE                            = 'n081'
+    constant integer TROLL_CHILD                                     = 'n0CX'
+    constant integer TROLL_PET                                       = 'n00U'
     constant integer TROLL_HOUSING                                   = 'h098'
 
     // Tauren
@@ -3803,6 +3805,7 @@ globals
 
     constant integer TAUREN_CITIZEN_MALE                              = 'n09Z'
     constant integer TAUREN_CITIZEN_FEMALE                            = 'n0BM'
+    constant integer TAUREN_CHILD                                     = 'n0LP'
     constant integer TAUREN_PET                                       = 'n0BN'
     constant integer TAUREN_HOUSING                                   = 'h0H1'
 
@@ -4131,6 +4134,8 @@ globals
     constant integer OGRE_STONEMAUL_OGRE                             = 'n0C3' // special unit
     constant integer OGRE_STONEMAUL_MAGI                             = 'n08K' // special unit
 
+    constant integer OGRE_CHILD                                      = 'n0IZ'
+    constant integer OGRE_PET                                        = 'n00U'
     constant integer OGRE_CITIZEN_MALE                               = 'n0GF'
     constant integer OGRE_CITIZEN_FEMALE                             = 'n0GG'
     constant integer OGRE_HOUSING                                    = 'h0QC'
@@ -4220,6 +4225,7 @@ globals
     constant integer FEL_ORC_WAR_MACHINE                             = 'o098'
 
     constant integer FEL_ORC_PET                                     = 'n00T'
+    constant integer FEL_ORC_CHILD                                   = 'n0LN'
     constant integer FEL_ORC_CITIZEN_MALE                            = 'n0KS'
     constant integer FEL_ORC_CITIZEN_FEMALE                          = 'n0KT'
     constant integer FEL_ORC_HOUSING                                 = 'h0US'
