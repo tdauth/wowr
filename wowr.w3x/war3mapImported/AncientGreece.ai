@@ -3,7 +3,6 @@ function BuildingStrategy takes nothing returns nothing
     // *      Building Strategy         *
     // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
     call SetBuildUnit( 1, ANCIENTGREECE_TIER_1 )
     call SetBuildUnit( 17, ANCIENTGREECE_WORKER )
     call SetBuildUnit( 2, ANCIENTGREECE_CITIZEN_MALE )

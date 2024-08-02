@@ -3296,8 +3296,9 @@ function ConfigureAI takes nothing returns nothing
     call SetAmphibious()
     call SetRandomPaths( true )
     call SetDefendPlayer( true )
+    call SetReplacements(1, 2, 3)
     
-    set attackEnemyPlayers = MeleeDifficulty() == MELEE_INSANE
+    set attackEnemyPlayers = difficulty == MELEE_INSANE
     set buildShips = false
     set disabled = false
 endfunction
