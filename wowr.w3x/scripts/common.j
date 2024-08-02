@@ -4868,9 +4868,14 @@ globals
     constant integer GALACTIC_EMPIRE_CHILD                           = 'n0M4'
     constant integer GALACTIC_EMPIRE_HOUSING                         = 'h0WH'
 
+    // Neutral
+    constant integer GOLD_MINE                                       = 'ngol'
+
     // All Races
 
     constant integer SHREDDER                                        = 'ngir'
+    constant integer DRILLBOT                                        = 'n0M5'
+    constant integer HARVEST_CART                                    = 'n0H6'
     constant integer AI_LABORATORY                                   = 'h01T'
     constant integer BLACK_DRAGON                                    = 'nbwm'
     constant integer BRONZE_DRAGON                                   = 'nbzd'
