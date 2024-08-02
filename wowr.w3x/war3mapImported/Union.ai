@@ -31,7 +31,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, UNION_WORKSHOP )
     call SetBuildUnit( 4, UNION_TENT )
     call SetBuildUnit( 2, UNION_CITIZEN_FEMALE )
-    
+    call SetBuildUnit( 2, UNION_CHILD )
+    call SetBuildUnit( 2, UNION_PET )
+
+
     //call SetBuildUpgr( 2, UPG_MELEE )
     //call SetBuildUpgr( 2, UPG_RANGED )
     //call SetBuildUpgr( 2, UPG_ARMOR )

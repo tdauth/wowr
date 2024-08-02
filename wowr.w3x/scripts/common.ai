@@ -2925,12 +2925,19 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(CORRUPTED_ANCIENTS_HOUSING)
     set count = count + GetUnitCount(FEL_ORC_HOUSING)
     set count = count + GetUnitCount(FACELESS_ONE_HOUSING)
+    set count = count + GetUnitCount(KOBOLD_HOUSING)
+    set count = count + GetUnitCount(ANCIENTGREECE_HOUSING)
+    set count = count + GetUnitCount(ROMANEMPIRE_HOUSING)
+    set count = count + GetUnitCount(MEDIEVAL_HOUSING)
+    set count = count + GetUnitCount(UNION_HOUSING)
     set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
+    set count = count + GetUnitCount(MODERNWARFARE_HOUSING)
     set count = count + GetUnitCount(FREEPEOPLE_HOUSING)
     set count = count + GetUnitCount(SAURONSFORCES_HOUSING)
     set count = count + GetUnitCount(GALACTIC_REPUBLIC_HOUSING)
     set count = count + GetUnitCount(CIS_HOUSING)
     set count = count + GetUnitCount(REBEL_ALLIANCE_HOUSING)
+    set count = count + GetUnitCount(GALACTIC_EMPIRE_HOUSING)
 
     return count
 endfunction

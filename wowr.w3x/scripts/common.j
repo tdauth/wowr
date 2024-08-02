@@ -4599,9 +4599,11 @@ globals
     constant integer UNION_GATLING_GUN                               = 'h0SV'
     constant integer UNION_BALLOON                                   = 'h0SM'
 
-    constant integer UNION_CITIZEN_MALE                              = 'n00E'
-    constant integer UNION_CITIZEN_FEMALE                            = 'n00F'
-    constant integer UNION_HOUSING                                   = 'h00R'
+    constant integer UNION_CITIZEN_MALE                              = 'n0LZ'
+    constant integer UNION_CITIZEN_FEMALE                            = 'n0M0'
+    constant integer UNION_PET                                       = 'n0M1'
+    constant integer UNION_CHILD                                     = 'n0CV'
+    constant integer UNION_HOUSING                                   = 'h0XU'
 
     // Germans WWII
     constant integer GERMANS_WWII_HEADQUARTERS                       = 'h0HB' // tier 1-3
@@ -4754,7 +4756,6 @@ globals
     constant integer CIS_CITIZEN_FEMALE                              = 'n0BQ'
     constant integer CIS_HOUSING                                     = 'h0H3'
 
-
     // Galactic Republic
     constant integer GALACTIC_REPUBLIC_ACCLAMATOR                    = 'h08M' // tier 1-3
     constant integer GALACTIC_REPUBLIC_ACCLAMATOR_PRODUCING          = 'h083' // tier 1-3
@@ -4830,17 +4831,42 @@ globals
     constant integer REBEL_ALLIANCE_HOUSING                          = 'h0VW'
 
     // Galactic Empire
-    constant integer GALACTIC_EMPIRE_STAR_DESTROYER_PRODUCING        = 'h0L2'
+    constant integer GALACTIC_EMPIRE_STAR_DESTROYER_PRODUCING        = 'h0L2' // tier 1-3
     constant integer GALACTIC_EMPIRE_BARRACKS                        = 'h0L3'
     constant integer GALACTIC_EMPIRE_ALTAR                           = 'h0W2'
     constant integer GALACTIC_EMPIRE_SITH_TEMPLE                     = 'h0W3'
     constant integer GALACTIC_EMPIRE_SPACEPORT                       = 'h0L8'
     constant integer GALACTIC_EMPIRE_TURBOLAZER                      = 'o056'
     constant integer GALACTIC_EMPIRE_VEHICLE_FACTORY                 = 'h0L7'
+    constant integer GALACTIC_EMPIRE_SHOP                            = 'h0WG'
+    constant integer GALACTIC_EMPIRE_DEATH_STAR                      = 'h0WI' // special building
 
     constant integer UPG_GALACTIC_EMPIRE_BACKPACK                    = 'R09Q'
+    constant integer UPG_GALACTIC_EMPIRE_BLASTERS                    = 'R0AB'
+    constant integer UPG_GALACTIC_EMPIRE_IRON_PLATING                = 'R0AC'
+    constant integer UPG_GALACTIC_EMPIRE_SITH                        = 'R0I2'
+    constant integer UPG_GALACTIC_EMPIRE_DEWBACK_TAMING              = 'R09P'
+    constant integer UPG_GALACTIC_EMPIRE_DEATH_STAR                  = 'R0HT'
 
     constant integer GALACTIC_EMPIRE_ASTROMECH_DROID                 = 'h0L1' // worker
+    constant integer GALACTIC_EMPIRE_ATAT                            = 'h0FO'
+    constant integer GALACTIC_EMPIRE_ATST                            = 'h0L6'
+    constant integer GALACTIC_EMPIRE_STORMTROOPER                    = 'h0L4'
+    constant integer GALACTIC_EMPIRE_ASSAULT_TROOPER                 = 'h0L5'
+    constant integer GALACTIC_EMPIRE_FIELD_TROOPER                   = 'h0LG'
+    constant integer GALACTIC_EMPIRE_PLEX_TROOPER                    = 'h0LF'
+    constant integer GALACTIC_EMPIRE_DEWBACK                         = 'h0LB'
+    constant integer GALACTIC_EMPIRE_DEWBACK_RIDER                   = 'h0LC'
+    constant integer GALACTIC_EMPIRE_IMPERIAL_SHUTTLE                = 'h0LD'
+    constant integer GALACTIC_EMPIRE_TIE_BOMBER                      = 'h0LA'
+    constant integer GALACTIC_EMPIRE_TIE_INTERCEPTOR                 = 'h0L9'
+    constant integer GALACTIC_EMPIRE_SITH                            = 'h0XV'
+
+    constant integer GALACTIC_EMPIRE_CITIZEN_MALE                    = 'n0O7'
+    constant integer GALACTIC_EMPIRE_CITIZEN_FEMALE                  = 'n0M2'
+    constant integer GALACTIC_EMPIRE_PET                             = 'n0M3'
+    constant integer GALACTIC_EMPIRE_CHILD                           = 'n0M4'
+    constant integer GALACTIC_EMPIRE_HOUSING                         = 'h0WH'
 
     // All Races
 
