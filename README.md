@@ -1638,3 +1638,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Grey-Tuzed: [BTNCorruptedBlessing](https://www.hiveworkshop.com/threads/btncorruptedblessing.92342/)
 * bakr: [Pandaren Banners](https://www.hiveworkshop.com/threads/pandaren-banners.354802/)
 * Tunadil: [Khaz Modan Banner](https://www.hiveworkshop.com/threads/khaz-modan-banner.349195/)
+* donut3.5: [Goblin Drillbot 3000](https://www.hiveworkshop.com/threads/goblin-drillbot-3000.48571/)
+* Liu: [SeaLife killer whale](https://www.hiveworkshop.com/threads/sealife-killer-whale.350409/)
+* Ket: [Thief - Blade Edition]( https://www.hiveworkshop.com/threads/thief-blade-edition.62259/)
+* Lockheart: [BTNcheck](https://www.hiveworkshop.com/threads/btncheck.261714/)
