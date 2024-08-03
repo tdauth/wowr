@@ -1642,3 +1642,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Liu: [SeaLife killer whale](https://www.hiveworkshop.com/threads/sealife-killer-whale.350409/)
 * Ket: [Thief - Blade Edition]( https://www.hiveworkshop.com/threads/thief-blade-edition.62259/)
 * Lockheart: [BTNcheck](https://www.hiveworkshop.com/threads/btncheck.261714/)
+* Mike: [Mine](https://www.hiveworkshop.com/threads/mine.239870/)
