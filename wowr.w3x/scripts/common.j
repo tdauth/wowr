@@ -2744,30 +2744,40 @@ globals
     constant integer MAX_ABILITIES                                   = 10
     constant integer SPELL_BOOK                                      = 'o025'
     constant integer POWER_GENERATOR                                 = 'n025'
+    constant integer ITEM_TINY_POWER_GENERATOR                       = 'I05C'
     constant integer PORTAL                                          = 'h014'
+    constant integer ITEM_TINY_PORTAL                                = 'I05B'
     constant integer PORTAL_NEUTRAL                                  = 'nwgt'
     constant integer PORTAL_NEUTRAL_2                                = 'n01G'
     constant integer PORTAL_NEUTRAL_FREELANCER                       = 'n03A'
     constant integer PORTAL_NEUTRAL_WATER                            = 'n04A'
     constant integer RESEARCH_TENT                                   = 'n042'
+    constant integer ITEM_TINY_RESEARCH_TENT                         = 'I0LK'
     constant integer EVENT_HOUSE                                     = 'n054'
     constant integer CRAFTING_STASH                                  = 'h04V'
+    constant integer ITEM_TINY_CRAFTING_STASH                        = 'I0LL'
     constant integer CRAFTING_STASH_NEUTRAL                          = 'h0J2'
     constant integer MARKETPLACE                                     = 'nmrk'
     constant integer TRADING_POST                                    = 'n04J'
+    constant integer ITEM_TINY_TRADING_POST                          = 'I0L9'
     constant integer ANTIMAGIC_WARD                                  = 'o01Z'
     constant integer PACK_HORSE_PACKED                               = 'h097'
     constant integer PACK_HORSE                                      = 'h02N'
     constant integer THIEVES_GUILD                                   = 'n09D'
-    constant integer THIEVES_GUILD_THIEF                             = 'n076'
+    constant integer ITEM_TINY_THIEVES_GUILD                         = 'I124'
     constant integer MOUNTS_CAGE                                     = 'o04H'
+    constant integer ITEM_TINY_MOUNTS_CAGE                           = 'I125'
     constant integer ALCHEMIST_LAB                                   = 'o054'
     constant integer WITCH_HUT                                       = 'o05F'
+    constant integer ITEM_TINY_WITCH_HUT                             = 'I0MX'
     constant integer HERO_ABILITIES                                  = 'n0E3'
+    constant integer ITEM_TINY_HERO_ABILITIES                        = 'I0J6'
     constant integer HERO_ABILITIES_NEUTRAL                          = 'n049'
     constant integer SKINS                                           = 'n0GD'
+    constant integer ITEM_TINY_SKINS                                 = 'I0QM'
     constant integer SKINS_NEUTRAL                                   = 'n0GB'
     constant integer DRAGON_ROOST                                    = 'n09L'
+    constant integer ITEM_TINY_DRAGON_ROOST                          = 'I126'
     constant integer TEMPLE_OF_DARKNESS                              = 'h00N'
     constant integer TEMPLE_OF_LIGHT                                 = 'h00M'
     constant integer HERO_SPELLS_SLOT_1                              = 'n0AN'
@@ -2777,6 +2787,7 @@ globals
     constant integer HERO_SPELLS_SLOT_5                              = 'n08G'
     constant integer MOUNTS_SHOP                                     = 'n06U'
     constant integer WALL                                            = 'h04Q'
+    constant integer ITEM_TINY_WALL                                  = 'I0L8'
     constant integer ENGINEER_SHIP                                   = 'n03H'
     constant integer GNOMISH_SUBMARINE                               = 'h029'
     constant integer WORLD_PORTAL                                    = 'h0QO'
@@ -2785,15 +2796,19 @@ globals
     constant integer PROFESSIONS_TAVERN                              = 'n0I2'
     constant integer START_LOCATIONS_TAVERN                          = 'n05V'
     constant integer ARMORY                                          = 'n0IS'
+    constant integer ITEM_TINY_ARMORY                                = 'I0U7'
     constant integer ARMORY_NEUTRAL                                  = 'n0IU'
     constant integer FRUIT_STAND_ALL_RACES                           = 'n0J7'
+    constant integer ITEM_TINY_FRUIT_STAND_ALL_RACES                 = 'I0WV'
 
-    //clans
+    // clans
     constant integer CLAN_SHOP                                       = 'n04I'
     constant integer CLAN_HORN_SOUND                                 = 'I050'
     constant integer CLAN_LAUGH_SOUND                                = 'I051'
     constant integer CLAN_CREATE_CLAN                                = 'I0H4'
     constant integer CLAN_TINY_CLAN_HALL                             = 'I04I'
+    constant integer ITEM_TINY_CLAN_HALL                             = 'I04I'
+    constant integer ITEM_TINY_CLAN_TOWER                            = 'I05A'
     constant integer CLAN_BANNER_NIGHT_ELF                           = 'I04U'
     constant integer CLAN_BANNER_UNDEAD                              = 'I04V'
     constant integer CLAN_BANNER_ORC                                 = 'I04T'
@@ -2816,6 +2831,7 @@ globals
 	constant integer UPG_DEMIGOD                                     = 'R04S'
     constant integer UPG_DRAGON_ROOST                                = 'R06M'
     constant integer UPG_ARCANE_PORTALS                              = 'R026'
+
 
     constant integer VOID_LORD_RANGE_STRENGTH                        = 'N08V'
     constant integer VOID_LORD_RANGE_AGILITY                         = 'N06O'
@@ -2849,6 +2865,41 @@ globals
     constant integer ITEM_TYPE_RANDOM_RACE                           = 'I06A'
     constant integer ITEM_TYPE_RANDOM_PROFESSION                     = 'I069'
     constant integer ITEM_TYPE_RANDOM_START_LOCATION                 = 'I0ZS'
+
+    // Professions
+    // Engineer
+
+    constant integer FLAME_TOWER                                     = 'nft1'
+    constant integer ADVANCED_FLAME_TOWER                            = 'nft2'
+    constant integer COLD_TOWER                                      = 'ndt1'
+    constant integer ADVANCED_COLD_TOWER                             = 'ndt2'
+    constant integer DEATH_TOWER                                     = 'ntt1'
+    constant integer ADVANCED_DEATH_TOWER                            = 'ntx2'
+    constant integer ITEM_TINY_FLAME_TOWER                           = 'I00T'
+    constant integer ITEM_TINY_COLD_TOWER                            = 'I00U'
+    constant integer ITEM_TINY_DEATH_TOWER                           = 'I00S'
+
+    // Farmer
+    constant integer GRANARY                                         = 'h0M7'
+    constant integer ITEM_TINY_GRANARY                               = 'I0KA'
+
+    // Prospector
+    constant integer GOLD_PANNING                                    = 'h0XX'
+    constant integer ITEM_TINY_GOLD_PANNING                          = 'I11Y'
+
+    // Lumberjack
+    constant integer SAWMILL                                         = 'h0UH'
+    constant integer ITEM_TINY_SAWMILL                               = 'I0XN'
+
+    // Thief
+    constant integer SAFE                                            = 'h0OH'
+    constant integer ITEM_TINY_SAFE                                  = 'I0FN'
+    constant integer THIEVES_GUILD_THIEF                             = 'n076'
+    constant integer ITEM_TINY_THIEVES_GUILD_THIEF                   = 'I10R'
+
+    // Items
+
+    constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
 
     // Human
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
