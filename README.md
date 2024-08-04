@@ -1644,3 +1644,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Lockheart: [BTNcheck](https://www.hiveworkshop.com/threads/btncheck.261714/)
 * Mike: [Mine](https://www.hiveworkshop.com/threads/mine.239870/)
 * Tro||: [BTNBag](https://www.hiveworkshop.com/threads/btnbag.56908/)
+* The_Silent: [BTNModernDrill](https://www.hiveworkshop.com/threads/btnmoderndrill.268830/)

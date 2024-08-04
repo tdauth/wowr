@@ -2883,7 +2883,11 @@ globals
     constant integer GRANARY                                         = 'h0M7'
     constant integer ITEM_TINY_GRANARY                               = 'I0KA'
 
+    // Miner
+    constant integer ITEM_PICKAXE                                    = 'I0W7'
+
     // Prospector
+    constant integer ITEM_GOLD_DRILL                                 = 'I11X'
     constant integer GOLD_PANNING                                    = 'h0XX'
     constant integer ITEM_TINY_GOLD_PANNING                          = 'I11Y'
 
@@ -2900,6 +2904,27 @@ globals
     // Items
 
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
+
+    constant integer ITEM_GOLD_COINS                                 = 'gold'
+    constant integer ITEM_GOLD_BARS                                  = 'I055'
+
+    constant integer ITEM_ROCKS                                      = 'I095'
+    constant integer ITEM_ORE_GOLD                                   = 'I08A'
+    constant integer ITEM_ORE_IRON                                   = 'I089'
+    constant integer ITEM_ORE_SILVER                                 = 'I08B'
+
+    constant integer ITEM_GEM_AMBER                                  = 'I0OF'
+    constant integer ITEM_GEM_AMETHYST                               = 'I0OG'
+    constant integer ITEM_GEM_AQUAMARINE                             = 'I0OH'
+    constant integer ITEM_GEM_DIAMOND                                = 'I0OI'
+    constant integer ITEM_GEM_EMERALD                                = 'I0OJ'
+    constant integer ITEM_GEM_JADE                                   = 'I0OK'
+    constant integer ITEM_GEM_MALACHITE                              = 'I0OL'
+    constant integer ITEM_GEM_OPAL                                   = 'I0OM'
+    constant integer ITEM_GEM_RUBY                                   = 'I0ON'
+    constant integer ITEM_GEM_SAPPHIRE                               = 'I0OO'
+    constant integer ITEM_GEM_TOPAZ                                  = 'I0OP'
+    constant integer ITEM_GEM_TURQUOISE                              = 'I0OQ'
 
     // Human
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
