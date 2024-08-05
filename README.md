@@ -1645,3 +1645,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mike: [Mine](https://www.hiveworkshop.com/threads/mine.239870/)
 * Tro||: [BTNBag](https://www.hiveworkshop.com/threads/btnbag.56908/)
 * The_Silent: [BTNModernDrill](https://www.hiveworkshop.com/threads/btnmoderndrill.268830/)
+* Sellenisko: [YseraTheDreamer](https://www.hiveworkshop.com/threads/yserathedreamer.180052/)
+* Sellenisko: [BTNYsera](https://www.hiveworkshop.com/threads/btnysera.241870/)
