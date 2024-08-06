@@ -1649,3 +1649,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sellenisko: [BTNYsera](https://www.hiveworkshop.com/threads/btnysera.241870/)
 * Bolthan: [Elk_male](https://www.hiveworkshop.com/threads/elk_male.49226/)
 * Moy: [BTNElkMount](https://www.hiveworkshop.com/threads/btnelkmount.299006/)
+* Ujimasa Hojo: [Tent (Centaur, 2) and Derivatives](https://www.hiveworkshop.com/threads/tent-centaur-2-and-derivatives.234439/)
+* komarovba: [CentaurTent2V2.01](https://www.hiveworkshop.com/threads/centaurtent2v2-01.351092/)
+* johnwar: [Female Centaur Archer (Re-Classic)](https://www.hiveworkshop.com/threads/female-centaur-archer-re-classic.335962/)
+* Dark Hunter1357: [Centaur Khan whit no weapon](https://www.hiveworkshop.com/threads/centaur-khan-whit-no-weapon.48368/)
