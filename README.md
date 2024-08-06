@@ -1647,3 +1647,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * The_Silent: [BTNModernDrill](https://www.hiveworkshop.com/threads/btnmoderndrill.268830/)
 * Sellenisko: [YseraTheDreamer](https://www.hiveworkshop.com/threads/yserathedreamer.180052/)
 * Sellenisko: [BTNYsera](https://www.hiveworkshop.com/threads/btnysera.241870/)
+* Bolthan: [Elk_male](https://www.hiveworkshop.com/threads/elk_male.49226/)
+* Moy: [BTNElkMount](https://www.hiveworkshop.com/threads/btnelkmount.299006/)
