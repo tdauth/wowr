@@ -4387,6 +4387,42 @@ globals
     constant integer CORRUPTED_ANCIENTS_CITIZEN_FEMALE               = 'n0JP'
     constant integer CORRUPTED_ANCIENTS_HOUSING                      = 'h0UE'
 
+    // Centaur
+    constant integer CENTAUR_TIER_1                                  = 'o06V'
+    constant integer CENTAUR_TIER_2                                  = 'o0AI'
+    constant integer CENTAUR_TIER_3                                  = 'o0AJ'
+    constant integer CENTAUR_TENT                                    = 'o06W' // farm
+    constant integer CENTAUR_ALTAR                                   = 'o0AG'
+    constant integer CENTAUR_BARRACKS                                = 'o0A8'
+    constant integer CENTAUR_MILL                                    = 'o0AF'
+    constant integer CENTAUR_SHOP                                    = 'o0AD'
+    constant integer CENTAUR_LODGE                                   = 'o0A9'
+    constant integer CENTAUR_NEST                                    = 'o0AA'
+    constant integer CENTAUR_KHAN_TENT                               = 'o0AC'
+    constant integer CENTAUR_TOWER                                   = 'o0AE'
+    constant integer CENTAUR_SPECIAL_BUILDING                        = 'o0MJ'
+
+    constant integer UPG_CENTAUR_BACKPACK                            = 'R0I4'
+    constant integer UPG_CENTAUR_DIVINER                             = 'R0I7'
+    constant integer UPG_CENTAUR_HORSE_SHOES                         = 'R0I6'
+    constant integer UPG_CENTAUR_REINCARNATION                       = 'R0I5'
+    constant integer UPG_CENTAUR_SPECIAL_BUILDING                    = 'R0I9'
+    constant integer UPG_CENTAUR_SORCERER                            = 'R0I8'
+
+    constant integer CENTAUR_WORKER                                  = 'n0HF'
+    constant integer CENTAUR_DRUDGE                                  = 'n0MA' // footman
+    constant integer CENTAUR_ARCHER                                  = 'n0MB' // rifleman
+    constant integer CENTAUR_OUTRUNNER                               = 'n0MC' // knight
+    constant integer CENTAUR_DIVINER                                 = 'n0MH' // priest
+    constant integer CENTAUR_SORCERER                                = 'n0MG' // sorcerer
+    constant integer CENTAUR_OHNAHRA                                 = 'o0AB' // wyvern rider
+    constant integer CENTAUR_KHAN                                    = 'n0MI' // tauren
+
+    constant integer CENTAUR_PET                                     = 'n0C7'
+    constant integer CENTAUR_CITIZEN_MALE                            = 'n0MD'
+    constant integer CENTAUR_CITIZEN_FEMALE                          = 'n0ME'
+    constant integer CENTAUR_HOUSING                                 = 'h0Y2'
+
     // Kobold
     constant integer KOBOLD_TIER_1                                   = 'o070'
     constant integer KOBOLD_TIER_2                                   = 'o09Y'
