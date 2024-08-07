@@ -2866,6 +2866,32 @@ globals
     constant integer ITEM_TYPE_RANDOM_PROFESSION                     = 'I069'
     constant integer ITEM_TYPE_RANDOM_START_LOCATION                 = 'I0ZS'
 
+    // mercenary camps
+    constant integer MERCENARY_CAMP_ASHENVALE                        = 'nmr5'
+    constant integer MERCENARY_CAMP_BARRENS                          = 'nmr4'
+    constant integer MERCENARY_CAMP_BLACK_CITADEL                    = 'nmrf'
+    constant integer MERCENARY_CAMP_CITYSCAPE                        = 'nmr8'
+    constant integer MERCENARY_CAMP_DALARAN                          = 'nmr9'
+    constant integer MERCENARY_CAMP_DUNGEON                          = 'nmra'
+    constant integer MERCENARY_CAMP_FELWOOD                          = 'nmr6'
+    constant integer MERCENARY_CAMP_ICECROWN_GLACIER                 = 'nmrd'
+    constant integer MERCENARY_CAMP_LORDAERON_FALL                   = 'nmr2'
+    constant integer MERCENARY_CAMP_LORDAERON_SUMMER                 = 'nmer'
+    constant integer MERCENARY_CAMP_LORDAERON_WINTER                 = 'nmr3'
+    constant integer MERCENARY_CAMP_NORHTREND                        = 'nmr7'
+    constant integer MERCENARY_CAMP_OUTLAND                          = 'nmre'
+    constant integer MERCENARY_CAMP_SUNKEN_RUINS                     = 'nmrc'
+    constant integer MERCENARY_CAMP_UNDERGROUND                      = 'nmrb'
+    constant integer MERCENARY_CAMP_VILLAGE                          = 'nmr0'
+    constant integer MERCENARY_CAMP_ARGUS                            = 'n0J5'
+    constant integer MERCENARY_CAMP_EMERALD_DREAM                    = 'n0MM'
+    constant integer MERCENARY_CAMP_PANDARIA                         = 'n08L'
+    constant integer MERCENARY_CAMP_FUTURE                           = 'n03R'
+    constant integer MERCENARY_CAMP_SEA                              = 'n0JA'
+    constant integer MERCENARY_CAMP_STAR_WARS                        = 'n07H'
+    constant integer MERCENARY_CAMP_SUNSTRIDER_ISLE                  = 'n01S'
+    constant integer MERCENARY_CAMP_NEW_CITADEL                      = 'n03D'
+
     // Professions
     // Engineer
 

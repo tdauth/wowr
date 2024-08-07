@@ -171,6 +171,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Toasty Toast UwU: Tests.
 * Deranor: Tests.
 * Axxa's World of Warcraft Logo Creator: Logo.
+* Jason Hayes, Glenn Stafford: [A Call to Arms](https://web.archive.org/web/20030403125739/http://ftp.blizzard.com/pub/war3/mp3s/Warcraft-ACallToArms.zip)
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
 * PROXY, ~Nightmare: [Sargeras](https://www.hiveworkshop.com/threads/sargeras.294982/)
