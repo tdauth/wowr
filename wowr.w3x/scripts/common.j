@@ -4397,7 +4397,7 @@ globals
     constant integer CENTAUR_MILL                                    = 'o0AF'
     constant integer CENTAUR_SHOP                                    = 'o0AD'
     constant integer CENTAUR_LODGE                                   = 'o0A9'
-    constant integer CENTAUR_NEST                                    = 'o0AA'
+    constant integer CENTAUR_ROOST                                   = 'o0AA'
     constant integer CENTAUR_KHAN_TENT                               = 'o0AC'
     constant integer CENTAUR_TOWER                                   = 'o0AE'
     constant integer CENTAUR_SPECIAL_BUILDING                        = 'o0MJ'
@@ -4408,6 +4408,10 @@ globals
     constant integer UPG_CENTAUR_REINCARNATION                       = 'R0I5'
     constant integer UPG_CENTAUR_SPECIAL_BUILDING                    = 'R0I9'
     constant integer UPG_CENTAUR_SORCERER                            = 'R0I8'
+    constant integer UPG_CENTAUR_SEARING_ARROWS                      = 'R0IA'
+    constant integer UPG_CENTAUR_MELEE                               = 'R0IC'
+    constant integer UPG_CENTAUR_RANGED                              = 'R0ID'
+    constant integer UPG_CENTAUR_ARMOR                               = 'R0IB'
 
     constant integer CENTAUR_WORKER                                  = 'n0HF'
     constant integer CENTAUR_DRUDGE                                  = 'n0MA' // footman
@@ -4415,7 +4419,8 @@ globals
     constant integer CENTAUR_OUTRUNNER                               = 'n0MC' // knight
     constant integer CENTAUR_DIVINER                                 = 'n0MH' // priest
     constant integer CENTAUR_SORCERER                                = 'n0MG' // sorcerer
-    constant integer CENTAUR_OHNAHRA                                 = 'o0AB' // wyvern rider
+    constant integer CENTAUR_EAGLE                                   = 'o0AB' // wyvern rider
+    constant integer CENTAUR_HARPY                                   = 'n0MK' // bat rider
     constant integer CENTAUR_KHAN                                    = 'n0MI' // tauren
 
     constant integer CENTAUR_PET                                     = 'n0C7'

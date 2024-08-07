@@ -16,10 +16,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, CENTAUR_BARRACKS )
     call SetBuildUnit( 1, CENTAUR_ALTAR )
     call SetBuildUnit( 1, CENTAUR_SHOP )
-    
-    //call SetBuildUpgr( 1, UPG_OGRE_MELEE )
-    //call SetBuildUpgr( 1, UPG_OGRE_RANGED )
-    //call SetBuildUpgr( 1, UPG_EREDAR_ARKONITE_DEFENSE )
+
+    call SetBuildUpgr( 1, UPG_CENTAUR_MELEE )
+    call SetBuildUpgr( 1, UPG_CENTAUR_RANGED )
+    call SetBuildUpgr( 1, UPG_CENTAUR_ARMOR )
     call SetBuildUpgr( 1, UPG_CENTAUR_HORSE_SHOES )
     //call SetBuildUpgr( 1, UPG_EREDAR_DEFEND )
 
@@ -27,15 +27,15 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, CENTAUR_TIER_2 )
     call SetBuildUnit( 1, CENTAUR_MILL )
     call SetBuildUnit( 1, CENTAUR_LODGE )
-    call SetBuildUnit( 1, CENTAUR_NEST )
-    //call SetBuildUnit( 1, OGRE_ARENA )
+    call SetBuildUnit( 1, CENTAUR_ROOST )
+    call SetBuildUnit( 1, CENTAUR_KHAN_TENT )
     call SetBuildUnit( 2, CENTAUR_TOWER )
     call SetBuildUnit( 2, CENTAUR_CITIZEN_FEMALE )
     call SetBuildUnit( 2, CENTAUR_PET )
     
-    //call SetBuildUpgr( 2, UPG_OGRE_MELEE )
-    //call SetBuildUpgr( 2, UPG_OGRE_RANGED )
-    //call SetBuildUpgr( 2, UPG_EREDAR_ARKONITE_DEFENSE )
+    call SetBuildUpgr( 2, UPG_CENTAUR_MELEE )
+    call SetBuildUpgr( 2, UPG_CENTAUR_RANGED )
+    call SetBuildUpgr( 2, UPG_CENTAUR_ARMOR )
     call SetBuildUpgr( 2, UPG_CENTAUR_HORSE_SHOES )
     //call SetBuildUpgr( 1, UPG_OGRE_DEMOLISH )
     //call SetBuildUpgr( 1, UPG_OGRE_AMBUSH )
@@ -51,17 +51,16 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 3 buildings
     call SetBuildUnit( 1, CENTAUR_TIER_3 )
     call SetBuildUnit( 2, CENTAUR_TOWER )
-    call SetBuildUnit( 1, CENTAUR_KHAN_TENT )
     call SetBuildUnit( 2, CENTAUR_CITIZEN_MALE )
 
-    //call SetBuildUpgr( 3, UPG_OGRE_MELEE )
-    //call SetBuildUpgr( 3, UPG_OGRE_RANGED )
-    //call SetBuildUpgr( 3, UPG_EREDAR_ARKONITE_DEFENSE )
+    call SetBuildUpgr( 3, UPG_CENTAUR_MELEE )
+    call SetBuildUpgr( 3, UPG_CENTAUR_RANGED )
+    call SetBuildUpgr( 3, UPG_CENTAUR_ARMOR )
     call SetBuildUpgr( 3, UPG_CENTAUR_HORSE_SHOES )
     call SetBuildUpgr( 2, UPG_CENTAUR_DIVINER )
     call SetBuildUpgr( 2, UPG_CENTAUR_SORCERER )
     //call SetBuildUpgr( 2, UPG_OGRE_NECROMANCER )
-    //call SetBuildUpgr( 1, UPG_OGRE_LIGHTNING_ATTACK )
+    call SetBuildUpgr( 1, UPG_CENTAUR_SEARING_ARROWS )
     //call SetBuildUpgr( 1, UPG_OGRE_REINCARNATION )
     //call SetBuildUpgr( 1, UPG_OGRE_RESISTANT_SKIN )
     //call SetBuildUpgr( 1, UPG_OGRE_SUMMON_BEAR )
@@ -195,7 +194,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, CENTAUR_DIVINER )
     call CampaignAttackerEx( 2, 2, 3, CENTAUR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, CENTAUR_KHAN )
-    call CampaignAttackerEx( 2, 2, 3, CENTAUR_OHNAHRA )
+    call CampaignAttackerEx( 2, 2, 3, CENTAUR_EAGLE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -208,7 +207,8 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, CENTAUR_DIVINER )
     call CampaignAttackerEx( 2, 2, 3, CENTAUR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, CENTAUR_KHAN )
-    call CampaignAttackerEx( 2, 2, 3, CENTAUR_OHNAHRA )
+    call CampaignAttackerEx( 2, 2, 3, CENTAUR_EAGLE )
+    call CampaignAttackerEx( 2, 2, 3, CENTAUR_HARPY )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -221,7 +221,8 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, CENTAUR_DIVINER )
     call CampaignAttackerEx( 2, 2, 3, CENTAUR_SORCERER )
     call CampaignAttackerEx( 2, 2, 3, CENTAUR_KHAN )
-    call CampaignAttackerEx( 2, 2, 3, CENTAUR_OHNAHRA )
+    call CampaignAttackerEx( 2, 2, 3, CENTAUR_EAGLE )
+    call CampaignAttackerEx( 2, 2, 3, CENTAUR_HARPY )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -239,7 +240,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, CENTAUR_KHAN )
 
          // big air army
-        call CampaignAttackerEx( 8, 10, 12, CENTAUR_OHNAHRA )
+        call CampaignAttackerEx( 8, 10, 12, CENTAUR_EAGLE )
+        call CampaignAttackerEx( 4, 6, 8, CENTAUR_HARPY )
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
