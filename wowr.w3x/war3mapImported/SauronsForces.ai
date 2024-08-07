@@ -48,6 +48,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, SAURONSFORCES_HARADRIM_WATCH_TOWER )
 
     call SetBuildUnit( 2, SAURONSFORCES_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, SAURONSFORCES_CHILD )
+    call SetBuildUnit( 2, SAURONSFORCES_PET )
 
     call SetBuildUpgr( 1, UPG_SAURONSFORCE_BARAD_DUR )
     call SetBuildUpgr( 1, UPG_SAURONSFORCE_ORTHANC )

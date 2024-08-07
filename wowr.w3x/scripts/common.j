@@ -4412,6 +4412,9 @@ globals
     constant integer UPG_CENTAUR_MELEE                               = 'R0IC'
     constant integer UPG_CENTAUR_RANGED                              = 'R0ID'
     constant integer UPG_CENTAUR_ARMOR                               = 'R0IB'
+    constant integer UPG_CENTAUR_RIDE_DOWN                           = 'R0IE'
+    constant integer UPG_CENTAUR_TRUE_SIGHT                          = 'R0IG'
+    constant integer UPG_CENTAUR_SLEEP                               = 'R0IF'
 
     constant integer CENTAUR_WORKER                                  = 'n0HF'
     constant integer CENTAUR_DRUDGE                                  = 'n0MA' // footman
@@ -4835,6 +4838,8 @@ globals
 
     constant integer SAURONSFORCES_CITIZEN_MALE                      = 'n0AO'
     constant integer SAURONSFORCES_CITIZEN_FEMALE                    = 'n0BR'
+    constant integer SAURONSFORCES_CHILD                             = 'n0ML'
+    constant integer SAURONSFORCES_PET                               = 'n00U'
     constant integer SAURONSFORCES_HOUSING                           = 'h0GW'
 
     // CIS
