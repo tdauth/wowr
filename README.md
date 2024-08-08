@@ -69,6 +69,7 @@ Use this check list when releasing a new version of the map:
 
 * Add all credits from this README to the map to make them appear in the quest log.
 * Add all changes to the ChangeLog in the quest log.
+* Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
 * Use [checkjass.bat](./checkjass.bat) to check all JASS scripts.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
