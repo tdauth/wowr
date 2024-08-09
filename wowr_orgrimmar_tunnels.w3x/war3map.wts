@@ -1,0 +1,143 @@
+﻿STRING 3
+{
+OrcX01_02
+}
+
+STRING 4
+{
+1
+}
+
+STRING 6
+{
+Blizzard Entertainment
+}
+
+STRING 44
+{
+Orcish Horde
+}
+
+STRING 47
+{
+Blood Elves
+}
+
+STRING 64
+{
+Rexxar
+}
+
+STRING 71
+{
+Goblin Engineers
+}
+
+STRING 84
+{
+Orgrimmar Tunnels
+}
+
+STRING 85
+{
+Orgrimmar Tunnels
+}
+
+STRING 192
+{
+Within the tunnels below Orgrimmar, the goblins have dug deep into the ground in search of water for the orcs' new home. Though the goblins are master diggers, they have little regard for the repercussions of turning so much soil.
+}
+
+STRING 386
+{
+Sapper
+}
+
+STRING 387
+{
+Wow, you're a big one! Gazlowe said he'd be sending some muscle.
+}
+
+STRING 388
+{
+Rexxar
+}
+
+STRING 389
+{
+Do you goblins have a plan?
+}
+
+STRING 390
+{
+Sapper
+}
+
+STRING 391
+{
+Of course! If you can get us close enough to the tunnel's support beams, we'll blast 'em to smithereens. That should collapse the ceiling on top of those rats and fix our problem up real nice.
+}
+
+STRING 398
+{
+Rexxar
+}
+
+STRING 399
+{
+This must be one of the support beams. It's all yours, goblins!
+}
+
+STRING 400
+// Doodads: D000 (Loading Runes), Name (Name)
+{
+Loading Runes
+}
+
+STRING 401
+// Doodads: D001 (Loading Wall), Name (Name)
+{
+Loading Wall
+}
+
+STRING 402
+{
+Resurrection Stone
+}
+
+STRING 407
+// Items: gcel (Gloves of Haste), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 408
+// Items: gcel (Gloves of Haste), Tip (Tooltip - Basic)
+{
+Purchase Gloves of Haste
+}
+
+STRING 409
+// Items: rde0 (Ring of Protection +1), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 410
+// Items: rde0 (Ring of Protection +1), Tip (Tooltip - Basic)
+{
+Purchase Ring of Protection +1
+}
+
+STRING 411
+// Items: asbl (Assassin's Blade), Hotkey (Hotkey)
+{
+B
+}
+
+STRING 412
+// Items: asbl (Assassin's Blade), Tip (Tooltip - Basic)
+{
+Purchase Assassin's Blade
+}
+
