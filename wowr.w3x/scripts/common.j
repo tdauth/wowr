@@ -2736,7 +2736,21 @@ globals
     // make it available to triggers AND common.ai
 
     constant string MAP_VERSION                                      = "3.22"
+
     constant real RESUME_GAME_SAVE_FRAME_UPDATE_DELAY                = 5.0 // Delay until a timer is resumed after saving a game. It has to be after the FrameLoader event.
+
+    constant real UI_FULLSCREEN_X                                    = 0.0
+    constant real UI_FULLSCREEN_Y                                    = 0.57
+    constant real UI_FULLSCREEN_WIDTH                                = 0.80
+    constant real UI_FULLSCREEN_HEIGHT                               = 0.42
+    constant real UI_FULLSCREEN_CLOSE_BUTTON_X                       = 0.34
+    constant real UI_FULLSCREEN_CLOSE_BUTTON_Y                       = 0.20
+    constant real UI_FULLSCREEN_CLOSE_BUTTON_WIDTH                   = 0.12
+    constant real UI_FULLSCREEN_CLOSE_BUTTON_HEIGHT                  = 0.03
+
+    constant string UI_ICON_UP                                       = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp"
+    constant string UI_ICON_DOWN                                     = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp"
+
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
     constant integer BACKPACK                                        = BACK_PACK
