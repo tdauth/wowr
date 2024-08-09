@@ -2736,6 +2736,7 @@ globals
     // make it available to triggers AND common.ai
 
     constant string MAP_VERSION                                      = "3.22"
+    constant real RESUME_GAME_SAVE_FRAME_UPDATE_DELAY                = 5.0 // Delay until a timer is resumed after saving a game. It has to be after the FrameLoader event.
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
     constant integer BACKPACK                                        = BACK_PACK

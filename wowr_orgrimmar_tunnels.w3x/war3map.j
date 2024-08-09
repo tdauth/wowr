@@ -16,19 +16,7 @@
 
 globals
     // Generated
-    sound                   gg_snd_D03Rexxar06         = null
-    sound                   gg_snd_D03Rexxar08         = null
-    sound                   gg_snd_D03Sapper05         = null
-    sound                   gg_snd_D03Sapper07         = null
-    sound                   gg_snd_WaterStreamLoop1    = null
-    sound                   gg_snd_Earthquake          = null
-    sound                   gg_snd_BridgeDeath         = null
-    sound                   gg_snd_ShimmeringPortalEntrance = null
-    sound                   gg_snd_EarthquakeLoop1     = null
-    sound                   gg_snd_KoboldDeath         = null
-    sound                   gg_snd_ArtilleryCorpseExplodeDeath1 = null
     trigger                 gg_trg_Map_Init_Environment = null
-    unit                    gg_unit_nbse_0091          = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -39,113 +27,6 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
-
-//***************************************************************************
-//*
-//*  Sound Assets
-//*
-//***************************************************************************
-
-function InitSounds takes nothing returns nothing
-    set gg_snd_D03Rexxar06 = CreateSound( "Sound\\Dialogue\\OrcExpCamp\\OrcQuest03x\\D03Rexxar06.flac", false, false, false, 10, 10, "DefaultEAXON" )
-    call SetSoundParamsFromLabel( gg_snd_D03Rexxar06, "D03Rexxar06" )
-    call SetSoundFacialAnimationLabel( gg_snd_D03Rexxar06, "D03Rexxar06" )
-    call SetSoundFacialAnimationGroupLabel( gg_snd_D03Rexxar06, "Map-Rexxar" )
-    call SetSoundFacialAnimationSetFilepath( gg_snd_D03Rexxar06, "Sound/Dialogue/FaceAnimation/OrcX01_02/FacialAnimation/Rexxar.animset" )
-    call SetDialogueSpeakerNameKey( gg_snd_D03Rexxar06, "TRIGSTR_388" )
-    call SetDialogueTextKey( gg_snd_D03Rexxar06, "TRIGSTR_389" )
-    call SetSoundDuration( gg_snd_D03Rexxar06, 1909 )
-    call SetSoundVolume( gg_snd_D03Rexxar06, 127 )
-    set gg_snd_D03Rexxar08 = CreateSound( "Sound\\Dialogue\\OrcExpCamp\\OrcQuest03x\\D03Rexxar08.flac", false, false, false, 10, 10, "DefaultEAXON" )
-    call SetSoundFacialAnimationLabel( gg_snd_D03Rexxar08, "D03Rexxar08" )
-    call SetSoundFacialAnimationGroupLabel( gg_snd_D03Rexxar08, "Map-Rexxar" )
-    call SetSoundFacialAnimationSetFilepath( gg_snd_D03Rexxar08, "Sound/Dialogue/FaceAnimation/OrcX01_02/FacialAnimation/Rexxar.animset" )
-    call SetDialogueSpeakerNameKey( gg_snd_D03Rexxar08, "TRIGSTR_398" )
-    call SetDialogueTextKey( gg_snd_D03Rexxar08, "TRIGSTR_399" )
-    call SetSoundDuration( gg_snd_D03Rexxar08, 4522 )
-    call SetSoundChannel( gg_snd_D03Rexxar08, 0 )
-    call SetSoundVolume( gg_snd_D03Rexxar08, 127 )
-    call SetSoundPitch( gg_snd_D03Rexxar08, 1.0 )
-    set gg_snd_D03Sapper05 = CreateSound( "Sound\\Dialogue\\OrcExpCamp\\OrcQuest03x\\D03Sapper05.flac", false, false, false, 10, 10, "DefaultEAXON" )
-    call SetSoundFacialAnimationLabel( gg_snd_D03Sapper05, "D03Sapper05" )
-    call SetSoundFacialAnimationGroupLabel( gg_snd_D03Sapper05, "Map-GoblinSapper" )
-    call SetSoundFacialAnimationSetFilepath( gg_snd_D03Sapper05, "Sound/Dialogue/FaceAnimation/OrcX01_02/FacialAnimation/GoblinSapper.animset" )
-    call SetDialogueSpeakerNameKey( gg_snd_D03Sapper05, "TRIGSTR_386" )
-    call SetDialogueTextKey( gg_snd_D03Sapper05, "TRIGSTR_387" )
-    call SetSoundDuration( gg_snd_D03Sapper05, 4545 )
-    call SetSoundChannel( gg_snd_D03Sapper05, 0 )
-    call SetSoundVolume( gg_snd_D03Sapper05, 127 )
-    call SetSoundPitch( gg_snd_D03Sapper05, 1.0 )
-    set gg_snd_D03Sapper07 = CreateSound( "Sound\\Dialogue\\OrcExpCamp\\OrcQuest03x\\D03Sapper07.flac", false, false, false, 10, 10, "DefaultEAXON" )
-    call SetSoundFacialAnimationLabel( gg_snd_D03Sapper07, "D03Sapper07" )
-    call SetSoundFacialAnimationGroupLabel( gg_snd_D03Sapper07, "Map-GoblinSapper" )
-    call SetSoundFacialAnimationSetFilepath( gg_snd_D03Sapper07, "Sound/Dialogue/FaceAnimation/OrcX01_02/FacialAnimation/GoblinSapper.animset" )
-    call SetDialogueSpeakerNameKey( gg_snd_D03Sapper07, "TRIGSTR_390" )
-    call SetDialogueTextKey( gg_snd_D03Sapper07, "TRIGSTR_391" )
-    call SetSoundDuration( gg_snd_D03Sapper07, 13322 )
-    call SetSoundChannel( gg_snd_D03Sapper07, 0 )
-    call SetSoundVolume( gg_snd_D03Sapper07, 127 )
-    call SetSoundPitch( gg_snd_D03Sapper07, 1.0 )
-    set gg_snd_WaterStreamLoop1 = CreateSound( "Sound\\Ambient\\DoodadEffects\\WaterStreamLoop1.flac", true, true, true, 10, 10, "DoodadsEAX" )
-    call SetSoundDuration( gg_snd_WaterStreamLoop1, 2008 )
-    call SetSoundChannel( gg_snd_WaterStreamLoop1, 0 )
-    call SetSoundVolume( gg_snd_WaterStreamLoop1, 127 )
-    call SetSoundPitch( gg_snd_WaterStreamLoop1, 1.0 )
-    call SetSoundDistances( gg_snd_WaterStreamLoop1, 0.0, 10000.0 )
-    call SetSoundDistanceCutoff( gg_snd_WaterStreamLoop1, 3000.0 )
-    call SetSoundConeAngles( gg_snd_WaterStreamLoop1, 0.0, 0.0, 0 )
-    call SetSoundConeOrientation( gg_snd_WaterStreamLoop1, 0.0, 0.0, 0.0 )
-    set gg_snd_Earthquake = CreateSound( "Sound\\Ambient\\DoodadEffects\\Earthquake.flac", true, true, true, 10, 10, "DefaultEAXON" )
-    call SetSoundDuration( gg_snd_Earthquake, 6000 )
-    call SetSoundChannel( gg_snd_Earthquake, 0 )
-    call SetSoundVolume( gg_snd_Earthquake, 127 )
-    call SetSoundPitch( gg_snd_Earthquake, 1.0 )
-    call SetSoundDistances( gg_snd_Earthquake, 0.0, 10000.0 )
-    call SetSoundDistanceCutoff( gg_snd_Earthquake, 3000.0 )
-    call SetSoundConeAngles( gg_snd_Earthquake, 0.0, 0.0, 0 )
-    call SetSoundConeOrientation( gg_snd_Earthquake, 0.0, 0.0, 0.0 )
-    set gg_snd_BridgeDeath = CreateSound( "Sound\\Ambient\\DoodadEffects\\BridgeDeath.flac", false, true, true, 10, 10, "DefaultEAXON" )
-    call SetSoundDuration( gg_snd_BridgeDeath, 9081 )
-    call SetSoundChannel( gg_snd_BridgeDeath, 0 )
-    call SetSoundVolume( gg_snd_BridgeDeath, 127 )
-    call SetSoundPitch( gg_snd_BridgeDeath, 1.0 )
-    call SetSoundDistances( gg_snd_BridgeDeath, 0.0, 10000.0 )
-    call SetSoundDistanceCutoff( gg_snd_BridgeDeath, 3000.0 )
-    call SetSoundConeAngles( gg_snd_BridgeDeath, 0.0, 0.0, 0 )
-    call SetSoundConeOrientation( gg_snd_BridgeDeath, 0.0, 0.0, 0.0 )
-    set gg_snd_ShimmeringPortalEntrance = CreateSound( "Sound\\Ambient\\DoodadEffects\\ShimmeringPortalEntrance.flac", false, true, true, 10, 10, "DefaultEAXON" )
-    call SetSoundDuration( gg_snd_ShimmeringPortalEntrance, 1828 )
-    call SetSoundChannel( gg_snd_ShimmeringPortalEntrance, 0 )
-    call SetSoundVolume( gg_snd_ShimmeringPortalEntrance, 127 )
-    call SetSoundPitch( gg_snd_ShimmeringPortalEntrance, 1.0 )
-    call SetSoundDistances( gg_snd_ShimmeringPortalEntrance, 0.0, 10000.0 )
-    call SetSoundDistanceCutoff( gg_snd_ShimmeringPortalEntrance, 3000.0 )
-    call SetSoundConeAngles( gg_snd_ShimmeringPortalEntrance, 0.0, 0.0, 0 )
-    call SetSoundConeOrientation( gg_snd_ShimmeringPortalEntrance, 0.0, 0.0, 0.0 )
-    set gg_snd_EarthquakeLoop1 = CreateSound( "Abilities\\Spells\\Orc\\Earthquake\\EarthquakeLoop1.flac", true, false, true, 10, 10, "SpellsEAX" )
-    call SetSoundDuration( gg_snd_EarthquakeLoop1, 1962 )
-    call SetSoundChannel( gg_snd_EarthquakeLoop1, 0 )
-    call SetSoundVolume( gg_snd_EarthquakeLoop1, 127 )
-    call SetSoundPitch( gg_snd_EarthquakeLoop1, 1.0 )
-    set gg_snd_KoboldDeath = CreateSound( "Units\\Creeps\\Kobold\\KoboldDeath.flac", false, true, true, 10, 10, "DefaultEAXON" )
-    call SetSoundDuration( gg_snd_KoboldDeath, 2075 )
-    call SetSoundChannel( gg_snd_KoboldDeath, 0 )
-    call SetSoundVolume( gg_snd_KoboldDeath, 127 )
-    call SetSoundPitch( gg_snd_KoboldDeath, 1.0 )
-    call SetSoundDistances( gg_snd_KoboldDeath, 0.0, 10000.0 )
-    call SetSoundDistanceCutoff( gg_snd_KoboldDeath, 3000.0 )
-    call SetSoundConeAngles( gg_snd_KoboldDeath, 0.0, 0.0, 0 )
-    call SetSoundConeOrientation( gg_snd_KoboldDeath, 0.0, 0.0, 0.0 )
-    set gg_snd_ArtilleryCorpseExplodeDeath1 = CreateSound( "Sound\\Units\\Death\\ArtilleryCorpseExplodeDeath1.flac", false, true, true, 10, 10, "DefaultEAXON" )
-    call SetSoundDuration( gg_snd_ArtilleryCorpseExplodeDeath1, 1486 )
-    call SetSoundChannel( gg_snd_ArtilleryCorpseExplodeDeath1, 0 )
-    call SetSoundVolume( gg_snd_ArtilleryCorpseExplodeDeath1, 127 )
-    call SetSoundPitch( gg_snd_ArtilleryCorpseExplodeDeath1, 1.0 )
-    call SetSoundDistances( gg_snd_ArtilleryCorpseExplodeDeath1, 0.0, 10000.0 )
-    call SetSoundDistanceCutoff( gg_snd_ArtilleryCorpseExplodeDeath1, 3000.0 )
-    call SetSoundConeAngles( gg_snd_ArtilleryCorpseExplodeDeath1, 0.0, 0.0, 0 )
-    call SetSoundConeOrientation( gg_snd_ArtilleryCorpseExplodeDeath1, 0.0, 0.0, 0.0 )
-endfunction
 
 //***************************************************************************
 //*
@@ -434,7 +315,6 @@ function main takes nothing returns nothing
     call SetAmbientDaySound( "DungeonDay" )
     call SetAmbientNightSound( "DungeonNight" )
     call SetMapMusic( "Music", true, 0 )
-    call InitSounds(  )
     call InitTechTree(  )
     call CreateAllItems(  )
     call CreateAllUnits(  )
