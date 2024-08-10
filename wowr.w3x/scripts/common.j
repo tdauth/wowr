@@ -2805,7 +2805,7 @@ globals
     constant integer ITEM_TINY_WALL                                  = 'I0L8'
     constant integer ENGINEER_SHIP                                   = 'n03H'
     constant integer GNOMISH_SUBMARINE                               = 'h029'
-    constant integer WORLD_PORTAL                                    = 'h0QO'
+    constant integer LEVEL_PORTAL                                    = 'h0QO'
     constant integer HEROES_TAVERN                                   = 'n0I0'
     constant integer RACES_TAVERN                                    = 'n0I1'
     constant integer PROFESSIONS_TAVERN                              = 'n0I2'
