@@ -2737,8 +2737,6 @@ globals
 
     constant string MAP_VERSION                                      = "3.22"
 
-    constant real RESUME_GAME_SAVE_FRAME_UPDATE_DELAY                = 5.0 // Delay until a timer is resumed after saving a game. It has to be after the FrameLoader event.
-
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
     constant real UI_FULLSCREEN_WIDTH                                = 0.80
