@@ -2743,10 +2743,12 @@ globals
     constant real UI_FULLSCREEN_HEIGHT                               = 0.42
     constant real UI_FULLSCREEN_TITLE_Y                              = 0.548
     constant real UI_FULLSCREEN_TITLE_HEIGHT                         = 0.1
+    constant real UI_FULLSCREEN_BOTTOM_BUTTON_Y                      = 0.20
+    constant real UI_FULLSCREEN_BOTTOM_BUTTON_WIDTH                  = 0.12
+    constant real UI_FULLSCREEN_BOTTOM_BUTTON_HEIGHT                 = 0.03
     constant real UI_FULLSCREEN_CLOSE_BUTTON_X                       = 0.34
-    constant real UI_FULLSCREEN_CLOSE_BUTTON_Y                       = 0.20
-    constant real UI_FULLSCREEN_CLOSE_BUTTON_WIDTH                   = 0.12
-    constant real UI_FULLSCREEN_CLOSE_BUTTON_HEIGHT                  = 0.03
+    constant real UI_FULLSCREEN_NEXT_PAGE_BUTTON_X                   = 0.18
+    constant real UI_FULLSCREEN_PREVIOUS_PAGE_BUTTON_X               = 0.06
 
     constant string UI_ICON_UP                                       = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp"
     constant string UI_ICON_DOWN                                     = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp"
