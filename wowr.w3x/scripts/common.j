@@ -2824,7 +2824,7 @@ globals
     constant integer CLAN_SHOP                                       = 'n04I'
     constant integer CLAN_HORN_SOUND                                 = 'I050'
     constant integer CLAN_LAUGH_SOUND                                = 'I051'
-    constant integer CLAN_CREATE_CLAN                                = 'I0H4'
+    constant integer CLAN_CREATE_CLAN                                = 'I04H'
     constant integer CLAN_TINY_CLAN_HALL                             = 'I04I'
     constant integer ITEM_TINY_CLAN_HALL                             = 'I04I'
     constant integer ITEM_TINY_CLAN_TOWER                            = 'I05A'
