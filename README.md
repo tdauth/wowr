@@ -1661,3 +1661,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * NFWar: [BTNHorseShoe](https://www.hiveworkshop.com/threads/btnhorseshoe.202888/)
 * NFWar: [BTNHorseShoe2](https://www.hiveworkshop.com/threads/btnhorseshoe2.202889/)
 * NFWar: [BTNHorseShoe3](https://www.hiveworkshop.com/threads/btnhorseshoe3.202890/)
+* Legal_Ease: [BTNJudgmentOff](https://www.hiveworkshop.com/threads/btnjudgmentoff.274736/)

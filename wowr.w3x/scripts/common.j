@@ -2741,6 +2741,8 @@ globals
     constant real UI_FULLSCREEN_Y                                    = 0.57
     constant real UI_FULLSCREEN_WIDTH                                = 0.80
     constant real UI_FULLSCREEN_HEIGHT                               = 0.42
+    constant real UI_FULLSCREEN_TITLE_Y                              = 0.548
+    constant real UI_FULLSCREEN_TITLE_HEIGHT                         = 0.1
     constant real UI_FULLSCREEN_CLOSE_BUTTON_X                       = 0.34
     constant real UI_FULLSCREEN_CLOSE_BUTTON_Y                       = 0.20
     constant real UI_FULLSCREEN_CLOSE_BUTTON_WIDTH                   = 0.12
@@ -2748,6 +2750,10 @@ globals
 
     constant string UI_ICON_UP                                       = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp"
     constant string UI_ICON_DOWN                                     = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp"
+
+    constant string URL_DISCORD                                      = "https://discord.com/invite/eM34z36"
+    constant string URL_WEBSITE                                      = "https://wowreforged.org"
+    constant string URL_DOWNLOAD                                     = "https://github.com/tdauth/wowr/releases"
 
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
