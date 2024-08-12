@@ -2914,8 +2914,32 @@ globals
     constant integer MERCENARY_CAMP_NEW_CITADEL                      = 'n03D'
 
     // Professions
-    // Engineer
 
+    // Tamer
+    constant integer ITEM_SMALL_BAIT                                 = 'I0L4' // rank 1
+    constant integer ITEM_BAIT                                       = 'I0L5' // rank 2
+    constant integer ITEM_ADVANCED_BAIT                              = 'I0L6' // rank 3
+    constant integer ITEM_MONSTER_LURE                               = 'I0L2' // rank 4
+
+    // Nercromancer
+    constant integer ITEM_ROD_OF_NECROMANCY                          = 'rnec' // rank 1
+    constant integer ITEM_WAND_OF_CORPSES                            = 'I0S9' // rank 2
+    constant integer ITEM_SACRIFICAL_SCULL                           = 'skul' // rank 3
+    constant integer ITEM_BOOK_OF_THE_DEAD                           = 'fgsk' // rank 4
+
+    // Golem Sculptor
+    constant integer ITEM_TINY_MUD_GOLEM                             = 'I0SJ' // rank 1
+    constant integer ITEM_TINY_WAR_GOLEM                             = 'I0SL' // rank 2
+    constant integer ITEM_TINY_SIEGE_GOLEM                           = 'I0SK' // rank 3
+    constant integer ITEM_TINY_FLESH_GOLEM                           = 'I0SM' // rank 4
+
+    // Warlock
+    constant integer ITEM_WAND_OF_DRAIN                              = 'I0YH' // rank 1
+    constant integer ITEM_INFERNO_STONE                              = 'infs' // rank 2
+    constant integer ITEM_DEMON_BLOOD                                = 'I0Y7' // rank 3
+    constant integer ITEM_TINY_DEMON_GATE                            = 'I0YG' // rank 4
+
+    // Engineer
     constant integer FLAME_TOWER                                     = 'nft1'
     constant integer ADVANCED_FLAME_TOWER                            = 'nft2'
     constant integer COLD_TOWER                                      = 'ndt1'
@@ -2947,6 +2971,11 @@ globals
     constant integer ITEM_TINY_SAFE                                  = 'I0FN'
     constant integer THIEVES_GUILD_THIEF                             = 'n076'
     constant integer ITEM_TINY_THIEVES_GUILD_THIEF                   = 'I10R'
+
+    // Astromancer
+    constant integer ITEM_NAVIGATION_SCROLL                          = 'I12V'
+    constant integer ITEM_TINY_PORTAL_ASTROMANCER                    = 'I12W'
+    constant integer ITEM_METEOR_STONE                               = 'I0FN'
 
     // Items
 

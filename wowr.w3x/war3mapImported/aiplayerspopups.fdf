@@ -178,6 +178,11 @@ Frame "POPUPMENU" "ProfessionsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Jewelcrafter",     -2,
         MenuItem "Archaeologist",     -2,
         MenuItem "Witch Doctor",     -2,
+        MenuItem "Tamer",     -2,
+        MenuItem "Necromancer",     -2,
+        MenuItem "Golem Sculptor",     -2,
+        MenuItem "Warlock",     -2,
+        MenuItem "Astromancer",     -2,
     }
 }
 
