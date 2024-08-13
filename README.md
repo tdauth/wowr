@@ -1672,3 +1672,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * ikillforeyou: [Night sky with moon skybox](https://www.hiveworkshop.com/threads/night-sky-with-moon-skybox.171715/)
 * Fingolfin: [Fingolfins Planet Pack](https://www.hiveworkshop.com/threads/fingolfins-planet-pack.245456/)
 * Explobomb: [Direhorn](https://www.hiveworkshop.com/threads/direhorn.320879/)
+* PrinceYaser: [BTNNagaWhaler](https://www.hiveworkshop.com/threads/btnnagawhaler.312470/)

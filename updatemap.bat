@@ -1,5 +1,5 @@
 REM copy C:\Users\Tamino\Documents\Projekte\wowr\releases\wowr3.14.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
-copy D:\wowr\releases\wowr3.22.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
-copy D:\wowr\releases\wowr_elvenclan3.22.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
-copy D:\wowr\releases\wowr3.22.w3n "C:\Users\Tamino\Documents\Warcraft III\Campaigns"
+copy D:\wowr\releases\wowr3.23.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
+copy D:\wowr\releases\wowr_elvenclan3.23.w3x "C:\Users\Tamino\Documents\Warcraft III\Maps\Download"
+copy D:\wowr\releases\wowr3.23.w3n "C:\Users\Tamino\Documents\Warcraft III\Campaigns"
 pause
