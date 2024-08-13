@@ -2974,7 +2974,9 @@ globals
     // Astromancer
     constant integer ITEM_NAVIGATION_SCROLL                          = 'I12V'
     constant integer ITEM_TINY_PORTAL_ASTROMANCER                    = 'I12W'
+    constant integer ITEM_FLARE_GUN                                  = 'fgun'
     constant integer ITEM_METEOR_STONE                               = 'I0FN'
+    constant integer ITEM_TINY_ARCANE_OBSERVATORY_ASTROMANCER        = 'I12Z'
 
     // Items
 
@@ -3129,14 +3131,16 @@ globals
     constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
     constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
     constant integer NAGA_SERPENT_PYRAMID                            = 'n05P'
+    constant integer NAGA_PORTAL                                     = 'h0Y6'
     constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
 
     constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
+    constant integer UPG_NAGA_SORCEROR                               = 'R0IH' // spellbreaker
     constant integer UPG_NAGA_BACKPACK                               = 'R01E'
     constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
 
     constant integer NAGA_WHALER                                     = 'n05Q' // sorceress
-    constant integer NAGA_REVENANT                                   = 'n0LA' // spellbreaker
+    constant integer NAGA_SORCEROR                                   = 'n0LA' // spellbreaker
     constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
 
     constant integer NAGA_CITIZEN_MALE                               = 'n00M'
@@ -4516,6 +4520,7 @@ globals
     constant integer KOBOLD_MILL                                     = 'o0A2'
     constant integer KOBOLD_SHOP                                     = 'o09S'
     constant integer KOBOLD_LODGE                                    = 'o0A4'
+    constant integer KOBOLD_TUNNEL                                   = 'u03F'
 
     constant integer UPG_KOBOLD_BACKPACK                             = 'R0DX'
     constant integer UPG_KOBOLD_BURROW                               = 'R0GB'
@@ -4530,9 +4535,10 @@ globals
     constant integer KOBOLD_TUNNELER                                 = 'n0LJ' // knight
     constant integer KOBOLD_GEOMANCER                                = 'n09B' // priest
 
-    constant integer KOBOLD_PET                                      = 'n04W'
     constant integer KOBOLD_CITIZEN_MALE                             = 'n09C'
     constant integer KOBOLD_CITIZEN_FEMALE                           = 'n0A3'
+    constant integer KOBOLD_CHILD                                    = 'n0MP'
+    constant integer KOBOLD_PET                                      = 'n04W'
     constant integer KOBOLD_HOUSING                                  = 'h0XA'
 
     // Modern Warfare

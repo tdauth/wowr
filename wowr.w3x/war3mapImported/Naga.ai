@@ -33,6 +33,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_NAGA_SUBMERGE )
     call SetBuildUpgr( 1, UPG_NAGA_BACKPACK )
     call SetBuildUpgr( 1, UPG_NAGA_ABOLISH )
+    call SetBuildUpgr( 1, UPG_SIREN )
+    call SetBuildUpgr( 1, UPG_NAGA_SORCEROR )
     
     // Tier 3 buildings
     call SetBuildUnit( 1, NAGA_TEMPLE_3 )
@@ -44,9 +46,12 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 3, UPG_NAGA_ATTACK )
     call SetBuildUpgr( 2, UPG_NAGA_ABOLISH )
     call SetBuildUpgr( 2, UPG_SIREN )
+    call SetBuildUpgr( 2, UPG_NAGA_SORCEROR )
     call SetBuildUpgr( 1, UPG_NAGA_ENSNARE )
     call SetBuildUpgr( 1, UPG_NAGA_STATUE_OF_AZSHARA )
     call SetBuildUnit( 1, NAGA_STATUE_OF_ASZHARA )
+
+    call SetBuildUnit( 1, NAGA_PORTAL )
 
     call BuildingStrategyStandardTier3()
     // **********************************
@@ -189,7 +194,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, NAGA_ROYAL )
 
         call CampaignAttackerEx( 2, 2, 2, NAGA_WHALER )
-        call CampaignAttackerEx( 2, 2, 2, NAGA_REVENANT )
+        call CampaignAttackerEx( 2, 2, 2, NAGA_SORCEROR )
         call CampaignAttackerEx( 2, 2, 2, NAGA_CORAL_GOLEM )
         
         // big air army

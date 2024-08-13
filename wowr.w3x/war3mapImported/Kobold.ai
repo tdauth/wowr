@@ -30,7 +30,8 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUnit( 1, TUSKARR_ICE_CUTTERS_LODGE )
     //call SetBuildUnit( 1, TUSKARR_HUNTERS_REST )
     call SetBuildUnit( 4, KOBOLD_CAVERN )
-    call SetBuildUnit( 2, KOBOLD_CITIZEN_MALE )
+    call SetBuildUnit( 2, KOBOLD_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, KOBOLD_CHILD )
     call SetBuildUnit( 2, KOBOLD_PET )
     
     call SetBuildUpgr( 2, UPG_KOBOLD_MELEE )
@@ -50,7 +51,7 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUnit( 2, TUSKARR_BLOCK_OF_ICE )
     //call SetBuildUnit( 2, TUSKARR_SPIDER_SHRINE )
     //call SetBuildUnit( 2, TUSKARR_FROST_SNOWMAN )
-    call SetBuildUnit( 2, KOBOLD_CITIZEN_FEMALE )
+    call SetBuildUnit( 1, KOBOLD_TUNNEL )
 
     call SetBuildUpgr( 3, UPG_KOBOLD_MELEE )
     //call SetBuildUpgr( 3, UPG_TUSKARR_HARPOONS )
