@@ -1681,3 +1681,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Talon the Mage: [Konstrukt_SniperAttachment](https://www.hiveworkshop.com/threads/konstrukt_sniperattachment.49016/)
 * Deathbringer: [BTNSniperRifle](https://www.hiveworkshop.com/threads/btnsniperrifle.56647/)
 * Talon the Mage: [Konstrukt_SniperMissile01](https://www.hiveworkshop.com/threads/konstrukt_snipermissile01.49018/)
+* epsilon: [m249_ByEpsilon](https://www.hiveworkshop.com/threads/m249_byepsilon.181217/)
+* Zombie: [Btnm249](https://www.hiveworkshop.com/threads/btnm249.117455/)
