@@ -2976,7 +2976,12 @@ globals
     constant integer ITEM_TINY_PORTAL_ASTROMANCER                    = 'I12W'
     constant integer ITEM_FLARE_GUN                                  = 'fgun'
     constant integer ITEM_METEOR_STONE                               = 'I0FN'
+    constant integer ARCANE_OBSERVATORY_ASTROMANCER                  = 'n0MO'
     constant integer ITEM_TINY_ARCANE_OBSERVATORY_ASTROMANCER        = 'I12Z'
+
+    // All Races Engineer
+    constant integer CHEST                                           = 'h0Y9'
+    constant integer ITEM_TINY_CHEST                                 = 'I134'
 
     // Items
 
