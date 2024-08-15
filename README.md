@@ -1684,3 +1684,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * epsilon: [m249_ByEpsilon](https://www.hiveworkshop.com/threads/m249_byepsilon.181217/)
 * Zombie: [Btnm249](https://www.hiveworkshop.com/threads/btnm249.117455/)
 * paladinjst: [Guard_Armor_Stormwind](https://www.hiveworkshop.com/threads/guard_armor_stormwind.178545/)
+* Kitabatake: [Farm](https://www.hiveworkshop.com/threads/farm.158793/)
+* Archangel_Tidusx: [BTNFarmKita](https://www.hiveworkshop.com/threads/btnfarmkita.163133/)
