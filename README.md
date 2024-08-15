@@ -1686,3 +1686,7 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * paladinjst: [Guard_Armor_Stormwind](https://www.hiveworkshop.com/threads/guard_armor_stormwind.178545/)
 * Kitabatake: [Farm](https://www.hiveworkshop.com/threads/farm.158793/)
 * Archangel_Tidusx: [BTNFarmKita](https://www.hiveworkshop.com/threads/btnfarmkita.163133/)
+* NFWar: [BTNPumkin](https://www.hiveworkshop.com/threads/btnpumkin.191916/)
+* R2D2: [Pumpkin](https://www.hiveworkshop.com/threads/pumpkin.49442/)
+* Sunchips: [RedApple](https://www.hiveworkshop.com/threads/redapple.223180/)
+* Aldeia: [Red Apple](https://www.hiveworkshop.com/threads/red-apple.352003/)
