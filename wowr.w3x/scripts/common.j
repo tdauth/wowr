@@ -2757,6 +2757,14 @@ globals
     constant string URL_WEBSITE                                      = "https://wowreforged.org"
     constant string URL_DOWNLOAD                                     = "https://github.com/tdauth/wowr/releases"
 
+    // Hero Journey
+    constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
+    constant integer HERO_JOURNEY_RANDOM_EVENTS                      = 10
+    constant integer HERO_JOURNEY_EQUIPMENT_BAG_1                    = 15
+    constant integer HERO_JOURNEY_MOUNTS                             = 20
+    constant integer HERO_JOURNEY_BONUS_RACES                        = 30
+    constant integer HERO_JOURNEY_BONUS_HEROS                        = 40
+
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
     constant integer BACKPACK                                        = BACK_PACK
