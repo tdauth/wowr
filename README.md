@@ -1697,3 +1697,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Praytic: [BTNRainyWeather](https://www.hiveworkshop.com/threads/btnrainyweather.231017/)
 * GolluM_KoMe: [DesertTile.blp](https://www.hiveworkshop.com/threads/deserttile-blp.265282/)
 * Null: [BTNZandalari Throne of War](https://www.hiveworkshop.com/threads/btnzandalari-throne-of-war.345578/)
+* Darkfang: [Improved Ancient Protector](https://www.hiveworkshop.com/threads/improved-ancient-protector.353853/)

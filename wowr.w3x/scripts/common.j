@@ -4477,40 +4477,41 @@ globals
     constant integer FACELESS_ONE_CITIZEN_MALE                       = 'n0KB'
     constant integer FACELESS_ONE_HOUSING                            = 'h0UP'
 
-    // Corrupted Ancients/Satyr
-    constant integer CORRUPTED_ANCIENTS_TIER_1                       = 'n0GX'
-    constant integer CORRUPTED_ANCIENTS_TIER_2                       = 'n0GY'
-    constant integer CORRUPTED_ANCIENTS_TIER_3                       = 'n0GZ'
-    constant integer CORRUPTED_ANCIENTS_ALTAR                        = 'e025'
-    constant integer CORRUPTED_ANCIENTS_MOON_WELL                    = 'n0H1' // farm
-    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_LORE              = 'e021'
-    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_WIND              = 'e022'
-    constant integer CORRUPTED_ANCIENTS_HUNTERS_HALL                 = 'e01Z' // forge
-    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_WONDERS           = 'e024' // shop
-    constant integer CORRUPTED_ANCIENTS_ANCIENT_OF_WAR               = 'n0GV' // barracks
-    constant integer CORRUPTED_ANCIENTS_ANCIENT_PROTECTOR            = 'n0GW' // tower
-    constant integer CORRUPTED_ANCIENTS_DEMON_GATE                   = 'n0H9' // aviary
+    // Satyr
+    constant integer SATYR_TIER_1                                    = 'n0GX'
+    constant integer SATYR_TIER_2                                    = 'n0GY'
+    constant integer SATYR_TIER_3                                    = 'n0GZ'
+    constant integer SATYR_ALTAR                                     = 'e025'
+    constant integer SATYR_MOON_WELL                                 = 'n0H1' // farm
+    constant integer SATYR_ANCIENT_OF_LORE                           = 'e021'
+    constant integer SATYR_ANCIENT_OF_WIND                           = 'e022'
+    constant integer SATYR_HUNTERS_HALL                              = 'e01Z' // forge
+    constant integer SATYR_ANCIENT_OF_WONDERS                        = 'e024' // shop
+    constant integer SATYR_ANCIENT_OF_WAR                            = 'n0GV' // barracks
+    constant integer SATYR_ANCIENT_PROTECTOR                         = 'n0GW' // tower
+    constant integer SATYR_DEMON_GATE                                = 'n0H9' // aviary
 
-    constant integer UPG_CORRUPTED_ANCIENTS_BACKPACK                 = 'R0DX'
-    constant integer UPG_CORRUPTED_ANCIENTS_STR_MOON                 = 'R0GB'
-    constant integer UPG_CORRUPTED_ANCIENTS_MOON_ARMOR               = 'R0GA'
-    constant integer UPG_CORRUPTED_ANCIENTS_SLUDGE_FLINGER           = 'R0GC'
+    constant integer UPG_SATYR_BACKPACK                              = 'R0DX'
+    constant integer UPG_SATYR_STR_MOON                              = 'R0GB'
+    constant integer UPG_SATYR_MOON_ARMOR                            = 'R0GA'
+    constant integer UPG_SATYR_SLUDGE_FLINGER                        = 'R0GC'
+    constant integer UPG_SATYR_CORRUPTED_ANCIENTS                    = 'R0IJ'
 
-    constant integer CORRUPTED_ANCIENTS_WORKER                       = 'e01Y'
-    constant integer CORRUPTED_ANCIENTS_SATYR                        = 'n0L6' // footman
-    constant integer CORRUPTED_ANCIENTS_TRICKSTER                    = 'n0L5' // archer
-    constant integer CORRUPTED_ANCIENTS_GIANT_SKELETON_WARRIOR       = 'n0L7' // knight
-    constant integer CORRUPTED_ANCIENTS_GREEN_DRAKE                  = 'n0HE'
-    constant integer CORRUPTED_ANCIENTS_CORRUPTED_TREANT             = 'n0H8'
-    constant integer CORRUPTED_ANCIENTS_GHOST                        = 'n0HB'
-    constant integer CORRUPTED_ANCIENTS_SATYR_SHADOWDANCER           = 'n0HD'
-    constant integer CORRUPTED_ANCIENTS_SATYR_HELLCALLER             = 'n0HL'
-    constant integer CORRUPTED_ANCIENTS_SLUDGE_FLINGER               = 'n0HC'
+    constant integer SATYR_WORKER                                    = 'e01Y'
+    constant integer SATYR_SATYR                                     = 'n0L6' // footman
+    constant integer SATYR_TRICKSTER                                 = 'n0L5' // archer
+    constant integer SATYR_GIANT_SKELETON_WARRIOR                    = 'n0L7' // knight
+    constant integer SATYR_GREEN_DRAKE                               = 'n0HE'
+    constant integer SATYR_CORRUPTED_TREANT                          = 'n0H8'
+    constant integer SATYR_GHOST                                     = 'n0HB'
+    constant integer SATYR_SATYR_SHADOWDANCER                        = 'n0HD'
+    constant integer SATYR_SATYR_HELLCALLER                          = 'n0HL'
+    constant integer SATYR_SLUDGE_FLINGER                            = 'n0HC'
 
-    constant integer CORRUPTED_ANCIENTS_PET                          = 'n0JN'
-    constant integer CORRUPTED_ANCIENTS_CITIZEN_MALE                 = 'n0JO'
-    constant integer CORRUPTED_ANCIENTS_CITIZEN_FEMALE               = 'n0JP'
-    constant integer CORRUPTED_ANCIENTS_HOUSING                      = 'h0UE'
+    constant integer SATYR_PET                                       = 'n0JN'
+    constant integer SATYR_CITIZEN_MALE                              = 'n0JO'
+    constant integer SATYR_CITIZEN_FEMALE                            = 'n0JP'
+    constant integer SATYR_HOUSING                                   = 'h0UE'
 
     // Centaur
     constant integer CENTAUR_TIER_1                                  = 'o06V'

@@ -782,10 +782,10 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == FACELESS_ONE_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(FACELESS_ONE_TIER_3,false,townid)
 
-    elseif unitid == CORRUPTED_ANCIENTS_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_2,false,townid) + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
-    elseif unitid == CORRUPTED_ANCIENTS_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(CORRUPTED_ANCIENTS_TIER_3,false,townid)
+    elseif unitid == SATYR_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(SATYR_TIER_2,false,townid) + GetUnitCountEx(SATYR_TIER_3,false,townid)
+    elseif unitid == SATYR_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(SATYR_TIER_3,false,townid)
 
     elseif unitid == CENTAUR_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(CENTAUR_TIER_2,false,townid) + GetUnitCountEx(CENTAUR_TIER_3,false,townid)
@@ -2926,7 +2926,7 @@ function CountHousings takes nothing returns integer
     set count = count + GetUnitCount(MURLOC_HOUSING)
     set count = count + GetUnitCount(OGRE_HOUSING)
     set count = count + GetUnitCount(EREDAR_HOUSING)
-    set count = count + GetUnitCount(CORRUPTED_ANCIENTS_HOUSING)
+    set count = count + GetUnitCount(SATYR_HOUSING)
     set count = count + GetUnitCount(CENTAUR_HOUSING)
     set count = count + GetUnitCount(FEL_ORC_HOUSING)
     set count = count + GetUnitCount(FACELESS_ONE_HOUSING)
