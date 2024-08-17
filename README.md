@@ -1692,3 +1692,8 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Aldeia: [Red Apple](https://www.hiveworkshop.com/threads/red-apple.352003/)
 * Kenathorn: [Some Custom Items Pack](https://www.hiveworkshop.com/threads/some-custom-items-pack.316835/)
 * Blizzard, UgoUgo, Kam: [HeroCryptLord](https://www.hiveworkshop.com/threads/herocryptlord.244529/)
+* Traxamillion: [Sand Troll Shaman](https://www.hiveworkshop.com/threads/sand-troll-shaman.100310/)
+* -Dieser-: [BTNSnowFlake](https://www.hiveworkshop.com/threads/btnsnowflake.209692/)
+* Praytic: [BTNRainyWeather](https://www.hiveworkshop.com/threads/btnrainyweather.231017/)
+* GolluM_KoMe: [DesertTile.blp](https://www.hiveworkshop.com/threads/deserttile-blp.265282/)
+* Null: [BTNZandalari Throne of War](https://www.hiveworkshop.com/threads/btnzandalari-throne-of-war.345578/)

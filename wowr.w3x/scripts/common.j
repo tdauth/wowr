@@ -3035,6 +3035,20 @@ globals
     constant integer ITEM_GEM_TOPAZ                                  = 'I0OP'
     constant integer ITEM_GEM_TURQUOISE                              = 'I0OQ'
 
+    // Tomes
+    constant integer TOME_OF_AGILITY                                 = 'tdex'
+    constant integer TOME_OF_AGILITY_2                               = 'tdx2'
+    constant integer TOME_OF_EXPERIENCE                              = 'texp'
+    constant integer TOME_OF_GREATER_EXPERIENCE                      = 'tgxp'
+    constant integer TOME_OF_INTELLIGENCE                            = 'tint'
+    constant integer TOME_OF_INTELLIGENCE_2                          = 'tin2'
+    constant integer TOME_OF_KNOWLEDGE                               = 'tpow'
+    constant integer TOME_OF_STRENGTH                                = 'tstr'
+    constant integer TOME_OF_STRENGTH_2                              = 'tst2'
+    constant integer TOME_OF_POWER                                   = 'tkno'
+    constant integer TOME_OF_ARMOR                                   = 'I13G'
+    constant integer TOME_OF_DAMNAGE                                 = 'I13E'
+
     // Human
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
