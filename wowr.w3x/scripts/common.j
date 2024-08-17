@@ -4947,8 +4947,9 @@ globals
     constant integer SAURONSFORCES_BARAD_DUR                         = 'h0FW' // special building
     constant integer SAURONSFORCES_ORTHANC                           = 'h0GQ' // special building
 
-    constant integer UPG_SAURONSFORCE_BARAD_DUR                      = 'R080'
-    constant integer UPG_SAURONSFORCE_ORTHANC                        = 'R083'
+    constant integer UPG_SAURONSFORCES_BACKPACK                      = 'R0II'
+    constant integer UPG_SAURONSFORCES_BARAD_DUR                     = 'R080'
+    constant integer UPG_SAURONSFORCES_ORTHANC                       = 'R083'
 
     constant integer SAURONSFORCES_ORC_WORKER                        = 'o03O' // worker
     constant integer SAURONSFORCES_ORC_WARRIOR                       = 'o03U' // grunt
@@ -4962,6 +4963,8 @@ globals
     constant integer SAURONSFORCES_WARG_RIDER                        = 'o040' // raider
     constant integer SAURONSFORCES_HARADRIM_RIDER                    = 'h0FX' // raider
     constant integer SAURONSFORCES_FELLBEAST                         = 'o049' // wyvern
+    constant integer SAURONSFORCES_CATAPULT                          = 'o0AM' // demolisher
+    constant integer SAURONSFORCES_SIEGE_TOWER                       = 'e02E' // workshop 4
 
     constant integer SAURONSFORCES_CITIZEN_MALE                      = 'n0AO'
     constant integer SAURONSFORCES_CITIZEN_FEMALE                    = 'n0BR'

@@ -51,11 +51,13 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 2, SAURONSFORCES_CHILD )
     call SetBuildUnit( 2, SAURONSFORCES_PET )
 
-    call SetBuildUpgr( 1, UPG_SAURONSFORCE_BARAD_DUR )
-    call SetBuildUpgr( 1, UPG_SAURONSFORCE_ORTHANC )
+    call SetBuildUpgr( 1, UPG_SAURONSFORCES_BACKPACK )
+    call SetBuildUpgr( 1, UPG_SAURONSFORCES_BARAD_DUR )
+    call SetBuildUpgr( 1, UPG_SAURONSFORCES_ORTHANC )
 
     call SetBuildUnit( 1, SAURONSFORCES_BARAD_DUR )
     call SetBuildUnit( 1, SAURONSFORCES_ORTHANC )
+
 
 //     call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
 //     call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
@@ -226,6 +228,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_WAR_TROLL )
         call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_HARADRIM_RIDER )
         call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_MUMAK )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_CATAPULT )
+        call CampaignAttackerEx( 4, 4, 4, SAURONSFORCES_SIEGE_TOWER )
 
         // big air army
         call CampaignAttackerEx( 8, 12, 18, SAURONSFORCES_FELLBEAST )
