@@ -4508,10 +4508,11 @@ globals
     constant integer SATYR_SATYR_HELLCALLER                          = 'n0HL'
     constant integer SATYR_SLUDGE_FLINGER                            = 'n0HC'
 
-    constant integer SATYR_PET                                       = 'n0JN'
-    constant integer SATYR_CITIZEN_MALE                              = 'n0JO'
-    constant integer SATYR_CITIZEN_FEMALE                            = 'n0JP'
-    constant integer SATYR_HOUSING                                   = 'h0UE'
+    constant integer SATYR_PET                                       = 'n0N6'
+    constant integer SATYR_CITIZEN_MALE                              = 'n0KX'
+    constant integer SATYR_CITIZEN_FEMALE                            = 'n0KY'
+    constant integer SATYR_CHILD                                     = 'n0N5'
+    constant integer SATYR_HOUSING                                   = 'e02A'
 
     // Centaur
     constant integer CENTAUR_TIER_1                                  = 'o06V'

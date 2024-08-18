@@ -31,6 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit( 1, SATYR_DEMON_GATE )
     call SetBuildUnit( 2, SATYR_ANCIENT_PROTECTOR )
     call SetBuildUnit( 2, SATYR_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, SATYR_CHILD )
     call SetBuildUnit( 2, SATYR_PET )
     
     call SetBuildUpgr( 2, UPG_SATYR_STR_MOON )
