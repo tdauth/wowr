@@ -1700,3 +1700,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Darkfang: [Improved Ancient Protector](https://www.hiveworkshop.com/threads/improved-ancient-protector.353853/)
 * Jacky The turtle: [Balloons](https://www.hiveworkshop.com/threads/balloons.142898/)
 * Em!: [Fireflies](https://www.hiveworkshop.com/threads/fireflies.293085/)
+* Null: [BTNDay Time](https://www.hiveworkshop.com/threads/btnday-time.350876/)
+* Hexus: [Fountain statue](https://www.hiveworkshop.com/threads/fountain-statue.219515/)
+* WhiteDeath: [Living Statue](https://www.hiveworkshop.com/threads/living-statue.219866/)
