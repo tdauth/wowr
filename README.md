@@ -1703,3 +1703,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Null: [BTNDay Time](https://www.hiveworkshop.com/threads/btnday-time.350876/)
 * Hexus: [Fountain statue](https://www.hiveworkshop.com/threads/fountain-statue.219515/)
 * WhiteDeath: [Living Statue](https://www.hiveworkshop.com/threads/living-statue.219866/)
+* WILL THE ALMIGHTY: [BTNPumpkinMonster](https://www.hiveworkshop.com/threads/btnpumpkinmonster.58703/)
+* Hantoo: [CandyItem](https://www.hiveworkshop.com/threads/candyitem.270824/)

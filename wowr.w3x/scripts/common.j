@@ -3035,6 +3035,10 @@ globals
     constant integer ITEM_GEM_TOPAZ                                  = 'I0OP'
     constant integer ITEM_GEM_TURQUOISE                              = 'I0OQ'
 
+    constant integer ITEM_CHRISTMAS_PRESENT                          = 'I0AP'
+    constant integer ITEM_EASTER_EGG                                 = 'I05I'
+    constant integer ITEM_CANDY                                      = 'I146'
+
     // Tomes
     constant integer TOME_OF_AGILITY                                 = 'tdex'
     constant integer TOME_OF_AGILITY_2                               = 'tdx2'
@@ -3353,6 +3357,7 @@ globals
     constant integer FURBOLG_CITIZEN_MALE                            = 'n029'
     constant integer FURBOLG_CITIZEN_FEMALE                          = 'n02A'
     constant integer FURBOLG_CHILD                                   = 'n05Z'
+    constant integer FURBOLG_PET                                     = 'n0C7'
     constant integer FURBOLG_HOUSING                                 = 'h015'
 
     // Goblin
