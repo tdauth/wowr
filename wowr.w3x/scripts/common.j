@@ -2790,6 +2790,7 @@ globals
     constant integer EQUIPMENT_BAG                                   = 'E00R'
     constant integer MAX_HERO_LEVEL                                  = 75
     constant integer MAX_ABILITIES                                   = 10
+    constant integer MAX_HEROES                                      = 3
     constant integer SPELL_BOOK                                      = 'o025'
     constant integer POWER_GENERATOR                                 = 'n025'
     constant integer ITEM_TINY_POWER_GENERATOR                       = 'I05C'
