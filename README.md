@@ -1711,3 +1711,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Thrikodius: [Moon](https://www.hiveworkshop.com/threads/moon.124935/)
 * Horn: [Ancient Malfurion](https://www.hiveworkshop.com/threads/ancient-malfurion.48312/)
 * Mc !: [NightElfCar](https://www.hiveworkshop.com/threads/nightelfcar.49786/)
+* 8512590215848: [BTNHunter01](https://www.hiveworkshop.com/threads/btnhunter01.213948/)
+* DeathKnight: [BTNPoisonArrowsOn](https://www.hiveworkshop.com/threads/btnpoisonarrowson.56685/)
+* DeathKnight: [BTNPoisonArrows](https://www.hiveworkshop.com/threads/btnpoisonarrows.56686/)

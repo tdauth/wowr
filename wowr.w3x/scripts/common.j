@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.23"
+    constant string MAP_VERSION                                      = "3.24"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -2849,6 +2849,8 @@ globals
     constant integer ARMORY_NEUTRAL                                  = 'n0IU'
     constant integer FRUIT_STAND_ALL_RACES                           = 'n0J7'
     constant integer ITEM_TINY_FRUIT_STAND_ALL_RACES                 = 'I0WV'
+    constant integer RESURRECTION_STONE_0                            = 'nbse'
+    constant integer RESURRECTION_STONE_1                            = 'nbsw'
 
     // clans
     constant integer CLAN_SHOP                                       = 'n04I'
