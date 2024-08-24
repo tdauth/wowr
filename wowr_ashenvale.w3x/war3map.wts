@@ -1,0 +1,94 @@
+﻿STRING 0
+{
+NightElf01
+}
+
+STRING 1
+{
+1
+}
+
+STRING 2
+{
+Chapter One: Enemies at the Gate
+}
+
+STRING 3
+{
+Blizzard Entertainment
+}
+
+STRING 4
+{
+Chapter One
+}
+
+STRING 5
+{
+Enemies at the Gate
+}
+
+STRING 6
+{
+With the heroic sacrifice of Grommash Hellscream, the pit lord Mannoroth was slain, and the demon curse that had plagued the orcs was put to an end. However, the combined human and orc forces have moved deeper into Ashenvale Forest to ascertain whether a demonic threat still lingers in the land. 
+
+Tyrande Whisperwind, the leader of the night elf Sentinels, believes that the outlanders will bring only doom to her enchanted homeland.
+}
+
+STRING 9
+{
+With the heroic sacrifice of Grommash Hellscream, the pit lord Mannoroth was slain, and the demon curse that had plagued the orcs was put to an end. However, the combined human and orc forces have moved deeper into Ashenvale Forest to ascertain whether a demonic threat still lingers in the land. Tyrande Whisperwind, the leader of the night elf Sentinels, believes that the outlanders will bring only doom to her enchanted homeland.
+}
+
+STRING 13
+{
+Force 1
+}
+
+STRING 14
+{
+Force 2
+}
+
+STRING 26
+// Units: Hpb1 (Paladin), Propernames (Proper Names)
+{
+Duke Lionheart
+}
+
+STRING 49
+// Units: Hpb2 (Paladin), Propernames (Proper Names)
+{
+Sir Henery Lionshield
+}
+
+STRING 88
+{
+Force 3
+}
+
+STRING 111
+{
+Orcish Horde
+}
+
+STRING 113
+{
+Undead Scourge
+}
+
+STRING 612
+{
+Sentinels
+}
+
+STRING 613
+{
+Human Expedition
+}
+
+STRING 614
+{
+Felwood Furbolgs
+}
+
