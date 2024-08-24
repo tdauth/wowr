@@ -50,18 +50,6 @@ STRING 14
 Force 2
 }
 
-STRING 26
-// Units: Hpb1 (Paladin), Propernames (Proper Names)
-{
-Duke Lionheart
-}
-
-STRING 49
-// Units: Hpb2 (Paladin), Propernames (Proper Names)
-{
-Sir Henery Lionshield
-}
-
 STRING 88
 {
 Force 3

@@ -1,10 +1,4 @@
-﻿STRING 7
-// Units: nshr (Skull of Gul'dan), Name (Name)
-{
-Skull of Gul'dan
-}
-
-STRING 13
+﻿STRING 13
 {
 Feldwood 3.23
 }
@@ -47,12 +41,6 @@ Felwood
 STRING 89
 {
 Corrupted Ancients
-}
-
-STRING 112
-// Units: nC01 (Skeleton King), Name (Name)
-{
-Skeleton King
 }
 
 STRING 115
