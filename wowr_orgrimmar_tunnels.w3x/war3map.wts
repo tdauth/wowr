@@ -1,6 +1,6 @@
 ﻿STRING 3
 {
-OrcX01_02
+WoW Reforged 3.23 Orgrimmar Tunnels
 }
 
 STRING 4
@@ -48,56 +48,13 @@ STRING 192
 Within the tunnels below Orgrimmar, the goblins have dug deep into the ground in search of water for the orcs' new home. Though the goblins are master diggers, they have little regard for the repercussions of turning so much soil.
 }
 
-STRING 400
-// Doodads: D000 (Loading Runes), Name (Name)
-{
-Loading Runes
-}
-
-STRING 401
-// Doodads: D001 (Loading Wall), Name (Name)
-{
-Loading Wall
-}
-
 STRING 402
 {
 Resurrection Stone
 }
 
-STRING 407
-// Items: gcel (Gloves of Haste), Hotkey (Hotkey)
+STRING 413
 {
-G
-}
-
-STRING 408
-// Items: gcel (Gloves of Haste), Tip (Tooltip - Basic)
-{
-Purchase Gloves of Haste
-}
-
-STRING 409
-// Items: rde0 (Ring of Protection +1), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 410
-// Items: rde0 (Ring of Protection +1), Tip (Tooltip - Basic)
-{
-Purchase Ring of Protection +1
-}
-
-STRING 411
-// Items: asbl (Assassin's Blade), Hotkey (Hotkey)
-{
-B
-}
-
-STRING 412
-// Items: asbl (Assassin's Blade), Tip (Tooltip - Basic)
-{
-Purchase Assassin's Blade
+World of Warcraft Reforged 3.23
 }
 
