@@ -2851,6 +2851,8 @@ globals
     constant integer ITEM_TINY_FRUIT_STAND_ALL_RACES                 = 'I0WV'
     constant integer RESURRECTION_STONE_0                            = 'nbse'
     constant integer RESURRECTION_STONE_1                            = 'nbsw'
+    constant integer WATER_TOWER                                     = 'n0ND'
+    constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
 
     // clans
     constant integer CLAN_SHOP                                       = 'n04I'
