@@ -1714,3 +1714,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * 8512590215848: [BTNHunter01](https://www.hiveworkshop.com/threads/btnhunter01.213948/)
 * DeathKnight: [BTNPoisonArrowsOn](https://www.hiveworkshop.com/threads/btnpoisonarrowson.56685/)
 * DeathKnight: [BTNPoisonArrows](https://www.hiveworkshop.com/threads/btnpoisonarrows.56686/)
+* Jaccouille: [Star Wars: Empire Vehicle AT-AT](https://www.hiveworkshop.com/threads/star-wars-empire-vehicle-at-at.354844/)
+* supertoinkz: [Crannies Summer and Fall](https://www.hiveworkshop.com/threads/crannies-summer-and-fall.166740/)
+* supertoinkz: [Crannies Snow/y and Winter](https://www.hiveworkshop.com/threads/crannies-snow-y-and-winter.166741/)

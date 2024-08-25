@@ -2854,6 +2854,12 @@ globals
     constant integer WATER_TOWER                                     = 'n0ND'
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
 
+    // Destructibles
+    constant integer CRANNIES_SUMMER                                 = 'B011'
+    constant integer CRANNIES_FALL                                   = 'B012'
+    constant integer CRANNIES_WINTER                                 = 'B013'
+    constant integer CRANNIES_WINTER_SNOWY                           = 'B014'
+
     // clans
     constant integer CLAN_SHOP                                       = 'n04I'
     constant integer CLAN_HORN_SOUND                                 = 'I050'
