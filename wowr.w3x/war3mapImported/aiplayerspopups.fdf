@@ -85,6 +85,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "Orgrimmar",     -2,
         MenuItem "Thunder Buff",     -2,
         MenuItem "Stormwind",     -2,
+        MenuItem "Kul Tiras",     -2,
         MenuItem "Undercity",     -2,
         MenuItem "Khaz Modan",     -2,
         MenuItem "Sunwell Grove",     -2,
