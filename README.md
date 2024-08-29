@@ -1717,3 +1717,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Jaccouille: [Star Wars: Empire Vehicle AT-AT](https://www.hiveworkshop.com/threads/star-wars-empire-vehicle-at-at.354844/)
 * supertoinkz: [Crannies Summer and Fall](https://www.hiveworkshop.com/threads/crannies-summer-and-fall.166740/)
 * supertoinkz: [Crannies Snow/y and Winter](https://www.hiveworkshop.com/threads/crannies-snow-y-and-winter.166741/)
+* JetFangInferno: [MusicTarget](https://www.hiveworkshop.com/threads/musictarget.50356/)
+* Mike: [Music effect (notes)](https://www.hiveworkshop.com/threads/music-effect-notes.312612/)
