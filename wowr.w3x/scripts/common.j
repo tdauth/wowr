@@ -5132,6 +5132,7 @@ globals
     constant integer GALACTIC_EMPIRE_DEWBACK                         = 'h0LB'
     constant integer GALACTIC_EMPIRE_DEWBACK_RIDER                   = 'h0LC'
     constant integer GALACTIC_EMPIRE_IMPERIAL_SHUTTLE                = 'h0LD'
+    constant integer GALACTIC_EMPIRE_TIE_FIGHTER                     = 'h0YL'
     constant integer GALACTIC_EMPIRE_TIE_BOMBER                      = 'h0LA'
     constant integer GALACTIC_EMPIRE_TIE_INTERCEPTOR                 = 'h0L9'
     constant integer GALACTIC_EMPIRE_SITH                            = 'h0XV'

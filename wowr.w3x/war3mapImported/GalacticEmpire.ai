@@ -173,6 +173,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_ATAT )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_FIELD_TROOPER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_PLEX_TROOPER )
+    call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_TIE_FIGHTER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_TIE_INTERCEPTOR )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_TIE_BOMBER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_IMPERIAL_SHUTTLE )
@@ -190,6 +191,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_ATAT )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_FIELD_TROOPER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_PLEX_TROOPER )
+    call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_TIE_FIGHTER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_TIE_INTERCEPTOR )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_TIE_BOMBER )
     call CampaignAttackerEx( 2, 2, 3, GALACTIC_EMPIRE_IMPERIAL_SHUTTLE )
@@ -212,7 +214,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, GALACTIC_EMPIRE_PLEX_TROOPER )
         
         // big air army
-        call CampaignAttackerEx( 10, 12, 14, GALACTIC_EMPIRE_TIE_INTERCEPTOR )
+        call CampaignAttackerEx( 5, 6, 7, GALACTIC_EMPIRE_TIE_FIGHTER )
+        call CampaignAttackerEx( 5, 6, 7, GALACTIC_EMPIRE_TIE_INTERCEPTOR )
         call CampaignAttackerEx( 8, 10, 12, GALACTIC_EMPIRE_TIE_BOMBER )
         call CampaignAttackerEx( 6, 8, 10, GALACTIC_EMPIRE_IMPERIAL_SHUTTLE )
         

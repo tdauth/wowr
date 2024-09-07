@@ -1723,3 +1723,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * assasin_lord: [Bard Projectile](https://www.hiveworkshop.com/threads/bard-projectile.141954/)
 * General Frank: [BTNSteamfortress](https://www.hiveworkshop.com/threads/btnsteamfortress.103883/)
 * <PMM>TerranUp16: [BTN_BronzeRoost](https://www.hiveworkshop.com/threads/btn_bronzeroost.56926/)
+* Rebel-Turret: [Tie](https://www.hiveworkshop.com/threads/tie.50228/)
