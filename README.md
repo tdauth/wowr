@@ -1724,3 +1724,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [BTNSteamfortress](https://www.hiveworkshop.com/threads/btnsteamfortress.103883/)
 * <PMM>TerranUp16: [BTN_BronzeRoost](https://www.hiveworkshop.com/threads/btn_bronzeroost.56926/)
 * Rebel-Turret: [Tie](https://www.hiveworkshop.com/threads/tie.50228/)
+* General Frank: [Draconian Spear thrower](https://www.hiveworkshop.com/threads/draconian-spear-thrower.64952/)
+* General Frank: [BTNDraconianSpearThrower](https://www.hiveworkshop.com/threads/btndraconianspearthrower.65899/)
+* Mister_Haudrauf: [Quilboar Raider](https://www.hiveworkshop.com/threads/quilboar-raider.288722/)

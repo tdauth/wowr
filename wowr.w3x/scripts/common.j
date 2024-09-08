@@ -4605,6 +4605,22 @@ globals
     constant integer KOBOLD_PET                                      = 'n04W'
     constant integer KOBOLD_HOUSING                                  = 'h0XA'
 
+    // Quillboar
+    constant integer QUILLBOAR_TIER_1                                = 'o071'
+    constant integer QUILLBOAR_TRAINING_CAMP                         = 'o0AQ' // barracks
+    constant integer QUILLBOAR_HUT                                   = 'o0AS' // farm
+    constant integer QUILLBOAR_FORGE                                 = 'o0AT' // war mill
+    constant integer QUILLBOAR_ALTAR                                 = 'o0AU' // altar
+    constant integer QUILLBOAR_HOUSE_OF_ANCESTRY                     = 'o0AV' // arcane sanctum
+    constant integer QUILLBOAR_SHOP                                  = 'o0AW' // shop
+    constant integer QUILLBOAR_THORNY_SPIRE                          = 'o0AX' // watch tower
+
+    constant integer UPG_QUILLBOAR_BACKPACK                          = 'R0IK'
+
+    constant integer QUILLBOAR_WORKER                                = 'o072'
+    constant integer QUILLBOAR_HUNTER                                = 'n0MN' // rifleman
+    constant integer QUILLBOAR_RAIDER                                = 'o0AR' // knight
+
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
     constant integer MODERNWARFARE_TIER_2                            = 'h0FR' // tier 2
