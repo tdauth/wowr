@@ -4616,10 +4616,13 @@ globals
     constant integer QUILLBOAR_THORNY_SPIRE                          = 'o0AX' // watch tower
 
     constant integer UPG_QUILLBOAR_BACKPACK                          = 'R0IK'
+    constant integer UPG_QUILLBOAR_MEDICINE_MAN                      = 'R0IL'
 
     constant integer QUILLBOAR_WORKER                                = 'o072'
     constant integer QUILLBOAR_HUNTER                                = 'n0MN' // rifleman
     constant integer QUILLBOAR_RAIDER                                = 'o0AR' // knight
+    constant integer QUILLBOAR_MEDICINE_MAN                          = 'o0AZ' // priest
+    constant integer QUILLBOAR_MYSTIC                                = 'o0AY' // sorceress
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1

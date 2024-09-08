@@ -1,0 +1,256 @@
+function BuildingStrategy takes nothing returns nothing
+    // **********************************
+    // *      Building Strategy         *
+    // **********************************
+    // Tier 1 Buildings
+    call SetReplacements( 1, 2, 3 )
+    call SetBuildUnit( 1, FACELESS_ONE_TIER_1 )
+    call SetBuildUnit( 17, FACELESS_ONE_WORKER )
+    call SetBuildUnit( 2, FACELESS_ONE_CITIZEN_MALE )
+
+    call BuildingStrategyStandardTier1()
+
+    call SetBuildUnit( 2, FACELESS_ONE_HOUSING )
+    call SetBuildUnit( 1, FACELESS_ONE_PRISON )
+    call SetBuildUnit( 3, FACELESS_ONE_TENTACLE )
+    call SetBuildUnit( 2, FACELESS_ONE_COLONY )
+    call SetBuildUnit( 1, FACELESS_ONE_ALTAR )
+    call SetBuildUnit( 1, FACELESS_ONE_SHOP )
+    
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_DAMAGE )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_TENTACLE )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_ARMOR )
+    //call SetBuildUpgr( 1, UPG_ORC_BERSERKER )
+    //call SetBuildUpgr( 1, UPG_ORC_BERSERK )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_TENTACLE )
+    //call SetBuildUpgr( 1, UPG_ORC_SPIKES )
+    //call SetBuildUpgr( 1, UPG_ORC_REGEN )
+
+    // Tier 2 buildings
+    call SetBuildUnit( 1, FACELESS_ONE_TIER_2 )
+    call SetBuildUnit( 1, FACELESS_ONE_PRISON )
+    call SetBuildUnit( 1, FACELESS_ONE_LIBRARY )
+    call SetBuildUnit( 1, FACELESS_ONE_POOL )
+    call SetBuildUnit( 4, FACELESS_ONE_TENTACLE )
+    call SetBuildUnit( 2, FACELESS_ONE_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, FACELESS_ONE_CHILD )
+    call SetBuildUnit( 2, FACELESS_ONE_PET )
+    
+    call SetBuildUpgr( 2, UPG_FACELESS_ONE_DAMAGE )
+    call SetBuildUpgr( 2, UPG_FACELESS_ONE_TENTACLE )
+    call SetBuildUpgr( 2, UPG_FACELESS_ONE_ARMOR )
+    call SetBuildUpgr( 2, UPG_FACELESS_ONE_TENTACLE )
+    //call SetBuildUpgr( 2, UPG_ORC_SPIKES )
+    //call SetBuildUpgr( 1, UPG_ORC_PILLAGE )
+    //call SetBuildUpgr( 1, UPG_ORC_FIRE )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_CULTIST )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_WITCH )
+
+    // Tier 3 buildings
+    call SetBuildUnit( 1, FACELESS_ONE_TIER_3 )
+    call SetBuildUnit( 1, FACELESS_ONE_CAVERN )
+    call SetBuildUnit( 5, FACELESS_ONE_TENTACLE )
+    call SetBuildUnit( 2, FACELESS_ONE_TENTACLE_PIT )
+    call SetBuildUnit( 2, FACELESS_ONE_CITIZEN_MALE )
+
+    call SetBuildUpgr( 3, UPG_FACELESS_ONE_DAMAGE )
+    call SetBuildUpgr( 3, UPG_FACELESS_ONE_TENTACLE )
+    call SetBuildUpgr( 3, UPG_FACELESS_ONE_ARMOR )
+    call SetBuildUpgr( 2, UPG_FACELESS_ONE_CULTIST )
+    call SetBuildUpgr( 2, UPG_FACELESS_ONE_WITCH )
+    call SetBuildUpgr( 3, UPG_FACELESS_ONE_TENTACLE )
+    //call SetBuildUpgr( 3, UPG_ORC_SPIKES )
+    //call SetBuildUpgr( 1, UPG_ORC_ENSNARE )
+    //call SetBuildUpgr( 2, UPG_ORC_SWALKER )
+    //call SetBuildUpgr( 1, UPG_ORC_PULVERIZE )
+    //call SetBuildUpgr( 1, UPG_ORC_VENOM )
+    //call SetBuildUpgr( 1, UPG_ORC_WAR_DRUMS )
+    //call SetBuildUpgr( 1, UPG_ORC_NAPTHA )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_BACKPACK )
+    call SetBuildUpgr( 1, UPG_FACELESS_ONE_FORGOTTEN_ONE )
+    call SetBuildUnit( 1, FACELESS_ONE_FORGOTTEN_ONE )
+
+    call BuildingStrategyStandardTier3()
+    // **********************************
+    // *    End Building Strategy       *
+    // **********************************
+endfunction
+
+function BuildExpansions takes nothing returns nothing
+    call SetBuildExpa(expansions, FACELESS_ONE_TIER_3)
+    call SetBuildExpa(expansions, FACELESS_ONE_PRISON)
+    call SetBuildExpa(expansions, FACELESS_ONE_TENTACLE_PIT)
+endfunction
+
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, ORC_SHIPYARD )
+        call SetBuildUnit( 1, ORC_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, ORC_FRIGATE )
+        call SetBuildUnit( 2, ORC_JUGGERNAUGHT )
+    else
+        call SetBuildUnit( 0, ORC_SHIPYARD )
+        call SetBuildUnit( 0, ORC_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, ORC_FRIGATE )
+        call SetBuildUnit( 0, ORC_JUGGERNAUGHT )
+    endif
+endfunction
+
+function AttackWaves takes nothing returns nothing
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 0, 1, 2, FACELESS_ONE_BONE_THROWER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 1 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 2, 3, 3, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 0, 1, 2, FACELESS_ONE_BONE_THROWER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 2 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M1 ) // Waits 1 minute before attacking
+    call LaunchAttack()
+
+    //*** WAVE 3 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 4 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 5 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 6 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 7 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_CULTIST )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 8 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_CULTIST )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_AQIR )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 9 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_CULTIST )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_AQIR )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_NIGHTMARE_WEAVER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    //*** WAVE 10 ***
+    call InitAssaultGroup()
+    call CampaignAttackerEx( 3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BONE_THROWER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_RIDER )
+    call CampaignAttackerEx( 1, 2, 3, FACELESS_ONE_BALLISTA )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_WITCH )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_CULTIST )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_AQIR )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_NIGHTMARE_WEAVER )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_KING )
+    call CampaignAttackerEx( 2, 2, 3, FACELESS_ONE_TRICKSTER )
+    call AddStandardUnitsToAttackWave()
+    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call LaunchAttack()
+
+    loop //Init the infinite attack loop
+        //*** WAVE 11 ***
+        call InitAssaultGroup()
+        
+        // small ground army
+        call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_BONE_THROWER )
+        call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_BALLISTA )
+        call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_WITCH )
+        call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_CULTIST )
+        call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_KING )
+        call CampaignAttackerEx( 2, 2, 2, FACELESS_ONE_TRICKSTER )
+        call CampaignAttackerEx( 4, 4, 4, FACELESS_ONE_BERSERKER )
+        
+        // big air army
+        call CampaignAttackerEx( 8, 10, 12, FACELESS_ONE_NIGHTMARE_WEAVER )
+        //call CampaignAttackerEx( 8, 10, 12, BATRIDER )
+        //call CampaignAttackerEx( 6, 8, 10, ORC_DRAGON)
+        
+        call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
+        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call LaunchAttack()
+    endloop
+endfunction
+
+function main takes nothing returns nothing
+    call CampaignAI( FACELESS_ONE_TENTACLE, function ChooseHeroSkill )
+    call ConfigureAI( )
+    call InitHero( )
+    call StartThread(function UpdateWorkers)
+    call Expansions(function BuildExpansions)
+    call Ships(function BuildShips)
+
+    call BuildingStrategy( )
+
+    call AttackWaves( )
+endfunction

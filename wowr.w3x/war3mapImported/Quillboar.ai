@@ -41,7 +41,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_TUSKARR_FROST_IMMUNITY )
     call SetBuildUpgr( 1, UPG_TUSKARR_ETHERAL_BEASTS )
     call SetBuildUpgr( 1, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
-    call SetBuildUpgr( 1, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
+    call SetBuildUpgr( 1, UPG_QUILLBOAR_MEDICINE_MAN )
 
     // Tier 3 buildings
     call SetBuildUnit( 1, TUSKARR_FROZEN_FORTRESS )
@@ -57,7 +57,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 3, UPG_TUSKARR_TUSKARR_ARMOR )
     call SetBuildUpgr( 3, UPG_TUSKARR_BEAST_PROTECTION )
     call SetBuildUpgr( 2, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING )
-    call SetBuildUpgr( 2, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
+    call SetBuildUpgr( 2, UPG_QUILLBOAR_MEDICINE_MAN )
     call SetBuildUpgr( 3, UPG_TUSKARR_DEVOUR )
     call SetBuildUpgr( 3, UPG_TUSKARR_IMPROVED_FISHING )
     call SetBuildUpgr( 1, UPG_TUSKARR_WAR_STOMP )
