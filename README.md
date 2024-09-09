@@ -1727,3 +1727,5 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * General Frank: [Draconian Spear thrower](https://www.hiveworkshop.com/threads/draconian-spear-thrower.64952/)
 * General Frank: [BTNDraconianSpearThrower](https://www.hiveworkshop.com/threads/btndraconianspearthrower.65899/)
 * Mister_Haudrauf: [Quilboar Raider](https://www.hiveworkshop.com/threads/quilboar-raider.288722/)
+* garfield: [RazorManeWorker](https://www.hiveworkshop.com/threads/razormaneworker.47622/)
+* Wandering Soul: [Razormane Hunter](https://www.hiveworkshop.com/threads/razormane-hunter.288601/)

@@ -4607,6 +4607,8 @@ globals
 
     // Quillboar
     constant integer QUILLBOAR_TIER_1                                = 'o071'
+    constant integer QUILLBOAR_TIER_2                                = 'o0B0'
+    constant integer QUILLBOAR_TIER_3                                = 'o0B1'
     constant integer QUILLBOAR_TRAINING_CAMP                         = 'o0AQ' // barracks
     constant integer QUILLBOAR_HUT                                   = 'o0AS' // farm
     constant integer QUILLBOAR_FORGE                                 = 'o0AT' // war mill
@@ -4614,15 +4616,24 @@ globals
     constant integer QUILLBOAR_HOUSE_OF_ANCESTRY                     = 'o0AV' // arcane sanctum
     constant integer QUILLBOAR_SHOP                                  = 'o0AW' // shop
     constant integer QUILLBOAR_THORNY_SPIRE                          = 'o0AX' // watch tower
+    constant integer QUILLBOAR_ANIMAL_BATTLE_GROUNDS                 = 'o0B2'
+    constant integer QUILLBOAR_SACRIFICIAL_GROUNDS                   = 'o0B3'
 
     constant integer UPG_QUILLBOAR_BACKPACK                          = 'R0IK'
     constant integer UPG_QUILLBOAR_MEDICINE_MAN                      = 'R0IL'
 
     constant integer QUILLBOAR_WORKER                                = 'o072'
-    constant integer QUILLBOAR_HUNTER                                = 'n0MN' // rifleman
+    constant integer QUILLBOAR_QUILLBOAR                             = 'n0NM' // footman
+    constant integer QUILLBOAR_HUNTER                                = 'n0MQ' // rifleman
     constant integer QUILLBOAR_RAIDER                                = 'o0AR' // knight
     constant integer QUILLBOAR_MEDICINE_MAN                          = 'o0AZ' // priest
     constant integer QUILLBOAR_MYSTIC                                = 'o0AY' // sorceress
+
+    constant integer QUILLBOAR_CITIZEN_MALE                          = 'n0NN'
+    constant integer QUILLBOAR_CITIZEN_FEMALE                        = 'n0NO'
+    constant integer QUILLBOAR_CHILD                                 = 'n0NP'
+    constant integer QUILLBOAR_PET                                   = 'n00U'
+    constant integer QUILLBOAR_HOUSING                               = 'h0YN'
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1
