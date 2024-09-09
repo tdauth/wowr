@@ -4628,6 +4628,8 @@ globals
     constant integer QUILLBOAR_RAIDER                                = 'o0AR' // knight
     constant integer QUILLBOAR_MEDICINE_MAN                          = 'o0AZ' // priest
     constant integer QUILLBOAR_MYSTIC                                = 'o0AY' // sorceress
+    constant integer QUILLBOAR_QUILBEAST                             = 'n0NR'
+    constant integer QUILLBOAR_CHIEFTAIN                             = 'n0NS'
 
     constant integer QUILLBOAR_CITIZEN_MALE                          = 'n0NN'
     constant integer QUILLBOAR_CITIZEN_FEMALE                        = 'n0NO'
