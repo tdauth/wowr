@@ -4621,6 +4621,7 @@ globals
 
     constant integer UPG_QUILLBOAR_BACKPACK                          = 'R0IK'
     constant integer UPG_QUILLBOAR_MEDICINE_MAN                      = 'R0IL'
+    constant integer UPG_QUILLBOAR_QUIL_SPRAY                        = 'R0IM'
 
     constant integer QUILLBOAR_WORKER                                = 'o072'
     constant integer QUILLBOAR_QUILLBOAR                             = 'n0NM' // footman
@@ -4628,14 +4629,19 @@ globals
     constant integer QUILLBOAR_RAIDER                                = 'o0AR' // knight
     constant integer QUILLBOAR_MEDICINE_MAN                          = 'o0AZ' // priest
     constant integer QUILLBOAR_MYSTIC                                = 'o0AY' // sorceress
-    constant integer QUILLBOAR_QUILBEAST                             = 'n0NR'
-    constant integer QUILLBOAR_CHIEFTAIN                             = 'n0NS'
+    constant integer QUILLBOAR_NECROMANCER                           = 'o0B4' // necromancer
+    constant integer QUILLBOAR_QUILBEAST                             = 'n0NR' // siege engine
+    constant integer QUILLBOAR_CHIEFTAIN                             = 'n0NS' // tauren
+    constant integer QUILLBOAR_HARPY_ROGUE                           = 'n0NT' // gryphon
+    constant integer QUILLBOAR_HARPY_WINDWITCH                       = 'n0NU' // dragon hawk
 
     constant integer QUILLBOAR_CITIZEN_MALE                          = 'n0NN'
     constant integer QUILLBOAR_CITIZEN_FEMALE                        = 'n0NO'
     constant integer QUILLBOAR_CHILD                                 = 'n0NP'
     constant integer QUILLBOAR_PET                                   = 'n00U'
     constant integer QUILLBOAR_HOUSING                               = 'h0YN'
+
+    constant integer QUILLBOAR_SKELETAL_RAZORMANE                    = 'u03K'
 
     // Modern Warfare
     constant integer MODERNWARFARE_TIER_1                            = 'h0DJ' // tier 1

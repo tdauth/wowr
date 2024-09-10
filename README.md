@@ -1729,3 +1729,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Mister_Haudrauf: [Quilboar Raider](https://www.hiveworkshop.com/threads/quilboar-raider.288722/)
 * garfield: [RazorManeWorker](https://www.hiveworkshop.com/threads/razormaneworker.47622/)
 * Wandering Soul: [Razormane Hunter](https://www.hiveworkshop.com/threads/razormane-hunter.288601/)
+* Mister_Haudrauf: [Skeletal Razormane](https://www.hiveworkshop.com/threads/skeletal-razormane.291435/)

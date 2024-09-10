@@ -62,9 +62,9 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr( 1, UPG_TUSKARR_WAR_STOMP )
     //call SetBuildUpgr( 1, UPG_TUSKARR_CRITICAL_STRIKE )
     //call SetBuildUpgr( 1, UPG_TUSKARR_CLANS )
-    //call SetBuildUpgr( 1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+    //call SetBuildUpgr( 1, UPG_QUILLBOAR_NECROMANCER )
     //call SetBuildUpgr( 1, UPG_TUSKARR_CLEAVING_ATTACK )
-    //call SetBuildUpgr( 1, UPG_TUSKARR_MAGIC_SENTRY )
+    call SetBuildUpgr( 1, UPG_QUILLBOAR_QUIL_SPRAY )
     call SetBuildUpgr( 1, UPG_QUILLBOAR_BACKPACK )
     //call SetBuildUpgr( 1, UPG_TUSKARR_BURIAL_PLACE )
     //call SetBuildUnit( 1, TUSKARR_BURIAL_PLACE )
@@ -183,7 +183,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, QUILLBOAR_QUILBEAST )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_MEDICINE_MAN )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_MYSTIC )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
+    call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_NECROMANCER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -196,8 +196,8 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, QUILLBOAR_QUILBEAST )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_MEDICINE_MAN )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_MYSTIC )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
+    call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_NECROMANCER )
+    call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_HARPY_ROGUE )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -210,10 +210,10 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx( 1, 2, 3, QUILLBOAR_QUILBEAST )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_MEDICINE_MAN )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_MYSTIC )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_FROST_WOLF )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_GIANT_SNOWY_OWL )
+    call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_NECROMANCER )
+    call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_HARPY_ROGUE )
     call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_CHIEFTAIN )
-    call CampaignAttackerEx( 2, 2, 3, TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+    call CampaignAttackerEx( 2, 2, 3, QUILLBOAR_NECROMANCER )
     call AddStandardUnitsToAttackWave()
     call Sleep( M2 ) // Waits 2 minutes before attacking
     call LaunchAttack()
@@ -228,13 +228,14 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx( 2, 2, 2, QUILLBOAR_MEDICINE_MAN )
         call CampaignAttackerEx( 2, 2, 2, QUILLBOAR_MYSTIC )
         call CampaignAttackerEx( 4, 4, 4, QUILLBOAR_CHIEFTAIN )
-        call CampaignAttackerEx( 4, 4, 4, TUSKARR_ELITE_ARMORED_POLAR_BEAR )
+        call CampaignAttackerEx( 4, 4, 4, QUILLBOAR_NECROMANCER )
         call CampaignAttackerEx( 4, 4, 4, QUILLBOAR_QUILLBOAR )
-        call CampaignAttackerEx( 4, 4, 4, TUSKARR_GIANT_FROST_WOLF )
+        call CampaignAttackerEx( 4, 4, 4, QUILLBOAR_NECROMANCER )
         call CampaignAttackerEx( 4, 4, 4, QUILLBOAR_RAIDER )
         
          // big air army
-        call CampaignAttackerEx( 8, 10, 12, TUSKARR_GIANT_SNOWY_OWL )
+        call CampaignAttackerEx( 8, 10, 12, QUILLBOAR_HARPY_ROGUE )
+        call CampaignAttackerEx( 4, 6, 8, QUILLBOAR_HARPY_WINDWITCH )
         
         call AddStandardUnitsToAttackWave()
         call Sleep( M2 ) // Waits 2 minutes before attacking
