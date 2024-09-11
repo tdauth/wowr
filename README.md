@@ -1730,3 +1730,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * garfield: [RazorManeWorker](https://www.hiveworkshop.com/threads/razormaneworker.47622/)
 * Wandering Soul: [Razormane Hunter](https://www.hiveworkshop.com/threads/razormane-hunter.288601/)
 * Mister_Haudrauf: [Skeletal Razormane](https://www.hiveworkshop.com/threads/skeletal-razormane.291435/)
+* Edge45: [Quilboar Bunker](https://www.hiveworkshop.com/threads/quilboar-bunker.267096/)
+* Windrunner29: [BTNQuilboarBunker](https://www.hiveworkshop.com/threads/btnquilboarbunker.267536/)
+* Darkfang: [PiercingQuills](https://www.hiveworkshop.com/threads/piercingquills.350510/)

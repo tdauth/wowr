@@ -4621,7 +4621,14 @@ globals
 
     constant integer UPG_QUILLBOAR_BACKPACK                          = 'R0IK'
     constant integer UPG_QUILLBOAR_MEDICINE_MAN                      = 'R0IL'
+    constant integer UPG_QUILLBOAR_MYSTIC                            = 'R0IP'
+    constant integer UPG_QUILLBOAR_NECROMANCER                       = 'R0IQ'
     constant integer UPG_QUILLBOAR_QUIL_SPRAY                        = 'R0IM'
+    constant integer UPG_QUILLBOAR_QUILLS                            = 'R0IN'
+    constant integer UPG_QUILLBOAR_THORNS_AURA                       = 'R0IO'
+    constant integer UPG_QUILLBOAR_MELEE                             = 'R0IS'
+    constant integer UPG_QUILLBOAR_RANGED                            = 'R0IT'
+    constant integer UPG_QUILLBOAR_ARMOR                             = 'R0IR'
 
     constant integer QUILLBOAR_WORKER                                = 'o072'
     constant integer QUILLBOAR_QUILLBOAR                             = 'n0NM' // footman
