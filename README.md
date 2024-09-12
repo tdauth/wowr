@@ -752,7 +752,6 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Sellenisko: [NozdormuTheTimelessOne](https://www.hiveworkshop.com/threads/nozdormuthetimelessone.239153/)
 * Sin'dorei300: [BTNNozdormu](https://www.hiveworkshop.com/threads/btnnozdormu.241120/)
 * Golden-Drake: [BTNWingedClock](https://www.hiveworkshop.com/threads/btnwingedclock.171646/)
-* www.textures4photoshop.com: Turnstile texture
 * Kino: [RuneClock](https://www.hiveworkshop.com/threads/runeclock.240537/)
 * HerrDave: [O'Connor](https://www.hiveworkshop.com/threads/oconnor.285771/)
 * HerrDave: [Mordor Great Hall](https://www.hiveworkshop.com/threads/mordor-great-hall.339407/)
