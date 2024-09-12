@@ -4585,6 +4585,11 @@ globals
     constant integer KOBOLD_SHOP                                     = 'o09S'
     constant integer KOBOLD_LODGE                                    = 'o0A4'
     constant integer KOBOLD_TUNNEL                                   = 'u03F'
+    constant integer KOBOLD_BEASTIARY                                = 'o0B5'
+    constant integer KOBOLD_SHIPYARD                                 = 'o0B6'
+    constant integer KOBOLD_BOULDER_TOWER                            = 'o0B7'
+    constant integer KOBOLD_ADVANCED_BOULDER_TOWER                   = 'o0B8'
+    constant integer KOBOLD_MINES                                    = 'n09N'
 
     constant integer UPG_KOBOLD_BACKPACK                             = 'R0DX'
     constant integer UPG_KOBOLD_BURROW                               = 'R0GB'
@@ -4592,6 +4597,9 @@ globals
     constant integer UPG_KOBOLD_MELEE                                = 'R0GA'
     constant integer UPG_KOBOLD_ARMOR                                = 'R0GA'
     constant integer UPG_KOBOLD_GEOMANCER                            = 'R0GA'
+    constant integer UPG_KOBOLD_MINING                               = 'R0IU'
+    constant integer UPG_KOBOLD_GOLD_COINS                           = 'R0IV'
+    constant integer UPG_KOBOLD_MINES                                = 'R0IW'
 
     constant integer KOBOLD_WORKER                                   = 'e01Y'
     constant integer KOBOLD_WARRIOR                                  = 'n0LI' // footman
