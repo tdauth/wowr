@@ -2789,7 +2789,7 @@ globals
     constant integer BACKPACK                                        = BACK_PACK
     constant integer EQUIPMENT_BAG                                   = 'E00R'
     constant integer MAX_HERO_LEVEL                                  = 75
-    constant integer MAX_ABILITIES                                   = 10
+    constant integer MAX_HERO_SPELL_LEVEL                            = 15
     constant integer MAX_HEROES                                      = 3
     constant integer SPELL_BOOK                                      = 'o025'
     constant integer POWER_GENERATOR                                 = 'n025'
