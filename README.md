@@ -1756,3 +1756,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Coronel Mael Radec: [BTNKoboldFort](https://www.hiveworkshop.com/threads/btnkoboldfort.355555/)
 * Coronel Mael Radec: [BTNKoboldTowerUpgrade](https://www.hiveworkshop.com/threads/btnkoboldtowerupgrade.355556/)
 * Coronel Mael Radec: [BTNKoboldLibrary](https://www.hiveworkshop.com/threads/btnkoboldlibrary.355590/)
+* Coronel Mael Radec: [BTNFarmKobold](https://www.hiveworkshop.com/threads/btnfarmkobold.355544/)

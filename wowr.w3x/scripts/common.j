@@ -4611,7 +4611,7 @@ globals
     constant integer KOBOLD_CITIZEN_FEMALE                           = 'n0A3'
     constant integer KOBOLD_CHILD                                    = 'n0MP'
     constant integer KOBOLD_PET                                      = 'n04W'
-    constant integer KOBOLD_HOUSING                                  = 'h0XA'
+    constant integer KOBOLD_HOUSING                                  = 'h0X4'
 
     // Quillboar
     constant integer QUILLBOAR_TIER_1                                = 'o071'
