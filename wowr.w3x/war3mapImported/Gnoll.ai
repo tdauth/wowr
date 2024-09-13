@@ -4,18 +4,19 @@ function BuildingStrategy takes nothing returns nothing
     // **********************************
     // Tier 1 Buildings
     call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, TUSKARR_FROZEN_HALL )
-    call SetBuildUnit( 17, TUSKARR_WORKER )
-    call SetBuildUnit( 2, TUSKARR_CITIZEN_MALE )
+    call SetBuildUnit( 1, GNOLL_TIER_1 )
+    call SetBuildUnit( 17, GNOLL_WORKER )
+    call SetBuildUnit( 2, GNOLL_CITIZEN_MALE )
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, TUSKARR_HOUSING )
-    call SetBuildUnit( 1, TUSKARR_ICY_SPIRE )
-    call SetBuildUnit( 3, TUSKARR_IGLOO )
-    call SetBuildUnit( 2, TUSKARR_IGLOO_BARRACKS )
-    call SetBuildUnit( 1, TUSKARR_ALTAR_OF_ICE )
-    call SetBuildUnit( 1, TUSKARR_NORTHERN_VENDOR_SHOP )
+    call SetBuildUnit( 2, GNOLL_HOUSING )
+    call SetBuildUnit( 1, GNOLL_LUMBERYARD )
+    call SetBuildUnit( 1, GNOLL_FORGE )
+    call SetBuildUnit( 3, GNOLL_HUT )
+    call SetBuildUnit( 2, GNOLL_KENNEL )
+    call SetBuildUnit( 1, GNOLL_ALTAR )
+    call SetBuildUnit( 1, GNOLL_SHOP )
     
     call SetBuildUpgr( 1, UPG_TUSKARR_TUSKARR_WEAPONS )
     call SetBuildUpgr( 1, UPG_TUSKARR_HARPOONS )
@@ -25,13 +26,14 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_TUSKARR_IMPROVED_FISHING )
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, TUSKARR_FROZEN_STRONGHOLD )
-    call SetBuildUnit( 1, TUSKARR_ICY_SPIRE )
-    call SetBuildUnit( 1, TUSKARR_ICE_CUTTERS_LODGE )
+    call SetBuildUnit( 1, GNOLL_TIER_2 )
+    call SetBuildUnit( 1, GNOLL_LUMBERYARD )
+    call SetBuildUnit( 1, GNOLL_ELEMENTAL_GROVE )
     call SetBuildUnit( 1, TUSKARR_HUNTERS_REST )
-    call SetBuildUnit( 4, TUSKARR_IGLOO )
-    call SetBuildUnit( 2, TUSKARR_CITIZEN_FEMALE )
-    call SetBuildUnit( 2, TUSKARR_PET_SEAL )
+    call SetBuildUnit( 4, GNOLL_HUT )
+    call SetBuildUnit( 2, GNOLL_CITIZEN_FEMALE )
+    call SetBuildUnit( 2, GNOLL_CHILD )
+    call SetBuildUnit( 2, GNOLL_PET )
     
     call SetBuildUpgr( 2, UPG_TUSKARR_TUSKARR_WEAPONS )
     call SetBuildUpgr( 2, UPG_TUSKARR_HARPOONS )
@@ -44,10 +46,10 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_TUSKARR_HEALER_ADEPT_TRAINING )
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, TUSKARR_FROZEN_FORTRESS )
+    call SetBuildUnit( 1, GNOLL_TIER_3 )
     call SetBuildUnit( 1, TUSKARR_DECORATED_CAVERN )
     call SetBuildUnit( 5, TUSKARR_IGLOO )
-    call SetBuildUnit( 2, TUSKARR_BLOCK_OF_ICE )
+    call SetBuildUnit( 2, GNOLL_SAVAGE_TOWER )
     call SetBuildUnit( 2, TUSKARR_SPIDER_SHRINE )
     call SetBuildUnit( 2, TUSKARR_FROST_SNOWMAN )
     call SetBuildUnit( 2, TUSKARR_CITIZEN_MALE )
@@ -78,8 +80,8 @@ endfunction
 
 function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, TUSKARR_FROZEN_FORTRESS)
-    call SetBuildExpa(expansions, TUSKARR_ICY_SPIRE)
-    call SetBuildExpa(expansions, TUSKARR_BLOCK_OF_ICE)
+    call SetBuildExpa(expansions, GNOLL_LUMBERYARD)
+    call SetBuildExpa(expansions, GNOLL_SAVAGE_TOWER)
 endfunction
 
 function BuildShips takes nothing returns nothing
@@ -244,7 +246,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( TUSKARR_IGLOO, function ChooseHeroSkill )
+    call CampaignAI( GNOLL_HUT, function ChooseHeroSkill )
     call ConfigureAI( )
     call InitHero( )
     call StartThread(function UpdateWorkers)

@@ -3978,7 +3978,7 @@ globals
     constant integer TROLL_CITIZEN_MALE                              = 'n07X'
     constant integer TROLL_CITIZEN_FEMALE                            = 'n081'
     constant integer TROLL_CHILD                                     = 'n0CX'
-    constant integer TROLL_PET                                       = 'n00U'
+    constant integer TROLL_PET                                       = 'n09V'
     constant integer TROLL_HOUSING                                   = 'h098'
 
     // Tauren
@@ -4573,6 +4573,29 @@ globals
     constant integer CENTAUR_CITIZEN_MALE                            = 'n0MD'
     constant integer CENTAUR_CITIZEN_FEMALE                          = 'n0ME'
     constant integer CENTAUR_HOUSING                                 = 'h0Y2'
+
+    // Gnoll
+    constant integer GNOLL_TIER_1                                    = 'o06X'
+    constant integer GNOLL_TIER_2                                    = 'o0BE'
+    constant integer GNOLL_TIER_3                                    = 'o0BF'
+    constant integer GNOLL_HUT                                       = 'o0B9' // farm
+    constant integer GNOLL_KENNEL                                    = 'o0BC' // barracks
+    constant integer GNOLL_ALTAR                                     = 'o0BB' // altar
+    constant integer GNOLL_LUMBERYARD                                = 'o0BA' // mill
+    constant integer GNOLL_ELEMENTAL_GROVE                           = 'o0BD' // arcane sanctum
+    constant integer GNOLL_SAVAGE_TOWER                              = 'o0BG' // watch tower
+    constant integer GNOLL_SHOP                                      = 'o0BH' // shop
+    constant integer GNOLL_FORGE                                     = 'o0BI' // blacksmith
+
+    constant integer UPG_GNOLL_BACKPACK                              = 'R0IX'
+
+    constant integer GNOLL_WORKER                                    = 'o06Y'
+
+    constant integer GNOLL_PET                                       = 'n0C7'
+    constant integer GNOLL_CITIZEN_MALE                              = 'n0MD'
+    constant integer GNOLL_CITIZEN_FEMALE                            = 'n0NW'
+    constant integer GNOLL_CHILD                                     = 'n0NX'
+    constant integer GNOLL_HOUSING                                   = 'h0FQ'
 
     // Kobold
     constant integer KOBOLD_TIER_1                                   = 'o070'
