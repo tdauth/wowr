@@ -66,9 +66,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( AI_LABORATORY, function ChooseHeroSkill )
+    call CampaignAI( AI_LABORATORY, null )
     call ConfigureAIFreelancer( )
-    call InitHero( )
+    call InitHeroes( )
+    call InitMounts( )
     call StartThread(function UpdateWorkersFreelancer)
     
     call BuildingStrategy( )

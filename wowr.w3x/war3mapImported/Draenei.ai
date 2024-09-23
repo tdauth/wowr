@@ -188,9 +188,8 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( DRAENEI_HUT, function ChooseHeroSkill )
+    call CampaignAI( DRAENEI_HUT, null )
     call ConfigureAI( )
-    call InitHero( )
     call StartThread(function UpdateWorkers)
     call Expansions(function BuildExpansions)
 

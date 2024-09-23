@@ -232,14 +232,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( TAUREN_TENT, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
-    call Ships(function BuildShips)
+    call MainWarlord(TAUREN_TENT, function BuildExpansions, function BuildShips)
+    call ConfigureAI()
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

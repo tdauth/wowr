@@ -80,6 +80,20 @@ function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, TROLL_WATCH_TOWER)
 endfunction
 
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, ORC_SHIPYARD )
+        call SetBuildUnit( 1, ORC_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, ORC_FRIGATE )
+        call SetBuildUnit( 2, ORC_JUGGERNAUGHT )
+    else
+        call SetBuildUnit( 0, ORC_SHIPYARD )
+        call SetBuildUnit( 0, ORC_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, ORC_FRIGATE )
+        call SetBuildUnit( 0, ORC_JUGGERNAUGHT )
+    endif
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
@@ -229,13 +243,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( TROLL_HUT, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
+    call MainWarlord(TROLL_HUT, function BuildExpansions, function BuildShips)
+    call ConfigureAI()
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

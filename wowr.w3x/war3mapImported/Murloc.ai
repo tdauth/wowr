@@ -265,17 +265,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( MURLOC_HUT, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
+    call MainWarlord(MURLOC_HUT, function BuildExpansions, function BuildShips)
+    call ConfigureAI()
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    // after building strategy
-    call StartThread(function BuildExpansions)
-    call StartThread(function BuildShips)
-
-    // blocks forever
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

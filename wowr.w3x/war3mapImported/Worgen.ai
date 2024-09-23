@@ -83,6 +83,20 @@ function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, WORGEN_GUARD_TOWER)
 endfunction
 
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, HUMAN_SHIPYARD )
+        call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, HUMAN_FRIGATE )
+        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
+    else
+        call SetBuildUnit( 0, HUMAN_SHIPYARD )
+        call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, HUMAN_FRIGATE )
+        call SetBuildUnit( 0, HUMAN_BATTLESHIP )
+    endif
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
@@ -227,13 +241,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( WORGEN_HOUSE, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
+    call MainWarlord(WORGEN_HOUSE, function BuildExpansions, function BuildShips)
+    call ConfigureAI()
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

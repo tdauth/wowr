@@ -261,17 +261,9 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( EREDAR_PYLON, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
+    call MainWarlord(EREDAR_PYLON, function BuildExpansions, function BuildShips)
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    // after building strategy
-    call StartThread(function BuildExpansions)
-    call StartThread(function BuildShips)
-
-    // blocks forever
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

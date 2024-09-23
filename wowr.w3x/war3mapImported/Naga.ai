@@ -65,6 +65,20 @@ function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, NAGA_GUARDIAN)
 endfunction
 
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, ELF_SHIPYARD )
+        call SetBuildUnit( 1, ELF_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, ELF_FRIGATE )
+        call SetBuildUnit( 2, ELF_BATTLESHIP )
+    else
+        call SetBuildUnit( 0, ELF_SHIPYARD )
+        call SetBuildUnit( 0, ELF_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, ELF_FRIGATE )
+        call SetBuildUnit( 0, ELF_BATTLESHIP )
+    endif
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
@@ -208,13 +222,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( NAGA_CORAL, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
+    call MainWarlord(NAGA_CORAL, function BuildExpansions, function BuildShips)
+    call ConfigureAI()
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

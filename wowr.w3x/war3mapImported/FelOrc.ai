@@ -233,14 +233,9 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( FEL_ORC_PIG_FARM, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
-    call Ships(function BuildShips)
+    call MainWarlord(FEL_ORC_PIG_FARM, function BuildExpansions, function BuildShips)
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

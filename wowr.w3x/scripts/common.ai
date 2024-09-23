@@ -210,6 +210,10 @@ globals
     // data
     integer array heroTypes
     integer heroTypesCounter = 0
+    integer array mountTypes
+    integer mountTypesCounter = 0
+    integer array housingTypes
+    integer housingTypesCounter = 0
 
     // AI command options
     boolean attackEnemyPlayers = true
@@ -808,56 +812,6 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(QUILLBOAR_TIER_2,false,townid) + GetUnitCountEx(QUILLBOAR_TIER_3,false,townid)
     elseif unitid == QUILLBOAR_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(QUILLBOAR_TIER_3,false,townid)
-
-    elseif unitid == ANCIENTGREECE_HOUSE then
-        set have_qty = have_qty + GetUnitCountEx(ANCIENTGREECE_HOUSE_URBAN_PLANNING,false,townid)
-
-    elseif unitid == MEDIEVAL_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_2,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_3,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
-    elseif unitid == MEDIEVAL_TIER_2 then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_3,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
-    elseif unitid == MEDIEVAL_TIER_3 then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_4,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
-    elseif unitid == MEDIEVAL_TIER_4 then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_5,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
-    elseif unitid == MEDIEVAL_TIER_5 then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_6,false,townid) + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
-    elseif unitid == MEDIEVAL_TIER_6 then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_TIER_7,false,townid)
-    elseif unitid == MEDIEVAL_SCOUT_TOWER then
-        set have_qty = have_qty + GetUnitCountEx(MEDIEVAL_GUARD_TOWER,false,townid) + GetUnitCountEx(MEDIEVAL_SENTRY_TOWER,false,townid)
-
-    elseif unitid == UNION_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(UNION_TIER_2,false,townid) + GetUnitCountEx(UNION_TIER_3,false,townid)
-    elseif unitid == UNION_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(UNION_TIER_3,false,townid)
-
-    elseif unitid == MODERNWARFARE_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(MODERNWARFARE_TIER_2,false,townid) + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
-    elseif unitid == MODERNWARFARE_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_TIER_3,false,townid)
-    elseif unitid == MODERNWARFARE_RADIO_TOWER then
-        set have_qty = have_qty  + GetUnitCountEx(MODERNWARFARE_FLAME_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MINIGUN_TOWER,false,townid) + GetUnitCountEx(MODERNWARFARE_MISSILE_TOWER,false,townid)
-
-    elseif unitid == FREEPEOPLE_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(FREEPEOPLE_TIER_2,false,townid) + GetUnitCountEx(FREEPEOPLE_TIER_3,false,townid)
-    elseif unitid == FREEPEOPLE_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(FREEPEOPLE_TIER_3,false,townid)
-
-    elseif unitid == FREEPEOPLE_ROHAN_SCOUT_TOWER then
-        set have_qty = have_qty + GetUnitCountEx(FREEPEOPLE_GONDORIAN_GUARD_TOWER,false,townid)
-
-    elseif unitid == SAURONSFORCES_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(SAURONSFORCES_TIER_2,false,townid) + GetUnitCountEx(SAURONSFORCES_TIER_3,false,townid)
-    elseif unitid == SAURONSFORCES_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(SAURONSFORCES_TIER_3,false,townid)
-
-    elseif unitid == CIS_DROID_CONTROL_SHIP then
-        set have_qty = have_qty + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_PRODUCING,false,townid) + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_FLYING,false,townid)
-    elseif unitid == CIS_DROID_CONTROL_SHIP_PRODUCING then
-        set have_qty = have_qty + GetUnitCountEx(CIS_DROID_CONTROL_SHIP,false,townid) + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_FLYING,false,townid)
-    elseif unitid == CIS_DROID_CONTROL_SHIP_FLYING then
-        set have_qty = have_qty  + GetUnitCountEx(CIS_DROID_CONTROL_SHIP,false,townid) + GetUnitCountEx(CIS_DROID_CONTROL_SHIP_PRODUCING,false,townid)
 
     elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
@@ -2304,690 +2258,164 @@ endfunction
 
 // World of Warcraft Reforged
 
-//===========================================================================
-// Calculate the modulus/remainder of (dividend) divided by (divisor).
-// Examples:  18 mod 5 = 3.  15 mod 5 = 0.  -8 mod 5 = 2.
-//
-function ModuloInteger takes integer dividend, integer divisor returns integer
-    local integer modulus = dividend - (dividend / divisor) * divisor
-
-    // If the dividend was negative, the above modulus calculation will
-    // be negative, but within (-divisor..0).  We can add (divisor) to
-    // shift this result into the desired range of (0..divisor).
-    if (modulus < 0) then
-        set modulus = modulus + divisor
-    endif
-
-    return modulus
-endfunction
-
-function ChooseHeroSkill takes nothing returns integer
-    local integer curHero = GetHeroId()
-    local integer level = GetHeroLevelAI()
-    local integer mod = ModuloInteger(level, 4)
-    local boolean skillUlti = ModuloInteger(level, 6) == 0
-
-    // Human
-    if (curHero == PALADIN) then
-        if (skillUlti) then
-            return RESURRECTION
-        elseif (mod == 0) then
-            return HOLY_BOLT
-        elseif (mod == 1) then
-            return DIVINE_SHIELD
-        elseif (mod == 2) then
-            return DEVOTION_AURA
-        endif
-    elseif (curHero == ARCHMAGE) then
-        if (skillUlti) then
-            return MASS_TELEPORT
-        elseif (mod == 0) then
-            return BLIZZARD
-        elseif (mod == 1) then
-            return BRILLIANCE_AURA
-        elseif (mod == 2) then
-            return WATER_ELEMENTAL
-        endif
-    elseif (curHero == MTN_KING) then
-        if (skillUlti) then
-            return AVATAR
-        elseif (mod == 0) then
-            return THUNDER_CLAP
-        elseif (mod == 1) then
-            return THUNDER_BOLT
-        elseif (mod == 2) then
-            return BASH
-        endif
-    elseif (curHero == BLOOD_MAGE) then
-        if (skillUlti) then
-            return SUMMON_PHOENIX
-        elseif (mod == 0) then
-            return FLAME_STRIKE
-        elseif (mod == 1) then
-            return BANISH
-        elseif (mod == 2) then
-            return SIPHON_MANA
-        endif
-    // Orc
-    elseif (curHero == BLADE_MASTER) then
-        if (skillUlti) then
-            return BLADE_STORM
-        elseif (mod == 0) then
-            return CRITICAL_STRIKE
-        elseif (mod == 1) then
-            return MIRROR_IMAGE
-        elseif (mod == 2) then
-            return WIND_WALK
-        endif
-    elseif (curHero == FAR_SEER) then
-        if (skillUlti) then
-            return EARTHQUAKE
-        elseif (mod == 0) then
-            return CHAIN_LIGHTNING
-        elseif (mod == 1) then
-            return FAR_SIGHT
-        elseif (mod == 2) then
-            return SPIRIT_WOLF
-        endif
-    elseif (curHero == TAUREN_CHIEF) then
-        if (skillUlti) then
-            return REINCARNATION
-        elseif (mod == 0) then
-            return ENDURANE_AURA
-        elseif (mod == 1) then
-            return SHOCKWAVE
-        elseif (mod == 2) then
-            return WAR_STOMP
-        endif
-    elseif (curHero == SHADOW_HUNTER) then
-        if (skillUlti) then
-            return VOODOO
-        elseif (mod == 0) then
-            return HEALING_WAVE
-        elseif (mod == 1) then
-            return HEX
-        elseif (mod == 2) then
-            return SERPENT_WARD
-        endif
-    // Night Elf
-     elseif (curHero == DEMON_HUNTER) then
-        if (skillUlti) then
-            return METAMORPHOSIS
-        elseif (mod == 0) then
-            return EVASION
-        elseif (mod == 1) then
-            return MANA_BURN
-        elseif (mod == 2) then
-            return IMMOLATION
-        endif
-    elseif (curHero == KEEPER) then
-        if (skillUlti) then
-            return TRANQUILITY
-        elseif (mod == 0) then
-            return THORNS_AURA
-        elseif (mod == 1) then
-            return FORCE_NATURE
-        elseif (mod == 2) then
-            return ENT_ROOTS
-        endif
-    elseif (curHero == MOON_CHICK) then
-        if (skillUlti) then
-            return STARFALL
-        elseif (mod == 0) then
-            return SCOUT
-        elseif (mod == 1) then
-            return TRUESHOT
-        elseif (mod == 2) then
-            return SEARING_ARROWS
-        endif
-    elseif (curHero == WARDEN) then
-        if (skillUlti) then
-            return VENGEANCE
-        elseif (mod == 0) then
-            return SHADOW_TOUCH
-        elseif (mod == 1) then
-            return FAN_KNIVES
-        elseif (mod == 2) then
-            return BLINK
-        endif
-    elseif (curHero == MOUNTAIN_GIANT_HERO) then
-        if (skillUlti) then
-            return MOUNTAIN_GIANT_DEMOLISH
-        elseif (mod == 0) then
-            return MOUNTAIN_GIANT_BOULDER
-        elseif (mod == 1) then
-            return MOUNTAIN_GIANT_HARDENED_SKIN
-        elseif (mod == 2) then
-            return MOUNTAIN_GIANT_EAT_TREE
-        endif
-    // Undead
-    elseif (curHero == DEATH_KNIGHT) then
-        if (skillUlti) then
-            return ANIM_DEAD
-        elseif (mod == 0) then
-            return DEATH_COIL
-        elseif (mod == 1) then
-            return DEATH_PACT
-        elseif (mod == 2) then
-            return UNHOLY_AURA
-        endif
-    elseif (curHero == DARK_RANGER_NEUTRAL) then
-        if (skillUlti) then
-            return DARK_RANGER_CHARM
-        elseif (mod == 0) then
-            return DARK_RANGER_SILENCE
-        elseif (mod == 1) then
-            return DARK_RANGER_BLACK_ARROW
-        elseif (mod == 2) then
-            return DARK_RANGER_LIFE_DRAIN
-        endif
-    elseif (curHero == LICH) then
-        if (skillUlti) then
-            return DEATH_DECAY
-        elseif (mod == 0) then
-            return DARK_RITUAL
-        elseif (mod == 1) then
-            return FROST_ARMOR
-        elseif (mod == 2) then
-            return FROST_NOVA
-        endif
-    elseif (curHero == CRYPT_LORD) then
-        if (skillUlti) then
-            return LOCUST_SWARM
-        elseif (mod == 0) then
-            return CARRION_SCARAB
-        elseif (mod == 1) then
-            return IMPALE
-        elseif (mod == 2) then
-            return THORNY_SHIELD
-        endif
-    // Furbolg
-    elseif (curHero == FURBOLG_URSA_WARRIOR_HERO) then
-        if (skillUlti) then
-            return FURBOLG_CORRUPTION
-        elseif (mod == 0) then
-            return FURBOLG_COMMAND_AURA
-        elseif (mod == 1) then
-            return FURBOLG_FAERIE_FIRE
-        elseif (mod == 2) then
-            return FURBOLG_REJUVENATION
-        endif
-    // Demon
-    elseif (curHero == PIT_LORD_NEUTRAL) then
-        if (skillUlti) then
-            return DEMON_MASTER
-        elseif (mod == 0) then
-            return CLEAVING_ATTACK
-        elseif (mod == 1) then
-            return HOWL_OF_TERROR
-        elseif (mod == 2) then
-            return RAIN_OF_FIRE
-        endif
-    elseif (curHero == DREAD_LORD) then
-        if (skillUlti) then
-            return DREAD_LORD_RAIN_OF_CHAOS
-        elseif (mod == 0) then
-            return SLEEP
-        elseif (mod == 1) then
-            return VAMP_AURA
-        elseif (mod == 2) then
-            return CARRION_SWARM
-        endif
-    elseif (curHero == EREDAR_WARLOCK_NEUTRAL) then
-        if (skillUlti) then
-            return EREDAR_FINGER_OF_DEATH
-        elseif (mod == 0) then
-            return EREDAR_WARLOCK_FIRE_BOLT
-        elseif (mod == 1) then
-            return EREDAR_WARLOCK_MANA_SHIELD
-        elseif (mod == 2) then
-            return EREDAR_WARLOCK_BASH
-        endif
-    // Draenei
-    elseif (curHero == AKAMA) then
-        if (skillUlti) then
-            return REINCARNATION_AKAMA
-        elseif (mod == 0) then
-            return SPIRIT_WOLF_AKAMA
-        elseif (mod == 1) then
-            return CHAIN_LIGHTNING
-        elseif (mod == 2) then
-            return SHADOW_TOUCH_AKAMA
-        endif
-    // Naga
-    elseif (curHero == NAGA_SORCERESS) then
-        if (skillUlti) then
-            return TORNADO
-        elseif (mod == 0) then
-            return FORKED_LIGHTNING
-        elseif (mod == 1) then
-            return FROST_ARROWS
-        elseif (mod == 2) then
-            return MANA_SHIELD
-        endif
-    // Neutral Heroes
-    elseif (curHero == BEASTMASTER) then
-        if (skillUlti) then
-            return STAMPEDE
-        elseif (mod == 0) then
-            return SUMMON_BEAR
-        elseif (mod == 1) then
-            return SUMMON_QUILBEAST
-        elseif (mod == 2) then
-            return SUMMON_HAWK
-        endif
-    elseif (curHero == ALCHEMIST) then
-        if (skillUlti) then
-            return TRANSMUTE
-        elseif (mod == 0) then
-            return HEALING_SPRAY
-        elseif (mod == 1) then
-            return ACID_BOMB
-        elseif (mod == 2) then
-            return CHEMICAL_RAGE
-        endif
-    elseif (curHero == TINKER) then
-        if (skillUlti) then
-            return ROBO_GOBLIN
-        elseif (mod == 0) then
-            return CLUSTER_ROCKETS
-        elseif (mod == 1) then
-            return ENGINEERING
-        elseif (mod == 2) then
-            return POCKET_FACTORY
-        endif
-    elseif (curHero == BREWMASTER) then
-        if (skillUlti) then
-            return STORM_EARTH_AND_FIRE
-        elseif (mod == 0) then
-            return BREATH_OF_FIRE
-        elseif (mod == 1) then
-            return DRUNKEN_HAZE
-        elseif (mod == 2) then
-            return DRUNKEN_BRAWLER
-        endif
-    elseif (curHero == FIRELORD) then
-        if (skillUlti) then
-            return VOLCANO
-        elseif (mod == 0) then
-            return INCINERATE
-        elseif (mod == 1) then
-            return SOUL_BURN
-        elseif (mod == 2) then
-            return SUMMON_LAVA_SPAWN
-        endif
-    // High Elf
-    elseif (curHero == RANGER) then
-        if (skillUlti) then
-            return STARFALL
-        elseif (mod == 0) then
-            return SCOUT
-        elseif (mod == 1) then
-            return COLD_ARROWS
-        elseif (mod == 2) then
-            return TRUESHOT
-        endif
-    // Gnome
-    elseif (curHero == GNOME_ENGINEER_HERO) then
-        if (skillUlti) then
-            return MECHANICAL_REPAIR
-        elseif (mod == 0) then
-            return HARVEST
-        elseif (mod == 1) then
-            return FLAMETHROWER
-        elseif (mod == 2) then
-            return REPAIR_AURA
-        endif
-    // Dalaran
-    elseif (curHero == WIZARD) then
-        if (skillUlti) then
-            return MASS_TELEPORT
-        elseif (mod == 0) then
-            return SIPHON_MANA_WIZARD
-        elseif (mod == 1) then
-            return MANA_SHIELD_WIZARD
-        elseif (mod == 2) then
-            return BRILLIANCE_AURA
-        endif
-    elseif (curHero == SORCERESS_HERO) then
-        if (skillUlti) then
-            return MASS_POLYMORPH
-        elseif (mod == 0) then
-            return MASS_INVISIBILITY
-        elseif (mod == 1) then
-            return MASS_SLOW
-        elseif (mod == 2) then
-            return BRILLIANCE_AURA
-        endif
-    // Kul Tiras
-    elseif (curHero == HYDROMANCER) then
-        if (skillUlti) then
-            return MONSOON
-        elseif (mod == 0) then
-            return FORKED_LIGHTNING
-        elseif (mod == 1) then
-            return SUMMON_SEA_ELEMENTAL
-        elseif (mod == 2) then
-            return CYCLONE
-        endif
-    // Tuskarr
-    elseif (curHero == HERO_TUSKARR_CHIEFTAIN) then
-        if (skillUlti) then
-            return AVATAR
-        elseif (mod == 0) then
-            return MASS_ENSNARE
-        elseif (mod == 1) then
-            return WAR_STOMP
-        elseif (mod == 2) then
-            return FURBOLG_COMMAND_AURA
-        endif
-    // Nerubian
-    elseif (curHero == NERUBIAN_QUEEN_HERO) then
-        if (skillUlti) then
-            return NERUBIAN_ARMY
-        elseif (mod == 0) then
-            return MASS_WEB
-        elseif (mod == 1) then
-            return SUMMON_SPIDER_EGG
-        elseif (mod == 2) then
-            return SPIN_WEB
-        endif
-    // Murloc
-    elseif (curHero == MURLOC_SORCERER) then
-        if (skillUlti) then
-            return TORNADO
-        elseif (mod == 0) then
-            return RAIN_OF_FIRE
-        elseif (mod == 1) then
-            return WATERY_MINION
-        elseif (mod == 2) then
-            return CRUSHING_WAVE
-        endif
-    // Ogre
-    elseif (curHero == OGRE_LORD) then
-        if (skillUlti) then
-            return REINCARNATION
-        elseif (mod == 0) then
-            return SHOCKWAVE
-        elseif (mod == 1) then
-            return MASS_BLOODLUST
-        elseif (mod == 2) then
-            return DEVOTION_AURA
-        endif
-    // Modern Warfare
-    elseif (curHero == US_GENERAL) then
-        if (skillUlti) then
-            return MECHANICAL_REPAIR
-        elseif (mod == 0) then
-            return REPAIR_AURA
-        elseif (mod == 1) then
-            return DIVINE_SHIELD
-        elseif (mod == 2) then
-            return FURBOLG_COMMAND_AURA
-        endif
-    // Roman Empire
-    elseif (curHero == MILITARY_TRIBUNE) then
-        if (skillUlti) then
-            return ROMAN_LEGION
-        elseif (mod == 0) then
-            return HOLY_BOLT
-        elseif (mod == 1) then
-            return DIVINE_SHIELD
-        elseif (mod == 2) then
-            return FURBOLG_COMMAND_AURA
-        endif
-    // Free People of Middle Earth
-    elseif (curHero == GANDALF) then
-        if (skillUlti) then
-            return MITHRANDIR
-        elseif (mod == 0) then
-            return FLAME_STRIKE
-        elseif (mod == 1) then
-            return BANISH
-        elseif (mod == 2) then
-            return SIPHON_MANA
-        endif
-    // Sauron's Forces
-    elseif (curHero == SARUMAN) then
-        if (skillUlti) then
-            return THUNDERSTORM
-        elseif (mod == 0) then
-            return FIREBOLT
-        elseif (mod == 1) then
-            return SUMMON_URUK_HAI
-        elseif (mod == 2) then
-            return POWERFUL_STAFF
-        endif
-    // CIS
-    elseif (curHero == GENERAL_GRIEVOUS) then
-        if (skillUlti) then
-            return FOUR_LIGHT_SABERS
-        elseif (mod == 0) then
-            return COMBAT_MASTER
-        elseif (mod == 1) then
-            return GENERAL_GRIEVOUS_BLADESTORM
-        elseif (mod == 2) then
-            return LIGHT_SABER_COMBAT
-        endif
-    elseif (curHero == COUNT_DOOKU) then
-        if (skillUlti) then
-            return FORCE_MASTER
-        elseif (mod == 0) then
-            return THROW_LIGHT_SABER
-        elseif (mod == 1) then
-            return FORCE_POWERS
-        elseif (mod == 2) then
-            return LIGHT_SABER_COMBAT
-        endif
-    // Galactic Republic
-    elseif (curHero == YODA) then
-        if (skillUlti) then
-            return FORCE_MASTER
-        elseif (mod == 0) then
-            return THROW_LIGHT_SABER
-        elseif (mod == 1) then
-            return FORCE_POWERS
-        elseif (mod == 2) then
-            return LIGHT_SABER_COMBAT
-        endif
-    // The Alliance
-    elseif (curHero == LADY_VASHJ_BONUS_HERO) then
-        if (skillUlti) then
-            return TORNADO
-        elseif (mod == 0) then
-            return FORKED_LIGHTNING
-        elseif (mod == 1) then
-            return FROST_ARROWS
-        elseif (mod == 2) then
-            return MANA_SHIELD
-        endif
-    elseif (curHero == KAEL_BONUS_HERO) then
-        if (skillUlti) then
-            return SUMMON_PHOENIX
-        elseif (mod == 0) then
-            return BANISH
-        elseif (mod == 1) then
-            return FLAME_STRIKE
-        elseif (mod == 2) then
-            return SIPHON_MANA
-        endif
-    elseif (curHero == ILLIDAN_BONUS_HERO) then
-        if (skillUlti) then
-            return METAMORPHOSIS
-        elseif (mod == 0) then
-            return EVASION
-        elseif (mod == 1) then
-            return MANA_BURN
-        elseif (mod == 2) then
-            return IMMOLATION
-        endif
-    endif
-
-    return 'Aamk'
-endfunction
-
-function AddHeroTypes takes integer unitTypeId returns integer
+function AddHero takes integer unitTypeId returns integer
     set heroTypes[heroTypesCounter] = unitTypeId
     set heroTypesCounter = heroTypesCounter + 1
     return heroTypesCounter
 endfunction
 
-function InitHeroTypes takes nothing returns nothing
+function InitHeroes takes nothing returns nothing
     // Human
-    call AddHeroTypes(PALADIN)
-    call AddHeroTypes(ARCHMAGE)
-    call AddHeroTypes(MTN_KING)
-    call AddHeroTypes(BLOOD_MAGE)
+    call AddHero(PALADIN)
+    call AddHero(ARCHMAGE)
+    call AddHero(MTN_KING)
+    call AddHero(BLOOD_MAGE)
     // Orc
-    call AddHeroTypes(BLADE_MASTER)
-    call AddHeroTypes(FAR_SEER)
-    call AddHeroTypes(TAUREN_CHIEF)
-    call AddHeroTypes(SHADOW_HUNTER)
+    call AddHero(BLADE_MASTER)
+    call AddHero(FAR_SEER)
+    call AddHero(TAUREN_CHIEF)
+    call AddHero(SHADOW_HUNTER)
     // Night Elf
-    call AddHeroTypes(DEMON_HUNTER)
-    call AddHeroTypes(KEEPER)
-    call AddHeroTypes(MOON_CHICK)
-    call AddHeroTypes(WARDEN)
-    call AddHeroTypes(MOUNTAIN_GIANT_HERO)
+    call AddHero(DEMON_HUNTER)
+    call AddHero(KEEPER)
+    call AddHero(MOON_CHICK)
+    call AddHero(WARDEN)
+    call AddHero(MOUNTAIN_GIANT_HERO)
     // Undead
-    call AddHeroTypes(DEATH_KNIGHT)
-    call AddHeroTypes(DARK_RANGER_NEUTRAL)
-    call AddHeroTypes(LICH)
-    call AddHeroTypes(CRYPT_LORD)
+    call AddHero(DEATH_KNIGHT)
+    call AddHero(DARK_RANGER_NEUTRAL)
+    call AddHero(LICH)
+    call AddHero(CRYPT_LORD)
     // Demon
-    call AddHeroTypes(PIT_LORD_NEUTRAL)
-    call AddHeroTypes(EREDAR_WARLOCK_NEUTRAL)
-    call AddHeroTypes(DREAD_LORD)
+    call AddHero(PIT_LORD_NEUTRAL)
+    call AddHero(EREDAR_WARLOCK_NEUTRAL)
+    call AddHero(DREAD_LORD)
     // Furbolg
-    call AddHeroTypes(FURBOLG_URSA_WARRIOR_HERO)
+    call AddHero(FURBOLG_URSA_WARRIOR_HERO)
     // Draenei
-    call AddHeroTypes(AKAMA)
+    call AddHero(AKAMA)
     // Naga
-    call AddHeroTypes(NAGA_SORCERESS)
+    call AddHero(NAGA_SORCERESS)
     // Neutral Heroes
-    call AddHeroTypes(BEASTMASTER)
-    call AddHeroTypes(ALCHEMIST)
-    call AddHeroTypes(TINKER)
-    call AddHeroTypes(BREWMASTER)
-    call AddHeroTypes(FIRELORD)
-    call AddHeroTypes(BREWMASTER)
+    call AddHero(BEASTMASTER)
+    call AddHero(ALCHEMIST)
+    call AddHero(TINKER)
+    call AddHero(BREWMASTER)
+    call AddHero(FIRELORD)
+    call AddHero(BREWMASTER)
     // High Elf
-    call AddHeroTypes(RANGER)
+    call AddHero(RANGER)
     // Gnome
-    call AddHeroTypes(GNOME_ENGINEER_HERO)
+    call AddHero(GNOME_ENGINEER_HERO)
     // Dalaran
-    call AddHeroTypes(WIZARD)
-    call AddHeroTypes(SORCERESS_HERO)
+    call AddHero(WIZARD)
+    call AddHero(SORCERESS_HERO)
     // Kul Tiras
-    call AddHeroTypes(HYDROMANCER)
+    call AddHero(HYDROMANCER)
     // Tuskarr
-    call AddHeroTypes(HERO_TUSKARR_CHIEFTAIN)
+    call AddHero(HERO_TUSKARR_CHIEFTAIN)
     // Nerubian
-    call AddHeroTypes(NERUBIAN_QUEEN_HERO)
+    call AddHero(NERUBIAN_QUEEN_HERO)
     // Murloc
-    call AddHeroTypes(MURLOC_SORCERER)
+    call AddHero(MURLOC_SORCERER)
     // Ogre
-    call AddHeroTypes(OGRE_LORD)
-    // Modern Warfare
-    call AddHeroTypes(US_GENERAL)
-    // Roman Empire
-    call AddHeroTypes(MILITARY_TRIBUNE)
-    // Free People of Middle Earth
-    call AddHeroTypes(GANDALF)
-    // Sauron's Forces
-    call AddHeroTypes(SARUMAN)
-    // CIS
-    call AddHeroTypes(GENERAL_GRIEVOUS)
-    call AddHeroTypes(COUNT_DOOKU)
-    // Galactic Republic
-    call AddHeroTypes(YODA)
+    call AddHero(OGRE_LORD)
 endfunction
 
-function InitHero takes nothing returns nothing
-    call InitHeroTypes()
+function AddMount takes integer id returns integer
+    set mountTypes[mountTypesCounter] = id
+    set mountTypesCounter = mountTypesCounter + 1
+    return mountTypesCounter
+endfunction
+
+function InitMounts takes nothing returns nothing
+    call AddMount(GRYPHON_MOUNT)
+    call AddMount(WYVERN_MOUNT)
+    call AddMount(FROST_WYRM_MOUNT)
+    call AddMount(CHIMAERA_MOUNT)
+    call AddMount(NETHER_DRAKE_MOUNT)
+    call AddMount(DRAGONHAWK_MOUNT)
+endfunction
+
+function AddHousing takes integer id returns integer
+    set housingTypes[housingTypesCounter] = id
+    set housingTypesCounter = housingTypesCounter + 1
+    return housingTypesCounter
+endfunction
+
+function InitHousings takes nothing returns nothing
+    call AddHousing(HUMAN_HOUSING)
+    call AddHousing(ORC_HOUSING)
+    call AddHousing(UNDEAD_HOUSING)
+    call AddHousing(ELF_HOUSING)
+    call AddHousing(BLOOD_ELF_HOUSING)
+    call AddHousing(DEMON_HOUSING)
+    call AddHousing(DRAENEI_HOUSING)
+    call AddHousing(FURBOLG_HOUSING)
+    call AddHousing(GOBLIN_HOUSING)
+    call AddHousing(DWARF_HOUSING)
+    call AddHousing(HIGH_ELF_HOUSING)
+    call AddHousing(GNOME_HOUSING)
+    call AddHousing(TROLL_HOUSING)
+    call AddHousing(TAUREN_HOUSING)
+    call AddHousing(PANDAREN_HOUSING)
+    call AddHousing(DALARAN_HOUSING)
+    call AddHousing(KULTIRAS_HOUSING)
+    call AddHousing(LORDAERON_HOUSING)
+    call AddHousing(STORMWIND_HOUSING)
+    call AddHousing(WORGEN_HOUSING)
+    call AddHousing(VRYKUL_HOUSING)
+    call AddHousing(TUSKARR_HOUSING)
+    call AddHousing(NERUBIAN_HOUSING)
+    call AddHousing(MURLOC_HOUSING)
+    call AddHousing(OGRE_HOUSING)
+    call AddHousing(EREDAR_HOUSING)
+    call AddHousing(SATYR_HOUSING)
+    call AddHousing(CENTAUR_HOUSING)
+    call AddHousing(FEL_ORC_HOUSING)
+    call AddHousing(FACELESS_ONE_HOUSING)
+    call AddHousing(GNOLL_HOUSING)
+    call AddHousing(KOBOLD_HOUSING)
 endfunction
 
 function CountHousings takes nothing returns integer
+    local integer i = 0
     local integer count = 0
-
-    set count = count + GetUnitCount(HUMAN_HOUSING)
-    set count = count + GetUnitCount(ORC_HOUSING)
-    set count = count + GetUnitCount(UNDEAD_HOUSING)
-    set count = count + GetUnitCount(ELF_HOUSING)
-    set count = count + GetUnitCount(BLOOD_ELF_HOUSING)
-    set count = count + GetUnitCount(NAGA_HOUSING)
-    set count = count + GetUnitCount(DEMON_HOUSING)
-    set count = count + GetUnitCount(DRAENEI_HOUSING)
-    set count = count + GetUnitCount(FURBOLG_HOUSING)
-    set count = count + GetUnitCount(GOBLIN_HOUSING)
-    set count = count + GetUnitCount(DWARF_HOUSING)
-    set count = count + GetUnitCount(HIGH_ELF_HOUSING)
-    set count = count + GetUnitCount(GNOME_HOUSING)
-    set count = count + GetUnitCount(TROLL_HOUSING)
-    set count = count + GetUnitCount(TAUREN_HOUSING)
-    set count = count + GetUnitCount(PANDAREN_HOUSING)
-    set count = count + GetUnitCount(DALARAN_HOUSING)
-    set count = count + GetUnitCount(KULTIRAS_HOUSING)
-    set count = count + GetUnitCount(LORDAERON_HOUSING)
-    set count = count + GetUnitCount(STORMWIND_HOUSING)
-    set count = count + GetUnitCount(WORGEN_HOUSING)
-    set count = count + GetUnitCount(VRYKUL_HOUSING)
-    set count = count + GetUnitCount(TUSKARR_HOUSING)
-    set count = count + GetUnitCount(NERUBIAN_HOUSING)
-    set count = count + GetUnitCount(TUSKARR_HOUSING)
-    set count = count + GetUnitCount(MURLOC_HOUSING)
-    set count = count + GetUnitCount(OGRE_HOUSING)
-    set count = count + GetUnitCount(EREDAR_HOUSING)
-    set count = count + GetUnitCount(SATYR_HOUSING)
-    set count = count + GetUnitCount(CENTAUR_HOUSING)
-    set count = count + GetUnitCount(FEL_ORC_HOUSING)
-    set count = count + GetUnitCount(FACELESS_ONE_HOUSING)
-    set count = count + GetUnitCount(GNOLL_HOUSING)
-    set count = count + GetUnitCount(KOBOLD_HOUSING)
-    set count = count + GetUnitCount(ANCIENTGREECE_HOUSING)
-    set count = count + GetUnitCount(ROMANEMPIRE_HOUSING)
-    set count = count + GetUnitCount(MEDIEVAL_HOUSING)
-    set count = count + GetUnitCount(UNION_HOUSING)
-    set count = count + GetUnitCount(GERMANS_WWII_HOUSING)
-    set count = count + GetUnitCount(MODERNWARFARE_HOUSING)
-    set count = count + GetUnitCount(FREEPEOPLE_HOUSING)
-    set count = count + GetUnitCount(SAURONSFORCES_HOUSING)
-    set count = count + GetUnitCount(GALACTIC_REPUBLIC_HOUSING)
-    set count = count + GetUnitCount(CIS_HOUSING)
-    set count = count + GetUnitCount(REBEL_ALLIANCE_HOUSING)
-    set count = count + GetUnitCount(GALACTIC_EMPIRE_HOUSING)
+    if (not disabled) then
+        loop
+            exitwhen (i >= housingTypesCounter)
+            set count = count + GetUnitCount(housingTypes[i])
+            set i = i + 1
+        endloop
+    endif
 
     return count
 endfunction
 
 function AttackWithMounts takes nothing returns nothing
-    if (GetUnitCount(GRYPHON_MOUNT) > 0) then
-        call CampaignAttacker( 0, GetUnitCount(GRYPHON_MOUNT), GRYPHON_MOUNT )
-    endif
-    if (GetUnitCount(WYVERN_MOUNT) > 0) then
-        call CampaignAttacker( 0, GetUnitCount(WYVERN_MOUNT), WYVERN_MOUNT )
-    endif
-    if (GetUnitCount(FROST_WYRM_MOUNT) > 0) then
-        call CampaignAttacker( 0, GetUnitCount(FROST_WYRM_MOUNT), FROST_WYRM_MOUNT )
-    endif
-    if (GetUnitCount(CHIMAERA_MOUNT) > 0) then
-        call CampaignAttacker( 0, GetUnitCount(CHIMAERA_MOUNT), CHIMAERA_MOUNT )
-    endif
-    if (GetUnitCount(NETHER_DRAKE_MOUNT) > 0) then
-        call CampaignAttacker( 0, GetUnitCount(NETHER_DRAKE_MOUNT), NETHER_DRAKE_MOUNT )
-    endif
-    if (GetUnitCount(DRAGONHAWK_MOUNT) > 0) then
-        call CampaignAttacker( 0, GetUnitCount(DRAGONHAWK_MOUNT), DRAGONHAWK_MOUNT )
+    local integer i = 0
+    local integer count = 0
+    if (not disabled) then
+        loop
+            exitwhen (i >= mountTypesCounter)
+            set count = GetUnitCountDone(mountTypes[i])
+            if (count > 0) then
+                call CampaignAttacker(0, count, mountTypes[i])
+            endif
+            set i = i + 1
+        endloop
     endif
 endfunction
 
 function AttackWithHeroes takes nothing returns nothing
     local integer i = 0
+    local integer count = 0
     if (not disabled) then
         loop
             exitwhen (i >= heroTypesCounter)
-            if (GetUnitCountDone(heroTypes[i]) > 0) then
-                call CampaignAttacker( 0, GetUnitCountDone(heroTypes[i]), heroTypes[i] )
+            set count = GetUnitCountDone(heroTypes[i])
+            if (count > 0) then
+                call CampaignAttacker(0, count, heroTypes[i])
             endif
             set i = i + 1
         endloop
@@ -3378,10 +2806,13 @@ function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
     call StartThread(function ResearchHighLevelTier3Researches)
 endfunction
 
-function Expansions takes code func returns nothing
-    call StartThread(func)
-endfunction
-
-function Ships takes code func returns nothing
-    call StartThread(func)
+function MainWarlord takes integer farms, code expansions, code ships returns nothing
+    call CampaignAI( farms, null )
+    call ConfigureAI( )
+    call InitHeroes( )
+    call InitMounts( )
+    call InitHousings( )
+    call StartThread(function UpdateWorkers)
+    call StartThread(expansions)
+    call StartThread(ships)
 endfunction

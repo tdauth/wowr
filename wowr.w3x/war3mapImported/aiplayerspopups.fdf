@@ -107,10 +107,9 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "RacesPopupMenu",
     Frame "MENU" "RacesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
         MenuItem "Matching Start Location",     -2,
-        MenuItem "Random Warcraft Warlord",     -2,
+        MenuItem "Random Warlord",     -2,
         MenuItem "Random",     -2,
         MenuItem "Random Freelancer",     -2,
-        MenuItem "Random Warlord",     -2,
         MenuItem "Random Alliance",     -2,
         MenuItem "Random Horde",     -2,
         MenuItem "Human",     -2,
@@ -148,18 +147,6 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Kobold",     -2,
         MenuItem "Quillboar",     -2,
         MenuItem "Dragonkin",     -2,
-        MenuItem "Ancient Greece",     -2,
-        MenuItem "Roman Empire",     -2,
-        MenuItem "Union",     -2,
-        MenuItem "Germans WWII",     -2,
-        MenuItem "Modern Warfare",     -2,
-        MenuItem "Terran",     -2,
-        MenuItem "Free People of Middle Earth",     -2,
-        MenuItem "Sauron's Forces",     -2,
-        MenuItem "Galactic Republic",     -2,
-        MenuItem "CIS",     -2,
-        MenuItem "Rebel Alliance",     -2,
-        MenuItem "Galactic Empire",     -2,
     }
 }
 

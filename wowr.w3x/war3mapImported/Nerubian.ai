@@ -74,6 +74,20 @@ function BuildExpansions takes nothing returns nothing
     call SetBuildExpa(expansions, NERUBIAN_TOWER)
 endfunction
 
+function BuildShips takes nothing returns nothing
+    if (buildShips) then
+        call SetBuildUnit( 1, UNDEAD_SHIPYARD )
+        call SetBuildUnit( 1, UNDEAD_TRANSPORT_SHIP )
+        call SetBuildUnit( 2, UNDEAD_FRIGATE )
+        call SetBuildUnit( 2, UNDEAD_BATTLESHIP )
+    else
+        call SetBuildUnit( 0, UNDEAD_SHIPYARD )
+        call SetBuildUnit( 0, UNDEAD_TRANSPORT_SHIP )
+        call SetBuildUnit( 0, UNDEAD_FRIGATE )
+        call SetBuildUnit( 0, UNDEAD_BATTLESHIP )
+    endif
+endfunction
+
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
@@ -223,13 +237,10 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( NERUBIAN_ZIGGURAT, function ChooseHeroSkill )
-    call ConfigureAI( )
-    call InitHero( )
-    call StartThread(function UpdateWorkers)
-    call Expansions(function BuildExpansions)
+    call MainWarlord(NERUBIAN_ZIGGURAT, function BuildExpansions, function BuildShips)
+    call ConfigureAI()
 
-    call BuildingStrategy( )
+    call BuildingStrategy()
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction
