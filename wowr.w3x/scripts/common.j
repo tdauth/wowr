@@ -4572,6 +4572,7 @@ globals
     constant integer CENTAUR_PET                                     = 'n0C7'
     constant integer CENTAUR_CITIZEN_MALE                            = 'n0MD'
     constant integer CENTAUR_CITIZEN_FEMALE                          = 'n0ME'
+    constant integer CENTAUR_CHILD                                   = 'n0MF'
     constant integer CENTAUR_HOUSING                                 = 'h0Y2'
 
     // Gnoll
@@ -4680,6 +4681,17 @@ globals
     constant integer QUILLBOAR_HOUSING                               = 'h0YN'
 
     constant integer QUILLBOAR_SKELETAL_RAZORMANE                    = 'u03K'
+
+    // Dragonkin
+    constant integer DRAGONKIN_TIER_1                                = 'o08P'
+    constant integer DRAGONKIN_ALTAR                                 = 'o08Q'
+    constant integer DRAGONKIN_BARRACKS                              = 'o0AO'
+
+    constant integer UPG_DRAGONKIN_BACKPACK                          = 'R0GF'
+
+    constant integer DRAGONKIN_WORKER                                = 'o08O'
+    constant integer DRAGONKIN_FOOTMAN                               = 'n0NL'
+    constant integer DRAGONKIN_RIFLEMAN                              = 'o0AP'
 
     // Neutral
     constant integer GOLD_MINE                                       = 'ngol'
