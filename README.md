@@ -1759,3 +1759,4 @@ Some maps are not really based on the original map World of Warcraft Reborn but 
 * Coronel Mael Radec: [BTNFarmKobold](https://www.hiveworkshop.com/threads/btnfarmkobold.355544/)
 * frostwhisper, Galendor an'Kreil, Ket: [Troll Warbeast Kraal](https://www.hiveworkshop.com/threads/troll-warbeast-kraal.355052/)
 * Mephestrial: [Gnoll Race Pack](https://www.hiveworkshop.com/threads/gnoll-race-pack.65909/)
+* loktar: [Furion (Optimized)](https://www.hiveworkshop.com/threads/furion-optimized.327276/)
