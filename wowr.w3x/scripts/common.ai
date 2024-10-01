@@ -2424,6 +2424,9 @@ endfunction
 
 function AddStandardUnitsToAttackWave takes nothing returns nothing
     if (not disabled) then
+        // 3 zeppelins to transport units
+        call PurchaseZeppelin()
+        call PurchaseZeppelin()
         call PurchaseZeppelin()
         call AttackWithMounts()
         call AttackWithHeroes()
