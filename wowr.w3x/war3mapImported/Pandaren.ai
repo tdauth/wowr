@@ -1,221 +1,217 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetBuildUnit( 1, PANDAREN_TIER_1 )
-    call SetBuildUnit( 17, PANDAREN_WOODCUTTER )
-    call SetBuildUnit( 2, PANDAREN_CITIZEN_MALE )
+    call SetBuildUnit(1, PANDAREN_TIER_1)
+    call SetBuildUnit(17, PANDAREN_WOODCUTTER)
+    call SetBuildUnit(2, PANDAREN_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, PANDAREN_HOUSING )
-    call SetBuildUnit( 3, PANDAREN_SHELTER )
-    call SetBuildUnit( 2, PANDAREN_WAR_ACADEMY )
-    call SetBuildUnit( 1, PANDAREN_ALTAR )
-    call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
-    call SetBuildUnit( 1, PANDAREN_BLACKSMITH )
-    call SetBuildUnit( 1, PANDAREN_BREWERY )
+    call SetBuildUnit(2, PANDAREN_HOUSING)
+    call SetBuildUnit(3, PANDAREN_SHELTER)
+    call SetBuildUnit(2, PANDAREN_WAR_ACADEMY)
+    call SetBuildUnit(1, PANDAREN_ALTAR)
+    call SetBuildUnit(1, PANDAREN_LUMBER_MILL)
+    call SetBuildUnit(1, PANDAREN_BLACKSMITH)
+    call SetBuildUnit(1, PANDAREN_BREWERY)
     
-    call SetBuildUpgr( 1, UPG_PANDAREN_DEFEND )
-    call SetBuildUpgr( 1, UPG_PANDAREN_MELEE )
-    call SetBuildUpgr( 1, UPG_PANDAREN_ARMOR )
-    call SetBuildUpgr( 1, UPG_PANDAREN_DRINK )
+    call SetBuildUpgr(1, UPG_PANDAREN_DEFEND)
+    call SetBuildUpgr(1, UPG_PANDAREN_MELEE)
+    call SetBuildUpgr(1, UPG_PANDAREN_ARMOR)
+    call SetBuildUpgr(1, UPG_PANDAREN_DRINK)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, PANDAREN_TIER_2 )
-    call SetBuildUnit( 1, PANDAREN_LUMBER_MILL )
-    call SetBuildUnit( 1, PANDAREN_ELEMENTAL_SANCTUARY )
-    call SetBuildUnit( 4, PANDAREN_SHELTER )
-    call SetBuildUnit( 1, PANDAREN_SCOUT_TOWER )
-    call SetBuildUnit( 2, PANDAREN_CITIZEN_FEMALE )
-    call SetBuildUnit( 2, PANDAREN_CHILD )
-    call SetBuildUnit( 2, PANDAREN_PET )
+    call SetBuildUnit(1, PANDAREN_TIER_2)
+    call SetBuildUnit(1, PANDAREN_LUMBER_MILL)
+    call SetBuildUnit(1, PANDAREN_ELEMENTAL_SANCTUARY)
+    call SetBuildUnit(4, PANDAREN_SHELTER)
+    call SetBuildUnit(1, PANDAREN_SCOUT_TOWER)
+    call SetBuildUnit(2, PANDAREN_CITIZEN_FEMALE)
+    call SetBuildUnit(2, PANDAREN_CHILD)
+    call SetBuildUnit(2, PANDAREN_PET)
     
-    call SetBuildUpgr( 2, UPG_PANDAREN_MELEE )
-    call SetBuildUpgr( 2, UPG_PANDAREN_ARMOR )
-    call SetBuildUpgr( 2, UPG_PANDAREN_DRINK )
-    call SetBuildUpgr( 1, UPG_PANDAREN_DRUID )
-    call SetBuildUpgr( 1, UPG_PANDAREN_MONK )
-    call SetBuildUpgr( 1, UPG_PANDAREN_SAGE )
+    call SetBuildUpgr(2, UPG_PANDAREN_MELEE)
+    call SetBuildUpgr(2, UPG_PANDAREN_ARMOR)
+    call SetBuildUpgr(2, UPG_PANDAREN_DRINK)
+    call SetBuildUpgr(1, UPG_PANDAREN_DRUID)
+    call SetBuildUpgr(1, UPG_PANDAREN_MONK)
+    call SetBuildUpgr(1, UPG_PANDAREN_SAGE)
     
     // Tier 3 buildings
-    call SetBuildUnit( 1, PANDAREN_TIER_3 )
-    call SetBuildUnit( 5, PANDAREN_SHELTER )
-    call SetBuildUnit( 1, PANDAREN_GUARD_TOWER )
-    call SetBuildUnit( 1, PANDAREN_CANNON_TOWER )
-    call SetBuildUnit( 1, PANDAREN_MAGIC_TOWER )
-    call SetBuildUnit( 1, PANDAREN_STORM_SPIRE )
-    call SetBuildUnit( 1, PANDAREN_WORKSHOP )
+    call SetBuildUnit(1, PANDAREN_TIER_3)
+    call SetBuildUnit(5, PANDAREN_SHELTER)
+    call SetBuildUnit(1, PANDAREN_GUARD_TOWER)
+    call SetBuildUnit(1, PANDAREN_CANNON_TOWER)
+    call SetBuildUnit(1, PANDAREN_MAGIC_TOWER)
+    call SetBuildUnit(1, PANDAREN_STORM_SPIRE)
+    call SetBuildUnit(1, PANDAREN_WORKSHOP)
 
-    call SetBuildUpgr( 3, UPG_PANDAREN_MELEE )
-    call SetBuildUpgr( 3, UPG_PANDAREN_ARMOR )
-    call SetBuildUpgr( 4, UPG_PANDAREN_DRINK )
-    call SetBuildUpgr( 2, UPG_PANDAREN_DRUID )
-    call SetBuildUpgr( 2, UPG_PANDAREN_MONK )
-    call SetBuildUpgr( 2, UPG_PANDAREN_SAGE )
-    call SetBuildUpgr( 1, UPG_PANDAREN_IMPROVED_BOWS )
-    call SetBuildUpgr( 1, UPG_PANDAREN_BERSERK )
-    call SetBuildUpgr( 1, UPG_PANDAREN_CHAIN_LIGHTNING )
-    call SetBuildUpgr( 1, UPG_PANDAREN_CLOUD )
-    call SetBuildUpgr( 1, UPG_PANDAREN_COMMAND_AURA )
-    call SetBuildUpgr( 1, UPG_PANDAREN_DRUNK_PANDA )
-    call SetBuildUpgr( 1, UPG_PANDAREN_FIREWORK )
-    call SetBuildUpgr( 1, UPG_PANDAREN_FRAGMENTATION_SHARDS )
-    call SetBuildUpgr( 1, UPG_PANDAREN_HARDENED_SKIN )
-    call SetBuildUpgr( 1, UPG_PANDAREN_SPIKED_SHELL )
-    call SetBuildUpgr( 1, UPG_PANDAREN_MAGIC_SENTRY )
-    call SetBuildUpgr( 1, UPG_PANDAREN_BAMBOO_STICKS )
-    call SetBuildUpgr( 1, UPG_PANDAREN_BACKPACK )
+    call SetBuildUpgr(3, UPG_PANDAREN_MELEE)
+    call SetBuildUpgr(3, UPG_PANDAREN_ARMOR)
+    call SetBuildUpgr(4, UPG_PANDAREN_DRINK)
+    call SetBuildUpgr(2, UPG_PANDAREN_DRUID)
+    call SetBuildUpgr(2, UPG_PANDAREN_MONK)
+    call SetBuildUpgr(2, UPG_PANDAREN_SAGE)
+    call SetBuildUpgr(1, UPG_PANDAREN_IMPROVED_BOWS)
+    call SetBuildUpgr(1, UPG_PANDAREN_BERSERK)
+    call SetBuildUpgr(1, UPG_PANDAREN_CHAIN_LIGHTNING)
+    call SetBuildUpgr(1, UPG_PANDAREN_CLOUD)
+    call SetBuildUpgr(1, UPG_PANDAREN_COMMAND_AURA)
+    call SetBuildUpgr(1, UPG_PANDAREN_DRUNK_PANDA)
+    call SetBuildUpgr(1, UPG_PANDAREN_FIREWORK)
+    call SetBuildUpgr(1, UPG_PANDAREN_FRAGMENTATION_SHARDS)
+    call SetBuildUpgr(1, UPG_PANDAREN_HARDENED_SKIN)
+    call SetBuildUpgr(1, UPG_PANDAREN_SPIKED_SHELL)
+    call SetBuildUpgr(1, UPG_PANDAREN_MAGIC_SENTRY)
+    call SetBuildUpgr(1, UPG_PANDAREN_BAMBOO_STICKS)
+    call SetBuildUpgr(1, UPG_PANDAREN_BACKPACK)
 
-    call SetBuildUpgr( 1, UPG_PANDAREN_JADE_FOREST )
-    call SetBuildUnit( 1, PANDAREN_JADE_FOREST )
+    call SetBuildUpgr(1, UPG_PANDAREN_JADE_FOREST)
+    call SetBuildUnit(1, PANDAREN_JADE_FOREST)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, PANDAREN_TIER_3)
-    call SetBuildExpa(expansions, PANDAREN_LUMBER_MILL)
-    call SetBuildExpa(expansions, PANDAREN_GUARD_TOWER)
-endfunction
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, PANDAREN_TIER_3)
+            call SetBuildExpa(expansions, PANDAREN_LUMBER_MILL)
+            call SetBuildExpa(expansions, PANDAREN_GUARD_TOWER)
+        endif
 
-function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, PANDAREN_SHIPYARD )
-        call SetBuildUnit( 1, PANDAREN_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, ELF_FRIGATE )
-        call SetBuildUnit( 2, PANDAREN_BATTLESHIP )
-    else
-        call SetBuildUnit( 0, PANDAREN_SHIPYARD )
-        call SetBuildUnit( 0, PANDAREN_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, ELF_FRIGATE )
-        call SetBuildUnit( 0, PANDAREN_BATTLESHIP )
-    endif
+        if (buildShips) then
+            call SetBuildUnit(1, PANDAREN_SHIPYARD)
+            call SetBuildUnit(1, PANDAREN_TRANSPORT_SHIP)
+            call SetBuildUnit(2, ELF_FRIGATE)
+            call SetBuildUnit(2, PANDAREN_BATTLESHIP)
+        else
+            call SetBuildUnit(0, PANDAREN_SHIPYARD)
+            call SetBuildUnit(0, PANDAREN_TRANSPORT_SHIP)
+            call SetBuildUnit(0, ELF_FRIGATE)
+            call SetBuildUnit(0, PANDAREN_BATTLESHIP)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 0, 1, 2, PANDAREN_ARCHER )
+    call CampaignAttackerEx(2, 3, 3, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(0, 1, 2, PANDAREN_ARCHER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call Sleep(M3)
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 0, 1, 2, PANDAREN_ARCHER )
+    call CampaignAttackerEx(2, 3, 3, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(0, 1, 2, PANDAREN_ARCHER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1)
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_DRUID )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_DRUID)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_DRUID )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_CLOUD_SERPENT )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_DRUID)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_CLOUD_SERPENT)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_DRUID )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_CLOUD_SERPENT )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_DRUID)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_CLOUD_SERPENT)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_DRUID )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_CLOUD_SERPENT )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_DRUID)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_CLOUD_SERPENT)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_DRUID )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_CLOUD_SERPENT )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_WARLORD )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_DRUID)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_CLOUD_SERPENT)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_WARLORD)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, PANDAREN_HONORGUARD )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SAGE )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_SHAMAN )
-    call CampaignAttackerEx( 1, 2, 3, PANDAREN_DRUID )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_CLOUD_SERPENT )
-    call CampaignAttackerEx( 2, 2, 3, PANDAREN_WARLORD )
+    call CampaignAttackerEx(3, 4, 4, PANDAREN_HONORGUARD)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SAGE)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_SHAMAN)
+    call CampaignAttackerEx(1, 2, 3, PANDAREN_DRUID)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_CLOUD_SERPENT)
+    call CampaignAttackerEx(2, 2, 3, PANDAREN_WARLORD)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -223,34 +219,32 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_HONORGUARD )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_ARCHER )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_ARCHER )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_SAGE )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_SHAMAN )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_DRUID )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_WARLORD )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_DRAGON_TURTLE )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_FIREWORK_TEAM )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_PRIMAL_PANDAREN )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_GIANT_SEA_TURTLE )
-        call CampaignAttackerEx( 4, 4, 4, PANDAREN_PRIMAL_PANDAREN )
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_HONORGUARD)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_ARCHER)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_ARCHER)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_SAGE)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_SHAMAN)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_DRUID)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_WARLORD)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_DRAGON_TURTLE)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_FIREWORK_TEAM)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_PRIMAL_PANDAREN)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_GIANT_SEA_TURTLE)
+        call CampaignAttackerEx(4, 4, 4, PANDAREN_PRIMAL_PANDAREN)
 
         // big air army
-        call CampaignAttackerEx( 8, 12, 18, PANDAREN_CLOUD_SERPENT )
+        call CampaignAttackerEx(8, 12, 18, PANDAREN_CLOUD_SERPENT)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(PANDAREN_SHELTER, function BuildExpansions, function BuildShips)
+    call MainWarlord(PANDAREN_SHELTER, function BuildingStrategy)
     call ConfigureAI()
-
-    call BuildingStrategy()
 
     call AttackWaves()
 endfunction

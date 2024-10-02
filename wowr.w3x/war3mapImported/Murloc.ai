@@ -1,108 +1,89 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, MURLOC_TIER_1 )
-    call SetBuildUnit( 17, MURLOC_WORKER )
-    call SetBuildUnit( 2, MURLOC_CITIZEN_MALE )
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, MURLOC_TIER_1)
+    call SetBuildUnit(17, MURLOC_WORKER)
+    call SetBuildUnit(2, MURLOC_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, MURLOC_HOUSING )
-    call SetBuildUnit( 1, MURLOC_BLADEMAKING_HUT )
-    call SetBuildUnit( 1, MURLOC_LUMBER_KEEP )
-    call SetBuildUnit( 3, MURLOC_HUT )
-    call SetBuildUnit( 2, MURLOC_BARRACKS )
-    call SetBuildUnit( 1, MURLOC_ALTAR )
-    call SetBuildUnit( 1, MURLOC_SHOP )
+    call SetBuildUnit(2, MURLOC_HOUSING)
+    call SetBuildUnit(1, MURLOC_BLADEMAKING_HUT)
+    call SetBuildUnit(1, MURLOC_LUMBER_KEEP)
+    call SetBuildUnit(3, MURLOC_HUT)
+    call SetBuildUnit(2, MURLOC_BARRACKS)
+    call SetBuildUnit(1, MURLOC_ALTAR)
+    call SetBuildUnit(1, MURLOC_SHOP)
     
-    call SetBuildUpgr( 1, UPG_MURLOC_DAMAGE )
-    call SetBuildUpgr( 1, UPG_MURLOC_ARMOR )
-    //call SetBuildUpgr( 1, UPG_OGRE_ENSNARE )
+    call SetBuildUpgr(1, UPG_MURLOC_DAMAGE)
+    call SetBuildUpgr(1, UPG_MURLOC_ARMOR)
+    //call SetBuildUpgr(1, UPG_OGRE_ENSNARE)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, MURLOC_TIER_2 )
-    call SetBuildUnit( 1, MURLOC_BLADEMAKING_HUT )
-    call SetBuildUnit( 1, MURLOC_LUMBER_KEEP )
-    call SetBuildUnit( 1, MURLOC_SORCERER_DEN )
-    call SetBuildUnit( 1, MURLOC_HATCHLING_GROUNDS )
-    //call SetBuildUnit( 1, OGRE_ARENA )
-    call SetBuildUnit( 2, MURLOC_BONE_CHIPPER )
-    call SetBuildUnit( 2, MURLOC_CITIZEN_FEMALE )
-    call SetBuildUnit( 2, MURLOC_PET )
+    call SetBuildUnit(1, MURLOC_TIER_2)
+    call SetBuildUnit(1, MURLOC_BLADEMAKING_HUT)
+    call SetBuildUnit(1, MURLOC_LUMBER_KEEP)
+    call SetBuildUnit(1, MURLOC_SORCERER_DEN)
+    call SetBuildUnit(1, MURLOC_HATCHLING_GROUNDS)
+    //call SetBuildUnit(1, OGRE_ARENA)
+    call SetBuildUnit(2, MURLOC_BONE_CHIPPER)
+    call SetBuildUnit(2, MURLOC_CITIZEN_FEMALE)
+    call SetBuildUnit(2, MURLOC_PET)
     
-    call SetBuildUpgr( 2, UPG_MURLOC_DAMAGE )
-    call SetBuildUpgr( 2, UPG_MURLOC_ARMOR )
-    call SetBuildUpgr( 1, UPG_OGRE_DEMOLISH )
-    //call SetBuildUpgr( 1, UPG_OGRE_AMBUSH )
-    call SetBuildUpgr( 1, UPG_MURLOC_BUBBLE_MAGE )
-    call SetBuildUpgr( 1, UPG_MURLOC_SHADOW_CASTER )
-    call SetBuildUpgr( 1, UPG_MURLOC_CULTIST )
-    //call SetBuildUpgr( 1, UPG_OGRE_STRENGTH )
-    //call SetBuildUpgr( 1, UPG_OGRE_PULVERIZE )
-    //call SetBuildUpgr( 1, UPG_OGRE_TAUNT )
-    //call SetBuildUpgr( 1, UPG_OGRE_BREATH_OF_FIRE )
-    //call SetBuildUpgr( 1, UPG_OGRE_ROAR )
+    call SetBuildUpgr(2, UPG_MURLOC_DAMAGE)
+    call SetBuildUpgr(2, UPG_MURLOC_ARMOR)
+    call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
+    //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
+    call SetBuildUpgr(1, UPG_MURLOC_BUBBLE_MAGE)
+    call SetBuildUpgr(1, UPG_MURLOC_SHADOW_CASTER)
+    call SetBuildUpgr(1, UPG_MURLOC_CULTIST)
+    //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
+    //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
+    //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
+    //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
+    //call SetBuildUpgr(1, UPG_OGRE_ROAR)
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, MURLOC_TIER_3 )
-    //call SetBuildUnit( 2, OGRE_ADVANCED_BOULDER_TOWER )
-    call SetBuildUnit( 2, MURLOC_CITIZEN_MALE )
+    call SetBuildUnit(1, MURLOC_TIER_3)
+    //call SetBuildUnit(2, OGRE_ADVANCED_BOULDER_TOWER)
+    call SetBuildUnit(2, MURLOC_CITIZEN_MALE)
 
-    call SetBuildUpgr( 3, UPG_MURLOC_DAMAGE )
-    call SetBuildUpgr( 3, UPG_MURLOC_ARMOR )
-    call SetBuildUpgr( 2, UPG_MURLOC_BUBBLE_MAGE )
-    call SetBuildUpgr( 2, UPG_MURLOC_SHADOW_CASTER )
-    call SetBuildUpgr( 2, UPG_MURLOC_CULTIST )
-    call SetBuildUpgr( 1, UPG_MURLOC_RIVER_BANK )
-    call SetBuildUpgr( 1, UPG_MURLOC_EGGS )
-    call SetBuildUpgr( 1, UPG_MURLOC_SWARMING )
-    call SetBuildUpgr( 1, UPG_MURLOC_PULVERIZE )
-    call SetBuildUpgr( 1, UPG_MURLOC_SIEGE_DRAGON_TURTLE )
-    call SetBuildUpgr( 1, UPG_MURLOC_BACKPACK )
-    //call SetBuildUpgr( 1, UPG_OGRE_GRONN_CLUBS )
-    call SetBuildUpgr( 1, UPG_MURLOC_FISHER )
-    call SetBuildUnit( 1, MURLOC_FISHER )
-
-
-
+    call SetBuildUpgr(3, UPG_MURLOC_DAMAGE)
+    call SetBuildUpgr(3, UPG_MURLOC_ARMOR)
+    call SetBuildUpgr(2, UPG_MURLOC_BUBBLE_MAGE)
+    call SetBuildUpgr(2, UPG_MURLOC_SHADOW_CASTER)
+    call SetBuildUpgr(2, UPG_MURLOC_CULTIST)
+    call SetBuildUpgr(1, UPG_MURLOC_RIVER_BANK)
+    call SetBuildUpgr(1, UPG_MURLOC_EGGS)
+    call SetBuildUpgr(1, UPG_MURLOC_SWARMING)
+    call SetBuildUpgr(1, UPG_MURLOC_PULVERIZE)
+    call SetBuildUpgr(1, UPG_MURLOC_SIEGE_DRAGON_TURTLE)
+    call SetBuildUpgr(1, UPG_MURLOC_BACKPACK)
+    //call SetBuildUpgr(1, UPG_OGRE_GRONN_CLUBS)
+    call SetBuildUpgr(1, UPG_MURLOC_FISHER)
+    call SetBuildUnit(1, MURLOC_FISHER)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call Sleep(M10)
     loop
         if (expansions > 0) then
             call SetBuildExpa(expansions, MURLOC_TIER_3)
             call SetBuildExpa(expansions, MURLOC_BLADEMAKING_HUT)
-            call SetBuildExpa(expansions, MURLOC_LUMBER_KEEP )
+            call SetBuildExpa(expansions, MURLOC_LUMBER_KEEP)
             call SetBuildExpa(expansions, MURLOC_BONE_CHIPPER)
             call SetBuildExpa(expansions, MURLOC_BONE_CHIPPER)
         endif
 
-        call Sleep(M1)
-    endloop
-endfunction
-
-function BuildShips takes nothing returns nothing
-    call Sleep(M10)
-    loop
         if (buildShips) then
-            call SetBuildUnit( 1, OGRE_SHIPYARD )
-            call SetBuildUnit( 1, ORC_TRANSPORT_SHIP )
-            call SetBuildUnit( 2, ORC_FRIGATE )
-            call SetBuildUnit( 2, ORC_JUGGERNAUGHT )
+            call SetBuildUnit(1, HUMAN_SHIPYARD)
+            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
+            call SetBuildUnit(2, HUMAN_FRIGATE)
+            call SetBuildUnit(2, HUMAN_BATTLESHIP)
         else
-            call SetBuildUnit( 0, OGRE_SHIPYARD )
-            call SetBuildUnit( 0, ORC_TRANSPORT_SHIP )
-            call SetBuildUnit( 0, ORC_FRIGATE )
-            call SetBuildUnit( 0, ORC_JUGGERNAUGHT )
+            call SetBuildUnit(0, HUMAN_SHIPYARD)
+            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
+            call SetBuildUnit(0, HUMAN_FRIGATE)
+            call SetBuildUnit(0, HUMAN_BATTLESHIP)
         endif
 
         call Sleep(M1)
@@ -112,122 +93,122 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 0, 1, 2, MURLOC_HUNTER )
+    call CampaignAttackerEx(2, 3, 3, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(0, 1, 2, MURLOC_HUNTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call Sleep(M3)
     call LaunchAttack()
 
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 0, 1, 2, MURLOC_HUNTER )
+    call CampaignAttackerEx(2, 3, 3, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(0, 1, 2, MURLOC_HUNTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SHADOWCASTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SHADOWCASTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_CULTIST )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SHADOWCASTER)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_CULTIST)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_CULTIST )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_DRAGON_TURTLE )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SHADOWCASTER)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_CULTIST)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_DRAGON_TURTLE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_CULTIST )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_DRAGON_TURTLE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_COUATL )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SHADOWCASTER)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_CULTIST)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_DRAGON_TURTLE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_COUATL)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, MURLOC_TIDESRUNNER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_HUNTER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_FLESH_EATER )
-    call CampaignAttackerEx( 1, 2, 3, MURLOC_BUBBLE_MAGE )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SHADOWCASTER )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_CULTIST )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_DRAGON_TURTLE )
-    //call CampaignAttackerEx( 2, 2, 3, MURLOC_COUATL )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SEA_GIANT )
-    call CampaignAttackerEx( 2, 2, 3, MURLOC_SNAP_DRAGON )
+    call CampaignAttackerEx(3, 4, 4, MURLOC_TIDESRUNNER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_HUNTER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_FLESH_EATER)
+    call CampaignAttackerEx(1, 2, 3, MURLOC_BUBBLE_MAGE)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SHADOWCASTER)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_CULTIST)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_DRAGON_TURTLE)
+    //call CampaignAttackerEx(2, 2, 3, MURLOC_COUATL)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SEA_GIANT)
+    call CampaignAttackerEx(2, 2, 3, MURLOC_SNAP_DRAGON)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -235,40 +216,38 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
 
         // small ground army
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_HUNTER )
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_BUBBLE_MAGE )
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_SHADOWCASTER )
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_CULTIST )
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_SEA_GIANT )
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_SNAP_DRAGON )
-        call CampaignAttackerEx( 4, 4, 4, MURLOC_TIDESRUNNER )
-        //call CampaignAttackerEx( 4, 4, 4, OGRE_MOKNATHAL )
-        call CampaignAttackerEx( 4, 4, 4, MURLOC_FLESH_EATER )
-        call CampaignAttackerEx( 2, 2, 2, MURLOC_DRAGON_TURTLE )
-        //call CampaignAttackerEx( 2, 2, 2, OGRE_OGRE_FIRE_BREATHER )
+        call CampaignAttackerEx(2, 2, 2, MURLOC_HUNTER)
+        call CampaignAttackerEx(2, 2, 2, MURLOC_BUBBLE_MAGE)
+        call CampaignAttackerEx(2, 2, 2, MURLOC_SHADOWCASTER)
+        call CampaignAttackerEx(2, 2, 2, MURLOC_CULTIST)
+        call CampaignAttackerEx(2, 2, 2, MURLOC_SEA_GIANT)
+        call CampaignAttackerEx(2, 2, 2, MURLOC_SNAP_DRAGON)
+        call CampaignAttackerEx(4, 4, 4, MURLOC_TIDESRUNNER)
+        //call CampaignAttackerEx(4, 4, 4, OGRE_MOKNATHAL)
+        call CampaignAttackerEx(4, 4, 4, MURLOC_FLESH_EATER)
+        call CampaignAttackerEx(2, 2, 2, MURLOC_DRAGON_TURTLE)
+        //call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_FIRE_BREATHER)
 
-        //call CampaignAttackerEx( 1, 1, 1, OGRE_KORGALL )
-        //call CampaignAttackerEx( 4, 4, 4, OGRE_STONEMAUL_OGRE )
-        //call CampaignAttackerEx( 4, 4, 4, OGRE_STONEMAUL_MAGI )
+        //call CampaignAttackerEx(1, 1, 1, OGRE_KORGALL)
+        //call CampaignAttackerEx(4, 4, 4, OGRE_STONEMAUL_OGRE)
+        //call CampaignAttackerEx(4, 4, 4, OGRE_STONEMAUL_MAGI)
 
-        //call CampaignAttackerEx( 3, 3, 3, OGRE_GRONN_WAR_CLUB )
+        //call CampaignAttackerEx(3, 3, 3, OGRE_GRONN_WAR_CLUB)
         
          // big air army
-        call CampaignAttackerEx( 8, 10, 12, MURLOC_COUATL )
-        //call CampaignAttackerEx( 6, 8, 10, OGRE_ZEPPELIN)
+        call CampaignAttackerEx(8, 10, 12, MURLOC_COUATL)
+        //call CampaignAttackerEx(6, 8, 10, OGRE_ZEPPELIN)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(MURLOC_HUT, function BuildExpansions, function BuildShips)
+    call MainWarlord(MURLOC_HUT, function BuildingStrategy)
     call ConfigureAI()
-
-    call BuildingStrategy()
 
     call AttackWaves()
 endfunction

@@ -2809,13 +2809,12 @@ function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
     call StartThread(function ResearchHighLevelTier3Researches)
 endfunction
 
-function MainWarlord takes integer farms, code expansions, code ships returns nothing
+function MainWarlord takes integer farms, code buildingStrategy returns nothing
     call CampaignAI( farms, null )
     call ConfigureAI( )
     call InitHeroes( )
     call InitMounts( )
     call InitHousings( )
     call StartThread(function UpdateWorkers)
-    call StartThread(expansions)
-    call StartThread(ships)
+    call StartThread(buildingStrategy)
 endfunction

@@ -1,208 +1,204 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, TREE_LIFE )
-    call SetBuildUnit( 1, ELF_MINE )
-    call SetBuildUnit( 19, WISP )
-    //call SetBuildUnit( 2, ELF_HOUSING )
-    call SetBuildUnit( 3, MOON_WELL )
-    call SetBuildUnit( 2, ANCIENT_WAR )
-    call SetBuildUnit( 1, ELF_ALTAR )
-    call SetBuildUnit( 1, HUNTERS_HALL )
-    call SetBuildUnit( 1, DEN_OF_WONDERS )
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, TREE_LIFE)
+    call SetBuildUnit(1, ELF_MINE)
+    call SetBuildUnit(19, WISP)
+    //call SetBuildUnit(2, ELF_HOUSING)
+    call SetBuildUnit(3, MOON_WELL)
+    call SetBuildUnit(2, ANCIENT_WAR)
+    call SetBuildUnit(1, ELF_ALTAR)
+    call SetBuildUnit(1, HUNTERS_HALL)
+    call SetBuildUnit(1, DEN_OF_WONDERS)
     
-    call SetBuildUpgr( 1, UPG_STR_MOON )
-    call SetBuildUpgr( 1, UPG_STR_WILD )
-    call SetBuildUpgr( 1, UPG_HIDES )
-    call SetBuildUpgr( 1, UPG_MOON_ARMOR )
-    call SetBuildUpgr( 1, UPG_GLAIVE )
+    call SetBuildUpgr(1, UPG_STR_MOON)
+    call SetBuildUpgr(1, UPG_STR_WILD)
+    call SetBuildUpgr(1, UPG_HIDES)
+    call SetBuildUpgr(1, UPG_MOON_ARMOR)
+    call SetBuildUpgr(1, UPG_GLAIVE)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, TREE_AGES )
-    call SetBuildUnit( 1, HUNTERS_HALL )
-    call SetBuildUnit( 1, ANCIENT_WIND )
-    call SetBuildUnit( 1, ANCIENT_LORE )
-    call SetBuildUnit( 3, MOON_WELL )
+    call SetBuildUnit(1, TREE_AGES)
+    call SetBuildUnit(1, HUNTERS_HALL)
+    call SetBuildUnit(1, ANCIENT_WIND)
+    call SetBuildUnit(1, ANCIENT_LORE)
+    call SetBuildUnit(3, MOON_WELL)
     
-    call SetBuildUpgr( 2, UPG_STR_MOON )
-    call SetBuildUpgr( 2, UPG_STR_WILD )
-    call SetBuildUpgr( 2, UPG_HIDES )
-    call SetBuildUpgr( 2, UPG_MOON_ARMOR )
-    call SetBuildUpgr( 1, UPG_ULTRAVISION )
-    call SetBuildUpgr( 1, UPG_SCOUT )
-    call SetBuildUpgr( 1, UPG_MARKSMAN )
-    call SetBuildUpgr( 1, UPG_WELL_SPRING )
-    call SetBuildUpgr( 1, UPG_BLESSING )
-    call SetBuildUpgr( 1, UPG_MARK_CLAW )
-    call SetBuildUpgr( 1, UPG_DRUID_CLAW )
-    call SetBuildUpgr( 1, UPG_DRUID_TALON )
-    call SetBuildUpgr( 1, UPG_ABOLISH )
+    call SetBuildUpgr(2, UPG_STR_MOON)
+    call SetBuildUpgr(2, UPG_STR_WILD)
+    call SetBuildUpgr(2, UPG_HIDES)
+    call SetBuildUpgr(2, UPG_MOON_ARMOR)
+    call SetBuildUpgr(1, UPG_ULTRAVISION)
+    call SetBuildUpgr(1, UPG_SCOUT)
+    call SetBuildUpgr(1, UPG_MARKSMAN)
+    call SetBuildUpgr(1, UPG_WELL_SPRING)
+    call SetBuildUpgr(1, UPG_BLESSING)
+    call SetBuildUpgr(1, UPG_MARK_CLAW)
+    call SetBuildUpgr(1, UPG_DRUID_CLAW)
+    call SetBuildUpgr(1, UPG_DRUID_TALON)
+    call SetBuildUpgr(1, UPG_ABOLISH)
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, TREE_ETERNITY )
-    call SetBuildUnit( 2, CHIMAERA_ROOST )
-    call SetBuildUnit( 2, MOON_WELL )
-    call SetBuildUnit( 2, ANCIENT_PROTECT )
+    call SetBuildUnit(1, TREE_ETERNITY)
+    call SetBuildUnit(2, CHIMAERA_ROOST)
+    call SetBuildUnit(2, MOON_WELL)
+    call SetBuildUnit(2, ANCIENT_PROTECT)
     
-    call SetBuildUnit( 1, ELF_CITIZEN_MALE )
+    call SetBuildUnit(1, ELF_CITIZEN_MALE)
     
-    call SetBuildUpgr( 3, UPG_STR_MOON )
-    call SetBuildUpgr( 3, UPG_STR_WILD )
-    call SetBuildUpgr( 3, UPG_HIDES )
-    call SetBuildUpgr( 3, UPG_MOON_ARMOR )
-    call SetBuildUpgr( 1, UPG_HARD_SKIN )
-    call SetBuildUpgr( 1, UPG_RESIST_SKIN )
-    call SetBuildUpgr( 1, 'Repb') // vorpal blades
-    call SetBuildUpgr( 1, UPG_CHIM_ACID )
-    call SetBuildUpgr( 1, UPG_HIPPO_TAME )
-    call SetBuildUpgr( 2, UPG_DRUID_CLAW )
-    call SetBuildUpgr( 2, UPG_DRUID_TALON )
-    call SetBuildUpgr( 1, UPG_MARK_TALON )
-    call SetBuildUpgr( 1, UPG_BOWS )
-    call SetBuildUpgr( 1, 'Repm' ) // backpack
-    call SetBuildUpgr( 1, UPG_ELF_WORLD_TREE )
+    call SetBuildUpgr(3, UPG_STR_MOON)
+    call SetBuildUpgr(3, UPG_STR_WILD)
+    call SetBuildUpgr(3, UPG_HIDES)
+    call SetBuildUpgr(3, UPG_MOON_ARMOR)
+    call SetBuildUpgr(1, UPG_HARD_SKIN)
+    call SetBuildUpgr(1, UPG_RESIST_SKIN)
+    call SetBuildUpgr(1, 'Repb') // vorpal blades
+    call SetBuildUpgr(1, UPG_CHIM_ACID)
+    call SetBuildUpgr(1, UPG_HIPPO_TAME)
+    call SetBuildUpgr(2, UPG_DRUID_CLAW)
+    call SetBuildUpgr(2, UPG_DRUID_TALON)
+    call SetBuildUpgr(1, UPG_MARK_TALON)
+    call SetBuildUpgr(1, UPG_BOWS)
+    call SetBuildUpgr(1, 'Repm') // backpack
+    call SetBuildUpgr(1, UPG_ELF_WORLD_TREE)
 
-    call SetBuildUnit( 1, ELF_WORLD_TREE )
+    call SetBuildUnit(1, ELF_WORLD_TREE)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, TREE_ETERNITY)
-    call SetBuildExpa(expansions, HUNTERS_HALL)
-    call SetBuildExpa(expansions, ANCIENT_PROTECT)
-endfunction
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, TREE_ETERNITY)
+            call SetBuildExpa(expansions, HUNTERS_HALL)
+            call SetBuildExpa(expansions, ANCIENT_PROTECT)
+        endif
 
-function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, ELF_SHIPYARD )
-        call SetBuildUnit( 1, ELF_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, ELF_FRIGATE )
-        call SetBuildUnit( 2, ELF_BATTLESHIP )
-    else
-        call SetBuildUnit( 0, ELF_SHIPYARD )
-        call SetBuildUnit( 0, ELF_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, ELF_FRIGATE )
-        call SetBuildUnit( 0, ELF_BATTLESHIP )
-    endif
+        if (buildShips) then
+            call SetBuildUnit(1, ELF_SHIPYARD)
+            call SetBuildUnit(1, ELF_TRANSPORT_SHIP)
+            call SetBuildUnit(2, ELF_FRIGATE)
+            call SetBuildUnit(2, ELF_BATTLESHIP)
+        else
+            call SetBuildUnit(0, ELF_SHIPYARD)
+            call SetBuildUnit(0, ELF_TRANSPORT_SHIP)
+            call SetBuildUnit(0, ELF_FRIGATE)
+            call SetBuildUnit(0, ELF_BATTLESHIP)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing 
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, HUNTRESS )
+    call CampaignAttackerEx(2, 3, 3, ARCHER)
+    call CampaignAttackerEx(0, 1, 2, HUNTRESS)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
+    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
+    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
+    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
+    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, HIPPO )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
+    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
+    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
+    call CampaignAttackerEx(2, 2, 3, HIPPO)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, HIPPO )
-    call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
+    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
+    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
+    call CampaignAttackerEx(2, 2, 3, HIPPO)
+    call CampaignAttackerEx(2, 2, 3, MOUNTAIN_GIANT)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HUNTRESS )
-    call CampaignAttackerEx( 1, 2, 3, DRYAD )
-    call CampaignAttackerEx( 1, 2, 3, BALLISTA )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_TALON )
-    call CampaignAttackerEx( 2, 2, 3, DRUID_CLAW )
-    call CampaignAttackerEx( 2, 2, 3, HIPPO )
-    call CampaignAttackerEx( 2, 2, 3, MOUNTAIN_GIANT )
-    call CampaignAttackerEx( 2, 2, 3, CHIMAERA )
+    call CampaignAttackerEx(3, 4, 4, ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
+    call CampaignAttackerEx(1, 2, 3, DRYAD)
+    call CampaignAttackerEx(1, 2, 3, BALLISTA)
+    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
+    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
+    call CampaignAttackerEx(2, 2, 3, HIPPO)
+    call CampaignAttackerEx(2, 2, 3, MOUNTAIN_GIANT)
+    call CampaignAttackerEx(2, 2, 3, CHIMAERA)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -210,31 +206,29 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 4, 4, 4, ARCHER )
-        call CampaignAttackerEx( 2, 2, 2, HUNTRESS )
-        call CampaignAttackerEx( 2, 2, 2, DRYAD )
-        call CampaignAttackerEx( 2, 2, 2, BALLISTA )
-        call CampaignAttackerEx( 2, 2, 2, DRUID_TALON )
-        call CampaignAttackerEx( 3, 3, 3, DRUID_CLAW )
-        call CampaignAttackerEx( 3, 3, 3, MOUNTAIN_GIANT )
+        call CampaignAttackerEx(4, 4, 4, ARCHER)
+        call CampaignAttackerEx(2, 2, 2, HUNTRESS)
+        call CampaignAttackerEx(2, 2, 2, DRYAD)
+        call CampaignAttackerEx(2, 2, 2, BALLISTA)
+        call CampaignAttackerEx(2, 2, 2, DRUID_TALON)
+        call CampaignAttackerEx(3, 3, 3, DRUID_CLAW)
+        call CampaignAttackerEx(3, 3, 3, MOUNTAIN_GIANT)
         
         // big air army
-        call CampaignAttackerEx( 8, 10, 12, HIPPO )
-        call CampaignAttackerEx( 8, 10, 12, CHIMAERA )
-        call CampaignAttackerEx( 8, 10, 12, FAERIE_DRAGON )
+        call CampaignAttackerEx(8, 10, 12, HIPPO)
+        call CampaignAttackerEx(8, 10, 12, CHIMAERA)
+        call CampaignAttackerEx(8, 10, 12, FAERIE_DRAGON)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(MOON_WELL, function BuildExpansions, function BuildShips)
+    call MainWarlord(MOON_WELL, function BuildingStrategy)
     call ConfigureAI()
-
-    call BuildingStrategy()
 
     call AttackWaves()
 endfunction

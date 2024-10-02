@@ -1,228 +1,223 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, GNOME_TIER_1 )
-    call SetBuildUnit( 17, GNOME_ENGINEER )
-    call SetBuildUnit( 2, GNOME_CITIZEN_MALE )
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, GNOME_TIER_1)
+    call SetBuildUnit(17, GNOME_ENGINEER)
+    call SetBuildUnit(2, GNOME_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, GNOME_HOUSING )
-    call SetBuildUnit( 1, GNOME_FACTORY )
-    call SetBuildUnit( 3, GNOME_GEAR )
-    call SetBuildUnit( 2, GNOME_BRASSMAN )
-    call SetBuildUnit( 1, GNOME_ALTAR_OF_TECHNOLOGY )
-    call SetBuildUnit( 1, GNOME_TECHNOLOGY_FAIR )
+    call SetBuildUnit(2, GNOME_HOUSING)
+    call SetBuildUnit(1, GNOME_FACTORY)
+    call SetBuildUnit(3, GNOME_GEAR)
+    call SetBuildUnit(2, GNOME_BRASSMAN)
+    call SetBuildUnit(1, GNOME_ALTAR_OF_TECHNOLOGY)
+    call SetBuildUnit(1, GNOME_TECHNOLOGY_FAIR)
 
-    //call SetBuildUpgr( 1, UPG_DEFEND )
-    call SetBuildUpgr( 1, UPG_GNOME_DAMAGE )
-    call SetBuildUpgr( 1, UPG_GNOME_ARMOR )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_LEATHER )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_STR_MOON )
-    call SetBuildUpgr( 1, UPG_GNOME_ENGINEERING )
+    //call SetBuildUpgr(1, UPG_DEFEND)
+    call SetBuildUpgr(1, UPG_GNOME_DAMAGE)
+    call SetBuildUpgr(1, UPG_GNOME_ARMOR)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_LEATHER)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_STR_MOON)
+    call SetBuildUpgr(1, UPG_GNOME_ENGINEERING)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, GNOME_TIER_2 )
-    call SetBuildUnit( 1, GNOME_WORKSHOP )
-    call SetBuildUnit( 1, GNOME_FACTORY )
-    call SetBuildUnit( 1, GNOME_LABORATORY )
-    call SetBuildUnit( 4, GNOME_GEAR )
-    call SetBuildUnit( 2, GNOME_TURRET )
-    call SetBuildUnit( 2, GNOME_CITIZEN_FEMALE )
+    call SetBuildUnit(1, GNOME_TIER_2)
+    call SetBuildUnit(1, GNOME_WORKSHOP)
+    call SetBuildUnit(1, GNOME_FACTORY)
+    call SetBuildUnit(1, GNOME_LABORATORY)
+    call SetBuildUnit(4, GNOME_GEAR)
+    call SetBuildUnit(2, GNOME_TURRET)
+    call SetBuildUnit(2, GNOME_CITIZEN_FEMALE)
 
-    call SetBuildUpgr( 2, UPG_GNOME_DAMAGE )
-    call SetBuildUpgr( 2, UPG_GNOME_ARMOR )
-    //call SetBuildUpgr( 2, UPG_HIGH_ELF_LEATHER )
-    //call SetBuildUpgr( 2, UPG_HIGH_ELF_STR_MOON )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_WOOD )
-    call SetBuildUpgr( 2, UPG_GNOME_ENGINEERING )
-    call SetBuildUpgr( 1, UPG_GNOME_ARCANIST )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_PRAYING_CLERIC )
-    //call SetBuildUpgr( 1, UPG_SORCERY )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_BOWS )
+    call SetBuildUpgr(2, UPG_GNOME_DAMAGE)
+    call SetBuildUpgr(2, UPG_GNOME_ARMOR)
+    //call SetBuildUpgr(2, UPG_HIGH_ELF_LEATHER)
+    //call SetBuildUpgr(2, UPG_HIGH_ELF_STR_MOON)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_WOOD)
+    call SetBuildUpgr(2, UPG_GNOME_ENGINEERING)
+    call SetBuildUpgr(1, UPG_GNOME_ARCANIST)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_PRAYING_CLERIC)
+    //call SetBuildUpgr(1, UPG_SORCERY)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_BOWS)
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, GNOME_TIER_3 )
-    call SetBuildUnit( 5, GNOME_GEAR )
-    call SetBuildUnit( 2, GNOME_TURRET )
-    call SetBuildUnit( 1, GNOME_TELEPORTER )
-    call SetBuildUnit( 1, GNOME_AVIARY )
+    call SetBuildUnit(1, GNOME_TIER_3)
+    call SetBuildUnit(5, GNOME_GEAR)
+    call SetBuildUnit(2, GNOME_TURRET)
+    call SetBuildUnit(1, GNOME_TELEPORTER)
+    call SetBuildUnit(1, GNOME_AVIARY)
 
-    //call SetBuildUpgr( 2, UPG_HIGH_ELF_WOOD )
-    call SetBuildUpgr( 3, UPG_GNOME_DAMAGE )
-    call SetBuildUpgr( 3, UPG_GNOME_ARMOR )
-    //call SetBuildUpgr( 3, UPG_HIGH_ELF_LEATHER )
-    //call SetBuildUpgr( 3, UPG_HIGH_ELF_STR_MOON )
-    call SetBuildUpgr( 3, UPG_GNOME_ENGINEERING )
-    call SetBuildUpgr( 2, UPG_GNOME_ARCANIST )
-    //call SetBuildUpgr( 2, UPG_HIGH_ELF_PRAYING_CLERIC )
-    //call SetBuildUpgr( 2, UPG_SORCERY )
-    call SetBuildUpgr( 1, UPG_GNOME_RESISTANT_SKIN )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_MAGIC_SENTRY )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_ANIMAL )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_ANTIMAGIC )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_CLOUD )
-    call SetBuildUpgr( 1, UPG_GNOME_INVENTIONS )
-    call SetBuildUpgr( 1, UPG_GNOME_BACKPACK )
-    //call SetBuildUpgr( 1, UPG_HIGH_ELF_SUNWELL )
-    //call SetBuildUnit( 1, HIGH_ELF_SUNWELL )
-
+    //call SetBuildUpgr(2, UPG_HIGH_ELF_WOOD)
+    call SetBuildUpgr(3, UPG_GNOME_DAMAGE)
+    call SetBuildUpgr(3, UPG_GNOME_ARMOR)
+    //call SetBuildUpgr(3, UPG_HIGH_ELF_LEATHER)
+    //call SetBuildUpgr(3, UPG_HIGH_ELF_STR_MOON)
+    call SetBuildUpgr(3, UPG_GNOME_ENGINEERING)
+    call SetBuildUpgr(2, UPG_GNOME_ARCANIST)
+    //call SetBuildUpgr(2, UPG_HIGH_ELF_PRAYING_CLERIC)
+    //call SetBuildUpgr(2, UPG_SORCERY)
+    call SetBuildUpgr(1, UPG_GNOME_RESISTANT_SKIN)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_MAGIC_SENTRY)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_ANIMAL)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_ANTIMAGIC)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_CLOUD)
+    call SetBuildUpgr(1, UPG_GNOME_INVENTIONS)
+    call SetBuildUpgr(1, UPG_GNOME_BACKPACK)
+    //call SetBuildUpgr(1, UPG_HIGH_ELF_SUNWELL)
+    //call SetBuildUnit(1, HIGH_ELF_SUNWELL)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, GNOME_TIER_3)
-    call SetBuildExpa(expansions, GNOME_FACTORY)
-    call SetBuildExpa(expansions, GNOME_TURRET)
-endfunction
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, GNOME_TIER_3)
+            call SetBuildExpa(expansions, GNOME_FACTORY)
+            call SetBuildExpa(expansions, GNOME_TURRET)
+        endif
 
-function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, HUMAN_SHIPYARD )
-        call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, HUMAN_FRIGATE )
-        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
-    else
-        call SetBuildUnit( 0, HUMAN_SHIPYARD )
-        call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, HUMAN_FRIGATE )
-        call SetBuildUnit( 0, HUMAN_BATTLESHIP )
-    endif
+        if (buildShips) then
+            call SetBuildUnit(1, HUMAN_SHIPYARD)
+            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
+            call SetBuildUnit(2, HUMAN_FRIGATE)
+            call SetBuildUnit(2, HUMAN_BATTLESHIP)
+        else
+            call SetBuildUnit(0, HUMAN_SHIPYARD)
+            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
+            call SetBuildUnit(0, HUMAN_FRIGATE)
+            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx(2, 3, 3, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(0, 1, 2, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call Sleep(M3)
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 0, 1, 2, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx(2, 3, 3, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(0, 1, 2, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_HOVER_COPTER )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_HOVER_COPTER )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_HOVER_COPTER )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_HOVER_COPTER )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_MORTAR_TEAM )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
+    call CampaignAttackerEx(2, 2, 3, GNOME_MORTAR_TEAM)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GNOME_RIFLEMAN )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCHER )
-    call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_ARCH_CLERIC )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_PRIEST )
-    //call CampaignAttackerEx( 1, 2, 3, HIGH_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_HOVER_COPTER )
-    call CampaignAttackerEx( 2, 2, 3, GNOME_MORTAR_TEAM )
+    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
+    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
+    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
+    call CampaignAttackerEx(2, 2, 3, GNOME_MORTAR_TEAM)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2) // Waits 2 minutes before attacking
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -230,33 +225,31 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
 
         // small ground army
-        call CampaignAttackerEx( 4, 4, 4, GNOME_RIFLEMAN )
-        //call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_ARCHER )
-        call CampaignAttackerEx( 0, 1, 2, GNOME_FIELD_ENGINEER )
-        //call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_ARCH_CLERIC )
-        //call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_PRIEST )
-        //call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_SORCERESS )
-        call CampaignAttackerEx( 4, 4, 4, GNOME_MORTAR_TEAM )
-        call CampaignAttackerEx( 4, 4, 4, GNOME_ARTILLERY_TANK )
-        //call CampaignAttackerEx( 4, 4, 4, HIGH_ELF_KNIGHT )
-        call CampaignAttackerEx( 4, 4, 4, GNOME_FLYING_MACHINE )
+        call CampaignAttackerEx(4, 4, 4, GNOME_RIFLEMAN)
+        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_ARCHER)
+        call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
+        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_ARCH_CLERIC)
+        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_PRIEST)
+        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_SORCERESS)
+        call CampaignAttackerEx(4, 4, 4, GNOME_MORTAR_TEAM)
+        call CampaignAttackerEx(4, 4, 4, GNOME_ARTILLERY_TANK)
+        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_KNIGHT)
+        call CampaignAttackerEx(4, 4, 4, GNOME_FLYING_MACHINE)
 
         // big air army
-        call CampaignAttackerEx( 8, 12, 18, GNOME_HOVER_COPTER )
-        call CampaignAttackerEx( 8, 12, 18, GNOME_GRYPHON_RIDER )
+        call CampaignAttackerEx(8, 12, 18, GNOME_HOVER_COPTER)
+        call CampaignAttackerEx(8, 12, 18, GNOME_GRYPHON_RIDER)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2) // Waits 2 minutes before attacking
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(GNOME_GEAR, function BuildExpansions, function BuildShips)
+    call MainWarlord(GNOME_GEAR, function BuildingStrategy)
     call ConfigureAI()
-
-    call BuildingStrategy()
 
     call AttackWaves()
 endfunction

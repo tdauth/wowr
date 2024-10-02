@@ -1,228 +1,224 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, NECROPOLIS_1 )
-    call SetBuildUnit( 1, UNDEAD_MINE )
-    call SetBuildUnit( 6, ACOLYTE )
-    call SetBuildUnit( 2, UNDEAD_CITIZEN_MALE )
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, NECROPOLIS_1)
+    call SetBuildUnit(1, UNDEAD_MINE)
+    call SetBuildUnit(6, ACOLYTE)
+    call SetBuildUnit(2, UNDEAD_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    //call SetBuildUnit( 2, UNDEAD_HOUSING )
-    call SetBuildUnit( 1, GRAVEYARD )
-    call SetBuildUnit( 2, CRYPT )
-    call SetBuildUnit( 5, GHOUL ) // after crypt!
-    call SetBuildUnit( 4, ZIGGURAT_1 )
-    call SetBuildUnit( 1, UNDEAD_ALTAR )
-    call SetBuildUnit( 1, TOMB_OF_RELICS )
+    //call SetBuildUnit(2, UNDEAD_HOUSING)
+    call SetBuildUnit(1, GRAVEYARD)
+    call SetBuildUnit(2, CRYPT)
+    call SetBuildUnit(5, GHOUL) // after crypt!
+    call SetBuildUnit(4, ZIGGURAT_1)
+    call SetBuildUnit(1, UNDEAD_ALTAR)
+    call SetBuildUnit(1, TOMB_OF_RELICS)
     
-    call SetBuildUpgr( 1, UPG_UNHOLY_STR )
-    call SetBuildUpgr( 1, UPG_UNHOLY_ARMOR )
-    call SetBuildUpgr( 1, UPG_CR_ATTACK )
-    call SetBuildUpgr( 1, UPG_CR_ARMOR )
-    call SetBuildUpgr( 1, UPG_FIEND_WEB )
-    call SetBuildUpgr( 1, UPG_CANNIBALIZE )
+    call SetBuildUpgr(1, UPG_UNHOLY_STR)
+    call SetBuildUpgr(1, UPG_UNHOLY_ARMOR)
+    call SetBuildUpgr(1, UPG_CR_ATTACK)
+    call SetBuildUpgr(1, UPG_CR_ARMOR)
+    call SetBuildUpgr(1, UPG_FIEND_WEB)
+    call SetBuildUpgr(1, UPG_CANNIBALIZE)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, NECROPOLIS_2 )
-    call SetBuildUnit( 1, GRAVEYARD )
-    call SetBuildUnit( 1, DAMNED_TEMPLE )
-    call SetBuildUnit( 1, SLAUGHTERHOUSE )
+    call SetBuildUnit(1, NECROPOLIS_2)
+    call SetBuildUnit(1, GRAVEYARD)
+    call SetBuildUnit(1, DAMNED_TEMPLE)
+    call SetBuildUnit(1, SLAUGHTERHOUSE)
 
-    call SetBuildUnit( 2, UNDEAD_CITIZEN_FEMALE )
-    call SetBuildUnit( 2, UNDEAD_CHILD )
-    call SetBuildUnit( 2, UNDEAD_PET )
+    call SetBuildUnit(2, UNDEAD_CITIZEN_FEMALE)
+    call SetBuildUnit(2, UNDEAD_CHILD)
+    call SetBuildUnit(2, UNDEAD_PET)
     
-    call SetBuildUpgr( 2, UPG_UNHOLY_STR )
-    call SetBuildUpgr( 2, UPG_UNHOLY_ARMOR )
-    call SetBuildUpgr( 2, UPG_CR_ATTACK )
-    call SetBuildUpgr( 2, UPG_CR_ARMOR )
-    call SetBuildUpgr( 1, UPG_MEAT_WAGON )
-    call SetBuildUpgr( 1, UPG_FIEND_WEB )
-    call SetBuildUpgr( 1, UPG_BANSHEE )
-    call SetBuildUpgr( 1, UPG_NECROS )
-    call SetBuildUpgr( 1, UPG_SKEL_LIFE )
-    call SetBuildUpgr( 1, UPG_SKEL_MASTERY )
+    call SetBuildUpgr(2, UPG_UNHOLY_STR)
+    call SetBuildUpgr(2, UPG_UNHOLY_ARMOR)
+    call SetBuildUpgr(2, UPG_CR_ATTACK)
+    call SetBuildUpgr(2, UPG_CR_ARMOR)
+    call SetBuildUpgr(1, UPG_MEAT_WAGON)
+    call SetBuildUpgr(1, UPG_FIEND_WEB)
+    call SetBuildUpgr(1, UPG_BANSHEE)
+    call SetBuildUpgr(1, UPG_NECROS)
+    call SetBuildUpgr(1, UPG_SKEL_LIFE)
+    call SetBuildUpgr(1, UPG_SKEL_MASTERY)
 
     // Tier 3 buildings
-    call SetBuildUnit( 1, NECROPOLIS_3 )
-    call SetBuildUnit( 1, SAC_PIT )
-    call SetBuildUnit( 2, BONEYARD )
-    call SetBuildUnit( 2, ZIGGURAT_FROST )
-    call SetBuildUnit( 2, ZIGGURAT_2 )
+    call SetBuildUnit(1, NECROPOLIS_3)
+    call SetBuildUnit(1, SAC_PIT)
+    call SetBuildUnit(2, BONEYARD)
+    call SetBuildUnit(2, ZIGGURAT_FROST)
+    call SetBuildUnit(2, ZIGGURAT_2)
     
-    call SetBuildUpgr( 3, UPG_UNHOLY_STR )
-    call SetBuildUpgr( 3, UPG_UNHOLY_ARMOR )
-    call SetBuildUpgr( 3, UPG_CR_ATTACK )
-    call SetBuildUpgr( 3, UPG_CR_ARMOR )
-    call SetBuildUpgr( 2, UPG_BANSHEE )
-    call SetBuildUpgr( 2, UPG_NECROS )
-    call SetBuildUpgr( 1, UPG_SACRIFICE )
-    call SetBuildUpgr( 1, UPG_PLAGUE )
-    call SetBuildUpgr( 1, UPG_BURROWING )
-    call SetBuildUpgr( 1, UPG_STONE_FORM )
-    call SetBuildUpgr( 1, UPG_EXHUME )
-    call SetBuildUpgr( 1, UPG_GHOUL_FRENZY )
-    call SetBuildUpgr( 1, UPG_BLK_SPHINX )
-    call SetBuildUpgr( 1, UPG_WYRM_BREATH )
-    call SetBuildUpgr( 1, 'Rupm' ) // backpack
-    call SetBuildUpgr( 1, UPG_UNDEAD_LICH_KING )
+    call SetBuildUpgr(3, UPG_UNHOLY_STR)
+    call SetBuildUpgr(3, UPG_UNHOLY_ARMOR)
+    call SetBuildUpgr(3, UPG_CR_ATTACK)
+    call SetBuildUpgr(3, UPG_CR_ARMOR)
+    call SetBuildUpgr(2, UPG_BANSHEE)
+    call SetBuildUpgr(2, UPG_NECROS)
+    call SetBuildUpgr(1, UPG_SACRIFICE)
+    call SetBuildUpgr(1, UPG_PLAGUE)
+    call SetBuildUpgr(1, UPG_BURROWING)
+    call SetBuildUpgr(1, UPG_STONE_FORM)
+    call SetBuildUpgr(1, UPG_EXHUME)
+    call SetBuildUpgr(1, UPG_GHOUL_FRENZY)
+    call SetBuildUpgr(1, UPG_BLK_SPHINX)
+    call SetBuildUpgr(1, UPG_WYRM_BREATH)
+    call SetBuildUpgr(1, 'Rupm') // backpack
+    call SetBuildUpgr(1, UPG_UNDEAD_LICH_KING)
 
-    call SetBuildUnit( 1, UNDEAD_LICH_KING )
+    call SetBuildUnit(1, UNDEAD_LICH_KING)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, NECROPOLIS_3)
-    call SetBuildExpa(expansions, GRAVEYARD)
-    call SetBuildExpa(expansions, ZIGGURAT_2)
-endfunction
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, NECROPOLIS_3)
+            call SetBuildExpa(expansions, GRAVEYARD)
+            call SetBuildExpa(expansions, ZIGGURAT_2)
+        endif
 
-function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, UNDEAD_SHIPYARD )
-        call SetBuildUnit( 1, UNDEAD_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, UNDEAD_FRIGATE )
-        call SetBuildUnit( 2, UNDEAD_BATTLESHIP )
-    else
-        call SetBuildUnit( 0, UNDEAD_SHIPYARD )
-        call SetBuildUnit( 0, UNDEAD_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, UNDEAD_FRIGATE )
-        call SetBuildUnit( 0, UNDEAD_BATTLESHIP )
-    endif
+        if (buildShips) then
+            call SetBuildUnit(1, UNDEAD_SHIPYARD)
+            call SetBuildUnit(1, UNDEAD_TRANSPORT_SHIP)
+            call SetBuildUnit(2, UNDEAD_FRIGATE)
+            call SetBuildUnit(2, UNDEAD_BATTLESHIP)
+        else
+            call SetBuildUnit(0, UNDEAD_SHIPYARD)
+            call SetBuildUnit(0, UNDEAD_TRANSPORT_SHIP)
+            call SetBuildUnit(0, UNDEAD_FRIGATE)
+            call SetBuildUnit(0, UNDEAD_BATTLESHIP)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, GHOUL )
-    call CampaignAttackerEx( 0, 1, 2, PIT_FIEND )
+    call CampaignAttackerEx(2, 3, 3, GHOUL)
+    call CampaignAttackerEx(0, 1, 2, PIT_FIEND)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call Sleep(M3)
     call LaunchAttack()
 
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, GHOUL )
-    call CampaignAttackerEx( 0, 1, 2, PIT_FIEND )
+    call CampaignAttackerEx(2, 3, 3, GHOUL)
+    call CampaignAttackerEx(0, 1, 2, PIT_FIEND)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
-    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
+    call CampaignAttackerEx(2, 2, 3, OBSIDIAN_STATUE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
-    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
+    call CampaignAttackerEx(2, 2, 3, OBSIDIAN_STATUE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
-    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
-    call CampaignAttackerEx( 2, 2, 3, NECRO )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
+    call CampaignAttackerEx(2, 2, 3, OBSIDIAN_STATUE)
+    call CampaignAttackerEx(2, 2, 3, NECRO)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
-    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
-    call CampaignAttackerEx( 2, 2, 3, NECRO )
-    call CampaignAttackerEx( 2, 2, 3, BANSHEE )
-    call CampaignAttackerEx( 2, 2, 3, ABOMINATION )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
+    call CampaignAttackerEx(2, 2, 3, OBSIDIAN_STATUE)
+    call CampaignAttackerEx(2, 2, 3, NECRO)
+    call CampaignAttackerEx(2, 2, 3, BANSHEE)
+    call CampaignAttackerEx(2, 2, 3, ABOMINATION)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
-    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
-    call CampaignAttackerEx( 2, 2, 3, NECRO )
-    call CampaignAttackerEx( 2, 2, 3, BANSHEE )
-    call CampaignAttackerEx( 2, 2, 3, ABOMINATION )
-    call CampaignAttackerEx( 2, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 1, 2, BLK_SPHINX )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
+    call CampaignAttackerEx(2, 2, 3, OBSIDIAN_STATUE)
+    call CampaignAttackerEx(2, 2, 3, NECRO)
+    call CampaignAttackerEx(2, 2, 3, BANSHEE)
+    call CampaignAttackerEx(2, 2, 3, ABOMINATION)
+    call CampaignAttackerEx(2, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 1, 2, BLK_SPHINX)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, GHOUL )
-    call CampaignAttackerEx( 1, 2, 3, PIT_FIEND )
-    call CampaignAttackerEx( 1, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 1, 2, 3, MEAT_WAGON )
-    call CampaignAttackerEx( 2, 2, 3, OBSIDIAN_STATUE )
-    call CampaignAttackerEx( 2, 2, 3, NECRO )
-    call CampaignAttackerEx( 2, 2, 3, BANSHEE )
-    call CampaignAttackerEx( 2, 2, 3, ABOMINATION )
-    call CampaignAttackerEx( 2, 2, 3, GARGOYLE )
-    call CampaignAttackerEx( 2, 2, 3, FROST_WYRM )
-    call CampaignAttackerEx( 1, 1, 2, BLK_SPHINX )
+    call CampaignAttackerEx(3, 4, 4, GHOUL)
+    call CampaignAttackerEx(1, 2, 3, PIT_FIEND)
+    call CampaignAttackerEx(1, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(1, 2, 3, MEAT_WAGON)
+    call CampaignAttackerEx(2, 2, 3, OBSIDIAN_STATUE)
+    call CampaignAttackerEx(2, 2, 3, NECRO)
+    call CampaignAttackerEx(2, 2, 3, BANSHEE)
+    call CampaignAttackerEx(2, 2, 3, ABOMINATION)
+    call CampaignAttackerEx(2, 2, 3, GARGOYLE)
+    call CampaignAttackerEx(2, 2, 3, FROST_WYRM)
+    call CampaignAttackerEx(1, 1, 2, BLK_SPHINX)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -230,31 +226,29 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 2, 2, 2, GHOUL )
-        call CampaignAttackerEx( 2, 2, 2, PIT_FIEND )
-        call CampaignAttackerEx( 2, 2, 2, MEAT_WAGON )
-        call CampaignAttackerEx( 2, 2, 2, OBSIDIAN_STATUE )
-        call CampaignAttackerEx( 2, 2, 2, NECRO )
-        call CampaignAttackerEx( 2, 2, 2, BANSHEE )
-        call CampaignAttackerEx( 2, 2, 3, ABOMINATION )
+        call CampaignAttackerEx(2, 2, 2, GHOUL)
+        call CampaignAttackerEx(2, 2, 2, PIT_FIEND)
+        call CampaignAttackerEx(2, 2, 2, MEAT_WAGON)
+        call CampaignAttackerEx(2, 2, 2, OBSIDIAN_STATUE)
+        call CampaignAttackerEx(2, 2, 2, NECRO)
+        call CampaignAttackerEx(2, 2, 2, BANSHEE)
+        call CampaignAttackerEx(2, 2, 3, ABOMINATION)
         
         // big air army
-        call CampaignAttackerEx( 10, 12, 14, GARGOYLE )
-        call CampaignAttackerEx( 8, 10, 12, BLK_SPHINX )
-        call CampaignAttackerEx( 8, 10, 12, FROST_WYRM )
+        call CampaignAttackerEx(10, 12, 14, GARGOYLE)
+        call CampaignAttackerEx(8, 10, 12, BLK_SPHINX)
+        call CampaignAttackerEx(8, 10, 12, FROST_WYRM)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(ZIGGURAT_1, function BuildExpansions, function BuildShips)
+    call MainWarlord(ZIGGURAT_1, function BuildingStrategy)
     call ConfigureAI()
-
-    call BuildingStrategy()
 
     call AttackWaves()
 endfunction

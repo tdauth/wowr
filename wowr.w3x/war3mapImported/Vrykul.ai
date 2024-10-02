@@ -1,212 +1,208 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, VRYKUL_TIER_1 )
-    call SetBuildUnit( 17, VRYKUL_WORKER )
-    call SetBuildUnit( 2, VRYKUL_CITIZEN_MALE )
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, VRYKUL_TIER_1)
+    call SetBuildUnit(17, VRYKUL_WORKER)
+    call SetBuildUnit(2, VRYKUL_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, VRYKUL_HOUSING )
-    call SetBuildUnit( 3, VRYKUL_FISHER_HOUSE )
-    call SetBuildUnit( 2, VRYKUL_LONGHOUSE )
-    call SetBuildUnit( 1, VRYKUL_ALTAR )
-    call SetBuildUnit( 1, VRYKUL_BLACKSMITH )
-    call SetBuildUnit( 1, VRYKUL_INN )
+    call SetBuildUnit(2, VRYKUL_HOUSING)
+    call SetBuildUnit(3, VRYKUL_FISHER_HOUSE)
+    call SetBuildUnit(2, VRYKUL_LONGHOUSE)
+    call SetBuildUnit(1, VRYKUL_ALTAR)
+    call SetBuildUnit(1, VRYKUL_BLACKSMITH)
+    call SetBuildUnit(1, VRYKUL_INN)
     
-    call SetBuildUpgr( 1, UPG_VRYKUL_DEFEND )
-    call SetBuildUpgr( 1, UPG_VRYKUL_SPIKED_SHELL )
-    call SetBuildUpgr( 1, UPG_VRYKUL_IRON_SWORDS )
-    call SetBuildUpgr( 1, UPG_VRYKUL_IRON_PLATING )
-    call SetBuildUpgr( 1, UPG_VRYKUL_CREATURE_SKIN )
-    call SetBuildUpgr( 1, UPG_VRYKUL_CREATURE_ATTACK )
+    call SetBuildUpgr(1, UPG_VRYKUL_DEFEND)
+    call SetBuildUpgr(1, UPG_VRYKUL_SPIKED_SHELL)
+    call SetBuildUpgr(1, UPG_VRYKUL_IRON_SWORDS)
+    call SetBuildUpgr(1, UPG_VRYKUL_IRON_PLATING)
+    call SetBuildUpgr(1, UPG_VRYKUL_CREATURE_SKIN)
+    call SetBuildUpgr(1, UPG_VRYKUL_CREATURE_ATTACK)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, VRYKUL_TIER_2 )
-    call SetBuildUnit( 1, VRYKUL_BLACKSMITH )
-    call SetBuildUnit( 1, VRYKUL_BEASTIARY )
-    call SetBuildUnit( 1, VRYKUL_VALKYR_TEMPLE )
-    call SetBuildUnit( 4, VRYKUL_FISHER_HOUSE )
-    call SetBuildUnit( 2, VRYKUL_LAMP )
-    call SetBuildUnit( 2, VRYKUL_CITIZEN_FEMALE )
+    call SetBuildUnit(1, VRYKUL_TIER_2)
+    call SetBuildUnit(1, VRYKUL_BLACKSMITH)
+    call SetBuildUnit(1, VRYKUL_BEASTIARY)
+    call SetBuildUnit(1, VRYKUL_VALKYR_TEMPLE)
+    call SetBuildUnit(4, VRYKUL_FISHER_HOUSE)
+    call SetBuildUnit(2, VRYKUL_LAMP)
+    call SetBuildUnit(2, VRYKUL_CITIZEN_FEMALE)
     
-    call SetBuildUpgr( 2, UPG_VRYKUL_IRON_SWORDS )
-    call SetBuildUpgr( 2, UPG_VRYKUL_IRON_PLATING )
-    call SetBuildUpgr( 2, UPG_VRYKUL_CREATURE_SKIN )
-    call SetBuildUpgr( 2, UPG_VRYKUL_CREATURE_ATTACK )
-    call SetBuildUpgr( 1, UPG_VRYKUL_GIANTS )
-    call SetBuildUpgr( 1, UPG_VRYKUL_LUMBER )
-    call SetBuildUpgr( 1, UPG_VRYKUL_VALKYR_GOLDEN )
-    call SetBuildUpgr( 1, UPG_VRYKUL_VALKYR_DARK )
-    call SetBuildUpgr( 1, UPG_VRYKUL_RUNECARVER )
+    call SetBuildUpgr(2, UPG_VRYKUL_IRON_SWORDS)
+    call SetBuildUpgr(2, UPG_VRYKUL_IRON_PLATING)
+    call SetBuildUpgr(2, UPG_VRYKUL_CREATURE_SKIN)
+    call SetBuildUpgr(2, UPG_VRYKUL_CREATURE_ATTACK)
+    call SetBuildUpgr(1, UPG_VRYKUL_GIANTS)
+    call SetBuildUpgr(1, UPG_VRYKUL_LUMBER)
+    call SetBuildUpgr(1, UPG_VRYKUL_VALKYR_GOLDEN)
+    call SetBuildUpgr(1, UPG_VRYKUL_VALKYR_DARK)
+    call SetBuildUpgr(1, UPG_VRYKUL_RUNECARVER)
     
     // Tier 3 buildings
-    call SetBuildUnit( 1, VRYKUL_TIER_3 )
-    call SetBuildUnit( 5, VRYKUL_FISHER_HOUSE )
-    call SetBuildUnit( 2, VRYKUL_LAMP )
-    call SetBuildUnit( 1, VRYKUL_PROTO_DRAKE_ROOST )
-    //call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )
+    call SetBuildUnit(1, VRYKUL_TIER_3)
+    call SetBuildUnit(5, VRYKUL_FISHER_HOUSE)
+    call SetBuildUnit(2, VRYKUL_LAMP)
+    call SetBuildUnit(1, VRYKUL_PROTO_DRAKE_ROOST)
+    //call SetBuildUnit(1, BLOOD_ELF_WORKSHOP)
 
-    call SetBuildUpgr( 3, UPG_VRYKUL_GIANTS )
-    call SetBuildUpgr( 3, UPG_VRYKUL_IRON_SWORDS )
-    call SetBuildUpgr( 3, UPG_VRYKUL_IRON_PLATING )
-    call SetBuildUpgr( 3, UPG_VRYKUL_CREATURE_SKIN )
-    call SetBuildUpgr( 3, UPG_VRYKUL_CREATURE_ATTACK )
-    call SetBuildUpgr( 3, UPG_VRYKUL_LUMBER )
-    call SetBuildUpgr( 2, UPG_VRYKUL_VALKYR_GOLDEN )
-    call SetBuildUpgr( 2, UPG_VRYKUL_VALKYR_DARK )
-    call SetBuildUpgr( 2, UPG_VRYKUL_RUNECARVER )
-    call SetBuildUpgr( 1, UPG_VRYKUL_DEVOUR )
-    call SetBuildUpgr( 1, UPG_VRYKUL_RESISTANT_SKIN )
-    call SetBuildUpgr( 1, UPG_VRYKUL_ULTRAVISION )
-    call SetBuildUpgr( 1, UPG_VRYKUL_BACKPACK )
-    call SetBuildUpgr( 1, UPG_VRYKUL_HALLS_OF_VALOR )
-    call SetBuildUnit( 1, VRYKUL_HALL_OF_VALOR )
+    call SetBuildUpgr(3, UPG_VRYKUL_GIANTS)
+    call SetBuildUpgr(3, UPG_VRYKUL_IRON_SWORDS)
+    call SetBuildUpgr(3, UPG_VRYKUL_IRON_PLATING)
+    call SetBuildUpgr(3, UPG_VRYKUL_CREATURE_SKIN)
+    call SetBuildUpgr(3, UPG_VRYKUL_CREATURE_ATTACK)
+    call SetBuildUpgr(3, UPG_VRYKUL_LUMBER)
+    call SetBuildUpgr(2, UPG_VRYKUL_VALKYR_GOLDEN)
+    call SetBuildUpgr(2, UPG_VRYKUL_VALKYR_DARK)
+    call SetBuildUpgr(2, UPG_VRYKUL_RUNECARVER)
+    call SetBuildUpgr(1, UPG_VRYKUL_DEVOUR)
+    call SetBuildUpgr(1, UPG_VRYKUL_RESISTANT_SKIN)
+    call SetBuildUpgr(1, UPG_VRYKUL_ULTRAVISION)
+    call SetBuildUpgr(1, UPG_VRYKUL_BACKPACK)
+    call SetBuildUpgr(1, UPG_VRYKUL_HALLS_OF_VALOR)
+    call SetBuildUnit(1, VRYKUL_HALL_OF_VALOR)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, VRYKUL_TIER_3)
-    call SetBuildExpa(expansions, VRYKUL_BLACKSMITH)
-    call SetBuildExpa(expansions, VRYKUL_LAMP)
-endfunction
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, VRYKUL_TIER_3)
+            call SetBuildExpa(expansions, VRYKUL_BLACKSMITH)
+            call SetBuildExpa(expansions, VRYKUL_LAMP)
+        endif
 
-function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, VRYKUL_SHIPYARD )
-        call SetBuildUnit( 10, VRYKUL_RAKKAR_SHIP )
-    else
-        call SetBuildUnit( 0, VRYKUL_SHIPYARD )
-        call SetBuildUnit( 0, VRYKUL_RAKKAR_SHIP )
-    endif
+        if (buildShips) then
+            call SetBuildUnit(1, VRYKUL_SHIPYARD)
+            call SetBuildUnit(10, VRYKUL_RAKKAR_SHIP)
+        else
+            call SetBuildUnit(0, VRYKUL_SHIPYARD)
+            call SetBuildUnit(0, VRYKUL_RAKKAR_SHIP)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 0, 1, 2, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx(2, 3, 3, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(0, 1, 2, VRYKUL_SPEAR_CARRIER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call Sleep(M3)
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 0, 1, 2, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx(2, 3, 3, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(0, 1, 2, VRYKUL_SPEAR_CARRIER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1)
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_DARK)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
-    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_DARK)
+    call CampaignAttackerEx(2, 2, 3, VRYKUL_PROTO_DRAKE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
-    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_DARK)
+    call CampaignAttackerEx(2, 2, 3, VRYKUL_PROTO_DRAKE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
-    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_DARK)
+    call CampaignAttackerEx(2, 2, 3, VRYKUL_PROTO_DRAKE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
-    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_DARK)
+    call CampaignAttackerEx(2, 2, 3, VRYKUL_PROTO_DRAKE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, VRYKUL_WARRIOR )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_SPEAR_CARRIER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH_RIDER )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_GOLDEN )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_VALKYR_DARK )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_ARMORED_WOLF )
-    call CampaignAttackerEx( 1, 2, 3, VRYKUL_MAMMOTH )
-    call CampaignAttackerEx( 2, 2, 3, VRYKUL_PROTO_DRAKE )
+    call CampaignAttackerEx(3, 4, 4, VRYKUL_WARRIOR)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_SPEAR_CARRIER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH_RIDER)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_GOLDEN)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_VALKYR_DARK)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_ARMORED_WOLF)
+    call CampaignAttackerEx(1, 2, 3, VRYKUL_MAMMOTH)
+    call CampaignAttackerEx(2, 2, 3, VRYKUL_PROTO_DRAKE)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -214,33 +210,31 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_WARRIOR )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_SPEAR_CARRIER )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_SPEAR_CARRIER )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_MAMMOTH_RIDER )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_VALKYR_GOLDEN )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_VALKYR_DARK )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_UNDEAD_VRYKUL )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_RUNECARVER )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_ARMORED_WOLF )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_MAMMOTH )
-        call CampaignAttackerEx( 4, 4, 4, VRYKUL_GIANT_POLAR_BEAR )
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_WARRIOR)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_SPEAR_CARRIER)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_SPEAR_CARRIER)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_MAMMOTH_RIDER)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_VALKYR_GOLDEN)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_VALKYR_DARK)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_UNDEAD_VRYKUL)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_RUNECARVER)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_ARMORED_WOLF)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_MAMMOTH)
+        call CampaignAttackerEx(4, 4, 4, VRYKUL_GIANT_POLAR_BEAR)
 
         // big air army
-        call CampaignAttackerEx( 8, 12, 18, VRYKUL_PROTO_DRAKE )
+        call CampaignAttackerEx(8, 12, 18, VRYKUL_PROTO_DRAKE)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(VRYKUL_FISHER_HOUSE, function BuildExpansions, function BuildShips)
+    call MainWarlord(VRYKUL_FISHER_HOUSE, function BuildingStrategy)
     call ConfigureAI()
-
-    call BuildingStrategy()
 
     call AttackWaves()
 endfunction

@@ -1,227 +1,223 @@
 function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
     // Tier 1 Buildings
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, BLOOD_ELF_TOWN_HALL )
-    call SetBuildUnit( 17, BLOOD_PEASANT )
-    call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_MALE )
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, BLOOD_ELF_TOWN_HALL)
+    call SetBuildUnit(17, BLOOD_PEASANT)
+    call SetBuildUnit(2, BLOOD_ELF_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit( 2, BLOOD_ELF_HOUSING )
-    call SetBuildUnit( 3, BLOOD_ELF_FARM )
-    call SetBuildUnit( 2, BLOOD_ELF_BARRACKS )
-    call SetBuildUnit( 1, BLOOD_ELF_ALTAR )
-    call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
-    call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
-    call SetBuildUnit( 1, BLOOD_ELF_ARCANE_VAULT )
+    call SetBuildUnit(2, BLOOD_ELF_HOUSING)
+    call SetBuildUnit(3, BLOOD_ELF_FARM)
+    call SetBuildUnit(2, BLOOD_ELF_BARRACKS)
+    call SetBuildUnit(1, BLOOD_ELF_ALTAR)
+    call SetBuildUnit(1, BLOOD_ELF_LUMBER_MILL)
+    call SetBuildUnit(1, BLOOD_ELF_BLACK_SMITH)
+    call SetBuildUnit(1, BLOOD_ELF_ARCANE_VAULT)
     
-    call SetBuildUpgr( 1, UPG_DEFEND )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_MELEE )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_ARMOR )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_LEATHER )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_MOON_ARMOR )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_STR_MOON )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_MASONRY )
+    call SetBuildUpgr(1, UPG_DEFEND)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_MELEE)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_ARMOR)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_LEATHER)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_MOON_ARMOR)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_STR_MOON)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_MASONRY)
 
     // Tier 2 buildings
-    call SetBuildUnit( 1, BLOOD_ELF_KEEP )
-    call SetBuildUnit( 1, BLOOD_ELF_LUMBER_MILL )
-    call SetBuildUnit( 1, BLOOD_ELF_BLACK_SMITH )
-    call SetBuildUnit( 1, BLOOD_ELF_ARCANE_SACNTUM )
-    call SetBuildUnit( 4, BLOOD_ELF_FARM )
-    call SetBuildUnit( 2, BLOOD_ELF_SCOUT_TOWER )
-    call SetBuildUnit( 2, BLOOD_ELF_CITIZEN_FEMALE )
-    call SetBuildUnit( 2, BLOOD_ELF_CHILD )
-    call SetBuildUnit( 2, BLOOD_ELF_PET )
+    call SetBuildUnit(1, BLOOD_ELF_KEEP)
+    call SetBuildUnit(1, BLOOD_ELF_LUMBER_MILL)
+    call SetBuildUnit(1, BLOOD_ELF_BLACK_SMITH)
+    call SetBuildUnit(1, BLOOD_ELF_ARCANE_SACNTUM)
+    call SetBuildUnit(4, BLOOD_ELF_FARM)
+    call SetBuildUnit(2, BLOOD_ELF_SCOUT_TOWER)
+    call SetBuildUnit(2, BLOOD_ELF_CITIZEN_FEMALE)
+    call SetBuildUnit(2, BLOOD_ELF_CHILD)
+    call SetBuildUnit(2, BLOOD_ELF_PET)
     
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_MELEE )
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_ARMOR )
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_LEATHER )
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_MOON_ARMOR )
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_STR_MOON )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_WOOD )
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_MASONRY )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_PRAYING )
-    call SetBuildUpgr( 1, UPG_SORCERY )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_BOWS )
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_MELEE)
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_ARMOR)
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_LEATHER)
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_MOON_ARMOR)
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_STR_MOON)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_WOOD)
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_MASONRY)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_PRAYING)
+    call SetBuildUpgr(1, UPG_SORCERY)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_BOWS)
     
     // Tier 3 buildings
-    call SetBuildUnit( 1, BLOOD_ELF_CASTLE )
-    call SetBuildUnit( 5, BLOOD_ELF_FARM )
-    call SetBuildUnit( 1, BLOOD_ELF_GUARD_TOWER )
-    call SetBuildUnit( 1, BLOOD_ELF_ARCANE_TOWER )
-    call SetBuildUnit( 1, BLOOD_ELF_PHOENIX_EGG )
-    call SetBuildUnit( 1, BLOOD_ELF_WORKSHOP )
+    call SetBuildUnit(1, BLOOD_ELF_CASTLE)
+    call SetBuildUnit(5, BLOOD_ELF_FARM)
+    call SetBuildUnit(1, BLOOD_ELF_GUARD_TOWER)
+    call SetBuildUnit(1, BLOOD_ELF_ARCANE_TOWER)
+    call SetBuildUnit(1, BLOOD_ELF_PHOENIX_EGG)
+    call SetBuildUnit(1, BLOOD_ELF_WORKSHOP)
 
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_WOOD )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_MELEE )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_ARMOR )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_LEATHER )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_MOON_ARMOR )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_STR_MOON )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_MASONRY )
-    call SetBuildUpgr( 2, UPG_BLOOD_ELF_PRAYING )
-    call SetBuildUpgr( 2, UPG_SORCERY )
-    call SetBuildUpgr( 3, UPG_BLOOD_ELF_IMPROVED_SIEGE )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_BURNING_OIL )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_BREEDING )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_MARKSMAN )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_CONT_MAGIC )
-    call SetBuildUpgr( 1, UPG_SENTINEL )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_CLOUD )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_SIPHON_MANA )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_BACKPACK )
-    call SetBuildUpgr( 1, UPG_BLOOD_ELF_MAGIC_VAULT )
-    call SetBuildUnit( 1, BLOOD_ELF_MAGIC_VAULT )
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_WOOD)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_MELEE)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_ARMOR)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_LEATHER)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_MOON_ARMOR)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_STR_MOON)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_MASONRY)
+    call SetBuildUpgr(2, UPG_BLOOD_ELF_PRAYING)
+    call SetBuildUpgr(2, UPG_SORCERY)
+    call SetBuildUpgr(3, UPG_BLOOD_ELF_IMPROVED_SIEGE)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_BURNING_OIL)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_BREEDING)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_MARKSMAN)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_CONT_MAGIC)
+    call SetBuildUpgr(1, UPG_SENTINEL)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_CLOUD)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_SIPHON_MANA)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_BACKPACK)
+    call SetBuildUpgr(1, UPG_BLOOD_ELF_MAGIC_VAULT)
+    call SetBuildUnit(1, BLOOD_ELF_MAGIC_VAULT)
 
     call BuildingStrategyStandardTier3()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
 
-function BuildExpansions takes nothing returns nothing
-    call SetBuildExpa(expansions, BLOOD_ELF_CASTLE)
-    call SetBuildExpa(expansions, BLOOD_ELF_LUMBER_MILL)
-    call SetBuildExpa(expansions, BLOOD_ELF_GUARD_TOWER)
-endfunction
+    loop
+        if (expansions > 0) then
+            call SetBuildExpa(expansions, BLOOD_ELF_CASTLE)
+            call SetBuildExpa(expansions, BLOOD_ELF_LUMBER_MILL)
+            call SetBuildExpa(expansions, BLOOD_ELF_GUARD_TOWER)
+        endif
 
-function BuildShips takes nothing returns nothing
-    if (buildShips) then
-        call SetBuildUnit( 1, HUMAN_SHIPYARD )
-        call SetBuildUnit( 1, HUMAN_TRANSPORT_SHIP )
-        call SetBuildUnit( 2, HUMAN_FRIGATE )
-        call SetBuildUnit( 2, HUMAN_BATTLESHIP )
-    else
-        call SetBuildUnit( 0, HUMAN_SHIPYARD )
-        call SetBuildUnit( 0, HUMAN_TRANSPORT_SHIP )
-        call SetBuildUnit( 0, HUMAN_FRIGATE )
-        call SetBuildUnit( 0, HUMAN_BATTLESHIP )
-    endif
+        if (buildShips) then
+            call SetBuildUnit(1, HUMAN_SHIPYARD)
+            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
+            call SetBuildUnit(2, HUMAN_FRIGATE)
+            call SetBuildUnit(2, HUMAN_BATTLESHIP)
+        else
+            call SetBuildUnit(0, HUMAN_SHIPYARD)
+            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
+            call SetBuildUnit(0, HUMAN_FRIGATE)
+            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+        endif
+
+        call Sleep(M1)
+    endloop
 endfunction
 
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
+    call CampaignAttackerEx(2, 3, 3, HIGH_SWORDMAN)
+    call CampaignAttackerEx(0, 1, 2, HIGH_ARCHER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M3 ) // Waits 3 minutes before attacking
+    call Sleep(M3) // Waits 3 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 2, 3, 3, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 0, 1, 2, HIGH_ARCHER )
+    call CampaignAttackerEx(2, 3, 3, HIGH_SWORDMAN)
+    call CampaignAttackerEx(0, 1, 2, HIGH_ARCHER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M1 ) // Waits 1 minute before attacking
+    call Sleep(M1) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SORCERESS )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_DRAGON_HAWK)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_DRAGON_HAWK)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_DRAGON_HAWK)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_DRAGON_HAWK)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_LIEUTENANT)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx( 3, 4, 4, HIGH_SWORDMAN )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, HIGH_ARCHER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SPELL_BREAKER )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_PRIEST )
-    call CampaignAttackerEx( 1, 2, 3, BLOOD_ELF_SORCERESS )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_DRAGON_HAWK )
-    call CampaignAttackerEx( 2, 2, 3, BLOOD_ELF_LIEUTENANT )
+    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_DRAGON_HAWK)
+    call CampaignAttackerEx(2, 2, 3, BLOOD_ELF_LIEUTENANT)
     call AddStandardUnitsToAttackWave()
-    call Sleep( M2 ) // Waits 2 minutes before attacking
+    call Sleep(M2)
     call LaunchAttack()
 
     loop //Init the infinite attack loop
@@ -229,33 +225,31 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx( 4, 4, 4, HIGH_SWORDMAN )
-        call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-        call CampaignAttackerEx( 4, 4, 4, HIGH_ARCHER )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_SPELL_BREAKER )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_PRIEST )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_SORCERESS )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_LIEUTENANT )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_WAGON )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_BALLISTA )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_CAGE )
-        call CampaignAttackerEx( 4, 4, 4, BLOOD_ELF_DECIMATOR )
+        call CampaignAttackerEx(4, 4, 4, HIGH_SWORDMAN)
+        call CampaignAttackerEx(4, 4, 4, HIGH_ARCHER)
+        call CampaignAttackerEx(4, 4, 4, HIGH_ARCHER)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_SPELL_BREAKER)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_PRIEST)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_SORCERESS)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_LIEUTENANT)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_WAGON)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_BALLISTA)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_CAGE)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_DECIMATOR)
         
         // big air army
-        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_DRAGON_HAWK )
-        call CampaignAttackerEx( 8, 12, 18, BLOOD_ELF_PHOENIX )
+        call CampaignAttackerEx(8, 12, 18, BLOOD_ELF_DRAGON_HAWK)
+        call CampaignAttackerEx(8, 12, 18, BLOOD_ELF_PHOENIX)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep( M2 ) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(BLOOD_ELF_FARM, function BuildExpansions, function BuildShips)
-
-    call BuildingStrategy()
+    call MainWarlord(BLOOD_ELF_FARM, function BuildingStrategy)
 
     call AttackWaves()
 endfunction
