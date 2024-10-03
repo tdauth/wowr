@@ -60,12 +60,12 @@ function BuildingStrategy takes nothing returns nothing
         endif
 
         if (buildShips) then
-            call SetBuildUnit(1, ELF_SHIPYARD)
+            call SetBuildUnit(1, NAGA_SHIPYARD)
             call SetBuildUnit(1, ELF_TRANSPORT_SHIP)
             call SetBuildUnit(2, ELF_FRIGATE)
             call SetBuildUnit(2, ELF_BATTLESHIP)
         else
-            call SetBuildUnit(0, ELF_SHIPYARD)
+            call SetBuildUnit(0, NAGA_SHIPYARD)
             call SetBuildUnit(0, ELF_TRANSPORT_SHIP)
             call SetBuildUnit(0, ELF_FRIGATE)
             call SetBuildUnit(0, ELF_BATTLESHIP)

@@ -71,15 +71,17 @@ function BuildingStrategy takes nothing returns nothing
         endif
 
         if (buildShips) then
-            call SetBuildUnit(1, HUMAN_SHIPYARD)
+            call SetBuildUnit(1, DWARF_SHIPYARD)
             call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
             call SetBuildUnit(2, HUMAN_FRIGATE)
             call SetBuildUnit(2, HUMAN_BATTLESHIP)
+            call SetBuildUnit(2, DWARF_SUBMARINE)
         else
-            call SetBuildUnit(0, HUMAN_SHIPYARD)
+            call SetBuildUnit(0, DWARF_SHIPYARD)
             call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
             call SetBuildUnit(0, HUMAN_FRIGATE)
             call SetBuildUnit(0, HUMAN_BATTLESHIP)
+            call SetBuildUnit(0, DWARF_SUBMARINE)
         endif
 
         call Sleep(M1)

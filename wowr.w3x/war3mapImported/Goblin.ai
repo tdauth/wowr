@@ -63,15 +63,17 @@ function BuildingStrategy takes nothing returns nothing
         endif
 
         if (buildShips) then
-            call SetBuildUnit(1, ORC_SHIPYARD)
+            call SetBuildUnit(1, GOBLIN_SHIPYARD)
             call SetBuildUnit(1, ORC_TRANSPORT_SHIP)
             call SetBuildUnit(2, ORC_FRIGATE)
             call SetBuildUnit(2, ORC_JUGGERNAUGHT)
+            call SetBuildUnit(2, GOBLIN_SUBMARINE)
         else
-            call SetBuildUnit(0, ORC_SHIPYARD)
+            call SetBuildUnit(0, GOBLIN_SHIPYARD)
             call SetBuildUnit(0, ORC_TRANSPORT_SHIP)
             call SetBuildUnit(0, ORC_FRIGATE)
             call SetBuildUnit(0, ORC_JUGGERNAUGHT)
+            call SetBuildUnit(0, GOBLIN_SUBMARINE)
         endif
 
         call Sleep(M1)

@@ -3148,6 +3148,7 @@ globals
     constant integer BLOOD_ELF_WORKSHOP                              = 'h013' // workshop
     constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h04P' // aviary
     constant integer BLOOD_ELF_MAGIC_VAULT                           = 'n038' // special building
+    constant integer BLOOD_ELF_SHIPYARD                              = 'h0WJ'
 
     constant integer UPG_BLOOD_ELF_BACKPACK                          = 'R0DY'
     constant integer UPG_BLOOD_ELF_BREEDING                          = 'R000'
@@ -3194,6 +3195,7 @@ globals
     constant integer NAGA_SERPENT_PYRAMID                            = 'n05P'
     constant integer NAGA_PORTAL                                     = 'h0Y6'
     constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
+    constant integer NAGA_SHIPYARD                                   = 'e00O'
 
     constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
     constant integer UPG_NAGA_SORCEROR                               = 'R0IH' // spellbreaker
@@ -3225,8 +3227,9 @@ globals
     constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
     constant integer DEMON_LEGION_TRANSPORTER                        = 'u019'
     constant integer DEMON_SACRIFICAL_PIT                            = 'u01A'
-    constant integer DEMON_BOOK_OF_SUMMONING                         = 'n039' // special building
-    constant integer DEMON_OUTLAND_DIMENSIONAL_GATE                  = 'o00H' // special building
+    constant integer DEMON_BOOK_OF_SUMMONING                         = 'n039' // special building 1
+    constant integer DEMON_OUTLAND_DIMENSIONAL_GATE                  = 'o00H' // special building 2
+    constant integer DEMON_SHIPYARD                                  = 'u017'
 
     constant integer DEMON_IMP                                       = 'u006' // worker
     constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
@@ -3290,8 +3293,7 @@ globals
     constant integer DRAENEI_BOULDER_TOWER                           = 'nbt1'
     constant integer DRAENEI_ADVANCED_BOULDER_TOWER                  = 'nbt2'
     constant integer DRAENEI_PRISON                                  = 'o00K'
-
-
+    constant integer DRAENEI_SHIPYARD                                = 'o00A'
 
     constant integer DRAENEI_LABORER                                 = 'ndrl' // worker
     constant integer DRAENEI_VINDICATOR                              = 'ndrn' // footman
@@ -3331,6 +3333,7 @@ globals
     constant integer GUARDING_FURBOLG                                = 'h016' // tower
     constant integer RESURRECTION_STONE                              = 'h01R' // altar
     constant integer FURBOLG_CORRUPTED_ANCIENT_PROTECTOR             = 'o00J' // special building
+    constant integer FURBOLG_SHIPYARD                                = 'o00E'
 
     constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
     constant integer FURBOLG_EX                                      = 'n02E'
@@ -3388,6 +3391,7 @@ globals
     constant integer GOBLIN_ROCKET_TOWER_3                           = 'o00Y' // tower 3
     constant integer GOBLIN_ALTAR                                    = 'o00T' // altar
     constant integer GOBLIN_HEAVY_TANK                               = 'o01G' // special building
+    constant integer GOBLIN_SHIPYARD                                 = 'o01B'
 
     constant integer GOBLIN_LABORER                                  = 'h02L' // worker
     constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
@@ -3403,6 +3407,7 @@ globals
     constant integer OGRE_GOBLIN_SQUAD                               = 'o01C'
     constant integer GOBLIN_EMPEROR                                  = 'h02E' // tauren
     constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // Obsidian Statue
+    constant integer GOBLIN_SUBMARINE                                = 'h02I'
 
     constant integer UPG_GOBLIN_STEEL_RWEAPONS                       = 'R033'
     constant integer UPG_GOBLIN_STEEL_WEAPONS                        = 'R02M'
@@ -3455,6 +3460,7 @@ globals
     constant integer DWARF_ALTAR                                     = 'h033' // altar
     constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
     constant integer DWARF_MINE                                      = 'u011'
+    constant integer DWARF_SHIPYARD                                  = 'h038'
 
     constant integer DWARF_MINER                                     = 'h02Q' // worker
     constant integer DWARF_TROLL_SLAYER                              = 'h02U'
@@ -3469,6 +3475,7 @@ globals
     constant integer DWARF_FLYING_MACHINE                            = 'h03I'
     constant integer DWARF_SIEGE_ENGINE                              = 'h03G'
     constant integer DWARF_STEAM_FORTRESS                            = 'h03F'
+    constant integer DWARF_SUBMARINE                                 = 'h0WL'
 
     constant integer UPG_DWARF_RANGED                                = 'R043'
     constant integer UPG_DWARF_MELEE                                 = 'R040'
@@ -3517,6 +3524,7 @@ globals
     constant integer HIGH_ELF_AVIARY                                 = 'h045' // aviary
     constant integer HIGH_ELF_DRAGON_NEXUS                           = 'h04J' // boneyard
     constant integer HIGH_ELF_SUNWELL                                = 'n05F' // special building
+    constant integer HIGH_ELF_SHIPYARD                               = 'h04Y'
 
     constant integer UPG_HIGH_ELF_BOWS                               = 'R04G'
     constant integer UPG_HIGH_ELF_WOOD                               = 'R04H'
@@ -3613,6 +3621,7 @@ globals
     constant integer DALARAN_ELEMENTAL_SANCTUARY_2                   = 'h09X' // boneyard 2
     constant integer DALARAN_VIOLET_CITADEL                          = 'h09J' // special building
     constant integer DALARAN_MINE                                    = 'u018' // goldmine
+    constant integer DALARAN_SHIPYARD                                = 'h09D'
 
     constant integer UPG_DALARAN_GOLD                                = 'R063'
     constant integer UPG_DALARAN_MELEE                               = 'R069'
@@ -3684,6 +3693,8 @@ globals
     constant integer KULTIRAS_AVIARY                                 = 'h06I' // aviary
     constant integer KULTIRAS_CRANE                                  = 'o021' // citizens building on shallow water for extra resources
     constant integer KULTIRAS_PROUDMOORE_KEEP                        = 'h08Z' // special building
+    constant integer KULTIRAS_SHIPYARD                               = 'h05G'
+    constant integer KULTIRAS_SHIPYARD_ADVANCED                      = 'h0CR'
 
     constant integer UPG_KULTIRAS_LUMBER                             = 'R05M'
     constant integer UPG_KULTIRAS_MASONRY                            = 'R05N'
@@ -3730,6 +3741,9 @@ globals
     constant integer KULTIRAS_WATER_DRAGON                           = 'n09O'
     constant integer KULTIRAS_PEREGRIN_FALCON                        = 'n09P'
     constant integer KULTIRAS_FLYING_DREADNOUGHT                     = 'h0BW'
+    constant integer KULTIRAS_BATTLESHIP                             = 'h05N'
+    constant integer KULTIRAS_DREADNOUGHT                            = 'h05K'
+    constant integer KULTIRAS_PIRATE_BATTLESHIP                      = 'h059'
 
     constant integer KULTIRAS_CITIZEN_MALE                           = 'n066'
     constant integer KULTIRAS_CITIZEN_FEMALE                         = 'n0BL'
@@ -3755,6 +3769,7 @@ globals
     constant integer LORDAERON_SCARLET_MONASTERY                     = 'h0N6'
     constant integer LORDAERON_TRADE_HOUSE                           = 'h0ML'
     constant integer LORDAERON_WORKSHOP                              = 'h0MO'
+    constant integer LORDAERON_SHIPYARD                              = 'h0NB'
 
     constant integer UPG_LORDAERON_LUMBER                            = 'R0AH'
     constant integer UPG_LORDAERON_MASONRY                           = 'R0AI'
@@ -3940,6 +3955,7 @@ globals
     constant integer TROLL_BARRACKS                                  = 'o02D' // barracks
     constant integer TROLL_VOODOO_LOUNGE                             = 'o04U' // shop
     constant integer TROLL_TEMPLE_OF_SACRIFICE                       = 'o050' // special building
+    constant integer TROLL_SHIPYARD                                  = 'o051'
 
     constant integer UPG_TROLL_SPEARS                                = 'R09E'
     constant integer UPG_TROLL_ARMOR                                 = 'R09H'
@@ -3974,6 +3990,7 @@ globals
     constant integer TROLL_ICE_TROLL_WARLORD                         = 'n0CO'
     constant integer TROLL_BLOOD_MAGE                                = 'o02L'
     constant integer TROLL_HEXER                                     = 'o02K'
+    constant integer TROLL_TIGERSHARK_RIDER                          = 'n07Y'
 
     constant integer TROLL_CITIZEN_MALE                              = 'n07X'
     constant integer TROLL_CITIZEN_FEMALE                            = 'n081'
@@ -4049,6 +4066,7 @@ globals
     constant integer WORGEN_CANNON_TOWER                             = 'h0JH'
     constant integer WORGEN_CATHEDRAL                                = 'h0J9'
     constant integer WORGEN_GREYMANE_WALL                            = 'h0PP'
+    constant integer WORGEN_SHIPYARD                                 = 'h0JB'
 
     constant integer UPG_WORGEN_DRUID                                = 'R08U'
     constant integer UPG_WORGEN_NOCTURNAL                            = 'R08X'
@@ -4085,6 +4103,9 @@ globals
     constant integer WORGEN_MINDLESS_WORGEN                          = 'o05J'
     constant integer WORGEN_NIGHTSTALKER                             = 'h0PJ'
     constant integer WORGEN_STORMCROW_KNIGHT                         = 'h0PH'
+    constant integer WORGEN_TRANSPORT_SHIP                           = 'h0PK'
+    constant integer WORGEN_FRIGATE                                  = 'h0PL'
+    constant integer WORGEN_BATTLESHIP                               = 'h0PM'
 
     constant integer WORGEN_CITIZEN_MALE                             = 'n0C5'
     constant integer WORGEN_CITIZEN_FEMALE                           = 'n0C6'
@@ -4216,6 +4237,7 @@ globals
     constant integer NERUBIAN_SPAWNING_PIT                           = 'u01Z' // barracks
     constant integer NERUBIAN_VAULT_OF_RELICS                        = 'u026' // shop
     constant integer NERUBIAN_AZJOL_NERUB                            = 'n0EH' // special building
+    constant integer NERUBIAN_SHIPYARD                               = 'u037'
 
     constant integer UPG_NERUBIAN_ANCIENT_POWER                      = 'R0BC' // skeletal mastery
     constant integer UPG_NERUBIAN_AZJOL_NERUB                        = 'R0B5' // special building
@@ -4415,6 +4437,7 @@ globals
     constant integer FEL_ORC_RED_DRAGON_ROOST                        = 'n0KP'
     constant integer FEL_ORC_PIG_FARM                                = 'n0K3' // farm
     constant integer FEL_ORC_HELLFIRE_CITADEL                        = 'o09G' // special building
+    constant integer FEL_ORC_SHIPYARD                                = 'o09X'
 
     constant integer UPG_FEL_ORC_BACKPACK                            = 'R0GG'
     constant integer UPG_FEL_ORC_BURNING_OIL                         = 'R0H1'
@@ -4613,7 +4636,7 @@ globals
     constant integer KOBOLD_SHIPYARD                                 = 'o0B6'
     constant integer KOBOLD_BOULDER_TOWER                            = 'o0B7'
     constant integer KOBOLD_ADVANCED_BOULDER_TOWER                   = 'o0B8'
-    constant integer KOBOLD_MINES                                    = 'n09N'
+    constant integer KOBOLD_MINES                                    = 'n09N' // special building
 
     constant integer UPG_KOBOLD_BACKPACK                             = 'R0DX'
     constant integer UPG_KOBOLD_BURROW                               = 'R0GB'
