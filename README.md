@@ -13,6 +13,7 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
 * [Releases](https://github.com/tdauth/wowr/releases)
+* [Google Drive](https://drive.google.com/drive/u/1/folders/1ZQL_8YVCbYfe8r6juGQnfMPIfzaHLfcd)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/World%20of%20Warcraft%20Reforged)
 * [Official download on Epic War](https://www.epicwar.com/maps/336351/)
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
@@ -50,11 +51,6 @@ This prevents ending the game for an AI.
 
 The file [Freelancer.ai](./wowr.w3x/war3mapImported/Freelancer.ai) is imported into the map whenever it is updated.
 It contains a very basic freelancer AI for computer players.
-
-### Professions
-
-Every AI is assigned their professions automatically and the crafted items are added to the hero's inventory automatically as well like the hero would craft them.
-
 
 ## Custom Systems
 
@@ -98,55 +94,11 @@ Sometimes versions of this map might lead to crashing but since it is really har
 
 Warcraft III: Reforged is a fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
-
-### Reconstruction
-
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 The original map script has been added to this repository as well as the original map strings:
 
 * [war3map.j](./original_map/war3map.j)
 * [war3map.wts](./translations/war3map.wts)
-
-### Old Versions
-
-**Note:** Some of these versions might have been optimized:
-
-* [Releases](https://github.com/tdauth/wowr/releases)
-* [wowr3.5.w3x](./wowr3.5.w3x)
-* [wowr3.4.w3x](./wowr3.4.w3x)
-* [wowr3.3.w3x](./wowr3.3.w3x)
-* [wowr3.2.w3x](./wowr3.2.w3x)
-* [wowr3.1.w3x](./wowr3.1.w3x)
-* [wowr3.0.w3x](./wowr3.0.w3x) (final release after a long time developing on 2.1)
-* [wowr2.1.w3x](./wowr2.1.w3x) (development version pre 3.0)
-* [wowr2.0.w3x](./wowr2.0.w3x)
-* [wowr1.9.9.w3x](./wowr1.9.9.w3x)
-* [wowr1.9.8.w3x](./wowr1.9.8.w3x)
-* [wowr1.9.7.w3x](./wowr1.9.7.w3x)
-* [wowr1.9.6.w3x](./wowr1.9.6.w3x)
-* [wowr1.9.5.w3x](./wowr1.9.5.w3x)
-* [wowr1.9.4.w3x](./wowr1.9.4.w3x)
-* [wowr1.9.3.w3x](./wowr1.9.3.w3x)
-* [wowr1.9.2.w3x](./wowr1.9.2.w3x)
-* [wowr1.9.1.w3x](./wowr1.9.1.w3x)
-* [wowr1.9.0.w3x](./wowr1.9.0.w3x)
-* [wowr1.8.9.w3x](./wowr1.8.9.w3x)
-* [wowr1.8.8.w3x](./wowr1.8.8.w3x)
-* [wowr1.8.7.w3x](./wowr1.8.7.w3x)
-* [wowr1.8.6.w3x](./wowr1.8.6.w3x)
-* [wowr1.8.5.w3x](./wowr1.8.5.w3x)
-* [wowr1.8.4.w3x](./wowr1.8.4.w3x)
-* [wowr1.8.3.w3x](./wowr1.8.3.w3x)
-* [wowr1.8.2.w3x](./wowr1.8.2.w3x)
-* [wowr1.8.1.w3x](./wowr1.8.1.w3x)
-* [wowr1.8.w3x](./wowr1.8.w3x)
-* [wowr1.7.w3x](./wowr1.7.w3x)
-* [wowr1.6.w3x](./wowr1.6.w3x)
-* [wowr1.5.w3x](./wowr1.5.w3x)
-* [wowr1.4.w3x](./wowr1.4.w3x)
-* [wowr1.3.w3x](./wowr1.3.w3x)
-* [wowr1.2.w3x](./wowr1.2.w3x)
-* [wowr1.1.w3x](./wowr1.1.w3x)
 
 ### Other Modified Versions
 
@@ -156,12 +108,7 @@ Here is a list of some modified versions online:
 * [World of War in Warcraft 2.03b](https://www.epicwar.com/maps/2673/)
 * [World of Warcraft Reborn 2](https://www.epicwar.com/maps/40351/)
 * [World of Warcraft 1.8](https://www.epicwar.com/maps/228752)
-
-### Other Variants
-
-Some maps are not really based on the original map World of Warcraft Reborn but a complete revision of the map:
-
-* [WoW Reanimated](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/wow-reanimated): This map has many more dungeons, professions, heroes and races but no AI support and is missing lots of features from this map.
+* [WoW Reanimated](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/wow-reanimated): Complete revision of the original map. It has many more dungeons, professions, heroes and races but no AI support and is missing lots of features from this map.
 
 ## Credits
 
