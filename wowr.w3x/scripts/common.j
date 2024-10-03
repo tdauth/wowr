@@ -4566,7 +4566,7 @@ globals
     constant integer CENTAUR_ROOST                                   = 'o0AA'
     constant integer CENTAUR_KHAN_TENT                               = 'o0AC'
     constant integer CENTAUR_TOWER                                   = 'o0AE'
-    constant integer CENTAUR_SPECIAL_BUILDING                        = 'o0MJ'
+    constant integer CENTAUR_SPECIAL_BUILDING                        = 'n0MJ'
 
     constant integer UPG_CENTAUR_BACKPACK                            = 'R0I4'
     constant integer UPG_CENTAUR_DIVINER                             = 'R0I7'
