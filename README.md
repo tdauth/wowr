@@ -89,6 +89,7 @@ Sometimes versions of this map might lead to crashing but since it is really har
 * Missing pathing for buildings constructed by the AI.
 * Lower number for maximum number than minimum number of summoned units for Dark Portal based abilities.
 * Training of certain unit types by the AI.
+* `CreateRegion` in globals instead of a JASS function crashes the game on saving it.
 
 ## History of the Map
 
