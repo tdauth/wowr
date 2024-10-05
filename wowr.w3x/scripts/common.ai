@@ -234,28 +234,28 @@ endfunction
 //============================================================================
 function Trace takes string message returns nothing
     if trace_on then
-        call DisplayText(GetAiPlayer(),message)
+        call DisplayText(0, GetPlayerName(ai_player) + ": " + message)
     endif
 endfunction
 
 //============================================================================
 function TraceI takes string message, integer val returns nothing
     if trace_on then
-        call DisplayTextI(GetAiPlayer(),message,val)
+        call DisplayTextI(0,GetPlayerName(ai_player) + ": " + message,val)
     endif
 endfunction
 
 //============================================================================
 function TraceII takes string message, integer v1, integer v2 returns nothing
     if trace_on then
-        call DisplayTextII(GetAiPlayer(),message,v1,v2)
+        call DisplayTextII(0,GetPlayerName(ai_player) + ": " + message,v1,v2)
     endif
 endfunction
 
 //============================================================================
 function TraceIII takes string message, integer v1, integer v2, integer v3 returns nothing
     if trace_on then
-        call DisplayTextIII(GetAiPlayer(),message,v1,v2,v3)
+        call DisplayTextIII(0,GetPlayerName(ai_player) + ": " + message,v1,v2,v3)
     endif
 endfunction
 
