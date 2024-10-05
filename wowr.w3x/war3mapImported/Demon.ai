@@ -78,6 +78,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, DEMON_GATE_3)
             call SetBuildExpa(expansions, DEMON_FLOATING_ROCKS)
@@ -259,7 +261,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(DEMON_FORTIFIED_INFERNAL_MACHINE, function BuildingStrategy)
+    call MainWoWReforged(DEMON_FORTIFIED_INFERNAL_MACHINE, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

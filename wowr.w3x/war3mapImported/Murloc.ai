@@ -66,6 +66,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, MURLOC_TIER_3)
             call SetBuildExpa(expansions, MURLOC_BLADEMAKING_HUT)
@@ -246,8 +248,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(MURLOC_HUT, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(MURLOC_HUT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

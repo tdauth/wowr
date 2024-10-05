@@ -77,6 +77,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, CASTLE)
             call SetBuildExpa(expansions, LUMBER_MILL)
@@ -246,7 +248,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(HOUSE, function BuildingStrategy)
+    call MainWoWReforged(HOUSE, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

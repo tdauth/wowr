@@ -37,6 +37,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, DRAENEI_HAVEN)
             call SetBuildExpa(expansions, DRAENEI_SEERS_DEN)
@@ -198,7 +200,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(DRAENEI_HUT, function BuildingStrategy)
+    call MainWoWReforged(DRAENEI_HUT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

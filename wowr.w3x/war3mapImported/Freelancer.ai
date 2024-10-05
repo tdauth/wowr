@@ -1,78 +1,44 @@
-function UpdateWorkersFreelancer takes nothing returns nothing
-    loop
-        call SetGoldPeons(2)
-        call SetWoodPeons(1)
-        call HarvestGold(0, 2)
-        call HarvestWood(0, 1)
-        call Sleep(1)
+function BuildingStrategy takes nothing returns nothing
+    call SetReplacements(1, 2, 3)
+    call SetBuildUnit(1, FOUNTAIN_OF_LIFE)
+    call SetBuildUnit(1, HIDEOUT)
+    call SetBuildUnit(3, NEUTRAL_CITIZEN)
+
+    call SetBuildUnit(2, SHREDDER)
+
+    //call SetBuildUnit(1, FREELANCER_LABORATORY) // TODO Leads to a crash!
+    //call SetBuildUnit(1, FREELANCER_SHOP)
+    //call SetBuildUnit(1, FREELANCER_MERCENARY_CAMP)
+    call SetBuildUnit(1, FORTIFIED_HIDEOUT)
+    call SetBuildUnit(1, GUARDIANS_CITADEL)
+
+    call BuildingStrategyStandardTier3Freelancer()
+
+     loop
+        call LoopActionWoWReforged()
+
+        call Sleep(M1)
     endloop
 endfunction
 
-function ConfigureAIFreelancer takes nothing returns nothing
-    call SetTargetHeroes( true )
-    call SetUnitsFlee( true )
-    call SetHeroesFlee( true )
-    call SetPeonsRepair( true )
-    call SetHeroesBuyItems( true )
-    call SetHeroesTakeItems( true )
-    call SetSlowChopping( false )
-    call SetRandomPaths( true )
-    call SetDefendPlayer( true )
-endfunction
-
-function BuildingStrategy takes nothing returns nothing
-    // **********************************
-    // *      Building Strategy         *
-    // **********************************
-    call SetReplacements( 1, 2, 3 )
-    call SetBuildUnit( 1, FOUNTAIN_OF_LIFE )
-    call SetBuildUnit( 1, HIDEOUT )
-    call SetBuildUnit( 3, NEUTRAL_CITIZEN )
-
-    call SetBuildUnit( 2, SHREDDER )
-
-    //call SetBuildUnit( 1, FREELANCER_LABORATORY ) // TODO Leads to a crash!
-    //call SetBuildUnit( 1, FREELANCER_SHOP )
-    //call SetBuildUnit( 1, FREELANCER_MERCENARY_CAMP )
-    call SetBuildUnit( 1, FORTIFIED_HIDEOUT )
-    call SetBuildUnit( 1, GUARDIANS_CITADEL )
-
-    call BuildingStrategyStandardTier3Freelancer()
-    // **********************************
-    // *    End Building Strategy       *
-    // **********************************
-endfunction
-
-function AddStandardUnitsToAttackWaveFreelancer takes nothing returns nothing
-    //call PurchaseZeppelin()
-    call AttackWithMounts()
-    call CampaignAttacker( 0, 1, hero_id )
-endfunction
-
 function AttackWaves takes nothing returns nothing
-    call Sleep( M2 )
+    call Sleep(M2)
     loop
         call InitAssaultGroup()
-        //call CampaignAttacker( 0, 1, CREEP_DARK_WIZARD )
-        //call CampaignAttacker( 0, 1, CREEP_UNBROKEN_DARK_WEAVER )
-        //call CampaignAttacker( 0, 1, CREEP_DOOM_GUARD )
-        //call CampaignAttacker( 0, 2, CREEP_HARPY )
-        //call CampaignAttacker( 0, 2, CREEP_GREEN_DRAGON )
-        call AddStandardUnitsToAttackWaveFreelancer()
+        //call CampaignAttacker(0, 1, CREEP_DARK_WIZARD)
+        //call CampaignAttacker(0, 1, CREEP_UNBROKEN_DARK_WEAVER)
+        //call CampaignAttacker(0, 1, CREEP_DOOM_GUARD)
+        //call CampaignAttacker(0, 2, CREEP_HARPY)
+        //call CampaignAttacker(0, 2, CREEP_GREEN_DRAGON)
+        call AddStandardUnitsToAttackWave()
 
-        call Sleep( M1 ) 
+        call Sleep(M2)
         //call LaunchAttack() // Leads to a crash
     endloop
 endfunction
 
 function main takes nothing returns nothing
-    call CampaignAI( AI_LABORATORY, null )
-    call ConfigureAIFreelancer( )
-    call InitHeroes( )
-    call InitMounts( )
-    call StartThread(function UpdateWorkersFreelancer)
-    
-    call BuildingStrategy( )
+    call MainWoWReforged(AI_LABORATORY, function BuildingStrategy)
 
-    call AttackWaves( )
+    call AttackWaves()
 endfunction

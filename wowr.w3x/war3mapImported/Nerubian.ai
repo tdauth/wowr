@@ -62,6 +62,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, NERUBIAN_TIER_3)
             call SetBuildExpa(expansions, NERUBIAN_HATCHERY)
@@ -233,8 +235,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(NERUBIAN_ZIGGURAT, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(NERUBIAN_ZIGGURAT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

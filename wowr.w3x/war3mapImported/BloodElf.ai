@@ -77,8 +77,10 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
-            call SetBuildExpa(expansions, BLOOD_ELF_CASTLE)
+            call BasicExpansionIfRequired(expansions, BLOOD_ELF_CASTLE)
             call SetBuildExpa(expansions, BLOOD_ELF_LUMBER_MILL)
             call SetBuildExpa(expansions, BLOOD_ELF_GUARD_TOWER)
         endif
@@ -249,7 +251,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(BLOOD_ELF_FARM, function BuildingStrategy)
+    call MainWoWReforged(BLOOD_ELF_FARM, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

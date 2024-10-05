@@ -70,6 +70,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, FACELESS_ONE_TIER_3)
             call SetBuildExpa(expansions, FACELESS_ONE_PRISON)
@@ -239,7 +241,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(FACELESS_ONE_TENTACLE, function BuildingStrategy)
+    call MainWoWReforged(FACELESS_ONE_TENTACLE, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

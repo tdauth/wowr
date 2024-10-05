@@ -73,6 +73,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, NECROPOLIS_3)
             call SetBuildExpa(expansions, GRAVEYARD)
@@ -247,8 +249,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(ZIGGURAT_1, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(ZIGGURAT_1, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

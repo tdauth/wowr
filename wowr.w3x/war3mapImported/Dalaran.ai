@@ -70,6 +70,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, DALARAN_TIER_3)
             call SetBuildExpa(expansions, DALARAN_BLACKSMITH)
@@ -256,7 +258,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(DALARAN_POWER_GENERATOR, function BuildingStrategy)
+    call MainWoWReforged(DALARAN_POWER_GENERATOR, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

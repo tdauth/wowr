@@ -63,6 +63,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, FEL_ORC_TIER_3)
             call SetBuildExpa(expansions, FEL_ORC_WAR_MILL)
@@ -229,7 +231,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(FEL_ORC_PIG_FARM, function BuildingStrategy)
+    call MainWoWReforged(FEL_ORC_PIG_FARM, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

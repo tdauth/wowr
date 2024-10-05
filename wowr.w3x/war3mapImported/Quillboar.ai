@@ -71,6 +71,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, QUILLBOAR_TIER_3)
             call SetBuildExpa(expansions, QUILLBOAR_FORGE)
@@ -242,8 +244,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(QUILLBOAR_HUT, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(QUILLBOAR_HUT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

@@ -46,6 +46,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, FURBOLG_TRIBAL_CENTER)
             call SetBuildExpa(expansions, FURBOLG_LUMBER_CAMP)
@@ -224,8 +226,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(FURBOLG_HUT, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(FURBOLG_HUT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

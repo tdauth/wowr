@@ -71,6 +71,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, TUSKARR_FROZEN_FORTRESS)
             call SetBuildExpa(expansions, TUSKARR_ICY_SPIRE)
@@ -242,8 +244,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(TUSKARR_IGLOO, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(TUSKARR_IGLOO, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

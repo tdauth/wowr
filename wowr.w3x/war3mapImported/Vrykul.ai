@@ -66,6 +66,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, VRYKUL_TIER_3)
             call SetBuildExpa(expansions, VRYKUL_BLACKSMITH)
@@ -233,8 +235,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(VRYKUL_FISHER_HOUSE, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(VRYKUL_FISHER_HOUSE, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

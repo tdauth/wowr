@@ -4807,6 +4807,9 @@ globals
     constant integer COMMAND_NORMAL                                  = 16
     constant integer COMMAND_HARD                                    = 17
     constant integer COMMAND_INSANE                                  = 18
+    constant integer COMMAND_ZEPPELINS                               = 19
+    constant integer COMMAND_TRACE_ON                                = 20
+    constant integer COMMAND_TRACE_OFF                               = 21
 endglobals
 
 //============================================================================

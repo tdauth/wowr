@@ -72,6 +72,8 @@ function BuildingStrategy takes nothing returns nothing
     call BuildingStrategyStandardTier3()
 
     loop
+        call LoopActionWoWReforged()
+
         if (expansions > 0) then
             call SetBuildExpa(expansions, GNOLL_TIER_3)
             call SetBuildExpa(expansions, GNOLL_LUMBERYARD)
@@ -240,8 +242,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWarlord(GNOLL_HUT, function BuildingStrategy)
-    call ConfigureAI()
+    call MainWoWReforged(GNOLL_HUT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction

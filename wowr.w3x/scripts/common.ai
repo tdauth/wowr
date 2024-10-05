@@ -201,7 +201,7 @@ globals
     boolean build_campaign_attackers = true
 
     boolean do_debug_cheats         = false
-    boolean trace_on                = true
+    boolean trace_on                = false
     boolean zep_next_wave           = false
     boolean form_group_timeouts     = true
     
@@ -223,6 +223,7 @@ globals
     boolean attackTargetLocation = false
     integer attackTargetLocationX = 0
     integer attackTargetLocationY = 0
+    integer zeppelins = 3
 endglobals
 
 //============================================================================
@@ -982,6 +983,7 @@ function StartExpansion takes integer qty, integer hall returns boolean
 
     set town = GetNextExpansion()
     if town == -1 then
+        call Trace("not finding any expansion\n")
         return true
     endif
 
@@ -989,16 +991,19 @@ function StartExpansion takes integer qty, integer hall returns boolean
 
     set gold_cost = GetUnitGoldCost(hall)
     if gold_cost > total_gold then
+        call Trace("no gold for expansion\n")
         return false
     endif
     set total_gold = total_gold - gold_cost
 
     if GetExpansionFoe() != null then
+        call Trace("no gold for expansion foe\n")
         return true
     endif
 
     set peon = GetExpansionPeon()
     if peon != null then
+        call Trace("no expansion peon\n")
         return SetExpansion(peon,hall)
     endif
 
@@ -2424,10 +2429,6 @@ endfunction
 
 function AddStandardUnitsToAttackWave takes nothing returns nothing
     if (not disabled) then
-        // 3 zeppelins to transport units
-        call PurchaseZeppelin()
-        call PurchaseZeppelin()
-        call PurchaseZeppelin()
         call AttackWithMounts()
         call AttackWithHeroes()
     endif
@@ -2605,7 +2606,12 @@ function NotifyOtherPlayers takes string message returns nothing
 endfunction
 
 function GetPlayerInfoText takes nothing returns string
+    local integer mines = GetMinesOwned()
+    local integer gold = GetGoldOwned()
     local string msg = "I "
+
+    set msg = msg + "own " + I2S2(mines) + " mines, "
+    set msg = msg + ", own " + I2S2(gold) + " gold, "
 
     if (disabled) then
         set msg = msg + "will do nothing (disabled)"
@@ -2718,6 +2724,16 @@ function UpdateWorkers takes nothing returns nothing
             elseif (c == COMMAND_INSANE) then
                 set difficulty = INSANE
                 call NotifyOtherPlayers("I will play INSANE.")
+            elseif (c == COMMAND_ZEPPELINS) then
+                set zeppelins = GetLastData()
+                call NotifyOtherPlayers("I will build " + I2S2(zeppelins) + " Zeppelins!")
+                call TraceI("Zeppelins: %d", zeppelins)
+            elseif (c == COMMAND_TRACE_ON) then
+                set trace_on = true
+                call NotifyOtherPlayers("Enabled trace for me!")
+            elseif (c == COMMAND_TRACE_OFF) then
+                set trace_on = false
+                call NotifyOtherPlayers("Disabled trace for me!")
             else
                 call NotifyOtherPlayers("I received an unknown AI command: " + I2S2(c))
             endif
@@ -2758,28 +2774,23 @@ function BuildingStrategyStandardTier1 takes nothing returns nothing
 endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing
-    local integer evolutionLevel = 0
-    loop
-        set evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
-
-        exitwhen (evolutionLevel >= MAX_WOWR_RESEARCH_LEVEL)
-
+    local integer evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
+    if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
         set evolutionLevel = evolutionLevel + 1
+    endif
 
-        if (not disabled) then
+    if (not disabled) then
+        if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
             call SetBuildUpgr( evolutionLevel, UPG_EVOLUTION )
             call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_POWER_GENERATOR )
             call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_MOUNT )
+            call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_NAVY )
+        else
+            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION )
+            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
+            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
+            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
         endif
-
-        call Sleep(M1)
-    endloop
-
-    if (not disabled) then
-        call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION )
-        call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
-        call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
-        //call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
     endif
 endfunction
 
@@ -2793,7 +2804,6 @@ function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
     call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
     call SetBuildUnit( 1, DRAGON_ROOST )
-    call StartThread(function ResearchHighLevelTier3Researches)
 endfunction
 
 function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
@@ -2806,15 +2816,29 @@ function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
     call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
     call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
     call SetBuildUnit( 1, DRAGON_ROOST )
-    call StartThread(function ResearchHighLevelTier3Researches)
 endfunction
 
-function MainWarlord takes integer farms, code buildingStrategy returns nothing
-    call CampaignAI( farms, null )
-    call ConfigureAI( )
-    call InitHeroes( )
-    call InitMounts( )
-    call InitHousings( )
+function BasicExpansionIfRequired takes integer ex, integer unitid returns nothing
+    call BasicExpansion(GetMinesOwned() < ex, unitid)
+endfunction
+
+function GetZeppelinsIfRequired takes nothing returns nothing
+    if GetUnitCount(ZEPPELIN) < zeppelins then
+        call GetZeppelin()
+    endif
+endfunction
+
+function LoopActionWoWReforged takes nothing returns nothing
+    call ResearchHighLevelTier3Researches()
+    call GetZeppelinsIfRequired()
+endfunction
+
+function MainWoWReforged takes integer farms, code buildingStrategy returns nothing
+    call CampaignAI(farms, null)
+    call ConfigureAI()
+    call InitHeroes()
+    call InitMounts()
+    call InitHousings()
     call StartThread(function UpdateWorkers)
     call StartThread(buildingStrategy)
 endfunction
