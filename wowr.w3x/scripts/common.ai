@@ -227,6 +227,56 @@ globals
 endglobals
 
 //============================================================================
+// https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/
+
+function I2C2 takes integer i returns string
+    if i == 0 then
+        return "0"
+    elseif i == 1 then
+        return "1"
+    elseif i == 2 then
+        return "2"
+    elseif i == 3 then
+        return "3"
+    elseif i == 4 then
+        return "4"
+    elseif i == 5 then
+        return "5"
+    elseif i == 6 then
+        return "6"
+    elseif i == 7 then
+        return "7"
+    elseif i == 8 then
+        return "8"
+    elseif i == 9 then
+        return "9"
+    endif
+    return ""
+endfunction
+
+function I2S2 takes integer i returns string
+    local integer j = i
+    local string s = ""
+    local integer k = 0
+    local boolean is_negative = false
+    local integer MAX_DIGITS = 20
+    if i < 0 then
+        set is_negative = true
+        set j = -j
+    endif
+    loop
+        set s = I2C2(j - (j / 10) * 10) + s
+        set j = j / 10
+        set k = k + 1
+        exitwhen j == 0 or k >= MAX_DIGITS
+    endloop
+    if is_negative then
+        set s = "-" + s
+    endif
+    return s
+endfunction
+
+//============================================================================
 function PlayerEx takes integer slot returns player
     return Player(slot-1)
 endfunction
@@ -234,28 +284,32 @@ endfunction
 //============================================================================
 function Trace takes string message returns nothing
     if trace_on then
-        call DisplayText(0, GetPlayerName(ai_player) + ": " + message)
+        call DisplayText(GetAiPlayer(), message)
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message)
     endif
 endfunction
 
 //============================================================================
 function TraceI takes string message, integer val returns nothing
     if trace_on then
-        call DisplayTextI(0,GetPlayerName(ai_player) + ": " + message,val)
+        call DisplayTextI(GetAiPlayer(),message,val)
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message + " v1=" + I2S2(val))
     endif
 endfunction
 
 //============================================================================
 function TraceII takes string message, integer v1, integer v2 returns nothing
     if trace_on then
-        call DisplayTextII(0,GetPlayerName(ai_player) + ": " + message,v1,v2)
+        call DisplayTextII(GetAiPlayer(),message,v1,v2)
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message  + " v1=" + I2S2(v1)  + ", v2=" + I2S2(v2))
     endif
 endfunction
 
 //============================================================================
 function TraceIII takes string message, integer v1, integer v2, integer v3 returns nothing
     if trace_on then
-        call DisplayTextIII(0,GetPlayerName(ai_player) + ": " + message,v1,v2,v3)
+        call DisplayTextIII(GetAiPlayer(),message,v1,v2,v3)
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message  + " v1=" + I2S2(v1) + " v2=" + I2S2(v2) + " v3=" + I2S2(v3))
     endif
 endfunction
 
@@ -2537,56 +2591,6 @@ function LaunchAttack takes nothing returns nothing
         // If no target was found, sleep a bit before trying again
         call Sleep( 20 )
     endif
-endfunction
-
-// https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/
-
-
-function I2C2 takes integer i returns string
-    if i == 0 then
-        return "0"
-    elseif i == 1 then
-        return "1"
-    elseif i == 2 then
-        return "2"
-    elseif i == 3 then
-        return "3"
-    elseif i == 4 then
-        return "4"
-    elseif i == 5 then
-        return "5"
-    elseif i == 6 then
-        return "6"
-    elseif i == 7 then
-        return "7"
-    elseif i == 8 then
-        return "8"
-    elseif i == 9 then
-        return "9"
-    endif
-    return ""
-endfunction
-
-function I2S2 takes integer i returns string
-    local integer j = i
-    local string s = ""
-    local integer k = 0
-    local boolean is_negative = false
-    local integer MAX_DIGITS = 20
-    if i < 0 then
-        set is_negative = true
-        set j = -j
-    endif
-    loop
-        set s = I2C2(j - (j / 10) * 10) + s
-        set j = j / 10
-        set k = k + 1
-        exitwhen j == 0 or k >= MAX_DIGITS
-    endloop
-    if is_negative then
-        set s = "-" + s
-    endif
-    return s
 endfunction
 
 // recipient: changes the type of chat channel prefix shown. It has no effect on the message's visibility.
