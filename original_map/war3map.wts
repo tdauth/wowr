@@ -1,0 +1,7328 @@
+﻿STRING 0
+{
+Alchemist
+}
+
+STRING 1
+{
+|cffffcc99World of Warcraft Reborn|r
+}
+
+STRING 2
+{
+10 RPG Lovers
+}
+
+STRING 3
+{
+Read the Quest log for gameplay info !
+Tell other players to do it, especially newbies ! =) 
+Game Start is always a bit laggy !
+}
+
+STRING 4
+{
+DeMoNiKuS
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Armorer
+}
+
+STRING 7
+{
+Wouded Worldtree
+}
+
+STRING 8
+{
+Engineer
+}
+
+STRING 9
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 10
+{
+Warlord (can use Goldmines)
+}
+
+STRING 11
+{
+Soul
+}
+
+STRING 12
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 13
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 14
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 15
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 16
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 17
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 18
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 19
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 20
+{
+Freelancer (no Workers/Bonus Stats)
+}
+
+STRING 21
+{
+Warlord (can use Goldmines)
+}
+
+STRING 22
+{
+Warlord (can use Goldmines)
+}
+
+STRING 23
+{
+Warlord (can use Goldmines)
+}
+
+STRING 24
+{
+Warlord (can use Goldmines)
+}
+
+STRING 25
+{
+Warlord (can use Goldmines)
+}
+
+STRING 26
+{
+Warlord (can use Goldmines)
+}
+
+STRING 27
+{
+Warlord (can use Goldmines)
+}
+
+STRING 28
+{
+Warlord (can use Goldmines)
+}
+
+STRING 29
+{
+Warlord (can use Goldmines)
+}
+
+STRING 30
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 34
+{
+Player 2
+}
+
+STRING 35
+{
+Player 3
+}
+
+STRING 36
+{
+Player 4
+}
+
+STRING 37
+{
+Player 5
+}
+
+STRING 38
+{
+Player 6
+}
+
+STRING 39
+{
+Player 7
+}
+
+STRING 40
+{
+Player 8
+}
+
+STRING 41
+{
+World Denizens
+}
+
+STRING 42
+{
+Player 10
+}
+
+STRING 43
+{
+Player 11
+}
+
+STRING 44
+{
+Herbalist
+}
+
+STRING 45
+{
+Adventurers
+}
+
+STRING 46
+{
+|cffffff00Quest completed:|r Crusade
+}
+
+STRING 47
+{
+|cffffff00New Quest discovered:|r Druid Spell
+}
+
+STRING 48
+{
+|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by 10 when carried. Also adds a 15% probability to bash an opponent (25 bonus damage and 2 second stun). |n|cffffcc00History|r|n|cffffdeadWhen Mauradin reached maturity, his brother gave him this axe as a birthday present. After Mauradin´s death, his companions buried the axe along with Mauradin´s ashes. After returning the urn to Ironforge, Mauradin´s brother allowed the Hero to keep the axe as a symbol of gratitude for returning Mauradin´s remnants to the tomb of his ancestors. |r
+}
+
+STRING 49
+{
+|cffffff00Quest update:|r Return the Druid Spell to Tyrande in Darnassus
+}
+
+STRING 50
+{
+|cffffff00New Quest discovered:|r Durotar Law Code
+}
+
+STRING 51
+{
+|cffffff00Quest completed:|r Druid Spell
+}
+
+STRING 52
+{
+Unholy Cathedral
+}
+
+STRING 53
+{
+Royal Paladin Hammer
+}
+
+STRING 54
+{
+|cffff8c00Artifact|r|nAn elegant War Hammer from the Paladins of the Silver Hand.
+}
+
+STRING 55
+{
+Stats Tomes
+}
+
+STRING 56
+{
+I have not included any form of Hero stat incresing tomes in the map for a specific reason. They would greatly imbalance the game and ruin the game concept. Heroes in this map are designed to stay MORTAL. This means no god-like heroes for the small kids who want to run around and kill everything ! Also completing quests would be far too easy with super-stats but the map quests are designed to have a certain amount of challenge. So, as mentioned, if you really want to add tomes with the editor, do it. However, i don´t appreciate it and don´t want any kind of complaints about map copies with tomes included.
+- EvilPitlord
+}
+
+STRING 57
+{
+Return this trophy to King anduin Wrynn in New Stormwind.
+}
+
+STRING 58
+{
+Druid Letter
+}
+
+STRING 59
+{
+A letter for the Druids of the Talon in the Barrow Dens
+}
+
+STRING 60
+{
+A Druid Spell required for Tyrande to shield the Night Elf housings from damaging magic.
+}
+
+STRING 61
+{
+|cffffff00New Quest discovered:|r The World Tree
+}
+
+STRING 62
+{
+|cffffff00Quest update:|r Return the Vial with Healing Waters to Furion on Mount Hyjal !
+}
+
+STRING 63
+{
+|cffffff00Quest completed:|r The World Tree
+}
+
+STRING 64
+{
+|cffffff00New Quest discovered:|r Moonstones
+}
+
+STRING 65
+{
+|cffffff00Quest update:|r Return the enhanced Moonstone to Tyrande on Teldrassil Isle !
+}
+
+STRING 66
+{
+|cffffff00Quest update:|r Return Tyrande´s Letter for Thrall to Thrall in Ogrimmar
+}
+
+STRING 67
+{
+|cffffff00Quest completed:|r Moonstones
+}
+
+STRING 68
+{
+Loremaster
+}
+
+STRING 69
+{
+Weaponsmith
+}
+
+STRING 70
+{
+Alchemist
+}
+
+STRING 71
+{
+Armorer
+}
+
+STRING 72
+{
+A special vial adept at containing magical healing waters..
+}
+
+STRING 73
+{
+A special vial adept at containing the magical healing waters from the Paladins of the Silver Hand.
+}
+
+STRING 74
+{
+Bugged Moonstone
+}
+
+STRING 75
+{
+A somehow bugged Moonstone from Tyrande. Take it to Jaina Proudmoore on Theramore Isle.
+}
+
+STRING 76
+{
+Enhanced Moonstone
+}
+
+STRING 77
+{
+An enhanced Moonstone from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
+}
+
+STRING 78
+{
+|cffffff00New Quest discovered:|r Demon Blood
+}
+
+STRING 79
+{
+|cffffff00Quest completed:|r Demon Blood
+}
+
+STRING 80
+{
+|cffffff00Quest update:|r Return Furion for your reward !
+}
+
+STRING 81
+{
+Entering now: |cff00ff00Grove of Cenarius - Cenarius´ Grave|r
+}
+
+STRING 82
+{
+Tyrande´s Moonstone
+}
+
+STRING 83
+{
+|cffff8c00Artifact|r|nA special Moonstone crafted by the Night Elves´ Priestess Tyrande Whisperwind.
+}
+
+STRING 84
+{
+|cffff8c00Artifact|r|nIncreases the defense of the Hero by 8. Also grants the ability to make a sun eclipse for a short period of time|n|cffffcc00History|r|n|cffffdeadAfter the incident with the prolongued sun eclipse caused by a bugged moonstone was solved, Tyrande gave this special copy of the moonstones to the Hero who helped finding and dispelling the item bug.|r
+}
+
+STRING 85
+{
+|cffffff00Quest completed:|r Durotar Law Code
+}
+
+STRING 86
+{
+Scepter of Naga
+}
+
+STRING 87
+{
+|cffff8c00Artifact|r|nSummons <AIsh,DataB1> Workers to do your bidding. Also grants the Hero and friendly nearby units increased attack rate and movement speed.|n|cffffcc00History|r|n|cffffdeadNames of generations of Nation Leaders are carved into this staff. The wielder can call upon them for wisdom and guidance in times of peace.|r
+}
+
+STRING 88
+{
+Scepter of Humans
+}
+
+STRING 89
+{
+Scepter of Orcs
+}
+
+STRING 90
+{
+Scepter of Undead
+}
+
+STRING 91
+{
+Scepter of Night Elves
+}
+
+STRING 92
+{
+Summon Peasant
+}
+
+STRING 93
+{
+Summon Acolyte
+}
+
+STRING 94
+{
+Summon Peon
+}
+
+STRING 95
+{
+Summon Murgul Slave
+}
+
+STRING 96
+{
+Summon Wisp
+}
+
+STRING 97
+{
+Lava Waterfall
+}
+
+STRING 98
+{
+World Villains
+}
+
+STRING 99
+{
+Engineer
+}
+
+STRING 100
+{
+Herbalist
+}
+
+STRING 101
+{
+Loremaster
+}
+
+STRING 102
+{
+Weaponsmith
+}
+
+STRING 103
+{
+Alchemist
+}
+
+STRING 104
+{
+Armorer
+}
+
+STRING 105
+{
+Engineer
+}
+
+STRING 106
+{
+Herbalist
+}
+
+STRING 107
+{
+Activate A|cffffcc00v|ratar
+}
+
+STRING 108
+{
+Activate Avatar to give the Mountain King <AHav,DataA2> bonus armor, <AHav,DataB2> bonus hit points, <AHav,DataC2> bonus damage and spell immunity. |nLasts <AHav,Dur2> seconds.
+}
+
+STRING 109
+{
+Deactivate A|cffffcc00v|ratar
+}
+
+STRING 110
+{
+Loremaster
+}
+
+STRING 111
+{
+|cffffcc00B|ranish - [|cffffcc00Level 4|r]
+}
+
+STRING 112
+{
+Turns a unit ethereal and slows its movement speed by <AHbn,DataA4,%>% for <AHbn,Dur4> seconds. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect.
+}
+
+STRING 113
+{
+Bash - [|cffffcc00Level 4|r]
+}
+
+STRING 114
+{
+Gives a <AHbh,DataA4>% chance that an attack will do <AHbh,DataC1> bonus damage and stun an opponent for <AHbh,Dur1> seconds.
+}
+
+STRING 115
+{
+|cffffcc00B|rlizzard - [|cffffcc00Level 4|r]
+}
+
+STRING 116
+{
+Calls down <AHbz,DataA4> freezing ice shard waves; each wave deals <AHbz,DataB4> damage to units in an area.
+}
+
+STRING 117
+{
+Brilliance Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 118
+{
+Gives 1 additional mana regeneration to nearby friendly units.
+}
+
+STRING 119
+{
+Gives 2 additional mana regeneration to nearby friendly units.
+}
+
+STRING 120
+{
+Gives 3 additional mana regeneration to nearby friendly units.
+}
+
+STRING 121
+{
+Gives 4 additional mana regeneration to nearby friendly units.
+}
+
+STRING 122
+{
+Devotion Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 123
+{
+Gives <AHad,DataA4> additional armor to nearby friendly units.
+}
+
+STRING 124
+{
+Ancient Phoenix
+}
+
+STRING 125
+{
+Turns a non-mechanical unit ethereal and slows its movement speed by <AHbn,DataA1,%>% for a short duration. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect. |n|n|cffffcc00Level 1|r - <AHbn,Cool1> second cooldown, lasts <AHbn,Dur1> seconds. |n|cffffcc00Level 2|r - <AHbn,Cool2> second cooldown, lasts <AHbn,Dur2> seconds. |n|cffffcc00Level 3|r - <AHbn,Cool3> second cooldown, lasts <AHbn,Dur3> seconds. |n|cffffcc00Level 4|r - <AHbn,Cool4> second cooldown, lasts <AHbn,Dur4> seconds.
+}
+
+STRING 126
+{
+Gives a 25% +10%/Level chance to stun an opponent and deal 25 Bonus damage.
+}
+
+STRING 127
+{
+Calls down waves of freezing ice shards that damage units in a target area. |n|n|cffffcc00Level 1|r - <AHbz,DataA1> waves at <AHbz,DataB1> damage each. |n|cffffcc00Level 2|r - <AHbz,DataA2> waves at <AHbz,DataB2> damage each. |n|cffffcc00Level 3|r - <AHbz,DataA3> waves at <AHbz,DataB3> damage each. |n|cffffcc00Level 4|r - <AHbz,DataA4> waves at <AHbz,DataB4> damage each.
+}
+
+STRING 128
+{
+Gives additional mana regeneration to nearby friendly units. |n|n|cffffcc00Level 1|r - Grants minor mana regeneration. |n|cffffcc00Level 2|r - Grants moderate mana regeneration. |n|cffffcc00Level 3|r - Grants heavy mana regeneration. |n|cffffcc00Level 4|r - Grants huge mana regeneration.
+}
+
+STRING 129
+{
+Gives additional armor to nearby friendly units. |n|n|cffffcc00Level 1|r - Increases base armor by <AHad,DataA1>. |n|cffffcc00Level 2|r - Increases base armor by <AHad,DataA2>. |n|cffffcc00Level 3|r - Increases base armor by <AHad,DataA3>. |n|cffffcc00Level 4|r - Increases base armor by <AHad,DataA4>.
+}
+
+STRING 130
+{
+Activate |cffffcc00D|rivine Shield - [|cffffcc00Level 4|r]
+}
+
+STRING 131
+{
+An impenetrable shield surrounds this unit, protecting it from all damage and spells for <AHds,Dur4> seconds.
+}
+
+STRING 132
+{
+An impenetrable shield surrounds the Paladin, protecting him from all damage and spells for a set amount of time. |n|n|cffffcc00Level 1|r - Lasts <AHds,Dur1> seconds. |n|cffffcc00Level 2|r - Lasts <AHds,Dur2> seconds. |n|cffffcc00Level 3|r - Lasts <AHds,Dur3> seconds. |n|cffffcc00Level 4|r - Lasts <AHds,Dur4> seconds.
+}
+
+STRING 133
+{
+|cffffcc00F|rlame Strike - [|cffffcc00Level 4|r]
+}
+
+STRING 134
+{
+Conjures a pillar of flame that burns ground units for 140 damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take moderate damage.
+}
+
+STRING 135
+{
+Conjures a pillar of fire which damages ground units in a target area over time. |n|n|cffffcc00Level 1|r - 45 damage a second for 3 seconds, followed by minor damage for 6 seconds. |n|cffffcc00Level 2|r - 80 damage a second for 3 seconds, followed by light damage for 6 seconds. |n|cffffcc00Level 3|r - 110 damage a second for 3 seconds, followed by moderate damage for 6 seconds. |n|cffffcc00Level 4|r - 140 damage a second for 3 seconds, followed by moderate damage for 6 seconds.
+}
+
+STRING 136
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 4|r]
+}
+
+STRING 137
+{
+A holy light that can heal a friendly living unit for <AHhb,DataA4> or deal half damage to an enemy Undead unit.
+}
+
+STRING 138
+{
+A holy light that can heal a friendly living unit or damage an enemy Undead unit. |n|n|cffffcc00Level 1|r - Heals for <AHhb,DataA1> hit points. |n|cffffcc00Level 2|r - Heals for <AHhb,DataA2> hit points. |n|cffffcc00Level 3|r - Heals for <AHhb,DataA3> hit points.  |n|cffffcc00Level 4|r - Heals for <AHhb,DataA4> hit points. 
+}
+
+STRING 139
+{
+Mass |cffffcc00T|releport
+}
+
+STRING 140
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 141
+{
+|cffffcc00R|resurrection
+}
+
+STRING 142
+{
+Brings back to life the corpses of 12 friendly nearby units.
+}
+
+STRING 143
+{
+Brings back to life the corpses of 6 friendly nearby units.
+}
+
+STRING 144
+{
+Weaponsmith
+}
+
+STRING 145
+{
+Absorbs the magical energies of a target enemy unit by taking mana from it every second and giving it to the Blood Mage. |nLasts <AHdr,Dur1> seconds. |n|n|cffffcc00Level 1|r - <AHdr,DataB1> mana drained per second. |n|cffffcc00Level 2|r - <AHdr,DataB2> mana drained per second. |n|cffffcc00Level 3|r - <AHdr,DataB3> mana drained per second. |n|cffffcc00Level 4|r - <AHdr,DataB4> mana drained per second.
+}
+
+STRING 146
+{
+Sipho|cffffcc00n|r Mana - [|cffffcc00Level 4|r]
+}
+
+STRING 147
+{
+Absorbs the magical energies of a target enemy unit by taking <AHdr,DataB4> mana per second from it and giving it to the Blood Mage. |nLasts <AHdr,Dur4> seconds.
+}
+
+STRING 148
+{
+S|cffffcc00t|rorm Bolt - [|cffffcc00Level 4|r]
+}
+
+STRING 149
+{
+Throws a magical hammer at a target enemy unit, dealing <AHtb,DataA4> damage and stunning the target for <AHtb,Dur4> seconds.
+}
+
+STRING 150
+{
+A magical hammer that is thrown at an enemy unit, causing damage and stunning the target. |n|n|cffffcc00Level 1|r - <AHtb,DataA1> damage, <AHtb,Dur1> second stun. |n|cffffcc00Level 2|r - <AHtb,DataA2> damage, <AHtb,Dur2> second stun. |n|cffffcc00Level 3|r - <AHtb,DataA3> damage, <AHtb,Dur3> second stun. |n|cffffcc00Level 4|r - <AHtb,DataA4> damage, <AHtb,Dur4> second stun.
+}
+
+STRING 151
+{
+Alchemist
+}
+
+STRING 152
+{
+Summon |cffffcc00W|rater Elemental - [|cffffcc00Level 4|r] 
+}
+
+STRING 153
+{
+Armorer
+}
+
+STRING 154
+{
+Summons a water elemental to attack the Archmage's enemies. |nLasts <AHwe,Dur1> seconds. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 155
+{
+Engineer
+}
+
+STRING 156
+{
+Thunder |cffffcc00C|rlap - [|cffffcc00Level 4|r]
+}
+
+STRING 157
+{
+Slams the ground, dealing <AHtc,DataA4> damage to nearby enemy land units and slowing their movement by <AHtc,DataC3,%>% and attack rate by <AHtc,DataD3,%>%.
+}
+
+STRING 158
+{
+ (Level 4)
+}
+
+STRING 159
+{
+Cerberus
+}
+
+STRING 160
+{
+Cobra Ward
+}
+
+STRING 161
+{
+Big Bad |cffffcc00V|roodoo
+}
+
+STRING 162
+{
+Herbalist
+}
+
+STRING 163
+{
+Loremaster
+}
+
+STRING 164
+{
+Weaponsmith
+}
+
+STRING 165
+{
+|cffffcc00B|rladestorm
+}
+
+STRING 166
+{
+|cffffcc00C|rhain Lightning - [|cffffcc00Level 4|r]
+}
+
+STRING 167
+{
+Calls forth a bolt of lightning that bounces up to <AOcl,DataB4> times, dealing <AOcl,DataA4> damage on the primary target. Each jump deals less damage.
+}
+
+STRING 168
+{
+Hurls a bolt of damaging lightning at a target enemy that jumps to nearby enemies. Each jump deals less damage. Deals 85-240 (level dependant) damage.
+}
+
+STRING 169
+{
+Alchemist
+}
+
+STRING 170
+{
+Critical Strike - [|cffffcc00Level 4|r]
+}
+
+STRING 171
+{
+Gives a <AOcr,DataA4>% chance to do <AOcr,DataB4> times normal damage on an attack.
+}
+
+STRING 172
+{
+Armorer
+}
+
+STRING 173
+{
+Endurance Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 174
+{
+Increases nearby friendly units' movement speed by <AOae,DataA4,%>% and attack rate by <AOae,DataB4,%>%.
+}
+
+STRING 175
+{
+Increases the movement speed and attack rate of nearby friendly units. |n|n|cffffcc00Level 1|r - <AOae,DataA1,%>% movement, <AOae,DataB1,%>% attack. |n|cffffcc00Level 2|r - <AOae,DataA2,%>% movement, <AOae,DataB2,%>% attack. |n|cffffcc00Level 3|r - <AOae,DataA3,%>% movement, <AOae,DataB3,%>% attack. |n|cffffcc00Level 4|r - <AOae,DataA4,%>% movement, <AOae,DataB4,%>% attack.
+}
+
+STRING 176
+{
+|cffffcc00F|rar Sight - [|cffffcc00Level 4|r]
+}
+
+STRING 177
+{
+Reveals the area of the map that it is cast upon for <AOfs,Dur1> seconds. Also reveals invisible units.
+}
+
+STRING 178
+{
+Feral Spiri|cffffcc00t|r - [|cffffcc00Level 4|r]
+}
+
+STRING 179
+{
+Summons 2 Spirit Wolf companions. |nLasts <AOsf,Dur1> seconds. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 180
+{
+Summons 2 Spirit Wolves to fight the Far Seer's enemies. |nLasts <AOsf,Dur1> seconds. |n|n|cffffcc00Level 1|r - 2 Spirit Wolves. |n|n|cffffcc00Level 2|r - 2 Dire Wolves with Critical Strike. |n|n|cffffcc00Level 3|r - 2 Shadow  Wolves with Critical Strike, invisible. |n|n|cffffcc00Level 3|r - 2 Cerberi with Critical Strike, invisibility and fiery Aura.
+}
+
+STRING 181
+{
+Calls forth a wave of energy that heals a target and bounces to nearby friendlies. Each bounce heals less damage. |n|n|cffffcc00Level 1|r - Heals <AOhw,DataA1> damage, jumps <AOhw,DataB1> times. |n|cffffcc00Level 2|r - Heals <AOhw,DataA2> damage, jumps <AOhw,DataB2> times. |n|cffffcc00Level 3|r - Heals <AOhw,DataA3> damage, jumps <AOhw,DataB3> times. |n|cffffcc00Level 4|r - Heals <AOhw,DataA4> damage, jumps <AOhw,DataB4> times.
+}
+
+STRING 182
+{
+H|cffffcc00e|raling Wave - [|cffffcc00Level 4|r]
+}
+
+STRING 183
+{
+Calls forth a wave of healing energy that bounces up to <AOhw,DataB4> times, healing <AOhw,DataA4> damage on the primary target. Each jump heals less damage.
+}
+
+STRING 184
+{
+He|cffffcc00x|r - [|cffffcc00Level 4|r]
+}
+
+STRING 185
+{
+Transforms an enemy unit into a random critter for <AOhx,Dur4> seconds.
+}
+
+STRING 186
+{
+Transforms an enemy unit into a random critter, disabling special abilities. |n|n|cffffcc00Level 1|r - Lasts <AOhx,Dur1> seconds. |n|cffffcc00Level 2|r - Lasts <AOhx,Dur2> seconds. |n|cffffcc00Level 3|r - Lasts <AOhx,Dur3> seconds. |n|cffffcc00Level 4|r - Lasts <AOhx,Dur4> seconds.
+}
+
+STRING 187
+{
+Mirro|cffffcc00r|r Image - [|cffffcc00Level 4|r]
+}
+
+STRING 188
+{
+Confuses the enemy by creating <AOmi,DataA4> illusions of the Blademaster. Dispels all magic from the Blademaster. |nLasts <AOmi,Dur1> seconds.
+}
+
+STRING 189
+{
+Confuses the enemy by creating illusions of the Blademaster and dispelling all magic from the Blademaster. |n|n|cffffcc00Level 1|r - Creates <AOmi,DataA1> illusion. |n|cffffcc00Level 2|r - Creates <AOmi,DataA2> illusions. |n|cffffcc00Level 3|r - Creates <AOmi,DataA3> illusions. |n|cffffcc00Level 4|r - Creates <AOmi,DataA4> illusions.
+}
+
+STRING 190
+{
+Reincarnation
+}
+
+STRING 191
+{
+Engineer
+}
+
+STRING 192
+{
+Summons an immobile serpentine ward to attack the Shadow Hunter's enemies. The ward is immune to magic. |nLasts <AOsw,Dur1> seconds. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 193
+{
+Serpent |cffffcc00W|rard - [|cffffcc00Level 4|r]
+}
+
+STRING 194
+{
+Summons an immobile serpentine ward to attack the Shadow Hunter's enemies. The ward has 200 hit points, is magic immune, and deals <osp3,mindmg1> - <osp3,maxdmg1> damage. |nLasts <AOsw,Dur1> seconds. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 195
+{
+Shock|cffffcc00w|rave - [|cffffcc00Level 4|r]
+}
+
+STRING 196
+{
+A wave of force that ripples outward, causing <AOsh,DataA4> damage to land units in a line.
+}
+
+STRING 197
+{
+A wave of force that ripples out from the Hero, causing damage to land units in a line. |n|n|cffffcc00Level 1|r - <AOsh,DataA1> damage. |n|cffffcc00Level 2|r - <AOsh,DataA2> damage. |n|cffffcc00Level 3|r - <AOsh,DataA3> damage. |n|cffffcc00Level 4|r - <AOsh,DataA4> damage.
+}
+
+STRING 198
+{
+War S|cffffcc00t|romp - [|cffffcc00Level 4|r]
+}
+
+STRING 199
+{
+Slams the ground, dealing <AOws,DataA4> damage to nearby enemy land units and stunning them for <AOws,Dur4> seconds.
+}
+
+STRING 200
+{
+Slams the ground, stunning and damaging nearby enemy land units. |n|n|cffffcc00Level 1|r - <AOws,DataA1> damage, <AOws,Dur1> second stun. |n|cffffcc00Level 2|r - <AOws,DataA2> damage, <AOws,Dur2> second stun. |n|cffffcc00Level 3|r - <AOws,DataA3> damage, <AOws,Dur3> second stun. |n|cffffcc00Level 4|r - <AOws,DataA4> damage, <AOws,Dur4> second stun.
+}
+
+STRING 201
+{
+|cffffcc00W|rind Walk - [|cffffcc00Level 4|r]
+}
+
+STRING 202
+{
+Allows the Blademaster to become invisible, and move <AOwk,DataB4,%>% faster for <AOwk,Dur4> seconds. If the Blademaster attacks a unit to break invisibility, the attack will do <AOwk,DataC4> bonus damage.
+}
+
+STRING 203
+{
+Magma Demon
+}
+
+STRING 204
+{
+Animate |cffffcc00D|read
+}
+
+STRING 205
+{
+Raises <AUan,DataA2> dead units in an area to fight for the Death Knight for <AUan,Dur2> seconds. Animated units are vulnerable.
+}
+
+STRING 206
+{
+Raises 8 (16) dead units in an area to fight for the Death Knight for 40 (120) seconds. Animated units are vulnerable.
+}
+
+STRING 207
+{
+Raises <AUan,DataA1> dead units in an area to fight for the Death Knight for <AUan,Dur1> seconds. Animated units are vulnerable.
+}
+
+STRING 208
+{
+|cffffcc00C|rarrion Beetles - [|cffffcc00Level 4|r]
+}
+
+STRING 209
+{
+Progenerates <AUcb,DataA3> Beetle from a target corpse. Beetles have <ucs3,realHP> hit points, and deal <ucs3,mindmg1> - <ucs3,maxdmg1> damage, and can burrow. Beetles are permanent until killed. |nMaximum of <AUcb,DataE4> Beetles.
+}
+
+STRING 210
+{
+The Crypt Lord progenerates <AUcb,DataA1> Carrion Beetle from a target corpse to attack the Crypt Lord's enemies. Beetles are permanent, but only <AUcb,DataE1> can be controlled at a time. |n|n|cffffcc00Level 1|r - <ucs1,realHP> hit points, <ucs1,mindmg1> - <ucs1,maxdmg1> damage. |n|cffffcc00Level 2|r - <ucs2,realHP> hit points, <ucs2,mindmg1> - <ucs2,maxdmg1> damage, Beetles can burrow. |n|cffffcc00Level 3|r - <ucs3,realHP> hit points, <ucs3,mindmg1> - <ucs3,maxdmg1> damage, Beetles can burrow. |n|cffffcc00Level 4|r - <ucs3,realHP> hit points, <ucs3,mindmg1> - <ucs3,maxdmg1> damage, Beetles can burrow.
+}
+
+STRING 211
+{
+|cffffcc00C|rarrion Swarm - [|cffffcc00Level 4|r]
+}
+
+STRING 212
+{
+Sends a horde of bats to deal <AUcs,DataA4> damage to each enemy unit in a cone.
+}
+
+STRING 213
+{
+Sends a horde of bats to damage enemies. |n|n|cffffcc00Level 1|r - <AUcs,DataA1> damage per unit. |n|cffffcc00Level 2|r - <AUcs,DataA2> damage per unit. |n|cffffcc00Level 3|r - <AUcs,DataA3> damage per unit. |n|cffffcc00Level 4|r - <AUcs,DataA4> damage per unit.
+}
+
+STRING 214
+{
+Dark |cffffcc00R|ritual - [|cffffcc00Level 4|r]
+}
+
+STRING 215
+{
+Sacrifices a target friendly Undead unit to convert <AUdr,DataA4,%>% of its hit points into mana for the Lich.
+}
+
+STRING 216
+{
+Sacrifices a target friendly Undead unit to convert its hit points into mana for the Lich. |n|n|cffffcc00Level 1|r - <AUdr,DataA1,%>% of hit points to mana. |n|cffffcc00Level 2|r - <AUdr,DataA2,%>% of hit points to mana. |n|cffffcc00Level 3|r - <AUdr,DataA3,%>% of hit points to mana. |n|cffffcc00Level 4|r - <AUdr,DataA4,%>% of hit points to mana.
+}
+
+STRING 217
+{
+|cffffcc00D|reath And Decay
+}
+
+STRING 218
+{
+Damages everything in its area of effect by <AUdd,DataA2,%>% of its base hit points per second. Also destroys trees. |nLasts <AUdd,Dur2> seconds.
+}
+
+STRING 219
+{
+Herbalist
+}
+
+STRING 220
+{
+Death |cffffcc00C|roil - [|cffffcc00Level 4|r]
+}
+
+STRING 221
+{
+A coil of death that can heal a friendly Undead unit for <AUdc,DataA4> hit points, or deal half damage to an enemy living unit.
+}
+
+STRING 222
+{
+A coil of death that can damage an enemy living unit or heal a friendly Undead unit. |n|n|cffffcc00Level 1|r - Heals for <AUdc,DataA1> hit points. |n|cffffcc00Level 2|r - Heals for <AUdc,DataA2> hit points. |n|cffffcc00Level 3|r - Heals for <AUdc,DataA3> hit points. |n|cffffcc00Level 4|r - Heals for <AUdc,DataA4> hit points.
+}
+
+STRING 223
+{
+D|cffffcc00e|rath Pact - [|cffffcc00Level 4|r]
+}
+
+STRING 224
+{
+Kills a target friendly Undead unit, giving <AUdp,DataB4,%>% of its hit points to the Death Knight.
+}
+
+STRING 225
+{
+Kills a target friendly Undead unit, giving a percentage of its hit points to the Death Knight. |n|n|cffffcc00Level 1|r - <AUdp,DataB1,%>% conversion. |n|cffffcc00Level 2|r - <AUdp,DataB2,%>% conversion. |n|cffffcc00Level 3|r - <AUdp,DataB3,%>% conversion. |n|cffffcc00Level 4|r - <AUdp,DataB4,%>% conversion.
+}
+
+STRING 226
+{
+|cffffcc00F|rrost Armor - [|cffffcc00Level 4|r]
+}
+
+STRING 227
+{
+Creates a shield of frost around a target friendly unit. The shield adds <AUfa,DataB4> armor and slows melee units that attack it for <AUfa,Dur1> seconds. |nLasts <AUfa,DataA4> seconds.
+}
+
+STRING 228
+{
+Creates a shield of frost around a target friendly unit. The shield adds armor and slows melee units that attack it. |n|n|cffffcc00Level 1|r - Adds <AUfa,DataB1> armor. |n|cffffcc00Level 2|r - Adds <AUfa,DataB2> armor. |n|cffffcc00Level 3|r - Adds <AUfa,DataB3> armor. |n|cffffcc00Level 4|r - Adds <AUfa,DataB4> armor.
+}
+
+STRING 229
+{
+Creates a shield of frost around a target friendly unit. The shield adds armor and slows melee units that attack it. |n|n|cffffcc00Level 1|r - Adds <AUfu,DataB1> armor. |n|cffffcc00Level 2|r - Adds <AUfu,DataB2> armor. |n|cffffcc00Level 3|r - Adds <AUfu,DataB3> armor. |n|cffffcc00Level 4|r - Adds <AUfu,DataB4> armor.
+}
+
+STRING 230
+{
+Blasts enemy units around a target enemy unit with a wave of damaging frost that slows movement and attack rate. |n|n|cffffcc00Level 1|r - <AUfn,DataB1> target damage, <AUfn,DataA1> nova damage. |n|cffffcc00Level 2|r - <AUfn,DataB2> target damage, <AUfn,DataA2> nova damage. |n|cffffcc00Level 3|r - <AUfn,DataB3> target damage, <AUfn,DataA3> nova damage. |n|cffffcc00Level 4|r - <AUfn,DataB4> target damage, <AUfn,DataA4> nova damage.
+}
+
+STRING 231
+{
+Frost |cffffcc00N|rova - [|cffffcc00Level 4|r]
+}
+
+STRING 232
+{
+Blasts enemy units with a wave of frost that deals <AUfn,DataB4> damage to the target, and <AUfn,DataA4> nova damage. Cold damage slows units' movement and attack rate for <AUfn,Dur4> seconds.
+}
+
+STRING 233
+{
+Slams the ground with the Crypt Lord's massive claws, shooting spiked tendrils out in a straight line, dealing damage and hurling enemy ground units into the air in their wake. |n|n|cffffcc00Level 1|r - <AUim,DataC1> damage, <AUim,Dur1> second stun. |n|cffffcc00Level 2|r - <AUim,DataC2> damage, <AUim,Dur2> second stun. |n|cffffcc00Level 3|r - <AUim,DataC3> damage, <AUim,Dur3> second stun. |n|cffffcc00Level 4|r - <AUim,DataC4> damage, <AUim,Dur4> second stun.
+}
+
+STRING 234
+{
+Impal|cffffcc00e|r - [|cffffcc00Level 4|r]
+}
+
+STRING 235
+{
+Slams the ground with the Crypt Lord's massive claws, shooting spiked tendrils out in a straight line dealing <AUim,DataC4> damage and hurling enemy ground units into the air in their wake, stunning them for <AUim,Dur4> seconds.
+}
+
+STRING 236
+{
+Loremaster
+}
+
+STRING 237
+{
+|cffffcc00L|rocust Swarm
+}
+
+STRING 238
+{
+Creates a swarm of angry locusts that bite and tear at nearby enemy units. As they chew the enemy flesh, they convert it into a substance that restores hit points to the Crypt Lord when they return. |nLasts <AUls,HeroDur2> seconds.
+}
+
+STRING 239
+{
+Weaponsmith
+}
+
+STRING 240
+{
+Puts a target enemy unit to sleep. A sleeping unit can be awoken by attacking it. |n|n|cffffcc00Level 1|r - <AUsl,Dur1> second sleep for <AUsl,Cost1> mana. |n|cffffcc00Level 2|r - <AUsl,Dur2> second sleep for <AUsl,Cost2> mana. |n|cffffcc00Level 3|r - <AUsl,Dur3> second sleep for <AUsl,Cost3> mana. |n|cffffcc00Level 4|r - <AUsl,Dur4> second sleep for <AUsl,Cost4> mana.
+}
+
+STRING 241
+{
+Sl|cffffcc00e|rep - [|cffffcc00Level 4|r]
+}
+
+STRING 242
+{
+Puts a target enemy unit to sleep for <AUsl,Dur4> seconds. A sleeping unit can be awoken by attacking it.
+}
+
+STRING 243
+{
+Spiked Carapace - [|cffffcc00Level 4|r]
+}
+
+STRING 244
+{
+Enhances the Crypt Lord's chitinous armor with organic barbs, giving him <AUts,DataC4> bonus armor and returning <AUts,DataA4,%>% of melee attack damage to enemies.
+}
+
+STRING 245
+{
+The Crypt Lord forms barbed layers of chitinous armor that increases its defense and returns damage to enemy melee attackers.  |n|n|cffffcc00Level 1|r - <AUts,DataA1,%>% damage returned, <AUts,DataC1> bonus armor. |n|cffffcc00Level 2|r -  <AUts,DataA2,%>% damage returned, <AUts,DataC2> bonus armor. |n|cffffcc00Level 3|r -  <AUts,DataA3,%>% damage returned, <AUts,DataC3> bonus armor. |n|cffffcc00Level 4|r -  <AUts,DataA4,%>% damage returned, <AUts,DataC4> bonus armor.
+}
+
+STRING 246
+{
+Increases the movement speed and life regeneration rate of nearby friendly units. |n|n|cffffcc00Level 1|r - <AUau,DataA1,%>% movement, minor regeneration bonus. |n|cffffcc00Level 2|r - <AUau,DataA2,%>% movement, moderate regeneration bonus. |n|cffffcc00Level 3|r - <AUau,DataA3,%>% movement, greater regeneration bonus. |n|cffffcc00Level 4|r - <AUau,DataA4,%>% movement, greater regeneration bonus.
+}
+
+STRING 247
+{
+Unholy Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 248
+{
+Increases nearby friendly units' movement speed by <AUau,DataA4,%>% and life regeneration rate.
+}
+
+STRING 249
+{
+Nearby friendly melee units gain hit points when they hit enemy units. |n|n|cffffcc00Level 1|r - Gains <AUav,DataA1,%>% of attack damage. |n|cffffcc00Level 2|r - Gains <AUav,DataA2,%>% of attack damage. |n|cffffcc00Level 3|r - Gains <AUav,DataA3,%>% of attack damage. |n|cffffcc00Level 4|r - Gains <AUav,DataA4,%>% of attack damage.
+}
+
+STRING 250
+{
+Vampiric Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 251
+{
+Nearby friendly melee units gain <AUav,DataA4,%>% of their attack damage when they hit enemy units.
+}
+
+STRING 252
+{
+Protector
+}
+
+STRING 253
+{
+Greater Spirit of Vengeance
+}
+
+STRING 254
+{
+|cffffcc00B|rlink - [|cffffcc00Level 4|r]
+}
+
+STRING 255
+{
+Teleports the Warden a short distance, allowing her to move in and out of combat.
+}
+
+STRING 256
+{
+Short distance teleportation that allows the Warden to move in and out of combat. |n|n|cffffcc00Level 1|r - <AEbl,Cool1> second cooldown, <AEbl,Cost1> mana. |n|cffffcc00Level 2|r - <AEbl,Cool2> second cooldown, <AEbl,Cost2> mana. |n|cffffcc00Level 3|r - <AEbl,Cool3> second cooldown, <AEbl,Cost3> mana. |n|cffffcc00Level 4|r - <AEbl,Cool4> second cooldown, <AEbl,Cost4> mana.
+}
+
+STRING 257
+{
+|cffffcc00E|rntangling Roots - [|cffffcc00Level 4|r]
+}
+
+STRING 258
+{
+Causes roots to burst from the ground, immobilizing and disarming a target enemy unit for <AEer,Dur4> seconds, and dealing <AEer,DataA4> damage per second.
+}
+
+STRING 259
+{
+Causes roots to burst from the ground, immobilizing, disarming and damaging a target enemy temporarily. |n|n|cffffcc00Level 1|r - <AEer,DataA1> damage per second for <AEer,Dur1> seconds. |n|cffffcc00Level 2|r - <AEer,DataA2> damage per second for <AEer,Dur2> seconds. |n|cffffcc00Level 3|r - <AEer,DataA3> damage per second for <AEer,Dur3> seconds. |n|cffffcc00Level 4|r - <AEer,DataA4> damage per second for <AEer,Dur4> seconds.
+}
+
+STRING 260
+{
+Evasion - [|cffffcc00Level 4|r]
+}
+
+STRING 261
+{
+Gives a <AEev,DataA4,%>% chance to avoid an attack.
+}
+
+STRING 262
+{
+Gives a percent chance to avoid attacks. |n|n|cffffcc00Level 1|r - <AEev,DataA1,%>% chance that an opponent misses. |n|cffffcc00Level 2|r - <AEev,DataA2,%>% chance that an opponent misses. |n|cffffcc00Level 3|r - <AEev,DataA3,%>% chance that an opponent misses. |n|cffffcc00Level 4|r - <AEev,DataA4,%>% chance that an opponent misses.
+}
+
+STRING 263
+{
+|cffffcc00F|ran of Knives - [|cffffcc00Level 4|r]
+}
+
+STRING 264
+{
+The Warden hurls a flurry of knives damaging, nearby enemies. Each knife does <AEfk,DataA4> damage.
+}
+
+STRING 265
+{
+The Warden hurls a flurry of knives, damaging nearby enemies. |n|n|cffffcc00Level 1|r - <AEfk,DataA1> damage per target. |n|cffffcc00Level 2|r - <AEfk,DataA2> damage per target. |n|cffffcc00Level 3|r - <AEfk,DataA3> damage per target. |n|cffffcc00Level 4|r - <AEfk,DataA4> damage per target.
+}
+
+STRING 266
+{
+|cffffcc00F|rorce of Nature - [|cffffcc00Level 4|r]
+}
+
+STRING 267
+{
+Converts a very large area of trees into <AEfn,DataA4> Protectors. Can learn Nature's Blessing. |nLasts <AEfn,Dur4> seconds. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 268
+{
+Converts a small area of trees into <AEfn,DataA1> Treants. Can learn Nature's Blessing. |nLasts <AEfn,Dur1> seconds. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 269
+{
+Converts a large area of trees into <AEfn,DataA2> Treants. Can learn Nature's Blessing. |nLasts <AEfn,Dur2> seconds. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 270
+{
+Converts a very large area of trees into <AEfn,DataA3> Treants. Can learn Nature's Blessing. |nLasts <AEfn,Dur3> seconds. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 271
+{
+Converts an area of trees into 2-4 Treants. Can learn Nature's Blessing. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Level 1|r - Raises <AEfn,DataA1> Treants for <AEfn,Dur1> seconds. |n|cffffcc00Level 2|r - Raises <AEfn,DataA2> Treants for <AEfn,Dur2> seconds. |n|cffffcc00Level 3|r - Raises <AEfn,DataA3> Treants for <AEfn,Dur3> seconds. |n|cffffcc00Level 4|r - Raises <AEfn,DataA4> Protectors for <AEfn,Dur4> seconds.
+}
+
+STRING 272
+{
+Activate Immo|cffffcc00l|ration - [|cffffcc00Level 4|r]
+}
+
+STRING 273
+{
+Activate Immolation to engulf this unit in flames, causing <AEim,DataA4> damage per second to nearby enemy land units. |nDrains mana until deactivated.
+}
+
+STRING 274
+{
+Engulfs the Demon Hunter in flames, causing damage to nearby enemy land units. |nDrains mana until deactivated. |n|n|cffffcc00Level 1|r - <AEim,DataA1> damage per second. |n|cffffcc00Level 2|r - <AEim,DataA2> damage per second. |n|cffffcc00Level 3|r - <AEim,DataA3> damage per second. |n|cffffcc00Level 4|r - <AEim,DataA4> damage per second.
+}
+
+STRING 275
+{
+Mana |cffffcc00B|rurn - [|cffffcc00Level 4|r]
+}
+
+STRING 276
+{
+Sends a bolt of negative energy that burns up to <AEmb,DataA4> points of a target enemy unit's mana. The mana combusts, dealing damage equal to the amount of mana burned.
+}
+
+STRING 277
+{
+Sends a bolt of negative energy that burns a target enemy unit's mana. Burned mana combusts, dealing damage to the target equal to the amount of mana burned. |n|n|cffffcc00Level 1|r - Burns up to <AEmb,DataA1> mana. |n|cffffcc00Level 2|r - Burns up to <AEmb,DataA2> mana. |n|cffffcc00Level 3|r - Burns up to <AEmb,DataA3> mana. |n|cffffcc00Level 4|r - Burns up to <AEmb,DataA4> mana.
+}
+
+STRING 278
+{
+Me|cffffcc00t|ramorphosis
+}
+
+STRING 279
+{
+Transforms the Demon Hunter into a powerful Demon with a ranged attack and <AEme,DataE2> bonus hit points. |nLasts <AEme,HeroDur2> seconds.
+}
+
+STRING 280
+{
+Blood Elves
+}
+
+STRING 281
+{
+S|cffffcc00c|rout - [|cffffcc00Level 4|r]
+}
+
+STRING 282
+{
+Summons a very fast and invisible Owl Scout, which can be used to scout.|nCan see invisible units. |nLasts <AEst,Dur4> seconds.
+}
+
+STRING 283
+{
+Temporarily summons an Owl Scout, which can be used to scout the map. |nCan see invisible units. |n|n|cffffcc00Level 1|r - Summons an Owl Scout for <AEst,Cost1> mana. |n|cffffcc00Level 2|r - Summons a better Owl Scout for <AEst,Cost2> mana. |n|cffffcc00Level 3|r - Summons an even better Owl Scout for <AEst,Cost3> mana. |n|cffffcc00Level 4|r - Summons the best Owl Scout for <AEst,Cost4> mana.
+}
+
+STRING 284
+{
+Sea|cffffcc00r|ring Arrows - [|cffffcc00Level 4|r]
+}
+
+STRING 285
+{
+Adds <AHfa,DataA4> bonus fire damage to an attack, but drains mana with each shot fired.
+}
+
+STRING 286
+{
+Increases the damage of the Priestess' attack by adding fire. |n|n|cffffcc00Level 1|r - <AHfa,DataA1> bonus damage. |n|cffffcc00Level 2|r - <AHfa,DataA2> bonus damage. |n|cffffcc00Level 3|r - <AHfa,DataA3> bonus damage. |n|cffffcc00Level 4|r - <AHfa,DataA4> bonus damage.
+}
+
+STRING 287
+{
+Sha|cffffcc00d|row Strike - [|cffffcc00Level 4|r]
+}
+
+STRING 288
+{
+Hurls a poisoned dagger at a target enemy unit, dealing <AEsh,DataE4> initial damage, and <AEsh,DataA4> damage every <AEsh,Cast4> seconds for <AEsh,Dur4> seconds. The poison slows the movement speed of the targeted unit for a short duration.
+}
+
+STRING 289
+{
+Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for a short duration. |n|n|cffffcc00Level 1|r - <AEsh,DataE1> strike damage, <AEsh,DataA1> duration damage. |n|cffffcc00Level 2|r - <AEsh,DataE2> strike damage, <AEsh,DataA2> duration damage. |n|cffffcc00Level 3|r - <AEsh,DataE3> strike damage, <AEsh,DataA3> duration damage. |n|cffffcc00Level 4|r - <AEsh,DataE4> strike damage, <AEsh,DataA4> duration damage.
+}
+
+STRING 290
+{
+Star|cffffcc00f|rall
+}
+
+STRING 291
+{
+Calls down waves of falling stars that damage nearby enemy units. Each wave deals <AEsf,DataA2> damage. |nLasts for <AEsf,Dur2> seconds.
+}
+
+STRING 292
+{
+Naga
+}
+
+STRING 293
+{
+Thorns Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 294
+{
+An aura that gives friendly nearby units a damage shield, which deals <AEah,DataA4,%>% of an enemy unit's melee attack damage back to it.
+}
+
+STRING 295
+{
+An aura that gives friendly nearby units a damage shield, which returns a percentage of a melee attacker's damage back to it. |n|n|cffffcc00Level 1|r - Returns <AEah,DataA1,%>% damage. |n|cffffcc00Level 2|r - Returns <AEah,DataA2,%>% damage. |n|cffffcc00Level 3|r - Returns <AEah,DataA3,%>% damage. |n|cffffcc00Level 4|r - Returns <AEah,DataA4,%>% damage.
+}
+
+STRING 296
+{
+|cffffcc00T|rranquility
+}
+
+STRING 297
+{
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for <AEtq,DataA2> hit points per second. |nLasts <AEtq,Dur2> seconds.
+}
+
+STRING 298
+{
+Night Elves
+}
+
+STRING 299
+{
+An aura that gives friendly nearby units bonus damage to their ranged attacks. |n|n|cffffcc00Level 1|r - Increases base ranged damage by <AEar,DataA1,%>%. |n|cffffcc00Level 2|r - Increases base ranged damage by <AEar,DataA2,%>%. |n|cffffcc00Level 3|r - Increases base ranged damage by <AEar,DataA3,%>%. |n|cffffcc00Level 4|r - Increases base ranged damage by <AEar,DataA4,%>%.
+}
+
+STRING 300
+{
+Trueshot Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 301
+{
+An aura that gives friendly nearby units a <AEar,DataA4,%>% bonus damage to their ranged attacks.
+}
+
+STRING 302
+{
+|cffffcc00V|rengeance
+}
+
+STRING 303
+{
+Creates a powerful Avatar to aid the Warden. Has Critical Strike, Aerial Shackles, Resistant Skin, Blink and is in overall better than the Spirit of Vengeance. |nLasts <AEsv,Dur1> seconds.
+}
+
+STRING 304
+{
+Creates a powerful spirit to aid the Warden. Has Critical Strike, Aerial Shackles and Resistant Skin. |nLasts <AEsv,Dur1> seconds.
+}
+
+STRING 305
+{
+Orcs
+}
+
+STRING 306
+{
+Blink (Vengeance)
+}
+
+STRING 307
+{
+Teleports the caster a short distance, allowing it to move in and out of combat.
+}
+
+STRING 308
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 309
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 310
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 311
+{
+Temple of Light
+}
+
+STRING 312
+{
+Upgrade to T|cffffcc00e|rmple of Light
+}
+
+STRING 313
+{
+|cffffff00New Quest discovered:|r Dragon Slayer
+}
+
+STRING 314
+{
+Temple of Darkness
+}
+
+STRING 315
+{
+Upgrade to T|cffffcc00e|rmple of Darkness
+}
+
+STRING 316
+{
+The Destroyer´s seat of power. Has different offensive capabilities. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 317
+{
+Demigod´s Protection
+}
+
+STRING 318
+{
+Turns all friendly units in the world invulnerable. |nThe Temple does not turn invulnerable. |nLasts <AOvd,Dur1> seconds.
+}
+
+STRING 319
+{
+Book of Alchemy
+}
+
+STRING 320
+{
+Book of Armoring
+}
+
+STRING 321
+{
+Book of Engineering
+}
+
+STRING 322
+{
+Book of Herbalism
+}
+
+STRING 323
+{
+Undead
+}
+
+STRING 324
+{
+Book of Lores
+}
+
+STRING 325
+{
+Learn Dem|cffffcc00i|rgod´s Protection
+}
+
+STRING 326
+{
+Humans
+}
+
+STRING 327
+{
+N
+}
+
+STRING 328
+{
+|cffffcc00N|rovice Alchemy
+}
+
+STRING 329
+{
+From now on, Players can be defeated forever by losing Hideouts, Town Halls or Demigod Temples.
+}
+
+STRING 330
+{
+A book that contains knowledge of brewing mana potions.
+}
+
+STRING 331
+{
+Purchase Alchemy |cffffcc00B|rook
+}
+
+STRING 332
+{
+Naga
+}
+
+STRING 333
+{
+Alchemy
+}
+
+STRING 334
+{
+Night Elves
+}
+
+STRING 335
+{
+Orcs
+}
+
+STRING 336
+{
+Undead
+}
+
+STRING 337
+{
+Humans
+}
+
+STRING 338
+{
+Naga
+}
+
+STRING 339
+{
+Night Elves
+}
+
+STRING 340
+{
+Orcs
+}
+
+STRING 341
+{
+Undead
+}
+
+STRING 342
+{
+Humans
+}
+
+STRING 343
+{
+Naga
+}
+
+STRING 344
+{
+Night Elves
+}
+
+STRING 345
+{
+Orcs
+}
+
+STRING 346
+{
+Undead
+}
+
+STRING 347
+{
+Humans
+}
+
+STRING 348
+{
+Naga
+}
+
+STRING 349
+{
+Night Elves
+}
+
+STRING 350
+{
+Orcs
+}
+
+STRING 351
+{
+Armoring
+}
+
+STRING 352
+{
+Undead
+}
+
+STRING 353
+{
+Humans
+}
+
+STRING 354
+{
+Naga
+}
+
+STRING 355
+{
+Night Elves
+}
+
+STRING 356
+{
+Orcs
+}
+
+STRING 357
+{
+Undead
+}
+
+STRING 358
+{
+Humans
+}
+
+STRING 359
+{
+Naga
+}
+
+STRING 360
+{
+Night Elves
+}
+
+STRING 361
+{
+Orcs
+}
+
+STRING 362
+{
+Undead
+}
+
+STRING 363
+{
+Humans
+}
+
+STRING 364
+{
+Naga
+}
+
+STRING 365
+{
+D
+}
+
+STRING 366
+{
+A|cffffcc00d|rvanced Alchemy
+}
+
+STRING 367
+{
+Surrounds the Hero with damaging flames. Also increases defense by +4 and adds 300 Life.
+}
+
+STRING 368
+{
+E
+}
+
+STRING 369
+{
+Ad|cffffcc00e|rpt Alchemy
+}
+
+STRING 370
+{
+Engulfs the Hero in fire which deals <AIcf,DataA1> damage per second to nearby enemy land units. Also increases defense by +4 and adds 300 Life. |nDoes not stack with Immolation.
+}
+
+STRING 371
+{
+T
+}
+
+STRING 372
+{
+Mas|cffffcc00t|rer Alchemy
+}
+
+STRING 373
+{
+The Alchemist uses gathered herbs and minerals to create a Mana Stone.
+}
+
+STRING 374
+{
+|cffffcc00N|rovice Armoring
+}
+
+STRING 375
+{
+Night Elves
+}
+
+STRING 376
+{
+Orcs
+}
+
+STRING 377
+{
+Undead
+}
+
+STRING 378
+{
+Humans
+}
+
+STRING 379
+{
+Herbalism
+}
+
+STRING 380
+{
+Naga
+}
+
+STRING 381
+{
+Night Elves
+}
+
+STRING 382
+{
+Orcs
+}
+
+STRING 383
+{
+Undead
+}
+
+STRING 384
+{
+Loremastery
+}
+
+STRING 385
+{
+Light Leather Armor
+}
+
+STRING 386
+{
+Infernal Spawn
+}
+
+STRING 387
+{
+Purchase Light Leather Armor
+}
+
+STRING 388
+{
+Plated Helmet
+}
+
+STRING 389
+{
+Plate Helmet forged in a complicated process. Grants +5 defense and 15% Evasion.
+}
+
+STRING 390
+{
+Purchase Plated Helmet
+}
+
+STRING 391
+{
+Heavy Plated Shield
+}
+
+STRING 392
+{
+Plated Shield made of very durable metals. Grants +8 defense and 70% protection from ranged attacks.
+}
+
+STRING 393
+{
+Purchase Heavy Plated Shield
+}
+
+STRING 394
+{
+Blessed Champion Armor
+}
+
+STRING 395
+{
+Magically enhanced, Diamond-socketed Armor. Grants +8 defense, Devotion Aura and blocks an enemy spell every 40 Seconds.
+}
+
+STRING 396
+{
+Purchase Blessed Champion Armor
+}
+
+STRING 397
+{
+Reborn Version
+}
+
+STRING 398
+{
+This version is merely an update of Pitlords WoW TFT 1.2
+Updates include: 
+
+- Horn of Cenarious item would not appear
+- No more respawning of bosses (I felt this was a bug whether it was or not)
+- Increased respawning time to 75 secs up from 45 secs
+- Removed some of them horrible sound effects that got REALLY annoying
+- Map file size 1.6MB down from 3.3MB (nothing is missing, Its called optimizing ^^ )
+- Generally cleaned out coding, etc
+- Plus more..
+
+}
+
+STRING 400
+{
+Mithril Long Sword
+}
+
+STRING 401
+{
+Armor made of various animal hides. Grants +5 Defense and faster life regeneration.
+}
+
+STRING 402
+{
+Purchase Mithril Long Sword
+}
+
+STRING 403
+{
+Demon Slayer Axe
+}
+
+STRING 404
+{
+Bow of Fire
+}
+
+STRING 405
+{
+Purchase Demon Slayer Axe
+}
+
+STRING 406
+{
+Blessed Dragon Lance
+}
+
+STRING 407
+{
+Precisely crafted magical bow. Grants +10 damage and allows to attack air units with fiery arrows.
+}
+
+STRING 408
+{
+Purchase Blessed Dragon Lance
+}
+
+STRING 409
+{
+Mas|cffffcc00t|rer Armoring
+}
+
+STRING 410
+{
+Purchase Bow of Fire
+}
+
+STRING 411
+{
+The Armorer uses gathered hides to compose a light Leather Armor.
+}
+
+STRING 412
+{
+A|cffffcc00d|rvanced Armoring
+}
+
+STRING 413
+{
+The Armorer uses gathered minerals to forge a Plate Helmet.
+}
+
+STRING 414
+{
+Ad|cffffcc00e|rpt Armoring
+}
+
+STRING 415
+{
+Blocks an enemy spell every 15 seconds and adds 250 Mana.
+}
+
+STRING 416
+{
+Humans
+}
+
+STRING 417
+{
+Purchase Talisman of Spell Protection
+}
+
+STRING 418
+{
+|cffffcc00N|rovice Weaponry
+}
+
+STRING 420
+{
+Naga
+}
+
+STRING 421
+{
+The Weaponsmith uses gathered minerals to forge a Mithril Long Sword.
+}
+
+STRING 422
+{
+Night Elves
+}
+
+STRING 423
+{
+Purchase Talisman of Everlasting
+}
+
+STRING 424
+{
+|cffffcc00N|rovice Herbalism
+}
+
+STRING 425
+{
+The Weaponsmith uses gathered minerals to craft a Bow of Fire..
+}
+
+STRING 426
+{
+A|cffffcc00d|rvanced Herbalism
+}
+
+STRING 427
+{
+The Herbalist uses his gathered herbs to brew a Greater Healing Potion.
+}
+
+STRING 428
+{
+Mas|cffffcc00t|rer Herbalism
+}
+
+STRING 429
+{
+The Herbalist uses his gathered herbs and minerals to create a Heath Stone.
+}
+
+STRING 430
+{
+Ad|cffffcc00e|rpt Herbalism
+}
+
+STRING 432
+{
+|cffffcc00N|rovice Loremastery
+}
+
+STRING 433
+{
+The Loremaster creates an enchanted Scroll of Protection.
+}
+
+STRING 434
+{
+A|cffffcc00d|rvanced Loremastery
+}
+
+STRING 435
+{
+The Loremaster creates an enchanted Scroll of Restoration.
+}
+
+STRING 436
+{
+Ad|cffffcc00e|rpt Loremastery
+}
+
+STRING 437
+{
+Conjures a pillar of flame that burns ground units for 80 damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
+}
+
+STRING 438
+{
+Mas|cffffcc00t|rer Loremastery
+}
+
+STRING 439
+{
+Orcs
+}
+
+STRING 440
+{
+Defend Plate Armor
+}
+
+STRING 441
+{
+Unique - Legion´s Hate
+}
+
+STRING 442
+{
+Undead
+}
+
+STRING 443
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 444
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 445
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 446
+{
+Unique - Shield of the Void
+}
+
+STRING 447
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 448
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 449
+{
+Unique - Varimathras´ Wings
+}
+
+STRING 450
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 451
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 452
+{
+Unique - Helm of the Void
+}
+
+STRING 453
+{
+|cff8b00ffUnique|r|nAn ancient Artifact that holds the Void Revenant´s dark power. Made by dark sorcery, it brings death and destruction to everyone who dares to oppose its master.
+}
+
+STRING 454
+{
+|cff8b00ffUnique|r|nAn ancient Artifact that holds the Void Revenant´s dark power. Made by dark sorcery, it brings death and destruction to everyone who dares to oppose its master.|nGrants +10 defense, +10 Damage, Unholy Aura and casts Ray of Death that deals 800 damage to any target.
+}
+
+STRING 455
+{
+Unique - Hydra Queen Scales
+}
+
+STRING 456
+{
+|cff8b00ffUnique|r|nAn extremely rare Armor made of a Hydra Queen´s Skin. Apart from looking eerie, it has many powerful abilities.
+}
+
+STRING 457
+{
+|cff8b00ffUnique|r|nAn extremely rare Armor made of a Hydra Queen´s Skin. Apart from looking eerie, it has many powerful abilities.|nGrants +10 defense, faster Life Regeneration, Endurance Aura and summons an Elder Hydra every 100 seconds (lasts 120 seconds).
+}
+
+STRING 458
+{
+Unique - Dragonspawn  Necklace
+}
+
+STRING 459
+{
+|cff8b00ffUnique|r|nThis Amulet has been enchanted by powerful magic used by the Dragonspawn Sorcerors. Grants 200 Mana, blocks an enemy Spell every 10 seconds and makes the bearer 75% resistant to harmful spells.
+}
+
+STRING 460
+{
+Spell Shield (unique)
+}
+
+STRING 461
+{
+Spell Damage Reduction (unique)
+}
+
+STRING 462
+{
+Inferno (unique)
+}
+
+STRING 463
+{
+Summon Hydra (unique)
+}
+
+STRING 464
+{
+Angry Spirits (unique)
+}
+
+STRING 465
+{
+Finger of Death (unique)
+}
+
+STRING 466
+{
+Mirror Image (unique)
+}
+
+STRING 467
+{
+Spell Damage Reduction (unique shield)
+}
+
+STRING 468
+{
+Unique - Stormbringer´s Horn
+}
+
+STRING 469
+{
+|cff8b00ffUnique|r|nThe Horn a legendary Stormbringer Dragon. Though the creature from whose head the horn has been cut off has perished, the frequent use of lightning magic has somehow enchanted the horn with magicks from the elemental plane of air.
+}
+
+STRING 470
+{
+|cffffff00New Quest discovered:|r Harpy Menace
+}
+
+STRING 471
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 472
+{
+Tiny Guard Tower
+}
+
+STRING 473
+{
+Creates a Guard Tower.
+}
+
+STRING 474
+{
+Sends a gigantic wave which deals 150 damage to each enemy land unit in a line, up to 900 max damage.
+}
+
+STRING 475
+{
+Engineering
+}
+
+STRING 476
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 477
+{
+The Engineer calls for 2 Goblin Sappers to demolish a target structure or cause havoc amongst his or her enemies. They´ll have it down in no time !
+}
+
+STRING 478
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 479
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 480
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 481
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 482
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 483
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 484
+{
+Tiny Death Tower
+}
+
+STRING 485
+{
+Creates a Death Tower.
+}
+
+STRING 486
+{
+Purchase |cffffcc00D|reath Tower
+}
+
+STRING 487
+{
+Creates a Death Tower at a target location.
+}
+
+STRING 488
+{
+Tiny Flame Tower
+}
+
+STRING 489
+{
+Creates a Flame Tower.
+}
+
+STRING 490
+{
+Creates a Flame Tower at a target location.
+}
+
+STRING 491
+{
+Purchase |cffffcc00F|rlame Tower
+}
+
+STRING 492
+{
+F
+}
+
+STRING 493
+{
+Tiny Cold Tower
+}
+
+STRING 494
+{
+C
+}
+
+STRING 495
+{
+Purchase |cffffcc00C|rold Tower
+}
+
+STRING 496
+{
+Creates a Cold Tower at a target location.
+}
+
+STRING 497
+{
+Creates a Cold Tower.
+}
+
+STRING 498
+{
+Ad|cffffcc00e|rpt Engineering
+}
+
+STRING 499
+{
+|cffffcc00N|rovice Engineering
+}
+
+STRING 500
+{
+The Engineer creates a Do-It-Yourself Flame Tower (which can be upgraded to an Advanced Flame Tower). You´ll have it up in no time !
+}
+
+STRING 501
+{
+A|cffffcc00d|rvanced Engineering
+}
+
+STRING 502
+{
+The Engineer creates a Do-It-Yourself Cold Tower (which can be upgraded to an Advanced Cold Tower). You´ll have it up in no time !
+}
+
+STRING 503
+{
+Mas|cffffcc00t|rer Engineering
+}
+
+STRING 504
+{
+The Engineer creates a Do-It-Yourself Death Tower (which can be upgraded to an Advanced Death Tower). You´ll have it up in no time !
+}
+
+STRING 505
+{
+Build Tiny Flame Tower
+}
+
+STRING 506
+{
+Build Tiny Cold Tower 
+}
+
+STRING 507
+{
+Build Tiny Death Tower 
+}
+
+STRING 508
+{
+Hand of Destruction
+}
+
+STRING 509
+{
+Revive Hand of |cffffcc00D|restruction
+}
+
+STRING 510
+{
+Summon Hand of |cffffcc00D|restruction
+}
+
+STRING 511
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 512
+{
+Granis Darkhammer,Jorn the Redeemer,Sage Truthbearer,Malak the Avenger,Gavinrad the Dire,Morlune the Mighty,Agamand the True,Ballador the Bright,Manadar the Healer,Zann the Defender,Arius the Seeker,Aurrius the Pure,Karnwield the Seeker,Buzan the Fearless
+}
+
+STRING 513
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 514
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 515
+{
+Gate
+}
+
+STRING 516
+{
+Teleports the caster to any desired, explored location. Cooldown decreases with each level, at a higher mana cost.
+}
+
+STRING 517
+{
+G
+}
+
+STRING 518
+{
+|cffffcc00G|rate - [|cffffcc00Level 1|r]
+}
+
+STRING 519
+{
+|cffffcc00G|rate - [|cffffcc00Level 2|r]
+}
+
+STRING 520
+{
+|cffffcc00G|rate - [|cffffcc00Level 3|r]
+}
+
+STRING 521
+{
+|cffffff00Quest completed:|r Dragon Slayer
+}
+
+STRING 522
+{
+Entering now: |cff00ff00Azeroth - New Stormwind|r
+}
+
+STRING 523
+{
+Entering now: |cff00ff00Khaz Modan - Ironforge|r
+}
+
+STRING 524
+{
+P
+}
+
+STRING 525
+{
+ (Destruction)
+}
+
+STRING 526
+{
+Dragon´s Call
+}
+
+STRING 527
+{
+ (Titan)
+}
+
+STRING 528
+{
+Learn D|cffffcc00r|ragon´s Call
+}
+
+STRING 529
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 530
+{
+D|cffffcc00r|ragon´s Call
+}
+
+STRING 531
+{
+Summon Bronze Drake
+}
+
+STRING 532
+{
+ (Destroyer)
+}
+
+STRING 533
+{
+Terrordar,Nerothos,Bleakill,Necros,Fearoth,Dethecus,Maldibion,Nochthitus,Gholbine,Rashgarroth,Aramachus,Zilfallon,Lorthiras,Zenedar,Mullioch,Algammon,Banehallow,Ven'Gyr
+}
+
+STRING 534
+{
+Light of Righteousness
+}
+
+STRING 535
+{
+Learn Light|cffffcc00t|r of Righteousness - [|cffffcc00Level %d|r]
+}
+
+STRING 536
+{
+Ligh|cffffcc00t|r of Righteousness - [|cffffcc00Level 1|r]
+}
+
+STRING 537
+{
+Ligh|cffffcc00t|r of Righteousness - [|cffffcc00Level 2|r]
+}
+
+STRING 538
+{
+Ligh|cffffcc00t|r of Righteousness - [|cffffcc00Level 3|r]
+}
+
+STRING 539
+{
+Touch of Darkness
+}
+
+STRING 540
+{
+You have chosen to be an |cffff0000Alchemist|r. Your Hero will be able to compose different Mana replenishing equipment..
+}
+
+STRING 541
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 542
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 543
+{
+Keeper of the Grave
+}
+
+STRING 544
+{
+Temp|cffffcc00l|re of Demigods Blueprints
+}
+
+STRING 545
+{
+Fires bolts of death that cause -5 armor at the target. Excellent at destroying everything. Immune to magic. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 546
+{
+Magical Seed
+}
+
+STRING 547
+{
+Magical Seed from the far continent of Kalimdor that regrows dead trees.
+}
+
+STRING 548
+{
+When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+}
+
+STRING 549
+{
+Stone of Order
+}
+
+STRING 550
+{
+Stone of Chaos
+}
+
+STRING 551
+{
+Order Stone Fragment
+}
+
+STRING 552
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 553
+{
+Purchase Order Stone Fragment
+}
+
+STRING 554
+{
+Chaos Stone Fragment
+}
+
+STRING 555
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 556
+{
+Purchase Chaos Stone Fragment
+}
+
+STRING 557
+{
+Boosts defense by 10 and casts Holy Light. Also needed for the Guardian Transformation Ritual.
+}
+
+STRING 558
+{
+Boosts attack damage by 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
+}
+
+STRING 559
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 560
+{
+Pain of Fellwood
+}
+
+STRING 561
+{
+Hydra Queen
+}
+
+STRING 562
+{
+Varimathras the Betrayer
+}
+
+STRING 563
+{
+Stormbringer
+}
+
+STRING 564
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 565
+{
+Dragon Temple Guardian
+}
+
+STRING 566
+{
+Void Revenant
+}
+
+STRING 567
+{
+Arch Lich
+}
+
+STRING 568
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 569
+{
+Unique Artifact
+}
+
+STRING 570
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 571
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 572
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 573
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 574
+{
+King of Azeroth
+}
+
+STRING 575
+{
+Anduin Wrynn
+}
+
+STRING 576
+{
+King of Ironforge
+}
+
+STRING 577
+{
+Magni Bronzebeard
+}
+
+STRING 578
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 579
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 580
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 581
+{
+Golem Factory
+}
+
+STRING 582
+{
+ (Ironforge)
+}
+
+STRING 583
+{
+Frozen Throne Chains
+}
+
+STRING 584
+{
+Gryphon Mount
+}
+
+STRING 585
+{
+Wyvern Mount
+}
+
+STRING 586
+{
+Frost Wyrm Mount
+}
+
+STRING 587
+{
+Chimaera Mount
+}
+
+STRING 588
+{
+Nether Drake Mount
+}
+
+STRING 589
+{
+Summon Frost Wyrm
+}
+
+STRING 590
+{
+O
+}
+
+STRING 591
+{
+The Hero´s calls his or her personal air mount that has average combat capabilities and can be used for different tasks. Lasts 180 seconds and has a 60 second cooldown.
+}
+
+STRING 592
+{
+Learn Summon Frost Wyrm M|cffffcc00o|runt
+}
+
+STRING 593
+{
+Frost Wyrm M|cffffcc00o|runt
+}
+
+STRING 594
+{
+Summon Chimaera
+}
+
+STRING 595
+{
+Learn Summon Chimaera M|cffffcc00o|runt
+}
+
+STRING 596
+{
+Chimaera M|cffffcc00o|runt
+}
+
+STRING 597
+{
+Summon Gryphon
+}
+
+STRING 598
+{
+Learn Summon Gryphon M|cffffcc00o|runt
+}
+
+STRING 599
+{
+Gryphon M|cffffcc00o|runt
+}
+
+STRING 600
+{
+Summon Wyvern
+}
+
+STRING 601
+{
+Learn Summon Wyvern M|cffffcc00o|runt
+}
+
+STRING 602
+{
+Wyvern M|cffffcc00o|runt
+}
+
+STRING 603
+{
+Summon Nether Drake
+}
+
+STRING 604
+{
+Learn Summon Nether Drake M|cffffcc00o|runt
+}
+
+STRING 605
+{
+Nether Drake M|cffffcc00o|runt
+}
+
+STRING 606
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 607
+{
+|cffffcc00F|rorked Lightning - [|cffffcc00Level 4|r]
+}
+
+STRING 608
+{
+Calls forth a cone of lightning from the Sea Witch, hitting up to <ANfl,DataB4> enemy units for <ANfl,DataA4> damage.
+}
+
+STRING 609
+{
+Calls forth a cone of lightning to damage enemies. |n|n|cffffcc00Level 1|r - <ANfl,DataA1> damage per unit. |n|cffffcc00Level 2|r - <ANfl,DataA2> damage per unit. |n|cffffcc00Level 3|r - <ANfl,DataA3> damage per unit.|n|cffffcc00Level 4|r - <ANfl,DataA4> damage per unit.
+}
+
+STRING 610
+{
+F|cffffcc00r|rost Arrows - [|cffffcc00Level 4|r]
+}
+
+STRING 611
+{
+Adds a cold effect to each attack, slowing a target enemy unit's attacks by <ANfa,DataB4,%>% and movement by <ANfa,DataC4,%>% for <ANfa,Dur4> seconds.
+}
+
+STRING 612
+{
+Adds a cold effect to each attack, slowing a target enemy unit's attacks and movement. |n|n|cffffcc00Level 1|r - <ANfa,DataB1,%>% attack rate, <ANfa,DataC1,%>% movement speed. |n|cffffcc00Level 2|r - <ANfa,DataB2,%>% attack rate, <ANfa,DataC2,%>% movement speed. |n|cffffcc00Level 3|r - <ANfa,DataB3,%>% attack rate, <ANfa,DataC3,%>% movement speed. |n|cffffcc00Level 4|r - <ANfa,DataB4,%>% attack rate, <ANfa,DataC4,%>% movement speed.
+}
+
+STRING 613
+{
+Creates a shield that absorbs damage by using the Sea Witch's mana. |n|n|cffffcc00Level 1|r - 1 damage per point of mana. |n|cffffcc00Level 2|r - 1.5 damage per point of mana. |n|cffffcc00Level 3|r - 2 damage per point of mana. |n|cffffcc00Level 4|r - 4 damage per point of mana.
+}
+
+STRING 614
+{
+Activate Ma|cffffcc00n|ra Shield - [|cffffcc00Level 4|r]
+}
+
+STRING 615
+{
+Activates a shield that absorbs 4 damage per point of mana.
+}
+
+STRING 616
+{
+You have chosen to be an |cffff0000Engineer|r. Your Hero will be given blueprints for normally not available towers.
+}
+
+STRING 617
+{
+|cffffcc00T|rornado
+}
+
+STRING 618
+{
+Calls down waves of fire that damage units in an area. Each wave deals initial damage and then burns enemies for <ANrf,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANrf,DataB1> wave damage, <ANrf,DataA1> waves, <ANrf,DataE1> damage per second. |n|cffffcc00Level 2|r - <ANrf,DataB2> wave damage, <ANrf,DataA2> waves, <ANrf,DataE2> damage per second. |n|cffffcc00Level 3|r - <ANrf,DataB3> wave damage, <ANrf,DataA3> waves, <ANrf,DataE3> damage per second. |n|cffffcc00Level 4|r - <ANrf,DataB4> wave damage, <ANrf,DataA4> waves, <ANrf,DataE4> damage per second.
+}
+
+STRING 619
+{
+Rain of |cffffcc00F|rire - [|cffffcc00Level 4|r]
+}
+
+STRING 620
+{
+Calls down waves of fire that damage units in an area. Each wave deals <ANrf,DataB4> initial damage and <ANrf,DataE4> damage per second for <ANrf,Dur4> seconds. |nLasts for <ANrf,DataA4> waves.
+}
+
+STRING 621
+{
+Howl of |cffffcc00T|rerror - [|cffffcc00Level 4|r]
+}
+
+STRING 622
+{
+The Pit Lord lets loose a terrifying howl that reduces nearby enemy units' attack damage by <ANht,DataA4,%>% for <ANht,Dur4> seconds.
+}
+
+STRING 623
+{
+The Pit Lord lets loose a terrifying howl that causes nearby enemy units to shiver in fear, reducing their attack damage. |nLasts <ANht,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANht,DataA1,%>% attack damage reduction. |n|cffffcc00Level 2|r - <ANht,DataA2,%>% attack damage reduction. |n|cffffcc00Level 3|r - <ANht,DataA3,%>% attack damage reduction. |n|cffffcc00Level 4|r - <ANht,DataA4,%>% attack damage reduction.
+}
+
+STRING 624
+{
+The Pit Lord strikes with such force that he damages multiple enemies with his attack. |n|n|cffffcc00Level 1|r - <ANca,DataA1,%>% damage is splash. |n|cffffcc00Level 2|r - <ANca,DataA2,%>% damage is splash. |n|cffffcc00Level 3|r - <ANca,DataA3,%>% damage is splash. |n|cffffcc00Level 4|r - <ANca,DataA4,%>% damage is splash.
+}
+
+STRING 625
+{
+Cleaving Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 626
+{
+The Pit Lord strikes with such force that <ANca,DataA4,%>% of his damage strikes through to enemies near the primary attacked unit.
+}
+
+STRING 627
+{
+Cargo Hold (Hero Mount)
+}
+
+STRING 628
+{
+Demon Master
+}
+
+STRING 629
+{
+ (PitLord)
+}
+
+STRING 630
+{
+|cffffcc00D|remon Master
+}
+
+STRING 631
+{
+Opens a portal, allowing demons to step through and do the Pit Lord´s bidding.
+}
+
+STRING 632
+{
+Learn |cffffcc00D|remon Master
+}
+
+STRING 633
+{
+Unholy Spirits
+}
+
+STRING 634
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 635
+{
+Unholy Spiri|cffffcc00t|rs
+}
+
+STRING 636
+{
+Learn Unholy Spiri|cffffcc00t|rs
+}
+
+STRING 637
+{
+Dark Portal
+}
+
+STRING 638
+{
+Summons 2 angry quilbeasts to attack your enemies. |nLasts <ANsq,Dur1> seconds. |n|n|cffffcc00Level 1|r - <nqb1,realHP> hit points, <nqb1,mindmg1> to <nqb1,maxdmg1> damage. |n|cffffcc00Level 2|r - <nqb2,realHP> hit points, <nqb2,mindmg1> to <nqb2,maxdmg1> damage, has Frenzy. |n|cffffcc00Level 3|r - <nqb3,realHP> hit points, <nqb3,mindmg1> to <nqb3,maxdmg1> area effect damage, has Frenzy. |n|cffffcc00Level 3|r - <nqb3,realHP> hit points, <nqb3,mindmg1> to <nqb3,maxdmg1> area effect damage, has Frenzy, 4 beasts summoned.
+}
+
+STRING 639
+{
+Summon |cffffcc00Q|ruilbeast - [|cffffcc00Level 4|r]
+}
+
+STRING 640
+{
+Summons 4 angry <nqb3,realHP> hit point quilbeasts to fling spines at your enemies. Has the Frenzy ability and does area effect damage. |nLasts <ANsq,Dur3> seconds.
+}
+
+STRING 641
+{
+Summons 2 angry <nqb1,realHP> hit point quilbeasts to fling spines at your enemies. |nLasts <ANsq,Dur1> seconds.
+}
+
+STRING 642
+{
+Summons 2 angry <nqb2,realHP> hit point quilbeasts to fling spines at your enemies. Has the Frenzy ability. |nLasts <ANsq,Dur2> seconds.
+}
+
+STRING 643
+{
+Summons 2 angry <nqb3,realHP> hit point quilbeasts to fling spines at your enemies. Has the Frenzy ability and does area effect damage. |nLasts <ANsq,Dur3> seconds.
+}
+
+STRING 644
+{
+Summons a powerful bear to attack your enemies. |nLasts <ANsg,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ngz1,realHP> hit points, <ngz1,mindmg1> to <ngz1,maxdmg1> damage. |n|cffffcc00Level 2|r - <ngz2,realHP> hit points, <ngz2,mindmg1> to <ngz2,maxdmg1> damage, has Bash. |n|cffffcc00Level 3|r - <ngz3,realHP> hit points, <ngz3,mindmg1> to <ngz3,maxdmg1> damage, has Bash and Blink. |n|cffffcc00Level 4|r - <ngz3,realHP> hit points, <ngz3,mindmg1> to <ngz3,maxdmg1> damage, has Bash and Blink, 2 Bears summoned.
+}
+
+STRING 645
+{
+Summon |cffffcc00B|rear - [|cffffcc00Level 4|r]
+}
+
+STRING 646
+{
+Summons 2 powerful <ngz3,realHP> hit point bears to attack your enemies. Has the Bash and Blink abilities. |nLasts <ANsg,Dur3> seconds.
+}
+
+STRING 647
+{
+Learn Dar|cffffcc00k|r Portal - [|cffffcc00Level %d|r]
+}
+
+STRING 648
+{
+Summons an immobile portal that launches suicidal spirits at the Ranger´s enemies. The portal is immune to magic. |nLasts <AOsw,Dur1> seconds. |n|n|cffffcc00Attacks land and air units.|r 
+}
+
+STRING 649
+{
+Dar|cffffcc00k|r Portal - [|cffffcc00Level 1|r]
+}
+
+STRING 650
+{
+Dar|cffffcc00k|r Portal - [|cffffcc00Level 2|r]
+}
+
+STRING 651
+{
+Dar|cffffcc00k|r Portal - [|cffffcc00Level 3|r]
+}
+
+STRING 652
+{
+Dar|cffffcc00k|r Portal - [|cffffcc00Level 4|r]
+}
+
+STRING 653
+{
+Summons a proud hawk to spy on your enemies. |nLasts <ANsw,Dur1> seconds. |n|n|cffffcc00Level 1|r - <nwe1,realHP> hit points, has True Sight. |n|cffffcc00Level 2|r - <nwe2,realHP> hit points, <nwe2,mindmg1> to <nwe2,maxdmg1> damage, has True Sight. |n|cffffcc00Level 3|r - <nwe3,realHP> hit points, <nwe3,mindmg1> to <nwe3,maxdmg1> damage, has True Sight and Invisibility. |n|cffffcc00Level 4|r - <nwe3,realHP> hit points, <nwe3,mindmg1> to <nwe3,maxdmg1> damage, has True Sight and Invisibility, summons 2 Hawks.
+}
+
+STRING 654
+{
+Summon Ha|cffffcc00w|rk - [|cffffcc00Level 4|r]
+}
+
+STRING 655
+{
+Summons 2 proud <nwe3,realHP> hit point hawk s to attack and spy on your enemies. Has the True Sight and Invisibility abilities. |nLasts <ANsw,Dur3> seconds.
+}
+
+STRING 656
+{
+S|cffffcc00t|rampede
+}
+
+STRING 657
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 659
+{
+Drunken Brawler - [|cffffcc00Level 4|r]
+}
+
+STRING 660
+{
+Gives a <ANdb,DataD4,%>% chance to dodge an attack and a <ANdb,DataA4>% chance to deal <ANdb,DataB4> times normal damage.
+}
+
+STRING 661
+{
+Gives a percent chance to avoid attacks and a <ANdb,DataA1>% chance to deal additional damage. |n|n|cffffcc00Level 1|r - <ANdb,DataD1,%>% dodge, <ANdb,DataB1> times normal damage. |n|cffffcc00Level 2|r - <ANdb,DataD2,%>% dodge, <ANdb,DataB2> times normal damage. |n|cffffcc00Level 3|r - <ANdb,DataD3,%>% dodge, <ANdb,DataB3> times normal damage. |n|cffffcc00Level 4|r - <ANdb,DataD4,%>% dodge, <ANdb,DataB4> times normal damage.
+}
+
+STRING 662
+{
+Drenches enemy units in alcohol, causing their movement speed to be reduced, and have a chance to miss on attacks. When units with Drunken Haze cast on them are hit by Breath of Fire, they will ignite and take burn damage over time. |nLasts <ANdh,Dur1> seconds |n|n|cffffcc00Level 1|r - <ANdh,DataC1,%>% movement speed, <ANdh,DataB1,%>% miss chance. |n|cffffcc00Level 2|r - <ANdh,DataC2,%>% movement speed, <ANdh,DataB2,%>% miss chance. |n|cffffcc00Level 3|r - <ANdh,DataC3,%>% movement speed, <ANdh,DataB3,%>% miss chance. |n|cffffcc00Level 4|r - <ANdh,DataC4,%>% movement speed, <ANdh,DataB4,%>% miss chance.
+}
+
+STRING 663
+{
+|cffffcc00D|rrunken Haze - [|cffffcc00Level 4|r]
+}
+
+STRING 664
+{
+Drenches enemy units in alcohol, causing their movement speed to be reduced by <ANdh,DataC4,%>%, and have a <ANdh,DataB4,%>% chance to miss on attacks. When units with Drunken Haze cast on them are hit by Breath of Fire, they will ignite and take burn damage. |nLasts <ANdh,Dur4> seconds.
+}
+
+STRING 665
+{
+Breath of |cffffcc00F|rire - [|cffffcc00Level 4|r]
+}
+
+STRING 666
+{
+Breathes a cone of fire at enemy units, dealing <ANbf,DataA4> initial damage, and burning them for <ANbf,DataE4> damage per second over <ANbf,Dur4> seconds.
+}
+
+STRING 667
+{
+Breathes a cone of fire at enemy units which deals damage. Units that have Drunken Haze on them will ignite and take burn damage over time. |nLasts <ANbf,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANbf,DataA1> initial damage, <ANbf,DataE1> damage per second. |n|cffffcc00Level 2|r - <ANbf,DataA2> initial damage, <ANbf,DataE2> damage per second. |n|cffffcc00Level 3|r - <ANbf,DataA3> initial damage, <ANbf,DataE3> damage per second. |n|cffffcc00Level 4|r - <ANbf,DataA4> initial damage, <ANbf,DataE4> damage per second.
+}
+
+STRING 668
+{
+When Avatar is activated, it gives the Mountain King 5 (10/15) bonus armor, 500 (850/1000) bonus hit points, 20 (40/60) bonus damage and spell immunity. |nLasts <AHav,Dur1> seconds.
+}
+
+STRING 669
+{
+Activate Avatar to give the Mountain King <AHav,DataA3> bonus armor, <AHav,DataB3> bonus hit points, <AHav,DataC3> bonus damage and spell immunity. |nLasts <AHav,Dur3> seconds.
+}
+
+STRING 670
+{
+Teleports 6 (12) of the player's nearby units, including the Archmage, to a friendly ground unit or structure. Has 120 (60/30) seconds cooldown.
+}
+
+STRING 671
+{
+Brings back to life the corpses of 6 (12) friendly nearby units. Has a 180 (120/60) second cooldown.
+}
+
+STRING 672
+{
+Damages everything in its area of effect by 5% (10%/15%) of its base hit points per second.
+}
+
+STRING 673
+{
+Damages everything in its area of effect by <AUdd,DataA3,%>% of its base hit points per second. Also destroys trees. |nLasts <AUdd,Dur3> seconds.
+}
+
+STRING 674
+{
+Calls an Infernal down from the sky, dealing <AUin,DataA1> damage and stunning enemy land units for <AUin,Dur1> seconds in an area. The Infernal lasts <AUin,DataB1> seconds. 160 (120/60) seconds cooldown.
+}
+
+STRING 675
+{
+I|cffffcc00n|rferno
+}
+
+STRING 676
+{
+Creates a swarm of angry locusts that bite and tear at nearby enemy units. As they chew the enemy flesh, they convert it into a substance that restores hit points to the Crypt Lord when they return. |nSummons 20 (30/40) Locusts and lasts 30 (40/40) seconds.
+}
+
+STRING 677
+{
+Creates a swarm of angry locusts that bite and tear at nearby enemy units. As they chew the enemy flesh, they convert it into a substance that restores hit points to the Crypt Lord when they return. |nLasts <AUls,HeroDur3> seconds.
+}
+
+STRING 678
+{
+Opens a portal, allowing demons to step through and do the Pit Lord´s bidding.|n|cffffcc00Level 1|r - 2 Greater Voidwalkers. |n|cffffcc00Level 2|r - 2 Doom Guards. |n|cffffcc00Level 3|r - 2 Doom Guards, 1 Overlord and 1 Maiden of Pain.
+}
+
+STRING 679
+{
+Calls down hordes of evil spirits to explode upon the Ranger´s enemies. Each exploding spirit <ANst,DataC1> damage. |nLasts 30 seconds and has a 180 (120/60) seconds cooldown.|nDamages only units, not structures.
+}
+
+STRING 680
+{
+Calls down hordes of evil spirits to explode upon the Ranger´s enemies. Each exploding spirit <ANst,DataC1> damage. |nLasts 30 seconds and has a 180 (120/60) seconds cooldown.
+}
+
+STRING 681
+{
+Expert Storm
+}
+
+STRING 682
+{
+Expert Earth
+}
+
+STRING 683
+{
+Expert Fire
+}
+
+STRING 684
+{
+Ancient Earth
+}
+
+STRING 685
+{
+Ancient Fire
+}
+
+STRING 686
+{
+Ancient Storm
+}
+
+STRING 687
+{
+Splits the Pandaren Brewmaster into elements, forming 3 specialized warriors. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.|n|n|cffffcc00Level 1|r - Summons three mighty Pandas. |n|cffffcc00Level 2|r - Summons three even mightier Pandas.  |n|cffffcc00Level 3|r - Summons three ultra mighty Pandas.
+}
+
+STRING 688
+{
+Storm, |cffffcc00E|rarth, And Fire - [|cffffcc00Level 3|r]
+}
+
+STRING 689
+{
+Splits the Pandaren Brewmaster into elements, forming 3 specialized warriors. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.
+}
+
+STRING 690
+{
+Ancient Avatar of Vengeance
+}
+
+STRING 691
+{
+Phoeni|cffffcc00x|r
+}
+
+STRING 692
+{
+Summons a powerful Phoenix. The Phoenix burns with such intensity that it damages itself and nearby enemy units. Has Spell Immunity, and Resistant Skin. When a Phoenix dies, it creates an egg that will hatch into a Phoenix. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 693
+{
+Summons a powerful Phoenix. The Phoenix burns with such intensity that it damages itself and nearby enemy units. Has Spell Immunity, and Resistant Skin. When a Phoenix dies, it creates an egg that will hatch into a Phoenix. |n|n|cffffcc00Attacks land and air units and has a 180 (120/100) seconds cooldown.|r
+}
+
+STRING 694
+{
+Turns all friendly units and buildings invulnerable in an area around the Shadow Hunter. |nThe Shadow Hunter does not turn invulnerable. |nLasts <AOvd,Dur1> seconds. Has a 180 (140/100) second cooldown.
+}
+
+STRING 695
+{
+Causes a bladestorm of destructive force around the Blademaster, rendering him immune to magic and dealing 110 (150/180) damage per second to nearby enemy land units and structures.
+}
+
+STRING 696
+{
+Causes a bladestorm of destructive force around the Blademaster, rendering him immune to magic and dealing 110 (150/180) damage per second to nearby enemy land units. |nLasts <AOww,Dur1> seconds.
+}
+
+STRING 697
+{
+Makes the ground tremble and break, causing 50 (75/100) damage per second to buildings and slowing units by 75% within the area of effect. Lasts 25 (50/50) seconds.
+}
+
+STRING 698
+{
+Makes the ground tremble and break, causing 50 (75/100) damage per second to buildings and slowing units by 75% within the area of effect. Lasts 25 (50) seconds.
+}
+
+STRING 699
+{
+|cffffcc00E|rarthquake
+}
+
+STRING 700
+{
+When killed, the Tauren Chieftain will come back to life. Reincarnation has a 240 (120/80) second cooldown.
+}
+
+STRING 701
+{
+Transforms the Demon Hunter into a powerful Demon with a ranged attack and 500 (850/1000) bonus hit points. |nLasts <AEme,HeroDur1> seconds.
+}
+
+STRING 702
+{
+Transforms the Demon Hunter into a powerful Demon with a ranged attack and <AEme,DataE3> bonus hit points. |nLasts <AEme,HeroDur3> seconds.
+}
+
+STRING 703
+{
+Calls down waves of falling stars that damage nearby enemy units. Each wave deals 50 (100/125) damage. |nLasts for <AEsf,Dur1> seconds.
+}
+
+STRING 704
+{
+Calls down waves of falling stars that damage nearby enemy units. Each wave deals <AEsf,DataA3> damage. |nLasts for <AEsf,Dur3> seconds.
+}
+
+STRING 705
+{
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for 25 (50/75) hit points per second. |nLasts <AEtq,Dur1> seconds.
+}
+
+STRING 706
+{
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for <AEtq,DataA3> hit points per second. |nLasts <AEtq,Dur3> seconds.
+}
+
+STRING 707
+{
+Creates a powerful Spirit to aid the Warden. |n|cffffcc00Level 1|r - Spirit with Critical Strike, Aerial Shackes and Resistant Skin. |n|cffffcc00Level 2|r - Spirit with Critical Strike, Blink, Aerial Shackes and Resistant Skin. |nLasts <AEsv,Dur1> seconds.|n|cffffcc00Level 3|r - Spirit with Critical Strike, Blink, Aerial Shackes, Bloodlust and Resistant Skin. |nLasts <AEsv,Dur1> seconds.
+}
+
+STRING 708
+{
+Creates a powerful Avatar to aid the Warden. Has Critical Strike, Aerial Shackles, Resistant Skin, Blink, Bloodlust and is in overall better than  its precessedors. |nLasts <AEsv,Dur1> seconds.
+}
+
+STRING 709
+{
+Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. |nLasts <ANto,Dur1> seconds. Has a 120 (80/60) second cooldown.
+}
+
+STRING 710
+{
+Calls down hordes of rampaging thunder lizards to explode upon the Beastmaster's enemies. Each exploding lizard deals <ANst,DataC1> damage. |nLasts <ANst,Dur1> seconds. Has a 160 (120/100) seconds cooldown and releases 2 (4/6) beasts per second).
+}
+
+STRING 711
+{
+Unique - Book of the 4 Elements
+}
+
+STRING 712
+{
+|cff8b00ffUnique|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item !
+}
+
+STRING 713
+{
+|cff8b00ffUnique|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item !|n|n Grants +6 Int, Brilliance Aura, +10 damage and holds different spells to cast.
+}
+
+STRING 714
+{
+Element Spell book
+}
+
+STRING 715
+{
+Earth Spell - Earthquake
+}
+
+STRING 716
+{
+(spellbook)
+}
+
+STRING 717
+{
+Fire Spell - Flame Strike
+}
+
+STRING 718
+{
+Water Spell - Crushing Wave
+}
+
+STRING 719
+{
+Air Spell - Mass Teleport
+}
+
+STRING 720
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 721
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 722
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 723
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 724
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 725
+{
+You have chosen to be a |cffff0000Herbalist|r. Your Hero will be able to brew different life replenishing potions.
+}
+
+STRING 726
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 727
+{
+Storm Hammer Bolt
+}
+
+STRING 728
+{
+A holy light that can heal a friendly living unit for 750 or deal half damage to an enemy Undead unit.
+}
+
+STRING 729
+{
+A holy light that can heal a friendly living unit for 1500 or deal half damage to an enemy Undead unit.
+}
+
+STRING 730
+{
+A holy light that can heal a friendly living unit for 2000 or deal half damage to an enemy Undead unit.
+}
+
+STRING 731
+{
+Absorbs the life essence of a target enemy unit by taking 50 hit points per second from it and giving them to the Destroyer. |nLasts <ANdr,Dur1> seconds.
+}
+
+STRING 732
+{
+Absorbs the life essence of a target enemy unit by taking 100 hit points per second from it and giving them to the Destroyer. |nLasts <ANdr,Dur2> seconds.
+}
+
+STRING 733
+{
+Absorbs the life essence of a target enemy unit by taking 150 hit points per second from it and giving them to the Destroyer. |nLasts <ANdr,Dur3> seconds.
+}
+
+STRING 734
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 735
+{
+Mystical Hero, adept at ranged assaults. Can learn Gate, Touch of Darkness, Finger of Death and Rain of Chaos. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 736
+{
+|cffffff00New Quest discovered:|r Golem Factory
+}
+
+STRING 737
+{
+Learn |cffffcc00G|rate
+}
+
+STRING 738
+{
+A holy light that can heal a friendly living unit or damage an enemy Undead unit. |n|n|cffffcc00Level 1|r - Heals for 750 hit points. |n|cffffcc00Level 2|r - Heals for 1500 hit points. |n|cffffcc00Level 3|r - Heals for 2000 hit points. 
+}
+
+STRING 739
+{
+Entering now: |cff00ff00Dalaran Ruins|r
+}
+
+STRING 740
+{
+|cff8b00ffUnique|r|nThis Cleaver has been used by Mannoroth in ages past to decapitate all those Orcs on Draenor who resisted to make the Blood Pact with him. Though they refused to serve in life, they must heed the call of the weapon´s wielder in death.
+}
+
+STRING 741
+{
+|cff8b00ffUnique|r|nThis Cleaver has been used by Mannoroth in ages past to decapitate all those Orcs on Draenor who resisted to make the Blood Pact with him. Though they refused to serve in life, they must heed the call of the weapon´s wielder in death.|nGrants +20 Damage, Thorns Aura, Critical Strike and casts a horde of Evil Spirits that explode upon impact with any living or undead being (30 damage/spirit).
+}
+
+STRING 742
+{
+|cff8b00ffUnique|r|nAn ancient Artifact of unknown origin. Some wizards believe it was a gift for Medivh from the first invading Orcs in Azeroth, since the runes on the shield resemble old orcish shamanistic language.
+}
+
+STRING 743
+{
+|cffffff00Quest update:|r Shatter the Crystal ! !
+}
+
+STRING 744
+{
+|cff8b00ffUnique|r|nThe wings of the last of the legendary 3 Nathrezim. Although the Dreadlord´s corporeal form is destroyed, his magical energies are somehow still trapped in this Artifact as long as it exists.
+}
+
+STRING 745
+{
+|cff8b00ffUnique|r|nThe wings of the last of the legendary 3 Nathrezim. Although the Dreadlord´s corporeal form is destroyed, his magical energies are somehow still trapped in this Artifact as long as it exists. |nGrants +10 defense, 15% Vampiric Aura, Life Bonus and summons an Infernal every 100 seconds (lasts 120 seconds).
+}
+
+STRING 746
+{
+Purchase Magical Seed
+}
+
+STRING 747
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 748
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 749
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 750
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 751
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 752
+{
+You have chosen to be a |cffff0000Loremaster|r. Your Hero will be able to write different arcane scrolls.
+}
+
+STRING 753
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 754
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 755
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 756
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 757
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 758
+{
+Special Thanks goes to..
+}
+
+STRING 759
+{
+- Pitlord for making this AMAZING map. It must have taken FOREVER!
+- Blizzard Entertainment for the great world edit tool, cool WC3 story   plot and of course for making WoW !
+- All Beta Testerz.
+- Yoda_24 for showing us in his RoC WoW version that it is possible  to make such a huge map =).
+- Waugriff for showing us that it actually is possible to include Hero quests in open RPG maps.
+- Bobthemage (AoS - Eternal Conflict) for the regrow trees-skill.
+- Razorclaw X for his Arthas/LichKing Unit Model.
+- GG&K (City of the 7 Mithril Golems) for the Golem Quest idea.
+- www.Warcraftiii.net and wc3campaigns.com for the great tutorials archives and map making forums.
+- God.
+- Everyone who plays the map.
+}
+
+STRING 760
+{
+Welcome to WoW Reborn !
+}
+
+STRING 761
+{
+Welcome to World of Warcraft Reborn open RPG ! Open RPG means, players can do whatever they want, even hunt other players (which is recommended in order to keep the whole thing a bit more exciting =) ...
+Additionally, there are optional quests to do for famous Warcraft Heros of the past. And for the very brave ones, on every continent there is at least 1 dungeon with over-the-average powerful creeps and Dungeon Masters who guard powerful artifacts..
+In Here are the few rules every player must stick to:
+- You can choose only 1 Hero and can NOT repick ! This is to prevent map bug creation and bug abuse.
+- You have to choose 1 Profession which effectively gives your Hero some item crafting skills. In addition you can craft and sell items in nearby Marketplaces to raise your funds. You can NOT drop your profession book due to game system abuse probability.
+- You have to choose Warlord or Freelacer status. Warlords can build cities and mine gold. Freelancers can not build cities but Hideouts. They get some extra stats in the game start.
+- You can become Demigod of Good or Evil (see the quest menu paragraph for more information on this subject.
+
+Have fun and enjoy...THE WORLD OF WARCRAFT !
+}
+
+STRING 762
+{
+Cities and Hideouts
+}
+
+STRING 763
+{
+Every warlord-type Hero has a nation-specific scepter. With this he or she can summon workers who will start building their nations. It is recommended that they build within city walls becasue the probability of their buildings being attacked by creeps or "terrorist" Heros is considerably lowered. Also, they can spawn citizens and build housings for them. Citizens make your town more realistic and also have some useful abilities.
+
+Hideouts are for Freelancer Heros. They are their personal homes and provide among other things a safe place to recover. It should be considered building them within city walls or under the protection of a warlord player to lower destruction probability.
+}
+
+STRING 764
+{
+Diplomacy
+}
+
+STRING 765
+{
+Player Red = 1
+Player Blue = 2
+Player Teal = 3
+Player Purple = 4
+Player Yellow = 5
+Player Orange = 6
+Player Green = 7
+Player Pink = 8
+Player Light Blue = 9
+Player Dark Green = 10
+
+1. Hostile state: write "unallyX"
+2. Ally state: write "allyX"
+3. Ally with shared vision: write "visionX"
+4. Hostile with ALL players: write "myenemies"
+5. Ally with ALL players: write "myfriends"
+6. Ally and Shared vision with ALL players: write "visionall"
+}
+
+STRING 766
+{
+NPC Quests
+}
+
+STRING 767
+{
+There are several NPC Heros which you will recognize from the original Warcraft Campaigns. They can give your Heros special quests to do for them. Once someone completes the required quest for the NPC, he or she will be able to give you another quest which is more difficult than the previous. In every nation it is possible to fulfill up to 4 quests for the NPCs. For example, the Orcs will have 2 Quests given to you by Thrall and 2 Quests given by Cairne Bloodhoof, which makes a total of 4 quests.
+}
+
+STRING 768
+{
+Demigod of Good or Evil
+}
+
+STRING 769
+{
+Every player can become a demigod of good or evil by capturing 1 Dragon of every color. This choice means to sacrifice your Hero for the Eternal Guardian (light side) or Hand of Destruction (dark side). However the process of getting this status is very difficult, because the consequences for other players can be fatal once someone gets these new powers. In order to prove worthyness of  these powers, you have to do 2 things: Depending on which side you want to be, you have to have 1 Order Stone Fragment or Chaos Stone Fragment in your inventory. You can get the fragments by searching for and finding the locations of the complete Stones (the Order stone fragment is in fact at the temple. The stones themselves also have some magical powers). Then find 1 Dragon of each type and bring them to the newly raised Dragon Temple in the deep ocean: Red Dragon, Blue Dragon, Black Dragon, Bronze Dragon and Green Dragon. Place every one of them on the appropriate circle of power in the temple and step into the center circle to perform the ascension ritual.
+The Dragon Roosts that let you get the dragons are shattered throughout the world so it can be a very long quest to find them all and collect all 5 Dragons. Also there may be some fierce creatures guarding the ancient Temple Ruins which have recently been raised from the ocean floor. Once you become a demigod, you can upgrade your Guardian´s Tower or Tier 3 Town Hall to a Temple of Light or Darkness after researching the Demigod Temple upgrade.
+}
+
+STRING 770
+{
+Teleports 4 of the player's nearby units, including the Archmage, to a friendly ground unit or structure.
+}
+
+STRING 771
+{
+|cffff0000Tauren Chieftain|r
+Warrior Hero, good at assaulting ground troops. Can learn Shockwave, War Stomp, Endurance Aura, Reincarnation.
+|cff00ff00Mount Creature:|r Wyvern
+|cff0000ffRecommended Staring Location:|r Ogrimmar (Barrens)
+}
+
+STRING 772
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 773
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 774
+{
+You have chosen to be a |cffff0000Weaponsmith|r. Your Hero will be able to craft different types of magical weapons.
+}
+
+STRING 775
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 776
+{
+|cffff0000Demon Hunter|r
+Warrior Hero for assasination and assaulting troops. Can learn Mana Burn, Evasion, Immolation and Metamorphosis.
+|cff00ff00Mount Creature:|r Nether Drake
+|cff0000ffRecommended Staring Location:|r Sunken Kalimdor (Naga Ruins)
+}
+
+STRING 777
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 778
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 779
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 780
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 781
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 782
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 783
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 784
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 785
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 786
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 787
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 788
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 789
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 790
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 791
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 792
+{
+|cffff0000Far Seer|r
+Spellcaster Hero, good for assaulting troops and cities. Can learn Chain Lightning, Spirit Wolves, Far Sight and Earthquake.
+|cff00ff00Mount Creature:|r Wyvern
+|cff0000ffRecommended Staring Location:|r Ogrimmar (Barrens)
+}
+
+STRING 793
+{
+|cffff0000Blade Master|r
+Warrior Hero, good at assassination and sabotage. Can learn Wind Walk, Critical Strike, Mirror Image and Blade Storm.
+|cff00ff00Mount Creature:|r Wyvern
+|cff0000ffRecommended Staring Location:|r Ogrimmar (Barrens)
+}
+
+STRING 794
+{
+|cffff0000Shadow Hunter|r
+Spellcaster Hero, good for supporting troops and Heros. Can learn Healing Wave, Hex, Snake Ward and Big Bad Voodoo.
+|cff00ff00Mount Creature:|r Wyvern
+|cff0000ffRecommended Staring Location:|r Ogrimmar (Barrens)
+}
+
+STRING 795
+{
+|cffff0000Beast Master|r
+Warrior Hero, good for assaulting troops and cities. Can learn Summon Quillbeast, Summon Hawk, Summon Bear and Stampede.
+|cff00ff00Mount Creature:|r Wyvern
+|cff0000ffRecommended Staring Location:|r Ogrimmar (Barrens)
+}
+
+STRING 796
+{
+|cffff0000Naga Sea Witch|r
+Spellcaster Hero, good for assaulting troops and cities. Can learn Forked Lightning, Mana Shield, Cold Arrow and Tornado. Can also swim.
+|cff00ff00Mount Creature:|r Nether Drake
+|cff0000ffRecommended Staring Location:|r Sunken Kalimdor (Naga Ruins)
+}
+
+STRING 797
+{
+|cffff0000Blood Mage|r
+Spellcaster Hero, good for toasting ground troops and cities. Can learn Flame Strike, Banish, Siphon Mana and Phoenix. Can also burn trees.
+|cff00ff00Mount Creature:|r Nether Drake
+|cff0000ffRecommended Staring Location:|r Sunken Kalimdor (Naga Ruins)
+}
+
+STRING 798
+{
+|cffff0000Mountain King|r
+Warrior Hero, good for assaulting ground troops and Heros. Can learn Storm Bolt, Thunder Clap, Bash and Avatar.
+|cff00ff00Mount Creature:|r Gryphon
+|cff0000ffRecommended Staring Location:|r Stormwind (Azeroth)
+}
+
+STRING 799
+{
+You have chosen to be a |cff00ff00Freelancer|r. Your hero has been given bonus stats, but you cannot build a town or have a mine.
+}
+
+STRING 800
+{
+|cffff0000Paladin of the Silver Hand|r
+Warrior Hero, good for supporting troops and Heros. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. Expert at hunting down and destroying undead.
+|cff00ff00Mount Creature:|r Gryphon
+|cff0000ffRecommended Staring Location:|r Stormwind (Azeroth)
+}
+
+STRING 801
+{
+|cffff0000Arch Mage|r
+Spellcaster Hero, good for assaulting troops and cities. Can learn Blizzard, Water Elemental, Brilliance Aura and Mass Teleport. Adept at travelling huge distances.
+|cff00ff00Mount Creature:|r Gryphon
+|cff0000ffRecommended Staring Location:|r Stormwind (Azeroth)
+}
+
+STRING 802
+{
+|cffff0000Dread Lord|r
+Spellcaster Hero, good for supporting troops. Can learn Sleep, Carrion Swarm, Vampiric Aura and Inferno.
+|cff00ff00Mount Creature:|r Frost Wyrm
+|cff0000ffRecommended Staring Location:|r Undercity (Lordaeron Ruins)
+}
+
+STRING 803
+{
+You have chosen to be a |cff00ff00Warlord|r.  You can build cities and have mines that other may not be able to.
+}
+
+STRING 804
+{
+|cffff0000Dark Ranger|r
+Warrior Hero, good for assaulting troops. Can learn Life Drain, Dark Portal, Silence and Unholy Spirits.
+|cff00ff00Mount Creature:|r Frost Wyrm
+|cff0000ffRecommended Staring Location:|r Undercity (Lordaeron Ruins)
+}
+
+STRING 805
+{
+|cffff0000Pit Lord|r
+Warrior Hero, good for toasting enemy troops. Can learn Rain of Fire, Howl of Terror, Cleaving Attack and Demon Mastery.
+|cff00ff00Mount Creature:|r Nether Drake
+|cff0000ffRecommended Staring Location:|r Undercity (Lordaeron Ruins)
+}
+
+STRING 806
+{
+|cffff0000Crypt Lord|r
+Warrior Hero, good for assaulting enemy troops and Heros. Can learn Impale, Carrion Beetles, Spiked Carapace and Locust Swarm.
+|cff00ff00Mount Creature:|r Frost Wyrm
+|cff0000ffRecommended Staring Location:|r Draktharon Keep (Icecrown)
+}
+
+STRING 807
+{
+|cffff0000Lich|r
+Spellcaster Hero, good for assaulting troops and cities. Can learn Frost Nova, Dark Ritual, Frost Armor and Death and Decay.
+|cff00ff00Mount Creature:|r Frost Wyrm
+|cff0000ffRecommended Staring Location:|r Draktharon Keep (Icecrown)
+}
+
+STRING 808
+{
+|cffff0000Death Knight|r
+Warrior Hero, good for supporting troops and undead Heros. Can learn Death Coil, Death Pact, Unholy Aura and Shadow Word Death.
+|cff00ff00Mount Creature:|r Frost Wyrm
+|cff0000ffRecommended Staring Location:|r Draktharon Keep (Icecrown)
+}
+
+STRING 809
+{
+|cffff0000Pandaren Brewmaster|r
+Warrior Hero, good for assaulting troops and Heros. Can learn Drunken Brawler, Drunken Haze, Breath of Fire and Earth Storm and Fire.
+|cff00ff00Mount Creature:|r Chimaera
+|cff0000ffRecommended Staring Location:|r Darnassus (Teldrassil)
+}
+
+STRING 810
+{
+|cffff0000Priestess of the Moon|r
+Warrior Hero, good for supporting troops. Can learn Searing Arrows, Owl Scout, Trueshot Aura and Starfall.
+|cff00ff00Mount Creature:|r Chimaera
+|cff0000ffRecommended Staring Location:|r Darnassus (Teldrassil)
+}
+
+STRING 811
+{
+|cffff0000Keeper of the Groove|r
+Spellcaster Hero, good for supporting troops. Can learn Entrangling Roots, Force of Nature, Thorns Aura and Tranquility. Can also regrow trees with Tranquility.
+|cff00ff00Mount Creature:|r Chimaera
+|cff0000ffRecommended Staring Location:|r Darnassus (Teldrassil)
+}
+
+STRING 812
+{
+|cffff0000Warden|r
+Warrior Hero, good at assaulting troops and Heros. Can learn Shadow Strike, Fan of Knives, Blink and Vengeance (modified).
+|cff00ff00Mount Creature:|r Chimaera
+|cff0000ffRecommended Staring Location:|r Darnassus (Teldrassil)
+}
+
+STRING 813
+{
+Alchemy - Advanced
+}
+
+STRING 814
+{
+Alchemy - Adept
+}
+
+STRING 815
+{
+Alchemy - Master
+}
+
+STRING 816
+{
+|cffff0000New Stormwind (Azeroth)/Ironforge (Khaz Modan):|r
+|cff0000ffGeographic Location:|r South East.
+Left unharmed by the Legion´s invasion and Scourge´s corruption, the humans of Azeroth prosper in this region under the protection of the Paladins of the Silver Hand and the Young King Anduin Wrynn. Though a bit further away, King Magni Bronzebeard of Ironforge still holds the human-dwarven alliance in high regards.
+
+|cff00ff00Recommended Race:|r Humans, Dwarves.
+}
+
+STRING 817
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 818
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 819
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 820
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 821
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 822
+{
+|cffff0000Naga Ruins (Sunken Kalimdor):|r
+|cff0000ffGeographic Location:|r South.
+
+After the second failure to destroy the evil Lich King, the humiliated Illidan and his Naga and Blood Elf forces have returned from Outland to take their vengeance upon Arthas and his undead minions in Icecrown. While still being closely pursued by the Warden Maiev Shadowsong, they have set up a small base of operations on a newly discovered group of islands.
+
+|cff00ff00Recommended Race:|r Naga, Blood Elves.
+}
+
+STRING 823
+{
+|cffff0000Undercity (Lordaeron Ruins):|r
+|cff0000ffGeographic Location:|r North East.
+Gotten rid of the Lich King´s mental control and the Dreadlords´ rule, the Forsaken Ones under the lead of the cursed Banshe Queen Sylvanas Windrunner have established a labyrinth of catacombs under the ruins of the former human capital. Apparently having alligned themselves with some Orcs, in secret they still plot to eradicate all living beings.
+|cff00ff00Recommended Race:|r Undead.
+}
+
+STRING 824
+{
+|cffff0000Ogrimmar (Barrens)/Thunder Buff (Mulgore):|r
+|cff0000ffGeographic Location:|r West.
+After having freed themselves from the demonic threat, Thrall´s Orcs and Cairne Bloodhoof´sTauren tribe have re-established their two nations on southern Kalimdor. Although it is openly against Warchief Thrall´s will, rumors of an alliance with the Forsaken Ones spread across the region.
+
+|cff00ff00Recommended Race:|r Orcs, Tauren, Pandaren.
+}
+
+STRING 825
+{
+|cffff0000Darnassus (Teldrassil Isle):|r
+|cff0000ffGeographic Location:|r North West.
+With the recent Naga threat gone, the Night Elves have finally begun to rebuild their once glorious nation. Under the lead of Tyrande Whisperwind and Furion Stormrage, they have even grown a new World Tree, as a symbol for their bound with nature.
+
+|cff00ff00Recommended Race:|r Night Elves, Pandaren.
+}
+
+STRING 826
+{
+|cffff0000Draktharon Keep (Icecrown):|r
+|cff0000ffGeographic Location:|r North.
+After the fierce battle for the Frozen Throne was won, Arthas and his power-hungry Master, the Lich King, have finally become one entity. With the Scourge  stronger than ever, it remains is to be seen who will feel their wrath first - the Humans, the Forsaken, the Naga or even the Night Elves ?
+
+|cff00ff00Recommended Race:|r Undead.
+}
+
+STRING 827
+{
+Black Market
+}
+
+STRING 828
+{
+Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Death Pact, Unholy Aura, and Shadow Word Death. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 829
+{
+Cunning Hero, adept at manipulating opponents. Can learn Silence, Dark Portal, Life Drain, and Unholy Spirits. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 830
+{
+Warrior Hero, adept at terrorizing enemies. Can learn Rain of Fire, Howl of Terror, Cleaving Attack, and Demon Mastery. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 831
+{
+Summons multiple Dragons to aid the Guardian
+}
+
+STRING 832
+{
+Instantly turns a creature or building inside-out, dealing 800 damage.
+}
+
+STRING 833
+{
+Shadow Word Death
+}
+
+STRING 834
+{
+(Death Knight)
+}
+
+STRING 835
+{
+Shadow |cffffcc00W|rord Death
+}
+
+STRING 836
+{
+Causes terrible pain at the Death Knight´s target, dealing instantly 200 damage. The target must be a living being.
+}
+
+STRING 837
+{
+Causes terrible pain at the Death Knight´s target, dealing instantly 400 damage. The target must be a living being.
+}
+
+STRING 838
+{
+Causes terrible pain at the Death Knight´s target, dealing instantly 600 damage. The target must be a living being.
+}
+
+STRING 839
+{
+W
+}
+
+STRING 840
+{
+Learn Shadow |cffffcc00W|rord Death
+}
+
+STRING 841
+{
+Causes terrible pain at the Death Knight´s target. Cooldown decreases with level. |n|n|cffffcc00Level 1|r - 200 damage. |n|cffffcc00Level 2|r - 400 damage. |n|cffffcc00Level 3|r - 600 damage.
+}
+
+STRING 842
+{
+Well of Life
+}
+
+STRING 843
+{
+Alchemy - Novice
+}
+
+STRING 844
+{
+Armoring - Novice
+}
+
+STRING 845
+{
+Weaponsmithing
+}
+
+STRING 846
+{
+Weaponsmithing - Novice
+}
+
+STRING 847
+{
+Herbalism - Novice
+}
+
+STRING 848
+{
+Loremastery - Novice
+}
+
+STRING 849
+{
+Engineering - Adept
+}
+
+STRING 850
+{
+Engineering - Novice
+}
+
+STRING 851
+{
+Armoring - Advanced
+}
+
+STRING 852
+{
+Armoring - Adept
+}
+
+STRING 853
+{
+Armoring - Master
+}
+
+STRING 854
+{
+Engineering - Advanced
+}
+
+STRING 855
+{
+Engineering - Master
+}
+
+STRING 856
+{
+Herbalism - Advanced
+}
+
+STRING 857
+{
+Herbalism - Adept
+}
+
+STRING 858
+{
+Herbalism - Master
+}
+
+STRING 859
+{
+Loremastery - Advanced
+}
+
+STRING 860
+{
+Loremastery - Adept
+}
+
+STRING 861
+{
+Loremastery - Master
+}
+
+STRING 862
+{
+Weaponsmithing - Advanced
+}
+
+STRING 863
+{
+A|cffffcc00d|rvanced Weaponsmithing
+}
+
+STRING 864
+{
+Weaponsmithing - Adept
+}
+
+STRING 865
+{
+Ad|cffffcc00e|rpt Weaponsmithing
+}
+
+STRING 866
+{
+Weaponsmithing - Master
+}
+
+STRING 867
+{
+Mas|cffffcc00t|rer Weaponsmithing
+}
+
+STRING 868
+{
+Stonemaul Gauntlet
+}
+
+STRING 869
+{
+The Stonemaul Ogres are famous for their passion for combat and fighting games. Their new warchief Rexxar has inspired them to establish a public gladiator arena. Here Heros can choose between different opponents to fight against in order to gain experience and maybe some small rewards. However, the Arena must first be officially opened by a certain Orc Quest. If you choose to fight in the arena, there is no turning back. If you enter the Arena with more than 1 Hero (Hero group), you lose the contest as soon as the 1st Hero dies. And if a Hero leaves the Arena before the fight is over, the battle is also over and you prove your cowardness to the Stonemaul Ogres. Aaahahahaharrr !
+}
+
+STRING 870
+{
+Professions
+}
+
+STRING 871
+{
+There are 6 Professions available from which every Hero must choose one at the game start:
+Armorer - forges different types of protective armor.
+Weaponsmith - forges different types of offensive weapons.
+Alchemist -  composes diefferent types of mana refreshing items.
+Herbalist - composes different types of life replenishing items.
+Loremaster - writes powerful magical scrolls and can craft Ankhs.
+Engineer - can demolish and build normally not available towers.
+
+The profession tomes can not be traded or dropped in order to maintain Hero uniqueness and prevent game system abuse and possible bugs.
+}
+
+STRING 872
+{
+Legendary Artifacts
+}
+
+STRING 873
+{
+Legends and rumors speak of many legendary Artifacts hidden across the World. The bad news is, you can´t get them for free, but in order to retrieve them, must defeat each Dungeon Master guarding them. Since the Artifact Guardians are very powerful, it is advised not to venture alone into their lairs, or at least not well prepared.
+
+If a Hero carrying a unique artifact DIES without an Ankh or the Reincarnation skill, the artifacts will be removed from the Hero. They can then again be retrieved from the location where they were originally found.
+}
+
+STRING 874
+{
+Lich King
+}
+
+STRING 875
+{
+Stonemaul Arena Master
+}
+
+STRING 876
+{
+Gauntlet Ticket - Level 1
+}
+
+STRING 877
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 1
+}
+
+STRING 878
+{
+Purchase Gauntlet Arena Ticket - Level 1
+}
+
+STRING 879
+{
+Gauntlet Ticket - Level 2
+}
+
+STRING 880
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 2
+}
+
+STRING 881
+{
+Purchase Gauntlet Arena Ticket - Level 2
+}
+
+STRING 882
+{
+Gauntlet Ticket - Level 7
+}
+
+STRING 883
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 7
+}
+
+STRING 884
+{
+Purchase Gauntlet Arena Ticket - Level 7
+}
+
+STRING 885
+{
+Gauntlet Ticket - Level 3
+}
+
+STRING 886
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 3
+}
+
+STRING 887
+{
+Purchase Gauntlet Arena Ticket - Level 3
+}
+
+STRING 888
+{
+Gauntlet Ticket - Level 4
+}
+
+STRING 889
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 4
+}
+
+STRING 890
+{
+Purchase Gauntlet Arena Ticket - Level 4
+}
+
+STRING 891
+{
+Gauntlet Ticket - Level 5
+}
+
+STRING 892
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 5
+}
+
+STRING 893
+{
+Purchase Gauntlet Arena Ticket - Level 5
+}
+
+STRING 894
+{
+Gauntlet Ticket - Level 6
+}
+
+STRING 895
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 6
+}
+
+STRING 896
+{
+Purchase Gauntlet Arena Ticket - Level 6
+}
+
+STRING 897
+{
+Gauntlet Ticket - Level 8
+}
+
+STRING 898
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 8
+}
+
+STRING 899
+{
+Purchase Gauntlet Arena Ticket - Level 8
+}
+
+STRING 900
+{
+Gauntlet Ticket - Level 9
+}
+
+STRING 901
+{
+A Stonemaul Gauntlet Arena ticket.|nLevel 9
+}
+
+STRING 902
+{
+Purchase Gauntlet Arena Ticket - Level 9
+}
+
+STRING 903
+{
+|cffff0000Level 1:|r Ogre Warriors
+}
+
+STRING 904
+{
+|cffff0000Level 2:|r Wildkins
+}
+
+STRING 905
+{
+|cffff0000Level 3:|r Magnataur Warriors
+}
+
+STRING 906
+{
+|cffff0000Level 4:|r Dragons
+}
+
+STRING 907
+{
+|cffff0000Level 5:|r Ogre Magi
+}
+
+STRING 908
+{
+|cffff0000Level 6:|r Hydras
+}
+
+STRING 909
+{
+|cffff0000Level 7:|r Wendigos
+}
+
+STRING 910
+{
+|cffff0000Level 8:|r Sasquatches
+}
+
+STRING 911
+{
+|cffff0000Level 9:|r Stonemaul Ogres
+}
+
+STRING 912
+{
+|cffffff00Quest update:|r Return the Harpy Queen heart to Cairne Bloodhoof !
+}
+
+STRING 913
+{
+|cffffff00Quest completed:|r Harpy Menace
+}
+
+STRING 914
+{
+|cffffff00New Quest discovered:|r Arena Contest
+|cff00ff00HINT: The Stonemaul Arena on Kalimdor is now open for all players !|r
+}
+
+STRING 915
+{
+|cffffff00Quest completed:|r Arena Contest
+}
+
+STRING 916
+{
+Blood Elf Town Hall
+}
+
+STRING 917
+{
+Blood Elf Keep
+}
+
+STRING 918
+{
+Blood Elf Castle
+}
+
+STRING 919
+{
+Blood Elf Barracks
+}
+
+STRING 920
+{
+Blood Elf Blacksmith
+}
+
+STRING 921
+{
+Blood Elf Arcane Sanctum
+}
+
+STRING 922
+{
+Trains Priests and Spell Breakers. |nAlso contains spell upgrades for Priests, Control Magic, and Magic Sentry.
+}
+
+STRING 923
+{
+Blood Elf Lumber Mill
+}
+
+STRING 924
+{
+(Blood Elf)
+}
+
+STRING 925
+{
+Blood Elf Animal War Training
+}
+
+STRING 926
+{
+Iron Forged Swords (Blood Elf)
+}
+
+STRING 927
+{
+Iron Plating (Blood Elf)
+}
+
+STRING 928
+{
+Improved Masonry (Blood Elf)
+}
+
+STRING 929
+{
+Studded Leather Armor (Blood Elf)
+}
+
+STRING 930
+{
+Improved Lumber Harvesting (Blood Elf)
+}
+
+STRING 931
+{
+Priest Adept Training (Blood Elf)
+}
+
+STRING 932
+{
+Moon Armor (Blood Elf)
+}
+
+STRING 933
+{
+Strength of the Moon (Blood Elf)
+}
+
+STRING 934
+{
+Improved Bows (Blood Elf)
+}
+
+STRING 935
+{
+Marksmanship (Blood Elf)
+}
+
+STRING 936
+{
+Blood Elf Arcane Vault
+}
+
+STRING 937
+{
+Faceless Nightmare
+}
+
+STRING 938
+{
+Some Units have entered the most hazardous area of the |cffff0000Maelstrom|r and have been totally destroyed by the tempest.
+}
+
+STRING 939
+{
+FrozenThrone Peak
+}
+
+STRING 940
+{
+Armorer
+}
+
+STRING 941
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 942
+{
+Dem|cffffcc00i|rgod´s Protection
+}
+
+STRING 943
+{
+Weaponsmith
+}
+
+STRING 944
+{
+Engineer
+}
+
+STRING 945
+{
+Herbalist
+}
+
+STRING 946
+{
+Alchemist
+}
+
+STRING 947
+{
+Loremaster
+}
+
+STRING 948
+{
+You have chosen to be an |cffff0000Armorer|r. Your Hero will be able to craft different types of armor.
+}
+
+STRING 949
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 950
+{
+Magical Seed (3)
+}
+
+STRING 951
+{
+Your Hero has fallen during an |cffff0000Arena|r fight and will respawn near the Arena entrance in 15 seconds.
+}
+
+STRING 952
+{
+Primary defensive structure witch magic attack. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 953
+{
+Upgrade to High Elven |cffffcc00G|ruard Tower
+}
+
+STRING 954
+{
+Demigod´s Wrath
+}
+
+STRING 955
+{
+Learn Dem|cffffcc00i|rgod´s Wrath
+}
+
+STRING 956
+{
+Dem|cffffcc00i|rgod´s Wrath
+}
+
+STRING 957
+{
+A book that contains knowledge of crafting armors.
+}
+
+STRING 958
+{
+Purchase Armoring |cffffcc00B|rook
+}
+
+STRING 959
+{
+A book that contains blueprints for different towers.
+}
+
+STRING 960
+{
+Purchase Engineering |cffffcc00B|rook
+}
+
+STRING 961
+{
+A book that contains knowledge of brewing life potions.
+}
+
+STRING 962
+{
+Purchase Herbalism |cffffcc00B|rook
+}
+
+STRING 963
+{
+A book that contains knowledge of compisong different arcane scrolls.
+}
+
+STRING 964
+{
+Purchase Lore |cffffcc00B|rook
+}
+
+STRING 965
+{
+Book of Weaponsmithing
+}
+
+STRING 966
+{
+A book that contains knowledge of crafting magical weapons.
+}
+
+STRING 967
+{
+Purchase Weaponsmithing |cffffcc00B|rook
+}
+
+STRING 968
+{
+Creep Respawning
+}
+
+STRING 969
+{
+Once a creep is slain, it will respawn at its dying location after about 75 game time seconds, and only if no player controlled unit is within 400 of the location.
+}
+
+STRING 974
+{
+Hurls a bolt of destruction anywhere in the world, dealing instantly 800 Damage.
+}
+
+STRING 975
+{
+Fear
+}
+
+STRING 976
+{
+Armorer
+}
+
+STRING 977
+{
+Weaponsmith
+}
+
+STRING 978
+{
+Engineer
+}
+
+STRING 979
+{
+Herbalist
+}
+
+STRING 980
+{
+Alchemist
+}
+
+STRING 981
+{
+Loremaster
+}
+
+STRING 982
+{
+Alchemist
+}
+
+STRING 983
+{
+Armorer
+}
+
+STRING 984
+{
+Engineer
+}
+
+STRING 985
+{
+Herbalist
+}
+
+STRING 986
+{
+Loremaster
+}
+
+STRING 987
+{
+Weaponsmith
+}
+
+STRING 988
+{
+Alchemist
+}
+
+STRING 989
+{
+Armorer
+}
+
+STRING 990
+{
+Engineer
+}
+
+STRING 991
+{
+Herbalist
+}
+
+STRING 992
+{
+Loremaster
+}
+
+STRING 993
+{
+Weaponsmith
+}
+
+STRING 994
+{
+Alchemist
+}
+
+STRING 995
+{
+Armorer
+}
+
+STRING 996
+{
+Engineer
+}
+
+STRING 997
+{
+Herbalist
+}
+
+STRING 998
+{
+Loremaster
+}
+
+STRING 999
+{
+Weaponsmith
+}
+
+STRING 1000
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1001
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1002
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1003
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1004
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1005
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1006
+{
+You have chosen to build a |cff00ff00Human|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1007
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1008
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1009
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1010
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1011
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1012
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1013
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1014
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1015
+{
+You have chosen to build a |cff00ff00Naga|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1016
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1017
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1018
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1019
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1020
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1021
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1022
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1023
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1024
+{
+You have chosen to build a |cff00ff00Night Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1025
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1026
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1027
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1028
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1029
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1030
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1031
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1032
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1033
+{
+You have chosen to build a |cff00ff00Orc|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1034
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1035
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1036
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1037
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1038
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1039
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1040
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1041
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1042
+{
+You have chosen to build a |cff00ff00Undead|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1043
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1044
+{
+R
+}
+
+STRING 1045
+{
+Hideout
+}
+
+STRING 1046
+{
+Fortified Hideout
+}
+
+STRING 1047
+{
+Upgrade to Fort|cffffcc00i|rfied Hideout
+}
+
+STRING 1048
+{
+Has beter defensive capabilities than the standard Hideout. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1049
+{
+I
+}
+
+STRING 1050
+{
+Guardian´s Citadel
+}
+
+STRING 1051
+{
+Upgrade to Guard|cffffcc00i|ran´s Citadel
+}
+
+STRING 1052
+{
+Has beter defensive capabilities than the fortified Hideout. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1053
+{
+Tiny Hideout
+}
+
+STRING 1054
+{
+Creates a Hideout.
+}
+
+STRING 1055
+{
+Creates a Hideout at a target location.
+}
+
+STRING 1056
+{
+Purchase Tiny H|cffffcc00i|rdeout
+}
+
+STRING 1057
+{
+Hideout Camouflage
+}
+
+STRING 1058
+{
+Build Tiny Hideout
+}
+
+STRING 1059
+{
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 hit points per second. |nLasts <AEtq,Dur1> seconds.
+}
+
+STRING 1060
+{
+(Hideout)
+}
+
+STRING 1061
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 1062
+{
+Turns all friendly units and buildings invulnerable in an area around the Citadel. |nThe Citadel stays vulnerable. |nLasts <AOvd,Dur1> seconds.
+}
+
+STRING 1063
+{
+Shroud of |cffffcc00P|rotection
+}
+
+STRING 1064
+{
+F|cffffcc00e|rar
+}
+
+STRING 1065
+{
+Lets loose a terrifying howl that reduces all  enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
+}
+
+STRING 1066
+{
+Spell Shield
+}
+
+STRING 1067
+{
+Mystical Hero, adept at ranged assaults. Can learn Spell Shield, Gate, Dragons´ Call and Light of Righteousness.|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1068
+{
+Take the Dragon heart to Nethergarde for your reward !
+}
+
+STRING 1069
+{
+Hero Death
+}
+
+STRING 1070
+{
+|cffffff00New Quest discovered:|r Centaur Khans
+}
+
+STRING 1072
+{
+Entering now: |cff00ff00Lordaeron - The Undercity|r
+}
+
+STRING 1073
+{
+Entering now: |cff00ff00Silvermoon Ruins - Sunwell Grove|r
+}
+
+STRING 1074
+{
+Entering now: |cff00ff00Northrend - Draktharon Keep|r
+}
+
+STRING 1075
+{
+Entering now: |cff00ff00Northrend - Icecrown Glacier|r
+}
+
+STRING 1076
+{
+Entering now: |cff00ff00The Frozen Throne|r
+}
+
+STRING 1077
+{
+Entering now: |cff00ff00Teldrassil Isle|r
+}
+
+STRING 1078
+{
+Entering now: |cff00ff00Mount Hyjal - The World Tree|r
+}
+
+STRING 1079
+{
+Entering now: |cff00ff00Alterac Ruins|r
+}
+
+STRING 1080
+{
+Entering now: |cff00ff00Ashenvale - Fellwood|r
+}
+
+STRING 1081
+{
+Entering now: |cff00ff00Ashenvale Forest|r
+}
+
+STRING 1082
+{
+Entering now: |cff00ff00Durotar - Ogrimmar|r
+}
+
+STRING 1083
+{
+Entering now: |cff00ff00Mulgore - Thunder Buff|r
+}
+
+STRING 1084
+{
+Entering now: |cff00ff00Stonetalon Peak|r
+}
+
+STRING 1085
+{
+Entering now: |cff00ff00Southern Kalimdor - The Barrens|r
+}
+
+STRING 1086
+{
+Entering now: |cff00ff00Kalimdor Coast - Theramore Isle|r
+}
+
+STRING 1087
+{
+Entering now: |cff00ff00Sunken Ruins|r
+}
+
+STRING 1088
+{
+Entering now: |cff00ff00Sunken Ruins - Naga Temple|r
+}
+
+STRING 1089
+{
+Entering now: |cff00ff00Tomb of Sargeras|r
+}
+
+STRING 1090
+{
+Entering now: |cff00ff00Maelstrom|r
+|cffff0000Danger:|r Hazardous Area !
+}
+
+STRING 1091
+{
+Entering now: |cff00ff00Temple of Eternity|r
+}
+
+STRING 1092
+{
+Entering now: |cff00ff00Westfall|r
+}
+
+STRING 1093
+{
+Entering now: |cff00ff00Nethergarde Citadel|r
+}
+
+STRING 1094
+{
+Entering now: |cff00ff00Quel Thalas|r
+}
+
+STRING 1095
+{
+Entering now: |cff00ff00Khaz Modan|r
+}
+
+STRING 1096
+{
+H|cffffcc00i|rdeout camouflage
+}
+
+STRING 1097
+{
+Shroud of Protection
+}
+
+STRING 1098
+{
+Entering now: |cff00ff00Eastern Northrend|r
+}
+
+STRING 1099
+{
+Entering now: |cff00ff00Azjol-Nerub|r
+}
+
+STRING 1100
+{
+Entering now: |cff00ff00Dalaran Dungeons|r
+}
+
+STRING 1105
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 1116
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 1117
+{
+A |cffffcc99Legendary Artifact|r has been recovered !
+}
+
+STRING 1118
+{
+Eternal Guardian
+}
+
+STRING 1119
+{
+Revive E|cffffcc00t|rernal Guardian
+}
+
+STRING 1120
+{
+Summon E|cffffcc00t|rernal Guardian
+}
+
+STRING 1121
+{
+The Eternal Guardian´s seat of power. Has different defensive capabilities. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1122
+{
+K
+}
+
+STRING 1123
+{
+L
+}
+
+STRING 1124
+{
+Spe|cffffcc00l|rl Shield
+}
+
+STRING 1125
+{
+Learn Spe|cffffcc00l|rl Shield
+}
+
+STRING 1126
+{
+Creates a barrier that stops spells from affecting a target unit. |nLasts <Aams,Dur1> seconds.
+}
+
+STRING 1127
+{
+|cffffff00Quest completed:|r Golem Factory
+}
+
+STRING 1128
+{
+Dragon Slayer
+}
+
+STRING 1129
+{
+Lately there has been some harassment by an evil Red Dragon that recently appeared in the Region. The Creature has caused serious damage to the defenses of Nethergarde Citadel and now the Wizards there have had enough ! There is a substantional reward to the Hero who kills the dragon and returns its heart to the Archmage of Nethergarde.
+}
+
+STRING 1130
+{
+Golem Factory
+}
+
+STRING 1131
+{
+The Engineers of Ironforge have discovered some very interesting blueprints in the city´s library: apparently there seems to be a long abandoned and forgotten Golem Factory somewhere under the city. This subject has drawn the Dwarf King´s attention since Golems would be an invaluable weapon against the increasing Undead threat. King Magni Bronzebeard requires brave adventurers to travel into the unexplored corridors deep under the city, and if the rumor is true,  bring a Battle Golem to him as a proof of the factory´s existence !
+}
+
+STRING 1132
+{
+Temple of Demigods Blueprints
+}
+
+STRING 1133
+{
+Allows the upgrade of Level 3 Town Halls and Guardian Towers to a Temple of Light or Darkness
+}
+
+STRING 1134
+{
+Search for Mauradin
+}
+
+STRING 1135
+{
+Although it may be a suicide mission, the High King of the Dwarves requests that you travel to Icecrown and find out what happened to Mauradin Bronzebeard, the High King´s brother. Find the Dwarf and, should he still live, escort safely him back to Ironforge !
+}
+
+STRING 1136
+{
+Crusade
+}
+
+STRING 1137
+{
+The time has come to take countermeasures against the increasing threat caused by the Scourge ! To prevent another cataclysm like in Lordaeron, King Anduin Wrynn and the Order of the Silver Hand have called out a Crusade against the Undead. Heros throughout the land are called for to hunt down and destroy 5 Undead Heros to avenge the death of legendary Sir Uther Lightbringer and the downfall of the Order of the Silver Hand in Lordaeron !
+Hint: no Undead genocide is allowed !
+}
+
+STRING 1138
+{
+Druid Spell
+}
+
+STRING 1139
+{
+The City of Darnassus is flourishing as hoped. However, there seems to be a problem with the Night Elf housings around the new World Tree. They are somehow falling apart. Apparently this seems to be a side-effect of the World Tree´s growing. Tyrande needs a special Spell from the Druids of the Talon to enhance the structures and shield them from the World Tree´s damaging magic. She requires a Hero to travel to the Barrow Dens in Ashenvale, find the druids and recover the Spell for her. Although this is only a small running job, there will be a reward for the Hero´s efforts to help the Night Elves.
+}
+
+STRING 1140
+{
+The World Tree
+}
+
+STRING 1141
+{
+Ever since the destruction of the Demon Archimonde near the World Tree, its regeneration has somehow been strange. The Arch-Druid Furion suspects some kind of corruption of the magical waters the World Tree is feeding from...
+Since the dispelling of demonic magicks is the speciality of the Paladins of the Silver Hand, Furion needs their help. Someone must seek the head of their Order who is currently in Nethergarde Citadel in Azeroth and get a sample of blessed water from him. Pouring the blessed water into the Well of Eternity should dispel any remnants of demonic corruption in it.
+}
+
+STRING 1142
+{
+Moon Stones
+}
+
+STRING 1143
+{
+During an experiment with the newly discovered Moon Stones, there has been an accident. The effect of the Moon Stone somehow prolongued the Eclipse to an incredible length. Tyrande has tried many spells to cancel the eclipse but with no success. She believes that with the help of the Arch-Sorceress Jaina Proudmoore, she could dispel the eclipse and also enhance the moon stones so that such an accident does not occur again. The mission is simple: travel to Theramore, and let Jaina enhance the moon stone Tyrande gave you. Afterwards return to it to Tyrande and receive a small reward for  helping the Night Elves !
+}
+
+STRING 1144
+{
+Demon Blood
+}
+
+STRING 1145
+{
+After the Legion´s defeat on Kalimdor, the Night Elves seem to have  overlooked something. There is still a defiled Fountain somewhere in Fellwood, probably the source of the Warsong Clan´s former corruption. To prevent other creatures to drink from it, Furion asks you to travel to the nearby Felwood Forest, find the Defiled Fountain and destroy it. But be on your guard, since there seem to be remnants of the Dark Legion´s strike force that the Night Elves have not yet eliminated !
+}
+
+STRING 1146
+{
+Durotar Law Code
+}
+
+STRING 1147
+{
+The Orcish nation of Durotar is prospering well. Under the guidance of Warchief Thrall, they have established a council of elders that is responsible for establishing order and laws among the hot-headed Orcs. Although the Night Elves and Humans already have written codes of law, this is something totally new for the young nation of Orcs. Thrall promised to keep the Night Elves informed about the progress of Durotar´s legislative acts. Since his former running pet, Rexxar, has moved to the wilds again, Thrall needs a new errand boy. Your Hero has to take the Code of Laws tome and take it to Tyrande on Teldrassil Isle. Afterwards you can return to Thrall and claim you payment for the job.
+}
+
+STRING 1148
+{
+Harpy Menace
+}
+
+STRING 1149
+{
+The Tauren have constantly been harassed by Harpies and Centaurs since they moved to Mulgore. Now a scout has discovered one of the Harpies´ Queens. Cairne believes that if she was destroyed, the Harpies would at last be silenced. He needs a strong Hero to travel to the nearby Stonetalon Mountains, find the Harpy Queen and dispose of her as she deserves. Return afterwards her heart to Cairne as a proof of the Mission success and claim your reward ! (*ugh*)
+}
+
+STRING 1150
+{
+Arena Contest
+}
+
+STRING 1151
+{
+Rexxar and the Stonemaul Ogres declare their Arena officially as open ! For the first warrior to beat Level 9 of the Gauntlet Arena, Rexxar has announced a special prize, apart from the items that may be dropped in the Arena fights. Beat Level 9 of the Gauntlet and show Rexxar the Mask of Death. He will then reward your Hero with something special.
+}
+
+STRING 1152
+{
+Centaur Khans
+}
+
+STRING 1153
+{
+The Pandaren Brewmaster, Chem Stormstout, has recently arrived in Mulgore with interesting news from his travel in the south. There seems to be an increased movement of the centaurs. They apparently seem to have their seasonal fights for who is to be the new Supreme Centaur leader. The Tauren see their opportunity to strike a blow at the centaurs in order to lower their battle morale and cause confusion among them. Cairne and Chem will reward any Hero who kills all 7 Centaur Khans in the southern part of the Barrens.
+}
+
+STRING 1154
+{
+Tomb of Sargeras
+}
+
+STRING 1155
+{
+After having returned from Outland, Illidan, Kael and Vashj have devised a new plan to strike at the Lich King. However, Lord Illidan needs a special Artifact which he can only get from his Master, Kil´Jaeden himself. He is currently somewhere in the Tomb of Sargeras, for reasons unknown. Your Hero must travel to the Tomb of Sargeras near the Maelstrom, find Kil´Jaeden, get the Artifact from him and return it to Illidan. Kil´Jaeden may be somewhat be aroused by the lost battle at Icecrown Glacier, so watch your steps carefully.
+}
+
+STRING 1156
+{
+Fight Fire with Fire
+}
+
+STRING 1157
+{
+Lord Illidan is getting tired of being chased by the Night Elf Warden Maiev Shadowsong. Before the next step to strike at the Lich King, Illidan wants the Warden matter solved first. According to spy reports, Maiev and her group of Huntresses have currently set up a base camp near the Naga Temple Ruins, giving you the chance to conduct a surprise attack ! However, Illidan wants Maiev alive. You will have to use a special magical scroll Kael has made to prevent Maiev from using her teleporting skills and capture her. The quest is to find Maiev and use the Arcane Scroll near her in order to activate the spell. Afterwards, return Maiev to Illidan and claim your reward !
+}
+
+STRING 1158
+{
+Sapphiron
+}
+
+STRING 1159
+{
+The time to strike at the Lich King is coming near. But before, a final step is needed. There is a mighty Frost Wyrm called Sapphiron who watches every movement in and out of Icecrown. Lord Illidan requires you to destroy it in order to get to the Icecrown Glacier undetected ! The Dragon is however protected by a spell that prevents him from being harmed in any way. Lady Vashj has created a special Spell that will dispel the protection of the Frost Wyrm and make it vulnerable. The quest is to travel to Icecrown, find Sapphiron´s Lair, use the magic scroll near the Dragon and after the invulnerability is dispelled, kill it. Afterwards return the creature´s head to Lord Illidan. This time Sapphiron stays dead !
+}
+
+STRING 1160
+{
+Stormrage
+}
+
+STRING 1161
+{
+It is time to strike at the Lich King himself ! Illidan has a score to settle with Arthas. However, the subject of this campaign is not to destroy the Lich King himself since his powers are still far too great at the moment. Even after striking down his mortal body, his dark sorcery will bring him back to life. But his temporary death will be enough to accomplish the actual quest: the Lich King created a powerful device that would allow him to increase his evil sorceries to a tremendous extent. Fortunately he has not yet used it. This must be prevented at all costs or a catastrophe that affects the whole world could occour with consequences not even Lord Illidan can predict. Recently Kil´Jaeden has given Illidan a special ring that will prevent Frostmourne´s powers from permanently destroying Illidan. However, in order to destroy the Lich King´s artifact, Illidan needs to enhance his double-bladed weapon first with sacred waters from a certain magical well. Take his Blade to the Sunnwell in Silvermoon, and after they are enhanced by the magic waters of the Sunwell, return the blade to Illidan. Afterwards guide Illidan himself to the Frozen Throne and conduct a surprise attack on the Dark Knight !
+}
+
+STRING 1162
+{
+Captured Maiev
+}
+
+STRING 1163
+{
+Dark Portal
+}
+
+STRING 1164
+{
+The Orcish warriors are the fiercest warriors known and they would be a valuable addition to the Forsaken Army. The Dark Lady Sylvanas has devised a plan to enslave the unsuspecting Orcs and turn them into the undead. To realize this idea, it will take several steps. At first, Sylvanas needs the Life essence of a Nether Drake. Your Hero needs to travel to Nethergarde Citadel and summon a Nether Drake Hatchling through the Dark Portal there. Afterwards return the creature to Sylvanas in the Undercity and claim your reward !
+}
+
+STRING 1165
+{
+Stormreaver Hermit
+}
+
+STRING 1166
+{
+After having captured the Nether Drake, the next step is to get a corpse probe of a dead orc. In Durotar, there is a Stormreaver Hermit who makes forbidden experiments with Orcish corpses. Sylvanas wants your Hero tage the bag of Gold, travel to Durotar, find the Warlock and buy a corpse probe from him. Afterwards return with the cadaver to the Undercity.
+}
+
+STRING 1167
+{
+The Silver Hand
+}
+
+STRING 1168
+{
+After having added the Orcs as part of the Forsaken, Sylvanas wants revenge on the Paladins of the Silver Hand who constantly hunt the Undead and cause the most dangerous threat for the Forsaken at the moment. There will be a bounty for the Hero who first kills 5 Paladins of the Silver Hand. However facing one of them is very dangerous, especially for the undead. Prepare yourself well !
+Hint: no Human genocide is allowed !
+}
+
+STRING 1169
+{
+Demigod´s Remnants
+}
+
+STRING 1170
+{
+The Faceless Ones of Azjul-Nerub have drawn the Lich King´ interest in them. He wants them as part of the scourge, but he needs more magic power in order to control them. Anub´Arak has received word from Kel´Thuzad that the Lich King´s power could be increased to that extent with a special ritual. The Lich will however need some items first to unravel the spell. The ancient Night Elves´ Demigod, Cenarius, lies buried somewhere in Ashenvale Forest. First, your Hero must travel to Ashenvale and find a corpse probe of the dead creature. Afterwards take it to the Sunwell Grove in the Silvermoon Ruins where Kel´Thuzad will await your arrival.
+}
+
+STRING 1171
+{
+Demigod´s Horn
+}
+
+STRING 1172
+{
+The next step to unravel Kel´Thzad´s spell requires the ancient Artifact known as the Horn of Cenarius. Fortunately as it is, the Horn seems to be guarded only by a few creatures and is vulnerable to theft. But in order to remove it from the pedestal that magically holds it, you need a special totem that Kel´Thuzad has created. The mission is simple: Sneak with the Lich´s relic to the Horn in Ashenvale Forest, destroy the Spirits who guard the Horn and afterwards return the Horn to Kel´Thuzad.
+}
+
+STRING 1173
+{
+Lich King´s Order
+}
+
+STRING 1174
+{
+After having enabled the Lich King to control the the mysterious Faceless Ones, the time has come to unravel the Scourge´s Wrath. The Quest is as hard as easy it is to describe it: you are to destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple). Hiring Faceless Ones in Draktharon Keep (Anub´Arak) might be clever in order to accomplish this difficult task. After you complete your Quest, return to Arthas and claim your reward !
+}
+
+STRING 1175
+{
+|cffffff00New Quest discovered:|r Search for Mauradin
+}
+
+STRING 1176
+{
+|cffffff00Quest update:|r Return Mauradin´s Urn to Ironforge
+}
+
+STRING 1177
+{
+|cffffff00Quest completed:|r Search for Mauradin
+}
+
+STRING 1178
+{
+|cffffff00New Quest discovered:|r Crusade
+}
+
+STRING 1179
+{
+Crusade
+}
+
+STRING 1180
+{
+The heart of the Dragon.
+}
+
+STRING 1181
+{
+The Heart of the Dragon
+}
+
+STRING 1182
+{
+The still beating heart of a Dragon.
+}
+
+STRING 1183
+{
+|cff8b00ffUnique|r|nThe Horn a legendary Stormbringer Dragon. Though the creature from whose head the horn has been cut off has perished, the frequent use of lightning magic has somehow enchanted the horn with magicks from the elemental plane of air.|nGrants a greater Life bonus, Lightning Attack, Trueshot Aura and casts a Forked Lightning that deals 100 damage to 3 targets. Has a 11 second cooldown.
+}
+
+STRING 1184
+{
+Letter for Mauradin
+}
+
+STRING 1185
+{
+The letter is magically sealed. On the front, written in large scrawling letters is the word Mauradin.
+}
+
+STRING 1186
+{
+A letter for Mauradin.
+}
+
+STRING 1187
+{
+Urn of Mauradin Bronzebeard
+}
+
+STRING 1188
+{
+This urn contains the remains of Mauradin Bronzebeard.
+}
+
+STRING 1189
+{
+This urn contains the remains of Mauradin Bronzebeard. After his death during Frostmourne´s recovery, the dwarves cremated Mauradin and buried the urn at a secret place in Northrend.
+}
+
+STRING 1190
+{
+Mauradin´s Axe
+}
+
+STRING 1191
+{
+|cffff8c00Artifact|r|nA silver axe that once belonged to the Mountain King Mauradin Bronzebeard.
+}
+
+STRING 1192
+{
+Ensnare (Unique)
+}
+
+STRING 1193
+{
+Forked Lightning (unique)
+}
+
+STRING 1194
+{
+(unique)
+}
+
+STRING 1195
+{
+Centaur Khans
+}
+
+STRING 1196
+{
+Khans killed: 
+}
+
+STRING 1197
+{
+|cffffff00Quest update:|r Return to Chem and Cairne in Mulgore for your reward on successfully destroying 6 Centaur Khans !
+}
+
+STRING 1198
+{
+|cffffff00Quest completed:|r Centaur Khans
+}
+
+STRING 1199
+{
+The heart of the Harpy Queen that terrorized the Tauren tribe of Thunder Buff.
+}
+
+STRING 1200
+{
+The heart of the Harpy Queen that terrorized the Tauren tribe of Thunder Buff. Return it to Cairne for a reward !
+}
+
+STRING 1201
+{
+Heart of the Harpy Queen
+}
+
+STRING 1202
+{
+The Code of laws for Durotar.
+}
+
+STRING 1203
+{
+The Code of laws for Durotar. This copy Thrall made for Tyrande in Darnassus.
+}
+
+STRING 1204
+{
+Tyrande´s letter for Thrall
+}
+
+STRING 1205
+{
+A letter from Tyrande for Thrall in Ogrimmar
+}
+
+STRING 1206
+{
+A letter from Tyrande for Thrall in Ogrimmar. She is thankful for the copy of the Orcs´ Code of Laws.
+}
+
+STRING 1207
+{
+Harpy Hunter´s Net
+}
+
+STRING 1208
+{
+|cffff8c00Artifact|r|nA very fine crafted net, designed to catch even the most powerful air units.
+}
+
+STRING 1209
+{
+|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by 15 when carried. Also grants Endurance Aura and can ensnare enemies. |n|cffffcc00History|r|n|cffffdeadWhen the evil Harpy Queen of Mulgore was defeated, the Tauren Chieftain gave this net to the Hero who defeated the winged beast. The net itself once belonged to a very brave tauren Bounty Hunter who, despite his skills, failed to kill the Harpies and suffered the penalty of death by the Harpies´ hands. You carry the tools of a dead person (ugh !).|r
+}
+
+STRING 1210
+{
+Gauntlet Grand Champion´s Belt
+}
+
+STRING 1211
+{
+|cffff8c00Artifact|r|nA heavy Belt with the inscripts "Grand Champion".
+}
+
+STRING 1212
+{
+|cffff8c00Artifact|r|nIncreases all stats of the bearer by +5. Also allows reincarnation every 180 seconds if the Hero dies. |n|cffffcc00History|r|n|cffffdeadAfter the Stonemaul Ogres held the first official Gauntlet Contest, only one Hero managed to beat all opponents in the Arena. For his valor in combat and symbol of the Stonemaul Ogres´ respect, he received this magically enhanced belt from Rexxar.|r
+}
+
+STRING 1213
+{
+Frozen Throne Crystal
+}
+
+STRING 1214
+{
+Totem of Thunder Buff
+}
+
+STRING 1215
+{
+|cffff8c00Artifact|r|nA magical totem with the symbol of Thunder Buff, the Tauren´s capital.
+}
+
+STRING 1216
+{
+|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by +10 and life points by 300. Also casts War Stomp every 60 seconds that deals 100 damage and stuns for 5 seconds. |n|cffffcc00History|r|n|cffffdeadFor defeating 6 Centaur Khans in an epic quest, the Tauren Chieftain Carine Bloodhoof rewarded the mighty warriors with this special magical totem. A symbol of the Taurens´ gratitude, the totem represents the Taurens´ superiority over the evil renegade Centaur tribes which once drove the Tauren away from their old homes in southern Kalimdor.|r
+}
+
+STRING 1217
+{
+Slam (unique)
+}
+
+STRING 1218
+{
+|cffffff00New Quest discovered:|r Tomb of Sargeras
+}
+
+STRING 1219
+{
+(cairnes item)
+}
+
+STRING 1220
+{
+|cffffff00Quest update:|r Bring Kil´Jaeden´s Ring to Illidan in the Naga Ruins !
+}
+
+STRING 1221
+{
+|cffffff00New Quest discovered:|r Dark Portal
+}
+
+STRING 1222
+{
+|cffffff00Quest completed:|r Tomb of Sargeras
+}
+
+STRING 1223
+{
+|cffffff00New Quest discovered:|r Fight Fire with Fire
+}
+
+STRING 1224
+{
+Allows you to hire Skeletal Orcs.
+}
+
+STRING 1225
+{
+|cffffff00Quest completed:|r Fight Fire with Fire
+}
+
+STRING 1226
+{
+Fountain of Resurrection
+}
+
+STRING 1229
+{
+Kil´Jaeden´s Ring
+}
+
+STRING 1230
+{
+Increases Armor by +8. Also has hidden powers only Illidan can use.
+}
+
+STRING 1231
+{
+Increases Armor by +8. Also has hidden powers only Illidan can use. Created for Lord Illidan by Kil´Jaeden for a special Quest.
+}
+
+STRING 1232
+{
+Ring of the Dark Legion
+}
+
+STRING 1233
+{
+Increases Armor by +8. Also grants Endurance Aura and Unholy Aura.
+}
+
+STRING 1234
+{
+Increases Armor by +8. Also grants Endurance Aura and Unholy Aura. Created for Lord Illidan by Kil´Jaeden for a special Quest.
+}
+
+STRING 1235
+{
+Azjol-Nerub Obelisk
+}
+
+STRING 1236
+{
+A scroll that contains a special spell to capture Maiev.
+}
+
+STRING 1237
+{
+A scroll that contains a special spell to capture Maiev. Stand in a radius of 600 near Maiev and use the scroll to capture her. Hint: the scroll works only on Maiev, so dont think you can capture other Heros with it.
+}
+
+STRING 1238
+{
+Berser|cffffcc00k|r
+}
+
+STRING 1239
+{
+Capture Maiev
+}
+
+STRING 1240
+{
+|cffffff00New Quest discovered:|r Sapphiron
+}
+
+STRING 1241
+{
+|cffffff00Quest update:|r Kill Sapphiron (again) !
+}
+
+STRING 1242
+{
+|cffffff00Quest update:|r Return Sapphiron´s Head to Lord Illidan !
+}
+
+STRING 1243
+{
+|cffffff00Quest completed:|r Sapphiron
+}
+
+STRING 1244
+{
+This ancient Frost Wyrm skull has been equipped with handles, turning it into a powerful shield. Increases armor by 7 when worn, grants Unholy Aura and reduces Magic damage dealt to the Hero by <AIsr,DataB1,%>%.
+}
+
+STRING 1245
+{
+Kael´s Scroll of Supression
+}
+
+STRING 1246
+{
+Vashj´s Scroll of Dispelling
+}
+
+STRING 1247
+{
+A magical Scroll that contains a spell that will dispel Sapphiron´s invulnerability.
+}
+
+STRING 1248
+{
+A magical Scroll that contains a spell that will dispel Sapphirons invulnerability. Go into Sapphiron´s Lair with it and the scroll will unravel its effect.
+}
+
+STRING 1249
+{
+Sapphiron´s Head
+}
+
+STRING 1250
+{
+The head of the mighty undead dragon Sapphiron.
+}
+
+STRING 1251
+{
+The head of the mighty undead dragon Sapphiron. Return it to Lord Illidan for a reward !
+}
+
+STRING 1252
+{
+|cffffff00New Quest discovered:|r Stormrage
+}
+
+STRING 1253
+{
+Allows you to hire Faceless Ones.
+}
+
+STRING 1254
+{
+|cffffff00Quest update:|r Return the now enhanced blade to Illidan !
+}
+
+STRING 1255
+{
+|cffffff00Quest update:|r Wait for a short time until Illidan has examined his new weapons !
+}
+
+STRING 1256
+{
+|cffffff00Quest update:|r Guide Illidan to the Frozen Throne peak and attack the Lich King ! To get your old Hero back, step with Illidan on the circle of power after 30 seconds from now on !
+}
+
+STRING 1257
+{
+|cffffff00Quest update:|r Guide Illidan to the Frozen Throne peak and attack the Lich King ! To control Illidan again, step with your Hero on the circle of power after 30 seconds from now on !
+}
+
+STRING 1258
+{
+|cffffff00Quest update:|r |cffff0000Illidan Stormrage|r is attacking the |cffff0000Lich King|r !
+}
+
+STRING 1259
+{
+Illidan´s Blade
+}
+
+STRING 1260
+{
+Illidan Stormrage´s Blade. Needed for a special Quest.
+}
+
+STRING 1261
+{
+|cffffff00Quest completed:|r Dark Portal
+}
+
+STRING 1262
+{
+|cffffff00New Quest discovered:|r Stormreaver Hermit
+}
+
+STRING 1263
+{
+Leaderboards
+}
+
+STRING 1264
+{
+|cffffff00Quest update:|r Return the Orc Corpse to Sylvanas in the Undercity !
+}
+
+STRING 1265
+{
+Some epic quests will create leaderboards. In order to hide or show them again, use following commands (works only if the quests are activated):
+
+1. CRUSADE:
+- turn on leaderboard: "-crusadeon"
+- turn off leaderboard: "-crusadeoff"
+
+2. THE SILVER HAND:
+- turn on leaderboard: "-paladinson"
+- turn off leaderboard: "-paladinsoff"
+
+3. CENTAUR KHANS:
+- turn on leaderboard: "-centaurson"
+- turn off leaderboard: "-centaursoff"
+
+Note: Even when the quest has been activated, and you turn off the leaderboard, the counts will continue until the quest requirement is accomplished. Also, it turns off/on the leaderboard display only for the player who writes the chat message.
+}
+
+STRING 1266
+{
+|cffffff00Quest completed:|r Stormreaver Hermit. From now on, Skeletal Orc Grunts (undead) can be hired in the Undercity !
+}
+
+STRING 1267
+{
+|cffffff00New Quest discovered:|r The Silver Hand
+}
+
+STRING 1268
+{
+Paladins slain
+}
+
+STRING 1269
+{
+|cffffff00Quest completed:|r The Silver Hand
+}
+
+STRING 1270
+{
+|cffffff00New Quest discovered:|r Demigod´s Remnants
+}
+
+STRING 1271
+{
+|cffffff00Quest update:|r Return Cenarius´ body part to Kel´Thuzad in the Silvermoon Ruins !
+}
+
+STRING 1272
+{
+Nation´s Battle Standard
+}
+
+STRING 1273
+{
+|cffffff00Quest completed:|r Demigod´s Remnants
+}
+
+STRING 1274
+{
+|cffffff00New Quest discovered:|r Demigod´s Horn
+}
+
+STRING 1275
+{
+The Battle Standard of a fallen Nation.
+}
+
+STRING 1276
+{
+|cffffff00Quest update:|r Kel´Thuzad is examining the body parts (and apparently has some problems with his helmet). Come back later for the next quest !
+}
+
+STRING 1277
+{
+The Battle Standard of a fallen Nation. Return it to the Lich King at the Frozen Throne for your reward !
+}
+
+STRING 1278
+{
+|cffffff00Quest update:|r Kill the Guardian Spirits who guard the Horn and steal the Horn !
+}
+
+STRING 1279
+{
+|cffffff00Quest completed:|r Demigod´s Horn
+}
+
+STRING 1280
+{
+|cffffff00Quest update:|r Faceless Warriors are now available for training in Draktharon Keep (Northrend) !
+}
+
+STRING 1281
+{
+|cffffff00New Quest discovered:|r Lich King´s Order
+}
+
+STRING 1282
+{
+|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by 15 when carried. Also grants Devotion Aura and casts Holy Light (200 Life healed).|n|cffffcc00History|r|n|cffffdeadAfter the Crusade against the Undead, King Anduin Wrynn gave the Champion who destroyed the most dangerous Undead Champions this Hammer as a symbol of eternal gratitude and valor in combat.|r
+}
+
+STRING 1283
+{
+Undead Head (Trophy)
+}
+
+STRING 1284
+{
+Sylvanas´ Bag of Gold
+}
+
+STRING 1285
+{
+A bag full of Gold from Sylvanas. Take it to the Stormreaver in the Barrens.
+}
+
+STRING 1286
+{
+A bag full of Gold from Sylvanas. Take it to the Stormreaver in the Barrens to buy an Orc corpse.
+}
+
+STRING 1287
+{
+Orcish Corpse
+}
+
+STRING 1288
+{
+A corpse of a dead Orc Grunt.
+}
+
+STRING 1289
+{
+A corpse of a dead Orc Grunt. Return it to the Undercity to Sylvanas.
+}
+
+STRING 1290
+{
+Paladin´s Head (Trophy)
+}
+
+STRING 1291
+{
+Return this trophy to Sylvanas Windrunner in the Undercity.
+}
+
+STRING 1292
+{
+Shield of the Undercity Forge
+}
+
+STRING 1293
+{
+|cffff8c00Artifact|r|nA heavy diamond-socketed shield from the Undercity Armory.
+}
+
+STRING 1294
+{
+|cffff8c00Artifact|r|nIncreases the defense of the Hero by 8 when carried. Also grants Unholy Aura, 15% Vamprism and casts Death Coil (200 Life healed).|n|cffffcc00History|r|n|cffffdeadWhen Sylvanas ordered to hunt down and destroy the Paladins of the Silver Hand in Lordaeron, an epic battle between the Undead and the Paladins broke out. The Shield has been crafted as a prize for the most vicious Undead Champion of the unholy crusade. A symbol of valor in combat and the cold clutch of the Forsaken around the fallen human kingdom of Lordaeron.|r
+}
+
+STRING 1295
+{
+Digging equipment
+}
+
+STRING 1296
+{
+Equipment for digging out the dead body of Cenarius in Ashenvale Forest.
+}
+
+STRING 1297
+{
+Body Part of Cenarius
+}
+
+STRING 1298
+{
+A few Body Parts of the fallen Night Elf Demigod Cenarius.
+}
+
+STRING 1299
+{
+A few Body Parts of the fallen Night Elf Demigod Cenarius. Take them to Kel´Thuzad at the Sunwell in the Silvermoon Ruins.
+}
+
+STRING 1300
+{
+Kel´Thuzad´s Scroll of Dispelling
+}
+
+STRING 1301
+{
+A magical scroll that will dispel the invulnerability of the guardians of the Horn of Cenarius.
+}
+
+STRING 1302
+{
+Runeblade of the Frozen Throne
+}
+
+STRING 1303
+{
+|cffff8c00Artifact|r|nA heavy, diamond-socketed magic sword.
+}
+
+STRING 1304
+{
+Reincarnation (unique)
+}
+
+STRING 1305
+{
+Death Coil (item)
+}
+
+STRING 1306
+{
+Blizzard (unique)
+}
+
+STRING 1307
+{
+(Runeblade)
+}
+
+STRING 1308
+{
+|cffffff00Quest update:|r Guide Illidan to the Frozen Throne peak and attack the Lich King !
+}
+
+STRING 1309
+{
+|cffffff00Quest completed:|r Lich King´s Wrath
+}
+
+STRING 1310
+{
+|cffffff00Quest update:|r Return to the Frozen Throne and claim your reward for destroying the Nation´s Capital !
+}
+
+STRING 1311
+{
+|cffffff00Quest update:|r Illidan is ready to travel to Icecrown !
+}
+
+STRING 1312
+{
+|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by 20 when carried. Also grants Unholy Aura, Endurance Aura and allows to cast a wide-range Blizzard. |n|cffffcc00History|r|n|cffffdeadAnother of the Lich King´s mysterious Runeblades. For destroying one of the Lich King´s enemy nations, the Hero who lead the assault on its capital was rewarded by the Dark Lord with this mighty sword. Though the blade turns the carrier into an evil being, the power it emerges is almost unbearable for the wielder and causes ever increasing lust for destruction. A nice toy for the Lich King´s newest Champion !|r
+}
+
+STRING 1313
+{
+|cffffff00Quest completed:|r Stormrage
+}
+
+STRING 1314
+{
+Illidan´s Charm
+}
+
+STRING 1315
+{
+|cffff8c00Artifact|r|nAn array of mystical crystals, forged into one single artifact by Illidan.
+}
+
+STRING 1316
+{
+|cffff8c00Artifact|r|nIncreases all stats of the Hero by 10, grants 15% evasion and allows the teleportation to any known location in the world every 80 seconds. |n|cffffcc00History|r|n|cffffdeadAfter the somewhat successfull second assault on the Lich King by Lord Illidan, the Demon Hunter rewarded the Hero who helped accomplish this victory with this mystical artifact.|r
+}
+
+STRING 1317
+{
+Blink (unique)
+}
+
+STRING 1318
+{
+|cff8b00ffUnique|r|nAn ancient Artifact of unknown origin. Some wizards believe it was a gift for Medivh from the first invading Orcs in Azeroth, since the runes on the shield resemble old orcish shamanistic language.|nGrants +10 defense, 50% spell damage reduction and casts Big Bad Voodoo every 100 seconds for 20 seconds.
+}
+
+STRING 1319
+{
+BigBadVoodoo (Unique)
+}
+
+STRING 1320
+{
+|cffffff00Quest update:|r Naga Royal Guards are now available for hire in the Sunken Ruins !
+}
+
+STRING 1321
+{
+Statue Lich King
+}
+
+STRING 1322
+{
+Touch of Dark|cffffcc00n|ress - [|cffffcc00Level 1|r]
+}
+
+STRING 1323
+{
+Touch of Dark|cffffcc00n|ress - [|cffffcc00Level 2|r]
+}
+
+STRING 1324
+{
+Touch of Dark|cffffcc00n|ress - [|cffffcc00Level 3|r]
+}
+
+STRING 1325
+{
+Absorbs the life essence of a target enemy unit by taking hit points from it every second and giving them to the Dark Ranger. |nLasts <ANdr,Dur1> seconds. |n|n|cffffcc00Level 1|r - 50 hit point drain per second. |n|cffffcc00Level 2|r - 100 hit point drain per second. |n|cffffcc00Level 3|r - 150 hit point drain per second.
+}
+
+STRING 1326
+{
+Learn Life Touch of Dark|cffffcc00n|ress - [|cffffcc00Level %d|r]
+}
+
+STRING 1327
+{
+If your Hero dies, don´t panic. There are 2 possibilities to revive your fallen champion:
+1. If you have an Altar or Hideout, you can revive there.
+
+2. If you don´t have these structures, you can revive at your personal Well of Life on Jaina´s Theramore Isle. However you have to buy a transport ship if you don´t have other means to get off Theramore. In case you need money, simply craft items and sell them at the marketplace.
+}
+
+STRING 1328
+{
+Look in the Quest menu chapter |cffff0000Diplomacy|r on how to change |cffff0000Ally options with other players|r !
+}
+
+STRING 1330
+{
+Defeat Conditions
+}
+
+STRING 1331
+{
+Defeat
+}
+
+STRING 1332
+{
+If Player 1 doesn´t turn off Defeat Conditions during the game start, every player can be permanently destroyed. You lose then, if
+- Town Hall Type structure is destroyed.
+- Hideout or an upgraded Hiedout is destroyed.
+- Demigod Temple is destroyed.
+Once you are defeated, you will lose all units and possibilities to resurrect your Hero and the game is over for you !
+}
+
+STRING 1333
+{
+Human Citizen (male)
+}
+
+STRING 1334
+{
+Hire Human Citizen (male)
+}
+
+STRING 1335
+{
+A hearty human citizen. Has life regeneration aura.
+}
+
+STRING 1336
+{
+Human Citizen (female)
+}
+
+STRING 1337
+{
+Hire Human Citizen (female)
+}
+
+STRING 1339
+{
+Undead Citizen (male)
+}
+
+STRING 1340
+{
+Hire Undead Citizen (male)
+}
+
+STRING 1342
+{
+Undead Citizen (female)
+}
+
+STRING 1344
+{
+Gives a 15% chance to do 2x +1x/Level more damage on an attack.
+}
+
+STRING 1345
+{
+Orc Citizen (male)
+}
+
+STRING 1346
+{
+Orc Citizen (female)
+}
+
+STRING 1347
+{
+Blood Elf Citizen (male)
+}
+
+STRING 1348
+{
+Blood Elf Citizen (female)
+}
+
+STRING 1349
+{
+Naga Citizen (male)
+}
+
+STRING 1350
+{
+Naga Citizen (female)
+}
+
+STRING 1351
+{
+Night Elf Citizen (male)
+}
+
+STRING 1352
+{
+Night Elf Citizen (female)
+}
+
+STRING 1353
+{
+An intelligent Human citizen. Has mana regeneration aura.
+}
+
+STRING 1354
+{
+A hearty Undead citizen. Has life regeneration aura.
+}
+
+STRING 1355
+{
+Hire Undead Citizen (female)
+}
+
+STRING 1356
+{
+An intelligent Undead citizen. Has mana regeneration aura.
+}
+
+STRING 1357
+{
+Hire Orc Citizen (male)
+}
+
+STRING 1358
+{
+A hearty Orc citizen. Has life regeneration aura.
+}
+
+STRING 1359
+{
+Hire Orc Citizen (female)
+}
+
+STRING 1360
+{
+An intelligent Orc citizen. Has mana regeneration aura.
+}
+
+STRING 1361
+{
+Hire Blood Elf Citizen (male)
+}
+
+STRING 1362
+{
+A hearty Blood Elf citizen. Has life regeneration aura.
+}
+
+STRING 1363
+{
+Hire Blood Elf Citizen (female)
+}
+
+STRING 1364
+{
+An intelligent Blood Elf citizen. Has mana regeneration aura.
+}
+
+STRING 1365
+{
+Hire Naga Citizen (male)
+}
+
+STRING 1366
+{
+A hearty Naga citizen. Has life regeneration aura.
+}
+
+STRING 1367
+{
+Hire Naga Citizen (female)
+}
+
+STRING 1368
+{
+An intelligent Naga citizen. Has mana regeneration aura.
+}
+
+STRING 1369
+{
+Hire Night Elf Citizen (male)
+}
+
+STRING 1370
+{
+A hearty Night Elf citizen. Has life regeneration aura.
+}
+
+STRING 1371
+{
+Hire Night Elf Citizen (female)
+}
+
+STRING 1372
+{
+An intelligent Night Elf citizen. Has mana regeneration aura.
+}
+
+STRING 1373
+{
+Naga Housing
+}
+
+STRING 1374
+{
+Build Naga H|cffffcc00o|rusing
+}
+
+STRING 1375
+{
+Provides an additional source of gold income
+}
+
+STRING 1376
+{
+Human Housing
+}
+
+STRING 1377
+{
+Build Human H|cffffcc00o|rusing
+}
+
+STRING 1378
+{
+Night Elf Housing
+}
+
+STRING 1379
+{
+Build Night Elf H|cffffcc00o|rusing
+}
+
+STRING 1380
+{
+Blood Elf Housing
+}
+
+STRING 1381
+{
+Build Blood Elf H|cffffcc00o|rusing
+}
+
+STRING 1382
+{
+Undead Housing
+}
+
+STRING 1383
+{
+Build Undead H|cffffcc00o|rusing
+}
+
+STRING 1384
+{
+Orc Housing
+}
+
+STRING 1385
+{
+Build Orc H|cffffcc00o|rusing
+}
+
+STRING 1386
+{
+Pet Sheep
+}
+
+STRING 1387
+{
+A lovely pet.
+}
+
+STRING 1388
+{
+Pet Worm
+}
+
+STRING 1389
+{
+Pet Stag
+}
+
+STRING 1390
+{
+Pet Fel Boar
+}
+
+STRING 1391
+{
+Pet Pig
+}
+
+STRING 1392
+{
+Pet Crab
+}
+
+STRING 1393
+{
+Long Sword that gives the bearer supreme combat capabilities. Grants +5 Damage and Fire damage bonus.
+}
+
+STRING 1394
+{
+Heavy Axe made of very rare minerals. Causes terrible pain among its victims. Grants +10 damage and 15% chance to deal 2x damage.
+}
+
+STRING 1395
+{
+Magically enhanced lance. Because it is so hard to forge them, they are very rare. Some enemies already flee when they see the bearer of such a mighty weapon. Grants +10 damage, Lightning attack bonus and casts Chain Lightning.
+}
+
+STRING 1396
+{
+Players can now not be defeated forever by losing Hideouts, Town Halls or Demigod Temples.
+}
+
+STRING 1397
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1398
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1399
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1400
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1401
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1402
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1403
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1404
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1405
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1406
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1407
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1408
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1409
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1410
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1411
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1412
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1413
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1414
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1415
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1416
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1417
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1418
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1419
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1420
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1421
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1422
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1423
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1424
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1425
+{
+Only |cffff0000Freelancer Heros|r are allowed to build a |cff00ff00Hideout|r and only one !
+}
+
+STRING 1428
+{
+Talisman of Spell Protection
+}
+
+STRING 1430
+{
+Talisman of Everlasting
+}
+
+STRING 1431
+{
+Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
+}
+
+STRING 1432
+{
+The Alchemist uses gathered herbs to create a Greater Mana Potion.
+}
+
+STRING 1433
+{
+The Alchemist uses gathered herbs and minerals to create a Wand of Mana Stealing. Also, a Mana Stone is required to craft this item.
+}
+
+STRING 1434
+{
+The Alchemist uses gathered herbs and minerals to create a Talisman of Spell Protection. Also, a Mana Stone and a Wand of Spell Stealing is required to craft this item.
+}
+
+STRING 1435
+{
+The Armorer uses gathered minerals to forge a heavy Plate Shield. Also, a Plated Helmet is required to craft this item.
+}
+
+STRING 1436
+{
+The Armorer uses his gathered minerals to forge a Blessed Champion Armor. Also, a Plated Helmet and a Heavy Plated Shield is required to craft this item.
+}
+
+STRING 1437
+{
+The Herbalist uses his gathered herbs and minerals to create a Potion of Invulnerability. Also, a Health Stone is required to craft this item.
+}
+
+STRING 1438
+{
+The Herbalist uses his gathered herbs and minerals to create an Amulet of Everlasting. Also, a Health Stone and a Potion of Invulnerability is required to craft this item.
+}
+
+STRING 1439
+{
+The Loremaster creates an enchanted Scroll of Resurrection. Also, a Scroll of Restoration is needed to craft this item.
+}
+
+STRING 1440
+{
+The Loremaster creates an enchanted Ankh of Reincarnation. Also, a Scroll of Restoration and a Scroll of Resurrection is needed to craft this item.
+}
+
+STRING 1441
+{
+The Weaponsmith uses gathered minerals to forge a Demon Slayer Axe. Also, a Mithril Long Sword is required to craft this item.
+}
+
+STRING 1442
+{
+The Weaponsmith uses gathered minerals to forge a Blessed Dragon Lance. Also, a Mithril Long Sword and a Demon Slayer Axe is needed to craft this item.
+}
+
+STRING 1443
+{
+Spell Shield (Charm)
+}
+
+STRING 1444
+{
+Humans
+}
+
+STRING 1445
+{
+Blood Elves
+}
+
+STRING 1446
+{
+Blood Elves
+}
+
+STRING 1447
+{
+Blood Elves
+}
+
+STRING 1448
+{
+Blood Elves
+}
+
+STRING 1449
+{
+Blood Elves
+}
+
+STRING 1450
+{
+Blood Elves
+}
+
+STRING 1451
+{
+Blood Elves
+}
+
+STRING 1452
+{
+Blood Elves
+}
+
+STRING 1453
+{
+Blood Elves
+}
+
+STRING 1454
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1455
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1456
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1457
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1458
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1459
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1460
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1461
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1462
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1463
+{
+You have chosen to build a |cff00ff00Blood Elf|r nation. May your days as a ruler be glorious ones !
+}
+
+STRING 1464
+{
+Scepter of Blood Elves
+}
+
+STRING 1465
+{
+Summon BloodElf Worker
+}
+
