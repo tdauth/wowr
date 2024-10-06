@@ -2502,15 +2502,18 @@ endfunction
 //===========================================================================
 function AttackTarget takes unit target, boolean addAlliance returns nothing
     if (target == null) then
+        call Trace("Attack target but have nothing\n")
         return
     endif
     if (addAlliance) then
-        call SetAllianceTarget( target )
+        call Trace("Attack target with alliance target\n")
+        call SetAllianceTarget(target)
     endif
-    call FormGroup( 3, true )
-    call AttackMoveKillA( target )
+    call Trace("Attack target form a group and move to kill\n")
+    call FormGroup(3, true)
+    call AttackMoveKillA(target)
     if (not addAlliance) then
-        call SetAllianceTarget( null )
+        call SetAllianceTarget(null)
     endif
 endfunction
 
@@ -2521,23 +2524,31 @@ function LaunchAttack takes nothing returns nothing
     local unit target = null
     local boolean setAlly = true
 
+    call Trace("Launch attack\n")
+
     if (disabled) then
+        call Trace("Launch attack cancel since disabled\n")
         return
     endif
 
     // Don't launch any attack while town is threatened
     if (TownThreatened()) then
+        call Trace("Launch attack cancel since town is threatened\n")
         call Sleep( 2 )
         return
     endif
     
     if (attackTargetLocation) then
+        call TraceII("Launch attack (%d|%d)\n", attackTargetLocationX, attackTargetLocationY)
         call AttackMoveXYA(attackTargetLocationX, attackTargetLocationY)
     elseif (attackEnemyPlayers) then
+        call Trace("Launch attack enemy player\n")
         // Target Priority #1
         if (target == null) then
             set target = GetAllianceTarget()
+            call Trace("Launch attack alliance target\n")
             if (target != null) then
+                call Trace("Launch attack alliance target found\n")
                 set setAlly = false
             endif
         endif
@@ -2545,51 +2556,57 @@ function LaunchAttack takes nothing returns nothing
         // Target Priority #2
         if (target == null) then
             set target = GetExpansionFoe()
+            call Trace("Launch attack expansion foe\n")
             if (target != null) then
+                call Trace("Launch attack expansion foe found\n")
                 set take_exp = false
             endif
         endif
 
         // Target Priority #3
         if (target == null) then
+            call Trace("Launch attack mega target\n")
             set target = GetMegaTarget()
         endif
 
         // Target Priority #4
         if (target == null) then
+            call Trace("Launch attack enemy expansion\n")
             set target = GetEnemyExpansion()
         endif
 
         // Target Priority #5
         if (target == null) then
-            set target = GetEnemyExpansion()
-            if (target == null) then
-                call StartGetEnemyBase(  )
-                loop
-                    exitwhen (not WaitGetEnemyBase())
-                    call SuicideSleep( 1 )
-                endloop
-                set target = GetEnemyBase()
-            endif
+            call Trace("Launch attack enemy base\n")
+            call StartGetEnemyBase()
+            loop
+                exitwhen (not WaitGetEnemyBase())
+                call SuicideSleep(1)
+            endloop
+            set target = GetEnemyBase()
         endif
     endif
 
     // Target Priority #6
     if (target == null) then
-        set target = GetCreepCamp( 0, 9, false )
+        call Trace("Launch attack creep camp small\n")
+        set target = GetCreepCamp(0, 9, false)
     endif
 
     // Target Priority #7
     if (target == null) then
-        set target = GetCreepCamp( 10, 100, true )
+        call Trace("Launch attack creep camp big\n")
+        set target = GetCreepCamp(0, 75, true)
     endif
 
     // Attack the target and increment attack wave
     if (target != null) then
-        call AttackTarget( target, setAlly )
+        call Trace("Attack\n")
+        call AttackTarget(target, setAlly)
     else
+        call Trace("Wait for another attack try\n")
         // If no target was found, sleep a bit before trying again
-        call Sleep( 20 )
+        call Sleep(20)
     endif
 endfunction
 
@@ -2666,6 +2683,7 @@ function UpdateWorkers takes nothing returns nothing
     local integer c = 0
     loop
         if (not disabled) then
+            call Trace("Updating gold and wood peons\n")
             call SetGoldPeons(5 + CountHousings() * 3)
             call SetWoodPeons(5)
         endif
@@ -2749,22 +2767,22 @@ function UpdateWorkers takes nothing returns nothing
 endfunction
 
 function ConfigureAI takes nothing returns nothing
-    call SetTargetHeroes( true )
-    call SetUnitsFlee( true )
-    call SetHeroesFlee( true )
-    call SetPeonsRepair( true )
-    call SetHeroesBuyItems( true )
-    call SetHeroesTakeItems( true )
-    call SetSlowChopping( false )
-    call SetWatchMegaTargets( true )
-    call SetIgnoreInjured( true )
-    call SetGroupsFlee( true )
-    call SetCaptainChanges ( false )
-    call SetSmartArtillery ( true )
-    call GroupTimedLife ( true )
+    call SetTargetHeroes(true)
+    call SetUnitsFlee(true)
+    call SetHeroesFlee(true)
+    call SetPeonsRepair(true)
+    call SetHeroesBuyItems(true)
+    call SetHeroesTakeItems(true)
+    call SetSlowChopping(false)
+    call SetWatchMegaTargets(true)
+    call SetIgnoreInjured(true)
+    call SetGroupsFlee(true)
+    call SetCaptainChanges(false)
+    call SetSmartArtillery(true)
+    call GroupTimedLife(true)
     call SetAmphibious()
-    call SetRandomPaths( true )
-    call SetDefendPlayer( true )
+    call SetRandomPaths(true)
+    call SetDefendPlayer(true)
     call SetReplacements(1, 2, 3)
     
     set attackEnemyPlayers = difficulty == MELEE_INSANE
@@ -2773,66 +2791,75 @@ function ConfigureAI takes nothing returns nothing
 endfunction
 
 function BuildingStrategyStandardTier1 takes nothing returns nothing
-    call SetBuildUnit( 1, AI_LABORATORY )
-    call SetBuildUnit( 2, SHREDDER )
+    call SetBuildUnit(1, AI_LABORATORY)
+    call SetBuildUnit(2, SHREDDER)
 endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing
     local integer evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
+    local integer improvedLevel = 0
     if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
         set evolutionLevel = evolutionLevel + 1
     endif
 
+    call TraceI("ResearchHighLevelTier3Researches with evolution level %d\n", evolutionLevel)
+
     if (not disabled) then
         if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
-            call SetBuildUpgr( evolutionLevel, UPG_EVOLUTION )
-            call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_POWER_GENERATOR )
-            call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_MOUNT )
-            call SetBuildUpgr( evolutionLevel / 10, UPG_IMPROVED_NAVY )
+            set improvedLevel = evolutionLevel / 10
+            call SetBuildUpgr(evolutionLevel, UPG_EVOLUTION)
+            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
+            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_MOUNT)
+            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_NAVY)
+            call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
         else
-            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION )
-            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR )
-            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT )
-            call SetBuildUpgr( MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY )
+            call Trace("ResearchHighLevelTier3Researches maximum levels\n")
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
         endif
     endif
 endfunction
 
 function BuildingStrategyStandardTier3 takes nothing returns nothing
-    call SetBuildUnit( 1, POWER_GENERATOR )
-    call SetBuildUnit( 1, ANTIMAGIC_WARD )
-    call SetBuildUnit( 1, RESEARCH_TENT )
-    call SetBuildUnit( 1, MARKETPLACE )
-    call SetBuildUnit( 1, THIEVES_GUILD )
-    call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-    call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
-    call SetBuildUnit( 1, DRAGON_ROOST )
+    call SetBuildUnit(1, POWER_GENERATOR)
+    call SetBuildUnit(1, ANTIMAGIC_WARD)
+    call SetBuildUnit(1, RESEARCH_TENT)
+    call SetBuildUnit(1, MARKETPLACE)
+    call SetBuildUnit(1, THIEVES_GUILD)
+    call SetBuildUpgr(1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS)
+    call SetBuildUpgr(1, UPG_STORM_PROTECTION)
+    call SetBuildUpgr(1, UPG_DRAGON_ROOST)
+    call SetBuildUnit(1, DRAGON_ROOST)
 endfunction
 
 function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
-    //call SetBuildUnit( 1, POWER_GENERATOR )
-    //call SetBuildUnit( 1, ANTIMAGIC_WARD )
-    call SetBuildUnit( 1, RESEARCH_TENT )
-    //call SetBuildUnit( 1, MARKETPLACE )
-    //call SetBuildUnit( 1, THIEVES_GUILD )
-    call SetBuildUpgr( 1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS )
-    call SetBuildUpgr( 1, UPG_STORM_PROTECTION)
-    call SetBuildUpgr( 1, UPG_DRAGON_ROOST )
-    call SetBuildUnit( 1, DRAGON_ROOST )
+    //call SetBuildUnit(1, POWER_GENERATOR)
+    //call SetBuildUnit(1, ANTIMAGIC_WARD)
+    call SetBuildUnit(1, RESEARCH_TENT)
+    //call SetBuildUnit(1, MARKETPLACE)
+    //call SetBuildUnit(1, THIEVES_GUILD)
+    call SetBuildUpgr(1, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS)
+    call SetBuildUpgr(1, UPG_STORM_PROTECTION)
+    call SetBuildUpgr(1, UPG_DRAGON_ROOST)
+    call SetBuildUnit(1, DRAGON_ROOST)
 endfunction
 
 function BasicExpansionIfRequired takes integer ex, integer unitid returns nothing
+    call TraceII("Building anothere expansion %d if required with mines owned %d\n", ex, GetMinesOwned())
     call BasicExpansion(GetMinesOwned() < ex, unitid)
 endfunction
 
 function GetZeppelinsIfRequired takes nothing returns nothing
     if GetUnitCount(ZEPPELIN) < zeppelins then
+        call TraceI("Getting another Zeppelin with zeppelins %d\n", zeppelins)
         call GetZeppelin()
     endif
 endfunction
 
 function LoopActionWoWReforged takes nothing returns nothing
+    call Trace("LoopActionWoWReforged\n")
     call ResearchHighLevelTier3Researches()
     call GetZeppelinsIfRequired()
 endfunction
