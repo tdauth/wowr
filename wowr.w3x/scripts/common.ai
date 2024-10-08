@@ -201,7 +201,7 @@ globals
     boolean build_campaign_attackers = true
 
     boolean do_debug_cheats         = false
-    boolean trace_on                = false
+    boolean array trace_on
     boolean zep_next_wave           = false
     boolean form_group_timeouts     = true
     
@@ -277,44 +277,85 @@ function I2S2 takes integer i returns string
 endfunction
 
 //============================================================================
+// recipient: changes the type of chat channel prefix shown. It has no effect on the message's visibility.
+// 0: "All" chat prefix
+// 1: "Allies"
+// 2: "Observers"
+// 3+: "Private"
+
+function NotifySpecificPlayer takes integer playerIndex, string message returns nothing
+    call BlzDisplayChatMessage(Player(GetAiPlayer()), 3 + playerIndex, message)
+endfunction
+
+function NotifyOtherPlayers takes string message returns nothing
+    call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message)
+endfunction
+
+//============================================================================
 function PlayerEx takes integer slot returns player
     return Player(slot-1)
 endfunction
 
 //============================================================================
 function Trace takes string message returns nothing
-    if trace_on then
-        call DisplayText(GetAiPlayer(), message)
-        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message)
-    endif
+    local integer i = 0
+    loop
+        exitwhen (i == GetBJMaxPlayers())
+        if trace_on[i] then
+            call DisplayText(i, message)
+            call NotifySpecificPlayer(i, message)
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 //============================================================================
 function TraceI takes string message, integer val returns nothing
-    if trace_on then
-        call DisplayTextI(GetAiPlayer(),message,val)
-        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message + " v1=" + I2S2(val))
-    endif
+    local integer i = 0
+    loop
+        exitwhen (i == GetBJMaxPlayers())
+        if trace_on[i] then
+            call DisplayTextI(i, message, val)
+            call NotifySpecificPlayer(i, message + " v1=" + I2S2(val))
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 //============================================================================
 function TraceII takes string message, integer v1, integer v2 returns nothing
-    if trace_on then
-        call DisplayTextII(GetAiPlayer(),message,v1,v2)
-        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message  + " v1=" + I2S2(v1)  + ", v2=" + I2S2(v2))
-    endif
+    local integer i = 0
+    loop
+        exitwhen (i == GetBJMaxPlayers())
+        if trace_on[i] then
+            call DisplayTextII(i,message,v1,v2)
+            call NotifySpecificPlayer(i, message  + " v1=" + I2S2(v1)  + ", v2=" + I2S2(v2))
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 //============================================================================
 function TraceIII takes string message, integer v1, integer v2, integer v3 returns nothing
-    if trace_on then
-        call DisplayTextIII(GetAiPlayer(),message,v1,v2,v3)
-        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message  + " v1=" + I2S2(v1) + " v2=" + I2S2(v2) + " v3=" + I2S2(v3))
-    endif
+    local integer i = 0
+    loop
+        exitwhen (i == GetBJMaxPlayers())
+        if trace_on[i] then
+            call DisplayTextIII(i,message,v1,v2,v3)
+            call NotifySpecificPlayer(i, message  + " v1=" + I2S2(v1) + " v2=" + I2S2(v2) + " v3=" + I2S2(v3))
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 //============================================================================
 function InitAI takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == GetBJMaxPlayers())
+        set trace_on[i] = false
+        set i = i + 1
+    endloop
     set ai_player = Player(GetAiPlayer())
     set sleep_seconds = 0
     call StopGathering()
@@ -2610,22 +2651,6 @@ function LaunchAttack takes nothing returns nothing
     endif
 endfunction
 
-// recipient: changes the type of chat channel prefix shown. It has no effect on the message's visibility.
-// 0: "All" chat prefix
-// 1: "Allies"
-// 2: "Observers"
-// 3+: "Private"
-
-function NotifySpecificPlayer takes integer playerIndex, string message returns nothing
-    call BlzDisplayChatMessage(Player(GetAiPlayer()), 3 + playerIndex, message)
-    call DisplayText(GetAiPlayer(), message)
-endfunction
-
-function NotifyOtherPlayers takes string message returns nothing
-    call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, message)
-    call DisplayText(GetAiPlayer(), message)
-endfunction
-
 function GetPlayerInfoText takes nothing returns string
     local integer mines = GetMinesOwned()
     local integer gold = GetGoldOwned()
@@ -2755,11 +2780,12 @@ function UpdateWorkers takes nothing returns nothing
                 call NotifyOtherPlayers("I will build " + I2S2(zeppelins) + " Zeppelins!")
                 call TraceI("Zeppelins: %d", zeppelins)
             elseif (c == COMMAND_TRACE_ON) then
-                set trace_on = true
+                set trace_on[GetLastData()] = true
                 call NotifyOtherPlayers("Enabled trace for me!")
+                call NotifySpecificPlayer(GetLastData(), "Enabled trace for me!")
             elseif (c == COMMAND_TRACE_OFF) then
-                set trace_on = false
-                call NotifyOtherPlayers("Disabled trace for me!")
+                set trace_on[GetLastData()] = false
+                call NotifySpecificPlayer(GetLastData(), "Disabled trace for me!")
             else
                 call NotifyOtherPlayers("I received an unknown AI command: " + I2S2(c))
             endif
