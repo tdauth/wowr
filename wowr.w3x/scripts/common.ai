@@ -2534,7 +2534,7 @@ function LaunchAttack takes nothing returns nothing
     // Don't launch any attack while town is threatened
     if (TownThreatened()) then
         call Trace("Launch attack cancel since town is threatened\n")
-        call Sleep( 2 )
+        call Sleep(2)
         return
     endif
     
@@ -2684,8 +2684,12 @@ function UpdateWorkers takes nothing returns nothing
     loop
         if (not disabled) then
             call Trace("Updating gold and wood peons\n")
-            call SetGoldPeons(5 + CountHousings() * 3)
-            call SetWoodPeons(5)
+            set c = 5 + CountHousings() * 3
+            call TraceI("Gold peons %d\n", c)
+            call SetGoldPeons(c)
+            set c = 5
+            call TraceI("Wood peons %d\n", c)
+            call SetWoodPeons(c)
         endif
         loop
             exitwhen (CommandsWaiting() <= 0)
@@ -2807,11 +2811,11 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
     if (not disabled) then
         if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
             set improvedLevel = evolutionLevel / 10
+            call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
             call SetBuildUpgr(evolutionLevel, UPG_EVOLUTION)
             call SetBuildUpgr(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
             call SetBuildUpgr(improvedLevel, UPG_IMPROVED_MOUNT)
             call SetBuildUpgr(improvedLevel, UPG_IMPROVED_NAVY)
-            call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
             call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)

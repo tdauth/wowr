@@ -14,7 +14,7 @@ Frame "SIMPLEFRAME" "CustomConsoleUI" {
             File "ConsoleTexture05",
             Width 0.256,
             Height 0.032,
-            TexCoord 0, 1, 0, 0.125
+            TexCoord 0, 1, 0, 0.125,
             AlphaMode "ALPHAKEY",
             Anchor TOPLEFT,-0.256,0,
         }

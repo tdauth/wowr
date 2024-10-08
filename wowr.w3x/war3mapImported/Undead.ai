@@ -131,7 +131,6 @@ function AttackWaves takes nothing returns nothing
     call Sleep(M2)
     call LaunchAttack()
 
-
     //*** WAVE 4 ***
     call InitAssaultGroup()
     call CampaignAttackerEx(3, 4, 4, GHOUL)
