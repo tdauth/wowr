@@ -1708,3 +1708,4 @@ Here is a list of some modified versions online:
 * frostwhisper, Galendor an'Kreil, Ket: [Troll Warbeast Kraal](https://www.hiveworkshop.com/threads/troll-warbeast-kraal.355052/)
 * Mephestrial: [Gnoll Race Pack](https://www.hiveworkshop.com/threads/gnoll-race-pack.65909/)
 * loktar: [Furion (Optimized)](https://www.hiveworkshop.com/threads/furion-optimized.327276/)
+* bakr: [Kultiras Navy](https://www.hiveworkshop.com/threads/kultiras-navy.354709/)

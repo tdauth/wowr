@@ -3738,7 +3738,7 @@ globals
     constant integer KULTIRAS_HYDROMANCER                            = 'n06X'
     constant integer KULTIRAS_LAND_SHIP                              = 'h0BT'
     constant integer KULTIRAS_GUNSHIP                                = 'h0BR'
-    constant integer KULTIRAS_WATER_DRAGON                           = 'n09O'
+    constant integer KULTIRAS_ALBATROSS_RIDER                        = 'n09O'
     constant integer KULTIRAS_PEREGRIN_FALCON                        = 'n09P'
     constant integer KULTIRAS_FLYING_DREADNOUGHT                     = 'h0BW'
     constant integer KULTIRAS_BATTLESHIP                             = 'h05N'
@@ -4657,7 +4657,7 @@ globals
     constant integer KOBOLD_CITIZEN_MALE                             = 'n09C'
     constant integer KOBOLD_CITIZEN_FEMALE                           = 'n0A3'
     constant integer KOBOLD_CHILD                                    = 'n0MP'
-    constant integer KOBOLD_PET                                      = 'n04W'
+    constant integer KOBOLD_PET                                      = 'n0A9'
     constant integer KOBOLD_HOUSING                                  = 'h0X4'
 
     // Quillboar

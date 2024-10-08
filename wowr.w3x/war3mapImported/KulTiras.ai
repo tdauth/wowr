@@ -256,7 +256,7 @@ function AttackWaves takes nothing returns nothing
 
         // big air army
         call CampaignAttackerEx(8, 12, 18, KULTIRAS_PEREGRIN_FALCON)
-        call CampaignAttackerEx(8, 12, 18, KULTIRAS_WATER_DRAGON)
+        call CampaignAttackerEx(8, 12, 18, KULTIRAS_ALBATROSS_RIDER)
         call CampaignAttackerEx(4, 4, 4, KULTIRAS_FLYING_DREADNOUGHT)
         call CampaignAttackerEx(4, 4, 4, KULTIRAS_GUNSHIP)
 
