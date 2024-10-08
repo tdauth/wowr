@@ -43,19 +43,19 @@ ReviveTimeFactor=1.0
 UpkeepUsage=150,250,10000,10000,10000,10000,10000,10000,10000,10000
 
 [TALT]
-DependencyOr=o0AU,o0AG,o0A0,h0W2,h0W1,o09D,n0KD,h0UD,h0TN,o082,h0R1,o07B,e025,h0QM,n0FZ,o05O,h0J0,h0OF,u01U,h0ME,o052,o02P,h0E8,h0A7,o02P,h0AT,h05A,h01R,ndh2,u008,halt,oalt,eate,uaod,nnad,o00T,h033,h042,h0GH,h007,h00K,h00J
+DependencyOr=o0AU,o0AG,o0A0,o09D,n0KD,h0UD,h0TN,o082,h0R1,o07B,e025,h0QM,n0FZ,o05O,h0J0,h0OF,u01U,h0ME,o052,o02P,h0A7,o02P,h05A,h01R,ndh2,u008,halt,oalt,eate,uaod,nnad,o00T,h033,h042,h0GH,h007,h00K,h00J
 
 [TWN1]
-DependencyOr=o071,o06V,h0VS,o08R,o070,o08V,n0IO,h0S3,o07P,h0QY,o06C,n0GX,h0JX,n0FP,o05N,h0IU,h0IA,u01Q,h0LX,h0LH,h0L2,o029,o03L,h0CT,h0DJ,h0AN,o029,o02M,h06D,h051,h057,h05R,h08M,h083,h07A,h07B,n05M,n026,ndh2,h00J,u005,htow,ogre,etol,unpl,o00O,h02R,h040
+DependencyOr=o071,o06V,o08R,o070,o08V,n0IO,h0S3,o07P,h0QY,o06C,n0GX,h0JX,n0FP,o05N,h0IU,h0IA,u01Q,h0LX,o029,o029,o02M,h06D,h051,h057,n05M,n026,ndh2,h00J,u005,htow,ogre,etol,unpl,o00O,h02R,h040
 Name=Tier 1 Hall
 
 [TWN2]
-DependencyOr=o0B0,o0AI,o09Y,h0VS,o09A,o092,n0JJ,h0TE,o089,h0RC,o073,n0GY,h0KB,n0G6,o05Y,h0IZ,h0IB,u023,h0MC,h0LH,h0L2,o02A,o03N,h0CT,h0FR,h0AV,o037,o02A,h08M,h083,h07A,h07B,h0AC,h051,h05I,h05R,n026,ndh2,h00K,u00E,h00A,hkee,ostr,etoa,unp1,nntt,o022,h030,h03Z
+DependencyOr=o0B0,o0AI,o09Y,o09A,o092,n0JJ,h0TE,o089,h0RC,o073,n0GY,h0KB,n0G6,o05Y,h0IZ,h0IB,u023,h0MC,o02A,o037,o02A,h0AC,h051,h05I,n026,ndh2,h00K,u00E,h00A,hkee,ostr,etoa,unp1,nntt,o022,h030,h03Z
 Name=Tier 2 Hall
 XPFactor=0
 
 [TWN3]
-DependencyOr=o0B1,o0AJ,o09Z,h0VS,o09F,o093,n0JK,h0TF,o08A,h0RD,o074,n0GZ,h0KE,n0G5,o05Z,h0IV,h0IC,u024,h0MD,h0LH,h0L2,o02B,h0HB,o03M,h0CT,h0FS,o038,h08M,h083,h07A,h07B,h0AW,o02B,h0AD,h051,h05J,h05R,n026,ndh2,h00L,u00F,h00B,hcas,ofrt,etoe,unp2,n05N,o023,h031,h041
+DependencyOr=o0B1,o0AJ,o09Z,o09F,o093,n0JK,h0TF,o08A,h0RD,o074,n0GZ,h0KE,n0G5,o05Z,h0IV,h0IC,u024,h0MD,o02B,o038,o02B,h0AD,h051,h05J,n026,ndh2,h00L,u00F,h00B,hcas,ofrt,etoe,unp2,n05N,o023,h031,h041
 Name=Tier 3 Hall
 XPFactor=0
 
@@ -64,14 +64,14 @@ DependencyOr=h00M,h00N,h0C0
 Name=Tier 4 Hall
 
 [TWN5]
-DependencyOr=h0C1
+DependencyOr=
 Name=Tier 5 Hall
 
 [TWN6]
-DependencyOr=h0C2
+DependencyOr=
 Name=Tier 6 Hall
 
 [TWN7]
-DependencyOr=h0C3
+DependencyOr=
 Name=Tier 7 Hall
 
