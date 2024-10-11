@@ -2924,6 +2924,34 @@ globals
     constant integer ITEM_TYPE_RANDOM_PROFESSION                     = 'I069'
     constant integer ITEM_TYPE_RANDOM_START_LOCATION                 = 'I0ZS'
 
+    // arena
+    constant integer ITEM_TYPE_TICKET_1                              = 'I00Y'
+    constant integer ITEM_TYPE_STONE_TOKEN                           = 'fgrg'
+
+    constant integer ITEM_TYPE_TICKET_2                              = 'I00Z'
+    constant integer ITEM_TYPE_TALISMAN_OF_THE_WILD                  = 'totw'
+
+    constant integer ITEM_TYPE_TICKET_3                              = 'I011'
+    constant integer ITEM_TYPE_ICE_SHARD                             = 'shar'
+
+    constant integer ITEM_TYPE_TICKET_4                              = 'I012'
+    constant integer ITEM_TYPE_GLOVES_OF_SPELL_MASTERY               = 'gvsm'
+
+    constant integer ITEM_TYPE_TICKET_5                              = 'I013'
+    constant integer ITEM_TYPE_SHAMAN_CLAWS                          = 'shcw'
+
+    constant integer ITEM_TYPE_TICKET_6                              = 'I014'
+    constant integer ITEM_TYPE_THUNDERLIZARD_DIAMOND                 = 'thdm'
+
+    constant integer ITEM_TYPE_TICKET_7                              = 'I010'
+    constant integer ITEM_TYPE_SHIELD_OF_HONOR                       = 'shhn'
+
+    constant integer ITEM_TYPE_TICKET_8                              = 'I015'
+    constant integer ITEM_TYPE_SERATHIL                              = 'srtl'
+
+    constant integer ITEM_TYPE_TICKET_9                              = 'I016'
+    constant integer ITEM_TYPE_STONEMAUL_ARENA_MASTER_BELT           = 'I03G'
+
     // mercenary camps
     constant integer MERCENARY_CAMP_ASHENVALE                        = 'nmr5'
     constant integer MERCENARY_CAMP_BARRENS                          = 'nmr4'
@@ -3179,6 +3207,10 @@ globals
     constant integer BLOOD_ELF_SPELL_BREAKER                         = 'h04N'
     constant integer BLOOD_ELF_PHOENIX                               = 'h04O'
     constant integer BLOOD_ELF_DECIMATOR                             = 'h0KI'
+
+    constant integer BLOOD_ELF_TRANSPORT_SHIP                        = 'h05R'
+    constant integer BLOOD_ELF_FRIGATE                               = 'h04U'
+    constant integer BLOOD_ELF_BATTLESHIP                            = 'h05S'
 
     constant integer BLOOD_ELF_CITIZEN_MALE                          = 'n00K'
     constant integer BLOOD_ELF_CITIZEN_FEMALE                        = 'n00L'
@@ -3559,6 +3591,10 @@ globals
     constant integer HIGH_ELF_DRAGON_HAWK                            = 'h046'
     constant integer HIGH_ELF_ARCH_CLERIC                            = 'h04C'
     constant integer HIGH_ELF_DRAGON                                 = 'n05L'
+
+    constant integer HIGH_ELF_TRANSPORT_SHIP                         = 'h00S'
+    constant integer HIGH_ELF_FRIGATE                                = 'h03X'
+    constant integer HIGH_ELF_BATTLESHIP                             = 'h04T'
 
     constant integer HIGH_ELF_CITIZEN_MALE                           = 'n05E'
     constant integer HIGH_ELF_CITIZEN_FEMALE                         = 'n05J'

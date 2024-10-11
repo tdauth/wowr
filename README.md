@@ -1709,3 +1709,4 @@ Here is a list of some modified versions online:
 * Mephestrial: [Gnoll Race Pack](https://www.hiveworkshop.com/threads/gnoll-race-pack.65909/)
 * loktar: [Furion (Optimized)](https://www.hiveworkshop.com/threads/furion-optimized.327276/)
 * bakr: [Kultiras Navy](https://www.hiveworkshop.com/threads/kultiras-navy.354709/)
+* bakr, Ian The Red: [Elven Ships](https://www.hiveworkshop.com/threads/elven-ships.356065/)

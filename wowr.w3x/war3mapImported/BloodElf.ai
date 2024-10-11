@@ -87,14 +87,14 @@ function BuildingStrategy takes nothing returns nothing
 
         if (buildShips) then
             call SetBuildUnit(1, BLOOD_ELF_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
+            call SetBuildUnit(1, BLOOD_ELF_TRANSPORT_SHIP)
+            call SetBuildUnit(2, BLOOD_ELF_FRIGATE)
+            call SetBuildUnit(2, BLOOD_ELF_BATTLESHIP)
         else
             call SetBuildUnit(0, BLOOD_ELF_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+            call SetBuildUnit(0, BLOOD_ELF_TRANSPORT_SHIP)
+            call SetBuildUnit(0, BLOOD_ELF_FRIGATE)
+            call SetBuildUnit(0, BLOOD_ELF_BATTLESHIP)
         endif
 
         call Sleep(M1)
