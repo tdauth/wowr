@@ -3492,6 +3492,8 @@ globals
     constant integer DWARF_ALTAR                                     = 'h033' // altar
     constant integer DWARF_LUMBER_MILL                               = 'n04Z' // special building
     constant integer DWARF_MINE                                      = 'u011'
+    constant integer DWARF_MINE_2                                    = 'u00Z'
+    constant integer DWARF_MINE_3                                    = 'u010'
     constant integer DWARF_SHIPYARD                                  = 'h038'
 
     constant integer DWARF_MINER                                     = 'h02Q' // worker
@@ -4565,6 +4567,7 @@ globals
     constant integer SATYR_ANCIENT_OF_WAR                            = 'n0GV' // barracks
     constant integer SATYR_ANCIENT_PROTECTOR                         = 'n0GW' // tower
     constant integer SATYR_DEMON_GATE                                = 'n0H9' // aviary
+    constant integer SATYR_MINE                                      = 'e020'
 
     constant integer UPG_SATYR_BACKPACK                              = 'R0DX'
     constant integer UPG_SATYR_STR_MOON                              = 'R0GB'
@@ -4787,6 +4790,8 @@ globals
 
     constant integer FOUNTAIN_OF_LIFE                                = 'h007'
     constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
+
+    constant integer GNOMISH_LOCOMOTIVE_TRAIN                        = 'n0IP'
 
     // WoW Reforged heroes
     constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
