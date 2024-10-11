@@ -64,14 +64,11 @@ DependencyOr=h00M,h00N,h0C0
 Name=Tier 4 Hall
 
 [TWN5]
-DependencyOr=
 Name=Tier 5 Hall
 
 [TWN6]
-DependencyOr=
 Name=Tier 6 Hall
 
 [TWN7]
-DependencyOr=
 Name=Tier 7 Hall
 
