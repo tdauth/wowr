@@ -4684,7 +4684,7 @@ globals
     constant integer UPG_KOBOLD_GOLD_COINS                           = 'R0IV'
     constant integer UPG_KOBOLD_MINES                                = 'R0IW'
 
-    constant integer KOBOLD_WORKER                                   = 'e01Y'
+    constant integer KOBOLD_WORKER                                   = 'o06Z'
     constant integer KOBOLD_WARRIOR                                  = 'n0LI' // footman
     constant integer KOBOLD_HUNTER                                   = 'n0AD' // rifleman
     constant integer KOBOLD_TUNNELER                                 = 'n0LJ' // knight
