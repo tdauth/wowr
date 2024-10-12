@@ -4652,6 +4652,9 @@ globals
     constant integer GNOLL_BATTLE_ARENA                              = 'o030' // aviary
 
     constant integer UPG_GNOLL_BACKPACK                              = 'R0IX'
+    constant integer UPG_GNOLL_ENVENOMED_WEAPONS                     = 'R01A'
+    constant integer UPG_GNOLL_ENSLAVEMENT                           = 'R028'
+    constant integer UPG_GNOLL_BARREL_FORM                           = 'R05B'
 
     constant integer GNOLL_WORKER                                    = 'o06Y'
     constant integer GNOLL_BRUTE                                     = 'n033' // footman
@@ -4661,6 +4664,7 @@ globals
     constant integer GNOLL_MYSTWEAVER                                = 'o027' // priest
     constant integer GNOLL_WARHAWK                                   = 'o028' // gryphon rider
     constant integer GNOLL_WARLORD                                   = 'n03N' // tauren
+    constant integer GNOLL_ROCKBREAKER                               = 'n07F' // siege engine
 
     constant integer GNOLL_PET                                       = 'n0C7'
     constant integer GNOLL_CITIZEN_MALE                              = 'n0NV'
