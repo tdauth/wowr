@@ -4649,13 +4649,21 @@ globals
     constant integer GNOLL_SAVAGE_TOWER                              = 'o0BG' // watch tower
     constant integer GNOLL_SHOP                                      = 'o0BH' // shop
     constant integer GNOLL_FORGE                                     = 'o0BI' // blacksmith
+    constant integer GNOLL_BATTLE_ARENA                              = 'o030' // aviary
 
     constant integer UPG_GNOLL_BACKPACK                              = 'R0IX'
 
     constant integer GNOLL_WORKER                                    = 'o06Y'
+    constant integer GNOLL_BRUTE                                     = 'n033' // footman
+    constant integer GNOLL_ASSASSIN                                  = 'n034' // rifleman
+    constant integer GNOLL_OVERSEER                                  = 'n035' // knight
+    constant integer GNOLL_TREASURE_HUNTER                           = 'o020' // sorceress
+    constant integer GNOLL_MYSTWEAVER                                = 'o027' // priest
+    constant integer GNOLL_WARHAWK                                   = 'o028' // gryphon rider
+    constant integer GNOLL_WARLORD                                   = 'n03N' // tauren
 
     constant integer GNOLL_PET                                       = 'n0C7'
-    constant integer GNOLL_CITIZEN_MALE                              = 'n0MD'
+    constant integer GNOLL_CITIZEN_MALE                              = 'n0NV'
     constant integer GNOLL_CITIZEN_FEMALE                            = 'n0NW'
     constant integer GNOLL_CHILD                                     = 'n0NX'
     constant integer GNOLL_HOUSING                                   = 'h0FQ'

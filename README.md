@@ -1710,3 +1710,5 @@ Here is a list of some modified versions online:
 * loktar: [Furion (Optimized)](https://www.hiveworkshop.com/threads/furion-optimized.327276/)
 * bakr: [Kultiras Navy](https://www.hiveworkshop.com/threads/kultiras-navy.354709/)
 * bakr, Ian The Red: [Elven Ships](https://www.hiveworkshop.com/threads/elven-ships.356065/)
+* johnwar: [Gnoll Treasure Hunter (Re-Classic)](https://www.hiveworkshop.com/threads/gnoll-treasure-hunter-re-classic.335534/)
+* Direfury: [Gnoll Battle Arena](https://www.hiveworkshop.com/threads/gnoll-battle-arena.275454/)
