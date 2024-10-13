@@ -1713,3 +1713,5 @@ Here is a list of some modified versions online:
 * johnwar: [Gnoll Treasure Hunter (Re-Classic)](https://www.hiveworkshop.com/threads/gnoll-treasure-hunter-re-classic.335534/)
 * Direfury: [Gnoll Battle Arena](https://www.hiveworkshop.com/threads/gnoll-battle-arena.275454/)
 * HuanJuan: [Gnoll Battle Arena](https://www.hiveworkshop.com/threads/gnoll-battle-arena.352156/)
+* Nosferoh: [Silithid Wasp](https://xgm.guru/p/wc3/silithid-wasp-opti)
+* Nosferoh: [Prophet of the Qiraji](https://xgm.guru/p/wc3/quiraj-prophet-opti)
