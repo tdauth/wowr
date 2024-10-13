@@ -4863,6 +4863,7 @@ globals
     constant integer COMMAND_ZEPPELINS                               = 19
     constant integer COMMAND_TRACE_ON                                = 20
     constant integer COMMAND_TRACE_OFF                               = 21
+    constant integer COMMAND_SHREDDERS                               = 22
 endglobals
 
 //============================================================================

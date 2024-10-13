@@ -224,6 +224,7 @@ globals
     integer attackTargetLocationX = 0
     integer attackTargetLocationY = 0
     integer zeppelins = 3
+    integer shredders = 3
 endglobals
 
 //============================================================================
@@ -2786,6 +2787,10 @@ function UpdateWorkers takes nothing returns nothing
             elseif (c == COMMAND_TRACE_OFF) then
                 set trace_on[GetLastData()] = false
                 call NotifySpecificPlayer(GetLastData(), "Disabled trace for me!")
+            elseif (c == COMMAND_SHREDDERS) then
+                set shredders = GetLastData()
+                call NotifyOtherPlayers("I will build " + I2S2(shredders) + " Shredders!")
+                call TraceI("Shredders: %d", shredders)
             else
                 call NotifyOtherPlayers("I received an unknown AI command: " + I2S2(c))
             endif
@@ -2822,7 +2827,7 @@ endfunction
 
 function BuildingStrategyStandardTier1 takes nothing returns nothing
     call SetBuildUnit(1, AI_LABORATORY)
-    call SetBuildUnit(2, SHREDDER)
+    call SetBuildUnit(shredders, SHREDDER)
 endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing
@@ -2888,10 +2893,16 @@ function GetZeppelinsIfRequired takes nothing returns nothing
     endif
 endfunction
 
+function GetShreddersIfRequired takes nothing returns nothing
+    call TraceI("Getting another Shredder with shredders %d\n", shredders)
+    call SetBuildUnit(shredders, SHREDDER)
+endfunction
+
 function LoopActionWoWReforged takes nothing returns nothing
     call Trace("LoopActionWoWReforged\n")
     call ResearchHighLevelTier3Researches()
     call GetZeppelinsIfRequired()
+    call GetShreddersIfRequired()
 endfunction
 
 function MainWoWReforged takes integer farms, code buildingStrategy returns nothing
