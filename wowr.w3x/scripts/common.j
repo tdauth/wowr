@@ -4756,6 +4756,28 @@ globals
 
     constant integer QUILLBOAR_SKELETAL_RAZORMANE                    = 'u03K'
 
+    // Bandit
+    constant integer BANDIT_TIER_1                                   = 'h05X'
+    constant integer BANDIT_TIER_2                                   = 'h05Y'
+    constant integer BANDIT_TIER_3                                   = 'h05Z'
+    constant integer BANDIT_BARRACKS                                 = 'h060'
+    constant integer BANDIT_CHURCH                                   = 'h072'
+    constant integer BANDIT_MILL                                     = 'h075'
+    constant integer BANDIT_MARKET                                   = 'h076' // shop
+    constant integer BANDIT_PRISON                                   = 'h079' // workshop
+    constant integer BANDIT_TENT                                     = 'h07A' // farm
+
+    constant integer UPG_BANDIT_BACKPACK                             = 'R05C'
+    constant integer UPG_BANDIT_ENSNARE                              = 'R05D'
+    constant integer UPG_BANDIT_SHADOW_MELD                          = 'R05E'
+
+    constant integer BANDIT_WORKER                                   = 'h05V'
+    constant integer BANDIT_BANDIT                                   = 'n07M' // footman
+    constant integer BANDIT_BRIGAND                                  = 'n07L' // rifleman
+    constant integer BANDIT_LORD                                     = 'n07K' // knight
+    constant integer BANDIT_APPRENTICE_WIZARD                        = 'h077' // priest
+    constant integer BANDIT_CARGE_CART                               = 'h078' // sieg engine
+
     // Dragonkin
     constant integer DRAGONKIN_TIER_1                                = 'o08P'
     constant integer DRAGONKIN_ALTAR                                 = 'o08Q'

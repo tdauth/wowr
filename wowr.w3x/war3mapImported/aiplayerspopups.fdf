@@ -146,6 +146,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Gnoll",     -2,
         MenuItem "Kobold",     -2,
         MenuItem "Quillboar",     -2,
+        MenuItem "Bandit",     -2,
         MenuItem "Dragonkin",     -2,
     }
 }
