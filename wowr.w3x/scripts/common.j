@@ -4763,6 +4763,7 @@ globals
     constant integer BANDIT_BARRACKS                                 = 'h060'
     constant integer BANDIT_CHURCH                                   = 'h072'
     constant integer BANDIT_MILL                                     = 'h075'
+    constant integer BANDIT_BLACKSMITH                               = 'h07I'
     constant integer BANDIT_MARKET                                   = 'h076' // shop
     constant integer BANDIT_PRISON                                   = 'h079' // workshop
     constant integer BANDIT_TENT                                     = 'h07A' // farm
@@ -4779,7 +4780,9 @@ globals
     constant integer BANDIT_BANDIT                                   = 'n07M' // footman
     constant integer BANDIT_BRIGAND                                  = 'n07L' // rifleman
     constant integer BANDIT_LORD                                     = 'n07K' // knight
+    constant integer BANDIT_ROGUE_WIZARD                             = 'h07J' // sorceress
     constant integer BANDIT_APPRENTICE_WIZARD                        = 'h077' // priest
+    constant integer BANDIT_HERETIC                                  = 'h07K' // spellbreaker
     constant integer BANDIT_CARGE_CART                               = 'h078' // sieg engine
 
     // Dragonkin
