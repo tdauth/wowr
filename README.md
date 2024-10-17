@@ -1724,3 +1724,7 @@ Here is a list of some modified versions online:
 * komarovba, Red XIII: [BanditLumberMill](https://www.hiveworkshop.com/threads/banditlumbermill.355805/)
 * Coronel Mael Radec: [BTNMarketPlaceBandit](https://www.hiveworkshop.com/threads/btnmarketplacebandit.355808/)
 * komarovba, Ujimasa Hojo: [MarketPlace Pack](https://www.hiveworkshop.com/threads/marketplace-pack.355460/)
+* HuanJuan: [Altar of Champions](https://www.hiveworkshop.com/threads/altar-of-champions.352161/)
+* Direfury: [Altar of Champions](https://www.hiveworkshop.com/threads/altar-of-champions.275502/)
+* Coronel Mael Radec: [BTNBanditTower](https://www.hiveworkshop.com/threads/btnbandittower.355812/)
+* komarovba: [Tower Bandit](https://www.hiveworkshop.com/threads/tower-bandit.355731/)

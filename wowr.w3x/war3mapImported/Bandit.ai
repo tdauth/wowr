@@ -9,9 +9,9 @@ function BuildingStrategy takes nothing returns nothing
 
     call SetBuildUnit(2, HUMAN_HOUSING)
     call SetBuildUnit(1, BANDIT_MILL)
-    call SetBuildUnit(3, HOUSE)
-    call SetBuildUnit(2, BARRACKS)
-    call SetBuildUnit(1, HUMAN_ALTAR)
+    call SetBuildUnit(3, BANDIT_TENT)
+    call SetBuildUnit(2, BANDIT_BARRACKS)
+    call SetBuildUnit(1, BANDIT_ALTAR)
     call SetBuildUnit(1, BLACKSMITH)
     call SetBuildUnit(1, BANDIT_MARKET)
     
@@ -26,12 +26,12 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(1, BANDIT_TIER_2)
     call SetBuildUnit(1, BANDIT_CHURCH)
     call SetBuildUnit(1, BANDIT_PRISON)
-    call SetBuildUnit(4, HOUSE)
+    call SetBuildUnit(4, BANDIT_TENT)
     call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
     call SetBuildUnit(2, HUMAN_CHILD)
     call SetBuildUnit(2, HUMAN_PET)
     
-    call SetBuildUnit(3, WATCH_TOWER)
+    call SetBuildUnit(3, BANDIT_WATCH_TOWER)
     
     call SetBuildUpgr(2, UPG_MELEE)
     call SetBuildUpgr(2, UPG_RANGED)
@@ -50,7 +50,7 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 buildings
     call SetBuildUnit(1, BANDIT_TIER_3)
-    call SetBuildUnit(1, AVIARY)
+    call SetBuildUnit(1, BANDIT_THIEVES_GUILD)
     call SetBuildUnit(2, GUARD_TOWER)
     call SetBuildUnit(1, CANNON_TOWER)
     
@@ -66,7 +66,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(1, UPG_HAMMERS)
     call SetBuildUpgr(1, UPG_BOMBS)
     call SetBuildUpgr(1, UPG_CONT_MAGIC)
-    call SetBuildUpgr(1, UPG_CLOUD)
+    call SetBuildUpgr(1, UPG_BANDIT_ROB)
 
     call SetBuildUpgr(1, UPG_BANDIT_BACKPACK)
     call SetBuildUpgr(1, UPG_HUMAN_SUNDERING_BLADES)
@@ -82,7 +82,7 @@ function BuildingStrategy takes nothing returns nothing
         if (expansions > 0) then
             call SetBuildExpa(expansions, BANDIT_TIER_3)
             call SetBuildExpa(expansions, BANDIT_MILL)
-            call SetBuildExpa(expansions, WATCH_TOWER)
+            call SetBuildExpa(expansions, BANDIT_WATCH_TOWER)
         endif
 
         if (buildShips) then
@@ -248,7 +248,7 @@ function AttackWaves takes nothing returns nothing
 endfunction
 
 function main takes nothing returns nothing
-    call MainWoWReforged(HOUSE, function BuildingStrategy)
+    call MainWoWReforged(BANDIT_TENT, function BuildingStrategy)
 
     call AttackWaves()
 endfunction
