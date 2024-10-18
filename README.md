@@ -1730,3 +1730,5 @@ Here is a list of some modified versions online:
 * komarovba: [Tower Bandit](https://www.hiveworkshop.com/threads/tower-bandit.355731/)
 * DREADMAN: [Bandit-Pack](https://www.hiveworkshop.com/threads/bandit-pack.353475/)
 * Scias: [BTNAmbal](https://www.hiveworkshop.com/threads/btnambal.355797/)
+* Direfury: [Deathguard Falric](https://www.hiveworkshop.com/threads/deathguard-falric.270821/)
+* loktar: [Dark Falric](https://www.hiveworkshop.com/threads/dark-falric.305606/)
