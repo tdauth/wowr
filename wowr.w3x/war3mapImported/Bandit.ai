@@ -3,11 +3,11 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, BANDIT_TIER_1)
     call SetBuildUnit(17, BANDIT_WORKER)
-    call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
+    call SetBuildUnit(2, BANDIT_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit(2, HUMAN_HOUSING)
+    call SetBuildUnit(2, BANDIT_HOUSING)
     call SetBuildUnit(1, BANDIT_MILL)
     call SetBuildUnit(3, BANDIT_TENT)
     call SetBuildUnit(2, BANDIT_BARRACKS)
@@ -27,9 +27,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(1, BANDIT_CHURCH)
     call SetBuildUnit(1, BANDIT_PRISON)
     call SetBuildUnit(4, BANDIT_TENT)
-    call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, HUMAN_CHILD)
-    call SetBuildUnit(2, HUMAN_PET)
+    call SetBuildUnit(2, BANDIT_CITIZEN_FEMALE)
+    call SetBuildUnit(2, BANDIT_CHILD)
+    call SetBuildUnit(2, BANDIT_PET)
     
     call SetBuildUnit(3, BANDIT_WATCH_TOWER)
     

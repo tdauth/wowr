@@ -2482,6 +2482,8 @@ function InitHousings takes nothing returns nothing
     call AddHousing(FACELESS_ONE_HOUSING)
     call AddHousing(GNOLL_HOUSING)
     call AddHousing(KOBOLD_HOUSING)
+    call AddHousing(QUILLBOAR_HOUSING)
+    call AddHousing(BANDIT_HOUSING)
 endfunction
 
 function CountHousings takes nothing returns integer

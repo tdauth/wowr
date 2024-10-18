@@ -4784,6 +4784,13 @@ globals
     constant integer BANDIT_APPRENTICE_WIZARD                        = 'h077' // priest
     constant integer BANDIT_HERETIC                                  = 'h07K' // spellbreaker
     constant integer BANDIT_CARGE_CART                               = 'h078' // sieg engine
+    constant integer BANDIT_CROW                                     = 'n092' // gryphon
+
+    constant integer BANDIT_CITIZEN_MALE                             = 'n08X'
+    constant integer BANDIT_CITIZEN_FEMALE                           = 'n08C'
+    constant integer BANDIT_CHILD                                    = 'n091'
+    constant integer BANDIT_PET                                      = 'n0C7'
+    constant integer BANDIT_HOUSING                                  = 'h07L'
 
     // Dragonkin
     constant integer DRAGONKIN_TIER_1                                = 'o08P'
