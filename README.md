@@ -1728,3 +1728,5 @@ Here is a list of some modified versions online:
 * Direfury: [Altar of Champions](https://www.hiveworkshop.com/threads/altar-of-champions.275502/)
 * Coronel Mael Radec: [BTNBanditTower](https://www.hiveworkshop.com/threads/btnbandittower.355812/)
 * komarovba: [Tower Bandit](https://www.hiveworkshop.com/threads/tower-bandit.355731/)
+* DREADMAN: [Bandit-Pack](https://www.hiveworkshop.com/threads/bandit-pack.353475/)
+* Scias: [BTNAmbal](https://www.hiveworkshop.com/threads/btnambal.355797/)

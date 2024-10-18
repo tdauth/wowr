@@ -4776,16 +4776,18 @@ globals
     constant integer UPG_BANDIT_SHADOW_MELD                          = 'R05E'
     constant integer UPG_BANDIT_ROB                                  = 'R05F'
     constant integer UPG_BANDIT_ENSLAVEMENT                          = 'R06K'
+    constant integer UPG_BANDIT_WIZARD                               = 'R073'
+    constant integer UPG_BANDIT_HERETIC                              = 'R074'
 
     constant integer BANDIT_WORKER                                   = 'h05V'
     constant integer BANDIT_BANDIT                                   = 'n07M' // footman
     constant integer BANDIT_BRIGAND                                  = 'n07L' // rifleman
     constant integer BANDIT_LORD                                     = 'n07K' // knight
-    constant integer BANDIT_ROGUE_WIZARD                             = 'h07J' // sorceress
-    constant integer BANDIT_APPRENTICE_WIZARD                        = 'h077' // priest
-    constant integer BANDIT_HERETIC                                  = 'h07K' // spellbreaker
+    constant integer BANDIT_WIZARD                                   = 'h077' // sorceress
+    constant integer BANDIT_HERETIC                                  = 'h07K' // priest
     constant integer BANDIT_CARGE_CART                               = 'h078' // sieg engine
     constant integer BANDIT_CROW                                     = 'n092' // gryphon
+    constant integer BANDIT_AMBAL                                    = 'n093' // mortar
 
     constant integer BANDIT_CITIZEN_MALE                             = 'n08X'
     constant integer BANDIT_CITIZEN_FEMALE                           = 'n08C'
