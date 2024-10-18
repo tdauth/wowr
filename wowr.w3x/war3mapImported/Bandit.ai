@@ -65,7 +65,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(1, UPG_BREEDING)
     call SetBuildUpgr(1, UPG_HAMMERS)
     call SetBuildUpgr(1, UPG_BOMBS)
-    call SetBuildUpgr(1, UPG_CONT_MAGIC)
+    call SetBuildUpgr(1, UPG_BANDIT_ENSLAVEMENT)
     call SetBuildUpgr(1, UPG_BANDIT_ROB)
 
     call SetBuildUpgr(1, UPG_BANDIT_BACKPACK)

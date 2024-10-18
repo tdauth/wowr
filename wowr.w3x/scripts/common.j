@@ -4775,6 +4775,7 @@ globals
     constant integer UPG_BANDIT_ENSNARE                              = 'R05D'
     constant integer UPG_BANDIT_SHADOW_MELD                          = 'R05E'
     constant integer UPG_BANDIT_ROB                                  = 'R05F'
+    constant integer UPG_BANDIT_ENSLAVEMENT                          = 'R06K'
 
     constant integer BANDIT_WORKER                                   = 'h05V'
     constant integer BANDIT_BANDIT                                   = 'n07M' // footman
