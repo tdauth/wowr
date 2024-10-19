@@ -1737,3 +1737,7 @@ Here is a list of some modified versions online:
 * Ujimasa Hojo: [Aviary (Gryphon) and Derivatives](https://www.hiveworkshop.com/threads/aviary-gryphon-and-derivatives.247643/)
 * komarovba: [GryphonAviaryBandit](https://www.hiveworkshop.com/threads/ryphonaviarybandit.349216/)
 * Mouseketeer: [BTN_Azshara_Siren](https://www.hiveworkshop.com/threads/btn_azshara_siren.349326/)
+* Wandering Soul: [Bandit Gryphon Raider](https://www.hiveworkshop.com/threads/bandit-gryphon-raider.237185/)
+* Thrikodius: [Surrender (buff)](https://www.hiveworkshop.com/threads/surrender-buff.190153/)
+* Wandering Soul: [Bandit Crossbowman](https://www.hiveworkshop.com/threads/bandit-crossbowman.215822/)
+* Gluma: [Human Crossbowman](https://www.hiveworkshop.com/threads/human-crossbowman.349800/)

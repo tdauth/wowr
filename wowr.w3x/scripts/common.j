@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.27"
+    constant string MAP_VERSION                                      = "3.28"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -4785,16 +4785,17 @@ globals
     constant integer UPG_BANDIT_WOOD                                 = 'R079'
     constant integer UPG_BANDIT_THIEVES_GUILD                        = 'R078'
 
-
     constant integer BANDIT_WORKER                                   = 'h05V'
     constant integer BANDIT_BANDIT                                   = 'n07M' // footman
     constant integer BANDIT_BRIGAND                                  = 'n07L' // rifleman
-    constant integer BANDIT_LORD                                     = 'n07K' // knight
+    constant integer BANDIT_BANDIT_LORD                              = 'n07K' // knight
     constant integer BANDIT_WIZARD                                   = 'h077' // sorceress
     constant integer BANDIT_HERETIC                                  = 'h07K' // priest
-    constant integer BANDIT_CARGE_CART                               = 'h078' // sieg engine
-    constant integer BANDIT_CROW                                     = 'n092' // gryphon
+    constant integer BANDIT_CARGE_CART                               = 'h078' // siege engine
+    constant integer BANDIT_GRYPHON_RAIDER                           = 'h07M' // gryphon
+    constant integer BANDIT_CROW                                     = 'n092' // dragonhawk
     constant integer BANDIT_AMBAL                                    = 'n093' // mortar
+    constant integer BANDIT_CROSSBOWMAN                              = 'n094' // flying machine
 
     constant integer BANDIT_CITIZEN_MALE                             = 'n08X'
     constant integer BANDIT_CITIZEN_FEMALE                           = 'n08C'
@@ -4868,12 +4869,16 @@ globals
     constant integer FIRELORD                                        = 'Nfir'
     constant integer RANGER                                          = 'H03Y' // High Elf
     constant integer GNOME_ENGINEER_HERO                             = 'N0CS'
-    constant integer WIZARD                                          = 'H00W'
     constant integer HYDROMANCER                                     = 'H06F'
     constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC' // hero
     constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
     constant integer MURLOC_SORCERER                                 = 'Nmsr'
     constant integer OGRE_LORD                                       = 'N0D1'
+    // Bandit
+    constant integer BANDIT_LORD                                     = 'H07B'
+    constant integer ASSASSIN                                        = 'H07C'
+    constant integer THIEF                                           = 'H0Y0'
+    constant integer WIZARD                                          = 'H00W'
 
     // Freelancer
     constant integer CREEP_DARK_WIZARD                               = 'nwzd'

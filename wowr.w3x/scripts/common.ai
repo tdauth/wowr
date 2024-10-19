@@ -2426,6 +2426,11 @@ function InitHeroes takes nothing returns nothing
     call AddHero(MURLOC_SORCERER)
     // Ogre
     call AddHero(OGRE_LORD)
+    // Bandit
+    call AddHero(BANDIT_LORD)
+    call AddHero(ASSASSIN)
+    call AddHero(THIEF)
+    call AddHero(WIZARD)
 endfunction
 
 function AddMount takes integer id returns integer
