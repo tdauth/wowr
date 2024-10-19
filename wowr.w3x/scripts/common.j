@@ -4782,7 +4782,9 @@ globals
     constant integer UPG_BANDIT_ARMOR                                = 'R075'
     constant integer UPG_BANDIT_MELEE                                = 'R076'
     constant integer UPG_BANDIT_RANGED                               = 'R077'
+    constant integer UPG_BANDIT_WOOD                                 = 'R079'
     constant integer UPG_BANDIT_THIEVES_GUILD                        = 'R078'
+
 
     constant integer BANDIT_WORKER                                   = 'h05V'
     constant integer BANDIT_BANDIT                                   = 'n07M' // footman
