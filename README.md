@@ -462,7 +462,6 @@ Here is a list of some modified versions online:
 * infrenus: [Bascinet Knights](https://www.hiveworkshop.com/threads/bascinet-knights.311845/)
 * Mike: [All types castle](https://www.hiveworkshop.com/threads/all-types-castle.263665/)
 * Mr. Bob: [Medieval Buildings: The complete collection.](https://www.hiveworkshop.com/threads/medieval-buildings-the-complete-collection.157245/)
-* Vendro the Wind Mage: [Naga Queen Azshara SD](https://www.hiveworkshop.com/threads/queen-azshara-sd.344213/#post-3557050)
 * PrinceYaser: [Queen Azshara](https://www.hiveworkshop.com/threads/queen-azshara.303895/)
 * Eagle XI: [Siegemachinery Icons](https://www.hiveworkshop.com/threads/siegemachinery-icons.275804/)
 * Mike: [Siege Tower](https://www.hiveworkshop.com/threads/siege-tower.265285/)
@@ -1737,3 +1736,4 @@ Here is a list of some modified versions online:
 * NFWar: [BTNBanditsLeather2](https://www.hiveworkshop.com/threads/btnbanditsleather2.179241/)
 * Ujimasa Hojo: [Aviary (Gryphon) and Derivatives](https://www.hiveworkshop.com/threads/aviary-gryphon-and-derivatives.247643/)
 * komarovba: [GryphonAviaryBandit](https://www.hiveworkshop.com/threads/ryphonaviarybandit.349216/)
+* Mouseketeer: [BTN_Azshara_Siren](https://www.hiveworkshop.com/threads/btn_azshara_siren.349326/)
