@@ -1732,3 +1732,8 @@ Here is a list of some modified versions online:
 * Scias: [BTNAmbal](https://www.hiveworkshop.com/threads/btnambal.355797/)
 * Direfury: [Deathguard Falric](https://www.hiveworkshop.com/threads/deathguard-falric.270821/)
 * loktar: [Dark Falric](https://www.hiveworkshop.com/threads/dark-falric.305606/)
+* NFWar: [BTNLeatherArmor](https://www.hiveworkshop.com/threads/btnleatherarmor.179061/)
+* NFWar: [BTNBanditsLeather](https://www.hiveworkshop.com/threads/btnbanditsleather.179238/)
+* NFWar: [BTNBanditsLeather2](https://www.hiveworkshop.com/threads/btnbanditsleather2.179241/)
+* Ujimasa Hojo: [Aviary (Gryphon) and Derivatives](https://www.hiveworkshop.com/threads/aviary-gryphon-and-derivatives.247643/)
+* komarovba: [GryphonAviaryBandit](https://www.hiveworkshop.com/threads/ryphonaviarybandit.349216/)

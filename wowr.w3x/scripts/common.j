@@ -4767,9 +4767,10 @@ globals
     constant integer BANDIT_MARKET                                   = 'h076' // shop
     constant integer BANDIT_PRISON                                   = 'h079' // workshop
     constant integer BANDIT_TENT                                     = 'h07A' // farm
-    constant integer BANDIT_THIEVES_GUILD                            = 'h07D' // aviary
+    constant integer BANDIT_AVIARY                                   = 'h07D' // aviary
     constant integer BANDIT_ALTAR                                    = 'h07E' // altar
     constant integer BANDIT_WATCH_TOWER                              = 'h07F' // guard tower
+    constant integer BANDIT_THIEVES_GUILD                            = 'h07J' // special building
 
     constant integer UPG_BANDIT_BACKPACK                             = 'R05C'
     constant integer UPG_BANDIT_ENSNARE                              = 'R05D'
@@ -4778,6 +4779,10 @@ globals
     constant integer UPG_BANDIT_ENSLAVEMENT                          = 'R06K'
     constant integer UPG_BANDIT_WIZARD                               = 'R073'
     constant integer UPG_BANDIT_HERETIC                              = 'R074'
+    constant integer UPG_BANDIT_ARMOR                                = 'R075'
+    constant integer UPG_BANDIT_MELEE                                = 'R076'
+    constant integer UPG_BANDIT_RANGED                               = 'R077'
+    constant integer UPG_BANDIT_THIEVES_GUILD                        = 'R078'
 
     constant integer BANDIT_WORKER                                   = 'h05V'
     constant integer BANDIT_BANDIT                                   = 'n07M' // footman
