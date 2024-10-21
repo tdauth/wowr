@@ -2972,9 +2972,7 @@ globals
     constant integer MERCENARY_CAMP_ARGUS                            = 'n0J5'
     constant integer MERCENARY_CAMP_EMERALD_DREAM                    = 'n0MM'
     constant integer MERCENARY_CAMP_PANDARIA                         = 'n08L'
-    constant integer MERCENARY_CAMP_FUTURE                           = 'n03R'
     constant integer MERCENARY_CAMP_SEA                              = 'n0JA'
-    constant integer MERCENARY_CAMP_STAR_WARS                        = 'n07H'
     constant integer MERCENARY_CAMP_SUNSTRIDER_ISLE                  = 'n01S'
     constant integer MERCENARY_CAMP_NEW_CITADEL                      = 'n03D'
 
