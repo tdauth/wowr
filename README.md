@@ -1741,3 +1741,5 @@ Here is a list of some modified versions online:
 * Thrikodius: [Surrender (buff)](https://www.hiveworkshop.com/threads/surrender-buff.190153/)
 * Wandering Soul: [Bandit Crossbowman](https://www.hiveworkshop.com/threads/bandit-crossbowman.215822/)
 * Gluma: [Human Crossbowman](https://www.hiveworkshop.com/threads/human-crossbowman.349800/)
+* Hoth: [Bandit Elite Barrack](https://www.hiveworkshop.com/threads/bandit-elite-barrack.332340/)
+* HuanJuan: [Bandit Elite Barrack](https://www.hiveworkshop.com/threads/bandit-elite-barrack.352067/)
