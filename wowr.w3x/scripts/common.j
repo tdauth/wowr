@@ -4854,31 +4854,116 @@ globals
     // WoW Reforged heroes
     constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
-    constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
-    constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
-    constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
     constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
     constant integer SORCERESS_HERO                                  = 'H0B2'
-    constant integer AKAMA                                           = 'N01K'
-    constant integer BEASTMASTER                                     = 'Nbst'
+    constant integer FIRELORD                                        = 'Nfir'
+    constant integer RANGER                                          = 'H03Y' // High Elf
+    constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
+    // Goblin
     constant integer ALCHEMIST                                       = 'Nalc'
     constant integer TINKER                                          = 'Ntin'
     constant integer ROBO_GOBLIN                                     = 'ANrg'
-    constant integer BREWMASTER                                      = 'Npbm'
-    constant integer FIRELORD                                        = 'Nfir'
-    constant integer RANGER                                          = 'H03Y' // High Elf
+    // Naga
+    constant integer NAGA_ROYAL_GUARD_HERO                           = 'N0BG'
+    constant integer NAGA_SIREN_HERO                                 = 'N0NC'
+    constant integer LADY_VASHJ                                      = 'H02B'
+    // Gnome
     constant integer GNOME_ENGINEER_HERO                             = 'N0CS'
-    constant integer LION_RIDER                                      = 'H0UL' // Stormwind
+    constant integer GNOME_WARLOCK_HERO                              = 'O055'
+    // Pandaren
+    constant integer BREWMASTER                                      = 'Npbm'
+    constant integer IRON_FIST                                       = 'E011'
+    constant integer SHADO_PAN                                       = 'O032'
+    constant integer MONK                                            = 'N032'
+    constant integer CHEN_STORMSTOUT                                 = 'N01F'
+    // Troll
+    constant integer WITCH_DOCTOR_HERO                               = 'O04Y'
+    constant integer ROKHAN                                          = 'O00B'
+    // Tauren
+    constant integer SPIRIT_WALKER_HERO                              = 'O04L'
+    constant integer CAIRNE_BLOODHOOF                                = 'O02S'
+    // Demon
+    constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
+    constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
+    constant integer SUCCUBUS                                        = 'N0AT'
+    constant integer DOOM_GUARD                                      = 'N0CB'
+    constant integer FEL_BEAST                                       = 'N04O'
+    constant integer INFERNAL_HERO                                   = 'N0HT'
+    constant integer JAILER                                          = 'U032'
+    constant integer MOARG_OVERLORD                                  = 'N0JL'
+    constant integer ARCHIMONDE                                      = 'Uwar'
+    constant integer MANNOROTH                                       = 'Nman'
+    constant integer KIL_JAEDEN                                      = 'N0FA'
+    constant integer TICHONDRIUS_HERO                                = 'Utic'
+    constant integer DOOM_LORD                                       = 'N0LG'
+    // Draenei
+    constant integer ELDER_SAGE                                      = 'N01K'
+    constant integer VINDICATOR                                      = 'H0KM'
+    constant integer VELEN                                           = 'H0JV'
+    // Furbolg
+    constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
+    // Dalaran
+    constant integer ARCH_SORCERESS                                  = 'H0V3'
+    // Kul Tiras
     constant integer HYDROMANCER                                     = 'H06F'
-    constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC' // hero
-    constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
+    constant integer TIDESAGE                                        = 'H0UN'
+    constant integer JAINA_HERO                                      = 'H0A4'
+    constant integer ADMIRAL_PROUDMOORE                              = 'Hapm'
+    // Stormwind
+    constant integer LION_RIDER                                      = 'H0UL'
+    // Vrykul
+    constant integer THANE                                           = 'H0IQ'
+    constant integer FLAMEBINDER                                     = 'H0IS'
+    constant integer WOLF_RIDER                                      = 'O04G'
+    constant integer DARK_VALKYR                                     = 'N0LE'
+    constant integer GOLDEN_VALKYR                                   = 'N0LF'
+    // Worgen
+    constant integer DEATHCLAW                                       = 'H0J1'
+    constant integer WORGEN_DEATH_KNIGHT                             = 'U01K'
+    constant integer GENN_GREYMANE                                   = 'H0PN'
+    // Tuskarr
+    constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC'
+    // Murloc
     constant integer MURLOC_SORCERER                                 = 'Nmsr'
+    // Ogre
     constant integer OGRE_LORD                                       = 'N0D1'
+    constant integer OGRE_MAGI_HERO                                  = 'O07J'
+    constant integer GRONN                                           = 'N0JU'
+    constant integer BEASTMASTER                                     = 'Nbst'
+    constant integer REXXAR                                          = 'O00C'
+    // Eredar
+    constant integer EREDAR_ANNIHILATOR                              = 'N0JX'
+    // Fel Orc
+    constant integer FEL_BLADEMASTER                                 = 'N01T'
+    constant integer FEL_WARLOCK                                     = 'O09I'
+    constant integer FEL_WARLORD                                     = 'O09J'
+    constant integer FEL_CROSSBOWMAN                                 = 'O09L'
+    constant integer FEL_RAIDER                                      = 'O09P'
+    constant integer FEL_PEON                                        = 'H0UU'
+    constant integer FEL_GROMMASH_HELLSCREAM                         = 'O02U'
+    constant integer KARGATH_BLADEFIST                               = 'O09K'
+    // Faceless One
+    constant integer UNBROKEN                                        = 'N0K5'
+    constant integer GENERAL_VEZAX                                   = 'N0KM'
+    // Satyr
+    constant integer SATYR_HELLCALLER                                = 'N0H0'
+    constant integer SATYR_TRICKSTER_HERO                            = 'N0L8'
+    // Centaur
+    constant integer CENTAUR_KHAN_HERO                               = 'N0D2'
+    // Gnoll
+    constant integer GNOLL_ALPHA                                     = 'N0HG'
+    // Kobold
+    constant integer GEOMANCER                                       = 'N0HH'
+    // Quillboar
+    constant integer RAZORMANE_CHIEFTAIN                             = 'O01R'
     // Bandit
     constant integer BANDIT_LORD                                     = 'H07B'
     constant integer ASSASSIN                                        = 'H07C'
     constant integer THIEF                                           = 'H0Y0'
     constant integer WIZARD                                          = 'H00W'
+    // Dragonkin
+    constant integer EVOKER                                          = 'H0SY'
+    constant integer DRAGONSPAWN                                     = 'N0JY'
 
     // Freelancer
     constant integer CREEP_DARK_WIZARD                               = 'nwzd'

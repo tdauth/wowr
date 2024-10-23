@@ -2401,7 +2401,7 @@ function InitHeroes takes nothing returns nothing
     // Furbolg
     call AddHero(FURBOLG_URSA_WARRIOR_HERO)
     // Draenei
-    call AddHero(AKAMA)
+    call AddHero(ELDER_SAGE)
     // Naga
     call AddHero(NAGA_SORCERESS)
     // Neutral Heroes
@@ -2682,6 +2682,21 @@ function GetPlayerInfoText takes nothing returns string
         set msg = msg + "will do something (enabled)"
     endif
 
+    // difficulty
+    set msg = msg + ", "
+
+    if (difficulty == EASY) then
+        set msg = msg + "play EASY"
+    elseif (difficulty == NORMAL) then
+        set msg = msg + "play NORMAL"
+    elseif (difficulty == HARD) then
+        set msg = msg + "play HARD"
+    elseif (difficulty == INSANE) then
+        set msg = msg + "play INSANE"
+    else
+        set msg = msg + "play UNKNOWN"
+    endif
+
     set msg = msg + ", "
     
     if (attackEnemyPlayers) then
@@ -2715,6 +2730,9 @@ function GetPlayerInfoText takes nothing returns string
     
         set msg = msg + "attack a specific location"
     endif
+
+    set msg = msg + " and will have " + I2S2(shredders) + " Shredders"
+    set msg = msg + " and will have " + I2S2(zeppelins) + " Zeppelins"
     
     set msg = msg + "."
     
