@@ -814,6 +814,8 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(STORMWIND_TIER_3,false,townid)
     elseif unitid == STORMWIND_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(STORMWIND_GUARD_TOWER,false,townid) + GetUnitCountEx(STORMWIND_CANNON_TOWER,false,townid) + GetUnitCountEx(STORMWIND_ARCANE_TOWER,false,townid)
+    elseif unitid == STORMWIND_KNIGHT then
+        set have_qty = have_qty + GetUnitCountEx(STORMWIND_KNIGHT_UNMOUNTED,false,townid)
 
     elseif unitid == PANDAREN_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(PANDAREN_TIER_2,false,townid) + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
@@ -2413,6 +2415,8 @@ function InitHeroes takes nothing returns nothing
     call AddHero(RANGER)
     // Gnome
     call AddHero(GNOME_ENGINEER_HERO)
+    // Stormwind
+    call AddHero(LION_RIDER)
     // Dalaran
     call AddHero(WIZARD)
     call AddHero(SORCERESS_HERO)

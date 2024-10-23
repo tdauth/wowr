@@ -3895,6 +3895,7 @@ globals
     constant integer STORMWIND_FOOTMAN                               = 'h0RS'
     constant integer STORMWIND_RANGER                                = 'n0I3'
     constant integer STORMWIND_KNIGHT                                = 'h0RU'
+    constant integer STORMWIND_KNIGHT_UNMOUNTED                      = 'h0RT'
     constant integer STORMWIND_BANNER_CARRIER                        = 'h0RQ'
     constant integer STORMWIND_GRYPHON_KNIGHT                        = 'h0RP'
     constant integer STORMWIND_EAGLE_KNIGHT                          = 'h0S0'
@@ -4867,6 +4868,7 @@ globals
     constant integer FIRELORD                                        = 'Nfir'
     constant integer RANGER                                          = 'H03Y' // High Elf
     constant integer GNOME_ENGINEER_HERO                             = 'N0CS'
+    constant integer LION_RIDER                                      = 'H0UL' // Stormwind
     constant integer HYDROMANCER                                     = 'H06F'
     constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC' // hero
     constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
