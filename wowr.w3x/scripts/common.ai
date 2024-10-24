@@ -2391,7 +2391,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(MOUNTAIN_GIANT_HERO)
     // Undead
     call AddHero(DEATH_KNIGHT)
-    call AddHero(DARK_RANGER_NEUTRAL)
+    call AddHero(DARK_RANGER)
     call AddHero(LICH)
     call AddHero(CRYPT_LORD)
     // Demon
@@ -2434,7 +2434,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(BANDIT_LORD)
     call AddHero(ASSASSIN)
     call AddHero(THIEF)
-    call AddHero(WIZARD)
+    call AddHero(DARK_WIZARD)
 endfunction
 
 function AddMount takes integer id returns integer
