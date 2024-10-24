@@ -2917,7 +2917,6 @@ globals
     constant integer DWARF_SUBMARINE_HERO_SUBMERGED                  = 'H0GT'
     constant integer HUMAN_BATTLESHIP_HERO                           = 'H0KA'
     constant integer CAPTAIN_HERO                                    = 'N0CR'
-    constant integer ANCIENT_OF_LORE_HERO                            = 'E02B'
 
     constant integer ITEM_TYPE_RANDOM_HERO                           = 'I068'
     constant integer ITEM_TYPE_RANDOM_RACE                           = 'I06A'
@@ -4854,15 +4853,43 @@ globals
     // WoW Reforged heroes
     constant integer DARK_RANGER_NEUTRAL                             = 'Nbrn'
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
-    constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
     constant integer SORCERESS_HERO                                  = 'H0B2'
-    constant integer FIRELORD                                        = 'Nfir'
-    constant integer RANGER                                          = 'H03Y' // High Elf
+    // High Elf
+    constant integer RANGER                                          = 'H03Y'
+    // Nerubian
     constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
+    constant integer ANUB_ARAK_HERO                                  = 'U01D'
+    // Night Elf
+    constant integer RANGER_NIGHT_ELF                                = 'H0YI'
+    constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
+    constant integer DRUID_OF_THE_CLAW                               = 'E00T'
+    constant integer DRUID_OF_THE_TALON                              = 'E00W'
+    constant integer DRYAD_HERO                                      = 'E02C'
+    constant integer WISP_HERO                                       = 'E01I'
+    constant integer ANCIENT_OF_LORE_HERO                            = 'E02B'
+    constant integer FURION                                          = 'E000'
+    constant integer MALFURION                                       = 'Emns'
+    constant integer ILLIDAN_HERO                                    = 'E010'
+    constant integer ILLIDAN_EVIL                                    = 'E00A'
+    constant integer TYRANDE_HERO                                    = 'E00Y'
+    constant integer MAIEV_HERO                                      = 'E00X'
+    constant integer SHANDRIS_FEATHER_MOON                           = 'H0YD'
+    constant integer KEEPER_OF_THE_GROVE_GHOST                       = 'E00Z'
+    constant integer CENARIUS_HERO                                   = 'E00H'
+    constant integer ARCHDRUID                                       = 'E01K'
+    constant integer PRIESTESS_OF_THE_MOON_OWL                       = 'E01J'
+    constant integer MALORNE                                         = 'E028'
+    constant integer CHIMAERA_HERO                                   = 'E02F'
     // Goblin
     constant integer ALCHEMIST                                       = 'Nalc'
     constant integer TINKER                                          = 'Ntin'
     constant integer ROBO_GOBLIN                                     = 'ANrg'
+    constant integer FLAME_SHREDDER                                  = 'N0BE'
+    constant integer GOBLIN_SHREDDER_HERO                            = 'N07D'
+    constant integer GOBLIN_GUNNER                                   = 'N06V'
+    constant integer GOBLIN_PRINCE                                   = 'N09E'
+    constant integer GOBLIN_HEAVY_TANK_HERO                          = 'N06N'
+    constant integer GOBLIN_WAR_ZEPPELIN_HERO                        = 'N06M'
     // Naga
     constant integer NAGA_ROYAL_GUARD_HERO                           = 'N0BG'
     constant integer NAGA_SIREN_HERO                                 = 'N0NC'
@@ -4964,6 +4991,12 @@ globals
     // Dragonkin
     constant integer EVOKER                                          = 'H0SY'
     constant integer DRAGONSPAWN                                     = 'N0JY'
+    // Neutral
+    constant integer FIRELORD                                        = 'Nfir'
+    constant integer SEA_GIANT                                       = 'N0GH'
+    constant integer REVENANT                                        = 'U02X'
+    constant integer REVENANT_DEEPLORD                               = 'U03J'
+    constant integer GIANT_SKELETON                                  = 'U02W'
 
     // Freelancer
     constant integer CREEP_DARK_WIZARD                               = 'nwzd'
