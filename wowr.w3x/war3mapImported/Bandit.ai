@@ -36,14 +36,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(2, UPG_BANDIT_RANGED)
     call SetBuildUpgr(2, UPG_BANDIT_ARMOR)
     call SetBuildUpgr(1, UPG_BANDIT_WOOD)
-    //call SetBuildUpgr(2, UPG_MASONRY)
-    //call SetBuildUpgr(1, UPG_SENTINEL)
-    //call SetBuildUpgr(1, UPG_GUN_RANGE)
     call SetBuildUpgr(1, UPG_BANDIT_HERETIC)
     call SetBuildUpgr(1, UPG_BANDIT_WIZARD)
-    //call SetBuildUpgr(1, UPG_FRAGS)
-    //call SetBuildUpgr(1, UPG_FLAK)
-    //call SetBuildUpgr(1, UPG_BANDIT_CARGE_CART)
     call SetBuildUpgr(1, UPG_HUMAN_FLARE)
 
     // Tier 3 buildings
@@ -54,12 +48,12 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(3, UPG_BANDIT_RANGED)
     call SetBuildUpgr(3, UPG_BANDIT_ARMOR)
     call SetBuildUpgr(2, UPG_BANDIT_WOOD)
-    //call SetBuildUpgr(3, UPG_MASONRY)
     call SetBuildUpgr(2, UPG_BANDIT_HERETIC)
     call SetBuildUpgr(2, UPG_BANDIT_WIZARD)
-    //call SetBuildUpgr(1, UPG_BREEDING)
-    //call SetBuildUpgr(1, UPG_HAMMERS)
-    //call SetBuildUpgr(1, UPG_BOMBS)
+    call SetBuildUpgr(1, UPG_BANDIT_FEATHER_ATTACK)
+    call SetBuildUpgr(1, UPG_BANDIT_STORM_HAMMERS)
+    call SetBuildUpgr(1, UPG_BANDIT_TRUE_SIGHT)
+
     call SetBuildUpgr(1, UPG_BANDIT_ENSLAVEMENT)
     call SetBuildUpgr(1, UPG_BANDIT_ROB)
 
