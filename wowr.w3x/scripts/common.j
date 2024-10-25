@@ -4798,6 +4798,8 @@ globals
     constant integer UPG_BANDIT_FEATHER_ATTACK                       = 'R07A'
     constant integer UPG_BANDIT_TRUE_SIGHT                           = 'R07B'
     constant integer UPG_BANDIT_STORM_HAMMERS                        = 'R07D'
+    constant integer UPG_BANDIT_RIDE_DOWN                            = 'R07E'
+    constant integer UPG_BANDIT_RESISTANT_SKIN                       = 'R07F' // tier 2
     constant integer UPG_BANDIT_THIEVES_GUILD                        = 'R078'
 
     constant integer BANDIT_WORKER                                   = 'h05V'
