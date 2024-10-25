@@ -1743,3 +1743,4 @@ Here is a list of some modified versions online:
 * Gluma: [Human Crossbowman](https://www.hiveworkshop.com/threads/human-crossbowman.349800/)
 * Hoth: [Bandit Elite Barrack](https://www.hiveworkshop.com/threads/bandit-elite-barrack.332340/)
 * HuanJuan: [Bandit Elite Barrack](https://www.hiveworkshop.com/threads/bandit-elite-barrack.352067/)
+* Ujimasa Hojo: [Hut (Gnoll) and Derivatives](https://www.hiveworkshop.com/threads/hut-gnoll-and-derivatives.288010/)
