@@ -4756,19 +4756,33 @@ globals
 
     // Bandit
     constant integer BANDIT_TIER_1                                   = 'h05X'
+    constant integer ITEM_TINY_BANDIT_TIER_1                         = 'I08C'
     constant integer BANDIT_TIER_2                                   = 'h05Y'
+    constant integer ITEM_TINY_BANDIT_TIER_2                         = 'I08I'
     constant integer BANDIT_TIER_3                                   = 'h05Z'
+    constant integer ITEM_TINY_BANDIT_TIER_3                         = 'I08J'
     constant integer BANDIT_BARRACKS                                 = 'h060'
+    constant integer ITEM_TINY_BANDIT_BARRACKS                       = 'I08K'
     constant integer BANDIT_CHURCH                                   = 'h072'
+    constant integer ITEM_TINY_BANDIT_CHURCH                         = 'I08L'
     constant integer BANDIT_MILL                                     = 'h075'
+    constant integer ITEM_TINY_BANDIT_MILL                           = 'I08M'
     constant integer BANDIT_BLACKSMITH                               = 'h07I'
+    constant integer ITEM_TINY_BANDIT_BLACKSMITH                     = 'I08N'
     constant integer BANDIT_MARKET                                   = 'h076' // shop
+    constant integer ITEM_TINY_BANDIT_MARKET                         = 'I08P'
     constant integer BANDIT_PRISON                                   = 'h079' // workshop
+    constant integer ITEM_TINY_BANDIT_PRISON                         = 'I08Q'
     constant integer BANDIT_TENT                                     = 'h07A' // farm
+    constant integer ITEM_TINY_BANDIT_TENT                           = 'I0AO'
     constant integer BANDIT_AVIARY                                   = 'h07D' // aviary
+    constant integer ITEM_TINY_BANDIT_AVIARY                         = 'I0AQ'
     constant integer BANDIT_ALTAR                                    = 'h07E' // altar
+    constant integer ITEM_TINY_BANDIT_ALTAR                          = 'I0AR'
     constant integer BANDIT_WATCH_TOWER                              = 'h07F' // guard tower
+    constant integer ITEM_TINY_BANDIT_WATCH_TOWER                    = 'I0BB'
     constant integer BANDIT_THIEVES_GUILD                            = 'h07J' // special building
+    constant integer ITEM_TINY_BANDIT_THIEVES_GUILD                  = 'I0DD'
 
     constant integer UPG_BANDIT_BACKPACK                             = 'R05C'
     constant integer UPG_BANDIT_ENSNARE                              = 'R05D'
@@ -4800,6 +4814,7 @@ globals
     constant integer BANDIT_CHILD                                    = 'n091'
     constant integer BANDIT_PET                                      = 'n0C7'
     constant integer BANDIT_HOUSING                                  = 'h07L'
+    constant integer ITEM_TINY_BANDIT_HOUSING                        = 'I0DE'
 
     // Dragonkin
     constant integer DRAGONKIN_TIER_1                                = 'o08P'
