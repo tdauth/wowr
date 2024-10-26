@@ -38,6 +38,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(1, UPG_BANDIT_WOOD)
     call SetBuildUpgr(1, UPG_BANDIT_HERETIC)
     call SetBuildUpgr(1, UPG_BANDIT_WIZARD)
+    call SetBuildUpgr(1, UPG_BANDIT_SLAVE_MASTER)
     call SetBuildUpgr(1, UPG_BANDIT_RESISTANT_SKIN)
     call SetBuildUpgr(1, UPG_BANDIT_ENVENOMED_WEAPONS)
 
@@ -51,6 +52,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(2, UPG_BANDIT_WOOD)
     call SetBuildUpgr(2, UPG_BANDIT_HERETIC)
     call SetBuildUpgr(2, UPG_BANDIT_WIZARD)
+    call SetBuildUpgr(2, UPG_BANDIT_SLAVE_MASTER)
     call SetBuildUpgr(1, UPG_BANDIT_FEATHER_ATTACK)
     call SetBuildUpgr(1, UPG_BANDIT_STORM_HAMMERS)
     call SetBuildUpgr(1, UPG_BANDIT_TRUE_SIGHT)
@@ -75,12 +77,12 @@ function BuildingStrategy takes nothing returns nothing
         endif
 
         if (buildShips) then
-            call SetBuildUnit(1, HUMAN_SHIPYARD)
+            call SetBuildUnit(1, BANDIT_SHIPYARD)
             call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
             call SetBuildUnit(2, HUMAN_FRIGATE)
             call SetBuildUnit(2, HUMAN_BATTLESHIP)
         else
-            call SetBuildUnit(0, HUMAN_SHIPYARD)
+            call SetBuildUnit(0, BANDIT_SHIPYARD)
             call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
             call SetBuildUnit(0, HUMAN_FRIGATE)
             call SetBuildUnit(0, HUMAN_BATTLESHIP)
@@ -176,6 +178,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
     call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
     call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
+    call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
     call AddStandardUnitsToAttackWave()
     call Sleep(M2)
     call LaunchAttack()
@@ -188,6 +191,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
     call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
     call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
+    call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
     call CampaignAttackerEx(2, 2, 3, BANDIT_GRYPHON_RAIDER)
     call AddStandardUnitsToAttackWave()
     call Sleep(M2)
@@ -201,6 +205,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
     call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
     call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
+    call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
     call CampaignAttackerEx(2, 2, 3, BANDIT_GRYPHON_RAIDER)
     call CampaignAttackerEx(2, 2, 3, BANDIT_CARGE_CART)
     call AddStandardUnitsToAttackWave()
@@ -218,12 +223,14 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx(3, 3, 3, BANDIT_AMBAL)
         call CampaignAttackerEx(3, 3, 3, BANDIT_WIZARD)
         call CampaignAttackerEx(3, 3, 3, BANDIT_HERETIC)
+        call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
         call CampaignAttackerEx(3, 3, 3, BANDIT_CARGE_CART)
         call CampaignAttackerEx(3, 3, 3, BANDIT_CROSSBOWMAN)
         
         // big air army
-        call CampaignAttackerEx(8, 10, 12, BANDIT_GRYPHON_RAIDER)
-        call CampaignAttackerEx(8, 10, 12, BANDIT_CROW)
+        call CampaignAttackerEx(6, 8, 10, BANDIT_GRYPHON_RAIDER)
+        call CampaignAttackerEx(6, 8, 10, BANDIT_CROW)
+        call CampaignAttackerEx(6, 8, 10, BANDIT_FLYING_SPEAR_THROWER)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()

@@ -3015,6 +3015,7 @@ globals
     // Farmer
     constant integer GRANARY                                         = 'h0M7'
     constant integer ITEM_TINY_GRANARY                               = 'I0KA'
+    constant integer WATER_SUPPLY                                    = 'h0KX'
 
     // Miner
     constant integer ITEM_PICKAXE                                    = 'I0W7'
@@ -4794,6 +4795,7 @@ globals
     constant integer UPG_BANDIT_ENSLAVEMENT                          = 'R06K'
     constant integer UPG_BANDIT_WIZARD                               = 'R073'
     constant integer UPG_BANDIT_HERETIC                              = 'R074'
+    constant integer UPG_BANDIT_SLAVE_MASTER                         = 'R07G'
     constant integer UPG_BANDIT_ARMOR                                = 'R075'
     constant integer UPG_BANDIT_MELEE                                = 'R076'
     constant integer UPG_BANDIT_RANGED                               = 'R077'
@@ -4811,12 +4813,15 @@ globals
     constant integer BANDIT_BANDIT_LORD                              = 'n07K' // knight
     constant integer BANDIT_WIZARD                                   = 'h077' // sorceress
     constant integer BANDIT_HERETIC                                  = 'h07K' // priest
+    constant integer BANDIT_SLAVE_MASTER                             = 'h07P' // spellbreaker
     constant integer BANDIT_CARGE_CART                               = 'h078' // siege engine
     constant integer BANDIT_GRYPHON_RAIDER                           = 'h07M' // gryphon
     constant integer BANDIT_CROW                                     = 'n092' // dragonhawk
+    constant integer BANDIT_FLYING_SPEAR_THROWER                     = 'h07Q'
     constant integer BANDIT_AMBAL                                    = 'n093' // mortar
     constant integer BANDIT_CROSSBOWMAN                              = 'n094' // flying machine
     constant integer SLAVE                                           = 'h05T' // Gnoll/Bandit/Enslavement
+    constant integer BANDIT_DOG                                      = 'o033'
 
     constant integer BANDIT_CITIZEN_MALE                             = 'n08X'
     constant integer BANDIT_CITIZEN_FEMALE                           = 'n08C'
