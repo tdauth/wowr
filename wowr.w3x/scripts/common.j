@@ -4783,11 +4783,14 @@ globals
     constant integer ITEM_TINY_BANDIT_WATCH_TOWER                    = 'I0BB'
     constant integer BANDIT_THIEVES_GUILD                            = 'h07J' // special building
     constant integer ITEM_TINY_BANDIT_THIEVES_GUILD                  = 'I0DD'
+    constant integer BANDIT_SHIPYARD                                 = 'h07O'
+    constant integer ITEM_TINY_BANDIT_SHIPYARD                       = 'I0E0'
 
     constant integer UPG_BANDIT_BACKPACK                             = 'R05C'
     constant integer UPG_BANDIT_ENSNARE                              = 'R05D'
     constant integer UPG_BANDIT_SHADOW_MELD                          = 'R05E'
     constant integer UPG_BANDIT_ROB                                  = 'R05F'
+    constant integer UPG_BANDIT_ENVENOMED_WEAPONS                    = 'R05G'
     constant integer UPG_BANDIT_ENSLAVEMENT                          = 'R06K'
     constant integer UPG_BANDIT_WIZARD                               = 'R073'
     constant integer UPG_BANDIT_HERETIC                              = 'R074'
@@ -4813,6 +4816,7 @@ globals
     constant integer BANDIT_CROW                                     = 'n092' // dragonhawk
     constant integer BANDIT_AMBAL                                    = 'n093' // mortar
     constant integer BANDIT_CROSSBOWMAN                              = 'n094' // flying machine
+    constant integer SLAVE                                           = 'h05T' // Gnoll/Bandit/Enslavement
 
     constant integer BANDIT_CITIZEN_MALE                             = 'n08X'
     constant integer BANDIT_CITIZEN_FEMALE                           = 'n08C'

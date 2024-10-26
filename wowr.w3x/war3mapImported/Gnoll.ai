@@ -39,8 +39,8 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
     call SetBuildUpgr(1, UPG_GNOLL_ENVENOMED_WEAPONS)
     //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
-    call SetBuildUpgr(1, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
-    call SetBuildUpgr(1, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
+    //call SetBuildUpgr(1, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
+    //call SetBuildUpgr(1, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
 
     // Tier 3 buildings
     call SetBuildUnit(1, GNOLL_TIER_3)
@@ -50,8 +50,8 @@ function BuildingStrategy takes nothing returns nothing
     //call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
     //call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_ARMOR)
     //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
-    call SetBuildUpgr(2, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
-    call SetBuildUpgr(2, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
+    //call SetBuildUpgr(2, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
+    //call SetBuildUpgr(2, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
     //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
     //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
     //call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
@@ -61,8 +61,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(1, UPG_GNOLL_BARREL_FORM)
     call SetBuildUpgr(1, UPG_GNOLL_ENSLAVEMENT)
     call SetBuildUpgr(1, UPG_GNOLL_BACKPACK)
-    call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
-    call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
+    //call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
+    //call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
 
     call BuildingStrategyStandardTier3()
 

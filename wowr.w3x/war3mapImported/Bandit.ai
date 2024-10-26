@@ -10,7 +10,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, BANDIT_HOUSING)
     call SetBuildUnit(1, BANDIT_MILL)
     call SetBuildUnit(3, BANDIT_TENT)
-    call SetBuildUnit(2, BANDIT_BARRACKS)
+    call SetBuildUnit(1, BANDIT_BARRACKS)
     call SetBuildUnit(1, BANDIT_ALTAR)
     call SetBuildUnit(1, BANDIT_BLACKSMITH)
     call SetBuildUnit(1, BANDIT_MARKET)
@@ -39,6 +39,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(1, UPG_BANDIT_HERETIC)
     call SetBuildUpgr(1, UPG_BANDIT_WIZARD)
     call SetBuildUpgr(1, UPG_BANDIT_RESISTANT_SKIN)
+    call SetBuildUpgr(1, UPG_BANDIT_ENVENOMED_WEAPONS)
 
     // Tier 3 buildings
     call SetBuildUnit(1, BANDIT_TIER_3)

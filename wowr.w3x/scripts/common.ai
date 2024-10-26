@@ -2684,16 +2684,19 @@ function CountHousings takes nothing returns integer
     return count
 endfunction
 
+function AttackWithUnitType takes integer id returns nothing
+    local integer count = GetUnitCountDone(id)
+    if (count > 0) then
+        call CampaignAttacker(0, count, id)
+    endif
+endfunction
+
 function AttackWithMounts takes nothing returns nothing
     local integer i = 0
-    local integer count = 0
     if (not disabled) then
         loop
             exitwhen (i >= mountTypesCounter)
-            set count = GetUnitCountDone(mountTypes[i])
-            if (count > 0) then
-                call CampaignAttacker(0, count, mountTypes[i])
-            endif
+            call AttackWithUnitType(mountTypes[i])
             set i = i + 1
         endloop
     endif
@@ -2705,10 +2708,7 @@ function AttackWithHeroes takes nothing returns nothing
     if (not disabled) then
         loop
             exitwhen (i >= heroTypesCounter)
-            set count = GetUnitCountDone(heroTypes[i])
-            if (count > 0) then
-                call CampaignAttacker(0, count, heroTypes[i])
-            endif
+            call AttackWithUnitType(heroTypes[i])
             set i = i + 1
         endloop
     endif
@@ -2718,16 +2718,17 @@ function AddStandardUnitsToAttackWave takes nothing returns nothing
     if (not disabled) then
         call AttackWithMounts()
         call AttackWithHeroes()
+        call AttackWithUnitType(SLAVE)
     endif
 endfunction
 
 function AddDragonsToAttackWave takes nothing returns nothing
-    call CampaignAttackerEx( 1, 1, 1, BLACK_DRAGON )
-    call CampaignAttackerEx( 1, 1, 1, BRONZE_DRAGON )
-    call CampaignAttackerEx( 1, 1, 1, BLUE_DRAGON )
-    call CampaignAttackerEx( 1, 1, 1, GREEN_DRAGON )
-    call CampaignAttackerEx( 1, 1, 1, NETHER_DRAGON )
-    call CampaignAttackerEx( 1, 1, 1, RED_DRAGON )
+    call CampaignAttackerEx(1, 1, 1, BLACK_DRAGON)
+    call CampaignAttackerEx(1, 1, 1, BRONZE_DRAGON)
+    call CampaignAttackerEx(1, 1, 1, BLUE_DRAGON)
+    call CampaignAttackerEx(1, 1, 1, GREEN_DRAGON)
+    call CampaignAttackerEx(1, 1, 1, NETHER_DRAGON)
+    call CampaignAttackerEx(1, 1, 1, RED_DRAGON)
 endfunction
 
 //===========================================================================
