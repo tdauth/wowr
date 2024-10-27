@@ -1748,3 +1748,7 @@ Here is a list of some modified versions online:
 * MassiveMaster: [FlyingSpearThrower](https://www.hiveworkshop.com/threads/flyingspearthrower.175223/)
 * Hermit: [CorruptedGoldmine](https://www.hiveworkshop.com/threads/corrupted-night-elves.249403/#post-2499858)
 * Hermit: [BTNCorruptedMine](https://www.hiveworkshop.com/threads/corrupted-night-elves.249403/#post-3542334)
+* Brombie: [BTNStrawberry](https://www.hiveworkshop.com/threads/btnstrawberry.199129/)
+* Steel0RaZoR: [BTNCherry](https://www.hiveworkshop.com/threads/btncherry.196149/)
+* DEE-BOO: [BTNBagOfPlums](https://www.hiveworkshop.com/threads/btnbagofplums.272993/)
+* Blizzard Entertainment: [BTNINV_Misc_Milk_04](https://www.hiveworkshop.com/threads/btninv_misc_milk_04.54931/)

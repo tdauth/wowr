@@ -3017,6 +3017,36 @@ globals
     constant integer ITEM_TINY_GRANARY                               = 'I0KA'
     constant integer WATER_SUPPLY                                    = 'h0KX'
 
+    constant integer COW                                             = 'n0DX'
+    constant integer CHICKEN                                         = 'nech'
+
+    // Hunter
+    constant integer STAG                                            = 'nder'
+    constant integer PIG                                             = 'npig'
+    constant integer SHEEP                                           = 'nshe'
+    constant integer FROG                                            = 'nfro'
+    constant integer SNOWY_OWL                                       = 'nsno'
+    constant integer RABBIT                                          = 'necr'
+    constant integer HERMIT_CRAB                                     = 'nhmc'
+    constant integer CRAB                                            = 'ncrb'
+    constant integer FEL_BOAR                                        = 'nfbr'
+    constant integer BEE                                             = 'n0DO'
+    constant integer RACCOON                                         = 'nrac'
+    constant integer ALBATROSS                                       = 'nalb'
+
+    constant integer ITEM_TYPE_ID_ANTLER                             = 'I0VS'
+    constant integer ITEM_TYPE_ID_PIG_SKIN                           = 'I0VT'
+    constant integer ITEM_TYPE_ID_SHEEP_WOOL                         = 'I0VU'
+    constant integer ITEM_TYPE_ID_FROG_LEGS                          = 'I0VY'
+    constant integer ITEM_TYPE_ID_SNOWY_OWL_FEATHER                  = 'I0WB'
+    constant integer ITEM_TYPE_ID_RABBIT_SKIN                        = 'I0WC'
+    constant integer ITEM_TYPE_ID_HERMIT_CRAB_SHELL                  = 'I0WD'
+    constant integer ITEM_TYPE_ID_CRAB_SHELL                         = 'I0WE'
+    constant integer ITEM_TYPE_ID_FEL_BOAR_SKIN                      = 'I0WF'
+    constant integer ITEM_TYPE_ID_BEE_STING                          = 'I0WG'
+    constant integer ITEM_TYPE_ID_RACOON_SKIN                        = 'I0ZM'
+    constant integer ITEM_TYPE_ID_ALBATROSS_PLUMAGE                  = 'I0ZN'
+
     // Miner
     constant integer ITEM_PICKAXE                                    = 'I0W7'
 
