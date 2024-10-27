@@ -29,6 +29,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, MURLOC_BONE_CHIPPER)
     call SetBuildUnit(2, MURLOC_CITIZEN_FEMALE)
     call SetBuildUnit(2, MURLOC_PET)
+    call SetBuildUnit(2, MURLOC_CHILD)
     
     call SetBuildUpgr(2, UPG_MURLOC_DAMAGE)
     call SetBuildUpgr(2, UPG_MURLOC_ARMOR)

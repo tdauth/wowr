@@ -29,6 +29,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(4, GNOME_GEAR)
     call SetBuildUnit(2, GNOME_TURRET)
     call SetBuildUnit(2, GNOME_CITIZEN_FEMALE)
+    call SetBuildUnit(2, GNOME_CITIZEN_PET)
+    call SetBuildUnit(2, GNOME_CITIZEN_CHILD)
 
     call SetBuildUpgr(2, UPG_GNOME_DAMAGE)
     call SetBuildUpgr(2, UPG_GNOME_ARMOR)

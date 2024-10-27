@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.28"
+    constant string MAP_VERSION                                      = "3.29"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -3637,7 +3637,9 @@ globals
 
     constant integer GNOME_CITIZEN_MALE                              = 'n0D0'
     constant integer GNOME_CITIZEN_FEMALE                            = 'n0D4'
-    constant integer GNOME_HOUSING                                   = 'h04H'
+    constant integer GNOME_CITIZEN_CHILD                             = 'n0D5'
+    constant integer GNOME_CITIZEN_PET                               = 'n0D3'
+    constant integer GNOME_HOUSING                                   = 'h0KZ'
 
     // Dalaran
     constant integer DALARAN_TIER_1                                  = 'h051' // tier 1
@@ -3705,7 +3707,7 @@ globals
 
     constant integer DALARAN_CITIZEN_MALE                            = 'n082'
     constant integer DALARAN_CITIZEN_FEMALE                          = 'n08B'
-    constant integer DALARAN_CHILD                                   = 'n0CV'
+    constant integer DALARAN_CHILD                                   = 'n09I'
     constant integer DALARAN_PET                                     = 'n00Q'
     constant integer DALARAN_HOUSING                                 = 'h09E'
 
@@ -4351,6 +4353,7 @@ globals
 
     constant integer MURLOC_CITIZEN_MALE                             = 'n0G4'
     constant integer MURLOC_CITIZEN_FEMALE                           = 'n0JV'
+    constant integer MURLOC_CHILD                                    = 'n09J'
     constant integer MURLOC_PET                                      = 'n05K'
     constant integer MURLOC_HOUSING                                  = 'h0Q0'
 

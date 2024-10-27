@@ -1746,3 +1746,5 @@ Here is a list of some modified versions online:
 * Ujimasa Hojo: [Hut (Gnoll) and Derivatives](https://www.hiveworkshop.com/threads/hut-gnoll-and-derivatives.288010/)
 * loktar: [Knight, Bandit Lord & Riderless Horse (WC1 & WC2)](https://www.hiveworkshop.com/threads/knight-bandit-lord-riderless-horse-wc1-wc2.321079/)
 * MassiveMaster: [FlyingSpearThrower](https://www.hiveworkshop.com/threads/flyingspearthrower.175223/)
+* Hermit: [CorruptedGoldmine](https://www.hiveworkshop.com/threads/corrupted-night-elves.249403/#post-2499858)
+* Hermit: [BTNCorruptedMine](https://www.hiveworkshop.com/threads/corrupted-night-elves.249403/#post-3542334)

@@ -2853,9 +2853,9 @@ function GetPlayerInfoText takes nothing returns string
     set msg = msg + ", own " + I2S2(gold) + " gold, "
 
     if (disabled) then
-        set msg = msg + "will do nothing (disabled)"
+        set msg = msg + " do nothing"
     else
-        set msg = msg + "will do something (enabled)"
+        set msg = msg + " do something"
     endif
 
     // difficulty
@@ -2876,9 +2876,9 @@ function GetPlayerInfoText takes nothing returns string
     set msg = msg + ", "
     
     if (attackEnemyPlayers) then
-        set msg = msg + "attack enemy players"
+        set msg = msg + "attack players"
     else
-        set msg = msg + "do not attack enemy players"
+        set msg = msg + "don't attack players"
     endif
     
     set msg = msg + ", "
@@ -2886,12 +2886,12 @@ function GetPlayerInfoText takes nothing returns string
     if (buildShips) then
         set msg = msg + "build ships"
     else
-        set msg = msg + "do not build ships"
+        set msg = msg + "don't build ships"
     endif
     
     set msg = msg + " and "
     
-    set msg = msg + "will have "
+    set msg = msg + "get "
 
     if (expansions > 0) then
         set msg = msg + I2S2(expansions)
@@ -2904,11 +2904,11 @@ function GetPlayerInfoText takes nothing returns string
     if (attackTargetLocation) then
         set msg = msg + " and "
     
-        set msg = msg + "attack a specific location"
+        set msg = msg + "attack a location"
     endif
 
-    set msg = msg + " and will have " + I2S2(shredders) + " Shredders"
-    set msg = msg + " and will have " + I2S2(zeppelins) + " Zeppelins"
+    set msg = msg + " and get " + I2S2(shredders) + " Shredders"
+    set msg = msg + " and get " + I2S2(zeppelins) + " Zeppelins"
     
     set msg = msg + "."
     
