@@ -1752,3 +1752,4 @@ Here is a list of some modified versions online:
 * Steel0RaZoR: [BTNCherry](https://www.hiveworkshop.com/threads/btncherry.196149/)
 * DEE-BOO: [BTNBagOfPlums](https://www.hiveworkshop.com/threads/btnbagofplums.272993/)
 * Blizzard Entertainment: [BTNINV_Misc_Milk_04](https://www.hiveworkshop.com/threads/btninv_misc_milk_04.54931/)
+* Cavman: [Skeletal Peasant](https://www.hiveworkshop.com/threads/skeletal-peasant.48363/)
