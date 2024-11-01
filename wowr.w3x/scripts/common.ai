@@ -2674,6 +2674,7 @@ function InitHousings takes nothing returns nothing
     call AddHousing(KOBOLD_HOUSING)
     call AddHousing(QUILLBOAR_HOUSING)
     call AddHousing(BANDIT_HOUSING)
+    call AddHousing(DUNGEON_HOUSING)
 endfunction
 
 function CountHousings takes nothing returns integer
