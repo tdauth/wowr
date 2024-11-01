@@ -4868,10 +4868,18 @@ globals
 
     // Dungeon
     constant integer DUNGEON_TIER_1                                  = 'o03M'
+    constant integer DUNGEON_TIER_2                                  = 'o03R'
+    constant integer DUNGEON_TIER_3                                  = 'o03S'
     constant integer DUNGEON_CAGE                                    = 'o03N' // farm
     constant integer DUNGEON_BARRACKS                                = 'o03O' // barracks
     constant integer DUNGEON_SHRINE                                  = 'o03P' // arcane sanctum
-    constant integer DUNGEON_TORTURE_CHAMBER                         = 'o03Q' // workshop
+    constant integer DUNGEON_TORTURE_CHAMBER                         = 'o03V' // mill/blacksmith
+    constant integer DUNGEON_PRISON                                  = 'o03Q' // workshop
+    constant integer DUNGEON_ALTAR                                   = 'o03U' // altar
+    constant integer DUNGEON_SHOP                                    = 'o03T' // shop
+
+    constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
+    constant integer UPG_DUNGEON_EAT_TREE                            = 'R07I'
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
     constant integer DUNGEON_SKELETON_WARRIOR                        = 'n09K' // footman
@@ -4883,6 +4891,7 @@ globals
     constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
     constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine
 
+    constant integer DUNGEON_CITIZEN_MALE                            = 'n0A4'
     constant integer DUNGEON_PET                                     = 'n0A9' // rat
 
     // Dragonkin
