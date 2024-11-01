@@ -4882,6 +4882,7 @@ globals
 
     constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
     constant integer UPG_DUNGEON_EAT_TREE                            = 'R07I'
+    constant integer UPG_DUNGEON_BURNING_ARROWS                      = 'R07J'
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
     constant integer DUNGEON_SKELETON_WARRIOR                        = 'n09K' // footman
