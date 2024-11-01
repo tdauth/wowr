@@ -4877,6 +4877,8 @@ globals
     constant integer DUNGEON_PRISON                                  = 'o03Q' // workshop
     constant integer DUNGEON_ALTAR                                   = 'o03U' // altar
     constant integer DUNGEON_SHOP                                    = 'o03T' // shop
+    constant integer DUNGEON_DRAGON_ROOST                            = 'o03W' // aviary
+    constant integer DUNGEON_TRAP                                    = 'o03X'
 
     constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
     constant integer UPG_DUNGEON_EAT_TREE                            = 'R07I'
@@ -4890,9 +4892,14 @@ globals
     constant integer DUNGEON_SALAMANDER                              = 'n09Y' // siege engine
     constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
     constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine
+    constant integer DUNGEON_LORD                                    = 'n0A5' // tauren
+    constant integer DUNGEON_RED_DRAGON                              = 'n0A6' // gryphon
 
     constant integer DUNGEON_CITIZEN_MALE                            = 'n0A4'
+    constant integer DUNGEON_CITIZEN_FEMALE                          = 'n0A7'
+    constant integer DUNGEON_CHILD                                   = 'n0A8'
     constant integer DUNGEON_PET                                     = 'n0A9' // rat
+    constant integer DUNGEON_HOUSING                                 = 'h07X'
 
     // Dragonkin
     constant integer DRAGONKIN_TIER_1                                = 'o08P'

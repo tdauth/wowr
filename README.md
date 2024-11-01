@@ -1757,3 +1757,5 @@ Here is a list of some modified versions online:
 * Achille: [Skeleton Berserker](https://www.hiveworkshop.com/threads/skeleton-berserker.340198/)
 * The_Silent: [Dungeon Walls [Mine] + Bookshelfs, Porticulus and Columns](https://www.hiveworkshop.com/threads/dungeon-walls-mine-bookshelfs-porticulus-and-columns.273921/)
 * Mike: [Rack (torture)](https://www.hiveworkshop.com/threads/rack-torture.244184/)
+* HappyTauren: [Skeleton Fire Warior Mage](https://www.hiveworkshop.com/threads/skeleton-fire-warior-mage.65646/)
+* HappyTauren: [BTNSkeletonFireWarriorMage](https://www.hiveworkshop.com/threads/btnskeletonfirewarriormage.65903/)

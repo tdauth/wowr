@@ -7,7 +7,7 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit(2, ORC_HOUSING)
+    call SetBuildUnit(2, DUNGEON_HOUSING)
     call SetBuildUnit(1, DUNGEON_TORTURE_CHAMBER)
     call SetBuildUnit(3, DUNGEON_CAGE)
     call SetBuildUnit(2, DUNGEON_BARRACKS)
@@ -29,9 +29,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(1, DUNGEON_SHRINE)
     call SetBuildUnit(1, DUNGEON_PRISON)
     call SetBuildUnit(4, DUNGEON_CAGE)
-    call SetBuildUnit(2, ORC_CITIZEN_FEMALE)
-    call SetBuildUnit(2, ORC_PET)
-    call SetBuildUnit(2, ORC_CHILD)
+    call SetBuildUnit(2, DUNGEON_CITIZEN_FEMALE)
+    call SetBuildUnit(2, DUNGEON_PET)
+    call SetBuildUnit(2, DUNGEON_CHILD)
     
     call SetBuildUpgr(2, UPG_ORC_MELEE)
     call SetBuildUpgr(2, UPG_ORC_RANGED)
@@ -45,7 +45,7 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 buildings
     call SetBuildUnit(1, DUNGEON_TIER_3)
-    call SetBuildUnit(1, TOTEM)
+    call SetBuildUnit(1, DUNGEON_DRAGON_ROOST)
     call SetBuildUnit(5, DUNGEON_CAGE)
     call SetBuildUnit(2, ORC_WATCH_TOWER)
     call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
@@ -198,7 +198,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(2, 2, 3, WITCH_DOCTOR)
     call CampaignAttackerEx(2, 2, 3, SHAMAN)
     call CampaignAttackerEx(2, 2, 3, KODO_BEAST)
-    call CampaignAttackerEx(2, 2, 3, WYVERN)
+    call CampaignAttackerEx(2, 2, 3, DUNGEON_RED_DRAGON)
     call AddStandardUnitsToAttackWave()
     call Sleep(M2)
     call LaunchAttack()
@@ -212,7 +212,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(2, 2, 3, WITCH_DOCTOR)
     call CampaignAttackerEx(2, 2, 3, SHAMAN)
     call CampaignAttackerEx(2, 2, 3, KODO_BEAST)
-    call CampaignAttackerEx(2, 2, 3, WYVERN)
+    call CampaignAttackerEx(2, 2, 3, DUNGEON_RED_DRAGON)
     call CampaignAttackerEx(2, 2, 3, TAUREN)
     call CampaignAttackerEx(2, 2, 3, SPIRIT_WALKER)
     call AddStandardUnitsToAttackWave()
@@ -236,9 +236,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx(2, 2, 2, CHAOS_KODO)
         
          // big air army
-        call CampaignAttackerEx(8, 10, 12, WYVERN)
-        call CampaignAttackerEx(8, 10, 12, BATRIDER)
-        call CampaignAttackerEx(6, 8, 10, ORC_DRAGON)
+        call CampaignAttackerEx(8, 10, 12, DUNGEON_RED_DRAGON)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
