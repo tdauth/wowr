@@ -1759,3 +1759,4 @@ Here is a list of some modified versions online:
 * Mike: [Rack (torture)](https://www.hiveworkshop.com/threads/rack-torture.244184/)
 * HappyTauren: [Skeleton Fire Warior Mage](https://www.hiveworkshop.com/threads/skeleton-fire-warior-mage.65646/)
 * HappyTauren: [BTNSkeletonFireWarriorMage](https://www.hiveworkshop.com/threads/btnskeletonfirewarriormage.65903/)
+* HappyTauren: [Lava](https://www.hiveworkshop.com/threads/lava.222317/)

@@ -233,11 +233,11 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Siege Golem",     -2,
         MenuItem "Sludge Monstrosity",     -2,
         MenuItem "Salamander Lord",     -2,
+        MenuItem "Revenant",     -2,
         MenuItem "Evoker",     -2,
         MenuItem "Dragonspawn",     -2,
         MenuItem "Firelord",     -2,
         MenuItem "Sea Giant",     -2,
-        MenuItem "Revenant",     -2,
         MenuItem "Deeplord Revenant",     -2,
         MenuItem "Magnataur Destroyer",     -2,
         MenuItem "Berserk Wildkin",     -2,
@@ -275,6 +275,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "Pandaria",     -2,
         MenuItem "Argus",     -2,
         MenuItem "Azuremyst Isles",     -2,
+        MenuItem "Dungeon",     -2,
     }
 }
 
