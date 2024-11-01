@@ -2853,6 +2853,9 @@ globals
     constant integer RESURRECTION_STONE_1                            = 'nbsw'
     constant integer WATER_TOWER                                     = 'n0ND'
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
+    constant integer LEGENDARY_ARTIFACT                              = 'nfrm'
+
+    constant integer DEAD_ANIMAL                                     = 'n0A2'
 
     // Destructibles
     constant integer CRANNIES_SUMMER                                 = 'B011'
@@ -4862,6 +4865,25 @@ globals
     constant integer BANDIT_PET                                      = 'n0C7'
     constant integer BANDIT_HOUSING                                  = 'h07L'
     constant integer ITEM_TINY_BANDIT_HOUSING                        = 'I0DE'
+
+    // Dungeon
+    constant integer DUNGEON_TIER_1                                  = 'o03M'
+    constant integer DUNGEON_CAGE                                    = 'o03N' // farm
+    constant integer DUNGEON_BARRACKS                                = 'o03O' // barracks
+    constant integer DUNGEON_SHRINE                                  = 'o03P' // arcane sanctum
+    constant integer DUNGEON_TORTURE_CHAMBER                         = 'o03Q' // workshop
+
+    constant integer DUNGEON_WORKER                                  = 'o03L'
+    constant integer DUNGEON_SKELETON_WARRIOR                        = 'n09K' // footman
+    constant integer DUNGEON_SKELETON_ARCHER                         = 'n09M' // archer
+    constant integer DUNGEON_SKELETON_BERSERKER                      = 'n09U' // knight
+    constant integer DUNGEON_GHOST                                   = 'n09R' // sorceress
+    constant integer DUNGEON_FIRE_REVENANT                           = 'n09T' // priest
+    constant integer DUNGEON_SALAMANDER                              = 'n09Y' // siege engine
+    constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
+    constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine
+
+    constant integer DUNGEON_PET                                     = 'n0A9' // rat
 
     // Dragonkin
     constant integer DRAGONKIN_TIER_1                                = 'o08P'

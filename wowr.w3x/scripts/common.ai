@@ -2589,6 +2589,11 @@ function InitHeroes takes nothing returns nothing
     call AddHero(ASSASSIN)
     call AddHero(THIEF)
     call AddHero(DARK_WIZARD)
+    // Dungeon
+    call AddHero(GIANT_SKELETON)
+    call AddHero(SIEGE_GOLEM)
+    call AddHero(SLUDGE_MONSTROSITY)
+    call AddHero(SALAMANDER_LORD)
     // Dragonkin
     call AddHero(EVOKER)
     call AddHero(DRAGONSPAWN)
@@ -2597,8 +2602,6 @@ function InitHeroes takes nothing returns nothing
     call AddHero(SEA_GIANT)
     call AddHero(REVENANT)
     call AddHero(REVENANT_DEEPLORD)
-    call AddHero(GIANT_SKELETON)
-    call AddHero(SIEGE_GOLEM)
     call AddHero(MAGNATAUR_DESTROYER)
     call AddHero(BERSERK_WILDKIN)
     call AddHero(ICECROWN_OVERLORD)
@@ -2606,8 +2609,6 @@ function InitHeroes takes nothing returns nothing
     call AddHero(BROOD_MOTHER)
     call AddHero(ANCIENT_SASQUATCH)
     call AddHero(ANCIENT_WENDIGO)
-    call AddHero(SLUDGE_MONSTROSITY)
-    call AddHero(SALAMANDER_LORD)
     call AddHero(HARPY_QUEEN)
     call AddHero(RED_DRAGON_HERO)
 endfunction

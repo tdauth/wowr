@@ -1753,3 +1753,5 @@ Here is a list of some modified versions online:
 * DEE-BOO: [BTNBagOfPlums](https://www.hiveworkshop.com/threads/btnbagofplums.272993/)
 * Blizzard Entertainment: [BTNINV_Misc_Milk_04](https://www.hiveworkshop.com/threads/btninv_misc_milk_04.54931/)
 * Cavman: [Skeletal Peasant](https://www.hiveworkshop.com/threads/skeletal-peasant.48363/)
+* Villagerino: [Skeleton Warriors (pack I)](https://www.hiveworkshop.com/threads/skeleton-warriors-pack-i.336636/)
+* Achille: [Skeleton Berserker](https://www.hiveworkshop.com/threads/skeleton-berserker.340198/)
