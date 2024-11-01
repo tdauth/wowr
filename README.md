@@ -1760,3 +1760,4 @@ Here is a list of some modified versions online:
 * HappyTauren: [Skeleton Fire Warior Mage](https://www.hiveworkshop.com/threads/skeleton-fire-warior-mage.65646/)
 * HappyTauren: [BTNSkeletonFireWarriorMage](https://www.hiveworkshop.com/threads/btnskeletonfirewarriormage.65903/)
 * HappyTauren: [Lava](https://www.hiveworkshop.com/threads/lava.222317/)
+* TriggerHappy: [GameStatus (Replay Detection)](https://www.hiveworkshop.com/threads/gamestatus-replay-detection.293176/)

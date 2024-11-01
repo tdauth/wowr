@@ -4892,6 +4892,7 @@ globals
     constant integer DUNGEON_SALAMANDER                              = 'n09Y' // siege engine
     constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
     constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine
+    constant integer DUNGEON_WILDKIN                                 = 'n0AC' // dragon hawk
     constant integer DUNGEON_LORD                                    = 'n0A5' // tauren
     constant integer DUNGEON_RED_DRAGON                              = 'n0A6' // gryphon
 
