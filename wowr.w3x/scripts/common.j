@@ -2857,6 +2857,16 @@ globals
 
     constant integer DEAD_ANIMAL                                     = 'n0A2'
 
+    // Levers
+    constant integer LEVER_ALL                                       = 'n0AH'
+
+    constant integer MOVE_BRIDGE_DOWN                                = 'o02X' // close
+    constant integer MOVE_BRIDGE_UP                                  = 'o02Y' // open
+    constant integer CLOSE_GATE                                      = 'o02W' // close
+    constant integer OPEN_GATE                                       = 'o02V' // open
+    constant integer DISABLE_PORTAL                                  = 'o040' // close
+    constant integer ENABLE_PORTAL                                   = 'o03Z' // open
+
     // Destructibles
     constant integer CRANNIES_SUMMER                                 = 'B011'
     constant integer CRANNIES_FALL                                   = 'B012'
