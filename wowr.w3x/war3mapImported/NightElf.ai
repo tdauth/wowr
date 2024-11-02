@@ -217,7 +217,8 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx(3, 3, 3, MOUNTAIN_GIANT)
         
         // big air army
-        call CampaignAttackerEx(8, 10, 12, HIPPO)
+        call CampaignAttackerEx(4, 5, 6, HIPPO)
+        call CampaignAttackerEx(4, 5, 6, HIPPO_RIDER)
         call CampaignAttackerEx(8, 10, 12, CHIMAERA)
         call CampaignAttackerEx(8, 10, 12, FAERIE_DRAGON)
         

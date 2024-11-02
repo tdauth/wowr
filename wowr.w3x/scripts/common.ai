@@ -700,6 +700,8 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == PEASANT then
         set have_qty = have_qty + GetUnitCountEx(MILITIA,false,townid)
+    elseif unitid == TANK then
+        set have_qty = have_qty + GetUnitCountEx(ROCKET_TANK,false,townid)
 
     elseif unitid == GREAT_HALL then
         set have_qty = have_qty + GetUnitCountEx(STRONGHOLD,false,townid) + GetUnitCountEx(FORTRESS,false,townid)
@@ -755,6 +757,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE,false,townid) + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
     elseif unitid == NAGA_TEMPLE then
         set have_qty = have_qty  + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
+
+    elseif unitid == NAGA_SNAP_DRAGON then
+        set have_qty = have_qty + GetUnitCountEx(NAGA_SNAP_DRAGON_SUBMERGED,false,townid)
+    elseif unitid == NAGA_MYRMIDON then
+        set have_qty = have_qty + GetUnitCountEx(NAGA_MYRMIDON_SUBMERGED,false,townid)
+    elseif unitid == NAGA_ROYAL then
+        set have_qty = have_qty + GetUnitCountEx(NAGA_ROYAL_SUBMERGED,false,townid)
 
     elseif unitid == DEMON_GATE_1 then
         set have_qty = have_qty + GetUnitCountEx(DEMON_GATE_2,false,townid) + GetUnitCountEx(DEMON_GATE_3,false,townid)
@@ -1227,6 +1236,17 @@ function Conversions takes integer desire, integer unitid returns nothing
     elseif unitid == BLK_SPHINX then
         call ConvertNeeds(OBS_STATUE)
         call ConvertUnits(desire,OBS_STATUE)
+
+    elseif unitid == HIGH_ELF_DRAGON_HAWK_ARCHER then
+        call ConvertNeeds(HIGH_ELF_ARCHER)
+        call ConvertNeeds(HIGH_ELF_DRAGON_HAWK)
+        call MergeUnits(desire,HIGH_ELF_ARCHER,HIGH_ELF_DRAGON_HAWK,HIGH_ELF_DRAGON_HAWK_ARCHER)
+
+    elseif unitid == HIGH_ELF_EAGLE_RIDER then
+        call ConvertNeeds(HIGH_ELF_ARCHER)
+        call ConvertNeeds(HIGH_ELF_EAGLE)
+        call MergeUnits(desire,HIGH_ELF_ARCHER,HIGH_ELF_DRAGON_HAWK,HIGH_ELF_EAGLE_RIDER)
+
     endif
 endfunction
 

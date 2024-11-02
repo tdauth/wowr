@@ -2199,7 +2199,7 @@ globals
 
     // common.ai
 
-        //--------------------------------------------------------------------
+    //--------------------------------------------------------------------
     //  HUMANS
     //--------------------------------------------------------------------
 
@@ -3161,6 +3161,8 @@ globals
     constant integer FEL_DRAGON_ROOST                                = 'ndrb'
 
     // Undead
+    constant integer UNDEAD_CRYPT_FIEND_BURROWED                     = 'ucrm'
+
     constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
     constant integer UNDEAD_CHILD                                    = 'n0IT'
@@ -3176,7 +3178,7 @@ globals
 
     constant integer UNDEAD_LICH_KING                                = 'n037' // special building
 
-    // Night ELF
+    // Night Elf
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
     constant integer ELF_HOUSING                                     = 'e016'
@@ -3268,6 +3270,9 @@ globals
     constant integer NAGA_WHALER                                     = 'n05Q' // sorceress
     constant integer NAGA_SORCEROR                                   = 'n0LA' // spellbreaker
     constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
+    constant integer NAGA_SNAP_DRAGON_SUBMERGED                      = 'nsbs' // weak ranged
+    constant integer NAGA_MYRMIDON_SUBMERGED                         = 'nmys' // knight
+    constant integer NAGA_ROYAL_SUBMERGED                            = 'nnrs' // royal guard
 
     constant integer NAGA_CITIZEN_MALE                               = 'n00M'
     constant integer NAGA_CITIZEN_FEMALE                             = 'n00N'
@@ -3612,16 +3617,19 @@ globals
     constant integer UPG_HIGH_ELF_SUNWELL                            = 'R047' // special building
 
     constant integer HIGH_ELF_ENGINEER                               = 'n05D' // worker
-    constant integer HIGH_ELF_ARCHER                                 = 'n05G'
+    constant integer HIGH_ELF_ARCHER                                 = 'n05G' // rifleman
     constant integer HIGH_ELF_RANGER                                 = 'n05H'
-    constant integer HIGH_ELF_SWORDMAN                               = 'h04A'
+    constant integer HIGH_ELF_SWORDMAN                               = 'h04A' // footman
     constant integer HIGH_ELF_LIEUTENANT                             = 'h049'
     constant integer HIGH_ELF_PRIEST                                 = 'h047'
     constant integer HIGH_ELF_SORCERESS                              = 'h048'
     constant integer HIGH_ELF_BIRDIEPULT                             = 'e00N'
-    constant integer HIGH_ELF_KNIGHT                                 = 'h04E'
+    constant integer HIGH_ELF_KNIGHT                                 = 'h04E' // knight
     constant integer HIGH_ELF_EAGLE                                  = 'e00M'
-    constant integer HIGH_ELF_DRAGON_HAWK                            = 'h046'
+    constant integer HIGH_ELF_EAGLE_RIDER                            = 'e00L'
+    constant integer HIGH_ELF_DRAGON_HAWK                            = 'e00K'
+    constant integer HIGH_ELF_DRAGON_HAWK_RIDER                      = 'h046'
+    constant integer HIGH_ELF_DRAGON_HAWK_ARCHER                     = 'e00P'
     constant integer HIGH_ELF_ARCH_CLERIC                            = 'h04C'
     constant integer HIGH_ELF_DRAGON                                 = 'n05L'
 
