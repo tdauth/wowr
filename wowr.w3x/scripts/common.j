@@ -3142,6 +3142,8 @@ globals
     constant integer LIVING_STATUE                                   = 'n0N7'
     constant integer LIVING_STATUE_M                                 = 'n0N8' // standing
 
+    constant integer CAGE                                            = 'o043'
+
     // Human
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
