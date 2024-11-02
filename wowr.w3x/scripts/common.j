@@ -3133,6 +3133,9 @@ globals
     constant integer TOME_OF_ARMOR                                   = 'I13G'
     constant integer TOME_OF_DAMNAGE                                 = 'I13E'
 
+    // Dungeon
+    constant integer ITEM_SPIKE_TRAPS                                = 'I0GH'
+
     // Creeps
     constant integer SAND_WORM                                       = 'n0N2'
     constant integer SAND_WORM_BURROWED                              = 'n0N3'
@@ -4763,6 +4766,7 @@ globals
     constant integer KOBOLD_HUNTER                                   = 'n0AD' // rifleman
     constant integer KOBOLD_TUNNELER                                 = 'n0LJ' // knight
     constant integer KOBOLD_GEOMANCER                                = 'n09B' // priest
+    constant integer KOBOLD_MUSHROOM_CASTER                          = 'n0AJ' // sorcress
 
     constant integer KOBOLD_CITIZEN_MALE                             = 'n09C'
     constant integer KOBOLD_CITIZEN_FEMALE                           = 'n0A3'
@@ -4909,6 +4913,9 @@ globals
     constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
     constant integer UPG_DUNGEON_EAT_TREE                            = 'R07I'
     constant integer UPG_DUNGEON_BURNING_ARROWS                      = 'R07J'
+    constant integer UPG_DUNGEON_GHOST                               = 'R07L'
+    constant integer UPG_DUNGEON_FIRE_REVENANT                       = 'R07M'
+    constant integer UPG_DUNGEON_HERETIC                             = 'R07N'
     constant integer UPG_DUNGEON_THRONE                              = 'R07K' // special building
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
@@ -4917,6 +4924,7 @@ globals
     constant integer DUNGEON_SKELETON_BERSERKER                      = 'n09U' // knight
     constant integer DUNGEON_GHOST                                   = 'n09R' // sorceress
     constant integer DUNGEON_FIRE_REVENANT                           = 'n09T' // priest
+    constant integer DUNGEON_HERETIC                                 = 'h07Z' // spell breaker
     constant integer DUNGEON_SALAMANDER                              = 'n09Y' // siege engine
     constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
     constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine

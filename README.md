@@ -1761,3 +1761,4 @@ Here is a list of some modified versions online:
 * HappyTauren: [BTNSkeletonFireWarriorMage](https://www.hiveworkshop.com/threads/btnskeletonfirewarriormage.65903/)
 * HappyTauren: [Lava](https://www.hiveworkshop.com/threads/lava.222317/)
 * TriggerHappy: [GameStatus (Replay Detection)](https://www.hiveworkshop.com/threads/gamestatus-replay-detection.293176/)
+* Bleeq: [Female Kobold Mushroom Caster](https://www.hiveworkshop.com/threads/female-kobold-mushroom-caster.355677/)
