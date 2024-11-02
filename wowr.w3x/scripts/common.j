@@ -3123,6 +3123,12 @@ globals
     constant integer TOME_OF_ARMOR                                   = 'I13G'
     constant integer TOME_OF_DAMNAGE                                 = 'I13E'
 
+    // Creeps
+    constant integer SAND_WORM                                       = 'n0N2'
+    constant integer SAND_WORM_BURROWED                              = 'n0N3'
+    constant integer LIVING_STATUE                                   = 'n0N7'
+    constant integer LIVING_STATUE_M                                 = 'n0N8' // standing
+
     // Human
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
@@ -4886,11 +4892,14 @@ globals
     constant integer DUNGEON_ALTAR                                   = 'o03U' // altar
     constant integer DUNGEON_SHOP                                    = 'o03T' // shop
     constant integer DUNGEON_DRAGON_ROOST                            = 'o03W' // aviary
-    constant integer DUNGEON_TRAP                                    = 'o03X'
+    constant integer DUNGEON_SPIKES                                  = 'o03X' // watch tower
+    constant integer DUNGEON_SHIPYARD                                = 'u01O'
+    constant integer DUNGEON_THRONE                                  = 'o03Y' // special building
 
     constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
     constant integer UPG_DUNGEON_EAT_TREE                            = 'R07I'
     constant integer UPG_DUNGEON_BURNING_ARROWS                      = 'R07J'
+    constant integer UPG_DUNGEON_THRONE                              = 'R07K' // special building
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
     constant integer DUNGEON_SKELETON_WARRIOR                        = 'n09K' // footman
@@ -4902,7 +4911,7 @@ globals
     constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
     constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine
     constant integer DUNGEON_WILDKIN                                 = 'n0AC' // dragon hawk
-    constant integer DUNGEON_LORD                                    = 'n0A5' // tauren
+    constant integer DUNGEON_LORD                                    = 'n0A5' // tauren special unit limited to 4
     constant integer DUNGEON_RED_DRAGON                              = 'n0A6' // gryphon
 
     constant integer DUNGEON_CITIZEN_MALE                            = 'n0A4'
