@@ -56,7 +56,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(2, UPG_ORC_SHAMAN)
     call SetBuildUpgr(2, UPG_ORC_DOCS)
     call SetBuildUpgr(3, UPG_ORC_BURROWS)
-    call SetBuildUpgr(3, UPG_ORC_SPIKES)
     call SetBuildUpgr(1, UPG_ORC_ENSNARE)
     call SetBuildUpgr(2, UPG_ORC_SWALKER)
     call SetBuildUpgr(1, UPG_ORC_PULVERIZE)

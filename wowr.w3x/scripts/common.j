@@ -4926,6 +4926,9 @@ globals
     constant integer UPG_DUNGEON_CAPTURE                             = 'R07Q'
     constant integer UPG_DUNGEON_DEVOUR                              = 'R07R'
     constant integer UPG_DUNGEON_BERSERK                             = 'R07S'
+    constant integer UPG_DUNGEON_SLEEP_FORM                          = 'R07T'
+    constant integer UPG_DUNGEON_WAR_STOMP                           = 'R07U'
+    constant integer UPG_DUNGEON_SPIKES                              = 'R07V'
     constant integer UPG_DUNGEON_THRONE                              = 'R07K' // special building
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
@@ -4938,6 +4941,7 @@ globals
     constant integer DUNGEON_SALAMANDER                              = 'n09Y' // siege engine
     constant integer DUNGEON_SLUDGE                                  = 'n0A0' // mortar
     constant integer DUNGEON_WAR_GOLEM                               = 'n0A1' // flying machine
+    constant integer DUNGEON_WAR_GOLEM_M                             = 'n05C'
     constant integer DUNGEON_WILDKIN                                 = 'n0AC' // dragon hawk
     constant integer DUNGEON_LORD                                    = 'n0A5' // tauren special unit limited to 4
     constant integer DUNGEON_RED_DRAGON                              = 'n0A6' // gryphon
