@@ -4757,7 +4757,7 @@ globals
     constant integer KOBOLD_MINES                                    = 'n09N' // special building
 
     constant integer UPG_KOBOLD_BACKPACK                             = 'R0DX'
-    constant integer UPG_KOBOLD_BURROW                               = 'R0GB'
+    constant integer UPG_KOBOLD_BURROW                               = 'R0GA'
     constant integer UPG_KOBOLD_CANDLES                              = 'R0GA'
     constant integer UPG_KOBOLD_MELEE                                = 'R0GA'
     constant integer UPG_KOBOLD_ARMOR                                = 'R0GA'
@@ -4921,6 +4921,11 @@ globals
     constant integer UPG_DUNGEON_GHOST                               = 'R07L'
     constant integer UPG_DUNGEON_FIRE_REVENANT                       = 'R07M'
     constant integer UPG_DUNGEON_HERETIC                             = 'R07N'
+    constant integer UPG_DUNGEON_SKELETON_BONES                      = 'R07O'
+    constant integer UPG_DUNGEON_CREATE_CORPSE                       = 'R07P'
+    constant integer UPG_DUNGEON_CAPTURE                             = 'R07Q'
+    constant integer UPG_DUNGEON_DEVOUR                              = 'R07R'
+    constant integer UPG_DUNGEON_BERSERK                             = 'R07S'
     constant integer UPG_DUNGEON_THRONE                              = 'R07K' // special building
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
