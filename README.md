@@ -1764,3 +1764,4 @@ Here is a list of some modified versions online:
 * Bleeq: [Female Kobold Mushroom Caster](https://www.hiveworkshop.com/threads/female-kobold-mushroom-caster.355677/)
 * maxor_gan: [BTNBlueMushroom](https://www.hiveworkshop.com/threads/btnbluemushroom.185713/)
 * Scias: [BTNGoblinWorker](https://www.hiveworkshop.com/threads/btngoblinworker.356227/)
+* kellym0: [LavaBridge.v075](https://www.hiveworkshop.com/threads/lavabridge-v075.251963/)
