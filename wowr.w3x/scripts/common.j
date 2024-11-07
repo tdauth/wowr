@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.29"
+    constant string MAP_VERSION                                      = "3.30"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -2930,6 +2930,7 @@ globals
     constant integer DWARF_SUBMARINE_HERO_SUBMERGED                  = 'H0GT'
     constant integer HUMAN_BATTLESHIP_HERO                           = 'H0KA'
     constant integer CAPTAIN_HERO                                    = 'N0CR'
+    constant integer ITEM_VALUES_DUMMY_HERO                          = 'H04W'
 
     constant integer ITEM_TYPE_RANDOM_HERO                           = 'I068'
     constant integer ITEM_TYPE_RANDOM_RACE                           = 'I06A'
