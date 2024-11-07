@@ -222,13 +222,16 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
+        call CampaignAttackerEx(2, 2, 2, DUNGEON_SKELETON_WARRIOR)
         call CampaignAttackerEx(2, 2, 2, DUNGEON_SKELETON_ARCHER)
+        call CampaignAttackerEx(2, 2, 2, DUNGEON_SKELETON_BERSERKER)
         call CampaignAttackerEx(2, 2, 2, DUNGEON_SALAMANDER)
         call CampaignAttackerEx(2, 2, 2, DUNGEON_GHOST)
         call CampaignAttackerEx(2, 2, 2, DUNGEON_FIRE_REVENANT)
+        call CampaignAttackerEx(2, 2, 2, DUNGEON_HERETIC)
+        call CampaignAttackerEx(2, 2, 2, DUNGEON_SLUDGE)
         call CampaignAttackerEx(2, 2, 2, DUNGEON_WAR_GOLEM)
         call CampaignAttackerEx(2, 2, 2, DUNGEON_WILDKIN)
-        call CampaignAttackerEx(4, 4, 4, CHAOS_DUNGEON_SKELETON_WARRIOR)
         call CampaignAttackerEx(4, 4, 4, DUNGEON_LORD)
         
          // big air army

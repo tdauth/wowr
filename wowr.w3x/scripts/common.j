@@ -5029,6 +5029,8 @@ globals
     constant integer DUNGEON_WILDKIN                                 = 'n0AC' // dragon hawk
     constant integer DUNGEON_LORD                                    = 'n0A5' // tauren special unit limited to 4
     constant integer DUNGEON_RED_DRAGON                              = 'n0A6' // gryphon
+    constant integer DUNGEON_PRISONER                                = 'n0AK'
+    constant integer DUNGEON_PRISONER_CORPSE                         = 'n0AO'
 
     constant integer DUNGEON_CITIZEN_MALE                            = 'n0A4'
     constant integer DUNGEON_CITIZEN_FEMALE                          = 'n0A7'
