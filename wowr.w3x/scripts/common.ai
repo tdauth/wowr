@@ -790,7 +790,6 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == HIGH_ELF_OUTPOST then
         set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_GUARD_TOWER,false,townid)
 
-    // High Elf
     elseif unitid == GNOME_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(GNOME_TIER_2,false,townid) + GetUnitCountEx(GNOME_TIER_3,false,townid)
     elseif unitid == GNOME_TIER_2 then
@@ -863,9 +862,53 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(TUSKARR_ICE_WALL,false,townid) + GetUnitCountEx(TUSKARR_SPIDER_SHRINE,false,townid) + GetUnitCountEx(TUSKARR_FROST_SNOWMAN,false,townid)
 
     elseif unitid == NERUBIAN_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(NERUBIAN_TIER_2,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
+        set have_qty = have_qty + GetUnitCountEx(NERUBIAN_TIER_2,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3,false,townid) + GetUnitCountEx(NERUBIAN_TIER_1_BURROWED,false,townid) + GetUnitCountEx(NERUBIAN_TIER_2_BURROWED,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3_BURROWED,false,townid)
     elseif unitid == NERUBIAN_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid) + GetUnitCountEx(NERUBIAN_TIER_2_BURROWED,false,townid) + GetUnitCountEx(NERUBIAN_TIER_3_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_ALTAR then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_ALTAR_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_ANCIENT_SHRINE then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_ANCIENT_SHRINE_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_HATCHERY then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_HATCHERY_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TOWER_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_ZIGGURAT then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_ZIGGURAT_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_NEST then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_NEST_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_SPAWNING_GROUND then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_SPAWNING_GROUND_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_SPAWNING_PIT then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_SPAWNING_PIT_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_VAULT_OF_RELICS then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_VAULT_OF_RELICS_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_HOUSING then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_HOUSING_BURROWED,false,townid)
+    elseif unitid == CRYPT_LORD then
+        set have_qty = have_qty  + GetUnitCountEx(CRYPT_LORD_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_QUEEN_HERO then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_QUEEN_HERO_BURROWED,false,townid)
+    elseif unitid == ANUBARAK_HERO then
+        set have_qty = have_qty  + GetUnitCountEx(ANUBARAK_HERO_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_WORKER then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_WORKER_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_CRYPT_FIEND then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_CRYPT_FIEND_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_SEER then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_SEER_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_SPEAR_THROWER then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_SPEAR_THROWER_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_SPIDER_LORD then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_SPIDER_LORD_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_WARRIOR then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_WARRIOR_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_WEBSPINNER then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_WEBSPINNER_BURROWED,false,townid)
+    elseif unitid == NERUBIAN_CRYPT_DRONE then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_CRYPT_DRONE_COCOON,false,townid)
+    elseif unitid == NERUBIAN_QUEEN then
+        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_QUEEN_BURROWED,false,townid)
 
     elseif unitid == MURLOC_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MURLOC_TIER_2,false,townid) + GetUnitCountEx(MURLOC_TIER_3,false,townid)
@@ -915,6 +958,10 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(KOBOLD_TIER_3,false,townid)
     elseif unitid == KOBOLD_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(KOBOLD_ADVANCED_BOULDER_TOWER,false,townid)
+    elseif unitid == KOBOLD_TUNNELER then
+        set have_qty = have_qty  + GetUnitCountEx(KOBOLD_TUNNELER_BURROWED,false,townid)
+    elseif unitid == GEOMANCER then
+        set have_qty = have_qty  + GetUnitCountEx(GEOMANCER_BURROWED,false,townid)
 
     elseif unitid == QUILLBOAR_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(QUILLBOAR_TIER_2,false,townid) + GetUnitCountEx(QUILLBOAR_TIER_3,false,townid)
@@ -1241,6 +1288,7 @@ function Conversions takes integer desire, integer unitid returns nothing
         call ConvertNeeds(OBS_STATUE)
         call ConvertUnits(desire,OBS_STATUE)
 
+    // High Elf
     elseif unitid == HIGH_ELF_DRAGON_HAWK_ARCHER then
         call ConvertNeeds(HIGH_ELF_ARCHER)
         call ConvertNeeds(HIGH_ELF_DRAGON_HAWK)

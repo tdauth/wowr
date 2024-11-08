@@ -3270,6 +3270,11 @@ globals
 
     // Undead
     constant integer UNDEAD_CRYPT_FIEND_BURROWED                     = 'ucrm'
+    constant integer CARRION_BEETLE_1                                = 'ucs1'
+    constant integer CARRION_BEETLE_2                                = 'ucs2'
+    constant integer CARRION_BEETLE_3                                = 'ucs3'
+    constant integer CARRION_BEETLE_2_BURROWED                       = 'ucsB'
+    constant integer CARRION_BEETLE_3_BURROWED                       = 'ucsC'
 
     constant integer UNDEAD_CITIZEN_MALE                             = 'n00G'
     constant integer UNDEAD_CITIZEN_FEMALE                           = 'n00H'
@@ -4412,18 +4417,30 @@ globals
 
     // Nerubian
     constant integer NERUBIAN_TIER_1                                 = 'u01Q'
+    constant integer NERUBIAN_TIER_1_BURROWED                        = 'u01R'
     constant integer NERUBIAN_TIER_2                                 = 'u023'
+    constant integer NERUBIAN_TIER_2_BURROWED                        = 'u02N'
     constant integer NERUBIAN_TIER_3                                 = 'u024'
+    constant integer NERUBIAN_TIER_3_BURROWED                        = 'u02O'
     constant integer NERUBIAN_ALTAR                                  = 'u01U'
+    constant integer NERUBIAN_ALTAR_BURROWED                         = 'u02G'
     constant integer NERUBIAN_ANCIENT_SHRINE                         = 'u02B' // sanctuary
+    constant integer NERUBIAN_ANCIENT_SHRINE_BURROWED                = 'u02P'
     constant integer NERUBIAN_HATCHERY                               = 'u029' // mill/forge
+    constant integer NERUBIAN_HATCHERY_BURROWED                      = 'u02Q'
     constant integer NERUBIAN_TOWER                                  = 'u02A' // watch tower
+    constant integer NERUBIAN_TOWER_BURROWED                         = 'u02F'
     constant integer NERUBIAN_TUNNEL                                 = 'u028' // sacrifical pit
     constant integer NERUBIAN_ZIGGURAT                               = 'u01S' // farm
+    constant integer NERUBIAN_ZIGGURAT_BURROWED                      = 'u01T'
     constant integer NERUBIAN_NEST                                   = 'u02D' // slaughterhouse
+    constant integer NERUBIAN_NEST_BURROWED                          = 'u02L'
     constant integer NERUBIAN_SPAWNING_GROUND                        = 'u025' // boneyard
+    constant integer NERUBIAN_SPAWNING_GROUND_BURROWED               = 'u02J'
     constant integer NERUBIAN_SPAWNING_PIT                           = 'u01Z' // barracks
+    constant integer NERUBIAN_SPAWNING_PIT_BURROWED                  = 'u02M'
     constant integer NERUBIAN_VAULT_OF_RELICS                        = 'u026' // shop
+    constant integer NERUBIAN_VAULT_OF_RELICS_BURROWED               = 'u02K'
     constant integer NERUBIAN_AZJOL_NERUB                            = 'n0EH' // special building
     constant integer NERUBIAN_SHIPYARD                               = 'u037'
 
@@ -4444,21 +4461,31 @@ globals
     constant integer UPG_NERUBIAN_WEB                                = 'R0AK'
 
     constant integer NERUBIAN_WORKER                                 = 'u01P'
+    constant integer NERUBIAN_WORKER_BURROWED                        = 'u02R'
     constant integer NERUBIAN_CRYPT_DRONE                            = 'u021'
+    constant integer NERUBIAN_CRYPT_DRONE_COCOON                     = 'u022'
     constant integer NERUBIAN_CRYPT_FIEND                            = 'u020'
+    constant integer NERUBIAN_CRYPT_FIEND_BURROWED                   = 'u02E'
     constant integer NERUBIAN_FLYING_BOMBARDER                       = 'u02C'
     constant integer NERUBIAN_QUEEN                                  = 'n0EB'
+    constant integer NERUBIAN_QUEEN_BURROWED                         = 'n0ER'
     constant integer NERUBIAN_SEER                                   = 'n0EF'
+    constant integer NERUBIAN_SEER_BURROWED                          = 'n0EQ'
     constant integer NERUBIAN_SPEAR_THROWER                          = 'n0EI'
+    constant integer NERUBIAN_SPEAR_THROWER_BURROWED                 = 'n0EP'
     constant integer NERUBIAN_SPIDER_LORD                            = 'n0EG'
+    constant integer NERUBIAN_SPIDER_LORD_BURROWED                   = 'n0EO'
     constant integer NERUBIAN_WARRIOR                                = 'n0E8' // footman
+    constant integer NERUBIAN_WARRIOR_BURROWED                       = 'n0EN'
     constant integer NERUBIAN_WEBSPINNER                             = 'n0EJ'
+    constant integer NERUBIAN_WEBSPINNER_BURROWED                    = 'n0EM'
 
     constant integer NERUBIAN_CITIZEN_MALE                           = 'n0E9'
     constant integer NERUBIAN_CITIZEN_FEMALE                         = 'n0EA'
     constant integer NERUBIAN_CHILD                                  = 'n065'
     constant integer NERUBIAN_PET                                    = 'n0EC'
     constant integer NERUBIAN_HOUSING                                = 'h0OX'
+    constant integer NERUBIAN_HOUSING_BURROWED                       = 'h0P1'
 
     // Murloc
     constant integer MURLOC_TIER_1                                   = 'n0FP'
@@ -4854,6 +4881,7 @@ globals
     constant integer KOBOLD_WARRIOR                                  = 'n0LI' // footman
     constant integer KOBOLD_HUNTER                                   = 'n0AD' // rifleman
     constant integer KOBOLD_TUNNELER                                 = 'n0LJ' // knight
+    constant integer KOBOLD_TUNNELER_BURROWED                        = 'n0LK'
     constant integer KOBOLD_GEOMANCER                                = 'n09B' // priest
     constant integer KOBOLD_MUSHROOM_CASTER                          = 'n0AJ' // sorcress
 
@@ -5000,6 +5028,9 @@ globals
     constant integer DUNGEON_THRONE                                  = 'o03Y' // special building
 
     constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
+    constant integer UPG_DUNGEON_MELEE                               = 'R07W'
+    constant integer UPG_DUNGEON_ARMOR                               = 'R07X'
+    constant integer UPG_DUNGEON_RANGED                              = 'R07Y'
     constant integer UPG_DUNGEON_EAT_TREE                            = 'R07I'
     constant integer UPG_DUNGEON_BURNING_ARROWS                      = 'R07J'
     constant integer UPG_DUNGEON_GHOST                               = 'R07L'
@@ -5152,7 +5183,10 @@ globals
     constant integer LICH_KING                                       = 'U00N'
     // Nerubian
     constant integer NERUBIAN_QUEEN_HERO                             = 'U027'
+    constant integer NERUBIAN_QUEEN_HERO_BURROWED                    = 'U03H'
     constant integer ANUBARAK_HERO                                   = 'U01D'
+    constant integer ANUBARAK_HERO_BURROWED                          = 'U03I'
+    constant integer CRYPT_LORD_BURROWED                             = 'U03G'
     // Night Elf
     constant integer RANGER_NIGHT_ELF                                = 'H0YI'
     constant integer MOUNTAIN_GIANT_HERO                             = 'E00G'
@@ -5275,6 +5309,7 @@ globals
     constant integer GNOLL_ALPHA                                     = 'N0HG'
     // Kobold
     constant integer GEOMANCER                                       = 'N0HH'
+    constant integer GEOMANCER_BURROWED                              = 'N0MY'
     // Quillboar
     constant integer RAZORMANE_CHIEFTAIN                             = 'O01R'
     // Bandit
