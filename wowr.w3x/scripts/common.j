@@ -3117,10 +3117,12 @@ globals
     constant integer BEE                                             = 'n0DO'
     constant integer RACCOON                                         = 'nrac'
     constant integer ALBATROSS                                       = 'nalb'
+    constant integer RAT                                             = 'nrat'
 
     constant integer ITEM_TYPE_ID_ANTLER                             = 'I0VS'
     constant integer ITEM_TYPE_ID_PIG_SKIN                           = 'I0VT'
     constant integer ITEM_TYPE_ID_SHEEP_WOOL                         = 'I0VU'
+    constant integer ITEM_TYPE_ID_RATS_TAIL                          = 'I0HF'
     constant integer ITEM_TYPE_ID_FROG_LEGS                          = 'I0VY'
     constant integer ITEM_TYPE_ID_SNOWY_OWL_FEATHER                  = 'I0WB'
     constant integer ITEM_TYPE_ID_RABBIT_SKIN                        = 'I0WC'
