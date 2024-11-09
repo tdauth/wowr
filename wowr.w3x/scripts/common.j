@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.30"
+    constant string MAP_VERSION                                      = "3.31"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -3255,6 +3255,26 @@ globals
     constant integer CAGE                                            = 'o043'
 
     // Human
+    constant integer ITEM_HUMAN_TIER_1                               = 'I02P'
+    constant integer ITEM_HUMAN_TIER_2                               = 'I0L7'
+    constant integer ITEM_HUMAN_TIER_3                               = 'tcas'
+    constant integer ITEM_HUMAN_FARM                                 = 'tfar'
+    constant integer ITEM_HUMAN_SCOUT_TOWER                          = 'tsct'
+    constant integer ITEM_HUMAN_GUARD_TOWER                          = 'I0LH'
+    constant integer ITEM_HUMAN_CANNON_TOWER                         = 'I0LI'
+    constant integer ITEM_HUMAN_ARCANE_TOWER                         = 'I0LJ'
+    constant integer ITEM_HUMAN_ALTAR                                = 'tbak'
+    constant integer ITEM_HUMAN_BARRACKS                             = 'tbar'
+    constant integer ITEM_HUMAN_BLACK_SMITH                          = 'tbsm'
+    constant integer ITEM_HUMAN_MILL                                 = 'tlum'
+    constant integer ITEM_HUMAN_ARCANE_SANCTUM                       = 'I0LC'
+    constant integer ITEM_HUMAN_GRYPHON_AVIARY                       = 'I0LB'
+    constant integer ITEM_HUMAN_WORKSHOP                             = 'I0LA'
+    constant integer ITEM_HUMAN_SHOP                                 = 'I0LD'
+    constant integer ITEM_HUMAN_SHIPYARD                             = 'I0LG'
+    constant integer ITEM_HUMAN_SPECIAL_BUILDING                     = 'I0LF'
+    constant integer ITEM_HUMAN_HOUSING                              = 'I0LE'
+
     constant integer HUMAN_CITIZEN_MALE                              = 'n00E'
     constant integer HUMAN_CITIZEN_FEMALE                            = 'n00F'
     constant integer HUMAN_CHILD                                     = 'n0CV'
@@ -3263,8 +3283,8 @@ globals
 
     constant integer HUMAN_SHIPYARD                                  = 'h010'
     constant integer HUMAN_TRANSPORT_SHIP                            = 'hbot'
-    constant integer HUMAN_BATTLESHIP                                = 'hbsh'
     constant integer HUMAN_FRIGATE                                   = 'hdes'
+    constant integer HUMAN_BATTLESHIP                                = 'hbsh'
 
     constant integer UPG_HUMAN_BACKPACK                              = 'Rhpm'
     constant integer UPG_HUMAN_SUNDERING_BLADES                      = 'Rhsb'
@@ -5049,6 +5069,20 @@ globals
     constant integer DUNGEON_SPIKES                                  = 'o03X' // watch tower
     constant integer DUNGEON_SHIPYARD                                = 'u01O'
     constant integer DUNGEON_THRONE                                  = 'o03Y' // special building
+
+    constant integer ITEM_DUNGEON_CAGE                               = 'I0K1'
+    constant integer ITEM_DUNGEON_TIER_2                             = 'I0K4'
+    constant integer ITEM_DUNGEON_TIER_3                             = 'I0K3'
+    constant integer ITEM_DUNGEON_BARRACKS                           = 'I0K5'
+    constant integer ITEM_DUNGEON_MILL                               = 'I0K9'
+    constant integer ITEM_DUNGEON_ALTAR                              = 'I0KO'
+    constant integer ITEM_DUNGEON_SHOP                               = 'I0KP'
+    constant integer ITEM_DUNGEON_SPIKES                             = 'I0KY'
+    constant integer ITEM_DUNGEON_PRISON                             = 'I0N2'
+    constant integer ITEM_DUNGEON_DRAGON_ROOST                       = 'I0N3'
+    constant integer ITEM_DUNGEON_HOUSING                            = 'I0N9'
+    constant integer ITEM_DUNGEON_THRONE                             = 'I0NA'
+    constant integer ITEM_DUNGEON_SHIPYARD                           = 'I0TX'
 
     constant integer UPG_DUNGEON_BACKPACK                            = 'R07H'
     constant integer UPG_DUNGEON_MELEE                               = 'R07W'
