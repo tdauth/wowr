@@ -746,6 +746,33 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(ILLIDAN_DEMON,false,townid)
         
     // World of Warcraft Reforged
+
+    elseif unitid == OLD_HORDE_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(OLD_HORDE_TIER_2,false,townid) + GetUnitCountEx(OLD_HORDE_TIER_3,false,townid)
+    elseif unitid == OLD_HORDE_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_TIER_3,false,townid)
+    elseif unitid == OLD_HORDE_WATCH_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_GUARD_TOWER,false,townid) + GetUnitCountEx(OLD_HORDE_CANNON_TOWER,false,townid)
+    elseif unitid == OLD_HORDE_WORKER_BASE then
+        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_WORKER_NORMAL,false,townid) + GetUnitCountEx(OLD_HORDE_WORKER_ADVANCED,false,townid)
+    elseif unitid == OLD_HORDE_TROLL_AXETHROWER then
+        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_TROLL_BERSERKER,false,townid)
+    elseif unitid == OLD_HORDE_OGRE then
+        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_OGRE_MAGE,false,townid)
+
+    elseif unitid == ALLIANCE_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_TIER_2,false,townid) + GetUnitCountEx(ALLIANCE_TIER_3,false,townid)
+    elseif unitid == ALLIANCE_TIER_2 then
+        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_TIER_3,false,townid)
+    elseif unitid == ALLIANCE_SCOUT_TOWER then
+        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_GUARD_TOWER,false,townid) + GetUnitCountEx(ALLIANCE_CANNON_TOWER,false,townid)
+    elseif unitid == ALLIANCE_WORKER_BASE then
+        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_WORKER_NORMAL,false,townid) + GetUnitCountEx(ALLIANCE_WORKER_ADVANCED,false,townid)
+    elseif unitid == ALLIANCE_ELVEN_ARCHER then
+        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_ELVEN_RANGER,false,townid)
+    elseif unitid == ALLIANCE_KNIGHT then
+        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_PALADIN,false,townid)
+
     elseif unitid == BLOOD_ELF_TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(BLOOD_ELF_KEEP,false,townid) + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
     elseif unitid == BLOOD_ELF_KEEP then
@@ -756,7 +783,7 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == NAGA_TEMPLE_1 then
         set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE,false,townid) + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
     elseif unitid == NAGA_TEMPLE then
-        set have_qty = have_qty  + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
+        set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
 
     elseif unitid == NAGA_SNAP_DRAGON then
         set have_qty = have_qty + GetUnitCountEx(NAGA_SNAP_DRAGON_SUBMERGED,false,townid)
@@ -775,20 +802,28 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == GOBLIN_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(GOBLIN_TIER_2,false,townid) + GetUnitCountEx(GOBLIN_TIER_3,false,townid)
     elseif unitid == GOBLIN_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(GOBLIN_TIER_3,false,townid)
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_TIER_3,false,townid)
+    elseif unitid == GOBLIN_TOWER then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_TURRET,false,townid) + GetUnitCountEx(GOBLIN_ROCKET_TOWER_1,false,townid) + GetUnitCountEx(GOBLIN_ROCKET_TOWER_2,false,townid) + GetUnitCountEx(GOBLIN_ROCKET_TOWER_3,false,townid)
+    elseif unitid == GOBLIN_ROCKET_TOWER_1 then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_ROCKET_TOWER_2,false,townid) + GetUnitCountEx(GOBLIN_ROCKET_TOWER_3,false,townid)
+    elseif unitid == GOBLIN_ROCKET_TOWER_2 then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_ROCKET_TOWER_3,false,townid)
+     elseif unitid == GOBLIN_FLAMETHROWER then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_MOBILE_TURRET,false,townid)
 
     elseif unitid == DWARF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_2,false,townid) + GetUnitCountEx(DWARF_TIER_3,false,townid)
     elseif unitid == DWARF_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(DWARF_TIER_3,false,townid)
+        set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_3,false,townid)
 
     elseif unitid == HIGH_ELF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(HIGH_ELF_TIER_2,false,townid) + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
     elseif unitid == HIGH_ELF_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
+        set have_qty = have_qty + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
 
     elseif unitid == HIGH_ELF_OUTPOST then
-        set have_qty = have_qty  + GetUnitCountEx(HIGH_ELF_GUARD_TOWER,false,townid)
+        set have_qty = have_qty + GetUnitCountEx(HIGH_ELF_GUARD_TOWER,false,townid)
 
     elseif unitid == GNOME_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(GNOME_TIER_2,false,townid) + GetUnitCountEx(GNOME_TIER_3,false,townid)
@@ -1279,11 +1314,13 @@ function Conversions takes integer desire, integer unitid returns nothing
         return
     endif
 
+    // Night Elf
     if unitid == HIPPO_RIDER then
         call ConvertNeeds(ARCHER)
         call ConvertNeeds(HIPPO)
         call MergeUnits(desire,ARCHER,HIPPO,HIPPO_RIDER)
 
+    // Undead
     elseif unitid == BLK_SPHINX then
         call ConvertNeeds(OBS_STATUE)
         call ConvertUnits(desire,OBS_STATUE)
@@ -1297,8 +1334,13 @@ function Conversions takes integer desire, integer unitid returns nothing
     elseif unitid == HIGH_ELF_EAGLE_RIDER then
         call ConvertNeeds(HIGH_ELF_ARCHER)
         call ConvertNeeds(HIGH_ELF_EAGLE)
-        call MergeUnits(desire,HIGH_ELF_ARCHER,HIGH_ELF_DRAGON_HAWK,HIGH_ELF_EAGLE_RIDER)
+        call MergeUnits(desire,HIGH_ELF_ARCHER,HIGH_ELF_EAGLE,HIGH_ELF_EAGLE_RIDER)
 
+    // Goblin
+     elseif unitid == GOBLIN_MOBILE_TURRET then
+        call ConvertNeeds(GOBLIN_FLAMETHROWER)
+        call ConvertNeeds(GOBLIN_TURRET)
+        call MergeUnits(desire,GOBLIN_FLAMETHROWER,GOBLIN_TURRET,GOBLIN_MOBILE_TURRET)
     endif
 endfunction
 

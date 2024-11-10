@@ -3246,13 +3246,82 @@ globals
     // Creeps
     constant integer BARBED_ARACHNATHID_WITH_BURROW                  = 'nanm'
     constant integer BARBED_ARACHNATHID_BURROWED                     = 'nbnb'
-
     constant integer SAND_WORM                                       = 'n0N2'
     constant integer SAND_WORM_BURROWED                              = 'n0N3'
     constant integer LIVING_STATUE                                   = 'n0N7'
     constant integer LIVING_STATUE_M                                 = 'n0N8' // standing
-
     constant integer CAGE                                            = 'o043'
+
+    // Old Horde
+    constant integer OLD_HORDE_TIER_1                                = 'o07P'
+    constant integer OLD_HORDE_TIER_2                                = 'o089'
+    constant integer OLD_HORDE_TIER_3                                = 'o08A'
+    constant integer OLD_HORDE_FARM                                  = 'o07Q'
+    constant integer OLD_HORDE_ALTAR                                 = 'o082'
+    constant integer OLD_HORDE_MILL                                  = 'o07S'
+    constant integer OLD_HORDE_BLACKSMITH                            = 'o07T'
+    constant integer OLD_HORDE_BARRACKS                              = 'o07R'
+    constant integer OLD_HORDE_SHOP                                  = 'o09U'
+    constant integer OLD_HORDE_WATCH_TOWER                           = 'o07U'
+    constant integer OLD_HORDE_GUARD_TOWER                           = 'o086'
+    constant integer OLD_HORDE_CANNON_TOWER                          = 'o087'
+    constant integer OLD_HORDE_TEMPLE_OF_THE_DAMNED                  = 'u030'
+    constant integer OLD_HORDE_GOBLIN_ALCHEMIST                      = 'o084'
+    constant integer OLD_HORDE_DRAGON_ROOST                          = 'o085'
+    constant integer OLD_HORDE_OGRE_MOUND                            = 'o083'
+
+    constant integer OLD_HORDE_WORKER_BASE                           = 'o07N'
+    constant integer OLD_HORDE_WORKER_NORMAL                         = 'o07O'
+    constant integer OLD_HORDE_WORKER_ADVANCED                       = 'o07Z'
+    constant integer OLD_HORDE_OGRE                                  = 'n0I9'
+    constant integer OLD_HORDE_OGRE_MAGE                             = 'n0IE'
+    constant integer OLD_HORDE_TROLL_AXETHROWER                      = 'n0I8'
+    constant integer OLD_HORDE_TROLL_BERSERKER                       = 'n0IA'
+
+    constant integer OLD_HORDE_HOUSING                               = 'h00V'
+    constant integer OLD_HORDE_SHIPYARD                              = 'o07W'
+
+    // Alliance of Lordaeron
+    constant integer ALLIANCE_TIER_1                                 = 'h0S3'
+    constant integer ALLIANCE_TIER_2                                 = 'h0TE'
+    constant integer ALLIANCE_TIER_3                                 = 'h0TF'
+    constant integer ALLIANCE_FARM                                   = 'h0TG'
+    constant integer ALLIANCE_CHURCH                                 = 'h0TN'
+    constant integer ALLIANCE_MILL                                   = 'h0TI'
+    constant integer ALLIANCE_BLACKSMITH                             = 'h0TJ'
+    constant integer ALLIANCE_BARRACKS                               = 'h0TH'
+    constant integer ALLIANCE_SHOP                                   = 'h0TP'
+    constant integer ALLIANCE_SCOUT_TOWER                            = 'h0TV'
+    constant integer ALLIANCE_GUARD_TOWER                            = 'h0TZ'
+    constant integer ALLIANCE_CANNON_TOWER                           = 'h0U0'
+    constant integer ALLIANCE_MAGE_TOWER                             = 'h0TK'
+    constant integer ALLIANCE_GNOMISH_INVENTOR                       = 'h0TL'
+    constant integer ALLIANCE_AVIARY                                 = 'h0TM'
+    constant integer ALLIANCE_STABLES                                = 'h0TU'
+    constant integer ALLIANCE_SHIPYARD                               = 'o08K'
+
+    constant integer UPG_ALLIANCE_BACKPACK                           = 'R0G0'
+
+    constant integer ALLIANCE_WORKER_BASE                            = 'h0S2'
+    constant integer ALLIANCE_WORKER_NORMAL                          = 'h0TW'
+    constant integer ALLIANCE_WORKER_ADVANCED                        = 'h0TX'
+    constant integer ALLIANCE_FOOTMAN                                = 'h0TS'
+    constant integer ALLIANCE_ELVEN_ARCHER                           = 'n0J2'
+    constant integer ALLIANCE_ELVEN_RANGER                           = 'n0J3'
+    constant integer ALLIANCE_KNIGHT                                 = 'h0TT'
+    constant integer ALLIANCE_PALADIN                                = 'h0WF'
+    constant integer ALLIANCE_MAGE                                   = 'h0TO'
+    constant integer ALLIANCE_BALLISTA                               = 'e029'
+    constant integer ALLIANCE_DEMOLITION_SQUAD                       = 'n0J1'
+    constant integer ALLIANCE_GRYPHON_RIDER                          = 'h0WO'
+    constant integer ALLIANCE_FLYING_MACHINE                         = 'h0TQ'
+    constant integer ALLIANCE_OIL_TANKER                             = 'h0TY'
+
+    constant integer ALLIANCE_HOUSING                                = 'h04X'
+    constant integer ALLIANCE_CITIZEN_MALE                           = 'n0AP'
+    constant integer ALLIANCE_CITIZEN_FEMALE                         = 'n0AQ'
+    constant integer ALLIANCE_CHILD                                  = 'n0AS'
+    constant integer ALLIANCE_PET                                    = 'n0AV'
 
     // Human
     constant integer ITEM_HUMAN_TIER_1                               = 'I02P'
@@ -3632,6 +3701,8 @@ globals
     constant integer GOBLIN_EMPEROR                                  = 'h02E' // tauren
     constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // Obsidian Statue
     constant integer GOBLIN_SUBMARINE                                = 'h02I'
+    constant integer GOBLIN_MOBILE_TURRET                            = 'e00J'
+    constant integer GOBLIN_TURRET                                   = 'o01E'
 
     constant integer UPG_GOBLIN_STEEL_RWEAPONS                       = 'R033'
     constant integer UPG_GOBLIN_STEEL_WEAPONS                        = 'R02M'
