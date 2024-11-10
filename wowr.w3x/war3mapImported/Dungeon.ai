@@ -10,7 +10,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, DUNGEON_HOUSING)
     call SetBuildUnit(1, DUNGEON_TORTURE_CHAMBER)
     call SetBuildUnit(3, DUNGEON_CAGE)
-    call SetBuildUnit(2, DUNGEON_BARRACKS)
+    call SetBuildUnit(1, DUNGEON_BARRACKS)
     call SetBuildUnit(1, DUNGEON_ALTAR)
     call SetBuildUnit(1, DUNGEON_SHOP)
     
@@ -24,8 +24,7 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 2 buildings
     call SetBuildUnit(1, DUNGEON_TIER_2)
-    call SetBuildUnit(1, DUNGEON_TORTURE_CHAMBER)
-    call SetBuildUnit(1, DUNGEON_SHRINE)
+    call SetBuildUnit(1, DUNGEON_BRAZIER)
     call SetBuildUnit(1, DUNGEON_PRISON)
     call SetBuildUnit(4, DUNGEON_CAGE)
     call SetBuildUnit(2, DUNGEON_CITIZEN_FEMALE)
@@ -35,7 +34,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(2, UPG_DUNGEON_MELEE)
     call SetBuildUpgr(2, UPG_DUNGEON_RANGED)
     call SetBuildUpgr(2, UPG_DUNGEON_ARMOR)
-    //call SetBuildUpgr(2, UPG_ORC_BURROWS)
     call SetBuildUpgr(2, UPG_DUNGEON_SPIKES)
     call SetBuildUpgr(1, UPG_DUNGEON_DEVOUR)
     call SetBuildUpgr(1, UPG_DUNGEON_EAT_TREE)
@@ -56,10 +54,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(2, UPG_DUNGEON_FIRE_REVENANT)
     call SetBuildUpgr(2, UPG_DUNGEON_GHOST)
     call SetBuildUpgr(2, UPG_DUNGEON_HERETIC)
-    //call SetBuildUpgr(3, UPG_ORC_BURROWS)
     call SetBuildUpgr(3, UPG_DUNGEON_SPIKES)
-    //call SetBuildUpgr(1, UPG_ORC_ENSNARE)
-    //call SetBuildUpgr(2, UPG_ORC_SWALKER)
+    call SetBuildUpgr(1, UPG_DUNGEON_RESISTANT_SKIN)
     call SetBuildUpgr(1, UPG_DUNGEON_WAR_STOMP)
     call SetBuildUpgr(1, UPG_DUNGEON_SLEEP_FORM)
     call SetBuildUpgr(1, UPG_DUNGEON_BERSERK)

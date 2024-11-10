@@ -5060,7 +5060,7 @@ globals
     constant integer DUNGEON_TIER_3                                  = 'o03S'
     constant integer DUNGEON_CAGE                                    = 'o03N' // farm
     constant integer DUNGEON_BARRACKS                                = 'o03O' // barracks
-    constant integer DUNGEON_SHRINE                                  = 'o03P' // arcane sanctum
+    constant integer DUNGEON_BRAZIER                                 = 'o03P' // arcane sanctum
     constant integer DUNGEON_TORTURE_CHAMBER                         = 'o03V' // mill/blacksmith
     constant integer DUNGEON_PRISON                                  = 'o03Q' // workshop
     constant integer DUNGEON_ALTAR                                   = 'o03U' // altar
@@ -5078,6 +5078,7 @@ globals
     constant integer ITEM_DUNGEON_ALTAR                              = 'I0KO'
     constant integer ITEM_DUNGEON_SHOP                               = 'I0KP'
     constant integer ITEM_DUNGEON_SPIKES                             = 'I0KY'
+    constant integer ITEM_DUNGEON_BRAZIER                            = 'I0TY'
     constant integer ITEM_DUNGEON_PRISON                             = 'I0N2'
     constant integer ITEM_DUNGEON_DRAGON_ROOST                       = 'I0N3'
     constant integer ITEM_DUNGEON_HOUSING                            = 'I0N9'
@@ -5101,6 +5102,7 @@ globals
     constant integer UPG_DUNGEON_SLEEP_FORM                          = 'R07T'
     constant integer UPG_DUNGEON_WAR_STOMP                           = 'R07U'
     constant integer UPG_DUNGEON_SPIKES                              = 'R07V'
+    constant integer UPG_DUNGEON_RESISTANT_SKIN                      = 'R07Z'
     constant integer UPG_DUNGEON_THRONE                              = 'R07K' // special building
 
     constant integer DUNGEON_WORKER                                  = 'o03L'
