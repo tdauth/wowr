@@ -1767,3 +1767,4 @@ Here is a list of some modified versions online:
 * kellym0: [LavaBridge.v075](https://www.hiveworkshop.com/threads/lavabridge-v075.251963/)
 * Grunts_Fadora: [BTNTomeGreen](https://www.hiveworkshop.com/threads/btntomegreen.202803/)
 * Grunts_Fadora: [BTNTomeRed](https://www.hiveworkshop.com/threads/btntomered.202802/)
+* Technomancer: [BTNMasks](https://www.hiveworkshop.com/threads/btnmasks.58173/)
