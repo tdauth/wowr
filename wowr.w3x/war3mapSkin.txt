@@ -1,13 +1,6 @@
 [CustomSkin]
-ConsoleInventoryCoverTexture=UI\Widgets\EscMenu\Human\blank-background.blp
-ConsoleTexture01=UI\Widgets\EscMenu\Human\blank-background.blp
-ConsoleTexture02=UI\Widgets\EscMenu\Human\blank-background.blp
-ConsoleTexture03=UI\Widgets\EscMenu\Human\blank-background.blp
-ConsoleTexture04=UI\Widgets\EscMenu\Human\blank-background.blp
 InfoPanelIconArmorDivine=ReplaceableTextures\CommandButtons\ATTDivineArmorNew.blp
 InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmorNew.blp
-ResearchComplete=ResearchCompleteGeneric
-TimeOfDayIndicator=war3mapImported\CustomTimeIndicator.mdx
 
 [Errors]
 Cooldownstock=TRIGSTR_48559
