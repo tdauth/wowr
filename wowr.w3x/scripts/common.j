@@ -3309,7 +3309,11 @@ globals
     constant integer OLD_HORDE_EYE_OF_KILROGG                        = 'n0J0'
     constant integer OLD_HORDE_OIL_TANKER                            = 'o07Y'
 
-    constant integer OLD_HORDE_HOUSING                               = 'h00V'
+    constant integer OLD_HORDE_HOUSING                               = 'h080'
+    constant integer OLD_HORDE_CITIZEN_MALE                          = 'n0AW'
+    constant integer OLD_HORDE_CITIZEN_FEMALE                        = 'n0AX'
+    constant integer OLD_HORDE_CHILD                                 = 'n0AY'
+    constant integer OLD_HORDE_PET                                   = 'n0AZ'
 
     // Alliance of Lordaeron
     constant integer ALLIANCE_TIER_1                                 = 'h0S3'
