@@ -687,7 +687,6 @@ endfunction
 
 //============================================================================
 function TownCountEx takes integer unitid, boolean only_done, integer townid returns integer
-
     local integer have_qty = GetUnitCountEx(unitid,only_done,townid)
 
     if unitid == TOWN_HALL then
@@ -746,6 +745,9 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(ILLIDAN_DEMON,false,townid)
         
     // World of Warcraft Reforged
+
+    elseif unitid == WATER_TOWER then
+        set have_qty = have_qty + GetUnitCountEx(ADVANCED_WATER_TOWER,false,townid)
 
     elseif unitid == OLD_HORDE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(OLD_HORDE_TIER_2,false,townid) + GetUnitCountEx(OLD_HORDE_TIER_3,false,townid)
