@@ -1,21 +1,28 @@
 function BuildingStrategy takes nothing returns nothing
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, FOUNTAIN_OF_LIFE)
-    call SetBuildUnit(1, HIDEOUT)
-    call SetBuildUnit(3, NEUTRAL_CITIZEN)
+    call SetBuildUnit(1, FREELANCER_TIER_1)
+    call SetBuildUnit(3, FREELANCER_CITIZEN_MALE)
+    call SetBuildUnit(3, FREELANCER_CITIZEN_FEMALE)
+    call SetBuildUnit(3, FREELANCER_CHILD)
+    call SetBuildUnit(3, FREELANCER_PET)
+    call SetBuildUnit(4, FREELANCER_HOUSING)
 
     call SetBuildUnit(2, SHREDDER)
 
     //call SetBuildUnit(1, FREELANCER_LABORATORY) // TODO Leads to a crash!
     //call SetBuildUnit(1, FREELANCER_SHOP)
     //call SetBuildUnit(1, FREELANCER_MERCENARY_CAMP)
-    call SetBuildUnit(1, FORTIFIED_HIDEOUT)
-    call SetBuildUnit(1, GUARDIANS_CITADEL)
+    call SetBuildUnit(1, FREELANCER_TIER_2)
+    call SetBuildUnit(1, FREELANCER_TIER_3)
+    call SetBuildUnit(1, FREELANCER_ADVANCED_TOWER)
+
+    call SetBuildUpgr(1, UPG_FREELANCER_MAGIC_SENTRY)
 
     call BuildingStrategyStandardTier3Freelancer()
 
      loop
-        call LoopActionWoWReforged()
+        call LoopActionFreelancerWoWReforged()
 
         call Sleep(M1)
     endloop

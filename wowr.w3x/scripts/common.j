@@ -2857,6 +2857,45 @@ globals
 
     constant integer DEAD_ANIMAL                                     = 'n0A2'
 
+    // Neutral
+    constant integer GOLD_MINE                                       = 'ngol'
+
+    // All Races
+    constant integer SHREDDER                                        = 'ngir'
+    constant integer DRILLBOT                                        = 'n0M5'
+    constant integer HARVEST_CART                                    = 'n0H6'
+    constant integer AI_LABORATORY                                   = 'h01T'
+    constant integer BLACK_DRAGON                                    = 'nbwm'
+    constant integer BRONZE_DRAGON                                   = 'nbzd'
+    constant integer BLUE_DRAGON                                     = 'nadr'
+    constant integer GREEN_DRAGON                                    = 'ngrd'
+    constant integer NETHER_DRAGON                                   = 'nndr'
+    constant integer RED_DRAGON                                      = 'nrwm'
+
+    constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
+    constant integer UPG_STORM_PROTECTION                            = 'R029'
+
+    constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
+    constant integer MAX_WOWR_HERO_LEVEL                             = 75
+
+    constant integer HIDEOUT                                         = 'h00J'
+    constant integer FORTIFIED_HIDEOUT                               = 'h00K'
+    constant integer GUARDIANS_CITADEL                               = 'h00L'
+
+    constant integer GRYPHON_MOUNT                                   = 'h004'
+    constant integer WYVERN_MOUNT                                    = 'o003'
+    constant integer FROST_WYRM_MOUNT                                = 'u004'
+    constant integer CHIMAERA_MOUNT                                  = 'e005'
+    constant integer NETHER_DRAKE_MOUNT                              = 'n007'
+    constant integer DRAGONHAWK_MOUNT                                = 'h04L'
+
+    constant integer FOUNTAIN_OF_LIFE                                = 'h007'
+    constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
+    constant integer NEUTRAL_CITIZEN_FEMALE                          = 'n03E'
+    constant integer NEUTRAL_CHILD                                   = 'n0IV'
+
+    constant integer GNOMISH_LOCOMOTIVE_TRAIN                        = 'n0IP'
+
     // Levers
     constant integer LEVER_ALL                                       = 'n0AH'
 
@@ -3251,6 +3290,50 @@ globals
     constant integer LIVING_STATUE                                   = 'n0N7'
     constant integer LIVING_STATUE_M                                 = 'n0N8' // standing
     constant integer CAGE                                            = 'o043'
+
+    // Freelancer
+    constant integer FREELANCER_TIER_1                               = HIDEOUT
+    constant integer FREELANCER_TIER_2                               = FORTIFIED_HIDEOUT
+    constant integer FREELANCER_TIER_3                               = GUARDIANS_CITADEL
+    constant integer FREELANCER_LABORATORY                           = 'h01V'
+    constant integer FREELANCER_SHOP                                 = 'h01S'
+    constant integer FREELANCER_MERCENARY_CAMP                       = 'h01U'
+    constant integer FREELANCER_HOUSING                              = 'h081'
+    constant integer FREELANCER_TOWER                                = 'n055'
+    constant integer FREELANCER_ADVANCED_TOWER                       = 'n056'
+    constant integer FREELANCER_SHIPYARD                             = 'o09W'
+
+    constant integer UPG_FREELANCER_MAGIC_SENTRY                     = 'R0EM'
+    constant integer UPG_FREELANCER_MASONRY                          = 'R00W'
+    constant integer UPG_FREELANCER_CHEAP_EVOLUTION                  = UPG_CHEAP_EVOLUTION
+
+    constant integer CREEP_DARK_WIZARD                               = 'nwzd'
+    constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
+    constant integer CREEP_DOOM_GUARD                                = 'nbal'
+    constant integer CREEP_WRAITH                                    = 'ngh2'
+    constant integer CREEP_SPIDER_CRAB                               = 'nsc2'
+    constant integer CREEP_HARPY                                     = 'nhrh'
+    constant integer CREEP_GREEN_DRAKE                               = 'ngdk'
+    constant integer CREEP_DARK_TROLL_PRIEST                         = 'ndth'
+    constant integer CREEP_BANDIT_LORD                               = 'nbld'
+    constant integer CREEP_SEA_GIANT_BEHEMOTH                        = 'nsgb'
+    constant integer CREEP_EREDAR_WARLOCK                            = 'nerw'
+
+    constant integer ITEM_FREELANCER_TIER_1                          = 'I018'
+    constant integer ITEM_FREELANCER_TIER_2                          = 'I0NG'
+    constant integer ITEM_FREELANCER_TIER_3                          = 'I0NH'
+    constant integer ITEM_FREELANCER_LABORATORY                      = 'I0NF'
+    constant integer ITEM_FREELANCER_MERCENARY_CAMP                  = 'I0NE'
+    constant integer ITEM_FREELANCER_SHOP                            = 'I0ND'
+    constant integer ITEM_FREELANCER_HOUSING                         = 'I0TZ'
+    constant integer ITEM_FREELANCER_TOWER                           = 'I0NB'
+    constant integer ITEM_FREELANCER_ADVANCED_TOWER                  = 'I0NC'
+    constant integer ITEM_FREELANCER_SHIPYARD                        = 'I0X3'
+
+    constant integer FREELANCER_CITIZEN_MALE                         = NEUTRAL_CITIZEN
+    constant integer FREELANCER_CITIZEN_FEMALE                       = NEUTRAL_CITIZEN_FEMALE
+    constant integer FREELANCER_CHILD                                = NEUTRAL_CHILD
+    constant integer FREELANCER_PET                                  = 'n00Q'
 
     // Old Horde
     constant integer OLD_HORDE_TIER_1                                = 'o07P'
@@ -5256,44 +5339,6 @@ globals
     constant integer DRAGONKIN_FOOTMAN                               = 'n0NL'
     constant integer DRAGONKIN_RIFLEMAN                              = 'o0AP'
 
-    // Neutral
-    constant integer GOLD_MINE                                       = 'ngol'
-
-    // All Races
-
-    constant integer SHREDDER                                        = 'ngir'
-    constant integer DRILLBOT                                        = 'n0M5'
-    constant integer HARVEST_CART                                    = 'n0H6'
-    constant integer AI_LABORATORY                                   = 'h01T'
-    constant integer BLACK_DRAGON                                    = 'nbwm'
-    constant integer BRONZE_DRAGON                                   = 'nbzd'
-    constant integer BLUE_DRAGON                                     = 'nadr'
-    constant integer GREEN_DRAGON                                    = 'ngrd'
-    constant integer NETHER_DRAGON                                   = 'nndr'
-    constant integer RED_DRAGON                                      = 'nrwm'
-
-    constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
-    constant integer UPG_STORM_PROTECTION                            = 'R029'
-
-    constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
-    constant integer MAX_WOWR_HERO_LEVEL                             = 75
-
-    constant integer HIDEOUT                                         = 'h00J'
-    constant integer FORTIFIED_HIDEOUT                               = 'h00K'
-    constant integer GUARDIANS_CITADEL                               = 'h00L'
-
-    constant integer GRYPHON_MOUNT                                   = 'h004'
-    constant integer WYVERN_MOUNT                                    = 'o003'
-    constant integer FROST_WYRM_MOUNT                                = 'u004'
-    constant integer CHIMAERA_MOUNT                                  = 'e005'
-    constant integer NETHER_DRAKE_MOUNT                              = 'n007'
-    constant integer DRAGONHAWK_MOUNT                                = 'h04L'
-
-    constant integer FOUNTAIN_OF_LIFE                                = 'h007'
-    constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
-
-    constant integer GNOMISH_LOCOMOTIVE_TRAIN                        = 'n0IP'
-
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
@@ -5514,18 +5559,6 @@ globals
     constant integer SALAMANDER_LORD                                 = 'N0AE'
     constant integer HARPY_QUEEN                                     = 'N0HJ'
     constant integer RED_DRAGON_HERO                                 = 'N02W'
-
-    // Freelancer
-    constant integer CREEP_DARK_WIZARD                               = 'nwzd'
-    constant integer CREEP_UNBROKEN_DARK_WEAVER                      = 'nubw'
-    constant integer CREEP_DOOM_GUARD                                = 'nbal'
-    constant integer CREEP_WRAITH                                    = 'ngh2'
-    constant integer CREEP_SPIDER_CRAB                               = 'nsc2'
-    constant integer CREEP_HARPY                                     = 'nhrh'
-
-    constant integer FREELANCER_LABORATORY                           = 'h01V'
-    constant integer FREELANCER_SHOP                                 = 'h01S'
-    constant integer FREELANCER_MERCENARY_CAMP                       = 'h01U'
 
     // AI commands
     constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1

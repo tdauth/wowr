@@ -749,6 +749,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == WATER_TOWER then
         set have_qty = have_qty + GetUnitCountEx(ADVANCED_WATER_TOWER,false,townid)
 
+    elseif unitid == HIDEOUT then
+        set have_qty = have_qty  + GetUnitCountEx(FORTIFIED_HIDEOUT,false,townid) + GetUnitCountEx(GUARDIANS_CITADEL,false,townid)
+    elseif unitid == FORTIFIED_HIDEOUT then
+        set have_qty = have_qty  + GetUnitCountEx(GUARDIANS_CITADEL,false,townid)
+    elseif unitid == FREELANCER_TOWER then
+        set have_qty = have_qty  + GetUnitCountEx(FREELANCER_ADVANCED_TOWER,false,townid)
+
     elseif unitid == OLD_HORDE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(OLD_HORDE_TIER_2,false,townid) + GetUnitCountEx(OLD_HORDE_TIER_3,false,townid)
     elseif unitid == OLD_HORDE_TIER_2 then
@@ -1022,11 +1029,6 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
     
-    elseif unitid == HIDEOUT then
-        set have_qty = have_qty  + GetUnitCountEx(FORTIFIED_HIDEOUT,false,townid) + GetUnitCountEx(GUARDIANS_CITADEL,false,townid)
-    elseif unitid == FORTIFIED_HIDEOUT then
-        set have_qty = have_qty  + GetUnitCountEx(GUARDIANS_CITADEL,false,townid)
-        
     endif
     return have_qty
 endfunction
@@ -2756,6 +2758,9 @@ function AddHousing takes integer id returns integer
 endfunction
 
 function InitHousings takes nothing returns nothing
+    call AddHousing(FREELANCER_HOUSING)
+    call AddHousing(OLD_HORDE_HOUSING)
+    call AddHousing(ALLIANCE_HOUSING)
     call AddHousing(HUMAN_HOUSING)
     call AddHousing(ORC_HOUSING)
     call AddHousing(UNDEAD_HOUSING)
@@ -3190,6 +3195,35 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
     endif
 endfunction
 
+function ResearchHighLevelTier3ResearchesFreelancer takes nothing returns nothing
+    local integer evolutionLevel = GetUpgradeLevel(UPG_FREELANCER_CHEAP_EVOLUTION)
+    local integer improvedLevel = 0
+    if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
+        set evolutionLevel = evolutionLevel + 1
+    endif
+
+    call TraceI("ResearchHighLevelTier3Researches with evolution level %d\n", evolutionLevel)
+
+    if (not disabled) then
+        if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
+            set improvedLevel = evolutionLevel / 10
+            call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
+            call SetBuildUpgr(evolutionLevel, UPG_FREELANCER_CHEAP_EVOLUTION)
+            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
+            call SetBuildUpgr(improvedLevel, UPG_FREELANCER_MASONRY)
+            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_MOUNT)
+            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_NAVY)
+        else
+            call Trace("ResearchHighLevelTier3Researches maximum levels\n")
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_FREELANCER_MASONRY)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
+            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
+        endif
+    endif
+endfunction
+
 function BuildingStrategyStandardTier3 takes nothing returns nothing
     call SetBuildUnit(1, POWER_GENERATOR)
     call SetBuildUnit(1, ANTIMAGIC_WARD)
@@ -3234,6 +3268,13 @@ endfunction
 function LoopActionWoWReforged takes nothing returns nothing
     call Trace("LoopActionWoWReforged\n")
     call ResearchHighLevelTier3Researches()
+    call GetZeppelinsIfRequired()
+    call GetShreddersIfRequired()
+endfunction
+
+function LoopActionFreelancerWoWReforged takes nothing returns nothing
+    call Trace("LoopActionWoWReforged\n")
+    call ResearchHighLevelTier3ResearchesFreelancer()
     call GetZeppelinsIfRequired()
     call GetShreddersIfRequired()
 endfunction
