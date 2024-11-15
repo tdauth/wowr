@@ -3,12 +3,13 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, DRAGONKIN_TIER_1)
     call SetBuildUnit(17, DRAGONKIN_WORKER)
-    call SetBuildUnit(2, OGRE_CITIZEN_MALE)
+    call SetBuildUnit(2, DRAGONKIN_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
 
     call SetBuildUnit(2, DRAGONKIN_HOUSING)
     call SetBuildUnit(1, DRAGONKIN_QUARRY)
+    call SetBuildUnit(1, DRAGONKIN_FORGE)
     call SetBuildUnit(3, DRAGONKIN_NEST)
     call SetBuildUnit(1, DRAGONKIN_BARRACKS)
     call SetBuildUnit(1, DRAGONKIN_ALTAR)
@@ -25,7 +26,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(1, DRAGONKIN_ARENA)
     call SetBuildUnit(1, DRAGONKIN_ROOST)
     call SetBuildUnit(2, DRAGONKIN_TOWER)
-    call SetBuildUnit(2, OGRE_CITIZEN_FEMALE)
+    call SetBuildUnit(2, DRAGONKIN_CITIZEN_FEMALE)
+    call SetBuildUnit(2, DRAGONKIN_CHILD)
+    call SetBuildUnit(2, DRAGONKIN_PET)
     
     call SetBuildUpgr(2, UPG_OGRE_MELEE)
     call SetBuildUpgr(2, UPG_OGRE_RANGED)
@@ -43,7 +46,6 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 buildings
     call SetBuildUnit(1, DRAGONKIN_TIER_3)
-    call SetBuildUnit(2, OGRE_CITIZEN_MALE)
 
     call SetBuildUpgr(3, UPG_OGRE_MELEE)
     call SetBuildUpgr(3, UPG_OGRE_RANGED)

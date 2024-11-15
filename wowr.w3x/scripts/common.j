@@ -5335,7 +5335,8 @@ globals
     constant integer DRAGONKIN_ALTAR                                 = 'o08Q'
     constant integer DRAGONKIN_BARRACKS                              = 'o0AO'
     constant integer DRAGONKIN_NEST                                  = 'o046' // farm
-    constant integer DRAGONKIN_QUARRY                                = 'o047' // mill and blacksmith
+    constant integer DRAGONKIN_QUARRY                                = 'o047' // mill
+    constant integer DRAGONKIN_FORGE                                 = 'o04C' // blacksmith
     constant integer DRAGONKIN_ARCANE_TEMPLE                         = 'o048' // arcane sanctuary
     constant integer DRAGONKIN_ARENA                                 = 'o049' // workshop
     constant integer DRAGONKIN_ROOST                                 = 'o04A' // aviary
@@ -5349,6 +5350,10 @@ globals
     constant integer DRAGONKIN_RIFLEMAN                              = 'o0AP'
     constant integer DRAGONKIN_BLACK_DRAGON                          = 'n0B0'
 
+    constant integer DRAGONKIN_CITIZEN_MALE                          = 'n0B1'
+    constant integer DRAGONKIN_CITIZEN_FEMALE                        = 'n0B2'
+    constant integer DRAGONKIN_CHILD                                 = 'n0B3'
+    constant integer DRAGONKIN_PET                                   = 'n0B4'
     constant integer DRAGONKIN_HOUSING                               = 'h082'
 
     // WoW Reforged heroes
