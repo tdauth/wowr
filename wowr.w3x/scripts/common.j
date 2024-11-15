@@ -5330,8 +5330,17 @@ globals
 
     // Dragonkin
     constant integer DRAGONKIN_TIER_1                                = 'o08P'
+    constant integer DRAGONKIN_TIER_2                                = 'o041'
+    constant integer DRAGONKIN_TIER_3                                = 'o044'
     constant integer DRAGONKIN_ALTAR                                 = 'o08Q'
     constant integer DRAGONKIN_BARRACKS                              = 'o0AO'
+    constant integer DRAGONKIN_NEST                                  = 'o046' // farm
+    constant integer DRAGONKIN_QUARRY                                = 'o047' // mill and blacksmith
+    constant integer DRAGONKIN_ARCANE_TEMPLE                         = 'o048' // arcane sanctuary
+    constant integer DRAGONKIN_ARENA                                 = 'o049' // workshop
+    constant integer DRAGONKIN_ROOST                                 = 'o04A' // aviary
+    constant integer DRAGONKIN_TOWER                                 = 'o04B'
+    constant integer DRAGONKIN_SHOP                                  = 'o045'
 
     constant integer UPG_DRAGONKIN_BACKPACK                          = 'R0GF'
 

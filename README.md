@@ -1768,3 +1768,4 @@ Here is a list of some modified versions online:
 * Grunts_Fadora: [BTNTomeGreen](https://www.hiveworkshop.com/threads/btntomegreen.202803/)
 * Grunts_Fadora: [BTNTomeRed](https://www.hiveworkshop.com/threads/btntomered.202802/)
 * Technomancer: [BTNMasks](https://www.hiveworkshop.com/threads/btnmasks.58173/)
+* bakr: [Black Dragon Buildings](https://www.hiveworkshop.com/threads/black-dragon-buildings.356613/)

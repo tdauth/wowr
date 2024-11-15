@@ -1026,6 +1026,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == DUNGEON_WAR_GOLEM_M then
         set have_qty = have_qty + GetUnitCountEx(DUNGEON_WAR_GOLEM,only_done,townid)
 
+    elseif unitid == DRAGONKIN_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(DRAGONKIN_TIER_2,false,townid) + GetUnitCountEx(DUNGEON_TIER_3,false,townid)
+    elseif unitid == DRAGONKIN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(DRAGONKIN_TIER_3,false,townid)
+
     elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
     
