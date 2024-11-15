@@ -7,7 +7,7 @@ function BuildingStrategy takes nothing returns nothing
 
     call BuildingStrategyStandardTier1()
 
-    call SetBuildUnit(2, OGRE_HOUSING)
+    call SetBuildUnit(2, DRAGONKIN_HOUSING)
     call SetBuildUnit(1, DRAGONKIN_QUARRY)
     call SetBuildUnit(3, DRAGONKIN_NEST)
     call SetBuildUnit(1, DRAGONKIN_BARRACKS)
@@ -188,7 +188,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
     call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_WARLOCK)
     call CampaignAttackerEx(2, 2, 3, OGRE_CLEFTHOOF)
-    call CampaignAttackerEx(2, 2, 3, OGRE_BRONZE_DRAKE)
+    call CampaignAttackerEx(2, 2, 3, DRAGONKIN_BLACK_DRAGON)
     call AddStandardUnitsToAttackWave()
     call Sleep(M2)
     call LaunchAttack()
@@ -202,7 +202,7 @@ function AttackWaves takes nothing returns nothing
     call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
     call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_WARLOCK)
     call CampaignAttackerEx(2, 2, 3, OGRE_CLEFTHOOF)
-    call CampaignAttackerEx(2, 2, 3, OGRE_BRONZE_DRAKE)
+    call CampaignAttackerEx(2, 2, 3, DRAGONKIN_BLACK_DRAGON)
     call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_LORD)
     call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_NECROMANCER)
     call AddStandardUnitsToAttackWave()
@@ -233,7 +233,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx(3, 3, 3, OGRE_GRONN_WAR_CLUB)
         
          // big air army
-        call CampaignAttackerEx(8, 10, 12, OGRE_BRONZE_DRAKE)
+        call CampaignAttackerEx(8, 10, 12, DRAGONKIN_BLACK_DRAGON)
         call CampaignAttackerEx(6, 8, 10, OGRE_ZEPPELIN)
         
         call AddStandardUnitsToAttackWave()

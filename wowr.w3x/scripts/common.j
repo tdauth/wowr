@@ -5347,6 +5347,9 @@ globals
     constant integer DRAGONKIN_WORKER                                = 'o08O'
     constant integer DRAGONKIN_FOOTMAN                               = 'n0NL'
     constant integer DRAGONKIN_RIFLEMAN                              = 'o0AP'
+    constant integer DRAGONKIN_BLACK_DRAGON                          = 'n0B0'
+
+    constant integer DRAGONKIN_HOUSING                               = 'h082'
 
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
