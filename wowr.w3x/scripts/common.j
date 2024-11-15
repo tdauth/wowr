@@ -5366,7 +5366,9 @@ globals
     constant integer DRAGONKIN_WORKER                                = 'o08O'
     constant integer DRAGONKIN_FOOTMAN                               = 'n0NL'
     constant integer DRAGONKIN_RIFLEMAN                              = 'o0AP'
+    constant integer DRAGONKIN_KNIGHT                                = 'n0BO'
     constant integer DRAGONKIN_BLACK_DRAGON                          = 'n0B0'
+    constant integer DRAGONKIN_DRAGON_PRIEST                         = 'o04D'
 
     constant integer DRAGONKIN_CITIZEN_MALE                          = 'n0B1'
     constant integer DRAGONKIN_CITIZEN_FEMALE                        = 'n0B2'
