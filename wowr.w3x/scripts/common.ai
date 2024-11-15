@@ -2722,16 +2722,16 @@ function InitHeroes takes nothing returns nothing
     call AddHero(SIEGE_GOLEM)
     call AddHero(SLUDGE_MONSTROSITY)
     call AddHero(SALAMANDER_LORD)
+    call AddHero(REVENANT)
+    call AddHero(BERSERK_WILDKIN)
     // Dragonkin
     call AddHero(EVOKER)
     call AddHero(DRAGONSPAWN)
     // Neutral
     call AddHero(FIRELORD)
     call AddHero(SEA_GIANT)
-    call AddHero(REVENANT)
     call AddHero(REVENANT_DEEPLORD)
     call AddHero(MAGNATAUR_DESTROYER)
-    call AddHero(BERSERK_WILDKIN)
     call AddHero(ICECROWN_OVERLORD)
     call AddHero(ANCIENT_HYDRA)
     call AddHero(BROOD_MOTHER)

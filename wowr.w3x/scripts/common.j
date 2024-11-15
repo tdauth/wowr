@@ -3168,6 +3168,7 @@ globals
     constant integer RAVEN                                           = 'n0KK'
     constant integer PARROT                                          = 'n0KL'
     constant integer CAMEL                                           = 'n0MZ'
+    constant integer FOX                                             = 'n0B5'
 
     constant integer ITEM_ANTLER                                     = 'I0VS'
     constant integer ITEM_PIG_SKIN                                   = 'I0VT'
@@ -3192,6 +3193,7 @@ globals
     constant integer ITEM_RAVEN_FEATHER                              = 'I0JL'
     constant integer ITEM_PARROT_FEATHER                             = 'I0JR'
     constant integer ITEM_CAMEL_HUMPS                                = 'I0JZ'
+    constant integer ITEM_FOX_SKIN                                   = 'I0ZC'
 
     // Miner
     constant integer ITEM_PICKAXE                                    = 'I0W7'
@@ -3492,6 +3494,22 @@ globals
     constant integer HUMAN_ARCANE_OBSERVATORY                        = 'h01Q' // special building
 
     // Orc
+    constant integer ITEM_ORC_TIER_1                                 = 'tgrh'
+    constant integer ITEM_ORC_TIER_2                                 = 'I0LS'
+    constant integer ITEM_ORC_TIER_3                                 = 'I0LQ'
+    constant integer ITEM_ORC_BURROW                                 = 'I0LM'
+    constant integer ITEM_ORC_WATCH_TOWER                            = 'I0LW'
+    constant integer ITEM_ORC_ALTAR                                  = 'I0LP'
+    constant integer ITEM_ORC_BARRACKS                               = 'I0LN'
+    constant integer ITEM_ORC_MILL                                   = 'I0LV'
+    constant integer ITEM_ORC_LODGE                                  = 'I0LR'
+    constant integer ITEM_ORC_TOTEM                                  = 'I0LT'
+    constant integer ITEM_ORC_BEASTIARY                              = 'I0LO'
+    constant integer ITEM_ORC_VOODOO_LOUNGE                          = 'I0LU'
+    constant integer ITEM_ORC_SHIPYARD                               = 'I0LY'
+    constant integer ITEM_ORC_SPECIAL_BUILDING                       = 'I0LZ'
+    constant integer ITEM_ORC_HOUSING                                = 'I0LX'
+
     constant integer UPG_ORC_BACKPACK                                = 'Ropm'
     constant integer UPG_FEL                                         = 'R01Y' // special building
 

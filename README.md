@@ -1769,3 +1769,4 @@ Here is a list of some modified versions online:
 * Grunts_Fadora: [BTNTomeRed](https://www.hiveworkshop.com/threads/btntomered.202802/)
 * Technomancer: [BTNMasks](https://www.hiveworkshop.com/threads/btnmasks.58173/)
 * bakr: [Black Dragon Buildings](https://www.hiveworkshop.com/threads/black-dragon-buildings.356613/)
+* Mr.Goblin: [TimberWolf.blp](https://www.hiveworkshop.com/threads/timberwolf-blp.96133/)
