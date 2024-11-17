@@ -5830,6 +5830,7 @@ native GetRectMinY              takes rect whichRect returns real
 native GetRectMaxX              takes rect whichRect returns real
 native GetRectMaxY              takes rect whichRect returns real
 
+// Barade: Never call in a globals block during initlization. The game will crash when saving it and it sometimes leads to a game lagging forever.
 native CreateRegion             takes nothing returns region
 native RemoveRegion             takes region whichRegion returns nothing
 
@@ -6630,6 +6631,7 @@ native          CopySaveGame        	takes string sourceSaveName, string destSav
 native          SaveGameExists      	takes string saveName returns boolean
 native          SetMaxCheckpointSaves  	takes integer maxCheckpointSaves returns nothing
 native          SaveGameCheckpoint  	takes string saveFileName, boolean showWindow returns nothing
+// Barade: I had some issues with this in unit selection events and trigger conditions counting the selected units by a player.
 native          SyncSelections      	takes nothing returns nothing
 native          SetFloatGameState   	takes fgamestate whichFloatGameState, real value returns nothing
 constant native GetFloatGameState   	takes fgamestate whichFloatGameState returns real
