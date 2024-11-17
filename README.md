@@ -1771,3 +1771,4 @@ Here is a list of some modified versions online:
 * bakr: [Black Dragon Buildings](https://www.hiveworkshop.com/threads/black-dragon-buildings.356613/)
 * Mr.Goblin: [TimberWolf.blp](https://www.hiveworkshop.com/threads/timberwolf-blp.96133/)
 * Gluma: [Dragon-priest](https://www.hiveworkshop.com/threads/dragon-priest.317506/)
+* Sellenisko: [VrykkulDRakkarShip](https://www.hiveworkshop.com/threads/vrykkuldrakkarship.239860/)

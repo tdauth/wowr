@@ -2928,6 +2928,21 @@ globals
     constant integer CLAN_BANNER_DWARF                               = 'I11J'
     constant integer CLAN_BANNER_GNOME                               = 'I11K'
 
+    constant integer CLAN_HALL                                       = 'h02M'
+    constant integer CLAN_HALL_KING_CASTLE                           = 'h03U'
+    constant integer CLAN_HALL_MANSION                               = 'h03O'
+    constant integer CLAN_HALL_NORSE_HALL                            = 'h03V'
+    constant integer CLAN_HALL_STONE_CASTLE                          = 'h03T'
+    constant integer CLAN_HALL_STONE_KEEP                            = 'h03S'
+    constant integer CLAN_TOWER                                      = 'n04N'
+    constant integer ADVANCED_CLAN_TOWER                             = 'n04M'
+    constant integer CLAN_EMISSARY                                   = 'n04G'
+
+    constant integer UPG_HERO_CLAN                                   = 'R03D'
+    constant integer UPG_IMPROVED_CLAN_HALL                          = 'R03C'
+    constant integer UPG_IMPROVED_CLAN                               = 'R03B'
+    constant integer UPG_CLAN_HAS_NO_AI_PLAYER                       = 'R046'
+
     constant integer DEMIGOD_LIGHT                                   = 'H003'
     constant integer DEMIGOD_DARK                                    = 'H002'
 
