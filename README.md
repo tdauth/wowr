@@ -1772,3 +1772,4 @@ Here is a list of some modified versions online:
 * Mr.Goblin: [TimberWolf.blp](https://www.hiveworkshop.com/threads/timberwolf-blp.96133/)
 * Gluma: [Dragon-priest](https://www.hiveworkshop.com/threads/dragon-priest.317506/)
 * Sellenisko: [VrykkulDRakkarShip](https://www.hiveworkshop.com/threads/vrykkuldrakkarship.239860/)
+* Stefan.K: [Ogres pack](https://www.hiveworkshop.com/threads/ogres-pack.356627/)

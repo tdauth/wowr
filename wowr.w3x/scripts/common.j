@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.32"
+    constant string MAP_VERSION                                      = "3.33"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -5375,8 +5375,12 @@ globals
     constant integer DRAGONKIN_ROOST                                 = 'o04A' // aviary
     constant integer DRAGONKIN_TOWER                                 = 'o04B'
     constant integer DRAGONKIN_SHOP                                  = 'o045'
+    constant integer DRAGONKIN_SHIPYARD                              = 'o04E'
 
     constant integer UPG_DRAGONKIN_BACKPACK                          = 'R0GF'
+    constant integer UPG_DRAGONKIN_SPELL_DAMAGE_REDUCTION            = 'R080'
+    constant integer UPG_DRAGONKIN_RESISTANT_SKIN                    = 'R081'
+    constant integer UPG_DRAGONKIN_FIRE_ATTACK                       = 'R082'
 
     constant integer DRAGONKIN_WORKER                                = 'o08O'
     constant integer DRAGONKIN_FOOTMAN                               = 'n0NL'
