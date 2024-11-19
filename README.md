@@ -1775,3 +1775,4 @@ Here is a list of some modified versions online:
 * Stefan.K: [Ogres pack](https://www.hiveworkshop.com/threads/ogres-pack.356627/)
 * Stanakin: [Hedgehog](https://www.hiveworkshop.com/threads/hedgehog.164914/)
 * Stanakin: [FeralPigeon](https://www.hiveworkshop.com/threads/feralpigeon.141467/)
+* Antimatter: [BTNTrollVillager](https://www.hiveworkshop.com/threads/btntrollvillager.266136/)
