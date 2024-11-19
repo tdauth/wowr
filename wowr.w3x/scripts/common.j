@@ -2872,6 +2872,8 @@ globals
     constant integer NETHER_DRAGON                                   = 'nndr'
     constant integer RED_DRAGON                                      = 'nrwm'
 
+    constant integer DIVINE_GOLEM                                    = 'n05R'
+
     constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
     constant integer UPG_STORM_PROTECTION                            = 'R029'
 
