@@ -2890,6 +2890,7 @@ globals
     constant integer CHIMAERA_MOUNT                                  = 'e005'
     constant integer NETHER_DRAKE_MOUNT                              = 'n007'
     constant integer DRAGONHAWK_MOUNT                                = 'h04L'
+    constant integer ZEPPELIN_MOUNT                                  = 'n0BT'
 
     constant integer FOUNTAIN_OF_LIFE                                = 'h007'
     constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
