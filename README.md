@@ -1773,3 +1773,5 @@ Here is a list of some modified versions online:
 * Gluma: [Dragon-priest](https://www.hiveworkshop.com/threads/dragon-priest.317506/)
 * Sellenisko: [VrykkulDRakkarShip](https://www.hiveworkshop.com/threads/vrykkuldrakkarship.239860/)
 * Stefan.K: [Ogres pack](https://www.hiveworkshop.com/threads/ogres-pack.356627/)
+* Stanakin: [Hedgehog](https://www.hiveworkshop.com/threads/hedgehog.164914/)
+* Stanakin: [FeralPigeon](https://www.hiveworkshop.com/threads/feralpigeon.141467/)

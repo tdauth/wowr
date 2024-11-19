@@ -3186,6 +3186,8 @@ globals
     constant integer PARROT                                          = 'n0KL'
     constant integer CAMEL                                           = 'n0MZ'
     constant integer FOX                                             = 'n0B5'
+    constant integer HEDGEHOG                                        = 'n0BR'
+    constant integer PIGEON                                          = 'n0BS'
 
     constant integer ITEM_ANTLER                                     = 'I0VS'
     constant integer ITEM_PIG_SKIN                                   = 'I0VT'
@@ -3211,6 +3213,8 @@ globals
     constant integer ITEM_PARROT_FEATHER                             = 'I0JR'
     constant integer ITEM_CAMEL_HUMPS                                = 'I0JZ'
     constant integer ITEM_FOX_SKIN                                   = 'I0ZC'
+    constant integer ITEM_HEDGEHOG_SKIN                              = 'I0ZP'
+    constant integer ITEM_PIGEON_FEATHER                             = 'I0ZW'
 
     // Miner
     constant integer ITEM_PICKAXE                                    = 'I0W7'
