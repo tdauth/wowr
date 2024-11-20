@@ -1776,3 +1776,6 @@ Here is a list of some modified versions online:
 * Stanakin: [Hedgehog](https://www.hiveworkshop.com/threads/hedgehog.164914/)
 * Stanakin: [FeralPigeon](https://www.hiveworkshop.com/threads/feralpigeon.141467/)
 * Antimatter: [BTNTrollVillager](https://www.hiveworkshop.com/threads/btntrollvillager.266136/)
+* Born2Modificate: [Cloud.mdx](http://wc3campaigns.net/)
+* chr2: [MountainGiant.blp](https://www.hiveworkshop.com/threads/mountaingiant-blp.236203/)
+* chr2: [MountainGiant.blp](https://www.hiveworkshop.com/threads/mountaingiant-blp.87115/)

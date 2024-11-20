@@ -3045,6 +3045,7 @@ globals
     constant integer MERCENARY_CAMP_SEA                              = 'n0JA'
     constant integer MERCENARY_CAMP_SUNSTRIDER_ISLE                  = 'n01S'
     constant integer MERCENARY_CAMP_NEW_CITADEL                      = 'n03D'
+    constant integer MERCENARY_CAMP_SKYFALL                          = 'n0BV'
 
     // Professions
 
