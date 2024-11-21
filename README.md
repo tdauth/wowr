@@ -1779,3 +1779,5 @@ Here is a list of some modified versions online:
 * Born2Modificate: [Cloud.mdx](http://wc3campaigns.net/)
 * chr2: [MountainGiant.blp](https://www.hiveworkshop.com/threads/mountaingiant-blp.236203/)
 * chr2: [MountainGiant.blp](https://www.hiveworkshop.com/threads/mountaingiant-blp.87115/)
+* Wraithling: [Kraken](https://www.hiveworkshop.com/threads/kraken.138933/)
+* alfredx_sotn: [EarthElemental](https://www.hiveworkshop.com/threads/earthelemental.49343/)
