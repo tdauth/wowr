@@ -3050,12 +3050,16 @@ globals
     // Professions
 
     // Herbalist
+    constant integer HERB_GARDEN                                     = 'h087' // doctor
+    constant integer ITEM_HERB_GARDEN                                = 'I10A' // doctor
+    constant integer ITEM_SCROLL_OF_HEALING                          = 'shea' // grand master
     constant integer ITEM_TALISMAN_OF_EVERLASTING                    = 'I025' // master
     constant integer ITEM_POTION_OF_INVULNERABILITY                  = 'pnvu' // adept
     constant integer ITEM_HEALTH_STONE                               = 'hlst' // advanced
     constant integer ITEM_POTION_OF_GREATER_HEALING                  = 'pghe' // novice
 
     // Alchemist
+    constant integer ITEM_SCROLL_OF_MANA                             = 'sman' // grand master
     constant integer ITEM_TALISMAN_OF_SPELL_PROTECTION               = 'I024' // master
     constant integer ITEM_WAND_OF_MANA_STEALING                      = 'woms' // adept
     constant integer ITEM_MANA_STONE                                 = 'mnst' // advanced
@@ -3105,6 +3109,7 @@ globals
     constant integer ITEM_RUNE_OF_SPEED_RUNEFORGER                   = 'I030' // novice
 
     // Dragon Breeder
+    constant integer ITEM_DRAGON_EGG                                 = 'I0B1' // grand master
     constant integer ITEM_GREEN_DRAGON_EGG                           = 'I037' // master
     constant integer ITEM_GREEN_DRAKE_EGG                            = 'I035' // adept
     constant integer ITEM_THARIFAS_EGG                               = 'I036' // advanced
