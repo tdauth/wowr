@@ -3059,6 +3059,8 @@ globals
     constant integer ITEM_POTION_OF_GREATER_HEALING                  = 'pghe' // novice
 
     // Alchemist
+    constant integer CAULDRON                                        = 'h088' // doctor
+    constant integer ITEM_CAULDRON                                   = 'I10C' // doctor
     constant integer ITEM_SCROLL_OF_MANA                             = 'sman' // grand master
     constant integer ITEM_TALISMAN_OF_SPELL_PROTECTION               = 'I024' // master
     constant integer ITEM_WAND_OF_MANA_STEALING                      = 'woms' // adept
