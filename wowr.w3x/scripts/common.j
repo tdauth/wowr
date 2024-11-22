@@ -3109,6 +3109,8 @@ globals
     constant integer ITEM_RUNE_OF_SPEED_RUNEFORGER                   = 'I030' // novice
 
     // Dragon Breeder
+    constant integer DRAGON_BREEDER_ROOST                            = 'n0DA' // doctor
+    constant integer ITEM_DRAGON_BREEDER_ROOST                       = 'I10B' // doctor
     constant integer ITEM_DRAGON_EGG                                 = 'I0B1' // grand master
     constant integer ITEM_GREEN_DRAGON_EGG                           = 'I037' // master
     constant integer ITEM_GREEN_DRAKE_EGG                            = 'I035' // adept
