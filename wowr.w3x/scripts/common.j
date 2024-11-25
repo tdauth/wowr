@@ -3311,7 +3311,7 @@ globals
     constant integer TOME_OF_STRENGTH_2                              = 'tst2'
     constant integer TOME_OF_POWER                                   = 'tkno'
     constant integer TOME_OF_ARMOR                                   = 'I13G'
-    constant integer TOME_OF_DAMNAGE                                 = 'I13E'
+    constant integer TOME_OF_DAMAGE                                  = 'I13E'
 
     // Dungeon
     constant integer ITEM_SPIKE_TRAPS                                = 'I0GH'
