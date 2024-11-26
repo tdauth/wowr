@@ -1795,3 +1795,7 @@ Here is a list of some modified versions online:
 * Arak1da: [Lava andd poison Dooddas](https://www.hiveworkshop.com/threads/lava-andd-poison-dooddas.305858/)
 * Hantoo: [Lava Pit](https://www.hiveworkshop.com/threads/lava-pit.291875/)
 * Stanakin: [PirateCaptain.blp](https://www.hiveworkshop.com/threads/piratecaptain-blp.249165/)
+* Mc !: [CrystalGolem](https://www.hiveworkshop.com/threads/crystalgolem.49745/)
+* Uncle Fester: [Red & Yellow Crystals](https://www.hiveworkshop.com/threads/red-yellow-crystals.215118/)
+* Uncle Fester: [Blue & Green Crystals](https://www.hiveworkshop.com/threads/blue-green-crystals.211174/)
+* Uncle Fester: [Orange & Purple Crystals](https://www.hiveworkshop.com/threads/orange-purple-crystals.215117/)

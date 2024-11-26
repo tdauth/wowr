@@ -3159,11 +3159,14 @@ globals
     // Inscriptor
     // TODO Add item types.
 
-    // Nercromancer
+    // Necromancer
     constant integer ITEM_ROD_OF_NECROMANCY                          = 'rnec' // rank 1
     constant integer ITEM_WAND_OF_CORPSES                            = 'I0S9' // rank 2
     constant integer ITEM_SACRIFICAL_SCULL                           = 'skul' // rank 3
     constant integer ITEM_BOOK_OF_THE_DEAD                           = 'fgsk' // rank 4
+    constant integer ITEM_BOOK_OF_REANIMATION                        = 'I10Y' // rank 5
+    constant integer ITEM_TINY_NECROMANCER_GRAVEYARD                 = 'I110' // rank 6
+    constant integer NECROMANCER_GRAVEYARD                           = 'u038'
 
     // Golem Sculptor
     constant integer ITEM_TINY_MUD_GOLEM                             = 'I0SJ' // rank 1
@@ -5635,6 +5638,9 @@ globals
     constant integer SALAMANDER_LORD                                 = 'N0AE'
     constant integer HARPY_QUEEN                                     = 'N0HJ'
     constant integer RED_DRAGON_HERO                                 = 'N02W'
+
+    // bosses
+    constant integer SMOLDERON                                       = 'N0DR'
 
     // AI commands
     constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1
