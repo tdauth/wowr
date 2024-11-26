@@ -120,6 +120,7 @@ Here is a list of some modified versions online:
 * Toasty Toast UwU: Tests.
 * Deranor: Tests.
 * Axxa's World of Warcraft Logo Creator: Logo.
+* [Wowpedia](https://wowpedia.fandom.com/): Most of the lore.
 * Jason Hayes, Glenn Stafford: [A Call to Arms](https://web.archive.org/web/20030403125739/http://ftp.blizzard.com/pub/war3/mp3s/Warcraft-ACallToArms.zip)
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
