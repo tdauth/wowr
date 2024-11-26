@@ -1793,3 +1793,4 @@ Here is a list of some modified versions online:
 * chr2: [DruidottheTalon.BLP](https://www.hiveworkshop.com/threads/druidotthetalon-blp.209960/)
 * Arak1da: [Lava andd poison Dooddas](https://www.hiveworkshop.com/threads/lava-andd-poison-dooddas.305858/)
 * Hantoo: [Lava Pit](https://www.hiveworkshop.com/threads/lava-pit.291875/)
+* Stanakin: [PirateCaptain.blp](https://www.hiveworkshop.com/threads/piratecaptain-blp.249165/)
