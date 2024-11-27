@@ -5641,6 +5641,7 @@ globals
 
     // bosses
     constant integer SMOLDERON                                       = 'N0DR'
+    constant integer DENATHRIUS                                      = 'U03L'
 
     // AI commands
     constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1
