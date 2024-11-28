@@ -2854,6 +2854,7 @@ globals
     constant integer WATER_TOWER                                     = 'n0ND'
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
     constant integer LEGENDARY_ARTIFACT                              = 'nfrm'
+    constant integer BANNER_SHOP                                     = 'n0E4'
 
     constant integer DEAD_ANIMAL                                     = 'n0A2'
 

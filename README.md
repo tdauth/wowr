@@ -1799,3 +1799,4 @@ Here is a list of some modified versions online:
 * Uncle Fester: [Red & Yellow Crystals](https://www.hiveworkshop.com/threads/red-yellow-crystals.215118/)
 * Uncle Fester: [Blue & Green Crystals](https://www.hiveworkshop.com/threads/blue-green-crystals.211174/)
 * Uncle Fester: [Orange & Purple Crystals](https://www.hiveworkshop.com/threads/orange-purple-crystals.215117/)
+* MangakaDark: [Hero Geomancer Icon](https://www.hiveworkshop.com/threads/hero-geomancer-icon.354661/)
