@@ -2854,12 +2854,27 @@ globals
     constant integer WATER_TOWER                                     = 'n0ND'
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
     constant integer LEGENDARY_ARTIFACT                              = 'nfrm'
-    constant integer BANNER_SHOP                                     = 'n0E4'
 
     constant integer DEAD_ANIMAL                                     = 'n0A2'
 
     // Neutral
     constant integer GOLD_MINE                                       = 'ngol'
+
+    // Banners
+    constant integer BANNER_SHOP_NEUTRAL                             = 'n0E4'
+    constant integer BANNER_SHOP                                     = 'n0E6'
+
+    constant integer BANNER_STORMWIND                                = 'o057'
+    constant integer BANNER_KUL_TIRAS                                = 'o056'
+    constant integer BANNER_GILNEAS                                  = 'o04K'
+    constant integer BANNER_ALTERAC                                  = 'o04F'
+    constant integer BANNER_DALARAN                                  = 'o04J'
+
+    constant integer ITEM_TINY_BANNER_STORMWIND                      = 'I15A'
+    constant integer ITEM_TINY_BANNER_DALARAN                        = 'I13C'
+    constant integer ITEM_TINY_BANNER_ALTERAC                        = 'I13B'
+    constant integer ITEM_TINY_BANNER_GILNEAS                        = 'I13D'
+    constant integer ITEM_TINY_BANNER_KUL_TIRAS                      = 'I159'
 
     // All Races
     constant integer SHREDDER                                        = 'ngir'
