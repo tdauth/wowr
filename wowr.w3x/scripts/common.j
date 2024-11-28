@@ -3167,6 +3167,7 @@ globals
     constant integer ITEM_BOOK_OF_REANIMATION                        = 'I10Y' // rank 5
     constant integer ITEM_TINY_NECROMANCER_GRAVEYARD                 = 'I110' // rank 6
     constant integer NECROMANCER_GRAVEYARD                           = 'u038'
+    constant integer NECROMANCER_MEAT_WAGON                          = 'u03M'
 
     // Golem Sculptor
     constant integer ITEM_TINY_MUD_GOLEM                             = 'I0SJ' // rank 1
