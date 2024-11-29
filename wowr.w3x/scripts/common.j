@@ -3115,6 +3115,7 @@ globals
     constant integer ITEM_POTION_OF_GREATER_MANA                     = 'pgma' // novice
 
     // Weapon Smith
+    constant integer ITEM_MYTHICAL_POISON_BLADE                      = 'I15Q' // doctor
     constant integer ITEM_BLESSED_DRAGON_LANCE                       = 'I00R' // master
     constant integer ITEM_DEMON_SLAYER_AXE                           = 'I00Q' // adept
     constant integer ITEM_MITHRIL_LONG_SWORD                         = 'I00P' // advanced
