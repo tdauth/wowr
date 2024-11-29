@@ -3174,6 +3174,9 @@ globals
     constant integer ITEM_RING_OF_SUPERIORITY                        = 'rnsp' // novice
 
     // Enchanter
+    constant integer ITEM_DOCTOR_ENCHANTING_FORMULA                  = 'I15S' // doctor
+    constant integer ITEM_GRAND_MASTER_ENCHANTING_FORMULA            = 'I15R' // grand master
+
     // Pirate
     // Archaeologist
     // TODO Add item types.
