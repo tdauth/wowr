@@ -1800,3 +1800,5 @@ Here is a list of some modified versions online:
 * Uncle Fester: [Blue & Green Crystals](https://www.hiveworkshop.com/threads/blue-green-crystals.211174/)
 * Uncle Fester: [Orange & Purple Crystals](https://www.hiveworkshop.com/threads/orange-purple-crystals.215117/)
 * MangakaDark: [Hero Geomancer Icon](https://www.hiveworkshop.com/threads/hero-geomancer-icon.354661/)
+* bakr, Manastorm: [Elven Banners](https://www.hiveworkshop.com/threads/elven-banners.355882/)
+* bakr: [Dwarven Banners](https://www.hiveworkshop.com/threads/dwarven-banners.347619/)

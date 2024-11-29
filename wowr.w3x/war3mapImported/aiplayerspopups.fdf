@@ -275,6 +275,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "Pandaria",     -2,
         MenuItem "Argus",     -2,
         MenuItem "Azuremyst Isles",     -2,
+        MenuItem "Dalaran",     -2,
         MenuItem "Dungeon",     -2,
         MenuItem "Underground",     -2,
         MenuItem "Maldraxxus",      -2,
@@ -393,5 +394,20 @@ Frame "POPUPMENU" "DifficultyPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Normal",     -2,
         MenuItem "Hard",     -2,
         MenuItem "Insane",     -2,
+    }
+}
+
+Frame "POPUPMENU" "AlliancePopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "AlliancePopupMenu",
+    Frame "MENU" "AlliancePopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Neutral",     -2,
+        MenuItem "Neutral Vision",     -2,
+        MenuItem "Neutral Control",     -2,
+        MenuItem "Ally",     -2,
+        MenuItem "Ally Vision",     -2,
+        MenuItem "Ally Control",     -2,
+        MenuItem "Enemy",     -2,
+        MenuItem "Enemy Vision",     -2,
+        MenuItem "Enemy Control",     -2,
     }
 }
