@@ -397,17 +397,25 @@ Frame "POPUPMENU" "DifficultyPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     }
 }
 
+// Alliance settings
+//constant integer   bj_ALLIANCE_UNALLIED        = 0
+//constant integer   bj_ALLIANCE_UNALLIED_VISION = 1
+//constant integer   bj_ALLIANCE_ALLIED          = 2
+//constant integer   bj_ALLIANCE_ALLIED_VISION   = 3
+//constant integer   bj_ALLIANCE_ALLIED_UNITS    = 4
+//constant integer   bj_ALLIANCE_ALLIED_ADVUNITS = 5
+//constant integer   bj_ALLIANCE_NEUTRAL         = 6
+//constant integer   bj_ALLIANCE_NEUTRAL_VISION  = 7
 Frame "POPUPMENU" "AlliancePopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "AlliancePopupMenu",
     Frame "MENU" "AlliancePopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "Unallied",     -2,
+        MenuItem "Unallied Vision",     -2,
+        MenuItem "Allied",     -2,
+        MenuItem "Allied Vision",     -2,
+        MenuItem "Allied Units",     -2,
+        MenuItem "Allied Advanced Units",     -2,
         MenuItem "Neutral",     -2,
         MenuItem "Neutral Vision",     -2,
-        MenuItem "Neutral Control",     -2,
-        MenuItem "Ally",     -2,
-        MenuItem "Ally Vision",     -2,
-        MenuItem "Ally Control",     -2,
-        MenuItem "Enemy",     -2,
-        MenuItem "Enemy Vision",     -2,
-        MenuItem "Enemy Control",     -2,
     }
 }
