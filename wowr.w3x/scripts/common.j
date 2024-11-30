@@ -3208,7 +3208,12 @@ globals
     constant integer ITEM_MONSTER_LURE                               = 'I0L2' // rank 4
 
     // Inscriptor
-    // TODO Add item types.
+    constant integer ITEM_DOCTOR_GLYPH                               = 'I15X'
+    constant integer ITEM_GRAND_MASTER_GLYPH                         = 'I15W'
+    constant integer ITEM_MASTER_GLYPH                               = 'I0NR'
+    constant integer ITEM_ADVANCED_GLYPH                             = 'I0NQ'
+    constant integer ITEM_ADEPT_GLYPH                                = 'I0NP'
+    constant integer ITEM_NOVICE_GLYPH                               = 'I0NO'
 
     // Necromancer
     constant integer ITEM_ROD_OF_NECROMANCY                          = 'rnec' // rank 1
