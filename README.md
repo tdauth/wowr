@@ -977,7 +977,7 @@ Here is a list of some modified versions online:
 * Shimrra: [BTNVespianGeyser](https://www.hiveworkshop.com/threads/btnvespiangeyser.57924/)
 * 67chrome: [BTNAstralCalander](https://www.hiveworkshop.com/threads/btnastralcalander.170325/)
 * KelThuzad: [BTNSilverBar](https://www.hiveworkshop.com/threads/btnsilverbar.110287/)
-* Ziadoma: [Ingots](https://www.hiveworkshop.com/threads/ingots.348353/)
+* Ziadoma, Blizzard Entertainment: [Ingots](https://www.hiveworkshop.com/threads/ingots.348353/)
 * maxor_gan: [BTNFirePit](https://www.hiveworkshop.com/threads/btnfirepit.161699/)
 * Mr. Bob: [Tavern](https://www.hiveworkshop.com/threads/tavern.134347/)
 * TESCAO: [BTNLaserBeam](https://www.hiveworkshop.com/threads/btnlaserbeam.203387/)
