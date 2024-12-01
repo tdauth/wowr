@@ -2883,6 +2883,7 @@ globals
     constant integer BANNER_ORC                                      = 'o0BM'
     constant integer BANNER_UNDEAD                                   = 'o0BN'
     constant integer BANNER_NIGHT_ELF                                = 'o0BO'
+    constant integer BANNER_PANDAREN                                 = 'o0BP'
 
     constant integer ITEM_TINY_BANNER_STORMWIND                      = 'I15A'
     constant integer ITEM_TINY_BANNER_DALARAN                        = 'I13C'
@@ -2903,6 +2904,7 @@ globals
     constant integer ITEM_TINY_BANNER_ORC                            = 'I15M'
     constant integer ITEM_TINY_BANNER_UNDEAD                         = 'I15N'
     constant integer ITEM_TINY_BANNER_NIGHT_ELF                      = 'I15O'
+    constant integer ITEM_TINY_BANNER_PANDAREN                       = 'I162'
 
     // All Races
     constant integer SHREDDER                                        = 'ngir'
