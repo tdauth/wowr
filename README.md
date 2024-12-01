@@ -1803,3 +1803,4 @@ Here is a list of some modified versions online:
 * bakr, Manastorm: [Elven Banners](https://www.hiveworkshop.com/threads/elven-banners.355882/)
 * bakr: [Dwarven Banners](https://www.hiveworkshop.com/threads/dwarven-banners.347619/)
 * Hantoo: [BaldEagles](https://www.hiveworkshop.com/threads/baldeagles.257285/)
+* Mr.Goblin: [BTNEagled](https://www.hiveworkshop.com/threads/btneagled.151500/)
