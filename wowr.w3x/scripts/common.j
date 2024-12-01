@@ -4189,6 +4189,7 @@ globals
     constant integer UPG_DALARAN_CR_ATTACK                           = 'R06H'
     constant integer UPG_DALARAN_CR_ARMOR                            = 'R068'
     constant integer UPG_DALARAN_DEFEND                              = 'R05U'
+    constant integer UPG_DALARAN_SORCERESS                           = 'R083'
     constant integer UPG_DALARAN_WIZARD                              = 'R05X'
     constant integer UPG_DALARAN_FIRE_MAGE                           = 'R065'
     constant integer UPG_DALARAN_GOLEM                               = 'R06N'

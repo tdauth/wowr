@@ -36,7 +36,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(1, UPG_DALARAN_GOLEM)
     call SetBuildUpgr(1, UPG_DALARAN_FIRE_MAGE)
     call SetBuildUpgr(1, UPG_DALARAN_WIZARD)
-    call SetBuildUpgr(1, UPG_SORCERY)
+    call SetBuildUpgr(1, UPG_DALARAN_SORCERESS)
 
     // Tier 3 buildings
     call SetBuildUnit(1, DALARAN_TIER_3)
@@ -52,7 +52,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUpgr(2, UPG_DALARAN_GOLEM)
     call SetBuildUpgr(2, UPG_DALARAN_FIRE_MAGE)
     call SetBuildUpgr(2, UPG_DALARAN_WIZARD)
-    call SetBuildUpgr(2, UPG_SORCERY)
+    call SetBuildUpgr(2, UPG_DALARAN_SORCERESS)
     call SetBuildUpgr(1, UPG_DALARAN_GOLD)
     call SetBuildUpgr(1, UPG_DALARAN_MAGIC_SENTRY)
     call SetBuildUpgr(1, UPG_DALARAN_ANIMAL)

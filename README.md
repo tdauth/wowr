@@ -1804,3 +1804,4 @@ Here is a list of some modified versions online:
 * bakr: [Dwarven Banners](https://www.hiveworkshop.com/threads/dwarven-banners.347619/)
 * Hantoo: [BaldEagles](https://www.hiveworkshop.com/threads/baldeagles.257285/)
 * Mr.Goblin: [BTNEagled](https://www.hiveworkshop.com/threads/btneagled.151500/)
+* Sin'dorei300: [BTNFireMage](https://www.hiveworkshop.com/threads/btnfiremage.213417/)
