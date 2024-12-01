@@ -1805,3 +1805,4 @@ Here is a list of some modified versions online:
 * Hantoo: [BaldEagles](https://www.hiveworkshop.com/threads/baldeagles.257285/)
 * Mr.Goblin: [BTNEagled](https://www.hiveworkshop.com/threads/btneagled.151500/)
 * Sin'dorei300: [BTNFireMage](https://www.hiveworkshop.com/threads/btnfiremage.213417/)
+* 8512590215848: [BTNGoldenCrown3](https://www.hiveworkshop.com/threads/btngoldencrown3.183146/)

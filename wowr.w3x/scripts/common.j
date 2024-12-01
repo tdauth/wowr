@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.34"
+    constant string MAP_VERSION                                      = "3.35"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -3160,6 +3160,8 @@ globals
     constant integer ITEM_WAND_OF_NEUTRALIZATION                     = 'wneu' // novice
 
     // Runeforger
+    constant integer ITEM_RUNE_OF_GREATER_RESURRECTION               = 'I164' // doctor
+    constant integer ITEM_RUNE_OF_LESSER_RESURRECTION_RUNEFORGER     = 'I163' // grand master
     constant integer ITEM_RUNE_OF_REBIRTH_RUNEFORGER                 = 'I032' // master
     constant integer ITEM_RUNE_OF_RESTORATION_RUNEFORGER             = 'I02Z' // adept
     constant integer ITEM_RUNE_OF_DISPEL_MAGIC_RUNEFORGER            = 'I031' // advanced
@@ -3175,6 +3177,8 @@ globals
     constant integer ITEM_GREEN_DRAGON_WHELP_EGG                     = 'I034' // novice
 
     // Jewel Crafter
+    constant integer ITEM_GOLDEN_CROWN                               = 'I165' // doctor
+    constant integer ITEM_BRACELET                                   = 'I166' // grand master
     constant integer ITEM_JEWEL_AMULET                               = 'I079' // master
     constant integer ITEM_GREEN_GEMSTONE                             = 'I078' // adept
     constant integer ITEM_ENCHANTED_GEMSTONE                         = 'I077' // advanced
