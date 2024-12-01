@@ -3093,6 +3093,8 @@ globals
     constant integer MERCENARY_CAMP_FIRELANDS                        = 'n0DB'
     constant integer MERCENARY_CAMP_ABYSSAL_MAW                      = 'n0DD'
     constant integer MERCENARY_CAMP_DEEPHOLM                         = 'n0DM'
+    constant integer MERCENARY_CAMP_SHADOWLANDS                      = 'n0ML'
+    constant integer MERCENARY_CAMP_NYALOTHA                         = 'n0M4'
 
     // Professions
 
@@ -3180,8 +3182,12 @@ globals
     constant integer ITEM_DOCTOR_ENCHANTING_FORMULA                  = 'I15S' // doctor
     constant integer ITEM_GRAND_MASTER_ENCHANTING_FORMULA            = 'I15R' // grand master
 
-    // Pirate
+    // Captain
+    // TODO Add item types.
+
     // Archaeologist
+    constant integer EXCAVATION_SITE                                 = 'n0M2' // doctor
+    constant integer ITEM_EXCAVATION_SITE                            = 'I160' // doctor
     // TODO Add item types.
 
     // Witch Doctor
@@ -3311,6 +3317,10 @@ globals
     constant integer ITEM_INFERNO_STONE                              = 'infs' // rank 2
     constant integer ITEM_DEMON_BLOOD                                = 'I0Y7' // rank 3
     constant integer ITEM_TINY_DEMON_GATE                            = 'I0YG' // rank 4
+    constant integer ITEM_SPIKED_COLLAR                              = 'fgfh' // grand master
+    constant integer ITEM_DEMONIC_FIGURE                             = 'fgdg' // grand master
+    constant integer ITEM_TINY_FEL_FOUNTAIN                          = 'I15Y' // doctor
+    constant integer FEL_FOUNTAIN_WARLOCK                            = 'n0M0'
 
     // Thief
     constant integer SAFE                                            = 'h0OH'
