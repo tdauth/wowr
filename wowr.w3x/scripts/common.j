@@ -3232,7 +3232,7 @@ globals
     constant integer ITEM_WAND_OF_CORPSES                            = 'I0S9' // rank 2
     constant integer ITEM_SACRIFICAL_SCULL                           = 'skul' // rank 3
     constant integer ITEM_BOOK_OF_THE_DEAD                           = 'fgsk' // rank 4
-    constant integer ITEM_BOOK_OF_REANIMATION                        = 'I10Y' // rank 5
+    constant integer ITEM_SCROLL_OF_ANIMATE_DEAD                     = 'sand' // rank 5
     constant integer ITEM_TINY_NECROMANCER_GRAVEYARD                 = 'I110' // rank 6
     constant integer NECROMANCER_GRAVEYARD                           = 'u038'
     constant integer NECROMANCER_MEAT_WAGON                          = 'u03M'
@@ -3497,10 +3497,10 @@ globals
     constant integer OLD_HORDE_TROLL_BERSERKER                       = 'n0IA'
     constant integer OLD_HORDE_CATPULT                               = 'o081'
     constant integer OLD_HORDE_DEATH_KNIGHT                          = 'o07L'
-    constant integer OLD_HORDE_DRAGON                                = 'o0IC'
-    constant integer OLD_HORDE_GREAT_SEE_TURTLE                      = 'o0IF'
-    constant integer OLD_HORDE_GOBLIN_SAPPERS                        = 'o0IB'
-    constant integer OLD_HORDE_GOBLIN_ZEPPELIN                       = 'o0ID'
+    constant integer OLD_HORDE_DRAGON                                = 'n0IC'
+    constant integer OLD_HORDE_GREAT_SEE_TURTLE                      = 'n0IF'
+    constant integer OLD_HORDE_GOBLIN_SAPPERS                        = 'n0IB'
+    constant integer OLD_HORDE_GOBLIN_ZEPPELIN                       = 'n0ID'
     constant integer OLD_HORDE_GRUNT                                 = 'o080'
     constant integer OLD_HORDE_EYE_OF_KILROGG                        = 'n0J0'
     constant integer OLD_HORDE_OIL_TANKER                            = 'o07Y'
@@ -5291,7 +5291,7 @@ globals
 
     constant integer QUILLBOAR_WORKER                                = 'o072'
     constant integer QUILLBOAR_QUILLBOAR                             = 'n0NM' // footman
-    constant integer QUILLBOAR_HUNTER                                = 'n0MQ' // rifleman
+    constant integer QUILLBOAR_HUNTER                                = 'n0NQ' // rifleman
     constant integer QUILLBOAR_RAIDER                                = 'o0AR' // knight
     constant integer QUILLBOAR_MEDICINE_MAN                          = 'o0AZ' // priest
     constant integer QUILLBOAR_MYSTIC                                = 'o0AY' // sorceress
