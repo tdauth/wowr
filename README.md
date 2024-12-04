@@ -1806,3 +1806,4 @@ Here is a list of some modified versions online:
 * Mr.Goblin: [BTNEagled](https://www.hiveworkshop.com/threads/btneagled.151500/)
 * Sin'dorei300: [BTNFireMage](https://www.hiveworkshop.com/threads/btnfiremage.213417/)
 * 8512590215848: [BTNGoldenCrown3](https://www.hiveworkshop.com/threads/btngoldencrown3.183146/)
+* Kwaliti: [The Lich King](https://www.hiveworkshop.com/threads/the-lich-king.154837/)
