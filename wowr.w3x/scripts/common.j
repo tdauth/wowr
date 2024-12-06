@@ -3351,6 +3351,14 @@ globals
 
     // Items
 
+    // Holy Set
+    constant integer ITEM_HOLY_CREST                                 = 'I16G'
+    constant integer ITEM_HOLY_BOOTS                                 = 'I16H'
+    constant integer ITEM_HOLY_GAUNTLET                              = 'I16I'
+    constant integer ITEM_HOLY_ARMOR                                 = 'I16J'
+    constant integer ITEM_HOLY_SHIELD                                = 'I16K'
+    constant integer ITEM_HOLY_SWORD                                 = 'I16L'
+
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
 
     constant integer ITEM_GOLD_COINS                                 = 'gold'
