@@ -1817,3 +1817,4 @@ Here is a list of some modified versions online:
 * 8512590215848: [BTNFireSpellBook](https://www.hiveworkshop.com/threads/btnfirespellbook.162626/)
 * LongbowMan: [Gypsy Wagon](https://www.hiveworkshop.com/threads/gypsy-wagon.357096/)
 * Sunchips: [House Building](https://www.hiveworkshop.com/threads/house-building.261669/)
+* Stefan.K: [Magna Aegwynn](https://www.hiveworkshop.com/threads/magna-aegwynn.292841/)

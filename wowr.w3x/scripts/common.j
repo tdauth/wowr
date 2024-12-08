@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.35"
+    constant string MAP_VERSION                                      = "3.36"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -5647,6 +5647,7 @@ globals
     constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
     // Dalaran
     constant integer ARCH_SORCERESS                                  = 'H0V3'
+    constant integer AEGWYNN                                         = 'H08E'
     // Kul Tiras
     constant integer HYDROMANCER                                     = 'H06F'
     constant integer TIDESAGE                                        = 'H0UN'

@@ -2660,6 +2660,7 @@ function InitHeroes takes nothing returns nothing
     // Dalaran
     call AddHero(ARCHMAGE)
     call AddHero(ARCH_SORCERESS)
+    call AddHero(AEGWYNN)
     // Kul Tiras
     call AddHero(HYDROMANCER)
     call AddHero(TIDESAGE)
