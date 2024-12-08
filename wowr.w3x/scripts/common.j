@@ -3411,6 +3411,12 @@ globals
     constant integer LIVING_STATUE                                   = 'n0N7'
     constant integer LIVING_STATUE_M                                 = 'n0N8' // standing
     constant integer CAGE                                            = 'o043'
+    constant integer CRATES_0                                        = 'o0BQ'
+    constant integer CRATES_1                                        = 'o0BR'
+
+    // Housing
+    constant integer HOUSING_MANAGER                                 = 'n0O2'
+    constant integer ITEM_HOUSE_KEY                                  = 'I16O'
 
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT
