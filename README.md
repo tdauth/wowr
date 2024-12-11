@@ -1818,3 +1818,5 @@ Here is a list of some modified versions online:
 * LongbowMan: [Gypsy Wagon](https://www.hiveworkshop.com/threads/gypsy-wagon.357096/)
 * Sunchips: [House Building](https://www.hiveworkshop.com/threads/house-building.261669/)
 * Stefan.K: [Magna Aegwynn](https://www.hiveworkshop.com/threads/magna-aegwynn.292841/)
+* 8512590215848: [Book with Earth\Nature Spells](https://www.hiveworkshop.com/threads/book-with-earth-nature-spells.318330/)
+* 8512590215848: [Book with Water Spells](https://www.hiveworkshop.com/threads/book-with-water-spells.318332/)

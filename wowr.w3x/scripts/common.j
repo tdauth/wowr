@@ -3415,8 +3415,11 @@ globals
     constant integer CRATES_1                                        = 'o0BR'
 
     // Housing
-    constant integer HOUSING_MANAGER                                 = 'n0O2'
+    constant integer CARETAKER                                       = 'n0O2'
+    constant integer LEAVE_HOUSING                                   = 'o0BS'
     constant integer ITEM_HOUSE_KEY                                  = 'I16O'
+    constant integer GROUND_DIRT                                     = 'o0BT'
+    constant integer GROUND_ROUGH_DIRT                               = 'o0BU'
 
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT
