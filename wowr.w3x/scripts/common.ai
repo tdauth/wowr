@@ -2515,6 +2515,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(PEASANT_HERO)
     call AddHero(CAPTAIN)
     call AddHero(ARTHAS)
+    call AddHero(ARTHAS_WIELDING_FROSTMOURNE)
     call AddHero(UTHER)
     call AddHero(KHADGAR)
     call AddHero(MEDIVH)
@@ -2755,6 +2756,8 @@ function InitMounts takes nothing returns nothing
     call AddMount(CHIMAERA_MOUNT)
     call AddMount(NETHER_DRAKE_MOUNT)
     call AddMount(DRAGONHAWK_MOUNT)
+    call AddMount(ZEPPELIN_MOUNT)
+    call AddMount(PHOENIX_MOUNT)
 endfunction
 
 function AddHousing takes integer id returns integer

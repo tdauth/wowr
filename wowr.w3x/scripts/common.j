@@ -2756,6 +2756,7 @@ globals
     constant string URL_DISCORD                                      = "https://discord.com/invite/eM34z36"
     constant string URL_WEBSITE                                      = "https://wowreforged.org"
     constant string URL_DOWNLOAD                                     = "https://github.com/tdauth/wowr/releases"
+    constant string URL_DONATION                                     = "https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8"
 
     // Hero Journey
     constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
@@ -2937,6 +2938,8 @@ globals
     constant integer NETHER_DRAKE_MOUNT                              = 'n007'
     constant integer DRAGONHAWK_MOUNT                                = 'h04L'
     constant integer ZEPPELIN_MOUNT                                  = 'n0BT'
+    constant integer PHOENIX_MOUNT                                   = 'h0UW'
+    constant integer SNOWY_OWL_MOUNT                                 = 'h0V5'
 
     constant integer FOUNTAIN_OF_LIFE                                = 'h007'
     constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
@@ -5536,6 +5539,7 @@ globals
     constant integer PEASANT_HERO                                    = 'H0KV'
     constant integer CAPTAIN                                         = 'H0VB'
     constant integer ARTHAS                                          = 'H0AI'
+    constant integer ARTHAS_WIELDING_FROSTMOURNE                     = 'H0AJ'
     constant integer UTHER                                           = 'H0A5'
     constant integer KHADGAR                                         = 'H03M'
     constant integer MEDIVH                                          = 'H018'
@@ -5748,6 +5752,8 @@ globals
     constant integer SALAMANDER_LORD                                 = 'N0AE'
     constant integer HARPY_QUEEN                                     = 'N0HJ'
     constant integer RED_DRAGON_HERO                                 = 'N02W'
+    // Account specific
+    constant integer BARADE                                          = 'H0V4'
 
     // bosses
     constant integer SMOLDERON                                       = 'N0DR'
