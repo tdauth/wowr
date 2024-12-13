@@ -1820,3 +1820,4 @@ Here is a list of some modified versions online:
 * Stefan.K: [Magna Aegwynn](https://www.hiveworkshop.com/threads/magna-aegwynn.292841/)
 * 8512590215848: [Book with Earth\Nature Spells](https://www.hiveworkshop.com/threads/book-with-earth-nature-spells.318330/)
 * 8512590215848: [Book with Water Spells](https://www.hiveworkshop.com/threads/book-with-water-spells.318332/)
+* Blizzard Entertainment: [BTNINV_Misc_Food_11](https://www.hiveworkshop.com/threads/btninv_misc_food_11.55055/)
