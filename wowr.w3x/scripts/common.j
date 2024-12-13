@@ -3386,6 +3386,21 @@ globals
     constant integer ITEM_EASTER_EGG                                 = 'I05I'
     constant integer ITEM_CANDY                                      = 'I146'
 
+    // Food
+    constant integer ITEM_BUNDLE_OF_WHEAT                            = 'I0KT'
+    constant integer ITEM_APPLE                                      = 'I141'
+    constant integer ITEM_BANANA                                     = 'I0S8'
+    constant integer ITEM_CHERRY                                     = 'I0EJ'
+    constant integer ITEM_FISH                                       = 'I0KN'
+    constant integer ITEM_GARLIC                                     = 'I0WW'
+    constant integer ITEM_LEMON                                      = 'I0U2'
+    constant integer ITEM_MEAT                                       = 'I0X1'
+    constant integer ITEM_MILK                                       = 'I0FY'
+    constant integer ITEM_ORANGE                                     = 'I0U3'
+    constant integer ITEM_PLUM                                       = 'I0FP'
+    constant integer ITEM_PUMPKIN                                    = 'I140'
+    constant integer ITEM_WOOL                                       = 'I0FZ'
+
     // Tomes
     constant integer TOME_OF_AGILITY                                 = 'tdex'
     constant integer TOME_OF_AGILITY_2                               = 'tdx2'
@@ -5508,6 +5523,9 @@ globals
     constant integer DRAGONKIN_CHILD                                 = 'n0B3'
     constant integer DRAGONKIN_PET                                   = 'n0B4'
     constant integer DRAGONKIN_HOUSING                               = 'h082'
+
+    // Village
+    constant integer VILLAGE_TIER_1                                  = 'h08F'
 
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
