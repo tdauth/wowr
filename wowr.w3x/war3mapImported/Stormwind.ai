@@ -241,6 +241,7 @@ function AttackWaves takes nothing returns nothing
         call CampaignAttackerEx(8, 10, 12, STORMWIND_GRYPHON_RIDER)
         call CampaignAttackerEx(8, 10, 12, STORMWIND_EAGLE_KNIGHT)
         call CampaignAttackerEx(8, 10, 12, STORMWIND_GRYPHON_KNIGHT)
+        call CampaignAttackerEx(2, 4, 6, STORMWIND_AIR_SHIP)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
