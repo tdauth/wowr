@@ -4425,16 +4425,19 @@ globals
     constant integer STORMWIND_ALTAR                                 = 'h0R1'
     constant integer ITEM_STORMWIND_ALTAR                            = 'I17E'
     constant integer STORMWIND_ARCANE_TOWER                          = 'h0RJ'
+    constant integer ITEM_STORMWIND_ARCANE_TOWER                     = 'I17P'
     constant integer STORMWIND_BARRACKS                              = 'h0RB'
     constant integer ITEM_STORMWIND_BARRACKS                         = 'I17D'
     constant integer STORMWIND_BLACKSMITH                            = 'h0R8'
     constant integer ITEM_STORMWIND_BLACKSMITH                       = 'I17F'
     constant integer STORMWIND_CANNON_TOWER                          = 'h0RI'
+    constant integer ITEM_STORMWIND_CANNON                           = 'I17O'
     constant integer STORMWIND_FARM                                  = 'h0R0'
     constant integer ITEM_STORMWIND_FARM                             = 'I17C'
     constant integer STORMWIND_AVIARY                                = 'h0R9'
     constant integer ITEM_STORMWIND_AVIARY                           = 'I17K'
     constant integer STORMWIND_GUARD_TOWER                           = 'h0RH'
+    constant integer ITEM_STORMWIND_GUARD_TOWER                      = 'I17Q'
     constant integer STORMWIND_LUMBER_MILL                           = 'h0R3'
     constant integer ITEM_STORMWIND_LUMBER_MILL                      = 'I17G'
     constant integer STORMWIND_SCOUT_TOWER                           = 'h0R4'
@@ -4442,11 +4445,13 @@ globals
     constant integer STORMWIND_MAGE_TOWER                            = 'h0RA'
     constant integer ITEM_STORMWIND_MAGE_TOWER                       = 'I17H'
     constant integer STORMWIND_CATHEDRAL_OF_LIGHT                    = 'h0RK' // special building
+    constant integer ITEM_STORMWIND_CATHEDRAL_OF_LIGHT               = 'I17M'
     constant integer STORMWIND_ARCANE_VAULT                          = 'h0R2'
     constant integer ITEM_STORMWIND_ARCANE_VAULT                     = 'I17I'
     constant integer STORMWIND_WORKSHOP                              = 'h0R7'
     constant integer ITEM_STORMWIND_WORKSHOP                         = 'I17J'
     constant integer STORMWIND_SHIPYARD                              = 'h0RG'
+    constant integer ITEM_STORMWIND_SHIPYARD                         = 'I17N'
 
     constant integer UPG_STORMWIND_LUMBER                            = 'R0ES'
     constant integer UPG_STORMWIND_MASONRY                           = 'R0ET'
@@ -5522,12 +5527,14 @@ globals
     constant integer DRAGONKIN_ROOST                                 = 'o04A' // aviary
     constant integer DRAGONKIN_TOWER                                 = 'o04B'
     constant integer DRAGONKIN_SHOP                                  = 'o045'
+    constant integer DRAGONKIN_WYRMREST_TEMPLE                       = 'o0BV' // special building
     constant integer DRAGONKIN_SHIPYARD                              = 'o04E'
 
     constant integer UPG_DRAGONKIN_BACKPACK                          = 'R0GF'
     constant integer UPG_DRAGONKIN_SPELL_DAMAGE_REDUCTION            = 'R080'
     constant integer UPG_DRAGONKIN_RESISTANT_SKIN                    = 'R081'
     constant integer UPG_DRAGONKIN_FIRE_ATTACK                       = 'R082'
+    constant integer UPG_DRAGONKIN_WYRMREST_TEMPLE                   = 'R084' // special building
 
     constant integer DRAGONKIN_WORKER                                = 'o08O'
     constant integer DRAGONKIN_FOOTMAN                               = 'n0NL'
@@ -5695,6 +5702,7 @@ globals
     constant integer ADMIRAL_PROUDMOORE                              = 'Hapm'
     // Stormwind
     constant integer LION_RIDER                                      = 'H0UL'
+    constant integer BISHOP                                          = 'H08H'
     // Vrykul
     constant integer THANE                                           = 'H0IQ'
     constant integer FLAMEBINDER                                     = 'H0IS'

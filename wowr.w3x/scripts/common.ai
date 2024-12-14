@@ -2669,6 +2669,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(ADMIRAL_PROUDMOORE)
     // Stormwind
     call AddHero(LION_RIDER)
+    call AddHero(BISHOP)
     // Vrykul
     call AddHero(THANE)
     call AddHero(FLAMEBINDER)

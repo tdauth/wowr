@@ -193,6 +193,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Jaina",     -2,
         MenuItem "Admiral Proudmoore",     -2,
         MenuItem "Lion Rider",     -2,
+        MenuItem "Bishop",     -2,
         MenuItem "Thane",     -2,
         MenuItem "Flamebinder",     -2,
         MenuItem "Wolf Rider",     -2,
