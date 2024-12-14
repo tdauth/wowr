@@ -4433,14 +4433,19 @@ globals
     constant integer STORMWIND_FARM                                  = 'h0R0'
     constant integer ITEM_STORMWIND_FARM                             = 'I17C'
     constant integer STORMWIND_AVIARY                                = 'h0R9'
+    constant integer ITEM_STORMWIND_AVIARY                           = 'I17K'
     constant integer STORMWIND_GUARD_TOWER                           = 'h0RH'
     constant integer STORMWIND_LUMBER_MILL                           = 'h0R3'
+    constant integer ITEM_STORMWIND_LUMBER_MILL                      = 'I17G'
     constant integer STORMWIND_SCOUT_TOWER                           = 'h0R4'
     constant integer ITEM_STORMWIND_SCOUT_TOWER                      = 'I179'
     constant integer STORMWIND_MAGE_TOWER                            = 'h0RA'
+    constant integer ITEM_STORMWIND_MAGE_TOWER                       = 'I17H'
     constant integer STORMWIND_CATHEDRAL_OF_LIGHT                    = 'h0RK' // special building
     constant integer STORMWIND_ARCANE_VAULT                          = 'h0R2'
+    constant integer ITEM_STORMWIND_ARCANE_VAULT                     = 'I17I'
     constant integer STORMWIND_WORKSHOP                              = 'h0R7'
+    constant integer ITEM_STORMWIND_WORKSHOP                         = 'I17J'
     constant integer STORMWIND_SHIPYARD                              = 'h0RG'
 
     constant integer UPG_STORMWIND_LUMBER                            = 'R0ES'
@@ -4486,6 +4491,7 @@ globals
     constant integer STORMWIND_CHILD                                 = 'n0CV'
     constant integer STORMWIND_PET                                   = 'n00Q'
     constant integer STORMWIND_HOUSING                               = 'h0RF'
+    constant integer ITEM_STORMWIND_HOUSING                          = 'I17L'
 
     // Pandaren
     constant integer PANDAREN_TIER_1                                 = 'h06D' // tier 1
