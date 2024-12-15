@@ -5551,6 +5551,8 @@ globals
 
     // Village
     constant integer VILLAGE_TIER_1                                  = 'h08F'
+    constant integer VILLAGE_TIER_2                                  = 'h08U'
+    constant integer VILLAGE_TIER_3                                  = 'h08V'
     constant integer VILLAGE_TAVERN                                  = 'h08J' // altar
     constant integer VILLAGE_OUTPOST                                 = 'h08K' // scout tower
     constant integer VILLAGE_BELL_TOWER                              = 'h08T' // guard tower
@@ -5562,6 +5564,8 @@ globals
     constant integer VILLAGE_WIND_MILL                               = 'h08Q' // aviary
     constant integer VILLAGE_GRANARY                                 = 'h08R' // lumber mill
     constant integer VILLAGE_FRUIT_STAND                             = 'h08S' // blacksmith
+
+    constant integer VILLAGE_WORKER                                  = 'h08G'
 
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
