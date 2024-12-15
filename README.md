@@ -1822,3 +1822,4 @@ Here is a list of some modified versions online:
 * 8512590215848: [Book with Water Spells](https://www.hiveworkshop.com/threads/book-with-water-spells.318332/)
 * Blizzard Entertainment: [BTNINV_Misc_Food_11](https://www.hiveworkshop.com/threads/btninv_misc_food_11.55055/)
 * bakr: [Wyrmrest Temple](https://www.hiveworkshop.com/threads/wyrmrest-temple.341674/)
+* sPy: [HolyMissile](https://www.hiveworkshop.com/threads/holymissile.158319/)
