@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make it available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "3.36"
+    constant string MAP_VERSION                                      = "3.37"
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -5179,7 +5179,7 @@ globals
     constant integer UPG_SATYR_STR_MOON                              = 'R0GB'
     constant integer UPG_SATYR_MOON_ARMOR                            = 'R0GA'
     constant integer UPG_SATYR_SLUDGE_FLINGER                        = 'R0GC'
-    constant integer UPG_SATYR_CORRUPTED_ANCIENTS                    = 'R0IJ'
+    constant integer UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS          = 'R0IJ'
 
     constant integer SATYR_WORKER                                    = 'e01Y'
     constant integer SATYR_SATYR                                     = 'n0L6' // footman
