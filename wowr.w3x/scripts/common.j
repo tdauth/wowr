@@ -5564,8 +5564,11 @@ globals
     constant integer VILLAGE_WIND_MILL                               = 'h08Q' // aviary
     constant integer VILLAGE_GRANARY                                 = 'h08R' // lumber mill
     constant integer VILLAGE_FRUIT_STAND                             = 'h08S' // blacksmith
+    constant integer VILLAGE_SHIPYARD                                = 'h0AL'
 
     constant integer VILLAGE_WORKER                                  = 'h08G'
+
+    constant integer VILLAGE_HOUSING                                 = 'h08W'
 
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'

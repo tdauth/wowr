@@ -1197,7 +1197,9 @@ function StartExpansion takes integer qty, integer hall returns boolean
     local integer gold_cost
 
     set count = TownCount(hall)
+    call TraceII("town count for hall when starting expansion: %d/%d\n", count, qty)
     if count >= qty then
+        call Trace("got enough towns already so do not build an expansion\n")
         return true
     endif
 
@@ -1223,9 +1225,11 @@ function StartExpansion takes integer qty, integer hall returns boolean
 
     set peon = GetExpansionPeon()
     if peon != null then
-        call Trace("no expansion peon\n")
+        call Trace("starting an expansion with peon\n")
         return SetExpansion(peon,hall)
     endif
+
+    call TraceI("no expansion peon for expansion %d\n", qty)
 
     return true
 endfunction
@@ -2994,10 +2998,7 @@ endfunction
 function GetPlayerInfoText takes nothing returns string
     local integer mines = GetMinesOwned()
     local integer gold = GetGoldOwned()
-    local string msg = "I "
-
-    set msg = msg + "own " + I2S2(mines) + " mines, "
-    set msg = msg + ", own " + I2S2(gold) + " gold, "
+    local string msg = "I own " + I2S2(mines) + " mines, own " + I2S2(gold) + " gold, "
 
     if (disabled) then
         set msg = msg + " do nothing"
