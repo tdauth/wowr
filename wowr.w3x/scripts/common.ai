@@ -218,6 +218,9 @@ globals
     // AI command options
     boolean attackEnemyPlayers = true
     boolean buildShips = false
+    integer shipyards = 0
+    integer ships_simple = 0
+    integer ships_strong = 0
     boolean disabled = false
     integer expansions = 0
     boolean attackTargetLocation = false
@@ -3096,9 +3099,15 @@ function UpdateWorkers takes nothing returns nothing
                 call NotifySpecificPlayer(GetLastData(), "Here, take my lumber!")
             elseif (c == COMMAND_SHIPS_ON) then
                 set buildShips = true
+                set shipyards = 1
+                set ships_simple = 1
+                set ships_strong = 3
                 call NotifyOtherPlayers("I will start building ships!")
             elseif (c == COMMAND_SHIPS_OFF) then
                 set buildShips = false
+                set shipyards = 0
+                set ships_simple = 0
+                set ships_strong = 0
                 call NotifyOtherPlayers("I will stop building ships!")
             elseif (c == COMMAND_DISABLED_ON) then
                 set disabled = true
@@ -3299,6 +3308,10 @@ function LoopActionFreelancerWoWReforged takes nothing returns nothing
     call ResearchHighLevelTier3ResearchesFreelancer()
     call GetZeppelinsIfRequired()
     call GetShreddersIfRequired()
+endfunction
+
+function StartUnitSimple takes integer qty, integer id returns nothing
+    call StartUnit(qty,id,-1)
 endfunction
 
 function MainWoWReforged takes integer farms, code buildingStrategy returns nothing

@@ -82,29 +82,20 @@ function BuildingStrategy takes nothing returns nothing
         call TraceI("Expansions Kul Tiras %d\n", expansions)
 
         if (expansions > 0) then
-            call SetBuildExpa(expansions, KULTIRAS_TIER_3)
-            call SetBuildExpa(expansions, KULTIRAS_LUMBER_MILL)
-            call SetBuildExpa(expansions, KULTIRAS_CANNON_TOWER)
+            call StartExpansion(expansions, KULTIRAS_TIER_3)
+            call StartExpansion(expansions, KULTIRAS_LUMBER_MILL)
+            call StartExpansion(expansions, KULTIRAS_CANNON_TOWER)
         endif
 
         if (buildShips) then
-            call SetBuildUnit(1, KULTIRAS_SHIPYARD)
-            call SetBuildUnit(1, KULTIRAS_SHIPYARD_ADVANCED)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-            call SetBuildUnit(2, KULTIRAS_BATTLESHIP)
-            call SetBuildUnit(2, KULTIRAS_DREADNOUGHT)
-            call SetBuildUnit(2, KULTIRAS_PIRATE_BATTLESHIP)
-        else
-            call SetBuildUnit(0, KULTIRAS_SHIPYARD)
-            call SetBuildUnit(0, KULTIRAS_SHIPYARD_ADVANCED)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
-            call SetBuildUnit(0, KULTIRAS_BATTLESHIP)
-            call SetBuildUnit(0, KULTIRAS_DREADNOUGHT)
-            call SetBuildUnit(0, KULTIRAS_PIRATE_BATTLESHIP)
+            call StartUnitSimple(shipyards, KULTIRAS_SHIPYARD)
+            call StartUnitSimple(shipyards, KULTIRAS_SHIPYARD_ADVANCED)
+            call StartUnitSimple(ships_simple, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_strong, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_strong, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_strong, KULTIRAS_BATTLESHIP)
+            call StartUnitSimple(ships_strong, KULTIRAS_DREADNOUGHT)
+            call StartUnitSimple(ships_strong, KULTIRAS_PIRATE_BATTLESHIP)
         endif
 
         call Sleep(M1)
