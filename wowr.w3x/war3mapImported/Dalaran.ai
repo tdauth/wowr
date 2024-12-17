@@ -3,7 +3,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, DALARAN_TIER_1)
     //call SetBuildUnit(1, DALARAN_MINE) // AI does not know how to construct. We preplaced one.
-    call SetBuildUnit(17, DALARAN_WORKER)
+    call SetBuildUnit(WORKERS_COUNT_START, DALARAN_WORKER)
     call SetBuildUnit(2, DALARAN_CITIZEN_MALE)
 
     call SetBuildUnit(2, DALARAN_HOUSING)

@@ -1256,6 +1256,8 @@ function OneBuildLoop takes nothing returns nothing
         set id  = build_item[index]
         set tp  = build_type[index]
 
+        call TraceIII("build " + GetObjectName(id) + ", qty %d, tp %d, build_length %d\n", qty, tp, build_length)
+
         //--------------------------------------------------------------------
         if tp == BUILD_UNIT then
             if not StartUnit(qty,id,build_town[index]) then

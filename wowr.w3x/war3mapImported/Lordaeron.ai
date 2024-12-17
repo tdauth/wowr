@@ -2,7 +2,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, LORDAERON_TIER_1)
-    call SetBuildUnit(17, LORDAERON_WORKER)
+    call SetBuildUnit(WORKERS_COUNT_START, LORDAERON_WORKER)
     call SetBuildUnit(2, LORDAERON_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
@@ -31,7 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, LORDAERON_CHILD)
     call SetBuildUnit(2, LORDAERON_PET)
     
-    call SetBuildUnit(3, LORDAERON_SCOUT_TOWER)
+    call SetBuildUnit(4, LORDAERON_SCOUT_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
     
     call SetBuildUpgr(2, UPG_LORDAERON_MELEE)
     call SetBuildUpgr(2, UPG_LORDAERON_RANGED)

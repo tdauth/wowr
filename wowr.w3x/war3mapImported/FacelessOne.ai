@@ -2,7 +2,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, FACELESS_ONE_TIER_1)
-    call SetBuildUnit(17, FACELESS_ONE_WORKER)
+    call SetBuildUnit(WORKERS_COUNT_START, FACELESS_ONE_WORKER)
     call SetBuildUnit(2, FACELESS_ONE_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()

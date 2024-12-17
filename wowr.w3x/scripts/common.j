@@ -2785,6 +2785,9 @@ globals
     constant integer HERO_JOURNEY_ALL_RACES                          = 75
     constant integer HERO_JOURNEY_ALL_PROFESSIONS                    = 75
 
+    // AI
+    constant integer WORKERS_COUNT_START                             = 20
+
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
     constant integer BACKPACK                                        = BACK_PACK
@@ -4300,7 +4303,7 @@ globals
     constant integer UPG_KULTIRAS_MASONRY                            = 'R05N'
     constant integer UPG_KULTIRAS_MELEE                              = 'R06T'
     constant integer UPG_KULTIRAS_ARMOR                              = 'R06U'
-    constant integer UPG_KULTIRAS_RANGED                             = 'R058'
+    constant integer UPG_KULTIRAS_RANGED                             = 'R06W'
     constant integer UPG_KULTIRAS_LEATHER                            = 'R06V'
     constant integer UPG_KULTIRAS_DEFEND                             = 'R06P'
     constant integer UPG_KULTIRAS_LONG_RIFLES                        = 'R058'

@@ -2,7 +2,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, OLD_HORDE_TIER_1)
-    call SetBuildUnit(17, OLD_HORDE_WORKER_BASE)
+    call SetBuildUnit(WORKERS_COUNT_START, OLD_HORDE_WORKER_BASE)
     call SetBuildUnit(2, OLD_HORDE_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()

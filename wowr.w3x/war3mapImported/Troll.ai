@@ -1,7 +1,7 @@
 function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetBuildUnit(1, TROLL_TIER_1)
-    call SetBuildUnit(17, TROLL_GATHERER)
+    call SetBuildUnit(WORKERS_COUNT_START, TROLL_GATHERER)
     call SetBuildUnit(2, TROLL_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()

@@ -2,7 +2,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, TOWN_HALL)
-    call SetBuildUnit(17, PEASANT)
+    call SetBuildUnit(WORKERS_COUNT_START, PEASANT)
     call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
@@ -31,7 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, HUMAN_CHILD)
     call SetBuildUnit(2, HUMAN_PET)
     
-    call SetBuildUnit(3, WATCH_TOWER)
+    call SetBuildUnit(3, WATCH_TOWER) // 2 guard towers, 1 cannon tower
     
     call SetBuildUpgr(2, UPG_MELEE)
     call SetBuildUpgr(2, UPG_RANGED)

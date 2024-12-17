@@ -2,7 +2,7 @@ function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetReplacements(1, 2, 3)
     call SetBuildUnit(1, KULTIRAS_TIER_1)
-    call SetBuildUnit(17, KULTIRAS_WORKER)
+    call SetBuildUnit(WORKERS_COUNT_START, KULTIRAS_WORKER)
     call SetBuildUnit(2, KULTIRAS_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
@@ -28,7 +28,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(1, KULTIRAS_TIER_2)
     call SetBuildUnit(1, KULTIRAS_WORKSHOP)
     call SetBuildUnit(1, KULTIRAS_ARCANE_SANCTUM)
-    call SetBuildUnit(2, KULTIRAS_WATCH_TOWER)
+    call SetBuildUnit(4, KULTIRAS_WATCH_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
     call SetBuildUnit(2, KULTIRAS_CITIZEN_FEMALE)
     call SetBuildUnit(2, KULTIRAS_CHILD)
     call SetBuildUnit(2, KULTIRAS_PET)
@@ -52,7 +52,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, KULTIRAS_GUARD_TOWER)
     call SetBuildUnit(1, KULTIRAS_CANNON_TOWER)
     call SetBuildUnit(1, KULTIRAS_ARCANE_TOWER)
-    call SetBuildUnit(2, KULTIRAS_AVIARY)
+    call SetBuildUnit(1, KULTIRAS_AVIARY)
 
     call SetBuildUpgr(3, UPG_KULTIRAS_MASONRY)
     call SetBuildUpgr(3, UPG_KULTIRAS_MELEE)
@@ -78,6 +78,8 @@ function BuildingStrategy takes nothing returns nothing
 
     loop
         call LoopActionWoWReforged()
+
+        call TraceI("Expansions Kul Tiras %d\n", expansions)
 
         if (expansions > 0) then
             call SetBuildExpa(expansions, KULTIRAS_TIER_3)

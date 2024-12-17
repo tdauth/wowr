@@ -12,15 +12,17 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, GOBLIN_CITIZEN_FEMALE)
     call SetBuildUnit(2, GOBLIN_CHILD)
     call SetBuildUnit(2, GOBLIN_BARRACKS)
-    call SetBuildUnit(2, GOBLIN_TOWER)
     call SetBuildUnit(1, GOBLIN_SHOP)
     call SetBuildUnit(1, GOBLIN_TIER_2)
     call SetBuildUnit(1, GOBLIN_TIER_3)
     call SetBuildUnit(1, GOBLIN_ARCANE_LABORATORY)
     call SetBuildUnit(1, GOBLIN_TANK_FACTORY)
     call SetBuildUnit(1, GOBLIN_AIR_FIELD)
-    call SetBuildUnit(4, GOBLIN_ROCKET_TOWER_3)
-    
+    call SetBuildUnit(4, GOBLIN_TOWER) // 2 rocket towers and 2 normal towers
+    call SetBuildUnit(2, GOBLIN_ROCKET_TOWER_1)
+    call SetBuildUnit(2, GOBLIN_ROCKET_TOWER_2)
+    call SetBuildUnit(2, GOBLIN_ROCKET_TOWER_3)
+
     call SetBuildUpgr(2, UPG_GOBLIN_LUMBER)
     call SetBuildUpgr(2, UPG_GOBLIN_BANKING)
     call SetBuildUpgr(3, UPG_GOBLIN_IMPROVED_CONSTRUCTION)

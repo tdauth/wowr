@@ -1,7 +1,7 @@
 function BuildingStrategy takes nothing returns nothing
     // Tier 1 Buildings
     call SetBuildUnit(1, PANDAREN_TIER_1)
-    call SetBuildUnit(17, PANDAREN_WOODCUTTER)
+    call SetBuildUnit(WORKERS_COUNT_START, PANDAREN_WOODCUTTER)
     call SetBuildUnit(2, PANDAREN_CITIZEN_MALE)
 
     call BuildingStrategyStandardTier1()
