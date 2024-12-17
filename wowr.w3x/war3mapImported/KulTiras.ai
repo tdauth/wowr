@@ -81,11 +81,9 @@ function BuildingStrategy takes nothing returns nothing
 
         call TraceI("Expansions Kul Tiras %d\n", expansions)
 
-        if (expansions > 0) then
-            call StartExpansion(expansions, KULTIRAS_TIER_3)
-            call StartExpansion(expansions, KULTIRAS_LUMBER_MILL)
-            call StartExpansion(expansions, KULTIRAS_CANNON_TOWER)
-        endif
+        call StartExpansion(expansions, KULTIRAS_TIER_3)
+        call StartExpansion(expansions, KULTIRAS_LUMBER_MILL)
+        call StartExpansion(expansions, KULTIRAS_CANNON_TOWER)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, KULTIRAS_SHIPYARD)

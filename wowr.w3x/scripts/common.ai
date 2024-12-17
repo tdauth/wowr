@@ -3285,15 +3285,19 @@ function BasicExpansionIfRequired takes integer ex, integer unitid returns nothi
 endfunction
 
 function GetZeppelinsIfRequired takes nothing returns nothing
-    if GetUnitCount(ZEPPELIN) < zeppelins then
+    if GetUnitCount(ZEPPELIN) < zeppelins and GetGold() > 300 and GetWood() > 100 then
         call TraceI("Getting another Zeppelin with zeppelins %d\n", zeppelins)
-        call GetZeppelin()
+        call PurchaseZeppelin()
     endif
+endfunction
+
+function StartUnitSimple takes integer qty, integer id returns nothing
+    call StartUnit(qty,id,-1)
 endfunction
 
 function GetShreddersIfRequired takes nothing returns nothing
     call TraceI("Getting another Shredder with shredders %d\n", shredders)
-    call SetBuildUnit(shredders, SHREDDER)
+    call StartUnitSimple(shredders, SHREDDER)
 endfunction
 
 function LoopActionWoWReforged takes nothing returns nothing
@@ -3308,10 +3312,6 @@ function LoopActionFreelancerWoWReforged takes nothing returns nothing
     call ResearchHighLevelTier3ResearchesFreelancer()
     call GetZeppelinsIfRequired()
     call GetShreddersIfRequired()
-endfunction
-
-function StartUnitSimple takes integer qty, integer id returns nothing
-    call StartUnit(qty,id,-1)
 endfunction
 
 function MainWoWReforged takes integer farms, code buildingStrategy returns nothing
