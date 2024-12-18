@@ -1222,7 +1222,7 @@ function StartExpansion takes integer qty, integer hall returns boolean
     set total_gold = total_gold - gold_cost
 
     if GetExpansionFoe() != null then
-        call Trace("no gold for expansion foe\n")
+        call Trace("no expansion foe\n")
         return true
     endif
 
@@ -1259,7 +1259,7 @@ function OneBuildLoop takes nothing returns nothing
         set id  = build_item[index]
         set tp  = build_type[index]
 
-        call TraceIII("build " + GetObjectName(id) + ", qty %d, tp %d, build_length %d\n", qty, tp, build_length)
+        //call TraceIII("build " + GetObjectName(id) + ", qty %d, tp %d, build_length %d\n", qty, tp, build_length)
 
         //--------------------------------------------------------------------
         if tp == BUILD_UNIT then
@@ -3199,6 +3199,11 @@ function BuildingStrategyStandardTier1 takes nothing returns nothing
     call SetBuildUnit(shredders, SHREDDER)
 endfunction
 
+function StartUnitSimple takes integer qty, integer id returns nothing
+    call StartUnit(qty,id,-1)
+endfunction
+
+
 function ResearchHighLevelTier3Researches takes nothing returns nothing
     local integer evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
     local integer improvedLevel = 0
@@ -3212,16 +3217,16 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
         if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
             set improvedLevel = evolutionLevel / 10
             call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
-            call SetBuildUpgr(evolutionLevel, UPG_EVOLUTION)
-            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
-            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_MOUNT)
-            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_NAVY)
+            call StartUpgrade(evolutionLevel, UPG_EVOLUTION)
+            call StartUpgrade(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
+            call StartUpgrade(improvedLevel, UPG_IMPROVED_MOUNT)
+            call StartUpgrade(improvedLevel, UPG_IMPROVED_NAVY)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
         endif
     endif
 endfunction
@@ -3239,18 +3244,18 @@ function ResearchHighLevelTier3ResearchesFreelancer takes nothing returns nothin
         if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
             set improvedLevel = evolutionLevel / 10
             call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
-            call SetBuildUpgr(evolutionLevel, UPG_FREELANCER_CHEAP_EVOLUTION)
-            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
-            call SetBuildUpgr(improvedLevel, UPG_FREELANCER_MASONRY)
-            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_MOUNT)
-            call SetBuildUpgr(improvedLevel, UPG_IMPROVED_NAVY)
+            call StartUpgrade(evolutionLevel, UPG_FREELANCER_CHEAP_EVOLUTION)
+            call StartUpgrade(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
+            call StartUpgrade(improvedLevel, UPG_FREELANCER_MASONRY)
+            call StartUpgrade(improvedLevel, UPG_IMPROVED_MOUNT)
+            call StartUpgrade(improvedLevel, UPG_IMPROVED_NAVY)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_FREELANCER_MASONRY)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
-            call SetBuildUpgr(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_FREELANCER_MASONRY)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
         endif
     endif
 endfunction
@@ -3289,10 +3294,6 @@ function GetZeppelinsIfRequired takes nothing returns nothing
         call TraceI("Getting another Zeppelin with zeppelins %d\n", zeppelins)
         call PurchaseZeppelin()
     endif
-endfunction
-
-function StartUnitSimple takes integer qty, integer id returns nothing
-    call StartUnit(qty,id,-1)
 endfunction
 
 function GetShreddersIfRequired takes nothing returns nothing
