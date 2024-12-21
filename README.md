@@ -68,6 +68,7 @@ Use this check list when releasing a new version of the map:
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
 * Use [checkjass.bat](./checkjass.bat) to check all JASS scripts.
+* Make sure that save games still work by saving and loading.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
 * Use the cheat "-savecodemissing" to check for missing save code objects.
 * Use the cheat "-checkheroskills" to check for all registered hero spells.
@@ -75,7 +76,7 @@ Use this check list when releasing a new version of the map:
 * Make sure the imported data is working and there are no corrupted or big files added by mistake. Check for imported files with a big size or 0 size.
 * Save the map as wowrX.Y.w3x and tag the repo with X.Y and create a release on GitHub based on the tag.
 * Upload the release on as many modding websites as possible.
-* Announce the new release on HIVE and Discord.
+* Announce the new release on Discord.
 
 ## Modifications with World Editor
 
