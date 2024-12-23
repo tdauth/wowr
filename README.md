@@ -9,6 +9,12 @@ GitHub Repository of the official website: [wowr-website](https://github.com/tda
 
 The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the Warcraft III: Reforged World Editor.
 
+## Contribute
+
+![Donate](QR_Code_Donate.png "Donate")
+
+Report any issues on Discord.
+
 ## Play the Map
 
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
