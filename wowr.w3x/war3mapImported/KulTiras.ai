@@ -82,7 +82,7 @@ function BuildingStrategy takes nothing returns nothing
         call TraceI("Expansions Kul Tiras %d\n", expansions)
 
         if expansions > 0 and TownHasMine(1) and not TownHasHall(1) then
-            call StartUnit(1,KULTIRAS_TIER_3,1)
+            call StartUnit(1, KULTIRAS_TIER_3, 1)
         endif
 
         call StartExpansion(expansions + 1, KULTIRAS_TIER_3)
