@@ -85,9 +85,9 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnit(1, KULTIRAS_TIER_3, 1)
         endif
 
-        call StartExpansion(expansions + 1, KULTIRAS_TIER_3)
-        call StartExpansion(expansions + 1, KULTIRAS_LUMBER_MILL)
-        call StartExpansion(expansions + 1, KULTIRAS_CANNON_TOWER)
+        call StartExpansionSimple(KULTIRAS_TIER_3)
+        call StartExpansionSimple(KULTIRAS_LUMBER_MILL)
+        call StartExpansionSimple(KULTIRAS_CANNON_TOWER)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, KULTIRAS_SHIPYARD)

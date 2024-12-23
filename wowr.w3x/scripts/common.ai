@@ -3203,6 +3203,9 @@ function StartUnitSimple takes integer qty, integer id returns nothing
     call StartUnit(qty,id,-1)
 endfunction
 
+function StartExpansionSimple takes integer id returns nothing
+    call StartExpansion(expansions + 1, id)
+endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing
     local integer evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
