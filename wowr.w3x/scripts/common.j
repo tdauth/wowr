@@ -2863,6 +2863,27 @@ globals
 
     // Neutral
     constant integer GOLD_MINE                                       = 'ngol'
+    constant integer RANDOM_MINE                                     = 'n0DF'
+    constant integer GEMSTONES_MINE                                  = 'n0DC'
+    constant integer ORE_MINE                                        = 'n0DG'
+    constant integer WELL                                            = 'n0DH'
+    constant integer OIL_PLATFORM                                    = 'n0DK'
+    constant integer FOOD_FARM                                       = 'n0DL'
+    constant integer FISH_SCHOOL                                     = 'n0DQ'
+    constant integer BERRY_BUSHES                                    = 'n0H7'
+    constant integer MINERAL_FIELDS                                  = 'n0DS'
+    constant integer VESPENE_GEYSERS                                 = 'n0DR'
+    constant integer POWER_CRYSTAL_MINE                              = 'n0DZ'
+    constant integer MONUMENT                                        = 'n0ET'
+    constant integer ROCKS_MINE                                      = 'n0GJ'
+    constant integer FRUIT_STAND                                     = 'n0GU'
+    constant integer ARGUNITE_MINE                                   = 'n0JT'
+    constant integer FEL_MINE                                        = 'n0FB'
+    constant integer RANDOM_WATER_MINE                               = 'n0DT'
+    constant integer WATER_OIL_PLATFORM                              = 'n0DU'
+    constant integer FLOTSAM                                         = 'n0DJ'
+
+    constant integer ANIMAL_PEN                                      = 'n0O5' // Wool Mine
 
     // Banners
     constant integer BANNER_SHOP_NEUTRAL                             = 'n0E4'
