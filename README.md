@@ -15,7 +15,8 @@ Donate:
 
 ![Donate](QR_Code_Donate.png "Donate")
 
-Report any issues on Discord.
+* Report any issues on Discord.
+* Support the [YouTube Channel](https://www.youtube.com/channel/UCzGcsuPfRVqdaE87JYCK5zw).
 
 ## Play the Map
 
