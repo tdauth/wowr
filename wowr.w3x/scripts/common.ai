@@ -3042,9 +3042,7 @@ function GetPlayerInfoText takes nothing returns string
         set msg = msg + "don't build ships"
     endif
     
-    set msg = msg + " and "
-    
-    set msg = msg + "get "
+    set msg = msg + " and get "
 
     if (expansions > 0) then
         set msg = msg + I2S2(expansions)
@@ -3053,15 +3051,13 @@ function GetPlayerInfoText takes nothing returns string
     endif
 
     set msg = msg + " expansions"
-    
-    if (attackTargetLocation) then
-        set msg = msg + " and "
-    
-        set msg = msg + "attack a location"
-    endif
 
-    set msg = msg + " and get " + I2S2(shredders) + " Shredders"
-    set msg = msg + " and get " + I2S2(zeppelins) + " Zeppelins"
+    set msg = msg + ", " + I2S2(shredders) + " Shredders"
+    set msg = msg + ", " + I2S2(zeppelins) + " Zeppelins"
+
+     if (attackTargetLocation) then
+        set msg = msg + " and attack a location"
+    endif
     
     set msg = msg + "."
     
