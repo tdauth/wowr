@@ -3269,6 +3269,11 @@ globals
     constant integer ITEM_TINY_WAR_GOLEM                             = 'I0SL' // rank 2
     constant integer ITEM_TINY_SIEGE_GOLEM                           = 'I0SK' // rank 3
     constant integer ITEM_TINY_FLESH_GOLEM                           = 'I0SM' // rank 4
+    constant integer ITEM_TINY_DIVINE_GOLEM                          = 'I186' // rank 5
+    constant integer ITEM_TINY_GOLEM_FACTORY                         = 'I185' // rank 6
+
+    constant integer GOLEM_FACTORY                                   = 'n0O6'
+    constant integer DIVINE_GOLEM_GOLEM_SCULPTOR                     = 'n0O7'
 
     // Combiner
     // TODO Add item types.
