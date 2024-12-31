@@ -3112,6 +3112,7 @@ globals
     constant integer MERCENARY_CAMP_SUNKEN_RUINS                     = 'nmrc'
     constant integer MERCENARY_CAMP_UNDERGROUND                      = 'nmrb'
     constant integer MERCENARY_CAMP_VILLAGE                          = 'nmr0'
+    constant integer MERCENARY_CAMP_KUL_TIRAS                        = 'n0OA'
     constant integer MERCENARY_CAMP_ARGUS                            = 'n0J5'
     constant integer MERCENARY_CAMP_EMERALD_DREAM                    = 'n0MM'
     constant integer MERCENARY_CAMP_PANDARIA                         = 'n08L'
@@ -3460,6 +3461,7 @@ globals
     constant integer CAGE                                            = 'o043'
     constant integer CRATES_0                                        = 'o0BQ'
     constant integer CRATES_1                                        = 'o0BR'
+    constant integer PIRATE                                          = 'h0AM'
 
     // Housing
     constant integer CARETAKER                                       = 'n0O2'
