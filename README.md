@@ -1834,3 +1834,4 @@ Here is a list of some modified versions online:
 * Blizzard Entertainment: [BTNINV_Misc_Food_11](https://www.hiveworkshop.com/threads/btninv_misc_food_11.55055/)
 * bakr: [Wyrmrest Temple](https://www.hiveworkshop.com/threads/wyrmrest-temple.341674/)
 * sPy: [HolyMissile](https://www.hiveworkshop.com/threads/holymissile.158319/)
+* 8512590215848: [BTNTreasureChest](https://www.hiveworkshop.com/threads/btntreasurechest.210141/)
