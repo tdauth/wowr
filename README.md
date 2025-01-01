@@ -1835,3 +1835,4 @@ Here is a list of some modified versions online:
 * bakr: [Wyrmrest Temple](https://www.hiveworkshop.com/threads/wyrmrest-temple.341674/)
 * sPy: [HolyMissile](https://www.hiveworkshop.com/threads/holymissile.158319/)
 * 8512590215848: [BTNTreasureChest](https://www.hiveworkshop.com/threads/btntreasurechest.210141/)
+* PrinceYaser: [BTNTentacles](https://www.hiveworkshop.com/threads/btntentacles.305845/)
