@@ -3225,6 +3225,7 @@ globals
     // TODO Add item types.
 
     // Witch Doctor
+    constant integer ITEM_POWER_WARDS                                = 'I189' // grand master
     constant integer ITEM_HEALING_WARDS                              = 'whwd' // master
     constant integer ITEM_MANA_WARDS                                 = 'I09I' // adept
     constant integer ITEM_STASIS_TRAPS                               = 'I09K' // advanced
