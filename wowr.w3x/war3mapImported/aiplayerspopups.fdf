@@ -285,6 +285,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "Ny'alotha",      -2,
         MenuItem "Village",      -2,
         MenuItem "Jadefire",      -2,
+        MenuItem "Winter",      -2,
     }
 }
 
