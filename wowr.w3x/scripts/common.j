@@ -3237,7 +3237,9 @@ globals
     // Farmer
     constant integer GRANARY                                         = 'h0M7'
     constant integer ITEM_TINY_GRANARY                               = 'I0KA'
+    constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G'
     constant integer WATER_SUPPLY                                    = 'h0KX'
+    constant integer ANIMAL_PEN_FARMER                               = 'h0AN'
 
     constant integer COW                                             = 'n0DX'
     constant integer CHICKEN                                         = 'nech'
