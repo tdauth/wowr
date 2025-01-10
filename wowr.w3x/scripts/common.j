@@ -2885,6 +2885,9 @@ globals
 
     constant integer ANIMAL_PEN                                      = 'n0O5' // Wool Mine
 
+    // Properties
+    constant integer PROPERTY_WYRMREST_TEMPLE                        = 'n0OC'
+
     // Banners
     constant integer BANNER_SHOP_NEUTRAL                             = 'n0E4'
     constant integer BANNER_SHOP                                     = 'n0E6'
@@ -5619,12 +5622,14 @@ globals
     constant integer MEDIVH                                          = 'H018'
     constant integer LORD_GARITHOS                                   = 'Hlgr'
     constant integer ANDUIN_WRYNN                                    = 'H0QW'
+    constant integer ANDUIN_WRYNN_M                                  = 'H0RW'
     constant integer ANDUIN_LOTHAR                                   = 'H0QX'
     constant integer VARIAN_WRYNN                                    = 'H0RR'
     // Dwarf
     constant integer MORTAR_TEAM                                     = 'H0JK'
     constant integer DWARF_MAGE                                      = 'H03L'
     constant integer ELITE_RIFLEMAN                                  = 'H0JQ'
+    constant integer ELITE_RIFLEMAN_M                                = 'H0JR'
     constant integer SIEGE_ENGINE                                    = 'H0QV'
     constant integer BARD                                            = 'H0YK'
     constant integer GRYPHON_RIDER                                   = 'H0S1'
@@ -5638,6 +5643,7 @@ globals
     constant integer SORCERESS_HERO                                  = 'H0B2'
     constant integer PRIEST_HERO                                     = 'H068'
     constant integer SYLVANAS_WINDRUNNER                             = 'Hvwd'
+    constant integer SYLVANAS_WINDRUNNER_M                           = 'H04K'
     constant integer THALORIEN_DAWNSEEKER                            = 'Hddt'
     // Orc
     constant integer WARLOCK                                         = 'O02O'
@@ -5647,9 +5653,11 @@ globals
     constant integer SHAMAN_HERO                                     = 'O0AK'
     constant integer THRALL_HERO                                     = 'O02R'
     constant integer GROMMASH_HELLSCREAM                             = 'O02T'
+    constant integer GROMMASH_HELLSCREAM_M                           = 'O02U'
     constant integer DREKTHAR                                        = 'O00D'
     constant integer BLACKHAND                                       = 'O01V'
     constant integer NERZHUL                                         = 'O01T'
+    constant integer NERZHUL_M                                       = 'O01U'
     constant integer GULDAN                                          = 'Ogld'
     constant integer DUROTAN                                         = 'O07H'
     constant integer GARONA                                          = 'O06U'
@@ -5661,7 +5669,9 @@ globals
     constant integer ABOMINATION_HERO                                = 'U01G'
     constant integer BANSHEE_HERO                                    = 'U01F'
     constant integer ACOLYTE_HERO                                    = 'H0P2'
+    constant integer ACOLYTE_HERO_M                                  = 'H0P3'
     constant integer OBSIDIAN_STATUE_HERO                            = 'U02U'
+    constant integer OBSIDIAN_STATUE_HERO_M                          = 'U02V'
     constant integer ARTHAS_UNDEAD                                   = 'U01C'
     constant integer KELTHUZAD                                       = 'U01B'
     constant integer KELTHUZAD_LICH                                  = 'U00J'
@@ -5710,11 +5720,13 @@ globals
     // Goblin
     constant integer ALCHEMIST                                       = 'Nalc'
     constant integer TINKER                                          = 'Ntin'
+    constant integer TINKER_M                                        = 'Nrob'
     constant integer ROBO_GOBLIN                                     = 'ANrg'
     constant integer FLAME_SHREDDER                                  = 'N0BE'
     constant integer GOBLIN_SHREDDER_HERO                            = 'N07D'
     constant integer GOBLIN_GUNNER                                   = 'N06V'
     constant integer GOBLIN_PRINCE                                   = 'N09E'
+    constant integer GOBLIN_PRINCE_M                                 = 'N09F'
     constant integer GOBLIN_HEAVY_TANK_HERO                          = 'N06N'
     constant integer GOBLIN_WAR_ZEPPELIN_HERO                        = 'N06M'
     // Naga
@@ -5735,6 +5747,7 @@ globals
     constant integer ROKHAN                                          = 'O00B'
     // Tauren
     constant integer SPIRIT_WALKER_HERO                              = 'O04L'
+    constant integer SPIRIT_WALKER_HERO_M                            = 'O04M'
     constant integer CAIRNE_BLOODHOOF                                = 'O02S'
     // Demon
     constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
@@ -5756,6 +5769,7 @@ globals
     constant integer VELEN                                           = 'H0JV'
     // Furbolg
     constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
+    constant integer FURBOLG_URSA_WARRIOR_HERO_M                     = 'E00F'
     // Dalaran
     constant integer ARCH_SORCERESS                                  = 'H0V3'
     constant integer AEGWYNN                                         = 'H08E'
@@ -5764,6 +5778,7 @@ globals
     constant integer TIDESAGE                                        = 'H0UN'
     constant integer JAINA_HERO                                      = 'H0A4'
     constant integer ADMIRAL_PROUDMOORE                              = 'Hapm'
+    constant integer ADMIRAL_PROUDMOORE_M                            = 'H01O'
     // Stormwind
     constant integer LION_RIDER                                      = 'H0UL'
     constant integer BISHOP                                          = 'H08H'
@@ -5777,6 +5792,7 @@ globals
     constant integer DEATHCLAW                                       = 'H0J1'
     constant integer WORGEN_DEATH_KNIGHT                             = 'U01K'
     constant integer GENN_GREYMANE                                   = 'H0PN'
+    constant integer GENN_GREYMANE_M                                 = 'H0PO'
     // Tuskarr
     constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC'
     // Murloc
@@ -5820,6 +5836,7 @@ globals
     constant integer DARK_WIZARD                                     = 'H05U'
     // Dragonkin
     constant integer EVOKER                                          = 'H0SY'
+    constant integer EVOKER_M                                        = 'H0SZ'
     constant integer DRAGONSPAWN                                     = 'N0JY'
     // Neutral
     constant integer FIRELORD                                        = 'Nfir'
