@@ -286,6 +286,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "Village",      -2,
         MenuItem "Jadefire",      -2,
         MenuItem "Winter",      -2,
+        MenuItem "Fall",      -2,
     }
 }
 
