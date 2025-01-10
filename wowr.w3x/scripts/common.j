@@ -3399,6 +3399,7 @@ globals
     constant integer ITEM_HOLY_SWORD                                 = 'I16L'
 
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
+    constant integer ITEM_GOBLIN_TOOL_BOX                            = 'I0Q1'
 
     constant integer ITEM_GOLD_COINS                                 = 'gold'
     constant integer ITEM_GOLD_BARS                                  = 'I055'
