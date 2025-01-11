@@ -4768,6 +4768,8 @@ globals
 
     constant integer WORGEN_CITIZEN_MALE                             = 'n0C5'
     constant integer WORGEN_CITIZEN_FEMALE                           = 'n0C6'
+    constant integer WORGEN_CHILD                                    = 'n0OD'
+    constant integer WORGEN_PET                                      = 'n0C7'
     constant integer WORGEN_HOUSING                                  = 'h0JA'
 
     // Vrykul
@@ -4820,6 +4822,8 @@ globals
 
     constant integer VRYKUL_CITIZEN_MALE                             = 'n0F4'
     constant integer VRYKUL_CITIZEN_FEMALE                           = 'n0F5'
+    constant integer VRYKUL_CHILD                                    = 'n0OE'
+    constant integer VRYKUL_PET                                      = 'n0C7'
     constant integer VRYKUL_HOUSING                                  = 'h0PC'
 
     // Tuskarr

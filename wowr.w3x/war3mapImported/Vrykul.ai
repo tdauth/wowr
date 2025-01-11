@@ -29,7 +29,9 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(4, VRYKUL_FISHER_HOUSE)
     call SetBuildUnit(2, VRYKUL_LAMP)
     call SetBuildUnit(2, VRYKUL_CITIZEN_FEMALE)
-    
+    call SetBuildUnit(2, VRYKUL_CHILD)
+    call SetBuildUnit(2, VRYKUL_PET)
+
     call SetBuildUpgr(2, UPG_VRYKUL_IRON_SWORDS)
     call SetBuildUpgr(2, UPG_VRYKUL_IRON_PLATING)
     call SetBuildUpgr(2, UPG_VRYKUL_CREATURE_SKIN)

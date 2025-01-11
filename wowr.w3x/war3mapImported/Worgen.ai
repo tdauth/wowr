@@ -28,6 +28,8 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(4, WORGEN_HOUSE)
     call SetBuildUnit(2, WORGEN_SCOUT_TOWER)
     call SetBuildUnit(2, WORGEN_CITIZEN_FEMALE)
+    call SetBuildUnit(2, WORGEN_CHILD)
+    call SetBuildUnit(2, WORGEN_PET)
     
     call SetBuildUpgr(2, UPG_WORGEN_WORGEN_CLAWS)
     call SetBuildUpgr(2, UPG_WORGEN_ARMOR)
