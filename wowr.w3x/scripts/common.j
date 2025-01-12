@@ -3132,8 +3132,8 @@ globals
     // Professions
 
     // Herbalist
-    constant integer HERB_GARDEN                                     = 'h087' // doctor
-    constant integer ITEM_HERB_GARDEN                                = 'I10A' // doctor
+    constant integer FOUNTAIN_OF_HEALTH                              = 'h087' // doctor
+    constant integer ITEM_FOUNTAIN_OF_HEALTH                         = 'I10A' // doctor
     constant integer ITEM_SCROLL_OF_HEALING                          = 'shea' // grand master
     constant integer ITEM_TALISMAN_OF_EVERLASTING                    = 'I025' // master
     constant integer ITEM_POTION_OF_INVULNERABILITY                  = 'pnvu' // adept
@@ -3141,8 +3141,8 @@ globals
     constant integer ITEM_POTION_OF_GREATER_HEALING                  = 'pghe' // novice
 
     // Alchemist
-    constant integer CAULDRON                                        = 'h088' // doctor
-    constant integer ITEM_CAULDRON                                   = 'I10C' // doctor
+    constant integer FOUNTAIN_OF_MANA                                = 'h088' // doctor
+    constant integer ITEM_FOUNTAIN_OF_MANA                           = 'I10C' // doctor
     constant integer ITEM_SCROLL_OF_MANA                             = 'sman' // grand master
     constant integer ITEM_TALISMAN_OF_SPELL_PROTECTION               = 'I024' // master
     constant integer ITEM_WAND_OF_MANA_STEALING                      = 'woms' // adept
@@ -3166,6 +3166,7 @@ globals
     constant integer ITEM_LIGHT_LEATHER_ARMOR                        = 'I00K' // novice
 
      // Engineer
+    constant integer ITEM_SCROLL_OF_REPAIR                           = 'I190' // grand master
     constant integer ITEM_TINY_DEATH_TOWER                           = 'I00S' // master
     // adept is 2 goblin sappers
     constant integer ITEM_TINY_COLD_TOWER                            = 'I00U' // advanced
@@ -3242,11 +3243,16 @@ globals
     constant integer MERCHANT_SHOP                                   = 'h0AR' // doctor
 
     // Farmer
+    constant integer FARM_FARMER                                     = 'h0KW'
+    constant integer ITEM_TINY_FARM_FARMER                           = 'I0JU'
     constant integer GRANARY                                         = 'h0M7'
     constant integer ITEM_TINY_GRANARY                               = 'I0KA'
-    constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G'
     constant integer WATER_SUPPLY                                    = 'h0KX'
+    constant integer ITEM_TINY_WATER_SUPPLY                          = 'I0JW'
+    constant integer WIND_MILL                                       = 'h0M8'
+    constant integer ITEM_TINY_WIND_MILL                             = 'I0KB'
     constant integer ANIMAL_PEN_FARMER                               = 'h0AN'
+    constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G'
 
     constant integer COW                                             = 'n0DX'
     constant integer CHICKEN                                         = 'nech'
@@ -3349,7 +3355,14 @@ globals
     constant integer ITEM_PICKAXE                                    = 'I0W7'
 
     // Cook
+    constant integer FIRE_PIT_COOK                                   = 'h0U1'
+    constant integer ITEM_FIRE_PIT                                   = 'I0WO'
+
     // Fisherman
+    constant integer ITEM_FISHING_PORT                               = 'I0WY'
+    constant integer FISHING_PORT                                    = 'h0U2'
+    constant integer ITEM_FISH_MARKET                                = 'I0X8'
+    constant integer FISH_MARKET_FISHERMAN                           = 'n0J8'
     // TODO Add item types.
 
     // Prospector
@@ -3387,6 +3400,8 @@ globals
 
     // Bard
     // TODO Add item types.
+    constant integer RECORD_PLAYER                                   = 'h0G0'
+    constant integer ITEM_RECORD_PLAYER                              = 'I14Q'
 
     // All Races Engineer
     constant integer CHEST                                           = 'h0Y9'

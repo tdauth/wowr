@@ -1837,3 +1837,4 @@ Here is a list of some modified versions online:
 * 8512590215848: [BTNTreasureChest](https://www.hiveworkshop.com/threads/btntreasurechest.210141/)
 * PrinceYaser: [BTNTentacles](https://www.hiveworkshop.com/threads/btntentacles.305845/)
 * bakr, Wargeras (Sponsor): [Tauren Log Launcher](https://www.hiveworkshop.com/threads/tauren-log-launcher.357877/)
+* Ceterai: [BTNFountainOfMagic](https://www.hiveworkshop.com/threads/btnfountainofmagic.332095/)
