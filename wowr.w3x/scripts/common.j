@@ -3228,6 +3228,7 @@ globals
     // TODO Add item types.
 
     // Witch Doctor
+    constant integer ITEM_PEACE_WARDS                                = 'I0R4' // doctor
     constant integer ITEM_POWER_WARDS                                = 'I189' // grand master
     constant integer ITEM_HEALING_WARDS                              = 'whwd' // master
     constant integer ITEM_MANA_WARDS                                 = 'I09I' // adept
@@ -3236,6 +3237,9 @@ globals
 
     // Merchant
     // TODO Add item types.
+    constant integer ITEM_AMULET_OF_HAGGLE                           = 'I18Y' // grand master
+    constant integer ITEM_MERCHANT_SHOP                              = 'I18Z' // doctor
+    constant integer MERCHANT_SHOP                                   = 'h0AR' // doctor
 
     // Farmer
     constant integer GRANARY                                         = 'h0M7'
