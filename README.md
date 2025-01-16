@@ -11,7 +11,7 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 
 ## Contribute
 
-Donate:
+[Donate](https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8):
 
 ![Donate](QR_Code_Donate.png "Donate")
 
