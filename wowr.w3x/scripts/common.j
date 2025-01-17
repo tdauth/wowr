@@ -3296,6 +3296,10 @@ globals
     // TODO Add item types.
 
     // Hunter
+    constant integer HUNTING_CAMP                                    = 'n0OF' // doctor
+    constant integer ITEM_HUNTING_CAMP                               = 'I194' // doctor
+    constant integer HUNTING_HAWK                                    = 'n0OG' // grand master
+
     // Critters
     constant integer STAG                                            = 'nder'
     constant integer PIG                                             = 'npig'
