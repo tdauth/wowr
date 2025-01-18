@@ -3180,6 +3180,10 @@ globals
     constant integer DEATH_TOWER                                     = 'ntt1'
     constant integer ADVANCED_DEATH_TOWER                            = 'ntx2'
 
+    // Demolition Expert
+    constant integer ITEM_GOBLIN_LAND_MINES                          = 'gobm' // novice
+    constant integer ITEM_EXPLOSIVE_BARRELS                          = 'I19B'
+
     // Lore Master
     constant integer ITEM_ANKH_OF_REINCARNATION                      = 'ankh' // master
     constant integer ITEM_SCROLL_OF_RESURRECTION                     = 'srrc' // adept
