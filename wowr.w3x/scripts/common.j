@@ -3251,8 +3251,10 @@ globals
     constant integer ITEM_TINY_WATER_SUPPLY                          = 'I0JW'
     constant integer WIND_MILL                                       = 'h0M8'
     constant integer ITEM_TINY_WIND_MILL                             = 'I0KB'
-    constant integer ANIMAL_PEN_FARMER                               = 'h0AN'
-    constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G'
+    constant integer ANIMAL_PEN_FARMER                               = 'h0AN' // grand master
+    constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G' // grand master
+    constant integer BARN                                            = 'h0AS' // doctor
+    constant integer ITEM_TINY_BARN                                  = 'I195' // doctor
 
     constant integer COW                                             = 'n0DX'
     constant integer CHICKEN                                         = 'nech'
@@ -5794,6 +5796,7 @@ globals
     constant integer CHEN_STORMSTOUT                                 = 'N01F'
     // Troll
     constant integer WITCH_DOCTOR_HERO                               = 'O04Y'
+    constant integer TROLL_WARLORD                                   = 'N0OH'
     constant integer ROKHAN                                          = 'O00B'
     // Tauren
     constant integer SPIRIT_WALKER_HERO                              = 'O04L'
@@ -5902,6 +5905,7 @@ globals
     constant integer BROOD_MOTHER                                    = 'N0LD'
     constant integer ANCIENT_SASQUATCH                               = 'O09Q'
     constant integer ANCIENT_WENDIGO                                 = 'O09R'
+    constant integer ENRANGED_JUNGLE_STALKER                         = 'O0BW'
     constant integer SLUDGE_MONSTROSITY                              = 'O0A1'
     constant integer SALAMANDER_LORD                                 = 'N0AE'
     constant integer HARPY_QUEEN                                     = 'N0HJ'

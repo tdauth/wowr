@@ -2649,6 +2649,7 @@ function InitHeroes takes nothing returns nothing
     // Troll
     call AddHero(SHADOW_HUNTER)
     call AddHero(WITCH_DOCTOR_HERO)
+    call AddHero(TROLL_WARLORD)
     call AddHero(ROKHAN)
     // Tauren
     call AddHero(TAUREN_CHIEF)
@@ -2757,6 +2758,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(BROOD_MOTHER)
     call AddHero(ANCIENT_SASQUATCH)
     call AddHero(ANCIENT_WENDIGO)
+    call AddHero(ENRANGED_JUNGLE_STALKER)
     call AddHero(HARPY_QUEEN)
     call AddHero(RED_DRAGON_HERO)
 endfunction
