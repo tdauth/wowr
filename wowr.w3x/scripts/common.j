@@ -3166,7 +3166,9 @@ globals
     constant integer ITEM_PLATED_HELMET                              = 'I00L' // advanced
     constant integer ITEM_LIGHT_LEATHER_ARMOR                        = 'I00K' // novice
 
-     // Engineer
+    // Engineer
+    constant integer POWER_GENERATOR_ENGINEER                        = 'n0OJ' // doctor
+    constant integer ITEM_POWER_GENERATOR_ENGINEER                   = 'I19C' // doctor
     constant integer ITEM_SCROLL_OF_REPAIR                           = 'I190' // grand master
     constant integer ITEM_TINY_DEATH_TOWER                           = 'I00S' // master
     // adept is 2 goblin sappers
@@ -3227,6 +3229,8 @@ globals
 
     // Captain
     // TODO Add item types.
+    constant integer SHIPYARD                                        = 'h0AT' // doctor
+    constant integer ITEM_SHIPYARD                                   = 'I19D' // doctor
 
     // Archaeologist
     constant integer EXCAVATION_SITE                                 = 'n0M2' // doctor
