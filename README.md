@@ -1838,3 +1838,4 @@ Here is a list of some modified versions online:
 * PrinceYaser: [BTNTentacles](https://www.hiveworkshop.com/threads/btntentacles.305845/)
 * bakr, Wargeras (Sponsor): [Tauren Log Launcher](https://www.hiveworkshop.com/threads/tauren-log-launcher.357877/)
 * Ceterai: [BTNFountainOfMagic](https://www.hiveworkshop.com/threads/btnfountainofmagic.332095/)
+* Mechanical Man: [CannonNaval](https://www.hiveworkshop.com/threads/cannonnaval.48185/)

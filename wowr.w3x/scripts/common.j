@@ -3231,6 +3231,7 @@ globals
     // TODO Add item types.
     constant integer SHIPYARD                                        = 'h0AT' // doctor
     constant integer ITEM_SHIPYARD                                   = 'I19D' // doctor
+    constant integer CANNON                                          = 'h0AU' // doctor shipyard
 
     // Archaeologist
     constant integer EXCAVATION_SITE                                 = 'n0M2' // doctor
@@ -3412,6 +3413,10 @@ globals
     constant integer ITEM_METEOR_STONE                               = 'I0FN'
     constant integer ARCANE_OBSERVATORY_ASTROMANCER                  = 'n0MO'
     constant integer ITEM_TINY_ARCANE_OBSERVATORY_ASTROMANCER        = 'I12Z'
+    constant integer MOON                                            = 'n0OL' // grand master
+    constant integer ITEM_MOON                                       = 'I19F' // grand master
+    constant integer STAR                                            = 'n0OK' // doctor
+    constant integer ITEM_STAR                                       = 'I19E' // doctor
 
     // Bard
     // TODO Add item types.
