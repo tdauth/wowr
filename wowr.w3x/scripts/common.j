@@ -5879,7 +5879,7 @@ globals
     constant integer FEL_CROSSBOWMAN                                 = 'O09L'
     constant integer FEL_RAIDER                                      = 'O09P'
     constant integer FEL_PEON                                        = 'H0UU'
-    constant integer FEL_GROMMASH_HELLSCREAM                         = 'O02U'
+    constant integer FEL_GROMMASH_HELLSCREAM                         = 'O0BX'
     constant integer KARGATH_BLADEFIST                               = 'O09K'
     // Faceless One
     constant integer UNBROKEN                                        = 'N0K5'
