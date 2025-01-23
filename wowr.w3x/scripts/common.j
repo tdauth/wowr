@@ -3167,24 +3167,32 @@ globals
     constant integer ITEM_LIGHT_LEATHER_ARMOR                        = 'I00K' // novice
 
     // Engineer
+    constant integer UPG_MASONRY_ENGINEER                            = 'R085' // doctor
     constant integer POWER_GENERATOR_ENGINEER                        = 'n0OJ' // doctor
     constant integer ITEM_POWER_GENERATOR_ENGINEER                   = 'I19C' // doctor
     constant integer ITEM_SCROLL_OF_REPAIR                           = 'I190' // grand master
     constant integer ITEM_TINY_DEATH_TOWER                           = 'I00S' // master
-    // adept is 2 goblin sappers
+    constant integer DEATH_TOWER                                     = 'ntt1' // master
+    constant integer ADVANCED_DEATH_TOWER                            = 'ntx2' // master
+    constant integer ITEM_TINY_BOULDER_TOWER                         = 'I02H' // adept
+    constant integer BOULDER_TOWER                                   = 'nbt1' // adept
+    constant integer ADANCED_BOULDER_TOWER                           = 'nbt2' // adept
     constant integer ITEM_TINY_COLD_TOWER                            = 'I00U' // advanced
+    constant integer COLD_TOWER                                      = 'ndt1' // advanced
+    constant integer ADVANCED_COLD_TOWER                             = 'ndt2' // advanced
     constant integer ITEM_TINY_FLAME_TOWER                           = 'I00T' // novice
-
-    constant integer FLAME_TOWER                                     = 'nft1'
-    constant integer ADVANCED_FLAME_TOWER                            = 'nft2'
-    constant integer COLD_TOWER                                      = 'ndt1'
-    constant integer ADVANCED_COLD_TOWER                             = 'ndt2'
-    constant integer DEATH_TOWER                                     = 'ntt1'
-    constant integer ADVANCED_DEATH_TOWER                            = 'ntx2'
+    constant integer FLAME_TOWER                                     = 'nft1' // novice
+    constant integer ADVANCED_FLAME_TOWER                            = 'nft2' // novice
 
     // Demolition Expert
+    constant integer ITEM_NUCLEAR_SILO                               = 'I19M' // doctor
+    constant integer NUCLEAR_SILO                                    = 'o0BZ' // doctor
+    constant integer TNT_CATAPULT                                    = 'o0BY' // grand master
+    constant integer ITEM_SLEDGE_HAMMER                              = 'I193' // master
+    // adept is 2 goblin sappers
+    constant integer ITEM_EXPLOSIVE_BARRELS                          = 'I19B' // advanced
+    constant integer ITEM_GOBLIN_GRENADES                            = 'I137' // advanced
     constant integer ITEM_GOBLIN_LAND_MINES                          = 'gobm' // novice
-    constant integer ITEM_EXPLOSIVE_BARRELS                          = 'I19B'
 
     // Lore Master
     constant integer ITEM_ANKH_OF_REINCARNATION                      = 'ankh' // master

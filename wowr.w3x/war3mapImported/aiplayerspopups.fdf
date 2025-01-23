@@ -353,6 +353,7 @@ Frame "POPUPMENU" "ProfessionsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Weapon Smith",     -2,
         MenuItem "Armorer",     -2,
         MenuItem "Engineer",     -2,
+        MenuItem "Demolition Expert",     -2,
         MenuItem "Dragon Breeder",     -2,
         MenuItem "Lore Master",     -2,
         MenuItem "Rune Forger",     -2,

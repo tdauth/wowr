@@ -1839,3 +1839,4 @@ Here is a list of some modified versions online:
 * bakr, Wargeras (Sponsor): [Tauren Log Launcher](https://www.hiveworkshop.com/threads/tauren-log-launcher.357877/)
 * Ceterai: [BTNFountainOfMagic](https://www.hiveworkshop.com/threads/btnfountainofmagic.332095/)
 * Mechanical Man: [CannonNaval](https://www.hiveworkshop.com/threads/cannonnaval.48185/)
+* bakr: [TNT Catapult](https://www.hiveworkshop.com/threads/tnt-catapult.322720/)
