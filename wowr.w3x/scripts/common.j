@@ -5678,6 +5678,7 @@ globals
     constant integer VILLAGE_WORKER                                  = 'h08G'
 
     constant integer VILLAGE_HOUSING                                 = 'h08W'
+    constant integer VILLAGE_PET                                     = 'n08F'
 
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'

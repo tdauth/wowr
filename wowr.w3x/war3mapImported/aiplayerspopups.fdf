@@ -341,6 +341,7 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Bandit",     -2,
         MenuItem "Dungeon",     -2,
         MenuItem "Dragonkin",     -2,
+        MenuItem "Village",     -2,
     }
 }
 
