@@ -3515,6 +3515,8 @@ globals
     constant integer CAGE                                            = 'o043'
     constant integer CRATES_0                                        = 'o0BQ'
     constant integer CRATES_1                                        = 'o0BR'
+    constant integer BARREL_0                                        = 'o0C1'
+    constant integer BARREL_1                                        = 'o0C2'
     constant integer PIRATE                                          = 'h0AM'
 
     // Housing
@@ -3523,6 +3525,9 @@ globals
     constant integer ITEM_HOUSE_KEY                                  = 'I16O'
     constant integer GROUND_DIRT                                     = 'o0BT'
     constant integer GROUND_ROUGH_DIRT                               = 'o0BU'
+
+    constant integer ENTER_COMMON_HOUSING                            = 'o0C3'
+    constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'
 
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT
