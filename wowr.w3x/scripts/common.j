@@ -3282,6 +3282,9 @@ globals
     constant integer ITEM_BAIT                                       = 'I0L5' // rank 2
     constant integer ITEM_ADVANCED_BAIT                              = 'I0L6' // rank 3
     constant integer ITEM_MONSTER_LURE                               = 'I0L2' // rank 4
+    constant integer ITEM_SCROLL_OF_CHARM                            = 'I19R' // grand master
+    constant integer ITEM_CAGE                                       = 'I19S' // doctor
+    constant integer CAGE_TAMER                                      = 'h0AV' // doctor
 
     // Inscriptor
     constant integer ITEM_DOCTOR_GLYPH                               = 'I15X'

@@ -1849,3 +1849,4 @@ Here is a list of some modified versions online:
 * Blood Raven: [Wine Bottle](https://www.hiveworkshop.com/threads/wine-bottle.270278/)
 * bisnar13: [Candle](https://www.hiveworkshop.com/threads/candle.235348/)
 * Mike: [WallTorch](https://www.hiveworkshop.com/threads/walltorch.267362/)
+* RodOfNOD: [PapilioBlue](https://www.hiveworkshop.com/threads/papilioblue.49218/)
