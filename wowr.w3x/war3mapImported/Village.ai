@@ -31,7 +31,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, HUMAN_CHILD)
     call SetBuildUnit(2, VILLAGE_PET)
     
-    call SetBuildUnit(3, WATCH_TOWER) // 2 guard towers, 1 cannon tower
+    call SetBuildUnit(2, VILLAGE_OUTPOST) // 2 bell towers
     
     call SetBuildUpgr(2, UPG_MELEE)
     call SetBuildUpgr(2, UPG_RANGED)
@@ -50,9 +50,8 @@ function BuildingStrategy takes nothing returns nothing
 
     // Tier 3 buildings
     call SetBuildUnit(1, VILLAGE_TIER_3)
-    call SetBuildUnit(1, AVIARY)
-    call SetBuildUnit(2, GUARD_TOWER)
-    call SetBuildUnit(1, CANNON_TOWER)
+    call SetBuildUnit(1, VILLAGE_WIND_MILL)
+    call SetBuildUnit(2, VILLAGE_BELL_TOWER)
     
     call SetBuildUpgr(3, UPG_MELEE)
     call SetBuildUpgr(3, UPG_RANGED)
@@ -82,16 +81,16 @@ function BuildingStrategy takes nothing returns nothing
         if (expansions > 0) then
             call SetBuildExpa(expansions, VILLAGE_TIER_3)
             call SetBuildExpa(expansions, VILLAGE_GRANARY)
-            call SetBuildExpa(expansions, WATCH_TOWER)
+            call SetBuildExpa(expansions, VILLAGE_OUTPOST)
         endif
 
         if (buildShips) then
-            call SetBuildUnit(1, HUMAN_SHIPYARD)
+            call SetBuildUnit(1, VILLAGE_SHIPYARD)
             call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
             call SetBuildUnit(2, HUMAN_FRIGATE)
             call SetBuildUnit(2, HUMAN_BATTLESHIP)
         else
-            call SetBuildUnit(0, HUMAN_SHIPYARD)
+            call SetBuildUnit(0, VILLAGE_SHIPYARD)
             call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
             call SetBuildUnit(0, HUMAN_FRIGATE)
             call SetBuildUnit(0, HUMAN_BATTLESHIP)
