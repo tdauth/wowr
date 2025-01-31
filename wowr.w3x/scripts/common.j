@@ -2969,6 +2969,7 @@ globals
     constant integer SNOWY_OWL_MOUNT                                 = 'h0V5'
 
     constant integer FOUNTAIN_OF_LIFE                                = 'h007'
+    constant integer FREELANCER_PROTECTION_TOWER                     = 'n03I'
     constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
     constant integer NEUTRAL_CITIZEN_FEMALE                          = 'n03E'
     constant integer NEUTRAL_CHILD                                   = 'n0IV'
@@ -3193,6 +3194,9 @@ globals
     constant integer ITEM_EXPLOSIVE_BARRELS                          = 'I19B' // advanced
     constant integer ITEM_GOBLIN_GRENADES                            = 'I137' // advanced
     constant integer ITEM_GOBLIN_LAND_MINES                          = 'gobm' // novice
+
+    constant integer GOBLIN_LAND_MINE                                = 'nglm'
+    constant integer EXPLOSIVE_BARREL                                = 'n0LH'
 
     // Lore Master
     constant integer ITEM_ANKH_OF_REINCARNATION                      = 'ankh' // master
@@ -4071,6 +4075,8 @@ globals
     constant integer GOBLIN_ALTAR                                    = 'o00T' // altar
     constant integer GOBLIN_HEAVY_TANK                               = 'o01G' // special building
     constant integer GOBLIN_SHIPYARD                                 = 'o01B'
+    constant integer GOBLIN_TUNNEL_WAYGATE                           = 'o018'
+    constant integer GOBLIN_TUNNEL                                   = 'o00P'
 
     constant integer GOBLIN_LABORER                                  = 'h02L' // worker
     constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
