@@ -2844,6 +2844,7 @@ globals
     constant integer ENGINEER_SHIP                                   = 'n03H'
     constant integer GNOMISH_SUBMARINE                               = 'h029'
     constant integer LEVEL_PORTAL                                    = 'h0QO'
+    constant integer GAME_MODE_TAVERN                                = 'n05U'
     constant integer HEROES_TAVERN                                   = 'n0I0'
     constant integer RACES_TAVERN                                    = 'n0I1'
     constant integer PROFESSIONS_TAVERN                              = 'n0I2'
@@ -3066,10 +3067,15 @@ globals
     constant integer CAPTAIN_HERO                                    = 'N0CR'
     constant integer ITEM_VALUES_DUMMY_HERO                          = 'H04W'
 
+    constant integer ITEM_TYPE_RANDOM                                = 'I19T'
     constant integer ITEM_TYPE_RANDOM_HERO                           = 'I068'
     constant integer ITEM_TYPE_RANDOM_RACE                           = 'I06A'
     constant integer ITEM_TYPE_RANDOM_PROFESSION                     = 'I069'
     constant integer ITEM_TYPE_RANDOM_START_LOCATION                 = 'I0ZS'
+    constant integer ITEM_TYPE_WARLORD                               = 'I05R'
+    constant integer ITEM_TYPE_FREELANCER                            = 'I05Q'
+
+    constant integer ITEM_TYPE_SCRIBE                                = 'I0HC'
 
     // arena
     constant integer ITEM_TYPE_TICKET_1                              = 'I00Y'
