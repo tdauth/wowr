@@ -3460,6 +3460,7 @@ globals
 
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
     constant integer ITEM_GOBLIN_TOOL_BOX                            = 'I0Q1'
+    constant integer ITEM_SPADE                                      = 'I19U'
 
     constant integer ITEM_GOLD_COINS                                 = 'gold'
     constant integer ITEM_GOLD_BARS                                  = 'I055'
@@ -3536,8 +3537,6 @@ globals
     constant integer CARETAKER                                       = 'n0O2'
     constant integer LEAVE_HOUSING                                   = 'o0BS'
     constant integer ITEM_HOUSE_KEY                                  = 'I16O'
-    constant integer GROUND_DIRT                                     = 'o0BT'
-    constant integer GROUND_ROUGH_DIRT                               = 'o0BU'
 
     constant integer ENTER_COMMON_HOUSING                            = 'o0C3'
     constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'

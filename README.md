@@ -1850,3 +1850,5 @@ Here is a list of some modified versions online:
 * bisnar13: [Candle](https://www.hiveworkshop.com/threads/candle.235348/)
 * Mike: [WallTorch](https://www.hiveworkshop.com/threads/walltorch.267362/)
 * RodOfNOD: [PapilioBlue](https://www.hiveworkshop.com/threads/papilioblue.49218/)
+* Blizzard Entertainment: [BTNINV_Misc_Dynamite_01](https://www.hiveworkshop.com/threads/btninv_misc_dynamite_01.55080/)
+* Deleted member 126647: [Dynamite Projectile](https://www.hiveworkshop.com/threads/dynamite-projectile.50649/)
