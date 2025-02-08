@@ -3371,6 +3371,7 @@ globals
     constant integer FOX                                             = 'n0B5'
     constant integer HEDGEHOG                                        = 'n0BR'
     constant integer PIGEON                                          = 'n0BS'
+    constant integer TURTLE                                          = 'n0OO'
 
     constant integer ITEM_ANTLER                                     = 'I0VS'
     constant integer ITEM_PIG_SKIN                                   = 'I0VT'
@@ -3398,6 +3399,7 @@ globals
     constant integer ITEM_FOX_SKIN                                   = 'I0ZC'
     constant integer ITEM_HEDGEHOG_SKIN                              = 'I0ZP'
     constant integer ITEM_PIGEON_FEATHER                             = 'I0ZW'
+    constant integer ITEM_TURTLE_SHELL                               = 'I19V'
 
     // Miner
     constant integer ITEM_PICKAXE                                    = 'I0W7'
