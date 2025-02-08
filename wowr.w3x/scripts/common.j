@@ -3147,6 +3147,7 @@ globals
     constant integer MERCENARY_CAMP_SHADOWLANDS                      = 'n0ML'
     constant integer MERCENARY_CAMP_NYALOTHA                         = 'n0M4'
     constant integer MERCENARY_CAMP_DESERT                           = 'n0OI'
+    constant integer MERCENARY_CAMP_VIP                              = 'n0OP'
 
     // Professions
 
