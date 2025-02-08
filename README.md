@@ -11,6 +11,12 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 
 ## Contribute
 
+[Subscribe](https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY) to become a VIP:
+
+![Subscribe](QR_Code_Subscribe.png "Subscribe")
+
+Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release.
+
 [Donate](https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8):
 
 ![Donate](QR_Code_Donate.png "Donate")

@@ -2736,6 +2736,7 @@ globals
     // make it available to triggers AND common.ai
 
     constant string MAP_VERSION                                      = "3.39"
+    constant boolean MAP_DEBUG_MODE                                  = true
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -2756,7 +2757,13 @@ globals
     constant string URL_DISCORD                                      = "https://discord.com/invite/eM34z36"
     constant string URL_WEBSITE                                      = "https://wowreforged.org"
     constant string URL_DOWNLOAD                                     = "https://github.com/tdauth/wowr/releases"
-    constant string URL_DONATION                                     = "https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8"
+    constant string URL_SUBSCRIBE                                    = "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY"
+    constant string URL_DONATE                                       = "https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8"
+
+    constant string QR_CODE_SUBSCRIBE                                = "war3mapImported\\QR_Code_Subscribe.blp"
+    constant string QR_CODE_DONATE                                   = "war3mapImported\\QR_Code_Donate.blp"
+    constant string QR_CODE_DISCORD                                  = "war3mapImported\\QR_Code_Discord.blp"
+    constant string QR_CODE_WEBSITE                                  = "war3mapImported\\QR_Code_Website.blp"
 
     // Hero Journey
     constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
@@ -2784,6 +2791,10 @@ globals
     constant integer HERO_JOURNEY_MAX_BOSS_LEVELS                    = 75
     constant integer HERO_JOURNEY_ALL_RACES                          = 75
     constant integer HERO_JOURNEY_ALL_PROFESSIONS                    = 75
+
+    constant integer UPG_BONUS_HEROES                                = 'R04Y'
+    constant integer UPG_HERO_LEVEL_75                               = 'R06B'
+    constant integer UPG_VIP                                         = 'R06C'
 
     // AI
     constant integer WORKERS_COUNT_START                             = 20
