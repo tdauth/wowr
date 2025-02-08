@@ -2733,10 +2733,10 @@ globals
 
 
     // WoW Reforged
-    // make it available to triggers AND common.ai
+    // make constants available to triggers AND common.ai
 
     constant string MAP_VERSION                                      = "3.39"
-    constant boolean MAP_DEBUG_MODE                                  = true
+    constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
