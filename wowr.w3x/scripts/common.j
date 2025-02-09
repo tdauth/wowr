@@ -5735,6 +5735,25 @@ globals
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
     constant integer ABILITY_BLIZZARD                                = 'ACbz'
 
+    // Earth Magic
+    constant integer ABILITY_EARTH_MAGIC                             = 'A26D'
+    constant integer ABILITY_STORM_BOLT                              = 'A26F'
+    constant integer ABILITY_FAR_SIGHT                               = 'A26G'
+    constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
+    constant integer ABILITY_SUMMON_GOLEM                            = 'A26I'
+    constant integer ABILITY_BLOODLUST                               = 'ACbl'
+    constant integer ABILITY_EARTH_QUAKE                             = 'S00U'
+    constant integer ABILITY_AVATAR                                  = 'A26J'
+    constant integer ABILITY_REINCARNATION                           = 'ACrn'
+
+    // Dark Magic
+    constant integer ABILITY_DARK_MAGIC                              = 'A16N'
+    constant integer ABILITY_CURSE                                   = 'ACcs'
+    constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
+    constant integer ABILITY_UNHOLY_FRENZY                           = 'ACuf'
+    constant integer ABILITY_BLACK_ARROW                             = 'ACbk'
+    constant integer ABILITY_DEATH_COIL                              = 'ACdc'
+
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
