@@ -2765,6 +2765,11 @@ globals
     constant string QR_CODE_DISCORD                                  = "war3mapImported\\QR_Code_Discord.blp"
     constant string QR_CODE_WEBSITE                                  = "war3mapImported\\QR_Code_Website.blp"
 
+    // limits
+    constant integer MAX_ITEM_ABILITIES                              = 4
+    constant integer MAX_HERO_ABILITIES                              = 5
+    constant integer MAX_UNIT_ABILITIES                              = 30 // actually infinite but we want to stop somewhere
+
     // Hero Journey
     constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
     constant integer HERO_JOURNEY_RANDOM_EVENTS                      = 10
@@ -5713,6 +5718,23 @@ globals
     constant integer VILLAGE_HOUSING                                 = 'h08W'
     constant integer VILLAGE_PET                                     = 'n08F'
 
+    // WoW Reforged abilities
+    // Schools of Magic
+    // Fire Magic
+    constant integer ABILITY_FIRE_MAGIC                              = 'A1O5'
+    constant integer ABILITY_FIREBOLT                                = 'ACfb'
+    constant integer ABILITY_IMMOLATION                              = 'ACim'
+    constant integer ABILITY_RAIN_OF_FIRE                            = 'ACrg'
+    constant integer ABILITY_FLAME_STRIKE                            = 'ACfs'
+    constant integer ABILITY_VOLCANO                                 = 'A112'
+
+    // Water Magic
+    constant integer ABILITY_WATER_MAGIC                             = 'A16Q'
+    constant integer ABILITY_CRUSHING_WAVE                           = 'ACcv'
+    constant integer ABILITY_CHAIN_LIGHTNING                         = 'ACcl'
+    constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
+    constant integer ABILITY_BLIZZARD                                = 'ACbz'
+
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
@@ -5921,6 +5943,7 @@ globals
     constant integer FEL_CROSSBOWMAN                                 = 'O09L'
     constant integer FEL_RAIDER                                      = 'O09P'
     constant integer FEL_PEON                                        = 'H0UU'
+    constant integer FEL_KODO_BEAST                                  = 'O0BT'
     constant integer FEL_GROMMASH_HELLSCREAM                         = 'O0BX'
     constant integer KARGATH_BLADEFIST                               = 'O09K'
     // Faceless One

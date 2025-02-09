@@ -218,6 +218,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Fel Crossbowman",     -2,
         MenuItem "Fel Raider",     -2,
         MenuItem "Fel Peon",     -2,
+        MenuItem "Fel Kodo Beast",     -2,
         MenuItem "Fel Grommash Hellscream",     -2,
         MenuItem "Kargath Bladefist",     -2,
         MenuItem "Unbroken",     -2,
