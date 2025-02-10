@@ -2770,6 +2770,9 @@ globals
     constant integer MAX_HERO_ABILITIES                              = 5
     constant integer MAX_UNIT_ABILITIES                              = 30 // actually infinite but we want to stop somewhere
 
+    // balance
+    constant integer MANA_COSTS_PER_ABILITY_LEVEL                    = 10
+
     // Hero Journey
     constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
     constant integer HERO_JOURNEY_RANDOM_EVENTS                      = 10
@@ -5720,6 +5723,37 @@ globals
 
     // WoW Reforged abilities
     // Schools of Magic
+
+    // Holy Magic
+    constant integer ABILITY_HOLY_MAGIC                              = 'A115'
+    constant integer ABILITY_HEAL                                    = 'Anhe'
+    constant integer ABILITY_INNFER_FIRE                             = 'ACif'
+    constant integer ABILITY_HOLY_LIGHT                              = 'A13W'
+    constant integer ABILITY_DIVINE_SHIELD                           = 'A1NY'
+    constant integer ABILITY_HEALING_WAVE                            = 'Leav'
+
+    // Arcane Magic
+    constant integer ABILITY_ARCANE_MAGIC                            = 'A11B'
+    constant integer ABILITY_BANISH                                  = 'ACbn'
+    constant integer ABILITY_SPELL_STEAL                             = 'Asps'
+    constant integer ABILITY_SPELL_CONTROL_MAGIC                     = 'A11C'
+    constant integer ABILITY_SPELL_FEEDBACK                          = 'Afbk'
+    constant integer ABILITY_SPELL_BLINK                             = 'A005'
+    constant integer ABILITY_SPELL_MANA_SHIELD                       = 'ACmf'
+    constant integer ABILITY_SPELL_SIPHON_MANA                       = 'ACsm'
+    constant integer ABILITY_SPELL_DISPEL_MAGIC                      = 'Adsm'
+    constant integer ABILITY_SPELL_BRILLIANCE_AURA                   = 'ACba'
+    constant integer ABILITY_SPELL_MASS_TELEPORT                     = 'A11F'
+    constant integer ABILITY_SPELL_POLYMORPH                         = 'ACpy'
+
+    // Dark Magic
+    constant integer ABILITY_DARK_MAGIC                              = 'A16N'
+    constant integer ABILITY_CURSE                                   = 'ACcs'
+    constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
+    constant integer ABILITY_UNHOLY_FRENZY                           = 'ACuf'
+    constant integer ABILITY_BLACK_ARROW                             = 'ACbk'
+    constant integer ABILITY_DEATH_COIL                              = 'ACdc'
+
     // Fire Magic
     constant integer ABILITY_FIRE_MAGIC                              = 'A1O5'
     constant integer ABILITY_FIREBOLT                                = 'ACfb'
@@ -5745,14 +5779,6 @@ globals
     constant integer ABILITY_EARTH_QUAKE                             = 'S00U'
     constant integer ABILITY_AVATAR                                  = 'A26J'
     constant integer ABILITY_REINCARNATION                           = 'ACrn'
-
-    // Dark Magic
-    constant integer ABILITY_DARK_MAGIC                              = 'A16N'
-    constant integer ABILITY_CURSE                                   = 'ACcs'
-    constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
-    constant integer ABILITY_UNHOLY_FRENZY                           = 'ACuf'
-    constant integer ABILITY_BLACK_ARROW                             = 'ACbk'
-    constant integer ABILITY_DEATH_COIL                              = 'ACdc'
 
     // WoW Reforged heroes
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
