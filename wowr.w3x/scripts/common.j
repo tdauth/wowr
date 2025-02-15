@@ -3564,6 +3564,8 @@ globals
     constant integer BARREL_0                                        = 'o0C1'
     constant integer BARREL_1                                        = 'o0C2'
     constant integer PIRATE                                          = 'h0AM'
+    constant integer EGG_SACK                                        = 'o0AN'
+    constant integer EXPLOSIVE_BARREL_CREEP                          = 'h0P9'
 
     // Housing
     constant integer CARETAKER                                       = 'n0O2'
