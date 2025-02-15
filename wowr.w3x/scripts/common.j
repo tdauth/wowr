@@ -3545,6 +3545,8 @@ globals
     constant integer TOME_OF_SKILL_POINTS                            = 'I156'
     constant integer MANUAL_OF_HEALTH                                = 'manh'
     constant integer MANUAL_OF_MANA                                  = 'I13F'
+    constant integer TOME_OF_LIFE_REGENARTION                        = 'I1AB'
+    constant integer TOME_OF_MANA_REGENERATION                       = 'I1AC'
 
     // Dungeon
     constant integer ITEM_SPIKE_TRAPS                                = 'I0GH'
@@ -3570,6 +3572,8 @@ globals
 
     constant integer ENTER_COMMON_HOUSING                            = 'o0C3'
     constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'
+
+    constant integer TRAINER                                         = 'n0OQ'
 
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT
