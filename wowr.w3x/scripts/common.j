@@ -3573,7 +3573,9 @@ globals
     constant integer ENTER_COMMON_HOUSING                            = 'o0C3'
     constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'
 
+    // Neutral Buildings
     constant integer TRAINER                                         = 'n0OQ'
+    constant integer LIBRARY                                         = 'n075'
 
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT
