@@ -3537,7 +3537,14 @@ globals
     constant integer TOME_OF_POWER                                   = 'tkno'
     constant integer TOME_OF_ARMOR                                   = 'I13G'
     constant integer TOME_OF_DAMAGE                                  = 'I13E'
+    constant integer TOME_OF_MOVEMENT                                = 'I1A8'
+    constant integer TOME_OF_SIGHT                                   = 'I1A7'
     constant integer TOME_OF_MAGIC                                   = 'I1A4'
+    constant integer TOME_OF_CHAOS                                   = 'I1A5'
+    constant integer TOME_OF_DIVINITY                                = 'I1A6'
+    constant integer TOME_OF_SKILL_POINTS                            = 'I156'
+    constant integer MANUAL_OF_HEALTH                                = 'manh'
+    constant integer MANUAL_OF_MANA                                  = 'I13F'
 
     // Dungeon
     constant integer ITEM_SPIKE_TRAPS                                = 'I0GH'
