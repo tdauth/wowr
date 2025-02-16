@@ -1859,3 +1859,4 @@ Here is a list of some modified versions online:
 * Blizzard Entertainment: [BTNINV_Misc_Dynamite_01](https://www.hiveworkshop.com/threads/btninv_misc_dynamite_01.55080/)
 * Deleted member 126647: [Dynamite Projectile](https://www.hiveworkshop.com/threads/dynamite-projectile.50649/)
 * lllLSDlll: [BTNTomeOWonders](https://www.hiveworkshop.com/threads/btntomeowonders.56240/)
+* Ujimasa Hojo: [Death Knights and Derivatives](https://www.hiveworkshop.com/threads/death-knights-and-derivatives.285718/)

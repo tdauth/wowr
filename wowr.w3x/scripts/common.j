@@ -5806,6 +5806,7 @@ globals
     constant integer CAPTAIN                                         = 'H0VB'
     constant integer ARTHAS                                          = 'H0AI'
     constant integer ARTHAS_WIELDING_FROSTMOURNE                     = 'H0AJ'
+    constant integer ARTHAS_MOUNTED                                  = 'H0AW'
     constant integer UTHER                                           = 'H0A5'
     constant integer KHADGAR                                         = 'H03M'
     constant integer MEDIVH                                          = 'H018'
