@@ -2778,6 +2778,8 @@ function InitMounts takes nothing returns nothing
     call AddMount(DRAGONHAWK_MOUNT)
     call AddMount(ZEPPELIN_MOUNT)
     call AddMount(PHOENIX_MOUNT)
+    call AddMount(SNOWY_OWL_MOUNT)
+    call AddMount(ALBATROSS_MOUNT)
 endfunction
 
 function AddHousing takes integer id returns integer

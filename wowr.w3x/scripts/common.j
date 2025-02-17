@@ -2978,6 +2978,7 @@ globals
     constant integer FORTIFIED_HIDEOUT                               = 'h00K'
     constant integer GUARDIANS_CITADEL                               = 'h00L'
 
+    // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
     constant integer WYVERN_MOUNT                                    = 'o003'
     constant integer FROST_WYRM_MOUNT                                = 'u004'
@@ -2987,6 +2988,7 @@ globals
     constant integer ZEPPELIN_MOUNT                                  = 'n0BT'
     constant integer PHOENIX_MOUNT                                   = 'h0UW'
     constant integer SNOWY_OWL_MOUNT                                 = 'h0V5'
+    constant integer ALBATROSS_MOUNT                                 = 'h0AX'
 
     constant integer FOUNTAIN_OF_LIFE                                = 'h007'
     constant integer FREELANCER_PROTECTION_TOWER                     = 'n03I'
