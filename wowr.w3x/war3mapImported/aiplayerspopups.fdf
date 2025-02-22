@@ -291,6 +291,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "Winter",      -2,
         MenuItem "Fall",      -2,
         MenuItem "Desert",      -2,
+        MenuItem "Dragon Isles",      -2,
     }
 }
 
