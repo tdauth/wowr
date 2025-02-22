@@ -3221,15 +3221,9 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
             set improvedLevel = evolutionLevel / 10
             call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
             call StartUpgrade(evolutionLevel, UPG_EVOLUTION)
-            call StartUpgrade(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
-            call StartUpgrade(improvedLevel, UPG_IMPROVED_MOUNT)
-            call StartUpgrade(improvedLevel, UPG_IMPROVED_NAVY)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
             call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
         endif
     endif
 endfunction
@@ -3248,17 +3242,9 @@ function ResearchHighLevelTier3ResearchesFreelancer takes nothing returns nothin
             set improvedLevel = evolutionLevel / 10
             call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
             call StartUpgrade(evolutionLevel, UPG_FREELANCER_CHEAP_EVOLUTION)
-            call StartUpgrade(improvedLevel, UPG_IMPROVED_POWER_GENERATOR)
-            call StartUpgrade(improvedLevel, UPG_FREELANCER_MASONRY)
-            call StartUpgrade(improvedLevel, UPG_IMPROVED_MOUNT)
-            call StartUpgrade(improvedLevel, UPG_IMPROVED_NAVY)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_EVOLUTION)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_POWER_GENERATOR)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_FREELANCER_MASONRY)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_MOUNT)
-            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_IMPROVED_NAVY)
+            call StartUpgrade(MAX_WOWR_RESEARCH_LEVEL, UPG_FREELANCER_CHEAP_EVOLUTION)
         endif
     endif
 endfunction

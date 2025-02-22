@@ -3050,12 +3050,6 @@ globals
 
     constant integer UPG_EVOLUTION                                   = 'R00U'
     constant integer UPG_CHEAP_EVOLUTION                             = 'R01V'
-    constant integer UPG_IMPROVED_POWER_GENERATOR                    = 'R01T'
-    constant integer UPG_IMPROVED_MOUNT                              = 'R024'
-    constant integer UPG_IMPROVED_HAND_OF_GOD                        = 'R00V'
-    constant integer UPG_IMPROVED_MASONRY                            = 'R00W'
-    constant integer UPG_IMPROVED_NAVY                               = 'R035'
-    constant integer UPG_IMPROVED_CREEP_HUNTER                       = 'R02Z'
     constant integer UPG_DEMIGOD                                     = 'R04S'
     constant integer UPG_DRAGON_ROOST                                = 'R06M'
     constant integer UPG_ARCANE_PORTALS                              = 'R026'
