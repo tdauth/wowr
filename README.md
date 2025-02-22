@@ -77,8 +77,8 @@ Each system provides a prototype map which shows you how to use the system.
 
 There can be translations of the map into different languages:
 
-* [English](./wowr.w3x/war3map.wts)
-* [German](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts)
+* :flag_us: [English](./wowr.w3x/war3map.wts)
+* :flag_de: [German](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts)
 
 The files have to be updated according to the [English](./wowr.w3x/war3map.wts) file which is the main file.
 Strings in custom scripts should always refer to trigger strings in a GUI trigger which are added automatically to the war3map.wts file on saving the map with the World Edito.
