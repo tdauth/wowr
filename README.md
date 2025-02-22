@@ -1,6 +1,6 @@
 # World of Warcraft Reforged
 
-Open world role-playing game map for Warcraft III: Reforged based on [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr) featuring computer AI support which allows you to play the map offline.
+Open world role-playing game and strategy map for Warcraft III: Reforged based on [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr) featuring computer AI support which allows you to play the map offline.
 This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
 
 
@@ -73,6 +73,16 @@ The map uses several custom systems created by Baradé which can be used in any 
 They are available in [systems](./systems).
 Each system provides a prototype map which shows you how to use the system.
 
+## Internationalization
+
+There can be translations of the map into different languages:
+
+* [English](./wowr.w3x/war3map.wts)
+* [German](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts)
+
+The files have to be updated according to the [English](./wowr.w3x/war3map.wts) file which is the main file.
+Strings in custom scripts should always refer to trigger strings in a GUI trigger which are added automatically to the war3map.wts file on saving the map with the World Edito.
+
 ## Release Process
 
 Open the folder [wowr.w3x](./wowr.w3x) with the World Editor and save the map as wowrX.Y.w3x.
@@ -83,6 +93,7 @@ Use this check list when releasing a new version of the map:
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
 * Use [checkjass.bat](./checkjass.bat) to check all JASS scripts.
+* Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder.
 * Make sure that save games still work by saving and loading.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
 * Use the cheat "-savecodemissing" to check for missing save code objects.
