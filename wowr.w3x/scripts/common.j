@@ -3573,7 +3573,10 @@ globals
     constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'
 
     // Neutral Buildings
-    constant integer TRAINER                                         = 'n0OQ'
+    constant integer TRAINER                                         = 'n079'
+    constant integer TRAINER_NEUTRAL                                 = 'n0GT'
+    constant integer ITEM_TINY_TRAINER                               = 'I1AM'
+
     constant integer LIBRARY                                         = 'n075'
 
     // Freelancer

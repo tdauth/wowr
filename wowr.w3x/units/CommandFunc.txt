@@ -50,8 +50,8 @@ ButtonPos=3,2
 
 [CmdHoldPos]
 Art=CommandHoldPosition
-Buttonpos=-2147483648,-2147483648
-//Buttonpos=2,0
+//Buttonpos=-2147483648,-2147483648
+Buttonpos=2,0
 
 [CmdPatrol]
 Art=CommandPatrol
