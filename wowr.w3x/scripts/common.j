@@ -5738,6 +5738,8 @@ globals
     constant integer VILLAGE_PET                                     = 'n08F'
 
     // WoW Reforged abilities
+    constant integer ABILITY_INVISIBILITY                            = 'Aivs'
+
     // Schools of Magic
 
     // Holy Magic
