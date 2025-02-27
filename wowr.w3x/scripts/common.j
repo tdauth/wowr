@@ -2905,6 +2905,10 @@ globals
 
     constant integer ANIMAL_PEN                                      = 'n0O5' // Wool Mine
 
+    constant integer RAILWAY_EAST                                    = 'o01N'
+    constant integer RAILWAY_VERTICAL                                = 'o01K'
+    constant integer TRAIN_STATION_DWARF                             = 'o01H'
+
     // Properties
     constant integer PROPERTY_WYRMREST_TEMPLE                        = 'n0OC'
 
