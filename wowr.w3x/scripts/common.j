@@ -3348,6 +3348,10 @@ globals
 
     // Combiner
     // TODO Add item types.
+    constant integer ITEM_MASTER_COMBINATION_TOOL                    = 'I0T9'
+    constant integer ITEM_ADVANCED_COMBINATION_TOOL                  = 'I0T8'
+    constant integer ITEM_COMBINATION_TOOL                           = 'I0T7'
+    constant integer ITEM_SMALL_COMBINATION_TOOL                     = 'I0T5'
 
     // Hunter
     constant integer HUNTING_CAMP                                    = 'n0OF' // doctor
