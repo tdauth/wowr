@@ -14,7 +14,7 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(2, DWARF_HOUSING)
     call SetBuildUnit(2, DWARF_CITIZEN_FEMALE)
     call SetBuildUnit(2, DWARF_BARRACKS)
-    call SetBuildUnit(2, DWARF_TOWER)
+    call SetBuildUnit(4, DWARF_TOWER)
 
     // Tier 2 Buildings
     call SetBuildUnit(1, DWARF_TIER_2)
@@ -66,24 +66,17 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, DWARF_TIER_3)
-            call SetBuildExpa(expansions, DWARF_BLACKSMITH)
-            call SetBuildExpa(expansions, DWARF_TOWER_CANNON)
-        endif
+        call StartExpansionTownHall(DWARF_TIER_1)
+        call StartExpansionSimple(DWARF_BLACKSMITH)
+        call StartExpansionSimple(DWARF_TOWER)
+        call StartExpansionSimple(DWARF_TOWER_CANNON)
 
         if (buildShips) then
-            call SetBuildUnit(1, DWARF_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-            call SetBuildUnit(2, DWARF_SUBMARINE)
-        else
-            call SetBuildUnit(0, DWARF_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
-            call SetBuildUnit(0, DWARF_SUBMARINE)
+            call StartUnitSimple(shipyards, DWARF_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_special1, DWARF_SUBMARINE)
         endif
 
         call Sleep(M1)

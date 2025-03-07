@@ -69,22 +69,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, DUNGEON_TIER_3)
-            call SetBuildExpa(expansions, DUNGEON_TORTURE_CHAMBER)
-            call SetBuildExpa(expansions, DUNGEON_SPIKES)
-        endif
+        call StartExpansionTownHall(DUNGEON_TIER_1)
+        call StartExpansionSimple(DUNGEON_TORTURE_CHAMBER)
+        call StartExpansionSimple(DUNGEON_SPIKES)
 
         if (buildShips) then
-            call SetBuildUnit(1, UNDEAD_SHIPYARD)
-            call SetBuildUnit(1, UNDEAD_TRANSPORT_SHIP)
-            call SetBuildUnit(2, UNDEAD_FRIGATE)
-            call SetBuildUnit(2, UNDEAD_BATTLESHIP)
-        else
-            call SetBuildUnit(0, UNDEAD_SHIPYARD)
-            call SetBuildUnit(0, UNDEAD_TRANSPORT_SHIP)
-            call SetBuildUnit(0, UNDEAD_FRIGATE)
-            call SetBuildUnit(0, UNDEAD_BATTLESHIP)
+            call StartUnitSimple(shipyards, UNDEAD_SHIPYARD)
+            call StartUnitSimple(ships_transport, UNDEAD_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, UNDEAD_FRIGATE)
+            call StartUnitSimple(ships_battleship, UNDEAD_BATTLESHIP)
         endif
 
         call Sleep(M1)

@@ -72,22 +72,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, DALARAN_TIER_3)
-            call SetBuildExpa(expansions, DALARAN_BLACKSMITH)
-            call SetBuildExpa(expansions, DALARAN_GUARD_TOWER_2)
-        endif
+        call StartExpansionTownHall(DALARAN_TIER_1)
+        call StartExpansionSimple(DALARAN_BLACKSMITH)
+        call StartExpansionSimple(DALARAN_GUARD_TOWER_1)
+        call StartExpansionSimple(DALARAN_GUARD_TOWER_2)
 
         if (buildShips) then
-            call SetBuildUnit(1, DALARAN_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-        else
-            call SetBuildUnit(0, DALARAN_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+            call StartUnitSimple(shipyards, DALARAN_SHIPYARD)
+            call StartUnitSimple(ships_simple, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_strong, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_strong, HUMAN_BATTLESHIP)
         endif
 
         call Sleep(M1)

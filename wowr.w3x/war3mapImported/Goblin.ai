@@ -60,24 +60,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, GOBLIN_TIER_3)
-            call SetBuildExpa(expansions, GOBLIN_FUEL_PUMP)
-            call SetBuildExpa(expansions, GOBLIN_ROCKET_TOWER_3)
-        endif
+        call StartExpansionTownHall(GOBLIN_TIER_1)
+        call StartExpansionSimple(GOBLIN_FUEL_PUMP)
+        call StartExpansionSimple(GOBLIN_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, GOBLIN_SHIPYARD)
-            call SetBuildUnit(1, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ORC_FRIGATE)
-            call SetBuildUnit(2, ORC_JUGGERNAUGHT)
-            call SetBuildUnit(2, GOBLIN_SUBMARINE)
-        else
-            call SetBuildUnit(0, GOBLIN_SHIPYARD)
-            call SetBuildUnit(0, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ORC_FRIGATE)
-            call SetBuildUnit(0, ORC_JUGGERNAUGHT)
-            call SetBuildUnit(0, GOBLIN_SUBMARINE)
+            call StartUnitSimple(shipyards, GOBLIN_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
+            call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
+            call StartUnitSimple(ships_special1, GOBLIN_SUBMARINE)
         endif
 
         call Sleep(M1)

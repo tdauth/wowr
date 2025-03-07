@@ -68,22 +68,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, DRAGONKIN_TIER_3)
-            call SetBuildExpa(expansions, DRAGONKIN_QUARRY)
-            call SetBuildExpa(expansions, DRAGONKIN_TOWER)
-        endif
+        call StartExpansionTownHall(DRAGONKIN_TIER_1)
+        call StartExpansionSimple(DRAGONKIN_QUARRY)
+        call StartExpansionSimple(DRAGONKIN_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, DRAGONKIN_SHIPYARD)
-            call SetBuildUnit(1, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ORC_FRIGATE)
-            call SetBuildUnit(2, ORC_JUGGERNAUGHT)
-        else
-            call SetBuildUnit(0, DRAGONKIN_SHIPYARD)
-            call SetBuildUnit(0, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ORC_FRIGATE)
-            call SetBuildUnit(0, ORC_JUGGERNAUGHT)
+            call StartUnitSimple(shipyards, DRAGONKIN_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
+            call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
         call Sleep(M1)

@@ -219,8 +219,11 @@ globals
     boolean attackEnemyPlayers = true
     boolean buildShips = false
     integer shipyards = 0
-    integer ships_simple = 0
-    integer ships_strong = 0
+    integer ships_transport = 0
+    integer ships_frigate = 0
+    integer ships_battleship = 0
+    integer ships_special1 = 0
+    integer ships_special2 = 0
     boolean disabled = false
     integer expansions = 0
     boolean attackTargetLocation = false
@@ -3100,14 +3103,20 @@ function UpdateWorkers takes nothing returns nothing
             elseif (c == COMMAND_SHIPS_ON) then
                 set buildShips = true
                 set shipyards = 1
-                set ships_simple = 1
-                set ships_strong = 3
+                set ships_transport = 1
+                set ships_frigate = 3
+                set ships_battleship = 2
+                set ships_special1 = 2
+                set ships_special2 = 2
                 call NotifyOtherPlayers("I will start building ships!")
             elseif (c == COMMAND_SHIPS_OFF) then
                 set buildShips = false
                 set shipyards = 0
-                set ships_simple = 0
-                set ships_strong = 0
+                set ships_transport = 0
+                set ships_frigate = 0
+                set ships_battleship = 0
+                set ships_special1 = 0
+                set ships_special2 = 0
                 call NotifyOtherPlayers("I will stop building ships!")
             elseif (c == COMMAND_DISABLED_ON) then
                 set disabled = true
@@ -3203,8 +3212,26 @@ function StartUnitSimple takes integer qty, integer id returns nothing
     call StartUnit(qty,id,-1)
 endfunction
 
+function StartExpansionTownHall takes integer id returns nothing
+    local integer i = 1
+    call TraceI("Expansions %d\n", expansions)
+
+    if (expansions > 0) then
+        set i = 1
+        loop
+            exitwhen (i > expansions)
+            if (TownHasMine(i) and not TownHasHall(i)) then
+                call StartUnit(1, id, i)
+            endif
+            set i = i + 1
+        endloop
+    endif
+endfunction
+
 function StartExpansionSimple takes integer id returns nothing
-    call StartExpansion(expansions + 1, id)
+    if (expansions > 0) then
+        call StartExpansion(expansions + 1, id)
+    endif
 endfunction
 
 function ResearchHighLevelTier3Researches takes nothing returns nothing

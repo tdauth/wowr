@@ -39,23 +39,17 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, DRAENEI_HAVEN)
-            call SetBuildExpa(expansions, DRAENEI_SEERS_DEN)
-            call SetBuildExpa(expansions, DRAENEI_MILL)
-            call SetBuildExpa(expansions, DRAENEI_ADVANCED_BOULDER_TOWER)
-        endif
+        call StartExpansionTownHall(DRAENEI_HAVEN)
+        call StartExpansionSimple(DRAENEI_SEERS_DEN)
+        call StartExpansionSimple(DRAENEI_MILL)
+        call StartExpansionSimple(DRAENEI_BOULDER_TOWER)
+        call StartExpansionSimple(DRAENEI_ADVANCED_BOULDER_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, DRAENEI_SHIPYARD)
-            call SetBuildUnit(1, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ORC_FRIGATE)
-            call SetBuildUnit(2, ORC_JUGGERNAUGHT)
-        else
-            call SetBuildUnit(0, DRAENEI_SHIPYARD)
-            call SetBuildUnit(0, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ORC_FRIGATE)
-            call SetBuildUnit(0, ORC_JUGGERNAUGHT)
+            call StartUnitSimple(shipyards, DRAENEI_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
+            call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
         call Sleep(M1)

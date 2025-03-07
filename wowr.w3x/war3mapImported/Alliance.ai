@@ -57,24 +57,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, ALLIANCE_TIER_3)
-            call SetBuildExpa(expansions, ALLIANCE_MILL)
-            call SetBuildExpa(expansions, ALLIANCE_GUARD_TOWER)
-        endif
+        call StartExpansionTownHall(expansions, ALLIANCE_TIER_1)
+        call StartExpansionSimple(expansions, ALLIANCE_MILL)
+        call StartExpansionSimple(expansions, ALLIANCE_GUARD_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, ALLIANCE_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-            call SetBuildUnit(2, ALLIANCE_OIL_TANKER)
-        else
-            call SetBuildUnit(0, ALLIANCE_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
-            call SetBuildUnit(0, ALLIANCE_OIL_TANKER)
+            call StartUnitSimple(shipyards, ALLIANCE_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_special1, ALLIANCE_OIL_TANKER)
         endif
 
         call Sleep(M1)

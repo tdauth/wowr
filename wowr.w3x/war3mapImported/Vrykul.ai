@@ -70,18 +70,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, VRYKUL_TIER_3)
-            call SetBuildExpa(expansions, VRYKUL_BLACKSMITH)
-            call SetBuildExpa(expansions, VRYKUL_LAMP)
-        endif
+        call StartExpansionTownHall(VRYKUL_TIER_1)
+        call StartExpansionSimple(VRYKUL_BLACKSMITH)
+        call StartExpansionSimple(VRYKUL_LAMP)
 
         if (buildShips) then
-            call SetBuildUnit(1, VRYKUL_SHIPYARD)
-            call SetBuildUnit(10, VRYKUL_RAKKAR_SHIP)
-        else
-            call SetBuildUnit(0, VRYKUL_SHIPYARD)
-            call SetBuildUnit(0, VRYKUL_RAKKAR_SHIP)
+            call StartUnitSimple(shipyards, VRYKUL_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_special1, VRYKUL_RAKKAR_SHIP)
         endif
 
         call Sleep(M1)

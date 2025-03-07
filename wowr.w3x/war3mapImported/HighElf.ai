@@ -76,22 +76,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, HIGH_ELF_TIER_3)
-            call SetBuildExpa(expansions, HIGH_ELF_ENCHANTER_TOWER)
-            call SetBuildExpa(expansions, HIGH_ELF_GUARD_TOWER)
-        endif
+        call StartExpansionTownHall(HIGH_ELF_TIER_1)
+        call StartExpansionSimple(HIGH_ELF_ENCHANTER_TOWER)
+        call StartExpansionSimple(HIGH_ELF_GUARD_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, HIGH_ELF_SHIPYARD)
-            call SetBuildUnit(1, HIGH_ELF_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HIGH_ELF_FRIGATE)
-            call SetBuildUnit(2, HIGH_ELF_BATTLESHIP)
-        else
-            call SetBuildUnit(0, HIGH_ELF_SHIPYARD)
-            call SetBuildUnit(0, HIGH_ELF_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HIGH_ELF_FRIGATE)
-            call SetBuildUnit(0, HIGH_ELF_BATTLESHIP)
+            call StartUnitSimple(shipyards, HIGH_ELF_SHIPYARD)
+            call StartUnitSimple(ships_transport, HIGH_ELF_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HIGH_ELF_FRIGATE)
+            call StartUnitSimple(ships_battleship, HIGH_ELF_BATTLESHIP)
         endif
 
         call Sleep(M1)

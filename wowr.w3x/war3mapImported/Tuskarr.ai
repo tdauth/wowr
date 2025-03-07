@@ -73,24 +73,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, TUSKARR_FROZEN_FORTRESS)
-            call SetBuildExpa(expansions, TUSKARR_ICY_SPIRE)
-            call SetBuildExpa(expansions, TUSKARR_BLOCK_OF_ICE)
-        endif
+        call StartExpansionTownHall(TUSKARR_FROZEN_HALL)
+        call StartExpansionSimple(TUSKARR_ICY_SPIRE)
+        call StartExpansionSimple(TUSKARR_BLOCK_OF_ICE)
 
         if (buildShips) then
-            call SetBuildUnit(1, TUSKARR_TUSKARR_SHIPYARD)
-            call SetBuildUnit(1, TUSKARR_FISHING_BOAT)
-            call SetBuildUnit(1, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ORC_JUGGERNAUGHT)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-        else
-            call SetBuildUnit(0, TUSKARR_TUSKARR_SHIPYARD)
-            call SetBuildUnit(0, TUSKARR_FISHING_BOAT)
-            call SetBuildUnit(0, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ORC_FRIGATE)
-            call SetBuildUnit(0, ORC_JUGGERNAUGHT)
+            call StartUnitSimple(shipyards, TUSKARR_TUSKARR_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
+            call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
+            call StartUnitSimple(ships_special1, TUSKARR_FISHING_BOAT)
         endif
 
         call Sleep(M1)

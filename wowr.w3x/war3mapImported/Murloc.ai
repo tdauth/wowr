@@ -69,24 +69,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, MURLOC_TIER_3)
-            call SetBuildExpa(expansions, MURLOC_BLADEMAKING_HUT)
-            call SetBuildExpa(expansions, MURLOC_LUMBER_KEEP)
-            call SetBuildExpa(expansions, MURLOC_BONE_CHIPPER)
-            call SetBuildExpa(expansions, MURLOC_BONE_CHIPPER)
-        endif
+        call StartExpansionTownHall(MURLOC_TIER_1)
+        call StartExpansionSimple(MURLOC_BLADEMAKING_HUT)
+        call StartExpansionSimple(MURLOC_LUMBER_KEEP)
+        call StartExpansionSimple(MURLOC_BONE_CHIPPER)
 
         if (buildShips) then
-            call SetBuildUnit(1, HUMAN_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-        else
-            call SetBuildUnit(0, HUMAN_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+            call StartUnitSimple(shipyards, HUMAN_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
         call Sleep(M1)

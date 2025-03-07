@@ -64,22 +64,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, NERUBIAN_TIER_3)
-            call SetBuildExpa(expansions, NERUBIAN_HATCHERY)
-            call SetBuildExpa(expansions, NERUBIAN_TOWER)
-        endif
+        call StartExpansionTownHall(NERUBIAN_TIER_1)
+        call StartExpansionSimple(NERUBIAN_HATCHERY)
+        call StartExpansionSimple(NERUBIAN_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, NERUBIAN_SHIPYARD)
-            call SetBuildUnit(1, UNDEAD_TRANSPORT_SHIP)
-            call SetBuildUnit(2, UNDEAD_FRIGATE)
-            call SetBuildUnit(2, UNDEAD_BATTLESHIP)
-        else
-            call SetBuildUnit(0, NERUBIAN_SHIPYARD)
-            call SetBuildUnit(0, UNDEAD_TRANSPORT_SHIP)
-            call SetBuildUnit(0, UNDEAD_FRIGATE)
-            call SetBuildUnit(0, UNDEAD_BATTLESHIP)
+            call StartUnitSimple(shipyards, NERUBIAN_SHIPYARD)
+            call StartUnitSimple(ships_transport, UNDEAD_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, UNDEAD_FRIGATE)
+            call StartUnitSimple(ships_battleship, UNDEAD_BATTLESHIP)
         endif
 
         call Sleep(M1)

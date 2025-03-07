@@ -75,24 +75,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, LORDAERON_TIER_3)
-            call SetBuildExpa(expansions, LORDAERON_LUMBER_MILL)
-            call SetBuildExpa(expansions, LORDAERON_GUARD_TOWER)
-            call SetBuildExpa(expansions, LORDAERON_CANNON_TOWER)
-            call SetBuildExpa(expansions, LORDAERON_ARCANE_TOWER)
-        endif
+        call StartExpansionTownHall(LORDAERON_TIER_1)
+        call StartExpansionSimple(LORDAERON_LUMBER_MILL)
+        call StartExpansionSimple(LORDAERON_SCOUT_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, LORDAERON_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-        else
-            call SetBuildUnit(0, LORDAERON_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+            call StartUnitSimple(shipyards, LORDAERON_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
         call Sleep(M1)

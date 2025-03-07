@@ -55,22 +55,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, NAGA_TEMPLE_3)
-            call SetBuildExpa(expansions, NAGA_MURLOC_HUT)
-            call SetBuildExpa(expansions, NAGA_GUARDIAN)
-        endif
+        call StartExpansionTownHall(NAGA_TEMPLE_1)
+        call StartExpansionSimple(NAGA_MURLOC_HUT)
+        call StartExpansionSimple(NAGA_GUARDIAN)
 
         if (buildShips) then
-            call SetBuildUnit(1, NAGA_SHIPYARD)
-            call SetBuildUnit(1, ELF_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ELF_FRIGATE)
-            call SetBuildUnit(2, ELF_BATTLESHIP)
-        else
-            call SetBuildUnit(0, NAGA_SHIPYARD)
-            call SetBuildUnit(0, ELF_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ELF_FRIGATE)
-            call SetBuildUnit(0, ELF_BATTLESHIP)
+            call StartUnitSimple(shipyards, NAGA_SHIPYARD)
+            call StartUnitSimple(ships_transport, ELF_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ELF_FRIGATE)
+            call StartUnitSimple(ships_battleship, ELF_BATTLESHIP)
         endif
 
         call Sleep(M1)

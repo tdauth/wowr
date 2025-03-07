@@ -74,24 +74,16 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, GNOME_TIER_3)
-            call SetBuildExpa(expansions, GNOME_FACTORY)
-            call SetBuildExpa(expansions, GNOME_TURRET)
-        endif
+        call StartExpansionTownHall(GNOME_TIER_1)
+        call StartExpansionSimple(GNOME_FACTORY)
+        call StartExpansionSimple(GNOME_TURRET)
 
         if (buildShips) then
-            call SetBuildUnit(1, GNOME_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-            call SetBuildUnit(2, GNOMISH_SUBMARINE)
-        else
-            call SetBuildUnit(0, GNOME_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
-            call SetBuildUnit(0, GNOMISH_SUBMARINE)
+            call StartUnitSimple(shipyards, GNOME_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_special1, GNOMISH_SUBMARINE)
         endif
 
         call Sleep(M1)

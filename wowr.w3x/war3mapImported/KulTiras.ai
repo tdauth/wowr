@@ -79,25 +79,18 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        call TraceI("Expansions Kul Tiras %d\n", expansions)
-
-        if expansions > 0 and TownHasMine(1) and not TownHasHall(1) then
-            call StartUnit(1, KULTIRAS_TIER_3, 1)
-        endif
-
-        call StartExpansionSimple(KULTIRAS_TIER_3)
+        call StartExpansionTownHall(KULTIRAS_TIER_1)
         call StartExpansionSimple(KULTIRAS_LUMBER_MILL)
-        call StartExpansionSimple(KULTIRAS_CANNON_TOWER)
+        call StartExpansionSimple(KULTIRAS_WATCH_TOWER)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, KULTIRAS_SHIPYARD)
             call StartUnitSimple(shipyards, KULTIRAS_SHIPYARD_ADVANCED)
-            call StartUnitSimple(ships_simple, HUMAN_TRANSPORT_SHIP)
-            call StartUnitSimple(ships_strong, HUMAN_FRIGATE)
-            call StartUnitSimple(ships_strong, HUMAN_BATTLESHIP)
-            call StartUnitSimple(ships_strong, KULTIRAS_BATTLESHIP)
-            call StartUnitSimple(ships_strong, KULTIRAS_DREADNOUGHT)
-            call StartUnitSimple(ships_strong, KULTIRAS_PIRATE_BATTLESHIP)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_special1, KULTIRAS_DREADNOUGHT)
+            call StartUnitSimple(ships_special2, KULTIRAS_PIRATE_BATTLESHIP)
         endif
 
         call Sleep(M1)

@@ -73,22 +73,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, PANDAREN_TIER_3)
-            call SetBuildExpa(expansions, PANDAREN_LUMBER_MILL)
-            call SetBuildExpa(expansions, PANDAREN_GUARD_TOWER)
-        endif
+        call StartExpansionTownHall(PANDAREN_TIER_1)
+        call StartExpansionSimple(PANDAREN_LUMBER_MILL)
+        call StartExpansionSimple(PANDAREN_GUARD_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, PANDAREN_SHIPYARD)
-            call SetBuildUnit(1, PANDAREN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ELF_FRIGATE)
-            call SetBuildUnit(2, PANDAREN_BATTLESHIP)
-        else
-            call SetBuildUnit(0, PANDAREN_SHIPYARD)
-            call SetBuildUnit(0, PANDAREN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ELF_FRIGATE)
-            call SetBuildUnit(0, PANDAREN_BATTLESHIP)
+            call StartUnitSimple(shipyards, PANDAREN_SHIPYARD)
+            call StartUnitSimple(ships_transport, PANDAREN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ELF_FRIGATE)
+            call StartUnitSimple(ships_battleship, PANDAREN_BATTLESHIP)
         endif
 
         call Sleep(M1)

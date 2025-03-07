@@ -70,22 +70,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, BANDIT_TIER_3)
-            call SetBuildExpa(expansions, BANDIT_MILL)
-            call SetBuildExpa(expansions, BANDIT_WATCH_TOWER)
-        endif
+        call StartExpansionTownHall(BANDIT_TIER_1)
+        call StartExpansionSimple(BANDIT_MILL)
+        call StartExpansionSimple(BANDIT_WATCH_TOWER)
 
         if (buildShips) then
-            call SetBuildUnit(1, BANDIT_SHIPYARD)
-            call SetBuildUnit(1, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(2, HUMAN_FRIGATE)
-            call SetBuildUnit(2, HUMAN_BATTLESHIP)
-        else
-            call SetBuildUnit(0, BANDIT_SHIPYARD)
-            call SetBuildUnit(0, HUMAN_TRANSPORT_SHIP)
-            call SetBuildUnit(0, HUMAN_FRIGATE)
-            call SetBuildUnit(0, HUMAN_BATTLESHIP)
+            call StartUnitSimple(shipyards, BANDIT_SHIPYARD)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
         call Sleep(M1)

@@ -48,22 +48,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        if (expansions > 0) then
-            call SetBuildExpa(expansions, FURBOLG_TRIBAL_CENTER)
-            call SetBuildExpa(expansions, FURBOLG_LUMBER_CAMP)
-            call SetBuildExpa(expansions, GUARDING_FURBOLG)
-        endif
+        call StartExpansionTownHall(FURBOLG_TRIBAL_CENTER)
+        call StartExpansionSimple(FURBOLG_LUMBER_CAMP)
+        call StartExpansionSimple(GUARDING_FURBOLG)
 
         if (buildShips) then
-            call SetBuildUnit(1, FURBOLG_SHIPYARD)
-            call SetBuildUnit(1, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(2, ORC_FRIGATE)
-            call SetBuildUnit(2, ORC_JUGGERNAUGHT)
-        else
-            call SetBuildUnit(0, FURBOLG_SHIPYARD)
-            call SetBuildUnit(0, ORC_TRANSPORT_SHIP)
-            call SetBuildUnit(0, ORC_FRIGATE)
-            call SetBuildUnit(0, ORC_JUGGERNAUGHT)
+            call StartUnitSimple(shipyards, FURBOLG_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
+            call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
         call Sleep(M1)

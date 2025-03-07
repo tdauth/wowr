@@ -80,21 +80,15 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        call TraceI("Expansions Demon %d\n", expansions)
-
-        if expansions > 0 and TownHasMine(1) and not TownHasHall(1) then
-            call StartUnit(1, DEMON_GATE_3, 1)
-        endif
-
-        call StartExpansionSimple(DEMON_GATE_3)
+        call StartExpansionTownHall(DEMON_GATE_1)
         call StartExpansionSimple(DEMON_FLOATING_ROCKS)
         call StartExpansionSimple(DEMON_FORTIFIED_INFERNAL_JUGGERNAUT)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, DEMON_SHIPYARD)
-            call StartUnitSimple(ships_simple, UNDEAD_TRANSPORT_SHIP)
-            call StartUnitSimple(ships_strong, UNDEAD_FRIGATE)
-            call StartUnitSimple(ships_strong, UNDEAD_BATTLESHIP)
+            call StartUnitSimple(ships_transport, UNDEAD_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, UNDEAD_FRIGATE)
+            call StartUnitSimple(ships_battleship, UNDEAD_BATTLESHIP)
         endif
 
         call Sleep(M1)
