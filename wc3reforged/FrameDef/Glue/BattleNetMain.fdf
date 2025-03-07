@@ -1,0 +1,376 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetMainFrame" INHERITS "BattleNetFrameTemplate" {
+    SetAllPoints,
+
+    Frame "SPRITE" "BattleNetMainBackground" {
+    	BackgroundArt "UI\Glues\BattleNet\BattlenetLoginGlue\BattlenetLoginGlue.mdl",
+        SetAllPoints,
+    }
+
+    // *******************************************
+    // *
+    // *    Main Login Panel
+    // *
+    // ******
+
+    Frame "FRAME" "LoginPanel" {
+
+        Frame "TEXT" "NameLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetMainFrame", TOPLEFT, 0.03125, -0.1,
+            Text "COLON_ACCOUNT_NAME",
+        }
+
+        Frame "EDITBOX" "AccountName" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT, "NameLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusDefault,
+		    TabFocusNext "Password",
+
+            EditTextFrame "AccountNameEditBoxText",
+            Frame "TEXT" "AccountNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+            }
+        }
+
+        Frame "TEXT" "PasswordLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "AccountName", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_PASSWORD",
+        }
+
+        Frame "EDITBOX" "Password" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT,"PasswordLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusNext "TOSButton",
+
+            EditTextFrame "PasswordEditBoxText",
+            Frame "TEXT" "PasswordEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                FontFlags "PASSWORDFIELD",
+            }
+        }
+
+        Frame "TEXT" "SelectedRealmLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "Password", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_SELECTED_REALM",
+        }
+
+        Frame "BACKDROP" "SelectedRealmBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.256,
+            Height 0.064,
+            BackdropMirrored,
+            SetPoint TOPLEFT, "SelectedRealmLabel", BOTTOMLEFT, -0.00625, 0.00175,
+
+            Frame "TEXT" "SelectedRealmValue" INHERITS "BattleNetInfoTextTemplate" {
+                SetPoint LEFT, "SelectedRealmBackdrop", LEFT, 0.02675, 0.0,                
+            }
+        }
+
+        Frame "BACKDROP" "ChangePasswordBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.256,
+            SetPoint BOTTOMLEFT, "BattleNetMainFrame", BOTTOMLEFT, 0.023125, 0.06,
+            BackdropMirrored,
+
+            Frame "GLUETEXTBUTTON" "ChangePasswordButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                Width 0.179,
+                SetPoint TOPLEFT,"ChangePasswordBackdrop",TOPLEFT, 0.012, -0.0165,			    
+		        TabFocusNext "LogonButton",
+		        ControlShortcutKey "P",
+
+                ButtonText "ChangePasswordButtonText",
+                Frame "TEXT" "ChangePasswordButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                    Text "KEY_CHANGE_PASSWORD",
+                }
+            }
+        }
+
+        Frame "BACKDROP" "NewAccountBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.256,
+            SetPoint BOTTOMLEFT, "ChangePasswordBackdrop", TOPLEFT, 0.0, -0.01,
+            BackdropMirrored,
+
+		    Frame "GLUETEXTBUTTON" "NewAccountButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+			    Width 0.179,
+                            SetPoint TOPLEFT,"NewAccountBackdrop",TOPLEFT, 0.012, -0.0165,			    
+			    TabFocusNext "ChangePasswordButton",
+			    ControlShortcutKey "C",
+
+			    ButtonText "NewAccountButtonText",
+			    Frame "TEXT" "NewAccountButtonText" INHERITS "BattleNetButtonTextTemplate" {
+				    Text "KEY_CREATE_NEW_ACCOUNT",
+			    }
+		    }
+        }
+
+        Frame "BACKDROP" "TOSBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.256,
+            SetPoint BOTTOMLEFT,"NewAccountBackdrop",TOPLEFT, 0.0, -0.01,
+            BackdropMirrored,
+
+		    Frame "GLUETEXTBUTTON" "TOSButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+			    Width 0.179,
+	                    SetPoint TOPLEFT,"TOSBackdrop",TOPLEFT, 0.012, -0.0165,
+			    TabFocusNext "NewAccountButton",
+			    ControlShortcutKey "V",
+
+			    ButtonText "TOSButtonText",
+			    Frame "TEXT" "TOSButtonText" INHERITS "BattleNetButtonTextTemplate" {
+				    Text "KEY_VIEW_TERMS_OF_USE",
+			    }
+		    }
+        }
+
+        Frame "BACKDROP" "LogonBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.2,
+            SetPoint BOTTOMRIGHT, "BattleNetMainFrame", BOTTOMRIGHT, -0.17, 0.06,
+
+            Frame "GLUETEXTBUTTON" "LogonButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                Width 0.138,
+                SetPoint TOPRIGHT,"LogonBackdrop",TOPRIGHT, -0.010, -0.0165,
+		        TabFocusNext "CancelButton",
+		        ControlShortcutKey "L",
+
+                ButtonText "LogonButtonText",
+                Frame "TEXT" "LogonButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                    Text "KEY_LOGON",
+                }
+            }
+        }
+    }
+
+    // *******************************************
+    // *
+    // *    Change Password Panel
+    // *
+    // ******
+
+    Frame "FRAME" "ChangePasswordPanel" {
+        Frame "TEXT" "CPNameLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetMainFrame", TOPLEFT, 0.03125, -0.1,
+            Text "COLON_NAME",
+        }
+
+        Frame "EDITBOX" "CPAccountName" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT, "CPNameLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusDefault,
+		    TabFocusNext "CPPassword",
+
+            EditTextFrame "CPAccountNameEditBoxText",
+            Frame "TEXT" "CPAccountNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+            }
+        }
+
+        Frame "TEXT" "CPPasswordLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "CPAccountName", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_CURRENT_PASSWORD",
+        }
+
+        Frame "EDITBOX" "CPPassword" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT,"CPPasswordLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusNext "CPNewPassword",
+
+            EditTextFrame "CPPasswordEditBoxText",
+            Frame "TEXT" "CPPasswordEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                FontFlags "PASSWORDFIELD",
+            }
+        }
+
+        Frame "TEXT" "CPNewPasswordLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "CPPassword", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_NEW_PASSWORD",
+        }
+
+        Frame "EDITBOX" "CPNewPassword" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT,"CPNewPasswordLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusNext "CPRepeatNewPassword",
+
+            EditTextFrame "CPNewPasswordEditBoxText",
+            Frame "TEXT" "CPNewPasswordEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                FontFlags "PASSWORDFIELD",
+            }
+        }
+
+        Frame "TEXT" "CPRepeatNewPasswordLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "CPNewPassword", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_REPEAT_NEW_PASSWORD",
+        }
+
+        Frame "EDITBOX" "CPRepeatNewPassword" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT,"CPRepeatNewPasswordLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusNext "CancelButton",
+
+            EditTextFrame "CPRepeatNewPasswordEditBoxText",
+            Frame "TEXT" "CPRepeatNewPasswordEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                FontFlags "PASSWORDFIELD",
+            }
+        }
+    }
+
+    // *******************************************
+    // *
+    // *    Terms Of Service Panel
+    // *
+    // ******
+
+    Frame "FRAME" "TOSPanel" {
+        Frame "TEXT" "TOSTitle" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetMainFrame", TOPRIGHT, -0.30125, -0.1,
+            Text "TOS",
+        }
+
+        Frame "TEXTAREA" "TOSTextArea" INHERITS WITHCHILDREN "BattleNetTextAreaTemplate" {
+            Width 0.271875,
+            Height 0.316875,
+            SetPoint TOPLEFT, "TOSTitle", BOTTOMLEFT, 0.0, -0.003125,
+        }
+
+        Frame "BACKDROP" "AgreeBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.2,
+            SetPoint BOTTOMRIGHT, "BattleNetMainFrame", BOTTOMRIGHT, -0.17, 0.06,
+
+            Frame "GLUETEXTBUTTON" "AgreeButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                Width 0.138,
+                SetPoint TOPRIGHT,"AgreeBackdrop",TOPRIGHT, -0.010, -0.0165,
+		        TabFocusNext "DisagreeButton",
+		        ControlShortcutKey "G",
+
+                ButtonText "AgreeButtonText",
+                Frame "TEXT" "AgreeButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                    Text "KEY_AGREE",
+                }
+            }
+        }
+
+        Frame "BACKDROP" "DisagreeBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+            Width 0.2,
+            SetPoint BOTTOMRIGHT, "BattleNetMainFrame", BOTTOMRIGHT, -0.008125, 0.06,
+
+            Frame "GLUETEXTBUTTON" "DisagreeButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                Width 0.138,
+                SetPoint TOPRIGHT,"DisagreeBackdrop",TOPRIGHT, -0.010, -0.0165,		        
+		        ControlShortcutKey "D",
+
+                ButtonText "DisagreeButtonText",
+                Frame "TEXT" "DisagreeButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                    Text "KEY_DISAGREE",
+                }
+            }
+        }
+    }
+
+    // *******************************************
+    // *
+    // *    New Account Panel
+    // *
+    // ******
+
+    Frame "FRAME" "NewAccountPanel" {
+
+        Frame "TEXT" "NANameLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetMainFrame", TOPLEFT, 0.03125, -0.1,
+            Text "COLON_NAME",
+        }
+
+        Frame "EDITBOX" "NAAccountName" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT, "NANameLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusDefault,
+		    TabFocusNext "NAPassword",
+
+            EditTextFrame "NAAccountNameEditBoxText",
+            Frame "TEXT" "NAAccountNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+            }
+        }
+
+        Frame "TEXT" "NAPasswordLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "NAAccountName", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_PASSWORD",
+        }
+
+        Frame "EDITBOX" "NAPassword" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT,"NAPasswordLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusNext "NARepeatPassword",
+
+            EditTextFrame "NAPasswordEditBoxText",
+            Frame "TEXT" "NAPasswordEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                FontFlags "PASSWORDFIELD",
+            }
+        }
+
+        Frame "TEXT" "NARepeatPasswordLabel" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "Password", BOTTOMLEFT, 0.00, -0.01,
+            Text "COLON_REPEAT_PASSWORD",
+        }
+
+        Frame "EDITBOX" "NARepeatPassword" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.24,
+            SetPoint TOPLEFT,"NARepeatPasswordLabel", BOTTOMLEFT, 0.0, -0.002,
+		    TabFocusNext "NAOKButton",
+
+            EditTextFrame "NARepeatPasswordEditBoxText",
+            Frame "TEXT" "NARepeatPasswordEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                FontFlags "PASSWORDFIELD",
+            }
+        }
+
+        Frame "TEXT" "NAAccountCreationTitle" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetMainFrame", TOPRIGHT, -0.30125, -0.1,
+            Text "ACCOUNT_CREATION",
+        }
+
+        Frame "TEXTAREA" "NATextArea" INHERITS WITHCHILDREN "BattleNetTextAreaTemplate" {
+            Width 0.271875,
+            Height 0.316875,
+            SetPoint TOPLEFT, "NAAccountCreationTitle", BOTTOMLEFT, 0.0, -0.003125,
+        }
+    }
+
+    // *******************************************
+    // *
+    // *    Common Buttons
+    // *
+    // ******
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.2,
+        SetPoint BOTTOMRIGHT, "BattleNetMainFrame", BOTTOMRIGHT, -0.008125, 0.06,
+
+        Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.138,
+            SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.010, -0.0165,		        
+		    ControlShortcutKey "A",
+
+            ButtonText "CancelButtonText",
+            Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                Text "KEY_CANCEL",
+            }
+        }
+    }
+
+
+    Frame "BACKDROP" "OKBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.2,
+        SetPoint BOTTOMRIGHT, "BattleNetMainFrame", BOTTOMRIGHT, -0.17, 0.06,
+
+        Frame "GLUETEXTBUTTON" "OKButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.138,
+            SetPoint TOPRIGHT,"OKBackdrop",TOPRIGHT, -0.010, -0.0165,
+		    TabFocusNext "CancelButton",
+		    ControlShortcutKey "O",
+
+            ButtonText "OKButtonText",
+            Frame "TEXT" "OKButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                Text "KEY_OK",
+            }
+        }
+    }
+}

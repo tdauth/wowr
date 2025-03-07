@@ -1,0 +1,646 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "EscMenuOptionsPanel" {
+    SetAllPoints,
+
+    // ***********************************************
+    // **
+    // **   Options Panel
+    // **
+    // **********
+
+    Frame "FRAME" "OptionsPanel" {
+
+		TabFocusPush,
+
+        Frame "TEXT" "OptionsTitleText" INHERITS "EscMenuTitleTextTemplate" {
+            SetPoint TOP, "EscMenuOptionsPanel", TOP, 0.0, -0.03,
+
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "OPTIONS",
+        }
+
+        Frame "GLUETEXTBUTTON" "GameplayButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+            SetPoint TOP, "EscMenuOptionsPanel", TOP, 0.0, -0.067,
+			TabFocusDefault,
+			TabFocusNext "VideoButton",
+            ControlShortcutKey "G",
+
+            ButtonText "GameplayButtonText",
+	        Frame "TEXT" "GameplayButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		        Text "KEY_GAMEPLAY",
+	        }
+        }
+
+        Frame "GLUETEXTBUTTON" "VideoButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+            SetPoint TOP, "GameplayButton", BOTTOM, 0.0, -0.002,
+			TabFocusNext "SoundButton",
+            ControlShortcutKey "V",
+
+            ButtonText "VideoButtonText",
+	        Frame "TEXT" "VideoButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		        Text "KEY_VIDEO",
+	        }
+        }
+
+        Frame "GLUETEXTBUTTON" "SoundButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+            SetPoint TOP, "VideoButton", BOTTOM, 0.0, -0.002,
+			TabFocusNext "OptionsPreviousButton",
+            ControlShortcutKey "S",
+
+            ButtonText "SoundButtonText",
+	        Frame "TEXT" "SoundButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		        Text "KEY_SOUND",
+	        }
+        }
+
+        Frame "GLUETEXTBUTTON" "OptionsPreviousButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+            SetPoint BOTTOM, "EscMenuOptionsPanel", BOTTOM, 0.0, 0.03,
+            ControlShortcutKey "P",
+
+            ButtonText "OptionsPreviousButtonText",
+	        Frame "TEXT" "OptionsPreviousButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		        Text "KEY_PREVIOUS_MENU",
+	        }
+        }
+    }
+
+    // ***********************************************
+    // **
+    // **   Gameplay Panel
+    // **
+    // **********
+
+    Frame "FRAME" "GameplayPanel" {
+
+        Frame "TEXT" "GameplayTitleText" INHERITS "EscMenuTitleTextTemplate" {
+            SetPoint TOP, "EscMenuOptionsPanel", TOP, 0.0, -0.03,
+
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "GAMEPLAY_OPTIONS",
+        }
+
+        Frame "TEXT" "GameSpeedLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "EscMenuOptionsPanel", TOPLEFT, 0.035, -0.05,
+            Text "COLON_GAME_SPEED",
+        }
+
+        Frame "SLIDER" "GameSpeedSlider" INHERITS WITHCHILDREN "EscMenuSliderTemplate" {            
+            Width 0.209,
+            SetPoint TOPLEFT, "GameSpeedLabel", BOTTOMLEFT, 0.00375, -0.0025,
+
+            SliderMinValue 0,
+            SliderMaxValue 2,
+            SliderInitialValue 1,
+            SliderStepSize 1,
+        }
+
+        Frame "TEXT" "GameSpeedValue" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint BOTTOMRIGHT, "GameSpeedSlider", TOPRIGHT, 0.0, 0.0025,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "Fastest",
+        }
+
+        Frame "TEXT" "MouseScrollLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "GameSpeedLabel", BOTTOMLEFT, 0.0, -0.025,
+            Text "COLON_MOUSE_SCROLL",
+        }
+
+        Frame "SLIDER" "MouseScrollSlider" INHERITS WITHCHILDREN "EscMenuSliderTemplate" {
+            SetPoint TOPLEFT, "MouseScrollLabel", BOTTOMLEFT, 0.04275, -0.0025,
+
+            SliderMinValue 0,
+            SliderMaxValue 100,
+            SliderInitialValue 0,
+            SliderStepSize 1,
+        }
+
+        Frame "TEXT" "MouseScrollSlowLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint RIGHT, "MouseScrollSlider", LEFT, -0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "SLOW",
+        }
+
+        Frame "TEXT" "MouseScrollFastLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "MouseScrollSlider", RIGHT, 0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "FAST",
+        }
+
+        Frame "GLUECHECKBOX" "MouseScrollDisable" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "MouseScrollSlowLabel", BOTTOMLEFT, -0.00375, -0.01,
+        }
+
+        Frame "TEXT" "MouseScrollDisableLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "MouseScrollDisable", RIGHT, 0.005, 0.0,
+            Text "GAMEPLAY_MOUSE_SCROLL_DISABLE",
+        }
+
+        Frame "TEXT" "KeyScrollLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "MouseScrollLabel", BOTTOMLEFT, 0.0, -0.05,
+            Text "COLON_KEYBOARD_SCROLL",
+        }
+
+        Frame "SLIDER" "KeyScrollSlider" INHERITS WITHCHILDREN "EscMenuSliderTemplate" {
+            SetPoint TOPLEFT, "KeyScrollLabel", BOTTOMLEFT, 0.04275, -0.0025,
+
+            SliderMinValue 0,
+            SliderMaxValue 100,
+            SliderInitialValue 0,
+            SliderStepSize 1,
+        }
+
+        Frame "TEXT" "KeyScrollSlowLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint RIGHT, "KeyScrollSlider", LEFT, -0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "SLOW",
+        }
+
+        Frame "TEXT" "KeyScrollFastLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "KeyScrollSlider", RIGHT, 0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "FAST",
+        }
+
+        Frame "GLUECHECKBOX" "TooltipsCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "KeyScrollLabel", BOTTOMLEFT, 0.0, -0.035,
+        }
+
+        Frame "TEXT" "TooltipsLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "TooltipsCheckBox", RIGHT, 0.003, 0.0,
+            Text "ENHANCED_TOOLTIPS",
+        }
+
+        Frame "GLUECHECKBOX" "InputSprocketCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "TooltipsCheckBox", BOTTOMLEFT, 0.0, -0.01125,
+        }
+
+        Frame "TEXT" "InputSprocketLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "InputSprocketCheckBox", RIGHT, 0.003, 0.0,
+            Text "ENABLE_MULTIBUTTON_MOUSE",
+        }
+
+        Frame "TEXT" "DifficultyLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "InputSprocketCheckBox", BOTTOMLEFT, 0.0, -0.01125,
+            Text "COLON_DIFFICULTY",
+        }
+
+        Frame "TEXT" "DifficultyValue" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPRIGHT, "DifficultyLabel", TOPLEFT, 0.216, 0.0,
+
+            FontJustificationH JUSTIFYRIGHT,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+/*
+        Frame "TEXT" "NetworkLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "InputSprocketCheckBox", BOTTOMLEFT, 0.0, -0.01125,
+            Text "NETWORK_LATENCY",
+        }
+
+        Frame "TEXT" "LatencyInfo1" INHERITS "EscMenuLabelTextTemplate" {
+            Width 0.225,
+            SetPoint TOPLEFT, "NetworkLabel", BOTTOMLEFT, 0.0, -0.0025,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "LATENCY_INFO1",
+        }
+
+        Frame "TEXT" "LatencyInfo2" INHERITS "EscMenuLabelTextTemplate" {
+            Width 0.225,
+            SetPoint TOPLEFT, "LatencyInfo1", BOTTOMLEFT, 0.0, -0.007,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "LATENCY_INFO2",
+        }
+*/
+    }
+
+    // ***********************************************
+    // **
+    // **   Video Panel
+    // **
+    // **********
+
+    Frame "FRAME" "VideoPanel" {
+
+        Frame "TEXT" "VideoTitleText" INHERITS "EscMenuTitleTextTemplate" {
+            SetPoint TOP, "EscMenuOptionsPanel", TOP, 0.0, -0.03,
+
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "VIDEO_OPTIONS",
+        }
+
+        Frame "TEXT" "GammaLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "EscMenuOptionsPanel", TOPLEFT, 0.035, -0.05,
+            Text "COLON_GAMMA",
+        }
+
+        Frame "SLIDER" "GammaSlider" INHERITS WITHCHILDREN "EscMenuSliderTemplate" {
+			Width 0.125,
+            SetPoint TOPLEFT, "GammaLabel", BOTTOMLEFT, 0.04275, -0.0025,
+
+            SliderMinValue 0,
+            SliderMaxValue 100,
+            SliderInitialValue 0,
+            SliderStepSize 1,
+        }
+
+        Frame "BACKDROP" "GammaNotch"  {
+            SetPoint BOTTOMLEFT, "GammaSlider", TOPLEFT, 0.027125, 0.00225,
+            BackdropBackground  "UI\Widgets\Glues\GlueScreen-PullDown-Arrow.blp",
+	        BackdropBlendAll,
+
+            Width   0.007,
+            Height  0.007,
+
+            Frame "TEXT" "GammaNotchLabel" INHERITS "EscMenuLabelTextTemplate" {
+                SetPoint LEFT, "GammaNotch", RIGHT, 0.00375, 0.001,
+                FontColor 1.0 1.0 1.0 1.0,
+                Text "1.0",
+            }
+        }
+
+        Frame "TEXT" "GammaDarkLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint RIGHT, "GammaSlider", LEFT, -0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "DARK",
+        }
+
+        Frame "TEXT" "GammaBrightLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "GammaSlider", RIGHT, 0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "BRIGHT",
+        }
+
+        // --- labels
+        Frame "TEXT" "ParticlesLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "GammaLabel", BOTTOMLEFT, 0.0, -0.03,
+            Text "COLON_PARTICLES",
+        }
+
+        Frame "TEXT" "LightsLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "ParticlesLabel", BOTTOMLEFT, 0.0, -0.017625,
+            Text "COLON_LIGHTS",
+        }
+
+        Frame "TEXT" "ShadowsLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "LightsLabel", BOTTOMLEFT, 0.0, -0.017625,
+            Text "COLON_SHADOWS",
+        }
+
+        Frame "TEXT" "OcclusionLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint TOPLEFT, "ShadowsLabel", BOTTOMLEFT, 0.0, -0.017625,
+            Text "COLON_OCCLUSION",
+        }
+
+        Frame "TEXT" "ResolutionLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "OcclusionLabel", BOTTOMLEFT, 0.0, -0.03125,
+            Text "COLON_RESOLUTION",
+        }
+
+        Frame "TEXT" "ResolutionValue" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPRIGHT, "ResolutionLabel", TOPLEFT, 0.216, 0.0,
+
+            FontJustificationH JUSTIFYRIGHT,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "ModelDetailLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "ResolutionLabel", BOTTOMLEFT, 0.0, -0.0125,
+            Text "COLON_MODEL_DETAIL",
+        }
+
+        Frame "TEXT" "ModelDetailValue" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPRIGHT, "ModelDetailLabel", TOPLEFT, 0.216, 0.0,
+
+            FontJustificationH JUSTIFYRIGHT,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "AnimQualityLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "ModelDetailLabel", BOTTOMLEFT, 0.0, -0.0125,
+            Text "COLON_ANIM_QUALITY",
+        }
+
+        Frame "TEXT" "AnimQualityValue" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPRIGHT, "AnimQualityLabel", TOPLEFT, 0.216, 0.0,
+
+            FontJustificationH JUSTIFYRIGHT,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "TextureQualityLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "AnimQualityLabel", BOTTOMLEFT, 0.0, -0.0125,
+            Text "COLON_TEXTURE_QUALITY",
+        }
+
+        Frame "TEXT" "TextureQualityValue" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPRIGHT, "TextureQualityLabel", TOPLEFT, 0.216, 0.0,
+
+            FontJustificationH JUSTIFYRIGHT,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        // --- pulldowns
+	    Frame "POPUPMENU" "EscOptionsParticlesMenu" {
+            Width 0.1375,
+            Height 0.0245,
+            PopupButtonInset 0.01,
+            SetPoint LEFT, "ParticlesLabel", RIGHT, 0.037, 0.0,
+
+            ControlBackdrop "EscOptionsParticlesPopupMenuBackdrop",
+            Frame "BACKDROP" "EscOptionsParticlesPopupMenuBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+            }
+
+            ControlDisabledBackdrop "EscOptionsParticlesPopupMenuDisabledBackdrop",
+            Frame "BACKDROP" "EscOptionsParticlesPopupMenuDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+            }
+
+            PopupTitleFrame "EscOptionsParticlesPopupMenuTitle",
+            Frame "GLUETEXTBUTTON" "EscOptionsParticlesPopupMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+            }
+
+            PopupArrowFrame "EscOptionsParticlesPopupMenuArrow",
+            Frame "BUTTON" "EscOptionsParticlesPopupMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+            }
+
+            PopupMenuFrame "EscOptionsParticlesPopupMenuMenu",
+            Frame "MENU" "EscOptionsParticlesPopupMenuMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+                MenuItem "LOW",   -2,
+                MenuItem "MEDIUM",   -2,
+                MenuItem "HIGH",  -2,
+            }
+	    }
+
+	    Frame "POPUPMENU" "EscOptionsLightsMenu" {
+            Width 0.1375,
+            Height 0.0245,
+            PopupButtonInset 0.01,
+            SetPoint TOPLEFT, "EscOptionsParticlesMenu", BOTTOMLEFT, 0.0, -0.004,
+
+            ControlBackdrop "EscOptionsLightsPopupMenuBackdrop",
+            Frame "BACKDROP" "EscOptionsLightsPopupMenuBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+            }
+
+            ControlDisabledBackdrop "EscOptionsLightsPopupMenuDisabledBackdrop",
+            Frame "BACKDROP" "EscOptionsLightsPopupMenuDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+            }
+
+            PopupTitleFrame "EscOptionsLightsPopupMenuTitle",
+            Frame "GLUETEXTBUTTON" "EscOptionsLightsPopupMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+            }
+
+            PopupArrowFrame "EscOptionsLightsPopupMenuArrow",
+            Frame "BUTTON" "EscOptionsLightsPopupMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+            }
+
+            PopupMenuFrame "EscOptionsLightsPopupMenuMenu",
+            Frame "MENU" "EscOptionsLightsPopupMenuMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {                    
+                MenuItem "LOW",   -2,
+                MenuItem "MEDIUM",   -2,                    
+                MenuItem "HIGH",  -2,
+            }
+	    }
+
+	    Frame "POPUPMENU" "EscOptionsShadowsMenu" {
+            Width 0.1375,
+            Height 0.0245,
+            PopupButtonInset 0.01,
+            SetPoint TOPLEFT, "EscOptionsLightsMenu", BOTTOMLEFT, 0.0, -0.004,
+
+            ControlBackdrop "EscOptionsShadowsPopupMenuBackdrop",
+            Frame "BACKDROP" "EscOptionsShadowsPopupMenuBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+            }
+
+            ControlDisabledBackdrop "EscOptionsShadowsPopupMenuDisabledBackdrop",
+            Frame "BACKDROP" "EscOptionsShadowsPopupMenuDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+            }
+
+            PopupTitleFrame "EscOptionsShadowsPopupMenuTitle",
+            Frame "GLUETEXTBUTTON" "EscOptionsShadowsPopupMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+            }
+
+            PopupArrowFrame "EscOptionsShadowsPopupMenuArrow",
+            Frame "BUTTON" "EscOptionsShadowsPopupMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+            }
+
+            PopupMenuFrame "EscOptionsShadowsPopupMenuMenu",
+            Frame "MENU" "EscOptionsShadowsPopupMenuMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+                MenuItem "OFF",       -2,
+                MenuItem "ON",        -2,
+            }
+	    }
+
+	    Frame "POPUPMENU" "EscOptionsOcclusionMenu" {
+            Width 0.1375,
+            Height 0.0245,
+            PopupButtonInset 0.01,
+            SetPoint TOPLEFT, "EscOptionsShadowsMenu", BOTTOMLEFT, 0.0, -0.004,
+
+            ControlBackdrop "EscOptionsOcclusionPopupMenuBackdrop",
+            Frame "BACKDROP" "EscOptionsOcclusionPopupMenuBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+            }
+
+            ControlDisabledBackdrop "EscOptionsOcclusionPopupMenuDisabledBackdrop",
+            Frame "BACKDROP" "EscOptionsOcclusionPopupMenuDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+            }
+
+            PopupTitleFrame "EscOptionsOcclusionPopupMenuTitle",
+            Frame "GLUETEXTBUTTON" "EscOptionsOcclusionPopupMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+            }
+
+            PopupArrowFrame "EscOptionsOcclusionPopupMenuArrow",
+            Frame "BUTTON" "EscOptionsOcclusionPopupMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+            }
+
+            PopupMenuFrame "EscOptionsOcclusionPopupMenuMenu",
+            Frame "MENU" "EscOptionsOcclusionPopupMenuMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+                MenuItem "OFF",       -2,
+                MenuItem "ON",        -2,
+            }
+	    }
+    }
+
+    // ***********************************************
+    // **
+    // **   Sound Panel
+    // **
+    // **********
+
+    Frame "FRAME" "SoundPanel" {
+
+        Frame "TEXT" "SoundTitleText" INHERITS "EscMenuTitleTextTemplate" {
+            SetPoint TOP, "EscMenuOptionsPanel", TOP, 0.0, -0.03,
+
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "SOUND_OPTIONS",
+        }
+
+        Frame "GLUECHECKBOX" "SoundCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "EscMenuOptionsPanel", TOPLEFT, 0.035, -0.05,
+        }
+
+        Frame "TEXT" "SoundVolumeLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint LEFT, "SoundCheckBox", RIGHT, 0.005, 0.0,
+            Text "COLON_SOUND_EFFECTS_VOLUME",
+        }
+
+        Frame "SLIDER" "SoundVolumeSlider" INHERITS WITHCHILDREN "EscMenuSliderTemplate" {
+            SetPoint TOPLEFT, "SoundCheckBox", BOTTOMLEFT, 0.04275, -0.003,
+
+            SliderMinValue 0,
+            SliderMaxValue 100,
+            SliderInitialValue 0,
+            SliderStepSize 1,
+        }
+
+        Frame "TEXT" "SoundVolumeLowLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint RIGHT, "SoundVolumeSlider", LEFT, -0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "LOW",
+        }
+
+        Frame "TEXT" "SoundVolumeHighLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "SoundVolumeSlider", RIGHT, 0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "HIGH",
+        }
+
+        Frame "GLUECHECKBOX" "MusicCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "SoundCheckBox", BOTTOMLEFT, 0.0, -0.025,
+        }
+
+        Frame "TEXT" "MusicVolumeLabel" INHERITS "EscMenuInfoTextTemplate" {
+            SetPoint LEFT, "MusicCheckBox", RIGHT, 0.005, 0.0,
+            Text "COLON_MUSIC_VOLUME",
+        }
+
+        Frame "SLIDER" "MusicVolumeSlider" INHERITS WITHCHILDREN "EscMenuSliderTemplate" {
+            SetPoint TOPLEFT, "MusicCheckBox", BOTTOMLEFT, 0.04275, -0.003,
+
+            SliderMinValue 0,
+            SliderMaxValue 100,
+            SliderInitialValue 0,
+            SliderStepSize 1,
+        }
+
+        Frame "TEXT" "MusicVolumeLowLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint RIGHT, "MusicVolumeSlider", LEFT, -0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "LOW",
+        }
+
+        Frame "TEXT" "MusicVolumeHighLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "MusicVolumeSlider", RIGHT, 0.00375, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+            Text "HIGH",
+        }
+
+        Frame "GLUECHECKBOX" "AmbientCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "MusicCheckBox", BOTTOMLEFT, 0.0, -0.023,
+        }
+
+        Frame "TEXT" "AmbientLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "AmbientCheckBox", RIGHT, 0.005, 0.0,
+            Text "AMBIENT_SOUNDS",
+        }
+
+        Frame "GLUECHECKBOX" "MovementCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "AmbientCheckBox", BOTTOMLEFT, 0.0, 0.0,
+        }
+
+        Frame "TEXT" "MovementLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "MovementCheckBox", RIGHT, 0.005, 0.0,
+            Text "MOVEMENT_SOUNDS",
+        }
+
+        Frame "GLUECHECKBOX" "UnitCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "MovementCheckBox", BOTTOMLEFT, 0.0, 0.0,
+        }
+
+        Frame "TEXT" "UnitLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "UnitCheckBox", RIGHT, 0.005, 0.0,
+            Text "UNIT_SOUNDS",
+        }
+		
+        Frame "GLUECHECKBOX" "SubtitlesCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "UnitCheckBox", BOTTOMLEFT, 0.0, 0.0,
+        }
+
+        Frame "TEXT" "SubtitlesLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "SubtitlesCheckBox", RIGHT, 0.005, 0.0,
+            Text "SUBTITLES",
+        }
+
+        // --- provider options
+        Frame "TEXT" "ProviderLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPLEFT, "SubtitlesCheckBox", BOTTOMLEFT, 0.0, -0.004,
+            Text "COLON_SOUND_PROVIDER",
+        }
+
+        Frame "TEXT" "ProviderValue" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint TOPRIGHT, "ProviderLabel", TOPLEFT, 0.218, 0.0,
+
+            FontJustificationH JUSTIFYRIGHT,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "GLUECHECKBOX" "EnviroCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "ProviderLabel", BOTTOMLEFT, 0.0, -0.005,
+        }
+
+        Frame "TEXT" "EnviroLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "EnviroCheckBox", RIGHT, 0.005, 0.0,
+            Text "ENVIRONMENTAL_EFFECTS",
+        }
+
+        Frame "GLUECHECKBOX" "PositionalCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+            SetPoint TOPLEFT, "EnviroCheckBox", BOTTOMLEFT, 0.0, 0.0,
+        }
+
+        Frame "TEXT" "PositionalLabel" INHERITS "EscMenuLabelTextTemplate" {
+            SetPoint LEFT, "PositionalCheckBox", RIGHT, 0.005, 0.0,
+            Text "POSITIONAL_AUDIO",
+        }
+    }
+
+    // ***********************************************
+    // **
+    // **   Bottom Button Panel
+    // **
+    // **********
+
+    Frame "FRAME" "BottomButtonPanel" {
+
+		TabFocusPush,
+
+        Frame "GLUETEXTBUTTON" "OptionsOKButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+            SetPoint BOTTOMLEFT, "EscMenuOptionsPanel", BOTTOMLEFT, 0.028125, 0.03,
+            Width 0.112,
+			TabFocusDefault,
+			TabFocusNext "OptionsCancelButton",
+            ControlShortcutKey "O",
+
+            ButtonText "OKButtonText",
+	        Frame "TEXT" "OKButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		        Text "KEY_OK",
+	        }
+        }
+
+        Frame "GLUETEXTBUTTON" "OptionsCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+            SetPoint LEFT, "OptionsOKButton", RIGHT, 0.00625, 0.0,
+            Width 0.112,
+            ControlShortcutKey "A",
+
+            ButtonText "CancelButtonText",
+	        Frame "TEXT" "CancelButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		        Text "KEY_CANCEL",
+	        }
+        }
+    }
+}
