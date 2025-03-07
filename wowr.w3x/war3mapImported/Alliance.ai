@@ -57,9 +57,9 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        call StartExpansionTownHall(expansions, ALLIANCE_TIER_1)
-        call StartExpansionSimple(expansions, ALLIANCE_MILL)
-        call StartExpansionSimple(expansions, ALLIANCE_GUARD_TOWER)
+        call StartExpansionTownHall(ALLIANCE_TIER_1)
+        call StartExpansionSimple(ALLIANCE_MILL)
+        call StartExpansionSimple(ALLIANCE_GUARD_TOWER)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, ALLIANCE_SHIPYARD)

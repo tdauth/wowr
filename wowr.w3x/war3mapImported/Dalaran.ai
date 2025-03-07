@@ -79,9 +79,9 @@ function BuildingStrategy takes nothing returns nothing
 
         if (buildShips) then
             call StartUnitSimple(shipyards, DALARAN_SHIPYARD)
-            call StartUnitSimple(ships_simple, HUMAN_TRANSPORT_SHIP)
-            call StartUnitSimple(ships_strong, HUMAN_FRIGATE)
-            call StartUnitSimple(ships_strong, HUMAN_BATTLESHIP)
+            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
+            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
         call Sleep(M1)

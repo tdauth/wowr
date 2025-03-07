@@ -79,10 +79,10 @@ function BuildingStrategy takes nothing returns nothing
     loop
         call LoopActionWoWReforged()
 
-        call StartExpansionTownHall(expansions, BLOOD_ELF_TOWN_HALL)
-        call StartExpansionSimple(expansions, BLOOD_ELF_LUMBER_MILL)
-        call StartExpansionSimple(expansions, BLOOD_ELF_SCOUT_TOWER)
-        call StartExpansionSimple(expansions, BLOOD_ELF_GUARD_TOWER)
+        call StartExpansionTownHall(BLOOD_ELF_TOWN_HALL)
+        call StartExpansionSimple(BLOOD_ELF_LUMBER_MILL)
+        call StartExpansionSimple(BLOOD_ELF_SCOUT_TOWER)
+        call StartExpansionSimple(BLOOD_ELF_GUARD_TOWER)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, BLOOD_ELF_SHIPYARD)
