@@ -207,6 +207,11 @@ globals
     
     // WoW Reforged
 
+    // traces
+    integer traceLineCounter = 0
+    integer traceCounter = 0
+    boolean trace_enabled = false
+
     // data
     integer array heroTypes
     integer heroTypesCounter = 0
@@ -283,6 +288,51 @@ function I2S2 takes integer i returns string
     return s
 endfunction
 
+function FileStart takes nothing returns nothing
+    call PreloadGenClear()
+    call PreloadGenStart()
+endfunction
+
+function FileWriteLine takes string whichString returns nothing
+    call Preload(whichString)
+endfunction
+
+function FileSave takes string fileName returns nothing
+    // The line below creates the file at the specified location
+    call PreloadGenEnd(fileName)
+endfunction
+
+function FileTraceSave takes nothing returns nothing
+    call FileSave("Trace " + I2S2(traceCounter) + GetPlayerName(Player(GetAiPlayer())) + ".txt")
+    set traceCounter = traceCounter + 1
+    set traceLineCounter = 0
+endfunction
+
+function FileTrace takes string message returns nothing
+    if (trace_enabled) then
+        call FileWriteLine(message)
+        set traceLineCounter = traceLineCounter + 1
+        if (traceLineCounter >= 20) then
+            call FileTraceSave()
+        endif
+    endif
+endfunction
+
+function DisableTraceIfNecessary takes nothing returns nothing
+    local integer i = 0
+    local boolean none = true
+    loop
+        exitwhen (i == GetBJMaxPlayers())
+        if (trace_on[i]) then
+            set none = false
+        endif
+        set i = i + 1
+    endloop
+    if (none) then
+        set trace_enabled = false
+    endif
+endfunction
+
 //============================================================================
 // recipient: changes the type of chat channel prefix shown. It has no effect on the message's visibility.
 // 0: "All" chat prefix
@@ -306,53 +356,65 @@ endfunction
 //============================================================================
 function Trace takes string message returns nothing
     local integer i = 0
-    loop
-        exitwhen (i == GetBJMaxPlayers())
-        if trace_on[i] then
-            call DisplayText(i, message)
-            call NotifySpecificPlayer(i, message)
-        endif
-        set i = i + 1
-    endloop
+    if (trace_enabled) then
+        loop
+            exitwhen (i == GetBJMaxPlayers())
+            if trace_on[i] then
+                call DisplayText(i, message)
+                call NotifySpecificPlayer(i, message)
+            endif
+            set i = i + 1
+        endloop
+        call FileTrace(message)
+    endif
 endfunction
 
 //============================================================================
 function TraceI takes string message, integer val returns nothing
     local integer i = 0
-    loop
-        exitwhen (i == GetBJMaxPlayers())
-        if trace_on[i] then
-            call DisplayTextI(i, message, val)
-            call NotifySpecificPlayer(i, message + " v1=" + I2S2(val))
-        endif
-        set i = i + 1
-    endloop
+    if (trace_enabled) then
+        loop
+            exitwhen (i == GetBJMaxPlayers())
+            if trace_on[i] then
+                call DisplayTextI(i, message, val)
+                call NotifySpecificPlayer(i, message + " v1=" + I2S2(val))
+            endif
+            set i = i + 1
+        endloop
+        call FileTrace(message + " v1=" + I2S2(val))
+    endif
 endfunction
 
 //============================================================================
 function TraceII takes string message, integer v1, integer v2 returns nothing
     local integer i = 0
-    loop
-        exitwhen (i == GetBJMaxPlayers())
-        if trace_on[i] then
-            call DisplayTextII(i,message,v1,v2)
-            call NotifySpecificPlayer(i, message  + " v1=" + I2S2(v1)  + ", v2=" + I2S2(v2))
-        endif
-        set i = i + 1
-    endloop
+    if (trace_enabled) then
+        loop
+            exitwhen (i == GetBJMaxPlayers())
+            if trace_on[i] then
+                call DisplayTextII(i,message,v1,v2)
+                call NotifySpecificPlayer(i, message + " v1=" + I2S2(v1)  + ", v2=" + I2S2(v2))
+            endif
+            set i = i + 1
+        endloop
+        call FileTrace(message  + " v1=" + I2S2(v1) + ", v2=" + I2S2(v2))
+    endif
 endfunction
 
 //============================================================================
 function TraceIII takes string message, integer v1, integer v2, integer v3 returns nothing
     local integer i = 0
-    loop
-        exitwhen (i == GetBJMaxPlayers())
-        if trace_on[i] then
-            call DisplayTextIII(i,message,v1,v2,v3)
-            call NotifySpecificPlayer(i, message  + " v1=" + I2S2(v1) + " v2=" + I2S2(v2) + " v3=" + I2S2(v3))
-        endif
-        set i = i + 1
-    endloop
+    if (trace_enabled) then
+        loop
+            exitwhen (i == GetBJMaxPlayers())
+            if trace_on[i] then
+                call DisplayTextIII(i,message,v1,v2,v3)
+                call NotifySpecificPlayer(i, message + " v1=" + I2S2(v1) + " v2=" + I2S2(v2) + " v3=" + I2S2(v3))
+            endif
+            set i = i + 1
+        endloop
+        call FileTrace(message + " v1=" + I2S2(v1) + " v2=" + I2S2(v2) + " v3=" + I2S2(v3))
+    endif
 endfunction
 
 //============================================================================
@@ -3160,10 +3222,14 @@ function UpdateWorkers takes nothing returns nothing
                 call TraceI("Zeppelins: %d", zeppelins)
             elseif (c == COMMAND_TRACE_ON) then
                 set trace_on[GetLastData()] = true
+                set trace_enabled = true
                 call NotifyOtherPlayers("Enabled trace for me!")
                 call NotifySpecificPlayer(GetLastData(), "Enabled trace for me!")
+                call FileStart()
             elseif (c == COMMAND_TRACE_OFF) then
                 set trace_on[GetLastData()] = false
+                call FileTraceSave()
+                call DisableTraceIfNecessary()
                 call NotifySpecificPlayer(GetLastData(), "Disabled trace for me!")
             elseif (c == COMMAND_SHREDDERS) then
                 set shredders = GetLastData()
@@ -3212,31 +3278,38 @@ function StartUnitSimple takes integer qty, integer id returns nothing
     call StartUnit(qty,id,-1)
 endfunction
 
+function BasicExpansionIfRequired takes integer ex, integer unitid returns nothing
+    local integer mines = GetMinesOwned()
+    call TraceII("Building anothere expansion %d if required with mines owned %d\n", ex, mines)
+    call BasicExpansion(mines < ex, unitid)
+endfunction
+
 function StartExpansionTownHall takes integer id returns nothing
-    local integer i = 1
     call TraceI("Expansions %d\n", expansions)
 
+    if (expansions > 0) then
+        call BasicExpansionIfRequired(expansions, id)
+    endif
+endfunction
+
+function StartExpansionSimple takes integer id returns nothing
+    local integer i = 1
     if (expansions > 0) then
         set i = 1
         loop
             exitwhen (i > expansions)
-            if (TownHasMine(i) and not TownHasHall(i)) then
+            if (TownHasHall(i)) then
                 call StartUnit(1, id, i)
+            else
+                call TraceI("Expansion %d has already a town hall\n", i)
             endif
             set i = i + 1
         endloop
     endif
 endfunction
 
-function StartExpansionSimple takes integer id returns nothing
-    if (expansions > 0) then
-        call StartExpansion(expansions + 1, id)
-    endif
-endfunction
-
 function ResearchHighLevelTier3Researches takes nothing returns nothing
     local integer evolutionLevel = GetUpgradeLevel(UPG_EVOLUTION)
-    local integer improvedLevel = 0
     if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
         set evolutionLevel = evolutionLevel + 1
     endif
@@ -3245,8 +3318,6 @@ function ResearchHighLevelTier3Researches takes nothing returns nothing
 
     if (not disabled) then
         if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
-            set improvedLevel = evolutionLevel / 10
-            call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
             call StartUpgrade(evolutionLevel, UPG_EVOLUTION)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
@@ -3257,7 +3328,6 @@ endfunction
 
 function ResearchHighLevelTier3ResearchesFreelancer takes nothing returns nothing
     local integer evolutionLevel = GetUpgradeLevel(UPG_FREELANCER_CHEAP_EVOLUTION)
-    local integer improvedLevel = 0
     if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
         set evolutionLevel = evolutionLevel + 1
     endif
@@ -3266,8 +3336,6 @@ function ResearchHighLevelTier3ResearchesFreelancer takes nothing returns nothin
 
     if (not disabled) then
         if (evolutionLevel < MAX_WOWR_RESEARCH_LEVEL) then
-            set improvedLevel = evolutionLevel / 10
-            call TraceI("ResearchHighLevelTier3Researches with improved levell %d\n", improvedLevel)
             call StartUpgrade(evolutionLevel, UPG_FREELANCER_CHEAP_EVOLUTION)
         else
             call Trace("ResearchHighLevelTier3Researches maximum levels\n")
@@ -3298,11 +3366,6 @@ function BuildingStrategyStandardTier3Freelancer takes nothing returns nothing
     call SetBuildUpgr(1, UPG_STORM_PROTECTION)
     call SetBuildUpgr(1, UPG_DRAGON_ROOST)
     call SetBuildUnit(1, DRAGON_ROOST)
-endfunction
-
-function BasicExpansionIfRequired takes integer ex, integer unitid returns nothing
-    call TraceII("Building anothere expansion %d if required with mines owned %d\n", ex, GetMinesOwned())
-    call BasicExpansion(GetMinesOwned() < ex, unitid)
 endfunction
 
 function GetZeppelinsIfRequired takes nothing returns nothing
