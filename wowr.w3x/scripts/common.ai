@@ -1268,7 +1268,7 @@ function StartExpansion takes integer qty, integer hall returns boolean
     local integer town
     local unit    peon
     local integer gold_cost
-
+    call Trace("StartExpansion\n")
     set count = TownCount(hall)
     call TraceII("town count for hall when starting expansion: %d/%d\n", count, qty)
     if count >= qty then
@@ -1318,6 +1318,8 @@ function OneBuildLoop takes nothing returns nothing
     if (disabled) then
         return
     endif
+
+    call TraceI("Build loop %d", build_length)
 
     set total_gold = GetGold() - gold_buffer
     set total_wood = GetWood()
