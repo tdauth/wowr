@@ -1,73 +1,74 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, TROLL_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, TROLL_GATHERER)
-    call SetBuildUnit(2, TROLL_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, TROLL_HOUSING)
-    call SetBuildUnit(1, TROLL_WAR_MILL)
-    call SetBuildUnit(3, TROLL_HUT)
-    call SetBuildUnit(2, TROLL_BARRACKS)
-    call SetBuildUnit(1, TROLL_ALTAR_OF_BLOOD)
-    call SetBuildUnit(1, TROLL_VOODOO_LOUNGE)
-    
-    call SetBuildUpgr(1, UPG_TROLL_SPEARS)
-    call SetBuildUpgr(1, UPG_TROLL_CREATURE_ATTACK)
-    call SetBuildUpgr(1, UPG_TROLL_ARMOR)
-    call SetBuildUpgr(1, UPG_TROLL_CREATURE_ARMOR)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, TROLL_TIER_2)
-    call SetBuildUnit(1, TROLL_WAR_MILL)
-    call SetBuildUnit(1, TROLL_SPIRIT_LODGE)
-    call SetBuildUnit(1, TROLL_BESTIARY)
-    call SetBuildUnit(4, TROLL_HUT)
-    call SetBuildUnit(2, TROLL_CITIZEN_FEMALE)
-    call SetBuildUnit(2, TROLL_CHILD)
-    call SetBuildUnit(2, TROLL_PET)
-    
-    call SetBuildUpgr(2, UPG_TROLL_SPEARS)
-    call SetBuildUpgr(2, UPG_TROLL_CREATURE_ATTACK)
-    call SetBuildUpgr(2, UPG_TROLL_ARMOR)
-    call SetBuildUpgr(2, UPG_TROLL_CREATURE_ARMOR)
-    call SetBuildUpgr(1, UPG_TROLL_TROLL_REGENEARTION)
-    call SetBuildUpgr(1, UPG_TROLL_SHAMAN)
-    call SetBuildUpgr(1, UPG_TROLL_TROLL_WITCH_DOCTOR)
-    call SetBuildUpgr(1, UPG_TROLL_TROLL_HEXER)
-    call SetBuildUpgr(1, UPG_TROLL_TROLL_BLOODMAGE)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, TROLL_TIER_3)
-    call SetBuildUnit(1, TROLL_ICE_TROLL_HUT)
-    call SetBuildUnit(5, TROLL_HUT)
-    call SetBuildUnit(2, TROLL_WATCH_TOWER)
-    call SetBuildUnit(2, TROLL_CITIZEN_MALE)
-
-    call SetBuildUpgr(3, UPG_TROLL_SPEARS)
-    call SetBuildUpgr(3, UPG_TROLL_CREATURE_ATTACK)
-    call SetBuildUpgr(3, UPG_TROLL_ARMOR)
-    call SetBuildUpgr(3, UPG_TROLL_CREATURE_ARMOR)
-    call SetBuildUpgr(2, UPG_TROLL_SHAMAN)
-    call SetBuildUpgr(2, UPG_TROLL_TROLL_WITCH_DOCTOR)
-    call SetBuildUpgr(2, UPG_TROLL_TROLL_HEXER)
-    call SetBuildUpgr(2, UPG_TROLL_TROLL_BLOODMAGE)
-    call SetBuildUpgr(1, UPG_TROLL_BERSERKER)
-    call SetBuildUpgr(1, UPG_TROLL_LIQUID_FIRE)
-    call SetBuildUpgr(1, UPG_TROLL_TRUESHOT_AURA)
-    call SetBuildUpgr(1, UPG_TROLL_WAR_DRUMS)
-    call SetBuildUpgr(2, UPG_TROLL_ICE_TROLL_HIGH_PRIEST)
-    call SetBuildUpgr(1, UPG_TROLL_BARRAGE)
-
-    call SetBuildUpgr(1, UPG_TROLL_TROLL_TRIBES)
-    call SetBuildUpgr(1, UPG_TROLL_BACKPACK)
-    call SetBuildUpgr(1, UPG_TROLL_TEMPLE_OF_SACRIFICE)
-    call SetBuildUnit(1, TROLL_TEMPLE_OF_SACRIFICE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, TROLL_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, TROLL_GATHERER)
+        call SetBuildUnit(2, TROLL_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, TROLL_HOUSING)
+        call SetBuildUnit(1, TROLL_WAR_MILL)
+        call SetBuildUnit(3, TROLL_HUT)
+        call SetBuildUnit(2, TROLL_BARRACKS)
+        call SetBuildUnit(1, TROLL_ALTAR_OF_BLOOD)
+        call SetBuildUnit(1, TROLL_VOODOO_LOUNGE)
+
+        call SetBuildUpgr(1, UPG_TROLL_SPEARS)
+        call SetBuildUpgr(1, UPG_TROLL_CREATURE_ATTACK)
+        call SetBuildUpgr(1, UPG_TROLL_ARMOR)
+        call SetBuildUpgr(1, UPG_TROLL_CREATURE_ARMOR)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, TROLL_TIER_2)
+        call SetBuildUnit(1, TROLL_WAR_MILL)
+        call SetBuildUnit(1, TROLL_SPIRIT_LODGE)
+        call SetBuildUnit(1, TROLL_BESTIARY)
+        call SetBuildUnit(4, TROLL_HUT)
+        call SetBuildUnit(2, TROLL_CITIZEN_FEMALE)
+        call SetBuildUnit(2, TROLL_CHILD)
+        call SetBuildUnit(2, TROLL_PET)
+
+        call SetBuildUpgr(2, UPG_TROLL_SPEARS)
+        call SetBuildUpgr(2, UPG_TROLL_CREATURE_ATTACK)
+        call SetBuildUpgr(2, UPG_TROLL_ARMOR)
+        call SetBuildUpgr(2, UPG_TROLL_CREATURE_ARMOR)
+        call SetBuildUpgr(1, UPG_TROLL_TROLL_REGENEARTION)
+        call SetBuildUpgr(1, UPG_TROLL_SHAMAN)
+        call SetBuildUpgr(1, UPG_TROLL_TROLL_WITCH_DOCTOR)
+        call SetBuildUpgr(1, UPG_TROLL_TROLL_HEXER)
+        call SetBuildUpgr(1, UPG_TROLL_TROLL_BLOODMAGE)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, TROLL_TIER_3)
+        call SetBuildUnit(1, TROLL_ICE_TROLL_HUT)
+        call SetBuildUnit(5, TROLL_HUT)
+        call SetBuildUnit(2, TROLL_WATCH_TOWER)
+        call SetBuildUnit(2, TROLL_CITIZEN_MALE)
+
+        call SetBuildUpgr(3, UPG_TROLL_SPEARS)
+        call SetBuildUpgr(3, UPG_TROLL_CREATURE_ATTACK)
+        call SetBuildUpgr(3, UPG_TROLL_ARMOR)
+        call SetBuildUpgr(3, UPG_TROLL_CREATURE_ARMOR)
+        call SetBuildUpgr(2, UPG_TROLL_SHAMAN)
+        call SetBuildUpgr(2, UPG_TROLL_TROLL_WITCH_DOCTOR)
+        call SetBuildUpgr(2, UPG_TROLL_TROLL_HEXER)
+        call SetBuildUpgr(2, UPG_TROLL_TROLL_BLOODMAGE)
+        call SetBuildUpgr(1, UPG_TROLL_BERSERKER)
+        call SetBuildUpgr(1, UPG_TROLL_LIQUID_FIRE)
+        call SetBuildUpgr(1, UPG_TROLL_TRUESHOT_AURA)
+        call SetBuildUpgr(1, UPG_TROLL_WAR_DRUMS)
+        call SetBuildUpgr(2, UPG_TROLL_ICE_TROLL_HIGH_PRIEST)
+        call SetBuildUpgr(1, UPG_TROLL_BARRAGE)
+
+        call SetBuildUpgr(1, UPG_TROLL_TROLL_TRIBES)
+        call SetBuildUpgr(1, UPG_TROLL_BACKPACK)
+        call SetBuildUpgr(1, UPG_TROLL_TEMPLE_OF_SACRIFICE)
+        call SetBuildUnit(1, TROLL_TEMPLE_OF_SACRIFICE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(TROLL_TIER_1)
@@ -82,7 +83,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_special1, TROLL_TIGERSHARK_RIDER)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

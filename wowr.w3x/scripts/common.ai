@@ -694,6 +694,7 @@ endfunction
 
 //============================================================================
 function SetBuildExpa takes integer qty, integer unitid returns nothing
+    call TraceI("SetBuildExpa %d\n", qty)
     call SetBuildAll(BUILD_EXPAND,qty,unitid,-1)
 endfunction
 
@@ -1126,8 +1127,12 @@ endfunction
 
 //============================================================================
 function BasicExpansion takes boolean build_it, integer unitid returns nothing
+    call Trace("BasicExpansion\n")
     if build_it and HallsCompleted(unitid) then
+        call Trace("build it and halls are completed\n")
         call SetBuildExpa( TownCount(unitid)+1, unitid )
+    else
+        call Trace("no build it or halls are not completed yet\n")
     endif
 endfunction
 
@@ -2412,6 +2417,7 @@ function CampaignAI takes integer farms, code heroes returns nothing
     call InitAI()
     call InitBuildArray()
     call InitAssaultGroup()
+
     call CreateCaptains()
 
     call SetNewHeroes(false)
@@ -3280,7 +3286,8 @@ endfunction
 
 function BasicExpansionIfRequired takes integer ex, integer unitid returns nothing
     local integer mines = GetMinesOwned()
-    call TraceII("Building anothere expansion %d if required with mines owned %d\n", ex, mines)
+    call TraceII("Building another expansion %d if required with mines owned %d\n", ex, mines)
+    call MeleeTownHall(ex, unitid)
     call BasicExpansion(mines < ex, unitid)
 endfunction
 
@@ -3301,7 +3308,7 @@ function StartExpansionSimple takes integer id returns nothing
             if (TownHasHall(i)) then
                 call StartUnit(1, id, i)
             else
-                call TraceI("Expansion %d has already a town hall\n", i)
+                call TraceI("Expansion %d has no town hall\n", i)
             endif
             set i = i + 1
         endloop

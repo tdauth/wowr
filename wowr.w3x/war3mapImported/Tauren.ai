@@ -1,62 +1,63 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, TAUREN_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, TAUREN_TAUREN_WORKER)
-    call SetBuildUnit(2, TAUREN_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, TAUREN_HOUSING)
-    call SetBuildUnit(1, TAUREN_LUMBER_MILL)
-    call SetBuildUnit(3, TAUREN_TENT)
-    call SetBuildUnit(2, TAUREN_TAUREN_BARRACKS)
-    call SetBuildUnit(1, TAUREN_ALTAR)
-    call SetBuildUnit(1, TAUREN_SPIRIT_LOUNGE)
-    
-    call SetBuildUpgr(1, UPG_TAUREN_MELEE)
-    call SetBuildUpgr(1, UPG_TAUREN_RANGED)
-    call SetBuildUpgr(1, UPG_TAUREN_ARMOR)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, TAUREN_TIER_2)
-    call SetBuildUnit(2, TAUREN_HOUSING)
-    call SetBuildUnit(1, TAUREN_SPIRIT_LODGE)
-    call SetBuildUnit(1, TAUREN_WYVERN_ROOST)
-    call SetBuildUnit(4, TAUREN_TENT)
-    call SetBuildUnit(2, TAUREN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, TAUREN_CHILD)
-    call SetBuildUnit(2, TAUREN_PET)
-    
-    call SetBuildUpgr(2, UPG_TAUREN_MELEE)
-    call SetBuildUpgr(2, UPG_TAUREN_RANGED)
-    call SetBuildUpgr(2, UPG_TAUREN_ARMOR)
-    call SetBuildUpgr(1, UPG_TAUREN_SPIRIT_WALKER)
-    call SetBuildUpgr(1, UPG_TAUREN_DRUID)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, TAUREN_TIER_3)
-    call SetBuildUnit(1, TAUREN_TAUREN_TOTEM)
-    call SetBuildUnit(5, TAUREN_TENT)
-    call SetBuildUnit(2, TAUREN_WATCH_TOWER)
-    call SetBuildUnit(2, TAUREN_CITIZEN_MALE)
-
-    call SetBuildUpgr(3, UPG_TAUREN_MELEE)
-    call SetBuildUpgr(3, UPG_TAUREN_RANGED)
-    call SetBuildUpgr(3, UPG_TAUREN_ARMOR)
-    call SetBuildUpgr(2, UPG_TAUREN_SPIRIT_WALKER)
-    call SetBuildUpgr(2, UPG_TAUREN_DRUID)
-    call SetBuildUpgr(1, UPG_TAUREN_INVISIBILITY)
-    call SetBuildUpgr(1, UPG_TAUREN_PULVERIZE)
-    call SetBuildUpgr(1, UPG_TAUREN_ELITE_TAUREN)
-    call SetBuildUpgr(1, UPG_TAUREN_WAR_DRUMS)
-    call SetBuildUpgr(1, UPG_TAUREN_EARTH_MOTHER)
-    call SetBuildUpgr(1, UPG_TAUREN_BACKPACK)
-    call SetBuildUpgr(1, UPG_TAUREN_TOTEM_POLE)
-    call SetBuildUnit(1, TAUREN_TOTEM_POLE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, TAUREN_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, TAUREN_TAUREN_WORKER)
+        call SetBuildUnit(2, TAUREN_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, TAUREN_HOUSING)
+        call SetBuildUnit(1, TAUREN_LUMBER_MILL)
+        call SetBuildUnit(3, TAUREN_TENT)
+        call SetBuildUnit(2, TAUREN_TAUREN_BARRACKS)
+        call SetBuildUnit(1, TAUREN_ALTAR)
+        call SetBuildUnit(1, TAUREN_SPIRIT_LOUNGE)
+
+        call SetBuildUpgr(1, UPG_TAUREN_MELEE)
+        call SetBuildUpgr(1, UPG_TAUREN_RANGED)
+        call SetBuildUpgr(1, UPG_TAUREN_ARMOR)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, TAUREN_TIER_2)
+        call SetBuildUnit(2, TAUREN_HOUSING)
+        call SetBuildUnit(1, TAUREN_SPIRIT_LODGE)
+        call SetBuildUnit(1, TAUREN_WYVERN_ROOST)
+        call SetBuildUnit(4, TAUREN_TENT)
+        call SetBuildUnit(2, TAUREN_CITIZEN_FEMALE)
+        call SetBuildUnit(2, TAUREN_CHILD)
+        call SetBuildUnit(2, TAUREN_PET)
+
+        call SetBuildUpgr(2, UPG_TAUREN_MELEE)
+        call SetBuildUpgr(2, UPG_TAUREN_RANGED)
+        call SetBuildUpgr(2, UPG_TAUREN_ARMOR)
+        call SetBuildUpgr(1, UPG_TAUREN_SPIRIT_WALKER)
+        call SetBuildUpgr(1, UPG_TAUREN_DRUID)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, TAUREN_TIER_3)
+        call SetBuildUnit(1, TAUREN_TAUREN_TOTEM)
+        call SetBuildUnit(5, TAUREN_TENT)
+        call SetBuildUnit(2, TAUREN_WATCH_TOWER)
+        call SetBuildUnit(2, TAUREN_CITIZEN_MALE)
+
+        call SetBuildUpgr(3, UPG_TAUREN_MELEE)
+        call SetBuildUpgr(3, UPG_TAUREN_RANGED)
+        call SetBuildUpgr(3, UPG_TAUREN_ARMOR)
+        call SetBuildUpgr(2, UPG_TAUREN_SPIRIT_WALKER)
+        call SetBuildUpgr(2, UPG_TAUREN_DRUID)
+        call SetBuildUpgr(1, UPG_TAUREN_INVISIBILITY)
+        call SetBuildUpgr(1, UPG_TAUREN_PULVERIZE)
+        call SetBuildUpgr(1, UPG_TAUREN_ELITE_TAUREN)
+        call SetBuildUpgr(1, UPG_TAUREN_WAR_DRUMS)
+        call SetBuildUpgr(1, UPG_TAUREN_EARTH_MOTHER)
+        call SetBuildUpgr(1, UPG_TAUREN_BACKPACK)
+        call SetBuildUpgr(1, UPG_TAUREN_TOTEM_POLE)
+        call SetBuildUnit(1, TAUREN_TOTEM_POLE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(TAUREN_TIER_1)
@@ -70,7 +71,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

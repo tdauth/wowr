@@ -1,75 +1,76 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, CENTAUR_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, CENTAUR_WORKER)
-    call SetBuildUnit(2, CENTAUR_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, CENTAUR_HOUSING)
-    call SetBuildUnit(1, CENTAUR_MILL)
-    call SetBuildUnit(3, CENTAUR_TENT)
-    call SetBuildUnit(2, CENTAUR_BARRACKS)
-    call SetBuildUnit(1, CENTAUR_ALTAR)
-    call SetBuildUnit(1, CENTAUR_SHOP)
-
-    call SetBuildUpgr(1, UPG_CENTAUR_MELEE)
-    call SetBuildUpgr(1, UPG_CENTAUR_RANGED)
-    call SetBuildUpgr(1, UPG_CENTAUR_ARMOR)
-    call SetBuildUpgr(1, UPG_CENTAUR_HORSE_SHOES)
-    //call SetBuildUpgr(1, UPG_EREDAR_DEFEND)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, CENTAUR_TIER_2)
-    call SetBuildUnit(1, CENTAUR_MILL)
-    call SetBuildUnit(1, CENTAUR_LODGE)
-    call SetBuildUnit(1, CENTAUR_ROOST)
-    call SetBuildUnit(1, CENTAUR_KHAN_TENT)
-    call SetBuildUnit(2, CENTAUR_TOWER)
-    call SetBuildUnit(2, CENTAUR_CITIZEN_FEMALE)
-    call SetBuildUnit(2, CENTAUR_CHILD)
-    call SetBuildUnit(2, CENTAUR_PET)
-    
-    call SetBuildUpgr(2, UPG_CENTAUR_MELEE)
-    call SetBuildUpgr(2, UPG_CENTAUR_RANGED)
-    call SetBuildUpgr(2, UPG_CENTAUR_ARMOR)
-    call SetBuildUpgr(2, UPG_CENTAUR_HORSE_SHOES)
-    //call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
-    //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
-    call SetBuildUpgr(1, UPG_CENTAUR_DIVINER)
-    call SetBuildUpgr(1, UPG_CENTAUR_SORCERER)
-    //call SetBuildUpgr(1, UPG_OGRE_NECROMANCER)
-    //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
-    //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
-    //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
-    //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
-    //call SetBuildUpgr(1, UPG_OGRE_ROAR)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, CENTAUR_TIER_3)
-    call SetBuildUnit(2, CENTAUR_TOWER)
-    call SetBuildUnit(2, CENTAUR_CITIZEN_MALE)
-
-    call SetBuildUpgr(3, UPG_CENTAUR_MELEE)
-    call SetBuildUpgr(3, UPG_CENTAUR_RANGED)
-    call SetBuildUpgr(3, UPG_CENTAUR_ARMOR)
-    call SetBuildUpgr(3, UPG_CENTAUR_HORSE_SHOES)
-    call SetBuildUpgr(2, UPG_CENTAUR_DIVINER)
-    call SetBuildUpgr(2, UPG_CENTAUR_SORCERER)
-    //call SetBuildUpgr(2, UPG_OGRE_NECROMANCER)
-    call SetBuildUpgr(1, UPG_CENTAUR_SEARING_ARROWS)
-    call SetBuildUpgr(1, UPG_CENTAUR_RIDE_DOWN)
-    call SetBuildUpgr(1, UPG_CENTAUR_TRUE_SIGHT)
-    call SetBuildUpgr(1, UPG_CENTAUR_SLEEP)
-    //call SetBuildUpgr(1, UPG_OGRE_WAR_STOMP)
-    call SetBuildUpgr(1, UPG_CENTAUR_BACKPACK)
-    call SetBuildUpgr(1, UPG_CENTAUR_REINCARNATION)
-    call SetBuildUpgr(1, UPG_CENTAUR_SPECIAL_BUILDING)
-    call SetBuildUnit(1, CENTAUR_SPECIAL_BUILDING)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, CENTAUR_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, CENTAUR_WORKER)
+        call SetBuildUnit(2, CENTAUR_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, CENTAUR_HOUSING)
+        call SetBuildUnit(1, CENTAUR_MILL)
+        call SetBuildUnit(3, CENTAUR_TENT)
+        call SetBuildUnit(2, CENTAUR_BARRACKS)
+        call SetBuildUnit(1, CENTAUR_ALTAR)
+        call SetBuildUnit(1, CENTAUR_SHOP)
+
+        call SetBuildUpgr(1, UPG_CENTAUR_MELEE)
+        call SetBuildUpgr(1, UPG_CENTAUR_RANGED)
+        call SetBuildUpgr(1, UPG_CENTAUR_ARMOR)
+        call SetBuildUpgr(1, UPG_CENTAUR_HORSE_SHOES)
+        //call SetBuildUpgr(1, UPG_EREDAR_DEFEND)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, CENTAUR_TIER_2)
+        call SetBuildUnit(1, CENTAUR_MILL)
+        call SetBuildUnit(1, CENTAUR_LODGE)
+        call SetBuildUnit(1, CENTAUR_ROOST)
+        call SetBuildUnit(1, CENTAUR_KHAN_TENT)
+        call SetBuildUnit(2, CENTAUR_TOWER)
+        call SetBuildUnit(2, CENTAUR_CITIZEN_FEMALE)
+        call SetBuildUnit(2, CENTAUR_CHILD)
+        call SetBuildUnit(2, CENTAUR_PET)
+
+        call SetBuildUpgr(2, UPG_CENTAUR_MELEE)
+        call SetBuildUpgr(2, UPG_CENTAUR_RANGED)
+        call SetBuildUpgr(2, UPG_CENTAUR_ARMOR)
+        call SetBuildUpgr(2, UPG_CENTAUR_HORSE_SHOES)
+        //call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
+        //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
+        call SetBuildUpgr(1, UPG_CENTAUR_DIVINER)
+        call SetBuildUpgr(1, UPG_CENTAUR_SORCERER)
+        //call SetBuildUpgr(1, UPG_OGRE_NECROMANCER)
+        //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
+        //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
+        //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
+        //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
+        //call SetBuildUpgr(1, UPG_OGRE_ROAR)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, CENTAUR_TIER_3)
+        call SetBuildUnit(2, CENTAUR_TOWER)
+        call SetBuildUnit(2, CENTAUR_CITIZEN_MALE)
+
+        call SetBuildUpgr(3, UPG_CENTAUR_MELEE)
+        call SetBuildUpgr(3, UPG_CENTAUR_RANGED)
+        call SetBuildUpgr(3, UPG_CENTAUR_ARMOR)
+        call SetBuildUpgr(3, UPG_CENTAUR_HORSE_SHOES)
+        call SetBuildUpgr(2, UPG_CENTAUR_DIVINER)
+        call SetBuildUpgr(2, UPG_CENTAUR_SORCERER)
+        //call SetBuildUpgr(2, UPG_OGRE_NECROMANCER)
+        call SetBuildUpgr(1, UPG_CENTAUR_SEARING_ARROWS)
+        call SetBuildUpgr(1, UPG_CENTAUR_RIDE_DOWN)
+        call SetBuildUpgr(1, UPG_CENTAUR_TRUE_SIGHT)
+        call SetBuildUpgr(1, UPG_CENTAUR_SLEEP)
+        //call SetBuildUpgr(1, UPG_OGRE_WAR_STOMP)
+        call SetBuildUpgr(1, UPG_CENTAUR_BACKPACK)
+        call SetBuildUpgr(1, UPG_CENTAUR_REINCARNATION)
+        call SetBuildUpgr(1, UPG_CENTAUR_SPECIAL_BUILDING)
+        call SetBuildUnit(1, CENTAUR_SPECIAL_BUILDING)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(CENTAUR_TIER_1)
@@ -83,7 +84,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

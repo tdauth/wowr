@@ -1,77 +1,78 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, LORDAERON_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, LORDAERON_WORKER)
-    call SetBuildUnit(2, LORDAERON_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, LORDAERON_HOUSING)
-    call SetBuildUnit(1, LORDAERON_LUMBER_MILL)
-    call SetBuildUnit(3, LORDAERON_FARM)
-    call SetBuildUnit(2, LORDAERON_BARRACKS)
-    call SetBuildUnit(1, LORDAERON_ALTAR)
-    call SetBuildUnit(1, LORDAERON_BLACKSMITH)
-    call SetBuildUnit(1, LORDAERON_TRADE_HOUSE)
-
-    call SetBuildUpgr(1, UPG_LORDAERON_MELEE)
-    call SetBuildUpgr(1, UPG_LORDAERON_RANGED)
-    call SetBuildUpgr(1, UPG_LORDAERON_ARMOR)
-    call SetBuildUpgr(1, UPG_LORDAERON_LEATHER)
-    call SetBuildUpgr(1, UPG_LORDAERON_DEFEND)
-    call SetBuildUpgr(1, UPG_LORDAERON_MASONRY)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, LORDAERON_TIER_2)
-    call SetBuildUnit(1, LORDAERON_MAGE_TOWER)
-    call SetBuildUnit(1, LORDAERON_WORKSHOP)
-    call SetBuildUnit(4, LORDAERON_FARM)
-    call SetBuildUnit(2, LORDAERON_CITIZEN_FEMALE)
-    call SetBuildUnit(2, LORDAERON_CHILD)
-    call SetBuildUnit(2, LORDAERON_PET)
-    
-    call SetBuildUnit(4, LORDAERON_SCOUT_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
-    
-    call SetBuildUpgr(2, UPG_LORDAERON_MELEE)
-    call SetBuildUpgr(2, UPG_LORDAERON_RANGED)
-    call SetBuildUpgr(2, UPG_LORDAERON_ARMOR)
-    call SetBuildUpgr(2, UPG_LORDAERON_LEATHER)
-    call SetBuildUpgr(1, UPG_LORDAERON_LUMBER)
-    call SetBuildUpgr(2, UPG_LORDAERON_MASONRY)
-    call SetBuildUpgr(1, UPG_LORDAERON_ARCHERY)
-    call SetBuildUpgr(1, UPG_LORDAERON_LONG_RIFLES)
-    call SetBuildUpgr(1, UPG_LORDAERON_MAGE)
-    call SetBuildUpgr(1, UPG_LORDAERON_SORCERY)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, LORDAERON_TIER_3)
-    call SetBuildUnit(1, LORDAERON_AVIARY)
-    call SetBuildUnit(2, LORDAERON_GUARD_TOWER)
-    call SetBuildUnit(1, LORDAERON_CANNON_TOWER)
-    call SetBuildUnit(1, LORDAERON_ARCANE_TOWER)
-    
-    call SetBuildUpgr(3, UPG_LORDAERON_MELEE)
-    call SetBuildUpgr(3, UPG_LORDAERON_RANGED)
-    call SetBuildUpgr(3, UPG_LORDAERON_ARMOR)
-    call SetBuildUpgr(3, UPG_LORDAERON_LEATHER)
-    call SetBuildUpgr(2, UPG_LORDAERON_LUMBER)
-    call SetBuildUpgr(3, UPG_LORDAERON_MASONRY)
-    call SetBuildUpgr(2, UPG_LORDAERON_MAGE)
-    call SetBuildUpgr(2, UPG_LORDAERON_SORCERY)
-    call SetBuildUpgr(3, UPG_LORDAERON_ENGINEERING)
-    call SetBuildUpgr(1, UPG_LORDAERON_SCARLET_CRUSADE)
-    call SetBuildUpgr(1, UPG_LORDAERON_HUMAN_COURAGE)
-    call SetBuildUpgr(1, UPG_LORDAERON_ANIMAL)
-    call SetBuildUpgr(1, UPG_LORDAERON_RAIN_OF_FIRE)
-
-    call SetBuildUpgr(1, UPG_LORDAERON_BACKPACK)
-
-    call SetBuildUpgr(1, UPG_LORDAERON_SCARLET_MONASTERY)
-    call SetBuildUnit(1, LORDAERON_SCARLET_MONASTERY)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, LORDAERON_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, LORDAERON_WORKER)
+        call SetBuildUnit(2, LORDAERON_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, LORDAERON_HOUSING)
+        call SetBuildUnit(1, LORDAERON_LUMBER_MILL)
+        call SetBuildUnit(3, LORDAERON_FARM)
+        call SetBuildUnit(2, LORDAERON_BARRACKS)
+        call SetBuildUnit(1, LORDAERON_ALTAR)
+        call SetBuildUnit(1, LORDAERON_BLACKSMITH)
+        call SetBuildUnit(1, LORDAERON_TRADE_HOUSE)
+
+        call SetBuildUpgr(1, UPG_LORDAERON_MELEE)
+        call SetBuildUpgr(1, UPG_LORDAERON_RANGED)
+        call SetBuildUpgr(1, UPG_LORDAERON_ARMOR)
+        call SetBuildUpgr(1, UPG_LORDAERON_LEATHER)
+        call SetBuildUpgr(1, UPG_LORDAERON_DEFEND)
+        call SetBuildUpgr(1, UPG_LORDAERON_MASONRY)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, LORDAERON_TIER_2)
+        call SetBuildUnit(1, LORDAERON_MAGE_TOWER)
+        call SetBuildUnit(1, LORDAERON_WORKSHOP)
+        call SetBuildUnit(4, LORDAERON_FARM)
+        call SetBuildUnit(2, LORDAERON_CITIZEN_FEMALE)
+        call SetBuildUnit(2, LORDAERON_CHILD)
+        call SetBuildUnit(2, LORDAERON_PET)
+
+        call SetBuildUnit(4, LORDAERON_SCOUT_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
+
+        call SetBuildUpgr(2, UPG_LORDAERON_MELEE)
+        call SetBuildUpgr(2, UPG_LORDAERON_RANGED)
+        call SetBuildUpgr(2, UPG_LORDAERON_ARMOR)
+        call SetBuildUpgr(2, UPG_LORDAERON_LEATHER)
+        call SetBuildUpgr(1, UPG_LORDAERON_LUMBER)
+        call SetBuildUpgr(2, UPG_LORDAERON_MASONRY)
+        call SetBuildUpgr(1, UPG_LORDAERON_ARCHERY)
+        call SetBuildUpgr(1, UPG_LORDAERON_LONG_RIFLES)
+        call SetBuildUpgr(1, UPG_LORDAERON_MAGE)
+        call SetBuildUpgr(1, UPG_LORDAERON_SORCERY)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, LORDAERON_TIER_3)
+        call SetBuildUnit(1, LORDAERON_AVIARY)
+        call SetBuildUnit(2, LORDAERON_GUARD_TOWER)
+        call SetBuildUnit(1, LORDAERON_CANNON_TOWER)
+        call SetBuildUnit(1, LORDAERON_ARCANE_TOWER)
+
+        call SetBuildUpgr(3, UPG_LORDAERON_MELEE)
+        call SetBuildUpgr(3, UPG_LORDAERON_RANGED)
+        call SetBuildUpgr(3, UPG_LORDAERON_ARMOR)
+        call SetBuildUpgr(3, UPG_LORDAERON_LEATHER)
+        call SetBuildUpgr(2, UPG_LORDAERON_LUMBER)
+        call SetBuildUpgr(3, UPG_LORDAERON_MASONRY)
+        call SetBuildUpgr(2, UPG_LORDAERON_MAGE)
+        call SetBuildUpgr(2, UPG_LORDAERON_SORCERY)
+        call SetBuildUpgr(3, UPG_LORDAERON_ENGINEERING)
+        call SetBuildUpgr(1, UPG_LORDAERON_SCARLET_CRUSADE)
+        call SetBuildUpgr(1, UPG_LORDAERON_HUMAN_COURAGE)
+        call SetBuildUpgr(1, UPG_LORDAERON_ANIMAL)
+        call SetBuildUpgr(1, UPG_LORDAERON_RAIN_OF_FIRE)
+
+        call SetBuildUpgr(1, UPG_LORDAERON_BACKPACK)
+
+        call SetBuildUpgr(1, UPG_LORDAERON_SCARLET_MONASTERY)
+        call SetBuildUnit(1, LORDAERON_SCARLET_MONASTERY)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(LORDAERON_TIER_1)
@@ -85,7 +86,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

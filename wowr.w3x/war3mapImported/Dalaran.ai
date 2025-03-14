@@ -1,74 +1,75 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, DALARAN_TIER_1)
-    //call SetBuildUnit(1, DALARAN_MINE) // AI does not know how to construct. We preplaced one.
-    call SetBuildUnit(WORKERS_COUNT_START, DALARAN_WORKER)
-    call SetBuildUnit(2, DALARAN_CITIZEN_MALE)
-
-    call SetBuildUnit(2, DALARAN_HOUSING)
-    call SetBuildUnit(3, DALARAN_POWER_GENERATOR)
-    call SetBuildUnit(2, DALARAN_BARRACKS)
-    call SetBuildUnit(1, DALARAN_ALTAR)
-    call SetBuildUnit(1, DALARAN_BLACKSMITH)
-    call SetBuildUnit(1, DALARAN_SHOP)
-
-    call SetBuildUpgr(1, UPG_DALARAN_DEFEND)
-    call SetBuildUpgr(1, UPG_DALARAN_MELEE)
-    call SetBuildUpgr(1, UPG_DALARAN_ARMOR)
-    call SetBuildUpgr(1, UPG_DALARAN_CR_ARMOR)
-    call SetBuildUpgr(1, UPG_DALARAN_CR_ATTACK)
-    call SetBuildUpgr(1, UPG_DALARAN_FEEDBACK)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, DALARAN_TIER_2)
-    call SetBuildUnit(1, DALARAN_ZOO)
-    call SetBuildUnit(1, DALARAN_ARCANE_SANCTUM)
-    call SetBuildUnit(2, DALARAN_GUARD_TOWER_1)
-    call SetBuildUnit(2, DALARAN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, DALARAN_CHILD)
-    call SetBuildUnit(2, DALARAN_PET)
-
-    call SetBuildUpgr(2, UPG_DALARAN_MELEE)
-    call SetBuildUpgr(2, UPG_DALARAN_ARMOR)
-    call SetBuildUpgr(2, UPG_DALARAN_CR_ARMOR)
-    call SetBuildUpgr(2, UPG_DALARAN_CR_ATTACK)
-    call SetBuildUpgr(1, UPG_DALARAN_GOLEM)
-    call SetBuildUpgr(1, UPG_DALARAN_FIRE_MAGE)
-    call SetBuildUpgr(1, UPG_DALARAN_WIZARD)
-    call SetBuildUpgr(1, UPG_DALARAN_SORCERESS)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, DALARAN_TIER_3)
-    call SetBuildUnit(2, DALARAN_GUARD_TOWER_2)
-    call SetBuildUnit(2, DALARAN_AVIARY)
-    call SetBuildUnit(1, DALARAN_ELEMENTAL_SANCTUARY_1)
-    call SetBuildUnit(1, DALARAN_ELEMENTAL_SANCTUARY_2)
-
-    call SetBuildUpgr(3, UPG_DALARAN_MELEE)
-    call SetBuildUpgr(3, UPG_DALARAN_ARMOR)
-    call SetBuildUpgr(3, UPG_DALARAN_CR_ARMOR)
-    call SetBuildUpgr(3, UPG_DALARAN_CR_ATTACK)
-    call SetBuildUpgr(2, UPG_DALARAN_GOLEM)
-    call SetBuildUpgr(2, UPG_DALARAN_FIRE_MAGE)
-    call SetBuildUpgr(2, UPG_DALARAN_WIZARD)
-    call SetBuildUpgr(2, UPG_DALARAN_SORCERESS)
-    call SetBuildUpgr(1, UPG_DALARAN_GOLD)
-    call SetBuildUpgr(1, UPG_DALARAN_MAGIC_SENTRY)
-    call SetBuildUpgr(1, UPG_DALARAN_ANIMAL)
-    call SetBuildUpgr(1, UPG_DALARAN_FLYING_CITY)
-    call SetBuildUpgr(1, UPG_DALARAN_CLOUD)
-    call SetBuildUpgr(1, UPG_DALARAN_ELEMENTAL)
-    call SetBuildUpgr(1, UPG_DALARAN_MANA_SHIELD)
-    call SetBuildUpgr(1, UPG_DALARAN_SPAWN_FIRE_ELEMENTALS)
-    call SetBuildUpgr(1, UPG_DALARAN_SHIELD)
-    call SetBuildUpgr(1, UPG_DALARAN_BLINK)
-    call SetBuildUpgr(1, UPG_DALARAN_VIOLET_CITADEL)
-    call SetBuildUnit(1, DALARAN_VIOLET_CITADEL)
-    call SetBuildUnit(1, UPG_DALARAN_BACKPACK)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, DALARAN_TIER_1)
+        //call SetBuildUnit(1, DALARAN_MINE) // AI does not know how to construct. We preplaced one.
+        call SetBuildUnit(WORKERS_COUNT_START, DALARAN_WORKER)
+        call SetBuildUnit(2, DALARAN_CITIZEN_MALE)
+
+        call SetBuildUnit(2, DALARAN_HOUSING)
+        call SetBuildUnit(3, DALARAN_POWER_GENERATOR)
+        call SetBuildUnit(2, DALARAN_BARRACKS)
+        call SetBuildUnit(1, DALARAN_ALTAR)
+        call SetBuildUnit(1, DALARAN_BLACKSMITH)
+        call SetBuildUnit(1, DALARAN_SHOP)
+
+        call SetBuildUpgr(1, UPG_DALARAN_DEFEND)
+        call SetBuildUpgr(1, UPG_DALARAN_MELEE)
+        call SetBuildUpgr(1, UPG_DALARAN_ARMOR)
+        call SetBuildUpgr(1, UPG_DALARAN_CR_ARMOR)
+        call SetBuildUpgr(1, UPG_DALARAN_CR_ATTACK)
+        call SetBuildUpgr(1, UPG_DALARAN_FEEDBACK)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, DALARAN_TIER_2)
+        call SetBuildUnit(1, DALARAN_ZOO)
+        call SetBuildUnit(1, DALARAN_ARCANE_SANCTUM)
+        call SetBuildUnit(2, DALARAN_GUARD_TOWER_1)
+        call SetBuildUnit(2, DALARAN_CITIZEN_FEMALE)
+        call SetBuildUnit(2, DALARAN_CHILD)
+        call SetBuildUnit(2, DALARAN_PET)
+
+        call SetBuildUpgr(2, UPG_DALARAN_MELEE)
+        call SetBuildUpgr(2, UPG_DALARAN_ARMOR)
+        call SetBuildUpgr(2, UPG_DALARAN_CR_ARMOR)
+        call SetBuildUpgr(2, UPG_DALARAN_CR_ATTACK)
+        call SetBuildUpgr(1, UPG_DALARAN_GOLEM)
+        call SetBuildUpgr(1, UPG_DALARAN_FIRE_MAGE)
+        call SetBuildUpgr(1, UPG_DALARAN_WIZARD)
+        call SetBuildUpgr(1, UPG_DALARAN_SORCERESS)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, DALARAN_TIER_3)
+        call SetBuildUnit(2, DALARAN_GUARD_TOWER_2)
+        call SetBuildUnit(2, DALARAN_AVIARY)
+        call SetBuildUnit(1, DALARAN_ELEMENTAL_SANCTUARY_1)
+        call SetBuildUnit(1, DALARAN_ELEMENTAL_SANCTUARY_2)
+
+        call SetBuildUpgr(3, UPG_DALARAN_MELEE)
+        call SetBuildUpgr(3, UPG_DALARAN_ARMOR)
+        call SetBuildUpgr(3, UPG_DALARAN_CR_ARMOR)
+        call SetBuildUpgr(3, UPG_DALARAN_CR_ATTACK)
+        call SetBuildUpgr(2, UPG_DALARAN_GOLEM)
+        call SetBuildUpgr(2, UPG_DALARAN_FIRE_MAGE)
+        call SetBuildUpgr(2, UPG_DALARAN_WIZARD)
+        call SetBuildUpgr(2, UPG_DALARAN_SORCERESS)
+        call SetBuildUpgr(1, UPG_DALARAN_GOLD)
+        call SetBuildUpgr(1, UPG_DALARAN_MAGIC_SENTRY)
+        call SetBuildUpgr(1, UPG_DALARAN_ANIMAL)
+        call SetBuildUpgr(1, UPG_DALARAN_FLYING_CITY)
+        call SetBuildUpgr(1, UPG_DALARAN_CLOUD)
+        call SetBuildUpgr(1, UPG_DALARAN_ELEMENTAL)
+        call SetBuildUpgr(1, UPG_DALARAN_MANA_SHIELD)
+        call SetBuildUpgr(1, UPG_DALARAN_SPAWN_FIRE_ELEMENTALS)
+        call SetBuildUpgr(1, UPG_DALARAN_SHIELD)
+        call SetBuildUpgr(1, UPG_DALARAN_BLINK)
+        call SetBuildUpgr(1, UPG_DALARAN_VIOLET_CITADEL)
+        call SetBuildUnit(1, DALARAN_VIOLET_CITADEL)
+        call SetBuildUnit(1, UPG_DALARAN_BACKPACK)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(DALARAN_TIER_1)
@@ -83,7 +84,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

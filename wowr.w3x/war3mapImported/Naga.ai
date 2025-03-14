@@ -1,57 +1,58 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, NAGA_TEMPLE_1)
-    call SetBuildUnit(22, NAGA_SLAVE)
-    call SetBuildUnit(2, NAGA_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, NAGA_HOUSING)
-    call SetBuildUnit(1, NAGA_MURLOC_HUT)
-    call SetBuildUnit(5, NAGA_CORAL)
-    call SetBuildUnit(2, NAGA_SPAWNING)
-    call SetBuildUnit(1, NAGA_ALTAR)
-    call SetBuildUnit(1, NAGA_FISH_MARKET)
-    
-    call SetBuildUpgr(1, UPG_NAGA_ARMOR)
-    call SetBuildUpgr(1, UPG_NAGA_ATTACK)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, NAGA_TEMPLE)
-    call SetBuildUnit(1, NAGA_MURLOC_HUT)
-    call SetBuildUnit(1, NAGA_SHRINE)
-    call SetBuildUnit(2, NAGA_CITIZEN_FEMALE)
-    call SetBuildUnit(2, NAGA_PET)
-    call SetBuildUnit(2, NAGA_CHILD)
-    
-    call SetBuildUpgr(2, UPG_NAGA_ARMOR)
-    call SetBuildUpgr(2, UPG_NAGA_ATTACK)
-    call SetBuildUpgr(1, UPG_NAGA_SUBMERGE)
-    call SetBuildUpgr(1, UPG_NAGA_BACKPACK)
-    call SetBuildUpgr(1, UPG_NAGA_ABOLISH)
-    call SetBuildUpgr(1, UPG_SIREN)
-    call SetBuildUpgr(1, UPG_NAGA_SORCEROR)
-    
-    // Tier 3 buildings
-    call SetBuildUnit(1, NAGA_TEMPLE_3)
-
-    call SetBuildUnit(3, NAGA_GUARDIAN)
-    call SetBuildUnit(1, NAGA_SERPENT_PYRAMID)
-    
-    call SetBuildUpgr(3, UPG_NAGA_ARMOR)
-    call SetBuildUpgr(3, UPG_NAGA_ATTACK)
-    call SetBuildUpgr(2, UPG_NAGA_ABOLISH)
-    call SetBuildUpgr(2, UPG_SIREN)
-    call SetBuildUpgr(2, UPG_NAGA_SORCEROR)
-    call SetBuildUpgr(1, UPG_NAGA_ENSNARE)
-    call SetBuildUpgr(1, UPG_NAGA_STATUE_OF_AZSHARA)
-    call SetBuildUnit(1, NAGA_STATUE_OF_ASZHARA)
-
-    call SetBuildUnit(1, NAGA_PORTAL)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, NAGA_TEMPLE_1)
+        call SetBuildUnit(22, NAGA_SLAVE)
+        call SetBuildUnit(2, NAGA_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, NAGA_HOUSING)
+        call SetBuildUnit(1, NAGA_MURLOC_HUT)
+        call SetBuildUnit(5, NAGA_CORAL)
+        call SetBuildUnit(2, NAGA_SPAWNING)
+        call SetBuildUnit(1, NAGA_ALTAR)
+        call SetBuildUnit(1, NAGA_FISH_MARKET)
+
+        call SetBuildUpgr(1, UPG_NAGA_ARMOR)
+        call SetBuildUpgr(1, UPG_NAGA_ATTACK)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, NAGA_TEMPLE)
+        call SetBuildUnit(1, NAGA_MURLOC_HUT)
+        call SetBuildUnit(1, NAGA_SHRINE)
+        call SetBuildUnit(2, NAGA_CITIZEN_FEMALE)
+        call SetBuildUnit(2, NAGA_PET)
+        call SetBuildUnit(2, NAGA_CHILD)
+
+        call SetBuildUpgr(2, UPG_NAGA_ARMOR)
+        call SetBuildUpgr(2, UPG_NAGA_ATTACK)
+        call SetBuildUpgr(1, UPG_NAGA_SUBMERGE)
+        call SetBuildUpgr(1, UPG_NAGA_BACKPACK)
+        call SetBuildUpgr(1, UPG_NAGA_ABOLISH)
+        call SetBuildUpgr(1, UPG_SIREN)
+        call SetBuildUpgr(1, UPG_NAGA_SORCEROR)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, NAGA_TEMPLE_3)
+
+        call SetBuildUnit(3, NAGA_GUARDIAN)
+        call SetBuildUnit(1, NAGA_SERPENT_PYRAMID)
+
+        call SetBuildUpgr(3, UPG_NAGA_ARMOR)
+        call SetBuildUpgr(3, UPG_NAGA_ATTACK)
+        call SetBuildUpgr(2, UPG_NAGA_ABOLISH)
+        call SetBuildUpgr(2, UPG_SIREN)
+        call SetBuildUpgr(2, UPG_NAGA_SORCEROR)
+        call SetBuildUpgr(1, UPG_NAGA_ENSNARE)
+        call SetBuildUpgr(1, UPG_NAGA_STATUE_OF_AZSHARA)
+        call SetBuildUnit(1, NAGA_STATUE_OF_ASZHARA)
+
+        call SetBuildUnit(1, NAGA_PORTAL)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(NAGA_TEMPLE_1)
@@ -65,7 +66,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ELF_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

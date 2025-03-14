@@ -1,81 +1,82 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, KULTIRAS_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, KULTIRAS_WORKER)
-    call SetBuildUnit(2, KULTIRAS_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, KULTIRAS_HOUSING)
-    call SetBuildUnit(1, KULTIRAS_LUMBER_MILL)
-    call SetBuildUnit(4, KULTIRAS_HOUSE)
-    call SetBuildUnit(1, KULTIRAS_BARRACKS_1)
-    call SetBuildUnit(1, KULTIRAS_BARRACKS_2)
-    call SetBuildUnit(1, KULTIRAS_ALTAR)
-    call SetBuildUnit(1, KULTIRAS_BLACKSMITH)
-    call SetBuildUnit(1, KULTIRAS_SHOP)
-
-    call SetBuildUpgr(1, UPG_KULTIRAS_LUMBER)
-    call SetBuildUpgr(1, UPG_KULTIRAS_MASONRY)
-    call SetBuildUpgr(1, UPG_KULTIRAS_DEFEND)
-    call SetBuildUpgr(1, UPG_KULTIRAS_MELEE)
-    call SetBuildUpgr(1, UPG_KULTIRAS_ARMOR)
-    call SetBuildUpgr(1, UPG_KULTIRAS_LEATHER)
-    call SetBuildUpgr(1, UPG_KULTIRAS_RANGED)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, KULTIRAS_TIER_2)
-    call SetBuildUnit(1, KULTIRAS_WORKSHOP)
-    call SetBuildUnit(1, KULTIRAS_ARCANE_SANCTUM)
-    call SetBuildUnit(4, KULTIRAS_WATCH_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
-    call SetBuildUnit(2, KULTIRAS_CITIZEN_FEMALE)
-    call SetBuildUnit(2, KULTIRAS_CHILD)
-    call SetBuildUnit(2, KULTIRAS_PET)
-
-    call SetBuildUpgr(2, UPG_KULTIRAS_LUMBER)
-    call SetBuildUpgr(2, UPG_KULTIRAS_MASONRY)
-    call SetBuildUpgr(2, UPG_KULTIRAS_MELEE)
-    call SetBuildUpgr(2, UPG_KULTIRAS_ARMOR)
-    call SetBuildUpgr(2, UPG_KULTIRAS_LEATHER)
-    call SetBuildUpgr(2, UPG_KULTIRAS_RANGED)
-    call SetBuildUpgr(1, UPG_KULTIRAS_LONG_RIFLES)
-    call SetBuildUpgr(1, UPG_KULTIRAS_SHIP_DOCTOR)
-    call SetBuildUpgr(1, UPG_KULTIRAS_HYDROMANCER)
-    call SetBuildUpgr(1, UPG_KULTIRAS_SORCERER)
-    call SetBuildUpgr(1, UPG_KULTIRAS_CLEAVING_ATTACK)
-    call SetBuildUpgr(1, UPG_KULTIRAS_ENSNARE)
-    call SetBuildUpgr(1, UPG_KULTIRAS_LAND_CANNONS)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, KULTIRAS_TIER_3)
-    call SetBuildUnit(2, KULTIRAS_GUARD_TOWER)
-    call SetBuildUnit(1, KULTIRAS_CANNON_TOWER)
-    call SetBuildUnit(1, KULTIRAS_ARCANE_TOWER)
-    call SetBuildUnit(1, KULTIRAS_AVIARY)
-
-    call SetBuildUpgr(3, UPG_KULTIRAS_MASONRY)
-    call SetBuildUpgr(3, UPG_KULTIRAS_MELEE)
-    call SetBuildUpgr(3, UPG_KULTIRAS_ARMOR)
-    call SetBuildUpgr(3, UPG_KULTIRAS_LEATHER)
-    call SetBuildUpgr(3, UPG_KULTIRAS_RANGED)
-    call SetBuildUpgr(1, UPG_KULTIRAS_SUNDERING_BLADES)
-    call SetBuildUpgr(2, UPG_KULTIRAS_SHIP_DOCTOR)
-    call SetBuildUpgr(2, UPG_KULTIRAS_HYDROMANCER)
-    call SetBuildUpgr(2, UPG_KULTIRAS_SORCERER)
-    call SetBuildUpgr(1, UPG_KULTIRAS_TRUE_SIGHT)
-    call SetBuildUpgr(1, UPG_KULTIRAS_GHOSTS)
-    call SetBuildUpgr(1, UPG_KULTIRAS_ANIMAL)
-    call SetBuildUpgr(1, UPG_KULTIRAS_DEVOUR)
-    call SetBuildUpgr(1, UPG_KULTIRAS_MAGIC_SENTRY)
-    call SetBuildUpgr(1, UPG_KULTIRAS_PROUDMOORE_KEEP)
-    call SetBuildUpgr(1, UPG_KULTIRAS_FRAGS)
-    call SetBuildUpgr(1, UPG_KULTIRAS_FLARE)
-    call SetBuildUnit(1, KULTIRAS_PROUDMOORE_KEEP)
-    call SetBuildUnit(1, UPG_KULTIRAS_BACKPACK)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, KULTIRAS_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, KULTIRAS_WORKER)
+        call SetBuildUnit(2, KULTIRAS_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, KULTIRAS_HOUSING)
+        call SetBuildUnit(1, KULTIRAS_LUMBER_MILL)
+        call SetBuildUnit(4, KULTIRAS_HOUSE)
+        call SetBuildUnit(1, KULTIRAS_BARRACKS_1)
+        call SetBuildUnit(1, KULTIRAS_BARRACKS_2)
+        call SetBuildUnit(1, KULTIRAS_ALTAR)
+        call SetBuildUnit(1, KULTIRAS_BLACKSMITH)
+        call SetBuildUnit(1, KULTIRAS_SHOP)
+
+        call SetBuildUpgr(1, UPG_KULTIRAS_LUMBER)
+        call SetBuildUpgr(1, UPG_KULTIRAS_MASONRY)
+        call SetBuildUpgr(1, UPG_KULTIRAS_DEFEND)
+        call SetBuildUpgr(1, UPG_KULTIRAS_MELEE)
+        call SetBuildUpgr(1, UPG_KULTIRAS_ARMOR)
+        call SetBuildUpgr(1, UPG_KULTIRAS_LEATHER)
+        call SetBuildUpgr(1, UPG_KULTIRAS_RANGED)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, KULTIRAS_TIER_2)
+        call SetBuildUnit(1, KULTIRAS_WORKSHOP)
+        call SetBuildUnit(1, KULTIRAS_ARCANE_SANCTUM)
+        call SetBuildUnit(4, KULTIRAS_WATCH_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
+        call SetBuildUnit(2, KULTIRAS_CITIZEN_FEMALE)
+        call SetBuildUnit(2, KULTIRAS_CHILD)
+        call SetBuildUnit(2, KULTIRAS_PET)
+
+        call SetBuildUpgr(2, UPG_KULTIRAS_LUMBER)
+        call SetBuildUpgr(2, UPG_KULTIRAS_MASONRY)
+        call SetBuildUpgr(2, UPG_KULTIRAS_MELEE)
+        call SetBuildUpgr(2, UPG_KULTIRAS_ARMOR)
+        call SetBuildUpgr(2, UPG_KULTIRAS_LEATHER)
+        call SetBuildUpgr(2, UPG_KULTIRAS_RANGED)
+        call SetBuildUpgr(1, UPG_KULTIRAS_LONG_RIFLES)
+        call SetBuildUpgr(1, UPG_KULTIRAS_SHIP_DOCTOR)
+        call SetBuildUpgr(1, UPG_KULTIRAS_HYDROMANCER)
+        call SetBuildUpgr(1, UPG_KULTIRAS_SORCERER)
+        call SetBuildUpgr(1, UPG_KULTIRAS_CLEAVING_ATTACK)
+        call SetBuildUpgr(1, UPG_KULTIRAS_ENSNARE)
+        call SetBuildUpgr(1, UPG_KULTIRAS_LAND_CANNONS)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, KULTIRAS_TIER_3)
+        call SetBuildUnit(2, KULTIRAS_GUARD_TOWER)
+        call SetBuildUnit(1, KULTIRAS_CANNON_TOWER)
+        call SetBuildUnit(1, KULTIRAS_ARCANE_TOWER)
+        call SetBuildUnit(1, KULTIRAS_AVIARY)
+
+        call SetBuildUpgr(3, UPG_KULTIRAS_MASONRY)
+        call SetBuildUpgr(3, UPG_KULTIRAS_MELEE)
+        call SetBuildUpgr(3, UPG_KULTIRAS_ARMOR)
+        call SetBuildUpgr(3, UPG_KULTIRAS_LEATHER)
+        call SetBuildUpgr(3, UPG_KULTIRAS_RANGED)
+        call SetBuildUpgr(1, UPG_KULTIRAS_SUNDERING_BLADES)
+        call SetBuildUpgr(2, UPG_KULTIRAS_SHIP_DOCTOR)
+        call SetBuildUpgr(2, UPG_KULTIRAS_HYDROMANCER)
+        call SetBuildUpgr(2, UPG_KULTIRAS_SORCERER)
+        call SetBuildUpgr(1, UPG_KULTIRAS_TRUE_SIGHT)
+        call SetBuildUpgr(1, UPG_KULTIRAS_GHOSTS)
+        call SetBuildUpgr(1, UPG_KULTIRAS_ANIMAL)
+        call SetBuildUpgr(1, UPG_KULTIRAS_DEVOUR)
+        call SetBuildUpgr(1, UPG_KULTIRAS_MAGIC_SENTRY)
+        call SetBuildUpgr(1, UPG_KULTIRAS_PROUDMOORE_KEEP)
+        call SetBuildUpgr(1, UPG_KULTIRAS_FRAGS)
+        call SetBuildUpgr(1, UPG_KULTIRAS_FLARE)
+        call SetBuildUnit(1, KULTIRAS_PROUDMOORE_KEEP)
+        call SetBuildUnit(1, UPG_KULTIRAS_BACKPACK)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(KULTIRAS_TIER_1)
@@ -92,7 +93,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_special2, KULTIRAS_PIRATE_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

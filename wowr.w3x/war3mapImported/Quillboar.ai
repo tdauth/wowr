@@ -1,75 +1,76 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, QUILLBOAR_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, QUILLBOAR_WORKER)
-    call SetBuildUnit(2, QUILLBOAR_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, QUILLBOAR_HOUSING)
-    call SetBuildUnit(1, QUILLBOAR_FORGE)
-    call SetBuildUnit(3, QUILLBOAR_HUT)
-    call SetBuildUnit(2, QUILLBOAR_TRAINING_CAMP)
-    call SetBuildUnit(1, QUILLBOAR_ALTAR)
-    call SetBuildUnit(1, QUILLBOAR_SHOP)
-
-    call SetBuildUpgr(1, UPG_QUILLBOAR_MELEE)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_RANGED)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_ARMOR)
-    //call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, QUILLBOAR_TIER_2)
-    call SetBuildUnit(1, QUILLBOAR_FORGE)
-    call SetBuildUnit(1, QUILLBOAR_HOUSE_OF_ANCESTRY)
-    call SetBuildUnit(1, QUILLBOAR_ANIMAL_BATTLE_GROUNDS)
-    call SetBuildUnit(4, QUILLBOAR_HUT)
-    call SetBuildUnit(2, QUILLBOAR_CITIZEN_FEMALE)
-    call SetBuildUnit(2, QUILLBOAR_CHILD)
-    call SetBuildUnit(2, QUILLBOAR_PET)
-    
-    call SetBuildUpgr(2, UPG_QUILLBOAR_MELEE)
-    call SetBuildUpgr(2, UPG_QUILLBOAR_RANGED)
-    call SetBuildUpgr(2, UPG_QUILLBOAR_ARMOR)
-    //call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
-    //call SetBuildUpgr(1, UPG_TUSKARR_FROST_IMMUNITY)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_MYSTIC)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_MEDICINE_MAN)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_NECROMANCER)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, QUILLBOAR_TIER_3)
-    call SetBuildUnit(1, QUILLBOAR_SACRIFICIAL_GROUNDS)
-    call SetBuildUnit(5, QUILLBOAR_HUT)
-    call SetBuildUnit(2, QUILLBOAR_THORNY_SPIRE)
-    call SetBuildUnit(2, QUILLBOAR_CITIZEN_MALE)
-
-    call SetBuildUpgr(3, UPG_QUILLBOAR_MELEE)
-    call SetBuildUpgr(3, UPG_QUILLBOAR_RANGED)
-    call SetBuildUpgr(3, UPG_QUILLBOAR_ARMOR)
-    //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
-    call SetBuildUpgr(2, UPG_QUILLBOAR_MYSTIC)
-    call SetBuildUpgr(2, UPG_QUILLBOAR_MEDICINE_MAN)
-    call SetBuildUpgr(2, UPG_QUILLBOAR_NECROMANCER)
-    //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
-    //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_QUILLS)
-    //call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
-    //call SetBuildUpgr(1, UPG_QUILLBOAR_NECROMANCER)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_THORNS_AURA)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_QUIL_SPRAY)
-    call SetBuildUpgr(1, UPG_QUILLBOAR_BACKPACK)
-    //call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
-    //call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, QUILLBOAR_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, QUILLBOAR_WORKER)
+        call SetBuildUnit(2, QUILLBOAR_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, QUILLBOAR_HOUSING)
+        call SetBuildUnit(1, QUILLBOAR_FORGE)
+        call SetBuildUnit(3, QUILLBOAR_HUT)
+        call SetBuildUnit(2, QUILLBOAR_TRAINING_CAMP)
+        call SetBuildUnit(1, QUILLBOAR_ALTAR)
+        call SetBuildUnit(1, QUILLBOAR_SHOP)
+
+        call SetBuildUpgr(1, UPG_QUILLBOAR_MELEE)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_RANGED)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_ARMOR)
+        //call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, QUILLBOAR_TIER_2)
+        call SetBuildUnit(1, QUILLBOAR_FORGE)
+        call SetBuildUnit(1, QUILLBOAR_HOUSE_OF_ANCESTRY)
+        call SetBuildUnit(1, QUILLBOAR_ANIMAL_BATTLE_GROUNDS)
+        call SetBuildUnit(4, QUILLBOAR_HUT)
+        call SetBuildUnit(2, QUILLBOAR_CITIZEN_FEMALE)
+        call SetBuildUnit(2, QUILLBOAR_CHILD)
+        call SetBuildUnit(2, QUILLBOAR_PET)
+
+        call SetBuildUpgr(2, UPG_QUILLBOAR_MELEE)
+        call SetBuildUpgr(2, UPG_QUILLBOAR_RANGED)
+        call SetBuildUpgr(2, UPG_QUILLBOAR_ARMOR)
+        //call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
+        //call SetBuildUpgr(1, UPG_TUSKARR_FROST_IMMUNITY)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_MYSTIC)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_MEDICINE_MAN)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_NECROMANCER)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, QUILLBOAR_TIER_3)
+        call SetBuildUnit(1, QUILLBOAR_SACRIFICIAL_GROUNDS)
+        call SetBuildUnit(5, QUILLBOAR_HUT)
+        call SetBuildUnit(2, QUILLBOAR_THORNY_SPIRE)
+        call SetBuildUnit(2, QUILLBOAR_CITIZEN_MALE)
+
+        call SetBuildUpgr(3, UPG_QUILLBOAR_MELEE)
+        call SetBuildUpgr(3, UPG_QUILLBOAR_RANGED)
+        call SetBuildUpgr(3, UPG_QUILLBOAR_ARMOR)
+        //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
+        call SetBuildUpgr(2, UPG_QUILLBOAR_MYSTIC)
+        call SetBuildUpgr(2, UPG_QUILLBOAR_MEDICINE_MAN)
+        call SetBuildUpgr(2, UPG_QUILLBOAR_NECROMANCER)
+        //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
+        //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_QUILLS)
+        //call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
+        //call SetBuildUpgr(1, UPG_QUILLBOAR_NECROMANCER)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_THORNS_AURA)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_QUIL_SPRAY)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_BACKPACK)
+        //call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
+        //call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(QUILLBOAR_TIER_1)
@@ -83,7 +84,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

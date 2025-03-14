@@ -1,66 +1,67 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, NERUBIAN_TIER_1)
-    call SetBuildUnit(8, NERUBIAN_WORKER)
-    call SetBuildUnit(2, NERUBIAN_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, NERUBIAN_HOUSING)
-    call SetBuildUnit(1, NERUBIAN_HATCHERY)
-    call SetBuildUnit(2, NERUBIAN_SPAWNING_PIT)
-    call SetBuildUnit(4, NERUBIAN_ZIGGURAT)
-    call SetBuildUnit(1, NERUBIAN_ALTAR)
-    call SetBuildUnit(1, NERUBIAN_VAULT_OF_RELICS)
-    
-    call SetBuildUpgr(1, UPG_NERUBIAN_WEAPONS)
-    call SetBuildUpgr(1, UPG_NERUBIAN_ARMOR)
-    call SetBuildUpgr(1, UPG_NERUBIAN_WINGS)
-    call SetBuildUpgr(1, UPG_NERUBIAN_WEB)
-    call SetBuildUpgr(1, UPG_NERUBIAN_COCOON)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, NERUBIAN_TIER_2)
-    call SetBuildUnit(1, NERUBIAN_HATCHERY)
-    call SetBuildUnit(1, NERUBIAN_ANCIENT_SHRINE)
-    call SetBuildUnit(1, NERUBIAN_NEST)
-
-    call SetBuildUnit(2, NERUBIAN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, NERUBIAN_CHILD)
-    call SetBuildUnit(2, NERUBIAN_PET)
-    
-    call SetBuildUpgr(2, UPG_NERUBIAN_WEAPONS)
-    call SetBuildUpgr(2, UPG_NERUBIAN_ARMOR)
-    call SetBuildUpgr(2, UPG_NERUBIAN_WINGS)
-    call SetBuildUpgr(1, UPG_NERUBIAN_WEB)
-    call SetBuildUpgr(1, UPG_NERUBIAN_WEBSPINNER)
-    call SetBuildUpgr(1, UPG_NERUBIAN_SEER)
-    call SetBuildUpgr(1, UPG_NERUBIAN_SPIDER_POISON)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, NERUBIAN_TIER_3)
-    //call SetBuildUnit(1, NERUBIAN_TUNNEL)
-    call SetBuildUnit(2, NERUBIAN_SPAWNING_GROUND)
-    call SetBuildUnit(2, NERUBIAN_TOWER)
-    
-    call SetBuildUpgr(3, UPG_NERUBIAN_WEAPONS)
-    call SetBuildUpgr(3, UPG_NERUBIAN_ARMOR)
-    call SetBuildUpgr(3, UPG_NERUBIAN_WINGS)
-    call SetBuildUpgr(2, UPG_NERUBIAN_WEBSPINNER)
-    call SetBuildUpgr(2, UPG_NERUBIAN_SEER)
-    call SetBuildUpgr(1, UPG_NERUBIAN_CORROSIVE_BREATH)
-    call SetBuildUpgr(3, UPG_NERUBIAN_IMPROVED_ANCIENT_ARCHITECTURE)
-    call SetBuildUpgr(1, UPG_NERUBIAN_SPAWN_SPIDERLINGS)
-    call SetBuildUpgr(1, UPG_NERUBIAN_SPIDER_EGG)
-    call SetBuildUpgr(3, UPG_NERUBIAN_ANCIENT_POWER)
-    call SetBuildUpgr(1, UPG_NERUBIAN_BACKPACK)
-    call SetBuildUpgr(1, UPG_NERUBIAN_AZJOL_NERUB)
-
-    call SetBuildUnit(1, NERUBIAN_AZJOL_NERUB)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, NERUBIAN_TIER_1)
+        call SetBuildUnit(8, NERUBIAN_WORKER)
+        call SetBuildUnit(2, NERUBIAN_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, NERUBIAN_HOUSING)
+        call SetBuildUnit(1, NERUBIAN_HATCHERY)
+        call SetBuildUnit(2, NERUBIAN_SPAWNING_PIT)
+        call SetBuildUnit(4, NERUBIAN_ZIGGURAT)
+        call SetBuildUnit(1, NERUBIAN_ALTAR)
+        call SetBuildUnit(1, NERUBIAN_VAULT_OF_RELICS)
+
+        call SetBuildUpgr(1, UPG_NERUBIAN_WEAPONS)
+        call SetBuildUpgr(1, UPG_NERUBIAN_ARMOR)
+        call SetBuildUpgr(1, UPG_NERUBIAN_WINGS)
+        call SetBuildUpgr(1, UPG_NERUBIAN_WEB)
+        call SetBuildUpgr(1, UPG_NERUBIAN_COCOON)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, NERUBIAN_TIER_2)
+        call SetBuildUnit(1, NERUBIAN_HATCHERY)
+        call SetBuildUnit(1, NERUBIAN_ANCIENT_SHRINE)
+        call SetBuildUnit(1, NERUBIAN_NEST)
+
+        call SetBuildUnit(2, NERUBIAN_CITIZEN_FEMALE)
+        call SetBuildUnit(2, NERUBIAN_CHILD)
+        call SetBuildUnit(2, NERUBIAN_PET)
+
+        call SetBuildUpgr(2, UPG_NERUBIAN_WEAPONS)
+        call SetBuildUpgr(2, UPG_NERUBIAN_ARMOR)
+        call SetBuildUpgr(2, UPG_NERUBIAN_WINGS)
+        call SetBuildUpgr(1, UPG_NERUBIAN_WEB)
+        call SetBuildUpgr(1, UPG_NERUBIAN_WEBSPINNER)
+        call SetBuildUpgr(1, UPG_NERUBIAN_SEER)
+        call SetBuildUpgr(1, UPG_NERUBIAN_SPIDER_POISON)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, NERUBIAN_TIER_3)
+        //call SetBuildUnit(1, NERUBIAN_TUNNEL)
+        call SetBuildUnit(2, NERUBIAN_SPAWNING_GROUND)
+        call SetBuildUnit(2, NERUBIAN_TOWER)
+
+        call SetBuildUpgr(3, UPG_NERUBIAN_WEAPONS)
+        call SetBuildUpgr(3, UPG_NERUBIAN_ARMOR)
+        call SetBuildUpgr(3, UPG_NERUBIAN_WINGS)
+        call SetBuildUpgr(2, UPG_NERUBIAN_WEBSPINNER)
+        call SetBuildUpgr(2, UPG_NERUBIAN_SEER)
+        call SetBuildUpgr(1, UPG_NERUBIAN_CORROSIVE_BREATH)
+        call SetBuildUpgr(3, UPG_NERUBIAN_IMPROVED_ANCIENT_ARCHITECTURE)
+        call SetBuildUpgr(1, UPG_NERUBIAN_SPAWN_SPIDERLINGS)
+        call SetBuildUpgr(1, UPG_NERUBIAN_SPIDER_EGG)
+        call SetBuildUpgr(3, UPG_NERUBIAN_ANCIENT_POWER)
+        call SetBuildUpgr(1, UPG_NERUBIAN_BACKPACK)
+        call SetBuildUpgr(1, UPG_NERUBIAN_AZJOL_NERUB)
+
+        call SetBuildUnit(1, NERUBIAN_AZJOL_NERUB)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(NERUBIAN_TIER_1)
@@ -74,7 +75,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, UNDEAD_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

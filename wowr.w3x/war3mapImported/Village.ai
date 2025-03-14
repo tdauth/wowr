@@ -1,80 +1,81 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, VILLAGE_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, VILLAGE_WORKER)
-    call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, VILLAGE_HOUSING)
-    call SetBuildUnit(1, VILLAGE_GRANARY)
-    call SetBuildUnit(3, VILLAGE_INN)
-    call SetBuildUnit(2, VILLAGE_STABLES)
-    call SetBuildUnit(1, VILLAGE_TAVERN)
-    call SetBuildUnit(1, VILLAGE_FRUIT_STAND)
-    call SetBuildUnit(1, VILLAGE_SHOP)
-    
-    call SetBuildUpgr(1, UPG_MELEE)
-    call SetBuildUpgr(1, UPG_RANGED)
-    call SetBuildUpgr(1, UPG_ARMOR)
-    call SetBuildUpgr(1, UPG_LEATHER)
-    call SetBuildUpgr(1, UPG_DEFEND)
-    call SetBuildUpgr(1, UPG_MASONRY)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, VILLAGE_TIER_2)
-    call SetBuildUnit(1, VILLAGE_ANIMAL_PEN)
-    call SetBuildUnit(1, VILLAGE_BARN)
-    call SetBuildUnit(4, VILLAGE_INN)
-    call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, HUMAN_CHILD)
-    call SetBuildUnit(2, VILLAGE_PET)
-    
-    call SetBuildUnit(2, VILLAGE_OUTPOST) // 2 bell towers
-    
-    call SetBuildUpgr(2, UPG_MELEE)
-    call SetBuildUpgr(2, UPG_RANGED)
-    call SetBuildUpgr(2, UPG_ARMOR)
-    call SetBuildUpgr(2, UPG_LEATHER)
-    call SetBuildUpgr(1, UPG_WOOD)
-    call SetBuildUpgr(2, UPG_MASONRY)
-    call SetBuildUpgr(1, UPG_SENTINEL)
-    call SetBuildUpgr(1, UPG_GUN_RANGE)
-    call SetBuildUpgr(1, UPG_PRAYING)
-    call SetBuildUpgr(1, UPG_SORCERY)
-    call SetBuildUpgr(1, UPG_FRAGS)
-    call SetBuildUpgr(1, UPG_FLAK)
-    call SetBuildUpgr(1, UPG_TANK)
-    call SetBuildUpgr(1, UPG_HUMAN_FLARE)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, VILLAGE_TIER_3)
-    call SetBuildUnit(1, VILLAGE_WIND_MILL)
-    call SetBuildUnit(2, VILLAGE_BELL_TOWER)
-    
-    call SetBuildUpgr(3, UPG_MELEE)
-    call SetBuildUpgr(3, UPG_RANGED)
-    call SetBuildUpgr(3, UPG_ARMOR)
-    call SetBuildUpgr(3, UPG_LEATHER)
-    call SetBuildUpgr(2, UPG_WOOD)
-    call SetBuildUpgr(3, UPG_MASONRY)
-    call SetBuildUpgr(2, UPG_PRAYING)
-    call SetBuildUpgr(2, UPG_SORCERY)
-    call SetBuildUpgr(1, UPG_BREEDING)
-    call SetBuildUpgr(1, UPG_HAMMERS)
-    call SetBuildUpgr(1, UPG_BOMBS)
-    call SetBuildUpgr(1, UPG_CONT_MAGIC)
-    call SetBuildUpgr(1, UPG_CLOUD)
-
-    call SetBuildUpgr(1, UPG_HUMAN_BACKPACK)
-    call SetBuildUpgr(1, UPG_HUMAN_SUNDERING_BLADES)
-
-    call SetBuildUpgr(1, UPG_HUMAN_ARCANE_OBSERVATORY)
-    call SetBuildUnit(1, HUMAN_ARCANE_OBSERVATORY)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, VILLAGE_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, VILLAGE_WORKER)
+        call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, VILLAGE_HOUSING)
+        call SetBuildUnit(1, VILLAGE_GRANARY)
+        call SetBuildUnit(3, VILLAGE_INN)
+        call SetBuildUnit(2, VILLAGE_STABLES)
+        call SetBuildUnit(1, VILLAGE_TAVERN)
+        call SetBuildUnit(1, VILLAGE_FRUIT_STAND)
+        call SetBuildUnit(1, VILLAGE_SHOP)
+
+        call SetBuildUpgr(1, UPG_MELEE)
+        call SetBuildUpgr(1, UPG_RANGED)
+        call SetBuildUpgr(1, UPG_ARMOR)
+        call SetBuildUpgr(1, UPG_LEATHER)
+        call SetBuildUpgr(1, UPG_DEFEND)
+        call SetBuildUpgr(1, UPG_MASONRY)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, VILLAGE_TIER_2)
+        call SetBuildUnit(1, VILLAGE_ANIMAL_PEN)
+        call SetBuildUnit(1, VILLAGE_BARN)
+        call SetBuildUnit(4, VILLAGE_INN)
+        call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
+        call SetBuildUnit(2, HUMAN_CHILD)
+        call SetBuildUnit(2, VILLAGE_PET)
+
+        call SetBuildUnit(2, VILLAGE_OUTPOST) // 2 bell towers
+
+        call SetBuildUpgr(2, UPG_MELEE)
+        call SetBuildUpgr(2, UPG_RANGED)
+        call SetBuildUpgr(2, UPG_ARMOR)
+        call SetBuildUpgr(2, UPG_LEATHER)
+        call SetBuildUpgr(1, UPG_WOOD)
+        call SetBuildUpgr(2, UPG_MASONRY)
+        call SetBuildUpgr(1, UPG_SENTINEL)
+        call SetBuildUpgr(1, UPG_GUN_RANGE)
+        call SetBuildUpgr(1, UPG_PRAYING)
+        call SetBuildUpgr(1, UPG_SORCERY)
+        call SetBuildUpgr(1, UPG_FRAGS)
+        call SetBuildUpgr(1, UPG_FLAK)
+        call SetBuildUpgr(1, UPG_TANK)
+        call SetBuildUpgr(1, UPG_HUMAN_FLARE)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, VILLAGE_TIER_3)
+        call SetBuildUnit(1, VILLAGE_WIND_MILL)
+        call SetBuildUnit(2, VILLAGE_BELL_TOWER)
+
+        call SetBuildUpgr(3, UPG_MELEE)
+        call SetBuildUpgr(3, UPG_RANGED)
+        call SetBuildUpgr(3, UPG_ARMOR)
+        call SetBuildUpgr(3, UPG_LEATHER)
+        call SetBuildUpgr(2, UPG_WOOD)
+        call SetBuildUpgr(3, UPG_MASONRY)
+        call SetBuildUpgr(2, UPG_PRAYING)
+        call SetBuildUpgr(2, UPG_SORCERY)
+        call SetBuildUpgr(1, UPG_BREEDING)
+        call SetBuildUpgr(1, UPG_HAMMERS)
+        call SetBuildUpgr(1, UPG_BOMBS)
+        call SetBuildUpgr(1, UPG_CONT_MAGIC)
+        call SetBuildUpgr(1, UPG_CLOUD)
+
+        call SetBuildUpgr(1, UPG_HUMAN_BACKPACK)
+        call SetBuildUpgr(1, UPG_HUMAN_SUNDERING_BLADES)
+
+        call SetBuildUpgr(1, UPG_HUMAN_ARCANE_OBSERVATORY)
+        call SetBuildUnit(1, HUMAN_ARCANE_OBSERVATORY)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(VILLAGE_TIER_1)
@@ -88,7 +89,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

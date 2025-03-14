@@ -1,68 +1,69 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, DWARF_TIER_1)
-    //call SetBuildUnit(1, DWARF_MINE) // AI does not know how to construct. We preplaced one.
-    call SetBuildUnit(22, DWARF_MINER)
-    call SetBuildUnit(1, DWARF_BLACKSMITH)
-    call SetBuildUnit(1, DWARF_ALTAR)
-    call SetBuildUnit(5, DWARF_HOUSE)
-    call SetBuildUnit(2, DWARF_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, DWARF_HOUSING)
-    call SetBuildUnit(2, DWARF_CITIZEN_FEMALE)
-    call SetBuildUnit(2, DWARF_BARRACKS)
-    call SetBuildUnit(4, DWARF_TOWER)
-
-    // Tier 2 Buildings
-    call SetBuildUnit(1, DWARF_TIER_2)
-    call SetBuildUnit(1, DWARF_TAVERN)
-    call SetBuildUnit(1, DWARF_MYSTICAL_HALL)
-    call SetBuildUnit(1, DWARF_WORKSHOP)
-    call SetBuildUnit(1, DWARF_BEASTIARY)
-
-    // Tier 3 Buildings
-    call SetBuildUnit(1, DWARF_TIER_3)
-
-    call SetBuildUnit(1, DWARF_TOWER_GUN)
-    call SetBuildUnit(1, DWARF_TOWER_GUARD)
-    call SetBuildUnit(1, DWARF_TOWER_CANNON)
-    
-    call SetBuildUpgr(2, UPG_DWARF_LUMBER)
-    call SetBuildUpgr(2, UPG_DWARF_LUMBER_MILL)
-    call SetBuildUpgr(3, UPG_DWARF_FLYING_MACHINE_BOMBS)
-    call SetBuildUpgr(3, UPG_DWARF_RANGED)
-    call SetBuildUpgr(3, UPG_DWARF_MELEE)
-    call SetBuildUpgr(3, UPG_DWARF_ARMOR)
-    call SetBuildUpgr(3, UPG_DWARF_LEATHER)
-
-    call SetBuildUpgr(2, UPG_DWARF_BATTLEPRIEST_ADEPT)
-    call SetBuildUpgr(2, UPG_DWARF_RUNECASTER_ADEPT)
-
-    call SetBuildUpgr(1, UPG_DWARF_LONG_RIFLES)
-    call SetBuildUpgr(1, UPG_DWARF_MITHRIL)
-    call SetBuildUpgr(1, UPG_DWARF_SLEEP_FORM)
-    call SetBuildUpgr(3, UPG_DWARF_MASONRY)
-    call SetBuildUpgr(1, UPG_DWARF_DEVOUR)
-
-    call SetBuildUpgr(1, UPG_DWARF_FRAGMENTATION_SHARDS)
-    call SetBuildUpgr(1, UPG_DWARF_FLAK_CANNONS)
-    call SetBuildUpgr(1, UPG_DWARF_FLARE)
-    call SetBuildUpgr(1, UPG_DWARF_SLAM)
-    call SetBuildUpgr(1, UPG_DWARF_ANIMAL_WAR_TRAINING)
-    call SetBuildUpgr(1, UPG_DWARF_BREEDING)
-    call SetBuildUpgr(1, UPG_DWARF_BERSERK)
-    call SetBuildUpgr(1, UPG_DWARF_POLAR_BEAR_BOMBS)
-    call SetBuildUpgr(1, UPG_DWARF_ELITE_SIEGE_TANK)
-    call SetBuildUpgr(1, UPG_DWARF_BARRAGE)
-    call SetBuildUpgr(1, UPG_DWARF_STORM_HAMMERS)
-    
-    call SetBuildUpgr(1, UPG_DWARF_BACKPACK)
-    
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, DWARF_TIER_1)
+        //call SetBuildUnit(1, DWARF_MINE) // AI does not know how to construct. We preplaced one.
+        call SetBuildUnit(22, DWARF_MINER)
+        call SetBuildUnit(1, DWARF_BLACKSMITH)
+        call SetBuildUnit(1, DWARF_ALTAR)
+        call SetBuildUnit(5, DWARF_HOUSE)
+        call SetBuildUnit(2, DWARF_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, DWARF_HOUSING)
+        call SetBuildUnit(2, DWARF_CITIZEN_FEMALE)
+        call SetBuildUnit(2, DWARF_BARRACKS)
+        call SetBuildUnit(4, DWARF_TOWER)
+
+        // Tier 2 Buildings
+        call SetBuildUnit(1, DWARF_TIER_2)
+        call SetBuildUnit(1, DWARF_TAVERN)
+        call SetBuildUnit(1, DWARF_MYSTICAL_HALL)
+        call SetBuildUnit(1, DWARF_WORKSHOP)
+        call SetBuildUnit(1, DWARF_BEASTIARY)
+
+        // Tier 3 Buildings
+        call SetBuildUnit(1, DWARF_TIER_3)
+
+        call SetBuildUnit(1, DWARF_TOWER_GUN)
+        call SetBuildUnit(1, DWARF_TOWER_GUARD)
+        call SetBuildUnit(1, DWARF_TOWER_CANNON)
+
+        call SetBuildUpgr(2, UPG_DWARF_LUMBER)
+        call SetBuildUpgr(2, UPG_DWARF_LUMBER_MILL)
+        call SetBuildUpgr(3, UPG_DWARF_FLYING_MACHINE_BOMBS)
+        call SetBuildUpgr(3, UPG_DWARF_RANGED)
+        call SetBuildUpgr(3, UPG_DWARF_MELEE)
+        call SetBuildUpgr(3, UPG_DWARF_ARMOR)
+        call SetBuildUpgr(3, UPG_DWARF_LEATHER)
+
+        call SetBuildUpgr(2, UPG_DWARF_BATTLEPRIEST_ADEPT)
+        call SetBuildUpgr(2, UPG_DWARF_RUNECASTER_ADEPT)
+
+        call SetBuildUpgr(1, UPG_DWARF_LONG_RIFLES)
+        call SetBuildUpgr(1, UPG_DWARF_MITHRIL)
+        call SetBuildUpgr(1, UPG_DWARF_SLEEP_FORM)
+        call SetBuildUpgr(3, UPG_DWARF_MASONRY)
+        call SetBuildUpgr(1, UPG_DWARF_DEVOUR)
+
+        call SetBuildUpgr(1, UPG_DWARF_FRAGMENTATION_SHARDS)
+        call SetBuildUpgr(1, UPG_DWARF_FLAK_CANNONS)
+        call SetBuildUpgr(1, UPG_DWARF_FLARE)
+        call SetBuildUpgr(1, UPG_DWARF_SLAM)
+        call SetBuildUpgr(1, UPG_DWARF_ANIMAL_WAR_TRAINING)
+        call SetBuildUpgr(1, UPG_DWARF_BREEDING)
+        call SetBuildUpgr(1, UPG_DWARF_BERSERK)
+        call SetBuildUpgr(1, UPG_DWARF_POLAR_BEAR_BOMBS)
+        call SetBuildUpgr(1, UPG_DWARF_ELITE_SIEGE_TANK)
+        call SetBuildUpgr(1, UPG_DWARF_BARRAGE)
+        call SetBuildUpgr(1, UPG_DWARF_STORM_HAMMERS)
+
+        call SetBuildUpgr(1, UPG_DWARF_BACKPACK)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(DWARF_TIER_1)
@@ -78,7 +79,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_special1, DWARF_SUBMARINE)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

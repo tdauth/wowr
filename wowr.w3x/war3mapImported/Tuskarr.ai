@@ -1,75 +1,76 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, TUSKARR_FROZEN_HALL)
-    call SetBuildUnit(WORKERS_COUNT_START, TUSKARR_WORKER)
-    call SetBuildUnit(2, TUSKARR_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, TUSKARR_HOUSING)
-    call SetBuildUnit(1, TUSKARR_ICY_SPIRE)
-    call SetBuildUnit(3, TUSKARR_IGLOO)
-    call SetBuildUnit(2, TUSKARR_IGLOO_BARRACKS)
-    call SetBuildUnit(1, TUSKARR_ALTAR_OF_ICE)
-    call SetBuildUnit(1, TUSKARR_NORTHERN_VENDOR_SHOP)
-    
-    call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_WEAPONS)
-    call SetBuildUpgr(1, UPG_TUSKARR_HARPOONS)
-    call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_ARMOR)
-    call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
-    call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
-    call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, TUSKARR_FROZEN_STRONGHOLD)
-    call SetBuildUnit(1, TUSKARR_ICY_SPIRE)
-    call SetBuildUnit(1, TUSKARR_ICE_CUTTERS_LODGE)
-    call SetBuildUnit(1, TUSKARR_HUNTERS_REST)
-    call SetBuildUnit(4, TUSKARR_IGLOO)
-    call SetBuildUnit(2, TUSKARR_CITIZEN_FEMALE)
-    call SetBuildUnit(2, TUSKARR_CHILD)
-    call SetBuildUnit(2, TUSKARR_PET_SEAL)
-    
-    call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_WEAPONS)
-    call SetBuildUpgr(2, UPG_TUSKARR_HARPOONS)
-    call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_ARMOR)
-    call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
-    call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
-    call SetBuildUpgr(1, UPG_TUSKARR_FROST_IMMUNITY)
-    call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
-    call SetBuildUpgr(1, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING)
-    call SetBuildUpgr(1, UPG_TUSKARR_HEALER_ADEPT_TRAINING)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, TUSKARR_FROZEN_FORTRESS)
-    call SetBuildUnit(1, TUSKARR_DECORATED_CAVERN)
-    call SetBuildUnit(5, TUSKARR_IGLOO)
-    call SetBuildUnit(2, TUSKARR_BLOCK_OF_ICE)
-    call SetBuildUnit(2, TUSKARR_SPIDER_SHRINE)
-    call SetBuildUnit(2, TUSKARR_FROST_SNOWMAN)
-    call SetBuildUnit(2, TUSKARR_CITIZEN_MALE)
-
-    call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_WEAPONS)
-    call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
-    call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_ARMOR)
-    call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
-    call SetBuildUpgr(2, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING)
-    call SetBuildUpgr(2, UPG_TUSKARR_HEALER_ADEPT_TRAINING)
-    call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
-    call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
-    call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
-    call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
-    call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
-    call SetBuildUpgr(1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR)
-    call SetBuildUpgr(1, UPG_TUSKARR_CLEAVING_ATTACK)
-    call SetBuildUpgr(1, UPG_TUSKARR_MAGIC_SENTRY)
-    call SetBuildUpgr(1, UPG_TUSKARR_BACKPACK)
-    call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
-    call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, TUSKARR_FROZEN_HALL)
+        call SetBuildUnit(WORKERS_COUNT_START, TUSKARR_WORKER)
+        call SetBuildUnit(2, TUSKARR_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, TUSKARR_HOUSING)
+        call SetBuildUnit(1, TUSKARR_ICY_SPIRE)
+        call SetBuildUnit(3, TUSKARR_IGLOO)
+        call SetBuildUnit(2, TUSKARR_IGLOO_BARRACKS)
+        call SetBuildUnit(1, TUSKARR_ALTAR_OF_ICE)
+        call SetBuildUnit(1, TUSKARR_NORTHERN_VENDOR_SHOP)
+
+        call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_WEAPONS)
+        call SetBuildUpgr(1, UPG_TUSKARR_HARPOONS)
+        call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_ARMOR)
+        call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
+        call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
+        call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, TUSKARR_FROZEN_STRONGHOLD)
+        call SetBuildUnit(1, TUSKARR_ICY_SPIRE)
+        call SetBuildUnit(1, TUSKARR_ICE_CUTTERS_LODGE)
+        call SetBuildUnit(1, TUSKARR_HUNTERS_REST)
+        call SetBuildUnit(4, TUSKARR_IGLOO)
+        call SetBuildUnit(2, TUSKARR_CITIZEN_FEMALE)
+        call SetBuildUnit(2, TUSKARR_CHILD)
+        call SetBuildUnit(2, TUSKARR_PET_SEAL)
+
+        call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_WEAPONS)
+        call SetBuildUpgr(2, UPG_TUSKARR_HARPOONS)
+        call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_ARMOR)
+        call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
+        call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
+        call SetBuildUpgr(1, UPG_TUSKARR_FROST_IMMUNITY)
+        call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
+        call SetBuildUpgr(1, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING)
+        call SetBuildUpgr(1, UPG_TUSKARR_HEALER_ADEPT_TRAINING)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, TUSKARR_FROZEN_FORTRESS)
+        call SetBuildUnit(1, TUSKARR_DECORATED_CAVERN)
+        call SetBuildUnit(5, TUSKARR_IGLOO)
+        call SetBuildUnit(2, TUSKARR_BLOCK_OF_ICE)
+        call SetBuildUnit(2, TUSKARR_SPIDER_SHRINE)
+        call SetBuildUnit(2, TUSKARR_FROST_SNOWMAN)
+        call SetBuildUnit(2, TUSKARR_CITIZEN_MALE)
+
+        call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_WEAPONS)
+        call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
+        call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_ARMOR)
+        call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
+        call SetBuildUpgr(2, UPG_TUSKARR_SHAMAN_ADEPT_TRAINING)
+        call SetBuildUpgr(2, UPG_TUSKARR_HEALER_ADEPT_TRAINING)
+        call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
+        call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
+        call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
+        call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
+        call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
+        call SetBuildUpgr(1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR)
+        call SetBuildUpgr(1, UPG_TUSKARR_CLEAVING_ATTACK)
+        call SetBuildUpgr(1, UPG_TUSKARR_MAGIC_SENTRY)
+        call SetBuildUpgr(1, UPG_TUSKARR_BACKPACK)
+        call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
+        call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(TUSKARR_FROZEN_HALL)
@@ -84,7 +85,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_special1, TUSKARR_FISHING_BOAT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

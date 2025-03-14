@@ -1,81 +1,82 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, TOWN_HALL)
-    call SetBuildUnit(WORKERS_COUNT_START, PEASANT)
-    call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, HUMAN_HOUSING)
-    call SetBuildUnit(1, LUMBER_MILL)
-    call SetBuildUnit(3, HOUSE)
-    call SetBuildUnit(2, BARRACKS)
-    call SetBuildUnit(1, HUMAN_ALTAR)
-    call SetBuildUnit(1, BLACKSMITH)
-    call SetBuildUnit(1, ARCANE_VAULT)
-    
-    call SetBuildUpgr(1, UPG_MELEE)
-    call SetBuildUpgr(1, UPG_RANGED)
-    call SetBuildUpgr(1, UPG_ARMOR)
-    call SetBuildUpgr(1, UPG_LEATHER)
-    call SetBuildUpgr(1, UPG_DEFEND)
-    call SetBuildUpgr(1, UPG_MASONRY)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, KEEP)
-    call SetBuildUnit(1, ARCANE_SANCTUM)
-    call SetBuildUnit(1, WORKSHOP)
-    call SetBuildUnit(4, HOUSE)
-    call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, HUMAN_CHILD)
-    call SetBuildUnit(2, HUMAN_PET)
-    
-    call SetBuildUnit(3, WATCH_TOWER) // 2 guard towers, 1 cannon tower
-    
-    call SetBuildUpgr(2, UPG_MELEE)
-    call SetBuildUpgr(2, UPG_RANGED)
-    call SetBuildUpgr(2, UPG_ARMOR)
-    call SetBuildUpgr(2, UPG_LEATHER)
-    call SetBuildUpgr(1, UPG_WOOD)
-    call SetBuildUpgr(2, UPG_MASONRY)
-    call SetBuildUpgr(1, UPG_SENTINEL)
-    call SetBuildUpgr(1, UPG_GUN_RANGE)
-    call SetBuildUpgr(1, UPG_PRAYING)
-    call SetBuildUpgr(1, UPG_SORCERY)
-    call SetBuildUpgr(1, UPG_FRAGS)
-    call SetBuildUpgr(1, UPG_FLAK)
-    call SetBuildUpgr(1, UPG_TANK)
-    call SetBuildUpgr(1, UPG_HUMAN_FLARE)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, CASTLE)
-    call SetBuildUnit(1, AVIARY)
-    call SetBuildUnit(2, GUARD_TOWER)
-    call SetBuildUnit(1, CANNON_TOWER)
-    
-    call SetBuildUpgr(3, UPG_MELEE)
-    call SetBuildUpgr(3, UPG_RANGED)
-    call SetBuildUpgr(3, UPG_ARMOR)
-    call SetBuildUpgr(3, UPG_LEATHER)
-    call SetBuildUpgr(2, UPG_WOOD)
-    call SetBuildUpgr(3, UPG_MASONRY)
-    call SetBuildUpgr(2, UPG_PRAYING)
-    call SetBuildUpgr(2, UPG_SORCERY)
-    call SetBuildUpgr(1, UPG_BREEDING)
-    call SetBuildUpgr(1, UPG_HAMMERS)
-    call SetBuildUpgr(1, UPG_BOMBS)
-    call SetBuildUpgr(1, UPG_CONT_MAGIC)
-    call SetBuildUpgr(1, UPG_CLOUD)
-
-    call SetBuildUpgr(1, UPG_HUMAN_BACKPACK)
-    call SetBuildUpgr(1, UPG_HUMAN_SUNDERING_BLADES)
-
-    call SetBuildUpgr(1, UPG_HUMAN_ARCANE_OBSERVATORY)
-    call SetBuildUnit(1, HUMAN_ARCANE_OBSERVATORY)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, TOWN_HALL)
+        call SetBuildUnit(WORKERS_COUNT_START, PEASANT)
+        call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, HUMAN_HOUSING)
+        call SetBuildUnit(1, LUMBER_MILL)
+        call SetBuildUnit(3, HOUSE)
+        call SetBuildUnit(2, BARRACKS)
+        call SetBuildUnit(1, HUMAN_ALTAR)
+        call SetBuildUnit(1, BLACKSMITH)
+        call SetBuildUnit(1, ARCANE_VAULT)
+
+        call SetBuildUpgr(1, UPG_MELEE)
+        call SetBuildUpgr(1, UPG_RANGED)
+        call SetBuildUpgr(1, UPG_ARMOR)
+        call SetBuildUpgr(1, UPG_LEATHER)
+        call SetBuildUpgr(1, UPG_DEFEND)
+        call SetBuildUpgr(1, UPG_MASONRY)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, KEEP)
+        call SetBuildUnit(1, ARCANE_SANCTUM)
+        call SetBuildUnit(1, WORKSHOP)
+        call SetBuildUnit(4, HOUSE)
+        call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
+        call SetBuildUnit(2, HUMAN_CHILD)
+        call SetBuildUnit(2, HUMAN_PET)
+
+        call SetBuildUnit(3, WATCH_TOWER) // 2 guard towers, 1 cannon tower
+
+        call SetBuildUpgr(2, UPG_MELEE)
+        call SetBuildUpgr(2, UPG_RANGED)
+        call SetBuildUpgr(2, UPG_ARMOR)
+        call SetBuildUpgr(2, UPG_LEATHER)
+        call SetBuildUpgr(1, UPG_WOOD)
+        call SetBuildUpgr(2, UPG_MASONRY)
+        call SetBuildUpgr(1, UPG_SENTINEL)
+        call SetBuildUpgr(1, UPG_GUN_RANGE)
+        call SetBuildUpgr(1, UPG_PRAYING)
+        call SetBuildUpgr(1, UPG_SORCERY)
+        call SetBuildUpgr(1, UPG_FRAGS)
+        call SetBuildUpgr(1, UPG_FLAK)
+        call SetBuildUpgr(1, UPG_TANK)
+        call SetBuildUpgr(1, UPG_HUMAN_FLARE)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, CASTLE)
+        call SetBuildUnit(1, AVIARY)
+        call SetBuildUnit(2, GUARD_TOWER)
+        call SetBuildUnit(1, CANNON_TOWER)
+
+        call SetBuildUpgr(3, UPG_MELEE)
+        call SetBuildUpgr(3, UPG_RANGED)
+        call SetBuildUpgr(3, UPG_ARMOR)
+        call SetBuildUpgr(3, UPG_LEATHER)
+        call SetBuildUpgr(2, UPG_WOOD)
+        call SetBuildUpgr(3, UPG_MASONRY)
+        call SetBuildUpgr(2, UPG_PRAYING)
+        call SetBuildUpgr(2, UPG_SORCERY)
+        call SetBuildUpgr(1, UPG_BREEDING)
+        call SetBuildUpgr(1, UPG_HAMMERS)
+        call SetBuildUpgr(1, UPG_BOMBS)
+        call SetBuildUpgr(1, UPG_CONT_MAGIC)
+        call SetBuildUpgr(1, UPG_CLOUD)
+
+        call SetBuildUpgr(1, UPG_HUMAN_BACKPACK)
+        call SetBuildUpgr(1, UPG_HUMAN_SUNDERING_BLADES)
+
+        call SetBuildUpgr(1, UPG_HUMAN_ARCANE_OBSERVATORY)
+        call SetBuildUnit(1, HUMAN_ARCANE_OBSERVATORY)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(TOWN_HALL)
@@ -89,7 +90,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

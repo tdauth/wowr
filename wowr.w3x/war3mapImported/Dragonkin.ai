@@ -1,70 +1,71 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, DRAGONKIN_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, DRAGONKIN_WORKER)
-    call SetBuildUnit(2, DRAGONKIN_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, DRAGONKIN_HOUSING)
-    call SetBuildUnit(1, DRAGONKIN_QUARRY)
-    call SetBuildUnit(1, DRAGONKIN_FORGE)
-    call SetBuildUnit(3, DRAGONKIN_NEST)
-    call SetBuildUnit(1, DRAGONKIN_BARRACKS)
-    call SetBuildUnit(1, DRAGONKIN_ALTAR)
-    call SetBuildUnit(1, DRAGONKIN_SHOP)
-    
-    //call SetBuildUpgr(1, UPG_OGRE_MELEE)
-    //call SetBuildUpgr(1, UPG_OGRE_RANGED)
-    //call SetBuildUpgr(1, UPG_OGRE_ARMOR)
-    //call SetBuildUpgr(1, UPG_OGRE_ENSNARE)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, DRAGONKIN_TIER_2)
-    call SetBuildUnit(1, DRAGONKIN_ARCANE_TEMPLE)
-    call SetBuildUnit(1, DRAGONKIN_ARENA)
-    call SetBuildUnit(1, DRAGONKIN_ROOST)
-    call SetBuildUnit(2, DRAGONKIN_TOWER)
-    call SetBuildUnit(2, DRAGONKIN_CITIZEN_FEMALE)
-    call SetBuildUnit(2, DRAGONKIN_CHILD)
-    call SetBuildUnit(2, DRAGONKIN_PET)
-    
-    //call SetBuildUpgr(2, UPG_OGRE_MELEE)
-    //call SetBuildUpgr(2, UPG_OGRE_RANGED)
-    //call SetBuildUpgr(2, UPG_OGRE_ARMOR)
-    //call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
-    //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
-    //call SetBuildUpgr(1, UPG_OGRE_MAGI)
-    //call SetBuildUpgr(1, UPG_OGRE_WARLOCK)
-    //call SetBuildUpgr(1, UPG_OGRE_NECROMANCER)
-    //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
-    //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
-    //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
-    //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
-    //call SetBuildUpgr(1, UPG_OGRE_ROAR)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, DRAGONKIN_TIER_3)
-
-    //call SetBuildUpgr(3, UPG_OGRE_MELEE)
-    //call SetBuildUpgr(3, UPG_OGRE_RANGED)
-    //call SetBuildUpgr(3, UPG_OGRE_ARMOR)
-    //call SetBuildUpgr(2, UPG_OGRE_MAGI)
-    //call SetBuildUpgr(2, UPG_OGRE_WARLOCK)
-    //call SetBuildUpgr(2, UPG_OGRE_NECROMANCER)
-    //call SetBuildUpgr(1, UPG_OGRE_LIGHTNING_ATTACK)
-    call SetBuildUpgr(1, UPG_DRAGONKIN_FIRE_ATTACK)
-    call SetBuildUpgr(1, UPG_DRAGONKIN_RESISTANT_SKIN)
-    //call SetBuildUpgr(1, UPG_OGRE_SUMMON_BEAR)
-    call SetBuildUpgr(1, UPG_DRAGONKIN_SPELL_DAMAGE_REDUCTION)
-    call SetBuildUpgr(1, UPG_DRAGONKIN_BACKPACK)
-    //call SetBuildUpgr(1, UPG_OGRE_GRONN_CLUBS)
-    call SetBuildUpgr(1, UPG_DRAGONKIN_WYRMREST_TEMPLE)
-    call SetBuildUnit(1, DRAGONKIN_WYRMREST_TEMPLE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, DRAGONKIN_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, DRAGONKIN_WORKER)
+        call SetBuildUnit(2, DRAGONKIN_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, DRAGONKIN_HOUSING)
+        call SetBuildUnit(1, DRAGONKIN_QUARRY)
+        call SetBuildUnit(1, DRAGONKIN_FORGE)
+        call SetBuildUnit(3, DRAGONKIN_NEST)
+        call SetBuildUnit(1, DRAGONKIN_BARRACKS)
+        call SetBuildUnit(1, DRAGONKIN_ALTAR)
+        call SetBuildUnit(1, DRAGONKIN_SHOP)
+
+        //call SetBuildUpgr(1, UPG_OGRE_MELEE)
+        //call SetBuildUpgr(1, UPG_OGRE_RANGED)
+        //call SetBuildUpgr(1, UPG_OGRE_ARMOR)
+        //call SetBuildUpgr(1, UPG_OGRE_ENSNARE)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, DRAGONKIN_TIER_2)
+        call SetBuildUnit(1, DRAGONKIN_ARCANE_TEMPLE)
+        call SetBuildUnit(1, DRAGONKIN_ARENA)
+        call SetBuildUnit(1, DRAGONKIN_ROOST)
+        call SetBuildUnit(2, DRAGONKIN_TOWER)
+        call SetBuildUnit(2, DRAGONKIN_CITIZEN_FEMALE)
+        call SetBuildUnit(2, DRAGONKIN_CHILD)
+        call SetBuildUnit(2, DRAGONKIN_PET)
+
+        //call SetBuildUpgr(2, UPG_OGRE_MELEE)
+        //call SetBuildUpgr(2, UPG_OGRE_RANGED)
+        //call SetBuildUpgr(2, UPG_OGRE_ARMOR)
+        //call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
+        //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
+        //call SetBuildUpgr(1, UPG_OGRE_MAGI)
+        //call SetBuildUpgr(1, UPG_OGRE_WARLOCK)
+        //call SetBuildUpgr(1, UPG_OGRE_NECROMANCER)
+        //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
+        //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
+        //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
+        //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
+        //call SetBuildUpgr(1, UPG_OGRE_ROAR)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, DRAGONKIN_TIER_3)
+
+        //call SetBuildUpgr(3, UPG_OGRE_MELEE)
+        //call SetBuildUpgr(3, UPG_OGRE_RANGED)
+        //call SetBuildUpgr(3, UPG_OGRE_ARMOR)
+        //call SetBuildUpgr(2, UPG_OGRE_MAGI)
+        //call SetBuildUpgr(2, UPG_OGRE_WARLOCK)
+        //call SetBuildUpgr(2, UPG_OGRE_NECROMANCER)
+        //call SetBuildUpgr(1, UPG_OGRE_LIGHTNING_ATTACK)
+        call SetBuildUpgr(1, UPG_DRAGONKIN_FIRE_ATTACK)
+        call SetBuildUpgr(1, UPG_DRAGONKIN_RESISTANT_SKIN)
+        //call SetBuildUpgr(1, UPG_OGRE_SUMMON_BEAR)
+        call SetBuildUpgr(1, UPG_DRAGONKIN_SPELL_DAMAGE_REDUCTION)
+        call SetBuildUpgr(1, UPG_DRAGONKIN_BACKPACK)
+        //call SetBuildUpgr(1, UPG_OGRE_GRONN_CLUBS)
+        call SetBuildUpgr(1, UPG_DRAGONKIN_WYRMREST_TEMPLE)
+        call SetBuildUnit(1, DRAGONKIN_WYRMREST_TEMPLE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(DRAGONKIN_TIER_1)
@@ -78,7 +79,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

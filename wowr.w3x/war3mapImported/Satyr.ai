@@ -1,71 +1,72 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, SATYR_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, SATYR_WORKER)
-    call SetBuildUnit(2, SATYR_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, SATYR_HOUSING)
-    call SetBuildUnit(1, SATYR_HUNTERS_HALL)
-    call SetBuildUnit(3, SATYR_MOON_WELL)
-    call SetBuildUnit(1, SATYR_ANCIENT_OF_WAR)
-    call SetBuildUnit(1, SATYR_ALTAR)
-    call SetBuildUnit(1, SATYR_ANCIENT_OF_WONDERS)
-
-    call SetBuildUpgr(1, UPG_SATYR_STR_MOON)
-    //call SetBuildUpgr(1, UPG_OGRE_RANGED)
-    call SetBuildUpgr(1, UPG_SATYR_MOON_ARMOR)
-    //call SetBuildUpgr(1, UPG_OGRE_ENSNARE)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, SATYR_TIER_2)
-    call SetBuildUnit(1, SATYR_ANCIENT_OF_LORE)
-    call SetBuildUnit(1, SATYR_ANCIENT_OF_WIND)
-    call SetBuildUnit(2, SATYR_ANCIENT_PROTECTOR)
-    call SetBuildUnit(2, SATYR_CITIZEN_FEMALE)
-    call SetBuildUnit(2, SATYR_CHILD)
-    call SetBuildUnit(2, SATYR_PET)
-    
-    call SetBuildUpgr(2, UPG_SATYR_STR_MOON)
-    //call SetBuildUpgr(2, UPG_OGRE_RANGED)
-    call SetBuildUpgr(2, UPG_SATYR_MOON_ARMOR)
-    call SetBuildUpgr(2, UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS)
-    //call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
-    //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
-    call SetBuildUpgr(1, UPG_SATYR_SLUDGE_FLINGER)
-    //call SetBuildUpgr(1, UPG_OGRE_WARLOCK)
-    //call SetBuildUpgr(1, UPG_OGRE_NECROMANCER)
-    //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
-    //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
-    //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
-    //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
-    //call SetBuildUpgr(1, UPG_OGRE_ROAR)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, SATYR_TIER_3)
-    call SetBuildUnit(1, SATYR_DEMON_GATE)
-
-    call SetBuildUpgr(3, UPG_SATYR_STR_MOON)
-    //call SetBuildUpgr(3, UPG_OGRE_RANGED)
-    call SetBuildUpgr(3, UPG_SATYR_MOON_ARMOR)
-    call SetBuildUpgr(3, UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS)
-    call SetBuildUpgr(2, UPG_SATYR_SLUDGE_FLINGER)
-    //call SetBuildUpgr(2, UPG_OGRE_WARLOCK)
-    //call SetBuildUpgr(2, UPG_OGRE_NECROMANCER)
-    //call SetBuildUpgr(1, UPG_OGRE_LIGHTNING_ATTACK)
-    //call SetBuildUpgr(1, UPG_OGRE_REINCARNATION)
-    //call SetBuildUpgr(1, UPG_OGRE_RESISTANT_SKIN)
-    //call SetBuildUpgr(1, UPG_OGRE_SUMMON_BEAR)
-    //call SetBuildUpgr(1, UPG_OGRE_WAR_STOMP)
-    call SetBuildUpgr(1, UPG_SATYR_BACKPACK)
-    //call SetBuildUpgr(1, UPG_OGRE_GRONN_CLUBS)
-    //call SetBuildUpgr(1, UPG_OGRE_STONEMAUL_CAMP)
-    //call SetBuildUnit(1, OGRE_STONEMAUL_CAMP)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, SATYR_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, SATYR_WORKER)
+        call SetBuildUnit(2, SATYR_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, SATYR_HOUSING)
+        call SetBuildUnit(1, SATYR_HUNTERS_HALL)
+        call SetBuildUnit(3, SATYR_MOON_WELL)
+        call SetBuildUnit(1, SATYR_ANCIENT_OF_WAR)
+        call SetBuildUnit(1, SATYR_ALTAR)
+        call SetBuildUnit(1, SATYR_ANCIENT_OF_WONDERS)
+
+        call SetBuildUpgr(1, UPG_SATYR_STR_MOON)
+        //call SetBuildUpgr(1, UPG_OGRE_RANGED)
+        call SetBuildUpgr(1, UPG_SATYR_MOON_ARMOR)
+        //call SetBuildUpgr(1, UPG_OGRE_ENSNARE)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, SATYR_TIER_2)
+        call SetBuildUnit(1, SATYR_ANCIENT_OF_LORE)
+        call SetBuildUnit(1, SATYR_ANCIENT_OF_WIND)
+        call SetBuildUnit(2, SATYR_ANCIENT_PROTECTOR)
+        call SetBuildUnit(2, SATYR_CITIZEN_FEMALE)
+        call SetBuildUnit(2, SATYR_CHILD)
+        call SetBuildUnit(2, SATYR_PET)
+
+        call SetBuildUpgr(2, UPG_SATYR_STR_MOON)
+        //call SetBuildUpgr(2, UPG_OGRE_RANGED)
+        call SetBuildUpgr(2, UPG_SATYR_MOON_ARMOR)
+        call SetBuildUpgr(2, UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS)
+        //call SetBuildUpgr(1, UPG_OGRE_DEMOLISH)
+        //call SetBuildUpgr(1, UPG_OGRE_AMBUSH)
+        call SetBuildUpgr(1, UPG_SATYR_SLUDGE_FLINGER)
+        //call SetBuildUpgr(1, UPG_OGRE_WARLOCK)
+        //call SetBuildUpgr(1, UPG_OGRE_NECROMANCER)
+        //call SetBuildUpgr(1, UPG_OGRE_STRENGTH)
+        //call SetBuildUpgr(1, UPG_OGRE_PULVERIZE)
+        //call SetBuildUpgr(1, UPG_OGRE_TAUNT)
+        //call SetBuildUpgr(1, UPG_OGRE_BREATH_OF_FIRE)
+        //call SetBuildUpgr(1, UPG_OGRE_ROAR)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, SATYR_TIER_3)
+        call SetBuildUnit(1, SATYR_DEMON_GATE)
+
+        call SetBuildUpgr(3, UPG_SATYR_STR_MOON)
+        //call SetBuildUpgr(3, UPG_OGRE_RANGED)
+        call SetBuildUpgr(3, UPG_SATYR_MOON_ARMOR)
+        call SetBuildUpgr(3, UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS)
+        call SetBuildUpgr(2, UPG_SATYR_SLUDGE_FLINGER)
+        //call SetBuildUpgr(2, UPG_OGRE_WARLOCK)
+        //call SetBuildUpgr(2, UPG_OGRE_NECROMANCER)
+        //call SetBuildUpgr(1, UPG_OGRE_LIGHTNING_ATTACK)
+        //call SetBuildUpgr(1, UPG_OGRE_REINCARNATION)
+        //call SetBuildUpgr(1, UPG_OGRE_RESISTANT_SKIN)
+        //call SetBuildUpgr(1, UPG_OGRE_SUMMON_BEAR)
+        //call SetBuildUpgr(1, UPG_OGRE_WAR_STOMP)
+        call SetBuildUpgr(1, UPG_SATYR_BACKPACK)
+        //call SetBuildUpgr(1, UPG_OGRE_GRONN_CLUBS)
+        //call SetBuildUpgr(1, UPG_OGRE_STONEMAUL_CAMP)
+        //call SetBuildUnit(1, OGRE_STONEMAUL_CAMP)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(SATYR_TIER_1)
@@ -79,7 +80,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ELF_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

@@ -1,50 +1,51 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, FURBOLG_TRIBAL_CENTER)
-    call SetBuildUnit(22, YOUNG_FURBOLG)
-    call SetBuildUnit(1, FURBOLG_LUMBER_CAMP)
-    call SetBuildUnit(1, RESURRECTION_STONE)
-    call SetBuildUnit(5, FURBOLG_HUT)
-    call SetBuildUnit(2, FURBOLG_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, FURBOLG_HOUSING)
-    call SetBuildUnit(2, FURBOLG_CITIZEN_FEMALE)
-    call SetBuildUnit(2, FURBOLG_CHILD)
-    call SetBuildUnit(2, FURBOLG_PET)
-    call SetBuildUnit(2, FURBOLG_BARRACKS)
-    call SetBuildUpgr(1, UPG_FURBOLG_LUMBER)
-    call SetBuildUnit(2, GUARDING_FURBOLG)
-    call SetBuildUnit(1, FURBOLG_MARKETPLACE)
-    call SetBuildUnit(1, FURBOLG_WOLVES_CAGE)
-    call SetBuildUnit(1, FURBOLG_POLAR_HUT)
-    call SetBuildUnit(1, FURBOLG_DEFILED_FOUNTAIN)
-    call SetBuildUpgr(2, UPG_FURBOLG_LUMBER)
-    call SetBuildUnit(1, FURBOLG_GREEN_DRAGON_ROOST)
-    
-    call SetBuildUpgr(3, UPG_FURBOLG_STEEL_RWEAPONS)
-    call SetBuildUpgr(3, UPG_FURBOLG_STEEL_WEAPONS)
-    call SetBuildUpgr(3, UPG_FURBOLG_STEEL_ARMOR)
-    call SetBuildUpgr(3, UPG_FURBOLG_CR_ARMOR)
-    call SetBuildUpgr(3, UPG_FURBOLG_CR_ATTACK)
-    
-    call SetBuildUpgr(2, UPG_FURBOLG_SHAMAN)
-    call SetBuildUpgr(2, UPG_FURBOLG_ELDER_SHAMAN)
-    call SetBuildUpgr(1, UPG_FURBOLG_FAERIE_FIRE)
-    call SetBuildUpgr(1, UPG_FURBOLG_WEB)
-    call SetBuildUpgr(1, UPG_FURBOLG_ENSNARE)
-    call SetBuildUpgr(1, UPG_FURBOLG_BLOOD_LUST)
-    call SetBuildUpgr(1, UPG_FURBOLG_BASH)
-    call SetBuildUpgr(1, UPG_FURBOLG_CORRUPTION)
-    call SetBuildUpgr(1, UPG_FURBOLG_CORRUPTED_ANCIENT_PROTECTOR)
-    call SetBuildUnit(1, FURBOLG_CORRUPTED_ANCIENT_PROTECTOR)
-    
-    call SetBuildUpgr(1, UPG_FURBOLG_BACKPACK)
-    
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, FURBOLG_TRIBAL_CENTER)
+        call SetBuildUnit(22, YOUNG_FURBOLG)
+        call SetBuildUnit(1, FURBOLG_LUMBER_CAMP)
+        call SetBuildUnit(1, RESURRECTION_STONE)
+        call SetBuildUnit(5, FURBOLG_HUT)
+        call SetBuildUnit(2, FURBOLG_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, FURBOLG_HOUSING)
+        call SetBuildUnit(2, FURBOLG_CITIZEN_FEMALE)
+        call SetBuildUnit(2, FURBOLG_CHILD)
+        call SetBuildUnit(2, FURBOLG_PET)
+        call SetBuildUnit(2, FURBOLG_BARRACKS)
+        call SetBuildUpgr(1, UPG_FURBOLG_LUMBER)
+        call SetBuildUnit(2, GUARDING_FURBOLG)
+        call SetBuildUnit(1, FURBOLG_MARKETPLACE)
+        call SetBuildUnit(1, FURBOLG_WOLVES_CAGE)
+        call SetBuildUnit(1, FURBOLG_POLAR_HUT)
+        call SetBuildUnit(1, FURBOLG_DEFILED_FOUNTAIN)
+        call SetBuildUpgr(2, UPG_FURBOLG_LUMBER)
+        call SetBuildUnit(1, FURBOLG_GREEN_DRAGON_ROOST)
+
+        call SetBuildUpgr(3, UPG_FURBOLG_STEEL_RWEAPONS)
+        call SetBuildUpgr(3, UPG_FURBOLG_STEEL_WEAPONS)
+        call SetBuildUpgr(3, UPG_FURBOLG_STEEL_ARMOR)
+        call SetBuildUpgr(3, UPG_FURBOLG_CR_ARMOR)
+        call SetBuildUpgr(3, UPG_FURBOLG_CR_ATTACK)
+
+        call SetBuildUpgr(2, UPG_FURBOLG_SHAMAN)
+        call SetBuildUpgr(2, UPG_FURBOLG_ELDER_SHAMAN)
+        call SetBuildUpgr(1, UPG_FURBOLG_FAERIE_FIRE)
+        call SetBuildUpgr(1, UPG_FURBOLG_WEB)
+        call SetBuildUpgr(1, UPG_FURBOLG_ENSNARE)
+        call SetBuildUpgr(1, UPG_FURBOLG_BLOOD_LUST)
+        call SetBuildUpgr(1, UPG_FURBOLG_BASH)
+        call SetBuildUpgr(1, UPG_FURBOLG_CORRUPTION)
+        call SetBuildUpgr(1, UPG_FURBOLG_CORRUPTED_ANCIENT_PROTECTOR)
+        call SetBuildUnit(1, FURBOLG_CORRUPTED_ANCIENT_PROTECTOR)
+
+        call SetBuildUpgr(1, UPG_FURBOLG_BACKPACK)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(FURBOLG_TRIBAL_CENTER)
@@ -58,7 +59,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

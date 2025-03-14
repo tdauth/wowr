@@ -1,75 +1,76 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, KOBOLD_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, KOBOLD_WORKER)
-    call SetBuildUnit(2, KOBOLD_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, KOBOLD_HOUSING)
-    call SetBuildUnit(1, KOBOLD_MILL)
-    call SetBuildUnit(3, KOBOLD_CAVERN)
-    call SetBuildUnit(2, KOBOLD_BARRACKS)
-    call SetBuildUnit(1, KOBOLD_ALTAR)
-    call SetBuildUnit(1, KOBOLD_SHOP)
-    
-    call SetBuildUpgr(1, UPG_KOBOLD_MELEE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_HARPOONS)
-    call SetBuildUpgr(1, UPG_KOBOLD_ARMOR)
-    //call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, KOBOLD_TIER_2)
-    call SetBuildUnit(1, KOBOLD_MILL)
-    call SetBuildUnit(1, KOBOLD_LODGE)
-    call SetBuildUnit(1, KOBOLD_BEASTIARY)
-    call SetBuildUnit(4, KOBOLD_CAVERN)
-    call SetBuildUnit(2, KOBOLD_CITIZEN_FEMALE)
-    call SetBuildUnit(2, KOBOLD_CHILD)
-    call SetBuildUnit(2, KOBOLD_PET)
-    
-    call SetBuildUpgr(2, UPG_KOBOLD_MELEE)
-    //call SetBuildUpgr(2, UPG_TUSKARR_HARPOONS)
-    call SetBuildUpgr(2, UPG_KOBOLD_ARMOR)
-    //call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
-    //call SetBuildUpgr(1, UPG_TUSKARR_FROST_IMMUNITY)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
-    call SetBuildUpgr(1, UPG_KOBOLD_GEOMANCER)
-    call SetBuildUpgr(1, UPG_KOBOLD_MINING)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, KOBOLD_TIER_3)
-    //call SetBuildUnit(1, TUSKARR_DECORATED_CAVERN)
-    call SetBuildUnit(5, KOBOLD_CAVERN)
-    call SetBuildUnit(2, KOBOLD_ADVANCED_BOULDER_TOWER)
-    //call SetBuildUnit(2, TUSKARR_SPIDER_SHRINE)
-    //call SetBuildUnit(2, TUSKARR_FROST_SNOWMAN)
-    call SetBuildUnit(1, KOBOLD_TUNNEL)
-
-    call SetBuildUpgr(3, UPG_KOBOLD_MELEE)
-    //call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
-    call SetBuildUpgr(3, UPG_KOBOLD_ARMOR)
-    //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
-    call SetBuildUpgr(2, UPG_KOBOLD_GEOMANCER)
-    call SetBuildUpgr(2, UPG_KOBOLD_MINING)
-    //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
-    //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
-    //call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
-    //call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
-    call SetBuildUpgr(1, UPG_KOBOLD_GOLD_COINS)
-    call SetBuildUpgr(1, UPG_KOBOLD_BURROW)
-    call SetBuildUpgr(1, UPG_KOBOLD_CANDLES)
-    call SetBuildUpgr(1, UPG_KOBOLD_BACKPACK)
-    call SetBuildUpgr(1, UPG_KOBOLD_MINES)
-    call SetBuildUnit(1, KOBOLD_MINES)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, KOBOLD_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, KOBOLD_WORKER)
+        call SetBuildUnit(2, KOBOLD_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, KOBOLD_HOUSING)
+        call SetBuildUnit(1, KOBOLD_MILL)
+        call SetBuildUnit(3, KOBOLD_CAVERN)
+        call SetBuildUnit(2, KOBOLD_BARRACKS)
+        call SetBuildUnit(1, KOBOLD_ALTAR)
+        call SetBuildUnit(1, KOBOLD_SHOP)
+
+        call SetBuildUpgr(1, UPG_KOBOLD_MELEE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_HARPOONS)
+        call SetBuildUpgr(1, UPG_KOBOLD_ARMOR)
+        //call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, KOBOLD_TIER_2)
+        call SetBuildUnit(1, KOBOLD_MILL)
+        call SetBuildUnit(1, KOBOLD_LODGE)
+        call SetBuildUnit(1, KOBOLD_BEASTIARY)
+        call SetBuildUnit(4, KOBOLD_CAVERN)
+        call SetBuildUnit(2, KOBOLD_CITIZEN_FEMALE)
+        call SetBuildUnit(2, KOBOLD_CHILD)
+        call SetBuildUnit(2, KOBOLD_PET)
+
+        call SetBuildUpgr(2, UPG_KOBOLD_MELEE)
+        //call SetBuildUpgr(2, UPG_TUSKARR_HARPOONS)
+        call SetBuildUpgr(2, UPG_KOBOLD_ARMOR)
+        //call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
+        //call SetBuildUpgr(1, UPG_TUSKARR_FROST_IMMUNITY)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
+        call SetBuildUpgr(1, UPG_KOBOLD_GEOMANCER)
+        call SetBuildUpgr(1, UPG_KOBOLD_MINING)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, KOBOLD_TIER_3)
+        //call SetBuildUnit(1, TUSKARR_DECORATED_CAVERN)
+        call SetBuildUnit(5, KOBOLD_CAVERN)
+        call SetBuildUnit(2, KOBOLD_ADVANCED_BOULDER_TOWER)
+        //call SetBuildUnit(2, TUSKARR_SPIDER_SHRINE)
+        //call SetBuildUnit(2, TUSKARR_FROST_SNOWMAN)
+        call SetBuildUnit(1, KOBOLD_TUNNEL)
+
+        call SetBuildUpgr(3, UPG_KOBOLD_MELEE)
+        //call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
+        call SetBuildUpgr(3, UPG_KOBOLD_ARMOR)
+        //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
+        call SetBuildUpgr(2, UPG_KOBOLD_GEOMANCER)
+        call SetBuildUpgr(2, UPG_KOBOLD_MINING)
+        //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
+        //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
+        //call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
+        //call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
+        call SetBuildUpgr(1, UPG_KOBOLD_GOLD_COINS)
+        call SetBuildUpgr(1, UPG_KOBOLD_BURROW)
+        call SetBuildUpgr(1, UPG_KOBOLD_CANDLES)
+        call SetBuildUpgr(1, UPG_KOBOLD_BACKPACK)
+        call SetBuildUpgr(1, UPG_KOBOLD_MINES)
+        call SetBuildUnit(1, KOBOLD_MINES)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(KOBOLD_TIER_1)
@@ -83,7 +84,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

@@ -1,71 +1,72 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, GNOLL_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, GNOLL_WORKER)
-    call SetBuildUnit(2, GNOLL_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, GNOLL_HOUSING)
-    call SetBuildUnit(1, GNOLL_LUMBERYARD)
-    call SetBuildUnit(1, GNOLL_FORGE)
-    call SetBuildUnit(3, GNOLL_HUT)
-    call SetBuildUnit(2, GNOLL_KENNEL)
-    call SetBuildUnit(1, GNOLL_ALTAR)
-    call SetBuildUnit(1, GNOLL_SHOP)
-    
-    //call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_WEAPONS)
-    //call SetBuildUpgr(1, UPG_TUSKARR_HARPOONS)
-    //call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_ARMOR)
-    //call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, GNOLL_TIER_2)
-    call SetBuildUnit(1, GNOLL_LUMBERYARD)
-    call SetBuildUnit(1, GNOLL_ELEMENTAL_GROVE)
-    call SetBuildUnit(4, GNOLL_HUT)
-    call SetBuildUnit(1, GNOLL_BATTLE_ARENA)
-    call SetBuildUnit(2, GNOLL_CITIZEN_FEMALE)
-    call SetBuildUnit(2, GNOLL_CHILD)
-    call SetBuildUnit(2, GNOLL_PET)
-    
-    //call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_WEAPONS)
-    //call SetBuildUpgr(2, UPG_TUSKARR_HARPOONS)
-    //call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_ARMOR)
-    //call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
-    call SetBuildUpgr(1, UPG_GNOLL_ENVENOMED_WEAPONS)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
-    //call SetBuildUpgr(1, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
-    //call SetBuildUpgr(1, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, GNOLL_TIER_3)
-    call SetBuildUnit(2, GNOLL_SAVAGE_TOWER)
-
-    //call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_WEAPONS)
-    //call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
-    //call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_ARMOR)
-    //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
-    //call SetBuildUpgr(2, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
-    //call SetBuildUpgr(2, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
-    //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
-    //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
-    //call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
-    //call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
-    //call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
-    //call SetBuildUpgr(1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR)
-    call SetBuildUpgr(1, UPG_GNOLL_BARREL_FORM)
-    call SetBuildUpgr(1, UPG_GNOLL_ENSLAVEMENT)
-    call SetBuildUpgr(1, UPG_GNOLL_BACKPACK)
-    //call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
-    //call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, GNOLL_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, GNOLL_WORKER)
+        call SetBuildUnit(2, GNOLL_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, GNOLL_HOUSING)
+        call SetBuildUnit(1, GNOLL_LUMBERYARD)
+        call SetBuildUnit(1, GNOLL_FORGE)
+        call SetBuildUnit(3, GNOLL_HUT)
+        call SetBuildUnit(2, GNOLL_KENNEL)
+        call SetBuildUnit(1, GNOLL_ALTAR)
+        call SetBuildUnit(1, GNOLL_SHOP)
+
+        //call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_WEAPONS)
+        //call SetBuildUpgr(1, UPG_TUSKARR_HARPOONS)
+        //call SetBuildUpgr(1, UPG_TUSKARR_TUSKARR_ARMOR)
+        //call SetBuildUpgr(1, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ENSNARE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_IMPROVED_FISHING)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, GNOLL_TIER_2)
+        call SetBuildUnit(1, GNOLL_LUMBERYARD)
+        call SetBuildUnit(1, GNOLL_ELEMENTAL_GROVE)
+        call SetBuildUnit(4, GNOLL_HUT)
+        call SetBuildUnit(1, GNOLL_BATTLE_ARENA)
+        call SetBuildUnit(2, GNOLL_CITIZEN_FEMALE)
+        call SetBuildUnit(2, GNOLL_CHILD)
+        call SetBuildUnit(2, GNOLL_PET)
+
+        //call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_WEAPONS)
+        //call SetBuildUpgr(2, UPG_TUSKARR_HARPOONS)
+        //call SetBuildUpgr(2, UPG_TUSKARR_TUSKARR_ARMOR)
+        //call SetBuildUpgr(2, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(2, UPG_TUSKARR_IMPROVED_FISHING)
+        call SetBuildUpgr(1, UPG_GNOLL_ENVENOMED_WEAPONS)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ETHERAL_BEASTS)
+        //call SetBuildUpgr(1, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
+        //call SetBuildUpgr(1, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, GNOLL_TIER_3)
+        call SetBuildUnit(2, GNOLL_SAVAGE_TOWER)
+
+        //call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_WEAPONS)
+        //call SetBuildUpgr(3, UPG_TUSKARR_HARPOONS)
+        //call SetBuildUpgr(3, UPG_TUSKARR_TUSKARR_ARMOR)
+        //call SetBuildUpgr(3, UPG_TUSKARR_BEAST_PROTECTION)
+        //call SetBuildUpgr(2, UPG_GNOLL_MYSTWEAVER_ADEPT_TRAINING)
+        //call SetBuildUpgr(2, UPG_GNOLL_TREASURE_HUNTER_ADEPT_TRAINING)
+        //call SetBuildUpgr(3, UPG_TUSKARR_DEVOUR)
+        //call SetBuildUpgr(3, UPG_TUSKARR_IMPROVED_FISHING)
+        //call SetBuildUpgr(1, UPG_TUSKARR_WAR_STOMP)
+        //call SetBuildUpgr(1, UPG_TUSKARR_CRITICAL_STRIKE)
+        //call SetBuildUpgr(1, UPG_TUSKARR_CLANS)
+        //call SetBuildUpgr(1, UPG_TUSKARR_ELITE_ARMORED_POLAR_BEAR)
+        call SetBuildUpgr(1, UPG_GNOLL_BARREL_FORM)
+        call SetBuildUpgr(1, UPG_GNOLL_ENSLAVEMENT)
+        call SetBuildUpgr(1, UPG_GNOLL_BACKPACK)
+        //call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
+        //call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(GNOLL_TIER_1)
@@ -79,7 +80,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

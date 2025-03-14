@@ -1,71 +1,72 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, DUNGEON_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, DUNGEON_WORKER)
-    call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, DUNGEON_HOUSING)
-    call SetBuildUnit(1, DUNGEON_TORTURE_CHAMBER)
-    call SetBuildUnit(3, DUNGEON_CAGE)
-    call SetBuildUnit(1, DUNGEON_BARRACKS)
-    call SetBuildUnit(1, DUNGEON_ALTAR)
-    call SetBuildUnit(1, DUNGEON_SHOP)
-    
-    call SetBuildUpgr(1, UPG_DUNGEON_MELEE)
-    call SetBuildUpgr(1, UPG_DUNGEON_RANGED)
-    call SetBuildUpgr(1, UPG_DUNGEON_ARMOR)
-    call SetBuildUpgr(1, UPG_DUNGEON_BURNING_ARROWS)
-    call SetBuildUpgr(1, UPG_DUNGEON_SKELETON_BONES)
-    call SetBuildUpgr(1, UPG_DUNGEON_SPIKES)
-    call SetBuildUpgr(1, UPG_DUNGEON_CREATE_CORPSE)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, DUNGEON_TIER_2)
-    call SetBuildUnit(1, DUNGEON_BRAZIER)
-    call SetBuildUnit(1, DUNGEON_PRISON)
-    call SetBuildUnit(4, DUNGEON_CAGE)
-    call SetBuildUnit(2, DUNGEON_CITIZEN_FEMALE)
-    call SetBuildUnit(2, DUNGEON_PET)
-    call SetBuildUnit(2, DUNGEON_CHILD)
-    
-    call SetBuildUpgr(2, UPG_DUNGEON_MELEE)
-    call SetBuildUpgr(2, UPG_DUNGEON_RANGED)
-    call SetBuildUpgr(2, UPG_DUNGEON_ARMOR)
-    call SetBuildUpgr(2, UPG_DUNGEON_SPIKES)
-    call SetBuildUpgr(1, UPG_DUNGEON_DEVOUR)
-    call SetBuildUpgr(1, UPG_DUNGEON_EAT_TREE)
-    call SetBuildUpgr(1, UPG_DUNGEON_FIRE_REVENANT)
-    call SetBuildUpgr(1, UPG_DUNGEON_GHOST)
-    call SetBuildUpgr(1, UPG_DUNGEON_HERETIC)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, DUNGEON_TIER_3)
-    call SetBuildUnit(1, DUNGEON_DRAGON_ROOST)
-    call SetBuildUnit(5, DUNGEON_CAGE)
-    call SetBuildUnit(2, DUNGEON_SPIKES)
-    call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
-
-    call SetBuildUpgr(3, UPG_DUNGEON_MELEE)
-    call SetBuildUpgr(3, UPG_DUNGEON_RANGED)
-    call SetBuildUpgr(3, UPG_DUNGEON_ARMOR)
-    call SetBuildUpgr(2, UPG_DUNGEON_FIRE_REVENANT)
-    call SetBuildUpgr(2, UPG_DUNGEON_GHOST)
-    call SetBuildUpgr(2, UPG_DUNGEON_HERETIC)
-    call SetBuildUpgr(3, UPG_DUNGEON_SPIKES)
-    call SetBuildUpgr(1, UPG_DUNGEON_RESISTANT_SKIN)
-    call SetBuildUpgr(1, UPG_DUNGEON_WAR_STOMP)
-    call SetBuildUpgr(1, UPG_DUNGEON_SLEEP_FORM)
-    call SetBuildUpgr(1, UPG_DUNGEON_BERSERK)
-    call SetBuildUpgr(1, UPG_DUNGEON_CAPTURE)
-    call SetBuildUpgr(1, UPG_DUNGEON_BACKPACK)
-    call SetBuildUpgr(1, UPG_DUNGEON_THRONE)
-    call SetBuildUnit(1, DUNGEON_THRONE)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, DUNGEON_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, DUNGEON_WORKER)
+        call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, DUNGEON_HOUSING)
+        call SetBuildUnit(1, DUNGEON_TORTURE_CHAMBER)
+        call SetBuildUnit(3, DUNGEON_CAGE)
+        call SetBuildUnit(1, DUNGEON_BARRACKS)
+        call SetBuildUnit(1, DUNGEON_ALTAR)
+        call SetBuildUnit(1, DUNGEON_SHOP)
+
+        call SetBuildUpgr(1, UPG_DUNGEON_MELEE)
+        call SetBuildUpgr(1, UPG_DUNGEON_RANGED)
+        call SetBuildUpgr(1, UPG_DUNGEON_ARMOR)
+        call SetBuildUpgr(1, UPG_DUNGEON_BURNING_ARROWS)
+        call SetBuildUpgr(1, UPG_DUNGEON_SKELETON_BONES)
+        call SetBuildUpgr(1, UPG_DUNGEON_SPIKES)
+        call SetBuildUpgr(1, UPG_DUNGEON_CREATE_CORPSE)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, DUNGEON_TIER_2)
+        call SetBuildUnit(1, DUNGEON_BRAZIER)
+        call SetBuildUnit(1, DUNGEON_PRISON)
+        call SetBuildUnit(4, DUNGEON_CAGE)
+        call SetBuildUnit(2, DUNGEON_CITIZEN_FEMALE)
+        call SetBuildUnit(2, DUNGEON_PET)
+        call SetBuildUnit(2, DUNGEON_CHILD)
+
+        call SetBuildUpgr(2, UPG_DUNGEON_MELEE)
+        call SetBuildUpgr(2, UPG_DUNGEON_RANGED)
+        call SetBuildUpgr(2, UPG_DUNGEON_ARMOR)
+        call SetBuildUpgr(2, UPG_DUNGEON_SPIKES)
+        call SetBuildUpgr(1, UPG_DUNGEON_DEVOUR)
+        call SetBuildUpgr(1, UPG_DUNGEON_EAT_TREE)
+        call SetBuildUpgr(1, UPG_DUNGEON_FIRE_REVENANT)
+        call SetBuildUpgr(1, UPG_DUNGEON_GHOST)
+        call SetBuildUpgr(1, UPG_DUNGEON_HERETIC)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, DUNGEON_TIER_3)
+        call SetBuildUnit(1, DUNGEON_DRAGON_ROOST)
+        call SetBuildUnit(5, DUNGEON_CAGE)
+        call SetBuildUnit(2, DUNGEON_SPIKES)
+        call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
+
+        call SetBuildUpgr(3, UPG_DUNGEON_MELEE)
+        call SetBuildUpgr(3, UPG_DUNGEON_RANGED)
+        call SetBuildUpgr(3, UPG_DUNGEON_ARMOR)
+        call SetBuildUpgr(2, UPG_DUNGEON_FIRE_REVENANT)
+        call SetBuildUpgr(2, UPG_DUNGEON_GHOST)
+        call SetBuildUpgr(2, UPG_DUNGEON_HERETIC)
+        call SetBuildUpgr(3, UPG_DUNGEON_SPIKES)
+        call SetBuildUpgr(1, UPG_DUNGEON_RESISTANT_SKIN)
+        call SetBuildUpgr(1, UPG_DUNGEON_WAR_STOMP)
+        call SetBuildUpgr(1, UPG_DUNGEON_SLEEP_FORM)
+        call SetBuildUpgr(1, UPG_DUNGEON_BERSERK)
+        call SetBuildUpgr(1, UPG_DUNGEON_CAPTURE)
+        call SetBuildUpgr(1, UPG_DUNGEON_BACKPACK)
+        call SetBuildUpgr(1, UPG_DUNGEON_THRONE)
+        call SetBuildUnit(1, DUNGEON_THRONE)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(DUNGEON_TIER_1)
@@ -79,7 +80,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, UNDEAD_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 

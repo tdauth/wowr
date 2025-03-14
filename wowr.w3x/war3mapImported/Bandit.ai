@@ -1,72 +1,73 @@
 function BuildingStrategy takes nothing returns nothing
-    // Tier 1 Buildings
-    call SetBuildUnit(1, BANDIT_TIER_1)
-    call SetBuildUnit(WORKERS_COUNT_START, BANDIT_WORKER)
-    call SetBuildUnit(2, BANDIT_CITIZEN_MALE)
-
-    call BuildingStrategyStandardTier1()
-
-    call SetBuildUnit(2, BANDIT_HOUSING)
-    call SetBuildUnit(1, BANDIT_MILL)
-    call SetBuildUnit(3, BANDIT_TENT)
-    call SetBuildUnit(1, BANDIT_BARRACKS)
-    call SetBuildUnit(1, BANDIT_ALTAR)
-    call SetBuildUnit(1, BANDIT_BLACKSMITH)
-    call SetBuildUnit(1, BANDIT_MARKET)
-    
-    call SetBuildUpgr(1, UPG_BANDIT_MELEE)
-    call SetBuildUpgr(1, UPG_BANDIT_RANGED)
-    call SetBuildUpgr(1, UPG_BANDIT_ARMOR)
-    call SetBuildUpgr(1, UPG_BANDIT_ENSNARE)
-    call SetBuildUpgr(1, UPG_BANDIT_SHADOW_MELD)
-
-    // Tier 2 buildings
-    call SetBuildUnit(1, BANDIT_TIER_2)
-    call SetBuildUnit(1, BANDIT_CHURCH)
-    call SetBuildUnit(1, BANDIT_PRISON)
-    call SetBuildUnit(4, BANDIT_TENT)
-    call SetBuildUnit(2, BANDIT_CITIZEN_FEMALE)
-    call SetBuildUnit(2, BANDIT_CHILD)
-    call SetBuildUnit(2, BANDIT_PET)
-    
-    call SetBuildUnit(3, BANDIT_WATCH_TOWER)
-    
-    call SetBuildUpgr(2, UPG_BANDIT_MELEE)
-    call SetBuildUpgr(2, UPG_BANDIT_RANGED)
-    call SetBuildUpgr(2, UPG_BANDIT_ARMOR)
-    call SetBuildUpgr(1, UPG_BANDIT_WOOD)
-    call SetBuildUpgr(1, UPG_BANDIT_HERETIC)
-    call SetBuildUpgr(1, UPG_BANDIT_WIZARD)
-    call SetBuildUpgr(1, UPG_BANDIT_SLAVE_MASTER)
-    call SetBuildUpgr(1, UPG_BANDIT_RESISTANT_SKIN)
-    call SetBuildUpgr(1, UPG_BANDIT_ENVENOMED_WEAPONS)
-
-    // Tier 3 buildings
-    call SetBuildUnit(1, BANDIT_TIER_3)
-    call SetBuildUnit(1, BANDIT_AVIARY)
-    
-    call SetBuildUpgr(3, UPG_BANDIT_MELEE)
-    call SetBuildUpgr(3, UPG_BANDIT_RANGED)
-    call SetBuildUpgr(3, UPG_BANDIT_ARMOR)
-    call SetBuildUpgr(2, UPG_BANDIT_WOOD)
-    call SetBuildUpgr(2, UPG_BANDIT_HERETIC)
-    call SetBuildUpgr(2, UPG_BANDIT_WIZARD)
-    call SetBuildUpgr(2, UPG_BANDIT_SLAVE_MASTER)
-    call SetBuildUpgr(1, UPG_BANDIT_FEATHER_ATTACK)
-    call SetBuildUpgr(1, UPG_BANDIT_STORM_HAMMERS)
-    call SetBuildUpgr(1, UPG_BANDIT_TRUE_SIGHT)
-    call SetBuildUpgr(1, UPG_BANDIT_ENSLAVEMENT)
-    call SetBuildUpgr(1, UPG_BANDIT_ROB)
-    call SetBuildUpgr(1, UPG_BANDIT_RIDE_DOWN)
-
-    call SetBuildUpgr(1, UPG_BANDIT_BACKPACK)
-
-    call SetBuildUpgr(1, UPG_BANDIT_THIEVES_GUILD)
-    call SetBuildUnit(1, BANDIT_THIEVES_GUILD)
-
-    call BuildingStrategyStandardTier3()
-
     loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, BANDIT_TIER_1)
+        call SetBuildUnit(WORKERS_COUNT_START, BANDIT_WORKER)
+        call SetBuildUnit(2, BANDIT_CITIZEN_MALE)
+
+        call BuildingStrategyStandardTier1()
+
+        call SetBuildUnit(2, BANDIT_HOUSING)
+        call SetBuildUnit(1, BANDIT_MILL)
+        call SetBuildUnit(3, BANDIT_TENT)
+        call SetBuildUnit(1, BANDIT_BARRACKS)
+        call SetBuildUnit(1, BANDIT_ALTAR)
+        call SetBuildUnit(1, BANDIT_BLACKSMITH)
+        call SetBuildUnit(1, BANDIT_MARKET)
+
+        call SetBuildUpgr(1, UPG_BANDIT_MELEE)
+        call SetBuildUpgr(1, UPG_BANDIT_RANGED)
+        call SetBuildUpgr(1, UPG_BANDIT_ARMOR)
+        call SetBuildUpgr(1, UPG_BANDIT_ENSNARE)
+        call SetBuildUpgr(1, UPG_BANDIT_SHADOW_MELD)
+
+        // Tier 2 buildings
+        call SetBuildUnit(1, BANDIT_TIER_2)
+        call SetBuildUnit(1, BANDIT_CHURCH)
+        call SetBuildUnit(1, BANDIT_PRISON)
+        call SetBuildUnit(4, BANDIT_TENT)
+        call SetBuildUnit(2, BANDIT_CITIZEN_FEMALE)
+        call SetBuildUnit(2, BANDIT_CHILD)
+        call SetBuildUnit(2, BANDIT_PET)
+
+        call SetBuildUnit(3, BANDIT_WATCH_TOWER)
+
+        call SetBuildUpgr(2, UPG_BANDIT_MELEE)
+        call SetBuildUpgr(2, UPG_BANDIT_RANGED)
+        call SetBuildUpgr(2, UPG_BANDIT_ARMOR)
+        call SetBuildUpgr(1, UPG_BANDIT_WOOD)
+        call SetBuildUpgr(1, UPG_BANDIT_HERETIC)
+        call SetBuildUpgr(1, UPG_BANDIT_WIZARD)
+        call SetBuildUpgr(1, UPG_BANDIT_SLAVE_MASTER)
+        call SetBuildUpgr(1, UPG_BANDIT_RESISTANT_SKIN)
+        call SetBuildUpgr(1, UPG_BANDIT_ENVENOMED_WEAPONS)
+
+        // Tier 3 buildings
+        call SetBuildUnit(1, BANDIT_TIER_3)
+        call SetBuildUnit(1, BANDIT_AVIARY)
+
+        call SetBuildUpgr(3, UPG_BANDIT_MELEE)
+        call SetBuildUpgr(3, UPG_BANDIT_RANGED)
+        call SetBuildUpgr(3, UPG_BANDIT_ARMOR)
+        call SetBuildUpgr(2, UPG_BANDIT_WOOD)
+        call SetBuildUpgr(2, UPG_BANDIT_HERETIC)
+        call SetBuildUpgr(2, UPG_BANDIT_WIZARD)
+        call SetBuildUpgr(2, UPG_BANDIT_SLAVE_MASTER)
+        call SetBuildUpgr(1, UPG_BANDIT_FEATHER_ATTACK)
+        call SetBuildUpgr(1, UPG_BANDIT_STORM_HAMMERS)
+        call SetBuildUpgr(1, UPG_BANDIT_TRUE_SIGHT)
+        call SetBuildUpgr(1, UPG_BANDIT_ENSLAVEMENT)
+        call SetBuildUpgr(1, UPG_BANDIT_ROB)
+        call SetBuildUpgr(1, UPG_BANDIT_RIDE_DOWN)
+
+        call SetBuildUpgr(1, UPG_BANDIT_BACKPACK)
+
+        call SetBuildUpgr(1, UPG_BANDIT_THIEVES_GUILD)
+        call SetBuildUnit(1, BANDIT_THIEVES_GUILD)
+
+        call BuildingStrategyStandardTier3()
+
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(BANDIT_TIER_1)
@@ -80,7 +81,7 @@ function BuildingStrategy takes nothing returns nothing
             call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
         endif
 
-        call Sleep(M1)
+        call Sleep(3)
     endloop
 endfunction
 
