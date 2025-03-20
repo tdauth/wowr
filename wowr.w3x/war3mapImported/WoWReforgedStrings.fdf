@@ -10,6 +10,19 @@
  */
 
 StringList {
+    NONE                               "None",
+    NORMAL                             "Normal",
+    SMALL                              "Small",
+    MEDIUM                             "Medium",
+    LARGE                              "Large",
+    FORTIFIED                          "Fortified",
+    HERO                               "Hero",
+    DIVINE                             "Divine",
+    PIERCE                             "Pierce",
+    SIEGE                              "Siege",
+    MELEE                              "Melee",
+    CHAOS                              "Chaos",
+    MAGIC                              "Magic",
     OK_YELLOW                          "|cffffcc00OK|r",
     CLOSE_YELLOW                       "|cffFCD20DClose|r",
     APPLY_YELLOW                       "|cffFCD20DApply|r",
