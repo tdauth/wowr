@@ -10,6 +10,10 @@
  */
 
 StringList {
+    OK_YELLOW                          "|cffffcc00OK|r",
+    CLOSE_YELLOW                       "|cffFCD20DSchließen|r",
+    APPLY_YELLOW                       "|cffFCD20DÜbernehmen|r",
+    DAMAGE_CALCULATION_TABLE           "Damage Calculation Table",
     HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
     HERO_STRENGTH_MELEE                "Hero Strength Melee",
     HERO_STRENGTH_RANGE                "Hero Strength Range",
