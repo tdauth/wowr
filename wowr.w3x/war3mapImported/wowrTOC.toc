@@ -3,4 +3,5 @@ UI\FrameDef\UI\escmenutemplates.fdf
 UI\FrameDef\Glue\battlenettemplates.fdf
 UI\Frames\framedef\glue\battlenettemplates.fdf
 UI\Frames\framedef\ui\escmenutemplates.fdf​
+war3mapImported\WoWReforgedStrings.fdf
 war3mapImported\aiplayerspopups.fdf
