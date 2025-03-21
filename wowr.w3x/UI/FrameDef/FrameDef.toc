@@ -13,6 +13,7 @@ UI\FrameDef\Glue\MapPreferenceBox.fdf
 UI\FrameDef\Glue\CheckListBox.fdf
 UI\FrameDef\Glue\MainMenu.fdf
 UI\FrameDef\Glue\MovieScreen.fdf
+UI\FrameDef\Glue\SplashScreen.fdf
 UI\FrameDef\Glue\Loading.fdf
 UI\FrameDef\Glue\LoadSavedGameScreen.fdf
 UI\FrameDef\Glue\OptionsMenu.fdf
@@ -52,6 +53,7 @@ UI\FrameDef\Glue\BattleNetClanInvitation.fdf
 UI\FrameDef\Glue\BattleNetStatusBox.fdf
 UI\FrameDef\Glue\BattleNetIconSelectBox.fdf
 UI\FrameDef\UI\ConsoleUI.fdf
+UI\FrameDef\UI\CommandBar.fdf
 UI\FrameDef\UI\AllianceSlot.fdf
 UI\FrameDef\UI\AllianceDialog.fdf
 UI\FrameDef\UI\ChatDialog.fdf
@@ -61,6 +63,7 @@ UI\FrameDef\UI\EscMenuOptionsPanel.fdf
 UI\FrameDef\UI\EscMenuSaveGamePanel.fdf
 UI\FrameDef\UI\GameResultDialog.fdf
 UI\FrameDef\UI\UpperButtonBar.fdf
+UI\FrameDef\UI\InventoryBar.fdf
 UI\FrameDef\UI\ResourceBar.fdf
 UI\FrameDef\UI\SimpleInfoPanel.fdf
 UI\FrameDef\UI\SuspendDialog.fdf
@@ -69,6 +72,7 @@ UI\FrameDef\UI\ReplayPanel.fdf
 UI\FrameDef\UI\ObserverPanel.fdf
 UI\FrameDef\UI\QuestDialog.fdf
 UI\FrameDef\UI\TimerDialog.fdf
+UI\FrameDef\UI\MiniMapFrame.fdf
 UI\FrameDef\UI\Leaderboard.fdf
 UI\FrameDef\UI\Multiboard.fdf
 UI\FrameDef\UI\CinematicPanel.fdf
