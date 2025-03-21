@@ -72,7 +72,7 @@ It contains a very basic freelancer AI for computer players.
 
 The map uses several custom systems created by Baradé which can be used in any other map.
 They are available in [systems](./systems).
-Each system provides a prototype map which shows you how to use the system.
+Each system provides a prototype map which shows you how to use it.
 
 ## Custom FDF Files
 
