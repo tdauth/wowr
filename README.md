@@ -73,6 +73,11 @@ The map uses several custom systems created by Baradé which can be used in any 
 They are available in [systems](./systems).
 Each system provides a prototype map which shows you how to use the system.
 
+## Custom FDF Files
+
+All custom FDF files are listed in the file [wowrTOC.toc](./wowr.w3x/war3mapImported/wowrTOC.toc).
+It has to be loaded with `BlzLoadTOCFile` before using any `GetLocalizedString` calls.
+
 ## Internationalization
 
 There can be translations of the map into different languages:
