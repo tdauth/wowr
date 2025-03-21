@@ -10,7 +10,7 @@
  */
 
 StringList {
-    /* Attack and Defense Types */
+    // Attack and Defense Types
     NONE                               "None",
     NORMAL                             "Normal",
     SMALL                              "Small",
@@ -25,15 +25,15 @@ StringList {
     CHAOS                              "Chaos",
     MAGIC                              "Magic",
     DAMAGE_CALCULATION_TABLE           "Damage Calculation Table",
-    /* UI */
+    // UI
     OK_YELLOW                          "|cffffcc00OK|r",
     CLOSE_YELLOW                       "|cffFCD20DClose|r",
     APPLY_YELLOW                       "|cffFCD20DApply|r",
-    /* Heroes */
+    // Heroes
     HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
     HERO_STRENGTH_MELEE                "Hero Strength Melee",
     HERO_STRENGTH_RANGE                "Hero Strength Range",
-    /* Start Locations */
+    // Start Locations
     TERDRASSIL                         "Terdrassil",
     WORLD_TREE                         "World Tree",
     ORGRIMMAR                          "Orgrimmar",
@@ -65,7 +65,7 @@ StringList {
     FALL                               "Fall",
     DESERT                             "Desert",
     DRAGON_ISLES                       "Dragon Isles",
-    /* Races */
+    // Races
     MATCHING_START_LOCATION            "Matching Start Location",
     RANDOM_WARLORD                     "Random Warlord",
     RANDOM_FREELANCER                  "Random Freelancer",
@@ -107,7 +107,7 @@ StringList {
     DUNGEON                            "Dungeon",
     DRAGONKIN                          "Dragonkin",
     VILLAGE                            "Village",
-    /* Professions */
+    // Professions
     HERBALIST                          "Herbalist",
     ALCHEMIST                          "Alchemist",
     WEAPON_SMITH                       "Weapon Smith",
@@ -126,7 +126,7 @@ StringList {
     GOLEM_SCULPTOR                     "Golem Sculptor",
     WARLOCK                            "Warlock",
     ASTROMANCER                        "Astromancer",
-    /* Player Colors */
+    // Player Colors
     RED                                "Red",
     BLUE                               "Blue",
     CYAN                               "Cyan",
@@ -151,7 +151,7 @@ StringList {
     SNOW                               "Snow",
     EMERALD                            "Emerald",
     PEANUT                             "Peanut",
-    /* Diplomacy UI */
+    // Diplomacy UI
     UNALLIED                           "Unallied",
     UNALLIED_VISION                    "Unallied Vision",
     ALLIED                             "Allied",
@@ -160,15 +160,15 @@ StringList {
     ALLIED_ADVANCED_UNITS              "Allied Advanced Units",
     NEUTRAL                            "Neutral",
     NEUTRAL_VISION                     "Neutral Vision",
-    /* Tomes */
+    // Tomes
     TOMES_DISABLED                     "Tomes are disabled.",
-    /* Backpack */
+    // Backpack
     BAG_WITH_INDEX                     "Bag %1%",
     BAG_ADDED                          "Added %1% to backpack bag %2% by stacking it to slot %3%.",
     BAG_ADDED_EMPTY                    "Added %1% to backpack bag %2% to empty slot %3%.",
     ORDERED_ITEMS                      "Ordered %1% items.",
     PICKUP_ERROR                       "%1% cannot be picked up: %2%",
-    /* Backpack UI */
+    // Backpack UI
     BACKPACK                           "Backpack",
     BAG_EMPTY_SLOT                     "Empty slot %1% at bag %2%.",
     BAG_CHANGED                        "Changed to bag %1%.",
@@ -180,7 +180,7 @@ StringList {
     BAG_TOOLTIP                        "%1%|n|n%2%",
     BAG_CHARGES                        " (|cffffcc00%1%|r)",
     DOT_HIDE_BAG_NUMBERS               "Hide bag numbers.",
-    /* Profession Ranks */
+    // Profession Ranks
     NOVICE                             "Novice",
     ADVANCED                           "Advanced",
     ADEPT                              "Adept",
@@ -188,18 +188,18 @@ StringList {
     GRAND_MASTER                       "Grand Master",
     DOCTOR                             "Doctor",
     CRAFT_TEXT                         "+%1%\nCooldown: %2%s",
-    /* Profession Combinator */
+    // Profession Combinator
     COMBINE_ERROR_NO_ABILITY_TARGET    "Target item has no free ability.",
     COMBINE_ERROR_NO_ABILITY_SOURCE    "Source item has no ability for index %1%.",
     COMBINE_ERROR_MAX_LEVEL            "Maximum allowed item level %1% but source item has level %2%.",
     COMBINE_ERROR_OWNER                "Source item has to be carried by the caster.",
-    /* Skins */
+    // Skins
     SKIN_CHANGED                       "Changed skin to %1%.",
     SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",
     SKIN_RESTRICTED                    "Skin is restricted to certain accounts: %1%",
     SKIN_CUSTOMIZABLE                  "Only customizable heroes can change their skin.",
     SKIN_NO_OTHER                      "No other skins.",
-    /* Zones */
+    // Zones
     ZONE_DISCOVERED                    "Discovered: |cff00ff00%1%|r",
     ZONE_ENTER                         "Entering now: |cff00ff00%1%|r",
     ZONE_NAME                          "|cff00ff00%1%|r",
@@ -208,14 +208,14 @@ StringList {
     ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r\n%3%",
     ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
     NO_UNITS_SELECTED                  "No unit selected.",
-    /* VIPs */
+    // VIPs
     VIP_WELCOME                        "Welcome %1%! You are an official VIP member of this map.",
-    /* Stats */
+    // Stats
     STATS_TITLE                        "Stats (%1%/%2%) %3% - %4% %5%",
     SINGLEPLAYER                       "Singleplayer",
     MULTIPLAYER                        "Multiplayer",
     FOOD                               "Food",
-    /* AI UI */
+    // AI UI
     AI_UI_TITLE                        "Computer Players (%1%/%2%)",
     COLOR                              "Color",
     LOCATION_WARLORD_ONLY              "Location (Warlord only)",
@@ -230,7 +230,7 @@ StringList {
     DIFFICULTY                         "Difficulty",
     PREVIOUS_PLAYER_YELLOW             "|cffFCD20DPrevious Player|r",
     NEXT_PLAYER_YELLOW                 "|cffFCD20DNext Player|r",
-    /* Actions Bar UI */
+    // Actions Bar UI
     TOGGLE_ACTION_BAR                  "Toggle action bar.",
     CLEAR_SCREEN_TEXT                  "Clear screen text.",
     PICKUP_ALL_ITEMS_NEARBY            "Pick up all items nearby.",
@@ -254,20 +254,20 @@ StringList {
     NO_SUMMONED_UNIT                   "No summoned unit.",
     DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items ("%1%") from backpack.",
     HOST_DIPLOMACY                     "You must be host to configure diplomacy.",
-    /* Settings UI */
+    // Settings UI
     SETTINGS                           "Settings",
     SETTINGS_MAP_NAME                  "Map Name: %1%",
     SETTINGS_MAP_VERSION               "Map Version: %1%",
     SETTINGS_MAP_DESCRIPTION           "Map Description: %1%",
     SETTINGS_MAP_DIMENSIONS            "Map Dimensions: %1%x%2%",
     SETTINGS_PLAYERS                   "Players: %1%",
-    /* News UI */
+    // News UI
     NEWS                               "News",
     COLON_SUBSCRIBE_VIP                "Subscribe (VIP):",
     COLON_DONATE                       "Donate:",
     COLON_DISCORD                      "Discord:",
     COLON_WEBSITE                      "Website:",
-    /* Save Codes UI */
+    // Save Codes UI
     UPDATE_YELLOW                      "|cffFCD20DUpdate|r",
     LOAD_YELLOW                        "|cffFCD20DLoad|r",
     LOAD_ALL_YELLOW                    "|cffFCD20DLoad All|r",
@@ -282,7 +282,7 @@ StringList {
     COLON_CLAN                         "|cffFFCC00Clan:|r",
     COLON_DIRECTORY                    "|cffFFCC00Directory:|r",
     COLON_ALL                          "|cffFFCC00All:|r",
-    /* Abilities */
+    // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
 }
