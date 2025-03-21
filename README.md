@@ -80,7 +80,8 @@ It has to be loaded with `BlzLoadTOCFile` before using any `GetLocalizedString` 
 
 ## Internationalization
 
-There can be translations of the map into different languages:
+There can be translations of the map into different languages.
+These are the existing translations so far:
 
 * 🇺🇸 [English map strings](./wowr.w3x/war3map.wts), [English global strings](./wowr.w3x/war3mapImported/WoWReforgedStrings.fdf)
 * 🇩🇪 [German map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [German global strings](./wowr.w3x/_Locales/deDE.w3mod/war3mapImported/WoWReforgedStrings.fdf)
