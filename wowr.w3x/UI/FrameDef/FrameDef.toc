@@ -75,4 +75,11 @@ UI\FrameDef\UI\CinematicPanel.fdf
 UI\FrameDef\UI\ScriptDialog.fdf
 UI\FrameDef\UI\GameSaveSplashDialog.fdf
 UI\FrameDef\UI\BrowserFrame.fdf
+ui\framedef\ui\escmenutemplates.fdf
+ui\framedef\glue\standardtemplates.fdf
+ui\framedef\glue\battlenettemplates.fdf
+UI\Frames\framedef\glue\battlenettemplates.fdf
+UI\Frames\framedef\ui\escmenutemplates.fdf​
 war3mapImported\WoWReforgedStrings.fdf
+war3mapImported\WoWReforgedStrings.fdf
+war3mapImported\aiplayerspopups.fdf
