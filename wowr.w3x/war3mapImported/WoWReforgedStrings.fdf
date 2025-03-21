@@ -10,6 +10,8 @@
  */
 
 StringList {
+    // Errors
+    NO_VALID_TARGETS                   "No valid targets.",
     // Attack and Defense Types
     NONE                               "None",
     NORMAL                             "Normal",
@@ -188,11 +190,30 @@ StringList {
     GRAND_MASTER                       "Grand Master",
     DOCTOR                             "Doctor",
     CRAFT_TEXT                         "+%1%\nCooldown: %2%s",
+    // Profession Weapon Smith
+    INCREASED_DAMAGE_ITEM              "Increased damage bonus of item.",
+    NO_ITEM_DAMAGE_ABILITIES           "Item has no known damage bonus abilities.",
+    // Profession Armorer
+    INCREASED_ARMOR_ITEM               "Increased armor bonus of item.",
+    NO_ITEM_ARMOR_ABILITIES            "Item has no known armor bonus abilities.",
     // Profession Combinator
     COMBINE_ERROR_NO_ABILITY_TARGET    "Target item has no free ability.",
     COMBINE_ERROR_NO_ABILITY_SOURCE    "Source item has no ability for index %1%.",
     COMBINE_ERROR_MAX_LEVEL            "Maximum allowed item level %1% but source item has level %2%.",
     COMBINE_ERROR_OWNER                "Source item has to be carried by the caster.",
+    // Profession Inscriptor
+    INSCRIPTOR_HERO_INFO               "%1% hero stats/defense/summoned units %2%, damage %3%, hp/mana %4%",
+    // Mounts
+    NO_MOUNTS                          "No mounts.",
+    ADDING_MOUNT                       "Adding mount %1%",
+    MOUNT_REACHED_MAX_ABILITIES        "Reached maximum of mount abilities.",
+    UNABLE_TO_ADD_MOUNT_ABILITY        "Unable to add mount ability.",
+    ONLY_DRACTHYR_HEROES_CAN_LEARN     "Only Dracthyr heroes can learn this.",
+    ONLY_WORGEN_HEROES_CAN_LEARN       "Only Worgen heroes can learn this.",
+    HERO_REQUIRES_LEVEL                "Your hero must be level %1% or higher.",
+    ONLY_HEROES_CHANGE_MOUNT           "Only your heroes can change their mounts.",
+    RESTRICTION_MOUNT                  "The mount is restricted to account names: %1%",
+    BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
     // Skins
     SKIN_CHANGED                       "Changed skin to %1%.",
     SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",
@@ -239,6 +260,8 @@ StringList {
     COLON_EVENT                        "Event:",
     // VIPs
     VIP_WELCOME                        "Welcome %1%! You are an official VIP member of this map.",
+    VIP_WELCOME_ALL                    "Welcome the VIPS: %1%!",
+    ONLY_VIPS_CAN_LOAD_SAVE_GAMES      "Only VIPs can load save games.",
     // Stats
     STATS_TITLE                        "Stats (%1%/%2%) %3% - %4% %5%",
     SINGLEPLAYER                       "Singleplayer",
@@ -279,7 +302,6 @@ StringList {
     DOT_TOGGLE_MULTIBOARDS             "Toggle multiboards.",
     DOT_NO_BACKPACK                    "No backpack.",
     DOT_NO_HERO_1                      "No hero 1.",
-    NO_MOUNTS                          "No mounts.",
     NO_SUMMONED_UNIT                   "No summoned unit.",
     DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items ("%1%") from backpack.",
     HOST_DIPLOMACY                     "You must be host to configure diplomacy.",
@@ -311,6 +333,18 @@ StringList {
     COLON_CLAN                         "|cffFFCC00Clan:|r",
     COLON_DIRECTORY                    "|cffFFCC00Directory:|r",
     COLON_ALL                          "|cffFFCC00All:|r",
+    // ChangeLog
+    ALL_CHANGES_OF_VERSION             "All changes of %1%.",
+    // Portals
+    PORTAL                             "Portal",
+    PORTAL_TO                          "Portal to %1%",
+    DISABLED_PORTAL                    "Disabled Portal",
+    // Item Sets
+    COMPLETED_ITEM_SET                 "Completed item set %1%.",
+    HOLY_SET                           "Holy Set",
+    // Fel
+    TARGET_HAS_ALREADY_CHAOS_ATTACK    "Target already has Chaos attack.",
+    TARGET_HAS_NO_ATTACK               "Target has no attack.",
     // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
