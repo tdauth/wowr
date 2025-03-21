@@ -1,0 +1,205 @@
+[halt]
+Name=Altar der Könige
+Hotkey=A
+Tip=|cffffcc00A|rltar der Könige errichten
+Ubertip="Beschwört Helden. Belebt getötete Helden wieder."
+
+[Hamg]
+Name=Erzmagier
+Propernames=Tenn Flamecaster,Nilas Arcanister,Andromath,Shal Lightbinder,Aran Spellweaver,Manath Magesinger,Landazar,Doril Magefont,Peril Spellbinder,Conjurus Rex,Fordred Aran,Dalar Dawnweaver, Kelen der Sucher
+Hotkey=E
+Tip=|cffffcc00E|rrzmagier beschwören
+Ubertip="Mystischer Held, geschickt bei Distanzangriffen. Kann 'Blizzard', 'Wasser-Elementargeist beschwören', 'Brillanz-Aura' und 'Massen-Teleportation' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r"
+Revivetip=|cffffcc00E|rrzmagier wiederbeleben
+ScoreScreenIcon=UI\Glues\ScoreScreen\scorescreen-hero-archmage.tga
+
+[harm]	
+Name=Werkstatt
+Hotkey=W
+Tip=|cffffcc00W|rerkstatt errichten
+Ubertip="Produziert Dampf-Panzer, Gyrokopter und Mörser-Trupps. |nBietet auch die Ausbaustufen 'Leuchtfeuer' und 'Gyrokopter-Bomben'."
+
+[hars]
+Name=Arkanes Sanktum
+Hotkey=R
+Tip=A|cffffcc00r|rkanes Sanktum errichten
+Ubertip="Bildet Priester und Zauberinnen aus. |nBietet auch Zauber-Ausbaustufen für Priester und Zauberinnen sowie die Ausbaustufe 'Magischer Schutz', die es menschlichen Türmen ermöglicht, unsichtbare Feinde zu entdecken."
+
+[hbar]
+Name=Kaserne
+Hotkey=K
+Tip=|cffffcc00K|raserne errichten
+Ubertip="Primäres Truppen-Produktionsgebäude. Bildet Soldaten, Scharfschützen und Ritter aus. |nBietet auch die 'Verteidigung'-Ausbaustufe für Soldaten, die 'Langflinten'-Ausbaustufe für Zwergen-Scharfschützen und die 'Kampftierausbildung'-Ausbaustufe für Ritter und Greifenreiter."
+
+[hbla]
+Name=Schmiede
+Hotkey=C
+Tip=S|cffffcc00c|rhmiede errichten
+Ubertip="Bietet die Ausbaustufen für verbesserte Rüstung, Waffen und Schießpulver."
+
+[hcas]
+Name=Schloss
+Hotkey=U
+Tip=A|cffffcc00u|rsbau zum Schloss
+Ubertip="Der Ausbau zum Schloss ermöglicht die Produktion weiterer Gebäude- und Einheitenarten."
+
+[hhou]
+Name=Hof
+Hotkey=F
+Tip=Ho|cffffcc00f|r errichten
+Ubertip="Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausgebildet werden können."
+
+[hfoo]	
+Name=Soldat
+Hotkey=S
+Tip=|cffffcc00S|roldaten ausbilden
+Ubertip="Vielseitig einsetzbarer Fußsoldat. Kann die 'Verteidigung'-Fähigkeit erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r"
+
+[hgra]
+Name=Greifenhorst
+Hotkey=G
+Tip=|cffffcc00G|rreifenhorst errichten
+Ubertip="Bildet Greifenreiter aus. |nBietet auch die Ausbaustufe 'Sturmhammer'."
+
+[hctw]
+Name=Kanonenturm
+Hotkey=K
+Tip=Ausbau zum |cffffcc00K|ranonenturm
+Ubertip="Starkes Verteidigungsgebäude. Besonders effektiv gegen Ansammlungen von Truppen. Kann die Fähigkeit 'Magischer Schutz' erlernen. |n|n|cffffcc00Greift Land-Einheiten und Bäume an.|r"
+
+[hgtw]
+Name=Wachturm
+Hotkey=W
+Tip=Zu |cffffcc00W|rachturm ausbauen
+Ubertip="Primäres Verteidigungsgebäude. Kann die Fähigkeit 'Magischer Schutz' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r"
+
+[hwtw]
+Name=Kontrollturm
+Hotkey=T
+Tip=Kontroll|cffffcc00t|rurm errichten
+Ubertip="Einfacher Beobachtungsturm. Hat keinen Angriff, kann aber zu einem Wachturm oder einem Kanonenturm ausgebaut werden. Kann die Fähigkeit 'Magischer Schutz' erlernen."
+
+[hgyr]
+Name=Gyrokopter
+Hotkey=G
+Tip=|cffffcc00G|ryrokopter ausbilden
+Ubertip="Flugapparat mit hohem Tempo. Ausgezeichnet zum Aufklären, effektiv gegen Luft-Einheiten. Kann die Fähigkeit 'Gyrokopter-Bomben' erlernen. |nKann unsichtbare Einheiten sehen. |n|n|cffffcc00Greift Luft-Einheiten an.|r"
+
+[hkee]	
+Name=Burg
+Hotkey=U
+Tip=A|cffffcc00u|rsbau zur Burg
+Ubertip="Der Ausbau zur Burg ermöglicht die Produktion weiterer Gebäude- und Einheitenarten."
+
+[hkni]
+Name=Ritter
+Hotkey=R
+Tip=|cffffcc00R|ritter ausbilden
+Ubertip="Mächtiger, berittener Krieger. Kann die Fähigkeit 'Kampftierausbildung' erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r"
+
+[hlum]
+Name=Sägewerk
+Hotkey=S
+Tip=|cffffcc00S|rägewerk errichten
+Ubertip="Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen für Holzgewinnung und Bau."
+
+[hmil]
+Name=Miliz
+
+[Hmkg]
+Name=Bergkönig
+Propernames=Bor Stonebreaker,Munin Ironcliff,Thorgas Broadaxe,Kelv Sternhammer,Grim Thunderbrew,Buri Frostbeard,Huginn Ironcliff,Thordin Rockbeard,Bandis Forgefire,Gar Doomforge,Beazel Bludstone,Modi Stonesmith,Aggronor der Mächtige
+Hotkey=B
+Tip=|cffffcc00B|rergkönig beschwören
+UberTip="Krieger-Held, Experte im Angriffskampf und im Zerstreuen feindlicher Truppen. Kann 'Sturmschlag', 'Donnerschlag', 'Hieb' und 'Avatar' erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r"
+Revivetip=|cffffcc00B|rergkönig wiederbeleben
+ScoreScreenIcon=UI\Glues\ScoreScreen\scorescreen-hero-mountainking.tga
+
+[hmpr]
+Name=Priester
+Hotkey=P
+Tip=|cffffcc00P|rriester ausbilden
+Ubertip="Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, wodurch das Leben verwundeter Einheiten erhöht wird. Kann auch 'Magie bannen' und 'Inneres Feuer' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Heilen","- Heilen|n- Magie bannen","- Heilen|n- Magie bannen|n- Inneres Feuer"
+
+[hmtm]
+Name=Mörser-Trupp
+Hotkey=M
+Tip=|cffffcc00M|rörser-Trupp ausbilden
+Ubertip="Belagerungswaffe mit hoher Reichweite. Verursacht starke Schäden an Gebäuden, ist aber langsam und verletzbar. Kann die 'Leuchtfeuer'-Fähigkeit erlernen. |n|n|cffffcc00Greift Land-Einheiten und Bäume an.|r"
+
+[Hpal]
+Name=Paladin
+Propernames=Granis Darkhammer,Jorn der Erlöser,Sage Truthbearer,Malak der Rächer,Gavinrad der Entsetzliche,Morlune der Mächtige,Agamand der Wahre,Ballador der Schlaue,Manadar der Heiler,Zann der Verteidiger,Arius der Sucher,Aurrius der Reine,Karnwield der Sucher,Buzan der Furchtlose
+Hotkey=L
+Tip=Pa|cffffcc00l|radin beschwören
+Ubertip="Krieger-Held mit außergewöhnlicher Verteidigung und gutem Einfluss auf in der Nähe befindliche befreundete Truppen. Kann 'Heiliges Licht', 'Gottesschild', 'Hingabe-Aura' und 'Wiederbelebung' erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r"
+Revivetip=Pa|cffffcc00l|radin wiederbeleben
+ScoreScreenIcon=UI\Glues\ScoreScreen\scorescreen-hero-paladin.tga
+
+[hpea]
+Name=Arbeiter
+Hotkey=R
+Tip=A|cffffcc00r|rbeiter ausbilden
+Ubertip="Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. Kann zu einer Miliz werden. |n|n|cffffcc00Greift Land-Einheiten und Bäume an.|r"
+
+[hrif]
+Name=Scharfschütze
+Hotkey=Z
+Tip=Scharfschüt|cffffcc00z|ren ausbilden
+Ubertip="Ausgezeichneter Scharfschütze, effektiv gegen Luft-Einheiten. Kann die Ausbaustufe 'Langflinten' erhalten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r"
+
+[hsor]
+Name=Zauberin
+Hotkey=Z
+Tip=|cffffcc00Z|rauberin ausbilden
+Ubertip="Vielseitige Zauberin. Kann zu Beginn den Spruch 'Langsam' wirken, wodurch das Bewegungs- und Angriffs-Tempo feindlicher Einheiten verringert wird. Kann auch 'Unsichtbarkeit' und 'Verwandlung' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Langsam","- Langsam|n- Unsichtbarkeit","- Langsam|n- Unsichtbarkeit|n- Verwandlung"
+
+//[hstt]
+//Name=Armored Transport
+//Hotkey=T
+//Tip=Train Armored |cffffcc00T|rransport
+//Ubertip="Heavily armored vehicle which can transport troops. When piloted by a Rifleman it becomes a War Wagon with a ranged attack. When piloted by a Mortar Team it becomes a Steam Tank with a siege attack. |nArmored Transports cannot attack."
+
+[hmtt]
+Name=Dampf-Panzer
+Hotkey=P
+Tip=Dampf-|cffffcc00P|ranzer ausbilden
+Ubertip="Schwer gepanzertes Fahrzeug, effektiv bei der Zerstörung von Gebäuden. |n|n|cffffcc00Greift Gebäude an.|r"
+
+//[hrtt]
+//Name=War Wagon
+
+[htow]
+Name=Rathaus
+Hotkey=H
+Tip=Rat|cffffcc00h|raus errichten
+Ubertip="Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen."
+
+// currently unused
+//[htws]
+//Name=Mage Tower
+//Hotkey=M
+//Tip=Build |cffffcc00M|rage Tower
+//Ubertip="Spellcaster production building. Trains Priests and Sorceresses."
+
+[hwat]
+Name=Wasser-Elementargeist
+EditorSuffix= (Stufe 1)
+
+[hwt2]
+Name=Wasser-Elementargeist
+EditorSuffix= (Stufe 2)
+
+[hwt3]
+Name=Wasser-Elementargeist
+EditorSuffix= (Stufe 3)
+
+[hgry]
+Name=Greifenreiter
+Hotkey=G
+Tip=|cffffcc00G|rreifenreiter ausbilden
+Ubertip="Mächtige fliegende Kreatur, die von einem Hammer werfenden Zwerg geritten wird. Kann 'Kampftierausbildung' und die Fähigkeit 'Sturmhammer' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r"

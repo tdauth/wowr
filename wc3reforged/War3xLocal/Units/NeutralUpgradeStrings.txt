@@ -1,0 +1,11 @@
+// Non-race-specific upgrades
+// glyph of fortification
+[Rgfo]
+Name=Glyphe der Verstärkung,Glyphe der Verstärkung,Glyphe der Verstärkung
+EditorSuffix= (Ausbau 1), (Ausbau 2), (Ausbau 3)
+
+// glyph of ultravision
+[Rguv]
+Name=Glyphe der Ultrasicht
+EditorSuffix= (Ausbau)
+

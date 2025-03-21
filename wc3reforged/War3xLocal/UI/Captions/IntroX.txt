@@ -1,0 +1,15 @@
+﻿00:00:00:01	00:00:00:02	                     
+00:00:10:23	00:00:13:11	Verräter.
+00:00:15:03	00:00:20:00	Ich war es doch, den man verriet ...
+00:00:28:20	00:00:31:22	Doch ich werde gejagt.
+00:00:33:17	00:00:36:15	Doch Ich werde gehasst ...
+00:00:38:15	00:00:43:00	Nun sehen meine blinden Augen, was anderen entgeht ...
+00:00:50:00	00:00:55:29	Dass manchmal ... des Schicksals Hand ... geführt werden muss!
+00:02:42:20	00:02:45:13	So ziehet denn fort ...
+00:02:48:20	00:02:52:06	und bringt alljenen Untergang
+00:02:55:02	00:02:57:15	all jenen, die sich
+00:02:58:11	00:03:00:20	uns entgegenstellen
+
+
+
+

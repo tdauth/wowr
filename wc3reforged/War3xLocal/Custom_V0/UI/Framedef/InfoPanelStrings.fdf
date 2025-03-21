@@ -1,0 +1,92 @@
+﻿/*
+ *  Info Panel Strings
+ *  ------------------
+ *
+ *  This file is a centralized location for storing strings which are
+ *  used through out info panels..  The identifiers
+ *  in the first column are unique, and must not be re-declared in a
+ *  StringList in any .fdf file.
+ *
+ */
+
+StringList {
+
+    AGILITY                         "Beweglichkeit",
+    AGILITY_HILIGHT                 "|Cffffff00Beweglichkeit|R",
+    ARMOR_FORT                      "Typ: |Cffffcc00Verstärkt|R",
+    ARMOR_HERO                      "Typ: |Cffffcc00Held|R",
+    ARMOR_LARGE                     "Typ: |Cffffcc00Schwer|R",
+    ARMOR_MEDIUM                    "Typ: |Cffffcc00Mittel|R",
+    ARMOR_NORMAL                    "Typ: |Cffffcc00Normal|R",
+    ARMOR_SMALL                     "Typ: |Cffffcc00Leicht|R",
+    ARMOR_DIVINE                    "Typ: |Cffffcc00Göttlich|R",
+    ARMOR_UNKNOWN                   "Typ: |Cffffcc00Unbekannt|R",
+    ARMOR_NONE                      "Typ: |Cffffcc00Ungepanzert|R",
+    ARMORTIP_FORT                   "Verstärkte Rüstung reduziert ausgezeichnet den Schaden durch normale sowie durch Stichangriffe, nimmt aber zusätzlichen Schaden bei Belagerungsangriffen.",
+    ARMORTIP_HERO                   "Helden nehmen bei Stich- und Belagerungsangriffen nur reduzierten Schaden.",
+    ARMORTIP_LARGE                  "Schwere Rüstung nimmt bei Stichangriffen zusätzlichen Schaden.",
+    ARMORTIP_MEDIUM                 "Alle Angriffe richten bei mittlerer Rüstung vollen Schaden an.",
+    ARMORTIP_NORMAL                 "Alle Angriffe richten bei normaler Rüstung vollen Schaden an.",
+    ARMORTIP_SMALL                  "Leichte Rüstung nimmt bei normalen Angriffen zusätzlichen und bei Stich- und Belagerungsangriffen reduzierten Schaden.",
+    ARMORTIP_DIVINE                 "Göttliche Wesen nehmen nur bei Chaos-Angriffen Schaden.",
+    ARMORTIP_UNKNOWN                "Unbekannte Rüstung bewirkt bei allen Angriffen eine unbekannte Reduzierung.",
+    ARMORTIP_NONE                   "Ungepanzert' nimmt bei Stich- und Belagerungsangriffen zusätzlichen Schaden.",
+    BONUS_ATTACK_SPEED              "  - Jeder Punkt erhöht das Angriffstempo",
+    BONUS_DAMAGE                    "  - Jeder Punkt erhöht den verursachten Schaden um %d",
+    BONUS_DEFENSE                   "  - Jeweils %d Punkte erhöhen die Rüstung um %d",    
+    BONUS_DEFENSE_FIXED             "  - Jeweils %d Punkte erhöhen die Rüstung um 1.",
+    BONUS_HITPOINTS                 "  - Jeder Punkt erhöht die Trefferpunkte um %d",
+    BONUS_HPREGEN                   "  - Jeder Punkt erhöht die Trefferpunkt-regeneration",    
+    BONUS_MANA                      "  - Jeder Punkt erhöht das Mana um %d",
+    BONUS_MANAREGEN                 "  - Jeder Punkt erhöht die mana-regeneration",
+    CASTER_UPGRADE_TIP              "Erhöhter Mana-Vorrat, erhöhte Mana-Regeneration, erhöhte Trefferpunkte und erhöhter Angriffsschaden.",
+    COLON_AGILITY                   "Beweglichkeit:",
+    COLON_AMOUNT                    "Menge:",
+    COLON_DAMAGE                    "Schaden:",
+    COLON_DAMAGE_REDUCTION          "Schaden-Reduzierung:",
+    COLON_FOOD                      "Essen:",
+    COLON_FOOD_PROVIDED             "Essen prod.:",
+    COLON_FOOD_USED                 "Essen verbr.:",
+    COLON_FOOD_TOTAL                "Essen ges.:",
+    COLON_FOOD_MAX                  "Essen max.:",
+    COLON_GOLD                      "Gold:",
+    COLON_GOLD_INCOME_RATE          "Gold-Einnahmerate:",
+    COLON_INTELLECT                 "Intelligenz:",
+    COLON_MOVE_SPEED                "Bewegungstempo:",
+    COLON_PRIMARY_ATTRIBUTE         "Primäres Attribut:",
+    COLON_PROVIDED                  "Geliefert:",
+    COLON_RANGE                     "Reichw.:",
+    COLON_SPEED                     "Tempo:",   
+    COLON_SPELLS                    "Zaubersprüche:", 
+    COLON_STATUS                    "Status:",
+    COLON_STRENGTH                  "Kraft:",
+    COLON_UPGRADE                   "Ausbaustufe:",
+    COLON_UPKEEP                    "Kosten:",
+    COLON_USED                      "Verwendet:",
+    DAMAGE_MAGIC                    "Typ: |Cffffcc00Magie|R",
+    DAMAGE_MELEE                    "Typ: |Cffffcc00Normal|R",
+    DAMAGE_NORMAL                   "Typ: |Cffffcc00Normal|R",
+    DAMAGE_PIERCE                   "Typ: |Cffffcc00Stich|R",
+    DAMAGE_SIEGE                    "Typ: |Cffffcc00Belagerung|R",
+    DAMAGE_CHAOS                    "Typ: |Cffffcc00Chaos|r",
+    DAMAGE_UNKNOWN                  "Typ: |Cffffcc00Unbekannt|R",
+    DAMAGETIP_HERO                  "Heldenangriffe richten bei verstärkter Rüstung geringeren Schaden an.",
+    DAMAGETIP_MELEE                 "Normale Angriffe richten zusätzlichen Schaden bei leicht gepanzerten Einheiten und reduzierten Schaden bei verstärkten Rüstungen an.",
+    DAMAGETIP_NORMAL                "Normale Angriffe richten zusätzlichen Schaden bei leicht gepanzerten Einheiten und reduzierten Schaden bei verstärkten Rüstungen an.",
+    DAMAGETIP_MAGIC                 "Magische Angriffe richten bei leichten und verstärkten Rüstungen reduzierten Schaden an.",
+    DAMAGETIP_PIERCE                "Stichangriffe erhöhen die Schadenswirkung bei schwer gepanzerten Einheiten und reduzieren die Schadenswirkung bei verstärkter und leichter Rüstung.",
+    DAMAGETIP_CHAOS                 "Chaos-Angriffe richten bei göttlichen Wesen Schaden an.",
+    DAMAGETIP_SIEGE                 "Belagerungsangriffe erhöhen die Schadenswirkung bei verstärkter Rüstung und reduzieren die Schadenswirkung bei leichter Rüstung sowie bei Helden.",
+    DAMAGETIP_UNKNOWN               "Angriffe unbekannter Art richten bei unbekannten Rüstungstypen reduzierten Schaden an.",
+    INTELLECT                       "Intelligenz",
+    INTELLECT_HILIGHT               "|Cffffff00Intelligenz|R",
+    INTELLIGENCE                    "Intelligenz",
+    INVENTORY                       "Inventar",    
+    INVULNERABLE                    "|Cffff0000Unbesiegbar|R",
+    PRIMARY_ATTRIBUTE               "|cffffff00Primäres Attribut|r",
+    STRENGTH                        "Kraft",
+    STRENGTH_HILIGHT                "|Cffffff00Kraft|R",
+    UPGRADE_TOOLTIP                 "%s - Stufe %d",                        // "Iron Weapons - Level 2"
+}
+
+

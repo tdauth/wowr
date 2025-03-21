@@ -1,0 +1,73 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetClanInvitation" {
+
+/*
+    // NOTE: use this highlight to position this guy on any new screens
+    Frame "HIGHLIGHT" "DebugTestFrame" {
+        SetAllPoints,
+        HighlightColor 1.0 0.0 0.0 0.2,
+        HighlightType "SHADE",
+    }
+*/
+
+    Frame "TEXT" "ClanInvitationTitle" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetClanInvitation", TOPLEFT, 0.0, -0.004,
+        Text "BNET_CLAN_INVITE_TITLE",
+        FontColor 1.0 1.0 1.0 1.0,
+    }
+
+    Frame "TEXT" "ClanInvitationValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.26475,
+        SetPoint TOPLEFT, "ClanInvitationTitle", BOTTOMLEFT, 0.0, -0.0105,
+    }
+
+    Frame "TEXT" "ClanNameValue" INHERITS "BattleNetValueTextTemplate" {
+        Width 0.26475,
+        FontJustificationH JUSTIFYCENTER,
+        SetPoint TOP, "ClanInvitationValue", BOTTOM, 0.0, -0.005,
+    }
+
+    Frame "TEXT" "ClanInvitationInfoText" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.26475,
+        SetPoint TOPLEFT, "ClanInvitationValue", BOTTOMLEFT, 0.0, -0.07,
+        Text "BNET_CLAN_INVITE_INFO",
+    }
+
+    Frame "TEXT" "ClanInvitationTimeoutLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ClanInvitationInfoText", BOTTOMLEFT, 0.0, -0.011,
+        Text "BNET_CLAN_INVITE_TIMOUT",
+        FontColor 1.0 0.0 0.0,
+    }
+
+    Frame "TEXT" "ClanInvitationTimeoutValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint LEFT, "ClanInvitationTimeoutLabel", RIGHT, 0.006, 0.0,
+    }
+
+	Frame "GLUETEXTBUTTON" "ClanInviteAcceptButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.12,
+		SetPoint BOTTOMLEFT, "BattleNetClanInvitation", BOTTOMLEFT, 0.006, 0.004,
+
+        ButtonText "ClanInviteAcceptButtonText",
+		Frame "TEXT" "ClanInviteAcceptButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "ACCEPT",
+		}
+	}
+
+	Frame "GLUETEXTBUTTON" "ClanInviteDeclineButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.12,
+		SetPoint BOTTOMRIGHT,"BattleNetClanInvitation",BOTTOMRIGHT, -0.006, 0.004,
+
+        ButtonText "ClanInviteDeclineButtonText",
+		Frame "TEXT" "ClanInviteDeclineButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "DECLINE",
+		}
+	}
+}
+
