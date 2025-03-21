@@ -155,8 +155,8 @@ Here is a list of some modified versions online:
 ## Credits
 
 * Baradé: Creator.
-* EvilPitlord: Original map.
-* DeMoNiKuS: Original map.
+* EvilPitlord: Original map World of Warcraft Reborn .
+* DeMoNiKuS: Original map World of Warcraft Reborn .
 * Runeblade14: Tests.
 * Toasty Toast UwU: Tests.
 * Deranor: Tests.
