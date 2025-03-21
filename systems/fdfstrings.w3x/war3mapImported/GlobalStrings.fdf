@@ -1,0 +1,15 @@
+﻿/*
+ *  Global Strings
+ *  --------------
+ *
+ *  This file is a centralized location for storing strings which are
+ *  used through out the glue screens and in-game ui.  The identifiers
+ *  in the first column are unique, and must not be re-declared in a
+ *  StringList in any .fdf file.
+ *
+ */
+
+StringList {
+    MY_STRING                          "This is my string.",
+}
+

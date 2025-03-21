@@ -1,0 +1,1 @@
+war3mapImported\GlobalStrings.fdf
