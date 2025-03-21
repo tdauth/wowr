@@ -35,7 +35,8 @@ endfunction
 //*
 //***************************************************************************
 function ShowMessage takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "MY_STRING")
+    call DisplayTextToForce(GetPlayersAll(), GetLocalizedString("MY_STRING"))
+    call DisplayTextToForce(GetPlayersAll(), GetLocalizedString("GOLD"))
 endfunction
 //***************************************************************************
 //*

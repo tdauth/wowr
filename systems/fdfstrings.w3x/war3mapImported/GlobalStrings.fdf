@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Global Strings
  *  --------------
  *
@@ -10,6 +10,7 @@
  */
 
 StringList {
-    MY_STRING                          "This is my string.",
+    // comment
+    MY_STRING                          "This is my string %1%.",
 }
 
