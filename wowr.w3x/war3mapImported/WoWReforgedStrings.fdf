@@ -303,7 +303,7 @@ StringList {
     DOT_NO_BACKPACK                    "No backpack.",
     DOT_NO_HERO_1                      "No hero 1.",
     NO_SUMMONED_UNIT                   "No summoned unit.",
-    DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items ("%1%") from backpack.",
+    DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items (%1%) from backpack.",
     HOST_DIPLOMACY                     "You must be host to configure diplomacy.",
     // Settings UI
     SETTINGS                           "Settings",
