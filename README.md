@@ -5,6 +5,7 @@ This map is not a recreation of the game World of Warcraft but is inspired by an
 
 
 Official website: [wowreforged.org](https://wowreforged.org)
+
 GitHub Repository of the official website: [wowr-website](https://github.com/tdauth/wowr-website)
 
 The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the Warcraft III: Reforged World Editor.
