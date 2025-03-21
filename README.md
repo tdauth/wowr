@@ -80,9 +80,14 @@ There can be translations of the map into different languages:
 * 🇺🇸 [English map strings](./wowr.w3x/war3map.wts), [English global strings](./wowr.w3x/war3mapImported/WoWReforgedStrings.fdf)
 * 🇩🇪 [German map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [German global strings](./wowr.w3x/_Locales/deDE.w3mod/war3mapImported/WoWReforgedStrings.fdf)
 
-The files have to be updated according to the [English](./wowr.w3x/war3map.wts) file which is the main file.
-Strings in custom scripts should always refer to trigger strings in a GUI trigger which are added automatically to the war3map.wts file on saving the map with the World Editor or to strings from the WoWReforgedStrings.fdf file.
-Be careful with converting the GUI trigger with strings into JASS and back since it might change the string IDs.
+The files have to be updated according to the English files which are the main files.
+Strings in custom scripts should always refer to entries from the global strings FDF file:
+
+```
+Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result()
+```
+
+The function Format is part of the library StringFormat.
 
 ## Release Process
 
