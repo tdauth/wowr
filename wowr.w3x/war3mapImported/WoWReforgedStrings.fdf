@@ -242,7 +242,7 @@ StringList {
     INCREASED_ARMOR_ITEM               "Increased armor bonus of item.",
     NO_ITEM_ARMOR_ABILITIES            "Item has no known armor bonus abilities.",
     // Profession Thief
-    CLOSED_GATE_OR_LOCKED_CHEST        "Target must be a closed gate or chest",
+    CLOSED_GATE_OR_LOCKED_CHEST        "Target must be a closed gate or chest.",
     UNLOCKED                           "Unlocked",
     // Profession Combinator
     COMBINE_ERROR_NO_ABILITY_TARGET    "Target item has no free ability.",
