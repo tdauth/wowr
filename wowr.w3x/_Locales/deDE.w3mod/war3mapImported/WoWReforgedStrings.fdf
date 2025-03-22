@@ -227,7 +227,7 @@ StringList {
     ZONE_NAME_2                        "|cff00ff00%1%|r\n%2%",
     ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r\n%3%",
     ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
-    NO_UNITS_SELECTED                  "No unit selected.",
+    NO_UNIT_SELECTED                   "No unit selected.",
     // Calendar
     GOOD                               "Gut",
     BAD                                "Schlecht",

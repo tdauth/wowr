@@ -167,6 +167,7 @@ StringList {
     // Backpack
     BAG_WITH_INDEX                     "Bag %1%",
     BAG_ADDED                          "Added %1% to backpack bag %2% by stacking it to slot %3%.",
+    BAG_ADDED_PROBLEM                  "Problem on adding %1% to backpack bag %2% by stacking it to slot %3%.",
     BAG_ADDED_EMPTY                    "Added %1% to backpack bag %2% to empty slot %3%.",
     ORDERED_ITEMS                      "Ordered %1% items.",
     PICKUP_ERROR                       "%1% cannot be picked up: %2%",
@@ -227,7 +228,7 @@ StringList {
     ZONE_NAME_2                        "|cff00ff00%1%|r\n%2%",
     ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r\n%3%",
     ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
-    NO_UNITS_SELECTED                  "No unit selected.",
+    NO_UNIT_SELECTED                   "No unit selected.",
     // Calendar
     GOOD                               "Good",
     BAD                                "Bad",
@@ -297,6 +298,7 @@ StringList {
     TOGGLE_RPG_CAMERA                  "Enable/disable RPG camera.",
     DOT_AUTO_SKILL                     "Auto skill.",
     DOT_MULTIPLAYER_LOG                "Multiplayer Log.".
+    DOT_SETTINGS                       "Settings.".
     DOT_DIPLOMACY                      "Diplomacy.",
     DOT_NEWS                           "News.",
     DOT_TOGGLE_MULTIBOARDS             "Toggle multiboards.",

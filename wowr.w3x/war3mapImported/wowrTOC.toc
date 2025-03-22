@@ -1,5 +1,6 @@
-ui\framedef\glue\standardtemplates.fdf
-ui\framedef\glue\battlenettemplates.fdf
+UI\FrameDef\Glue\standardtemplates.fdf
+UI\FrameDef\UI\escmenutemplates.fdf
+UI\FrameDef\Glue\battlenettemplates.fdf
 UI\Frames\framedef\glue\battlenettemplates.fdf
 UI\Frames\framedef\ui\escmenutemplates.fdf​
 war3mapImported\WoWReforgedStrings.fdf
