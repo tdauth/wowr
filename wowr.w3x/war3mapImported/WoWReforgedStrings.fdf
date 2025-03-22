@@ -12,6 +12,14 @@
 StringList {
     // Errors
     NO_VALID_TARGETS                   "No valid targets.",
+    // Ban
+    BANNED_REASON                      "Banned!|nReason: %1%",
+    BANNED_KICKED_REASON               "%1% was kicked from the game for being banned with the reason: %2%",
+    BAN_LIST_HEADER                    "Bans:\n",
+    BAN_LIST_ITEM                      "%1% - %2%",
+    // Camera
+    ONLY_AVAILABLE_IN_SINGLEPLAYER     "Only available in singleplayer.",
+    RPG_CAMERA_CONTROLS_HINT           "Use the arrow keys to move the camera, press Control and IJKL  to move your hero, select another hero to change the camera.",
     // Attack and Defense Types
     NONE                               "None",
     NORMAL                             "Normal",
@@ -191,6 +199,7 @@ StringList {
     GRAND_MASTER                       "Grand Master",
     DOCTOR                             "Doctor",
     CRAFT_TEXT                         "+%1%\nCooldown: %2%s",
+    CRAFT_BONUS                        "+%1% %2%",
     // Profession Weapon Smith
     INCREASED_DAMAGE_ITEM              "Increased damage bonus of item.",
     NO_ITEM_DAMAGE_ABILITIES           "Item has no known damage bonus abilities.",
@@ -204,6 +213,11 @@ StringList {
     COMBINE_ERROR_OWNER                "Source item has to be carried by the caster.",
     // Profession Inscriptor
     INSCRIPTOR_HERO_INFO               "%1% hero stats/defense/summoned units %2%, damage %3%, hp/mana %4%",
+    // Profession Cook
+    TARGET_ITEM_MUST_BE_FOOD           "Target item must be food.",
+    // Profession Fisherman
+    NO_FISH                            "No fish!",
+    TARGET_AREA_MUST_BE_WATER          "Target area must be water.",
     // Mounts
     NO_MOUNTS                          "No mounts.",
     ADDING_MOUNT                       "Adding mount %1%",
@@ -229,6 +243,30 @@ StringList {
     ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r\n%3%",
     ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
     NO_UNIT_SELECTED                   "No unit selected.",
+    PLAYER_SELECTION                   "Player Selection",
+    PLAYER_SELECTION_DESCRIPTION       "All players start here in the beginning of the game to pick their hero etc. and to start the game. ",
+    VIP_ROOM                           "VIP Room",
+    VIP_ROOM_DESCRIPTION               "A secret room for VIP players only which contains lots of useful items.",
+    PLAYER_HOUSINGS                    "Player Housings",
+    PLAYER_HOUSINGS_DESCRIPTION        "Players with certain account names can purchase and customize their own housings. "
+    AZEROTH                            "Azeroth",
+    AZEROTH_DESCRIPTION                "The world in which the majority of the Warcraft series is set.",
+    BOSS_FIGHT_ISLAND                  "Boss Fight Island",
+    BOSS_FIGHT_ISLAND_DESCRIPTION      "Here you can fight all the bosses at once.",
+    // Achievements
+    CONQUEROR                          "Conqueror",
+    CONQUEROR_DESCRIPTION              "%1% XP for constructing a town hall in every start location.",
+    QUEST_SOLVER                       "Quest Solver",
+    QUEST_SOLVER_DESCRIPTION           "%1% XP * all completed quests every %2% completed quests by any player.",
+    // Racing Tracks
+    RACE_HAS_ENDED                     "Race %1% has ended and the winners are: %2%",
+    RACE_ALREADY_RUNNING               "Race is already running: %1%",
+    RACE_CHECKPOINTS                   "Checkpoints: %1%/%2%",
+    AZEROTH_GRAND_PRIX                 "Azeroth Grand Prix",
+    NORTHREND_RACE                     "Northrend Race",
+    OUTLAND_RACE                       "Outland Race",
+    // Demigod
+    BECOME_DEMIGOD                     "%1% has become an \"%2%\" (demigod)!",
     // Calendar
     GOOD                               "Good",
     BAD                                "Bad",
@@ -268,6 +306,8 @@ StringList {
     SINGLEPLAYER                       "Singleplayer",
     MULTIPLAYER                        "Multiplayer",
     FOOD                               "Food",
+    STATS_LEFT                         "%1% (left)",
+    STATS_DEFEATED                     "%1% (defeated)",
     // AI UI
     AI_UI_TITLE                        "Computer Players (%1%/%2%)",
     COLOR                              "Color",
