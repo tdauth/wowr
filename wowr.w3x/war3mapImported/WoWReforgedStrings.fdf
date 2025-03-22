@@ -287,7 +287,7 @@ StringList {
     VIP_ROOM                           "VIP Room",
     VIP_ROOM_DESCRIPTION               "A secret room for VIP players only which contains lots of useful items.",
     PLAYER_HOUSINGS                    "Player Housings",
-    PLAYER_HOUSINGS_DESCRIPTION        "Players with certain account names can purchase and customize their own housings. "
+    PLAYER_HOUSINGS_DESCRIPTION        "Players with certain account names can purchase and customize their own housings.",
     AZEROTH                            "Azeroth",
     AZEROTH_DESCRIPTION                "The world in which the majority of the Warcraft series is set.",
     BOSS_FIGHT_ISLAND                  "Boss Fight Island",
