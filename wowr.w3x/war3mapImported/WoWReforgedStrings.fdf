@@ -283,7 +283,7 @@ StringList {
     ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
     NO_UNIT_SELECTED                   "No unit selected.",
     PLAYER_SELECTION                   "Player Selection",
-    PLAYER_SELECTION_DESCRIPTION       "All players start here in the beginning of the game to pick their hero etc. and to start the game. ",
+    PLAYER_SELECTION_DESCRIPTION       "All players start here in the beginning of the game to pick their hero etc. and to start the game.",
     VIP_ROOM                           "VIP Room",
     VIP_ROOM_DESCRIPTION               "A secret room for VIP players only which contains lots of useful items.",
     PLAYER_HOUSINGS                    "Player Housings",
@@ -305,7 +305,7 @@ StringList {
     NORTHREND_RACE                     "Northrend Race",
     OUTLAND_RACE                       "Outland Race",
     // Demigod
-    BECOME_DEMIGOD                     "%1% has become an \"%2%\" (demigod)!",
+    BECOME_DEMIGOD                     "%1% has become an %2% (demigod)!",
     // Calendar
     GOOD                               "Good",
     BAD                                "Bad",
