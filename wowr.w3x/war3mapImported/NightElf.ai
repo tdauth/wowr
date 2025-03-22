@@ -53,14 +53,14 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(3, UPG_MOON_ARMOR)
         call SetBuildUpgr(1, UPG_HARD_SKIN)
         call SetBuildUpgr(1, UPG_RESIST_SKIN)
-        call SetBuildUpgr(1, 'Repb') // vorpal blades
+        call SetBuildUpgr(1, UPG_ELF_VORPAL_BLADES)
         call SetBuildUpgr(1, UPG_CHIM_ACID)
         call SetBuildUpgr(1, UPG_HIPPO_TAME)
         call SetBuildUpgr(2, UPG_DRUID_CLAW)
         call SetBuildUpgr(2, UPG_DRUID_TALON)
         call SetBuildUpgr(1, UPG_MARK_TALON)
         call SetBuildUpgr(1, UPG_BOWS)
-        call SetBuildUpgr(1, 'Repm') // backpack
+        call SetBuildUpgr(1, UPG_ELF_BACKPACK)
         call SetBuildUpgr(1, UPG_ELF_WORLD_TREE)
 
         call SetBuildUnit(1, ELF_WORLD_TREE)

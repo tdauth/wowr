@@ -3840,6 +3840,7 @@ globals
     constant integer UNDEAD_BATTLESHIP                               = 'uubs'
     constant integer UNDEAD_FRIGATE                                  = 'udes'
 
+    constant integer UPG_UNDEAD_BACKPACK                             = 'Rupm'
     constant integer UPG_UNDEAD_LICH_KING                            = 'R020' // special building
 
     constant integer UNDEAD_LICH_KING                                = 'n037' // special building
@@ -3854,6 +3855,8 @@ globals
     constant integer ELF_BATTLESHIP                                  = 'ebsh'
     constant integer ELF_FRIGATE                                     = 'edes'
 
+    constant integer UPG_ELF_VORPAL_BLADES                           = 'Repb'
+    constant integer UPG_ELF_BACKPACK                                = 'Repm'
     constant integer UPG_ELF_WORLD_TREE                              = 'R01Z'
 
     constant integer ELF_WORLD_TREE                                  = 'o00G' // special building

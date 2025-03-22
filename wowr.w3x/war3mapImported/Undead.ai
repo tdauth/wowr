@@ -66,7 +66,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_GHOUL_FRENZY)
         call SetBuildUpgr(1, UPG_BLK_SPHINX)
         call SetBuildUpgr(1, UPG_WYRM_BREATH)
-        call SetBuildUpgr(1, 'Rupm') // backpack
+        call SetBuildUpgr(1, UPG_UNDEAD_BACKPACK)
         call SetBuildUpgr(1, UPG_UNDEAD_LICH_KING)
 
         call SetBuildUnit(1, UNDEAD_LICH_KING)
