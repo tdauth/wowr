@@ -49,6 +49,7 @@ StringList {
     FORTIFIED                          "Fortified",
     HERO                               "Hero",
     DIVINE                             "Divine",
+    ETHERAL                            "Etheral",
     PIERCE                             "Pierce",
     SIEGE                              "Siege",
     MELEE                              "Melee",
@@ -237,7 +238,12 @@ StringList {
     BAG_ADDED_PROBLEM                  "Problem on adding %1% to backpack bag %2% by stacking it to slot %3%.",
     BAG_ADDED_EMPTY                    "Added %1% to backpack bag %2% to empty slot %3%.",
     ORDERED_ITEMS                      "Ordered %1% items.",
+    // Items
     PICKUP_ERROR                       "%1% cannot be picked up: %2%",
+    BELONGS_TO_RACE                    "%1% belongs to race %2%.",
+    BELONGS_TO_PROFESSION              "%1% belongs to profession %2%.",
+    OWNER_IS                           "Owner is %1%!",
+    ITEM_CAN_ONLY_BE_ONCE_INVENTORY    "Item can be only once it inventory!",
     // Backpack UI
     BACKPACK                           "Backpack",
     BAG_EMPTY_SLOT                     "Empty slot %1% at bag %2%.",
