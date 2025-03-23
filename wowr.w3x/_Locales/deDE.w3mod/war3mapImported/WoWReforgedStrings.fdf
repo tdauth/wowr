@@ -11,7 +11,27 @@
 
 StringList {
     // Errors
+    NO_TARGET                          "Kein Ziel.",
+    NO_TARGETS                         "Keine Ziele.",
     NO_VALID_TARGETS                   "Keine gültigen Ziele.",
+    NO_VALID_TARGETS_IN_THIS_AREA      "Keine gültigen Ziele im Gebiet.",
+    TREE_IS_ALREADY_OCCUPIED           "Tree is already occupied.",
+    NO_TREES                           "No trees.",
+    DOT_DRAW                           "Unentschieden.",
+    TARGET_IS_ALLIED                   "Target is allied.",
+    TARGET_BELONGS_TO_YOU              "Target belongs to you.",
+    NO_CORPSES_IN_TARGET_AREA          "No corpses in target area.",
+    TARGET_HAS_NO_RESOURCES            "Target has no resources.",
+    TARGET_IS_NOT_A_TREE               "Target is not a tree.",
+    TARGET_MUST_BE_A_MINE_OR_TREE      "Target must be a mine or tree.",
+    TARGET_MUST_BE_A_HERO              "Target must be a hero.",
+    TARGET_HAS_DISABLED_XP             "Target has disabled gaining XP.",
+    MAXIMUM_FOOD_COST_TOO_HIGH         "Maximum food cost of target is too high.",
+    TARGET_HAS_NO_DISABLED_FOOD_COST   "Target has no disabled food cost.",
+    TARGET_IS_MAGIC_IMMUNE             "Target is magic-immune.",
+    TARGET_IS_INVULNERABLE             "Target is invulnerable.",
+    // Floating Texts
+    PARRY_TEXTTAG                      "Pariert!",
     // Ban
     BANNED_REASON                      "Gebannt!|nGrund: %1%",
     BANNED_KICKED_REASON               "%1% was kicked from the game for being banned with the reason: %2%",
@@ -34,6 +54,7 @@ StringList {
     MELEE                              "Nahkampf",
     CHAOS                              "Chaos",
     MAGIC                              "Magie",
+    SPELLS                             "Zauber",
     DAMAGE_CALCULATION_TABLE           "Schadensberechnungstabelle",
     // UI
     OK_YELLOW                          "|cffffcc00OK|r",
@@ -196,6 +217,9 @@ StringList {
     SNOW                               "Schnee",
     EMERALD                            "Smaragd",
     PEANUT                             "Erdnuss",
+    // Heroes Info
+    HERO_IS_RESTRICTED_TO_ACCOUNTS     "Hero is restricted to accounts: %1%",
+    BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or '-unlock'.",
     // Diplomacy UI
     UNALLIED                           "Nicht Verbündet",
     UNALLIED_VISION                    "Nicht Verbündet Sicht",
@@ -234,6 +258,7 @@ StringList {
     GRAND_MASTER                       "Großmeister",
     DOCTOR                             "Doktor",
     CRAFT_TEXT                         "+%1%\nAbklingzeit: %2%s",
+    CRAFT_BONUS                        "+%1% %2%",
     // Profession Weapon Smith
     INCREASED_DAMAGE_ITEM              "Increased damage bonus of item.",
     NO_ITEM_DAMAGE_ABILITIES           "Item has no known damage bonus abilities.",
@@ -376,6 +401,7 @@ StringList {
     TOGGLE_RPG_CAMERA                  "RSP-Kamera ein-/ausschalten.",
     DOT_AUTO_SKILL                     "Auto skill.",
     DOT_MULTIPLAYER_LOG                "Mehrspieler-Log.",
+    DOT_DAMAGE_CALCULATION_TABLE       "Schadensberechnungstabelle.",
     DOT_SETTINGS                       "Einstellungen.",
     DOT_DIPLOMACY                      "Diplomatie.",
     DOT_NEWS                           "Neuigkeiten.",
@@ -383,6 +409,8 @@ StringList {
     DOT_NO_BACKPACK                    "Kein Rucksack.",
     DOT_NO_HERO_1                      "Kein Held 1.",
     NO_SUMMONED_UNIT                   "Keine beschworene Einheit.",
+    NO_ALTARS                          "Keine Altare.",
+    NO_TOWN_HALLS                      "Keine Rathäuser.",
     DROPPED_ALL_ITEMS_FROM_BACKPACK    "Alle Gegenstände aus dem Rucksack abgelegt (%1%).",
     HOST_DIPLOMACY                     "Sie müssen der Host sein, um die Diplomatie einstellen zu können.",
     // Settings UI
@@ -425,6 +453,13 @@ StringList {
     // Fel
     TARGET_HAS_ALREADY_CHAOS_ATTACK    "Ziel hat bereits Chaos-Angriff.",
     TARGET_HAS_NO_ATTACK               "Ziel hat keinen Angriff.",
+    // Taunts
+    TAUNTS                             "Taunts",
+    TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",
+    ENABLED_TAUNTS                     "Enabled taunts.",
+    DISABLED_TAUNTS                    "Disabled taunts.",
+    TAUNTS_ENABLED                     "Taunts (enabled): ",
+    TAUNTS_DISABLED                    "Taunts (disabled): ",
     // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",

@@ -54,6 +54,7 @@ StringList {
     MELEE                              "Melee",
     CHAOS                              "Chaos",
     MAGIC                              "Magic",
+    SPELLS                             "Spells",
     DAMAGE_CALCULATION_TABLE           "Damage Calculation Table",
     // UI
     OK_YELLOW                          "|cffffcc00OK|r",
@@ -400,6 +401,7 @@ StringList {
     TOGGLE_RPG_CAMERA                  "Enable/disable RPG camera.",
     DOT_AUTO_SKILL                     "Auto skill.",
     DOT_MULTIPLAYER_LOG                "Multiplayer Log.",
+    DOT_DAMAGE_CALCULATION_TABLE       "Damage Calculation Table.",
     DOT_SETTINGS                       "Settings.",
     DOT_DIPLOMACY                      "Diplomacy.",
     DOT_NEWS                           "News.",
