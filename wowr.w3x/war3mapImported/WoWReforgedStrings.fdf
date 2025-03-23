@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  WoW Reforged Strings
  *  --------------
  *
@@ -218,7 +218,7 @@ StringList {
     PEANUT                             "Peanut",
     // Heroes Info
     HERO_IS_RESTRICTED_TO_ACCOUNTS     "Hero is restricted to accounts: %1%",
-    BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or \"-unlock\".",
+    BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or '-unlock'.",
     // Diplomacy UI
     UNALLIED                           "Unallied",
     UNALLIED_VISION                    "Unallied Vision",
