@@ -54,7 +54,7 @@ Make sure that the JassHelper and vJass are enabled:
 The map uses Warcraft's AI for computer players.
 The map contains the modified [common.j](./wowr.w3x/scripts/common.j) to make constants available to map triggers AND AI scripts at once.
 The map contains the modified [common.ai](./wowr.w3x/scripts/common.ai) which is used by all custom AI scripts.
-Run [checkjass.bat](./checkjass.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
+Run [check.bat](./check.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
 
 ### Warlords
 
@@ -95,6 +95,7 @@ Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result()
 ```
 
 The function Format is part of the library StringFormat.
+Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
 
 ## Release Process
 
@@ -105,8 +106,8 @@ Use this check list when releasing a new version of the map:
 * Add all changes to the ChangeLog in the quest log.
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
-* Use [checkjass.bat](./checkjass.bat) to check all JASS scripts.
-* Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder.
+* Use [check.bat](./check.bat) to check all JASS scripts and FDF files.
+* Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
 * Make sure that save games still work by saving and loading.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
 * Use the cheat "-savecodemissing" to check for missing save code objects.

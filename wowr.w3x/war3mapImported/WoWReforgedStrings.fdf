@@ -11,7 +11,27 @@
 
 StringList {
     // Errors
+    NO_TARGET                          "No target.",
+    NO_TARGETS                         "No targets.",
     NO_VALID_TARGETS                   "No valid targets.",
+    NO_VALID_TARGETS_IN_THIS_AREA      "No valid targets in area.",
+    TREE_IS_ALREADY_OCCUPIED           "Tree is already occupied.",
+    NO_TREES                           "No trees.",
+    DOT_DRAW                           "Draw.",
+    TARGET_IS_ALLIED                   "Target is allied.",
+    TARGET_BELONGS_TO_YOU              "Target belongs to you.",
+    NO_CORPSES_IN_TARGET_AREA          "No corpses in target area.",
+    TARGET_HAS_NO_RESOURCES            "Target has no resources.",
+    TARGET_IS_NOT_A_TREE               "Target is not a tree.",
+    TARGET_MUST_BE_A_MINE_OR_TREE      "Target must be a mine or tree.",
+    TARGET_MUST_BE_A_HERO              "Target must be a hero.",
+    TARGET_HAS_DISABLED_XP             "Target has disabled gaining XP.",
+    MAXIMUM_FOOD_COST_TOO_HIGH         "Maximum food cost of target is too high.",
+    TARGET_HAS_NO_DISABLED_FOOD_COST   "Target has no disabled food cost.",
+    TARGET_IS_MAGIC_IMMUNE             "Target is magic-immune.",
+    TARGET_IS_INVULNERABLE             "Target is invulnerable.",
+    // Floating Texts
+    PARRY_TEXTTAG                      "Parry!",
     // Ban
     BANNED_REASON                      "Banned!|nReason: %1%",
     BANNED_KICKED_REASON               "%1% was kicked from the game for being banned with the reason: %2%",
@@ -196,6 +216,9 @@ StringList {
     SNOW                               "Snow",
     EMERALD                            "Emerald",
     PEANUT                             "Peanut",
+    // Heroes Info
+    HERO_IS_RESTRICTED_TO_ACCOUNTS     "Hero is restricted to accounts: %1%",
+    BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or \"-unlock\".",
     // Diplomacy UI
     UNALLIED                           "Unallied",
     UNALLIED_VISION                    "Unallied Vision",
@@ -376,14 +399,16 @@ StringList {
     TOGGLE_LOCK_CAMERA                 "Lock/unlock camera.",
     TOGGLE_RPG_CAMERA                  "Enable/disable RPG camera.",
     DOT_AUTO_SKILL                     "Auto skill.",
-    DOT_MULTIPLAYER_LOG                "Multiplayer Log.".
-    DOT_SETTINGS                       "Settings.".
+    DOT_MULTIPLAYER_LOG                "Multiplayer Log.",
+    DOT_SETTINGS                       "Settings.",
     DOT_DIPLOMACY                      "Diplomacy.",
     DOT_NEWS                           "News.",
     DOT_TOGGLE_MULTIBOARDS             "Toggle multiboards.",
     DOT_NO_BACKPACK                    "No backpack.",
     DOT_NO_HERO_1                      "No hero 1.",
     NO_SUMMONED_UNIT                   "No summoned unit.",
+    NO_ALTARS                          "No altars.",
+    NO_TOWN_HALLS                      "No town halls.",
     DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items (%1%) from backpack.",
     HOST_DIPLOMACY                     "You must be host to configure diplomacy.",
     // Settings UI
@@ -426,6 +451,13 @@ StringList {
     // Fel
     TARGET_HAS_ALREADY_CHAOS_ATTACK    "Target already has Chaos attack.",
     TARGET_HAS_NO_ATTACK               "Target has no attack.",
+    // Taunts
+    TAUNTS                             "Taunts",
+    TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",
+    ENABLED_TAUNTS                     "Enabled taunts.",
+    DISABLED_TAUNTS                    "Disabled taunts.",
+    TAUNTS_ENABLED                     "Taunts (enabled): ",
+    TAUNTS_DISABLED                    "Taunts (disabled): ",
     // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",

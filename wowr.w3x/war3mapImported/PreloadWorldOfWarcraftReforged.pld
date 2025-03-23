@@ -1,0 +1,16 @@
+function PreloadFiles takes nothing returns nothing
+	// Reduce the lag of the stats multiboard and paged buttons
+	// Profession Icons
+	call Preload( "ReplaceableTextures\\CommandButtons\\BTNPotionGreen.blp" )
+	call Preload( "ReplaceableTextures\\CommandButtons\\BTNPotionBlueBig.blp" )
+	call Preload( "ReplaceableTextures\\CommandButtons\\BTNImprovedBows.blp" )
+	// Hero Icons
+	call Preload( "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.blp" )
+	// Race Icons
+	call Preload( "ReplaceableTextures\\CommandButtons\\BTNMercenaryCamp.blp" )
+	// Start locations
+	call Preload( "ReplaceableTextures\\CommandButtons\\BTNBanner_Stormwind.blp" )
+    call PreloadEnd( 2.5 )
+endfunction
+
+

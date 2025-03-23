@@ -75,9 +75,9 @@ StringList {
     ARGUNITE                           "Argunit",
     ARGUNITE_DESCRIPTION               "Mineral from Argus with magical properties.",
     // Heroes
-    HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
-    HERO_STRENGTH_MELEE                "Hero Strength Melee",
-    HERO_STRENGTH_RANGE                "Hero Strength Range",
+    HERO_RANDOM_MATCHING_RACE          "Zufällig passend zum Volk",
+    HERO_STRENGTH_MELEE                "Held Stärke Nahkampf",
+    HERO_STRENGTH_RANGE                "Held Stärke Fernkampf",
     // Start Locations
     TERDRASSIL                         "Terdrassil",
     WORLD_TREE                         "Weltenbaum",
@@ -268,11 +268,11 @@ StringList {
     RESTRICTION_MOUNT                  "The mount is restricted to account names: %1%",
     BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
     // Skins
-    SKIN_CHANGED                       "Changed skin to %1%.",
-    SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",
+    SKIN_CHANGED                       "Skin zu %1% geändert.",
+    SKIN_CHANGED_RANGE                 "Skin zu %1% geändert (%2%/%3%).",
     SKIN_RESTRICTED                    "Skin is restricted to certain accounts: %1%",
     SKIN_CUSTOMIZABLE                  "Only customizable heroes can change their skin.",
-    SKIN_NO_OTHER                      "No other skins.",
+    SKIN_NO_OTHER                      "Keine anderen Skins.",
     // Zones
     ZONE_DISCOVERED                    "Entdeckt: |cff00ff00%1%|r",
     ZONE_ENTER                         "Betreten: |cff00ff00%1%|r",
@@ -280,7 +280,7 @@ StringList {
     ZONE_NAME_2                        "|cff00ff00%1%|r\n%2%",
     ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r\n%3%",
     ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
-    NO_UNIT_SELECTED                   "No unit selected.",
+    NO_UNIT_SELECTED                   "Keine Einheit ausgewählt.",
     PLAYER_SELECTION                   "Player Selection",
     PLAYER_SELECTION_DESCRIPTION       "All players start here in the beginning of the game to pick their hero etc. and to start the game.",
     VIP_ROOM                           "VIP Room",
@@ -292,7 +292,7 @@ StringList {
     BOSS_FIGHT_ISLAND                  "Boss Fight Island",
     BOSS_FIGHT_ISLAND_DESCRIPTION      "Here you can fight all the bosses at once.",
     // Achievements
-    CONQUEROR                          "Conqueror",
+    CONQUEROR                          "Eroberer",
     CONQUEROR_DESCRIPTION              "%1% XP for constructing a town hall in every start location.",
     QUEST_SOLVER                       "Quest Solver",
     QUEST_SOLVER_DESCRIPTION           "%1% XP * all completed quests every %2% completed quests by any player.",
@@ -373,10 +373,10 @@ StringList {
     DOT_ALTARS                         "Altare.",
     DOT_SAVE_CODES                     "Speicher-Codes.",
     TOGGLE_LOCK_CAMERA                 "Kamera festsetzen/lösen.",
-    TOGGLE_RPG_CAMERA                  "Enable/disable RPG camera.",
+    TOGGLE_RPG_CAMERA                  "RSP-Kamera ein-/ausschalten.",
     DOT_AUTO_SKILL                     "Auto skill.",
-    DOT_MULTIPLAYER_LOG                "Mehrspieler-Log.".
-    DOT_SETTINGS                       "Einstellungen.".
+    DOT_MULTIPLAYER_LOG                "Mehrspieler-Log.",
+    DOT_SETTINGS                       "Einstellungen.",
     DOT_DIPLOMACY                      "Diplomatie.",
     DOT_NEWS                           "Neuigkeiten.",
     DOT_TOGGLE_MULTIBOARDS             "Multiboards umschalten.",
