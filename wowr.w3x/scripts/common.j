@@ -4615,7 +4615,7 @@ globals
     constant integer UPG_STORMWIND_DEFEND                            = 'R0EV'
     constant integer UPG_STORMWIND_BOWS                              = 'R0EW'
     constant integer UPG_STORMWIND_MARKSMANSHIP                      = 'R0EX'
-    constant integer UPG_STORMWIND_SUNDERING_BLADES                  = 'R0FU'
+    constant integer UPG_STORMWIND_SUNDERING_BLADES                  = 'R0F0'
     constant integer UPG_STORMWIND_BACKPACK                          = 'R0ER'
     constant integer UPG_STORMWIND_SORCERY                           = 'R0F6'
     constant integer UPG_STORMWIND_MAGE                              = 'R0F5'
