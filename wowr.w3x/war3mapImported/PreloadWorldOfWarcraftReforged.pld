@@ -278,7 +278,7 @@ function PreloadFiles takes nothing returns nothing
 	call Preload( "ReplaceableTextures\\CommandButtons\\UI\\Feedback\\Resources\\ResourceLumber.blp" )
 	call Preload( "ReplaceableTextures\\CommandButtons\\UI\\Feedback\\Resources\\ResourceSupply.blp" )
 	call Preload( "ReplaceableTextures\\CommandButtons\\BTNHealthStone.blp" )
-	call PreloadEnd( 1.0 )
+	call PreloadEnd( 1.9 )
 
 endfunction
 
