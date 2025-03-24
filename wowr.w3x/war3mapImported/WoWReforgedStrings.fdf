@@ -173,7 +173,6 @@ StringList {
     BANDIT                             "Bandit",
     DUNGEON                            "Dungeon",
     DRAGONKIN                          "Dragonkin",
-    VILLAGE                            "Village",
     // Professions
     HERBALIST                          "Herbalist",
     ALCHEMIST                          "Alchemist",
