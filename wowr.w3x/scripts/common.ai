@@ -1103,14 +1103,6 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == DRAENEI_BOULDER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(DRAENEI_ADVANCED_BOULDER_TOWER,false,townid)
 
-    elseif unitid == VILLAGE_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(VILLAGE_TIER_2,false,townid) + GetUnitCountEx(VILLAGE_TIER_3,false,townid)
-    elseif unitid == VILLAGE_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(VILLAGE_TIER_3,false,townid)
-
-    elseif unitid == VILLAGE_OUTPOST then
-        set have_qty = have_qty  + GetUnitCountEx(VILLAGE_BELL_TOWER,false,townid)
-    
     endif
     return have_qty
 endfunction

@@ -3864,8 +3864,26 @@ globals
     constant integer UNDEAD_LICH_KING                                = 'n037' // special building
 
     // Night Elf
+    constant integer ITEM_ELF_TIER_1                                 = 'I02J'
+    constant integer ITEM_ELF_TIER_2                                 = 'I0MO'
+    constant integer ITEM_ELF_TIER_3                                 = 'I0MP'
+    constant integer ITEM_ELF_MOON_WELL                              = 'I0MM'
+    constant integer ITEM_ELF_ANCIENT_PROTECTOR                      = 'I0MH'
+    constant integer ITEM_ELF_ALTAR                                  = 'I0MG'
+    constant integer ITEM_ELF_ANCIENT_OF_WAR                         = 'I0MJ'
+    constant integer ITEM_ELF_HUNTERS_HALL                           = 'I0MQ'
+    constant integer ITEM_ELF_ANCIENT_OF_WIND                        = 'I0MK'
+    constant integer ITEM_ELF_ANCIENT_OF_LORE                        = 'I0MI'
+    constant integer ITEM_ELF_CHIMAERA_ROOST                         = 'I0MN'
+    constant integer ITEM_ELF_ANCIENT_OF_WONDERS                     = 'I0ML'
+    constant integer ITEM_ELF_SHIPYARD                               = 'I0MT'
+    constant integer ITEM_ELF_SPECIAL_BUILDING                       = 'I0MR'
+    constant integer ITEM_ELF_HOUSING                                = 'I0MS'
+
     constant integer ELF_CITIZEN_MALE                                = 'n00O'
     constant integer ELF_CITIZEN_FEMALE                              = 'n00P'
+    constant integer ELF_CHILD                                       = 'n0IX'
+    constant integer ELF_PET                                         = 'n00S'
     constant integer ELF_HOUSING                                     = 'e016'
 
     constant integer ELF_SHIPYARD                                    = 'e009'
