@@ -30,6 +30,9 @@ StringList {
     TARGET_HAS_NO_DISABLED_FOOD_COST   "Target has no disabled food cost.",
     TARGET_IS_MAGIC_IMMUNE             "Target is magic-immune.",
     TARGET_IS_INVULNERABLE             "Target is invulnerable.",
+    // Equipment Bag
+    EQUIPMENT_BAG_INDEX                "Equipment Bag %1%",
+    MAXIMUM_EQUIPMENT_BAGS             "Maximum number of equipment bags: %1%",
     // Floating Texts
     PARRY_TEXTTAG                      "Parry!",
     // Ban
@@ -220,6 +223,13 @@ StringList {
     // Heroes Info
     HERO_IS_RESTRICTED_TO_ACCOUNTS     "Hero is restricted to accounts: %1%",
     BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or '-unlock'.",
+    // Hero
+    RECREATED_ITEMS                    "Recreated profession and race items.",
+    // Hero Attributes
+    NO_ATTRIBUTE_POINTS                "No attribute points.",
+    NO_ATTRIBUTE_POINTS_SPENT          "No attribute points spent.",
+    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%",
+    ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribute cannot be unskilled.",
     // Diplomacy UI
     UNALLIED                           "Unallied",
     UNALLIED_VISION                    "Unallied Vision",
@@ -278,7 +288,7 @@ StringList {
     COMBINE_ERROR_NO_ABILITY_SOURCE    "Source item has no ability for index %1%.",
     COMBINE_ERROR_MAX_LEVEL            "Maximum allowed item level %1% but source item has level %2%.",
     COMBINE_ERROR_OWNER                "Source item has to be carried by the caster.",
-    // Profession Inscriptor
+    // Profession Inscriptor and Enchanter
     INSCRIPTOR_HERO_INFO               "%1% hero stats/defense/summoned units %2%, damage %3%, hp/mana %4%",
     // Profession Cook
     TARGET_ITEM_MUST_BE_FOOD           "Target item must be food.",
@@ -458,6 +468,26 @@ StringList {
     // Fel
     TARGET_HAS_ALREADY_CHAOS_ATTACK    "Target already has Chaos attack.",
     TARGET_HAS_NO_ATTACK               "Target has no attack.",
+    // Clans
+    LEADER                             "Leader",
+    CAPTAIN                            "Captain",
+    MEMBER                             "Member",
+    CLAN_RESOURCES_FROM_AI             "%1% gave your clan %2% gold and %3% lumber which has been split amongst all online clan players. Enter '-clanaioff' to hide these messages.",
+    CLANS_MESSAGE                      "Clans:|n",
+    CLANS_ITEM                         "- %1% (%2% player(s): %3%)|n",
+    YOU_HAVE_NO_CLAN                   "You have no clan.",
+    YOUR_CLAN_RANK_IS_NOT_LEADER       "Your clan rank must be Leader.",
+    CHANGED_CLAN_BANNER_TO             "Changed clan banner to: %1%",
+    CHANGED_CLAN_SOUND_TO              "Changed clan sound to: %1%",
+    CLAN_PAGED_BUTTONS_TITLE           "(Clan)",
+    SOUNDS_PAGED_BUTTONS_TITLE         "(Sounds)",
+    BANNERS_PAGED_BUTTONS_TITLE        "(Banners)",
+    // Player Housings
+    NO_HOUSING_AVAILABLE               "No housing available.",
+    RESTRICTION_HOUSINGS               "Housings are restricted to certain accounts: %1%",
+    NOT_IN_HOUSING                     "Not in housing.",
+    IN_HOUSING                         "In housing.",
+    CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",

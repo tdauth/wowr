@@ -3,7 +3,7 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, BLOOD_ELF_TOWN_HALL)
-        call SetBuildUnit(WORKERS_COUNT_START, BLOOD_PEASANT)
+        call SetBuildUnit(WORKERS_COUNT_START, BLOOD_ELF_WORKER)
         call SetBuildUnit(2, BLOOD_ELF_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
@@ -16,7 +16,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, BLOOD_ELF_BLACK_SMITH)
         call SetBuildUnit(1, BLOOD_ELF_ARCANE_VAULT)
 
-        call SetBuildUpgr(1, UPG_DEFEND)
+        call SetBuildUpgr(1, UPG_BLOOD_ELF_DEFEND)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_MELEE)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_ARMOR)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_LEATHER)
@@ -43,7 +43,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_BLOOD_ELF_WOOD)
         call SetBuildUpgr(2, UPG_BLOOD_ELF_MASONRY)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_PRAYING)
-        call SetBuildUpgr(1, UPG_SORCERY)
+        call SetBuildUpgr(1, UPG_BLOOD_ELF_SORCERY)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_BOWS)
 
         // Tier 3 buildings
@@ -62,13 +62,13 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(3, UPG_BLOOD_ELF_STR_MOON)
         call SetBuildUpgr(3, UPG_BLOOD_ELF_MASONRY)
         call SetBuildUpgr(2, UPG_BLOOD_ELF_PRAYING)
-        call SetBuildUpgr(2, UPG_SORCERY)
+        call SetBuildUpgr(2, UPG_BLOOD_ELF_SORCERY)
         call SetBuildUpgr(3, UPG_BLOOD_ELF_IMPROVED_SIEGE)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_BURNING_OIL)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_BREEDING)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_MARKSMAN)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_CONT_MAGIC)
-        call SetBuildUpgr(1, UPG_SENTINEL)
+        call SetBuildUpgr(1, UPG_BLOOD_ELF_SENTINEL)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_CLOUD)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_SIPHON_MANA)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_BACKPACK)
@@ -98,32 +98,32 @@ endfunction
 function AttackWaves takes nothing returns nothing
     //*** WAVE 1 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, HIGH_SWORDMAN)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ARCHER)
+    call CampaignAttackerEx(2, 3, 3, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(0, 1, 2, BLOOD_ELF_ARCHER)
     call AddStandardUnitsToAttackWave()
     call Sleep(M3) // Waits 3 minutes before attacking
     call LaunchAttack()
 
     //*** WAVE 2 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, HIGH_SWORDMAN)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ARCHER)
+    call CampaignAttackerEx(2, 3, 3, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(0, 1, 2, BLOOD_ELF_ARCHER)
     call AddStandardUnitsToAttackWave()
     call Sleep(M2)
     call LaunchAttack()
 
     //*** WAVE 3 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call AddStandardUnitsToAttackWave()
     call Sleep(M1) // Waits 1 minute before attacking
     call LaunchAttack()
 
     //*** WAVE 4 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call AddStandardUnitsToAttackWave()
     call Sleep(M2)
@@ -131,8 +131,8 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 5 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call AddStandardUnitsToAttackWave()
@@ -141,8 +141,8 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 6 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
@@ -152,8 +152,8 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 7 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
@@ -164,9 +164,9 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 8 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
@@ -177,9 +177,9 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 9 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
@@ -190,9 +190,9 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 10 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
@@ -204,9 +204,9 @@ function AttackWaves takes nothing returns nothing
 
     //*** WAVE 11 ***
     call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ARCHER)
+    call CampaignAttackerEx(3, 4, 4, BLOOD_ELF_SWORDMAN)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
+    call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_ARCHER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SPELL_BREAKER)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_PRIEST)
     call CampaignAttackerEx(1, 2, 3, BLOOD_ELF_SORCERESS)
@@ -221,9 +221,9 @@ function AttackWaves takes nothing returns nothing
         call InitAssaultGroup()
         
         // small ground army
-        call CampaignAttackerEx(4, 4, 4, HIGH_SWORDMAN)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ARCHER)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ARCHER)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_SWORDMAN)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_ARCHER)
+        call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_ARCHER)
         call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_SPELL_BREAKER)
         call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_PRIEST)
         call CampaignAttackerEx(4, 4, 4, BLOOD_ELF_SORCERESS)

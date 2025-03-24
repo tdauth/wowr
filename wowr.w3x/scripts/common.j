@@ -3898,6 +3898,11 @@ globals
     constant integer ELF_WORLD_TREE                                  = 'o00G' // special building
 
     // Blood Elf
+    constant integer ITEM_BLOOD_ELF_TOWN_HALL                        = 'I02L'
+    constant integer ITEM_BLOOD_ELF_KEEP                             = 'I0DC'
+    constant integer ITEM_BLOOD_ELF_CASTLE                           = 'I0GK'
+    constant integer ITEM_BLOOD_ELF_FARM                             = 'I0HE'
+
     constant integer BLOOD_ELF_TOWN_HALL                             = 'h009' // town hall
     constant integer BLOOD_ELF_KEEP                                  = 'h00A' // keep
     constant integer BLOOD_ELF_CASTLE                                = 'h00B' // castle
@@ -3917,6 +3922,9 @@ globals
     constant integer BLOOD_ELF_SHIPYARD                              = 'h0WJ'
 
     constant integer UPG_BLOOD_ELF_BACKPACK                          = 'R0DY'
+    constant integer UPG_BLOOD_ELF_DEFEND                            = UPG_DEFEND
+    constant integer UPG_BLOOD_ELF_SORCERY                           = UPG_SORCERY
+    constant integer UPG_BLOOD_ELF_SENTINEL                          = UPG_SENTINEL
     constant integer UPG_BLOOD_ELF_BREEDING                          = 'R000'
     constant integer UPG_BLOOD_ELF_BOWS                              = 'R009'
     constant integer UPG_BLOOD_ELF_WOOD                              = 'R006'
@@ -3935,6 +3943,9 @@ globals
     constant integer UPG_BLOOD_ELF_SIPHON_MANA                       = 'R09M'
     constant integer UPG_BLOOD_ELF_MAGIC_VAULT                       = 'R021' // special building
 
+    constant integer BLOOD_ELF_WORKER                                = BLOOD_PEASANT
+    constant integer BLOOD_ELF_SWORDMAN                              = HIGH_SWORDMAN
+    constant integer BLOOD_ELF_ARCHER                                = HIGH_ARCHER
     constant integer BLOOD_ELF_SORCERESS                             = 'h0QL'
     constant integer BLOOD_ELF_PRIEST                                = 'h00G'
     constant integer BLOOD_ELF_LIEUTENANT                            = 'nbel'
