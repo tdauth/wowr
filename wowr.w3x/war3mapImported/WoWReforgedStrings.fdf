@@ -262,7 +262,7 @@ StringList {
     MASTER                             "Master",
     GRAND_MASTER                       "Grand Master",
     DOCTOR                             "Doctor",
-    CRAFT_TEXT                         "+%1%\nCooldown: %2%s",
+    CRAFT_TEXT                         "+%1%|nCooldown: %2%s",
     CRAFT_BONUS                        "+%1% %2%",
     // Profession Weapon Smith
     INCREASED_DAMAGE_ITEM              "Increased damage bonus of item.",
