@@ -3900,10 +3900,17 @@ globals
     constant integer ITEM_BLOOD_ELF_FARM                             = 'I0HE'
     constant integer ITEM_BLOOD_ELF_ALTAR                            = 'I0K8'
     constant integer ITEM_BLOOD_ELF_SCOUT_TOWER                      = 'I0D8'
+    constant integer ITEM_BLOOD_ELF_GUARD_TOWER                      = 'I00H'
+    constant integer ITEM_BLOOD_ELF_ARCANE_TOWER                     = 'I1AX'
     constant integer ITEM_BLOOD_ELF_ARCANE_VAULT                     = 'I1AP'
     constant integer ITEM_BLOOD_ELF_BARRACKS                         = 'I1AQ'
     constant integer ITEM_BLOOD_ELF_BLACK_SMITH                      = 'I1AR'
     constant integer ITEM_BLOOD_ELF_LUMBER_MILL                      = 'I1AS'
+    constant integer ITEM_BLOOD_ELF_WORKSHOP                         = 'I1AT'
+    constant integer ITEM_BLOOD_ELF_PHOENIX_EGG                      = 'I1AU'
+    constant integer ITEM_BLOOD_ELF_MAGIC_VAULT                      = 'I1AV'
+    constant integer ITEM_BLOOD_ELF_SHIPYARD                         = 'I1AW'
+    constant integer ITEM_BLOOD_ELF_HOUSING                          = 'I1AY'
 
     constant integer BLOOD_ELF_TOWN_HALL                             = 'h009' // town hall
     constant integer BLOOD_ELF_KEEP                                  = 'h00A' // keep
