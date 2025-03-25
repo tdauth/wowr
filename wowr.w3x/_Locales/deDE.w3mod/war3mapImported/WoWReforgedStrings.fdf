@@ -28,8 +28,15 @@ StringList {
     TARGET_HAS_DISABLED_XP             "Ziel hat deaktivierte Erfahrungsgewinnung.",
     MAXIMUM_FOOD_COST_TOO_HIGH         "Maximum food cost of target is too high.",
     TARGET_HAS_NO_DISABLED_FOOD_COST   "Target has no disabled food cost.",
-    TARGET_IS_MAGIC_IMMUNE             "Target is magic-immune.",
+    TARGET_IS_MAGIC_IMMUNE             "Ziel ist zauberimmun.",
     TARGET_IS_INVULNERABLE             "Ziel ist unverwundbar.",
+    INVALID_TARGET_ITEM                "Ungültiger Zielgegenstand.",
+    NO_X                               "Kein %1%.",
+    // Equipment Bag
+    EQUIPMENT_BAG_INDEX                "Equipment Bag %1%",
+    MAXIMUM_EQUIPMENT_BAGS             "Maximum number of equipment bags: %1%",
+    HERO_REQUIRES_LEVEL_15             "Your hero must be at least level 15.",
+    RESET_EQUIPMENT_BAGS               "Reset equipment bags.",
     // Floating Texts
     PARRY_TEXTTAG                      "Pariert!",
     // Ban
@@ -173,7 +180,6 @@ StringList {
     BANDIT                             "Bandit",
     DUNGEON                            "Verlies",
     DRAGONKIN                          "Dragonkin",
-    VILLAGE                            "Dorf",
     // Professions
     HERBALIST                          "Kräuterkundiger",
     ALCHEMIST                          "Alchimist",
@@ -221,6 +227,13 @@ StringList {
     // Heroes Info
     HERO_IS_RESTRICTED_TO_ACCOUNTS     "Hero is restricted to accounts: %1%",
     BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or '-unlock'.",
+    // Hero
+    RECREATED_ITEMS                    "Recreated profession and race items.",
+    // Hero Attributes
+    NO_ATTRIBUTE_POINTS                "No attribute points.",
+    NO_ATTRIBUTE_POINTS_SPENT          "No attribute points spent.",
+    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%",
+    ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribute cannot be unskilled.",
     // Diplomacy UI
     UNALLIED                           "Nicht Verbündet",
     UNALLIED_VISION                    "Nicht Verbündet Sicht",
@@ -238,6 +251,7 @@ StringList {
     BAG_ADDED_PROBLEM                  "Problem on adding %1% to backpack bag %2% by stacking it to slot %3%.",
     BAG_ADDED_EMPTY                    "Added %1% to backpack bag %2% to empty slot %3%.",
     ORDERED_ITEMS                      "Ordered %1% items.",
+    DROPPED_ALL_ITEMS_FROM_BACKPACK    "Alle Gegenstände aus dem Rucksack abgelegt (%1%).",
     // Items
     PICKUP_ERROR                       "%1% kann nicht eingesammelt werden: %2%",
     BELONGS_TO_RACE                    "%1% gehört zum Volk %2%.",
@@ -255,7 +269,7 @@ StringList {
     BAG_LUMBER_VALUE                   "|cffFCD20D%1% Holz|r",
     BAG_TOOLTIP                        "%1%|n|n%2%",
     BAG_CHARGES                        " (|cffffcc00%1%|r)",
-    DOT_HIDE_BAG_NUMBERS               "Hide bag numbers.",
+    DOT_HIDE_BAG_NUMBERS               "Taschenzahlen verbergen.",
     // Profession Ranks
     NOVICE                             "Anfänger",
     ADVANCED                           "Fortgeschritten",
@@ -343,9 +357,9 @@ StringList {
     SPRING                             "Frühling",
     FALL                               "Herbst",
     WINTER                             "Winter",
-    EVENT_STARTING                     "Event starting: %1%",
-    EVENT_ENDING                       "Event ending %1%",
-    CALENDAR_EVENT_START               "Calendar event starting: %s%",
+    EVENT_STARTING                     "Ereignis beginnt: %1%",
+    EVENT_ENDING                       "Ereignis endet %1%",
+    CALENDAR_EVENT_START               "Kalenderereignis beginnt: %s%",
     CALENDAR_DATE_SHORT                "%1%-%2%-%3%",
     CALENDAR_TIME_TEXT                 "%s\nMonth: %2%\nSeason: %3%\nTime of Day: %4%\nTotal passed time: %5%\nWeather Report: Rain/Snow/Storm in %5% and thunder/lightning in %6%",
     HAPPY_NEW_YEAR                     "Happy new year for the year %1%!",
@@ -417,7 +431,6 @@ StringList {
     NO_SUMMONED_UNIT                   "Keine beschworene Einheit.",
     NO_ALTARS                          "Keine Altare.",
     NO_TOWN_HALLS                      "Keine Rathäuser.",
-    DROPPED_ALL_ITEMS_FROM_BACKPACK    "Alle Gegenstände aus dem Rucksack abgelegt (%1%).",
     HOST_DIPLOMACY                     "Sie müssen der Host sein, um die Diplomatie einstellen zu können.",
     // Settings UI
     SETTINGS                           "Einstellungen",
@@ -453,12 +466,42 @@ StringList {
     PORTAL                             "Portal",
     PORTAL_TO                          "Portal nach %1%",
     DISABLED_PORTAL                    "Deaktiviertes Portal",
+    // Save Codes
+    SAVE_CODES_DISABLED                "Loading savecodes has been disabled for this game!",
     // Item Sets
     COMPLETED_ITEM_SET                 "Gegenstandset %1% vervollständigt.",
     HOLY_SET                           "Heiliges Set",
     // Fel
     TARGET_HAS_ALREADY_CHAOS_ATTACK    "Ziel hat bereits Chaos-Angriff.",
     TARGET_HAS_NO_ATTACK               "Ziel hat keinen Angriff.",
+    // Clans
+    LEADER                             "Leader",
+    CAPTAIN                            "Captain",
+    MEMBER                             "Mitglied",
+    CLAN_RESOURCES_FROM_AI             "%1% gave your clan %2% gold and %3% lumber which has been split amongst all online clan players. Enter '-clanaioff' to hide these messages.",
+    CLANS_MESSAGE                      "Clans:|n",
+    CLANS_ITEM                         "- %1% (%2% player(s): %3%)|n",
+    YOU_HAVE_NO_CLAN                   "You have no clan.",
+    YOUR_CLAN_RANK_IS_NOT_LEADER       "Your clan rank must be Leader.",
+    CHANGED_CLAN_BANNER_TO             "Changed clan banner to: %1%",
+    CHANGED_CLAN_SOUND_TO              "Changed clan sound to: %1%",
+    CLAN_PAGED_BUTTONS_TITLE           "(Clan)",
+    SOUNDS_PAGED_BUTTONS_TITLE         "(Sounds)",
+    BANNERS_PAGED_BUTTONS_TITLE        "(Banners)",
+    // Player Housings
+    NO_HOUSING_AVAILABLE               "Keine Unterkunft verfügbar.",
+    RESTRICTION_HOUSINGS               "Housings are restricted to certain accounts: %1%",
+    NOT_IN_HOUSING                     "Not in housing.",
+    IN_HOUSING                         "In Unterkunft.",
+    CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
+    BOSSES                             "Bosse",
+    // Freelancer Hideouts
+    HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
+    HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
+    // Player Selection
+    NO_SUICIDE_IN_PLAYER_SELECTION     "Cannot suicide unit in player selection.",
+    // Antimagic Wards
+    AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Area is protected by an Antimagic Ward.",
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",

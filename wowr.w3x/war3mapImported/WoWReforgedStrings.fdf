@@ -30,8 +30,8 @@ StringList {
     TARGET_HAS_NO_DISABLED_FOOD_COST   "Target has no disabled food cost.",
     TARGET_IS_MAGIC_IMMUNE             "Target is magic-immune.",
     TARGET_IS_INVULNERABLE             "Target is invulnerable.",
-    // Players
-    HAS_LEFT_THE_GAME                  "%1% has left the game.",
+    INVALID_TARGET_ITEM                "Invalid target item.",
+    NO_X                               "No %1%.",
     // Equipment Bag
     EQUIPMENT_BAG_INDEX                "Equipment Bag %1%",
     MAXIMUM_EQUIPMENT_BAGS             "Maximum number of equipment bags: %1%",
@@ -494,11 +494,14 @@ StringList {
     NOT_IN_HOUSING                     "Not in housing.",
     IN_HOUSING                         "In housing.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
+    BOSSES                             "Bosses",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
     // Player Selection
     NO_SUICIDE_IN_PLAYER_SELECTION     "Cannot suicide unit in player selection.",
+    // Antimagic Wards
+    AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Area is protected by an Antimagic Ward.",
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",
