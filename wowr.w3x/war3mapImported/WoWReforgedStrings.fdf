@@ -32,6 +32,8 @@ StringList {
     TARGET_IS_INVULNERABLE             "Target is invulnerable.",
     INVALID_TARGET_ITEM                "Invalid target item.",
     NO_X                               "No %1%.",
+    // Game End
+    X_HAS_WON_THE_GAME                 "%1% has won the game!",
     // Equipment Bag
     EQUIPMENT_BAG_INDEX                "Equipment Bag %1%",
     MAXIMUM_EQUIPMENT_BAGS             "Maximum number of equipment bags: %1%",
