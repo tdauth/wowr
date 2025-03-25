@@ -30,9 +30,13 @@ StringList {
     TARGET_HAS_NO_DISABLED_FOOD_COST   "Target has no disabled food cost.",
     TARGET_IS_MAGIC_IMMUNE             "Target is magic-immune.",
     TARGET_IS_INVULNERABLE             "Target is invulnerable.",
+    // Players
+    HAS_LEFT_THE_GAME                  "%1% has left the game.",
     // Equipment Bag
     EQUIPMENT_BAG_INDEX                "Equipment Bag %1%",
     MAXIMUM_EQUIPMENT_BAGS             "Maximum number of equipment bags: %1%",
+    HERO_REQUIRES_LEVEL_15             "Your hero must be at least level 15.",
+    RESET_EQUIPMENT_BAGS               "Reset equipment bags.",
     // Floating Texts
     PARRY_TEXTTAG                      "Parry!",
     // Ban
@@ -247,6 +251,7 @@ StringList {
     BAG_ADDED_PROBLEM                  "Problem on adding %1% to backpack bag %2% by stacking it to slot %3%.",
     BAG_ADDED_EMPTY                    "Added %1% to backpack bag %2% to empty slot %3%.",
     ORDERED_ITEMS                      "Ordered %1% items.",
+    DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items (%1%) from backpack.",
     // Items
     PICKUP_ERROR                       "%1% cannot be picked up: %2%",
     BELONGS_TO_RACE                    "%1% belongs to race %2%.",
@@ -426,7 +431,6 @@ StringList {
     NO_SUMMONED_UNIT                   "No summoned unit.",
     NO_ALTARS                          "No altars.",
     NO_TOWN_HALLS                      "No town halls.",
-    DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items (%1%) from backpack.",
     HOST_DIPLOMACY                     "You must be host to configure diplomacy.",
     // Settings UI
     SETTINGS                           "Settings",
@@ -462,6 +466,8 @@ StringList {
     PORTAL                             "Portal",
     PORTAL_TO                          "Portal to %1%",
     DISABLED_PORTAL                    "Disabled Portal",
+    // Save Codes
+    SAVE_CODES_DISABLED                "Loading savecodes has been disabled for this game!",
     // Item Sets
     COMPLETED_ITEM_SET                 "Completed item set %1%.",
     HOLY_SET                           "Holy Set",
@@ -488,6 +494,11 @@ StringList {
     NOT_IN_HOUSING                     "Not in housing.",
     IN_HOUSING                         "In housing.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
+    // Freelancer Hideouts
+    HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
+    HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
+    // Player Selection
+    NO_SUICIDE_IN_PLAYER_SELECTION     "Cannot suicide unit in player selection.",
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",
