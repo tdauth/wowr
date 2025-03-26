@@ -141,6 +141,9 @@ StringList {
     FALL                               "Herbst",
     DESERT                             "Wüste",
     DRAGON_ISLES                       "Dracheninseln",
+    // Teams
+    ALLIANCE                           "Allianz",
+    HORDE                              "Horde",
     // Races
     MATCHING_START_LOCATION            "Passend zum Startort",
     RANDOM_WARLORD                     "Zufälliger Kriegsherr",
@@ -232,9 +235,9 @@ StringList {
     // Hero
     RECREATED_ITEMS                    "Recreated profession and race items.",
     // Hero Attributes
-    NO_ATTRIBUTE_POINTS                "No attribute points.",
+    NO_ATTRIBUTE_POINTS                "Keine Attributpunkte.",
     NO_ATTRIBUTE_POINTS_SPENT          "No attribute points spent.",
-    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%",
+    ATTRIBUTE_POINTS_MESSAGE           "Attributpunkte: %1%",
     ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribute cannot be unskilled.",
     // Diplomacy UI
     UNALLIED                           "Nicht Verbündet",
@@ -258,7 +261,7 @@ StringList {
     PICKUP_ERROR                       "%1% kann nicht eingesammelt werden: %2%",
     BELONGS_TO_RACE                    "%1% gehört zum Volk %2%.",
     BELONGS_TO_PROFESSION              "%1% gehört zum Beruf %2%.",
-    OWNER_IS                           "Owner is %1%!",
+    OWNER_IS                           "Besitzer ist %1%!",
     ITEM_CAN_ONLY_BE_ONCE_INVENTORY    "Item can be only once it inventory!",
     // Backpack UI
     BACKPACK                           "Rucksack",
@@ -306,7 +309,7 @@ StringList {
     NO_MOUNTS                          "Keine Reittiere.",
     ADDING_MOUNT                       "Reittier  %1% hinzugefügt",
     MOUNT_REACHED_MAX_ABILITIES        "Reached maximum of mount abilities.",
-    SET_MOUNT_NAME                     "Set mount name %1% to: %2%",
+    SET_MOUNT_NAME                     "Reittiernamen %1% gesetzt zu: %2%",
     UNABLE_TO_ADD_MOUNT_ABILITY        "Unable to add mount ability.",
     ONLY_DRACTHYR_HEROES_CAN_LEARN     "Only Dracthyr heroes can learn this.",
     ONLY_WORGEN_HEROES_CAN_LEARN       "Only Worgen heroes can learn this.",
@@ -330,7 +333,7 @@ StringList {
     NO_UNIT_SELECTED                   "Keine Einheit ausgewählt.",
     PLAYER_SELECTION                   "Player Selection",
     PLAYER_SELECTION_DESCRIPTION       "All players start here in the beginning of the game to pick their hero etc. and to start the game.",
-    VIP_ROOM                           "VIP Room",
+    VIP_ROOM                           "VIP-Raum",
     VIP_ROOM_DESCRIPTION               "A secret room for VIP players only which contains lots of useful items.",
     PLAYER_HOUSINGS                    "Player Housings",
     PLAYER_HOUSINGS_DESCRIPTION        "Players with certain account names can purchase and customize their own housings.",
