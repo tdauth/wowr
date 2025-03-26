@@ -141,6 +141,9 @@ StringList {
     FALL                               "Fall",
     DESERT                             "Desert",
     DRAGON_ISLES                       "Dragon Isles",
+    // Teams
+    ALLIANCE                           "Alliance",
+    HORDE                              "Horde",
     // Races
     MATCHING_START_LOCATION            "Matching Start Location",
     RANDOM_WARLORD                     "Random Warlord",

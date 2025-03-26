@@ -36,10 +36,8 @@ Frame "POPUPMENU" "MyPopupTemplate" {
 Frame "POPUPMENU" "TeamPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "TeamPopupMenu",
     Frame "MENU" "TeamPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
-        MenuItem "1",     -2,
-        MenuItem "2",     -2,
-        MenuItem "3",     -2,
-        MenuItem "4",     -2,
+        MenuItem "ALLIANCE",     -2,
+        MenuItem "HORDE",     -2,
     }
 }
 
