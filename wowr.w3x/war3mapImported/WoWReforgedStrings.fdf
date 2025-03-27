@@ -32,6 +32,18 @@ StringList {
     TARGET_IS_INVULNERABLE             "Target is invulnerable.",
     INVALID_TARGET_ITEM                "Invalid target item.",
     NO_X                               "No %1%.",
+    CANNOT_TELEPORT_INTO_THIS_AREA     "Cannot teleport into this area.",
+    CANNOT_JUMP_THERE                  "Cannot jump there.",
+    // Learnable Skills Shop
+    SLOT_X                             "Slot %1%",
+    WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
+    NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Backpacks.",
+    SKILL_FOR_CUSTOMIZABLE_HEROES      "Only Void Lord heroes, Archangel heroes, Sea Giant heroes or Equipment Backpacks at hero level 75 can change their hero abilities.",
+    // Resurrection Stones
+    ACTIVATED_RESURRECTION_STONE       "Activated Resurrection Stone.",
+    DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",
+    RESURRECTION_STONE_HERO_ONLY       "Only one of your heroes can activate the Resurrection Stone.",
+    NO_HERO_X                          "No hero %1%.",
     // Game End
     X_HAS_WON_THE_GAME                 "%1% has won the game!",
     // Equipment Bag
@@ -342,10 +354,18 @@ StringList {
     BOSS_FIGHT_ISLAND                  "Boss Fight Island",
     BOSS_FIGHT_ISLAND_DESCRIPTION      "Here you can fight all the bosses at once.",
     // Achievements
+    COLON_ACHIEVEMENTS                 "Achievements:",
     CONQUEROR                          "Conqueror",
     CONQUEROR_DESCRIPTION              "%1% XP for constructing a town hall in every start location.",
     QUEST_SOLVER                       "Quest Solver",
     QUEST_SOLVER_DESCRIPTION           "%1% XP * all completed quests every %2% completed quests by any player.",
+    COMPLETED_ALL_QUESTS               "Completed all quests.",
+    COMPLETED_X_MORE_QUESTS            "Completed %1% more quests.",
+    COMPLETED_ALL_ACHIEVEMENTS         "Completed all achievements.",
+    KILLED_X_BOSSES                    "Killed %1% bosses.",
+    KILLED_ALL_BOSSES                  "Killed all bosses.",
+    X_HOURS_PLAYED                     "%1% hours played.",
+    PURCHASED_ALL_PROPERTIES           "Purchased all properties.",
     // Racing Tracks
     RACE_HAS_ENDED                     "Race %1% has ended and the winners are: %2%",
     RACE_ALREADY_RUNNING               "Race is already running: %1%",
