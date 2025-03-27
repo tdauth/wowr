@@ -117,6 +117,26 @@ StringList {
     FEL_DESCRIPTION                    "A demonic, destructive form of magic which leads to corruption of the target.",
     ARGUNITE                           "Argunite",
     ARGUNITE_DESCRIPTION               "Mineral from Argus with magical properties.",
+    // Resources UI
+    RESOURCES_OF_X                     "Resources of %1%",
+    RESOURCE                           "Resource",
+    AMOUNT                             "Amount",
+    INCOME                             "Income",
+    GOLD_EXCHANGE_RATE                 "Gold Exchange",
+    NOT_ALLOWED_TO_HARVEST             "Not allowed to harvest.",
+    // Limits
+    REACHED_LIMIT_OF_X_FOR_Y           "Reached limit of %1% for building %2%.",
+    // Witch Hut
+    REMOVED_ALL_ADDED_ABILITIES_FROM   "Removed all added abilities from %1%."
+    ADDED_ABILITY_TO                   "Added ability to %1%: %2%",
+    // Alchemist Lab
+    ALCHEMIST_LAB_X                    "Alchemist Lab X",
+    COULD_NOT_CONVERT_TARGET_UNIT      "Could not convert the target unit.",
+    COULD_NOT_CONVERT_TARGET_ITEM      "Could not convert the target item.",
+    CONVERSION_NOT_ALLOWED             "Conversion is not allowed.",
+    // Pickpocketing
+    HAS_STOLEN_ITEM_FROM_YOUR_UNIT     "%1% has stolen the item %2% from your unit %3%!",
+    STOLE_ITEM_FROM_UNIT               "Stole item %1% from %2%!",
     // Heroes
     HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
     HERO_STRENGTH_MELEE                "Hero Strength Melee",
@@ -413,6 +433,11 @@ StringList {
     STATS_TITLE                        "Stats (%1%/%2%) %3% - %4% %5%",
     SINGLEPLAYER                       "Singleplayer",
     MULTIPLAYER                        "Multiplayer",
+    STATS_T                            "T",
+    STATS_C                            "C",
+    H1                                 "H1",
+    H2                                 "H2",
+    H3                                 "H3",
     FOOD                               "Food",
     STATS_LEFT                         "%1% (left)",
     STATS_DEFEATED                     "%1% (defeated)",
