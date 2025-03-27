@@ -44,11 +44,11 @@ Frame "POPUPMENU" "TeamPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
 Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "HeroesPopupMenu",
     Frame "MENU" "HeroesPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
-        MenuItem "Random Matching Race",     -2,
+        MenuItem "HERO_RANDOM_MATCHING_RACE",     -2,
         MenuItem "RANDOM",     -2,
         // Add all heroes in the correct order:
-        MenuItem "Hero Strength Melee",     -2,
-        MenuItem "Hero Strength Range",     -2,
+        MenuItem "HERO_STRENGTH_MELEE",     -2,
+        MenuItem "HERO_STRENGTH_RANGE",     -2,
         MenuItem "Hero Agility Melee",     -2,
         MenuItem "Hero Agility Range",     -2,
         MenuItem "Hero Intelligence Melee",     -2,
@@ -359,7 +359,7 @@ Frame "POPUPMENU" "ProfessionsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "RUNEFORGER",     -2,
         MenuItem "SORCERER",     -2,
         MenuItem "JEWELCRAFTER",     -2,
-        MenuItem "ARCHAEOLOGIST",     -2,
+        MenuItem "ARCHEOLOGIST",     -2,
         MenuItem "WITCH_DOCTOR",     -2,
         MenuItem "TAMER",     -2,
         MenuItem "NECROMANCER",     -2,
