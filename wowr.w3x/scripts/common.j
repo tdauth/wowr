@@ -3454,7 +3454,7 @@ globals
     constant integer ITEM_NAVIGATION_SCROLL                          = 'I12V'
     constant integer ITEM_TINY_PORTAL_ASTROMANCER                    = 'I12W'
     constant integer ITEM_FLARE_GUN                                  = 'fgun'
-    constant integer ITEM_METEOR_STONE                               = 'I0FN'
+    constant integer ITEM_METEOR_STONE                               = 'I12U'
     constant integer ARCANE_OBSERVATORY_ASTROMANCER                  = 'n0MO'
     constant integer ITEM_TINY_ARCANE_OBSERVATORY_ASTROMANCER        = 'I12Z'
     constant integer MOON                                            = 'n0OL' // grand master
