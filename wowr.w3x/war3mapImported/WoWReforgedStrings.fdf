@@ -168,10 +168,6 @@ StringList {
     MALDRAXXUS                         "Maldraxxus",
     NYALOTHA                           "Ny'alotha",
     VILLAGE                            "Village",
-    JADEFIRE                           "Jadefire",
-    WINTER                             "Winter",
-    FALL                               "Fall",
-    DESERT                             "Desert",
     DRAGON_ISLES                       "Dragon Isles",
     // Teams
     ALLIANCE                           "Alliance",
@@ -369,8 +365,6 @@ StringList {
     PLAYER_HOUSINGS_DESCRIPTION        "Players with certain account names can purchase and customize their own housings.",
     AZEROTH                            "Azeroth",
     AZEROTH_DESCRIPTION                "The world in which the majority of the Warcraft series is set.",
-    BOSS_FIGHT_ISLAND                  "Boss Fight Island",
-    BOSS_FIGHT_ISLAND_DESCRIPTION      "Here you can fight all the bosses at once.",
     // Achievements
     COLON_ACHIEVEMENTS                 "Achievements:",
     CONQUEROR                          "Conqueror",
