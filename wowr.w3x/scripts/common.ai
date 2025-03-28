@@ -2829,8 +2829,6 @@ endfunction
 
 function InitHousings takes nothing returns nothing
     call AddHousing(FREELANCER_HOUSING)
-    call AddHousing(OLD_HORDE_HOUSING)
-    call AddHousing(ALLIANCE_HOUSING)
     call AddHousing(HUMAN_HOUSING)
     call AddHousing(ORC_HOUSING)
     call AddHousing(UNDEAD_HOUSING)
