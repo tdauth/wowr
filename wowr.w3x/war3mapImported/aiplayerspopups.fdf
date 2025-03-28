@@ -147,8 +147,6 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "Goblin Shredder",     -2,
         MenuItem "Gunner",     -2,
         MenuItem "Goblin Prince",     -2,
-        MenuItem "Goblin Heavy Tank",     -2,
-        MenuItem "Goblin War Zeppelin",     -2,
         MenuItem "Sea Witch",     -2,
         MenuItem "Naga Royal Guard",     -2,
         MenuItem "Naga Siren",     -2,
