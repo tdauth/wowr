@@ -284,8 +284,6 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "UNDERGROUND",     -2,
         MenuItem "MALDRAXXUS",      -2,
         MenuItem "NYALOTHA",      -2,
-        MenuItem "VILLAGE",      -2,
-        MenuItem "JADEFIRE",      -2,
         MenuItem "WINTER",      -2,
         MenuItem "DRAGON_ISLES",      -2,
     }

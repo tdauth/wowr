@@ -167,7 +167,6 @@ StringList {
     UNDERGROUND                        "Underground",
     MALDRAXXUS                         "Maldraxxus",
     NYALOTHA                           "Ny'alotha",
-    VILLAGE                            "Village",
     DRAGON_ISLES                       "Dragon Isles",
     // Teams
     ALLIANCE                           "Alliance",
