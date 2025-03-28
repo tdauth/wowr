@@ -334,8 +334,6 @@ Here is a list of some modified versions online:
 * Blizzard Entertainment: [BTNINV_Ore_Mithril_01](https://www.hiveworkshop.com/threads/btninv_ore_mithril_01.54863/)
 * Blizzard Entertainment: [BTNINV_Ore_Copper_01](https://www.hiveworkshop.com/threads/btninv_ore_copper_01.54865/)
 * KelThuzad: [BTNGoldBar](https://www.hiveworkshop.com/threads/btngoldbar.110288/)
-* olofmoleman: [Marine](https://www.hiveworkshop.com/threads/marine.49802/)
-* Fingolfin: [Fingolfins Separatist Fleet Pack](https://www.hiveworkshop.com/threads/fingolfins-separatist-fleet-pack.264210/)
 * GreyArchon: [Bamboo Doodad 1](https://www.hiveworkshop.com/threads/bamboo-doodad-1.49756/)
 * GreyArchon: [Bamboo Doodad 2](https://www.hiveworkshop.com/threads/bamboo-doodad-2.49757/)
 * Illidan(Evil)X: [LightSaber3D](https://www.hiveworkshop.com/threads/lightsaber3d.49843/)
