@@ -825,32 +825,6 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == FREELANCER_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(FREELANCER_ADVANCED_TOWER,false,townid)
 
-    elseif unitid == OLD_HORDE_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(OLD_HORDE_TIER_2,false,townid) + GetUnitCountEx(OLD_HORDE_TIER_3,false,townid)
-    elseif unitid == OLD_HORDE_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_TIER_3,false,townid)
-    elseif unitid == OLD_HORDE_WATCH_TOWER then
-        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_GUARD_TOWER,false,townid) + GetUnitCountEx(OLD_HORDE_CANNON_TOWER,false,townid)
-    elseif unitid == OLD_HORDE_WORKER_BASE then
-        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_WORKER_NORMAL,false,townid) + GetUnitCountEx(OLD_HORDE_WORKER_ADVANCED,false,townid)
-    elseif unitid == OLD_HORDE_TROLL_AXETHROWER then
-        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_TROLL_BERSERKER,false,townid)
-    elseif unitid == OLD_HORDE_OGRE then
-        set have_qty = have_qty  + GetUnitCountEx(OLD_HORDE_OGRE_MAGE,false,townid)
-
-    elseif unitid == ALLIANCE_TIER_1 then
-        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_TIER_2,false,townid) + GetUnitCountEx(ALLIANCE_TIER_3,false,townid)
-    elseif unitid == ALLIANCE_TIER_2 then
-        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_TIER_3,false,townid)
-    elseif unitid == ALLIANCE_SCOUT_TOWER then
-        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_GUARD_TOWER,false,townid) + GetUnitCountEx(ALLIANCE_CANNON_TOWER,false,townid)
-    elseif unitid == ALLIANCE_WORKER_BASE then
-        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_WORKER_NORMAL,false,townid) + GetUnitCountEx(ALLIANCE_WORKER_ADVANCED,false,townid)
-    elseif unitid == ALLIANCE_ELVEN_ARCHER then
-        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_ELVEN_RANGER,false,townid)
-    elseif unitid == ALLIANCE_KNIGHT then
-        set have_qty = have_qty + GetUnitCountEx(ALLIANCE_PALADIN,false,townid)
-
     elseif unitid == BLOOD_ELF_TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(BLOOD_ELF_KEEP,false,townid) + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
     elseif unitid == BLOOD_ELF_KEEP then

@@ -182,8 +182,6 @@ StringList {
     RANDOM_FREELANCER                  "Zufälliger Freiberufler",
     RANDOM_ALLIANCE                    "Zufällige Allianz",
     RANDOM_HORDE                       "Zufällige Horde",
-    OLD_HORDE                          "Alte Horde",
-    ALLIANCE_OF_LORDAERON              "Allianz von Lordaeron",
     BLOOD_ELF                          "Blutelfen",
     NAGA                               "Naga",
     DRAENEI                            "Draenei",
@@ -510,6 +508,8 @@ StringList {
     COLON_CLAN                         "|cffFFCC00Clan:|r",
     COLON_DIRECTORY                    "|cffFFCC00Verzeichnis:|r",
     COLON_ALL                          "|cffFFCC00Alles:|r",
+    // Save Codes Dialog
+    LOAD_SAVE_CODES_QUESTION           "Speicher-Codes laden?",
     // ChangeLog
     ALL_CHANGES_OF_VERSION             "Alle Änderungen aus %1%.",
     // Portals

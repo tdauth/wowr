@@ -302,8 +302,6 @@ Frame "POPUPMENU" "RacesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "RANDOM_FREELANCER",     -2,
         MenuItem "RANDOM_ALLIANCE",     -2,
         MenuItem "RANDOM_HORDE",     -2,
-        MenuItem "OLD_HORDE",     -2,
-        MenuItem "ALLIANCE_OF_LORDAERON",     -2,
         MenuItem "HUMAN",     -2,
         MenuItem "ORC",     -2,
         MenuItem "UNDEAD",     -2,

@@ -126,7 +126,7 @@ Use this check list when releasing a new version of the map:
 * Add all changes to the ChangeLog in the quest log.
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
-* Use [check.bat](./check.bat) to check all JASS scripts and FDF files.
+* Use [check.bat](./check.bat) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
 * Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
 * Make sure that save games still work by saving and loading.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.

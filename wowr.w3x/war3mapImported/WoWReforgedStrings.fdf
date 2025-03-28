@@ -182,8 +182,6 @@ StringList {
     RANDOM_FREELANCER                  "Random Freelancer",
     RANDOM_ALLIANCE                    "Random Alliance",
     RANDOM_HORDE                       "Random Horde",
-    OLD_HORDE                          "Old Horde",
-    ALLIANCE_OF_LORDAERON              "Alliance of Lordaeron",
     BLOOD_ELF                          "Blood Elf",
     NAGA                               "Naga",
     DRAENEI                            "Draenei",
@@ -510,6 +508,8 @@ StringList {
     COLON_CLAN                         "|cffFFCC00Clan:|r",
     COLON_DIRECTORY                    "|cffFFCC00Directory:|r",
     COLON_ALL                          "|cffFFCC00All:|r",
+    // Save Codes Dialog
+    LOAD_SAVE_CODES_QUESTION           "Load Save Codes?",
     // ChangeLog
     ALL_CHANGES_OF_VERSION             "All changes of %1%.",
     // Portals
