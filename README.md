@@ -49,6 +49,26 @@ Make sure that the JassHelper and vJass are enabled:
 
 ![JassHelper](JassHelper.jpg "JassHelper")
 
+## On the Limitations of Warcraft III
+
+This project exists for several years now.
+These years helped me to get some experience with the limitations of the Warcraft III engine as well as the changes and bugs introduced by Reforged.
+Hence, one should be really careful to add new features and new content.
+For example, a high number of ability levels will slow down the loading time massively.
+A high number of preplaced units and other objects will heavily decrease the FPS.
+Custom AI scripts can lead to crashes depending on the space the AI is given at start and map size in total.
+Therefore it seems to be a good idea to keep everything a bit smaller than it theoretically could be.
+A lower hero level like 30 or 20 or even 15 (like in the Bonus Campaign) will keep the hero ability levels lower and therefore improve the loading time and number of translatable strings.
+Besides, the number of preskilled ability levels for boss heroes stays low and there is less need for researches like Evolution/progression of world creeps.
+A smaller map area leads to less preplaced objects and much better FPS as well as less crashes with AI.
+Computer players need enough space for build their base or otherwise the game will crash.
+Keep the number of custom scripts low and make sure that periodic scripts won't affect the performance.
+Custom models with high polygon count will affect the FPS as well.
+Make sure that custom assets have a low file size and a certain quality standard before using them.
+A huge map area will also make the minimap much smaller and pretty much almost useless.
+Cliff types are restricted to only two being rendered which limits areas such as Outland using its own cliff type.
+Use the 16 different tile types wisely.
+
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
@@ -130,6 +150,7 @@ Sometimes versions of this map might lead to crashing but since it is really har
 * Missing pathing for buildings constructed by the AI.
 * Lower number for maximum number than minimum number of summoned units for Dark Portal based abilities.
 * Training of certain unit types by the AI.
+* Not enough space for AI to build its base.
 * `CreateRegion` in globals instead of a JASS function crashes the game on saving it.
 * String literals which are longer than 1023 characters will lead to crashes on loading save games.
 
