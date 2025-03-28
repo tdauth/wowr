@@ -235,7 +235,7 @@ globals
     integer attackTargetLocationX = 0
     integer attackTargetLocationY = 0
     integer zeppelins = 3
-    integer shredders = 3
+    integer shredders = 0
 endglobals
 
 //============================================================================

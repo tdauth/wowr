@@ -1,6 +1,7 @@
 [CmdMove]
 Art=CommandMove
-Buttonpos=-2147483648,-2147483648
+//Buttonpos=-2147483648,-2147483648
+Buttonpos=0,0
 
 [CmdAttack]
 Art=CommandAttack
