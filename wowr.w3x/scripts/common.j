@@ -3493,18 +3493,7 @@ globals
     constant integer ITEM_ORE_IRON                                   = 'I089'
     constant integer ITEM_ORE_SILVER                                 = 'I08B'
 
-    constant integer ITEM_GEM_AMBER                                  = 'I0OF'
-    constant integer ITEM_GEM_AMETHYST                               = 'I0OG'
-    constant integer ITEM_GEM_AQUAMARINE                             = 'I0OH'
     constant integer ITEM_GEM_DIAMOND                                = 'I0OI'
-    constant integer ITEM_GEM_EMERALD                                = 'I0OJ'
-    constant integer ITEM_GEM_JADE                                   = 'I0OK'
-    constant integer ITEM_GEM_MALACHITE                              = 'I0OL'
-    constant integer ITEM_GEM_OPAL                                   = 'I0OM'
-    constant integer ITEM_GEM_RUBY                                   = 'I0ON'
-    constant integer ITEM_GEM_SAPPHIRE                               = 'I0OO'
-    constant integer ITEM_GEM_TOPAZ                                  = 'I0OP'
-    constant integer ITEM_GEM_TURQUOISE                              = 'I0OQ'
 
     constant integer ITEM_CHRISTMAS_PRESENT                          = 'I0AP'
     constant integer ITEM_EASTER_EGG                                 = 'I05I'
