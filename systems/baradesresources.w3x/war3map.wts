@@ -1,0 +1,833 @@
+﻿STRING 1
+{
+Baradé's Resources 1.0
+}
+
+STRING 2
+{
+1
+}
+
+STRING 3
+{
+Allows adding custom resources.
+}
+
+STRING 4
+{
+Baradé
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 29
+// Units: o001 (Orc Oil Tanker), Name (Name)
+{
+Orc Oil Tanker
+}
+
+STRING 30
+// Units: o001 (Orc Oil Tanker), Tip (Tooltip - Basic)
+{
+Train Orc Oil Tanker
+}
+
+STRING 31
+// Units: o002 (Oil Platform), Name (Name)
+{
+Oil Platform
+}
+
+STRING 32
+// Units: o002 (Oil Platform), Tip (Tooltip - Basic)
+{
+Build Oil Platform
+}
+
+STRING 33
+// Units: o000 (Orc Shipyard), Hotkey (Hotkey)
+{
+Y
+}
+
+STRING 34
+// Abilities: A000 (Drill Oil), Name (Name)
+{
+Drill Oil
+}
+
+STRING 35
+// Abilities: A000 (Drill Oil), Tip (Tooltip - Normal)
+{
+Drill Oil
+}
+
+STRING 36
+// Units: o001 (Orc Oil Tanker), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 37
+// Abilities: A000 (Drill Oil), Ubertip (Tooltip - Normal - Extended)
+{
+Drills oil from an Oil Platform.
+}
+
+STRING 38
+// Units: u000 (Oil Patch), Name (Name)
+{
+Oil Patch
+}
+
+STRING 39
+// Abilities: A000 (Drill Oil), Hotkey (Hotkey - Normal)
+{
+O
+}
+
+STRING 44
+// Units: n001 (Rock Mine), Name (Name)
+{
+Rock Mine
+}
+
+STRING 45
+// Doodads: D000 (Oil Patch), Name (Name)
+{
+Oil Patch
+}
+
+STRING 49
+// Abilities: A003 (Mine Rocks or Harvest Wheat), Hotkey (Hotkey - Normal)
+{
+O
+}
+
+STRING 55
+// Abilities: A004 (Return Oil), Name (Name)
+{
+Return Oil
+}
+
+STRING 59
+// Abilities: A001 (Return Resources), Name (Name)
+{
+Return Resources
+}
+
+STRING 60
+// Abilities: A001 (Return Resources), Tip (Tooltip - Normal)
+{
+Return Resources
+}
+
+STRING 61
+// Abilities: A001 (Return Resources), Ubertip (Tooltip - Normal - Extended)
+{
+Returns gathered custom resources.
+}
+
+STRING 63
+// Abilities: A004 (Return Oil), EditorSuffix (Editor Suffix)
+{
+(Hidden)
+}
+
+STRING 65
+// Abilities: A005 (Return Rocks and Wheat), EditorSuffix (Editor Suffix)
+{
+(Hidden)
+}
+
+STRING 68
+// Units: odes (Orc Frigate), Tip (Tooltip - Basic)
+{
+Train Frigate
+}
+
+STRING 71
+// Abilities: A006 (Build Oil Platform), Name (Name)
+{
+Build Oil Platform
+}
+
+STRING 72
+// Abilities: A006 (Build Oil Platform), Tip (Tooltip - Normal)
+{
+Build Oil Platform
+}
+
+STRING 73
+// Items: oli2 (Orb of Lightning), Ubertip (Tooltip - Extended)
+{
+Oil: 200|n|nAdds <AIll,DataA1> bonus damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air, and have a chance to dispel magic and slow the movement speed of the enemy for <AIlp,Dur1> seconds. |n|cffffcc00Deals <AIpg,DataC1> bonus damage to summoned units.
+}
+
+STRING 74
+// Upgrades: R000 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
+{
+Upgrade Cannons
+}
+
+STRING 75
+// Upgrades: R000 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
+{
+Upgrade Cannons
+}
+
+STRING 76
+// Upgrades: R000 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
+{
+Upgrade Cannons
+}
+
+STRING 77
+// Upgrades: R000 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
+{
+Upgrade Cannons
+}
+
+STRING 80
+// Units: o003 (Oil Refinery), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 82
+// Units: o003 (Oil Refinery), Name (Name)
+{
+Oil Refinery
+}
+
+STRING 83
+// Units: o003 (Oil Refinery), Tip (Tooltip - Basic)
+{
+Build Oil Refinery
+}
+
+STRING 84
+// Units: o002 (Oil Platform), Ubertip (Tooltip - Extended)
+{
+Can be used to drill Oil from it with Oil Tankers. Unlike in Warcraft II allied Oil Platforms can be used by allied Oil Tankers.
+}
+
+STRING 87
+// Units: o004 (Foundry), Name (Name)
+{
+Foundry
+}
+
+STRING 88
+// Units: o004 (Foundry), Tip (Tooltip - Basic)
+{
+Build Foundry
+}
+
+STRING 90
+// Units: o005 (Quarry), Name (Name)
+{
+Quarry
+}
+
+STRING 91
+// Units: o005 (Quarry), Tip (Tooltip - Basic)
+{
+Build Quarry
+}
+
+STRING 92
+// Units: o005 (Quarry), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 93
+// Units: o005 (Quarry), Ubertip (Tooltip - Extended)
+{
+Serves as a drop-off point for harvested Rock. Increases the harvested Rock by 25.
+}
+
+STRING 94
+// Units: ojgn (Orc Juggernaught), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 1000|n|nMassive battleship good at destroying enemy ships and bombarding buildings from the sea. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 95
+// Units: obot (Orc Transport Ship), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 500|n|nA sturdy transport ship capable of carrying units over the sea.
+}
+
+STRING 96
+// Units: odes (Orc Frigate), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 700
+}
+
+STRING 97
+// Units: o003 (Oil Refinery), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 200|n|nIf you own at least one Oil Refinery, an additional 25 oil will be added to your stockpile every time an Oil Tanker drops off harvested oil. Tankers can also drop off oil here instead of at the Shipyard. Oil Refineries must be built on a coast.
+}
+
+STRING 98
+// Units: o004 (Foundry), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 400|n|nFoundries are used to upgrade your Troll Destroyers, Ogre Juggernaughts, and Transports. They must be built on a coast. A Foundry is required to build Ogre Juggernauts and Transports.
+}
+
+STRING 100
+// Units: o004 (Foundry), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 101
+// Upgrades: R000 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 1000|n|nIncreases the damage of ships.
+}
+
+STRING 102
+// Upgrades: R000 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 3000|n|nIncreases the damage of ships.
+}
+
+STRING 103
+// Units: o006 (Peon), EditorSuffix (Name - Editor Suffix)
+{
+(Normal Buildings)
+}
+
+STRING 104
+// Units: o007 (Peon), EditorSuffix (Name - Editor Suffix)
+{
+(Advanced Buildings)
+}
+
+STRING 117
+// Abilities: S000 (Passive Transformation), Name (Name)
+{
+Passive Transformation
+}
+
+STRING 118
+// Abilities: A007 (Advanced Buildings), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 124
+// Abilities: A002 (Normal Buildings), Ubertip (Tooltip - Normal - Extended)
+{
+Normal buildings.
+}
+
+STRING 125
+// Abilities: S000 (Passive Transformation), EditorSuffix (Editor Suffix)
+{
+ (Peon) (Normal Buildings)
+}
+
+STRING 126
+// Abilities: A002 (Normal Buildings), Name (Name)
+{
+Normal Buildings
+}
+
+STRING 127
+// Abilities: A002 (Normal Buildings), Tip (Tooltip - Normal)
+{
+Normal Buildings
+}
+
+STRING 128
+// Abilities: A007 (Advanced Buildings), Name (Name)
+{
+Advanced Buildings
+}
+
+STRING 129
+// Abilities: A007 (Advanced Buildings), Tip (Tooltip - Normal)
+{
+Advanced Buildings
+}
+
+STRING 130
+// Abilities: A007 (Advanced Buildings), Ubertip (Tooltip - Normal - Extended)
+{
+Normal buildings.
+}
+
+STRING 131
+// Abilities: S001 (Passive Transformation), Name (Name)
+{
+Passive Transformation
+}
+
+STRING 132
+// Abilities: S001 (Passive Transformation), EditorSuffix (Editor Suffix)
+{
+ (Peon) (Advanced Buildings)
+}
+
+STRING 133
+// Abilities: A002 (Normal Buildings), Hotkey (Hotkey - Normal)
+{
+N
+}
+
+STRING 134
+{
+Blackrock Clan
+}
+
+STRING 135
+{
+Stormreaver Clan
+}
+
+STRING 136
+// Units: o000 (Orc Shipyard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Rock:|r 500|n|nBoat construction facility. Produces Orc Transport Ships, Orc Frigates, and Orc Battleships.
+}
+
+STRING 137
+// Items: bspd (Boots of Speed), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 200|n|cffffcc00Rock:|r 200|n|nIncreases the movement speed of the Hero when worn.
+}
+
+STRING 139
+// Units: n000 (Wheat Field), Name (Name)
+{
+Wheat Field
+}
+
+STRING 140
+// Units: o008 (Granary), Name (Name)
+{
+Granary
+}
+
+STRING 141
+// Units: o008 (Granary), Tip (Tooltip - Basic)
+{
+Build Granary
+}
+
+STRING 142
+// Units: o008 (Granary), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 143
+// Units: o008 (Granary), Ubertip (Tooltip - Extended)
+{
+Serves as a drop-off point for harvested Wheat. Increases the harvested Wheat by 25.
+}
+
+STRING 144
+// Units: o009 (Peon Crops), Name (Name)
+{
+Peon Crops
+}
+
+STRING 146
+// Units: ngrk (Mud Golem), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Oil:|r 200|n|cffffcc00Rock:|r 200|n|cffffcc00Wheat:|r 200|n|nLight melee unit that can Slow opponents. Immune to spells. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 147
+// Units: ogru (Grunt), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Wheat:|r 150|n|nBrutish Orc warrior. Can learn Brute Strength. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 148
+// Abilities: A003 (Mine Rocks or Harvest Wheat), Name (Name)
+{
+Mine Rocks or Harvest Wheat
+}
+
+STRING 149
+// Abilities: A003 (Mine Rocks or Harvest Wheat), Tip (Tooltip - Normal)
+{
+Mine Rocks or Harvest Wheat
+}
+
+STRING 150
+// Abilities: A003 (Mine Rocks or Harvest Wheat), Ubertip (Tooltip - Normal - Extended)
+{
+Mines Rock from a Rock Mine or harvests Wheat from a Wheat Field.
+}
+
+STRING 151
+// Items: I000 (Wheat Bundle), Name (Name)
+{
+Wheat Bundle
+}
+
+STRING 152
+// Items: I000 (Wheat Bundle), Tip (Tooltip - Basic)
+{
+Purchase Wheat Bundle
+}
+
+STRING 153
+// Items: I000 (Wheat Bundle), Description (Description)
+{
+Gives Wheat to player.
+}
+
+STRING 154
+// Items: I000 (Wheat Bundle), Ubertip (Tooltip - Extended)
+{
+Gives 200 Wheat to the player when used.
+}
+
+STRING 155
+// Abilities: A008 (Wheat Bundle), Name (Name)
+{
+Wheat Bundle
+}
+
+STRING 156
+// Units: n002 (Eye of Kilrogg), Name (Name)
+{
+Eye of Kilrogg
+}
+
+STRING 157
+// Abilities: A009 (Eye of Kilrogg), Name (Name)
+{
+Eye of Kilrogg
+}
+
+STRING 160
+// Units: n003 (Ogre Magi), Tip (Tooltip - Basic)
+{
+Train Ogre Magi
+}
+
+STRING 161
+// Abilities: A009 (Eye of Kilrogg), Tip (Tooltip - Normal)
+{
+Eye of Kilrogg
+}
+
+STRING 162
+// Abilities: A009 (Eye of Kilrogg), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00Wheat:|r 150|n|nSummons <ACs9,DataB1> Spirit Pig companions. |nLasts <ACs9,Dur1> seconds. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 163
+// Units: n003 (Ogre Magi), Ubertip (Tooltip - Extended)
+{
+Spellcasting warrior of the Ogre Legion. Can cast Bloodlust and Eye of Kilrogg which costs Wheat. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 164
+// Units: n003 (Ogre Magi), Hotkey (Hotkey)
+{
+M
+}
+
+STRING 167
+// Units: obot (Orc Transport Ship), Tip (Tooltip - Basic)
+{
+Train Transport Ship
+}
+
+STRING 168
+{
+Baradé's Resources 1.0
+}
+
+STRING 169
+{
+- Order Oil Tankers on Oil Patches or Oil Platforms.
+}
+
+STRING 170
+{
+- Gather Rock and Wheat with Peons.
+}
+
+STRING 171
+{
+- Gather Oil with Oil Tankers from Oil Platforms.
+}
+
+STRING 172
+{
+- Wheat has the same upkeep levels as gold.
+}
+
+STRING 173
+{
+- Press Escape to cheat resources.
+}
+
+STRING 174
+{
+- Use the cheat warpten if everything is too slow.
+}
+
+STRING 175
+{
+- Warcraft II and HiveWorkshop: Icons and models.
+}
+
+STRING 176
+{
+- Enter "-hr" for resources chat commands.
+}
+
+STRING 177
+{
+- Use "-ask 1000 oil blue" to ask for 2000 Oil from blue.
+}
+
+STRING 178
+{
+- Use "-buy 5000" to buy 5000 Oil for gold.
+}
+
+STRING 179
+// Units: n004 (Trading Post), Name (Name)
+{
+Trading Post
+}
+
+STRING 180
+// Units: h000 (Buy 100 Oil), Name (Name)
+{
+Buy 100 Oil
+}
+
+STRING 181
+// Units: h000 (Buy 100 Oil), Tip (Tooltip - Basic)
+{
+Buy 100 Oil
+}
+
+STRING 183
+// Units: h000 (Buy 100 Oil), Ubertip (Tooltip - Extended)
+{
+Buys 100 Oil for gold. Use "-buy 100 oil" to buy it via chat.
+}
+
+STRING 184
+// Units: h001 (Sell 100 Oil), Name (Name)
+{
+Sell 100 Oil
+}
+
+STRING 185
+// Units: h001 (Sell 100 Oil), Tip (Tooltip - Basic)
+{
+Sell 100 Oil
+}
+
+STRING 187
+// Units: h001 (Sell 100 Oil), Ubertip (Tooltip - Extended)
+{
+Sells 100 Oil for gold. Use "-sell 100 oil" to sell it via chat.
+}
+
+STRING 188
+// Units: h002 (Sell 100 Rock), Name (Name)
+{
+Sell 100 Rock
+}
+
+STRING 189
+// Units: h002 (Sell 100 Rock), Tip (Tooltip - Basic)
+{
+Sell 100 Rock
+}
+
+STRING 190
+// Units: h002 (Sell 100 Rock), Ubertip (Tooltip - Extended)
+{
+Sells 100 Rock for gold. Use "-sell 100 rock" to sell it via chat.
+}
+
+STRING 191
+// Units: h003 (Sell 100 Wheat), Name (Name)
+{
+Sell 100 Wheat
+}
+
+STRING 192
+// Units: h003 (Sell 100 Wheat), Tip (Tooltip - Basic)
+{
+Sell 100 Wheat
+}
+
+STRING 193
+// Units: h003 (Sell 100 Wheat), Ubertip (Tooltip - Extended)
+{
+Sells 100 Wheat for gold. Use "-sell 100 wheat" to sell it via chat.
+}
+
+STRING 194
+// Units: h004 (Buy 100 Rock), Name (Name)
+{
+Buy 100 Rock
+}
+
+STRING 195
+// Units: h004 (Buy 100 Rock), Tip (Tooltip - Basic)
+{
+Buy 100 Rock
+}
+
+STRING 196
+// Units: h004 (Buy 100 Rock), Ubertip (Tooltip - Extended)
+{
+Buys 100 Rock for gold. Use "-buy 100 rock" to buy it via chat.
+}
+
+STRING 197
+// Units: h005 (Buy 100 Wheat), Name (Name)
+{
+Buy 100 Wheat
+}
+
+STRING 198
+// Units: h005 (Buy 100 Wheat), Tip (Tooltip - Basic)
+{
+Buy 100 Wheat
+}
+
+STRING 199
+// Units: h005 (Buy 100 Wheat), Ubertip (Tooltip - Extended)
+{
+Buys 100 Wheat for gold. Use "-buy 100 wheat" to buy it via chat.
+}
+
+STRING 200
+// Units: h000 (Buy 100 Oil), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 201
+// Units: h001 (Sell 100 Oil), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 202
+// Units: h002 (Sell 100 Rock), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 203
+// Units: h003 (Sell 100 Wheat), Hotkey (Hotkey)
+{
+Y
+}
+
+STRING 204
+// Units: h004 (Buy 100 Rock), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 205
+// Units: h005 (Buy 100 Wheat), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 206
+// Abilities: A005 (Return Rocks and Wheat), Name (Name)
+{
+Return Rocks and Wheat
+}
+
+STRING 208
+// Units: e000 (Rock Mine Shaft), Name (Name)
+{
+Rock Mine Shaft
+}
+
+STRING 209
+// Units: e000 (Rock Mine Shaft), Tip (Tooltip - Basic)
+{
+Build Rock Mine Shaft
+}
+
+STRING 210
+// Abilities: S002 (Load), EditorSuffix (Editor Suffix)
+{
+(Mine Shaft)
+}
+
+STRING 211
+// Units: e000 (Rock Mine Shaft), Ubertip (Tooltip - Extended)
+{
+Allows Peons to mine Rock from Rock Mines more efficiently.
+}
+
+STRING 212
+// Units: n005 (Drillbot), Name (Name)
+{
+Drillbot
+}
+
+STRING 213
+// Units: n005 (Drillbot), Tip (Tooltip - Basic)
+{
+Hire Drillbot
+}
+
+STRING 214
+// Units: n005 (Drillbot), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 215
+// Units: n005 (Drillbot), Ubertip (Tooltip - Extended)
+{
+Medium melee unit made of iron. Excellent at harvesting large amounts of rock. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 216
+{
+Ore Mine
+}
+
+STRING 217
+// Units: n006 (Ore Mine), Description (Description)
+{
+The main source of ore.
+}
+
+STRING 218
+// Abilities: A001 (Return Resources), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 220
+// Units: n006 (Ore Mine), Name (Name)
+{
+Ore Mine
+}
+

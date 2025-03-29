@@ -1,0 +1,34 @@
+/*
+ *  Resources Strings
+ *  --------------
+ *
+ *  This file is a centralized location for storing strings which are
+ *  used through out the glue screens and in-game ui.  The identifiers
+ *  in the first column are unique, and must not be re-declared in a
+ *  StringList in any .fdf file.
+ *
+ */
+
+StringList {
+    // Resources
+    TARGET_IS_NO_VALID_MINE            "Target is no valid mine.",
+    CANNOT_HARVEST                     "%1% cannot harvest %2%.",
+    // Resources Chat Commands
+    GAVE_RESOURCES_TO                  "Gave %1% of %2% to %3%.",
+    RECEIVED_RESOURCES_FROM            "Received %1% of %2% from %3%.",
+    RECEIVED_X_RESOURCES               "Received %1% of %2%.",
+    NOT_ENOUGH_X                       "Not enough %1%.",
+    TARGET_PLAYER_HAS_NOT_ENOUGH       "Target player has not enough %1%.",
+    TARGET_PLAYER_HAS_TO_BE_ALLIED_C   "Target player has has to be an allied Computer player.",
+    INVALID_PLAYER                     "Invalid player.",
+    INVALID_RESOURCE                   "Invalid resource.",
+    SOLD_ALL_FOR_GOLD                  "Sold all resources for %1% gold.",
+    SOLD_ALL_LUMBER_FOR_GOLD           "Sold all lumber for %1% gold.",
+    // Resources UI
+    RESOURCES_OF_X                     "Resources of %1%",
+    RESOURCE                           "Resource",
+    AMOUNT                             "Amount",
+    INCOME                             "Income",
+    GOLD_EXCHANGE_RATE                 "Gold Exchange",
+    NOT_ALLOWED_TO_HARVEST             "Not allowed to harvest.",
+}
