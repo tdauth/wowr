@@ -163,6 +163,7 @@ Sometimes versions of this map might lead to crashing but since it is really har
 * Not enough space for AI to build its base.
 * `CreateRegion` in globals instead of a JASS function crashes the game on saving it.
 * String literals which are longer than 1023 characters will lead to crashes on loading save games.
+* Using trigger conditions instead of trigger actions for triggers with events `EVENT_PLAYER_UNIT_SELECTED` and `EVENT_PLAYER_UNIT_DESELECTED` will lead to weird desync bugs and unselecting selected units.
 
 ## History of the Map
 
