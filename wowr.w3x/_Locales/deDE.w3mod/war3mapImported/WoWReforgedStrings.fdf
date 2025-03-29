@@ -116,6 +116,20 @@ StringList {
     FEL_DESCRIPTION                    "A demonic, destructive form of magic which leads to corruption of the target.",
     ARGUNITE                           "Argunit",
     ARGUNITE_DESCRIPTION               "Mineral from Argus with magical properties.",
+    // Resources
+    TARGET_IS_NO_VALID_MINE            "Ziel ist keine gültige Mine.",
+    CANNOT_HARVEST                     "%1% kann nicht %2% sammeln.",
+    // Resources Chat Commands
+    GAVE_RESOURCES_TO                  "Gave %1% of %2% to %3%.",
+    RECEIVED_RESOURCES_FROM            "Received %1% of %2% from %3%.",
+    RECEIVED_X_RESOURCES               "Received %1% of %2%.",
+    NOT_ENOUGH_X                       "Nicht genug %1%.",
+    TARGET_PLAYER_HAS_NOT_ENOUGH       "Target player has not enough %1%.",
+    TARGET_PLAYER_HAS_TO_BE_ALLIED_C   "Target player has has to be an allied Computer player.",
+    INVALID_PLAYER                     "Ungültiger Spieler.",
+    INVALID_RESOURCE                   "Invalid resource.",
+    SOLD_ALL_FOR_GOLD                  "Sold all resources for %1% gold.",
+    SOLD_ALL_LUMBER_FOR_GOLD           "Sold all lumber for %1% gold.",
     // Resources UI
     RESOURCES_OF_X                     "Rohstoffe von %1%",
     RESOURCE                           "Rohstoff",
@@ -124,7 +138,7 @@ StringList {
     GOLD_EXCHANGE_RATE                 "Gold Exchange",
     NOT_ALLOWED_TO_HARVEST             "Not allowed to harvest.",
     // Limits
-    REACHED_LIMIT_OF_X_FOR_Y           "Reached limit of %1% for building %2%.",
+    REACHED_LIMIT_OF_X_FOR_Y           "Maximum von %1% für Gebäude %2% erreicht.",
     // Witch Hut
     REMOVED_ALL_ADDED_ABILITIES_FROM   "Removed all added abilities from %1%.",
     ADDED_ABILITY_TO                   "Added ability to %1%: %2%",
