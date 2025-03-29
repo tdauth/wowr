@@ -49,6 +49,16 @@ Make sure that the JassHelper and vJass are enabled:
 
 ![JassHelper](JassHelper.jpg "JassHelper")
 
+## Frozen Throne Support
+
+This map has been developed for Warcraft III: Reforged.
+However, it can be adapted for the old Frozen Throne version.
+Use the tool [Map Adapter](https://www.hiveworkshop.com/threads/map-adapter.326456/) or adapt the map manually.
+JASS natives which only exist in Reforged must be replaced with custom functions.
+You have to adapt the [common.j](./wowr.w3x/scripts/common.j) file and remove natives which do not exist in Frozen Throne.
+You have to add all of these natives to the map script [war3map.j](./wowr.w3x/scripts/war3map.j) as user-defined JASS functions.
+Modify any map file manually with an MPQ editor like [Ladik's MPQ Editor](https://www.hiveworkshop.com/threads/ladiks-mpq-editor-version-2-0-1-278.91512/).
+
 ## On the Limitations of Warcraft III
 
 This project exists for several years now.
@@ -361,18 +371,7 @@ Here is a list of some modified versions online:
 * GreyArchon: [Bamboo Doodad 1](https://www.hiveworkshop.com/threads/bamboo-doodad-1.49756/)
 * GreyArchon: [Bamboo Doodad 2](https://www.hiveworkshop.com/threads/bamboo-doodad-2.49757/)
 * Wojannnn: [Star Wars Sith pack](https://wc3modding.info/6439/star-wars-sith-pack/)
-* olofmoleman: [BTNLightsaberBlock](https://www.hiveworkshop.com/threads/btnlightsaberblock.56759/)
 * purparisien: [Ancient Shipyard](https://www.hiveworkshop.com/threads/ancient-shipyard.321677/)
-* Illidan(Evil)X: [NabooBuilding02](https://www.hiveworkshop.com/threads/naboobuilding02.50234/)
-* olofmoleman: [NabooStarFighter](https://www.hiveworkshop.com/threads/naboostarfighter.50018/)
-* olofmoleman: [Marine](https://www.hiveworkshop.com/threads/marine.49801/)
-* olofmoleman: [BTNCloneTrooper](https://www.hiveworkshop.com/threads/btnclonetrooper.56669/)
-* Fingolfin: [Republic Gunship](https://www.hiveworkshop.com/threads/republic-gunship.273820/)
-* olofmoleman: [Marine](https://www.hiveworkshop.com/threads/marine.47718/)
-* olofmoleman: [Turbolazer](https://www.hiveworkshop.com/threads/turbolazer.50174/)
-* Fingolfin: [All Terrain Attack Pod](https://www.hiveworkshop.com/threads/all-terrain-attack-pod.264425/)
-* Fingolfin: [V-Wing Fighter/Bomber](https://www.hiveworkshop.com/threads/v-wing-fighter-bomber.265593/)
-* Fingolfin: [Consular-class Cruiser](https://www.hiveworkshop.com/threads/consular-class-cruiser.271794/)
 * Fingolfin: [Coruscant](https://www.hiveworkshop.com/threads/coruscant.250027/)
 * olofmoleman: [Ewok](https://www.hiveworkshop.com/threads/ewok.50259/)
 * olofmoleman: [BanthawithRider](https://www.hiveworkshop.com/threads/banthawithrider.50229/)
@@ -983,7 +982,6 @@ Here is a list of some modified versions online:
 * Frozen_Naga: [BTN.Galaxy](https://www.hiveworkshop.com/threads/btn-galaxy.57048/)
 * Blizzard Entertainment: [BTNINV_Misc_Food_18](https://www.hiveworkshop.com/threads/btninv_misc_food_18.55048/)
 * HerrDave: [Scarlet Monastery](https://www.hiveworkshop.com/threads/scarlet-monastery.339122/)
-* olofmoleman: [Hoth Blaster](https://www.hiveworkshop.com/threads/hoth-blaster.50217/)
 * Asssssvi: [Footman Lordaeron HQ](https://www.hiveworkshop.com/threads/footman-lordaeron-hq.312783/)
 * Asssssvi: [Rifleman Lordaeron HD](https://www.hiveworkshop.com/threads/rifleman-lordaeron-hd.313452/)
 * Jiok: [Bannercarrier and Derivatives](https://www.hiveworkshop.com/threads/bannercarrier-and-derivatives.345982/)
@@ -1532,7 +1530,6 @@ Here is a list of some modified versions online:
 * olofmoleman: [BobaFett](https://www.hiveworkshop.com/threads/bobafett.60976/)
 * olofmoleman: [BTNBobaFett](https://www.hiveworkshop.com/threads/btnbobafett.56664/)
 * ynosh: [Star Wars BFTF 1.12.01](https://www.hiveworkshop.com/threads/star-wars-bftf-1-12-01.148278/)
-* Jaccouille: [Star Wars: Rebel Trooper](https://www.hiveworkshop.com/threads/star-wars-rebel-trooper.354168/)
 * olofmoleman: [Ithorian](https://www.hiveworkshop.com/threads/ithorian.50231/)
 * Elunes-Guardian: [StarBase](https://www.hiveworkshop.com/threads/starbase.47510/)
 * Domokun: [xwing11](https://www.hiveworkshop.com/threads/xwing11.49711/)
@@ -1829,3 +1826,4 @@ Here is a list of some modified versions online:
 * lllLSDlll: [BTNTomeOWonders](https://www.hiveworkshop.com/threads/btntomeowonders.56240/)
 * Ujimasa Hojo: [Death Knights and Derivatives](https://www.hiveworkshop.com/threads/death-knights-and-derivatives.285718/)
 * Tauer: [Thrall](https://www.hiveworkshop.com/threads/thrall.302619/)
+* Paladon: [BTNPReflect](https://www.hiveworkshop.com/threads/btnpreflect.137763/)
