@@ -3031,11 +3031,6 @@ globals
     constant integer CLAN_BANNER_GNOME                               = 'I11K'
 
     constant integer CLAN_HALL                                       = 'h02M'
-    constant integer CLAN_HALL_KING_CASTLE                           = 'h03U'
-    constant integer CLAN_HALL_MANSION                               = 'h03O'
-    constant integer CLAN_HALL_NORSE_HALL                            = 'h03V'
-    constant integer CLAN_HALL_STONE_CASTLE                          = 'h03T'
-    constant integer CLAN_HALL_STONE_KEEP                            = 'h03S'
     constant integer CLAN_TOWER                                      = 'n04N'
     constant integer ADVANCED_CLAN_TOWER                             = 'n04M'
     constant integer CLAN_EMISSARY                                   = 'n04G'
