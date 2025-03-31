@@ -610,6 +610,14 @@ StringList {
     COLON_CLAN                         "|cffFFCC00Clan:|r",
     COLON_DIRECTORY                    "|cffFFCC00Directory:|r",
     COLON_ALL                          "|cffFFCC00All:|r",
+    UPDATED_SAVE_CODES_HEROES          "Updated savecode for heroes.",
+    UPDATED_SAVE_CODES_ITEMS           "Updated savecode for items.",
+    UPDATED_SAVE_CODES_UNITS           "Updated savecode for units.",
+    UPDATED_SAVE_CODES_RESEARCHES      "Updated savecode for researches.",
+    UPDATED_SAVE_CODES_BUILDINGS       "Updated savecode for buildings.",
+    UPDATED_SAVE_CODES_RESEARCHES      "Updated savecode for resources.",
+    UPDATED_SAVE_CODE_CLAN             "Updated savecode for clan.",
+    SAVE_CODE_DIRECTORY_INFO           "This is the directory which all save codes are generated into.",
     // Save Codes Dialog
     LOAD_SAVE_CODES_QUESTION           "Load Save Codes?",
     // ChangeLog
