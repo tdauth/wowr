@@ -595,7 +595,6 @@ Here is a list of some modified versions online:
 * Sellenisko: [GoblinShopCentreCataclysmV](https://www.hiveworkshop.com/threads/goblinshopcentrecataclysmv.162973/)
 * Anachron: [BTNANAHolyCross](https://www.hiveworkshop.com/threads/btnanaholycross.106525/)
 * kola: [BTNFlamethrower](https://www.hiveworkshop.com/threads/btnflamethrower.154065/)
-* purparisien: [Vintage Car Pack](https://www.hiveworkshop.com/threads/vintage-car-pack.332848/)
 * Ziadoma: [GTA Checkpoint model](https://www.hiveworkshop.com/threads/gta-checkpoint-model.347420/#post-3568861)
 * Blizzard Entertainment: [BTNINV_Misc_Bomb_01](https://www.hiveworkshop.com/threads/btninv_misc_bomb_01.55131/)
 * Blizzard Entertainment: [BTNINV_Misc_Bomb_02](https://www.hiveworkshop.com/threads/btninv_misc_bomb_02.55130/)
