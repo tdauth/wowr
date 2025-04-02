@@ -326,7 +326,7 @@ StringList {
     EMERALD                            "Emerald",
     PEANUT                             "Peanut",
     // Heroes Info
-    HERO_IS_RESTRICTED_TO_ACCOUNTS     "Hero is restricted to accounts: %1%",
+    RESTRICTED_TO_ACCOUNTS             "%1% is restricted to accounts: %2%",
     BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or '-unlock'.",
     // Hero
     RECREATED_ITEMS                    "Recreated profession and race items.",
@@ -423,12 +423,10 @@ StringList {
     ONLY_WORGEN_HEROES_CAN_LEARN       "Only Worgen heroes can learn this.",
     HERO_REQUIRES_LEVEL                "Your hero must be level %1% or higher.",
     ONLY_HEROES_CHANGE_MOUNT           "Only your heroes can change their mounts.",
-    RESTRICTION_MOUNT                  "The mount is restricted to account names: %1%",
     BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
     // Skins
     SKIN_CHANGED                       "Changed skin to %1%.",
     SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",
-    SKIN_RESTRICTED                    "Skin is restricted to certain accounts: %1%",
     SKIN_CUSTOMIZABLE                  "Only customizable heroes can change their skin.",
     SKIN_NO_OTHER                      "No other skins.",
     // Zones
@@ -650,7 +648,6 @@ StringList {
     BANNERS_PAGED_BUTTONS_TITLE        "(Banners)",
     // Player Housings
     NO_HOUSING_AVAILABLE               "No housing available.",
-    RESTRICTION_HOUSINGS               "Housings are restricted to certain accounts: %1%",
     NOT_IN_HOUSING                     "Not in housing.",
     IN_HOUSING                         "In housing.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",

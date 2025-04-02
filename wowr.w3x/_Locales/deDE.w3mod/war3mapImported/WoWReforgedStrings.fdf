@@ -326,7 +326,7 @@ StringList {
     EMERALD                            "Smaragd",
     PEANUT                             "Erdnuss",
     // Heroes Info
-    HERO_IS_RESTRICTED_TO_ACCOUNTS     "Held ist auf Konten beschränkt: %1%",
+    RESTRICTED_TO_ACCOUNTS             "%1% ist auf Konten beschränkt: %1%",
     BONUS_HERO_REQUIRES_LEVEL          "Bonusheld erfordert Heldenstufe %1% oder '-unlock'.",
     // Hero
     RECREATED_ITEMS                    "Berufs- und Volksgegenstände wiedererschaffen.",
@@ -423,12 +423,10 @@ StringList {
     ONLY_WORGEN_HEROES_CAN_LEARN       "Only Worgen heroes can learn this.",
     HERO_REQUIRES_LEVEL                "Your hero must be level %1% or higher.",
     ONLY_HEROES_CHANGE_MOUNT           "Only your heroes can change their mounts.",
-    RESTRICTION_MOUNT                  "Das Reittier ist auf Kontennamen beschränkt: %1%",
     BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
     // Skins
     SKIN_CHANGED                       "Skin zu %1% geändert.",
     SKIN_CHANGED_RANGE                 "Skin zu %1% geändert (%2%/%3%).",
-    SKIN_RESTRICTED                    "Skin ist auf bestimmte Kontonamen beschränkt: %1%",
     SKIN_CUSTOMIZABLE                  "Nur anpassbare Helden können ihren Skin ändern.",
     SKIN_NO_OTHER                      "Keine anderen Skins.",
     // Zones
@@ -650,7 +648,6 @@ StringList {
     BANNERS_PAGED_BUTTONS_TITLE        "(Banner)",
     // Player Housings
     NO_HOUSING_AVAILABLE               "Keine Unterkunft verfügbar.",
-    RESTRICTION_HOUSINGS               "Unterkünfte sind auf bestimmte Konten beschränkt: %1%",
     NOT_IN_HOUSING                     "Nicht in Unterkunft.",
     IN_HOUSING                         "In Unterkunft.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Kann nicht in Spielerunterkunft teleportieren.",
@@ -659,7 +656,7 @@ StringList {
     HIDEHOUTS_ARE_LIMITED_TO_1         "Verstecke sind auf 1 begrenzt.",
     HIDEOUTS_ARE_RESTRUCTED            "Verstecke sind auf Freiberufler beschränkt.",
     // Player Selection
-    NO_SUICIDE_IN_PLAYER_SELECTION     "Kann in Spielerauswahl keinen Selbstmord begehen.",
+    NOT_ALLOWED_IN_PLAYER_SELECTION    "In Spielerauswahl nicht erlaubt.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt..",
     // Taunts
