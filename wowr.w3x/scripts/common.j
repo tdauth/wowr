@@ -3580,7 +3580,6 @@ globals
     constant integer FREELANCER_SHIPYARD                             = 'o09W'
 
     constant integer UPG_FREELANCER_MAGIC_SENTRY                     = 'R0EM'
-    constant integer UPG_FREELANCER_MASONRY                          = 'R00W'
     constant integer UPG_FREELANCER_CHEAP_EVOLUTION                  = UPG_CHEAP_EVOLUTION
 
     constant integer CREEP_DARK_WIZARD                               = 'nwzd'
