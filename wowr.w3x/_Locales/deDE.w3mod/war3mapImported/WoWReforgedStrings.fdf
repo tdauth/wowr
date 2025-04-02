@@ -161,7 +161,9 @@ StringList {
     NERUBIAN_BONUS                     "Neruber Bonus",
     NIGHT_ELF_BONUS                    "Nachtelfen Bonus",
     NAGA_BONUS                         "Naga Bonus",
+    DEMON_BONUS                        "Dämonen Bonus",
     PANDAREN_BONUS                     "Pandaren Bonus",
+    OGRE_BONUS                         "Oger Bonus",
     NAVY                               "Flotte",
     VOID_LORDS                         "Void Lords",
     NAARU                              "Naaru",
@@ -424,6 +426,13 @@ StringList {
     HERO_REQUIRES_LEVEL                "Your hero must be level %1% or higher.",
     ONLY_HEROES_CHANGE_MOUNT           "Only your heroes can change their mounts.",
     BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
+    // Crafting
+    X_IS_DISABLED                      "%1% ist deaktiviert.",
+    CAN_ONLY_SUMMON_FOOD_LIMIT         "Can only summon %1% creatures due to food limit.",
+    NOT_ENOUGH_FOOD                    "Nicht genügend Nahrung.",
+    X_IS_NOT_AVAILABLE                 "%1% ist nicht verfügbar.",
+    NO_ITEMS_TO_DISASSEMBLE            "Keine Gegenstände zum zerlegen.",
+    CANNOT_BE_DISASSEMBLED             "Kann nicht zerlegt werden.",
     // Skins
     SKIN_CHANGED                       "Skin zu %1% geändert.",
     SKIN_CHANGED_RANGE                 "Skin zu %1% geändert (%2%/%3%).",
