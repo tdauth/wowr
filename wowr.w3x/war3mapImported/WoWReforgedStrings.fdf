@@ -686,7 +686,7 @@ StringList {
     HERO_JOURNEY_70                    "70: AI for yourself.",
     HERO_JOURNEY_75_1                  "75: Void Lord can be chosen as hero who can learn different spells.",
     HERO_JOURNEY_75_2                  "75: Advanced chat commands from '-helpvisual' can be used.",
-    HERO_JOURNEY_75_3                  "75 (all 3 heroes): All races and professions are available and chat command '-maxbosslevels'.",
+    HERO_JOURNEY_75_3                  "75 (all 3 heroes): All races, professions and chat command '-maxbosslevels' are available.",
     HERO_JOURNEY_VIP                   "Donating/Reporting bugs: VIP.",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Adding ability %1%.",
