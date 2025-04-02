@@ -1,0 +1,7 @@
+[Errors]
+Cooldownstock=TRIGSTR_090
+Outofstock=TRIGSTR_089
+
+[FrameDef]
+OUTOFSTOCKTOOLTIP=TRIGSTR_091
+

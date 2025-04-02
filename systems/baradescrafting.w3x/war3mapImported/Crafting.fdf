@@ -1,0 +1,20 @@
+/*
+ *  Crafting Strings
+ *  --------------
+ *
+ *  This file is a centralized location for storing strings which are
+ *  used through out the glue screens and in-game ui.  The identifiers
+ *  in the first column are unique, and must not be re-declared in a
+ *  StringList in any .fdf file.
+ *
+ */
+
+StringList {
+    // Crafting
+    X_IS_DISABLED                      "%1% is disabled.",
+    CAN_ONLY_SUMMON_FOOD_LIMIT         "Can only summon %1% creatures due to food limit.",
+    NOT_ENOUGH_FOOD                    "Not enough food.",
+    X_IS_NOT_AVAILABLE                 "%1% is not available.",
+    NO_ITEMS_TO_DISASSEMBLE            "No items to disassemble.",
+    CANNOT_BE_DISASSEMBLED             "Cannot be disassembled.",
+}

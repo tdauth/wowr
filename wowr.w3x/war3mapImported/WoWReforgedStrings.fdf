@@ -426,6 +426,13 @@ StringList {
     HERO_REQUIRES_LEVEL                "Your hero must be level %1% or higher.",
     ONLY_HEROES_CHANGE_MOUNT           "Only your heroes can change their mounts.",
     BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
+    // Crafting
+    X_IS_DISABLED                      "%1% is disabled.",
+    CAN_ONLY_SUMMON_FOOD_LIMIT         "Can only summon %1% creatures due to food limit.",
+    NOT_ENOUGH_FOOD                    "Not enough food.",
+    X_IS_NOT_AVAILABLE                 "%1% is not available.",
+    NO_ITEMS_TO_DISASSEMBLE            "No items to disassemble.",
+    CANNOT_BE_DISASSEMBLED             "Cannot be disassembled.",
     // Skins
     SKIN_CHANGED                       "Changed skin to %1%.",
     SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",

@@ -1,0 +1,299 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+Baradé's Crafting 1.0
+}
+
+STRING 4
+{
+1-2
+}
+
+STRING 5
+{
+Baradé
+}
+
+STRING 6
+{
+Player 2
+}
+
+STRING 29
+{
+Allows reflecting enemy missiles.
+}
+
+STRING 30
+{
+Baradé's Crafting System 1.0
+}
+
+STRING 31
+{
+- Put items into the inventory of Crafting Stashes to craft items or units.
+}
+
+STRING 67
+// Units: n000 (Crafting Stash), Name (Name)
+{
+Crafting Stash
+}
+
+STRING 68
+// Abilities: A000 (Disassemble), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 69
+// Abilities: A000 (Disassemble), Name (Name)
+{
+Disassemble
+}
+
+STRING 70
+// Abilities: A000 (Disassemble), Tip (Tooltip - Normal)
+{
+Disassemble
+}
+
+STRING 71
+// Abilities: A000 (Disassemble), EditorSuffix (Editor Suffix)
+{
+(Crafting Stash)
+}
+
+STRING 73
+// Abilities: A001 (Unit Inventory), EditorSuffix (Editor Suffix)
+{
+(Crafting Stash)
+}
+
+STRING 74
+// Units: h000 (Next Page), Name (Name)
+{
+Next Page
+}
+
+STRING 75
+// Units: h000 (Next Page), Tip (Tooltip - Basic)
+{
+Next Page
+}
+
+STRING 76
+// Units: h000 (Next Page), Ubertip (Tooltip - Extended)
+{
+Changes to the next page.
+}
+
+STRING 77
+// Units: h001 (Previous Page), Name (Name)
+{
+Previous Page
+}
+
+STRING 78
+// Units: h001 (Previous Page), Tip (Tooltip - Basic)
+{
+Previous Page
+}
+
+STRING 79
+// Units: h001 (Previous Page), Ubertip (Tooltip - Extended)
+{
+Changes to the previous page.
+}
+
+STRING 80
+// Items: I000 (Craft Ring of Protection +5), Name (Name)
+{
+Craft Ring of Protection +5
+}
+
+STRING 81
+// Items: I000 (Craft Ring of Protection +5), Tip (Tooltip - Basic)
+{
+Craft Ring of Protection +5
+}
+
+STRING 82
+// Items: I001 (Dragon Egg), Description (Description)
+{
+Dragon Egg.
+}
+
+STRING 83
+// Items: I001 (Dragon Egg), Name (Name)
+{
+Dragon Egg
+}
+
+STRING 84
+// Items: I001 (Dragon Egg), Tip (Tooltip - Basic)
+{
+Purchase Dragon Egg
+}
+
+STRING 86
+// Items: I002 (Craft Red Drake), Name (Name)
+{
+Craft Red Drake
+}
+
+STRING 87
+// Items: I002 (Craft Red Drake), Tip (Tooltip - Basic)
+{
+Craft Red Drake
+}
+
+STRING 89
+{
+Out of stock or missing ingredients
+}
+
+STRING 90
+{
+Out of stock or missing ingredients
+}
+
+STRING 91
+{
+Out of stock or missing ingredients
+}
+
+STRING 93
+// Abilities: A000 (Disassemble), Ubertip (Tooltip - Normal - Extended)
+{
+Disassembles the crafted target item or unit back to its requirements.
+}
+
+STRING 94
+// Items: I000 (Craft Ring of Protection +5), Ubertip (Tooltip - Extended)
+{
+Increases the armor of the Hero by 5 when worn.|n|n|cffffcc00- Ring of Protection +1|n- Ring of Protection +4|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+}
+
+STRING 95
+// Items: I002 (Craft Red Drake), Ubertip (Tooltip - Extended)
+{
+Small ranged flying unit. |n|n|cffffcc00Attacks land and air units.|r|n |n|cffffcc00- 3 Dragon Eggs.|n- 5 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+}
+
+STRING 96
+// Items: I003 (Craft Potion of Victory), Name (Name)
+{
+Craft Potion of Victory
+}
+
+STRING 97
+// Items: I003 (Craft Potion of Victory), Tip (Tooltip - Basic)
+{
+Craft Potion of Victory
+}
+
+STRING 98
+// Items: I003 (Craft Potion of Victory), Ubertip (Tooltip - Extended)
+{
+Consuming it gives you immediate victory.|n|n|cffffcc00- Player 1 (red)|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+}
+
+STRING 99
+// Items: I004 (Potion of Victory), Name (Name)
+{
+Potion of Victory
+}
+
+STRING 100
+// Items: I004 (Potion of Victory), Tip (Tooltip - Basic)
+{
+Purchase Potion of Victory
+}
+
+STRING 101
+// Items: I004 (Potion of Victory), Ubertip (Tooltip - Extended)
+{
+Consuming it gives you immediate victory.
+}
+
+STRING 102
+// Items: I004 (Potion of Victory), Description (Description)
+{
+Consuming it gives you immediate victory.
+}
+
+STRING 103
+// Items: I005 (Craft Spell Book), Name (Name)
+{
+Craft Spell Book
+}
+
+STRING 104
+// Items: I005 (Craft Spell Book), Tip (Tooltip - Basic)
+{
+Craft Spell Book
+}
+
+STRING 105
+// Items: I005 (Craft Spell Book), Ubertip (Tooltip - Extended)
+{
+A book full of random spells.|n|n|cffffcc00- Drek'thar's Spellbook (not consumed)|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+}
+
+STRING 106
+{
+Defeat!
+}
+
+STRING 107
+// Items: I006 (Potion of Defeat), Name (Name)
+{
+Potion of Defeat
+}
+
+STRING 108
+// Items: I006 (Potion of Defeat), Tip (Tooltip - Basic)
+{
+Purchase Potion of Defeat
+}
+
+STRING 109
+// Items: I006 (Potion of Defeat), Ubertip (Tooltip - Extended)
+{
+Consuming it gives you immediate defeat.
+}
+
+STRING 110
+// Items: I006 (Potion of Defeat), Description (Description)
+{
+Consuming it gives you immediate defeat.
+}
+
+STRING 111
+// Items: I007 (Craft Potion of Defeat), Name (Name)
+{
+Craft Potion of Defeat
+}
+
+STRING 112
+// Items: I007 (Craft Potion of Defeat), Tip (Tooltip - Basic)
+{
+Craft Potion of Defeat
+}
+
+STRING 113
+// Items: I007 (Craft Potion of Defeat), Ubertip (Tooltip - Extended)
+{
+Consuming it gives you immediate defeat.|n|n|cffffcc00- Player 2 (blue)|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+}
+
