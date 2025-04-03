@@ -519,6 +519,7 @@ StringList {
     H1                                 "H1",
     H2                                 "H2",
     H3                                 "H3",
+    STATS_E                            "E",
     FOOD                               "Food",
     STATS_LEFT                         "%1% (left)",
     STATS_DEFEATED                     "%1% (defeated)",
