@@ -2833,8 +2833,6 @@ globals
     constant integer TRADING_POST                                    = 'n04J'
     constant integer ITEM_TINY_TRADING_POST                          = 'I0L9'
     constant integer ANTIMAGIC_WARD                                  = 'o01Z'
-    constant integer PACK_HORSE_PACKED                               = 'h097'
-    constant integer PACK_HORSE                                      = 'h02N'
     constant integer THIEVES_GUILD                                   = 'n09D'
     constant integer ITEM_TINY_THIEVES_GUILD                         = 'I124'
     constant integer MOUNTS_CAGE                                     = 'o04H'
