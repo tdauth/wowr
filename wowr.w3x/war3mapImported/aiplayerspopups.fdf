@@ -250,7 +250,10 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
 Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
     PopupMenuFrame "StartLocationsPopupMenu",
     Frame "MENU" "StartLocationsPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "RANDOM_MATCHING_TEAM",     -2,
         MenuItem "RANDOM",     -2,
+        MenuItem "RANDOM_ALLIANCE",     -2,
+        MenuItem "RANDOM_HORDE",     -2,
         MenuItem "TERDRASSIL",     -2,
         MenuItem "WORLD_TREE",     -2,
         MenuItem "ORGRIMMAR",     -2,

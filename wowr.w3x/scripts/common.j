@@ -2804,6 +2804,12 @@ globals
     constant integer UPG_HERO_LEVEL_75                               = 'R06B'
     constant integer UPG_VIP                                         = 'R06C'
 
+    // Teams
+    constant integer TEAM_ALLIANCE                                   = 0
+    constant integer TEAM_HORDE                                      = 1
+    constant integer TEAM_FIXED_COMPUTER                             = 2
+    constant integer TEAM_NONE                                       = 3
+
     // AI
     constant integer WORKERS_COUNT_START                             = 20
 
@@ -4172,9 +4178,27 @@ globals
     constant integer DWARF_HOUSING                                   = 'h02S'
 
     // High Elf
-    constant integer HIGH_ELF_TIER_1                                 = 'h040' // tier 1
-    constant integer HIGH_ELF_TIER_2                                 = 'h03Z' // tier 2
-    constant integer HIGH_ELF_TIER_3                                 = 'h041' // tier 3
+    constant integer ITEM_HIGH_ELF_TIER_1                            = 'I05F'
+    constant integer ITEM_HIGH_ELF_TIER_2                            = 'I13Y'
+    constant integer ITEM_HIGH_ELF_TIER_3                            = 'I13Z'
+    constant integer ITEM_HIGH_ELF_FARM                              = 'I13L'
+    constant integer ITEM_HIGH_ELF_SCOUT_TOWER                       = 'I05K'
+    constant integer ITEM_HIGH_ELF_GUARD_TOWER                       = 'I13W'
+    constant integer ITEM_HIGH_ELF_ALTAR                             = 'I13M'
+    constant integer ITEM_HIGH_ELF_BARRACKS                          = 'I13O'
+    constant integer ITEM_HIGH_ELF_DRAGON_NEXUS                      = 'I13R'
+    constant integer ITEM_HIGH_ELF_ENCHANTER_TOWER                   = 'I13P'
+    constant integer ITEM_HIGH_ELF_MAGE_TOWER                        = 'I13Q'
+    constant integer ITEM_HIGH_ELF_AVIARY                            = 'I13X'
+    constant integer ITEM_HIGH_ELF_STABLES                           = 'I13S'
+    constant integer ITEM_HIGH_ELF_BAZAAR                            = 'I13N'
+    constant integer ITEM_HIGH_ELF_SHIPYARD                          = 'I13T'
+    constant integer ITEM_HIGH_ELF_SUNWELL                           = 'I13U'
+    constant integer ITEM_HIGH_ELF_HOUSING                           = 'I13V'
+
+    constant integer HIGH_ELF_TIER_1                                 = 'h040'
+    constant integer HIGH_ELF_TIER_2                                 = 'h03Z'
+    constant integer HIGH_ELF_TIER_3                                 = 'h041'
     constant integer HIGH_ELF_OUTPOST                                = 'h04G' // scout tower
     constant integer HIGH_ELF_GUARD_TOWER                            = 'n05I' // guard tower
     constant integer HIGH_ELF_FARM                                   = 'h04B' // farm
@@ -4182,10 +4206,10 @@ globals
     constant integer HIGH_ELF_ALTAR                                  = 'h042' // altar
     constant integer HIGH_ELF_BAZAAR                                 = 'h04D' // shop
     constant integer HIGH_ELF_BARRACKS                               = 'h044' // barracks
-    constant integer HIGH_ELF_ENCHANTER_TOWER                        = 'h04I' // blacksmith/lumber mill
+    constant integer HIGH_ELF_ENCHANTER_TOWER                        = 'h04I' // lumber mill
     constant integer HIGH_ELF_STABLES                                = 'h04F' // barracks 2/workshop
     constant integer HIGH_ELF_AVIARY                                 = 'h045' // aviary
-    constant integer HIGH_ELF_DRAGON_NEXUS                           = 'h04J' // boneyard
+    constant integer HIGH_ELF_DRAGON_NEXUS                           = 'h04J' // boneyard/black smith
     constant integer HIGH_ELF_SUNWELL                                = 'n05F' // special building
     constant integer HIGH_ELF_SHIPYARD                               = 'h04Y'
 
