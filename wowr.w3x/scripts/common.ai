@@ -236,6 +236,27 @@ globals
     integer attackTargetLocationY = 0
     integer zeppelins = 3
     integer shredders = 3
+
+    // counters for the final attack waves
+    // change for different difficulties or via chat commands
+    integer workers = 20
+    integer citizens_male = 2
+    integer citizens_female = 2
+    integer children = 2
+    integer pets = 2
+    integer footmen = 4
+    integer riflemen = 4
+    integer knights = 4
+    integer mortars = 2
+    integer priests = 3
+    integer sorceresses = 3
+    integer spellbreakers = 2
+    integer siege_engines = 2
+    integer gryphons = 3
+    integer flying_machines = 2
+    integer dragon_hawks = 3
+
+    integer attack_wave = 0
 endglobals
 
 //============================================================================
@@ -2955,7 +2976,9 @@ function LaunchAttack takes nothing returns nothing
     local unit target = null
     local boolean setAlly = true
 
-    call Trace("Launch attack\n")
+    call TraceI("Launch attack %d\n", attack_wave)
+
+    set attack_wave = attack_wave + 1
 
     if (disabled) then
         call Trace("Launch attack cancel since disabled\n")
@@ -3248,6 +3271,12 @@ endfunction
 
 function StartUnitSimple takes integer qty, integer id returns nothing
     call StartUnit(qty,id,-1)
+endfunction
+
+function AttackerSimple takes integer wave, integer qty, integer id returns nothing
+    if (qty > 0 and wave >= attack_wave) then
+        call SetAssaultGroup(qty, qty, id)
+    endif
 endfunction
 
 function BasicExpansionIfRequired takes integer ex, integer unitid returns nothing

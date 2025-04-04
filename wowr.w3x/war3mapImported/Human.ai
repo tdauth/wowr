@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, TOWN_HALL)
-        call SetBuildUnit(WORKERS_COUNT_START, PEASANT)
-        call SetBuildUnit(2, HUMAN_CITIZEN_MALE)
+        call SetBuildUnit(workers, PEASANT)
+        call SetBuildUnit(citizens_male, HUMAN_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -28,9 +28,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, ARCANE_SANCTUM)
         call SetBuildUnit(1, WORKSHOP)
         call SetBuildUnit(4, HOUSE)
-        call SetBuildUnit(2, HUMAN_CITIZEN_FEMALE)
-        call SetBuildUnit(2, HUMAN_CHILD)
-        call SetBuildUnit(2, HUMAN_PET)
+        call SetBuildUnit(citizens_female, HUMAN_CITIZEN_FEMALE)
+        call SetBuildUnit(children, HUMAN_CHILD)
+        call SetBuildUnit(pets, HUMAN_PET)
 
         call SetBuildUnit(3, WATCH_TOWER) // 2 guard towers, 1 cannon tower
 
@@ -95,143 +95,20 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call CampaignAttackerEx(2, 2, 3, PRIEST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call CampaignAttackerEx(2, 2, 3, PRIEST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call CampaignAttackerEx(2, 2, 3, PRIEST)
-    call CampaignAttackerEx(2, 2, 3, SORCERESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call CampaignAttackerEx(2, 2, 3, PRIEST)
-    call CampaignAttackerEx(2, 2, 3, SORCERESS)
-    call CampaignAttackerEx(1, 2, 3, SPELL_BREAKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call CampaignAttackerEx(2, 2, 3, PRIEST)
-    call CampaignAttackerEx(2, 2, 3, SORCERESS)
-    call CampaignAttackerEx(1, 2, 3, SPELL_BREAKER)
-    call CampaignAttackerEx(2, 2, 3, GRYPHON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, MORTAR)
-    call CampaignAttackerEx(2, 2, 3, PRIEST)
-    call CampaignAttackerEx(2, 2, 3, SORCERESS)
-    call CampaignAttackerEx(1, 2, 3, SPELL_BREAKER)
-    call CampaignAttackerEx(2, 2, 3, GRYPHON)
-    call CampaignAttackerEx(2, 2, 3, TANK)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
         
-        // small ground army
-        call CampaignAttackerEx(3, 3, 3, FOOTMAN)
-        call CampaignAttackerEx(3, 3, 3, RIFLEMAN)
-        call CampaignAttackerEx(3, 3, 3, KNIGHT)
-        call CampaignAttackerEx(3, 3, 3, MORTAR)
-        call CampaignAttackerEx(3, 3, 3, PRIEST)
-        call CampaignAttackerEx(3, 3, 3, SORCERESS)
-        call CampaignAttackerEx(1, 2, 3, SPELL_BREAKER)
-        call CampaignAttackerEx(3, 3, 3, TANK)
-        
-        // big air army
-        call CampaignAttackerEx(8, 10, 12, GRYPHON)
-        call CampaignAttackerEx(8, 10, 12, COPTER)
-        call CampaignAttackerEx(8, 10, 12, HUMAN_DRAGON_HAWK)
+        call AttackerSimple(0, footmen, FOOTMAN)
+        call AttackerSimple(0, riflemen, RIFLEMAN)
+        call AttackerSimple(2, knights, KNIGHT)
+        call AttackerSimple(3, priests, PRIEST)
+        call AttackerSimple(3, sorceresses, SORCERESS)
+        call AttackerSimple(4, mortars, MORTAR)
+        call AttackerSimple(4, siege_engines, TANK)
+        call AttackerSimple(5, spellbreakers, SPELL_BREAKER)
+        call AttackerSimple(12, gryphons, GRYPHON)
+        call AttackerSimple(12, flying_machines, COPTER)
+        call AttackerSimple(12, dragon_hawks, HUMAN_DRAGON_HAWK)
         
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()

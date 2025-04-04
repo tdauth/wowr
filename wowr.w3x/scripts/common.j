@@ -2810,9 +2810,6 @@ globals
     constant integer TEAM_FIXED_COMPUTER                             = 2
     constant integer TEAM_NONE                                       = 3
 
-    // AI
-    constant integer WORKERS_COUNT_START                             = 20
-
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
     constant integer BACKPACK                                        = BACK_PACK
