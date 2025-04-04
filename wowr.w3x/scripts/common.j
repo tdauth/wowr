@@ -4104,6 +4104,7 @@ globals
     constant integer GOBLIN_CITIZEN_MALE                             = 'n03Y'
     constant integer GOBLIN_CITIZEN_FEMALE                           = 'n03Z'
     constant integer GOBLIN_CHILD                                    = 'n05Y'
+    constant integer GOBLIN_PET                                      = 'n040'
     constant integer GOBLIN_HOUSING                                  = 'h02H'
 
     // Dwarf
