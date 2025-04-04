@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, DEMON_GATE_1)
-        call SetBuildUnit(WORKERS_COUNT_START, DEMON_IMP)
-        call SetBuildUnit(2, DEMON_CITIZEN_MALE)
+        call SetBuildUnit(workers, DEMON_IMP)
+        call SetBuildUnit(citizens_male, DEMON_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -28,9 +28,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(2, DEMON_LEGION_TRANSPORTER)
         call SetBuildUnit(2, DEMON_FORTIFIED_INFERNAL_MACHINE)
         call SetBuildUnit(1, DEMON_SACRIFICAL_PIT)
-        call SetBuildUnit(2, DEMON_CITIZEN_FEMALE)
-        call SetBuildUnit(2, DEMON_CHILD)
-        call SetBuildUnit(2, DEMON_PET)
+        call SetBuildUnit(citizens_female, DEMON_CITIZEN_FEMALE)
+        call SetBuildUnit(children, DEMON_CHILD)
+        call SetBuildUnit(pets, DEMON_PET)
 
         call SetBuildUpgr(2, UPG_DEMON_UNHOLY_STR)
         call SetBuildUpgr(2, UPG_DEMON_UNHOLY_ARMOR)
@@ -96,156 +96,25 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DEMON_OVERLORD)
-    call CampaignAttackerEx(0, 1, 2, DEMON_FEL_STALKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DEMON_OVERLORD)
-    call CampaignAttackerEx(0, 1, 2, DEMON_FEL_STALKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_GREATER_VOID_WALKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_GREATER_VOID_WALKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_GREATER_VOID_WALKER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_EREDAR_SORCERER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_GREATER_VOID_WALKER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_EREDAR_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_SUCCUBUS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_GREATER_VOID_WALKER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_EREDAR_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_SUCCUBUS)
-    call CampaignAttackerEx(2, 2, 3, DEMON_LEGION_SHIP)
-    call CampaignAttackerEx(2, 2, 3, DEMON_JAILER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_INQUISITOR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DEMON_OVERLORD)
-    call CampaignAttackerEx(1, 2, 3, DEMON_FEL_STALKER)
-    call CampaignAttackerEx(1, 2, 3, DEMON_LEGION_SHIP)
-    call CampaignAttackerEx(1, 2, 3, DEMON_INFERNAL_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_GREATER_VOID_WALKER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_EREDAR_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_SUCCUBUS)
-    call CampaignAttackerEx(2, 2, 3, DEMON_NETHER_DRAKE)
-    call CampaignAttackerEx(2, 2, 3, DEMON_LEGION_SHIP)
-    call CampaignAttackerEx(2, 2, 3, DEMON_JAILER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_INQUISITOR)
-    call CampaignAttackerEx(2, 2, 3, DEMON_INFERNAL)
-    call CampaignAttackerEx(2, 2, 3, DEMON_INFERNAL_REAVER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_VOID_REAVER)
-    call CampaignAttackerEx(2, 2, 3, DEMON_FEL_REAVER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(3, 3, 3, DEMON_OVERLORD)
-        call CampaignAttackerEx(3, 3, 3, DEMON_FEL_STALKER)
-        call CampaignAttackerEx(3, 3, 3, DEMON_INFERNAL_MACHINE)
-        call CampaignAttackerEx(3, 3, 3, DEMON_GREATER_VOID_WALKER)
-        call CampaignAttackerEx(3, 3, 3, DEMON_EREDAR_SORCERER)
-        call CampaignAttackerEx(3, 3, 3, DEMON_SUCCUBUS)
-        call CampaignAttackerEx(3, 3, 3, DEMON_INFERNAL)
-        call CampaignAttackerEx(2, 2, 3, DEMON_JAILER)
-        call CampaignAttackerEx(2, 2, 3, DEMON_INQUISITOR)
-        call CampaignAttackerEx(3, 3, 3, DEMON_INFERNAL_REAVER)
-        call CampaignAttackerEx(3, 3, 3, DEMON_VOID_REAVER)
-        call CampaignAttackerEx(3, 3, 3, DEMON_FEL_REAVER)
-        
-        // big air army
-        call CampaignAttackerEx(2, 2, 3, DEMON_LEGION_SHIP)
-        call CampaignAttackerEx(15, 20, 25, DEMON_NETHER_DRAKE)
-        
+
+        call AttackerSimple(0, footmen, DEMON_OVERLORD)
+        call AttackerSimple(0, riflemen, DEMON_FEL_STALKER)
+        call AttackerSimple(2, knights, BLOOD_ELF_LIEUTENANT)
+        call AttackerSimple(3, priests, DEMON_EREDAR_SORCERER)
+        call AttackerSimple(3, sorceresses, DEMON_SUCCUBUS)
+        call AttackerSimple(4, mortars, DEMON_INFERNAL_REAVER)
+        call AttackerSimple(4, mortars, DEMON_VOID_REAVER)
+        call AttackerSimple(4, mortars, DEMON_FEL_REAVER)
+        call AttackerSimple(4, siege_engines, DEMON_INFERNAL_MACHINE)
+        call AttackerSimple(5, spellbreakers, DEMON_GREATER_VOID_WALKER)
+        call AttackerSimple(5, spellbreakers, DEMON_JAILER)
+        call AttackerSimple(5, spellbreakers, DEMON_INQUISITOR)
+        call AttackerSimple(12, taurens, DEMON_INFERNAL)
+        call AttackerSimple(12, gryphons, DEMON_NETHER_DRAKE)
+        call AttackerSimple(12, dragon_hawks, DEMON_LEGION_SHIP)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

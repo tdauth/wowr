@@ -4,7 +4,8 @@ function BuildingStrategy takes nothing returns nothing
         // Tier 1 Buildings
         call SetBuildUnit(1, TREE_LIFE)
         call SetBuildUnit(1, ELF_MINE)
-        call SetBuildUnit(19, WISP)
+        call SetBuildUnit(workers, WISP)
+        call SetBuildUnit(citizens_male, ELF_CITIZEN_MALE)
         //call SetBuildUnit(2, ELF_HOUSING)
         call SetBuildUnit(3, MOON_WELL)
         call SetBuildUnit(2, ANCIENT_WAR)
@@ -45,8 +46,6 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(2, MOON_WELL)
         call SetBuildUnit(2, ANCIENT_PROTECT)
 
-        call SetBuildUnit(1, ELF_CITIZEN_MALE)
-
         call SetBuildUpgr(3, UPG_STR_MOON)
         call SetBuildUpgr(3, UPG_STR_WILD)
         call SetBuildUpgr(3, UPG_HIDES)
@@ -85,136 +84,21 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing 
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HUNTRESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
-    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
-    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
-    call CampaignAttackerEx(2, 2, 3, HIPPO)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
-    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
-    call CampaignAttackerEx(2, 2, 3, HIPPO)
-    call CampaignAttackerEx(2, 2, 3, MOUNTAIN_GIANT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, ARCHER)
-    call CampaignAttackerEx(1, 2, 3, HUNTRESS)
-    call CampaignAttackerEx(1, 2, 3, DRYAD)
-    call CampaignAttackerEx(1, 2, 3, BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, DRUID_TALON)
-    call CampaignAttackerEx(2, 2, 3, DRUID_CLAW)
-    call CampaignAttackerEx(2, 2, 3, HIPPO)
-    call CampaignAttackerEx(2, 2, 3, MOUNTAIN_GIANT)
-    call CampaignAttackerEx(2, 2, 3, CHIMAERA)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(4, 4, 4, ARCHER)
-        call CampaignAttackerEx(2, 2, 2, HUNTRESS)
-        call CampaignAttackerEx(2, 2, 2, DRYAD)
-        call CampaignAttackerEx(2, 2, 2, BALLISTA)
-        call CampaignAttackerEx(2, 2, 2, DRUID_TALON)
-        call CampaignAttackerEx(3, 3, 3, DRUID_CLAW)
-        call CampaignAttackerEx(3, 3, 3, MOUNTAIN_GIANT)
-        
-        // big air army
-        call CampaignAttackerEx(4, 5, 6, HIPPO)
-        call CampaignAttackerEx(4, 5, 6, HIPPO_RIDER)
-        call CampaignAttackerEx(8, 10, 12, CHIMAERA)
-        call CampaignAttackerEx(8, 10, 12, FAERIE_DRAGON)
-        
+
+        call AttackerSimple(0, footmen, ARCHER)
+        call AttackerSimple(0, riflemen, HUNTRESS)
+        call AttackerSimple(2, knights, MOUNTAIN_GIANT)
+        call AttackerSimple(3, priests, DRUID_TALON)
+        call AttackerSimple(3, sorceresses, DRUID_CLAW)
+        call AttackerSimple(4, siege_engines, BALLISTA)
+        call AttackerSimple(5, spellbreakers, DRYAD)
+        call AttackerSimple(12, gryphons, CHIMAERA)
+        call AttackerSimple(12, flying_machines, HIPPO_RIDER)
+        call AttackerSimple(12, flying_machines, HIPPO)
+        call AttackerSimple(12, dragon_hawks, FAERIE_DRAGON)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

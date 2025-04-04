@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, QUILLBOAR_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, QUILLBOAR_WORKER)
-        call SetBuildUnit(2, QUILLBOAR_CITIZEN_MALE)
+        call SetBuildUnit(workers, QUILLBOAR_WORKER)
+        call SetBuildUnit(citizens_male, QUILLBOAR_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -28,9 +28,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, QUILLBOAR_HOUSE_OF_ANCESTRY)
         call SetBuildUnit(1, QUILLBOAR_ANIMAL_BATTLE_GROUNDS)
         call SetBuildUnit(4, QUILLBOAR_HUT)
-        call SetBuildUnit(2, QUILLBOAR_CITIZEN_FEMALE)
-        call SetBuildUnit(2, QUILLBOAR_CHILD)
-        call SetBuildUnit(2, QUILLBOAR_PET)
+        call SetBuildUnit(citizens_female, QUILLBOAR_CITIZEN_FEMALE)
+        call SetBuildUnit(children, QUILLBOAR_CHILD)
+        call SetBuildUnit(pets, QUILLBOAR_PET)
 
         call SetBuildUpgr(2, UPG_QUILLBOAR_MELEE)
         call SetBuildUpgr(2, UPG_QUILLBOAR_RANGED)
@@ -48,7 +48,6 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, QUILLBOAR_SACRIFICIAL_GROUNDS)
         call SetBuildUnit(5, QUILLBOAR_HUT)
         call SetBuildUnit(2, QUILLBOAR_THORNY_SPIRE)
-        call SetBuildUnit(2, QUILLBOAR_CITIZEN_MALE)
 
         call SetBuildUpgr(3, UPG_QUILLBOAR_MELEE)
         call SetBuildUpgr(3, UPG_QUILLBOAR_RANGED)
@@ -89,149 +88,27 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(0, 1, 2, QUILLBOAR_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(0, 1, 2, QUILLBOAR_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MEDICINE_MAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MEDICINE_MAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MEDICINE_MAN)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MYSTIC)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MEDICINE_MAN)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MYSTIC)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_NECROMANCER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MEDICINE_MAN)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MYSTIC)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_NECROMANCER)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_HARPY_ROGUE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, QUILLBOAR_QUILLBOAR)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_RAIDER)
-    call CampaignAttackerEx(1, 2, 3, QUILLBOAR_QUILBEAST)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MEDICINE_MAN)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_MYSTIC)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_NECROMANCER)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_HARPY_ROGUE)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_CHIEFTAIN)
-    call CampaignAttackerEx(2, 2, 3, QUILLBOAR_NECROMANCER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, QUILLBOAR_HUNTER)
-        call CampaignAttackerEx(2, 2, 2, QUILLBOAR_QUILBEAST)
-        call CampaignAttackerEx(2, 2, 2, QUILLBOAR_MEDICINE_MAN)
-        call CampaignAttackerEx(2, 2, 2, QUILLBOAR_MYSTIC)
-        call CampaignAttackerEx(4, 4, 4, QUILLBOAR_CHIEFTAIN)
-        call CampaignAttackerEx(4, 4, 4, QUILLBOAR_NECROMANCER)
-        call CampaignAttackerEx(4, 4, 4, QUILLBOAR_QUILLBOAR)
-        call CampaignAttackerEx(4, 4, 4, QUILLBOAR_NECROMANCER)
-        call CampaignAttackerEx(4, 4, 4, QUILLBOAR_RAIDER)
-        
-         // big air army
-        call CampaignAttackerEx(8, 10, 12, QUILLBOAR_HARPY_ROGUE)
-        call CampaignAttackerEx(4, 6, 8, QUILLBOAR_HARPY_WINDWITCH)
-        
+
+        call AttackerSimple(0, footmen, QUILLBOAR_QUILLBOAR)
+        call AttackerSimple(0, riflemen, QUILLBOAR_HUNTER)
+        call AttackerSimple(2, knights, QUILLBOAR_RAIDER)
+        call AttackerSimple(3, priests, QUILLBOAR_MEDICINE_MAN)
+        call AttackerSimple(3, sorceresses, QUILLBOAR_MYSTIC)
+        call AttackerSimple(4, siege_engines, QUILLBOAR_QUILBEAST)
+        call AttackerSimple(5, spellbreakers, QUILLBOAR_NECROMANCER)
+        call AttackerSimple(12, taurens, QUILLBOAR_CHIEFTAIN)
+        call AttackerSimple(12, gryphons, QUILLBOAR_HARPY_ROGUE)
+        call AttackerSimple(12, dragon_hawks, QUILLBOAR_HARPY_WINDWITCH)
+
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep(M2)
         call LaunchAttack()
     endloop
+endfunction
+
 endfunction
 
 function main takes nothing returns nothing

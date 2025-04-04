@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, OGRE_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, OGRE_OGRE_SLAVE)
-        call SetBuildUnit(2, OGRE_CITIZEN_MALE)
+        call SetBuildUnit(workers, OGRE_OGRE_SLAVE)
+        call SetBuildUnit(citizens_male, OGRE_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -27,9 +27,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, OGRE_BEASTIARY)
         call SetBuildUnit(1, OGRE_ARENA)
         call SetBuildUnit(2, OGRE_BOULDER_TOWER)
-        call SetBuildUnit(2, OGRE_CITIZEN_FEMALE)
-        call SetBuildUnit(2, OGRE_CHILD)
-        call SetBuildUnit(2, OGRE_PET)
+        call SetBuildUnit(citizens_female, OGRE_CITIZEN_FEMALE)
+        call SetBuildUnit(children, OGRE_CHILD)
+        call SetBuildUnit(pets, OGRE_PET)
 
         call SetBuildUpgr(2, UPG_OGRE_MELEE)
         call SetBuildUpgr(2, UPG_OGRE_RANGED)
@@ -48,7 +48,6 @@ function BuildingStrategy takes nothing returns nothing
         // Tier 3 buildings
         call SetBuildUnit(1, OGRE_TIER_3)
         call SetBuildUnit(2, OGRE_ADVANCED_BOULDER_TOWER)
-        call SetBuildUnit(2, OGRE_CITIZEN_MALE)
 
         call SetBuildUpgr(3, UPG_OGRE_MELEE)
         call SetBuildUpgr(3, UPG_OGRE_RANGED)
@@ -86,154 +85,32 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(0, 1, 2, OGRE_OGRE_STONE_THROWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(0, 1, 2, OGRE_OGRE_STONE_THROWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_WARLOCK)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_WARLOCK)
-    call CampaignAttackerEx(2, 2, 3, OGRE_CLEFTHOOF)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_WARLOCK)
-    call CampaignAttackerEx(2, 2, 3, OGRE_CLEFTHOOF)
-    call CampaignAttackerEx(2, 2, 3, OGRE_BRONZE_DRAKE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, OGRE_OGRE_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_STONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_DRUMMER)
-    call CampaignAttackerEx(1, 2, 3, OGRE_OGRE_HUNTER)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_MAGI)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_WARLOCK)
-    call CampaignAttackerEx(2, 2, 3, OGRE_CLEFTHOOF)
-    call CampaignAttackerEx(2, 2, 3, OGRE_BRONZE_DRAKE)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_LORD)
-    call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_NECROMANCER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_STONE_THROWER)
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_HUNTER)
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_MAGI)
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_WARLOCK)
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_LORD)
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_NECROMANCER)
-        call CampaignAttackerEx(4, 4, 4, OGRE_OGRE_WARRIOR)
-        call CampaignAttackerEx(4, 4, 4, OGRE_MOKNATHAL)
-        call CampaignAttackerEx(4, 4, 4, OGRE_OGRE_DRUMMER)
-        call CampaignAttackerEx(2, 2, 2, OGRE_CLEFTHOOF)
-        call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_FIRE_BREATHER)
 
-        call CampaignAttackerEx(1, 1, 1, OGRE_KORGALL)
-        call CampaignAttackerEx(4, 4, 4, OGRE_STONEMAUL_OGRE)
-        call CampaignAttackerEx(4, 4, 4, OGRE_STONEMAUL_MAGI)
+        call AttackerSimple(0, footmen, OGRE_OGRE_WARRIOR)
+        call AttackerSimple(0, riflemen, OGRE_OGRE_STONE_THROWER)
+        call AttackerSimple(2, knights, OGRE_OGRE_LORD)
+        call AttackerSimple(3, priests, OGRE_OGRE_MAGI)
+        call AttackerSimple(3, sorceresses, OGRE_OGRE_WARLOCK)
+        call AttackerSimple(4, mortars, OGRE_OGRE_HUNTER)
+        call AttackerSimple(4, mortars, OGRE_OGRE_FIRE_BREATHER)
+        call AttackerSimple(4, siege_engines, OGRE_CLEFTHOOF)
+        call AttackerSimple(4, siege_engines, OGRE_OGRE_DRUMMER)
+        call AttackerSimple(5, spellbreakers, OGRE_OGRE_NECROMANCER)
+        call AttackerSimple(5, spellbreakers, STORMWIND_BISHOP)
+        call AttackerSimple(12, taurens, OGRE_GRONN_WAR_CLUB)
+        call AttackerSimple(12, taurens, OGRE_MOKNATHAL)
+        call AttackerSimple(12, 1, OGRE_KORGALL)
+        call AttackerSimple(12, 4, OGRE_STONEMAUL_OGRE)
+        call AttackerSimple(12, 4, OGRE_STONEMAUL_MAGI)
+        call AttackerSimple(12, gryphons, OGRE_BRONZE_DRAKE)
+        call AttackerSimple(12, flying_machines, OGRE_ZEPPELIN)
+        call AttackerSimple(12, dragon_hawks, STORMWIND_EAGLE_KNIGHT)
+        call AttackerSimple(12, dragon_hawks, STORMWIND_GRYPHON_KNIGHT)
 
-        call CampaignAttackerEx(3, 3, 3, OGRE_GRONN_WAR_CLUB)
-        
-         // big air army
-        call CampaignAttackerEx(8, 10, 12, OGRE_BRONZE_DRAKE)
-        call CampaignAttackerEx(6, 8, 10, OGRE_ZEPPELIN)
-        
         call AddStandardUnitsToAttackWave()
+        call AddDragonsToAttackWave()
         call Sleep(M2)
         call LaunchAttack()
     endloop

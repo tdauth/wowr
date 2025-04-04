@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, BANDIT_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, BANDIT_WORKER)
-        call SetBuildUnit(2, BANDIT_CITIZEN_MALE)
+        call SetBuildUnit(workers, BANDIT_WORKER)
+        call SetBuildUnit(citizens_male, BANDIT_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -27,9 +27,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, BANDIT_CHURCH)
         call SetBuildUnit(1, BANDIT_PRISON)
         call SetBuildUnit(4, BANDIT_TENT)
-        call SetBuildUnit(2, BANDIT_CITIZEN_FEMALE)
-        call SetBuildUnit(2, BANDIT_CHILD)
-        call SetBuildUnit(2, BANDIT_PET)
+        call SetBuildUnit(citizens_female, BANDIT_CITIZEN_FEMALE)
+        call SetBuildUnit(children, BANDIT_CHILD)
+        call SetBuildUnit(pets, BANDIT_PET)
 
         call SetBuildUnit(3, BANDIT_WATCH_TOWER)
 
@@ -86,145 +86,22 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, BANDIT_BANDIT)
-    call CampaignAttackerEx(0, 1, 2, BANDIT_BRIGAND)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, BANDIT_BANDIT)
-    call CampaignAttackerEx(0, 1, 2, BANDIT_BRIGAND)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_GRYPHON_RAIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, BANDIT_BANDIT)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BRIGAND)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_BANDIT_LORD)
-    call CampaignAttackerEx(1, 2, 3, BANDIT_AMBAL)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_WIZARD)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_HERETIC)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_GRYPHON_RAIDER)
-    call CampaignAttackerEx(2, 2, 3, BANDIT_CARGE_CART)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(3, 3, 3, BANDIT_BANDIT)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_BRIGAND)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_BANDIT_LORD)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_AMBAL)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_WIZARD)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_HERETIC)
-        call CampaignAttackerEx(2, 2, 3, BANDIT_SLAVE_MASTER)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_CARGE_CART)
-        call CampaignAttackerEx(3, 3, 3, BANDIT_CROSSBOWMAN)
-        
-        // big air army
-        call CampaignAttackerEx(6, 8, 10, BANDIT_GRYPHON_RAIDER)
-        call CampaignAttackerEx(6, 8, 10, BANDIT_CROW)
-        call CampaignAttackerEx(6, 8, 10, BANDIT_FLYING_SPEAR_THROWER)
-        
+
+        call AttackerSimple(0, footmen, BANDIT_BANDIT)
+        call AttackerSimple(0, riflemen, BANDIT_BRIGAND)
+        call AttackerSimple(2, knights, BANDIT_BANDIT_LORD)
+        call AttackerSimple(3, priests, BANDIT_WIZARD)
+        call AttackerSimple(3, sorceresses, BANDIT_HERETIC)
+        call AttackerSimple(4, mortars, BANDIT_AMBAL)
+        call AttackerSimple(4, mortars, BANDIT_CROSSBOWMAN)
+        call AttackerSimple(4, siege_engines, BANDIT_CARGE_CART)
+        call AttackerSimple(5, spellbreakers, BANDIT_SLAVE_MASTER)
+        call AttackerSimple(12, gryphons, BANDIT_GRYPHON_RAIDER)
+        call AttackerSimple(12, flying_machines, BANDIT_FLYING_SPEAR_THROWER)
+        call AttackerSimple(12, dragon_hawks, BANDIT_CROW)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

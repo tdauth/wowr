@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, WORGEN_TOWN_HALL)
-        call SetBuildUnit(WORKERS_COUNT_START, WORGEN_PEASANT)
-        call SetBuildUnit(2, WORGEN_CITIZEN_MALE)
+        call SetBuildUnit(workers, WORGEN_PEASANT)
+        call SetBuildUnit(citizens_male, WORGEN_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -28,9 +28,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, WORGEN_WIZARD_TOWER)
         call SetBuildUnit(4, WORGEN_HOUSE)
         call SetBuildUnit(2, WORGEN_SCOUT_TOWER)
-        call SetBuildUnit(2, WORGEN_CITIZEN_FEMALE)
-        call SetBuildUnit(2, WORGEN_CHILD)
-        call SetBuildUnit(2, WORGEN_PET)
+        call SetBuildUnit(citizens_female, WORGEN_CITIZEN_FEMALE)
+        call SetBuildUnit(children, WORGEN_CHILD)
+        call SetBuildUnit(pets, WORGEN_PET)
 
         call SetBuildUpgr(2, UPG_WORGEN_WORGEN_CLAWS)
         call SetBuildUpgr(2, UPG_WORGEN_ARMOR)
@@ -91,140 +91,20 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, WORGEN_RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, WORGEN_RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_NIGHTSTALKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_NIGHTSTALKER)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_STORMCROW_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_NIGHTSTALKER)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_STORMCROW_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_NIGHTSTALKER)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_STORMCROW_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_NIGHTSTALKER)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_STORMCROW_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_BANNER_CARRIER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, WORGEN_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_DRUID)
-    call CampaignAttackerEx(1, 2, 3, WORGEN_NIGHTSTALKER)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_STORMCROW_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, WORGEN_BANNER_CARRIER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(4, 4, 4, WORGEN_FOOTMAN)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_RIFLEMAN)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_KNIGHT)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_DRUID)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_NIGHTSTALKER)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_BANNER_CARRIER)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_BATTLE_MAGE)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_MANTICORE)
-        call CampaignAttackerEx(4, 4, 4, WORGEN_MINDLESS_WORGEN)
-        
-        // big air army
-        call CampaignAttackerEx(8, 12, 18, WORGEN_STORMCROW_KNIGHT)
-        call CampaignAttackerEx(8, 12, 18, WORGEN_GILNEAS_GUNSHIP)
+
+        call AttackerSimple(0, footmen, WORGEN_FOOTMAN)
+        call AttackerSimple(0, riflemen, WORGEN_RIFLEMAN)
+        call AttackerSimple(2, knights, WORGEN_KNIGHT)
+        call AttackerSimple(3, priests, WORGEN_DRUID)
+        call AttackerSimple(3, sorceresses, WORGEN_BATTLE_MAGE)
+        call AttackerSimple(4, mortars, WORGEN_NIGHTSTALKER)
+        call AttackerSimple(4, siege_engines, WORGEN_MANTICORE)
+        call AttackerSimple(5, spellbreakers, WORGEN_BANNER_CARRIER)
+        call AttackerSimple(12, taurens, WORGEN_MINDLESS_WORGEN)
+        call AttackerSimple(12, gryphons, WORGEN_STORMCROW_KNIGHT)
+        call AttackerSimple(12, flying_machines, WORGEN_GILNEAS_GUNSHIP)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()

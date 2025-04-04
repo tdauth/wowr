@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, NAGA_TEMPLE_1)
-        call SetBuildUnit(22, NAGA_SLAVE)
-        call SetBuildUnit(2, NAGA_CITIZEN_MALE)
+        call SetBuildUnit(workers, NAGA_SLAVE)
+        call SetBuildUnit(citizens_male, NAGA_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -22,9 +22,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, NAGA_TEMPLE)
         call SetBuildUnit(1, NAGA_MURLOC_HUT)
         call SetBuildUnit(1, NAGA_SHRINE)
-        call SetBuildUnit(2, NAGA_CITIZEN_FEMALE)
-        call SetBuildUnit(2, NAGA_PET)
-        call SetBuildUnit(2, NAGA_CHILD)
+        call SetBuildUnit(citizens_female, NAGA_CITIZEN_FEMALE)
+        call SetBuildUnit(children, NAGA_CHILD)
+        call SetBuildUnit(pets, NAGA_PET)
 
         call SetBuildUpgr(2, UPG_NAGA_ARMOR)
         call SetBuildUpgr(2, UPG_NAGA_ATTACK)
@@ -71,140 +71,20 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, NAGA_REAVER)
-    call CampaignAttackerEx(0, 1, 2, NAGA_SNAP_DRAGON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, NAGA_REAVER)
-    call CampaignAttackerEx(0, 1, 2, NAGA_SNAP_DRAGON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call CampaignAttackerEx(2, 2, 3, NAGA_SIREN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call CampaignAttackerEx(2, 2, 3, NAGA_SIREN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call CampaignAttackerEx(2, 2, 3, NAGA_SIREN)
-    call CampaignAttackerEx(2, 2, 3, NAGA_COUATL)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call CampaignAttackerEx(2, 2, 3, NAGA_SIREN)
-    call CampaignAttackerEx(2, 2, 3, NAGA_COUATL)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call CampaignAttackerEx(2, 2, 3, NAGA_SIREN)
-    call CampaignAttackerEx(2, 2, 3, NAGA_COUATL)
-    call CampaignAttackerEx(2, 2, 3, NAGA_ROYAL)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, NAGA_REAVER)
-    call CampaignAttackerEx(1, 2, 3, NAGA_SNAP_DRAGON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_MYRMIDON)
-    call CampaignAttackerEx(1, 2, 3, NAGA_TURTLE)
-    call CampaignAttackerEx(2, 2, 3, NAGA_SIREN)
-    call CampaignAttackerEx(2, 2, 3, NAGA_COUATL)
-    call CampaignAttackerEx(2, 2, 3, NAGA_ROYAL)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, NAGA_REAVER)
-        call CampaignAttackerEx(2, 2, 2, NAGA_SNAP_DRAGON)
-        call CampaignAttackerEx(2, 2, 2, NAGA_MYRMIDON)
-        call CampaignAttackerEx(2, 2, 2, NAGA_TURTLE)
-        call CampaignAttackerEx(2, 2, 2, NAGA_SIREN)
-        call CampaignAttackerEx(4, 4, 4, NAGA_ROYAL)
 
-        call CampaignAttackerEx(2, 2, 2, NAGA_WHALER)
-        call CampaignAttackerEx(2, 2, 2, NAGA_SORCEROR)
-        call CampaignAttackerEx(2, 2, 2, NAGA_CORAL_GOLEM)
-        
-        // big air army
-        call CampaignAttackerEx(15, 20, 25, NAGA_COUATL)
-        
+        call AttackerSimple(0, footmen, NAGA_REAVER)
+        call AttackerSimple(0, riflemen, NAGA_SNAP_DRAGON)
+        call AttackerSimple(2, knights, NAGA_MYRMIDON)
+        call AttackerSimple(3, priests, NAGA_SORCEROR)
+        call AttackerSimple(3, sorceresses, NAGA_SIREN)
+        call AttackerSimple(4, mortars, NAGA_CORAL_GOLEM)
+        call AttackerSimple(4, siege_engines, NAGA_TURTLE)
+        call AttackerSimple(5, spellbreakers, NAGA_WHALER)
+        call AttackerSimple(12, taurens, NAGA_ROYAL)
+        call AttackerSimple(12, gryphons, NAGA_COUATL)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

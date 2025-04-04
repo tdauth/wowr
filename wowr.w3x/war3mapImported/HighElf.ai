@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, HIGH_ELF_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, HIGH_ELF_ENGINEER)
-        call SetBuildUnit(2, HIGH_ELF_CITIZEN_MALE)
+        call SetBuildUnit(workers, HIGH_ELF_ENGINEER)
+        call SetBuildUnit(citizens_male, HIGH_ELF_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -29,9 +29,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, HIGH_ELF_MAGE_TOWER)
         call SetBuildUnit(4, HIGH_ELF_FARM)
         call SetBuildUnit(2, HIGH_ELF_OUTPOST)
-        call SetBuildUnit(2, HIGH_ELF_CITIZEN_FEMALE)
-        call SetBuildUnit(2, HIGH_ELF_CHILD)
-        call SetBuildUnit(2, HIGH_ELF_PET)
+        call SetBuildUnit(citizens_female, HIGH_ELF_CITIZEN_FEMALE)
+        call SetBuildUnit(children, HIGH_ELF_CHILD)
+        call SetBuildUnit(pets, HIGH_ELF_PET)
 
         call SetBuildUpgr(2, UPG_HIGH_ELF_MELEE)
         call SetBuildUpgr(2, UPG_HIGH_ELF_ARMOR)
@@ -92,162 +92,23 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_RIDER)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_RIDER)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_ARCHER)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_LIEUTENANT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, HIGH_ELF_SWORDMAN)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_RIDER)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_DRAGON_HAWK_ARCHER)
-    call CampaignAttackerEx(2, 2, 3, HIGH_ELF_LIEUTENANT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
 
-        // small ground army
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_SWORDMAN)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_ARCHER)
-        call CampaignAttackerEx(0, 1, 2, HIGH_ELF_RANGER)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_ARCH_CLERIC)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_PRIEST)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_SORCERESS)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_LIEUTENANT)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_BIRDIEPULT)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_KNIGHT)
-
-        // big air army
-        call CampaignAttackerEx(4, 6, 9, HIGH_ELF_DRAGON_HAWK)
-        call CampaignAttackerEx(4, 6, 9, HIGH_ELF_DRAGON_HAWK_RIDER)
-        call CampaignAttackerEx(4, 6, 9, HIGH_ELF_DRAGON_HAWK_ARCHER)
-        call CampaignAttackerEx(4, 4, 4, HIGH_ELF_EAGLE)
-        call CampaignAttackerEx(4, 6, 9, HIGH_ELF_EAGLE_RIDER)
-        call CampaignAttackerEx(4, 6, 9, HIGH_ELF_DRAGON)
+        call AttackerSimple(0, footmen, HIGH_ELF_SWORDMAN)
+        call AttackerSimple(0, riflemen, HIGH_ELF_ARCHER)
+        call AttackerSimple(2, knights, HIGH_ELF_KNIGHT)
+        call AttackerSimple(3, priests, HIGH_ELF_PRIEST)
+        call AttackerSimple(3, sorceresses, HIGH_ELF_SORCERESS)
+        call AttackerSimple(4, siege_engines, HIGH_ELF_BIRDIEPULT)
+        call AttackerSimple(5, spellbreakers, HIGH_ELF_ARCH_CLERIC)
+        call AttackerSimple(12, taurens, HIGH_ELF_LIEUTENANT)
+        call AttackerSimple(12, gryphons, HIGH_ELF_DRAGON)
+        call AttackerSimple(12, flying_machines, HIGH_ELF_EAGLE_RIDER)
+        call AttackerSimple(12, flying_machines, HIGH_ELF_EAGLE)
+        call AttackerSimple(12, flying_machines, HIGH_ELF_DRAGON_HAWK_ARCHER)
+        call AttackerSimple(12, flying_machines, HIGH_ELF_DRAGON_HAWK_RIDER)
+        call AttackerSimple(12, dragon_hawks, HIGH_ELF_DRAGON_HAWK)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()

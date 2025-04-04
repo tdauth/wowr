@@ -4133,6 +4133,7 @@ globals
     constant integer DWARF_RIFLEMAN                                  = 'h02W'
     constant integer DWARF_BATTLEPRIEST                              = 'h03A'
     constant integer DWARF_RUNECASTER                                = 'o01L'
+    constant integer DWARF_WAR_GOLEM                                 = 'n04X' // spell breaker
     constant integer DWARF_RIDER                                     = 'h02Y' // knight
     constant integer DWARF_MORTAR                                    = 'h03H'
     constant integer DWARF_POLAR_BEAR                                = 'n04T' // tauren
@@ -4955,7 +4956,7 @@ globals
     constant integer TUSKARR_SHAMAN                                  = 'o05R' // sorceress
     constant integer TUSKARR_FISHING_BOAT                            = 'h0PU'
 
-    constant integer TUSKARR_PET_SEAL                                = 'n0FH'
+    constant integer TUSKARR_PET                                     = 'n0FH'
     constant integer TUSKARR_CITIZEN_FEMALE                          = 'n0FN'
     constant integer TUSKARR_CITIZEN_MALE                            = 'n0FG'
     constant integer TUSKARR_CHILD                                   = 'n07E'

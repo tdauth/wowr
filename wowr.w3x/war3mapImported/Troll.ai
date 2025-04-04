@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, TROLL_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, TROLL_GATHERER)
-        call SetBuildUnit(2, TROLL_CITIZEN_MALE)
+        call SetBuildUnit(workers, TROLL_GATHERER)
+        call SetBuildUnit(citizens_male, TROLL_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -26,9 +26,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, TROLL_SPIRIT_LODGE)
         call SetBuildUnit(1, TROLL_BESTIARY)
         call SetBuildUnit(4, TROLL_HUT)
-        call SetBuildUnit(2, TROLL_CITIZEN_FEMALE)
-        call SetBuildUnit(2, TROLL_CHILD)
-        call SetBuildUnit(2, TROLL_PET)
+        call SetBuildUnit(citizens_female, TROLL_CITIZEN_FEMALE)
+        call SetBuildUnit(children, TROLL_CHILD)
+        call SetBuildUnit(pets, TROLL_PET)
 
         call SetBuildUpgr(2, UPG_TROLL_SPEARS)
         call SetBuildUpgr(2, UPG_TROLL_CREATURE_ATTACK)
@@ -88,146 +88,23 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(0, 1, 2, TROLL_HEAD_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(0, 1, 2, TROLL_HEAD_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call CampaignAttackerEx(2, 2, 3, TROLL_WITCH_DOCTOR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call CampaignAttackerEx(2, 2, 3, TROLL_WITCH_DOCTOR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call CampaignAttackerEx(2, 2, 3, TROLL_WITCH_DOCTOR)
-    call CampaignAttackerEx(2, 2, 3, TROLL_SHAMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call CampaignAttackerEx(2, 2, 3, TROLL_WITCH_DOCTOR)
-    call CampaignAttackerEx(2, 2, 3, TROLL_SHAMAN)
-    call CampaignAttackerEx(2, 2, 3, TROLL_THRONE_OF_WAR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call CampaignAttackerEx(2, 2, 3, TROLL_WITCH_DOCTOR)
-    call CampaignAttackerEx(2, 2, 3, TROLL_SHAMAN)
-    call CampaignAttackerEx(2, 2, 3, TROLL_THRONE_OF_WAR)
-    call CampaignAttackerEx(2, 2, 3, TROLL_BAT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, TROLL_MAN_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_HEAD_HUNTER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_RIDER)
-    call CampaignAttackerEx(1, 2, 3, TROLL_VOODOO_CANNONEER)
-    call CampaignAttackerEx(2, 2, 3, TROLL_WITCH_DOCTOR)
-    call CampaignAttackerEx(2, 2, 3, TROLL_SHAMAN)
-    call CampaignAttackerEx(2, 2, 3, TROLL_THRONE_OF_WAR)
-    call CampaignAttackerEx(2, 2, 3, TROLL_BAT)
-    call CampaignAttackerEx(2, 2, 3, TROLL_ICE_TROLL_WARLORD)
-    call CampaignAttackerEx(2, 2, 3, TROLL_ICE_TROLL_HIGH_PRIEST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, TROLL_HEAD_HUNTER)
-        call CampaignAttackerEx(2, 2, 2, TROLL_VOODOO_CANNONEER)
-        call CampaignAttackerEx(2, 2, 2, TROLL_WITCH_DOCTOR)
-        call CampaignAttackerEx(2, 2, 2, TROLL_SHAMAN)
-        call CampaignAttackerEx(2, 2, 2, TROLL_ICE_TROLL_WARLORD)
-        call CampaignAttackerEx(2, 2, 2, TROLL_ICE_TROLL_HIGH_PRIEST)
-        call CampaignAttackerEx(4, 4, 4, TROLL_MAN_HUNTER)
-        call CampaignAttackerEx(4, 4, 4, TROLL_BLOOD_MAGE)
-        call CampaignAttackerEx(4, 4, 4, TROLL_RIDER)
-        call CampaignAttackerEx(2, 2, 2, TROLL_HEXER)
-        
-         // big air army
-        call CampaignAttackerEx(8, 10, 12, TROLL_BAT)
-        call CampaignAttackerEx(8, 10, 12, TROLL_BAT)
-        
+
+        call AttackerSimple(0, footmen, TROLL_MAN_HUNTER)
+        call AttackerSimple(0, riflemen, TROLL_HEAD_HUNTER)
+        call AttackerSimple(2, knights, TROLL_RIDER)
+        call AttackerSimple(3, priests, TROLL_WITCH_DOCTOR)
+        call AttackerSimple(3, sorceresses, TROLL_SHAMAN)
+        call AttackerSimple(4, siege_engines, TROLL_VOODOO_CANNONEER)
+        call AttackerSimple(5, spellbreakers, TROLL_ICE_TROLL_HIGH_PRIEST)
+        call AttackerSimple(5, spellbreakers, TROLL_BLOOD_MAGE)
+        call AttackerSimple(5, spellbreakers, TROLL_HEXER)
+        call AttackerSimple(12, taurens, TROLL_THRONE_OF_WAR)
+        call AttackerSimple(12, taurens, TROLL_ICE_TROLL_WARLORD)
+        call AttackerSimple(12, gryphons, TROLL_BATRIDER)
+        call AttackerSimple(12, dragon_hawks, TROLL_BAT)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

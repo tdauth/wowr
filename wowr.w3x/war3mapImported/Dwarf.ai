@@ -4,18 +4,18 @@ function BuildingStrategy takes nothing returns nothing
         // Tier 1 Buildings
         call SetBuildUnit(1, DWARF_TIER_1)
         //call SetBuildUnit(1, DWARF_MINE) // AI does not know how to construct. We preplaced one.
-        call SetBuildUnit(22, DWARF_MINER)
+        call SetBuildUnit(workers, DWARF_MINER)
         call SetBuildUnit(1, DWARF_BLACKSMITH)
         call SetBuildUnit(1, DWARF_ALTAR)
         call SetBuildUnit(5, DWARF_HOUSE)
-        call SetBuildUnit(2, DWARF_CITIZEN_MALE)
+        call SetBuildUnit(citizens_male, DWARF_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
         call SetBuildUnit(2, DWARF_HOUSING)
-        call SetBuildUnit(2, DWARF_CITIZEN_FEMALE)
-        call SetBuildUnit(2, DWARF_BARRACKS)
-        call SetBuildUnit(4, DWARF_TOWER)
+        call SetBuildUnit(citizens_female, DWARF_CITIZEN_FEMALE)
+        call SetBuildUnit(children, DWARF_BARRACKS)
+        call SetBuildUnit(pets, DWARF_TOWER)
 
         // Tier 2 Buildings
         call SetBuildUnit(1, DWARF_TIER_2)
@@ -84,153 +84,24 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(0, 1, 2, DWARF_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(0, 1, 2, DWARF_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON_RIDER)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON_RIDER)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON)
-    call CampaignAttackerEx(2, 2, 3, DWARF_BATTLEPRIEST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON_RIDER)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON)
-    call CampaignAttackerEx(2, 2, 3, DWARF_BATTLEPRIEST)
-    call CampaignAttackerEx(2, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(2, 2, 3, DWARF_FLYING_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DWARF_SIEGE_ENGINE)
-    call CampaignAttackerEx(2, 2, 3, DWARF_STEAM_FORTRESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DWARF_TROLL_SLAYER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIDER)
-    call CampaignAttackerEx(1, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(1, 2, 3, DWARF_MORTAR)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON_RIDER)
-    call CampaignAttackerEx(2, 2, 3, DWARF_GRYPHON)
-    call CampaignAttackerEx(2, 2, 3, DWARF_BATTLEPRIEST)
-    call CampaignAttackerEx(2, 2, 3, DWARF_RIFLEMAN)
-    call CampaignAttackerEx(2, 2, 3, DWARF_RUNECASTER)
-    call CampaignAttackerEx(2, 2, 3, DWARF_FLYING_MACHINE)
-    call CampaignAttackerEx(2, 2, 3, DWARF_SIEGE_ENGINE)
-    call CampaignAttackerEx(2, 2, 3, DWARF_STEAM_FORTRESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, DWARF_TROLL_SLAYER)
-        call CampaignAttackerEx(2, 2, 2, DWARF_RIDER)
-        call CampaignAttackerEx(2, 2, 2, DWARF_RIFLEMAN)
-        call CampaignAttackerEx(2, 2, 2, DWARF_MORTAR)
-        call CampaignAttackerEx(2, 2, 2, DWARF_GRYPHON)
-        call CampaignAttackerEx(2, 2, 2, DWARF_BATTLEPRIEST)
-        call CampaignAttackerEx(2, 2, 2, DWARF_RIFLEMAN)
-        call CampaignAttackerEx(2, 2, 2, DWARF_RUNECASTER)
-        call CampaignAttackerEx(2, 2, 2, DWARF_FLYING_MACHINE)
-        call CampaignAttackerEx(2, 2, 2, DWARF_SIEGE_ENGINE)
-        call CampaignAttackerEx(2, 2, 2, DWARF_STEAM_FORTRESS)
-        
-        // big air army
-        call CampaignAttackerEx(6, 12, 18, DWARF_POLAR_BEAR)
-        call CampaignAttackerEx(15, 20, 25, DWARF_GRYPHON_RIDER)
-        
+
+        call AttackerSimple(0, footmen, DWARF_TROLL_SLAYER)
+        call AttackerSimple(0, riflemen, DWARF_RIFLEMAN)
+        call AttackerSimple(2, knights, DWARF_RIDER)
+        call AttackerSimple(3, priests, DWARF_BATTLEPRIEST)
+        call AttackerSimple(3, sorceresses, DWARF_RUNECASTER)
+        call AttackerSimple(4, mortars, DWARF_MORTAR)
+        call AttackerSimple(4, siege_engines, DWARF_SIEGE_ENGINE)
+        call AttackerSimple(4, siege_engines, DWARF_STEAM_FORTRESS)
+        call AttackerSimple(5, spellbreakers, DWARF_WAR_GOLEM)
+        call AttackerSimple(12, taurens, DWARF_POLAR_BEAR)
+        call AttackerSimple(12, gryphons, DWARF_GRYPHON_RIDER)
+        call AttackerSimple(12, flying_machines, DWARF_FLYING_MACHINE)
+        call AttackerSimple(12, flying_machines, DWARF_GRYPHON)
+        call AttackerSimple(12, dragon_hawks, DEMON_LEGION_SHIP)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

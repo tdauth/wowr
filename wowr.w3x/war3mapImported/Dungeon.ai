@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, DUNGEON_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, DUNGEON_WORKER)
-        call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
+        call SetBuildUnit(workers, DUNGEON_WORKER)
+        call SetBuildUnit(citizens_male, DUNGEON_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -28,9 +28,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, DUNGEON_BRAZIER)
         call SetBuildUnit(1, DUNGEON_PRISON)
         call SetBuildUnit(4, DUNGEON_CAGE)
-        call SetBuildUnit(2, DUNGEON_CITIZEN_FEMALE)
-        call SetBuildUnit(2, DUNGEON_PET)
-        call SetBuildUnit(2, DUNGEON_CHILD)
+        call SetBuildUnit(citizens_female, DUNGEON_CITIZEN_FEMALE)
+        call SetBuildUnit(children, DUNGEON_CHILD)
+        call SetBuildUnit(pets, DUNGEON_PET)
 
         call SetBuildUpgr(2, UPG_DUNGEON_MELEE)
         call SetBuildUpgr(2, UPG_DUNGEON_RANGED)
@@ -47,7 +47,6 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, DUNGEON_DRAGON_ROOST)
         call SetBuildUnit(5, DUNGEON_CAGE)
         call SetBuildUnit(2, DUNGEON_SPIKES)
-        call SetBuildUnit(2, DUNGEON_CITIZEN_MALE)
 
         call SetBuildUpgr(3, UPG_DUNGEON_MELEE)
         call SetBuildUpgr(3, UPG_DUNGEON_RANGED)
@@ -85,147 +84,22 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(0, 1, 2, DUNGEON_SKELETON_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(0, 1, 2, DUNGEON_SKELETON_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_GHOST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_GHOST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_GHOST)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_FIRE_REVENANT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_GHOST)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_FIRE_REVENANT)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_SLUDGE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_GHOST)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_FIRE_REVENANT)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_SLUDGE)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_RED_DRAGON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DUNGEON_SKELETON_WARRIOR)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SKELETON_BERSERKER)
-    call CampaignAttackerEx(1, 2, 3, DUNGEON_SALAMANDER)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_GHOST)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_FIRE_REVENANT)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_HERETIC)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_SLUDGE)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_RED_DRAGON)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_WAR_GOLEM)
-    call CampaignAttackerEx(2, 2, 3, DUNGEON_WILDKIN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_SKELETON_WARRIOR)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_SKELETON_ARCHER)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_SKELETON_BERSERKER)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_SALAMANDER)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_GHOST)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_FIRE_REVENANT)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_HERETIC)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_SLUDGE)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_WAR_GOLEM)
-        call CampaignAttackerEx(2, 2, 2, DUNGEON_WILDKIN)
-        call CampaignAttackerEx(4, 4, 4, DUNGEON_LORD)
-        
-         // big air army
-        call CampaignAttackerEx(8, 10, 12, DUNGEON_RED_DRAGON)
-        
+
+        call AttackerSimple(0, footmen, DUNGEON_SKELETON_WARRIOR)
+        call AttackerSimple(0, riflemen, DUNGEON_SKELETON_ARCHER)
+        call AttackerSimple(2, knights, DUNGEON_SKELETON_BERSERKER)
+        call AttackerSimple(3, priests, DUNGEON_FIRE_REVENANT)
+        call AttackerSimple(3, sorceresses, DUNGEON_GHOST)
+        call AttackerSimple(4, mortars, DUNGEON_SLUDGE)
+        call AttackerSimple(4, mortars, DUNGEON_WILDKIN)
+        call AttackerSimple(4, siege_engines, DUNGEON_SALAMANDER)
+        call AttackerSimple(4, siege_engines, DUNGEON_WAR_GOLEM)
+        call AttackerSimple(5, spellbreakers, DUNGEON_HERETIC)
+        call AttackerSimple(12, taurens, DUNGEON_LORD)
+        call AttackerSimple(12, gryphons, DUNGEON_RED_DRAGON)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)
