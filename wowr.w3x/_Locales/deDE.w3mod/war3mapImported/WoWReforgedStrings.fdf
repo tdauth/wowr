@@ -33,6 +33,7 @@ StringList {
     NO_X                               "Kein %1%.",
     CANNOT_TELEPORT_INTO_THIS_AREA     "Kann nicht in dieses Gebiet teleportieren.",
     CANNOT_JUMP_THERE                  "Kann nicht dorthin springen.",
+    UNABLE_TO_WATER_GROUND_HERE        "Boden kann hier nicht bewässert werden.",
     // Learnable Skills Shop
     SLOT_X                             "Fach %1%",
     WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
@@ -219,6 +220,7 @@ StringList {
     SAMURO                             "Samuro",
     DEATH_KNIGHT                       "Todesritter",
     // Start Locations
+    RANDOM_MATCHING_TEAM               "Zufällig passend zum Team",
     TERDRASSIL                         "Terdrassil",
     WORLD_TREE                         "Weltenbaum",
     ORGRIMMAR                          "Orgrimmar",
