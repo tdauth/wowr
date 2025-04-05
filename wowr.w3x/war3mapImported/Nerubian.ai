@@ -90,7 +90,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, sorceresses, NERUBIAN_WEBSPINNER)
         call AttackerSimple(4, mortars, NAGA_CORAL_GOLEM)
         call AttackerSimple(5, spellbreakers, NERUBIAN_SPIDER_LORD)
-        call AttackerSimple(12, taurens, NERUBIAN_QUEEN)
+        call AttackerSimple(12, tauren, NERUBIAN_QUEEN)
         call AttackerSimple(12, gryphons, NERUBIAN_CRYPT_DRONE)
         call AttackerSimple(12, flying_machines, NERUBIAN_FLYING_BOMBARDER)
 

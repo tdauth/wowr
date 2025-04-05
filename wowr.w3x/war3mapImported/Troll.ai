@@ -100,7 +100,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(5, spellbreakers, TROLL_ICE_TROLL_HIGH_PRIEST)
         call AttackerSimple(5, spellbreakers, TROLL_BLOOD_MAGE)
         call AttackerSimple(5, spellbreakers, TROLL_HEXER)
-        call AttackerSimple(12, taurens, TROLL_THRONE_OF_WAR)
+        call AttackerSimple(12, tauren, TROLL_THRONE_OF_WAR)
         call AttackerSimple(12, taurens, TROLL_ICE_TROLL_WARLORD)
         call AttackerSimple(12, gryphons, TROLL_BATRIDER)
         call AttackerSimple(12, dragon_hawks, TROLL_BAT)

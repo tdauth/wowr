@@ -104,7 +104,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(12, knights, CHAOS_WARLOCK)
         call AttackerSimple(12, knights, CHAOS_RAIDER)
         call AttackerSimple(12, mortars, CHAOS_KODO)
-        call AttackerSimple(12, taurens, TAUREN)
+        call AttackerSimple(12, tauren, TAUREN)
         call AttackerSimple(12, gryphons, WYVERN)
         call AttackerSimple(12, flying_machines, ORC_DRAGON)
         call AttackerSimple(12, dragon_hawks, BATRIDER)

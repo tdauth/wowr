@@ -97,7 +97,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, DUNGEON_SALAMANDER)
         call AttackerSimple(4, siege_engines, DUNGEON_WAR_GOLEM)
         call AttackerSimple(5, spellbreakers, DUNGEON_HERETIC)
-        call AttackerSimple(12, taurens, DUNGEON_LORD)
+        call AttackerSimple(12, tauren, DUNGEON_LORD)
         call AttackerSimple(12, gryphons, DUNGEON_RED_DRAGON)
 
         call AddStandardUnitsToAttackWave()

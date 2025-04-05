@@ -96,7 +96,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, GOBLIN_ASSAULT_TANK)
         call AttackerSimple(4, siege_engines, GOBLIN_SAPPER)
         call AttackerSimple(5, spellbreakers, GOBLIN_STEAM_ROLLER)
-        call AttackerSimple(12, taurens, GOBLIN_EMPEROR)
+        call AttackerSimple(12, tauren, GOBLIN_EMPEROR)
         call AttackerSimple(12, gryphons, GOBLIN_WAR_ZEPPELIN)
         call AttackerSimple(12, dragon_hawks, GOBLIN_AIR_DRONE)
 

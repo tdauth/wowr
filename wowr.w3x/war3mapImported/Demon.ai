@@ -111,7 +111,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(5, spellbreakers, DEMON_GREATER_VOID_WALKER)
         call AttackerSimple(5, spellbreakers, DEMON_JAILER)
         call AttackerSimple(5, spellbreakers, DEMON_INQUISITOR)
-        call AttackerSimple(12, taurens, DEMON_INFERNAL)
+        call AttackerSimple(12, tauren, DEMON_INFERNAL)
         call AttackerSimple(12, gryphons, DEMON_NETHER_DRAKE)
         call AttackerSimple(12, dragon_hawks, DEMON_LEGION_SHIP)
 

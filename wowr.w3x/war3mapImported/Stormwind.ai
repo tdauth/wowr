@@ -105,7 +105,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, STORMWIND_BANNER_CARRIER)
         call AttackerSimple(5, spellbreakers, STORMWIND_MAGE)
         call AttackerSimple(5, spellbreakers, STORMWIND_BISHOP)
-        call AttackerSimple(12, taurens, STORMWIND_LION_RIDER)
+        call AttackerSimple(12, tauren, STORMWIND_LION_RIDER)
         call AttackerSimple(12, gryphons, STORMWIND_GRYPHON_RIDER)
         call AttackerSimple(12, flying_machines, STORMWIND_AIR_SHIP)
         call AttackerSimple(12, dragon_hawks, STORMWIND_EAGLE_KNIGHT)

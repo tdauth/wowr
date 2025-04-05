@@ -99,7 +99,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, VRYKUL_MAMMOTH)
         call AttackerSimple(4, siege_engines, VRYKUL_ARMORED_WOLF)
         call AttackerSimple(5, spellbreakers, VRYKUL_RUNECARVER)
-        call AttackerSimple(12, taurens, VRYKUL_GIANT_POLAR_BEAR)
+        call AttackerSimple(12, tauren, VRYKUL_GIANT_POLAR_BEAR)
         call AttackerSimple(12, gryphons, VRYKUL_PROTO_DRAKE)
 
         call AddStandardUnitsToAttackWave()

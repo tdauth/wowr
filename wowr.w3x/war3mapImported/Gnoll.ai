@@ -94,7 +94,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, priests, GNOLL_MYSTWEAVER)
         call AttackerSimple(3, sorceresses, GNOLL_TREASURE_HUNTER)
         call AttackerSimple(4, siege_engines, GNOLL_ROCKBREAKER)
-        call AttackerSimple(12, taurens, GNOLL_WARLORD)
+        call AttackerSimple(12, tauren, GNOLL_WARLORD)
         call AttackerSimple(12, gryphons, GNOLL_WARHAWK)
 
         call AddStandardUnitsToAttackWave()

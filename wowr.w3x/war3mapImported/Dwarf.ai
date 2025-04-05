@@ -96,7 +96,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, DWARF_SIEGE_ENGINE)
         call AttackerSimple(4, siege_engines, DWARF_STEAM_FORTRESS)
         call AttackerSimple(5, spellbreakers, DWARF_WAR_GOLEM)
-        call AttackerSimple(12, taurens, DWARF_POLAR_BEAR)
+        call AttackerSimple(12, tauren, DWARF_POLAR_BEAR)
         call AttackerSimple(12, gryphons, DWARF_GRYPHON_RIDER)
         call AttackerSimple(12, flying_machines, DWARF_FLYING_MACHINE)
         call AttackerSimple(12, flying_machines, DWARF_GRYPHON)

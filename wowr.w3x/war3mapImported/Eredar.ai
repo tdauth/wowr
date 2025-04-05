@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, EREDAR_TIER_1)
-        call SetBuildUnit(17, EREDAR_ARTIFICER)
-        call SetBuildUnit(2, EREDAR_CITIZEN_MALE)
+        call SetBuildUnit(workers, EREDAR_ARTIFICER)
+        call SetBuildUnit(citizens_male, EREDAR_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -27,8 +27,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, EREDAR_WORKSHOP)
         //call SetBuildUnit(1, OGRE_ARENA)
         call SetBuildUnit(2, EREDAR_SPIRE)
-        call SetBuildUnit(2, EREDAR_CITIZEN_FEMALE)
-        call SetBuildUnit(2, EREDAR_PET)
+        call SetBuildUnit(citizens_female, EREDAR_CITIZEN_FEMALE)
+        // TODO children
+        call SetBuildUnit(pets, EREDAR_PET)
 
         //call SetBuildUpgr(2, UPG_OGRE_MELEE)
         //call SetBuildUpgr(2, UPG_OGRE_RANGED)
@@ -85,153 +86,20 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(0, 1, 2, EREDAR_RANGARI)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(0, 1, 2, EREDAR_RANGARI)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SUCCUBUS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SUCCUBUS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SUCCUBUS)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SORCERER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SUCCUBUS)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SIEGEBREAKER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SUCCUBUS)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SIEGEBREAKER)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_NETHER_RAY)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, EREDAR_PEACEKEEPER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_RANGARI)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_OUTRIDER)
-    call CampaignAttackerEx(1, 2, 3, EREDAR_ELEKK_KNIGHT)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SUCCUBUS)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_SIEGEBREAKER)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_NETHER_RAY)
-    call CampaignAttackerEx(2, 2, 3, EREDAR_VIGILANT)
-    //call CampaignAttackerEx(2, 2, 3, OGRE_OGRE_NECROMANCER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, EREDAR_RANGARI)
-        call CampaignAttackerEx(2, 2, 2, EREDAR_ELEKK_KNIGHT)
-        call CampaignAttackerEx(2, 2, 2, EREDAR_SUCCUBUS)
-        call CampaignAttackerEx(2, 2, 2, EREDAR_SORCERER)
-        call CampaignAttackerEx(2, 2, 2, EREDAR_VIGILANT)
-        //call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_NECROMANCER)
-        call CampaignAttackerEx(4, 4, 4, EREDAR_PEACEKEEPER)
-        //call CampaignAttackerEx(4, 4, 4, OGRE_MOKNATHAL)
-        call CampaignAttackerEx(4, 4, 4, EREDAR_OUTRIDER)
-        call CampaignAttackerEx(2, 2, 2, EREDAR_SIEGEBREAKER)
-        //call CampaignAttackerEx(2, 2, 2, OGRE_OGRE_FIRE_BREATHER)
 
-        //call CampaignAttackerEx(1, 1, 1, OGRE_KORGALL)
-        //call CampaignAttackerEx(4, 4, 4, OGRE_STONEMAUL_OGRE)
-        //call CampaignAttackerEx(4, 4, 4, OGRE_STONEMAUL_MAGI)
+        call AttackerSimple(0, footmen, EREDAR_PEACEKEEPER)
+        call AttackerSimple(0, riflemen, EREDAR_RANGARI)
+        call AttackerSimple(2, knights, EREDAR_OUTRIDER)
+        call AttackerSimple(3, priests, EREDAR_SORCERER)
+        call AttackerSimple(3, sorceresses, EREDAR_SUCCUBUS)
+        call AttackerSimple(4, mortars, EREDAR_SIEGEBREAKER)
+        call AttackerSimple(4, siege_engines, EREDAR_ELEKK_KNIGHT)
+        call AttackerSimple(5, spellbreakers, FACELESS_ONE_TRICKSTER)
+        call AttackerSimple(12, tauren, EREDAR_VIGILANT)
+        call AttackerSimple(12, gryphons, EREDAR_NETHER_RAY)
 
-        //call CampaignAttackerEx(3, 3, 3, OGRE_GRONN_WAR_CLUB)
-        
-         // big air army
-        call CampaignAttackerEx(8, 10, 12, EREDAR_NETHER_RAY)
-        //call CampaignAttackerEx(6, 8, 10, OGRE_ZEPPELIN)
-        
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

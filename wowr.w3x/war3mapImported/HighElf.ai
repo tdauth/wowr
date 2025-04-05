@@ -102,7 +102,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, sorceresses, HIGH_ELF_SORCERESS)
         call AttackerSimple(4, siege_engines, HIGH_ELF_BIRDIEPULT)
         call AttackerSimple(5, spellbreakers, HIGH_ELF_ARCH_CLERIC)
-        call AttackerSimple(12, taurens, HIGH_ELF_LIEUTENANT)
+        call AttackerSimple(12, tauren, HIGH_ELF_LIEUTENANT)
         call AttackerSimple(12, gryphons, HIGH_ELF_DRAGON)
         call AttackerSimple(12, flying_machines, HIGH_ELF_EAGLE_RIDER)
         call AttackerSimple(12, flying_machines, HIGH_ELF_EAGLE)

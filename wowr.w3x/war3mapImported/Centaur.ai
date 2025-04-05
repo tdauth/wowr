@@ -97,7 +97,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(2, knights, CENTAUR_OUTRUNNER)
         call AttackerSimple(3, priests, CENTAUR_DIVINER)
         call AttackerSimple(3, sorceresses, CENTAUR_SORCERER)
-        call AttackerSimple(12, taurens, CENTAUR_KHAN)
+        call AttackerSimple(12, tauren, CENTAUR_KHAN)
         call AttackerSimple(12, gryphons, CENTAUR_EAGLE)
         call AttackerSimple(12, dragon_hawks, CENTAUR_HARPY)
 

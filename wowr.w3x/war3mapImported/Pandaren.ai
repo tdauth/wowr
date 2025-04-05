@@ -101,7 +101,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, mortars, PANDAREN_FIREWORK_TEAM)
         call AttackerSimple(4, siege_engines, PANDAREN_DRAGON_TURTLE)
         call AttackerSimple(5, spellbreakers, PANDAREN_DRUID)
-        call AttackerSimple(12, taurens, PANDAREN_PRIMAL_PANDAREN)
+        call AttackerSimple(12, tauren, PANDAREN_PRIMAL_PANDAREN)
         call AttackerSimple(12, taurens, PANDAREN_GIANT_SEA_TURTLE)
         call AttackerSimple(12, gryphons, PANDAREN_CLOUD_SERPENT)
 

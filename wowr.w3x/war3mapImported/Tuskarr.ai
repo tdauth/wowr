@@ -102,7 +102,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, TUSKARR_ICETUSK_MAMMOTH)
         call AttackerSimple(4, siege_engines, TUSKARR_ELITE_ARMORED_POLAR_BEAR)
         call AttackerSimple(5, spellbreakers, WORGEN_BANNER_CARRIER)
-        call AttackerSimple(12, taurens, TUSKARR_CHIEFTAIN)
+        call AttackerSimple(12, tauren, TUSKARR_CHIEFTAIN)
         call AttackerSimple(12, gryphons, TUSKARR_GIANT_SNOWY_OWL)
 
         call AddStandardUnitsToAttackWave()

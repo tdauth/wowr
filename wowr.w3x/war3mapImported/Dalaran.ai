@@ -4,8 +4,8 @@ function BuildingStrategy takes nothing returns nothing
         // Tier 1 Buildings
         call SetBuildUnit(1, DALARAN_TIER_1)
         //call SetBuildUnit(1, DALARAN_MINE) // AI does not know how to construct. We preplaced one.
-        call SetBuildUnit(WORKERS_COUNT_START, DALARAN_WORKER)
-        call SetBuildUnit(2, DALARAN_CITIZEN_MALE)
+        call SetBuildUnit(workers, DALARAN_WORKER)
+        call SetBuildUnit(citizens_male, DALARAN_CITIZEN_MALE)
 
         call SetBuildUnit(2, DALARAN_HOUSING)
         call SetBuildUnit(3, DALARAN_POWER_GENERATOR)
@@ -26,9 +26,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, DALARAN_ZOO)
         call SetBuildUnit(1, DALARAN_ARCANE_SANCTUM)
         call SetBuildUnit(2, DALARAN_GUARD_TOWER_1)
-        call SetBuildUnit(2, DALARAN_CITIZEN_FEMALE)
-        call SetBuildUnit(2, DALARAN_CHILD)
-        call SetBuildUnit(2, DALARAN_PET)
+        call SetBuildUnit(citizens_female, DALARAN_CITIZEN_FEMALE)
+        call SetBuildUnit(children, DALARAN_CHILD)
+        call SetBuildUnit(pets, DALARAN_PET)
 
         call SetBuildUpgr(2, UPG_DALARAN_MELEE)
         call SetBuildUpgr(2, UPG_DALARAN_ARMOR)
@@ -89,160 +89,29 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_SORCERESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_DRAGON_HAWK)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_DRAGON_HAWK)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_DRAGON_HAWK)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_DRAGON_HAWK)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_WIZARD)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, DALARAN_PIKEMAN)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_APPRENTICE_WIZARD)
-    call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_MUTANT)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_FIRE_MAGE)
-    call CampaignAttackerEx(1, 2, 3, DALARAN_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_DRAGON_HAWK)
-    call CampaignAttackerEx(2, 2, 3, DALARAN_WIZARD)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
 
-        // small ground army
-        call CampaignAttackerEx(4, 4, 4, DALARAN_PIKEMAN)
-        call CampaignAttackerEx(4, 4, 4, DALARAN_APPRENTICE_WIZARD)
-        call CampaignAttackerEx(0, 1, 2, DALARAN_SUPPLY_CART)
-        call CampaignAttackerEx(4, 4, 4, DALARAN_MUTANT)
-        call CampaignAttackerEx(4, 4, 4, DALARAN_FIRE_MAGE)
-        call CampaignAttackerEx(4, 4, 4, DALARAN_SORCERESS)
-        call CampaignAttackerEx(4, 4, 4, DALARAN_WIZARD)
-        call CampaignAttackerEx(2, 2, 2, DALARAN_REJECT)
-        call CampaignAttackerEx(4, 4, 4, DALARAN_FLESH_GOLEM)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_AIR_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_FIRE_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_FROST_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_LIGHTNING_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_POISON_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_VOID_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_SAND_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_WATER_ELEMENTAL)
-        call CampaignAttackerEx(1, 1, 1, DALARAN_SEA_ELEMENTAL)
-
-        // big air army
-        call CampaignAttackerEx(8, 12, 18, DALARAN_DRAGON_HAWK)
-        call CampaignAttackerEx(8, 12, 18, DALARAN_GUARDIAN_GOLEM)
+        call AttackerSimple(0, footmen, DALARAN_PIKEMAN)
+        call AttackerSimple(0, riflemen, DALARAN_MUTANT)
+        call AttackerSimple(2, knights, DALARAN_REJECT)
+        call AttackerSimple(3, priests, DALARAN_APPRENTICE_WIZARD)
+        call AttackerSimple(3, sorceresses, DALARAN_SORCERESS)
+        call AttackerSimple(4, mortars, DALARAN_GUARDIAN_GOLEM)
+        call AttackerSimple(4, siege_engines, DALARAN_SUPPLY_CART)
+        call AttackerSimple(5, spellbreakers, DALARAN_WIZARD)
+        call AttackerSimple(5, spellbreakers, DALARAN_FIRE_MAGE)
+        call AttackerSimple(5, spellbreakers, DALARAN_AIR_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_FIRE_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_FROST_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_LIGHTNING_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_POISON_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_VOID_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_SAND_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_WATER_ELEMENTAL)
+        call AttackerSimple(5, spellbreakers, DALARAN_SEA_ELEMENTAL)
+        call AttackerSimple(12, tauren, DALARAN_FLESH_GOLEM)
+        call AttackerSimple(12, gryphons, DALARAN_DRAGON_HAWK)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()

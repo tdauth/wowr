@@ -85,7 +85,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, priests, TAUREN_TAUREN_DRUID)
         call AttackerSimple(3, sorceresses, TAUREN_SPIRIT_WALKER)
         call AttackerSimple(4, siege_engines, TAUREN_TAUREN_CATAPULT)
-        call AttackerSimple(12, taurens, TAUREN_TAUREN)
+        call AttackerSimple(12, tauren, TAUREN_TAUREN)
         call AttackerSimple(12, gryphons, TAUREN_WYVERN)
         call AttackerSimple(12, dragon_hawks, TAUREN_SPIRIT_WYVERN)
 

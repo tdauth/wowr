@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, FACELESS_ONE_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, FACELESS_ONE_WORKER)
-        call SetBuildUnit(2, FACELESS_ONE_CITIZEN_MALE)
+        call SetBuildUnit(workers, FACELESS_ONE_WORKER)
+        call SetBuildUnit(citizens_male, FACELESS_ONE_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -29,9 +29,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, FACELESS_ONE_LIBRARY)
         call SetBuildUnit(1, FACELESS_ONE_POOL)
         call SetBuildUnit(4, FACELESS_ONE_TENTACLE)
-        call SetBuildUnit(2, FACELESS_ONE_CITIZEN_FEMALE)
-        call SetBuildUnit(2, FACELESS_ONE_CHILD)
-        call SetBuildUnit(2, FACELESS_ONE_PET)
+        call SetBuildUnit(citizens_female, FACELESS_ONE_CITIZEN_FEMALE)
+        call SetBuildUnit(children, FACELESS_ONE_CHILD)
+        call SetBuildUnit(pets, FACELESS_ONE_PET)
 
         call SetBuildUpgr(2, UPG_FACELESS_ONE_DAMAGE)
         call SetBuildUpgr(2, UPG_FACELESS_ONE_TENTACLE)
@@ -47,7 +47,6 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, FACELESS_ONE_CAVERN)
         call SetBuildUnit(5, FACELESS_ONE_TENTACLE)
         call SetBuildUnit(2, FACELESS_ONE_TENTACLE_PIT)
-        call SetBuildUnit(2, FACELESS_ONE_CITIZEN_MALE)
 
         call SetBuildUpgr(3, UPG_FACELESS_ONE_DAMAGE)
         call SetBuildUpgr(3, UPG_FACELESS_ONE_TENTACLE)
@@ -85,144 +84,22 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(0, 1, 2, FACELESS_ONE_BONE_THROWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(0, 1, 2, FACELESS_ONE_BONE_THROWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_WITCH)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_WITCH)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_WITCH)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_CULTIST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_WITCH)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_CULTIST)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_AQIR)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_WITCH)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_CULTIST)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_AQIR)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_NIGHTMARE_WEAVER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BONE_THROWER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_RIDER)
-    call CampaignAttackerEx(1, 2, 3, FACELESS_ONE_BALLISTA)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_WITCH)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_CULTIST)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_AQIR)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_NIGHTMARE_WEAVER)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_KING)
-    call CampaignAttackerEx(2, 2, 3, FACELESS_ONE_TRICKSTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 11 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(2, 2, 2, FACELESS_ONE_BONE_THROWER)
-        call CampaignAttackerEx(2, 2, 2, FACELESS_ONE_BALLISTA)
-        call CampaignAttackerEx(2, 2, 2, FACELESS_ONE_WITCH)
-        call CampaignAttackerEx(2, 2, 2, FACELESS_ONE_CULTIST)
-        call CampaignAttackerEx(2, 2, 2, FACELESS_ONE_KING)
-        call CampaignAttackerEx(2, 2, 2, FACELESS_ONE_TRICKSTER)
-        call CampaignAttackerEx(4, 4, 4, FACELESS_ONE_BERSERKER)
-        
-        // big air army
-        call CampaignAttackerEx(8, 10, 12, FACELESS_ONE_NIGHTMARE_WEAVER)
-        //call CampaignAttackerEx(8, 10, 12, BATRIDER)
-        //call CampaignAttackerEx(6, 8, 10, ORC_DRAGON)
-        
+
+        call AttackerSimple(0, footmen, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
+        call AttackerSimple(0, riflemen, FACELESS_ONE_BONE_THROWER)
+        call AttackerSimple(2, knights, FACELESS_ONE_RIDER)
+        call AttackerSimple(3, priests, FACELESS_ONE_CULTIST)
+        call AttackerSimple(3, sorceresses, FACELESS_ONE_WITCH)
+        call AttackerSimple(4, mortars, FACELESS_ONE_KING)
+        call AttackerSimple(4, mortars, FACELESS_ONE_BERSERKER)
+        call AttackerSimple(4, siege_engines, FACELESS_ONE_BALLISTA)
+        call AttackerSimple(5, spellbreakers, FACELESS_ONE_TRICKSTER)
+        call AttackerSimple(12, tauren, FACELESS_ONE_AQIR)
+        call AttackerSimple(12, gryphons, WORGEN_STORMCROW_KNIGHT)
+        call AttackerSimple(12, flying_machines, FACELESS_ONE_NIGHTMARE_WEAVER)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
         call Sleep(M2)

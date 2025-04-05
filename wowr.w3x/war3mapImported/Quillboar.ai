@@ -98,7 +98,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, sorceresses, QUILLBOAR_MYSTIC)
         call AttackerSimple(4, siege_engines, QUILLBOAR_QUILBEAST)
         call AttackerSimple(5, spellbreakers, QUILLBOAR_NECROMANCER)
-        call AttackerSimple(12, taurens, QUILLBOAR_CHIEFTAIN)
+        call AttackerSimple(12, tauren, QUILLBOAR_CHIEFTAIN)
         call AttackerSimple(12, gryphons, QUILLBOAR_HARPY_ROGUE)
         call AttackerSimple(12, dragon_hawks, QUILLBOAR_HARPY_WINDWITCH)
 

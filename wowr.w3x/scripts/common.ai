@@ -247,7 +247,7 @@ globals
     integer footmen = 4
     integer riflemen = 4
     integer knights = 4
-    integer taurens = 2
+    integer tauren = 2
     integer mortars = 2
     integer priests = 3
     integer sorceresses = 3

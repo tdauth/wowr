@@ -78,7 +78,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, siege_engines, POLAR_FURBOLG)
         call AttackerSimple(4, siege_engines, POLAR_FURBOLG_CHAMPION)
         call AttackerSimple(5, spellbreakers, FEL_ORC_CULTIST)
-        call AttackerSimple(12, taurens, FURBOLG_URSA_WARRIOR)
+        call AttackerSimple(12, tauren, FURBOLG_URSA_WARRIOR)
         call AttackerSimple(12, gryphons, GREEN_DRAKE)
 
         call AddStandardUnitsToAttackWave()

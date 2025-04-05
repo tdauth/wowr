@@ -102,7 +102,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(4, mortars, WORGEN_NIGHTSTALKER)
         call AttackerSimple(4, siege_engines, WORGEN_MANTICORE)
         call AttackerSimple(5, spellbreakers, WORGEN_BANNER_CARRIER)
-        call AttackerSimple(12, taurens, WORGEN_MINDLESS_WORGEN)
+        call AttackerSimple(12, tauren, WORGEN_MINDLESS_WORGEN)
         call AttackerSimple(12, gryphons, WORGEN_STORMCROW_KNIGHT)
         call AttackerSimple(12, flying_machines, WORGEN_GILNEAS_GUNSHIP)
 
