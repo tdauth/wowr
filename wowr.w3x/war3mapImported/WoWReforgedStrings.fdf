@@ -333,7 +333,7 @@ StringList {
     ARCHEOLOGIST                       "Archaeologist",
     WITCH_DOCTOR                       "Witch Doctor",
     TAMER                              "Tamer",
-    NECROMANCER                        "Necromancer",
+    //NECROMANCER                        "Necromancer",
     GOLEM_SCULPTOR                     "Golem Sculptor",
     //WARLOCK                            "Warlock",
     ASTROMANCER                        "Astromancer",
@@ -704,7 +704,7 @@ StringList {
     UPDATED_SAVE_CODES_UNITS           "Updated savecode for units.",
     UPDATED_SAVE_CODES_RESEARCHES      "Updated savecode for researches.",
     UPDATED_SAVE_CODES_BUILDINGS       "Updated savecode for buildings.",
-    UPDATED_SAVE_CODES_RESEARCHES      "Updated savecode for resources.",
+    UPDATED_SAVE_CODES_RESOURCES       "Updated savecode for resources.",
     UPDATED_SAVE_CODE_CLAN             "Updated savecode for clan.",
     SAVE_CODE_DIRECTORY_INFO           "This is the directory which all save codes are generated into.",
     // Save Codes Dialog
@@ -725,7 +725,7 @@ StringList {
     TARGET_HAS_NO_ATTACK               "Target has no attack.",
     // Clans
     LEADER                             "Leader",
-    CAPTAIN                            "Captain",
+    //CAPTAIN                            "Captain",
     MEMBER                             "Member",
     CLAN_RESOURCES_FROM_AI             "%1% gave your clan %2% gold and %3% lumber which has been split amongst all online clan players. Enter '-clanaioff' to hide these messages.",
     CLANS_MESSAGE                      "Clans:|n",
