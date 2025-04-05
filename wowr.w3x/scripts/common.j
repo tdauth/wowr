@@ -5072,7 +5072,7 @@ globals
     constant integer MURLOC_CULTIST                                  = 'n0JB' // spellbreaker
     constant integer MURLOC_DRAGON_TURTLE                            = 'n0FS' // catapult
     constant integer MURLOC_SNAP_DRAGON                              = 'n0AR' // mortar
-    constant integer MURLOC_COUATL                                   =  'n0BA' // weak air
+    constant integer MURLOC_COUATL                                   = 'n0BA' // weak air
     constant integer MURLOC_SEA_GIANT                                = 'n0G8' // tauren
 
     constant integer MURLOC_CITIZEN_MALE                             = 'n0G4'

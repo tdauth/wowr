@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, LORDAERON_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, LORDAERON_WORKER)
-        call SetBuildUnit(2, LORDAERON_CITIZEN_MALE)
+        call SetBuildUnit(workers, LORDAERON_WORKER)
+        call SetBuildUnit(citizens_male, LORDAERON_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -28,9 +28,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, LORDAERON_MAGE_TOWER)
         call SetBuildUnit(1, LORDAERON_WORKSHOP)
         call SetBuildUnit(4, LORDAERON_FARM)
-        call SetBuildUnit(2, LORDAERON_CITIZEN_FEMALE)
-        call SetBuildUnit(2, LORDAERON_CHILD)
-        call SetBuildUnit(2, LORDAERON_PET)
+        call SetBuildUnit(citizens_female, LORDAERON_CITIZEN_FEMALE)
+        call SetBuildUnit(children, LORDAERON_CHILD)
+        call SetBuildUnit(pets, LORDAERON_PET)
 
         call SetBuildUnit(4, LORDAERON_SCOUT_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
 
@@ -91,148 +91,25 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, LORDAERON_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3) // Waits 3 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, LORDAERON_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_MAGE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_MAGE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_MAGE)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_SORCERESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_MAGE)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_SORCERESS)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BATTLE_MAGE)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_MAGE)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_SORCERESS)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BATTLE_MAGE)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_GRYPHON_RIDER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, LORDAERON_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_ARCHER)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BANNER_CARRIER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_MAGE)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_SORCERESS)
-    call CampaignAttackerEx(1, 2, 3, LORDAERON_BATTLE_MAGE)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_GRYPHON_RIDER)
-    call CampaignAttackerEx(2, 2, 3, LORDAERON_ALLIANCE_SIEGE_TOWER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
-        
-        // small ground army
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_FOOTMAN)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_ARCHER)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_KNIGHT)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_BANNER_CARRIER)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_MAGE)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_SORCERESS)
-        call CampaignAttackerEx(1, 2, 3, LORDAERON_BATTLE_MAGE)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_ALLIANCE_SIEGE_TOWER)
-        call CampaignAttackerEx(3, 3, 3, LORDAERON_SCARLET_CRUSADE_PALADIN)
-        
-        // big air army
-        call CampaignAttackerEx(8, 10, 12, LORDAERON_GRYPHON_RIDER)
-        call CampaignAttackerEx(8, 10, 12, LORDAERON_AIR_SHIP)
-        call CampaignAttackerEx(8, 10, 12, LORDAERON_PEGASUS_KNIGHT)
-        
+
+        call AttackerSimple(0, footmen, LORDAERON_FOOTMAN)
+        call AttackerSimple(0, riflemen, LORDAERON_ARCHER)
+        call AttackerSimple(2, knights, LORDAERON_KNIGHT)
+        call AttackerSimple(3, priests, LORDAERON_MAGE)
+        call AttackerSimple(3, sorceresses, LORDAERON_SORCERESS)
+        call AttackerSimple(4, mortars, LORDAERON_BANNER_CARRIER)
+        call AttackerSimple(4, siege_engines, LORDAERON_ALLIANCE_SIEGE_TOWER)
+        call AttackerSimple(5, spellbreakers, LORDAERON_BATTLE_MAGE)
+        call AttackerSimple(12, tauren, LORDAERON_SCARLET_CRUSADE_PALADIN)
+        call AttackerSimple(12, gryphons, LORDAERON_GRYPHON_RIDER)
+        call AttackerSimple(12, flying_machines, LORDAERON_AIR_SHIP)
+        call AttackerSimple(12, dragon_hawks, LORDAERON_PEGASUS_KNIGHT)
+
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep(M2) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction

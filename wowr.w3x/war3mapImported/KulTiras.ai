@@ -3,8 +3,8 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, KULTIRAS_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, KULTIRAS_WORKER)
-        call SetBuildUnit(2, KULTIRAS_CITIZEN_MALE)
+        call SetBuildUnit(workers, KULTIRAS_WORKER)
+        call SetBuildUnit(citizens_male, KULTIRAS_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
@@ -30,9 +30,9 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, KULTIRAS_WORKSHOP)
         call SetBuildUnit(1, KULTIRAS_ARCANE_SANCTUM)
         call SetBuildUnit(4, KULTIRAS_WATCH_TOWER) // 2 guard towers, 1 cannon tower, 1 arcane tower
-        call SetBuildUnit(2, KULTIRAS_CITIZEN_FEMALE)
-        call SetBuildUnit(2, KULTIRAS_CHILD)
-        call SetBuildUnit(2, KULTIRAS_PET)
+        call SetBuildUnit(citizens_female, KULTIRAS_CITIZEN_FEMALE)
+        call SetBuildUnit(children, KULTIRAS_CHILD)
+        call SetBuildUnit(pets, KULTIRAS_PET)
 
         call SetBuildUpgr(2, UPG_KULTIRAS_LUMBER)
         call SetBuildUpgr(2, UPG_KULTIRAS_MASONRY)
@@ -98,155 +98,24 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_STORM_SORCERER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_STORM_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_PEREGRIN_FALCON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_STORM_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_PEREGRIN_FALCON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_STORM_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_PEREGRIN_FALCON)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_STORM_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_PEREGRIN_FALCON)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_HYDROMANCER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, KULTIRAS_FOOTMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_RIFLEMAN)
-    call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_KNIGHT)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_FLIBUSTIER_GUN)
-    call CampaignAttackerEx(1, 2, 3, KULTIRAS_STORM_SORCERER)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_PEREGRIN_FALCON)
-    call CampaignAttackerEx(2, 2, 3, KULTIRAS_HYDROMANCER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2)
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
 
-        // small ground army
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_FOOTMAN)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_RIFLEMAN)
-        call CampaignAttackerEx(0, 1, 2, KULTIRAS_GUARDSMAN)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_KNIGHT)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_FLIBUSTIER_GUN)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_STORM_SORCERER)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_HYDROMANCER)
-        call CampaignAttackerEx(2, 2, 2, KULTIRAS_SHIP_DOCTOR)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_ROYAL_GUARD)
-        call CampaignAttackerEx(2, 2, 2, KULTIRAS_CANONEER_TEAM)
-        call CampaignAttackerEx(2, 2, 2, KULTIRAS_LAND_SHIP)
-
-        // big air army
-        call CampaignAttackerEx(8, 12, 18, KULTIRAS_PEREGRIN_FALCON)
-        call CampaignAttackerEx(8, 12, 18, KULTIRAS_ALBATROSS_RIDER)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_FLYING_DREADNOUGHT)
-        call CampaignAttackerEx(4, 4, 4, KULTIRAS_GUNSHIP)
+        call AttackerSimple(0, footmen, KULTIRAS_FOOTMAN)
+        call AttackerSimple(0, riflemen, KULTIRAS_RIFLEMAN)
+        call AttackerSimple(2, knights, KULTIRAS_KNIGHT)
+        call AttackerSimple(3, priests, KULTIRAS_SHIP_DOCTOR)
+        call AttackerSimple(3, sorceresses, KULTIRAS_HYDROMANCER)
+        call AttackerSimple(4, mortars, KULTIRAS_CANONEER_TEAM)
+        call AttackerSimple(4, siege_engines, KULTIRAS_LAND_SHIP)
+        call AttackerSimple(5, spellbreakers, KULTIRAS_STORM_SORCERER)
+        call AttackerSimple(5, spellbreakers, KULTIRAS_FLIBUSTIER_GUN)
+        call AttackerSimple(5, spellbreakers, KULTIRAS_GUARDSMAN)
+        call AttackerSimple(12, tauren, KULTIRAS_ROYAL_GUARD)
+        call AttackerSimple(12, gryphons, KULTIRAS_PEREGRIN_FALCON)
+        call AttackerSimple(12, flying_machines, KULTIRAS_GUNSHIP)
+        call AttackerSimple(12, flying_machines, KULTIRAS_FLYING_DREADNOUGHT)
+        call AttackerSimple(12, dragon_hawks, KULTIRAS_ALBATROSS_RIDER)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
