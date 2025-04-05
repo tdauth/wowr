@@ -2807,6 +2807,7 @@ globals
     // Teams
     constant integer TEAM_ALLIANCE                                   = 0
     constant integer TEAM_HORDE                                      = 1
+    constant integer TEAM_MAX_AI                                     = 2
     constant integer TEAM_FIXED_COMPUTER                             = 2
     constant integer TEAM_NONE                                       = 3
 

@@ -3068,12 +3068,12 @@ endfunction
 function GetPlayerInfoText takes nothing returns string
     local integer mines = GetMinesOwned()
     local integer gold = GetGoldOwned()
-    local string msg = "I own " + I2S2(mines) + " mines, own " + I2S2(gold) + " gold, "
+    local string msg = "I own " + I2S2(mines) + " mines and " + I2S2(gold) + " gold, "
 
     if (disabled) then
-        set msg = msg + " do nothing"
+        set msg = msg + "do nothing"
     else
-        set msg = msg + " do something"
+        set msg = msg + "do something"
     endif
 
     // difficulty
@@ -3119,6 +3119,7 @@ function GetPlayerInfoText takes nothing returns string
 
     set msg = msg + ", " + I2S2(shredders) + " Shredders"
     set msg = msg + ", " + I2S2(zeppelins) + " Zeppelins"
+    set msg = msg + ", attack wave " + I2S2(attack_wave)
 
      if (attackTargetLocation) then
         set msg = msg + " and attack a location"

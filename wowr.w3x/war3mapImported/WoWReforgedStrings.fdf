@@ -15,6 +15,8 @@ StringList {
     NO_TARGETS                         "No targets.",
     NO_VALID_TARGETS                   "No valid targets.",
     NO_VALID_TARGETS_IN_THIS_AREA      "No valid targets in area.",
+    INVALID_TARGET                     "Invalid target.",
+    INVALID_BUILDING                   "Invalid building.",
     TARGET_LOCATION_MUST_BE_VISIBLE    "Target location must be visible.",
     NO_ABILITY_WITHOUT_COOLDOWNS       "Target has no ability without cooldown.",
     TREE_IS_ALREADY_OCCUPIED           "Tree is already occupied.",
@@ -302,7 +304,7 @@ StringList {
     TAMER                              "Tamer",
     NECROMANCER                        "Necromancer",
     GOLEM_SCULPTOR                     "Golem Sculptor",
-    WARLOCK                            "Warlock",
+    //WARLOCK                            "Warlock",
     ASTROMANCER                        "Astromancer",
     // Player Colors
     RED                                "Red",
@@ -329,6 +331,8 @@ StringList {
     SNOW                               "Snow",
     EMERALD                            "Emerald",
     PEANUT                             "Peanut",
+    // Players Info
+    VERSION_X                          "Version: %1%",
     // Heroes Info
     RESTRICTED_TO_ACCOUNTS             "%1% is restricted to accounts: %2%",
     BONUS_HERO_REQUIRES_LEVEL          "Bonus hero requires hero level %1% or '-unlock'.",
@@ -400,6 +404,8 @@ StringList {
     // Profession Thief
     CLOSED_GATE_OR_LOCKED_CHEST        "Target must be a closed gate or chest.",
     UNLOCKED                           "Unlocked",
+    // Profession Hunter
+    TROPHIES                           "Trophies: ",
     // Profession Combiner
     MARKED_ABILITY_X                   "Marked ability %1%.",
     TRANSFERRED_ABILITY_X              "Transferred ability %1%.",
@@ -412,11 +418,17 @@ StringList {
     ITEMS_PERISHABLE_OR_PERMANENT      "Target and source items must either be both perishable or both permanent.",
     // Profession Inscriptor and Enchanter
     INSCRIPTOR_HERO_INFO               "%1% hero stats/defense/summoned units %2%, damage %3%, hp/mana %4%",
+    ENCHANTABLE_ITEM_ABILITIES         "Enchantable item abilities: ",
+    INSCRIPTABLE_SPELLS                "Inscriptable spells: ",
     // Profession Cook
     TARGET_ITEM_MUST_BE_FOOD           "Target item must be food.",
     // Profession Fisherman
     NO_FISH                            "No fish!",
     TARGET_AREA_MUST_BE_WATER          "Target area must be water.",
+    // Properties
+    PROPERTY                           "Property",
+    PAGE_TITLE_UNITS                   "(Units)",
+    PAGE_TITLE_BUILDINGS               "(Buildings)",
     // Mounts
     NO_MOUNTS                          "No mounts.",
     ADDING_MOUNT                       "Adding mount %1%",
@@ -474,6 +486,8 @@ StringList {
     ELEMENTAL_PLANE_DESCRIPTION        "A pocket dimension created by the Keepers to imprison Azeroth's elementals.",
     // Achievements
     COLON_ACHIEVEMENTS                 "Achievements:",
+    ACHIEVEMENT_BONUS_MESSAGE          "|cff0000ff%1% +%2% XP and gold:|r %3%",
+    ACHIEVEMENT_HINT_MESSAGE           "|cff0000ff%1%:|r %2%",
     CONQUEROR                          "Conqueror",
     CONQUEROR_DESCRIPTION              "%1% XP for constructing a town hall in every start location.",
     QUEST_SOLVER                       "Quest Solver",
@@ -483,8 +497,26 @@ StringList {
     COMPLETED_ALL_ACHIEVEMENTS         "Completed all achievements.",
     KILLED_X_BOSSES                    "Killed %1% bosses.",
     KILLED_ALL_BOSSES                  "Killed all bosses.",
+    KILLED_X_TREES                     "Killed %1% trees.",
     X_HOURS_PLAYED                     "%1% hours played.",
+    KILLED_X_CITIZENS                  "Killed %1% citizens.",
+    PURCHASED_X_PROPERTIES             "Purchased %1% properties.",
     PURCHASED_ALL_PROPERTIES           "Purchased all properties.",
+    NEWLY_DISCOVERED_X_ZONES           "Newly discovered %1% zones.",
+    NEWLY_DISOCVERED_ALL_ZONES         "Newly discovered all existing zones.",
+    FINISHED_ALL_RACES                 "Finished all races.",
+    GATHERED_X_OIL                     "Gathered %1% Oil.",
+    USING_X_FOOD                       "Using %1% food.",
+    STOLEN_X_ITEMS                     "Stolen %1% items.",
+    UNLOCKED_X_CHESTS                  "Unlocked %1% chests.",
+    KILLED_X_UNDEAD                    "Killed %1% Undead.",
+    KILLED_X_LIVING                    "Killed %1% living.",
+    KILLED_ARCHIMONDE_WITHIN_X_MINUTES "Killed Archimonde within %1% minutes.",
+    X_HOURS_WITHOUT_HERO_DEATH         "%1% hours without your hero dying.",
+    KILLED_X_Y_CREEPS                  "Killed %1% %2% creeps.",
+    KILLED_EVERY_CREEP_TYPE            "Killed every creep type.",
+    KILLED_X_ENEMY_HEROES              "Killed %1% enemy heroes.",
+    DEFEATED_PLAYER_X                  "Defeated player %1%.",
     // Racing Tracks
     RACE_HAS_ENDED                     "Race %1% has ended and the winners are: %2%",
     RACE_ALREADY_RUNNING               "Race is already running: %1%",
@@ -609,8 +641,8 @@ StringList {
     COLON_WEBSITE                      "Website:",
     NEWS_LINE_1                        "- Release %1%.",
     NEWS_LINE_2                        "- Support the project by becoming a VIP or with single donations.",
-    NEWS_LINE_3                        "- New professions, skins and zones.",
-    NEWS_LINE_4                        "- New hero standard abilities: Next Skin, Hide in Trees.",
+    NEWS_LINE_3                        "- New professions, skins, spells, standard abilities and zones.",
+    NEWS_LINE_4                        "- Two teams Alliance and Horde.",
     NEWS_LINE_5                        "- New profession ranks Grand Master and Doctor.",
     NEWS_LINE_6                        "- Use chat command '-q/-news' to show this UI.",
     NEWS_LINE_7                        "- Use chat command '-dct/-damagecalculationtable' to show a damage calculation table.",
@@ -620,7 +652,7 @@ StringList {
     NEWS_LINE_11                       "- Removed game settings dialog in the beginning of the game.",
     NEWS_LINE_12                       "- Removed game types which makes old save codes invalid.",
     NEWS_LINE_13                       "- Multiple 75 level researches have been merged into Evolution.",
-    NEWS_LINE_14                       "- Quests have cinematic sequences now.",
+    NEWS_LINE_14                       "- Some Quests have cinematic sequences now.",
     // Save Codes UI
     UPDATE_YELLOW                      "|cffFCD20DUpdate|r",
     LOAD_YELLOW                        "|cffFCD20DLoad|r",
