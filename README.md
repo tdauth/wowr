@@ -334,8 +334,6 @@ Here is a list of some modified versions online:
 * Blizzard Entertainment: [Fire Elemental](https://www.hiveworkshop.com/threads/fire-elemental.307530/)
 * Explobomb: [Old God Pack](https://www.hiveworkshop.com/threads/old-god-pack.334166/)
 * CRAZYRUSSIAN: [BTN_CR_Heart_of_Gold](https://www.hiveworkshop.com/threads/btn_cr_heart_of_gold.58148/)
-* ikillforeyou: [Goblin War Zeppelin](https://www.hiveworkshop.com/threads/goblin-war-zeppelin.162935/)
-* Shardeth: [Net Launcher Turret](https://www.hiveworkshop.com/threads/net-launcher-turret.330923/)
 * ILH: [Nuclear Silo and Missile](https://www.hiveworkshop.com/threads/nuclear-silo-and-missile.298792/)
 * Callahan: [The Void Lord](https://www.hiveworkshop.com/threads/the-void-lord.48554/)
 * Remixer: [Pandarian Harvester](https://www.hiveworkshop.com/threads/pandarian-harvester.316782/)
