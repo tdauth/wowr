@@ -13,6 +13,8 @@ StringList {
     // Resources
     TARGET_IS_NO_VALID_MINE            "Target is no valid mine.",
     CANNOT_HARVEST                     "%1% cannot harvest %2%.",
+    FOOD                               "Food",
+    FOOD_MAXIMUM                       "Food Maximum",
     // Resources Chat Commands
     GAVE_RESOURCES_TO                  "Gave %1% of %2% to %3%.",
     RECEIVED_RESOURCES_FROM            "Received %1% of %2% from %3%.",
@@ -24,11 +26,24 @@ StringList {
     INVALID_RESOURCE                   "Invalid resource.",
     SOLD_ALL_FOR_GOLD                  "Sold all resources for %1% gold.",
     SOLD_ALL_LUMBER_FOR_GOLD           "Sold all lumber for %1% gold.",
-    // Resources UI
+    // Resources Multiboard Gui
     RESOURCES_OF_X                     "Resources of %1%",
     RESOURCE                           "Resource",
     AMOUNT                             "Amount",
     INCOME                             "Income",
     GOLD_EXCHANGE_RATE                 "Gold Exchange",
-    NOT_ALLOWED_TO_HARVEST             "Not allowed to harvest.",
+    // Resources Team Multiboard Gui
+    TEAM_RESOURCES                     "Team Resources",
+    // Resources Gui
+    RESOURCE_X                         "|cffffcc00%1%:|r|n  %2%",
+    RESOURCE_X_OF_Y                    "|cffffcc00%1%:|r|n  %2%/%3%",
+    RESOURCE_X_OF_Y_BONUS_POSITIVE     "|cffffcc00%1%:|r|n  %2%/%3%|n|c0000ff00+%4%|r",
+    RESOURCE_X_OF_Y_BONUS_NEGATIVE     "|cffffcc00%1%:|r|n  %2%/%3%|n|c0000ff00-%4%|r",
+    // Example Map Only
+    LOW_OIL                            "A Oil Platform is running low.",
+    COLLAPESD_OIL                      "A Oil Platform has collapsed.",
+    LOW_ROCK                           "A Rock Mine is running low.",
+    COLLAPSED_ROCK                     "A Rock Mine is collapsed.",
+    LOW_WHEAT                          "A Wheat Field is almost empty.",
+    COLLAPSED_WHEAT                    "A Wheat Field is empty.",
 }

@@ -831,3 +831,45 @@ STRING 220
 Ore Mine
 }
 
+STRING 221
+// Units: h006 (Buy 100 Ore), Name (Name)
+{
+Buy 100 Ore
+}
+
+STRING 222
+// Units: h006 (Buy 100 Ore), Tip (Tooltip - Basic)
+{
+Buy 100 Ore
+}
+
+STRING 223
+// Units: h006 (Buy 100 Ore), Ubertip (Tooltip - Extended)
+{
+Buys 100 Ore for gold. Use "-buy 100 ore" to buy it via chat.
+}
+
+STRING 225
+// Units: h007 (Sell 100 Ore), Name (Name)
+{
+Sell 100 Ore
+}
+
+STRING 226
+// Units: h007 (Sell 100 Ore), Tip (Tooltip - Basic)
+{
+Sell 100 Ore
+}
+
+STRING 227
+// Units: h007 (Sell 100 Ore), Ubertip (Tooltip - Extended)
+{
+Sells 100 Ore for gold. Use "-sell 100 ore" to sell it via chat.
+}
+
+STRING 229
+// Units: h006 (Buy 100 Ore), Hotkey (Hotkey)
+{
+R
+}
+

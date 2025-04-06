@@ -32,11 +32,11 @@ trigger OnStartGame___startGameTrigger= CreateTrigger()
 //endglobals from OnStartGame
 //globals from RegisterNativeEvent:
 constant boolean LIBRARY_RegisterNativeEvent=true
-integer RegisterNativeEvent__eventIndex= 500
+integer RegisterNativeEvent___eventIndex= 500
 //endglobals from RegisterNativeEvent
 //globals from RegisterPlayerUnitEvent:
 constant boolean LIBRARY_RegisterPlayerUnitEvent=true
-trigger array RegisterPlayerUnitEvent__t
+trigger array RegisterPlayerUnitEvent___t
 //endglobals from RegisterPlayerUnitEvent
 //globals from SimError:
 constant boolean LIBRARY_SimError=true
@@ -70,10 +70,10 @@ constant integer EVENT_UNIT_INDEX= 0
 constant integer EVENT_UNIT_DEINDEX= 1
       
         // System variables
-trigger array UnitDex__IndexTrig
-integer UnitDex__Index= 0
-real UnitDex__E=- 1
-boolexpr UnitDex__FilterEnter
+trigger array UnitDex___IndexTrig
+integer UnitDex___Index= 0
+real UnitDex___E=- 1
+boolexpr UnitDex___FilterEnter
 //endglobals from UnitDex
 //globals from Resources:
 constant boolean LIBRARY_Resources=true
@@ -89,10 +89,6 @@ constant string Resources_FOOD_ICON= "UI\\Feedback\\Resources\\ResourceSupply.bl
 constant string Resources_FOOD_ICON_ATT= "UI\\Widgets\\Console\\Human\\infocard-supply.blp"
 constant string Resources_FOOD_MAX_ICON= "UI\\Feedback\\Resources\\ResourceSupply.blp"
 constant string Resources_FOOD_MAX_ICON_ATT= "UI\\Widgets\\Console\\Human\\infocard-supply.blp"
-constant string Resources_GOLD_DESCRIPTION= "Gold is the main resource of Azeroth. It can be gathered from Gold Mines. It is used to buy items, train units, research upgrades and construct buildings."
-constant string Resources_LUMBER_DESCRIPTION= "Lumber is the second most important resource of Azeroth. It can be gathered from trees. It is used for more expensive stuff since it might take longer to gather lumber than gold."
-constant string Resources_FOOD_DESCRIPTION= "Food is used by player units. Stronger units use more food."
-constant string Resources_FOOD_MAX_DESCRIPTION= "The food maximum is determined by the farms/burrows etc. you have constructed and limited by 100."
     
 hashtable Resources___h= InitHashtable()
 trigger Resources___castTrigger= CreateTrigger()
@@ -153,38 +149,38 @@ constant boolean LIBRARY_UnitEventEx=true
     // CONFIGURATION
     
     // the transform detection ability. If DETECT_TRANSFORM is false, this is not needed.
-constant integer UnitEventEx__DETECT_TRANSFORM_ABILITY= 'UEdt'
+constant integer UnitEventEx___DETECT_TRANSFORM_ABILITY= 'UEdt'
     
     // toggles the detection of transform events.
-constant boolean UnitEventEx__DETECT_TRANSFORM= false
+constant boolean UnitEventEx___DETECT_TRANSFORM= false
     
     // toggles the detection of load/unload of cargo units, except for dead units (eg Meat Wagon's Exhume Corpse)
-constant boolean UnitEventEx__DETECT_CARGO= true
+constant boolean UnitEventEx___DETECT_CARGO= true
     
     // toggles the detection of unloading dead units in cargo (Exhume Corpse). Does nothing if DETECT_CARGO is false.
-constant boolean UnitEventEx__DETECT_CARGO_DEAD= true
+constant boolean UnitEventEx___DETECT_CARGO_DEAD= true
     
     // toggles the detection of when a unit begins and finishes reincarnating.
-constant boolean UnitEventEx__DETECT_REINCARNATION= true
+constant boolean UnitEventEx___DETECT_REINCARNATION= true
     
     // toggles the detection of when a unit is animated via animate dead.
-constant boolean UnitEventEx__DETECT_ANIMATE_DEAD= true
+constant boolean UnitEventEx___DETECT_ANIMATE_DEAD= true
     
     // toggles the detection of units that are brought back to life via resurrection.
-constant boolean UnitEventEx__DETECT_RESURRECTION= false
+constant boolean UnitEventEx___DETECT_RESURRECTION= false
     
     // this overrides reincarnation, animate dead and resurrection. Set to true if you want any of these events to work.
     // for some reason setting DETECT_REVIVES = (DETECT_REINCARNATION or DETECT_ANIMATE_DEAD or DETECT_RESURRECTION) does not work.
-constant boolean UnitEventEx__DETECT_REVIVES= false
+constant boolean UnitEventEx___DETECT_REVIVES= false
     // this particular event will run after a zero-second delay so that units are able to fully enter the creation scope.
     // it can be useful if you need something to run after both indexing and other events like EVENT_PLAYER_UNIT_CONSTRUCT_START
-constant boolean UnitEventEx__DETECT_CREATION= false
+constant boolean UnitEventEx___DETECT_CREATION= false
     
     // END CONFIGURATION
     
-unit UnitEventEx__eventUnit= null
-unit UnitEventEx__eventOther= null
-integer UnitEventEx__eventPreType= 0
+unit UnitEventEx___eventUnit= null
+unit UnitEventEx___eventOther= null
+integer UnitEventEx___eventPreType= 0
     
 integer EVENT_ON_TRANSFORM
 integer EVENT_ON_CARGO_LOAD
@@ -195,23 +191,23 @@ integer EVENT_ON_REINCARNATION_START
 integer EVENT_ON_REINCARNATION_FINISH
 integer EVENT_ON_UNIT_CREATED
     
-integer UnitEventEx__Stack= - 1
-unit array UnitEventEx__IndexedUnit
-unit array UnitEventEx__CargoUnit
-group array UnitEventEx__CargoGroup
-unit array UnitEventEx__Transporter
-integer array UnitEventEx__PreTransformType
+integer UnitEventEx___Stack= - 1
+unit array UnitEventEx___IndexedUnit
+unit array UnitEventEx___CargoUnit
+group array UnitEventEx___CargoGroup
+unit array UnitEventEx___Transporter
+integer array UnitEventEx___PreTransformType
     
-real UnitEventEx__MaxX
-real UnitEventEx__MaxY
+real UnitEventEx___MaxX
+real UnitEventEx___MaxY
     
-boolean array UnitEventEx__IsNew
-boolean array UnitEventEx__IsAlive
-boolean array UnitEventEx__IsReincarnating
-boolean array UnitEventEx__IsTransforming
+boolean array UnitEventEx___IsNew
+boolean array UnitEventEx___IsAlive
+boolean array UnitEventEx___IsReincarnating
+boolean array UnitEventEx___IsTransforming
     
-timer UnitEventEx__AfterIndexTimer= CreateTimer()
-boolean UnitEventEx__rezCheck= true
+timer UnitEventEx___AfterIndexTimer= CreateTimer()
+boolean UnitEventEx___rezCheck= true
     
 //endglobals from UnitEventEx
 //globals from ResourcesChatCommands:
@@ -392,6 +388,8 @@ unit gg_unit_n000_0050= null
 unit gg_unit_opeo_0052= null
 unit gg_unit_opeo_0053= null
 unit gg_unit_opeo_0054= null
+trigger gg_trg_Buy_100_Ore= null
+trigger gg_trg_Sell_100_Ore= null
 trigger deathTrigger= CreateTrigger()
 integer Oil
 integer Rock
@@ -404,8 +402,8 @@ integer array playerGranaryCounters
 trigger l__library_init
 
 //JASSHelper struct globals:
-constant integer si__RegisterNativeEvent__NativeEvent=1
-hashtable s__RegisterNativeEvent__NativeEvent_table= InitHashtable()
+constant integer si__RegisterNativeEvent___NativeEvent=1
+hashtable s__RegisterNativeEvent___NativeEvent_table= InitHashtable()
 constant integer si__WorldBounds=2
 integer s__WorldBounds_maxX
 integer s__WorldBounds_maxY
@@ -455,15 +453,15 @@ constant integer s___Resource_playerUpkeepRate_size=28
 integer array s__Resource_playerUpkeepRate
 integer array s__Resource_resources
 integer s__Resource_resourcesCount= 0
-constant integer si__UnitEventEx__Cargo=9
-integer si__UnitEventEx__Cargo_F=0
-integer si__UnitEventEx__Cargo_I=0
-integer array si__UnitEventEx__Cargo_V
-constant integer si__UnitEventEx__UnitEventEx=10
-integer si__UnitEventEx__UnitEventEx_F=0
-integer si__UnitEventEx__UnitEventEx_I=0
-integer array si__UnitEventEx__UnitEventEx_V
-trigger st__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer
+constant integer si__UnitEventEx___Cargo=9
+integer si__UnitEventEx___Cargo_F=0
+integer si__UnitEventEx___Cargo_I=0
+integer array si__UnitEventEx___Cargo_V
+constant integer si__UnitEventEx___UnitEventEx=10
+integer si__UnitEventEx___UnitEventEx_F=0
+integer si__UnitEventEx___UnitEventEx_I=0
+integer array si__UnitEventEx___UnitEventEx_V
+trigger st__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer
 trigger array st___prototype51
 unit f__arg_unit1
 
@@ -473,66 +471,66 @@ native GetUnitGoldCost takes integer unitid returns integer
 native GetUnitWoodCost takes integer unitid returns integer
 
 
-//Generated method caller for UnitEventEx__UnitEventEx.UnitEventEx__UnitEventExCore___resurrectionTimer
-function sc__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer takes nothing returns nothing
-        set UnitEventEx__rezCheck=false
+//Generated method caller for UnitEventEx___UnitEventEx.UnitEventEx___UnitEventExCore___resurrectionTimer
+function sc__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer takes nothing returns nothing
+        set UnitEventEx___rezCheck=false
         call DestroyTimer(GetExpiredTimer())
 endfunction
 
-//Generated allocator of UnitEventEx__UnitEventEx
-function s__UnitEventEx__UnitEventEx__allocate takes nothing returns integer
- local integer this=si__UnitEventEx__UnitEventEx_F
+//Generated allocator of UnitEventEx___UnitEventEx
+function s__UnitEventEx___UnitEventEx__allocate takes nothing returns integer
+ local integer this=si__UnitEventEx___UnitEventEx_F
     if (this!=0) then
-        set si__UnitEventEx__UnitEventEx_F=si__UnitEventEx__UnitEventEx_V[this]
+        set si__UnitEventEx___UnitEventEx_F=si__UnitEventEx___UnitEventEx_V[this]
     else
-        set si__UnitEventEx__UnitEventEx_I=si__UnitEventEx__UnitEventEx_I+1
-        set this=si__UnitEventEx__UnitEventEx_I
+        set si__UnitEventEx___UnitEventEx_I=si__UnitEventEx___UnitEventEx_I+1
+        set this=si__UnitEventEx___UnitEventEx_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__UnitEventEx__UnitEventEx_V[this]=-1
+    set si__UnitEventEx___UnitEventEx_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of UnitEventEx__UnitEventEx
-function s__UnitEventEx__UnitEventEx_deallocate takes integer this returns nothing
+//Generated destructor of UnitEventEx___UnitEventEx
+function s__UnitEventEx___UnitEventEx_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__UnitEventEx__UnitEventEx_V[this]!=-1) then
+    elseif (si__UnitEventEx___UnitEventEx_V[this]!=-1) then
         return
     endif
-    set si__UnitEventEx__UnitEventEx_V[this]=si__UnitEventEx__UnitEventEx_F
-    set si__UnitEventEx__UnitEventEx_F=this
+    set si__UnitEventEx___UnitEventEx_V[this]=si__UnitEventEx___UnitEventEx_F
+    set si__UnitEventEx___UnitEventEx_F=this
 endfunction
 
-//Generated allocator of UnitEventEx__Cargo
-function s__UnitEventEx__Cargo__allocate takes nothing returns integer
- local integer this=si__UnitEventEx__Cargo_F
+//Generated allocator of UnitEventEx___Cargo
+function s__UnitEventEx___Cargo__allocate takes nothing returns integer
+ local integer this=si__UnitEventEx___Cargo_F
     if (this!=0) then
-        set si__UnitEventEx__Cargo_F=si__UnitEventEx__Cargo_V[this]
+        set si__UnitEventEx___Cargo_F=si__UnitEventEx___Cargo_V[this]
     else
-        set si__UnitEventEx__Cargo_I=si__UnitEventEx__Cargo_I+1
-        set this=si__UnitEventEx__Cargo_I
+        set si__UnitEventEx___Cargo_I=si__UnitEventEx___Cargo_I+1
+        set this=si__UnitEventEx___Cargo_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__UnitEventEx__Cargo_V[this]=-1
+    set si__UnitEventEx___Cargo_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of UnitEventEx__Cargo
-function s__UnitEventEx__Cargo_deallocate takes integer this returns nothing
+//Generated destructor of UnitEventEx___Cargo
+function s__UnitEventEx___Cargo_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__UnitEventEx__Cargo_V[this]!=-1) then
+    elseif (si__UnitEventEx___Cargo_V[this]!=-1) then
         return
     endif
-    set si__UnitEventEx__Cargo_V[this]=si__UnitEventEx__Cargo_F
-    set si__UnitEventEx__Cargo_F=this
+    set si__UnitEventEx___Cargo_V[this]=si__UnitEventEx___Cargo_F
+    set si__UnitEventEx___Cargo_F=this
 endfunction
 
 //Generated allocator of Resource
@@ -876,8 +874,8 @@ endfunction
 
 
 
-//Implemented from module RegisterNativeEvent__NativeEventInit:
-    function s__RegisterNativeEvent__NativeEvent_RegisterNativeEvent__NativeEventInit___onInit takes nothing returns nothing
+//Implemented from module RegisterNativeEvent___NativeEventInit:
+    function s__RegisterNativeEvent___NativeEvent_RegisterNativeEvent___NativeEventInit___onInit takes nothing returns nothing
 
 
 
@@ -887,7 +885,7 @@ function IsNativeEventRegistered takes integer whichIndex,integer whichEvent ret
 
 
 
-    return HaveSavedHandle(s__RegisterNativeEvent__NativeEvent_table, whichEvent, whichIndex)
+    return HaveSavedHandle(s__RegisterNativeEvent___NativeEvent_table, whichEvent, whichIndex)
 
 endfunction
 
@@ -896,7 +894,7 @@ function RegisterNativeEventTrigger takes integer whichIndex,integer whichEvent 
 
 
 
-        call SaveTriggerHandle(s__RegisterNativeEvent__NativeEvent_table, whichEvent, whichIndex, CreateTrigger())
+        call SaveTriggerHandle(s__RegisterNativeEvent___NativeEvent_table, whichEvent, whichIndex, CreateTrigger())
 
         return true
     endif
@@ -907,7 +905,7 @@ function GetIndexNativeEventTrigger takes integer whichIndex,integer whichEvent 
 
 
 
-    return LoadTriggerHandle(s__RegisterNativeEvent__NativeEvent_table, whichEvent, whichIndex)
+    return LoadTriggerHandle(s__RegisterNativeEvent___NativeEvent_table, whichEvent, whichIndex)
 
 endfunction
 
@@ -916,9 +914,9 @@ function GetNativeEventTrigger takes integer whichEvent returns trigger
 endfunction
 
 function CreateNativeEvent takes nothing returns integer
-    local integer eventId= RegisterNativeEvent__eventIndex
+    local integer eventId= RegisterNativeEvent___eventIndex
     call RegisterNativeEventTrigger(bj_MAX_PLAYER_SLOTS , eventId)
-    set RegisterNativeEvent__eventIndex=RegisterNativeEvent__eventIndex + 1
+    set RegisterNativeEvent___eventIndex=RegisterNativeEvent___eventIndex + 1
     return eventId
 endfunction
 
@@ -942,28 +940,28 @@ endfunction
     function RegisterPlayerUnitEvent takes playerunitevent p,code c returns nothing
         local integer i= GetHandleId(p)
         local integer k= 15
-        if RegisterPlayerUnitEvent__t[i] == null then
-            set RegisterPlayerUnitEvent__t[i]=CreateTrigger()
+        if RegisterPlayerUnitEvent___t[i] == null then
+            set RegisterPlayerUnitEvent___t[i]=CreateTrigger()
             loop
-                call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent__t[i], Player(k), p, null)
+                call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent___t[i], Player(k), p, null)
                 exitwhen k == 0
                 set k=k - 1
             endloop
         endif
-        call TriggerAddCondition(RegisterPlayerUnitEvent__t[i], Filter(c))
+        call TriggerAddCondition(RegisterPlayerUnitEvent___t[i], Filter(c))
     endfunction
     
     function RegisterPlayerUnitEventForPlayer takes playerunitevent p,code c,player pl returns nothing
         local integer i= 16 * GetHandleId(p) + GetPlayerId(pl)
-        if RegisterPlayerUnitEvent__t[i] == null then
-            set RegisterPlayerUnitEvent__t[i]=CreateTrigger()
-            call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent__t[i], pl, p, null)
+        if RegisterPlayerUnitEvent___t[i] == null then
+            set RegisterPlayerUnitEvent___t[i]=CreateTrigger()
+            call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent___t[i], pl, p, null)
         endif
-        call TriggerAddCondition(RegisterPlayerUnitEvent__t[i], Filter(c))
+        call TriggerAddCondition(RegisterPlayerUnitEvent___t[i], Filter(c))
     endfunction
     
     function GetPlayerUnitEventTrigger takes playerunitevent p returns trigger
-        return RegisterPlayerUnitEvent__t[GetHandleId(p)]
+        return RegisterPlayerUnitEvent___t[GetHandleId(p)]
     endfunction
 
 //library RegisterPlayerUnitEvent ends
@@ -1381,8 +1379,8 @@ endfunction
 		
 		
 		
-//Implemented from module WorldBounds__WorldBoundInit:
-  function s__WorldBounds_WorldBounds__WorldBoundInit___onInit takes nothing returns nothing
+//Implemented from module WorldBounds___WorldBoundInit:
+  function s__WorldBounds_WorldBounds___WorldBoundInit___onInit takes nothing returns nothing
 			set s__WorldBounds_world=GetWorldBounds()
 			
 			set s__WorldBounds_maxX=R2I(GetRectMaxX(s__WorldBounds_world))
@@ -2367,23 +2365,23 @@ endfunction
     endfunction
   
     function RegisterUnitIndexEvent takes boolexpr func,integer eventtype returns triggercondition
-        return TriggerAddCondition(UnitDex__IndexTrig[eventtype], func)
+        return TriggerAddCondition(UnitDex___IndexTrig[eventtype], func)
     endfunction
   
     function RemoveUnitIndexEvent takes triggercondition c,integer eventtype returns nothing
-        call TriggerRemoveCondition(UnitDex__IndexTrig[eventtype], c)
+        call TriggerRemoveCondition(UnitDex___IndexTrig[eventtype], c)
     endfunction
   
     function TriggerRegisterUnitIndexEvent takes trigger t,integer eventtype returns nothing
-        call TriggerRegisterVariableEvent(t, "UnitDex__E", EQUAL, eventtype)
+        call TriggerRegisterVariableEvent(t, "UnitDex___E", EQUAL, eventtype)
     endfunction
   
     function OnUnitIndex takes code func returns triggercondition
-        return TriggerAddCondition(UnitDex__IndexTrig[EVENT_UNIT_INDEX], Filter(func))
+        return TriggerAddCondition(UnitDex___IndexTrig[EVENT_UNIT_INDEX], Filter(func))
     endfunction
 
     function OnUnitDeindex takes code func returns triggercondition
-        return TriggerAddCondition(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX], Filter(func))
+        return TriggerAddCondition(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX], Filter(func))
     endfunction
   
     
@@ -2391,7 +2389,7 @@ endfunction
   
       
       
-//Implemented from module UnitDex__UnitDexConfig:
+//Implemented from module UnitDex___UnitDexConfig:
   
         // The raw code of the leave detection ability.
         //static constant integer DETECT_LEAVE_ABILITY = 'uDex'
@@ -2405,24 +2403,24 @@ endfunction
       
       
       
-//Implemented from module UnitDex__UnitDexCore:
+//Implemented from module UnitDex___UnitDexCore:
   
         function s__UnitDex_Remove takes unit u,boolean runEvents returns boolean
             local integer i
           
             if ( ((s__UnitDex_Unit[((GetUnitUserData(((u)))))]) != null) ) then // INLINED!!
                 set i=(GetUnitUserData((u))) // INLINED!!
-                set s__UnitDex_List[i]=UnitDex__Index
-                set UnitDex__Index=i
+                set s__UnitDex_List[i]=UnitDex___Index
+                set UnitDex___Index=i
               
                 call GroupRemoveUnit(s__UnitDex_Group, u)
                 call SetUnitUserData(u, 0)
           
                 if ( runEvents ) then
                     set s__UnitDex_LastIndex=i
-                    set UnitDex__E=EVENT_UNIT_DEINDEX
-                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX])
-                    set UnitDex__E=- 1
+                    set UnitDex___E=EVENT_UNIT_DEINDEX
+                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX])
+                    set UnitDex___E=- 1
                 endif
               
                 set s__UnitDex_Unit[i]=null
@@ -2434,7 +2432,7 @@ endfunction
             return false
         endfunction
       
-        function s__UnitDex_UnitDex__UnitDexCore___onGameStart takes nothing returns nothing
+        function s__UnitDex_UnitDex___UnitDexCore___onGameStart takes nothing returns nothing
             local integer i= 1
           
             loop
@@ -2442,24 +2440,24 @@ endfunction
               
                 set s__UnitDex_LastIndex=i
               
-                call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_INDEX])
-                set UnitDex__E=EVENT_UNIT_INDEX
-                set UnitDex__E=- 1
+                call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_INDEX])
+                set UnitDex___E=EVENT_UNIT_INDEX
+                set UnitDex___E=- 1
               
                 set i=i + 1
             endloop
 
             set s__UnitDex_LastIndex=s__UnitDex_Counter
             set s__UnitDex_Initialized=true
-            set UnitDex__FilterEnter=null
+            set UnitDex___FilterEnter=null
           
             call DestroyTimer(GetExpiredTimer())
         endfunction
       
-        function s__UnitDex_UnitDex__UnitDexCore___onEnter takes nothing returns boolean
+        function s__UnitDex_UnitDex___UnitDexCore___onEnter takes nothing returns boolean
             local unit u= GetFilterUnit()
             local integer i= (GetUnitUserData((u))) // INLINED!!
-            local integer t= UnitDex__Index
+            local integer t= UnitDex___Index
           
             if ( i == 0 and s__UnitDex_Enabled ) then
               
@@ -2488,8 +2486,8 @@ endfunction
                 call UnitMakeAbilityPermanent(u, true, s__UnitDex_DETECT_LEAVE_ABILITY)
               
                 // Allocate index
-                if ( UnitDex__Index != 0 ) then
-                    set UnitDex__Index=s__UnitDex_List[t]
+                if ( UnitDex___Index != 0 ) then
+                    set UnitDex___Index=s__UnitDex_List[t]
                 else
                     set s__UnitDex_Counter=s__UnitDex_Counter + 1
                     set t=s__UnitDex_Counter
@@ -2505,13 +2503,13 @@ endfunction
               
                 if ( s__UnitDex_Initialized ) then
                     // Execute custom events registered with RegisterUnitIndexEvent
-                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_INDEX])
+                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_INDEX])
                   
                     // Handle TriggerRegisterUnitIndexEvent
-                    set UnitDex__E=EVENT_UNIT_INDEX
+                    set UnitDex___E=EVENT_UNIT_INDEX
 
                     // Reset so the event can occur again
-                    set UnitDex__E=- 1
+                    set UnitDex___E=- 1
                 endif
             endif
           
@@ -2520,7 +2518,7 @@ endfunction
             return false
         endfunction
 
-        function s__UnitDex_UnitDex__UnitDexCore___onLeave takes nothing returns boolean
+        function s__UnitDex_UnitDex___UnitDexCore___onLeave takes nothing returns boolean
             local unit u
             local integer i
           
@@ -2541,18 +2539,18 @@ endfunction
                 if ( i > 0 and i <= s__UnitDex_Counter and u == (s__UnitDex_Unit[(i)]) ) then // INLINED!!
                   
                     // Recycle the index
-                    set s__UnitDex_List[i]=UnitDex__Index
-                    set UnitDex__Index=i
+                    set s__UnitDex_List[i]=UnitDex___Index
+                    set UnitDex___Index=i
                     set s__UnitDex_LastIndex=i
                   
                     // Remove to group of indexed units
                     call GroupRemoveUnit(s__UnitDex_Group, u)
               
                     // Execute custom events without any associated triggers
-                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX])
+                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX])
                   
                     // Handle TriggerRegisterUnitIndexEvent
-                    set UnitDex__E=EVENT_UNIT_DEINDEX
+                    set UnitDex___E=EVENT_UNIT_DEINDEX
                   
                     // Remove entry
                     call SetUnitUserData(u, 0)
@@ -2562,7 +2560,7 @@ endfunction
                     set s__UnitDex_Count=s__UnitDex_Count - 1
               
                     // Reset so the event can occur again
-                    set UnitDex__E=- 1
+                    set UnitDex___E=- 1
                 endif
               
                 set u=null
@@ -2571,7 +2569,7 @@ endfunction
             return false
         endfunction
       
-        function s__UnitDex_UnitDex__UnitDexCore___onInit takes nothing returns nothing
+        function s__UnitDex_UnitDex___UnitDexCore___onInit takes nothing returns nothing
             local trigger t= CreateTrigger()
             local integer i= 0
             local player p
@@ -2586,11 +2584,11 @@ endfunction
                 local group ENUM_GROUP= CreateGroup()
 
           
-            set UnitDex__FilterEnter=Filter(function s__UnitDex_UnitDex__UnitDexCore___onEnter)
+            set UnitDex___FilterEnter=Filter(function s__UnitDex_UnitDex___UnitDexCore___onEnter)
           
             // Begin to index units when they enter the map
 
-                call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, UnitDex__FilterEnter)
+                call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, UnitDex___FilterEnter)
 
 
 
@@ -2598,10 +2596,10 @@ endfunction
 
 
           
-            call TriggerAddCondition(t, Filter(function s__UnitDex_UnitDex__UnitDexCore___onLeave))
+            call TriggerAddCondition(t, Filter(function s__UnitDex_UnitDex___UnitDexCore___onLeave))
           
-            set UnitDex__IndexTrig[EVENT_UNIT_INDEX]=CreateTrigger()
-            set UnitDex__IndexTrig[EVENT_UNIT_DEINDEX]=CreateTrigger()
+            set UnitDex___IndexTrig[EVENT_UNIT_INDEX]=CreateTrigger()
+            set UnitDex___IndexTrig[EVENT_UNIT_DEINDEX]=CreateTrigger()
           
             loop
                 set p=Player(i)
@@ -2619,7 +2617,7 @@ endfunction
             // Index preplaced units
             set i=0
             loop
-                call GroupEnumUnitsOfPlayer(ENUM_GROUP, Player(i), UnitDex__FilterEnter)
+                call GroupEnumUnitsOfPlayer(ENUM_GROUP, Player(i), UnitDex___FilterEnter)
               
                 set i=i + 1
               
@@ -2634,7 +2632,7 @@ endfunction
             set s__UnitDex_LastIndex=s__UnitDex_Counter
           
             // run init triggers
-            call TimerStart(CreateTimer(), 0.00, false, function s__UnitDex_UnitDex__UnitDexCore___onGameStart)
+            call TimerStart(CreateTimer(), 0.00, false, function s__UnitDex_UnitDex___UnitDexCore___onGameStart)
         endfunction
   
   
@@ -4111,28 +4109,28 @@ function Resources___Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(Resources___deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddAction(Resources___deathTrigger, function Resources___TriggerActionDeath)
     
-    set Resources_GOLD=(s__Resource_create(("Gold"))) // INLINED!!
+    set Resources_GOLD=(s__Resource_create((GetLocalizedString("GOLD")))) // INLINED!!
     set s__Resource_icon[(Resources_GOLD )]=( Resources_GOLD_ICON) // INLINED!!
     set s__Resource_iconAtt[(Resources_GOLD )]=( Resources_GOLD_ICON_ATT) // INLINED!!
-    set s__Resource_description[(Resources_GOLD )]=( Resources_GOLD_DESCRIPTION) // INLINED!!
+    set s__Resource_description[(Resources_GOLD )]=( GetLocalizedString("RESOURCE_UBERTIP_GOLD")) // INLINED!!
     set s__Resource_goldExchangeRate[(Resources_GOLD )]=(( Resources_GOLD_GOLD_EXCHANGE_RATE)*1.0) // INLINED!!
     set s__Resource_red[(Resources_GOLD )]=( 255) // INLINED!!
     set s__Resource_green[(Resources_GOLD )]=( 255) // INLINED!!
-    set Resources_LUMBER=(s__Resource_create(("Lumber"))) // INLINED!!
+    set Resources_LUMBER=(s__Resource_create((GetLocalizedString("LUMBER")))) // INLINED!!
     set s__Resource_icon[(Resources_LUMBER )]=( Resources_LUMBER_ICON) // INLINED!!
     set s__Resource_iconAtt[(Resources_LUMBER )]=( Resources_LUMBER_ICON_ATT) // INLINED!!
-    set s__Resource_description[(Resources_LUMBER )]=( Resources_LUMBER_DESCRIPTION) // INLINED!!
+    set s__Resource_description[(Resources_LUMBER )]=( GetLocalizedString("RESOURCE_UBERTIP_LUMBER")) // INLINED!!
     set s__Resource_goldExchangeRate[(Resources_LUMBER )]=(( Resources_LUMBER_GOLD_EXCHANGE_RATE)*1.0) // INLINED!!
     set s__Resource_green[(Resources_LUMBER )]=( 255) // INLINED!!
-    set Resources_FOOD=(s__Resource_create(("Food"))) // INLINED!!
+    set Resources_FOOD=(s__Resource_create((GetLocalizedString("FOOD")))) // INLINED!!
     set s__Resource_icon[(Resources_FOOD )]=( Resources_FOOD_ICON) // INLINED!!
     set s__Resource_iconAtt[(Resources_FOOD )]=( Resources_FOOD_ICON_ATT) // INLINED!!
-    set s__Resource_description[(Resources_FOOD )]=( Resources_FOOD_DESCRIPTION) // INLINED!!
+    set s__Resource_description[(Resources_FOOD )]=( GetLocalizedString("RESOURCE_UBERTIP_SUPPLY")) // INLINED!!
     set s__Resource_goldExchangeRate[(Resources_FOOD )]=(( Resources_FOOD_GOLD_EXCHANGE_RATE)*1.0) // INLINED!!
-    set Resources_FOOD_MAX=(s__Resource_create(("Food Maximum"))) // INLINED!!
+    set Resources_FOOD_MAX=(s__Resource_create((GetLocalizedString("FOOD_MAXIMUM")))) // INLINED!!
     set s__Resource_icon[(Resources_FOOD_MAX )]=( Resources_FOOD_MAX_ICON) // INLINED!!
     set s__Resource_iconAtt[(Resources_FOOD_MAX )]=( Resources_FOOD_MAX_ICON_ATT) // INLINED!!
-    set s__Resource_description[(Resources_FOOD_MAX )]=( Resources_FOOD_MAX_DESCRIPTION) // INLINED!!
+    set s__Resource_description[(Resources_FOOD_MAX )]=( GetLocalizedString("RESOURCE_UBERTIP_SUPPLY")) // INLINED!!
     set s__Resource_goldExchangeRate[(Resources_FOOD_MAX )]=(( Resources_FOOD_MAX_GOLD_EXCHANGE_RATE)*1.0) // INLINED!!
 endfunction
 
@@ -4156,17 +4154,17 @@ endfunction
 //library UnitEventEx:
 
 //ignored textmacro command: DEFINE_LIST("", "UEExList", "unit")
-function UnitEventEx__FireEvent takes integer ev,unit u,unit other returns nothing
+function UnitEventEx___FireEvent takes integer ev,unit u,unit other returns nothing
     local integer playerId= GetPlayerId(GetOwningPlayer(u))
     local integer handleId= GetHandleId(u)
     local integer id= (GetUnitUserData((u))) // INLINED!!
-    local unit prevUnit= UnitEventEx__eventUnit
-    local unit prevOther= UnitEventEx__eventOther
-    local integer prevType= UnitEventEx__eventPreType
+    local unit prevUnit= UnitEventEx___eventUnit
+    local unit prevOther= UnitEventEx___eventOther
+    local integer prevType= UnitEventEx___eventPreType
     
-    set UnitEventEx__eventUnit=u
-    set UnitEventEx__eventOther=other
-    set UnitEventEx__eventPreType=UnitEventEx__PreTransformType[id]
+    set UnitEventEx___eventUnit=u
+    set UnitEventEx___eventOther=other
+    set UnitEventEx___eventPreType=UnitEventEx___PreTransformType[id]
     
     call TriggerEvaluate((GetIndexNativeEventTrigger(bj_MAX_PLAYER_SLOTS , (ev)))) // INLINED!!
     if IsNativeEventRegistered(playerId , ev) then
@@ -4175,9 +4173,9 @@ function UnitEventEx__FireEvent takes integer ev,unit u,unit other returns nothi
         call TriggerEvaluate(GetIndexNativeEventTrigger(handleId , ev))
     endif
     
-    set UnitEventEx__eventUnit=prevUnit
-    set UnitEventEx__eventOther=prevOther
-    set UnitEventEx__eventPreType=prevType
+    set UnitEventEx___eventUnit=prevUnit
+    set UnitEventEx___eventOther=prevOther
+    set UnitEventEx___eventPreType=prevType
     
     set prevUnit=null
     set prevOther=null
@@ -4187,52 +4185,52 @@ endfunction
 
 
     
-    function s__UnitEventEx__Cargo_delete takes integer transport_id returns nothing
+    function s__UnitEventEx___Cargo_delete takes integer transport_id returns nothing
 
 
 
-            call DestroyGroup(UnitEventEx__CargoGroup[transport_id])
+            call DestroyGroup(UnitEventEx___CargoGroup[transport_id])
 
     endfunction
     
-    function s__UnitEventEx__Cargo_remove takes unit u,unit transport returns nothing
+    function s__UnitEventEx___Cargo_remove takes unit u,unit transport returns nothing
         local integer transport_id= (GetUnitUserData((transport))) // INLINED!!
 
 
 
-            call GroupRemoveUnit(UnitEventEx__CargoGroup[transport_id], u)
+            call GroupRemoveUnit(UnitEventEx___CargoGroup[transport_id], u)
 
-        set UnitEventEx__Transporter[(GetUnitUserData((u)))]=null // INLINED!!
-        call UnitEventEx__FireEvent(EVENT_ON_CARGO_UNLOAD , u , transport)
+        set UnitEventEx___Transporter[(GetUnitUserData((u)))]=null // INLINED!!
+        call UnitEventEx___FireEvent(EVENT_ON_CARGO_UNLOAD , u , transport)
     endfunction
     
-    function s__UnitEventEx__Cargo_add takes unit u,unit transport returns nothing
+    function s__UnitEventEx___Cargo_add takes unit u,unit transport returns nothing
         local integer transport_id= (GetUnitUserData((transport))) // INLINED!!
 
 
 
-            call GroupAddUnit(UnitEventEx__CargoGroup[transport_id], u)
+            call GroupAddUnit(UnitEventEx___CargoGroup[transport_id], u)
 
-        set UnitEventEx__Transporter[(GetUnitUserData((u)))]=transport // INLINED!!
-        call UnitEventEx__FireEvent(EVENT_ON_CARGO_LOAD , u , transport)
+        set UnitEventEx___Transporter[(GetUnitUserData((u)))]=transport // INLINED!!
+        call UnitEventEx___FireEvent(EVENT_ON_CARGO_LOAD , u , transport)
     endfunction
     
-    function s__UnitEventEx__Cargo_size takes integer transport_id returns integer
+    function s__UnitEventEx___Cargo_size takes integer transport_id returns integer
 
 
 
-            return CountUnitsInGroup(UnitEventEx__CargoGroup[transport_id])
+            return CountUnitsInGroup(UnitEventEx___CargoGroup[transport_id])
 
     endfunction
     
-    function s__UnitEventEx__Cargo_exists takes integer transport_id returns boolean
+    function s__UnitEventEx___Cargo_exists takes integer transport_id returns boolean
 
 
 
-            return ( UnitEventEx__CargoGroup[transport_id] != null )
+            return ( UnitEventEx___CargoGroup[transport_id] != null )
 
     endfunction
-    function s__UnitEventEx__Cargo_copyGroup takes integer transport_id returns group
+    function s__UnitEventEx___Cargo_copyGroup takes integer transport_id returns group
         local group g= CreateGroup()
 
 
@@ -4243,7 +4241,7 @@ endfunction
 
 
             //call BlzGroupAddGroupFast(g, )
-            call GroupAddGroup(UnitEventEx__CargoGroup[transport_id], g)
+            call GroupAddGroup(UnitEventEx___CargoGroup[transport_id], g)
 
         return g
     endfunction
@@ -4260,33 +4258,33 @@ endfunction
 
 
     
-    function s__UnitEventEx__Cargo_create takes integer transport_id returns integer
+    function s__UnitEventEx___Cargo_create takes integer transport_id returns integer
 
 
 
-            set UnitEventEx__CargoGroup[transport_id]=CreateGroup()
+            set UnitEventEx___CargoGroup[transport_id]=CreateGroup()
 
         return 0
     endfunction
     
 // these functions are here so that they don't call functions below them.
 function GetEventUnit takes nothing returns unit
-    return UnitEventEx__eventUnit
+    return UnitEventEx___eventUnit
 endfunction
 function GetCargoUnit takes nothing returns unit
-    return UnitEventEx__eventOther
+    return UnitEventEx___eventOther
 endfunction
 function GetCargoSize takes unit transport returns integer
-    return (CountUnitsInGroup(UnitEventEx__CargoGroup[((GetUnitUserData((transport))))])) // INLINED!!
+    return (CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData((transport))))])) // INLINED!!
 endfunction
 function IsUnitInTransporter takes unit whichUnit returns boolean
-    return UnitEventEx__Transporter[(GetUnitUserData((whichUnit)))] != null // INLINED!!
+    return UnitEventEx___Transporter[(GetUnitUserData((whichUnit)))] != null // INLINED!!
 endfunction
 function GetUnitTransporter takes unit whichUnit returns unit
-    return UnitEventEx__Transporter[(GetUnitUserData((whichUnit)))] // INLINED!!
+    return UnitEventEx___Transporter[(GetUnitUserData((whichUnit)))] // INLINED!!
 endfunction
 function GetCargoTransportedUnitGroup takes unit transporter returns group
-    return s__UnitEventEx__Cargo_copyGroup((GetUnitUserData((transporter)))) // INLINED!!
+    return s__UnitEventEx___Cargo_copyGroup((GetUnitUserData((transporter)))) // INLINED!!
 endfunction
 
 
@@ -4294,26 +4292,26 @@ endfunction
 
 
 
-//Implemented from module UnitEventEx__UnitEventExCore:
+//Implemented from module UnitEventEx___UnitEventExCore:
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___afterIndex takes nothing returns nothing
-        local integer i= UnitEventEx__Stack
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___afterIndex takes nothing returns nothing
+        local integer i= UnitEventEx___Stack
         local integer id
         local unit u
         
         loop
             exitwhen i < 0
-            set u=UnitEventEx__IndexedUnit[i]
+            set u=UnitEventEx___IndexedUnit[i]
             set id=(GetUnitUserData((u))) // INLINED!!
             
-            if UnitEventEx__IsNew[id] then
-                set UnitEventEx__IsNew[id]=false
+            if UnitEventEx___IsNew[id] then
+                set UnitEventEx___IsNew[id]=false
 
 
 
                 
-            elseif UnitEventEx__IsTransforming[id] then
+            elseif UnitEventEx___IsTransforming[id] then
                 
 
 
@@ -4323,48 +4321,48 @@ endfunction
 
 
                 
-            elseif UnitEventEx__IsAlive[id] then
+            elseif UnitEventEx___IsAlive[id] then
             
 
-                    set UnitEventEx__IsReincarnating[id]=true
-                    set UnitEventEx__IsAlive[id]=false
-                    call UnitEventEx__FireEvent(EVENT_ON_REINCARNATION_START , u , null)
+                    set UnitEventEx___IsReincarnating[id]=true
+                    set UnitEventEx___IsAlive[id]=false
+                    call UnitEventEx___FireEvent(EVENT_ON_REINCARNATION_START , u , null)
 
                 
             endif
             
-            set UnitEventEx__IndexedUnit[i]=null
+            set UnitEventEx___IndexedUnit[i]=null
             set i=i - 1
         endloop
-        set UnitEventEx__Stack=- 1
+        set UnitEventEx___Stack=- 1
             
         set u=null
     endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___timerCheck takes unit u returns nothing
-        set UnitEventEx__Stack=UnitEventEx__Stack + 1
-        set UnitEventEx__IndexedUnit[UnitEventEx__Stack]=u
-        call TimerStart(UnitEventEx__AfterIndexTimer, 0., false, function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___afterIndex)
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___timerCheck takes unit u returns nothing
+        set UnitEventEx___Stack=UnitEventEx___Stack + 1
+        set UnitEventEx___IndexedUnit[UnitEventEx___Stack]=u
+        call TimerStart(UnitEventEx___AfterIndexTimer, 0., false, function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___afterIndex)
     endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___unload takes unit u returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___unload takes unit u returns nothing
         local integer id= (GetUnitUserData((u))) // INLINED!!
-        local integer cargo_id= (GetUnitUserData((UnitEventEx__CargoUnit[id]))) // INLINED!!
+        local integer cargo_id= (GetUnitUserData((UnitEventEx___CargoUnit[id]))) // INLINED!!
         
-        call s__UnitEventEx__Cargo_remove(u , UnitEventEx__CargoUnit[id])
+        call s__UnitEventEx___Cargo_remove(u , UnitEventEx___CargoUnit[id])
         
-        if not IsUnitLoaded(u) or not UnitAlive(UnitEventEx__CargoUnit[id]) then
-            set UnitEventEx__CargoUnit[id]=null
+        if not IsUnitLoaded(u) or not UnitAlive(UnitEventEx___CargoUnit[id]) then
+            set UnitEventEx___CargoUnit[id]=null
         endif
     endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onOrder takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onOrder takes nothing returns nothing
         local unit u= GetTriggerUnit()
         local integer id= (GetUnitUserData((u))) // INLINED!!
         
@@ -4381,8 +4379,8 @@ endfunction
                 if GetIssuedOrderId() == 851972 then // order stop
                     
                     // This does not detect unloaded corpses.
-                    if UnitEventEx__CargoUnit[id] != null and not IsUnitLoaded(u) or UnitAlive(u) then
-                        call s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___unload(u)
+                    if UnitEventEx___CargoUnit[id] != null and not IsUnitLoaded(u) or UnitAlive(u) then
+                        call s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___unload(u)
                     endif
                     
                     set u=null
@@ -4465,19 +4463,19 @@ endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onDeath takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onDeath takes nothing returns nothing
         local unit u= GetTriggerUnit()
         local integer id= (GetUnitUserData((u))) // INLINED!!
         
         // This checks if the unit has been indexed.
         if id > 0 then
-            set UnitEventEx__IsAlive[id]=false
+            set UnitEventEx___IsAlive[id]=false
         endif
         
 
-            if UnitEventEx__CargoUnit[id] != null then
-                call UnitEventEx__FireEvent(EVENT_ON_CARGO_UNLOAD , u , UnitEventEx__CargoUnit[id])
-                set UnitEventEx__CargoUnit[id]=null
+            if UnitEventEx___CargoUnit[id] != null then
+                call UnitEventEx___FireEvent(EVENT_ON_CARGO_UNLOAD , u , UnitEventEx___CargoUnit[id])
+                set UnitEventEx___CargoUnit[id]=null
             endif
 
         
@@ -4486,14 +4484,14 @@ endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onLoad takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onLoad takes nothing returns nothing
         local unit u= GetTriggerUnit()
         local integer id= (GetUnitUserData((u))) // INLINED!!
         local integer cargo_id
         
         // if unit somehow loaded into a transport while being inside another, unload it
-        if UnitEventEx__CargoUnit[id] != null then
-            call s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___unload(u)
+        if UnitEventEx___CargoUnit[id] != null then
+            call s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___unload(u)
         endif
         
 
@@ -4506,36 +4504,36 @@ endfunction
                     call SetUnitX(u, s__WorldBounds_maxX)
                     call SetUnitY(u, s__WorldBounds_maxY)
                 else
-                    call SetUnitX(u, UnitEventEx__MaxX)
-                    call SetUnitY(u, UnitEventEx__MaxY)
+                    call SetUnitX(u, UnitEventEx___MaxX)
+                    call SetUnitY(u, UnitEventEx___MaxY)
                 endif
             endif
 
         
-        set UnitEventEx__CargoUnit[id]=GetTransportUnit()
-        set cargo_id=(GetUnitUserData((UnitEventEx__CargoUnit[id]))) // INLINED!!
+        set UnitEventEx___CargoUnit[id]=GetTransportUnit()
+        set cargo_id=(GetUnitUserData((UnitEventEx___CargoUnit[id]))) // INLINED!!
         
-        if not (UnitEventEx__CargoGroup[(cargo_id)] != null) then // INLINED!!
-            call s__UnitEventEx__Cargo_create(cargo_id)
+        if not (UnitEventEx___CargoGroup[(cargo_id)] != null) then // INLINED!!
+            call s__UnitEventEx___Cargo_create(cargo_id)
         endif
-        call s__UnitEventEx__Cargo_add(u , UnitEventEx__CargoUnit[id])
+        call s__UnitEventEx___Cargo_add(u , UnitEventEx___CargoUnit[id])
         
         set u=null
     endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onEnter takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onEnter takes nothing returns nothing
         local unit u= GetFilterUnit()
         local integer id= (GetUnitUserData((u))) // INLINED!!
-        local integer cargo_id= (GetUnitUserData((UnitEventEx__CargoUnit[id]))) // INLINED!!
+        local integer cargo_id= (GetUnitUserData((UnitEventEx___CargoUnit[id]))) // INLINED!!
         
             // onEnter occurs AFTER onIndex
             
         // The unit was dead, but has re-entered the map. Used to detect when a Meat Wagon unloads a corpse.
         if id > 0 then
-            if not IsUnitLoaded(u) and UnitEventEx__CargoUnit[id] != null then
-                call s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___unload(u)
+            if not IsUnitLoaded(u) and UnitEventEx___CargoUnit[id] != null then
+                call s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___unload(u)
             endif
         endif
         
@@ -4544,13 +4542,13 @@ endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onIndex takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onIndex takes nothing returns nothing
         local unit u= (s__UnitDex_Unit[s__UnitDex_LastIndex]) // INLINED!!
         local integer id= (GetUnitUserData((u))) // INLINED!!
         
             // onIndex occurs BEFORE onEnter
         
-        set UnitEventEx__IsNew[id]=true
+        set UnitEventEx___IsNew[id]=true
         
 
 
@@ -4563,32 +4561,32 @@ endfunction
 
         
         if UnitAlive(u) then
-            set UnitEventEx__IsAlive[id]=true
+            set UnitEventEx___IsAlive[id]=true
         else
-            set UnitEventEx__IsAlive[id]=false
+            set UnitEventEx___IsAlive[id]=false
         endif
         
         // This is called here so as to set the variable IsNew[] to false after 0. seconds.
-        call s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___timerCheck(u)
+        call s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___timerCheck(u)
         
         set u=null
     endfunction
     
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onDeindex takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onDeindex takes nothing returns nothing
         local unit u= (s__UnitDex_Unit[s__UnitDex_LastIndex]) // INLINED!!
         local integer id= (GetUnitUserData((u))) // INLINED!!
         
-        if (UnitEventEx__CargoGroup[(id)] != null) then // INLINED!!
-            call DestroyGroup(UnitEventEx__CargoGroup[(id)]) // INLINED!!
+        if (UnitEventEx___CargoGroup[(id)] != null) then // INLINED!!
+            call DestroyGroup(UnitEventEx___CargoGroup[(id)]) // INLINED!!
         endif
         
         set u=null
     endfunction
     
     
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onInit takes nothing returns nothing
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onInit takes nothing returns nothing
         local integer i
         
 
@@ -4609,8 +4607,8 @@ endfunction
         set EVENT_ON_REINCARNATION_FINISH=CreateNativeEvent()
         set EVENT_ON_UNIT_CREATED=CreateNativeEvent()
         
-        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_ORDER , function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onOrder)
-        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onDeath)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_ORDER , function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onOrder)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onDeath)
         
 
             
@@ -4623,16 +4621,16 @@ endfunction
 
 
 
-                    call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, Condition(function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onEnter))
+                    call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, Condition(function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onEnter))
 
-                call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_LOADED , function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onLoad)
+                call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_LOADED , function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onLoad)
             
 
-            call RegisterUnitIndexEvent(Condition(function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onDeindex) , EVENT_UNIT_DEINDEX)
+            call RegisterUnitIndexEvent(Condition(function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onDeindex) , EVENT_UNIT_DEINDEX)
             
 
         
-        call RegisterUnitIndexEvent(Condition(function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onIndex) , EVENT_UNIT_INDEX)
+        call RegisterUnitIndexEvent(Condition(function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onIndex) , EVENT_UNIT_INDEX)
         
 
 
@@ -4644,15 +4642,15 @@ endfunction
 
         
         // see resurrectionTimer below.
-        call TimerStart(CreateTimer(), 0., false, function sc__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer)
+        call TimerStart(CreateTimer(), 0., false, function sc__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer)
         
     endfunction
     
     // for some reason dummy recyclers creating dummies to store fires off a resurrection event, so
     // this boolean rezCheck is set to false after a 0. second timer to prevent this from happening.
     // rezCheck must be false for a resurrection event to happen.
-    function s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer takes nothing returns nothing
-        set UnitEventEx__rezCheck=false
+    function s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer takes nothing returns nothing
+        set UnitEventEx___rezCheck=false
         call DestroyTimer(GetExpiredTimer())
     endfunction
     
@@ -4862,7 +4860,7 @@ function ResourcesChatCommands___TriggerConditionChat takes nothing returns bool
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ResourcesChatCommands_INFO_DURATION, s__AFormat_result(s__AFormat_i((s__AFormat_create((GetLocalizedString("SOLD_ALL_FOR_GOLD")))),SellAllNonStandardResourcesForGold(GetTriggerPlayer())))) // INLINED!!
     elseif ( ResourcesChatCommands_ALLOW_SELL_WOOD and ( msg == "-sellwood" or msg == "-sw" ) ) then
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ResourcesChatCommands_INFO_DURATION, s__AFormat_result(s__AFormat_i((s__AFormat_create((GetLocalizedString("SOLD_ALL_LUMBER_FOR_GOLD")))),SellAllLumberForGold(GetTriggerPlayer())))) // INLINED!!
-    elseif ( ResourcesChatCommands_ALLOW_SELL and msg == "-sell" ) then
+    elseif ( ResourcesChatCommands_ALLOW_SELL and StringStartsWith(msg , "-sell") ) then
         call ResourcesChatCommands___SellChatCommand(GetTriggerPlayer() , msg)
     elseif ( ResourcesChatCommands_ALLOW_BUY and StringStartsWith(msg , "-buy") ) then
         call ResourcesChatCommands___BuyChatCommand(GetTriggerPlayer() , msg)
@@ -4886,14 +4884,6 @@ endfunction
 
 
 
-
-function ResourcesCosts___Index2D takes integer Value1,integer Value2,integer MaxValue2 returns integer
-    return ( ( Value1 * MaxValue2 ) + Value2 )
-endfunction
-
-function ResourcesCosts___Index3D takes integer Value1,integer Value2,integer Value3,integer MaxValue2,integer MaxValue3 returns integer
-    return ( ( Value1 * ( MaxValue2 * MaxValue3 ) ) + ( Value2 * MaxValue3 ) + Value3 )
-endfunction
 
 function ResourcesCosts___GetAlliesWithSharedControl takes player owner returns force
     local force allies= CreateForce()
@@ -4938,62 +4928,62 @@ function ResourcesCosts___SimErrorForAllies takes player whichPlayer,string msg 
 endfunction
 
 function SetObjectTypeResourcesCostsIsResearch takes integer objectTypeId,boolean hasLevels returns nothing
-    call SaveBoolean(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
+    call SaveBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
 endfunction
 
 function GetObjectTypeResourcesCostsIsResearch takes integer objectTypeId returns boolean
-    return LoadBoolean(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeResourcesCostsIsAbility takes integer objectTypeId,boolean hasLevels returns nothing
-    call SaveBoolean(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
+    call SaveBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
 endfunction
 
 function GetObjectTypeResourcesCostsIsAbility takes integer objectTypeId returns boolean
-    return LoadBoolean(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeResourcesCostsHasCosts takes integer objectTypeId,boolean hasCosts returns nothing
-    call SaveBoolean(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasCosts)
+    call SaveBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasCosts)
 endfunction
 
 function GetObjectTypeResourcesCostsHasCosts takes integer objectTypeId returns boolean
-    return LoadBoolean(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeGoldValue takes integer objectTypeId,integer value returns nothing
-    call SaveInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
+    call SaveInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
 endfunction
 
 function GetObjectTypeGoldValue takes integer objectTypeId returns integer
-    return LoadInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function HasObjectTypeGoldValue takes integer objectTypeId returns boolean
-    return HaveSavedInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return HaveSavedInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeLumberValue takes integer objectTypeId,integer value returns nothing
-    call SaveInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
+    call SaveInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
 endfunction
 
 function GetObjectTypeLumberValue takes integer objectTypeId returns integer
-    return LoadInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function HasObjectTypeLumberValue takes integer objectTypeId returns boolean
-    return HaveSavedInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return HaveSavedInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeLevelResourcesCostsForPlayer takes player whichPlayer,integer objectTypeId,integer level,integer resource,integer amount returns nothing
     if ( amount > 0 ) then
         call SetObjectTypeResourcesCostsHasCosts(objectTypeId , true)
     endif
-    call SaveInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), amount)
+    call SaveInteger(ResourcesCosts___h, objectTypeId, Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), amount)
 endfunction
 
 function GetObjectTypeLevelResourcesCostsForPlayer takes player whichPlayer,integer objectTypeId,integer level,integer resource returns integer
-    return LoadInteger(ResourcesCosts___h, objectTypeId, ResourcesCosts___Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadInteger(ResourcesCosts___h, objectTypeId, Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetResearchCostsForLevel takes integer objectTypeId,integer level,integer resource,integer amount returns nothing
@@ -5058,26 +5048,26 @@ function RemoveObjectTypeResourcesCosts takes integer objectTypeId returns nothi
 endfunction
 
 function SetNotEnoughResourcesSound takes player whichPlayer,integer resource,sound whichSound returns nothing
-    set ResourcesCosts___playerSoundNotEnough[ResourcesCosts___Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
+    set ResourcesCosts___playerSoundNotEnough[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
 endfunction
 
 function GetNotEnoughResourcesSound takes player whichPlayer,integer resource returns sound
-    return ResourcesCosts___playerSoundNotEnough[ResourcesCosts___Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesCosts___playerSoundNotEnough[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function SetNotEnoughResourcesSoundForAllPlayers takes integer resource,sound whichSound returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesCosts___playerSoundNotEnough[ResourcesCosts___Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
+        set ResourcesCosts___playerSoundNotEnough[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
         set i=i + 1
     endloop
 endfunction
 
 function ResourcesCosts___GetLevel takes player whichPlayer,unit worker,integer objectTypeId returns integer
-    if ( (LoadBoolean(ResourcesCosts___h, (objectTypeId), ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
+    if ( (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
         return GetPlayerTechCountSimple(objectTypeId, whichPlayer)
-    elseif ( (LoadBoolean(ResourcesCosts___h, (objectTypeId), ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
+    elseif ( (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
         return GetUnitAbilityLevel(worker, objectTypeId)
     endif
     return 0
@@ -5087,7 +5077,7 @@ function CheckResourceCosts takes player whichPlayer,unit worker,integer objectT
     local integer resource= 0
     local integer cost= 0
     local boolean enough= true
-    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
+    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
     local integer level= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer i= 0
@@ -5101,7 +5091,7 @@ function CheckResourceCosts takes player whichPlayer,unit worker,integer objectT
             set cost=GetObjectTypeLevelResourcesCostsForPlayer(whichPlayer , objectTypeId , level , resource)
             if ( cost > GetPlayerResource(whichPlayer , resource) ) then
                 if ( showError ) then
-                    call ResourcesCosts___SimErrorForAllies(whichPlayer , "Not enough " + (s__Resource_name[(resource)]) + ".") // INLINED!!
+                    call ResourcesCosts___SimErrorForAllies(whichPlayer , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("NOT_ENOUGH_X")))),(s__Resource_name[(resource)])))) // INLINED!!
                     if ( GetNotEnoughResourcesSound(whichPlayer , resource) != null ) then
                         call ResourcesCosts___StartSoundForAllies(whichPlayer , GetNotEnoughResourcesSound(whichPlayer , resource))
                     endif
@@ -5116,7 +5106,7 @@ endfunction
 
 function RemoveResourceCosts takes player whichPlayer,unit worker,integer objectTypeId returns nothing
     local integer resource= 0
-    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
+    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
     local integer level= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer i= 0
@@ -5133,7 +5123,7 @@ endfunction
 
 function RefundResourceCosts takes player whichPlayer,unit worker,integer objectTypeId,real factor returns nothing
     local integer resource= 0
-    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), ResourcesCosts___Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
+    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
     local integer cost= 0
     local integer level= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
@@ -5403,13 +5393,12 @@ function ResourcesGui___GetPrimaryResource takes unit mine returns integer
 endfunction
 
 function ResourcesGui___GetResourceGatheredText takes unit worker,integer resource returns string
-    local string text= "|cffffcc00" + (s__Resource_name[(resource)]) + ":|r|n  " + I2S((LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))) + "/" + I2S((LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX)))) // INLINED!!
     if ( GetPlayerResourceBonus(GetOwningPlayer(worker) , resource) > 0 ) then
-        set text=text + "|n|c0000ff00+" + I2S(GetPlayerResourceBonus(GetOwningPlayer(worker) , resource)) + "|r"
+        return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y_BONUS_POSITIVE")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX)))),GetPlayerResourceBonus(GetOwningPlayer(worker) , resource))) // INLINED!!
     elseif ( GetPlayerResourceBonus(GetOwningPlayer(worker) , resource) < 0 ) then
-        set text=text + "|n|c00ff0000-" + I2S(GetPlayerResourceBonus(GetOwningPlayer(worker) , resource)) + "|r"
+        return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y_BONUS_NEGATIVE")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX)))),GetPlayerResourceBonus(GetOwningPlayer(worker) , resource))) // INLINED!!
     endif
-    return text
+    return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))))) // INLINED!!
 endfunction
 
 function ResourcesGui___UpdateGathered takes player whichPlayer,unit worker returns nothing
@@ -5448,7 +5437,7 @@ endfunction
 
 function ResourcesGui___HasNonEmptyCargo takes unit mine returns boolean
 
-    return (CountUnitsInGroup(UnitEventEx__CargoGroup[((GetUnitUserData(((mine)))))])) > 0 // INLINED!!
+    return (CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData(((mine)))))])) > 0 // INLINED!!
 
 
 
@@ -5465,13 +5454,13 @@ function UpdatePlayerResourceSelectionGui takes player whichPlayer returns nothi
     set ResourcesGui___currentMine[playerId]=GetSingleSelectedUnit(whichPlayer)
     //call BJDebugMsg("Current single selected unit " + GetUnitName(currentMine[playerId]))
     // heroes have no space for the icons
-    if ( IsUnitType(ResourcesGui___currentMine[playerId], UNIT_TYPE_HERO) ) then
+    if ( ResourcesGui___currentMine[playerId] != null and IsUnitType(ResourcesGui___currentMine[playerId], UNIT_TYPE_HERO) ) then
         set ResourcesGui___currentMine[playerId]=null
     endif
     
     // with cargo there is no space for icons
 
-    if ( ResourcesGui___currentMine[playerId] != null and ((CountUnitsInGroup(UnitEventEx__CargoGroup[((GetUnitUserData((((ResourcesGui___currentMine[playerId]))))))])) > 0) ) then // INLINED!!
+    if ( ResourcesGui___currentMine[playerId] != null and ((CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData((((ResourcesGui___currentMine[playerId]))))))])) > 0) ) then // INLINED!!
         set ResourcesGui___currentMine[playerId]=null
     endif
 
@@ -5492,7 +5481,7 @@ function UpdatePlayerResourceSelectionGui takes player whichPlayer returns nothi
                 //call BJDebugMsg("Show mine " + GetUnitName(currentMine[playerId]))
                 if ( GetLocalPlayer() == whichPlayer ) then
                     call BlzFrameSetTexture(ResourcesGui___IconFrame, (s__Resource_iconAtt[(resource)]), 0, true) // INLINED!!
-                    call BlzFrameSetText(ResourcesGui___TextFrame, "|cffffcc00" + (s__Resource_name[(resource)]) + ":|r|n  " + I2S((LoadInteger(Resources___h, GetHandleId((ResourcesGui___currentMine[playerId] )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))))) // INLINED!!
+                    call BlzFrameSetText(ResourcesGui___TextFrame, s__AFormat_result(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((ResourcesGui___currentMine[playerId] )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))))) // INLINED!!
                     //call BJDebugMsg("Icon mine " + GetResourceIcon(resource))
                     //call BJDebugMsg("Text mine " + BlzFrameGetText(TextFrame))
                     call ResourcesGui___SetResourcesUIVisibleAll(true)
@@ -5582,17 +5571,21 @@ function ResourcesGui___TriggerActionReturn takes nothing returns nothing
 endfunction
 
 function ResourcesGui___TriggerActionProgressBarStart takes nothing returns nothing
-    if ( not IsUnitInGroup(GetTriggerUnit(), ResourcesGui___progressBarUnits) ) then
-        call GroupAddUnit(ResourcesGui___progressBarUnits, GetTriggerUnit())
-        call ResourcesGui_StartUpdateTimerForUnits(GetTriggerUnit() , null)
+    local unit u= GetTriggerUnit()
+    if ( not IsUnitInGroup(u, ResourcesGui___progressBarUnits) ) then
+        call GroupAddUnit(ResourcesGui___progressBarUnits, u)
+        call ResourcesGui_StartUpdateTimerForUnits(u , null)
     endif
+    set u=null
 endfunction
 
 function ResourcesGui___TriggerActionProgressBarFinish takes nothing returns nothing
-    if ( IsUnitInGroup(GetTriggerUnit(), ResourcesGui___progressBarUnits) ) then
-        call GroupRemoveUnit(ResourcesGui___progressBarUnits, GetTriggerUnit())
-        call ResourcesGui_StartUpdateTimerForUnits(GetTriggerUnit() , null)
+    local unit u= GetTriggerUnit()
+    if ( IsUnitInGroup(u, ResourcesGui___progressBarUnits) ) then
+        call GroupRemoveUnit(ResourcesGui___progressBarUnits, u)
+        call ResourcesGui_StartUpdateTimerForUnits(u , null)
     endif
+    set u=null
 endfunction
 
 function ResourcesGui___Init takes nothing returns nothing
@@ -5703,7 +5696,7 @@ function ResumeHarvestTimer takes nothing returns nothing
 endfunction
 
 function ResourcesLoadedMines___GetFirstWorkerInLoadedMine takes unit mine returns unit
-    local group cargo= (s__UnitEventEx__Cargo_copyGroup((GetUnitUserData(((mine)))))) // INLINED!!
+    local group cargo= (s__UnitEventEx___Cargo_copyGroup((GetUnitUserData(((mine)))))) // INLINED!!
     local unit first= FirstOfGroup(cargo)
     call GroupClear(cargo)
     call DestroyGroup(cargo)
@@ -5737,7 +5730,7 @@ function ResourcesLoadedMines___ForGroupHarvest takes nothing returns nothing
     local integer cargoSize= 0
     local integer amount= 0
     if ( not IsUnitPaused(mine) ) then
-        set cargoSize=(CountUnitsInGroup(UnitEventEx__CargoGroup[((GetUnitUserData(((mine)))))])) // INLINED!!
+        set cargoSize=(CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData(((mine)))))])) // INLINED!!
         if ( cargoSize > 0 ) then
             set amount=cargoSize * (LoadInteger(ResourcesLoadedMines___h, GetHandleId((mine)), Index2D(0 , ResourcesLoadedMines___KEY_HARVEST_BONUS_PER_WORKER , ResourcesLoadedMines___MAX_KEYS))) // INLINED!!
             if ( amount > 0 ) then
@@ -5770,7 +5763,7 @@ function ResourcesLoadedMines___TriggerConditionOrder takes nothing returns bool
     local unit mine= GetTriggerUnit()
     if ( orderId == ResourcesLoadedMines_ORDER_ID_LOAD and mine != null and (IsUnitInGroup((mine), ResourcesLoadedMines___mines)) and not (LoadBoolean(ResourcesLoadedMines___h, GetHandleId((mine )), Index2D(( GetUnitTypeId(worker)) , ResourcesLoadedMines___KEY_ALLOWED_WORKER_UNIT_TYPE_ID , ResourcesLoadedMines___MAX_KEYS))) ) then // INLINED!!
         call IssueImmediateOrder(worker, "stop")
-        call SimError(GetOwningPlayer(worker) , GetLocalizedString("NOT_ALLOWED_TO_HARVEST"))
+        call SimError(GetOwningPlayer(worker) , s__AFormat_result(s__AFormat_s(s__AFormat_s((s__AFormat_create((GetLocalizedString("CANNOT_HARVEST")))),GetUnitName(worker)),GetUnitName(mine)))) // INLINED!!
     endif
     set worker=null
     set mine=null
@@ -5951,7 +5944,7 @@ function CreateTeamResourceMultiboards takes player whichPlayer returns multiboa
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer columns= max
     local integer rows= ResourcesTeamMultiboardGui___CountAlliesWithSharedControl(whichPlayer)
-    local multiboard mb= CreateMultiboardBJ(columns, rows, "Team Resources")
+    local multiboard mb= CreateMultiboardBJ(columns, rows, GetLocalizedString("TEAM_RESOURCES"))
     call MultiboardSetTitleTextColor(mb, 240, 240, 16, 0)
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
@@ -6040,14 +6033,9 @@ function ResourcesTeamMultiboardGui___StartTeamResourceMultiboardsUpdates takes 
     call TimerStart(ResourcesTeamMultiboardGui___t, ResourcesTeamMultiboardGui_TIMER_INTERVAL, true, function UpdateAllTeamResourceMultiboards)
 endfunction
 
-function ResourcesTeamMultiboardGui___TimerFunctionRecreateInitial takes nothing returns nothing
-    local timer l__ResourcesTeamMultiboardGui___t= GetExpiredTimer()
+function ResourcesTeamMultiboardGui___StartGame takes nothing returns nothing
     call RecreateTeamResourceMultiboards()
     call UpdateAllTeamResourceMultiboards()
-    
-    call PauseTimer(l__ResourcesTeamMultiboardGui___t)
-    call DestroyTimer(l__ResourcesTeamMultiboardGui___t)
-    set l__ResourcesTeamMultiboardGui___t=null
 endfunction
 
 function ResourcesTeamMultiboardGui___TriggerConditionAllianceChange takes nothing returns boolean
@@ -6065,7 +6053,7 @@ function ResourcesTeamMultiboardGui___Init takes nothing returns nothing
     endloop
     call TriggerAddCondition(ResourcesTeamMultiboardGui___allianceChangeTrigger, Condition(function ResourcesTeamMultiboardGui___TriggerConditionAllianceChange))
     call TimerStart(ResourcesTeamMultiboardGui___t, ResourcesTeamMultiboardGui_TIMER_INTERVAL, true, function UpdateAllTeamResourceMultiboards) // INLINED!!
-    call TimerStart(CreateTimer(), 0.0, false, function ResourcesTeamMultiboardGui___TimerFunctionRecreateInitial)
+    call TriggerAddAction(OnStartGame___startGameTrigger, (function ResourcesTeamMultiboardGui___StartGame)) // INLINED!!
 endfunction
 
 
@@ -6368,23 +6356,23 @@ function InitResources takes nothing returns nothing
     call SetNotEnoughResourcesSoundForAllPlayers(Oil , gg_snd_GruntNoOil1)
     set ResourcesWarnings___resourceLowValue[(Oil )]=( 1500) // INLINED!!
     call SetLowResourcesSoundForAllPlayers(Oil , gg_snd_GruntOilPlatformLow1)
-    call SetLowResourcesMessageForAllPlayers(Oil , "A Oil Platform is running low.")
+    call SetLowResourcesMessageForAllPlayers(Oil , GetLocalizedString("LOW_OIL"))
     call SetCollapsedResourcesSoundForAllPlayers(Oil , gg_snd_GruntOilPlatformCollapsed1)
-    call SetCollapsedResourcesMessageForAllPlayers(Oil , "A Oil Platform has collapsed.")
+    call SetCollapsedResourcesMessageForAllPlayers(Oil , GetLocalizedString("COLLAPESD_OIL"))
     
     call SetNotEnoughResourcesSoundForAllPlayers(Rock , gg_snd_GruntNoRock1)
     set ResourcesWarnings___resourceLowValue[(Rock )]=( 1500) // INLINED!!
     call SetLowResourcesSoundForAllPlayers(Rock , gg_snd_GruntRockMineLow1)
-    call SetLowResourcesMessageForAllPlayers(Rock , "A Rock Mine is running low.")
+    call SetLowResourcesMessageForAllPlayers(Rock , GetLocalizedString("LOW_ROCK"))
     call SetCollapsedResourcesSoundForAllPlayers(Rock , gg_snd_GruntRockMineCollapsed1)
-    call SetCollapsedResourcesMessageForAllPlayers(Rock , "A Rock Mine is collapsed.")
+    call SetCollapsedResourcesMessageForAllPlayers(Rock , GetLocalizedString("COLLAPSED_ROCK"))
     
     call SetNotEnoughResourcesSoundForAllPlayers(Wheat , gg_snd_GruntNoWheat1)
     set ResourcesWarnings___resourceLowValue[(Wheat )]=( 1500) // INLINED!!
     call SetLowResourcesSoundForAllPlayers(Wheat , gg_snd_GruntWheatFieldLow1)
-    call SetLowResourcesMessageForAllPlayers(Wheat , "A Wheat Field is almost empty.")
+    call SetLowResourcesMessageForAllPlayers(Wheat , GetLocalizedString("LOW_WHEAT"))
     call SetCollapsedResourcesSoundForAllPlayers(Wheat , gg_snd_GruntWheatFieldCollapsed1)
-    call SetCollapsedResourcesMessageForAllPlayers(Wheat , "A Wheat Field is empty.")
+    call SetCollapsedResourcesMessageForAllPlayers(Wheat , GetLocalizedString("COLLAPSED_WHEAT"))
     
     // costs
     call SetObjectTypeResourcesCosts(('ogru' ) , ( Wheat ) , ( 150)) // INLINED!!
@@ -6478,6 +6466,14 @@ endfunction
 
 function Sell100Wheat takes player whichPlayer returns nothing
     call ExchangePlayerResource(whichPlayer , Wheat , Resources_GOLD , 100)
+endfunction
+
+function Buy100Ore takes player whichPlayer returns nothing
+    call AddPlayerResource(whichPlayer , Ore , 100)
+endfunction
+
+function Sell100Ore takes player whichPlayer returns nothing
+    call ExchangePlayerResource(whichPlayer , Ore , Resources_GOLD , 100)
 endfunction
 
 function AddOilTanker takes unit worker returns nothing
@@ -7597,6 +7593,52 @@ function InitTrig_Sell_100_Wheat takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Buy 100 Ore
+//===========================================================================
+function Trig_Buy_100_Ore_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'h006' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Buy_100_Ore_Actions takes nothing returns nothing
+    call h__RemoveUnit(GetSoldUnit())
+    call AddPlayerResource((GetOwningPlayer(GetBuyingUnit())) , Ore , 100) // INLINED!!
+endfunction
+
+//===========================================================================
+function InitTrig_Buy_100_Ore takes nothing returns nothing
+    set gg_trg_Buy_100_Ore=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Buy_100_Ore, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(gg_trg_Buy_100_Ore, Condition(function Trig_Buy_100_Ore_Conditions))
+    call TriggerAddAction(gg_trg_Buy_100_Ore, function Trig_Buy_100_Ore_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Sell 100 Ore
+//===========================================================================
+function Trig_Sell_100_Ore_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'h007' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Sell_100_Ore_Actions takes nothing returns nothing
+    call h__RemoveUnit(GetSoldUnit())
+    call ExchangePlayerResource((GetOwningPlayer(GetBuyingUnit())) , Ore , Resources_GOLD , 100) // INLINED!!
+endfunction
+
+//===========================================================================
+function InitTrig_Sell_100_Ore takes nothing returns nothing
+    set gg_trg_Sell_100_Ore=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Sell_100_Ore, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(gg_trg_Sell_100_Ore, Condition(function Trig_Sell_100_Ore_Conditions))
+    call TriggerAddAction(gg_trg_Sell_100_Ore, function Trig_Sell_100_Ore_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Initialization
 //===========================================================================
 function Trig_Initialization_Actions takes nothing returns nothing
@@ -7888,6 +7930,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Sell_100_Rock()
     call InitTrig_Buy_100_Wheat()
     call InitTrig_Sell_100_Wheat()
+    call InitTrig_Buy_100_Ore()
+    call InitTrig_Sell_100_Ore()
     call InitTrig_Initialization()
     call InitTrig_Melee_Initialization()
     call InitTrig_Game_Start()
@@ -8012,7 +8056,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs188066843")
+call ExecuteFunc("jasshelper__initstructs245401250")
 call ExecuteFunc("FrameLoader___init_function")
 call ExecuteFunc("OnStartGame___Init")
 call ExecuteFunc("SimError___init")
@@ -8058,9 +8102,9 @@ endfunction
 
 
 //Struct method generated initializers/callers:
-function sa__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer takes nothing returns boolean
+function sa__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer takes nothing returns boolean
 
-        set UnitEventEx__rezCheck=false
+        set UnitEventEx___rezCheck=false
         call DestroyTimer(GetExpiredTimer())
    return true
 endfunction
@@ -8073,9 +8117,9 @@ function sa___prototype51_ResourcesGui___RemoveUnitHook takes nothing returns bo
     return true
 endfunction
 
-function jasshelper__initstructs188066843 takes nothing returns nothing
-    set st__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer=CreateTrigger()
-    call TriggerAddCondition(st__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer,Condition( function sa__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___resurrectionTimer))
+function jasshelper__initstructs245401250 takes nothing returns nothing
+    set st__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer=CreateTrigger()
+    call TriggerAddCondition(st__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer,Condition( function sa__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer))
     set st___prototype51[1]=CreateTrigger()
     call TriggerAddAction(st___prototype51[1],function sa___prototype51_Resources___RemoveUnitHook)
     call TriggerAddCondition(st___prototype51[1],Condition(function sa___prototype51_Resources___RemoveUnitHook))
@@ -8083,19 +8127,19 @@ function jasshelper__initstructs188066843 takes nothing returns nothing
     call TriggerAddAction(st___prototype51[2],function sa___prototype51_ResourcesGui___RemoveUnitHook)
     call TriggerAddCondition(st___prototype51[2],Condition(function sa___prototype51_ResourcesGui___RemoveUnitHook))
 
-call ExecuteFunc("s__RegisterNativeEvent__NativeEvent_RegisterNativeEvent__NativeEventInit___onInit")
+call ExecuteFunc("s__RegisterNativeEvent___NativeEvent_RegisterNativeEvent___NativeEventInit___onInit")
 
-call ExecuteFunc("s__WorldBounds_WorldBounds__WorldBoundInit___onInit")
-
-
-call ExecuteFunc("s__UnitDex_UnitDex__UnitDexCore___onInit")
+call ExecuteFunc("s__WorldBounds_WorldBounds___WorldBoundInit___onInit")
 
 
+call ExecuteFunc("s__UnitDex_UnitDex___UnitDexCore___onInit")
 
 
 
 
-call ExecuteFunc("s__UnitEventEx__UnitEventEx_UnitEventEx__UnitEventExCore___onInit")
+
+
+call ExecuteFunc("s__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___onInit")
 
 endfunction
 
