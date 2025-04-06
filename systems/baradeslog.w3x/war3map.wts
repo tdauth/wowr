@@ -1,0 +1,117 @@
+﻿STRING 1
+{
+Baradé's Log 1.0
+}
+
+STRING 2
+{
+1-2
+}
+
+STRING 3
+{
+Buy units and items on multiple pages.
+}
+
+STRING 4
+{
+Baradé
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 8
+{
+Player 2
+}
+
+STRING 11
+{
+Baradé's Log 1.0
+}
+
+STRING 16
+{
+|cff808080Drop item on shop to sell|NDouble right click item to unstack|R
+}
+
+STRING 37
+{
+- Enter "-l" or "-log" in the chat to see the log.
+}
+
+STRING 60
+{
+All players!
+}
+
+STRING 61
+{
+All players timed!
+
+After empty line.
+}
+
+STRING 62
+{
+Player |cffff0000Red|r!
+}
+
+STRING 63
+{
+Player |cff0000ffBlue|r!
+}
+
+STRING 64
+{
+All players quest update!
+}
+
+STRING 65
+{
+Paladin
+}
+
+STRING 66
+{
+Paladin All!
+}
+
+STRING 67
+{
+Paladin
+}
+
+STRING 68
+{
+Red Paladin!
+}
+
+STRING 69
+{
+Paladin
+}
+
+STRING 70
+{
+Blue Paladin!
+}
+
+STRING 73
+{
+Archmage
+}
+
+STRING 74
+{
+Archmage!
+}
+
