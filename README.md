@@ -1467,3 +1467,4 @@ Here is a list of some modified versions online:
 * kangyun: [Hots Alexstrasza](https://www.hiveworkshop.com/threads/hots-alexstrasza.329948/)
 * Scias: [BTNAlexstrasza](https://www.hiveworkshop.com/threads/btnalexstrasza.339513/)
 * Elf Knight- (author), Missing Shadowsong (sponsor): [Elune](https://www.hiveworkshop.com/threads/elune.353106/)
+* Blizzard Entertainment, TheKaldorei: [BTNGarrisonArmy](https://www.hiveworkshop.com/threads/btngarrisonarmy.279730/)
