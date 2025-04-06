@@ -68,9 +68,6 @@ StringList {
     BANNED_KICKED_REASON               "%1% wurde aus dem Spiel geworfen, wegen eines Banns mit der Begründung: %2%",
     BAN_LIST_HEADER                    "Bans:\n",
     BAN_LIST_ITEM                      "%1% - %2%",
-    // Camera
-    ONLY_AVAILABLE_IN_SINGLEPLAYER     "Nur im Einzelspieler verfügbar.",
-    RPG_CAMERA_CONTROLS_HINT           "Use the arrow keys to move the camera, press Control and IJKL  to move your hero, select another hero to change the camera.",
     // Attack and Defense Types
     NONE                               "Keiner",
     NORMAL                             "Normal",
@@ -168,7 +165,7 @@ StringList {
     CONVERSION_NOT_ALLOWED             "Umwandlung nicht erlaubt.",
     // Pickpocketing
     HAS_STOLEN_ITEM_FROM_YOUR_UNIT     "%1% has stolen the item %2% from your unit %3%!",
-    STOLE_ITEM_FROM_UNIT               "Stole item %1% from %2%!",
+    STOLE_ITEM_FROM_UNIT               "Gegenstand %1% von %2% gestohlen!",
     // Heroes Tavern
     CUSTOMIZABLE                       "Anpassbar",
     HUMAN_BONUS                        "Menschen Bonus",
@@ -271,7 +268,7 @@ StringList {
     TYRANDE                            "Tyrande",
     MAIEV                              "Maiev",
     SHANDRIS_FEATHERMOON               "Shandris Feathermoon",
-    KEEPER_OF_THE_GROVE_GHOST          "Keeper of the Grove Ghost",
+    KEEPER_OF_THE_GROVE_GHOST          "Hüter des Hains Geist",
     CENARIUS                           "Cenarius",
     ARCHDRUID                          "Erzdruide",
     // Start Locations
@@ -396,6 +393,20 @@ StringList {
     NO_ATTRIBUTE_POINTS_SPENT          "Keine Attributpunkte ausgegeben.",
     ATTRIBUTE_POINTS_MESSAGE           "Attributpunkte: %1%",
     ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribut kann nicht verlernt werden.",
+    ATTRIBUTE_POINTS                   "Attribute Points",
+    ATTRIBUTE_POINTS_DESCRIPTION       "Allow skilling the standard attributes for your hero.",
+    INSTINCT                           "Instinct",
+    INSTINCT_DESCRIPTION               "Increases the hero's sight and movement by 10 per point.",
+    STAMINA                            "Stamina",
+    STAMINO_DESCRIPTION                "Temporarily increases the movement and attack speed of your hero.",
+    LUCK                               "Luck",
+    LUCK_DESCRIPTION                   "Increases the chance for positive events for your hero.",
+    CHARISMA                           "Charisma",
+    CHARISMA_DESCRIPTION               "Increases the chance to persuade other characters for your hero.",
+    MYSTIC                             "Mystic",
+    MYSTIC_DESCRIPTION                 "Increases the hero's magic resistance by 3 and reduces the cooldown by 0.2 seconds per point.",
+    THIEF                              "Thief",
+    THIEF_DESCRIPTION                  "Increases the chance to rob units and to loot chests.",
     // Diplomacy UI
     UNALLIED                           "Nicht Verbündet",
     UNALLIED_VISION                    "Nicht Verbündet Sicht",
@@ -414,6 +425,7 @@ StringList {
     BAG_ADDED_EMPTY                    "Added %1% to backpack bag %2% to empty slot %3%.",
     ORDERED_ITEMS                      "%1% Gegenstände aufgeräumt.",
     DROPPED_ALL_ITEMS_FROM_BACKPACK    "Alle Gegenstände aus dem Rucksack abgelegt (%1%).",
+    INVENTORY_IS_FULL                  "Inventar ist voll.",
     // Items
     PICKUP_ERROR                       "%1% kann nicht eingesammelt werden: %2%",
     BELONGS_TO_RACE                    "%1% gehört zum Volk %2%.",
@@ -482,6 +494,7 @@ StringList {
     PROPERTY                           "Immobilie",
     PAGE_TITLE_UNITS                   "(Einheiten)",
     PAGE_TITLE_BUILDINGS               "(Gebäude)",
+    PURCHASED_PROPERTY_X               "Immobilie %1% erworben.",
     // Mounts
     NO_MOUNTS                          "Keine Reittiere.",
     ADDING_MOUNT                       "Reittier  %1% hinzugefügt",
@@ -570,6 +583,8 @@ StringList {
     KILLED_EVERY_CREEP_TYPE            "Killed every creep type.",
     KILLED_X_ENEMY_HEROES              "Killed %1% enemy heroes.",
     DEFEATED_PLAYER_X                  "Defeated player %1%.",
+    CONSTRUCTED_TOWN_HALLS_IN_X        "Constructed town halls in %1% start locations.",
+    CONSTRUCTED_TOWN_HALL_IN_X_OF_Y    "Constructed another town hall in a start location (%1%/%2%).",
     // Racing Tracks
     RACE_HAS_ENDED                     "Rennen %1% ist zu Ende und die Gewinner sind: %2%",
     RACE_ALREADY_RUNNING               "Rennen läuft bereits: %1%",
@@ -737,6 +752,15 @@ StringList {
     PORTAL                             "Portal",
     PORTAL_TO                          "Portal nach %1%",
     DISABLED_PORTAL                    "Deaktiviertes Portal",
+    PORTAL_IS_DISABLED                 "Portal is disabled.",
+    // Equipment
+    PAGE_TITLE_MISC                    "(Verschiedenes)",
+    PAGE_TITLE_MELEE_WEAPONS           "(Nahkampfwaffen)",
+    PAGE_TITLE_RANGE_WEAPONS           "(Fernkampfwaffen)",
+    PAGE_TITLE_SHIELDS                 "(Schilde)",
+    PAGE_TITLE_ARMORS                  "(Rüstungen)",
+    PAGE_TITLE_HELMETS                 "(Helme)",
+    PAGE_TITLE_BOOTS                   "(Schuhe)",
     // Save Codes
     SAVE_CODES_DISABLED                "Speicher-Codes laden wurde in diesem Spiel deaktiviert!",
     // Item Sets
@@ -779,6 +803,15 @@ StringList {
     DISABLED_TAUNTS                    "Verspottungen deaktiviert.",
     TAUNTS_ENABLED                     "Verspottungen (aktiviert): ",
     TAUNTS_DISABLED                    "Verspottungen (deaktiviert): ",
+    YES_MY_LORD                        "Yes my lord!",
+    WORK_WORK                          "Work work!",
+    THATS_IT_I_AM_DEAD                 "That's it, I am dead!",
+    INTRUGING                          "Intriguing!",
+    FOR_LORDAERON                      "For Lordaeron!",
+    I_SHOULD_HAVE_BEEN_A_FARMER        "I should have been a farmer like my father wanted!",
+    HIPPITY_HOPPITY                    "Hippity Hoppity!",
+    WHO_DARES_TO_DEFILE                "Who dares defile this ancient land?",
+    TREMBLE_MORTALS_AND_DESPAIR        "Tremble mortals and despair, doom has come to this world!",
     // Hero Journey
     HERO_JOURNEY_5                     "5: Fähigkeiten auf Theramore verfügbar.",
     HERO_JOURNEY_10                    "10: Zufällige Ereignisse.",
@@ -811,6 +844,10 @@ StringList {
     // Trading Post
     ENABLED_GOLD_AUTO_EXCHANGE         "Automatischen Goldtausch aktiviert.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Automatischen Goldtausch deaktiviert.",
+    // Votes
+    UNABLE_TO_VOTE                     "Abstimmung unmöglich.",
+    UNABLE_TO_START_VOTE               "Abstimmungsstart unmöglich.",
+    START_VOTE_MESSAGE                 "%1% hat Abstimmung %2% gestartet. Mit '%3%' akzeptieren oder ignorieren.",
     // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
