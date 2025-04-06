@@ -36,6 +36,14 @@ StringList {
     CANNOT_TELEPORT_INTO_THIS_AREA     "Kann nicht in dieses Gebiet teleportieren.",
     CANNOT_JUMP_THERE                  "Kann nicht dorthin springen.",
     UNABLE_TO_WATER_GROUND_HERE        "Boden kann hier nicht bewässert werden.",
+    // war3mapMisc.txt
+    TIER_1_HALL                        "Rathaus Stufe 1",
+    TIER_2_HALL                        "Rathaus Stufe 2",
+    TIER_3_HALL                        "Rathaus Stufe 3",
+    TIER_4_HALL                        "Rathaus Stufe 4",
+    TIER_5_HALL                        "Rathaus Stufe 5",
+    TIER_6_HALL                        "Rathaus Stufe 6",
+    TIER_7_HALL                        "Rathaus Stufe 7",
     // Learnable Skills Shop
     SLOT_X                             "Fach %1%",
     WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
@@ -122,6 +130,8 @@ StringList {
     // Resources
     TARGET_IS_NO_VALID_MINE            "Ziel ist keine gültige Mine.",
     CANNOT_HARVEST                     "%1% kann nicht %2% sammeln.",
+    FOOD                               "Nahrung",
+    FOOD_MAXIMUM                       "Nahrungsmaximum",
     // Resources Chat Commands
     GAVE_RESOURCES_TO                  "Gave %1% of %2% to %3%.",
     RECEIVED_RESOURCES_FROM            "Received %1% of %2% from %3%.",
@@ -139,7 +149,13 @@ StringList {
     AMOUNT                             "Menge",
     INCOME                             "Einkommen",
     GOLD_EXCHANGE_RATE                 "Goldtausch",
-    NOT_ALLOWED_TO_HARVEST             "Sammeln nicht erlaubt.",
+    // Resources Team Multiboard Gui
+    TEAM_RESOURCES                     "Team-Rohstoffe",
+    // Resources Gui
+    RESOURCE_X                         "|cffffcc00%1%:|r|n  %2%",
+    RESOURCE_X_OF_Y                    "|cffffcc00%1%:|r|n  %2%/%3%",
+    RESOURCE_X_OF_Y_BONUS_POSITIVE     "|cffffcc00%1%:|r|n  %2%/%3%|n|c0000ff00+%4%|r",
+    RESOURCE_X_OF_Y_BONUS_NEGATIVE     "|cffffcc00%1%:|r|n  %2%/%3%|n|c0000ff00-%4%|r",
     // Limits
     REACHED_LIMIT_OF_X_FOR_Y           "Maximum von %1% für Gebäude %2% erreicht.",
     // Witch Hut
@@ -221,6 +237,29 @@ StringList {
     DREKTHAR                           "Drek'Thar",
     SAMURO                             "Samuro",
     DEATH_KNIGHT                       "Todesritter",
+    LICH                               "Lich",
+    DARK_RANGER                        "Dunkler Waldläufer",
+    NECROMANCER                        "Nekromant",
+    ABOMINATION                        "Monstrosität",
+    BANSHEE                            "Banshee",
+    ACOLYTE                            "Acolyt",
+    OBSIDIAN_STATUE                    "Obsidian-Statue",
+    ARTHAS_EVIL                        "Arthas Böse",
+    KELTHUZAD                          "Kel'Thuzad",
+    KELTHUZAD_LICH                     "Kel'Thuzad Lich",
+    MALGANIS                           "Mal'Ganis",
+    SYLVANAS_EVIL                      "Sylvanas Böse",
+    LICH_KING                          "Lich-König",
+    CRYPT_LORD                         "Gruft-Lord",
+    NERUBIAN_QUEEN                     "Neruber-Königin",
+    ANUBARAK                           "Anub'arak",
+    RANGER_NIGHT_ELF                   "Waldläufer Nachtelfen",
+    KEEPER_OF_THE_GROVE                "Hüter des Hains",
+    PRIESTESS_OF_THE_MOON              "Mondpriesterin",
+    DEMON_HUNTER                       "Dämonenjäger",
+    WARDEN                             "Wächterin",
+    MOUNTAIN_GIANT                     "Bergriese",
+    DRUID_OF_THE_CLAW                  "Klauendruide",
     // Start Locations
     RANDOM_MATCHING_TEAM               "Zufällig passend zum Team",
     TERDRASSIL                         "Terdrassil",
