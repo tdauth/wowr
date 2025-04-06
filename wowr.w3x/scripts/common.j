@@ -5754,7 +5754,6 @@ globals
     constant integer MORTAR_TEAM                                     = 'H0JK'
     constant integer DWARF_MAGE                                      = 'H03L'
     constant integer ELITE_RIFLEMAN                                  = 'H0JQ'
-    constant integer ELITE_RIFLEMAN_M                                = 'H0JR'
     constant integer SIEGE_ENGINE                                    = 'H0QV'
     constant integer BARD                                            = 'H0YK'
     constant integer GRYPHON_RIDER                                   = 'H0S1'
