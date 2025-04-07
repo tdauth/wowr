@@ -3774,6 +3774,7 @@ globals
     constant integer ITEM_BLOOD_ELF_BARRACKS                         = 'I1AQ'
     constant integer ITEM_BLOOD_ELF_BLACK_SMITH                      = 'I1AR'
     constant integer ITEM_BLOOD_ELF_LUMBER_MILL                      = 'I1AS'
+    constant integer ITEM_BLOOD_ELF_ARCANE_SANCTUM                   = 'I04C'
     constant integer ITEM_BLOOD_ELF_WORKSHOP                         = 'I1AT'
     constant integer ITEM_BLOOD_ELF_PHOENIX_EGG                      = 'I1AU'
     constant integer ITEM_BLOOD_ELF_MAGIC_VAULT                      = 'I1AV'
