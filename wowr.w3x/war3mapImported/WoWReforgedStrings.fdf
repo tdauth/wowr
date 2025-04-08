@@ -77,7 +77,7 @@ StringList {
     FORTIFIED                          "Fortified",
     HERO                               "Hero",
     DIVINE                             "Divine",
-    ETHERAL                            "Etheral",
+    ETHEREAL                           "Ethereal",
     PIERCE                             "Pierce",
     SIEGE                              "Siege",
     MELEE                              "Melee",
