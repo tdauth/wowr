@@ -77,7 +77,7 @@ StringList {
     FORTIFIED                          "Verstärkt",
     HERO                               "Held",
     DIVINE                             "Göttlich",
-    ETHERAL                            "Astral",
+    ETHEREAL                           "Astral",
     PIERCE                             "Stich",
     SIEGE                              "Belagerung",
     MELEE                              "Nahkampf",
@@ -754,7 +754,7 @@ StringList {
     NEWS_LINE_11                       "- Removed game settings dialog in the beginning of the game.",
     NEWS_LINE_12                       "- Removed game types which makes old save codes invalid.",
     NEWS_LINE_13                       "- Multiple 75 level researches have been merged into Evolution.",
-    NEWS_LINE_14                       "- Quests have cinematic sequences now.",
+    NEWS_LINE_14                       "- Some Quests have cinematic sequences now.",
     // Save Codes UI
     UPDATE_YELLOW                      "|cffFCD20DAktualisieren|r",
     LOAD_YELLOW                        "|cffFCD20DLaden|r",
