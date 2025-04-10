@@ -1,0 +1,34 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetUserListBoxItem" {
+    Height 0.029322,
+    Width 0.2625,
+    UseActiveContext,
+
+    Frame "BACKDROP" "UserListItemBackdrop" {
+        UseActiveContext,
+        SetAllPoints,
+        BackdropBlendAll,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-userlist-back.blp",
+
+        Frame "BACKDROP" "UserListItemIcon" {
+            UseActiveContext,
+            BackdropBlendAll,
+            Height 0.0175,
+            Width 0.0325,
+            SetPoint LEFT, "UserListItemBackdrop", LEFT, 0.016625, 0.0,
+            BackdropBackground  "UI\Widgets\BattleNet\chaticons\default2.blp",
+        }
+
+        Frame "TEXT" "UserNameText" INHERITS "BattleNetListBoxTextTemplate" {
+            UseActiveContext,
+            SetPoint LEFT, "UserListItemBackdrop", LEFT, 0.05625, -0.000625,
+        }
+    }
+}

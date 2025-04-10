@@ -1,0 +1,169 @@
+/*
+ *  Network Strings
+ *  ---------------
+ *
+ *  This file contains all strings that can be displayed in response to network activity.
+ *
+ */
+
+StringList {
+
+    // --- network error message (map to error id)
+    ERROR_ID_INVALIDPARAMS              "The parameters provided are invalid.",
+    ERROR_ID_AUTOCANCEL                 "Battle.net has automatically cancelled the request.",
+    ERROR_ID_BADPROVIDER                "The operation failed, because the current network provider is invalid.",
+    ERROR_ID_NOTINITIALIZED             "The operation failed, because the network provider has not been initialized.",
+    ERROR_ID_ALREADYINITIALIZED         "The operation failed, because the network provider is already initialized.",
+    ERROR_ID_GAMEPORTINUSE              "Another application is using a needed game port. Quit other applications and try again.",
+    ERROR_ID_GAMENOTFOUND               "The game was not found.",
+    ERROR_ID_GAMEUNJOINABLE             "The specified game is unjoinable.",
+    ERROR_ID_GAMEFULL                   "The specified game is full or the creator has closed all remaining open slots.",
+    ERROR_ID_GAMECLOSED                 "The specified game has already started.",
+    ERROR_ID_CANTCONNECT                "Unable to connect.",
+    ERROR_ID_DISCONNECT                 "Your connection to Battle.net has been lost.",
+    ERROR_ID_NOTCONNECTED               "The operation was unable to complete, because you are not connected.",
+    ERROR_ID_NOTIMPLEMENTED             "This feature is not implemented.",
+    ERROR_ID_VERSION_BAD                "Unable to validate game version. Please reconnect to Battle.net, or apply the current game patch manually.",
+    ERROR_ID_CDKEY_INVALID              "The CD key provided is invalid.",
+    ERROR_ID_CDKEY_INUSE                "The CD key provided is currently in use by %s",
+    ERROR_ID_CDKEY_DISABLED             "The CD key provided is currently disabled.",
+    ERROR_ID_CDKEY_MISMATCH             "The CD key provided does not match this product.",
+    ERROR_ID_BADSERVER                  "The operation failed, because the specified server is invalid.",
+    ERROR_ID_UNKNOWNACCOUNT             "That account does not exist.|n|nWarcraft III requires a new Battle.net account.|n|nPlease select 'Create New Account' to choose a new name and password.",
+    ERROR_ID_UNSUPPORTEDACCOUNT         "The account specified is not supported by Warcraft III.|n|nPlease select 'Create New Account' to choose a new name and password.",
+    ERROR_ID_BADPASSWORD                "The password you have provided is incorrect.  Please try again.",
+    ERROR_ID_BADCDKEY                   "The CD key provided is invalid.",
+    ERROR_ID_NAMEUSED                   "The specified account name is already used.  Please select another.",
+    ERROR_ID_NAMEBLANK                  "No account name was specified.  Please enter an account name.",
+    ERROR_ID_NAMEBADCHARS               "The specified account name contains invalid characters.",
+    ERROR_ID_NAMEBADWORD                "The specified account name contains invalid words.",
+    ERROR_ID_NEEDALPHACHARS             "The specified account name does not have enough alphabetic characters.",
+    ERROR_ID_ADJACENTPUNCT              "The specified account name has too many adjacent punctuation characters.",
+    ERROR_ID_TOOMANYPUNCT               "The specified account name has too many punctuation characters.",
+    ERROR_ID_NOTLOGGEDON                "The operation was unable to complete, because you are not logged in.",
+    ERROR_ID_NOTINCHAT                  "The operation failed, because you are not in chat.",
+    ERROR_ID_UPGRADEFAILED              "There was an error applying the upgrade.",
+    ERROR_ID_FLOODDETECTED              "A network flood was detected.|n|nYou have been disconnected from Battle.net",
+    ERROR_ID_GAMETYPEDISABLED           "The selected game type has been disabled.",
+    ERROR_ID_GAMECREATEFAILED           "The game creation has failed.",
+    ERROR_ID_REQUESTDENIED              "The requested operation has been denied.",
+    ERROR_ID_ANONFINDFAILED             "Battle.net was unable to find a game for you. Please wait a few minutes and try again.",
+    ERROR_ID_ANONFINDCANCELLED          "The anonymous game find was cancelled.",
+    ERROR_ID_ANONFINDBADVERSION         "The game types have been updated on Battle.net.|n|nPlease reconfigure your game preferences and hit 'Play Game' again.",
+    ERROR_ID_DOWNLOADFAILED             "There was an error while trying to download a file from Battle.net.",
+    ERROR_ID_DOWNLOADFAILED_BADSIZE     "There was insufficient space on your hard drive to download a file from Battle.net. Please free up some space on your hard drive and try again.",
+    ERROR_ID_DOWNLOADFAILED_WRITE       "There was an error writing to your hard drive while trying to download a file from Battle.net. You may need to free some space. Please check your hard drive and try again.",
+    ERROR_ID_FILENOTFOUND               "A required file was not found on Battle.net.", 
+
+    // --- miscellaneous error messages
+    NETERROR_NOUSERNAME                 "Please enter an account name.",
+    NETERROR_NOPASSWORD                 "Please enter a password.",
+    NETERROR_LOGINNOUSERNAME            "Please enter your account name.",
+    NETERROR_LOGINNOPASSWORD            "Please enter your password.",
+    NETERROR_REPEATPASSWORD             "Please repeat your password.",
+    NETERROR_PASSWORDMISMATCH           "Password and repeated password do not match.",
+    NETERROR_USERNAMEPASSWORD           "Your password should not match your account name.",
+    NETERROR_USERNAMETOOSHORT           "Your account name must be at least 3 characters long.",
+    NETERROR_PASSWORDTOOSHORT           "Your password must be at least 3 characters long.",
+    NETERROR_NEWPASSWORDTOOSHORT        "Your new password must be at least 3 characters long.",
+    NETERROR_NOCURRENTPASSWORD          "Please enter your current password.",
+    NETERROR_NONEWPASSWORD              "Please enter the new password.",
+    NETERROR_REPEATNEWPASSWORD          "Please repeat the new password.",
+    NETERROR_NEWPASSWORDMISMATCH        "New password and repeated password do not match.",
+    NETERROR_NEWUSERNAMEPASSWORD        "Your new password should not match your account name.",
+    NETERROR_DEFAULTERROR               "There was an error in handling the request.",
+    NETERROR_NOGAMESPECIFIED            "You must specify a game to join.",
+    NETERROR_NOMAPSELECTED              "You must select a map.",
+    NETERROR_NOREPLAYSELECTED           "You must select a replay.",
+    NETERROR_NOSAVEDGAMESELECTED        "You must select a saved game.",
+    NETERROR_MAPLOADERROR               "There was an error trying to load the selected map.|n|nThe map is unavailable or corrupted.",
+    NETERROR_NOGAMENAMESPECIFIED        "You must specify a name to create a game.",
+    NETERROR_EMPTYGAMENAMESPECIFIED     "The game name cannot be comprised only of spaces.|n|nPlease enter a game name, which includes alphabetic characters.",
+    NETERROR_CREATEGAMEFAILED           "The game was unable to be created as specified.|n|nThere may already be a game by that name, or the game name you have chosen was not accepted.",
+    NETERROR_JOINGAMEFAILED             "Unable to join the specified game.|n|nPlease try again, or select a different game",
+    NETERROR_NOREALMSELECTED            "Please select a gateway.",
+    NETERROR_COULDNOTCONNECT            "Could not connect to the network.",
+    NETERROR_CUSTOMGAMEDISABLED         "Custom games are currently disabled.|n|nPlease try a different game type or try again later.",
+    NETERROR_STANDARDGAMEDISABLED       "Standard games are currently disabled.|n|nPlease try a different game type or try again later.",
+    NETERROR_JOINGAMENOTFOUND           "The game you attempted to join could not be found.|n|nYou may have entered the name incorrectly or the game creator may have canceled the game.",
+    NETERROR_CANTCONNECTBNET            "Unable to connect to Battle.net.|n|nYou may be trying to connect to an invalid Battle.net server.  If you are using a modem, you may need to manually connect to the Internet before connecting to Battle.net.",
+	NETERROR_CANTLOADREPLAYFILE         "The replay file could not be loaded.",
+	NETERROR_CANTLOADREPLAYDATA         "The replay data could not be loaded.",
+	NETERROR_CANTLOADREPLAYMAP          "The map file associated with the replay could not be loaded.|n|nPlease make sure the map file '%s' used by the recorded game exists and try again.",
+	NETERROR_BADREPLAYVERSION           "This replay data is for a different version of Warcraft III.",
+    NETERROR_NOCHANNELNAME              "Please enter a channel name to join.",
+    NETERROR_TEAMMUSTBEFULL             "You cannot start a game search until all teammembers have accepted your invitation and joined the team.",
+    NETERROR_NOGAMETYPESELECTED         "Please select a game type.",
+    NETERROR_JOINTEAMGAMENOTFOUND       "The team game you attempted to join could not be found.|n|nThe game creator may have canceled the game, or another teammate declined to join the team.",
+    NETERROR_JOINTEAMCANTCONNECT        "Unable to join team.|N|NThis may have occured because the team creator's computer is configured to block incoming connections.  |N|NOtherwise, it is possible that you were unable to send the invite response due to your own firewall configuration.  Please ensure that your firewall software allows outgoing connections on the game port.",
+    NETERROR_NOPLAYERNAMESPECIFIED      "Please enter a player name.",
+    NETERROR_MAPAUTHFAILED              "Failed to authorize map.",
+    NETERROR_MAPFILEBADSIZE             "The map file is too big. Please choose a different map.",
+    NETERROR_MAPFILENOTFOUND            "Could not find the map file.",
+    NETERROR_MAPFILEREAD                "There was an error reading the map file.",
+    NETERROR_MAPFILEINCOMPLETE          "There was an error downloading the map file.",
+    NETERROR_MAPFILEWRITE               "There was an error writing the map file.",
+    NETERROR_MAPFILENAMEINVALID         "The map filename is too long or contains invalid characters.",
+    NETERROR_TEAMMATECOUNT              "You need to select at least one teammate to invite.",
+    NETERROR_WOULDFLOOD                 "You are sending commands to Battle.net too quickly and risk being disconnected for flooding. Please slow down.",
+    NETERROR_SAVEGAMENOTFOUND           "The specified game requires a save game file which could not be found.",
+    NETERROR_BADMAP                     "One or more of your official Blizzard maps are missing or corrupt. Please reinstall the game.",
+    NETERROR_DIFFERENTSAVEFILE          "The save game file you possess for this game is different than the creator's save game file.|n|nYou either were not in this game when it was originally saved, or your save game file is corrupted.",
+    NETERROR_WRONGMAPINSAVEFILE         "The map file referenced by the save game is different to the map file on your hard drive.",
+	
+    // --- misc net messages
+    NETMESSAGE_ACCOUNTCREATE            "Your account has been created.|n|nClick OK to log on to Battle.net using your new account.",
+    NETMESSAGE_PASSWORDCHANGE           "Your password has been changed.",
+    NETMESSAGE_ANONFINDREQUEST          "Requesting a search for a game...",
+    NETMESSAGE_ANONFINDINPROGRESS       "Searching for a suitable game...",
+    NETMESSAGE_ANONFINDFOUND            "A matching game has been located.",
+    NETMESSAGE_ANONFINDCANCELING        "Canceling search...",
+    NETMESSAGE_ANONJOINWAIT             "Waiting for other players...",
+    NETMESSAGE_ANONJOINTIMEOUT          "Failed to join game because another player didn't show.|n|nPlease search again.",
+    NETMESSAGE_PLAYERJOINED             "|CFFAAAAAA%s has joined the game.",
+    NETMESSAGE_PLAYERLEFT               "|CFFAAAAAA%s has left the game.",
+    NETMESSAGE_NOPROFILE                "No profile data exists for this account.",
+
+    // --- chatdisplay colors
+    CHATCOLOR_TALK_USER                 "|CFFFED312",
+    CHATCOLOR_TALK_MESSAGE              "|CFFFFFFFF",
+    CHATCOLOR_WHISPER_USER              "|CFFFED312",
+    CHATCOLOR_WHISPER_MESSAGE           "|CFF00FF00",
+    CHATCOLOR_WHISPERSENT_USER          "|CFFFED312",
+    CHATCOLOR_WHISPERSENT_MESSAGE       "|CFF00FF00",
+    CHATCOLOR_INFO_MESSAGE              "|CFF80D8FF",
+    CHATCOLOR_BROADCAST_MESSAGE         "|CFF80D8FF",
+    CHATCOLOR_EMOTE_MESSAGE             "|CFF888888",
+    CHATCOLOR_ERROR_MESSAGE             "|CFFFF0000",
+
+    // --- chatdisplay messages (map to chatevent id)
+    CHATEVENT_ID_TALK                   "%s%s:|R %s%s |R",
+        // 1:CHATCOLOR_TALK_USER
+        // 2:<username>
+        // 3:CHATCOLOR_TALK_MESSAGE
+        // 4:<message>
+    CHATEVENT_ID_WHISPER                "%s%s whispers:|R %s%s |R",
+        // 1:CHATCOLOR_WHISPER_USER
+        // 2:<username>
+        // 3:CHATCOLOR_WHISPER_MESSAGE
+        // 4:<message>
+    CHATEVENT_ID_WHISPERSENT            "%sYou whisper to %s:|R %s%s |R",
+        // 1:CHATCOLOR_WHISPERSENT_USER
+        // 2:<username>
+        // 3:CHATCOLOR_WHISPERSENT_MESSAGE
+        // 4:<message>
+    CHATEVENT_ID_INFORMATION            "%s%s |R",
+        // 1:CHATCOLOR_INFO_MESSAGE
+        // 2:<message>
+    CHATEVENT_ID_BROADCAST              "%s%s |R",
+        // 1:CHATCOLOR_BROADCAST_MESSAGE
+        // 2:<message>
+    CHATEVENT_ID_EMOTE                  "%s%s %s |R",
+        // 1:CHATCOLOR_EMOTE_MESSAGE
+        // 2:<username>
+        // 3:<message>
+    CHATEVENT_ID_ERROR                  "%s%s |R",
+        // 1:CHATCOLOR_ERROR_MESSAGE
+        // 2:<message>
+}
+

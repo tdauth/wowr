@@ -1,0 +1,5 @@
+[Categories]
+GiantClass=Riese
+UndeadClass=Untote
+MechanicalClass=Mechanisch
+TaurenClass=Tauren

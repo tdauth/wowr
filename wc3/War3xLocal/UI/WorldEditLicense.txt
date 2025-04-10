@@ -1,0 +1,262 @@
+﻿
+LESEN SIE DIE FOLGENDE ENDBENUTZER-LIZENZVEREINBARUNG BITTE
+SORGFÄLTIG DURCH, BEVOR SIE DIESES SOFTWARE-PROGRAMM
+INSTALLIEREN.
+Dieses Software-Programm (im folgenden "Programm" genannt), einschließlich aller nachfolgenden
+Patches, aller gedruckten Unterlagen, der gesamten Online- oder elektronischen
+Dokumentation sowie aller Kopien und aller von diesem Programm und diesen
+Materialien abgeleiteten Arbeiten sind das urheberrechtlich geschützte Werk von
+Blizzard Entertainment, ein Schwesterunternehmen der Vivendi Universal Interactive Deutschland GmbH oder seiner Zulieferer, Tochterfirmen oder Lizenzgeber. Jede Benutzung des Programms unterliegt den Bestimmungen der folgenden Endbenutzer-Lizenzvereinbarung (im
+folgenden "Lizenzvereinbarung" genannt). Das Programm darf ausschließlich von
+Endbenutzern verwendet werden, die mit der Lizenzvereinbarung und den
+Bedingungen der Lizenzvereinbarung einverstanden sind.
+
+ENDBENUTZER-LIZENZVEREINBARUNG
+
+1. Beschränkte Benutzerlizenz
+
+Blizzard Entertainment (im Folgenden "der Lizenzgeber") räumt hiermit - und mit der Installation des Programms erklären Sie sich damit einverstanden - eine
+beschränkte nicht-exklusive Lizenz ein sowie das Recht, eine (1) Kopie des
+Programms zu installieren und diese zu Ihrem eigenen Gebrauch auf einem Heim-, Büro- oder
+einem tragbaren Computer zu benutzen. Die Installation des Programms in
+einem Netzwerk bzw. die Nutzung der Software auf mehreren Computern auf einmal
+ist ohne ausdrückliche Erlaubnis im Rahmen der Lizenzvereinbarung untersagt.
+Sie müssen die dazugehörigen Handbücher lesen und die dazugehörigen
+Vereinbarungen akzeptieren, falls Folgendes gegeben ist:
+
+a) Das Programm verfügt über eine Multiplayer-Funktion. Diese Multiplayer-Funktion erlaubt dem Endbenutzer ausschließlich dann die Nutzung der Internetfunktion über das Battle.net oder über einen von Blizzard Entertainment autorisierten Host, wenn die Nutzungsvereinbarungen des Battle.nets akzeptiert wurden. Blizzard Entertainment behält sich jederzeit die Änderung, Erweiterung oder Aktualisierung der Nutzungsvereinbarungen vor. 
+b) Das Programm enthält des weiteren einen Level-Editor/World Editor (im Folgenden "Editor"
+genannt) , der es Ihnen erlaubt, Levels eigenen Zuschnitts oder andere Materialien
+(im Folgenden "neue Materialien" genannt) zu Ihrem persönlichen Gebrauch in
+Verbindung mit dem Programm zu erzeugen. Jede Benutzung des Editors oder aller
+neuer Materialien unterliegen dieser Lizenzvereinbarung;
+Für das Programm wird eine Lizenz erteilt, es gilt nicht als verkauft. Ihre Lizenz verleiht
+keinen Rechtsanspruch oder den Besitz an dem Programm.
+
+2. Besitz
+
+Alle Rechtsansprüche, Besitzrechte und geistigen Eigentumsrechte an dem
+Programm und auf das Programm sowie alle Kopien davon (dazu gehören unter
+anderen aber nicht ausschließlich alle Titel, Computercodes, Themen, Objekte,
+Charaktere, Charakternamen, Stories, Dialoge, Slogans, Ausdrücke, Konzepte,
+Bildmaterial, Animationen, Geräusche, musikalische Kompositionen, audiovisuelle
+Effekte, Bedienungsmethoden, moralische Rechte), jede damit im Zusammenhang
+stehende Dokumentation sowie in das Programm eingebaute "applets" (spezielle
+Applikationen) sind Eigentum des Lizenzgebers oder seinen Lizenzgebern. Das
+Programm ist im Rahmen des Urheberrechtsgesetzes der Bundesrepublik
+Deutschland, internationaler Copyright-Verträge und Konventionen sowie anderer
+Gesetze geschützt. Alle Rechte sind vorbehalten. Die Lizenzgeber der verschiedenen
+Komponenten des Programms behalten sich rechtliche Schritte im Falle einer
+Verletzung dieser Lizenzvereinbarung vor.
+
+3. Verpflichtungen des Endbenutzers
+
+A. An die vorstehende Lizenzgewährung gebunden, dürfen Sie weder Kopien,
+Fotokopien, Reproduktionen, Weiterlizensierungen, Übersetzungen, Rückentwicklungen, Quellcode-Herleitungen, Herstellung ähnlicher Quellcodes, Modifikationen, Disassemblierungen, Dekompilationen oder
+abgeleitete Programme bzw. Arbeiten herstellen, die ganz oder in wesentlichen
+Teilen auf dem Programm basieren, noch irgendwelche Eigentumsanzeigen oder
+Eigentumsetiketten auf dem Programm anbringen oder anderen erlauben, dies zu tun, ohne das vorherige schriftliche
+Einverständnis von dem Lizenzgeber erhalten zu haben.
+
+B. Sie haben die Lizenz für das Programm als ein einziges Produkt.
+Seine Bestandteile dürfen nicht zur Benutzung auf mehr als einem (1) Computer
+abgetrennt werden.
+
+C. Sie sind berechtigt, das Programm zu Ihrem eigenen Gebrauch zu verwenden, Sie
+sind aber nicht berechtigt;
+
+(i) ohne das vorherige, schriftliche Einverständnis von dem Lizenzgeber
+Reproduktionen des Programms in irgendeiner Weise an Dritte zu verkaufen oder zu
+übergeben, noch diese gegenüber Dritten zur Sicherung von Forderungen zu
+verwenden, noch an Dritte das Programm zu verleihen, zu vermieten, zu leasen oder
+die Lizenz daran zu erteilen;
+
+(ii) mit dem Programm oder irgendeinem Teil davon (dazu gehören unter anderen
+Bilder, Sounddateien, Schriften, Grafiken, Cliparts, Animationen, Photos,
+Datenbanken) einen. kommerziellen Zweck zu verfolgen, wozu unter anderem aber
+nicht ausschließlich seine Verwendung in einem Cyber-Café, in einem Center für
+Computerspiele oder an irgendeinem anderem ortsgebundenem Standort gehört;
+
+(iii) ohne das ausdrückliche schriftliche Einverständnis von dem Lizenzgeber den
+Editor und die damit geschaffenen neuen Materialien (dazu gehören unter
+anderen aber nicht ausschließlich Bilder, Sounddateien, Schriften, Grafiken, Cliparts,
+Animationen, Photos, Datenbanken) zu kommerziellen Zwecken zu verwenden
+oder Dritten eine solche Verwendung zu gestatten, wozu unter anderem aber nicht
+ausschließlich die Verteilung neuer Materialien auf einer Stand-alone-Basis oder im
+Paket mit anderer Software oder Hardware über alle Vertriebswege gehört, wozu
+unter anderem aber nicht ausschließlich der Verkauf im Einzelhandel und der
+elektronische Online-Vertrieb gehören sowie
+
+(iv) den Editor und die dadurch erstellten neuen Materialien kommerziell zu nutzen
+oder dritten die kommerzielle Nutzung zu erlauben, einschließlich aber nicht beschränkt
+auf die Nutzung als eigenständiges Produkt oder als Paket mit zusätzlicher Software
+oder Hardware. Der Vertrieb durch jegliche Distributionskanäle, einschließlich aber
+nicht beschränkt auf Groß- und Einzelhandel, On-Line oder elektronischen Vertrieb
+ist ohne ausdrückliche schriftliche Erlaubnis des Lizenzgebers untersagt.
+
+(v) ohne vorheriges schriftliches Einverständnis von Blizzard Entertainment
+als Spielleiter (Host) für das Programm zu fungieren oder für dieses Dienste
+anzubieten, die der Initiierung von Spielen dienen, noch Kommunikationsprotokolle
+zu emulieren oder weiterzuleiten, die von dem Lizenzgeber im Netzwerk-Feature
+des Programms verwendet werden, und dazu Methoden wie Protokollemulation,
+Tunneling, die Modifizierung oder Hinzufügung von Komponenten zum Programm,
+ein Utility-Programm oder irgendeine andere schon bekannte oder zukünftig
+entwickelte Technik zu benutzen. Dies gilt für jeden Zweck, dazu gehören unter
+anderem aber nicht ausschließlich Netzwerkspiele über das Internet,
+Netzwerkspiele, die kommerzielle oder nicht-kommerzielle Gaming-Netzwerke
+verwenden oder die zu Content Aggregation-Netzwerken gehören.
+
+(vi) unter jeglichen Umständen mehr als eine gleichzeitige Verbindung zum 
+Battle.net oder anderen von Blizzard autorisierten Host Services zu unterhalten
+oder zu starten. Jegliche Verbindung zum Battle.net oder anderen von Blizzard
+autorisierten Host Services, sei sie durch das Programm oder andere Utilities oder
+Software erstellt, darf nur durch Methoden und Vorgehensweisen hergestellt 
+werden, die von Blizzard Entertainment ausdrücklich genehmigt wurden. 
+Jegliche andere Form der Verbindung oder der Erschaffung von "Tool-Software",
+die eine Verbindung zu Blizzards internen binärem Interface oder zu Interfaces, 
+die von Blizzard nicht ausdrücklich der Öffentlichkeit zugänglich gemacht wurden,
+ermöglicht, ist untersagt.
+
+4. Weitergabe des Programms
+Sie dürfen auf Dauer Ihre gesamten Rechte unentgeltlich weiter übertragen, die
+sich aus dieser Lizenzvereinbarung ergeben, unter der Voraussetzung, dass der
+Empfänger den Bedingungen dieser Lizenzvereinbarung zustimmt und Sie damit
+einverstanden sind, das Programm und alle neuen Materialien von Ihrem Home-, Büro- oder
+tragbaren Computer zu entfernen.
+
+5. Ende der Lizenzvereinbarung
+Diese Lizenzvereinbarung läuft auf unbestimmte Zeit, es sei denn, es ist
+ausdrücklich etwas anderes vereinbart. Sie können die Lizenzvereinbarung
+jederzeit kündigen, indem Sie das Programm und alle neuen Materialien
+vernichten. Der Lizenzgeber ist nach eigenem Ermessen unbeschadet sonstiger
+Rechte berechtigt, die Lizenz bei Verstößen gegen diese Lizenzvereinbarung zu
+kündigen. In diesem Fall sind Sie verpflichtet, das Programm und alle neuen
+Materialien unverzüglich zu löschen.
+
+6. U.S.A. Ausfuhrbeschränkungen
+Das Programm darf nicht reexportiert, heruntergeladen oder in anderer Weise
+in irgendein Land (oder an einen seiner Staatsbürger oder Einwohner) exportiert
+werden, das von den USA mit einem Embargo für Güter belegt worden ist, oder
+an jemanden, der sich auf der Liste der "Special Designated Nationals" des U.S.
+Finanzministeriums oder der "Table of Denial Orders" des U.S. Handelsministeriums
+befindet. Mit der Installation des Programm stimmen Sie dem Vorstehenden zu,
+und Sie erklären und garantieren, dass Sie sich nicht in einem solchen Land
+befinden, kein Staatsbürger oder Einwohner eines solchen sind und nicht der
+Kontrolle irgendeiner solchen Liste unterliegen.
+
+7. Technischer Kundendienst. Der Lizenzgeber erklärt sich mit der Bereitstellung von technischem Kundendienst für das Programm einverstanden bis das Programm "nicht mehr in Vertrieb" ist. Das Programm wird dann als "nicht mehr in Vertrieb" befindlich bezeichnet, wenn es ein Jahr lang nicht mehr vom Lizenzgeber oder seinen Lizenznehmern vertrieben und/oder hergestellt wurde. Der technische Kundendienst kann seitens des Lizenzgebers per Telefon, Email oder Fax erfolgen oder dadurch, dass relevante Informationen zu technischen Problemen auf der Internetseite des Lizenzgebers zur Verfügung gestellt werden. Ohne explizite Angabe auf der Verpackung übernimmt der Lizenzgeber keinerlei Verpflichtung, den technischen Kundendienst über eine gebührenfreie Telefonnummer zur Verfügung zu stellen.
+
+8. Dauer der Bereitstellung der On-Line Komponente des Programms. Dieses Programm enthält eine "On-Line" Komponente, die es erlaubt, das Produkt über das Internet mit Hilfe der vom Lizenzgeber bereitgestellten Server und Software zu nutzen. Der Lizenzgeber erklärt sich bereit, die Server- und Softwaretechnologie zur Verfügung zu stellen, die es ermöglicht die "On-Line" Komponente zu nutzen bis das Programm "nicht mehr in Vertrieb" ist, wie oben festgelegt. Danach steht es dem Lizenzgeber frei, weiterhin Server- und Softwaretechnologie zur Verfügung zu stellen, die es ermöglicht, die "On-Line" Komponente zu nutzen oder die Rechte zur Bereitstellung von Server- und Softwaretechnologie, die es ermöglicht die "On-Line" Komponente zu nutzen, an andere Anbieter weiterzugeben. Dem Lizenzgeber entstehen aus obigem Absatz jedoch keinerlei Verpflichtungen, die Server- und Softwaretechnologie, die es ermöglicht, die "On-Line" Komponente zu nutzen, über den Zeitpunkt hinaus zur Verfügung zu stellen, an dem das Programm "nicht mehr in Vertrieb" ist.
+
+9. Beschränkte Gewährleistung
+Der Lizenzgeber lehnt ausdrücklich jede Gewährleistung für das Programm, den
+Editor und Anleitung(-en) ab. Das Programm, Editor und Anleitung(-en) werden
+"wie vorliegend" ausgeliefert.
+DER LIZENZGEBER ERTEILT KEINE GARANTIE, WEDER AUSDRÜCKLICH NOCH
+STILLSCHWEIGEND, FÜR DIE RICHTIGKEIT, VOLLSTÄNDIGKEIT, UNVERSEHRTHEIT,
+VERKÄUFLICHKEIT SOWIE DIE EIGNUNG ZU EINEM BESTIMMTEN ZWECK DES
+PROGRAMMS. WEITERHIN ÜBERNIMMT DER LIZENZGEBER KEINERLEI GARANTIEN
+BEZÜGLICH DER JAHR 2000-TAUGLICHKEIT DER SOFTWARE. DIES GILT INSBESONDERE
+FÜR MÖGLICHE AUSWIRKUNGEN AUF DIE LEISTUNG ODER FUNKTIONALITÄT DES
+PROGRAMMS VOR, WÄHREND ODER NACH DEM JAHR 2000 SOWIE DIE KORREKTE
+VERARBEITUNG VON DATEN WÄHREND UND NACH DER JAHRESWENDE.
+DIESER GARANTIEAUSSCHLUSS BEZIEHT SICH FERNER AUF DEN KORREKTEN
+DATENAUSTAUSCH ZWISCHEN PRODUKTEN ODER ANWENDUNGEN VON
+DRITTANBIETERN.
+
+Sämtliche Risiken, die aus der Verwendung des Programms, des Editors und der
+Handbücher entstehen können, trägt der Lizenznehmer.
+Der Lizenzgeber garantiert für einen Zeitraum von 2 Jahren ab dem Kaufdatum
+des Programms, dass das Programm frei von Material- oder Verarbeitungsfehlern
+ist und bei normaler Verwendung im wesentlichen gemäß der beiliegenden
+Dokumentation funktioniert.
+Sollte sich das Programm in diesem Zeitraum als fehlerhaft erweisen, verpflichtet
+sich der Lizenzgeber nach eigenem Ermessen und nach Vorlage einer gültigen
+Rechnung 1) den Fehler zu beheben, 2) den Austausch des fehlerhaften Produktes
+vorzunehmen, oder 3) dem Lizenznehmer den Kaufpreis zu erstatten, wenn ihm die 
+Mängel oder Beschädigung spätestens 2 (zwei) Monate nach Auftreten derselben 
+mitgeteilt wurden.
+Da einige Staaten/Rechtsprechungen zeitliche Beschränkungen implizierter
+Garantien nicht gestatten, gilt diese Beschränkung für Sie möglicherweise nicht.
+Diese Gewährleistungsbeschränkung beeinträchtigt in keiner Weise die Wirkung 
+anderslautender anwendbarer Gesetze und Verordnungen.
+Sollten Sie ein Produkt beispielsweise im Falle eines Defekts umtauschen oder
+zurücksenden wollen, folgen Sie bitte der dieser Lizenz beigefügten
+Vorgehensweise für den Technischen Kundendienst.
+
+8. Haftungsbeschränkung
+WEDER BLIZZARD, NOCH SEINE MUTTERGESELLSCHAFT,TOCHTERGESELLSCHAFTEN, SUBUNTERNEHMER ODER LIZENZGEBER HAFTEN FÜR DURCH DIE
+VERWENDUNG DES PROGRAMMS ODER DES EDITORS ODER BLIZZARD ENTERTAINMENTS ONLINE NETZWERKS, BATTLE.NET, ODER EINES ANDEREN ONLINE SERVICES; DER DURCH VON BLIZZARD AUTORIESIERTE ANDERE ANBIETER ZUR VERFÜGUNG GESTELLT WIRD; ENTSTEHENDEN SCHÄDEN.
+DAZU GEHÖREN UNTERE ANDEREM ARBEITS- UND COMPUTERAUSFÄLLE,
+FEHLFUNKTIONEN SOWIE ALLE FINANZIELLEN VERLUSTE ODER SCHÄDEN.
+Da einige Staaten/Rechtsprechungen den Haftungsausschluss für Schäden und
+Folgeschäden bzw. die zeitliche Beschränkung implizierter Garantien nicht
+gestatten, gilt diese Beschränkung für Sie möglicherweise nicht.
+
+9. Rechtsansprüche
+Sie stimmen hiermit zu, dass der Lizenzgeber erheblich beschädigt wird, falls diese
+Lizenzvereinbarung verletzt wird, und infolgedessen dass der Lizenzgeber sich mit
+dieser Lizenzvereinbarung gegen Schädigungen versichert und zur Wahrung seiner
+Rechte im Rahmen dieser Lizenzvereinbarung auch ohne Verpflichtung oder andere
+Sicherheiten oder eine nachweisbare Schädigung entsprechende Rechtsmittel
+ergreifen kann. Ferner findet die Rechtsprechung der jeweils zuständigen Staaten
+Anwendung.
+
+10. Verschiedenes
+Erfüllungsort und Gerichtsstand dieser Lizenzvereinbarung ist Deutschland und
+deutsche Gesetze sind anwendbar.
+Nebenabreden zu dieser Lizenzvereinbarung sind nicht getroffen. Änderungen oder
+Ergänzungen bedürfen zu ihrer Rechtswirksamkeit der Schriftform. Das gleiche gilt für
+den Verzicht auf das Schriftformerfordernis.
+Im Falle der Unwirksamkeit einer oder mehrerer Bestimmungen dieser
+Lizenzvereinbarung bleibt die Wirksamkeit der übrigen Bestimmungen hiervon
+unberührt. Anstelle der unwirksamen oder nichtigen Bestimmung verpflichten sich die
+Parteien, die unwirksame Bestimmung durch  solche zu ersetzen, die in gesetzlich
+zulässiger Weise der unwirksamen Bestimmung wirtschaftlich am nächsten kommt.
+Entsprechendes gilt bei der Aufdeckung ergänzungsbedürftiger Vertragslücken.
+Sie bestätigen hiermit, die vorstehende Lizenzvereinbarung gelesen zu haben,
+sie zu verstehen und damit einverstanden zu sein, dass die Aktion der Programminstallation
+eine Bestätigung ihres Einverständnisses darstellt, an die Bedingungen
+gebunden zu sein, die in der Lizenzvereinbarung enthalten sind. Sie bestätigen
+außerdem und erklären sich einverstanden, dass diese Lizenzvereinbarung die
+vollständige und ausschließliche vertragliche Abmachung darstellt, die zwischen dem
+Lizenzgeber und Ihnen besteht, und dass die Lizenzvereinbarung jede frühere oder
+gegenwärtige Vereinbarung, ob schriftlich oder mündlich, und jede andere Mitteilung
+zwischen dem Lizenzgeber und Ihnen aufhebt.
+
+ 
+EULA Technischer Kundendienst
+
+
+Achtung: Der technische Kundendienst bezieht sich ausschließlich auf die private Nutzung entsprechend der diesem Produkt beigefügten Lizenzbestimmungen. Folglich kann der technische Kundendienst für gewerbliche Nutzung der Produkte nicht gewährt werden.
+
+Umtausch von defekten CD-ROMs, DVD-ROMs oder Cartridges durch den Kundendienst
+
+Innerhalb von zwei Jahren ab Kaufdatum erhalten Sie für defekte CD-ROMs oder DVD-ROMs von unserem Kundenservice kostenlosen Ersatz. Bitte senden Sie hierzu 
+
+·	die defekten CD-ROMs oder DVD-ROMs
+·	eine Kopie des Kaufbeleges
+
+an unseren Kundendienst.
+
+Bitte vergessen Sie nicht, Ihren Namen, Ihre vollständige Adresse und eine Telefonnummer anzugeben, unter der wir Sie tagsüber erreichen können.
+
+Nach Ablauf der zwei Jahre ab Kaufdatum bieten wir Ihnen einen Umtausch von defekten CD-ROMs oder DVD-ROMs gegen einen pauschalen Unkostenbeitrag von 15,- Euro an. Bitte senden Sie hierfür die defekten CD-ROMs, DVD-ROMs oder Cartridges und einen Verrechnungsscheck, ausgestellt auf Vivendi Universal Interactive Publishing Deutschland GmbH, an unseren Kundendienst.
+Bitte vergessen Sie nicht, Ihren Namen, Ihre vollständige Adresse und eine Telefonnummer anzugeben, unter der wir Sie tagsüber erreichen können.
+
+Adressieren Sie Ihren Brief bitte an Vivendi Universal Interactive Publishing Deutschland GmbH, Technischer Kundendienst, Paul-Ehrlich-Str. 1, 63225 Langen.
+
+Umtausch des Handbuchs
+
+Sollten Sie Ersatz für das Handbuch Ihres Produktes benötigen, bieten wir Ihnen für den Einheitspreis von 7 Euro (13,69 DM) ein neues Exemplar an, falls dem Produkt im Original ein Handbuch beiliegt. Bitte senden Sie uns hierzu eine Fotokopie der Cartridge bzw. der CD-ROM/DVD-ROM Nr.1 Ihres Spiels und einen Verrechnungsscheck, ausgestellt auf Vivendi Universal Interactive Publishing Deutschland GmbH, an unseren Kundendienst.
+Bitte vergessen Sie nicht, Ihren Namen, Ihre vollständige Adresse und eine Telefonnummer anzugeben, unter der wir Sie tagsüber erreichen können.
+
+Adressieren Sie Ihren Brief bitte an Vivendi Universal Interactive Publishing Deutschland GmbH, Technischer Kundendienst, Paul-Ehrlich-Str. 1, D-63225 Langen.
+
+Für andere Reklamationen kontaktieren Sie bitte unseren Kundendienst, da wir außerhalb oben genannter Rücknahmeangebote keine Rücksendungen annehmen können und diese zu Ihren Kosten zurücksenden müssen.
+
+Die Kontaktadresse zum Kundendienst entnehmen Sie bitte dem Handbuch.
+
+* Wir empfehlen Ihnen, diese Sendung per Einschreiben zu senden, da wir im Falle von auf dem Postweg verloren gegangenen Sendungen keine Haftung übernehmen können. Die Versandkosten können nicht erstattet werden.
+
+

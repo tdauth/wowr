@@ -1,0 +1,18 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "CONTROL" "DecoratedMapListBox" {
+
+    ControlBackdrop "MapListBoxBackdrop",
+    Frame "BACKDROP" "MapListBoxBackdrop" INHERITS "EscMenuEditBoxBackdropTemplate" {
+    }
+
+    Frame "SCROLLBAR" "MapListScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+        SetPoint TOPRIGHT, "DecoratedMapListBox", TOPRIGHT, 0.0, 0.0,
+    }
+}

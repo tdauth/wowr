@@ -1,4 +1,0 @@
-WARCRAFT III - Welt-Editor - Fehler
-Unable to open '%s'
-Could not initialize graphics system.|n|n- Make sure you have DirectX 8.1 or newer installed and|n  that your display drivers are current.|n  DirectX may be found on your Warcraft III install CD under Options.|n|n- Try adjusting display settings to 16-bit or 32-bit color depth.|n
-

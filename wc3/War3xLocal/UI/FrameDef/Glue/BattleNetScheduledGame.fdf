@@ -1,0 +1,92 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "DIALOG" "BattleNetScheduledGame" {
+    Height 0.458125,
+    Width 0.43,
+
+    DialogBackdrop "ScheduledGameDialogBackdrop",
+    Frame "BACKDROP" "ScheduledGameDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "ScheduledGameTitle" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetScheduledGame", TOPLEFT, 0.02375, -0.02375,
+        Text "SCHEDULED_GAME_TITLE",
+        FontColor 1.0 1.0 1.0 1.0,
+    }
+
+    Frame "TEXT" "ScheduledGameInfo" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.38,
+        SetPoint TOPLEFT, "ScheduledGameTitle", BOTTOMLEFT, 0.0, -0.001,
+        Text "BNET_SCHEDULED_GAME_INFO",
+    }    
+
+    Frame "FRAME" "ScheduledGameOpponentsPanel" {
+        Frame "TEXT" "ScheduledGameOpponentsLabel" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOPLEFT, "ScheduledGameInfo", BOTTOMLEFT, 0.05375, -0.013,
+            Text "COLON_YOUR_OPPONENTS",
+        }
+    }
+
+    Frame "FRAME" "ScheduledGameTeammatesPanel" {
+        Frame "TEXT" "ScheduledGameTeammatesLabel" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOPLEFT, "ScheduledGameOpponentsLabel", BOTTOMLEFT, 0.0, -0.09375,
+            Text "COLON_YOUR_TEAM",
+        }
+    }
+    
+    Frame "TEXT" "ScheduledGameRaceLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint BOTTOMLEFT, "BattleNetScheduledGame", BOTTOMLEFT, 0.08125, 0.1,
+        Text "COLON_RACE",
+    }
+
+	Frame "POPUPMENU" "ScheduledGameRaceMenu" INHERITS WITHCHILDREN "BattleNetPopupMenuTemplate" {        
+		SetPoint BOTTOMRIGHT,"BattleNetScheduledGame",BOTTOMRIGHT, -0.07375, 0.08875,
+        Width 0.13,
+	}
+
+	Frame "GLUETEXTBUTTON" "ScheduledGameReadyButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.12,
+		SetPoint BOTTOMLEFT, "BattleNetScheduledGame", BOTTOMLEFT, 0.02375, 0.02375,
+
+        ButtonText "ScheduledGameReadyButtonText",
+		Frame "TEXT" "ScheduledGameReadyButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "READY",
+		}
+	}
+
+	Frame "GLUETEXTBUTTON" "ScheduledGameForfeitButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.13,
+		SetPoint BOTTOMRIGHT,"BattleNetScheduledGame",BOTTOMRIGHT, -0.02375, 0.02375,
+
+        ButtonText "ScheduledGameForfeitButtonText",
+		Frame "TEXT" "ScheduledGameForfeitButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "FORFEIT",
+		}
+	}
+
+    Frame "TEXT" "ScheduledGameTimeoutLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint BOTTOMLEFT, "ScheduledGameReadyButton", TOPLEFT, 0.0, 0.01,
+        Text "BNET_SCHEDULED_GAME_TIMEOUT",
+        FontColor 1.0 0.0 0.0,
+    }
+
+    Frame "TEXT" "ScheduledGameTimeoutValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint LEFT, "ScheduledGameTimeoutLabel", RIGHT, 0.006, 0.0,
+        Text "30",
+    }
+}
+

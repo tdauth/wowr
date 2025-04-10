@@ -1,0 +1,467 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "TEXT" "TeamLabelTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.011, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+Frame "TEXT" "TeamValueTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.011, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetProfilePanel" {
+    SetAllPoints,
+
+    // --- Personal Info -------------------------------------------------------
+    Frame "SPRITE" "ProfilePortraitFrame" {
+        Width 0.0900,
+        Height 0.09185,
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.02, -0.034375,
+
+        Frame "BACKDROP" "ProfilePortraitHighlight" {
+            SetAllPoints,
+            BackdropBlendAll,
+            BackdropBackground  "UI\Widgets\BattleNet\bnet-profileportrait-cover.blp",
+        }
+    }
+
+    Frame "TEXT" "ProfileNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.130625, -0.03125,
+        Text "COLON_NAME",
+    }
+
+    Frame "TEXT" "ProfileNameValue" {
+        Height 0.025,
+        Width 0.27625,
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.131875, -0.05,
+        FontJustificationV JUSTIFYMIDDLE,
+    }
+
+    Frame "TEXT" "ProfileClanLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.130625, -0.0825,
+        Text "COLON_CLAN",
+    }
+
+    Frame "TEXT" "ProfileClanValue" {
+        Height 0.025,
+        Width 0.22875,
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.131875, -0.101875,
+        FontJustificationV JUSTIFYMIDDLE,
+    }
+
+    Frame "TEXT" "ProfileHomepageLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.0175, -0.1525,
+        Text "COLON_HOMEPAGE",
+    }
+
+    Frame "EDITBOX" "ProfileHomepageField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.39,
+        SetPoint TOPLEFT, "ProfileHomepageLabel", BOTTOMLEFT, 0.0, -0.001,
+        TabFocusDefault,
+        TabFocusNext "ProfileAdditionalField",
+    }
+
+    Frame "TEXT" "ProfileAdditionalLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileHomepageField", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_ADDITIONAL_INFORMATION",
+    }
+
+    Frame "EDITBOX" "ProfileAdditionalField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        //Height 0.14,
+        Width 0.39,
+        SetPoint TOPLEFT, "ProfileAdditionalLabel", BOTTOMLEFT, 0.0, -0.001,
+        TabFocusNext "ProfileBackButton",
+    }
+
+    // --- Ladder Ranking -------------------------------------------------------
+
+    Frame "TEXT" "ProfileSoloLabel" INHERITS "BattleNetInfoTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "BattleNetProfilePanel", BOTTOMLEFT, 0.11, 0.188125,
+        FontJustificationH JUSTIFYCENTER,
+        Text "SOLO_GAMES",
+    }
+
+    Frame "TEXT" "ProfileSoloLevelValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileSoloLabel", BOTTOM, 0.0, -0.004125,
+        FontJustificationH JUSTIFYCENTER,
+    }
+
+    Frame "SPRITE" "ProfileSoloLevelBar" {
+        SetPoint TOP, "ProfileSoloLabel", BOTTOM, 0.0, -0.016375,
+        BackgroundArt "UI\Glues\BattleNet\BattlenetProfileLevelBar\BattlenetProfileLevelBar.mdl",
+    }
+
+    Frame "TEXT" "ProfileSoloPreviousLevelValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOPLEFT, "ProfileSoloLevelBar", BOTTOMLEFT, 0.00625, 0.00625,
+        FontColor 0.7 0.7 0.7,
+    }
+    Frame "TEXT" "ProfileSoloCurrentLevelValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOP, "ProfileSoloLevelBar", BOTTOM, 0.0, 0.00625,
+        FontColor 0.7 0.7 0.7,
+    }
+    Frame "TEXT" "ProfileSoloNextLevelValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOPRIGHT, "ProfileSoloLevelBar", BOTTOMRIGHT, -0.00625, 0.00625,
+        FontColor 0.7 0.7 0.7,
+    }
+
+    Frame "TEXT" "ProfileSoloWinsLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileSoloLabel", BOTTOM, 0.0, -0.081875,
+        FontJustificationH JUSTIFYLEFT,
+        Text "COLON_WINS",
+    }
+
+    Frame "TEXT" "ProfileSoloWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        Width 0.16,
+        SetPoint TOPLEFT, "ProfileSoloWinsLabel", TOPLEFT, 0.0, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "ProfileSoloLossesLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileSoloWinsLabel", BOTTOM, 0.0, -0.004,
+        FontJustificationH JUSTIFYLEFT,
+        Text "COLON_LOSSES",
+    }
+
+    Frame "TEXT" "ProfileSoloLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        Width 0.16,
+        SetPoint TOPLEFT, "ProfileSoloLossesLabel", TOPLEFT, 0.0, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "ProfileSoloRankLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileSoloLossesLabel", BOTTOM, 0.0, -0.01,
+        FontJustificationH JUSTIFYCENTER,
+        Text "COLON_RANK",
+    }
+
+    Frame "TEXT" "ProfileSoloRankValue" INHERITS "BattleNetTitleTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileSoloRankLabel", BOTTOM, 0.0, -0.004,
+        FontJustificationH JUSTIFYCENTER,
+    }
+
+
+
+    Frame "TEXT" "ProfileTeamLabel" INHERITS "BattleNetInfoTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "BattleNetProfilePanel", BOTTOMLEFT, 0.31625, 0.188125,
+        FontJustificationH JUSTIFYCENTER,
+        Text "TEAM_GAMES",
+    }
+
+    Frame "TEXT" "ProfileTeamLevelValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileTeamLabel", BOTTOM, 0.0, -0.004125,
+        FontJustificationH JUSTIFYCENTER,
+    }
+
+    Frame "SPRITE" "ProfileTeamLevelBar" {
+        SetPoint TOP, "ProfileTeamLabel", BOTTOM, 0.0, -0.016375,
+        BackgroundArt "UI\Glues\BattleNet\BattlenetProfileLevelBar\BattlenetProfileLevelBar.mdl",
+    }
+
+    Frame "TEXT" "ProfileTeamPreviousLevelValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOPLEFT, "ProfileTeamLevelBar", BOTTOMLEFT, 0.00625, 0.00625,
+        FontColor 0.7 0.7 0.7,
+    }
+    Frame "TEXT" "ProfileTeamCurrentLevelValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOP, "ProfileTeamLevelBar", BOTTOM, 0.0, 0.00625,
+        FontColor 0.7 0.7 0.7,
+    }
+    Frame "TEXT" "ProfileTeamNextLevelValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOPRIGHT, "ProfileTeamLevelBar", BOTTOMRIGHT, -0.00625, 0.00625,
+        FontColor 0.7 0.7 0.7,
+    }
+
+    Frame "TEXT" "ProfileTeamWinsLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileTeamLabel", BOTTOM, 0.0, -0.081875,
+        FontJustificationH JUSTIFYLEFT,
+        Text "COLON_WINS",
+    }
+
+    Frame "TEXT" "ProfileTeamWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        Width 0.16,
+        SetPoint TOPLEFT, "ProfileTeamWinsLabel", TOPLEFT, 0.0, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "ProfileTeamLossesLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileTeamWinsLabel", BOTTOM, 0.0, -0.004,
+        FontJustificationH JUSTIFYLEFT,
+        Text "COLON_LOSSES",
+    }
+
+    Frame "TEXT" "ProfileTeamLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        Width 0.16,
+        SetPoint TOPLEFT, "ProfileTeamLossesLabel", TOPLEFT, 0.0, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "ProfileTeamRankLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileTeamLossesLabel", BOTTOM, 0.0, -0.01,
+        FontJustificationH JUSTIFYCENTER,
+        Text "COLON_RANK",
+    }
+
+    Frame "TEXT" "ProfileTeamRankValue" INHERITS "BattleNetTitleTextTemplate" {
+        Width 0.16,
+        SetPoint TOP, "ProfileTeamRankLabel", BOTTOM, 0.0, -0.004,
+        FontJustificationH JUSTIFYCENTER,
+    }
+
+    // --- Play History ---------------------------------------------------------
+
+    Frame "TEXT" "ProfilePlayHistoryLabel" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPRIGHT, -0.3475, -0.0425,
+        Text "COLON_PLAY_HISTORY",
+    }
+
+    Frame "TEXT" "ProfileHumanLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfilePlayHistoryLabel", BOTTOMLEFT, 0.0285, -0.01625,
+        Text "COLON_HUMAN",
+    }
+    Frame "TEXT" "ProfileOrcLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileHumanLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_ORC",
+    }
+    Frame "TEXT" "ProfileUndeadLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileOrcLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_UNDEAD",
+    }
+    Frame "TEXT" "ProfileNightElfLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileUndeadLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_NIGHT_ELF",
+    }
+    Frame "TEXT" "ProfileRandomLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileNightElfLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_RANDOM",
+    }
+    Frame "TEXT" "ProfileTotalLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileRandomLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_TOTAL",
+    }
+
+    // wins
+    Frame "TEXT" "ProfileWinsLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPRIGHT, "ProfilePlayHistoryLabel", BOTTOMLEFT, 0.14125, -0.00375,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "COLON_WINS",
+    }
+
+    Frame "TEXT" "ProfileHumanWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileWinsLabel", BOTTOMRIGHT, 0.0, -0.00075,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileOrcWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileUndeadWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileOrcWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileNightElfWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileUndeadWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileRandomWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileNightElfWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTotalWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileRandomWinsValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    // losses
+    Frame "TEXT" "ProfileLossesLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "ProfileWinsLabel", RIGHT, 0.035, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "COLON_LOSSES",
+    }
+
+    Frame "TEXT" "ProfileHumanLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileLossesLabel", BOTTOMRIGHT, 0.0, -0.00075,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileOrcLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileUndeadLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileOrcLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileNightElfLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileUndeadLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileRandomLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileNightElfLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTotalLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileRandomLossesValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    // win percentage
+    Frame "TEXT" "ProfileWinPercentageLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "ProfileLossesLabel", RIGHT, 0.035, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "COLON_WIN_PERCENTAGE",
+    }
+
+    Frame "TEXT" "ProfileHumanWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileWinPercentageLabel", BOTTOMRIGHT, 0.0, -0.00075,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileOrcWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileUndeadWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileOrcWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileNightElfWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileUndeadWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileRandomWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileNightElfWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTotalWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileRandomWinPercentageValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    // --- Team History ---------------------------------------------------------
+
+    Frame "TEXT" "ProfileTeamHistoryLabel" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPRIGHT, -0.3475, -0.181875,
+        Text "COLON_ARRANGED_TEAM_HISTORY",
+    }
+
+    // --- Bottom Buttons -------------------------------------------------------
+    Frame "BACKDROP" "ProfileBackBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetProfilePanel",BOTTOMRIGHT, -0.014375, 0.099375,
+
+	    Frame "GLUETEXTBUTTON" "ProfileBackButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"ProfileBackBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "B",
+
+            ButtonText "ProfileBackButtonText",
+		    Frame "TEXT" "ProfileBackButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}
+
+// -------------------------------------
+
+Frame "FRAME" "BattleNetProfileTeam" {
+    UseActiveContext,
+    Height 0.025,
+    Width 0.33125,
+
+    Frame "SPRITE" "TeamProfileLevelBar" {
+        UseActiveContext,
+        SetPoint LEFT, "BattleNetProfileTeam", LEFT, -0.0195, 0.0,
+        BackgroundArt "UI\Glues\BattleNet\BattleNetTeamLevelBar\BattleNetTeamLevelBar.mdl",
+
+        Frame "TEXT" "TeamProfileLevelValue" INHERITS "BattleNetValueTextTemplate" {
+            UseActiveContext,
+            SetPoint CENTER, "TeamProfileLevelBar", CENTER, -0.024375, 0.0,
+        }
+    }
+
+    Frame "TEXT" "TeamProfileWinsLabel" INHERITS "TeamLabelTextTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "BattleNetProfileTeam", TOPLEFT, 0.0975, 0.0,
+        Text "COLON_WINS",
+    }
+
+    Frame "TEXT" "TeamProfileLossesLabel" INHERITS "TeamLabelTextTemplate" {
+        UseActiveContext,
+        SetPoint BOTTOMLEFT, "BattleNetProfileTeam", BOTTOMLEFT, 0.0975, 0.0,
+        Text "COLON_LOSSES",
+    }
+
+    Frame "TEXT" "TeamProfileWinsValue" INHERITS "TeamValueTextTemplate" {
+        UseActiveContext,
+        Width 0.0655,
+        FontJustificationH JUSTIFYRIGHT,
+        SetPoint TOPLEFT, "TeamProfileWinsLabel", TOPLEFT, 0.0, 0.0,
+    }
+
+    Frame "TEXT" "TeamProfileLossesValue" INHERITS "TeamValueTextTemplate" {
+        UseActiveContext,
+        Width 0.0655,
+        FontJustificationH JUSTIFYRIGHT,
+        SetPoint TOPLEFT, "TeamProfileLossesLabel", TOPLEFT, 0.0, 0.0,
+    }
+
+    Frame "TEXT" "TeamProfilePartnerLabel" INHERITS "TeamLabelTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "TeamProfileWinsValue", RIGHT, 0.009125, 0.0,
+        Text "COLON_PARTNER",
+    }
+
+    Frame "TEXT" "TeamProfilePartnerAValue" INHERITS "TeamValueTextTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "TeamProfilePartnerLabel", TOPRIGHT, 0.004, 0.0,
+    }
+
+    Frame "TEXT" "TeamProfilePartnerBValue" INHERITS "TeamValueTextTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "TeamProfilePartnerAValue", BOTTOMLEFT, 0.0, -0.001375,
+    }
+}

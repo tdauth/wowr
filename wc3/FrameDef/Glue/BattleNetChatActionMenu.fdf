@@ -1,0 +1,35 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "CONTROL" "BattleNetChatActionMenu" {
+    Width 0.18,
+    Height 0.2,
+
+    ControlBackdrop "ActionMenuBackdrop",
+    Frame "BACKDROP" "ActionMenuBackdrop" {
+        UseActiveContext,
+        BackdropTileBackground,
+        BackdropBackground  "UI\widgets\BattleNet\bnet-tooltip-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundInsets 0.005f 0.005f 0.005f 0.005f,
+        BackdropEdgeFile  "UI\widgets\BattleNet\bnet-tooltip-border.blp",
+    }
+
+    Frame "SCROLLBAR" "ActionMenuScrollBar" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+        SetPoint TOPRIGHT, "BattleNetChatActionMenu", TOPRIGHT, 0.0, 0.0,
+        UseActiveContext,
+    }
+
+    Frame "TEXT" "UsernameTextValue" INHERITS "BattleNetLabelTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+
+        SetPoint TOPLEFT, "BattleNetChatActionMenu", TOPLEFT, 0.0095, -0.0095,
+    }
+}

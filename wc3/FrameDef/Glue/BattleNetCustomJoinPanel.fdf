@@ -1,0 +1,191 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetCustomJoinPanel" {
+    SetAllPoints,
+    TabFocusPush,
+
+    // --- title
+    Frame "TEXT" "CustomJoinTitleLabel" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetCustomJoinPanel", TOPLEFT, 0.02625, -0.039,
+        Text "BNET_CUSTOM_JOIN_TITLE",
+    }
+
+    // --- join game controls
+    Frame "TEXT" "JoinGameListLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomJoinTitleLabel", BOTTOMLEFT, 0.0, -0.0075,
+        Text "COLON_AVAILABLE_GAMES",
+    }
+
+    Frame "FRAME" "JoinGameListContainer" {
+        SetPoint TOPLEFT, "JoinGameListLabel", BOTTOMLEFT, 0.0, -0.001,
+        Height 0.305,
+        Width 0.375,
+    }
+
+    Frame "TEXT" "JoinGameNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "JoinGameListContainer", BOTTOMLEFT, 0.0, -0.006875,
+        Text "COLON_GAME_NAME",
+    }
+
+    Frame "EDITBOX" "JoinGameNameEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.213625,
+        SetPoint TOPLEFT, "JoinGameNameLabel", BOTTOMLEFT, 0.0, -0.001,
+		TabFocusDefault,
+        TabFocusNext "JoinGameButton",
+
+        EditTextFrame "JoinGameNameEditBoxText",
+        Frame "TEXT" "JoinGameNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+        }
+    }
+
+    Frame "BACKDROP" "JoinGameBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        BackdropMirrored,
+        SetPoint LEFT,"JoinGameNameEditBox",RIGHT, 0.0, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "JoinGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.128,
+            SetPoint TOPLEFT,"JoinGameBackdrop",TOPLEFT, 0.012, -0.0165,
+		    ControlShortcutKey "J",
+            TabFocusNext "LoadGameButton",
+
+            ButtonText "JoinGameButtonText",
+		    Frame "TEXT" "JoinGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_JOIN_GAME",
+		    }
+	    }
+    }
+
+	Frame "BUTTON" "GameFilterButton" {
+        Height 0.02,
+        Width 0.02,
+        SetPoint BOTTOMRIGHT,"JoinGameListContainer",TOPRIGHT, 0.0, 0.0,
+	}
+
+    // --- create panel
+    Frame "TEXT" "CustomCreateTitle" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetCustomJoinPanel", TOPLEFT, 0.02625, -0.4875,
+        Text "BNET_CUSTOM_JOIN_CREATE_TITLE",
+    }
+
+    Frame "TEXT" "CustomCreateInfo" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "CustomCreateTitle", BOTTOMLEFT, 0.0, -0.001875,
+        Text "BNET_CUSTOM_JOIN_CREATE_INFO",
+    }
+
+    Frame "BACKDROP" "CreateGameBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        BackdropMirrored,
+        SetPoint BOTTOMLEFT,"BattleNetCustomJoinPanel",BOTTOMLEFT, 0.24, 0.013,
+
+	    Frame "GLUETEXTBUTTON" "CreateGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.128,
+            SetPoint TOPLEFT,"CreateGameBackdrop",TOPLEFT, 0.012, -0.0165,
+		    ControlShortcutKey "C",
+            TabFocusNext "CancelButton",
+
+            ButtonText "CreateGameButtonText",
+		    Frame "TEXT" "CreateGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CREATE_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "LoadGameBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        BackdropMirrored,
+        SetPoint RIGHT,"CreateGameButton",LEFT, 0.085625, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "LoadGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.128,
+            SetPoint TOPLEFT,"LoadGameBackdrop",TOPLEFT, 0.012, -0.0165,
+		    ControlShortcutKey "L",
+            TabFocusNext "CreateGameButton",
+
+            ButtonText "LoadGameButtonText",
+		    Frame "TEXT" "LoadGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_LOAD_GAME",
+		    }
+	    }
+    }
+
+    // --- map info controls
+    Frame "FRAME" "MapInfoPaneContainer" {
+        Width 0.271875,
+        Height 0.223125,
+        SetPoint TOP, "BattleNetCustomJoinPanel", TOPRIGHT, -0.180625, -0.0375,
+    }
+
+    Frame "TEXT" "GameCreatorLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOP, "MapInfoPaneContainer", BOTTOM, 0.0, -0.005,
+
+        Text "COLON_GAME_CREATOR",
+    }
+
+    Frame "TEXT" "GameCreatorValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOPLEFT, "GameCreatorLabel", TOPLEFT, 0.0, 0.0,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "GameSpeedLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOP, "GameCreatorLabel", BOTTOM, 0.0, -0.002,
+
+        Text "COLON_GAME_SPEED",
+    }
+
+    Frame "TEXT" "GameSpeedValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOPLEFT, "GameSpeedLabel", TOPLEFT, 0.0, 0.0,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "GameCreationTimeLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOP, "GameSpeedLabel", BOTTOM, 0.0, -0.002,
+
+        Text "COLON_GAME_CREATION_TIME",
+    }
+
+    Frame "TEXT" "GameCreationTimeValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOPLEFT, "GameCreationTimeLabel", TOPLEFT, 0.0, 0.0,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "FRAME" "AdvancedOptionsContainer" {
+        Height 0.125,
+        Width 0.271875,
+        SetPoint TOP, "GameCreationTimeLabel", BOTTOM, 0.0, -0.008,
+    }
+
+    // -- bottom button controls
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetCustomJoinPanel",BOTTOMRIGHT, -0.014375, 0.099375,
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "B",
+            TabFocusNext "JoinGameNameEditBox",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}
+

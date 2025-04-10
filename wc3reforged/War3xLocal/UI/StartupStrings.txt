@@ -1,7 +1,0 @@
-﻿WARCRAFT III wird bereits ausgeführt.
-WARCRAFT III konnte DirectX nicht initialisieren. Prüfen Sie dass Sie DirectX 8.1 oder neuer installiert haben und die aktuellsten Versionen der benötigten Grafiktreiber verwenden. DirectX finden sie auf WARCRAFT III-Installations-CD unter 'Optionen'.
-WARCRAFT III konnte OpenGL nicht initialisieren.  Bitte stellen Sie sicher, dass Sie OpenGL installiert haben und die aktuellsten Versionen der benötigten Grafiktreiber verwenden.
-Warcraft III konnte die Datei War3.mpg nicht öffnen.  Bitte installieren Sie das Spiel nochmals von der WARCRAFT III-CD.
-Warcraft III konnte nicht den CD-Code finden.  Bitte installieren Sie das Spiel nochmals von der WARCRAFT III-CD.
-Diese Version von Warcraft III benötigt eine spezifische Sprachversion von Windows.
-

@@ -1,0 +1,36 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetFriendsPane" {
+
+    Frame "FRAME" "FriendListContainer" {
+        Height 0.28875,
+        SetPoint TOPLEFT, "BattleNetFriendsPane", TOPLEFT, 0.0, 0.0,
+        SetPoint TOPRIGHT, "BattleNetFriendsPane", TOPRIGHT, 0.0, 0.0,
+    }
+
+    Frame "EDITBOX" "AddFriendEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.17875,
+        SetPoint BOTTOMLEFT, "BattleNetFriendsPane", BOTTOMLEFT, 0.0, 0.0,
+
+        EditTextFrame "AddFriendEditBoxText",
+        Frame "TEXT" "AddFriendEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+        }            
+    }
+
+	Frame "GLUETEXTBUTTON" "AddFriendButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.0875,
+		SetPoint LEFT, "AddFriendEditBox", RIGHT, 0.0, 0.0,
+
+        ButtonText "AddFriendButtonText",
+		Frame "TEXT" "AddFriendButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "ADD",
+		}
+	}
+}
+
