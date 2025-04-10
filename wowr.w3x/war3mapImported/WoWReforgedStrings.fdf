@@ -153,6 +153,9 @@ StringList {
     RESOURCE_X_OF_Y                    "|cffffcc00%1%:|r|n  %2%/%3%",
     RESOURCE_X_OF_Y_BONUS_POSITIVE     "|cffffcc00%1%:|r|n  %2%/%3%|n|c0000ff00+%4%|r",
     RESOURCE_X_OF_Y_BONUS_NEGATIVE     "|cffffcc00%1%:|r|n  %2%/%3%|n|c0000ff00-%4%|r",
+    // Queue UI
+    SHOW_QUEUE_UI                      "Show",
+    HIDE_QUEUE_UI                      "Hide",
     // Limits
     REACHED_LIMIT_OF_X_FOR_Y           "Reached limit of %1% for building %2%.",
     // Witch Hut
