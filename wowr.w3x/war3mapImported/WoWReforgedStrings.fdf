@@ -50,6 +50,8 @@ StringList {
     WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
     NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Backpacks.",
     SKILL_FOR_CUSTOMIZABLE_HEROES      "Only Void Lord heroes, Archangel heroes, Sea Giant heroes or Equipment Backpacks at hero level 75 can change their hero abilities.",
+    // Reskillable Heroes
+    SKILL_POINTS_REMAINING             "%1% skill points remaining.",
     // Resurrection Stones
     ACTIVATED_RESURRECTION_STONE       "Activated Resurrection Stone.",
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",
