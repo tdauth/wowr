@@ -203,8 +203,6 @@ Here is a list of some modified versions online:
 * Maker: [Jump System v. 1.0.1.6](https://www.hiveworkshop.com/threads/jump-system-v-1-0-1-6.230294/)
 * chopinski: [New Bonus](https://www.hiveworkshop.com/threads/new-bonus-vjass-lua.324058/)
 * PurgeandFire: [Libram v3.0.0.0](https://www.hiveworkshop.com/threads/libram-v3-0-0-0.193521/)
-* Anitarf: [Arrow Key System](http://www.wc3c.net/showthread.php?t=101271)
-* Opossum: [Third Person Camera System](http://www.wc3c.net/showthread.php?t=104786)
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Dangerb0y: [Easy Item Stack 'n Split v2.7.4](https://www.hiveworkshop.com/threads/easy-item-stack-n-split-v2-7-4.153287/) as reference for the unstack and pickup item systems.
 * MeKC: [GetItemValue](https://www.hiveworkshop.com/threads/detecting-item-price.120355/#post-1045229) as reference for item gold and lumber value system.

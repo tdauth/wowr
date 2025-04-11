@@ -6027,6 +6027,8 @@ globals
     constant integer SMOLDERON                                       = 'N0DR'
     constant integer DENATHRIUS                                      = 'U03L'
 
+    constant integer MATHOGS_CAGE                                    = 'I040'
+
     // AI commands
     constant integer COMMAND_ATTACK_PLAYERS_ON                       = 1
     constant integer COMMAND_ATTACK_PLAYERS_OFF                      = 2
