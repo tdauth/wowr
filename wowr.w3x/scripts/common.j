@@ -5222,6 +5222,8 @@ globals
     constant integer EREDAR_CITIZEN_FEMALE                           = 'n0JP'
     constant integer EREDAR_HOUSING                                  = 'h0UE'
 
+    constant integer EREDAR_SHIPYARD                                 = 'o016'
+
     // Fel Orc
     constant integer FEL_ORC_TIER_1                                  = 'o08R'
     constant integer FEL_ORC_TIER_2                                  = 'o09A'
