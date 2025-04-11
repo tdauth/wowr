@@ -65,10 +65,6 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_ORC_BACKPACK)
         call SetBuildUpgr(1, UPG_FEL)
         call SetBuildUnit(1, FOUNTAIN_OF_BLOOD)
-        call SetBuildUnit(3, CHAOS_PEON)
-        call SetBuildUnit(1, FEL_DRAGON_ROOST)
-        call SetBuildUnit(2, PIG_FARM)
-        call SetBuildUnit(2, CHAOS_BURROW)
 
         call BuildingStrategyStandardTier3()
 
@@ -100,13 +96,8 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, sorceresses, SHAMAN)
         call AttackerSimple(4, siege_engines, CATAPULT)
         call AttackerSimple(5, spellbreakers, SPIRIT_WALKER)
-        call AttackerSimple(12, knights, CHAOS_GRUNT)
-        call AttackerSimple(12, knights, CHAOS_WARLOCK)
-        call AttackerSimple(12, knights, CHAOS_RAIDER)
-        call AttackerSimple(12, mortars, CHAOS_KODO)
         call AttackerSimple(12, tauren, TAUREN)
         call AttackerSimple(12, gryphons, WYVERN)
-        call AttackerSimple(12, flying_machines, ORC_DRAGON)
         call AttackerSimple(12, dragon_hawks, BATRIDER)
         
         call AddStandardUnitsToAttackWave()

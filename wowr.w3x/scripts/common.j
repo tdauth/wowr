@@ -3074,8 +3074,6 @@ globals
     constant integer CLAN_EMISSARY                                   = 'n04G'
 
     constant integer UPG_HERO_CLAN                                   = 'R03D'
-    constant integer UPG_IMPROVED_CLAN_HALL                          = 'R03C'
-    constant integer UPG_IMPROVED_CLAN                               = 'R03B'
     constant integer UPG_CLAN_HAS_NO_AI_PLAYER                       = 'R046'
 
     constant integer DEMIGOD_LIGHT                                   = 'H003'
@@ -3507,6 +3505,8 @@ globals
     constant integer ITEM_TINY_CHEST                                 = 'I134'
 
     // Items
+
+    constant integer ITEM_GLOVES_OF_HASTE                            = 'gcel'
 
     // Holy Set
     constant integer ITEM_HOLY_CREST                                 = 'I16G'
