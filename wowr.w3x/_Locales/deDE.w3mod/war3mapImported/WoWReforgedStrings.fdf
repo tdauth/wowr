@@ -37,6 +37,7 @@ StringList {
     CANNOT_TELEPORT_INTO_THIS_AREA     "Kann nicht in dieses Gebiet teleportieren.",
     CANNOT_JUMP_THERE                  "Kann nicht dorthin springen.",
     UNABLE_TO_WATER_GROUND_HERE        "Boden kann hier nicht bewässert werden.",
+    OWNER_X_IS_NOT_ALLOWED             "Besitzer %1% ist nicht erlaubt.",
     // war3mapMisc.txt
     TIER_1_HALL                        "Rathaus Stufe 1",
     TIER_2_HALL                        "Rathaus Stufe 2",
