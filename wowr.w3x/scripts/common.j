@@ -2818,22 +2818,9 @@ globals
     constant integer MAX_HERO_LEVEL                                  = 75
     constant integer MAX_HERO_SPELL_LEVEL                            = 15
     constant integer MAX_HEROES                                      = 3
+
+    // All Races
     constant integer SPELL_BOOK                                      = 'o025'
-    constant integer POWER_GENERATOR                                 = 'n025'
-    constant integer ITEM_TINY_POWER_GENERATOR                       = 'I05C'
-    constant integer PORTAL                                          = 'h014'
-    constant integer ITEM_TINY_PORTAL                                = 'I05B'
-    constant integer PORTAL_NEUTRAL                                  = 'nwgt'
-    constant integer PORTAL_NEUTRAL_2                                = 'n01G'
-    constant integer PORTAL_NEUTRAL_FREELANCER                       = 'n03A'
-    constant integer PORTAL_NEUTRAL_WATER                            = 'n04A'
-    constant integer RESEARCH_TENT                                   = 'n042'
-    constant integer ITEM_TINY_RESEARCH_TENT                         = 'I0LK'
-    constant integer EVENT_HOUSE                                     = 'n054'
-    constant integer CRAFTING_STASH                                  = 'h04V'
-    constant integer ITEM_TINY_CRAFTING_STASH                        = 'I0LL'
-    constant integer CRAFTING_STASH_NEUTRAL                          = 'h0J2'
-    constant integer MARKETPLACE                                     = 'nmrk'
     constant integer TRADING_POST                                    = 'n04J'
     constant integer ITEM_TINY_TRADING_POST                          = 'I0L9'
     constant integer ANTIMAGIC_WARD                                  = 'o01Z'
@@ -2854,37 +2841,80 @@ globals
     constant integer ITEM_TINY_DRAGON_ROOST                          = 'I126'
     constant integer TEMPLE_OF_DARKNESS                              = 'h00N'
     constant integer TEMPLE_OF_LIGHT                                 = 'h00M'
+    constant integer MOUNTS_SHOP                                     = 'n06U'
+    constant integer RESEARCH_TENT                                   = 'n042'
+    constant integer ITEM_TINY_RESEARCH_TENT                         = 'I0LK'
+    constant integer EVENT_HOUSE                                     = 'n054'
+    constant integer CRAFTING_STASH                                  = 'h04V'
+    constant integer ITEM_TINY_CRAFTING_STASH                        = 'I0LL'
+    constant integer POWER_GENERATOR                                 = 'n025'
+    constant integer ITEM_TINY_POWER_GENERATOR                       = 'I05C'
+    constant integer PORTAL                                          = 'h014'
+    constant integer ITEM_TINY_PORTAL                                = 'I05B'
+    constant integer WALL                                            = 'h04Q'
+    constant integer ITEM_TINY_WALL                                  = 'I0L8'
+    constant integer ENGINEER_SHIP                                   = 'n03H'
+    constant integer GNOMISH_SUBMARINE                               = 'h029'
+    constant integer ARMORY                                          = 'n0IS'
+    constant integer ITEM_TINY_ARMORY                                = 'I0U7'
+    constant integer FRUIT_STAND_ALL_RACES                           = 'n0J7'
+    constant integer ITEM_TINY_FRUIT_STAND_ALL_RACES                 = 'I0WV'
+    constant integer WATER_TOWER                                     = 'n0ND'
+    constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
+
+    // Neutral Buildings
     constant integer HERO_SPELLS_SLOT_1                              = 'n0AN'
     constant integer HERO_SPELLS_SLOT_2                              = 'n08I'
     constant integer HERO_SPELLS_SLOT_3                              = 'n06Y'
     constant integer HERO_SPELLS_SLOT_4                              = 'n08H'
     constant integer HERO_SPELLS_SLOT_5                              = 'n08G'
-    constant integer MOUNTS_SHOP                                     = 'n06U'
-    constant integer WALL                                            = 'h04Q'
-    constant integer ITEM_TINY_WALL                                  = 'I0L8'
-    constant integer ENGINEER_SHIP                                   = 'n03H'
-    constant integer GNOMISH_SUBMARINE                               = 'h029'
+    constant integer MARKETPLACE                                     = 'nmrk'
+    constant integer CRAFTING_STASH_NEUTRAL                          = 'h0J2'
+    constant integer PORTAL_NEUTRAL                                  = 'nwgt'
+    constant integer PORTAL_NEUTRAL_2                                = 'n01G'
+    constant integer PORTAL_NEUTRAL_FREELANCER                       = 'n03A'
+    constant integer PORTAL_NEUTRAL_WATER                            = 'n04A'
+    constant integer ARMORY_NEUTRAL                                  = 'n0IU'
     constant integer LEVEL_PORTAL                                    = 'h0QO'
     constant integer GAME_MODE_TAVERN                                = 'n05U'
     constant integer HEROES_TAVERN                                   = 'n0I0'
     constant integer RACES_TAVERN                                    = 'n0I1'
     constant integer PROFESSIONS_TAVERN                              = 'n0I2'
     constant integer START_LOCATIONS_TAVERN                          = 'n05V'
-    constant integer ARMORY                                          = 'n0IS'
-    constant integer ITEM_TINY_ARMORY                                = 'I0U7'
-    constant integer ARMORY_NEUTRAL                                  = 'n0IU'
-    constant integer FRUIT_STAND_ALL_RACES                           = 'n0J7'
-    constant integer ITEM_TINY_FRUIT_STAND_ALL_RACES                 = 'I0WV'
     constant integer RESURRECTION_STONE_0                            = 'nbse'
     constant integer RESURRECTION_STONE_1                            = 'nbsw'
-    constant integer WATER_TOWER                                     = 'n0ND'
-    constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
+    constant integer TRAINER                                         = 'n079'
+    constant integer TRAINER_NEUTRAL                                 = 'n0GT'
+    constant integer ITEM_TINY_TRAINER                               = 'I1AM'
     constant integer LEGENDARY_ARTIFACT                              = 'nfrm'
+    constant integer CHEST_NEUTRAL                                   = 'n0AB'
+    constant integer ALCHEMIST_LAB_NEUTRAL                           = 'n0CD'
+    constant integer FOUNTAIN_OF_HEALTH_NEUTRAL                      = 'nfoh'
+    constant integer FOUNTAIN_OF_MANA_NEUTRAL                        = 'nmoo'
+    constant integer FOUNTAIN_OF_POWER                               = 'nfnp'
+    constant integer GOBLIN_SHIPYARD_NEUTRAL                         = 'nshp'
+    constant integer GOBLIN_MERCHANT_NEUTRAL                         = 'n07P'
+    constant integer GOBLIN_RACING_ORGANISATION                      = 'ngad'
+    constant integer BLACK_MARKET                                    = 'ngme'
+    constant integer EQUIPMENT_LABORATORY                            = 'n06S'
+
+    constant integer LIBRARY                                         = 'n075'
+    constant integer AUCTION_HOUSE                                   = 'n0MN'
+
+    // Roosts
+    constant integer GREEN_DRAGON_ROOST                              = 'ndrg'
+    constant integer RED_DRAGON_ROOST                                = 'ndrr'
+    constant integer BLACK_DRAGON_ROOST                              = 'ndrk'
+    constant integer BLUE_DRAGON_ROOST                               = 'ndru'
+    constant integer BRONZE_DRAGON_ROOST                             = 'ndrz'
+    constant integer NETHER_DRAGON_ROOST                             = 'ndro'
+    constant integer PHOENIX_ROOST                                   = 'n031'
 
     constant integer DEAD_ANIMAL                                     = 'n0A2'
 
     // Neutral
     constant integer GOLD_MINE                                       = 'ngol'
+    constant integer WATER_GOLD_MINE                                 = 'n03G'
     constant integer RANDOM_MINE                                     = 'n0DF'
     constant integer GEMSTONES_MINE                                  = 'n0DC'
     constant integer ORE_MINE                                        = 'n0DG'
@@ -2906,6 +2936,9 @@ globals
     constant integer FLOTSAM                                         = 'n0DJ'
 
     constant integer ANIMAL_PEN                                      = 'n0O5' // Wool Mine
+
+    // Dungeons
+    constant integer POWER_GENERATOR_BOSS_DUNGEON                    = 'n044'
 
     // Properties
     constant integer PROPERTY_WYRMREST_TEMPLE                        = 'n0OC'
@@ -3001,6 +3034,9 @@ globals
     constant integer GNOMISH_LOCOMOTIVE_TRAIN                        = 'n0IP'
 
     // Levers
+    constant integer LEVER_BRIDGE                                    = 'n0HZ'
+    constant integer LEVER_GATE                                      = 'n0ES'
+    constant integer LEVER_GATE_AND_BRIDGE                           = 'n08R'
     constant integer LEVER_ALL                                       = 'n0AH'
 
     constant integer MOVE_BRIDGE_DOWN                                = 'o02X' // close
@@ -3090,6 +3126,8 @@ globals
     constant integer ITEM_TYPE_SCRIBE                                = 'I0HC'
 
     // arena
+    constant integer STONEMAUL_ARENA_MASTER                          = 'h008'
+
     constant integer ITEM_TYPE_TICKET_1                              = 'I00Y'
     constant integer ITEM_TYPE_STONE_TOKEN                           = 'fgrg'
 
@@ -3545,7 +3583,9 @@ globals
     constant integer SAND_WORM_BURROWED                              = 'n0N3'
     constant integer LIVING_STATUE                                   = 'n0N7'
     constant integer LIVING_STATUE_M                                 = 'n0N8' // standing
-    constant integer CAGE                                            = 'o043'
+    constant integer CAGE_0                                          = 'o043'
+    constant integer CAGE_1                                          = 'o00Q'
+    constant integer CAGE_2                                          = 'o015'
     constant integer CRATES_0                                        = 'o0BQ'
     constant integer CRATES_1                                        = 'o0BR'
     constant integer BARREL_0                                        = 'o0C1'
@@ -3555,19 +3595,13 @@ globals
     constant integer EXPLOSIVE_BARREL_CREEP                          = 'h0P9'
 
     // Housing
+    constant integer REAL_ESTATE_AGENT                               = 'n0O3'
     constant integer CARETAKER                                       = 'n0O2'
     constant integer LEAVE_HOUSING                                   = 'o0BS'
     constant integer ITEM_HOUSE_KEY                                  = 'I16O'
 
     constant integer ENTER_COMMON_HOUSING                            = 'o0C3'
     constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'
-
-    // Neutral Buildings
-    constant integer TRAINER                                         = 'n079'
-    constant integer TRAINER_NEUTRAL                                 = 'n0GT'
-    constant integer ITEM_TINY_TRAINER                               = 'I1AM'
-
-    constant integer LIBRARY                                         = 'n075'
 
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT

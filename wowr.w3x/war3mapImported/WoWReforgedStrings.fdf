@@ -37,6 +37,7 @@ StringList {
     CANNOT_TELEPORT_INTO_THIS_AREA     "Cannot teleport into this area.",
     CANNOT_JUMP_THERE                  "Cannot jump there.",
     UNABLE_TO_WATER_GROUND_HERE        "Unable to water the ground here.",
+    OWNER_X_IS_NOT_ALLOWED             "Owner %1% is not allowed.",
     // war3mapMisc.txt
     TIER_1_HALL                        "Tier 1 Hall",
     TIER_2_HALL                        "Tier 2 Hall",
