@@ -497,6 +497,7 @@ Here is a list of some modified versions online:
 * Mike: [Wagon](https://www.hiveworkshop.com/threads/wagon.250916/)
 * expresso, Tranquil: [Angel](https://www.hiveworkshop.com/threads/angel.65292/)
 * Mike: [Chalice](https://www.hiveworkshop.com/threads/chalice.244829/)
+* CRAZYRUSSIAN: [BTNHL_Holy_Grail](https://www.hiveworkshop.com/threads/btnhl_holy_grail.57330/)
 * Asssssvi: [Footman Kul-Tiras HD](https://www.hiveworkshop.com/threads/footman-kul-tiras-hd.319578/)
 * Asssssvi: [Royal Guard Kul-Tiras HD](https://www.hiveworkshop.com/threads/royal-guard-kul-tiras-hd.322373/)
 * Hellx-Magnus: [BTNSpectralHead](https://www.hiveworkshop.com/threads/btnspectralhead.170421/)
