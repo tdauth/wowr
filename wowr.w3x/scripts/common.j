@@ -4310,6 +4310,7 @@ globals
     constant integer GNOME_ALTAR_OF_TECHNOLOGY                       = 'h0QM' // altar
     constant integer GNOME_TECHNOLOGY_FAIR                           = 'h0QN' // shop
     constant integer GNOME_SHIPYARD                                  = 'h0WN'
+    constant integer GNOME_SKYFIRE_GUNSHIP                           = 'h0VM' // special building
 
     constant integer UPG_GNOME_BACKPACK                              = 'R09O'
     constant integer UPG_GNOME_INVENTIONS                            = 'R09N'
@@ -4318,6 +4319,9 @@ globals
     constant integer UPG_GNOME_ARMOR                                 = 'R0E1'
     constant integer UPG_GNOME_ENGINEERING                           = 'R0E2'
     constant integer UPG_GNOME_RESISTANT_SKIN                        = 'R0E3'
+    constant integer UPG_GNOME_LONG_RIFLES                           = 'R0FM'
+    constant integer UPG_GNOME_WINDWALK                              = 'R0FL'
+    constant integer UPG_GNOME_SKYFIRE_GUNSHIP                       = 'R0HD' // special building
 
     constant integer GNOME_ENGINEER                                  = 'h0JY' // worker
     constant integer GNOME_ROGUE                                     = 'h0S5' // footman
@@ -5337,23 +5341,32 @@ globals
     constant integer SATYR_ANCIENT_PROTECTOR                         = 'n0GW' // tower
     constant integer SATYR_DEMON_GATE                                = 'n0H9' // aviary
     constant integer SATYR_MINE                                      = 'e020'
+    constant integer SATYR_SKULL_OF_GULDAN                           = 'o09T' // special building
 
     constant integer UPG_SATYR_BACKPACK                              = 'R0DX'
     constant integer UPG_SATYR_STR_MOON                              = 'R0GB'
     constant integer UPG_SATYR_MOON_ARMOR                            = 'R0GA'
+    constant integer UPG_SATYR_STR_WILD                              = 'R0H6'
+    constant integer UPG_SATYR_HIDES                                 = 'R0H8'
     constant integer UPG_SATYR_SLUDGE_FLINGER                        = 'R0GC'
     constant integer UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS          = 'R0IJ'
+    constant integer UPG_SATYR_MANA_BURN                             = 'R0H9'
+    constant integer UPG_SATRY_BLESSING                              = 'R0H7'
+    constant integer UPG_SATYR_SKULL_OF_GULDAN                       = 'R0HC' // special building
 
     constant integer SATYR_WORKER                                    = 'e01Y'
     constant integer SATYR_SATYR                                     = 'n0L6' // footman
     constant integer SATYR_TRICKSTER                                 = 'n0L5' // archer
     constant integer SATYR_GIANT_SKELETON_WARRIOR                    = 'n0L7' // knight
-    constant integer SATYR_GREEN_DRAKE                               = 'n0HE'
-    constant integer SATYR_CORRUPTED_TREANT                          = 'n0H8'
-    constant integer SATYR_GHOST                                     = 'n0HB'
-    constant integer SATYR_SATYR_SHADOWDANCER                        = 'n0HD'
-    constant integer SATYR_SATYR_HELLCALLER                          = 'n0HL'
-    constant integer SATYR_SLUDGE_FLINGER                            = 'n0HC'
+    constant integer SATYR_GREEN_DRAKE                               = 'n0HE' // gryphon, dragon hawk and flying machine
+    constant integer SATYR_CORRUPTED_TREANT                          = 'n0H8' // mortar
+    constant integer SATYR_GHOST                                     = 'n0HB' // sorceress
+    constant integer SATYR_SATYR_SHADOWDANCER                        = 'n0HD' // spell breaker
+    constant integer SATYR_SATYR_HELLCALLER                          = 'n0HL' // tauren
+    constant integer SATYR_SLUDGE_FLINGER                            = 'n0HC' // priest
+    constant integer SATYR_INFERNAL                                  = 'n0L4' // tauren 2
+    constant integer SATYR_FEL_STALKER                               = 'n0L3' // siege engine
+    constant integer SATYR_DOOMG_GUARD                               = 'n0L2' // tauren 3
 
     constant integer SATYR_PET                                       = 'n0N6'
     constant integer SATYR_CITIZEN_MALE                              = 'n0KX'
