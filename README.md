@@ -114,8 +114,8 @@ It has to be loaded with `BlzLoadTOCFile` before using any `GetLocalizedString` 
 There can be translations of the map into different languages.
 These are the existing translations so far:
 
-* 🇺🇸 [English map strings](./wowr.w3x/war3map.wts), [English global strings](./wowr.w3x/war3mapImported/WoWReforgedStrings.fdf), [English Gameplay Constants](./wowr.w3x/war3mapMisc.txt)
-* 🇩🇪 [German map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [German global strings](./wowr.w3x/_Locales/deDE.w3mod/war3mapImported/WoWReforgedStrings.fdf), [German Gameplay Constants](./wowr.w3x/_Locales/deDE.w3mod/war3mapMisc.txt)
+* 🇺🇸 English: [map strings](./wowr.w3x/war3map.wts), [global strings](./wowr.w3x/war3mapImported/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/war3mapMisc.txt)
+* 🇩🇪 German: [map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [global strings](./wowr.w3x/_Locales/deDE.w3mod/war3mapImported/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/_Locales/deDE.w3mod/war3mapMisc.txt)
 
 The files have to be updated according to the English files which are the main files.
 Strings in custom scripts should always refer to entries from the global strings FDF file:
