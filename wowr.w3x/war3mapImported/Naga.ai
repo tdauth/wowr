@@ -46,6 +46,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(2, UPG_SIREN)
         call SetBuildUpgr(2, UPG_NAGA_SORCEROR)
         call SetBuildUpgr(1, UPG_NAGA_ENSNARE)
+        call SetBuildUpgr(1, UPG_NAGA_RESISTANT_SKIN)
         call SetBuildUpgr(1, UPG_NAGA_STATUE_OF_AZSHARA)
         call SetBuildUnit(1, NAGA_STATUE_OF_ASZHARA)
 

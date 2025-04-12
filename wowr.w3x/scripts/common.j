@@ -3891,12 +3891,13 @@ globals
     constant integer NAGA_SHIPYARD                                   = 'e00O'
 
     constant integer UPG_NAGA_SUBMERGE                               = 'Rnsb'
-    constant integer UPG_NAGA_SORCEROR                               = 'R0IH' // spellbreaker
+    constant integer UPG_NAGA_SORCEROR                               = 'R0IH' // priest
     constant integer UPG_NAGA_BACKPACK                               = 'R01E'
+    constant integer UPG_NAGA_RESISTANT_SKIN                         = 'R05H'
     constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
 
-    constant integer NAGA_WHALER                                     = 'n05Q' // sorceress
-    constant integer NAGA_SORCEROR                                   = 'n0LA' // spellbreaker
+    constant integer NAGA_WHALER                                     = 'n05Q' // spellbreaker
+    constant integer NAGA_SORCEROR                                   = 'n0LA' // priest
     constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
     constant integer NAGA_SNAP_DRAGON_SUBMERGED                      = 'nsbs' // weak ranged
     constant integer NAGA_MYRMIDON_SUBMERGED                         = 'nmys' // knight
