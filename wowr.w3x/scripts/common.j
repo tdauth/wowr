@@ -4320,13 +4320,18 @@ globals
     constant integer UPG_GNOME_RESISTANT_SKIN                        = 'R0E3'
 
     constant integer GNOME_ENGINEER                                  = 'h0JY' // worker
+    constant integer GNOME_ROGUE                                     = 'h0S5' // footman
     constant integer GNOME_RIFLEMAN                                  = 'h0KC' // rifleman
     constant integer GNOME_FIELD_ENGINEER                            = 'h0K8' // knight
+    constant integer GNOME_ARCANIST                                  = 'h0QD' // priest
+    constant integer GNOME_SORCERESS                                 = 'h0S7' // sorceress
+    constant integer GNOME_MAGE                                      = 'h0S6' // spellbreaker
     constant integer GNOME_ARTILLERY_TANK                            = 'h0KD' // demolisher
     constant integer GNOME_FLYING_MACHINE                            = 'h0KO'
     constant integer GNOME_GRYPHON_RIDER                             = 'h0KP'
     constant integer GNOME_HOVER_COPTER                              = 'h0KQ'
-    constant integer GNOME_MORTAR_TEAM                               = 'h0KR'
+    constant integer GNOME_MORTAR_TEAM                               = 'h0KR' // mortar
+    constant integer GNOME_DRILL_ENGINE                              = 'h0S4' // siege engine
 
     constant integer GNOME_CITIZEN_MALE                              = 'n0D0'
     constant integer GNOME_CITIZEN_FEMALE                            = 'n0D4'

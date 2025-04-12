@@ -109,8 +109,6 @@ function AttackWaves takes nothing returns nothing
     endloop
 endfunction
 
-endfunction
-
 function main takes nothing returns nothing
     call MainWoWReforged(QUILLBOAR_HUT, function BuildingStrategy)
 

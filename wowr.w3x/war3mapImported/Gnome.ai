@@ -3,7 +3,7 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, GNOME_TIER_1)
-        call SetBuildUnit(WORKERS_COUNT_START, GNOME_ENGINEER)
+        call SetBuildUnit(workers, GNOME_ENGINEER)
         call SetBuildUnit(2, GNOME_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
@@ -91,156 +91,25 @@ function BuildingStrategy takes nothing returns nothing
 endfunction
 
 function AttackWaves takes nothing returns nothing
-    //*** WAVE 1 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(0, 1, 2, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M3)
-    call LaunchAttack()
-
-    //*** WAVE 2 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(2, 3, 3, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(0, 1, 2, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 3 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M1) // Waits 1 minute before attacking
-    call LaunchAttack()
-
-    //*** WAVE 4 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 5 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 6 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 7 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 8 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 9 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 10 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
-    call CampaignAttackerEx(2, 2, 3, GNOME_MORTAR_TEAM)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    //*** WAVE 11 ***
-    call InitAssaultGroup()
-    call CampaignAttackerEx(3, 4, 4, GNOME_RIFLEMAN)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCHER)
-    call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_ARCH_CLERIC)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_PRIEST)
-    //call CampaignAttackerEx(1, 2, 3, HIGH_ELF_SORCERESS)
-    call CampaignAttackerEx(2, 2, 3, GNOME_HOVER_COPTER)
-    call CampaignAttackerEx(2, 2, 3, GNOME_MORTAR_TEAM)
-    call AddStandardUnitsToAttackWave()
-    call Sleep(M2) // Waits 2 minutes before attacking
-    call LaunchAttack()
-
-    loop //Init the infinite attack loop
-        //*** WAVE 12 ***
+    loop
         call InitAssaultGroup()
 
-        // small ground army
-        call CampaignAttackerEx(4, 4, 4, GNOME_RIFLEMAN)
-        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_ARCHER)
-        call CampaignAttackerEx(0, 1, 2, GNOME_FIELD_ENGINEER)
-        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_ARCH_CLERIC)
-        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_PRIEST)
-        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_SORCERESS)
-        call CampaignAttackerEx(4, 4, 4, GNOME_MORTAR_TEAM)
-        call CampaignAttackerEx(4, 4, 4, GNOME_ARTILLERY_TANK)
-        //call CampaignAttackerEx(4, 4, 4, HIGH_ELF_KNIGHT)
-        call CampaignAttackerEx(4, 4, 4, GNOME_FLYING_MACHINE)
-
-        // big air army
-        call CampaignAttackerEx(8, 12, 18, GNOME_HOVER_COPTER)
-        call CampaignAttackerEx(8, 12, 18, GNOME_GRYPHON_RIDER)
+        call AttackerSimple(0, footmen, GNOME_ROGUE)
+        call AttackerSimple(0, riflemen, GNOME_RIFLEMAN)
+        call AttackerSimple(2, knights, GNOME_FIELD_ENGINEER)
+        call AttackerSimple(3, priests, GNOME_ARCANIST)
+        call AttackerSimple(3, sorceresses, GNOME_SORCERESS)
+        call AttackerSimple(4, mortars, GNOME_MORTAR_TEAM)
+        call AttackerSimple(4, siege_engines, GNOME_ARTILLERY_TANK)
+        call AttackerSimple(4, siege_engines, GNOME_DRILL_ENGINE)
+        call AttackerSimple(5, spellbreakers, GNOME_MAGE)
+        call AttackerSimple(12, gryphons, GNOME_GRYPHON_RIDER)
+        call AttackerSimple(12, dragon_hawks, GNOME_HOVER_COPTER)
+        call AttackerSimple(12, flying_machines, GNOME_FLYING_MACHINE)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
-        call Sleep(M2) // Waits 2 minutes before attacking
+        call Sleep(M2)
         call LaunchAttack()
     endloop
 endfunction

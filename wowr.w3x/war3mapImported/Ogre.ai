@@ -100,7 +100,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(5, spellbreakers, OGRE_OGRE_NECROMANCER)
         call AttackerSimple(5, spellbreakers, STORMWIND_BISHOP)
         call AttackerSimple(12, tauren, OGRE_GRONN_WAR_CLUB)
-        call AttackerSimple(12, taurens, OGRE_MOKNATHAL)
+        call AttackerSimple(12, tauren, OGRE_MOKNATHAL)
         call AttackerSimple(12, 1, OGRE_KORGALL)
         call AttackerSimple(12, 4, OGRE_STONEMAUL_OGRE)
         call AttackerSimple(12, 4, OGRE_STONEMAUL_MAGI)
