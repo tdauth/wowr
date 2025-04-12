@@ -163,7 +163,17 @@ Sometimes versions of this map might lead to crashing but since it is really har
 * Not enough space for AI to build its base.
 * `CreateRegion` in globals instead of a JASS function crashes the game on saving it.
 * String literals which are longer than 1023 characters will lead to crashes on loading save games.
+
+## Know Reasons for Desyncs
+
 * Using trigger conditions instead of trigger actions for triggers with events `EVENT_PLAYER_UNIT_SELECTED` and `EVENT_PLAYER_UNIT_DESELECTED` will lead to weird desync bugs and unselecting selected units.
+
+## Analyzing Crashes and Desyncs
+
+Warcraft III stores information about games with crashes or desyncs in the folder `C:\Users\%USER%\Documents\Warcraft III\Errors\`.
+We have core dump files which could only be read with debug symbols in the binary of Warcraft III.
+The core dump file can be checked to find some readable stuff about the current state.
+We have replays which can either be watched or analyzed with a tool to see the final actions of users before the crash/desync.
 
 ## History of the Map
 

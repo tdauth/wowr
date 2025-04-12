@@ -42,7 +42,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_GNOME_ARCANIST)
         //call SetBuildUpgr(1, UPG_HIGH_ELF_PRAYING_CLERIC)
         //call SetBuildUpgr(1, UPG_SORCERY)
-        //call SetBuildUpgr(1, UPG_HIGH_ELF_BOWS)
+        call SetBuildUpgr(1, UPG_GNOME_LONG_RIFLES)
 
         // Tier 3 buildings
         call SetBuildUnit(1, GNOME_TIER_3)
@@ -64,11 +64,11 @@ function BuildingStrategy takes nothing returns nothing
         //call SetBuildUpgr(1, UPG_HIGH_ELF_MAGIC_SENTRY)
         //call SetBuildUpgr(1, UPG_HIGH_ELF_ANIMAL)
         //call SetBuildUpgr(1, UPG_HIGH_ELF_ANTIMAGIC)
-        //call SetBuildUpgr(1, UPG_HIGH_ELF_CLOUD)
+        call SetBuildUpgr(1, UPG_GNOME_WINDWALK)
         call SetBuildUpgr(1, UPG_GNOME_INVENTIONS)
         call SetBuildUpgr(1, UPG_GNOME_BACKPACK)
-        //call SetBuildUpgr(1, UPG_HIGH_ELF_SUNWELL)
-        //call SetBuildUnit(1, HIGH_ELF_SUNWELL)
+        call SetBuildUpgr(1, UPG_GNOME_SKYFIRE_GUNSHIP)
+        call SetBuildUnit(1, GNOME_SKYFIRE_GUNSHIP)
 
         call BuildingStrategyStandardTier3()
 
