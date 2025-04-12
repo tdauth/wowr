@@ -15,7 +15,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, HIGH_ELF_ALTAR)
         call SetBuildUnit(1, HIGH_ELF_BAZAAR)
 
-        call SetBuildUpgr(1, UPG_DEFEND)
+        call SetBuildUpgr(1, UPG_HIGH_ELF_DEFEND)
         call SetBuildUpgr(1, UPG_HIGH_ELF_MELEE)
         call SetBuildUpgr(1, UPG_HIGH_ELF_ARMOR)
         call SetBuildUpgr(1, UPG_HIGH_ELF_LEATHER)
@@ -41,7 +41,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(2, UPG_HIGH_ELF_MASONRY)
         call SetBuildUpgr(1, UPG_HIGH_ELF_PRAYING)
         call SetBuildUpgr(1, UPG_HIGH_ELF_PRAYING_CLERIC)
-        call SetBuildUpgr(1, UPG_SORCERY)
+        call SetBuildUpgr(1, UPG_HIGH_ELF_SORCERY)
         call SetBuildUpgr(1, UPG_HIGH_ELF_BOWS)
 
         // Tier 3 buildings
@@ -59,7 +59,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(3, UPG_HIGH_ELF_MASONRY)
         call SetBuildUpgr(2, UPG_HIGH_ELF_PRAYING)
         call SetBuildUpgr(2, UPG_HIGH_ELF_PRAYING_CLERIC)
-        call SetBuildUpgr(2, UPG_SORCERY)
+        call SetBuildUpgr(2, UPG_HIGH_ELF_SORCERY)
         call SetBuildUpgr(1, UPG_HIGH_ELF_MARKSMAN)
         call SetBuildUpgr(1, UPG_HIGH_ELF_MAGIC_SENTRY)
         call SetBuildUpgr(1, UPG_HIGH_ELF_ANIMAL)

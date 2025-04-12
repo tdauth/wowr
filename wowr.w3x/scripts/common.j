@@ -4249,6 +4249,7 @@ globals
     constant integer HIGH_ELF_SUNWELL                                = 'n05F' // special building
     constant integer HIGH_ELF_SHIPYARD                               = 'h04Y'
 
+    constant integer UPG_HIGH_ELF_DEFEND                             = 'R04Z'
     constant integer UPG_HIGH_ELF_BOWS                               = 'R04G'
     constant integer UPG_HIGH_ELF_WOOD                               = 'R04H'
     constant integer UPG_HIGH_ELF_MASONRY                            = 'R04K'
@@ -4258,6 +4259,7 @@ globals
     constant integer UPG_HIGH_ELF_LEATHER                            = 'R04O'
     constant integer UPG_HIGH_ELF_MARKSMAN                           = 'R04D'
     constant integer UPG_HIGH_ELF_PRAYING                            = 'R04J'
+    constant integer UPG_HIGH_ELF_SORCERY                            = 'R00W'
     constant integer UPG_HIGH_ELF_PRAYING_CLERIC                     = 'R04L'
     constant integer UPG_HIGH_ELF_ANIMAL                             = 'R04F'
     constant integer UPG_HIGH_ELF_ANTIMAGIC                          = 'R04C'
