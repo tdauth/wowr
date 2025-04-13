@@ -3834,9 +3834,9 @@ globals
     constant integer BLOOD_ELF_SHIPYARD                              = 'h0WJ'
 
     constant integer UPG_BLOOD_ELF_BACKPACK                          = 'R0DY'
-    constant integer UPG_BLOOD_ELF_DEFEND                            = UPG_DEFEND
-    constant integer UPG_BLOOD_ELF_SORCERY                           = UPG_SORCERY
-    constant integer UPG_BLOOD_ELF_SENTINEL                          = UPG_SENTINEL
+    constant integer UPG_BLOOD_ELF_DEFEND                            = 'R01T'
+    constant integer UPG_BLOOD_ELF_SORCERY                           = 'R02Z'
+    constant integer UPG_BLOOD_ELF_SENTINEL                          = 'R024'
     constant integer UPG_BLOOD_ELF_BREEDING                          = 'R000'
     constant integer UPG_BLOOD_ELF_BOWS                              = 'R009'
     constant integer UPG_BLOOD_ELF_WOOD                              = 'R006'
