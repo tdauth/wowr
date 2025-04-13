@@ -3577,6 +3577,9 @@ globals
     constant integer ITEM_SPIKE_TRAPS                                = 'I0GH'
 
     // Creeps
+    constant integer GHOST                                           = 'ngh1'
+    constant integer WRAITH                                          = 'ngh2'
+
     constant integer BARBED_ARACHNATHID_WITH_BURROW                  = 'nanm'
     constant integer BARBED_ARACHNATHID_BURROWED                     = 'nbnb'
     constant integer SAND_WORM                                       = 'n0N2'
