@@ -61,6 +61,8 @@ boolean array Queue__isEnabledForPlayer
 hashtable Queue__h= InitHashtable()
 group Queue__constructions= CreateGroup()
     
+group Queue__ignored= CreateGroup()
+    
     // callbacks
 trigger array Queue__callbackTriggers
 integer Queue__callbackTriggersCount= 0
@@ -715,6 +717,18 @@ function SetQueueEnabledForPlayer takes player whichPlayer,boolean enabled retur
     set Queue__isEnabledForPlayer[GetPlayerId(whichPlayer)]=enabled
 endfunction
 
+function IgnoreQueueUnit takes unit whichUnit returns nothing
+    call GroupAddUnit(Queue__ignored, whichUnit)
+endfunction
+
+function UnignoreQueueUnit takes unit whichUnit returns nothing
+    call GroupRemoveUnit(Queue__ignored, whichUnit)
+endfunction
+
+function IsQueueUnitIgnored takes unit whichUnit returns boolean
+    return IsUnitInGroup(whichUnit, Queue__ignored)
+endfunction
+
 function Queue__SetSourceCounter takes unit source,integer id,integer count returns nothing
     call SaveInteger(Queue__h, GetHandleId(source), id, count)
 endfunction
@@ -981,6 +995,8 @@ function Queue__IsValidBuilding takes unit whichUnit returns boolean
         return false
     elseif ( GetUnitAbilityLevel(whichUnit, 'Apit') > 0 ) then
         return false
+    elseif ( IsUnitInGroup(whichUnit, Queue__ignored) ) then
+        return false
     endif
     return true
 endfunction
@@ -1070,6 +1086,13 @@ function Queue__Init takes nothing returns nothing
     
     call TriggerRegisterAnyUnitEventBJ(Queue__deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(Queue__deathTrigger, Condition(function Queue__TriggerConditionDeath))
+endfunction
+
+function Queue__RemoveUnitHook takes unit whichUnit returns nothing
+    call Queue__ClearSourceCounterExtended(whichUnit)
+    if ( (IsUnitInGroup((whichUnit), Queue__ignored)) ) then // INLINED!!
+        call GroupRemoveUnit(Queue__ignored, (whichUnit)) // INLINED!!
+    endif
 endfunction
 
 //processed hook: hook RemoveUnit Queue__ClearSourceCounterExtended
@@ -1730,7 +1753,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs6296593")
+call ExecuteFunc("jasshelper__initstructs334236828")
 call ExecuteFunc("FrameLoader__init_function")
 call ExecuteFunc("QueueUIResearches__Init")
 call ExecuteFunc("HeroReviveEvents__Init")
@@ -1791,7 +1814,7 @@ function sa___prototype10_Queue__ClearSourceCounterExtended takes nothing return
     return true
 endfunction
 
-function jasshelper__initstructs6296593 takes nothing returns nothing
+function jasshelper__initstructs334236828 takes nothing returns nothing
     set st__Queue_onDestroy=CreateTrigger()
     call TriggerAddCondition(st__Queue_onDestroy,Condition( function sa__Queue_onDestroy))
     set st___prototype10[1]=CreateTrigger()
