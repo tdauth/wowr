@@ -835,6 +835,7 @@ StringList {
     PORTAL_TO                          "Portal to %1%",
     DISABLED_PORTAL                    "Disabled Portal",
     PORTAL_IS_DISABLED                 "Portal is disabled.",
+    TARGET_MUST_BE_A_PORTAL            "Target must be a Portal.",
     // Equipment
     PAGE_TITLE_MISC                    "(Misc)",
     PAGE_TITLE_MELEE_WEAPONS           "(Melee Weapons)",
