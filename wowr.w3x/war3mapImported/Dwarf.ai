@@ -8,14 +8,17 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, DWARF_BLACKSMITH)
         call SetBuildUnit(1, DWARF_ALTAR)
         call SetBuildUnit(5, DWARF_HOUSE)
+        call SetBuildUnit(1, DWARF_BARRACKS)
         call SetBuildUnit(citizens_male, DWARF_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
 
         call SetBuildUnit(2, DWARF_HOUSING)
         call SetBuildUnit(citizens_female, DWARF_CITIZEN_FEMALE)
-        call SetBuildUnit(children, DWARF_BARRACKS)
-        call SetBuildUnit(pets, DWARF_TOWER)
+        call SetBuildUnit(children, DWARF_CHILD)
+        call SetBuildUnit(pets, DWARF_PET)
+
+        call SetBuildUnit(4, DWARF_TOWER)
 
         // Tier 2 Buildings
         call SetBuildUnit(1, DWARF_TIER_2)

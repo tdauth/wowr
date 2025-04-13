@@ -4209,6 +4209,8 @@ globals
     constant integer UPG_DWARF_LUMBER                                = 'R03S'
     constant integer UPG_DWARF_BACKPACK                              = 'R03H'
 
+    constant integer DWARF_CHILD                                     = 'n060'
+    constant integer DWARF_PET                                       = 'n04W'
     constant integer DWARF_CITIZEN_MALE                              = 'n04S'
     constant integer DWARF_CITIZEN_FEMALE                            = 'n050'
     constant integer DWARF_HOUSING                                   = 'h02S'
@@ -5229,6 +5231,7 @@ globals
     constant integer EREDAR_VIGILANT                                 = 'n0JG' // tauren
     constant integer EREDAR_SIEGEBREAKER                             = 'n0JF' // catapult
 
+    constant integer EREDAR_CHILD                                    = 'n01H'
     constant integer EREDAR_PET                                      = 'n0JN'
     constant integer EREDAR_CITIZEN_MALE                             = 'n0JO'
     constant integer EREDAR_CITIZEN_FEMALE                           = 'n0JP'
