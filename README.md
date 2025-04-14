@@ -178,6 +178,7 @@ Replays can be converted into JSON with the help of [w3gjs](https://github.com/P
 Replays are documented in [this specification](http://w3g.deepnode.de/files/w3g_format.txt).
 Replay actions are documented in [this specification](http://w3g.deepnode.de/files/w3g_actions.txt).
 Use the scripts [replayanalyser.bat](./replayanalyser.bat) or [replayanalyser.sh](./replayanalyser.sh) to create JSON files from an input replay .w3g file.
+The action types can be compared with the IDs in [ActionParser.ts](https://github.com/PBug90/w3gjs/blob/master/src/parsers/ActionParser.ts).
 
 ## History of the Map
 
