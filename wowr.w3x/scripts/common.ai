@@ -853,6 +853,8 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(BLOOD_ELF_CASTLE,false,townid)
     elseif unitid == BLOOD_ELF_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(BLOOD_ELF_GUARD_TOWER,false,townid) + GetUnitCountEx(BLOOD_ELF_ARCANE_TOWER,false,townid)
+    elseif unitid == BLOOD_ELF_PHOENIX then
+        set have_qty = have_qty + GetUnitCountEx(BLOOD_ELF_PHOENIX_EGG,false,townid)
 
     elseif unitid == NAGA_TEMPLE_1 then
         set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE,false,townid) + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)

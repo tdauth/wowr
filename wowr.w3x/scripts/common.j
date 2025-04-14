@@ -3813,7 +3813,7 @@ globals
     constant integer ITEM_BLOOD_ELF_LUMBER_MILL                      = 'I1AS'
     constant integer ITEM_BLOOD_ELF_ARCANE_SANCTUM                   = 'I04C'
     constant integer ITEM_BLOOD_ELF_WORKSHOP                         = 'I1AT'
-    constant integer ITEM_BLOOD_ELF_PHOENIX_EGG                      = 'I1AU'
+    constant integer ITEM_BLOOD_ELF_AVIARY                           = 'I1AU'
     constant integer ITEM_BLOOD_ELF_MAGIC_VAULT                      = 'I1AV'
     constant integer ITEM_BLOOD_ELF_SHIPYARD                         = 'I1AW'
     constant integer ITEM_BLOOD_ELF_HOUSING                          = 'I1AY'
@@ -3832,7 +3832,7 @@ globals
     constant integer BLOOD_ELF_BLACK_SMITH                           = 'h00D' // blacksmith
     constant integer BLOOD_ELF_LUMBER_MILL                           = 'h00F' // lumber mill
     constant integer BLOOD_ELF_WORKSHOP                              = 'h013' // workshop
-    constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h04P' // aviary
+    constant integer BLOOD_ELF_AVIARY                                = 'h04P' // aviary
     constant integer BLOOD_ELF_MAGIC_VAULT                           = 'n038' // special building
     constant integer BLOOD_ELF_SHIPYARD                              = 'h0WJ'
 
@@ -3856,6 +3856,7 @@ globals
     constant integer UPG_BLOOD_ELF_CONT_MAGIC                        = 'R04A'
     constant integer UPG_BLOOD_ELF_CLOUD                             = 'R04B'
     constant integer UPG_BLOOD_ELF_SIPHON_MANA                       = 'R09M'
+    constant integer UPG_BLOOD_ELF_PHOENIX_EGGS                      = 'R035'
     constant integer UPG_BLOOD_ELF_MAGIC_VAULT                       = 'R021' // special building
 
     constant integer BLOOD_ELF_WORKER                                = BLOOD_PEASANT
@@ -3870,6 +3871,7 @@ globals
     constant integer BLOOD_ELF_DRAGON_HAWK                           = 'h04M'
     constant integer BLOOD_ELF_SPELL_BREAKER                         = 'h04N'
     constant integer BLOOD_ELF_PHOENIX                               = 'h04O'
+    constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h01B'
     constant integer BLOOD_ELF_DECIMATOR                             = 'h0KI'
 
     constant integer BLOOD_ELF_TRANSPORT_SHIP                        = 'h05R'
@@ -5342,13 +5344,14 @@ globals
     constant integer SATYR_TIER_3                                    = 'n0GZ'
     constant integer SATYR_ALTAR                                     = 'e025'
     constant integer SATYR_MOON_WELL                                 = 'n0H1' // farm
-    constant integer SATYR_ANCIENT_OF_LORE                           = 'e021'
-    constant integer SATYR_ANCIENT_OF_WIND                           = 'e022'
+    constant integer SATYR_ANCIENT_OF_LORE                           = 'e021' // arcane sanctuary
+    constant integer SATYR_ANCIENT_OF_WIND                           = 'e022' // workshop
     constant integer SATYR_HUNTERS_HALL                              = 'e01Z' // forge
     constant integer SATYR_ANCIENT_OF_WONDERS                        = 'e024' // shop
     constant integer SATYR_ANCIENT_OF_WAR                            = 'n0GV' // barracks
     constant integer SATYR_ANCIENT_PROTECTOR                         = 'n0GW' // tower
     constant integer SATYR_DEMON_GATE                                = 'n0H9' // aviary
+    constant integer SATYR_DEFILED_FOUNTAIN_OF_LIFE                  = 'n0HA' // sacrifical pit
     constant integer SATYR_MINE                                      = 'e020'
     constant integer SATYR_SKULL_OF_GULDAN                           = 'o09T' // special building
 

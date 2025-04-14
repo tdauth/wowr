@@ -50,6 +50,7 @@ function BuildingStrategy takes nothing returns nothing
 
         // Tier 3 buildings
         call SetBuildUnit(1, SATYR_TIER_3)
+        call SetBuildUnit(1, SATYR_DEFILED_FOUNTAIN_OF_LIFE)
         call SetBuildUnit(1, SATYR_DEMON_GATE)
 
         call SetBuildUpgr(3, UPG_SATYR_STR_MOON)

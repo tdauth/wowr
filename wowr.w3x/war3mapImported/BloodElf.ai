@@ -51,7 +51,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(5, BLOOD_ELF_FARM)
         call SetBuildUnit(1, BLOOD_ELF_GUARD_TOWER)
         call SetBuildUnit(1, BLOOD_ELF_ARCANE_TOWER)
-        call SetBuildUnit(1, BLOOD_ELF_PHOENIX_EGG)
+        call SetBuildUnit(1, BLOOD_ELF_AVIARY)
         call SetBuildUnit(1, BLOOD_ELF_WORKSHOP)
 
         call SetBuildUpgr(2, UPG_BLOOD_ELF_WOOD)
@@ -71,6 +71,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_BLOOD_ELF_SENTINEL)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_CLOUD)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_SIPHON_MANA)
+        call SetBuildUpgr(1, UPG_BLOOD_ELF_PHOENIX_EGGS)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_BACKPACK)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_MAGIC_VAULT)
         call SetBuildUnit(1, BLOOD_ELF_MAGIC_VAULT)
