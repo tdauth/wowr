@@ -174,6 +174,10 @@ Warcraft III stores information about games with crashes or desyncs in the folde
 We have core dump files which could only be read with debug symbols in the binary of Warcraft III.
 The core dump file can be checked to find some readable stuff about the current state.
 We have replays which can either be watched or analyzed with a tool to see the final actions of users before the crash/desync.
+Replays can be converted into JSON with the help of [w3gjs](https://github.com/PBug90/w3gjs).
+Replays are documented in [this specification](http://w3g.deepnode.de/files/w3g_format.txt).
+Replay actions are documented in [this specification](http://w3g.deepnode.de/files/w3g_actions.txt).
+Use the scripts [replayanalyser.bat](./replayanalyser.bat) or [replayanalyser.sh](./replayanalyser.sh) to create JSON files from an input replay .w3g file.
 
 ## History of the Map
 
