@@ -3,6 +3,29 @@ const fs = require("fs");
 const filePath = process.argv[2];
 //console.log("Replay file path: " + filePath);
 
+// https://github.com/PBug90/w3gjs/blob/master/src/parsers/ActionParser.ts
+const typeLabels = {
+  [0x10]: "UnitBuildingAbilityActionNoParams",
+  [0x11]: "UnitBuildingAbilityActionTargetPosition",
+  [0x12]: "UnitBuildingAbilityActionTargetPositionTargetObjectId",
+  [0x51]: "TransferResourcesAction",
+  [0x13]: "GiveItemToUnitAciton",
+  [0x14]: "UnitBuildingAbilityActionTwoTargetPositions",
+  [0x16]: "ChangeSelectionAction",
+  [0x17]: "AssignGroupHotkeyAction", // leave game block id: 0x17;
+  [0x18]: "SelectGroupHotkeyAction",
+  [0x19]: "SelectSubgroupAction",
+  [0x1d]: "CancelHeroRevival",
+  [0x65]: "ChooseHeroSkillSubmenu",
+  [0x66]: "ChooseHeroSkillSubmenu",
+  [0x67]: "EnterBuildingSubmenu",
+  [0x61]: "ESCPressedAction",
+  [0x1e]: "RemoveUnitFromBuildingQueue",
+  [0x1f]: "RemoveUnitFromBuildingQueue",
+  [0x1a]: "PreSubselectionAction",
+  [0x6b]: "W3MMDAction"
+};
+
 (async () => {
   const buffer = fs.readFileSync(filePath);
   const parser = new ReplayParser();
@@ -12,7 +35,6 @@ const filePath = process.argv[2];
   parser.on("gamedatablock", (block) => {
     //console.log(JSON.stringify(block, null, "\t"));
 
-    // https://github.com/PBug90/w3gjs/blob/master/src/parsers/ActionParser.ts
     if (block.id != null && block.commandBlocks != null) {
       for (let item of block.commandBlocks) {
         if (item.playerId > 1 && item.actions != null && item.actions.length > 0) {
@@ -23,6 +45,7 @@ const filePath = process.argv[2];
           for (let a of item.actions) {
             a.name = (typeof a).name;
             a.idhex = "0x" + a.id.toString(16);
+            a.type = typeLabels[a.id] ? typeLabels[a.id] : "unknown";
             actions.push(a);
           }
 
