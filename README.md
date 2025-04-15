@@ -963,7 +963,6 @@ Here is a list of some modified versions online:
 * Kam: [Ogre Reincarnation](https://www.hiveworkshop.com/threads/ogre-reincarnation.306251/)
 * Ujimasa Hojo: [Grunt and Derivatives](https://www.hiveworkshop.com/threads/grunt-and-derivatives.307931/)
 * Serbianbeast: [ElevatorPuzzle](https://www.hiveworkshop.com/threads/elevatorpuzzle.113921/)
-* HerrDave: [Elf Maiden](https://www.hiveworkshop.com/threads/elf-maiden.348950/)
 * Alethos, Cuore: [Camel Pack Bundle](https://www.hiveworkshop.com/threads/camel-pack-bundle.293183/)
 * Uncle Fester: [BTNMagnifyingGlass](https://www.hiveworkshop.com/threads/btnmagnifyingglass.229591/)
 * Mc !: [BTNItemForging](https://www.hiveworkshop.com/threads/btnitemforging.56538/)
@@ -1474,3 +1473,4 @@ Here is a list of some modified versions online:
 * Blizzard Entertainment, TheKaldorei: [BTNGarrisonArmy](https://www.hiveworkshop.com/threads/btngarrisonarmy.279730/)
 * johnwar: [Blood Elf and High Elf Hawkstriders (Re-Classic)](https://www.hiveworkshop.com/threads/blood-elf-and-high-elf-hawkstriders-re-classic.353835/)
 * L_Lawliet: [BTNBag](https://www.hiveworkshop.com/threads/btnbag.168944/)
+* infrenus: [Blood Elf Skyship](https://www.hiveworkshop.com/threads/blood-elf-skyship.290841/)

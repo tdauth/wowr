@@ -3857,6 +3857,7 @@ globals
     constant integer UPG_BLOOD_ELF_CLOUD                             = 'R04B'
     constant integer UPG_BLOOD_ELF_SIPHON_MANA                       = 'R09M'
     constant integer UPG_BLOOD_ELF_PHOENIX_EGGS                      = 'R035'
+    constant integer UPG_BLOOD_ELF_PHOENIX_FIRE                      = 'R03B'
     constant integer UPG_BLOOD_ELF_MAGIC_VAULT                       = 'R021' // special building
 
     constant integer BLOOD_ELF_WORKER                                = BLOOD_PEASANT
@@ -3873,6 +3874,7 @@ globals
     constant integer BLOOD_ELF_PHOENIX                               = 'h04O'
     constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h01B'
     constant integer BLOOD_ELF_DECIMATOR                             = 'h0KI'
+    constant integer BLOOD_ELF_SKYSHIP                               = 'h01C'
 
     constant integer BLOOD_ELF_TRANSPORT_SHIP                        = 'h05R'
     constant integer BLOOD_ELF_FRIGATE                               = 'h04U'

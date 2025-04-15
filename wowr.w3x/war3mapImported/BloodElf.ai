@@ -72,6 +72,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_BLOOD_ELF_CLOUD)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_SIPHON_MANA)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_PHOENIX_EGGS)
+        call SetBuildUpgr(1, UPG_BLOOD_ELF_PHOENIX_FIRE)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_BACKPACK)
         call SetBuildUpgr(1, UPG_BLOOD_ELF_MAGIC_VAULT)
         call SetBuildUnit(1, BLOOD_ELF_MAGIC_VAULT)
@@ -112,6 +113,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(5, spellbreakers, BLOOD_ELF_SPELL_BREAKER)
         call AttackerSimple(12, gryphons, BLOOD_ELF_DRAGON_HAWK)
         call AttackerSimple(12, dragon_hawks, BLOOD_ELF_DRAGON_HAWK)
+        call AttackerSimple(12, flying_machines, BLOOD_ELF_SKYSHIP)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()
