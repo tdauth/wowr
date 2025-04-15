@@ -39,7 +39,8 @@ const typeLabels = {
       for (let item of block.commandBlocks) {
         if (item.playerId > 1 && item.actions != null && item.actions.length > 0) {
 
-            //console.log(JSON.stringify(item, null, "\t"));
+          //console.log(JSON.stringify(item, null, "\t"));
+
           var actions = [];
 
           for (let a of item.actions) {
