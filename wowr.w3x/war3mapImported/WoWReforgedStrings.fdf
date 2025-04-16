@@ -42,8 +42,8 @@ StringList {
     // Learnable Skills Shop
     SLOT_X                             "Slot %1%",
     WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
-    NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Backpacks.",
-    SKILL_FOR_CUSTOMIZABLE_HEROES      "Only Void Lord heroes, Archangel heroes, Sea Giant heroes or Equipment Backpacks at hero level 75 can change their hero abilities.",
+    NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Bags.",
+    SKILL_FOR_CUSTOMIZABLE_HEROES      "Only customizable, Void Lord, Archangel, Sea Giant heroes or Equipment Bags at hero level 75 can change their hero abilities.",
     // Reskillable Heroes
     SKILL_POINTS_REMAINING             "%1% skill points remaining.",
     // Resurrection Stones
@@ -419,7 +419,7 @@ StringList {
     CHARISMA_DESCRIPTION               "Increases the chance to persuade other characters for your hero.",
     MYSTIC                             "Mystic",
     MYSTIC_DESCRIPTION                 "Increases the hero's magic resistance by 3 and reduces the cooldown by 0.2 seconds per point.",
-    THIEF                              "Thief",
+    THIEF                              "Thieving",
     THIEF_DESCRIPTION                  "Increases the chance to rob units and to loot chests.",
     // Diplomacy UI
     UNALLIED                           "Unallied",
@@ -517,9 +517,9 @@ StringList {
     UNABLE_TO_ADD_MOUNT_ABILITY        "Unable to add mount ability.",
     ONLY_DRACTHYR_HEROES_CAN_LEARN     "Only Dracthyr heroes can learn this.",
     ONLY_WORGEN_HEROES_CAN_LEARN       "Only Worgen heroes can learn this.",
-    HERO_REQUIRES_LEVEL                "Your hero must be level %1% or higher.",
+    HERO_REQUIRES_LEVEL                "Your hero must be at least level %1%.",
     ONLY_HEROES_CHANGE_MOUNT           "Only your heroes can change their mounts.",
-    BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %2% or -unlock.",
+    BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %1% or -unlock.",
     // Crafting
     X_IS_DISABLED                      "%1% is disabled.",
     CAN_ONLY_SUMMON_FOOD_LIMIT         "Can only summon %1% creatures due to food limit.",
@@ -791,7 +791,7 @@ StringList {
     COLON_WEBSITE                      "Website:",
     NEWS_LINE_1                        "- Release %1%.",
     NEWS_LINE_2                        "- Support the project by becoming a VIP or with single donations.",
-    NEWS_LINE_3                        "- New professions, skins, spells, standard abilities and zones.",
+    NEWS_LINE_3                        "- New quests, professions, skins, spells, standard abilities and zones.",
     NEWS_LINE_4                        "- Two teams Alliance and Horde.",
     NEWS_LINE_5                        "- New profession ranks Grand Master and Doctor.",
     NEWS_LINE_6                        "- Use chat command '-q/-news' to show this UI.",
@@ -825,7 +825,7 @@ StringList {
     UPDATED_SAVE_CODES_BUILDINGS       "Updated savecode for buildings.",
     UPDATED_SAVE_CODES_RESOURCES       "Updated savecode for resources.",
     UPDATED_SAVE_CODE_CLAN             "Updated savecode for clan.",
-    SAVE_CODE_DIRECTORY_INFO           "This is the directory which all save codes are generated into.",
+    SAVE_CODE_DIRECTORY_INFO           "All save codes are generated into this directory.",
     // Save Codes Dialog
     LOAD_SAVE_CODES_QUESTION           "Load Save Codes?",
     // ChangeLog
