@@ -1,0 +1,141 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+Baradé's Reflection 1.0
+}
+
+STRING 4
+{
+1-2
+}
+
+STRING 5
+{
+Baradé
+}
+
+STRING 6
+{
+Player 2
+}
+
+STRING 29
+{
+Allows reflecting enemy missiles.
+}
+
+STRING 30
+{
+Baradé's Reflection 1.0
+}
+
+STRING 31
+{
+- Skill Reflection to reflect range attacks.
+}
+
+STRING 41
+// Units: h000 (Dummy), Name (Name)
+{
+Dummy
+}
+
+STRING 42
+// Abilities: A000 (Reflection), Tip (Tooltip - Normal)
+{
+Reflection - [|cffffcc00Level 1|r]
+}
+
+STRING 43
+// Abilities: A000 (Reflection), Name (Name)
+{
+Reflection
+}
+
+STRING 45
+// Abilities: A000 (Reflection), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 47
+// Abilities: A000 (Reflection), Tip (Tooltip - Normal)
+{
+Reflection - [|cffffcc00Level 2|r]
+}
+
+STRING 48
+// Abilities: A000 (Reflection), Tip (Tooltip - Normal)
+{
+Reflection - [|cffffcc00Level 3|r]
+}
+
+STRING 57
+// Units: E000 (Jedi), Name (Name)
+{
+Jedi
+}
+
+STRING 58
+// Units: E000 (Jedi), Awakentip (Tooltip - Awaken)
+{
+Revive Jedi
+}
+
+STRING 59
+// Units: E000 (Jedi), Revivetip (Tooltip - Revive)
+{
+Revive Jedi
+}
+
+STRING 60
+// Units: E000 (Jedi), Tip (Tooltip - Basic)
+{
+Summon Jedi
+}
+
+STRING 61
+// Abilities: A000 (Reflection), Researchtip (Tooltip - Learn)
+{
+Learn Reflection - [|cffffcc00Level %d|r]
+}
+
+STRING 62
+// Abilities: A000 (Reflection), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives a percent chance to reflect range attacks. |n|n|cffffcc00Level 1|r - 40% chance that an attack is reflected. |n|cffffcc00Level 2|r - 50% chance that an attack is reflected. |n|cffffcc00Level 3|r - 60% chance that an attack is reflected.
+}
+
+STRING 63
+// Abilities: A000 (Reflection), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 40% chance to reflect a range attack.
+}
+
+STRING 64
+// Abilities: A000 (Reflection), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 50% chance to reflect a range attack.
+}
+
+STRING 65
+// Abilities: A000 (Reflection), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 60% chance to reflect a range attack.
+}
+
+STRING 66
+// Units: h000 (Dummy), EditorSuffix (Name - Editor Suffix)
+{
+(Reflection)
+}
+

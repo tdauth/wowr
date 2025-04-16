@@ -1,0 +1,164 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 3
+{
+Baradé's Black Arrow 1.2
+}
+
+STRING 4
+{
+1-2
+}
+
+STRING 5
+{
+Baradé
+}
+
+STRING 6
+{
+Player 2
+}
+
+STRING 10
+// Abilities: A000 (Black Arrow Buff), Name (Name)
+{
+Black Arrow Buff
+}
+
+STRING 11
+// Units: n000 (Improved Fel Ravager), Name (Name)
+{
+Improved Fel Ravager
+}
+
+STRING 12
+// Units: N001 (Improved Dark Ranger), Name (Name)
+{
+Improved Dark Ranger
+}
+
+STRING 13
+// Items: I000 (Improved Orb of Darkness), Name (Name)
+{
+Improved Orb of Darkness
+}
+
+STRING 14
+// Abilities: A001 (Black Arrow), EditorSuffix (Editor Suffix)
+{
+(Improved)
+}
+
+STRING 15
+// Abilities: A001 (Black Arrow), Researchtip (Tooltip - Learn)
+{
+Learn Improved Black Arrow - [|cffffcc00Level %d|r]
+}
+
+STRING 16
+// Abilities: A001 (Black Arrow), Tip (Tooltip - Normal)
+{
+Improved Black Arrow - [|cffffcc00Level 1|r]
+}
+
+STRING 17
+// Abilities: A001 (Black Arrow), Tip (Tooltip - Normal)
+{
+Improved Black Arrow - [|cffffcc00Level 2|r]
+}
+
+STRING 18
+// Abilities: A001 (Black Arrow), Tip (Tooltip - Normal)
+{
+Improved Black Arrow - [|cffffcc00Level 3|r]
+}
+
+STRING 19
+// Abilities: A002 (Improved Black Arrow), EditorSuffix (Editor Suffix)
+{
+ (Neutral Hostile - Improved)
+}
+
+STRING 20
+// Abilities: A002 (Improved Black Arrow), Name (Name)
+{
+Improved Black Arrow
+}
+
+STRING 21
+// Abilities: A003 (Item Attack Black Arrow Bonus), EditorSuffix (Editor Suffix)
+{
+(Improved)
+}
+
+STRING 22
+// Abilities: A004 (Item Black Arrow), EditorSuffix (Editor Suffix)
+{
+(Improved)
+}
+
+STRING 23
+// Items: I000 (Improved Orb of Darkness), Ubertip (Tooltip - Extended)
+{
+Adds <AIdf,DataA1> bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create <A004,DataB1> Dark Minions when it is the killing blow on an enemy unit. The Dark Minions last <ANbs,DataC1> seconds.
+}
+
+STRING 24
+// Abilities: A001 (Black Arrow), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <ANba,DataA1> bonus damage to attacks. Units killed while under the effect of Black Arrow will turn into <A001,DataB1> <ndr1,RealHP> hit point skeletons.
+}
+
+STRING 25
+// Abilities: A001 (Black Arrow), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <ANba,DataA2> bonus damage to attacks. Units killed while under the effect of Black Arrow will turn into <A001,DataB2> <ndr2,RealHP> hit point skeletons.
+}
+
+STRING 26
+// Abilities: A001 (Black Arrow), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <ANba,DataA3> bonus damage to attacks. Units killed while under the effect of Black Arrow will turn into <A001,DataB3> <ndr3,RealHP> hit point skeletons.
+}
+
+STRING 27
+// Abilities: A001 (Black Arrow), Researchubertip (Tooltip - Learn - Extended)
+{
+Adds extra damage to attacks. Units killed while under the effect of Black Arrow will turn into skeletons. |n|n|cffffcc00Level 1|r - <ANba,DataA1> bonus damage, <A001,DataB1> <ndr1,RealHP> hit point skeletons. |n|cffffcc00Level 2|r - <ANba,DataA2> bonus damage, <A001,DataB2> <ndr2,RealHP> hit point skeletons. |n|cffffcc00Level 3|r - <ANba,DataA3> bonus damage, <A001,DataB3> <ndr3,RealHP> hit point skeletons.
+}
+
+STRING 28
+// Abilities: A002 (Improved Black Arrow), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <ACbk,DataA1> bonus damage to attacks. Units killed while under the effect of Black Arrow will turn into <A002,DataB1> skeletons.
+}
+
+STRING 29
+{
+Black Arrow is limited to units with a level of 5 or less. This system allows casting Black Arrows on units with a higher level.
+}
+
+STRING 30
+{
+Baradé's Black Arrow 1.2
+}
+
+STRING 31
+{
+- All Black Arrow abilities and items should work on any creep.
+}
+
+STRING 32
+{
+- Enter chat command "-debug" to see Black Arrow information.
+}
+
