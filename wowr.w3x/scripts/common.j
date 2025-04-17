@@ -3597,6 +3597,12 @@ globals
     constant integer EGG_SACK                                        = 'o0AN'
     constant integer EXPLOSIVE_BARREL_CREEP                          = 'h0P9'
 
+    constant integer DARK_PHOENIX                                    = 'h085'
+    constant integer GREATER_THUNDER_PHOENIX                         = 'h0VF'
+    constant integer PHOENIX_CREEP                                   = 'h0UV'
+    constant integer PHOENIX_EGG_CREEP                               = 'h0VD'
+    constant integer LESSER_THUNDER_PHOENIX                          = 'h0VG'
+
     // Housing
     constant integer REAL_ESTATE_AGENT                               = 'n0O3'
     constant integer CARETAKER                                       = 'n0O2'
@@ -3875,6 +3881,11 @@ globals
     constant integer BLOOD_ELF_PHOENIX_EGG                           = 'h01B'
     constant integer BLOOD_ELF_DECIMATOR                             = 'h0KI'
     constant integer BLOOD_ELF_SKYSHIP                               = 'h01C'
+
+    constant integer PHOENIX                                         = 'hphx'
+    constant integer PHOENIX_EGG                                     = 'hpxe'
+    constant integer ANCIENT_PHOENIX                                 = 'h000'
+    constant integer ANCIENT_PHOENIX_EGG                             = 'h0VC'
 
     constant integer BLOOD_ELF_TRANSPORT_SHIP                        = 'h05R'
     constant integer BLOOD_ELF_FRIGATE                               = 'h04U'
@@ -4323,7 +4334,7 @@ globals
     constant integer GNOME_TIER_2                                    = 'h0KB'
     constant integer GNOME_TIER_3                                    = 'h0KE'
     constant integer GNOME_GEAR                                      = 'h0KL' // farm
-    constant integer GNOME_BRASSMAN                                  = 'e01G' // barracks
+    constant integer GNOME_BRASSMAN                                  = 'h0NH' // barracks
     constant integer GNOME_FACTORY                                   = 'h0KK' // forge/lumber mill
     constant integer GNOME_TURRET                                    = 'h0KH' // watch tower
     constant integer GNOME_AVIARY                                    = 'h0KN' // aviary
