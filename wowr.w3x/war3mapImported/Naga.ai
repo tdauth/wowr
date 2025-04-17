@@ -22,6 +22,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, NAGA_TEMPLE)
         call SetBuildUnit(1, NAGA_MURLOC_HUT)
         call SetBuildUnit(1, NAGA_SHRINE)
+        call SetBuildUnit(1, NAGA_HATCHERY)
         call SetBuildUnit(citizens_female, NAGA_CITIZEN_FEMALE)
         call SetBuildUnit(children, NAGA_CHILD)
         call SetBuildUnit(pets, NAGA_PET)
@@ -47,6 +48,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(2, UPG_NAGA_SORCEROR)
         call SetBuildUpgr(1, UPG_NAGA_ENSNARE)
         call SetBuildUpgr(1, UPG_NAGA_RESISTANT_SKIN)
+        call SetBuildUpgr(1, UPG_NAGA_TIDAL_WYRMS)
         call SetBuildUpgr(1, UPG_NAGA_STATUE_OF_AZSHARA)
         call SetBuildUnit(1, NAGA_STATUE_OF_ASZHARA)
 
@@ -82,6 +84,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, sorceresses, NAGA_SIREN)
         call AttackerSimple(4, mortars, NAGA_CORAL_GOLEM)
         call AttackerSimple(4, siege_engines, NAGA_TURTLE)
+        call AttackerSimple(4, siege_engines, NAGA_HYDRA)
         call AttackerSimple(5, spellbreakers, NAGA_WHALER)
         call AttackerSimple(12, tauren, NAGA_ROYAL)
         call AttackerSimple(12, gryphons, NAGA_COUATL)

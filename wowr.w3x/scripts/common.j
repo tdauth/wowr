@@ -2667,7 +2667,7 @@ globals
     constant integer NAGA_DRAGON        = 'nsnp'        // old names
     constant integer NAGA_WITCH         = 'nnsw'
     constant integer NAGA_SERPENT       = 'nwgs'
-    constant integer NAGA_HYDRA         = 'nhyc'
+    //constant integer NAGA_HYDRA         = 'nhyc'
 
     constant integer NAGA_SLAVE         = 'nmpe'        // peon
     constant integer NAGA_SNAP_DRAGON   =  NAGA_DRAGON  // weak ranged
@@ -2675,14 +2675,14 @@ globals
     constant integer NAGA_SIREN         =  NAGA_WITCH   // caster
     constant integer NAGA_MYRMIDON      = 'nmyr'        // knight
     constant integer NAGA_REAVER        = 'nnmg'        // footman
-    constant integer NAGA_TURTLE        =  NAGA_HYDRA   // siege
+    constant integer NAGA_TURTLE        = 'nhyc'        // siege
     constant integer NAGA_ROYAL         = 'nnrg'        // royal guard
 
     // naga buildings
     constant integer NAGA_TEMPLE        = 'nntt'        // town hall
     constant integer NAGA_CORAL         = 'nnfm'        // farm
     constant integer NAGA_SHRINE        = 'nnsa'        // sirens & couatls
-    constant integer NAGA_SPAWNING      = 'nnsg'        // myrm, snap dragon, hydra
+    constant integer NAGA_SPAWNING      = 'nnsg'        // barracks mur'gul, myrm, snap dragon
     constant integer NAGA_GUARDIAN      = 'nntg'        // tower
     constant integer NAGA_ALTAR         = 'nnad'        // altar
 
@@ -3887,12 +3887,17 @@ globals
     constant integer BLOOD_ELF_HOUSING                               = 'h00T'
 
     // Naga
+    constant integer ITEM_NAGA_TEMPLE_1                              = 'I02M'
+    constant integer ITEM_NAGA_TEMPLE_2                              = 'I0C8'
+
     constant integer NAGA_TEMPLE_1                                   = 'n05M'
+    constant integer NAGA_TEMPLE_2                                   = NAGA_TEMPLE
     constant integer NAGA_TEMPLE_3                                   = 'n05N'
     constant integer NAGA_MURLOC_HUT                                 = 'o008' // lumber mill and blacksmith
     constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
     constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
-    constant integer NAGA_SERPENT_PYRAMID                            = 'n05P'
+    constant integer NAGA_SERPENT_PYRAMID                            = 'n05P' // aviary
+    constant integer NAGA_HATCHERY                                   = 'n01I' // workshop
     constant integer NAGA_PORTAL                                     = 'h0Y6'
     constant integer NAGA_STATUE_OF_ASZHARA                          = 'o00I' // special building
     constant integer NAGA_SHIPYARD                                   = 'e00O'
@@ -3901,11 +3906,14 @@ globals
     constant integer UPG_NAGA_SORCEROR                               = 'R0IH' // priest
     constant integer UPG_NAGA_BACKPACK                               = 'R01E'
     constant integer UPG_NAGA_RESISTANT_SKIN                         = 'R05H'
+    constant integer UPG_NAGA_TIDAL_WYRMS                            = 'R03C'
     constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
 
     constant integer NAGA_WHALER                                     = 'n05Q' // spellbreaker
     constant integer NAGA_SORCEROR                                   = 'n0LA' // priest
     constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
+    constant integer NAGA_HYDRA                                      = 'n03R' // siege engine 2
+    constant integer NAGA_TIDAL_WYRM                                 = 'n06M' // summoned
     constant integer NAGA_SNAP_DRAGON_SUBMERGED                      = 'nsbs' // weak ranged
     constant integer NAGA_MYRMIDON_SUBMERGED                         = 'nmys' // knight
     constant integer NAGA_ROYAL_SUBMERGED                            = 'nnrs' // royal guard

@@ -1474,3 +1474,5 @@ Here is a list of some modified versions online:
 * johnwar: [Blood Elf and High Elf Hawkstriders (Re-Classic)](https://www.hiveworkshop.com/threads/blood-elf-and-high-elf-hawkstriders-re-classic.353835/)
 * L_Lawliet: [BTNBag](https://www.hiveworkshop.com/threads/btnbag.168944/)
 * infrenus: [Blood Elf Skyship](https://www.hiveworkshop.com/threads/blood-elf-skyship.290841/)
+* Retera: [Turtle Hatchery](https://www.hiveworkshop.com/threads/turtle-hatchery.302771/)
+* Hermit, Lord_T, Zerox: [Tidal Wyrm (Tidal Guardian)](https://www.hiveworkshop.com/threads/tidal-wyrm-tidal-guardian.313251/)
