@@ -1,0 +1,21 @@
+/*
+ *  Paged Buttons UI Strings
+ *  --------------
+ *
+ *  This file is a centralized location for storing strings which are
+ *  used through out the glue screens and in-game ui.  The identifiers
+ *  in the first column are unique, and must not be re-declared in a
+ *  StringList in any .fdf file.
+ *
+ */
+
+StringList {
+    // Paged Buttons UI
+    BUY_TOOLTIP_SUFFIX                 "|n|n|cff808080Click to buy and open the page.|R|n",
+    SLOT_TOOLTIP_SUFFIX                "|n|n|cff808080Click to open the page.|R|n",
+    NEXT_PAGE_BUTTON                   "|cffFCD20DNext Page|r",
+    PREVIOUS_PAGE_BUTTON               "|cffFCD20DPrevious Page|r",
+    CLOSE_BUTTON                       "|cffFCD20DClose|r",
+    PAGE_NAME                          "%1% (%2%/%3%)",
+    EMPTY_SLOT_TOOLTIP                 "Empty slot %1% at page %2%.",
+}
