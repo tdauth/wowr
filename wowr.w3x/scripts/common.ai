@@ -2601,8 +2601,6 @@ function InitHeroes takes nothing returns nothing
     call AddHero(MEDIVH)
     call AddHero(LORD_GARITHOS)
     call AddHero(ANDUIN_WRYNN)
-    call AddHero(ANDUIN_LOTHAR)
-    call AddHero(VARIAN_WRYNN)
     // Dwarf
     call AddHero(MTN_KING)
     call AddHero(MORTAR_TEAM)
@@ -2614,7 +2612,7 @@ function InitHeroes takes nothing returns nothing
     // Blood Elf
     call AddHero(BLOOD_MAGE)
     call AddHero(SPELLBREAKER_HERO)
-    call AddHero(PHOENIX)
+    call AddHero(PHOENIX_HERO)
     call AddHero(ANASTERIAN_SUNSTRIDER)
     call AddHero(KAEL_HERO)
     // High Elf
@@ -2634,12 +2632,9 @@ function InitHeroes takes nothing returns nothing
     call AddHero(THRALL_HERO)
     call AddHero(GROMMASH_HELLSCREAM)
     call AddHero(DREKTHAR)
-    call AddHero(BLACKHAND)
     call AddHero(NERZHUL)
     call AddHero(GULDAN)
     call AddHero(DUROTAN)
-    call AddHero(GARONA)
-    call AddHero(ORGRIM_DOOMHAMMER)
     call AddHero(SAMURO)
     // Undead
     call AddHero(DEATH_KNIGHT)
@@ -2692,9 +2687,6 @@ function InitHeroes takes nothing returns nothing
     call AddHero(FLAME_SHREDDER)
     call AddHero(GOBLIN_SHREDDER_HERO)
     call AddHero(GOBLIN_GUNNER)
-    call AddHero(GOBLIN_PRINCE)
-    call AddHero(GOBLIN_HEAVY_TANK_HERO)
-    call AddHero(GOBLIN_WAR_ZEPPELIN_HERO)
     // Naga
     call AddHero(NAGA_SORCERESS)
     call AddHero(NAGA_ROYAL_GUARD_HERO)

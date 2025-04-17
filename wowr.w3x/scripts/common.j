@@ -5839,8 +5839,6 @@ globals
     constant integer LORD_GARITHOS                                   = 'Hlgr'
     constant integer ANDUIN_WRYNN                                    = 'H0QW'
     constant integer ANDUIN_WRYNN_M                                  = 'H0RW'
-    constant integer ANDUIN_LOTHAR                                   = 'H0QX'
-    constant integer VARIAN_WRYNN                                    = 'H0RR'
     // Dwarf
     constant integer MORTAR_TEAM                                     = 'H0JK'
     constant integer DWARF_MAGE                                      = 'H03L'
@@ -5850,7 +5848,7 @@ globals
     constant integer GRYPHON_RIDER                                   = 'H0S1'
     // Blood Elf
     constant integer SPELLBREAKER_HERO                               = 'H0K7'
-    constant integer PHOENIX                                         = 'H0YC'
+    constant integer PHOENIX_HERO                                    = 'H0YC'
     constant integer ANASTERIAN_SUNSTRIDER                           = 'Hssa'
     constant integer KAEL_HERO                                       = 'H02C'
     // High Elf
@@ -5870,13 +5868,10 @@ globals
     constant integer GROMMASH_HELLSCREAM                             = 'O02T'
     constant integer GROMMASH_HELLSCREAM_M                           = 'O02U'
     constant integer DREKTHAR                                        = 'O00D'
-    constant integer BLACKHAND                                       = 'O01V'
     constant integer NERZHUL                                         = 'O01T'
     constant integer NERZHUL_M                                       = 'O01U'
     constant integer GULDAN                                          = 'Ogld'
     constant integer DUROTAN                                         = 'O07H'
-    constant integer GARONA                                          = 'O06U'
-    constant integer ORGRIM_DOOMHAMMER                               = 'O07I'
     constant integer SAMURO                                          = 'Osam'
     // Undead
     constant integer DARK_RANGER                                     = 'Nbrn'
@@ -5942,10 +5937,6 @@ globals
     constant integer FLAME_SHREDDER                                  = 'N0BE'
     constant integer GOBLIN_SHREDDER_HERO                            = 'N07D'
     constant integer GOBLIN_GUNNER                                   = 'N06V'
-    constant integer GOBLIN_PRINCE                                   = 'N09E'
-    constant integer GOBLIN_PRINCE_M                                 = 'N09F'
-    constant integer GOBLIN_HEAVY_TANK_HERO                          = 'N06N'
-    constant integer GOBLIN_WAR_ZEPPELIN_HERO                        = 'N06M'
     // Naga
     constant integer NAGA_ROYAL_GUARD_HERO                           = 'N0BG'
     constant integer NAGA_SIREN_HERO                                 = 'N0NC'
