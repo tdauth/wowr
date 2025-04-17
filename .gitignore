@@ -11,3 +11,6 @@
 /replays
 /package.json
 /package-lock.json
+/backups
+/logs
+/out
