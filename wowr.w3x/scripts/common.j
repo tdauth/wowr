@@ -3889,6 +3889,9 @@ globals
     // Naga
     constant integer ITEM_NAGA_TEMPLE_1                              = 'I02M'
     constant integer ITEM_NAGA_TEMPLE_2                              = 'I0C8'
+    constant integer ITEM_NAGA_TEMPLE_3                              = 'I0DI'
+    constant integer ITEM_NAGA_CORAL_BED                             = 'I0DL'
+    constant integer ITEM_NAGA_SPAWNING_GROUNDS                      = 'I0DZ'
 
     constant integer NAGA_TEMPLE_1                                   = 'n05M'
     constant integer NAGA_TEMPLE_2                                   = NAGA_TEMPLE
