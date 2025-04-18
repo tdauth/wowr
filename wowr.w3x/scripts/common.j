@@ -8126,3 +8126,7 @@ native BlzGetUnitOrderCount takes unit whichUnit returns integer
 native BlzUnitClearOrders takes unit whichUnit, boolean onlyQueued returns nothing
 // stops the current order and optionally clears the queue
 native BlzUnitForceStopOrder takes unit whichUnit, boolean clearQueue returns nothing
+
+// commmon.ai
+native GetUnitGoldCost      takes integer unitid                        returns integer
+native GetUnitWoodCost      takes integer unitid                        returns integer

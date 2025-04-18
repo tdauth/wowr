@@ -18,8 +18,6 @@ native GetUnitCount         takes integer unitid                        returns 
 native GetPlayerUnitTypeCount takes player p, integer unitid            returns integer
 native GetUnitCountDone     takes integer unitid                        returns integer
 native GetTownUnitCount     takes integer id, integer tn, boolean dn    returns integer
-native GetUnitGoldCost      takes integer unitid                        returns integer
-native GetUnitWoodCost      takes integer unitid                        returns integer
 native GetUnitBuildTime     takes integer unitid                        returns integer
 
 native GetMinesOwned        takes nothing                               returns integer
