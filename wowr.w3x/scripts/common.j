@@ -2804,7 +2804,7 @@ globals
     constant integer UPG_HERO_LEVEL_75                               = 'R06B'
     constant integer UPG_VIP                                         = 'R06C'
 
-    // Teams
+    // Teams/Factions
     constant integer TEAM_ALLIANCE                                   = 0
     constant integer TEAM_HORDE                                      = 1
     constant integer TEAM_MAX_AI                                     = 2
