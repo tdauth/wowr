@@ -84,7 +84,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(3, sorceresses, NAGA_SIREN)
         call AttackerSimple(4, mortars, NAGA_CORAL_GOLEM)
         call AttackerSimple(4, siege_engines, NAGA_TURTLE)
-        call AttackerSimple(4, siege_engines, NAGA_HYDRA)
+        call AttackerSimple(4, siege_engines, NAGA_HYDRA_X)
         call AttackerSimple(5, spellbreakers, NAGA_WHALER)
         call AttackerSimple(12, tauren, NAGA_ROYAL)
         call AttackerSimple(12, gryphons, NAGA_COUATL)

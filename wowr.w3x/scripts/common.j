@@ -2667,7 +2667,7 @@ globals
     constant integer NAGA_DRAGON        = 'nsnp'        // old names
     constant integer NAGA_WITCH         = 'nnsw'
     constant integer NAGA_SERPENT       = 'nwgs'
-    //constant integer NAGA_HYDRA         = 'nhyc'
+    constant integer NAGA_HYDRA         = 'nhyc'
 
     constant integer NAGA_SLAVE         = 'nmpe'        // peon
     constant integer NAGA_SNAP_DRAGON   =  NAGA_DRAGON  // weak ranged
@@ -2675,14 +2675,14 @@ globals
     constant integer NAGA_SIREN         =  NAGA_WITCH   // caster
     constant integer NAGA_MYRMIDON      = 'nmyr'        // knight
     constant integer NAGA_REAVER        = 'nnmg'        // footman
-    constant integer NAGA_TURTLE        = 'nhyc'        // siege
+    constant integer NAGA_TURTLE        = NAGA_HYDRA    // siege
     constant integer NAGA_ROYAL         = 'nnrg'        // royal guard
 
     // naga buildings
     constant integer NAGA_TEMPLE        = 'nntt'        // town hall
     constant integer NAGA_CORAL         = 'nnfm'        // farm
     constant integer NAGA_SHRINE        = 'nnsa'        // sirens & couatls
-    constant integer NAGA_SPAWNING      = 'nnsg'        // barracks mur'gul, myrm, snap dragon
+    constant integer NAGA_SPAWNING      = 'nnsg'        // barracks murgul, myrm, snap dragon
     constant integer NAGA_GUARDIAN      = 'nntg'        // tower
     constant integer NAGA_ALTAR         = 'nnad'        // altar
 
@@ -3926,7 +3926,7 @@ globals
     constant integer NAGA_WHALER                                     = 'n05Q' // spellbreaker
     constant integer NAGA_SORCEROR                                   = 'n0LA' // priest
     constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
-    constant integer NAGA_HYDRA                                      = 'n03R' // siege engine 2
+    constant integer NAGA_HYDRA_X                                    = 'n03R' // siege engine 2
     constant integer NAGA_TIDAL_WYRM                                 = 'n06M' // summoned
     constant integer NAGA_SNAP_DRAGON_SUBMERGED                      = 'nsbs' // weak ranged
     constant integer NAGA_MYRMIDON_SUBMERGED                         = 'nmys' // knight
