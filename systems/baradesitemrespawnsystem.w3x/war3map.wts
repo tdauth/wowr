@@ -1,0 +1,45 @@
+﻿STRING 1
+{
+Baradé's Item Respawn System 1.2
+}
+
+STRING 2
+{
+1-2
+}
+
+STRING 3
+{
+Picked up and destroyed items will automatically respawn after some time.
+}
+
+STRING 4
+{
+Baradé
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 8
+{
+Player 2
+}
+
+STRING 11
+{
+Baradé's Item Respawn System 1.2
+}
+
+STRING 14
+{
+- All preplaced items will respawn after being picked up or destroyed.
+}
+
