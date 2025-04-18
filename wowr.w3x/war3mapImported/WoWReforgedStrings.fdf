@@ -51,6 +51,18 @@ StringList {
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",
     RESURRECTION_STONE_HERO_ONLY       "Only one of your heroes can activate the Resurrection Stone.",
     NO_HERO_X                          "No hero %1%.",
+    // Magical Item Summoner
+    NO_VALID_ITEMS                     "No valid items.",
+    // Item Locker
+    LOCKED_ITEM_X                      "Locked item %1%.",
+    UNLOCKED_ITEM_X                    "Unlocked item %1%.",
+    ITEM_IS_OWNED_BY_ANOTHER_PLAYER    "Item is owned by another player.",
+    CANNOT_LOCK_ITEM                   "Cannot lock this type of item.",
+    // Item Summoner
+    SUMMONED_X_ITEMS                   "Summoned %1% items.",
+    NO_MATCHING_ITEMS                  "No matching items.",
+    // Moving Boxes
+    NO_WRAPABLE_BUILDINGS              "No wrapable buildings in area.",
     // Game End
     X_HAS_WON_THE_GAME                 "%1% has won the game!",
     // Equipment Bag
@@ -981,6 +993,19 @@ StringList {
     PLAYER_INFOS                       "%1% (%2%%3%%4%):\n- XP Rate: %5% %\n- Heroes: %6% (%7%)/%8% (%9%)/%10% (%11%)\n- Races: %12%/%13%/%14%\n- Professions: %15%/%16%/%17%\n- G: %18%/L: %19%/F: %20%/%21%\n- Evolution: %22%\n- HK %23%/UK %24%/R %25%/BK %26%/%27%",
     COOLDOWNS_INFOS                    "Cooldowns:\n- Repick: %1%\n- Race 1 repick: %2%\n- Race 2 repick: %3%\n- Profession 1 repick: %4%\n- Profession 2 repick: %5%\n- Heroes savecode: %6%\n- Resources savecode: %7%",
     PLAYER_SELECTION_SETTINGS          "- Mode: %1%|n- Heroes: %2%/%3%/%4%|n- Races: %5%/%6%/%7%|n- Professions: %8%/%9%/%10%|n- Start Location: %11%",
+    // Repick
+    NO_REPICK_WITH_ILLIDAN             "You cannot repick while controlling Illidan.",
+    NO_REPICK_WITH_ENEMIES             "You cannot repick when enemies are within a certain range.",
+    NEXT_REPICK_IS_ALLOWED_IN_X        "The next repick is allowed in %1%.",
+    NO_REPICK_IN_HARDCORE              "You cannot repick in game type |cffff0000HARDCORE|r",
+    NO_HERO_X                          "You have no hero %1%.",
+    HERO_2_REQUIREMENT                 "Your hero level must be 45 or higher.",
+    HERO_3_REQUIREMENT                 "Your hero level must be 65 or higher.",
+    PROFESSION_2_REQUIREMENT           "Your hero level must be 20 or higher.",
+    PROFESSION_3_REQUIREMENT           "Your hero level must be 45 or higher.",
+    NO_REPICK_RACE_FOR_FREELANCERS     "Repicking the race is only possible for Warlords.",
+    RACE_2_REQUIREMENT                 "Your hero level must be 30 or higher.",
+    RACE_3_REQUIREMENT                 "Your hero level must be 65 or higher.",
     // Equipment
     ONLY_CUSTOMIZABLE_HEROES_EQUIPMENT "Only customizable heroes can use equipment items.",
     // Elevator
