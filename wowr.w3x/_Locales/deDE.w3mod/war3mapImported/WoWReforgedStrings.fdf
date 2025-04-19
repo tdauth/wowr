@@ -51,6 +51,18 @@ StringList {
     DEACTIVATED_RESURRECTION_STONE     "Auferstehungsschrein deaktiviert.",
     RESURRECTION_STONE_HERO_ONLY       "Nur einer Ihrer Helden kann den Auferstehungsschrein aktivieren.",
     NO_HERO_X                          "Kein Held %1%.",
+    // Magical Item Summoner
+    NO_VALID_ITEMS                     "No valid items.",
+    // Item Locker
+    LOCKED_ITEM_X                      "Locked item %1%.",
+    UNLOCKED_ITEM_X                    "Unlocked item %1%.",
+    ITEM_IS_OWNED_BY_ANOTHER_PLAYER    "Item is owned by another player.",
+    CANNOT_LOCK_ITEM                   "Cannot lock this type of item.",
+    // Item Summoner
+    SUMMONED_X_ITEMS                   "Summoned %1% items.",
+    NO_MATCHING_ITEMS                  "No matching items.",
+    // Moving Boxes
+    NO_WRAPABLE_BUILDINGS              "No wrapable buildings in area.",
     // Game End
     X_HAS_WON_THE_GAME                 "%1% hat das Spiel gewonnen!",
     // Equipment Bag
@@ -121,6 +133,14 @@ StringList {
     FEL_DESCRIPTION                    "A demonic, destructive form of magic which leads to corruption of the target.",
     ARGUNITE                           "Argunit",
     ARGUNITE_DESCRIPTION               "Mineral from Argus with magical properties.",
+    // Paged Buttons UI
+    BUY_TOOLTIP_SUFFIX                 "|n|n|cff808080Click to buy and open the page.|R|n",
+    SLOT_TOOLTIP_SUFFIX                "|n|n|cff808080Click to open the page.|R|n",
+    NEXT_PAGE_BUTTON                   "|cffFCD20DNext Page|r",
+    PREVIOUS_PAGE_BUTTON               "|cffFCD20DPrevious Page|r",
+    CLOSE_BUTTON                       "|cffFCD20DClose|r",
+    PAGE_NAME                          "%1% (%2%/%3%)",
+    EMPTY_SLOT_TOOLTIP                 "Empty slot %1% at page %2%.",
     // Resources
     TARGET_IS_NO_VALID_MINE            "Ziel ist keine gültige Mine.",
     CANNOT_HARVEST                     "%1% kann nicht %2% sammeln.",
@@ -933,7 +953,7 @@ StringList {
     TREMBLE_MORTALS_AND_DESPAIR        "Erzittert, Sterbliche und verzweifelt! Diese Welt ist dem Untergang geweiht!",
     // Hero Journey
     HERO_JOURNEY_5                     "5: Fähigkeiten auf Theramore verfügbar.",
-    HERO_JOURNEY_10                    "10: Zufällige Ereignisse.",
+    HERO_JOURNEY_10                    "10: -",
     HERO_JOURNEY_15                    "15: Eine Ausrüstungsstasche.",
     HERO_JOURNEY_20                    "20: Reittier.",
     HERO_JOURNEY_25                    "25: Zweiter Beruf.",
