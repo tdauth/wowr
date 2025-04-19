@@ -1,0 +1,170 @@
+|CFFFFFFFFCHATHILFE|CFFF0C810
+
+|CFFDFDFDFClans|CFFF0C810
+Battle.net bietet jetzt Unterstützung für WARCRAFT III-Spieler, die eigene Clans aufbauen. Clans sind Gruppen von 10 bis 100 Spielern, die sich unter der Führung eines Häuptlings zusammenschließen möchten. Battle.net stellt Clans eigene private Channels sowie eine Rangliste zur Einstufung der Gesamtspielleistung des Clans zur Verfügung. Jeder Clan hat auch ein eindeutiges Clankürzel, das hinter den Namen der Mitglieder angezeigt wird. Weitere Informationen zu Clans findest du unter http://www.battle.net.
+
+|CFFDFDFDFMit Linksklick auf ein Spielersymbol wird dieser Spieler ausgewählt.
+Mit Rechtsklick auf ein Spielersymbol wird ein Dropdown-Menü mit mehreren Optionen geöffnet:|CFFF0C810
+
+|CFFBFBFBFFLÜSTERN|CFFF0C810 schickt eine private Nachricht an diesen Spieler.
+
+|CFFBFBFBFWER IST|CFFF0C810 sucht nach diesem Spieler und zeigt seinen momentanen Aufenthaltsort an. 
+
+|CFFBFBFBFNACHRICHTEN AUSBLENDEN|CFFF0C810 ignoriert Nachrichten von diesem Benutzer.
+
+|CFFBFBFBFPROFIL ...|CFFF0C810 zeigt das WARCRAFT III-Profil dieses Spielers an. Per Doppelklick auf WARCRAFT III-Spieler in der Channelliste dessen Profil aufgerufen werden.
+
+|CFFBFBFBFZU FREUNDEN HINZUFÜGEN|CFFF0C810 fügt diesen Spieler Ihrer Freundesliste hinzu.
+
+
+
+|CFFDFDFDFDie Hauptbuttons haben folgende Funktionen:|CFFF0C810
+
+|CFFBFBFBFSPIELEN|CFFF0C810 ist das anonyme Zuweisen von Spielpartnern, mit dem WARCRAFT III-Spieler ähnlichen Niveaus für ein Spiel zusammengestellt werden. Du kannst angeben, welche Spielart du spielen möchtest, wie viele Spieler mitspielen sollen und welche Karten du bevorzugst. Battle.net sucht Spieler mit vergleichbarer Erfahrung, die dann gegeneinander antreten können. Weitere Details dazu findest du im WARCRAFT III-Handbuch.
+
+|CFFBFBFBFARRANGIERTES TEAM|CFFF0C810 ermöglicht es, mit Teamgefährten deiner Wahl gegen anonym ausgewählte Gegner anzutreten. Du wählst deine Verbündeten, bevor du ein Spiel startest. Battle.net sucht Teams mit vergleichbarer Erfahrung, die dann gegeneinander antreten können.
+
+|CFFBFBFBFEIGENES SPIEL|CFFF0C810 ermöglicht es, sich seine Gegner auszusuchen. Wenn du 'Eigenes Spiel' auswählst, siehst du auf der linken Seite des Bildschirms eine Liste verfügbarer Spiele. Wenn du auf ein Spiel klickst, werden Informationen über die Karte und den Spiel-Host angezeigt.
+
+|CFFBFBFBFRANGLISTENINFOS|CFFF0C810 ermöglicht es, sich auf der Battle.net-Website seine offizielle Platzierung in der WARCRAFT III-Rangliste anzusehen. Die Rangfolge der Spieler ändert sich, je nach den Erfolgen oder Niederlagen eines Spielers in Spielen mit anonym zugewiesenen Spielpartnern. Die Ranglistenstatistik wird täglich aktualisiert. Die Symbole, die in Chaträumen neben deinem Namen angezeigt werden, ändern sich, wenn sich dein Ranglistenstatus ändert.
+
+|CFFBFBFBFCHANNEL|CFFF0C810 ermöglicht es, einem bereits bestehenden Chatchannel beizutreten oder einen eigenen Channel zu erstellen. Wenn du einem bestehenden öffentlichen Channel beitreten möchtest, wähle den Channel in der Channelliste aus und klick dann auf den 'Chat betreten'-Button. Du kannst aber auch auf den Channelnamen doppelklicken. Wenn du einen eigenen Channel erstellen möchtest, gib in das Feld 'Channelname' den Namen des Channels ein, den du erstellen möchtest.
+
+|CFFBFBFBFBATTLE.NET VERLASSEN|CFFF0C810 schließt das Battle.net-Chat-Interface und bringt dich zum Hauptauswahlbildschirm zurück. Du bist dann nicht mehr mit Battle.net verbunden.
+
+Das Fenster |CFFBFBFBFCHANNEL|CFFF0C810 zeigt eine Liste aller Spieler an, die sich im selben Chatchannel befinden.
+
+Das Fenster |CFFBFBFBFFREUNDE|CFFF0C810 zeigt eine Liste der Spieler an, die deine Freunde sind. Du kannst den Kontakt zu deinen Freunden aufrechterhalten, da du es erfährst, wenn sich ein Freund in Battle.net einloggt, und auch darauf aufmerksam gemacht wirst, wenn sich Freunde sich in Chatchannels einloggen oder Spiele erstellen.
+
+
+
+|CFFDFDFDFMit Rechtsklick auf einen ausgewählten Freund wird ein Dropdown-Menü mit mehreren Optionen:|CFFF0C810
+
+|CFFBFBFBFFLÜSTERN|CFFF0C810 schickt eine private Nachricht an diesen Freund.
+
+|CFFBFBFBFWER IST|CFFF0C810 sucht nach diesem Freund und zeigt seinen momentanen Aufenthaltsort an.
+
+|CFFBFBFBFFREUND HOCHSTUFEN|CFFF0C810 verschiebt diesen Freund in deiner Freundesliste nach oben.
+
+|CFFBFBFBFFREUND ZURÜCKSTUFEN|CFFF0C810 verschiebt diesen Freund in deiner Freundesliste nach unten.
+
+|CFFBFBFBFAUS FREUNDEN ENTFERNEN|CFFF0C810 löscht diesen Spieler aus deiner Freundesliste.
+
+Weitere Informationen zur Verwaltung deiner Freundesliste findest du auf |CFFBFBFBFhttp://www.battle.net/info/friends.shtml|CFFF0C810.
+
+
+
+|CFFFFFFFFCHATFENSTER|CFFF0C810
+
+|CFFFFFF00Gelber Text|CFFF0C810 zeigt den Namen des Spielers an, der spricht.
+
+|CFFFFFFFFWeißer Text|CFFF0C810 zeigt an, was du oder andere laut zum gesamten Chatchannel gesagt haben.
+
+|CFF3F3F3FGrauer Text|CFFF0C810 zeigt an, dass du oder andere diese Aktion im Chatchannel ausgeführt haben.
+
+|CFF00FF00Grüner Text|CFFF0C810 zeigt Nachrichten an, die du einer bestimmten Person zugeflüstert hast oder die dir zugeflüstert wurden. 
+
+|CFF0000FFBlauer Text|CFFF0C810 kennzeichnet besondere Nachrichten, die direkt von Battle.net gesendet wurden.
+
+|CFFFF0000Roter Text|CFFF0C810 kennzeichnet Warnungen oder Fehlermeldungen, die direkt von Battle.net gesendet wurden.
+
+
+
+|CFFFFFFFFCHATBEFEHLE|CFFF0C810
+
+|CFFBFBFBFALT+N|CFFF0C810 (Macintosh |CFFBFBFBFALT+M|CFFF0C810)
+Fügt den Namen des gewählten Spielers in das Textfeld ein.
+
+|CFFBFBFBFALT-R|CFFF0C810
+Antwortet dem letzten Spieler, der dir etwas zugeflüstert hat.
+
+|CFFBFBFBFALT-W|CFFF0C810
+Flüstert dem ausgewählten Spieler zu.
+
+|CFFBFBFBFSTRG-C, STRG-X, STRG-V|CFFF0C810
+Mit diesen Befehlen kann Text kopiert, ausgeschnitten und eingefügt werden.
+
+|CFFBFBFBFSTRG-M|CFFF0C810
+Schaltet die Musik ein/aus.
+
+
+
+|CFFFFFFFFBATTLE.NET-BEFEHLE|CFFF0C810
+|CFFDFDFDFDu kannst jeden dieser Befehle verwenden, indem du ihn in das Textfeld eingibst, in das du normalerweise auch deine Nachrichten schreibst:|CFFF0C810
+
+|CFFBFBFBF/whisper BENUTZERNAME NACHRICHT, /w BENUTZERNAME NACHRICHT
+/msg BENUTZERNAME NACHRICHT, /m BENUTZERNAME NACHRICHT|CFFF0C810
+Schickt eine private Nachricht an einen anderen Benutzer auf Battle.net.
+
+|CFFBFBFBF/me NACHRICHT, /emote NACHRICHT|CFFF0C810
+Ermöglicht es, eine Aktion in einem Chatraum auszuführen.
+
+|CFFBFBFBF/squelch BENUTZERNAME, /ignore BENUTZERNAME|CFFF0C810
+Ermöglicht es, Nachrichten vom angegebenen Benutzer zu ignorieren. 
+
+|CFFBFBFBF/unsquelch BENUTZERNAME, /unignore BENUTZERNAME|CFFF0C810
+Ermöglicht es, Nachrichten von diesem Benutzer wieder zu empfangen. 
+
+|CFFBFBFBF/away GRUND|CFFF0C810
+Zeigt Spielern, die dir eine Nachricht schicken, an, dass du dich nicht an der Tastatur befindest und daher nicht antworten kannst. Du kannst auch einen Grund für deine Abwesenheit angeben, indem du ihn nach dem /away-Befehl eingibst. Um diese automatische Nachricht abzuschalten, sobald du dich wieder an der Tastatur befindest, gib einfach nur erneut /away ein.
+
+|CFFBFBFBF/dnd GRUND|CFFF0C810
+Zeigt Spielern, die dir eine Nachricht schicken, an, dass du nicht gestört werden möchtest. Du kannst auch einen Grund dafür angeben, indem du ihn nach dem /dnd-Befehl eingibst. Um diese automatische Nachricht abzuschalten, gib einfach nur erneut /dnd ein.
+
+|CFFBFBFBF/channel CHANNELNAME, /join CHANNELNAME|CFFF0C810
+Bringt dich zum Battle.net-Channel deiner Wahl. Wenn du z. B. dem Channel des technischen Supports beitreten möchtest, kannst du einfach /channel technical support eingeben. Wenn du versuchst, einem Channel beizutreten, der nicht existiert, wird der Channel automatisch angelegt.
+
+|CFFBFBFBF/who CHANNELNAME|CFFF0C810
+Zeigt eine Liste der Battle.net-Benutzernamen der Spieler an, die sich momentan im angegebenen Battle.net-Channel befinden.
+
+|CFFBFBFBF/whois BENUTZERNAME, /where BENUTZERNAME, /whereis BENUTZERNAME|CFFF0C810
+Sucht in allen öffentlichen Battle.net-Chatcchanneln und allen Blizzard-Spielen nach einem anderen Spieler und zeigt dessen Benutzernamen und Aufenthaltsort an.
+
+|CFFBFBFBF/whoami|CFFF0C810
+Zeigt dir deinen momentanen Aufenthaltsort auf Battle.net an.
+
+|CFFBFBFBF/help, /?|CFFF0C810
+Zeigt dir diesen allgemeinen Battle.net-Hilfetext an.
+
+|CFFBFBFBF/time|CFFF0C810
+Zeigt dir die aktuelle Battle.net-Zeit und deine aktuelle Ortszeit an.
+
+|CFFBFBFBF/users|CFFF0C810
+Zeigt die Anzahl der momentan auf Battle.net aktiven Benutzer, Spiele und Channels an.
+
+|CFFBFBFBF/stats [BENUTZERNAME] [PROGRAMM-ID]|CFFF0C810
+Zeigt dir die Ranglistenstatistik für Spiele von Blizzard Entertainment an, die über Battle.net gespielt werden können. Dabei steht die PROGRAMM-ID für folgende Spiele: STAR ist STARCRAFT, SEXP ist STARCRAFT EXPANSION (BROOD WAR), W2BN ist WARCRAFT II: BATTLE.NET EDITION und WAR3 ist WARCRAFT III. Wenn die PROGRAMM-ID nicht angegeben wird, wird sie standardmäßig auf dein aktuelles Spiel gestellt. Wenn der BENUTZERNAME nicht angegeben wird, wird er standardmäßig auf deinen Benutzernamen gestellt.
+
+|CFFBFBFBF/profile BENUTZERNAME|CFFF0C810
+Ermöglicht es, das Profil anderer WARCRAFT III-Spieler anzusehen. Mit Rechtsklick auf dein eigenes Spielersymbol kannst du dein eigenes Profil bearbeiten.
+
+
+
+|CFFFFFFFFFREUNDBEFEHLE|CFFF0C810
+
+|CFFBFBFBF/friends BEFEHL [OPTIONEN], /f BEFEHL [OPTIONEN]|CFFF0C810
+Die verfügbaren Befehle sind 'list', 'add', 'remove', 'msg', 'promote' und 'demote'.
+
+|CFFBFBFBF/friends list, /friends l|CFFF0C810
+Listet alle deine Freunde auf und zeigt an, was sie gerade machen.
+
+|CFFBFBFBF/friends add BENUTZERNAME, /friends a BENUTZERNAME|CFFF0C810
+Fügt BENUTZERNAME zu deiner Freundesliste hinzu.
+
+|CFFBFBFBF/friends remove BENUTZERNAME, /friends r BENUTZERNAME|CFFF0C810
+Entfernt BENUTZERNAME aus deiner Freundesliste.
+
+|CFFBFBFBF/friends msg NACHRICHT, /friends m NACHRICHT|CFFF0C810
+Schickt eine NACHRICHT an alle Spieler auf deiner Freundesliste.
+
+|CFFBFBFBF/friends promote BENUTZERNAME [POSITION], /friends p BENUTZERNAME [POSITION]|CFFF0C810
+Stuft BENUTZERNAME um eine Position auf deiner Freundesliste hoch. Wenn die POSITION angegeben ist, wird BENUTZERNAME auf diesen Platz, von oben aus gezählt, deiner Freundesliste gestuft.
+
+|CFFBFBFBF/friends demote BENUTZERNAME [POSITION], /friends d BENUTZERNAME [POSITION]|CFFF0C810
+Stuft BENUTZERNAME um eine Position auf deiner Freundesliste zurück. Wenn die POSITION angegeben ist, wird BENUTZERNAME auf diesen Platz, von unten aus gezählt, deiner Freundesliste gestuft.
+
+Weitere Informationen zur Verwaltung deiner Freundesliste findest du auf |CFFBFBFBFhttp://www.battle.net/info/friends.shtml|CFFF0C810.
+
+
+
+Falls du weitere Hilfe benötigst, solltest du dem Battle.net-Channel des technischen Supports (|CFFBFBFBFTECHNICAL SUPPORT|CFFF0C810) auf Lordaeron (US West) beitreten, in das WARCRAFT III-Handbuch sehen oder die Website des technischen Supports unter |CFFBFBFBFhttp://www.blizzard.de/support|CFFF0C810 besuchen.

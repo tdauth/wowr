@@ -1,0 +1,137 @@
+﻿|Cffc5ff26MENÜBEFEHLE|r
+
+|Cfffed312F9|r
+- Das Questlog ein/ausschalten.
+
+|Cfffed312F10|r
+- Das Spielmenü ein/ausschalten.
+
+|Cfffed312F11|r
+- Das Verbündetenmenü ein/ausschalten.
+
+|Cfffed312F12|r
+- Das Chatmenü ein/ausschalten.
+
+|Cfffed312ALT-F4|r
+- WARCRAFT III verlassen.
+
+|Cfffed312F6|r
+- Schnellspeichern.
+
+|Cfffed312ALT+Q|r
+- Das 'Spiel beenden'-Menü aufrufen.
+
+|Cfffed312ALT+O|r
+- Das Optionsmenü aufrufen.
+
+|Cfffed312ALT+S|r
+- Das Speichermenü aufrufen.
+
+|Cfffed312ALT+L|r
+- Das Lademenü aufrufen.
+
+|Cfffed312ALT+H|r
+- Das Hilfemenü aufrufen.
+
+|Cfffed312STRG+M|r
+- Die Musik ein/ausschalten.
+
+|Cfffed312STRG+S|r
+- Die Soundeffekte ein/ausschalten.
+
+|Cfffed312ESC|r
+- Zum vorigen Menü zurückkehren.
+
+
+|Cffc5ff26SPIELBEFEHLE|r
+
+|Cfffed312Linke Maustaste|r
+- Wählt Einheiten, Gebäude, Befehlsbuttons und Aktionspunkte (an denen Befehle ausgeführt werden sollen) an:
+   |Cffa1acff- Wählt Einheiten und Gebäude auf dem Bildschirm an.|r
+   |Cffa1acff- Aktiviert Buttons auf der Kommandokarte einer Einheit.|r
+   |Cffa1acff- Bestätigt Ziele für Befehle, Gebäudeplatzierung, Fähigkeiten- und Gegenstandszuweisung.|r
+   |Cffa1acff- Benutzt einen Gegenstand aus dem Inventar eines Helden.|r
+   |Cffa1acff- Verschiebt die Spielansicht zum auf der Minikarte markierten Ort.|r
+
+|Cfffed312Rechte Maustaste|r
+- Führt 'intelligente' Aktionen auf anvisierte Einheiten/Gebäude, den Boden oder auf der Minikarte aus:
+   |Cffa1acff- Boden - Einheit bewegt sich ungeachtet aller Angriffe zu diesem Ort.|r
+   |Cffa1acff- Feindliche Einheit oder feindliches Gebäude - Ziel wird angegriffen.|r
+   |Cffa1acff- Verbündete Einheit - Dem Ziel wird gefolgt.|r
+   |Cffa1acff- Baum oder Goldmine - Einheit bewegt sich zur entsprechenden Position (und sammelt Rohstoffe, wenn Arbeitereinheit).|r
+   |Cffa1acff- Gegenstand auf dem Boden - Held bewegt sich, um den Gegenstand aufzunehmen.|r
+   |Cffa1acff- Gegenstand im Inventar des Helden - Gegenstand wird aufgenommen.|r
+   |Cffa1acff- Wenn Zielcursor aktiv ist - Befehl wird aufgehoben.|r
+   |Cffa1acff- Wenn Zielcursor aktiv ist und auf die Minikarte zeigt - Spielansicht wird zum auf der Minikarte markierten Ort verschoben.|r
+
+|Cfffed312Mittlere Maustaste|r
+- Gedrückt halten, um die Spielansicht mit der Maus zu scrollen.
+
+|Cfffed312ESC|r
+- Befehlsauswahl rückgängig machen.
+
+|Cfffed312ENTER|r
+- Aktiviert die Nachrichteneingabe. Nochmaliger Druck auf |Cfffed312ENTER|r (|Cfffed312Eingabetaste|r) schickt die Nachricht ab.
+
+|Cfffed312Umschalttaste+ENTER|r
+- Aktiviert die Nachrichteneingabe für 'Alle' Spieler. Nochmaliger Druck auf |Cfffed312ENTER|r (|Cfffed312Eingabetaste|r) schickt die Nachricht ab.
+
+|Cfffed312STRG+ENTER|r
+- Aktiviert die Nachrichteneingabe nur für 'Verbündete'. Nochmaliger Druck auf |Cfffed312ENTER|r (|Cfffed312Eingabetaste|r) schickt die Nachricht ab.
+
+|Cfffed312Pfeiltasten|r
+- Scrollt die Spielansicht.
+
+|Cfffed312TAB|r
+- Schaltet zwischen Untergruppen um.
+
+|Cfffed312ALT|r (falls bei Befehlseingabe gedrückt)
+- Formationsbewegung wird während einer Aktion ignoriert.
+
+|Cfffed312STRG|r (falls bei Befehlseingabe gedrückt)
+- Aktion wird nur von der augenblicklich aktiven Untergruppe ausgeführt.
+
+|Cfffed312STRG+Nr.|r
+- Weist die angewählten Einheiten oder Gebäude einer Gruppe zu.
+
+|Cfffed312Umschalttaste+Nr.|r
+- Fügt die angewählten Einheiten der aktiven Gruppe hinzu.
+
+|Cfffed312Nr.|r
+- Wählt die zugewiesene Gruppe an. Zweimal schnell hintereinander gedrückt, wird die Ansicht auf die entsprechende Gruppe zentriert.
+
+|Cfffed312F1-F3 (Multiplayer F1-F7)|r
+- Wählt den zugehörigen Helden an. Zweimal schnell hintereinander gedrückt, wird die Ansicht auf den entsprechenden Helden zentriert.
+
+|Cfffed312F8|r
+- Wählt untätige Arbeitereinheit(en) an.
+
+|Cfffed312Rücktaste|r
+- Schaltet durch die Hauptgebäude.
+
+|Cfffed312Leertaste|r
+- Zentriert die Sicht auf die letzte Benachrichtigung.
+
+|Cfffed312STRG+C / ALT+C|r
+- Zentriert die Sicht auf die Einheit mit dem aktiven Porträt.
+
+|Cfffed312Umschalttaste+Einheit anwählen|r
+- Fügt eine Einheit zur aktuellen Auswahl hinzu bzw. entfernt sie daraus.
+
+|Cfffed312STRG+Einheit anwählen / Doppelklick auf Einheit|r
+- Wählt alle Einheiten dieses Typs in der Spielansicht an.
+
+|Cfffed312Mausrad nach oben / BILD aufwärts|r
+- Senkt die Spielkamera und vergrößert die Ansicht.
+
+|Cfffed312Mausrad nach unten / BILD abwärts|r
+- Hebt die Spielkamera und verkleinert die Ansicht.
+
+|Cfffed312EINFG|r
+- Dreht die Kamera nach links.
+
+|Cfffed312ENTF|r
+- Dreht die Kamera nach rechts.
+
+|Cfffed312DRUCK|r
+- Speichert einen Screenshot in deinem WARCRAFT III-Verzeichnis.

@@ -1,0 +1,4 @@
+﻿Neue Accounts erstellen:
+
+Bitte beachten Sie, dass inaktive Accounts in regelmäßigen Abständen gelöscht werden. Wenn Sie einen neuen Account erstellen, müssen Sie innerhalb der ersten 48 Stunden mindestens zwei Stunden lang in Battle.net eingeloggt sein (entweder in einer Session oder über mehrere Sessions verteilt). Danach bleibt Ihr Account dauerhaft aktiv, so lange Sie sich mindestes einmal alle drei Monate einloggen.
+
