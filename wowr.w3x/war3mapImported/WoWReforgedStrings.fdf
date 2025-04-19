@@ -698,9 +698,9 @@ StringList {
     MASTER_THIEF_DESCRIPTION           "%1% XP per 50 stolen items.",
     SURVIVOR                           "Survivor",
     SURVIVOR_DESCRIPTION               "%1% XP for 2 hours without your hero dying.",
-    HOLY_WARRIOR                       "Holy Warrior"
+    HOLY_WARRIOR                       "Holy Warrior",
     HOLY_WARRIOR_DESCRIPTION           "%1% XP for 100 killed Undead as non-Undead.",
-    UNHOLY_WARRIOR                     "Unholy Warrior"
+    UNHOLY_WARRIOR                     "Unholy Warrior",
     UNHOLY_WARRIOR_DESCRIPTION         "%1% XP for 100 killed non-Undead as Undead.",
     WAR_CRIMINAL                       "War Criminal",
     WAR_CRIMINAL_DESCRIPTION           "%1% XP for 100 killed enemy citizens.",
