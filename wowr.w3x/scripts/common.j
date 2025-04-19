@@ -2736,7 +2736,7 @@ globals
     // make constants available to triggers AND common.ai
 
     constant string MAP_VERSION                                      = "4.0"
-    constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
+    constant boolean MAP_DEBUG_MODE                                  = false // Disable for releases.
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57

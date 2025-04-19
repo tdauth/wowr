@@ -52,17 +52,17 @@ StringList {
     RESURRECTION_STONE_HERO_ONLY       "Nur einer Ihrer Helden kann den Auferstehungsschrein aktivieren.",
     NO_HERO_X                          "Kein Held %1%.",
     // Magical Item Summoner
-    NO_VALID_ITEMS                     "No valid items.",
+    NO_VALID_ITEMS                     "Kein gültiger Gegenstand.",
     // Item Locker
-    LOCKED_ITEM_X                      "Locked item %1%.",
-    UNLOCKED_ITEM_X                    "Unlocked item %1%.",
-    ITEM_IS_OWNED_BY_ANOTHER_PLAYER    "Item is owned by another player.",
-    CANNOT_LOCK_ITEM                   "Cannot lock this type of item.",
+    LOCKED_ITEM_X                      "Gegenstand %1% gesperrt.",
+    UNLOCKED_ITEM_X                    "Gegenstand %1% entsperrt.",
+    ITEM_IS_OWNED_BY_ANOTHER_PLAYER    "Gegenstand gehört einem anderen Spieler.",
+    CANNOT_LOCK_ITEM                   "Ein Gegenstand mit diesem Typ kann nicht gesperrt werden.",
     // Item Summoner
-    SUMMONED_X_ITEMS                   "Summoned %1% items.",
-    NO_MATCHING_ITEMS                  "No matching items.",
+    SUMMONED_X_ITEMS                   "%1% Gegenstände herbeigerufen.",
+    NO_MATCHING_ITEMS                  "Keine passenden Gegenstände.",
     // Moving Boxes
-    NO_WRAPABLE_BUILDINGS              "No wrapable buildings in area.",
+    NO_WRAPABLE_BUILDINGS              "Keine verpackbaren Gebäude in diesem Gebiet.",
     // Game End
     X_HAS_WON_THE_GAME                 "%1% hat das Spiel gewonnen!",
     // Equipment Bag
