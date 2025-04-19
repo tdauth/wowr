@@ -153,6 +153,13 @@ Use this check list when releasing a new version of the map:
 Saving the map takes some time due to the big number of objects.
 Hence, you can use the "Validate Map Triggers (F10)" action in the trigger editor before actually saving the map to make sure there won't be any syntax error.
 
+## Corrupted Map Data/Unregistered native function
+
+"There was an error trying to load the selected map. The map is unavailable or corrupted." might appear on selecting an older version of the map which uses natives in the [common.j](./wowr.w3x/scripts/common.j) file which do not exist anymore due to an update of Warcraft III.
+Saving the map will lead to "Unregistered native function" errors.
+The first shown line number is actually the first line number after the natives which are not available anymore.
+Just compare the custom common.j file with the one of the latest Warcraft III version and remove/comment the old natives in the custom file.
+
 ## Known Reasons for Crashes
 
 Sometimes versions of this map might lead to crashing but since it is really hard to debug Warcraft maps, there are only some possible known reasons for crashes we have experienced so far:
