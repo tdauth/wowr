@@ -51,6 +51,13 @@ StringList {
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",
     RESURRECTION_STONE_HERO_ONLY       "Only one of your heroes can activate the Resurrection Stone.",
     NO_HERO_X                          "No hero %1%.",
+    // Quiver
+    ALREADY_USED                       "Already used.",
+    // Goblin Tool Box
+    TARGET_HAS_MINIMUM_HP              "Target has already reached maximum hit points.",
+    TARGET_HAS_MAXIMUM_HP              "Target has already reached minimum hit points.",
+    REINFORCE_REQUIRES_RESOURCES       "Requires 100 gold and 50 lumber.",
+    ENEMY_UNITS_NEARBY                 "There are enemy units nearby.",
     // Magical Item Summoner
     NO_VALID_ITEMS                     "No valid items.",
     // Item Locker
@@ -503,6 +510,9 @@ StringList {
     // Profession Thief
     CLOSED_GATE_OR_LOCKED_CHEST        "Target must be a closed gate or chest.",
     UNLOCKED                           "Unlocked",
+    // Profession Tamer
+    TARGET_MUST_BE_MAX_LEVEL_X         "Target must be maximum level %1%",
+    TARGET_MUST_BE_A_CREEP             "Target must be a creep.",
     // Profession Hunter
     TROPHIES                           "Trophies: ",
     // Profession Combiner
@@ -521,7 +531,7 @@ StringList {
     INSCRIPTABLE_SPELLS                "Inscriptable spells: ",
     // Profession Cook
     TARGET_ITEM_MUST_BE_FOOD           "Target item must be food.",
-    // Profession Fisherman
+    // Profession Fisherman/Captain
     NO_FISH                            "No fish!",
     TARGET_AREA_MUST_BE_WATER          "Target area must be water.",
     // Properties
@@ -555,6 +565,7 @@ StringList {
     PAGE_TITLE_DRAGONS                 "(Dragons)",
     PAGE_TITLE_POWERFUL_CREATURES      "(Powerful Creatures)",
     PAGE_TITLE_COOKING                 "(Cooking)",
+    TARGET_MUST_BE_A_CRAFTING_STASH    "Target unit must be a Crafting Stash.",
     // Skins
     SKIN_CHANGED                       "Changed skin to %1%.",
     SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",
@@ -969,12 +980,16 @@ StringList {
     CLAN_PAGED_BUTTONS_TITLE           "(Clan)",
     SOUNDS_PAGED_BUTTONS_TITLE         "(Sounds)",
     BANNERS_PAGED_BUTTONS_TITLE        "(Banners)",
+    TARGET_MUST_BE_IN_YOUR_CLAN        "Target must be in your clan.",
+    NO_BUILD_ELVEN_CLAN_ISLAND         "Cannot build on the island of The Elven Clan.",
     // Player Housings
     NO_HOUSING_AVAILABLE               "No housing available.",
     NOT_IN_HOUSING                     "Not in housing.",
     IN_HOUSING                         "In housing.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
     BOSSES                             "Bosses",
+    // Book of Mercenaries
+    NO_PICKUP_BOOK_OF_MERCENARIES      "Cannot pick up the Book of Mercenaries as Warlord.",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
@@ -1025,6 +1040,8 @@ StringList {
     REQUIRES_HERO_LEVEL_OR_VIP         "Requires hero level %1% or VIP or everything unlocked.",
     DOT_NOT_AVAILABLE                  "Not available.",
     ONLY_HEROES_CAN_CHANGE_ABILITY     "Only heroes can change their standard ability.",
+    // Power Generator
+    HOSTILE_BUILDINGS_NEARBY           "Cannot be constructed with hostile buildings nearby.",
     // Computer
     MY_NAVY_WILL_ATTACK_X              "My navy will attack %1%!",
     // Trading Post

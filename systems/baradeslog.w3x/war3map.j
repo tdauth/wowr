@@ -1,9 +1,9 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader__eventTrigger= CreateTrigger()
-trigger FrameLoader__actionTrigger= CreateTrigger()
-timer FrameLoader__t= CreateTimer()
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
 //endglobals from FrameLoader
 //globals from MathUtils:
 constant boolean LIBRARY_MathUtils=true
@@ -17,7 +17,7 @@ constant boolean LIBRARY_StringUtils=true
 //endglobals from StringUtils
 //globals from PlayerColorUtils:
 constant boolean LIBRARY_PlayerColorUtils=true
-string array PlayerColorUtils__PlayerColorNames
+string array PlayerColorUtils___PlayerColorNames
 //endglobals from PlayerColorUtils
 //globals from Log:
 constant boolean LIBRARY_Log=true
@@ -386,18 +386,18 @@ endfunction
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader__actionTrigger, func)
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
     endfunction
 
-    function FrameLoader__timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader__actionTrigger)
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
     endfunction
-    function FrameLoader__eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
     endfunction
-    function FrameLoader__init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
     endfunction
 
 //library FrameLoader ends
@@ -958,42 +958,42 @@ function GetPlayerNameColored takes player whichPlayer returns string
 endfunction
 
 
-function PlayerColorUtils__Init takes nothing returns nothing
-    set PlayerColorUtils__PlayerColorNames[0]="RED"
-    set PlayerColorUtils__PlayerColorNames[1]="BLUE"
-    set PlayerColorUtils__PlayerColorNames[2]="CYAN"
-    set PlayerColorUtils__PlayerColorNames[3]="PURPLE"
-    set PlayerColorUtils__PlayerColorNames[4]="YELLOW"
-    set PlayerColorUtils__PlayerColorNames[5]="ORANGE"
-    set PlayerColorUtils__PlayerColorNames[6]="GREEN"
-    set PlayerColorUtils__PlayerColorNames[7]="PINK"
-    set PlayerColorUtils__PlayerColorNames[8]="LIGHT_GRAY"
-    set PlayerColorUtils__PlayerColorNames[9]="LIGHT_BLUE"
-    set PlayerColorUtils__PlayerColorNames[10]="AQUA"
-    set PlayerColorUtils__PlayerColorNames[11]="BROWN"
-    set PlayerColorUtils__PlayerColorNames[12]="MAROON"
-    set PlayerColorUtils__PlayerColorNames[13]="NAVY"
-    set PlayerColorUtils__PlayerColorNames[14]="TURQUOISE"
-    set PlayerColorUtils__PlayerColorNames[15]="VIOLET"
-    set PlayerColorUtils__PlayerColorNames[16]="WHEAT"
-    set PlayerColorUtils__PlayerColorNames[17]="PEACH"
-    set PlayerColorUtils__PlayerColorNames[18]="MINT"
-    set PlayerColorUtils__PlayerColorNames[19]="LAVENDER"
-    set PlayerColorUtils__PlayerColorNames[20]="COAL"
-    set PlayerColorUtils__PlayerColorNames[21]="SNOW"
-    set PlayerColorUtils__PlayerColorNames[22]="EMERALD"
-    set PlayerColorUtils__PlayerColorNames[23]="PEANUT"
+function PlayerColorUtils___Init takes nothing returns nothing
+    set PlayerColorUtils___PlayerColorNames[0]="RED"
+    set PlayerColorUtils___PlayerColorNames[1]="BLUE"
+    set PlayerColorUtils___PlayerColorNames[2]="CYAN"
+    set PlayerColorUtils___PlayerColorNames[3]="PURPLE"
+    set PlayerColorUtils___PlayerColorNames[4]="YELLOW"
+    set PlayerColorUtils___PlayerColorNames[5]="ORANGE"
+    set PlayerColorUtils___PlayerColorNames[6]="GREEN"
+    set PlayerColorUtils___PlayerColorNames[7]="PINK"
+    set PlayerColorUtils___PlayerColorNames[8]="LIGHT_GRAY"
+    set PlayerColorUtils___PlayerColorNames[9]="LIGHT_BLUE"
+    set PlayerColorUtils___PlayerColorNames[10]="AQUA"
+    set PlayerColorUtils___PlayerColorNames[11]="BROWN"
+    set PlayerColorUtils___PlayerColorNames[12]="MAROON"
+    set PlayerColorUtils___PlayerColorNames[13]="NAVY"
+    set PlayerColorUtils___PlayerColorNames[14]="TURQUOISE"
+    set PlayerColorUtils___PlayerColorNames[15]="VIOLET"
+    set PlayerColorUtils___PlayerColorNames[16]="WHEAT"
+    set PlayerColorUtils___PlayerColorNames[17]="PEACH"
+    set PlayerColorUtils___PlayerColorNames[18]="MINT"
+    set PlayerColorUtils___PlayerColorNames[19]="LAVENDER"
+    set PlayerColorUtils___PlayerColorNames[20]="COAL"
+    set PlayerColorUtils___PlayerColorNames[21]="SNOW"
+    set PlayerColorUtils___PlayerColorNames[22]="EMERALD"
+    set PlayerColorUtils___PlayerColorNames[23]="PEANUT"
 endfunction
 
 function GetPlayerColorName takes player whichPlayer returns string
-    return StringCase(PlayerColorUtils__PlayerColorNames[GetPlayerId(whichPlayer)], false)
+    return StringCase(PlayerColorUtils___PlayerColorNames[GetPlayerId(whichPlayer)], false)
 endfunction
 
 function GetPlayerColorFromString takes string whichString returns playercolor
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( whichString == I2S(i + 1) or ( PlayerColorUtils__PlayerColorNames[i] != null and StringLength(PlayerColorUtils__PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils__PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
+        if ( whichString == I2S(i + 1) or ( PlayerColorUtils___PlayerColorNames[i] != null and StringLength(PlayerColorUtils___PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils___PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
             return ConvertPlayerColor(i)
         endif
         set i=i + 1
@@ -1006,7 +1006,7 @@ function GetPlayerFromString takes string whichString returns player
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( whichString == I2S(i + 1) or ( PlayerColorUtils__PlayerColorNames[i] != null and StringLength(PlayerColorUtils__PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils__PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
+        if ( whichString == I2S(i + 1) or ( PlayerColorUtils___PlayerColorNames[i] != null and StringLength(PlayerColorUtils___PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils___PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
             return Player(i)
         endif
         set i=i + 1
@@ -1333,6 +1333,7 @@ function LogUI_CreateUI takes nothing returns nothing
     set LogUI__BackgroundFrame=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(LogUI__BackgroundFrame, FRAMEPOINT_TOPLEFT, LogUI_X, LogUI_Y)
     call BlzFrameSetAbsPoint(LogUI__BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, LogUI_X + LogUI_WIDTH, LogUI_Y - LogUI_HEIGHT)
+    call BlzFrameSetLevel(LogUI__BackgroundFrame, 1)
 
     set f=BlzCreateFrame("EscMenuTitleTextTemplate", LogUI__BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, LogUI_TITLE_X, LogUI_TITLE_Y)
@@ -1405,7 +1406,7 @@ function LogUI__Init takes nothing returns nothing
     call TriggerAddAction(OnStartGame__startGameTrigger, (function LogUI__Start)) // INLINED!!
     // Prevents crashes on loading save games:
 
-    call TriggerAddAction(FrameLoader__actionTrigger, (function LogUI_CreateUI)) // INLINED!!
+    call TriggerAddAction(FrameLoader___actionTrigger, (function LogUI_CreateUI)) // INLINED!!
 
 endfunction
 
@@ -1681,10 +1682,10 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs246756750")
-call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("jasshelper__initstructs841108687")
+call ExecuteFunc("FrameLoader___init_function")
 call ExecuteFunc("OnStartGame__Init")
-call ExecuteFunc("PlayerColorUtils__Init")
+call ExecuteFunc("PlayerColorUtils___Init")
 call ExecuteFunc("Log__Init")
 call ExecuteFunc("LogUI__Init")
 
@@ -1804,7 +1805,7 @@ function sa___prototype52_Log__SetCinematicSceneBJHook takes nothing returns boo
     return true
 endfunction
 
-function jasshelper__initstructs246756750 takes nothing returns nothing
+function jasshelper__initstructs841108687 takes nothing returns nothing
     set st___prototype42[1]=CreateTrigger()
     call TriggerAddAction(st___prototype42[1],function sa___prototype42_Log__DisplayTextToPlayerHook)
     call TriggerAddCondition(st___prototype42[1],Condition(function sa___prototype42_Log__DisplayTextToPlayerHook))
