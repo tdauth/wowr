@@ -14,13 +14,13 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 
 [Subscribe](https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY) to become a VIP:
 
-![Subscribe](QR_Code_Subscribe.png "Subscribe")
+![Subscribe](images/QR_Code_Subscribe.png "Subscribe")
 
 Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release.
 
 [Donate](https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8):
 
-![Donate](QR_Code_Donate.png "Donate")
+![Donate](images/QR_Code_Donate.png "Donate")
 
 * Report any issues on Discord.
 * Support the [YouTube Channel](https://www.youtube.com/channel/UCzGcsuPfRVqdaE87JYCK5zw).
@@ -43,11 +43,11 @@ Start Warcraft III: Reforged and play a custom game by choosing the map.
 However, you can easily remove this restriction by opening and modifying the map with the World Editor.
 Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
 
-![SD and HD](HD.jpg "SD and HD")
+![SD and HD](images/HD.jpg "SD and HD")
 
 Make sure that the JassHelper and vJass are enabled:
 
-![JassHelper](JassHelper.jpg "JassHelper")
+![JassHelper](images/JassHelper.jpg "JassHelper")
 
 ## Frozen Throne Support
 
@@ -84,7 +84,7 @@ Use the 16 different tile types wisely.
 The map uses Warcraft's AI for computer players.
 The map contains the modified [common.j](./wowr.w3x/scripts/common.j) to make constants available to map triggers AND AI scripts at once.
 The map contains the modified [common.ai](./wowr.w3x/scripts/common.ai) which is used by all custom AI scripts.
-Run [check.bat](./check.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
+Run [check.bat](./scripts/check.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
 
 ### Warlords
 
@@ -125,7 +125,7 @@ Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result()
 ```
 
 The function Format is part of the library StringFormat.
-Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
+Use [diffstrings.bat](./scripts/diffstrings.bat) to compare the translation files with the original ones.
 
 ## Release Process
 
@@ -136,7 +136,7 @@ Use this check list when releasing a new version of the map:
 * Add all changes to the ChangeLog in the quest log.
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
-* Use [check.bat](./check.bat) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
+* Use [check.bat](./scripts/check.bat) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
 * Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
 * Make sure that save games still work by saving and loading.
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
@@ -192,7 +192,7 @@ We have replays which can either be watched or analyzed with a tool to see the f
 Replays can be converted into JSON with the help of [w3gjs](https://github.com/PBug90/w3gjs).
 Replays are documented in [this specification](http://w3g.deepnode.de/files/w3g_format.txt).
 Replay actions are documented in [this specification](http://w3g.deepnode.de/files/w3g_actions.txt).
-Use the scripts [replayanalyser.bat](./replayanalyser.bat) or [replayanalyser.sh](./replayanalyser.sh) to create JSON files from an input replay .w3g file.
+Use the scripts [replayanalyser.bat](./scripts/replayanalyser.bat) or [replayanalyser.sh](./replayanalyser.sh) to create JSON files from an input replay .w3g file.
 The action types can be compared with the IDs in [ActionParser.ts](https://github.com/PBug90/w3gjs/blob/master/src/parsers/ActionParser.ts).
 
 ## History of the Map
