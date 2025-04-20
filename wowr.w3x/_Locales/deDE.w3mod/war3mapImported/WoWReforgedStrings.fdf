@@ -52,12 +52,12 @@ StringList {
     RESURRECTION_STONE_HERO_ONLY       "Nur einer Ihrer Helden kann den Auferstehungsschrein aktivieren.",
     NO_HERO_X                          "Kein Held %1%.",
     // Quiver
-    ALREADY_USED                       "Already used.",
+    ALREADY_USED                       "Bereits benutzt.",
     // Goblin Tool Box
-    TARGET_HAS_MINIMUM_HP              "Target has already reached maximum hit points.",
-    TARGET_HAS_MAXIMUM_HP              "Target has already reached minimum hit points.",
-    REINFORCE_REQUIRES_RESOURCES       "Requires 100 gold and 50 lumber.",
-    ENEMY_UNITS_NEARBY                 "There are enemy units nearby.",
+    TARGET_HAS_MINIMUM_HP              "Ziel hat bereits die maximalen Trefferpunkte erreicht.",
+    TARGET_HAS_MAXIMUM_HP              "Ziel hat bereits die minimalen Trefferpunkte erreicht.",
+    REINFORCE_REQUIRES_RESOURCES       "Benötigt 100 Gold und 50 Holz.",
+    ENEMY_UNITS_NEARBY                 "Es befinden sich Gegner in der Nähe.",
     // Magical Item Summoner
     NO_VALID_ITEMS                     "Kein gültiger Gegenstand.",
     // Item Locker
@@ -85,9 +85,9 @@ StringList {
     BAN_LIST_HEADER                    "Bans:\n",
     BAN_LIST_ITEM                      "%1% - %2%",
     // Votekick
-    X_HAS_BEEN_KICKED                  "%1% has been by votes!",
-    YOU_HAVE_BEEN_KICKED               "You have been kicked!",
-    VOTEKICK_HAS_EXPIRED               "Votekick has expired!",
+    X_HAS_BEEN_KICKED                  "%1% wurde per Abstimmung gekickt!",
+    YOU_HAVE_BEEN_KICKED               "Sie wurden gekickt!",
+    VOTEKICK_HAS_EXPIRED               "Votekick ist abgelaufen!",
     // Transfer Units
     SELECTED_UNITS_FOR_TRANSFER        "Selected %1% units to give. Enter '-give <playernumber>' to accept it or '-nogive' to cancel it.",
     // Attack and Defense Types
@@ -463,6 +463,12 @@ StringList {
     ALLIED_ADVANCED_UNITS              "Verbündet Erweiterte Einheiten",
     NEUTRAL                            "Neutral",
     NEUTRAL_VISION                     "Neutral Sicht",
+    CANCEL_YELLOW                      "|cffFCD20DAbbrechen|r",
+    APPLY_YELLOW                       "|cffFCD20DÜbernehmen|r",
+    DIPLOMACY                          "Diplomatie",
+    SOURCE_TARGET                      "Quelle/Ziele",
+    DIPLOMACY_CHANGE_NOT_ALLOWED       "Sie dürfen die Diplomatie nicht ändern.",
+    FROM_TO_X                          "Von %1% zu %2%: %3%",
     // Tomes
     TOMES_DISABLED                     "Folianten sind deaktiviert.",
     // Backpack
@@ -833,9 +839,7 @@ StringList {
     DOT_TOWN_HALLS                     "Rathäuser.",
     DOT_ALTARS                         "Altare.",
     DOT_SAVE_CODES                     "Speicher-Codes.",
-    TOGGLE_LOCK_CAMERA                 "Kamera festsetzen/lösen.",
-    TOGGLE_RPG_CAMERA                  "RSP-Kamera ein-/ausschalten.",
-    DOT_AUTO_SKILL                     "Auto skill.",
+    DOT_AUTO_SKILL                     "Auto-Lernen.",
     DOT_MULTIPLAYER_LOG                "Mehrspieler-Log.",
     DOT_DAMAGE_CALCULATION_TABLE       "Schadensberechnungstabelle.",
     DOT_SETTINGS                       "Einstellungen.",
@@ -960,9 +964,9 @@ StringList {
     MISSING_RESEARCHES_SAVE_CODE_FILE  "Missing researches savecode file.",
     MISSING_RESOURCES_SAVE_CODE_FILE   "Missing resources savecode file.",
     MISSING_CLAN_SAVE_CODE_FILE        "Missing clan savecode file.",
-    X_EXCEEDS_FOOD_AND_NOT_LOADED      "%1% exceeds your food maximum and hence is not loaded.",
-    X_HAS_CREATED_A_NEW_CLAN_Y         "%1% has created a new clan %2%!",
-    YOU_ARE_NOT_A_MEMBER_OF_THIS_CLAN  "You are not a member of this clan!",
+    X_EXCEEDS_FOOD_AND_NOT_LOADED      "%1% überschreitet Ihr Nahrungslimit und wird daher nicht geladen.",
+    X_HAS_CREATED_A_NEW_CLAN_Y         "%1% hat einen neuen Clan %2% gegründet!",
+    YOU_ARE_NOT_A_MEMBER_OF_THIS_CLAN  "Sie sind kein Mitglied dieses Clans!",
     // Mailbox
     LETTER                             "Brief",
     LETTER_USAGE                       "Geben Sie '-letter <an> <Nachricht>' ein, um einen Brief zu hinterlassen. Verwenden Sie 'all', um einen Brief an alle zu hinterlassen.",
@@ -1103,8 +1107,8 @@ StringList {
     NO_STATS                           "No Stats",
     THE_BURNING_LEGION                 "Die brennende Legion",
     NO_BURNING_LEGION                  "Keine brennende Legion",
-    BUILDER                            "Builder",
-    NO_BUILDER                         "No Builder",
+    BUILDER                            "Erbauer",
+    NO_BUILDER                         "Kein Erbauer",
     AMBIENT_SOUND                      "Ambient Sound",
     SEASONS                            "Jahreszeiten",
     NO_SEASONS                         "Keine Jahreszeiten",

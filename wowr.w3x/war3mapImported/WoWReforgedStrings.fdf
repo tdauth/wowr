@@ -85,7 +85,7 @@ StringList {
     BAN_LIST_HEADER                    "Bans:\n",
     BAN_LIST_ITEM                      "%1% - %2%",
     // Votekick
-    X_HAS_BEEN_KICKED                  "%1% has been by votes!",
+    X_HAS_BEEN_KICKED                  "%1% has been kicked by votes!",
     YOU_HAVE_BEEN_KICKED               "You have been kicked!",
     VOTEKICK_HAS_EXPIRED               "Votekick has expired!",
     // Transfer Units
@@ -839,8 +839,6 @@ StringList {
     DOT_TOWN_HALLS                     "Town Halls.",
     DOT_ALTARS                         "Altars.",
     DOT_SAVE_CODES                     "Save Codes.",
-    TOGGLE_LOCK_CAMERA                 "Lock/unlock camera.",
-    TOGGLE_RPG_CAMERA                  "Enable/disable RPG camera.",
     DOT_AUTO_SKILL                     "Auto skill.",
     DOT_MULTIPLAYER_LOG                "Multiplayer Log.",
     DOT_DAMAGE_CALCULATION_TABLE       "Damage Calculation Table.",
