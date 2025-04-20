@@ -23,7 +23,11 @@ const typeLabels = {
   [0x1e]: "RemoveUnitFromBuildingQueue",
   [0x1f]: "RemoveUnitFromBuildingQueue",
   [0x1a]: "PreSubselectionAction",
-  [0x6b]: "W3MMDAction"
+  [0x6b]: "W3MMDAction",
+  [0x79]: "UnknownAction",
+  [0x76]: "UnknownAction",
+  [0x73]: "UnknownAction",
+  [0x78]: "BlzSyncAction"
 };
 
 (async () => {
@@ -37,7 +41,7 @@ const typeLabels = {
 
     if (block.id != null && block.commandBlocks != null) {
       for (let item of block.commandBlocks) {
-        if (item.playerId > 1 && item.actions != null && item.actions.length > 0) {
+        if (item.actions != null && item.actions.length > 0) { // item.playerId > 1 &&
 
           //console.log(JSON.stringify(item, null, "\t"));
 
