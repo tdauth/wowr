@@ -1078,7 +1078,6 @@ Here is a list of some modified versions online:
 * 1223344: [demon sword](https://www.hiveworkshop.com/threads/demon-sword.49661/)
 * Hantoo: [Naginata](https://www.hiveworkshop.com/threads/naginata.264314/)
 * Black flesh: [Demon Hunter Blade](https://www.hiveworkshop.com/threads/demon-hunter-blade.85816/#post-690837)
-* Molot: [Animated smoke in three colors](https://www.hiveworkshop.com/threads/animated-smoke-in-three-colors.308037/)
 * Stanakin: [BTNAntler](https://www.hiveworkshop.com/threads/btnantler.144777/)
 * General Frank: [It's a bear trap!](https://www.hiveworkshop.com/threads/its-a-bear-trap.231801/)
 * HerrDave: [Leather Jerkin](https://www.hiveworkshop.com/threads/leather-jerkin.271663/)
