@@ -13,7 +13,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(5, NAGA_CORAL)
         call SetBuildUnit(2, NAGA_SPAWNING)
         call SetBuildUnit(1, NAGA_ALTAR)
-        call SetBuildUnit(1, NAGA_FISH_MARKET)
+        call SetBuildUnit(1, NAGA_TREASURY_OF_THE_TIDES)
 
         call SetBuildUpgr(1, UPG_NAGA_ARMOR)
         call SetBuildUpgr(1, UPG_NAGA_ATTACK)

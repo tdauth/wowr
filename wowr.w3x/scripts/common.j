@@ -3905,13 +3905,21 @@ globals
     constant integer ITEM_NAGA_SPAWNING_GROUNDS                      = 'I0DZ'
     constant integer ITEM_NAGA_ROYAL_VAULT                           = 'I0F8'
     constant integer ITEM_NAGA_GUARDIAN                              = 'I029'
+    constant integer ITEM_NAGA_ALTAR                                 = 'I0FC'
+    constant integer ITEM_NAGA_SHRINE                                = 'I0FD'
+    constant integer ITEM_NAGA_TREASURY_OF_THE_TIDES                 = 'I0FG'
+    constant integer ITEM_NAGA_HATCHERY                              = 'I0FM'
+    constant integer ITEM_NAGA_SERPENT_PYRAMID                       = 'I0FQ'
+    constant integer ITEM_NAGA_PORTAL                                = 'I0FS'
+    constant integer ITEM_NAGA_STATUE_OF_AZSHARA                     = 'I0GD'
+    constant integer ITEM_NAGA_HOUSING                               = 'I0GE'
+    constant integer ITEM_NAGA_SHIPYARD                              = 'I0GF'
 
     constant integer NAGA_TEMPLE_1                                   = 'n05M'
     constant integer NAGA_TEMPLE_2                                   = NAGA_TEMPLE
     constant integer NAGA_TEMPLE_3                                   = 'n05N'
     constant integer NAGA_ROYAL_VAULT                                = 'o008' // lumber mill and blacksmith
-    constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
-    constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
+    constant integer NAGA_TREASURY_OF_THE_TIDES                      = 'h00X' // shop
     constant integer NAGA_SERPENT_PYRAMID                            = 'n05P' // aviary
     constant integer NAGA_HATCHERY                                   = 'n01I' // workshop
     constant integer NAGA_PORTAL                                     = 'h0Y6'
