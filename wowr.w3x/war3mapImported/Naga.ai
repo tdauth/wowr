@@ -9,7 +9,7 @@ function BuildingStrategy takes nothing returns nothing
         call BuildingStrategyStandardTier1()
 
         call SetBuildUnit(2, NAGA_HOUSING)
-        call SetBuildUnit(1, NAGA_MURLOC_HUT)
+        call SetBuildUnit(1, NAGA_ROYAL_VAULT)
         call SetBuildUnit(5, NAGA_CORAL)
         call SetBuildUnit(2, NAGA_SPAWNING)
         call SetBuildUnit(1, NAGA_ALTAR)
@@ -20,7 +20,6 @@ function BuildingStrategy takes nothing returns nothing
 
         // Tier 2 buildings
         call SetBuildUnit(1, NAGA_TEMPLE)
-        call SetBuildUnit(1, NAGA_MURLOC_HUT)
         call SetBuildUnit(1, NAGA_SHRINE)
         call SetBuildUnit(1, NAGA_HATCHERY)
         call SetBuildUnit(citizens_female, NAGA_CITIZEN_FEMALE)
@@ -49,6 +48,8 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_NAGA_ENSNARE)
         call SetBuildUpgr(1, UPG_NAGA_RESISTANT_SKIN)
         call SetBuildUpgr(1, UPG_NAGA_TIDAL_WYRMS)
+        call SetBuildUpgr(1, UPG_NAGA_SPIKED_SHELL)
+        call SetBuildUpgr(1, UPG_NAGA_SLOW_POISON)
         call SetBuildUpgr(1, UPG_NAGA_STATUE_OF_AZSHARA)
         call SetBuildUnit(1, NAGA_STATUE_OF_ASZHARA)
 
@@ -59,7 +60,7 @@ function BuildingStrategy takes nothing returns nothing
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(NAGA_TEMPLE_1)
-        call StartExpansionSimple(NAGA_MURLOC_HUT)
+        call StartExpansionSimple(NAGA_ROYAL_VAULT)
         call StartExpansionSimple(NAGA_GUARDIAN)
 
         if (buildShips) then

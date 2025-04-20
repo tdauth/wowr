@@ -3903,11 +3903,13 @@ globals
     constant integer ITEM_NAGA_TEMPLE_3                              = 'I0DI'
     constant integer ITEM_NAGA_CORAL_BED                             = 'I0DL'
     constant integer ITEM_NAGA_SPAWNING_GROUNDS                      = 'I0DZ'
+    constant integer ITEM_NAGA_ROYAL_VAULT                           = 'I0F8'
+    constant integer ITEM_NAGA_GUARDIAN                              = 'I029'
 
     constant integer NAGA_TEMPLE_1                                   = 'n05M'
     constant integer NAGA_TEMPLE_2                                   = NAGA_TEMPLE
     constant integer NAGA_TEMPLE_3                                   = 'n05N'
-    constant integer NAGA_MURLOC_HUT                                 = 'o008' // lumber mill and blacksmith
+    constant integer NAGA_ROYAL_VAULT                                = 'o008' // lumber mill and blacksmith
     constant integer NAGA_FISH_MARKET                                = 'h00X' // shop
     constant integer NAGA_TREASURY_OF_THE_TIDES                      = NAGA_FISH_MARKET
     constant integer NAGA_SERPENT_PYRAMID                            = 'n05P' // aviary
@@ -3921,6 +3923,8 @@ globals
     constant integer UPG_NAGA_BACKPACK                               = 'R01E'
     constant integer UPG_NAGA_RESISTANT_SKIN                         = 'R05H'
     constant integer UPG_NAGA_TIDAL_WYRMS                            = 'R03C'
+    constant integer UPG_NAGA_SPIKED_SHELL                           = 'R01X'
+    constant integer UPG_NAGA_SLOW_POISON                            = 'R052'
     constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
 
     constant integer NAGA_WHALER                                     = 'n05Q' // spellbreaker
