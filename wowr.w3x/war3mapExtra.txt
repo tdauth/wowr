@@ -1,3 +1,4 @@
 [MapExtraInfo]
 EnableJassHelper=true
+EnableJassHelperOptimizer=true
 

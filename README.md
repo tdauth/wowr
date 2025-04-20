@@ -143,6 +143,7 @@ Use this check list when releasing a new version of the map:
 * Use the cheat "-savecodemissing" to check for missing save code objects.
 * Use the cheat "-checkheroskills" to check for all registered hero spells.
 * Disable triggers for debugging or generating data only like "WoW Reforged Website" which only adds more code to the map script.
+* Enable JassHelper optimizer with `EnableJassHelperOptimizer=true` in the trigger editor GUI before saving the map.
 * Make sure the imported data is working and there are no corrupted or big files added by mistake. Check for imported files with a big size or 0 size.
 * Save the map as wowrX.Y.w3x and tag the repo with X.Y and create a release on GitHub based on the tag.
 * Upload the release on as many modding websites as possible.
