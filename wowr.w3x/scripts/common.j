@@ -3936,6 +3936,7 @@ globals
     constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
 
     constant integer NAGA_WHALER                                     = 'n05Q' // spellbreaker
+    constant integer NAGA_WHALER_SUBMERGED                           = 'n0MS'
     constant integer NAGA_SORCEROR                                   = 'n0LA' // priest
     constant integer NAGA_CORAL_GOLEM                                = 'n05O' // mortar
     constant integer NAGA_HYDRA_X                                    = 'n03R' // siege engine 2

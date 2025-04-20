@@ -998,6 +998,8 @@ StringList {
     IN_HOUSING                         "In housing.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
     BOSSES                             "Bosses",
+    // Factions
+    RESCUABLE                          "Rescuable",
     // Book of Mercenaries
     NO_PICKUP_BOOK_OF_MERCENARIES      "Cannot pick up the Book of Mercenaries as Warlord.",
     // Freelancer Hideouts
