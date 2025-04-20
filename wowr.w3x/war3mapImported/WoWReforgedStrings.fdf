@@ -84,6 +84,12 @@ StringList {
     BANNED_KICKED_REASON               "%1% was kicked from the game for being banned with the reason: %2%",
     BAN_LIST_HEADER                    "Bans:\n",
     BAN_LIST_ITEM                      "%1% - %2%",
+    // Votekick
+    X_HAS_BEEN_KICKED                  "%1% has been by votes!",
+    YOU_HAVE_BEEN_KICKED               "You have been kicked!",
+    VOTEKICK_HAS_EXPIRED               "Votekick has expired!",
+    // Transfer Units
+    SELECTED_UNITS_FOR_TRANSFER        "Selected %1% units to give. Enter '-give <playernumber>' to accept it or '-nogive' to cancel it.",
     // Attack and Defense Types
     NONE                               "None",
     NORMAL                             "Normal",
