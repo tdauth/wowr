@@ -84,6 +84,12 @@ StringList {
     BANNED_KICKED_REASON               "%1% wurde aus dem Spiel geworfen, wegen eines Banns mit der Begründung: %2%",
     BAN_LIST_HEADER                    "Bans:\n",
     BAN_LIST_ITEM                      "%1% - %2%",
+    // Votekick
+    X_HAS_BEEN_KICKED                  "%1% has been by votes!",
+    YOU_HAVE_BEEN_KICKED               "You have been kicked!",
+    VOTEKICK_HAS_EXPIRED               "Votekick has expired!",
+    // Transfer Units
+    SELECTED_UNITS_FOR_TRANSFER        "Selected %1% units to give. Enter '-give <playernumber>' to accept it or '-nogive' to cancel it.",
     // Attack and Defense Types
     NONE                               "Keiner",
     NORMAL                             "Normal",
@@ -980,8 +986,8 @@ StringList {
     CLAN_PAGED_BUTTONS_TITLE           "(Clan)",
     SOUNDS_PAGED_BUTTONS_TITLE         "(Klänge)",
     BANNERS_PAGED_BUTTONS_TITLE        "(Banner)",
-    TARGET_MUST_BE_IN_YOUR_CLAN        "Target must be in your clan.",
-    NO_BUILD_ELVEN_CLAN_ISLAND         "Cannot build on the island of The Elven Clan.",
+    TARGET_MUST_BE_IN_YOUR_CLAN        "Ziel muss in Ihrem CLan sein.",
+    NO_BUILD_ELVEN_CLAN_ISLAND         "Kann nichts auf der Insel des Elfen-Clans errichten.",
     // Player Housings
     NO_HOUSING_AVAILABLE               "Keine Unterkunft verfügbar.",
     NOT_IN_HOUSING                     "Nicht in Unterkunft.",
@@ -989,7 +995,7 @@ StringList {
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Kann nicht in Spielerunterkunft teleportieren.",
     BOSSES                             "Bosse",
     // Book of Mercenaries
-    NO_PICKUP_BOOK_OF_MERCENARIES      "Cannot pick up the Book of Mercenaries as Warlord.",
+    NO_PICKUP_BOOK_OF_MERCENARIES      "Buch der Söldner kann als Kriegsherr nicht aufgehoben werden.",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Verstecke sind auf 1 begrenzt.",
     HIDEOUTS_ARE_RESTRUCTED            "Verstecke sind auf Freiberufler beschränkt.",
