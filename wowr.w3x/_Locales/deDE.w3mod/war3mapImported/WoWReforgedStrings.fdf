@@ -998,6 +998,8 @@ StringList {
     IN_HOUSING                         "In Unterkunft.",
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Kann nicht in Spielerunterkunft teleportieren.",
     BOSSES                             "Bosse",
+    // Factions
+    RESCUABLE                          "Rettbar",
     // Book of Mercenaries
     NO_PICKUP_BOOK_OF_MERCENARIES      "Buch der Söldner kann als Kriegsherr nicht aufgehoben werden.",
     // Freelancer Hideouts
@@ -1021,7 +1023,7 @@ StringList {
     FOR_LORDAERON                      "Für Lordaeron!",
     I_SHOULD_HAVE_BEEN_A_FARMER        "Ich hätte dem Wunsch meines Vaters folgen und Bauer werden sollen!",
     HIPPITY_HOPPITY                    "Hippity Hoppity!",
-    WHO_DARES_TO_DEFILE                "Who dares to defile this ancient land?",
+    WHO_DARES_TO_DEFILE                "Wer ist so dreist und entweiht dies alte Land?",
     TREMBLE_MORTALS_AND_DESPAIR        "Erzittert, Sterbliche und verzweifelt! Diese Welt ist dem Untergang geweiht!",
     // Hero Journey
     HERO_JOURNEY_5                     "5: Fähigkeiten auf Theramore verfügbar.",
