@@ -153,6 +153,12 @@ Use this check list when releasing a new version of the map:
 Saving the map takes some time due to the big number of objects.
 Hence, you can use the "Validate Map Triggers (F10)" action in the trigger editor before actually saving the map to make sure there won't be any syntax error.
 
+## Multiplayer Tests
+
+Multiplayer tests are possible at one PC by hosting a LAN game.
+The hosting player has to be logged out and the joining player has to be logged in the Battle.net ([source](https://us.forums.blizzard.com/en/warcraft3/t/cannot-join-lan-games-on-a-logged-out-client-20122498/34540/5)).
+Multiplayer tests are important to detect desyncs.
+
 ## Corrupted Map Data/Unregistered native function
 
 "There was an error trying to load the selected map. The map is unavailable or corrupted." might appear on selecting an older version of the map which uses natives in the [common.j](./wowr.w3x/scripts/common.j) file which do not exist anymore due to an update of Warcraft III.
@@ -174,6 +180,7 @@ Sometimes versions of this map might lead to crashing but since it is really har
 ## Know Reasons for Desyncs
 
 * Using trigger conditions instead of trigger actions for triggers with events `EVENT_PLAYER_UNIT_SELECTED` and `EVENT_PLAYER_UNIT_DESELECTED` will lead to weird desync bugs and unselecting selected units.
+* Hooks inside `GetLocalPlayer` blocks might lead to desyncs. Be careful with any hooks and make sure only certain natives are inside those blocks.
 
 ## Analyzing Crashes and Desyncs
 
