@@ -463,6 +463,12 @@ StringList {
     ALLIED_ADVANCED_UNITS              "Allied Advanced Units",
     NEUTRAL                            "Neutral",
     NEUTRAL_VISION                     "Neutral Vision",
+    CANCEL_YELLOW                      "|cffFCD20DCancel|r",
+    APPLY_YELLOW                       "|cffFCD20DApply|r",
+    DIPLOMACY                          "Diplomacy",
+    SOURCE_TARGET                      "Source/Target",
+    DIPLOMACY_CHANGE_NOT_ALLOWED       "You are not allowed to change diplomacy.",
+    FROM_TO_X                          "From %1% to %2%: %3%",
     // Tomes
     TOMES_DISABLED                     "Tomes are disabled.",
     // Backpack

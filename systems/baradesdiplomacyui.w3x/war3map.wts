@@ -1,0 +1,269 @@
+﻿STRING 1
+{
+Baradé's Diplomacy UI 1.0
+}
+
+STRING 2
+{
+1-4
+}
+
+STRING 3
+{
+Allows changing the diplomacy settings between players.
+}
+
+STRING 4
+{
+Baradé
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 8
+{
+Player 2
+}
+
+STRING 11
+{
+Baradé's Diplomacy UI 1.0
+}
+
+STRING 16
+{
+|cff808080Drop item on shop to sell|NDouble right click item to unstack|R
+}
+
+STRING 17
+// Units: h001 (Next Page), Name (Name)
+{
+Next Page
+}
+
+STRING 18
+// Units: h001 (Next Page), Tip (Tooltip - Basic)
+{
+Next Page
+}
+
+STRING 19
+// Units: h001 (Next Page), Ubertip (Tooltip - Extended)
+{
+Changes to the next page.
+}
+
+STRING 20
+// Units: h000 (Previous Page), Name (Name)
+{
+Previous Page
+}
+
+STRING 21
+// Units: h000 (Previous Page), Tip (Tooltip - Basic)
+{
+Previous Page
+}
+
+STRING 22
+// Units: h000 (Previous Page), Ubertip (Tooltip - Extended)
+{
+Changes to the previous page.
+}
+
+STRING 23
+// Units: n000 ( ), Name (Name)
+{
+ 
+}
+
+STRING 24
+// Units: n001 ( ), Name (Name)
+{
+ 
+}
+
+STRING 25
+// Units: n002 ( ), Name (Name)
+{
+ 
+}
+
+STRING 26
+// Units: n000 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Advanced Mercenary Camp
+}
+
+STRING 27
+// Units: n001 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Advanced Goblin Merchant
+}
+
+STRING 28
+// Units: n002 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Advanced Dragon Roost
+}
+
+STRING 29
+// Units: n003 ( ), Name (Name)
+{
+ 
+}
+
+STRING 30
+// Units: n003 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Advanced Tavern
+}
+
+STRING 37
+{
+- Change Computer players alliances.
+- Enter "-diplomacy"/"-dp" to show the UI.
+}
+
+STRING 38
+// Units: n004 ( ), Name (Name)
+{
+ 
+}
+
+STRING 39
+// Units: n004 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Advanced Goblin Laboratory
+}
+
+STRING 44
+// Units: n005 ( ), Name (Name)
+{
+ 
+}
+
+STRING 45
+// Units: n005 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Advanced Marketplace
+}
+
+STRING 46
+{
+Player 3
+}
+
+STRING 47
+{
+Player 4
+}
+
+STRING 48
+{
+Player 5
+}
+
+STRING 49
+{
+Player 6
+}
+
+STRING 50
+{
+Player 7
+}
+
+STRING 51
+{
+Player 8
+}
+
+STRING 52
+{
+Player 9
+}
+
+STRING 53
+{
+Player 10
+}
+
+STRING 54
+{
+Player 11
+}
+
+STRING 55
+{
+Player 12
+}
+
+STRING 56
+{
+Player 13
+}
+
+STRING 57
+{
+Player 14
+}
+
+STRING 58
+{
+Player 15
+}
+
+STRING 59
+{
+Player 16
+}
+
+STRING 60
+{
+Player 17
+}
+
+STRING 61
+{
+Player 18
+}
+
+STRING 62
+{
+Player 19
+}
+
+STRING 63
+{
+Player 20
+}
+
+STRING 64
+{
+Player 21
+}
+
+STRING 65
+{
+Player 22
+}
+
+STRING 66
+{
+Player 23
+}
+
+STRING 67
+{
+Player 24
+}
+

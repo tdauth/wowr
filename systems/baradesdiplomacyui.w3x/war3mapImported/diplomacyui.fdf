@@ -1,0 +1,57 @@
+IncludeFile "UI/FrameDef/UI/EscMenuTemplates.fdf",
+
+Frame "POPUPMENU" "MyPopupTemplate" {
+    Width 0.19625,
+    Height 0.03,
+    PopupButtonInset 0.01, // -x offset for PopupArrowFrame from RIGHT of the POPUPMENU
+
+    // Background Enabled
+    ControlBackdrop "MyPopupTemplateBackdropTemplate",
+    Frame "BACKDROP" "MyPopupTemplateBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+    }
+
+    // Background Disabled
+    ControlDisabledBackdrop "MyPopupTemplateDisabledBackdropTemplate",
+    Frame "BACKDROP" "MyPopupTemplateDisabledBackdropTemplate" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+    }
+
+    // Text markup for the current selected Text, also can be used with a FrameEvent to know when someone starts selecting.
+    PopupTitleFrame "PopupMenuTitleTemplate",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitleTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+    }
+
+    // the Arrow at the right
+    PopupArrowFrame "PopupMenuArrowTemplate",
+    Frame "BUTTON" "PopupMenuArrowTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" {
+    }
+
+    // The Container for the selectable options
+    // actulay it is smarter to not define this in the Template.
+    //PopupMenuFrame "TestPopupMenu",
+    //Frame "MENU" "TestPopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+//
+//    }
+}
+
+// Alliance settings
+//constant integer   bj_ALLIANCE_UNALLIED        = 0
+//constant integer   bj_ALLIANCE_UNALLIED_VISION = 1
+//constant integer   bj_ALLIANCE_ALLIED          = 2
+//constant integer   bj_ALLIANCE_ALLIED_VISION   = 3
+//constant integer   bj_ALLIANCE_ALLIED_UNITS    = 4
+//constant integer   bj_ALLIANCE_ALLIED_ADVUNITS = 5
+//constant integer   bj_ALLIANCE_NEUTRAL         = 6
+//constant integer   bj_ALLIANCE_NEUTRAL_VISION  = 7
+Frame "POPUPMENU" "AlliancePopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
+    PopupMenuFrame "AlliancePopupMenu",
+    Frame "MENU" "AlliancePopupMenu" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        MenuItem "UNALLIED",     -2,
+        MenuItem "UNALLIED_VISION",     -2,
+        MenuItem "ALLIED",     -2,
+        MenuItem "ALLIED_VISION",     -2,
+        MenuItem "ALLIED_UNITS",     -2,
+        MenuItem "ALLIED_ADVANCED_UNITS",     -2,
+        MenuItem "NEUTRAL",     -2,
+        MenuItem "NEUTRAL_VISION",     -2,
+    }
+}
