@@ -82,7 +82,7 @@ StringList {
     // Ban
     BANNED_REASON                      "Banned!|nReason: %1%",
     BANNED_KICKED_REASON               "%1% was kicked from the game for being banned with the reason: %2%",
-    BAN_LIST_HEADER                    "Bans:\n",
+    BAN_LIST_HEADER                    "Bans:|n",
     BAN_LIST_ITEM                      "%1% - %2%",
     // Votekick
     X_HAS_BEEN_KICKED                  "%1% has been kicked by votes!",
@@ -536,7 +536,7 @@ StringList {
     CLOSED_GATE_OR_LOCKED_CHEST        "Target must be a closed gate or chest.",
     UNLOCKED                           "Unlocked",
     // Profession Tamer
-    TARGET_MUST_BE_MAX_LEVEL_X         "Target must be maximum level %1%",
+    TARGET_MUST_BE_MAX_LEVEL_X         "Target must be maximum level %1%.",
     TARGET_MUST_BE_A_CREEP             "Target must be a creep.",
     // Profession Hunter
     TROPHIES                           "Trophies: ",
@@ -600,9 +600,9 @@ StringList {
     ZONE_DISCOVERED                    "Discovered: |cff00ff00%1%|r",
     ZONE_ENTER                         "Entering now: |cff00ff00%1%|r",
     ZONE_NAME                          "|cff00ff00%1%|r",
-    ZONE_NAME_2                        "|cff00ff00%1%|r\n%2%",
-    ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r\n%3%",
-    ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r\n%4%",
+    ZONE_NAME_2                        "|cff00ff00%1%|r|n%2%",
+    ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r|n%3%",
+    ZONE_NAME_4                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r|n%4%",
     NO_UNIT_SELECTED                   "No unit selected.",
     PLAYER_SELECTION                   "Player Selection",
     PLAYER_SELECTION_DESCRIPTION       "All players start here in the beginning of the game to pick their hero etc. and to start the game.",
@@ -790,7 +790,7 @@ StringList {
     EVENT_ENDING                       "Event ending %1%",
     CALENDAR_EVENT_START               "Calendar event starting: %s%",
     CALENDAR_DATE_SHORT                "%1%-%2%-%3%",
-    CALENDAR_TIME_TEXT                 "%s\nMonth: %2%\nSeason: %3%\nTime of Day: %4%\nTotal passed time: %5%\nWeather Report: Rain/Snow/Storm in %5% and thunder/lightning in %6%",
+    CALENDAR_TIME_TEXT                 "%s|nMonth: %2%|nSeason: %3%|nTime of Day: %4%|nTotal passed time: %5%|nWeather Report: Rain/Snow/Storm in %5% and thunder/lightning in %6%",
     HAPPY_NEW_YEAR                     "Happy new year for the year %1%!",
     WEATHER_RUNNING                    "Snowfall/Storm/Rain with thunder in %1% ending in %2%.",
     WEATHER_PREDICTION                 "Next Snowfall/Storm/Rain in %1%.",
@@ -1083,8 +1083,8 @@ StringList {
     // Player Infos
     FREELANCER                         "Freelancer",
     WARLORD                            "Warlord",
-    PLAYER_INFOS                       "%1% (%2%%3%%4%):\n- XP Rate: %5% %\n- Heroes: %6% (%7%)/%8% (%9%)/%10% (%11%)\n- Races: %12%/%13%/%14%\n- Professions: %15%/%16%/%17%\n- G: %18%/L: %19%/F: %20%/%21%\n- Evolution: %22%\n- HK %23%/UK %24%/R %25%/BK %26%/%27%",
-    COOLDOWNS_INFOS                    "Cooldowns:\n- Repick: %1%\n- Race 1 repick: %2%\n- Race 2 repick: %3%\n- Profession 1 repick: %4%\n- Profession 2 repick: %5%\n- Heroes savecode: %6%\n- Resources savecode: %7%",
+    PLAYER_INFOS                       "%1% (%2%%3%%4%):|n- XP Rate: %5% %|n- Heroes: %6% (%7%)/%8% (%9%)/%10% (%11%)|n- Races: %12%/%13%/%14%|n- Professions: %15%/%16%/%17%|n- G: %18%/L: %19%/F: %20%/%21%|n- Evolution: %22%|n- HK %23%/UK %24%/R %25%/BK %26%/%27%",
+    COOLDOWNS_INFOS                    "Cooldowns:|n- Repick: %1%|n- Race 1 repick: %2%|n- Race 2 repick: %3%|n- Profession 1 repick: %4%|n- Profession 2 repick: %5%|n- Heroes savecode: %6%|n- Resources savecode: %7%",
     PLAYER_SELECTION_SETTINGS          "- Mode: %1%|n- Heroes: %2%/%3%/%4%|n- Races: %5%/%6%/%7%|n- Professions: %8%/%9%/%10%|n- Start Location: %11%",
     // Repick
     NO_REPICK_WITH_ILLIDAN             "You cannot repick while controlling Illidan.",

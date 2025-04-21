@@ -2828,6 +2828,7 @@ function InitMounts takes nothing returns nothing
     call AddMount(GRYPHON_MOUNT)
     call AddMount(WYVERN_MOUNT)
     call AddMount(FROST_WYRM_MOUNT)
+    call AddMount(GARGOYLE_MOUNT)
     call AddMount(CHIMAERA_MOUNT)
     call AddMount(NETHER_DRAKE_MOUNT)
     call AddMount(DRAGONHAWK_MOUNT)

@@ -3017,6 +3017,7 @@ globals
     constant integer GRYPHON_MOUNT                                   = 'h004'
     constant integer WYVERN_MOUNT                                    = 'o003'
     constant integer FROST_WYRM_MOUNT                                = 'u004'
+    constant integer GARGOYLE_MOUNT                                  = 'u030'
     constant integer CHIMAERA_MOUNT                                  = 'e005'
     constant integer NETHER_DRAKE_MOUNT                              = 'n007'
     constant integer DRAGONHAWK_MOUNT                                = 'h04L'
