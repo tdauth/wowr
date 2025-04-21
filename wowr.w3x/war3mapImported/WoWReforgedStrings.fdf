@@ -880,7 +880,7 @@ StringList {
     NEWS_LINE_1                        "- Release %1%.",
     NEWS_LINE_2                        "- Support the project by becoming a VIP or with single donations.",
     NEWS_LINE_3                        "- New quests, professions, skins, spells, standard abilities and zones.",
-    NEWS_LINE_4                        "- Two teams Alliance and Horde.",
+    NEWS_LINE_4                        "- Two factions Alliance and Horde.",
     NEWS_LINE_5                        "- New profession ranks Grand Master and Doctor.",
     NEWS_LINE_6                        "- Use chat command '-q/-news' to show this UI.",
     NEWS_LINE_7                        "- Use chat command '-dct/-damagecalculationtable' to show a damage calculation table.",
