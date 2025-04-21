@@ -871,6 +871,8 @@ StringList {
     SETTINGS_HARDCORE                  "- Hardcore: %1%",
     SETTINGS_CHEATS                    "- Cheats: %1%",
     SETTINGS_BUILDER                   "- Builder: %1%",
+    SETTINGS_PORTALS                   "- Portale: %1%",
+    SETTINGS_TRAIN                     "- Zug: %1%",
     // News UI
     NEWS                               "Neuigkeiten",
     COLON_SUBSCRIBE_VIP                "Abonnieren (VIP):",
