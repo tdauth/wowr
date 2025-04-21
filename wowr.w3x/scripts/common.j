@@ -3933,6 +3933,7 @@ globals
     constant integer UPG_NAGA_TIDAL_WYRMS                            = 'R03C'
     constant integer UPG_NAGA_SPIKED_SHELL                           = 'R01X'
     constant integer UPG_NAGA_SLOW_POISON                            = 'R052'
+    constant integer UPG_NAGA_SPAWN_HYDRA_HATCHLING                  = 'R06L'
     constant integer UPG_NAGA_STATUE_OF_AZSHARA                      = 'R02B' // special building
 
     constant integer NAGA_WHALER                                     = 'n05Q' // spellbreaker
