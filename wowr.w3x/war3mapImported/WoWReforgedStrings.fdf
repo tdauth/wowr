@@ -865,6 +865,16 @@ StringList {
     OUTLAND_RACE                       "Outland Race",
     // Demigod
     BECOME_DEMIGOD                     "%1% has become an %2% (demigod)!",
+    NO_DEMIGOD_AS_ILLIDAN              "You cannot become a Demigod if you are controlling Illidan.",
+    NO_DEMIGOD_FOR_EQUIPMENT_BAGS      "Equipment bags cannot become Demigods.",
+    MISSING_BLUE_DRAGON                "Missing the Blue Dragon.",
+    MISSING_BLACK_DRAGON               "Missing the Black Dragon.",
+    MISSING_RED_DRAGON                 "Missing the Red Dragon.",
+    MISSING_BRONZE_DRAGON              "Missing the Bronze Dragon.",
+    MISSING_GREEN_DRAGON               "Missing the Green Dragon.",
+    MISSING_NETHER_DRAGON              "Missing the Nether Dragon.",
+    // Arena
+    ENTERING_ARENA                     "|cffffcc00ENTERING ARENA|r",
     // Calendar
     GOOD                               "Good",
     BAD                                "Bad",
@@ -1102,9 +1112,11 @@ StringList {
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Cannot teleport into player housing.",
     BOSSES                             "Bosses",
     // Factions
+    CREEPS                             "Creeps",
+    CITIZENS                           "Citizens",
     RESCUABLE                          "Rescuable",
-    // Book of Mercenaries
-    NO_PICKUP_BOOK_OF_MERCENARIES      "Cannot pick up the Book of Mercenaries as Warlord.",
+    // Book of Mercenaries and Book of Fast Travel
+    NO_PICKUP_X_AS_WARLORD             "Cannot pick up %1% as Warlord.",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
@@ -1112,6 +1124,10 @@ StringList {
     NOT_ALLOWED_IN_PLAYER_SELECTION    "Not allowed in player selection.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Area is protected by an Antimagic Ward.",
+    // Alliance with the Burning Legion
+    ALLIANCE_THE_BURNING_LEGION_COLON  "Alliance with the Burning Legion:",
+    ALLIANCE_THE_BURNING_LEGION_START  "The alliance between The Burning Legion and %1% has started for %2% minutes!",
+    ALLIANCE_THE_BURNING_LEGION_END    "The alliance between The Burning Legion and %1% has ended!",
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",

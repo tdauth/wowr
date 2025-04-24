@@ -865,6 +865,16 @@ StringList {
     OUTLAND_RACE                       "Fremdland-Rennen",
     // Demigod
     BECOME_DEMIGOD                     "%1% wurde zu %2% (Halbgott)!",
+    NO_DEMIGOD_AS_ILLIDAN              "You cannot become a Demigod if you are controlling Illidan.",
+    NO_DEMIGOD_FOR_EQUIPMENT_BAGS      "Equipment bags cannot become Demigods.",
+    MISSING_BLUE_DRAGON                "Missing the Blue Dragon.",
+    MISSING_BLACK_DRAGON               "Missing the Black Dragon.",
+    MISSING_RED_DRAGON                 "Missing the Red Dragon.",
+    MISSING_BRONZE_DRAGON              "Missing the Bronze Dragon.",
+    MISSING_GREEN_DRAGON               "Missing the Green Dragon.",
+    MISSING_NETHER_DRAGON              "Missing the Nether Dragon.",
+    // Arena
+    ENTERING_ARENA                     "|cffffcc00ENTERING ARENA|r",
     // Calendar
     GOOD                               "Gut",
     BAD                                "Schlecht",
@@ -900,7 +910,7 @@ StringList {
     VIP_WELCOME_ALL                    "Heißen Sie die VIPS willkommen: %1%!",
     ONLY_VIPS_CAN_LOAD_SAVE_GAMES      "Nur VIPs können Spielstände laden.",
     // Stats
-    STATS_TITLE                        "%1% - %2% %3% (%4%/%5%)",
+    STATS_TITLE                        "%1% %2% (%3%/%4%)",
     SINGLEPLAYER                       "Einzelspieler",
     MULTIPLAYER                        "Mehrspieler",
     STATS_T                            "T",
@@ -916,7 +926,7 @@ StringList {
     LOCATION_WARLORD_ONLY              "Ort (nur Kriegsherr)",
     RACE                               "Volk",
     PROFESSION                         "Beruf",
-    MAX_FOOD                           "Max. Nahrung",
+    //MAX_FOOD                           "Max. Nahrung",
     EVOLUTION                          "Evolution",
     ATTACKS                            "Angriffe",
     HEROES                             "Helden",
@@ -1102,16 +1112,22 @@ StringList {
     CANNOT_TELEPORT_IN_PLAYER_HOUSING  "Kann nicht in Spielerunterkunft teleportieren.",
     BOSSES                             "Bosse",
     // Factions
+    CREEPS                             "Unholde",
+    CITIZENS                           "Bürger",
     RESCUABLE                          "Rettbar",
     // Book of Mercenaries
-    NO_PICKUP_BOOK_OF_MERCENARIES      "Buch der Söldner kann als Kriegsherr nicht aufgehoben werden.",
+    NO_PICKUP_X_AS_WARLORD             "%1% kann als Kriegsherr nicht aufgehoben werden.",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Verstecke sind auf 1 begrenzt.",
     HIDEOUTS_ARE_RESTRUCTED            "Verstecke sind auf Freiberufler beschränkt.",
     // Player Selection
     NOT_ALLOWED_IN_PLAYER_SELECTION    "In Spielerauswahl nicht erlaubt.",
     // Antimagic Wards
-    AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt..",
+    AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt.",
+    // Alliance with the Burning Legion
+    ALLIANCE_THE_BURNING_LEGION_COLON  "Alliance with the Burning Legion:",
+    ALLIANCE_THE_BURNING_LEGION_START  "The alliance between The Burning Legion and %1% has started for %2% minutes!",
+    ALLIANCE_THE_BURNING_LEGION_END    "The alliance between The Burning Legion and %1% has ended!",
     // Taunts
     TAUNTS                             "Verspottungen",
     TAUNTS_DESCRIPTION                 "Verspottungen können genutzt werden, um Klangeffekte mit Chat-Befehlen an andere Spieler zu senden.",
