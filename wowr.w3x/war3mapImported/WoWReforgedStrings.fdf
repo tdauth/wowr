@@ -900,7 +900,7 @@ StringList {
     VIP_WELCOME_ALL                    "Welcome the VIPS: %1%!",
     ONLY_VIPS_CAN_LOAD_SAVE_GAMES      "Only VIPs can load save games.",
     // Stats
-    STATS_TITLE                        "%1% - %2% %3% (%4%/%5%)",
+    STATS_TITLE                        "%1% %2% (%3%/%4%)",
     SINGLEPLAYER                       "Singleplayer",
     MULTIPLAYER                        "Multiplayer",
     STATS_T                            "T",
