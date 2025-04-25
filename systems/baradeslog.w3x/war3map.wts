@@ -48,69 +48,69 @@ STRING 37
 - Enter "-l" or "-log" in the chat to see the log.
 }
 
-STRING 60
+STRING 91
 {
 All players!
 }
 
-STRING 61
+STRING 92
 {
 All players timed!
 
 After empty line.
 }
 
-STRING 62
+STRING 93
 {
 Player |cffff0000Red|r!
 }
 
-STRING 63
+STRING 94
 {
 Player |cff0000ffBlue|r!
 }
 
-STRING 64
+STRING 95
 {
 All players quest update!
 }
 
-STRING 65
+STRING 96
 {
 Paladin
 }
 
-STRING 66
+STRING 97
 {
 Paladin All!
 }
 
-STRING 67
+STRING 98
 {
 Paladin
 }
 
-STRING 68
+STRING 99
 {
 Red Paladin!
 }
 
-STRING 69
+STRING 100
 {
 Paladin
 }
 
-STRING 70
+STRING 101
 {
 Blue Paladin!
 }
 
-STRING 73
+STRING 102
 {
 Archmage
 }
 
-STRING 74
+STRING 103
 {
 Archmage!
 }
