@@ -1,23 +1,23 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from MathUtils:
 constant boolean LIBRARY_MathUtils=true
 //endglobals from MathUtils
 //globals from OnStartGame:
 constant boolean LIBRARY_OnStartGame=true
-trigger OnStartGame___startGameTrigger= CreateTrigger()
+trigger OnStartGame__startGameTrigger= CreateTrigger()
 //endglobals from OnStartGame
 //globals from StringUtils:
 constant boolean LIBRARY_StringUtils=true
 //endglobals from StringUtils
 //globals from PlayerColorUtils:
 constant boolean LIBRARY_PlayerColorUtils=true
-string array PlayerColorUtils___PlayerColorNames
+string array PlayerColorUtils__PlayerColorNames
 //endglobals from PlayerColorUtils
 //globals from Log:
 constant boolean LIBRARY_Log=true
@@ -27,17 +27,17 @@ constant boolean LOG_CINEMATIC_TRANSMISSIONS= true
 constant boolean REMOVE_STARTING_EMPTY_LINES= true
 
 constant integer LOG_MAXIMUM= 5000
-string array Log___log
-integer array Log___logCounter
-boolean array Log___logEnabled
-integer array Log___logMaximum
+string array Log__log
+integer array Log__logCounter
+boolean array Log__logEnabled
+integer array Log__logMaximum
     
-trigger array Log___callbackTriggers
-integer Log___callbackTriggersCounter= 0
-player Log___triggerLogPlayer= null
-string Log___triggerLogMessage= null
+trigger array Log__callbackTriggers
+integer Log__callbackTriggersCounter= 0
+player Log__triggerLogPlayer= null
+string Log__triggerLogMessage= null
     
-string Log___tmpMessage= ""
+string Log__tmpMessage= ""
 //endglobals from Log
 //globals from LogUI:
 constant boolean LIBRARY_LogUI=true
@@ -73,14 +73,14 @@ constant real LogUI_CLOSE_BUTTON_HEIGHT= 0.035
 constant real LogUI_CLOSE_BUTTON_X= LogUI_FULLSCREEN_WIDTH / 2.0 - ( LogUI_CLOSE_BUTTON_WIDTH / 2.0 )
 constant real LogUI_CLOSE_BUTTON_Y= LogUI_TEXT_AREA_Y - LogUI_TEXT_AREA_HEIGHT - LogUI_TEXT_AREA_SPACE
     
-framehandle LogUI___BackgroundFrame= null
-framehandle LogUI___TextAreaFrame= null
+framehandle LogUI__BackgroundFrame= null
+framehandle LogUI__TextAreaFrame= null
     
-trigger LogUI___closeTrigger= null
-trigger LogUI___clickUpperButtonTrigger= null
-trigger LogUI___upperButtonHotkeyTrigger= null
-trigger LogUI___chatCommandTrigger= CreateTrigger()
-trigger LogUI___logTrigger= CreateTrigger()
+trigger LogUI__closeTrigger= null
+trigger LogUI__clickUpperButtonTrigger= null
+trigger LogUI__upperButtonHotkeyTrigger= null
+trigger LogUI__chatCommandTrigger= CreateTrigger()
+trigger LogUI__logTrigger= CreateTrigger()
 //endglobals from LogUI
     // Generated
 trigger gg_trg_Initialization= null
@@ -324,62 +324,62 @@ function sc___prototype52_evaluate takes integer i,sound a1,integer a2,playercol
 
 endfunction
 function h__DisplayTextToPlayer takes player a0, real a1, real a2, string a3 returns nothing
-    //hook: Log___DisplayTextToPlayerHook
+    //hook: Log__DisplayTextToPlayerHook
     call sc___prototype42_evaluate(1,a0,a1,a2,a3)
 call DisplayTextToPlayer(a0,a1,a2,a3)
 endfunction
 function h__DisplayTimedTextToPlayer takes player a0, real a1, real a2, real a3, string a4 returns nothing
-    //hook: Log___DisplayTimedTextToPlayerHook
+    //hook: Log__DisplayTimedTextToPlayerHook
     call sc___prototype43_evaluate(1,a0,a1,a2,a3,a4)
 call DisplayTimedTextToPlayer(a0,a1,a2,a3,a4)
 endfunction
 function h__DisplayTimedTextFromPlayer takes player a0, real a1, real a2, real a3, string a4 returns nothing
-    //hook: Log___DisplayTimedTextFromPlayerHook
+    //hook: Log__DisplayTimedTextFromPlayerHook
     call sc___prototype43_evaluate(2,a0,a1,a2,a3,a4)
 call DisplayTimedTextFromPlayer(a0,a1,a2,a3,a4)
 endfunction
 function h__DisplayTextToForce takes force a0, string a1 returns nothing
-    //hook: Log___DisplayTextToForceHook
+    //hook: Log__DisplayTextToForceHook
     call sc___prototype44_evaluate(1,a0,a1)
 call DisplayTextToForce(a0,a1)
 endfunction
 function h__DisplayTimedTextToForce takes force a0, real a1, string a2 returns nothing
-    //hook: Log___DisplayTimedTextToForceHook
+    //hook: Log__DisplayTimedTextToForceHook
     call sc___prototype45_evaluate(1,a0,a1,a2)
 call DisplayTimedTextToForce(a0,a1,a2)
 endfunction
 function h__QuestMessageBJ takes force a0, integer a1, string a2 returns nothing
-    //hook: Log___QuestMessageBJHook
+    //hook: Log__QuestMessageBJHook
     call sc___prototype46_evaluate(1,a0,a1,a2)
 call QuestMessageBJ(a0,a1,a2)
 endfunction
 function h__BJDebugMsg takes string a0 returns nothing
-    //hook: Log___BJDebugMsgHook
+    //hook: Log__BJDebugMsgHook
     call sc___prototype47_evaluate(1,a0)
 call BJDebugMsg(a0)
 endfunction
 function h__BlzDisplayChatMessage takes player a0, integer a1, string a2 returns nothing
-    //hook: Log___BlzDisplayChatMessageHook
+    //hook: Log__BlzDisplayChatMessageHook
     call sc___prototype48_evaluate(1,a0,a1,a2)
 call BlzDisplayChatMessage(a0,a1,a2)
 endfunction
 function h__TransmissionFromUnitWithNameBJ takes force a0, unit a1, string a2, sound a3, string a4, integer a5, real a6, boolean a7 returns nothing
-    //hook: Log___TransmissionFromUnitWithNameBJHook
+    //hook: Log__TransmissionFromUnitWithNameBJHook
     call sc___prototype49_evaluate(1,a0,a1,a2,a3,a4,a5,a6,a7)
 call TransmissionFromUnitWithNameBJ(a0,a1,a2,a3,a4,a5,a6,a7)
 endfunction
 function h__TransmissionFromUnitTypeWithNameBJ takes force a0, player a1, integer a2, string a3, location a4, sound a5, string a6, integer a7, real a8, boolean a9 returns nothing
-    //hook: Log___TransmissionFromUnitTypeWithNameBJHook
+    //hook: Log__TransmissionFromUnitTypeWithNameBJHook
     call sc___prototype50_evaluate(1,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9)
 call TransmissionFromUnitTypeWithNameBJ(a0,a1,a2,a3,a4,a5,a6,a7,a8,a9)
 endfunction
 function h__SetCinematicScene takes integer a0, playercolor a1, string a2, string a3, real a4, real a5 returns nothing
-    //hook: Log___SetCinematicSceneHook
+    //hook: Log__SetCinematicSceneHook
     call sc___prototype51_evaluate(1,a0,a1,a2,a3,a4,a5)
 call SetCinematicScene(a0,a1,a2,a3,a4,a5)
 endfunction
 function h__SetCinematicSceneBJ takes sound a0, integer a1, playercolor a2, string a3, string a4, real a5, real a6 returns nothing
-    //hook: Log___SetCinematicSceneBJHook
+    //hook: Log__SetCinematicSceneBJHook
     call sc___prototype52_evaluate(1,a0,a1,a2,a3,a4,a5,a6)
 call SetCinematicSceneBJ(a0,a1,a2,a3,a4,a5,a6)
 endfunction
@@ -390,18 +390,18 @@ endfunction
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
@@ -469,19 +469,19 @@ endfunction
 
 
 function OnStartGame takes code func returns nothing
-    call TriggerAddAction(OnStartGame___startGameTrigger, func)
+    call TriggerAddAction(OnStartGame__startGameTrigger, func)
 endfunction
 
-function OnStartGame___TimerFunctionStartGame takes nothing returns nothing
+function OnStartGame__TimerFunctionStartGame takes nothing returns nothing
     local timer t= GetExpiredTimer()
-    call TriggerExecute(OnStartGame___startGameTrigger)
+    call TriggerExecute(OnStartGame__startGameTrigger)
     call PauseTimer(t)
     call DestroyTimer(t)
     set t=null
 endfunction
 
-function OnStartGame___Init takes nothing returns nothing
-    call TimerStart(CreateTimer(), 0.0, false, function OnStartGame___TimerFunctionStartGame)
+function OnStartGame__Init takes nothing returns nothing
+    call TimerStart(CreateTimer(), 0.0, false, function OnStartGame__TimerFunctionStartGame)
 endfunction
 
 
@@ -727,14 +727,6 @@ function IsStringNumber takes string whichString returns boolean
     return true
 endfunction
 
-function GetLocalizedMessage takes string msg returns string
-    if ( StringStartsWith(msg , "TRIGSTR_") ) then
-        return GetLocalizedString(msg)
-    endif
-    
-    return msg
-endfunction
-
 
 //library StringUtils ends
 //library PlayerColorUtils:
@@ -970,42 +962,42 @@ function GetPlayerNameColored takes player whichPlayer returns string
 endfunction
 
 
-function PlayerColorUtils___Init takes nothing returns nothing
-    set PlayerColorUtils___PlayerColorNames[0]="RED"
-    set PlayerColorUtils___PlayerColorNames[1]="BLUE"
-    set PlayerColorUtils___PlayerColorNames[2]="CYAN"
-    set PlayerColorUtils___PlayerColorNames[3]="PURPLE"
-    set PlayerColorUtils___PlayerColorNames[4]="YELLOW"
-    set PlayerColorUtils___PlayerColorNames[5]="ORANGE"
-    set PlayerColorUtils___PlayerColorNames[6]="GREEN"
-    set PlayerColorUtils___PlayerColorNames[7]="PINK"
-    set PlayerColorUtils___PlayerColorNames[8]="LIGHT_GRAY"
-    set PlayerColorUtils___PlayerColorNames[9]="LIGHT_BLUE"
-    set PlayerColorUtils___PlayerColorNames[10]="AQUA"
-    set PlayerColorUtils___PlayerColorNames[11]="BROWN"
-    set PlayerColorUtils___PlayerColorNames[12]="MAROON"
-    set PlayerColorUtils___PlayerColorNames[13]="NAVY"
-    set PlayerColorUtils___PlayerColorNames[14]="TURQUOISE"
-    set PlayerColorUtils___PlayerColorNames[15]="VIOLET"
-    set PlayerColorUtils___PlayerColorNames[16]="WHEAT"
-    set PlayerColorUtils___PlayerColorNames[17]="PEACH"
-    set PlayerColorUtils___PlayerColorNames[18]="MINT"
-    set PlayerColorUtils___PlayerColorNames[19]="LAVENDER"
-    set PlayerColorUtils___PlayerColorNames[20]="COAL"
-    set PlayerColorUtils___PlayerColorNames[21]="SNOW"
-    set PlayerColorUtils___PlayerColorNames[22]="EMERALD"
-    set PlayerColorUtils___PlayerColorNames[23]="PEANUT"
+function PlayerColorUtils__Init takes nothing returns nothing
+    set PlayerColorUtils__PlayerColorNames[0]="RED"
+    set PlayerColorUtils__PlayerColorNames[1]="BLUE"
+    set PlayerColorUtils__PlayerColorNames[2]="CYAN"
+    set PlayerColorUtils__PlayerColorNames[3]="PURPLE"
+    set PlayerColorUtils__PlayerColorNames[4]="YELLOW"
+    set PlayerColorUtils__PlayerColorNames[5]="ORANGE"
+    set PlayerColorUtils__PlayerColorNames[6]="GREEN"
+    set PlayerColorUtils__PlayerColorNames[7]="PINK"
+    set PlayerColorUtils__PlayerColorNames[8]="LIGHT_GRAY"
+    set PlayerColorUtils__PlayerColorNames[9]="LIGHT_BLUE"
+    set PlayerColorUtils__PlayerColorNames[10]="AQUA"
+    set PlayerColorUtils__PlayerColorNames[11]="BROWN"
+    set PlayerColorUtils__PlayerColorNames[12]="MAROON"
+    set PlayerColorUtils__PlayerColorNames[13]="NAVY"
+    set PlayerColorUtils__PlayerColorNames[14]="TURQUOISE"
+    set PlayerColorUtils__PlayerColorNames[15]="VIOLET"
+    set PlayerColorUtils__PlayerColorNames[16]="WHEAT"
+    set PlayerColorUtils__PlayerColorNames[17]="PEACH"
+    set PlayerColorUtils__PlayerColorNames[18]="MINT"
+    set PlayerColorUtils__PlayerColorNames[19]="LAVENDER"
+    set PlayerColorUtils__PlayerColorNames[20]="COAL"
+    set PlayerColorUtils__PlayerColorNames[21]="SNOW"
+    set PlayerColorUtils__PlayerColorNames[22]="EMERALD"
+    set PlayerColorUtils__PlayerColorNames[23]="PEANUT"
 endfunction
 
 function GetPlayerColorName takes player whichPlayer returns string
-    return StringCase(PlayerColorUtils___PlayerColorNames[GetPlayerId(whichPlayer)], false)
+    return StringCase(PlayerColorUtils__PlayerColorNames[GetPlayerId(whichPlayer)], false)
 endfunction
 
 function GetPlayerColorFromString takes string whichString returns playercolor
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( whichString == I2S(i + 1) or ( PlayerColorUtils___PlayerColorNames[i] != null and StringLength(PlayerColorUtils___PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils___PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
+        if ( whichString == I2S(i + 1) or ( PlayerColorUtils__PlayerColorNames[i] != null and StringLength(PlayerColorUtils__PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils__PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
             return ConvertPlayerColor(i)
         endif
         set i=i + 1
@@ -1018,7 +1010,7 @@ function GetPlayerFromString takes string whichString returns player
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( whichString == I2S(i + 1) or ( PlayerColorUtils___PlayerColorNames[i] != null and StringLength(PlayerColorUtils___PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils___PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
+        if ( whichString == I2S(i + 1) or ( PlayerColorUtils__PlayerColorNames[i] != null and StringLength(PlayerColorUtils__PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils__PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
             return Player(i)
         endif
         set i=i + 1
@@ -1033,62 +1025,62 @@ endfunction
 
 
 function TriggerRegisterLogEvent takes trigger whichTrigger returns nothing
-    set Log___callbackTriggers[Log___callbackTriggersCounter]=whichTrigger
-    set Log___callbackTriggersCounter=Log___callbackTriggersCounter + 1
+    set Log__callbackTriggers[Log__callbackTriggersCounter]=whichTrigger
+    set Log__callbackTriggersCounter=Log__callbackTriggersCounter + 1
 endfunction
 
 function GetTriggerLogPlayer takes nothing returns player
-    return Log___triggerLogPlayer
+    return Log__triggerLogPlayer
 endfunction
 
 function GetTriggerLogMessage takes nothing returns string
-    return Log___triggerLogMessage
+    return Log__triggerLogMessage
 endfunction
 
-function Log___ExecuteCallbackTriggers takes player whichPlayer,string msg returns nothing
+function Log__ExecuteCallbackTriggers takes player whichPlayer,string msg returns nothing
     local integer i= 0
     local player slotPlayer= null
     loop
-        exitwhen ( i == Log___callbackTriggersCounter )
-        if ( IsTriggerEnabled(Log___callbackTriggers[i]) ) then
-            set Log___triggerLogPlayer=whichPlayer
-            set Log___triggerLogMessage=msg
-            call ConditionalTriggerExecute(Log___callbackTriggers[i])
+        exitwhen ( i == Log__callbackTriggersCounter )
+        if ( IsTriggerEnabled(Log__callbackTriggers[i]) ) then
+            set Log__triggerLogPlayer=whichPlayer
+            set Log__triggerLogMessage=msg
+            call ConditionalTriggerExecute(Log__callbackTriggers[i])
         endif
         set i=i + 1
     endloop
 endfunction
 
-function Log___GetLogEntryIndex takes player whichPlayer,integer index returns integer
+function Log__GetLogEntryIndex takes player whichPlayer,integer index returns integer
     return Index2D(index , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)
 endfunction
 
 function ClearLog takes player whichPlayer returns nothing
-    set Log___logCounter[GetPlayerId(whichPlayer)]=0
+    set Log__logCounter[GetPlayerId(whichPlayer)]=0
 endfunction
 
 function IsLogEnabled takes player whichPlayer returns boolean
-    return Log___logEnabled[GetPlayerId(whichPlayer)]
+    return Log__logEnabled[GetPlayerId(whichPlayer)]
 endfunction
 
 function SetLogEnabled takes player whichPlayer,boolean enabled returns nothing
-    set Log___logEnabled[GetPlayerId(whichPlayer)]=enabled
+    set Log__logEnabled[GetPlayerId(whichPlayer)]=enabled
 endfunction
 
 function GetLogMaximum takes player whichPlayer returns integer
-    return Log___logMaximum[GetPlayerId(whichPlayer)]
+    return Log__logMaximum[GetPlayerId(whichPlayer)]
 endfunction
 
 function SetLogMaximum takes player whichPlayer,integer maximum returns nothing
-    set Log___logMaximum[GetPlayerId(whichPlayer)]=maximum
+    set Log__logMaximum[GetPlayerId(whichPlayer)]=maximum
 endfunction
 
 function GetLogEntry takes player whichPlayer,integer index returns string
-    return Log___log[Log___GetLogEntryIndex(whichPlayer , index)]
+    return Log__log[Log__GetLogEntryIndex(whichPlayer , index)]
 endfunction
 
 function GetLogCounter takes player whichPlayer returns integer
-    return Log___logCounter[GetPlayerId(whichPlayer)]
+    return Log__logCounter[GetPlayerId(whichPlayer)]
 endfunction
 
 
@@ -1109,73 +1101,73 @@ endfunction
 
 
 function AddLog takes player whichPlayer,string msg returns nothing
-    local integer index= (Log___logCounter[GetPlayerId((whichPlayer))]) // INLINED!!
+    local integer index= (Log__logCounter[GetPlayerId((whichPlayer))]) // INLINED!!
     local integer i= 0
     local integer max= 0
-    if ( (Log___logEnabled[GetPlayerId((whichPlayer))]) ) then // INLINED!!
+    if ( (Log__logEnabled[GetPlayerId((whichPlayer))]) ) then // INLINED!!
         // Do this before removing empty lines since StringLength seems to already localize the passed string.
-        set msg=GetLocalizedMessage(msg)
+        set msg=GetLocalizedString(msg)
 
         set msg=RemoveStartingEmptyLines(msg)
 
         
-        set max=(Log___logMaximum[GetPlayerId((whichPlayer))]) // INLINED!!
+        set max=(Log__logMaximum[GetPlayerId((whichPlayer))]) // INLINED!!
         if ( index >= max ) then
             set i=1
             loop
                 exitwhen ( i >= max )
-                set Log___log[Log___GetLogEntryIndex(whichPlayer , i - 1)]=Log___log[Log___GetLogEntryIndex(whichPlayer , i)]
+                set Log__log[Log__GetLogEntryIndex(whichPlayer , i - 1)]=Log__log[Log__GetLogEntryIndex(whichPlayer , i)]
                 set i=i + 1
             endloop
-            set Log___log[Log___GetLogEntryIndex(whichPlayer , max - 1)]=msg
+            set Log__log[Log__GetLogEntryIndex(whichPlayer , max - 1)]=msg
         else
-            set Log___logCounter[GetPlayerId(whichPlayer)]=index + 1
-            set Log___log[Log___GetLogEntryIndex(whichPlayer , index)]=msg
+            set Log__logCounter[GetPlayerId(whichPlayer)]=index + 1
+            set Log__log[Log__GetLogEntryIndex(whichPlayer , index)]=msg
         endif
         
-        call Log___ExecuteCallbackTriggers(whichPlayer , msg)
+        call Log__ExecuteCallbackTriggers(whichPlayer , msg)
     endif
 endfunction
 
-function Log___DisplayTextToPlayerHook takes player toPlayer,real x,real y,string message returns nothing
+function Log__DisplayTextToPlayerHook takes player toPlayer,real x,real y,string message returns nothing
     call AddLog(toPlayer , message)
 endfunction
 
-function Log___DisplayTimedTextToPlayerHook takes player toPlayer,real x,real y,real duration,string message returns nothing
+function Log__DisplayTimedTextToPlayerHook takes player toPlayer,real x,real y,real duration,string message returns nothing
     call AddLog(toPlayer , message)
 endfunction
 
-function Log___DisplayTimedTextFromPlayerHook takes player toPlayer,real x,real y,real duration,string message returns nothing
+function Log__DisplayTimedTextFromPlayerHook takes player toPlayer,real x,real y,real duration,string message returns nothing
     call AddLog(toPlayer , message)
 endfunction
 
-function Log___ForForceAddLog takes nothing returns nothing
-    call AddLog(GetEnumPlayer() , Log___tmpMessage)
+function Log__ForForceAddLog takes nothing returns nothing
+    call AddLog(GetEnumPlayer() , Log__tmpMessage)
 endfunction
 
-function Log___DisplayTextToForceHook takes force toForce,string message returns nothing
-    set Log___tmpMessage=message
-    call ForForce(toForce, function Log___ForForceAddLog)
+function Log__DisplayTextToForceHook takes force toForce,string message returns nothing
+    set Log__tmpMessage=message
+    call ForForce(toForce, function Log__ForForceAddLog)
 endfunction
 
-function Log___DisplayTimedTextToForceHook takes force toForce,real duration,string message returns nothing
-    set Log___tmpMessage=message
-    call ForForce(toForce, function Log___ForForceAddLog)
+function Log__DisplayTimedTextToForceHook takes force toForce,real duration,string message returns nothing
+    set Log__tmpMessage=message
+    call ForForce(toForce, function Log__ForForceAddLog)
 endfunction
 
-function Log___QuestMessageBJHook takes force f,integer messageType,string message returns nothing
-    set Log___tmpMessage=" "
-    call ForForce(f, function Log___ForForceAddLog)
-    set Log___tmpMessage=message
-    call ForForce(f, function Log___ForForceAddLog)
+function Log__QuestMessageBJHook takes force f,integer messageType,string message returns nothing
+    set Log__tmpMessage=" "
+    call ForForce(f, function Log__ForForceAddLog)
+    set Log__tmpMessage=message
+    call ForForce(f, function Log__ForForceAddLog)
 endfunction
 
-function Log___BJDebugMsgHook takes string msg returns nothing
-    set Log___tmpMessage=msg
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+function Log__BJDebugMsgHook takes string msg returns nothing
+    set Log__tmpMessage=msg
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
 endfunction
 
-function Log___GetChatMessageRecipient takes integer recipient returns string
+function Log__GetChatMessageRecipient takes integer recipient returns string
     if ( recipient == 0 ) then
         return GetLocalizedString("CHAT_RECIPIENT_ALL")
     elseif ( recipient == 1 ) then
@@ -1192,75 +1184,75 @@ endfunction
 // 1: "Allies"
 // 2: "Observers"
 // 3+: "Private"
-function Log___BlzDisplayChatMessageHook takes player whichPlayer,integer recipient,string message returns nothing
-    set Log___tmpMessage=Log___GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+function Log__BlzDisplayChatMessageHook takes player whichPlayer,integer recipient,string message returns nothing
+    set Log__tmpMessage=Log__GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
 endfunction
 
-//processed hook: hook DisplayTextToPlayer Log___DisplayTextToPlayerHook
-//processed hook: hook DisplayTimedTextToPlayer Log___DisplayTimedTextToPlayerHook
-//processed hook: hook DisplayTimedTextFromPlayer Log___DisplayTimedTextFromPlayerHook
-//processed hook: hook DisplayTextToForce Log___DisplayTextToForceHook
-//processed hook: hook DisplayTimedTextToForce Log___DisplayTimedTextToForceHook
-//processed hook: hook QuestMessageBJ Log___QuestMessageBJHook
-//processed hook: hook BJDebugMsg Log___BJDebugMsgHook
-//processed hook: hook BlzDisplayChatMessage Log___BlzDisplayChatMessageHook
+//processed hook: hook DisplayTextToPlayer Log__DisplayTextToPlayerHook
+//processed hook: hook DisplayTimedTextToPlayer Log__DisplayTimedTextToPlayerHook
+//processed hook: hook DisplayTimedTextFromPlayer Log__DisplayTimedTextFromPlayerHook
+//processed hook: hook DisplayTextToForce Log__DisplayTextToForceHook
+//processed hook: hook DisplayTimedTextToForce Log__DisplayTimedTextToForceHook
+//processed hook: hook QuestMessageBJ Log__QuestMessageBJHook
+//processed hook: hook BJDebugMsg Log__BJDebugMsgHook
+//processed hook: hook BlzDisplayChatMessage Log__BlzDisplayChatMessageHook
 
 
-function Log___TransmissionFromUnitWithNameBJHook takes force toForce,unit whichUnit,string unitName,sound soundHandle,string message,integer timeType,real timeVal,boolean wait returns nothing
-    set Log___tmpMessage=" "
-    call ForForce(toForce, function Log___ForForceAddLog)
-    set Log___tmpMessage="|cffffcc00" + GetLocalizedMessage(unitName) + ":|r " + GetLocalizedMessage(message)
-    call ForForce(toForce, function Log___ForForceAddLog)
+function Log__TransmissionFromUnitWithNameBJHook takes force toForce,unit whichUnit,string unitName,sound soundHandle,string message,integer timeType,real timeVal,boolean wait returns nothing
+    set Log__tmpMessage=" "
+    call ForForce(toForce, function Log__ForForceAddLog)
+    set Log__tmpMessage="|cffffcc00" + GetLocalizedString(unitName) + ":|r " + GetLocalizedString(message)
+    call ForForce(toForce, function Log__ForForceAddLog)
 endfunction
 
-function Log___TransmissionFromUnitTypeWithNameBJHook takes force toForce,player fromPlayer,integer unitId,string unitName,location loc,sound soundHandle,string message,integer timeType,real timeVal,boolean wait returns nothing
-    set Log___tmpMessage=" "
-    call ForForce(toForce, function Log___ForForceAddLog)
-    set Log___tmpMessage="|cffffcc00" + GetLocalizedMessage(GetObjectName(unitId)) + ":|r " + GetLocalizedMessage(message)
-    call ForForce(toForce, function Log___ForForceAddLog)
+function Log__TransmissionFromUnitTypeWithNameBJHook takes force toForce,player fromPlayer,integer unitId,string unitName,location loc,sound soundHandle,string message,integer timeType,real timeVal,boolean wait returns nothing
+    set Log__tmpMessage=" "
+    call ForForce(toForce, function Log__ForForceAddLog)
+    set Log__tmpMessage="|cffffcc00" + GetLocalizedString(GetObjectName(unitId)) + ":|r " + GetLocalizedString(message)
+    call ForForce(toForce, function Log__ForForceAddLog)
 endfunction
 
-function Log___SetCinematicSceneHook takes integer portraitUnitId,playercolor color,string speakerTitle,string text,real sceneDuration,real voiceoverDuration returns nothing
-    set Log___tmpMessage=" "
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
-    set Log___tmpMessage="|cffffcc00" + speakerTitle + ":|r " + GetLocalizedMessage(text)
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+function Log__SetCinematicSceneHook takes integer portraitUnitId,playercolor color,string speakerTitle,string text,real sceneDuration,real voiceoverDuration returns nothing
+    set Log__tmpMessage=" "
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
+    set Log__tmpMessage="|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text)
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
 endfunction
 
-function Log___SetCinematicSceneBJHook takes sound soundHandle,integer portraitUnitId,playercolor color,string speakerTitle,string text,real sceneDuration,real voiceoverDuration returns nothing
-    set Log___tmpMessage=" "
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
-    set Log___tmpMessage="|cffffcc00" + speakerTitle + ":|r " + GetLocalizedMessage(text)
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+function Log__SetCinematicSceneBJHook takes sound soundHandle,integer portraitUnitId,playercolor color,string speakerTitle,string text,real sceneDuration,real voiceoverDuration returns nothing
+    set Log__tmpMessage=" "
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
+    set Log__tmpMessage="|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text)
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
 endfunction
 
-//processed hook: hook TransmissionFromUnitWithNameBJ Log___TransmissionFromUnitWithNameBJHook
-//processed hook: hook TransmissionFromUnitTypeWithNameBJ Log___TransmissionFromUnitTypeWithNameBJHook
-//processed hook: hook SetCinematicScene Log___SetCinematicSceneHook
-//processed hook: hook SetCinematicSceneBJ Log___SetCinematicSceneBJHook
+//processed hook: hook TransmissionFromUnitWithNameBJ Log__TransmissionFromUnitWithNameBJHook
+//processed hook: hook TransmissionFromUnitTypeWithNameBJ Log__TransmissionFromUnitTypeWithNameBJHook
+//processed hook: hook SetCinematicScene Log__SetCinematicSceneHook
+//processed hook: hook SetCinematicSceneBJ Log__SetCinematicSceneBJHook
 
 
 
 
-function Log___TriggerActionChatMessage takes nothing returns nothing
+function Log__TriggerActionChatMessage takes nothing returns nothing
     call AddLog(GetTriggerPlayer() , GetPlayerNameColoredSimple(GetTriggerPlayer()) + ": " + GetEventPlayerChatString())
 endfunction
 
 
-function Log___Init takes nothing returns nothing
+function Log__Init takes nothing returns nothing
     local trigger t= null
     local integer i= 0
     local player slotPlayer= null
 
      set t=CreateTrigger()
-     call TriggerAddAction(t, function Log___TriggerActionChatMessage)
+     call TriggerAddAction(t, function Log__TriggerActionChatMessage)
 
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
         set slotPlayer=Player(i)
-        set Log___logEnabled[GetPlayerId((slotPlayer ))]=( GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING) // INLINED!!
-        set Log___logMaximum[GetPlayerId((slotPlayer ))]=( LOG_MAXIMUM) // INLINED!!
+        set Log__logEnabled[GetPlayerId((slotPlayer ))]=( GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING) // INLINED!!
+        set Log__logMaximum[GetPlayerId((slotPlayer ))]=( LOG_MAXIMUM) // INLINED!!
 
         call TriggerRegisterPlayerChatEvent(t, slotPlayer, "", false)
 
@@ -1275,24 +1267,24 @@ endfunction
 
 
 function EnableLogUI takes nothing returns nothing
-    call EnableTrigger(LogUI___closeTrigger)
-    call EnableTrigger(LogUI___chatCommandTrigger)
-    call EnableTrigger(LogUI___logTrigger)
+    call EnableTrigger(LogUI__closeTrigger)
+    call EnableTrigger(LogUI__chatCommandTrigger)
+    call EnableTrigger(LogUI__logTrigger)
 endfunction
 
 function DisableLogUI takes nothing returns nothing
-    call DisableTrigger(LogUI___closeTrigger)
-    call DisableTrigger(LogUI___chatCommandTrigger)
-    call DisableTrigger(LogUI___logTrigger)
+    call DisableTrigger(LogUI__closeTrigger)
+    call DisableTrigger(LogUI__chatCommandTrigger)
+    call DisableTrigger(LogUI__logTrigger)
 endfunction
 
 function UpdateLogUIVisible takes nothing returns nothing
-    local integer max= (Log___logCounter[GetPlayerId((GetLocalPlayer()))]) // INLINED!!
+    local integer max= (Log__logCounter[GetPlayerId((GetLocalPlayer()))]) // INLINED!!
     local integer i= 0
-    call BlzFrameSetText(LogUI___TextAreaFrame, "")
+    call BlzFrameSetText(LogUI__TextAreaFrame, "")
     loop
         exitwhen ( i == max )
-        call BlzFrameAddText(LogUI___TextAreaFrame, (Log___log[Log___GetLogEntryIndex((GetLocalPlayer() ) , ( i))])) // INLINED!!
+        call BlzFrameAddText(LogUI__TextAreaFrame, (Log__log[Log__GetLogEntryIndex((GetLocalPlayer() ) , ( i))])) // INLINED!!
         set i=i + 1
     endloop
 endfunction
@@ -1301,7 +1293,7 @@ function SetLogUIVisible takes boolean visible returns nothing
     if ( visible ) then
         call UpdateLogUIVisible()
     endif
-    call BlzFrameSetVisible(LogUI___BackgroundFrame, visible)
+    call BlzFrameSetVisible(LogUI__BackgroundFrame, visible)
 endfunction
 
 function ShowLogUI takes nothing returns nothing
@@ -1330,11 +1322,11 @@ function HideLogUIForPlayer takes player whichPlayer returns nothing
     endif
 endfunction 
 
-function LogUI___CloseFunction takes nothing returns nothing
+function LogUI__CloseFunction takes nothing returns nothing
     call HideLogUIForPlayer(GetTriggerPlayer())
 endfunction
 
-function LogUI___ClickUpperButtonFunction takes nothing returns nothing
+function LogUI__ClickUpperButtonFunction takes nothing returns nothing
     call ForceUIKeyBJ(GetTriggerPlayer(), "F12")
     call ShowLogUIForPlayer(GetTriggerPlayer())
     if ( GetTriggerPlayer() == GetLocalPlayer() ) then
@@ -1342,82 +1334,82 @@ function LogUI___ClickUpperButtonFunction takes nothing returns nothing
     endif
 endfunction
 
-function LogUI___CreateUpperButtonUI takes nothing returns nothing
+function LogUI__CreateUpperButtonUI takes nothing returns nothing
     local integer i= 0
     local player slotPlayer= null
-    if ( LogUI___clickUpperButtonTrigger != null ) then
-        call DestroyTrigger(LogUI___clickUpperButtonTrigger)
+    if ( LogUI__clickUpperButtonTrigger != null ) then
+        call DestroyTrigger(LogUI__clickUpperButtonTrigger)
     endif
-    set LogUI___clickUpperButtonTrigger=CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(LogUI___clickUpperButtonTrigger, BlzGetFrameByName("UpperButtonBarChatButton", 0), FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(LogUI___clickUpperButtonTrigger, function LogUI___ClickUpperButtonFunction)
+    set LogUI__clickUpperButtonTrigger=CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(LogUI__clickUpperButtonTrigger, BlzGetFrameByName("UpperButtonBarChatButton", 0), FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(LogUI__clickUpperButtonTrigger, function LogUI__ClickUpperButtonFunction)
     
-    if ( LogUI___upperButtonHotkeyTrigger != null ) then
-        call DestroyTrigger(LogUI___upperButtonHotkeyTrigger)
+    if ( LogUI__upperButtonHotkeyTrigger != null ) then
+        call DestroyTrigger(LogUI__upperButtonHotkeyTrigger)
     endif
-    set LogUI___upperButtonHotkeyTrigger=CreateTrigger()
+    set LogUI__upperButtonHotkeyTrigger=CreateTrigger()
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
         set slotPlayer=Player(i)
         if ( GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING ) then
-            call BlzTriggerRegisterPlayerKeyEvent(LogUI___upperButtonHotkeyTrigger, slotPlayer, OSKEY_F12, 0, true)
+            call BlzTriggerRegisterPlayerKeyEvent(LogUI__upperButtonHotkeyTrigger, slotPlayer, OSKEY_F12, 0, true)
         endif
         set i=i + 1
     endloop
-    call TriggerAddAction(LogUI___upperButtonHotkeyTrigger, function LogUI___ClickUpperButtonFunction)
+    call TriggerAddAction(LogUI__upperButtonHotkeyTrigger, function LogUI__ClickUpperButtonFunction)
 endfunction
 
-function LogUI___CreateUI takes nothing returns nothing
+function LogUI__CreateUI takes nothing returns nothing
     local framehandle f= null
     
-    set LogUI___BackgroundFrame=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(LogUI___BackgroundFrame, FRAMEPOINT_TOPLEFT, LogUI_X, LogUI_Y)
-    call BlzFrameSetAbsPoint(LogUI___BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, LogUI_X + LogUI_WIDTH, LogUI_Y - LogUI_HEIGHT)
-    call BlzFrameSetLevel(LogUI___BackgroundFrame, 1)
+    set LogUI__BackgroundFrame=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(LogUI__BackgroundFrame, FRAMEPOINT_TOPLEFT, LogUI_X, LogUI_Y)
+    call BlzFrameSetAbsPoint(LogUI__BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, LogUI_X + LogUI_WIDTH, LogUI_Y - LogUI_HEIGHT)
+    call BlzFrameSetLevel(LogUI__BackgroundFrame, 1)
 
-    set f=BlzCreateFrame("EscMenuTitleTextTemplate", LogUI___BackgroundFrame, 0, 0)
+    set f=BlzCreateFrame("EscMenuTitleTextTemplate", LogUI__BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, LogUI_TITLE_X, LogUI_TITLE_Y)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, LogUI_TITLE_X + LogUI_WIDTH, LogUI_TITLE_Y - LogUI_TITLE_HEIGHT)
     call BlzFrameSetTextAlignment(f, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetText(f, GetLocalizedString("MESSAGE_LOG"))
     
-    set LogUI___TextAreaFrame=BlzCreateFrame("EscMenuTextAreaTemplate", LogUI___BackgroundFrame, 0, 0)
-    call BlzFrameSetAbsPoint(LogUI___TextAreaFrame, FRAMEPOINT_TOPLEFT, LogUI_TEXT_AREA_X, LogUI_TEXT_AREA_Y)
-    call BlzFrameSetAbsPoint(LogUI___TextAreaFrame, FRAMEPOINT_BOTTOMRIGHT, LogUI_TEXT_AREA_X + LogUI_TEXT_AREA_WIDTH, LogUI_TEXT_AREA_Y - LogUI_TEXT_AREA_HEIGHT)
-    call BlzFrameSetFont(LogUI___TextAreaFrame, "MasterFont", 0.011, 0)
+    set LogUI__TextAreaFrame=BlzCreateFrame("EscMenuTextAreaTemplate", LogUI__BackgroundFrame, 0, 0)
+    call BlzFrameSetAbsPoint(LogUI__TextAreaFrame, FRAMEPOINT_TOPLEFT, LogUI_TEXT_AREA_X, LogUI_TEXT_AREA_Y)
+    call BlzFrameSetAbsPoint(LogUI__TextAreaFrame, FRAMEPOINT_BOTTOMRIGHT, LogUI_TEXT_AREA_X + LogUI_TEXT_AREA_WIDTH, LogUI_TEXT_AREA_Y - LogUI_TEXT_AREA_HEIGHT)
+    call BlzFrameSetFont(LogUI__TextAreaFrame, "MasterFont", 0.011, 0)
 
-    set f=BlzCreateFrame("ScriptDialogButton", LogUI___BackgroundFrame, 0, 0)
+    set f=BlzCreateFrame("ScriptDialogButton", LogUI__BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, LogUI_CLOSE_BUTTON_X, LogUI_CLOSE_BUTTON_Y)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, LogUI_CLOSE_BUTTON_X + LogUI_CLOSE_BUTTON_WIDTH, LogUI_CLOSE_BUTTON_Y - LogUI_CLOSE_BUTTON_HEIGHT)
     call BlzFrameSetText(f, "|cffffcc00" + GetLocalizedString("OK") + "|r")
 
-    if ( LogUI___closeTrigger != null ) then
-        call DestroyTrigger(LogUI___closeTrigger)
+    if ( LogUI__closeTrigger != null ) then
+        call DestroyTrigger(LogUI__closeTrigger)
     endif
-    set LogUI___closeTrigger=CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(LogUI___closeTrigger, f, FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(LogUI___closeTrigger, function LogUI___CloseFunction)
+    set LogUI__closeTrigger=CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(LogUI__closeTrigger, f, FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(LogUI__closeTrigger, function LogUI__CloseFunction)
 
 
-    call LogUI___CreateUpperButtonUI()
+    call LogUI__CreateUpperButtonUI()
 
 
     call SetLogUIVisible(false) // INLINED!!
 endfunction
 
-function LogUI___TriggerActionShowLogUI takes nothing returns nothing
+function LogUI__TriggerActionShowLogUI takes nothing returns nothing
     call ShowLogUIForPlayer(GetTriggerPlayer())
 endfunction
 
-function LogUI___TriggerActionLog takes nothing returns nothing
-    if ( (Log___triggerLogPlayer) == GetLocalPlayer() ) then // INLINED!!
-        if ( BlzFrameIsVisible(LogUI___BackgroundFrame) ) then
+function LogUI__TriggerActionLog takes nothing returns nothing
+    if ( (Log__triggerLogPlayer) == GetLocalPlayer() ) then // INLINED!!
+        if ( BlzFrameIsVisible(LogUI__BackgroundFrame) ) then
             call UpdateLogUIVisible()
         endif
     endif
 endfunction
 
-function LogUI___Start takes nothing returns nothing
+function LogUI__Start takes nothing returns nothing
     local integer i= 0
     local player slotPlayer= null
 
@@ -1426,33 +1418,33 @@ function LogUI___Start takes nothing returns nothing
         set slotPlayer=Player(i)
         if ( GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING ) then
             if ( StringLength(LogUI_CHAT_COMMAND_SHORT) > 0 ) then
-                call TriggerRegisterPlayerChatEvent(LogUI___chatCommandTrigger, slotPlayer, LogUI_CHAT_COMMAND_SHORT, true)
+                call TriggerRegisterPlayerChatEvent(LogUI__chatCommandTrigger, slotPlayer, LogUI_CHAT_COMMAND_SHORT, true)
             endif
             if ( StringLength(LogUI_CHAT_COMMAND) > 0 ) then
-                call TriggerRegisterPlayerChatEvent(LogUI___chatCommandTrigger, slotPlayer, LogUI_CHAT_COMMAND, true)
+                call TriggerRegisterPlayerChatEvent(LogUI__chatCommandTrigger, slotPlayer, LogUI_CHAT_COMMAND, true)
             endif
         endif
         set slotPlayer=null
         set i=i + 1
     endloop
-    call TriggerAddAction(LogUI___chatCommandTrigger, function LogUI___TriggerActionShowLogUI)
+    call TriggerAddAction(LogUI__chatCommandTrigger, function LogUI__TriggerActionShowLogUI)
 
 
-    call TriggerRegisterLogEvent(LogUI___logTrigger)
-    call TriggerAddAction(LogUI___logTrigger, function LogUI___TriggerActionLog)
+    call TriggerRegisterLogEvent(LogUI__logTrigger)
+    call TriggerAddAction(LogUI__logTrigger, function LogUI__TriggerActionLog)
 
 
     call BlzLoadTOCFile(LogUI_TOC_FILE)
 
     
-    call LogUI___CreateUI()
+    call LogUI__CreateUI()
 endfunction
 
-function LogUI___Init takes nothing returns nothing
-    call TriggerAddAction(OnStartGame___startGameTrigger, (function LogUI___Start)) // INLINED!!
+function LogUI__Init takes nothing returns nothing
+    call TriggerAddAction(OnStartGame__startGameTrigger, (function LogUI__Start)) // INLINED!!
     // Prevents crashes on loading save games:
 
-    call TriggerAddAction(FrameLoader___actionTrigger, (function LogUI___CreateUI)) // INLINED!!
+    call TriggerAddAction(FrameLoader__actionTrigger, (function LogUI__CreateUI)) // INLINED!!
 
 endfunction
 
@@ -1728,12 +1720,12 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs5240640")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("OnStartGame___Init")
-call ExecuteFunc("PlayerColorUtils___Init")
-call ExecuteFunc("Log___Init")
-call ExecuteFunc("LogUI___Init")
+call ExecuteFunc("jasshelper__initstructs6659031")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("OnStartGame__Init")
+call ExecuteFunc("PlayerColorUtils__Init")
+call ExecuteFunc("Log__Init")
+call ExecuteFunc("LogUI__Init")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -1767,7 +1759,7 @@ endfunction
 
 
 //Struct method generated initializers/callers:
-function sa___prototype42_Log___DisplayTextToPlayerHook takes nothing returns boolean
+function sa___prototype42_Log__DisplayTextToPlayerHook takes nothing returns boolean
  local player toPlayer=f__arg_player1
  local real x=f__arg_real1
  local real y=f__arg_real2
@@ -1776,17 +1768,7 @@ function sa___prototype42_Log___DisplayTextToPlayerHook takes nothing returns bo
     call AddLog(toPlayer , message)
     return true
 endfunction
-function sa___prototype43_Log___DisplayTimedTextToPlayerHook takes nothing returns boolean
- local player toPlayer=f__arg_player1
- local real x=f__arg_real1
- local real y=f__arg_real2
- local real duration=f__arg_real3
- local string message=f__arg_string1
-
-    call AddLog(toPlayer , message)
-    return true
-endfunction
-function sa___prototype43_Log___DisplayTimedTextFromPlayerHook takes nothing returns boolean
+function sa___prototype43_Log__DisplayTimedTextToPlayerHook takes nothing returns boolean
  local player toPlayer=f__arg_player1
  local real x=f__arg_real1
  local real y=f__arg_real2
@@ -1796,43 +1778,53 @@ function sa___prototype43_Log___DisplayTimedTextFromPlayerHook takes nothing ret
     call AddLog(toPlayer , message)
     return true
 endfunction
-function sa___prototype44_Log___DisplayTextToForceHook takes nothing returns boolean
-    call Log___DisplayTextToForceHook(f__arg_force1,f__arg_string1)
+function sa___prototype43_Log__DisplayTimedTextFromPlayerHook takes nothing returns boolean
+ local player toPlayer=f__arg_player1
+ local real x=f__arg_real1
+ local real y=f__arg_real2
+ local real duration=f__arg_real3
+ local string message=f__arg_string1
+
+    call AddLog(toPlayer , message)
     return true
 endfunction
-function sa___prototype45_Log___DisplayTimedTextToForceHook takes nothing returns boolean
-    call Log___DisplayTimedTextToForceHook(f__arg_force1,f__arg_real1,f__arg_string1)
+function sa___prototype44_Log__DisplayTextToForceHook takes nothing returns boolean
+    call Log__DisplayTextToForceHook(f__arg_force1,f__arg_string1)
     return true
 endfunction
-function sa___prototype46_Log___QuestMessageBJHook takes nothing returns boolean
-    call Log___QuestMessageBJHook(f__arg_force1,f__arg_integer1,f__arg_string1)
+function sa___prototype45_Log__DisplayTimedTextToForceHook takes nothing returns boolean
+    call Log__DisplayTimedTextToForceHook(f__arg_force1,f__arg_real1,f__arg_string1)
     return true
 endfunction
-function sa___prototype47_Log___BJDebugMsgHook takes nothing returns boolean
+function sa___prototype46_Log__QuestMessageBJHook takes nothing returns boolean
+    call Log__QuestMessageBJHook(f__arg_force1,f__arg_integer1,f__arg_string1)
+    return true
+endfunction
+function sa___prototype47_Log__BJDebugMsgHook takes nothing returns boolean
  local string msg=f__arg_string1
 
-    set Log___tmpMessage=msg
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+    set Log__tmpMessage=msg
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
     return true
 endfunction
-function sa___prototype48_Log___BlzDisplayChatMessageHook takes nothing returns boolean
+function sa___prototype48_Log__BlzDisplayChatMessageHook takes nothing returns boolean
  local player whichPlayer=f__arg_player1
  local integer recipient=f__arg_integer1
  local string message=f__arg_string1
 
-    set Log___tmpMessage=Log___GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+    set Log__tmpMessage=Log__GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
     return true
 endfunction
-function sa___prototype49_Log___TransmissionFromUnitWithNameBJHook takes nothing returns boolean
-    call Log___TransmissionFromUnitWithNameBJHook(f__arg_force1,f__arg_unit1,f__arg_string1,f__arg_sound1,f__arg_string2,f__arg_integer1,f__arg_real1,f__arg_boolean1)
+function sa___prototype49_Log__TransmissionFromUnitWithNameBJHook takes nothing returns boolean
+    call Log__TransmissionFromUnitWithNameBJHook(f__arg_force1,f__arg_unit1,f__arg_string1,f__arg_sound1,f__arg_string2,f__arg_integer1,f__arg_real1,f__arg_boolean1)
     return true
 endfunction
-function sa___prototype50_Log___TransmissionFromUnitTypeWithNameBJHook takes nothing returns boolean
-    call Log___TransmissionFromUnitTypeWithNameBJHook(f__arg_force1,f__arg_player1,f__arg_integer1,f__arg_string1,f__arg_location1,f__arg_sound1,f__arg_string2,f__arg_integer2,f__arg_real1,f__arg_boolean1)
+function sa___prototype50_Log__TransmissionFromUnitTypeWithNameBJHook takes nothing returns boolean
+    call Log__TransmissionFromUnitTypeWithNameBJHook(f__arg_force1,f__arg_player1,f__arg_integer1,f__arg_string1,f__arg_location1,f__arg_sound1,f__arg_string2,f__arg_integer2,f__arg_real1,f__arg_boolean1)
     return true
 endfunction
-function sa___prototype51_Log___SetCinematicSceneHook takes nothing returns boolean
+function sa___prototype51_Log__SetCinematicSceneHook takes nothing returns boolean
  local integer portraitUnitId=f__arg_integer1
  local playercolor color=f__arg_playercolor1
  local string speakerTitle=f__arg_string1
@@ -1840,54 +1832,54 @@ function sa___prototype51_Log___SetCinematicSceneHook takes nothing returns bool
  local real sceneDuration=f__arg_real1
  local real voiceoverDuration=f__arg_real2
 
-    set Log___tmpMessage=" "
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
-    set Log___tmpMessage="|cffffcc00" + speakerTitle + ":|r " + GetLocalizedMessage(text)
-    call ForForce(GetPlayersAll(), function Log___ForForceAddLog)
+    set Log__tmpMessage=" "
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
+    set Log__tmpMessage="|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text)
+    call ForForce(GetPlayersAll(), function Log__ForForceAddLog)
     return true
 endfunction
-function sa___prototype52_Log___SetCinematicSceneBJHook takes nothing returns boolean
-    call Log___SetCinematicSceneBJHook(f__arg_sound1,f__arg_integer1,f__arg_playercolor1,f__arg_string1,f__arg_string2,f__arg_real1,f__arg_real2)
+function sa___prototype52_Log__SetCinematicSceneBJHook takes nothing returns boolean
+    call Log__SetCinematicSceneBJHook(f__arg_sound1,f__arg_integer1,f__arg_playercolor1,f__arg_string1,f__arg_string2,f__arg_real1,f__arg_real2)
     return true
 endfunction
 
-function jasshelper__initstructs5240640 takes nothing returns nothing
+function jasshelper__initstructs6659031 takes nothing returns nothing
     set st___prototype42[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype42[1],function sa___prototype42_Log___DisplayTextToPlayerHook)
-    call TriggerAddCondition(st___prototype42[1],Condition(function sa___prototype42_Log___DisplayTextToPlayerHook))
+    call TriggerAddAction(st___prototype42[1],function sa___prototype42_Log__DisplayTextToPlayerHook)
+    call TriggerAddCondition(st___prototype42[1],Condition(function sa___prototype42_Log__DisplayTextToPlayerHook))
     set st___prototype43[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype43[1],function sa___prototype43_Log___DisplayTimedTextToPlayerHook)
-    call TriggerAddCondition(st___prototype43[1],Condition(function sa___prototype43_Log___DisplayTimedTextToPlayerHook))
+    call TriggerAddAction(st___prototype43[1],function sa___prototype43_Log__DisplayTimedTextToPlayerHook)
+    call TriggerAddCondition(st___prototype43[1],Condition(function sa___prototype43_Log__DisplayTimedTextToPlayerHook))
     set st___prototype43[2]=CreateTrigger()
-    call TriggerAddAction(st___prototype43[2],function sa___prototype43_Log___DisplayTimedTextFromPlayerHook)
-    call TriggerAddCondition(st___prototype43[2],Condition(function sa___prototype43_Log___DisplayTimedTextFromPlayerHook))
+    call TriggerAddAction(st___prototype43[2],function sa___prototype43_Log__DisplayTimedTextFromPlayerHook)
+    call TriggerAddCondition(st___prototype43[2],Condition(function sa___prototype43_Log__DisplayTimedTextFromPlayerHook))
     set st___prototype44[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype44[1],function sa___prototype44_Log___DisplayTextToForceHook)
-    call TriggerAddCondition(st___prototype44[1],Condition(function sa___prototype44_Log___DisplayTextToForceHook))
+    call TriggerAddAction(st___prototype44[1],function sa___prototype44_Log__DisplayTextToForceHook)
+    call TriggerAddCondition(st___prototype44[1],Condition(function sa___prototype44_Log__DisplayTextToForceHook))
     set st___prototype45[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype45[1],function sa___prototype45_Log___DisplayTimedTextToForceHook)
-    call TriggerAddCondition(st___prototype45[1],Condition(function sa___prototype45_Log___DisplayTimedTextToForceHook))
+    call TriggerAddAction(st___prototype45[1],function sa___prototype45_Log__DisplayTimedTextToForceHook)
+    call TriggerAddCondition(st___prototype45[1],Condition(function sa___prototype45_Log__DisplayTimedTextToForceHook))
     set st___prototype46[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype46[1],function sa___prototype46_Log___QuestMessageBJHook)
-    call TriggerAddCondition(st___prototype46[1],Condition(function sa___prototype46_Log___QuestMessageBJHook))
+    call TriggerAddAction(st___prototype46[1],function sa___prototype46_Log__QuestMessageBJHook)
+    call TriggerAddCondition(st___prototype46[1],Condition(function sa___prototype46_Log__QuestMessageBJHook))
     set st___prototype47[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype47[1],function sa___prototype47_Log___BJDebugMsgHook)
-    call TriggerAddCondition(st___prototype47[1],Condition(function sa___prototype47_Log___BJDebugMsgHook))
+    call TriggerAddAction(st___prototype47[1],function sa___prototype47_Log__BJDebugMsgHook)
+    call TriggerAddCondition(st___prototype47[1],Condition(function sa___prototype47_Log__BJDebugMsgHook))
     set st___prototype48[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype48[1],function sa___prototype48_Log___BlzDisplayChatMessageHook)
-    call TriggerAddCondition(st___prototype48[1],Condition(function sa___prototype48_Log___BlzDisplayChatMessageHook))
+    call TriggerAddAction(st___prototype48[1],function sa___prototype48_Log__BlzDisplayChatMessageHook)
+    call TriggerAddCondition(st___prototype48[1],Condition(function sa___prototype48_Log__BlzDisplayChatMessageHook))
     set st___prototype49[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype49[1],function sa___prototype49_Log___TransmissionFromUnitWithNameBJHook)
-    call TriggerAddCondition(st___prototype49[1],Condition(function sa___prototype49_Log___TransmissionFromUnitWithNameBJHook))
+    call TriggerAddAction(st___prototype49[1],function sa___prototype49_Log__TransmissionFromUnitWithNameBJHook)
+    call TriggerAddCondition(st___prototype49[1],Condition(function sa___prototype49_Log__TransmissionFromUnitWithNameBJHook))
     set st___prototype50[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype50[1],function sa___prototype50_Log___TransmissionFromUnitTypeWithNameBJHook)
-    call TriggerAddCondition(st___prototype50[1],Condition(function sa___prototype50_Log___TransmissionFromUnitTypeWithNameBJHook))
+    call TriggerAddAction(st___prototype50[1],function sa___prototype50_Log__TransmissionFromUnitTypeWithNameBJHook)
+    call TriggerAddCondition(st___prototype50[1],Condition(function sa___prototype50_Log__TransmissionFromUnitTypeWithNameBJHook))
     set st___prototype51[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype51[1],function sa___prototype51_Log___SetCinematicSceneHook)
-    call TriggerAddCondition(st___prototype51[1],Condition(function sa___prototype51_Log___SetCinematicSceneHook))
+    call TriggerAddAction(st___prototype51[1],function sa___prototype51_Log__SetCinematicSceneHook)
+    call TriggerAddCondition(st___prototype51[1],Condition(function sa___prototype51_Log__SetCinematicSceneHook))
     set st___prototype52[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype52[1],function sa___prototype52_Log___SetCinematicSceneBJHook)
-    call TriggerAddCondition(st___prototype52[1],Condition(function sa___prototype52_Log___SetCinematicSceneBJHook))
+    call TriggerAddAction(st___prototype52[1],function sa___prototype52_Log__SetCinematicSceneBJHook)
+    call TriggerAddCondition(st___prototype52[1],Condition(function sa___prototype52_Log__SetCinematicSceneBJHook))
 
 endfunction
 
