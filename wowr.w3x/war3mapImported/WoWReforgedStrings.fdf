@@ -203,7 +203,6 @@ StringList {
     CUSTOMIZABLE                       "Customizable",
     NAVY                               "Navy",
     VOID_LORDS                         "Void Lords",
-    NAARU                              "Naaru",
     DEMIGODS                           "Demigods",
     // Heroes
     HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
@@ -232,6 +231,7 @@ StringList {
     ELITE_RIFLEMAN                     "Elite Rifleman",
     SIEGE_ENGINE                       "Siege Engine",
     BARD                               "Bard",
+    MURADIN_BRONZEBEARD                "Muradin Bronzebeard",
     GRYPHON_RIDER                      "Gryphon Rider",
     BLOOD_MAGE                         "Blood Mage",
     SPELLBREAKER                       "Spellbreaker",
@@ -335,6 +335,7 @@ StringList {
     ELDER_SAGE                         "Elder Sage",
     VINDICATOR                         "Vindicator",
     VELEN                              "Velen",
+    NAARU                              "Naaru",
     FURBOLG_URSA_WARROR                "Furbolg Ursa Warrior",
     ARCHMAGE                           "Archmage",
     ARCH_SORCERESS                     "Arch Sorceress",
