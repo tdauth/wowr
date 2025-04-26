@@ -2871,8 +2871,6 @@ globals
     constant integer MARKETPLACE                                     = 'nmrk'
     constant integer CRAFTING_STASH_NEUTRAL                          = 'h0J2'
     constant integer PORTAL_NEUTRAL                                  = 'nwgt'
-    constant integer PORTAL_NEUTRAL_2                                = 'n01G'
-    constant integer PORTAL_NEUTRAL_FREELANCER                       = 'n03A'
     constant integer PORTAL_NEUTRAL_WATER                            = 'n04A'
     constant integer ARMORY_NEUTRAL                                  = 'n0IU'
     constant integer LEVEL_PORTAL                                    = 'h0QO'
