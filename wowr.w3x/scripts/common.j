@@ -5256,13 +5256,14 @@ globals
     constant integer EREDAR_SHOP                                     = 'h0UC'
     constant integer EREDAR_WORKSHOP                                 = 'o08C'
     constant integer EREDAR_PYLON                                    = 'o08B' // farm
+    constant integer EREDAR_STABLES                                  = 'h01D' // aviary
     constant integer EREDAR_EXODAR                                   = 'o08N' // special building
 
     constant integer UPG_EREDAR_BACKPACK                             = 'R0G3'
     constant integer UPG_EREDAR_DEFEND                               = 'R0G4'
     constant integer UPG_EREDAR_ARKONITE_DEFENSE                     = 'R0G7' // masonry
     constant integer UPG_EREDAR_SORCERESS                            = 'R00E'
-    constant integer UPG_EREDAR_EXODAR                               = 'R0G5'
+    constant integer UPG_EREDAR_EXODAR                               = 'R0G5' // special building
 
     constant integer EREDAR_ARTIFICER                                = 'n0IN' // worker
     constant integer EREDAR_PEACEKEEPER                              = 'h0U9' // footman

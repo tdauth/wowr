@@ -1489,3 +1489,4 @@ Here is a list of some modified versions online:
 * Retera: [Turtle Hatchery](https://www.hiveworkshop.com/threads/turtle-hatchery.302771/)
 * Hermit, Lord_T, Zerox: [Tidal Wyrm (Tidal Guardian)](https://www.hiveworkshop.com/threads/tidal-wyrm-tidal-guardian.313251/)
 * MassiveMaster: [Siege Ladder](https://www.hiveworkshop.com/threads/siege-ladder.217560/)
+* bakr, Manastorm: [Draenei Buildings](https://www.hiveworkshop.com/threads/draenei-buildings.359663/)
