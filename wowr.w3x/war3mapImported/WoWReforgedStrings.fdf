@@ -1146,7 +1146,7 @@ StringList {
     TREMBLE_MORTALS_AND_DESPAIR        "Tremble mortals and despair, doom has come to this world!",
     // Hero Journey
     HERO_JOURNEY_5                     "5: Abilities available on Theramore.",
-    HERO_JOURNEY_10                    "10: -.",
+    HERO_JOURNEY_10                    "10: -",
     HERO_JOURNEY_15                    "15: One Equipment Bag.",
     HERO_JOURNEY_20                    "20: Mount.",
     HERO_JOURNEY_25                    "25: Second profession.",
