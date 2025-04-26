@@ -5251,7 +5251,10 @@ globals
     constant integer EREDAR_ARGUNITE_MILL                            = 'h0UK' // lumber mill
     constant integer EREDAR_FORGE                                    = 'h0U6' // forge
     constant integer EREDAR_MANARI_CRYSTAL                           = 'h0U7' // sanctuary
-    constant integer EREDAR_SPIRE                                    = 'h0U5' // watch tower
+    constant integer EREDAR_SPIRE                                    = 'h0U5' // scout tower
+    constant integer EREDAR_ARCANE_SPIRE                             = 'h01E' // arcane tower
+    constant integer EREDAR_GUARD_SPIRE                              = 'h01F' // guard tower
+    constant integer EREDAR_SIEGE_SPIRE                              = 'h01G' // cannon tower
     constant integer EREDAR_ALTAR                                    = 'h0UD'
     constant integer EREDAR_SHOP                                     = 'h0UC'
     constant integer EREDAR_WORKSHOP                                 = 'o08C'

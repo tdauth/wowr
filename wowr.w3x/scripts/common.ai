@@ -1043,6 +1043,9 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == FEL_ORC_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(FEL_ORC_TIER_3,false,townid)
 
+     elseif unitid == EREDAR_SPIRE then
+        set have_qty = have_qty + GetUnitCountEx(EREDAR_ARCANE_SPIRE,false,townid) + GetUnitCountEx(EREDAR_GUARD_SPIRE,false,townid) + GetUnitCountEx(EREDAR_SIEGE_SPIRE,false,townid)
+
     elseif unitid == FACELESS_ONE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(FACELESS_ONE_TIER_2,false,townid) + GetUnitCountEx(FACELESS_ONE_TIER_3,false,townid)
     elseif unitid == FACELESS_ONE_TIER_2 then

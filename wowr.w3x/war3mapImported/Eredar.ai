@@ -26,7 +26,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, EREDAR_MANARI_CRYSTAL)
         call SetBuildUnit(1, EREDAR_WORKSHOP)
         call SetBuildUnit(1, EREDAR_STABLES)
-        call SetBuildUnit(2, EREDAR_SPIRE)
+        call SetBuildUnit(4, EREDAR_SPIRE) // scout, guard, arcane and siege tower
         call SetBuildUnit(citizens_female, EREDAR_CITIZEN_FEMALE)
         call SetBuildUnit(children, EREDAR_CHILD)
         call SetBuildUnit(pets, EREDAR_PET)
@@ -47,8 +47,9 @@ function BuildingStrategy takes nothing returns nothing
 
         // Tier 3 buildings
         call SetBuildUnit(1, EREDAR_TIER_3)
-        call SetBuildUnit(2, EREDAR_SPIRE)
-        call SetBuildUnit(2, EREDAR_CITIZEN_MALE)
+        call SetBuildUnit(1, EREDAR_ARCANE_SPIRE)
+        call SetBuildUnit(1, EREDAR_GUARD_SPIRE)
+        call SetBuildUnit(1, EREDAR_SIEGE_SPIRE)
 
         //call SetBuildUpgr(3, UPG_OGRE_MELEE)
         //call SetBuildUpgr(3, UPG_OGRE_RANGED)
