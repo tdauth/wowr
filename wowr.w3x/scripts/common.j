@@ -5923,6 +5923,7 @@ globals
     constant integer DRYAD_HERO                                      = 'E02C'
     constant integer WISP_HERO                                       = 'E01I'
     constant integer ANCIENT_OF_LORE_HERO                            = 'E02B'
+    constant integer ANCIENT_OF_LORE_HERO_ROOTED                     = 'E00I'
     constant integer FURION                                          = 'E000'
     constant integer MALFURION                                       = 'Emns'
     constant integer ILLIDAN_HERO                                    = 'E010'

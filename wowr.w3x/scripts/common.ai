@@ -832,6 +832,9 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == ILLIDAN then
         set have_qty = have_qty + GetUnitCountEx(ILLIDAN_DEMON,false,townid)
+
+    elseif unitid == ANCIENT_OF_LORE_HERO then
+        set have_qty = have_qty + GetUnitCountEx(ANCIENT_OF_LORE_HERO_ROOTED,false,townid)
         
     // World of Warcraft Reforged
 

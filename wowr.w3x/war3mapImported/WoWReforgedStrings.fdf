@@ -1165,7 +1165,6 @@ StringList {
     HERO_JOURNEY_VIP                   "Donating/Reporting bugs: VIP.",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Adding ability %1%.",
-    ONLY_AVAILABLE_ANCIENT_S_HEROES    "Only available for Ancient structure heroes.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Only available for reskillable heroes.",
     ONLY_AVAILABLE_VIP_PLAYERS         "Only available for VIP players.",
     REQUIRES_HERO_LEVEL_OR_VIP         "Requires hero level %1% or VIP or everything unlocked.",
