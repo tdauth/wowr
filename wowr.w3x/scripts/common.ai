@@ -3099,6 +3099,14 @@ function GetPlayerInfoText takes nothing returns string
     endif
 
     set msg = msg + ", "
+
+    if (attacks_disabled) then
+        set msg = msg + "don't attack"
+    else
+        set msg = msg + "attack"
+    endif
+
+    set msg = msg + ", "
     
     if (attack_enemy_players) then
         set msg = msg + "attack players"
@@ -3159,10 +3167,10 @@ function UpdateWorkers takes nothing returns nothing
                 set attack_enemy_players = false
                 call NotifyOtherPlayers("I won't attack enemy players anymore!")
             elseif (c == COMMAND_ATTACK_ON) then
-                set attacks_disabled = true
+                set attacks_disabled = false
                 call NotifyOtherPlayers("I will attack from now on!")
             elseif (c == COMMAND_ATTACK_OFF) then
-                set attacks_disabled = false
+                set attacks_disabled = true
                 call NotifyOtherPlayers("I won't attack anymore!")
             elseif (c == COMMAND_GIVE_GOLD) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
