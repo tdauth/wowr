@@ -6121,6 +6121,8 @@ globals
     constant integer COMMAND_TRACE_ON                                = 20
     constant integer COMMAND_TRACE_OFF                               = 21
     constant integer COMMAND_SHREDDERS                               = 22
+    constant integer COMMAND_ATTACK_ON                               = 23
+    constant integer COMMAND_ATTACK_OFF                              = 24
 endglobals
 
 //============================================================================

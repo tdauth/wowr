@@ -219,7 +219,9 @@ globals
     integer housingTypesCounter = 0
 
     // AI command options
-    boolean attackEnemyPlayers = true
+    boolean disabled = false
+    boolean attacks_disabled = true
+    boolean attack_enemy_players = true
     boolean buildShips = false
     integer shipyards = 0
     integer ships_transport = 0
@@ -227,7 +229,6 @@ globals
     integer ships_battleship = 0
     integer ships_special1 = 0
     integer ships_special2 = 0
-    boolean disabled = false
     integer expansions = 0
     boolean attackTargetLocation = false
     integer attackTargetLocationX = 0
@@ -2978,14 +2979,19 @@ function LaunchAttack takes nothing returns nothing
     local unit target = null
     local boolean setAlly = true
 
+    if (disabled) then
+        call Trace("Launch attack cancel since the whole AI is disabled\n")
+        return
+    endif
+
+    if (attacks_disabled) then
+        call Trace("Launch attack cancel since attacks are disabled\n")
+        return
+    endif
+
     call TraceI("Launch attack %d\n", attack_wave)
 
     set attack_wave = attack_wave + 1
-
-    if (disabled) then
-        call Trace("Launch attack cancel since disabled\n")
-        return
-    endif
 
     // Don't launch any attack while town is threatened
     if (TownThreatened()) then
@@ -2997,7 +3003,7 @@ function LaunchAttack takes nothing returns nothing
     if (attackTargetLocation) then
         call TraceII("Launch attack (%d|%d)\n", attackTargetLocationX, attackTargetLocationY)
         call AttackMoveXYA(attackTargetLocationX, attackTargetLocationY)
-    elseif (attackEnemyPlayers) then
+    elseif (attack_enemy_players) then
         call Trace("Launch attack enemy player\n")
         // Target Priority #1
         if (target == null) then
@@ -3094,7 +3100,7 @@ function GetPlayerInfoText takes nothing returns string
 
     set msg = msg + ", "
     
-    if (attackEnemyPlayers) then
+    if (attack_enemy_players) then
         set msg = msg + "attack players"
     else
         set msg = msg + "don't attack players"
@@ -3147,11 +3153,17 @@ function UpdateWorkers takes nothing returns nothing
             exitwhen (CommandsWaiting() <= 0)
             set c = GetLastCommand()
             if (c == COMMAND_ATTACK_PLAYERS_ON) then
-                set attackEnemyPlayers = true
+                set attack_enemy_players = true
                 call NotifyOtherPlayers("I will attack enemy players from now on!")
             elseif (c == COMMAND_ATTACK_PLAYERS_OFF) then
-                set attackEnemyPlayers = false
+                set attack_enemy_players = false
                 call NotifyOtherPlayers("I won't attack enemy players anymore!")
+            elseif (c == COMMAND_ATTACK_ON) then
+                set attacks_disabled = true
+                call NotifyOtherPlayers("I will attack from now on!")
+            elseif (c == COMMAND_ATTACK_OFF) then
+                set attacks_disabled = false
+                call NotifyOtherPlayers("I won't attack anymore!")
             elseif (c == COMMAND_GIVE_GOLD) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
@@ -3262,7 +3274,7 @@ function ConfigureAI takes nothing returns nothing
     call SetDefendPlayer(true)
     call SetReplacements(1, 2, 3)
     
-    set attackEnemyPlayers = difficulty == MELEE_INSANE
+    set attack_enemy_players = difficulty == MELEE_INSANE
     set buildShips = false
     set disabled = false
 endfunction
