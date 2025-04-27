@@ -989,6 +989,7 @@ StringList {
     NEWS_LINE_12                       "- Spielmodi entfernt, was alle Speicher-Codes ungültig macht.",
     NEWS_LINE_13                       "- Mehrere 75-Stufen-Forschungen wurden mit Evolution zusammengeführt.",
     NEWS_LINE_14                       "- Einige Quests haben nun Videosequenzen.",
+    NEWS_LINE_15                       "- KI-Angriffe deaktiviert, um Abstürze zu verhindern.",
     // Save Codes UI
     UPDATE_YELLOW                      "|cffFCD20DAktualisieren|r",
     LOAD_YELLOW                        "|cffFCD20DLaden|r",

@@ -989,6 +989,7 @@ StringList {
     NEWS_LINE_12                       "- Removed game types which makes old save codes invalid.",
     NEWS_LINE_13                       "- Multiple 75 level researches have been merged into Evolution.",
     NEWS_LINE_14                       "- Some Quests have cinematic sequences now.",
+    NEWS_LINE_15                       "- Disable AI attacks to prevent crashes.",
     // Save Codes UI
     UPDATE_YELLOW                      "|cffFCD20DUpdate|r",
     LOAD_YELLOW                        "|cffFCD20DLoad|r",
