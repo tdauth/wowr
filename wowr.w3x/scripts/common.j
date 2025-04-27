@@ -2739,7 +2739,7 @@ globals
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
     constant integer PLAYER_RESCUABLE                                = 21
-    constant integer PLAYER_BOSSES                                   = 23
+    constant integer PLAYER_BOSSES                                   = 22
     constant integer PLAYER_THE_BURNING_LEGION                       = 24
 
     constant real UI_FULLSCREEN_X                                    = 0.0
