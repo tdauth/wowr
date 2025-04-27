@@ -13,7 +13,8 @@ REM set replayf=%replay%\\aaaaaa.w3g
 REM set replay="..\\replays\\warchasers"
 REM set replayf=%replay%\\warchasers.w3g
 set replay="..\\replays\\wowr"
-set replayf=%replay%\\WoWReforged4.0Short.w3g
+REM set replayf=%replay%\\WoWReforged4.0Short.w3g
+set replayf=%replay%\\WoWReforged4.0ShortNoMouseUtils.w3g
 node replayanalyser_high_level.ts %replayf% >%replay%/replay_high_level.json
 node replayanalyser_low_level.ts %replayf% >%replay%/replay_low_level.json
 pause
