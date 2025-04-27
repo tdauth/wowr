@@ -6,8 +6,12 @@ REM set replay=".\\replays\\desync\\2025-04-05 20.47.52 899b4664\\TempReplay.w3g
 REM set replay=".\\replays\\desync\\2025-03-31 01.07.01 d1898034\\TempReplay.w3g"
 REM set replay=".\\replays\\desync\\2025-03-30 17.14.46 5c0a162c\\TempReplay.w3g"
 REM set replay=".\\replays\\desync\\2025-03-30 23.50.52 03a7ce94\\TempReplay.w3g"
-set replay="..\\replays\\desync\\2025-04-20 00.39.19 a56936b8"
-set replayf=%replay%\\TempReplay.w3g
+REM set replay="..\\replays\\desync\\2025-04-27 16.20.09 62cc5948"
+REM set replayf=%replay%\\TempReplay.w3g
+REM set replay="..\\replays\\melee\\aaaaaa"
+REM set replayf=%replay%\\aaaaaa.w3g
+set replay="..\\replays\\warchasers"
+set replayf=%replay%\\warchasers.w3g
 node replayanalyser_high_level.ts %replayf% >%replay%/replay_high_level.json
 node replayanalyser_low_level.ts %replayf% >%replay%/replay_low_level.json
 pause
