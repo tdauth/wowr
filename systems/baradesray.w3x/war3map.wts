@@ -1,0 +1,1333 @@
+﻿STRING 1
+{
+Baradé's Ray 1.0
+}
+
+STRING 2
+{
+1-2
+}
+
+STRING 3
+{
+Baradé
+}
+
+STRING 4
+{
+Player 1
+}
+
+STRING 5
+{
+Force 1
+}
+
+STRING 10
+// Abilities: A002 (Holy Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 11
+// Abilities: A002 (Holy Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 12
+// Abilities: A002 (Holy Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 15
+// Abilities: A002 (Holy Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 16
+{
+Player 2
+}
+
+STRING 27
+// Abilities: A003 (Harvest Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 28
+// Abilities: A003 (Harvest Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 29
+// Abilities: A003 (Harvest Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 31
+// Abilities: A001 (Fire Ray ), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 32
+// Abilities: A003 (Harvest Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 33
+// Abilities: A001 (Fire Ray ), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 34
+// Abilities: A000 (Frost Ray), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 35
+// Abilities: A000 (Frost Ray), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 36
+// Abilities: A002 (Holy Ray), Name (Name)
+{
+Holy Ray
+}
+
+STRING 37
+// Abilities: A002 (Holy Ray), Tip (Tooltip - Normal)
+{
+Holy Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 38
+// Abilities: A002 (Holy Ray), Tip (Tooltip - Normal)
+{
+Holy Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 39
+// Abilities: A002 (Holy Ray), Tip (Tooltip - Normal)
+{
+Holy Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 40
+// Abilities: A004 (Loot Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 41
+// Abilities: A004 (Loot Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 42
+// Abilities: A004 (Loot Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 43
+// Abilities: A002 (Holy Ray), Researchtip (Tooltip - Learn)
+{
+Learn Holy Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 44
+// Abilities: A002 (Holy Ray), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 45
+// Abilities: A005 (Water Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 46
+// Abilities: A002 (Holy Ray), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 51
+// Abilities: A005 (Water Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 52
+// Abilities: A005 (Water Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 53
+// Abilities: A005 (Water Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 55
+// Abilities: A003 (Harvest Ray), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 56
+// Abilities: A006 (Drain Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 57
+// Abilities: A003 (Harvest Ray), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 58
+// Abilities: A004 (Loot Ray), Name (Name)
+{
+Loot Ray
+}
+
+STRING 60
+// Abilities: A004 (Loot Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 61
+// Abilities: A004 (Loot Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 62
+// Abilities: A006 (Drain Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 63
+// Abilities: A006 (Drain Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 64
+// Abilities: A009 (Mana Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 65
+// Abilities: A004 (Loot Ray), Researchtip (Tooltip - Learn)
+{
+Learn Loot Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 66
+// Abilities: A004 (Loot Ray), Researchhotkey (Hotkey - Learn)
+{
+L
+}
+
+STRING 67
+// Abilities: A009 (Mana Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 68
+// Abilities: A004 (Loot Ray), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 69
+// Abilities: A004 (Loot Ray), Tip (Tooltip - Normal)
+{
+Loot Ray
+}
+
+STRING 70
+// Abilities: A005 (Water Ray), Name (Name)
+{
+Water Ray
+}
+
+STRING 71
+// Abilities: A005 (Water Ray), Tip (Tooltip - Normal)
+{
+Water Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 72
+// Abilities: A005 (Water Ray), Tip (Tooltip - Normal)
+{
+Water Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 73
+// Abilities: A005 (Water Ray), Tip (Tooltip - Normal)
+{
+Water Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 74
+// Abilities: A009 (Mana Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 75
+// Abilities: A009 (Mana Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 76
+// Abilities: A00A (Raise Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 77
+// Abilities: A005 (Water Ray), Researchtip (Tooltip - Learn)
+{
+Learn Water Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 79
+// Abilities: A00A (Raise Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 81
+// Abilities: A005 (Water Ray), Researchhotkey (Hotkey - Learn)
+{
+X
+}
+
+STRING 82
+// Abilities: A005 (Water Ray), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 83
+// Units: Hblm (Sorceress), Name (Name)
+{
+Sorceress
+}
+
+STRING 84
+// Units: Hblm (Sorceress), Awakentip (Tooltip - Awaken)
+{
+Revive Sorceress
+}
+
+STRING 85
+// Units: Hblm (Sorceress), Tip (Tooltip - Basic)
+{
+Summon Sorceress
+}
+
+STRING 86
+// Units: Hblm (Sorceress), Revivetip (Tooltip - Revive)
+{
+Revive Sorceress
+}
+
+STRING 87
+// Units: Hblm (Sorceress), Propernames (Proper Names)
+{
+Nara Pathstrider,Anya Eversong,Anthis Sunbow,Clea Deathstrider,Cyndia Hawkspear,Mira Shadewither,Amora Eagleye,Siren Ghostsong,Somand Wayfinder
+}
+
+STRING 88
+// Abilities: A006 (Drain Ray), Name (Name)
+{
+Drain Ray
+}
+
+STRING 89
+// Abilities: A006 (Drain Ray), Tip (Tooltip - Normal)
+{
+Drain Ray
+}
+
+STRING 90
+// Abilities: A006 (Drain Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 91
+// Abilities: A006 (Drain Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 92
+// Abilities: A00A (Raise Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 93
+// Abilities: A00A (Raise Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 94
+// Abilities: A00C (Poison Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 95
+// Abilities: A006 (Drain Ray), Researchtip (Tooltip - Learn)
+{
+Learn Loot Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 96
+// Abilities: A006 (Drain Ray), Researchhotkey (Hotkey - Learn)
+{
+L
+}
+
+STRING 97
+// Abilities: A00C (Poison Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 98
+// Abilities: A006 (Drain Ray), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 99
+// Abilities: A000 (Frost Ray), Name (Name)
+{
+Frost Ray
+}
+
+STRING 100
+// Abilities: A000 (Frost Ray), Tip (Tooltip - Normal)
+{
+Frost Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 101
+// Abilities: A000 (Frost Ray), Tip (Tooltip - Normal)
+{
+Frost Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 102
+// Abilities: A000 (Frost Ray), Tip (Tooltip - Normal)
+{
+Frost Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 103
+// Abilities: A000 (Frost Ray), Researchtip (Tooltip - Learn)
+{
+Learn Frost Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 104
+// Abilities: A001 (Fire Ray ), Name (Name)
+{
+Fire Ray 
+}
+
+STRING 105
+// Abilities: A001 (Fire Ray ), Tip (Tooltip - Normal)
+{
+Fire Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 106
+// Abilities: A001 (Fire Ray ), Tip (Tooltip - Normal)
+{
+Fire Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 107
+// Abilities: A001 (Fire Ray ), Tip (Tooltip - Normal)
+{
+Fire Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 108
+// Abilities: A001 (Fire Ray ), Researchtip (Tooltip - Learn)
+{
+Learn Fire Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 109
+// Abilities: A003 (Harvest Ray), Name (Name)
+{
+Harvest Ray
+}
+
+STRING 110
+// Abilities: A003 (Harvest Ray), Tip (Tooltip - Normal)
+{
+Harvest Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 111
+// Abilities: A003 (Harvest Ray), Tip (Tooltip - Normal)
+{
+Harvest Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 112
+// Abilities: A003 (Harvest Ray), Tip (Tooltip - Normal)
+{
+Harvest Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 113
+// Abilities: A003 (Harvest Ray), Researchtip (Tooltip - Learn)
+{
+Learn Harvest Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 118
+// Abilities: A00C (Poison Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 119
+// Abilities: A00C (Poison Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 120
+// Abilities: A00D (Resurrection Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 122
+// Abilities: A007 (Frost and Fire Ray), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 123
+// Abilities: A00D (Resurrection Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 124
+// Abilities: A007 (Frost and Fire Ray), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 129
+// Abilities: A008 (Chain Ray), Name (Name)
+{
+Chain Ray
+}
+
+STRING 130
+// Abilities: A008 (Chain Ray), Tip (Tooltip - Normal)
+{
+Chain Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 131
+// Abilities: A008 (Chain Ray), Tip (Tooltip - Normal)
+{
+Chain Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 132
+// Abilities: A008 (Chain Ray), Tip (Tooltip - Normal)
+{
+Chain Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 133
+// Abilities: A00D (Resurrection Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 134
+// Abilities: A00E (Wind Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 135
+// Abilities: A00E (Wind Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 136
+// Abilities: A008 (Chain Ray), Researchtip (Tooltip - Learn)
+{
+Learn Chain Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 137
+// Abilities: A008 (Chain Ray), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 138
+// Abilities: A00E (Wind Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 139
+// Abilities: A008 (Chain Ray), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 140
+// Abilities: A009 (Mana Ray), Name (Name)
+{
+Mana Ray
+}
+
+STRING 141
+// Abilities: A009 (Mana Ray), Tip (Tooltip - Normal)
+{
+Mana Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 142
+// Abilities: A009 (Mana Ray), Tip (Tooltip - Normal)
+{
+Mana Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 143
+// Abilities: A009 (Mana Ray), Tip (Tooltip - Normal)
+{
+Mana Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 144
+// Abilities: A00E (Wind Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 145
+// Abilities: A00J (Hex Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 146
+// Abilities: A00J (Hex Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 147
+// Abilities: A009 (Mana Ray), Researchtip (Tooltip - Learn)
+{
+Learn Mana Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 148
+// Abilities: A009 (Mana Ray), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 149
+// Abilities: A00J (Hex Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 150
+// Abilities: A009 (Mana Ray), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 151
+// Abilities: A00A (Raise Ray), Name (Name)
+{
+Raise Ray
+}
+
+STRING 152
+// Abilities: A00A (Raise Ray), Tip (Tooltip - Normal)
+{
+Raise Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 153
+// Abilities: A00A (Raise Ray), Tip (Tooltip - Normal)
+{
+Raise Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 154
+// Abilities: A00A (Raise Ray), Tip (Tooltip - Normal)
+{
+Raise Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 155
+// Abilities: A00J (Hex Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 156
+// Abilities: A00N (Neutralization Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 157
+// Abilities: A00N (Neutralization Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 158
+// Abilities: A00A (Raise Ray), Researchtip (Tooltip - Learn)
+{
+Learn Raise Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 159
+// Abilities: A00A (Raise Ray), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 160
+// Abilities: A00N (Neutralization Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. They ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 161
+// Abilities: A00A (Raise Ray), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 162
+// Abilities: A00D (Resurrection Ray), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 166
+// Abilities: A00C (Poison Ray), Name (Name)
+{
+Poison Ray
+}
+
+STRING 167
+// Abilities: A00C (Poison Ray), Tip (Tooltip - Normal)
+{
+Poison Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 168
+// Abilities: A00C (Poison Ray), Tip (Tooltip - Normal)
+{
+Poison Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 169
+// Abilities: A00C (Poison Ray), Tip (Tooltip - Normal)
+{
+Poison Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 173
+// Abilities: A00C (Poison Ray), Researchtip (Tooltip - Learn)
+{
+Learn Poison Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 177
+// Abilities: A00C (Poison Ray), Researchhotkey (Hotkey - Learn)
+{
+X
+}
+
+STRING 178
+// Abilities: A00C (Poison Ray), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 179
+// Abilities: A00D (Resurrection Ray), Name (Name)
+{
+Resurrection Ray
+}
+
+STRING 180
+// Abilities: A00D (Resurrection Ray), Tip (Tooltip - Normal)
+{
+Resurrection Ray
+}
+
+STRING 181
+// Abilities: A00D (Resurrection Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 182
+// Abilities: A00D (Resurrection Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 186
+// Abilities: A00D (Resurrection Ray), Researchtip (Tooltip - Learn)
+{
+Learn Loot Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 187
+// Abilities: A00D (Resurrection Ray), Researchhotkey (Hotkey - Learn)
+{
+L
+}
+
+STRING 190
+// Units: h000 (Resurrection Ray Dummy), Name (Name)
+{
+Resurrection Ray Dummy
+}
+
+STRING 194
+// Units: h001 (Frost Ray Dummy), Name (Name)
+{
+Frost Ray Dummy
+}
+
+STRING 195
+// Units: h002 (Fire Ray Dummy), Name (Name)
+{
+Fire Ray Dummy
+}
+
+STRING 196
+// Buffs/Effects: Bfre (Freeze), Bufftip (Tooltip)
+{
+Freeze
+}
+
+STRING 197
+// Buffs/Effects: Bfre (Freeze), Buffubertip (Tooltip - Extended)
+{
+Frozen.
+}
+
+STRING 198
+// Units: h003 (Wind Ray Dummy), Name (Name)
+{
+Wind Ray Dummy
+}
+
+STRING 199
+// Units: H004 (Hydromancer), Name (Name)
+{
+Hydromancer
+}
+
+STRING 200
+// Units: H004 (Hydromancer), Awakentip (Tooltip - Awaken)
+{
+Revive Hydromancer
+}
+
+STRING 201
+// Units: H004 (Hydromancer), Revivetip (Tooltip - Revive)
+{
+Revive Hydromancer
+}
+
+STRING 202
+// Units: H004 (Hydromancer), Tip (Tooltip - Basic)
+{
+Summon Hydromancer
+}
+
+STRING 203
+// Abilities: A00B (Item Liquid Fire), EditorSuffix (Editor Suffix)
+{
+(Fire Ray)
+}
+
+STRING 204
+// Abilities: A00E (Wind Ray), Name (Name)
+{
+Wind Ray
+}
+
+STRING 205
+// Abilities: A00E (Wind Ray), Tip (Tooltip - Normal)
+{
+Wind Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 206
+// Abilities: A00E (Wind Ray), Tip (Tooltip - Normal)
+{
+Wind Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 207
+// Abilities: A00E (Wind Ray), Tip (Tooltip - Normal)
+{
+Wind Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 208
+// Abilities: A00E (Wind Ray), Researchtip (Tooltip - Learn)
+{
+Learn Wind Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 212
+// Abilities: A00F (Item Resurrection), EditorSuffix (Editor Suffix)
+{
+(cooldown) (Resurrection Ray)
+}
+
+STRING 213
+// Abilities: A00B (Item Liquid Fire), Name (Name)
+{
+Item Liquid Fire
+}
+
+STRING 214
+// Abilities: A00G (Item Freeze Damage Bonus), EditorSuffix (Editor Suffix)
+{
+(Frost Ray)
+}
+
+STRING 215
+// Buffs/Effects: B000 (Freeze), Bufftip (Tooltip)
+{
+Freeze
+}
+
+STRING 216
+// Buffs/Effects: B000 (Freeze), Buffubertip (Tooltip - Extended)
+{
+Frozen.
+}
+
+STRING 217
+// Buffs/Effects: B000 (Freeze), EditorSuffix (Editor Suffix)
+{
+(Frost Ray)
+}
+
+STRING 218
+// Abilities: A007 (Frost and Fire Ray), Name (Name)
+{
+Frost and Fire Ray
+}
+
+STRING 219
+// Abilities: A007 (Frost and Fire Ray), Tip (Tooltip - Normal)
+{
+Frost and Fire Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 220
+// Abilities: A007 (Frost and Fire Ray), Tip (Tooltip - Normal)
+{
+Frost and Fire Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 221
+// Abilities: A007 (Frost and Fire Ray), Tip (Tooltip - Normal)
+{
+Frost and Fire Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 222
+// Abilities: A007 (Frost and Fire Ray), Researchtip (Tooltip - Learn)
+{
+Learn Frost and Fire Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 223
+// Units: h005 (Poison Ray Dummy), Name (Name)
+{
+Poison Ray Dummy
+}
+
+STRING 224
+// Abilities: A00H (Poison Sting), EditorSuffix (Editor Suffix)
+{
+(Poison Ray)
+}
+
+STRING 225
+// Abilities: A00I (Cyclone), EditorSuffix (Editor Suffix)
+{
+(Wind Ray)
+}
+
+STRING 226
+// Units: h006 (Charm Ray Dummy), Name (Name)
+{
+Charm Ray Dummy
+}
+
+STRING 227
+// Units: h007 (Hex Ray Dummy), Name (Name)
+{
+Hex Ray Dummy
+}
+
+STRING 228
+// Abilities: A00J (Hex Ray), Name (Name)
+{
+Hex Ray
+}
+
+STRING 229
+// Abilities: A00J (Hex Ray), Tip (Tooltip - Normal)
+{
+Hex Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 230
+// Abilities: A00J (Hex Ray), Tip (Tooltip - Normal)
+{
+Hex Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 231
+// Abilities: A00J (Hex Ray), Tip (Tooltip - Normal)
+{
+Hex Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 235
+// Abilities: A00J (Hex Ray), Researchtip (Tooltip - Learn)
+{
+Learn Hex Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 236
+// Abilities: A00J (Hex Ray), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 238
+// Abilities: A00J (Hex Ray), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 239
+// Abilities: A00K (Charm Ray), Name (Name)
+{
+Charm Ray
+}
+
+STRING 240
+// Abilities: A00K (Charm Ray), Tip (Tooltip - Normal)
+{
+Charm Ray - [|cffffcc00Level 1|r]
+}
+
+STRING 241
+// Abilities: A00K (Charm Ray), Tip (Tooltip - Normal)
+{
+Charm Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 242
+// Abilities: A00K (Charm Ray), Tip (Tooltip - Normal)
+{
+Charm Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 246
+// Abilities: A00K (Charm Ray), Researchtip (Tooltip - Learn)
+{
+Learn Charm Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 247
+// Abilities: A00K (Charm Ray), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 249
+// Abilities: A00K (Charm Ray), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 250
+// Abilities: A00L (Charm), EditorSuffix (Editor Suffix)
+{
+(Charm Ray)
+}
+
+STRING 251
+// Abilities: A00M (Hex), EditorSuffix (Editor Suffix)
+{
+(Hex Ray)
+}
+
+STRING 252
+// Abilities: A00N (Neutralization Ray), Name (Name)
+{
+Neutralization Ray
+}
+
+STRING 253
+// Abilities: A00N (Neutralization Ray), Tip (Tooltip - Normal)
+{
+Neutralization Ray
+}
+
+STRING 254
+// Abilities: A00N (Neutralization Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 2|r]
+}
+
+STRING 255
+// Abilities: A00N (Neutralization Ray), Tip (Tooltip - Normal)
+{
+Loot Ray - [|cffffcc00Level 3|r]
+}
+
+STRING 259
+// Abilities: A00N (Neutralization Ray), Researchtip (Tooltip - Learn)
+{
+Learn Loot Ray - [|cffffcc00Level %d|r]
+}
+
+STRING 260
+// Abilities: A00N (Neutralization Ray), Researchhotkey (Hotkey - Learn)
+{
+L
+}
+
+STRING 262
+// Abilities: A00N (Neutralization Ray), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 263
+// Abilities: A00E (Wind Ray), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 264
+// Abilities: A00E (Wind Ray), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 277
+// Abilities: A000 (Frost Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 278
+// Abilities: A000 (Frost Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 279
+// Abilities: A000 (Frost Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 280
+// Abilities: A000 (Frost Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 281
+// Abilities: A001 (Fire Ray ), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 282
+// Abilities: A001 (Fire Ray ), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 283
+// Abilities: A001 (Fire Ray ), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 284
+// Abilities: A001 (Fire Ray ), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful rays pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 285
+// Abilities: A007 (Frost and Fire Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts powerful rays pointing in the facing direction of the hero and damaging enemy targets in their way. They rays are stopped by any object in its way and damage only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 286
+// Abilities: A007 (Frost and Fire Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts powerful rays pointing in the facing direction of the hero and damaging enemy targets in their way. They rays are stopped by any object in its way and damage only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 287
+// Abilities: A007 (Frost and Fire Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts powerful rays pointing in the facing direction of the hero and damaging enemy targets in their way. They rays are stopped by any object in its way and damage only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 288
+// Abilities: A007 (Frost and Fire Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts powerful rays pointing in the facing direction of the hero and damaging enemy targets in their way. They rays are stopped by any object in its way and damage only destructible objects. |n|n|cffffcc00Keep the key pressed to cast the spell and move the mouse to change its direction. Disables attack while being cast.|r
+}
+
+STRING 290
+{
+Baradé's Ray 1.0:
+- Some rays require the key to be hold and the mouse to be moved to aim.
+- Press Escape to revive your heroes.
+}
+
+STRING 291
+// Abilities: A004 (Loot Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and pulling items in its way to the hero. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 292
+// Abilities: A006 (Drain Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and draining life and mana from enemy targets in its way or restoring life and mana for friendly targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 293
+// Abilities: A008 (Chain Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 294
+// Abilities: A008 (Chain Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 295
+// Abilities: A008 (Chain Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 296
+// Abilities: A008 (Chain Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 297
+// Abilities: A00D (Resurrection Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and resurrecting friendly dead units and restoring dead destructibles in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 298
+// Abilities: A00K (Charm Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 299
+// Abilities: A00K (Charm Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 300
+// Abilities: A00K (Charm Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 301
+// Abilities: A00K (Charm Ray), Researchubertip (Tooltip - Learn - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and damaging enemy targets in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
+STRING 302
+// Abilities: A00N (Neutralization Ray), Ubertip (Tooltip - Normal - Extended)
+{
+Casts a powerful ray pointing in the facing direction of the hero and neutralizing negative buffs on allied units or neutralizing positive buffs on enemy units or damaging enemy summoned units in its way. The ray is stopped by any object in its way and damages only destructible objects.
+}
+
