@@ -24,9 +24,9 @@ const typeLabels = {
   [0x1f]: "RemoveUnitFromBuildingQueue",
   [0x1a]: "PreSubselectionAction",
   [0x6b]: "W3MMDAction",
-  [0x79]: "UnknownAction",
-  [0x76]: "UnknownAction",
-  [0x73]: "UnknownAction",
+  [0x79]: "CommandFrameAction",
+  [0x76]: "MouseAction",
+  [0x73]: "BlzCacheClearUnitAction",
   [0x78]: "BlzSyncAction"
 };
 

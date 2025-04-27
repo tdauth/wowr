@@ -10,10 +10,10 @@ REM set replay="..\\replays\\desync\\2025-04-27 16.20.09 62cc5948"
 REM set replayf=%replay%\\TempReplay.w3g
 REM set replay="..\\replays\\melee\\aaaaaa"
 REM set replayf=%replay%\\aaaaaa.w3g
-REM set replay="..\\replays\\warchasers"
-REM set replayf=%replay%\\warchasers.w3g
-set replay="..\\replays\\wowr"
-set replayf=%replay%\\WoWReforged4.0.w3g
+set replay="..\\replays\\warchasers"
+set replayf=%replay%\\warchasers.w3g
+REM set replay="..\\replays\\wowr"
+REM set replayf=%replay%\\WoWReforged4.0.w3g
 node replayanalyser_high_level.ts %replayf% >%replay%/replay_high_level.json
 node replayanalyser_low_level.ts %replayf% >%replay%/replay_low_level.json
 pause
