@@ -1491,3 +1491,5 @@ Here is a list of some modified versions online:
 * Hermit, Lord_T, Zerox: [Tidal Wyrm (Tidal Guardian)](https://www.hiveworkshop.com/threads/tidal-wyrm-tidal-guardian.313251/)
 * MassiveMaster: [Siege Ladder](https://www.hiveworkshop.com/threads/siege-ladder.217560/)
 * bakr, Manastorm: [Draenei Buildings](https://www.hiveworkshop.com/threads/draenei-buildings.359663/)
+* MangakaDark: [Female Eredar Annihilator](https://www.hiveworkshop.com/threads/female-eredar-annihilator.355815/)
+* Aldeia: [Draenei / Eredar Pack](https://www.hiveworkshop.com/threads/draenei-eredar-pack.349763/)
