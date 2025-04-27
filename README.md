@@ -194,6 +194,7 @@ Replays are documented in [this specification](http://w3g.deepnode.de/files/w3g_
 Replay actions are documented in [this specification](http://w3g.deepnode.de/files/w3g_actions.txt).
 Use the scripts [replayanalyser.bat](./scripts/replayanalyser.bat) or [replayanalyser.sh](./replayanalyser.sh) to create JSON files from an input replay .w3g file.
 The action types can be compared with the IDs in [ActionParser.ts](https://github.com/PBug90/w3gjs/blob/master/src/parsers/ActionParser.ts).
+Replays will contain lots of MouseActions if you have any `EVENT_PLAYER_MOUSE_MOVE` in your map script since all mouse movements have to be tracked.
 
 ## History of the Map
 
