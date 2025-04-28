@@ -4025,7 +4025,7 @@ globals
 
     constant integer DEMON_HOUSING                                   = 'h00Y'
 
-    // Draenei
+    // Lost Ones
     constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
     constant integer DRAENEI_BARRACKS                                = 'ndh3'
     constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
@@ -5245,7 +5245,7 @@ globals
 
     constant integer OGRE_SHIPYARD                                   = 'o07C'
 
-    // Eredar
+    // Eredar/Draenei
     constant integer EREDAR_TIER_1                                   = 'n0IO'
     constant integer EREDAR_TIER_2                                   = 'n0JJ'
     constant integer EREDAR_TIER_3                                   = 'n0JK'
@@ -5267,7 +5267,9 @@ globals
     constant integer UPG_EREDAR_BACKPACK                             = 'R0G3'
     constant integer UPG_EREDAR_DEFEND                               = 'R0G4'
     constant integer UPG_EREDAR_ARKONITE_DEFENSE                     = 'R0G7' // masonry
-    constant integer UPG_EREDAR_SORCERESS                            = 'R00E'
+    constant integer UPG_EREDAR_MYSTIC                               = 'R086'
+    constant integer UPG_EREDAR_HIGH_TEMPLAR                         = 'R087'
+    constant integer UPG_EREDAR_SPACE_TRAVEL                         = 'R088'
     constant integer UPG_EREDAR_EXODAR                               = 'R0G5' // special building
 
     constant integer EREDAR_ARTIFICER                                = 'n0IN' // worker
@@ -5276,6 +5278,7 @@ globals
     constant integer EREDAR_OUTRIDER                                 = 'h0UA' // knight
     constant integer EREDAR_ELEKK_KNIGHT                             = 'h0UB' // kodo beast
     constant integer EREDAR_NETHER_RAY                               = 'n0JH' // gryphon rider
+    constant integer EREDAR_DIMENSIONAL_SHIP                         = 'h01I' // flying machine
     constant integer EREDAR_SUCCUBUS                                 = 'n0JD' // sorceress
     constant integer EREDAR_SORCERER                                 = 'n0JC' // priest
     constant integer EREDAR_VIGILANT                                 = 'n0JG' // tauren
