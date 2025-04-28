@@ -361,7 +361,7 @@ StringList {
     GRONN                              "Gronn",
     BEASTMASTER                        "Beastmaster",
     REXXAR                             "Rexxar",
-    EREDAR_ANNIHILATOR                 "Eredar Annihilator",
+    ANNIHILATOR                        "Annihilator",
     FEL_BLADEMASTER                    "Fel Blademaster",
     FEL_WARLOCK                        "Fel Warlock",
     FEL_WARLORD                        "Fel Warlord",
@@ -639,6 +639,7 @@ StringList {
     PAGE_TITLE_UNITS                   "(Units)",
     PAGE_TITLE_BUILDINGS               "(Buildings)",
     PURCHASED_PROPERTY_X               "Purchased property %1%.",
+    RESTRICTED_TO_FACTION              "Restricted to faction %1%.",
     // Mounts
     NO_MOUNTS                          "No mounts.",
     ADDING_MOUNT                       "Adding mount %1%",

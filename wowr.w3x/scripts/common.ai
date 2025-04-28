@@ -2772,6 +2772,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(REXXAR)
     // Eredar
     call AddHero(EREDAR_ANNIHILATOR)
+    call AddHero(EREDAR_VINDICATOR)
     // Fel Orc
     call AddHero(FEL_BLADEMASTER)
     call AddHero(FEL_WARLOCK)

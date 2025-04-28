@@ -2740,7 +2740,7 @@ globals
 
     constant integer PLAYER_RESCUABLE                                = 21
     constant integer PLAYER_BOSSES                                   = 22
-    constant integer PLAYER_THE_BURNING_LEGION                       = 24
+    constant integer PLAYER_THE_BURNING_LEGION                       = 23
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
@@ -5994,7 +5994,7 @@ globals
     constant integer KIL_JAEDEN                                      = 'N0FA'
     constant integer TICHONDRIUS_HERO                                = 'Utic'
     constant integer DOOM_LORD                                       = 'N0LG'
-    // Draenei
+    // Lost Ones
     constant integer ELDER_SAGE                                      = 'N01K'
     constant integer VINDICATOR                                      = 'H0KM'
     constant integer VELEN                                           = 'H0JV'
@@ -6036,6 +6036,7 @@ globals
     constant integer REXXAR                                          = 'O00C'
     // Eredar
     constant integer EREDAR_ANNIHILATOR                              = 'N0JX'
+    constant integer EREDAR_VINDICATOR                               = 'H01H'
     // Fel Orc
     constant integer FEL_BLADEMASTER                                 = 'N01T'
     constant integer FEL_WARLOCK                                     = 'O09I'
