@@ -134,7 +134,6 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "CENARIUS",     -2,
         MenuItem "ARCHDRUID",     -2,
         MenuItem "PRIESTESS_OF_THE_MOON_ON_OWL",     -2,
-        MenuItem "MALORNE",     -2,
         MenuItem "CHIMAERA",     -2,
         MenuItem "ALCHEMIST",     -2,
         MenuItem "TINKER",     -2,
