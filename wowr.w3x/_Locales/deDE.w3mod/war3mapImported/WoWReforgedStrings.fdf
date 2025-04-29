@@ -1019,9 +1019,9 @@ StringList {
     // ChangeLog
     ALL_CHANGES_OF_VERSION             "Alle Änderungen von %1%.",
     // Quests
-    QUEST_DISCOVERED                   "|cffffcc00Neue Quest entdeckt:|r %1%",
-    QUEST_UPDATE                       "|cffffcc00Quest-Aktualisierung:|r %1%",
-    QUEST_COMPLETED                    "|cffffcc00Quest abgeschlossen:|r %1%",
+    QUEST_DISCOVERED                   "|cffffcc00QUEST ENTDECKT:|r %1%",
+    QUEST_UPDATE                       "|cffffcc00QUEST-AKTUALISIERUNG:|r %1%",
+    QUEST_COMPLETED                    "|cffffcc00QUEST ABGESCHLOSSEN:|r %1%",
     // Portals
     PORTAL                             "Portal",
     PORTAL_TO                          "Portal nach %1%",
