@@ -4055,7 +4055,7 @@ globals
     constant integer UPG_DRAENEI_STEEL_ARMOR                         = 'R013'
     constant integer UPG_DRAENEI_STEEL_MELEE_WEAPONS                 = 'R011'
     constant integer UPG_DRAENEI_STEEL_RANGED_WEAPONS                = 'R012'
-    constant integer UPG_DRAENEI_PRISON                              = 'R0D2'
+    constant integer UPG_DRAENEI_PRISON                              = 'R02D'
 
     constant integer DRAENEI_CITIZEN_MALE                            = 'n01L'
     constant integer DRAENEI_CITIZEN_FEMALE                          = 'n01M'
