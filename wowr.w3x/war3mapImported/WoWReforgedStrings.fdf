@@ -39,6 +39,7 @@ StringList {
     CANNOT_JUMP_THERE                  "Cannot jump there.",
     UNABLE_TO_WATER_GROUND_HERE        "Unable to water the ground here.",
     OWNER_X_IS_NOT_ALLOWED             "Owner %1% is not allowed.",
+    UNIT_IS_NO_HERO                    "Unit is not a hero.",
     // Learnable Skills Shop
     SLOT_X                             "Slot %1%",
     WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
