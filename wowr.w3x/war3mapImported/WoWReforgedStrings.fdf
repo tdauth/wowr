@@ -1262,6 +1262,9 @@ StringList {
     TILE_OUTLAND_ROUGH_DIRT            "Red Rough Dirt",
     TILE_UNDERGROUND_BRICK             "Underground",
     UNKNOWN                            "Unknown",
+    // Railway
+    TRAIN_HAS_TO_BE_STOPPED            "The train has to be stopped.",
+    TRAIN_MUST_BE_IN_STATION           "The train must be in a station.",
     // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
