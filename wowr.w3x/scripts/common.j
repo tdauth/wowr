@@ -7138,7 +7138,7 @@ native          CopySaveGame        	takes string sourceSaveName, string destSav
 native          SaveGameExists      	takes string saveName returns boolean
 native          SetMaxCheckpointSaves  	takes integer maxCheckpointSaves returns nothing
 native          SaveGameCheckpoint  	takes string saveFileName, boolean showWindow returns nothing
-// Barade: I had some issues with this in unit selection events and trigger conditions counting the selected units by a player.
+// Barade: I had some issues with this in unit selection events and trigger conditions counting the selected units by a player. Apparently, it has some delay in it which is why it does not work in trigger conditions.
 native          SyncSelections      	takes nothing returns nothing
 native          SetFloatGameState   	takes fgamestate whichFloatGameState, real value returns nothing
 constant native GetFloatGameState   	takes fgamestate whichFloatGameState returns real
