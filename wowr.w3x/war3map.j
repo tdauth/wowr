@@ -15824,6 +15824,9 @@ function Trig_Init_Func011Func001C takes nothing returns boolean
     if ( not ( GetEnumPlayer() != Player(0) ) ) then
         return false
     endif
+    if ( not ( GetEnumPlayer() != Player(1) ) ) then
+        return false
+    endif
     if ( not ( GetEnumPlayer() != Player(22) ) ) then
         return false
     endif
