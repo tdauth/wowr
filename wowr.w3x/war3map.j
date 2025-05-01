@@ -16038,7 +16038,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor(Player(1), ConvertPlayerColor(1))
     call SetPlayerRacePreference(Player(1), RACE_PREF_RANDOM)
     call SetPlayerRaceSelectable(Player(1), true)
-    call SetPlayerController(Player(1), MAP_CONTROL_COMPUTER)
+    call SetPlayerController(Player(1), MAP_CONTROL_USER)
 
     // Player 2
     call SetPlayerStartLocation(Player(2), 2)
@@ -16112,6 +16112,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerRaceSelectable(Player(20), false)
     call SetPlayerController(Player(20), MAP_CONTROL_RESCUABLE)
     call SetPlayerAlliance(Player(20), Player(0), ALLIANCE_RESCUABLE, true)
+    call SetPlayerAlliance(Player(20), Player(1), ALLIANCE_RESCUABLE, true)
 
     // Player 22
     call SetPlayerStartLocation(Player(22), 11)
@@ -16253,16 +16254,11 @@ endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
-    call SetStartLocPrioCount(1, 9)
+    call SetStartLocPrioCount(0, 1)
+    call SetStartLocPrio(0, 0, 1, MAP_LOC_PRIO_HIGH)
+
+    call SetStartLocPrioCount(1, 1)
     call SetStartLocPrio(1, 0, 0, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 1, 2, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 2, 3, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 3, 4, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 4, 5, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 5, 6, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 6, 7, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 7, 8, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(1, 8, 9, MAP_LOC_PRIO_HIGH)
 
     call SetStartLocPrioCount(2, 9)
     call SetStartLocPrio(2, 0, 0, MAP_LOC_PRIO_HIGH)
@@ -16433,7 +16429,7 @@ function config takes nothing returns nothing
     call SetMapDescription("TRIGSTR_003")
     call SetPlayers(13)
     call SetTeams(13)
-    call SetGamePlacement(MAP_PLACEMENT_USE_MAP_SETTINGS)
+    call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
     call DefineStartLocation(0, 5056.0, - 12096.0)
     call DefineStartLocation(1, 9024.0, - 13888.0)
