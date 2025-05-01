@@ -4,6 +4,7 @@ InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmo
 
 [Errors]
 Cooldownstock=TRIGSTR_48559
+Inventoryfull=
 Outofstock=TRIGSTR_48558
 
 [FrameDef]
