@@ -21,6 +21,9 @@ hashtable ItemTypeUtils__h= InitHashtable()
 constant integer ItemTypeUtils__SHOP= 'ngme'
 constant integer ItemTypeUtils__SELL_UNIT= 'Hpal'
 //endglobals from ItemTypeUtils
+//globals from MathUtils:
+constant boolean LIBRARY_MathUtils=true
+//endglobals from MathUtils
 //globals from OpLimit:
 constant boolean LIBRARY_OpLimit=true
 //endglobals from OpLimit
@@ -230,62 +233,62 @@ constant integer Crafting_DISASSEMBLE_ABILITY_ID= 'A000'
     // This interval defines how often the stocks are updated and start again with their start delay.
 constant real Crafting_UPDATE_INTERVAL= 60.0
 
-integer array Crafting___recipesItemTypeIds
-integer array Crafting___recipesUIItemTypeIds
-boolean array Crafting___recipesIsUnit
-boolean array Crafting___recipesIsSpacer
-string array Crafting___recipesPageName
-boolean array Crafting___recipesNotAvailableForPlayer
-integer array Crafting___recipesMinRequirements
-integer array Crafting___recipesRequirementCounters
-integer array Crafting___recipesRequirementItemTypeIds
-integer array Crafting___recipesRequirementCharges
-boolean array Crafting___recipesRequirementConsume
-integer Crafting___recipesCounter= 0
+integer array Crafting__recipesItemTypeIds
+integer array Crafting__recipesUIItemTypeIds
+boolean array Crafting__recipesIsUnit
+boolean array Crafting__recipesIsSpacer
+string array Crafting__recipesPageName
+boolean array Crafting__recipesNotAvailableForPlayer
+integer array Crafting__recipesMinRequirements
+integer array Crafting__recipesRequirementCounters
+integer array Crafting__recipesRequirementItemTypeIds
+integer array Crafting__recipesRequirementCharges
+boolean array Crafting__recipesRequirementConsume
+integer Crafting__recipesCounter= 0
 
     // callbacks
-integer Crafting___recipeRequirementCallback= 0
-trigger Crafting___recipeRequirementCallbackTrigger= null
-trigger Crafting___recipeShowCallbackTrigger= null
-trigger array Crafting___craftingCallbackTriggers
-integer Crafting___craftingCallbackTriggersCounter= 0
-trigger array Crafting___craftingCallbackUnitTriggers
-integer Crafting___craftingCallbackUnitTriggersCounter= 0
-trigger array Crafting___disassembleCallbackTriggers
-integer Crafting___disassembleCallbackTriggersCounter= 0
+integer Crafting__recipeRequirementCallback= 0
+trigger Crafting__recipeRequirementCallbackTrigger= null
+trigger Crafting__recipeShowCallbackTrigger= null
+trigger array Crafting__craftingCallbackTriggers
+integer Crafting__craftingCallbackTriggersCounter= 0
+trigger array Crafting__craftingCallbackUnitTriggers
+integer Crafting__craftingCallbackUnitTriggersCounter= 0
+trigger array Crafting__disassembleCallbackTriggers
+integer Crafting__disassembleCallbackTriggersCounter= 0
     
-integer Crafting___lastCreatedRecipe= 0
+integer Crafting__lastCreatedRecipe= 0
 
-integer Crafting___triggerRecipe= 0
-unit Crafting___triggerCraftingUnit= null
-item Crafting___triggerCraftedItem= null
-unit Crafting___triggerCraftedUnit= null
-integer Crafting___triggerCraftedCharges= 0
+integer Crafting__triggerRecipe= 0
+unit Crafting__triggerCraftingUnit= null
+item Crafting__triggerCraftedItem= null
+unit Crafting__triggerCraftedUnit= null
+integer Crafting__triggerCraftedCharges= 0
 
-group Crafting___itemCraftingUnits= CreateGroup()
-trigger Crafting___pickupTrigger= CreateTrigger()
-trigger Crafting___dropTrigger= CreateTrigger()
-trigger Crafting___itemCraftTrigger= CreateTrigger()
-trigger Crafting___itemDisassembleTrigger= CreateTrigger()
+group Crafting__itemCraftingUnits= CreateGroup()
+trigger Crafting__pickupTrigger= CreateTrigger()
+trigger Crafting__dropTrigger= CreateTrigger()
+trigger Crafting__itemCraftTrigger= CreateTrigger()
+trigger Crafting__itemDisassembleTrigger= CreateTrigger()
 
-hashtable Crafting___itemCraftingUnitsHashTable= InitHashtable()
-trigger Crafting___itemCraftingChangePageTrigger= CreateTrigger()
-timer Crafting___itemCraftingStockUpdateTimer= CreateTimer()
+hashtable Crafting__itemCraftingUnitsHashTable= InitHashtable()
+trigger Crafting__itemCraftingChangePageTrigger= CreateTrigger()
+timer Crafting__itemCraftingStockUpdateTimer= CreateTimer()
     
     // update food available
-trigger Crafting___trainStartTrigger= CreateTrigger()
-trigger Crafting___trainCancelTrigger= CreateTrigger()
-trigger Crafting___sellTrigger= CreateTrigger()
-trigger Crafting___reviveStartTrigger= CreateTrigger()
-trigger Crafting___reviveCancelTrigger= CreateTrigger()
-trigger Crafting___deathTrigger= CreateTrigger()
+trigger Crafting__trainStartTrigger= CreateTrigger()
+trigger Crafting__trainCancelTrigger= CreateTrigger()
+trigger Crafting__sellTrigger= CreateTrigger()
+trigger Crafting__reviveStartTrigger= CreateTrigger()
+trigger Crafting__reviveCancelTrigger= CreateTrigger()
+trigger Crafting__deathTrigger= CreateTrigger()
     
 
-constant integer Crafting___HASHTABLE_KEY_PAGE= 0
-constant integer Crafting___HASHTABLE_KEY_GROUP= 1
-constant integer Crafting___HASHTABLE_KEY_DISABLED_RECIPES= 2
-unit Crafting___tmpUnit= null
-integer Crafting___tmpInteger0= 0
+constant integer Crafting__HASHTABLE_KEY_PAGE= 0
+constant integer Crafting__HASHTABLE_KEY_GROUP= 1
+constant integer Crafting__HASHTABLE_KEY_DISABLED_RECIPES= 2
+unit Crafting__tmpUnit= null
+integer Crafting__tmpInteger0= 0
 //endglobals from Crafting
 //globals from MapCrafting:
 constant boolean LIBRARY_MapCrafting=true
@@ -720,9 +723,9 @@ integer array si__PagedButtons_Type_11type
 integer array si__PagedButtons_Type_12type
 integer array si__PagedButtons_Type_13type
 trigger array st__PagedButtons_Type_onDestroy
-trigger array st___prototype22
+trigger array st___prototype31
 boolean f__result_boolean
-trigger array st___prototype51
+trigger array st___prototype60
 integer f__result_integer
 unit f__arg_unit1
 integer f__arg_integer1
@@ -3474,35 +3477,35 @@ function s__PagedButtons_SpacerType__allocate takes nothing returns integer
  return this
 endfunction
 
-function sc___prototype22_execute takes integer i,unit a1 returns nothing
+function sc___prototype31_execute takes integer i,unit a1 returns nothing
     set f__arg_unit1=a1
 
-    call TriggerExecute(st___prototype22[i])
+    call TriggerExecute(st___prototype31[i])
 endfunction
-function sc___prototype22_evaluate takes integer i,unit a1 returns boolean
+function sc___prototype31_evaluate takes integer i,unit a1 returns boolean
     set f__arg_unit1=a1
 
-    call TriggerEvaluate(st___prototype22[i])
+    call TriggerEvaluate(st___prototype31[i])
  return f__result_boolean
 endfunction
-function sc___prototype51_execute takes integer i,integer a1,unit a2 returns nothing
+function sc___prototype60_execute takes integer i,integer a1,unit a2 returns nothing
     set f__arg_integer1=a1
     set f__arg_unit1=a2
 
-    call TriggerExecute(st___prototype51[i])
+    call TriggerExecute(st___prototype60[i])
 endfunction
-function sc___prototype51_evaluate takes integer i,integer a1,unit a2 returns integer
+function sc___prototype60_evaluate takes integer i,integer a1,unit a2 returns integer
     set f__arg_integer1=a1
     set f__arg_unit1=a2
 
-    call TriggerEvaluate(st___prototype51[i])
+    call TriggerEvaluate(st___prototype60[i])
  return f__result_integer
 endfunction
 function h__RemoveUnit takes unit a0 returns nothing
     //hook: DisablePagedButtons
-    call sc___prototype22_evaluate(1,a0)
+    call sc___prototype31_evaluate(1,a0)
     //hook: DisableItemCraftingUnit
-    call sc___prototype22_evaluate(2,a0)
+    call sc___prototype31_evaluate(2,a0)
 call RemoveUnit(a0)
 endfunction
 
@@ -3664,6 +3667,66 @@ endfunction
 
 
 //library ItemTypeUtils ends
+//library MathUtils:
+
+function Index2D takes integer v1,integer v2,integer max2 returns integer
+    return v1 * max2 + v2
+endfunction
+
+function Index3D takes integer v1,integer v2,integer v3,integer max2,integer max3 returns integer
+    return v1 * max2 * max3 + v2 * max3 + v3
+endfunction
+
+function PolarProjectionX takes real x,real angle,real distance returns real
+    return x + distance * Cos(angle * bj_DEGTORAD)
+endfunction
+
+function PolarProjectionY takes real y,real angle,real distance returns real
+    return y + distance * Sin(angle * bj_DEGTORAD)
+endfunction
+
+function AngleBetweenCoordinatesRad takes real x1,real y1,real x2,real y2 returns real
+    return Atan2(y2 - y1, x2 - x1)
+endfunction
+
+// Utilities already uses the identifier AngleBetweenCoordinates.
+function AngleBetweenCoordinatesDeg takes real x1,real y1,real x2,real y2 returns real
+    return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
+endfunction
+
+function AngleBetweenUnitsDeg takes unit whichUnit0,unit whichUnit1 returns real
+    return AngleBetweenCoordinatesDeg(GetUnitX(whichUnit0) , GetUnitY(whichUnit0) , GetUnitX(whichUnit1) , GetUnitY(whichUnit1))
+endfunction
+
+// Utilities already uses the identifier DistanceBetweenCoordinates.
+function DistBetweenCoordinates takes real x1,real y1,real x2,real y2 returns real
+    local real dx= x2 - x1
+    local real dy= y2 - y1
+    return SquareRoot(dx * dx + dy * dy)
+endfunction
+
+function DistanceBetweenUnits takes unit whichUnit0,unit whichUnit1 returns real
+    return DistBetweenCoordinates(GetUnitX(whichUnit0) , GetUnitY(whichUnit0) , GetUnitX(whichUnit1) , GetUnitY(whichUnit1))
+endfunction
+
+function DistanceBetweenUnitAndItem takes unit whichUnit,item whichItem returns real
+    return DistBetweenCoordinates(GetUnitX(whichUnit) , GetUnitY(whichUnit) , GetItemX(whichItem) , GetItemY(whichItem))
+endfunction
+
+function DistanceBetweenUnitAndDestructable takes unit whichUnit,destructable whichDestructable returns real
+    return DistBetweenCoordinates(GetUnitX(whichUnit) , GetUnitY(whichUnit) , GetDestructableX(whichDestructable) , GetDestructableY(whichDestructable))
+endfunction
+
+function IntToPrecentage takes integer v,integer max returns real
+    return I2R(v) * 100.0 / I2R(max)
+endfunction
+
+function GetRectFromCircle takes real centerX,real centerY,real radius returns rect
+    return Rect(centerX - radius, centerY - radius, centerX + radius, centerY + radius)
+endfunction
+
+
+//library MathUtils ends
 //library OpLimit:
 
 function NewOpLimit takes code callback returns nothing
@@ -6534,234 +6597,230 @@ endfunction
 
 
 function GetCraftingStockUpdateTimerHandleId takes nothing returns integer
-    return GetHandleId(Crafting___itemCraftingStockUpdateTimer)
-endfunction
-
-function Crafting___Index2D takes integer Value1,integer Value2,integer MaxValue2 returns integer
-    return ( ( Value1 * MaxValue2 ) + Value2 )
+    return GetHandleId(Crafting__itemCraftingStockUpdateTimer)
 endfunction
 
 function GetRecipesMax takes nothing returns integer
-    return Crafting___recipesCounter
+    return Crafting__recipesCounter
 endfunction
 
 function GetRecipeItemTypeId takes integer recipe returns integer
-    return Crafting___recipesItemTypeIds[recipe]
+    return Crafting__recipesItemTypeIds[recipe]
 endfunction
 
 function GetRecipeUIItemTypeId takes integer recipe returns integer
-    return Crafting___recipesUIItemTypeIds[recipe]
+    return Crafting__recipesUIItemTypeIds[recipe]
 endfunction
 
 function AddRecipe takes integer itemTypeId,integer uiItemTypeId returns integer
-    local integer index= Crafting___recipesCounter
-    set Crafting___recipesItemTypeIds[index]=itemTypeId
-    set Crafting___recipesUIItemTypeIds[index]=uiItemTypeId
-    set Crafting___recipesIsUnit[index]=false
-    set Crafting___recipesIsSpacer[index]=false
-    set Crafting___recipesPageName[index]=""
-    set Crafting___recipesMinRequirements[index]=0
-    set Crafting___recipesRequirementCounters[index]=0
-    set Crafting___recipesCounter=Crafting___recipesCounter + 1
-    set Crafting___lastCreatedRecipe=index
+    local integer index= Crafting__recipesCounter
+    set Crafting__recipesItemTypeIds[index]=itemTypeId
+    set Crafting__recipesUIItemTypeIds[index]=uiItemTypeId
+    set Crafting__recipesIsUnit[index]=false
+    set Crafting__recipesIsSpacer[index]=false
+    set Crafting__recipesPageName[index]=""
+    set Crafting__recipesMinRequirements[index]=0
+    set Crafting__recipesRequirementCounters[index]=0
+    set Crafting__recipesCounter=Crafting__recipesCounter + 1
+    set Crafting__lastCreatedRecipe=index
     return index
 endfunction
 
 function AddRecipeRequirementItem takes integer recipe,integer itemTypeId,integer charges,boolean consume returns integer
-    local integer counter= Crafting___recipesRequirementCounters[recipe]
-    local integer index= Crafting___Index2D(recipe , counter , Crafting_MAX_REQUIREMENTS)
-    set Crafting___recipesRequirementItemTypeIds[index]=itemTypeId
-    set Crafting___recipesRequirementCharges[index]=charges
-    set Crafting___recipesRequirementConsume[index]=consume
-    set Crafting___recipesRequirementCounters[recipe]=counter + 1
-    set Crafting___recipesMinRequirements[recipe]=counter + 1
+    local integer counter= Crafting__recipesRequirementCounters[recipe]
+    local integer index= Index2D(recipe , counter , Crafting_MAX_REQUIREMENTS)
+    set Crafting__recipesRequirementItemTypeIds[index]=itemTypeId
+    set Crafting__recipesRequirementCharges[index]=charges
+    set Crafting__recipesRequirementConsume[index]=consume
+    set Crafting__recipesRequirementCounters[recipe]=counter + 1
+    set Crafting__recipesMinRequirements[recipe]=counter + 1
     return counter
 endfunction
 
 function SetRecipeIsUnit takes integer recipe,boolean flag returns nothing
-    set Crafting___recipesIsUnit[recipe]=flag
+    set Crafting__recipesIsUnit[recipe]=flag
 endfunction
 
 function GetRecipeIsUnit takes integer recipe returns boolean
-    return Crafting___recipesIsUnit[recipe]
+    return Crafting__recipesIsUnit[recipe]
 endfunction
 
 function SetRecipeIsSpacer takes integer recipe,boolean flag returns nothing
-    set Crafting___recipesIsSpacer[recipe]=flag
+    set Crafting__recipesIsSpacer[recipe]=flag
 endfunction
 
 function GetRecipeIsSpacer takes integer recipe returns boolean
-    return Crafting___recipesIsSpacer[recipe]
+    return Crafting__recipesIsSpacer[recipe]
 endfunction
 
 function AddRecipeSpacer takes string pageName returns integer
     local integer recipe= AddRecipe(0 , 0)
-    set Crafting___recipesIsSpacer[(recipe )]=( true) // INLINED!!
-    set Crafting___recipesPageName[recipe]=pageName
+    set Crafting__recipesIsSpacer[(recipe )]=( true) // INLINED!!
+    set Crafting__recipesPageName[recipe]=pageName
     return recipe
 endfunction
 
 function SetRecipePageName takes integer recipe,string pageName returns nothing
-    set Crafting___recipesPageName[recipe]=pageName
+    set Crafting__recipesPageName[recipe]=pageName
 endfunction
 
 function GetRecipeNotAvailableForPlayer takes integer recipe,integer playerId returns boolean
-    local integer index= Crafting___Index2D(recipe , playerId , bj_MAX_PLAYERS)
-    return Crafting___recipesNotAvailableForPlayer[index]
+    local integer index= Index2D(recipe , playerId , bj_MAX_PLAYERS)
+    return Crafting__recipesNotAvailableForPlayer[index]
 endfunction
 
 function SetRecipeNotAvailableForPlayer takes integer recipe,integer playerId,boolean notAvailable returns nothing
-    local integer index= Crafting___Index2D(recipe , playerId , bj_MAX_PLAYERS)
-    set Crafting___recipesNotAvailableForPlayer[index]=notAvailable
+    local integer index= Index2D(recipe , playerId , bj_MAX_PLAYERS)
+    set Crafting__recipesNotAvailableForPlayer[index]=notAvailable
 endfunction
 
 function GetRecipeAvailableForPlayer takes integer recipe,integer playerId returns boolean
-    local integer index= Crafting___Index2D(recipe , playerId , bj_MAX_PLAYERS)
-    return not Crafting___recipesNotAvailableForPlayer[index]
+    local integer index= Index2D(recipe , playerId , bj_MAX_PLAYERS)
+    return not Crafting__recipesNotAvailableForPlayer[index]
 endfunction
 
 function SetRecipeAvailableForPlayer takes integer recipe,integer playerId,boolean available returns nothing
-    local integer index= Crafting___Index2D(recipe , playerId , bj_MAX_PLAYERS)
-    set Crafting___recipesNotAvailableForPlayer[index]=not available
+    local integer index= Index2D(recipe , playerId , bj_MAX_PLAYERS)
+    set Crafting__recipesNotAvailableForPlayer[index]=not available
 endfunction
 
 function GetLastCreatedRecipe takes nothing returns integer
-    return Crafting___lastCreatedRecipe
+    return Crafting__lastCreatedRecipe
 endfunction
 
 function SetLastRecipePageName takes string pageName returns nothing
-    set Crafting___recipesPageName[Crafting___lastCreatedRecipe]=pageName
+    set Crafting__recipesPageName[Crafting__lastCreatedRecipe]=pageName
 endfunction
 
 function GetRecipeRequirementsCount takes integer recipe returns integer
-    return Crafting___recipesRequirementCounters[recipe]
+    return Crafting__recipesRequirementCounters[recipe]
 endfunction
 
 function GetRecipeRequirementItemTypeId takes integer recipe,integer requirement returns integer
-    local integer index= Crafting___Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
-    return Crafting___recipesRequirementItemTypeIds[index]
+    local integer index= Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
+    return Crafting__recipesRequirementItemTypeIds[index]
 endfunction
 
 function GetRecipeRequirementCharges takes integer recipe,integer requirement returns integer
-    local integer index= Crafting___Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
-    return Crafting___recipesRequirementCharges[index]
+    local integer index= Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
+    return Crafting__recipesRequirementCharges[index]
 endfunction
 
 function GetRecipeRequirementConsume takes integer recipe,integer requirement returns boolean
-    local integer index= Crafting___Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
-    return Crafting___recipesRequirementConsume[index]
+    local integer index= Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
+    return Crafting__recipesRequirementConsume[index]
 endfunction
 
 function GetRecipeMinRequirements takes integer recipe returns integer
-    return Crafting___recipesMinRequirements[recipe]
+    return Crafting__recipesMinRequirements[recipe]
 endfunction
 
 function SetRecipeMinRequirements takes integer recipe,integer minRequirements returns nothing
-    set Crafting___recipesMinRequirements[recipe]=minRequirements
+    set Crafting__recipesMinRequirements[recipe]=minRequirements
 endfunction
 
 function SetRecipeRequirementCallback takes integer callback returns nothing
-    set Crafting___recipeRequirementCallback=callback
+    set Crafting__recipeRequirementCallback=callback
 endfunction
 
 function SetRecipeRequirementCallbackTrigger takes trigger callback returns nothing
-    set Crafting___recipeRequirementCallbackTrigger=callback
+    set Crafting__recipeRequirementCallbackTrigger=callback
 endfunction
 
 function SetRecipeShowCallbackTrigger takes trigger callback returns nothing
-    set Crafting___recipeShowCallbackTrigger=callback
+    set Crafting__recipeShowCallbackTrigger=callback
 endfunction
 
 function TriggerRegisterItemCraftingEvent takes trigger whichTrigger returns integer
-    local integer counter= Crafting___craftingCallbackTriggersCounter
-    set Crafting___craftingCallbackTriggers[counter]=whichTrigger
-    set Crafting___craftingCallbackTriggersCounter=Crafting___craftingCallbackTriggersCounter + 1
+    local integer counter= Crafting__craftingCallbackTriggersCounter
+    set Crafting__craftingCallbackTriggers[counter]=whichTrigger
+    set Crafting__craftingCallbackTriggersCounter=Crafting__craftingCallbackTriggersCounter + 1
     return counter
 endfunction
 
 function TriggerRegisterUnitCraftingEvent takes trigger whichTrigger returns integer
-    local integer counter= Crafting___craftingCallbackUnitTriggersCounter
-    set Crafting___craftingCallbackUnitTriggers[counter]=whichTrigger
-    set Crafting___craftingCallbackUnitTriggersCounter=Crafting___craftingCallbackUnitTriggersCounter + 1
+    local integer counter= Crafting__craftingCallbackUnitTriggersCounter
+    set Crafting__craftingCallbackUnitTriggers[counter]=whichTrigger
+    set Crafting__craftingCallbackUnitTriggersCounter=Crafting__craftingCallbackUnitTriggersCounter + 1
     return counter
 endfunction
 
 function TriggerRegisterItemDisassembleEvent takes trigger whichTrigger returns integer
-    local integer counter= Crafting___disassembleCallbackTriggersCounter
-    set Crafting___disassembleCallbackTriggers[counter]=whichTrigger
-    set Crafting___disassembleCallbackTriggersCounter=Crafting___disassembleCallbackTriggersCounter + 1
+    local integer counter= Crafting__disassembleCallbackTriggersCounter
+    set Crafting__disassembleCallbackTriggers[counter]=whichTrigger
+    set Crafting__disassembleCallbackTriggersCounter=Crafting__disassembleCallbackTriggersCounter + 1
     return counter
 endfunction
 
 function GetTriggerRecipe takes nothing returns integer
-    return Crafting___triggerRecipe
+    return Crafting__triggerRecipe
 endfunction
 
 function GetTriggerCraftingUnit takes nothing returns unit
-    return Crafting___triggerCraftingUnit
+    return Crafting__triggerCraftingUnit
 endfunction
 
 function GetTriggerCraftedItem takes nothing returns item
-    return Crafting___triggerCraftedItem
+    return Crafting__triggerCraftedItem
 endfunction
 
 function GetTriggerCraftedUnit takes nothing returns unit
-    return Crafting___triggerCraftedUnit
+    return Crafting__triggerCraftedUnit
 endfunction
 
 function GetTriggerCraftedCharges takes nothing returns integer
-    return Crafting___triggerCraftedCharges
+    return Crafting__triggerCraftedCharges
 endfunction
 
-function Crafting___ExecuteCraftingCallbacks takes integer recipe,unit craftingUnit,item craftedItem returns nothing
+function Crafting__ExecuteCraftingCallbacks takes integer recipe,unit craftingUnit,item craftedItem returns nothing
     local integer i= 0
-    set Crafting___triggerRecipe=recipe
-    set Crafting___triggerCraftingUnit=craftingUnit
-    set Crafting___triggerCraftedItem=craftedItem
+    set Crafting__triggerRecipe=recipe
+    set Crafting__triggerCraftingUnit=craftingUnit
+    set Crafting__triggerCraftedItem=craftedItem
     loop
-        exitwhen ( i == Crafting___craftingCallbackTriggersCounter )
-        if ( IsTriggerEnabled(Crafting___craftingCallbackTriggers[i]) ) then
-            call ConditionalTriggerExecute(Crafting___craftingCallbackTriggers[i])
+        exitwhen ( i == Crafting__craftingCallbackTriggersCounter )
+        if ( IsTriggerEnabled(Crafting__craftingCallbackTriggers[i]) ) then
+            call ConditionalTriggerExecute(Crafting__craftingCallbackTriggers[i])
         endif
         set i=i + 1
     endloop
 endfunction
 
-function Crafting___ExecuteCraftingCallbacksUnit takes integer recipe,unit craftingUnit,unit craftedUnit returns nothing
+function Crafting__ExecuteCraftingCallbacksUnit takes integer recipe,unit craftingUnit,unit craftedUnit returns nothing
     local integer i= 0
-    set Crafting___triggerRecipe=recipe
-    set Crafting___triggerCraftingUnit=craftingUnit
-    set Crafting___triggerCraftedUnit=craftedUnit
+    set Crafting__triggerRecipe=recipe
+    set Crafting__triggerCraftingUnit=craftingUnit
+    set Crafting__triggerCraftedUnit=craftedUnit
     loop
-        exitwhen ( i == Crafting___craftingCallbackUnitTriggersCounter )
-        if ( IsTriggerEnabled(Crafting___craftingCallbackUnitTriggers[i]) ) then
-            call ConditionalTriggerExecute(Crafting___craftingCallbackUnitTriggers[i])
+        exitwhen ( i == Crafting__craftingCallbackUnitTriggersCounter )
+        if ( IsTriggerEnabled(Crafting__craftingCallbackUnitTriggers[i]) ) then
+            call ConditionalTriggerExecute(Crafting__craftingCallbackUnitTriggers[i])
         endif
         set i=i + 1
     endloop
 endfunction
 
-function Crafting___ExecuteDisassembleCallbacks takes integer recipe,unit craftingUnit,item craftedItem,unit craftedUnit returns nothing
+function Crafting__ExecuteDisassembleCallbacks takes integer recipe,unit craftingUnit,item craftedItem,unit craftedUnit returns nothing
     local integer i= 0
-    set Crafting___triggerRecipe=recipe
-    set Crafting___triggerCraftingUnit=craftingUnit
-    set Crafting___triggerCraftedItem=craftedItem
-    set Crafting___triggerCraftedUnit=craftedUnit
+    set Crafting__triggerRecipe=recipe
+    set Crafting__triggerCraftingUnit=craftingUnit
+    set Crafting__triggerCraftedItem=craftedItem
+    set Crafting__triggerCraftedUnit=craftedUnit
     loop
-        exitwhen ( i == Crafting___disassembleCallbackTriggersCounter )
-        if ( IsTriggerEnabled(Crafting___disassembleCallbackTriggers[i]) ) then
-            call ConditionalTriggerExecute(Crafting___disassembleCallbackTriggers[i])
+        exitwhen ( i == Crafting__disassembleCallbackTriggersCounter )
+        if ( IsTriggerEnabled(Crafting__disassembleCallbackTriggers[i]) ) then
+            call ConditionalTriggerExecute(Crafting__disassembleCallbackTriggers[i])
         endif
         set i=i + 1
     endloop
 endfunction
 
 function GetRecipeByItemTypeId takes integer itemTypeId returns integer
-    local integer counter= Crafting___recipesCounter
+    local integer counter= Crafting__recipesCounter
     local integer recipe= 0
     loop
         exitwhen ( recipe == counter )
-        if ( Crafting___recipesItemTypeIds[recipe] == itemTypeId ) then
+        if ( Crafting__recipesItemTypeIds[recipe] == itemTypeId ) then
             return recipe
         endif
         set recipe=recipe + 1
@@ -6769,21 +6828,21 @@ function GetRecipeByItemTypeId takes integer itemTypeId returns integer
     return - 1
 endfunction
 
-function Crafting___SetItemCraftingUnitGroup takes unit whichUnit,group whichGroup returns nothing
-    call SaveGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_GROUP, whichGroup)
+function Crafting__SetItemCraftingUnitGroup takes unit whichUnit,group whichGroup returns nothing
+    call SaveGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_GROUP, whichGroup)
 endfunction
 
-function Crafting___GetItemCraftingUnitGroup takes unit whichUnit returns group
-    return LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_GROUP)
+function Crafting__GetItemCraftingUnitGroup takes unit whichUnit returns group
+    return LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_GROUP)
 endfunction
 
 function IsItemCraftingRecipeEnabled takes unit whichUnit,integer recipe returns boolean
-    local integer counter= LoadInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES)
+    local integer counter= LoadInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES)
     local integer disabledRecipe= 0
     local integer i= 0
     loop
         exitwhen ( i >= counter )
-        set disabledRecipe=LoadInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES + i)
+        set disabledRecipe=LoadInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES + i)
         if ( disabledRecipe == recipe ) then
             return false
         endif
@@ -6793,13 +6852,13 @@ function IsItemCraftingRecipeEnabled takes unit whichUnit,integer recipe returns
 endfunction
 
 function GetRecipeName takes integer recipe returns string
-    return GetObjectName(Crafting___recipesUIItemTypeIds[recipe])
+    return GetObjectName(Crafting__recipesUIItemTypeIds[recipe])
 endfunction
 
-function Crafting___CheckRecipeRequirement takes integer recipe,integer requirement,unit whichUnit,integer craftedCharges returns integer
-    local integer index= Crafting___Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
-    local integer requiredItemTypeId= Crafting___recipesRequirementItemTypeIds[index]
-    local integer requiredCharges= Crafting___recipesRequirementCharges[index]
+function Crafting__CheckRecipeRequirement takes integer recipe,integer requirement,unit whichUnit,integer craftedCharges returns integer
+    local integer index= Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
+    local integer requiredItemTypeId= Crafting__recipesRequirementItemTypeIds[index]
+    local integer requiredCharges= Crafting__recipesRequirementCharges[index]
     local integer matchingCharges= 0
     local item slotItem= null
     local integer i= 0
@@ -6816,12 +6875,12 @@ function Crafting___CheckRecipeRequirement takes integer recipe,integer requirem
                 set j=0
                 loop
                     exitwhen ( j == IMaxBJ(GetItemCharges(slotItem), 1) )
-                    if ( Crafting___recipeRequirementCallbackTrigger != null ) then
-                        set Crafting___triggerRecipe=recipe
-                        set Crafting___triggerCraftingUnit=whichUnit
-                        set Crafting___triggerCraftedItem=null
-                        set Crafting___triggerCraftedCharges=craftedCharges + matchingCharges / requiredCharges
-                        exitwhen ( not TriggerEvaluate(Crafting___recipeRequirementCallbackTrigger) )
+                    if ( Crafting__recipeRequirementCallbackTrigger != null ) then
+                        set Crafting__triggerRecipe=recipe
+                        set Crafting__triggerCraftingUnit=whichUnit
+                        set Crafting__triggerCraftedItem=null
+                        set Crafting__triggerCraftedCharges=craftedCharges + matchingCharges / requiredCharges
+                        exitwhen ( not TriggerEvaluate(Crafting__recipeRequirementCallbackTrigger) )
                     endif
                     set matchingCharges=matchingCharges + 1
                     set j=j + 1
@@ -6840,14 +6899,14 @@ function Crafting___CheckRecipeRequirement takes integer recipe,integer requirem
     return 0
 endfunction
 
-function Crafting___ConsumeRecipeRequirement takes integer recipe,integer requirement,integer charges,unit whichUnit returns integer
-    local integer index= Crafting___Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
-    local integer requiredItemTypeId= Crafting___recipesRequirementItemTypeIds[index]
+function Crafting__ConsumeRecipeRequirement takes integer recipe,integer requirement,integer charges,unit whichUnit returns integer
+    local integer index= Index2D(recipe , requirement , Crafting_MAX_REQUIREMENTS)
+    local integer requiredItemTypeId= Crafting__recipesRequirementItemTypeIds[index]
     local integer matchingCharges= 0
     local integer reducedCharges= 0
     local item slotItem= null
     local integer i= 0
-    local group whichGroup= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
     local integer j= 0
     local unit groupUnit= null
     if ( requiredItemTypeId != 0 ) then
@@ -6859,7 +6918,7 @@ function Crafting___ConsumeRecipeRequirement takes integer recipe,integer requir
                 exitwhen ( i == bj_MAX_INVENTORY )
                 set slotItem=UnitItemInSlot(groupUnit, i)
                 if ( slotItem != null and GetItemTypeId(slotItem) == requiredItemTypeId ) then
-                    set reducedCharges=charges * Crafting___recipesRequirementCharges[index]
+                    set reducedCharges=charges * Crafting__recipesRequirementCharges[index]
                     set matchingCharges=matchingCharges + reducedCharges
                     //call BJDebugMsg("Consuming " + I2S(reducedCharges) + " of item " + GetItemName(slotItem) + " from unit " + GetUnitName(groupUnit) + ".")
                     set reducedCharges=GetItemCharges(slotItem) - reducedCharges
@@ -6881,20 +6940,20 @@ function Crafting___ConsumeRecipeRequirement takes integer recipe,integer requir
     return reducedCharges
 endfunction
 
-function Crafting___CheckRecipeRequirements takes integer recipe,unit whichUnit returns integer
+function Crafting__CheckRecipeRequirements takes integer recipe,unit whichUnit returns integer
     local integer requirementCheckCounter= 0
     local integer result= 0
     local boolean initResult= false
     local integer matchingRequirements= 0
-    local integer minRequirements= Crafting___recipesMinRequirements[recipe]
-    local integer counter= Crafting___recipesRequirementCounters[recipe]
+    local integer minRequirements= Crafting__recipesMinRequirements[recipe]
+    local integer counter= Crafting__recipesRequirementCounters[recipe]
     local integer i= 0
-    local group whichGroup= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
     local player owner= GetOwningPlayer(whichUnit)
     local integer j= 0
 
-    if ( Crafting___recipeRequirementCallback != 0 ) then
-        set result=sc___prototype51_evaluate(Crafting___recipeRequirementCallback,recipe , whichUnit)
+    if ( Crafting__recipeRequirementCallback != 0 ) then
+        set result=sc___prototype60_evaluate(Crafting__recipeRequirementCallback,recipe , whichUnit)
     endif
 
     loop
@@ -6902,7 +6961,7 @@ function Crafting___CheckRecipeRequirements takes integer recipe,unit whichUnit 
         set j=0
         loop
             exitwhen ( j >= BlzGroupGetSize(whichGroup) or matchingRequirements >= minRequirements )
-            set requirementCheckCounter=Crafting___CheckRecipeRequirement(recipe , i , BlzGroupUnitAt(whichGroup, j) , result)
+            set requirementCheckCounter=Crafting__CheckRecipeRequirement(recipe , i , BlzGroupUnitAt(whichGroup, j) , result)
 
             if ( requirementCheckCounter > 0 ) then
                 // TODO What if there is yet another requirement which has more charges?
@@ -6923,8 +6982,8 @@ function Crafting___CheckRecipeRequirements takes integer recipe,unit whichUnit 
     set whichGroup=null
     
     // food check
-    if ( (Crafting___recipesIsUnit[(recipe)]) ) then // INLINED!!
-        set result=IMinBJ(( GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_CAP) - GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_USED) ) / GetFoodUsed(Crafting___recipesItemTypeIds[recipe]), result)
+    if ( (Crafting__recipesIsUnit[(recipe)]) ) then // INLINED!!
+        set result=IMinBJ(( GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_CAP) - GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_USED) ) / GetFoodUsed(Crafting__recipesItemTypeIds[recipe]), result)
     endif
     
     set owner=null
@@ -6937,11 +6996,11 @@ function Crafting___CheckRecipeRequirements takes integer recipe,unit whichUnit 
     return 0
 endfunction
 
-function Crafting___ConsumeRecipeRequirements takes integer recipe,integer charges,unit whichUnit returns integer
+function Crafting__ConsumeRecipeRequirements takes integer recipe,integer charges,unit whichUnit returns integer
     local integer result= 0
-    local integer counter= Crafting___recipesRequirementCounters[recipe]
+    local integer counter= Crafting__recipesRequirementCounters[recipe]
     local integer matchingRequirements= 0
-    local integer minRequirements= Crafting___recipesMinRequirements[recipe]
+    local integer minRequirements= Crafting__recipesMinRequirements[recipe]
     local integer consumedRequirements= 0
     local boolean consume= false
     local integer i= 0
@@ -6949,7 +7008,7 @@ function Crafting___ConsumeRecipeRequirements takes integer recipe,integer charg
         exitwhen ( i == counter or matchingRequirements >= minRequirements )
         set consume=GetRecipeRequirementConsume(recipe , i)
         if ( consume ) then
-            set consumedRequirements=Crafting___ConsumeRecipeRequirement(recipe , i , charges , whichUnit)
+            set consumedRequirements=Crafting__ConsumeRecipeRequirement(recipe , i , charges , whichUnit)
             set result=result + consumedRequirements
         endif
         if ( consumedRequirements > 0 or not consume ) then
@@ -6961,11 +7020,11 @@ function Crafting___ConsumeRecipeRequirements takes integer recipe,integer charg
 endfunction
 
 function GetRecipeByUIItemTypeId takes integer uIItemTypeId returns integer
-    local integer counter= Crafting___recipesCounter
+    local integer counter= Crafting__recipesCounter
     local integer recipe= 0
     loop
         exitwhen ( recipe == counter )
-        if ( Crafting___recipesUIItemTypeIds[recipe] == uIItemTypeId ) then
+        if ( Crafting__recipesUIItemTypeIds[recipe] == uIItemTypeId ) then
             return recipe
         endif
         set recipe=recipe + 1
@@ -6973,14 +7032,14 @@ function GetRecipeByUIItemTypeId takes integer uIItemTypeId returns integer
     return - 1
 endfunction
 
-function Crafting___CheckAllRecipesRequirementsForPageEx takes unit whichUnit,integer page returns integer
+function Crafting__CheckAllRecipesRequirementsForPageEx takes unit whichUnit,integer page returns integer
     local integer result= 0
     local integer requirementCheckCounter= 0
     local integer startSlot= page * Crafting_MAX_SLOTS
     local integer maxSlot= startSlot + Crafting_MAX_SLOTS
     local integer slot= startSlot
     local integer recipe= 0
-    local group whichGroup= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
     local integer j= 0
     local unit groupUnit= null
     //call BJDebugMsg("Checking " + I2S(counter) + " recipes for unit " + GetUnitName(whichUnit) + " at page " + I2S(page) + " with " + I2S(recipesPerPage) + " recipes per page.")
@@ -6989,7 +7048,7 @@ function Crafting___CheckAllRecipesRequirementsForPageEx takes unit whichUnit,in
         if ( not (sg__PagedButtons_Type_get_whichType(GetPagedButton((whichUnit ) , ( slot))) == PagedButtons_BUTTON_TYPE_SPACER) ) then // INLINED!!
             set recipe=GetRecipeByUIItemTypeId(GetPagedButtonId(whichUnit , slot))
             if ( recipe != - 1 ) then
-                set requirementCheckCounter=Crafting___CheckRecipeRequirements(recipe , whichUnit)
+                set requirementCheckCounter=Crafting__CheckRecipeRequirements(recipe , whichUnit)
                 //call BJDebugMsg("Get requirement counter " + I2S(requirementCheckCounter) + " and group size " + I2S(BlzGroupGetSize(whichGroup)))
                 set j=0
                 loop
@@ -7001,19 +7060,19 @@ function Crafting___CheckAllRecipesRequirementsForPageEx takes unit whichUnit,in
                             set result=result + 1
                            
                             //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " to unit " + GetUnitName(groupUnit))
-                            call RemoveItemFromStock(groupUnit, Crafting___recipesUIItemTypeIds[recipe])
+                            call RemoveItemFromStock(groupUnit, Crafting__recipesUIItemTypeIds[recipe])
                             //call BJDebugMsg("Crafted item: " + GetObjectName(recipesUIItemTypeIds[recipe]) + " with stock " + I2S(requirementCheckCounter))
                             // Even although this is 2 it becomes like 1 or something by the paged buttons system?
-                            call AddItemToStock(groupUnit, Crafting___recipesUIItemTypeIds[recipe], requirementCheckCounter, requirementCheckCounter)
+                            call AddItemToStock(groupUnit, Crafting__recipesUIItemTypeIds[recipe], requirementCheckCounter, requirementCheckCounter)
                         else
                             //call BJDebugMsg("Removing UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " from unit " + GetUnitName(groupUnit))
-                            call RemoveItemFromStock(groupUnit, Crafting___recipesUIItemTypeIds[recipe])
-                            call AddItemToStock(groupUnit, Crafting___recipesUIItemTypeIds[recipe], 0, 1)
+                            call RemoveItemFromStock(groupUnit, Crafting__recipesUIItemTypeIds[recipe])
+                            call AddItemToStock(groupUnit, Crafting__recipesUIItemTypeIds[recipe], 0, 1)
                         endif
                     //else
                         //call BJDebugMsg("Item crafting is disabled." )
                     else
-                        call SimError(GetOwningPlayer(whichUnit) , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("RECIPE_IS_DISABLED")))),(GetObjectName(Crafting___recipesUIItemTypeIds[(recipe)]))))) // INLINED!!
+                        call SimError(GetOwningPlayer(whichUnit) , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("RECIPE_IS_DISABLED")))),(GetObjectName(Crafting__recipesUIItemTypeIds[(recipe)]))))) // INLINED!!
                     endif
                     set groupUnit=null
                     set j=j + 1
@@ -7027,22 +7086,22 @@ function Crafting___CheckAllRecipesRequirementsForPageEx takes unit whichUnit,in
 endfunction
 
 
-function Crafting___CheckAllRecipesRequirementsForPageNewOpLimit takes nothing returns nothing
-    call Crafting___CheckAllRecipesRequirementsForPageEx(Crafting___tmpUnit , Crafting___tmpInteger0)
+function Crafting__CheckAllRecipesRequirementsForPageNewOpLimit takes nothing returns nothing
+    call Crafting__CheckAllRecipesRequirementsForPageEx(Crafting__tmpUnit , Crafting__tmpInteger0)
 endfunction
 
-function Crafting___CheckAllRecipesRequirementsForPage takes unit whichUnit,integer page returns nothing
-    set Crafting___tmpUnit=whichUnit
-    set Crafting___tmpInteger0=page
-    call ForForce(bj_FORCE_PLAYER[0], (function Crafting___CheckAllRecipesRequirementsForPageNewOpLimit)) // INLINED!!
+function Crafting__CheckAllRecipesRequirementsForPage takes unit whichUnit,integer page returns nothing
+    set Crafting__tmpUnit=whichUnit
+    set Crafting__tmpInteger0=page
+    call ForForce(bj_FORCE_PLAYER[0], (function Crafting__CheckAllRecipesRequirementsForPageNewOpLimit)) // INLINED!!
 endfunction
 
-function Crafting___UpdateStocks takes unit whichUnit returns nothing
-    call Crafting___CheckAllRecipesRequirementsForPage(whichUnit , GetPagedButtonsPage(whichUnit))
+function Crafting__UpdateStocks takes unit whichUnit returns nothing
+    call Crafting__CheckAllRecipesRequirementsForPage(whichUnit , GetPagedButtonsPage(whichUnit))
 endfunction
 
-function Crafting___ClearItemCraftingUnit takes unit whichUnit returns nothing
-    local group whichGroup= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+function Crafting__ClearItemCraftingUnit takes unit whichUnit returns nothing
+    local group whichGroup= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
     if ( whichGroup != null ) then
         call GroupRemoveUnit(whichGroup, whichUnit)
         if ( BlzGroupGetSize(whichGroup) == 0 ) then
@@ -7052,21 +7111,21 @@ function Crafting___ClearItemCraftingUnit takes unit whichUnit returns nothing
         set whichGroup=null
     endif
 
-    call FlushChildHashtable(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit))
+    call FlushChildHashtable(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit))
 endfunction
 
 function SetItemCraftingRecipeEnabled takes unit whichUnit,integer recipe,boolean enabled returns nothing
     local integer page= GetPagedButtonsPage(whichUnit)
-    local integer counter= LoadInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES)
+    local integer counter= LoadInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES)
     local integer disabledRecipe= 0
     local boolean found= false
     local integer i= 0
     if ( enabled ) then
         loop
             exitwhen ( i >= counter )
-            set disabledRecipe=LoadInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES + i)
+            set disabledRecipe=LoadInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES + i)
             if ( found == true ) then
-                call SaveInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES + i - 1, disabledRecipe)
+                call SaveInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES + i - 1, disabledRecipe)
             endif
             if ( disabledRecipe == recipe ) then
                 set found=true
@@ -7074,23 +7133,23 @@ function SetItemCraftingRecipeEnabled takes unit whichUnit,integer recipe,boolea
             set i=i + 1
         endloop
         if ( found ) then
-            call SaveInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES, counter - 1)
+            call SaveInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES, counter - 1)
         endif
     else
         loop
             exitwhen ( i >= counter )
-            set disabledRecipe=LoadInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES + i)
+            set disabledRecipe=LoadInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES + i)
             if ( disabledRecipe == recipe ) then
                 set found=true
             endif
             set i=i + 1
         endloop
         if ( not found ) then
-            call SaveInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES + counter, recipe)
-            call SaveInteger(Crafting___itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting___HASHTABLE_KEY_DISABLED_RECIPES, counter + 1)
+            call SaveInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES + counter, recipe)
+            call SaveInteger(Crafting__itemCraftingUnitsHashTable, GetHandleId(whichUnit), Crafting__HASHTABLE_KEY_DISABLED_RECIPES, counter + 1)
         endif
     endif
-    call Crafting___CheckAllRecipesRequirementsForPage(whichUnit , page)
+    call Crafting__CheckAllRecipesRequirementsForPage(whichUnit , page)
 endfunction
 
 function CraftItem takes item soldItem,unit sellingUnit,unit buyingUnit returns item
@@ -7106,21 +7165,21 @@ function CraftItem takes item soldItem,unit sellingUnit,unit buyingUnit returns 
     local unit craftedUnit= null
     local item array additionalCraftedItems
     local integer additionalCraftedItemsCounter= 0
-    local integer counter= Crafting___recipesCounter
+    local integer counter= Crafting__recipesCounter
     local integer j= 0
     local integer recipe= 0
     loop
         exitwhen ( recipe >= counter and craftedItem != null )
-        if ( not (Crafting___recipesIsSpacer[(recipe)]) and Crafting___recipesUIItemTypeIds[recipe] == soldItemTypeId ) then // INLINED!!
+        if ( not (Crafting__recipesIsSpacer[(recipe)]) and Crafting__recipesUIItemTypeIds[recipe] == soldItemTypeId ) then // INLINED!!
             if ( GetRecipeAvailableForPlayer(recipe , playerIdBuying) ) then
-                set charges=Crafting___CheckRecipeRequirements(recipe , sellingUnit)
+                set charges=Crafting__CheckRecipeRequirements(recipe , sellingUnit)
                 if ( charges > 0 ) then
                     call RemoveItem(soldItem)
                     set soldItem=null
                     
-                    if ( (Crafting___recipesIsUnit[(recipe)]) ) then // INLINED!!
+                    if ( (Crafting__recipesIsUnit[(recipe)]) ) then // INLINED!!
                         set availableFood=GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_CAP) - GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_USED)
-                        set chargesWithFoodLimit=availableFood / GetFoodUsed(Crafting___recipesItemTypeIds[recipe])
+                        set chargesWithFoodLimit=availableFood / GetFoodUsed(Crafting__recipesItemTypeIds[recipe])
                         set chargesWithFoodLimit=IMinBJ(chargesWithFoodLimit, charges)
                         if ( chargesWithFoodLimit > 0 ) then
                             if ( chargesWithFoodLimit < charges ) then
@@ -7130,37 +7189,37 @@ function CraftItem takes item soldItem,unit sellingUnit,unit buyingUnit returns 
                             set j=0
                             loop
                                 exitwhen ( j >= chargesWithFoodLimit )
-                                set craftedUnit=CreateUnit(owner, Crafting___recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit), GetUnitFacing(sellingUnit))
-                                call Crafting___ExecuteCraftingCallbacksUnit(recipe , sellingUnit , craftedUnit)
+                                set craftedUnit=CreateUnit(owner, Crafting__recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit), GetUnitFacing(sellingUnit))
+                                call Crafting__ExecuteCraftingCallbacksUnit(recipe , sellingUnit , craftedUnit)
                                 set j=j + 1
                             endloop
 
-                            call Crafting___ConsumeRecipeRequirements(recipe , chargesWithFoodLimit , sellingUnit)
+                            call Crafting__ConsumeRecipeRequirements(recipe , chargesWithFoodLimit , sellingUnit)
                         else
                             call SimError(owner , GetLocalizedString("NOT_ENOUGH_FOOD"))
                         endif
                     else
-                        set craftedItem=CreateItem(Crafting___recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit))
+                        set craftedItem=CreateItem(Crafting__recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit))
                         
                         if ( GetItemCharges(craftedItem) > 0 ) then
                             call SetItemCharges(craftedItem, charges)
-                            call Crafting___ExecuteCraftingCallbacks(recipe , sellingUnit , craftedItem)
+                            call Crafting__ExecuteCraftingCallbacks(recipe , sellingUnit , craftedItem)
                         // create non charged items separately
                         else
-                            call Crafting___ExecuteCraftingCallbacks(recipe , sellingUnit , craftedItem)
+                            call Crafting__ExecuteCraftingCallbacks(recipe , sellingUnit , craftedItem)
                             
                             set j=1
                             loop
                                 exitwhen ( j >= charges )
-                                set craftedItem=CreateItem(Crafting___recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit))
-                                call Crafting___ExecuteCraftingCallbacks(recipe , sellingUnit , craftedItem)
+                                set craftedItem=CreateItem(Crafting__recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit))
+                                call Crafting__ExecuteCraftingCallbacks(recipe , sellingUnit , craftedItem)
                                 set additionalCraftedItems[additionalCraftedItemsCounter]=craftedItem
                                 set additionalCraftedItemsCounter=additionalCraftedItemsCounter + 1
                                 set j=j + 1
                             endloop
                         endif
                         
-                        call Crafting___ConsumeRecipeRequirements(recipe , charges , sellingUnit)
+                        call Crafting__ConsumeRecipeRequirements(recipe , charges , sellingUnit)
                         
                         // add item after callbacks since it might lead to stacking and the crafted item may become null
                         // call ite also after consuming requirements since the inventory might have more slots now
@@ -7175,30 +7234,30 @@ function CraftItem takes item soldItem,unit sellingUnit,unit buyingUnit returns 
                     endif
                 endif
             else
-                call SimError(ownerBuying , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("X_IS_NOT_AVAILABLE")))),GetObjectName(Crafting___recipesItemTypeIds[recipe])))) // INLINED!!
+                call SimError(ownerBuying , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("X_IS_NOT_AVAILABLE")))),GetObjectName(Crafting__recipesItemTypeIds[recipe])))) // INLINED!!
             endif
         endif
         set recipe=recipe + 1
     endloop
-    call Crafting___CheckAllRecipesRequirementsForPage(sellingUnit , page) // update all stocks but after crafting something we might need some delay to update stocks.
+    call Crafting__CheckAllRecipesRequirementsForPage(sellingUnit , page) // update all stocks but after crafting something we might need some delay to update stocks.
     set owner=null
     set ownerBuying=null
     return craftedItem
 endfunction
 
-function Crafting___ForGroupUpdateStocks takes nothing returns nothing
-    call Crafting___UpdateStocks(GetEnumUnit())
+function Crafting__ForGroupUpdateStocks takes nothing returns nothing
+    call Crafting__UpdateStocks(GetEnumUnit())
 endfunction
 
-function Crafting___UpdateAllStocks takes nothing returns nothing
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks)
+function Crafting__UpdateAllStocks takes nothing returns nothing
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks)
 endfunction
 
-function Crafting___ShowRecipeForUnit takes integer recipe,unit whichUnit returns boolean
-    if ( Crafting___recipeShowCallbackTrigger != null and IsTriggerEnabled(Crafting___recipeShowCallbackTrigger) ) then
-        set Crafting___triggerRecipe=recipe
-        set Crafting___triggerCraftingUnit=whichUnit
-        return TriggerEvaluate(Crafting___recipeShowCallbackTrigger)
+function Crafting__ShowRecipeForUnit takes integer recipe,unit whichUnit returns boolean
+    if ( Crafting__recipeShowCallbackTrigger != null and IsTriggerEnabled(Crafting__recipeShowCallbackTrigger) ) then
+        set Crafting__triggerRecipe=recipe
+        set Crafting__triggerCraftingUnit=whichUnit
+        return TriggerEvaluate(Crafting__recipeShowCallbackTrigger)
     endif
     return true
 endfunction
@@ -7209,24 +7268,24 @@ function EnableItemCraftingUnit takes unit whichUnit returns nothing
     local integer index= 0
     local group whichGroup= CreateGroup()
     call GroupAddUnit(whichGroup, whichUnit)
-    call GroupAddUnit(Crafting___itemCraftingUnits, whichUnit)
-    call SaveGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit )), Crafting___HASHTABLE_KEY_GROUP, ( whichGroup)) // INLINED!!
+    call GroupAddUnit(Crafting__itemCraftingUnits, whichUnit)
+    call SaveGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit )), Crafting__HASHTABLE_KEY_GROUP, ( whichGroup)) // INLINED!!
     //call BJDebugMsg("Enable crafting for unit " + GetUnitName(whichUnit))
     call EnablePagedButtons(whichUnit)
     call SetPagedButtonsSlotsPerPage(whichUnit , Crafting_MAX_SLOTS)
     set i=0
     loop
-        exitwhen ( i == Crafting___recipesCounter )
+        exitwhen ( i == Crafting__recipesCounter )
         //call BJDebugMsg("Recipe " + I2S(i) + ": " + GetObjectName(recipesUIItemTypeIds[i]))
-        if ( GetRecipeAvailableForPlayer(i , playerId) and Crafting___ShowRecipeForUnit(i , whichUnit) ) then
-            if ( Crafting___recipesIsSpacer[i] ) then
-                call SetPagedButtonsCurrentPageName(whichUnit , Crafting___recipesPageName[i])
+        if ( GetRecipeAvailableForPlayer(i , playerId) and Crafting__ShowRecipeForUnit(i , whichUnit) ) then
+            if ( Crafting__recipesIsSpacer[i] ) then
+                call SetPagedButtonsCurrentPageName(whichUnit , Crafting__recipesPageName[i])
                 call AddPagedButtonsSpacersRemaining(whichUnit)
             else
-                if ( Crafting___recipesPageName[i] != null and StringLength(Crafting___recipesPageName[i]) > 0 ) then
-                    call SetPagedButtonsCurrentPageName(whichUnit , Crafting___recipesPageName[i])
+                if ( Crafting__recipesPageName[i] != null and StringLength(Crafting__recipesPageName[i]) > 0 ) then
+                    call SetPagedButtonsCurrentPageName(whichUnit , Crafting__recipesPageName[i])
                 endif
-                set index=(AddPagedButtonsId((whichUnit ) , ( Crafting___recipesUIItemTypeIds[i]) , PagedButtons_BUTTON_TYPE_ITEM)) // INLINED!!
+                set index=(AddPagedButtonsId((whichUnit ) , ( Crafting__recipesUIItemTypeIds[i]) , PagedButtons_BUTTON_TYPE_ITEM)) // INLINED!!
                 call sg__PagedButtons_SlotType_set_replenish((GetPagedButton(whichUnit , index)),false) // prevents auto replenish
             endif
         endif
@@ -7234,25 +7293,25 @@ function EnableItemCraftingUnit takes unit whichUnit returns nothing
     endloop
     //call CheckAllRecipesRequirementsForPage(whichUnit, 0, PagedButtonsSystem_SLOTS_PER_PAGE)
 
-    if ( BlzGroupGetSize(Crafting___itemCraftingUnits) == 1 ) then
+    if ( BlzGroupGetSize(Crafting__itemCraftingUnits) == 1 ) then
         // This timer is required since we can only set the maximum time to 3600 seconds.
-        call TimerStart(Crafting___itemCraftingStockUpdateTimer, Crafting_UPDATE_INTERVAL, true, function Crafting___UpdateAllStocks)
+        call TimerStart(Crafting__itemCraftingStockUpdateTimer, Crafting_UPDATE_INTERVAL, true, function Crafting__UpdateAllStocks)
     endif
 endfunction
 
 function IsItemCraftingUnitEnabled takes unit whichUnit returns boolean
-    return IsUnitInGroup(whichUnit, Crafting___itemCraftingUnits)
+    return IsUnitInGroup(whichUnit, Crafting__itemCraftingUnits)
 endfunction
 
 function DisableItemCraftingUnit takes unit whichUnit returns boolean
-    if ( (IsUnitInGroup((whichUnit), Crafting___itemCraftingUnits)) ) then // INLINED!!
-        call GroupRemoveUnit(Crafting___itemCraftingUnits, whichUnit)
+    if ( (IsUnitInGroup((whichUnit), Crafting__itemCraftingUnits)) ) then // INLINED!!
+        call GroupRemoveUnit(Crafting__itemCraftingUnits, whichUnit)
         call DisablePagedButtons(whichUnit)
 
-        call Crafting___ClearItemCraftingUnit(whichUnit)
+        call Crafting__ClearItemCraftingUnit(whichUnit)
 
-        if ( BlzGroupGetSize(Crafting___itemCraftingUnits) == 0 ) then
-            call PauseTimer(Crafting___itemCraftingStockUpdateTimer)
+        if ( BlzGroupGetSize(Crafting__itemCraftingUnits) == 0 ) then
+            call PauseTimer(Crafting__itemCraftingStockUpdateTimer)
         endif
         
         return true
@@ -7261,8 +7320,8 @@ function DisableItemCraftingUnit takes unit whichUnit returns boolean
 endfunction
 
 function LinkItemCraftingUnitInventories takes unit whichUnit0,unit whichUnit1 returns group
-    local group whichGroup0= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit0)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
-    local group whichGroup1= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit1)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup0= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit0)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup1= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit1)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
     local integer i= 0
 
     if ( whichGroup0 == null ) then
@@ -7281,7 +7340,7 @@ function LinkItemCraftingUnitInventories takes unit whichUnit0,unit whichUnit1 r
         set i=0
         loop
             exitwhen ( i == BlzGroupGetSize(whichGroup0) )
-            call SaveGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((BlzGroupUnitAt(whichGroup0, i) )), Crafting___HASHTABLE_KEY_GROUP, ( whichGroup0)) // INLINED!!
+            call SaveGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((BlzGroupUnitAt(whichGroup0, i) )), Crafting__HASHTABLE_KEY_GROUP, ( whichGroup0)) // INLINED!!
             set i=i + 1
         endloop
         call GroupClear(whichGroup1)
@@ -7289,8 +7348,8 @@ function LinkItemCraftingUnitInventories takes unit whichUnit0,unit whichUnit1 r
         set whichGroup1=null
     endif
     
-    call Crafting___UpdateStocks(whichUnit0)
-    call Crafting___UpdateStocks(whichUnit1)
+    call Crafting__UpdateStocks(whichUnit0)
+    call Crafting__UpdateStocks(whichUnit1)
 
     return whichGroup0
 endfunction
@@ -7305,14 +7364,14 @@ function LinkItemCraftingGroupInventories takes group source returns group
             set i=i + 1
         endloop
         set first=null
-        return (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((first)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+        return (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((first)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
     endif
     return null
 endfunction
 
 function UnlinkItemCraftingUnitInventories takes unit whichUnit0,unit whichUnit1 returns group
-    local group whichGroup0= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit0)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
-    local group whichGroup1= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit1)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup0= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit0)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup1= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit1)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
 
     if ( whichGroup0 != null ) then
         call GroupRemoveUnit(whichGroup0, whichUnit1)
@@ -7330,46 +7389,46 @@ function UnlinkItemCraftingUnitInventories takes unit whichUnit0,unit whichUnit1
     set whichGroup1=CreateGroup()
     call GroupAddUnit(whichGroup1, whichUnit1)
 
-    call SaveGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit1 )), Crafting___HASHTABLE_KEY_GROUP, ( whichGroup1)) // INLINED!!
+    call SaveGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit1 )), Crafting__HASHTABLE_KEY_GROUP, ( whichGroup1)) // INLINED!!
     
-    call Crafting___UpdateStocks(whichUnit0)
-    call Crafting___UpdateStocks(whichUnit1)
+    call Crafting__UpdateStocks(whichUnit0)
+    call Crafting__UpdateStocks(whichUnit1)
 
     return whichGroup1
 endfunction
 
 function ItemCraftingUnitInventoriesAreLinked takes unit whichUnit0,unit whichUnit1 returns boolean
-    local group whichGroup0= (LoadGroupHandle(Crafting___itemCraftingUnitsHashTable, GetHandleId((whichUnit0)), Crafting___HASHTABLE_KEY_GROUP)) // INLINED!!
+    local group whichGroup0= (LoadGroupHandle(Crafting__itemCraftingUnitsHashTable, GetHandleId((whichUnit0)), Crafting__HASHTABLE_KEY_GROUP)) // INLINED!!
 
     return IsUnitInGroup(whichUnit1, whichGroup0)
 endfunction
 
-function Crafting___TriggerConditionIsItemCraftingUnitEnabled takes nothing returns boolean
-    return (IsUnitInGroup((GetTriggerUnit()), Crafting___itemCraftingUnits)) // INLINED!!
+function Crafting__TriggerConditionIsItemCraftingUnitEnabled takes nothing returns boolean
+    return (IsUnitInGroup((GetTriggerUnit()), Crafting__itemCraftingUnits)) // INLINED!!
 endfunction
 
-function Crafting___TriggerActionCheckAllRecipesRequirements takes nothing returns nothing
+function Crafting__TriggerActionCheckAllRecipesRequirements takes nothing returns nothing
     //call BJDebugMsg("Crafter " + GetUnitName(GetTriggerUnit()) + " picks up or drops an item.")
-    call Crafting___UpdateStocks(GetTriggerUnit())
+    call Crafting__UpdateStocks(GetTriggerUnit())
 endfunction
 
-function Crafting___TriggerActionCheckAllRecipesRequirementsDelayed takes nothing returns nothing
+function Crafting__TriggerActionCheckAllRecipesRequirementsDelayed takes nothing returns nothing
     //call BJDebugMsg("Crafter " + GetUnitName(GetTriggerUnit()) + " picks up or drops an item.")
     local unit triggerUnit= GetTriggerUnit()
     call TriggerSleepAction(0.0) // wait until item has been dropped
-    call Crafting___UpdateStocks(triggerUnit)
+    call Crafting__UpdateStocks(triggerUnit)
     set triggerUnit=null
 endfunction
 
-function Crafting___TriggerActionCraftItem takes nothing returns nothing
+function Crafting__TriggerActionCraftItem takes nothing returns nothing
     local unit shop= GetSellingUnit()
     call CraftItem(GetSoldItem() , shop , GetBuyingUnit())
     call TriggerSleepAction(0.0) // wait until we can refresh the stock
-    call Crafting___UpdateStocks(shop)
+    call Crafting__UpdateStocks(shop)
     set shop=null
 endfunction
 
-function Crafting___TriggerConditionDisassemble takes nothing returns boolean
+function Crafting__TriggerConditionDisassemble takes nothing returns boolean
     return GetSpellAbilityId() == Crafting_DISASSEMBLE_ABILITY_ID
 endfunction
 
@@ -7384,12 +7443,12 @@ function DisassembleItem takes item soldItem,unit sellingUnit returns integer
     local integer result= 0
     
     if ( recipe != - 1 ) then
-        call Crafting___ExecuteDisassembleCallbacks(recipe , sellingUnit , soldItem , null)
+        call Crafting__ExecuteDisassembleCallbacks(recipe , sellingUnit , soldItem , null)
         call RemoveItem(soldItem)
         set soldItem=null
         set i=0
-        set max=(Crafting___recipesRequirementCounters[(recipe)]) // INLINED!!
-        set minRequirements=(Crafting___recipesMinRequirements[(recipe)]) // INLINED!!
+        set max=(Crafting__recipesRequirementCounters[(recipe)]) // INLINED!!
+        set minRequirements=(Crafting__recipesMinRequirements[(recipe)]) // INLINED!!
         loop
             exitwhen ( i == max or ( minRequirements > 0 and i > minRequirements ) )
             set requirement=CreateItem(GetRecipeRequirementItemTypeId(recipe , i), GetUnitX(sellingUnit), GetUnitY(sellingUnit))
@@ -7417,12 +7476,12 @@ function DisassembleUnit takes unit target,unit sellingUnit returns integer
     local integer result= 0
     
     if ( recipe != - 1 ) then
-        call Crafting___ExecuteDisassembleCallbacks(recipe , sellingUnit , null , target)
+        call Crafting__ExecuteDisassembleCallbacks(recipe , sellingUnit , null , target)
         call h__RemoveUnit(target)
         set target=null
         set i=0
-        set max=(Crafting___recipesRequirementCounters[(recipe)]) // INLINED!!
-        set minRequirements=(Crafting___recipesMinRequirements[(recipe)]) // INLINED!!
+        set max=(Crafting__recipesRequirementCounters[(recipe)]) // INLINED!!
+        set minRequirements=(Crafting__recipesMinRequirements[(recipe)]) // INLINED!!
         loop
             exitwhen ( i == max or ( minRequirements > 0 and i > minRequirements ) )
             set requirement=CreateItem(GetRecipeRequirementItemTypeId(recipe , i), GetUnitX(sellingUnit), GetUnitY(sellingUnit))
@@ -7439,7 +7498,7 @@ function DisassembleUnit takes unit target,unit sellingUnit returns integer
     return result
 endfunction
 
-function Crafting___TriggerActionDisassembleItem takes nothing returns nothing
+function Crafting__TriggerActionDisassembleItem takes nothing returns nothing
     local unit sellingUnit= GetTriggerUnit()
     local unit target= GetSpellTargetUnit()
     local item targetItem= GetSpellTargetItem()
@@ -7447,7 +7506,7 @@ function Crafting___TriggerActionDisassembleItem takes nothing returns nothing
     local integer counter= 0
     local integer i= 0
     if ( target != null ) then
-        if ( (IsUnitInGroup((target), Crafting___itemCraftingUnits)) and GetOwningPlayer(sellingUnit) == GetOwningPlayer(target) ) then // INLINED!!
+        if ( (IsUnitInGroup((target), Crafting__itemCraftingUnits)) and GetOwningPlayer(sellingUnit) == GetOwningPlayer(target) ) then // INLINED!!
             loop
                 exitwhen ( i == bj_MAX_INVENTORY )
                 set slotItem=UnitItemInSlot(sellingUnit, i)
@@ -7477,83 +7536,83 @@ function Crafting___TriggerActionDisassembleItem takes nothing returns nothing
     set targetItem=null
 endfunction
 
-function Crafting___TriggerConditionChangePage takes nothing returns boolean
-    return (IsUnitInGroup(((PagedButtons__triggerShop)), Crafting___itemCraftingUnits)) // INLINED!!
+function Crafting__TriggerConditionChangePage takes nothing returns boolean
+    return (IsUnitInGroup(((PagedButtons__triggerShop)), Crafting__itemCraftingUnits)) // INLINED!!
 endfunction
 
-function Crafting___TriggerActionChangePage takes nothing returns nothing
-    call Crafting___UpdateStocks((PagedButtons__triggerShop)) // INLINED!!
+function Crafting__TriggerActionChangePage takes nothing returns nothing
+    call Crafting__UpdateStocks((PagedButtons__triggerShop)) // INLINED!!
 endfunction
 
-function Crafting___TriggerConditionTrainStart takes nothing returns boolean
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks) // INLINED!!
+function Crafting__TriggerConditionTrainStart takes nothing returns boolean
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks) // INLINED!!
     return false
 endfunction
     
-function Crafting___TriggerConditionTrainCancel takes nothing returns boolean
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks) // INLINED!!
+function Crafting__TriggerConditionTrainCancel takes nothing returns boolean
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks) // INLINED!!
     return false
 endfunction
     
-function Crafting___TriggerConditionReviveStart takes nothing returns boolean
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks) // INLINED!!
+function Crafting__TriggerConditionReviveStart takes nothing returns boolean
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks) // INLINED!!
     return false
 endfunction
     
-function Crafting___TriggerConditionReviveCancel takes nothing returns boolean
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks) // INLINED!!
+function Crafting__TriggerConditionReviveCancel takes nothing returns boolean
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks) // INLINED!!
     return false
 endfunction
     
-function Crafting___TriggerConditionSell takes nothing returns boolean
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks) // INLINED!!
+function Crafting__TriggerConditionSell takes nothing returns boolean
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks) // INLINED!!
     return false
 endfunction
     
-function Crafting___TriggerConditionDeath takes nothing returns boolean
-    call ForGroup(Crafting___itemCraftingUnits, function Crafting___ForGroupUpdateStocks) // INLINED!!
+function Crafting__TriggerConditionDeath takes nothing returns boolean
+    call ForGroup(Crafting__itemCraftingUnits, function Crafting__ForGroupUpdateStocks) // INLINED!!
     return false
 endfunction
 
-function Crafting___Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(Crafting___pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    call TriggerAddCondition(Crafting___pickupTrigger, Condition(function Crafting___TriggerConditionIsItemCraftingUnitEnabled))
-    call TriggerAddAction(Crafting___pickupTrigger, function Crafting___TriggerActionCheckAllRecipesRequirements)
+function Crafting__Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(Crafting__pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(Crafting__pickupTrigger, Condition(function Crafting__TriggerConditionIsItemCraftingUnitEnabled))
+    call TriggerAddAction(Crafting__pickupTrigger, function Crafting__TriggerActionCheckAllRecipesRequirements)
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___dropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
-    call TriggerAddCondition(Crafting___dropTrigger, Condition(function Crafting___TriggerConditionIsItemCraftingUnitEnabled))
-    call TriggerAddAction(Crafting___dropTrigger, function Crafting___TriggerActionCheckAllRecipesRequirementsDelayed)
+    call TriggerRegisterAnyUnitEventBJ(Crafting__dropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
+    call TriggerAddCondition(Crafting__dropTrigger, Condition(function Crafting__TriggerConditionIsItemCraftingUnitEnabled))
+    call TriggerAddAction(Crafting__dropTrigger, function Crafting__TriggerActionCheckAllRecipesRequirementsDelayed)
 
-    call TriggerRegisterAnyUnitEventBJ(Crafting___itemCraftTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
-    call TriggerAddCondition(Crafting___itemCraftTrigger, Condition(function Crafting___TriggerConditionIsItemCraftingUnitEnabled))
-    call TriggerAddAction(Crafting___itemCraftTrigger, function Crafting___TriggerActionCraftItem)
+    call TriggerRegisterAnyUnitEventBJ(Crafting__itemCraftTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
+    call TriggerAddCondition(Crafting__itemCraftTrigger, Condition(function Crafting__TriggerConditionIsItemCraftingUnitEnabled))
+    call TriggerAddAction(Crafting__itemCraftTrigger, function Crafting__TriggerActionCraftItem)
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___itemDisassembleTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(Crafting___itemDisassembleTrigger, Condition(function Crafting___TriggerConditionDisassemble))
-    call TriggerAddAction(Crafting___itemDisassembleTrigger, function Crafting___TriggerActionDisassembleItem)
+    call TriggerRegisterAnyUnitEventBJ(Crafting__itemDisassembleTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(Crafting__itemDisassembleTrigger, Condition(function Crafting__TriggerConditionDisassemble))
+    call TriggerAddAction(Crafting__itemDisassembleTrigger, function Crafting__TriggerActionDisassembleItem)
 
-    call TriggerRegisterChangePagedButtons(Crafting___itemCraftingChangePageTrigger)
-    call TriggerAddCondition(Crafting___itemCraftingChangePageTrigger, Condition(function Crafting___TriggerConditionChangePage))
-    call TriggerAddAction(Crafting___itemCraftingChangePageTrigger, function Crafting___TriggerActionChangePage)
+    call TriggerRegisterChangePagedButtons(Crafting__itemCraftingChangePageTrigger)
+    call TriggerAddCondition(Crafting__itemCraftingChangePageTrigger, Condition(function Crafting__TriggerConditionChangePage))
+    call TriggerAddAction(Crafting__itemCraftingChangePageTrigger, function Crafting__TriggerActionChangePage)
     
     // update food available
-    call TriggerRegisterAnyUnitEventBJ(Crafting___trainStartTrigger, EVENT_PLAYER_UNIT_TRAIN_START)
-    call TriggerAddCondition(Crafting___trainStartTrigger, Condition(function Crafting___TriggerConditionTrainStart))
+    call TriggerRegisterAnyUnitEventBJ(Crafting__trainStartTrigger, EVENT_PLAYER_UNIT_TRAIN_START)
+    call TriggerAddCondition(Crafting__trainStartTrigger, Condition(function Crafting__TriggerConditionTrainStart))
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___trainCancelTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
-    call TriggerAddCondition(Crafting___trainCancelTrigger, Condition(function Crafting___TriggerConditionTrainCancel))
+    call TriggerRegisterAnyUnitEventBJ(Crafting__trainCancelTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
+    call TriggerAddCondition(Crafting__trainCancelTrigger, Condition(function Crafting__TriggerConditionTrainCancel))
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___reviveStartTrigger, EVENT_PLAYER_HERO_REVIVE_START)
-    call TriggerAddCondition(Crafting___reviveStartTrigger, Condition(function Crafting___TriggerConditionReviveStart))
+    call TriggerRegisterAnyUnitEventBJ(Crafting__reviveStartTrigger, EVENT_PLAYER_HERO_REVIVE_START)
+    call TriggerAddCondition(Crafting__reviveStartTrigger, Condition(function Crafting__TriggerConditionReviveStart))
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___reviveCancelTrigger, EVENT_PLAYER_HERO_REVIVE_CANCEL)
-    call TriggerAddCondition(Crafting___reviveCancelTrigger, Condition(function Crafting___TriggerConditionReviveCancel))
+    call TriggerRegisterAnyUnitEventBJ(Crafting__reviveCancelTrigger, EVENT_PLAYER_HERO_REVIVE_CANCEL)
+    call TriggerAddCondition(Crafting__reviveCancelTrigger, Condition(function Crafting__TriggerConditionReviveCancel))
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___sellTrigger, EVENT_PLAYER_UNIT_SELL)
-    call TriggerAddCondition(Crafting___sellTrigger, Condition(function Crafting___TriggerConditionSell))
+    call TriggerRegisterAnyUnitEventBJ(Crafting__sellTrigger, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(Crafting__sellTrigger, Condition(function Crafting__TriggerConditionSell))
     
-    call TriggerRegisterAnyUnitEventBJ(Crafting___deathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(Crafting___deathTrigger, Condition(function Crafting___TriggerConditionDeath))
+    call TriggerRegisterAnyUnitEventBJ(Crafting__deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(Crafting__deathTrigger, Condition(function Crafting__TriggerConditionDeath))
 endfunction
 
 //processed hook: hook RemoveUnit DisableItemCraftingUnit
@@ -7570,7 +7629,7 @@ endfunction
 
 function AddRecipeUnit takes nothing returns integer
     set udg_TmpInteger=AddRecipe(udg_TmpUnitType , udg_TmpItemType2)
-    set Crafting___recipesIsUnit[(udg_TmpInteger )]=( true) // INLINED!!
+    set Crafting__recipesIsUnit[(udg_TmpInteger )]=( true) // INLINED!!
     set udg_TmpInteger2=1
     return udg_TmpInteger
 endfunction
@@ -7588,7 +7647,7 @@ function AddRecipeRequirementNonConsuming takes nothing returns integer
 endfunction
 
 function SetRecipeMinRequirementsCount takes nothing returns nothing
-    set Crafting___recipesMinRequirements[(udg_TmpInteger )]=( udg_TmpInteger2) // INLINED!!
+    set Crafting__recipesMinRequirements[(udg_TmpInteger )]=( udg_TmpInteger2) // INLINED!!
     set udg_TmpInteger2=1
 endfunction
 
@@ -7676,6 +7735,8 @@ endfunction
 //*  Barades Op Limit
 //***************************************************************************
 //*  Barades Item Type Utils
+//***************************************************************************
+//*  Barades Math Utils
 //***************************************************************************
 //*  Barades String Utils
 //***************************************************************************
@@ -8070,9 +8131,9 @@ function Trig_Crafting_Start_Actions takes nothing returns nothing
     call TriggerRegisterItemCraftingEvent(gg_trg_Crafting_On_Crafting_Item)
     call TriggerRegisterUnitCraftingEvent(gg_trg_Crafting_On_Crafting_Unit)
     call TriggerRegisterItemDisassembleEvent(gg_trg_Crafting_On_Disassemble_Item)
-    set Crafting___recipeRequirementCallbackTrigger=(gg_trg_Crafting_On_Requirement) // INLINED!!
-    set Crafting___recipeShowCallbackTrigger=(gg_trg_Crafting_On_Show) // INLINED!!
-    set Crafting___recipeRequirementCallback=((1)) // INLINED!!
+    set Crafting__recipeRequirementCallbackTrigger=(gg_trg_Crafting_On_Requirement) // INLINED!!
+    set Crafting__recipeShowCallbackTrigger=(gg_trg_Crafting_On_Show) // INLINED!!
+    set Crafting__recipeRequirementCallback=((1)) // INLINED!!
     call ForGroupBJ(GetUnitsOfTypeIdAll('n000'), function Trig_Crafting_Start_Func007A)
 endfunction
 
@@ -8089,8 +8150,8 @@ endfunction
 // Gives some feedback to the player when crafting items.
 //===========================================================================
 function Trig_Crafting_On_Crafting_Item_Actions takes nothing returns nothing
-    set udg_TmpUnit=(Crafting___triggerCraftingUnit) // INLINED!!
-    set udg_TmpItem=(Crafting___triggerCraftedItem) // INLINED!!
+    set udg_TmpUnit=(Crafting__triggerCraftingUnit) // INLINED!!
+    set udg_TmpItem=(Crafting__triggerCraftedItem) // INLINED!!
     call CraftHint(udg_TmpUnit)
 endfunction
 
@@ -8106,8 +8167,8 @@ endfunction
 // Gives some feedback to the player when crafting units.
 //===========================================================================
 function Trig_Crafting_On_Crafting_Unit_Actions takes nothing returns nothing
-    set udg_TmpUnit=(Crafting___triggerCraftingUnit) // INLINED!!
-    set udg_TmpUnit2=(Crafting___triggerCraftedUnit) // INLINED!!
+    set udg_TmpUnit=(Crafting__triggerCraftingUnit) // INLINED!!
+    set udg_TmpUnit2=(Crafting__triggerCraftedUnit) // INLINED!!
     call CraftHint(udg_TmpUnit)
 endfunction
 
@@ -8123,8 +8184,8 @@ endfunction
 // Gives some feedback to the player when disassembling items.
 //===========================================================================
 function Trig_Crafting_On_Disassemble_Item_Actions takes nothing returns nothing
-    set udg_TmpUnit=(Crafting___triggerCraftingUnit) // INLINED!!
-    set udg_TmpItem=(Crafting___triggerCraftedItem) // INLINED!!
+    set udg_TmpUnit=(Crafting__triggerCraftingUnit) // INLINED!!
+    set udg_TmpItem=(Crafting__triggerCraftedItem) // INLINED!!
     call CraftHint(udg_TmpUnit)
 endfunction
 
@@ -8152,8 +8213,8 @@ endfunction
 // Trigger: Crafting On Show
 //===========================================================================
 function Trig_Crafting_On_Show_Conditions takes nothing returns boolean
-    local unit craftingUnit= (Crafting___triggerCraftingUnit) // INLINED!!
-    local integer recipe= (Crafting___triggerRecipe) // INLINED!!
+    local unit craftingUnit= (Crafting__triggerCraftingUnit) // INLINED!!
+    local integer recipe= (Crafting__triggerRecipe) // INLINED!!
     local integer unitTypeId= GetUnitTypeId(craftingUnit)
     return true
 endfunction
@@ -8354,13 +8415,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs450553125")
+call ExecuteFunc("jasshelper__initstructs300664875")
 call ExecuteFunc("FrameLoader__init_function")
 call ExecuteFunc("FrameSaver__Init")
 call ExecuteFunc("PagedButtons__Init")
 call ExecuteFunc("SimError__Init")
 call ExecuteFunc("PagedButtonsUI__Init")
-call ExecuteFunc("Crafting___Init")
+call ExecuteFunc("Crafting__Init")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -8420,34 +8481,34 @@ local integer this=f__arg_this
     set f__arg_this=this
    return true
 endfunction
-function sa___prototype22_DisablePagedButtons takes nothing returns boolean
+function sa___prototype31_DisablePagedButtons takes nothing returns boolean
     set f__result_boolean=DisablePagedButtons(f__arg_unit1)
     return true
 endfunction
-function sa___prototype22_DisableItemCraftingUnit takes nothing returns boolean
+function sa___prototype31_DisableItemCraftingUnit takes nothing returns boolean
     set f__result_boolean=DisableItemCraftingUnit(f__arg_unit1)
     return true
 endfunction
-function sa___prototype51_MapRecipeRequirementCallback takes nothing returns boolean
+function sa___prototype60_MapRecipeRequirementCallback takes nothing returns boolean
     set f__result_integer=MapRecipeRequirementCallback(f__arg_integer1,f__arg_unit1)
     return true
 endfunction
 
-function jasshelper__initstructs450553125 takes nothing returns nothing
+function jasshelper__initstructs300664875 takes nothing returns nothing
     set st__PagedButtons_Type_onDestroy[1]=null
     set st__PagedButtons_Type_onDestroy[3]=CreateTrigger()
     call TriggerAddCondition(st__PagedButtons_Type_onDestroy[3],Condition( function sa__PagedButtons_SlotType_onDestroy))
     set st__PagedButtons_Type_onDestroy[2]=CreateTrigger()
     call TriggerAddCondition(st__PagedButtons_Type_onDestroy[2],Condition( function sa__PagedButtons_SpacerType_onDestroy))
-    set st___prototype22[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype22[1],function sa___prototype22_DisablePagedButtons)
-    call TriggerAddCondition(st___prototype22[1],Condition(function sa___prototype22_DisablePagedButtons))
-    set st___prototype22[2]=CreateTrigger()
-    call TriggerAddAction(st___prototype22[2],function sa___prototype22_DisableItemCraftingUnit)
-    call TriggerAddCondition(st___prototype22[2],Condition(function sa___prototype22_DisableItemCraftingUnit))
-    set st___prototype51[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype51[1],function sa___prototype51_MapRecipeRequirementCallback)
-    call TriggerAddCondition(st___prototype51[1],Condition(function sa___prototype51_MapRecipeRequirementCallback))
+    set st___prototype31[1]=CreateTrigger()
+    call TriggerAddAction(st___prototype31[1],function sa___prototype31_DisablePagedButtons)
+    call TriggerAddCondition(st___prototype31[1],Condition(function sa___prototype31_DisablePagedButtons))
+    set st___prototype31[2]=CreateTrigger()
+    call TriggerAddAction(st___prototype31[2],function sa___prototype31_DisableItemCraftingUnit)
+    call TriggerAddCondition(st___prototype31[2],Condition(function sa___prototype31_DisableItemCraftingUnit))
+    set st___prototype60[1]=CreateTrigger()
+    call TriggerAddAction(st___prototype60[1],function sa___prototype60_MapRecipeRequirementCallback)
+    call TriggerAddCondition(st___prototype60[1],Condition(function sa___prototype60_MapRecipeRequirementCallback))
 
 
 

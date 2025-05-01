@@ -1124,6 +1124,8 @@ StringList {
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",
+    TAUNTS_QUEST_ITEM_0                "\"-taunts\": Lists all taunts.",
+    TAUNTS_QUEST_ITEM_1                "\"-tauntson/off\": Enables/disables taunts.",
     ENABLED_TAUNTS                     "Enabled taunts.",
     DISABLED_TAUNTS                    "Disabled taunts.",
     TAUNTS_ENABLED                     "Taunts (enabled): ",
