@@ -5963,9 +5963,12 @@ globals
     constant integer GOBLIN_SHREDDER_HERO                            = 'N07D'
     constant integer GOBLIN_GUNNER                                   = 'N06V'
     // Naga
+    constant integer SUBMERGED_SEAWITCH                              = 'N0MQ'
     constant integer NAGA_ROYAL_GUARD_HERO                           = 'N0BG'
+    constant integer SUBMERGED_NAGA_ROYAL_GUARD_HERO                 = 'N0MR'
     constant integer NAGA_SIREN_HERO                                 = 'N0NC'
     constant integer LADY_VASHJ                                      = 'H02B'
+    constant integer SUBMERGED_LADY_VASHJ                            = 'H05Y'
     // Gnome
     constant integer GNOME_ENGINEER_HERO                             = 'N0CS'
     constant integer GNOME_WARLOCK_HERO                              = 'O055'

@@ -1019,10 +1019,10 @@ StringList {
     // ChangeLog
     ALL_CHANGES_OF_VERSION             "All changes of %1%.",
     // Quests
-    QUEST_DISCOVERED                   "|cffffcc00QUEST DISCOVERED|r|n%1%%2%",
-    QUEST_UPDATE                       "|cffffcc00QUEST UPDATE|r|n%1%%2%",
-    QUEST_COMPLETED                    "|cffffcc00QUEST COMPLETED|r|n%1%%2%",
-    QUEST_ITEM_COMPLETED               "  - |cff808080%1% (Completed)|r",
+    QUEST_DISCOVERED                   "|cffffcc00QUEST DISCOVERED|r %1%%2%",
+    QUEST_UPDATE                       "|cffffcc00QUEST UPDATE|r %1%%2%",
+    QUEST_COMPLETED                    "|cffffcc00QUEST COMPLETED|r %1%%2%",
+    QUEST_ITEM_COMPLETED               "|cff808080  - %1% (Completed)|r",
     QUEST_ITEM                         "  - %1%",
     // Portals
     PORTAL                             "Portal",

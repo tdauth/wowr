@@ -863,6 +863,13 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == NAGA_TEMPLE then
         set have_qty = have_qty + GetUnitCountEx(NAGA_TEMPLE_3,false,townid)
 
+    elseif unitid == NAGA_SORCERESS then
+        set have_qty = have_qty + GetUnitCountEx(SUBMERGED_SEAWITCH,false,townid)
+    elseif unitid == LADY_VASHJ then
+        set have_qty = have_qty + GetUnitCountEx(SUBMERGED_LADY_VASHJ,false,townid)
+     elseif unitid == NAGA_ROYAL_GUARD_HERO then
+        set have_qty = have_qty + GetUnitCountEx(SUBMERGED_NAGA_ROYAL_GUARD_HERO,false,townid)
+
     elseif unitid == NAGA_SNAP_DRAGON then
         set have_qty = have_qty + GetUnitCountEx(NAGA_SNAP_DRAGON_SUBMERGED,false,townid)
     elseif unitid == NAGA_MYRMIDON then
