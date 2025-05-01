@@ -1124,6 +1124,8 @@ StringList {
     // Taunts
     TAUNTS                             "Verspottungen",
     TAUNTS_DESCRIPTION                 "Verspottungen können genutzt werden, um Klangeffekte mit Chat-Befehlen an andere Spieler zu senden.",
+    TAUNTS_QUEST_ITEM_0                "'-taunts': Listet alle Verspottungen auf.",
+    TAUNTS_QUEST_ITEM_1                "'-tauntson/off': Aktiviert/deaktiviert Verspottungen.",
     ENABLED_TAUNTS                     "Verspottungen aktiviert.",
     DISABLED_TAUNTS                    "Verspottungen deaktiviert.",
     TAUNTS_ENABLED                     "Verspottungen (aktiviert): ",
@@ -1265,6 +1267,8 @@ StringList {
     // Railway
     TRAIN_HAS_TO_BE_STOPPED            "Der Zug muss gestoppt worden sein.",
     TRAIN_MUST_BE_IN_STATION           "Der Zug muss an einem Bahnhof stehen.",
+    // Demon Quest 2
+    TARGET_MUST_BE_CREEP_DRAENEI       "Ziel muss eine Unhold-Draenei-Einheit sein.",
     // Abilities
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
     FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
