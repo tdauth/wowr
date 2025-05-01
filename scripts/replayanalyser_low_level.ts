@@ -27,7 +27,10 @@ const typeLabels = {
   [0x79]: "CommandFrameAction",
   [0x76]: "MouseAction",
   [0x73]: "BlzCacheClearUnitAction",
-  [0x78]: "BlzSyncAction"
+  [0x78]: "BlzSyncAction",
+  [0x1b]: "SelectUnitAction",
+  [0x1c]: "SelectGroundItemAction",
+  [0x77]: "W3APIAction",
 };
 
 (async () => {
