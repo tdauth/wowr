@@ -1,9 +1,9 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from GetSingleSelectedUnit:
 constant boolean LIBRARY_GetSingleSelectedUnit=true
@@ -11,24 +11,24 @@ constant boolean LIBRARY_GetSingleSelectedUnit=true
 //globals from ItemTypeUtils:
 constant boolean LIBRARY_ItemTypeUtils=true
     // Barade: Cache all the values for better performance.
-hashtable ItemTypeUtils___h= InitHashtable()
+hashtable ItemTypeUtils__h= InitHashtable()
     
-constant integer ItemTypeUtils___SHOP= 'ngme'
-constant integer ItemTypeUtils___SELL_UNIT= 'Hpal'
-constant real ItemTypeUtils___PAWN_ITEM_RATE= 0.6
+constant integer ItemTypeUtils__SHOP= 'ngme'
+constant integer ItemTypeUtils__SELL_UNIT= 'Hpal'
+constant real ItemTypeUtils__PAWN_ITEM_RATE= 0.6
     
-constant integer ItemTypeUtils___KEY_VALUE_GOLD= 0
-constant integer ItemTypeUtils___KEY_VALUE_LUMBER= 1
-constant integer ItemTypeUtils___KEY_PERISHABLE= 2
-constant integer ItemTypeUtils___KEY_MODEL= 3
-constant integer ItemTypeUtils___KEY_ICON= 4
+constant integer ItemTypeUtils__KEY_VALUE_GOLD= 0
+constant integer ItemTypeUtils__KEY_VALUE_LUMBER= 1
+constant integer ItemTypeUtils__KEY_PERISHABLE= 2
+constant integer ItemTypeUtils__KEY_MODEL= 3
+constant integer ItemTypeUtils__KEY_ICON= 4
 //endglobals from ItemTypeUtils
 //globals from MathUtils:
 constant boolean LIBRARY_MathUtils=true
 //endglobals from MathUtils
 //globals from OnStartGame:
 constant boolean LIBRARY_OnStartGame=true
-trigger OnStartGame___startGameTrigger= CreateTrigger()
+trigger OnStartGame__startGameTrigger= CreateTrigger()
 //endglobals from OnStartGame
 //globals from RegisterNativeEvent:
 constant boolean LIBRARY_RegisterNativeEvent=true
@@ -40,7 +40,7 @@ trigger array RegisterPlayerUnitEvent___t
 //endglobals from RegisterPlayerUnitEvent
 //globals from SimError:
 constant boolean LIBRARY_SimError=true
-sound SimError___error
+sound SimError__error
 //endglobals from SimError
 //globals from StringUtils:
 constant boolean LIBRARY_StringUtils=true
@@ -55,7 +55,7 @@ constant boolean LIBRARY_WorldBounds=true
 //endglobals from WorldBounds
 //globals from PlayerColorUtils:
 constant boolean LIBRARY_PlayerColorUtils=true
-string array PlayerColorUtils___PlayerColorNames
+string array PlayerColorUtils__PlayerColorNames
 //endglobals from PlayerColorUtils
 //globals from Refund:
 constant boolean LIBRARY_Refund=true
@@ -90,58 +90,58 @@ constant string Resources_FOOD_ICON_ATT= "UI\\Widgets\\Console\\Human\\infocard-
 constant string Resources_FOOD_MAX_ICON= "UI\\Feedback\\Resources\\ResourceSupply.blp"
 constant string Resources_FOOD_MAX_ICON_ATT= "UI\\Widgets\\Console\\Human\\infocard-supply.blp"
     
-hashtable Resources___h= InitHashtable()
-trigger Resources___castTrigger= CreateTrigger()
-trigger Resources___orderTrigger= CreateTrigger()
-trigger Resources___orderResetTrigger= CreateTrigger()
-trigger Resources___returnTrigger= CreateTrigger()
-trigger Resources___deathTrigger= CreateTrigger()
-group Resources___mines= CreateGroup()
-group Resources___workers= CreateGroup()
-group Resources___returnBuildings= CreateGroup()
+hashtable Resources__h= InitHashtable()
+trigger Resources__castTrigger= CreateTrigger()
+trigger Resources__orderTrigger= CreateTrigger()
+trigger Resources__orderResetTrigger= CreateTrigger()
+trigger Resources__returnTrigger= CreateTrigger()
+trigger Resources__deathTrigger= CreateTrigger()
+group Resources__mines= CreateGroup()
+group Resources__workers= CreateGroup()
+group Resources__returnBuildings= CreateGroup()
     
     // callbacks
-trigger array Resources___callbackTriggers
-integer Resources___callbackTriggersCounter= 0
-trigger array Resources___callbackReturnTriggers
-integer Resources___callbackReturnTriggersCounter= 0
-trigger array Resources___callbackDeathTriggers
-integer Resources___callbackDeathTriggersCounter= 0
-unit Resources___triggerMine= null
-unit Resources___triggerReturnBuilding= null
-unit Resources___triggerDyingResourceUnit= null
-unit Resources___triggerWorker= null
-integer Resources___triggerResource= 0
-integer Resources___triggerResourceAmount= 0
+trigger array Resources__callbackTriggers
+integer Resources__callbackTriggersCounter= 0
+trigger array Resources__callbackReturnTriggers
+integer Resources__callbackReturnTriggersCounter= 0
+trigger array Resources__callbackDeathTriggers
+integer Resources__callbackDeathTriggersCounter= 0
+unit Resources__triggerMine= null
+unit Resources__triggerReturnBuilding= null
+unit Resources__triggerDyingResourceUnit= null
+unit Resources__triggerWorker= null
+integer Resources__triggerResource= 0
+integer Resources__triggerResourceAmount= 0
     
-constant integer Resources___KEY_RESOURCE= 0
-constant integer Resources___KEY_MAX_RESOURCE= 1
-constant integer Resources___KEY_RESOURCE_PER_HIT= 2
-constant integer Resources___KEY_MINE= 3
-constant integer Resources___KEY_RETURN_RESOURCE= 4
-constant integer Resources___KEY_HARVEST_ORDER_ID= 5
-constant integer Resources___KEY_HARVEST_ABILITY_ID= 6
-constant integer Resources___KEY_RETURN_ORDER_ID= 7
-constant integer Resources___KEY_RETURN_ABILITY_ID= 8
-constant integer Resources___KEY_RETURN_HIDDEN_ORDER_ID= 9
-constant integer Resources___KEY_RETURN_HIDDEN_ABILITY_ID= 10
-constant integer Resources___KEY_HARVEST_DURATION= 11
-constant integer Resources___KEY_EXPLODE_ON_DEATH= 12
-constant integer Resources___KEY_MINE_WORKERS= 13
-constant integer Resources___KEY_MAX_MINE_WORKERS= 14
-constant integer Resources___KEY_TAKE_WORKER_INSIDE= 15
-constant integer Resources___KEY_ANIMATION_PROPERTIES= 16
-constant integer Resources___KEY_SKIN= 17
-constant integer Resources___KEY_QUEUE_TIMER= 18
-constant integer Resources___KEY_QUEUE_WORKER_RELEASE_TIMER= 19
-constant integer Resources___KEY_DISABLE_STOP_MINING_ON_ERROR= 20
-constant integer Resources___KEY_MAX= 21
+constant integer Resources__KEY_RESOURCE= 0
+constant integer Resources__KEY_MAX_RESOURCE= 1
+constant integer Resources__KEY_RESOURCE_PER_HIT= 2
+constant integer Resources__KEY_MINE= 3
+constant integer Resources__KEY_RETURN_RESOURCE= 4
+constant integer Resources__KEY_HARVEST_ORDER_ID= 5
+constant integer Resources__KEY_HARVEST_ABILITY_ID= 6
+constant integer Resources__KEY_RETURN_ORDER_ID= 7
+constant integer Resources__KEY_RETURN_ABILITY_ID= 8
+constant integer Resources__KEY_RETURN_HIDDEN_ORDER_ID= 9
+constant integer Resources__KEY_RETURN_HIDDEN_ABILITY_ID= 10
+constant integer Resources__KEY_HARVEST_DURATION= 11
+constant integer Resources__KEY_EXPLODE_ON_DEATH= 12
+constant integer Resources__KEY_MINE_WORKERS= 13
+constant integer Resources__KEY_MAX_MINE_WORKERS= 14
+constant integer Resources__KEY_TAKE_WORKER_INSIDE= 15
+constant integer Resources__KEY_ANIMATION_PROPERTIES= 16
+constant integer Resources__KEY_SKIN= 17
+constant integer Resources__KEY_QUEUE_TIMER= 18
+constant integer Resources__KEY_QUEUE_WORKER_RELEASE_TIMER= 19
+constant integer Resources__KEY_DISABLE_STOP_MINING_ON_ERROR= 20
+constant integer Resources__KEY_MAX= 21
 integer Resources_GOLD= 0
 integer Resources_LUMBER= 0
 integer Resources_FOOD= 0
 integer Resources_FOOD_MAX= 0
-unit Resources___filterWorker= null
-integer Resources___filterResource= 0
+unit Resources__filterWorker= null
+integer Resources__filterResource= 0
 //endglobals from Resources
 //globals from UnitEventEx:
 constant boolean LIBRARY_UnitEventEx=true
@@ -224,7 +224,7 @@ constant real ResourcesChatCommands_HELP_DURATION= 8.0
 constant real ResourcesChatCommands_RESOURCES_DURATION= 8.0
 constant real ResourcesChatCommands_INFO_DURATION= 4.0
    
-trigger ResourcesChatCommands___chatTrigger= CreateTrigger()
+trigger ResourcesChatCommands__chatTrigger= CreateTrigger()
 //endglobals from ResourcesChatCommands
 //globals from ResourcesCosts:
 constant boolean LIBRARY_ResourcesCosts=true
@@ -244,55 +244,55 @@ constant integer ResourcesCosts_KEY_GOLD_VALUE= bj_MAX_PLAYERS + 3
 constant integer ResourcesCosts_KEY_LUMBER_VALUE= bj_MAX_PLAYERS + 4
 constant integer ResourcesCosts_MAX_KEYS= bj_MAX_PLAYERS + 5
     
-sound array ResourcesCosts___playerSoundNotEnough
-hashtable ResourcesCosts___h= InitHashtable()
-hashtable ResourcesCosts___h2= InitHashtable()
-trigger ResourcesCosts___issueTrigger= CreateTrigger()
-trigger ResourcesCosts___constructCancelTrigger= CreateTrigger()
-trigger ResourcesCosts___trainCancelTrigger= CreateTrigger()
-trigger ResourcesCosts___researchCancelTrigger= CreateTrigger()
-trigger ResourcesCosts___heroReviveCancelTrigger= CreateTrigger()
-trigger ResourcesCosts___unitSellTrigger= CreateTrigger()
-trigger ResourcesCosts___itemSellTrigger= CreateTrigger()
-trigger ResourcesCosts___channelTrigger= CreateTrigger()
+sound array ResourcesCosts__playerSoundNotEnough
+hashtable ResourcesCosts__h= InitHashtable()
+hashtable ResourcesCosts__h2= InitHashtable()
+trigger ResourcesCosts__issueTrigger= CreateTrigger()
+trigger ResourcesCosts__constructCancelTrigger= CreateTrigger()
+trigger ResourcesCosts__trainCancelTrigger= CreateTrigger()
+trigger ResourcesCosts__researchCancelTrigger= CreateTrigger()
+trigger ResourcesCosts__heroReviveCancelTrigger= CreateTrigger()
+trigger ResourcesCosts__unitSellTrigger= CreateTrigger()
+trigger ResourcesCosts__itemSellTrigger= CreateTrigger()
+trigger ResourcesCosts__channelTrigger= CreateTrigger()
 //endglobals from ResourcesCosts
 //globals from ResourcesGui:
 constant boolean LIBRARY_ResourcesGui=true
-constant real ResourcesGui___X= 0.3053
-constant real ResourcesGui___Y= 0.06
-constant real ResourcesGui___WIDTH= 0.05
-constant real ResourcesGui___HEIGHT= 0.05
-constant real ResourcesGui___TEXT_X= ResourcesGui___X + ResourcesGui___WIDTH
-constant real ResourcesGui___TEXT_WIDTH= 0.1
+constant real ResourcesGui__X= 0.3053
+constant real ResourcesGui__Y= 0.06
+constant real ResourcesGui__WIDTH= 0.05
+constant real ResourcesGui__HEIGHT= 0.05
+constant real ResourcesGui__TEXT_X= ResourcesGui__X + ResourcesGui__WIDTH
+constant real ResourcesGui__TEXT_WIDTH= 0.1
     
-constant real ResourcesGui___X_GATHERED= 0.404
-constant real ResourcesGui___Y_GATHERED= 0.09
-constant real ResourcesGui___TEXT_X_GATHERED= ResourcesGui___X_GATHERED + ResourcesGui___WIDTH
+constant real ResourcesGui__X_GATHERED= 0.404
+constant real ResourcesGui__Y_GATHERED= 0.09
+constant real ResourcesGui__TEXT_X_GATHERED= ResourcesGui__X_GATHERED + ResourcesGui__WIDTH
 
-framehandle ResourcesGui___IconFrame
-framehandle ResourcesGui___TextFrame
+framehandle ResourcesGui__IconFrame
+framehandle ResourcesGui__TextFrame
     
-framehandle ResourcesGui___IconFrameGathered
-framehandle ResourcesGui___TextFrameGathered
+framehandle ResourcesGui__IconFrameGathered
+framehandle ResourcesGui__TextFrameGathered
     
-framehandle ResourcesGui___IconFrameGathered2
-framehandle ResourcesGui___TextFrameGathered2
+framehandle ResourcesGui__IconFrameGathered2
+framehandle ResourcesGui__TextFrameGathered2
     
-trigger ResourcesGui___selectionTrigger= CreateTrigger()
-trigger ResourcesGui___deselectionTrigger= CreateTrigger()
-trigger ResourcesGui___gatherTrigger= CreateTrigger()
-trigger ResourcesGui___returnTrigger= CreateTrigger()
-hashtable ResourcesGui___h= InitHashtable()
-timer array ResourcesGui___updateTimer
-boolean array ResourcesGui___updateTimerRunning
-unit array ResourcesGui___currentMine
+trigger ResourcesGui__selectionTrigger= CreateTrigger()
+trigger ResourcesGui__deselectionTrigger= CreateTrigger()
+trigger ResourcesGui__gatherTrigger= CreateTrigger()
+trigger ResourcesGui__returnTrigger= CreateTrigger()
+hashtable ResourcesGui__h= InitHashtable()
+timer array ResourcesGui__updateTimer
+boolean array ResourcesGui__updateTimerRunning
+unit array ResourcesGui__currentMine
     
-trigger ResourcesGui___progressBarStartTrigger= CreateTrigger()
-trigger ResourcesGui___progressBarFinishTrigger= CreateTrigger()
-group ResourcesGui___progressBarUnits= CreateGroup()
+trigger ResourcesGui__progressBarStartTrigger= CreateTrigger()
+trigger ResourcesGui__progressBarFinishTrigger= CreateTrigger()
+group ResourcesGui__progressBarUnits= CreateGroup()
     
-player ResourcesGui___tmpPlayer= null
-trigger ResourcesGui___tmpTrigger= CreateTrigger()
+player ResourcesGui__tmpPlayer= null
+trigger ResourcesGui__tmpTrigger= CreateTrigger()
 //endglobals from ResourcesGui
 //globals from ResourcesLoadedMines:
 constant boolean LIBRARY_ResourcesLoadedMines=true
@@ -314,20 +314,20 @@ constant boolean ResourcesTeamMultiboardGui_INCLUDE_VIEWING_PLAYERS= true
 constant real ResourcesTeamMultiboardGui_NAME_COLUMN_WIDTH= 0.1
 constant real ResourcesTeamMultiboardGui_RESOURCE_COLUMN_WIDTH= 0.07
 constant real ResourcesTeamMultiboardGui_FOOD_COLUMN_WIDTH= 0.06
-multiboard array ResourcesTeamMultiboardGui___playerMultiboards
-boolean array ResourcesTeamMultiboardGui___playerIgnoredMultiboards
-timer ResourcesTeamMultiboardGui___t= CreateTimer()
-trigger ResourcesTeamMultiboardGui___allianceChangeTrigger= CreateTrigger()
+multiboard array ResourcesTeamMultiboardGui__playerMultiboards
+boolean array ResourcesTeamMultiboardGui__playerIgnoredMultiboards
+timer ResourcesTeamMultiboardGui__t= CreateTimer()
+trigger ResourcesTeamMultiboardGui__allianceChangeTrigger= CreateTrigger()
 //endglobals from ResourcesTeamMultiboardGui
 //globals from ResourcesWarnings:
 constant boolean LIBRARY_ResourcesWarnings=true
-integer array ResourcesWarnings___resourceLowValue
-sound array ResourcesWarnings___playerSoundLow
-string array ResourcesWarnings___playerMessageLow
-sound array ResourcesWarnings___playerSoundCollapsed
-string array ResourcesWarnings___playerMessageCollapsed
+integer array ResourcesWarnings__resourceLowValue
+sound array ResourcesWarnings__playerSoundLow
+string array ResourcesWarnings__playerMessageLow
+sound array ResourcesWarnings__playerSoundCollapsed
+string array ResourcesWarnings__playerMessageCollapsed
    
-trigger ResourcesWarnings___gatherTrigger= CreateTrigger()
+trigger ResourcesWarnings__gatherTrigger= CreateTrigger()
 //endglobals from ResourcesWarnings
     // Generated
 sound gg_snd_GruntNoOil1= null
@@ -371,6 +371,8 @@ trigger gg_trg_Buy_100_Rock= null
 trigger gg_trg_Sell_100_Rock= null
 trigger gg_trg_Buy_100_Wheat= null
 trigger gg_trg_Sell_100_Wheat= null
+trigger gg_trg_Buy_100_Ore= null
+trigger gg_trg_Sell_100_Ore= null
 trigger gg_trg_Initialization= null
 trigger gg_trg_Melee_Initialization= null
 trigger gg_trg_Game_Start= null
@@ -388,8 +390,6 @@ unit gg_unit_n000_0050= null
 unit gg_unit_opeo_0052= null
 unit gg_unit_opeo_0053= null
 unit gg_unit_opeo_0054= null
-trigger gg_trg_Buy_100_Ore= null
-trigger gg_trg_Sell_100_Ore= null
 trigger deathTrigger= CreateTrigger()
 integer Oil
 integer Rock
@@ -603,9 +603,9 @@ function sc___prototype51_evaluate takes integer i,unit a1 returns nothing
 
 endfunction
 function h__RemoveUnit takes unit a0 returns nothing
-    //hook: Resources___RemoveUnitHook
+    //hook: Resources__RemoveUnitHook
     call sc___prototype51_evaluate(1,a0)
-    //hook: ResourcesGui___RemoveUnitHook
+    //hook: ResourcesGui__RemoveUnitHook
     call sc___prototype51_evaluate(2,a0)
 call RemoveUnit(a0)
 endfunction
@@ -616,18 +616,18 @@ endfunction
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
@@ -635,8 +635,10 @@ endfunction
 
 
 function GetSingleSelectedUnit takes player whichPlayer returns unit
-    local group selected= GetUnitsSelectedAll(whichPlayer)
+    local group selected= CreateGroup()
     local unit first= null
+    // Avid SyncSelections in GetUnitsSelectedAll which delays and cannot be used in trigger conditions.
+    call GroupEnumUnitsSelected(selected, whichPlayer, null)
     if ( BlzGroupGetSize(selected) == 1 ) then
         set first=FirstOfGroup(selected)
     endif
@@ -654,20 +656,20 @@ endfunction
 // https://www.hiveworkshop.com/threads/detecting-item-price.120355/
 
 // This is the x position where we create the dummy units. Dont place it in the water.
-function ItemTypeUtils___GetShopDummyX takes nothing returns real
+function ItemTypeUtils__GetShopDummyX takes nothing returns real
     return 0.0
 endfunction
 
 // This is the y position where we create the dummy units. Dont place it in the water.
-function ItemTypeUtils___GetShopDummyY takes nothing returns real
+function ItemTypeUtils__GetShopDummyY takes nothing returns real
     return 0.0
 endfunction
 
 function GetItemValueGoldFresh takes integer i returns integer
     local real x= (0.0) // INLINED!!
     local real y= (0.0) // INLINED!!
-    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SHOP, x, y, 0)
-    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SELL_UNIT, x, y - 100, 90)
+    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SHOP, x, y, 0)
+    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SELL_UNIT, x, y - 100, 90)
     local item a= UnitAddItemById(u2, i)
     local integer g1= GetPlayerState(Player(PLAYER_NEUTRAL_PASSIVE), PLAYER_STATE_RESOURCE_GOLD)
     local integer g2= 0
@@ -685,25 +687,25 @@ function GetItemValueGoldFresh takes integer i returns integer
 endfunction
 
 function GetItemValueGold takes integer i returns integer
-    if ( not HaveSavedInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_GOLD) ) then
-        call SaveInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_GOLD, GetItemValueGoldFresh(i))
+    if ( not HaveSavedInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_GOLD) ) then
+        call SaveInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_GOLD, GetItemValueGoldFresh(i))
     endif
-    return LoadInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_GOLD)
+    return LoadInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_GOLD)
 endfunction
 
 function GetItemCostGold takes integer i returns integer
-    return R2I(I2R(GetItemValueGold(i)) * ItemTypeUtils___PAWN_ITEM_RATE)
+    return R2I(I2R(GetItemValueGold(i)) * ItemTypeUtils__PAWN_ITEM_RATE)
 endfunction
 
 function GetItemGoldCost takes integer i returns integer
-    return (R2I(I2R(GetItemValueGold((i))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
+    return (R2I(I2R(GetItemValueGold((i))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
 endfunction
 
 function GetItemValueLumberFresh takes integer i returns integer
     local real x= (0.0) // INLINED!!
     local real y= (0.0) // INLINED!!
-    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SHOP, x, y, 0)
-    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SELL_UNIT, x, y - 100, 90)
+    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SHOP, x, y, 0)
+    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SELL_UNIT, x, y - 100, 90)
     local item a= UnitAddItemById(u2, i)
     local integer g1= GetPlayerState(Player(PLAYER_NEUTRAL_PASSIVE), PLAYER_STATE_RESOURCE_LUMBER)
     local integer g2= 0
@@ -721,18 +723,18 @@ function GetItemValueLumberFresh takes integer i returns integer
 endfunction
 
 function GetItemValueLumber takes integer i returns integer
-    if ( not HaveSavedInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_LUMBER) ) then
-        call SaveInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_LUMBER, GetItemValueLumberFresh(i))
+    if ( not HaveSavedInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_LUMBER) ) then
+        call SaveInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_LUMBER, GetItemValueLumberFresh(i))
     endif
-    return LoadInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_LUMBER)
+    return LoadInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_LUMBER)
 endfunction
 
 function GetItemCostLumber takes integer i returns integer
-    return R2I(I2R(GetItemValueLumber(i)) * ItemTypeUtils___PAWN_ITEM_RATE)
+    return R2I(I2R(GetItemValueLumber(i)) * ItemTypeUtils__PAWN_ITEM_RATE)
 endfunction
 
 function GetItemWoodCost takes integer i returns integer
-    return (R2I(I2R(GetItemValueLumber((i))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
+    return (R2I(I2R(GetItemValueLumber((i))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
 endfunction
 
 function GetItemTypePerishableFresh takes integer i returns boolean
@@ -745,10 +747,10 @@ function GetItemTypePerishableFresh takes integer i returns boolean
 endfunction
 
 function GetItemTypePerishable takes integer i returns boolean
-    if ( not HaveSavedBoolean(ItemTypeUtils___h, i, ItemTypeUtils___KEY_PERISHABLE) ) then
-        call SaveBoolean(ItemTypeUtils___h, i, ItemTypeUtils___KEY_PERISHABLE, GetItemTypePerishableFresh(i))
+    if ( not HaveSavedBoolean(ItemTypeUtils__h, i, ItemTypeUtils__KEY_PERISHABLE) ) then
+        call SaveBoolean(ItemTypeUtils__h, i, ItemTypeUtils__KEY_PERISHABLE, GetItemTypePerishableFresh(i))
     endif
-    return LoadBoolean(ItemTypeUtils___h, i, ItemTypeUtils___KEY_PERISHABLE)
+    return LoadBoolean(ItemTypeUtils__h, i, ItemTypeUtils__KEY_PERISHABLE)
 endfunction
 
 function GetItemTypeModelFresh takes integer i returns string
@@ -761,10 +763,10 @@ function GetItemTypeModelFresh takes integer i returns string
 endfunction
 
 function GetItemTypeModel takes integer i returns string
-    if ( not HaveSavedString(ItemTypeUtils___h, i, ItemTypeUtils___KEY_MODEL) ) then
-        call SaveStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_MODEL, GetItemTypeModelFresh(i))
+    if ( not HaveSavedString(ItemTypeUtils__h, i, ItemTypeUtils__KEY_MODEL) ) then
+        call SaveStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_MODEL, GetItemTypeModelFresh(i))
     endif
-    return LoadStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_MODEL)
+    return LoadStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_MODEL)
 endfunction
 
 function GetItemTypeIconFresh takes integer i returns string
@@ -777,10 +779,10 @@ function GetItemTypeIconFresh takes integer i returns string
 endfunction
 
 function GetItemTypeIcon takes integer i returns string
-    if ( not HaveSavedString(ItemTypeUtils___h, i, ItemTypeUtils___KEY_ICON) ) then
-        call SaveStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_ICON, GetItemTypeIconFresh(i))
+    if ( not HaveSavedString(ItemTypeUtils__h, i, ItemTypeUtils__KEY_ICON) ) then
+        call SaveStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_ICON, GetItemTypeIconFresh(i))
     endif
-    return LoadStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_ICON)
+    return LoadStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_ICON)
 endfunction
 
 
@@ -849,19 +851,19 @@ endfunction
 
 
 function OnStartGame takes code func returns nothing
-    call TriggerAddAction(OnStartGame___startGameTrigger, func)
+    call TriggerAddAction(OnStartGame__startGameTrigger, func)
 endfunction
 
-function OnStartGame___TimerFunctionStartGame takes nothing returns nothing
+function OnStartGame__TimerFunctionStartGame takes nothing returns nothing
     local timer t= GetExpiredTimer()
-    call TriggerExecute(OnStartGame___startGameTrigger)
+    call TriggerExecute(OnStartGame__startGameTrigger)
     call PauseTimer(t)
     call DestroyTimer(t)
     set t=null
 endfunction
 
-function OnStartGame___Init takes nothing returns nothing
-    call TimerStart(CreateTimer(), 0.0, false, function OnStartGame___TimerFunctionStartGame)
+function OnStartGame__Init takes nothing returns nothing
+    call TimerStart(CreateTimer(), 0.0, false, function OnStartGame__TimerFunctionStartGame)
 endfunction
 
 
@@ -989,12 +991,12 @@ endfunction
         if ( GetLocalPlayer() == ForPlayer ) then
             call ClearTextMessages()
             call DisplayTimedTextToPlayer(ForPlayer, 0.52, 0.96, 2.00, msg)
-            call StartSound(SimError___error)
+            call StartSound(SimError__error)
         endif
     endfunction
 
-    function SimError___init takes nothing returns nothing
-         set SimError___error=CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
+    function SimError__init takes nothing returns nothing
+         set SimError__error=CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
          //call StartSound( error ) //apparently the bug in which you play a sound for the first time
                                     //and it doesn't work is not there anymore in patch 1.22
     endfunction
@@ -1630,42 +1632,42 @@ function GetPlayerNameColored takes player whichPlayer returns string
 endfunction
 
 
-function PlayerColorUtils___Init takes nothing returns nothing
-    set PlayerColorUtils___PlayerColorNames[0]="RED"
-    set PlayerColorUtils___PlayerColorNames[1]="BLUE"
-    set PlayerColorUtils___PlayerColorNames[2]="CYAN"
-    set PlayerColorUtils___PlayerColorNames[3]="PURPLE"
-    set PlayerColorUtils___PlayerColorNames[4]="YELLOW"
-    set PlayerColorUtils___PlayerColorNames[5]="ORANGE"
-    set PlayerColorUtils___PlayerColorNames[6]="GREEN"
-    set PlayerColorUtils___PlayerColorNames[7]="PINK"
-    set PlayerColorUtils___PlayerColorNames[8]="LIGHT_GRAY"
-    set PlayerColorUtils___PlayerColorNames[9]="LIGHT_BLUE"
-    set PlayerColorUtils___PlayerColorNames[10]="AQUA"
-    set PlayerColorUtils___PlayerColorNames[11]="BROWN"
-    set PlayerColorUtils___PlayerColorNames[12]="MAROON"
-    set PlayerColorUtils___PlayerColorNames[13]="NAVY"
-    set PlayerColorUtils___PlayerColorNames[14]="TURQUOISE"
-    set PlayerColorUtils___PlayerColorNames[15]="VIOLET"
-    set PlayerColorUtils___PlayerColorNames[16]="WHEAT"
-    set PlayerColorUtils___PlayerColorNames[17]="PEACH"
-    set PlayerColorUtils___PlayerColorNames[18]="MINT"
-    set PlayerColorUtils___PlayerColorNames[19]="LAVENDER"
-    set PlayerColorUtils___PlayerColorNames[20]="COAL"
-    set PlayerColorUtils___PlayerColorNames[21]="SNOW"
-    set PlayerColorUtils___PlayerColorNames[22]="EMERALD"
-    set PlayerColorUtils___PlayerColorNames[23]="PEANUT"
+function PlayerColorUtils__Init takes nothing returns nothing
+    set PlayerColorUtils__PlayerColorNames[0]="RED"
+    set PlayerColorUtils__PlayerColorNames[1]="BLUE"
+    set PlayerColorUtils__PlayerColorNames[2]="CYAN"
+    set PlayerColorUtils__PlayerColorNames[3]="PURPLE"
+    set PlayerColorUtils__PlayerColorNames[4]="YELLOW"
+    set PlayerColorUtils__PlayerColorNames[5]="ORANGE"
+    set PlayerColorUtils__PlayerColorNames[6]="GREEN"
+    set PlayerColorUtils__PlayerColorNames[7]="PINK"
+    set PlayerColorUtils__PlayerColorNames[8]="LIGHT_GRAY"
+    set PlayerColorUtils__PlayerColorNames[9]="LIGHT_BLUE"
+    set PlayerColorUtils__PlayerColorNames[10]="AQUA"
+    set PlayerColorUtils__PlayerColorNames[11]="BROWN"
+    set PlayerColorUtils__PlayerColorNames[12]="MAROON"
+    set PlayerColorUtils__PlayerColorNames[13]="NAVY"
+    set PlayerColorUtils__PlayerColorNames[14]="TURQUOISE"
+    set PlayerColorUtils__PlayerColorNames[15]="VIOLET"
+    set PlayerColorUtils__PlayerColorNames[16]="WHEAT"
+    set PlayerColorUtils__PlayerColorNames[17]="PEACH"
+    set PlayerColorUtils__PlayerColorNames[18]="MINT"
+    set PlayerColorUtils__PlayerColorNames[19]="LAVENDER"
+    set PlayerColorUtils__PlayerColorNames[20]="COAL"
+    set PlayerColorUtils__PlayerColorNames[21]="SNOW"
+    set PlayerColorUtils__PlayerColorNames[22]="EMERALD"
+    set PlayerColorUtils__PlayerColorNames[23]="PEANUT"
 endfunction
 
 function GetPlayerColorName takes player whichPlayer returns string
-    return StringCase(PlayerColorUtils___PlayerColorNames[GetPlayerId(whichPlayer)], false)
+    return StringCase(PlayerColorUtils__PlayerColorNames[GetPlayerId(whichPlayer)], false)
 endfunction
 
 function GetPlayerColorFromString takes string whichString returns playercolor
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( whichString == I2S(i + 1) or ( PlayerColorUtils___PlayerColorNames[i] != null and StringLength(PlayerColorUtils___PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils___PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
+        if ( whichString == I2S(i + 1) or ( PlayerColorUtils__PlayerColorNames[i] != null and StringLength(PlayerColorUtils__PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils__PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
             return ConvertPlayerColor(i)
         endif
         set i=i + 1
@@ -1678,7 +1680,7 @@ function GetPlayerFromString takes string whichString returns player
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( whichString == I2S(i + 1) or ( PlayerColorUtils___PlayerColorNames[i] != null and StringLength(PlayerColorUtils___PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils___PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
+        if ( whichString == I2S(i + 1) or ( PlayerColorUtils__PlayerColorNames[i] != null and StringLength(PlayerColorUtils__PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorUtils__PlayerColorNames[i] ) or StringStartsWith(GetPlayerName(Player(i)) , whichString) ) then
             return Player(i)
         endif
         set i=i + 1
@@ -1704,8 +1706,8 @@ endfunction
 
 function RefundItem takes item whichItem,player whichPlayer returns nothing
     local integer itemTypeId= GetItemTypeId(whichItem)
-    local integer gold= (R2I(I2R(GetItemValueGold(((itemTypeId)))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
-    local integer lumber= (R2I(I2R(GetItemValueLumber(((itemTypeId)))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
+    local integer gold= (R2I(I2R(GetItemValueGold(((itemTypeId)))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
+    local integer lumber= (R2I(I2R(GetItemValueLumber(((itemTypeId)))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
     call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_RESOURCE_GOLD, gold)
     call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
     call RemoveItem(whichItem)
@@ -2648,7 +2650,7 @@ endfunction
 //library Resources:
 
 
-function Resources___GetAlliesWithSharedControl takes player owner returns force
+function Resources__GetAlliesWithSharedControl takes player owner returns force
     local force allies= CreateForce()
     local player slotPlayer= null
     local integer i= 0
@@ -2665,9 +2667,9 @@ function Resources___GetAlliesWithSharedControl takes player owner returns force
     return allies
 endfunction
 
-function Resources___ShowFadingTextTag takes unit worker,integer amount,integer red,integer green,integer blue returns nothing
+function Resources__ShowFadingTextTag takes unit worker,integer amount,integer red,integer green,integer blue returns nothing
     local texttag textTag= CreateTextTag()
-    local force allies= Resources___GetAlliesWithSharedControl(GetOwningPlayer(worker))
+    local force allies= Resources__GetAlliesWithSharedControl(GetOwningPlayer(worker))
     call SetTextTagText(textTag, "+" + I2S(amount), 0.024)
     call SetTextTagPos(textTag, GetUnitX(worker), GetUnitY(worker), 0.0)
     call SetTextTagColor(textTag, red, green, blue, 255)
@@ -2686,7 +2688,7 @@ endfunction
 
 // u0 - worker/source
 // u1 - return building/mine/target
-function Resources___MovementTypesMatch takes unit u0,unit u1 returns boolean
+function Resources__MovementTypesMatch takes unit u0,unit u1 returns boolean
     local movetype mt0= ConvertMoveType(BlzGetUnitIntegerField(u0, UNIT_IF_MOVE_TYPE))
     local real targetX= GetUnitX(u1)
     local real targetY= GetUnitY(u1)
@@ -2902,43 +2904,43 @@ function ExchangePlayerResource takes player whichPlayer,integer source,integer 
 endfunction
 
 function GetUnitResource takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RESOURCE , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RESOURCE , Resources__KEY_MAX))
 endfunction
 
 function SetUnitResource takes unit whichUnit,integer r,integer amount returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RESOURCE , Resources___KEY_MAX), amount)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RESOURCE , Resources__KEY_MAX), amount)
 endfunction
 
 function SetUnitResourceMax takes unit whichUnit,integer r,integer max returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX), max)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX), max)
 endfunction
 
 function GetUnitResourceMax takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))
 endfunction
 
 function SetUnitResourcePerHit takes unit whichUnit,integer r,integer amount returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RESOURCE_PER_HIT , Resources___KEY_MAX), amount)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RESOURCE_PER_HIT , Resources__KEY_MAX), amount)
 endfunction
 
 function GetUnitResourcePerHit takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RESOURCE_PER_HIT , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RESOURCE_PER_HIT , Resources__KEY_MAX))
 endfunction
 
 function SetUnitMine takes unit whichUnit,unit mine returns nothing
-    call SaveUnitHandle(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_MINE , Resources___KEY_MAX), mine)
+    call SaveUnitHandle(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_MINE , Resources__KEY_MAX), mine)
 endfunction
 
 function GetUnitMine takes unit whichUnit returns unit
-    return LoadUnitHandle(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_MINE , Resources___KEY_MAX))
+    return LoadUnitHandle(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_MINE , Resources__KEY_MAX))
 endfunction
 
 function SetUnitReturnResource takes unit whichUnit,integer r,boolean allow returns nothing
-    call SaveBoolean(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_RESOURCE , Resources___KEY_MAX), allow)
+    call SaveBoolean(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_RESOURCE , Resources__KEY_MAX), allow)
 endfunction
 
 function GetUnitReturnResource takes unit whichUnit,integer r returns boolean
-    return LoadBoolean(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_RESOURCE , Resources___KEY_MAX))
+    return LoadBoolean(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_RESOURCE , Resources__KEY_MAX))
 endfunction
 
 function AddUnitReturnResource takes unit whichUnit,integer r returns nothing
@@ -2946,139 +2948,139 @@ function AddUnitReturnResource takes unit whichUnit,integer r returns nothing
 endfunction
 
 function SetUnitHarvestOrderId takes unit whichUnit,integer r,integer orderId returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX), orderId)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX), orderId)
 endfunction
 
 function GetUnitHarvestOrderId takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))
 endfunction
 
 function SetUnitHarvestAbilityId takes unit whichUnit,integer r,integer orderId returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX), orderId)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX), orderId)
 endfunction
 
 function GetUnitHarvestAbilityId takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))
 endfunction
 
 function SetUnitReturnOrderId takes unit whichUnit,integer r,integer orderId returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_ORDER_ID , Resources___KEY_MAX), orderId)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_ORDER_ID , Resources__KEY_MAX), orderId)
 endfunction
 
 function GetUnitReturnOrderId takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_ORDER_ID , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_ORDER_ID , Resources__KEY_MAX))
 endfunction
 
 function SetUnitReturnAbilityId takes unit whichUnit,integer r,integer orderId returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX), orderId)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX), orderId)
 endfunction
 
 function GetUnitReturnAbilityId takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))
 endfunction
 
 function SetUnitReturnHiddenOrderId takes unit whichUnit,integer r,integer orderId returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX), orderId)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX), orderId)
 endfunction
 
 function GetUnitReturnHiddenOrderId takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX))
 endfunction
 
 function SetUnitReturnHiddenAbilityId takes unit whichUnit,integer r,integer orderId returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_HIDDEN_ABILITY_ID , Resources___KEY_MAX), orderId)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_HIDDEN_ABILITY_ID , Resources__KEY_MAX), orderId)
 endfunction
 
 function GetUnitReturnHiddenAbilityId takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_RETURN_HIDDEN_ABILITY_ID , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_RETURN_HIDDEN_ABILITY_ID , Resources__KEY_MAX))
 endfunction
 
 function IsMine takes unit whichUnit returns boolean
-    return IsUnitInGroup(whichUnit, Resources___mines)
+    return IsUnitInGroup(whichUnit, Resources__mines)
 endfunction
 
 function SetUnitHarvestDuration takes unit whichUnit,integer r,real duration returns nothing
-    call SaveReal(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_HARVEST_DURATION , Resources___KEY_MAX), duration)
+    call SaveReal(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_HARVEST_DURATION , Resources__KEY_MAX), duration)
 endfunction
 
 function GetUnitHarvestDuration takes unit whichUnit,integer r returns real
-    return LoadReal(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_HARVEST_DURATION , Resources___KEY_MAX))
+    return LoadReal(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_HARVEST_DURATION , Resources__KEY_MAX))
 endfunction
 
 function SetMineExplodesOnDeath takes unit mine,boolean explode returns nothing
-    call SaveBoolean(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_EXPLODE_ON_DEATH , Resources___KEY_MAX), explode)
+    call SaveBoolean(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_EXPLODE_ON_DEATH , Resources__KEY_MAX), explode)
 endfunction
 
 function GetMineExplodesOnDeath takes unit mine returns boolean
-    return LoadBoolean(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_EXPLODE_ON_DEATH , Resources___KEY_MAX))
+    return LoadBoolean(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_EXPLODE_ON_DEATH , Resources__KEY_MAX))
 endfunction
 
-function SetMineWorkers takes unit mine,group l__Resources___workers returns nothing
-    call SaveGroupHandle(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX), l__Resources___workers)
+function SetMineWorkers takes unit mine,group l__Resources__workers returns nothing
+    call SaveGroupHandle(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX), l__Resources__workers)
 endfunction
 
 function GetMineWorkers takes unit mine returns group
-    return LoadGroupHandle(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX))
+    return LoadGroupHandle(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX))
 endfunction
 
 function SetMineMaxWorkers takes unit mine,integer max returns nothing
-    call SaveInteger(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_MAX_MINE_WORKERS , Resources___KEY_MAX), max)
+    call SaveInteger(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_MAX_MINE_WORKERS , Resources__KEY_MAX), max)
 endfunction
 
 function GetMineMaxWorkers takes unit mine returns integer
-    return LoadInteger(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_MAX_MINE_WORKERS , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_MAX_MINE_WORKERS , Resources__KEY_MAX))
 endfunction
 
 function SetMineTakeWorkerInside takes unit mine,boolean take returns nothing
-    call SaveBoolean(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_TAKE_WORKER_INSIDE , Resources___KEY_MAX), take)
+    call SaveBoolean(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_TAKE_WORKER_INSIDE , Resources__KEY_MAX), take)
 endfunction
 
 function GetMineTakeWorkerInside takes unit mine returns boolean
-    return LoadBoolean(Resources___h, GetHandleId(mine), Index2D(0 , Resources___KEY_TAKE_WORKER_INSIDE , Resources___KEY_MAX))
+    return LoadBoolean(Resources__h, GetHandleId(mine), Index2D(0 , Resources__KEY_TAKE_WORKER_INSIDE , Resources__KEY_MAX))
 endfunction
 
 function SetUnitResourceAnimationProperties takes unit whichUnit,integer r,string animationProperties returns nothing
-    call SaveStr(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX), animationProperties)
+    call SaveStr(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX), animationProperties)
 endfunction
 
 function GetUnitResourceAnimationProperties takes unit whichUnit,integer r returns string
-    return LoadStr(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))
+    return LoadStr(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))
 endfunction
 
 function SetUnitResourceSkin takes unit whichUnit,integer r,integer skin returns nothing
-    call SaveInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_SKIN , Resources___KEY_MAX), skin)
+    call SaveInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_SKIN , Resources__KEY_MAX), skin)
 endfunction
 
 function GetUnitResourceSkin takes unit whichUnit,integer r returns integer
-    return LoadInteger(Resources___h, GetHandleId(whichUnit), Index2D(r , Resources___KEY_SKIN , Resources___KEY_MAX))
+    return LoadInteger(Resources__h, GetHandleId(whichUnit), Index2D(r , Resources__KEY_SKIN , Resources__KEY_MAX))
 endfunction
 
 function SetUnitQueueTimer takes unit whichUnit,timer t returns nothing
-    call SaveTimerHandle(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_QUEUE_TIMER , Resources___KEY_MAX), t)
+    call SaveTimerHandle(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_QUEUE_TIMER , Resources__KEY_MAX), t)
 endfunction
 
 function GetUnitQueueTimer takes unit whichUnit returns timer
-    return LoadTimerHandle(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_QUEUE_TIMER , Resources___KEY_MAX))
+    return LoadTimerHandle(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_QUEUE_TIMER , Resources__KEY_MAX))
 endfunction
 
 function SetUnitQueueWorkerReleaseTimer takes unit whichUnit,timer t returns nothing
-    call SaveTimerHandle(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_QUEUE_WORKER_RELEASE_TIMER , Resources___KEY_MAX), t)
+    call SaveTimerHandle(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_QUEUE_WORKER_RELEASE_TIMER , Resources__KEY_MAX), t)
 endfunction
 
 function GetUnitQueueWorkerReleaseTimer takes unit whichUnit returns timer
-    return LoadTimerHandle(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_QUEUE_WORKER_RELEASE_TIMER , Resources___KEY_MAX))
+    return LoadTimerHandle(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_QUEUE_WORKER_RELEASE_TIMER , Resources__KEY_MAX))
 endfunction
 
 function SetUnitDisableStopMiningOnError takes unit whichUnit,boolean disable returns nothing
-    call SaveBoolean(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_DISABLE_STOP_MINING_ON_ERROR , Resources___KEY_MAX), disable)
+    call SaveBoolean(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_DISABLE_STOP_MINING_ON_ERROR , Resources__KEY_MAX), disable)
 endfunction
 
 function GetUnitDisableStopMiningOnError takes unit whichUnit returns boolean
-    return LoadBoolean(Resources___h, GetHandleId(whichUnit), Index2D(0 , Resources___KEY_DISABLE_STOP_MINING_ON_ERROR , Resources___KEY_MAX))
+    return LoadBoolean(Resources__h, GetHandleId(whichUnit), Index2D(0 , Resources__KEY_DISABLE_STOP_MINING_ON_ERROR , Resources__KEY_MAX))
 endfunction
 
 function AddMine takes unit whichUnit returns nothing
-    call GroupAddUnit(Resources___mines, whichUnit)
+    call GroupAddUnit(Resources__mines, whichUnit)
     call SetMineWorkers(whichUnit , CreateGroup())
 endfunction
 
@@ -3090,20 +3092,20 @@ function AddMineEx takes unit whichUnit,integer resource,integer amount returns 
 endfunction
 
 function RemoveMine takes unit whichUnit returns nothing
-    call GroupRemoveUnit(Resources___mines, whichUnit)
-    if ( (LoadGroupHandle(Resources___h, GetHandleId((whichUnit)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX))) != null ) then // INLINED!!
-        call DestroyGroup((LoadGroupHandle(Resources___h, GetHandleId((whichUnit)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX)))) // INLINED!!
+    call GroupRemoveUnit(Resources__mines, whichUnit)
+    if ( (LoadGroupHandle(Resources__h, GetHandleId((whichUnit)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX))) != null ) then // INLINED!!
+        call DestroyGroup((LoadGroupHandle(Resources__h, GetHandleId((whichUnit)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX)))) // INLINED!!
     endif
 endfunction
 
 function IsWorker takes unit whichUnit returns boolean
-    return IsUnitInGroup(whichUnit, Resources___workers)
+    return IsUnitInGroup(whichUnit, Resources__workers)
 endfunction
 
 function AddWorker takes unit whichUnit returns nothing
     local integer i= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
-    call GroupAddUnit(Resources___workers, whichUnit)
+    call GroupAddUnit(Resources__workers, whichUnit)
 endfunction
 
 function AddAllResourcesToWorker takes unit worker,integer maxResource,integer resourcePerHit returns nothing
@@ -3145,28 +3147,28 @@ function AddResourceToWorker takes unit worker,integer resource,integer abilityI
 endfunction
 
 function RemoveWorker takes unit whichUnit returns nothing
-    call GroupRemoveUnit(Resources___workers, whichUnit)
+    call GroupRemoveUnit(Resources__workers, whichUnit)
 endfunction
 
 function IsReturnBuilding takes unit whichUnit returns boolean
-    return IsUnitInGroup(whichUnit, Resources___returnBuildings)
+    return IsUnitInGroup(whichUnit, Resources__returnBuildings)
 endfunction
 
 function AddReturnBuilding takes unit whichUnit returns nothing
-    call GroupAddUnit(Resources___returnBuildings, whichUnit)
+    call GroupAddUnit(Resources__returnBuildings, whichUnit)
 endfunction
 
 function AddReturnBuildingEx takes unit whichUnit,integer r returns nothing
-    call GroupAddUnit(Resources___returnBuildings, (whichUnit)) // INLINED!!
+    call GroupAddUnit(Resources__returnBuildings, (whichUnit)) // INLINED!!
     call SetUnitReturnResource(whichUnit , r , true)
 endfunction
 
 function RemoveReturnBuilding takes unit whichUnit returns nothing
-    call GroupRemoveUnit(Resources___returnBuildings, whichUnit)
+    call GroupRemoveUnit(Resources__returnBuildings, whichUnit)
 endfunction
 
 function CustomBountyFadingText takes unit worker,integer resource,integer amount returns nothing
-    call Resources___ShowFadingTextTag(worker , amount , (s__Resource_red[(resource)]) , (s__Resource_green[(resource)]) , (s__Resource_blue[(resource)])) // INLINED!!
+    call Resources__ShowFadingTextTag(worker , amount , (s__Resource_red[(resource)]) , (s__Resource_green[(resource)]) , (s__Resource_blue[(resource)])) // INLINED!!
 endfunction
 
 function CustomBountyEx takes unit worker,player whichPlayer,integer resource,integer amount returns nothing
@@ -3184,61 +3186,61 @@ function GetWorkerTotalResources takes unit worker returns integer
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     loop
         exitwhen ( i == max )
-        set result=result + (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( (s__Resource_resources[(i)])) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+        set result=result + (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( (s__Resource_resources[(i)])) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
         set i=i + 1
     endloop
     return result
 endfunction
 
 function TriggerRegisterGatherEvent takes trigger whichTrigger returns nothing
-    set Resources___callbackTriggers[Resources___callbackTriggersCounter]=whichTrigger
-    set Resources___callbackTriggersCounter=Resources___callbackTriggersCounter + 1
+    set Resources__callbackTriggers[Resources__callbackTriggersCounter]=whichTrigger
+    set Resources__callbackTriggersCounter=Resources__callbackTriggersCounter + 1
 endfunction
 
 function TriggerRegisterReturnEvent takes trigger whichTrigger returns nothing
-    set Resources___callbackReturnTriggers[Resources___callbackReturnTriggersCounter]=whichTrigger
-    set Resources___callbackReturnTriggersCounter=Resources___callbackReturnTriggersCounter + 1
+    set Resources__callbackReturnTriggers[Resources__callbackReturnTriggersCounter]=whichTrigger
+    set Resources__callbackReturnTriggersCounter=Resources__callbackReturnTriggersCounter + 1
 endfunction
 
 function TriggerRegisterDeathResourceEvent takes trigger whichTrigger returns nothing
-    set Resources___callbackDeathTriggers[Resources___callbackDeathTriggersCounter]=whichTrigger
-    set Resources___callbackDeathTriggersCounter=Resources___callbackDeathTriggersCounter + 1
+    set Resources__callbackDeathTriggers[Resources__callbackDeathTriggersCounter]=whichTrigger
+    set Resources__callbackDeathTriggersCounter=Resources__callbackDeathTriggersCounter + 1
 endfunction
 
 function GetTriggerMine takes nothing returns unit
-    return Resources___triggerMine
+    return Resources__triggerMine
 endfunction
 
 function GetTriggerReturnBuilding takes nothing returns unit
-    return Resources___triggerReturnBuilding
+    return Resources__triggerReturnBuilding
 endfunction
 
 function GetTriggerDyingResourceUnit takes nothing returns unit
-    return Resources___triggerDyingResourceUnit
+    return Resources__triggerDyingResourceUnit
 endfunction
 
 function GetTriggerWorker takes nothing returns unit
-    return Resources___triggerWorker
+    return Resources__triggerWorker
 endfunction
 
 function GetTriggerResource takes nothing returns integer
-    return Resources___triggerResource
+    return Resources__triggerResource
 endfunction
 
 function GetTriggerResourceAmount takes nothing returns integer
-    return Resources___triggerResourceAmount
+    return Resources__triggerResourceAmount
 endfunction
 
 function ExecuteGatherCallbacks takes unit mine,unit worker,integer resource,integer amount returns nothing
     local integer i= 0
     loop
-        exitwhen ( i == Resources___callbackTriggersCounter )
-        if ( IsTriggerEnabled(Resources___callbackTriggers[i]) ) then
-            set Resources___triggerMine=mine
-            set Resources___triggerWorker=worker
-            set Resources___triggerResource=resource
-            set Resources___triggerResourceAmount=amount
-            call ConditionalTriggerExecute(Resources___callbackTriggers[i])
+        exitwhen ( i == Resources__callbackTriggersCounter )
+        if ( IsTriggerEnabled(Resources__callbackTriggers[i]) ) then
+            set Resources__triggerMine=mine
+            set Resources__triggerWorker=worker
+            set Resources__triggerResource=resource
+            set Resources__triggerResourceAmount=amount
+            call ConditionalTriggerExecute(Resources__callbackTriggers[i])
         endif
         set i=i + 1
     endloop
@@ -3247,13 +3249,13 @@ endfunction
 function ExecuteReturnCallbacks takes unit returnBuilding,unit worker,integer resource,integer amount returns nothing
     local integer i= 0
     loop
-        exitwhen ( i == Resources___callbackReturnTriggersCounter )
-        if ( IsTriggerEnabled(Resources___callbackReturnTriggers[i]) ) then
-            set Resources___triggerReturnBuilding=returnBuilding
-            set Resources___triggerWorker=worker
-            set Resources___triggerResource=resource
-            set Resources___triggerResourceAmount=amount
-            call ConditionalTriggerExecute(Resources___callbackReturnTriggers[i])
+        exitwhen ( i == Resources__callbackReturnTriggersCounter )
+        if ( IsTriggerEnabled(Resources__callbackReturnTriggers[i]) ) then
+            set Resources__triggerReturnBuilding=returnBuilding
+            set Resources__triggerWorker=worker
+            set Resources__triggerResource=resource
+            set Resources__triggerResourceAmount=amount
+            call ConditionalTriggerExecute(Resources__callbackReturnTriggers[i])
         endif
         set i=i + 1
     endloop
@@ -3262,10 +3264,10 @@ endfunction
 function ExecuteDeathCallbacks takes unit whichUnit returns nothing
     local integer i= 0
     loop
-        exitwhen ( i == Resources___callbackReturnTriggersCounter )
-        if ( IsTriggerEnabled(Resources___callbackDeathTriggers[i]) ) then
-            set Resources___triggerDyingResourceUnit=whichUnit
-            call ConditionalTriggerExecute(Resources___callbackDeathTriggers[i])
+        exitwhen ( i == Resources__callbackReturnTriggersCounter )
+        if ( IsTriggerEnabled(Resources__callbackDeathTriggers[i]) ) then
+            set Resources__triggerDyingResourceUnit=whichUnit
+            call ConditionalTriggerExecute(Resources__callbackDeathTriggers[i])
         endif
         set i=i + 1
     endloop
@@ -3295,7 +3297,7 @@ function IsMineEmpty takes unit mine returns boolean
     local integer i= 0
     loop
         exitwhen ( i == max or not empty )
-        if ( (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( (s__Resource_resources[(i)])) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( (s__Resource_resources[(i)])) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
             set empty=false
         endif
         set i=i + 1
@@ -3317,19 +3319,19 @@ function Gather takes unit worker,unit mine returns integer
     loop
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        set actualAmount=IMinBJ((LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))), (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE_PER_HIT , Resources___KEY_MAX)))) // INLINED!!
+        set actualAmount=IMinBJ((LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))), (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE_PER_HIT , Resources__KEY_MAX)))) // INLINED!!
         //call BJDebugMsg("Actual amount 1: " + I2S(actualAmount))
         if ( actualAmount > 0 ) then
-            set actualAmount=IMinBJ(actualAmount, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) - (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))) // INLINED!!
+            set actualAmount=IMinBJ(actualAmount, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) - (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))) // INLINED!!
             //call BJDebugMsg("Actual amount 2: " + I2S(actualAmount) + " workerresource amount " + I2S(GetUnitResource(worker, resource)) + " and max resource: " + I2S(GetUnitResourceMax(worker, resource)))
             if ( actualAmount > 0 ) then
-                call SetUnitResource(mine , resource , (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) - actualAmount) // INLINED!!
-                call SetUnitResource(worker , resource , (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) + actualAmount) // INLINED!!
-                if ( (LoadStr(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))) != null and (LoadStr(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))) != "" ) then // INLINED!!
-                    call AddUnitAnimationProperties(worker, (LoadStr(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))), true) // INLINED!!
+                call SetUnitResource(mine , resource , (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) - actualAmount) // INLINED!!
+                call SetUnitResource(worker , resource , (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) + actualAmount) // INLINED!!
+                if ( (LoadStr(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))) != null and (LoadStr(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))) != "" ) then // INLINED!!
+                    call AddUnitAnimationProperties(worker, (LoadStr(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))), true) // INLINED!!
                 endif
-                if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_SKIN , Resources___KEY_MAX))) != 0 ) then // INLINED!!
-                    call BlzSetUnitSkin(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_SKIN , Resources___KEY_MAX)))) // INLINED!!
+                if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_SKIN , Resources__KEY_MAX))) != 0 ) then // INLINED!!
+                    call BlzSetUnitSkin(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_SKIN , Resources__KEY_MAX)))) // INLINED!!
                 endif
                 call ExecuteGatherCallbacks(mine , worker , resource , actualAmount)
                 //call BJDebugMsg("Actual amount 3: " + I2S(actualAmount))
@@ -3342,7 +3344,7 @@ function Gather takes unit worker,unit mine returns integer
     call SetUnitMine(worker , mine)
     
     if ( IsMineEmpty(mine) ) then
-        if ( (LoadBoolean(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_EXPLODE_ON_DEATH , Resources___KEY_MAX))) ) then // INLINED!!
+        if ( (LoadBoolean(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_EXPLODE_ON_DEATH , Resources__KEY_MAX))) ) then // INLINED!!
             call KillUnit(mine)
         else
             call RemoveMine(mine)
@@ -3353,28 +3355,28 @@ function Gather takes unit worker,unit mine returns integer
 endfunction
 
 
-function Resources___FilterFunctionIsMine takes nothing returns boolean
-    return (IsUnitInGroup((GetFilterUnit()), Resources___mines)) and Resources___MovementTypesMatch(Resources___filterWorker , GetFilterUnit()) and (LoadInteger(Resources___h, GetHandleId((GetFilterUnit() )), Index2D(( Resources___filterResource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 // INLINED!!
+function Resources__FilterFunctionIsMine takes nothing returns boolean
+    return (IsUnitInGroup((GetFilterUnit()), Resources__mines)) and Resources__MovementTypesMatch(Resources__filterWorker , GetFilterUnit()) and (LoadInteger(Resources__h, GetHandleId((GetFilterUnit() )), Index2D(( Resources__filterResource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 // INLINED!!
 endfunction
 
 function FindNearestMineOfResource takes unit worker,real radius,integer resource returns unit
     local real x= GetUnitX(worker)
     local real y= GetUnitY(worker)
-    local group l__Resources___mines= CreateGroup()
+    local group l__Resources__mines= CreateGroup()
     local unit currentMine= null
     local real currentDistance= 0.0
     local real distance= 0.0
     local unit mine= null
     local integer i= 0
     local integer max= 0
-    set Resources___filterWorker=worker
-    set Resources___filterResource=resource
-    call GroupEnumUnitsInRange(l__Resources___mines, x, y, radius, Filter(function Resources___FilterFunctionIsMine))
+    set Resources__filterWorker=worker
+    set Resources__filterResource=resource
+    call GroupEnumUnitsInRange(l__Resources__mines, x, y, radius, Filter(function Resources__FilterFunctionIsMine))
     set i=0
-    set max=BlzGroupGetSize(l__Resources___mines)
+    set max=BlzGroupGetSize(l__Resources__mines)
     loop
         exitwhen ( i == max )
-        set currentMine=BlzGroupUnitAt(l__Resources___mines, i)
+        set currentMine=BlzGroupUnitAt(l__Resources__mines, i)
         if ( mine == null ) then
             set mine=currentMine
         else
@@ -3387,9 +3389,9 @@ function FindNearestMineOfResource takes unit worker,real radius,integer resourc
         set currentMine=null
         set i=i + 1
     endloop
-    call GroupClear(l__Resources___mines)
-    call DestroyGroup(l__Resources___mines)
-    set l__Resources___mines=null
+    call GroupClear(l__Resources__mines)
+    call DestroyGroup(l__Resources__mines)
+    set l__Resources__mines=null
     return mine
 endfunction
 
@@ -3404,13 +3406,13 @@ function ConstructedReturnBuilding takes unit worker,unit returnBuilding returns
     loop
         exitwhen ( i == max or returnOrder )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        if ( (LoadBoolean(Resources___h, GetHandleId((returnBuilding )), Index2D(( resource) , Resources___KEY_RETURN_RESOURCE , Resources___KEY_MAX))) ) then // INLINED!!
-            if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
+        if ( (LoadBoolean(Resources__h, GetHandleId((returnBuilding )), Index2D(( resource) , Resources__KEY_RETURN_RESOURCE , Resources__KEY_MAX))) ) then // INLINED!!
+            if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
                 set returnOrder=true
                 set result=resource
-            elseif ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) > amount ) then // INLINED!!
+            elseif ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) > amount ) then // INLINED!!
                 set result=resource
-                set amount=(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+                set amount=(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) // INLINED!!
             endif
         endif
         set i=i + 1
@@ -3418,11 +3420,11 @@ function ConstructedReturnBuilding takes unit worker,unit returnBuilding returns
     
     if ( result != 0 ) then
         if ( returnOrder ) then
-            call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( result) , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX))), returnBuilding) // INLINED!!
+            call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( result) , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX))), returnBuilding) // INLINED!!
         else
             set mine=FindNearestMineOfResource(worker , 2048.0 , result)
             if ( mine != null ) then
-                call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( result) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))), mine) // INLINED!!
+                call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( result) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))), mine) // INLINED!!
             endif
         endif
     endif
@@ -3439,10 +3441,10 @@ function ConstructedMine takes unit worker,unit mine returns integer
         exitwhen ( i == max or returnOrder )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
         //call BJDebugMsg("Checking resource " + GetResourceName(resource) + " for worker " + GetUnitName(worker) + " and mine " + GetUnitName(mine))
-        if ( (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 and (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 and (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
             set result=resource
             
-            if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 and (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) == (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) ) then // INLINED!!
+            if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 and (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) == (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) ) then // INLINED!!
                 set returnOrder=true
             endif
         endif
@@ -3451,10 +3453,10 @@ function ConstructedMine takes unit worker,unit mine returns integer
     
     if ( result != 0 ) then
         if ( returnOrder ) then
-            call IssueImmediateOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( result) , Resources___KEY_RETURN_ORDER_ID , Resources___KEY_MAX)))) // INLINED!!
+            call IssueImmediateOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( result) , Resources__KEY_RETURN_ORDER_ID , Resources__KEY_MAX)))) // INLINED!!
             //call BJDebugMsg("Order return")
         else
-            call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( result) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))), mine) // INLINED!!
+            call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( result) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))), mine) // INLINED!!
             //call BJDebugMsg("Order harvest for resource " + GetResourceName(result))
         endif
     endif
@@ -3471,9 +3473,9 @@ function GetPrimaryResourceForWorker takes unit worker returns integer
     loop
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > amount ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > amount ) then // INLINED!!
             set result=resource
-            set amount=(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+            set amount=(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
         endif
         set i=i + 1
     endloop
@@ -3491,13 +3493,13 @@ function GetPrimaryMineResourceForWorker takes unit mine,unit worker returns int
     loop
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) > 0 and (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 and IsAlliedMine(mine , GetOwningPlayer(worker)) ) then // INLINED!!
-            if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) > workerMax ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) > 0 and (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 and IsAlliedMine(mine , GetOwningPlayer(worker)) ) then // INLINED!!
+            if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) > workerMax ) then // INLINED!!
                 set result=resource
-                set workerMax=(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) // INLINED!!
-            elseif ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) == workerMax and (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > mineMax ) then // INLINED!!
+                set workerMax=(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) // INLINED!!
+            elseif ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) == workerMax and (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > mineMax ) then // INLINED!!
                 set result=resource
-                set mineMax=(LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+                set mineMax=(LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
             endif
         endif
         set i=i + 1
@@ -3515,9 +3517,9 @@ function GetResourceFromReturnResourcesAbilityId takes unit worker,integer abili
     loop
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))) == abilityId and (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > v ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))) == abilityId and (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > v ) then // INLINED!!
             set result=resource
-            set v=(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+            set v=(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
         endif
         set i=i + 1
     endloop
@@ -3530,7 +3532,7 @@ function IsReturnResourcesHiddenAbilityId takes unit worker,integer abilityId re
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     loop
         exitwhen ( i == max )
-        if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( (s__Resource_resources[(i)])) , Resources___KEY_RETURN_HIDDEN_ABILITY_ID , Resources___KEY_MAX))) == abilityId ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( (s__Resource_resources[(i)])) , Resources__KEY_RETURN_HIDDEN_ABILITY_ID , Resources__KEY_MAX))) == abilityId ) then // INLINED!!
             return true
         endif
         set i=i + 1
@@ -3538,56 +3540,56 @@ function IsReturnResourcesHiddenAbilityId takes unit worker,integer abilityId re
     return false
 endfunction
 
-function Resources___TimerFunctionQueue takes nothing returns nothing
+function Resources__TimerFunctionQueue takes nothing returns nothing
     local timer t= GetExpiredTimer()
     local integer handleId= GetHandleId(t)
-    local unit worker= LoadUnitHandle(Resources___h, handleId, 0)
-    local integer orderId= LoadInteger(Resources___h, handleId, 1)
-    local integer abilityId= LoadInteger(Resources___h, handleId, 2)
-    local unit mine= LoadUnitHandle(Resources___h, handleId, 3)
+    local unit worker= LoadUnitHandle(Resources__h, handleId, 0)
+    local integer orderId= LoadInteger(Resources__h, handleId, 1)
+    local integer abilityId= LoadInteger(Resources__h, handleId, 2)
+    local unit mine= LoadUnitHandle(Resources__h, handleId, 3)
     //local real cooldown = BlzGetAbilityRealLevelField(BlzGetUnitAbility(worker, abilityId), ABILITY_RLF_COOLDOWN, 0)
     if ( IsUnitAliveBJ(worker) and IsUnitAliveBJ(mine) ) then
         //call BJDebugMsg("trigger queued order with ID " + I2S(orderId) + " for worker " + GetUnitName(worker) + " to mine " + GetUnitName(mine))
         call IssueTargetOrderById(worker, orderId, mine)
     endif
-    call FlushChildHashtable(Resources___h, handleId)
+    call FlushChildHashtable(Resources__h, handleId)
     call PauseTimer(t)
     call DestroyTimer(t)
     call SetUnitQueueTimer(worker , null)
     set t=null
 endfunction
 
-function Resources___CancelUnitQueueTimer takes unit worker returns nothing
-    local timer t= (LoadTimerHandle(Resources___h, GetHandleId((worker)), Index2D(0 , Resources___KEY_QUEUE_TIMER , Resources___KEY_MAX))) // INLINED!!
+function Resources__CancelUnitQueueTimer takes unit worker returns nothing
+    local timer t= (LoadTimerHandle(Resources__h, GetHandleId((worker)), Index2D(0 , Resources__KEY_QUEUE_TIMER , Resources__KEY_MAX))) // INLINED!!
     if ( t != null ) then
-        call FlushChildHashtable(Resources___h, GetHandleId(t))
+        call FlushChildHashtable(Resources__h, GetHandleId(t))
         call PauseTimer(t)
         call DestroyTimer(t)
     endif
 endfunction
 
-function Resources___QueueOrderEx takes unit worker,integer orderId,integer abilityId,unit mine,real duration returns nothing
+function Resources__QueueOrderEx takes unit worker,integer orderId,integer abilityId,unit mine,real duration returns nothing
     local timer t= null
     local integer handleId= 0
     //call BJDebugMsg("Queue order with order ID " + OrderId2String(orderId) + " with mine " + GetUnitName(mine) + " and duration " + R2S(duration))
-    call Resources___CancelUnitQueueTimer(worker)
+    call Resources__CancelUnitQueueTimer(worker)
     if ( duration <= 0.0 ) then
         //call BJDebugMsg("Issue order id immediately to  mine " + GetUnitName(mine))
         call IssueTargetOrderById(worker, orderId, mine)
     else
         set t=CreateTimer()
         set handleId=GetHandleId(t)
-        call SaveUnitHandle(Resources___h, handleId, 0, worker)
-        call SaveInteger(Resources___h, handleId, 1, orderId)
-        call SaveInteger(Resources___h, handleId, 2, abilityId)
-        call SaveUnitHandle(Resources___h, handleId, 3, mine)
+        call SaveUnitHandle(Resources__h, handleId, 0, worker)
+        call SaveInteger(Resources__h, handleId, 1, orderId)
+        call SaveInteger(Resources__h, handleId, 2, abilityId)
+        call SaveUnitHandle(Resources__h, handleId, 3, mine)
         call SetUnitQueueTimer(worker , t)
         // add threshold since the timer might not be as precise as the cooldown
-        call TimerStart(t, duration, false, function Resources___TimerFunctionQueue)
+        call TimerStart(t, duration, false, function Resources__TimerFunctionQueue)
     endif
 endfunction
 
-function Resources___QueueOrder takes unit worker,integer orderId,integer abilityId,unit mine returns nothing
+function Resources__QueueOrder takes unit worker,integer orderId,integer abilityId,unit mine returns nothing
    local real cooldown= BlzGetUnitAbilityCooldownRemaining(worker, abilityId)
    
    if ( cooldown > 0.0 ) then
@@ -3595,7 +3597,7 @@ function Resources___QueueOrder takes unit worker,integer orderId,integer abilit
         set cooldown=cooldown + 0.6
     endif
     
-    call Resources___QueueOrderEx(worker , orderId , abilityId , mine , cooldown)
+    call Resources__QueueOrderEx(worker , orderId , abilityId , mine , cooldown)
 endfunction
 
 function ReturnResources takes unit worker,unit returnBuilding returns integer
@@ -3609,25 +3611,25 @@ function ReturnResources takes unit worker,unit returnBuilding returns integer
     loop
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        set actualAmount=(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+        set actualAmount=(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
         if ( actualAmount > 0 ) then
             set actualAmount=actualAmount + GetPlayerResourceBonus(owner , resource)
         endif
         set actualAmount=actualAmount - ( actualAmount * GetPlayerResourceUpkeepRate(owner , resource) / 100 )
         if ( actualAmount > 0 ) then
-            set result=result + (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+            set result=result + (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
             call SetUnitResource(worker , resource , 0)
-            if ( (LoadStr(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))) != null and (LoadStr(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))) != "" ) then // INLINED!!
-                call AddUnitAnimationProperties(worker, (LoadStr(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_ANIMATION_PROPERTIES , Resources___KEY_MAX))), false) // INLINED!!
+            if ( (LoadStr(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))) != null and (LoadStr(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))) != "" ) then // INLINED!!
+                call AddUnitAnimationProperties(worker, (LoadStr(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_ANIMATION_PROPERTIES , Resources__KEY_MAX))), false) // INLINED!!
             endif
             //call BJDebugMsg("returned resource " + GetResourceName(resource))
-            if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_SKIN , Resources___KEY_MAX))) != 0 ) then // INLINED!!
+            if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_SKIN , Resources__KEY_MAX))) != 0 ) then // INLINED!!
                 //call BJDebugMsg("change skin")
                 call BlzSetUnitSkin(worker, GetUnitTypeId(worker))
             endif
-            call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))), true) // INLINED!!
+            call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))), true) // INLINED!!
             //call BJDebugMsg("hide return ability " + GetObjectName(GetUnitReturnAbilityId(worker, resource)) + " for worker " + GetUnitName(worker))
-            call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))), false) // INLINED!!
+            call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))), false) // INLINED!!
             //call BJDebugMsg("Fading text")
             call CustomBounty(worker , resource , actualAmount) // adds the resource to the player
             call ExecuteReturnCallbacks(returnBuilding , worker , resource , actualAmount)
@@ -3636,7 +3638,7 @@ function ReturnResources takes unit worker,unit returnBuilding returns integer
     endloop
 
     // continue harvest
-    set mine=(LoadUnitHandle(Resources___h, GetHandleId((worker)), Index2D(0 , Resources___KEY_MINE , Resources___KEY_MAX))) // INLINED!!
+    set mine=(LoadUnitHandle(Resources__h, GetHandleId((worker)), Index2D(0 , Resources__KEY_MINE , Resources__KEY_MAX))) // INLINED!!
     if ( mine != null and IsUnitAliveBJ(mine) ) then
         // TODO Continue with the previous resource
         set resource=GetPrimaryMineResourceForWorker(mine , worker)
@@ -3644,7 +3646,7 @@ function ReturnResources takes unit worker,unit returnBuilding returns integer
         if ( resource != 0 ) then
             //call IssueTargetOrderById(worker, GetUnitHarvestOrderId(worker, resource), mine)
             // consider cooldown
-            call Resources___QueueOrder(worker , (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))) , (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))) , mine) // INLINED!!
+            call Resources__QueueOrder(worker , (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))) , (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))) , mine) // INLINED!!
         else
             call SetWorkerPathing(worker , true)
         endif
@@ -3660,12 +3662,12 @@ function ReturnResources takes unit worker,unit returnBuilding returns integer
     return result
 endfunction
 
-function Resources___FilterFunctionReturnBuilding takes nothing returns boolean
-    return (IsUnitInGroup((GetFilterUnit()), Resources___returnBuildings)) and Resources___MovementTypesMatch(Resources___filterWorker , GetFilterUnit()) // INLINED!!
+function Resources__FilterFunctionReturnBuilding takes nothing returns boolean
+    return (IsUnitInGroup((GetFilterUnit()), Resources__returnBuildings)) and Resources__MovementTypesMatch(Resources__filterWorker , GetFilterUnit()) // INLINED!!
 endfunction
 
 function NextReturnBuilding takes unit worker returns unit
-    local group l__Resources___returnBuildings= CreateGroup()
+    local group l__Resources__returnBuildings= CreateGroup()
     local integer resource= 0
     local unit groupMember= null
     local real groupMemberDistance= 0.0
@@ -3676,12 +3678,12 @@ function NextReturnBuilding takes unit worker returns unit
     local integer j= 0
     local integer max2= 0
     local boolean valid= false
-    set Resources___filterWorker=worker
-    call GroupEnumUnitsOfPlayer(l__Resources___returnBuildings, GetOwningPlayer(worker), Filter(function Resources___FilterFunctionReturnBuilding))
-    set max=BlzGroupGetSize(l__Resources___returnBuildings)
+    set Resources__filterWorker=worker
+    call GroupEnumUnitsOfPlayer(l__Resources__returnBuildings, GetOwningPlayer(worker), Filter(function Resources__FilterFunctionReturnBuilding))
+    set max=BlzGroupGetSize(l__Resources__returnBuildings)
     loop
         exitwhen ( i == max )
-        set groupMember=BlzGroupUnitAt(l__Resources___returnBuildings, i)
+        set groupMember=BlzGroupUnitAt(l__Resources__returnBuildings, i)
         //call BJDebugMsg("Checking return building "  + GetUnitName(groupMember))
         
         set valid=false
@@ -3691,7 +3693,7 @@ function NextReturnBuilding takes unit worker returns unit
             exitwhen ( j == max2 )
             set resource=(s__Resource_resources[(j)]) // INLINED!!
             //call BJDebugMsg("Resource "  + GetResourceName(resource) + " carrying " + I2S(GetUnitResource(worker, resource)))
-            if ( (LoadBoolean(Resources___h, GetHandleId((groupMember )), Index2D(( resource) , Resources___KEY_RETURN_RESOURCE , Resources___KEY_MAX))) and (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
+            if ( (LoadBoolean(Resources__h, GetHandleId((groupMember )), Index2D(( resource) , Resources__KEY_RETURN_RESOURCE , Resources__KEY_MAX))) and (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
                 //call BJDebugMsg("Enable for resource "  + GetResourceName(resource))
                 set valid=true
             endif
@@ -3711,14 +3713,14 @@ function NextReturnBuilding takes unit worker returns unit
         set i=i + 1
     endloop
     
-    call GroupClear(l__Resources___returnBuildings)
-    call DestroyGroup(l__Resources___returnBuildings)
-    set l__Resources___returnBuildings=null
+    call GroupClear(l__Resources__returnBuildings)
+    call DestroyGroup(l__Resources__returnBuildings)
+    set l__Resources__returnBuildings=null
     
     return result
 endfunction
 
-function Resources___HasMaxOfMineResources takes unit worker,unit mine returns boolean
+function Resources__HasMaxOfMineResources takes unit worker,unit mine returns boolean
     local integer i= 0
     local integer actualAmount= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
@@ -3726,7 +3728,7 @@ function Resources___HasMaxOfMineResources takes unit worker,unit mine returns b
     loop
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
-        if ( (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 and (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) < (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 and (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) < (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) ) then // INLINED!!
             return false
         endif
         set i=i + 1
@@ -3737,8 +3739,8 @@ endfunction
 function ReleaseWorkerFromMine takes unit worker,unit mine returns nothing
     call ShowUnit(worker, true)
     call SetUnitInvulnerable(worker, false)
-    call GroupRemoveUnit((LoadGroupHandle(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX))), worker) // INLINED!!
-    if ( BlzGroupGetSize((LoadGroupHandle(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX)))) == 0 ) then // INLINED!!
+    call GroupRemoveUnit((LoadGroupHandle(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX))), worker) // INLINED!!
+    if ( BlzGroupGetSize((LoadGroupHandle(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX)))) == 0 ) then // INLINED!!
         call ResetUnitAnimation(mine)
     endif
 endfunction
@@ -3747,25 +3749,25 @@ function AddWorkerToMine takes unit worker,unit mine returns nothing
     call SelectUnitRemove(worker)
     call ShowUnit(worker, false)
     call SetUnitInvulnerable(worker, true)
-    call GroupAddUnit((LoadGroupHandle(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX))), worker) // INLINED!!
+    call GroupAddUnit((LoadGroupHandle(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX))), worker) // INLINED!!
     call QueueUnitAnimation(mine, "stand work")
 endfunction
 
 function ReleaseAllWorkersFromMine takes unit mine returns nothing
     local unit first= null
     loop
-        set first=FirstOfGroup((LoadGroupHandle(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX)))) // INLINED!!
+        set first=FirstOfGroup((LoadGroupHandle(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX)))) // INLINED!!
         exitwhen ( first == null )
         call ReleaseWorkerFromMine(first , mine)
     endloop
 endfunction
 
-function Resources___TimerFunctionReleaseWorkerFromMine takes nothing returns nothing
+function Resources__TimerFunctionReleaseWorkerFromMine takes nothing returns nothing
     local timer t= GetExpiredTimer()
     local integer handleId= GetHandleId(t)
-    local unit worker= LoadUnitHandle(Resources___h, handleId, 0)
-    local unit mine= LoadUnitHandle(Resources___h, handleId, 1)
-    local integer resource= LoadInteger(Resources___h, handleId, 2)
+    local unit worker= LoadUnitHandle(Resources__h, handleId, 0)
+    local unit mine= LoadUnitHandle(Resources__h, handleId, 1)
+    local integer resource= LoadInteger(Resources__h, handleId, 2)
     local integer amount= Gather(worker , mine)
     
     // did not explode
@@ -3775,56 +3777,56 @@ function Resources___TimerFunctionReleaseWorkerFromMine takes nothing returns no
     endif
     
     //call BJDebugMsg("Show and order return ability " + GetObjectName(GetUnitReturnAbilityId(worker, resource)))
-    call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))), true) // INLINED!!
-    call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))), false) // INLINED!!
-    call IssueImmediateOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RETURN_ORDER_ID , Resources___KEY_MAX)))) // INLINED!!
+    call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))), true) // INLINED!!
+    call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))), false) // INLINED!!
+    call IssueImmediateOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RETURN_ORDER_ID , Resources__KEY_MAX)))) // INLINED!!
     
-    call FlushChildHashtable(Resources___h, handleId)
+    call FlushChildHashtable(Resources__h, handleId)
     call PauseTimer(t)
     call DestroyTimer(t)
     call SetUnitQueueWorkerReleaseTimer(worker , null)
     set t=null
 endfunction
 
-function Resources___CancelUnitQueueWorkerReleaseTimer takes unit worker returns nothing
-    local timer t= (LoadTimerHandle(Resources___h, GetHandleId((worker)), Index2D(0 , Resources___KEY_QUEUE_WORKER_RELEASE_TIMER , Resources___KEY_MAX))) // INLINED!!
+function Resources__CancelUnitQueueWorkerReleaseTimer takes unit worker returns nothing
+    local timer t= (LoadTimerHandle(Resources__h, GetHandleId((worker)), Index2D(0 , Resources__KEY_QUEUE_WORKER_RELEASE_TIMER , Resources__KEY_MAX))) // INLINED!!
     if ( t != null ) then
-        call FlushChildHashtable(Resources___h, GetHandleId(t))
+        call FlushChildHashtable(Resources__h, GetHandleId(t))
         call PauseTimer(t)
         call DestroyTimer(t)
     endif
 endfunction
 
-function Resources___QueueWorkerRelease takes unit worker,unit mine,integer resource returns nothing
-    local real duration= (LoadReal(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_DURATION , Resources___KEY_MAX))) // INLINED!!
+function Resources__QueueWorkerRelease takes unit worker,unit mine,integer resource returns nothing
+    local real duration= (LoadReal(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_DURATION , Resources__KEY_MAX))) // INLINED!!
     local timer t= null
     local integer handleId= 0
     //call BJDebugMsg("Queue order with cooldown " + R2S(duration) + " and worker handle ID " + I2S(GetHandleId(worker)) + " for resource " + GetResourceName(resource))
-    call Resources___CancelUnitQueueWorkerReleaseTimer(worker)
+    call Resources__CancelUnitQueueWorkerReleaseTimer(worker)
     if ( duration <= 0.0 ) then
         call Gather(worker , mine)
         call ReleaseWorkerFromMine(worker , mine)
-        call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))), true) // INLINED!!
-        call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))), false) // INLINED!!
-        call IssueImmediateOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RETURN_ORDER_ID , Resources___KEY_MAX)))) // INLINED!!
+        call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))), true) // INLINED!!
+        call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))), false) // INLINED!!
+        call IssueImmediateOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RETURN_ORDER_ID , Resources__KEY_MAX)))) // INLINED!!
         //call BJDebugMsg("Immediate release")
     else
         set t=CreateTimer()
         set handleId=GetHandleId(t)
-        call SaveUnitHandle(Resources___h, handleId, 0, worker)
-        call SaveUnitHandle(Resources___h, handleId, 1, mine)
-        call SaveInteger(Resources___h, handleId, 2, resource)
+        call SaveUnitHandle(Resources__h, handleId, 0, worker)
+        call SaveUnitHandle(Resources__h, handleId, 1, mine)
+        call SaveInteger(Resources__h, handleId, 2, resource)
         call SetUnitQueueWorkerReleaseTimer(worker , t)
-        call TimerStart(t, duration, false, function Resources___TimerFunctionReleaseWorkerFromMine)
+        call TimerStart(t, duration, false, function Resources__TimerFunctionReleaseWorkerFromMine)
     endif
 endfunction
 
 function GatherInsideMine takes unit worker,unit mine,integer resource returns nothing
     call AddWorkerToMine(worker , mine)
-    call Resources___QueueWorkerRelease(worker , mine , resource)
+    call Resources__QueueWorkerRelease(worker , mine , resource)
 endfunction
 
-function Resources___TriggerActionCast takes nothing returns nothing
+function Resources__TriggerActionCast takes nothing returns nothing
     local integer abilityId= GetSpellAbilityId()
     local unit worker= GetTriggerUnit()
     local unit mine= GetSpellTargetUnit()
@@ -3836,15 +3838,15 @@ function Resources___TriggerActionCast takes nothing returns nothing
     local integer foundResource= 0
     local integer resource= 0
     local boolean queued= false
-    local boolean gatherInside= (LoadBoolean(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_TAKE_WORKER_INSIDE , Resources___KEY_MAX))) // INLINED!!
+    local boolean gatherInside= (LoadBoolean(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_TAKE_WORKER_INSIDE , Resources__KEY_MAX))) // INLINED!!
     if ( IsAlliedMine(mine , GetOwningPlayer(worker)) ) then
         loop
             exitwhen ( i == max )
             set resource=(s__Resource_resources[(i)]) // INLINED!!
-            if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))) == abilityId ) then // INLINED!!
+            if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))) == abilityId ) then // INLINED!!
                 //call BJDebugMsg("Harvest ability for resource: " + GetResourceName(resource) + " with mine " + GetUnitName(mine))
                 set matchingResources=matchingResources + 1
-                if ( (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
+                if ( (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
                     set nonEmptyResources=nonEmptyResources + 1
                     set foundResource=resource
                     if ( not gatherInside ) then
@@ -3859,26 +3861,26 @@ function Resources___TriggerActionCast takes nothing returns nothing
 
     if ( gatherInside and foundResource != 0 ) then
         //call BJDebugMsg("Worker with handle ID wants to harvest inside mine " + I2S(GetHandleId(worker)))
-        if ( (LoadInteger(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MAX_MINE_WORKERS , Resources___KEY_MAX))) == 0 or BlzGroupGetSize((LoadGroupHandle(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MINE_WORKERS , Resources___KEY_MAX)))) < (LoadInteger(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_MAX_MINE_WORKERS , Resources___KEY_MAX))) ) then // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MAX_MINE_WORKERS , Resources__KEY_MAX))) == 0 or BlzGroupGetSize((LoadGroupHandle(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MINE_WORKERS , Resources__KEY_MAX)))) < (LoadInteger(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_MAX_MINE_WORKERS , Resources__KEY_MAX))) ) then // INLINED!!
             call GatherInsideMine(worker , mine , foundResource)
         else
             // queue harvest until the mine has a free slot
             set queued=true
-            call Resources___QueueOrderEx(worker , (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))) , abilityId , mine , 0.5) // INLINED!!
+            call Resources__QueueOrderEx(worker , (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))) , abilityId , mine , 0.5) // INLINED!!
             //call BJDebugMsg("Queue for free slot for resource " + GetResourceName(foundResource) + " and worker with handle ID " + I2S(GetHandleId(worker)) + " and order " + OrderId2String(GetUnitHarvestOrderId(worker, foundResource)))
         endif
     elseif ( matchingResources > 0 and nonEmptyResources == 0 ) then
         call IssueImmediateOrder(worker, "stop")
         //call SimError(GetOwningPlayer(worker), "Empty " + GetUnitName(mine) + ".")
         //call BJDebugMsg("Stop worker " + GetUnitName(worker))
-    elseif ( not gatherInside and foundResource != 0 and amount == 0 or Resources___HasMaxOfMineResources(worker , mine) ) then // return resources if necessary
+    elseif ( not gatherInside and foundResource != 0 and amount == 0 or Resources__HasMaxOfMineResources(worker , mine) ) then // return resources if necessary
         call IssueImmediateOrder(worker, "stop")
         //call BJDebugMsg("has max looking for return building")
         if ( GetWorkerTotalResources(worker) > 0 ) then
-            call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_HARVEST_ABILITY_ID , Resources___KEY_MAX))), true) // INLINED!!
-            call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))), false) // INLINED!!
+            call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_HARVEST_ABILITY_ID , Resources__KEY_MAX))), true) // INLINED!!
+            call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))), false) // INLINED!!
             //call BJDebugMsg("Show return ability " + GetObjectName(GetUnitReturnAbilityId(worker, foundResource)) + " with level on unit " + I2S(GetUnitAbilityLevel(worker, GetUnitReturnAbilityId(worker, foundResource))))
-            call IssueImmediateOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_RETURN_ORDER_ID , Resources___KEY_MAX)))) // INLINED!!
+            call IssueImmediateOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_RETURN_ORDER_ID , Resources__KEY_MAX)))) // INLINED!!
         else
             //call BJDebugMsg("Has no resources")
         endif
@@ -3889,9 +3891,9 @@ function Resources___TriggerActionCast takes nothing returns nothing
         //call BJDebugMsg("harvest cooldown " + R2S(BlzGetAbilityRealLevelField(BlzGetUnitAbility(worker, abilityId), ABILITY_RLF_COOLDOWN, 0)))
         //call BlzUnitClearOrders(worker, true)
         //call BlzQueueTargetOrderById(worker, GetUnitHarvestOrderId(worker, foundResource), mine)
-        call BlzUnitHideAbility(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_RETURN_ABILITY_ID , Resources___KEY_MAX))), false) // INLINED!!
+        call BlzUnitHideAbility(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_RETURN_ABILITY_ID , Resources__KEY_MAX))), false) // INLINED!!
             
-        call Resources___QueueOrderEx(worker , (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))) , abilityId , mine , 0.5) // add some threshold to continue // INLINED!!
+        call Resources__QueueOrderEx(worker , (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))) , abilityId , mine , 0.5) // add some threshold to continue // INLINED!!
         set queued=true
         //call IssueTargetOrderById(worker, GetUnitHarvestOrderId(worker, foundResource), mine)
     elseif ( matchingResources > 0 ) then
@@ -3901,7 +3903,7 @@ function Resources___TriggerActionCast takes nothing returns nothing
     
     // cancel queue if any other ability has been cast
     if ( not queued ) then
-        call Resources___CancelUnitQueueTimer(worker)
+        call Resources__CancelUnitQueueTimer(worker)
     endif
     
     set mine=null
@@ -3911,11 +3913,11 @@ endfunction
 function ReorderWorkerToMineRally takes unit producer,unit worker returns nothing
     local unit mine= GetUnitRallyUnit(producer)
     local integer resource= 0
-    if ( mine != null and (IsUnitInGroup((worker), Resources___workers)) and (IsUnitInGroup((mine), Resources___mines)) ) then // INLINED!!
+    if ( mine != null and (IsUnitInGroup((worker), Resources__workers)) and (IsUnitInGroup((mine), Resources__mines)) ) then // INLINED!!
         set resource=GetPrimaryMineResourceForWorker(mine , worker)
         if ( resource != 0 ) then
             //call BJDebugMsg("Rally order to mine " + GetUnitName(mine))
-            call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))), mine) // INLINED!!
+            call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))), mine) // INLINED!!
         endif
     endif
     set mine=null
@@ -3930,8 +3932,8 @@ function GetReturnResource takes unit worker,unit returnBuilding returns integer
     loop
         exitwhen ( i == max )
         set r=(s__Resource_resources[(i)]) // INLINED!!
-        if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 and (LoadBoolean(Resources___h, GetHandleId((returnBuilding )), Index2D(( r) , Resources___KEY_RETURN_RESOURCE , Resources___KEY_MAX))) and (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > returnResourceAmount ) then // INLINED!!
-            set returnResourceAmount=(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+        if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 and (LoadBoolean(Resources__h, GetHandleId((returnBuilding )), Index2D(( r) , Resources__KEY_RETURN_RESOURCE , Resources__KEY_MAX))) and (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > returnResourceAmount ) then // INLINED!!
+            set returnResourceAmount=(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
             set returnResource=r
         endif
         set i=i + 1
@@ -3939,7 +3941,7 @@ function GetReturnResource takes unit worker,unit returnBuilding returns integer
     return returnResource
 endfunction
 
-function Resources___TriggerActionOrder takes nothing returns nothing
+function Resources__TriggerActionOrder takes nothing returns nothing
     local unit mine= GetOrderTargetUnit()
     local unit worker= GetTriggerUnit()
     local integer orderId= GetIssuedOrderId()
@@ -3949,33 +3951,33 @@ function Resources___TriggerActionOrder takes nothing returns nothing
     local unit returnBuilding= null
     local boolean foundResourceInMine= false
     local boolean isBusyHarvestingOrReturning= false
-    local boolean movement= Resources___MovementTypesMatch(worker , mine)
-    if ( (IsUnitInGroup((mine), Resources___mines)) and (IsUnitInGroup((worker), Resources___workers)) and movement ) then // INLINED!!
+    local boolean movement= Resources__MovementTypesMatch(worker , mine)
+    if ( (IsUnitInGroup((mine), Resources__mines)) and (IsUnitInGroup((worker), Resources__workers)) and movement ) then // INLINED!!
         if ( IsSmartOrder(orderId) ) then
             set r=GetPrimaryMineResourceForWorker(mine , worker)
             //call BJDebugMsg("Got primary resource from mine " + I2S(r) + " and order ID " + OrderId2String(GetUnitHarvestOrderId(worker, r)))
             if ( r != 0 ) then
-                if ( (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) == 0 ) then // INLINED!!
+                if ( (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) == 0 ) then // INLINED!!
                     call IssueImmediateOrder(worker, "stop")
                     //call SimError(GetOwningPlayer(worker), "Empty " + GetUnitName(mine) + ".")
                 else
-                    if ( Resources___HasMaxOfMineResources(worker , mine) ) then
+                    if ( Resources__HasMaxOfMineResources(worker , mine) ) then
                         // return resource
                         // In Warcraft III workers would actually go to the mine and then return the resources.
                         call SetUnitMine(worker , mine)
                         set returnBuilding=NextReturnBuilding(worker)
                         if ( returnBuilding != null ) then
-                            call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX))), returnBuilding) // INLINED!!
+                            call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX))), returnBuilding) // INLINED!!
                             set returnBuilding=null
                         endif
                     else
                         // harvest
                         //call BJDebugMsg("Harvest order " + I2S(GetUnitHarvestOrderId(worker, r)))
-                        call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))), mine) // INLINED!!
+                        call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))), mine) // INLINED!!
                     endif
                 endif
             else
-                if ( not (LoadBoolean(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_DISABLE_STOP_MINING_ON_ERROR , Resources___KEY_MAX))) ) then // INLINED!!
+                if ( not (LoadBoolean(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_DISABLE_STOP_MINING_ON_ERROR , Resources__KEY_MAX))) ) then // INLINED!!
                     call IssueImmediateOrder(worker, "stop")
                     call SimError(GetOwningPlayer(worker) , s__AFormat_result(s__AFormat_s(s__AFormat_s((s__AFormat_create((GetLocalizedString("CANNOT_HARVEST")))),GetUnitName(worker)),GetUnitName(mine)))) // INLINED!!
                 endif
@@ -3987,8 +3989,8 @@ function Resources___TriggerActionOrder takes nothing returns nothing
             loop
                 exitwhen ( i == max or foundResourceInMine )
                 set r=(s__Resource_resources[(i)]) // INLINED!!
-                if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))) == orderId ) then // INLINED!!
-                    if ( (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
+                if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))) == orderId ) then // INLINED!!
+                    if ( (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
                         set foundResourceInMine=true
                     endif
                 endif
@@ -4003,23 +4005,23 @@ function Resources___TriggerActionOrder takes nothing returns nothing
     endif
     
     // return resources
-    if ( (IsUnitInGroup((mine), Resources___returnBuildings)) and (IsUnitInGroup((worker), Resources___workers)) and IsSmartOrder(orderId) and movement ) then // INLINED!!
+    if ( (IsUnitInGroup((mine), Resources__returnBuildings)) and (IsUnitInGroup((worker), Resources__workers)) and IsSmartOrder(orderId) and movement ) then // INLINED!!
         set r=GetReturnResource(worker , mine)
         //call BJDebugMsg("Return resource " + I2S(r))
         if ( r != 0 ) then
-            call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX))), mine) // INLINED!!
+            call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX))), mine) // INLINED!!
             set isBusyHarvestingOrReturning=true
         endif
     endif
 
-    if ( (IsUnitInGroup((worker), Resources___workers)) and movement ) then // INLINED!!
+    if ( (IsUnitInGroup((worker), Resources__workers)) and movement ) then // INLINED!!
         // disable pathing of busy workers to avoid blocking
         set i=0
         set max=(s__Resource_resourcesCount) // INLINED!!
         loop
             exitwhen ( i == max or isBusyHarvestingOrReturning )
             set r=(s__Resource_resources[(i)]) // INLINED!!
-            if ( (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_HARVEST_ORDER_ID , Resources___KEY_MAX))) == orderId or (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( r) , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX))) == orderId ) then // INLINED!!
+            if ( (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_HARVEST_ORDER_ID , Resources__KEY_MAX))) == orderId or (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( r) , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX))) == orderId ) then // INLINED!!
                 set isBusyHarvestingOrReturning=true
             endif
             set i=i + 1
@@ -4027,30 +4029,30 @@ function Resources___TriggerActionOrder takes nothing returns nothing
         call SetWorkerPathing(worker , not isBusyHarvestingOrReturning)
 
         // cancel queued order for any other order
-        call Resources___CancelUnitQueueTimer(worker)
+        call Resources__CancelUnitQueueTimer(worker)
     endif
     set mine=null
     set worker=null
 endfunction
 
-function Resources___TriggerActionOrderReset takes nothing returns nothing
+function Resources__TriggerActionOrderReset takes nothing returns nothing
     local unit worker= GetTriggerUnit()
-    if ( (IsUnitInGroup((worker), Resources___workers)) ) then // INLINED!!
-        call Resources___CancelUnitQueueTimer(worker)
+    if ( (IsUnitInGroup((worker), Resources__workers)) ) then // INLINED!!
+        call Resources__CancelUnitQueueTimer(worker)
         call SetWorkerPathing(worker , true)
     endif
     set worker=null
 endfunction
 
-function Resources___TriggerActionReturn takes nothing returns nothing
+function Resources__TriggerActionReturn takes nothing returns nothing
     local unit returnBuilding= GetSpellTargetUnit()
     local unit worker= GetTriggerUnit()
     local integer abilityId= GetSpellAbilityId()
     local integer foundResource= 0
-    local boolean movement= Resources___MovementTypesMatch(worker , returnBuilding)
-    if ( (IsUnitInGroup((worker), Resources___workers)) and movement ) then // INLINED!!
+    local boolean movement= Resources__MovementTypesMatch(worker , returnBuilding)
+    if ( (IsUnitInGroup((worker), Resources__workers)) and movement ) then // INLINED!!
         //call BJDebugMsg("Return resources with return building " + GetUnitName(returnBuilding))
-        if ( returnBuilding != null and (IsUnitInGroup((returnBuilding), Resources___returnBuildings)) and IsReturnResourcesHiddenAbilityId(worker , abilityId) ) then // INLINED!!
+        if ( returnBuilding != null and (IsUnitInGroup((returnBuilding), Resources__returnBuildings)) and IsReturnResourcesHiddenAbilityId(worker , abilityId) ) then // INLINED!!
             //call BJDebugMsg("Returning resources NOW!")
             call ReturnResources(worker , returnBuilding)
         else
@@ -4059,7 +4061,7 @@ function Resources___TriggerActionReturn takes nothing returns nothing
             if ( foundResource != 0 ) then
                 set returnBuilding=NextReturnBuilding(worker)
                 if ( returnBuilding != null ) then
-                    call IssueTargetOrderById(worker, (LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( foundResource) , Resources___KEY_RETURN_HIDDEN_ORDER_ID , Resources___KEY_MAX))), returnBuilding) // INLINED!!
+                    call IssueTargetOrderById(worker, (LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( foundResource) , Resources__KEY_RETURN_HIDDEN_ORDER_ID , Resources__KEY_MAX))), returnBuilding) // INLINED!!
                     set returnBuilding=null
                 else
                     // nothing happens in Warcraft III if no return building is found
@@ -4072,42 +4074,42 @@ function Resources___TriggerActionReturn takes nothing returns nothing
     set worker=null
 endfunction
 
-function Resources___TriggerActionDeath takes nothing returns nothing
+function Resources__TriggerActionDeath takes nothing returns nothing
     local unit dyingUnit= GetDyingUnit()
-    if ( (IsUnitInGroup((dyingUnit), Resources___mines)) or (IsUnitInGroup((dyingUnit), Resources___workers)) or (IsUnitInGroup((dyingUnit), Resources___returnBuildings)) ) then // INLINED!!
+    if ( (IsUnitInGroup((dyingUnit), Resources__mines)) or (IsUnitInGroup((dyingUnit), Resources__workers)) or (IsUnitInGroup((dyingUnit), Resources__returnBuildings)) ) then // INLINED!!
         // this could actually remove it from any of these so we have to check again afterwards
         call ExecuteDeathCallbacks(dyingUnit)
         call ReleaseAllWorkersFromMine(dyingUnit)
     endif
-    if ( (IsUnitInGroup((dyingUnit), Resources___mines)) ) then // INLINED!!
+    if ( (IsUnitInGroup((dyingUnit), Resources__mines)) ) then // INLINED!!
         call RemoveMine(dyingUnit)
     endif
-    if ( (IsUnitInGroup((dyingUnit), Resources___workers)) ) then // INLINED!!
-        call GroupRemoveUnit(Resources___workers, (dyingUnit)) // INLINED!!
+    if ( (IsUnitInGroup((dyingUnit), Resources__workers)) ) then // INLINED!!
+        call GroupRemoveUnit(Resources__workers, (dyingUnit)) // INLINED!!
     endif
-    if ( (IsUnitInGroup((dyingUnit), Resources___returnBuildings)) ) then // INLINED!!
-        call GroupRemoveUnit(Resources___returnBuildings, (dyingUnit)) // INLINED!!
+    if ( (IsUnitInGroup((dyingUnit), Resources__returnBuildings)) ) then // INLINED!!
+        call GroupRemoveUnit(Resources__returnBuildings, (dyingUnit)) // INLINED!!
     endif
     set dyingUnit=null
 endfunction
 
-function Resources___Init takes nothing returns nothing
+function Resources__Init takes nothing returns nothing
     // use trigger actions to avoid issues with unfinished Channel abilities
-    call TriggerRegisterAnyUnitEventBJ(Resources___castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddAction(Resources___castTrigger, function Resources___TriggerActionCast)
+    call TriggerRegisterAnyUnitEventBJ(Resources__castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddAction(Resources__castTrigger, function Resources__TriggerActionCast)
     
-    call TriggerRegisterAnyUnitEventBJ(Resources___orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
-    call TriggerAddAction(Resources___orderTrigger, function Resources___TriggerActionOrder)
+    call TriggerRegisterAnyUnitEventBJ(Resources__orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddAction(Resources__orderTrigger, function Resources__TriggerActionOrder)
     
-    call TriggerRegisterAnyUnitEventBJ(Resources___orderResetTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
-    call TriggerRegisterAnyUnitEventBJ(Resources___orderResetTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-    call TriggerAddAction(Resources___orderResetTrigger, function Resources___TriggerActionOrderReset)
+    call TriggerRegisterAnyUnitEventBJ(Resources__orderResetTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(Resources__orderResetTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerAddAction(Resources__orderResetTrigger, function Resources__TriggerActionOrderReset)
     
-    call TriggerRegisterAnyUnitEventBJ(Resources___returnTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddAction(Resources___returnTrigger, function Resources___TriggerActionReturn)
+    call TriggerRegisterAnyUnitEventBJ(Resources__returnTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddAction(Resources__returnTrigger, function Resources__TriggerActionReturn)
 
-    call TriggerRegisterAnyUnitEventBJ(Resources___deathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddAction(Resources___deathTrigger, function Resources___TriggerActionDeath)
+    call TriggerRegisterAnyUnitEventBJ(Resources__deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddAction(Resources__deathTrigger, function Resources__TriggerActionDeath)
     
     set Resources_GOLD=(s__Resource_create((GetLocalizedString("GOLD")))) // INLINED!!
     set s__Resource_icon[(Resources_GOLD )]=( Resources_GOLD_ICON) // INLINED!!
@@ -4138,16 +4140,16 @@ function IsStandardResource takes integer r returns boolean
     return r == Resources_GOLD or r == Resources_LUMBER or r == Resources_FOOD or r == Resources_FOOD_MAX
 endfunction
 
-function Resources___RemoveUnitHook takes unit whichUnit returns nothing
-    call Resources___CancelUnitQueueTimer(whichUnit)
-    call Resources___CancelUnitQueueWorkerReleaseTimer(whichUnit)
+function Resources__RemoveUnitHook takes unit whichUnit returns nothing
+    call Resources__CancelUnitQueueTimer(whichUnit)
+    call Resources__CancelUnitQueueWorkerReleaseTimer(whichUnit)
     call RemoveMine(whichUnit)
-    call GroupRemoveUnit(Resources___workers, (whichUnit)) // INLINED!!
-    call GroupRemoveUnit(Resources___returnBuildings, (whichUnit)) // INLINED!!
-    call FlushChildHashtable(Resources___h, GetHandleId(whichUnit))
+    call GroupRemoveUnit(Resources__workers, (whichUnit)) // INLINED!!
+    call GroupRemoveUnit(Resources__returnBuildings, (whichUnit)) // INLINED!!
+    call FlushChildHashtable(Resources__h, GetHandleId(whichUnit))
 endfunction
 
-//processed hook: hook RemoveUnit Resources___RemoveUnitHook
+//processed hook: hook RemoveUnit Resources__RemoveUnitHook
 
 
 //library Resources ends
@@ -4748,7 +4750,7 @@ function GetResourceFromString takes string s returns integer
     return 0
 endfunction
 
-function ResourcesChatCommands___GiveChatCommand takes player whichPlayer,string msg returns nothing
+function ResourcesChatCommands__GiveChatCommand takes player whichPlayer,string msg returns nothing
     local string amount= StringTokenEx(msg , 1 , " " , false)
     local string resource= StringTokenEx(msg , 2 , " " , false)
     local string to= StringTokenEx(msg , 3 , " " , false)
@@ -4773,7 +4775,7 @@ function ResourcesChatCommands___GiveChatCommand takes player whichPlayer,string
     endif
 endfunction
 
-function ResourcesChatCommands___AskChatCommand takes player whichPlayer,string msg returns nothing
+function ResourcesChatCommands__AskChatCommand takes player whichPlayer,string msg returns nothing
     local string amount= StringTokenEx(msg , 1 , " " , false)
     local string resource= StringTokenEx(msg , 2 , " " , false)
     local string from= StringTokenEx(msg , 3 , " " , false)
@@ -4801,7 +4803,7 @@ function ResourcesChatCommands___AskChatCommand takes player whichPlayer,string 
     endif
 endfunction
 
-function ResourcesChatCommands___SellChatCommand takes player whichPlayer,string msg returns nothing
+function ResourcesChatCommands__SellChatCommand takes player whichPlayer,string msg returns nothing
     local string amount= StringTokenEx(msg , 1 , " " , false)
     local string resource= StringTokenEx(msg , 2 , " " , false)
     local string targetResource= StringTokenEx(msg , 3 , " " , false)
@@ -4830,7 +4832,7 @@ function ResourcesChatCommands___SellChatCommand takes player whichPlayer,string
     endif
 endfunction
 
-function ResourcesChatCommands___BuyChatCommand takes player whichPlayer,string msg returns nothing
+function ResourcesChatCommands__BuyChatCommand takes player whichPlayer,string msg returns nothing
     local string amount= StringTokenEx(msg , 1 , " " , false)
     local string resource= StringTokenEx(msg , 2 , " " , false)
     local integer a= S2I(amount)
@@ -4845,7 +4847,7 @@ function ResourcesChatCommands___BuyChatCommand takes player whichPlayer,string 
     endif
 endfunction
 
-function ResourcesChatCommands___TriggerConditionChat takes nothing returns boolean
+function ResourcesChatCommands__TriggerConditionChat takes nothing returns boolean
     local string msg= GetEventPlayerChatString()
     
     if ( ResourcesChatCommands_ALLOW_HELP and ( msg == "-helpresources" or msg == "-helpr" or msg == "-hr" ) ) then
@@ -4853,29 +4855,29 @@ function ResourcesChatCommands___TriggerConditionChat takes nothing returns bool
     elseif ( ResourcesChatCommands_ALLOW_LIST and ( msg == "-resources" or msg == "-res" or msg == "-r" ) ) then
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ResourcesChatCommands_RESOURCES_DURATION, GetResources())
     elseif ( ResourcesChatCommands_ALLOW_GIVE and StringStartsWith(msg , "-give") ) then
-        call ResourcesChatCommands___GiveChatCommand(GetTriggerPlayer() , msg)
+        call ResourcesChatCommands__GiveChatCommand(GetTriggerPlayer() , msg)
     elseif ( ResourcesChatCommands_ALLOW_ASK and StringStartsWith(msg , "-ask") ) then
-        call ResourcesChatCommands___AskChatCommand(GetTriggerPlayer() , msg)
+        call ResourcesChatCommands__AskChatCommand(GetTriggerPlayer() , msg)
     elseif ( ResourcesChatCommands_ALLOW_SELL_ALL and ( msg == "-sellall" or msg == "-sa" ) ) then
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ResourcesChatCommands_INFO_DURATION, s__AFormat_result(s__AFormat_i((s__AFormat_create((GetLocalizedString("SOLD_ALL_FOR_GOLD")))),SellAllNonStandardResourcesForGold(GetTriggerPlayer())))) // INLINED!!
     elseif ( ResourcesChatCommands_ALLOW_SELL_WOOD and ( msg == "-sellwood" or msg == "-sw" ) ) then
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ResourcesChatCommands_INFO_DURATION, s__AFormat_result(s__AFormat_i((s__AFormat_create((GetLocalizedString("SOLD_ALL_LUMBER_FOR_GOLD")))),SellAllLumberForGold(GetTriggerPlayer())))) // INLINED!!
     elseif ( ResourcesChatCommands_ALLOW_SELL and StringStartsWith(msg , "-sell") ) then
-        call ResourcesChatCommands___SellChatCommand(GetTriggerPlayer() , msg)
+        call ResourcesChatCommands__SellChatCommand(GetTriggerPlayer() , msg)
     elseif ( ResourcesChatCommands_ALLOW_BUY and StringStartsWith(msg , "-buy") ) then
-        call ResourcesChatCommands___BuyChatCommand(GetTriggerPlayer() , msg)
+        call ResourcesChatCommands__BuyChatCommand(GetTriggerPlayer() , msg)
     endif
     return false
 endfunction
 
-function ResourcesChatCommands___Init takes nothing returns nothing
+function ResourcesChatCommands__Init takes nothing returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        call TriggerRegisterPlayerChatEvent(ResourcesChatCommands___chatTrigger, Player(i), "", false)
+        call TriggerRegisterPlayerChatEvent(ResourcesChatCommands__chatTrigger, Player(i), "", false)
         set i=i + 1
     endloop
-    call TriggerAddCondition(ResourcesChatCommands___chatTrigger, Condition(function ResourcesChatCommands___TriggerConditionChat))
+    call TriggerAddCondition(ResourcesChatCommands__chatTrigger, Condition(function ResourcesChatCommands__TriggerConditionChat))
 endfunction
 
 
@@ -4885,7 +4887,7 @@ endfunction
 
 
 
-function ResourcesCosts___GetAlliesWithSharedControl takes player owner returns force
+function ResourcesCosts__GetAlliesWithSharedControl takes player owner returns force
     local force allies= CreateForce()
     local player slotPlayer= null
     local integer i= 0
@@ -4902,8 +4904,8 @@ function ResourcesCosts___GetAlliesWithSharedControl takes player owner returns 
     return allies
 endfunction
 
-function ResourcesCosts___StartSoundForAllies takes player whichPlayer,sound whichSound returns nothing
-    local force allies= ResourcesCosts___GetAlliesWithSharedControl(whichPlayer)
+function ResourcesCosts__StartSoundForAllies takes player whichPlayer,sound whichSound returns nothing
+    local force allies= ResourcesCosts__GetAlliesWithSharedControl(whichPlayer)
     if ( IsPlayerInForce(GetLocalPlayer(), allies) ) then
         call StartSound(whichSound)
     endif
@@ -4912,8 +4914,8 @@ function ResourcesCosts___StartSoundForAllies takes player whichPlayer,sound whi
     set allies=null
 endfunction
 
-function ResourcesCosts___SimErrorForAllies takes player whichPlayer,string msg returns nothing
-    local force allies= ResourcesCosts___GetAlliesWithSharedControl(whichPlayer)
+function ResourcesCosts__SimErrorForAllies takes player whichPlayer,string msg returns nothing
+    local force allies= ResourcesCosts__GetAlliesWithSharedControl(whichPlayer)
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
@@ -4928,62 +4930,62 @@ function ResourcesCosts___SimErrorForAllies takes player whichPlayer,string msg 
 endfunction
 
 function SetObjectTypeResourcesCostsIsResearch takes integer objectTypeId,boolean hasLevels returns nothing
-    call SaveBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
+    call SaveBoolean(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
 endfunction
 
 function GetObjectTypeResourcesCostsIsResearch takes integer objectTypeId returns boolean
-    return LoadBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadBoolean(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeResourcesCostsIsAbility takes integer objectTypeId,boolean hasLevels returns nothing
-    call SaveBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
+    call SaveBoolean(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasLevels)
 endfunction
 
 function GetObjectTypeResourcesCostsIsAbility takes integer objectTypeId returns boolean
-    return LoadBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadBoolean(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeResourcesCostsHasCosts takes integer objectTypeId,boolean hasCosts returns nothing
-    call SaveBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasCosts)
+    call SaveBoolean(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), hasCosts)
 endfunction
 
 function GetObjectTypeResourcesCostsHasCosts takes integer objectTypeId returns boolean
-    return LoadBoolean(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadBoolean(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeGoldValue takes integer objectTypeId,integer value returns nothing
-    call SaveInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
+    call SaveInteger(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
 endfunction
 
 function GetObjectTypeGoldValue takes integer objectTypeId returns integer
-    return LoadInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadInteger(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function HasObjectTypeGoldValue takes integer objectTypeId returns boolean
-    return HaveSavedInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return HaveSavedInteger(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_GOLD_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeLumberValue takes integer objectTypeId,integer value returns nothing
-    call SaveInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
+    call SaveInteger(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), value)
 endfunction
 
 function GetObjectTypeLumberValue takes integer objectTypeId returns integer
-    return LoadInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadInteger(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function HasObjectTypeLumberValue takes integer objectTypeId returns boolean
-    return HaveSavedInteger(ResourcesCosts___h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return HaveSavedInteger(ResourcesCosts__h, objectTypeId, Index3D(0 , ResourcesCosts_KEY_LUMBER_VALUE , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetObjectTypeLevelResourcesCostsForPlayer takes player whichPlayer,integer objectTypeId,integer level,integer resource,integer amount returns nothing
     if ( amount > 0 ) then
         call SetObjectTypeResourcesCostsHasCosts(objectTypeId , true)
     endif
-    call SaveInteger(ResourcesCosts___h, objectTypeId, Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), amount)
+    call SaveInteger(ResourcesCosts__h, objectTypeId, Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL), amount)
 endfunction
 
 function GetObjectTypeLevelResourcesCostsForPlayer takes player whichPlayer,integer objectTypeId,integer level,integer resource returns integer
-    return LoadInteger(ResourcesCosts___h, objectTypeId, Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
+    return LoadInteger(ResourcesCosts__h, objectTypeId, Index3D(resource , GetPlayerId(whichPlayer) , level , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))
 endfunction
 
 function SetResearchCostsForLevel takes integer objectTypeId,integer level,integer resource,integer amount returns nothing
@@ -5044,30 +5046,30 @@ function GetCostsForLevel takes player whichPlayer,integer objectTypeId,integer 
 endfunction
 
 function RemoveObjectTypeResourcesCosts takes integer objectTypeId returns nothing
-    call FlushChildHashtable(ResourcesCosts___h, objectTypeId)
+    call FlushChildHashtable(ResourcesCosts__h, objectTypeId)
 endfunction
 
 function SetNotEnoughResourcesSound takes player whichPlayer,integer resource,sound whichSound returns nothing
-    set ResourcesCosts___playerSoundNotEnough[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
+    set ResourcesCosts__playerSoundNotEnough[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
 endfunction
 
 function GetNotEnoughResourcesSound takes player whichPlayer,integer resource returns sound
-    return ResourcesCosts___playerSoundNotEnough[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesCosts__playerSoundNotEnough[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function SetNotEnoughResourcesSoundForAllPlayers takes integer resource,sound whichSound returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesCosts___playerSoundNotEnough[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
+        set ResourcesCosts__playerSoundNotEnough[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
         set i=i + 1
     endloop
 endfunction
 
-function ResourcesCosts___GetLevel takes player whichPlayer,unit worker,integer objectTypeId returns integer
-    if ( (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
+function ResourcesCosts__GetLevel takes player whichPlayer,unit worker,integer objectTypeId returns integer
+    if ( (LoadBoolean(ResourcesCosts__h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_IS_RESEARCH , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
         return GetPlayerTechCountSimple(objectTypeId, whichPlayer)
-    elseif ( (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
+    elseif ( (LoadBoolean(ResourcesCosts__h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_IS_ABILITY , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) ) then // INLINED!!
         return GetUnitAbilityLevel(worker, objectTypeId)
     endif
     return 0
@@ -5077,13 +5079,13 @@ function CheckResourceCosts takes player whichPlayer,unit worker,integer objectT
     local integer resource= 0
     local integer cost= 0
     local boolean enough= true
-    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
+    local boolean hasCost= (LoadBoolean(ResourcesCosts__h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
     local integer level= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer i= 0
     //call BJDebugMsg(GetObjectName(objectTypeId) + " has costs.")
     if ( hasCost ) then
-        set level=ResourcesCosts___GetLevel(whichPlayer , worker , objectTypeId)
+        set level=ResourcesCosts__GetLevel(whichPlayer , worker , objectTypeId)
         //call BJDebugMsg("Level " + I2S(level))
         loop
             exitwhen ( i == max or not enough )
@@ -5091,9 +5093,9 @@ function CheckResourceCosts takes player whichPlayer,unit worker,integer objectT
             set cost=GetObjectTypeLevelResourcesCostsForPlayer(whichPlayer , objectTypeId , level , resource)
             if ( cost > GetPlayerResource(whichPlayer , resource) ) then
                 if ( showError ) then
-                    call ResourcesCosts___SimErrorForAllies(whichPlayer , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("NOT_ENOUGH_X")))),(s__Resource_name[(resource)])))) // INLINED!!
+                    call ResourcesCosts__SimErrorForAllies(whichPlayer , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("NOT_ENOUGH_X")))),(s__Resource_name[(resource)])))) // INLINED!!
                     if ( GetNotEnoughResourcesSound(whichPlayer , resource) != null ) then
-                        call ResourcesCosts___StartSoundForAllies(whichPlayer , GetNotEnoughResourcesSound(whichPlayer , resource))
+                        call ResourcesCosts__StartSoundForAllies(whichPlayer , GetNotEnoughResourcesSound(whichPlayer , resource))
                     endif
                 endif
                 set enough=false
@@ -5106,12 +5108,12 @@ endfunction
 
 function RemoveResourceCosts takes player whichPlayer,unit worker,integer objectTypeId returns nothing
     local integer resource= 0
-    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
+    local boolean hasCost= (LoadBoolean(ResourcesCosts__h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
     local integer level= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer i= 0
     if ( hasCost ) then
-        set level=ResourcesCosts___GetLevel(whichPlayer , worker , objectTypeId)
+        set level=ResourcesCosts__GetLevel(whichPlayer , worker , objectTypeId)
         loop
             exitwhen ( i == max )
             set resource=(s__Resource_resources[(i)]) // INLINED!!
@@ -5123,14 +5125,14 @@ endfunction
 
 function RefundResourceCosts takes player whichPlayer,unit worker,integer objectTypeId,real factor returns nothing
     local integer resource= 0
-    local boolean hasCost= (LoadBoolean(ResourcesCosts___h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
+    local boolean hasCost= (LoadBoolean(ResourcesCosts__h, (objectTypeId), Index3D(0 , ResourcesCosts_KEY_HAS_COSTS , 0 , ResourcesCosts_MAX_KEYS , ResourcesCosts_MAX_LEVEL))) // INLINED!!
     local integer cost= 0
     local integer level= 0
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer i= 0
     //call BJDebugMsg("Refund cost with factor " + R2S(factor))
     if ( hasCost ) then
-        set level=ResourcesCosts___GetLevel(whichPlayer , worker , objectTypeId)
+        set level=ResourcesCosts__GetLevel(whichPlayer , worker , objectTypeId)
         loop
             exitwhen ( i == max )
             set resource=(s__Resource_resources[(i)]) // INLINED!!
@@ -5144,7 +5146,7 @@ function RefundResourceCosts takes player whichPlayer,unit worker,integer object
     endif
 endfunction
 
-function ResourcesCosts___TriggerConditionIssue takes nothing returns boolean
+function ResourcesCosts__TriggerConditionIssue takes nothing returns boolean
     if ( CheckResourceCosts(GetOwningPlayer(GetTriggerUnit()) , GetTriggerUnit() , GetIssuedOrderId() , true) ) then
         // remove resources on ordering the unit which also happens in Warcraft III when you order a worker to build something
         call RemoveResourceCosts(GetOwningPlayer(GetTriggerUnit()) , GetTriggerUnit() , GetIssuedOrderId())
@@ -5155,60 +5157,60 @@ function ResourcesCosts___TriggerConditionIssue takes nothing returns boolean
     return true
 endfunction
 
-function ResourcesCosts___EnableCancelTriggers takes nothing returns nothing
-    call EnableTrigger(ResourcesCosts___constructCancelTrigger)
-    call EnableTrigger(ResourcesCosts___trainCancelTrigger)
-    call EnableTrigger(ResourcesCosts___researchCancelTrigger)
-    call EnableTrigger(ResourcesCosts___heroReviveCancelTrigger)
+function ResourcesCosts__EnableCancelTriggers takes nothing returns nothing
+    call EnableTrigger(ResourcesCosts__constructCancelTrigger)
+    call EnableTrigger(ResourcesCosts__trainCancelTrigger)
+    call EnableTrigger(ResourcesCosts__researchCancelTrigger)
+    call EnableTrigger(ResourcesCosts__heroReviveCancelTrigger)
 endfunction
 
-function ResourcesCosts___DisableCancelTriggers takes nothing returns nothing
-    call DisableTrigger(ResourcesCosts___constructCancelTrigger)
-    call DisableTrigger(ResourcesCosts___trainCancelTrigger)
-    call DisableTrigger(ResourcesCosts___researchCancelTrigger)
-    call DisableTrigger(ResourcesCosts___heroReviveCancelTrigger)
+function ResourcesCosts__DisableCancelTriggers takes nothing returns nothing
+    call DisableTrigger(ResourcesCosts__constructCancelTrigger)
+    call DisableTrigger(ResourcesCosts__trainCancelTrigger)
+    call DisableTrigger(ResourcesCosts__researchCancelTrigger)
+    call DisableTrigger(ResourcesCosts__heroReviveCancelTrigger)
 endfunction
 
-function ResourcesCosts___TimerFunctionCancel takes nothing returns nothing
+function ResourcesCosts__TimerFunctionCancel takes nothing returns nothing
     local timer t= GetExpiredTimer()
     local integer handleId= GetHandleId(t)
-    local unit whichUnit= LoadUnitHandle(ResourcesCosts___h2, handleId, 0)
-    call ResourcesCosts___DisableCancelTriggers()
+    local unit whichUnit= LoadUnitHandle(ResourcesCosts__h2, handleId, 0)
+    call ResourcesCosts__DisableCancelTriggers()
     call IssueImmediateOrderById(whichUnit, ResourcesCosts_CANCEL_ORDER_ID)
     call IssueImmediateOrder(whichUnit, "stop") // for constructions
-    call ResourcesCosts___EnableCancelTriggers()
-    call FlushChildHashtable(ResourcesCosts___h2, handleId)
+    call ResourcesCosts__EnableCancelTriggers()
+    call FlushChildHashtable(ResourcesCosts__h2, handleId)
     call PauseTimer(t)
     call DestroyTimer(t)
 endfunction
 
-function ResourcesCosts___TriggerActionIssue takes nothing returns nothing
+function ResourcesCosts__TriggerActionIssue takes nothing returns nothing
     local timer t= CreateTimer()
-    call SaveUnitHandle(ResourcesCosts___h2, GetHandleId(t), 0, GetTriggerUnit())
-    call TimerStart(t, 0.0, false, function ResourcesCosts___TimerFunctionCancel)
+    call SaveUnitHandle(ResourcesCosts__h2, GetHandleId(t), 0, GetTriggerUnit())
+    call TimerStart(t, 0.0, false, function ResourcesCosts__TimerFunctionCancel)
 endfunction
 
-function ResourcesCosts___TriggerConditionConstructCancel takes nothing returns boolean
+function ResourcesCosts__TriggerConditionConstructCancel takes nothing returns boolean
     call RefundResourceCosts(GetOwningPlayer(GetCancelledStructure()) , GetTriggerUnit() , GetUnitTypeId(GetCancelledStructure()) , ResourcesCosts_REFUND_BUILDING)
     return false
 endfunction
 
-function ResourcesCosts___TriggerConditionTrainCancel takes nothing returns boolean
+function ResourcesCosts__TriggerConditionTrainCancel takes nothing returns boolean
     call RefundResourceCosts(GetOwningPlayer(GetTriggerUnit()) , GetTriggerUnit() , GetTrainedUnitType() , ResourcesCosts_REFUND_UNIT_TRAINING)
     return false
 endfunction
 
-function ResourcesCosts___TriggerConditionResearchCancel takes nothing returns boolean
+function ResourcesCosts__TriggerConditionResearchCancel takes nothing returns boolean
     call RefundResourceCosts(GetOwningPlayer(GetResearchingUnit()) , GetTriggerUnit() , GetResearched() , ResourcesCosts_REFUND_RESEARCH)
     return false
 endfunction
 
-function ResourcesCosts___TriggerConditionHeroReviveCancel takes nothing returns boolean
+function ResourcesCosts__TriggerConditionHeroReviveCancel takes nothing returns boolean
     call RefundResourceCosts(GetOwningPlayer(GetRevivingUnit()) , GetTriggerUnit() , GetUnitTypeId(GetRevivableUnit()) , ResourcesCosts_REFUND_HERO_REVIVAL)
     return false
 endfunction
 
-function ResourcesCosts___TriggerConditionUnitSell takes nothing returns boolean
+function ResourcesCosts__TriggerConditionUnitSell takes nothing returns boolean
     if ( CheckResourceCosts(GetOwningPlayer(GetBuyingUnit()) , GetBuyingUnit() , GetUnitTypeId(GetSoldUnit()) , true) ) then
         call RemoveResourceCosts(GetOwningPlayer(GetBuyingUnit()) , GetBuyingUnit() , GetUnitTypeId(GetSoldUnit()))
     else
@@ -5218,7 +5220,7 @@ function ResourcesCosts___TriggerConditionUnitSell takes nothing returns boolean
     return false
 endfunction
 
-function ResourcesCosts___TriggerConditionItemSell takes nothing returns boolean
+function ResourcesCosts__TriggerConditionItemSell takes nothing returns boolean
     if ( CheckResourceCosts(GetOwningPlayer(GetBuyingUnit()) , GetBuyingUnit() , GetItemTypeId(GetSoldItem()) , true) ) then
         call RemoveResourceCosts(GetOwningPlayer(GetBuyingUnit()) , GetBuyingUnit() , GetItemTypeId(GetSoldItem()))
     else
@@ -5228,7 +5230,7 @@ function ResourcesCosts___TriggerConditionItemSell takes nothing returns boolean
     return false
 endfunction
 
-function ResourcesCosts___TriggerConditionChannel takes nothing returns boolean
+function ResourcesCosts__TriggerConditionChannel takes nothing returns boolean
     //call BJDebugMsg("Checking ability costs for " + GetObjectName(GetSpellAbilityId()) + " for caster " + GetUnitName(GetTriggerUnit()) + " with level " + I2S(GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId())))
     if ( CheckResourceCosts(GetOwningPlayer(GetTriggerUnit()) , GetTriggerUnit() , GetSpellAbilityId() , true) ) then
         call RemoveResourceCosts(GetOwningPlayer(GetTriggerUnit()) , GetTriggerUnit() , GetSpellAbilityId())
@@ -5239,32 +5241,32 @@ function ResourcesCosts___TriggerConditionChannel takes nothing returns boolean
     return false
 endfunction
 
-function ResourcesCosts___Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___issueTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___issueTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-    call TriggerAddCondition(ResourcesCosts___issueTrigger, Condition(function ResourcesCosts___TriggerConditionIssue))
-    call TriggerAddAction(ResourcesCosts___issueTrigger, function ResourcesCosts___TriggerActionIssue)
+function ResourcesCosts__Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__issueTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__issueTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerAddCondition(ResourcesCosts__issueTrigger, Condition(function ResourcesCosts__TriggerConditionIssue))
+    call TriggerAddAction(ResourcesCosts__issueTrigger, function ResourcesCosts__TriggerActionIssue)
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___constructCancelTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_CANCEL)
-    call TriggerAddCondition(ResourcesCosts___constructCancelTrigger, Condition(function ResourcesCosts___TriggerConditionConstructCancel))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__constructCancelTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_CANCEL)
+    call TriggerAddCondition(ResourcesCosts__constructCancelTrigger, Condition(function ResourcesCosts__TriggerConditionConstructCancel))
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___trainCancelTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
-    call TriggerAddCondition(ResourcesCosts___trainCancelTrigger, Condition(function ResourcesCosts___TriggerConditionTrainCancel))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__trainCancelTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
+    call TriggerAddCondition(ResourcesCosts__trainCancelTrigger, Condition(function ResourcesCosts__TriggerConditionTrainCancel))
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___researchCancelTrigger, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerAddCondition(ResourcesCosts___researchCancelTrigger, Condition(function ResourcesCosts___TriggerConditionResearchCancel))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__researchCancelTrigger, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(ResourcesCosts__researchCancelTrigger, Condition(function ResourcesCosts__TriggerConditionResearchCancel))
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___heroReviveCancelTrigger, EVENT_PLAYER_HERO_REVIVE_CANCEL)
-    call TriggerAddCondition(ResourcesCosts___heroReviveCancelTrigger, Condition(function ResourcesCosts___TriggerConditionHeroReviveCancel))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__heroReviveCancelTrigger, EVENT_PLAYER_HERO_REVIVE_CANCEL)
+    call TriggerAddCondition(ResourcesCosts__heroReviveCancelTrigger, Condition(function ResourcesCosts__TriggerConditionHeroReviveCancel))
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___unitSellTrigger, EVENT_PLAYER_UNIT_SELL)
-    call TriggerAddCondition(ResourcesCosts___unitSellTrigger, Condition(function ResourcesCosts___TriggerConditionUnitSell))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__unitSellTrigger, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(ResourcesCosts__unitSellTrigger, Condition(function ResourcesCosts__TriggerConditionUnitSell))
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___itemSellTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
-    call TriggerAddCondition(ResourcesCosts___itemSellTrigger, Condition(function ResourcesCosts___TriggerConditionItemSell))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__itemSellTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
+    call TriggerAddCondition(ResourcesCosts__itemSellTrigger, Condition(function ResourcesCosts__TriggerConditionItemSell))
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts___channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(ResourcesCosts___channelTrigger, Condition(function ResourcesCosts___TriggerConditionChannel))
+    call TriggerRegisterAnyUnitEventBJ(ResourcesCosts__channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(ResourcesCosts__channelTrigger, Condition(function ResourcesCosts__TriggerConditionChannel))
 endfunction
 
 
@@ -5272,95 +5274,95 @@ endfunction
 //library ResourcesGui:
 
 
-function ResourcesGui___SetResourcesUIVisibleAll takes boolean visible returns nothing
-    call BlzFrameSetVisible(ResourcesGui___IconFrame, visible)
-    call BlzFrameSetVisible(ResourcesGui___TextFrame, visible)
+function ResourcesGui__SetResourcesUIVisibleAll takes boolean visible returns nothing
+    call BlzFrameSetVisible(ResourcesGui__IconFrame, visible)
+    call BlzFrameSetVisible(ResourcesGui__TextFrame, visible)
 endfunction
 
-function ResourcesGui___SetResourcesUIGatheredVisibleAll takes boolean visible returns nothing
-    call BlzFrameSetVisible(ResourcesGui___IconFrameGathered, visible)
-    call BlzFrameSetVisible(ResourcesGui___TextFrameGathered, visible)
-    call BlzFrameSetVisible(ResourcesGui___IconFrameGathered2, visible)
-    call BlzFrameSetVisible(ResourcesGui___TextFrameGathered2, visible)
+function ResourcesGui__SetResourcesUIGatheredVisibleAll takes boolean visible returns nothing
+    call BlzFrameSetVisible(ResourcesGui__IconFrameGathered, visible)
+    call BlzFrameSetVisible(ResourcesGui__TextFrameGathered, visible)
+    call BlzFrameSetVisible(ResourcesGui__IconFrameGathered2, visible)
+    call BlzFrameSetVisible(ResourcesGui__TextFrameGathered2, visible)
 endfunction
 
-function ResourcesGui___SetResourcesUIGathered2VisibleAll takes boolean visible returns nothing
-    call BlzFrameSetVisible(ResourcesGui___IconFrameGathered2, visible)
-    call BlzFrameSetVisible(ResourcesGui___TextFrameGathered2, visible)
+function ResourcesGui__SetResourcesUIGathered2VisibleAll takes boolean visible returns nothing
+    call BlzFrameSetVisible(ResourcesGui__IconFrameGathered2, visible)
+    call BlzFrameSetVisible(ResourcesGui__TextFrameGathered2, visible)
 endfunction
 
-function ResourcesGui___SetResourcesUIVisible takes player whichPlayer,boolean visible returns nothing
+function ResourcesGui__SetResourcesUIVisible takes player whichPlayer,boolean visible returns nothing
     if ( whichPlayer == GetLocalPlayer() ) then
-        call ResourcesGui___SetResourcesUIVisibleAll(visible)
+        call ResourcesGui__SetResourcesUIVisibleAll(visible)
     endif
 endfunction
 
-function ResourcesGui___SetResourcesUIGatheredVisible takes player whichPlayer,boolean visible returns nothing
+function ResourcesGui__SetResourcesUIGatheredVisible takes player whichPlayer,boolean visible returns nothing
     if ( whichPlayer == GetLocalPlayer() ) then
-        call ResourcesGui___SetResourcesUIGatheredVisibleAll(visible)
+        call ResourcesGui__SetResourcesUIGatheredVisibleAll(visible)
     endif
 endfunction
 
-function ResourcesGui___ShowResourcesUI takes player whichPlayer returns nothing
-    call ResourcesGui___SetResourcesUIVisible(whichPlayer , true)
+function ResourcesGui__ShowResourcesUI takes player whichPlayer returns nothing
+    call ResourcesGui__SetResourcesUIVisible(whichPlayer , true)
 endfunction
 
-function ResourcesGui___HideResourcesUI takes player whichPlayer returns nothing
-    call ResourcesGui___SetResourcesUIVisible(whichPlayer , false)
+function ResourcesGui__HideResourcesUI takes player whichPlayer returns nothing
+    call ResourcesGui__SetResourcesUIVisible(whichPlayer , false)
 endfunction
 
-function ResourcesGui___ShowResourcesGatheredUI takes player whichPlayer returns nothing
-    call ResourcesGui___SetResourcesUIGatheredVisible(whichPlayer , true)
+function ResourcesGui__ShowResourcesGatheredUI takes player whichPlayer returns nothing
+    call ResourcesGui__SetResourcesUIGatheredVisible(whichPlayer , true)
 endfunction
 
-function ResourcesGui___HideResourcesGatheredUI takes player whichPlayer returns nothing
-    call ResourcesGui___SetResourcesUIGatheredVisible(whichPlayer , false)
+function ResourcesGui__HideResourcesGatheredUI takes player whichPlayer returns nothing
+    call ResourcesGui__SetResourcesUIGatheredVisible(whichPlayer , false)
 endfunction
 
-function ResourcesGui___CreateResourcesUI takes nothing returns nothing
-    set ResourcesGui___IconFrame=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(ResourcesGui___IconFrame, FRAMEPOINT_TOPLEFT, ResourcesGui___X, ResourcesGui___Y)
-    call BlzFrameSetAbsPoint(ResourcesGui___IconFrame, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui___X + ResourcesGui___WIDTH, ResourcesGui___Y - ResourcesGui___HEIGHT)
-    call BlzFrameSetLevel(ResourcesGui___IconFrame, 1)
+function ResourcesGui__CreateResourcesUI takes nothing returns nothing
+    set ResourcesGui__IconFrame=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(ResourcesGui__IconFrame, FRAMEPOINT_TOPLEFT, ResourcesGui__X, ResourcesGui__Y)
+    call BlzFrameSetAbsPoint(ResourcesGui__IconFrame, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui__X + ResourcesGui__WIDTH, ResourcesGui__Y - ResourcesGui__HEIGHT)
+    call BlzFrameSetLevel(ResourcesGui__IconFrame, 1)
 
-    set ResourcesGui___TextFrame=BlzCreateFrameByType("TEXT", "ResourceGuiText", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(ResourcesGui___TextFrame, FRAMEPOINT_TOPLEFT, ResourcesGui___TEXT_X, ResourcesGui___Y)
-    call BlzFrameSetAbsPoint(ResourcesGui___TextFrame, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui___TEXT_X + ResourcesGui___TEXT_WIDTH, ResourcesGui___Y - ResourcesGui___HEIGHT)
-    call BlzFrameSetTextAlignment(ResourcesGui___TextFrame, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetScale(ResourcesGui___TextFrame, 1.0)
-    call BlzFrameSetLevel(ResourcesGui___TextFrame, 1)
+    set ResourcesGui__TextFrame=BlzCreateFrameByType("TEXT", "ResourceGuiText", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(ResourcesGui__TextFrame, FRAMEPOINT_TOPLEFT, ResourcesGui__TEXT_X, ResourcesGui__Y)
+    call BlzFrameSetAbsPoint(ResourcesGui__TextFrame, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui__TEXT_X + ResourcesGui__TEXT_WIDTH, ResourcesGui__Y - ResourcesGui__HEIGHT)
+    call BlzFrameSetTextAlignment(ResourcesGui__TextFrame, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetScale(ResourcesGui__TextFrame, 1.0)
+    call BlzFrameSetLevel(ResourcesGui__TextFrame, 1)
     
-    set ResourcesGui___IconFrameGathered=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(ResourcesGui___IconFrameGathered, FRAMEPOINT_TOPLEFT, ResourcesGui___X_GATHERED, ResourcesGui___Y_GATHERED)
-    call BlzFrameSetAbsPoint(ResourcesGui___IconFrameGathered, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui___X_GATHERED + ResourcesGui___WIDTH, ResourcesGui___Y_GATHERED - ResourcesGui___HEIGHT)
-    call BlzFrameSetLevel(ResourcesGui___IconFrameGathered, 1)
+    set ResourcesGui__IconFrameGathered=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(ResourcesGui__IconFrameGathered, FRAMEPOINT_TOPLEFT, ResourcesGui__X_GATHERED, ResourcesGui__Y_GATHERED)
+    call BlzFrameSetAbsPoint(ResourcesGui__IconFrameGathered, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui__X_GATHERED + ResourcesGui__WIDTH, ResourcesGui__Y_GATHERED - ResourcesGui__HEIGHT)
+    call BlzFrameSetLevel(ResourcesGui__IconFrameGathered, 1)
 
-    set ResourcesGui___TextFrameGathered=BlzCreateFrameByType("TEXT", "ResourceGuiTextGathered", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(ResourcesGui___TextFrameGathered, FRAMEPOINT_TOPLEFT, ResourcesGui___TEXT_X_GATHERED, ResourcesGui___Y_GATHERED)
-    call BlzFrameSetAbsPoint(ResourcesGui___TextFrameGathered, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui___TEXT_X_GATHERED + ResourcesGui___TEXT_WIDTH, ResourcesGui___Y_GATHERED - ResourcesGui___HEIGHT)
-    call BlzFrameSetTextAlignment(ResourcesGui___TextFrameGathered, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetScale(ResourcesGui___TextFrameGathered, 1.0)
-    call BlzFrameSetLevel(ResourcesGui___TextFrameGathered, 1)
+    set ResourcesGui__TextFrameGathered=BlzCreateFrameByType("TEXT", "ResourceGuiTextGathered", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(ResourcesGui__TextFrameGathered, FRAMEPOINT_TOPLEFT, ResourcesGui__TEXT_X_GATHERED, ResourcesGui__Y_GATHERED)
+    call BlzFrameSetAbsPoint(ResourcesGui__TextFrameGathered, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui__TEXT_X_GATHERED + ResourcesGui__TEXT_WIDTH, ResourcesGui__Y_GATHERED - ResourcesGui__HEIGHT)
+    call BlzFrameSetTextAlignment(ResourcesGui__TextFrameGathered, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetScale(ResourcesGui__TextFrameGathered, 1.0)
+    call BlzFrameSetLevel(ResourcesGui__TextFrameGathered, 1)
     
-    set ResourcesGui___IconFrameGathered2=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(ResourcesGui___IconFrameGathered2, FRAMEPOINT_TOPLEFT, ResourcesGui___X_GATHERED, ResourcesGui___Y)
-    call BlzFrameSetAbsPoint(ResourcesGui___IconFrameGathered2, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui___X_GATHERED + ResourcesGui___WIDTH, ResourcesGui___Y - ResourcesGui___HEIGHT)
-    call BlzFrameSetLevel(ResourcesGui___IconFrameGathered2, 1)
+    set ResourcesGui__IconFrameGathered2=BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(ResourcesGui__IconFrameGathered2, FRAMEPOINT_TOPLEFT, ResourcesGui__X_GATHERED, ResourcesGui__Y)
+    call BlzFrameSetAbsPoint(ResourcesGui__IconFrameGathered2, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui__X_GATHERED + ResourcesGui__WIDTH, ResourcesGui__Y - ResourcesGui__HEIGHT)
+    call BlzFrameSetLevel(ResourcesGui__IconFrameGathered2, 1)
 
-    set ResourcesGui___TextFrameGathered2=BlzCreateFrameByType("TEXT", "ResourceGuiTextGathered2", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(ResourcesGui___TextFrameGathered2, FRAMEPOINT_TOPLEFT, ResourcesGui___TEXT_X_GATHERED, ResourcesGui___Y)
-    call BlzFrameSetAbsPoint(ResourcesGui___TextFrameGathered2, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui___TEXT_X_GATHERED + ResourcesGui___TEXT_WIDTH, ResourcesGui___Y - ResourcesGui___HEIGHT)
-    call BlzFrameSetTextAlignment(ResourcesGui___TextFrameGathered2, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
-    call BlzFrameSetScale(ResourcesGui___TextFrameGathered2, 1.0)
-    call BlzFrameSetLevel(ResourcesGui___TextFrameGathered2, 1)
+    set ResourcesGui__TextFrameGathered2=BlzCreateFrameByType("TEXT", "ResourceGuiTextGathered2", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(ResourcesGui__TextFrameGathered2, FRAMEPOINT_TOPLEFT, ResourcesGui__TEXT_X_GATHERED, ResourcesGui__Y)
+    call BlzFrameSetAbsPoint(ResourcesGui__TextFrameGathered2, FRAMEPOINT_BOTTOMRIGHT, ResourcesGui__TEXT_X_GATHERED + ResourcesGui__TEXT_WIDTH, ResourcesGui__Y - ResourcesGui__HEIGHT)
+    call BlzFrameSetTextAlignment(ResourcesGui__TextFrameGathered2, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
+    call BlzFrameSetScale(ResourcesGui__TextFrameGathered2, 1.0)
+    call BlzFrameSetLevel(ResourcesGui__TextFrameGathered2, 1)
 
     // hide for all players
-    call ResourcesGui___SetResourcesUIVisibleAll(false)
-    call ResourcesGui___SetResourcesUIGatheredVisibleAll(false)
-    call ResourcesGui___SetResourcesUIGathered2VisibleAll(false)
+    call ResourcesGui__SetResourcesUIVisibleAll(false)
+    call ResourcesGui__SetResourcesUIGatheredVisibleAll(false)
+    call ResourcesGui__SetResourcesUIGathered2VisibleAll(false)
 endfunction
 
-function ResourcesGui___GetPrimaryResourceEx takes unit mine,integer ignore returns integer
+function ResourcesGui__GetPrimaryResourceEx takes unit mine,integer ignore returns integer
     local integer resource= 0
     local integer result= 0
     local integer current= 0
@@ -5373,8 +5375,8 @@ function ResourcesGui___GetPrimaryResourceEx takes unit mine,integer ignore retu
         exitwhen ( i == max )
         set resource=(s__Resource_resources[(i)]) // INLINED!!
         if ( resource != ignore ) then
-            set v=(LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
-            set w=(LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+            set v=(LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
+            set w=(LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))) // INLINED!!
             if ( v > current ) then
                 set result=resource
                 set current=v
@@ -5388,54 +5390,54 @@ function ResourcesGui___GetPrimaryResourceEx takes unit mine,integer ignore retu
     return result
 endfunction
 
-function ResourcesGui___GetPrimaryResource takes unit mine returns integer
-    return ResourcesGui___GetPrimaryResourceEx(mine , 0)
+function ResourcesGui__GetPrimaryResource takes unit mine returns integer
+    return ResourcesGui__GetPrimaryResourceEx(mine , 0)
 endfunction
 
-function ResourcesGui___GetResourceGatheredText takes unit worker,integer resource returns string
+function ResourcesGui__GetResourceGatheredText takes unit worker,integer resource returns string
     if ( GetPlayerResourceBonus(GetOwningPlayer(worker) , resource) > 0 ) then
-        return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y_BONUS_POSITIVE")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX)))),GetPlayerResourceBonus(GetOwningPlayer(worker) , resource))) // INLINED!!
+        return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y_BONUS_POSITIVE")))),(s__Resource_name[(resource)])),(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))),(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX)))),GetPlayerResourceBonus(GetOwningPlayer(worker) , resource))) // INLINED!!
     elseif ( GetPlayerResourceBonus(GetOwningPlayer(worker) , resource) < 0 ) then
-        return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y_BONUS_NEGATIVE")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX)))),GetPlayerResourceBonus(GetOwningPlayer(worker) , resource))) // INLINED!!
+        return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y_BONUS_NEGATIVE")))),(s__Resource_name[(resource)])),(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))),(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX)))),GetPlayerResourceBonus(GetOwningPlayer(worker) , resource))) // INLINED!!
     endif
-    return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))),(LoadInteger(Resources___h, GetHandleId((worker )), Index2D(( resource) , Resources___KEY_MAX_RESOURCE , Resources___KEY_MAX))))) // INLINED!!
+    return s__AFormat_result(s__AFormat_i(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X_OF_Y")))),(s__Resource_name[(resource)])),(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))),(LoadInteger(Resources__h, GetHandleId((worker )), Index2D(( resource) , Resources__KEY_MAX_RESOURCE , Resources__KEY_MAX))))) // INLINED!!
 endfunction
 
-function ResourcesGui___UpdateGathered takes player whichPlayer,unit worker returns nothing
-    local integer resource= (ResourcesGui___GetPrimaryResourceEx((worker) , 0)) // INLINED!!
-    local integer resource2= ResourcesGui___GetPrimaryResourceEx(worker , resource)
+function ResourcesGui__UpdateGathered takes player whichPlayer,unit worker returns nothing
+    local integer resource= (ResourcesGui__GetPrimaryResourceEx((worker) , 0)) // INLINED!!
+    local integer resource2= ResourcesGui__GetPrimaryResourceEx(worker , resource)
     //call BJDebugMsg("resource " + I2S(resource))
     if ( GetLocalPlayer() == whichPlayer ) then
         if ( resource != 0 ) then
-            call BlzFrameSetTexture(ResourcesGui___IconFrameGathered, (s__Resource_iconAtt[(resource)]), 0, true) // INLINED!!
-            call BlzFrameSetText(ResourcesGui___TextFrameGathered, ResourcesGui___GetResourceGatheredText(worker , resource))
+            call BlzFrameSetTexture(ResourcesGui__IconFrameGathered, (s__Resource_iconAtt[(resource)]), 0, true) // INLINED!!
+            call BlzFrameSetText(ResourcesGui__TextFrameGathered, ResourcesGui__GetResourceGatheredText(worker , resource))
             //call BJDebugMsg("Icon mine " + GetResourceIcon(resource))
             //call BJDebugMsg("Text mine " + BlzFrameGetText(TextFrame))
-            call ResourcesGui___SetResourcesUIGatheredVisibleAll(true)
+            call ResourcesGui__SetResourcesUIGatheredVisibleAll(true)
         else
-            call ResourcesGui___SetResourcesUIGatheredVisibleAll(false)
+            call ResourcesGui__SetResourcesUIGatheredVisibleAll(false)
         endif
         
         if ( resource2 != 0 ) then
-            call BlzFrameSetTexture(ResourcesGui___IconFrameGathered2, (s__Resource_iconAtt[(resource2)]), 0, true) // INLINED!!
-            call BlzFrameSetText(ResourcesGui___TextFrameGathered2, ResourcesGui___GetResourceGatheredText(worker , resource2))
-            call ResourcesGui___SetResourcesUIGathered2VisibleAll(true)
+            call BlzFrameSetTexture(ResourcesGui__IconFrameGathered2, (s__Resource_iconAtt[(resource2)]), 0, true) // INLINED!!
+            call BlzFrameSetText(ResourcesGui__TextFrameGathered2, ResourcesGui__GetResourceGatheredText(worker , resource2))
+            call ResourcesGui__SetResourcesUIGathered2VisibleAll(true)
         else
-            call ResourcesGui___SetResourcesUIGathered2VisibleAll(false)
+            call ResourcesGui__SetResourcesUIGathered2VisibleAll(false)
         endif
     endif
 endfunction
 
-function ResourcesGui___ForGroupPrint takes nothing returns nothing
+function ResourcesGui__ForGroupPrint takes nothing returns nothing
     call BJDebugMsg(GetUnitName(GetEnumUnit()))
 endfunction
 
 function PrintResourcesGuiSelection takes player whichPlayer returns nothing
-    call BJDebugMsg("current selected unit from system " + GetUnitName(ResourcesGui___currentMine[GetPlayerId(whichPlayer)]))
+    call BJDebugMsg("current selected unit from system " + GetUnitName(ResourcesGui__currentMine[GetPlayerId(whichPlayer)]))
     call BJDebugMsg("current selected unit by player " + GetUnitName(GetSingleSelectedUnit(whichPlayer)))
 endfunction
 
-function ResourcesGui___HasNonEmptyCargo takes unit mine returns boolean
+function ResourcesGui__HasNonEmptyCargo takes unit mine returns boolean
 
     return (CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData(((mine)))))])) > 0 // INLINED!!
 
@@ -5443,96 +5445,96 @@ function ResourcesGui___HasNonEmptyCargo takes unit mine returns boolean
 
 endfunction
 
-function ResourcesGui___HasProgressBar takes unit mine returns boolean
-    return IsUnitInGroup(mine, ResourcesGui___progressBarUnits)
+function ResourcesGui__HasProgressBar takes unit mine returns boolean
+    return IsUnitInGroup(mine, ResourcesGui__progressBarUnits)
 endfunction
 
 function UpdatePlayerResourceSelectionGui takes player whichPlayer returns nothing
     local integer resource= 0
     local integer playerId= GetPlayerId(whichPlayer)
     //call BJDebugMsg("UpdatePlayerResourceSelectionGui")
-    set ResourcesGui___currentMine[playerId]=GetSingleSelectedUnit(whichPlayer)
+    set ResourcesGui__currentMine[playerId]=GetSingleSelectedUnit(whichPlayer)
     //call BJDebugMsg("Current single selected unit " + GetUnitName(currentMine[playerId]))
     // heroes have no space for the icons
-    if ( ResourcesGui___currentMine[playerId] != null and IsUnitType(ResourcesGui___currentMine[playerId], UNIT_TYPE_HERO) ) then
-        set ResourcesGui___currentMine[playerId]=null
+    if ( ResourcesGui__currentMine[playerId] != null and IsUnitType(ResourcesGui__currentMine[playerId], UNIT_TYPE_HERO) ) then
+        set ResourcesGui__currentMine[playerId]=null
     endif
     
     // with cargo there is no space for icons
 
-    if ( ResourcesGui___currentMine[playerId] != null and ((CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData((((ResourcesGui___currentMine[playerId]))))))])) > 0) ) then // INLINED!!
-        set ResourcesGui___currentMine[playerId]=null
+    if ( ResourcesGui__currentMine[playerId] != null and ((CountUnitsInGroup(UnitEventEx___CargoGroup[((GetUnitUserData((((ResourcesGui__currentMine[playerId]))))))])) > 0) ) then // INLINED!!
+        set ResourcesGui__currentMine[playerId]=null
     endif
 
 
-    if ( ResourcesGui___currentMine[playerId] != null and (IsUnitInGroup((ResourcesGui___currentMine[playerId]), ResourcesGui___progressBarUnits)) ) then // INLINED!!
-        set ResourcesGui___currentMine[playerId]=null
+    if ( ResourcesGui__currentMine[playerId] != null and (IsUnitInGroup((ResourcesGui__currentMine[playerId]), ResourcesGui__progressBarUnits)) ) then // INLINED!!
+        set ResourcesGui__currentMine[playerId]=null
     endif
 
     //call BJDebugMsg("XXXXXXXXXXXX")
-    if ( ResourcesGui___currentMine[playerId] != null ) then
-        set resource=(ResourcesGui___GetPrimaryResourceEx((ResourcesGui___currentMine[playerId]) , 0)) // INLINED!!
+    if ( ResourcesGui__currentMine[playerId] != null ) then
+        set resource=(ResourcesGui__GetPrimaryResourceEx((ResourcesGui__currentMine[playerId]) , 0)) // INLINED!!
         
         //call PrintResourcesGuiSelection(whichPlayer)
         //call BJDebugMsg("mine " + GetUnitName(currentMine[playerId]) + " with primary resource " + I2S(resource))
-        if ( (IsUnitInGroup((ResourcesGui___currentMine[playerId]), Resources___mines)) and IsAlliedMine(ResourcesGui___currentMine[playerId] , whichPlayer) ) then // INLINED!!
+        if ( (IsUnitInGroup((ResourcesGui__currentMine[playerId]), Resources__mines)) and IsAlliedMine(ResourcesGui__currentMine[playerId] , whichPlayer) ) then // INLINED!!
            // call BJDebugMsg("is mine")
             if ( resource != 0 ) then
                 //call BJDebugMsg("Show mine " + GetUnitName(currentMine[playerId]))
                 if ( GetLocalPlayer() == whichPlayer ) then
-                    call BlzFrameSetTexture(ResourcesGui___IconFrame, (s__Resource_iconAtt[(resource)]), 0, true) // INLINED!!
-                    call BlzFrameSetText(ResourcesGui___TextFrame, s__AFormat_result(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X")))),(s__Resource_name[(resource)])),(LoadInteger(Resources___h, GetHandleId((ResourcesGui___currentMine[playerId] )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))))) // INLINED!!
+                    call BlzFrameSetTexture(ResourcesGui__IconFrame, (s__Resource_iconAtt[(resource)]), 0, true) // INLINED!!
+                    call BlzFrameSetText(ResourcesGui__TextFrame, s__AFormat_result(s__AFormat_i(s__AFormat_s((s__AFormat_create((GetLocalizedString("RESOURCE_X")))),(s__Resource_name[(resource)])),(LoadInteger(Resources__h, GetHandleId((ResourcesGui__currentMine[playerId] )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))))) // INLINED!!
                     //call BJDebugMsg("Icon mine " + GetResourceIcon(resource))
                     //call BJDebugMsg("Text mine " + BlzFrameGetText(TextFrame))
-                    call ResourcesGui___SetResourcesUIVisibleAll(true)
-                    call ResourcesGui___SetResourcesUIGatheredVisibleAll(false)
-                    call ResourcesGui___SetResourcesUIGathered2VisibleAll(false)
+                    call ResourcesGui__SetResourcesUIVisibleAll(true)
+                    call ResourcesGui__SetResourcesUIGatheredVisibleAll(false)
+                    call ResourcesGui__SetResourcesUIGathered2VisibleAll(false)
                 endif
             else
                 //call BJDebugMsg("selection counter is not 1 " + I2S(selectionCounter[playerId] ))
                 //call BJDebugMsg("Hide mine " + GetUnitName(selected))
                 if ( GetLocalPlayer() == whichPlayer ) then
-                    call ResourcesGui___SetResourcesUIVisibleAll(false)
-                    call ResourcesGui___SetResourcesUIGatheredVisibleAll(false)
-                    call ResourcesGui___SetResourcesUIGathered2VisibleAll(false)
+                    call ResourcesGui__SetResourcesUIVisibleAll(false)
+                    call ResourcesGui__SetResourcesUIGatheredVisibleAll(false)
+                    call ResourcesGui__SetResourcesUIGathered2VisibleAll(false)
                 endif
             endif
-        elseif ( resource != 0 and IsAlliedMine(ResourcesGui___currentMine[playerId] , whichPlayer) ) then
+        elseif ( resource != 0 and IsAlliedMine(ResourcesGui__currentMine[playerId] , whichPlayer) ) then
             //call BJDebugMsg("Update gathered resources UI for player " + GetPlayerName(whichPlayer))
-            call ResourcesGui___SetResourcesUIVisibleAll(false)
-            call ResourcesGui___UpdateGathered(whichPlayer , ResourcesGui___currentMine[playerId])
+            call ResourcesGui__SetResourcesUIVisibleAll(false)
+            call ResourcesGui__UpdateGathered(whichPlayer , ResourcesGui__currentMine[playerId])
         else
             //call BJDebugMsg("Hide gathered resources UI for player " + GetPlayerName(whichPlayer))
-            call ResourcesGui___SetResourcesUIVisibleAll(false)
-            call ResourcesGui___SetResourcesUIGatheredVisibleAll(false)
-            call ResourcesGui___SetResourcesUIGathered2VisibleAll(false)
+            call ResourcesGui__SetResourcesUIVisibleAll(false)
+            call ResourcesGui__SetResourcesUIGatheredVisibleAll(false)
+            call ResourcesGui__SetResourcesUIGathered2VisibleAll(false)
         endif
     else
         //call BJDebugMsg("Hide all resources UI for player " + GetPlayerName(whichPlayer))
-        call ResourcesGui___SetResourcesUIVisibleAll(false)
-        call ResourcesGui___SetResourcesUIGatheredVisibleAll(false)
-        call ResourcesGui___SetResourcesUIGathered2VisibleAll(false)
+        call ResourcesGui__SetResourcesUIVisibleAll(false)
+        call ResourcesGui__SetResourcesUIGatheredVisibleAll(false)
+        call ResourcesGui__SetResourcesUIGathered2VisibleAll(false)
     endif
 endfunction
 
-function ResourcesGui___TriggerActionTmp takes nothing returns nothing
-    call UpdatePlayerResourceSelectionGui(ResourcesGui___tmpPlayer)
+function ResourcesGui__TriggerActionTmp takes nothing returns nothing
+    call UpdatePlayerResourceSelectionGui(ResourcesGui__tmpPlayer)
 endfunction
 
-function ResourcesGui___TimerFunctionUpdate takes nothing returns nothing
-    local integer playerId= LoadInteger(ResourcesGui___h, GetHandleId(GetExpiredTimer()), 0)
+function ResourcesGui__TimerFunctionUpdate takes nothing returns nothing
+    local integer playerId= LoadInteger(ResourcesGui__h, GetHandleId(GetExpiredTimer()), 0)
     //call BJDebugMsg("Timer function with playerId " + I2S(playerId))
     // This has to be done to make GetSingleSelectedUnit work. SyncSelections might hang the current thread otherwise.
-    set ResourcesGui___tmpPlayer=Player(playerId)
-    call TriggerExecute(ResourcesGui___tmpTrigger)
-    set ResourcesGui___updateTimerRunning[playerId]=false
+    set ResourcesGui__tmpPlayer=Player(playerId)
+    call TriggerExecute(ResourcesGui__tmpTrigger)
+    set ResourcesGui__updateTimerRunning[playerId]=false
 endfunction
 
-function ResourcesGui___StartUpdateTimer takes player whichPlayer returns nothing
+function ResourcesGui__StartUpdateTimer takes player whichPlayer returns nothing
     local integer playerId= GetPlayerId(whichPlayer)
-    if ( not ResourcesGui___updateTimerRunning[playerId] ) then
-        set ResourcesGui___updateTimerRunning[playerId]=true
-        call TimerStart(ResourcesGui___updateTimer[playerId], 0.0, false, function ResourcesGui___TimerFunctionUpdate)
+    if ( not ResourcesGui__updateTimerRunning[playerId] ) then
+        set ResourcesGui__updateTimerRunning[playerId]=true
+        call TimerStart(ResourcesGui__updateTimer[playerId], 0.0, false, function ResourcesGui__TimerFunctionUpdate)
     endif
 endfunction
 
@@ -5543,105 +5545,105 @@ function ResourcesGui_StartUpdateTimerForUnits takes unit u0,unit u1 returns not
         exitwhen ( i == bj_MAX_PLAYERS )
         set slotPlayer=Player(i)
         if ( GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING and ( ( u0 != null and IsUnitSelected(u0, slotPlayer) ) or ( u1 != null and IsUnitSelected(u1, slotPlayer) ) ) ) then
-            call ResourcesGui___StartUpdateTimer(slotPlayer)
+            call ResourcesGui__StartUpdateTimer(slotPlayer)
         endif
         set slotPlayer=null
         set i=i + 1
     endloop
 endfunction
 
-function ResourcesGui___TriggerActionSelected takes nothing returns nothing
+function ResourcesGui__TriggerActionSelected takes nothing returns nothing
     // This has to be done to make GetSingleSelectedUnit work. SyncSelections might hang the current thread otherwise.
-    call ResourcesGui___StartUpdateTimer(GetTriggerPlayer())
+    call ResourcesGui__StartUpdateTimer(GetTriggerPlayer())
 endfunction
 
-function ResourcesGui___TriggerActionDeselected takes nothing returns nothing
+function ResourcesGui__TriggerActionDeselected takes nothing returns nothing
     // This has to be done to make GetSingleSelectedUnit work. SyncSelections might hang the current thread otherwise.
-    call ResourcesGui___StartUpdateTimer(GetTriggerPlayer())
+    call ResourcesGui__StartUpdateTimer(GetTriggerPlayer())
 endfunction
 
-function ResourcesGui___TriggerActionGather takes nothing returns nothing
+function ResourcesGui__TriggerActionGather takes nothing returns nothing
     // This has to be done to make GetSingleSelectedUnit work. SyncSelections might hang the current thread otherwise.
-    call ResourcesGui_StartUpdateTimerForUnits((Resources___triggerWorker) , (Resources___triggerMine)) // INLINED!!
+    call ResourcesGui_StartUpdateTimerForUnits((Resources__triggerWorker) , (Resources__triggerMine)) // INLINED!!
 endfunction
 
-function ResourcesGui___TriggerActionReturn takes nothing returns nothing
+function ResourcesGui__TriggerActionReturn takes nothing returns nothing
     // This has to be done to make GetSingleSelectedUnit work. SyncSelections might hang the current thread otherwise.
-    call ResourcesGui_StartUpdateTimerForUnits((Resources___triggerWorker) , (Resources___triggerReturnBuilding)) // INLINED!!
+    call ResourcesGui_StartUpdateTimerForUnits((Resources__triggerWorker) , (Resources__triggerReturnBuilding)) // INLINED!!
 endfunction
 
-function ResourcesGui___TriggerActionProgressBarStart takes nothing returns nothing
+function ResourcesGui__TriggerActionProgressBarStart takes nothing returns nothing
     local unit u= GetTriggerUnit()
-    if ( not IsUnitInGroup(u, ResourcesGui___progressBarUnits) ) then
-        call GroupAddUnit(ResourcesGui___progressBarUnits, u)
+    if ( not IsUnitInGroup(u, ResourcesGui__progressBarUnits) ) then
+        call GroupAddUnit(ResourcesGui__progressBarUnits, u)
         call ResourcesGui_StartUpdateTimerForUnits(u , null)
     endif
     set u=null
 endfunction
 
-function ResourcesGui___TriggerActionProgressBarFinish takes nothing returns nothing
+function ResourcesGui__TriggerActionProgressBarFinish takes nothing returns nothing
     local unit u= GetTriggerUnit()
-    if ( IsUnitInGroup(u, ResourcesGui___progressBarUnits) ) then
-        call GroupRemoveUnit(ResourcesGui___progressBarUnits, u)
+    if ( IsUnitInGroup(u, ResourcesGui__progressBarUnits) ) then
+        call GroupRemoveUnit(ResourcesGui__progressBarUnits, u)
         call ResourcesGui_StartUpdateTimerForUnits(u , null)
     endif
     set u=null
 endfunction
 
-function ResourcesGui___Init takes nothing returns nothing
+function ResourcesGui__Init takes nothing returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesGui___currentMine[i]=null
-        set ResourcesGui___updateTimer[i]=CreateTimer()
-        call SaveInteger(ResourcesGui___h, GetHandleId(ResourcesGui___updateTimer[i]), 0, i)
+        set ResourcesGui__currentMine[i]=null
+        set ResourcesGui__updateTimer[i]=CreateTimer()
+        call SaveInteger(ResourcesGui__h, GetHandleId(ResourcesGui__updateTimer[i]), 0, i)
         set i=i + 1
     endloop
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___selectionTrigger, EVENT_PLAYER_UNIT_SELECTED)
-    call TriggerAddAction(ResourcesGui___selectionTrigger, function ResourcesGui___TriggerActionSelected)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__selectionTrigger, EVENT_PLAYER_UNIT_SELECTED)
+    call TriggerAddAction(ResourcesGui__selectionTrigger, function ResourcesGui__TriggerActionSelected)
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___deselectionTrigger, EVENT_PLAYER_UNIT_DESELECTED)
-    call TriggerAddAction(ResourcesGui___deselectionTrigger, function ResourcesGui___TriggerActionDeselected)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__deselectionTrigger, EVENT_PLAYER_UNIT_DESELECTED)
+    call TriggerAddAction(ResourcesGui__deselectionTrigger, function ResourcesGui__TriggerActionDeselected)
     
-    call TriggerRegisterGatherEvent(ResourcesGui___gatherTrigger)
+    call TriggerRegisterGatherEvent(ResourcesGui__gatherTrigger)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
-    call TriggerAddAction(ResourcesGui___gatherTrigger, function ResourcesGui___TriggerActionGather)
+    call TriggerAddAction(ResourcesGui__gatherTrigger, function ResourcesGui__TriggerActionGather)
     
-    call TriggerRegisterReturnEvent(ResourcesGui___returnTrigger)
+    call TriggerRegisterReturnEvent(ResourcesGui__returnTrigger)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
-    call TriggerAddAction(ResourcesGui___returnTrigger, function ResourcesGui___TriggerActionReturn)
+    call TriggerAddAction(ResourcesGui__returnTrigger, function ResourcesGui__TriggerActionReturn)
 
-    call TriggerAddAction(OnStartGame___startGameTrigger, (function ResourcesGui___CreateResourcesUI)) // INLINED!!
+    call TriggerAddAction(OnStartGame__startGameTrigger, (function ResourcesGui__CreateResourcesUI)) // INLINED!!
     
-    call TriggerAddAction(ResourcesGui___tmpTrigger, function ResourcesGui___TriggerActionTmp)
+    call TriggerAddAction(ResourcesGui__tmpTrigger, function ResourcesGui__TriggerActionTmp)
     
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarStartTrigger, EVENT_PLAYER_UNIT_UPGRADE_START)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarStartTrigger, EVENT_PLAYER_UNIT_RESEARCH_START)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarStartTrigger, EVENT_PLAYER_UNIT_TRAIN_START)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarStartTrigger, EVENT_PLAYER_UNIT_UPGRADE_START)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarStartTrigger, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarStartTrigger, EVENT_PLAYER_UNIT_TRAIN_START)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
-    call TriggerAddAction(ResourcesGui___progressBarStartTrigger, function ResourcesGui___TriggerActionProgressBarStart)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_UPGRADE_CANCEL)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(ResourcesGui___progressBarFinishTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddAction(ResourcesGui__progressBarStartTrigger, function ResourcesGui__TriggerActionProgressBarStart)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_UPGRADE_CANCEL)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(ResourcesGui__progressBarFinishTrigger, EVENT_PLAYER_UNIT_DEATH)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
-    call TriggerAddAction(ResourcesGui___progressBarFinishTrigger, function ResourcesGui___TriggerActionProgressBarFinish)
+    call TriggerAddAction(ResourcesGui__progressBarFinishTrigger, function ResourcesGui__TriggerActionProgressBarFinish)
     
 
-        call TriggerAddAction(FrameLoader___actionTrigger, (function ResourcesGui___CreateResourcesUI)) // INLINED!!
+        call TriggerAddAction(FrameLoader__actionTrigger, (function ResourcesGui__CreateResourcesUI)) // INLINED!!
 
 endfunction
 
-function ResourcesGui___RemoveUnitHook takes unit whichUnit returns nothing
-    if ( IsUnitInGroup(whichUnit, ResourcesGui___progressBarUnits) ) then
-        call GroupRemoveUnit(ResourcesGui___progressBarUnits, whichUnit)
+function ResourcesGui__RemoveUnitHook takes unit whichUnit returns nothing
+    if ( IsUnitInGroup(whichUnit, ResourcesGui__progressBarUnits) ) then
+        call GroupRemoveUnit(ResourcesGui__progressBarUnits, whichUnit)
     endif
 endfunction
 
-//processed hook: hook RemoveUnit ResourcesGui___RemoveUnitHook
+//processed hook: hook RemoveUnit ResourcesGui__RemoveUnitHook
 
 
 //library ResourcesGui ends
@@ -5713,10 +5715,10 @@ function ResourcesLoadedMines___HarvestMine takes unit mine,integer amount retur
     loop
         exitwhen ( i == max )
         set r=(s__Resource_resources[(i)]) // INLINED!!
-        set actualAmount=(LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) // INLINED!!
+        set actualAmount=(LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) // INLINED!!
         if ( actualAmount > 0 ) then
             set actualAmount=IMinBJ(actualAmount, amount + GetPlayerResourceBonus(GetOwningPlayer(mine) , r))
-            call SetUnitResource(mine , r , (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( r) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) - actualAmount) // INLINED!!
+            call SetUnitResource(mine , r , (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( r) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) - actualAmount) // INLINED!!
             call CustomBountyEx(mine , GetOwningPlayer(firstWorker) , r , actualAmount)
             call ExecuteGatherCallbacks(mine , firstWorker , r , actualAmount)
         endif
@@ -5739,7 +5741,7 @@ function ResourcesLoadedMines___ForGroupHarvest takes nothing returns nothing
                 call ResourcesLoadedMines___HarvestMine(mine , amount)
                                     
                 if ( IsMineEmpty(mine) ) then
-                    if ( (LoadBoolean(Resources___h, GetHandleId((mine)), Index2D(0 , Resources___KEY_EXPLODE_ON_DEATH , Resources___KEY_MAX))) ) then // INLINED!!
+                    if ( (LoadBoolean(Resources__h, GetHandleId((mine)), Index2D(0 , Resources__KEY_EXPLODE_ON_DEATH , Resources__KEY_MAX))) ) then // INLINED!!
                         call KillUnit(mine)
                     else
                         call RemoveLoadedMine(mine)
@@ -5793,14 +5795,14 @@ endfunction
 
 
 function IsPlayerIgnoredForTeamResourceMultiboard takes player whichPlayer,player forPlayer returns boolean
-    return ResourcesTeamMultiboardGui___playerIgnoredMultiboards[Index2D(GetPlayerId(whichPlayer) , GetPlayerId(forPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesTeamMultiboardGui__playerIgnoredMultiboards[Index2D(GetPlayerId(whichPlayer) , GetPlayerId(forPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function GetPlayerTeamResourceMultiboard takes player whichPlayer returns multiboard
-    return ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId(whichPlayer)]
+    return ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId(whichPlayer)]
 endfunction
 
-function ResourcesTeamMultiboardGui___CountAlliesWithSharedControl takes player whichPlayer returns integer
+function ResourcesTeamMultiboardGui__CountAlliesWithSharedControl takes player whichPlayer returns integer
     local integer count= 0
     local player slotPlayer= null
     local integer i= 0
@@ -5812,7 +5814,7 @@ function ResourcesTeamMultiboardGui___CountAlliesWithSharedControl takes player 
             set count=count + 1
          endif
 
-        if ( slotPlayer != whichPlayer and GetPlayerAlliance(slotPlayer, whichPlayer, ALLIANCE_SHARED_CONTROL) or GetPlayerAlliance(slotPlayer, whichPlayer, ALLIANCE_SHARED_ADVANCED_CONTROL) and not (ResourcesTeamMultiboardGui___playerIgnoredMultiboards[Index2D(GetPlayerId((slotPlayer )) , GetPlayerId(( whichPlayer)) , bj_MAX_PLAYERS)]) ) then // INLINED!!
+        if ( slotPlayer != whichPlayer and GetPlayerAlliance(slotPlayer, whichPlayer, ALLIANCE_SHARED_CONTROL) or GetPlayerAlliance(slotPlayer, whichPlayer, ALLIANCE_SHARED_ADVANCED_CONTROL) and not (ResourcesTeamMultiboardGui__playerIgnoredMultiboards[Index2D(GetPlayerId((slotPlayer )) , GetPlayerId(( whichPlayer)) , bj_MAX_PLAYERS)]) ) then // INLINED!!
             set count=count + 1
         endif
         set slotPlayer=null
@@ -5821,7 +5823,7 @@ function ResourcesTeamMultiboardGui___CountAlliesWithSharedControl takes player 
     return count
 endfunction
 
-function ResourcesTeamMultiboardGui___IsAlliedPlayerWithSharedControl takes player viewingPlayer,player alliedPlayer returns boolean
+function ResourcesTeamMultiboardGui__IsAlliedPlayerWithSharedControl takes player viewingPlayer,player alliedPlayer returns boolean
 
     if ( viewingPlayer == alliedPlayer ) then
         return true
@@ -5831,7 +5833,7 @@ function ResourcesTeamMultiboardGui___IsAlliedPlayerWithSharedControl takes play
 endfunction
 
 function UpdatePlayerTeamResourceMultiboard takes player whichPlayer returns nothing
-    local multiboard mb= (ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId((whichPlayer))]) // INLINED!!
+    local multiboard mb= (ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId((whichPlayer))]) // INLINED!!
     local multiboarditem it= null
     local integer column= 1
     local integer percentage= 0
@@ -5844,7 +5846,7 @@ function UpdatePlayerTeamResourceMultiboard takes player whichPlayer returns not
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
         set slotPlayer=Player(i)
-        if ( not (ResourcesTeamMultiboardGui___playerIgnoredMultiboards[Index2D(GetPlayerId((slotPlayer )) , GetPlayerId(( whichPlayer)) , bj_MAX_PLAYERS)]) and ResourcesTeamMultiboardGui___IsAlliedPlayerWithSharedControl(whichPlayer , slotPlayer) ) then // INLINED!!
+        if ( not (ResourcesTeamMultiboardGui__playerIgnoredMultiboards[Index2D(GetPlayerId((slotPlayer )) , GetPlayerId(( whichPlayer)) , bj_MAX_PLAYERS)]) and ResourcesTeamMultiboardGui__IsAlliedPlayerWithSharedControl(whichPlayer , slotPlayer) ) then // INLINED!!
             set column=1
             set j=0
             loop
@@ -5892,7 +5894,7 @@ function UpdateAllTeamResourceMultiboards takes nothing returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( ResourcesTeamMultiboardGui___playerMultiboards[i] != null ) then
+        if ( ResourcesTeamMultiboardGui__playerMultiboards[i] != null ) then
             call UpdatePlayerTeamResourceMultiboard(Player(i))
         endif
         set i=i + 1
@@ -5900,26 +5902,26 @@ function UpdateAllTeamResourceMultiboards takes nothing returns nothing
 endfunction
 
 function PauseTeamResourceMultiboardsUpdates takes nothing returns nothing
-    call PauseTimer(ResourcesTeamMultiboardGui___t)
+    call PauseTimer(ResourcesTeamMultiboardGui__t)
 endfunction
 
 function ResumeTeamResourceMultiboardsUpdates takes nothing returns nothing
-    call ResumeTimer(ResourcesTeamMultiboardGui___t)
+    call ResumeTimer(ResourcesTeamMultiboardGui__t)
 endfunction
 
 function ShowPlayerTeamResourceMultiboard takes player whichPlayer returns nothing
-    call MultiboardDisplay((ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId((whichPlayer))]), true) // INLINED!!
+    call MultiboardDisplay((ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId((whichPlayer))]), true) // INLINED!!
 endfunction
 
 function HidePlayerTeamResourceMultiboard takes player whichPlayer returns nothing
-    call MultiboardDisplay((ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId((whichPlayer))]), false) // INLINED!!
+    call MultiboardDisplay((ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId((whichPlayer))]), false) // INLINED!!
 endfunction
 
 function ShowAllTeamResourceMultiboards takes nothing returns nothing
      local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        call MultiboardDisplay((ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId((Player(i)))]), false) // INLINED!!
+        call MultiboardDisplay((ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId((Player(i)))]), false) // INLINED!!
         set i=i + 1
     endloop
 endfunction
@@ -5928,7 +5930,7 @@ function HideAllTeamResourceMultiboards takes nothing returns nothing
      local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        call MultiboardDisplay((ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId((Player(i)))]), false) // INLINED!!
+        call MultiboardDisplay((ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId((Player(i)))]), false) // INLINED!!
         set i=i + 1
     endloop
 endfunction
@@ -5943,13 +5945,13 @@ function CreateTeamResourceMultiboards takes player whichPlayer returns multiboa
     local player slotPlayer= null
     local integer max= (s__Resource_resourcesCount) // INLINED!!
     local integer columns= max
-    local integer rows= ResourcesTeamMultiboardGui___CountAlliesWithSharedControl(whichPlayer)
+    local integer rows= ResourcesTeamMultiboardGui__CountAlliesWithSharedControl(whichPlayer)
     local multiboard mb= CreateMultiboardBJ(columns, rows, GetLocalizedString("TEAM_RESOURCES"))
     call MultiboardSetTitleTextColor(mb, 240, 240, 16, 0)
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
         set slotPlayer=Player(i)
-        if ( not (ResourcesTeamMultiboardGui___playerIgnoredMultiboards[Index2D(GetPlayerId((slotPlayer )) , GetPlayerId(( whichPlayer)) , bj_MAX_PLAYERS)]) and ResourcesTeamMultiboardGui___IsAlliedPlayerWithSharedControl(whichPlayer , slotPlayer) ) then // INLINED!!
+        if ( not (ResourcesTeamMultiboardGui__playerIgnoredMultiboards[Index2D(GetPlayerId((slotPlayer )) , GetPlayerId(( whichPlayer)) , bj_MAX_PLAYERS)]) and ResourcesTeamMultiboardGui__IsAlliedPlayerWithSharedControl(whichPlayer , slotPlayer) ) then // INLINED!!
             set column=0
             set it=MultiboardGetItem(mb, row, column)
             call MultiboardSetItemStyle(it, true, false)
@@ -5994,18 +5996,18 @@ endfunction
 
 function RecreateTeamResourceMultiboardForPlayer takes player whichPlayer returns nothing
     local integer playerId= GetPlayerId(whichPlayer)
-    if ( ResourcesTeamMultiboardGui___playerMultiboards[playerId] != null ) then
-        call DestroyMultiboard(ResourcesTeamMultiboardGui___playerMultiboards[playerId])
-        set ResourcesTeamMultiboardGui___playerMultiboards[playerId]=null
+    if ( ResourcesTeamMultiboardGui__playerMultiboards[playerId] != null ) then
+        call DestroyMultiboard(ResourcesTeamMultiboardGui__playerMultiboards[playerId])
+        set ResourcesTeamMultiboardGui__playerMultiboards[playerId]=null
     endif
-    if ( ResourcesTeamMultiboardGui___CountAlliesWithSharedControl(whichPlayer) > 0 and GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING ) then
-        set ResourcesTeamMultiboardGui___playerMultiboards[playerId]=CreateTeamResourceMultiboards(whichPlayer)
+    if ( ResourcesTeamMultiboardGui__CountAlliesWithSharedControl(whichPlayer) > 0 and GetPlayerController(whichPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_PLAYING ) then
+        set ResourcesTeamMultiboardGui__playerMultiboards[playerId]=CreateTeamResourceMultiboards(whichPlayer)
     endif
 endfunction
 
 function SetPlayerIgnoredForTeamResourceMultiboard takes player whichPlayer,player forPlayer,boolean ignored returns nothing
-    set ResourcesTeamMultiboardGui___playerIgnoredMultiboards[Index2D(GetPlayerId(whichPlayer) , GetPlayerId(forPlayer) , bj_MAX_PLAYERS)]=ignored
-    if ( ResourcesTeamMultiboardGui___playerMultiboards[GetPlayerId(forPlayer)] != null ) then
+    set ResourcesTeamMultiboardGui__playerIgnoredMultiboards[Index2D(GetPlayerId(whichPlayer) , GetPlayerId(forPlayer) , bj_MAX_PLAYERS)]=ignored
+    if ( ResourcesTeamMultiboardGui__playerMultiboards[GetPlayerId(forPlayer)] != null ) then
         call RecreateTeamResourceMultiboardForPlayer(forPlayer)
         call UpdatePlayerTeamResourceMultiboard(forPlayer)
     endif
@@ -6016,44 +6018,44 @@ function RecreateTeamResourceMultiboards takes nothing returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        if ( ResourcesTeamMultiboardGui___playerMultiboards[i] != null ) then
-            call DestroyMultiboard(ResourcesTeamMultiboardGui___playerMultiboards[i])
-            set ResourcesTeamMultiboardGui___playerMultiboards[i]=null
+        if ( ResourcesTeamMultiboardGui__playerMultiboards[i] != null ) then
+            call DestroyMultiboard(ResourcesTeamMultiboardGui__playerMultiboards[i])
+            set ResourcesTeamMultiboardGui__playerMultiboards[i]=null
         endif
         set slotPlayer=Player(i)
-        if ( ResourcesTeamMultiboardGui___CountAlliesWithSharedControl(slotPlayer) > 0 and GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING ) then
-            set ResourcesTeamMultiboardGui___playerMultiboards[i]=CreateTeamResourceMultiboards(slotPlayer)
+        if ( ResourcesTeamMultiboardGui__CountAlliesWithSharedControl(slotPlayer) > 0 and GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING ) then
+            set ResourcesTeamMultiboardGui__playerMultiboards[i]=CreateTeamResourceMultiboards(slotPlayer)
         endif
         set slotPlayer=null
         set i=i + 1
     endloop
 endfunction
 
-function ResourcesTeamMultiboardGui___StartTeamResourceMultiboardsUpdates takes nothing returns nothing
-    call TimerStart(ResourcesTeamMultiboardGui___t, ResourcesTeamMultiboardGui_TIMER_INTERVAL, true, function UpdateAllTeamResourceMultiboards)
+function ResourcesTeamMultiboardGui__StartTeamResourceMultiboardsUpdates takes nothing returns nothing
+    call TimerStart(ResourcesTeamMultiboardGui__t, ResourcesTeamMultiboardGui_TIMER_INTERVAL, true, function UpdateAllTeamResourceMultiboards)
 endfunction
 
-function ResourcesTeamMultiboardGui___StartGame takes nothing returns nothing
+function ResourcesTeamMultiboardGui__StartGame takes nothing returns nothing
     call RecreateTeamResourceMultiboards()
     call UpdateAllTeamResourceMultiboards()
 endfunction
 
-function ResourcesTeamMultiboardGui___TriggerConditionAllianceChange takes nothing returns boolean
+function ResourcesTeamMultiboardGui__TriggerConditionAllianceChange takes nothing returns boolean
     call RecreateTeamResourceMultiboards()
     return false
 endfunction
 
-function ResourcesTeamMultiboardGui___Init takes nothing returns nothing
+function ResourcesTeamMultiboardGui__Init takes nothing returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        call TriggerRegisterPlayerAllianceChange(ResourcesTeamMultiboardGui___allianceChangeTrigger, Player(i), ALLIANCE_SHARED_ADVANCED_CONTROL)
-        call TriggerRegisterPlayerAllianceChange(ResourcesTeamMultiboardGui___allianceChangeTrigger, Player(i), ALLIANCE_SHARED_CONTROL)
+        call TriggerRegisterPlayerAllianceChange(ResourcesTeamMultiboardGui__allianceChangeTrigger, Player(i), ALLIANCE_SHARED_ADVANCED_CONTROL)
+        call TriggerRegisterPlayerAllianceChange(ResourcesTeamMultiboardGui__allianceChangeTrigger, Player(i), ALLIANCE_SHARED_CONTROL)
         set i=i + 1
     endloop
-    call TriggerAddCondition(ResourcesTeamMultiboardGui___allianceChangeTrigger, Condition(function ResourcesTeamMultiboardGui___TriggerConditionAllianceChange))
-    call TimerStart(ResourcesTeamMultiboardGui___t, ResourcesTeamMultiboardGui_TIMER_INTERVAL, true, function UpdateAllTeamResourceMultiboards) // INLINED!!
-    call TriggerAddAction(OnStartGame___startGameTrigger, (function ResourcesTeamMultiboardGui___StartGame)) // INLINED!!
+    call TriggerAddCondition(ResourcesTeamMultiboardGui__allianceChangeTrigger, Condition(function ResourcesTeamMultiboardGui__TriggerConditionAllianceChange))
+    call TimerStart(ResourcesTeamMultiboardGui__t, ResourcesTeamMultiboardGui_TIMER_INTERVAL, true, function UpdateAllTeamResourceMultiboards) // INLINED!!
+    call TriggerAddAction(OnStartGame__startGameTrigger, (function ResourcesTeamMultiboardGui__StartGame)) // INLINED!!
 endfunction
 
 
@@ -6064,14 +6066,14 @@ endfunction
 
 
 function SetResourceLowValue takes integer resource,integer lowValue returns nothing
-    set ResourcesWarnings___resourceLowValue[resource]=lowValue
+    set ResourcesWarnings__resourceLowValue[resource]=lowValue
 endfunction
 
 function GetResourceLowValue takes integer resource returns integer
-    return ResourcesWarnings___resourceLowValue[resource]
+    return ResourcesWarnings__resourceLowValue[resource]
 endfunction
 
-function ResourcesWarnings___GetAlliesWithSharedControl takes player owner returns force
+function ResourcesWarnings__GetAlliesWithSharedControl takes player owner returns force
     local force allies= CreateForce()
     local player slotPlayer= null
     local integer i= 0
@@ -6088,8 +6090,8 @@ function ResourcesWarnings___GetAlliesWithSharedControl takes player owner retur
     return allies
 endfunction
 
-function ResourcesWarnings___StartSoundForAllies takes player whichPlayer,sound whichSound returns nothing
-    local force allies= ResourcesWarnings___GetAlliesWithSharedControl(whichPlayer)
+function ResourcesWarnings__StartSoundForAllies takes player whichPlayer,sound whichSound returns nothing
+    local force allies= ResourcesWarnings__GetAlliesWithSharedControl(whichPlayer)
     if ( IsPlayerInForce(GetLocalPlayer(), allies) ) then
         call StartSound(whichSound)
     endif
@@ -6098,8 +6100,8 @@ function ResourcesWarnings___StartSoundForAllies takes player whichPlayer,sound 
     set allies=null
 endfunction
 
-function ResourcesWarnings___SimErrorForAllies takes player whichPlayer,string msg returns nothing
-    local force allies= ResourcesWarnings___GetAlliesWithSharedControl(whichPlayer)
+function ResourcesWarnings__SimErrorForAllies takes player whichPlayer,string msg returns nothing
+    local force allies= ResourcesWarnings__GetAlliesWithSharedControl(whichPlayer)
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
@@ -6113,8 +6115,8 @@ function ResourcesWarnings___SimErrorForAllies takes player whichPlayer,string m
     set allies=null
 endfunction
 
-function ResourcesWarnings___PingMinimapForAllies takes player whichPlayer,real x,real y returns nothing
-    local force allies= ResourcesWarnings___GetAlliesWithSharedControl(whichPlayer)
+function ResourcesWarnings__PingMinimapForAllies takes player whichPlayer,real x,real y returns nothing
+    local force allies= ResourcesWarnings__GetAlliesWithSharedControl(whichPlayer)
     if ( IsPlayerInForce(GetLocalPlayer(), allies) ) then
         call PingMinimapEx(x, y, 4.0, 255, 255, 22, false)
     endif
@@ -6124,90 +6126,90 @@ function ResourcesWarnings___PingMinimapForAllies takes player whichPlayer,real 
 endfunction
 
 function SetLowResourcesSound takes player whichPlayer,integer resource,sound whichSound returns nothing
-    set ResourcesWarnings___playerSoundLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
+    set ResourcesWarnings__playerSoundLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
 endfunction
 
 function GetLowResourcesSound takes player whichPlayer,integer resource returns sound
-    return ResourcesWarnings___playerSoundLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesWarnings__playerSoundLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function SetLowResourcesSoundForAllPlayers takes integer resource,sound whichSound returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesWarnings___playerSoundLow[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
+        set ResourcesWarnings__playerSoundLow[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
         set i=i + 1
     endloop
 endfunction
 
 function SetLowResourcesMessage takes player whichPlayer,integer resource,string message returns nothing
-    set ResourcesWarnings___playerMessageLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=message
+    set ResourcesWarnings__playerMessageLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=message
 endfunction
 
 function GetLowResourcesMessage takes player whichPlayer,integer resource returns string
-    return ResourcesWarnings___playerMessageLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesWarnings__playerMessageLow[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function SetLowResourcesMessageForAllPlayers takes integer resource,string message returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesWarnings___playerMessageLow[Index2D(resource , i , bj_MAX_PLAYERS)]=message
+        set ResourcesWarnings__playerMessageLow[Index2D(resource , i , bj_MAX_PLAYERS)]=message
         set i=i + 1
     endloop
 endfunction
 
 function SetCollapsedesourcesSound takes player whichPlayer,integer resource,sound whichSound returns nothing
-    set ResourcesWarnings___playerSoundCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
+    set ResourcesWarnings__playerSoundCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=whichSound
 endfunction
 
 function GetCollapsedResourcesSound takes player whichPlayer,integer resource returns sound
-    return ResourcesWarnings___playerSoundCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesWarnings__playerSoundCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function SetCollapsedResourcesSoundForAllPlayers takes integer resource,sound whichSound returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesWarnings___playerSoundCollapsed[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
+        set ResourcesWarnings__playerSoundCollapsed[Index2D(resource , i , bj_MAX_PLAYERS)]=whichSound
         set i=i + 1
     endloop
 endfunction
 
 function SetCollapsedResourcesMessage takes player whichPlayer,integer resource,string message returns nothing
-    set ResourcesWarnings___playerMessageCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=message
+    set ResourcesWarnings__playerMessageCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]=message
 endfunction
 
 function GetCollapsedResourcesMessage takes player whichPlayer,integer resource returns string
-    return ResourcesWarnings___playerMessageCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
+    return ResourcesWarnings__playerMessageCollapsed[Index2D(resource , GetPlayerId(whichPlayer) , bj_MAX_PLAYERS)]
 endfunction
 
 function SetCollapsedResourcesMessageForAllPlayers takes integer resource,string message returns nothing
     local integer i= 0
     loop
         exitwhen ( i == bj_MAX_PLAYERS )
-        set ResourcesWarnings___playerMessageCollapsed[Index2D(resource , i , bj_MAX_PLAYERS)]=message
+        set ResourcesWarnings__playerMessageCollapsed[Index2D(resource , i , bj_MAX_PLAYERS)]=message
         set i=i + 1
     endloop
 endfunction
 
-function ResourcesWarnings___TriggerConditionGather takes nothing returns boolean
-    local integer resource= (Resources___triggerResource) // INLINED!!
-    local unit mine= (Resources___triggerMine) // INLINED!!
-    local unit worker= (Resources___triggerWorker) // INLINED!!
+function ResourcesWarnings__TriggerConditionGather takes nothing returns boolean
+    local integer resource= (Resources__triggerResource) // INLINED!!
+    local unit mine= (Resources__triggerMine) // INLINED!!
+    local unit worker= (Resources__triggerWorker) // INLINED!!
     local player owner= GetOwningPlayer(worker)
-    if ( GetLowResourcesSound(owner , resource) != null and (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) <= (ResourcesWarnings___resourceLowValue[(resource)]) and (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) + resource > (ResourcesWarnings___resourceLowValue[(resource)]) ) then // INLINED!!
-        call ResourcesWarnings___StartSoundForAllies(owner , GetLowResourcesSound(GetOwningPlayer((Resources___triggerWorker)) , resource)) // INLINED!!
-        call ResourcesWarnings___PingMinimapForAllies(owner , GetUnitX(mine) , GetUnitY(mine))
+    if ( GetLowResourcesSound(owner , resource) != null and (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) <= (ResourcesWarnings__resourceLowValue[(resource)]) and (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) + resource > (ResourcesWarnings__resourceLowValue[(resource)]) ) then // INLINED!!
+        call ResourcesWarnings__StartSoundForAllies(owner , GetLowResourcesSound(GetOwningPlayer((Resources__triggerWorker)) , resource)) // INLINED!!
+        call ResourcesWarnings__PingMinimapForAllies(owner , GetUnitX(mine) , GetUnitY(mine))
         if ( GetLowResourcesMessage(owner , resource) != null and GetLowResourcesMessage(owner , resource) != "" ) then
-            call ResourcesWarnings___SimErrorForAllies(owner , GetLowResourcesMessage(owner , resource))
+            call ResourcesWarnings__SimErrorForAllies(owner , GetLowResourcesMessage(owner , resource))
         endif
     endif
-    if ( GetCollapsedResourcesSound(owner , resource) != null and (LoadInteger(Resources___h, GetHandleId((mine )), Index2D(( resource) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) <= 0 ) then // INLINED!!
-        call ResourcesWarnings___StartSoundForAllies(owner , GetCollapsedResourcesSound(owner , resource))
-        call ResourcesWarnings___PingMinimapForAllies(owner , GetUnitX(mine) , GetUnitY(mine))
+    if ( GetCollapsedResourcesSound(owner , resource) != null and (LoadInteger(Resources__h, GetHandleId((mine )), Index2D(( resource) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) <= 0 ) then // INLINED!!
+        call ResourcesWarnings__StartSoundForAllies(owner , GetCollapsedResourcesSound(owner , resource))
+        call ResourcesWarnings__PingMinimapForAllies(owner , GetUnitX(mine) , GetUnitY(mine))
         if ( GetCollapsedResourcesMessage(owner , resource) != null and GetCollapsedResourcesMessage(owner , resource) != "" ) then
-            call ResourcesWarnings___SimErrorForAllies(owner , GetCollapsedResourcesMessage(owner , resource))
+            call ResourcesWarnings__SimErrorForAllies(owner , GetCollapsedResourcesMessage(owner , resource))
         endif
     endif
     set mine=null
@@ -6217,9 +6219,9 @@ function ResourcesWarnings___TriggerConditionGather takes nothing returns boolea
     return false
 endfunction
 
-function ResourcesWarnings___Init takes nothing returns nothing
-    call TriggerRegisterGatherEvent(ResourcesWarnings___gatherTrigger)
-    call TriggerAddCondition(ResourcesWarnings___gatherTrigger, Condition(function ResourcesWarnings___TriggerConditionGather))
+function ResourcesWarnings__Init takes nothing returns nothing
+    call TriggerRegisterGatherEvent(ResourcesWarnings__gatherTrigger)
+    call TriggerAddCondition(ResourcesWarnings__gatherTrigger, Condition(function ResourcesWarnings__TriggerConditionGather))
 endfunction
 
 
@@ -6296,22 +6298,22 @@ endfunction
 
 function RecreateOilPatchFromPlatform takes unit platform returns nothing
     local unit mine= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'u000', GetUnitX(platform), GetUnitY(platform), bj_UNIT_FACING)
-    call SetResourceAmount(mine, (LoadInteger(Resources___h, GetHandleId((platform )), Index2D(( Oil) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))) // INLINED!!
+    call SetResourceAmount(mine, (LoadInteger(Resources__h, GetHandleId((platform )), Index2D(( Oil) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))) // INLINED!!
 endfunction
 
 function RecreateRockMineFromShaft takes unit shaft returns nothing
     local unit mine= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'n001', GetUnitX(shaft), GetUnitY(shaft), bj_UNIT_FACING)
-    call AddMineEx(mine , Rock , (LoadInteger(Resources___h, GetHandleId((shaft )), Index2D(( Rock) , Resources___KEY_RESOURCE , Resources___KEY_MAX)))) // INLINED!!
+    call AddMineEx(mine , Rock , (LoadInteger(Resources__h, GetHandleId((shaft )), Index2D(( Rock) , Resources__KEY_RESOURCE , Resources__KEY_MAX)))) // INLINED!!
 endfunction
 
 // death event before resources are lost
 function TriggerConditionDeath takes nothing returns boolean
-    if ( GetUnitTypeId((Resources___triggerDyingResourceUnit)) == 'o002' and (LoadInteger(Resources___h, GetHandleId(((Resources___triggerDyingResourceUnit) )), Index2D(( Oil) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
-        call RecreateOilPatchFromPlatform((Resources___triggerDyingResourceUnit)) // INLINED!!
+    if ( GetUnitTypeId((Resources__triggerDyingResourceUnit)) == 'o002' and (LoadInteger(Resources__h, GetHandleId(((Resources__triggerDyingResourceUnit) )), Index2D(( Oil) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
+        call RecreateOilPatchFromPlatform((Resources__triggerDyingResourceUnit)) // INLINED!!
     endif
     
-    if ( GetUnitTypeId((Resources___triggerDyingResourceUnit)) == 'e000' and (LoadInteger(Resources___h, GetHandleId(((Resources___triggerDyingResourceUnit) )), Index2D(( Rock) , Resources___KEY_RESOURCE , Resources___KEY_MAX))) > 0 ) then // INLINED!!
-        call RecreateRockMineFromShaft((Resources___triggerDyingResourceUnit)) // INLINED!!
+    if ( GetUnitTypeId((Resources__triggerDyingResourceUnit)) == 'e000' and (LoadInteger(Resources__h, GetHandleId(((Resources__triggerDyingResourceUnit) )), Index2D(( Rock) , Resources__KEY_RESOURCE , Resources__KEY_MAX))) > 0 ) then // INLINED!!
+        call RecreateRockMineFromShaft((Resources__triggerDyingResourceUnit)) // INLINED!!
     endif
     
     return false
@@ -6354,21 +6356,21 @@ function InitResources takes nothing returns nothing
     
     // warnings
     call SetNotEnoughResourcesSoundForAllPlayers(Oil , gg_snd_GruntNoOil1)
-    set ResourcesWarnings___resourceLowValue[(Oil )]=( 1500) // INLINED!!
+    set ResourcesWarnings__resourceLowValue[(Oil )]=( 1500) // INLINED!!
     call SetLowResourcesSoundForAllPlayers(Oil , gg_snd_GruntOilPlatformLow1)
     call SetLowResourcesMessageForAllPlayers(Oil , GetLocalizedString("LOW_OIL"))
     call SetCollapsedResourcesSoundForAllPlayers(Oil , gg_snd_GruntOilPlatformCollapsed1)
     call SetCollapsedResourcesMessageForAllPlayers(Oil , GetLocalizedString("COLLAPESD_OIL"))
     
     call SetNotEnoughResourcesSoundForAllPlayers(Rock , gg_snd_GruntNoRock1)
-    set ResourcesWarnings___resourceLowValue[(Rock )]=( 1500) // INLINED!!
+    set ResourcesWarnings__resourceLowValue[(Rock )]=( 1500) // INLINED!!
     call SetLowResourcesSoundForAllPlayers(Rock , gg_snd_GruntRockMineLow1)
     call SetLowResourcesMessageForAllPlayers(Rock , GetLocalizedString("LOW_ROCK"))
     call SetCollapsedResourcesSoundForAllPlayers(Rock , gg_snd_GruntRockMineCollapsed1)
     call SetCollapsedResourcesMessageForAllPlayers(Rock , GetLocalizedString("COLLAPSED_ROCK"))
     
     call SetNotEnoughResourcesSoundForAllPlayers(Wheat , gg_snd_GruntNoWheat1)
-    set ResourcesWarnings___resourceLowValue[(Wheat )]=( 1500) // INLINED!!
+    set ResourcesWarnings__resourceLowValue[(Wheat )]=( 1500) // INLINED!!
     call SetLowResourcesSoundForAllPlayers(Wheat , gg_snd_GruntWheatFieldLow1)
     call SetLowResourcesMessageForAllPlayers(Wheat , GetLocalizedString("LOW_WHEAT"))
     call SetCollapsedResourcesSoundForAllPlayers(Wheat , gg_snd_GruntWheatFieldCollapsed1)
@@ -6495,7 +6497,7 @@ function AddDrillbot takes unit worker returns nothing
 endfunction
 
 function AddTownHall takes unit whichUnit returns nothing
-    call GroupAddUnit(Resources___returnBuildings, (whichUnit)) // INLINED!!
+    call GroupAddUnit(Resources__returnBuildings, (whichUnit)) // INLINED!!
     call SetUnitReturnResource((whichUnit ) , ( Oil) , true) // INLINED!!
     call SetUnitReturnResource((whichUnit ) , ( Rock) , true) // INLINED!!
     call SetUnitReturnResource((whichUnit ) , ( Wheat) , true) // INLINED!!
@@ -8056,18 +8058,18 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs245401250")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("OnStartGame___Init")
-call ExecuteFunc("SimError___init")
-call ExecuteFunc("PlayerColorUtils___Init")
-call ExecuteFunc("Resources___Init")
-call ExecuteFunc("ResourcesChatCommands___Init")
-call ExecuteFunc("ResourcesCosts___Init")
-call ExecuteFunc("ResourcesGui___Init")
+call ExecuteFunc("jasshelper__initstructs407992406")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("OnStartGame__Init")
+call ExecuteFunc("SimError__init")
+call ExecuteFunc("PlayerColorUtils__Init")
+call ExecuteFunc("Resources__Init")
+call ExecuteFunc("ResourcesChatCommands__Init")
+call ExecuteFunc("ResourcesCosts__Init")
+call ExecuteFunc("ResourcesGui__Init")
 call ExecuteFunc("ResourcesLoadedMines___Init")
-call ExecuteFunc("ResourcesTeamMultiboardGui___Init")
-call ExecuteFunc("ResourcesWarnings___Init")
+call ExecuteFunc("ResourcesTeamMultiboardGui__Init")
+call ExecuteFunc("ResourcesWarnings__Init")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -8108,24 +8110,24 @@ function sa__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrect
         call DestroyTimer(GetExpiredTimer())
    return true
 endfunction
-function sa___prototype51_Resources___RemoveUnitHook takes nothing returns boolean
-    call Resources___RemoveUnitHook(f__arg_unit1)
+function sa___prototype51_Resources__RemoveUnitHook takes nothing returns boolean
+    call Resources__RemoveUnitHook(f__arg_unit1)
     return true
 endfunction
-function sa___prototype51_ResourcesGui___RemoveUnitHook takes nothing returns boolean
-    call ResourcesGui___RemoveUnitHook(f__arg_unit1)
+function sa___prototype51_ResourcesGui__RemoveUnitHook takes nothing returns boolean
+    call ResourcesGui__RemoveUnitHook(f__arg_unit1)
     return true
 endfunction
 
-function jasshelper__initstructs245401250 takes nothing returns nothing
+function jasshelper__initstructs407992406 takes nothing returns nothing
     set st__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer=CreateTrigger()
     call TriggerAddCondition(st__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer,Condition( function sa__UnitEventEx___UnitEventEx_UnitEventEx___UnitEventExCore___resurrectionTimer))
     set st___prototype51[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype51[1],function sa___prototype51_Resources___RemoveUnitHook)
-    call TriggerAddCondition(st___prototype51[1],Condition(function sa___prototype51_Resources___RemoveUnitHook))
+    call TriggerAddAction(st___prototype51[1],function sa___prototype51_Resources__RemoveUnitHook)
+    call TriggerAddCondition(st___prototype51[1],Condition(function sa___prototype51_Resources__RemoveUnitHook))
     set st___prototype51[2]=CreateTrigger()
-    call TriggerAddAction(st___prototype51[2],function sa___prototype51_ResourcesGui___RemoveUnitHook)
-    call TriggerAddCondition(st___prototype51[2],Condition(function sa___prototype51_ResourcesGui___RemoveUnitHook))
+    call TriggerAddAction(st___prototype51[2],function sa___prototype51_ResourcesGui__RemoveUnitHook)
+    call TriggerAddCondition(st___prototype51[2],Condition(function sa___prototype51_ResourcesGui__RemoveUnitHook))
 
 call ExecuteFunc("s__RegisterNativeEvent___NativeEvent_RegisterNativeEvent___NativeEventInit___onInit")
 
