@@ -180,7 +180,8 @@ Sometimes versions of this map might lead to crashing but since it is really har
 
 ## Know Reasons for Desyncs
 
-* Using trigger conditions instead of trigger actions for triggers with events `EVENT_PLAYER_UNIT_SELECTED` and `EVENT_PLAYER_UNIT_DESELECTED` will lead to weird desync bugs and unselecting selected units. `SyncSelections` causes delays and cannot be used in trigger conditions. Calling it often will lead to massive delays in multiplayer games.
+* Using trigger conditions instead of trigger actions for triggers with events `EVENT_PLAYER_UNIT_SELECTED` and `EVENT_PLAYER_UNIT_DESELECTED` will lead to weird desync bugs and unselecting selected units. 
+* `SyncSelections` causes delays and cannot be used in trigger conditions. Calling it often will lead to massive delays in multiplayer games. Avoid using it as well as `EnumUnitsSelected` and `GetUnitsSelectedAll`.
 * Hooks inside `GetLocalPlayer` blocks might lead to desyncs. Be careful with any hooks and make sure only certain natives are inside those blocks.
 
 ## Analyzing Crashes and Desyncs
