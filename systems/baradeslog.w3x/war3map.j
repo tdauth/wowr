@@ -81,6 +81,8 @@ trigger LogUI__clickUpperButtonTrigger= null
 trigger LogUI__upperButtonHotkeyTrigger= null
 trigger LogUI__chatCommandTrigger= CreateTrigger()
 trigger LogUI__logTrigger= CreateTrigger()
+    
+sound LogUI__logSound= CreateSound("Sound\\Interface\\BigButtonClick", false, false, true, 12700, 12700, "")
 //endglobals from LogUI
     // Generated
 trigger gg_trg_Initialization= null
@@ -1330,7 +1332,7 @@ function LogUI__ClickUpperButtonFunction takes nothing returns nothing
     call ForceUIKeyBJ(GetTriggerPlayer(), "F12")
     call ShowLogUIForPlayer(GetTriggerPlayer())
     if ( GetTriggerPlayer() == GetLocalPlayer() ) then
-        call PlaySound("Sound\\Interface\\BigButtonClick")
+        call StartSound(LogUI__logSound)
     endif
 endfunction
 
@@ -1720,7 +1722,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs6659031")
+call ExecuteFunc("jasshelper__initstructs413780859")
 call ExecuteFunc("FrameLoader__init_function")
 call ExecuteFunc("OnStartGame__Init")
 call ExecuteFunc("PlayerColorUtils__Init")
@@ -1843,7 +1845,7 @@ function sa___prototype52_Log__SetCinematicSceneBJHook takes nothing returns boo
     return true
 endfunction
 
-function jasshelper__initstructs6659031 takes nothing returns nothing
+function jasshelper__initstructs413780859 takes nothing returns nothing
     set st___prototype42[1]=CreateTrigger()
     call TriggerAddAction(st___prototype42[1],function sa___prototype42_Log__DisplayTextToPlayerHook)
     call TriggerAddCondition(st___prototype42[1],Condition(function sa___prototype42_Log__DisplayTextToPlayerHook))
