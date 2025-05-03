@@ -3170,7 +3170,7 @@ function UpdateWorkers takes nothing returns nothing
             set c = GetLastCommand()
             if (c == COMMAND_ATTACK_PLAYERS_ON) then
                 set attack_enemy_players = true
-                call NotifyOtherPlayers("I will attack enemy players from now on!")
+                call NotifyOtherPlayers(GetLocalizedString("I_WILL_ATTACK_WITH_SHIPS"))
             elseif (c == COMMAND_ATTACK_PLAYERS_OFF) then
                 set attack_enemy_players = false
                 call NotifyOtherPlayers("I won't attack enemy players anymore!")
