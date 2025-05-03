@@ -1140,6 +1140,8 @@ StringList {
     WHO_DARES_TO_DEFILE                "Wer ist so dreist und entweiht dies alte Land?",
     TREMBLE_MORTALS_AND_DESPAIR        "Erzittert, Sterbliche und verzweifelt! Diese Welt ist dem Untergang geweiht!",
     // Hero Journey
+    HERO_JOURNEY_X_MESSAGE             "|cff00ff00STUFE %1%:|r %2%",
+    HERO_JOURNEY_X_QUEST_ITEM          "%1%: %2%",
     HERO_JOURNEY_5                     "5: Fähigkeiten auf Theramore verfügbar.",
     HERO_JOURNEY_10                    "10: -",
     HERO_JOURNEY_15                    "15: Eine Ausrüstungsstasche.",
@@ -1169,6 +1171,7 @@ StringList {
     HOSTILE_BUILDINGS_NEARBY           "Kann nicht mit feindlichen Gebäuden in der Nähe errichtet werden.",
     // Computer
     MY_NAVY_WILL_ATTACK_X              "Meine Flotte wird %1% angreifen!",
+    I_WILL_ATTACK_WITH_SHIPS           "Ich werde von nun an feindliche Spieler angreifen!",
     // Trading Post
     ENABLED_GOLD_AUTO_EXCHANGE         "Automatischen Goldtausch aktiviert.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Automatischen Goldtausch deaktiviert.",
