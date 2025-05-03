@@ -1115,6 +1115,15 @@ StringList {
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
     // Player Selection
     NOT_ALLOWED_IN_PLAYER_SELECTION    "Not allowed in player selection.",
+    HYPHEN_FIRST_RACE                  "- First Race",
+    HYPHEN_SECOND_RACE                 "- Second Race",
+    HYPHEN_THIRD_RACE                  "- Third Race",
+    HYPHEN_FIRST_PROFESSION            "- First Profession",
+    HYPHEN_SECOND_PROFESSION           "- Second Profession",
+    HYPHEN_THIRD_PROFESSION            "- Third Profession",
+    HYPHEN_FIRST_HERO                  "- First Hero",
+    HYPHEN_SECOND_HERO                 "- Second Hero",
+    HYPHEN_THIRD_HERO                  "- Third Hero",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Area is protected by an Antimagic Ward.",
     // Alliance with the Burning Legion
