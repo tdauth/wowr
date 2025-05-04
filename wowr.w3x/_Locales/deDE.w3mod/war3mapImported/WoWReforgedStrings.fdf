@@ -1049,7 +1049,6 @@ StringList {
     SAVE_CODE_SLOT_BUILDING_INVALID    "%1% - Ungültiges Gebäude mit ID %2%",
     // Save Codes All
     AT_LEAST_ONE_ALOAD                 "Laden Sie zumindest ein,alig alle Speicher-Codes mit '-aload' bevor Sie sie erneut speichern oder benutzen Sie '-areset', um Ihren automatischen Speicher-Code zu überschreiben.",
-    YOU_CAN_LOAD_HEROES_IN_X           "Sie können einen weiteren Speicher-Code für Helden in folgender Zeit laden: %1%.",
     LOADED_SAVE_CODES                  "Speicher-Codes geladen.",
     MISSING_SAVE_CODE_WITH_LOAD        "Speicher-Code mit with '-load' in Datei %1% fehlt.",
     LOADED_ITEM_SAVE_CODES             "Gegenstands-Speicher-Codes geladen.",
@@ -1057,10 +1056,8 @@ StringList {
     LOADED_BUILDING_SAVE_CODES         "Gebäude-Speicher-Codes geladen.",
     LOADED_RESEARCH_SAVE_CODES         "Forschungs-Speicer-Codes geladen.",
     LOADED_RESOURCES_SAVE_CODES        "Rohstoff-Speicher-Codes geladen.",
-    YOU_CAN_LOAD_RESOURCES_IN_X        "Sie können einen weiteren Speicher-Code für Rohstoffe in %1% laden.",
     MISSING_SAVE_CODE_WITH_LOADRES     "Speicher-Code mit '-loadres' fehlt in Datei: %1%",
     LOADED_CLAN_SAVE_CODES             "Clan-Speicher-Codes geladen.",
-    YOU_CAN_LOAD_CLANS_IN_X            "Sie können einen weiteren Speicher-Code für Ihren Clan in %1% laden.",
     MISSING_SAVE_CODE_WITH_LOADC       "Speicher-Code für '-loadc' fehlt in Datei %1%.",
     LOADING_YOUR_CHARACTER_FROM_FILE   "Ihr Charakter wird aus Datei %1% geladen.",
     MISSING_HEROES_SAVE_CODE_FILE      "Helden-Speicher-Code-Datei fehlt.",
@@ -1115,6 +1112,15 @@ StringList {
     HIDEOUTS_ARE_RESTRUCTED            "Verstecke sind auf Freiberufler beschränkt.",
     // Player Selection
     NOT_ALLOWED_IN_PLAYER_SELECTION    "In Spielerauswahl nicht erlaubt.",
+    HYPHEN_FIRST_RACE                  "- Erstes Volk",
+    HYPHEN_SECOND_RACE                 "- Zweites Volk",
+    HYPHEN_THIRD_RACE                  "- Drittes Volk",
+    HYPHEN_FIRST_PROFESSION            "- Erster Beruf",
+    HYPHEN_SECOND_PROFESSION           "- Zweiter Beruf",
+    HYPHEN_THIRD_PROFESSION            "- Dritter Beruf",
+    HYPHEN_FIRST_HERO                  "- Erster Held",
+    HYPHEN_SECOND_HERO                 "- Zweiter Held",
+    HYPHEN_THIRD_HERO                  "- Dritter Held",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt.",
     // Alliance with the Burning Legion
@@ -1183,12 +1189,10 @@ StringList {
     FREELANCER                         "Freiberufler",
     WARLORD                            "Kriegsherr",
     PLAYER_INFOS                       "%1% (%2%%3%%4%):|n- XP-Rate: %5% %|n- Helden: %6% (%7%)/%8% (%9%)/%10% (%11%)|n- Völker: %12%/%13%/%14%|n- Berufe: %15%/%16%/%17%|n- G: %18%/L: %19%/F: %20%/%21%|n- Evolution: %22%|n- HK %23%/UK %24%/R %25%/BK %26%/%27%",
-    COOLDOWNS_INFOS                    "Abklingzeiten:|n- Neuwahl: %1%|n- Neuwahl Volk 1: %2%|n- Neuwahl Volk 2: %3%|n- Neuwahl Beruf 1: %4%|n- Neuwahl Beruf 2: %5%|n- Helden-Speicher-Code: %6%|n- Rohstoff-Speicher-Code: %7%",
     PLAYER_SELECTION_SETTINGS          "- Modus: %1%|n- Helden: %2%/%3%/%4%|n- Völker: %5%/%6%/%7%|n- Berufe: %8%/%9%/%10%|n- Startort: %11%",
     // Repick
     NO_REPICK_WITH_ILLIDAN             "Sie können nicht neu auswählen während Sie Illidan kontrollieren.",
     NO_REPICK_WITH_ENEMIES             "Sie können nicht neuwählen, wenn sich Gegner in einer gewissen Reichweite befinden.",
-    NEXT_REPICK_IS_ALLOWED_IN_X        "Die nächste Neuauswahl ist in %1% erlaubt.",
     NO_REPICK_IN_HARDCORE              "Sie können im Spieltyp |cffff0000HARDCORE|r nicht neuwählen.",
     NO_HERO_X                          "Sie haben keinen Helden %1%.",
     HERO_2_REQUIREMENT                 "Ihre Heldenstufe muss 45 oder höher sein.",
