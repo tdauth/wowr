@@ -876,7 +876,7 @@ StringList {
     EVENT_ENDING                       "Event ending %1%",
     CALENDAR_EVENT_START               "Calendar event starting: %s%",
     CALENDAR_DATE_SHORT                "%1%-%2%-%3%",
-    CALENDAR_TIME_TEXT                 "%s|nMonth: %2%|nSeason: %3%|nTime of Day: %4%|nTotal passed time: %5%|nWeather Report: Rain/Snow/Storm in %5% and thunder/lightning in %6%",
+    CALENDAR_TIME_TEXT                 "%1%|nMonth: %2%|nSeason: %3%|nTime of Day: %4%|nTotal passed time: %5%|nWeather Report: Rain/Snow/Storm in %6% and thunder/lightning in %7%",
     HAPPY_NEW_YEAR                     "Happy new year for the year %1%!",
     WEATHER_RUNNING                    "Snowfall/Storm/Rain with thunder in %1% ending in %2%.",
     WEATHER_PREDICTION                 "Next Snowfall/Storm/Rain in %1%.",
