@@ -4135,8 +4135,7 @@ globals
     constant integer GOBLIN_ALTAR                                    = 'o00T' // altar
     constant integer GOBLIN_HEAVY_TANK                               = 'o01G' // special building
     constant integer GOBLIN_SHIPYARD                                 = 'o01B'
-    constant integer GOBLIN_TUNNEL_WAYGATE                           = 'o018'
-    constant integer GOBLIN_TUNNEL                                   = 'o00P'
+    constant integer GOBLIN_TUNNEL                                   = 'o00P' // sacrifical pit - like Nerubian tunnel
 
     constant integer GOBLIN_LABORER                                  = 'h02L' // worker
     constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
