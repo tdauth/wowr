@@ -1189,7 +1189,7 @@ StringList {
     FREELANCER                         "Freiberufler",
     WARLORD                            "Kriegsherr",
     PLAYER_INFOS                       "%1% (%2%%3%%4%):|n- XP-Rate: %5% %|n- Helden: %6% (%7%)/%8% (%9%)/%10% (%11%)|n- Völker: %12%/%13%/%14%|n- Berufe: %15%/%16%/%17%|n- G: %18%/L: %19%/F: %20%/%21%|n- Evolution: %22%|n- HK %23%/UK %24%/R %25%/BK %26%/%27%",
-    PLAYER_SELECTION_SETTINGS          "- Modus: %1%|n- Helden: %2%/%3%/%4%|n- Völker: %5%/%6%/%7%|n- Berufe: %8%/%9%/%10%|n- Startort: %11%",
+    PLAYER_SELECTION_SETTINGS          "Benutzen Sie -random und -start oder -rs|n- Modus: %1%|n- Helden: %2%/%3%/%4%|n- Völker: %5%/%6%/%7%|n- Berufe: %8%/%9%/%10%|n- Startort: %11%",
     // Repick
     NO_REPICK_WITH_ILLIDAN             "Sie können nicht neu auswählen während Sie Illidan kontrollieren.",
     NO_REPICK_WITH_ENEMIES             "Sie können nicht neuwählen, wenn sich Gegner in einer gewissen Reichweite befinden.",
