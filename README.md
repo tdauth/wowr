@@ -234,7 +234,6 @@ Here is a list of some modified versions online:
 * Kricz: [Knockback v1.01b](https://www.hiveworkshop.com/threads/knockback-v1-01b.174502/)
 * Maker: [Jump System v. 1.0.1.6](https://www.hiveworkshop.com/threads/jump-system-v-1-0-1-6.230294/)
 * chopinski: [New Bonus](https://www.hiveworkshop.com/threads/new-bonus-vjass-lua.324058/)
-* PurgeandFire: [Libram v3.0.0.0](https://www.hiveworkshop.com/threads/libram-v3-0-0-0.193521/)
 * Dangerb0y: [Easy Item Stack 'n Split v2.7.4](https://www.hiveworkshop.com/threads/easy-item-stack-n-split-v2-7-4.153287/) as reference for the unstack and pickup item systems.
 * MeKC: [GetItemValue](https://www.hiveworkshop.com/threads/detecting-item-price.120355/#post-1045229) as reference for item gold and lumber value system.
 * Spellbound: [UnitEventEx](https://www.hiveworkshop.com/threads/uniteventex.306289/)
