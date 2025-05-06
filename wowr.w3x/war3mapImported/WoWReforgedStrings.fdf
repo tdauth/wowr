@@ -40,6 +40,12 @@ StringList {
     UNABLE_TO_WATER_GROUND_HERE        "Unable to water the ground here.",
     OWNER_X_IS_NOT_ALLOWED             "Owner %1% is not allowed.",
     UNIT_IS_NO_HERO                    "Unit is not a hero.",
+    // -playercolor, -playername
+    X_CHANGED_COLOR_FOR_PLAYER_Y       "%1% changed color for player %2%.",
+    X_CHANGED_NAME_FOR_PLAYER_Y        "%1% changed name for player %2%.",
+    INVALID_PLAYER_COLOR_X             "Invalid player color %1%.",
+    ONLY_MAX_HERO_LEVEL_VIP_COMPUTER   "Only possible at maximum hero level or for VIP or for Computer players.",
+    INVALID_TARGET_PLAYER              "Invalid target player.",
     // Learnable Skills Shop
     SLOT_X                             "Slot %1%",
     WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
@@ -899,6 +905,8 @@ StringList {
     VIP_WELCOME                        "Welcome %1%! You are an official VIP member of this map.",
     VIP_WELCOME_ALL                    "Welcome the VIPS: %1%!",
     ONLY_VIPS_CAN_LOAD_SAVE_GAMES      "Only VIPs can load save games.",
+    ONLY_ALLOWED_FOR_VIPS              "Only allowed for VIPs.",
+    X_HAS_RESET_USED_SAVE_CODES        "%1% has reset all used save codes.",
     // Stats
     STATS_TITLE                        "%1% %2% (%3%/%4%)",
     SINGLEPLAYER                       "Singleplayer",
