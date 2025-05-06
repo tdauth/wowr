@@ -5967,7 +5967,7 @@ globals
     constant integer SUBMERGED_NAGA_ROYAL_GUARD_HERO                 = 'N0MR'
     constant integer NAGA_SIREN_HERO                                 = 'N0NC'
     constant integer LADY_VASHJ                                      = 'H02B'
-    constant integer SUBMERGED_LADY_VASHJ                            = 'H05Y'
+    constant integer SUBMERGED_LADY_VASHJ                            = 'H0Y5'
     // Gnome
     constant integer GNOME_ENGINEER_HERO                             = 'N0CS'
     constant integer GNOME_WARLOCK_HERO                              = 'O055'
