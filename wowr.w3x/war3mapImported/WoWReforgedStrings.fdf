@@ -1052,7 +1052,7 @@ StringList {
     YES_GREEN                          "|cffff0000Yes|r",
     NO_RED                             "|cff00ff00No|r",
     VALID_GREEN                        "|cff00ff00Valid|r",
-    INVALID_RED                        "|cff00ff00Valid|r",
+    INVALID_RED                        "|cffff0000Invalid|r",
     GENERATED_SAVE_CODES               "Generated (%1%):%2%",
     EMPTY_SAVECODE                     "Empty savecode!",
     LOWER_RESEARCH                     "Not loading research %1% since your current level is higher or equal!",
