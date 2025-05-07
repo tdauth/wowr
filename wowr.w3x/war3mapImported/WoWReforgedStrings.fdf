@@ -1167,7 +1167,7 @@ StringList {
     HERO_JOURNEY_X_MESSAGE             "|cff00ff00LEVEL %1%:|r %2%",
     HERO_JOURNEY_X_QUEST_ITEM          "%1%: %2%",
     HERO_JOURNEY_5                     "Abilities available on Theramore.",
-    HERO_JOURNEY_10                    "-",
+    HERO_JOURNEY_10                    "Properties.",
     HERO_JOURNEY_15                    "One Equipment Bag.",
     HERO_JOURNEY_20                    "Mount.",
     HERO_JOURNEY_25                    "Second profession.",
