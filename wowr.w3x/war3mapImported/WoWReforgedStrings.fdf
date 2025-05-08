@@ -904,7 +904,6 @@ StringList {
     // VIPs
     VIP_WELCOME                        "Welcome %1%! You are an official VIP member of this map.",
     VIP_WELCOME_ALL                    "Welcome the VIPS: %1%!",
-    ONLY_VIPS_CAN_LOAD_SAVE_GAMES      "Only VIPs can load save games.",
     ONLY_ALLOWED_FOR_VIPS              "Only allowed for VIPs.",
     X_HAS_RESET_USED_SAVE_CODES        "%1% has reset all used save codes.",
     // Stats

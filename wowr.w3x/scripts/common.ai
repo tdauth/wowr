@@ -1035,7 +1035,9 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == MURLOC_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(MURLOC_TIER_2,false,townid) + GetUnitCountEx(MURLOC_TIER_3,false,townid)
     elseif unitid == MURLOC_TIER_2 then
-        set have_qty = have_qty  + GetUnitCountEx(NERUBIAN_TIER_3,false,townid)
+        set have_qty = have_qty  + GetUnitCountEx(MURLOC_TIER_3,false,townid)
+    elseif unitid == MURLOC_DRAGON_TURTLE then
+        set have_qty = have_qty  + GetUnitCountEx(MURLOC_DRAGON_TURTLE_SIEGE_FORM,false,townid)
 
     elseif unitid == OGRE_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(OGRE_TIER_2,false,townid) + GetUnitCountEx(OGRE_TIER_3,false,townid)
