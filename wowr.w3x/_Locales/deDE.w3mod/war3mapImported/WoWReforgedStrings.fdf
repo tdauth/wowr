@@ -904,7 +904,6 @@ StringList {
     // VIPs
     VIP_WELCOME                        "Willkommen %1%! Sie sind offizielles VIP-Mitglied dieser Karte.",
     VIP_WELCOME_ALL                    "Heißen Sie die VIPS willkommen: %1%!",
-    ONLY_VIPS_CAN_LOAD_SAVE_GAMES      "Nur VIPs können Spielstände laden.",
     ONLY_ALLOWED_FOR_VIPS              "Nur für VIPs erlaubt.",
     X_HAS_RESET_USED_SAVE_CODES        "%1% hat alle verwendeten Speicher-Codes zurückgesetzt.",
     // Stats
