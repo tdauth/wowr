@@ -2641,6 +2641,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(BLADE_MASTER)
     call AddHero(FAR_SEER)
     call AddHero(WARLOCK)
+    call AddHero(STORMREAVER_WARLOCK)
     call AddHero(PEON_HERO)
     call AddHero(KODO_BEAST_HERO)
     call AddHero(RAIDER_HERO)

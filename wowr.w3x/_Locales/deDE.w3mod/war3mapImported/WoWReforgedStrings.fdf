@@ -253,6 +253,7 @@ StringList {
     BLADEMASTER                        "Klingenmeister",
     FAR_SEER                           "Scharfseher",
     WARLOCK                            "Hexenmeister",
+    STORMREAVER_WARLOCK                "Stormreaver Warlock",
     PEON                               "Peon",
     KODO_BEAST                         "Kodo-Bestie",
     RAIDER                             "Räuber",

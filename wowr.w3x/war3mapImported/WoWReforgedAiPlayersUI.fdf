@@ -87,6 +87,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "BLADEMASTER",     -2,
         MenuItem "FAR_SEER",     -2,
         MenuItem "WARLOCK",     -2,
+        MenuItem "STORMREAVER_WARLOCK",     -2,
         MenuItem "PEON",     -2,
         MenuItem "KODO_BEAST",     -2,
         MenuItem "RAIDER",     -2,

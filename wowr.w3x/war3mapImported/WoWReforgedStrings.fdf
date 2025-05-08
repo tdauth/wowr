@@ -253,6 +253,7 @@ StringList {
     BLADEMASTER                        "Blademaster",
     FAR_SEER                           "Far Seer",
     WARLOCK                            "Warlock",
+    STORMREAVER_WARLOCK                "Stormreaver Warlock",
     PEON                               "Peon",
     KODO_BEAST                         "Kodo Beast",
     RAIDER                             "Raider",
