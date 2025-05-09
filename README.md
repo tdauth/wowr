@@ -31,7 +31,7 @@ Send me your Battle.net ID on Discord after subscribing to get it unlocked with 
 * [Releases](https://github.com/tdauth/wowr/releases)
 * [Google Drive](https://drive.google.com/drive/u/1/folders/1ZQL_8YVCbYfe8r6juGQnfMPIfzaHLfcd)
 * [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/World%20of%20Warcraft%20Reforged)
-* [Official download on Epic War](https://www.epicwar.com/maps/343751/)
+* [Official download on Epic War](https://www.epicwar.com/maps/343915/)
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
 
