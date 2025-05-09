@@ -10,6 +10,7 @@ function BuildingStrategy takes nothing returns nothing
 
         call SetBuildUnit(2, EREDAR_HOUSING)
         call SetBuildUnit(1, EREDAR_FORGE)
+        call SetBuildUnit(1, EREDAR_ARGUNITE_MILL)
         call SetBuildUnit(3, EREDAR_PYLON)
         call SetBuildUnit(2, EREDAR_BARRACKS)
         call SetBuildUnit(1, EREDAR_ALTAR)
@@ -22,7 +23,6 @@ function BuildingStrategy takes nothing returns nothing
 
         // Tier 2 buildings
         call SetBuildUnit(1, EREDAR_TIER_2)
-        call SetBuildUnit(1, EREDAR_FORGE)
         call SetBuildUnit(1, EREDAR_MANARI_CRYSTAL)
         call SetBuildUnit(1, EREDAR_WORKSHOP)
         call SetBuildUnit(1, EREDAR_STABLES)
@@ -72,7 +72,7 @@ function BuildingStrategy takes nothing returns nothing
         call LoopActionWoWReforged()
 
         call StartExpansionTownHall(EREDAR_TIER_1)
-        call StartExpansionSimple(EREDAR_FORGE)
+        call StartExpansionSimple(EREDAR_ARGUNITE_MILL)
         call StartExpansionSimple(EREDAR_SPIRE)
 
         if (buildShips) then
