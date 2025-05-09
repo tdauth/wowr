@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make constants available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "4.2"
+    constant string MAP_VERSION                                      = "4.3"
     constant boolean MAP_DEBUG_MODE                                  = false // Disable for releases.
 
     constant integer PLAYER_RESCUABLE                                = 21
