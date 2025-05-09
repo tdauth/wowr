@@ -993,7 +993,7 @@ StringList {
     NEWS_LINE_7                        "- Use chat command '-dct/-damagecalculationtable' to show a damage calculation table.",
     NEWS_LINE_8                        "- Use chat command '-dp/-diplomacy' to change alliances for AI players.",
     NEWS_LINE_9                        "- Use chat command '-st/-settings' to show game settings.",
-    NEWS_LINE_10                       "- Save games work now but are only allowed for VIPs.",
+    NEWS_LINE_10                       "- Save games work now.",
     NEWS_LINE_11                       "- Removed game settings dialog in the beginning of the game.",
     NEWS_LINE_12                       "- Removed game types which makes old save codes invalid.",
     NEWS_LINE_13                       "- Multiple 75 level researches have been merged into Evolution.",
@@ -1273,6 +1273,8 @@ StringList {
     HARDCORE                           "Hardcore",
     NO_CHEATS                          "No Cheats",
     CHEATS                             "Cheats",
+    NO_PORTALS                         "No Portals",
+    PORTALS                            "Portals",
     // Tiles
     TILE_DIRT                          "Dirt",
     TILE_ROUGH_DIRT                    "Rough Dirt",
