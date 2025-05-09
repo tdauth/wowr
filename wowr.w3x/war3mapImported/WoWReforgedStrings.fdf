@@ -1267,6 +1267,8 @@ StringList {
     RED_WATER                          "Red Water",
     NO_FOG                             "No Fog",
     FOG                                "Fog",
+    NO_REVEAL                          "No Reveal",
+    REVEAL                             "Reveal",
     NO_HARDCORE                        "No Hardcore",
     HARDCORE                           "Hardcore",
     NO_CHEATS                          "No Cheats",
