@@ -3652,6 +3652,7 @@ globals
     constant integer ITEM_FREELANCER_TOWER                           = 'I0NB'
     constant integer ITEM_FREELANCER_ADVANCED_TOWER                  = 'I0NC'
     constant integer ITEM_FREELANCER_SHIPYARD                        = 'I0X3'
+    constant integer ITEM_FREELANCER_BOOK_OF_FAST_TRAVEL             = 'I0QG'
 
     constant integer FREELANCER_CITIZEN_MALE                         = NEUTRAL_CITIZEN
     constant integer FREELANCER_CITIZEN_FEMALE                       = NEUTRAL_CITIZEN_FEMALE
