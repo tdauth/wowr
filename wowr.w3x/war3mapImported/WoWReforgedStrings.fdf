@@ -1213,7 +1213,7 @@ StringList {
     // Player Infos
     FREELANCER                         "Freelancer",
     WARLORD                            "Warlord",
-    PLAYER_INFOS                       "%1% (%2%%3%%4%):|n- XP Rate: %5% %|n- Heroes: %6% (%7%)/%8% (%9%)/%10% (%11%)|n- Races: %12%/%13%/%14%|n- Professions: %15%/%16%/%17%|n- G: %18%/L: %19%/F: %20%/%21%|n- Evolution: %22%|n- HK %23%/UK %24%/R %25%/BK %26%/%27%",
+    PLAYER_INFOS                       "%1% (%2%%3%%4%), XP Rate: %5% %, Heroes: %6% (%7%)/%8% (%9%)/%10% (%11%), Races: %12%/%13%/%14%, Professions: %15%/%16%/%17%, G: %18%/L: %19%/F: %20%/%21%, Evolution: %22%, HK %23%/UK %24%/R %25%/BK %26%/%27%",
     PLAYER_SELECTION_SETTINGS          "Use -random and -start or -rs|n- Mode: %1%|n- Heroes: %2%/%3%/%4%|n- Races: %5%/%6%/%7%|n- Professions: %8%/%9%/%10%|n- Start Location: %11%",
     // Repick
     NO_REPICK_WITH_ILLIDAN             "You cannot repick while controlling Illidan.",
