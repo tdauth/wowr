@@ -254,6 +254,7 @@ StringList {
     FAR_SEER                           "Far Seer",
     WARLOCK                            "Warlock",
     STORMREAVER_WARLOCK                "Stormreaver Warlock",
+    SKELETAL_ORC_CHAMPION              "Skeletal Orc Champion",
     PEON                               "Peon",
     KODO_BEAST                         "Kodo Beast",
     RAIDER                             "Raider",

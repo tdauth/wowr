@@ -5890,6 +5890,7 @@ globals
     // Orc
     constant integer WARLOCK                                         = 'O02O'
     constant integer STORMREAVER_WARLOCK                             = 'O004'
+    constant integer SKELETAL_ORC_CHAMPION                           = 'O005'
     constant integer PEON_HERO                                       = 'H0OG'
     constant integer KODO_BEAST_HERO                                 = 'O08G'
     constant integer RAIDER_HERO                                     = 'O09O'
