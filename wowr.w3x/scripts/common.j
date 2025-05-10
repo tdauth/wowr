@@ -4362,9 +4362,13 @@ globals
     constant integer GNOME_SHIPYARD                                  = 'h0WN'
     constant integer GNOME_SKYFIRE_GUNSHIP                           = 'h0VM' // special building
 
+    constant integer ITEM_GNOME_TURRET                               = 'I0K6'
+
     constant integer UPG_GNOME_BACKPACK                              = 'R09O'
     constant integer UPG_GNOME_INVENTIONS                            = 'R09N'
-    constant integer UPG_GNOME_ARCANIST                              = 'R0DH'
+    constant integer UPG_GNOME_SORCERESS                             = 'R08A' // sorceress
+    constant integer UPG_GNOME_ARCANIST                              = 'R0DH' // priest
+    constant integer UPG_GNOME_MAGE                                  = 'R08B' // spellbreaker
     constant integer UPG_GNOME_DAMAGE                                = 'R0E0'
     constant integer UPG_GNOME_ARMOR                                 = 'R0E1'
     constant integer UPG_GNOME_ENGINEERING                           = 'R0E2'

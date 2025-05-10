@@ -1209,6 +1209,7 @@ StringList {
     UNABLE_TO_VOTE                     "Unable to vote.",
     UNABLE_TO_START_VOTE               "Unable to start vote.",
     START_VOTE_MESSAGE                 "%1% has started a vote %2%. Accept with '%3%' or ignore.",
+    VOTE_MESSAGE                       "%1% has voted for %2%: %3%/%4%",
     // Player Infos
     FREELANCER                         "Freelancer",
     WARLORD                            "Warlord",
