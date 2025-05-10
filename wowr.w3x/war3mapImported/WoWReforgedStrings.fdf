@@ -1066,6 +1066,7 @@ StringList {
     SAVE_CODES_DISABLED                "Loading savecodes has been disabled for this game!",
     SUCCESSFULLY_LOADED_X              "Successfully loaded %1%!",
     UNABLE_TO_LOAD_X                   "Unable to load %1% since it does not belong to your chosen races or professions!",
+    UNABLE_TO_LOAD_X_LIMIT_Y           "Unable to load %1% since you reached its limit: %2%/%3%.",
     UNABLE_TO_LOAD_X_TOMES             "Unable to load %1% since tomes are disabled!",
     SAVE_CODE_SLOT_BUILDING            "%1% - |cff00ff00%2%|r (%3%|%4%)",
     SAVE_CODE_SLOT_BUILDING_RED        "%1% - |cffff0000%2%|r (%3%|%4%)",
