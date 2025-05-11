@@ -1138,6 +1138,10 @@ StringList {
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
     // Player Selection
     NOT_ALLOWED_IN_PLAYER_SELECTION    "Not allowed in player selection.",
+    PICK_YOUR_GAME_MODE                "Pick your game mode.",
+    PICK_YOUR_FIRST_PROFESSION         "Pick your first profession.",
+    PICK_YOUR_FIRST_RACE               "Pick your first race.",
+    PICK_YOUR_HERO_FIRST               "Pick your hero first.",
     HYPHEN_FIRST_RACE                  "- First Race",
     HYPHEN_SECOND_RACE                 "- Second Race",
     HYPHEN_THIRD_RACE                  "- Third Race",
