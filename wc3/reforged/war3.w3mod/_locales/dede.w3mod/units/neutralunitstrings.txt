@@ -1,0 +1,2673 @@
+﻿// permits dependencies upon heroes
+[HERO]
+Name=Ein Held
+
+[nwad]
+Name=Beobachterschutz
+
+[nska]
+Name=Skelettbogenschütze
+Tip=Skelettbogenschütze anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nske]
+Name=Skelettkrieger
+Tip=Skelettkrieger anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsca]
+Name=Skelettbogenschütze
+Tip=Skelettbogenschütze anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsce]
+Name=Skelettkrieger
+Tip=Skelettkrieger anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nskg]
+Name=Riesenskelettkrieger
+Tip=Riesenskelettkrieger anheuern
+Ubertip=Eine große Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nskm]
+Name=Skelettschütze
+Hotkey=K
+Tip=Skelettschütze anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Eispfeile.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nskf]
+Name=Feuerbogenschütze
+Hotkey=B
+Tip=Feuerbogenschütze anheuern
+Tip:melee,V1=Feuerbogenschütze beschwören
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Sengpfeile.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+// dragon hawk 1
+[nws1]
+Name=Drachenfalke
+Hotkey=D
+Hotkey:melee,V0=C
+Tip=Drachenfalke ausbilden
+Tip:melee,V0=Drachenfalke ausbilden
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nban]
+Name=Bandit
+Hotkey=B
+Tip=Bandit anheuern
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Schattenmimik.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nbrg]
+Name=Brigant
+Tip=Brigant anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Schattenmimik.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nrog]
+Name=Schurke
+Hotkey=R
+Tip=Schurke anheuern
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Schattenmimik.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nenf]
+Name=Vollstrecker
+Hotkey=E
+Tip=Vollstrecker anheuern
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Schattenmimik und Entrinnen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nbld]
+Name=Banditenlord
+Tip=Banditenlord anheuern
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Schattenmimik, Hingabeaura und Gottesschild.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nass]
+Name=Auftragsmörder
+Tip=Auftragsmörder anheuern
+Hotkey=A
+Ubertip="Eine mittelschwere Fernkampfeinheit, die Giftpfeile verschießt. Beherrscht Schattenmimik.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nbdk]
+Name=Schwarzdrache
+Tip=Schwarzdrache beschwören
+Ubertip=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=C
+
+[nrdk]
+Name=Roter Großdrachenwelpe
+Tip=Roten Großdrachenwelpen beschwören
+Ubertip=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=W
+
+[nbdr]
+Name=Schwarzer Großdrachenwelpe
+Tip=Schwarzen Großdrachenwelpen beschwören
+Ubertip=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=W
+
+[nrdr]
+Name=Rotdrache
+Tip=Rotdrache beschwören
+Ubertip=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=C
+
+[nbwm]
+Name=Schwarzer Großdrache
+Tip=Schwarzen Großdrachen beschwören
+Ubertip=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=S
+
+[nrwm]
+Name=Roter Großdrache
+Hotkey=R
+Tip=Roten Großdrachen beschwören
+Ubertip=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nadr]
+Name=Blauer Großdrache
+Tip=Blauen Großdrachen beschwören
+Hotkey=L
+Ubertip=Eine schwere Fernkampflufteinheit. Verursacht Kälteschaden und verlangsamt gegnerische Einheiten. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Fernkampfeinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Fernkampfeinheit. Beherrscht Verschlingen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V1=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nadw]
+Name=Blauer Großdrachenwelpe
+Tip=Blauen Großdrachenwelpen beschwören
+Ubertip=Eine winzige Fernkampflufteinheit. Verursacht Kälteschaden und verlangsamt gegnerische Einheiten.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V1=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=W
+
+[nadk]
+Name=Blaudrache
+Tip=Blaudrache beschwören
+Ubertip=Eine kleine Fernkampflufteinheit. Verursacht Kälteschaden und verlangsamt gegnerische Einheiten.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V1=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=C
+
+[nbzd]
+Name=Bronzener Großdrache
+Tip=Bronzenen Großdrachen beschwören
+Hotkey=B
+Ubertip=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Fernkampfeinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Fernkampfeinheit. Beherrscht Verschlingen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nbzk]
+Name=Bronzedrache
+Tip=Bronzedrache beschwören
+Ubertip=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=C
+
+[nbzw]
+Name=Bronzener Großdrachenwelpe
+Tip=Bronzenen Großdrachenwelpen beschwören
+Ubertip=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=W
+
+[ngrd]
+Name=Grüner Großdrache
+Tip=Grünen Großdrachen beschwören
+Hotkey=G
+Ubertip=Eine schwere Fernkampflufteinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Fernkampfeinheit. Beherrscht Verschlingen. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Fernkampfeinheit. Beherrscht Verschlingen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ngdk]
+Name=Gründrache
+Tip=Gründrache beschwören
+Ubertip=Eine kleine Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=C
+
+[ngrw]
+Name=Grüner Großdrachenwelpe
+Tip=Grünen Großdrachenwelpen beschwören
+Ubertip=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=W
+
+// red dragon roost building
+[ndrr]
+Name=Rotdrachenhorst
+Tip=Rotdrachenhorst errichten
+Description=Ermöglicht das Herbeirufen roter Großdrachen.
+
+// green dragon roost building
+[ndrg]
+Name=Gründrachenhorst
+Tip=Gründrachenhorst errichten
+Description=Ermöglicht das Herbeirufen grüner Großdrachen.
+
+// bronze dragon roost building
+[ndrz]
+Name=Bronzedrachenhorst
+Tip=Bronzedrachenhorst errichten
+Description=Ermöglicht das Herbeirufen bronzener Großdrachen.
+
+// black dragon roost building
+[ndrk]
+Name=Schwarzdrachenhorst
+Tip=Schwarzdrachenhorst errichten
+Description=Ermöglicht das Herbeirufen schwarzer Großdrachen.
+
+// blue dragon roost building
+[ndru]
+Name=Blaudrachenhorst
+Tip=Blaudrachenhorst errichten
+Description=Ermöglicht das Herbeirufen blauer Großdrachen.
+
+[ncea]
+Name=Zentaurenbogenschütze
+Tip=Zentaurenbogenschütze anheuern
+Hotkey=A
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ncim]
+Name=Zentaurenhornkämpfer
+Tip=Zentaurenhornkämpfer anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Sengpfeile.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ncen]
+Name=Zentaurenläufer
+Tip=Zentaurenläufer anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit mit einer großen Axt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=U
+
+[ncer]
+Name=Zentaurenarbeiter
+Hotkey=B
+Tip=Zentaurenarbeiter anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ncks]
+Name=Zentaurenzauberer
+Name:custom,V0=Zentaurenzauberer
+Tip=Zentaurenzauberer anheuern
+Tip:custom,V0=Zentaurenzauberer anheuern
+Ubertip="Eine mittelschwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Magie aufheben und Kampfrausch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Eine mittelschwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Magie aufheben und Kampfrausch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ncnk]
+Name=Zentaurenkhan
+Tip=Zentaurenkhan anheuern
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht die Ausdaueraura, Kriegsdonner und Reinkarnation.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ndth]
+Name=Dunkeltrollhohepriester
+Hotkey=H
+Tip=Dunkeltrollhohepriester anheuern
+Ubertip=Ein Hohepriester mit heilender Magie. Verschießt feurige Geschosse. Beherrscht Schlaf.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndtp]
+Name=Dunkeltrollschattenpriester
+Hotkey=P
+Tip=Dunkeltrollschattenpriester anheuern
+Ubertip=Ein Schattenpriester mit heilender Magie. Verschießt feurige Geschosse.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndtb]
+Name=Dunkeltrollberserker
+Hotkey=B
+Tip=Dunkeltrollberserker anheuern
+Ubertip=Ein fanatischer Axtwerfer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndtw]
+Name=Dunkeltrollkriegsherr
+Hotkey=N
+Tip=Dunkeltrollkriegsherr anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht die Volltrefferaura.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndtr]
+Name=Dunkeltroll
+Hotkey=T
+Tip=Dunkeltroll anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndtt]
+Name=Dunkeltrollfallensteller
+Hotkey=D
+Tip=Dunkeltrollfallensteller anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nelb]
+Name=Berserkerelementar
+Tip=Berserkerelementar beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Frostnova. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nele]
+Name=Wütender Elementar
+Tip=Wütenden Elementar beschwören
+Tip:custom,V0=Wütenden Elementar beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nenc]
+Name=Verderbter Treant
+Tip=Verderbten Treant beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nenp]
+Name=Gifttreant
+Tip=Gifttreant beschwören
+Ubertip="Eine leichte Nahkampfeinheit, die Gegner vergiftet. Beherrscht Wucherwurzeln.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nepl]
+Name=Seuchentreant
+Tip=Seuchentreant beschwören
+Ubertip="Eine mittelschwere Nahkampfeinheit, die Gegner krank macht. Beherrscht Wucherwurzeln.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+// fel hunter
+[nfel]
+Name=Teufelspirscher
+Tip=Teufelspirscher beschwören
+Ubertip=Eine dämonische Bestie. Beherrscht Manabrand.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfsh]
+Name=Waldtrollhohepriester
+Hotkey=H
+Tip=Waldtrollhohepriester anheuern
+Ubertip=Ein Hohepriester mit heilender Magie. Verschießt feurige Geschosse. Beherrscht Magie aufheben und Inneres Feuer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nfsp]
+Name=Waldtrollschattenpriester
+Hotkey=P
+Tip=Waldtrollschattenpriester anheuern
+Ubertip=Ein Schattenpriester mit heilender Magie. Verschießt feurige Geschosse. Beherrscht Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nftr]
+Name=Waldtroll
+Hotkey=T
+Tip=Waldtroll anheuern
+Ubertip=Ein axtwerfender Troll.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nftb]
+Name=Waldtrollberserker
+Hotkey=B
+Tip=Waldtrollberserker anheuern
+Ubertip=Ein fanatischer Axtwerfer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nftt]
+Name=Waldtrollfallensteller
+Hotkey=F
+Tip=Waldtrollfallensteller anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nftk]
+Name=Waldtrollkriegsherr
+Hotkey=W
+Tip=Waldtrollkriegsherrn anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht die Volltrefferaura.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ngad]
+Name=Goblinlabor
+Tip=Goblinlabor errichten
+Description=Ermöglicht den Einsatz von Goblintechnologie.
+
+[ngme]
+Name=Goblinladen
+Tip=Goblinladen errichten
+Description=Verkauft verschiedene magische Gegenstände.
+
+[nshp]
+Name=Goblinhafen
+Tip=Goblinhafen errichten
+Description=Verkauft Schiffe.
+
+[ngrk]
+Name=Schlammgolem
+Hotkey=M
+Tip=Schlammgolem beschwören
+Tip:custom,V0=Schlammgolem beschwören
+Tip:melee,V0=Schlammgolem beschwören
+Ubertip="Eine leichte Nahkampfeinheit, die Gegner verlangsamt. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ngst]
+Name=Steingolem
+Tip=Steingolem beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nggr]
+Name=Granitgolem
+Tip=Granitgolem beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Zerschmettern und Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[narg]
+Name=Kampfgolem
+Tip=Kampfgolem beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwrg]
+Name=Kriegsgolem
+Tip=Kriegsgolem beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsgg]
+Name=Belagerungsgolem
+Tip=Belagerungsgolem beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Nahkampfeinheit. Beherrscht Felsen schleudern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ngir]
+Name=Goblinschredder
+Hotkey=G
+Tip=Goblinschredder anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit aus Eisen. Kann große Holzmengen abbauen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
+
+// Furbolg level 4
+[nfrl]
+Name=Furbolg
+Tip=Furbolg anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+// Furbolg Tracker level 6
+[nfrb]
+Name=Furbolgspurenleser
+Tip=Furbolgspurenleser anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Feenfeuer.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+// Furbolg Champion level 7
+[nfrg]
+Name=Furbolgheld
+Tip=Furbolgheld anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+// Furbolg level 9
+[nfra]
+Name=Furbolgursakrieger
+Tip=Furbolgursakrieger anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Befehlsaura und Kriegsdonner.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+// Furbolg Shaman level 4
+[nfrs]
+Name=Furbolgschamane
+Tip=Furbolgschamane anheuern
+Hotkey=F
+Ubertip="Eine mittelschwere Fernkampfeinheit, die Blitze schleudert. Beherrscht Verjüngung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+// Furbolg Elder Shaman level 7
+[nfre]
+Name=Furbolgahnenschamane
+Tip=Furbolgahnenschamane anheuern
+Ubertip="Eine schwere Fernkampfeinheit, die Blitze schleudert. Beherrscht Verjüngung und Blitzschild.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ngh1]
+Name=Geist
+Tip=Geist beschwören
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Besessenheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ngh2]
+Name=Gespenst
+Tip=Gespenst beschwören
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Fluch und Besessenheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ngna]
+Name=Gnollwilderer
+Tip=Gnollwilderer anheuern
+Hotkey=L
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ngns]
+Name=Gnollauftragsmörder
+Tip=Gnollauftragsmörder anheuern
+Hotkey=S
+Ubertip="Eine leichte Fernkampfeinheit, die Giftpfeile verschießt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ngno]
+Name=Gnollräuber
+Tip=Gnollräuber anheuern
+Hotkey=R
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ngnb]
+Name=Gnollschläger
+Tip=Gnollschläger anheuern
+Hotkey=S
+Ubertip="Eine leichte Nahkampfeinheit, die die Streitkräfte unterstützt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ngnw]
+Name=Gnollwächter
+Tip=Gnollwächter anheuern
+Hotkey=W
+Ubertip="Eine leichte Fernkampfeinheit, die Blitze schleudert. Beherrscht Reinigen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ngnv]
+Name=Gnollaufseher
+Tip=Gnollaufseher anheuern
+Tip:custom,V0=Gnollaufseher anheuern
+Tip:melee,V0=Gnollaufseher anheuern
+Hotkey=A
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Befehlsaura.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ngol]
+Name=Goldmine
+Tip=Goldmine errichten
+Description=Die Hauptquelle für Gold.
+
+[ngsp]
+Name=Randalierer
+Tip=Randalierer anheuern
+Ubertip=Explosives Team aus Randaliergoblins. Fügt Gebäuden extrem hohen Schaden zu.|n|cffffcc00Kann Kabumm gegen Bodeneinheiten und Bäume einsetzen.|r
+Hotkey=E
+
+[nhar]
+Name=Harpyienspäherin
+Tip=Harpyienspäherin anheuern
+Ubertip="Eine leichte Fernkampflufteinheit, die Federpfeile verschießt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nhrr]
+Name=Harpyienschurkin
+Tip=Harpyienschurkin anheuern
+Hotkey=R
+Ubertip="Eine leichte Fernkampflufteinheit, die Federpfeile verschießt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nhrw]
+Name=Harpyienwindhexe
+Tip=Harpyienwindhexe anheuern
+Tip:custom,V0=Harpyienwindhexe anheuern
+Tip:melee,V0=Harpyienwindhexe anheuern
+Hotkey=W
+Ubertip="Eine leichte Fernkampflufteinheit, die Blitze schleudert. Beherrscht Feenfeuer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Eine leichte Fernkampflufteinheit, die Blitze schleudert. Beherrscht Feenfeuer und Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V1="Eine leichte Fernkampflufteinheit, die Blitze schleudert. Beherrscht Feenfeuer und Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Eine leichte Fernkampflufteinheit, die Blitze schleudert. Beherrscht Feenfeuer und Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nhrh]
+Name=Harpyiensturmvettel
+Tip=Harpyiensturmvettel anheuern
+Ubertip="Eine mittelschwere Fernkampflufteinheit, die Blitze schleudert. Beherrscht Fluch und Schlaf.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nhrq]
+Name=Harpyienkönigin
+Tip=Harpyienkönigin anheuern
+Ubertip=Eine schwere Fernkampflufteinheit. Beherrscht Verjüngung und Wirbelsturm.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+// heretics
+[nhfp]
+Name=Gefallener Priester
+Tip=Gefallenen Priester anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nhdc]
+Name=Betrüger
+Tip=Betrüger anheuern
+Ubertip="Eine leichte Fernkampfeinheit, die Dämonenfeuer verschießt. Beherrscht Fluch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nhhr]
+Name=Ketzer
+Tip=Ketzer anheuern
+Ubertip="Eine mittelschwere Fernkampfeinheit, die Dämonenfeuer verschießt. Beherrscht Totenerweckung und Aasschwarm.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nitr]
+Name=Eistroll
+Tip=Eistroll anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nits]
+Name=Eistrollberserker
+Tip=Eistrollberserker anheuern
+Hotkey=B
+Ubertip=Eine mittelschwere Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nitt]
+Name=Eistrollfallensteller
+Tip=Eistrollfallensteller anheuern
+Hotkey=T
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nitw]
+Name=Eistrollkriegsherr
+Tip=Eistrollkriegsherr anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht die Volltrefferaura.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nith]
+Name=Eistrollhohepriester
+Tip=Eistrollhohepriester anheuern
+Ubertip=Ein Hohepriester mit heilender Magie. Beherrscht Magie aufheben und Frostrüstung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nitp]
+Hotkey:melee,V1=P
+Name=Eistrollpriester
+Tip=Eistrollpriester anheuern
+Ubertip=Ein Priester mit heilender Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nkob]
+Name=Kobold
+Tip=Kobold anheuern
+Hotkey=K
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nkog]
+Name=Koboldgeomant
+Tip=Koboldgeomant anheuern
+Hotkey=G
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Verlangsamung und Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nkol]
+Hotkey:melee,V1=K
+Name=Koboldzuchtmeister
+Tip=Koboldzuchtmeister anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Befehlsaura und Hieb.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nkot]
+Hotkey:melee,V1=T
+Name=Koboldtunnelgräber
+Tip=Koboldtunnelgräber anheuern
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Hieb.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nltl]
+Name=Blitzechse
+Tip=Blitzechse beschwören
+Ubertip="Eine leichte Fernkampfeinheit, die Blitze schleudert. Beherrscht Reinigen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nlur]
+Name=Monsterköder
+Tip=Monsterköder erstellen
+Ubertip="Ein Schutz, der nahe Monster anlockt."
+
+[nthl]
+EditorSuffix=2
+Name=Donnerechse
+Tip=Donnerechse beschwören
+Hotkey=C
+Ubertip="Eine schwere Fernkampfeinheit, die Blitze schleudert. Beherrscht Zerschmettern.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nstw]
+Name=Sturmwyrm
+Tip=Sturmwyrm beschwören
+Ubertip="Eine schwere Fernkampfeinheit, die Blitze schleudert. Beherrscht Verschlingen, Kettenblitz und Blitzschild.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nmfs]
+Name=Murlocfleischfresser
+Tip=Murlocfleischfresser anheuern
+Hotkey=M
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Kannibalismus.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmmu]
+Name=Murlocmutant
+Tip=Murlocmutant anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Verkrüppeln.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmpg]
+Name=Murlocpestbringer
+Tip=Murlocpestbringer anheuern
+Ubertip="Eine leichte Nahkampfeinheit, die Gegner krank macht.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nmrl]
+Name=Murlocgezeitenläufer
+Tip=Murlocgezeitenläufer anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmrr]
+Name=Murlocjäger
+Tip=Murlocjäger anheuern
+Hotkey=J
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmrm]
+Name=Murlocnachtkriecher
+Tip=Murlocnachtkriecher anheuern
+Ubertip="Eine leichte Nahkampfeinheit, die Gegner vergiftet. Beherrscht Schattenmimik.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nowb]
+Name=Wildekin
+Name:custom,V0=Eulenbär
+Tip=Wildekin beschwören
+Tip:custom,V0=Eulenbär beschwören
+Hotkey=W
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nowe]
+Name=Wütendes Wildekin
+Name:custom,V0=Wütender Eulenbär
+Tip=Wütendes Wildekin beschwören
+Tip:custom,V0=Wütenden Eulenbären beschwören
+
+[nowk]
+Name=Tobendes Wildekin
+Name:custom,V0=Tobender Eulenbär
+Tip=Tobendes Wildekin beschwören
+Tip:custom,V0=Tobenden Eulenbär beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Hieb und Kriegsdonner.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrzs]
+Name=Klingenmähnenspäher
+Tip=Klingenmähnenspäher anheuern
+
+[nrzb]
+Name=Klingenmähnenschläger
+Tip=Klingenmähnenschläger anheuern
+
+[nrzm]
+Name=Klingenmähnenmedizinmann
+Tip=Klingenmähnenmedizinmann anheuern
+Hotkey=M
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrrscht Heilschutz und Wildgeist.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrzg]
+Name=Klingenmähnenhäuptling
+Tip=Klingenmähnenhäuptling anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Dornenaura und Felsen schleudern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrzt]
+Name=Stacheleber
+Tip=Stacheleber anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nqbh]
+Hotkey:melee,V1=H
+Name=Stacheleberjäger
+Tip=Stacheleberjäger anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Entrinnen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nspd]
+Name=Spinnling
+Tip=Spinnling beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nnwa]
+Name=Neruberkrieger
+Tip=Neruberkrieger beschwören
+Tip:melee,V1=Neruberkrieger anheuern
+Hotkey=K
+Ubertip="Eine leichte Nahkampfeinheit, die ihre Jungen mit in den Kampf nimmt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nnwl]
+Name=Nerubernetzweber
+Tip=Nerubernetzweber beschwören
+Tip:custom,V0=Nerubernetzweber beschwören
+Tip:melee,V0=Nerubernetzweber beschwören
+Hotkey=N
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Gespinst und Totenerweckung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nnws]
+Name=Neruberspinnenlord
+Tip=Neruberspinnenlord beschwören
+Ubertip="Eine schwere Nahkampfeinheit, die ihre Jungen mit in den Kampf nimmt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nnwr]
+Hotkey:melee,V1=N
+Name=Neruberseher
+Tip=Neruberseher beschwören
+Tip:melee,V1=Neruberseher anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Magie aufheben und Totenerweckung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nnwq]
+Name=Neruberkönigin
+Tip=Neruberkönigin beschwören
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht die Unheilige Aura, Totenerweckung und Aasschwarm.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nmer]
+Name=Söldnerlager
+EditorSuffix=(Sommerliches Lordaeron)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr2]
+Name=Söldnerlager
+EditorSuffix=(Herbstliches Lordaeron)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr3]
+Name=Söldnerlager
+EditorSuffix=(Winterliches Lordaeron)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr4]
+Name=Söldnerlager
+EditorSuffix= (Brachland)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr5]
+Name=Söldnerlager
+EditorSuffix=(Eschental)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr6]
+Name=Söldnerlager
+EditorSuffix=(Teufelswald)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr7]
+Name=Söldnerlager
+EditorSuffix=(Nordend)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr8]
+Name=Söldnerlager
+EditorSuffix= (Stadtgebiet)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr9]
+Name=Söldnerlager
+EditorSuffix= (Dalaran)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmr0]
+Name=Söldnerlager
+EditorSuffix= (Dorf)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmra]
+Name=Söldnerlager
+EditorSuffix=(Verlies)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmrb]
+Name=Söldnerlager
+EditorSuffix= (Unterirdisch)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmrc]
+Name=Söldnerlager
+EditorSuffix= (Versunkene Ruinen)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[ntav]
+Name=Taverne
+Tip=Taverne errichten
+Description=Ermöglicht das Anheuern verschiedener Helden.
+
+[nmoo]
+Name=Brunnen des Manas
+Tip=Brunnen des Manas errichten
+Description=Regeneriert das Mana aller nahen nichtmechanischen Einheiten.
+
+[nfoh]
+Name=Brunnen der Gesundheit
+Tip=Brunnen der Gesundheit errichten
+Description=Regeneriert die Trefferpunkte aller nichtmechanischen Einheiten in der Nähe.
+
+[nmrk]
+Name=Markt
+Tip=Markt errichten
+Description="Ein Laden, in dem man Waren kaufen kann."
+
+
+// ogre 1
+[nogr]
+Name=Ogerkrieger
+Tip=Ogerkrieger anheuern
+Ubertip=Ein durchschnittlicher Krieger der Ogerlegion.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=K
+
+// ogre 2
+[nogm]
+Name=Ogerprügler
+Tip=Ogerprügler anheuern
+Ubertip="Ein großer, brutaler Krieger der Ogerlegion.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Hotkey=C
+
+// ogre lord
+[nogl]
+Name=Ogerlord
+Tip=Ogerlord anheuern
+Ubertip=Herr der Ogerlegion mit einer defensiven Aura. Beherrscht Schockwelle.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=L
+
+// ogre magi
+[nomg]
+Name=Ogermagier
+Tip=Ogermagier anheuern
+Ubertip=Ein magiekundiger Krieger der Ogerlegion. Beherrscht Kampfrausch.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=O
+
+[nrvf]
+Name=Feuerklagegeist
+Tip=Feuerklagegeist beschwören
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Feuerbrand.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrvs]
+Name=Frostklagegeist
+Tip=Frostklagegeist beschwören
+Hotkey=F
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Blizzard.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrvl]
+Name=Blitzklagegeist
+Tip=Blitzklagegeist beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Kettenblitz und Reinigen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrvi]
+Name=Eisklagegeist
+Tip=Eisklagegeist beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Vampiraura und Frostnova.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrvd]
+Name=Todesklagegeist
+Tip=Todesklagegeist beschwören
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Totenerweckung, Todesmantel und Totenbelebung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nslm]
+Name=Schlammdiener
+Tip=Schlammdiener beschwören
+Ubertip="Eine leichte Nahkampfeinheit, die Gegner verlangsamt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nslf]
+Name=Schlammwerfer
+Tip=Schlammwerfer beschwören
+Hotkey=F
+Ubertip="Eine leichte Fernkampfeinheit, die Gegner verlangsamt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nsln]
+Hotkey:melee,V1=L
+Name=Schlammmonster
+Tip=Schlammmonster beschwören
+Ubertip="Eine mittelschwere Nahkampfeinheit, die Gegner verlangsamt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nslh]
+Name=Jungsalamander
+Tip=Jungsalamander beschwören
+
+[nslr]
+Name=Salamander
+Tip=Salamander beschwören
+Ubertip="Eine mittelschwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Feuerbrand und Feuerblitz.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nslv]
+Name=Salamanderwesir
+Tip=Salamanderwesir beschwören
+Ubertip="Eine schwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Magie aufheben, Manabrand und Kampfrausch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nsll]
+Name=Salamanderlord
+Tip=Salamanderlord beschwören
+Ubertip="Eine schwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Verschlingen, Feuerbrand und Feuerregen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+// satyr 1
+[nsat]
+Name=Satyrschwindler
+Tip=Satyrschwindler anheuern
+Ubertip="Eine leichte Fernkampfeinheit, die Höllenfeuerblitze schleudert. Beherrscht Reinigen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+// satyr 2
+[nsts]
+Name=Satyrschattentänzer
+Tip=Satyrschattentänzer anheuern
+Hotkey=S
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Schattenmimik und Fluch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+// satyr 3
+[nsth]
+Name=Satyrhöllenbeschwörer
+Tip=Satyrhöllenbeschwörer anheuern
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht die Unheilige Aura, Kampfrausch und Totenbelebung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nstl]
+Name=Satyrseelendieb
+Tip=Satyrseelendieb anheuern
+Hotkey=S
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Manabrand und Totenerweckung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsty]
+Name=Satyr
+Tip=Satyr anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nspb]
+Name=Schwarzspinne
+Tip=Schwarzspinne beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nspr]
+Name=Spinne
+Tip=Spinne beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsgt]
+Name=Riesenspinne
+Tip=Riesenspinne beschwören
+Ubertip="Eine mittelschwere Nahkampfeinheit, die Gegner vergiftet. Beherrscht Einschnüren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nssp]
+Hotkey:melee,V1=P
+Name=Speispinne
+Tip=Speispinne beschwören
+Ubertip="Eine leichte Fernkampfeinheit, die Gift auf Gegner spuckt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nsbm]
+Name=Brutmutter
+Tip=Brutmutter beschwören
+Ubertip="Eine schwere Nahkampfeinheit, die Gegner vergiftet und ihre Jungen mit in den Kampf nimmt. Beherrscht Einschnüren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nspg]
+Name=Waldspinne
+Tip=Waldspinne beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsqt]
+Name=Sasquatch
+Tip=Sasquatch beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsqe]
+Name=Ahnensasquatch
+Tip=Ahnensasquatch beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Hieb und Naturgewalt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsqo]
+Name=Sasquatchorakel
+Tip=Sasquatchorakel beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Gebrüll und Verjüngung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsqa]
+Name=Uralter Sasquatch
+Tip=Uralten Sasquatch beschwören
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Zerschmettern, Naturgewalt und Reinkarnation.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ndog]
+Name=Hund
+Tip=Hund herbeirufen
+Ubertip="Ruft den Geist eines Hundes herbei, um Euch zu retten."
+
+[npig]
+Name=Schwein
+Tip=Schwein herbeirufen
+Ubertip="Ruft den Geist eines Schweins herbei, um Euch zu retten."
+
+[nder]
+Name=Hirsch
+Tip=Hirsch herbeirufen
+Ubertip="Ruft den Geist eines Hirsches herbei, um Euch zu retten."
+
+[nsea]
+Name=Robbe
+Tip=Robbe herbeirufen
+Ubertip="Ruft den Geist einer Robbe herbei, um Euch zu retten."
+
+[nshe]
+Name=Schaf
+Tip=Schaf herbeirufen
+Ubertip="Ruft den Geist eines Schafs herbei, um Euch zu retten."
+
+[nsha]
+Name=Schaf
+Tip=Schaf herbeirufen
+Ubertip="Ruft den Geist eines Schafs herbei, um Euch zu retten."
+EditorSuffix= (Amphibisch)
+
+[nshw]
+Name=Schaf
+Tip=Schaf herbeirufen
+Ubertip="Ruft den Geist eines Schafs herbei, um Euch zu retten."
+EditorSuffix= (Schwimmfähig)
+
+[nshf]
+Name=Fliegendes Schaf
+Tip=Superschaf herbeirufen
+Ubertip="Ruft das Superschaf herbei, um Euch zu retten."
+
+// male villager
+[nvil]
+Name=Dorfbewohner
+Tip=Dorfbewohner anheuern
+Ubertip=Ein wackerer Dorfbewohner.
+EditorSuffix=(Männlich)
+
+// kid villager
+[nvlk]
+Name=Kind
+Ubertip="Ein kleiner Dorfbewohner."
+Tip=Dorfbewohner anheuern
+
+// female villager
+[nvlw]
+Name=Dorfbewohnerin
+Tip=Dorfbewohnerin anheuern
+Ubertip="Eine intelligente Dorfbewohnerin."
+EditorSuffix=(Weiblich)
+
+[nvul]
+Name=Geier
+Tip=Geier herbeirufen
+Ubertip="Ruft den Geist eines Geiers herbei, um Euch zu retten."
+
+[nwen]
+Name=Wendigo
+Tip=Wendigo beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwlt]
+Name=Waldwolf
+Tip=Waldwolf beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwlg]
+Hotkey:melee,V1=W
+Name=Riesenwolf
+Tip=Riesenwolf beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Kritische Treffer.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwld]
+Name=Terrorwolf
+Tip=Terrorwolf beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Kritische Treffer und Gebrüll.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwwf]
+Name=Frostwolf
+Tip=Frostwolf beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwwg]
+Name=Riesenfrostwolf
+Tip=Riesenfrostwolf beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Kritische Treffer.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwwd]
+Name=Terrorfrostwolf
+Tip=Terrorfrostwolf beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Kritische Treffer und Gebrüll.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwnr]
+Name=Ahnenwendigo
+Tip=Ahnenwendigo beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Hieb.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwna]
+Name=Uralter Wendigo
+Tip=Uralten Wendigo beschwören
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Hieb, Kriegsdonner und Reinkarnation.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nwns]
+Name=Wendigoschamane
+Tip=Wendigoschamane beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Gebrüll und Verjüngung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nwzr]
+Name=Verräterischer Zauberer
+Tip=Verräterischen Zauberer anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Frostrüstung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nwzg]
+Name=Abtrünniger Zauberer
+Tip=Abtrünnigen Zauberer anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Reinigen und Blitzschild.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nwiz]
+Name=Zauberlehrling
+Tip=Zauberlehrling anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nwzd]
+Name=Dunkler Zauberer
+Tip=Dunklen Zauberer anheuern
+Ubertip="Eine schwere Fernkampfeinheit. Beherrscht die Brillanzaura, Totenerweckung und Verwandlung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nzep]
+Name=Zeppelin
+Tip=Zeppelin anheuern
+Ubertip=Ein fliegender Transporter.
+Hotkey=Z
+
+[ninf]
+Name=Höllenbestie
+Tip=Höllenbestie beschwören
+Ubertip="Eine schwere Nahkampfeinheit, umhüllt von dämonischen Flammen. Fügt gegnerischen Bodeneinheiten in der Nähe Schaden zu. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nbal]
+Name=Verdammniswache
+Tip=Verdammniswache beschwören
+Ubertip="Eine schwere Fernkampfeinheit. Beherrscht Magie bannen, Kriegsdonner, Verkrüppeln und Feuerregen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+EditorSuffix=(Standard)
+
+//doom guard, summoned
+[nba2]
+Name=Verdammniswache
+Tip=Verdammniswache beschwören
+Ubertip="Eine schwere Fernkampfeinheit. Beherrscht Magie bannen, Kriegsdonner, Verkrüppeln und Feuerregen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+EditorSuffix=(Beschworen)
+
+
+[nglm]
+Name=Goblinlandmine
+
+[nwgt]
+Name=Portal
+Tip=Portal errichten
+Description=Teleportiert Einheiten zu einem Schwesterportal.
+
+[ncnt]
+Name=Zentaurenzelt
+Tip=Zentaurenzelt errichten
+Description=Ein kleiner Unterstand aus Leder.
+
+[nct1]
+Name=Zentaurenzelt
+Tip=Zentaurenzelt errichten
+Description=Ein kleiner Unterstand aus Leder.
+EditorSuffix=(2)
+
+[nct2]
+Name=Zentaurenzelt
+Tip=Zentaurenzelt errichten
+Description=Ein kleiner Unterstand aus Leder.
+EditorSuffix=(3)
+
+[ntnt]
+Name=Taurenzelt
+Tip=Taurenzelt errichten
+Description=Ein stabiler Unterstand aus Leder.
+
+[ntt2]
+EditorSuffix=2
+Name=Taurenzelt
+Tip=Taurenzelt errichten
+Description=Ein stabiler Unterstand aus Leder.
+
+[ngnh]
+Name=Gnollhütte
+Tip=Gnollhütte errichten
+Description=Eine stabile Blockhütte aus Holz und Stein.
+
+[ngt2]
+Name=Gnollhütte
+Tip=Gnollhütte errichten
+Description=Eine stabile Blockhütte aus Holz und Stein.
+EditorSuffix= 2
+
+[nten]
+Name=Zelt
+Tip=Zelt errichten
+Description="Ein Segeltuchzelt, das mit seltsamen Zeichen verziert ist."
+
+[ntn2]
+Name=Zelt
+Tip=Zelt errichten
+Description="Ein Segeltuchzelt, das mit seltsamen Zeichen verziert ist."
+EditorSuffix= 2
+
+[nfh0]
+Name=Waldtrollhütte
+Tip=Waldtrollhütte errichten
+Description="Ein ausgehöhlter Baumstamm, den manche Trolle Zuhause nennen."
+
+[nfh1]
+EditorSuffix=2
+Name=Waldtrollhütte
+Tip=Waldtrollhütte errichten
+Description="Ein ausgehöhlter Baumstamm, den manche Trolle Zuhause nennen."
+
+[nfr1]
+EditorSuffix=2
+Name=Furbolghütte
+Tip=Furbolghütte errichten
+Description="Ein ausgehöhlter Baumstamm, den manche Furbolgs Zuhause nennen."
+
+[nfr2]
+Name=Furbolghütte
+Tip=Furbolghütte errichten
+Description="Ein ausgehöhlter Baumstamm, den manche Furbolgs Zuhause nennen."
+
+[nth0]
+EditorSuffix=2
+Name=Eistrollhütte
+Tip=Eistrollhütte errichten
+Description="Eine schneebedeckte Behausung, die manche Trolle Zuhause nennen."
+
+[nth1]
+Name=Eistrollhütte
+Tip=Eistrollhütte errichten
+Description="Eine schneebedeckte Behausung, die manche Trolle Zuhause nennen."
+
+[ncb0]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 0
+Description=Ein großes Steingebäude.
+
+[ncb1]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 1
+Description=Ein großes Steingebäude.
+
+[ncb2]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 2
+Description=Ein großes Steingebäude.
+
+[ncb3]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 3
+Description=Ein großes Steingebäude.
+
+[ncb4]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 4
+Description=Ein großes Steingebäude.
+
+[ncb5]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 5
+Description=Ein großes Steingebäude.
+
+[ncb6]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 6
+Description=Ein großes Steingebäude.
+
+[ncb7]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 7
+Description=Ein großes Steingebäude.
+
+[ncb8]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 8
+Description=Ein großes Steingebäude.
+
+[ncb9]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 9
+Description=Ein großes Steingebäude.
+
+[ncba]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 10
+Description=Ein großes Steingebäude.
+
+[ncbb]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 11
+Description=Ein großes Steingebäude.
+
+[ncbc]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 12
+Description=Ein großes Steingebäude.
+
+[ncbd]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 13
+Description=Ein großes Steingebäude.
+
+[ncbe]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 14
+Description=Ein großes Steingebäude.
+
+[ncbf]
+Name=Stadtgebäude
+Tip=Stadtgebäude errichten
+EditorSuffix= 15
+Description=Ein großes Steingebäude.
+
+[nmh0]
+Name=Murlochütte
+Tip=Murlochütte errichten
+EditorSuffix= 0
+Description=Ein kleiner Wachturm aus Bambus.
+
+[nmh1]
+Name=Murlochütte
+Tip=Murlochütte errichten
+EditorSuffix= 1
+Description=Ein hoher Wachturm aus Bambus.
+
+[nnzg]
+Name=Neruberziggurat
+Tip=Neruberziggurat errichten
+Description=Eine kleine Ziggurat aus Stein.
+
+[ncop]
+Name=Kreis der Macht
+Tip=Kreis der Macht errichten
+Description="Ein kleiner Sockel, der vor Energie leuchtet."
+
+[ncp2]
+Name=Kreis der Macht
+Tip=Kreis der Macht errichten
+Description="Ein Sockel, der vor Energie glüht."
+EditorSuffix=(Mittel)
+
+[ncp3]
+Name=Kreis der Macht
+Tip=Kreis der Macht errichten
+Description="Ein großer Sockel, der vor Energie leuchtet."
+EditorSuffix=(Groß)
+
+[nhns]
+Name=Harpyiennest
+Tip=Harpyiennest errichten
+Description="Ein Nest, dessen Holzgerüst nur spärlich mit einer Lage aus Unrat bedeckt ist."
+
+[nowl]
+Name=Eulenspäher
+EditorSuffix= (Stufe 1)
+EditorSuffix:custom,V0=(Stufe 1)
+
+[now2]
+Name=Eulenspäher
+EditorSuffix= (Stufe 2)
+EditorSuffix:custom,V0=(Stufe 2)
+
+[now3]
+Name=Eulenspäher
+EditorSuffix= (Stufe 3)
+EditorSuffix:custom,V0=(Stufe 3)
+
+[nspp]
+Name=Geisterschwein
+
+// neutral heroes
+[Npbm]
+Name=Braumeister
+Propernames=Modo Schwarzbräu,Sinjo Honigbräu,Keshan Wildgerste,Tatsa Süßhopf,Mishi Humpenherz,Jinto Schilfrebe,Masha Sturmbräu,Polo Kullerfass
+Hotkey=N
+Tip=Braumeister beschwören
+Ubertip="Ein Kriegerheld mit außergewöhnlicher Nahkampfleistung und hoher Schadensabsorption. Kann Feuerodem, Fasshieb, Flüchtiger Kämpfer und Sturm, Erde und Feuer erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Braumeister wiederbeleben
+Awakentip=Braumeister wiederbeleben
+
+[npn1]
+Name=Feuer
+Tip=Feuer beschwören
+Ubertip=Ein wilder Pandarenkrieger des Feuers. Beherrscht Permanenten Feuerbrand und Resistente Haut.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=F
+
+[npn2]
+Name=Sturm
+Tip=Sturm beschwören
+Ubertip="Ein schneller Pandarenkrieger der Stürme. Beherrscht Resistente Haut, Magie bannen, Wirbelsturm und Windlauf.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=T
+
+[npn3]
+Name=Erde
+Tip=Erde beschwören
+Ubertip="Ein robuster Pandarenkrieger der Erde. Beherrscht Resistente Haut, Zauberimmunität, Pulverisieren und Spott.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Hotkey=E
+
+// neutral heroes
+
+//alchemist
+[Nalc]
+Name=Alchemist
+Propernames=Razzil Nöpalm,Niffy Gurgelbecher,Ezzel Nachtmischer,Lapis Mischmasch,Sawy Faulmixer,Flunki Kriegstrunk
+Hotkey=C
+Tip=Alchemist beschwören
+Ubertip="Ein Kriegerheld, der sich durch seine offensive und defensive Vielseitigkeit auszeichnet. Kann Heilspray, Chemiewut, Säurebombe und Transmutieren erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Alchemist wiederbeleben
+Awakentip=Alchemist wiederbeleben
+
+//alchemist
+[Nalm]
+Name=Alchemist
+Propernames=Razzil Nöpalm,Niffy Gurgelbecher,Ezzel Nachtmischer,Lapis Mischmasch,Sawy Faulmixer,Flunki Kriegstrunk
+Hotkey=C
+Tip=Alchemist beschwören
+Ubertip="Ein Kriegerheld, der sich durch seine offensive und defensive Vielseitigkeit auszeichnet. Kann Heilspray, Chemiewut, Säurebombe und Transmutieren erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Alchemist wiederbeleben
+Awakentip=Alchemist wiederbeleben
+EditorSuffix=(Umwandeln Stufe 1)
+
+//alchemist (morph, 2)
+[Nal2]
+Name=Alchemist
+Propernames=Razzil Nöpalm,Niffy Gurgelbecher,Ezzel Nachtmischer,Lapis Mischmasch,Sawy Faulmixer,Flunki Kriegstrunk
+Hotkey=C
+Tip=Alchemist beschwören
+Ubertip="Ein Kriegerheld, der sich durch seine offensive und defensive Vielseitigkeit auszeichnet. Kann Heilspray, Chemiewut, Säurebombe und Transmutieren erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Alchemist wiederbeleben
+Awakentip=Alchemist wiederbeleben
+EditorSuffix=(Umwandeln Stufe 2)
+
+//alchemist (morph, 3)
+[Nal3]
+Name=Alchemist
+Propernames=Razzil Nöpalm,Niffy Gurgelbecher,Ezzel Nachtmischer,Lapis Mischmasch,Sawy Faulmixer,Flunki Kriegstrunk
+Hotkey=C
+Tip=Alchemist beschwören
+Ubertip="Ein Kriegerheld, der sich durch seine offensive und defensive Vielseitigkeit auszeichnet. Kann Heilspray, Chemiewut, Säurebombe und Transmutieren erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Alchemist wiederbeleben
+Awakentip=Alchemist wiederbeleben
+EditorSuffix=(Umwandeln Stufe 3)
+
+// Tinker
+[Ntin]
+Name=Tüftler
+Propernames=Gazz Bolzenklau,Riket Apparillo,Mekka Gobb,Tek Tüftelteil,Stöpsel Klapperfalle,Ratso Dampfdruck
+Hotkey=Z
+Tip=Tüftler beschwören
+Ubertip="Ein listiger Held, der viel aushält und Kämpfe stören kann. Kann Schwarmraketen, Taschenfabrik, Ingenieurskunst und Robogoblin erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Tüftler wiederbeleben
+Awakentip=Tüftler wiederbeleben
+
+// Tinker (morph / robo-goblin)
+[Nrob]
+Name=Tüftler
+Propernames=Gazz Bolzenklau,Riket Apparillo,Mekka Gobb,Tek Tüftelteil,Stöpsel Klapperfalle,Ratso Dampfdruck
+Hotkey=Z
+Tip=Tüftler beschwören
+Ubertip="Ein listiger Held, der viel aushält und Kämpfe stören kann. Kann Schwarmraketen, Taschenfabrik, Ingenieurskunst und Robogoblin erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Tüftler wiederbeleben
+Awakentip=Tüftler wiederbeleben
+
+[ncgb]
+Name=Uhrwerkgoblin
+Tip=Uhrwerkgoblin beschwören
+Ubertip=Ein jämmerlich zusammengeschusterter mechanischer Goblinnahkämpfer. Explodiert nach einer bestimmten Zeit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=H
+
+[ncg1]
+Name=Uhrwerkgoblin
+Tip=Uhrwerkgoblin beschwören
+Ubertip=Ein jämmerlich zusammengeschusterter mechanischer Goblinnahkämpfer. Explodiert nach einer bestimmten Zeit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=H
+
+[ncg2]
+Name=Uhrwerkgoblin
+Tip=Uhrwerkgoblin beschwören
+Ubertip=Ein jämmerlich zusammengeschusterter mechanischer Goblinnahkämpfer. Explodiert nach einer bestimmten Zeit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=H
+
+[ncg3]
+Name=Uhrwerkgoblin
+Tip=Uhrwerkgoblin beschwören
+Ubertip=Ein jämmerlich zusammengeschusterter mechanischer Goblinnahkämpfer. Explodiert nach einer bestimmten Zeit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=H
+
+[nfac]
+Name=Taschenfabrik
+Tip=Taschenfabrik beschwören
+Ubertip="Fabrikeinheit der Fähigkeit Taschenfabrik, die Uhrwerkgoblins erschafft."
+Hotkey=F
+EditorSuffix=(Stufe 1)
+
+[nfa1]
+Name=Taschenfabrik
+Tip=Taschenfabrik beschwören
+Ubertip="Fabrikeinheit der Fähigkeit Taschenfabrik, die Uhrwerkgoblins erschafft."
+Hotkey=F
+EditorSuffix=(Stufe 2)
+
+[nfa2]
+Name=Taschenfabrik
+Tip=Taschenfabrik beschwören
+Ubertip="Fabrikeinheit der Fähigkeit Taschenfabrik, die Uhrwerkgoblins erschafft."
+Hotkey=F
+EditorSuffix=(Stufe 3)
+
+[Nbrn]
+Name=Dunkle Waldläuferin
+Propernames=Nara Pfadwanderer,Anya Immersang,Anthis Sonnenbogen,Clea Todeswanderer,Cyndia Falkenspeer,Mira Schattenwelk,Amora Adlerauge,Siren Geisterlied,Somand Wegfinder
+Hotkey=R
+Tip=Dunkle Waldläuferin beschwören
+Ubertip="Eine listige Heldin, die auf die Manipulation von Gegnern spezialisiert ist. Kann Stille, Schwarzer Pfeil, Lebensentzug und Bezauberung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Dunkle Waldläuferin wiederbeleben
+Awakentip=Dunkle Waldläuferin wiederbeleben
+
+[ndr1]
+Name=Geringer Dunkler Diener
+Tip=Dunklen Diener beschwören
+
+[ndr2]
+Name=Dunkler Diener
+Tip=Dunklen Diener beschwören
+
+[ndr3]
+Name=Großer Dunkler Diener
+Tip=Dunklen Diener beschwören
+
+[nskk]
+Name=Skink
+Tip=Skink herbeirufen
+Ubertip="Ruft den Geist eines Skinks herbei, um Euch zu retten."
+
+[ncrb]
+Name=Krebs
+Tip=Krebs herbeirufen
+Ubertip="Ruft den Geist eines Krebses herbei, um Euch zu retten."
+
+[nhmc]
+Name=Einsiedlerkrebs
+Tip=Einsiedlerkrebs herbeirufen
+Ubertip="Ruft den Geist eines Einsiedlerkrebses herbei, um Euch zu retten."
+
+[nech]
+Name=Huhn
+Tip=Huhn herbeirufen
+Ubertip="Ruft den Geist eines furchterregenden Huhns herbei, um Euch zu retten."
+
+[nfro]
+Name=Frosch
+Tip=Frosch herbeirufen
+Ubertip="Ruft den Geist eines furchterregenden Frosches herbei, um Euch zu retten."
+
+[necr]
+Name=Hase
+Tip=Hasen herbeirufen
+Ubertip="Ruft den Geist eines furchterregenden Hasen herbei, um Euch zu retten."
+
+[nrac]
+Name=Waschbär
+Tip=Waschbären herbeirufen
+Ubertip="Ruft den Geist eines furchterregenden Waschbären herbei, um Euch zu retten."
+
+[nalb]
+Name=Albatros
+Tip=Albatros herbeirufen
+Ubertip="Ruft den Geist eines Albatros herbei, um Euch zu retten."
+
+[ntrh]
+Name=Jungmeeresschildkröte
+Tip=Jungmeeresschildkröte anheuern
+Ubertip="Eine leichte amphibische Fernkampfeinheit, deren Stachelpanzerschale gegnerische Nahkämpfer verwundet.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ntrs]
+Name=Meeresschildkröte
+Tip=Meeresschildkröte anheuern
+Ubertip="Eine leichte amphibische Fernkampfeinheit, deren Stachelpanzerschale gegnerische Nahkämpfer verwundet.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ntrt]
+Name=Riesenmeeresschildkröte
+Tip=Riesenmeeresschildkröte anheuern
+Ubertip="Eine mittelschwere amphibische Fernkampfeinheit, deren Stachelpanzerschale gegnerische Nahkämpfer verwundet.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=T
+
+[ntrg]
+Name=Riesige Meeresschildkröte
+Tip=Riesige Meeresschildkröte anheuern
+Ubertip="Eine schwere amphibische Fernkampfeinheit, deren Stachelpanzerschale gegnerische Nahkämpfer verwundet.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ntrd]
+Name=Drachenschildkröte
+Tip=Drachenschildkröte anheuern
+Ubertip=Eine schwere amphibische Nahkampfeinheit mit Stachelpanzerschale. Beherrscht Verschlingen und Schmetterwelle.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nhyd]
+Name=Hydra
+Tip=Hydra anheuern
+Ubertip=Eine leichte amphibische Fernkampfeinheit. Beherrscht Schleichendes Gift. Beim Tod erheben sich kleinere Hydras aus der Leiche.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nhyh]
+Name=Junghydra
+Tip=Junghydra anheuern
+Ubertip=Eine mittelschwere amphibische Fernkampfeinheit. Beherrscht Schleichendes Gift.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nehy]
+Name=Ahnenhydra
+Tip=Ahnenhydra anheuern
+Ubertip=Eine schwere amphibische Fernkampfeinheit. Beherrscht Feenfeuer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nahy]
+Name=Uralte Hydra
+Tip=Uralte Hydra anheuern
+Ubertip="Eine schwere amphibische Fernkampfeinheit. Beherrscht Verschlingen, Kriegsdonner und Schleichendes Gift. Beim Tod erheben sich kleinere Hydras aus der Leiche.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nlpr]
+Name=Makrurakrabbe
+Tip=Makrurakrabbe anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nlps]
+Name=Beschworene Krabbe
+Tip=Beschworene Krabbe
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nltc]
+Name=Makruragezeitenrufer
+Tip=Makruragezeitenrufer anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Heilen und Frostrüstung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nlpd]
+Name=Makrurateichbewohner
+Tip=Makrurateichbewohner anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nlds]
+Name=Makruratiefseher
+Tip=Makruratiefseher anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Krabben beschwören und Wucherwurzeln.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=F
+
+[nlsn]
+Name=Makruraschnapper
+Tip=Makruraschnapper anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=R
+
+[nlkl]
+Name=Makruraflutlord
+Tip=Makruraflutlord anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Hingabeaura und Spaltschlag.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmcf]
+Name=Mur'gulklippenläufer
+Tip=Mur'gulklippenläufer anheuern
+Ubertip=Eine leichte amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmbg]
+Hotkey:melee,V1=B
+Name=Mur'gulblutkieme
+Tip=Mur'gulblutkieme anheuern
+Ubertip=Eine leichte amphibische Fernkampfeinheit. Beherrscht Heilen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nmtw]
+Name=Mur'gulgezeitenkrieger
+Tip=Mur'gulgezeitenkrieger anheuern
+Ubertip=Eine leichte amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmsn]
+Name=Mur'gulverlangsamer
+Tip=Mur'gulverlangsamer anheuern
+Ubertip=Eine mittelschwere amphibische Fernkampfeinheit. Beherrscht Magie aufheben und Verlangsamung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=G
+Hotkey:melee,V1=S
+
+[nmrv]
+Name=Mur'gulmarodeur
+Tip=Mur'gulmarodeur anheuern
+Ubertip=Eine schwere amphibische Nahkampfeinheit. Beherrscht die Befehlsaura.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmsc]
+Name=Mur'gulschattenzauberer
+Tip=Mur'gulschattenzauberer anheuern
+Ubertip=Eine schwere amphibische Fernkampfeinheit. Beherrscht Fluch und Verhexen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nscb]
+Name=Spinnenkrebsuferkriecher
+Tip=Spinnenkrebsuferkriecher anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=K
+
+[ntrv]
+Name=Gezeitenklagegeist
+Tip=Gezeitenklagegeist anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsrv]
+Name=Meeresklagegeist
+Tip=Meeresklagegeist anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndrv]
+Name=Tiefenklagegeist
+Tip=Tiefenklagegeist anheuern
+Ubertip="Eine schwere Nahkampfeinheit, die einen Meereselementar beschwören kann.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nlrv]
+Name=Tiefenfürstklagegeist
+Tip=Tiefenfürstklagegeist anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Schmetterwelle und Frostrüstung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nrel]
+Name=Riffelementar
+Tip=Riffelementar beschwören
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsel]
+Name=Meereselementar
+Tip=Meereselementar beschwören
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Hieb.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsgn]
+Name=Meeresriese
+Tip=Meeresriese beschwören
+Ubertip=Eine leichte amphibische Nahkampfeinheit. Beherrscht Pulverisieren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsgh]
+Name=Meeresriesenjäger
+Tip=Meeresriesenjäger beschwören
+Ubertip=Eine schwere amphibische Nahkampfeinheit. Beherrscht Einschnüren und Pulverisieren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsgb]
+Name=Meeresriesenungetüm
+Tip=Meeresriesenungetüm beschwören
+Ubertip="Eine schwere amphibische Nahkampfeinheit. Beherrscht Felsen schleudern, Kriegsdonner und Pulverisieren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nsko]
+Name=Skelettorc
+Tip=Skelettorc beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsog]
+Hotkey:melee,V1=G
+Name=Skelettorcgrunzer
+Tip=Skelettorcgrunzer beschwören
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsoc]
+Name=Skelettorcheld
+Tip=Skelettorcheld beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Todesmantel.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsra]
+Name=Lehrling der Sturmreiter
+Tip=Lehrling der Sturmreiter anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsrh]
+Hotkey:melee,V1=H
+Name=Einsiedler der Sturmreiter
+Tip=Einsiedler der Sturmreiter anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Reinigen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsrn]
+Name=Nekrolyth der Sturmreiter
+Tip=Nekrolyth der Sturmreiter anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Kampfrausch und Kettenblitz.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nsrw]
+Name=Hexenmeister der Sturmreiter
+Tip=Hexenmeister der Sturmreiter anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Monsun und Totenbelebung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nbot]
+Name=Transportschiff
+Hotkey=T
+Tip=Transportschiff anheuern
+Ubertip="Ein Schiff, das Einheiten transportieren kann."
+
+[nfrp]
+Name=Urpandaren
+Tip=Urpandaren anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[Nngs]
+Name=Meerhexe
+Propernames=Anna Kondra,Szilla Trübschatten,Ursula Schlangenkragen,Lady Giftzunge,Lady Serpentra,Lady Dunkelschuppe,Serena Narbenschuppe,Asprah Serpus,Venna Seesturm,Charib'dishal
+Hotkey=X
+Tip=Meerhexe beschwören
+Ubertip="Eine mystische Heldin, die geschickt aus der Entfernung angreift. Kann Gabelblitzschlag, Frostpfeile, Manaschild und Tornado erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Meerhexe wiederbeleben
+Awakentip=Meerhexe wiederbeleben
+
+[Nfir]
+Name=Feuerlord
+Propernames=Stichflamme,Hassfunken,Zornlohe,Hitzeschinder,Volcanus,Feuerblitz,Kar der Ewigbrennende,Loderas,Sengschlächter
+Hotkey=F
+Tip=Feuerlord beschwören
+Ubertip="Ein mystischer Held, der geschickt Fähigkeiten stört und hohen Feuerschaden verursacht. Kann Verbrennen, Seelenbrand, Lavabrut beschwören und Vulkan erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V1="Ein mystischer Held, der geschickt Fähigkeiten stört und hohen Feuerschaden verursacht. Kann Verbrennen, Seelenbrand, Lavabrut beschwören und Vulkan erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Feuerlord wiederbeleben
+Awakentip=Feuerlord wiederbeleben
+
+//lava spawn1
+[nlv1]
+Name=Lavabrut
+EditorSuffix= (Stufe 1)
+
+//lava spawn2
+[nlv2]
+Name=Lavabrut
+EditorSuffix= (Stufe 2)
+
+//lava spawn3
+[nlv3]
+Name=Lavabrut
+EditorSuffix= (Stufe 3)
+
+[Nplh]
+Name=Grubenlord
+Propernames=Azgalor,Brutillus,Mongrethod,Destromath,Gogonnash
+Hotkey=G
+Tip=Grubenlord beschwören
+Ubertip="Ein Kriegerheld, der Gegner in Angst und Schrecken versetzt. Kann Feuerregen, Schreckensgeheul, Spaltschlag und Verdammnis erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Grubenlord wiederbeleben
+Awakentip=Grubenlord wiederbeleben
+
+[Nbst]
+Name=Bestienmeister
+Propernames=Mägg Bärenfraß,Tagar Bärenklaue,Gorsh Krallenzahn,Maxx Rocmähne,Gaz Eberhauer,Mok Felsschnauze,Gish Adlerblick
+Hotkey=S
+Tip=Bestienmeister beschwören
+Ubertip="Ein Kriegerheld, der Bestien in den Kampf führt. Kann Bär beschwören, Stachelbestie beschwören, Falke beschwören und Stampede erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Bestienmeister wiederbeleben
+Awakentip=Bestienmeister wiederbeleben
+
+[ngz1]
+Name=Bär
+EditorSuffix= (Stufe 1)
+
+[ngz2]
+Name=Wütender Bär
+EditorSuffix= (Stufe 2)
+
+[ngz3]
+Name=Geisterbär
+EditorSuffix= (Stufe 3)
+
+[nwe1]
+Name=Falke
+EditorSuffix= (Stufe 1)
+
+[nwe2]
+Name=Donnerfalke
+EditorSuffix= (Stufe 2)
+
+[nwe3]
+Name=Geisterfalke
+EditorSuffix= (Stufe 3)
+
+[nqb1]
+Name=Stachelbestie
+EditorSuffix= (Stufe 1)
+
+[nqb2]
+Name=Terrorstachelbestie
+EditorSuffix= (Stufe 2)
+
+[nqb3]
+Name=Wütende Stachelbestie
+EditorSuffix= (Stufe 3)
+
+[ntor]
+Name=Tornado
+
+[nsc2]
+Name=Spinnenkrebsverstümmler
+Tip=Spinnenkrebsverstümmler anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=K
+
+[nsc3]
+Name=Spinnenkrebsungetüm
+Tip=Spinnenkrebsungetüm anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=K
+
+//#RestNoBeta
+
+
+
+[nmam]
+Name=Mammut
+Tip=Mammut anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmit]
+Name=Eiszahnmammut
+Tip=Eiszahnmammut anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmdr]
+Name=Terrormammut
+Tip=Terrormammut anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfgo]
+Name=Vergessener
+Tip=Vergessener anheuern
+Ubertip="Eine sehr alte und mächtige Kreatur, die Feuer auf ihre Gegner schleudert. Beherrscht Tentakel erschaffen, Feuerblitz und Bezauberung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nfgt]
+Name=Tentakel
+Ubertip=Ein knorriges Tentakel aus den Tiefen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ntkf]
+Name=Tuskarrkämpfer
+Tip=Tuskarrkämpfer anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ntka]
+Name=Tuskarrspeerträger
+Tip=Tuskarrspeerträger anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ntkw]
+Name=Tuskarrkrieger
+Tip=Tuskarrkrieger anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ntkt]
+Name=Tuskarrfallensteller
+Tip=Tuskarrfallensteller anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ntkc]
+Name=Tuskarrhäuptling
+Tip=Tuskarrhäuptling anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Befehlsaura.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ntkh]
+Hotkey:melee,V1=H
+Name=Tuskarrheiler
+Tip=Tuskarrheiler anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Heilen und Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ntks]
+Name=Tuskarrzauberer
+Tip=Tuskarrzauberer anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Inneres Feuer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nbdm]
+Name=Blaudrachenbrutschnüffler
+Tip=Blaudrachenbrutschnüffler anheuern
+Hotkey=D
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Entrinnen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nbdw]
+Hotkey:melee,V1=W
+Name=Blaudrachenbrutkrieger
+Tip=Blaudrachenbrutkrieger anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Entrinnen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nbdo]
+Name=Blaudrachenbrutaufseher
+Tip=Blaudrachenbrutaufseher anheuern
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Frostodem, Hingabeaura und Entrinnen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nbda]
+Name=Blaudrachenbrutlehrling
+Tip=Blaudrachenbrutlehrling anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Berherrscht Entrinnen und Verjüngung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nbds]
+Name=Blaudrachenbrutzauberer
+Tip=Blaudrachenbrutzauberer anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Entrinnen und Frostnova.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nmgw]
+Name=Magnataurenkrieger
+Tip=Magnataurenkrieger anheuern
+Hotkey=K
+Ubertip=Eine schwere Nahkampfeinheit. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmgr]
+Name=Magnataurenhäscher
+Tip=Magnataurenhäscher anheuern
+Ubertip="Eine schwere Nahkampfeinheit, die Frostblitze verschießt. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nmgd]
+Name=Magnataurenzerstörer
+Tip=Magnataurenzerstörer anheuern
+Ubertip="Eine schwere Nahkampfeinheit, die Frostblitze verschießt. Beherrscht Zerschmettern. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nanc]
+Name=Kristallarachnathid
+Tip=Kristallarachnathid anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nanb]
+Name=Stachelarachnathid
+Tip=Stachelarachnathid anheuern
+Hotkey=S
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nanm]
+Name=Stachelarachnathid
+Tip=Stachelarachnathid anheuern
+Hotkey=S
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Eingraben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nbnb]
+Name=Eingegrabener Stachelarachnathid
+Tip=Stachelarachnathid anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nanw]
+Name=Arachnathidenkrieger
+Tip=Arachnathidenkrieger anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nane]
+Name=Arachnathidenerdwühler
+Tip=Arachnathidenerdwühler anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Giftwaffen und Schattenschlag.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nano]
+Name=Arachnathidenanführer
+Tip=Arachnathidenanführer anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Befehlsaura.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfor]
+Name=Gesichtslosenschwindler
+Tip=Gesichtslosenschwindler anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Reinigen und Fluch.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfot]
+Name=Gesichtslosenschrecken
+Tip=Gesichtslosenschrecken anheuern
+Ubertip="Eine schwere Fernkampfeinheit, die Blitze schleudert. Beherrscht Schlaf und Manaschild.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nfod]
+Name=Gesichtslosentodesbringer
+Tip=Gesichtslosentodesbringer anheuern
+Ubertip="Eine schwere Fernkampfeinheit, die Blitze schleudert. Beherrscht Stille und Totenbelebung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nubk]
+Name=Dunkeljäger der Ungebrochenen
+Tip=Dunkeljäger der Ungebrochenen anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nubr]
+Name=Wüter der Ungebrochenen
+Tip=Wüter der Ungebrochenen anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nubw]
+Hotkey:melee,V1=D
+Name=Dunkelwirker der Ungebrochenen
+Tip=Dunkelwirker der Ungebrochenen anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Unheilige Raserei.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nplb]
+Name=Eisbär
+Tip=Eisbär anheuern
+Ubertip=Eine mittelschwere amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nplg]
+Name=Rieseneisbär
+Tip=Rieseneisbär anheuern
+Ubertip=Eine schwere amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ncfs]
+EditorSuffix=(Stufe 1)
+Name=Wasserdiener
+Tip=Wasserdiener beschwören
+Ubertip=Eine leichte amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ntws]
+EditorSuffix=(Stufe 2)
+Name=Wasserdiener
+Tip=Wasserdiener beschwören
+Ubertip=Eine leichte amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nsns]
+EditorSuffix=(Stufe 3)
+Name=Wasserdiener
+Tip=Wasserdiener beschwören
+Ubertip=Eine mittelschwere amphibische Fernkampfeinheit. Beherrscht Magie aufheben und Verlangsamung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ngni]
+Name=Befallene Kornkammer
+Tip=Befallene Kornkammer errichten
+Description=Ein verrottendes Silo voll verseuchten Korns.
+
+[ngwr]
+Name=Kornkammer
+Tip=Kornkammer errichten
+Description=Ein Lagerhaus für Getreide.
+
+[nfpl]
+Name=Eisfurbolg
+Tip=Eisfurbolg anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfpc]
+Name=Eisfurbolgchampion
+Tip=Eisfurbolgchampion anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfpe]
+Name=Eisfurbolgahnenschamane
+Tip=Eisfurbolgahnenschamane anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Frostnova und Welle der Heilung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nfps]
+Name=Eisfurbolgschamane
+Tip=Eisfurbolgschamane anheuern
+Hotkey=F
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Magie aufheben und Frostrüstung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nfpu]
+Name=Eisfurbolgursakrieger
+Tip=Eisfurbolgursakrieger anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht die Befehlsaura und Kriegsdonner.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfpt]
+Name=Eisfurbolgspurenleser
+Tip=Eisfurbolgspurenleser anheuern
+Ubertip="Eine schwere Nahkampfeinheit, die Gegner verlangsamt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nmgv]
+Tooltip:custom,V0=Magisches Gewölbe errichten
+Tooltip:melee,V0=Magisches Gewölbe errichten
+Name=Magisches Gewölbe
+Tip=Magisches Gewölbe kaufen, Magisches Gewölbe errichten
+Tip:custom,V0=Magisches Gewölbe kaufen
+Tip:melee,V0=Magisches Gewölbe kaufen
+Hotkey=W
+Ubertip="In jeder Kiste verbirgt sich ein Geheimnis."
+Description="Ein Gewölbe, das mit leuchtenden Runen versiegelt ist. Solche Gewölbe enthalten oft magische Schätze."
+
+[nitb]
+Name=Vereiste Schatztruhe
+Tip=Vereiste Schatztruhe kaufen,Schatztruhe bauen
+Hotkey=T
+Ubertip="Im Eis verbirgt sich ein Schatz."
+Description="Eine Kiste, die durch massives Eis versiegelt ist. Solche Kisten enthalten oft magische Schätze."
+
+[nmrd]
+Name=Söldnerlager
+EditorSuffix=(Eiskronengletscher)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmre]
+Name=Söldnerlager
+EditorSuffix=(Scherbenwelt)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+[nmrf]
+Name=Söldnerlager
+EditorSuffix= (Schwarze Zitadelle)
+Tip=Söldnerlager errichten
+Description=Ermöglicht das Anheuern verschiedener Söldner.
+
+// outland dragon roost building
+[ndro]
+Name=Nethergroßdrachenhorst
+Tip=Nethergroßdrachenhorst errichten
+Description=Ermöglicht das Herbeirufen von Nethergroßdrachen.
+
+[npng]
+Name=Pinguin
+Tip=Pinguin herbeirufen
+Ubertip="Ruft den Geist eines Pinguins herbei, um Euch zu retten."
+
+[npnw]
+Name=Pinguin
+Tip=Pinguin herbeirufen
+Ubertip="Ruft den Geist eines Pinguins herbei, um Euch zu retten."
+EditorSuffix= (Schwimmfähig)
+
+[nrat]
+Name=Ratte
+Tip=Ratte herbeirufen
+Ubertip="Ruft den Geist einer Ratte herbei, um Euch zu retten."
+
+[nsno]
+Name=Schnee-Eule
+Tip=Schnee-Eule herbeirufen
+Ubertip="Ruft den Geist einer Schnee-Eule herbei, um Euch zu retten."
+
+[nfbr]
+Name=Teufelseber
+Tip=Teufelseber herbeirufen
+Ubertip="Ruft den Geist eines Teufelsebers herbei, um Euch zu retten."
+
+[ndwm]
+Name=Dünenwurm
+Tip=Dünenwurm herbeirufen
+Ubertip="Ruft den Geist eines Dünenwurms herbei, um Euch zu retten."
+
+[nvk2]
+Name=Kind
+Tip=Dorfbewohner anheuern
+Ubertip="Ein kleiner Dorfbewohner."
+EditorSuffix= (2)
+
+[nvl2]
+Name=Dorfbewohner
+Tip=Dorfbewohner anheuern
+Ubertip=Ein wackerer Dorfbewohner.
+EditorSuffix= (Männlich 2)
+
+[nwc1]
+Name=Windreiterkäfig
+Tip=Windreiterkäfig errichten
+EditorSuffix= (1)
+Description="Ein stabiler Käfig, in dem Windreiter gefangen gehalten werden."
+
+[nwc2]
+Name=Windreiterkäfig
+Tip=Windreiterkäfig errichten
+EditorSuffix= (2)
+Description="Ein stabiler Käfig, in dem Windreiter gefangen gehalten werden."
+
+[nzom]
+Name=Zombie
+Tip=Zombie beschwören
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[npfl]
+Name=Teufelsbestie
+Tip=Teufelsbestie beschwören
+Hotkey=F
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[npfm]
+Name=Teufelsfresser
+Tip=Teufelsfresser beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Schwarzer Pfeil und Magie verschlingen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndqn]
+Name=Sukkubus
+Tip=Sukkubus anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndqv]
+Name=Schändlicher Folterknecht
+Tip=Schändlichen Folterknecht anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Stille.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndqt]
+Name=Schändliche Verführerin
+Tip=Schändliche Verführerin anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndqp]
+Name=Maid des Schmerzes
+Tip=Maid des Schmerzes anheuern
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Lebensentzug und Schattenschlag.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndqs]
+Name=Königin der Qualen
+Tip=Königin der Qualen anheuern
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Todesmantel, Unheilige Aura und Bezauberung.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nmg0]
+Name=Mur'gulhütte
+Tip=Mur'gulhütte errichten
+EditorSuffix= 0
+Description=Ein kleiner Wachturm aus Bambus.
+
+[nmg1]
+Name=Mur'gulhütte
+Tip=Mur'gulhütte errichten
+EditorSuffix= 1
+Description=Ein hoher Wachturm aus Bambus.
+
+[nfgu]
+Name=Teufelswache
+Tip=Teufelswache anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfgb]
+Hotkey:melee,V1=B
+Name=Blutscheusal
+Tip=Blutscheusal anheuern
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Spaltschlag.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nfov]
+Name=Anführer
+Tip=Anführer anheuern
+Ubertip="Eine schwere Nahkampfeinheit. Beherrscht Schreckensgeheul, Spaltschlag und die Vampiraura.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ndrf]
+Name=Draeneiwächter
+Tip=Draeneiwächter anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndrt]
+Name=Draeneipirscher
+Tip=Draeneipirscher anheuern
+Ubertip="Eine leichte Nahkampfeinheit, die dauerhaft getarnt ist. Beherrscht Einschnüren und Entrinnen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ndrn]
+Name=Draeneiverteidiger
+Tip=Draeneiverteidiger anheuern
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndrp]
+Name=Draeneibeschützer
+Tip=Draeneibeschützer anheuern
+Ubertip=Eine leichte Nahkampfeinheit. Beherrscht Einschnüren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndrw]
+Name=Draeneibeobachter
+Tip=Draeneibeobachter anheuern
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndrd]
+Name=Draeneidunkeltöter
+Tip=Draeneidunkeltöter anheuern
+Hotkey=D
+Ubertip=Eine mittelschwere Nahkampfeinheit. Beherrscht Feuerbrand.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ndrm]
+Name=Draeneijünger
+Tip=Draeneijünger anheuern
+Hotkey=J
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Heilen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndrh]
+Name=Draeneiherold
+Tip=Draeneiherold anheuern
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Kampfrausch und Unterbrechungsstrahl.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndrs]
+Name=Draeneiseher
+Tip=Draeneiseher anheuern
+Ubertip="Eine schwere Fernkampfeinheit. Beherrscht Brillanzaura, Verlangsamung und Welle der Heilung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ninc]
+Name=Höllenapparat
+Tip=Höllenapparat anheuern
+Ubertip="Eine mittelschwere Fernkampfeinheit, die feurige Geschosse verschießt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ninm]
+Name=Höllenmaschine
+Tip=Höllenmaschine anheuern
+Ubertip="Eine schwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Feuerodem.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nina]
+Name=Höllenkampfschiff
+Tip=Höllenkampfschiff anheuern
+Ubertip="Eine schwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Inferno.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nvdl]
+Name=Geringer Leerwandler
+Tip=Geringen Leerwandler anheuern
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nvdw]
+Name=Leerwandler
+Tip=Leerwandler anheuern
+Hotkey=L
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Eispfeile.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nvdg]
+Name=Großer Leerwandler
+Tip=Großen Leerwandler anheuern
+Hotkey=L
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Kettenblitz und Frostrüstung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nvde]
+Name=Ahnenleerwandler
+Tip=Ahnenleerwandler anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Magie verschlingen und Gabelblitzschlag.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nnht]
+Name=Jungnethergroßdrache
+Tip=Jungnethergroßdrache beschwören
+Hotkey=H
+Ubertip=Eine winzige Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nndk]
+Name=Netherdrache
+Tip=Netherdrache beschwören
+Hotkey=C
+Ubertip=Eine schwere Fernkampflufteinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nndr]
+Name=Nethergroßdrache
+Tip=Nethergroßdrache beschwören
+Hotkey=D
+Ubertip=Eine schwere Fernkampflufteinheit. Beherrscht Verkrüppeln. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ners]
+Name=Eredarzauberer
+Tip=Eredarzauberer anheuern
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Schlaf und Magie aufheben.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nerd]
+Name=Eredardiabolist
+Tip=Eredardiabolist anheuern
+Ubertip=Eine schwere Fernkampfeinheit. Beherrscht Feuerblitz und Parasit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nerw]
+Name=Eredarhexenmeister
+Tip=Eredarhexenmeister anheuern
+Ubertip="Eine schwere Fernkampfeinheit. Beherrscht Hieb, Schmerzensfinger und Manaschild.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nogo]
+Name=Oger der Steinbrecher
+Tip=Oger der Steinbrecher anheuern
+Ubertip="Ein mächtiger Krieger. Nicht so intelligent wie die zweiköpfige Variante, aber erstklassiges Kanonenfutter. Beherrscht Einschnüren.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nogn]
+Name=Magus der Steinbrecher
+Tip=Magus der Steinbrecher anheuern
+Ubertip=Ein mächtiger Magiebenutzer. Dieser intelligente und entschlossene Ogermagier unterstützt seine Krieger mit arkanen Fähigkeiten. Beherrscht Gebrüll.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[noga]
+Name=Steinbrecherhäuptling
+Tip=Steinbrecherhäuptling anheuern
+Ubertip="Herr der Oger. Dieser kräftig gebaute Oger kann geringe Bestien mit bloßen Händen zerquetschen. Beherrscht Spott, Hieb und die Ausdaueraura.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ndh0]
+Name=Draeneihütte
+Tip=Draeneihütte errichten
+Ubertip=Eine einfache Bauernhütte der Draenei.
+
+[ndh1]
+EditorSuffix=2
+Name=Draeneihütte
+Tip=Draeneihütte errichten
+Ubertip=Eine einfache Bauernhütte der Draenei.
+
+[ndch]
+Name=Hütte des Draeneihäuptlings
+Tip=Hütte des Draeneihäuptlings errichten
+Ubertip=Die Hütte des Draeneihäuptlings.
+
+[njgb]
+Name=Wütender Dschungelpirscher
+Tip=Wütenden Dschungelpirscher beschwören
+Ubertip=Eine schwere Nahkampfeinheit. Beherrscht Zerschmettern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[njga]
+Name=Ahnendschungelpirscher
+Tip=Ahnendschungelpirscher beschwören
+Ubertip=Eine schwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[njg1]
+Name=Dschungelpirscher
+Tip=Dschungelpirscher beschwören
+Ubertip=Eine mittelschwere Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+
+[ncef]
+Ubertip=Eine leichte Fernkampfeinheit.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=A
+Tip=Zentaurenbogenschütze anheuern
+Name=Zentaurenbogenschütze
+
+[ncif]
+Ubertip=Eine mittelschwere Fernkampfeinheit. Beherrscht Sengpfeile.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Tip=Zentaurenhornkämpfer anheuern
+Name=Zentaurenhornkämpfer
+
+[nckf]
+Ubertip="Eine mittelschwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Magie aufheben und Kampfrausch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Eine mittelschwere Fernkampfeinheit, die feurige Geschosse verschießt. Beherrscht Magie aufheben und Kampfrausch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Tip=Zentaurenzauberer anheuern
+Tip:custom,V1=Zentaurenzauberin anheuern
+Tip:custom,V0=Zentaurenzauberin anheuern
+Tip:melee,V0=Zentaurenzauberin anheuern
+Name=Zentaurenzauberer
+Name:custom,V1=Zentaurenzauberin
+Name:custom,V0=Zentaurenzauberin
+Name:melee,V0=Zentaurenzauberin
+
+[nstf]
+Ubertip=Eine leichte Fernkampfeinheit. Beherrscht Schattenmimik und Fluch.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=S
+Tip=Satyrschattentänzer anheuern
+Name=Satyrschattentänzer
+
+[nzof]
+EditorSuffix=Weiblich
+Ubertip=Eine leichte Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Tip=Zombie beschwören
+Name=Zombie
+
+[nobs]
+Description:custom,V0=Ein Gebäude für astronomische Studien.
+Description:melee,V0=Ein Gebäude für astronomische Studien.
+Tip:custom,V0=Spähposten errichten
+Tip:melee,V0=Spähposten errichten
+Name:custom,V0=Spähposten
+Name:melee,V0=Spähposten
+
+[ndrb]
+Name:melee,V0=Drachenhorst
+Tip:custom,V0=Drachenhorst errichten
+Tip:melee,V0=Drachenhorst errichten
+Name:custom,V0=Drachenhorst
+
+[ntn3]
+Name=Zelt
+EditorSuffix=3
+
+[nggm]
+Name=Moosbedeckter Granitgolem
+
+[nggg]
+Name=Wächtergolem
+
+[nggd]
+Name=Verteidigergolem
+
+[ngow]
+Name=Gnollkriegsherr
+
+[nwzw]
+Name=Blutzauberer
+
+[ngos]
+Name=Knurrmähne der Blutsäufer
+
+[ngog]
+Name=Wachhund
+
+[nccd]
+Name=Diablos Wagen
+
+[ncco]
+Name=Orcwagen
+
+[nccu]
+Name=Untotenwagen
+
+[nccr]
+Name=Zwergenwagen
+
+[H000]
+Name=Waldläuferin
+
+[nmg2]
+EditorSuffix=2
+Name=Murlochütte
+
+[nhn2]
+EditorSuffix=2
+Name=Harpyiennest
+
+[obai]
+Name=Baine
+
+[hrrh]
+EditorSuffix=Hochelfe
+Name=Bote
+
+[Haah]
+Name=Hochelfenerzmagier
+Propernames=Kelen der Sucher
+
+[Hssa]
+Name=Hochkönig
+Propernames=Anasterian Sonnenwanderer
+
+[Hddt]
+Name=Meisterschwertkämpfer
+Propernames=Thalorien Morgensucher
+
+[owad]
+Name=Sklavenmeister
+
+[Hjnd]
+Propernames=Jennalla Trautquell
+Name=Waldläuferin
+
+[nwc3]
+Description="Ein stabiler Käfig, in dem Windreiter gefangen gehalten werden."
+EditorSuffix=(3)
+Tip=Windreiterkäfig errichten
+Name=Windreiterkäfig
+
+[nwc4]
+Description="Ein stabiler Käfig, in dem Windreiter gefangen gehalten werden."
+EditorSuffix=(4)
+Tip=Windreiterkäfig errichten
+Name=Windreiterkäfig
+
+[nwar]
+Name=Kriegswagen

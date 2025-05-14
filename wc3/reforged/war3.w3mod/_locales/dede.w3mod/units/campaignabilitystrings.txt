@@ -1,0 +1,387 @@
+﻿// Attribute Bonus
+[Aamk]
+Name=Erhöhte Attribute
+Tip=Erhöhte Attribute [|cffffcc00Stufe 1|r],Erhöhte Attribute [|cffffcc00Stufe 2|r],Erhöhte Attribute [|cffffcc00Stufe 3|r],Erhöhte Attribute [|cffffcc00Stufe 4|r]
+Ubertip="Erhöht die Beweglichkeit, Stärke und Intelligenz um insgesamt <Aamk,DataA1>.","Erhöht die Beweglichkeit, Stärke und Intelligenz um insgesamt <Aamk,DataA2>.","Erhöht die Beweglichkeit, Stärke und Intelligenz um insgesamt <Aamk,DataA3>.","Erhöht die Beweglichkeit, Stärke und Intelligenz um insgesamt <Aamk,DataA4>."
+Researchtip=Erhöhte Attribute [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht die Beweglichkeit, Stärke und Intelligenz dauerhaft.|n|n|cffffcc00Stufe 1|r - Erhöht alle Werte um 3.|n|cffffcc00Stufe 2|r - Erhöht alle Werte zusätzlich um 3.|n|cffffcc00Stufe 3|r - Erhöht alle Werte zusätzlich um 3.|n|cffffcc00Stufe 4|r - Erhöht alle Werte zusätzlich um 3."
+Researchhotkey=B
+
+// Serpent Ward (tentacle)
+[ACtn]
+Name=Tentakel erschaffen
+Tip=Tentakel erschaffen
+Ubertip=Greift den Gegner mit einem mächtigen Tentakel an.
+Hotkey=T
+
+// Feral Spirit (akama)
+[ACs7]
+Name=Wildgeist
+Tip=Wildgeist [|cffffcc00Stufe 1|r],Wildgeist [|cffffcc00Stufe 2|r],Wildgeist [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört <ACs7,DataB1> Geisterwölfe als Begleiter. Jeder Wolf hat <osw1,realHP> Trefferpunkte und verursacht <osw1,mindmg1>-<osw1,maxdmg1> Schaden.|nBleiben <ACs7,Dur1> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r","Beschwört <ACs7,DataB2> Geisterwölfe als Begleiter, die Kritische Treffer beherrschen. Jeder Wolf hat <osw2,realHP> Trefferpunkte und verursacht <osw2,mindmg1>-<osw2,maxdmg1> Schaden.|nBleiben <ACs7,Dur2> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r","Beschwört <ACs7,DataB3> Geisterwölfe als Begleiter, die Kritische Treffer beherrschen und unsichtbar sind, bis sie angreifen. Jeder Wolf hat <osw3,realHP> Trefferpunkte und verursacht <osw3,mindmg1>-<osw3,maxdmg1> Schaden.|nBleiben <ACs7,Dur3> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r"
+Researchtip=Wildgeist [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört <ACs7,DataB1> Geisterwölfe, die gegen die Gegner des Scharfsehers kämpfen.|nBleiben <ACs7,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <osw1,realHP> Trefferpunkte, <osw1,mindmg1>-<osw1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <osw2,realHP> Trefferpunkte, <osw2,mindmg1>-<osw2,maxdmg1> Schaden, beherrschen Kritische Treffer.|n|cffffcc00Stufe 3|r - <osw3,realHP> Trefferpunkte, <osw3,mindmg1>-<osw3,maxdmg1> Schaden, beherrschen Kritische Treffer und Unsichtbarkeit."
+Hotkey=T
+Researchhotkey=T
+
+
+// Avatar (garithos)
+[ANav]
+Name=Avatar
+EditorSuffix=(Neutral)
+Tip=Avatar aktivieren
+UberTip="Aktivieren, um die Rüstung von Lord Garithos um <ANav,DataA1>, seine Trefferpunkte um <ANav,DataB1> und seinen Schaden um <AHav,DataC1> zu erhöhen und ihm Zauberimmunität zu gewähren.|nHält <ANav,Dur1> Sek. lang an."
+Untip=Avatar deaktivieren
+UnUberTip=""
+Hotkey=K
+Unhotkey=K
+Researchtip=Avatar erlernen
+ResearchUberTip="Avatar erhöht die Rüstung von Lord Garithos um <ANav,DataA1>, seine Trefferpunkte um <ANav,DataB1>, seinen Schaden um <ANav,DataC1> und gewährt ihm Zauberimmunität.|nHält <ANav,Dur1> Sek. lang an."
+Researchhotkey=V
+
+// Shockwave
+[ANsh]
+Name=Schockwelle
+Tip=Schockwelle [|cffffcc00Stufe 1|r],Schockwelle [|cffffcc00Stufe 2|r],Schockwelle [|cffffcc00Stufe 3|r]
+Ubertip="Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOsh,DataA1> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOsh,DataA2> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOsh,DataA3> Schaden zufügt."
+Hotkey=W
+Researchtip=Schockwelle [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Entfesselt eine Kraftwelle, die vom Helden ausgeht und Bodeneinheiten in einer Linie Schaden zufügt.|n|n|cffffcc00Stufe 1|r - <AOsh,DataA1> Schaden.|n|cffffcc00Stufe 2|r - <AOsh,DataA2> Schaden.|n|cffffcc00Stufe 3|r - <AOsh,DataA3> Schaden."
+Researchhotkey=W
+
+// Feral Spirit
+[ACs8]
+Name=Geisterbestie
+Tip=Geisterbestie [|cffffcc00Stufe 1|r],Geisterbestie [|cffffcc00Stufe 2|r],Geisterbestie [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört <ACs8,DataB1> Geisterbestien als Begleiter. Jede Bestie hat <nsw1,realHP> Trefferpunkte und verursacht <nsw1,mindmg1>-<nsw1,maxdmg1> Schaden.|nBleiben <ACs8,Dur1> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r","Beschwört <ACs8,DataB2> Geisterbestien als Begleiter, die Rückkopplung beherrschen. Jede Bestie hat <nsw2,realHP> Trefferpunkte und verursacht <nsw2,mindmg1>-<nsw2,maxdmg1> Schaden.|nBleiben <ACs8,Dur2> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r","Beschwört <ACs8,DataB3> Geisterbestien als Begleiter, die Rückkopplung und Manabrand beherrschen. Jede Bestie hat <nsw3,realHP> Trefferpunkte und verursacht <nsw3,mindmg1>-<nsw3,maxdmg1> Schaden.|nBleiben <ACs8,Dur3> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r"
+Researchtip=Geisterbestie [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört <ACs8,DataB1> Geisterbestien, die gegen Akamas Gegner kämpfen.|nBleiben <ACs8,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <nsw1,realHP> Trefferpunkte, <nsw1,mindmg1>-<nsw1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <nsw2,realHP> Trefferpunkte, <nsw2,mindmg1>-<nsw2,maxdmg1> Schaden, beherrschen Rückkopplung.|n|cffffcc00Stufe 3|r - <nsw3,realHP> Trefferpunkte, <nsw3,mindmg1>-<nsw3,maxdmg1> Schaden, beherrschen Rückkopplung und Manabrand."
+Hotkey=I
+Researchhotkey=I
+
+// Reincarnation (generic)
+[ANr2]
+Name=Reinkarnation
+Tip=Reinkarnation
+Ubertip="Nach dem Tod wird dieser Held wiederbelebt. Reinkarnation hat eine Abklingzeit von <ANr2,Cool1> Sek."
+Researchtip=Reinkarnation erlernen
+Researchubertip="Nach dem Tod wird dieser Held wiederbelebt. Reinkarnation hat eine Abklingzeit von <ANr2,Cool1> Sek."
+Researchhotkey=R
+Globalmessage=
+Globalsound=
+
+// Feedback
+[Afbb]
+Name=Rückkopplung
+Tip=Rückkopplung
+Ubertip="Angriffe von Geisterbestien verbrennen <Afbb,DataA1> Mana pro Treffer. Das Mana explodiert und fügt der angegriffenen Einheit Schaden zu."
+
+
+// Auto-Dispel Magic
+[Andm]
+Name=Magie aufheben
+Tip=Magie aufheben
+Ubertip="Bannt Stärkungseffekte von gegnerischen Einheiten und Schwächungseffekte von verbündeten Einheiten.|n|cffffcc00Fügt beschworenen Einheiten <Aadm,DataB1> Schaden zu.|r"
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=M
+Unhotkey=M
+
+// Submerge
+[Asb1]
+Name=Abtauchen
+EditorSuffix=(Myrmidone)
+Tip=Abtauchen
+Untip=Auftauchen
+Ubertip="Ermöglicht dieser Einheit, ins Wasser zu tauchen und sich so zu verbergen."
+Unubertip="Ermöglicht dieser Einheit, aus dem Wasser aufzutauchen."
+Hotkey=U
+Unhotkey=U
+
+// Submerge
+[Asb2]
+Name=Abtauchen
+EditorSuffix= (Königswache)
+Tip=Abtauchen
+Untip=Auftauchen
+Ubertip="Ermöglicht dieser Einheit, ins Wasser zu tauchen und sich so zu verbergen."
+Unubertip="Ermöglicht dieser Einheit, aus dem Wasser aufzutauchen."
+Hotkey=U
+Unhotkey=U
+
+// Submerge
+[Asb3]
+Name=Abtauchen
+EditorSuffix= (Schnappdrache)
+Tip=Abtauchen
+Untip=Auftauchen
+Ubertip="Ermöglicht dieser Einheit, ins Wasser zu tauchen und sich so zu verbergen."
+Unubertip="Ermöglicht dieser Einheit, aus dem Wasser aufzutauchen."
+Hotkey=U
+Unhotkey=U
+
+//naga harvest
+[ANha]
+Name=Abbauen
+EditorSuffix= (Neutral),  (Gold und Holz)
+EditorSuffix:custom,V0=(Neutral),  (Gold und Holz)
+EditorSuffix:custom,V1=(Neutral),  (Gold und Holz)
+EditorSuffix:melee,V0=(Neutral),  (Gold und Holz)
+Tip=Abbauen/Sammeln
+Ubertip=Baut Gold in Goldminen ab und sammelt Holz von Bäumen.
+Untip=Rohstoffe zurückbringen
+Unubertip=Bringt die abgebauten Rohstoffe zum nächsten Tempel der Gezeiten.
+Hotkey=M
+Unhotkey=E
+
+// Ensnare (Naga)
+[ANen]
+Name=Einschnüren
+Tip=Einschnüren
+Ubertip="Fesselt die gegnerische Zieleinheit an den Boden, sodass sie sich <Aens,Dur1> Sek. lang nicht bewegen kann. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden."
+Hotkey=E
+
+
+// Frost Armor (Autocast, Naga)
+[ACfu]
+Name=Frostrüstung
+EditorSuffix=(Automatischer Einsatz)
+Tip=Frostrüstung
+Ubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <ACfu,DataB1> und verlangsamt angreifende Nahkampfeinheiten für <ACfu,Dur1> Sek.|nHält <ACfu,DataA1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+
+// Parasite
+[ANpa]
+Name=Parasit
+Tip=Parasit
+Ubertip="Infiziert eine gegnerische Zieleinheit mit einem tödlichen Parasiten, der <ANpa,Dur1> Sek. lang <ANpa,DataA1> Schaden pro Sekunde verursacht. Wenn die Einheit unter dem Einfluss des Parasiten stirbt, steigt ein schwacher Diener aus ihrer Leiche empor."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+
+[BNpa]
+Bufftip="Parasit"
+Buffubertip="Diese Einheit ist von einem Parasiten infiziert und erleidet periodischen Schaden. Wenn die Einheit unter dem Einfluss des Parasiten stirbt, steigt ein Diener aus ihrer Leiche empor."
+
+// Parasite Minion
+[BNpm]
+Bufftip="Parasit"
+Buffubertip="Diese Einheit ist von einem Parasiten infiziert und erleidet periodischen Schaden. Wenn die Einheit unter dem Einfluss des Parasiten stirbt, steigt ein Diener aus ihrer Leiche empor."
+EditorSuffix= (Diener)
+
+// Cyclone, Naga
+//Unused line: When that unit lands, its movement speed is slowed by a factor of <Acyc,DataC1>, and it will regain 1/<Acyc,DataC1> of its movement every <Acyc,DataB1> seconds.
+[Acny]
+Name=Wirbelsturm
+Tip=Wirbelsturm
+Ubertip="Schleudert eine nichtmechanische gegnerische Zieleinheit in die Luft. Die Einheit kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen. Andere Einheiten können sie nicht angreifen oder Fähigkeiten gegen sie einsetzen.|nHält <Acny,Dur1> Sek. lang an."
+Hotkey=M
+
+// null aoe roar, naga summoner
+[Ahnl]
+Name=Beschwörungsritual
+Tip=Beschwörungsritual
+Ubertip=Beschwört Energien aus dem Wirbelnden Nether.
+Hotkey=U
+
+// Channel
+[ANcl]
+Name=Kanalisieren
+Tip=Kanalisieren
+Ubertip=Kanalisiert mächtige Schutzmagie.
+Hotkey=K
+
+
+//orc campaign abilities
+
+// Summon Quilbeast (Rexxar)
+[Arsq]
+Name=Stachelbestie beschwören
+Tip=Stachelbestie beschwören [|cffffcc00Stufe 1|r],Stachelbestie beschwören [|cffffcc00Stufe 2|r],Stachelbestie beschwören [|cffffcc00Stufe 3|r],Stachelbestie beschwören [|cffffcc00Stufe 4|r]
+Ubertip="Beschwört eine wütende Stachelbestie mit <nqb1,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft.|nBleibt <Arsq,Dur1> Sek. lang bestehen.","Beschwört eine wütende Stachelbestie mit <nqb2,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft. Beherrscht Raserei.|nBleibt <Arsq,Dur2> Sek. lang bestehen.","Beschwört eine wütende Stachelbestie mit <nqb3,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft. Beherrscht Raserei und verursacht Flächenschaden.|nBleibt <Arsq,Dur3> Sek. lang bestehen.","Beschwört eine wütende Stachelbestie mit <nqb4,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft. Beherrscht Raserei und verursacht Flächenschaden.|nBleibt <Arsq,Dur4> Sek. lang bestehen."
+Hotkey=E
+Researchtip=Stachelbestie beschwören [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört eine wütende Stachelbestie, die Gegner angreift.|nBleibt <Arsq,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <nqb1,realHP> Trefferpunkte, <nqb1,mindmg1>-<nqb1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <nqb2,realHP> Trefferpunkte, <nqb2,mindmg1>-<nqb2,maxdmg1> Schaden, beherrscht Raserei.|n|cffffcc00Stufe 3|r - <nqb3,realHP> Trefferpunkte, <nqb3,mindmg1>-<nqb3,maxdmg1> Flächenschaden, beherrscht Raserei.|n|cffffcc00Stufe 4|r - <nqb4,realHP> Trefferpunkte, <nqb4,mindmg1>-<nqb4,maxdmg1> Flächenschaden, beherrscht Raserei."
+Researchhotkey=E
+EditorSuffix=(Rexxar)
+
+// Summon Bear (Rexxar)
+[Arsg]
+Name=Misha beschwören
+Tip=Misha beschwören [|cffffcc00Stufe 1|r],Misha beschwören [|cffffcc00Stufe 2|r],Misha beschwören [|cffffcc00Stufe 3|r],Misha beschwören [|cffffcc00Stufe 4|r]
+Ubertip="Beschwört Misha, eine mächtige Bärin mit <ngzc,realHP> Trefferpunkten, die Gegner angreift.","Beschwört Misha, eine mächtige Bärin mit <ngzd,realHP> Trefferpunkten, die Gegner angreift. Beherrscht Hieb.","Beschwört Misha, eine mächtige Bärin mit <ngza,realHP> Trefferpunkten, die Gegner angreift. Beherrscht Zermalmen.","Beschwört Misha, eine mächtige Bärin mit <ngz4,realHP> Trefferpunkten, die Gegner angreift. Beherrscht Zermalmen."
+Hotkey=I
+Researchtip=Misha beschwören [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört Misha, eine mächtige Bärin, die Gegner angreift.|n|n|cffffcc00Stufe 1|r - <ngzc,realHP> Trefferpunkte, <ngzc,mindmg1>-<ngzc,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <ngzd,realHP> Trefferpunkte, <ngzd,mindmg1>-<ngzd,maxdmg1> Schaden, beherrscht Hieb.|n|cffffcc00Stufe 3|r - <ngza,realHP> Trefferpunkte, <ngza,mindmg1>-<ngza,maxdmg1> Schaden, beherrscht Zermalmen.|n|cffffcc00Stufe 4|r - <ngz4,realHP> Trefferpunkte, <ngz4,mindmg1>-<ngz4,maxdmg1> Schaden, beherrscht Zermalmen."
+Researchhotkey=I
+EditorSuffix=(Rexxar)
+
+// Stampede (Rexxar)
+[Arsp]
+Name=Stampede
+Tip=Stampede [|cffffcc00Stufe 1|r],Stampede [|cffffcc00Stufe 2|r]
+Ubertip="Ruft Horden tobsüchtiger Donnerechsen herbei, die bei den Gegnern des Bestienmeisters explodieren. Jede Echse verursacht <Arsp,DataC1> Schaden.|nHält <Arsp,Dur1> Sek. lang an.","Ruft Horden tobsüchtiger Donnerechsen herbei, die bei den Gegnern des Bestienmeisters explodieren. Jede Echse verursacht <Arsp,DataC2> Schaden.|nHält <Arsp,Dur2> Sek. lang an."
+Hotkey=D
+Researchtip=Stampede [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ruft Horden tobsüchtiger Donnerechsen herbei, die bei den Gegnern des Bestienmeisters explodieren.|n|n|cffffcc00Stufe 1|r - Jede Echse verursacht <Arsp,DataC1> Schaden.|n|cffffcc00Stufe 2|r - Jede Echse verursacht <Arsp,DataC2> Schaden.|n|nHält <Arsp,Dur2> Sek. lang an."
+Researchhotkey=D
+EditorSuffix=(Rexxar)
+
+// Battle Roar
+[ANbr]
+Name=Kampfgebrüll
+Tip=Kampfgebrüll [|cffffcc00Stufe 1|r],Kampfgebrüll [|cffffcc00Stufe 2|r],Kampfgebrüll [|cffffcc00Stufe 3|r],Kampfgebrüll [|cffffcc00Stufe 4|r]
+Ubertip="Erhöht den Angriffsschaden verbündeter Einheiten in der Nähe um <ANbr,DataA1>.|nHält <ANbr,Dur1> Sek. lang an.","Erhöht den Angriffsschaden verbündeter Einheiten in der Nähe um <ANbr,DataA2>.|nHält <ANbr,Dur2> Sek. lang an.","Erhöht den Angriffsschaden verbündeter Einheiten in der Nähe um <ANbr,DataA3>.|nHält <ANbr,Dur3> Sek. lang an.","Erhöht den Angriffsschaden verbündeter Einheiten in der Nähe um <ANbr,DataA4>.|nHält <ANbr,Dur4> Sek. lang an."
+Hotkey=R
+Researchtip=Kampfgebrüll [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht den Angriffsschaden naher verbündeter Einheiten.|nHält <ANbr,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANbr,DataA1> Schaden.|n|cffffcc00Stufe 2|r - <ANbr,DataA2> Schaden.|n|cffffcc00Stufe 3|r - <ANbr,DataA3> Schaden.|n|cffffcc00Stufe 4|r - <ANbr,DataA4> Schaden."
+Researchhotkey=R
+
+[BNbr]
+Bufftip=Kampfgebrüll
+Buffubertip=Diese Einheit steht unter dem Effekt Kampfgebrüll. Ihre Angriffe verursachen mehr Schaden.
+
+// storm bolt
+[ANsb]
+Name=Sturmschlag
+Tip=Sturmschlag [|cffffcc00Stufe 1|r],Sturmschlag [|cffffcc00Stufe 2|r],Sturmschlag [|cffffcc00Stufe 3|r],Sturmschlag [|cffffcc00Stufe 4|r]
+Ubertip="Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <ANsb,DataA1> Schaden zu und betäubt sie für <ANsb,Dur1> Sek.","Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <ANsb,DataA2> Schaden zu und betäubt sie für <ANsb,Dur2> Sek.","Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <ANsb,DataA3> Schaden zu und betäubt sie für <ANsb,Dur3> Sek.","Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <ANsb,DataA4> Schaden zu und betäubt sie für <ANsb,Dur4> Sek."
+Hotkey=T
+Researchtip=Sturmschlag [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Schleudert einen magischen Hammer auf eine gegnerische Einheit, fügt ihr Schaden zu und betäubt sie.|n|n|cffffcc00Stufe 1|r - <ANsb,DataA1> Schaden, betäubt für <ANsb,Dur1> Sek.|n|cffffcc00Stufe 2|r - <ANsb,DataA2> Schaden, betäubt für <ANsb,Dur2> Sek.|n|cffffcc00Stufe 3|r - <ANsb,DataA3> Schaden, betäubt für <ANsb,Dur3> Sek.|n|cffffcc00Stufe 4|r - <ANsb,DataA4> Schaden, betäubt für <ANsb,Dur4> Sek."
+Researchhotkey=T
+
+// Breath of Fire (Chen)
+[ANcf]
+Name=Feuerodem
+Tip=Feuerodem [|cffffcc00Stufe 1|r],Feuerodem [|cffffcc00Stufe 2|r],Feuerodem [|cffffcc00Stufe 3|r],Feuerodem [|cffffcc00Stufe 4|r]
+Ubertip="Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANcf,DataA1> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANcf,Dur1> Sek. lang <ANcf,DataE1> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANcf,DataA2> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANcf,Dur2> Sek. lang <ANcf,DataE2> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANcf,DataA3> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANcf,Dur3> Sek. lang <ANcf,DataE3> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANcf,DataA4> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANcf,Dur4> Sek. lang <ANcf,DataE4> Schaden pro Sekunde."
+Hotkey=F
+Researchtip=Feuerodem [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Haucht einen Feuerkegel auf gegnerische Einheiten, der Schaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden periodischen Brandschaden.|nHält <ANcf,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANcf,DataA1> Direktschaden, <ANcf,DataE1> Schaden pro Sekunde.|n|cffffcc00Stufe 2|r - <ANcf,DataA2> Direktschaden, <ANcf,DataE2> Schaden pro Sekunde.|n|cffffcc00Stufe 3|r - <ANcf,DataA3> Direktschaden, <ANcf,DataE3> Schaden pro Sekunde.|n|cffffcc00Stufe 4|r - <ANcf,DataA4> Direktschaden, <ANcf,DataE4> Schaden pro Sekunde."
+Researchhotkey=F
+EditorSuffix=(Chen)
+
+// Drunken Brawler (Chen)
+[Acdb]
+Name=Flüchtiger Kämpfer
+Tip=Flüchtiger Kämpfer [|cffffcc00Stufe 1|r],Flüchtiger Kämpfer [|cffffcc00Stufe 2|r],Flüchtiger Kämpfer [|cffffcc00Stufe 3|r],Flüchtiger Kämpfer [|cffffcc00Stufe 4|r]
+Ubertip="Gewährt eine Ausweichchance von <Acdb,DataD1,%>% und eine Chance von <Acdb,DataA1>%, das <Acdb,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <Acdb,DataD2,%>% und eine Chance von <Acdb,DataA2>%, das <Acdb,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <Acdb,DataD3,%>% und eine Chance von <Acdb,DataA3>%, das <Acdb,DataB3>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <Acdb,DataD4,%>% und eine Chance von <Acdb,DataA4>%, das <Acdb,DataB4>-Fache des normalen Schadens zu verursachen."
+Researchtip=Flüchtiger Kämpfer [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Gewährt eine Ausweichchance und eine Chance von <Acdb,DataA1>%, mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <Acdb,DataD1,%>% Ausweichchance, Chance auf <Acdb,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <Acdb,DataD2,%>% Ausweichchance, Chance auf <Acdb,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <Acdb,DataD3,%>% Ausweichchance, Chance auf <Acdb,DataB3>-fachen normalen Schaden.|n|cffffcc00Stufe 4|r - <Acdb,DataD4,%>% Ausweichchance, Chance auf <Acdb,DataB4>-fachen normalen Schaden."
+Researchhotkey=B
+EditorSuffix=(Chen)
+
+// Drunken Haze (Chen)
+[Acdh]
+Name=Fasshieb
+Tip=Fasshieb [|cffffcc00Stufe 1|r],Fasshieb [|cffffcc00Stufe 2|r],Fasshieb [|cffffcc00Stufe 3|r],Fasshieb [|cffffcc00Stufe 4|r]
+Ubertip="Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <Acdh,DataC1,%>% verringert und ihre Chance, zu verfehlen, um <Acdh,DataB1,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <Acdh,Dur1> Sek. lang an.","Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <Acdh,DataC2,%>% verringert und ihre Chance, zu verfehlen, um <Acdh,DataB2,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <Acdh,Dur2> Sek. lang an.","Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <Acdh,DataC3,%>% verringert und ihre Chance, zu verfehlen, um <Acdh,DataB3,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <Acdh,Dur3> Sek. lang an.","Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <Acdh,DataC4,%>% verringert und ihre Chance, zu verfehlen, um <Acdh,DataB4,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <Acdh,Dur4> Sek. lang an."
+Hotkey=T
+Researchtip=Fasshieb [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit verringert und ihre Chance, zu verfehlen, erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <Acdh,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <Acdh,DataC1,%>% verringerte Bewegungsgeschwindigkeit, <Acdh,DataB1,%>% Chance, zu verfehlen.|n|cffffcc00Stufe 2|r - <Acdh,DataC2,%>% verringerte Bewegungsgeschwindigkeit, <Acdh,DataB2,%>% Chance, zu verfehlen.|n|cffffcc00Stufe 3|r - <Acdh,DataC3,%>% verringerte Bewegungsgeschwindigkeit, <Acdh,DataB3,%>% Chance, zu verfehlen.|n|cffffcc00Stufe 4|r - <Acdh,DataC4,%>% verringerte Bewegungsgeschwindigkeit, <Acdh,DataB4,%>% Chance, zu verfehlen."
+Researchhotkey=T
+EditorSuffix=(Chen)
+
+// Storm, Earth, and Fire
+[Acef]
+Name="Sturm, Erde und Feuer"
+Tip="Sturm, Erde und Feuer [|cffffcc00Stufe 1|r]","Sturm, Erde und Feuer [|cffffcc00Stufe 2|r]"
+Ubertip="Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren.","Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren."
+Ubertip:melee,V0="Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren.","Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren."
+Hotkey=E
+Researchtip="Sturm, Erde und Feuer [|cffffcc00Stufe %d|r] erlernen"
+Researchubertip="Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren.|n|n|cffffcc00Stufe 1|r - Beschwört drei mächtige Pandaren.|n|cffffcc00Stufe 2|r - Beschwört drei noch mächtigere Pandaren."
+Researchubertip:melee,V0="Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren.|n|n|cffffcc00Stufe 1|r - Beschwört drei mächtige Pandaren.|n|cffffcc00Stufe 2|r - Beschwört drei noch mächtigere Pandaren."
+Researchhotkey=E
+EditorSuffix=(Chen)
+
+// Healing Wave (Rokhan)
+[ANhw]
+Name=Welle der Heilung
+Tip=Welle der Heilung [|cffffcc00Stufe 1|r],Welle der Heilung [|cffffcc00Stufe 2|r],Welle der Heilung [|cffffcc00Stufe 3|r],Welle der Heilung [|cffffcc00Stufe 4|r]
+Ubertip="Ruft eine Energiewelle hervor, die das Primärziel um <ANhw,DataA1> Trefferpunkte heilt und <ANhw,DataB1>-mal überspringt. Jeder Sprung heilt weniger.","Ruft eine Energiewelle hervor, die das Primärziel um <ANhw,DataA2> Trefferpunkte heilt und <ANhw,DataB2>-mal überspringt. Jeder Sprung heilt weniger.","Ruft eine Energiewelle hervor, die das Primärziel um <ANhw,DataA3> Trefferpunkte heilt und <ANhw,DataB3>-mal überspringt. Jeder Sprung heilt weniger.","Ruft eine Energiewelle hervor, die das Primärziel um <ANhw,DataA4> Trefferpunkte heilt und <ANhw,DataB4>-mal überspringt. Jeder Sprung heilt weniger."
+Hotkey=E
+Researchtip=Welle der Heilung [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ruft eine Energiewelle hervor, die ein Ziel heilt und zu nahen verbündeten Einheiten überspringt. Jeder Sprung heilt weniger.|n|n|cffffcc00Stufe 1|r - Heilt um <ANhw,DataA1> Trefferpunkte, springt <ANhw,DataB1>-mal.|n|cffffcc00Stufe 2|r - Heilt um <ANhw,DataA2> Trefferpunkte, springt <ANhw,DataB2>-mal.|n|cffffcc00Stufe 3|r - Heilt um <ANhw,DataA3> Trefferpunkte, springt <ANhw,DataB3>-mal.|n|cffffcc00Stufe 4|r - Heilt um <ANhw,DataA4> Trefferpunkte, springt <ANhw,DataB4>-mal."
+Researchhotkey=E
+EditorSuffix=(Rokhan)
+
+// Hex (rokhan)
+[ANhx]
+Name=Verhexen
+Tip=Verhexen [|cffffcc00Stufe 1|r],Verhexen [|cffffcc00Stufe 2|r],Verhexen [|cffffcc00Stufe 3|r],Verhexen [|cffffcc00Stufe 4|r]
+Ubertip="Verwandelt eine gegnerische Einheit für <ANhx,Dur1> Sek. in ein zufälliges Tier.","Verwandelt eine gegnerische Einheit für <ANhx,Dur2> Sek. in ein zufälliges Tier.","Verwandelt eine gegnerische Einheit für <ANhx,Dur3> Sek. in ein zufälliges Tier.","Verwandelt eine gegnerische Einheit für <ANhx,Dur4> Sek. in ein zufälliges Tier."
+Hotkey=X
+Researchtip=Verhexen [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Verwandelt eine gegnerische Einheit in ein zufälliges Tier und deaktiviert Spezialfähigkeiten.|n|n|cffffcc00Stufe 1|r - <ANhx,Cost1> Mana, hält <ANhx,Dur1> Sek. lang an.|n|cffffcc00Stufe 2|r - <ANhx,Cost2> Mana, hält <ANhx,Dur2> Sek. lang an.|n|cffffcc00Stufe 3|r - <ANhx,Cost3> Mana, hält <ANhx,Dur3> Sek. lang an.|n|cffffcc00Stufe 4|r - <ANhx,Cost4> Mana, hält <ANhx,Dur4> Sek. lang an."
+Researchhotkey=X
+EditorSuffix=(Rokhan)
+
+// Serpent Ward
+[Arsw]
+Name=Schlangenschutz
+Tip=Schlangenschutz [|cffffcc00Stufe 1|r],Schlangenschutz [|cffffcc00Stufe 2|r],Schlangenschutz [|cffffcc00Stufe 3|r],Schlangenschutz [|cffffcc00Stufe 4|r]
+Ubertip="Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp1,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp1,mindmg1>-<osp1,maxdmg1> Schaden.|nBleibt <Arsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp2,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp2,mindmg1>-<osp2,maxdmg1> Schaden.|nBleibt <Arsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp3,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp3,mindmg1>-<osp3,maxdmg1> Schaden.|nBleibt <Arsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp4,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp4,mindmg1>-<osp4,maxdmg1> Flächenschaden.|nBleibt <Arsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=U
+Researchtip=Schlangenschutz [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz ist immun gegen Magie.|nBleibt <Arsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r|n|n|cffffcc00Stufe 1|r - <osp1,realHP> Trefferpunkte, <osp1,mindmg1>-<osp1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <osp2,realHP> Trefferpunkte, <osp2,mindmg1>-<osp2,maxdmg1> Schaden.|n|cffffcc00Stufe 3|r - <osp3,realHP> Trefferpunkte, <osp3,mindmg1>-<osp3,maxdmg1> Schaden.|n|cffffcc00Stufe 4|r - <osp4,realHP> Trefferpunkte, <osp4,mindmg1>-<osp4,maxdmg1> Flächenschaden."
+Researchhotkey=U
+EditorSuffix=(Rokhan)
+
+// Endurance Aura (Cairne)
+[AOr2]
+Name=Ausdaueraura
+Tip=Ausdaueraura [|cffffcc00Stufe 1|r],Ausdaueraura [|cffffcc00Stufe 2|r],Ausdaueraura [|cffffcc00Stufe 3|r],Ausdaueraura [|cffffcc00Stufe 4|r]
+Ubertip="Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOr2,DataA1,%>% und die Angriffsgeschwindigkeit um <AOr2,DataB1,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOr2,DataA2,%>% und die Angriffsgeschwindigkeit um <AOr2,DataB2,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOr2,DataA3,%>% und die Angriffsgeschwindigkeit um <AOr2,DataB3,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOr2,DataA4,%>% und die Angriffsgeschwindigkeit um <AOr2,DataB4,%>%."
+Researchtip=Ausdaueraura [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht die Bewegungs- und Angriffsgeschwindigkeit von verbündeten Einheiten in der Nähe.|n|n|cffffcc00Stufe 1|r - <AOr2,DataA1,%>% Bewegungsgeschwindigkeit, <AOr2,DataB1,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 2|r - <AOr2,DataA2,%>% Bewegungsgeschwindigkeit, <AOr2,DataB2,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 3|r - <AOr2,DataA3,%>% Bewegungsgeschwindigkeit, <AOr2,DataB3,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 4|r - <AOr2,DataA4,%>% Bewegungsgeschwindigkeit, <AOr2,DataB4,%>% Angriffsgeschwindigkeit."
+Researchhotkey=E
+EditorSuffix=(Cairne)
+
+// Shockwave (Cairne)
+[AOs2]
+Name=Schockwelle
+Tip=Schockwelle [|cffffcc00Stufe 1|r],Schockwelle [|cffffcc00Stufe 2|r],Schockwelle [|cffffcc00Stufe 3|r],Schockwelle [|cffffcc00Stufe 4|r]
+Ubertip="Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOs2,DataA1> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOs2,DataA2> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOs2,DataA3> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOs2,DataA4> Schaden zufügt."
+Hotkey=W
+Researchtip=Schockwelle [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Entfesselt eine Kraftwelle, die vom Helden ausgeht und Bodeneinheiten in einer Linie Schaden zufügt.|n|n|cffffcc00Stufe 1|r - <AOs2,DataA1> Schaden.|n|cffffcc00Stufe 2|r - <AOs2,DataA2> Schaden.|n|cffffcc00Stufe 3|r - <AOs2,DataA3> Schaden.|n|cffffcc00Stufe 4|r - <AOs2,DataA4> Schaden."
+Researchhotkey=W
+EditorSuffix=(Cairne)
+
+// Reincarnation (Cairne)
+[AOr3]
+Name=Reinkarnation
+Tip=Reinkarnation [|cffffcc00Stufe 1|r],Reinkarnation [|cffffcc00Stufe 1|r]
+Ubertip="Nach dem Tod wird Cairne wiederbelebt. Reinkarnation hat eine Abklingzeit von <AOr3,Cool1> Sek.","Nach dem Tod wird Cairne wiederbelebt. Reinkarnation hat eine Abklingzeit von <AOr3,Cool2> Sek."
+Researchtip=Reinkarnation erlernen
+Researchubertip="Nach dem Tod wird der Taurenhäuptling wiederbelebt.|n|n|cffffcc00Stufe 1|r - <AOr3,Cool1> Sek. Abklingzeit.|n|cffffcc00Stufe 2|r - <AOr3,Cool2> Sek. Abklingzeit."
+Researchhotkey=R
+Globalmessage=
+Globalsound=
+EditorSuffix=(Cairne)
+
+// War Stomp (Chieftan)
+[AOw2]
+Name=Kriegsdonner
+Tip=Kriegsdonner [|cffffcc00Stufe 1|r],Kriegsdonner [|cffffcc00Stufe 2|r],Kriegsdonner [|cffffcc00Stufe 3|r],Kriegsdonner [|cffffcc00Stufe 4|r]
+Ubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOw2,DataA1> Schaden zu und betäubt sie für <AOw2,Dur1> Sek.","Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOw2,DataA2> Schaden zu und betäubt sie für <AOw2,Dur2> Sek.","Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOw2,DataA3> Schaden zu und betäubt sie für <AOw2,Dur3> Sek.","Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOw2,DataA4> Schaden zu und betäubt sie für <AOw2,Dur4> Sek."
+Researchtip=Kriegsdonner [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe Schaden zu und betäubt sie.|n|n|cffffcc00Stufe 1|r - <AOw2,DataA1> Schaden, betäubt für <AOw2,Dur1> Sek.|n|cffffcc00Stufe 2|r - <AOw2,DataA2> Schaden, betäubt für <AOw2,Dur2> Sek.|n|cffffcc00Stufe 3|r - <AOw2,DataA3> Schaden, betäubt für <AOw2,Dur3> Sek.|n|cffffcc00Stufe 4|r - <AOw2,DataA4> Schaden, betäubt für <AOw2,Dur4> Sek."
+Hotkey=D
+Researchhotkey=D
+
+
+// Voodoo Spirits
+[AOls]
+Name=Voodoogeister
+Tip=Voodoogeister [|cffffcc00Stufe 1|r],Voodoogeister [|cffffcc00Stufe 2|r]
+Ubertip="Entfesselt einen Schwarm wütender Geister, die nahen gegnerischen Einheiten die Lebensenergie entziehen. Bei ihrer Rückkehr heilen sie Rokhan mit der entzogenen Energie.|n Hält <AOls,HeroDur1> Sek. lang an.","Entfesselt einen Schwarm wütender Geister, die nahen gegnerischen Einheiten die Lebensenergie entziehen. Bei ihrer Rückkehr heilen sie Rokhan mit der entzogenen Energie.|n Hält <AOls,HeroDur1> Sek. lang an."
+Hotkey=V
+Researchtip=Voodoogeister [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Entfesselt einen Schwarm wütender Geister, die nahen gegnerischen Einheiten die Lebensenergie entziehen. Bei ihrer Rückkehr heilen sie Rokhan mit der entzogenen Energie.|n|n|cffffcc00Stufe 1|r - <AOls,DataA1> Geister.|n|cffffcc00Stufe 2|r - <AOls,DataA2> Geister.|n|nHält <AOls,HeroDur1> Sek. lang an."
+Researchhotkey=V

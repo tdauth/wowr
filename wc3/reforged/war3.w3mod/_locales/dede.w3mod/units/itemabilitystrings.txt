@@ -1,0 +1,1106 @@
+// Item abilities are generally activated via the inventory UI and not through their own hotkeys
+
+// Rune of the Watcher
+[APwt]
+Name=Rune des Wächters
+
+// Blink (item)
+[AIbk]
+Name=Blinzeln (Gegenstandsversion)
+
+// One time permanent strength gain ability, usually on a Tome
+[AIsm]
+Name=Gegenstand: Stärkeerhöhung
+
+// One time permanent agility gain ability, usually on a tome
+[AIam]
+Name=Gegenstand: Beweglichkeitserhöhung
+
+// short duration single target speed bonus
+[AIsp]
+Name=Gegenstand: Vorübergehender Geschwindigkeitsbonus
+
+// continuous Attack Bonus
+[AIat]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+3)
+
+// continuous Defense Bonus
+[AIde]
+Name=Gegenstand: Rüstungsbonus
+
+// area of effect damage of destructables
+[AIdm]
+Name=Gegenstand: Flächenschaden gegen Bäume/Mauern
+
+// One time permanent hero experience gain, usually on a tome
+[AIem]
+Name=Gegenstand: Erfahrungsgewinn
+
+[AIe2]
+Name=Gegenstand: Erfahrungsgewinn
+EditorSuffix= (Groß)
+
+// Cloud of Fog
+[AIfg]
+Name=Nebelwolke
+Tip=Nebelwolke
+Ubertip="Erzeugt eine kleine Wolke, die Gebäude in ihrem Wirkungsbereich daran hindert, Fernkampfangriffe auszuführen.|nHält <Aclf,Dur1> Sek. lang an."
+Hotkey=K
+
+// Flag Ability, to show something on a hero carrying the flag
+[AIfl]
+Name=Gegenstand: Flaggeneroberung
+
+// human flag
+[AIfm]
+Name=Gegenstand: Flaggeneroberung
+EditorSuffix=(Menschen)
+
+// night elf flag
+[AIfn]
+Name=Gegenstand: Flaggeneroberung
+EditorSuffix=(Nachtelfen)
+
+// orc flag
+[AIfo]
+Name=Gegenstand: Flaggeneroberung
+EditorSuffix=(Orcs)
+
+// undead flag
+[AIfe]
+Name=Gegenstand: Flaggeneroberung
+EditorSuffix=(Untote)
+
+// One time permanent hero level gain, usually on a tome
+[AIlm]
+Name=Gegenstand: Stufenerhöhung
+
+// One time permanent intelligence gain, usually on a Tome
+[AIim]
+Name=Gegenstand: Intelligenzerhöhung
+
+// One time permanent int/agi/str gain
+[AIxm]
+Name=Gegenstand: Intelligenz-/Beweglichkeits-/Stärkeerhöhung
+
+// single shot one target healing (potions, typically)
+[AIhe]
+Name=Gegenstand: Heilung
+
+[AIhx]
+Name=Gegenstand: Heilung
+EditorSuffix=(Am geringsten)
+
+// single shot group area effect healing (scrolls, typically)
+[AIha]
+Name=Gegenstand: Gebietsheilung
+
+[AIhb]
+Name=Gegenstand: Gebietsheilung
+EditorSuffix= (Groß)
+
+// single shot group area effect healing (powerup, lesser)
+[APh1]
+Name=Powerup: Geringe Gebietsheilung
+
+// single shot group area effect healing (powerup)
+[APh2]
+Name=Powerup: Gebietsheilung
+
+// single shot group area effect healing (powerup, greater)
+[APh3]
+Name=Powerup: Große Gebietsheilung
+
+
+// short duration single target invisibility (potion)
+[AIvi]
+Name=Gegenstand: Vorübergehende Unsichtbarkeit
+
+// short duration single target invulnerability (potion)
+[AIvu]
+Name=Gegenstand: Vorübergehende Unverwundbarkeit
+
+[AIvl]
+Name=Gegenstand: Vorübergehende Unverwundbarkeit
+EditorSuffix=(Geringer)
+
+// single shot one target mana regain (potions, typically)
+[AIma]
+Name=Gegenstand: Manawiederherstellung
+
+// single shot group area effect mana regain (scrolls, typically)
+[AImr]
+Name=Gegenstand: Gebietswiederherstellung von Mana
+
+// single shot group area effect mana regain (rune)
+[APmr]
+Name=Rune: Gebietswiederherstellung von Mana
+
+// single shot group area effect mana regain (rune, greater)
+[APmg]
+Name=Rune: Große Gebietswiederherstellung von Mana
+
+// single shot one target life/mana restore (potion)
+[AIre]
+Name=Gegenstand: Wiederherstellung von Trefferpunkten/Mana
+
+// single shot group area effect life/mana restore (scroll)
+[AIra]
+Name=Gegenstand: Gebietswiederherstellung von Trefferpunkten/Mana
+
+// single shot group area effect life/mana restore (rune)
+[APra]
+Name=Rune: Gebietswiederherstellung von Trefferpunkten/Mana
+
+// area of effect application of a defensive buff (scroll of protection)
+[AIda]
+Name=Gegenstand: Vorübergehender Gebietsrüstungsbonus
+
+// area of effect application of a defensive buff (scroll of protection) (with healing)
+[AIdb]
+Name=Gegenstand: Vorübergehender Gebietsrüstungsbonus
+EditorSuffix=(mit Trefferpunkte- und Manawiederherstellung)
+
+// buff that AIda applies
+[Bdef]
+Bufftip=Rolle des Schutzes
+Buffubertip=Diese Einheit steht unter dem Effekt einer Rolle des Schutzes. Ihre Rüstung ist vorübergehend erhöht.
+
+// area of effect detection (crystal ball)
+[AIta]
+Name=Gegenstand: Gebietsaufdeckung
+
+// continuous Mana regeneration (ring)
+[AIrm]
+Name=Gegenstand: Manaregeneration
+
+[AIfi]
+Name=Gegenstand: Feuerblitz
+
+// Illusion generator
+[AIil]
+Name=Gegenstand: Illusionen
+
+[BIil]
+Bufftip=Illusion
+Buffubertip=Diese Einheit ist eine Illusion. Sie erleidet mehr Schaden durch gegnerische Angriffe.
+
+// Dispel effect
+[AIdi]
+Name=Gegenstand: Bannen
+
+[AIds]
+Name=Gegenstand: Bannen
+EditorSuffix= (mit Abklingzeit)
+
+// Dispel effect (powerup)
+[APdi]
+Name=Powerup: Bannen
+
+// Hero attacks get fire damage bonus, persistent, Orb of Fire
+[AIfb]
+Name=Gegenstand: Angriffsbonus durch Feuer
+
+// Hero attacks get lightning damage bonus, persistent, Orb of Lightning
+[AIlb]
+Name=Gegenstand: Angriffsbonus durch Blitz
+
+// Hero attacks get black arrow bonus
+[AIdf]
+Name=Gegenstand: Angriffsbonus durch Schwarze Pfeile
+
+// purge portion of lightning orb
+[AIlp]
+Name=Gegenstand: Reinigen
+EditorSuffix= (1)
+
+// Hero attacks get frost damage bonus, persistent, Orb of Frost
+[AIob]
+Name=Gegenstand: Angriffsbonus durch Frost
+
+[AIpb]
+Name=Gegenstand: Angriffsbonus durch Gift
+
+[AIcb]
+Name=Gegenstand: Angriffsbonus durch Verderbnis
+
+[BIcb]
+Bufftip=Verderbnis
+Buffubertip=Diese Einheit wurde von einer Verderbniskugel getroffen und hat vorübergehend weniger Rüstung.
+
+// Hero sight range increase, persistent, Telescope
+[AIsi]
+Name=Gegenstand: Sichtradiusbonus
+
+// Soul Gem Hero soul theft ability
+[AIso]
+Name=Gegenstand: Seelendiebstahl
+
+// Soul Gem Hero soul-carying ability - remove this to release the soul
+[Asou]
+Name=Gegenstand: Seelenbesessenheit
+
+// caster buff for AIso
+[BIsv]
+Bufftip=Seelendiebstahl
+Buffubertip="Dies ist die Seele eines Helden."
+
+// reincarnation (ankh)
+[AIrc]
+Name=Gegenstand: Reinkarnation
+
+// recall (amulet)
+[AIrt]
+Name=Gegenstand: Rückruf
+
+[AItp]
+Name=Gegenstand: Stadtportal
+
+[AIco]
+Name=Gegenstand: Befehl
+
+// figurine unit summon ability - red drake
+[AIfd]
+Name=Gegenstand: Rotdrache beschwören,Gegenstand: Blaudrache beschwören
+
+// furbolg
+[AIff]
+Name=Gegenstand: Furbolg beschwören,Gegenstand: Blaudrachenbrutaufseher beschwören
+
+// rock golem
+[AIfr]
+Name=Gegenstand: Steingolem beschwören
+
+// doom guard
+[AIfu]
+Name=Gegenstand: Verdammniswache beschwören
+
+// felhound
+[AIfh]
+Name=Gegenstand: Teufelspirscher beschwören
+
+// skeleton
+[AIfs]
+Name=Gegenstand: Skelett beschwören
+
+// Ice Revenant
+[AIir]
+Name=Gegenstand: Eisklagegeist beschwören
+
+// Ursa Warrior
+[AIuw]
+Name=Gegenstand: Ursakrieger beschwören
+
+[BFig]
+Bufftip=Beschworene Einheit
+Buffubertip=Bannen fügt beschworenen Einheiten zusätzlichen Schaden zu.
+
+// place goblin land mine
+[AIpm]
+Name=Gegenstand: Goblinlandmine platzieren
+
+// permanent attack bonus
+[AIaa]
+Name=Gegenstand: Dauerhafte Schadenserhöhung,Gegenstand: Angriffsschadenserhöhung
+
+// permanent hit point bonus
+[AImi]
+Name=Gegenstand: Dauerhafte Trefferpunkterhöhung,Gegenstand: Trefferpunkterhöhung
+
+[AIpx]
+Name=Gegenstand: Dauerhafte Trefferpunkterhöhung
+EditorSuffix=(Geringer)
+
+// vampiric life steal ability
+[AIva]
+Name=Gegenstand: Lebensdiebstahl
+
+// cloak of flames immolation
+[AIcf]
+Name=Gegenstand: Feuerbrand
+
+// Cloak of Flames immolation buff
+[BIcf]
+Bufftip=Flammenumhang
+Buffubertip=Diese Einheit hat einen Flammenumhang. Gegnerische Bodeneinheiten in ihrer Nähe erleiden periodischen Schaden.
+
+// hero stat bonus
+[AIab]
+Name=Gegenstand: Heldenwertbonus
+
+// freeze damage bonus
+[AIzb]
+Name=Gegenstand: Schadensbonus durch Eis
+
+// max life bonus
+[AIml]
+Name=Gegenstand: Trefferpunktebonus
+
+[AIlz]
+Name=Gegenstand: Trefferpunktebonus
+EditorSuffix=(Am geringsten)
+
+// regen life
+[Arel]
+Name=Gegenstand: Trefferpunktregeneration
+
+// anti-magic shield
+[Aami]
+Name=Gegenstand: Antimagische Hülle
+
+// max mana bonus
+[AImm]
+Name=Gegenstand: Manabonus
+
+[AImz]
+Name=Gegenstand: Manabonus (100)
+
+[AImv]
+Name=Gegenstand: Manabonus (75)
+
+[AI2m]
+Name=Gegenstand: Manabonus (200)
+
+// attack speed increase
+[AIas]
+Name=Gegenstand: Bonus für Angriffsgeschwindigkeit
+
+[AIsx]
+Name=Gegenstand: Bonus für Angriffsgeschwindigkeit
+EditorSuffix=(Handschuhe der Hast)
+
+[AIs2]
+Name=Gegenstand: Bonus für Angriffsgeschwindigkeit
+EditorSuffix= (Groß)
+
+[AIan]
+Name=Gegenstand: Totenbelebung
+
+[AIrs]
+Name=Gegenstand: Auferstehung
+
+[AIrx]
+Name=Gegenstand: Auferstehung
+EditorSuffix=(Abklingzeit)
+
+[APrl]
+Name=Geringe Runenauferstehung
+
+[APrr]
+Name=Große Runenauferstehung
+
+[AIaa]
+
+[AImi]
+
+[AIms]
+Name=Gegenstand: Bonus für Bewegungsgeschwindigkeit
+
+[AIa3]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+3 Beweglichkeit)
+
+[AIa4]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+4 Beweglichkeit)
+
+[AIa6]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+6 Beweglichkeit)
+
+[AIaz]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+10 Beweglichkeit)
+
+[AIx5]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+5 auf alle Werte)
+
+[AIx2]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+2 auf alle Werte)
+
+[AIs3]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+3 Stärke)
+
+[AIs4]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+4 Stärke)
+
+[AIs6]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+6 Stärke)
+
+[AIi3]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+3 Intelligenz)
+
+[AIi4]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+4 Intelligenz)
+
+[AIi6]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+6 Intelligenz)
+
+[AIgm]
+Name=Gegenstand: Beweglichkeitserhöhung
+EditorSuffix=(+2)
+
+[AItm]
+Name=Gegenstand: Intelligenzerhöhung
+EditorSuffix=(+2)
+
+[AInm]
+Name=Gegenstand: Stärkeerhöhung
+EditorSuffix=(+2)
+
+[AIt6]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+6)
+
+[AIt9]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+9)
+
+[AItc]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+12)
+
+[AItf]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+15)
+
+[AIcy]
+Name=Wirbelsturm
+Tip=Wirbelsturm
+Ubertip="Schleudert eine nichtmechanische gegnerische Zieleinheit in die Luft. Die Einheit kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen. Andere Einheiten können sie nicht angreifen oder Fähigkeiten gegen sie einsetzen.|nHält <AIcy,Dur1> Sek. lang an."
+Hotkey=M
+EditorSuffix=(Gegenstand)
+
+[AId1]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+1)
+
+[AId2]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+2)
+
+[AId3]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+3)
+
+[AId4]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+4)
+
+[AId5]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+5)
+
+[AId7]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+7)
+
+[AId8]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+8)
+
+[AId0]
+Name=Gegenstand: Rüstungsbonus
+EditorSuffix=(+10)
+
+[AIin]
+EditorSuffix=(Gegenstand)
+
+[AIlf]
+Name=Gegenstand: Trefferpunktebonus
+EditorSuffix=(Am geringsten)
+
+[AIl1]
+Name=Gegenstand: Trefferpunktebonus
+EditorSuffix=(Geringer)
+
+[AIl2]
+Name=Gegenstand: Trefferpunktebonus
+EditorSuffix=(Groß)
+
+[Arll]
+Name=Gegenstand: Trefferpunktregeneration
+EditorSuffix=(Geringer)
+
+[AIh1]
+Name=Gegenstand: Heilung
+EditorSuffix=(Geringer)
+
+[AIh2]
+Name=Gegenstand: Heilung
+EditorSuffix=(Groß)
+
+[AIhw]
+Name=Heilschutz
+Ubertip="Beschwört einen stationären Schutz, der pro Sekunde <Aoar,DataA1,%>% der Trefferpunkte verbündeter nichtmechanischer Einheiten in der Nähe wiederherstellt.|nBleibt <AIhw,Dur1> Sek. lang bestehen."
+EditorSuffix=(Gegenstand)
+
+[AIsw]
+Name=Wächterschutz
+Ubertip="Beschwört einen unsichtbaren stationären Schutz, der ein Gebiet sichtbar macht.|nKann unsichtbare Einheiten aufdecken.|nBleibt <AIsw,Dur1> Sek. lang bestehen."
+EditorSuffix=(Gegenstand)
+
+[AIv1]
+Name=Gegenstand: Vorübergehende Unsichtbarkeit
+EditorSuffix=(Geringer)
+
+[AIv2]
+Name=Gegenstand: Vorübergehende Unsichtbarkeit
+EditorSuffix=(Groß)
+
+[AIm1]
+Name=Gegenstand: Manawiederherstellung
+EditorSuffix=(Geringer)
+
+[AIm2]
+Name=Gegenstand: Manawiederherstellung
+EditorSuffix=(Groß)
+
+[AIrn]
+EditorSuffix=(Geringer)
+
+[AIad]
+EditorSuffix=(Gegenstand)
+
+[AIcd]
+EditorSuffix=(Gegenstand)
+
+[AIba]
+EditorSuffix=(Gegenstand)
+
+[AIav]
+EditorSuffix=(Gegenstand)
+
+[AIar]
+EditorSuffix=(Gegenstand)
+
+[AIae]
+EditorSuffix=(Gegenstand)
+
+[AIau]
+EditorSuffix=(Gegenstand)
+
+[AIls]
+Name=Blitzschild
+Ubertip="Gewährt der Zieleinheit einen Schild aus elektrischer Energie, der Einheiten in der Nähe <AIls,DataA1> Schaden pro Sekunde zufügt.|nHält <AIls,Dur1> Sek. lang an."
+EditorSuffix=(Gegenstand)
+
+[AIrr]
+Name=Gebrüll
+Ubertip="Erhöht den Schaden verbündeter Einheiten in der Nähe um <AIrr,DataA1,%>%.|nHält <AIrr,Dur1> Sek. lang an."
+EditorSuffix=(Gegenstand)
+
+[AIev]
+Name=Entrinnen
+Ubertip="Gewährt eine Ausweichchance von <AIev,DataA1,%>%."
+EditorSuffix=(Gegenstand)
+
+[AImx]
+Name=Zauberimmunität
+Ubertip=Macht diese Einheit immun gegen alle Formen von Magie.
+EditorSuffix=(Gegenstand)
+
+[AImb]
+Name=Gegenstand: Manabonus
+EditorSuffix=(Am geringsten)
+
+[AIbm]
+Name=Gegenstand: Manabonus
+EditorSuffix=(Groß)
+
+[AIuv]
+Name=Ultrasicht
+EditorSuffix=(Gegenstand)
+
+[AImh]
+Name=Gegenstand: Dauerhafte Trefferpunkterhöhung
+EditorSuffix=(+50)
+
+[AIa1]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+1 Beweglichkeit)
+
+[AIx1]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+1 auf alle Werte)
+
+[AIs1]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+1 Stärke)
+
+[AIi1]
+Name=Gegenstand: Heldenwertbonus
+EditorSuffix=(+1 Intelligenz)
+
+[AIfc]
+Name=Fliegender Teppich
+
+// Healing Salve
+[AIrl]
+Name=Heilsalbe
+
+[BIrl]
+Bufftip=Regeneration
+Buffubertip=Diese Einheit steht unter dem Effekt Regeneration. Ihre Trefferpunkte regenerieren sich mit der Zeit.
+
+// Clarity Potion
+[AIpr]
+Name=Klarsichttrank
+
+[AIpl]
+Name=Geringer Klarsichttrank
+
+// generic rejuv potion/scroll base
+[AIp1]
+Name=Standardgegenstand: Verjüngungseffekt
+
+[BIrm]
+Bufftip=Klarsichttrank
+Buffubertip=Diese Einheit hat einen Klarsichttrank getrunken und regeneriert mit der Zeit Mana.
+
+[AIp2]
+Name=Standardgegenstand: Verjüngungseffekt
+EditorSuffix= (II)
+
+[AIp3]
+Name=Standardgegenstand: Verjüngungseffekt
+EditorSuffix= (III)
+
+[AIp4]
+Name=Standardgegenstand: Verjüngungseffekt
+EditorSuffix= (IV)
+
+[AIp5]
+Name=Standardgegenstand: Verjüngungseffekt
+EditorSuffix= (V)
+
+[AIp6]
+Name=Standardgegenstand: Verjüngungseffekt
+EditorSuffix= (VI)
+
+// Scroll of Regeneration
+[AIsl]
+Name=Rolle der Regeneration
+
+[BIrg]
+Bufftip=Verjüngung
+Buffubertip=Diese Einheit regeneriert mit der Zeit Trefferpunkte und Mana.
+EditorSuffix= (Gegenstand)
+
+// One time permanent gold increase
+[AIgo]
+Name=Goldtruhe
+
+// One time permanent lumber increase
+[AIlu]
+Name=Holzbündel
+
+// Flare Gun
+[AIfa]
+Name=Leuchtpistole
+
+[AIrv]
+Name=Gegenstand: Gesamte Karte sichtbar machen
+
+
+// Wand of Neutralization
+[AIdc]
+Name=Gegenstand: Kettenbann
+
+// Spider Silk
+[AIwb]
+Name=Gegenstand: Gespinst
+
+// Monster Lure
+[AImo]
+Name=Monsterköder
+
+[BImo]
+Bufftip=Monsterköder
+Buffubertip=Unholde in der Nähe werden zu diesem Köder gelockt.
+
+// Random Item
+[AIri]
+Name=Zufälliger Gegenstand
+
+// Blight Placement
+[Ablp]
+Name=Platzierung von verseuchtem Boden
+
+// Steal
+[Aste]
+Name=Stehlen
+
+// Change TOD
+[AIct]
+Name=Tageszeit ändern
+
+// Vampiric Potion
+[AIpv]
+Name=Vampirtrank
+
+[BIpv]
+Bufftip=Vampirtrank
+Buffubertip="Dieser Held hat einen Vampirtrank benutzt. Er verursacht mehr Schaden und hat einen Angriff, der Trefferpunkte stiehlt."
+
+// Spell Damage Reduction
+[AIsr]
+Name=Magieschadensverringerung
+
+// Build Tiny Castle
+[AIbl]
+Name=Winziges Schloss errichten
+
+// Build Tiny Castle
+[AIbg]
+Name=Winziges Haupthaus errichten
+
+//build tiny tower
+[AIbt]
+Name=Winzigen Kontrollturm errichten 
+
+
+// Shadowsight
+[Ashs]
+Name=Zauberstab der Schattensicht
+
+[Bshs]
+Bufftip=Zauberstab der Schattensicht
+Buffubertip=Diese Einheit wurde von einem Zauberstab der Schattensicht getroffen. Gegner können sie sehen.
+
+// Tome of Retraining
+[Aret]
+Name=Foliant des Vergessens
+
+// Staff of Teleportation
+[AImt]
+Name=Stab der Teleportation
+
+// Staff of Preservation
+[ANpr]
+Name=Stab der Bewahrung
+
+// Mechanical Critter
+[Amec]
+Name=Mechanisches Tier
+
+[Bmec]
+Bufftip=Mechanisches Tier
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Spell Shield
+[ANss]
+Name=Zauberschild
+EditorSuffix= (Amulett)
+
+// Spell Shield (AOE)
+[ANse]
+Name=Zauberschild
+EditorSuffix= (Rune)
+
+[BNss]
+Bufftip=Zauberschild
+Buffubertip="Ein Schutzschild, der eine Fähigkeit blockt."
+
+// Spell book
+[Aspb]
+Name=Zauberbuch
+
+// Raise Dead
+[AIrd]
+Name=Totenerweckung (Gegenstand)
+
+// Staff of Sanctuary
+[ANsa]
+Name=Stab der Zuflucht
+
+[BNsa]
+Bufftip=Zuflucht
+Buffubertip="Diese Einheit steht unter dem Effekt eines Stabs der Zuflucht. Ihre Trefferpunkte regenerieren sich mit der Zeit, aber sie kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen."
+
+[AIsa]
+Name=Rolle der Hast
+
+[APsa]
+Name=Rune der Geschwindigkeit
+
+[AItb]
+Name=Pulver der Erscheinung
+
+[Bdet]
+Bufftip=Pulver der Erscheinung
+Buffubertip=Das Pulver der Erscheinung deckt unsichtbare Einheiten auf.
+
+[AIsb]
+Name=Gegenstand: Verlangsamungsbonus für Angriffe
+
+[AIll]
+Name=Gegenstand: Blitzbonus für Angriffe (neu)
+
+[AIos]
+Name=Gegenstand: Verlangsamung
+Tip=Verlangsamung
+Ubertip="Verringert die Angriffsgeschwindigkeit einer gegnerischen Zieleinheit um <AIos,DataB1,%>% und die Bewegungsgeschwindigkeit um <AIos,DataA1,%>%.|nHält <AIos,Dur1> Sek. lang an."
+EditorSuffix=(Kugelversion)
+
+// Orb of Darkness
+[ANbs]
+Name=Gegenstand: Schwarzer Pfeil
+
+// Spirit Link (AOE)
+[Aspp]
+Name=Geistverbindung
+EditorSuffix= (Gebiet)
+
+[AIrb]
+Name=Wiedergeburt
+
+[BIrb]
+Bufftip=Wiedergeboren
+Buffubertip="Diese Einheit wurde wiedergeboren."
+
+// Dark Summoning
+[AUds]
+Name=Dunkle Beschwörung
+Tip=Dunkle Beschwörung
+Ubertip="Beschwört <AUds,DataA1> verbündete Einheiten aus dem Zielgebiet zum Benutzer."
+Hotkey=D
+Researchtip=Dunkle Beschwörung erlernen
+Researchubertip="Beschwört <AUds,DataA1> verbündete Einheiten aus dem Zielgebiet zum Benutzer."
+Researchhotkey=D
+
+// anti-magic shield
+[AIxs]
+Name=Gegenstand: Antimagische Hülle
+
+// divine shield item
+[AIdv]
+Name=Gegenstand: Gottesschild
+
+// silence item
+[AIse]
+Name=Gegenstand: Stille
+
+// item purge
+[AIpg]
+Name=Gegenstand: Reinigen
+EditorSuffix= (2)
+
+// item purge
+[AIps]
+Name=Gegenstand: Reinigen
+EditorSuffix= (3)
+
+//#RESTNOBETA
+[AItg]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+1)
+
+[AIth]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+2)
+
+[AIti]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+4)
+
+[AItj]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+5)
+
+[AItk]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+7)
+
+[AItl]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+8)
+
+[AItn]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+10)
+
+[AItx]
+Name=Gegenstand: Schadensbonus
+EditorSuffix=(+20)
+
+[AIh3]
+Name=Geringste Heilung
+EditorSuffix=(Langsame Abklingzeit)
+
+// orcish battle standard
+[AIfx]
+Name=Gegenstand: Orcschlachtstandarte
+
+// Hero attacks get fire damage bonus, persistent, Orb of Gul'dan
+[AIgd]
+Name=Gegenstand: Angriffsbonus durch Feuer
+EditorSuffix= (Gul'dan)
+
+
+// tiny altar of kings
+[AIbh]
+Name=Winzigen Altar der Könige errichten
+
+// tiny blacksmith
+[AIbb]
+Name=Winzige Schmiede errichten
+
+// tiny lumber mill
+[AIbr]
+Name=Winziges Sägewerk errichten
+
+// tiny farm
+[AIbf]
+Name=Winzigen Hof errichten
+
+// tiny barracks
+[AIbs]
+Name=Winzige Kaserne errichten
+
+[AIdn]
+Name=Fähigkeit Schattenkugel
+
+[AInd]
+Name=Wiederbelebung
+EditorSuffix=(Spezieller Kampagnengegenstand)
+
+[AIuf]
+Name=Unheilige Raserei
+EditorSuffix= (Gegenstand)
+
+[AIcm]
+Name=Magie kontrollieren
+EditorSuffix= (Gegenstand)
+
+[AIfz]
+Name=Todesfinger
+EditorSuffix= (Gegenstand)
+
+[AIdp]
+Name=Todespakt
+EditorSuffix= (Gegenstand)
+
+[AIdd]
+Name=Verteidigungshaltung,Passive Verteidigungshaltung
+EditorSuffix= (Gegenstand)
+
+[AIbx]
+Name=Hieb
+EditorSuffix= (Gegenstand)
+
+[AIwm]
+Name=Wasserdiener
+EditorSuffix= (Gegenstand)
+
+[AIsh]
+Name=Kopfjäger beschwören
+EditorSuffix= (Gegenstand)
+
+[BIsh]
+Bufftip=Kopfjägergeist
+
+[AIgx]
+Name=Regenerationsaura
+EditorSuffix= (Gegenstand)
+
+[AIhl]
+Name=Heiliges Licht
+EditorSuffix= (Gegenstand)
+
+[AIsz]
+Name=Schleichendes Gift
+EditorSuffix= (Gegenstand)
+
+[AIpz]
+Name=Pinguinquietschen
+
+[AIfw]
+Name=Nahkampfschadenbsonus durch Feuer
+
+[AIft]
+Name=Nahkampfschadensbonus durch Kälte
+
+[AIlx]
+Name=Nahkampfschadensbonus durch Blitz
+
+[AIcs]
+Name=Kritische Treffer
+EditorSuffix= (Gegenstand)
+
+[AIdd]
+
+[AIcl]
+Name=Kettenblitz
+EditorSuffix= (Gegenstand)
+
+[AIxk]
+Name=Berserker
+EditorSuffix= (Gegenstand)
+
+//----------------------------------------------------
+// Buffs with no in-game text
+// EditorName is for the Object Editor list only
+
+[BIwb]
+EditorName=Gegenstand: Gespinst
+
+[Btrv]
+EditorName=Teleportaufdeckung
+
+[AIdg]
+EditorSuffix=(Sofortige Heilung)
+Name=Ritualdolch
+
+[BIhm]
+Buffubertip=Diese Einheit wird weniger schnell geheilt.
+Bufftip=Verringerte Heilung
+
+[AIwd]
+EditorSuffix=(Gegenstand)
+
+[AIg2]
+EditorSuffix=(Regeneration),(Regeneration)
+Name=Ritualdolch,Ritualdolch
+
+[AIf2]
+Name=Gegenstand: Heilungsverringerungsbonus bei Angriffen
+
+[AIvg]
+EditorSuffix=(Offenbarung)
+Name=Gegenstand: Vorübergehende Unverwundbarkeit
+
+[AIts]
+Name=Gegenstand: Transmutieren
+
+[AIut]
+Name=Gegenstand: Furbolgspurenleser beschwören
+
+[AIa5]
+EditorSuffix=(+5 Beweglichkeit)
+Name=Gegenstand: Heldenwertbonus
+
+[AIx3]
+EditorSuffix=(+3 auf alle Werte)
+Name=Gegenstand: Heldenwertbonus
+
+[AIx4]
+EditorSuffix=(+4 auf alle Werte)
+Name=Gegenstand: Heldenwertbonus
+
+[AIs5]
+EditorSuffix=(+5 Stärke)
+Name=Gegenstand: Heldenwertbonus
+
+[AIi5]
+EditorSuffix=(+5 Intelligenz)
+Name=Gegenstand: Heldenwertbonus

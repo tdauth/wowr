@@ -1,0 +1,49 @@
+// Set the LANGID in [Game] to one of these unquoted constants:
+//
+//  English (US)            = 0x00000409
+//  English (UK)            = 0x00000809
+//  French                  = 0x0000040c
+//  German                  = 0x00000407
+//  Spanish                 = 0x0000040a
+//  Italian                 = 0x00000410
+//  Czech                   = 0x00000405
+//  Russian                 = 0x00000419
+//  Polish                  = 0x00000415
+//  Portuguese (Brazilian)  = 0x00000416
+//  Portuguese (Portugal)   = 0x00000816
+//  Turkish                 = 0x0000041f
+//  Japanese                = 0x00000411
+//  Korean                  = 0x00000412
+//  Chinese (Traditional)   = 0x00000404
+//  Chinese (Simplified)    = 0x00000804
+//  Thai                    = 0x0000041e
+//
+// Note: Do NOT quote the constant!
+
+[Game]
+LANGID=0x00000407
+
+// Set the LANGID in [Battle.net] to one of these single-quoted strings:
+//
+//  English (US)            = 'enUS' 
+//  English (UK)            = 'enGB' 
+//  French                  = 'frFR' 
+//  German                  = 'deDE' 
+//  Spanish                 = 'esES' 
+//  Italian                 = 'itIT' 
+//  Czech                   = 'csCZ' 
+//  Russian                 = 'ruRU' 
+//  Polish                  = 'plPL' 
+//  Portuguese (Brazilian)  = 'ptBR' 
+//  Portuguese (Portugal)   = 'ptPT' 
+//  Turkish                 = 'tkTK' 
+//  Japanese                = 'jaJA' 
+//  Korean                  = 'koKR' 
+//  Chinese (Traditional)   = 'zhTW' 
+//  Chinese (Simplified)    = 'zhCN' 
+//  Thai                    = 'thTH' 
+//
+// Note: You MUST single-quote the string!
+
+[Battle.net]
+LANGID='deDE'

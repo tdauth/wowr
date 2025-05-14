@@ -1,0 +1,299 @@
+﻿[oalt]
+Name=Altar der Stürme
+Hotkey=A
+Tip=Altar der Stürme errichten
+Ubertip=Beschwört Helden und belebt getötete Helden wieder.
+
+[oang]
+Name=Wächter der Ahnen
+
+[obar]
+Name=Kaserne
+Hotkey=K
+Tip=Kaserne errichten
+Ubertip="Primäres Truppenproduktionsgebäude. Bildet Grunzer und Kopfjäger aus und baut Verwüster.|nDient zur Erforschung von Bestialische Kraft, Trollberserkern, Trollregeneration und Brandöl."
+Ubertip:custom,V0=Primäres Truppenproduktionsgebäude. Bildet Grunzer und Kopfjäger aus und baut Verwüster.|nDient zur Erforschung von Bestialische Kraft und Trollregeneration.
+Ubertip:melee,V0=Primäres Truppenproduktionsgebäude. Bildet Grunzer und Kopfjäger aus und baut Verwüster.|nDient zur Erforschung von Bestialische Kraft und Trollregeneration.
+
+[obea]
+Name=Bestiarium
+Hotkey=E
+Tip=Bestiarium errichten
+Ubertip="Bildet Räuber, Kodobestien, Fledermausreiter und Windreiter aus.|nDient zur Erforschung von Einschnüren, Giftspeeren, Flüssigem Feuer und Verbesserten Kriegstrommeln."
+Ubertip:custom,V0="Bildet Räuber, Kodobestien und Windreiter aus.|nDient zur Erforschung von Einschnüren, Giftspeeren und Verbesserten Kriegstrommeln."
+Ubertip:melee,V0="Bildet Räuber, Kodobestien und Windreiter aus.|nDient zur Erforschung von Einschnüren, Giftspeeren und Verbesserten Kriegstrommeln."
+
+[Obla]
+Name=Klingenmeister
+Propernames=Tojara,Nikoro,Kajind,Mikasa,Samuro,Akinos,Mazuru,Yozshura,Daisho,Kigami,Arashikage,Moogul der Gerissene,Jubei
+Hotkey=M
+Tip=Klingenmeister beschwören
+Ubertip="Ein listiger Held, der schnell einzelne Einheiten töten kann und große Verwirrung unter Gegnern auslöst. Kann Spiegelbild, Windlauf, Kritische Treffer und Klingensturm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Klingenmeister wiederbeleben
+Awakentip=Klingenmeister wiederbeleben
+
+[ocat]
+Name=Verwüster
+Hotkey=V
+Tip=Verwüster bauen
+Ubertip="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar. Kann Brandöl erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:custom,V0="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:melee,V0="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[odoc]
+Name=Medizinmann
+Hotkey=Z
+Tip=Medizinmann ausbilden
+Ubertip="Ein unterstützender Magiebenutzer. Beherrscht Wächterschutz, wodurch ein unsichtbarer Detektor aufgestellt wird. Kann Stasisfalle und Heilschutz erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Wächterschutz","- Wächterschutz|n- Stasisfalle","- Wächterschutz|n- Stasisfalle|n- Heilschutz"
+
+[otot]
+Name=Stasisfalle
+
+[oeye]
+Name=Wächterschutz
+
+[Ofar]
+Name=Scharfseher
+Propernames=Gar'dal Grimmsicht,Negal Feuerauge,Kazil Finsterauge,Magis Kaltauge,Bale Trübblick,Gorr Grimmwolf,Kag'ar Winterfang,Nazgrel,Morg Wolfssänger,Kazragor,Fenris'ar Gul
+Hotkey=A
+Tip=Scharfseher beschwören
+Ubertip="Ein mystischer Held, der auf Fernkampf und auf Aufklärung spezialisiert ist. Kann Kettenblitz, Fernsicht, Wildgeist und Erdbeben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Scharfseher wiederbeleben
+Awakentip=Scharfseher wiederbeleben
+
+[ofor]
+Name=Kriegswerkstatt
+Hotkey=R
+Tip=Kriegswerkstatt errichten
+Ubertip="Dient als Abgabepunkt für geschlagenes Holz.|nDient zur Erforschung von verbesserter Rüstung, verbesserten Nah- und Fernkampfwaffen sowie Verstärkter Verteidigung und Stachelbarrikaden."
+Ubertip:custom,V0="Dient als Abgabepunkt für geschlagenes Holz.|nDient zur Erforschung von verbesserter Rüstung, verbesserten Nah- und Fernkampfwaffen sowie Stachelbarrikaden."
+Ubertip:melee,V0="Dient als Abgabepunkt für geschlagenes Holz.|nDient zur Erforschung von verbesserter Rüstung, verbesserten Nah- und Fernkampfwaffen sowie Stachelbarrikaden."
+
+[ofrt]
+Name=Festung
+Hotkey=U
+Tip=Ausbau zur Festung
+Ubertip=Der Ausbau zur Festung ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
+
+[ogre]
+Name=Haupthaus
+Hotkey=H
+Tip=Haupthaus errichten
+Ubertip="Hauptgebäude. Bildet Peons aus und nimmt abgebaute Rohstoffe entgegen. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen."
+
+[ogru]
+Name=Grunzer
+Hotkey=G
+Tip=Grunzer ausbilden
+Ubertip=Ein brutaler Orckrieger. Kann Bestialische Kraft erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[ohun]
+Name=Kopfjäger
+Hotkey=T
+Hotkey:custom,V0=J
+Hotkey:melee,V0=J
+Tip=Kopfjäger ausbilden
+Tip:custom,V0=Kopfjäger ausbilden
+Tip:melee,V0=Kopfjäger ausbilden
+Ubertip="Ein vielseitiger Speerwerfer, der mit Lufteinheiten kurzen Prozess macht. Kann Trollregeneration erlernen. Kann nach Erforschung zum Trollberserker werden und Berserker einsetzen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Ein vielseitiger Speerwerfer, der mit Lufteinheiten kurzen Prozess macht. Kann Trollregeneration erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Ein vielseitiger Speerwerfer, der mit Lufteinheiten kurzen Prozess macht. Kann Trollregeneration erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[otbk]
+Name=Berserker
+Hotkey=T
+Tip=Berserker ausbilden
+Ubertip="Ein vielseitiger Speerwerfer, der mit Lufteinheiten kurzen Prozess macht. Beherrscht Berserker, wodurch er mehr Schaden verursacht, aber auch mehr Schaden erleidet. Kann Trollregeneration erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ohwd]
+Name=Heilschutz
+
+[okod]
+Name=Kodobestie
+Hotkey=B
+Tip=Kodobestie ausbilden
+Ubertip="Eine schwerfällige Kriegsbestie, die von einem Orctrommler geritten wird. Beherrscht Kriegstrommeln und Verschlingen. Kriegstrommeln erhöhen den Angriffsschaden von verbündeten Einheiten in der Nähe. Mit Verschlingen frisst der Kodo die gegnerische Zieleinheit. Kann Verbesserte Kriegstrommeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Eine schwerfällige Kriegsbestie, die von einem Orctrommler geritten wird. Beherrscht Kriegstrommeln und Verschlingen. Kriegstrommeln erhöhen den Angriffsschaden von verbündeten Einheiten in der Nähe. Kann Verbesserte Kriegstrommeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Eine schwerfällige Kriegsbestie, die von einem Orctrommler geritten wird. Beherrscht Kriegstrommeln und Verschlingen. Kriegstrommeln erhöhen den Angriffsschaden von verbündeten Einheiten in der Nähe. Kann Verbesserte Kriegstrommeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[osld]
+Name=Geisterhaus
+Hotkey=S
+Tip=Geisterhaus errichten
+Ubertip=Produktionsgebäude für Magiebenutzer. Bildet Schamanen und Medizinmänner aus.|nDient zur Erforschung von Verbesserungen für Schamanen und Medizinmänner.
+Ubertip:custom,V0=Produktionsgebäude für Magiebenutzer. Bildet Schamanen und Medizinmänner aus.|nDient zur Erforschung von Verbesserungen für Schamanen und Medizinmänner.
+Ubertip:custom,V1=Produktionsgebäude für Magiebenutzer. Bildet Schamanen und Medizinmänner aus.|nDient zur Erforschung von Verbesserungen für Schamanen und Medizinmänner.
+Ubertip:melee,V0=Produktionsgebäude für Magiebenutzer. Bildet Schamanen und Medizinmänner aus.|nDient zur Erforschung von Verbesserungen für Schamanen und Medizinmänner.
+
+[opeo]
+Name=Peon
+Hotkey=P
+Tip=Peon ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann Baue betreten und aus dem Gebäude heraus angreifen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:custom,V0="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann Baue betreten und aus dem Gebäude heraus angreifen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[orai]
+Name=Räuber
+Hotkey=R
+Tip=Räuber ausbilden
+Ubertip=Ein extrem mobiler Wolfsreiter. Effektiv gegen Gebäude. Kann Einschnüren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[oshm]
+Name=Schamane
+Hotkey=S
+Tip=Schamane ausbilden
+Ubertip="Ein primärer Magiebenutzer. Beherrscht Reinigen, wodurch magische Stärkungseffekte gebannt und Gegner bewegungsunfähig gemacht werden können. Kann Blitzschild und Kampfrausch erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Ein primärer Magiebenutzer. Beherrscht Reinigen, wodurch Schwächungs- und Stärkungseffekte gebannt sowie Gegner verlangsamt werden können. Kann Blitzschild und Kampfrausch erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V1="Ein primärer Magiebenutzer. Beherrscht Reinigen, wodurch Schwächungs- und Stärkungseffekte gebannt sowie Gegner verlangsamt werden können. Kann Blitzschild und Kampfrausch erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Ein primärer Magiebenutzer. Beherrscht Reinigen, wodurch Schwächungs- und Stärkungseffekte gebannt sowie Gegner verlangsamt werden können. Kann Blitzschild und Kampfrausch erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Reinigen","- Reinigen|n- Blitzschild","- Reinigen|n- Blitzschild|n- Kampfrausch"
+
+[ostr]
+Name=Hochburg
+Hotkey=U
+Tip=Ausbau zur Hochburg
+Ubertip=Der Ausbau zur Hochburg ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
+
+[osw1]
+Name=Geisterwolf
+EditorSuffix= (Stufe 1)
+
+[osw2]
+Name=Terrorwolf
+EditorSuffix= (Stufe 2)
+
+[osw3]
+Name=Schattenwolf
+EditorSuffix= (Stufe 3)
+
+[osp1]
+Name=Schlangenschutz
+EditorSuffix= (Stufe 1)
+
+[osp2]
+Name=Schlangenschutz
+EditorSuffix= (Stufe 2)
+
+[osp3]
+Name=Schlangenschutz
+EditorSuffix= (Stufe 3)
+
+[otau]
+Name=Tauren
+Hotkey=T
+Tip=Tauren ausbilden
+Ubertip="Ein mächtiger Krieger. Beherrscht Pulverisieren, wodurch Angriffe eine Chance haben, Flächenschaden zu verursachen. Kann Verbessertes Pulverisieren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0=Ein mächtiger Krieger. Kann Pulverisieren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V1=Ein mächtiger Krieger. Kann Pulverisieren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Ein mächtiger Krieger. Kann Pulverisieren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[otbr]
+Name=Fledermausreiter
+Hotkey=F
+Tip=Fledermausreiter ausbilden
+Ubertip="Eine leichte Lufteinheit mit unglaublicher Wahrnehmung. Effizient gegen Gebäude. Beherrscht Instabiles Gebräu, womit er explodieren und so gegnerischen Lufteinheiten in der Nähe Schaden zufügen kann. Kann Flüssiges Feuer und Trollregeneration erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Oshd]
+Name=Schattenjäger
+Propernames=Zul'kis,Zul'abar,Zul'rajas,Zul'maran,Jo Jo Kopfschrumpfer,Shaka-zahn,Shakti-lar,Mezil-kree
+Hotkey=H
+Tip=Schattenjäger beschwören
+Ubertip="Ein listiger Held, der auf Heilmagie und Voodooflüche spezialisiert ist. Kann Welle der Heilung, Verhexen, Schlangenschutz und Großer böser Voodoo erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Schattenjäger wiederbeleben
+Awakentip=Schattenjäger wiederbeleben
+
+[Otch]
+Name=Taurenhäuptling
+Propernames=Marn Donnerhorn,Tygor Staubhuf,Tam Windtotem,Durn Harpyientöter,Kam Geistleiter,Kel Steinbulle,Mull Sturmhuf,Grok Bluthorn,Malar Ebenenschreiter,Taur Runentotem
+Hotkey=T
+Tip=Taurenhäuptling beschwören
+Ubertip="Ein Kriegerheld und außergewöhnlicher Nahkämpfer, der viel Schaden einstecken kann. Kann Schockwelle, Kriegsdonner, Ausdaueraura und Reinkarnation erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Taurenhäuptling wiederbeleben
+Awakentip=Taurenhäuptling wiederbeleben
+
+[otrb]
+Name=Bau
+Hotkey=O
+Tip=Bau errichten
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Peons können in Bauen stationiert werden, damit sie Gegner angreifen. Kann Verstärkte Verteidigung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Peons können in Bauen stationiert werden, damit sie Gegner angreifen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Peons können in Bauen stationiert werden, damit sie Gegner angreifen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[orbr]
+Name=Verstärkter Bau
+Hotkey=O
+Tip=Verstärkten Bau errichten
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Peons können in Bauen stationiert werden, damit sie Gegner angreifen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[otto]
+Name=Taurentotem
+Hotkey=T
+Tip=Taurentotem errichten
+Ubertip=Bildet Geistwandler und Tauren aus.|nDient zur Erforschung von Verbesserungen für Geistwandler und Tauren.
+Ubertip:custom,V0=Bildet Tauren aus. |nDient zur Erforschung von Pulverisieren.
+Ubertip:custom,V1=Bildet Geistwandler und Tauren aus.|nDient zur Erforschung von Verbesserungen für Geistwandler und Tauren.
+Ubertip:melee,V0=Bildet Tauren aus. |nDient zur Erforschung von Pulverisieren.
+
+[ovln]
+Name=Voodoo-Lounge
+Hotkey=V
+Tip=Voodoo-Lounge errichten
+Ubertip="Ein Laden mit käuflichen Gegenständen. Die verfügbaren Gegenstände hängen von der Ausbaustufe des Hauptgebäudes (Haupthaus, Festung oder Hochburg) ab sowie von den anderen vorhandenen Gebäuden."
+
+[owyv]
+Name=Windreiter
+Hotkey=W
+Tip=Windreiter ausbilden
+Tip:melee,V0=Wyvern ausbilden
+Ubertip="Eine sehr mobile Lufteinheit, die sich hervorragend zum Aufklären eignet. Kann Giftspeere erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[owtw]
+Name=Wachturm
+Hotkey=W
+Tip=Wachturm errichten
+Ubertip=Ein Verteidigungsgebäude. Kann Verstärkte Verteidigung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Verteidigungsgebäude.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Verteidigungsgebäude.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ospw]
+DependencyOr=ospm
+Name=Geistwandler
+Hotkey=L
+Hotkey:custom,V1=T
+Tip=Geistwandler ausbilden
+Tip:custom,V1=Geistwandler ausbilden
+Ubertip="Ein mystischer Magiebenutzer der Tauren. Beherrscht Astralgestalt, wodurch er körperlichen Schaden vermeiden kann. Beherrscht außerdem Geistverbindung, womit erlittener Schaden auf mehrere Einheiten verteilt werden kann. Kann Entzaubern und Geist der Ahnen erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Astralgestalt|n- Geistverbindung","- Astralgestalt|n- Geistverbindung|n- Entzaubern","- Astralgestalt|n- Geistverbindung|n- Entzaubern|n- Geist der Ahnen"
+
+[ospm]
+Name=Geistwandler
+Hotkey=L
+Hotkey:custom,V1=T
+Tip=Geistwandler ausbilden
+Tip:custom,V1=Geistwandler ausbilden
+Ubertip="Ein mystischer Magiebenutzer der Tauren. Beherrscht Astralgestalt, wodurch er körperlichen Schaden vermeiden kann. Beherrscht außerdem Geistverbindung, womit erlittener Schaden auf mehrere Einheiten verteilt werden kann. Kann Entzaubern und Geist der Ahnen erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Astralgestalt|n- Geistverbindung","- Astralgestalt|n- Geistverbindung|n- Entzaubern","- Astralgestalt|n- Geistverbindung|n- Entzaubern|n- Geist der Ahnen"
+EditorSuffix= (Astral)
+//#RESTNOBETA
+[oshy]
+Name=Orcischer Hafen
+Tip=Orcischen Hafen errichten
+Ubertip="Produktionsgebäude für Schiffe. Baut Transportschiffe, Fregatten und Schlachtschiffe der Orcs."
+Description=Verkauft Schiffe.
+
+[obot]
+Name=Orctransportschiff
+Hotkey=T
+Tip=Transportschiff anheuern
+Ubertip="Ein robustes Transportschiff, das Einheiten übers Meer transportieren kann."
+
+[odes]
+Name=Orcfregatte
+Hotkey=F
+Tip=Fregatte anheuern
+Ubertip="Ein vielseitiges Angriffsschiff, das mit Luftangreifern kurzen Prozess macht.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"

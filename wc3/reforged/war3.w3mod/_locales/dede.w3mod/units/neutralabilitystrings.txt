@@ -1,0 +1,2647 @@
+﻿//-----------------------------------------------------------------------------
+// FIRELORD
+//-----------------------------------------------------------------------------
+
+// Incinerate
+[ANic]
+Name=Verbrennen
+Tip=Verbrennen [|cffffcc00Stufe 1|r],Verbrennen [|cffffcc00Stufe 2|r],Verbrennen [|cffffcc00Stufe 3|r]
+Researchtip=Verbrennen [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff <ANic,DataA1> Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe bis zu <ANic,DataB1> Schaden zu.","Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff <ANic,DataA2> Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe bis zu <ANic,DataB2> Schaden zu.","Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff <ANic,DataA3> Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe bis zu <ANic,DataB3> Schaden zu."
+Researchubertip="Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff wenig Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe beträchtlichen Schaden zu.|n|n|cffffcc00Stufe 1|r - <ANic,DataA1> Bonusschaden, <ANic,DataB1> Verbrennungsschaden.|n|cffffcc00Stufe 2|r - <ANic,DataA2> Bonusschaden, <ANic,DataB2> Verbrennungsschaden.|n|cffffcc00Stufe 3|r - <ANic,DataA3> Bonusschaden, <ANic,DataB3> Verbrennungsschaden."
+Hotkey=V
+Researchhotkey=V
+
+// Incinerate (Arrow)
+[ANia]
+Name=Verbrennen
+Tip=Verbrennen [|cffffcc00Stufe 1|r],Verbrennen [|cffffcc00Stufe 2|r],Verbrennen [|cffffcc00Stufe 3|r]
+Researchtip=Verbrennen [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff <ANia,DataA1> Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe bis zu <ANia,DataB1> Schaden zu.","Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff <ANia,DataA2> Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe bis zu <ANia,DataB2> Schaden zu.","Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff <ANia,DataA3> Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe bis zu <ANia,DataB3> Schaden zu."
+Researchubertip="Verstärkt Angriffe mit lebenden Flammen, die beim ersten Angriff wenig Bonusschaden verursachen, beim zweiten Angriff doppelt so viel, beim dritten Angriff dreimal so viel usw.|n|nWenn eine betroffene Einheit stirbt, verbrennt sie und fügt allen gegnerischen Einheiten in der Nähe beträchtlichen Schaden zu.|n|n|cffffcc00Stufe 1|r - <ANia,DataA1> Bonusschaden, <ANia,DataB1> Verbrennungsschaden.|n|cffffcc00Stufe 2|r - <ANia,DataA2> Bonusschaden, <ANia,DataB2> Verbrennungsschaden.|n|cffffcc00Stufe 3|r - <ANia,DataA3> Bonusschaden, <ANia,DataB3> Verbrennungsschaden."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=V
+Researchhotkey=V
+EditorSuffix= (Pfeil)
+
+[BNic]
+Bufftip=Verbrennen
+Buffubertip=Dieses Ziel steht teilweise in Flammen. Es wird beim Tod verbrennen und Einheiten in der Nähe Schaden zufügen.
+
+// Soul Burn
+[ANso]
+Name=Seelenbrand
+Tip=Seelenbrand [|cffffcc00Stufe 1|r],Seelenbrand [|cffffcc00Stufe 2|r],Seelenbrand [|cffffcc00Stufe 3|r]
+Researchtip=Seelenbrand [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Hüllt eine gegnerische Einheit in magische Flammen, die <ANso,DataA1> Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC1,%>% verringern.|nHält <ANso,Dur1> Sek. lang an.","Hüllt eine gegnerische Einheit in magische Flammen, die <ANso,DataA2> Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC2,%>% verringern.|nHält <ANso,Dur2> Sek. lang an.","Hüllt eine gegnerische Einheit in magische Flammen, die <ANso,DataA3> Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC3,%>% verringern.|nHält <ANso,Dur3> Sek. lang an."
+Researchubertip="Hüllt eine gegnerische Einheit in magische Flammen, die periodischen Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC1,%>% verringern.|n|n|cffffcc00Stufe 1|r - 80 Schaden im Verlauf von <ANso,Dur1> Sek.|n|cffffcc00Stufe 2|r - 200 Schaden im Verlauf von <ANso,Dur2> Sek.|n|cffffcc00Stufe 3|r - 340 Schaden im Verlauf von <ANso,Dur3> Sek.|n|nSeelenbrand hält bei Helden nur etwa halb so lange an."
+Researchubertip:custom,V0="Hüllt eine gegnerische Einheit in magische Flammen, die periodischen Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC1,%>% verringern.|n|n|cffffcc00Stufe 1|r - 100 Schaden im Verlauf von <ANso,Dur1> Sek.|n|cffffcc00Stufe 2|r - 225 Schaden im Verlauf von <ANso,Dur2> Sek.|n|cffffcc00Stufe 3|r - 375 Schaden im Verlauf von <ANso,Dur3> Sek.|n|nSeelenbrand hält bei Helden nur etwa halb so lange an."
+Researchubertip:custom,V1="Hüllt eine gegnerische Einheit in magische Flammen, die periodischen Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC1,%>% verringern.|n|n|cffffcc00Stufe 1|r - 100 Schaden im Verlauf von <ANso,Dur1> Sek.|n|cffffcc00Stufe 2|r - 225 Schaden im Verlauf von <ANso,Dur2> Sek.|n|cffffcc00Stufe 3|r - 375 Schaden im Verlauf von <ANso,Dur3> Sek.|n|nSeelenbrand hält bei Helden nur etwa halb so lange an."
+Researchubertip:melee,V0="Hüllt eine gegnerische Einheit in magische Flammen, die periodischen Schaden verursachen, den Einsatz von Fähigkeiten verhindern und den Angriffsschaden um <ANso,DataC1,%>% verringern.|n|n|cffffcc00Stufe 1|r - 100 Schaden im Verlauf von <ANso,Dur1> Sek.|n|cffffcc00Stufe 2|r - 225 Schaden im Verlauf von <ANso,Dur2> Sek.|n|cffffcc00Stufe 3|r - 375 Schaden im Verlauf von <ANso,Dur3> Sek.|n|nSeelenbrand hält bei Helden nur etwa halb so lange an."
+Hotkey=E
+Researchhotkey=E
+
+[BNso]
+Bufftip=Seelenbrand
+Buffubertip="Diese Einheit leidet unter Seelenbrand. Sie kann keine Fähigkeiten einsetzen, verursacht weniger Schaden und erleidet periodischen Schaden."
+
+// Summmon Lava Spawn
+[ANlm]
+Name=Lavabrut beschwören
+Tip=Lavabrut beschwören [|cffffcc00Stufe 1|r],Lavabrut beschwören [|cffffcc00Stufe 2|r],Lavabrut beschwören [|cffffcc00Stufe 3|r]
+Researchtip=Lavabrut beschwören [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Beschwört eine Lavabrut, eine zähe und tödliche Feuerkreatur. Mit ihren Angriffen verzehrt die Lavabrut das Fleisch des Ziels, um ihr eigenes Feuer zu nähren. Sie teilt sich schließlich in zwei gesunde Lavabruten.|n|nHat <nlv1,realHP> Trefferpunkte und verursacht <nlv1,mindmg1>-<nlv1,maxdmg1> Schaden.|nBleibt <ANlm,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört eine Lavabrut, eine zähe und tödliche Feuerkreatur. Mit ihren Angriffen verzehrt die Lavabrut das Fleisch des Ziels, um ihr eigenes Feuer zu nähren. Sie teilt sich schließlich in zwei gesunde Lavabruten.|n|nHat <nlv2,realHP> Trefferpunkte und verursacht <nlv2,mindmg1>-<nlv2,maxdmg1> Schaden.|nBleibt <ANlm,Dur2> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört eine Lavabrut, eine zähe und tödliche Feuerkreatur. Mit ihren Angriffen verzehrt die Lavabrut das Fleisch des Ziels, um ihr eigenes Feuer zu nähren. Sie teilt sich schließlich in zwei gesunde Lavabruten.|n|nHat <nlv3,realHP> Trefferpunkte und verursacht <nlv3,mindmg1>-<nlv3,maxdmg1> Schaden.|nBleibt <ANlm,Dur3> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Researchubertip="Beschwört eine Lavabrut, eine zähe und tödliche Feuerkreatur. Mit ihren Angriffen verzehrt die Lavabrut das Fleisch des Ziels, um ihr eigenes Feuer zu nähren. Sie teilt sich schließlich in zwei gesunde Lavabruten.|nBleibt <ANlm,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <nlv1,realHP> Trefferpunkte, <nlv1,mindmg1>-<nlv1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <nlv2,realHP> Trefferpunkte, <nlv2,mindmg1>-<nlv2,maxdmg1> Schaden.|n|cffffcc00Stufe 3|r - <nlv3,realHP> Trefferpunkte, <nlv3,mindmg1>-<nlv3,maxdmg1> Schaden.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=L
+Researchhotkey=L
+
+[BNlm]
+Bufftip=Lavabrut
+Buffubertip="Lavabrut."
+
+// Volcano
+[ANvc]
+Name=Vulkan
+Tip=Vulkan
+Researchtip=Vulkan erlernen
+Ubertip="Lässt einen riesigen Vulkan aus dem Boden hervorbrechen, der alle <ANvc,DataC1> Sek. glühende Felsen auf nahe Bodeneinheiten und Gebäude schleudert, die jedem Ziel <ANvc,DataE1> Schaden zufügen und es für <ANvc,Dur1> Sek. betäuben. Gebäude erleiden <ANvc,DataD1>-mal so viel Schaden durch glühende Felsen wie Einheiten.|nHält 35 Sek. lang an."
+Ubertip:melee,V1="Lässt einen riesigen Vulkan aus dem Boden hervorbrechen, der alle <ANvc,DataC1> Sek. glühende Felsen auf nahe Bodeneinheiten und Gebäude schleudert, die jedem Ziel <ANvc,DataE1> Schaden zufügen und es für <ANvc,Dur1> Sek. betäuben. Gebäude erleiden <ANvc,DataD1>-mal so viel Schaden durch glühende Felsen wie Einheiten.|nHält 15 Sek. lang an."
+Researchubertip="Lässt einen riesigen Vulkan aus dem Boden hervorbrechen, der alle <ANvc,DataC1> Sek. glühende Felsen auf nahe Bodeneinheiten und Gebäude schleudert, die jedem Ziel <ANvc,DataE1> Schaden zufügen und es für <ANvc,Dur1> Sek. betäuben. Gebäude erleiden <ANvc,DataD1>-mal so viel Schaden durch glühende Felsen wie Einheiten.|nHält 35 Sek. lang an."
+Researchubertip:melee,V1="Lässt einen riesigen Vulkan aus dem Boden hervorbrechen, der alle <ANvc,DataC1> Sek. glühende Felsen auf nahe Bodeneinheiten und Gebäude schleudert, die jedem Ziel <ANvc,DataE1> Schaden zufügen und es für <ANvc,Dur1> Sek. betäuben. Gebäude erleiden <ANvc,DataD1>-mal so viel Schaden durch glühende Felsen wie Einheiten.|nHält 15 Sek. lang an."
+Hotkey=N
+Researchhotkey=N
+
+[BNvc]
+Bufftip=Vulkan
+Buffubertip="Vulkan."
+
+//-----------------------------------------------------------------------------
+// TINKERER
+//-----------------------------------------------------------------------------
+
+// Pocket Factory
+[ANsy]
+Name=Taschenfabrik
+Tip=Taschenfabrik [|cffffcc00Stufe 1|r],Taschenfabrik [|cffffcc00Stufe 2|r],Taschenfabrik [|cffffcc00Stufe 3|r]
+Ubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncgb,realHP> Trefferpunkte, verursachen <ncgb,mindmg1>-<ncgb,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asdg,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANsy,Dur1> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg2,realHP> Trefferpunkte, verursachen <ncg2,mindmg1>-<ncg2,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd2,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANsy,Dur2> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg3,realHP> Trefferpunkte, verursachen <ncg3,mindmg1>-<ncg3,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd3,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANsy,Dur3> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r"
+Hotkey=F
+Researchtip=Taschenfabrik [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt. Diese künstlichen Goblins sind starke Angreifer und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - Die Explosion verursacht <Asdg,DataB1> Schaden.|n|cffffcc00Stufe 2|r - Die Explosion verursacht <Asd2,DataB1> Schaden.|n|cffffcc00Stufe 3|r - Die Explosion verursacht <Asd3,DataB1> Schaden.|nDie Fabrik bleibt <ANsy,Dur3> Sek. lang bestehen."
+Researchhotkey=F
+
+// Pocket Factory
+[ANs1]
+Name=Taschenfabrik
+Tip=Taschenfabrik [|cffffcc00Stufe 1|r],Taschenfabrik [|cffffcc00Stufe 2|r],Taschenfabrik [|cffffcc00Stufe 3|r]
+Ubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncgb,realHP> Trefferpunkte, verursachen <ncgb,mindmg1>-<ncgb,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asdg,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs1,Dur1> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg2,realHP> Trefferpunkte, verursachen <ncg2,mindmg1>-<ncg2,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd2,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs1,Dur2> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg3,realHP> Trefferpunkte, verursachen <ncg3,mindmg1>-<ncg3,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd3,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs1,Dur3> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r"
+Hotkey=F
+Researchtip=Taschenfabrik [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt. Diese künstlichen Goblins sind starke Angreifer und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - Die Explosion verursacht <Asdg,DataB1> Schaden.|n|cffffcc00Stufe 2|r - Die Explosion verursacht <Asd2,DataB1> Schaden.|n|cffffcc00Stufe 3|r - Die Explosion verursacht <Asd3,DataB1> Schaden.|nDie Fabrik bleibt <ANs1,Dur3> Sek. lang bestehen."
+Researchhotkey=F
+EditorSuffix=(Forschung 1)
+
+[ANs2]
+Name=Taschenfabrik
+Tip=Taschenfabrik [|cffffcc00Stufe 1|r],Taschenfabrik [|cffffcc00Stufe 2|r],Taschenfabrik [|cffffcc00Stufe 3|r]
+Ubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncgb,realHP> Trefferpunkte, verursachen <ncgb,mindmg1>-<ncgb,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asdg,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs2,Dur1> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg2,realHP> Trefferpunkte, verursachen <ncg2,mindmg1>-<ncg2,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd2,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs2,Dur2> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg3,realHP> Trefferpunkte, verursachen <ncg3,mindmg1>-<ncg3,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd3,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs2,Dur3> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r"
+Hotkey=F
+Researchtip=Taschenfabrik [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt. Diese künstlichen Goblins sind starke Angreifer und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - Die Explosion verursacht <Asdg,DataB1> Schaden.|n|cffffcc00Stufe 2|r - Die Explosion verursacht <Asd2,DataB1> Schaden.|n|cffffcc00Stufe 3|r - Die Explosion verursacht <Asd3,DataB1> Schaden.|nDie Fabrik bleibt <ANs2,Dur3> Sek. lang bestehen."
+Researchhotkey=F
+EditorSuffix=(Forschung 2)
+
+// Pocket Factory
+[ANs3]
+Name=Taschenfabrik
+Tip=Taschenfabrik [|cffffcc00Stufe 1|r],Taschenfabrik [|cffffcc00Stufe 2|r],Taschenfabrik [|cffffcc00Stufe 3|r]
+Ubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncgb,realHP> Trefferpunkte, verursachen <ncgb,mindmg1>-<ncgb,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asdg,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs3,Dur1> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg2,realHP> Trefferpunkte, verursachen <ncg2,mindmg1>-<ncg2,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd2,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs3,Dur2> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r","Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt.|n|nUhrwerkgoblins haben <ncg3,realHP> Trefferpunkte, verursachen <ncg3,mindmg1>-<ncg3,maxdmg1> Schaden und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten bis zu <Asd3,DataB1> Schaden zufügen.|nDie Fabrik bleibt <ANs3,Dur3> Sek. lang bestehen.|n|n|cffffcc00Uhrwerkgoblins können nur Bodeneinheiten angreifen.|r"
+Hotkey=F
+Researchtip=Taschenfabrik [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Baut eine Fabrik, die automatisch Uhrwerkgoblins herstellt. Diese künstlichen Goblins sind starke Angreifer und explodieren beim Tod, wodurch sie nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - Die Explosion verursacht <Asdg,DataB1> Schaden.|n|cffffcc00Stufe 2|r - Die Explosion verursacht <Asd2,DataB1> Schaden.|n|cffffcc00Stufe 3|r - Die Explosion verursacht <Asd3,DataB1> Schaden.|nDie Fabrik bleibt <ANs3,Dur3> Sek. lang bestehen."
+Researchhotkey=F
+EditorSuffix=(Forschung 3)
+
+[BNfy]
+Bufftip=Taschenfabrik
+Buffubertip=Taschenfabrik.
+
+// Cluster Rockets
+[ANcs]
+Name=Schwarmraketen
+Tip=Schwarmraketen [|cffffcc00Stufe 1|r],Schwarmraketen [|cffffcc00Stufe 2|r],Schwarmraketen [|cffffcc00Stufe 3|r]
+Researchtip=Schwarmraketen [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 45 Schaden zufügen und sie für <ANcs,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 75 Schaden zufügen und sie für <ANcs,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 110 Schaden zufügen und sie für <ANcs,Dur3> Sek. betäuben."
+Ubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANcs,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANcs,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANcs,Dur3> Sek. betäuben."
+Ubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANcs,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANcs,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANcs,Dur3> Sek. betäuben."
+Ubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANcs,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANcs,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANcs,Dur3> Sek. betäuben."
+Researchubertip="Bombardiert ein Gebiet mit Raketen, die gegnerische Einheiten für <ANcs,Dur1> Sek. betäuben und nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 45 Schaden.|n|cffffcc00Stufe 2|r - 75 Schaden.|n|cffffcc00Stufe 3|r - 110 Schaden."
+Researchubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANcs,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANcs,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANcs,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Hotkey=R
+Researchhotkey=R
+
+// Cluster Rockets
+[ANc1]
+Name=Schwarmraketen
+Tip=Schwarmraketen [|cffffcc00Stufe 1|r],Schwarmraketen [|cffffcc00Stufe 2|r],Schwarmraketen [|cffffcc00Stufe 3|r]
+Researchtip=Schwarmraketen [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 45 Schaden zufügen und sie für <ANc1,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 75 Schaden zufügen und sie für <ANc1,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 110 Schaden zufügen und sie für <ANc1,Dur3> Sek. betäuben."
+Ubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc1,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc1,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc1,Dur3> Sek. betäuben."
+Ubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc1,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc1,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc1,Dur3> Sek. betäuben."
+Ubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc1,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc1,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc1,Dur3> Sek. betäuben."
+Researchubertip="Bombardiert ein Gebiet mit Raketen, die gegnerische Einheiten für <ANc1,Dur1> Sek. betäuben und nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 45 Schaden.|n|cffffcc00Stufe 2|r - 75 Schaden.|n|cffffcc00Stufe 3|r - 110 Schaden."
+Researchubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc1,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc1,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc1,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Hotkey=R
+Researchhotkey=R
+EditorSuffix=(Forschungsstufe 1)
+
+// Cluster Rockets
+[ANc2]
+Name=Schwarmraketen
+Tip=Schwarmraketen [|cffffcc00Stufe 1|r],Schwarmraketen [|cffffcc00Stufe 2|r],Schwarmraketen [|cffffcc00Stufe 3|r]
+Researchtip=Schwarmraketen [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 45 Schaden zufügen und sie für <ANc2,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 75 Schaden zufügen und sie für <ANc2,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 110 Schaden zufügen und sie für <ANc2,Dur3> Sek. betäuben."
+Ubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc2,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc2,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc2,Dur3> Sek. betäuben."
+Ubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc2,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc2,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc2,Dur3> Sek. betäuben."
+Ubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc2,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc2,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc2,Dur3> Sek. betäuben."
+Researchubertip="Bombardiert ein Gebiet mit Raketen, die gegnerische Einheiten für <ANc2,Dur1> Sek. betäuben und nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 45 Schaden.|n|cffffcc00Stufe 2|r - 75 Schaden.|n|cffffcc00Stufe 3|r - 110 Schaden."
+Researchubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc2,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc2,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc2,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Hotkey=R
+Researchhotkey=R
+EditorSuffix=(Forschungsstufe 2)
+
+// Cluster Rockets
+[ANc3]
+Name=Schwarmraketen
+Tip=Schwarmraketen [|cffffcc00Stufe 1|r],Schwarmraketen [|cffffcc00Stufe 2|r],Schwarmraketen [|cffffcc00Stufe 3|r]
+Researchtip=Schwarmraketen [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 45 Schaden zufügen und sie für <ANc3,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 75 Schaden zufügen und sie für <ANc3,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Einheiten bis zu 110 Schaden zufügen und sie für <ANc3,Dur3> Sek. betäuben."
+Ubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc3,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc3,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc3,Dur3> Sek. betäuben."
+Ubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc3,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc3,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc3,Dur3> Sek. betäuben."
+Ubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 35 Schaden zufügen und sie für <ANc3,Dur1> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 65 Schaden zufügen und sie für <ANc3,Dur2> Sek. betäuben.","Bombardiert ein Gebiet mit Raketen, die nahen gegnerischen Bodeneinheiten bis zu 100 Schaden zufügen und sie für <ANc3,Dur3> Sek. betäuben."
+Researchubertip="Bombardiert ein Gebiet mit Raketen, die gegnerische Einheiten für <ANc3,Dur1> Sek. betäuben und nahen gegnerischen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 45 Schaden.|n|cffffcc00Stufe 2|r - 75 Schaden.|n|cffffcc00Stufe 3|r - 110 Schaden."
+Researchubertip:custom,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc3,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:custom,V1="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc3,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Researchubertip:melee,V0="Bombardiert ein Gebiet mit Raketen, die gegnerische Bodeneinheiten für <ANc3,Dur1> Sek. betäuben und nahen Einheiten Schaden zufügen.|n|n|cffffcc00Stufe 1|r - 35 Schaden.|n|cffffcc00Stufe 2|r - 65 Schaden.|n|cffffcc00Stufe 3|r - 100 Schaden."
+Hotkey=R
+Researchhotkey=R
+EditorSuffix=(Forschungsstufe 3)
+
+[BNcs]
+Bufftip=Schwarmraketen
+Buffubertip="Schwarmraketen."
+
+// Engineering Upgrade
+[ANeg]
+Name=Ingenieurskunst
+Tip=Ingenieurskunst [|cffffcc00Stufe 1|r],Ingenieurskunst [|cffffcc00Stufe 2|r],Ingenieurskunst [|cffffcc00Stufe 3|r]
+Researchtip=Ingenieurskunst [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Verbessert andere Tüftlerfähigkeiten, erhöht den Angriffsschaden des Tüftlers um <ANeg,DataB1> und seine Bewegungsgeschwindigkeit um <ANeg,DataA1,%>%.","Verbessert andere Tüftlerfähigkeiten, erhöht den Angriffsschaden des Tüftlers um <ANeg,DataB2> und seine Bewegungsgeschwindigkeit um <ANeg,DataA2,%>%.","Verbessert andere Tüftlerfähigkeiten, erhöht den Angriffsschaden des Tüftlers um <ANeg,DataB3> und seine Bewegungsgeschwindigkeit um <ANeg,DataA3,%>%."
+Researchubertip="Verbessert mit jeder weiteren Stufe die anderen Fähigkeiten des Tüftlers:|n|n|cffffcc00Schwarmraketen|r - Vergrößert das Gebiet.|n|cffffcc00Taschenfabrik|r - Stellt Uhrwerkgoblins schneller her.|n|cffffcc00Robogoblin|r - Erhöht die Rüstung und Stärke, verbessert Demolieren.|n|nErhöht außerdem den Schaden und die Bewegungsgeschwindigkeit des Tüftlers.|n|n|cffffcc00Stufe 1|r - <ANeg,DataB1> Bonusschaden, <ANeg,DataA1,%>% erhöhte Bewegungsgeschwindigkeit.|n|cffffcc00Stufe 2|r - <ANeg,DataB2> Bonusschaden, <ANeg,DataA2,%>% erhöhte Bewegungsgeschwindigkeit.|n|cffffcc00Stufe 3|r - <ANeg,DataB3> Bonusschaden, <ANeg,DataA3,%>% erhöhte Bewegungsgeschwindigkeit."
+Hotkey=E
+Researchhotkey=E
+
+[BNeg]
+Bufftip=Ingenieurskunst
+
+// Robo-Goblin
+[ANrg]
+Name=Robogoblin
+Tip=Robogoblin
+Untip=Zu Tüftlergestalt zurückverwandeln
+Researchtip=Robogoblin erlernen
+Ubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke um <ANrg,DataE1> und Rüstung um <ANrg,DataF1> erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Unubertip="Lässt den Tüftler wieder seine normale Gestalt annehmen. Dadurch verliert er die Vorteile des Robogoblins, wird aber wieder organisch."
+Researchubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke und Rüstung erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Hotkey=O
+Unhotkey=T
+Researchhotkey=O
+
+// Robo-Goblin
+[ANg1]
+Name=Robogoblin
+Tip=Robogoblin
+Untip=Zu Tüftlergestalt zurückverwandeln
+Researchtip=Robogoblin erlernen
+Ubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke um <ANg1,DataE1> und Rüstung um <ANg1,DataF1> erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Unubertip="Lässt den Tüftler wieder seine normale Gestalt annehmen. Dadurch verliert er die Vorteile des Robogoblins, wird aber wieder organisch."
+Researchubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke und Rüstung erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Hotkey=O
+Unhotkey=T
+Researchhotkey=O
+EditorSuffix=(Forschungsstufe 1)
+
+// Robo-Goblin
+[ANg2]
+Name=Robogoblin
+Tip=Robogoblin
+Untip=Zu Tüftlergestalt zurückverwandeln
+Researchtip=Robogoblin erlernen
+Ubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke um <ANg2,DataE1> und Rüstung um <ANg2,DataF1> erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Unubertip="Lässt den Tüftler wieder seine normale Gestalt annehmen. Dadurch verliert er die Vorteile des Robogoblins, wird aber wieder organisch."
+Researchubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke und Rüstung erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Hotkey=O
+Unhotkey=T
+Researchhotkey=O
+EditorSuffix=(Forschungsstufe 2)
+
+// Robo-Goblin
+[ANg3]
+Name=Robogoblin
+Tip=Robogoblin
+Untip=Zu Tüftlergestalt zurückverwandeln
+Researchtip=Robogoblin erlernen
+Ubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke um <ANg3,DataE1> und Rüstung um <ANg3,DataF1> erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Unubertip="Lässt den Tüftler wieder seine normale Gestalt annehmen. Dadurch verliert er die Vorteile des Robogoblins, wird aber wieder organisch."
+Researchubertip="Transformiert den Tüftler in einen stark gepanzerten Robogoblin mit folgenden Eigenschaften:|n|n- Stärke und Rüstung erhöht.|n- Beherrscht Demolieren, das den Schaden gegen Gebäude erhöht.|n- Wird mechanisch und damit immun gegen die meisten Betäubungen, die meisten Angriffsfähigkeiten und einige nützliche Fähigkeiten."
+Hotkey=O
+Unhotkey=T
+Researchhotkey=O
+EditorSuffix=(Forschungsstufe 3)
+
+// Demolish
+[ANde]
+Name=Demolieren
+Tip=Demolieren
+Ubertip="Angriffe fügen Gebäuden das <ANde,DataB1>-Fache des normalen Schadens zu."
+Hotkey=
+
+// Demolish
+[ANd1]
+Name=Demolieren
+Tip=Demolieren - Forschungsstufe 1
+Ubertip="Angriffe fügen Gebäuden das <ANd1,DataB1>-Fache des normalen Schadens zu."
+Hotkey=
+EditorSuffix=(Forschungsstufe 1)
+
+// Demolish
+[ANd2]
+Name=Demolieren
+Tip=Demolieren - Forschungsstufe 2
+Ubertip="Angriffe fügen Gebäuden das <ANd2,DataB1>-Fache des normalen Schadens zu."
+Hotkey=
+EditorSuffix=(Forschungsstufe 2)
+
+// Demolish
+[ANd3]
+Name=Demolieren
+Tip=Demolieren - Forschungsstufe 3
+Ubertip="Angriffe fügen Gebäuden das <ANd3,DataB1>-Fache des normalen Schadens zu."
+Hotkey=
+EditorSuffix=(Forschungsstufe 3)
+
+[ANfy]
+Name=Fabrik
+Tip="Fabrik"
+Ubertip="Fabrik."
+Hotkey=
+
+[ANf1]
+Name=Fabrik
+Tip=Fabrik - Forschungsstufe 1
+Ubertip="Fabrik."
+Hotkey=
+EditorSuffix=(Forschungsstufe 1)
+
+[ANf2]
+Name=Fabrik
+Tip=Fabrik - Forschungsstufe 2
+Ubertip="Fabrik."
+Hotkey=
+EditorSuffix=(Forschungsstufe 2)
+
+[ANf3]
+Name=Fabrik
+Tip=Fabrik - Forschungsstufe 3
+Ubertip="Fabrik."
+Hotkey=
+EditorSuffix=(Forschungsstufe 3)
+
+[BNcg]
+Bufftip=Uhrwerkgoblin
+Buffubertip=Uhrwerkgoblin.
+
+// Kaboom! (Clockwerk goblin level 1)
+[Asdg]
+Name=Kabumm
+Tip=Kabumm
+Ubertip="Verursacht in einem kleinen Gebiet <Asdg,DataB1> Schaden."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r|r
+Hotkey=U
+Unhotkey=U
+EditorSuffix=(Uhrwerkgoblin - Stufe 1)
+
+// Kaboom! (Clockwerk goblin level 2)
+[Asd2]
+Name=Kabumm
+Tip=Kabumm
+Ubertip="Verursacht in einem kleinen Gebiet <Asd2,DataB1> Schaden."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r|r
+Hotkey=U
+Unhotkey=U
+EditorSuffix=(Uhrwerkgoblin - Stufe 2)
+
+// Kaboom! (Clockwerk goblin level 3)
+[Asd3]
+Name=Kabumm
+Tip=Kabumm
+Ubertip="Verursacht in einem kleinen Gebiet <Asd3,DataB1> Schaden."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r|r
+Hotkey=U
+Unhotkey=U
+EditorSuffix=(Uhrwerkgoblin - Stufe 3)
+
+//-----------------------------------------------------------------------------
+// ALCHEMIST
+//-----------------------------------------------------------------------------
+
+// Healing Spray
+[ANhs]
+Name=Heilspray
+Tip=Heilspray [|cffffcc00Stufe 1|r],Heilspray [|cffffcc00Stufe 2|r],Heilspray [|cffffcc00Stufe 3|r]
+Researchtip=Heilspray [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Versprüht <ANhs,DataF1> Wellen aus Heilnebel. Jede Welle stellt bei allen verbündeten Einheiten in einem Gebiet <ANhs,DataA1> Trefferpunkte wieder her.","Versprüht <ANhs,DataF2> Wellen aus Heilnebel. Jede Welle stellt bei allen verbündeten Einheiten in einem Gebiet <ANhs,DataA2> Trefferpunkte wieder her.","Versprüht <ANhs,DataF3> Wellen aus Heilnebel. Jede Welle stellt bei allen verbündeten Einheiten in einem Gebiet <ANhs,DataA3> Trefferpunkte wieder her."
+Ubertip:custom,V0="Versprüht <ANhs,DataF1> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA1> Trefferpunkte wieder her.","Versprüht <ANhs,DataF2> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA2> Trefferpunkte wieder her.","Versprüht <ANhs,DataF3> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA3> Trefferpunkte wieder her."
+Ubertip:custom,V1="Versprüht <ANhs,DataF1> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA1> Trefferpunkte wieder her.","Versprüht <ANhs,DataF2> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA2> Trefferpunkte wieder her.","Versprüht <ANhs,DataF3> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA3> Trefferpunkte wieder her."
+Ubertip:melee,V0="Versprüht <ANhs,DataF1> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA1> Trefferpunkte wieder her.","Versprüht <ANhs,DataF2> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA2> Trefferpunkte wieder her.","Versprüht <ANhs,DataF3> Wellen aus Heilnebel. Jede Welle stellt bei allen Einheiten in einem Gebiet <ANhs,DataA3> Trefferpunkte wieder her."
+Researchubertip="Versprüht Wellen aus Heilnebel, der verbündete Einheiten im Zielgebiet heilt.|n|n|cffffcc00Stufe 1|r - <ANhs,DataF1> Wellen, die je <ANhs,DataA1> Trefferpunkte heilen.|n|cffffcc00Stufe 2|r - <ANhs,DataF2> Wellen, die je <ANhs,DataA2> Trefferpunkte heilen.|n|cffffcc00Stufe 3|r - <ANhs,DataF3> Wellen, die je <ANhs,DataA3> Trefferpunkte heilen."
+Researchubertip:custom,V0="Versprüht Wellen aus Heilnebel, der Einheiten im Zielgebiet heilt.|n|n|cffffcc00Stufe 1|r - <ANhs,DataF1> Wellen, die je <ANhs,DataA1> Trefferpunkte heilen.|n|cffffcc00Stufe 2|r - <ANhs,DataF2> Wellen, die je <ANhs,DataA2> Trefferpunkte heilen.|n|cffffcc00Stufe 3|r - <ANhs,DataF3> Wellen, die je <ANhs,DataA3> Trefferpunkte heilen."
+Researchubertip:custom,V1="Versprüht Wellen aus Heilnebel, der Einheiten im Zielgebiet heilt.|n|n|cffffcc00Stufe 1|r - <ANhs,DataF1> Wellen, die je <ANhs,DataA1> Trefferpunkte heilen.|n|cffffcc00Stufe 2|r - <ANhs,DataF2> Wellen, die je <ANhs,DataA2> Trefferpunkte heilen.|n|cffffcc00Stufe 3|r - <ANhs,DataF3> Wellen, die je <ANhs,DataA3> Trefferpunkte heilen."
+Researchubertip:melee,V0="Versprüht Wellen aus Heilnebel, der Einheiten im Zielgebiet heilt.|n|n|cffffcc00Stufe 1|r - <ANhs,DataF1> Wellen, die je <ANhs,DataA1> Trefferpunkte heilen.|n|cffffcc00Stufe 2|r - <ANhs,DataF2> Wellen, die je <ANhs,DataA2> Trefferpunkte heilen.|n|cffffcc00Stufe 3|r - <ANhs,DataF3> Wellen, die je <ANhs,DataA3> Trefferpunkte heilen."
+Hotkey=E
+Researchhotkey=E
+
+[BNhs]
+Bufftip=Heilspray
+Buffubertip=Diese Einheit wird durch Heilspray geheilt.
+
+// Acid Bomb
+[ANab]
+Name=Säurebombe
+Tip=Säurebombe [|cffffcc00Stufe 1|r],Säurebombe [|cffffcc00Stufe 2|r],Säurebombe [|cffffcc00Stufe 3|r]
+Researchtip=Säurebombe [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Schleudert eine Säureflasche auf ein Ziel, die beim Aufprall zerbricht und nahe gegnerische Einheiten mit starker Säure bespritzt.|n|nDie Säure verringert die Rüstung um <ANab,DataC1>, fügt dem Primärziel <ANab,DataD1> Schaden pro Sekunde und Zielen in der Nähe leicht weniger Schaden zu.|nHält <ANab,Dur1> Sek. lang an.","Schleudert eine Säureflasche auf ein Ziel, die beim Aufprall zerbricht und nahe gegnerische Einheiten mit starker Säure bespritzt.|n|nDie Säure verringert die Rüstung um <ANab,DataC2>, fügt dem Primärziel <ANab,DataD2> Schaden pro Sekunde und Zielen in der Nähe leicht weniger Schaden zu.|nHält <ANab,Dur2> Sek. lang an.","Schleudert eine Säureflasche auf ein Ziel, die beim Aufprall zerbricht und nahe gegnerische Einheiten mit starker Säure bespritzt.|n|nDie Säure verringert die Rüstung um <ANab,DataC3>, fügt dem Primärziel <ANab,DataD3> Schaden pro Sekunde und Zielen in der Nähe leicht weniger Schaden zu.|nHält <ANab,Dur3> Sek. lang an."
+Researchubertip="Schleudert eine Säureflasche auf ein Ziel, die beim Aufprall zerbricht und nahe gegnerische Einheiten mit starker Säure bespritzt.|n|nDie Säure verringert die Rüstung, fügt dem Primärziel hohen periodischen Schaden und Zielen in der Nähe leicht weniger periodischen Schaden zu.|nHält <ANab,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Maximal <ANab,DataD1> Schaden pro Sekunde, verringert die Rüstung um <ANab,DataC1>.|n|cffffcc00Stufe 2|r - Maximal <ANab,DataD2> Schaden pro Sekunde, verringert die Rüstung um <ANab,DataC2>.|n|cffffcc00Stufe 3|r - Maximal <ANab,DataD3> Schaden pro Sekunde, verringert die Rüstung um <ANab,DataC3>."
+Hotkey=R
+Researchhotkey=R
+
+[BNab]
+Bufftip=Säurebombe
+Buffubertip=Diese Einheit wurde mit Säure bombardiert. Sie hat weniger Rüstung und erleidet periodischen Schaden.
+
+// Chemical Rage
+[ANcr]
+Name=Chemiewut
+Tip=Chemiewut [|cffffcc00Stufe 1|r],Chemiewut [|cffffcc00Stufe 2|r],Chemiewut [|cffffcc00Stufe 3|r]
+Researchtip=Chemiewut [|cffffcc00Stufe %d|r] erlernen
+Ubertip="Versetzt den Oger des Alchemisten in Wut, die seine Bewegungsgeschwindigkeit um <ANcr,DataE1,%>% und seine Angriffsgeschwindigkeit um <ANcr,DataF1,%>% erhöht. Hält <ANcr,HeroDur1> Sek. lang an.","Versetzt den Oger des Alchemisten in Wut, die seine Bewegungsgeschwindigkeit um <ANcr,DataE2,%>% und seine Angriffsgeschwindigkeit um <ANcr,DataF2,%>% erhöht. Hält <ANcr,HeroDur1> Sek. lang an.","Versetzt den Oger des Alchemisten in Wut, die seine Bewegungsgeschwindigkeit um <ANcr,DataE3,%>% und seine Angriffsgeschwindigkeit um <ANcr,DataF3,%>% erhöht. Hält <ANcr,HeroDur1> Sek. lang an."
+Researchubertip="Versetzt den Oger des Alchemisten in Wut, die seine Bewegungsgeschwindigkeit um <ANcr,DataE1,%>% und seine Angriffsgeschwindigkeit erhöht.|nHält <ANcr,HeroDur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANcr,DataF1,%>% erhöhte Angriffsgeschwindigkeit.|n|cffffcc00Stufe 2|r - <ANcr,DataF2,%>% erhöhte Angriffsgeschwindigkeit.|n|cffffcc00Stufe 3|r - <ANcr,DataF3,%>% erhöhte Angriffsgeschwindigkeit ."
+Hotkey=W
+Researchhotkey=W
+
+[BNcr]
+Bufftip=Chemiewut
+Buffubertip=Diese Einheit wird durch Chemiewut verstärkt. Sie bewegt sich schneller und greift schneller an.
+
+// Transmute
+[ANtm]
+Name=Transmutieren
+Tip=Transmutieren
+Researchtip=Transmutieren erlernen
+Ubertip="Tötet eine Zieleinheit sofort und wandelt sie in Gold um, das zum Gold des Spielers hinzugefügt wird!|nKann nicht gegen Helden oder Unholde über Stufe <ANtm,DataC1> eingesetzt werden."
+Researchubertip="Tötet eine Zieleinheit sofort und wandelt sie in Gold um, das zum Gold des Spielers hinzugefügt wird!|nKann nicht gegen Helden oder Unholde über Stufe <ANtm,DataC1> eingesetzt werden."
+Hotkey=T
+Researchhotkey=T
+
+[BNtm]
+Bufftip=Transmutieren
+Buffubertip="Diese Einheit wird transmutiert und stirbt bald. Sie wird in Gold umgewandelt, das an den Spieler geht, der Transmutieren eingesetzt hat."
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+
+
+//glyph of fortification
+[AIgf]
+Name=Glyphe der Befestigung
+
+[AIgu]
+Name=Glyphe der Befestigung
+
+//tornado slow
+[Aasl]
+Name=Verlangsamungsaura
+EditorSuffix= (Tornado)
+
+[Atdg]
+Name=Schadensaura für Gebäude
+EditorSuffix= (Tornado)
+
+[Atsp]
+Name=Tornadowirbel
+EditorSuffix= (Tornado)
+
+[Atwa]
+Name=Tornadowanderung
+EditorSuffix= (Tornado)
+
+
+// Orb of Annihilation (Quill Spray)
+[ANak]
+Name=Stachelschauer
+Tip=Stachelschauer
+Ubertip="Erhöht den Angriffsschaden der Stachelbestie um <ANak,DataA1> und ihre Angriffe verursachen Flächenschaden."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=S
+Unhotkey=S
+
+// Blink (beastmaster bear)
+[ANbl]
+Name=Blinzeln
+EditorSuffix=(Neutral)
+Tip=Blinzeln
+Ubertip=Teleportiert den Bären über kurze Distanz. Er kann so sich so in den Kampf stürzen oder zurückziehen.
+Hotkey=B
+
+//chain dispel
+[Ache]
+Name=Unterbrechungsstrahl
+Hotkey=R
+Tip=Unterbrechungsstrahl einsetzen
+Ubertip="Beschwört einen Strom neutralisierender Magie, der bis zu <Ache,DataC1>-mal überspringt und dabei Einheiten bannt."
+
+// Burrow (Barbed Arachnathid)
+[Abu5]
+Name=Eingraben
+EditorSuffix="(Neutral, feindselig)"
+Tip=Eingraben
+Untip=Ausgraben
+Ubertip="Der Arachnathid vergräbt sich im Boden und wird unsichtbar."
+Unubertip="Der Arachnathid bricht aus der Erde hervor und wird wieder sichtbar."
+Hotkey=E
+Unhotkey=E
+
+// Parasite
+[ACpa]
+Name=Parasit
+Tip=Parasit
+Ubertip="Infiziert eine gegnerische Zieleinheit mit einem tödlichen Parasiten, der <ANpa,Dur1> Sek. lang <ANpa,DataA1> Schaden pro Sekunde verursacht. Wenn die Einheit unter dem Einfluss des Parasiten stirbt, steigt ein schwacher Diener aus ihrer Leiche empor."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+
+// Siphon Mana
+[ACsm]
+Name=Manaentzug
+EditorSuffix="(Neutral, feindselig)"
+Tip=Manaentzug
+Ubertip="Entzieht der gegnerischen Zieleinheit <ACsm,DataB1> Mana pro Sekunde und überträgt sie auf diese Einheit.|nHält <ACsm,Dur1> Sek. lang an."
+Hotkey=Z
+
+
+// Devour Magic
+[ACde]
+Name=Magie verschlingen
+EditorSuffix="(Neutral, feindselig)"
+Tip=Magie verschlingen
+Ubertip="Raubt alle magischen Stärkungseffekte von Einheiten in einem Gebiet. Jede beraubte Einheit stellt beim Benutzer <Advm,DataA1> Trefferpunkte und <Advm,DataB1> Mana wieder her.|n|cffffcc00Fügt beschworenen Einheiten <Advm,DataE1> Schaden zu.|r"
+Hotkey=V
+
+
+// Hardened Skin
+[Ansk]
+Name=Gehärtete Haut
+Tip=Gehärtete Haut
+Ubertip="Verringert den Schaden aller Angriffe auf die Einheit um <Ansk,DataC1>. Angriffe können maximal auf <Ansk,DataB1> Schaden verringert werden."
+Hotkey=H
+
+// Mana Shield
+[ANms]
+Name=Manaschild
+Tip=Manaschild [|cffffcc00Stufe 1|r] aktivieren,Manaschild [|cffffcc00Stufe 2|r] aktivieren,Manaschild [|cffffcc00Stufe 3|r] aktivieren
+Ubertip="Aktiviert einen Schild, der pro Mana <ANms,DataA1> Schaden absorbiert.","Aktiviert einen Schild, der pro Mana <ANms,DataA2> Schaden absorbiert.","Aktiviert einen Schild, der pro Mana <ANms,DataA3> Schaden absorbiert."
+Ubertip:custom,V0="Aktiviert einen Schild, der pro Mana 1 Schaden absorbiert.","Aktiviert einen Schild, der pro Mana 1,5 Schaden absorbiert.","Aktiviert einen Schild, der pro Mana 2 Schaden absorbiert."
+Ubertip:custom,V1="Aktiviert einen Schild, der pro Mana 1 Schaden absorbiert.","Aktiviert einen Schild, der pro Mana 1,5 Schaden absorbiert.","Aktiviert einen Schild, der pro Mana 2 Schaden absorbiert."
+Ubertip:melee,V0="Aktiviert einen Schild, der pro Mana 1 Schaden absorbiert.","Aktiviert einen Schild, der pro Mana 1,5 Schaden absorbiert.","Aktiviert einen Schild, der pro Mana 2 Schaden absorbiert."
+Untip=Manaschild deaktivieren
+Hotkey=N
+Unhotkey=N
+Researchtip=Manaschild [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erschafft einen Schild, der das Mana der Meerhexe verwendet, um Schaden zu absorbieren.|n|n|cffffcc00Stufe 1|r - Absorbiert <ANms,DataA1> Schaden pro Mana.|n|cffffcc00Stufe 2|r - Absorbiert <ANms,DataA2> Schaden pro Mana.|n|cffffcc00Stufe 3|r - Absorbiert <ANms,DataA3> Schaden pro Mana."
+Researchubertip:custom,V0="Erschafft einen Schild, der das Mana der Meerhexe verwendet, um Schaden zu absorbieren.|n|n|cffffcc00Stufe 1|r - Absorbiert 1 Schaden pro Mana.|n|cffffcc00Stufe 2|r - Absorbiert 1,5 Schaden pro Mana.|n|cffffcc00Stufe 3|r - Absorbiert 2 Schaden pro Mana."
+Researchubertip:custom,V1="Erschafft einen Schild, der das Mana der Meerhexe verwendet, um Schaden zu absorbieren.|n|n|cffffcc00Stufe 1|r - Absorbiert 1 Schaden pro Mana.|n|cffffcc00Stufe 2|r - Absorbiert 1,5 Schaden pro Mana.|n|cffffcc00Stufe 3|r - Absorbiert 2 Schaden pro Mana."
+Researchubertip:melee,V0="Erschafft einen Schild, der das Mana der Meerhexe verwendet, um Schaden zu absorbieren.|n|n|cffffcc00Stufe 1|r - Absorbiert 1 Schaden pro Mana.|n|cffffcc00Stufe 2|r - Absorbiert 1,5 Schaden pro Mana.|n|cffffcc00Stufe 3|r - Absorbiert 2 Schaden pro Mana."
+Researchhotkey=N
+
+[BNms]
+Bufftip=Manaschild
+Buffubertip=Diese Einheit hat einen Manaschild. Sie ist vorübergehend vor körperlichem Schaden und Schwächungseffekten geschützt.
+
+// Rain of Fire
+[ANrf]
+Name=Feuerregen
+Tip=Feuerregen [|cffffcc00Stufe 1|r],Feuerregen [|cffffcc00Stufe 2|r],Feuerregen [|cffffcc00Stufe 3|r]
+Ubertip="Ruft <ANrf,DataA1> Feuerwellen herbei, die Flächenschaden verursachen. Jede Welle verursacht <ANrf,DataB1> Direktschaden und <ANrf,Dur1> Sek. lang <ANrf,DataE1> Schaden pro Sekunde.","Ruft <ANrf,DataA2> Feuerwellen herbei, die Flächenschaden verursachen. Jede Welle verursacht <ANrf,DataB2> Direktschaden und <ANrf,Dur2> Sek. lang <ANrf,DataE2> Schaden pro Sekunde.","Ruft <ANrf,DataA3> Feuerwellen herbei, die Flächenschaden verursachen. Jede Welle verursacht <ANrf,DataB3> Direktschaden und <ANrf,Dur3> Sek. lang <ANrf,DataE3> Schaden pro Sekunde."
+Hotkey=E
+Researchtip=Feuerregen [|cffffcc00Stufe %d|r] erlernen
+Researchhotkey=E
+Researchubertip="Ruft Feuerwellen herbei, die Flächenschaden verursachen. Jede Welle verursacht Direktschaden und verbrennt Gegner dann <ANrf,Dur1> Sek. lang.|n|n|cffffcc00Stufe 1|r - <ANrf,DataA1> Wellen, <ANrf,DataB1> Direktschaden, <ANrf,DataE1> Schaden pro Sekunde.|n|cffffcc00Stufe 2|r - <ANrf,DataA2> Wellen, <ANrf,DataB2> Direktschaden, <ANrf,DataE2> Schaden pro Sekunde.|n|cffffcc00Stufe 3|r - <ANrf,DataA3> Wellen, <ANrf,DataB3> Direktschaden, <ANrf,DataE3> Schaden pro Sekunde."
+
+[BNrd]
+Bufftip=Feuerregen
+Buffubertip=Diese Einheit wurde von Feuerregen getroffen und erleidet periodischen Schaden.
+
+// Rain of Fire (greater, creep)
+[ACrg]
+Name=Feuerregen
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Feuerregen
+Ubertip="Ruft <ACrg,DataA1> Feuerwellen herbei, die Flächenschaden verursachen. Jede Welle verursacht <ACrg,DataB1> Direktschaden und <ACrg,Dur1> Sek. lang <ACrg,DataE1> Schaden pro Sekunde."
+Hotkey=F
+
+// Frost Arrows
+[ANfa]
+Name=Frostpfeile
+Tip=Frostpfeile [|cffffcc00Stufe 1|r],Frostpfeile [|cffffcc00Stufe 2|r],Frostpfeile [|cffffcc00Stufe 3|r]
+Ubertip="Verstärkt Angriffe mit <ANfa,DataA1> Kälteschaden, der die Angriffsgeschwindigkeit der gegnerischen Zieleinheit um <ANfa,DataB1,%>% und ihre Bewegungsgeschwindigkeit um <ANfa,DataC1,%>% verringert. Hält <ANfa,Dur1> Sek. lang an.","Verstärkt Angriffe mit <ANfa,DataA2> Kälteschaden, der die Angriffsgeschwindigkeit der gegnerischen Zieleinheit um <ANfa,DataB2,%>% und ihre Bewegungsgeschwindigkeit um <ANfa,DataC2,%>% verringert. Hält <ANfa,Dur2> Sek. lang an.","Verstärkt Angriffe mit <ANfa,DataA3> Kälteschaden, der die Angriffsgeschwindigkeit der gegnerischen Zieleinheit um <ANfa,DataB3,%>% und ihre Bewegungsgeschwindigkeit um <ANfa,DataC3,%>% verringert. Hält <ANfa,Dur3> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+Researchtip=Frostpfeile [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Verstärkt Angriffe mit Kälteschaden, der die Bewegungs- und Angriffsgeschwindigkeit der gegnerischen Zieleinheit verringert.|n|n|cffffcc00Stufe 1|r - <ANfa,DataB1,%>% Angriffsgeschwindigkeit, <ANfa,DataC1,%>% Bewegungsgeschwindigkeit, <ANfa,DataA1> Bonusschaden.|n|cffffcc00Stufe 2|r - <ANfa,DataB2,%>% Angriffsgeschwindigkeit, <ANfa,DataC2,%>% Bewegungsgeschwindigkeit, <ANfa,DataA2> Bonusschaden.|n|cffffcc00Stufe 3|r - <ANfa,DataB3,%>% Angriffsgeschwindigkeit, <ANfa,DataC3,%>% Bewegungsgeschwindigkeit, <ANfa,DataA3> Bonusschaden."
+Researchhotkey=R
+
+// Cold Arrows
+[AHca]
+Name=Eispfeile
+Tip=Eispfeile [|cffffcc00Stufe 1|r],Eispfeile [|cffffcc00Stufe 2|r],Eispfeile [|cffffcc00Stufe 3|r]
+Ubertip="Verstärkt Angriffe mit Kälteschaden, der die Angriffsgeschwindigkeit der gegnerischen Zieleinheit um <AHca,DataB1,%>% und ihre Bewegungsgeschwindigkeit um <AHca,DataC1,%>% verringert. Hält <AHca,Dur1> Sek. lang an.","Verstärkt Angriffe mit Kälteschaden, der die Angriffsgeschwindigkeit der gegnerischen Zieleinheit um <AHca,DataB2,%>% und ihre Bewegungsgeschwindigkeit um <AHca,DataC2,%>% verringert. Hält <AHca,Dur2> Sek. lang an.","Verstärkt Angriffe mit Kälteschaden, der die Angriffsgeschwindigkeit der gegnerischen Zieleinheit um <AHca,DataB3,%>% und ihre Bewegungsgeschwindigkeit um <AHca,DataC3,%>% verringert. Hält <AHca,Dur3> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+Unhotkey=F
+Researchtip=Eispfeile [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Verstärkt Angriffe mit Kälteschaden, der die Bewegungs- und Angriffsgeschwindigkeit der gegnerischen Zieleinheit verringert.|n|n|cffffcc00Stufe 1|r - <AHca,DataB1,%>% Angriffs- und <AHca,DataC1,%>% Bewegungsgeschwindigkeit. Hält <AHca,Dur1> Sek. lang an.|n|cffffcc00Stufe 2|r - <AHca,DataB2,%>% Angriffs- und <AHca,DataC2,%>% Bewegungsgeschwindigkeit. Hält <AHca,Dur2> Sek. lang an.|n|cffffcc00Stufe 3|r - <AHca,DataB3,%>% Angriffs- und <AHca,DataC3,%>% Bewegungsgeschwindigkeit. Hält <AHca,Dur3> Sek. lang an."
+Researchhotkey=F
+
+[BHca]
+Bufftip=Eispfeile
+Buffubertip=Diese Einheit wurde von einem Eispfeil getroffen. Ihre Bewegungs- und Angriffsgeschwindigkeit sind verringert.
+EditorSuffix=(Nicht stapelbar)
+
+[Bcsd]
+Bufftip=Eispfeile
+Buffubertip=Diese Einheit wurde von einem Eispfeil getroffen. Ihre Bewegungs- und Angriffsgeschwindigkeit sind verringert.
+EditorSuffix=(Stapelbar)
+
+[Bcsi]
+EditorName=Eispfeile
+EditorSuffix= (Info)
+
+// Howl of Terror
+[ANht]
+Name=Schreckensgeheul
+Tip=Schreckensgeheul [|cffffcc00Stufe 1|r],Schreckensgeheul [|cffffcc00Stufe 2|r],Schreckensgeheul [|cffffcc00Stufe 3|r]
+Ubertip="Stößt ein grauenvolles Heulen aus, das den Angriffsschaden naher gegnerischer Einheiten <ANht,Dur1> Sek. lang um <ANht,DataA1,%>% verringert.","Stößt ein grauenvolles Heulen aus, das den Angriffsschaden naher gegnerischer Einheiten <ANht,Dur2> Sek. lang um <ANht,DataA2,%>% verringert.","Stößt ein grauenvolles Heulen aus, das den Angriffsschaden naher gegnerischer Einheiten <ANht,Dur3> Sek. lang um <ANht,DataA3,%>% verringert."
+Hotkey=U
+Researchtip=Schreckensgeheul [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Stößt ein grauenvolles Heulen aus, das nahe gegnerische Einheiten erzittern lässt und ihren Angriffsschaden verringert.|nHält <ANht,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANht,DataA1,%>% Schadensverringerung.|n|cffffcc00Stufe 2|r - <ANht,DataA2,%>% Schadensverringerung.|n|cffffcc00Stufe 3|r - <ANht,DataA3,%>% Schadensverringerung."
+Researchhotkey=U
+
+// Howl of Terror
+[Acht]
+Name=Schreckensgeheul
+EditorSuffix="(Neutral, feindselig)"
+Tip=Schreckensgeheul
+Ubertip="Stößt ein grauenvolles Heulen aus, das den Angriffsschaden gegnerischer Einheiten in der Nähe <Acht,Dur1> Sek. lang um <Acht,DataA1,%>% verringert."
+Hotkey=U
+
+[BNht]
+Bufftip=Schreckensgeheul
+Buffubertip=Diese Einheit hat das Schreckensgeheul gehört und verursacht vorübergehend weniger Schaden.
+
+// Cleaving Attack
+[ANca]
+Name=Spaltschlag
+Tip=Spaltschlag [|cffffcc00Stufe 1|r],Spaltschlag [|cffffcc00Stufe 2|r],Spaltschlag [|cffffcc00Stufe 3|r]
+Ubertip="Schlägt mit solcher Kraft zu, dass auch Gegner in der Nähe des Primärziels <ANca,DataA1,%>% Schaden erleiden.","Schlägt mit solcher Kraft zu, dass auch Gegner in der Nähe des Primärziels <ANca,DataA2,%>% Schaden erleiden.","Schlägt mit solcher Kraft zu, dass auch Gegner in der Nähe des Primärziels <ANca,DataA3,%>% Schaden erleiden."
+Researchtip=Spaltschlag [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Schlägt mit solcher Kraft zu, dass mehrere Gegner Schaden erleiden.|n|n|cffffcc00Stufe 1|r - <ANca,DataA1,%>% Flächenschaden.|n|cffffcc00Stufe 2|r - <ANca,DataA2,%>% Flächenschaden.|n|cffffcc00Stufe 3|r - <ANca,DataA3,%>% Flächenschaden."
+Researchhotkey=C
+
+// Cleaving Attack
+[ACce]
+Name=Spaltschlag
+EditorSuffix="(Neutral, feindselig)"
+Tip=Spaltschlag
+Ubertip="Schlägt mit solcher Kraft zu, dass auch Gegner in der Nähe des Primärziels <ACce,DataA1,%>% Schaden erleiden."
+
+// Doom
+[ANdo]
+Name=Verdammnis
+Tip=Verdammnis
+Ubertip="Markiert eine Zieleinheit für die Manifestation eines Dämons. Die Einheit kann keine Fähigkeiten einsetzen und erleidet <ANdo,DataA1> Schaden pro Sekunde, bis sie stirbt. Nach ihrem Tod steigt ein großer Dämon aus ihrer Leiche empor. Verdammnis kann nicht gebannt oder beendet werden."
+Ubertip:melee,V1="Markiert eine Zieleinheit für die Manifestation eines Dämons. Die Einheit kann keine Fähigkeiten einsetzen, hat eine um <ANdo,DataE1,%>% verringerte Bewegungsgeschwindigkeit und erleidet <ANdo,DataA1> Schaden pro Sekunde, bis sie stirbt. Nach ihrem Tod steigt ein großer Dämon aus ihrer Leiche empor. Verdammnis kann nicht gebannt oder beendet werden."
+Hotkey=R
+Researchtip=Verdammnis erlernen
+Researchubertip="Markiert eine Zieleinheit für die Manifestation eines Dämons. Die Einheit kann keine Fähigkeiten einsetzen und erleidet <ANdo,DataA1> Schaden pro Sekunde, bis sie stirbt. Nach ihrem Tod steigt ein großer Dämon aus ihrer Leiche empor. Verdammnis kann nicht gebannt oder beendet werden."
+Researchubertip:melee,V1="Markiert eine Zieleinheit für die Manifestation eines Dämons. Die Einheit kann keine Fähigkeiten einsetzen, hat eine um <ANdo,DataE1,%>% verringerte Bewegungsgeschwindigkeit und erleidet <ANdo,DataA1> Schaden pro Sekunde, bis sie stirbt. Nach ihrem Tod steigt ein großer Dämon aus ihrer Leiche empor. Verdammnis kann nicht gebannt oder beendet werden."
+Researchhotkey=R
+
+[BNdo]
+Bufftip=Verdammnis
+Buffubertip="Verdammnis wurde über dieser Einheit ausgesprochen. Sie kann keine Fähigkeiten einsetzen und erleidet Schaden, bis sie stirbt. Bei ihrem Tod steigt ein Dämon aus ihrer Leiche empor. Verdammnis kann nicht gebannt oder beendet werden."
+Buffubertip:melee,V1="Verdammnis wurde über dieser Einheit ausgesprochen. Sie kann keine Fähigkeiten einsetzen, hat eine verringerte Bewegungsgeschwindigkeit und erleidet Schaden, bis sie stirbt. Bei ihrem Tod steigt ein Dämon aus ihrer Leiche empor. Verdammnis kann nicht gebannt oder beendet werden."
+
+[BNdi]
+Bufftip=Verdammnis
+Buffubertip="Verdammnis wurde über dieser Einheit ausgesprochen. Sie erleidet Schaden, bis sie stirbt, worauf ein Dämon aus ihrer Leiche emporsteigt. Verdammnis kann nicht gebannt oder beendet werden."
+EditorSuffix= (Diener)
+
+// Storm, Earth, and Fire
+[ANef]
+Name="Sturm, Erde und Feuer"
+Tip="Sturm, Erde und Feuer"
+Ubertip="Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren.|nHält <ANef,HeroDur1> Sek. lang an."
+Hotkey=E
+Researchtip="Sturm, Erde und Feuer erlernen"
+Researchubertip="Teilt den Braumeister in drei spezialisierte Krieger verschiedener Elemente. Wenn mindestens einer bis zum Ende seiner Lebensdauer überlebt, wird der Braumeister wiedergeboren.|nHält <ANef,HeroDur1> Sek. lang an."
+Researchhotkey=E
+
+[BNef]
+Bufftip=Pandarenelementar
+Buffubertip=Ich bin ein Pandarenelementar; betet mich an.
+
+// Wind Walk (pandaren)
+[ANwk]
+Name=Windlauf
+EditorSuffix="(Neutral, feindselig)"
+Tip=Windlauf
+Ubertip="Macht den Pandaren unsichtbar und lässt ihn <ANwk,DataB1,%>% schneller laufen. Sein erster Angriff aus der Unsichtbarkeit deckt ihn auf und verursacht <ANwk,DataC1> Bonusschaden."
+Hotkey=F
+
+// Taunt
+[ANta]
+Name=Spott
+EditorSuffix="(Neutral, feindselig)"
+Tip=Spott
+Ubertip="Die <ANta,DataA1> Gegner, die dieser Einheit am nächsten sind, werden gezwungen, sie anzugreifen."
+Hotkey=T
+
+// Banish (Creep)
+[ACbn]
+Name=Verbannen
+EditorSuffix="(Neutral, feindselig)"
+Tip=Verbannen
+Ubertip="Macht eine nichtmechanische Einheit astral und verringert ihre Bewegungsgeschwindigkeit <ACbn,Dur1> Sek. lang um <ACbn,DataA1,%>%. Astrale Einheiten können nicht angreifen, aber sie können Fähigkeiten einsetzen. Bestimmte Zauber, die auf sie gewirkt werden, haben eine größere Wirkung."
+Hotkey=B
+
+
+// Life Drain 
+[ANdr]
+Name=Lebensentzug
+Tip=Lebensentzug [|cffffcc00Stufe 1|r],Lebensentzug [|cffffcc00Stufe 2|r],Lebensentzug [|cffffcc00Stufe 3|r]
+Ubertip="Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA1> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|n|nBelegt das Ziel außerdem mit dem aktuellen Rang des Schwarzen Pfeils.|nHält <ANdr,Dur1> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA2> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|n|nBelegt das Ziel außerdem mit dem aktuellen Rang des Schwarzen Pfeils.|nHält <ANdr,Dur2> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA3> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|n|nBelegt das Ziel außerdem mit dem aktuellen Rang des Schwarzen Pfeils.|nHält <ANdr,Dur3> Sek. lang an."
+Ubertip:custom,V0="Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA1> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur1> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA2> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur2> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA3> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur3> Sek. lang an."
+Ubertip:custom,V1="Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA1> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur1> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA2> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur2> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA3> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur3> Sek. lang an."
+Ubertip:melee,V0="Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA1> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur1> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA2> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur2> Sek. lang an.","Entzieht einer gegnerischen Zieleinheit pro Sekunde <ANdr,DataA3> Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur3> Sek. lang an."
+Hotkey=L
+Researchtip=Lebensentzug [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Entzieht einer gegnerischen Zieleinheit jede Sekunde Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|n|nBelegt das Ziel außerdem mit dem aktuellen Rang des Schwarzen Pfeils.|nHält <ANdr,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Entzieht <ANdr,DataA1> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 2|r - Entzieht <ANdr,DataA2> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 3|r - Entzieht <ANdr,DataA3> Trefferpunkte pro Sekunde."
+Researchubertip:custom,V0="Entzieht einer gegnerischen Zieleinheit jede Sekunde Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Entzieht <ANdr,DataA1> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 2|r - Entzieht <ANdr,DataA2> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 3|r - Entzieht <ANdr,DataA3> Trefferpunkte pro Sekunde."
+Researchubertip:custom,V1="Entzieht einer gegnerischen Zieleinheit jede Sekunde Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Entzieht <ANdr,DataA1> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 2|r - Entzieht <ANdr,DataA2> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 3|r - Entzieht <ANdr,DataA3> Trefferpunkte pro Sekunde."
+Researchubertip:melee,V0="Entzieht einer gegnerischen Zieleinheit jede Sekunde Trefferpunkte und überträgt sie auf die Dunkle Waldläuferin.|nHält <ANdr,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Entzieht <ANdr,DataA1> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 2|r - Entzieht <ANdr,DataA2> Trefferpunkte pro Sekunde.|n|cffffcc00Stufe 3|r - Entzieht <ANdr,DataA3> Trefferpunkte pro Sekunde."
+Researchhotkey=L
+
+// Life Drain (Creep)
+[ACdr]
+Name=Lebensentzug
+EditorSuffix="(Neutral, feindselig)"
+Tip=Lebensentzug
+Ubertip="Entzieht einer gegnerischen Zieleinheit pro Sekunde <ACdr,DataA1> Trefferpunkte und überträgt sie auf den Magiebenutzer. |nHält <ACdr,Dur1> Sek. lang an."
+Hotkey=R
+
+// Breath of Fire
+[ANbf]
+Name=Feuerodem
+Tip=Feuerodem [|cffffcc00Stufe 1|r],Feuerodem [|cffffcc00Stufe 2|r],Feuerodem [|cffffcc00Stufe 3|r],Feuerodem [|cffffcc00Stufe 1|r],Feuerodem [|cffffcc00Stufe 2|r],Feuerodem [|cffffcc00Stufe 3|r]
+Ubertip="Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANbf,DataA1> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANbf,Dur1> Sek. lang <ANbf,DataE1> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANbf,DataA2> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANbf,Dur2> Sek. lang <ANbf,DataE2> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANbf,DataA3> Direktschaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden <ANbf,Dur3> Sek. lang <ANbf,DataE3> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANbf,DataA1> Direktschaden und <ANbf,Dur1> Sek. lang <ANbf,DataE1> Schaden pro Sekunde verursacht.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANbf,DataA2> Direktschaden und <ANbf,Dur2> Sek. lang <ANbf,DataE2> Schaden pro Sekunde verursacht.","Haucht einen Feuerkegel auf gegnerische Einheiten, der <ANbf,DataA3> Direktschaden und <ANbf,Dur3> Sek. lang <ANbf,DataE3> Schaden pro Sekunde verursacht."
+Hotkey="F"
+Researchtip=Feuerodem [|cffffcc00Stufe %d|r] erlernen,"Feuerodem [|cffffcc00Stufe %d|r] erlernen"
+Researchubertip="Haucht einen Feuerkegel auf gegnerische Einheiten, der Schaden verursacht. Von Fasshieb betroffene Einheiten gehen in Flammen auf und erleiden periodischen Brandschaden.|nHält <ANbf,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANbf,DataA1> Direktschaden, <ANbf,DataE1> Schaden pro Sekunde.|n|cffffcc00Stufe 2|r - <ANbf,DataA2> Direktschaden, <ANbf,DataE2> Schaden pro Sekunde.|n|cffffcc00Stufe 3|r - <ANbf,DataA3> Direktschaden, <ANbf,DataE3> Schaden pro Sekunde.","Haucht einen Feuerkegel auf gegnerische Einheiten, der Direktschaden und dann periodischen Schaden verursacht.|nHält <ANbf,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANbf,DataA1> Direktschaden, <ANbf,DataE1> Schaden pro Sekunde.|n|cffffcc00Stufe 2|r - <ANbf,DataA2> Direktschaden, <ANbf,DataE2> Schaden pro Sekunde.|n|cffffcc00Stufe 3|r - <ANbf,DataA3> Direktschaden, <ANbf,DataE3> Schaden pro Sekunde."
+Researchhotkey="F"
+
+// Unit Inventory (2 slot)
+[Aiun]
+Name=Einheiteninventar
+EditorSuffix= (Untote)
+Tip=Einheiteninventar
+Ubertip="Ermöglicht dieser Einheit, Gegenstände für Helden zu tragen. Gegenstände können im Inventar dieser Einheit nicht benutzt werden."
+
+[Aion]
+Name=Einheiteninventar
+EditorSuffix=(Orcs)
+Tip=Einheiteninventar
+Ubertip="Ermöglicht dieser Einheit, Gegenstände für Helden zu tragen. Gegenstände können im Inventar dieser Einheit nicht benutzt werden."
+
+[Aihn]
+Name=Einheiteninventar
+EditorSuffix= (Menschen)
+Tip=Einheiteninventar
+Ubertip="Ermöglicht dieser Einheit, Gegenstände für Helden zu tragen. Gegenstände können im Inventar dieser Einheit nicht benutzt werden."
+
+[Aien]
+Name=Einheiteninventar
+EditorSuffix= (Nachtelfen)
+Tip=Einheiteninventar
+Ubertip="Ermöglicht dieser Einheit, Gegenstände für Helden zu tragen. Gegenstände können im Inventar dieser Einheit nicht benutzt werden."
+
+// Summon Bear
+[ANsg]
+Name=Bär beschwören
+Tip=Bär beschwören [|cffffcc00Stufe 1|r],Bär beschwören [|cffffcc00Stufe 2|r],Bär beschwören [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört einen mächtigen Bären mit <ngz1,realHP> Trefferpunkten, der Gegner angreift.|nBleibt <ANsg,Dur1> Sek. lang bestehen.","Beschwört einen mächtigen Bären mit <ngz2,realHP> Trefferpunkten, der Gegner angreift. Beherrscht Hieb.|nBleibt <ANsg,Dur2> Sek. lang bestehen.","Beschwört einen mächtigen Bären mit <ngz3,realHP> Trefferpunkten, der Gegner angreift. Beherrscht Hieb und Blinzeln.|nBleibt <ANsg,Dur3> Sek. lang bestehen."
+Hotkey=R
+Researchtip=Bär beschwören [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört einen mächtigen Bären, der Gegner angreift.|nBleibt <ANsg,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <ngz1,realHP> Trefferpunkte, <ngz1,mindmg1>-<ngz1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <ngz2,realHP> Trefferpunkte, <ngz2,mindmg1>-<ngz2,maxdmg1> Schaden, beherrscht Hieb.|n|cffffcc00Stufe 3|r - <ngz3,realHP> Trefferpunkte, <ngz3,mindmg1>-<ngz3,maxdmg1> Schaden, beherrscht Hieb und Blinzeln."
+Researchhotkey=R
+
+[BNsg]
+Bufftip=Bär
+Buffubertip="Ein wilder Bär."
+
+// Summon Quilbeast
+[ANsq]
+Name=Stachelbestie beschwören
+Tip=Stachelbestie beschwören [|cffffcc00Stufe 1|r],Stachelbestie beschwören [|cffffcc00Stufe 2|r],Stachelbestie beschwören [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört eine wütende Stachelbestie mit <nqb1,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft.|nBleibt <ANsq,Dur1> Sek. lang bestehen.","Beschwört eine wütende Stachelbestie mit <nqb2,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft. Beherrscht Raserei.|nBleibt <ANsq,Dur2> Sek. lang bestehen.","Beschwört eine wütende Stachelbestie mit <nqb3,realHP> Trefferpunkten, die Stacheln nach Gegnern wirft. Beherrscht Raserei und verursacht Flächenschaden.|nBleibt <ANsq,Dur3> Sek. lang bestehen."
+Hotkey=E
+Researchtip=Stachelbestie beschwören [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört eine wütende Stachelbestie, die Gegner angreift.|nBleibt <ANsq,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <nqb1,realHP> Trefferpunkte, <nqb1,mindmg1>-<nqb1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <nqb2,realHP> Trefferpunkte, <nqb2,mindmg1>-<nqb2,maxdmg1> Schaden, beherrscht Raserei.|n|cffffcc00Stufe 3|r - <nqb3,realHP> Trefferpunkte, <nqb3,mindmg1>-<nqb3,maxdmg1> Flächenschaden, beherrscht Raserei."
+Researchhotkey=E
+
+[BNsq]
+Bufftip=Stachelbestie
+Buffubertip="Eine wütende Stachelbestie."
+
+// Summon Hawk
+[ANsw]
+Name=Falke beschwören
+Tip=Falke beschwören [|cffffcc00Stufe 1|r],Falke beschwören [|cffffcc00Stufe 2|r],Falke beschwören [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört einen stolzen Falken mit <nwe1,realHP> Trefferpunkten, der Gegner ausspioniert. Beherrscht Durchblick.|nBleibt <ANsw,Dur1> Sek. lang bestehen.","Beschwört einen stolzen Falken mit <nwe2,realHP> Trefferpunkten, der Gegner angreift und ausspioniert. Beherrscht Durchblick.|nBleibt <ANsw,Dur2> Sek. lang bestehen.","Beschwört einen stolzen Falken mit <nwe3,realHP> Trefferpunkten, der Gegner angreift und ausspioniert. Beherrscht Durchblick und Unsichtbarkeit.|nBleibt <ANsw,Dur3> Sek. lang bestehen."
+Hotkey=F
+Researchtip=Falke beschwören [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört einen stolzen Falken, der Gegner ausspioniert.|nBleibt <ANsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <nwe1,realHP> Trefferpunkte, beherrscht Durchblick.|n|cffffcc00Stufe 2|r - <nwe2,realHP> Trefferpunkte, <nwe2,mindmg1>-<nwe2,maxdmg1> Schaden, beherrscht Durchblick.|n|cffffcc00Stufe 3|r - <nwe3,realHP> Trefferpunkte, <nwe3,mindmg1>-<nwe3,maxdmg1> Schaden, beherrscht Durchblick und Unsichtbarkeit."
+Researchhotkey=F
+
+[BNsw]
+Bufftip=Falke
+Buffubertip=Ein stolzer Falke.
+
+// Stampede
+[ANst]
+Name=Stampede
+Tip=Stampede
+Ubertip="Ruft Horden tobsüchtiger Donnerechsen herbei, die bei den Gegnern des Bestienmeisters explodieren. Jede Echse verursacht <ANst,DataC1> Schaden.|nHält <ANst,Dur1> Sek. lang an."
+Hotkey=T
+Researchtip=Stampede erlernen
+Researchubertip="Ruft Horden tobsüchtiger Donnerechsen herbei, die bei den Gegnern des Bestienmeisters explodieren. Jede Echse verursacht <ANst,DataC1> Schaden.|nHält <ANst,Dur1> Sek. lang an."
+Researchhotkey=T
+
+// Hex
+[AChx]
+Name=Verhexen
+EditorSuffix="(Neutral, feindselig)"
+Tip=Verhexen
+Ubertip="Verwandelt eine gegnerische Einheit für <AChx,Dur1> Sek. in ein zufälliges Tier."
+Hotkey=X
+
+// Entangling Roots Seaweed Version (Creep)
+[Aenw]
+Name=Wucherwurzeln
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Wucherwurzeln
+Ubertip="Lässt Wurzeln aus dem Boden schießen, die eine gegnerische Zieleinheit <Aenw,Dur1> Sek. lang bewegungsunfähig machen und <Aenw,DataA1> Schaden pro Sekunde verursachen."
+Hotkey=E
+
+// Healing Wave (Creep)
+[AChv]
+Name=Welle der Heilung
+EditorSuffix="(Neutral, feindselig)"
+Tip=Welle der Heilung
+Ubertip="Ruft eine Energiewelle hervor, die das Primärziel um <AChv,DataA1> Trefferpunkte heilt und <AChv,DataB1>-mal überspringt. Jeder Sprung heilt weniger."
+Hotkey=E
+
+// Silence(Creep)
+[ACsi]
+Name=Stille
+EditorSuffix="(Neutral, feindselig)"
+Tip=Stille
+Ubertip="Hindert alle Gegner im Zielgebiet <ACsi,Dur1> Sek. lang daran, Fähigkeiten einzusetzen."
+Hotkey=E
+
+// Mana Shield(Creep)
+[ACmf]
+Name=Manaschild
+EditorSuffix="(Neutral, feindselig)"
+Tip=Manaschild
+Ubertip="Aktiviert einen Schild, der pro Mana <ACmf,DataA1> Schaden absorbiert."
+Untip=Manaschild deaktivieren
+Hotkey=N
+Unhotkey=N
+
+// Shadow Strike
+[ACss]
+EditorSuffix="(Neutral, feindselig)"
+Tip=Schattenschlag
+Ubertip="Wirft einen vergifteten Dolch mit unglaublicher Wucht auf einen Gegner, fügt ihm <ACss,DataE1> Direktschaden und <ACss,Dur1> Sek. lang alle <ACss,Cast1> Sek. <ACss,DataA1> Schaden zu. Verringert außerdem für kurze Zeit die Bewegungs- und Angriffsgeschwindigkeit des Gegners."
+Hotkey=T
+
+// Frost Bolt
+[ACcb]
+Name=Frostblitz
+Tip=Frostblitz
+Ubertip="Schleudert einen magischen Eissplitter auf eine gegnerische Zieleinheit, der <ACcb,DataA1> Schaden verursacht und das Ziel für <ACcb,Dur1> Sek. betäubt."
+Hotkey=F
+
+// Breath of Frost(Creep)
+[ACbf]
+Name=Frostodem
+Tip=Frostodem
+Ubertip="Haucht einen Frostkegel auf gegnerische Einheiten, der <ACbf,DataA1> Direktschaden und <ACbf,Dur1> Sek. lang <ACbf,DataE1> Schaden pro Sekunde verursacht."
+Hotkey=F
+
+[BCbf]
+Bufftip=Frostodem
+Buffubertip=Diese Einheit wurde von Frostodem getroffen und erleidet periodischen Schaden.
+
+// Breath of Fire (Creep)
+[ACbc]
+Name=Feuerodem
+EditorSuffix="(Neutral, feindselig)"
+Tip=Feuerodem
+Ubertip="Haucht einen Feuerkegel auf gegnerische Einheiten, der <ACbc,DataA1> Schaden verursacht."
+Hotkey=F
+
+// Flame Strike
+[ACfs]
+Name=Flammenschlag
+EditorSuffix="(Neutral, feindselig)"
+Tip=Flammenschlag
+Ubertip="Beschwört eine Feuersäule, die Bodeneinheiten 2 Sek. lang 45 Schaden pro Sekunde zufügt. Während die Feuersäule langsam erlischt, erleiden Einheiten im Wirkungsbereich weiterhin geringen Schaden."
+Hotkey=F
+
+// Flame Strike
+[ANfs]
+Name=Flammenschlag
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Flammenschlag
+Ubertip="Beschwört eine Feuersäule, die Bodeneinheiten 3 Sek. lang 75 Schaden pro Sekunde zufügt. Während die Feuersäule langsam erlischt, erleiden Einheiten im Wirkungsbereich weiterhin mittleren Schaden."
+Hotkey=F
+
+// Impale
+[ACmp]
+Name=Aufspießen
+EditorSuffix="(Neutral, feindselig)"
+Tip=Aufspießen
+Ubertip="Erschüttert den Boden und sendet eine Kraftwelle in einer geraden Linie aus. Die Welle verursacht <ACmp,DataA1> Schaden, schleudert gegnerische Bodeneinheiten in die Luft und betäubt sie für <ACmp,Dur1> Sek."
+Hotkey=E
+
+// Inventory
+[AInv]
+Name=Inventar
+EditorSuffix= (Held)
+
+// Spiked Shell
+[ANth]
+Name=Stachelpanzerschale
+Tip=Stachelpanzerschale
+Ubertip="Rasiermesserscharfe Stacheln auf dem Panzer der Schildkröte reflektieren <ANth,DataA1,%>% des Nahkampfschadens gegnerischer Einheiten."
+
+// Spiked Shell, 2,2 button pos, dragon turtle
+[ANt2]
+Name=Stachelpanzerschale
+Tip=Stachelpanzerschale
+Ubertip="Rasiermesserscharfe Stacheln auf dem Panzer der Schildkröte reflektieren <ANth,DataA1,%>% des Nahkampfschadens gegnerischer Einheiten."
+EditorSuffix="(2,2 Button-Position)"
+
+// Mind Rot
+[ANmr]
+Name=Gedankenverfall
+Tip=Gedankenverfall
+Ubertip="Entzieht einer gegnerischen Zieleinheit im Verlauf von <ANmr,Dur1> Sek. <ANmr,DataA1> Mana."
+Hotkey=R
+
+[BNmr]
+Bufftip=Gedankenverfall
+Buffubertip=Diese Einheit wurde von Gedankenverfall getroffen und verliert mit der Zeit Mana.
+
+// Preservation
+[ANpr]
+
+// Spell Shield
+
+[BNbf]
+Bufftip=Feuerodem
+Buffubertip=Diese Einheit wurde von Feuerodem getroffen und erleidet periodischen Schaden.
+
+// Drunken Brawler
+[ANdb]
+Name=Flüchtiger Kämpfer
+Tip=Flüchtiger Kämpfer [|cffffcc00Stufe 1|r],Flüchtiger Kämpfer [|cffffcc00Stufe 2|r],Flüchtiger Kämpfer [|cffffcc00Stufe 3|r]
+Ubertip="Gewährt eine Ausweichchance von <ANdb,DataD1,%>% und eine Chance von <ANdb,DataA1>%, das <ANdb,DataB1>-Fache des Gesamtschadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD2,%>% und eine Chance von <ANdb,DataA2>%, das <ANdb,DataB2>-Fache des Gesamtschadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD3,%>% und eine Chance von <ANdb,DataA3>%, das <ANdb,DataB3>-Fache des Gesamtschadens zu verursachen."
+Ubertip:custom,V0="Gewährt eine Ausweichchance von <ANdb,DataD1,%>% und eine Chance von <ANdb,DataA1>%, das <ANdb,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD2,%>% und eine Chance von <ANdb,DataA2>%, das <ANdb,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD3,%>% und eine Chance von <ANdb,DataA3>%, das <ANdb,DataB3>-Fache des normalen Schadens zu verursachen."
+Ubertip:custom,V1="Gewährt eine Ausweichchance von <ANdb,DataD1,%>% und eine Chance von <ANdb,DataA1>%, das <ANdb,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD2,%>% und eine Chance von <ANdb,DataA2>%, das <ANdb,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD3,%>% und eine Chance von <ANdb,DataA3>%, das <ANdb,DataB3>-Fache des normalen Schadens zu verursachen."
+Ubertip:melee,V0="Gewährt eine Ausweichchance von <ANdb,DataD1,%>% und eine Chance von <ANdb,DataA1>%, das <ANdb,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD2,%>% und eine Chance von <ANdb,DataA2>%, das <ANdb,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Ausweichchance von <ANdb,DataD3,%>% und eine Chance von <ANdb,DataA3>%, das <ANdb,DataB3>-Fache des normalen Schadens zu verursachen."
+Researchtip=Flüchtiger Kämpfer [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Gewährt eine Ausweichchance und eine Chance von <ANdb,DataA1>%, mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <ANdb,DataD1,%>% Ausweichchance, Chance auf <ANdb,DataB1>-fachen Gesamtschaden.|n|cffffcc00Stufe 2|r - <ANdb,DataD2,%>% Ausweichchance, Chance auf <ANdb,DataB2>-fachen Gesamtschaden.|n|cffffcc00Stufe 3|r - <ANdb,DataD3,%>% Ausweichchance, Chance auf <ANdb,DataB3>-fachen Gesamtschaden."
+Researchubertip:custom,V0="Gewährt eine Ausweichchance und eine Chance von <ANdb,DataA1>%, mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <ANdb,DataD1,%>% Ausweichchance, Chance auf <ANdb,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <ANdb,DataD2,%>% Ausweichchance, Chance auf <ANdb,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <ANdb,DataD3,%>% Ausweichchance, Chance auf <ANdb,DataB3>-fachen normalen Schaden."
+Researchubertip:custom,V1="Gewährt eine Ausweichchance und eine Chance von <ANdb,DataA1>%, mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <ANdb,DataD1,%>% Ausweichchance, Chance auf <ANdb,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <ANdb,DataD2,%>% Ausweichchance, Chance auf <ANdb,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <ANdb,DataD3,%>% Ausweichchance, Chance auf <ANdb,DataB3>-fachen normalen Schaden."
+Researchubertip:melee,V0="Gewährt eine Ausweichchance und eine Chance von <ANdb,DataA1>%, mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <ANdb,DataD1,%>% Ausweichchance, Chance auf <ANdb,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <ANdb,DataD2,%>% Ausweichchance, Chance auf <ANdb,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <ANdb,DataD3,%>% Ausweichchance, Chance auf <ANdb,DataB3>-fachen normalen Schaden."
+Researchhotkey=B
+
+// Drunken Haze
+[ANdh]
+Name=Fasshieb
+Tip=Fasshieb [|cffffcc00Stufe 1|r],Fasshieb [|cffffcc00Stufe 2|r],Fasshieb [|cffffcc00Stufe 3|r]
+Ubertip="Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <ANdh,DataC1,%>% verringert und ihre Chance, zu verfehlen, um <ANdh,DataB1,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <ANdh,Dur1> Sek. lang an.","Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <ANdh,DataC2,%>% verringert und ihre Chance, zu verfehlen, um <ANdh,DataB2,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <ANdh,Dur2> Sek. lang an.","Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit um <ANdh,DataC3,%>% verringert und ihre Chance, zu verfehlen, um <ANdh,DataB3,%>% erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <ANdh,Dur3> Sek. lang an."
+Hotkey=T
+Researchtip=Fasshieb [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Tränkt gegnerische Einheiten mit einer brennbaren Flüssigkeit, die ihre Bewegungsgeschwindigkeit verringert und ihre Chance, zu verfehlen, erhöht. Wenn getränkte Einheiten von Feuerodem getroffen werden, gehen sie in Flammen auf und erleiden periodischen Brandschaden.|nHält <ANdh,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - <ANdh,DataC1,%>% verringerte Bewegungsgeschwindigkeit, <ANdh,DataB1,%>% Chance, zu verfehlen.|n|cffffcc00Stufe 2|r - <ANdh,DataC2,%>% verringerte Bewegungsgeschwindigkeit, <ANdh,DataB2,%>% Chance, zu verfehlen.|n|cffffcc00Stufe 3|r - <ANdh,DataC3,%>% verringerte Bewegungsgeschwindigkeit, <ANdh,DataB3,%>% Chance, zu verfehlen."
+Researchhotkey=T
+
+[BNdh]
+Bufftip=Fasshieb
+Buffubertip="Diese Einheit wurde von einem Fasshieb getroffen. Sie bewegt sich langsamer und es besteht eine Chance, dass ihre Angriffe verfehlen."
+
+// Silence
+[ANsi]
+Name=Stille
+Tip=Stille [|cffffcc00Stufe 1|r],Stille [|cffffcc00Stufe 2|r],Stille [|cffffcc00Stufe 3|r]
+Ubertip="Hindert alle Gegner in einem kleinen Zielgebiet <ANsi,Dur1> Sek. lang daran, Fähigkeiten einzusetzen.","Hindert alle Gegner in einem mittelgroßen Zielgebiet <ANsi,Dur2> Sek. lang daran, Fähigkeiten einzusetzen.","Hindert alle Gegner in einem großen Zielgebiet <ANsi,Dur3> Sek. lang daran, Fähigkeiten einzusetzen."
+Hotkey=E
+Researchtip=Stille [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Hindert alle Gegner im Zielgebiet daran, Fähigkeiten einzusetzen. Wirkungsbereich und Dauer nehmen mit der Stufe zu.|n|n|cffffcc00Stufe 1|r - Kleines Gebiet, hält <ANsi,Dur1> Sek. lang an.|n|cffffcc00Stufe 2|r - Mittelgroßes Gebiet, hält <ANsi,Dur2> Sek. lang an.|n|cffffcc00Stufe 3|r - Großes Gebiet, hält <ANsi,Dur3> Sek. lang an."
+Researchhotkey=E
+
+[BNsi]
+Bufftip=Stille
+Buffubertip=Diese Einheit wurde zum Schweigen gebracht. Sie kann keine Fähigkeiten einsetzen.
+
+// Black Arrow
+[ANba]
+Name=Schwarzer Pfeil
+Tip=Schwarzer Pfeil [|cffffcc00Stufe 1|r],Schwarzer Pfeil [|cffffcc00Stufe 2|r],Schwarzer Pfeil [|cffffcc00Stufe 3|r]
+Ubertip="Erhöht den Angriffsschaden um <ANba,DataA1>. Einheiten, die unter dem Einfluss von Schwarzen Pfeilen getötet werden, verwandeln sich in Skelette mit <ndr1,RealHP> Trefferpunkten.","Erhöht den Angriffsschaden um <ANba,DataA2>. Einheiten, die unter dem Einfluss von Schwarzen Pfeilen getötet werden, verwandeln sich in Skelette mit <ndr2,RealHP> Trefferpunkten.","Erhöht den Angriffsschaden um <ANba,DataA3>. Einheiten, die unter dem Einfluss von Schwarzen Pfeilen getötet werden, verwandeln sich in Skelette mit <ndr3,RealHP> Trefferpunkten."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=W
+Researchtip=Schwarzer Pfeil [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht den Angriffsschaden. Einheiten, die unter dem Einfluss von Schwarzen Pfeilen getötet werden, verwandeln sich in Skelette.|n|n|cffffcc00Stufe 1|r - <ANba,DataA1> Bonusschaden, Skelette mit <ndr1,RealHP> Trefferpunkten.|n|cffffcc00Stufe 2|r - <ANba,DataA2> Bonusschaden, Skelette mit <ndr2,RealHP> Trefferpunkten.|n|cffffcc00Stufe 3|r - <ANba,DataA3> Bonusschaden, Skelette mit <ndr3,RealHP> Trefferpunkten."
+Researchhotkey=W
+
+[BNba]
+Bufftip=Schwarzer Pfeil
+Buffubertip=Diese Einheit wurde von einem Schwarzen Pfeil getroffen. Sie verwandelt sich beim Tod in ein gegnerisches Skelett.
+
+[BNdm]
+Bufftip=Dunkler Diener
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Black Arrow
+[ACbk]
+Name=Schwarzer Pfeil
+EditorSuffix="(Neutral, feindselig)"
+Tip=Schwarzer Pfeil
+Ubertip="Erhöht den Angriffsschaden um <ACbk,DataA1>. Einheiten, die unter dem Einfluss von Schwarzen Pfeilen getötet werden, verwandeln sich in Skelette."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=W
+
+// Charm (Creep)
+[ACch]
+Name=Bezauberung
+EditorSuffix="(Neutral, feindselig)"
+Tip=Bezauberung
+Ubertip="Übernimmt die Kontrolle über eine gegnerische Zieleinheit.|nKann nicht gegen Helden oder Unholde über Stufe <ACch,DataA1> eingesetzt werden."
+Hotkey=R
+
+// Charm
+[ANch]
+Name=Bezauberung
+Tip=Bezauberung
+Ubertip="Übernimmt die Kontrolle über eine gegnerische Zieleinheit.|nKann nicht gegen Helden oder Unholde über Stufe <ANch,DataA1> eingesetzt werden."
+Hotkey=Z
+Researchtip=Bezauberung erlernen
+Researchubertip="Übernimmt die Kontrolle über eine gegnerische Zieleinheit.|nKann nicht gegen Helden oder Unholde über Stufe <ANch,DataA1> eingesetzt werden."
+Researchhotkey=Z
+
+// Monsoon
+[ANmo]
+Name=Monsun
+Tip=Monsun [|cffffcc00Stufe 1|r],Monsun [|cffffcc00Stufe 2|r],Monsun [|cffffcc00Stufe 3|r]
+Ubertip="Ruft einen Blitzsturm herbei, der gegnerischen Einheiten in einem kleinen Zielgebiet <ANmo,DataA1> Schaden zufügt.|nHält <ANmo,Dur1> Sek. lang an.","Ruft einen Blitzsturm herbei, der gegnerischen Einheiten in einem mittelgroßen Zielgebiet <ANmo,DataA2> Schaden zufügt.|nHält <ANmo,Dur1> Sek. lang an.","Ruft einen Blitzsturm herbei, der gegnerischen Einheiten in einem großen Zielgebiet <ANmo,DataA3> Schaden zufügt.|nHält <ANmo,Dur1> Sek. lang an."
+Hotkey=N
+Researchtip=Monsun [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ruft einen Blitzsturm herbei, der gegnerischen Einheiten <ANmo,DataA1> Schaden zufügt.|nHält <ANmo,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Kleines Gebiet.|n|cffffcc00Stufe 2|r - Mittelgroßes Gebiet.|n|cffffcc00Stufe 3|r - Großes Gebiet."
+Researchhotkey=N
+
+[BNmo]
+Bufftip=Monsun
+Buffubertip=Diese Einheit steht in einem Monsun und erleidet Schaden durch Blitzschläge.
+
+// creep monsoon
+[ACmo]
+Name=Monsun
+Tip=Monsun [|cffffcc00Stufe 1|r],Monsun [|cffffcc00Stufe 2|r],Monsun [|cffffcc00Stufe 3|r]
+Ubertip="Ruft einen Blitzsturm herbei, der gegnerischen Einheiten in einem kleinen Zielgebiet <ACmo,DataA1> Schaden zufügt.|nHält <ACmo,Dur1> Sek. lang an.","Ruft einen Blitzsturm herbei, der gegnerischen Einheiten in einem mittelgroßen Zielgebiet <ACmo,DataA2> Schaden zufügt.|nHält <ACmo,Dur1> Sek. lang an.","Ruft einen Blitzsturm herbei, der gegnerischen Einheiten in einem großen Zielgebiet <ACmo,DataA3> Schaden zufügt.|nHält <ACmo,Dur1> Sek. lang an."
+Hotkey=N
+Researchtip=Monsun [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ruft einen Blitzsturm herbei, der gegnerischen Einheiten <ANmo,DataA1> Schaden zufügt.|nHält <ANmo,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Kleines Gebiet.|n|cffffcc00Stufe 2|r - Mittelgroßes Gebiet.|n|cffffcc00Stufe 3|r - Großes Gebiet."
+Researchhotkey=N
+
+// Watery Minion
+[ANwm]
+Name=Wasserdiener
+Tip=Wasserdiener
+Ubertip="Beschwört <ANwm,DataA1> Diener, die ihrem Meister gehorchen.|nBleiben <ANwm,Dur1> Sek. lang bestehen."
+Hotkey=W
+
+[BNwm]
+Bufftip=Wasserdiener
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// watery minion makrura
+[Aslp]
+Name=Krabben beschwören
+Tip=Krabben beschwören
+Ubertip="Beschwört <Aslp,DataA1> Makrurakrabben, die ihrem Meister gehorchen.|nBleiben <Aslp,Dur1> Sek. lang bestehen."
+Hotkey=R
+
+// Tornado
+[ANto]
+Name=Tornado
+Tip=Tornado
+Ubertip="Beschwört einen heftigen lenkbaren Tornado, der die Bewegungsgeschwindigkeit gegnerischer Einheiten verringert, zufällige gegnerische Bodeneinheiten in die Luft schleudert und gegnerischen Gebäuden Schaden zufügt.|nHält <ANto,Dur1> Sek. lang an."
+Hotkey=T
+Researchtip=Tornado erlernen
+Researchubertip="Beschwört einen heftigen lenkbaren Tornado, der die Bewegungsgeschwindigkeit gegnerischer Einheiten verringert, zufällige gegnerische Bodeneinheiten in die Luft schleudert und gegnerischen Gebäuden Schaden zufügt.|nHält <ANto,Dur1> Sek. lang an."
+Researchhotkey=T
+
+// Tornado - Slow Aura
+[Basl]
+Bufftip=Tornado
+Buffubertip=Diese Einheit wurde von einem Tornado erfasst und bewegt sich vorübergehend langsamer.
+EditorSuffix=(Verlangsamungsaura)
+
+// Tornado - Spin
+[Btsp]
+Bufftip=Tornadowirbel
+Buffubertip=Diese Einheit wurde von einem Tornado erfasst und in die Luft geschleudert.
+
+// Tornado - timed life
+[BNto]
+Bufftip=Tornado
+EditorSuffix=(Begrenzte Lebenszeit)
+
+// Healing Ward (Creep)
+[AChw]
+Name=Heilschutz
+Tip=Heilschutz
+Ubertip="Beschwört einen stationären Schutz, der pro Sekunde <Aoar,DataA1,%>% der Trefferpunkte verbündeter nichtmechanischer Einheiten in der Nähe wiederherstellt.|nBleibt <AChw,Dur1> Sek. lang bestehen."
+Hotkey=E
+EditorSuffix="(Neutral, feindselig)"
+
+// Rejuvenation (Furbolg)
+[ACr2]
+Name=Verjüngung
+Tip=Verjüngung
+Ubertip="Heilt eine verbündete Zieleinheit im Verlauf von <ACr2,Dur1> Sek. um <ACr2,DataA1> Trefferpunkte."
+Hotkey=E
+EditorSuffix=(Furbolg)
+
+// Magic Immunity (Archimonde)
+[ACm2]
+Name=Zauberimmunität,Zauberimmunität
+Tip=Zauberimmunität,Zauberimmunität
+Ubertip=Macht diese Einheit immun gegen alle Formen von Magie.,"Macht diese Einheit immun gegen alle Formen von Magie."
+
+// Magic Immunity (Dragons)
+[ACm3]
+Name=Zauberimmunität,Zauberimmunität
+Tip=Zauberimmunität,Zauberimmunität
+Ubertip=Macht diese Einheit immun gegen alle Formen von Magie.,"Macht diese Einheit immun gegen alle Formen von Magie."
+
+[Arng]
+Name=Rache
+
+// general detect invis
+[Adtg]
+Name=Durchblick
+EditorSuffix= (Neutral 1)
+Tip=Durchblick
+Ubertip=Deckt unsichtbare Einheiten in der Nähe auf.
+
+// general detect invis (War eagle)
+[ANtr]
+Name=Durchblick
+EditorSuffix= (Neutral 2)
+Tip=Durchblick
+Ubertip=Deckt unsichtbare Einheiten in der Nähe auf.
+
+// blighted gold mine
+[Abgm]
+Name=Goldmine verhexen
+
+// entangled gold mine
+[Aegm]
+Name=Goldmine durchwuchern
+
+// tree of life art attachment
+[Atol]
+Name=Ausbau zum Baum des Lebens
+
+// waygate ability
+[Awrp]
+Name=Portal
+
+// Dark Conversion
+[ANdc]
+Name=Dunkle Umwandlung
+Tip=Dunkle Umwandlung
+Ubertip=Versetzt einen ausgewählten Dorfbewohner in Schlaf und verwandelt ihn in einen Zombie.
+Hotkey=K
+Researchtip=Dunkle Umwandlung erlernen
+Researchubertip=Versetzt einen ausgewählten Dorfbewohner in Schlaf und verwandelt ihn in einen Zombie.
+Researchhotkey=K
+EditorSuffix=(Mal'Ganis)
+
+[BNdc]
+Bufftip=Dunkle Umwandlung
+Buffubertip=Dieser Dorfbewohner wurde von einer Dunklen Umwandlung getroffen. Er schläft ein und verwandelt sich dann in einen Zombie.
+
+// Dark Conversion (Fast)
+[SNdc]
+Name=Dunkle Umwandlung
+Tip=Dunkle Umwandlung
+Ubertip=Versetzt einen ausgewählten Dorfbewohner in Schlaf und verwandelt ihn in einen Zombie.
+Hotkey=K
+Researchtip=Dunkle Umwandlung erlernen
+Researchubertip=Versetzt einen ausgewählten Dorfbewohner in Schlaf und verwandelt ihn in einen Zombie.
+Researchhotkey=K
+EditorSuffix=" (Malganis, schnell)"
+
+// Soul Preservation
+[ANsl]
+Name=Seelenbewahrung
+Tip=Seelenbewahrung
+Ubertip=Versetzt einen verwandelten Zombie für spätere Verwendung in die Unterwelt.
+Hotkey=L
+Researchtip=Seelenbewahrung erlernen
+Researchubertip=Versetzt einen verwandelten Zombie für spätere Verwendung in die Unterwelt.
+Researchhotkey=L
+EditorSuffix=(Mal'Ganis)
+
+[BNsp]
+Bufftip=Seelenbewahrung
+Buffubertip=Diese Einheit wird für spätere Verwendung aufbewahrt.
+
+// Inferno (Tichondrius)
+[SNin]
+Name=Inferno
+Tip=Inferno
+Ubertip="Ruft eine Höllenbestie vom Himmel herab, die in einem Gebiet <SNin,DataA1> Schaden verursacht und gegnerische Bodeneinheiten für <SNin,Dur1> Sek. betäubt. Die Höllenbestie bleibt <SNin,DataB1> Sek. lang bestehen."
+Hotkey=N
+Researchtip=Inferno erlernen
+Researchubertip="Ruft eine Höllenbestie vom Himmel herab, die in einem Gebiet <SNin,DataA1> Schaden verursacht und gegnerische Bodeneinheiten für <SNin,Dur1> Sek. betäubt. Die Höllenbestie bleibt <SNin,DataB1> Sek. lang bestehen."
+Researchhotkey=N
+EditorSuffix= (Tichondrius)
+
+[ANfd]
+Name=Todesfinger
+Tip=Todesfinger
+Ubertip=Kehrt das Innere einer Kreatur oder eines Gebäudes sofort nach außen. Zerstört das Ziel völlig.
+Hotkey=F
+Researchtip=Todesfinger erlernen
+Researchubertip=Kehrt das Innere einer Kreatur oder eines Gebäudes sofort nach außen. Zerstört das Ziel völlig.
+Researchhotkey=F
+EditorSuffix= (Archimonde)
+
+[ACfd]
+Name=Schmerzensfinger
+Tip=Schmerzensfinger
+Ubertip="Verkrüppelt das Innerste einer Kreatur oder eines Gebäudes auf schreckliche Weise."
+Hotkey=F
+Researchtip=Schmerzensfinger erlernen
+Researchubertip="Verkrüppelt das Innerste einer Kreatur oder eines Gebäudes auf schreckliche Weise."
+Researchhotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+[ACf3]
+Name=Schmerzensfinger
+Tip=Schmerzensfinger
+Ubertip="Verkrüppelt das Innerste einer Kreatur oder eines Gebäudes auf schreckliche Weise."
+Hotkey=F
+Researchtip=Schmerzensfinger erlernen
+Researchubertip="Verkrüppelt das Innerste einer Kreatur oder eines Gebäudes auf schreckliche Weise."
+Researchhotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+[Afod]
+Name=Todesfinger
+Tip=Todesfinger
+Ubertip=Kehrt das Innere einer Kreatur oder eines Gebäudes sofort nach außen.
+Hotkey=F
+Researchtip=Todesfinger erlernen
+Researchubertip=Kehrt das Innere einer Kreatur oder eines Gebäudes sofort nach außen.
+Researchhotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+[ANdp]
+Name=Dunkles Portal
+Tip=Dunkles Portal
+Ubertip="Öffnet ein Portal, aus dem Dämonen treten und Archimondes Befehle ausführen."
+Hotkey=D
+Researchtip=Dunkles Portal erlernen
+Researchubertip="Öffnet ein Portal, aus dem Dämonen treten und Archimondes Befehle ausführen."
+Researchhotkey=D
+EditorSuffix= (Archimonde)
+
+[ANrc]
+Name=Chaosregen
+Tip=Chaosregen
+Ubertip=Ruft mehrere Höllenbestien vom Himmel herab.
+Hotkey=R
+Researchtip=Chaosregen erlernen
+Researchubertip=Ruft mehrere Höllenbestien vom Himmel herab.
+Researchhotkey=R
+EditorSuffix= (Archimonde)
+
+//rain of chaos button pos 0,2, balnazzar
+[ANr3]
+Name=Chaosregen
+Tip=Chaosregen
+Ubertip=Ruft mehrere Höllenbestien vom Himmel herab.
+Hotkey=R
+Researchtip=Chaosregen erlernen
+Researchubertip=Ruft mehrere Höllenbestien vom Himmel herab.
+Researchhotkey=R
+EditorSuffix= (Balnazzar)
+
+// Creep Devotion Aura
+[ACav]
+Name=Hingabeaura
+EditorSuffix="(Neutral, feindselig)"
+Tip=Hingabeaura
+Ubertip="Erhöht die Rüstung verbündeter Einheiten in der Nähe um <ACav,DataA1>."
+
+// Cargo Hold Death
+[Achd]
+Name=Tod im Inneren einer anderen Einheit
+
+[Bchd]
+Bufftip=Benommen
+Buffubertip=Diese Einheit ist benommen. Ihre Bewegungs- und Angriffsgeschwindigkeit sind verringert.
+
+// Cargo Load
+[Aloa]
+Name=Einladen
+Tip=Einladen
+Ubertip=Lädt eine ausgewählte verbündete Bodeneinheit ein.
+Hotkey=L
+EditorSuffix=(Goblinzeppelin)
+
+// Cargo Unload
+[Adro]
+Name=Ausladen
+EditorSuffix=(Lufttransporter),(Goblinzeppelin)
+Tip=Alle ausladen
+Ubertip=Lädt alle transportierten Einheiten am Zielort aus.
+Hotkey=E
+
+[Sdro]
+Name=Ausladen
+EditorSuffix= (Seetransporter)
+Tip=Alle ausladen
+Ubertip=Lädt alle transportierten Einheiten am Zielort aus.
+Hotkey=E
+
+// Cargo Unload (Instant)
+[Adri]
+Name=Sofort ausladen
+Tip=Alle ausladen
+Ubertip=Lädt alle Einheiten aus.
+Hotkey=E
+EditorSuffix=(Durchwucherte Goldmine)
+
+[Asla]
+Name=Dauerschlaf
+Tip=Schlaf
+Ubertip="Die Einheit schläft, bis sie geweckt wird."
+
+// devour cargo hold
+[Advc]
+Name=Verschlungene Einheit
+
+// permanent immolation
+[ANpi]
+Name=Permanenter Feuerbrand
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Permanenter Feuerbrand
+Ubertip="Verbrennt nahe gegnerische Einheiten. Verursacht <ANpi,DataA1> Schaden pro Sekunde."
+
+[Apig]
+Name=Permanenter Feuerbrand
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Permanenter Feuerbrand
+Ubertip="Verbrennt nahe gegnerische Einheiten. Verursacht <Apig,DataA1> Schaden pro Sekunde."
+
+// bunker, orc burrow cargo hold
+[Abun]
+Name=Besatzung (Bau)
+
+// chaos orc burrow battle stations
+[Sbtl]
+Name=Auf Kampfstation
+Tip=Auf Kampfstation
+Ubertip="Schickt nahe Peons in den Bau, damit sie ihre Basis verteidigen können."
+Hotkey=K
+EditorSuffix=(Teufelsorcbau)
+
+// cargo hold, generic
+[Acar]
+Name=Besatzung
+
+// Neutral Spell
+[AAns]
+Name=Gold und Holz abziehen
+Tip=Gold und Holz abziehen
+Ubertip=Zieht dem Spieler eine bestimmte Menge Gold und Holz ab.
+Hotkey=G
+
+// Reveal
+[Andt]
+Name=Sichtbar machen
+Tip=Sichtbar machen
+Ubertip="Macht ein Gebiet der Karte sichtbar.|nDeckt unsichtbare Einheiten auf.|nHält <Andt,Dur1> Sek. lang an."
+Hotkey=R
+
+// Currently Unused
+// Neutral G2L Exchange
+[ANgl]
+Name=Gold gegen Holz eintauschen
+Tip=%d Gold gegen %d Holz eintauschen
+Hotkey=H
+
+// Currently Unused
+// Neutral L2G Exchange
+[ANlg]
+Name=Holz gegen Gold eintauschen
+Tip=%d Holz gegen %d Gold eintauschen
+Hotkey=G
+
+[ANre]
+Name=Manaregeneration,Trefferpunktregenerationsaura
+
+[ANrl]
+Name=Trefferpunktregeneration
+
+// 'select hero to use' ability for neutral buildings
+[Aneu]
+Name=Held wählen
+Tip=Held wählen
+Untip=Held abwählen
+Hotkey=H
+Unhotkey=H
+
+// select any unit, for buildings
+[Ane2]
+Name=Einheit auswählen
+Tip=Einheit auswählen
+Untip=Einheitauswahl aufheben
+Hotkey=E
+Unhotkey=E
+
+// Inferno
+[ANin]
+Name=Inferno
+Tip=Inferno
+Ubertip="Beschwört eine Höllenbestie vom Himmel, die am Einschlagsort Flächenschaden verursacht."
+Hotkey=I
+Researchtip=Inferno erlernen
+Researchhotkey=I
+EditorSuffix="(Neutral, feindselig)"
+Globalmessage=
+Globalsound=
+
+[BNin]
+Bufftip=Höllenbestie
+Buffubertip="Diese Höllenbestie ist mächtig."
+
+// Spy
+[ANsp]
+Name=Spionieren
+Tip=Spionieren
+Hotkey=N
+
+// Kaboom!
+[Asds]
+Name=Kabumm
+Tip=Kabumm
+Ubertip="Verursacht in einem kleinen Gebiet <Asds,DataB1> Schaden. Effektiv gegen Gebäude und Bäume."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r|r
+Hotkey=U
+Unhotkey=U
+EditorSuffix=(Randaliergoblin)
+
+// Medivh Crow Form
+[Amrf]
+Name=Krähengestalt
+Tip=Krähengestalt
+Ubertip=Verwandelt die Einheit in eine Krähe.
+Hotkey=G
+Untip=Menschengestalt
+Unubertip=Verwandelt die Einheit in einen Menschen.
+Unhotkey=G
+
+// Neutral Unit Healing
+[Anhe]
+Name=Heilen
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Heilen
+Ubertip=Heilt eine verbündete nichtmechanische Zieleinheit.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=L
+Unhotkey=L
+
+// Creep slow
+[ACsw]
+EditorSuffix="(Neutral, feindselig)"
+Name=Verlangsamung
+Hotkey=G
+Unhotkey=G
+Tip=Verlangsamung
+Ubertip="Verringert die Angriffsgeschwindigkeit einer gegnerischen Einheit um <ACsw,DataB1,%>% und die Bewegungsgeschwindigkeit um <ACsw,DataA1,%>%. Hält <ACsw,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+
+// Creep Thunder Clap
+[ACtc]
+Name=Zerschmettern
+Tip=Zerschmettern
+Ubertip="Erschüttert den Boden, fügt gegnerischen Einheiten in der Nähe <ACtc,DataA1> Schaden zu und verringert ihre Bewegungs- und Angriffsgeschwindigkeit."
+Hotkey=M
+EditorSuffix="(Neutral, feindselig)"
+
+[BCtc]
+Bufftip=Zerschmettern
+Buffubertip=Diese Einheit wurde von Zerschmettern getroffen. Ihre Bewegungs- und Angriffsgeschwindigkeit sind verringert.
+
+// Creep Thunder Clap (Thunder Lizard)
+[ACt2]
+Name=Zerschmettern
+Tip=Zerschmettern
+Ubertip="Erschüttert den Boden, fügt gegnerischen Einheiten in der Nähe <ACt2,DataA1> Schaden zu und verringert ihre Bewegungs- und Angriffsgeschwindigkeit."
+Hotkey=M
+EditorSuffix=(Donnerechse)
+
+// Creep Storm Bolt
+[ACtb]
+Name=Felsen schleudern
+Tip=Felsen schleudern
+Ubertip="Schleudert einen magischen Felsen auf eine gegnerische Einheit. Fügt ihr <ACtb,DataA1> Schaden zu und betäubt sie für <ACtb,Dur1> Sek."
+Hotkey=F
+
+// Creep Berserker Rage
+[ACbr]
+Name=Berserkerwut
+Tip=Berserkerwut
+Ubertip="Erhöht die Angriffsgeschwindigkeit <ACbr,Dur1> Sek. lang um <ACbr,DataA1,%>%."
+Hotkey=B
+
+// Creep Bloodlust (B hotkey version)
+[ACbb]
+Name=Kampfrausch
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Kampfrausch
+Ubertip="Erhöht die Angriffsgeschwindigkeit einer verbündeten Zieleinheit um <ACbb,DataA1,%>% und die Bewegungsgeschwindigkeit um <ACbb,DataB1,%>%. Hält <ACbb,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=U
+Unhotkey=U
+
+// Frenzy
+[Afzy]
+Name=Raserei
+Tip=Raserei
+Ubertip="Erhöht die Angriffsgeschwindigkeit der Einheit um <Afzy,DataA1,%>% und die Bewegungsgeschwindigkeit um <Afzy,DataB1,%>%. Hält <Afzy,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+
+[Bfzy]
+Bufftip=Raserei
+Buffubertip=Diese Einheit ist in Raserei verfallen. Ihre Bewegungs- und Angriffsgeschwindigkeit sind erhöht.
+
+// Creep Bloodlust
+[ACbl]
+Name=Kampfrausch
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Kampfrausch
+Ubertip="Erhöht die Angriffsgeschwindigkeit einer verbündeten Zieleinheit um <ACbl,DataA1,%>% und die Bewegungsgeschwindigkeit um <ACbl,DataB1,%>%. Hält <ACbl,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=U
+Unhotkey=U
+
+// Creep Ensnare
+[ACen]
+EditorSuffix="(Neutral, feindselig)"
+Name="Einschnüren"
+Tip=Einschnüren
+Ubertip="Fesselt die gegnerische Zieleinheit an den Boden, sodass sie sich <ACen,Dur1> Sek. lang nicht bewegen kann. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden."
+Ubertip:custom,V0="Fesselt eine Zieleinheit an den Boden, sodass sie sich nicht bewegen kann. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden.|nHält <ACen,Dur1> Sek. lang an."
+Ubertip:custom,V1="Fesselt eine Zieleinheit an den Boden, sodass sie sich nicht bewegen kann. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden.|nHält <ACen,Dur1> Sek. lang an."
+Ubertip:melee,V0="Fesselt eine Zieleinheit an den Boden, sodass sie sich nicht bewegen kann. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden.|nHält <ACen,Dur1> Sek. lang an."
+Hotkey="E"
+
+// Dragon Creep Devour
+[ACdv]
+Name=Verschlingen
+EditorSuffix="(Neutral, feindselig)"
+Tip=Verschlingen
+Ubertip="Verschlingt eine gegnerische Einheit und verdaut sie langsam, wobei sie pro Sekunde <Advc,DataB1> Schaden erleidet. Wenn der Unhold beim Verdauen getötet wird, wird die verschlungene Einheit befreit."
+Hotkey=V
+
+// Creep Sleep
+[ACsp]
+Name=Schlaf
+
+// demon reincarnation
+[ANrn]
+Name=Reinkarnation
+Tip=Reinkarnation
+Ubertip="Nach dem Tod wird der Dämon wiederbelebt. Reinkarnation hat eine Abklingzeit von <ANrn,Cool1> Sek."
+Researchtip=Reinkarnation erlernen
+Researchubertip="Nach dem Tod wird der Dämon wiederbelebt. Reinkarnation hat eine Abklingzeit von <ANrn,Cool1> Sek."
+Hotkey=R
+Unhotkey=R
+Researchhotkey=R
+EditorSuffix= (Mannoroth)
+
+// Creep Firebolt (like storm bolt, only fiery)
+[ANfb]
+Name=Feuerblitz
+Tip=Feuerblitz
+Ubertip="Schleudert einen feurigen Blitz, der eine gegnerische Zieleinheit betäubt."
+Hotkey=Z
+Researchtip=Feuerblitz [Stufe %d] erlernen
+Researchhotkey=Z
+EditorSuffix="(Neutral, feindselig)"
+
+//spawn skeleton
+[Asod]
+Name=Skelett erschaffen
+EditorSuffix= (Wahrscheinlich schwarzer Pfeil)
+
+// spawn spiderlings (nerubian) on death
+[Assp]
+Name=Spinnlinge erschaffen
+EditorSuffix="(Neutral, feindselig)"
+
+// spawn spiders on death
+[Aspd]
+Name=Spinnen erschaffen
+EditorSuffix="(Neutral, feindselig)"
+
+// spawn hydra on death
+[Aspy]
+Name=Hydra erschaffen
+
+// spawn hydra hatchling on death
+[Aspt]
+Name=Junghydra erschaffen
+
+[AOac]
+Name=Befehlsaura
+Tip=Befehlsaura
+Ubertip=Erhöht den Schaden verbündeter Einheiten in der Nähe.
+
+[Boac]
+Bufftip=Befehlsaura
+Buffubertip=Diese Einheit steht unter dem Effekt der Befehlsaura. Ihre Angriffe verursachen mehr Schaden.
+
+[ACac]
+Name=Befehlsaura
+Tip=Befehlsaura
+Ubertip=Erhöht den Schaden verbündeter Einheiten in der Nähe.
+
+[Btlf]
+Bufftip=Begrenzte Lebenszeit
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+[ACad]
+Name=Totenbelebung
+Tip=Totenbelebung
+Ubertip="Erweckt <ACad,DataA1> tote Einheiten in einem Gebiet für <ACad,Dur1> Sek."
+Hotkey=T
+EditorSuffix="(Neutral, feindselig)","(Neutral, feindselig)"
+
+[ACrn]
+Name=Reinkarnation
+Tip=Reinkarnation
+ubertip="Nach dem Tod wird diese Einheit wiederbelebt. Reinkarnation hat eine Abklingzeit von <ACrn,Cool1> Sek."
+EditorSuffix="(Neutral, feindselig)"
+
+// creep (demon) mana burn
+[Ambd]
+Name=Manabrand
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Manabrand
+Ubertip="Schleudert einen Blitz negativer Energie, der bei der gegnerischen Zieleinheit <Ambd,DataA1> Mana verbrennt. Das Mana explodiert und verursacht Schaden in Höhe der verbrannten Menge."
+Hotkey=N
+
+[Amnb]
+Name=Manabrand
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Manabrand
+Ubertip="Schleudert einen Blitz negativer Energie, der bei der gegnerischen Zieleinheit <Amnb,DataA1> Mana verbrennt. Das Mana explodiert und verursacht Schaden in Höhe der verbrannten Menge."
+Hotkey=N
+
+[Ambb]
+Name=Manabrand
+EditorSuffix="(Neutral, feindselig 3)"
+Tip=Manabrand
+Ubertip="Schleudert einen Blitz negativer Energie, der bei der gegnerischen Zieleinheit <Ambb,DataA1> Mana verbrennt. Das Mana explodiert und verursacht Schaden in Höhe der verbrannten Menge."
+Hotkey=N
+
+
+// AOE damage upon death
+[Adda]
+Name=Flächenschaden bei Tod
+EditorSuffix= (Randalierer)
+
+// ghost (shade)
+[Agho]
+Name=Geist
+
+// Ghost (visible)
+[Aeth]
+Name=Geist
+EditorSuffix=(Sichtbar)
+
+// gold mine ability
+[Agld]
+Name=Goldmine
+
+// goblin mine
+[Amin]
+Name=Mine - explodiert
+EditorSuffix=(Goblinlandmine)
+
+// permanent invis
+[Apiv]
+Name=Dauerhaft getarnt
+
+// return resources
+[Artn]
+Name=Zurückbringen
+
+// invulnerable
+[Avul]
+Name=Unverwundbar
+EditorSuffix= (Neutral)
+
+// critter wander
+[Awan]
+Name=Umherwandern
+EditorSuffix= (Neutral)
+
+// Malganis dark summoning
+[AUmd]
+Name=Dunkle Beschwörung (Malganis)
+
+[Aarm]
+Name=Manaregenerationsaura
+
+[Barm]
+Bufftip=Manaregenerationsaura
+Buffubertip=Diese Einheit steht unter dem Effekt der Manaregenerationsaura. Ihre Manaregeneration ist erhöht.
+
+//
+// below is a section by which aliased abilities, typically used by neutral hostile units,
+// can be denoted as different from normal abilities
+//
+
+[ACnr]
+Name=Trefferpunktregenerationsaura
+EditorSuffix= (Neutral)
+
+[ANre]
+EditorSuffix= (Neutral)
+
+// meat wagon cargo hold
+[Sch2]
+Name=Besatzung
+EditorSuffix=(Fleischwagen)
+
+// transport cargo hold
+[Sch3]
+Name=Besatzung
+EditorSuffix=(Goblinzeppelin)
+
+// Tank cargo hold
+[Sch4]
+Name=Besatzung
+EditorSuffix= (Panzer)
+
+// Boat cargo hold
+[Sch5]
+Name=Besatzung
+EditorSuffix= (Schiff)
+
+[Argd]
+Name=Gold zurückbringen
+
+[Argl]
+Name=Gold und Holz zurückbringen
+
+[Arlm]
+Name=Holz zurückbringen
+
+[Amnz]
+Name=Flächenschaden bei Tod
+EditorSuffix=(Große Mine)
+
+// animate dead
+[Aand]
+EditorSuffix="(Neutral, feindselig)"
+
+// anti-magic shield
+[ACam]
+Name=Antimagische Hülle
+Tip=Antimagische Hülle
+Ubertip="Erzeugt eine Barriere, die eine Zieleinheit gegen Magie abschirmt.|nHält <ACam,Dur1> Sek. lang an."
+Hotkey=N
+EditorSuffix="(Neutral, feindselig)"
+
+// brilliance aura
+[ACba]
+Name=Brillanzaura
+Tip=Brillanzaura
+Ubertip="Erhöht die Manaregeneration verbündeter Einheiten in der Nähe um <ACba,DataA1> Mana pro Sekunde."
+EditorSuffix="(Neutral, feindselig)"
+
+// bash
+[ACbh]
+Name=Hieb
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Hieb
+Ubertip="Gewährt eine Chance von <ACbh,DataA1>%, bei einem Angriff <ACbh,DataC1> Bonusschaden zu verursachen und das Ziel für <ACbh,Dur1> Sek. zu betäuben."
+Ubertip:custom,V0="Gewährt eine Chance von <ACbh,DataA1>%, bei einem Angriff <ACbh,DataC1> Bonusschaden zu verursachen und den Gegner für <ACbh,Dur1> Sek. zu betäuben."
+Ubertip:custom,V1="Gewährt eine Chance von <ACbh,DataA1>%, bei einem Angriff <ACbh,DataC1> Bonusschaden zu verursachen und den Gegner für <ACbh,Dur1> Sek. zu betäuben."
+Ubertip:melee,V0="Gewährt eine Chance von <ACbh,DataA1>%, bei einem Angriff <ACbh,DataC1> Bonusschaden zu verursachen und den Gegner für <ACbh,Dur1> Sek. zu betäuben."
+
+// bash
+[ANbh]
+Name=Hieb
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Hieb
+Ubertip="Gewährt eine Chance von <ANbh,DataA1>%, bei einem Angriff <ANbh,DataC1> Bonusschaden zu verursachen und das Ziel für <ANbh,Dur1> Sek. zu betäuben."
+Ubertip:custom,V0="Gewährt eine Chance von <ANbh,DataA1>%, bei einem Angriff <ANbh,DataC1> Bonusschaden zu verursachen und den Gegner für <ANbh,Dur1> Sek. zu betäuben."
+Ubertip:custom,V1="Gewährt eine Chance von <ANbh,DataA1>%, bei einem Angriff <ANbh,DataC1> Bonusschaden zu verursachen und den Gegner für <ANbh,Dur1> Sek. zu betäuben."
+Ubertip:melee,V0="Gewährt eine Chance von <ANbh,DataA1>%, bei einem Angriff <ANbh,DataC1> Bonusschaden zu verursachen und den Gegner für <ANbh,Dur1> Sek. zu betäuben."
+
+// bash
+[ANb2]
+Name=Zermalmen
+EditorSuffix="(Neutral, feindselig 3/Keule)"
+Tip=Zermalmen
+Ubertip="Gewährt eine Chance von <ANb2,DataA1>%, bei einem Angriff <ANb2,DataC1> Bonusschaden zu verursachen und das Ziel für <ANb2,Dur1> Sek. zu betäuben."
+Ubertip:custom,V0="Gewährt eine Chance von <ANb2,DataA1>%, bei einem Angriff <ANb2,DataC1> Bonusschaden zu verursachen und den Gegner für <ANb2,Dur1> Sek. zu betäuben."
+Ubertip:custom,V1="Gewährt eine Chance von <ANb2,DataA1>%, bei einem Angriff <ANb2,DataC1> Bonusschaden zu verursachen und den Gegner für <ANb2,Dur1> Sek. zu betäuben."
+Ubertip:melee,V0="Gewährt eine Chance von <ANb2,DataA1>%, bei einem Angriff <ANb2,DataC1> Bonusschaden zu verursachen und den Gegner für <ANb2,Dur1> Sek. zu betäuben."
+
+
+
+// devotion aura
+[ACad]
+
+// disease cloud/plague
+[Aap1]
+EditorSuffix=(Monstrosität)
+
+[Aap2]
+EditorSuffix=(Seuchenschutz)
+
+[Aap3]
+EditorSuffix="(Neutral, feindselig)"
+
+[Aap4]
+EditorSuffix="(Neutral, feindselig, kein Schaden)"
+
+// trueshot aura
+[ACat]
+Name=Volltrefferaura
+Tip=Volltrefferaura
+Ubertip="Strahlt eine Aura aus, die den Fernkampfschaden von verbündeten Einheiten in der Nähe um <ACat,DataA1,%>% erhöht."
+EditorSuffix="(Neutral, feindselig)"
+
+// Blight
+[Abli]
+Name=Verseuchter Boden
+
+// blight dispel
+[Abds]
+Name="Verseuchter Boden - Bannen, klein"
+
+[Abdl]
+Name="Verseuchter Boden - Bannen, groß"
+
+// blight growth
+[Abgs]
+Name="Verseuchter Boden - Wachstum, klein"
+
+[Abgl]
+Name="Verseuchter Boden - Wachstum, groß"
+
+// blizzard
+[ACbz]
+Name=Blizzard
+Tip=Blizzard
+Ubertip="Ruft <ACbz,DataA1> Wellen von Eistrümmern herbei. Jede Welle fügt Einheiten in einem kleinen Gebiet <ACbz,DataB1> Schaden zu."
+Hotkey=Z
+EditorSuffix="(Neutral, feindselig)"
+
+
+// cannibalize
+[ACcn]
+Name=Kannibalismus
+Tip=Kannibalismus
+Ubertip="Verschlingt eine Leiche in der Nähe, um pro Sekunde <ACcn,DataA1> Trefferpunkte wiederherzustellen."
+Hotkey=N
+EditorSuffix="(Neutral, feindselig)"
+
+// carrion swarm
+[ACca]
+Name=Aasschwarm
+Tip=Aasschwarm
+Ubertip="Schickt einen Schwarm Fledermäuse aus, die allen gegnerischen Bodeneinheiten in einer Linie <ACca,DataA1> Schaden zufügen, bis maximal <ACca,DataB1> Schaden."
+Hotkey=C
+EditorSuffix="(Neutral, feindselig)"
+
+// chain lightning
+[ACcl]
+Name=Kettenblitz
+Tip=Kettenblitz
+Ubertip="Schleudert einen Blitz, der dem Primärziel <ACcl,DataA1> Schaden zufügt und bis zu <ACcl,DataB1>-mal überspringt. Jeder Sprung verursacht weniger Schaden."
+Hotkey=Z
+EditorSuffix="(Neutral, feindselig)"
+
+// cold arrows
+[ACcw]
+Name=Eispfeile
+Tip=Eispfeile
+Ubertip="Verstärkt Angriffe mit Kälteschaden, der Ziele verlangsamt, aber jeder Schuss verbraucht Mana."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+Unhotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+// cripple
+[ACcr]
+Name=Verkrüppeln
+Tip=Verkrüppeln
+Ubertip="Verringert die Bewegungsgeschwindigkeit einer gegnerischen Zieleinheit um <ACcr,DataA1,%>%, die Angriffsgeschwindigkeit um <ACcr,DataB1,%>% und den Schaden um <ACcr,DataC1,%>%.|nHält <ACcr,Dur1> Sek. lang an."
+Hotkey=K
+EditorSuffix="(Neutral, feindselig)"
+
+// critical strike
+[ACct]
+Name=Kritische Treffer
+Tip=Kritische Treffer
+Ubertip="Gewährt eine Chance von <ACct,DataA1>%, bei einem Angriff das <ACct,DataB1>-Fache des Gesamtschadens zu verursachen."
+Ubertip:custom,V0="Gewährt eine Chance von <ACct,DataA1>%, bei einem Angriff das <ACct,DataB1>-Fache des normalen Schadens zu verursachen."
+Ubertip:custom,V1="Gewährt eine Chance von <ACct,DataA1>%, bei einem Angriff das <ACct,DataB1>-Fache des normalen Schadens zu verursachen."
+Ubertip:melee,V0="Gewährt eine Chance von <ACct,DataA1>%, bei einem Angriff das <ACct,DataB1>-Fache des normalen Schadens zu verursachen."
+EditorSuffix="(Neutral, feindselig)"
+
+// curse
+[ACcs]
+Name=Fluch
+Tip=Fluch
+Ubertip="Verflucht die gegnerische Zieleinheit, sodass ihre Angriffe eine Chance von <ACcs,DataA1,%>% haben, zu verfehlen.|nHält <ACcs,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=C
+Unhotkey=C
+EditorSuffix="(Neutral, feindselig)"
+
+// cyclone
+[ACcy]
+Name=Wirbelsturm
+Tip=Wirbelsturm
+Ubertip="Schleudert eine nichtmechanische gegnerische Zieleinheit in die Luft. Die Einheit kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen. Andere Einheiten können sie nicht angreifen oder Fähigkeiten gegen sie einsetzen.|nHält <ACcy,Dur1> Sek. lang an."
+Hotkey=M
+EditorSuffix="(Neutral, feindselig)"
+
+[SCc1]
+Name=Wirbelsturm
+Tip=Wirbelsturm
+Ubertip="Schleudert eine gegnerische Zieleinheit in die Luft. Die Einheit kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen. Andere Einheiten können sie nicht angreifen oder Fähigkeiten gegen sie einsetzen.|nHält <SCc1,Dur1> Sek. lang an."
+Hotkey=M
+EditorSuffix=(Cenarius)
+
+// goblin mine damage aoe
+[Amnx]
+Name=Flächenschaden bei Tod
+EditorSuffix=(Goblinmine)
+
+// super death and decay
+[SNdd]
+Name=Tod und Verfall
+Tip=Tod und Verfall
+Ubertip="Verursacht in seinem Wirkungsbereich Schaden in Höhe von <SNdd,DataA1,%>% seiner Basistrefferpunkte. Zerstört auch Bäume.|nHält <SNdd,Dur1> Sek. lang an."
+Hotkey=D
+Researchtip=Tod und Verfall erlernen
+Researchubertip="Verursacht in seinem Wirkungsbereich Schaden in Höhe von <SNdd,DataA1,%>% seiner Basistrefferpunkte pro Sekunde. Zerstört auch Bäume."
+Researchhotkey=D
+EditorSuffix="(Neutral, feindselig)"
+
+// death coil
+[ACdc]
+Name=Todesmantel
+Tip=Todesmantel
+Ubertip="Ein Todesmantel, der eine verbündete untote Einheit um <ACdc,DataA1> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt."
+Hotkey=N
+EditorSuffix="(Neutral, feindselig)"
+
+// detection
+[Adt1]
+EditorSuffix=(Wächterschutz)
+
+[Adt2]
+EditorSuffix=(Schemen)
+
+[Adt3]
+EditorSuffix=(Flugapparat)
+
+// dispel magic
+[Adsm]
+Name=Magie bannen
+Tip=Magie bannen
+UberTip="Entfernt alle Stärkungseffekte von Einheiten im Zielgebiet.|n|cffffcc00Fügt beschworenen Einheiten <Adsm,DataB1> Schaden zu.|r"
+Hotkey=M
+EditorSuffix="(Neutral, feindselig)"
+
+// auto-dispel magic
+[ACdm]
+Name=Magie aufheben
+Tip=Magie aufheben
+Ubertip="Bannt Stärkungseffekte von gegnerischen Einheiten und Schwächungseffekte von verbündeten Einheiten.|n|cffffcc00Fügt beschworenen Einheiten <ACdm,DataB1> Schaden zu.|r"
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=I
+Unhotkey=I
+EditorSuffix="(Neutral, feindselig)"
+
+// auto-dispel magic (button pos 1,2)
+[ACd2]
+Name=Magie aufheben
+Tip=Magie aufheben
+Ubertip="Bannt Stärkungseffekte von gegnerischen Einheiten und Schwächungseffekte von verbündeten Einheiten.|n|cffffcc00Fügt beschworenen Einheiten <ACdm,DataB1> Schaden zu.|r"
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=I
+Unhotkey=I
+EditorSuffix="(Neutral, feindselig, zweite Position)"
+
+// divine shield
+[ACds]
+Name=Gottesschild
+Tip=Gottesschild aktivieren
+Ubertip="Umgibt diese Einheit mit einem undurchdringlichen Schild, der sie <ACds,Dur1> Sek. lang vor jeglichem Schaden und Fähigkeiten schützt."
+Untip=Gottesschild deaktivieren
+Hotkey=D
+Unhotkey=D
+EditorSuffix="(Neutral, feindselig)"
+
+// super earthquake
+[SNeq]
+Name=Erdbeben
+Tip=Erdbeben
+Ubertip="Lässt den Boden beben und aufreißen, fügt Gebäuden im Wirkungsbereich <SNeq,DataB1> Schaden pro Sekunde zu und verlangsamt Einheiten um <SNeq,DataC1,%>%.|nHält <SNeq,Dur1> Sek. lang an."
+Hotkey=E
+Researchtip=Erdbeben erlernen
+Researchubertip="Lässt den Boden beben und aufreißen, fügt Gebäuden im Wirkungsbereich <SNeq,DataB1> Schaden pro Sekunde zu und verlangsamt Einheiten um <SNeq,DataC1,%>%. Hält <SNeq,Dur1> Sek. lang an."
+Researchhotkey=E
+EditorSuffix="(Neutral, feindselig)"
+
+// endurance aura
+[SCae]
+Name=Ausdaueraura
+Tip=Ausdaueraura
+Ubertip="Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <SCae,DataA1,%>% und die Angriffsgeschwindigkeit um <SCae,DataB1,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <SCae,DataA2,%>% und die Angriffsgeschwindigkeit um <SCae,DataB2,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <SCae,DataA3,%>% und die Angriffsgeschwindigkeit um <SCae,DataB3,%>%."
+EditorSuffix="(Neutral, feindselig)"
+
+// ensnare
+[ACen]
+EditorSuffix=(Neutral feindlich)
+
+// entangling roots
+[Aenr]
+Name=Wucherwurzeln
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Wucherwurzeln
+Ubertip="Lässt Wurzeln aus dem Boden schießen, die eine gegnerische Zieleinheit <Aenr,Dur1> Sek. lang bewegungsunfähig machen und <Aenr,DataA1> Schaden pro Sekunde verursachen."
+Hotkey=E
+
+// evasion
+[ACev]
+Name=Entrinnen
+Tip=Entrinnen
+Ubertip="Gewährt eine Ausweichchance von <ACev,DataA1,%>%."
+EditorSuffix="(Neutral, feindselig)"
+
+[ACes]
+Name=Entrinnen
+Tip=Entrinnen
+Ubertip="Gewährt eine Ausweichchance von <ACes,DataA1,%>%."
+EditorSuffix="(Neutral, feindselig, 100%)"
+
+// faerie fire
+[ACff]
+Name=Feenfeuer
+Tip=Feenfeuer
+Ubertip="Verringert die Rüstung einer gegnerischen Zieleinheit um <ACff,DataA1> und deckt sie auf.|nHält <ACff,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+EditorSuffix="(Neutral, feindselig)"
+
+// feral spirit
+[ACsf]
+Name=Wildgeist
+Tip=Wildgeist
+Ubertip="Beschwört <ACsf,DataB1> Geisterwölfe als Begleiter.|nBleiben <ACsf,Dur1> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r"
+Hotkey=T
+EditorSuffix="(Neutral, feindselig)"
+
+// spirit pig
+[ACs9]
+Name=Wildgeist
+Tip=Wildgeist
+Ubertip="Beschwört <ACs9,DataB1> Geisterschweine als Begleiter.|nBleiben <ACs9,Dur1> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r"
+Hotkey=T
+EditorSuffix="(Neutral, feindselig, Schwein)"
+
+// firebolt
+[ACfb]
+Name=Feuerblitz
+Tip=Feuerblitz
+Ubertip="Schleudert einen feurigen Blitz, der eine gegnerische Zieleinheit betäubt."
+Hotkey=Z
+EditorSuffix="(Neutral, feindselig)"
+
+// force of nature
+[ACfr]
+Name=Naturgewalt
+Tip=Naturgewalt
+Ubertip="Verwandelt Bäume in einem kleinen Gebiet in <ACfr,DataA1> Treants.|nBleiben <ACfr,Dur1> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r"
+Hotkey=W
+EditorSuffix="(Neutral, feindselig)"
+
+// frost armor (old, creep)
+[ACfa]
+Name=Frostrüstung
+Tip=Frostrüstung
+Ubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <ACfa,DataB1> und verlangsamt angreifende Nahkampfeinheiten für <ACfa,Dur1> Sek.|nHält <ACfa,DataA1> Sek. lang an."
+Hotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+// frost armor (new, creep, autocast)
+[ACf2]
+Name=Frostrüstung
+Tip=Frostrüstung
+Ubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <ACfa,DataB1> und verlangsamt angreifende Nahkampfeinheiten für <ACfa,Dur1> Sek.|nHält <ACfa,DataA1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+EditorSuffix="(Automatischer Einsatz) (Neutral, feindselig)"
+
+// frost armor (autocast)
+[ACfu]
+Name=Frostrüstung
+Tip=Frostrüstung
+Ubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <ACfu,DataB1> und verlangsamt angreifende Nahkampfeinheiten für <ACfu,Dur1> Sek.|nHält <ACfu,DataA1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+EditorSuffix="(Automatischer Einsatz) (Neutral, feindselig)"
+
+// frost nova
+[ACfn]
+Name=Frostnova
+Tip=Frostnova
+Ubertip="Überzieht gegnerische Einheiten mit einer Frostwelle, die dem Ziel <ACfn,DataB1> Schaden zufügt und <ACfn,DataA1> Novaschaden verursacht. Kälteschaden verringert <ACfn,Dur1> Sek. lang die Bewegungs- und Angriffsgeschwindigkeit betroffener Einheiten."
+Hotkey=N
+EditorSuffix="(Neutral, feindselig)"
+
+// archimonde's ghouls harvest lumber
+[Ahr2]
+Name=Abbauen
+Tip=Abbauen/Sammeln
+Ubertip=Sammelt Holz von Bäumen.
+Untip=Rohstoffe zurückbringen
+Unubertip="Bringt das abgebaute Holz zum nächsten Gebäude, das es aufnehmen kann."
+Hotkey=M
+Unhotkey=E
+EditorSuffix="(Archimondes Ghule, Holz)"
+
+// goblin shredder's harvest lumber
+[Ahr3]
+Name=Abbauen
+Tip=Abbauen/Sammeln
+Ubertip=Sammelt Holz von Bäumen.
+Untip=Rohstoffe zurückbringen
+Unubertip="Bringt das abgebaute Holz zum nächsten Gebäude, das es aufnehmen kann."
+Hotkey=M
+Unhotkey=E
+EditorSuffix="(Goblinschredder, Holz)"
+
+// heal
+[Anh1]
+Name=Heilen
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Heilen
+Ubertip=Heilt eine verbündete nichtmechanische Zieleinheit.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=E
+Unhotkey=E
+
+[Anh2]
+Name=Heilen
+EditorSuffix="(Neutral, feindselig 3)"
+Tip=Heilen
+Ubertip=Heilt eine verbündete nichtmechanische Zieleinheit.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=E
+Unhotkey=E
+
+// healing ward
+[AChd]
+EditorSuffix="(Neutral, feindselig)"
+
+// immolation
+[ACim]
+Name=Feuerbrand
+Tip=Feuerbrand aktivieren
+Ubertip="Aktivieren, um diese Einheit in Flammen zu hüllen und nahen gegnerischen Bodeneinheiten <ACim,DataA1> Schaden pro Sekunde zuzufügen.|nVerbraucht Mana bis Abbruch."
+Unubertip="Deaktivieren, um den Verbrauch von Mana zu stoppen."
+Hotkey=F
+Untip=Feuerbrand deaktivieren
+Unhotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+[ACma]
+EditorSuffix=(immer an)
+
+// inner fire
+[ACif]
+Name=Inneres Feuer
+Tip=Inneres Feuer
+Ubertip="Erhöht den Schaden einer verbündeten Zieleinheit um <ACif,DataA1,%>% und die Rüstung um <ACif,DataB1>.|nHält <ACif,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+Unhotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+// lightning shield
+[ACls]
+Name=Blitzschild
+Tip=Blitzschild
+Ubertip="Gewährt der Zieleinheit einen Schild aus elektrischer Energie, der Einheiten in der Nähe <ACls,DataA1> Schaden pro Sekunde zufügt.|nHält <ACls,Dur1> Sek. lang an."
+Hotkey=L
+EditorSuffix="(Neutral, feindselig)"
+
+// load, orc burrow
+[Sloa]
+Name=Einladen
+Tip=Einladen
+Ubertip=Lädt eine ausgewählte verbündete Bodeneinheit ein.
+Hotkey=L
+EditorSuffix=(Bau)
+
+// load ships
+[Slo3]
+Name=Einladen
+Tip=Einladen
+Ubertip=Lädt eine ausgewählte verbündete Bodeneinheit ein.
+Hotkey=L
+EditorSuffix= (Schiffe)
+
+// magic immunity
+[ACmi]
+Name=Zauberimmunität
+Tip=Zauberimmunität
+Ubertip=Macht diese Einheit immun gegen alle Formen von Magie.
+EditorSuffix="(Neutral, feindselig)"
+
+[ACm2]
+EditorSuffix=(Archimonde)
+
+[ACm3]
+EditorSuffix=(Drache)
+
+// polymorph
+[ACpy]
+Name=Verwandlung
+Tip=Verwandlung
+Ubertip="Verwandelt eine gegnerische Zieleinheit in ein Schaf. Die Einheit behält ihre Trefferpunkte und Rüstung, kann aber nicht angreifen.|nKann nicht gegen Helden oder beschworene Einheiten eingesetzt werden.|nHält <ACpy,Dur1> Sek. lang an."
+Hotkey=W
+EditorSuffix="(Neutral, feindselig)"
+
+// possession
+[ACps]
+Name=Besessenheit
+Tip=Besessenheit
+Ubertip="Vertreibt die Seele einer Zieleinheit. Dadurch erlangt der Spieler die Kontrolle über sie, aber der Körper des Zaubernden wird vernichtet.|nKann nicht gegen Lufteinheiten, Helden oder Unholde über Stufe <ACps,DataA1> eingesetzt werden."
+Hotkey=E
+EditorSuffix="(Neutral, feindselig)"
+
+// pulverize
+[ACpv]
+Name="Pulverisieren"
+Tip="Pulverisieren"
+Ubertip="Gewährt eine Chance von <ACpv,DataA1>%, bei einem Angriff <ACpv,DataB1> Flächenschaden zu verursachen."
+EditorSuffix="(Neutral, feindselig)"
+
+// purge
+[ACpu]
+Name=Reinigen
+Tip=Reinigen
+Ubertip="Entfernt alle Stärkungseffekte von der Zieleinheit und verringert ihre Bewegungsgeschwindigkeit um den Faktor <ACpu,DataA1>. Gereinigte Einheiten erhalten ihre Bewegungsgeschwindigkeit im Verlauf von <ACpu,Dur1> Sek. zurück.|n|cffffcc00Fügt beschworenen Einheiten <ACpu,DataC1> Schaden zu.|r"
+Hotkey=G
+EditorSuffix="(Neutral, feindselig)"
+
+// rain of fire
+[ACrf]
+Name=Feuerregen
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Feuerregen
+Ubertip="Ruft <ACrf,DataA1> Feuerwellen herbei, die Flächenschaden verursachen. Jede Welle verursacht <ACrf,DataB1> Schaden."
+Hotkey=U
+
+// raise dead
+[ACrd]
+Name=Totenerweckung
+Tip=Totenerweckung
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Ubertip="Erweckt <ACrd,DataA1> Skelette aus einer Leiche."
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+EditorSuffix="(Neutral, feindselig)"
+
+// rejuvenation
+[ACrj]
+Name=Verjüngung
+Tip=Verjüngung
+Ubertip="Heilt eine verbündete Zieleinheit im Verlauf von <ACrj,Dur1> Sek. um <ACrj,DataA1> Trefferpunkte."
+Hotkey=E
+EditorSuffix="(Neutral, feindselig)"
+
+// human repair
+[Ahrp]
+Name=Reparieren
+Tip=Reparieren
+Ubertip=Repariert mechanische Einheiten und Gebäude. Verbraucht dabei Rohstoffe.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+EditorSuffix=(Menschen)
+
+// roar
+[ACro]
+Name=Gebrüll
+Tip=Gebrüll
+Ubertip="Erhöht den Schaden verbündeter Einheiten in der Nähe um <ACro,DataA1,%>%.|nHält <ACro,Dur1> Sek. lang an."
+Hotkey=R
+EditorSuffix="(Neutral, feindselig)"
+
+// roar skeletal orc champion
+[ACr1]
+Name=Gebrüll
+Tip=Gebrüll
+Ubertip="Erhöht den Schaden verbündeter Einheiten in der Nähe um <ACr1,DataA1,%>%.|nHält <ACr1,Dur1> Sek. lang an."
+Hotkey=R
+EditorSuffix=(Skelettorcheld)
+
+// root
+[Aro1]
+Name=Verwurzeln
+Tip=Verwurzeln
+Ubertip="Lässt das Urtum Wurzeln schlagen, wodurch es unbeweglich wird und Einheiten ausbilden kann. Urtumbeschützer können in diesem Zustand riesige Felsen durch die Luft schleudern, um Gegnern Schaden zuzufügen. Gewährt dem Urtum außerdem verstärkte Rüstung."
+Hotkey=R
+Untip=Entwurzeln
+Unubertip="Entwurzelt das Urtum, sodass es sich bewegen und Einheiten im Nahkampf angreifen kann. Gewährt dem Urtum außerdem schwere Rüstung."
+Unhotkey=R
+EditorSuffix=(Urtume)
+
+[Aro2]
+Name=Verwurzeln
+Tip=Verwurzeln
+Ubertip="Lässt das Urtum Wurzeln schlagen, wodurch es unbeweglich wird und Einheiten ausbilden kann. Urtumbeschützer können in diesem Zustand riesige Felsen durch die Luft schleudern, um Gegnern Schaden zuzufügen. Gewährt dem Urtum außerdem verstärkte Rüstung."
+Hotkey=R
+Untip=Entwurzeln
+Unubertip="Entwurzelt das Urtum, sodass es sich bewegen und Einheiten im Nahkampf angreifen kann. Gewährt dem Urtum außerdem schwere Rüstung."
+Unhotkey=R
+EditorSuffix=(Urtumbeschützer)
+
+// searing arrows
+[ACsa]
+Name=Sengpfeile
+Tip=Sengpfeile
+Ubertip="Verstärkt Angriffe mit <ACsa,DataA1> Feuerschaden, aber jeder Schuss verbraucht Mana."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=N
+Unhotkey=N
+EditorSuffix="(Neutral, feindselig)"
+
+// sell items
+[Asid]
+Name=Gegenstände verkaufen
+Tip=Gegenstände verkaufen
+Ubertip=Ermöglicht das Verkaufen von Gegenständen.
+
+// sell units
+[Asud]
+Name=Einheiten verkaufen
+Tip=Einheiten verkaufen
+Ubertip=Ermöglicht das Verkaufen von Einheiten.
+
+// shockwave
+[ACsh]
+Name=Schockwelle
+Tip=Schockwelle
+Ubertip="Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <ACsh,DataA1> Schaden zufügt."
+Hotkey=W
+EditorSuffix="(Neutral, feindselig)"
+
+[ACst]
+Name=Schockwelle
+Tip=Schockwelle
+Ubertip="Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <ACst,DataA1> Schaden zufügt."
+Hotkey=W
+EditorSuffix=(Falle)
+
+// sleep
+[ACsl]
+Name=Schlaf
+Tip=Schlaf
+Ubertip="Versetzt eine gegnerische Zieleinheit <ACsl,Dur1> Sek. lang in Schlaf. Schlafende Einheiten wachen auf, wenn sie angegriffen werden."
+Hotkey=F
+EditorSuffix="(Neutral, feindselig)"
+
+// slow
+[ACsw]
+EditorSuffix=(Neutral feindlich)
+
+// thorns aura
+[ACah]
+Name=Dornenaura
+Tip=Dornenaura
+Ubertip="Strahlt eine Aura aus, die nahen verbündeten Einheiten einen Schadensschild gewährt, der <ACah,DataA1,%>% des eintreffenden Angriffsschadens reflektiert."
+EditorSuffix="(Neutral, feindselig)"
+
+// unholy aura
+[ACua]
+Name=Unheilige Aura
+Tip=Unheilige Aura
+Ubertip="Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <ACua,DataA1,%>% und die Trefferpunktregeneration um <ACua,DataB1,%>%."
+EditorSuffix="(Neutral, feindselig)"
+
+// unholy frenzy
+[ACuf]
+Name=Unheilige Raserei
+Tip=Unheilige Raserei
+Ubertip="Erhöht die Angriffsgeschwindigkeit einer Zieleinheit um <ACuf,DataA1,%>%, aber verbraucht <ACuf,DataB1> Trefferpunkte pro Sekunde.|nHält <ACuf,Dur1> Sek. lang an."
+Hotkey=U
+EditorSuffix="(Neutral, feindselig)"
+
+// vampiric attack
+[SCva]
+Name=Lebensdiebstahl
+EditorSuffix=(Frostgram)
+
+// vampiric aura
+[ACvp]
+Name=Vampiraura
+Tip=Vampiraura
+Ubertip="Heilt verbündete Nahkampfeinheiten in der Nähe um <ACvp,DataA1,%>% ihres Angriffsschadens, wenn sie gegnerische Einheiten treffen."
+EditorSuffix="(Neutral, feindselig)"
+
+// war stomp
+[Awrs]
+Name=Kriegsdonner
+EditorSuffix="(Neutral, feindselig 1)","(Neutral, feindselig)"
+Tip=Kriegsdonner
+Ubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <Awrs,DataA1> Schaden zu und betäubt sie für <Awrs,Dur1> Sek."
+Hotkey=D
+
+// war stomp (Ancient Hydra)
+[Awrh]
+Name=Kriegsdonner
+EditorSuffix="(Neutral, feindselig 2)","(Neutral, feindselig)"
+Tip=Kriegsdonner
+Ubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <Awrh,DataA1> Schaden zu und betäubt sie für <Awrh,Dur1> Sek."
+Hotkey=D
+
+// war stomp (Sea Giant)
+[Awrg]
+Name=Kriegsdonner
+EditorSuffix="(Neutral, feindselig 3)","(Neutral, feindselig)"
+Tip=Kriegsdonner
+Ubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <Awrg,DataA1> Schaden zu und betäubt sie für <Awrg,Dur1> Sek."
+Hotkey=D
+
+// Pulverize (sea giant)
+[ACpv]
+
+// venom spears
+[ACvs]
+Name=Giftwaffen
+Tip=Giftwaffen
+Ubertip="Verursacht <ACvs,DataA1> Giftschaden pro Sekunde.|nHält <ACvs,Dur1> Sek. lang an."
+EditorSuffix="(Neutral, feindselig)"
+
+// web
+[ACwb]
+Name=Gespinst
+Tip=Gespinst
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Ubertip="Spinnt eine ausgewählte gegnerische Lufteinheit ein und zwingt sie zu Boden. Eingesponnene Einheiten können wie Bodeneinheiten angegriffen werden.|nHält <ACwb,Dur1> Sek. lang an."
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=N
+Unhotkey=N
+EditorSuffix="(Neutral, feindselig)"
+
+// Crushing Wave
+[ACcv]
+Name=Schmetterwelle
+Tip=Schmetterwelle
+Ubertip="Schickt eine gigantische Welle aus, die allen gegnerischen Bodeneinheiten in einer Linie <ACcv,DataA1> Schaden zufügt, bis maximal <ACcv,DataB1> Schaden."
+Hotkey=C
+
+// Crushing Wave (dragon turtle)
+[ACc2]
+Name=Schmetterwelle
+Tip=Schmetterwelle
+Ubertip="Schickt eine gigantische Welle aus, die allen gegnerischen Bodeneinheiten in einer Linie <ACc2,DataA1> Schaden zufügt, bis maximal <ACc2,DataB1> Schaden."
+Hotkey=C
+EditorSuffix=(Geringer)
+
+// Crushing Wave (lesser version)
+[ACc3]
+Name=Schmetterwelle
+Tip=Schmetterwelle
+Ubertip="Schickt eine gigantische Welle aus, die allen gegnerischen Bodeneinheiten in einer Linie <ACc3,DataA1> Schaden zufügt, bis maximal <ACc3,DataB1> Schaden."
+Hotkey=C
+EditorSuffix=(Geringer)
+
+// summon sea elemental
+[ACwe]
+Name=Meereselementar beschwören
+Tip=Meereselementar beschwören
+Ubertip="Beschwört einen mächtigen Meereselementar mit <nsel,realHP> Trefferpunkten, der <nsel,mindmg1>-<nsel,maxdmg1> Schaden verursacht.|nBleibt <ACwe,Dur1> Sek. lang bestehen."
+Hotkey=E
+
+// neutral interact
+[Anei]
+Name=Benutzer wählen
+Tip=Benutzer wählen
+Hotkey=U
+
+// permanent flyer immolation
+[Apmf]
+Name=Phönixfeuer
+Tip=Phönixfeuer
+EditorSuffix=(Flieger)
+Ubertip="Verbrennt nahe gegnerische Lufteinheiten und fügt ihnen <Apmf,DataA1> Schaden pro Sekunde zu."
+
+// neutral version of resistant skin
+[ACrk]
+Name=Resistente Haut
+EditorSuffix="(Neutral, feindselig 1)"
+Tip=Resistente Haut
+Ubertip=Verringert die Dauer von Schwächungseffekten und macht immun gegen bestimmte Fähigkeiten.
+
+// neutral version of resistant skin (altered button pos)
+[ACsk]
+Name=Resistente Haut
+EditorSuffix="(Neutral, feindselig 2)"
+Tip=Resistente Haut
+Ubertip=Verringert die Dauer von Schwächungseffekten und macht immun gegen bestimmte Fähigkeiten.
+
+
+// Forked Lightning
+[ANfl]
+Name=Gabelblitzschlag
+Tip=Gabelblitzschlag [|cffffcc00Stufe 1|r],Gabelblitzschlag [|cffffcc00Stufe 2|r],Gabelblitzschlag [|cffffcc00Stufe 3|r]
+Ubertip="Richtet einen Blitzkegel auf eine gegnerische Zieleinheit, der bis zu <ANfl,DataB1> gegnerische Einheiten trifft und ihnen <ANfl,DataA1> Schaden zufügt.","Richtet einen Blitzkegel auf Gegner, der bis zu <ANfl,DataB2> gegnerische Einheiten trifft und ihnen <ANfl,DataA2> Schaden zufügt.","Richtet einen Blitzkegel auf Gegner, der bis zu <ANfl,DataB3> gegnerische Einheiten trifft und ihnen <ANfl,DataA3> Schaden zufügt."
+Hotkey=Z
+Researchtip=Gabelblitzschlag [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Richtet einen Blitzkegel auf Gegner, der ihnen Schaden zufügt.|n|n|cffffcc00Stufe 1|r - <ANfl,DataA1> Schaden pro Einheit.|n|cffffcc00Stufe 2|r - <ANfl,DataA2> Schaden pro Einheit.|n|cffffcc00Stufe 3|r - <ANfl,DataA3> Schaden pro Einheit."
+Researchhotkey=Z
+
+// Forked Lightning
+[ACfl]
+Name=Gabelblitzschlag
+EditorSuffix="(Neutral, feindselig)"
+Tip=Gabelblitzschlag
+Ubertip="Richtet einen Blitzkegel auf eine gegnerische Zieleinheit, der bis zu <ACfl,DataB1> gegnerische Einheiten trifft und ihnen <ACfl,DataA1> Schaden zufügt."
+Hotkey=L
+
+//----------------------------------------------------
+// Buffs with no in-game text
+// EditorName is for the Object Editor list only
+
+[BNpi]
+EditorName=Permanenter Feuerbrand
+EditorSuffix="(Neutral, feindselig 1)"
+
+[Bpig]
+EditorName=Permanenter Feuerbrand
+EditorSuffix="(Neutral, feindselig 2)"
+
+[BNsl]
+Buffubertip=Diese Einheit wird für spätere Verwendung aufbewahrt.
+Bufftip=Seelenbewahrung
+EditorName=Seelenbewahrung
+
+[BNst]
+EditorName=Stampede
+
+[BNrf]
+EditorName=Feuerregen (Gebiet)
+
+[Bfre]
+EditorName=Einfrieren
+
+[Bsha]
+EditorName=Gemeinsame Sicht
+
+[Btdg]
+EditorName=Tornadoschaden
+
+[Btsa]
+EditorName=Tornadowirbel (Gebiet)
+
+[ANmd]
+EditorName=Monsun
+
+[XErc]
+EditorName=Chaosregen (Effekt)
+
+[XErf]
+EditorName=Feuerregen (Effekt)
+
+[XIct]
+EditorName=Gegenstand: Tageszeit ändern
+
+[XNmo]
+EditorName=Monsun (Effekt)
+
+[BNva]
+EditorName=Vulkan (Gebiet)
+
+[XNvc]
+EditorName=Vulkan (Effekt)
+
+[XNcs]
+EditorName=Schwarmraketen (Effekt)
+
+[XNhs]
+EditorName=Heilspray (Effekt)

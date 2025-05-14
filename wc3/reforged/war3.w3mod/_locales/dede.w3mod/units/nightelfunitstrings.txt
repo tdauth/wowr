@@ -1,0 +1,315 @@
+﻿[ebal]
+Name=Glevenschleuder
+Hotkey=G
+Hotkey:melee,V0=L
+Tip=Glevenschleuder bauen
+Tip:melee,V0=Balliste bauen
+Ubertip="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu. Kann Vorpalklingen erlernen, um Bäume anzugreifen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0=Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu. Kann Vorpalgleven erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
+
+[etrp]
+Name=Urtumbeschützer
+Hotkey=C
+Tip=Urtumbeschützer erschaffen
+Ubertip="Ein Urtum, das andere Urtume verteidigt. Schleudert im verwurzelten Zustand riesiege Felsen auf nahe Gegner.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[echm]
+Name=Schimäre
+Hotkey=C
+Tip=Schimäre ausbilden
+Ubertip=Ein zweiköpfiger fliegender Drache. Kann Ätzatem erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[edoc]
+Casterupgradecount:custom,V0=3
+Casterupgradecount:melee,V0=3
+Name=Klauendruide
+EditorSuffix= (Nachtelfengestalt)
+Hotkey=L
+Tip=Klauendruide ausbilden
+Ubertip="Eine Nahkampfeinheit mit Magiefähigkeiten. Beherrscht Gebrüll, wodurch der Angriffsschaden erhöht wird. Kann Verjüngung, Bärengestalt und Mal der Klaue erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0="Eine Nahkampfeinheit mit Magiefähigkeiten. Beherrscht Gebrüll, wodurch der Angriffsschaden erhöht wird. Kann Verjüngung und Bärengestalt erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0="Eine Nahkampfeinheit mit Magiefähigkeiten. Beherrscht Gebrüll, wodurch der Angriffsschaden erhöht wird. Kann Verjüngung und Bärengestalt erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Gebrüll","- Gebrüll|n- Verjüngung","- Gebrüll|n- Verjüngung|n- Bärengestalt"
+
+[edcm]
+Name=Klauendruide
+EditorSuffix= (Bärengestalt)
+Hotkey=L
+Tip=Klauendruide ausbilden
+Ubertip="Eine Nahkampfeinheit mit Magiefähigkeiten. Beherrscht Gebrüll, wodurch der Angriffsschaden erhöht wird. Kann Verjüngung, Bärengestalt und Mal der Klaue erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0="Eine Nahkampfeinheit mit Magiefähigkeiten. Beherrscht Gebrüll, wodurch der Angriffsschaden erhöht wird. Kann Verjüngung und Bärengestalt erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0="Eine Nahkampfeinheit mit Magiefähigkeiten. Beherrscht Gebrüll, wodurch der Angriffsschaden erhöht wird. Kann Verjüngung und Bärengestalt erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Gebrüll","- Gebrüll|n- Verjüngung","- Gebrüll|n- Verjüngung|n- Bärengestalt"
+
+[edot]
+Name=Krallendruide
+EditorSuffix= (Nachtelfengestalt)
+Hotkey=U
+Tip=Krallendruide ausbilden
+Ubertip="Ein mobiler Magiebenutzer. Beherrscht Feenfeuer, was die Rüstung einer gegnerischen Einheit verringert und Sicht auf die Einheit gewährt. Kann Sturmkrähengestalt, Wirbelsturm und Mal der Kralle erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Ein mobiler Magiebenutzer. Beherrscht Feenfeuer, was die Rüstung einer gegnerischen Einheit verringert und Sicht auf die Einheit gewährt. Kann Sturmkrähengestalt und Wirbelsturm erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Ein mobiler Magiebenutzer. Beherrscht Feenfeuer, was die Rüstung einer gegnerischen Einheit verringert und Sicht auf die Einheit gewährt. Kann Sturmkrähengestalt und Wirbelsturm erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Feenfeuer","- Feenfeuer|n- Sturmkrähengestalt","- Feenfeuer|n- Sturmkrähengestalt|n- Wirbelsturm"
+
+[edtm]
+Name=Krallendruide
+EditorSuffix= (Sturmkrähengestalt)
+Hotkey=U
+Tip=Krallendruide ausbilden
+Ubertip="Ein mobiler Magiebenutzer. Beherrscht Feenfeuer, was die Rüstung einer gegnerischen Einheit verringert und Sicht auf die Einheit gewährt. Kann Sturmkrähengestalt, Wirbelsturm und Mal der Kralle erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Ein mobiler Magiebenutzer. Beherrscht Feenfeuer, was die Rüstung einer gegnerischen Einheit verringert und Sicht auf die Einheit gewährt. Kann Sturmkrähengestalt und Wirbelsturm erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Ein mobiler Magiebenutzer. Beherrscht Feenfeuer, was die Rüstung einer gegnerischen Einheit verringert und Sicht auf die Einheit gewährt. Kann Sturmkrähengestalt und Wirbelsturm erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Feenfeuer","- Feenfeuer|n- Sturmkrähengestalt","- Feenfeuer|n- Sturmkrähengestalt|n- Wirbelsturm"
+
+[egol]
+Name=Durchwucherte Goldmine
+Tip=Goldmine durchwuchern
+Ubertip="Ein Geflecht von Wurzeln, das Irrwischen den Abbau von Gold aus Goldminen ermöglicht."
+
+
+[ewsp]
+Name=Irrwisch
+Hotkey=W
+Tip=Irrwisch ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold und Holz abbauen sowie Nachtelfengebäude erschaffen und mit Erneuern reparieren.|nKann Detonieren einsetzen, um in einem Gebiet Magie zu bannen, beschworenen Kreaturen Schaden zuzufügen und Mana zu verpuffen."
+
+[Edem]
+Name=Dämonenjäger
+Hotkey=D
+Tip=Dämonenjäger beschwören
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+Propernames=Schattensang,Schattenzorn,Schattenpirscher,Flammensucher,Düsterweber,Düsterschrecken,Düstergram,Sündschwelger,Schmerzstiller,Höllenspross,Zornbringer,Wutläufer,Feuermal,Blutzorn,Schreckensklinge
+
+
+[Edmm]
+Name=Dämonenjäger
+EditorSuffix= (Dämonengestalt)
+Hotkey=D
+Tip=Dämonenjäger beschwören
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+Propernames=Schattensang,Schattenzorn,Schattenpirscher,Flammensucher,Düsterweber,Düsterschrecken,Düstergram,Sündschwelger,Schmerzstiller,Höllenspross,Zornbringer,Wutläufer,Feuermal,Blutzorn,Schreckensklinge
+
+[Ekee]
+Name=Hüter des Hains
+Hotkey=T
+Tip=Hüter des Hains beschwören
+Ubertip="Ein mystischer Held, der geschickt im Umgang mit Naturzaubern ist. Kann Wucherwurzeln, Naturgewalt, Dornenaura und Gelassenheit erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Hüter des Hains wiederbeleben
+Awakentip=Hüter des Hains wiederbeleben
+Propernames=Larodar,Anubris,Nandieb,Califax,Bandalar,Malorne,Gholbine,Dagda,Nuada,Oghma,Centrius,Ceredwyn
+
+[Emoo]
+Name=Mondpriesterin
+Hotkey=M
+Tip=Mondpriesterin beschwören
+Ubertip="Eine Kriegerheldin, die Fernkampfangriffe verstärkt und Gegner aus der Entfernung ausschaltet. Kann Ausspähen, Sengpfeile, Volltrefferaura und Sternenregen erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Mondpriesterin wiederbeleben
+Awakentip=Mondpriesterin wiederbeleben
+Propernames=Kathris Sternensang,Adora Nachtschatten,Mora Mondsang,Felore Mondstrahl,Anara Abendhauch,Kera Sterndrach,Mave Wisperwind,Delas Mondfang,Mira Weißhaupt,Theta Säbelzahn,Tygra Schneenarbe,Ariel Dunklemond,Diana Windholz
+
+[Ewar]
+Name=Wächterin
+Hotkey=W
+Tip=Wächterin beschwören
+Ubertip="Eine listige Heldin, die sich schnell in den Kampf stürzen und wieder zurückziehen kann. Kann Blinzeln, Dolchfächer, Schattenschlag und Rache erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Wächterin wiederbeleben
+Awakentip=Wächterin wiederbeleben
+Propernames=Alsa Eisenzelle,Eisenrabe,Marin Klingenflügel,Shalis Dunkeljäger,Sira Mondhüter,Saithis,Malace Schatten,Kiri Sternpirscher,Anaya Teufelshain,Mirana Sternenfeuer,Felhala Mondstern,Drelanim Wisperwind,Cordana Teufelsang,Nalmeena Düsterfolg
+
+[esen]
+Name=Jägerin
+Hotkey=J
+Tip=Jägerin ausbilden
+Ubertip=Eine bewegliche Kriegerin mit kurzer Reichweite. Kann Wächter und Lunargleve erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[earc]
+Name=Bogenschützin
+Hotkey=N
+Tip=Bogenschützin ausbilden
+Ubertip=Eine einfache Angreiferin mit hoher Reichweite. Beherrscht Elunes Anmut und Hippogryphenzähmung. Kann Treffsicherheit und Verbesserte Bogen erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0="Eine einfache Angreiferin mit hoher Reichweite. Kann Treffsicherheit, Verbesserte Bogen und Hippogryphenzähmung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V1="Eine einfache Angreiferin mit hoher Reichweite. Kann Treffsicherheit, Verbesserte Bogen und Hippogryphenzähmung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Eine einfache Angreiferin mit hoher Reichweite. Kann Treffsicherheit, Verbesserte Bogen und Hippogryphenzähmung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[edry]
+Name=Dryade
+Hotkey=D
+Tip=Dryade ausbilden
+Ubertip="Eine auf Magieabwehr spezialisierte Einheit mit einem Giftangriff, der gegnerische Einheiten verlangsamt und ihnen Schaden zufügt. Hat Zauberimmunität, wodurch ihr Magieeffekte und -schaden nichts anhaben können. Kann Magie aufheben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[efon]
+Name=Treant
+
+[ehip]
+Name=Hippogryph
+Hotkey=P
+Tip=Hippogryph ausbilden
+Ubertip=Eine fliegende Nahkampfbestie. Beherrscht Hippogryphenzähmung.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Eine fliegende Nahkampfbestie. Kann Hippogryphenzähmung erlernen.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+Ubertip:custom,V1=Eine fliegende Nahkampfbestie. Kann Hippogryphenzähmung erlernen.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Eine fliegende Nahkampfbestie. Kann Hippogryphenzähmung erlernen.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+
+[ehpr]
+Name=Hippogryphenreiterin
+Hotkey=R
+Tip=Hippogryph reiten
+Ubertip="Eine Bogenschützin, die auf einem Hippogryph reitet.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[etol]
+Name=Baum des Lebens
+Hotkey=L
+Tip=Baum des Lebens erschaffen
+Ubertip="Hauptgebäude. Bildet Irrwische aus und kann Goldminen durchwuchern. Kann erst zum Baum des Alters und dann zum Baum der Ewigkeit ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[etoa]
+Name=Baum des Alters
+Hotkey=U
+Tip=Ausbau zum Baum des Alters
+Ubertip=Der Ausbau zum Baum des Alters ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[etoe]
+Name=Baum der Ewigkeit
+Hotkey=U
+Tip=Ausbau zum Baum der Ewigkeit
+Ubertip=Der Ausbau zum Baum der Ewigkeit ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[edob]
+Name=Jägerhalle
+Hotkey=H
+Tip=Jägerhalle erschaffen
+Ubertip=Dient zur Erforschung von Waffen- und Rüstungsverbesserungen für alle Einheiten sowie von Ultrasicht und Quellbrunnen.
+Ubertip:custom,V0=Dient zur Erforschung von Waffen- und Rüstungsverbesserungen für alle Einheiten sowie von Ultrasicht.
+Ubertip:melee,V0=Dient zur Erforschung von Waffen- und Rüstungsverbesserungen für alle Einheiten sowie von Ultrasicht.
+
+[eate]
+Name=Altar der Alten
+Hotkey=A
+Tip=Altar der Alten errichten
+Ubertip=Beschwört Helden und belebt getötete Helden wieder.
+
+[eaoe]
+Name=Urtum der Lehren
+Hotkey=U
+Tip=Urtum der Lehren erschaffen
+Ubertip="Urtum der bodengebundenen Magiebenutzer. Bildet Klauendruiden, Dryaden und Bergriesen aus.|nDient zur Erforschung von Mal der Klaue, Magie aufheben, Gehärteter Haut und Resistenter Haut sowie von Verbesserungen für Klauendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0=Urtum der bodengebundenen Magiebenutzer. Bildet Klauendruiden und Dryaden aus.|nDient zur Erforschung von Magie aufheben und Verbesserungen für Klauendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Urtum der bodengebundenen Magiebenutzer. Bildet Klauendruiden und Dryaden aus.|nDient zur Erforschung von Magie aufheben und Verbesserungen für Klauendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[eaom]
+Name=Urtum des Krieges
+Hotkey=R
+Tip=Urtum des Krieges erschaffen
+Ubertip="Urtum der primären Angriffstruppen. Bildet Bogenschützinnen und Jägerinnen aus und baut Glevenschleudern.|nDient zur Erforschung von Verbesserungen für Bogenschützinnen, Jägerinnen und Glevenschleudern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0="Urtum der primären Angriffstruppen. Bildet Bogenschützinnen und Jägerinnen aus und baut Glevenschleudern.|nDient zur Erforschung von Verbesserungen für Bogenschützinnen, Jägerinnen und Glevenschleudern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V1="Urtum der primären Angriffstruppen. Bildet Bogenschützinnen und Jägerinnen aus und baut Glevenschleudern.|nDient zur Erforschung von Verbesserungen für Bogenschützinnen, Jägerinnen und Glevenschleudern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0="Urtum der primären Angriffstruppen. Bildet Bogenschützinnen und Jägerinnen aus und baut Glevenschleudern.|nDient zur Erforschung von Verbesserungen für Bogenschützinnen, Jägerinnen und Glevenschleudern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[eaow]
+Name=Urtum des Windes
+Hotkey=W
+Tip=Urtum des Windes erschaffen
+Ubertip="Urtum der fliegenden Angriffseinheiten und Magiebenutzer. Bildet Hippogryphen, Krallendruiden und Feendrachen aus.|nDient zur Erforschung von Mal der Kralle und Verbesserungen für Krallendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0=Urtum der fliegenden Angriffseinheiten und Magiebenutzer. Bildet Hippogryphen und Krallendruiden aus.|nDient zur Erforschung von Hippogryphenzähmung und Verbesserungen für Krallendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V1="Urtum der fliegenden Angriffseinheiten und Magiebenutzer. Bildet Hippogryphen, Krallendruiden und Feendrachen aus.|nDient zur Erforschung von Mal der Kralle, Hippogryphenzähmung und Verbesserungen für Krallendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0=Urtum der fliegenden Angriffseinheiten und Magiebenutzer. Bildet Hippogryphen und Krallendruiden aus.|nDient zur Erforschung von Hippogryphenzähmung und Verbesserungen für Krallendruiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+
+[eden]
+Name=Urtum der Wunder
+Hotkey=D
+Tip=Urtum der Wunder erschaffen
+Ubertip="Ein Laden mit käuflichen Gegenständen. Die verfügbaren Gegenstände hängen von der Ausbaustufe des Hauptgebäudes (Baum des Lebens, Baum des Alters oder Baum der Ewigkeit) ab sowie von den anderen vorhandenen Gebäuden.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+
+[edos]
+Name=Schimärenhorst
+Hotkey=S
+Tip=Schimärenhorst erschaffen
+Ubertip=Bildet Schimären aus.|nDient zur Erforschung von Ätzatem.
+
+[emow]
+Name=Mondbrunnen
+Hotkey=M
+Tip=Mondbrunnen erschaffen
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Kann Mana und Trefferpunkte auffüllen. Kann Quellbrunnen erlernen. Regeneriert nachts Mana."
+Ubertip:custom,V0="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Kann Mana und Trefferpunkte auffüllen. Regeneriert nachts Mana."
+Ubertip:melee,V0="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Kann Mana und Trefferpunkte auffüllen. Regeneriert nachts Mana."
+
+[espv]
+Name=Avatar der Rache
+
+[even]
+Name=Rachegeist
+
+[emtg]
+Name=Bergriese
+Hotkey=G
+Tip=Bergriese ausbilden
+Ubertip="Ein riesiger Nahkämpfer, der sehr viel aushält und Angreifer stören kann. Beherrscht Spott und Kriegskeule. Kann Gehärtete Haut und Resistente Haut erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[efdr]
+Name=Feendrache
+Hotkey=F
+Tip=Feendrache ausbilden
+Ubertip="Eine kleine Lufteinheit, die Magiebenutzern Schaden zufügt und selbst Schaden vermeidet. Hat Zauberimmunität, Phasenverschiebung und Manaleuchtfeuer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Aimp]
+Name=Vorpalklingen
+Name:melee,V0=Vorpalgleven
+Tip=Vorpalklingen
+Tip:melee,V0=Vorpalgleven
+Ubertip="Erhöht die Geschwindigkeit der geschleuderten Gleven. Ermöglicht Glevenschleudern, Bäume anzugreifen."
+Ubertip:custom,V1="Lässt die Gleven der Glevenschleuder die ersten getroffenen Bodeneinheiten durchschlagen und auch Einheiten dahinter Schaden zufügen. Ermöglicht Glevenschleudern, Bäume anzugreifen."
+Ubertip:melee,V0=Lässt die Gleven der Glevenschleuder die ersten getroffenen Bodeneinheiten durchschlagen und auch Einheiten dahinter Schaden zufügen.
+
+//#RESTNOBETA
+[etrs]
+Name=Nachtelfentransportschiff
+Hotkey=T
+Tip=Nachtelfentransportschiff anheuern
+Ubertip="Ein robustes Transportschiff, das Einheiten übers Meer transportieren kann."
+
+[edes]
+Name=Nachtelfenfregatte
+Hotkey=F
+Tip=Fregatte anheuern
+Ubertip="Ein vielseitiges Angriffsschiff, das mit Luftangreifern kurzen Prozess macht.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ebsh]
+Name=Nachtelfenschlachtschiff
+Hotkey=S
+Tip=Schlachtschiff anheuern
+Ubertip="Ein schweres Schlachtschiff, das gegnerische Schiffe zerstört und Gebäude vom Meer aus bombardiert.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[eshy]
+Name=Nachtelfenhafen
+Tip=Nachtelfenhafen erschaffen
+Ubertip="Produktionsgebäude für Schiffe. Baut Transportschiffe, Fregatten und Schlachtschiffe der Nachtelfen."
+Description=Verkauft Schiffe.
+
+[Edef]
+Propernames=Schattensang,Schattenzorn,Schattenpirscher,Flammensucher,Düsterweber,Düsterschrecken,Düstergram,Sündschwelger,Schmerzstiller,Höllenspross,Zornbringer,Wutläufer,Feuermal,Blutzorn,Schreckensklinge
+Awakentip=Dämonenjägerin wiederbeleben
+Revivetip=Dämonenjägerin wiederbeleben
+Ubertip="Eine listige Heldin, die meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Tip=Dämonenjägerin beschwören
+Hotkey=D
+Name=Dämonenjägerin
+
+[Edmf]
+Propernames=Schattensang,Schattenzorn,Schattenpirscher,Flammensucher,Düsterweber,Düsterschrecken,Düstergram,Sündschwelger,Schmerzstiller,Höllenspross,Zornbringer,Wutläufer,Feuermal,Blutzorn,Schreckensklinge
+Awakentip=Dämonenjägerin wiederbeleben
+Revivetip=Dämonenjägerin wiederbeleben
+Ubertip="Eine listige Heldin, die meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Tip=Dämonenjägerin beschwören
+Hotkey=D
+EditorSuffix=(Dämonengestalt)
+Name=Dämonenjägerin

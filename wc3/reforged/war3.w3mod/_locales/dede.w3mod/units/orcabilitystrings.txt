@@ -1,0 +1,642 @@
+// burning oil
+[Abof]
+Name=Brandöl
+Tip=Brandöl
+Ubertip="Tränkt die Verwüstermunition in brennendem Öl, sodass sie den Boden in Brand setzt und gegnerische Einheiten verbrennt."
+
+[Bbof]
+Bufftip=Brandöl
+Buffubertip=Diese Einheit wurde mit Brandölfeuer in Brand gesteckt und erleidet periodischen Schaden.
+
+// Berserk
+[Absk]
+Name=Berserker
+Tip=Berserker
+Ubertip="Erhöht die Angriffsgeschwindigkeit dieser Einheit um <Absk,DataB1,%>%, aber auch ihren erlittenen Schaden um <Absk,DataC1,%>%."
+Hotkey=E
+
+[Bbsk]
+Bufftip=Berserker
+Buffubertip="Diese Einheit ist zum Berserker geworden. Sie verursacht mehr Schaden, erleidet aber auch mehr Schaden durch Angriffe."
+
+// Berserker Upgrade
+[Sbsk]
+Name=Trollberserker
+
+// Reinforced Burrows Upgrade
+[Arbr]
+Name=Verstärkte Verteidigung für Baue
+Tip=Verstärkte Verteidigung für Baue
+Ubertip=Gewährt Bauen verstärkte Rüstung.
+
+// Ancestral Spirit
+[Aast]
+Name=Geist der Ahnen
+Tip=Geist der Ahnen
+Ubertip="Belebt einen nicht-heroischen Tauren mit <Aast,DataA1,%>% seiner Trefferpunkte wieder."
+Hotkey=N
+
+// Disenchant
+[Adch]
+Name=Entzaubern
+EditorSuffix=(Alt)
+Tip=Entzaubern
+Ubertip="Entfernt alle Stärkungseffekte von Einheiten im Zielgebiet.|n|cffffcc00Fügt beschworenen Einheiten <Adch,DataB1> Schaden zu.|r"
+Hotkey=E
+
+// Disenchant (new)
+[Adcn]
+Name=Entzaubern
+Tip=Entzaubern
+Ubertip="Entfernt alle Stärkungseffekte von Einheiten im Zielgebiet.|n|cffffcc00Fügt gegnerischen beschworenen Einheiten <Adcn,DataB1> Schaden zu.|r"
+Hotkey=E
+
+// Corporeal Form
+[Acpf]
+Name=Korporalgestalt
+Tip=Korporalgestalt
+Untip=Astralgestalt
+Ubertip=Lässt den Geistwandler körperliche Gestalt annehmen. So kann er angreifen und körperlichen Schaden erleiden.
+Unubertip="Macht den Geistwandler astral. So ist er immun gegen körperlichen Schaden, kann aber nicht angreifen. Er kann Fähigkeiten einsetzen und erleidet mehr Schaden durch magische Angriffe und Zauber."
+Hotkey=G
+Unhotkey=G
+
+// Ethereal Form
+[Aetf]
+Name=Astralgestalt
+Tip=Astralgestalt
+Untip=Korporalgestalt
+Ubertip="Macht den Geistwandler astral. So ist er immun gegen körperlichen Schaden, kann aber nicht angreifen. Er kann Fähigkeiten einsetzen und erleidet mehr Schaden durch magische Angriffe und Zauber."
+Unubertip=Lässt den Geistwandler körperliche Gestalt annehmen. So kann er angreifen und körperlichen Schaden erleiden.
+Hotkey=G
+Unhotkey=G
+
+// Spirit Link
+[Aspl]
+Name=Geistverbindung
+Tip=Geistverbindung
+Ubertip="Verbindet die Seelen von <Aspl,DataB1> Einheiten. Geistverbundene Einheiten leben länger, weil <Aspl,DataA1,%>% ihres erlittenen Schadens auf andere geistverbundene Einheiten verteilt wird.|nHält <Aspl,Dur1> Sek. lang an."
+Hotkey=R
+
+[Bspl]
+Bufftip=Geistverbindung
+Buffubertip=Diese Einheit ist eine Geistverbindung eingegangen. Ein Teil ihres erlittenen Schadens wird auf andere geistverbundene Einheiten verteilt.
+
+// Pack Mule
+[Apak]
+Name=Packmuli
+Tip=Packmuli
+Ubertip="Ermöglicht dieser Einheit, Gegenstände für Helden zu tragen. Gegenstände können im Inventar dieser Einheit nicht benutzt werden."
+
+// Liquid Fire
+[Aliq]
+Name=Flüssiges Feuer
+Tip="Flüssiges Feuer"
+Ubertip="Wirft eine flüchtige Flüssigkeit, die Gebäuden periodischen Schaden zufügt. Getroffene Gebäude können nicht repariert werden und greifen <Aliq,DataC1,%>% langsamer an."
+
+// Unstable Concoction
+[Auco]
+Name=Instabiles Gebräu
+Tip=Instabiles Gebräu
+Ubertip="Löst eine heftige Explosion aus, die einer ausgewählten Lufteinheit <Auco,DataB1> Schaden und gegnerischen Lufteinheiten in der Nähe <Auco,DataD1> Schaden zufügt."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=G
+Unhotkey=G
+
+// Healing Wave
+[AOhw]
+Name=Welle der Heilung
+Tip=Welle der Heilung [|cffffcc00Stufe 1|r],Welle der Heilung [|cffffcc00Stufe 2|r],Welle der Heilung [|cffffcc00Stufe 3|r]
+Ubertip="Ruft eine Energiewelle hervor, die das Primärziel um <AOhw,DataA1> Trefferpunkte heilt und <AOhw,DataB1>-mal überspringt. Jeder Sprung heilt weniger.","Ruft eine Energiewelle hervor, die das Primärziel um <AOhw,DataA2> Trefferpunkte heilt und <AOhw,DataB2>-mal überspringt. Jeder Sprung heilt weniger.","Ruft eine Energiewelle hervor, die das Primärziel um <AOhw,DataA3> Trefferpunkte heilt und <AOhw,DataB3>-mal überspringt. Jeder Sprung heilt weniger."
+Hotkey=E
+Researchtip=Welle der Heilung [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ruft eine Energiewelle hervor, die ein Ziel heilt und zu nahen verbündeten Einheiten überspringt. Jeder Sprung heilt weniger.|n|n|cffffcc00Stufe 1|r - Heilt um <AOhw,DataA1> Trefferpunkte, springt <AOhw,DataB1>-mal.|n|cffffcc00Stufe 2|r - Heilt um <AOhw,DataA2> Trefferpunkte, springt <AOhw,DataB2>-mal.|n|cffffcc00Stufe 3|r - Heilt um <AOhw,DataA3> Trefferpunkte, springt <AOhw,DataB3>-mal."
+Researchhotkey=E
+
+// Hex
+[AOhx]
+Name=Verhexen
+Tip=Verhexen [|cffffcc00Stufe 1|r],Verhexen [|cffffcc00Stufe 2|r],Verhexen [|cffffcc00Stufe 3|r]
+Ubertip="Verwandelt eine gegnerische Einheit für <AOhx,Dur1> Sek. in ein zufälliges Tier.","Verwandelt eine gegnerische Einheit für <AOhx,Dur2> Sek. in ein zufälliges Tier.","Verwandelt eine gegnerische Einheit für <AOhx,Dur3> Sek. in ein zufälliges Tier."
+Hotkey=X
+Researchtip=Verhexen [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Verwandelt eine gegnerische Einheit in ein zufälliges Tier und deaktiviert Spezialfähigkeiten.|n|n|cffffcc00Stufe 1|r - Hält <AOhx,Dur1> Sek. lang an.|n|cffffcc00Stufe 2|r - Hält <AOhx,Dur2> Sek. lang an.|n|cffffcc00Stufe 3|r - Hält <AOhx,Dur3> Sek. lang an."
+Researchhotkey=X
+
+[BOhx]
+Bufftip=Verhexen
+Buffubertip=Diese Einheit ist verhext und wurde in ein Tier verwandelt.
+
+// Serpent Ward
+[AOsw]
+Name=Schlangenschutz
+Tip=Schlangenschutz [|cffffcc00Stufe 1|r],Schlangenschutz [|cffffcc00Stufe 2|r],Schlangenschutz [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp1,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp1,mindmg1>-<osp1,maxdmg1> Schaden.|nBleibt <AOsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp2,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp2,mindmg1>-<osp2,maxdmg1> Schaden.|nBleibt <AOsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz hat <osp3,realHP> Trefferpunkte, ist immun gegen Magie und verursacht <osp3,mindmg1>-<osp3,maxdmg1> Schaden.|nBleibt <AOsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=U
+Researchtip=Schlangenschutz [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört einen stationären Schlangenschutz, der die Gegner des Schattenjägers angreift. Der Schutz ist immun gegen Magie.|nBleibt <AOsw,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r|n|n|cffffcc00Stufe 1|r - <osp1,realHP> Trefferpunkte, <osp1,mindmg1>-<osp1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <osp2,realHP> Trefferpunkte, <osp2,mindmg1>-<osp2,maxdmg1> Schaden.|n|cffffcc00Stufe 3|r - <osp3,realHP> Trefferpunkte, <osp3,mindmg1>-<osp3,maxdmg1> Schaden."
+Researchhotkey=U
+
+// Generic ward buff
+[BOwd]
+Bufftip=Schutz
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Voodoo
+[AOvd]
+Name=Großer böser Voodoo
+Tip=Großer böser Voodoo
+Ubertip="Macht alle verbündeten Einheiten in der Nähe des Schattenjägers unverwundbar.|nDer Schattenjäger selbst wird nicht unverwundbar.|nHält <AOvd,Dur1> Sek. lang an."
+Hotkey=O
+Researchtip=Großer böser Voodoo erlernen
+Researchubertip="Macht alle verbündeten Einheiten in der Nähe des Schattenjägers unverwundbar.|nDer Schattenjäger selbst wird nicht unverwundbar.|nHält <AOvd,Dur1> Sek. lang an."
+Researchhotkey=O
+
+[BOvd]
+Bufftip=Großer böser Voodoo
+Buffubertip=Diese Einheit steht unter dem Effekt des Großen bösen Voodoos und ist unverwundbar.
+
+// firebolt
+[Awfb]
+Name=Feuerblitz
+Tip=Feuerblitz
+Ubertip="Schleudert einen feurigen Blitz, der eine gegnerische Zieleinheit betäubt."
+Hotkey=Z
+EditorSuffix=(Hexenmeister)
+
+[Acha]
+Name=Chaos
+
+[Sca1]
+EditorSuffix=(Grunzer)
+
+[Sca2]
+EditorSuffix= (Räuber)
+
+[Sca3]
+EditorSuffix= (Schamane)
+
+[Sca4]
+EditorSuffix=(Kodobestie)
+
+[Sca5]
+EditorSuffix= (Peon)
+
+[Sca6]
+EditorSuffix=(Grommash)
+
+[Achl]
+Name=Besatzung mit Chaosorcs
+
+// Pulverize
+[Awar]
+Name=Pulverisieren, Pulverisieren
+Tip=Pulverisieren,Verbessertes Pulverisieren
+Ubertip="Gewährt eine Chance von <Awar,DataA1>%, bei einem Angriff <Awar,DataB1> Flächenschaden zu verursachen.","Gewährt eine Chance von <Awar,DataA2>%, bei einem Angriff <Awar,DataB2> Flächenschaden zu verursachen."
+
+[Abtl]
+Name=Auf Kampfstation
+Tip=Auf Kampfstation
+Ubertip="Schickt nahe Peons in den Bau, damit sie ihre Basis verteidigen können."
+Hotkey=K
+
+[Astd]
+Name=Entlassen
+Tip=Entlassen
+Ubertip=Schickt Peons im Bau zurück an die Arbeit.
+Hotkey=L
+
+// Ensnare
+[Aens]
+Name=Einschnüren
+Tip=Einschnüren
+Ubertip="Fesselt die gegnerische Zieleinheit an den Boden, sodass sie sich <Aens,Dur1> Sek. lang nicht bewegen kann. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden."
+Hotkey=E
+
+// Ensnare buff on ground units
+[Beng]
+Bufftip=Einschnüren
+Buffubertip=Diese Einheit ist eingeschnürt. Sie kann sich nicht bewegen oder fliegen.
+EditorSuffix= (Boden)
+
+// Ensnare buff on air units
+[Bena]
+Bufftip=Einschnüren
+Buffubertip=Diese Einheit ist eingeschnürt. Sie kann sich nicht bewegen oder fliegen.
+EditorSuffix= (Luft)
+
+// Pulverize - passive
+[Awar]
+
+// Devour
+[Adev]
+Name=Verschlingen
+Tip=Verschlingen
+Ubertip="Verschlingt eine gegnerische Bodeneinheit und verdaut sie langsam, wobei sie pro Sekunde <Advc,DataC1> Schaden erleidet. Wenn die Kodobestie beim Verdauen getötet wird, wird die verschlungene Einheit befreit."
+Hotkey=V
+
+// Devour buff
+[Bdvv]
+Bufftip=Verschlingen
+Buffubertip=Eine Einheit wird verschlungen. Sie erleidet Schaden und gewährt ihrem Besitzer Sicht.
+
+// Purge (classic)
+[Aprg]
+Name=Reinigen
+Tip=Reinigen
+Ubertip="Entfernt alle Stärkungseffekte von der Zieleinheit und verringert ihre Bewegungsgeschwindigkeit um den Faktor <Aprg,DataA1>. Gereinigte Einheiten erhalten ihre Bewegungsgeschwindigkeit im Verlauf von <Aprg,Dur1> Sek. zurück.|n|cffffcc00Fügt beschworenen Einheiten <Aprg,DataC1> Schaden zu.|r"
+Hotkey=G
+
+// Purge (expansion melee)
+[Apg2]
+Name=Reinigen
+Tip=Reinigen
+Ubertip="Entfernt alle Stärkungseffekte von der Zieleinheit. Macht gegnerische Einheiten außerdem für <Apg2,DataD1> Sek. bewegungsunfähig und verringert ihre Bewegungsgeschwindigkeit um den Faktor <Apg2,DataA1>. Sie erhalten ihre Bewegungsgeschwindigkeit im Verlauf von <Apg2,Dur1> Sek. zurück.|n|cffffcc00Fügt beschworenen Einheiten <Apg2,DataC1> Schaden zu.|r"
+Hotkey=G
+
+[Bprg]
+Bufftip=Reinigen
+Buffubertip=Diese Einheit ist gereinigt. Alle Stärkungseffekte wurden von ihr entfernt und sie bewegt sich für kurze Zeit langsamer.
+
+// Lightning Shield
+[Alsh]
+Name=Blitzschild
+Tip=Blitzschild
+Ubertip="Gewährt der Zieleinheit einen Schild aus elektrischer Energie, der Einheiten in der Nähe <Alsh,DataA1> Schaden pro Sekunde zufügt.|nHält <Alsh,Dur1> Sek. lang an."
+Hotkey=L
+
+[Blsh]
+Bufftip=Blitzschild
+Buffubertip="Diese Einheit hat einen Blitzschild. Verbündete und gegnerische Einheiten erleiden Schaden, wenn sie neben dieser Einheit stehen."
+
+// Bloodlust
+[Ablo]
+Name=Kampfrausch
+Tip=Kampfrausch
+Ubertip="Erhöht die Angriffsgeschwindigkeit einer verbündeten Einheit um <Ablo,DataA1,%>% und die Bewegungsgeschwindigkeit um <Ablo,DataB1,%>%.|nHält <Ablo,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=U
+Unhotkey=U
+
+[Bblo]
+Bufftip=Kampfrausch
+Buffubertip=Diese Einheit ist im Kampfrausch. Ihre Bewegungs- und Angriffsgeschwindigkeit sind erhöht.
+
+// Sentry Ward
+[Aeye]
+Name=Wächterschutz
+Tip=Wächterschutz
+Ubertip="Beschwört einen unsichtbaren stationären Schutz, der ein Gebiet sichtbar macht.|nKann unsichtbare Einheiten aufdecken.|nBleibt <Aeye,Dur1> Sek. lang bestehen."
+Hotkey=W
+
+[Beye]
+Bufftip=Wächterschutz
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Stasis Trap spell
+[Asta]
+Name=Stasisfalle
+Tip=Stasisfalle
+Ubertip="Beschwört einen unsichtbaren stationären Schutz, der gegnerische Bodeneinheiten in der Nähe betäubt. Die Falle wird aktiviert, wenn sich eine gegnerische Bodeneinheit nähert, und zerstört alle anderen Stasisschutze im Wirkungsbereich.|nDie Falle bleibt <Asta,Dur1> Sek. lang bestehen.|nDie Betäubung hält <Asta,DataD1> Sek. lang an."
+Hotkey=T
+
+// Stasis Trap trigger buff
+[Bstt]
+Bufftip=Stasisfalle
+Buffubertip="Dieser Schutz betäubt gegnerische Bodeneinheiten, wenn er ausgelöst wird."
+
+// Stasis Trap effect buff
+[Bsta]
+Bufftip=Stasisfalle
+Buffubertip="Diese Einheit ist von einer Stasisfalle betäubt. Sie kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen."
+
+// Healing Ward
+[Ahwd]
+Name=Heilschutz
+Tip=Heilschutz
+Ubertip="Beschwört einen stationären Schutz, der pro Sekunde <Aoar,DataA1,%>% der Trefferpunkte verbündeter nichtmechanischer Einheiten in der Nähe wiederherstellt.|nBleibt <Ahwd,Dur1> Sek. lang bestehen."
+Hotkey=E
+EditorSuffix= (Medizinmann)
+
+[Bhwd]
+Bufftip=Heilschutz
+Buffubertip=Dieser Schutz erhöht die Trefferpunktregeneration von verbündeten Einheiten in der Nähe.
+
+// Healing Ward Aura
+[Aoar]
+Name=Heilschutzaura
+EditorSuffix=(Heilschutz)
+
+[Boar]
+Bufftip=Heilschutzaura
+Buffubertip=Erhöht die Trefferpunktregeneration.
+
+// Envenomed Spears
+[Aven]
+Name=Giftspeere
+Tip=Giftspeere
+Ubertip="Verursacht <Aven,DataA1> Giftschaden pro Sekunde.|nHält <Aven,Dur1> Sek. lang an."
+
+// currently unused
+// Poison Sting
+[Apoi]
+Name=Giftstachel
+Hotkey=T
+Tip=Giftstachel
+
+// Poison Sting (Orb of Venom)
+[Apo2]
+Name=Giftstachel
+Hotkey=T
+Tip=Giftstachel
+EditorSuffix= (Giftkugel)
+
+// Poison Sting Non Stack Buff
+[Bpoi]
+Bufftip=Gift
+Buffubertip=Diese Einheit ist vergiftet und erleidet periodischen Schaden.
+EditorSuffix=(Nicht stapelbar)
+
+// Poison Sting Stack Buff
+[Bpsd]
+Bufftip=Gift
+Buffubertip=Diese Einheit ist vergiftet und erleidet periodischen Schaden.
+EditorSuffix=(Stapelbar)
+
+[Bpsi]
+EditorName=Gift (Info)
+
+// currently unused
+// Tracking (Passive)
+[Anit]
+Name=Verfolgung
+
+// Spiked Barricades (Passive)
+[Aspi]
+Name=Stachelbarrikaden
+
+// Pillage (Passive)
+[Asal]
+Name=Plündern
+Tip=Plündern
+Ubertip="Jeder Angriff, der einem gegnerischen Gebäude Schaden zufügt, gewährt Rohstoffe."
+
+// War Drums Aura
+[Aakb]
+Name=Kriegstrommeln
+Tip=Kriegstrommeln
+Ubertip=Erhöht den Schaden naher verbündeter Einheiten.
+
+[Bakb]
+Bufftip=Kriegstrommeln
+Buffubertip=Diese Einheit hört Kriegstrommeln. Ihre Angriffe verursachen mehr Schaden.
+
+// Wind Walk
+[AOwk]
+Name=Windlauf
+Tip=Windlauf [|cffffcc00Stufe 1|r],Windlauf [|cffffcc00Stufe 2|r],Windlauf [|cffffcc00Stufe 3|r]
+Ubertip="Macht den Klingenmeister unsichtbar und lässt ihn für <AOwk,Dur1> Sek. <AOwk,DataB1,%>% schneller laufen. Sein erster Angriff aus der Unsichtbarkeit deckt ihn auf und verursacht <AOwk,DataC1> Bonusschaden.","Macht den Klingenmeister unsichtbar und lässt ihn für <AOwk,Dur2> Sek. <AOwk,DataB2,%>% schneller laufen. Sein erster Angriff aus der Unsichtbarkeit deckt ihn auf und verursacht <AOwk,DataC2> Bonusschaden.","Macht den Klingenmeister unsichtbar und lässt ihn für <AOwk,Dur3> Sek. <AOwk,DataB3,%>% schneller laufen. Sein erster Angriff aus der Unsichtbarkeit deckt ihn auf und verursacht <AOwk,DataC3> Bonusschaden."
+Hotkey=W
+Researchtip=Windlauf [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Macht den Klingenmeister unsichtbar und lässt ihn vorübergehend schneller laufen. Sein erster Angriff aus der Unsichtbarkeit deckt ihn auf und verursacht Bonusschaden.|n|n|cffffcc00Stufe 1|r - <AOwk,DataB1,%>% Bewegungsgeschwindigkeit für <AOwk,Dur1> Sek., <AOwk,DataC1> zusätzlicher Schaden.|n|cffffcc00Stufe 2|r - <AOwk,DataB2,%>% Bewegungsgeschwindigkeit für <AOwk,Dur2> Sek., <AOwk,DataC2> zusätzlicher Schaden.|n|cffffcc00Stufe 3|r - <AOwk,DataB3,%>% Bewegungsgeschwindigkeit für <AOwk,Dur3> Sek., <AOwk,DataC3> zusätzlicher Schaden."
+Researchhotkey=W
+
+[BOwk]
+Bufftip=Windlauf
+Buffubertip="Diese Einheit setzt Windlauf ein. Sie ist unsichtbar, bewegt sich schneller und ihr erster Angriff aus der Unsichtbarkeit verursacht Bonusschaden."
+
+// Mirror Image
+[AOmi]
+Name=Spiegelbild
+Tip=Spiegelbild [|cffffcc00Stufe 1|r],Spiegelbild [|cffffcc00Stufe 2|r],Spiegelbild [|cffffcc00Stufe 3|r]
+Ubertip="Verwirrt den Gegner mit <AOmi,DataA1> Illusion des Klingenmeisters und bannt jegliche Magie vom Klingenmeister.|nHält <AOmi,Dur1> Sek. lang an.","Verwirrt den Gegner mit <AOmi,DataA2> Illusionen des Klingenmeisters und bannt jegliche Magie vom Klingenmeister.|nHält <AOmi,Dur1> Sek. lang an.","Verwirrt den Gegner mit <AOmi,DataA3> Illusionen des Klingenmeisters und bannt jegliche Magie vom Klingenmeister.|nHält <AOmi,Dur1> Sek. lang an."
+Hotkey=I
+Researchtip=Spiegelbild [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Verwirrt den Gegner mit Illusionen des Klingenmeisters und bannt jegliche Magie vom Klingenmeister.|n|n|cffffcc00Stufe 1|r - Erschafft <AOmi,DataA1> Illusion.|n|cffffcc00Stufe 2|r - Erschafft <AOmi,DataA2> Illusionen.|n|cffffcc00Stufe 3|r - Erschafft <AOmi,DataA3> Illusionen."
+Researchhotkey=I
+
+[BOmi]
+Bufftip=Spiegelbild
+Buffubertip="Eine Illusion des eigentlichen Klingenmeisters."
+
+// Critical Strike
+[AOcr]
+Name=Kritische Treffer
+Tip=Kritische Treffer [|cffffcc00Stufe 1|r],Kritische Treffer [|cffffcc00Stufe 2|r],Kritische Treffer [|cffffcc00Stufe 3|r]
+Ubertip="Gewährt eine Chance von <AOcr,DataA1>%, bei einem Angriff das <AOcr,DataB1>-Fache des Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA2>%, bei einem Angriff das <AOcr,DataB2>-Fache des Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA3>%, bei einem Angriff das <AOcr,DataB3>-Fache des Schadens zu verursachen."
+Ubertip:custom,V0="Gewährt eine Chance von <AOcr,DataA1>%, bei einem Angriff das <AOcr,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA2>%, bei einem Angriff das <AOcr,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA3>%, bei einem Angriff das <AOcr,DataB3>-Fache des normalen Schadens zu verursachen."
+Ubertip:custom,V1="Gewährt eine Chance von <AOcr,DataA1>%, bei einem Angriff das <AOcr,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA2>%, bei einem Angriff das <AOcr,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA3>%, bei einem Angriff das <AOcr,DataB3>-Fache des normalen Schadens zu verursachen."
+Ubertip:melee,V0="Gewährt eine Chance von <AOcr,DataA1>%, bei einem Angriff das <AOcr,DataB1>-Fache des normalen Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA2>%, bei einem Angriff das <AOcr,DataB2>-Fache des normalen Schadens zu verursachen.","Gewährt eine Chance von <AOcr,DataA3>%, bei einem Angriff das <AOcr,DataB3>-Fache des normalen Schadens zu verursachen."
+Researchtip=Kritische Treffer [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Gewährt eine Chance, bei einem Angriff mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <AOcr,DataA1>% Chance auf <AOcr,DataB1>-fachen Schaden.|n|cffffcc00Stufe 2|r - <AOcr,DataA2>% Chance auf <AOcr,DataB2>-fachen Schaden.|n|cffffcc00Stufe 3|r - <AOcr,DataA3>% Chance auf <AOcr,DataB3>-fachen Schaden."
+Researchubertip:custom,V0="Gewährt eine Chance, bei einem Angriff mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <AOcr,DataA1>% Chance auf <AOcr,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <AOcr,DataA2>% Chance auf <AOcr,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <AOcr,DataA3>% Chance auf <AOcr,DataB3>-fachen normalen Schaden."
+Researchubertip:custom,V1="Gewährt eine Chance, bei einem Angriff mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <AOcr,DataA1>% Chance auf <AOcr,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <AOcr,DataA2>% Chance auf <AOcr,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <AOcr,DataA3>% Chance auf <AOcr,DataB3>-fachen normalen Schaden."
+Researchubertip:melee,V0="Gewährt eine Chance, bei einem Angriff mehr Schaden zu verursachen.|n|n|cffffcc00Stufe 1|r - <AOcr,DataA1>% Chance auf <AOcr,DataB1>-fachen normalen Schaden.|n|cffffcc00Stufe 2|r - <AOcr,DataA2>% Chance auf <AOcr,DataB2>-fachen normalen Schaden.|n|cffffcc00Stufe 3|r - <AOcr,DataA3>% Chance auf <AOcr,DataB3>-fachen normalen Schaden."
+Researchhotkey=C
+
+// Bladestorm
+[AOww]
+Name=Klingensturm
+Tip=Klingensturm
+Ubertip="Entfesselt einen zerstörerischen Klingensturm um den Klingenmeister, der ihn immun gegen Magie macht und nahen gegnerischen Bodeneinheiten <AOww,DataA1> Schaden pro Sekunde zufügt.|nHält <AOww,Dur1> Sek. lang an."
+Hotkey=K
+Researchtip=Klingensturm erlernen
+Researchubertip="Entfesselt einen zerstörerischen Klingensturm um den Klingenmeister, der ihn immun gegen Magie macht und nahen gegnerischen Bodeneinheiten <AOww,DataA1> Schaden pro Sekunde zufügt."
+Researchhotkey=K
+Globalmessage=
+Globalsound=
+
+// Chain Lightning
+[AOcl]
+Name=Kettenblitz
+Tip=Kettenblitz [|cffffcc00Stufe 1|r],Kettenblitz [|cffffcc00Stufe 2|r],Kettenblitz [|cffffcc00Stufe 3|r]
+Ubertip="Schleudert einen Blitz, der dem Primärziel <AOcl,DataA1> Schaden zufügt und bis zu <AOcl,DataB1>-mal überspringt. Jeder Sprung verursacht weniger Schaden.","Schleudert einen Blitz, der dem Primärziel <AOcl,DataA2> Schaden zufügt und bis zu <AOcl,DataB2>-mal überspringt. Jeder Sprung verursacht weniger Schaden.","Schleudert einen Blitz, der dem Primärziel <AOcl,DataA3> Schaden zufügt und bis zu <AOcl,DataB3>-mal überspringt. Jeder Sprung verursacht weniger Schaden."
+Hotkey=Z
+Researchtip=Kettenblitz [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Schleudert einen Blitz, der einer gegnerischen Zieleinheit Schaden zufügt und zu Gegnern in der Nähe überspringt. Jeder Sprung verursacht weniger Schaden.|n|n|cffffcc00Stufe 1|r - <AOcl,DataA1> Schaden, springt <AOcl,DataB1>-mal.|n|cffffcc00Stufe 2|r - <AOcl,DataA2> Schaden, springt <AOcl,DataB2>-mal.|n|cffffcc00Stufe 3|r - <AOcl,DataA3> Schaden, springt <AOcl,DataB3>-mal."
+Researchhotkey=Z
+
+// Far Sight
+[AOfs]
+Name=Fernsicht
+Tip=Fernsicht [|cffffcc00Stufe 1|r],Fernsicht [|cffffcc00Stufe 2|r],Fernsicht [|cffffcc00Stufe 3|r]
+Ubertip="Macht ein ausgewähltes Gebiet der Karte <AOfs,Dur1> Sek. lang sichtbar. Deckt auch unsichtbare Einheiten auf."
+Hotkey=F
+Researchtip=Fernsicht [|cffffcc00Stufe %d|r] erlernen
+Researchubertip=Macht ein ausgewähltes Gebiet der Karte sichtbar. Deckt auch unsichtbare Einheiten auf.|n|n|cffffcc00Stufe 1|r - Deckt ein kleines Gebiet auf.|n|cffffcc00Stufe 2|r - Deckt ein großes Gebiet auf.|n|cffffcc00Stufe 3|r - Deckt ein sehr großes Gebiet auf.
+Researchubertip:custom,V0="Macht ein ausgewähltes Gebiet der Karte sichtbar. Deckt auch unsichtbare Einheiten auf.|n|n|cffffcc00Stufe 1|r - Deckt für <AOfs,Cost1> Mana ein kleines Gebiet auf.|n|cffffcc00Stufe 2|r - Deckt für <AOfs,Cost2> Mana ein großes Gebiet auf.|n|cffffcc00Stufe 3|r - Deckt für <AOfs,Cost3> Mana ein sehr großes Gebiet auf."
+Researchubertip:custom,V1="Macht ein ausgewähltes Gebiet der Karte sichtbar. Deckt auch unsichtbare Einheiten auf.|n|n|cffffcc00Stufe 1|r - Deckt für <AOfs,Cost1> Mana ein kleines Gebiet auf.|n|cffffcc00Stufe 2|r - Deckt für <AOfs,Cost2> Mana ein großes Gebiet auf.|n|cffffcc00Stufe 3|r - Deckt für <AOfs,Cost3> Mana ein sehr großes Gebiet auf."
+Researchubertip:melee,V0="Macht ein ausgewähltes Gebiet der Karte sichtbar. Deckt auch unsichtbare Einheiten auf.|n|n|cffffcc00Stufe 1|r - Deckt für <AOfs,Cost1> Mana ein kleines Gebiet auf.|n|cffffcc00Stufe 2|r - Deckt für <AOfs,Cost2> Mana ein großes Gebiet auf.|n|cffffcc00Stufe 3|r - Deckt für <AOfs,Cost3> Mana ein sehr großes Gebiet auf."
+Researchhotkey=F
+
+// Feral Spirit
+[AOsf]
+Name=Wildgeist
+Tip=Wildgeist [|cffffcc00Stufe 1|r],Wildgeist [|cffffcc00Stufe 2|r],Wildgeist [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört <AOsf,DataB1> Geisterwölfe als Begleiter. Jeder Wolf hat <osw1,realHP> Trefferpunkte und verursacht <osw1,mindmg1>-<osw1,maxdmg1> Schaden.|nBleiben <AOsf,Dur1> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r","Beschwört <AOsf,DataB2> Geisterwölfe als Begleiter, die Kritische Treffer beherrschen. Jeder Wolf hat <osw2,realHP> Trefferpunkte und verursacht <osw2,mindmg1>-<osw2,maxdmg1> Schaden.|nBleiben <AOsf,Dur2> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r","Beschwört <AOsf,DataB3> Geisterwölfe als Begleiter, die Kritische Treffer beherrschen und unsichtbar sind, bis sie angreifen. Jeder Wolf hat <osw3,realHP> Trefferpunkte und verursacht <osw3,mindmg1>-<osw3,maxdmg1> Schaden.|nBleiben <AOsf,Dur3> Sek. lang bestehen.|n|n|cffffcc00Können Bodeneinheiten angreifen.|r"
+Researchtip=Wildgeist [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört <AOsf,DataB1> Geisterwölfe, die gegen die Gegner des Scharfsehers kämpfen.|nBleiben <AOsf,Dur1> Sek. lang bestehen.|n|n|cffffcc00Stufe 1|r - <osw1,realHP> Trefferpunkte, <osw1,mindmg1>-<osw1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <osw2,realHP> Trefferpunkte, <osw2,mindmg1>-<osw2,maxdmg1> Schaden, beherrschen Kritische Treffer.|n|cffffcc00Stufe 3|r - <osw3,realHP> Trefferpunkte, <osw3,mindmg1>-<osw3,maxdmg1> Schaden, beherrschen Kritische Treffer und Unsichtbarkeit."
+Hotkey=T
+Researchhotkey=T
+
+
+[BOsf]
+Bufftip=Wildgeist
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Earthquake
+[AOeq]
+Name=Erdbeben
+Tip=Erdbeben
+Ubertip="Lässt den Boden beben und aufreißen, fügt Gebäuden im Wirkungsbereich <AOeq,DataB1> Schaden pro Sekunde zu und verlangsamt Einheiten um <AOeq,DataC1,%>%.|nHält <AOeq,Dur1> Sek. lang an."
+Hotkey=E
+Researchtip=Erdbeben erlernen
+Researchubertip="Lässt den Boden beben und aufreißen, fügt Gebäuden im Wirkungsbereich <AOeq,DataB1> Schaden pro Sekunde zu und verlangsamt Einheiten um <AOeq,DataC1,%>%. Hält <AOeq,Dur1> Sek. lang an."
+Researchhotkey=E
+
+[BOeq]
+Bufftip=Erdbeben
+Buffubertip=Diese Einheit ist von einem Erdbeben erfasst und bewegt sich viel langsamer.
+
+// Shockwave
+[AOsh]
+Name=Schockwelle
+Tip=Schockwelle [|cffffcc00Stufe 1|r],Schockwelle [|cffffcc00Stufe 2|r],Schockwelle [|cffffcc00Stufe 3|r]
+Ubertip="Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOsh,DataA1> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOsh,DataA2> Schaden zufügt.","Entfesselt eine Kraftwelle, die Bodeneinheiten in einer Linie <AOsh,DataA3> Schaden zufügt."
+Hotkey=W
+Researchtip=Schockwelle [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Entfesselt eine Kraftwelle, die vom Helden ausgeht und Bodeneinheiten in einer Linie Schaden zufügt.|n|n|cffffcc00Stufe 1|r - <AOsh,DataA1> Schaden.|n|cffffcc00Stufe 2|r - <AOsh,DataA2> Schaden.|n|cffffcc00Stufe 3|r - <AOsh,DataA3> Schaden."
+Researchhotkey=W
+
+// Endurance Aura
+[AOae]
+Name=Ausdaueraura
+Tip=Ausdaueraura [|cffffcc00Stufe 1|r],Ausdaueraura [|cffffcc00Stufe 2|r],Ausdaueraura [|cffffcc00Stufe 3|r]
+Ubertip="Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOae,DataA1,%>% und die Angriffsgeschwindigkeit um <AOae,DataB1,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOae,DataA2,%>% und die Angriffsgeschwindigkeit um <AOae,DataB2,%>%.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AOae,DataA3,%>% und die Angriffsgeschwindigkeit um <AOae,DataB3,%>%."
+Researchtip=Ausdaueraura [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht die Bewegungs- und Angriffsgeschwindigkeit von verbündeten Einheiten in der Nähe.|n|n|cffffcc00Stufe 1|r - <AOae,DataA1,%>% Bewegungsgeschwindigkeit, <AOae,DataB1,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 2|r - <AOae,DataA2,%>% Bewegungsgeschwindigkeit, <AOae,DataB2,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 3|r - <AOae,DataA3,%>% Bewegungsgeschwindigkeit, <AOae,DataB3,%>% Angriffsgeschwindigkeit."
+Researchhotkey=E
+
+[BOae]
+Bufftip=Ausdaueraura
+Buffubertip=Diese Einheit steht unter dem Effekt der Ausdaueraura. Ihre Bewegungs- und Angriffsgeschwindigkeit sind erhöht.
+
+// Reincarnation
+[AOre]
+Name=Reinkarnation
+Tip=Reinkarnation
+Ubertip="Nach dem Tod wird der Taurenhäuptling wiederbelebt. Reinkarnation hat eine Abklingzeit von <AOre,Cool1> Sek."
+Researchtip=Reinkarnation erlernen
+Researchubertip="Nach dem Tod wird der Taurenhäuptling wiederbelebt. Reinkarnation hat eine Abklingzeit von <AOre,Cool1> Sek."
+Researchhotkey=R
+Globalmessage=
+Globalsound=
+
+// War Stomp (Chieftan)
+[AOws]
+Name=Kriegsdonner
+Tip=Kriegsdonner [|cffffcc00Stufe 1|r],Kriegsdonner [|cffffcc00Stufe 2|r],Kriegsdonner [|cffffcc00Stufe 3|r]
+Ubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOws,DataA1> Schaden zu und betäubt sie für <AOws,Dur1> Sek.","Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOws,DataA2> Schaden zu und betäubt sie für <AOws,Dur2> Sek.","Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe <AOws,DataA3> Schaden zu und betäubt sie für <AOws,Dur3> Sek."
+Researchtip=Kriegsdonner [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe Schaden zu und betäubt sie.|n|n|cffffcc00Stufe 1|r - <AOws,DataA1> Schaden, betäubt für <AOws,Dur1> Sek.|n|cffffcc00Stufe 2|r - <AOws,DataA2> Schaden, betäubt für <AOws,Dur2> Sek.|n|cffffcc00Stufe 3|r - <AOws,DataA3> Schaden, betäubt für <AOws,Dur3> Sek."
+Hotkey=D
+Researchhotkey=D
+
+
+[BOws]
+Bufftip=Kriegsdonner
+Buffubertip="Diese Einheit wurde von Kriegsdonner getroffen. Sie kann sich für kurze Zeit nicht bewegen, angreifen oder Fähigkeiten einsetzen."
+
+//----------------------------------------------------
+// Buffs with no in-game text
+// EditorName is for the Object Editor list only
+
+[BOea]
+EditorName=Erdbeben (Benutzer)
+
+[BOsh]
+EditorName=Schockwelle (Benutzer)
+
+[BOvc]
+EditorName=Großer böser Voodoo (Benutzer)
+
+[BOww]
+EditorName=Klingensturm (Benutzer)
+
+[Bdig]
+EditorName=Verschlingen (Benutzer)
+
+[Bens]
+EditorName=Einschnüren (Allgemein)
+
+[Bliq]
+EditorName=Flüssiges Feuer
+
+[Blsa]
+EditorName=Blitzschild (Benutzer)
+
+[XOeq]
+EditorName=Erdbeben (Effekt)
+
+[XOre]
+EditorName=Reinkarnation (Effekt)
+
+[Xbof]
+EditorName=Brandöl (Effekt)
+
+[Xfos]
+EditorName="Gebäudeschaden - Orcs, klein"
+
+[Xfom]
+EditorName="Gebäudeschaden - Orcs, mittel"
+
+[Xfol]
+EditorName="Gebäudeschaden - Orcs, groß"
+[BIpb]
+EditorSuffix=(Nicht stapelbar)
+Buffubertip=Diese Einheit ist vergiftet und erleidet periodischen Schaden.
+Bufftip=Toxin
+[BIpd]
+EditorSuffix=(Stapelbar)
+Buffubertip=Diese Einheit ist vergiftet und erleidet periodischen Schaden.
+Bufftip=Toxin
+[BIpi]
+EditorName=Toxin (Info)
+
+[Aobs]
+EditorSuffix=(Symbol)
+Ubertip="Erhöht die Trefferpunkte von Grunzern um <Robs,base1> und ihren Angriffsschaden um <Robs,base2>."
+Tip=Bestialische Kraft
+Name=Bestialische Kraft
+
+[Aobk]
+EditorSuffix=(Symbol)
+Ubertip="Macht Kopfjäger zu Berserkern, die mehr Trefferpunkte haben und Berserker beherrschen."
+Tip=Trollberserker
+Name=Trollberserker
+
+[Aorb]
+EditorSuffix=(Symbol)
+Ubertip=Gewährt Bauen und Wachtürmen verstärkte Rüstung.
+Tip=Verstärkte Verteidigung
+Name=Verstärkte Verteidigung
+
+[Aosp]
+EditorSuffix=(Symbol)
+Ubertip="Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen. Reflektiert außerdem <Rosp,base2,%>% des Schadens auf Angreifer.","Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen. Reflektiert außerdem <Rosp,base2,%>% des Schadens auf Angreifer.","Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen. Reflektiert außerdem <Rosp,base2,%>% des Schadens auf Angreifer."
+Tip=Stachelbarrikaden,Stachelbarrikaden,Verbesserte Stachelbarrikaden
+Name=Stachelbarrikaden,Stachelbarrikaden,Verbesserte Stachelbarrikaden
+
+[Aotr]
+EditorSuffix=(Symbol)
+Ubertip="Erhöht die Trefferpunktregeneration von Kopfjägern, Medizinmännern und Fledermausreitern."
+Tip=Trollregeneration
+Name=Trollregeneration
+
+[Asa2]
+EditorSuffix:custom,V1=(1,1)
+Ubertip:custom,V1="Jeder Angriff, der einem gegnerischen Gebäude Schaden zufügt, gewährt Rohstoffe."
+Tip:custom,V1=Plündern
+Name:custom,V1=Plündern

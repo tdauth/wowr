@@ -1,0 +1,1349 @@
+﻿// Human Units
+[Harf]
+Name=Paladin
+EditorSuffix=(führt Frostgram)
+Hotkey=L
+Propernames=Arthas
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hart]
+Name=Paladin
+Hotkey=L
+Propernames=Arthas
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+
+[Huth]
+Name=Paladin
+Hotkey=L
+Propernames=Uther
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+
+[Hpb1]
+Name=Paladin
+Hotkey=L
+Propernames=Lord Nicholas Buzan
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hpb2]
+Name=Paladin
+Hotkey=L
+Propernames=Lord Gregory Edmunson
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hdgo]
+Name=Paladin
+Hotkey=L
+Propernames=Dagren der Orcschlächter
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hmgd]
+Name=Paladin
+Hotkey=L
+Propernames=Magroth der Verteidiger
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hhkl]
+Name=Paladin
+Hotkey=L
+Propernames=Halahk der Lebenspender
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hjai]
+Name=Erzmagier
+Hotkey=E
+Propernames=Jaina
+Revivetip=Erzmagier wiederbeleben
+Awakentip=Erzmagier wiederbeleben
+Ubertip="Ein mystischer Held, der geschickt aus der Entfernung angreift. Kann Blizzard, Wasserelementar beschwören, Brillanzaura und Massenteleport erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Hmbr]
+Name=Bergkönig
+Hotkey=B
+Propernames=Muradin Bronzebart
+Revivetip=Bergkönig wiederbeleben
+Awakentip=Bergkönig wiederbeleben
+UberTip="Ein Kriegerheld, der auf den Angriffskampf und das Zerstreuen gegnerischer Truppen spezialisiert ist. Kann Sturmschlag, Donnerschlag, Hieb und Avatar erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Hant]
+Name=Erzmagier
+Hotkey=E
+Propernames=Antonidas
+Revivetip=Erzmagier wiederbeleben
+Awakentip=Erzmagier wiederbeleben
+Ubertip="Ein mystischer Held, der geschickt aus der Entfernung angreift. Kann Blizzard, Wasserelementar beschwören, Brillanzaura und Massenteleport erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Hvwd]
+Name=Waldläuferin
+Hotkey=W
+Propernames=Sylvanas Windläufer
+Revivetip=Waldläuferin wiederbeleben
+Awakentip=Waldläuferin wiederbeleben
+
+[Hkal]
+Name=Blutmagier
+Hotkey=M
+Propernames=Kael'thas
+Revivetip=Blutmagier wiederbeleben
+Awakentip=Blutmagier wiederbeleben
+Ubertip="Ein mystischer Held, der Magie kontrolliert und geschickt aus der Entfernung angreift. Kann Flammenschlag, Verbannen, Manaentzug und Phönix erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Hvsh]
+Name=Meerhexe
+Hotkey=X
+Propernames=Lady Vashj
+Revivetip=Meerhexe wiederbeleben
+Awakentip=Meerhexe wiederbeleben
+Ubertip="Eine mystische Heldin, die geschickt aus der Entfernung angreift. Kann Gabelblitzschlag, Frostpfeile, Manaschild und Tornado erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Hlgr]
+Name=Dunkler Ritter
+Hotkey=L
+Propernames=Lord Garithos
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[haro]
+Name=Arkaner Spähposten
+Hotkey=S
+Tip=Arkanen Spähposten errichten
+
+[hcth]
+Name=Hauptmann
+
+[hhdl]
+Name=Reiterloses Pferd
+
+[hhes]
+Name=Schwertkämpfer
+Tip=Schwertkämpfer ausbilden
+Tip:melee,V0=Hochelfenschwertkämpfer ausbilden
+Hotkey=S
+Ubertip=Ein vielseitiger Fußsoldat. Kann Verteidigungshaltung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[hbew]
+Name=Wagen
+
+[Hapm]
+Name=Paladin
+Hotkey=L
+Propernames=Admiral Prachtmeer
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[hrdh]
+Name=Packpferd
+
+[Hgam]
+Name=Geist eines Erzmagiers
+Hotkey=A
+Propernames=Antonidas
+Revivetip=Geist eines Erzmagiers wiederbeleben
+Awakentip=Geist eines Erzmagiers wiederbeleben
+Ubertip="Der Geist eines mystischen Helden, der geschickt aus der Entfernung angreift. Kann Blizzard, Wasserelementar beschwören, Brillanzaura und Massenteleport erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+// Orc Units
+[Othr]
+Name=Scharfseher
+Hotkey=A
+Propernames=Thrall
+Revivetip=Scharfseher wiederbeleben
+Awakentip=Scharfseher wiederbeleben
+Ubertip="Ein mystischer Held, der auf Fernkampf und auf Aufklärung spezialisiert ist. Kann Kettenblitz, Fernsicht, Wildgeist und Erdbeben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Ogrh]
+Name=Klingenmeister
+Hotkey=M
+Propernames=Grommash Höllschrei
+Revivetip=Klingenmeister wiederbeleben
+Awakentip=Klingenmeister wiederbeleben
+Ubertip="Ein listiger Held, der schnell einzelne Einheiten töten kann und große Verwirrung unter Gegnern auslöst. Kann Spiegelbild, Windlauf, Kritische Treffer und Klingensturm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Opgh]
+Name=Klingenmeister
+EditorSuffix= (Besessen)
+Hotkey=M
+Propernames=Grommash Höllschrei
+Revivetip=Klingenmeister wiederbeleben
+Awakentip=Klingenmeister wiederbeleben
+Ubertip="Ein listiger Held, der schnell einzelne Einheiten töten kann und große Verwirrung unter Gegnern auslöst. Kann Spiegelbild, Windlauf, Kritische Treffer und Klingensturm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Ocbh]
+Name=Taurenhäuptling
+Hotkey=T
+Propernames=Cairne Bluthuf
+Revivetip=Taurenhäuptling wiederbeleben
+Awakentip=Taurenhäuptling wiederbeleben
+Ubertip="Ein Kriegerheld und außergewöhnlicher Nahkämpfer, der viel Schaden einstecken kann. Kann Schockwelle, Kriegsdonner, Ausdaueraura und Reinkarnation erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+//expansion version of cairne bloodhoof
+[Ocb2]
+Name=Taurenhäuptling
+Hotkey=T
+Propernames=Cairne Bluthuf
+Revivetip=Taurenhäuptling wiederbeleben
+Awakentip=Taurenhäuptling wiederbeleben
+Ubertip="Ein Kriegerheld und außergewöhnlicher Nahkämpfer, der viel Schaden einstecken kann. Kann Schockwelle, Kriegsdonner, Ausdaueraura und Reinkarnation erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+EditorSuffix=(Erweiterung)
+
+[owar]
+Name=Orckriegshäuptling
+
+[ocbw]
+Name=Bau der Teufelsorcs
+Name:custom,V1=Bau der Teufelsorcs,Bau der Teufelsorcs
+Hotkey=O
+Tip=Bau der Teufelsorcs errichten
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. TeufelsPeons können in Bauen stationiert werden, damit sie Gegner angreifen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Peons können in Bauen stationiert werden, damit sie Gegner angreifen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Peons können in Bauen stationiert werden, damit sie Gegner angreifen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+EditorSuffix= (Chaos)
+
+[oosc]
+Name=Kodobestie
+EditorSuffix= (Reiterlos)
+
+[ownr]
+Name=Windreiter
+EditorSuffix= (Reiterlos)
+
+[odkt]
+Name=Drak'thul
+
+[onzg]
+Name=Nazgrel
+
+[Odrt]
+Name=Scharfseher
+Propernames=Drek'Thar
+Hotkey=A
+Tip=Scharfseher beschwören
+Ubertip="Ein mystischer Held, der auf Fernkampf und auf Aufklärung spezialisiert ist. Kann Kettenblitz, Fernsicht, Wildgeist und Erdbeben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Scharfseher wiederbeleben
+Awakentip=Scharfseher wiederbeleben
+
+[Orkn]
+Name=Schattenjäger
+Propernames=Rokhan
+Hotkey=H
+Tip=Schattenjäger beschwören
+Ubertip="Ein listiger Held, der auf Heilmagie und Voodooflüche spezialisiert ist. Kann Welle der Heilung, Verhexen, Schlangenschutz und Großer böser Voodoo erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Schattenjäger wiederbeleben
+Awakentip=Schattenjäger wiederbeleben
+
+[omtg]
+Name=Mathog
+
+[ovlj]
+Name=Vol'jin
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Wächterschutz","- Wächterschutz|n- Stasisfalle","- Wächterschutz|n- Stasisfalle|n- Heilschutz"
+
+[Ogld]
+Name=Hexenmeister
+Propernames=Gul'dan
+Hotkey=X
+Tip=Hexenmeister beschwören
+Ubertip="Ein mächtiger Hexenmeister, der Kil'jaeden höchst persönlich verschrieben ist.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Hexenmeister wiederbeleben
+Awakentip=Hexenmeister wiederbeleben
+
+[Osam]
+Name=Klingenmeister
+Hotkey=K
+Propernames=Samuro
+Revivetip=Klingenmeister wiederbeleben
+Awakentip=Klingenmeister wiederbeleben
+Ubertip="Ein listiger Held, der schnell einzelne Einheiten töten kann und große Verwirrung unter Gegnern auslöst. Kann Spiegelbild, Windlauf, Kritische Treffer und Klingensturm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Orex]
+Name=Bestienmeister
+Propernames=Rexxar
+Hotkey=S
+Tip=Bestienmeister beschwören
+Ubertip="Ein Kriegerheld, der Bestien in den Kampf führt und seine Verbündeten unterstützt. Kann Bär beschwören, Stachelbestie beschwören, Kampfgebrüll und Stampede erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Bestienmeister wiederbeleben
+Awakentip=Bestienmeister wiederbeleben
+
+[ngzc]
+Name=Misha
+EditorSuffix= (Stufe 1)
+
+[ngzd]
+Name=Misha
+EditorSuffix= (Stufe 2)
+
+[ngza]
+Name=Misha
+EditorSuffix= (Stufe 3)
+
+[ngz4]
+Name=Misha
+EditorSuffix= (Stufe 4)
+
+[nqb4]
+Name=Berserkerstachelbestie
+EditorSuffix= (Stufe 4)
+
+[osp4]
+Name=Schlangenschutz
+EditorSuffix= (Stufe 4)
+
+
+[npn4]
+Name=Feuer
+Tip=Feuer beschwören
+Ubertip=Ein wilder Pandarenkrieger des Feuers. Beherrscht Permanenten Feuerbrand und Resistente Haut.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=F
+
+[npn5]
+Name=Sturm
+Tip=Sturm beschwören
+Ubertip="Ein schneller Pandarenkrieger der Stürme. Beherrscht Resistente Haut, Magie bannen, Wirbelsturm und Windlauf.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=T
+
+[npn6]
+Name=Erde
+Tip=Erde beschwören
+Ubertip="Ein robuster Pandarenkrieger der Erde. Beherrscht Resistente Haut, Zauberimmunität, Pulverisieren und Spott.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Hotkey=E
+
+[oswy]
+Name=Geisterwindreiter
+
+[ogrk]
+Name=Gar'thok
+
+[ojgn]
+Name=Orckampfschiff
+Hotkey=R
+Tip=Orckampfschiff bauen
+Ubertip="Ein schweres Schlachtschiff, das gegnerische Schiffe zerstört und Gebäude vom Meer aus bombardiert.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+// Undead Units
+[Uear]
+Name=Todesritter
+EditorSuffix= (Böse)
+Hotkey=D
+Propernames=Arthas
+Revivetip=Todesritter wiederbeleben
+Awakentip=Todesritter wiederbeleben
+Ubertip="Ein Kriegerheld, der das Gegenstück zum menschlichen Paladin darstellt. Kann Todesmantel, Todespakt, Unheilige Aura und Totenbelebung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Uktl]
+Name=Lich
+EditorSuffix= (Lich)
+Hotkey=L
+Propernames=Kel'Thuzad
+Revivetip=Lich wiederbeleben
+Awakentip=Lich wiederbeleben
+Ubertip="Ein mystischer Held, der auf Kältemagie spezialisiert ist. Kann Frostrüstung, Frostnova, Dunkles Ritual sowie Tod und Verfall erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Umal]
+Name=Schreckenslord
+Hotkey=E
+Propernames=Mal'Ganis
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Utic]
+Name=Schreckenslord
+Hotkey=E
+Propernames=Tichondrius
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Uvar]
+Name=Schreckenslord
+Hotkey=E
+Propernames=Varimathras
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Udth]
+Name=Schreckenslord
+Hotkey=E
+Propernames=Detheroc
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Ubal]
+Name=Schreckenslord
+Hotkey=E
+Propernames=Balnazzar
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Uvng]
+Name=Schreckenslord
+Hotkey=E
+Propernames=Dalvengyr
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Uanb]
+Name=Gruftlord
+Hotkey=O
+Propernames=Anub'arak
+Revivetip=Gruftlord wiederbeleben
+Awakentip=Gruftlord wiederbeleben
+Ubertip="Ein Kriegerheld, der insektenartige Diener beschwört und Gegner zerquetscht. Kann Aufspießen, Stachelpanzer, Aaskäfer und Heuschreckenschwarm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Usyl]
+Name=Dunkle Waldläuferin
+Propernames=Sylvanas
+Hotkey=R
+Tip=Dunkle Waldläuferin beschwören
+Revivetip=Dunkle Waldläuferin wiederbeleben
+Awakentip=Dunkle Waldläuferin wiederbeleben
+Ubertip="Eine listige Heldin, die auf die Manipulation von Gegnern spezialisiert ist. Kann Stille, Schwarzer Pfeil, Lebensentzug und Bezauberung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[uktn]
+Name=Kel'Thuzad
+EditorSuffix= (Totenbeschwörer)
+
+[uktg]
+Name=Kel'Thuzad
+EditorSuffix= (Geist)
+
+[Uwar]
+Name=Hexenmeister
+Hotkey=X
+Propernames=Archimonde
+Revivetip=Hexenmeister wiederbeleben
+Awakentip=Hexenmeister wiederbeleben
+
+[uswb]
+Name=Sylvanas Windläufer
+EditorSuffix= (Banshee)
+
+[uarb]
+Name=Himmelsbarke
+Tip=Himmelsbarke beschwören
+Ubertip="Ein schwerer Lufttransporter."
+Hotkey=B
+
+[ubdr]
+Name=Saphiron
+EditorSuffix=(Lebendig)
+
+[ubdd]
+Name=Saphiron
+EditorSuffix=(Untote)
+
+[ushp]
+Name=Hafen der Untoten
+Tip=Hafen der Untoten
+Ubertip="Produktionsgebäude für Schiffe. Baut Transportschiffe, Fregatten und Schlachtschiffe der Untoten."
+Hotkey=H
+
+// Night Elf Units
+[Eill]
+Name=Dämonenjäger
+Hotkey=D
+Propernames=Illidan
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Eilm]
+Name=Dämonenjäger
+EditorSuffix=(Umgewandelt)
+Hotkey=D
+Propernames=Illidan
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Eidm]
+Name=Dämonenjäger
+EditorSuffix= (Dämonengestalt)
+Hotkey=D
+Propernames=Illidan
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Ecen]
+Name=Halbgott
+Hotkey=C
+Propernames=Cenarius
+Revivetip=Cenarius wiederbeleben
+Awakentip=Cenarius wiederbeleben
+
+[Ekgg]
+Name=Hüter des Hains
+Hotkey=G
+Propernames=Geist
+Revivetip=Geist wiederbeleben
+Awakentip=Geist wiederbeleben
+Ubertip="Ein mystischer Held, der geschickt im Umgang mit Naturzaubern ist. Kann Wucherwurzeln, Naturgewalt, Dornenaura und Gelassenheit erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Efur]
+Name=Hüter des Hains
+Hotkey=T
+Propernames=Malfurion
+Revivetip=Hüter des Hains wiederbeleben
+Awakentip=Hüter des Hains wiederbeleben
+Ubertip="Ein mystischer Held, der geschickt im Umgang mit Naturzaubern ist. Kann Wucherwurzeln, Naturgewalt, Dornenaura und Gelassenheit erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Emfr]
+Name=Hüter des Hains
+Hotkey=T
+Propernames=Malfurion 
+Revivetip=Hüter des Hains wiederbeleben
+Awakentip=Hüter des Hains wiederbeleben
+Ubertip="Ein mystischer Held, der geschickt im Umgang mit Naturzaubern ist. Kann Wucherwurzeln, Naturgewalt, Dornenaura und Gelassenheit erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Emns]
+Name=Hüter des Hains
+Hotkey=T
+Propernames=Malfurion
+Revivetip=Hüter des Hains wiederbeleben
+Awakentip=Hüter des Hains wiederbeleben
+EditorSuffix= (ohne Hirsch)
+Ubertip="Ein mystischer Held, der geschickt im Umgang mit Naturzaubern ist. Kann Wucherwurzeln, Naturgewalt, Dornenaura und Gelassenheit erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Ewrd]
+Name=Wächterin
+Hotkey=W
+Propernames=Maiev
+Revivetip=Wächterin wiederbeleben
+Awakentip=Wächterin wiederbeleben
+Ubertip="Eine listige Heldin, die sich schnell in den Kampf stürzen und wieder zurückziehen kann. Kann Blinzeln, Dolchfächer, Schattenschlag und Rache erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[eshd]
+Name=Shandris
+
+[Etyr]
+Name=Mondpriesterin
+Hotkey=M
+Propernames=Tyrande
+Revivetip=Mondpriesterin wiederbeleben
+Awakentip=Mondpriesterin wiederbeleben
+Ubertip="Eine Kriegerheldin, die Fernkampfangriffe verstärkt und Gegner aus der Entfernung ausschaltet. Kann Ausspähen, Sengpfeile, Volltrefferaura und Sternenregen erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[Eevi]
+Name=Dämonenjäger
+Hotkey=D
+Propernames=Illidan
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+EditorSuffix= (Böse)
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Eevm]
+Name=Dämonenjäger
+EditorSuffix=(Umgewandelt),(Böse)
+Hotkey=D
+Propernames=Illidan
+Revivetip=Dämonenjäger wiederbeleben
+Awakentip=Dämonenjäger wiederbeleben
+Ubertip="Ein listiger Held, der meisterlich durch Kämpfe manövriert. Kann Feuerbrand, Entrinnen, Manabrand und Metamorphose erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[ensh]
+Name=Naisha
+
+[enec]
+Name=Nachtelfenbotin
+
+[eilw]
+Name=Gefängniswagen
+
+// Neutral Units
+[Nbbc]
+Name=Klingenmeister
+Hotkey=M
+Propernames=Klingenmeister des Schwarzfelsklans
+Revivetip=Klingenmeister wiederbeleben
+Awakentip=Klingenmeister wiederbeleben
+Ubertip="Ein listiger Held, der schnell einzelne Einheiten töten kann und große Verwirrung unter Gegnern auslöst. Kann Spiegelbild, Windlauf, Kritische Treffer und Klingensturm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nckb]
+Name=Kodobestie der Teufelsorcs
+Name:custom,V0=Teufelskodobestie
+Name:melee,V0=Teufelskodobestie
+Hotkey=B
+Tip=Kodobestie der Teufelsorcs ausbilden
+Tip:custom,V0=Teufelskodobestie ausbilden
+Tip:melee,V0=Teufelskodobestie ausbilden
+Ubertip="Eine schwerfällige Kriegsbestie, die von einem Orctrommler geritten wird. Beherrscht Kriegstrommeln und Verschlingen. Kriegstrommeln erhöhen den Angriffsschaden von verbündeten Einheiten in der Nähe. Kann Verbesserte Kriegstrommeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Eine schwerfällige Kriegsbestie, die von einem Orctrommler geritten wird. Beherrscht Kriegstrommeln und Verschlingen. Kriegstrommeln erhöhen den Angriffsschaden von verbündeten Einheiten in der Nähe. Kann Verbesserte Kriegstrommeln erlernen.|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Eine schwerfällige Kriegsbestie, die von einem Orctrommler geritten wird. Beherrscht Kriegstrommeln und Verschlingen. Kriegstrommeln erhöhen den Angriffsschaden von verbündeten Einheiten in der Nähe. Kann Verbesserte Kriegstrommeln erlernen.|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nchg]
+Name=Grunzer der Teufelsorcs
+Name:custom,V0=Teufelsgrunzer
+Name:melee,V0=Teufelsgrunzer
+Hotkey=G
+Tip=Grunzer der Teufelsorcs ausbilden
+Tip:custom,V0=Teufelsgrunzer ausbilden
+Tip:melee,V0=Teufelsgrunzer ausbilden
+Ubertip="Ein brutaler Orckrieger, in dessen Adern Dämonenblut fließt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0="Ein brutaler Orckrieger, in dessen Adern Dämonenblut fließt.|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0="Ein brutaler Orckrieger, in dessen Adern Dämonenblut fließt.|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nchr]
+Name=Räuber der Teufelsorcs
+Name:custom,V0=Teufelsräuber
+Name:melee,V0=Teufelsräuber
+Hotkey=R
+Tip=Räuber der Teufelsorcs ausbilden
+Tip:custom,V0=Teufelsräuber ausbilden
+Tip:melee,V0=Teufelsräuber ausbilden
+Ubertip="Ein extrem mobiler Wolfsreiter, in dessen Adern Dämonenblut fließt.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:custom,V0="Ein extrem mobiler Wolfsreiter, in dessen Adern Dämonenblut fließt.|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Ubertip:melee,V0="Ein extrem mobiler Wolfsreiter, in dessen Adern Dämonenblut fließt.|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nchw]
+Name=Hexenmeister der Teufelsorcs
+Name:custom,V0=Teufelshexenmeister
+Name:melee,V0=Teufelshexenmeister
+Hotkey=X
+Hotkey:custom,V0=S
+Hotkey:melee,V0=S
+Tip=Hexenmeister der Teufelsorcs ausbilden
+Tip:custom,V0=Teufelshexenmeister ausbilden
+Tip:melee,V0=Teufelshexenmeister ausbilden
+Ubertip="Ein orcischer Magiebenutzer, in dessen Adern Dämonenblut fließt. Beherrscht Feuerblitz, womit er einer gegnerischen Zieleinheit Schaden zufügen und sie betäuben kann. Kann Unheilige Raserei und Verkrüppeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Ein orcischer Magiebenutzer, in dessen Adern Dämonenblut fließt. Beherrscht Feuerblitz, womit er einer gegnerischen Zieleinheit Schaden zufügen und sie betäuben kann. Kann Unheilige Raserei und Verkrüppeln erlernen.|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Ein orcischer Magiebenutzer, in dessen Adern Dämonenblut fließt. Beherrscht Feuerblitz, womit er einer gegnerischen Zieleinheit Schaden zufügen und sie betäuben kann. Kann Unheilige Raserei und Verkrüppeln erlernen.|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Feuerblitz","- Feuerblitz|n- Unheilige Raserei","- Feuerblitz|n- Unheilige Raserei|n- Verkrüppeln"
+Casterupgradetip:custom,V0=- Reinigen,- Reinigen|n- Blitzschild,- Reinigen|n- Blitzschild|n- Kampfrausch
+
+[nw2w]
+Ubertip="Ein orcischer Magiebenutzer. Beherrscht Feuerblitz, womit er einer gegnerischen Zieleinheit Schaden zufügen und sie betäuben kann. Kann Unheilige Raserei und Verkrüppeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Tip=Orchexenmeister
+Hotkey=W
+Name=Orchexenmeister
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Feuerblitz","- Feuerblitz|n- Unheilige Raserei","- Feuerblitz|n- Unheilige Raserei|n- Verkrüppeln"
+Casterupgradetip:custom,V0=- Reinigen,- Reinigen|n- Blitzschild,- Reinigen|n- Blitzschild|n- Kampfrausch
+
+[ncpn]
+Name=Teufelspeon
+Hotkey=P
+Tip=Teufelspeon ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann Baue der Teufelsorcs betreten und aus dem Gebäude heraus angreifen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:custom,V0="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann Baue betreten und aus dem Gebäude heraus angreifen.|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:custom,V1="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann Baue betreten und aus dem Gebäude heraus angreifen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:melee,V0="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann Baue betreten und aus dem Gebäude heraus angreifen.|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[nmed]
+Name=Medivh
+
+[nmdm]
+Name=Medivh
+EditorSuffix=(Rabengestalt)
+
+[Nman]
+Name=Grubenlord
+Propernames=Mannoroth
+Revivetip=Grubenlord wiederbeleben
+Revivetip:custom,V0=Mannoroth wiederbeleben
+Revivetip:melee,V0=Mannoroth wiederbeleben
+Awakentip=Grubenlord wiederbeleben
+Awakentip:custom,V0=Mannoroth wiederbeleben
+Awakentip:melee,V0=Mannoroth wiederbeleben
+Hotkey=M
+
+[Npld]
+Name=Grubenlord
+Propernames=Azgalor,Brutillus,Mongrethod,Destromath,Gogonnash,Magtheridon
+Revivetip=Grubenlord wiederbeleben
+Awakentip=Grubenlord wiederbeleben
+Hotkey=G
+
+[nser]
+Name=Searinox
+
+[nthr]
+Name=Tharifas
+
+[nemi]
+Name=Botschafter
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Heilen","- Heilen|n- Magie bannen","- Heilen|n- Magie bannen|n- Inneres Feuer"
+
+[nhem]
+Name=Hochelf
+EditorSuffix=(Männlich)
+
+[nhef]
+Name=Hochelfe
+EditorSuffix=(Weiblich)
+
+[nhea]
+Name=Bogenschützin
+Tip=Bogenschützin ausbilden
+Tip:melee,V0=Hochelfenbogenschützin ausbilden
+Hotkey=N
+Hotkey:melee,V0=H
+Ubertip=Eine einfache Angreiferin mit hoher Reichweite.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nshr]
+Name=Schrein
+
+[ndmg]
+Name=Dämonentor
+
+[nefm]
+Name=Hochelfenhof
+
+[nef0]
+Name=Hochelfenhof
+EditorSuffix=1
+
+[nef1]
+Name=Hochelfenhof
+EditorSuffix=2
+
+[nef2]
+Name=Hochelfenhof
+EditorSuffix=3
+
+[nef3]
+Name=Hochelfenhof
+EditorSuffix=4
+
+[nef4]
+Name=Hochelfenhof
+EditorSuffix=5
+
+[nef5]
+Name=Hochelfenhof
+EditorSuffix=6
+
+[nef6]
+Name=Hochelfenhof
+EditorSuffix=7
+
+[nef7]
+Name=Hochelfenhof
+EditorSuffix=8
+
+[negt]
+Name=Hochelfenwachturm
+Hotkey=G
+Tip=Hochelfenwachturm errichten
+Ubertip=Primäres Verteidigungsgebäude.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+
+[negf]
+Name=Erdzornturm
+
+[negm]
+Name=Himmelszornturm
+
+[ndgt]
+Name=Wachturm von Dalaran
+
+[npgf]
+Name=Schweinefarm
+Tip=Schweinefarm errichten
+Hotkey=F
+
+[nheb]
+Name=Hochelfenkaserne
+Hotkey=K
+Tip=Kaserne errichten
+Ubertip="Primäres Truppenproduktionsgebäude. Bildet Hochelfenschwertkämpfer, Hochelfenbogenschützinnen und Drachenfalken aus.|nDient zur Erforschung von Verteidigungshaltung für Hochelfenschwertkämpfer."
+Ubertip:custom,V0="Primäres Truppenproduktionsgebäude. Bildet Schwertkämpfer, Bogenschützinnen und Drachenfalken aus. |nDient zur Erforschung von Verteidigungshaltung für Schwertkämpfer."
+Ubertip:custom,V1="Primäres Truppenproduktionsgebäude. Bildet Schwertkämpfer, Bogenschützinnen und Drachenfalken aus. |nDient zur Erforschung von Verteidigungshaltung für Schwertkämpfer."
+Ubertip:melee,V0="Primäres Truppenproduktionsgebäude. Bildet Schwertkämpfer, Bogenschützinnen und Drachenfalken aus. |nDient zur Erforschung von Verteidigungshaltung für Schwertkämpfer."
+
+
+[nbfl]
+Name=Brunnen des Blutes
+
+[nfnp]
+Name=Brunnen der Macht
+
+[ndfl]
+Name=Entweihter Brunnen des Lebens
+
+[nbsm]
+Name=Beschwörungsbuchpodest
+
+[nhcn]
+Name=Sockel des Cenariushorns
+
+[nfrm]
+Name=Frostgrams Sockel
+
+[ngob]
+Name=Verzauberter Edelsteinobelisk
+
+[nbwd]
+Name=Traumhöhle
+
+[ncap]
+Name=Verderbter Urtumbeschützer
+Hotkey=C
+Tip=Verderbten Urtumbeschützer erschaffen
+Ubertip="Ein Urtum, das andere Urtume verteidigt. Schleudert im verwurzelten Zustand riesiege Felsen auf nahe Gegner.|nKann Boden- und Lufteinheiten angreifen."
+
+[ncmw]
+Name=Verderbter Mondbrunnen
+Hotkey=M
+Tip=Verderbten Mondbrunnen erschaffen
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Kann Mana und Trefferpunkte auffüllen."
+
+[nctl]
+Name=Verderbter Baum des Lebens
+Hotkey=L
+Tip=Verderbten Baum des Lebens erschaffen
+Ubertip="Hauptgebäude. Bildet Irrwische aus und kann Goldminen durchwuchern. Kann erst zum verderbten Baum des Alters und dann zum verderbten Baum der Ewigkeit ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen."
+
+[ncta]
+Name=Verderbter Baum des Alters
+Hotkey=U
+Tip=Ausbau zum verderbten Baum des Alters
+Ubertip=Der Ausbau zum verderbten Baum des Alters ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
+
+[ncte]
+Name=Verderbter Baum der Ewigkeit
+Hotkey=U
+Tip=Ausbau zum verderbten Baum der Ewigkeit
+Ubertip=Der Ausbau zum verderbten Baum der Ewigkeit ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
+
+[ncaw]
+Name=Verderbtes Urtum des Krieges
+Hotkey=R
+Tip=Verderbtes Urtum des Krieges erschaffen
+Ubertip=Urtum der primären Angriffstruppen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nbsp]
+Name=Schiff
+
+[nssn]
+Name=Wächterin
+
+[nwat]
+Name=Wächter
+
+[ndrb]
+Name=Drachenhorst
+Tip=Drachenhorst errichten
+
+[Uclc]
+Name=Lich
+EditorSuffix="(Lich, Videosequenz)"
+Hotkey=L
+Propernames=Kel'Thuzad
+Revivetip=Lich wiederbeleben
+Awakentip=Lich wiederbeleben
+Ubertip="Ein mystischer Held, der auf Kältemagie spezialisiert ist. Kann Frostrüstung, Frostnova, Dunkles Ritual sowie Tod und Verfall erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[uabc]
+Name=Monstrosität
+EditorSuffix=(Videosequenz)
+Tip=Monstrosität ausbilden
+Ubertip=Eine schwere Nahkampfeinheit. Kann Krankheitswolke erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Nahkampfeinheit. Kann Krankheitswolke erlernen.|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Nahkampfeinheit. Kann Krankheitswolke erlernen.|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=O
+
+[Otcc]
+Name=Taurenhäuptling
+EditorSuffix=(Videosequenz)
+Hotkey=T
+Propernames=Cairne Bluthuf
+Revivetip=Taurenhäuptling wiederbeleben
+Awakentip=Taurenhäuptling wiederbeleben
+Ubertip="Ein Kriegerheld und außergewöhnlicher Nahkämpfer, der viel Schaden einstecken kann. Kann Schockwelle, Kriegsdonner, Ausdaueraura und Reinkarnation erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[zmar]
+Name=Space-Marine
+Hotkey=M
+Tip=Space-Marine ausbilden
+Ubertip=Mächtiger terranischer Space-Marine mit einem automatischen Pulsgewehr.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[zjug]
+Name=Orckampfschiff
+Name:custom,V0=Kampfschiff
+Name:melee,V0=Kampfschiff
+Hotkey=R
+Tip=Orckampfschiff bauen
+Ubertip="Ein schweres Schlachtschiff, das gegnerische Schiffe zerstört und Gebäude vom Meer aus bombardiert.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+EditorSuffix=(Videosequenz)
+
+[zzrg]
+Name=Zergling
+Hotkey=Z
+Tip=Zergling ausbilden
+Ubertip="Eine kleine Nahkampfkreatur der Zerg. Hält zwar nicht viel aus, ist in großer Zahl aber gefährlich.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[zhyd]
+Name=Hydralisk
+Hotkey=H
+Tip=Hydralisk ausbilden
+Ubertip="Ein mächtiger Zerg, der Gegner mit in Säure getauchten Stachelgeschossen vernichtet.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[zcso]
+Name=Terranischer Space-Marine
+Name:custom,V0=Terranischer Space-Marine
+Name:melee,V0=Terranischer Space-Marine
+Hotkey=C
+Tip=Terranischen Space-Marine ausbilden
+Ubertip="Ein Terranischer Space-Marine mit einem mächtigen Flammenwerfer, der zusammenstehenden Gegnern ordentlich zusetzt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[zsmc]
+Name=Sammy!
+Hotkey=M
+Tip=Sammy ausbilden
+Ubertip="Sam Didier, Lead Artist. Experte für Concept Art und Texturen. Viele untergebene Artists gehorchen ihm aufs Wort.|n|n|cffffcc00Kann miese Zeichnungen angreifen.|r"
+
+[zshv]
+Name=Koboldschaufler
+Hotkey=K
+Tip=Koboldschaufler ausbilden
+Ubertip="Frank Pearce, Vizepräsident von Blizzard. Mächtiger Programmierer, Experte darin, die Spreu vom Weizen zu trennen und Aufgaben zu erledigen.|n|n|cffffcc00Kann Bugs angreifen.|r"
+
+// naga units/buildings
+[nmpe]
+Name=Mur'gulsklave
+Hotkey=V
+Tip=Mur'gulsklave ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[nnfm]
+Name=Korallenbank
+Tip=Korallenbank errichten
+Hotkey=K
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird."
+
+[nntg]
+Name=Flutwächter
+Tip=Flutwächter erschaffen
+Hotkey=T
+Ubertip=Primäres Verteidigungsgebäude.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nntt]
+Name=Tempel der Gezeiten
+Tip=Tempel der Gezeiten errichten
+Hotkey=E
+Ubertip=Hauptgebäude. Bildet Mur'gulsklaven und Mur'gulhäscher aus und nimmt abgebaute Rohstoffe entgegen. Dient zur Erforschung von Waffen- und Rüstungsverbesserungen für Naga sowie von Abtauchen.
+
+[nnsg]
+Name=Brutstätte
+Tip=Brutstätte errichten
+Hotkey=S
+Ubertip="Bildet Nagamyrmidonen, Schnappdrachen und Drachenschildkröten aus. Dient zur Erforschung von Einschnüren."
+
+[nnsa]
+Name=Schrein von Azshara
+Tip=Schrein von Azshara errichten
+Hotkey=A
+Ubertip=Bildet Nagasirenen und Coatls aus. Dient zur Erforschung von Verbesserungen für Nagasirenen und Coatl.
+
+[nnad]
+Name=Altar der Tiefen
+Tip=Altar der Tiefen errichten
+Hotkey=L
+Ubertip=Beschwört Helden und belebt getötete Helden wieder.
+
+[nnmg]
+Name=Mur'gulhäscher
+Tip=Mur'gulhäscher ausbilden
+Hotkey=R
+Ubertip=Eine leichte amphibische Nahkampfeinheit.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nmyr]
+Name=Nagamyrmidone
+Hotkey=M
+Tip=Nagamyrmidone ausbilden
+Ubertip="Eine mächtige Nahkampfeinheit. Beherrscht Abtauchen, wodurch sich diese Einheit unter Wasser verstecken kann. Kann Einschnüren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen."
+
+[nmys]
+Name=Abgetauchter Nagamyrmidone
+Hotkey=M
+Tip=Nagamyrmidone ausbilden
+Ubertip="Eine mächtige Nahkampfeinheit. Beherrscht Abtauchen, wodurch sich diese Einheit unter Wasser verstecken kann. Kann Einschnüren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen."
+
+[nnrg]
+Name=Nagakönigswache
+Tip=Nagakönigswache ausbilden
+Ubertip="Eine unglaublich mächtige Nahkampfeinheit. Beherrscht Abtauchen, wodurch sich diese Einheit unter Wasser verstecken kann, Resistente Haut, die die Dauer von Schwächungseffekten verringert, Frostblitz, der eine gegnerische Zieleinheit betäubt, Schmetterwelle, die hintereinanderstehenden Einheiten Schaden zufügt, und Meereselementar beschwören, wodurch eine Fernkampfeinheit beschworen wird.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nnrs]
+Name=Abgetauchte Nagakönigswache
+Tip=Nagakönigswache ausbilden
+Ubertip="Eine unglaublich mächtige Nahkampfeinheit. Beherrscht Abtauchen, wodurch sich diese Einheit unter Wasser verstecken kann, Resistente Haut, die die Dauer von Schwächungseffekten verringert, Frostblitz, der eine gegnerische Zieleinheit betäubt, Schmetterwelle, die hintereinanderstehenden Einheiten Schaden zufügt, und Meereselementar beschwören, wodurch eine Fernkampfeinheit beschworen wird.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nnsw]
+Name=Nagasirene
+Hotkey=S
+Tip=Nagasirene ausbilden
+Ubertip="Eine mächtige Magiebenutzerin. Beherrscht Parasit, wodurch gegnerische Einheiten periodischen Schaden erleiden. Aus den Leichen kann sie dann Wasserdiener erschaffen. Kann Frostrüstung und Wirbelsturm erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Parasit","- Parasit|n- Frostrüstung","- Parasit|n- Frostrüstung|n- Wirbelsturm"
+
+[nnsu]
+Name=Beschwörer
+Hotkey=S
+Tip=Beschwörer ausbilden
+Ubertip="Ein mächtiger Beschwörer. Beherrscht Parasit, wodurch gegnerische Einheiten periodischen Schaden erleiden. Aus den Leichen kann er dann Wasserdiener erschaffen. Kann Frostrüstung und Wirbelsturm erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Parasit","- Parasit|n- Frostrüstung","- Parasit|n- Frostrüstung|n- Wirbelsturm"
+
+[nsnp]
+Name=Schnappdrache
+Hotkey=D
+Tip=Schnappdrache ausbilden
+Ubertip="Eine leichte Fernkampfeinheit mit einem Giftangriff, der gegnerische Einheiten verlangsamt und ihnen Schaden zufügt. Beherrscht Abtauchen, wodurch sich diese Einheit unter Wasser verstecken kann.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nsbs]
+Name=Abgetauchter Schnappdrache
+Hotkey=D
+Tip=Schnappdrache ausbilden
+Ubertip="Eine leichte Fernkampfeinheit mit einem Giftangriff, der gegnerische Einheiten verlangsamt und ihnen Schaden zufügt. Beherrscht Abtauchen, wodurch sich diese Einheit unter Wasser verstecken kann.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nwgs]
+Name=Coatl
+Hotkey=C
+Tip=Coatl ausbilden
+Ubertip=Eine leichte Fernkampflufteinheit. Kann Magie aufheben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nhyc]
+Name=Drachenschildkröte
+Hotkey=T
+Tip=Drachenschildkröte ausbilden
+Ubertip="Eine mächtige Schildkröte, die gegnerische Einheiten verschlingen kann. Macht mit Gebäuden kurzen Prozess. Beherrscht Gehärtete Haut, wodurch der erlittene Schaden verringert wird, und Stachelpanzerschale, wodurch gegnerische Nahkampfangreifer Schaden erleiden.|n|n|cffffcc00Kann Bodeneinheiten angreifen."
+
+//end naga stuff
+
+[nbel]
+Name=Blutelfenleutnant
+Hotkey=L
+Tip=Blutelfenleutnant ausbilden
+Ubertip=Ein mächtiger Leutnant aus Prinz Kael'thas' Blutelfenarmee. Experte im Vernichten von Magiebenutzern.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nbee]
+Name=Blutelfenpionier
+Hotkey=E
+Tip=Blutelfenpionier ausbilden
+Ubertip="Ein außergewöhnlich intelligenter Blutelf, der neue Technologien entdeckt und mächtige Türme konstruiert.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[ndmu]
+Name=Mutant von Dalaran
+
+[ndrj]
+Name=Verstoßener von Dalaran
+
+[nfgl]
+Name=Fleischgolem
+
+[njks]
+Name=Wärter Kassan
+
+[Naka]
+Name=Ältestenweiser
+Propernames=Akama
+Revivetip=Akama wiederbeleben
+Awakentip=Akama wiederbeleben
+Hotkey=K
+
+[ndrl]
+Name=Draeneiarbeiter
+Hotkey=D
+Tip=Draeneiarbeiter ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[ndh4]
+Name=Hütte des Sehers
+Tip=Hütte des Sehers errichten
+Ubertip=Bildet Draeneiseher und Draeneiherolde aus.
+
+[ndh3]
+Name=Draeneikaserne
+Tip=Draeneikaserne errichten
+Ubertip="Bildet Draeneiverteidiger, Draeneipirscher, Draeneiverwüster und Salamander aus."
+
+[ndh2]
+Name=Draeneihafen
+Tip=Draeneihafen errichten
+Ubertip=Ermöglicht den Abbau von Gold. Bildet Draeneiarbeitskräfte aus und kann Helden wiederbeleben.
+
+[ndsa]
+Name=Salamander
+Tip=Salamander ausbilden
+Ubertip="Eine schwere Fernkampfeinheit, die Blitze schleudert.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nsw1]
+Name=Geringe Geisterbestie
+EditorSuffix= (Stufe 1)
+
+[nsw2]
+Name=Geisterbestie
+EditorSuffix= (Stufe 2)
+
+[nsw3]
+Name=Große Geisterbestie
+EditorSuffix= (Stufe 3)
+
+[ncat]
+Name=Draeneiverwüster
+Hotkey=D
+Tip=Draeneiverwüster bauen
+Ubertip="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar. Kann Brandöl erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[Nmag]
+Name=Grubenlord
+Propernames=Magtheridon
+Revivetip=Grubenlord wiederbeleben
+Awakentip=Grubenlord wiederbeleben
+Hotkey=G
+Ubertip="Ein Kriegerheld, der Gegner in Angst und Schrecken versetzt. Kann Feuerregen, Schreckensgeheul, Spaltschlag und Verdammnis erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Nklj]
+Name=Hexenmeister
+Hotkey=X
+Propernames=Kil'jaeden
+Revivetip=Hexenmeister wiederbeleben
+Awakentip=Hexenmeister wiederbeleben
+
+[Nkjx]
+Name=Hexenmeister
+Hotkey=X
+Propernames=Kil'jaeden
+Revivetip=Hexenmeister wiederbeleben
+Awakentip=Hexenmeister wiederbeleben
+EditorSuffix=(Videosequenz)
+
+[nfv0]
+Name=Nachtelfenfischerdorf
+EditorSuffix="(zweistöckig, Ausrichtung Südwest)"
+
+[nfv1]
+Name=Nachtelfenfischerdorf
+EditorSuffix="(gekrönt, Ausrichtung Südwest)"
+
+[nfv2]
+Name=Nachtelfenfischerdorf
+EditorSuffix=(Einstöckig)
+
+[nfv3]
+Name=Nachtelfenfischerdorf
+EditorSuffix="(zweistöckig, Ausrichtung Südost)"
+
+[nfv4]
+Name=Nachtelfenfischerdorf
+EditorSuffix="(gekrönt, Ausrichtung Südost)"
+
+[nvr0]
+Name=Nachtelfenfischerdorf
+EditorSuffix=(ruined, two story)
+
+[nvr1]
+Name=Nachtelfenfischerdorf
+EditorSuffix=(ruined, one story)
+
+[nvr2]
+Name=Nachtelfenfischerdorf
+EditorSuffix=(ruined, crested)
+
+[npgr]
+Name=Energiegenerator
+
+[nmsh]
+Name=Misha
+
+[negz]
+Name=Ingenieur Gazlowe
+
+[Nsjs]
+Name=Braumeister
+Propernames=Chen Sturmbräu
+Hotkey=N
+Tip=Braumeister beschwören
+Ubertip="Ein Kriegerheld mit außergewöhnlicher Nahkampfleistung und hoher Schadensabsorption. Kann Feuerodem, Fasshieb, Flüchtiger Kämpfer und Sturm, Erde und Feuer erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Braumeister wiederbeleben
+Awakentip=Braumeister wiederbeleben
+
+[nhew]
+Name=Arbeiter
+EditorSuffix= (Blutelf)
+Hotkey=A
+Tip=Arbeiter ausbilden
+Ubertip=Ein einfacher Arbeiter. Kann Gebäude errichten und reparieren.
+
+[nspc]
+Name=Stützsäule
+
+[ngbl]
+Name=Goblinblaster
+
+[ndkw]
+Name=Dimensionstor
+EditorSuffix= (Ausrichtung Südwest)
+
+[ndke]
+Name=Dimensionstor
+EditorSuffix= (Ausrichtung Südost)
+
+[nico]
+Name=Eiskronenobelisk
+
+[net1]
+Name=Energieturm
+Hotkey=E
+Tip=Energieturm errichten
+Ubertip=Feuert Energieblitze ab. Effektiv gegen Lufteinheiten. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[net2]
+Name=Verbesserter Energieturm
+Hotkey=U
+Tip=Ausbau zum verbesserten Energieturm
+Ubertip=Erhöht den Schaden der Energieblitze. Effektiv gegen Lufteinheiten. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nbt1]
+Name=Felsenturm
+Hotkey=F
+Tip=Felsenturm errichten
+Ubertip="Feuert massive Felsbrocken ab, die Flächenschaden verursachen. Effektiv gegen Bodeneinheiten. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[nbt2]
+Name=Verbesserter Felsenturm
+Hotkey=U
+Tip=Ausbau zum verbesserten Felsenturm
+Ubertip=Erhöht den Schaden der Felsbrocken. Effektiv gegen Bodeneinheiten. Immun gegen Magie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[nft1]
+Name=Flammenturm
+Hotkey=L
+Tip=Flammenturm errichten
+Ubertip=Feuert kurze Flammenstöße ab. Effektiv gegen nahe Gegner. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nft2]
+Name=Verbesserter Flammenturm
+Hotkey=U
+Tip=Ausbau zum verbesserten Flammenturm
+Ubertip=Erhöht den Schaden der Flammenstöße. Effektiv gegen nahe Gegner. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndt1]
+Name=Kälteturm
+Hotkey=K
+Tip=Kälteturm errichten
+Ubertip=Feuert Eissplitter ab. Verlangsamt Gegner. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ndt2]
+Name=Verbesserter Kälteturm
+Hotkey=U
+Tip=Ausbau zum verbesserten Kälteturm
+Ubertip=Feuert noch schneller Eissplitter ab. Verlangssamt Gegner. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ntt1]
+Name=Todesturm
+Hotkey=D
+Tip=Todesturm errichten
+Ubertip=Feuert tödliche Energieblitze ab. Fügt allen Zielen schweren Schaden zu. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[ntx2]
+Name=Verbesserter Todesturm
+Hotkey=U
+Tip=Ausbau zum verbesserten Todesturm
+Ubertip=Feuert Todesblitze ab. Vernichtet einfach alles. Immun gegen Magie.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[nfrt]
+Name=Obststand
+Tip=Obststand errichten
+Ubertip="Der unglaublichste Obststand, den man je gesehen hat."
+
+[hprt]
+Name=Portal
+Tip=Portal öffnen
+Ubertip="Öffnet das Portal."
+
+[nzlc]
+Name=Lichkönig
+Tip=Lichkönig
+Ubertip="Dies ist der Lichkönig. Ganz ehrlich, das ist er! Glaubt mir denn keiner?"
+EditorSuffix=(Kampagneneinheit für Videosequenzen)
+
+[nchp]
+Name=Kaplan
+Hotkey=K
+Tip=Kaplan ausbilden
+Ubertip="Ein unterstützender Magiebenutzer. Beherrscht Heilen, Magie bannen und Inneres Feuer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nhym]
+Name=Hydromant
+Hotkey=Y
+Tip=Hydromant ausbilden
+Ubertip="Ein vielseitiger Magiebenutzer. Berherrscht Verlangsamung, Schmetterwelle und Verwandlung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[nzin]
+Name=Zonenindikator
+Tip=Zonenindikator
+Ubertip=Zonenindikator
+EditorSuffix= (Eigene Kampagne)
+
+[nbse]
+Name=Auferstehungsstein
+Tip=Auferstehungsstein erstellen
+Ubertip=""
+EditorSuffix=(Ausrichtung Südost)
+
+[nbsw]
+Name=Auferstehungsstein
+Tip=Auferstehungsstein erstellen
+Ubertip=""
+EditorSuffix=(Ausrichtung Südwest)
+
+[h1fo]
+Name=Fußsoldat
+
+[h1wa]
+Name=Wasserelementar
+
+[Nmsr]
+ScoreScreenIcon=UI\Glues\ScoreScreen\scorescreen-hero-lich.blp
+Revivetip=Murloczauberer wiederbeleben
+Ubertip="Ein mystischer Murloc, der auf Fernkampfangriffe spezialisiert ist. Kann Feuerregen erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=Z
+Tip=Murloczauberer beschwören
+Propernames=Murloczauberer
+Name=Murloczauberer
+
+[Nswt]
+ScoreScreenIcon=UI\Glues\ScoreScreen\scorescreen-hero-seawitch.blp
+Revivetip=Meerhexe wiederbeleben
+Ubertip="Eine mystische Meerhexe, die auf Fernkampfangriffe spezialisiert ist. Kann Wasserelementar beschwören, Brillanzaura und Erdbeben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=X
+Tip=Meerhexe beschwören
+Propernames=Meerhexe
+Name=Meerhexe
+
+[Oths]
+EditorSuffix=(ohne Reittier)
+Ubertip="Ein mystischer Held, der auf Fernkampf und auf Aufklärung spezialisiert ist. Kann Kettenblitz, Fernsicht, Wildgeist und Erdbeben erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Awakentip=Scharfseher wiederbeleben
+Revivetip=Scharfseher wiederbeleben
+Propernames=Thrall
+Hotkey=F
+Name=Scharfseher

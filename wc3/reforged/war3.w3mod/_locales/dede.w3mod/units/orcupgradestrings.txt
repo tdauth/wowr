@@ -1,0 +1,142 @@
+[Roch]
+Name=Chaos
+
+[Rome]
+Name=Stahlnahkampfwaffen,Thoriumnahkampfwaffen,Arkanitnahkampfwaffen
+Tip=Stahlnahkampfwaffen erforschen,Thoriumnahkampfwaffen erforschen,Arkanitnahkampfwaffen erforschen
+Ubertip="Erhöht den Nahkampfschaden von Grunzern, Räubern und Tauren.","Erhöht den Nahkampfschaden von Grunzern, Räubern und Tauren zusätzlich.","Erhöht den Nahkampfschaden von Grunzern, Räubern und Tauren zusätzlich."
+Hotkey=N,N,N
+
+[Rora]
+Name=Stahlfernkampfwaffen,Thoriumfernkampfwaffen,Arkanitfernkampfwaffen
+Tip=Stahlfernkampfwaffen erforschen,Thoriumfernkampfwaffen erforschen,Arkanitfernkampfwaffen erforschen
+Ubertip="Erhöht den Fernkampfschaden von Kopfjägern, Windreitern, Fledermausreitern und Verwüstern.","Erhöht den Fernkampfschaden von Kopfjägern, Windreitern, Fledermausreitern und Verwüstern zusätzlich.","Erhöht den Fernkampfschaden von Kopfjägern, Windreitern, Fledermausreitern und Verwüstern zusätzlich."
+Ubertip:custom,V0="Erhöht den Fernkampfschaden von Kopfjägern, Windreitern und Verwüstern.","Erhöht den Fernkampfschaden von Kopfjägern, Windreitern und Verwüstern zusätzlich.","Erhöht den Fernkampfschaden von Kopfjägern, Windreitern und Verwüstern zusätzlich."
+Ubertip:melee,V0="Erhöht den Fernkampfschaden von Kopfjägern, Windreitern und Verwüstern.","Erhöht den Fernkampfschaden von Kopfjägern, Windreitern und Verwüstern zusätzlich.","Erhöht den Fernkampfschaden von Kopfjägern, Windreitern und Verwüstern zusätzlich."
+Hotkey=W,W,W
+
+[Roar]
+Name=Stahlpanzerrüstung,Thoriumpanzerrüstung,Arkanitpanzerrüstung
+Tip=Stahlpanzerrüstung erforschen,Thoriumpanzerrüstung erforschen,Arkanitpanzerrüstung erforschen
+Ubertip="Erhöht die Rüstung von Grunzern, Räubern, Fledermausreitern, Tauren, Kopfjägern, Windreitern und Verwüstern.","Erhöht die Rüstung von Grunzern, Räubern, Fledermausreitern, Tauren, Kopfjägern, Windreitern und Verwüstern zusätzlich.","Erhöht die Rüstung von Grunzern, Räubern, Fledermausreitern, Tauren, Kopfjägern, Windreitern und Verwüstern zusätzlich."
+Ubertip:custom,V0="Erhöht die Rüstung von Grunzern, Räubern, Tauren, Kopfjägern, Windreitern und Verwüstern.","Erhöht die Rüstung von Grunzern, Räubern, Tauren, Kopfjägern, Windreitern und Verwüstern zusätzlich.","Erhöht die Rüstung von Grunzern, Räubern, Tauren, Kopfjägern, Windreitern und Verwüstern zusätzlich."
+Ubertip:melee,V0="Erhöht die Rüstung von Grunzern, Räubern, Tauren, Kopfjägern, Windreitern und Verwüstern.","Erhöht die Rüstung von Grunzern, Räubern, Tauren, Kopfjägern, Windreitern und Verwüstern zusätzlich.","Erhöht die Rüstung von Grunzern, Räubern, Tauren, Kopfjägern, Windreitern und Verwüstern zusätzlich."
+Hotkey=A,A,A
+
+[Rwdm]
+Name=Schadenserhöhung durch Kriegstrommeln
+Tip=Verbesserte Kriegstrommeln erforschen
+Ubertip=Erhöht den Schadensbonus der Kriegstrommeln der Kodobestie. Kriegstrommeln erhöhen den Schaden verbündeter Einheiten in der Nähe von Kodobestien.
+Hotkey=O
+
+// pillage
+[Ropg]
+Name=Plündern
+Tip=Plündern erforschen
+Ubertip="Angriffe von Peons, Grunzern und Räubern gewähren Rohstoffe, wenn sie Gebäude treffen."
+Hotkey=E
+
+[Robs]
+Name=Bestialische Kraft
+Tip=Bestialische Kraft erforschen
+Ubertip="Erhöht die Trefferpunkte von Grunzern um <Robs,base1> und ihren Angriffsschaden um <Robs,base2>."
+Hotkey=B
+
+[Rows]
+Name=Verbessertes Pulverisieren
+Name:custom,V0=Pulverisieren
+Name:custom,V1=Pulverisieren
+Name:melee,V0=Pulverisieren
+Tip=Verbessertes Pulverisieren erforschen
+Tip:custom,V0=Pulverisieren erforschen
+Tip:custom,V1=Pulverisieren erforschen
+Tip:melee,V0=Pulverisieren erforschen
+Ubertip=Verbessert das vom Tauren getragene Totem und erhöht somit den Schaden von Pulverisieren.
+Ubertip:custom,V0="Lehrt Tauren Pulverisieren, wodurch Angriffe eine Chance haben, Flächenschaden zu verursachen."
+Ubertip:custom,V1="Lehrt Tauren Pulverisieren, wodurch Angriffe eine Chance haben, Flächenschaden zu verursachen."
+Ubertip:melee,V0="Lehrt Tauren Pulverisieren, wodurch Angriffe eine Chance haben, Flächenschaden zu verursachen."
+Hotkey=P
+
+[Roen]
+Name=Einschnüren
+Tip=Einschnüren erforschen
+Ubertip="Lehrt Räuber Einschnüren, womit sie eine gegnerische Zieleinheit an den Boden fesseln und bewegungsunfähig machen können. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden."
+Hotkey=N
+
+[Rovs]
+Name=Giftspeere
+Tip=Giftspeere erforschen
+Ubertip=Verstärkt die Angriffe von Windreitern mit Giftschaden. Von Giftspeeren getroffene Einheiten erleiden periodischen Schaden.
+Hotkey=E
+
+[Rowd]
+Name=Adeptenausbildung für Medizinmänner,Meisterausbildung für Medizinmänner
+Tip=Adeptenausbildung für Medizinmänner,Meisterausbildung für Medizinmänner
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Medizinmännern und lehrt sie Stasisfalle.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Medizinmännern und lehrt sie Heilschutz."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Medizinmännern und lehrt sie Stasisfalle.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Medizinmännern und lehrt sie Heilschutz."
+Hotkey=D,D
+
+[Rost]
+Name=Adeptenausbildung für Schamanen,Meisterausbildung für Schamanen
+Tip=Adeptenausbildung für Schamanen,Meisterausbildung für Schamanen
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Schamanen und lehrt sie Blitzschild.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Schamanen und lehrt sie Kampfrausch."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Schamanen und lehrt sie Blitzschild.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Schamanen und lehrt sie Kampfrausch."
+Hotkey=M,M
+
+[Rosp]
+Name=Stachelbarrikaden,Verbesserte Stachelbarrikaden,Hoch entwickelte Stachelbarrikaden
+Tip=Stachelbarrikaden erforschen,Verbesserte Stachelbarrikaden erforschen,Hoch entwickelte Stachelbarrikaden erforschen
+Ubertip="Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen. Reflektiert außerdem <Rosp,base2,%>% des Schadens auf Angreifer.","Erhöht den zusätzlich reflektierten Schaden um <Rosp,mod2,%>% des Schadens des Angreifers.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden zusätzlich um <Rosp,mod1>."
+Ubertip:custom,V0="Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden um <Rosp,mod1>.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden zusätzlich um <Rosp,mod1>."
+Ubertip:custom,V1="Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden um <Rosp,mod1>.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden zusätzlich um <Rosp,mod1>."
+Ubertip:melee,V0="Rüstet Orcgebäude mit Stacheln aus, die Nahkampfangreifern <Rosp,base1> Schaden zufügen.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden um <Rosp,mod1>.","Erhöht den pro eintreffendem Nahkampfangriff reflektierten Schaden zusätzlich um <Rosp,mod1>."
+Hotkey=S,S,S
+
+[Rotr]
+Name=Trollregeneration,Verbesserte Trollregeneration,Hoch entwickelte Trollregeneration
+Tip=Trollregeneration erforschen,Verbesserte Trollregeneration erforschen,Hoch entwickelte Trollregeneration erforschen
+Tip:custom,V0=Trollregeneration erforschen,Verbesserte Trollregeneration erforschen,Hoch entwickelte Trollregeneration erforschen
+Tip:melee,V0=Trollregeneration erforschen,Verbesserte Trollregeneration erforschen,Hoch entwickelte Trollregeneration erforschen
+Ubertip="Erhöht die Trefferpunktregeneration von Kopfjägern, Medizinmännern und Fledermausreitern.","Erhöht die Trefferpunktregeneration von Kopfjägern, Medizinmännern und Fledermausreitern zusätzlich.","Erhöht die Trefferpunktregeneration von Kopfjägern, Medizinmännern und Fledermausreitern zusätzlich."
+Ubertip:custom,V0=Erhöht die Trefferpunktregeneration von Kopfjägern und Medizinmännern.,Erhöht die Trefferpunktregeneration von Kopfjägern und Medizinmännern zusätzlich.,Erhöht die Trefferpunktregeneration von Kopfjägern und Medizinmännern zusätzlich.
+Ubertip:melee,V0=Erhöht die Trefferpunktregeneration von Kopfjägern und Medizinmännern.,Erhöht die Trefferpunktregeneration von Kopfjägern und Medizinmännern zusätzlich.,Erhöht die Trefferpunktregeneration von Kopfjägern und Medizinmännern zusätzlich.
+Hotkey=R
+Hotkey:custom,V0=T
+Hotkey:melee,V0=T
+
+[Rolf]
+Name=Flüssiges Feuer
+Tip=Flüssiges Feuer erforschen
+Ubertip="Lehrt Fledermausreiter Flüssiges Feuer, womit sie gegnerischen Gebäuden periodischen Schaden zufügen. Getroffene Gebäude können nicht repariert werden und greifen langsamer an."
+Hotkey=L
+
+[Ropm]
+Name=Rucksack
+EditorSuffix=(Orcs)
+Tip=Rucksack erforschen
+Ubertip="Ermöglicht bestimmten Bodeneinheiten der Orcs, Gegenstände zu tragen."
+Hotkey=C
+
+[Rowt]
+Name=Adeptenausbildung für Geistwandler,Meisterausbildung für Geistwandler
+Tip=Adeptenausbildung für Geistwandler,Meisterausbildung für Geistwandler
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Geistwandlern und lehrt sie Entzaubern.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Geistwandlern und lehrt sie Geist der Ahnen."
+Hotkey=R,R
+
+[Robk]
+Name=Trollberserker
+Tip=Trollberserker erforschen
+Ubertip="Macht Kopfjäger zu Berserkern, die mehr Trefferpunkte haben und Berserker beherrschen."
+Hotkey=E
+
+[Rorb]
+Name=Verstärkte Verteidigung
+Tip=Verstärkte Verteidigung erforschen
+Ubertip=Gewährt Bauen und Wachtürmen verstärkte Rüstung.
+Hotkey=D
+
+[Robf]
+Name=Brandöl
+Tip=Brandöl erforschen
+Ubertip="Lässt Verwüster Felsen schleudern, die mit brennendem Öl getränkt sind und den Boden in Brand setzen."
+Hotkey=N

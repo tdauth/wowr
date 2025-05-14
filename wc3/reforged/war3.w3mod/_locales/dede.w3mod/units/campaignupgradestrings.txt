@@ -1,0 +1,35 @@
+[Rnsw]
+Name=Adeptenausbildung für Nagasirenen,Meisterausbildung für Nagasirenen
+Tip=Adeptenausbildung für Nagasirenen erforschen,Meisterausbildung für Nagasirenen erforschen
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Nagasirenen und lehrt sie Frostrüstung.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Nagasirenen und lehrt sie Wirbelsturm."
+Hotkey=A,A
+
+[Rnen]
+Name=Einschnüren
+Tip=Einschnüren erforschen
+Ubertip="Lehrt Nagamyrmidonen Einschnüren, womit sie eine gegnerische Zieleinheit an den Boden fesseln und sie bewegungsunfähig machen können. Eingeschnürte Lufteinheiten können wie Bodeneinheiten angegriffen werden."
+Hotkey=N
+
+[Rnsi]
+Name=Magie aufheben
+Tip=Magie aufheben erforschen
+Ubertip="Ermöglicht Coatls, Stärkungseffekte von gegnerischen Einheiten und Schwächungseffekte von verbündeten Einheiten zu bannen.|nFügt beschworenen Einheiten Schaden zu."
+Hotkey=S
+
+[Rnam]
+Name=Korallenschuppen,Chitinschuppen,Klingenstachelschuppen
+Tip=Korallenschuppen erforschen,Chitinschuppen erforschen,Klingenstachelschuppen erforschen
+Ubertip="Erhöht die Rüstung von Angriffseinheiten der Naga.","Erhöht die Rüstung von Angriffseinheiten der Naga zusätzlich.","Erhöht die Rüstung von Angriffseinheiten der Naga zusätzlich."
+Hotkey=C,C,C
+
+[Rnat]
+Name=Korallenwaffen,Chitinwaffen,Klingenstachelwaffen
+Tip=Korallenwaffen erforschen,Chitinwaffen erforschen,Klingenstachelwaffen erforschen
+Ubertip="Erhöht den Angriffsschaden von Angriffseinheiten der Naga.","Erhöht den Angriffsschaden von Angriffseinheiten der Naga zusätzlich.","Erhöht den Angriffsschaden von Angriffseinheiten der Naga zusätzlich."
+Hotkey=W,W,W
+
+[Rnsb]
+Name=Abtauchen
+Tip=Abtauchen erforschen
+Ubertip="Ermöglicht Nagamyrmidonen und Schnappdrachen, ins Wasser zu tauchen und sich so zu verbergen."
+Hotkey=U

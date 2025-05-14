@@ -1,0 +1,141 @@
+﻿[Resm]
+Name=Kraft des Mondes,Verbesserte Kraft des Mondes,Hoch entwickelte Kraft des Mondes
+Tip=Kraft des Mondes erforschen,Verbesserte Kraft des Mondes erforschen,Hoch entwickelte Kraft des Mondes erforschen
+Ubertip="Erhöht den Schaden von Bogenschützinnen, Jägerinnen, Glevenschleudern und Hippogryphenreiterinnen.","Erhöht den Schaden von Bogenschützinnen, Jägerinnen, Glevenschleudern und Hippogryphenreiterinnen zusätzlich.","Erhöht den Schaden von Bogenschützinnen, Jägerinnen, Glevenschleudern und Hippogryphenreiterinnen zusätzlich."
+Hotkey=K,K,K
+
+[Resw]
+Name=Kraft der Wildnis,Verbesserte Kraft der Wildnis,Hoch entwickelte Kraft der Wildnis
+Tip=Kraft der Wildnis erforschen,Verbesserte Kraft der Wildnis erforschen,Hoch entwickelte Kraft der Wildnis erforschen
+Ubertip="Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Bergriesen, Feendrachen, Hippogryphen und Schimären.","Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Bergriesen, Feendrachen, Hippogryphen und Schimären zusätzlich.","Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Bergriesen, Feendrachen, Hippogryphen und Schimären zusätzlich."
+Ubertip:custom,V0="Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären.","Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich.","Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich."
+Ubertip:melee,V0="Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären.","Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich.","Erhöht den Schaden von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich."
+Hotkey=W,W,W
+
+[Rema]
+Name=Mondrüstung,Verbesserte Mondrüstung,Hoch entwickelte Mondrüstung
+Tip=Mondrüstung erforschen,Verbesserte Mondrüstung erforschen,Hoch entwickelte Mondrüstung erforschen
+Ubertip="Erhöht die Rüstung von Bogenschützinnen, Jägerinnen und Hippogryphenreiterinnen.","Erhöht die Rüstung von Bogenschützinnen, Jägerinnen und Hippogryphenreiterinnen zusätzlich.","Erhöht die Rüstung von Bogenschützinnen, Jägerinnen und Hippogryphenreiterinnen zusätzlich."
+Hotkey=M,M,M
+
+[Rerh]
+Name=Verstärkte Haut,Verbesserte verstärkte Haut,Hoch entwickelte verstärkte Haut
+Name:custom,V0=Verstärkte Haut,Verbesserte verstärkte Haut,Hoch entwickelte verstärkte Haut
+Name:melee,V0=Verstärkte Haut,Verbesserte verstärkte Haut,Hoch entwickelte verstärkte Haut
+Tip=Verstärkte Haut erforschen,Verbesserte verstärkte Haut erforschen,Hoch entwickelte verstärkte Haut erforschen
+Ubertip="Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Bergriesen, Feendrachen, Hippogryphen und Schimären.","Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Bergriesen, Feendrachen, Hippogryphen und Schimären zusätzlich.","Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Bergriesen, Feendrachen, Hippogryphen und Schimären zusätzlich."
+Ubertip:custom,V0="Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären.","Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich.","Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich."
+Ubertip:melee,V0="Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären.","Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich.","Erhöht die Rüstung von Klauendruiden in Bärengestalt, Krallendruiden in Sturmkrähengestalt, Dryaden, Hippogryphen und Schimären zusätzlich."
+Hotkey=R,R,R
+
+[Reuv]
+Name=Ultrasicht
+Tip=Ultrasicht erforschen
+Ubertip="Ermöglicht Nachtelfen, nachts genauso weit zu sehen wie am Tag."
+Hotkey=U
+
+[Renb]
+Name=Segen der Natur
+Tip=Segen der Natur erforschen
+Ubertip=Erhöht die Bewegungsgeschwindigkeit und die Rüstung von Urtumen und Treants.
+Ubertip:custom,V0=Erhöht die Bewegungsgeschwindigkeit und die Rüstung von Urtumen.
+Hotkey=N
+
+[Reib]
+Name=Verbesserte Bogen
+Tip=Verbesserte Bogen erforschen
+Ubertip=Erhöht die Angriffsreichweite von Bogenschützinnen und Hippogryphenreiterinnen.
+Hotkey=O
+
+[Remk]
+Name=Treffsicherheit
+Tip=Treffsicherheit erforschen
+Ubertip="Erhöht den Schaden von Bogenschützinnen und Hippogryphenreiterinnen um <Remk,base1>."
+Hotkey=F
+
+[Resc]
+Name=Wächter
+Tip=Wächter erforschen
+Ubertip="Ermöglicht Jägerinnen, eine Eule zu einen Baum in der Nähe zu schicken, um das Gebiet um den Baum sichtbar zu machen.|nKann unsichtbare Einheiten aufdecken."
+Hotkey=W
+
+[Remg]
+Name=Lunargleve
+Tip=Lunargleve erforschen
+Ubertip="Ermöglicht Jägerinnen, zusätzliche Einheiten mit überspringenden Glevenangriffen zu treffen."
+Hotkey=U
+
+[Redt]
+Name=Adeptenausbildung für Krallendruiden,Meisterausbildung für Krallendruiden
+Tip=Adeptenausbildung für Krallendruiden,Meisterausbildung für Krallendruiden
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte der Nachtelfengestalt von Krallendruiden und lehrt sie Sturmkrähengestalt.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte der Nachtelfengestalt von Krallendruiden und lehrt sie Wirbelsturm."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden der Nachtelfengestalt von Klauendruiden und lehrt sie Sturmkrähengestalt.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden der Nachtelfengestalt von Klauendruiden und lehrt sie Wirbelsturm."
+Hotkey=G,G
+
+[Redc]
+Name=Adeptenausbildung für Klauendruiden,Meisterausbildung für Klauendruiden
+Tip=Adeptenausbildung für Klauendruiden,Meisterausbildung für Klauendruiden
+Ubertip="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden der Nachtelfengestalt von Klauendruiden und lehrt sie Verjüngung.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden der Nachtelfengestalt von Klauendruiden und lehrt sie Bärengestalt."
+Hotkey=I,I
+
+[Resi]
+Name=Magie aufheben
+Tip=Magie aufheben erforschen
+Ubertip="Ermöglicht Dryaden, Stärkungseffekte von gegnerischen Einheiten und Schwächungseffekte von verbündeten Einheiten zu bannen.|nFügt beschworenen Einheiten Schaden zu."
+Hotkey=S
+
+[Reht]
+Name=Hippogryphenzähmung
+Tip=Hippogryphenzähmung erforschen
+Ubertip="Bildet Hippogryphen aus, Bogenschützinnen aufsitzen zu lassen, wodurch sie Boden- und Lufteinheiten angreifen können."
+Hotkey=Z
+
+[Recb]
+Name=Ätzatem
+Tip=Ätzatem erforschen
+Ubertip="Ermöglicht Schimären, ätzende Galle auf gegnerische Gebäude zu spucken."
+Hotkey=Z
+
+[Repb]
+Name=Vorpalklingen
+Tip=Vorpalklingen erforschen
+Ubertip="Erhöht die Geschwindigkeit der geschleuderten Gleven. Ermöglicht Glevenschleudern, Bäume anzugreifen."
+Ubertip:custom,V1="Lässt die Gleven der Glevenschleuder die ersten getroffenen Bodeneinheiten durchschlagen und auch Einheiten dahinter Schaden zufügen. Ermöglicht Glevenschleudern, Bäume anzugreifen."
+Hotkey=P
+
+[Rers]
+Name=Resistente Haut
+Tip=Resistente Haut erforschen
+Ubertip=Verringert den erlittenen Magieschaden von Bergriesen.
+Hotkey=T
+
+[Rehs]
+Name=Gehärtete Haut
+Tip=Gehärtete Haut erforschen
+Ubertip=Verringert den erlittenen Angriffsschaden von Bergriesen.
+Hotkey=H
+
+[Reeb]
+Name=Mal der Klaue
+Tip=Mal der Klaue erforschen
+Ubertip="Ermöglicht Klauendruiden, Gebrüll in Bärengestalt einzusetzen."
+Hotkey=M
+
+[Reec]
+Name=Mal der Kralle
+Tip=Mal der Kralle erforschen
+Ubertip="Ermöglicht Krallendruiden, Feenfeuer in Sturmkrähengestalt einzusetzen."
+Hotkey=M
+
+[Rews]
+Name=Quellbrunnen
+Tip=Quellbrunnen erforschen
+Ubertip="Erhöht die Manakapazität von Mondbrunnen um <Rews,base1> und die gewährte Manaregeneration um <Rews,base2,%>%."
+Hotkey=E
+
+[Repm]
+Name=Rucksack
+EditorSuffix= (Nachtelfen)
+Tip=Rucksack erforschen
+Ubertip="Ermöglicht bestimmten Bodeneinheiten der Nachtelfen, Gegenstände zu tragen."
+Hotkey=C

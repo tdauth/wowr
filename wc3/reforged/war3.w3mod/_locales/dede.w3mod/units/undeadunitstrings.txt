@@ -1,0 +1,303 @@
+[Ucrl]
+Name=Gruftlord
+Propernames=Thebis-Ra,Typhis-Ahn,Anubiros,Memphis-Ahn,Horus'aman,Nephri'thos,Arak-arahm,Tuten'arak,Pharoh-moth
+Tip=Gruftlord beschwören
+Hotkey=O
+Ubertip="Ein Kriegerheld, der insektenartige Diener beschwört und Gegner zerquetscht. Kann Aufspießen, Stachelpanzer, Aaskäfer und Heuschreckenschwarm erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Gruftlord wiederbeleben
+Awakentip=Gruftlord wiederbeleben
+
+[uaco]
+Name=Akolyth
+Tip=Akolyth ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold abbauen, Gebäude beschwören und mit Wiederherstellen reparieren. Akolythen können in einer Opfergrube geopfert werden, um Schemen zu erschaffen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Hotkey=Y
+
+[uabo]
+Name=Monstrosität
+Tip=Monstrosität ausbilden
+Ubertip=Ein schwerer Nahkämpfer. Kann Krankheitswolke und Kannibalismus erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Eine schwere Nahkampfeinheit. Kann Krankheitswolke erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Eine schwere Nahkampfeinheit. Kann Krankheitswolke erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=O
+
+[Udea]
+Name=Todesritter
+Propernames=Lord Nachtklage,Lord Seelenfetzer,Lord Totensturm,Lord Maldazzar,Lord Finsterweihe,Lord Lichtjäger,Baron Blutbann,Baron Teufelsklinge,Fürst Schreckensmeer,Fürst Zornschlächter,Baron Teufelsfrost,Lord Finstersense,Fürst Winterblut,Baron Perenolde,Baron Morte
+Tip=Todesritter beschwören
+Ubertip="Ein Kriegerheld, der das Gegenstück zum menschlichen Paladin darstellt. Kann Todesmantel, Todespakt, Unheilige Aura und Totenbelebung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Todesritter wiederbeleben
+Awakentip=Todesritter wiederbeleben
+Hotkey=D
+
+[uban]
+Name=Banshee
+Tip=Banshee ausbilden
+Ubertip="Eine unterstützende Magiebenutzerin. Beherrscht Fluch, wodurch gegnerische Einheiten im Kampf gelegentlich verfehlen. Kann Antimagische Hülle und Besessenheit erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=B
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Fluch","- Fluch|n- Antimagische Hülle","- Fluch|n- Antimagische Hülle|n- Besessenheit"
+
+[ucrm]
+Name=Eingegrabene Gruftbestie
+Tip=Gruftbestie ausbilden
+Ubertip=Ein Fernkampfunterstützer. Kann Gespinst und Eingraben erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=F
+
+[ucry]
+Name=Gruftbestie
+Tip=Gruftbestie ausbilden
+Ubertip=Ein Fernkampfunterstützer. Kann Gespinst und Eingraben erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Ein Fernkampfunterstützer. Kann Gespinst erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Ein Fernkampfunterstützer. Kann Gespinst erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Hotkey=F
+
+[Udre]
+Name=Schreckenslord
+Propernames=Terrordar,Nerothos,Totentrost,Necros,Fearoth,Dethecus,Maldibion,Nochthitus,Balnazzar,Rashgarroth,Aramachus,Zilfallon,Lorthiras,Zenedar,Mullioch,Algammon,Schattenfluch,Ven'Gyr
+Propernames:custom,V0=Terrordar,Nerothos,Totentrost,Necros,Fearoth,Dethecus,Maldibion,Nochthitus,Balnazzar,Rashgarroth,Aramachus,Zilfallon,Lorthiras,Zenedar,Mullioch,Algammon,Schattenfluch,Ven'Gyr
+Propernames:melee,V0=Terrordar,Nerothos,Totentrost,Necros,Fearoth,Dethecus,Maldibion,Nochthitus,Balnazzar,Rashgarroth,Aramachus,Zilfallon,Lorthiras,Zenedar,Mullioch,Algammon,Schattenfluch,Ven'Gyr
+Tip=Schreckenslord beschwören
+Ubertip="Ein listiger Held, der Kämpfe kontrolliert. Kann Aasschwarm, Schlaf, Vampiraura und Inferno erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Schreckenslord wiederbeleben
+Awakentip=Schreckenslord wiederbeleben
+Hotkey=E
+
+[ufro]
+Name=Frostwyrm
+Tip=Frostwyrm ausbilden
+Ubertip=Ein schwerer fliegender Angreifer. Kann Eisatem erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=F
+
+[ugar]
+Name=Gargoyle
+Tip=Gargoyle ausbilden
+Ubertip=Ein fliegender Angreifer. Kann Steingestalt erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=L
+
+[ugrm]
+Name=Steingargoyle
+Tip=Gargoyle ausbilden
+Ubertip=Ein fliegender Angreifer.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=L
+
+[ugho]
+Name=Ghul
+Tip=Ghul ausbilden
+Ubertip="Ein einfacher Angreifer, der auch Holz abbaut. Kann Kannibalismus und Ghulraserei erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Hotkey=G
+
+[Ulic]
+Name=Lich
+Propernames=Ordin Frostbann,Ras Splittergrat,Morbent Teufel,Furor Winterfrost,Araj der Beschwörer,Kali'naj Todesend,Rak Kaltschädel,Din Frostfeuer,Calis Geistersohn,Venim Eisklinge,Naze der Ewige,Ras Frostraunen,Eisbringer,Cho'Nammoth,Kryptikk Seelentöter,Alandil Lieng
+Propernames:custom,V0=Ordin Frostbann,Ras Splittergrat,Morbent Teufel,Furor Winterfrost,Araj der Beschwörer,Kali'naj Todesend,Rak Kaltschädel,Din Frostfeuer,Calis Geistersohn,Venim Eisklinge,Naze der Ewige,Ras Frostraunen,Eisbringer,Cho'Nammoth,Alandil Lieng
+Propernames:melee,V0=Ordin Frostbann,Ras Splittergrat,Morbent Teufel,Furor Winterfrost,Araj der Beschwörer,Kali'naj Todesend,Rak Kaltschädel,Din Frostfeuer,Calis Geistersohn,Venim Eisklinge,Naze der Ewige,Ras Frostraunen,Eisbringer,Cho'Nammoth,Alandil Lieng
+Tip=Lich beschwören
+Ubertip="Ein mystischer Held, der auf Kältemagie spezialisiert ist. Kann Frostrüstung, Frostnova, Dunkles Ritual sowie Tod und Verfall erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Lich wiederbeleben
+Awakentip=Lich wiederbeleben
+Hotkey=L
+
+[unec]
+Name=Totenbeschwörer
+Tip=Totenbeschwörer ausbilden
+Ubertip="Ein finsterer Magiebenutzer. Beherrscht Totenerweckung, womit er Leichen erwecken kann. Kann Unheilige Raserei und Verkrüppeln erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Ein unverzichtbarer Magiebenutzer. Beherrscht Totenerweckung, womit er Leichen erwecken kann. Kann Unheilige Raserei und Verkrüppeln erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V1="Ein unverzichtbarer Magiebenutzer. Beherrscht Totenerweckung, womit er Leichen erwecken kann. Kann Unheilige Raserei und Verkrüppeln erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Ein unverzichtbarer Magiebenutzer. Beherrscht Totenerweckung, womit er Leichen erwecken kann. Kann Unheilige Raserei und Verkrüppeln erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=N
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Totenerweckung","- Totenerweckung|n- Verkrüppeln","- Totenerweckung|n- Unheilige Raserei|n- Verkrüppeln"
+Casterupgradetip:custom,V0=- Totenerweckung,- Totenerweckung|n- Unheilige Raserei,- Totenerweckung|n- Unheilige Raserei|n- Verkrüppeln
+Casterupgradetip:custom,V1=- Totenerweckung,- Totenerweckung|n- Unheilige Raserei,- Totenerweckung|n- Unheilige Raserei|n- Verkrüppeln
+Casterupgradetip:melee,V0=- Totenerweckung,- Totenerweckung|n- Unheilige Raserei,- Totenerweckung|n- Unheilige Raserei|n- Verkrüppeln
+
+[uske]
+Name=Skelettkrieger
+Tip=Skelettkrieger beschwören
+
+[uskm]
+Name=Skelettmagier
+Tip=Skelettmagier beschwören
+
+[uplg]
+Name=Krankheitswolke
+
+[uaod]
+Name=Altar der Dunkelheit
+Tip=Altar der Dunkelheit beschwören
+Ubertip=Beschwört Helden und belebt getötete Helden wieder.
+Hotkey=A
+
+[unpl]
+Name=Nekropole
+Tip=Nekropole beschwören
+Ubertip="Hauptgebäude. Bildet Akolythen aus und nimmt das Holz von Ghulen entgegen. Kann erst zur Halle der Toten und dann zur Schwarzen Zitadelle ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen."
+Ubertip:custom,V0="Hauptgebäude. Bildet Akolythen aus und nimmt das Holz von Ghulen entgegen. Kann erst zur Halle der Toten und dann zur Schwarzen Zitadelle ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen."
+Ubertip:melee,V0="Hauptgebäude. Bildet Akolythen aus und nimmt das Holz von Ghulen entgegen. Kann erst zur Halle der Toten und dann zur Schwarzen Zitadelle ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen."
+Hotkey=N
+
+[unp1]
+Name=Halle der Toten
+Tip=Ausbau zur Halle der Toten
+Ubertip=Der Ausbau zur Halle der Toten ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Der Ausbau zur Halle der Toten ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Der Ausbau zur Halle der Toten ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=U
+
+[unp2]
+Name=Schwarze Zitadelle
+Tip=Ausbau zur Schwarzen Zitadelle
+Ubertip=Der Ausbau zur Schwarzen Zitadelle ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Der Ausbau zur Schwarzen Zitadelle ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Der Ausbau zur Schwarzen Zitadelle ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=U
+
+[usep]
+Name=Gruft
+Tip=Gruft beschwören
+Ubertip="Primäres Truppenproduktionsgebäude. Bildet Ghule, Gruftbestien und Gargoyles aus.|nDient zur Erforschung von Ghulraserei, Kannibalismus, Steingestalt, Gespinst und Eingraben."
+Ubertip:custom,V0="Primäres Truppenproduktionsgebäude. Bildet Ghule, Gruftbestien und Gargoyles aus.|nDient zur Erforschung von Ghulraserei, Kannibalismus, Steingestalt und Gespinst."
+Ubertip:melee,V0="Primäres Truppenproduktionsgebäude. Bildet Ghule, Gruftbestien und Gargoyles aus.|nDient zur Erforschung von Ghulraserei, Kannibalismus, Steingestalt und Gespinst."
+Hotkey=F
+
+[utod]
+Name=Tempel der Verdammten
+Tip=Tempel der Verdammten beschwören
+Ubertip=Produktionsgebäude für Magiebenutzer. Bildet Totenbeschwörer und Banshees aus.|nDient zur Erforschung von Verbesserungen für Totenbeschwörer und Banshees sowie von Skelettbeherrschung.
+Ubertip:custom,V0=Produktionsgebäude für Magiebenutzer. Bildet Totenbeschwörer und Banshees aus.|nDient zur Erforschung von Verbesserungen für Totenbeschwörer und Banshees sowie von Skelettlanglebigkeit.
+Ubertip:custom,V1=Produktionsgebäude für Magiebenutzer. Bildet Totenbeschwörer und Banshees aus.|nDient zur Erforschung von Verbesserungen für Totenbeschwörer und Banshees sowie von Skelettlanglebigkeit und Skelettbeherrschung.
+Ubertip:melee,V0=Produktionsgebäude für Magiebenutzer. Bildet Totenbeschwörer und Banshees aus.|nDient zur Erforschung von Verbesserungen für Totenbeschwörer und Banshees sowie von Skelettlanglebigkeit.
+Hotkey=T
+
+[utom]
+Name=Grabmal der Relikte
+Hotkey=R
+Tip=Grabmal der Relikte beschwören
+Ubertip="Ein Laden mit käuflichen Gegenständen. Die verfügbaren Gegenstände hängen von der Ausbaustufe des Hauptgebäudes (Nekropole, Halle der Toten oder Schwarze Zitadelle) ab sowie von den anderen vorhandenen Gebäuden."
+
+[ugol]
+Name=Verhexte Goldmine
+Tip=Goldmine verhexen
+Ubertip="Verhext eine Goldmine, sodass Akolythen dort Gold abbauen können. Auf eine Goldmine anwenden, um diese zu verderben."
+Hotkey=G
+
+[uzig]
+Name=Ziggurat
+Tip=Ziggurat beschwören
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Kann zu einem Verteidigungsgebäude ausgebaut werden, das Boden- und Lufteinheiten angreift."
+Hotkey=Z
+
+[uzg1]
+Name=Geisterturm
+Tip=Ausbau zum Geisterturm
+Ubertip=Ausbau zu einem Verteidigungsgebäude.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+Hotkey=T
+
+[uzg2]
+Name=Neruberturm
+Tip=Ausbau zum Neruberturm
+Ubertip="Ausbau zu einem Verteidigungsgebäude, das Kälteschaden verursacht und gegnerische Einheiten verlangsamt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=N
+
+[umtw]
+Name=Fleischwagen
+Tip=Fleischwagen bauen
+Ubertip="Maschine zur Verwahrung von Leichen. Dient gleichzeitig als Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar. Kann Krankheitswolke erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Hotkey=F
+
+[ubon]
+Name=Knochenhof
+Tip=Knochenhof beschwören
+Ubertip=Bildet Frostwyrms aus. Dient zur Erforschung von Eisatem.
+Hotkey=K
+
+[usap]
+Name=Opfergrube
+Tip=Opfergrube beschwören
+Ubertip="Dient als Opferungsstätte für Akolythen, um sie in Schemen zu verwandeln. Schemen sind unsichtbare Geister, die andere unsichtbare Einheiten aufdecken, aber nicht angreifen können."
+Hotkey=P
+
+[uslh]
+Name=Schlachthaus
+Tip=Schlachthaus beschwören
+Ubertip=Bildet Monstrositäten aus und baut Obsidianstatuen sowie Fleischwagen. Dient zur Erforschung von Krankheitswolke und Zerstörergestalt.
+Ubertip:custom,V0=Bildet Monstrositäten aus und baut Fleischwagen. Dient zur Erforschung von Krankheitswolke.
+Ubertip:melee,V0=Bildet Monstrositäten aus und baut Fleischwagen. Dient zur Erforschung von Krankheitswolke.
+Hotkey=H
+
+[ushd]
+Name=Schemen
+Tip=Schemen ausbilden
+Ubertip="Ein dauerhaft getarnter Geist, der andere unsichtbare Einheiten aufdecken, aber nicht angreifen kann."
+
+[ugrv]
+Name=Friedhof
+Tip=Friedhof beschwören
+Ubertip=Dient zur Erforschung von verbesserten Angriffen und Rüstungen aller Einheiten der Untoten. Erschafft außerdem Leichen und dient als Abgabepunkt für geschlagenes Holz.
+Hotkey=O
+
+[ucs1]
+Name=Aaskäfer
+EditorSuffix= (Stufe 1)
+
+[ucs2]
+Name=Aaskäfer
+EditorSuffix= (Stufe 2)
+
+[ucsB]
+Name=Eingegrabener Aaskäfer
+EditorSuffix= (Stufe 2)
+
+[ucs3]
+Name=Aaskäfer
+EditorSuffix= (Stufe 3)
+
+[ucsC]
+Name=Eingegrabener Aaskäfer
+EditorSuffix= (Stufe 3)
+
+[uloc]
+Name=Heuschrecke
+
+[uobs]
+Name=Obsidianstatue
+Tip=Obsidianstatue erschaffen
+Hotkey=B
+Ubertip="Eine verstärkte Statue, die die Trefferpunkte und das Mana der Armee wiederherstellen kann. Beherrscht Geistberührung und Essenz der Verseuchung und kann die Zerstörergestalt erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[ubsp]
+Name=Zerstörer
+Tip=In Zerstörer wandeln
+Hotkey=T
+Ubertip="Eine große Lufteinheit, die Magie verzehren muss, um sich mit Mana zu versorgen. Macht kurzen Prozess mit gegnerischen Magiebenutzern und zusammenstehenden Bodeneinheiten. Beherrscht Zauberimmunität, Magie verschlingen, Mana absorbieren und Kugel der Vernichtung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+//#RESTNOBETA
+[ubot]
+Name=Untotentransportschiff
+Hotkey=T
+Tip=Transportschiff anheuern
+Ubertip="Ein robustes Transportschiff, das Einheiten übers Meer transportieren kann."
+
+
+[udes]
+Name=Untotenfregatte
+Hotkey=F
+Tip=Fregatte anheuern
+Ubertip="Ein vielseitiges Angriffsschiff, das mit Luftangreifern kurzen Prozess macht.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+
+[uubs]
+Name=Untotenschlachtschiff
+Hotkey=S
+Tip=Schlachtschiff anheuern
+Ubertip="Ein schweres Schlachtschiff, das gegnerische Schiffe zerstört und Gebäude vom Meer aus bombardiert.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[Udef]
+Hotkey=D
+Awakentip=Todesritter wiederbeleben
+Revivetip=Todesritter wiederbeleben
+Ubertip="Eine Kriegerheldin, die das Gegenstück zum menschlichen Paladin darstellt. Kann Todesmantel, Todespakt, Unheilige Aura und Totenbelebung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Tip=Todesritter beschwören
+Propernames=Lady Nachtklage,Lady Seelenfetzer,Lady Totensturm,Lady Maldazzar,Lady Finsterweihe,Lady Lichtjäger,Baroness Blutbann,Baroness Teufelsklinge,Fürstin Schreckensmeer,Fürstin Zornschlächter,Baroness Teufelsfrost,Lady Finstersense,Fürstin Winterblut,Baroness Perenolde,Baroness Morte
+Name=Todesritter

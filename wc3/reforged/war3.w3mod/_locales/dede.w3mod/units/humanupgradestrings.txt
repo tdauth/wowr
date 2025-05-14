@@ -1,0 +1,148 @@
+[Rhss]
+Name=Magie kontrollieren
+Tip=Magie kontrollieren erforschen
+Ubertip="Ermöglicht Zauberbrechern, beschworene Einheiten des Gegners zu kontrollieren."
+Hotkey=M
+
+[Rhme]
+Name=Eisenschwerter,Stahlschwerter,Mithrilschwerter
+Tip=Eisenschwerter erforschen,Stahlschwerter erforschen,Mithrilschwerter erforschen
+Ubertip="Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Zauberbrechern, Drachenfalkenreitern, Greifenreitern und Rittern.","Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Zauberbrechern, Drachenfalkenreitern, Greifenreitern und Rittern zusätzlich.","Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Zauberbrechern, Drachenfalkenreitern, Greifenreitern und Rittern zusätzlich."
+Ubertip:custom,V0="Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Greifenreitern und Rittern.","Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Greifenreitern und Rittern zusätzlich.","Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Greifenreitern und Rittern zusätzlich."
+Ubertip:melee,V0="Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Greifenreitern und Rittern.","Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Greifenreitern und Rittern zusätzlich.","Erhöht den Angriffsschaden von Milizsoldaten, Fußsoldaten, Greifenreitern und Rittern zusätzlich."
+Hotkey=S,S,S
+
+[Rhra]
+Name=Schwarzes Schießpulver,Angereichertes Schießpulver,Magisches Schießpulver
+Tip=Schwarzes Schießpulver erforschen,Angereichertes Schießpulver erforschen,Magisches Schießpulver erforschen
+Ubertip="Erhöht den Fernkampfschaden von Scharfschützen, Mörsertrupps, Belagerungsmaschinen und Flugapparaten.","Erhöht den Fernkampfschaden von Scharfschützen, Mörsertrupps, Belagerungsmaschinen und Flugapparaten zusätzlich.","Erhöht den Fernkampfschaden von Scharfschützen, Mörsertrupps, Belagerungsmaschinen und Flugapparaten zusätzlich."
+Hotkey=V,V,V
+
+[Rhar]
+Name=Eisenrüstung,Stahlrüstung,Mithrilrüstung
+Tip=Eisenrüstung erforschen,Stahlrüstung erforschen,Mithrilrüstung erforschen
+Ubertip="Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Zauberbrechern, Rittern, Flugapparaten und Belagerungsmaschinen.","Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Zauberbrechern, Rittern, Flugapparaten und Belagerungsmaschinen zusätzlich.","Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Zauberbrechern, Rittern, Flugapparaten und Belagerungsmaschinen zusätzlich."
+Ubertip:custom,V0="Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Rittern, Flugapparaten und Belagerungsmaschinen.","Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Rittern, Flugapparaten und Belagerungsmaschinen zusätzlich.","Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Rittern, Flugapparaten und Belagerungsmaschinen zusätzlich."
+Ubertip:melee,V0="Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Rittern, Flugapparaten und Belagerungsmaschinen.","Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Rittern, Flugapparaten und Belagerungsmaschinen zusätzlich.","Erhöht die Rüstung von Milizsoldaten, Fußsoldaten, Rittern, Flugapparaten und Belagerungsmaschinen zusätzlich."
+Hotkey=R,R,R
+
+[Rhla]
+Name=Beschlagene Lederrüstung,Stachellederrüstung,Drachenlederrüstung
+Tip=Beschlagene Lederrüstung erforschen,Stachellederrüstung erforschen,Drachenlederrüstung erforschen
+Ubertip="Erhöht die Rüstung von Scharfschützen, Mörsertrupps, Drachenfalkenreitern und Greifenreitern.","Erhöht die Rüstung von Scharfschützen, Mörsertrupps, Drachenfalkenreitern und Greifenreitern zusätzlich.","Erhöht die Rüstung von Scharfschützen, Mörsertrupps, Drachenfalkenreitern und Greifenreitern zusätzlich."
+Ubertip:custom,V0="Erhöht die Rüstung von Scharfschützen, Mörsertrupps und Greifenreitern.","Erhöht die Rüstung von Scharfschützen, Mörsertrupps und Greifenreitern zusätzlich.","Erhöht die Rüstung von Scharfschützen, Mörsertrupps und Greifenreitern zusätzlich."
+Ubertip:melee,V0="Erhöht die Rüstung von Scharfschützen, Mörsertrupps und Greifenreitern.","Erhöht die Rüstung von Scharfschützen, Mörsertrupps und Greifenreitern zusätzlich.","Erhöht die Rüstung von Scharfschützen, Mörsertrupps und Greifenreitern zusätzlich."
+Hotkey=A,A,A
+
+[Rhac]
+Name=Verbesserte Baukunst,Hoch entwickelte Baukunst,Magische Baukunst
+Tip=Verbesserte Baukunst erforschen,Hoch entwickelte Baukunst erforschen,Magische Baukunst erforschen
+Ubertip="Erhöht die Rüstung und Trefferpunkte von Menschengebäuden.","Erhöht die Rüstung und Trefferpunkte von Menschengebäuden zusätzlich.","Erhöht die Rüstung und Trefferpunkte von Menschengebäuden zusätzlich."
+Hotkey=K,K,K
+
+[Rhgb]
+Name=Flugapparatbomben
+Tip=Flugapparatbomben erforschen
+Ubertip="Ermöglicht Flugapparaten, Bodeneinheiten anzugreifen."
+Hotkey=B
+
+[Rhlh]
+Name=Verbesserter Holzabbau,Hoch entwickelter Holzabbau
+Tip=Verbesserten Holzabbau erforschen,Hoch entwickelten Holzabbau erforschen
+Ubertip="Erhöht die Menge Holz, die ein Arbeiter tragen kann, um <Rhlh,mod1>.","Erhöht die Menge Holz, die ein Arbeiter tragen kann, um zusätzlich <Rhlh,mod1>."
+Hotkey=L,L
+
+[Rhde]
+Name=Verteidigungshaltung
+Tip=Verteidigungshaltung erforschen
+UberTip="Lehrt Fußsoldaten Verteidigungshaltung, was den Schaden durch Stichangriffe verringert."
+Hotkey=D
+
+[Rhan]
+Name=Kampftierausbildung
+Tip=Kampftierausbildung erforschen
+Ubertip="Erhöht die maximalen Trefferpunkte von Rittern, Drachenfalkenreitern und Greifenreitern um <Rhan,base1>."
+Ubertip:custom,V0="Erhöht die maximalen Trefferpunkte von Rittern und Greifenreitern um <Rhan,base1>."
+Ubertip:melee,V0="Erhöht die maximalen Trefferpunkte von Rittern und Greifenreitern um <Rhan,base1>."
+Hotkey=T
+
+[Rhpt]
+Name=Adeptenausbildung für Priester,Meisterausbildung für Priester
+Tip=Adeptenausbildung für Priester,Meisterausbildung für Priester
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Priestern und lehrt sie Magie bannen.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Priestern und lehrt sie Inneres Feuer."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Priestern und lehrt sie Magie bannen.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Priestern und lehrt sie Inneres Feuer."
+Hotkey=T,T
+
+[Rhst]
+Name=Adeptenausbildung für Zauberinnen,Meisterausbildung für Zauberinnen
+Tip=Adeptenausbildung für Zauberinnen,Meisterausbildung für Zauberinnen
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Zauberinnen und lehrt sie Unsichtbarkeit.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Zauberinnen und lehrt sie Verwandlung."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Zauberinnen und lehrt sie Unsichtbarkeit.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Zauberinnen und lehrt sie Verwandlung."
+Hotkey=G,G
+
+[Rhri]
+Name=Langflinten
+Tip=Langflinten erforschen
+Ubertip=Erhöht die Reichweite von Scharfschützen.
+Hotkey=L
+
+[Rhse]
+Name=Magischer Schutz
+Tip=Magischen Schutz erforschen
+Ubertip="Ermöglicht Menschentürmen, unsichtbare Einheiten aufzudecken."
+Hotkey=I
+
+[Rhfl]
+Name=Leuchtfeuer
+Tip=Leuchtfeuer erforschen
+Tip:custom,V0=Leuchtfeuer erforschen
+Tip:melee,V0=Leuchtfeuer erforschen
+Ubertip="Lehrt Mörsertrupps Leuchtfeuer, womit sie einen Bereich der Karte sichtbar machen können.|nKann unsichtbare Einheiten aufdecken."
+Hotkey=R
+Hotkey:custom,V0=F
+Hotkey:melee,V0=F
+
+[Rhhb]
+Name=Sturmhammer
+Tip=Sturmhammer erforschen
+Ubertip=Lässt Angriffe von Greifenreitern mehrere Einheiten treffen.
+Ubertip:custom,V0=Lässt die Hämmer des Greifenreiters die erste gegnerische Bodeneinheit durchschlagen und auch der nächsten Bodeneinheit Schaden zufügen.
+Hotkey=H
+
+[Rhrt]
+Name=Sperrfeuer
+Tip=Sperrfeuer erforschen
+Ubertip="Lehrt Belagerungsmaschinen Sperrfeuer, womit sie gegnerischen Lufteinheiten in der Nähe Schaden zufügen können."
+Hotkey=P
+
+[Rhpm]
+Name=Rucksack
+EditorSuffix= (Menschen)
+Tip=Rucksack erforschen
+Ubertip="Ermöglicht bestimmten Bodeneinheiten der Menschen, Gegenstände zu tragen."
+Hotkey=C
+
+[Rhfc]
+Name=Flakgeschütze
+Tip=Flakgeschütze erforschen
+Ubertip="Verbessert die Waffen von Flugapparaten, sodass sie Lufteinheiten Flächenschaden zufügen."
+Hotkey=A
+
+[Rhfs]
+Name=Schrapnellsplitter
+Tip=Schrapnellsplitter erforschen
+Ubertip="Verbessert die Mörsergeschosse von Mörsertrupps und Kanonentürmen, sodass sie ungepanzerten Einheiten und Einheiten mit mittlerer Rüstung mehr Schaden zufügen."
+Ubertip:custom,V1="Verbessert die Mörsergeschosse von Mörsertrupps, sodass sie ungepanzerten Einheiten und Einheiten mit mittlerer Rüstung mehr Schaden zufügen."
+Hotkey=S
+
+[Rhcd]
+Name=Wolke
+Tip=Wolke erforschen
+Ubertip="Lehrt Drachenfalkenreiter Wolke, womit sie Gebäude daran hindern können, Fernkampfangriffe auszuführen."
+Hotkey=F
+
+[Rhsb]
+Hotkey=B
+Ubertip=Erhöht den Schaden von Rittern gegen Ziele mit mittlerer Rüstung.
+Tip=Brecherklingen erforschen
+Name=Brecherklingen

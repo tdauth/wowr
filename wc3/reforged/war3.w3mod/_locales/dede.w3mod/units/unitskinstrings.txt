@@ -1,0 +1,29 @@
+
+
+[Y425]
+Description=Dummy Field
+Name=ydeng
+
+[Hjas]
+Propernames:hd=Jaina Prachtmeer
+Name=Erzmagierin
+
+[Uart]
+Propernames:hd=Arthas Menethil
+Name=Todesritter
+
+[Ekce]
+Propernames:hd=Cenarius
+Name=Hüter des Hains
+
+[Ofth]
+Propernames:hd=Thrall
+Name=Scharfseher
+
+[Udef]
+Propernames=Lady Nachtklage,Lady Seelenfetzer,Lady Totensturm,Lady Maldazzar,Lady Finsterweihe,Lady Lichtjäger,Baroness Blutbann,Baroness Teufelsklinge,Fürstin Schreckensmeer,Fürstin Zornschlächter,Baroness Teufelsfrost,Lady Finstersense,Fürstin Winterblut,Baroness Perenolde,Baroness Morte
+Name=Todesritter
+
+[Edef]
+Propernames=Schattensang,Schattenzorn,Schattenpirscher,Flammensucher,Düsterweber,Düsterschrecken,Düstergram,Sündschwelger,Schmerzstiller,Höllenspross,Zornbringer,Wutläufer,Feuermal,Blutzorn,Schreckensklinge
+Name=Dämonenjägerin

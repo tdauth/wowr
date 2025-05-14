@@ -1,0 +1,743 @@
+﻿[Ablr]
+Name=Trefferpunktregeneration auf verseuchtem Boden
+
+// Replenish Life & Mana
+[Arpb]
+Name=Auffüllen
+Tip=Auffüllen
+Ubertip=Füllt die Trefferpunkte und das Mana einer verbündeten Zieleinheit wieder auf.
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=A
+Unhotkey=A
+
+[Brpb]
+Bufftip=Auffüllen
+Buffubertip=Diese Einheit steht unter dem Effekt von Auffüllen. Ein Teil ihrer Trefferpunkte und ihres Manas wurde wiederhergestellt.
+
+// Replenish Life (Obsidian Statue)
+[Arpl]
+Name=Essenz der Verseuchung
+Tip=Essenz der Verseuchung
+Ubertip="Stellt bei verbündeten Einheiten in der Nähe <Arpl,DataA1> Trefferpunkte wieder her."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=V
+Unhotkey=V
+
+[Brpl]
+Bufftip=Essenz der Verseuchung
+Buffubertip=Diese Einheit wurde von der Essenz der Verseuchung geheilt. Ein Teil ihrer Trefferpunkte wurde wiederhergestellt.
+
+// Spirit Touch (Obsidian Statue)
+[Arpm]
+Name=Geistberührung
+Tip=Geistberührung
+Ubertip="Stellt bei verbündeten Einheiten in der Nähe <Arpm,DataB1> Mana wieder her."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=E
+Unhotkey=E
+Order=replenishmana
+Orderon=replenishmanaon
+Orderoff=replenishmanaoff
+
+[Brpm]
+Bufftip=Geistberührung
+Buffubertip=Diese Einheit steht unter dem Einfluss der Geistberührung. Ein Teil ihres Manas wurde wiederhergestellt.
+
+// Exhume Corpses
+[Aexh]
+Name=Leichen exhumieren
+Tip=Leichen exhumieren
+Ubertip="Erschafft alle <Aexh,Dur1> Sek. eine Leiche im Fleischwagen."
+
+// Obsidian Statue mana battery
+[Amb2]
+Name=Mana auffüllen
+Tip=Mana auffüllen
+Ubertip=Füllt das Mana einer verbündeten Zieleinheit wieder auf.
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+Unhotkey=F
+Order=Auffüllen
+
+// Destroyer Form 
+[Aave] 
+Name=Zerstörergestalt 
+
+// Orb of Annihilation
+[Afak]
+Name=Kugel der Vernichtung
+Tip=Kugel der Vernichtung
+Ubertip="Erhöht den Angriffsschaden des Zerstörers um <Afak,DataA1> und seine Angriffe verursachen Flächenschaden."
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=I
+Unhotkey=I
+
+// Devour Magic
+[Advm]
+Name=Magie verschlingen
+Tip=Magie verschlingen
+Ubertip="Raubt alle magischen Stärkungseffekte von Einheiten in einem Gebiet. Jede beraubte Einheit stellt beim Zerstörer <Advm,DataA1> Trefferpunkte und <Advm,DataB1> Mana wieder her.|n|cffffcc00Fügt beschworenen Einheiten <Advm,DataE1> Schaden zu.|r"
+Hotkey=V
+
+// Aura of Blight
+[Aabr]
+Name=Seuchenaura
+Tip=Seuchenaura
+Ubertip=Erhöht die Trefferpunktregeneration aller verbündeten untoten Einheiten in der Nähe. Nicht mit der Regeneration auf verseuchtem Boden stapelbar.
+
+[Babr]
+Bufftip=Seuchenaura
+Buffubertip=Diese Einheit steht unter dem Effekt der Seuchenaura. Ihre Trefferpunktregeneration ist erhöht.
+
+// Absorb Mana
+[Aabs]
+Name=Mana absorbieren
+Tip=Mana absorbieren
+Ubertip=Entzieht einer Einheit des Spielers sämtliches Mana und überträgt es auf den Zerstörer.
+Hotkey=N
+
+// Burrow
+[Abur]
+Name=Eingraben
+EditorSuffix= (Gruftbestie)
+Tip=Eingraben
+Untip=Ausgraben
+Ubertip="Die Gruftbestie vergräbt sich im Boden, wird unsichtbar und regeneriert <ucrm,regenHP> Trefferpunkte pro Sekunde.|nIm Boden kann die Gruftbestie nicht angreifen."
+Unubertip="Die Gruftbestie bricht aus der Erde hervor und wird wieder sichtbar."
+Hotkey=E
+Unhotkey=B
+
+// Burrow (scarab lvl 2)
+[Abu2]
+Name=Eingraben
+EditorSuffix=(Skarabäus - Stufe 2)
+Tip=Eingraben
+Untip=Ausgraben
+Ubertip=Der Aaskäfer vergräbt sich im Boden und wird unsichtbar.
+Unubertip=Der Aaskäfer bricht aus der Erde hervor und wird wieder sichtbar.
+Hotkey=E
+Unhotkey=B
+
+// Burrow (scarab lvl 3)
+[Abu3]
+Name=Eingraben
+EditorSuffix=(Skarabäus - Stufe 3)
+Tip=Eingraben
+Untip=Ausgraben
+Ubertip=Der Aaskäfer vergräbt sich im Boden und wird unsichtbar.
+Unubertip=Der Aaskäfer bricht aus der Erde hervor und wird wieder sichtbar.
+Hotkey=E
+Unhotkey=B
+
+// Impale
+[AUim]
+Name=Aufspießen
+Tip=Aufspießen[|cffffcc00Stufe 1|r],Aufspießen [|cffffcc00Stufe 2|r],Aufspießen [|cffffcc00Stufe 3|r]
+Ubertip="Erschüttert den Boden mit enormen Klauen und lässt Stacheltentakel in einer Linie aus dem Boden schießen. Die Tentakel verursachen <AUim,DataC1> Schaden, schleudern gegnerische Bodeneinheiten in die Luft und betäuben sie für <AUim,Dur1> Sek.","Erschüttert den Boden mit enormen Klauen und lässt Stacheltentakel in einer Linie aus dem Boden schießen. Die Tentakel verursachen <AUim,DataC2> Schaden, schleudern gegnerische Bodeneinheiten in die Luft und betäuben sie für <AUim,Dur2> Sek.","Erschüttert den Boden mit enormen Klauen und lässt Stacheltentakel in einer Linie aus dem Boden schießen. Die Tentakel verursachen <AUim,DataC3> Schaden, schleudern gegnerische Bodeneinheiten in die Luft und betäuben sie für <AUim,Dur3> Sek."
+Hotkey=E
+Researchtip=Aufspießen [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erschüttert den Boden mit enormen Klauen und lässt Stacheltentakel in einer Linie aus dem Boden schießen. Die Tentakel verursachen Schaden und schleudern gegnerische Bodeneinheiten in die Luft.|n|n|cffffcc00Stufe 1|r - <AUim,DataC1> Schaden, betäubt für <AUim,Dur1> Sek.|n|cffffcc00Stufe 2|r - <AUim,DataC2> Schaden, betäubt für <AUim,Dur2> Sek.|n|cffffcc00Stufe 3|r - <AUim,DataC3> Schaden, betäubt für <AUim,Dur3> Sek."
+Researchhotkey=E
+
+[BUim]
+Bufftip=Aufspießen
+Buffubertip=Diese Einheit wurde aufgespießt und ist für kurze Zeit in der Luft.
+
+[AUts]
+Name=Stachelpanzer
+Tip=Stachelpanzer [|cffffcc00Stufe 1|r],Stachelpanzer [|cffffcc00Stufe 2|r],Stachelpanzer [|cffffcc00Stufe 3|r]
+Ubertip="Verbessert den Chitinpanzer des Gruftlords mit organischen Stacheln, die seine Rüstung um <AUts,DataC1> erhöhen und <AUts,DataA1,%>% des eintreffenden Nahkampfschadens reflektieren.","Verbessert den Chitinpanzer des Gruftlords mit organischen Stacheln, die seine Rüstung um <AUts,DataC2> erhöhen und <AUts,DataA2,%>% des eintreffenden Nahkampfschadens reflektieren.","Verbessert den Chitinpanzer des Gruftlords mit organischen Stacheln, die seine Rüstung um <AUts,DataC3> erhöhen und <AUts,DataA3,%>% des eintreffenden Nahkampfschadens reflektieren."
+Researchtip=Stachelpanzer [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Bildet einen mehrlagigen stacheligen Chitinpanzer, der die Rüstung erhöht und eintreffenden Nahkampfschaden reflektiert.|n|n|cffffcc00Stufe 1|r - Reflektiert <AUts,DataA1,%>% Schaden, <AUts,DataC1> zusätzliche Rüstung.|n|cffffcc00Stufe 2|r - Reflektiert <AUts,DataA2,%>% Schaden, <AUts,DataC2> zusätzliche Rüstung.|n|cffffcc00Stufe 3|r - Reflektiert <AUts,DataA3,%>% Schaden, <AUts,DataC3> zusätzliche Rüstung."
+Researchhotkey=Z
+
+// Carrion Beetles
+[AUcb]
+Name=Aaskäfer
+Tip=Aaskäfer [|cffffcc00Stufe 1|r],Aaskäfer [|cffffcc00Stufe 2|r],Aaskäfer [|cffffcc00Stufe 3|r]
+Ubertip="Erzeugt <AUcb,DataA1> Käfer aus der ausgewählten Leiche. Käfer haben <ucs1,realHP> Trefferpunkte und verursachen <ucs1,mindmg1>-<ucs1,maxdmg1> Schaden. Sie bleiben bestehen, bis sie getötet werden.|nMaximal <AUcb,DataE1> Käfer.","Erzeugt <AUcb,DataA2> Käfer aus der ausgewählten Leiche. Käfer haben <ucs2,realHP> Trefferpunkte und verursachen <ucs2,mindmg1>-<ucs2,maxdmg1> Schaden. Sie können Eingraben erlernen und bleiben bestehen, bis sie getötet werden.|nMaximal <AUcb,DataE2> Käfer.","Erzeugt <AUcb,DataA3> Käfer aus der ausgewählten Leiche. Käfer haben <ucs3,realHP> Trefferpunkte und verursachen <ucs3,mindmg1>-<ucs3,maxdmg1> Schaden. Sie können Eingraben erlernen und bleiben bestehen, bis sie getötet werden.|nMaximal <AUcb,DataE3> Käfer."
+Ubertip:melee,V1="Erzeugt <AUcb,DataA1> Käfer aus der ausgewählten Leiche. Käfer haben <ucs1,realHP> Trefferpunkte und verursachen <ucs1,mindmg1>-<ucs1,maxdmg1> Schaden. Sie bleiben bestehen, bis sie getötet werden.|nMaximal <AUcb,DataE1> Käfer.","Erzeugt <AUcb,DataA2> Käfer aus der ausgewählten Leiche. Käfer haben <ucs2,realHP> Trefferpunkte und verursachen <ucs2,mindmg1>-<ucs2,maxdmg1> Schaden. Sie können Eingraben erlernen und bleiben bestehen, bis sie getötet werden.|nMaximal <AUcb,DataE2> Käfer.","Erzeugt <AUcb,DataA3> Käfer aus der ausgewählten Leiche. Käfer haben <ucs3,realHP> Trefferpunkte und verursachen <ucs3,mindmg1>-<ucs3,maxdmg1> Schaden. Sie können Eingraben erlernen und bleiben bestehen, bis sie getötet werden.|nMaximal <AUcb,DataE3> Käfer."
+Hotkey=F
+Researchtip=Aaskäfer [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erzeugt aus der ausgewählten Leiche <AUcb,DataA1> Aaskäfer. Käfer greifen Gegner an und bleiben dauerhaft bestehen, es können aber nur <AUcb,DataE1> gleichzeitig kontrolliert werden.|n|n|cffffcc00Stufe 1|r - <ucs1,realHP> Trefferpunkte, <ucs1,mindmg1>-<ucs1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <ucs2,realHP> Trefferpunkte, <ucs2,mindmg1>-<ucs2,maxdmg1> Schaden, Käfer können Eingraben erlernen.|n|cffffcc00Stufe 3|r - <ucs3,realHP> Trefferpunkte, <ucs3,mindmg1>-<ucs3,maxdmg1> Schaden, Käfer können Eingraben erlernen."
+Researchubertip:melee,V1="Erzeugt aus der ausgewählten Leiche <AUcb,DataA1> Aaskäfer. Käfer greifen Gegner an und bleiben dauerhaft bestehen, es können aber nur <AUcb,DataE1> gleichzeitig kontrolliert werden.|n|n|cffffcc00Stufe 1|r - <ucs1,realHP> Trefferpunkte, <ucs1,mindmg1>-<ucs1,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <ucs2,realHP> Trefferpunkte, <ucs2,mindmg1>-<ucs2,maxdmg1> Schaden, Käfer können Eingraben erlernen.|n|cffffcc00Stufe 3|r - <ucs3,realHP> Trefferpunkte, <ucs3,mindmg1>-<ucs3,maxdmg1> Schaden, Käfer können Eingraben erlernen."
+Researchhotkey=F
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+
+[BUcb]
+Bufftip=Aaskäfer
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Locust Swarm
+[AUls]
+Name=Heuschreckenschwarm
+Tip=Heuschreckenschwarm
+Ubertip="Erzeugt einen Schwarm wütender Heuschrecken, die gegnerischen Einheiten in der Nähe das Fleisch vom Körper reißen. Beim Fressen wandeln sie es in eine Substanz um, mit der sie den Gruftlord bei ihrer Rückkehr heilen.|nHält <AUls,HeroDur1> Sek. lang an."
+Hotkey=K
+Researchtip=Heuschreckenschwarm erlernen
+Researchubertip="Erzeugt einen Schwarm wütender Heuschrecken, die gegnerischen Einheiten in der Nähe das Fleisch vom Körper reißen. Beim Fressen wandeln sie es in eine Substanz um, mit der sie den Gruftlord bei ihrer Rückkehr heilen.|nHält <AUls,HeroDur1> Sek. lang an."
+Researchhotkey=K
+
+[BUlo]
+Bufftip=Heuschrecke
+
+// Meat Wagon Cargo Hold
+[Amtc]
+Name=Besatzung
+
+// True Sight
+[Atru]
+Name=Durchblick
+Tip=Durchblick
+Ubertip=Deckt unsichtbare Einheiten in der Nähe auf.
+EditorSuffix= (Schemen)
+
+// Acolyte Harvest
+[Aaha]
+Name=Abbauen/Sammeln
+Tip=Abbauen/Sammeln
+Ubertip=Baut Gold in verhexten Goldminen ab.
+Untip=Rohstoffe zurückbringen
+Unubertip=Bringt die abgebauten Rohstoffe zum nächsten Hauptgebäude.
+Hotkey=M
+Unhotkey=R
+EditorSuffix="(Akolyth, Gold)"
+
+// Unsummon
+[Auns]
+Name=Gebäude zurückschicken
+Tip=Gebäude zurückschicken
+Ubertip="Schickt ein Gebäude zurück und erstattet <Auns,DataA1,%>% der verwendeten Rohstoffe."
+Hotkey=U
+
+[Buns]
+Bufftip=Zurückschicken
+
+// Graveyard
+[Agyd]
+Name=Leiche erzeugen
+//Tip=Create C|cffffcc00o|rrpse
+//Ubertip="Create a corpse."
+//Hotkey=O
+
+// Sacrifice (Acolyte's button)
+[Alam]
+Name=Opfern
+Tip=Opfern
+Ubertip="Opfert den Akolythen in der ausgewählten Opfergrube und verwandelt ihn in einen Schemen. Schemen sind unsichtbare Geister, die unsichtbare Einheiten aufdecken können.|nSchemen können nicht angreifen."
+Hotkey=F
+EditorSuffix=(Akolyth)
+
+// Sacrifice (Sacrificial Pit's button)
+[Asac]
+Name=Opfern
+Tip=Opfern
+Ubertip="Opfert den ausgewählten Akolythen und verwandelt ihn in einen Schemen. Schemen sind unsichtbare Geister, die unsichtbare Einheiten aufdecken können.|nSchemen können nicht angreifen."
+Hotkey=F
+EditorSuffix= (Opfergrube)
+
+// Cannibalize
+[Acan]
+Name=Kannibalismus
+Tip=Kannibalismus
+Ubertip="Verschlingt eine Leiche in der Nähe, um pro Sekunde <Acan,DataA1> Trefferpunkte wiederherzustellen."
+Hotkey=N
+
+// Cannibalize
+[Acn2]
+Name=Kannibalismus
+Tip=Kannibalismus
+Ubertip="Verschlingt eine Leiche in der Nähe, um pro Sekunde <Acn2,DataA1> Trefferpunkte wiederherzustellen."
+Hotkey=N
+
+// Spider Attack
+[Aspa]
+Name=Spinnenangriff
+// This ability modifies the unit's attack.
+
+[Bspa]
+Bufftip=Spinnling
+
+// Web
+[Aweb]
+Name=Gespinst
+Tip=Gespinst
+Untip=|cffc3dbff|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Ubertip="Spinnt eine ausgewählte gegnerische Lufteinheit ein und zwingt sie zu Boden. Eingesponnene Einheiten können wie Bodeneinheiten angegriffen werden.|nHält <Aweb,Dur1> Sek. lang an."
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=G
+Unhotkey=G
+
+// Web buff on ground units
+[Bweb]
+Bufftip=Gespinst
+Buffubertip=Diese Einheit ist eingesponnen. Sie klebt am Boden fest und kann sich nicht bewegen.
+EditorSuffix= (Boden)
+
+// Web buff on air units
+[Bwea]
+Bufftip=Gespinst
+Buffubertip=Diese Einheit ist eingesponnen. Sie klebt am Boden fest und kann sich nicht bewegen.
+EditorSuffix= (Luft)
+
+// Stone Form
+[Astn]
+Name=Steingestalt
+Tip=Steingestalt
+Ubertip="Verwandelt den Gargoyle in eine Statue, die immun gegen Magie ist, mehr Rüstung hat und <Astn,DataE1> Trefferpunkte pro Sekunde regeneriert.|nGargoyles können in dieser Gestalt nicht angreifen."
+Hotkey=G
+Untip=Gargoylegestalt
+Unubertip=Lässt den Gargoyle wieder fliegen.
+Unhotkey=G
+
+// Load Corpse
+[Amel]
+Name=Leiche verwahren
+Tip=Leiche verwahren
+Ubertip=Hebt eine Leiche in der Nähe für spätere Verwendung auf.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=V
+Unhotkey=V
+
+// Unload Corpse
+[Amed]
+Name=Leichen abladen
+Tip=Alle Leichen abladen
+Ubertip="Lädt alle Leichen zur sofortigen Verwendung ab."
+Hotkey=L
+
+// Disease Cloud
+[Aapl]
+Name=Krankheitswolke
+Tip=Krankheitswolke
+Ubertip="Infiziert gegnerische lebende Einheiten in der Nähe mit einer Krankheitswolke, die <Aap1,DataB1> Schaden pro Sekunde verursacht.|nHält <Aap1,DataA1> Sek. lang an."
+
+[Aap1]
+Name=Krankheitswolke
+Tip=Krankheitswolke
+Ubertip="Infiziert gegnerische lebende Einheiten in der Nähe mit einer Krankheitswolke, die <Aap1,DataB1> Schaden pro Sekunde verursacht.|nHält <Aap1,DataA1> Sek. lang an."
+
+// Disease Cloud
+[Aap2]
+Ubertip="Infiziert gegnerische lebende Einheiten in der Nähe mit einer Krankheitswolke, die <Aap2,DataB1> Schaden pro Sekunde verursacht.|nHält <Aap2,DataA1> Sek. lang an."
+Tip=Krankheitswolke
+Name=Krankheitswolke
+EditorSuffix= (Seuchenschutz)
+
+[Aap3]
+Name=Krankheitswolke
+Tip=Krankheitswolke
+Ubertip="Infiziert gegnerische lebende Einheiten in der Nähe mit einer Krankheitswolke, die <Aap3,DataB1> Schaden pro Sekunde verursacht.|nHält <Aap3,DataA1> Sek. lang an."
+EditorSuffix="(Neutral, feindselig)"
+
+[Aap4]
+Name=Krankheitswolke
+Tip=Krankheitswolke
+Ubertip="Infiziert gegnerische lebende Einheiten in der Nähe mit einer Krankheitswolke, die <Aap4,DataB1> Schaden pro Sekunde verursacht.|nHält <Aap4,DataA1> Sek. lang an."
+EditorSuffix="(Neutral, feindselig, kein Schaden)"
+
+[Bapl]
+Bufftip=Krankheit
+Buffubertip=Diese Einheit ist verseucht und erleidet periodischen Schaden.
+
+// Disease Cloud
+[Apts]
+Name=Krankheitswolke
+Tip=Krankheitswolke
+Ubertip="Erzeugt bei jedem Angriff eine Krankheitswolke, die <Aap1,DataB1> Schaden pro Sekunde verursacht.|nHält <Aap1,DataA1> Sek. lang an."
+EditorSuffix= (Fleischwagen)
+
+// Frost Breath
+[Afrb]
+Name=Frostatem
+// This ability modifies the unit's attack.
+
+// Frost Attack
+[Afra]
+Name=Frostangriff
+Tip=Frostangriff
+Ubertip="Verstärkt Angriffe mit Kälteschaden, der die Bewegungsgeschwindigkeit gegnerischer Einheiten verringert."
+
+// Frost Attack (1,2 button pos version)
+[Afr2]
+Name=Frostangriff
+Tip=Frostangriff
+Ubertip="Verstärkt Angriffe mit Kälteschaden, der die Bewegungsgeschwindigkeit gegnerischer Einheiten verringert."
+
+// Freezing Breath
+[Afrz]
+Name=Eisatem
+Tip=Eisatem
+Ubertip="Setzt ein Gebäude vorübergehend außer Gefecht.|nHält <Afrz,Dur1> Sek. lang an."
+
+[Bfrz]
+Bufftip=Eisatem
+Buffubertip=Dieses Gebäude ist eingefroren. Seine Fähigkeiten können nicht eingesetzt und es kann nicht repariert werden.
+
+// Raise Dead
+[Arai]
+Name=Totenerweckung
+Tip=Totenerweckung
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Ubertip="Erweckt <Arai,DataA1> Skelette aus einer Leiche."
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=R
+Unhotkey=R
+
+[Brai]
+Bufftip=Skelettdiener
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Unholy Frenzy
+[Auhf]
+Name=Unheilige Raserei
+Tip=Unheilige Raserei
+Ubertip="Erhöht die Angriffsgeschwindigkeit einer Zieleinheit um <Auhf,DataA1,%>%, aber verbraucht <Auhf,DataB1> Trefferpunkte pro Sekunde.|nHält <Auhf,Dur1> Sek. lang an."
+Hotkey=U
+
+// Unholy Frenzy (Warlock)
+[Suhf]
+Name=Unheilige Raserei
+Tip=Unheilige Raserei
+Ubertip="Erhöht die Angriffsgeschwindigkeit einer Zieleinheit um <Suhf,DataA1,%>%, aber verbraucht <Suhf,DataB1> Trefferpunkte pro Sekunde.|nHält <Suhf,Dur1> Sek. lang an."
+Hotkey=U
+EditorSuffix= (Hexenmeister)
+
+[Buhf]
+Bufftip=Unheilige Raserei
+Buffubertip="Diese Einheit ist in Unheilige Raserei verfallen. Sie greift schneller an, aber erleidet periodischen Schaden."
+
+// Curse
+[Acrs]
+Name=Fluch
+Tip=Fluch
+Ubertip="Verflucht die gegnerische Zieleinheit, sodass ihre Angriffe eine Chance von <Acrs,DataA1,%>% haben, zu verfehlen.|nHält <Acrs,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=C
+Unhotkey=C
+
+[Bcrs]
+Bufftip=Fluch
+Buffubertip="Diese Einheit ist verflucht und ihre Angriffe haben eine Chance, zu verfehlen."
+
+// Anti-magic Shell
+[Aams]
+Name=Antimagische Hülle
+Tip=Antimagische Hülle
+Ubertip="Erzeugt eine Barriere, die eine Zieleinheit gegen Magie abschirmt.|nHält <Aams,Dur1> Sek. lang an."
+Hotkey=N
+
+// Anti-magic Shell
+[Aam2]
+Name=Antimagische Hülle
+Tip=Antimagische Hülle
+Ubertip="Erzeugt eine Barriere, die <Aam2,DataC1> gegen eine Zieleinheit gerichteten Magieschaden abwehrt.|nHält <Aam2,Dur1> Sek. lang an."
+Hotkey=N
+EditorSuffix=(Magiewiderstand)
+
+[Bams]
+Bufftip=Antimagische Hülle
+Buffubertip="Diese Einheit ist durch eine Antimagische Hülle geschützt. Sie kann nicht als Ziel für Fähigkeiten ausgewählt, aber gebannt werden."
+
+[Bam2]
+Bufftip=Antimagische Hülle
+Buffubertip="Diese Einheit ist durch eine Antimagische Hülle geschützt. Schadensfähigkeiten müssen erst die Hülle zerstören, bevor sie die Einheit treffen können."
+EditorSuffix= (Extra)
+
+// Possession
+[Apos]
+Name=Besessenheit
+Tip=Besessenheit
+Ubertip="Vertreibt die Seele eines Gegners. Dadurch erlangt der Spieler dauerhaft die Kontrolle über den Gegner, aber der Körper des Zaubernden wird vernichtet.|nKann nicht gegen Lufteinheiten, Helden oder Unholde über Stufe <Apos,DataA1> eingesetzt werden."
+Hotkey=E
+
+// Possession
+[Aps2]
+Name=Besessenheit
+Tip=Besessenheit
+Ubertip="Betäubt eine Zieleinheit und die Banshee für <Aps2,Dur1> Sek. Währenddessen erleidet die Banshee mehr Schaden durch Angriffe. Sie vertreibt dann die Seele des Gegners und der Spieler erlangt dauerhaft die Kontrolle über ihn, aber der Körper der Banshee wird vernichtet.|nKann nicht gegen Lufteinheiten, Helden oder Unholde über Stufe <Aps2,DataA1> eingesetzt werden."
+Hotkey=E
+EditorSuffix=(Kanalisiert)
+
+[Bpos]
+Bufftip=Besessenheit
+Buffubertip=Diese Einheit wird besessen.
+
+// Death Coil
+[AUdc]
+Name=Todesmantel
+Tip=Todesmantel [|cffffcc00Stufe 1|r],Todesmantel [|cffffcc00Stufe 2|r],Todesmantel [|cffffcc00Stufe 3|r]
+Ubertip="Ein Todesmantel, der eine verbündete untote oder dämonische Einheit um <AUdc,DataA1> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote oder dämonische Einheit um <AUdc,DataA2> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote oder dämonische Einheit um <AUdc,DataA3> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt."
+Ubertip:custom,V0="Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA1> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA2> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA3> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt."
+Ubertip:custom,V1="Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA1> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA2> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA3> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt."
+Ubertip:melee,V0="Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA1> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA2> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt.","Ein Todesmantel, der eine verbündete untote Einheit um <AUdc,DataA3> Trefferpunkte heilt oder einer gegnerischen lebenden Einheit halb so viel Schaden zufügt."
+Hotkey=N
+Researchtip=Todesmantel [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ein Todesmantel, der einer gegnerischen lebenden Einheit Schaden zufügt oder eine verbündete untote oder dämonische Einheit heilt.|n|n|cffffcc00Stufe 1|r - Heilt <AUdc,DataA1> Trefferpunkte.|n|cffffcc00Stufe 2|r - Heilt <AUdc,DataA2> Trefferpunkte.|n|cffffcc00Stufe 3|r - Heilt <AUdc,DataA3> Trefferpunkte."
+Researchubertip:custom,V0="Ein Todesmantel, der einer gegnerischen lebenden Einheit Schaden zufügt oder eine verbündete untote Einheit heilt.|n|n|cffffcc00Stufe 1|r - Heilt <AUdc,DataA1> Trefferpunkte.|n|cffffcc00Stufe 2|r - Heilt <AUdc,DataA2> Trefferpunkte.|n|cffffcc00Stufe 3|r - Heilt <AUdc,DataA3> Trefferpunkte."
+Researchubertip:custom,V1="Ein Todesmantel, der einer gegnerischen lebenden Einheit Schaden zufügt oder eine verbündete untote Einheit heilt.|n|n|cffffcc00Stufe 1|r - Heilt <AUdc,DataA1> Trefferpunkte.|n|cffffcc00Stufe 2|r - Heilt <AUdc,DataA2> Trefferpunkte.|n|cffffcc00Stufe 3|r - Heilt <AUdc,DataA3> Trefferpunkte."
+Researchubertip:melee,V0="Ein Todesmantel, der einer gegnerischen lebenden Einheit Schaden zufügt oder eine verbündete untote Einheit heilt.|n|n|cffffcc00Stufe 1|r - Heilt <AUdc,DataA1> Trefferpunkte.|n|cffffcc00Stufe 2|r - Heilt <AUdc,DataA2> Trefferpunkte.|n|cffffcc00Stufe 3|r - Heilt <AUdc,DataA3> Trefferpunkte."
+Researchhotkey=N
+
+// Unholy Aura
+[AUau]
+Name=Unheilige Aura
+Tip=Unheilige Aura [|cffffcc00Stufe 1|r],Unheilige Aura [|cffffcc00Stufe 2|r],Unheilige Aura [|cffffcc00Stufe 3|r]
+Ubertip="Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AUau,DataA1,%>% und ihre Trefferpunktregeneration.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AUau,DataA2,%>% und ihre Trefferpunktregeneration.","Erhöht die Bewegungsgeschwindigkeit von verbündeten Einheiten in der Nähe um <AUau,DataA3,%>% und ihre Trefferpunktregeneration."
+Researchtip=Unheilige Aura [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht die Bewegungsgeschwindigkeit und die Trefferpunktregeneration von verbündeten Einheiten in der Nähe.|n|n|cffffcc00Stufe 1|r - <AUau,DataA1,%>% Bewegungsgeschwindigkeit, leicht erhöhte Regeneration.|n|cffffcc00Stufe 2|r - <AUau,DataA2,%>% Bewegungsgeschwindigkeit, moderat erhöhte Regeneration.|n|cffffcc00Stufe 3|r - <AUau,DataA3,%>% Bewegungsgeschwindigkeit, stark erhöhte Regeneration."
+Researchhotkey=U
+
+[BUau]
+Bufftip=Unheilige Aura
+Buffubertip=Diese Einheit steht unter dem Effekt der Unheiligen Aura. Ihre Bewegungsgeschwindigkeit und Trefferpunktregeneration sind erhöht.
+
+// Death Pact
+[AUdp]
+Name=Todespakt
+Tip=Todespakt [|cffffcc00Stufe 1|r],Todespakt [|cffffcc00Stufe 2|r],Todespakt [|cffffcc00Stufe 3|r]
+Ubertip="Tötet eine verbündete untote Zieleinheit und überträgt <AUdp,DataB1,%>% ihrer Trefferpunkte auf den Todesritter.","Tötet eine verbündete untote Zieleinheit und überträgt <AUdp,DataB2,%>% ihrer Trefferpunkte auf den Todesritter.","Tötet eine verbündete untote Zieleinheit und überträgt <AUdp,DataB3,%>% ihrer Trefferpunkte auf den Todesritter."
+Hotkey=E
+Researchtip=Todespakt [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Tötet eine verbündete untote Zieleinheit und überträgt einen Teil ihrer Trefferpunkte auf den Todesritter.|n|n|cffffcc00Stufe 1|r - Überträgt <AUdp,DataB1,%>% der Trefferpunkte.|n|cffffcc00Stufe 2|r - Überträgt <AUdp,DataB2,%>% der Trefferpunkte.|n|cffffcc00Stufe 3|r - Überträgt <AUdp,DataB3,%>% der Trefferpunkte."
+Researchhotkey=E
+
+// Animate Dead
+[AUan]
+Name=Totenbelebung
+Tip=Totenbelebung
+Ubertip="Erweckt in einem Gebiet <AUan,DataA1> tote Einheiten, die <AUan,Dur1> Sek. lang für den Todesritter kämpfen. Erweckte Einheiten sind unverwundbar."
+Hotkey=T
+Researchtip=Totenbelebung erlernen
+Researchubertip="Erweckt in einem Gebiet <AUan,DataA1> tote Einheiten, die <AUan,Dur1> Sek. lang für den Todesritter kämpfen. Erweckte Einheiten sind unverwundbar."
+Researchhotkey=T
+Globalmessage=
+Globalsound=
+
+[BUan]
+Bufftip=Totenbelebung
+Buffubertip=Bannen fügt beschworenen Einheiten Schaden zu.
+
+// Carrion Swarm
+[AUcs]
+Name=Aasschwarm
+Tip=Aasschwarm [|cffffcc00Stufe 1|r],Aasschwarm [|cffffcc00Stufe 2|r],Aasschwarm [|cffffcc00Stufe 3|r]
+Ubertip="Schickt einen Schwarm Fledermäuse aus, die allen gegnerischen Einheiten in einem kegelförmigen Bereich <AUcs,DataA1> Schaden zufügen.","Schickt einen Schwarm Fledermäuse aus, die allen gegnerischen Einheiten in einem kegelförmigen Bereich <AUcs,DataA2> Schaden zufügen.","Schickt einen Schwarm Fledermäuse aus, die allen gegnerischen Einheiten in einem kegelförmigen Bereich <AUcs,DataA3> Schaden zufügen."
+Hotkey=W
+Researchtip=Aasschwarm [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Schickt einen Schwarm Fledermäuse aus, die Gegnern Schaden zufügen.|n|n|cffffcc00Stufe 1|r - <AUcs,DataA1> Schaden pro Einheit.|n|cffffcc00Stufe 2|r - <AUcs,DataA2> Schaden pro Einheit.|n|cffffcc00Stufe 3|r - <AUcs,DataA3> Schaden pro Einheit."
+Researchhotkey=W
+
+// Sleep
+[AUsl]
+Name=Schlaf
+Tip=Schlaf [|cffffcc00Stufe 1|r],Schlaf [|cffffcc00Stufe 2|r],Schlaf [|cffffcc00Stufe 3|r]
+Ubertip="Versetzt eine gegnerische Zieleinheit <AUsl,Dur1> Sek. lang in Schlaf. Schlafende Einheiten wachen auf, wenn sie angegriffen werden.","Versetzt eine gegnerische Zieleinheit <AUsl,Dur2> Sek. lang in Schlaf. Schlafende Einheiten wachen auf, wenn sie angegriffen werden.","Versetzt eine gegnerische Zieleinheit <AUsl,Dur3> Sek. lang in Schlaf. Schlafende Einheiten wachen auf, wenn sie angegriffen werden."
+Hotkey=F
+Researchtip=Schlaf [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Versetzt eine gegnerische Zieleinheit in Schlaf. Schlafende Einheiten wachen auf, wenn sie angegriffen werden.|n|n|cffffcc00Stufe 1|r - <AUsl,Dur1> Sek. Schlaf für <AUsl,Cost1> Mana.|n|cffffcc00Stufe 2|r - <AUsl,Dur2> Sek. Schlaf für <AUsl,Cost2> Mana.|n|cffffcc00Stufe 3|r - <AUsl,Dur3> Sek. Schlaf für <AUsl,Cost3> Mana."
+Researchhotkey=F
+
+[BUsl]
+Bufftip=Schlaf
+Buffubertip="Diese Einheit schläft. Sie kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen. Sie wacht auf, wenn sie angegriffen wird."
+
+// Vampiric Aura
+[AUav]
+Name=Vampiraura
+Tip=Vampiraura [|cffffcc00Stufe 1|r],Vampiraura [|cffffcc00Stufe 2|r],Vampiraura [|cffffcc00Stufe 3|r]
+Ubertip="Heilt verbündete Nahkampfeinheiten in der Nähe um <AUav,DataA1,%>% ihres Angriffsschadens, wenn sie gegnerische Einheiten treffen.","Heilt verbündete Nahkampfeinheiten in der Nähe um <AUav,DataA2,%>% ihres Angriffsschadens, wenn sie gegnerische Einheiten treffen.","Heilt verbündete Nahkampfeinheiten in der Nähe um <AUav,DataA3,%>% ihres Angriffsschadens, wenn sie gegnerische Einheiten treffen."
+Researchtip=Vampiraura [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Heilt verbündete Nahkampfeinheiten in der Nähe, wenn sie gegnerische Einheiten treffen.|n|n|cffffcc00Stufe 1|r - Heilt um <AUav,DataA1,%>% des Angriffsschadens.|n|cffffcc00Stufe 2|r - Heilt um <AUav,DataA2,%>% des Angriffsschadens.|n|cffffcc00Stufe 3|r - Heilt um <AUav,DataA3,%>% des Angriffsschadens."
+Researchhotkey=V
+
+[BUav]
+Bufftip=Vampiraura
+Buffubertip="Diese Einheit steht unter dem Effekt der Vampiraura. Sie wird geheilt, wenn sie gegnerischen Einheiten Schaden zufügt."
+
+// Frost Nova
+[AUfn]
+Name=Frostnova
+Tip=Frostnova [|cffffcc00Stufe 1|r],Frostnova [|cffffcc00Stufe 2|r],Frostnova [|cffffcc00Stufe 3|r]
+Ubertip="Überzieht gegnerische Einheiten mit einer Frostwelle, die dem Ziel <AUfn,DataB1> Schaden zufügt und <AUfn,DataA1> Novaschaden verursacht. Kälteschaden verringert <AUfn,Dur1> Sek. lang die Bewegungs- und Angriffsgeschwindigkeit betroffener Einheiten.","Überzieht gegnerische Einheiten mit einer Frostwelle, die dem Ziel <AUfn,DataB2> Schaden zufügt und <AUfn,DataA2> Novaschaden verursacht. Kälteschaden verringert <AUfn,Dur2> Sek. lang die Bewegungs- und Angriffsgeschwindigkeit betroffener Einheiten.","Überzieht gegnerische Einheiten mit einer Frostwelle, die dem Ziel <AUfn,DataB3> Schaden zufügt und <AUfn,DataA3> Novaschaden verursacht. Kälteschaden verringert <AUfn,Dur3> Sek. lang die Bewegungs- und Angriffsgeschwindigkeit betroffener Einheiten."
+Hotkey=N
+Researchtip=Frostnova [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Überzieht eine gegnerische Zieleinheit und nahe Gegner mit einer Frostwelle, die Schaden verursacht und Bewegungs- sowie Angriffsgeschwindigkeit verringert.|n|n|cffffcc00Stufe 1|r - <AUfn,DataB1> Zielschaden, <AUfn,DataA1> Novaschaden.|n|cffffcc00Stufe 2|r - <AUfn,DataB2> Zielschaden, <AUfn,DataA2> Novaschaden.|n|cffffcc00Stufe 3|r - <AUfn,DataB3> Zielschaden, <AUfn,DataA3> Novaschaden."
+Researchhotkey=N
+
+// Frost Armor
+[AUfa]
+Name=Frostrüstung
+Tip=Frostrüstung [|cffffcc00Stufe 1|r],Frostrüstung [|cffffcc00Stufe 2|r],Frostrüstung [|cffffcc00Stufe 3|r]
+Ubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <AUfa,DataB1> und verlangsamt angreifende Nahkampfeinheiten für <AUfa,Dur1> Sek.|nHält <AUfa,DataA1> Sek. lang an.","Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <AUfa,DataB2> und verlangsamt angreifende Nahkampfeinheiten für <AUfa,Dur1> Sek.|nHält <AUfa,DataA2> Sek. lang an.","Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <AUfa,DataB3> und verlangsamt angreifende Nahkampfeinheiten für <AUfa,Dur1> Sek.|nHält <AUfa,DataA3> Sek. lang an."
+Hotkey=F
+Researchtip=Frostrüstung [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung und verlangsamt angreifende Nahkampfeinheiten.|n|n|cffffcc00Stufe 1|r - <AUfa,DataB1> zusätzliche Rüstung.|n|cffffcc00Stufe 2|r - <AUfa,DataB2> zusätzliche Rüstung.|n|cffffcc00Stufe 3|r - <AUfa,DataB3> zusätzliche Rüstung."
+Researchhotkey=F
+
+// Frost Armor (Autocast)
+[AUfu]
+Name=Frostrüstung
+EditorSuffix=(Automatischer Einsatz)
+Tip=Frostrüstung [|cffffcc00Stufe 1|r],Frostrüstung [|cffffcc00Stufe 2|r],Frostrüstung [|cffffcc00Stufe 3|r]
+Ubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <AUfu,DataB1> und verlangsamt angreifende Nahkampfeinheiten für <AUfu,Dur1> Sek.|nHält <AUfu,DataA1> Sek. lang an.","Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <AUfa,DataB2> und verlangsamt angreifende Nahkampfeinheiten für <AUfa,Dur1> Sek.|nHält <AUfa,DataA2> Sek. lang an.","Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung um <AUfa,DataB3> und verlangsamt angreifende Nahkampfeinheiten für <AUfa,Dur1> Sek.|nHält <AUfa,DataA3> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=F
+Researchtip=Frostrüstung [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Hüllt eine verbündete Zieleinheit in einen Frostschild. Erhöht die Rüstung und verlangsamt angreifende Nahkampfeinheiten.|n|n|cffffcc00Stufe 1|r - <AUfu,DataB1> zusätzliche Rüstung.|n|cffffcc00Stufe 2|r - <AUfu,DataB2> zusätzliche Rüstung.|n|cffffcc00Stufe 3|r - <AUfu,DataB3> zusätzliche Rüstung."
+Researchhotkey=F
+
+[BUfa]
+Bufftip=Frostrüstung
+Buffubertip=Diese Einheit hat Frostrüstung. Sie hat mehr Rüstung und verringert kurzzeitig die Bewegungs- und Angriffsgeschwindigkeit von Nahkampfangreifern.
+
+// Dark Ritual
+[AUdr]
+Name=Dunkles Ritual
+Tip=Dunkles Ritual [|cffffcc00Stufe 1|r],Dunkles Ritual [|cffffcc00Stufe 2|r],Dunkles Ritual [|cffffcc00Stufe 3|r]
+Ubertip="Opfert eine verbündete untote Zieleinheit und wandelt <AUdr,DataA1,%>% ihrer Trefferpunkte in Mana für den Lich um.","Opfert eine verbündete untote Zieleinheit und wandelt <AUdr,DataA2,%>% ihrer Trefferpunkte in Mana für den Lich um.","Opfert eine verbündete untote Zieleinheit und wandelt <AUdr,DataA3,%>% ihrer Trefferpunkte in Mana für den Lich um."
+Hotkey=R
+Researchtip=Dunkles Ritual [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Opfert eine verbündete untote Zieleinheit und wandelt ihre Trefferpunkte in Mana für den Lich um.|n|n|cffffcc00Stufe 1|r - Wandelt <AUdr,DataA1,%>% der Trefferpunkte in Mana um.|n|cffffcc00Stufe 2|r - Wandelt <AUdr,DataA2,%>% der Trefferpunkte in Mana um.|n|cffffcc00Stufe 3|r - Wandelt <AUdr,DataA3,%>% der Trefferpunkte in Mana um."
+Researchhotkey=R
+
+// Death And Decay
+[AUdd]
+Name=Tod und Verfall
+Tip=Tod und Verfall
+Ubertip="Verursacht in seinem Wirkungsbereich Schaden in Höhe von <AUdd,DataA1,%>% seiner Basistrefferpunkte. Zerstört auch Bäume.|nHält <AUdd,Dur1> Sek. lang an."
+Hotkey=D
+Researchtip=Tod und Verfall erlernen
+Researchubertip="Verursacht in seinem Wirkungsbereich Schaden in Höhe von <AUdd,DataA1,%>% seiner Basistrefferpunkte pro Sekunde. Zerstört auch Bäume."
+Researchhotkey=D
+
+[BUdd]
+Bufftip=Tod und Verfall
+Buffubertip=Diese Einheit leidet unter Tod und Verfall und erleidet periodischen Schaden.
+
+// Cripple
+[Acri]
+Name=Verkrüppeln
+Tip=Verkrüppeln
+Ubertip="Verringert die Bewegungsgeschwindigkeit einer gegnerischen Zieleinheit um <Acri,DataA1,%>%, die Angriffsgeschwindigkeit um <Acri,DataB1,%>% und den Schaden um <Acri,DataC1,%>%.|nHält <Acri,Dur1> Sek. lang an."
+Hotkey=K
+
+// Cripple (Warlock)
+[Scri]
+Name=Verkrüppeln
+Tip=Verkrüppeln
+Ubertip="Verringert die Bewegungsgeschwindigkeit einer gegnerischen Zieleinheit um <Acri,DataA1,%>%, die Angriffsgeschwindigkeit um <Acri,DataB1,%>% und den Schaden um <Acri,DataC1,%>%.|nHält <Acri,Dur1> Sek. lang an."
+Hotkey=K
+EditorSuffix= (Hexenmeister)
+
+[Bcri]
+Bufftip=Verkrüppeln
+Buffubertip=Diese Einheit ist verkrüppelt. Ihre Bewegungs- und Angriffsgeschwindigkeit sowie ihr Schaden sind verringert.
+
+// Restore
+[Arst]
+Name=Wiederherstellen
+Tip=Wiederherstellen
+Ubertip=Repariert mechanische Einheiten und Gebäude. Verbraucht dabei Rohstoffe.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.
+Hotkey=E
+Unhotkey=E
+
+[AUin]
+Name=Inferno
+Tip=Inferno
+Ubertip="Ruft eine Höllenbestie vom Himmel herab, die in einem Gebiet <AUin,DataA1> Schaden verursacht und gegnerische Bodeneinheiten für <AUin,Dur1> Sek. betäubt. Die Höllenbestie bleibt <AUin,DataB1> Sek. lang bestehen."
+Hotkey=N
+Researchtip=Inferno erlernen
+Researchubertip="Ruft eine Höllenbestie vom Himmel herab, die in einem Gebiet <AUin,DataA1> Schaden verursacht und gegnerische Bodeneinheiten für <AUin,Dur1> Sek. betäubt. Die Höllenbestie bleibt <AUin,DataB1> Sek. lang bestehen."
+Researchhotkey=N
+
+//----------------------------------------------------
+// Buffs with no in-game text
+// EditorName is for the Object Editor list only
+
+[BUcs]
+EditorName=Aasschwarm (Benutzer)
+
+[BUsp]
+EditorName=Schlaf (Pause)
+
+[BUst]
+EditorName=Schlaf (Betäubt)
+
+[BUts]
+EditorName=Stachelpanzer
+
+[Bplg]
+EditorName=Krankheitswolke
+
+[BUad]
+EditorName=Totenbelebung (Extra)
+
+[Bpoc]
+EditorName=Besessenheit (Benutzer)
+
+[XUdd]
+EditorName=Tod und Verfall (Effekt)
+
+[Xfus]
+EditorName="Gebäudeschaden - Untote, klein"
+
+[Xfum]
+EditorName="Gebäudeschaden - Untote, mittel"
+
+[Xful]
+EditorName="Gebäudeschaden - Untote, groß"
+
+[Auuf]
+Hotkey=U
+Ubertip="Opfert die verbündete untote Zieleinheit. Gewährt allen nichtmechanischen Einheiten in der Nähe Unheilige Raserei, die ihre Angriffsgeschwindigkeit um <Auuf,DataA1,%>% erhöht, ihnen aber <Auuf,DataB1> Trefferpunkte pro Sekunde entzieht.|nHält <Auuf,Dur1> Sek. lang an."
+Tip=Unheilige Raserei entfachen
+Name=Unheilige Raserei entfachen
+
+[Afrc]
+EditorSuffix=(Neue(r/s), hat Symbol)
+Ubertip="Verstärkt Angriffe mit Kälteschaden, der die Bewegungsgeschwindigkeit gegnerischer Einheiten verringert."
+Tip=Frostangriff
+Name=Frostangriff
+
+[Augf]
+EditorSuffix=(Symbol)
+Ubertip="Erhöht die Angriffs- und Bewegungsgeschwindigkeit von Ghulen um <Rugf,base1,%>%."
+Tip=Ghulraserei
+Name=Ghulraserei
+
+[Augh]
+EditorSuffix=(Symbol)
+Ubertip=Diese Einheit ist dauerhaft getarnt.
+Tip=Schemen
+Name=Schemen
+
+[Ausm]
+EditorSuffix=(Symbol)
+Ubertip="Macht eins der zwei durch Totenerweckung erschaffenen Skelette zu einem Skelettmagier. Erhöht außerdem die Lebensdauer erweckter Skelettkrieger und Skelettmagier um <Rusl,base1> Sek."
+Tip=Skelettbeherrschung
+Name=Skelettbeherrschung
+
+[Aatp]
+Unubertip=Nimmt wieder das normale Angriffsverhalten an.
+Ubertip="Greift gegnerische Lufteinheiten zuerst an, sofern keine anderen Befehle erteilt werden."
+Untip="|cffc3dbff|cffc3dbffKlicken, um Priorität zu deaktivieren.|r|r"
+Unhotkey=R
+Hotkey=R
+Tip=Priorität
+Name=Priorität
+
+[Batp]
+Buffubertip="Diese Einheit priorisiert. Sie greift gegnerische Lufteinheiten zuerst an, sofern keine anderen Befehle erteilt werden."
+Bufftip=Priorität

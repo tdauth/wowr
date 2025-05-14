@@ -1,0 +1,298 @@
+[Hblm]
+Name=Blutmagier
+Propernames=Eldin Sonnenwanderer,Tanin Falkenschwinge,Lorn Blutsucher,Aldos Feuerstern,Gilaras Drachensohn,Hale Magiebrand,Kath'ranis Remar,Tyoril Sonnenjäger,Sylvos Windläufer,Tenris Mirkblut,Marakanis Sternenzorn,Geldor Erdfeuer,Halendor Brenner,Kelen der Vernichter
+Hotkey=M
+Tip=Blutmagier beschwören
+Ubertip="Ein mystischer Held, der Magie kontrolliert und geschickt aus der Entfernung angreift. Kann Flammenschlag, Verbannen, Manaentzug und Phönix erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Blutmagier wiederbeleben
+Awakentip=Blutmagier wiederbeleben
+
+[halt]
+Name=Altar der Könige
+Hotkey=A
+Tip=Altar der Könige errichten
+Ubertip=Beschwört Helden und belebt getötete Helden wieder.
+
+[Hamg]
+Name=Erzmagier
+Propernames=Tenn Flammenzauberer,Nilas Arkanister,Andromath,Shal Lichtbinder,Aran Spruchwirker,Manath Zaubersinger,Landazar,Doril Zauberquell,Peril Zauberbinder,Magius Rex,Fordred Aran,Dalar Morgenweber, Kelen der Sucher
+Hotkey=E
+Tip=Erzmagier beschwören
+Ubertip="Ein mystischer Held, der geschickt aus der Entfernung angreift. Kann Blizzard, Wasserelementar beschwören, Brillanzaura und Massenteleport erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Revivetip=Erzmagier wiederbeleben
+Awakentip=Erzmagier wiederbeleben
+
+[harm]	
+Name=Werkstatt
+Hotkey=W
+Tip=Werkstatt errichten
+Ubertip="Baut Belagerungsmaschinen, Flugapparate und Mörsertrupps.|nDient zur Erforschung von Leuchtfeuern, Schrapnellsplittern, Sperrfeuer, Flugapparatbomben und Flakgeschützen."
+Ubertip:custom,V0="Baut Belagerungsmaschinen, Flugapparate und Mörsertrupps.|nDient zur Erforschung von Leuchtfeuern und Flugapparatbomben."
+Ubertip:melee,V0="Baut Belagerungsmaschinen, Flugapparate und Mörsertrupps.|nDient zur Erforschung von Leuchtfeuern und Flugapparatbomben."
+
+[hars]
+Name=Arkanes Sanktum
+Hotkey=R
+Tip=Arkanes Sanktum errichten
+Ubertip="Bildet Priester, Zauberinnen und Zauberbrecher aus.|nDient zur Erforschung von Verbesserungen für Priester und Zauberinnen sowie Magie kontrollieren und Magischer Schutz."
+Ubertip:custom,V0="Bildet Priester und Zauberinnen aus.|nDient zur Erforschung von Verbesserungen für Priester und Zauberinnen sowie Magischer Schutz, wodurch Menschentürme unsichtbare Einheiten aufdecken können."
+Ubertip:melee,V0="Bildet Priester und Zauberinnen aus.|nDient zur Erforschung von Verbesserungen für Priester und Zauberinnen sowie Magischer Schutz, wodurch Menschentürme unsichtbare Einheiten aufdecken können."
+
+[hbar]
+Name=Kaserne
+Hotkey=K
+Tip=Kaserne errichten
+Ubertip="Primäres Truppenproduktionsgebäude. Bildet Fußsoldaten, Scharfschützen und Ritter aus.|nDient zur Erforschung von Verteidigungshaltung, Langflinten, Kampftierausbildung und Brecherklingen."
+Ubertip:custom,V0="Primäres Truppenproduktionsgebäude. Bildet Fußsoldaten, Scharfschützen und Ritter aus.|nDient zur Erforschung von Verteidigungshaltung für Fußsoldaten, Langflinten für Scharfschützen und und Kampftierausbildung für Ritter und Greifenreiter."
+Ubertip:custom,V1="Primäres Truppenproduktionsgebäude. Bildet Fußsoldaten, Scharfschützen und Ritter aus.|nDient zur Erforschung von Verteidigungshaltung, Langflinten und Kampftierausbildung."
+Ubertip:melee,V0="Primäres Truppenproduktionsgebäude. Bildet Fußsoldaten, Scharfschützen und Ritter aus.|nDient zur Erforschung von Verteidigungshaltung für Fußsoldaten, Langflinten für Scharfschützen und und Kampftierausbildung für Ritter und Greifenreiter."
+
+[hbla]
+Name=Schmiede
+Hotkey=C
+Tip=Schmiede errichten
+Ubertip="Dient zur Erforschung von Schießpulver-, Waffen- und Rüstungsverbesserungen."
+
+[hcas]
+Name=Schloss
+Hotkey=U
+Tip=Ausbau zum Schloss
+Ubertip=Der Ausbau zum Schloss ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
+
+[hdhw]
+Name=Drachenfalkenreiter
+Hotkey=D
+Tip=Drachenfalkenreiter ausbilden
+Ubertip="Eine schnelle Lufteinheit, die von einem Elfenkrieger geritten wird. Kann Luftfesseln einsetzen, die gegnerische Lufteinheiten vorübergehend bewegungsunfähig machen und entwaffnen. Kann Kampftierausbildung und Wolke erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[hhou]
+Name=Hof
+Hotkey=F
+Tip=Hof errichten
+Ubertip="Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird."
+
+[hfoo]	
+Name=Fußsoldat
+Hotkey=S
+Tip=Fußsoldat ausbilden
+Ubertip=Ein vielseitiger Fußsoldat. Kann Verteidigungshaltung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[hgra]
+Name=Greifenhorst
+Hotkey=G
+Tip=Greifenhorst errichten
+Ubertip=Bildet Greifenreiter und Drachenfalkenreiter aus.|nDient zur Erforschung von Sturmhammer und Wolke.
+Ubertip:custom,V0=Bildet Greifenreiter aus.|nDient zur Erforschung von Sturmhammer.
+Ubertip:melee,V0=Bildet Greifenreiter aus.|nDient zur Erforschung von Sturmhammer.
+
+[hctw]
+Name=Kanonenturm
+Hotkey=K
+Tip=Ausbau zum Kanonenturm
+Ubertip=Ein starkes Verteidigungsgebäude. Besonders effektiv gegen Ansammlungen von Truppen. Kann Schrapnellsplitter und Magischen Schutz erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
+Ubertip:custom,V0=Ein starkes Verteidigungsgebäude. Besonders effektiv gegen Ansammlungen von Truppen. Kann Magischen Schutz erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
+Ubertip:custom,V1=Ein starkes Verteidigungsgebäude. Besonders effektiv gegen Ansammlungen von Truppen. Kann Magischen Schutz erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
+Ubertip:melee,V0=Ein starkes Verteidigungsgebäude. Besonders effektiv gegen Ansammlungen von Truppen. Kann Magischen Schutz erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
+
+[hgtw]
+Name=Wachturm
+Hotkey=W
+Tip=Ausbau zum Wachturm
+Ubertip=Primäres Verteidigungsgebäude. Kann Magischen Schutz erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
+
+[hwtw]
+Name=Kontrollturm
+Hotkey=T
+Tip=Kontrollturm errichten
+Ubertip="Ein einfacher Beobachtungsturm. Kann nicht angreifen, aber zu einem Wachturm, Arkanen Turm oder Kanonenturm ausgebaut werden. Kann Magischen Schutz erlernen."
+Ubertip:custom,V0="Ein einfacher Beobachtungsturm. Kann nicht angreifen, aber zu einem Wachturm oder Kanonenturm ausgebaut werden. Kann Magischen Schutz erlernen."
+Ubertip:melee,V0="Ein einfacher Beobachtungsturm. Kann nicht angreifen, aber zu einem Wachturm oder Kanonenturm ausgebaut werden. Kann Magischen Schutz erlernen."
+
+[hatw]
+Name=Arkaner Turm
+Hotkey=N
+Tip=Ausbau zum Arkanen Turm
+Ubertip="Ein magischer Verteidigungsturm. Besonders effektiv gegen gegnerische Helden und Magiebenutzer. Beherrscht Rückkopplung, womit seine Angriffe gegnerisches Mana verbrennen und zusätzlichen Schaden in Höhe des verbrannten Manas verursachen. Fügt beschworenen Einheiten Bonusschaden zu. Kann Magischen Schutz erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V1="Ein magischer Verteidigungsturm. Besonders effektiv gegen gegnerische Helden und Magiebenutzer. Beherrscht Rückkopplung, womit seine Angriffe gegnerisches Mana verbrennen und zusätzlichen Schaden in Höhe des verbrannten Manas verursachen. Kann Magischen Schutz erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen."
+
+[hvlt]
+Name=Arkanes Gewölbe
+Hotkey=B
+Tip=Arkanes Gewölbe errichten
+Ubertip="Ein Laden mit käuflichen Gegenständen. Die verfügbaren Gegenstände hängen von der Ausbaustufe des Hauptgebäudes (Rathaus, Burg oder Schloss) ab sowie von den anderen vorhandenen Gebäuden."
+
+[hgyr]
+Name=Flugapparat
+Hotkey=F
+Hotkey:custom,V0=G
+Hotkey:melee,V0=G
+Tip=Flugapparat bauen
+Tip:custom,V0=Gyrokopter bauen
+Tip:melee,V0=Gyrokopter bauen
+Ubertip=Ein schneller Flugapparat. Hervorragend zum Aufklären und besonders stark gegen Lufteinheiten. Kann Flugapparatbomben und Flakgeschütze erlernen.|nKann unsichtbare Einheiten aufdecken.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+Ubertip:custom,V0=Ein schneller Flugapparat. Hervorragend zum Aufklären und besonders stark gegen Lufteinheiten. Kann Flugapparatbomben erlernen.|nKann unsichtbare Einheiten aufdecken.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+Ubertip:melee,V0=Ein schneller Flugapparat. Hervorragend zum Aufklären und besonders stark gegen Lufteinheiten. Kann Flugapparatbomben erlernen.|nKann unsichtbare Einheiten aufdecken.|n|n|cffffcc00Kann Lufteinheiten angreifen.|r
+
+[hkee]	
+Name=Burg
+Hotkey=U
+Tip=Ausbau zur Burg
+Ubertip=Der Ausbau zur Burg ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
+
+[hkni]
+Name=Ritter
+Hotkey=R
+Tip=Ritter ausbilden
+Ubertip=Ein mächtiger berittener Krieger. Kann Kampftierausbildung und Brecherklingen erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V0=Ein mächtiger berittener Krieger. Kann Kampftierausbildung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:custom,V1=Ein mächtiger berittener Krieger. Kann Kampftierausbildung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ubertip:melee,V0=Ein mächtiger berittener Krieger. Kann Kampftierausbildung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+
+[hlum]
+Name=Sägewerk
+Hotkey=S
+Tip=Sägewerk errichten
+Ubertip=Dient als Abgabepunkt für geschlagenes Holz.|nDient zur Erforschung von verbessertem Holzabbau und verbesserter Baukunst.
+
+[hmil]
+Name=Milizsoldat
+
+[Hmkg]
+Name=Bergkönig
+Propernames=Bor Steinbrecher,Munin Eisenklippe,Thorgas Breitaxt,Kelv Sternhammer,Grim Donnerbräu,Buri Frostbart,Huginn Eisenklippe,Thordin Felsbart,Bandis Schmiedefeuer,Gar Schicksalsschmiede,Bierbart Goldfaust,Modi Steinschmied,Aggronor der Mächtige
+Hotkey=B
+Tip=Bergkönig beschwören
+UberTip="Ein Kriegerheld, der auf den Angriffskampf und das Zerstreuen gegnerischer Truppen spezialisiert ist. Kann Sturmschlag, Donnerschlag, Hieb und Avatar erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Bergkönig wiederbeleben
+Awakentip=Bergkönig wiederbeleben
+
+[hmpr]
+Name=Priester
+Hotkey=P
+Tip=Priester ausbilden
+Ubertip="Ein unterstützender Magiebenutzer. Beherrscht Heilen, wodurch die Trefferpunkte verwundeter Einheiten wiederhergestellt werden. Kann Magie bannen und Inneres Feuer erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Heilen","- Heilen|n- Magie bannen","- Heilen|n- Magie bannen|n- Inneres Feuer"
+
+[hmtm]
+Name=Mörsertrupp
+Hotkey=M
+Tip=Mörsertrupp ausbilden
+Ubertip="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar. Kann Schrapnellsplitter und Leuchtfeuer erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:custom,V0="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar. Kann Leuchtfeuer erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+Ubertip:melee,V0="Eine Belagerungswaffe mit hoher Reichweite. Fügt Gebäuden extrem hohen Schaden zu, ist aber langsam und verwundbar. Kann Leuchtfeuer erlernen.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[Hpal]
+Name=Paladin
+Propernames=Granis Düsterhammer,Jörn der Erlöser,Sagatius der Weise,Malak der Rächer,Gavinrad der Entsetzliche,Morlune der Mächtige,Agamand der Wahre,Ballador der Helle,Manadar der Heiler,Zann der Verteidiger,Arius der Sucher,Aurrius der Reine,Karnwield der Sucher,Buzan der Furchtlose
+Hotkey=L
+Tip=Paladin beschwören
+Ubertip="Ein Kriegerheld, der viel aushält und verbündete Truppen verstärkt. Kann Heiliges Licht, Gottesschild, Hingabeaura und Auferstehung erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+Revivetip=Paladin wiederbeleben
+Awakentip=Paladin wiederbeleben
+
+[hpea]
+Name=Arbeiter
+Hotkey=R
+Tip=Arbeiter ausbilden
+Ubertip="Ein einfacher Arbeiter. Kann Gold und Holz abbauen, Gebäude errichten und reparieren. Kann zu den Waffen greifen und zum Milizsoldaten werden.|n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r"
+
+[hrif]
+Name=Scharfschütze
+Hotkey=Z
+Tip=Scharfschütze ausbilden
+Ubertip="Ein ausgezeichneter Schütze, der besonders gut gegen Lufteinheiten ist. Kann Langflinten erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[hsor]
+Name=Zauberin
+Hotkey=Z
+Tip=Zauberin ausbilden
+Ubertip="Eine vielseitige Magiebenutzerin. Beherrscht Verlangsamung, wodurch die Bewegungs- und Angriffsgeschwindigkeit gegnerischer Einheiten verringert wird. Kann Unsichtbarkeit und Verwandlung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Casterupgradename=Initiand, Adept, Meister
+Casterupgradetip="- Verlangsamung","- Verlangsamung|n- Unsichtbarkeit","- Verlangsamung|n- Unsichtbarkeit|n- Verwandlung"
+
+[hspt]
+Name=Zauberbrecher
+Hotkey=B
+Tip=Zauberbrecher ausbilden
+Ubertip="Ein Elfenkrieger, der Magiebenutzer kontert. Beherrscht Zauberimmunität, Rückkopplung sowie Zauberdiebstahl, womit er Stärkungseffekte zugunsten seiner Armee manipuliert. Kann Magie kontrollieren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[hmtt]
+Name=Belagerungsmaschine
+Hotkey=E
+Tip=Belagerungsmaschine bauen
+Ubertip="Ein schwer gepanzertes Fahrzeug, das mit Gebäuden kurzen Prozess macht. Kann Sperrfeuer erlernen.|n|n|cffffcc00Kann Gebäude angreifen.|r"
+Ubertip:custom,V0="Ein schwer gepanzertes Fahrzeug, das mit Gebäuden kurzen Prozess macht.|n|n|cffffcc00Kann Gebäude angreifen.|r"
+Ubertip:melee,V0="Ein schwer gepanzertes Fahrzeug, das mit Gebäuden kurzen Prozess macht.|n|n|cffffcc00Kann Gebäude angreifen.|r"
+
+[hrtt]
+Name=Belagerungsmaschine
+EditorSuffix= (Sperrfeuer)
+Hotkey=E
+Tip=Belagerungsmaschine bauen
+Ubertip="Ein schwer gepanzertes Fahrzeug, das mit Gebäuden kurzen Prozess macht. Beherrscht Sperrfeuer, womit es Raketen auf gegnerische Lufteinheiten in der Nähe abfeuert.|n|n|cffffcc00Kann Gebäude angreifen.|r"
+
+[htow]
+Name=Rathaus
+Hotkey=H
+Tip=Rathaus errichten
+Ubertip="Hauptgebäude. Bildet Arbeiter aus und nimmt abgebaute Rohstoffe entgegen. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen."
+
+[hwat]
+Name=Wasserelementar
+EditorSuffix= (Stufe 1)
+
+[hwt2]
+Name=Wasserelementar
+EditorSuffix= (Stufe 2)
+
+[hwt3]
+Name=Wasserelementar
+EditorSuffix= (Stufe 3)
+
+[hgry]
+Name=Greifenreiter
+Hotkey=G
+Tip=Greifenreiter ausbilden
+Ubertip="Eine mächtige Flugkreatur, die von einem Hammer werfenden Zwerg geritten wird. Kann Kampftierausbildung und Sturmhammer erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:custom,V0="Eine mächtige Flugkreatur, die von einem Hammer werfenden Zwerg geritten wird. Kann Sturmhammer erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Ubertip:melee,V0="Eine mächtige Flugkreatur, die von einem Hammer werfenden Zwerg geritten wird. Kann Kampftierausbildung und Sturmhammer erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[hphx]
+Name=Phönix
+
+[hpxe]
+Name=Phönix-Ei
+
+//#RESTNOBETA
+
+[hshy]
+Name=Hafen der Menschen
+Tip=Hafen der Menschen errichten
+Ubertip="Produktionsgebäude für Schiffe. Baut Transportschiffe, Fregatten und Schlachtschiffe der Menschen."
+
+[hbsh]
+Name=Menschenschlachtschiff
+Hotkey=S
+Tip=Schlachtschiff anheuern
+Ubertip="Ein schweres Schlachtschiff, das gegnerische Schiffe zerstört und Gebäude vom Meer aus bombardiert.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r"
+
+[hdes]
+Name=Menschenfregatte
+Hotkey=F
+Tip=Fregatte anheuern
+Ubertip="Ein vielseitiges Angriffsschiff, das mit Luftangreifern kurzen Prozess macht.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+
+[hbot]
+Name=Menschentransportschiff
+Hotkey=T
+Tip=Transportschiff anheuern
+Ubertip="Ein robustes Transportschiff, das Einheiten übers Meer transportieren kann."
+
+[Agyb]
+Name:melee,V0=Flugapparatbomben
+Ubertip:custom,V0="Ermöglicht Flugapparaten, Bodeneinheiten anzugreifen."
+Ubertip:melee,V0="Ermöglicht Flugapparaten, Bodeneinheiten anzugreifen."
+Tip:custom,V0=Flugapparatbomben
+Tip:melee,V0=Flugapparatbomben
+Name:custom,V0=Flugapparatbomben

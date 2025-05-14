@@ -1,0 +1,582 @@
+﻿// Aerial Shackles
+[Amls]
+Name=Luftfesseln
+Tip=Luftfesseln
+Ubertip="Bindet eine ausgewählte gegnerische Lufteinheit mit magischen Fesseln, sodass sie sich nicht bewegen oder angreifen kann und <Amls,DataA1> Schaden pro Sekunde erleidet.|nHält <Amls,Dur1> Sek. lang an."
+Hotkey=E
+
+// Aerial Shackles Target
+[Bmlt]
+Bufftip=Luftfesseln
+Buffubertip=Diese Einheit ist in Luftfesseln gefangen. Sie kann sich nicht bewegen oder angreifen und erleidet periodischen Schaden.
+
+// area of effect detection (scry)
+[AHta]
+Name=Gegner aufdecken
+Tip=Gegner aufdecken
+Ubertip="Macht ein Gebiet der Karte sichtbar.|nDeckt unsichtbare Einheiten auf.|nHält <AHta,Dur1> Sek. lang an."
+Hotkey=R
+
+// Feedback
+[Afbk]
+Name=Rückkopplung
+EditorSuffix= (Zauberbrecher)
+Tip=Rückkopplung
+Ubertip="Angriffe von Zauberbrechern verbrennen <Afbk,DataA1> Mana pro Treffer. Das Mana explodiert und fügt der angegriffenen Einheit Schaden zu."
+
+// Feedback
+[Afbt]
+Name=Rückkopplung
+EditorSuffix= (Arkaner Turm)
+Tip=Rückkopplung
+Ubertip="Angriffe dieses Turms verbrennen <Afbt,DataA1> Mana pro Treffer und fügen getroffenen Einheiten Bonusschaden in Höhe des verbrannten Manas zu.|n|nAngriffe dieses Turms fügen beschworenen Einheiten außerdem <Afbt,DataE1> Bonusschaden zu."
+
+
+// Control Magic
+[Acmg]
+Name=Magie kontrollieren
+Tip=Magie kontrollieren
+Ubertip="Übernimmt die Kontrolle über eine beschworene Einheit des Gegners. Die Manakosten betragen <Acmg,DataB1,%>% der aktuellen Trefferpunkte der beschworenen Einheit."
+Hotkey=M
+
+[Bcmg]
+Bufftip=Magie kontrollieren
+Buffubertip=Diese Einheit wird kontrolliert und gehorcht jetzt einem neuen Meister.
+
+// Siphon Mana
+[AHdr]
+Researchubertip,custom,V1="Überträgt Mana von einem Gegner zum Zaubernden.|n|n|cffffcc00Stufe 1|r - <AHdr,DataB1> Mana pro Sekunde.|n|cffffcc00Stufe 2|r - <AHdr,DataB2> Mana pro Sekunde.|n|cffffcc00Stufe 3|r - <AHdr,DataB3> Mana pro Sekunde."
+Ubertip,custom,V1="Überträgt <AHdr,DataB1> Mana pro Sekunde von einem Gegner zum Zaubernden.","Überträgt <AHdr,DataB2> Mana pro Sekunde von einem Gegner zum Zaubernden.","Überträgt <AHdr,DataB3> Mana pro Sekunde von einem Gegner zum Zaubernden."
+Name=Manaentzug
+Tip=Manaentzug [|cffffcc00Stufe 1|r],Manaentzug [|cffffcc00Stufe 2|r],Manaentzug [|cffffcc00Stufe 3|r]
+Ubertip="Transferiert Mana zwischen dem Blutmagier und einem Ziel. Entzieht einem Gegner pro Sekunde <AHdr,DataB1> Mana oder überträgt pro Sekunde <AHdr,DataE1> Mana auf einen Verbündeten.|n|nDiese Fähigkeit kann das Mana des Blutmagiers über das Maximum erhöhen, aber überschüssiges Mana schwindet schnell, wenn es nicht genutzt wird.|nHält <AHdr,Dur1> Sek. lang an.","Transferiert Mana zwischen dem Blutmagier und einem Ziel. Entzieht einem Gegner pro Sekunde <AHdr,DataB2> Mana oder überträgt pro Sekunde <AHdr,DataE2> Mana auf einen Verbündeten.|n|nDiese Fähigkeit kann das Mana des Blutmagiers über das Maximum erhöhen, aber überschüssiges Mana schwindet schnell, wenn es nicht genutzt wird.|nHält <AHdr,Dur2> Sek. lang an.","Transferiert Mana zwischen dem Blutmagier und einem Ziel. Entzieht einem Gegner pro Sekunde <AHdr,DataB3> Mana oder überträgt pro Sekunde <AHdr,DataE3> Mana auf einen Verbündeten.|n|nDiese Fähigkeit kann das Mana des Blutmagiers über das Maximum erhöhen, aber überschüssiges Mana schwindet schnell, wenn es nicht genutzt wird.|nHält <AHdr,Dur3> Sek. lang an."
+Hotkey=Z
+Researchtip=Manaentzug [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Transferiert Mana zwischen dem Blutmagier und einem Ziel. Entzieht einem Gegner Mana oder überträgt Mana auf einen Verbündeten.|n|nDiese Fähigkeit kann das Mana des Blutmagiers über das Maximum erhöhen, aber überschüssiges Mana schwindet schnell, wenn es nicht genutzt wird.|nHält <AHdr,Dur1> Sek. lang an.|n|n|cffffcc00Stufe 1|r - Entzieht <AHdr,DataB1> Mana pro Sekunde.|n|cffffcc00Stufe 2|r - Entzieht <AHdr,DataB2> Mana pro Sekunde.|n|cffffcc00Stufe 3|r - Entzieht <AHdr,DataB3> Mana pro Sekunde."
+Researchhotkey=Z
+
+[Bdbb]
+Name=Trefferpunkte & Mana abziehen (Bonus)
+Bufftip=Trefferpunkte & Mana abziehen
+Buffubertip=Mana und Trefferpunkte dieser Einheit liegen vorübergehend über dem normalen Maximum. Dieser Bonus schwindet schnell wieder.
+
+[Bdbl]
+Name=Blutsauger (Bonus)
+Bufftip=Blutsauger
+Buffubertip=Die Trefferpunkte dieser Einheit liegen vorübergehend über dem normalen Maximum. Dieser Bonus schwindet schnell wieder.
+
+[Bdbm]
+Name=Manaentzug (Bonus)
+Bufftip=Manaentzug
+Buffubertip=Das Mana dieser Einheit liegt vorübergehend über dem normalen Maximum. Dieser Bonus schwindet schnell wieder.
+
+// Flak Cannons
+[Aflk]
+Name=Flakgeschütze
+Tip=Flakgeschütze
+Ubertip=Fügt Lufteinheiten mit mächtigen Kanonen Flächenschaden zu.
+
+// Frag Shards
+[Afsh]
+Name=Schrapnellsplitter
+Tip=Schrapnellsplitter
+Ubertip=Fügt ungepanzerten Einheiten und Einheiten mit mittlerer Rüstung mithilfe von Schrapnellmörsern mehr Schaden zu.
+
+// Barrage
+[Aroc]
+Name=Sperrfeuer
+Tip=Sperrfeuer
+Ubertip="Ermöglicht Belagerungsmaschinen, mächtige Raketen auf gegnerische Lufteinheiten in der Nähe abzufeuern."
+
+// Tank upgrade
+[Srtt]
+Requires=Rhrt
+
+// Magic Defense
+[Amdf]
+Name=Magieverteidigung
+Tip=Magieverteidigung
+Untip=Magieverteidigung abbrechen
+Ubertip="Aktivieren, um immun gegen Magie zu werden, aber die Bewegungsgeschwindigkeit um <Adef,DataC1,%>% zu verringern."
+Unubertip="Deaktivieren, damit sich die Einheit normal bewegt, aber durch alle Formen von Magie Schaden erleidet."
+Hotkey=D
+Unhotkey=D
+
+// Sphere
+[Asph]
+Name=Sphäre
+
+// Spell Steal
+[Asps]
+Name=Zauberdiebstahl
+Tip=Zauberdiebstahl
+Ubertip="Stiehlt einen Stärkungseffekt von einer gegnerischen Einheit und überträgt ihn auf eine verbündete Einheit in der Nähe, oder entfernt einen Schwächungseffekt von einer verbündeten Einheit und überträgt ihn auf eine gegnerische Einheit in der Nähe."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=T
+Unhotkey=T
+
+// Cloud
+[Aclf]
+Name=Wolke
+Tip=Wolke
+Ubertip="Hindert gegnerische Gebäude daran, aus der Distanz anzugreifen.|nHält <Aclf,Dur1> Sek. lang an."
+Hotkey=K
+
+[Bclf]
+Bufftip=Wolke
+Buffubertip=Dieses Gebäude ist von einer Wolke verhüllt und kann keine Fernkampfangriffe ausführen.
+
+// Flame Strike
+[AHfs]
+Name=Flammenschlag
+Tip=Flammenschlag [|cffffcc00Stufe 1|r],Flammenschlag [|cffffcc00Stufe 2|r],Flammenschlag [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört eine Feuersäule, die Bodeneinheiten 3 Sek. lang 45 Schaden pro Sekunde zufügt. Während die Feuersäule langsam erlischt, erleiden Einheiten im Wirkungsbereich weiterhin geringen Schaden.","Beschwört eine Feuersäule, die Bodeneinheiten 3 Sek. lang 80 Schaden pro Sekunde zufügt. Während die Feuersäule langsam erlischt, erleiden Einheiten im Wirkungsbereich weiterhin leichten Schaden.","Beschwört eine Feuersäule, die Bodeneinheiten 3 Sek. lang 110 Schaden pro Sekunde zufügt. Während die Feuersäule langsam erlischt, erleiden Einheiten im Wirkungsbereich weiterhin moderaten Schaden."
+Hotkey=F
+Researchtip=Flammenschlag [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Beschwört eine Feuersäule, die Bodeneinheiten im Zielgebiet periodischen Schaden zufügt.|n|n|cffffcc00Stufe 1|r - 3 Sek. lang 45 Schaden pro Sekunde, danach 6 Sek. lang geringer Schaden.|n|cffffcc00Stufe 2|r - 3 Sek. lang 80 Schaden pro Sekunde, danach 6 Sek. lang leichter Schaden.|n|cffffcc00Stufe 3|r - 3 Sek. lang 110 Schaden pro Sekunde, danach 6 Sek. lang moderater Schaden."
+Researchhotkey=F
+
+[BHfs]
+Bufftip=Flammenschlag
+Buffubertip=Diese Einheit steht in einem Flammenschlag und erleidet periodischen Schaden.
+
+// Banish
+[AHbn]
+Name=Verbannen
+Tip=Verbannen [|cffffcc00Stufe 1|r],Verbannen [|cffffcc00Stufe 2|r],Verbannen [|cffffcc00Stufe 3|r]
+Ubertip="Macht eine nichtmechanische Einheit astral und verringert ihre Bewegungsgeschwindigkeit <AHbn,Dur1> Sek. lang um <AHbn,DataA1,%>%. Astrale Einheiten können nicht angreifen, aber sie können Fähigkeiten einsetzen. Bestimmte Zauber, die auf sie gewirkt werden, haben eine größere Wirkung.","Macht eine Einheit astral und verringert ihre Bewegungsgeschwindigkeit <AHbn,Dur2> Sek. lang um <AHbn,DataA2,%>%. Astrale Einheiten können nicht angreifen, aber sie können Fähigkeiten einsetzen. Bestimmte Zauber, die auf sie gewirkt werden, haben eine größere Wirkung.","Macht eine Einheit astral und verringert ihre Bewegungsgeschwindigkeit <AHbn,Dur3> Sek. lang um <AHbn,DataA3,%>%. Astrale Einheiten können nicht angreifen, aber sie können Fähigkeiten einsetzen. Bestimmte Zauber, die auf sie gewirkt werden, haben eine größere Wirkung."
+Hotkey=N
+Researchtip=Verbannen [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Macht eine nichtmechanische Einheit astral und verringert ihre Bewegungsgeschwindigkeit für kurze Zeit um <AHbn,DataA1,%>%. Astrale Einheiten können nicht angreifen, aber sie können Fähigkeiten einsetzen. Bestimmte Zauber, die auf sie gewirkt werden, haben eine größere Wirkung.|n|n|cffffcc00Stufe 1|r - <AHbn,Cost1> Mana, hält <AHbn,Dur1> Sek. lang an.|n|cffffcc00Stufe 2|r - <AHbn,Cost2> Mana, hält <AHbn,Dur2> Sek. lang an.|n|cffffcc00Stufe 3|r - <AHbn,Cost3> Mana, hält <AHbn,Dur3> Sek. lang an."
+Researchhotkey=N
+
+[BHbn]
+Bufftip=Verbannen
+Buffubertip="Diese Einheit ist verbannt. Verbannte Einheiten können nicht angreifen, aber sie können Fähigkeiten einsetzen und erleiden mehr Schaden durch magische Angriffe und Zauber."
+
+// Summon Phoenix
+[AHpx]
+Name=Phönix
+Tip=Phönix
+Ubertip="Beschwört einen mächtigen Phönix, der so heiß brennt, dass er sich und gegnerischen Einheiten in der Nähe Schaden zufügt. Hat Zauberimmunität und Resistente Haut. Beim Tod hinterlässt der Phönix ein Ei, aus dem ein neuer Phönix schlüpft.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=X
+Researchtip=Phönix erlernen
+Researchubertip="Beschwört einen mächtigen Phönix, der so heiß brennt, dass er sich und gegnerischen Einheiten in der Nähe Schaden zufügt. Hat Zauberimmunität und Resistente Haut. Beim Tod hinterlässt der Phönix ein Ei, aus dem ein neuer Phönix schlüpft.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Researchhotkey=X
+
+// Phoenix (morph)
+[Aphx]
+Name=Phönixverwandlung (Ei)
+
+// Phoenix (progress bar)
+[Bphx]
+Bufftip=Phönix
+Buffubertip="Die Macht des Phönix wird offenbar."
+
+// Phoenix Fire
+[Apxf]
+Name=Phönixfeuer
+Tip=Phönixfeuer
+Ubertip=Lässt Flammen auf Gegner in der Nähe niedergehen und setzt sie in Brand.
+
+// Phoenix Fire
+[Bpxf]
+Bufftip=Phönixfeuer
+Buffubertip=Diese Einheit wird von Phönixfeuer verbrannt und erleidet periodischen Schaden.
+
+// Flying Machine Bombs
+[Agyb]
+Name=Flugapparatbomben
+Tip=Flugapparatbomben
+Ubertip="Ermöglicht Flugapparaten, Bodeneinheiten anzugreifen."
+
+// Storm hammers
+[Asth]
+Name=Sturmhammer
+Tip=Sturmhammer
+Ubertip=Lässt Angriffe von Greifenreitern mehrere Einheiten treffen.
+
+// Flying Machine Vision
+[Agyv]
+Name=Durchblick
+Tip=Durchblick
+Ubertip=Deckt unsichtbare Einheiten in der Nähe auf.
+EditorSuffix= (Flugapparat)
+
+// Defend
+[Adef]
+Name=Verteidigungshaltung
+Tip=Verteidigungshaltung
+Ubertip="Aktivieren, um eine Chance von <Adef,DataF1>% zu erhalten, Stichangriffe auf den Angreifer zu reflektieren. Verringert außerdem den erlittenen Schaden durch nicht reflektierte Angriffe auf <Adef,DataA1,%>%. Während die Verteidigungshaltung aktiv ist, ist die Bewegungsgeschwindigkeit um <Adef,DataC1,%>% verringert."
+Ubertip:custom,V0="Aktivieren, um nur <Adef,DataA1,%>% Schaden durch Stichangriffe zu erleiden. Während die Verteidigungshaltung aktiv ist, ist die Bewegungsgeschwindigkeit um <Adef,DataC1,%>% verringert."
+Ubertip:custom,V1="Aktivieren, um nur <Adef,DataA1,%>% Schaden durch Stichangriffe zu erleiden. Während die Verteidigungshaltung aktiv ist, ist die Bewegungsgeschwindigkeit um <Adef,DataC1,%>% verringert."
+Ubertip:melee,V0="Aktivieren, um nur <Adef,DataA1,%>% Schaden durch Stichangriffe zu erleiden. Während die Verteidigungshaltung aktiv ist, ist die Bewegungsgeschwindigkeit um <Adef,DataC1,%>% verringert."
+Untip=Verteidigungshaltung beenden
+Unubertip="Deaktivieren, damit sich die Einheit normal bewegt, aber durch Stichangriffe normalen Schaden erleidet."
+Hotkey=D
+Unhotkey=D
+
+// Flare
+[Afla]
+Name=Leuchtfeuer
+Tip=Leuchtfeuer
+Ubertip="Schießt ein Zwergenleuchtfeuer über den Zielpunkt, das das Gebiet <Afla,Dur1> Sek. lang sichtbar macht.|nDeckt unsichtbare Einheiten auf."
+Hotkey=F
+
+// Magic Sentry (passive)
+[Adts]
+Name=Magischer Schutz
+Tip=Magischer Schutz
+Ubertip=Deckt unsichtbare Einheiten in der Nähe auf.
+EditorSuffix=(Menschentürme)
+
+// Inner Fire
+[Ainf]
+Name=Inneres Feuer
+Tip=Inneres Feuer
+Ubertip="Erhöht den Schaden einer verbündeten Zieleinheit um <Ainf,DataA1,%>% und die Rüstung um <Ainf,DataB1>.|nHält <Ainf,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=F
+Unhotkey=F
+
+[Binf]
+Bufftip=Inneres Feuer
+Buffubertip=Diese Einheit wird von Innerem Feuer angetrieben. Ihre Rüstung und ihr Angriffsschaden sind erhöht.
+
+// Dispel Magic
+[Adis]
+Name=Magie bannen
+Tip=Magie bannen
+UberTip="Entfernt alle Stärkungseffekte von Einheiten im Zielgebiet.|n|cffffcc00Fügt beschworenen Einheiten <Adis,DataB1> Schaden zu.|r"
+Hotkey=M
+
+// Heal
+[Ahea]
+Name=Heilen
+Tip=Heilen
+Ubertip="Heilt eine verbündete nichtmechanische Zieleinheit um <Ahea,DataA1> Trefferpunkte."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=L
+Unhotkey=L
+
+[Bhea]
+Bufftip=Heilen
+Buffubertip=Diese Einheit wird geheilt. Verlorene Trefferpunkte werden wiederhergestellt.
+
+[BNhe]
+Bufftip=Neutrale Heilung
+Buffubertip=Diese Einheit wird geheilt. Verlorene Trefferpunkte werden wiederhergestellt.
+
+// Slow
+[Aslo]
+Name=Verlangsamung
+Tip=Verlangsamung
+Ubertip="Verringert die Angriffsgeschwindigkeit einer gegnerischen Zieleinheit um <Aslo,DataB1,%>% und die Bewegungsgeschwindigkeit um <Aslo,DataA1,%>%.|nHält <Aslo,Dur1> Sek. lang an."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=G
+Unhotkey=G
+
+[Bslo]
+Bufftip=Verlangsamung
+Buffubertip=Diese Einheit ist verlangsamt. Ihre Bewegungs- und Angriffsgeschwindigkeit sind verringert.
+
+// Invisibility
+[Aivs]
+Name=Unsichtbarkeit
+Tip=Unsichtbarkeit
+Ubertip="Macht eine Einheit unsichtbar. Wenn sie angreift oder eine Fähigkeit einsetzt, wird sie sichtbar.|nHält <Aivs,Dur1> Sek. lang an."
+Hotkey=I
+
+[Binv]
+Bufftip=Unsichtbarkeit
+Buffubertip="Diese Einheit ist unsichtbar und kann von gegnerischen Einheiten nicht gesehen werden. Sie wird sichtbar, wenn sie angreift oder eine Fähigkeit einsetzt."
+
+// Polymorph
+[Aply]
+Name=Verwandlung
+Tip=Verwandlung
+Ubertip="Verwandelt eine gegnerische Zieleinheit in ein Schaf. Die Einheit behält ihre Trefferpunkte und Rüstung, kann aber nicht angreifen.|nKann nicht gegen Helden eingesetzt werden.|nHält <Aply,Dur1> Sek. lang an."
+Hotkey=W
+
+[Bply]
+Bufftip=Verwandlung
+Buffubertip=Diese Einheit wurde in ein Schaf verwandelt.
+
+// Blizzard
+[AHbz]
+Name=Blizzard
+Tip=Blizzard [|cffffcc00Stufe 1|r],Blizzard [|cffffcc00Stufe 2|r],Blizzard [|cffffcc00Stufe 3|r]
+Ubertip="Ruft <AHbz,DataA1> Wellen von Eistrümmern herbei. Jede Welle fügt Einheiten im Wirkungsbereich <AHbz,DataB1> Schaden zu.","Ruft <AHbz,DataA2> Wellen von Eistrümmern herbei. Jede Welle fügt Einheiten im Wirkungsbereich <AHbz,DataB2> Schaden zu.","Ruft <AHbz,DataA3> Wellen von Eistrümmern herbei. Jede Welle fügt Einheiten im Wirkungsbereich <AHbz,DataB3> Schaden zu."
+Hotkey=Z
+Researchtip=Blizzard [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Ruft Wellen von Eistrümmern herbei, die Einheiten im Zielgebiet Schaden zufügen.|n|n|cffffcc00Stufe 1|r - <AHbz,DataA1> Wellen, die jeweils <AHbz,DataB1> Schaden verursachen.|n|cffffcc00Stufe 2|r - <AHbz,DataA2> Wellen, die jeweils <AHbz,DataB2> Schaden verursachen.|n|cffffcc00Stufe 3|r - <AHbz,DataA3> Wellen, die jeweils <AHbz,DataB3> Schaden verursachen."
+Researchhotkey=Z
+
+[BHbd]
+Bufftip=Blizzard
+Buffubertip=Diese Einheit erleidet Schaden durch einen Blizzard.
+
+// Summon Water Elemental
+[AHwe]
+Name=Wasserelementar beschwören
+Tip=Wasserelementar beschwören [|cffffcc00Stufe 1|r],Wasserelementar beschwören [|cffffcc00Stufe 2|r],Wasserelementar beschwören [|cffffcc00Stufe 3|r]
+Ubertip="Beschwört einen Wasserelementar, der die Gegner des Erzmagiers angreift. Der Elementar hat <hwat,realHP> Trefferpunkte und verursacht <hwat,mindmg1>-<hwat,maxdmg1> Schaden.|nBleibt <AHwe,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen Wasserelementar, der die Gegner des Erzmagiers angreift. Der Elementar hat <hwt2,realHP> Trefferpunkte und verursacht <hwt2,mindmg1>-<hwt2,maxdmg1> Schaden.|nBleibt <AHwe,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r","Beschwört einen Wasserelementar, der die Gegner des Erzmagiers angreift. Der Elementar hat <hwt3,realHP> Trefferpunkte und verursacht <hwt3,mindmg1>-<hwt3,maxdmg1> Schaden.|nBleibt <AHwe,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+ResearchUberTip="Beschwört einen Wasserelementar, der die Gegner des Erzmagiers angreift.|nBleibt <AHwe,Dur1> Sek. lang bestehen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r|n|n|cffffcc00Stufe 1|r - <hwat,realHP> Trefferpunkte, <hwat,mindmg1>-<hwat,maxdmg1> Schaden.|n|cffffcc00Stufe 2|r - <hwt2,realHP> Trefferpunkte, <hwt2,mindmg1>-<hwt2,maxdmg1> Schaden.|n|cffffcc00Stufe 3|r - <hwt3,realHP> Trefferpunkte, <hwt3,mindmg1>-<hwt3,maxdmg1> Schaden."
+Hotkey=W
+Researchtip=Wasserelementar beschwören [|cffffcc00Stufe %d|r] erlernen
+Researchhotkey=W
+
+[BHwe]
+Bufftip=Wasserelementar
+Buffubertip=Bannen fügt beschworenen Einheiten zusätzlichen Schaden zu.
+
+// Brilliance Aura
+[AHab]
+Name=Brillanzaura
+Tip=Brillanzaura [|cffffcc00Stufe 1|r],Brillanzaura [|cffffcc00Stufe 2|r],Brillanzaura [|cffffcc00Stufe 3|r]
+Ubertip="Erhöht die Manaregeneration verbündeter Einheiten in der Nähe.","Erhöht die Manaregeneration verbündeter Einheiten in der Nähe.","Erhöht die Manaregeneration verbündeter Einheiten in der Nähe."
+Researchtip=Brillanzaura [|cffffcc00Stufe %d|r] erlernen
+Researchubertip=Erhöht die Manaregeneration verbündeter Einheiten in der Nähe.|n|n|cffffcc00Stufe 1|r - Leicht erhöhte Manaregeneration.|n|cffffcc00Stufe 2|r - Moderat erhöhte Manaregeneration.|n|cffffcc00Stufe 3|r - Stark erhöhte Manaregeneration.
+Researchhotkey=R
+
+[BHab]
+Bufftip=Brillanzaura
+Buffubertip=Diese Einheit steht unter dem Effekt der Brillanzaura. Ihre Manaregeneration ist erhöht.
+
+// Mass Teleport
+[AHmt]
+Name=Massenteleport
+Tip=Massenteleport
+Ubertip="Teleportiert den Erzmagier und <AHmt,DataA1> nahe Einheiten des Spielers zu einer verbündeten Bodeneinheit oder einem verbündeten Gebäude."
+Hotkey=T
+Researchtip=Massenteleport erlernen
+Researchubertip="Teleportiert den Erzmagier und <AHmt,DataA1> nahe Einheiten des Spielers zu einer verbündeten Bodeneinheit oder einem verbündeten Gebäude."
+Researchhotkey=T
+Globalmessage=
+Globalsound=
+
+// Storm Bolt
+[AHtb]
+Name=Sturmschlag
+Tip=Sturmschlag [|cffffcc00Stufe 1|r],Sturmschlag [|cffffcc00Stufe 2|r],Sturmschlag [|cffffcc00Stufe 3|r]
+Ubertip="Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <AHtb,DataA1> Schaden zu und betäubt sie für <AHtb,Dur1> Sek.","Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <AHtb,DataA2> Schaden zu und betäubt sie für <AHtb,Dur2> Sek.","Schleudert einen magischen Hammer auf eine gegnerische Zieleinheit, fügt ihr <AHtb,DataA3> Schaden zu und betäubt sie für <AHtb,Dur3> Sek."
+Hotkey=T
+Researchtip=Sturmschlag [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Schleudert einen magischen Hammer auf eine gegnerische Einheit, fügt ihr Schaden zu und betäubt sie.|n|n|cffffcc00Stufe 1|r - <AHtb,DataA1> Schaden, betäubt für <AHtb,Dur1> Sek.|n|cffffcc00Stufe 2|r - <AHtb,DataA2> Schaden, betäubt für <AHtb,Dur2> Sek.|n|cffffcc00Stufe 3|r - <AHtb,DataA3> Schaden, betäubt für <AHtb,Dur3> Sek."
+Researchhotkey=T
+
+[BHtb]
+Bufftip=Sturmschlag
+Buffubertip="Diese Einheit ist von einem Sturmschlag betäubt. Sie kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen."
+
+// Thunder Clap
+[AHtc]
+Name=Donnerschlag
+Tip=Donnerschlag [|cffffcc00Stufe 1|r],Donnerschlag [|cffffcc00Stufe 2|r],Donnerschlag [|cffffcc00Stufe 3|r]
+Ubertip="Erschüttert den Boden. Die Erschütterung fügt gegnerischen Bodeneinheiten in der Nähe <AHtc,DataA1> Schaden zu, verringert ihre Bewegungsgeschwindigkeit um <AHtc,DataC1,%>% und ihre Angriffsgeschwindigkeit um <AHtc,DataD1,%>%.","Erschüttert den Boden. Die Erschütterung fügt gegnerischen Bodeneinheiten in der Nähe <AHtc,DataA2> Schaden zu, verringert ihre Bewegungsgeschwindigkeit um <AHtc,DataC2,%>% und ihre Angriffsgeschwindigkeit um <AHtc,DataD2,%>%.","Erschüttert den Boden. Die Erschütterung fügt gegnerischen Bodeneinheiten in der Nähe <AHtc,DataA3> Schaden zu, verringert ihre Bewegungsgeschwindigkeit um <AHtc,DataC3,%>% und ihre Angriffsgeschwindigkeit um <AHtc,DataD3,%>%."
+Hotkey=C
+Researchtip=Donnerschlag [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erschüttert den Boden, fügt gegnerischen Bodeneinheiten in der Nähe Schaden zu und verringert ihre Bewegungs- und Angriffsgeschwindigkeit.|n|n|cffffcc00Stufe 1|r - <AHtc,DataA1> Schaden, <AHtc,DataC1,%>% Bewegungsgeschwindigkeit, <AHtc,DataD1,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 2|r - <AHtc,DataA2> Schaden, <AHtc,DataC2,%>% Bewegungsgeschwindigkeit, <AHtc,DataD2,%>% Angriffsgeschwindigkeit.|n|cffffcc00Stufe 3|r - <AHtc,DataA3> Schaden, <AHtc,DataC3,%>% Bewegungsgeschwindigkeit, <AHtc,DataD3,%>% Angriffsgeschwindigkeit."
+Researchhotkey=C
+
+[BHtc]
+Bufftip=Donnerschlag
+Buffubertip=Diese Einheit wurde von einem Donnerschlag getroffen. Ihre Bewegungs- und Angriffsgeschwindigkeit sind verringert.
+
+// Bash
+[AHbh]
+Name=Hieb
+Tip=Hieb [|cffffcc00Stufe 1|r],Hieb [|cffffcc00Stufe 2|r],Hieb [|cffffcc00Stufe 3|r]
+Ubertip="Gewährt eine Chance von <AHbh,DataA1>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und das Ziel für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA2>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und das Ziel für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA3>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und das Ziel für <AHbh,Dur1> Sek. zu betäuben."
+Ubertip:custom,V0="Gewährt eine Chance von <AHbh,DataA1>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA2>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA3>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben."
+Ubertip:custom,V1="Gewährt eine Chance von <AHbh,DataA1>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA2>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA3>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben."
+Ubertip:melee,V0="Gewährt eine Chance von <AHbh,DataA1>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA2>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.","Gewährt eine Chance von <AHbh,DataA3>%, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben."
+Researchtip=Hieb [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Gewährt eine Chance, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und das Ziel für <AHbh,Dur1> Sek. zu betäuben.|n|n|cffffcc00Stufe 1|r - <AHbh,DataA1>% Chance pro Angriff.|n|cffffcc00Stufe 2|r - <AHbh,DataA2>% Chance pro Angriff.|n|cffffcc00Stufe 3|r - <AHbh,DataA3>% Chance pro Angriff."
+Researchubertip:custom,V0="Gewährt eine Chance, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.|n|n|cffffcc00Stufe 1|r - <AHbh,DataA1>% Chance pro Angriff.|n|cffffcc00Stufe 2|r - <AHbh,DataA2>% Chance pro Angriff.|n|cffffcc00Stufe 3|r - <AHbh,DataA3>% Chance pro Angriff."
+Researchubertip:custom,V1="Gewährt eine Chance, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.|n|n|cffffcc00Stufe 1|r - <AHbh,DataA1>% Chance pro Angriff.|n|cffffcc00Stufe 2|r - <AHbh,DataA2>% Chance pro Angriff.|n|cffffcc00Stufe 3|r - <AHbh,DataA3>% Chance pro Angriff."
+Researchubertip:melee,V0="Gewährt eine Chance, bei einem Angriff <AHbh,DataC1> Bonusschaden zu verursachen und den Gegner für <AHbh,Dur1> Sek. zu betäuben.|n|n|cffffcc00Stufe 1|r - <AHbh,DataA1>% Chance pro Angriff.|n|cffffcc00Stufe 2|r - <AHbh,DataA2>% Chance pro Angriff.|n|cffffcc00Stufe 3|r - <AHbh,DataA3>% Chance pro Angriff."
+Researchhotkey=I
+
+[BHbh]
+Bufftip=Hieb
+Buffubertip="Diese Einheit wurde von Hieb getroffen. Sie kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen."
+
+// Avatar
+[AHav]
+Name=Avatar
+Tip=Avatar aktivieren
+UberTip="Aktivieren, um die Rüstung des Bergkönigs um <AHav,DataA1>, seine Trefferpunkte um <AHav,DataB1> und seinen Schaden um <AHav,DataC1> zu erhöhen und ihm Zauberimmunität zu gewähren.|nHält <AHav,Dur1> Sek. lang an."
+Untip=Avatar deaktivieren
+UnUberTip=""
+Hotkey=K
+Unhotkey=K
+Researchtip=Avatar erlernen
+ResearchUberTip="Avatar erhöht die Rüstung des Bergkönigs um <AHav,DataA1>, seine Trefferpunkte um <AHav,DataB1>, seinen Schaden um <AHav,DataC1> und gewährt ihm Zauberimmunität.|nHält <AHav,Dur1> Sek. lang an."
+Researchhotkey=V
+
+[BHav]
+Bufftip=Avatar
+Buffubertip="Diese Einheit ist in Avatargestalt. Ihre Trefferpunkte, ihr Angriffsschaden und ihre Rüstung sind erhöht und sie ist immun gegen Magie."
+
+// Holy Light
+[AHhb]
+Name=Heiliges Licht
+Tip=Heiliges Licht [|cffffcc00Stufe 1|r],Heiliges Licht [|cffffcc00Stufe 2|r],Heiliges Licht [|cffffcc00Stufe 3|r]
+UberTip="Entfesselt heiliges Licht, das eine verbündete lebende Einheit um <AHhb,DataA1> Trefferpunkte heilt oder einer gegnerischen untoten Einheit halb so viel Schaden zufügt.","Entfesselt heiliges Licht, das eine verbündete lebende Einheit um <AHhb,DataA2> Trefferpunkte heilt oder einer gegnerischen untoten Einheit halb so viel Schaden zufügt.","Entfesselt heiliges Licht, das eine verbündete lebende Einheit um <AHhb,DataA3> Trefferpunkte heilt oder einer gegnerischen untoten Einheit halb so viel Schaden zufügt."
+Hotkey=T
+Researchtip=Heiliges Licht [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Entfesselt heiliges Licht, das eine verbündete lebende Einheit heilt oder einer gegnerischen untoten Einheit Schaden zufügt.|n|n|cffffcc00Stufe 1|r - Heilt <AHhb,DataA1> Trefferpunkte.|n|cffffcc00Stufe 2|r - Heilt <AHhb,DataA2> Trefferpunkte.|n|cffffcc00Stufe 3|r - Heilt <AHhb,DataA3> Trefferpunkte."
+Researchhotkey=T
+
+// Divine Shield
+[AHds]
+Name=Gottesschild
+Tip=Gottesschild [|cffffcc00Stufe 1|r] aktivieren,Gottesschild [|cffffcc00Stufe 2|r] aktivieren,Gottesschild [|cffffcc00Stufe 3|r] aktivieren
+Ubertip="Umgibt diese Einheit mit einem undurchdringlichen Schild, der sie <AHds,Dur1> Sek. lang vor jeglichem Schaden und Fähigkeiten schützt.","Umgibt diese Einheit mit einem undurchdringlichen Schild, der sie <AHds,Dur2> Sek. lang vor jeglichem Schaden und Fähigkeiten schützt.","Umgibt diese Einheit mit einem undurchdringlichen Schild, der sie <AHds,Dur3> Sek. lang vor jeglichem Schaden und Fähigkeiten schützt."
+Untip=Gottesschild deaktivieren
+Hotkey=D
+Unhotkey=D
+Researchtip=Gottesschild [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Umgibt den Paladin mit einem undurchdringlichen Schild, der ihn vorübergehend vor jeglichem Schaden und Fähigkeiten schützt.|n|n|cffffcc00Stufe 1|r - Hält <AHds,Dur1> Sek. lang an.|n|cffffcc00Stufe 2|r - Hält <AHds,Dur2> Sek. lang an.|n|cffffcc00Stufe 3|r - Hält <AHds,Dur3> Sek. lang an."
+Researchhotkey=D
+Globalmessage=
+Globalsound=
+
+[BHds]
+Bufftip=Gottesschild
+Buffubertip=Diese Einheit ist von einem Gottesschild geschützt und unverwundbar.
+
+// Devotion Aura
+[AHad]
+Name=Hingabeaura
+Tip=Hingabeaura [|cffffcc00Stufe 1|r],Hingabeaura [|cffffcc00Stufe 2|r],Hingabeaura [|cffffcc00Stufe 3|r]
+Ubertip="Erhöht die Rüstung verbündeter Einheiten in der Nähe um <AHad,DataA1,.>.","Erhöht die Rüstung verbündeter Einheiten in der Nähe um <AHad,DataA2,.>.","Erhöht die Rüstung verbündeter Einheiten in der Nähe um <AHad,DataA3,.>."
+Researchtip=Hingabeaura [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Erhöht die Rüstung verbündeter Einheiten in der Nähe.|n|n|cffffcc00Stufe 1|r - Erhöht die Basisrüstung um <AHad,DataA1,.>.|n|cffffcc00Stufe 2|r - Erhöht die Basisrüstung um <AHad,DataA2,.>.|n|cffffcc00Stufe 3|r - Erhöht die Basisrüstung um <AHad,DataA3,.>."
+Researchhotkey=I
+
+[BHad]
+Bufftip=Hingabeaura
+Buffubertip=Diese Einheit steht unter dem Effekt der Hingabeaura. Sie hat mehr Rüstung.
+
+// Resurrection
+[AHre]
+Name=Auferstehung
+Tip=Auferstehung
+Ubertip="Belebt <AHre,DataA1> verbündete Einheiten in der Nähe wieder."
+Hotkey=R
+Researchtip=Auferstehung erlernen
+Researchubertip="Belebt <AHre,DataA1> verbündete Einheiten in der Nähe wieder."
+Researchhotkey=R
+
+// Militia
+[Amil]
+Name=Zu den Waffen
+Tip=Zu den Waffen
+Untip=Zurück an die Arbeit
+Ubertip="Ruft den Arbeiter zum nächstgelegenen Hauptgebäude, um ihn zum Milizsoldaten aufzurüsten.|nHält <Amil,Dur1> Sek. lang an."
+Unubertip="Ruft den Milizsoldaten zum nächstgelegenen Hauptgebäude, um ihn zu entwaffnen und wieder zu einem Arbeiter zu machen."
+Hotkey=W
+Unhotkey=Z
+EditorSuffix= (Arbeiter)
+
+[Bmil]
+Bufftip=Milizsoldat
+Buffubertip=Diese Einheit wurde zum Milizsoldaten aufgerüstet. Ihre Bewegungs- und Angriffsgeschwindigkeit sowie ihr Angriffsschaden und ihre Rüstung sind erhöht.
+
+// Militia Conversion
+[Amic]
+Name=Zu den Waffen
+Tip=Zu den Waffen
+Untip=Zurück an die Arbeit
+Ubertip="Ruft alle nahen Arbeiter zum Rathaus, um sie zu Milizsoldaten aufzurüsten.|nHält <Amil,Dur1> Sek. lang an."
+Unubertip="Ruft alle nahen Milizsoldaten zum Rathaus, um sie zu Arbeitern abzurüsten."
+Hotkey=W
+Unhotkey=Z
+EditorSuffix= (Rathaus)
+
+//----------------------------------------------------
+// Buffs with no in-game text
+// EditorName is for the Object Editor list only
+
+[BHbz]
+EditorName=Blizzard (Benutzer)
+
+[Bdcb]
+EditorName=Trefferpunkte & Mana abziehen (Benutzer)
+
+[Bdcl]
+EditorName=Trefferpunkte abziehen (Benutzer)
+
+[Bdcm]
+EditorName=Mana abziehen (Benutzer)
+
+[Bdtb]
+EditorName=Trefferpunkte & Mana abziehen (Ziel)
+
+[Bdtl]
+EditorName=Trefferpunkte abziehen (Ziel)
+
+[Bdtm]
+EditorName=Mana abziehen (Ziel)
+
+[Bmlc]
+EditorName=Luftfesseln (Benutzer)
+
+[Bivs]
+EditorName=Unsichtbarkeit (Extra)
+
+[XHbz]
+EditorName=Blizzard (Effekt)
+
+[XHfs]
+EditorName=Flammenschlag (Effekt)
+
+[Xclf]
+EditorName=Wolke (Effekt)
+
+[Xfla]
+EditorName=Leuchtfeuer (Effekt)
+
+[Xfhs]
+EditorName="Gebäudeschaden - Menschen, klein"
+
+[Xfhm]
+EditorName="Gebäudeschaden - Menschen, mittel"
+
+[Xfhl]
+EditorName="Gebäudeschaden - Menschen, groß"
+
+[Ahsb]
+Ubertip="Erhöht den Schaden gegen gegnerische Ziele mit mittlerer Rüstung um <Ahsb,DataB1,%>%."
+Tip=Brecherklingen
+Name=Brecherklingen
+
+[Ahri]
+EditorSuffix=(Symbol)
+Ubertip=Erhöhte Angriffsreichweite.
+Tip=Langflinten
+Name=Langflinten
+
+[Ahan]
+EditorSuffix=(Symbol)
+Ubertip="Erhöht die maximalen Trefferpunkte dieser Einheit um <Rhan,base1>."
+Tip=Kampftierausbildung
+Name=Kampftierausbildung
+
+[Ahpe]
+EditorSuffix=(Symbol)
+Ubertip="Der Phönix lässt verzauberte Flammen auf nahe Gegner überspringen, die ihnen <Apxf,DataA1> Schaden zufügen sowie im Verlauf von <Apxf,Dur1> Sek. weitere <Apxf,DataB1> Schaden pro Sekunde. Die Hitze des Phönix verbrennt auch ihn selbst, wodurch er sich selbst Schaden zufügt. Beim Tod hinterlässt der Phönix ein Ei, aus dem ein neuer Phönix schlüpft."
+Tip=Phönix
+Name=Phönix
+
+[Ahlh]
+EditorSuffix=(Symbol)
+Ubertip="Erhöht die Menge Holz, die ein Arbeiter tragen kann, um <Rhlh,mod1>.","Erhöht die Menge Holz, die ein Arbeiter tragen kann, um <Rhlh,mod1>.","Erhöht die Menge Holz, die ein Arbeiter tragen kann, um zusätzlich <Rhlh,mod1>."
+Tip=Verbesserter Holzabbau,Verbesserter Holzabbau,Hoch entwickelter Holzabbau
+Name=Verbesserter Holzabbau,Verbesserter Holzabbau,Hoch entwickelter Holzabbau

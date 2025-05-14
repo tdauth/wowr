@@ -1,0 +1,129 @@
+﻿[Rusp]
+Name=Zerstörergestalt
+Tip=Zerstörergestalt erforschen
+Ubertip="Ermöglicht der Obsidianstatue, sich in einen Zerstörer zu verwandeln. Diese große Flugeinheit muss Magie verschlingen, um Mana zu erhalten. Beherrscht Zauberimmunität, Magie verschlingen, Mana absorbieren und Kugel der Vernichtung.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r"
+Hotkey=T
+
+[Rume]
+Name=Unheilige Kraft,Verbesserte unheilige Kraft,Hoch entwickelte unheilige Kraft
+Tip=Unheilige Kraft erforschen,Verbesserte unheilige Kraft erforschen,Hoch entwickelte unheilige Kraft erforschen
+Ubertip="Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten, Skelettkriegern und Skelettmagiern.","Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten, Skelettkriegern und Skelettmagiern zusätzlich.","Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten, Skelettkriegern und Skelettmagiern zusätzlich."
+Ubertip:custom,V0="Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten und Skelettkriegern.","Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten und Skelettkriegern zusätzlich.","Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten und Skelettkriegern zusätzlich."
+Ubertip:melee,V0="Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten und Skelettkriegern.","Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten und Skelettkriegern zusätzlich.","Erhöht den Angriffsschaden von Ghulen, Fleischwagen, Monstrositäten und Skelettkriegern zusätzlich."
+Hotkey=K,K,K
+
+[Rura]
+Name=Kreaturenangriff,Verbesserter Kreaturenangriff,Hoch entwickelter Kreaturenangriff
+Tip=Kreaturenangriff erforschen,Verbesserten Kreaturenangriff erforschen,Hoch entwickelten Kreaturenangriff erforschen
+Ubertip="Erhöht den Angriffsschaden von Gruftbestien, Gargoyles, Zerstörern und Frostwyrms.","Erhöht den Angriffsschaden von Gruftbestien, Gargoyles, Zerstörern und Frostwyrms zusätzlich.","Erhöht den Angriffsschaden von Gruftbestien, Gargoyles, Zerstörern und Frostwyrms zusätzlich."
+Ubertip:custom,V0="Erhöht den Angriffsschaden von Gruftbestien, Gargoyles und Frostwyrms.","Erhöht den Angriffsschaden von Gruftbestien, Gargoyles und Frostwyrms zusätzlich.","Erhöht den Angriffsschaden von Gruftbestien, Gargoyles und Frostwyrms zusätzlich."
+Ubertip:melee,V0="Erhöht den Angriffsschaden von Gruftbestien, Gargoyles und Frostwyrms.","Erhöht den Angriffsschaden von Gruftbestien, Gargoyles und Frostwyrms zusätzlich.","Erhöht den Angriffsschaden von Gruftbestien, Gargoyles und Frostwyrms zusätzlich."
+Hotkey=A,A,A
+
+[Ruar]
+Name=Unheilige Rüstung,Verbesserte unheilige Rüstung,Hoch entwickelte unheilige Rüstung
+Tip=Unheilige Rüstung erforschen,Verbesserte unheilige Rüstung erforschen,Hoch entwickelte unheilige Rüstung erforschen
+Ubertip="Erhöht die Rüstung von Ghulen, Monstrositäten, Skelettkriegern und Skelettmagiern.","Erhöht die Rüstung von Ghulen, Monstrositäten, Skelettkriegern und Skelettmagiern zusätzlich.","Erhöht die Rüstung von Ghulen, Monstrositäten, Skelettkriegern und Skelettmagiern zusätzlich."
+Ubertip:custom,V0="Erhöht die Rüstung von Ghulen, Monstrositäten und Skelettkriegern.","Erhöht die Rüstung von Ghulen, Monstrositäten und Skelettkriegern zusätzlich.","Erhöht die Rüstung von Ghulen, Monstrositäten und Skelettkriegern zusätzlich."
+Ubertip:melee,V0="Erhöht die Rüstung von Ghulen, Monstrositäten und Skelettkriegern.","Erhöht die Rüstung von Ghulen, Monstrositäten und Skelettkriegern zusätzlich.","Erhöht die Rüstung von Ghulen, Monstrositäten und Skelettkriegern zusätzlich."
+Hotkey=U,U,U
+
+[Rucr]
+Name=Kreaturenpanzer,Verbesserter Kreaturenpanzer,Hoch entwickelter Kreaturenpanzer
+Tip=Kreaturenpanzer erforschen,Verbesserten Kreaturenpanzer erforschen,Hoch entwickelten Kreaturenpanzer erforschen
+Ubertip="Erhöht die Rüstung von Gruftbestien, Gargoyles, Zerstörern und Frostwyrms.","Erhöht die Rüstung von Gruftbestien, Gargoyles, Zerstörern und Frostwyrms zusätzlich.","Erhöht die Rüstung von Gruftbestien, Gargoyles, Zerstörern und Frostwyrms zusätzlich."
+Ubertip:custom,V0="Erhöht die Rüstung von Gruftbestien, Gargoyles und Frostwyrms.","Erhöht die Rüstung von Gruftbestien, Gargoyles und Frostwyrms zusätzlich.","Erhöht die Rüstung von Gruftbestien, Gargoyles und Frostwyrms zusätzlich."
+Ubertip:melee,V0="Erhöht die Rüstung von Gruftbestien, Gargoyles und Frostwyrms.","Erhöht die Rüstung von Gruftbestien, Gargoyles und Frostwyrms zusätzlich.","Erhöht die Rüstung von Gruftbestien, Gargoyles und Frostwyrms zusätzlich."
+Hotkey=Z,Z,Z
+
+[Ruac]
+Name=Kannibalismus
+Tip=Kannibalismus erforschen
+Ubertip="Lehrt Ghule und Monstrositäten Kannibalismus, womit sie eine Leiche in der Nähe verschlingen können, um Trefferpunkte wiederherzustellen."
+Ubertip:custom,V0="Lehrt Ghule Kannibalismus, womit sie eine Leiche in der Nähe verschlingen können, um sich zu heilen."
+Ubertip:melee,V0="Lehrt Ghule Kannibalismus, womit sie eine Leiche in der Nähe verschlingen können, um Trefferpunkte wiederherzustellen."
+Hotkey=N
+Hotkey:custom,V0=N
+Hotkey:melee,V0=N
+
+[Rugf]
+Name=Ghulraserei
+Tip=Ghulraserei erforschen
+Ubertip="Erhöht die Angriffsgeschwindigkeit von Ghulen um <Rugf,base1,%>% und erhöht auch ihre Bewegungsgeschwindigkeit."
+Hotkey=I
+
+[Ruwb]
+Name=Gespinst
+Tip=Gespinst erforschen
+Ubertip="Lehrt Gruftbestien Gespinst, womit sie eine ausgewählte gegnerische Lufteinheit einspinnen und zu Boden zwingen können. Eingesponnene Einheiten können wie Bodeneinheiten angegriffen werden."
+Hotkey=P
+
+[Rusf]
+Name=Steingestalt
+Tip=Steingestalt erforschen
+Ubertip="Lehrt Gargoyles Steingestalt, womit sie sich in eine Statue mit hoher Rüstung, Zauberimmunität und Regeneration verwandeln können. Gargoyles können in dieser Gestalt nicht angreifen."
+Ubertip:custom,V0="Lehrt Gargoyles Steingestalt, womit sie sich in eine Statue mit hoher Rüstung und Regeneration verwandeln können. Gargoyles können in dieser Gestalt nicht angreifen."
+Hotkey=S
+
+[Rune]
+Name=Adeptenausbildung für Totenbeschwörer,Meisterausbildung für Totenbeschwörer
+Tip=Adeptenausbildung für Totenbeschwörer,Meisterausbildung für Totenbeschwörer
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Totenbeschwörern und lehrt sie Unheilige Raserei.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Totenbeschwörern und lehrt sie Verkrüppeln."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Totenbeschwörern und lehrt sie Unheilige Raserei.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Totenbeschwörern und lehrt sie Verkrüppeln."
+Ubertip:custom,V1="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Totenbeschwörern und lehrt sie Unheilige Raserei.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Totenbeschwörern und lehrt sie Verkrüppeln."
+Ubertip:melee,V0="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Totenbeschwörern und lehrt sie Unheilige Raserei.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Totenbeschwörern und lehrt sie Verkrüppeln."
+Hotkey=T,T
+
+[Ruba]
+Name=Adeptenausbildung für Banshees,Meisterausbildung für Banshees
+Tip=Adeptenausbildung für Banshees,Meisterausbildung für Banshees
+Ubertip="Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Banshees und lehrt sie Antimagische Hülle.","Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Banshees und lehrt sie Besessenheit."
+Ubertip:custom,V0="Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Banshees und lehrt sie Antimagische Hülle.","Erhöht das maximale Mana, die Manaregeneration, die Trefferpunkte und den Angriffsschaden von Banshees und lehrt sie Besessenheit."
+Hotkey=H,H
+
+[Rufb]
+Name=Eisatem
+Tip=Eisatem erforschen
+Ubertip="Lehrt Frostwyrms Eisatem, womit sie Gebäude vorübergehend außer Gefecht setzen können."
+Hotkey=I
+
+[Rusl]
+Name=Skelettlanglebigkeit
+Tip=Skelettlanglebigkeit erforschen
+Ubertip="Erhöht die Lebensdauer erweckter Skelettkrieger und Skelettmagier um <Rusl,base1> Sek."
+Ubertip:custom,V0="Erhöht die Lebensdauer erweckter Skelettkrieger um <Rusl,base1> Sek."
+Ubertip:melee,V0="Erhöht die Lebensdauer erweckter Skelettkrieger um <Rusl,base1> Sek."
+Hotkey=S
+
+[Rupc]
+Name=Krankheitswolke
+Tip=Krankheitswolke erforschen
+Ubertip="Gewährt Monstrositäten eine Krankheitswolkenaura, die gegnerischen Einheiten in der Nähe <Aap1,DataA1> Sek. lang <Aap1,DataB1> Schaden pro Sekunde zufügt. Außerdem erzeugen Angriffe von Fleischwagen Krankheitswolken, die gegnerischen Einheiten in der Nähe <Aap2,DataA1> Sek. lang <Aap2,DataB1> Schaden pro Sekunde zufügen.|nUntote sind immun gegen Krankheitswolken."
+Hotkey=W
+
+[Rusm]
+Name=Skelettbeherrschung
+Tip=Skelettbeherrschung erforschen
+Ubertip="Macht eins der zwei durch Totenerweckung erschaffenen Skelette zu einem Skelettmagier. Erhöht außerdem die Lebensdauer erweckter Skelettkrieger und Skelettmagier um <Rusl,base1> Sek."
+Ubertip:custom,V1=Macht eins der zwei durch Totenerweckung erschaffenen Skelette zu einem Skelettmagier.
+Hotkey=E
+
+[Rubu]
+Name=Eingraben
+Tip=Eingraben erforschen
+Ubertip="Ermöglicht Gruftbestien, sich einzugraben. Eingegrabene Gruftbestien sind unsichtbar und regenerieren mehr Trefferpunkte, können aber nicht angreifen."
+Hotkey=E
+
+
+[Ruex]
+Name=Leichen exhumieren
+Tip=Leichen exhumieren erforschen
+Ubertip="Ermöglicht Fleischwagen, Leichen zu erschaffen."
+Hotkey=E
+
+[Rupm]
+Name=Rucksack
+EditorSuffix= (Untote)
+Tip=Rucksack erforschen
+Ubertip="Ermöglicht bestimmten Bodeneinheiten der Untoten, Gegenstände zu tragen."
+Hotkey=C

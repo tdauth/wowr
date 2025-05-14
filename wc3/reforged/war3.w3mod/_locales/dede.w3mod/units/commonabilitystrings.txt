@@ -1,0 +1,178 @@
+//allied building
+[Aall]
+Name=Gemeinsamer Laden mit Verbündeten
+
+//burrow detection, fliers
+[Abdt]
+Name=Aufdecken eingegrabener Einheiten
+EditorSuffix="(Flugobjekte, überflüssig)"
+
+//purchase (shop)
+[Apit]
+Name=Gegenstand im Laden kaufen
+
+[Amou]
+Name=Aufsitzen
+Tip=Transformieren
+Untip=Rücktransformieren
+Ubertip=Wandelt den Helden in eine Alternativgestalt.
+Unubertip=Lässt den Helden wieder seine normale Gestalt annehmen.
+Hotkey=R
+Unhotkey=R
+
+[Ahar]
+Name=Abbauen
+Tip=Abbauen/Sammeln
+Ubertip=Baut Gold in Goldminen ab und sammelt Holz von Bäumen.
+Untip=Rohstoffe zurückbringen
+Unubertip=Bringt die abgebauten Rohstoffe zum nächsten Hauptgebäude.
+Hotkey=M
+Unhotkey=E
+EditorSuffix= (Gold und Holz)
+
+[Ahrl]
+Name=Abbauen
+Tip=Abbauen/Sammeln
+Ubertip=Sammelt Holz von Bäumen.
+Untip=Rohstoffe zurückbringen
+Unubertip=Bringt die abgebauten Rohstoffe zur nächsten Nekropole oder zum nächsten Friedhof.
+Hotkey=M
+Unhotkey=E
+EditorSuffix="(Ghule, Holz)"
+
+[Arev]
+Name=Held wiederbeleben
+
+[Aawa]
+Name=Held sofort wiederbeleben
+
+// passive 'detector' ability
+[Adet]
+Name=Detektor
+
+[Adt1]
+Name=Detektor
+
+[Adta]
+Name=Gegner aufdecken
+Tip=Gegner aufdecken
+Hotkey=R
+
+[Bdet]
+Bufftip=Aufgedeckt
+Buffubertip=Diese Einheit wurde aufgedeckt. Gegnerische Spieler können sie sehen.
+
+[Bvul]
+Bufftip=Unverwundbar
+Buffubertip=Diese Einheit ist unverwundbar. Sie erleidet keinen Schaden durch Angriffe und kann nicht als Ziel für Fähigkeiten ausgewählt werden.
+
+[Bspe]
+Bufftip=Geschwindigkeitsbonus
+Buffubertip=Diese Einheit hat einen Geschwindigkeitsbonus und bewegt sich schneller als gewöhnlich.
+
+[Bfro]
+Bufftip=Verlangsamt
+Buffubertip=Diese Einheit ist verlangsamt und bewegt sich langsamer als gewöhnlich.
+
+// peon/peasant repair ability
+[Arep]
+Name=Reparieren
+Tip=Reparieren
+Ubertip=Repariert mechanische Einheiten und Gebäude. Verbraucht dabei Rohstoffe.
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+
+// Abilities that need names in the editor
+[AEpa]
+Name=Feuergiftpfeile
+Tip=Feuergiftpfeile [|cffffcc00Stufe 1|r],Feuergiftpfeile [|cffffcc00Stufe 2|r],Feuergiftpfeile [|cffffcc00Stufe 3|r]
+Ubertip="Verstärkt Angriffe mit <AHfa,DataA1> Feuerschaden, aber jeder Schuss verbraucht Mana.","Verstärkt Angriffe mit <AHfa,DataA2> Feuerschaden, aber jeder Schuss verbraucht Mana.","Verstärkt Angriffe mit <AHfa,DataA3> Feuerschaden, aber jeder Schuss verbraucht Mana."
+Untip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick aktivieren.|r
+Unubertip=|cffc3dbffAutomatischen Einsatz mit Rechtsklick deaktivieren.|r
+Hotkey=R
+Unhotkey=R
+Researchtip=Feuergiftpfeile [|cffffcc00Stufe %d|r] erlernen
+Researchubertip="Verstärkt die Angriffe der Priesterin mit Feuerschaden.|n|n|cffffcc00Stufe 1|r - <AHfa,DataA1> Bonusschaden.|n|cffffcc00Stufe 2|r - <AHfa,DataA2> Bonusschaden.|n|cffffcc00Stufe 3|r - <AHfa,DataA3> Bonusschaden."
+Researchhotkey=R
+
+[AEbu]
+Name=Bauen (Nachtelfen)
+
+[AGbu]
+Name=Bauen (Naga)
+
+[AHbu]
+Name=Bauen (Menschen)
+
+[AHer]
+Name=Held
+
+[ANbu]
+Name=Bauen (Neutral)
+
+[AObu]
+Name=Bauen (Orcs)
+
+[ARal]
+Name=Sammelpunkt
+
+[AUbu]
+Name=Bauen (Untote)
+
+[Aalr]
+Name=Alarmieren
+
+[Aatk]
+Name=Angreifen
+
+[Afih]
+Name=Brennt (Menschen)
+
+[Afin]
+Name=Brennt (Nachtelfen)
+
+[Afio]
+Name=Brennt (Orcs)
+
+[Afir]
+Name=Brennt
+
+[Afiu]
+Name=Brennt (Untote)
+
+[Aloc]
+Name=Heuschrecke
+
+[Amov]
+Name=Bewegen
+
+[Atdp]
+Name=Pilot absetzen
+
+[Atlp]
+Name=Pilot aufnehmen
+
+[Attu]
+Name=Geschützturm
+
+// Stun buff
+[BSTN]
+Bufftip=Betäubt
+Buffubertip="Diese Einheit ist betäubt. Sie kann sich nicht bewegen, angreifen oder Fähigkeiten einsetzen."
+
+// Pause buff
+[BPSE]
+Bufftip=Betäubt
+Buffubertip="Diese Einheit bewegt sich nicht."
+EditorSuffix= (Pause)
+
+[Xbdt]
+EditorName=Aufdecken (Effekt)
+
+[Xbli]
+EditorName=Verseuchter Boden (Effekt)
+
+[Xdis]
+EditorName=Helden auflösen (Effekt)
