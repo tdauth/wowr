@@ -824,7 +824,7 @@ StringList {
     WITHOUT_FRIENDS_DESCRIPTION        "%1% XP * 2/4/6/8/10 hours straight.",
     OVERPOPULATION                     "Overpopulation",
     OVERPOPULATION_DESCRIPTION         "%1% XP for 600 food used.",
-    DEMON_HUNTER_DESCRIPTION           "%1% XP killed Archimonde within 30 minutes.",
+    DEMON_HUNTER_DESCRIPTION           "%1% XP for killing Archimonde within 30 minutes.",
     MASTER_LOCKSMITH                   "Master Locksmith",
     MASTER_LOCKSMITH_DESCRIPTION       "%1% XP per 50 unlocked chests.",
     MASTER_THIEF                       "Master Thief",
