@@ -749,6 +749,8 @@ StringList {
     NEW_STORMWIND_DESCRIPTION          "The capital city of the kingdom of Stormwind and the largest human city on Azeroth.",
     GILNEAS                            "Gilneas",
     GILNEAS_DESCRIPTION                "Gilneas.",
+    GNOMEREGAN                         "Gnomeregan",
+    GNOMEREGAN_DESCRIPTION             "Gnomeregan.",
     PANDARIA_DESCRIPTION               "Homeland of the Pandaren and birthplace of their ancient empire which is located in the southern part of Azeroth.",
     ELEMENTAL_PLANE                    "Elementarebene",
     ELEMENTAL_PLANE_DESCRIPTION        "A pocket dimension created by the Keepers to imprison Azeroth's elementals.",
@@ -1233,7 +1235,7 @@ StringList {
     FREELANCER                         "Freiberufler",
     WARLORD                            "Kriegsherr",
     PLAYER_INFOS                       "%1% (%2%%3%%4%),  XP-Rate: %5% %, Helden: %6% (%7%)/%8% (%9%)/%10% (%11%), Völker: %12%/%13%/%14%, Berufe: %15%/%16%/%17%, G: %18%/L: %19%/F: %20%/%21%, Evolution: %22%, HK %23%/UK %24%/R %25%/BK %26%/%27%",
-    PLAYER_SELECTION_SETTINGS          "Benutzen Sie -random und -start oder -rs|n- Modus: %1%|n- Helden: %2%/%3%/%4%|n- Völker: %5%/%6%/%7%|n- Berufe: %8%/%9%/%10%|n- Startort: %11%",
+    PLAYER_SELECTION_SETTINGS          "Benutzen Sie -random und -start/-rs oder -soul|n- Spielerauswahl: %1%|n- Modus: %2%|n- Helden: %3%/%4%/%5%|n- Völker: %6%/%7%/%8%|n- Berufe: %9%/%10%/%11%|n- Startort: %12%",
     // Repick
     NO_REPICK_WITH_ILLIDAN             "Sie können nicht neu auswählen während Sie Illidan kontrollieren.",
     NO_REPICK_WITH_ENEMIES             "Sie können nicht neuwählen, wenn sich Gegner in einer gewissen Reichweite befinden.",
