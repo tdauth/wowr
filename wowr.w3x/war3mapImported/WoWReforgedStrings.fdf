@@ -1159,6 +1159,8 @@ StringList {
     // Player Selection
     NOT_ALLOWED_IN_PLAYER_SELECTION    "Not allowed in player selection.",
     ONLY_DURING_PLAYER_SELECTION       "Only during player selection.",
+    CANNOT_CHANGE_GAME_MODE            "You have to be in your initial hero selection or full repick to change the game mode.",
+    UNABLE_TO_PICK_RACE                "Unable to pick a race.",
     PICK_YOUR_GAME_MODE                "Pick your game mode.",
     PICK_YOUR_FIRST_PROFESSION         "Pick your first profession.",
     PICK_YOUR_FIRST_RACE               "Pick your first race.",
