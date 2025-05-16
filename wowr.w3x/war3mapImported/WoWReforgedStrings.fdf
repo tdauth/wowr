@@ -675,6 +675,9 @@ StringList {
     PAGE_TITLE_POWERFUL_CREATURES      "(Powerful Creatures)",
     PAGE_TITLE_COOKING                 "(Cooking)",
     TARGET_MUST_BE_A_CRAFTING_STASH    "Target unit must be a Crafting Stash.",
+    CRAFTED_ITEM_X                     "Crafted item %1% (%2%).",
+    DISASSEMBLED_ITEM_X                "Disassembled item %1% (%2%).",
+    CRAFTED_UNIT_X                     "Summoned unit %1%.",
     // Skins
     SKIN_CHANGED                       "Changed skin to %1%.",
     SKIN_CHANGED_RANGE                 "Changed skin to %1% (%2%/%3%).",

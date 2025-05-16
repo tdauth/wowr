@@ -65,8 +65,8 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_QUILLBOAR_THORNS_AURA)
         call SetBuildUpgr(1, UPG_QUILLBOAR_QUIL_SPRAY)
         call SetBuildUpgr(1, UPG_QUILLBOAR_BACKPACK)
-        //call SetBuildUpgr(1, UPG_TUSKARR_BURIAL_PLACE)
-        //call SetBuildUnit(1, TUSKARR_BURIAL_PLACE)
+        call SetBuildUpgr(1, UPG_QUILLBOAR_THORN)
+        call SetBuildUnit(1, QUILLBOAR_THORN)
 
         call BuildingStrategyStandardTier3()
 

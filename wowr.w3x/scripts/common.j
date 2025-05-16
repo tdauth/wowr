@@ -5573,6 +5573,7 @@ globals
     constant integer QUILLBOAR_THORNY_SPIRE                          = 'o0AX' // watch tower
     constant integer QUILLBOAR_ANIMAL_BATTLE_GROUNDS                 = 'o0B2'
     constant integer QUILLBOAR_SACRIFICIAL_GROUNDS                   = 'o0B3'
+    constant integer QUILLBOAR_THORN                                 = 'o006' // special building
 
     constant integer UPG_QUILLBOAR_BACKPACK                          = 'R0IK'
     constant integer UPG_QUILLBOAR_MEDICINE_MAN                      = 'R0IL'
@@ -5584,6 +5585,7 @@ globals
     constant integer UPG_QUILLBOAR_MELEE                             = 'R0IS'
     constant integer UPG_QUILLBOAR_RANGED                            = 'R0IT'
     constant integer UPG_QUILLBOAR_ARMOR                             = 'R0IR'
+    constant integer UPG_QUILLBOAR_THORN                             = 'R08C' // special building
 
     constant integer QUILLBOAR_WORKER                                = 'o072'
     constant integer QUILLBOAR_QUILLBOAR                             = 'n0NM' // footman
