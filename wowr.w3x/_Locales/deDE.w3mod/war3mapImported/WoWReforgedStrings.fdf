@@ -675,6 +675,9 @@ StringList {
     PAGE_TITLE_POWERFUL_CREATURES      "(Mächtige Kreaturen)",
     PAGE_TITLE_COOKING                 "(Kochen)",
     TARGET_MUST_BE_A_CRAFTING_STASH    "Zieleinheit muss ein Herstellungslager sein.",
+    CRAFTED_ITEM_X                     "Gegenstand %1% (%2%) hergestellt.",
+    DISASSEMBLED_ITEM_X                "Gegenstand %1% (%2%) zerlegt.",
+    CRAFTED_UNIT_X                     "Einheit %1% beschworen.",
     // Skins
     SKIN_CHANGED                       "Skin zu %1% geändert.",
     SKIN_CHANGED_RANGE                 "Skin zu %1% geändert (%2%/%3%).",
@@ -1236,6 +1239,12 @@ StringList {
     WARLORD                            "Kriegsherr",
     PLAYER_INFOS                       "%1% (%2%%3%%4%),  XP-Rate: %5% %, Helden: %6% (%7%)/%8% (%9%)/%10% (%11%), Völker: %12%/%13%/%14%, Berufe: %15%/%16%/%17%, G: %18%/L: %19%/F: %20%/%21%, Evolution: %22%, HK %23%/UK %24%/R %25%/BK %26%/%27%",
     PLAYER_SELECTION_SETTINGS          "Benutzen Sie -random und -start/-rs oder -soul|n- Spielerauswahl: %1%|n- Modus: %2%|n- Helden: %3%/%4%/%5%|n- Völker: %6%/%7%/%8%|n- Berufe: %9%/%10%/%11%|n- Startort: %12%",
+    PLAYER_SELECTION_INITIAL           "Initial",
+    PLAYER_SELECTION_REPICK            "Neuauswahl",
+    PLAYER_SELECTION_REPICK_FULL       "Vollständige Neuauswahl",
+    PLAYER_SELECTION_HERO_X            "Held %1%",
+    PLAYER_SELECTION_PROFESSION_X      "Beruf %1%",
+    PLAYER_SELECTION_RACE_X            "Volk %1%",
     // Repick
     NO_REPICK_WITH_ILLIDAN             "Sie können nicht neu auswählen während Sie Illidan kontrollieren.",
     NO_REPICK_WITH_ENEMIES             "Sie können nicht neuwählen, wenn sich Gegner in einer gewissen Reichweite befinden.",

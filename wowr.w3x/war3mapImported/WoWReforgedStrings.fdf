@@ -661,6 +661,7 @@ StringList {
     BONUS_MOUNT_REQUIREMENT            "Bonus mounts require VIPs, hero level %1% or -unlock.",
     // Crafting
     X_IS_DISABLED                      "%1% is disabled.",
+    MISSING_REQUIREMENTS_FOR_X         "Missing requirements for %1%.",
     CAN_ONLY_SUMMON_FOOD_LIMIT         "Can only summon %1% creatures due to food limit.",
     NOT_ENOUGH_FOOD                    "Not enough food.",
     X_IS_NOT_AVAILABLE                 "%1% is not available.",
