@@ -6954,6 +6954,7 @@ function Crafting__CheckRecipeRequirements takes integer recipe,unit whichUnit r
 
     if ( Crafting__recipeRequirementCallback != 0 ) then
         set result=sc___prototype60_evaluate(Crafting__recipeRequirementCallback,recipe , whichUnit)
+        //call BJDebugMsg("Result with custom callback " + I2S(result))
     endif
 
     loop
@@ -7072,7 +7073,8 @@ function Crafting__CheckAllRecipesRequirementsForPageEx takes unit whichUnit,int
                     //else
                         //call BJDebugMsg("Item crafting is disabled." )
                     else
-                        call SimError(GetOwningPlayer(whichUnit) , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("RECIPE_IS_DISABLED")))),(GetObjectName(Crafting__recipesUIItemTypeIds[(recipe)]))))) // INLINED!!
+                        // Do not show when showing the page but only when trying to craft.
+                        //call SimError(GetOwningPlayer(whichUnit), Format(GetLocalizedString("X_IS_DISABLED")).s(GetRecipeName(recipe)).result())
                     endif
                     set groupUnit=null
                     set j=j + 1
@@ -7171,12 +7173,11 @@ function CraftItem takes item soldItem,unit sellingUnit,unit buyingUnit returns 
     loop
         exitwhen ( recipe >= counter and craftedItem != null )
         if ( not (Crafting__recipesIsSpacer[(recipe)]) and Crafting__recipesUIItemTypeIds[recipe] == soldItemTypeId ) then // INLINED!!
+            call RemoveItem(soldItem)
+            set soldItem=null
             if ( GetRecipeAvailableForPlayer(recipe , playerIdBuying) ) then
                 set charges=Crafting__CheckRecipeRequirements(recipe , sellingUnit)
                 if ( charges > 0 ) then
-                    call RemoveItem(soldItem)
-                    set soldItem=null
-                    
                     if ( (Crafting__recipesIsUnit[(recipe)]) ) then // INLINED!!
                         set availableFood=GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_CAP) - GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_USED)
                         set chargesWithFoodLimit=availableFood / GetFoodUsed(Crafting__recipesItemTypeIds[recipe])
@@ -7230,12 +7231,14 @@ function CraftItem takes item soldItem,unit sellingUnit,unit buyingUnit returns 
                             call UnitAddItem(sellingUnit, additionalCraftedItems[j]) // TODO Drops the item next to the crafting unit.
                             set j=j + 1
                         endloop
-                        
                     endif
+                else
+                    call SimError(ownerBuying , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("MISSING_REQUIREMENTS_FOR_X")))),GetObjectName(Crafting__recipesItemTypeIds[recipe])))) // INLINED!!
                 endif
             else
                 call SimError(ownerBuying , s__AFormat_result(s__AFormat_s((s__AFormat_create((GetLocalizedString("X_IS_NOT_AVAILABLE")))),GetObjectName(Crafting__recipesItemTypeIds[recipe])))) // INLINED!!
             endif
+            exitwhen ( true ) // found the matching recipe
         endif
         set recipe=recipe + 1
     endloop
@@ -8415,7 +8418,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs300664875")
+call ExecuteFunc("jasshelper__initstructs92389609")
 call ExecuteFunc("FrameLoader__init_function")
 call ExecuteFunc("FrameSaver__Init")
 call ExecuteFunc("PagedButtons__Init")
@@ -8494,7 +8497,7 @@ function sa___prototype60_MapRecipeRequirementCallback takes nothing returns boo
     return true
 endfunction
 
-function jasshelper__initstructs300664875 takes nothing returns nothing
+function jasshelper__initstructs92389609 takes nothing returns nothing
     set st__PagedButtons_Type_onDestroy[1]=null
     set st__PagedButtons_Type_onDestroy[3]=CreateTrigger()
     call TriggerAddCondition(st__PagedButtons_Type_onDestroy[3],Condition( function sa__PagedButtons_SlotType_onDestroy))
