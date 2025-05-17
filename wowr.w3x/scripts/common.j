@@ -3040,6 +3040,7 @@ globals
     constant integer LEVER_BRIDGE                                    = 'n0HZ'
     constant integer LEVER_GATE                                      = 'n0ES'
     constant integer LEVER_GATE_AND_BRIDGE                           = 'n08R'
+    constant integer LEVER_GATE_AND_PORTAL                           = 'n03A'
     constant integer LEVER_ALL                                       = 'n0AH'
 
     constant integer MOVE_BRIDGE_DOWN                                = 'o02X' // close
