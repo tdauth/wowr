@@ -661,6 +661,7 @@ StringList {
     BONUS_MOUNT_REQUIREMENT            "Bonus-Reittiere benötigen VIPs, Heldenstufe %1% oder -unlock.",
     // Crafting
     X_IS_DISABLED                      "%1% ist deaktiviert.",
+    MISSING_REQUIREMENTS_FOR_X         "Voraussetzungen für %1% nicht erfüllt.",
     CAN_ONLY_SUMMON_FOOD_LIMIT         "Nur %1% Kreaturen können aufgrund des Nahrungslimits beschworen werden.",
     NOT_ENOUGH_FOOD                    "Nicht genügend Nahrung.",
     X_IS_NOT_AVAILABLE                 "%1% ist nicht verfügbar.",
@@ -1090,6 +1091,7 @@ StringList {
     SAVE_CODES_DISABLED                "Das Laden von Speicher-Codes wurde für dieses Spiel deaktiviert!",
     SUCCESSFULLY_LOADED_X              "%1% erfolgreich geladen!",
     UNABLE_TO_LOAD_X                   "%1% kann nicht geladen werden, weil es nicht zu Ihren gewählten Völkern oder Berufen gehört!",
+    UNABLE_TO_LOAD_X_LIMIT_Y           "%1% kann nicht geladen werden, weil Sie das Limit erreicht haben: %2%/%3%.",
     UNABLE_TO_LOAD_X_TOMES             "%1% kann nicht geladen werden, weil Folianten deaktiviert sind!",
     SAVE_CODE_SLOT_BUILDING            "%1% - |cff00ff00%2%|r (%3%|%4%)",
     SAVE_CODE_SLOT_BUILDING_RED        "%1% - |cffff0000%2%|r (%3%|%4%)",
