@@ -2777,6 +2777,8 @@ globals
     // balance
     constant integer MANA_COSTS_PER_ABILITY_LEVEL                    = 10
 
+    constant integer DUNGEON_KEY                                     = 'I04B'
+
     // Hero Journey
     constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
     constant integer HERO_JOURNEY_RANDOM_EVENTS                      = 10
