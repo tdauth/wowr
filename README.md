@@ -18,7 +18,7 @@ The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the War
 
 Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release.
 
-[Donate](https://www.paypal.com/donate/?hosted_button_id=ZAAKMQLSNGDK8):
+[Donate](https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8):
 
 ![Donate](images/QR_Code_Donate.png "Donate")
 
