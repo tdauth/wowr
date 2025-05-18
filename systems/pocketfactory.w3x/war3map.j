@@ -1,15 +1,15 @@
 globals
 //globals from PocketFactory:
 constant boolean LIBRARY_PocketFactory=true
-unit PocketFactory___triggerCaster= null
-unit PocketFactory___triggerPocketFactory= null
-trigger array PocketFactory___callbackTriggers
-integer PocketFactory___callbackTriggersCounter= 0
+unit PocketFactory__triggerCaster= null
+unit PocketFactory__triggerPocketFactory= null
+trigger array PocketFactory__callbackTriggers
+integer PocketFactory__callbackTriggersCounter= 0
     
-group PocketFactory___casters= CreateGroup()
+group PocketFactory__casters= CreateGroup()
     
-trigger PocketFactory___castTrigger= CreateTrigger()
-trigger PocketFactory___enterTrigger= CreateTrigger()
+trigger PocketFactory__castTrigger= CreateTrigger()
+trigger PocketFactory__enterTrigger= CreateTrigger()
 //endglobals from PocketFactory
     // Generated
 trigger gg_trg_Melee_Initialization= null
@@ -35,7 +35,7 @@ function sc___prototype8_evaluate takes integer i,unit a1 returns nothing
 
 endfunction
 function h__RemoveUnit takes unit a0 returns nothing
-    //hook: PocketFactory___RemoveUnitHook
+    //hook: PocketFactory__RemoveUnitHook
     call sc___prototype8_evaluate(1,a0)
 call RemoveUnit(a0)
 endfunction
@@ -56,61 +56,61 @@ function IsUnitPocketFactory takes unit whichUnit returns boolean
 endfunction
 
 function GetTriggerPocketFactoryCaster takes nothing returns unit
-    return PocketFactory___triggerCaster
+    return PocketFactory__triggerCaster
 endfunction
 
 function GetTriggerPocketFactory takes nothing returns unit
-    return PocketFactory___triggerPocketFactory
+    return PocketFactory__triggerPocketFactory
 endfunction
 
 function TriggerRegisterPocketFactorySummon takes trigger whichTrigger returns nothing
-    set PocketFactory___callbackTriggers[PocketFactory___callbackTriggersCounter]=whichTrigger
-    set PocketFactory___callbackTriggersCounter=PocketFactory___callbackTriggersCounter + 1
+    set PocketFactory__callbackTriggers[PocketFactory__callbackTriggersCounter]=whichTrigger
+    set PocketFactory__callbackTriggersCounter=PocketFactory__callbackTriggersCounter + 1
 endfunction
 
-function PocketFactory___TriggerConditionCast takes nothing returns boolean
-    if ( IsPocketFactoryAbility(GetSpellAbilityId()) and not IsUnitInGroup(GetTriggerUnit(), PocketFactory___casters) ) then
-        call GroupAddUnit(PocketFactory___casters, GetTriggerUnit())
+function PocketFactory__TriggerConditionCast takes nothing returns boolean
+    if ( IsPocketFactoryAbility(GetSpellAbilityId()) and not IsUnitInGroup(GetTriggerUnit(), PocketFactory__casters) ) then
+        call GroupAddUnit(PocketFactory__casters, GetTriggerUnit())
     endif
     return false
 endfunction
 
-function PocketFactory___SummonPocketFactory takes unit factory,unit caster returns nothing
+function PocketFactory__SummonPocketFactory takes unit factory,unit caster returns nothing
     local integer i= 0
     if ( caster != null ) then
-        call GroupRemoveUnit(PocketFactory___casters, caster)
+        call GroupRemoveUnit(PocketFactory__casters, caster)
     endif
     loop
-        exitwhen ( i == PocketFactory___callbackTriggersCounter )
-        if ( IsTriggerEnabled(PocketFactory___callbackTriggers[i]) ) then
-            set PocketFactory___triggerCaster=caster
-            set PocketFactory___triggerPocketFactory=factory
-            call ConditionalTriggerExecute(PocketFactory___callbackTriggers[i])
+        exitwhen ( i == PocketFactory__callbackTriggersCounter )
+        if ( IsTriggerEnabled(PocketFactory__callbackTriggers[i]) ) then
+            set PocketFactory__triggerCaster=caster
+            set PocketFactory__triggerPocketFactory=factory
+            call ConditionalTriggerExecute(PocketFactory__callbackTriggers[i])
         endif
         set i=i + 1
     endloop
 endfunction
 
-function PocketFactory___TriggerConditionEnter takes nothing returns boolean
+function PocketFactory__TriggerConditionEnter takes nothing returns boolean
     if ( (IsPocketFactory(GetUnitTypeId((GetTriggerUnit())))) ) then // INLINED!!
-        call PocketFactory___SummonPocketFactory(GetTriggerUnit() , FirstOfGroup(PocketFactory___casters))
+        call PocketFactory__SummonPocketFactory(GetTriggerUnit() , FirstOfGroup(PocketFactory__casters))
     endif
     return false
 endfunction
 
-function PocketFactory___Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(PocketFactory___castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(PocketFactory___castTrigger, Condition(function PocketFactory___TriggerConditionCast))
+function PocketFactory__Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(PocketFactory__castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(PocketFactory__castTrigger, Condition(function PocketFactory__TriggerConditionCast))
     
-    call TriggerRegisterEnterRectSimple(PocketFactory___enterTrigger, GetPlayableMapRect())
-    call TriggerAddCondition(PocketFactory___enterTrigger, Condition(function PocketFactory___TriggerConditionEnter))
+    call TriggerRegisterEnterRectSimple(PocketFactory__enterTrigger, GetPlayableMapRect())
+    call TriggerAddCondition(PocketFactory__enterTrigger, Condition(function PocketFactory__TriggerConditionEnter))
 endfunction
 
-function PocketFactory___RemoveUnitHook takes unit whichUnit returns nothing
-    call GroupRemoveUnit(PocketFactory___casters, whichUnit)
+function PocketFactory__RemoveUnitHook takes unit whichUnit returns nothing
+    call GroupRemoveUnit(PocketFactory__casters, whichUnit)
 endfunction
 
-//processed hook: hook RemoveUnit PocketFactory___RemoveUnitHook
+//processed hook: hook RemoveUnit PocketFactory__RemoveUnitHook
 
 
 //library PocketFactory ends
@@ -140,7 +140,7 @@ endfunction
 //*
 //***************************************************************************
 //***************************************************************************
-//*  PocketFactory
+//*  Barades Pocket Factory
 
 //***************************************************************************
 //*
@@ -262,7 +262,7 @@ endfunction
 // Trigger: Summon Pocket Factory
 //===========================================================================
 function Trig_Summon_Pocket_Factory_Actions takes nothing returns nothing
-    call BJDebugMsg("Summon pocket factory " + GetUnitName((PocketFactory___triggerPocketFactory)) + " from caster " + GetUnitName((PocketFactory___triggerCaster))) // INLINED!!
+    call BJDebugMsg("Summon pocket factory " + GetUnitName((PocketFactory__triggerPocketFactory)) + " from caster " + GetUnitName((PocketFactory__triggerCaster))) // INLINED!!
 endfunction
 
 //===========================================================================
@@ -359,8 +359,8 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs187359750")
-call ExecuteFunc("PocketFactory___Init")
+call ExecuteFunc("jasshelper__initstructs188231750")
+call ExecuteFunc("PocketFactory__Init")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -394,15 +394,15 @@ endfunction
 
 
 //Struct method generated initializers/callers:
-function sa___prototype8_PocketFactory___RemoveUnitHook takes nothing returns boolean
-    call GroupRemoveUnit(PocketFactory___casters, (f__arg_unit1)) // INLINED!!
+function sa___prototype8_PocketFactory__RemoveUnitHook takes nothing returns boolean
+    call GroupRemoveUnit(PocketFactory__casters, (f__arg_unit1)) // INLINED!!
     return true
 endfunction
 
-function jasshelper__initstructs187359750 takes nothing returns nothing
+function jasshelper__initstructs188231750 takes nothing returns nothing
     set st___prototype8[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype8[1],function sa___prototype8_PocketFactory___RemoveUnitHook)
-    call TriggerAddCondition(st___prototype8[1],Condition(function sa___prototype8_PocketFactory___RemoveUnitHook))
+    call TriggerAddAction(st___prototype8[1],function sa___prototype8_PocketFactory__RemoveUnitHook)
+    call TriggerAddCondition(st___prototype8[1],Condition(function sa___prototype8_PocketFactory__RemoveUnitHook))
 
 endfunction
 
