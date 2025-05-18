@@ -1195,6 +1195,8 @@ StringList {
     HIPPITY_HOPPITY                    "Hippity Hoppity!",
     WHO_DARES_TO_DEFILE                "Wer ist so dreist und entweiht dies alte Land?",
     TREMBLE_MORTALS_AND_DESPAIR        "Erzittert, Sterbliche und verzweifelt! Diese Welt ist dem Untergang geweiht!",
+    FOR_THE_ALLIANCE                   "Für die Allianz!",
+    FOR_THE_HORDE                      "Für die Horde!",
     // Hero Journey
     HERO_JOURNEY_X_MESSAGE             "|cff00ff00STUFE %1%:|r %2%",
     HERO_JOURNEY_X_QUEST_ITEM          "%1%: %2%",
