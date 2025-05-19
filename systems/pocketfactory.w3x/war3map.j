@@ -1,4 +1,7 @@
 globals
+//globals from WorldBounds:
+constant boolean LIBRARY_WorldBounds=true
+//endglobals from WorldBounds
 //globals from PocketFactory:
 constant boolean LIBRARY_PocketFactory=true
 unit PocketFactory__triggerCaster= null
@@ -14,10 +17,20 @@ trigger PocketFactory__enterTrigger= CreateTrigger()
     // Generated
 trigger gg_trg_Melee_Initialization= null
 trigger gg_trg_Summon_Pocket_Factory= null
+trigger gg_trg_WorldBounds= null
 
 trigger l__library_init
 
 //JASSHelper struct globals:
+constant integer si__WorldBounds=1
+integer s__WorldBounds_maxX
+integer s__WorldBounds_maxY
+integer s__WorldBounds_minX
+integer s__WorldBounds_minY
+integer s__WorldBounds_centerX
+integer s__WorldBounds_centerY
+rect s__WorldBounds_world
+region s__WorldBounds_worldRegion
 trigger array st___prototype8
 unit f__arg_unit1
 
@@ -40,6 +53,30 @@ function h__RemoveUnit takes unit a0 returns nothing
 call RemoveUnit(a0)
 endfunction
 
+//library WorldBounds:
+	
+		
+		
+		
+		
+//Implemented from module WorldBounds__WorldBoundInit:
+  function s__WorldBounds_WorldBounds__WorldBoundInit__onInit takes nothing returns nothing
+			set s__WorldBounds_world=GetWorldBounds()
+			
+			set s__WorldBounds_maxX=R2I(GetRectMaxX(s__WorldBounds_world))
+			set s__WorldBounds_maxY=R2I(GetRectMaxY(s__WorldBounds_world))
+			set s__WorldBounds_minX=R2I(GetRectMinX(s__WorldBounds_world))
+			set s__WorldBounds_minY=R2I(GetRectMinY(s__WorldBounds_world))
+			
+			set s__WorldBounds_centerX=R2I(( s__WorldBounds_maxX + s__WorldBounds_minX ) / 2)
+			set s__WorldBounds_centerY=R2I(( s__WorldBounds_minY + s__WorldBounds_maxY ) / 2)
+			
+			set s__WorldBounds_worldRegion=CreateRegion()
+			
+			call RegionAddRect(s__WorldBounds_worldRegion, s__WorldBounds_world)
+  endfunction
+
+//library WorldBounds ends
 //library PocketFactory:
 
 
@@ -102,7 +139,7 @@ function PocketFactory__Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(PocketFactory__castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(PocketFactory__castTrigger, Condition(function PocketFactory__TriggerConditionCast))
     
-    call TriggerRegisterEnterRectSimple(PocketFactory__enterTrigger, GetPlayableMapRect())
+    call TriggerRegisterEnterRegion(PocketFactory__enterTrigger, s__WorldBounds_worldRegion, null)
     call TriggerAddCondition(PocketFactory__enterTrigger, Condition(function PocketFactory__TriggerConditionEnter))
 endfunction
 
@@ -239,6 +276,9 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+// Trigger: WorldBounds
+//===========================================================================
+//===========================================================================
 // Trigger: Melee Initialization
 //
 // Default melee game initialization for all players
@@ -273,6 +313,7 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
+    //Function not found: call InitTrig_WorldBounds()
     call InitTrig_Melee_Initialization()
     call InitTrig_Summon_Pocket_Factory()
 endfunction
@@ -359,7 +400,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs188231750")
+call ExecuteFunc("jasshelper__initstructs295573937")
 call ExecuteFunc("PocketFactory__Init")
 
     call InitGlobals()
@@ -399,10 +440,12 @@ function sa___prototype8_PocketFactory__RemoveUnitHook takes nothing returns boo
     return true
 endfunction
 
-function jasshelper__initstructs188231750 takes nothing returns nothing
+function jasshelper__initstructs295573937 takes nothing returns nothing
     set st___prototype8[1]=CreateTrigger()
     call TriggerAddAction(st___prototype8[1],function sa___prototype8_PocketFactory__RemoveUnitHook)
     call TriggerAddCondition(st___prototype8[1],Condition(function sa___prototype8_PocketFactory__RemoveUnitHook))
+
+call ExecuteFunc("s__WorldBounds_WorldBounds__WorldBoundInit__onInit")
 
 endfunction
 
