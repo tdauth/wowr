@@ -396,7 +396,7 @@ StringList {
     SLUDGE_MONSTROSITY                 "Schlamm-Monstrosität",
     SALAMANDER_LORD                    "Salamander Lord",
     REVENANT                           "Revenant",
-    BERSERK_WILDKIN                    "Berserk Wildkin",
+    BERSERK_WILDKIN                    "Berserker-Wildekin",
     EVOKER                             "Evoker",
     DRAGONSPAWN                        "Drachenbrut",
     FIRELORD                           "Feuerlord",
@@ -1162,6 +1162,13 @@ StringList {
     HIDEOUTS_ARE_RESTRUCTED            "Verstecke sind auf Freiberufler beschränkt.",
     // Player Selection
     NOT_ALLOWED_IN_PLAYER_SELECTION    "In Spielerauswahl nicht erlaubt.",
+    ONLY_DURING_PLAYER_SELECTION       "Nur während der Spielerauswahl.",
+    CANNOT_CHANGE_GAME_MODE            "Sie müssen in der initialen Heldenauswahl oder vollständigen Neuauswahl sein, um den Spielmodus ändern zu können.",
+    UNABLE_TO_PICK_RACE                "Volk kann nicht gewählt werden.",
+    PICK_YOUR_GAME_MODE                "Wählen Sie Ihren Spielmodus.",
+    PICK_YOUR_FIRST_PROFESSION         "Wählen Sie Ihren ersten Beruf.",
+    PICK_YOUR_FIRST_RACE               "Wählen Sie Ihre erstes Volk.",
+    PICK_YOUR_HERO_FIRST               "Wählen Sie zunächst Ihren Helden.",
     HYPHEN_FIRST_RACE                  "- Erstes Volk",
     HYPHEN_SECOND_RACE                 "- Zweites Volk",
     HYPHEN_THIRD_RACE                  "- Drittes Volk",
@@ -1175,8 +1182,8 @@ StringList {
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt.",
     // Alliance with the Burning Legion
     ALLIANCE_THE_BURNING_LEGION_COLON  "Allianz mit der brennenden Legion:",
-    ALLIANCE_THE_BURNING_LEGION_START  "The alliance between The Burning Legion and %1% has started for %2% minutes!",
-    ALLIANCE_THE_BURNING_LEGION_END    "The alliance between The Burning Legion and %1% has ended!",
+    ALLIANCE_THE_BURNING_LEGION_START  "Die Allianz zwischen der brennenden Legion und %1% für %2% Minuten hat begonnen!",
+    ALLIANCE_THE_BURNING_LEGION_END    "Die Allianz zwischen der brennenden Legion und %1% ist zu Ende!",
     // Taunts
     TAUNTS                             "Verspottungen",
     TAUNTS_DESCRIPTION                 "Verspottungen können genutzt werden, um Klangeffekte mit Chat-Befehlen an andere Spieler zu senden.",
