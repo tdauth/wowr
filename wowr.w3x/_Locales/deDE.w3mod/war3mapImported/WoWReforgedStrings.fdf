@@ -309,7 +309,7 @@ StringList {
     GOBLIN_SHREDDER                    "Goblinschredder",
     GUNNER                             "Schütze",
     SEA_WITCH                          "Seehexe",
-    NAGA_ROYAL_GUARD                   "Nagakönigswachen",
+    NAGA_ROYAL_GUARD                   "Nagakönigswache",
     NAGA_SIREN                         "Nagasirene",
     LADY_VASHJ                         "Lady Vashj",
     GNOMISH_ENGINEER                   "Gnomischer Ingenieur",
