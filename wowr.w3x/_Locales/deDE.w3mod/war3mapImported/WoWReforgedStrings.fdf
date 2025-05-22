@@ -802,6 +802,7 @@ StringList {
     EMERALD_DREAM_DESCRIPTION          "A vast, ever-changing spirit world that exists outside the boundaries of the physical world.",
     SHADOWLANDS                        "Schattenlande",
     SHADOWLANDS_DESCRIPTION            "The realm of Death, an infinite plane where the souls of deceased mortals go to be reborn, serve, find peace, do battle, or endure endless torment.",
+    HOWLING_FJORD_DESCRIPTION          "Howling Fjord.",
     // Achievements
     COLON_ACHIEVEMENTS                 "Errungenschaften:",
     ACHIEVEMENT_BONUS_MESSAGE          "|cff0000ff%1% +%2% XP und Gold:|r %3%",
