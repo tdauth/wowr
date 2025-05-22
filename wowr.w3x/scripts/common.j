@@ -5796,7 +5796,36 @@ globals
     constant integer DRAGONKIN_HOUSING                               = 'h082'
 
     // WoW Reforged abilities
+
+    // Units (abilities)
     constant integer ABILITY_INVISIBILITY                            = 'Aivs'
+
+    // Heroes (spells)
+    constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
+
+    constant integer SLOT_1_HERO                                     = 'A0OF'
+    constant integer SLOT_2_HERO                                     = 'A0OG'
+    constant integer SLOT_3_HERO                                     = 'A0OD'
+    constant integer SLOT_4_HERO                                     = 'A0OH'
+    constant integer SLOT_5_HERO                                     = 'A0OI'
+
+    // Slot 1
+    constant integer POCKET_FACTORY                                  = 'ANsy'
+    constant integer SUMMON_BEAR                                     = 'ANsg'
+    constant integer HEALING_SPRAY                                   = 'ANhs'
+    constant integer SILENCE                                         = 'ANsi'
+    constant integer DISARMAMENT                                     = 'A03C'
+    constant integer CYCLONE                                         = 'A0K1'
+    constant integer FORKED_LIGHTNING                                = 'ANfl'
+    constant integer RAIN_OF_FIRE                                    = 'ANrf'
+    constant integer CURSE                                           = 'A0SX'
+    constant integer REJUVENATION                                    = 'A06X'
+    constant integer RAISE_DEAD                                      = 'A0KG'
+    constant integer CANNIBALIZE                                     = 'A0TY'
+    constant integer SOUL_BURN                                       = 'ANso'
+    constant integer BREATH_OF_FIRE                                  = 'ANbf'
+    constant integer CONTROL_MAGIC                                   = 'A0EN'
+    constant integer REPAIR                                          = 'A0K4'
 
     // Schools of Magic
 
@@ -5857,7 +5886,6 @@ globals
     constant integer ABILITY_REINCARNATION                           = 'ACrn'
 
     // WoW Reforged heroes
-    constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
 
     // Human
     constant integer WIZARD                                          = 'H00W'
