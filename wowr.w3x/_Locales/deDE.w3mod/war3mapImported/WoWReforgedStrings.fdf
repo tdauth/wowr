@@ -636,7 +636,7 @@ StringList {
     // Profession Inscriptor
     INSCRIPTOR_HERO_INFO               "%1% Heldenattribute/Rüstung/beschworene Einheiten %2%, Schaden %3%, Trefferpunkte/Mana %4%",
     ENCHANTABLE_ITEM_ABILITIES         "Verzauberbare Gegenstandsfähigkeiten: ",
-    INSCRIPTABLE_SPELLS                "Beschriftbare Zauber: ",
+    INSCRIPTABLE_SPELLS                "Beschriftbare Zauber: Beschwörungszauber, ",
     // Profession Cook
     TARGET_ITEM_MUST_BE_FOOD           "Zielgegenstand muss Nahrung sein.",
     // Profession Fisherman

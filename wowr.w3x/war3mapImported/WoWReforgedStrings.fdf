@@ -636,7 +636,7 @@ StringList {
     // Profession Inscriptor and Enchanter
     INSCRIPTOR_HERO_INFO               "%1% hero stats/defense/summoned units %2%, damage %3%, hp/mana %4%",
     ENCHANTABLE_ITEM_ABILITIES         "Enchantable item abilities: ",
-    INSCRIPTABLE_SPELLS                "Inscriptable spells: ",
+    INSCRIPTABLE_SPELLS                "Inscriptable spells: Summon spells, ",
     // Profession Cook
     TARGET_ITEM_MUST_BE_FOOD           "Target item must be food.",
     // Profession Fisherman/Captain
