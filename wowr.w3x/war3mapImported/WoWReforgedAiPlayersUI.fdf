@@ -286,6 +286,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "GILNEAS",      -2,
         MenuItem "GNOMEREGAN",      -2,
         MenuItem "NETHERSTORM",      -2,
+        MenuItem "HOWLING_FJORD",      -2,
     }
 }
 
