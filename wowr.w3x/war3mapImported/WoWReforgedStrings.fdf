@@ -1354,6 +1354,10 @@ StringList {
     TILE_OUTLAND_ROUGH_DIRT            "Red Rough Dirt",
     TILE_UNDERGROUND_BRICK             "Underground",
     UNKNOWN                            "Unknown",
+    // Trolls
+    FOREST_TROLLS                      "Forest Trolls",
+    DARK_TROLLS                        "Dark Trolls",
+    ICE_TROLLS                         "Ice Trolls",
     // Railway
     TRAIN_HAS_TO_BE_STOPPED            "The train has to be stopped.",
     TRAIN_MUST_BE_IN_STATION           "The train must be in a station.",
