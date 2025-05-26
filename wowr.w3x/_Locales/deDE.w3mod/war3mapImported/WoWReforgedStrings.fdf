@@ -436,6 +436,7 @@ StringList {
     MALDRAXXUS                         "Maldraxxus",
     NYALOTHA                           "Ny'alotha",
     DRAGON_ISLES                       "Dracheninseln",
+    HOWLING_FJORD                      "Howling Fjord",
     // Teams
     ALLIANCE                           "Allianz",
     HORDE                              "Horde",
@@ -1353,6 +1354,10 @@ StringList {
     TILE_OUTLAND_ROUGH_DIRT            "Rote raue Erde",
     TILE_UNDERGROUND_BRICK             "Unterirdisch",
     UNKNOWN                            "Unbekannt",
+    // Trolls
+    FOREST_TROLLS                      "Wald-Trolle",
+    DARK_TROLLS                        "Dunkle Trolle",
+    ICE_TROLLS                         "Eis-Trolle",
     // Railway
     TRAIN_HAS_TO_BE_STOPPED            "Der Zug muss gestoppt worden sein.",
     TRAIN_MUST_BE_IN_STATION           "Der Zug muss an einem Bahnhof stehen.",
