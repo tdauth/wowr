@@ -289,6 +289,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "HOWLING_FJORD",      -2,
         MenuItem "JADEFIRE_GLEN",      -2,
         MenuItem "ECHO_ISLES",      -2,
+        MenuItem "DARKSPEAR_ISLANDS",      -2,
     }
 }
 
