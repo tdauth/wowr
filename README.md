@@ -1497,3 +1497,4 @@ Here is a list of some modified versions online:
 * GhostThruster: [BTNdraenei](https://www.hiveworkshop.com/threads/btndraenei.274911/)
 * HuanJuan: [Warbeast Kraal](https://www.hiveworkshop.com/threads/warbeast-kraal.352024/)
 * Ujimasa Hojo: [War Mill (BETA) and Derivatives](https://www.hiveworkshop.com/threads/war-mill-beta-and-derivatives.287945/)
+* frostwhisper: [Troll Arena](https://www.hiveworkshop.com/threads/troll-arena.354984)

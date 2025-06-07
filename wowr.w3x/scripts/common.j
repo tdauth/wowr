@@ -2918,7 +2918,7 @@ globals
 
     // Neutral
     constant integer GOLD_MINE                                       = 'ngol'
-    constant integer WATER_GOLD_MINE                                 = 'n03G'
+    constant integer OIL_PATCH                                       = 'u031'
     constant integer RANDOM_MINE                                     = 'n0DF'
     constant integer GEMSTONES_MINE                                  = 'n0DC'
     constant integer ORE_MINE                                        = 'n0DG'
