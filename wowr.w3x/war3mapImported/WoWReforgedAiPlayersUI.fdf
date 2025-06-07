@@ -293,6 +293,9 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "THERAMORE",      -2,
         MenuItem "LORDAERON",      -2,
         MenuItem "ALTERAC",      -2,
+        MenuItem "GNOLL_CAMP",      -2,
+        MenuItem "MARAUDON",      -2,
+        MenuItem "RAZORFEN_KRAUL",      -2,
     }
 }
 
