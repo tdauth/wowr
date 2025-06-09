@@ -3,9 +3,9 @@ InfoPanelIconArmorDivine=ReplaceableTextures\CommandButtons\ATTDivineArmorNew.bl
 InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmorNew.blp
 
 [Errors]
-Cooldownstock=TRIGSTR_48559
+Cooldownstock=
 Inventoryfull=TRIGSTR_11995
-Outofstock=TRIGSTR_48558
+Outofstock=
 
 [FrameDef]
 ITEM_PAWN_TOOLTIP=TRIGSTR_1171
