@@ -296,6 +296,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "GNOLL_CAMP",      -2,
         MenuItem "MARAUDON",      -2,
         MenuItem "RAZORFEN_KRAUL",      -2,
+        MenuItem "MOAKI_HARBOR",      -2,
     }
 }
 
