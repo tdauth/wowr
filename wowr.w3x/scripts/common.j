@@ -2905,6 +2905,44 @@ globals
     constant integer LIBRARY                                         = 'n075'
     constant integer AUCTION_HOUSE                                   = 'n0MN'
 
+    // Story
+    constant integer WOUNDED_WORLD_TREE                               = 'n000'
+    constant integer AZJOL_NERUBIAN_OBELISK                           = 'n00D'
+    constant integer ICECROWN_OBELISK                                 = 'nico'
+    constant integer EXODAR                                           = 'n0LB'
+    constant integer XENEDAR                                          = 'n0L9'
+    constant integer GOLEM_FACTORY_NEUTRAL                            = 'n006'
+    constant integer DIMENSIONAL_GATE_SOUTH_WEST                      = 'ndkw'
+    constant integer MERCENARY_CAMP_OUTLAND_DRAENEI                   = 'n01R' // Lich King quest 4
+    constant integer ARCANE_LABORATORY_DALARAN                        = 'n0NZ' // Dalaran quest
+    constant integer UNHOLY_CATHEDRAL                                 = 'n00C' // Forsaken quest
+    constant integer ARCANE_OBSERVATORY                               = 'haro' // Dalaran Ruins
+    constant integer TUSKARR_STATUE                                   = 'n0M9' // Tuskarr quest
+    constant integer DEMON_GATE_NEUTRAL                               = DEMON_GATE
+    constant integer FOUNTAIN_OF_RESURRECTION                         = 'e007' // Naga quest
+    constant integer ORDER_STONE                                      = 'n003'
+    constant integer CHAOS_STONE                                      = 'n004'
+    constant integer BARROW_DEN                                       = 'nbwd'
+    constant integer SHRINE                                           = 'nshr'
+    constant integer TENT_NEUTRAL_1                                   = 'nten'
+    constant integer TENT_NEUTRAL_2                                   = 'ntn2'
+    constant integer CENTAUR_TENT_NEUTRAL_1                           = 'ncnt'
+    constant integer CENTAUR_TENT_NEUTRAL_2                           = 'nct1'
+    constant integer CENTAUR_TENT_NEUTRAL_3                           = 'nct2'
+    constant integer TAUREN_TENT_NEUTRAL_1                            = 'ntnt'
+    constant integer TAUREN_TENT_NEUTRAL_2                            = 'ntt2'
+    constant integer FOREST_TROLL_HUT_NEUTRAL_1                       = 'nfh0'
+    constant integer FOREST_TROLL_HUT_NEUTRAL_2                       = 'nfh1'
+    constant integer ICE_TROLL_HUT_NEUTRAL_1                          = 'nth1'
+    constant integer ICE_TROLL_HUT_NEUTRAL_2                          = 'nth0'
+    constant integer FURBOLG_HUT_NEUTRAL_1                            = 'nfr2'
+    constant integer FURBOLG_HUT_NEUTRAL_2                            = 'nfr1'
+    constant integer GNOLL_HUT_NEUTRAL_1                              = 'ngnh'
+    constant integer GNOLL_HUT_NEUTRAL_2                              = 'ngt2'
+    constant integer HARPY_NEST_NEUTRAL                               = 'nhns'
+    constant integer MURLOC_HUT_NEUTRAL_1                             = 'nmh0'
+    constant integer MURLOC_HUT_NEUTRAL_2                             = 'nmh1'
+
     // Roosts
     constant integer GREEN_DRAGON_ROOST                              = 'ndrg'
     constant integer RED_DRAGON_ROOST                                = 'ndrr'
