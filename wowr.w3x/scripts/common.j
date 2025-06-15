@@ -2806,8 +2806,24 @@ globals
     constant integer HERO_JOURNEY_ALL_RACES                          = 75
     constant integer HERO_JOURNEY_ALL_PROFESSIONS                    = 75
 
+    constant integer UPG_HERO_LEVEL_5                                = 'R032'
+    constant integer UPG_HERO_LEVEL_10                               = 'R00X'
+    constant integer UPG_HERO_LEVEL_10_VIP                           = 'R089'
+    constant integer UPG_HERO_LEVEL_15                               = 'R050'
+    constant integer UPG_HERO_LEVEL_20                               = 'R025'
+    constant integer UPG_HERO_LEVEL_25                               = 'R04U'
+    constant integer UPG_HERO_LEVEL_30                               = 'R04W'
+    constant integer UPG_HERO_LEVEL_35                               = 'R010'
+    constant integer UPG_HERO_LEVEL_40                               = 'R04X'
     constant integer UPG_BONUS_HEROES                                = 'R04Y'
-    constant integer UPG_HERO_LEVEL_75                               = 'R06B'
+    constant integer UPG_HERO_LEVEL_45                               = 'R00V'
+    constant integer UPG_HERO_LEVEL_50                               = 'R027'
+    constant integer UPG_HERO_LEVEL_55                               = 'R07C'
+    constant integer UPG_HERO_LEVEL_60                               = 'R04T'
+    constant integer UPG_HERO_LEVEL_65                               = 'R03F'
+    constant integer UPG_HERO_LEVEL_70                               = 'R03G'
+    constant integer UPG_HERO_LEVEL_75                               = 'R064'
+    constant integer UPG_HERO_LEVEL_75_VIP                           = 'R06B'
     constant integer UPG_VIP                                         = 'R06C'
 
     // Teams/Factions
