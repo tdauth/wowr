@@ -3114,6 +3114,7 @@ globals
 
     // clans
     constant integer CLAN_SHOP                                       = 'n04I'
+    constant integer CLAN_SHOP_NEUTRAL                               = 'n0AQ'
     constant integer CLAN_HORN_SOUND                                 = 'I050'
     constant integer CLAN_LAUGH_SOUND                                = 'I051'
     constant integer CLAN_CREATE_CLAN                                = 'I04H'

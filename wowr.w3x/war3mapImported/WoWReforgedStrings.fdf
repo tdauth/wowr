@@ -1395,7 +1395,7 @@ StringList {
     // Player Infos
     FREELANCER                         "Freelancer",
     WARLORD                            "Warlord",
-    PLAYER_INFOS                       "%1% (%2%%3%%4%), XP Rate: %5% %, Heroes: %6% (%7%)/%8% (%9%)/%10% (%11%), Races: %12%/%13%/%14%, Professions: %15%/%16%/%17%, G: %18%/L: %19%/F: %20%/%21%, Evolution: %22%, HK %23%/UK %24%/R %25%/BK %26%/%27%",
+    PLAYER_INFOS                       "%1% (%2%%3%%4%%5%), XP Rate: %6% %, Heroes: %7% (%8%)/%9% (%10%)/%11% (%12%), Races: %13%/%14%/%15%, Professions: %16%/%17%/%18%, G: %19%/L: %20%/F: %21%/%22%, Evolution: %23%, HK %24%/UK %25%/R %26%/BK %27%/%28%",
     PLAYER_SELECTION_SETTINGS          "Use -random and -start/-rs or -soul|n- Player Selection: %1%|n- Game Mode: %2%|n- Heroes: %3%/%4%/%5%|n- Races: %6%/%7%/%8%|n- Professions: %9%/%10%/%11%|n- Start Location: %12%",
     PLAYER_SELECTION_INITIAL           "Initial",
     PLAYER_SELECTION_REPICK            "Repick",
