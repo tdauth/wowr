@@ -79,6 +79,7 @@ StringList {
     NO_WRAPABLE_BUILDINGS              "Keine verpackbaren Gebäude in diesem Gebiet.",
     // Game End
     X_HAS_WON_THE_GAME                 "%1% hat das Spiel gewonnen!",
+    X_HAS_DEFEATED_Y                   "%1% hat %2% besiegt!",
     // Equipment Bag
     EQUIPMENT_BAG_INDEX                "Ausrüstungstasche %1%",
     MAXIMUM_EQUIPMENT_BAGS             "Maximale Anzahl von Ausrüstungstaschen: %1%",
