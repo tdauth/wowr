@@ -260,7 +260,7 @@ Frame "POPUPMENU" "StartLocationsPopup" INHERITS WITHCHILDREN "MyPopupTemplate" 
         MenuItem "TERDRASSIL",     -2,
         MenuItem "WORLD_TREE",     -2,
         MenuItem "ORGRIMMAR",     -2,
-        MenuItem "THUNDER_BUFF",     -2,
+        MenuItem "THUNDER_BLUFF",     -2,
         MenuItem "STORMWIND",     -2,
         MenuItem "KUL_TIRAS",     -2,
         MenuItem "UNDERCITY",     -2,
