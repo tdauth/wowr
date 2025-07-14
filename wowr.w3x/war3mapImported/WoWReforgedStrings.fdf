@@ -1326,6 +1326,7 @@ StringList {
     PICKED_PROFESSION_X_Y              "Picked profession %1%: %2%.",
     PICKED_START_LOCATION_X            "Picked start location %1%.",
     NO_CLAN_ISLAND                     "You must be a member of TheElvenClan to start on the clan island.",
+    YOU_ARE_CARRYING_NOW_THE_X         "You are carrying now the %1%.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Area is protected by an Antimagic Ward.",
     // Alliance with the Burning Legion
