@@ -1,4 +1,5 @@
 REM https://pbug90.github.io/w3gjs/
+REM rmdir node_modules /s /q
 REM npm install w3gjs
 REM set replay="C:\\Users\\Tamino\\Documents\\Warcraft III\\Errors\\2025-04-05 20.50.53 914e7d20\\TempReplay.w3g"
 REM set replay=".\\replays\\desync\\2025-03-29 17.15.01 f9edca4c\\TempReplay.w3g"
@@ -16,7 +17,8 @@ REM set replay="..\\replays\\wowr"
 REM set replayf=%replay%\\WoWReforged4.0Short.w3g
 REM set replayf=%replay%\\WoWReforged4.0ShortNoMouseUtils.w3g
 REM set replay="..\\replays\\desync\\2025-05-01 22.10.52 44fdea8c"
-set replay="..\\replays\\crash\\2025-05-03 11.51.34 bbb812f4"
+REM set replay="..\\replays\\crash\\2025-05-03 11.51.34 bbb812f4"
+set replay="..\\replays\\desync\\2025-07-15 14.15.29 4e4e9fa0"
 set replayf=%replay%\\TempReplay.w3g
 node replayanalyser_high_level.ts %replayf% >%replay%/replay_high_level.json
 node replayanalyser_low_level.ts %replayf% >%replay%/replay_low_level.json
