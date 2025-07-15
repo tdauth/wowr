@@ -125,7 +125,7 @@ Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result()
 ```
 
 The function Format is part of the library StringFormat.
-Use [diffstrings.bat](./scripts/diffstrings.bat) to compare the translation files with the original ones.
+Use [diffstrings.bat](./scripts/diffstrings.bat) to automatically update and compare the translation files with the original ones.
 
 ## Release Process
 
