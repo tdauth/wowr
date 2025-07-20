@@ -1,5 +1,7 @@
 # World of Warcraft Reforged
 
+![Logo](logos/Logo.png "Logo")
+
 Open world role-playing game and strategy map for Warcraft III: Reforged based on [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr) featuring computer AI support which allows you to play the map offline.
 This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
 
