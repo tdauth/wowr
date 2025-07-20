@@ -1373,6 +1373,10 @@ StringList {
     HERO_JOURNEY_75_2                  "Advanced chat commands from '-helpvisual' can be used.",
     HERO_JOURNEY_75_3                  "(all three heroes) All races, professions and chat command '-maxbosslevels' are available.",
     HERO_JOURNEY_VIP                   "Donating/Reporting bugs: VIP.",
+    // Trainers
+    ATTRIBUTES                         "Attributes",
+    MOVEMENT_TYPES                     "Movement Types",
+    PRIMARY_ATTRIBUTES                 "Primary Attributes",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Adding ability %1%.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Only available for reskillable heroes.",

@@ -1374,6 +1374,10 @@ StringList {
     HERO_JOURNEY_75_2                  "Erweiterete Chat-Befehle aus '-helpvisual' können genutzt werden.",
     HERO_JOURNEY_75_3                  "(all 3 Helden) Alle Völker, Berufe und der Chat-Befehl '-maxbosslevels' sind verfügbar.",
     HERO_JOURNEY_VIP                   "Spenden/Fehler melden: VIP.",
+    // Trainers
+    ATTRIBUTES                         "Attribute",
+    MOVEMENT_TYPES                     "Bewegungstypen",
+    PRIMARY_ATTRIBUTES                 "Primäre Attributes",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Fähigkeit %1% hinzugefügt.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Nur für umschulbare Helden verfügbar.",
