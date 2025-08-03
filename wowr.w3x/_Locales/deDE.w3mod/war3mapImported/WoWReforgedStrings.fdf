@@ -1169,9 +1169,9 @@ StringList {
     NEWS_LINE_8                        "- Benutzen Sie den Chat-Befehl '-dp/-diplomacy', um die Allianzen für KI-Spieler zu ändern.",
     NEWS_LINE_9                        "- Benutzen Sie den Chat-Befehl '-st/-settings', um die Spieleinstellungen anzuzeigen.",
     NEWS_LINE_10                       "- Spielstände funktionieren nun.",
-    NEWS_LINE_11                       "- Spieleinstellungsdialog vom Anfang des Spiels entfernt.",
-    NEWS_LINE_12                       "- Spielmodi entfernt, was alle Speicher-Codes ungültig macht.",
-    NEWS_LINE_13                       "- Mehrere 75-Stufen-Forschungen wurden mit Evolution zusammengeführt.",
+    NEWS_LINE_11                       "- Deutsche Übersetzung.",
+    NEWS_LINE_12                       "- Keine Minikarten-Symbole mehr für neutrale Gebäude.",
+    NEWS_LINE_13                       "- Quests haben nun Quest-Ziele.",
     NEWS_LINE_14                       "- Einige Quests haben nun Videosequenzen.",
     NEWS_LINE_15                       "- KI-Angriffe deaktiviert, um Abstürze zu verhindern.",
     // Save Codes UI
@@ -1207,6 +1207,8 @@ StringList {
     QUEST_COMPLETED                    "|cffffcc00QUEST ABGESCHLOSSEN|r %1%%2%",
     QUEST_ITEM_COMPLETED               "|cff808080  - %1% (abgeschlossen)|r",
     QUEST_ITEM                         "  - %1%",
+    // Eredar Quest 3
+    QUEST_EREDAR_3_UPDATE              "|cffffcc00QUEST-AKTUALISIERUNG|r Exodar %1%/%2%",
     // Jaina Quest 2
     PORTALS_DESTROYED_X                "Portals destroyed (%1% in total)",
     // Portals
