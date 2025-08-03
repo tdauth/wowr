@@ -40,6 +40,9 @@ StringList {
     UNABLE_TO_WATER_GROUND_HERE        "Boden kann hier nicht bewässert werden.",
     OWNER_X_IS_NOT_ALLOWED             "Besitzer %1% ist nicht erlaubt.",
     UNIT_IS_NO_HERO                    "Einheit ist kein Held.",
+    TARGET_HAS_NO_MANA                 "Ziel hat kein Mana.",
+    HERO_HAS_NO_MANA                   "Held hat kein Mana.",
+    HERO_HAS_FULL_LIFE                 "Held hat volles Leben.",
     // -playercolor, -playername
     X_CHANGED_COLOR_FOR_PLAYER_Y       "%1% hat die Farbe von Spieler %2% geändert.",
     X_CHANGED_NAME_FOR_PLAYER_Y        "%1% hat den Namen von Spieler %2% geändert.",
