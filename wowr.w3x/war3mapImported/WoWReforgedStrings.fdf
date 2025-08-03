@@ -1207,6 +1207,8 @@ StringList {
     QUEST_COMPLETED                    "|cffffcc00QUEST COMPLETED|r %1%%2%",
     QUEST_ITEM_COMPLETED               "|cff808080  - %1% (Completed)|r",
     QUEST_ITEM                         "  - %1%",
+    // Eredar Quest 3
+    QUEST_EREDAR_3_UPDATE              "|cffffcc00QUEST UPDATE|r Exodar %1%/%2%",
     // Jaina Quest 2
     PORTALS_DESTROYED_X                "Portals destroyed (%1% in total)",
     // Portals
