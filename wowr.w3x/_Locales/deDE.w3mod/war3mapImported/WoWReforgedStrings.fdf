@@ -213,7 +213,7 @@ StringList {
     // Heroes Tavern
     CUSTOMIZABLE                       "Anpassbar",
     NAVY                               "Flotte",
-    VOID_LORDS                         "Void Lords",
+    VOID_LORDS                         "Herren der Leere",
     DEMIGODS                           "Halbgötter",
     // Heroes
     HERO_RANDOM_MATCHING_RACE          "Zufällig passend zum Volk",
