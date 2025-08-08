@@ -497,7 +497,7 @@ StringList {
     SORCERER                           "Zauberer",
     JEWELCRAFTER                       "Juwelier",
     ARCHEOLOGIST                       "Archäologe",
-    WITCH_DOCTOR                       "Hexendoktor",
+    WITCH_DOCTOR                       "Medizinmann",
     TAMER                              "Dompteur",
     NECROMANCER                        "Nekromant",
     GOLEM_SCULPTOR                     "Golem-Bildhauer",
