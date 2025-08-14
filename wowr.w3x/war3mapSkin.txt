@@ -3,7 +3,7 @@ InfoPanelIconArmorDivine=ReplaceableTextures\CommandButtons\ATTDivineArmorNew.bl
 InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmorNew.blp
 
 [Errors]
-Inventoryfull=TRIGSTR_375
+Inventoryfull=TRIGSTR_12200
 
 [FrameDef]
 ITEM_PAWN_TOOLTIP=TRIGSTR_1171

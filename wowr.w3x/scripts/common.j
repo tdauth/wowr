@@ -4138,21 +4138,22 @@ globals
     constant integer FURBOLG_SHIPYARD                                = 'o00E'
 
     constant integer YOUNG_FURBOLG                                   = 'h01M' // worker
-    constant integer FURBOLG_EX                                      = 'n02E'
-    constant integer FURBOLG_CHAMPION_EX                             = 'n02F'
-    constant integer FURBOLG_ELDER_SHAMAN                            = 'n02G'
-    constant integer FURBOLG_SHAMAN_EX                               = 'n02H'
-    constant integer FURBOLG_TRACKER_EX                              = 'n02I'
+    constant integer FURBOLG_EX                                      = 'n02E' // footman
+    constant integer FURBOLG_CHAMPION_EX                             = 'n02F' // knight
+    constant integer FURBOLG_ELDER_SHAMAN                            = 'n02G' // sorceress
+    constant integer FURBOLG_SHAMAN_EX                               = 'n02H' // priest
+    constant integer FURBOLG_TRACKER_EX                              = 'n02I' // rifleman
     constant integer FURBOLG_URSA_WARRIOR                            = 'n02J' // tauren
-    constant integer GREEN_DRAKE                                     = 'n02S' // frost wyrm
-    constant integer POLAR_FURBOLG                                   = 'n02K'
-    constant integer POLAR_FURBOLG_CHAMPION                          = 'n02L'
-    constant integer TIMBER_WOLF                                     = 'n02O'
-    constant integer GIANT_WOLF                                      = 'n02M'
-    constant integer DIRE_WOLF                                       = 'n02N'
+    constant integer GREEN_DRAKE                                     = 'n02S' // gryphon/dragonhawk
+    constant integer POLAR_FURBOLG                                   = 'n02K' // spellbreaker
+    constant integer POLAR_FURBOLG_CHAMPION                          = 'n02L' // shade
+    constant integer TIMBER_WOLF                                     = 'n02O' // flying machine
+    constant integer GIANT_WOLF                                      = 'n02M' // siege engine
+    constant integer DIRE_WOLF                                       = 'n02N' // mortar team
 
     constant integer CORRUPTED_FURBOLG                               = 'n02P'
 
+    constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
     constant integer UPG_FURBOLG_WEB                                 = 'R01Q'
     constant integer UPG_FURBOLG_STEEL_RWEAPONS                      = 'R01G'
     constant integer UPG_FURBOLG_STEEL_WEAPONS                       = 'R01F'
@@ -4167,7 +4168,6 @@ globals
     constant integer UPG_FURBOLG_CORRUPTION                          = 'R01R'
     constant integer UPG_FURBOLG_BLOOD_LUST                          = 'R01O'
     constant integer UPG_FURBOLG_BASH                                = 'R01P'
-    constant integer UPG_FURBOLG_BACKPACK                            = 'R01D'
     constant integer UPG_FURBOLG_CORRUPTED_ANCIENT_PROTECTOR         = 'R02C'
 
     constant integer FURBOLG_CITIZEN_MALE                            = 'n029'
@@ -4198,22 +4198,28 @@ globals
 
     constant integer GOBLIN_LABORER                                  = 'h02L' // worker
     constant integer GOBLIN_SHREDDER                                 = 'n03W' // lumber worker
-    constant integer GOBLIN_FLAMETHROWER                             = 'o013'
-    constant integer GOBLIN_FLAME_TANK                               = 'h02D'
-    constant integer GOBLIN_MAGE                                     = 'o010'
-    constant integer GOBLIN_SORCERESS                                = 'o012'
-    constant integer GOBLIN_FLAME_SHREDDER                           = 'o00V'
-    constant integer GOBLIN_ASSAULT_TANK                             = 'h02F'
-    constant integer GOBLIN_WAR_ZEPPELIN                             = 'n03T' // frost wyrm
-    constant integer GOBLIN_AIR_DRONE                                = 'h02G'
-    constant integer GOBLIN_SAPPER                                   = 'n03V'
-    constant integer OGRE_GOBLIN_SQUAD                               = 'o01C'
+    constant integer GOBLIN_FLAMETHROWER                             = 'o013' // footman
+    constant integer GOBLIN_MOBILE_TURRET                            = 'e00J' // footman morphed
+    constant integer GOBLIN_TURRET                                   = 'o01E' // arcane sanctum 4
+    constant integer GOBLIN_SAPPER                                   = 'n03V' // rifleman
+    constant integer OGRE_GOBLIN_SQUAD                               = 'o01C' // knight
+    constant integer OGRE_GOBLIN_SQUAD_M                             = 'o01D' // knight morphed
+    constant integer GOBLIN_FLAME_SHREDDER                           = 'o00V' // barracks 4
+    constant integer GOBLIN_MAGE                                     = 'o010' // priest
+    constant integer GOBLIN_SORCERESS                                = 'o012' // sorceress
+    constant integer GOBLIN_ALCHEMIST                                = 'n03U' // spellbreaker
+    constant integer GOBLIN_ALCHEMIST_M                              = 'n04B' // spellbreaker morphed
+    constant integer GOBLIN_ASSAULT_TANK                             = 'h02F' // siege engine
+    constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // mortar
+    constant integer GOBLIN_ZEPPELIN                                 = 'n03X' // flying machine
+    constant integer GOBLIN_FLAME_TANK                               = 'h02D' // workshop 4
+    constant integer GOBLIN_AIR_DRONE                                = 'h02G' // gryphon
+    constant integer GOBLIN_WAR_ZEPPELIN                             = 'n03T' // dragonhawk
     constant integer GOBLIN_EMPEROR                                  = 'h02E' // tauren
-    constant integer GOBLIN_STEAM_ROLLER                             = 'h02K' // Obsidian Statue
-    constant integer GOBLIN_SUBMARINE                                = 'h02I'
-    constant integer GOBLIN_MOBILE_TURRET                            = 'e00J'
-    constant integer GOBLIN_TURRET                                   = 'o01E'
+    constant integer GOBLIN_SUBMARINE                                = 'h02I' // ship special 1
+    constant integer GOBLIN_ARTIST                                   = 'n045' // shade
 
+    constant integer UPG_GOBLIN_BACKPACK                             = 'R02G'
     constant integer UPG_GOBLIN_STEEL_RWEAPONS                       = 'R033'
     constant integer UPG_GOBLIN_STEEL_WEAPONS                        = 'R02M'
     constant integer UPG_GOBLIN_STEEL_ARMOR                          = 'R031'
@@ -4240,7 +4246,6 @@ globals
     constant integer UPG_GOBLIN_REPAIR                               = 'R02K'
     constant integer UPG_GOBLIN_BANKING                              = 'R02P'
     constant integer UPG_GOBLIN_LUMBER                               = 'R02O'
-    constant integer UPG_GOBLIN_BACKPACK                             = 'R02G'
 
     constant integer GOBLIN_CITIZEN_MALE                             = 'n03Y'
     constant integer GOBLIN_CITIZEN_FEMALE                           = 'n03Z'

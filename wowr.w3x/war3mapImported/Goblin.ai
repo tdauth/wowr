@@ -91,6 +91,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(2, knights, GOBLIN_FLAME_SHREDDER)
         call AttackerSimple(3, priests, GOBLIN_MAGE)
         call AttackerSimple(3, sorceresses, GOBLIN_SORCERESS)
+        call AttackerSimple(4, spellbreakers, GOBLIN_ALCHEMIST)
         call AttackerSimple(4, mortars, OGRE_GOBLIN_SQUAD)
         call AttackerSimple(4, mortars, GOBLIN_MOBILE_TURRET)
         call AttackerSimple(4, siege_engines, GOBLIN_ASSAULT_TANK)
@@ -99,6 +100,8 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(12, tauren, GOBLIN_EMPEROR)
         call AttackerSimple(12, gryphons, GOBLIN_WAR_ZEPPELIN)
         call AttackerSimple(12, dragon_hawks, GOBLIN_AIR_DRONE)
+        call AttackerSimple(12, flying_machines, GOBLIN_ZEPPELIN)
+        call AttackerSimple(12, shades, GOBLIN_ARTIST)
 
         call AddStandardUnitsToAttackWave()
         call AddDragonsToAttackWave()

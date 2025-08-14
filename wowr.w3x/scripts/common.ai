@@ -255,6 +255,7 @@ globals
     integer gryphons = 3
     integer flying_machines = 2
     integer dragon_hawks = 3
+    integer shades = 1
 
     integer attack_wave = 0
 endglobals
@@ -896,8 +897,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(GOBLIN_ROCKET_TOWER_2,false,townid) + GetUnitCountEx(GOBLIN_ROCKET_TOWER_3,false,townid)
     elseif unitid == GOBLIN_ROCKET_TOWER_2 then
         set have_qty = have_qty + GetUnitCountEx(GOBLIN_ROCKET_TOWER_3,false,townid)
-     elseif unitid == GOBLIN_FLAMETHROWER then
+    elseif unitid == GOBLIN_FLAMETHROWER then
         set have_qty = have_qty + GetUnitCountEx(GOBLIN_MOBILE_TURRET,false,townid)
+    elseif unitid == OGRE_GOBLIN_SQUAD then
+        set have_qty = have_qty + GetUnitCountEx(OGRE_GOBLIN_SQUAD_M,false,townid)
+    elseif unitid == GOBLIN_ALCHEMIST then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_ALCHEMIST_M,false,townid)
 
     elseif unitid == DWARF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_2,false,townid) + GetUnitCountEx(DWARF_TIER_3,false,townid)
