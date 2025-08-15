@@ -908,6 +908,18 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_2,false,townid) + GetUnitCountEx(DWARF_TIER_3,false,townid)
     elseif unitid == DWARF_TIER_2 then
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_3,false,townid)
+    elseif unitid == DWARF_MINE then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_MINE_2,false,townid) + GetUnitCountEx(DWARF_MINE_3,false,townid)
+    elseif unitid == DWARF_MINE_2 then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_MINE_3,false,townid)
+    elseif unitid == DWARF_TOWER then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_TOWER_GUARD,false,townid) + GetUnitCountEx(DWARF_TOWER_CANNON,false,townid) + GetUnitCountEx(DWARF_TOWER_GUN,false,townid)
+    elseif unitid == DWARF_SIEGE_ENGINE then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_SIEGE_ENGINE_BARRAGE,false,townid) + GetUnitCountEx(DWARF_ELITE_SIEGE_TANK,false,townid)
+    elseif unitid == DWARF_GRYPHON then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_GRYPHON_M,false,townid)
+    elseif unitid == DWARF_WAR_GOLEM then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_WAR_GOLEM_M,false,townid)
 
     elseif unitid == HIGH_ELF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(HIGH_ELF_TIER_2,false,townid) + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
