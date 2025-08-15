@@ -4841,6 +4841,7 @@ globals
     constant integer TROLL_TEMPLE_OF_SACRIFICE                       = 'o050' // special building
     constant integer TROLL_SHIPYARD                                  = 'o051'
 
+    constant integer UPG_TROLL_BACKPACK                              = 'R099'
     constant integer UPG_TROLL_SPEARS                                = 'R09E'
     constant integer UPG_TROLL_ARMOR                                 = 'R09H'
     constant integer UPG_TROLL_CREATURE_ATTACK                       = 'R09F'
@@ -4857,24 +4858,23 @@ globals
     constant integer UPG_TROLL_BERSERKER                             = 'R097'
     constant integer UPG_TROLL_LIQUID_FIRE                           = 'R095'
     constant integer UPG_TROLL_BARRAGE                               = 'R09D'
-    constant integer UPG_TROLL_BACKPACK                              = 'R099'
     constant integer UPG_TROLL_TEMPLE_OF_SACRIFICE                   = 'R09C'
 
     constant integer TROLL_GATHERER                                  = 'o02C' // worker
-    constant integer TROLL_MAN_HUNTER                                = 'o02H'
-    constant integer TROLL_HEAD_HUNTER                               = 'o04T'
-    constant integer TROLL_RIDER                                     = 'o04Q'
-    constant integer TROLL_VOODOO_CANNONEER                          = 'o04Z' // demolisher
-    constant integer TROLL_WITCH_DOCTOR                              = 'o04W'
-    constant integer TROLL_SHAMAN                                    = 'o02G'
-    constant integer TROLL_BATRIDER                                  = 'o04O'
-    constant integer TROLL_BAT                                       = 'o02J'
-    constant integer TROLL_THRONE_OF_WAR                             = 'o04S'
-    constant integer TROLL_ICE_TROLL_HIGH_PRIEST                     = 'n07Z'
-    constant integer TROLL_ICE_TROLL_WARLORD                         = 'n0CO'
-    constant integer TROLL_BLOOD_MAGE                                = 'o02L'
-    constant integer TROLL_HEXER                                     = 'o02K'
-    constant integer TROLL_TIGERSHARK_RIDER                          = 'n07Y'
+    constant integer TROLL_MAN_HUNTER                                = 'o02H' // footman
+    constant integer TROLL_HEAD_HUNTER                               = 'o04T' // rifleman
+    constant integer TROLL_RIDER                                     = 'o04Q' // knight
+    constant integer TROLL_VOODOO_CANNONEER                          = 'o04Z' // mortar team
+    constant integer TROLL_WITCH_DOCTOR                              = 'o04W' // priest
+    constant integer TROLL_SHAMAN                                    = 'o02G' // sorceress
+    constant integer TROLL_HEXER                                     = 'o02K' // spellbreaker
+    constant integer TROLL_BLOOD_MAGE                                = 'o02L' // arcane sanctum 4
+    constant integer TROLL_BATRIDER                                  = 'o04O' // gryphon
+    constant integer TROLL_BAT                                       = 'o02J' // dragonhawk
+    constant integer TROLL_THRONE_OF_WAR                             = 'o04S' // tauren
+    constant integer TROLL_ICE_TROLL_HIGH_PRIEST                     = 'n07Z' // flying machine
+    constant integer TROLL_ICE_TROLL_WARLORD                         = 'n0CO' // siege engine
+    constant integer TROLL_TIGERSHARK_RIDER                          = 'n07Y' // special ship 1
 
     constant integer TROLL_CITIZEN_MALE                              = 'n07X'
     constant integer TROLL_CITIZEN_FEMALE                            = 'n081'
