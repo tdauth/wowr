@@ -981,6 +981,17 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == TAUREN_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(TAUREN_TIER_3,false,townid)
 
+    elseif unitid == TAUREN_SPIRIT_WALKER then
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_SPIRIT_WALKER_M,false,townid)
+    elseif unitid == TAUREN_SPIRIT_WALKER_M then
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_SPIRIT_WALKER,false,townid)
+    elseif unitid == TAUREN_DRUID then
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_DRUID_M,false,townid)
+    elseif unitid == TAUREN_DRUID_M then
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_DRUID,false,townid)
+    elseif unitid == TAUREN_TAUREN then
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_ELITE_TAUREN,false,townid)
+
     elseif unitid == WORGEN_TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(WORGEN_KEEP,false,townid) + GetUnitCountEx(WORGEN_CASTLE,false,townid)
     elseif unitid == WORGEN_KEEP then

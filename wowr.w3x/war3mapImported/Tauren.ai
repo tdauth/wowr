@@ -11,7 +11,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(2, TAUREN_HOUSING)
         call SetBuildUnit(1, TAUREN_LUMBER_MILL)
         call SetBuildUnit(3, TAUREN_TENT)
-        call SetBuildUnit(2, TAUREN_TAUREN_BARRACKS)
+        call SetBuildUnit(2, TAUREN_BARRACKS)
         call SetBuildUnit(1, TAUREN_ALTAR)
         call SetBuildUnit(1, TAUREN_SPIRIT_LOUNGE)
 
@@ -65,7 +65,7 @@ function BuildingStrategy takes nothing returns nothing
         call StartExpansionSimple(TAUREN_WATCH_TOWER)
 
         if (buildShips) then
-            call StartUnitSimple(shipyards, ORC_SHIPYARD)
+            call StartUnitSimple(shipyards, TAUREN_SHIPYARD)
             call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
             call StartUnitSimple(ships_frigate, ORC_FRIGATE)
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
@@ -79,12 +79,13 @@ function AttackWaves takes nothing returns nothing
     loop
         call InitAssaultGroup()
 
-        call AttackerSimple(0, footmen, TAUREN_TAUREN_AXE_FIGHTER)
-        call AttackerSimple(0, riflemen, TAUREN_TAUREN_SPEAR_THROWER)
+        call AttackerSimple(0, footmen, TAUREN_AXE_FIGHTER)
+        call AttackerSimple(0, riflemen, TAUREN_SPEAR_THROWER)
         call AttackerSimple(2, knights, TAUREN_KODO_BEAST_RIDERLESS)
-        call AttackerSimple(3, priests, TAUREN_TAUREN_DRUID)
+        call AttackerSimple(3, priests, TAUREN_DRUID)
         call AttackerSimple(3, sorceresses, TAUREN_SPIRIT_WALKER)
-        call AttackerSimple(4, siege_engines, TAUREN_TAUREN_CATAPULT)
+        call AttackerSimple(4, mortars, TAUREN_CATAPULT)
+        call AttackerSimple(4, siege_engines, TAUREN_KODO_BEAST_RIDERLESS)
         call AttackerSimple(12, tauren, TAUREN_TAUREN)
         call AttackerSimple(12, gryphons, TAUREN_WYVERN)
         call AttackerSimple(12, dragon_hawks, TAUREN_SPIRIT_WYVERN)
