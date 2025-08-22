@@ -4021,17 +4021,25 @@ globals
     constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and farm
     constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
     constant integer DEMON_ALTAR                                     = 'u008'
+    constant integer ITEM_DEMON_ALTAR                                = 'I0D9'
     constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
+    constant integer ITEM_DEMON_DIMENSIONAL_GATE                     = 'I0OP'
     constant integer DEMON_DUNGEON_OF_PAIN                           = 'u00C' // sanctum/damned temple
+    constant integer ITEM_DEMON_DUNGEON_OF_PAIN                      = 'I0OQ'
     constant integer DEMON_FLOATING_ROCKS                            = 'u009' // lumber will and blacksmith
+    constant integer ITEM_DEMON_FLOATING_ROCKS                       = 'I0SI'
     constant integer DEMON_OBELISK                                   = 'u00G' // shop
+    constant integer ITEM_DEMON_OBELISK                              = 'I0PN'
     constant integer DEMON_PORTAL                                    = 'u00B' // slaughterhouse/barracks for stronger units at tier 2
+    constant integer ITEM_DEMON_PORTAL                               = 'I0PQ'
     constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
+    constant integer ITEM_DEMON_SHRINE                               = 'I0QF'
     constant integer DEMON_LEGION_TRANSPORTER                        = 'u019'
     constant integer DEMON_SACRIFICAL_PIT                            = 'u01A'
     constant integer DEMON_BOOK_OF_SUMMONING                         = 'n039' // special building 1
     constant integer DEMON_OUTLAND_DIMENSIONAL_GATE                  = 'o00H' // special building 2
     constant integer DEMON_SHIPYARD                                  = 'u017'
+    constant integer ITEM_DEMON_SHIPYARD                             = 'I0P2'
 
     constant integer DEMON_IMP                                       = 'u006' // worker
     constant integer DEMON_OVERLORD                                  = 'n01A' // ghoul
@@ -4083,6 +4091,7 @@ globals
     constant integer DEMON_PET                                       = 'n018'
 
     constant integer DEMON_HOUSING                                   = 'h00Y'
+    constant integer ITEM_DEMON_HOUSING                              = 'I0SZ'
 
     // Lost Ones
     constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
