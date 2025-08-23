@@ -1,0 +1,28 @@
+﻿STRING 29
+{
+Dynamic Spell Book
+}
+
+STRING 30
+{
+Baradé's Dynamic Spell Book 1.0:
+- Press Escap
+}
+
+STRING 31
+{
+Baradé
+}
+
+STRING 32
+// Abilities: A000 (Spell Book), Tip (Tooltip - Normal)
+{
+Spell Book
+}
+
+STRING 33
+// Abilities: A000 (Spell Book), Ubertip (Tooltip - Normal - Extended)
+{
+Spell Book.
+}
+
