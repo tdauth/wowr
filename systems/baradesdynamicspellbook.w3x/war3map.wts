@@ -6,7 +6,6 @@ Dynamic Spell Book
 STRING 30
 {
 Baradé's Dynamic Spell Book 1.0:
-- Press Escap
 }
 
 STRING 31
@@ -24,5 +23,10 @@ STRING 33
 // Abilities: A000 (Spell Book), Ubertip (Tooltip - Normal - Extended)
 {
 Spell Book.
+}
+
+STRING 34
+{
+- Press Escape to change your abilities.
 }
 

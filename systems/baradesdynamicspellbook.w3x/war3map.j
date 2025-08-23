@@ -1,13 +1,17 @@
 globals
+//globals from DynamicSpellBook:
+constant boolean LIBRARY_DynamicSpellBook=true
+hashtable h= InitHashtable()
+//endglobals from DynamicSpellBook
     // User-defined
 unit array udg_Heroes
 
     // Generated
 trigger gg_trg_Initialization= null
 trigger gg_trg_Game_Start= null
+trigger gg_trg_Change_Spell_Book= null
 unit gg_unit_Nbrn_0006= null
 unit gg_unit_Nbrn_0005= null
-trigger gg_trg_Change_Spell_Book= null
 
 
 //JASSHelper struct globals:
@@ -15,6 +19,39 @@ trigger gg_trg_Change_Spell_Book= null
 endglobals
 
 
+//library DynamicSpellBook:
+
+
+function ChangeSpellBook takes player whichPlayer returns nothing
+    local integer playerId= GetPlayerId(whichPlayer)
+    local unit hero= udg_Heroes[playerId]
+    local integer handleId= GetHandleId(hero)
+    local boolean disabled= LoadBoolean(h, handleId, 'AEer')
+    local boolean newValue= not disabled
+    if ( newValue ) then
+        call BJDebugMsg("Disable ability.")
+    else
+        call BJDebugMsg("Enable ability.")
+    endif
+    call BlzUnitDisableAbility(hero, 'AEer', newValue, newValue)
+    call SaveBoolean(h, handleId, 'AEer', newValue)
+    set hero=null
+endfunction
+
+
+function ChangeSpellBookNotWorking takes player whichPlayer returns nothing
+    local integer playerId= GetPlayerId(whichPlayer)
+    local unit hero= udg_Heroes[playerId]
+    local string abilities= "ACbk,ACcl,ACcr,Afbb"
+    call BJDebugMsg("Changing " + GetUnitName(hero) + "'s abilities to: " + abilities)
+    call BlzSetAbilityStringLevelField(BlzGetUnitAbility(hero, 'A000'), ABILITY_SLF_SPELL_LIST, 0, abilities)
+    call IncUnitAbilityLevel(hero, 'A000')
+    call DecUnitAbilityLevel(hero, 'A000')
+    set hero=null
+endfunction
+
+
+//library DynamicSpellBook ends
 //===========================================================================
 // 
 // Dynamic Spell Book
@@ -115,16 +152,6 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
-function ChangeSpellBook takes player whichPlayer returns nothing
-    local integer playerId= GetPlayerId(whichPlayer)
-    local unit hero= udg_Heroes[playerId]
-    local string abilities= "ACbk,ACcl,ACcr,Afbb"
-    call BJDebugMsg("Changing " + GetUnitName(hero) + "'s abilities to: " + abilities)
-    call BlzSetAbilityStringLevelField(BlzGetUnitAbility(hero, 'A000'), ABILITY_SLF_SPELL_LIST, 0, abilities)
-    call IncUnitAbilityLevel(hero, 'A000')
-    call DecUnitAbilityLevel(hero, 'A000')
-    set hero=null
-endfunction
 //***************************************************************************
 //*
 //*  Triggers
@@ -171,6 +198,7 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call ForForce(GetPlayersAll(), function Trig_Game_Start_Func006A)
     call ForForce(GetPlayersMatching(Condition(function Trig_Game_Start_Func007001001)), function Trig_Game_Start_Func007A)
     call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_030")
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_034")
     call SelectUnitForPlayerSingle(gg_unit_Nbrn_0005, Player(0))
     call SelectUnitForPlayerSingle(gg_unit_Nbrn_0006, Player(1))
 endfunction
