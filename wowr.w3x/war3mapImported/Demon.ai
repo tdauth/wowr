@@ -71,10 +71,8 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_DEMON_INFERNO)
         call SetBuildUpgr(1, UPG_DEMON_BACKPACK)
         call SetBuildUpgr(1, UPG_DEMON_BOOK_OF_SUMMONING)
-        call SetBuildUpgr(1, UPG_DEMON_OUTLAND_DIMENSIONAL_GATE)
 
         call SetBuildUnit(1, DEMON_BOOK_OF_SUMMONING)
-        call SetBuildUnit(1, DEMON_OUTLAND_DIMENSIONAL_GATE)
 
         call BuildingStrategyStandardTier3()
 

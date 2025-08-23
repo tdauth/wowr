@@ -1501,3 +1501,4 @@ Here is a list of some modified versions online:
 * Ujimasa Hojo: [War Mill (BETA) and Derivatives](https://www.hiveworkshop.com/threads/war-mill-beta-and-derivatives.287945/)
 * frostwhisper: [Troll Arena](https://www.hiveworkshop.com/threads/troll-arena.354984)
 * Explobomb: [Elemental Lords Pack](https://www.hiveworkshop.com/threads/elemental-lords-pack.360451/)
+* loboproto: [BTNLegionTeleporter](https://www.hiveworkshop.com/threads/btnlegionteleporter.268572/)

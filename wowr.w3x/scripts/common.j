@@ -4016,10 +4016,12 @@ globals
 
     // Demon
     constant integer DEMON_GATE_1                                    = 'u005' // tier 1
+    constant integer ITEM_DEMON_GATE_1                               = 'I02N'
     constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
     constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
-    constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and farm
     constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
+    constant integer ITEM_DEMON_FORTIFIED_INFERNAL_MACHINE           = 'I0T0'
+    constant integer DEMON_FORTIFIED_INFERNAL_JUGGERNAUT             = 'u00H' // watch tower and upgraded farm
     constant integer DEMON_ALTAR                                     = 'u008'
     constant integer ITEM_DEMON_ALTAR                                = 'I0D9'
     constant integer DEMON_DIMENSIONAL_GATE                          = 'u00A' // barracks
@@ -4035,9 +4037,10 @@ globals
     constant integer DEMON_SHRINE                                    = 'u00D' // totem/strong units at tier 3
     constant integer ITEM_DEMON_SHRINE                               = 'I0QF'
     constant integer DEMON_LEGION_TRANSPORTER                        = 'u019'
+    constant integer ITEM_DEMON_LEGION_TRANSPORTER                   = 'I0T6'
     constant integer DEMON_SACRIFICAL_PIT                            = 'u01A'
     constant integer DEMON_BOOK_OF_SUMMONING                         = 'n039' // special building 1
-    constant integer DEMON_OUTLAND_DIMENSIONAL_GATE                  = 'o00H' // special building 2
+    constant integer ITEM_DEMON_BOOK_OF_SUMMONING                    = 'I0TG'
     constant integer DEMON_SHIPYARD                                  = 'u017'
     constant integer ITEM_DEMON_SHIPYARD                             = 'I0P2'
 
@@ -4083,7 +4086,6 @@ globals
     constant integer UPG_DEMON_INFERNO                               = 'R0G6'
     constant integer UPG_DEMON_BACKPACK                              = 'R00G'
     constant integer UPG_DEMON_BOOK_OF_SUMMONING                     = 'R023' // special building
-    constant integer UPG_DEMON_OUTLAND_DIMENSIONAL_GATE              = 'R02A' // special building
 
     constant integer DEMON_CITIZEN_MALE                              = 'n016'
     constant integer DEMON_CITIZEN_FEMALE                            = 'n017'
