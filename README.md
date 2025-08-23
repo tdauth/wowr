@@ -1502,3 +1502,4 @@ Here is a list of some modified versions online:
 * frostwhisper: [Troll Arena](https://www.hiveworkshop.com/threads/troll-arena.354984)
 * Explobomb: [Elemental Lords Pack](https://www.hiveworkshop.com/threads/elemental-lords-pack.360451/)
 * loboproto: [BTNLegionTeleporter](https://www.hiveworkshop.com/threads/btnlegionteleporter.268572/)
+* HappyCockroach: [Spellbook Pack](https://www.hiveworkshop.com/threads/spellbook-pack.144447/)

@@ -2257,6 +2257,8 @@ globals
     constant integer SPELL_BREAKER      = 'hspt'
     constant integer HUMAN_DRAGON_HAWK  = 'hdhw'
 
+    constant integer WATER_ELEMENTAL_LEVEL_4                         = 'h001'
+
     // special human units
     constant integer BLOOD_PRIEST       = 'hbep'
     constant integer BLOOD_SORCERESS    = 'hbes'
@@ -2359,6 +2361,9 @@ globals
     constant integer BATRIDER           = 'otbr'
     constant integer SPIRIT_WALKER      = 'ospw'
     constant integer SPIRIT_WALKER_M    = 'ospm'
+
+    constant integer ZERBERUS                         = 'o000'
+    constant integer COBRA_WARD                       = 'o001'
 
     // orc buildings
     constant integer ORC_ALTAR          = 'oalt'
@@ -2570,6 +2575,10 @@ globals
     constant integer ENT                = 'efon'
     constant integer MOUNTAIN_GIANT     = 'emtg'
     constant integer FAERIE_DRAGON      = 'efdr'
+
+    constant integer OWL_SCOUT_LEVEL_4                       = 'n002'
+    constant integer TREANT_LEVEL_4                          = 'e001'
+    constant integer ETERNAL_AVATAR_OF_VENGEANCE             = 'e006'
 
     // special elf units
     constant integer HIGH_ARCHER        = 'nhea'
@@ -3640,6 +3649,8 @@ globals
     // Creeps
     constant integer GHOST                                           = 'ngh1'
     constant integer WRAITH                                          = 'ngh2'
+    constant integer SEA_ELEMENTAL                                   = 'nsel'
+    constant integer FIRE_ELEMENTAL                                  = 'h061'
 
     constant integer BARBED_ARACHNATHID_WITH_BURROW                  = 'nanm'
     constant integer BARBED_ARACHNATHID_BURROWED                     = 'nbnb'
@@ -3663,6 +3674,8 @@ globals
     constant integer PHOENIX_CREEP                                   = 'h0UV'
     constant integer PHOENIX_EGG_CREEP                               = 'h0VD'
     constant integer LESSER_THUNDER_PHOENIX                          = 'h0VG'
+
+    constant integer AIR_ELEMENTAL                                   = 'n0IK'
 
     // Housing
     constant integer REAL_ESTATE_AGENT                               = 'n0O3'
@@ -5879,6 +5892,10 @@ globals
 
     // Heroes (spells)
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
+    constant integer RAIN_OF_CHAOS_SLOT_3                            = 'A01F'
+    constant integer RAIN_OF_CHAOS_SLOT_4                            = 'A07V'
+    constant integer CALL_OF_DRAKES                                  = 'A01G'
+    constant integer CALL_OF_DRAKES_DRAKE                            = 'n01J'
 
     constant integer SLOT_1_HERO                                     = 'A0OF'
     constant integer SLOT_2_HERO                                     = 'A0OG'
@@ -5943,6 +5960,7 @@ globals
     constant integer ABILITY_IMMOLATION                              = 'ACim'
     constant integer ABILITY_RAIN_OF_FIRE                            = 'ACrg'
     constant integer ABILITY_FLAME_STRIKE                            = 'ACfs'
+    constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
     constant integer ABILITY_VOLCANO                                 = 'A112'
     constant integer ABILITY_INCINERATE                              = 'A09N'
     constant integer ABILITY_PHOENIX                                 = 'A0V4'
@@ -5964,6 +5982,12 @@ globals
     constant integer ABILITY_EARTH_QUAKE                             = 'S00U'
     constant integer ABILITY_AVATAR                                  = 'A26J'
     constant integer ABILITY_REINCARNATION                           = 'ACrn'
+
+    // Air Magic
+    constant integer ABILITY_AIR_MAGIC                               = 'A0V6'
+    constant integer ABILITY_CYCLONE                                 = 'ACcy'
+    constant integer ABILITY_SUMMON_AIR_ELEMENTAL                    = 'A0VH'
+    constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
     // WoW Reforged heroes
 
