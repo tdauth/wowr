@@ -5913,6 +5913,7 @@ globals
     constant integer ABILITY_HOLY_LIGHT                              = 'A13W'
     constant integer ABILITY_DIVINE_SHIELD                           = 'A1NY'
     constant integer ABILITY_HEALING_WAVE                            = 'Leav'
+    constant integer ABILITY_RESURRECTION                            = 'A13V'
 
     // Arcane Magic
     constant integer ABILITY_ARCANE_MAGIC                            = 'A11B'
@@ -5943,6 +5944,8 @@ globals
     constant integer ABILITY_RAIN_OF_FIRE                            = 'ACrg'
     constant integer ABILITY_FLAME_STRIKE                            = 'ACfs'
     constant integer ABILITY_VOLCANO                                 = 'A112'
+    constant integer ABILITY_INCINERATE                              = 'A09N'
+    constant integer ABILITY_PHOENIX                                 = 'A0V4'
 
     // Water Magic
     constant integer ABILITY_WATER_MAGIC                             = 'A16Q'
