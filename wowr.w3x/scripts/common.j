@@ -5986,6 +5986,8 @@ globals
     // Air Magic
     constant integer ABILITY_AIR_MAGIC                               = 'A0V6'
     constant integer ABILITY_CYCLONE                                 = 'ACcy'
+    constant integer ABILITY_EVASION                                 = 'ACev'
+    constant integer ABILITY_DISARMAMENT                             = 'A16K'
     constant integer ABILITY_SUMMON_AIR_ELEMENTAL                    = 'A0VH'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
