@@ -901,8 +901,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(GOBLIN_MOBILE_TURRET,false,townid)
     elseif unitid == OGRE_GOBLIN_SQUAD then
         set have_qty = have_qty + GetUnitCountEx(OGRE_GOBLIN_SQUAD_M,false,townid)
+    elseif unitid == OGRE_GOBLIN_SQUAD_M then
+        set have_qty = have_qty + GetUnitCountEx(OGRE_GOBLIN_SQUAD,only_done,townid)
     elseif unitid == GOBLIN_ALCHEMIST then
         set have_qty = have_qty + GetUnitCountEx(GOBLIN_ALCHEMIST_M,false,townid)
+    elseif unitid == GOBLIN_ALCHEMIST_M then
+        set have_qty = have_qty + GetUnitCountEx(GOBLIN_ALCHEMIST,only_done,townid)
 
     elseif unitid == DWARF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(DWARF_TIER_2,false,townid) + GetUnitCountEx(DWARF_TIER_3,false,townid)
@@ -918,8 +922,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(DWARF_SIEGE_ENGINE_BARRAGE,false,townid) + GetUnitCountEx(DWARF_ELITE_SIEGE_TANK,false,townid)
     elseif unitid == DWARF_GRYPHON then
         set have_qty = have_qty + GetUnitCountEx(DWARF_GRYPHON_M,false,townid)
+    elseif unitid == DWARF_GRYPHON_M then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_GRYPHON,only_done,townid)
     elseif unitid == DWARF_WAR_GOLEM then
         set have_qty = have_qty + GetUnitCountEx(DWARF_WAR_GOLEM_M,false,townid)
+    elseif unitid == DWARF_WAR_GOLEM_M then
+        set have_qty = have_qty + GetUnitCountEx(DWARF_WAR_GOLEM,only_done,townid)
 
     elseif unitid == HIGH_ELF_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(HIGH_ELF_TIER_2,false,townid) + GetUnitCountEx(HIGH_ELF_TIER_3,false,townid)
@@ -970,6 +978,10 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(PANDAREN_TIER_3,false,townid)
     elseif unitid == PANDAREN_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(PANDAREN_MAGIC_TOWER,false,townid) + GetUnitCountEx(PANDAREN_CANNON_TOWER,false,townid) + GetUnitCountEx(PANDAREN_GUARD_TOWER,false,townid)
+    elseif unitid == PANDAREN_DRUID then
+        set have_qty = have_qty + GetUnitCountEx(PANDAREN_DRUID_M,false,townid)
+    elseif unitid == PANDAREN_DRUID_M then
+        set have_qty = have_qty + GetUnitCountEx(PANDAREN_DRUID,only_done,townid)
 
     elseif unitid == TROLL_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(TROLL_TIER_2,false,townid) + GetUnitCountEx(TROLL_TIER_3,false,townid)
@@ -984,11 +996,11 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
     elseif unitid == TAUREN_SPIRIT_WALKER then
         set have_qty = have_qty  + GetUnitCountEx(TAUREN_SPIRIT_WALKER_M,false,townid)
     elseif unitid == TAUREN_SPIRIT_WALKER_M then
-        set have_qty = have_qty  + GetUnitCountEx(TAUREN_SPIRIT_WALKER,false,townid)
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_SPIRIT_WALKER,only_done,townid)
     elseif unitid == TAUREN_DRUID then
         set have_qty = have_qty  + GetUnitCountEx(TAUREN_DRUID_M,false,townid)
     elseif unitid == TAUREN_DRUID_M then
-        set have_qty = have_qty  + GetUnitCountEx(TAUREN_DRUID,false,townid)
+        set have_qty = have_qty  + GetUnitCountEx(TAUREN_DRUID,only_done,townid)
     elseif unitid == TAUREN_TAUREN then
         set have_qty = have_qty  + GetUnitCountEx(TAUREN_ELITE_TAUREN,false,townid)
 

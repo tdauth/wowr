@@ -4792,12 +4792,12 @@ globals
     constant integer PANDAREN_SHIPYARD                               = 'e01V'
     constant integer PANDAREN_BLACKSMITH                             = 'h0TC' // blacksmith
 
+    constant integer UPG_PANDAREN_BACKPACK                           = 'R08Z'
     constant integer UPG_PANDAREN_MELEE                              = 'R0DJ'
     constant integer UPG_PANDAREN_ARMOR                              = 'R0DK'
     constant integer UPG_PANDAREN_DRINK                              = 'R0DM'
     constant integer UPG_PANDAREN_DEFEND                             = 'R06I'
     constant integer UPG_PANDAREN_IMPROVED_BOWS                      = 'R090'
-    constant integer UPG_PANDAREN_BACKPACK                           = 'R08Z'
     constant integer UPG_PANDAREN_DRUNK_PANDA                        = 'R091'
     constant integer UPG_PANDAREN_DRUID                              = 'R092'
     constant integer UPG_PANDAREN_MONK                               = 'R0DL'
@@ -4809,18 +4809,19 @@ globals
     constant integer UPG_PANDAREN_FIREWORK                           = 'R0DN'
     constant integer UPG_PANDAREN_FRAGMENTATION_SHARDS               = 'R0DT'
     constant integer UPG_PANDAREN_HARDENED_SKIN                      = 'R0DV'
-    constant integer UPG_PANDAREN_JADE_FOREST                        = 'R0DQ' // special building
     constant integer UPG_PANDAREN_MAGIC_SENTRY                       = 'R0DI'
     constant integer UPG_PANDAREN_SPIKED_SHELL                       = 'R0DW'
     constant integer UPG_PANDAREN_BAMBOO_STICKS                      = 'R0FU'
+    constant integer UPG_PANDAREN_JADE_FOREST                        = 'R0DQ' // special building
 
     constant integer PANDAREN_WOODCUTTER                             = 'h067' // worker
-    constant integer PANDAREN_ARCHER                                 = 'h0B0'
-    constant integer PANDAREN_HONORGUARD                             = 'h0B1'
-    constant integer PANDAREN_WARLORD                                = 'h0AG'
-    constant integer PANDAREN_SHAMAN                                 = 'o04N' // monk
-    constant integer PANDAREN_SAGE                                   = 'h0AA'
-    constant integer PANDAREN_DRUID                                  = 'e01E'
+    constant integer PANDAREN_HONORGUARD                             = 'h0B1' // footman
+    constant integer PANDAREN_ARCHER                                 = 'h0B0' // rifleman
+    constant integer PANDAREN_WARLORD                                = 'h0AG' // knight
+    constant integer PANDAREN_SHAMAN                                 = 'o04N' // monk/priest
+    constant integer PANDAREN_SAGE                                   = 'h0AA' // sorceress
+    constant integer PANDAREN_DRUID                                  = 'e01E' // spell breaker
+    constant integer PANDAREN_DRUID_M                                = 'e01F'
     constant integer PANDAREN_DRAGON_TURTLE                          = 'n0GO'
     constant integer PANDAREN_FIREWORK_TEAM                          = 'h0A8'
     constant integer PANDAREN_PRIMAL_PANDAREN                        = 'n0GR'
