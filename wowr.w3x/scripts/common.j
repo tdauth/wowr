@@ -3677,6 +3677,19 @@ globals
 
     constant integer AIR_ELEMENTAL                                   = 'n0IK'
 
+    constant integer DARK_MINION_3                                   = 'ndr3'
+    constant integer DOOM_GUARD_SUMMONED                             = 'nba2'
+
+    // Special Units/Summoned Units
+    constant integer ANCIENT_EARTH                                   = 'n008'
+    constant integer ANCIENT_FIRE                                    = 'n009'
+    constant integer ANCIENT_STORM                                   = 'n00A'
+    constant integer SPIRIT_BEAR_3                                   = 'ngz3'
+    constant integer SPIRIT_HAWK_3                                   = 'nwe3'
+    constant integer QUILBEAST_3                                     = 'nqb3'
+    constant integer LAVA_SPAWN_3                                    = 'nlv3'
+    constant integer WATERY_MINION_3                                 = 'nsns'
+
     // Housing
     constant integer REAL_ESTATE_AGENT                               = 'n0O3'
     constant integer CARETAKER                                       = 'n0O2'
@@ -5920,6 +5933,19 @@ globals
     constant integer BREATH_OF_FIRE                                  = 'ANbf'
     constant integer CONTROL_MAGIC                                   = 'A0EN'
     constant integer REPAIR                                          = 'A0K4'
+
+    // Slot 2
+    constant integer BLACK_ARROW                                     = 'ANba'
+    constant integer SUMMON_QUILBEAST                                = 'ANsq'
+    constant integer SUMMON_LAVA_SPAWN                               = 'ANlm'
+
+    // Slot 3
+    constant integer SUMMON_HAWK                                     = 'ANsw'
+    constant integer WATERY_MINION                                   = 'ANwm'
+
+    // Slot 4
+    constant integer DOOM                                            = 'ANdo'
+    constant integer STORM_EARTH_FIRE                                = 'ANef'
 
     // Schools of Magic
 
