@@ -1189,7 +1189,7 @@ StringList {
     BUILDINGS_NEW_LINE                 "Buildings:|n %1%",
     RESOURCES_NEW_LINE                 "Resources:|n %1%",
     CLAN_NEW_LINE                      "Clan:|n %1%",
-    MISSING_CLAN_NAME                  "Missing clan name! Enter '-loadc XXX <Clan Name>'",
+    MISSING_CLAN_NAME                  "Missing clan name! Enter '-loadc XXX <Clan Name>'.",
     SUCCESSFULLY_LOADED_SAVECODE_X     "Successfully loaded the savecode: %1%",
     ERROR_ON_LOADING_SAVECODE_X        "Error on loading the savecode: %1%",
     UPDATE_YELLOW                      "|cffFCD20DUpdate|r",
