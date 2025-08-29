@@ -3652,6 +3652,11 @@ globals
     constant integer NETHER_DRAGON_HATCHLING                         = 'nnht'
     constant integer NETHER_DRAKE                                    = 'nndk'
     constant integer SPIDER_CRAB_BEHEMOTH                            = 'nsc3'
+    constant integer SUCCUBUS_CREEP                                  = 'ndqn'
+    constant integer VILE_TOMENTOR                                   = 'ndqv'
+    constant integer VILE_TEMPTRESS                                  = 'ndqt'
+    constant integer MAIDEN_OF_PAIN                                  = 'ndqp'
+    constant integer QUEEN_OF_SUFFERING                              = 'ndqs'
 
 
     constant integer BARBED_ARACHNATHID_WITH_BURROW                  = 'nanm'
@@ -3670,6 +3675,7 @@ globals
     constant integer PIRATE                                          = 'h0AM'
     constant integer EGG_SACK                                        = 'o0AN'
     constant integer EXPLOSIVE_BARREL_CREEP                          = 'h0P9'
+    constant integer DJINN                                           = 'h0V9'
 
     constant integer DARK_PHOENIX                                    = 'h085'
     constant integer GREATER_THUNDER_PHOENIX                         = 'h0VF'
@@ -3686,7 +3692,7 @@ globals
     constant integer DARK_MINION_3                                   = 'ndr3'
     constant integer DOOM_GUARD_SUMMONED                             = 'nba2'
 
-    // Special Units/Summoned Units
+    // Special/Summoned Units
     constant integer ANCIENT_EARTH                                   = 'n008'
     constant integer ANCIENT_FIRE                                    = 'n009'
     constant integer ANCIENT_STORM                                   = 'n00A'
@@ -3700,6 +3706,11 @@ globals
     constant integer SUMMONED_SIEGE_GOLEM                            = 'n053'
     constant integer SUMMONED_MEAT_WAGON                             = 'u014'
     constant integer SUMMONED_SAPPHIRON                              = 'u015'
+    constant integer TELESCOPE                                       = 'o04I'
+    constant integer SUMMONED_GUNNER                                 = 'n0CA'
+    constant integer SUMMONED_SPOTTER                                = 'n0C2'
+    constant integer SUMMONED_SHIP                                   = 'h0XQ'
+    constant integer SPIDERLING                                      = 'nspd'
 
     // Old Gods
     constant integer TENTACLE_CTHUN                                  = 'n06F'
@@ -5957,6 +5968,7 @@ globals
     constant integer SPAWN_TENTACLE_CTHUN                            = 'A0HU'
     constant integer SPAWN_TENTACLE_NZOTH                            = 'A0HV'
     constant integer SPAWN_TENTACLE_YOGG_SARON                       = 'A0HR'
+    constant integer SUMMON_SHIP                                     = 'A217'
 
     // Slot 2
     constant integer BLACK_ARROW                                     = 'ANba'
@@ -5968,9 +5980,11 @@ globals
     constant integer SUMMON_AIR_ELEMENTAL                            = 'A1PR'
     constant integer SUMMON_EARTH_ELEMENTAL                          = 'A1PQ'
     constant integer SUMMON_DOOM_GUARD                               = 'A15Z'
+    constant integer SUMMON_DJINN                                    = 'A1Z1'
     constant integer RAISE_DEAD_SLOT_2                               = 'A09A'
     constant integer SUMMON_MEAT_WAGON                               = 'A0KI'
     constant integer SUMMON_SEA_ELEMENTAL_SLOT_2                     = 'A08S'
+    constant integer SUMMON_SPIDER_EGG                               = 'A1CF'
     constant integer SPAWN_EYE_TENTACLE_CTHUN                        = 'A0I3'
     constant integer SPAWN_EYE_TENTACLE_NZOTH                        = 'A0I4'
     constant integer SPAWN_MACE_TENTACLE_YOGG_SARON                  = 'A0HS'
@@ -5980,6 +5994,8 @@ globals
     constant integer WATERY_MINION                                   = 'ANwm'
     constant integer SUMMON_SEA_ELEMENTAL_SLOT_3                     = 'A24S'
     constant integer SUMMON_SPIDER_CRABS                             = 'A0AE'
+    constant integer SUMMON_TELESCOPE                                = 'A12Z'
+    constant integer SUMMON_SUCCUBUS                                 = 'A1YL'
 
     // Slot 4
     constant integer DOOM                                            = 'ANdo'
@@ -5987,6 +6003,7 @@ globals
     constant integer NETHER_DRAGON_MASTER                            = 'A088'
     constant integer SUMMON_SAPPHIRON                                = 'A0R5'
     constant integer SUMMON_GREEN_DRAGON                             = 'A22D'
+    constant integer SPLIT                                           = 'A127'
 
     // Schools of Magic
 
