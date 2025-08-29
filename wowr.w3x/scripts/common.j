@@ -3649,8 +3649,10 @@ globals
     // Creeps
     constant integer GHOST                                           = 'ngh1'
     constant integer WRAITH                                          = 'ngh2'
-    constant integer SEA_ELEMENTAL                                   = 'nsel'
-    constant integer FIRE_ELEMENTAL                                  = 'h061'
+    constant integer NETHER_DRAGON_HATCHLING                         = 'nnht'
+    constant integer NETHER_DRAKE                                    = 'nndk'
+    constant integer SPIDER_CRAB_BEHEMOTH                            = 'nsc3'
+
 
     constant integer BARBED_ARACHNATHID_WITH_BURROW                  = 'nanm'
     constant integer BARBED_ARACHNATHID_BURROWED                     = 'nbnb'
@@ -3675,7 +3677,11 @@ globals
     constant integer PHOENIX_EGG_CREEP                               = 'h0VD'
     constant integer LESSER_THUNDER_PHOENIX                          = 'h0VG'
 
+    // Elementals
+    constant integer SEA_ELEMENTAL                                   = 'nsel'
     constant integer AIR_ELEMENTAL                                   = 'n0IK'
+    constant integer FIRE_ELEMENTAL                                  = 'h061'
+    constant integer EARTH_ELEMENTAL                                 = 'n0IJ'
 
     constant integer DARK_MINION_3                                   = 'ndr3'
     constant integer DOOM_GUARD_SUMMONED                             = 'nba2'
@@ -3689,6 +3695,19 @@ globals
     constant integer QUILBEAST_3                                     = 'nqb3'
     constant integer LAVA_SPAWN_3                                    = 'nlv3'
     constant integer WATERY_MINION_3                                 = 'nsns'
+    constant integer SPIRIT_PIG                                      = 'nspp'
+    constant integer SKELETAL_MAGE                                   = 'uskm'
+    constant integer SUMMONED_SIEGE_GOLEM                            = 'n053'
+    constant integer SUMMONED_MEAT_WAGON                             = 'u014'
+    constant integer SUMMONED_SAPPHIRON                              = 'u015'
+
+    // Old Gods
+    constant integer TENTACLE_CTHUN                                  = 'n06F'
+    constant integer TENTACLE_NZOTH                                  = 'n06D'
+    constant integer TENTACLE_YOGG_SARON                             = 'n06A'
+    constant integer EYE_TENTACLE_CTHUN                              = 'n06K'
+    constant integer EYE_TENTACLE_NZOTH                              = 'n06L'
+    constant integer MACE_TENTACLE_YOGG_SARON                        = 'n06B'
 
     // Housing
     constant integer REAL_ESTATE_AGENT                               = 'n0O3'
@@ -5933,19 +5952,41 @@ globals
     constant integer BREATH_OF_FIRE                                  = 'ANbf'
     constant integer CONTROL_MAGIC                                   = 'A0EN'
     constant integer REPAIR                                          = 'A0K4'
+    constant integer RAISE_DEAD_SLOT_1                               = 'A0KG'
+    constant integer SUMMON_SKELETONS                                = 'A1IL'
+    constant integer SPAWN_TENTACLE_CTHUN                            = 'A0HU'
+    constant integer SPAWN_TENTACLE_NZOTH                            = 'A0HV'
+    constant integer SPAWN_TENTACLE_YOGG_SARON                       = 'A0HR'
 
     // Slot 2
     constant integer BLACK_ARROW                                     = 'ANba'
     constant integer SUMMON_QUILBEAST                                = 'ANsq'
     constant integer SUMMON_LAVA_SPAWN                               = 'ANlm'
+    constant integer FERAL_SPIRIT_PIGS                               = 'A0H6'
+    constant integer SUMMON_GOLEM                                    = 'A0EM'
+    constant integer SUMMON_FIRE_ELEMENTAL                           = 'A0HM'
+    constant integer SUMMON_AIR_ELEMENTAL                            = 'A1PR'
+    constant integer SUMMON_EARTH_ELEMENTAL                          = 'A1PQ'
+    constant integer SUMMON_DOOM_GUARD                               = 'A15Z'
+    constant integer RAISE_DEAD_SLOT_2                               = 'A09A'
+    constant integer SUMMON_MEAT_WAGON                               = 'A0KI'
+    constant integer SUMMON_SEA_ELEMENTAL_SLOT_2                     = 'A08S'
+    constant integer SPAWN_EYE_TENTACLE_CTHUN                        = 'A0I3'
+    constant integer SPAWN_EYE_TENTACLE_NZOTH                        = 'A0I4'
+    constant integer SPAWN_MACE_TENTACLE_YOGG_SARON                  = 'A0HS'
 
     // Slot 3
     constant integer SUMMON_HAWK                                     = 'ANsw'
     constant integer WATERY_MINION                                   = 'ANwm'
+    constant integer SUMMON_SEA_ELEMENTAL_SLOT_3                     = 'A24S'
+    constant integer SUMMON_SPIDER_CRABS                             = 'A0AE'
 
     // Slot 4
     constant integer DOOM                                            = 'ANdo'
     constant integer STORM_EARTH_FIRE                                = 'ANef'
+    constant integer NETHER_DRAGON_MASTER                            = 'A088'
+    constant integer SUMMON_SAPPHIRON                                = 'A0R5'
+    constant integer SUMMON_GREEN_DRAGON                             = 'A22D'
 
     // Schools of Magic
 

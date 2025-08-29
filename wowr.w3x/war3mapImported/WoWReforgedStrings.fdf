@@ -312,6 +312,8 @@ StringList {
     FLAME_SHREDDER                     "Flame Shredder",
     GOBLIN_SHREDDER                    "Goblin Shredder",
     GUNNER                             "Gunner",
+    ENGINEER                           "Engineer",
+    SAPPER                             "Sapper",
     SEA_WITCH                          "Sea Witch",
     NAGA_ROYAL_GUARD                   "Naga Royal Guard",
     NAGA_SIREN                         "Naga Siren",

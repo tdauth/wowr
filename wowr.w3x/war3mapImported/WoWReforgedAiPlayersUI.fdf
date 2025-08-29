@@ -142,6 +142,8 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "FLAME_SHREDDER",     -2,
         MenuItem "GOBLIN_SHREDDER",     -2,
         MenuItem "GUNNER",     -2,
+        MenuItem "ENGINEER",     -2,
+        MenuItem "SAPPER",     -2,
         MenuItem "SEA_WITCH",     -2,
         MenuItem "NAGA_ROYAL_GUARD",     -2,
         MenuItem "NAGA_SIREN",     -2,
