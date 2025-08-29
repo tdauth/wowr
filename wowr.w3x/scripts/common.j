@@ -3652,12 +3652,26 @@ globals
     constant integer NETHER_DRAGON_HATCHLING                         = 'nnht'
     constant integer NETHER_DRAKE                                    = 'nndk'
     constant integer SPIDER_CRAB_BEHEMOTH                            = 'nsc3'
-    constant integer SUCCUBUS_CREEP                                  = 'ndqn'
+    constant integer CREEP_SUCCUBUS                                  = 'ndqn'
     constant integer VILE_TOMENTOR                                   = 'ndqv'
     constant integer VILE_TEMPTRESS                                  = 'ndqt'
     constant integer MAIDEN_OF_PAIN                                  = 'ndqp'
     constant integer QUEEN_OF_SUFFERING                              = 'ndqs'
-
+    constant integer CREEP_FEL_BEAST                                 = 'npfl'
+    constant integer FEL_STALKER                                     = 'nfel'
+    constant integer GREATER_VOID_WALKER                             = 'nvdg'
+    constant integer ELDER_VOID_WALKER                               = 'nvde'
+    constant integer OVERLORD                                        = 'nfov'
+    constant integer INFERNAL_CONTRAPTION                            = 'ninc'
+    constant integer INFERNAL_MACHINE                                = 'ninm'
+    constant integer FEL_RAVAGER                                     = 'npfm'
+    constant integer INFERNAL_JUGGERNAUT                             = 'nina'
+    constant integer EREDAR_DIABOLIST                                = 'nerd'
+    constant integer BLOODFIEND                                      = 'nfgb'
+    constant integer SLAMANDER_LORD                                  = 'nsll'
+    constant integer LADY_OF_SUFFERING                               = 'n00X'
+    constant integer BIG_INFERNAL_JUGGERNAUT                         = 'n010'
+    constant integer MAGMA_GIANT                                     = 'n00Y'
 
     constant integer BARBED_ARACHNATHID_WITH_BURROW                  = 'nanm'
     constant integer BARBED_ARACHNATHID_BURROWED                     = 'nbnb'
@@ -3674,13 +3688,13 @@ globals
     constant integer BARREL_1                                        = 'o0C2'
     constant integer PIRATE                                          = 'h0AM'
     constant integer EGG_SACK                                        = 'o0AN'
-    constant integer EXPLOSIVE_BARREL_CREEP                          = 'h0P9'
+    constant integer CREEP_EXPLOSIVE_BARREL                          = 'h0P9'
     constant integer DJINN                                           = 'h0V9'
 
     constant integer DARK_PHOENIX                                    = 'h085'
     constant integer GREATER_THUNDER_PHOENIX                         = 'h0VF'
-    constant integer PHOENIX_CREEP                                   = 'h0UV'
-    constant integer PHOENIX_EGG_CREEP                               = 'h0VD'
+    constant integer CREEP_PHOENIX                                   = 'h0UV'
+    constant integer CREEP_PHOENIX_EGG                               = 'h0VD'
     constant integer LESSER_THUNDER_PHOENIX                          = 'h0VG'
 
     // Elementals
@@ -6004,6 +6018,8 @@ globals
     constant integer SUMMON_SAPPHIRON                                = 'A0R5'
     constant integer SUMMON_GREEN_DRAGON                             = 'A22D'
     constant integer SPLIT                                           = 'A127'
+    constant integer DEMON_MASTER                                    = 'A01R'
+    constant integer DEMON_MASTER_ARCHIMONDE                         = 'A041'
 
     // Schools of Magic
 
