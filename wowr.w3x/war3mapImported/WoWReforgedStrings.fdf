@@ -213,16 +213,11 @@ StringList {
     // Heroes Tavern
     CUSTOMIZABLE                       "Customizable",
     NAVY                               "Navy",
-    VOID_LORDS                         "Void Lords",
     DEMIGODS                           "Demigods",
     // Heroes
     HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
-    HERO_STRENGTH_MELEE                "Hero Strength Melee",
-    HERO_STRENGTH_RANGE                "Hero Strength Range",
-    HERO_AGILITY_MELEE                 "Hero Agility Melee",
-    HERO_AGILITY_RANGE                 "Hero Agility Range",
-    HERO_INTELLIGENCE_MELEE            "Hero Intelligence Melee",
-    HERO_INTELLIGENCE_RANGE            "Hero Intelligence Range",
+    CUSTOMIZABLE_HERO                  "Customizable Hero",
+    VOID_LORD                          "Void Lord",
     NERZHUL                            "Ner'Zhul",
     GULDAN                             "Gul'dan",
     KHADGAR                            "Khadgar",
@@ -1411,6 +1406,7 @@ StringList {
     ATTRIBUTES                         "Attributes",
     MOVEMENT_TYPES                     "Movement Types",
     PRIMARY_ATTRIBUTES                 "Primary Attributes",
+    ATTACK_TYPES                       "Attack Types",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Adding ability %1%.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Only available for reskillable heroes.",

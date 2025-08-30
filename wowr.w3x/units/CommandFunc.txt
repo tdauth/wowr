@@ -4,8 +4,8 @@ Buttonpos=-2147483648,-2147483648
 
 [CmdAttack]
 Art=CommandAttack
-//Buttonpos=-2147483648,-2147483648
-Buttonpos=3,0
+Buttonpos=-2147483648,-2147483648
+//Buttonpos=3,0
 
 [CmdAttackGround]
 Art=CommandAttackGround
@@ -50,8 +50,8 @@ ButtonPos=3,2
 
 [CmdHoldPos]
 Art=CommandHoldPosition
-//Buttonpos=-2147483648,-2147483648
-Buttonpos=2,0
+Buttonpos=-2147483648,-2147483648
+//Buttonpos=2,0
 
 [CmdPatrol]
 Art=CommandPatrol
@@ -73,8 +73,8 @@ Buttonpos=3,1
 
 [CmdStop]
 Art=CommandStop
-//Buttonpos=-2147483648,-2147483648
-Buttonpos=1,0
+Buttonpos=-2147483648,-2147483648
+//Buttonpos=1,0
 
 //[CmdUnivAgi]
 //Art=

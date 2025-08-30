@@ -1411,7 +1411,8 @@ StringList {
     // Trainers
     ATTRIBUTES                         "Attribute",
     MOVEMENT_TYPES                     "Bewegungstypen",
-    PRIMARY_ATTRIBUTES                 "Primäre Attributes",
+    PRIMARY_ATTRIBUTES                 "Primäre Attribute",
+    ATTACK_TYPES                       "Angriffstypen",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Fähigkeit %1% hinzugefügt.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Nur für umschulbare Helden verfügbar.",
