@@ -51,11 +51,14 @@ StringList {
     INVALID_TARGET_PLAYER              "Invalid target player.",
     // Learnable Skills Shop
     SLOT_X                             "Slot %1%",
-    WAIT_X_FOR_SKILL_OF_SLOT_Y         "Wait %1% until you can learn another skill from slot %2%.",
     NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Bags.",
     SKILL_FOR_CUSTOMIZABLE_HEROES      "Only customizable, Void Lord, Archangel, Sea Giant heroes or Equipment Bags at hero level 75 can change their hero abilities.",
     // Reskillable Heroes
     SKILL_POINTS_REMAINING             "%1% skill points remaining.",
+    // Skill Menu
+    NOT_ENOUGH_SKILL_POINTS            "Not enough skill points.",
+    ABILITY_HAS_LEVEL_0                "Ability has level 0.",
+    NO_ABILITY                         "No ability.",
     // Resurrection Stones
     ACTIVATED_RESURRECTION_STONE       "Activated Resurrection Stone.",
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",
@@ -1410,6 +1413,7 @@ StringList {
     CHANGE_MOVEMENT_TYPE_TO_X          "Change movement type to %1%.",
     CHANGE_PRIMARY_ATTRIBUTE_TO_X      "Change primary attribute to %1%.",
     CHANGE_ATTACK_TO_X                 "Change attack to %1%.",
+    RANGE                              "Range",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Adding ability %1%.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Only available for reskillable heroes.",
