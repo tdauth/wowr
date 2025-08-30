@@ -1407,6 +1407,9 @@ StringList {
     MOVEMENT_TYPES                     "Movement Types",
     PRIMARY_ATTRIBUTES                 "Primary Attributes",
     ATTACK_TYPES                       "Attack Types",
+    CHANGE_MOVEMENT_TYPE_TO_X          "Change movement type to %1%.",
+    CHANGE_PRIMARY_ATTRIBUTE_TO_X      "Change primary attribute to %1%.",
+    CHANGE_ATTACK_TO_X                 "Change attack to %1%.",
     // Standard Hero Abilities
     ADDING_ABILITY_X                   "Adding ability %1%.",
     ONLY_AVAILABLE_RESKILLABLE_HEROES  "Only available for reskillable heroes.",
