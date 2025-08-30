@@ -3092,6 +3092,7 @@ globals
     constant integer PHOENIX_MOUNT                                   = 'h0UW'
     constant integer SNOWY_OWL_MOUNT                                 = 'h0V5'
     constant integer ALBATROSS_MOUNT                                 = 'h0AX'
+    constant integer BRUTOSAUR_MOUNT                                 = 'n0IW'
 
     constant integer FOUNTAIN_OF_LIFE                                = 'h007'
     constant integer FREELANCER_PROTECTION_TOWER                     = 'n03I'
