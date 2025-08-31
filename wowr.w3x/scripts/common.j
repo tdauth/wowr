@@ -3082,6 +3082,7 @@ globals
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
+    constant integer ABILITY_SUMMON_GRYPHON_MOUNT                    = 'A021'
     constant integer WYVERN_MOUNT                                    = 'o003'
     constant integer FROST_WYRM_MOUNT                                = 'u004'
     constant integer GARGOYLE_MOUNT                                  = 'u030'
@@ -6018,6 +6019,11 @@ globals
     constant integer ABILITY_HOLY_LIGHT                              = 'A13W'
     constant integer ABILITY_DIVINE_SHIELD                           = 'A1NY'
     constant integer ABILITY_HEALING_WAVE                            = 'Leav'
+    constant integer ABILITY_HOLY_AURA                               = 'A117'
+    constant integer ABILITY_DEVOTION_AURA                           = 'ACav'
+    constant integer ABILITY_HOLY_NOVA                               = 'A118'
+    constant integer ABILITY_MASS_HOLY_LIGHT                         = 'A119'
+    constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
     // Arcane Magic
