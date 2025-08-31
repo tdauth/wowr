@@ -2744,7 +2744,7 @@ globals
     // WoW Reforged
     // make constants available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "4.4"
+    constant string MAP_VERSION                                      = "4.5"
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
     constant integer PLAYER_RESCUABLE                                = 21
@@ -6037,8 +6037,8 @@ globals
     constant integer ABILITY_BLIZZARD                                = 'ACbz'
     constant integer ABILITY_FROST_NOVA                              = 'ACfn'
     constant integer ABILITY_FROST_ARROWS                            = 'A179'
+    constant integer ABILITY_FROST_BOLT                              = 'ACcb'
     constant integer ABILITY_MONSOON                                 = 'ACmo'
-    constant integer ABILITY_TORNADO                                 = 'A09O'
 
     // Earth Magic
     constant integer ABILITY_EARTH_MAGIC                             = 'A26D'
@@ -6065,7 +6065,7 @@ globals
     constant integer ABILITY_DISARMAMENT                             = 'A16K'
     constant integer ABILITY_SUMMON_AIR_ELEMENTAL                    = 'A0VH'
     constant integer ABILITY_WEB                                     = 'ACwb'
-    //constant integer ABILITY_TORNADO                                 = 'A09O'
+    constant integer ABILITY_TORNADO                                 = 'A09O'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
         // Holy Magic
