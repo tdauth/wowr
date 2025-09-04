@@ -3709,7 +3709,6 @@ globals
     constant integer SUMMONED_SIEGE_GOLEM                            = 'n053'
     constant integer SUMMONED_MEAT_WAGON                             = 'u014'
     constant integer SUMMONED_SAPPHIRON                              = 'u015'
-    constant integer TELESCOPE                                       = 'o04I'
     constant integer SUMMONED_GUNNER                                 = 'n0CA'
     constant integer SUMMONED_SPOTTER                                = 'n0C2'
     constant integer SUMMONED_SHIP                                   = 'h0XQ'
@@ -5997,7 +5996,6 @@ globals
     constant integer WATERY_MINION                                   = 'ANwm'
     constant integer SUMMON_SEA_ELEMENTAL_SLOT_3                     = 'A24S'
     constant integer SUMMON_SPIDER_CRABS                             = 'A0AE'
-    constant integer SUMMON_TELESCOPE                                = 'A12Z'
     constant integer SUMMON_SUCCUBUS                                 = 'A1YL'
 
     // Slot 4
