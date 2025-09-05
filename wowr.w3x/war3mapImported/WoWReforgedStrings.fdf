@@ -1563,13 +1563,36 @@ StringList {
     LEARN_ABILITY_X                    "Learn %1%",
     ABILITY_LEVEL_X                    "%1% - [|cffffcc00Level %2%|r]",
     CLICK_TO_CHANGE_ABILITY            "Click to change ability.",
+    HERO_HAS_DEFAULT_CLASS_X           "Hero has default class %1%.",
+    // Classes
+    ARCANIST                           "Arcane Magic",
+    PYROMANCER                         "Pyromancer",
+    HYDROMANCER                        "Hydromancer",
+    GEOMANCER                          "Geomancer",
+    AEROMANCER                         "Aeromancer",
+    PALADIN                            "Paladin",
+    DEATH_KNIGHT                       "Death Knight",
+    WARLOCK                            "Warlock",
+    DRUID                              "Druid",
+    WARRIOR                            "Warrior",
+    // Arcanist
+    MASS_TELEPORT_TOOLTIP              "Teleports <this,Hmt1,X> of the player's nearby units, including the hero, to a friendly ground unit or structure.|n|n|cffffcc00Increases the number of teleported player units with every level.|r",
+    // Pyromancer
+    FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
+    // Geomancer
     STORM_BOLT_TOOLTIP                 "Throws a magical hammer at a target enemy unit, dealing <this,Htb1,x> damage and stunning the target for <ANsb,Dur1> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
+    BASH_TOOLTIP                       "Gives a <this,Hbh1,x>% chance that an attack will do <this,Hbh3,x> bonus damage and stun the target for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage and chance to stun with every level.|r",
     AVATAR_TOOLTIP                     "Activate Avatar to give the hero <this,Hav1,x> bonus armor, <this,Hav2,x> bonus hit points, <this,Hav3,x> bonus damage and spell immunity. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the bonus armor, bonus hit points and bonus damage with every level.|r",
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
+    // Paladin
     HEAL_TOOLTIP                       "Heals <this,Hea1,x> hit points per second of a target friendly non-mechanical wounded unit.|n|n|cffffcc00Increases the amount of healed hit points with every level.|r",
-    HEALING_WAVE_TOOLTIP               "Calls forth a wave of healing energy that bounces up to <this,Ocl2,x> times, healing <this,Ocl1,x> damage on the primary target. Each jump heals less damage.",
-    RESURRECTION_TOOLTIP               "Brings back to life the corpses of <this,Hre1,x> friendly nearby units.",
-    MASS_TELEPORT_TOOLTIP              "Teleports <this,Hmt1,X> of the player's nearby units, including the hero, to a friendly ground unit or structure.|n|n|cffffcc00Increases the number of teleported player units with every level.|r",
     HOLY_LIGHT_TOOLTIP                 "A holy light that can heal a friendly living unit for <this,Hhb1,x> or deal half damage to an enemy Undead unit.|n|n|cffffcc00Increases the healed hit points with every level.|r",
-    FIREBOLT_TOOLTIP                   "Hurls a fiery bolt that causes <this,Htb1,x> damage and stuns a target enemy unit for <this,adur,x> seconds.",
+    DIVINE_SHIELD_TOOLTIP              "An impenetrable shield surrounds the hero, protecting him from all damage and spells for a set amount of time.|n|n|cffffcc00Increases the duration and cooldown with every level.|r",
+    HEALING_WAVE_TOOLTIP               "Calls forth a wave of healing energy that bounces up to <this,Ocl2,x> times, healing <this,Ocl1,x> damage on the primary target. Each jump heals less damage.",
+    DEVOTION_AURA_TOOLTIP              "Gives <this,Had1,x> additional armor to nearby friendly units.|n|n|cffffcc00Increases the armor bonus with every level.|r",
+    HOLY_NOVA_TOOLTIP                  "Casts a powerful nova of Holy Magic damaging Undead enemy units and healing allied non-Undead units.|n|n|cffffcc00Increases the damage and healing with every level.|r",
+    RESURRECTION_TOOLTIP               "Brings back to life the corpses of <this,Hre1,x> friendly nearby units.",
+    // Warrior
+    SLIDE_TOOLTIP                      "Lets your hero slide into the given direction, moving the hero quickly and damaging everything on its way.|n|n|cffffcc00Increases the distance and decreases the cooldown with every level.|r",
+    BARRAGE_TOOLTIP                    "Allows the hero to fire at <this,Efk3,x> nearby enemies at the same time.|n|n|cffffcc00Increases the maximum number of targets per level.|r",
 }

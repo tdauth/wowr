@@ -5932,7 +5932,6 @@ globals
     // WoW Reforged abilities
 
     // Units (abilities)
-    constant integer ABILITY_INVISIBILITY                            = 'Aivs'
 
     // Heroes (spells)
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
@@ -6064,7 +6063,7 @@ globals
     constant integer ABILITY_TORNADO                                 = 'A09O'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
-        // Holy Magic
+    // Holy Magic
     constant integer ABILITY_HOLY_MAGIC                              = 'A115'
     constant integer ABILITY_HEAL                                    = 'Anhe'
     constant integer ABILITY_INNFER_FIRE                             = 'ACif'
@@ -6098,7 +6097,7 @@ globals
     constant integer ABILITY_SPELL_STEAL                             = 'Asps'
     constant integer ABILITY_CONTROL_MAGIC                           = 'A11C'
     constant integer ABILITY_FEEDBACK                                = 'Afbk'
-    constant integer ABILITY_BLINK                                   = 'A005'
+    constant integer ABILITY_INVISIBILITY                            = 'A25Z'
     constant integer ABILITY_MANA_SHIELD                             = 'ACmf'
     constant integer ABILITY_SIPHON_MANA                             = 'ACsm'
     constant integer ABILITY_DISPEL_MAGIC                            = 'Adsm'
@@ -6133,6 +6132,13 @@ globals
     constant integer ABILITY_DRUID_FORMS                             = 'A17H'
     constant integer ABILITY_ROAR                                    = 'ACro'
     constant integer ABILITY_TRANQUILITY                             = 'A1BV'
+
+    // Combat
+    constant integer ABILITY_SLIDE                                   = 'A0W7'
+    constant integer ABILITY_BARRAGE                                 = 'A1OQ'
+
+    // Poison/Moon Magic
+    constant integer ABILITY_BLINK                                   = 'A005'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'

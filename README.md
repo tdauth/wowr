@@ -1503,3 +1503,6 @@ Here is a list of some modified versions online:
 * Explobomb: [Elemental Lords Pack](https://www.hiveworkshop.com/threads/elemental-lords-pack.360451/)
 * loboproto: [BTNLegionTeleporter](https://www.hiveworkshop.com/threads/btnlegionteleporter.268572/)
 * HappyCockroach: [Spellbook Pack](https://www.hiveworkshop.com/threads/spellbook-pack.144447/)
+* CRAZYRUSSIAN: [BTNcrPLUSbooK](https://www.hiveworkshop.com/threads/btncrplusbook.198471/)
+* CRAZYRUSSIAN: [BTNcrMINUSbooK](https://www.hiveworkshop.com/threads/btncrminusbook.198470/)
+* Pakmand: [BTNBack](https://www.hiveworkshop.com/threads/btnback.120394/)
