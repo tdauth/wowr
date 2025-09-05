@@ -1562,6 +1562,7 @@ StringList {
     // Abilities
     LEARN_ABILITY_X                    "Learn %1%",
     ABILITY_LEVEL_X                    "%1% - [|cffffcc00Level %2%|r]",
+    CLICK_TO_CHANGE_ABILITY            "Click to change ability.",
     STORM_BOLT_TOOLTIP                 "Throws a magical hammer at a target enemy unit, dealing <this,Htb1,x> damage and stunning the target for <ANsb,Dur1> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     AVATAR_TOOLTIP                     "Activate Avatar to give the hero <this,Hav1,x> bonus armor, <this,Hav2,x> bonus hit points, <this,Hav3,x> bonus damage and spell immunity. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the bonus armor, bonus hit points and bonus damage with every level.|r",
     INVISIBILITY_TOOLTIP               "Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <this,adur,x> seconds.",
