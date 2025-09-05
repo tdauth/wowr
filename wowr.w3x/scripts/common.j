@@ -3711,7 +3711,6 @@ globals
     constant integer SUMMONED_SAPPHIRON                              = 'u015'
     constant integer SUMMONED_GUNNER                                 = 'n0CA'
     constant integer SUMMONED_SPOTTER                                = 'n0C2'
-    constant integer SUMMONED_SHIP                                   = 'h0XQ'
     constant integer SPIDERLING                                      = 'nspd'
 
     // Old Gods
@@ -5970,7 +5969,6 @@ globals
     constant integer SPAWN_TENTACLE_CTHUN                            = 'A0HU'
     constant integer SPAWN_TENTACLE_NZOTH                            = 'A0HV'
     constant integer SPAWN_TENTACLE_YOGG_SARON                       = 'A0HR'
-    constant integer SUMMON_SHIP                                     = 'A217'
 
     // Slot 2
     constant integer BLACK_ARROW                                     = 'ANba'
@@ -6141,6 +6139,14 @@ globals
     constant integer ABILITY_SUBMERGE_NAGA_ROYAL_GUARD               = 'A239'
     constant integer ABILITY_SUBMERGE_LADY_VASHJ                     = 'A23A'
 
+    // Burrow
+    constant integer ABILITY_BURROW_CRYPT_LORD                      = 'A248'
+    constant integer ABILITY_BURROW_NERUBIAN_QUEEN                  = 'A249'
+    constant integer ABILITY_BURROW_ANUBARAK                        = 'A24A'
+    constant integer ABILITY_BURROW_GEOMANCER                       = 'A247'
+
+    // Root
+    constant integer ABILITY_ROOT_ANCIENT_OF_LORE                   = 'A0J1'
 
     // WoW Reforged heroes
 
