@@ -5961,7 +5961,6 @@ globals
     constant integer CANNIBALIZE                                     = 'A0TY'
     constant integer SOUL_BURN                                       = 'ANso'
     constant integer BREATH_OF_FIRE                                  = 'ANbf'
-    constant integer CONTROL_MAGIC                                   = 'A0EN'
     constant integer REPAIR                                          = 'A0K4'
     constant integer RAISE_DEAD_SLOT_1                               = 'A0KG'
     constant integer SUMMON_SKELETONS                                = 'A1IL'
@@ -6005,9 +6004,9 @@ globals
     constant integer DEMON_MASTER                                    = 'A01R'
     constant integer DEMON_MASTER_ARCHIMONDE                         = 'A041'
 
-    // Magic Schools
+    // Classes
 
-    // Fire Magic
+    // Pyromancer
     constant integer ABILITY_FIRE_MAGIC                              = 'A1O5'
     constant integer ABILITY_FIREBOLT                                = 'ACfb'
     constant integer ABILITY_IMMOLATION                              = 'ACim'
@@ -6021,7 +6020,7 @@ globals
     constant integer ABILITY_INCINERATE                              = 'A09N'
     constant integer ABILITY_PHOENIX                                 = 'A0V4'
 
-    // Water Magic
+    // Hydromancer
     constant integer ABILITY_WATER_MAGIC                             = 'A16Q'
     constant integer ABILITY_CRUSHING_WAVE                           = 'ACcv'
     constant integer ABILITY_CHAIN_LIGHTNING                         = 'ACcl'
@@ -6035,21 +6034,21 @@ globals
     constant integer ABILITY_FROST_BOLT                              = 'ACcb'
     constant integer ABILITY_MONSOON                                 = 'ACmo'
 
-    // Earth Magic
+    // Geomancer
     constant integer ABILITY_EARTH_MAGIC                             = 'A26D'
     constant integer ABILITY_STORM_BOLT                              = 'A26F'
-    constant integer ABILITY_WAR_STOMP                               = 'Awrs'
-    constant integer ABILITY_BASH                                    = 'ACbh'
+    constant integer ABILITY_SUMMON_WALL                             = 'A1E3'
+    constant integer ABILITY_ENDURANCE_AURA                          = 'SCae'
     constant integer ABILITY_FAR_SIGHT                               = 'A26G'
     constant integer ABILITY_SHOCKWAVE                               = 'ACsh'
     constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
     constant integer ABILITY_SUMMON_GOLEM                            = 'A26I'
     constant integer ABILITY_BLOODLUST                               = 'ACbl'
     constant integer ABILITY_EARTH_QUAKE                             = 'S00U'
-    constant integer ABILITY_AVATAR                                  = 'A26J'
+    constant integer ABILITY_STAMPEDE                                = 'A03Q'
     constant integer ABILITY_REINCARNATION                           = 'ACrn'
 
-    // Air Magic
+    // Aeromancer
     constant integer ABILITY_AIR_MAGIC                               = 'A0V6'
     constant integer ABILITY_CYCLONE                                 = 'ACcy'
     constant integer ABILITY_MIRROR_IMAGE                            = 'A0CQ'
@@ -6063,7 +6062,7 @@ globals
     constant integer ABILITY_TORNADO                                 = 'A09O'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
-    // Holy Magic
+    // Paladin
     constant integer ABILITY_HOLY_MAGIC                              = 'A115'
     constant integer ABILITY_HEAL                                    = 'Anhe'
     constant integer ABILITY_INNFER_FIRE                             = 'ACif'
@@ -6077,7 +6076,7 @@ globals
     constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
-    // Dark Magic
+    // Death Knight
     constant integer ABILITY_DARK_MAGIC                              = 'A16N'
     constant integer ABILITY_CURSE                                   = 'ACcs'
     constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
@@ -6091,7 +6090,7 @@ globals
     constant integer ABILITY_ANIMATE_DEAD                            = 'ACad'
     constant integer ABILITY_DEATH_AND_DECAY                         = 'A16P'
 
-    // Arcane Magic
+    // Arcanist
     constant integer ABILITY_ARCANE_MAGIC                            = 'A11B'
     constant integer ABILITY_BANISH                                  = 'ACbn'
     constant integer ABILITY_SPELL_STEAL                             = 'Asps'
@@ -6105,7 +6104,7 @@ globals
     constant integer ABILITY_MASS_TELEPORT                           = 'A11F'
     constant integer ABILITY_POLYMORPH                               = 'ACpy'
 
-    // Fel Magic
+    // Warlock
     constant integer ABILITY_FEL_MAGIC                               = 'A11G'
     constant integer ABILITY_CRIPPLE                                 = 'ACcr'
     constant integer ABILITY_MANA_BURN                               = 'Ambd'
@@ -6119,7 +6118,7 @@ globals
     constant integer ABILITY_RAIN_OF_CHAOS                           = 'A097'
     constant integer ABILITY_FINGER_OF_DEATH                         = 'Afod'
 
-    // Nature Magic
+    // Druid
     constant integer ABILITY_NATURE_MAGIC                            = 'A17A'
     constant integer ABILITY_REJUVENATION                            = 'ACrj'
     constant integer ABILITY_FEARIE_FIRE                             = 'ACff'
@@ -6133,11 +6132,23 @@ globals
     constant integer ABILITY_ROAR                                    = 'ACro'
     constant integer ABILITY_TRANQUILITY                             = 'A1BV'
 
-    // Combat
+    // Warrior
+    constant integer ABILITY_BERSERK                                 = 'A03P'
+    constant integer ABILITY_WAR_STOMP                               = 'Awrs'
+    constant integer ABILITY_PARRY                                   = 'A1Z5'
+    constant integer ABILITY_SPIKED_SHELL                            = 'ANth'
     constant integer ABILITY_SLIDE                                   = 'A0W7'
+    constant integer ABILITY_BASH                                    = 'ACbh'
+    constant integer ABILITY_COMMAND_AURA                            = 'ACac'
     constant integer ABILITY_BARRAGE                                 = 'A1OQ'
+    constant integer ABILITY_AVATAR                                  = 'A26J'
 
-    // Poison/Moon Magic
+    // Hunter
+    constant integer ABILITY_RAIN_OF_ARROWS                          = 'A11P'
+    constant integer ABILITY_TRUESHOT_AURA                           = 'ACat'
+    constant integer ABILITY_STARFALL                                = 'A03R'
+
+    // Warden/Poison/Moon Magic
     constant integer ABILITY_BLINK                                   = 'A005'
 
     // Submerge
@@ -6176,6 +6187,7 @@ globals
     constant integer ELITE_RIFLEMAN                                  = 'H0JQ'
     constant integer SIEGE_ENGINE                                    = 'H0QV'
     constant integer BARD                                            = 'H0YK'
+    constant integer MURADIN_BRONZEBEARD                             = 'H0AK'
     constant integer GRYPHON_RIDER                                   = 'H0S1'
     // Blood Elf
     constant integer SPELLBREAKER_HERO                               = 'H0K7'
