@@ -6140,6 +6140,7 @@ globals
     // Hunter
     constant integer ABILITY_RAIN_OF_ARROWS                          = 'A11P'
     constant integer ABILITY_FAN_OF_KNIVES                           = 'A0HX'
+    constant integer ABILITY_SCOUT                                   = 'A08G'
     constant integer ABILITY_SEARING_ARROWS                          = 'ACsa'
     constant integer ABILITY_BARRAGE                                 = 'A1OQ'
     constant integer ABILITY_TRUESHOT_AURA                           = 'ACat'
@@ -6158,6 +6159,7 @@ globals
 
     // Warden/Poison/Moon Magic
     constant integer ABILITY_BLINK                                   = 'A005'
+    constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
