@@ -2257,8 +2257,6 @@ globals
     constant integer SPELL_BREAKER      = 'hspt'
     constant integer HUMAN_DRAGON_HAWK  = 'hdhw'
 
-    constant integer WATER_ELEMENTAL_LEVEL_4                         = 'h001'
-
     // special human units
     constant integer BLOOD_PRIEST       = 'hbep'
     constant integer BLOOD_SORCERESS    = 'hbes'
@@ -3696,6 +3694,8 @@ globals
     constant integer DOOM_GUARD_SUMMONED                             = 'nba2'
 
     // Special/Summoned Units
+    constant integer WATER_ELEMENTAL_LEVEL_3                         = 'hwt3'
+    constant integer WATER_ELEMENTAL_LEVEL_4                         = 'h001'
     constant integer ANCIENT_EARTH                                   = 'n008'
     constant integer ANCIENT_FIRE                                    = 'n009'
     constant integer ANCIENT_STORM                                   = 'n00A'
@@ -6024,7 +6024,7 @@ globals
     constant integer ABILITY_WATER_MAGIC                             = 'A16Q'
     constant integer ABILITY_CRUSHING_WAVE                           = 'ACcv'
     constant integer ABILITY_CHAIN_LIGHTNING                         = 'ACcl'
-    constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
+    constant integer ABILITY_SUMMON_WATER_ELEMENTAL                  = 'A0AQ'
     constant integer ABILITY_FORKED_LIGHTNING                        = 'ACfl'
     constant integer ABILITY_BREATH_OF_FROST                         = 'ACbf'
     constant integer ABILITY_FROST_ARMOR                             = 'ACf2'
@@ -6073,6 +6073,7 @@ globals
     constant integer ABILITY_DEVOTION_AURA                           = 'ACav'
     constant integer ABILITY_HOLY_NOVA                               = 'A118'
     constant integer ABILITY_MASS_HOLY_LIGHT                         = 'A119'
+    constant integer ABILITY_MASS_HOLY_LIGHT_DUMMY                   = 'A13Q'
     constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
@@ -6134,12 +6135,14 @@ globals
 
     // Warrior
     constant integer ABILITY_BERSERK                                 = 'A03P'
-    constant integer ABILITY_WAR_STOMP                               = 'Awrs'
+    constant integer ABILITY_THUNDER_CLAP                            = 'A08S'
     constant integer ABILITY_PARRY                                   = 'A1Z5'
     constant integer ABILITY_SPIKED_SHELL                            = 'ANth'
-    constant integer ABILITY_SLIDE                                   = 'A0W7'
+    constant integer ABILITY_WAR_STOMP                               = 'Awrs'
     constant integer ABILITY_BASH                                    = 'ACbh'
+    constant integer ABILITY_SLIDE                                   = 'A0W7'
     constant integer ABILITY_COMMAND_AURA                            = 'ACac'
+    constant integer ABILITY_IMPALE                                  = 'ACmp'
     constant integer ABILITY_REFLECTION                              = 'A1QL'
     constant integer ABILITY_AVATAR                                  = 'A26J'
 
@@ -6170,6 +6173,9 @@ globals
 
     // Root
     constant integer ABILITY_ROOT_ANCIENT_OF_LORE                   = 'A0J1'
+
+    // Other abilities
+    constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
 
     // WoW Reforged heroes
 
@@ -6279,7 +6285,6 @@ globals
     constant integer DRUID_FORM_WILDKIN                              = 'E01M'
     constant integer DRUID_FORM_WOLF                                 = 'E01R'
     constant integer PRIESTESS_OF_THE_MOON_OWL                       = 'E01J'
-    constant integer MALORNE                                         = 'E028'
     constant integer CHIMAERA_HERO                                   = 'E02F'
     // Goblin
     constant integer ALCHEMIST                                       = 'Nalc'
@@ -6289,6 +6294,8 @@ globals
     constant integer FLAME_SHREDDER                                  = 'N0BE'
     constant integer GOBLIN_SHREDDER_HERO                            = 'N07D'
     constant integer GOBLIN_GUNNER                                   = 'N06V'
+    constant integer ENGINEER                                        = 'N07A'
+    constant integer SAPPER_HERO                                     = 'N0F3'
     // Naga
     constant integer SUBMERGED_SEAWITCH                              = 'N0MQ'
     constant integer NAGA_ROYAL_GUARD_HERO                           = 'N0BG'
