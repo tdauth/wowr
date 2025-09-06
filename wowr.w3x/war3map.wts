@@ -2680,13 +2680,13 @@ Summon Water Elemental
 }
 
 STRING 463
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A0W7 (Slide), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 464
-// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
+// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2710,7 +2710,7 @@ Spell Damage Reduction (unique shield)
 }
 
 STRING 468
-// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
+// Units: h01Z (Wall), Hotkey (Hotkey)
 {
 J
 }
@@ -10631,7 +10631,7 @@ Summon Wall
 }
 
 STRING 1849
-// Abilities: A0W7 (Slide), EditorSuffix (Editor Suffix)
+// Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11195,7 +11195,7 @@ Heals a target friendly unit for <A06X,DataA12> hit points and regenerates <A06X
 }
 
 STRING 1946
-// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11213,7 +11213,7 @@ STRING 1948
 }
 
 STRING 1949
-// Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
+// Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -13146,7 +13146,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 }
 
 STRING 2277
-// Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
+// Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -13446,7 +13446,7 @@ Revive Samuro
 }
 
 STRING 2327
-// Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -14196,7 +14196,7 @@ Revive Dark Wizard
 }
 
 STRING 2452
-// Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
+// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -27136,13 +27136,13 @@ E
 }
 
 STRING 4674
-// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
+// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 4675
-// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
+// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -27896,7 +27896,7 @@ Transmute
 }
 
 STRING 4802
-// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
+// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -28478,7 +28478,7 @@ STRING 4899
 }
 
 STRING 4900
-// Units: h01Z (Wall), Hotkey (Hotkey)
+// Units: H0A4 (Archmage), Hotkey (Hotkey)
 {
 J
 }
@@ -44752,7 +44752,7 @@ Summon Vindicator
 }
 
 STRING 7717
-// Units: H0A4 (Archmage), Hotkey (Hotkey)
+// Units: n08O (Jailer), Hotkey (Hotkey)
 {
 J
 }
@@ -50269,7 +50269,7 @@ Meteor
 }
 
 STRING 8666
-// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -50448,7 +50448,7 @@ Gypsy Wagon
 }
 
 STRING 8699
-// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
+// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -51712,7 +51712,7 @@ Skeletal Mastery - [|cffffcc00Level 3|r]
 }
 
 STRING 9007
-// Units: n08O (Jailer), Hotkey (Hotkey)
+// Units: n0JR (Jailer), Hotkey (Hotkey)
 {
 J
 }
@@ -52280,7 +52280,7 @@ Akama's Message
 }
 
 STRING 9143
-// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
+// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52346,7 +52346,7 @@ Holy Nova
 }
 
 STRING 9154
-// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
+// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52364,7 +52364,7 @@ Mass Holy Light
 }
 
 STRING 9157
-// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
+// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52400,7 +52400,7 @@ Mass Inner Fire
 }
 
 STRING 9163
-// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -55029,7 +55029,7 @@ Various Dark magic spells.|n|n|cffffcc00Adds another spell and increases the eff
 }
 
 STRING 9758
-// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -55071,13 +55071,13 @@ Temporarily gives a friendly target unit Chaos damage.
 }
 
 STRING 9765
-// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 9766
-// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -55905,7 +55905,7 @@ Confuses the enemy by creating <AOmi,DataA15> illusions of the Blademaster. Disp
 }
 
 STRING 9973
-// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
+// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -56107,7 +56107,7 @@ STRING 10011
 }
 
 STRING 10046
-// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -56131,7 +56131,7 @@ Summon Bear
 }
 
 STRING 10050
-// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
+// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -56167,7 +56167,7 @@ Mass Forestation
 }
 
 STRING 10056
-// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
+// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -56191,7 +56191,7 @@ Druid Forms
 }
 
 STRING 10060
-// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
+// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -57924,7 +57924,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 10361
-// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
+// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -61098,7 +61098,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
+// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -65206,7 +65206,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, Wa
 }
 
 STRING 11719
-// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
+// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -65883,7 +65883,7 @@ Storm Bolt
 }
 
 STRING 11904
-// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -65931,13 +65931,13 @@ Summon Golem
 }
 
 STRING 11912
-// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
+// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 11913
-// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -66973,7 +66973,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 12106
-// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
+// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -68267,7 +68267,7 @@ I
 }
 
 STRING 12338
-// Units: n0JR (Jailer), Hotkey (Hotkey)
+// Units: H08E (Guardian of Tirisfal), Hotkey (Hotkey)
 {
 J
 }
@@ -69485,7 +69485,7 @@ Heavy Axe made of very rare minerals. Causes terrible pain among its victims. Gr
 }
 
 STRING 13837
-// Units: H08E (Guardian of Tirisfal), Hotkey (Hotkey)
+// Items: I05O (Deposit 5000 Gold), Hotkey (Hotkey)
 {
 J
 }
@@ -77654,7 +77654,7 @@ Changes the ability to Summon Cloud Serpent Mount.
 }
 
 STRING 16888
-// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -90216,7 +90216,7 @@ Floating Eye
 }
 
 STRING 22436
-// Items: I05O (Deposit 5000 Gold), Hotkey (Hotkey)
+// Abilities: A07T (Freelancer Summon Mercenaries - Level 4), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -117281,7 +117281,7 @@ STRING 32773
 }
 
 STRING 32774
-// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
+// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -117305,7 +117305,7 @@ Brings back to life the corpses of <A13V,DataA1> friendly nearby units.
 }
 
 STRING 32778
-// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -142391,7 +142391,7 @@ Deposits lumber to get it back with interest charges.
 }
 
 STRING 40465
-// Abilities: A07T (Freelancer Summon Mercenaries - Level 4), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -179468,7 +179468,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 53394
-// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }

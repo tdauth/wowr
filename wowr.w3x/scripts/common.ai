@@ -2637,13 +2637,8 @@ function AddHero takes integer unitTypeId returns integer
 endfunction
 
 function InitHeroes takes nothing returns nothing
-    // Customizable heroes
-    call AddHero(CUSTOMIZABLE_HERO_STRENGTH_MELEE)
-    call AddHero(CUSTOMIZABLE_HERO_AGILITY_MELEE)
-    call AddHero(CUSTOMIZABLE_HERO_INTELLIGENCE_MELEE)
-    call AddHero(CUSTOMIZABLE_HERO_STRENGTH_RANGE)
-    call AddHero(CUSTOMIZABLE_HERO_AGILITY_RANGE)
-    call AddHero(CUSTOMIZABLE_HERO_INTELLIGENCE_RANGE)
+    // Customizable
+    call AddHero(CUSTOMIZABLE_HERO)
     // Human
     call AddHero(PALADIN)
     call AddHero(WIZARD)
@@ -2736,7 +2731,6 @@ function InitHeroes takes nothing returns nothing
     call AddHero(CENARIUS_HERO)
     call AddHero(ARCHDRUID)
     call AddHero(PRIESTESS_OF_THE_MOON_OWL)
-    call AddHero(MALORNE)
     call AddHero(CHIMAERA_HERO)
     // Goblin
     call AddHero(ALCHEMIST)
@@ -2769,8 +2763,8 @@ function InitHeroes takes nothing returns nothing
     call AddHero(SPIRIT_WALKER_HERO)
     call AddHero(CAIRNE_BLOODHOOF)
     // Demon
-    call AddHero(PIT_LORD_NEUTRAL)
-    call AddHero(EREDAR_WARLOCK_NEUTRAL)
+    call AddHero(PIT_LORD)
+    call AddHero(EREDAR_WARLOCK_HERO)
     call AddHero(DREAD_LORD)
     call AddHero(SUCCUBUS)
     call AddHero(DOOM_GUARD)

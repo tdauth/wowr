@@ -6321,8 +6321,7 @@ globals
     constant integer SPIRIT_WALKER_HERO_M                            = 'O04M'
     constant integer CAIRNE_BLOODHOOF                                = 'O02S'
     // Demon
-    constant integer PIT_LORD_NEUTRAL                                = 'Nplh'
-    constant integer EREDAR_WARLOCK_NEUTRAL                          = 'U00M'
+    constant integer EREDAR_WARLOCK_HERO                             = 'U00M'
     constant integer SUCCUBUS                                        = 'N0AT'
     constant integer DOOM_GUARD                                      = 'N0CB'
     constant integer FEL_BEAST                                       = 'N04O'
@@ -6337,7 +6336,6 @@ globals
     // Lost Ones
     constant integer ELDER_SAGE                                      = 'N01K'
     constant integer VINDICATOR                                      = 'H0KM'
-    constant integer VELEN                                           = 'H0JV'
     // Furbolg
     constant integer FURBOLG_URSA_WARRIOR_HERO                       = 'E00E'
     constant integer FURBOLG_URSA_WARRIOR_HERO_M                     = 'E00F'
@@ -6374,9 +6372,10 @@ globals
     constant integer GRONN                                           = 'N0JU'
     constant integer BEASTMASTER                                     = 'Nbst'
     constant integer REXXAR                                          = 'O00C'
-    // Eredar
+    // Draenei
     constant integer EREDAR_ANNIHILATOR                              = 'N0JX'
     constant integer EREDAR_VINDICATOR                               = 'H01H'
+    constant integer VELEN                                           = 'H0JV'
     // Fel Orc
     constant integer FEL_BLADEMASTER                                 = 'N01T'
     constant integer FEL_WARLOCK                                     = 'O09I'
