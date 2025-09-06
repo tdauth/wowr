@@ -6140,16 +6140,22 @@ globals
     constant integer ABILITY_SLIDE                                   = 'A0W7'
     constant integer ABILITY_BASH                                    = 'ACbh'
     constant integer ABILITY_COMMAND_AURA                            = 'ACac'
-    constant integer ABILITY_BARRAGE                                 = 'A1OQ'
+    constant integer ABILITY_REFLECTION                              = 'A1QL'
     constant integer ABILITY_AVATAR                                  = 'A26J'
 
     // Hunter
     constant integer ABILITY_RAIN_OF_ARROWS                          = 'A11P'
+    constant integer ABILITY_SEARING_ARROWS                          = 'ACsa'
+    constant integer ABILITY_BARRAGE                                 = 'A1OQ'
     constant integer ABILITY_TRUESHOT_AURA                           = 'ACat'
     constant integer ABILITY_STARFALL                                = 'A03R'
 
     // Warden/Poison/Moon Magic
     constant integer ABILITY_BLINK                                   = 'A005'
+
+    // Tinker
+    constant integer ABILITY_REPAIR                                  = 'A0PP'
+    constant integer ABILITY_TRANSMUTE                               = 'A05B'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
