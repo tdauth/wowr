@@ -3713,6 +3713,7 @@ globals
     constant integer SUMMONED_SPOTTER                                = 'n0C2'
     constant integer SPIDERLING                                      = 'nspd'
     constant integer TORNADO                                         = 'ntor'
+    constant integer GHOST_FORM                                      = 'H04K'
 
     // Old Gods
     constant integer TENTACLE_CTHUN                                  = 'n06F'
@@ -6151,9 +6152,11 @@ globals
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
     constant integer ABILITY_CARRION_BEETLES                         = 'A0EN'
 
-    // Witch Doctor
+    // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
+    constant integer ABILITY_SILENCE                                 = 'ACsi'
     constant integer ABILITY_HEX                                     = 'AChx'
+    constant integer ABILITY_GHOST_FORM                              = 'A05N'
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'
     constant integer ABILITY_CHARM                                   = 'ACch'
     constant integer ABILITY_BIG_BAD_VOODOO                          = 'A01T'
@@ -6167,7 +6170,10 @@ globals
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
+    constant integer ABILITY_CLUSTER_ROCKETS                         = 'A201'
     constant integer ABILITY_TRANSMUTE                               = 'A05B'
+    constant integer ABILITY_MASS_TRANSMUTE                          = 'A1IF'
+    constant integer ABILITY_MASS_TRANSMUTE_DUMMY                    = 'A1IG'
 
     // Monk
     constant integer ABILITY_SLIDE                                   = 'A0W7'
@@ -6187,13 +6193,17 @@ globals
     constant integer ABILITY_ROOT_ANCIENT_OF_LORE                   = 'A0J1'
 
     // Other abilities
+    constant integer ABILITY_ATTRIBUTE_BONUS                         = 'A041'
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
+    constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_MASS_REJUVENATION_DUMMY                 = 'A1H6'
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
     constant integer ABILITY_MASS_CHARM                              = 'A14P'
     constant integer ABILITY_MASS_FINGER_OF_DEATH                    = 'A176'
     constant integer ABILITY_MASS_FINGER_OF_DEATH_DUMMY              = 'A177'
+    constant integer ABILITY_MASS_DOOM                               = 'A14C'
+    constant integer ABILITY_MASS_DOOM_DUMMY                         = 'A14D'
 
     // WoW Reforged heroes
 
