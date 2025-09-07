@@ -6070,6 +6070,7 @@ globals
     constant integer ABILITY_MASS_HOLY_LIGHT                         = 'A119'
     constant integer ABILITY_MASS_HOLY_LIGHT_DUMMY                   = 'A13Q'
     constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
+    constant integer ABILITY_MASS_INNER_FIRE_DUMMY                   = 'A1WK'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
     // Death Knight
@@ -6112,7 +6113,7 @@ globals
     constant integer ABILITY_FINGER_OF_DEATH                         = 'Afod'
 
     // Druid
-    constant integer ABILITY_REJUVENATION                            = 'ACrj'
+    constant integer ABILITY_REJUVENATION                            = 'A01I'
     constant integer ABILITY_FEARIE_FIRE                             = 'ACff'
     constant integer ABILITY_FORCE_OF_NATURE                         = 'ACfr'
     constant integer ABILITY_THORNS_AURA                             = 'ACah'
@@ -6155,6 +6156,7 @@ globals
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
     constant integer ABILITY_HEX                                     = 'AChx'
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'
+    constant integer ABILITY_CHARM                                   = 'ACch'
     constant integer ABILITY_BIG_BAD_VOODOO                          = 'A01T'
 
     // Alchemist/Warden/Poison/Moon Magic
@@ -6186,6 +6188,10 @@ globals
 
     // Other abilities
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
+    constant integer ABILITY_MASS_REJUVENATION_DUMMY                 = 'A1H6'
+    constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
+    constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
+    constant integer ABILITY_MASS_CHARM                              = 'A14P'
 
     // WoW Reforged heroes
 
