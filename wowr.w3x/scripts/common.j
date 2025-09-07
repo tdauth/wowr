@@ -6106,8 +6106,8 @@ globals
     constant integer ABILITY_FEL                                     = 'A11K'
     constant integer ABILITY_DARK_SUMMONING                          = 'A08B'
     constant integer ABILITY_HOWL_OF_TERROR                          = 'Acht'
-    constant integer ABILITY_CLEAVING_ATTACK                         = 'ACce'
     constant integer ABILITY_DARK_PORTAL                             = 'A12C'
+    constant integer ABILITY_METAMORPHOSIS                           = 'A05M'
     constant integer ABILITY_RAIN_OF_CHAOS                           = 'A097'
     constant integer ABILITY_FINGER_OF_DEATH                         = 'Afod'
 
@@ -6131,7 +6131,7 @@ globals
     constant integer ABILITY_SPIKED_SHELL                            = 'ANth'
     constant integer ABILITY_WAR_STOMP                               = 'Awrs'
     constant integer ABILITY_BASH                                    = 'ACbh'
-    constant integer ABILITY_SLIDE                                   = 'A0W7'
+    constant integer ABILITY_CLEAVING_ATTACK                         = 'ACce'
     constant integer ABILITY_COMMAND_AURA                            = 'ACac'
     constant integer ABILITY_IMPALE                                  = 'ACmp'
     constant integer ABILITY_REFLECTION                              = 'A1QL'
@@ -6157,13 +6157,18 @@ globals
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'
     constant integer ABILITY_BIG_BAD_VOODOO                          = 'A01T'
 
-    // Warden/Poison/Moon Magic
+    // Alchemist/Warden/Poison/Moon Magic
     constant integer ABILITY_BLINK                                   = 'A005'
     constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
+    constant integer ABILITY_ACID_BOMB                               = 'A0ID'
+    constant integer ABILITY_VENGEANCE                               = 'A0HY'
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
     constant integer ABILITY_TRANSMUTE                               = 'A05B'
+
+    // Monk
+    constant integer ABILITY_SLIDE                                   = 'A0W7'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
@@ -6437,7 +6442,10 @@ globals
     // Account specific
     constant integer BARADE                                          = 'H0V4'
 
-    // bosses
+    // Bosses
+    constant integer ARCHIMONDE_BOSS                                 = 'N011'
+    constant integer ARCH_LICH                                       = 'U003'
+    constant integer AVATAR_OF_SARGERAS                              = 'U00V'
     constant integer SMOLDERON                                       = 'N0DR'
     constant integer DENATHRIUS                                      = 'U03L'
 
