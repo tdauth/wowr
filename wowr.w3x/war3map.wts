@@ -1711,6 +1711,12 @@ STRING 311
 (Neutral Hostile)
 }
 
+STRING 312
+// Units: Edmm (Demon Form), Name (Name)
+{
+Demon Form
+}
+
 STRING 316
 // Abilities: A061 (Bash), Tip (Tooltip - Normal)
 {

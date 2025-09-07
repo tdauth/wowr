@@ -1580,7 +1580,7 @@ StringList {
     //NECROMANCER                        "Necromancer",
     //TINKER                             "Tinker",
     // Arcanist
-    BANISH_TOOLTIP                     "Turns a non-mechanical unit ethereal and slows its movement speed by <this,Hbn1,x,%>% for a <this,adur,x>. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect.|n|n|cffffcc00Increases the duration with every level.|r",
+    BANISH_TOOLTIP                     "Turns a non-mechanical unit ethereal and slows its movement speed by <this,Hbn1,0,%>% for <this,adur,x> seconds. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect.|n|n|cffffcc00Increases the duration with every level.|r",
     SPELL_STEAL_TOOLTIP                "Steals a positive buff from an enemy unit and applies it to a nearby friendly unit, or takes a negative buff from a friendly unit and applies it to a nearby enemy unit.|n|n|cffffcc00Decreases the cooldown duration with every level.|r",
     CONTROL_MAGIC_TOOLTIP              "Takes control of an enemy summoned unit. The mana cost is <this,Cmg2,x,%>% of the summoned unit's current hit points. Maximum target unit level is <this,Nch1,x>.|n|n|cffffcc00Decreases the mana cost for hit points and increases the maximum creep level with every level.|r",
     FEEDBACK_TOOLTIP                   "",
@@ -1677,6 +1677,7 @@ StringList {
     CRIPPLE_TOOLTIP                    "Reduces movement speed by <this,Cri1,x,%>%, attack rate by <this,Cri2,x,%>%, and damage by <this,Cri3,x,%>% of a target enemy unit. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the reduced movement speed, attack rate and damage with every level.|r",
     MANA_BURN_TOOLTIP                  "Sends a bolt of negative energy that burns up to <this,Emb1,x> points of a target enemy unit's mana. The mana combusts, dealing damage equal to the amount of mana burned. |n|n|cffffcc00Increases the burned up mana and decreases the cooldown with every level.|r",
     DARK_PORTAL_TOOLTIP                "Opens a portal, allowing demons to step through and do the hero's bidding. |n|n|cffffcc00Increases the stats of the demons with every level.|r",
+    METAMORPHOSIS_TOOLTIP              "Transforms the hero into a powerful Demon with a ranged attack and <this,cr00,x> bonus hit points. |n|n|cffffcc00Increases the stats of the Demon form with every level.|r",
     FINGER_OF_DEATH_TOOLTIP            "Instantly turns a creature or building inside-out, destroying it utterly. Causes <this,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
     // Monk
     SLIDE_TOOLTIP                      "Lets your hero slide into the given direction, moving the hero quickly and damaging everything on its way.|n|n|cffffcc00Increases the distance and decreases the cooldown with every level.|r",
