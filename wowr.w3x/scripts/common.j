@@ -5935,8 +5935,6 @@ globals
 
     // Heroes (spells)
     constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
-    constant integer RAIN_OF_CHAOS_SLOT_3                            = 'A01F'
-    constant integer RAIN_OF_CHAOS_SLOT_4                            = 'A07V'
     constant integer CALL_OF_DRAKES                                  = 'A01G'
     constant integer CALL_OF_DRAKES_DRAKE                            = 'n01J'
 
@@ -5992,7 +5990,6 @@ globals
     constant integer WATERY_MINION                                   = 'ANwm'
     constant integer SUMMON_SEA_ELEMENTAL_SLOT_3                     = 'A24S'
     constant integer SUMMON_SPIDER_CRABS                             = 'A0AE'
-    constant integer SUMMON_SUCCUBUS                                 = 'A1YL'
 
     // Slot 4
     constant integer DOOM                                            = 'ANdo'
@@ -6192,6 +6189,8 @@ globals
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
     constant integer ABILITY_MASS_CHARM                              = 'A14P'
+    constant integer ABILITY_MASS_FINGER_OF_DEATH                    = 'A176'
+    constant integer ABILITY_MASS_FINGER_OF_DEATH_DUMMY              = 'A177'
 
     // WoW Reforged heroes
 
