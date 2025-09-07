@@ -1687,6 +1687,30 @@ STRING 307
 (Neutral Hostile)
 }
 
+STRING 308
+// Abilities: A01R (Healing Spray), Tip (Tooltip - Normal)
+{
+Healing Spray
+}
+
+STRING 309
+// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
+}
+
+STRING 310
+// Abilities: A024 (Tornado), Researchubertip (Tooltip - Learn - Extended)
+{
+Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings.
+}
+
+STRING 311
+// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
+}
+
 STRING 316
 // Abilities: A061 (Bash), Tip (Tooltip - Normal)
 {
@@ -17638,114 +17662,6 @@ STRING 3289
 Slave Master Master Training
 }
 
-STRING 3290
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 4|r]
-}
-
-STRING 3291
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 5|r]
-}
-
-STRING 3292
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 6|r]
-}
-
-STRING 3293
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 7|r]
-}
-
-STRING 3294
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 8|r]
-}
-
-STRING 3295
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 9|r]
-}
-
-STRING 3296
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 10|r]
-}
-
-STRING 3297
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 11|r]
-}
-
-STRING 3298
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 12|r]
-}
-
-STRING 3299
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF4> waves of healing mist; each wave heals <ANhs,DataA4> damage to all friendly units in an area.
-}
-
-STRING 3300
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF5> waves of healing mist; each wave heals <ANhs,DataA5> damage to all friendly units in an area.
-}
-
-STRING 3301
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF6> waves of healing mist; each wave heals <ANhs,DataA6> damage to all friendly units in an area.
-}
-
-STRING 3302
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF7> waves of healing mist; each wave heals <ANhs,DataA7> damage to all friendly units in an area.
-}
-
-STRING 3303
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF8> waves of healing mist; each wave heals <ANhs,DataA8> damage to all friendly units in an area.
-}
-
-STRING 3304
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF9> waves of healing mist; each wave heals <ANhs,DataA9> damage to all friendly units in an area.
-}
-
-STRING 3305
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF10> waves of healing mist; each wave heals <ANhs,DataA10> damage to all friendly units in an area.
-}
-
-STRING 3306
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF11> waves of healing mist; each wave heals <ANhs,DataA11> damage to all friendly units in an area.
-}
-
-STRING 3307
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF12> waves of healing mist; each wave heals <ANhs,DataA12> damage to all friendly units in an area.
-}
-
 STRING 3308
 // Units: h01S (Freelancer Shop), Hotkey (Hotkey)
 {
@@ -19114,64 +19030,10 @@ STRING 3536
 (Magma Giant)
 }
 
-STRING 3549
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 2|r]
-}
-
-STRING 3550
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 3|r]
-}
-
 STRING 3551
 // Items: I0FW (Tiny Cowshed), Tip (Tooltip - Basic)
 {
 Purchase Tiny Cowshed
-}
-
-STRING 3552
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 1|r]
-}
-
-STRING 3553
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 4|r]
-}
-
-STRING 3554
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 5|r]
-}
-
-STRING 3555
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 6|r]
-}
-
-STRING 3556
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 7|r]
-}
-
-STRING 3557
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 8|r]
-}
-
-STRING 3558
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 9|r]
 }
 
 STRING 3559
@@ -19211,7 +19073,7 @@ Creates a Sheepfold at a target location.
 }
 
 STRING 3565
-// Abilities: ANto (Tornado), Researchtip (Tooltip - Learn)
+// Abilities: A09O (Tornado), Researchtip (Tooltip - Learn)
 {
 Learn Tornado - [|cffffcc00Level %d|r]
 }
@@ -38413,7 +38275,7 @@ Purchase Tiny Banner Gilneas
 }
 
 STRING 7178
-// Abilities: ANto (Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: ANef (Storm, Earth, And Fire), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -38803,13 +38665,13 @@ Drunken Brawler - [|cffffcc00Level 12|r]
 }
 
 STRING 7244
-// Abilities: ANto (Tornado), Hotkey (Hotkey - Normal)
+// Abilities: ANef (Storm, Earth, And Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7245
-// Abilities: ANef (Storm, Earth, And Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: ANrg (Robo-Goblin), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40408,7 +40270,7 @@ Resistant Skin
 }
 
 STRING 7636
-// Abilities: ANef (Storm, Earth, And Fire), Hotkey (Hotkey - Normal)
+// Abilities: ANrg (Robo-Goblin), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -40636,7 +40498,7 @@ Purchase Tiny Altar of Twisting Nether
 }
 
 STRING 7674
-// Abilities: ANrg (Robo-Goblin), Hotkey (Hotkey - Normal)
+// Abilities: ANrg (Robo-Goblin), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -40708,7 +40570,7 @@ STRING 7685
 }
 
 STRING 7686
-// Abilities: ANrg (Robo-Goblin), Researchhotkey (Hotkey - Learn)
+// Abilities: ANdo (Doom), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42514,7 +42376,7 @@ Q
 }
 
 STRING 7995
-// Abilities: ANrg (Robo-Goblin), Unhotkey (Hotkey - Turn Off)
+// Abilities: ANdo (Doom), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44549,7 +44411,7 @@ Changes the abilities page.
 }
 
 STRING 8337
-// Abilities: ANhs (Healing Spray), Researchhotkey (Hotkey - Learn)
+// Abilities: ANso (Soul Burn), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44699,7 +44561,7 @@ L
 }
 
 STRING 8362
-// Abilities: ANdo (Doom), Researchhotkey (Hotkey - Learn)
+// Abilities: A01D (Herbalism - Master), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45300,7 +45162,7 @@ Error on loading savecode!
 }
 
 STRING 8474
-// Abilities: ANdo (Doom), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Fear), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45544,7 +45406,7 @@ W
 }
 
 STRING 8519
-// Abilities: A01D (Herbalism - Master), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Fear), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -46207,7 +46069,7 @@ N
 }
 
 STRING 8634
-// Abilities: A029 (Fear), Researchhotkey (Hotkey - Learn)
+// Abilities: A02A (Spell Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -46500,7 +46362,7 @@ Harvest
 }
 
 STRING 8690
-// Abilities: ANhs (Healing Spray), Hotkey (Hotkey - Normal)
+// Abilities: ANso (Soul Burn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46723,7 +46585,7 @@ Skin Peasant
 }
 
 STRING 8728
-// Abilities: A029 (Fear), Hotkey (Hotkey - Normal)
+// Abilities: A02A (Spell Shield), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -47208,7 +47070,7 @@ STRING 8827
 }
 
 STRING 8828
-// Abilities: ANso (Soul Burn), Researchhotkey (Hotkey - Learn)
+// Abilities: ANsy (Pocket Factory), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47673,25 +47535,25 @@ Guardian of Tirisfal
 }
 
 STRING 8951
-// Abilities: A02A (Spell Shield), Hotkey (Hotkey - Normal)
+// Abilities: A04K (Restore Mana), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8952
-// Abilities: ANso (Soul Burn), Hotkey (Hotkey - Normal)
+// Abilities: ANsy (Pocket Factory), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8953
-// Abilities: ANsy (Pocket Factory), Researchhotkey (Hotkey - Learn)
+// Abilities: A00E (Herbalism - Novice), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8954
-// Abilities: A02A (Spell Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A04K (Restore Mana), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -47776,7 +47638,7 @@ STRING 9010
 }
 
 STRING 9011
-// Abilities: ANsy (Pocket Factory), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Gate), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48457,13 +48319,13 @@ Summons a Meat Wagon.
 }
 
 STRING 9248
-// Abilities: A00E (Herbalism - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Gate), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9249
-// Abilities: A01C (Gate), Researchhotkey (Hotkey - Learn)
+// Abilities: A05U (Select Destination), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48505,13 +48367,13 @@ Summons a Meat Wagon.
 }
 
 STRING 9257
-// Abilities: A01C (Gate), Hotkey (Hotkey - Normal)
+// Abilities: S006 (Life Steal), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9258
-// Abilities: A05U (Select Destination), Hotkey (Hotkey - Normal)
+// Abilities: A08Q (Power of Cenarius), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48601,13 +48463,13 @@ Summon Sapphiron
 }
 
 STRING 9334
-// Abilities: S006 (Life Steal), Researchhotkey (Hotkey - Learn)
+// Abilities: A09Y (Ping Included Units for Savecode), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9335
-// Abilities: A04K (Restore Mana), Hotkey (Hotkey - Normal)
+// Abilities: A04W (Reward Freelancer), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48717,7 +48579,7 @@ Durotar Law Code
 }
 
 STRING 9364
-// Abilities: A04K (Restore Mana), Unhotkey (Hotkey - Turn Off)
+// Abilities: A05O (Restore Mana), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48831,19 +48693,19 @@ Calls forth a wave of healing energy that bounces up to <AOhw,DataB12> times, he
 }
 
 STRING 9385
-// Abilities: A08Q (Power of Cenarius), Hotkey (Hotkey - Normal)
+// Abilities: A0AF (Ensnare), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9386
-// Abilities: A09Y (Ping Included Units for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: A0AF (Ensnare), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9387
-// Abilities: A04W (Reward Freelancer), Hotkey (Hotkey - Normal)
+// Abilities: A05O (Restore Mana), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -48855,19 +48717,19 @@ Heavy unit causing Chaos damage. Immune to spells. Can cast Divine Shield. |n|n|
 }
 
 STRING 9391
-// Abilities: A0AF (Ensnare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AU (Convert Into Human), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9392
-// Abilities: A0AF (Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A0FN (Sun Key), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9401
-// Abilities: A0AU (Convert Into Human), Hotkey (Hotkey - Normal)
+// Abilities: A0HR (Spawn Tentacle), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48879,7 +48741,7 @@ STRING 9402
 }
 
 STRING 9403
-// Abilities: A0FN (Sun Key), Hotkey (Hotkey - Normal)
+// Abilities: A0HR (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49011,7 +48873,7 @@ Summons Sapphiron, a powerful undead dragon, to attack your enemies. |n|n|cffffc
 }
 
 STRING 9472
-// Abilities: A05O (Restore Mana), Hotkey (Hotkey - Normal)
+// Abilities: A05V (Disable Portal), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49299,25 +49161,25 @@ Disease Cloud - [|cffffcc00Level 12|r]
 }
 
 STRING 9591
-// Abilities: A05O (Restore Mana), Unhotkey (Hotkey - Turn Off)
-{
-R
-}
-
-STRING 9592
-// Abilities: A05V (Disable Portal), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 9593
 // Abilities: A070 (Corruption), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
-STRING 9594
+STRING 9592
 // Abilities: A070 (Corruption), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 9593
+// Abilities: A0A7 (Demolish), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 9594
+// Abilities: A0AW (Convert Into Night Elf), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49661,7 +49523,7 @@ Change slot 8.
 }
 
 STRING 9742
-// Abilities: A0HR (Spawn Tentacle), Hotkey (Hotkey - Normal)
+// Abilities: A0HU (Spawn Tentacle), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49707,13 +49569,13 @@ W
 }
 
 STRING 9750
-// Abilities: A0A7 (Demolish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C7 (Paint Red), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9751
-// Abilities: A0AW (Convert Into Night Elf), Hotkey (Hotkey - Normal)
+// Abilities: A0F7 (Council of Six), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -50043,13 +49905,13 @@ Build Horizontal Bridge
 }
 
 STRING 9868
-// Abilities: A0HR (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HU (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9869
-// Abilities: A0HU (Spawn Tentacle), Hotkey (Hotkey - Normal)
+// Abilities: A0HV (Spawn Tentacle), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50103,13 +49965,13 @@ STRING 9897
 }
 
 STRING 9899
-// Abilities: A0HU (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HV (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9900
-// Abilities: A0HV (Spawn Tentacle), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50239,13 +50101,13 @@ Craft items which increase your hero attributes:|n- Ring of Superiority|n- Encha
 }
 
 STRING 10008
-// Abilities: A0HV (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K1 (Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10009
-// Abilities: A0K1 (Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A0KG (Raise Dead), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -50369,7 +50231,7 @@ Summon Bear
 }
 
 STRING 10065
-// Abilities: A0K1 (Cyclone), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KG (Raise Dead), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50547,7 +50409,7 @@ Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Bash 
 }
 
 STRING 10098
-// Abilities: A0KG (Raise Dead), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KG (Raise Dead), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50899,7 +50761,7 @@ The Lich King will now have his revenge on his original creator Kil'jaeden who i
 }
 
 STRING 10159
-// Abilities: A0KG (Raise Dead), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53359,7 +53221,7 @@ Dragon Queen
 }
 
 STRING 10595
-// Abilities: A0KG (Raise Dead), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M2 (Jetpack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53710,7 +53572,7 @@ Find a corpse probe of the dead Cenarius in Ashenvale.
 }
 
 STRING 10660
-// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
+// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55098,7 +54960,7 @@ STRING 10937
 }
 
 STRING 10938
-// Abilities: A0M2 (Jetpack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55528,7 +55390,7 @@ Skins determine the visuals and sounds of units and buildings. They can be custo
 }
 
 STRING 11030
-// Abilities: A0C7 (Paint Red), Hotkey (Hotkey - Normal)
+// Abilities: A0F7 (Council of Six), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55546,7 +55408,7 @@ E
 }
 
 STRING 11033
-// Abilities: A0F7 (Council of Six), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FM (Banshee Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55714,7 +55576,7 @@ STRING 11071
 }
 
 STRING 11072
-// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56014,7 +55876,7 @@ Allows building male citizens a Fountain of Blood to train and convert Fel Orcs.
 }
 
 STRING 11123
-// Abilities: A0F7 (Council of Six), Hotkey (Hotkey - Normal)
+// Abilities: A0FM (Banshee Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56044,7 +55906,7 @@ K
 }
 
 STRING 11128
-// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0PX (Harvest), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57257,13 +57119,13 @@ Wine Bottle
 }
 
 STRING 11396
-// Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
+// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11397
-// Abilities: A0PX (Harvest), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QD (Mass Invisibility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -58014,7 +57876,7 @@ STRING 11530
 }
 
 STRING 11531
-// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Curse), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59967,7 +59829,7 @@ Repair
 }
 
 STRING 11944
-// Abilities: A0FM (Banshee Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G6 (Sunwell Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60118,7 +59980,7 @@ An encampment of demonic satyr in southern Felwood.|n
 }
 
 STRING 11974
-// Abilities: A0FM (Banshee Form), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Lich King), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60793,7 +60655,7 @@ Fly
 }
 
 STRING 12095
-// Abilities: A0QD (Mass Invisibility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SX (Curse), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -60811,7 +60673,7 @@ STRING 12097
 }
 
 STRING 12098
-// Abilities: A0SX (Curse), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Curse), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60871,25 +60733,25 @@ STRING 12110
 }
 
 STRING 12111
-// Abilities: A0SX (Curse), Unhotkey (Hotkey - Turn Off)
-{
-Q
-}
-
-STRING 12112
-// Abilities: A0SX (Curse), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 12113
 // Abilities: A0TY (Cannibalize), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 12114
+STRING 12112
 // Abilities: A0TY (Cannibalize), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 12113
+// Abilities: A03C (Disarmament), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 12114
+// Abilities: A03C (Disarmament), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61105,7 +60967,7 @@ O
 }
 
 STRING 12157
-// Abilities: A0G6 (Sunwell Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Lich King), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -61117,7 +60979,7 @@ STRING 12158
 }
 
 STRING 12160
-// Abilities: A0HG (Lich King), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Mechanical Repair), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -61370,7 +61232,7 @@ STRING 12202
 }
 
 STRING 12203
-// Abilities: A03C (Disarmament), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W5 (Power Ward), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61451,7 +61313,7 @@ Dragon Egg
 }
 
 STRING 12216
-// Abilities: A03C (Disarmament), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Power Ward), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -63017,7 +62879,7 @@ Summon Lava Spawn - [|cffffcc00Level 7|r]
 }
 
 STRING 13847
-// Abilities: A0HG (Lich King), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IF (Mechanical Repair), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -63041,7 +62903,7 @@ W
 }
 
 STRING 13858
-// Abilities: A0W5 (Power Ward), Hotkey (Hotkey - Normal)
+// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -63166,7 +63028,7 @@ G
 }
 
 STRING 13920
-// Abilities: A09O (Tornado), Researchtip (Tooltip - Learn)
+// Abilities: A024 (Tornado), Researchtip (Tooltip - Learn)
 {
 Learn Tornado - [|cffffcc00Level %d|r]
 }
@@ -63928,7 +63790,7 @@ Can select units and buildings which should be saved in a savecode or not.
 }
 
 STRING 14248
-// Abilities: A0W5 (Power Ward), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -63970,7 +63832,7 @@ Orb of Orbs
 }
 
 STRING 14257
-// Abilities: A0IF (Mechanical Repair), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JZ (Bear Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65041,25 +64903,25 @@ E
 }
 
 STRING 14575
-// Abilities: A0IF (Mechanical Repair), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (Bear Form), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 14576
-// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
+// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14577
-// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XR (Club Strike), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14578
-// Abilities: A0JZ (Bear Form), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (Bear Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -65916,43 +65778,43 @@ W
 }
 
 STRING 14878
-// Abilities: A0JZ (Bear Form), Unhotkey (Hotkey - Turn Off)
-{
-R
-}
-
-STRING 14879
-// Abilities: A0JZ (Bear Form), Researchhotkey (Hotkey - Learn)
-{
-R
-}
-
-STRING 14880
 // Abilities: A0K0 (Storm Crow Form), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14881
+STRING 14879
 // Abilities: A0K0 (Storm Crow Form), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
-STRING 14882
+STRING 14880
 // Abilities: A0K0 (Storm Crow Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
+STRING 14881
+// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 14882
+// Abilities: A0KA (Summon Mercenary Camp), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
 STRING 14883
-// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14884
-// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65964,7 +65826,7 @@ W
 }
 
 STRING 14886
-// Abilities: A0KA (Summon Mercenary Camp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Return Gold and Lumber), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65976,7 +65838,7 @@ W
 }
 
 STRING 14888
-// Abilities: A0XR (Club Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XZ (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66012,7 +65874,7 @@ E
 }
 
 STRING 14894
-// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0YR (Torpedoes), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66024,13 +65886,13 @@ W
 }
 
 STRING 14896
-// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
+// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14897
-// Abilities: A0MO (Return Gold and Lumber), Hotkey (Hotkey - Normal)
+// Abilities: A0PJ (Chaos), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66048,13 +65910,13 @@ W
 }
 
 STRING 14900
-// Abilities: A0XZ (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YR (Torpedoes), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14901
-// Abilities: A0YR (Torpedoes), Hotkey (Hotkey - Normal)
+// Abilities: A10S (Goblin Dynamite), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66066,25 +65928,25 @@ E
 }
 
 STRING 14903
-// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0PJ (Chaos), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 14904
-// Abilities: A0YR (Torpedoes), Researchhotkey (Hotkey - Learn)
+// Abilities: A10S (Goblin Dynamite), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14905
-// Abilities: A10S (Goblin Dynamite), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14906
-// Abilities: A0PJ (Chaos), Hotkey (Hotkey - Normal)
+// Abilities: A0QJ (Dark Summoning), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66186,19 +66048,19 @@ STRING 14931
 }
 
 STRING 14935
-// Abilities: A0PJ (Chaos), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QJ (Dark Summoning), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 14936
-// Abilities: A10S (Goblin Dynamite), Researchhotkey (Hotkey - Learn)
+// Abilities: A134 (Ethereal Form), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14937
-// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A134 (Ethereal Form), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -66216,19 +66078,19 @@ E
 }
 
 STRING 14940
-// Abilities: A134 (Ethereal Form), Hotkey (Hotkey - Normal)
+// Abilities: A134 (Ethereal Form), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14941
-// Abilities: A134 (Ethereal Form), Unhotkey (Hotkey - Turn Off)
+// Abilities: A13N (Teleportation), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14942
-// Abilities: A0QJ (Dark Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66365,25 +66227,25 @@ W
 }
 
 STRING 15090
-// Abilities: A134 (Ethereal Form), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 15091
-// Abilities: A13N (Teleportation), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 15092
 // Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 15093
+STRING 15091
 // Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 15092
+// Abilities: A14F (Mass Entangling Roots), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 15093
+// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66502,13 +66364,13 @@ Mace Tentacle
 }
 
 STRING 15135
-// Abilities: A14F (Mass Entangling Roots), Researchhotkey (Hotkey - Learn)
+// Abilities: A14T (Mass Control Magic), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15136
-// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
+// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67180,13 +67042,13 @@ The activating hero will be resurrected automatically at this stone after some t
 }
 
 STRING 15342
-// Abilities: A14T (Mass Control Magic), Researchhotkey (Hotkey - Learn)
+// Abilities: A1E5 (Summon Explosive Barrel), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15343
-// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
+// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67332,13 +67194,13 @@ STRING 15376
 }
 
 STRING 15377
-// Abilities: A1E5 (Summon Explosive Barrel), Researchhotkey (Hotkey - Learn)
+// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15378
-// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
+// Abilities: A1GB (Mass Firebolt), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -67896,7 +67758,7 @@ Immediately decays all corpses in the target area making them unvailable for any
 }
 
 STRING 15778
-// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
+// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67974,7 +67836,7 @@ Uses the Jetpack to fly to another revealed location.
 }
 
 STRING 15806
-// Abilities: A0QJ (Dark Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QS (Mass Polymorph), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -68058,7 +67920,7 @@ E
 }
 
 STRING 15822
-// Abilities: A1GB (Mass Firebolt), Researchhotkey (Hotkey - Learn)
+// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68076,7 +67938,7 @@ Gives a permanent bonus to Agility, Intelligence, and Strength. |n|n|cffffcc00In
 }
 
 STRING 15827
-// Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
+// Abilities: A0R5 (Summon Sapphiron), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -68220,7 +68082,7 @@ Uses the Jetpack to fly to another revealed location.
 }
 
 STRING 15909
-// Abilities: A0QS (Mass Polymorph), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R5 (Summon Sapphiron), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -68518,7 +68380,7 @@ STRING 16008
 }
 
 STRING 16009
-// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
+// Abilities: A1H5 (Mass Rejuvenation), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68650,13 +68512,13 @@ Mass Invisibility
 }
 
 STRING 16124
-// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16125
-// Abilities: A1H5 (Mass Rejuvenation), Researchhotkey (Hotkey - Learn)
+// Abilities: A1H8 (Mass Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68859,7 +68721,7 @@ Disable Wandering
 }
 
 STRING 16182
-// Abilities: A0R5 (Summon Sapphiron), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SZ (Open Portals), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -69264,7 +69126,7 @@ You own the clan hall now!
 }
 
 STRING 16275
-// Abilities: A0R5 (Summon Sapphiron), Hotkey (Hotkey - Normal)
+// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69281,13 +69143,13 @@ Disabled train!
 }
 
 STRING 16302
-// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A1HC (Meteor), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 16303
-// Abilities: A1H8 (Mass Cyclone), Researchhotkey (Hotkey - Learn)
+// Abilities: A1HC (Meteor), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69933,7 +69795,7 @@ Jewelcrafting - Advanced
 }
 
 STRING 16569
-// Abilities: A1HC (Meteor), Hotkey (Hotkey - Normal)
+// Abilities: A1HV (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69957,7 +69819,7 @@ E
 }
 
 STRING 16573
-// Abilities: A1HC (Meteor), Researchhotkey (Hotkey - Learn)
+// Abilities: A1HV (Mass Ensnare), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70484,7 +70346,7 @@ Cloud Serpent Mount
 }
 
 STRING 16886
-// Abilities: A0SZ (Open Portals), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -70531,7 +70393,7 @@ W
 }
 
 STRING 16895
-// Abilities: A1HV (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70605,7 +70467,7 @@ STRING 16919
 }
 
 STRING 16920
-// Abilities: A1HV (Mass Ensnare), Researchhotkey (Hotkey - Learn)
+// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71135,7 +70997,7 @@ STRING 17218
 }
 
 STRING 17221
-// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
+// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71663,7 +71525,7 @@ S
 }
 
 STRING 17401
-// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Revive), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -71735,7 +71597,7 @@ STRING 17418
 }
 
 STRING 17419
-// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
+// Abilities: A0TZ (Disease Cloud), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -72154,13 +72016,13 @@ STRING 17520
 }
 
 STRING 17525
-// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
+// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17526
-// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
+// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72899,13 +72761,13 @@ E
 }
 
 STRING 17801
-// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
+// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 17802
-// Abilities: A0T7 (Revive), Researchhotkey (Hotkey - Learn)
+// Abilities: A033 (Clone), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -73559,13 +73421,13 @@ STRING 18232
 }
 
 STRING 18270
-// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
+// Abilities: A1VP (Crushing Wave), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 18271
-// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
+// Abilities: A1VP (Crushing Wave), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74767,7 +74629,7 @@ Mana Burn
 }
 
 STRING 18918
-// Abilities: A1VP (Crushing Wave), Researchhotkey (Hotkey - Learn)
+// Abilities: A1WF (Fel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75121,25 +74983,25 @@ W
 }
 
 STRING 19040
-// Abilities: A0TZ (Disease Cloud), Researchhotkey (Hotkey - Learn)
+// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 19041
-// Abilities: A1VP (Crushing Wave), Hotkey (Hotkey - Normal)
+// Abilities: A1WF (Fel), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 19042
-// Abilities: A1WF (Fel), Hotkey (Hotkey - Normal)
+// Abilities: A220 (Abolish Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 19043
-// Abilities: A033 (Clone), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Full Regeneration), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -75157,25 +75019,25 @@ W
 }
 
 STRING 19075
-// Abilities: A1WF (Fel), Researchhotkey (Hotkey - Learn)
-{
-Q
-}
-
-STRING 19076
-// Abilities: A220 (Abolish Magic), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 19077
 // Abilities: A220 (Abolish Magic), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
-STRING 19078
+STRING 19076
 // Abilities: A220 (Abolish Magic), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 19077
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 19078
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75277,13 +75139,13 @@ W
 }
 
 STRING 19146
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 19147
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75427,43 +75289,43 @@ Gives gold to player.
 }
 
 STRING 19338
-// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 19339
-// Abilities: A0Y2 (Full Regeneration), Researchhotkey (Hotkey - Learn)
-{
-R
-}
-
-STRING 19340
 // Abilities: A0Y2 (Full Regeneration), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 19341
+STRING 19339
 // Abilities: A0YQ (Launch Missiles), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 19342
+STRING 19340
 // Abilities: A0YQ (Launch Missiles), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
-STRING 19343
+STRING 19341
 // Abilities: A10L (Mass Devour), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 19344
+STRING 19342
 // Abilities: A10L (Mass Devour), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19343
+// Abilities: A127 (Split), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 19344
+// Abilities: A127 (Split), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -75499,7 +75361,7 @@ E
 }
 
 STRING 19350
-// Abilities: A127 (Split), Researchhotkey (Hotkey - Learn)
+// Abilities: A12I (Flame Storm), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -75601,7 +75463,7 @@ E
 }
 
 STRING 19382
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
+// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75613,7 +75475,7 @@ Train Alliance Siege Tower
 }
 
 STRING 19384
-// Abilities: A127 (Split), Hotkey (Hotkey - Normal)
+// Abilities: A12I (Flame Storm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -76051,7 +75913,7 @@ E
 }
 
 STRING 19664
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -76195,7 +76057,7 @@ Allows portals to select visible locations as destinations.
 }
 
 STRING 19845
-// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
+// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
 {
 Q
 }
@@ -76286,12 +76148,6 @@ STRING 19865
 // Abilities: A0MZ (Link Crafting Stash), Tip (Tooltip - Normal)
 {
 Link Crafting Stash
-}
-
-STRING 19869
-// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
-{
-Q
 }
 
 STRING 19870
@@ -76409,7 +76265,7 @@ Beast Whistle
 }
 
 STRING 19897
-// Abilities: A12I (Flame Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A12R (Banshee Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -76463,7 +76319,7 @@ E
 }
 
 STRING 19906
-// Abilities: A12I (Flame Storm), Hotkey (Hotkey - Normal)
+// Abilities: A12R (Banshee Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -76853,7 +76709,7 @@ Return Gold and Lumber
 }
 
 STRING 20066
-// Abilities: A12R (Banshee Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -76925,7 +76781,7 @@ Order Items
 }
 
 STRING 20079
-// Abilities: A12R (Banshee Form), Hotkey (Hotkey - Normal)
+// Abilities: A135 (Mass Cripple), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -77273,12 +77129,6 @@ STRING 20141
 Transforms Sylvanas into a powerful Banshee.
 }
 
-STRING 20145
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
-{
-Q
-}
-
 STRING 20146
 // Items: I13G (Tome of Armor), Hotkey (Hotkey)
 {
@@ -77517,7 +77367,7 @@ Adds <A15Q,DataA1> bonus damage to the attack of a Hero when carried. The Hero's
 }
 
 STRING 20187
-// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
+// Abilities: A13I (Target Divine Shield), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -77529,7 +77379,7 @@ Banshee Form
 }
 
 STRING 20191
-// Abilities: A135 (Mass Cripple), Researchhotkey (Hotkey - Learn)
+// Abilities: A13I (Target Divine Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -77721,7 +77571,7 @@ Train Troll Bloodmage
 }
 
 STRING 20225
-// Abilities: A13I (Target Divine Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -77841,7 +77691,7 @@ Craft Demonic Figurine
 }
 
 STRING 20262
-// Abilities: A13I (Target Divine Shield), Hotkey (Hotkey - Normal)
+// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78315,7 +78165,7 @@ Centaur Citizen (male)
 }
 
 STRING 20427
-// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A14C (Mass Doom), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -78327,7 +78177,7 @@ W
 }
 
 STRING 20431
-// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
+// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78345,7 +78195,7 @@ W
 }
 
 STRING 20449
-// Abilities: A14C (Mass Doom), Researchhotkey (Hotkey - Learn)
+// Abilities: A14I (Mass Sleep), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79453,13 +79303,13 @@ Stops all enemies in a small target area from casting spells for <ANsi,Dur15> se
 }
 
 STRING 20733
-// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
+// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 20771
-// Abilities: A14I (Mass Sleep), Researchhotkey (Hotkey - Learn)
+// Abilities: A14L (Mass Hex), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79600,7 +79450,7 @@ Resets all hero spells.
 }
 
 STRING 20817
-// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
+// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -79609,12 +79459,6 @@ STRING 20818
 // Items: I0A7 (Tome of Retraining Reset), Name (Name)
 {
 Tome of Retraining Reset
-}
-
-STRING 20825
-// Abilities: ANhs (Healing Spray), Researchubertip (Tooltip - Learn - Extended)
-{
-Sprays waves of healing mist that heal friendly units in a target area.|n|n|cffffcc00Increases the number of waves, area of effect and healed life with every level.|r
 }
 
 STRING 20828
@@ -79684,7 +79528,7 @@ This ward provides mana regeneration for nearby friendly units.
 }
 
 STRING 20863
-// Abilities: A14L (Mass Hex), Researchhotkey (Hotkey - Learn)
+// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -80014,7 +79858,7 @@ Resurrection
 }
 
 STRING 21350
-// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -80032,7 +79876,7 @@ E
 }
 
 STRING 21355
-// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -80874,7 +80718,7 @@ V
 }
 
 STRING 22383
-// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
+// Abilities: A1DO (Shade Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -80976,7 +80820,7 @@ O
 }
 
 STRING 22400
-// Abilities: A184 (Multiply), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DO (Shade Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -81810,7 +81654,7 @@ Accept
 }
 
 STRING 22570
-// Abilities: A1DO (Shade Form), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81864,7 +81708,7 @@ Thane
 }
 
 STRING 22584
-// Abilities: A1DO (Shade Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A1FI (Worgen Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -82014,7 +81858,7 @@ Learn Chaos - [|cffffcc00Level %d|r]
 }
 
 STRING 22622
-// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A1FI (Worgen Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -82212,7 +82056,7 @@ Transforms the Hellscream into a his Chaos form with <A0PJ,DataE1> bonus hit poi
 }
 
 STRING 22658
-// Abilities: A1FI (Worgen Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A1GF (Destroyer Form), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -82308,7 +82152,7 @@ Gives Inquisitors the ability Anti-magic Shell.
 }
 
 STRING 22698
-// Abilities: A1FI (Worgen Form), Hotkey (Hotkey - Normal)
+// Abilities: A1GF (Destroyer Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -82976,7 +82820,7 @@ Gives gold and lumber to player.
 }
 
 STRING 22932
-// Abilities: A1GF (Destroyer Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A1GF (Destroyer Form), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -83036,7 +82880,7 @@ Build House
 }
 
 STRING 23036
-// Abilities: A1GF (Destroyer Form), Hotkey (Hotkey - Normal)
+// Abilities: A1GT (Druid Forms), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -83893,7 +83737,7 @@ W
 }
 
 STRING 23369
-// Abilities: A1GF (Destroyer Form), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1GT (Druid Forms), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -83995,7 +83839,7 @@ Summons <A0QJ,DataA15> friendly units from a target area to the caster.
 }
 
 STRING 23406
-// Abilities: A1GT (Druid Forms), Researchhotkey (Hotkey - Learn)
+// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84073,7 +83917,7 @@ E
 }
 
 STRING 23461
-// Abilities: A1GT (Druid Forms), Hotkey (Hotkey - Normal)
+// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84085,7 +83929,7 @@ Flying Form
 }
 
 STRING 23465
-// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
+// Abilities: A1IF (Mass Transmute), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -84235,7 +84079,7 @@ Aura of Darkness - [|cffffcc00Level 15|r]
 }
 
 STRING 23514
-// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A1JC (Barrens), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84391,7 +84235,7 @@ Purchase Kobold Gold Coins
 }
 
 STRING 23589
-// Abilities: A1IF (Mass Transmute), Researchhotkey (Hotkey - Learn)
+// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -84451,7 +84295,7 @@ Mass Polymorph
 }
 
 STRING 23599
-// Abilities: A1JC (Barrens), Hotkey (Hotkey - Normal)
+// Abilities: A1LX (Magic Defense), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -84661,7 +84505,7 @@ STRING 23636
 }
 
 STRING 23637
-// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
+// Abilities: A1LX (Magic Defense), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -85261,7 +85105,7 @@ Sleep
 }
 
 STRING 24369
-// Abilities: A1LX (Magic Defense), Researchhotkey (Hotkey - Learn)
+// Abilities: A1LX (Magic Defense), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -85387,7 +85231,7 @@ STRING 24403
 }
 
 STRING 24404
-// Abilities: A1LX (Magic Defense), Hotkey (Hotkey - Normal)
+// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87251,7 +87095,7 @@ Disabled bag info.
 }
 
 STRING 24963
-// Abilities: A1LX (Magic Defense), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87359,7 +87203,7 @@ Summon Couatl Mount
 }
 
 STRING 24987
-// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
+// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87431,7 +87275,7 @@ Revive
 }
 
 STRING 25030
-// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
+// Abilities: A1QK (Dragon Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87539,7 +87383,7 @@ Bat Mount
 }
 
 STRING 25068
-// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
+// Abilities: A1QK (Dragon Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -87614,12 +87458,6 @@ STRING 25095
 // Abilities: A0SZ (Open Portals), Researchubertip (Tooltip - Learn - Extended)
 {
 Opens portals at the hero's position and the target location which are connected to each other.|n|n|cffffcc00Increases the duration with every level.|r
-}
-
-STRING 25098
-// Abilities: ANto (Tornado), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings.|n|n|cffffcc00Increases the slowdown and caused damage with every level.|r
 }
 
 STRING 25101
@@ -87802,7 +87640,7 @@ Torpedoes
 }
 
 STRING 25167
-// Abilities: A1QK (Dragon Attack), Hotkey (Hotkey - Normal)
+// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87844,37 +87682,37 @@ Transmute
 }
 
 STRING 25188
-// Abilities: A1QK (Dragon Attack), Researchhotkey (Hotkey - Learn)
-{
-R
-}
-
-STRING 25189
-// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 25190
 // Abilities: A1VK (Frost Bolt Rain), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 25191
+STRING 25189
 // Abilities: A1VK (Frost Bolt Rain), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
-STRING 25192
+STRING 25190
 // Abilities: A1WD (Mass Fel), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 25193
+STRING 25191
 // Abilities: A1WD (Mass Fel), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 25192
+// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 25193
+// Abilities: A1W4 (Mass Ensnare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -87892,7 +87730,7 @@ STRING 25201
 }
 
 STRING 25208
-// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A1XG (Summon Ancient Hydra), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -87910,13 +87748,13 @@ STRING 25213
 }
 
 STRING 25214
-// Abilities: A1W4 (Mass Ensnare), Researchhotkey (Hotkey - Learn)
+// Abilities: A1XG (Summon Ancient Hydra), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 25219
-// Abilities: A1XG (Summon Ancient Hydra), Researchhotkey (Hotkey - Learn)
+// Abilities: A1XI (Fire and Frost Ray), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88126,7 +87964,7 @@ Learn Charge - [|cffffcc00Level %d|r]
 }
 
 STRING 25263
-// Abilities: A1XG (Summon Ancient Hydra), Hotkey (Hotkey - Normal)
+// Abilities: A1XI (Fire and Frost Ray), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88546,7 +88384,7 @@ Revive Captain
 }
 
 STRING 25382
-// Abilities: A1XI (Fire and Frost Ray), Hotkey (Hotkey - Normal)
+// Abilities: A22D (Summon Green Dragon), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88582,7 +88420,7 @@ STRING 25389
 }
 
 STRING 25390
-// Abilities: A1XI (Fire and Frost Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A22D (Summon Green Dragon), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88594,13 +88432,13 @@ War Queen
 }
 
 STRING 25392
-// Abilities: A22D (Summon Green Dragon), Researchhotkey (Hotkey - Learn)
+// Abilities: A22J (Mass Forestation), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 25400
-// Abilities: A22D (Summon Green Dragon), Hotkey (Hotkey - Normal)
+// Abilities: A22J (Mass Forestation), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88624,7 +88462,7 @@ Fly
 }
 
 STRING 25482
-// Abilities: A22J (Mass Forestation), Hotkey (Hotkey - Normal)
+// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88636,25 +88474,25 @@ D
 }
 
 STRING 25484
-// Abilities: A22J (Mass Forestation), Researchhotkey (Hotkey - Learn)
-{
-R
-}
-
-STRING 25485
-// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 25486
 // Abilities: A22T (Mind Control), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
-STRING 25487
+STRING 25485
 // Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 25486
+// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 25487
+// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -88744,25 +88582,25 @@ Small Bill
 }
 
 STRING 25521
-// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 25555
-// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 25556
 // Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
 {
 R
 }
 
-STRING 25557
+STRING 25555
 // Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 25556
+// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 25557
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -88918,7 +88756,7 @@ S
 }
 
 STRING 25614
-// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -88930,7 +88768,7 @@ R
 }
 
 STRING 25616
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -88972,13 +88810,13 @@ Gold Coins
 }
 
 STRING 25755
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 25756
-// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -89758,7 +89596,7 @@ L
 }
 
 STRING 26020
-// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -90459,7 +90297,7 @@ Build Wall
 }
 
 STRING 26250
-// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -90470,22 +90308,10 @@ STRING 26251
 S
 }
 
-STRING 26252
-// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
-{
-R
-}
-
 STRING 26387
 // Abilities: A08M (Siphon Mana), EditorSuffix (Editor Suffix)
 {
 (Gul'dan) (Slot 2)
-}
-
-STRING 26390
-// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
-{
-R
 }
 
 STRING 26392
@@ -97109,24 +96935,6 @@ STRING 30154
 Jetpack
 }
 
-STRING 30170
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 13|r]
-}
-
-STRING 30171
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 14|r]
-}
-
-STRING 30172
-// Abilities: ANhs (Healing Spray), Tip (Tooltip - Normal)
-{
-Healing Spray - [|cffffcc00Level 15|r]
-}
-
 STRING 30204
 // Abilities: A0DN (Devour), Researchtip (Tooltip - Learn)
 {
@@ -97262,24 +97070,6 @@ STRING 30255
 // Abilities: A24P (Dig Up), Tip (Tooltip - Normal)
 {
 Dig Up
-}
-
-STRING 30258
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF13> waves of healing mist; each wave heals <ANhs,DataA13> damage to all friendly units in an area.
-}
-
-STRING 30259
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF14> waves of healing mist; each wave heals <ANhs,DataA14> damage to all friendly units in an area.
-}
-
-STRING 30260
-// Abilities: ANhs (Healing Spray), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <ANhs,DataF15> waves of healing mist; each wave heals <ANhs,DataA15> damage to all friendly units in an area.
 }
 
 STRING 30269
@@ -126380,42 +126170,6 @@ STRING 40009
 // Upgrades: R0CB (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Worgen)
-}
-
-STRING 40011
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 10|r]
-}
-
-STRING 40012
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 11|r]
-}
-
-STRING 40013
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 12|r]
-}
-
-STRING 40014
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 13|r]
-}
-
-STRING 40015
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 14|r]
-}
-
-STRING 40016
-// Abilities: ANto (Tornado), Tip (Tooltip - Normal)
-{
-Tornado - [|cffffcc00Level 15|r]
 }
 
 STRING 40017
@@ -179906,96 +179660,6 @@ STRING 62515
 // Upgrades: R00W (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (High Elf)
-}
-
-STRING 62719
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA3> damage per second to buildings. |nLasts <ANto,Dur3> seconds.
-}
-
-STRING 62720
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA4> damage per second to buildings. |nLasts <ANto,Dur4> seconds.
-}
-
-STRING 62721
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA5> damage per second to buildings. |nLasts <ANto,Dur5> seconds.
-}
-
-STRING 62722
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA6> damage per second to buildings. |nLasts <ANto,Dur6> seconds.
-}
-
-STRING 62723
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA7> damage per second to buildings. |nLasts <ANto,Dur7> seconds.
-}
-
-STRING 62724
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA8> damage per second to buildings. |nLasts <ANto,Dur8> seconds.
-}
-
-STRING 62725
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA9> damage per second to buildings. |nLasts <ANto,Dur9> seconds.
-}
-
-STRING 62726
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA2> damage per second to buildings. |nLasts <ANto,Dur2> seconds.
-}
-
-STRING 62727
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA10> damage per second to buildings. |nLasts <ANto,Dur10> seconds.
-}
-
-STRING 62728
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA11> damage per second to buildings. |nLasts <ANto,Dur11> seconds.
-}
-
-STRING 62729
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA12> damage per second to buildings. |nLasts <ANto,Dur12> seconds.
-}
-
-STRING 62730
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA13> damage per second to buildings. |nLasts <ANto,Dur13> seconds.
-}
-
-STRING 62731
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA14> damage per second to buildings. |nLasts <ANto,Dur14> seconds.
-}
-
-STRING 62732
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA15> damage per second to buildings. |nLasts <ANto,Dur15> seconds.
-}
-
-STRING 62818
-// Abilities: ANto (Tornado), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,DataA1> damage per second to buildings. |nLasts <ANto,Dur1> seconds.
 }
 
 STRING 62842

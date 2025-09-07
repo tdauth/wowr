@@ -3712,6 +3712,7 @@ globals
     constant integer SUMMONED_GUNNER                                 = 'n0CA'
     constant integer SUMMONED_SPOTTER                                = 'n0C2'
     constant integer SPIDERLING                                      = 'nspd'
+    constant integer TORNADO                                         = 'ntor'
 
     // Old Gods
     constant integer TENTACLE_CTHUN                                  = 'n06F'
@@ -6052,7 +6053,8 @@ globals
     constant integer ABILITY_DISARMAMENT                             = 'A16K'
     constant integer ABILITY_SUMMON_AIR_ELEMENTAL                    = 'A0VH'
     constant integer ABILITY_WEB                                     = 'ACwb'
-    constant integer ABILITY_TORNADO                                 = 'A09O'
+    constant integer ABILITY_TORNADO                                 = 'A024'
+    constant integer ABILITY_TORNADO_BUILDING_DAMAGE_AURA            = 'Atdg'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
     // Paladin
@@ -6158,6 +6160,7 @@ globals
 
     // Alchemist/Warden/Poison/Moon Magic
     constant integer ABILITY_BLINK                                   = 'A005'
+    constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
     constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
     constant integer ABILITY_ACID_BOMB                               = 'A0ID'
     constant integer ABILITY_VENGEANCE                               = 'A0HY'
