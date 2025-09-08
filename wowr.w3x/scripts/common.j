@@ -6149,6 +6149,9 @@ globals
     constant integer ABILITY_TRUESHOT_AURA                           = 'ACat'
     constant integer ABILITY_STARFALL                                = 'A03R'
 
+    // Rogue
+    constant integer ABILITY_ENSNARE                                 = 'ACen'
+
     // Necromancer
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
@@ -6169,10 +6172,12 @@ globals
     constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
     constant integer ABILITY_ACID_BOMB                               = 'A0ID'
     constant integer ABILITY_POISON_ARROWS                           = 'A07Y'
+    constant integer ABILITY_ENVENOMED_WEAPONS                       = 'ACvs'
     constant integer ABILITY_VENGEANCE                               = 'A0HY'
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
+    constant integer ABILITY_DEMOLISH                                = 'A01F'
     constant integer ABILITY_CLUSTER_ROCKETS                         = 'A201'
     constant integer ABILITY_TRANSMUTE                               = 'A05B'
     constant integer ABILITY_MASS_TRANSMUTE                          = 'A1IF'
