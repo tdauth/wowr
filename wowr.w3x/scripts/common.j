@@ -6144,6 +6144,8 @@ globals
     constant integer ABILITY_SCOUT                                   = 'A08G'
     constant integer ABILITY_SEARING_ARROWS                          = 'ACsa'
     constant integer ABILITY_BARRAGE                                 = 'A1OQ'
+    constant integer ABILITY_SUMMON_QUILBEAST                        = 'A08N'
+    constant integer ABILITY_SUMMON_HAWK                             = 'A0AC'
     constant integer ABILITY_TRUESHOT_AURA                           = 'ACat'
     constant integer ABILITY_STARFALL                                = 'A03R'
 
@@ -6166,6 +6168,7 @@ globals
     constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
     constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
     constant integer ABILITY_ACID_BOMB                               = 'A0ID'
+    constant integer ABILITY_POISON_ARROWS                           = 'A07Y'
     constant integer ABILITY_VENGEANCE                               = 'A0HY'
 
     // Tinker
@@ -6177,6 +6180,8 @@ globals
 
     // Monk
     constant integer ABILITY_SLIDE                                   = 'A0W7'
+    constant integer ABILITY_DRUNKEN_BRAWLER                         = 'A060'
+    constant integer ABILITY_DRUNKEN_HAZE                            = 'A06X'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
@@ -6195,6 +6200,8 @@ globals
     // Other abilities
     constant integer ABILITY_ATTRIBUTE_BONUS                         = 'A041'
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
+    constant integer ABILITY_SUMMON_LAVA_SPAWN                       = 'A0CO'
+    constant integer ABILITY_INFERNO                                 = 'A1V1'
     constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_MASS_REJUVENATION_DUMMY                 = 'A1H6'
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
