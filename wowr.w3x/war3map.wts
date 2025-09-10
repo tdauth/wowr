@@ -34966,13 +34966,13 @@ Places a Goblin Land Mine which explodes when enemy ground units get nearby and 
 }
 
 STRING 6932
-// Units: n049 (Hero Abilities), Name (Name)
+// Units: n0E3 (Hero Abilities), Name (Name)
 {
 Hero Abilities
 }
 
 STRING 6933
-// Units: n0E3 (Hero Abilities), Name (Name)
+// Abilities: A0V5 (Hero Abilities), Name (Name)
 {
 Hero Abilities
 }
@@ -35056,7 +35056,7 @@ STRING 6946
 }
 
 STRING 6947
-// Abilities: A0V5 (Hero Abilities), Name (Name)
+// Abilities: A0V5 (Hero Abilities), Tip (Tooltip - Normal)
 {
 Hero Abilities
 }
@@ -43760,7 +43760,7 @@ STRING 8664
 }
 
 STRING 8665
-// Abilities: A1HC (Meteor), Name (Name)
+// Abilities: A237 (Meteor), Name (Name)
 {
 Meteor
 }
@@ -43772,7 +43772,7 @@ STRING 8666
 }
 
 STRING 8667
-// Abilities: A237 (Meteor), Name (Name)
+// Abilities: A237 (Meteor), Tip (Tooltip - Normal)
 {
 Meteor
 }
@@ -55834,7 +55834,7 @@ Kaboom! - [|cffffcc00Level 15|r]
 }
 
 STRING 11939
-// Abilities: A1HC (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A1HV (Mass Ensnare), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -61105,13 +61105,13 @@ W
 }
 
 STRING 14900
-// Abilities: A1HC (Meteor), Hotkey (Hotkey - Normal)
+// Abilities: A1HV (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14901
-// Abilities: A1HC (Meteor), Researchhotkey (Hotkey - Learn)
+// Abilities: A1HV (Mass Ensnare), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61129,13 +61129,13 @@ R
 }
 
 STRING 14904
-// Abilities: A1HV (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14905
-// Abilities: A1HV (Mass Ensnare), Researchhotkey (Hotkey - Learn)
+// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61183,13 +61183,13 @@ R
 }
 
 STRING 14936
-// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
+// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14937
-// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
+// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61207,13 +61207,13 @@ E
 }
 
 STRING 14940
-// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
+// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14941
-// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
+// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61338,25 +61338,25 @@ W
 }
 
 STRING 15090
-// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 15091
-// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 15092
 // Abilities: A1WF (Fel), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 15093
+STRING 15091
 // Abilities: A1WF (Fel), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 15092
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 15093
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61475,13 +61475,13 @@ Mace Tentacle
 }
 
 STRING 15135
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15136
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62045,13 +62045,13 @@ The activating hero will be resurrected automatically at this stone after some t
 }
 
 STRING 15342
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
+// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15343
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62095,13 +62095,7 @@ STRING 15376
 }
 
 STRING 15377
-// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 15378
-// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
+// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
 {
 Q
 }
@@ -62296,12 +62290,6 @@ STRING 15777
 // Items: I0N5 (Wand of Decay), Description (Description)
 {
 Immediately decays all corpses in the target area making them unvailable for any other spells.
-}
-
-STRING 15778
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
-{
-Q
 }
 
 STRING 15790
@@ -64502,7 +64490,7 @@ Allows causing damage to a unit from its mana.
 }
 
 STRING 16749
-// Units: n049 (Hero Abilities), EditorSuffix (Name - Editor Suffix)
+// Units: n04A (Water Portal), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -65034,7 +65022,7 @@ Avatar of Sargeras:
 }
 
 STRING 16968
-// Units: n04A (Water Portal), EditorSuffix (Name - Editor Suffix)
+// Units: n06U (Mounts Cage), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -65196,7 +65184,7 @@ Clan members:
 }
 
 STRING 17002
-// Abilities: A1HV (Mass Ensnare), EditorSuffix (Editor Suffix)
+// Abilities: A1WF (Fel), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -70954,7 +70942,7 @@ A sturdy transport ship capable of carrying huge amounts of Oil over the sea.
 }
 
 STRING 20352
-// Units: n06U (Mounts Cage), EditorSuffix (Name - Editor Suffix)
+// Units: n07P (Goblin Merchant), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -74118,12 +74106,6 @@ STRING 22530
 (Bonus Hero) (Possessed)
 }
 
-STRING 22531
-// Abilities: A0V5 (Hero Abilities), Tip (Tooltip - Normal)
-{
-Hero Abilities
-}
-
 STRING 22533
 // Units: E00R (Equipment Bag), Ubertip (Tooltip - Extended)
 {
@@ -75233,36 +75215,6 @@ STRING 23066
 // Upgrades: R08X (Magic Sentry), Tip (Tooltip)
 {
 Research Nocturnal
-}
-
-STRING 23067
-// Units: n06Y (Hero Spells Slot 3), Name (Name)
-{
-Hero Spells Slot 3
-}
-
-STRING 23068
-// Units: n0AN (Hero Spells Slot 1), Name (Name)
-{
-Hero Spells Slot 1
-}
-
-STRING 23069
-// Units: n08G (Hero Spells Slot 5), Name (Name)
-{
-Hero Spells Slot 5
-}
-
-STRING 23070
-// Units: n08H (Hero Spells Slot 4), Name (Name)
-{
-Hero Spells Slot 4
-}
-
-STRING 23071
-// Units: n08I (Hero Spells Slot 2), Name (Name)
-{
-Hero Spells Slot 2
 }
 
 STRING 23115
@@ -78667,12 +78619,6 @@ STRING 24893
 Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave, Hex, Serpent Ward and Big Bad Voodoo. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Bat.|r|n|cffffcc00Standard Ability: Invisibility.|r
 }
 
-STRING 24930
-// Abilities: A1WF (Fel), EditorSuffix (Editor Suffix)
-{
-(Slot 1)
-}
-
 STRING 24931
 // Abilities: A0SY (Anti-magic Shell), Researchtip (Tooltip - Learn)
 {
@@ -81304,7 +81250,7 @@ Eagle Mount
 }
 
 STRING 26394
-// Units: n06Y (Hero Spells Slot 3), EditorSuffix (Name - Editor Suffix)
+// Units: n0BF (Goblin Special Laboratory), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -88285,31 +88231,31 @@ STRING 31168
 }
 
 STRING 31169
-// Units: n07P (Goblin Merchant), EditorSuffix (Name - Editor Suffix)
+// Units: h0J2 (Crafting Stash), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31170
-// Units: n08G (Hero Spells Slot 5), EditorSuffix (Name - Editor Suffix)
+// Units: n0CD (Alchemist Lab), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31171
-// Units: n08H (Hero Spells Slot 4), EditorSuffix (Name - Editor Suffix)
+// Units: n0DH (Well), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31172
-// Units: n08I (Hero Spells Slot 2), EditorSuffix (Name - Editor Suffix)
+// Units: n0DK (Oil Platform), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31173
-// Units: n0AN (Hero Spells Slot 1), EditorSuffix (Name - Editor Suffix)
+// Units: n0GB (Skins), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -88321,7 +88267,7 @@ Mounts Cage
 }
 
 STRING 31175
-// Units: n0BF (Goblin Special Laboratory), EditorSuffix (Name - Editor Suffix)
+// Units: n0GC (Graveyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -88345,7 +88291,7 @@ Allows crafting items using the items in its inventory. You can drop items from 
 }
 
 STRING 31179
-// Units: h0J2 (Crafting Stash), EditorSuffix (Name - Editor Suffix)
+// Units: n0GT (Trainer), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -89434,12 +89380,6 @@ STRING 31760
 // Upgrades: R00O (Disease Cloud), EditorSuffix (Editor Suffix)
 {
 (Demon)
-}
-
-STRING 31761
-// Units: n0AN (Hero Spells Slot 1), Ubertip (Tooltip - Extended)
-{
-Allows buying hero spells for slot 1.
 }
 
 STRING 31762
@@ -93003,12 +92943,6 @@ STRING 33048
 // Units: o05N (Frozen Hall), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
-}
-
-STRING 33050
-// Abilities: A1HC (Meteor), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for some time.|n|n|cffffcc00Decreases the damage and stun duration with every level.|r
 }
 
 STRING 33051
@@ -104035,13 +103969,13 @@ F
 }
 
 STRING 36492
-// Units: n049 (Hero Abilities), Ubertip (Tooltip - Extended)
+// Units: n0E3 (Hero Abilities), Ubertip (Tooltip - Extended)
 {
 Allows changing the standard ability of your hero.
 }
 
 STRING 36493
-// Units: n049 (Hero Abilities), Description (Description)
+// Units: n0E3 (Hero Abilities), Description (Description)
 {
 Allows changing the standard ability of your hero.
 }
@@ -104059,13 +103993,13 @@ Build Hero Abilities
 }
 
 STRING 36496
-// Units: n0E3 (Hero Abilities), Ubertip (Tooltip - Extended)
+// Units: n0GB (Skins), Ubertip (Tooltip - Extended)
 {
 Allows changing the standard ability of your hero.
 }
 
 STRING 36497
-// Units: n0E3 (Hero Abilities), Description (Description)
+// Units: n0GB (Skins), Description (Description)
 {
 Allows changing the standard ability of your hero.
 }
@@ -114090,30 +114024,6 @@ STRING 40404
 Purchase Scepter of Tuskarrs
 }
 
-STRING 40405
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur1> seconds.
-}
-
-STRING 40406
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur2> seconds.
-}
-
-STRING 40407
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur3> seconds.
-}
-
-STRING 40408
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur4> seconds.
-}
-
 STRING 40409
 // Items: I0PT (Tuskarr), Name (Name)
 {
@@ -114148,12 +114058,6 @@ STRING 40414
 // Abilities: A1WS (Demon Blood), EditorSuffix (Editor Suffix)
 {
 (Item)
-}
-
-STRING 40415
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur5> seconds.
 }
 
 STRING 40416
@@ -114246,34 +114150,10 @@ STRING 40432
 A lovely pet.
 }
 
-STRING 40433
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur6> seconds.
-}
-
-STRING 40434
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur7> seconds.
-}
-
 STRING 40435
 // Units: h0PT (Tuskarr Housing), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
-}
-
-STRING 40436
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur8> seconds.
-}
-
-STRING 40437
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur9> seconds.
 }
 
 STRING 40438
@@ -114690,18 +114570,6 @@ STRING 40525
 Improved Fishing
 }
 
-STRING 40526
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur10> seconds.
-}
-
-STRING 40527
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur11> seconds.
-}
-
 STRING 40528
 // Abilities: A1GM (Summon Sea Turtle), Name (Name)
 {
@@ -114880,18 +114748,6 @@ STRING 40560
 // Abilities: A1GO (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
-}
-
-STRING 40561
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur12> seconds.
-}
-
-STRING 40562
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur13> seconds.
 }
 
 STRING 40564
@@ -115302,18 +115158,6 @@ STRING 40651
 Summon Priestess of the Moon on Owl
 }
 
-STRING 40653
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur14> seconds.
-}
-
-STRING 40654
-// Abilities: A1HC (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for <A1HE,Dur15> seconds.
-}
-
 STRING 40656
 // Abilities: A1HJ (Item Attack Lightning Bonus), EditorSuffix (Editor Suffix)
 {
@@ -115657,7 +115501,7 @@ Mystical Hero, adept at controlling magic and ranged assaults. Can learn Meteor,
 }
 
 STRING 40747
-// Abilities: A237 (Meteor), Tip (Tooltip - Normal)
+// Abilities: A0NR (Meteor), Name (Name)
 {
 Meteor
 }
@@ -115669,21 +115513,9 @@ Druid Spider Form
 }
 
 STRING 40752
-// Abilities: A0NR (Meteor), Name (Name)
+// Abilities: A0NR (Meteor), Tip (Tooltip - Normal)
 {
 Meteor
-}
-
-STRING 40753
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 1|r]
-}
-
-STRING 40754
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 2|r]
 }
 
 STRING 40772
@@ -116004,66 +115836,6 @@ STRING 40837
 (Mass Cyclone)
 }
 
-STRING 40838
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 3|r]
-}
-
-STRING 40839
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 4|r]
-}
-
-STRING 40840
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 5|r]
-}
-
-STRING 40841
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 6|r]
-}
-
-STRING 40842
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 7|r]
-}
-
-STRING 40843
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 8|r]
-}
-
-STRING 40844
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 9|r]
-}
-
-STRING 40845
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 10|r]
-}
-
-STRING 40846
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 11|r]
-}
-
-STRING 40847
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 12|r]
-}
-
 STRING 40851
 // Units: h06P (Orb of Orbs Dummy), Name (Name)
 {
@@ -116080,24 +115852,6 @@ STRING 40853
 // Abilities: A0GY (Item Attack Poison Bonus), EditorSuffix (Editor Suffix)
 {
 (Orb of Orbs)
-}
-
-STRING 40862
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 13|r]
-}
-
-STRING 40863
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 14|r]
-}
-
-STRING 40864
-// Abilities: A1HC (Meteor), Tip (Tooltip - Normal)
-{
-Meteor - [|cffffcc00Level 15|r]
 }
 
 STRING 40865
@@ -116134,18 +115888,6 @@ STRING 40870
 // Units: E01Q (Druid Stag Form), Tip (Tooltip - Basic)
 {
 Summon Druid Stag Form
-}
-
-STRING 40881
-// Abilities: A1HC (Meteor), Researchtip (Tooltip - Learn)
-{
-Learn Meteor - [|cffffcc00Level %d|r]
-}
-
-STRING 40883
-// Abilities: A0NR (Meteor), Tip (Tooltip - Normal)
-{
-Meteor
 }
 
 STRING 40885
@@ -118655,18 +118397,6 @@ STRING 41456
 Skins
 }
 
-STRING 41457
-// Units: n0GB (Skins), Ubertip (Tooltip - Extended)
-{
-Allows changing the standard ability of your hero.
-}
-
-STRING 41458
-// Units: n0GB (Skins), Description (Description)
-{
-Allows changing the standard ability of your hero.
-}
-
 STRING 41459
 // Items: I0Q8 (Skin Arthas), Name (Name)
 {
@@ -118686,7 +118416,7 @@ Skin of Arthas.
 }
 
 STRING 41463
-// Units: n0CD (Alchemist Lab), EditorSuffix (Name - Editor Suffix)
+// Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -118902,7 +118632,7 @@ Graveyard
 }
 
 STRING 41522
-// Units: n0DH (Well), EditorSuffix (Name - Editor Suffix)
+// Units: h0R5 (Human Oil Tanker), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -124259,7 +123989,7 @@ K
 }
 
 STRING 42824
-// Units: n0DK (Oil Platform), EditorSuffix (Name - Editor Suffix)
+// Units: o07K (Orc Oil Tanker), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -133109,7 +132839,7 @@ Sword
 }
 
 STRING 48575
-// Units: n0GB (Skins), EditorSuffix (Name - Editor Suffix)
+// Units: n0IU (Armory), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -143986,7 +143716,7 @@ Grants the ability of Mass Holy Light and Holy Aura. The Holy Aura reduces enemy
 }
 
 STRING 51718
-// Units: n0GC (Graveyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0M5 (Drillbot), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -149013,7 +148743,7 @@ STRING 54983
 }
 
 STRING 54984
-// Units: n0GT (Trainer), EditorSuffix (Name - Editor Suffix)
+// Units: n0MN (Auction House), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -149241,7 +148971,7 @@ STRING 55056
 }
 
 STRING 55061
-// Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: h0YJ (Kul Tiras Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -150651,19 +150381,19 @@ The tropical homeland of the goblins. Their capital of Undermine is located bene
 }
 
 STRING 55755
-// Units: h0R5 (Human Oil Tanker), EditorSuffix (Name - Editor Suffix)
+// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 55756
-// Units: o07K (Orc Oil Tanker), EditorSuffix (Name - Editor Suffix)
+// Units: n0E4 (Banner Shop), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 55757
-// Units: n0IU (Armory), EditorSuffix (Name - Editor Suffix)
+// Units: e019 (Blood Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -152067,7 +151797,7 @@ Magical Coin
 }
 
 STRING 56235
-// Units: n0M5 (Drillbot), EditorSuffix (Name - Editor Suffix)
+// Units: n0AQ (Clan Shop), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -152348,13 +152078,13 @@ Massive Frozen Throne Gate
 }
 
 STRING 56302
-// Units: n0MN (Auction House), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0JV (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 56303
-// Units: h0YJ (Kul Tiras Shipyard), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
@@ -152384,19 +152114,7 @@ Water Portal
 }
 
 STRING 56311
-// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
-{
-(Neutral)
-}
-
-STRING 56312
-// Units: n0E4 (Banner Shop), EditorSuffix (Name - Editor Suffix)
-{
-(Neutral)
-}
-
-STRING 56313
-// Units: e019 (Blood Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
@@ -158935,12 +158653,6 @@ STRING 58430
 Boat construction facility. Produces Human Transport Ships, Human Frigates, Kul Tiras Battleships, Engineer Ships and Gnomish Submarines.|n|nProvides researches Shipyard Repair and Improved Navy.
 }
 
-STRING 58431
-// Units: n0AQ (Clan Shop), EditorSuffix (Name - Editor Suffix)
-{
-(Neutral)
-}
-
 STRING 58435
 // Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
 {
@@ -159673,12 +159385,6 @@ STRING 58568
 Increases the range of Riflemen and Gun Tower attacks.
 }
 
-STRING 58569
-// Abilities: A0JV (Freezing Breath), EditorSuffix (Editor Suffix)
-{
-(Neutral)
-}
-
 STRING 58570
 // Abilities: A1X4 (Move), Name (Name)
 {
@@ -159749,12 +159455,6 @@ STRING 58581
 // Abilities: A1Q6 (Load), EditorSuffix (Editor Suffix)
 {
 (Train)
-}
-
-STRING 58582
-// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
-{
-(Neutral)
 }
 
 STRING 58583
@@ -160234,12 +159934,6 @@ STRING 58734
 // Items: I156 (Tome of Skill Points), Ubertip (Tooltip - Extended)
 {
 Permanently increases the Skill Points of the Hero by 1 when used.
-}
-
-STRING 58735
-// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
-{
-(Neutral)
 }
 
 STRING 58736

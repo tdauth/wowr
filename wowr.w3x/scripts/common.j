@@ -6003,7 +6003,7 @@ globals
     constant integer DEMON_MASTER                                    = 'A01R'
     constant integer DEMON_MASTER_ARCHIMONDE                         = 'A041'
 
-    // Classes
+    // Hero Classes
 
     // Pyromancer
     constant integer ABILITY_FIREBOLT                                = 'ACfb'
@@ -6011,6 +6011,9 @@ globals
     constant integer ABILITY_RAIN_OF_FIRE                            = 'ACrg'
     constant integer ABILITY_FLAME_STRIKE                            = 'ACfs'
     constant integer ABILITY_METEOR                                  = 'A0NR'
+    constant integer ABILITY_METEOR_DUMMY                            = 'A1HE'
+    constant integer ABILITY_METEOR_ITEM                             = 'A22V'
+    constant integer ABILITY_METEOR_ARCANE_OBSERVATORY               = 'A237'
     constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
     constant integer ABILITY_VOLCANO                                 = 'A112'
     constant integer ABILITY_FLAME_STORM                             = 'A114'
