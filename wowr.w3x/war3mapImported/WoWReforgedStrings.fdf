@@ -43,7 +43,7 @@ StringList {
     TARGET_HAS_NO_MANA                 "Target has no mana.",
     HERO_HAS_NO_MANA                   "Hero has no mana.",
     HERO_HAS_FULL_LIFE                 "Hero has full life.",
-    ONE_ABILITY_HAS_COOLDOWN           "At least one hero spell still has a cooldown.",
+    ONE_ABILITY_HAS_COOLDOWN           "At least one ability still has a cooldown.",
     // -playercolor, -playername
     X_CHANGED_COLOR_FOR_PLAYER_Y       "%1% changed color for player %2%.",
     X_CHANGED_NAME_FOR_PLAYER_Y        "%1% changed name for player %2%.",
