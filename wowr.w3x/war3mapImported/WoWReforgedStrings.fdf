@@ -43,6 +43,7 @@ StringList {
     TARGET_HAS_NO_MANA                 "Target has no mana.",
     HERO_HAS_NO_MANA                   "Hero has no mana.",
     HERO_HAS_FULL_LIFE                 "Hero has full life.",
+    ONE_ABILITY_HAS_COOLDOWN           "At least one hero spell still has a cooldown.",
     // -playercolor, -playername
     X_CHANGED_COLOR_FOR_PLAYER_Y       "%1% changed color for player %2%.",
     X_CHANGED_NAME_FOR_PLAYER_Y        "%1% changed name for player %2%.",
@@ -1678,6 +1679,7 @@ StringList {
     ENSNARE_TOOLTIP                    "Causes a target enemy unit to be bound to the ground so that it cannot move for <this,adur,x> seconds. Air units that are ensnared can be attacked as though they were land units. |n|n|cffffcc00Increases the duration and decreases the cooldown with every level.|r",
     PICKPOCKETING_TOOLTIP              "Gives your hero the chance to pickpocket a nearby killed unit. It will steal a random item from the unit's inventory including equipment bags and give you 20 % of its bounty extra.|n|n|cffffcc00Increases the chance percentage with every level.|r",
     FIND_ARTIFACTS_TOOLTIP             "Finds <this,ci00,x> random artifacts with level <this,ci01,x>.|n|n|cffffcc00Increases the number and level of found artifacts with every level.|r",
+    SUMMON_CREEP_TOOLTIP               "Summons a random creep with level <this,ci00,x>.|n|n|cffffcc00Increases the creep level and stats with every level.|r",
     // Druid
     REJUVENATION_TOOLTIP               "Heals a target friendly unit for <this,Rej1,x> hit points and regenerates <this,Rej2,x> mana over <this,adur,x> seconds. |n|n|cffffcc00Increases the gained hit points and regenerated mana with every level.|r",
     FORCE_OF_NATURE_TOOLTIP            "Converts a small area of trees into <this,Efn1,x> Treants. Can learn Nature's Blessing. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Increases the stats of Treants with every level.|r",
@@ -1691,6 +1693,7 @@ StringList {
     CRIPPLE_TOOLTIP                    "Reduces movement speed by <this,Cri1,x,%>%, attack rate by <this,Cri2,x,%>%, and damage by <this,Cri3,x,%>% of a target enemy unit. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the reduced movement speed, attack rate and damage with every level.|r",
     MANA_BURN_TOOLTIP                  "Sends a bolt of negative energy that burns up to <this,Emb1,x> points of a target enemy unit's mana. The mana combusts, dealing damage equal to the amount of mana burned. |n|n|cffffcc00Increases the burned up mana and decreases the cooldown with every level.|r",
     LIFE_DRAIN_TOOLTIP                 "Absorbs the life essence of a target enemy unit by taking <this,Ndr1,x> hit points per second from it and giving them to the hero, or transfers <this,Ndr4,x> hit points from the hero to an ally. |n|nAlso applies the current rank of the Black Arrow debuff to the target. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the drained and transfered life per second with every level.|r",
+    FEL_TOOLTIP                        "Temporarily gives a friendly target unit Chaos damage.|n|n|cffffcc00Decreases the cooldown and increases duration with every level.|r",
     DARK_SUMMONING_TOOLTIP             "Summons <this,Uds1,x> friendly units from a target area to the caster.|n|n|cffffcc00Increases the number of summoned units and decreases the cooldown with every level.|r",
     HOWL_OF_TERROR_TOOLTIP             "The hero lets loose a terrifying howl that reduces nearby enemy units' attack damage by <this,Roa1,x,%>% for <this,adur,x> seconds.|n|n|cffffcc00Decreases the attack damage with every level.|r",
     DARK_PORTAL_TOOLTIP                "Opens a portal, allowing demons to step through and do the hero's bidding. |n|n|cffffcc00Increases the stats of the demons with every level.|r",
