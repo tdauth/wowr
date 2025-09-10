@@ -1676,6 +1676,8 @@ StringList {
     STARFALL_TOOLTIP                   "Calls down waves of falling stars that damage nearby enemy units. Each wave deals <this,Esf1,x> damage. |nLasts for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     // Rogue
     ENSNARE_TOOLTIP                    "Causes a target enemy unit to be bound to the ground so that it cannot move for <this,adur,x> seconds. Air units that are ensnared can be attacked as though they were land units. |n|n|cffffcc00Increases the duration and decreases the cooldown with every level.|r",
+    PICKPOCKETING_TOOLTIP              "Gives your hero the chance to pickpocket a nearby killed unit. It will steal a random item from the unit's inventory including equipment bags and give you 20 % of its bounty extra.|n|n|cffffcc00Increases the chance percentage with every level.|r",
+    FIND_ARTIFACTS_TOOLTIP             "Finds <this,ci00,x> random artifacts with level <this,ci01,x>.|n|n|cffffcc00Increases the number and level of found artifacts with every level.|r",
     // Druid
     REJUVENATION_TOOLTIP               "Heals a target friendly unit for <this,Rej1,x> hit points and regenerates <this,Rej2,x> mana over <this,adur,x> seconds. |n|n|cffffcc00Increases the gained hit points and regenerated mana with every level.|r",
     FORCE_OF_NATURE_TOOLTIP            "Converts a small area of trees into <this,Efn1,x> Treants. Can learn Nature's Blessing. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Increases the stats of Treants with every level.|r",
@@ -1733,4 +1735,5 @@ StringList {
     ATTRIBUTE_BONUS_TOOLTIP            "Gives a total of <this,Iagi,x> points to Agility, Intelligence, and Strength. |n|n|cffffcc00Increases the stats with every level.|r",
     SUMMON_LAVA_SPAWN_TOOLTIP          "Summons a Lava Spawn, a resilient and deadly fire creature. As a Lava Spawn deals damage, it consumes the flesh of its target, eventually splitting into two healthy Lava Spawns.|nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Lava Spawn with every level.|r",
     INFERNO_TOOLTIP                    "Summons an Infernal from the sky, causing area effect damage where it lands.|n|n|cffffcc00Increases the stats of the summoned Infernal with every level.|r",
+    CLUB_STRIKE_TOOLTIP                "The hero uses a club for a powerful strike which knocks back enemy ground units, causes massive damage and stuns them for some time.|n|n|cffffcc00Increases the damage and stun duration with every level.|r",
 }

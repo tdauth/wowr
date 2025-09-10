@@ -2862,7 +2862,6 @@ globals
     constant integer ITEM_TINY_WITCH_HUT                             = 'I0MX'
     constant integer HERO_ABILITIES                                  = 'n0E3'
     constant integer ITEM_TINY_HERO_ABILITIES                        = 'I0J6'
-    constant integer HERO_ABILITIES_NEUTRAL                          = 'n049'
     constant integer SKINS                                           = 'n0GD'
     constant integer ITEM_TINY_SKINS                                 = 'I0QM'
     constant integer SKINS_NEUTRAL                                   = 'n0GB'
@@ -2892,11 +2891,6 @@ globals
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
 
     // Neutral Buildings
-    constant integer HERO_SPELLS_SLOT_1                              = 'n0AN'
-    constant integer HERO_SPELLS_SLOT_2                              = 'n08I'
-    constant integer HERO_SPELLS_SLOT_3                              = 'n06Y'
-    constant integer HERO_SPELLS_SLOT_4                              = 'n08H'
-    constant integer HERO_SPELLS_SLOT_5                              = 'n08G'
     constant integer MARKETPLACE                                     = 'nmrk'
     constant integer CRAFTING_STASH_NEUTRAL                          = 'h0J2'
     constant integer PORTAL_NEUTRAL                                  = 'nwgt'
@@ -2924,7 +2918,6 @@ globals
     constant integer GOBLIN_RACING_ORGANISATION                      = 'ngad'
     constant integer BLACK_MARKET                                    = 'ngme'
     constant integer EQUIPMENT_LABORATORY                            = 'n06S'
-
     constant integer LIBRARY                                         = 'n075'
     constant integer AUCTION_HOUSE                                   = 'n0MN'
 
@@ -6154,6 +6147,8 @@ globals
 
     // Rogue
     constant integer ABILITY_ENSNARE                                 = 'ACen'
+    constant integer ABILITY_PICKPOCKETING                           = 'A17B'
+    constant integer ABILITY_FIND_ARTIFACTS                          = 'A0HL'
 
     // Necromancer
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
@@ -6212,6 +6207,7 @@ globals
     constant integer ABILITY_SUMMON_LAVA_SPAWN                       = 'A0CO'
     constant integer ABILITY_INFERNO                                 = 'A1V1'
     constant integer ABILITY_DOOM                                    = 'A11L'
+    constant integer ABILITY_CLUB_STRIKE                             = 'A0XR'
     constant integer ABILITY_MASS_REJUVENATION_DUMMY                 = 'A1H6'
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
