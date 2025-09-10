@@ -6160,6 +6160,7 @@ globals
     // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
     constant integer ABILITY_SILENCE                                 = 'ACsi'
+    constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
     constant integer ABILITY_HEX                                     = 'AChx'
     constant integer ABILITY_GHOST_FORM                              = 'A05N'
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'

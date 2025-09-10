@@ -1564,6 +1564,7 @@ StringList {
     ABILITY_LEVEL_X                    "%1% - [|cffffcc00Level %2%|r]",
     CLICK_TO_CHANGE_ABILITY            "Click to change ability.",
     // Classes
+    CLASSES                            "Classes",
     HERO_HAS_DEFAULT_CLASS_X           "Hero has default class %1%.",
     NO_MATCHING_CLASS                  "No matching class.",
     ARCANIST                           "Arcanist",
@@ -1710,6 +1711,7 @@ StringList {
     // Witch Doctor
     SERPENT_WARD_TOOLTIP               "Summons an immobile serpentine ward to attack the hero's enemies. The ward is magic and spell immune. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r |n|n|cffffcc00Increases the stats of the serpentine ward with every level.|r",
     SILENCE_TOOLTIP                    "Stops all enemies in a small target area from casting spells for <this,adur,x> seconds.|n|n|cffffcc00Increases the area of effect and duration with every level.|r",
+    TELEKINESIS_TOOLTIP                "Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.|n|n|cffffcc00Increases the maximum distance and reduces the cooldown with every level.|r",
     HEX_TOOLTIP                        "Transforms an enemy unit into a random critter for <this,adur,x> seconds. Hex disables a unit’s abilities, item usage, ability to attack, and slows the unit to minimum movement speed. |n|n|cffffcc00Increases the duration with every level.|r",
     GHOST_FORM_TOOLTIP                 "Transforms the hero into an invisible Ghost with a ranged attack and <this,cr00,x> bonus hit points. |n|n|cffffcc00Increases the stats of the Ghost form with every level.|r",
     LOCUST_SWARM_TOOLTIP               "Creates a swarm of <this,Uls1,x> angry locusts that bite and tear at nearby enemy units. As they chew the enemy flesh, they convert it into a substance that restores <this,Uls4,x,%> % of the caused damage as hit points to the hero when they return. |nLasts <this,acdn,x> seconds. |n|n|cffffcc00Increases the converted hit points and number of locusts with every level.|r",

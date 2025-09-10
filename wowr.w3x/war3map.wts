@@ -740,7 +740,7 @@ Summon Green Dragon Mount
 }
 
 STRING 124
-// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A0XZ (Telekinesis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1568,7 +1568,7 @@ Gnome Factory
 }
 
 STRING 263
-// Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
+// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1598,19 +1598,19 @@ Ghost Form
 }
 
 STRING 268
-// Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
+// Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 269
-// Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 270
-// Abilities: A14P (Mass Charm), EditorSuffix (Editor Suffix)
+// Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1622,33 +1622,99 @@ Drunken Haze
 }
 
 STRING 272
-// Abilities: A176 (Mass Finger of Death), EditorSuffix (Editor Suffix)
+// Abilities: A14P (Mass Charm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 273
-// Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
+// Abilities: A176 (Mass Finger of Death), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 274
-// Abilities: A1IF (Mass Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 275
-// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
+// Abilities: A1IF (Mass Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 276
-// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
+// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
+}
+
+STRING 277
+// Items: I03K (Warrior), Name (Name)
+{
+Warrior
+}
+
+STRING 278
+// Items: I03K (Warrior), Tip (Tooltip - Basic)
+{
+Warrior
+}
+
+STRING 279
+// Items: I03K (Warrior), Ubertip (Tooltip - Extended)
+{
+Changes the class to Warrior.
+}
+
+STRING 280
+// Items: I04D (Warlock), Name (Name)
+{
+Warlock
+}
+
+STRING 281
+// Items: I04D (Warlock), Tip (Tooltip - Basic)
+{
+Warlock
+}
+
+STRING 282
+// Items: I04D (Warlock), Ubertip (Tooltip - Extended)
+{
+Changes the class to Warlock.
+}
+
+STRING 283
+// Items: I04K (Paladin), Name (Name)
+{
+Paladin
+}
+
+STRING 284
+// Items: I04K (Paladin), Tip (Tooltip - Basic)
+{
+Paladin
+}
+
+STRING 285
+// Items: I04K (Paladin), Ubertip (Tooltip - Extended)
+{
+Changes the class to Paladin.
+}
+
+STRING 286
+// Items: I04L (Geomancer), Name (Name)
+{
+Geomancer
+}
+
+STRING 287
+// Items: I04L (Geomancer), Tip (Tooltip - Basic)
+{
+Geomancer
 }
 
 STRING 288
@@ -1703,6 +1769,12 @@ STRING 296
 // Units: O00B (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Hero Selection)
+}
+
+STRING 297
+// Items: I04L (Geomancer), Ubertip (Tooltip - Extended)
+{
+Changes the class to Geomancer.
 }
 
 STRING 298
@@ -1760,7 +1832,7 @@ Build Water Tower
 }
 
 STRING 307
-// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
+// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1772,7 +1844,7 @@ Healing Spray
 }
 
 STRING 309
-// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1784,7 +1856,7 @@ Summons a fierce controllable Tornado that slows enemy units' movement speed, ra
 }
 
 STRING 311
-// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
+// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1793,6 +1865,24 @@ STRING 312
 // Units: Edmm (Demon Form), Name (Name)
 {
 Demon Form
+}
+
+STRING 313
+// Items: I04M (Pyromancer), Name (Name)
+{
+Pyromancer
+}
+
+STRING 314
+// Items: I04M (Pyromancer), Tip (Tooltip - Basic)
+{
+Pyromancer
+}
+
+STRING 315
+// Items: I04M (Pyromancer), Ubertip (Tooltip - Extended)
+{
+Changes the class to Pyromancer.
 }
 
 STRING 317
@@ -1808,7 +1898,7 @@ Turns all friendly units in the world invulnerable. |nThe Temple does not turn i
 }
 
 STRING 319
-// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
+// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1832,7 +1922,7 @@ Primary structure, used to train Gan'arg Engineers and receive lumber gathered b
 }
 
 STRING 331
-// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
+// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1844,37 +1934,37 @@ Death Pact
 }
 
 STRING 333
-// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
+// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 334
-// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 335
-// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 336
-// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 337
-// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 338
-// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
+// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1892,7 +1982,7 @@ Metamorphosis
 }
 
 STRING 341
-// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1907,6 +1997,18 @@ STRING 343
 // Units: negt (Guard Tower), Hotkey (Hotkey)
 {
 G
+}
+
+STRING 344
+// Items: I05H (Arcanist), Name (Name)
+{
+Arcanist
+}
+
+STRING 345
+// Items: I05H (Arcanist), Tip (Tooltip - Basic)
+{
+Arcanist
 }
 
 STRING 346
@@ -2245,6 +2347,12 @@ STRING 402
 Blink
 }
 
+STRING 403
+// Items: I05H (Arcanist), Ubertip (Tooltip - Extended)
+{
+Changes the class to Arcanist.
+}
+
 STRING 404
 // Abilities: A0AX (Convert Into Blood Elf), Name (Name)
 {
@@ -2333,6 +2441,12 @@ STRING 418
 // Units: O04G (Wolf Rider), Name (Name)
 {
 Wolf Rider
+}
+
+STRING 419
+// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
 }
 
 STRING 421
@@ -2548,13 +2662,13 @@ Summon Water Elemental
 }
 
 STRING 463
-// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
+// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 464
-// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
+// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2584,7 +2698,7 @@ J
 }
 
 STRING 469
-// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
+// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9438,7 +9552,7 @@ Summon Wall
 }
 
 STRING 1849
-// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
+// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9996,7 +10110,7 @@ Resources allow training, buying and upgrading units, constructing buildings, re
 }
 
 STRING 1946
-// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
+// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10008,7 +10122,7 @@ STRING 1947
 }
 
 STRING 1949
-// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
+// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11515,7 +11629,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 }
 
 STRING 2277
-// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11803,7 +11917,7 @@ Revive Samuro
 }
 
 STRING 2327
-// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
+// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12367,7 +12481,7 @@ Revive Dark Wizard
 }
 
 STRING 2452
-// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -20082,7 +20196,7 @@ Learn Frost Bolt Rain - [|cffffcc00Level %d|r]
 }
 
 STRING 3973
-// Abilities: A0XZ (Telekinesis), EditorSuffix (Editor Suffix)
+// Abilities: A10S (Goblin Dynamite), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -23099,13 +23213,13 @@ E
 }
 
 STRING 4674
-// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
+// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 4675
-// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
+// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -23853,7 +23967,7 @@ Transmute
 }
 
 STRING 4802
-// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
+// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -40211,19 +40325,19 @@ STRING 8045
 }
 
 STRING 8046
-// Abilities: A10S (Goblin Dynamite), EditorSuffix (Editor Suffix)
-{
-(Slot 1)
-}
-
-STRING 8047
 // Abilities: A13N (Teleportation), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
 
-STRING 8048
+STRING 8047
 // Abilities: A14F (Mass Entangling Roots), EditorSuffix (Editor Suffix)
+{
+(Slot 1)
+}
+
+STRING 8048
+// Abilities: A14T (Mass Control Magic), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -40277,7 +40391,7 @@ STRING 8056
 }
 
 STRING 8058
-// Abilities: A14T (Mass Control Magic), EditorSuffix (Editor Suffix)
+// Abilities: A1E5 (Summon Explosive Barrel), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -43652,7 +43766,7 @@ Meteor
 }
 
 STRING 8666
-// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
+// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43831,7 +43945,7 @@ Gypsy Wagon
 }
 
 STRING 8699
-// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44693,7 +44807,7 @@ A holy light that can heal friendly living units for <A13Q,DataA1> or deal half 
 }
 
 STRING 9010
-// Abilities: A1E5 (Summon Explosive Barrel), EditorSuffix (Editor Suffix)
+// Abilities: A1GB (Mass Firebolt), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -44901,7 +45015,7 @@ Akama's Message
 }
 
 STRING 9143
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44967,7 +45081,7 @@ Holy Nova
 }
 
 STRING 9154
-// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44985,7 +45099,7 @@ Mass Holy Light
 }
 
 STRING 9157
-// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
+// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45021,7 +45135,7 @@ Mass Inner Fire
 }
 
 STRING 9163
-// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
+// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46342,7 +46456,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 9758
-// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
+// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46384,13 +46498,13 @@ Temporarily gives a friendly target unit Chaos damage.
 }
 
 STRING 9765
-// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
+// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 9766
-// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
+// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46612,7 +46726,7 @@ W
 }
 
 STRING 9973
-// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
+// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46736,7 +46850,7 @@ STRING 10011
 }
 
 STRING 10046
-// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
+// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46760,7 +46874,7 @@ Summon Bear
 }
 
 STRING 10050
-// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
+// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46796,7 +46910,7 @@ Mass Forestation
 }
 
 STRING 10056
-// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
+// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -46820,7 +46934,7 @@ Druid Forms
 }
 
 STRING 10060
-// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -48547,7 +48661,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 10361
-// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
+// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -51547,7 +51661,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
+// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52307,7 +52421,7 @@ K
 }
 
 STRING 11128
-// Abilities: A0XZ (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A10S (Goblin Dynamite), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53190,13 +53304,13 @@ Wine Bottle
 }
 
 STRING 11396
-// Abilities: A10S (Goblin Dynamite), Hotkey (Hotkey - Normal)
+// Abilities: A10S (Goblin Dynamite), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11397
-// Abilities: A10S (Goblin Dynamite), Researchhotkey (Hotkey - Learn)
+// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53935,7 +54049,7 @@ Thorn
 }
 
 STRING 11529
-// Abilities: A1GB (Mass Firebolt), EditorSuffix (Editor Suffix)
+// Abilities: A1H5 (Mass Rejuvenation), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -53947,13 +54061,13 @@ STRING 11530
 }
 
 STRING 11531
-// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A13N (Teleportation), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11532
-// Abilities: A1H5 (Mass Rejuvenation), EditorSuffix (Editor Suffix)
+// Abilities: A1H8 (Mass Cyclone), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -54851,7 +54965,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, Wa
 }
 
 STRING 11719
-// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -55522,7 +55636,7 @@ Storm Bolt
 }
 
 STRING 11904
-// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
+// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -55570,13 +55684,13 @@ Summon Golem
 }
 
 STRING 11912
-// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
+// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 11913
-// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
+// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -55720,7 +55834,7 @@ Kaboom! - [|cffffcc00Level 15|r]
 }
 
 STRING 11939
-// Abilities: A1H8 (Mass Cyclone), EditorSuffix (Editor Suffix)
+// Abilities: A1HC (Meteor), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -56564,7 +56678,7 @@ Fly
 }
 
 STRING 12095
-// Abilities: A13N (Teleportation), Researchhotkey (Hotkey - Learn)
+// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56582,7 +56696,7 @@ STRING 12097
 }
 
 STRING 12098
-// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56612,7 +56726,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 12106
-// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -56642,25 +56756,25 @@ STRING 12110
 }
 
 STRING 12111
-// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 12112
 // Abilities: A14F (Mass Entangling Roots), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
-STRING 12113
+STRING 12112
 // Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 12114
+STRING 12113
 // Abilities: A14T (Mass Control Magic), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 12114
+// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57135,7 +57249,7 @@ STRING 12202
 }
 
 STRING 12203
-// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
+// Abilities: A1E5 (Summon Explosive Barrel), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57216,7 +57330,7 @@ Dragon Egg
 }
 
 STRING 12216
-// Abilities: A1E5 (Summon Explosive Barrel), Researchhotkey (Hotkey - Learn)
+// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58626,7 +58740,7 @@ W
 }
 
 STRING 13858
-// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
+// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59483,7 +59597,7 @@ Can select units and buildings which should be saved in a savecode or not.
 }
 
 STRING 14248
-// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
+// Abilities: A1GB (Mass Firebolt), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60392,13 +60506,13 @@ R
 }
 
 STRING 14576
-// Abilities: A1GB (Mass Firebolt), Researchhotkey (Hotkey - Learn)
+// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14577
-// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
+// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60889,7 +61003,7 @@ R
 }
 
 STRING 14883
-// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A1H5 (Mass Rejuvenation), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60919,7 +61033,7 @@ W
 }
 
 STRING 14888
-// Abilities: A1H5 (Mass Rejuvenation), Researchhotkey (Hotkey - Learn)
+// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60955,7 +61069,7 @@ E
 }
 
 STRING 14894
-// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A1H8 (Mass Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60991,13 +61105,13 @@ W
 }
 
 STRING 14900
-// Abilities: A1H8 (Mass Cyclone), Researchhotkey (Hotkey - Learn)
+// Abilities: A1HC (Meteor), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14901
-// Abilities: A1HC (Meteor), Hotkey (Hotkey - Normal)
+// Abilities: A1HC (Meteor), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61015,13 +61129,13 @@ R
 }
 
 STRING 14904
-// Abilities: A1HC (Meteor), Researchhotkey (Hotkey - Learn)
+// Abilities: A1HV (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14905
-// Abilities: A1HV (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A1HV (Mass Ensnare), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61069,13 +61183,13 @@ R
 }
 
 STRING 14936
-// Abilities: A1HV (Mass Ensnare), Researchhotkey (Hotkey - Learn)
+// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14937
-// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
+// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61093,13 +61207,13 @@ E
 }
 
 STRING 14940
-// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
+// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14941
-// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
+// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61224,25 +61338,25 @@ W
 }
 
 STRING 15090
-// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 15091
 // Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 15092
+STRING 15091
 // Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 15093
+STRING 15092
 // Abilities: A1WF (Fel), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 15093
+// Abilities: A1WF (Fel), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61361,13 +61475,13 @@ Mace Tentacle
 }
 
 STRING 15135
-// Abilities: A1WF (Fel), Researchhotkey (Hotkey - Learn)
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15136
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61931,13 +62045,13 @@ The activating hero will be resurrected automatically at this stone after some t
 }
 
 STRING 15342
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15343
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61981,13 +62095,13 @@ STRING 15376
 }
 
 STRING 15377
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15378
-// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62185,7 +62299,7 @@ Immediately decays all corpses in the target area making them unvailable for any
 }
 
 STRING 15778
-// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
+// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
 {
 Q
 }
@@ -62344,12 +62458,6 @@ STRING 15820
 // Abilities: A0IO (Jewelcrafting - Adept), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 15822
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
-{
-Q
 }
 
 STRING 15823
@@ -64605,7 +64713,7 @@ Changes the ability to Summon Cloud Serpent Mount.
 }
 
 STRING 16888
-// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
+// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -65088,7 +65196,7 @@ Clan members:
 }
 
 STRING 17002
-// Abilities: A1HC (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A1HV (Mass Ensnare), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -78560,7 +78668,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Healing Wave,
 }
 
 STRING 24930
-// Abilities: A1HV (Mass Ensnare), EditorSuffix (Editor Suffix)
+// Abilities: A1WF (Fel), EditorSuffix (Editor Suffix)
 {
 (Slot 1)
 }
@@ -80672,12 +80780,6 @@ STRING 25897
 // Units: N0BI (War Queen), Tip (Tooltip - Basic)
 {
 Summon War Queen
-}
-
-STRING 25903
-// Abilities: A1WF (Fel), EditorSuffix (Editor Suffix)
-{
-(Slot 1)
 }
 
 STRING 25935
@@ -84063,188 +84165,8 @@ STRING 28474
 Telekinesis
 }
 
-STRING 28477
-// Abilities: A0XZ (Telekinesis), Researchtip (Tooltip - Learn)
-{
-Learn Telekinesis - [|cffffcc00Level %d|r]
-}
-
-STRING 28478
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 1|r]
-}
-
-STRING 28479
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 2|r]
-}
-
-STRING 28480
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 3|r]
-}
-
-STRING 28481
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 4|r]
-}
-
-STRING 28482
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 5|r]
-}
-
-STRING 28483
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 6|r]
-}
-
-STRING 28484
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 7|r]
-}
-
-STRING 28485
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 8|r]
-}
-
-STRING 28486
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 9|r]
-}
-
-STRING 28487
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 10|r]
-}
-
-STRING 28488
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 11|r]
-}
-
-STRING 28489
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 12|r]
-}
-
-STRING 28490
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 13|r]
-}
-
-STRING 28491
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 14|r]
-}
-
-STRING 28492
-// Abilities: A0XZ (Telekinesis), Tip (Tooltip - Normal)
-{
-Telekinesis - [|cffffcc00Level 15|r]
-}
-
 STRING 28493
 // Items: I0XW (Wand of Telekinesis), Ubertip (Tooltip - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28494
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28495
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28496
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28497
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28498
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28499
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28500
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28501
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28502
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28503
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28504
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28505
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28506
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
-STRING 28507
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
 Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
 }
@@ -84253,12 +84175,6 @@ STRING 28510
 // Buffs/Effects: B01P (Telekinesis), EditorName (Name (Editor Only))
 {
 Telekinesis
-}
-
-STRING 28512
-// Abilities: A0XZ (Telekinesis), Researchubertip (Tooltip - Learn - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.|n|n|cffffcc00Increases the maximum distance and reduces the cooldown with every level.|r
 }
 
 STRING 28515
@@ -92023,7 +91939,7 @@ STRING 32773
 }
 
 STRING 32774
-// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
+// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -92047,7 +91963,7 @@ Brings back to life the corpses of <A13V,DataA1> friendly nearby units.
 }
 
 STRING 32778
-// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
+// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -139803,12 +139719,6 @@ STRING 50678
 Casts Telekinesis.
 }
 
-STRING 50679
-// Abilities: A0XZ (Telekinesis), Ubertip (Tooltip - Normal - Extended)
-{
-Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground.
-}
-
 STRING 50681
 // Units: o096 (Warlock Temple), EditorSuffix (Name - Editor Suffix)
 {
@@ -147298,7 +147208,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 53394
-// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
+// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
