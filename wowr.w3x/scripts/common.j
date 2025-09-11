@@ -6177,11 +6177,17 @@ globals
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
+    constant integer ABILITY_HARVEST                                 = 'A0PX'
     constant integer ABILITY_DEMOLISH                                = 'A01F'
+    constant integer ABILITY_POCKET_FACTORY                          = 'A061'
+    constant integer ABILITY_POCKET_FACTORY_ABILITY_ICON             = 'A0LH'
+    constant integer ABILITY_JETPACK                                 = 'A0M2'
     constant integer ABILITY_CLUSTER_ROCKETS                         = 'A201'
+    constant integer ABILITY_ENGINEERING_UPGRADE                     = 'A05L'
     constant integer ABILITY_TRANSMUTE                               = 'A05B'
     constant integer ABILITY_MASS_TRANSMUTE                          = 'A1IF'
     constant integer ABILITY_MASS_TRANSMUTE_DUMMY                    = 'A1IG'
+    constant integer ABILITY_ROBO_GOBLIN                             = 'A06Y'
 
     // Monk
     constant integer ABILITY_SLIDE                                   = 'A0W7'
@@ -6209,6 +6215,7 @@ globals
     constant integer ABILITY_INFERNO                                 = 'A1V1'
     constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_CLUB_STRIKE                             = 'A0XR'
+    constant integer ABILITY_DRAIN                                   = 'A03C'
     constant integer ABILITY_MASS_REJUVENATION_DUMMY                 = 'A1H6'
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
