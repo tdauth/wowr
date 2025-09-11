@@ -3706,6 +3706,7 @@ globals
     constant integer SUMMONED_SPOTTER                                = 'n0C2'
     constant integer SPIDERLING                                      = 'nspd'
     constant integer TORNADO                                         = 'ntor'
+    constant integer SUMMONED_MERCENARY_CAMP                         = 'h073'
     constant integer GHOST_FORM                                      = 'H04K'
 
     // Old Gods
@@ -6150,8 +6151,10 @@ globals
     constant integer ABILITY_PICKPOCKETING                           = 'A17B'
     constant integer ABILITY_FIND_ARTIFACTS                          = 'A0HL'
     constant integer ABILITY_SUMMON_CREEP                            = 'AY1G'
+    constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
 
     // Necromancer
+    constant integer ABILITY_CANNIBALIZE                             = 'ACcn'
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
     constant integer ABILITY_CARRION_BEETLES                         = 'A0EN'
@@ -6160,6 +6163,7 @@ globals
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
     constant integer ABILITY_SILENCE                                 = 'ACsi'
     constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
+    constant integer ABILITY_ANTIMAGIC_SHIELD                        = 'ACam'
     constant integer ABILITY_HEX                                     = 'AChx'
     constant integer ABILITY_GHOST_FORM                              = 'A05N'
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'
@@ -6181,6 +6185,7 @@ globals
     constant integer ABILITY_DEMOLISH                                = 'A01F'
     constant integer ABILITY_POCKET_FACTORY                          = 'A061'
     constant integer ABILITY_POCKET_FACTORY_ABILITY_ICON             = 'A0LH'
+    constant integer ABILITY_POCKET_FACTORY_ABILITY_KABOOM           = 'Asdg'
     constant integer ABILITY_JETPACK                                 = 'A0M2'
     constant integer ABILITY_CLUSTER_ROCKETS                         = 'A201'
     constant integer ABILITY_ENGINEERING_UPGRADE                     = 'A05L'
@@ -6193,6 +6198,7 @@ globals
     constant integer ABILITY_SLIDE                                   = 'A0W7'
     constant integer ABILITY_DRUNKEN_BRAWLER                         = 'A060'
     constant integer ABILITY_DRUNKEN_HAZE                            = 'A06X'
+    constant integer ABILITY_STORM_EARTH_FIRE                        = 'A070'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
@@ -6216,6 +6222,8 @@ globals
     constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_CLUB_STRIKE                             = 'A0XR'
     constant integer ABILITY_DRAIN                                   = 'A03C'
+    constant integer ABILITY_SOUL_BURN                               = 'A06Z'
+    constant integer ABILITY_TELEPORTATION                           = 'A13N'
     constant integer ABILITY_MASS_REJUVENATION_DUMMY                 = 'A1H6'
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
