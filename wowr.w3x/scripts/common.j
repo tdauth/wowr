@@ -3708,6 +3708,7 @@ globals
     constant integer TORNADO                                         = 'ntor'
     constant integer SUMMONED_MERCENARY_CAMP                         = 'h073'
     constant integer GHOST_FORM                                      = 'H04K'
+    constant integer POWER_WARD                                      = 'o026'
 
     // Old Gods
     constant integer TENTACLE_CTHUN                                  = 'n06F'
@@ -6011,6 +6012,8 @@ globals
     constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
     constant integer ABILITY_VOLCANO                                 = 'A112'
     constant integer ABILITY_FLAME_STORM                             = 'A114'
+    constant integer ABILITY_FLAME_STORM_STARFALL                    = 'A12L'
+    constant integer FLAME_STORM_DUMMY                               = 'h0JN'
     constant integer ABILITY_BREATH_OF_FIRE                          = 'ACbc'
     constant integer ABILITY_INCINERATE                              = 'A09N'
     constant integer ABILITY_PHOENIX                                 = 'A0V4'
@@ -6159,6 +6162,7 @@ globals
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
     constant integer ABILITY_CARRION_BEETLES                         = 'A0EN'
+    constant integer ABILITY_SPAWN_TENTACLE                          = 'ACtn'
 
     // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
@@ -6188,6 +6192,7 @@ globals
     constant integer ABILITY_POCKET_FACTORY_ABILITY_ICON             = 'A0LH'
     constant integer ABILITY_POCKET_FACTORY_ABILITY_KABOOM           = 'Asdg'
     constant integer ABILITY_EXPLOSIVE_BARREL                        = 'A1E5'
+    constant integer ABILITY_REPAIR_AURA                             = 'A0WC'
     constant integer ABILITY_AOE_DAMAGE                              = 'A1E6'
     constant integer ABILITY_JETPACK                                 = 'A0M2'
     constant integer ABILITY_CLUSTER_ROCKETS                         = 'A201'
@@ -6227,6 +6232,10 @@ globals
     constant integer ABILITY_DRAIN                                   = 'A03C'
     constant integer ABILITY_SOUL_BURN                               = 'A06Z'
     constant integer ABILITY_TELEPORTATION                           = 'A13N'
+    constant integer ABILITY_POWER_WARD                              = 'A0W5'
+    constant integer ABILITY_LIFE_REGENERATION_NEUTRAL               = 'ACnr'
+    constant integer ABILITY_MANA_REGENERATION_NEUTRAL               = 'ANre'
+    constant integer ABILITY_CLONE                                   = 'A033'
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
     constant integer ABILITY_MASS_CHARM                              = 'A14P'

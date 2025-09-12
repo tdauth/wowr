@@ -403,12 +403,6 @@ STRING 67
 (Slot 4)
 }
 
-STRING 68
-// Abilities: A0W5 (Power Ward), EditorSuffix (Editor Suffix)
-{
-(Slot 1)
-}
-
 STRING 69
 // Abilities: A0T7 (Revive), EditorSuffix (Editor Suffix)
 {
@@ -770,7 +764,7 @@ Random Hero
 }
 
 STRING 129
-// Abilities: A0W7 (Slide), EditorSuffix (Editor Suffix)
+// Abilities: A033 (Clone), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1574,7 +1568,7 @@ Gnome Factory
 }
 
 STRING 263
-// Abilities: A0XR (Club Strike), EditorSuffix (Editor Suffix)
+// Abilities: A0W5 (Power Ward), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1591,12 +1585,6 @@ STRING 265
 Ghost
 }
 
-STRING 266
-// Abilities: A0WC (Repair Aura), EditorSuffix (Editor Suffix)
-{
-(Slot 1)
-}
-
 STRING 267
 // Abilities: A05N (Ghost Form), Name (Name)
 {
@@ -1604,19 +1592,19 @@ Ghost Form
 }
 
 STRING 268
-// Abilities: A0XZ (Telekinesis), EditorSuffix (Editor Suffix)
+// Abilities: A0W7 (Slide), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 269
-// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A0WC (Repair Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 270
-// Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
+// Abilities: A0XR (Club Strike), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1628,31 +1616,31 @@ Drunken Haze
 }
 
 STRING 272
-// Abilities: A135 (Mass Cripple), EditorSuffix (Editor Suffix)
+// Abilities: A0XZ (Telekinesis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 273
-// Abilities: A13N (Teleportation), EditorSuffix (Editor Suffix)
+// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 274
-// Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
+// Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 275
-// Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A135 (Mass Cripple), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 276
-// Abilities: A149 (Mass Death Coil), EditorSuffix (Editor Suffix)
+// Abilities: A13N (Teleportation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1796,25 +1784,25 @@ Mass Polymorph
 }
 
 STRING 300
-// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
+// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 301
-// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
+// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 302
-// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 303
-// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
+// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1838,7 +1826,7 @@ Build Water Tower
 }
 
 STRING 307
-// Abilities: A14F (Mass Entangling Roots), EditorSuffix (Editor Suffix)
+// Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1850,7 +1838,7 @@ Healing Spray
 }
 
 STRING 309
-// Abilities: A14I (Mass Sleep), EditorSuffix (Editor Suffix)
+// Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1862,7 +1850,7 @@ Summons a fierce controllable Tornado that slows enemy units' movement speed, ra
 }
 
 STRING 311
-// Abilities: A14L (Mass Hex), EditorSuffix (Editor Suffix)
+// Abilities: A149 (Mass Death Coil), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1910,7 +1898,7 @@ Turns all friendly units in the world invulnerable. |nThe Temple does not turn i
 }
 
 STRING 319
-// Abilities: A14P (Mass Charm), EditorSuffix (Editor Suffix)
+// Abilities: A14F (Mass Entangling Roots), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1982,7 +1970,7 @@ Transforms into Robo-Goblin.
 }
 
 STRING 331
-// Abilities: A14T (Mass Control Magic), EditorSuffix (Editor Suffix)
+// Abilities: A14I (Mass Sleep), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -1994,37 +1982,37 @@ Death Pact
 }
 
 STRING 333
-// Abilities: A15V (Mass Mana Burn), EditorSuffix (Editor Suffix)
+// Abilities: A14L (Mass Hex), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 334
-// Abilities: A173 (Mass Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A14P (Mass Charm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 335
-// Abilities: A176 (Mass Finger of Death), EditorSuffix (Editor Suffix)
+// Abilities: A14T (Mass Control Magic), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 336
-// Abilities: A17B (Pickpocketing), EditorSuffix (Editor Suffix)
+// Abilities: A15V (Mass Mana Burn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 337
-// Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
+// Abilities: A173 (Mass Bloodlust), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 338
-// Abilities: A1E5 (Summon Explosive Barrel), EditorSuffix (Editor Suffix)
+// Abilities: A176 (Mass Finger of Death), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2042,7 +2030,7 @@ Metamorphosis
 }
 
 STRING 341
-// Abilities: A1GB (Mass Firebolt), EditorSuffix (Editor Suffix)
+// Abilities: A17B (Pickpocketing), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2504,13 +2492,13 @@ Wolf Rider
 }
 
 STRING 419
-// Abilities: A1H5 (Mass Rejuvenation), EditorSuffix (Editor Suffix)
+// Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 420
-// Abilities: A1H8 (Mass Cyclone), EditorSuffix (Editor Suffix)
+// Abilities: A1E5 (Summon Explosive Barrel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2522,7 +2510,7 @@ The Weaponsmith uses gathered minerals to forge a Mithril Long Sword.
 }
 
 STRING 422
-// Abilities: A1IF (Mass Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A1GB (Mass Firebolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2576,7 +2564,7 @@ STRING 430
 }
 
 STRING 431
-// Abilities: A1II (Mass Illusion), EditorSuffix (Editor Suffix)
+// Abilities: A1H5 (Mass Rejuvenation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2623,7 +2611,7 @@ STRING 438
 }
 
 STRING 439
-// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
+// Abilities: A1H8 (Mass Cyclone), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2635,7 +2623,7 @@ Defend Plate Armor
 }
 
 STRING 441
-// Abilities: A1W4 (Mass Ensnare), EditorSuffix (Editor Suffix)
+// Abilities: A1IF (Mass Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2647,7 +2635,7 @@ F
 }
 
 STRING 443
-// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
+// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2764,13 +2752,13 @@ Summon Water Elemental
 }
 
 STRING 463
-// Abilities: A1YG (Summon Creep), EditorSuffix (Editor Suffix)
+// Abilities: A1II (Mass Illusion), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 464
-// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
+// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2800,13 +2788,13 @@ J
 }
 
 STRING 469
-// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
+// Abilities: A1W4 (Mass Ensnare), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 470
-// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
+// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2854,19 +2842,19 @@ Tiny Tree of Life
 }
 
 STRING 478
-// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
+// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 479
-// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 480
-// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
+// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2890,19 +2878,19 @@ Mass Mana Burn
 }
 
 STRING 484
-// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 485
-// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
+// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 486
-// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
+// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -2926,13 +2914,13 @@ Mass Entangling Roots
 }
 
 STRING 490
-// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
+// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 491
-// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
+// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3109,7 +3097,7 @@ Summon Dark Wizard
 }
 
 STRING 521
-// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
+// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3199,7 +3187,7 @@ Mass Death Coil
 }
 
 STRING 536
-// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
+// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3217,9 +3205,39 @@ STRING 538
 }
 
 STRING 539
-// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
+// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
+}
+
+STRING 540
+// Items: I06Y (Tinker), Name (Name)
+{
+Tinker
+}
+
+STRING 541
+// Items: I06Y (Tinker), Tip (Tooltip - Basic)
+{
+Tinker
+}
+
+STRING 542
+// Items: I06Y (Tinker), Ubertip (Tooltip - Extended)
+{
+Changes the class to Tinker.
+}
+
+STRING 543
+// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
+}
+
+STRING 544
+// Buffs/Effects: B01F (), Bufftip (Tooltip)
+{
+Repair Aura
 }
 
 STRING 545
@@ -3244,6 +3262,30 @@ STRING 548
 // Items: I00V (Magical Seed), Ubertip (Tooltip - Extended)
 {
 When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+}
+
+STRING 549
+// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
+}
+
+STRING 550
+// Buffs/Effects: B01B (), Bufftip (Tooltip)
+{
+Power Ward
+}
+
+STRING 551
+// Abilities: A033 (Clone), Tip (Tooltip - Normal)
+{
+Clone
+}
+
+STRING 552
+// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
 }
 
 STRING 553
@@ -4028,19 +4070,19 @@ Hero Abilities Previous Page
 }
 
 STRING 726
-// Abilities: A033 (Clone), EditorSuffix (Editor Suffix)
-{
-(Slot 4)
-}
-
-STRING 727
 // Abilities: A0Y2 (Full Regeneration), EditorSuffix (Editor Suffix)
 {
 (Slot 4)
 }
 
+STRING 727
+// Abilities: A13I (Target Divine Shield), EditorSuffix (Editor Suffix)
+{
+(Slot 4)
+}
+
 STRING 728
-// Abilities: A12I (Flame Storm), EditorSuffix (Editor Suffix)
+// Abilities: A184 (Multiply), EditorSuffix (Editor Suffix)
 {
 (Slot 4)
 }
@@ -4569,28 +4611,10 @@ STRING 841
 (Slot 2) (Necromancer)
 }
 
-STRING 842
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 1|r]
-}
-
 STRING 843
 // Abilities: A007 (Alchemy - Novice), Name (Name)
 {
 Alchemy - Novice
-}
-
-STRING 844
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 2|r]
-}
-
-STRING 845
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 3|r]
 }
 
 STRING 846
@@ -5828,12 +5852,6 @@ STRING 1079
 Mystical Hero, adept at using nature spells. Can learn Mass Rejuvenation, Mass Faerie Fire, Eat Tree, and Mass Forestation. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 1086
-// Abilities: A0HV (Spawn Tentacle), EditorSuffix (Editor Suffix)
-{
-(N'zoth) (Slot 1)
-}
-
 STRING 1106
 {
 Railway
@@ -6865,142 +6883,10 @@ STRING 1307
 Further increases the amount of lumber that Sailors can carry by <Rhlh,mod1>.
 }
 
-STRING 1308
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 4|r]
-}
-
-STRING 1309
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 5|r]
-}
-
-STRING 1310
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 6|r]
-}
-
-STRING 1311
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 7|r]
-}
-
-STRING 1312
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 8|r]
-}
-
-STRING 1313
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 9|r]
-}
-
-STRING 1314
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 10|r]
-}
-
-STRING 1315
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 11|r]
-}
-
-STRING 1316
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 12|r]
-}
-
-STRING 1317
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 13|r]
-}
-
-STRING 1318
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 14|r]
-}
-
-STRING 1320
-// Abilities: A0KG (Raise Dead), Tip (Tooltip - Normal)
-{
-Raise Dead - [|cffffcc00Level 15|r]
-}
-
 STRING 1321
 // Doodads: D003 (Statue Lich King), Name (Name)
 {
 Statue Lich King
-}
-
-STRING 1322
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA1> skeleton and <A0KG,DataB1> skeleton mage from a corpse.
-}
-
-STRING 1323
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA2> skeleton and <A0KG,DataB2> skeleton mage from a corpse.
-}
-
-STRING 1324
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA3> skeleton and <A0KG,DataB3> skeleton mage from a corpse.
-}
-
-STRING 1325
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA4> skeleton and <A0KG,DataB4> skeleton mage from a corpse.
-}
-
-STRING 1326
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA5> skeleton and <A0KG,DataB5> skeleton mage from a corpse.
-}
-
-STRING 1327
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA6> skeleton and <A0KG,DataB6> skeleton mage from a corpse.
-}
-
-STRING 1328
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA7> skeleton and <A0KG,DataB7> skeleton mage from a corpse.
-}
-
-STRING 1329
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA8> skeleton and <A0KG,DataB8> skeleton mage from a corpse.
-}
-
-STRING 1330
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA9> skeleton and <A0KG,DataB9> skeleton mage from a corpse.
-}
-
-STRING 1331
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA10> skeleton and <A0KG,DataB10> skeleton mage from a corpse.
 }
 
 STRING 1332
@@ -7282,18 +7168,6 @@ STRING 1378
 A holy light that can heal a friendly living unit or damage an enemy Undead unit.
 }
 
-STRING 1379
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA11> skeleton and <A0KG,DataB11> skeleton mage from a corpse.
-}
-
-STRING 1380
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA12> skeleton and <A0KG,DataB12> skeleton mage from a corpse.
-}
-
 STRING 1381
 // Upgrades: R05N (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
@@ -7492,7 +7366,7 @@ Skin of a Witch Doctor.
 }
 
 STRING 1417
-// Abilities: A13I (Target Divine Shield), EditorSuffix (Editor Suffix)
+// Abilities: A1VK (Frost Bolt Rain), EditorSuffix (Editor Suffix)
 {
 (Slot 4)
 }
@@ -8157,19 +8031,19 @@ STRING 1586
 }
 
 STRING 1587
-// Abilities: A184 (Multiply), EditorSuffix (Editor Suffix)
+// Abilities: A1XG (Summon Ancient Hydra), EditorSuffix (Editor Suffix)
 {
 (Slot 4)
 }
 
 STRING 1588
-// Abilities: A1VK (Frost Bolt Rain), EditorSuffix (Editor Suffix)
+// Abilities: A22J (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Slot 4)
 }
 
 STRING 1589
-// Abilities: A1XG (Summon Ancient Hydra), EditorSuffix (Editor Suffix)
+// Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
 {
 (Slot 4)
 }
@@ -8322,12 +8196,6 @@ STRING 1614
 // Abilities: A12S (Discharge), EditorSuffix (Editor Suffix)
 {
 (Slot 3)
-}
-
-STRING 1615
-// Abilities: A22J (Mass Forestation), EditorSuffix (Editor Suffix)
-{
-(Slot 4)
 }
 
 STRING 1616
@@ -9348,7 +9216,7 @@ Summon Wall
 }
 
 STRING 1849
-// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A1YG (Summon Creep), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9768,12 +9636,6 @@ STRING 1919
 Adds an additional poison effect to Gnoll Assassins' and Gnoll Warhawk Riders' attacks. A unit poisoned by Envenomed Weapons takes damage over time.
 }
 
-STRING 1920
-// Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
-{
-(Slot 4)
-}
-
 STRING 1921
 // Units: h009 (Town Hall), Ubertip (Tooltip - Extended)
 {
@@ -9888,13 +9750,13 @@ Resources allow training, buying and upgrading units, constructing buildings, re
 }
 
 STRING 1946
-// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
+// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1949
-// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
+// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11389,7 +11251,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 }
 
 STRING 2277
-// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
+// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11677,7 +11539,7 @@ Revive Samuro
 }
 
 STRING 2327
-// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
+// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12241,7 +12103,7 @@ Revive Dark Wizard
 }
 
 STRING 2452
-// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -17447,48 +17309,6 @@ STRING 3471
 Power Ward
 }
 
-STRING 3472
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 1|r]
-}
-
-STRING 3473
-// Abilities: A0W5 (Power Ward), Researchtip (Tooltip - Learn)
-{
-Learn Power Ward - [|cffffcc00Level %d|r]
-}
-
-STRING 3474
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 2|r]
-}
-
-STRING 3475
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 3|r]
-}
-
-STRING 3476
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 4|r]
-}
-
-STRING 3477
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 5|r]
-}
-
-STRING 3478
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 6|r]
-}
-
 STRING 3479
 // Units: h0DM (Air Wall), Hotkey (Hotkey)
 {
@@ -17553,12 +17373,6 @@ STRING 3490
 // Items: I1AN (Elven Boots of Speed), Ubertip (Tooltip - Extended)
 {
 Increases the movement speed and the agility by 6 of the Hero when worn.
-}
-
-STRING 3491
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 7|r]
 }
 
 STRING 3492
@@ -17961,12 +17775,6 @@ STRING 3624
 // Units: U00N (Death Knight), Propernames (Proper Names)
 {
 Lich King
-}
-
-STRING 3625
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 8|r]
 }
 
 STRING 3626
@@ -18613,18 +18421,6 @@ STRING 3739
 Scepter of Dungeon
 }
 
-STRING 3740
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 9|r]
-}
-
-STRING 3741
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 10|r]
-}
-
 STRING 3742
 // Units: o0AO (Dungeon), Name (Name)
 {
@@ -18841,12 +18637,6 @@ STRING 3777
 E
 }
 
-STRING 3778
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 11|r]
-}
-
 STRING 3779
 // Units: h0SB (Stop Train), Hotkey (Hotkey)
 {
@@ -18943,12 +18733,6 @@ STRING 3803
 Mercenary Camp Sunstrider Isle
 }
 
-STRING 3805
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 12|r]
-}
-
 STRING 3806
 // Units: n08L (Mercenary Camp Pandaria), Name (Name)
 {
@@ -18989,18 +18773,6 @@ STRING 3819
 // Units: H089 (The Last Guardian), Propernames (Proper Names)
 {
 Medivh
-}
-
-STRING 3820
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 13|r]
-}
-
-STRING 3821
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 14|r]
 }
 
 STRING 3822
@@ -19061,12 +18833,6 @@ STRING 3839
 // Units: h01Y (Wall), Name (Name)
 {
 Wall
-}
-
-STRING 3841
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward - [|cffffcc00Level 15|r]
 }
 
 STRING 3842
@@ -19710,7 +19476,7 @@ Warrior Hero, exceptional at absorbing damage and melee combat. Can learn Shockw
 }
 
 STRING 3971
-// Abilities: A1QC (Power Ward), Name (Name)
+// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
 {
 Power Ward
 }
@@ -19770,15 +19536,9 @@ Craft Orb of Orbs
 }
 
 STRING 4020
-// Buffs/Effects: B01B (), Bufftip (Tooltip)
+// Abilities: A1QC (Power Ward), Name (Name)
 {
 Power Ward
-}
-
-STRING 4021
-// Abilities: A01Q (Healing Ward Aura), EditorSuffix (Editor Suffix)
-{
-(Power Ward) (15 Levels)
 }
 
 STRING 4022
@@ -22565,13 +22325,13 @@ E
 }
 
 STRING 4674
-// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 4675
-// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -22793,12 +22553,6 @@ STRING 4711
 // Items: I0BV (Clothing Bag), Ubertip (Tooltip - Extended)
 {
 Allows changing the skin of a unit.
-}
-
-STRING 4712
-// Abilities: A0FR (Mana Ward), EditorSuffix (Editor Suffix)
-{
-(Mana Regeneration Aura) (High Elf) (15 Levels)
 }
 
 STRING 4713
@@ -23319,7 +23073,7 @@ Transmute
 }
 
 STRING 4802
-// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -24047,18 +23801,6 @@ Testing: Runeblade14, Toasty, Deranor and others.
 Credits: Quest Log (F9).
 }
 
-STRING 4938
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA13> skeleton and <A0KG,DataB13> skeleton mage from a corpse.
-}
-
-STRING 4939
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA14> skeleton and <A0KG,DataB14> skeleton mage from a corpse.
-}
-
 STRING 4944
 // Items: I0H2 (Unique - Ancient Bow), Description (Description)
 {
@@ -24099,12 +23841,6 @@ STRING 4967
 // Units: o00O (Goblin Town Hall), Ubertip (Tooltip - Extended)
 {
 Primary structure, used to train Goblin Laborerers, Goblin Shredders Goblin Citizens and receive gathered resources.
-}
-
-STRING 4968
-// Abilities: A0KG (Raise Dead), Ubertip (Tooltip - Normal - Extended)
-{
-Raises <A0KG,DataA15> skeleton and <A0KG,DataB15> skeleton mage from a corpse.
 }
 
 STRING 4969
@@ -31194,12 +30930,6 @@ STRING 6267
 O
 }
 
-STRING 6268
-// Abilities: A0KG (Raise Dead), Researchubertip (Tooltip - Learn - Extended)
-{
-Raises <A0KG,DataA1> skeleton and <A0KG,DataB1> skeleton mage from a corpse. |n|n|cffffcc00Increases the stats of the summoned units with every level.|r
-}
-
 STRING 6269
 // Items: I145 (Weather Balloon), Hotkey (Hotkey)
 {
@@ -35167,12 +34897,6 @@ STRING 7278
 Fortified Goblin Rocket Tower
 }
 
-STRING 7279
-// Abilities: A0KG (Raise Dead), Researchtip (Tooltip - Learn)
-{
-Learn Raise Dead - [|cffffcc00Level %d|r]
-}
-
 STRING 7280
 // Items: I159 (Tiny Banner Kul Tiras), Tip (Tooltip - Basic)
 {
@@ -38036,7 +37760,7 @@ Magma Demon
 }
 
 STRING 7926
-// Abilities: A0HV (Spawn Tentacle), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A1VS (Spawn Tentacle), Ubertip (Tooltip - Normal - Extended)
 {
 Unleashes a mighty tentacle upon the enemy.
 }
@@ -42038,7 +41762,7 @@ Meteor
 }
 
 STRING 8666
-// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
+// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42123,7 +41847,7 @@ Races (Only Warlord)
 }
 
 STRING 8683
-// Abilities: A12I (Flame Storm), Name (Name)
+// Abilities: A114 (Flame Storm), Name (Name)
 {
 Flame Storm
 }
@@ -42141,7 +41865,7 @@ Summons a powerful flame storm which damages enemy units around.
 }
 
 STRING 8686
-// Abilities: A114 (Flame Storm), Name (Name)
+// Abilities: A114 (Flame Storm), Tip (Tooltip - Normal)
 {
 Flame Storm
 }
@@ -42217,7 +41941,7 @@ Gypsy Wagon
 }
 
 STRING 8699
-// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42958,7 +42682,7 @@ Q
 }
 
 STRING 8953
-// Abilities: A0HV (Spawn Tentacle), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43043,7 +42767,7 @@ A holy light that can heal friendly living units for <A13Q,DataA1> or deal half 
 }
 
 STRING 9011
-// Abilities: A0HV (Spawn Tentacle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43245,7 +42969,7 @@ Akama's Message
 }
 
 STRING 9143
-// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
+// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43311,7 +43035,7 @@ Holy Nova
 }
 
 STRING 9154
-// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
+// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43329,7 +43053,7 @@ Mass Holy Light
 }
 
 STRING 9157
-// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
+// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43359,7 +43083,7 @@ Mass Inner Fire
 }
 
 STRING 9163
-// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
+// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43562,13 +43286,13 @@ Summons a Meat Wagon.
 }
 
 STRING 9248
-// Abilities: A0KG (Raise Dead), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9249
-// Abilities: A0KG (Raise Dead), Hotkey (Hotkey - Normal)
+// Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43610,13 +43334,13 @@ Summons a Meat Wagon.
 }
 
 STRING 9257
-// Abilities: A0KG (Raise Dead), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9258
-// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Power Ward), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43664,13 +43388,13 @@ Summon Sapphiron
 }
 
 STRING 9334
-// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9335
-// Abilities: A0IF (Mechanical Repair), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43774,7 +43498,7 @@ Durotar Law Code
 }
 
 STRING 9364
-// Abilities: A0IF (Mechanical Repair), Hotkey (Hotkey - Normal)
+// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43834,19 +43558,19 @@ Summons Sapphiron, a powerful undead dragon, to attack your enemies.
 }
 
 STRING 9385
-// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9386
-// Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
+// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9387
-// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Return Gold and Lumber), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43858,19 +43582,19 @@ Heavy unit causing Chaos damage. Immune to spells. Can cast Divine Shield. |n|n|
 }
 
 STRING 9391
-// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
+// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9392
-// Abilities: A0W5 (Power Ward), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9401
-// Abilities: A0W5 (Power Ward), Researchhotkey (Hotkey - Learn)
+// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43882,7 +43606,7 @@ STRING 9402
 }
 
 STRING 9403
-// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
+// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44014,7 +43738,7 @@ Summons Sapphiron, a powerful undead dragon, to attack your enemies. |n|n|cffffc
 }
 
 STRING 9472
-// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
+// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44302,25 +44026,25 @@ Disease Cloud - [|cffffcc00Level 12|r]
 }
 
 STRING 9591
-// Abilities: A0MO (Return Gold and Lumber), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 9592
-// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 9593
 // Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 9594
+STRING 9592
 // Abilities: A0R5 (Summon Sapphiron), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 9593
+// Abilities: A0R5 (Summon Sapphiron), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 9594
+// Abilities: A0SZ (Open Portals), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44604,7 +44328,7 @@ Change slot 8.
 }
 
 STRING 9742
-// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44650,13 +44374,13 @@ W
 }
 
 STRING 9750
-// Abilities: A0R5 (Summon Sapphiron), Hotkey (Hotkey - Normal)
+// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9751
-// Abilities: A0SZ (Open Portals), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44674,7 +44398,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 9758
-// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
+// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44716,13 +44440,13 @@ Temporarily gives a friendly target unit Chaos damage.
 }
 
 STRING 9765
-// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
+// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 9766
-// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44854,13 +44578,13 @@ Build Horizontal Bridge
 }
 
 STRING 9868
-// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
+// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9869
-// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44914,13 +44638,13 @@ STRING 9897
 }
 
 STRING 9899
-// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9900
-// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44938,7 +44662,7 @@ W
 }
 
 STRING 9973
-// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
+// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45044,13 +44768,13 @@ Craft items which increase your hero attributes:|n- Ring of Superiority|n- Encha
 }
 
 STRING 10008
-// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
+// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10009
-// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
+// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45062,7 +44786,7 @@ STRING 10011
 }
 
 STRING 10046
-// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45086,7 +44810,7 @@ Summon Bear
 }
 
 STRING 10050
-// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
+// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45122,7 +44846,7 @@ Mass Forestation
 }
 
 STRING 10056
-// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
+// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45146,7 +44870,7 @@ Druid Forms
 }
 
 STRING 10060
-// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
+// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45174,7 +44898,7 @@ Summon Bear
 }
 
 STRING 10065
-// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
+// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45352,7 +45076,7 @@ Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Bash 
 }
 
 STRING 10098
-// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
+// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45698,7 +45422,7 @@ The Lich King will now have his revenge on his original creator Kil'jaeden who i
 }
 
 STRING 10159
-// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
+// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46873,7 +46597,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 10361
-// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
+// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -48158,7 +47882,7 @@ Dragon Queen
 }
 
 STRING 10595
-// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
+// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48509,7 +48233,7 @@ Find a corpse probe of the dead Cenarius in Ashenvale.
 }
 
 STRING 10660
-// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49867,7 +49591,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -49891,7 +49615,7 @@ STRING 10937
 }
 
 STRING 10938
-// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50315,7 +50039,7 @@ Skins determine the visuals and sounds of units and buildings. They can be custo
 }
 
 STRING 11030
-// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Revive), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -50333,7 +50057,7 @@ E
 }
 
 STRING 11033
-// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
+// Abilities: A0TZ (Disease Cloud), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -50501,7 +50225,7 @@ STRING 11071
 }
 
 STRING 11072
-// Abilities: A1IL (Summon Skeletons), Researchhotkey (Hotkey - Learn)
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50597,7 +50321,7 @@ Allows building male citizens a Fountain of Blood to train and convert Fel Orcs.
 }
 
 STRING 11123
-// Abilities: A0T7 (Revive), Researchhotkey (Hotkey - Learn)
+// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50627,7 +50351,7 @@ K
 }
 
 STRING 11128
-// Abilities: A1IL (Summon Skeletons), Hotkey (Hotkey - Normal)
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51510,13 +51234,13 @@ Wine Bottle
 }
 
 STRING 11396
-// Abilities: A1J9 (East Northrend), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11397
-// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52207,13 +51931,13 @@ Thorn
 }
 
 STRING 11530
-// Abilities: A0IF (Mechanical Repair), EditorSuffix (Editor Suffix)
+// Abilities: A10L (Mass Devour), EditorSuffix (Editor Suffix)
 {
 (Slot 4) (Ulti)
 }
 
 STRING 11531
-// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
+// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52757,7 +52481,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, Wa
 }
 
 STRING 11719
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -53380,7 +53104,7 @@ Storm Bolt
 }
 
 STRING 11904
-// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -53428,13 +53152,13 @@ Summon Golem
 }
 
 STRING 11912
-// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
+// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 11913
-// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -53464,7 +53188,7 @@ Repair
 }
 
 STRING 11944
-// Abilities: A0TZ (Disease Cloud), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Full Regeneration), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53615,7 +53339,7 @@ An encampment of demonic satyr in southern Felwood.|n
 }
 
 STRING 11974
-// Abilities: A033 (Clone), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y2 (Full Regeneration), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54290,7 +54014,7 @@ Fly
 }
 
 STRING 12095
-// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54308,7 +54032,7 @@ STRING 12097
 }
 
 STRING 12098
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
 {
 Q
 }
@@ -54338,7 +54062,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 12106
-// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
+// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -54365,30 +54089,6 @@ STRING 12110
 // Upgrades: R00U (Animal War Training), Ubertip (Tooltip - Extended)
 {
 - Increases the maximum hit points, mana and damage of all player units.|n- Increases the armor and level by 1 every 10 levels of this research of all player units.|n- Increases armour, movement speed and attack and sight range of ships and submarines.|n- Allows unit abilities to target units with a level above their initial level: Polymorph (Human, Goblin), Transmute (Goblin), Possession (Undead), Charm Creeps) etc. This does not improve hero abilities!|n- Increases cargo hold, movement speed and mana of mounts.|n|nIs increased automatically for creeps and bosses to the lowest hero level of playing users.
-}
-
-STRING 12111
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 12112
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 12113
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 12114
-// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
-{
-Q
 }
 
 STRING 12115
@@ -54596,7 +54296,7 @@ O
 }
 
 STRING 12157
-// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
+// Abilities: A10L (Mass Devour), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54608,7 +54308,7 @@ STRING 12158
 }
 
 STRING 12160
-// Abilities: A0Y2 (Full Regeneration), Researchhotkey (Hotkey - Learn)
+// Abilities: A10L (Mass Devour), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54860,12 +54560,6 @@ STRING 12202
 |cff8b00ffUnique|r|nThis is the legendary weapon of Xal'atath. |nGrants +25 poison attack damage, makes the hero permanently invisible and allows casting Shadow Strike.
 }
 
-STRING 12203
-// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
 STRING 12204
 // Items: I0D9 (Tiny Altar of Twisting Nether), Ubertip (Tooltip - Extended)
 {
@@ -54939,12 +54633,6 @@ STRING 12215
 // Items: I0B1 (Dragon Egg), Name (Name)
 {
 Dragon Egg
-}
-
-STRING 12216
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
-{
-Q
 }
 
 STRING 12217
@@ -56316,7 +56004,7 @@ J
 }
 
 STRING 13847
-// Abilities: A0Y2 (Full Regeneration), Hotkey (Hotkey - Normal)
+// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57221,7 +56909,7 @@ Orb of Orbs
 }
 
 STRING 14257
-// Abilities: A10L (Mass Devour), Hotkey (Hotkey - Normal)
+// Abilities: A13I (Target Divine Shield), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58082,13 +57770,13 @@ E
 }
 
 STRING 14575
-// Abilities: A10L (Mass Devour), Researchhotkey (Hotkey - Learn)
+// Abilities: A13I (Target Divine Shield), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14578
-// Abilities: A12I (Flame Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58537,37 +58225,37 @@ W
 }
 
 STRING 14878
-// Abilities: A12I (Flame Storm), Hotkey (Hotkey - Normal)
+// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14879
-// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
+// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14880
-// Abilities: A13I (Target Divine Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14881
-// Abilities: A13I (Target Divine Shield), Hotkey (Hotkey - Normal)
+// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14882
-// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14884
-// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58579,7 +58267,7 @@ W
 }
 
 STRING 14886
-// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58627,13 +58315,13 @@ W
 }
 
 STRING 14896
-// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14897
-// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
+// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58651,19 +58339,19 @@ W
 }
 
 STRING 14902
-// Abilities: A0DH (Feedback), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HL (Find Artifacts), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 14903
-// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14906
-// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
+// Abilities: A1JC (Barrens), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58699,25 +58387,25 @@ STRING 14931
 }
 
 STRING 14935
-// Abilities: A184 (Multiply), Researchhotkey (Hotkey - Learn)
+// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14938
-// Abilities: A0HL (Find Artifacts), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (Jewelcrafting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 14939
-// Abilities: A0HT (Breath of Frost), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Enchanting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 14942
-// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -58948,108 +58636,6 @@ STRING 15134
 Mace Tentacle
 }
 
-STRING 15137
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 2|r]
-}
-
-STRING 15138
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 1|r]
-}
-
-STRING 15139
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 3|r]
-}
-
-STRING 15140
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 4|r]
-}
-
-STRING 15141
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 5|r]
-}
-
-STRING 15142
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 6|r]
-}
-
-STRING 15143
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 7|r]
-}
-
-STRING 15144
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 8|r]
-}
-
-STRING 15145
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 9|r]
-}
-
-STRING 15146
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 10|r]
-}
-
-STRING 15147
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 11|r]
-}
-
-STRING 15166
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 12|r]
-}
-
-STRING 15167
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 13|r]
-}
-
-STRING 15168
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 14|r]
-}
-
-STRING 15169
-// Abilities: A0HV (Spawn Tentacle), Tip (Tooltip - Normal)
-{
-Spawn Tentacle - [|cffffcc00Level 15|r]
-}
-
-STRING 15185
-// Abilities: A1VS (Spawn Tentacle), Ubertip (Tooltip - Normal - Extended)
-{
-Unleashes a mighty tentacle upon the enemy.
-}
-
-STRING 15186
-// Abilities: A0HV (Spawn Tentacle), Researchtip (Tooltip - Learn)
-{
-Learn Spawn Tentacle - [|cffffcc00Level %d|r]
-}
-
 STRING 15216
 // Upgrades: R03D (Animal War Training), Tip (Tooltip)
 {
@@ -59063,81 +58649,15 @@ STRING 15222
 }
 
 STRING 15223
-// Abilities: A0HT (Breath of Frost), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JP (Captain - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 15224
-// Abilities: A0IO (Jewelcrafting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Skeletal Mastery), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 15225
-// Abilities: A0HT (Breath of Frost), Researchtip (Tooltip - Learn)
-{
-Learn Breath of Frost - [|cffffcc00Level %d|r]
-}
-
-STRING 15226
-// Abilities: A0HT (Breath of Frost), Researchubertip (Tooltip - Learn - Extended)
-{
-Breathes a cone of frost at enemy units that deals initial damage, and damage per second over <ACbf,Dur1> seconds.
-}
-
-STRING 15227
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 1|r]
-}
-
-STRING 15228
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 2|r]
-}
-
-STRING 15229
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 3|r]
-}
-
-STRING 15230
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 4|r]
-}
-
-STRING 15231
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 5|r]
-}
-
-STRING 15232
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 6|r]
-}
-
-STRING 15233
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 7|r]
-}
-
-STRING 15234
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 8|r]
-}
-
-STRING 15235
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 9|r]
 }
 
 STRING 15243
@@ -59170,42 +58690,6 @@ STRING 15253
 Pickaxe
 }
 
-STRING 15254
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 10|r]
-}
-
-STRING 15255
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 11|r]
-}
-
-STRING 15256
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 12|r]
-}
-
-STRING 15257
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 13|r]
-}
-
-STRING 15258
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 14|r]
-}
-
-STRING 15259
-// Abilities: A0HT (Breath of Frost), Tip (Tooltip - Normal)
-{
-Breath of Frost - [|cffffcc00Level 15|r]
-}
-
 STRING 15260
 // Units: u03F (Kobold Tunnel), Tip (Tooltip - Basic)
 {
@@ -59222,96 +58706,6 @@ STRING 15264
 // Items: I0W7 (Pickaxe), Description (Description)
 {
 Allows harvesting minerals and increases attack damage against structures.
-}
-
-STRING 15275
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA1> initial damage, and <A0HT,DataE1> damage per second over <A0HT,Dur1> seconds.
-}
-
-STRING 15276
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA2> initial damage, and <A0HT,DataE2> damage per second over <A0HT,Dur2> seconds.
-}
-
-STRING 15277
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA3> initial damage, and <A0HT,DataE3> damage per second over <A0HT,Dur3> seconds.
-}
-
-STRING 15278
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA4> initial damage, and <A0HT,DataE4> damage per second over <A0HT,Dur4> seconds.
-}
-
-STRING 15279
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA5> initial damage, and <A0HT,DataE5> damage per second over <A0HT,Dur5> seconds.
-}
-
-STRING 15280
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA6> initial damage, and <A0HT,DataE6> damage per second over <A0HT,Dur6> seconds.
-}
-
-STRING 15281
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA7> initial damage, and <A0HT,DataE7> damage per second over <A0HT,Dur7> seconds.
-}
-
-STRING 15282
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA8> initial damage, and <A0HT,DataE8> damage per second over <A0HT,Dur8> seconds.
-}
-
-STRING 15283
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA9> initial damage, and <A0HT,DataE9> damage per second over <A0HT,Dur9> seconds.
-}
-
-STRING 15284
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA10> initial damage, and <A0HT,DataE10> damage per second over <A0HT,Dur10> seconds.
-}
-
-STRING 15285
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA11> initial damage, and <A0HT,DataE11> damage per second over <A0HT,Dur11> seconds.
-}
-
-STRING 15286
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA12> initial damage, and <A0HT,DataE12> damage per second over <A0HT,Dur12> seconds.
-}
-
-STRING 15287
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA13> initial damage, and <A0HT,DataE13> damage per second over <A0HT,Dur13> seconds.
-}
-
-STRING 15288
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA14> initial damage, and <A0HT,DataE14> damage per second over <A0HT,Dur14> seconds.
-}
-
-STRING 15289
-// Abilities: A0HT (Breath of Frost), Ubertip (Tooltip - Normal - Extended)
-{
-Breathes a cone of frost at enemy units that deals <A0HT,DataA15> initial damage, and <A0HT,DataE15> damage per second over <A0HT,Dur15> seconds.
 }
 
 STRING 15290
@@ -59803,19 +59197,19 @@ Creates a Safe.
 }
 
 STRING 15806
-// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
+// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 15807
-// Abilities: A0IU (Enchanting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Archaeology - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 15809
-// Abilities: A0JP (Captain - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (Witch Doctor - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -59845,7 +59239,7 @@ STRING 15818
 }
 
 STRING 15820
-// Abilities: A0KH (Skeletal Mastery), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UA (Merchant - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -59857,7 +59251,7 @@ W
 }
 
 STRING 15827
-// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59959,7 +59353,7 @@ STRING 15883
 }
 
 STRING 15909
-// Abilities: A1JC (Barrens), Hotkey (Hotkey - Normal)
+// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60131,7 +59525,7 @@ Turret
 }
 
 STRING 15962
-// Abilities: A0MK (Archaeology - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (Blink), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60269,13 +59663,13 @@ Kobold Camp
 }
 
 STRING 16102
-// Abilities: A0MW (Witch Doctor - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A100 (Scream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 16103
-// Abilities: A0QN (Aura of Darkness), Researchhotkey (Hotkey - Learn)
+// Abilities: A100 (Scream), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60400,111 +59794,9 @@ Disable Wandering
 }
 
 STRING 16182
-// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
+// Abilities: A1VK (Frost Bolt Rain), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 16183
-// Abilities: A0IF (Mechanical Repair), Name (Name)
-{
-Mechanical Repair
-}
-
-STRING 16184
-// Abilities: A0IF (Mechanical Repair), Researchtip (Tooltip - Learn)
-{
-Learn Mechanical Repair - [|cffffcc00Level %d|r]
-}
-
-STRING 16185
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 1|r]
-}
-
-STRING 16186
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 2|r]
-}
-
-STRING 16187
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 3|r]
-}
-
-STRING 16188
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 4|r]
-}
-
-STRING 16189
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 5|r]
-}
-
-STRING 16190
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 6|r]
-}
-
-STRING 16191
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 7|r]
-}
-
-STRING 16192
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 8|r]
-}
-
-STRING 16193
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 9|r]
-}
-
-STRING 16194
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 10|r]
-}
-
-STRING 16195
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 11|r]
-}
-
-STRING 16196
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 12|r]
-}
-
-STRING 16197
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 13|r]
-}
-
-STRING 16198
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 14|r]
-}
-
-STRING 16199
-// Abilities: A0IF (Mechanical Repair), Tip (Tooltip - Normal)
-{
-Mechanical Repair - [|cffffcc00Level 15|r]
 }
 
 STRING 16200
@@ -60570,96 +59862,6 @@ STRING 16214
 // Units: n082 (Dalaran Citizen (male)), Name (Name)
 {
 Dalaran Citizen (male)
-}
-
-STRING 16215
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF1> waves of healing mist; each wave heals <A0IF,DataA1> damage to all friendly mechanical units in an area.
-}
-
-STRING 16216
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF2> waves of healing mist; each wave heals <A0IF,DataA2> damage to all friendly mechanical units in an area.
-}
-
-STRING 16217
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF3> waves of healing mist; each wave heals <A0IF,DataA3> damage to all friendly mechanical units in an area.
-}
-
-STRING 16218
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF4> waves of healing mist; each wave heals <A0IF,DataA4> damage to all friendly mechanical units in an area.
-}
-
-STRING 16219
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF5> waves of healing mist; each wave heals <A0IF,DataA5> damage to all friendly mechanical units in an area.
-}
-
-STRING 16220
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF6> waves of healing mist; each wave heals <A0IF,DataA6> damage to all friendly mechanical units in an area.
-}
-
-STRING 16221
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF7> waves of healing mist; each wave heals <A0IF,DataA7> damage to all friendly mechanical units in an area.
-}
-
-STRING 16222
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF8> waves of healing mist; each wave heals <A0IF,DataA8> damage to all friendly mechanical units in an area.
-}
-
-STRING 16223
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF9> waves of healing mist; each wave heals <A0IF,DataA9> damage to all friendly mechanical units in an area.
-}
-
-STRING 16224
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF10> waves of healing mist; each wave heals <A0IF,DataA10> damage to all friendly mechanical units in an area.
-}
-
-STRING 16225
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF11> waves of healing mist; each wave heals <A0IF,DataA11> damage to all friendly mechanical units in an area.
-}
-
-STRING 16226
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF12> waves of healing mist; each wave heals <A0IF,DataA12> damage to all friendly mechanical units in an area.
-}
-
-STRING 16227
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF13> waves of healing mist; each wave heals <A0IF,DataA13> damage to all friendly mechanical units in an area.
-}
-
-STRING 16228
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF14> waves of healing mist; each wave heals <A0IF,DataA14> damage to all friendly mechanical units in an area.
-}
-
-STRING 16229
-// Abilities: A0IF (Mechanical Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Sprays <A0IF,DataF15> waves of healing mist; each wave heals <A0IF,DataA15> damage to all friendly mechanical units in an area.
 }
 
 STRING 16230
@@ -60805,7 +60007,7 @@ You own the clan hall now!
 }
 
 STRING 16275
-// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
+// Abilities: A1VK (Frost Bolt Rain), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -61032,7 +60234,7 @@ Quills
 }
 
 STRING 16471
-// Abilities: A0UA (Merchant - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0YY (Horn of Stormwind), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61462,7 +60664,7 @@ Jewelcrafting - Adept
 }
 
 STRING 16572
-// Abilities: A0Z0 (Blink), Hotkey (Hotkey - Normal)
+// Abilities: A0YY (Horn of Stormwind), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61875,7 +61077,7 @@ Cloud Serpent Mount
 }
 
 STRING 16886
-// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
+// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61887,7 +61089,7 @@ Changes the ability to Summon Cloud Serpent Mount.
 }
 
 STRING 16888
-// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
+// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -61904,7 +61106,7 @@ Your hero can be revived at altars and on Theramore but will be removed on repic
 }
 
 STRING 16891
-// Abilities: A100 (Scream), Researchhotkey (Hotkey - Learn)
+// Abilities: A11W (Life Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62916,7 +62118,7 @@ S
 }
 
 STRING 17401
-// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
+// Abilities: A1XG (Summon Ancient Hydra), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -62988,7 +62190,7 @@ STRING 17418
 }
 
 STRING 17419
-// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
+// Abilities: A1XG (Summon Ancient Hydra), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -63066,7 +62268,7 @@ Opens a Portal which can have another allied Portal as destination. This helps y
 }
 
 STRING 17435
-// Abilities: A100 (Scream), Hotkey (Hotkey - Normal)
+// Abilities: A12S (Discharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63276,7 +62478,7 @@ Enchanting - Adept
 }
 
 STRING 17472
-// Abilities: A0YY (Horn of Stormwind), Researchhotkey (Hotkey - Learn)
+// Abilities: A12S (Discharge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63809,7 +63011,7 @@ Increases Hydromancers' mana capacity, mana regeneration rate, hit points, and g
 }
 
 STRING 17672
-// Abilities: A0YY (Horn of Stormwind), Hotkey (Hotkey - Normal)
+// Abilities: A13Z (Pillage Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64020,13 +63222,13 @@ Gives <A0EI,DataA1> gold to the player when used.
 }
 
 STRING 17800
-// Abilities: A11W (Life Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A146 (Mana Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 17802
-// Abilities: A1VK (Frost Bolt Rain), Hotkey (Hotkey - Normal)
+// Abilities: A22J (Mass Forestation), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64242,7 +63444,7 @@ Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool10>
 }
 
 STRING 18097
-// Abilities: A12S (Discharge), Hotkey (Hotkey - Normal)
+// Abilities: A159 (Feedback Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64874,7 +64076,7 @@ Detects enemy ships on the sea.
 }
 
 STRING 18824
-// Abilities: A12S (Discharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A15V (Mass Mana Burn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65306,13 +64508,13 @@ Revive Captain
 }
 
 STRING 18935
-// Abilities: A13Z (Pillage Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A17V (Farming - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 18936
-// Abilities: A146 (Mana Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A196 (Taming - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65606,13 +64808,13 @@ S
 }
 
 STRING 19040
-// Abilities: A1VK (Frost Bolt Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A22J (Mass Forestation), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 19043
-// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65750,73 +64952,73 @@ Gives gold to player.
 }
 
 STRING 19338
-// Abilities: A1XG (Summon Ancient Hydra), Researchhotkey (Hotkey - Learn)
-{
-R
-}
-
-STRING 19339
-// Abilities: A1XG (Summon Ancient Hydra), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 19340
-// Abilities: A22J (Mass Forestation), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 19341
-// Abilities: A22J (Mass Forestation), Researchhotkey (Hotkey - Learn)
-{
-R
-}
-
-STRING 19342
-// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 19343
 // Abilities: A22T (Mind Control), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
-STRING 19344
+STRING 19339
 // Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
 {
 R
 }
 
+STRING 19340
+// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 19341
+// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 19342
+// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 19343
+// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 19344
+// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+{
+R
+}
+
 STRING 19345
-// Abilities: A159 (Feedback Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A1CQ (Inscription - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 19347
-// Abilities: A15V (Mass Mana Burn), Hotkey (Hotkey - Normal)
+// Abilities: A1DX (Critical Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 19348
-// Abilities: A17V (Farming - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1GW (Cat Form), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 19349
-// Abilities: A196 (Taming - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1II (Mass Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 19350
-// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -65828,7 +65030,7 @@ Y
 }
 
 STRING 19381
-// Abilities: A1CQ (Inscription - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1JB (Ashenvale), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65840,7 +65042,7 @@ Train Alliance Siege Tower
 }
 
 STRING 19384
-// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -65990,25 +65192,25 @@ Hire Fel Core Hound
 }
 
 STRING 19410
-// Abilities: A1DX (Critical Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A1JK (Exterminate), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 19411
-// Abilities: A1GW (Cat Form), Hotkey (Hotkey - Normal)
+// Abilities: A1KU (Miss Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 19412
-// Abilities: A1II (Mass Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A1L7 (+1 Intelligence), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 19413
-// Abilities: A1JB (Ashenvale), Hotkey (Hotkey - Normal)
+// Abilities: A1M3 (Necromancy - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66068,7 +65270,7 @@ Summons the moving boss Cenarius.
 }
 
 STRING 19479
-// Abilities: A1JK (Exterminate), Hotkey (Hotkey - Normal)
+// Abilities: A1MS (Sculpting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66236,7 +65438,7 @@ STRING 19662
 }
 
 STRING 19663
-// Abilities: A1KU (Miss Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A1O8 (Combination - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66284,7 +65486,7 @@ STRING 19758
 }
 
 STRING 19759
-// Abilities: A1L7 (+1 Intelligence), Hotkey (Hotkey - Normal)
+// Abilities: A1OE (Mark 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66456,7 +65658,7 @@ Sea Giant
 }
 
 STRING 19876
-// Abilities: A1M3 (Necromancy - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1QA (Magical Item Summoner), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66528,7 +65730,7 @@ Beast Whistle
 }
 
 STRING 19897
-// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -66576,13 +65778,13 @@ Defensive structure against ground units.|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 19905
-// Abilities: A1MS (Sculpting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1QL (Reflection), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 19906
-// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -66654,7 +65856,7 @@ Sea Giant
 }
 
 STRING 19936
-// Abilities: A1O8 (Combination - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1QQ (Sleep to Evening), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66948,7 +66150,7 @@ STRING 20062
 }
 
 STRING 20063
-// Abilities: A1OE (Mark 2), Hotkey (Hotkey - Normal)
+// Abilities: A1SQ (Hunting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66966,7 +66168,7 @@ Return Gold and Lumber
 }
 
 STRING 20066
-// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -66990,7 +66192,7 @@ D
 }
 
 STRING 20074
-// Abilities: A1QA (Magical Item Summoner), Hotkey (Hotkey - Normal)
+// Abilities: A1T6 (Mining - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67020,7 +66222,7 @@ Order Items
 }
 
 STRING 20079
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -67155,7 +66357,7 @@ Witch Doctor - Adept
 }
 
 STRING 20107
-// Abilities: A1QL (Reflection), Researchhotkey (Hotkey - Learn)
+// Abilities: A1UH (Fishing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67221,7 +66423,7 @@ Link Crafting Stash
 }
 
 STRING 20133
-// Abilities: A1QQ (Sleep to Evening), Hotkey (Hotkey - Normal)
+// Abilities: A1UK (Cooking - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67402,7 +66604,7 @@ Adds <A15Q,DataA1> bonus damage to the attack of a Hero when carried. The Hero's
 }
 
 STRING 20187
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -67414,7 +66616,7 @@ Banshee Form
 }
 
 STRING 20191
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -67599,12 +66801,6 @@ STRING 20224
 Train Troll Bloodmage
 }
 
-STRING 20225
-// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
-{
-R
-}
-
 STRING 20226
 // Units: o02J (Bat), Tip (Tooltip - Basic)
 {
@@ -67666,19 +66862,19 @@ D
 }
 
 STRING 20253
-// Abilities: A1SQ (Hunting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1UZ (Lumberjacking - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20254
-// Abilities: A1T6 (Mining - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1WY (Warlockery - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 20255
-// Abilities: A1UH (Fishing - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A20N (Thieving - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67696,7 +66892,7 @@ Craft Ring of Protection +4
 }
 
 STRING 20258
-// Abilities: A1UK (Cooking - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A21O (Prospecting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67717,12 +66913,6 @@ STRING 20261
 // Items: I0A0 (Craft Demonic Figurine), Name (Name)
 {
 Craft Demonic Figurine
-}
-
-STRING 20262
-// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
-{
-R
 }
 
 STRING 20281
@@ -67762,7 +66952,7 @@ Train Ogre Magi
 }
 
 STRING 20287
-// Abilities: A1UZ (Lumberjacking - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A231 (Astromancy - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67882,31 +67072,31 @@ Build Aviary
 }
 
 STRING 20367
-// Abilities: A1WY (Warlockery - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A252 (Damage Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 20371
-// Abilities: A0FR (Mana Ward), Name (Name)
-{
-Mana Ward
-}
-
-STRING 20374
 // Abilities: A0FS (Mana Ward), Name (Name)
 {
 Mana Ward
 }
 
-STRING 20375
+STRING 20374
 // Abilities: A0FS (Mana Ward), Tip (Tooltip - Normal)
 {
 Mana Ward
 }
 
-STRING 20377
+STRING 20375
 // Abilities: A0MS (Mana Ward), Name (Name)
+{
+Mana Ward
+}
+
+STRING 20377
+// Buffs/Effects: B00V (), Bufftip (Tooltip)
 {
 Mana Ward
 }
@@ -67999,24 +67189,6 @@ STRING 20426
 // Units: n0MD (Centaur Citizen (male)), Name (Name)
 {
 Centaur Citizen (male)
-}
-
-STRING 20427
-// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 20431
-// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 20449
-// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
-{
-R
 }
 
 STRING 20461
@@ -68152,7 +67324,7 @@ Research Feedback
 }
 
 STRING 20488
-// Abilities: A20N (Thieving - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A258 (Damage Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68764,7 +67936,7 @@ STRING 20616
 }
 
 STRING 20617
-// Abilities: A21O (Prospecting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A25E (Barding - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68878,7 +68050,7 @@ Trains Dragonhawk Riders. |nAlso contains the Cloud upgrade.
 }
 
 STRING 20639
-// Abilities: A231 (Astromancy - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Scribing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69112,12 +68284,6 @@ STRING 20828
 P
 }
 
-STRING 20834
-// Buffs/Effects: B00V (), Bufftip (Tooltip)
-{
-Mana Ward
-}
-
 STRING 20837
 // Abilities: A13U (Flying Val'kyr), Hotkey (Hotkey - Normal)
 {
@@ -69130,12 +68296,6 @@ STRING 20839
 Enchants a gold mine so that Elemental Servants can mine. Use on gold mines to enchant them.
 }
 
-STRING 20840
-// Abilities: A0DH (Feedback), Researchubertip (Tooltip - Learn - Extended)
-{
-Antonidas attacks destroy mana per hit. The mana combusts, dealing damage to the attacked unit.|n|n|cffffcc00Increases the damage and maximum mana destroyed per hit with every level.|r
-}
-
 STRING 20859
 // Abilities: A0O1 (Enchant Gold Mine), Name (Name)
 {
@@ -69143,7 +68303,7 @@ Enchant Gold Mine
 }
 
 STRING 20860
-// Abilities: A252 (Damage Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A203 (Demolishing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69389,7 +68549,7 @@ P
 }
 
 STRING 21354
-// Abilities: A258 (Damage Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A26C (Previous Tile), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69668,7 +68828,7 @@ Witch Huts can be built by female citizens. They allow giving units different ab
 }
 
 STRING 22298
-// Abilities: A25E (Barding - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Slot 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69979,13 +69139,13 @@ I
 }
 
 STRING 22356
-// Abilities: A0ST (Scribing - Adept), Hotkey (Hotkey - Normal)
+// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 22357
-// Abilities: A203 (Demolishing - Adept), Hotkey (Hotkey - Normal)
+// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
 }
@@ -70842,12 +70002,6 @@ STRING 22545
 Skin Death Knight
 }
 
-STRING 22549
-// Abilities: A0W5 (Power Ward), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons an immovable ward that regenerates a percentage of a nearby friendly non-mechanical unit's life and mana points per second. |nLasts <A0W5,Dur1> seconds.|n|n|cffffcc00Increases the percentage of regenerated life and mana points with every level.|r
-}
-
 STRING 22564
 // Units: N0FA (Warlock), EditorSuffix (Name - Editor Suffix)
 {
@@ -70855,13 +70009,13 @@ STRING 22564
 }
 
 STRING 22565
-// Abilities: A26C (Previous Tile), Hotkey (Hotkey - Normal)
+// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 22566
-// Abilities: A0W4 (Slot 3), Hotkey (Hotkey - Normal)
+// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
 }
@@ -71947,204 +71101,6 @@ STRING 23480
 Revive Mal'Ganis
 }
 
-STRING 23482
-// Abilities: A0QN (Aura of Darkness), Name (Name)
-{
-Aura of Darkness
-}
-
-STRING 23483
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 1|r]
-}
-
-STRING 23484
-// Abilities: A0QN (Aura of Darkness), Researchtip (Tooltip - Learn)
-{
-Learn Aura of Darkness - [|cffffcc00Level %d|r]
-}
-
-STRING 23486
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 2|r]
-}
-
-STRING 23487
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 3|r]
-}
-
-STRING 23488
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 4|r]
-}
-
-STRING 23489
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 5|r]
-}
-
-STRING 23490
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 6|r]
-}
-
-STRING 23491
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 7|r]
-}
-
-STRING 23492
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 8|r]
-}
-
-STRING 23493
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 9|r]
-}
-
-STRING 23494
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 10|r]
-}
-
-STRING 23495
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 11|r]
-}
-
-STRING 23496
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 12|r]
-}
-
-STRING 23497
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 13|r]
-}
-
-STRING 23498
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 14|r]
-}
-
-STRING 23499
-// Abilities: A0QN (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness - [|cffffcc00Level 15|r]
-}
-
-STRING 23515
-// Abilities: A0QN (Aura of Darkness), Researchubertip (Tooltip - Learn - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.|n|n|cffffcc00Increases the range with every level.|r
-}
-
-STRING 23519
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23520
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23521
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23522
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23523
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23524
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23525
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23526
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23527
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23528
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23529
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23530
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23531
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23532
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23533
-// Abilities: A0QN (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
 STRING 23534
 // Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
@@ -72155,42 +71111,6 @@ STRING 23536
 // Abilities: A0SM (Drain), Name (Name)
 {
 Drain
-}
-
-STRING 23537
-// Abilities: A0QO (Aura of Darkness), Tip (Tooltip - Normal)
-{
-Aura of Darkness
-}
-
-STRING 23539
-// Abilities: A0QO (Aura of Darkness), Name (Name)
-{
-Aura of Darkness
-}
-
-STRING 23542
-// Upgrades: R06J (Animal War Training), Name (Name)
-{
-Aura of Darkness
-}
-
-STRING 23544
-// Abilities: A0QO (Aura of Darkness), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the terrain around your hero from enemy players and block spells like Reveal and Far Sight as long as the enemy players do not have any units in the area.
-}
-
-STRING 23546
-// Upgrades: R06J (Animal War Training), Tip (Tooltip)
-{
-Research Aura of Darkness
-}
-
-STRING 23547
-// Upgrades: R06J (Animal War Training), Ubertip (Tooltip - Extended)
-{
-Enables the ability Aura of Darkness for Antimagic Wards.
 }
 
 STRING 23588
@@ -75724,196 +74644,10 @@ STRING 25814
 Spell Shield - [|cffffcc00Level 15|r]
 }
 
-STRING 25860
-// Abilities: A033 (Clone), Researchtip (Tooltip - Learn)
-{
-Learn Clone - [|cffffcc00Level %d|r]
-}
-
-STRING 25861
-// Abilities: A033 (Clone), Researchubertip (Tooltip - Learn - Extended)
-{
-Clones a target unit for some time.|n|n|cffffcc00Increases the duration with every level.|r
-}
-
 STRING 25862
 // Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
 {
 Clones a target unit for <A033,Dur1> seconds.
-}
-
-STRING 25863
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur2> seconds.
-}
-
-STRING 25864
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur3> seconds.
-}
-
-STRING 25865
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur4> seconds.
-}
-
-STRING 25866
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur5> seconds.
-}
-
-STRING 25867
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur6> seconds.
-}
-
-STRING 25868
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur7> seconds.
-}
-
-STRING 25869
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur8> seconds.
-}
-
-STRING 25870
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur9> seconds.
-}
-
-STRING 25871
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur10> seconds.
-}
-
-STRING 25872
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur11> seconds.
-}
-
-STRING 25873
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur12> seconds.
-}
-
-STRING 25874
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur13> seconds.
-}
-
-STRING 25875
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur14> seconds.
-}
-
-STRING 25876
-// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
-{
-Clones a target unit for <A033,Dur15> seconds.
-}
-
-STRING 25877
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 1|r]
-}
-
-STRING 25878
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 2|r]
-}
-
-STRING 25879
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 3|r]
-}
-
-STRING 25880
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 4|r]
-}
-
-STRING 25881
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 5|r]
-}
-
-STRING 25882
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 6|r]
-}
-
-STRING 25883
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 7|r]
-}
-
-STRING 25884
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 8|r]
-}
-
-STRING 25885
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 9|r]
-}
-
-STRING 25886
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 10|r]
-}
-
-STRING 25887
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 11|r]
-}
-
-STRING 25888
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 12|r]
-}
-
-STRING 25889
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 13|r]
-}
-
-STRING 25890
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 14|r]
-}
-
-STRING 25891
-// Abilities: A033 (Clone), Tip (Tooltip - Normal)
-{
-Clone - [|cffffcc00Level 15|r]
 }
 
 STRING 25896
@@ -77109,12 +75843,6 @@ STRING 26730
 S
 }
 
-STRING 26776
-// Abilities: A0QN (Aura of Darkness), EditorSuffix (Editor Suffix)
-{
-(Slot 3) (Icon) (Mal'Ganis)
-}
-
 STRING 26853
 // Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
 {
@@ -77451,96 +76179,6 @@ STRING 27359
 (Hero)
 }
 
-STRING 27360
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA1,%> % life points and <A0FR,DataA1,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur1> seconds.
-}
-
-STRING 27378
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA2,%> % life points and <A0FR,DataA2,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur2> seconds.
-}
-
-STRING 27379
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA3,%> % life points and <A0FR,DataA3,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur3> seconds.
-}
-
-STRING 27380
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA4,%> % life points and <A0FR,DataA4,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur4> seconds.
-}
-
-STRING 27381
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA5,%> % life points and <A0FR,DataA5,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur5> seconds.
-}
-
-STRING 27382
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA6,%> % life points and <A0FR,DataA6,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur6> seconds.
-}
-
-STRING 27383
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA7,%> % life points and <A0FR,DataA7,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur7> seconds.
-}
-
-STRING 27384
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA8,%> % life points and <A0FR,DataA8,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur8> seconds.
-}
-
-STRING 27385
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA9,%> % life points and <A0FR,DataA9,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur9> seconds.
-}
-
-STRING 27386
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA10,%> % life points and <A0FR,DataA10,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur10> seconds.
-}
-
-STRING 27387
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA11,%> % life points and <A0FR,DataA11,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur11> seconds.
-}
-
-STRING 27388
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA12,%> % life points and <A0FR,DataA12,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur12> seconds.
-}
-
-STRING 27389
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA13,%> % life points and <A0FR,DataA13,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur13> seconds.
-}
-
-STRING 27390
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA14,%> % life points and <A0FR,DataA14,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur14> seconds.
-}
-
-STRING 27391
-// Abilities: A0W5 (Power Ward), Ubertip (Tooltip - Normal - Extended)
-{
-Summons an immovable ward that regenerates <A05H,DataA15,%> % life points and <A0FR,DataA15,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <A0W5,Dur15> seconds.
-}
-
 STRING 27395
 // Abilities: A1KB (Slide), Tip (Tooltip - Normal)
 {
@@ -77656,201 +76294,9 @@ Repair Aura
 }
 
 STRING 27495
-// Buffs/Effects: B01F (), Bufftip (Tooltip)
+// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
 {
 Repair Aura
-}
-
-STRING 27499
-// Abilities: A0WC (Repair Aura), Researchubertip (Tooltip - Learn - Extended)
-{
-Increases the life regeneration rate of nearby friendly mechanical units.  |n|n|cffffcc00Increases the regeneration bonus with every level.|r
-}
-
-STRING 27500
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 4|r]
-}
-
-STRING 27501
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 5|r]
-}
-
-STRING 27502
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 6|r]
-}
-
-STRING 27503
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 7|r]
-}
-
-STRING 27504
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 8|r]
-}
-
-STRING 27505
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 9|r]
-}
-
-STRING 27506
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 10|r]
-}
-
-STRING 27507
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 11|r]
-}
-
-STRING 27508
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 12|r]
-}
-
-STRING 27509
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 13|r]
-}
-
-STRING 27510
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 14|r]
-}
-
-STRING 27511
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 15|r]
-}
-
-STRING 27512
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27513
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27514
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27515
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27516
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27517
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27518
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27519
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27520
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27521
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27522
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27523
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27524
-// Abilities: A0WC (Repair Aura), Researchtip (Tooltip - Learn)
-{
-Learn Repair Aura - [|cffffcc00Level %d|r]
-}
-
-STRING 27526
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 1|r]
-}
-
-STRING 27527
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 2|r]
-}
-
-STRING 27528
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
-{
-Repair Aura - [|cffffcc00Level 3|r]
-}
-
-STRING 27529
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27530
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
-}
-
-STRING 27531
-// Abilities: A0WC (Repair Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly mechanical units'  life regeneration rate.
 }
 
 STRING 27539
@@ -81264,12 +79710,6 @@ STRING 30516
 Sacrifice
 }
 
-STRING 30579
-// Abilities: A0IF (Mechanical Repair), Researchubertip (Tooltip - Learn - Extended)
-{
-Sprays waves of healing mist that heal friendly mechanical units in a target area.|n|n|cffffcc00Increases the number of waves and healed hit points with every level.|r
-}
-
 STRING 30613
 // Upgrades: R01Z (Burning Oil), Tip (Tooltip)
 {
@@ -83281,7 +81721,7 @@ STRING 31544
 }
 
 STRING 31545
-// Abilities: A114 (Flame Storm), Tip (Tooltip - Normal)
+// Buffs/Effects: B023 (), Bufftip (Tooltip)
 {
 Flame Storm
 }
@@ -83412,12 +81852,6 @@ STRING 31566
 (Dalaran Power Generator)
 }
 
-STRING 31569
-// Abilities: A12I (Flame Storm), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons a powerful flame storm which damages enemy units around.|n|n|cffffcc00Increases the damage with every level.|r
-}
-
 STRING 31571
 // Units: h055 (Dalaran Guards Tower), Name (Name)
 {
@@ -83466,64 +81900,10 @@ STRING 31592
 Razormane Chieftain
 }
 
-STRING 31665
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 4|r]
-}
-
 STRING 31666
 // Buffs/Effects: B007 (), EditorSuffix (Editor Suffix)
 {
 (Demon)
-}
-
-STRING 31667
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 5|r]
-}
-
-STRING 31668
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 6|r]
-}
-
-STRING 31669
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 7|r]
-}
-
-STRING 31670
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 8|r]
-}
-
-STRING 31671
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 9|r]
-}
-
-STRING 31672
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 10|r]
-}
-
-STRING 31673
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 11|r]
-}
-
-STRING 31674
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 12|r]
 }
 
 STRING 31675
@@ -83574,24 +81954,6 @@ STRING 31682
 (Demon)
 }
 
-STRING 31684
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 13|r]
-}
-
-STRING 31685
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 14|r]
-}
-
-STRING 31686
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 15|r]
-}
-
 STRING 31687
 // Upgrades: R00I (Cannibalize), EditorSuffix (Editor Suffix)
 {
@@ -83608,36 +81970,6 @@ STRING 31689
 // Abilities: A12M (Soul Theft), EditorSuffix (Editor Suffix)
 {
 (Demon) (Inquisitor)
-}
-
-STRING 31690
-// Buffs/Effects: B023 (), Bufftip (Tooltip)
-{
-Flame Storm
-}
-
-STRING 31691
-// Abilities: A12I (Flame Storm), Researchtip (Tooltip - Learn)
-{
-Learn Flame Storm - [|cffffcc00Level %d|r]
-}
-
-STRING 31692
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 1|r]
-}
-
-STRING 31693
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 2|r]
-}
-
-STRING 31694
-// Abilities: A12I (Flame Storm), Tip (Tooltip - Normal)
-{
-Flame Storm - [|cffffcc00Level 3|r]
 }
 
 STRING 31695
@@ -83670,90 +82002,6 @@ STRING 31703
 Starfall - Level 1
 }
 
-STRING 31704
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 2
-}
-
-STRING 31705
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 3
-}
-
-STRING 31706
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 4
-}
-
-STRING 31707
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 5
-}
-
-STRING 31708
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 6
-}
-
-STRING 31709
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 7
-}
-
-STRING 31710
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 8
-}
-
-STRING 31711
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 9
-}
-
-STRING 31712
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 10
-}
-
-STRING 31713
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 11
-}
-
-STRING 31714
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 12
-}
-
-STRING 31715
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 13
-}
-
-STRING 31716
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 14
-}
-
-STRING 31717
-// Abilities: A12L (Starfall), Tip (Tooltip - Normal)
-{
-Starfall - Level 15
-}
-
 STRING 31719
 // Buffs/Effects: B022 (Flame Storm (Target)), EditorName (Name (Editor Only))
 {
@@ -83764,96 +82012,6 @@ STRING 31720
 // Buffs/Effects: X008 (Flame Storm (Effect)), EditorName (Name (Editor Only))
 {
 Flame Storm (Effect)
-}
-
-STRING 31728
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA4> damage per second to every target.
-}
-
-STRING 31729
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA5> damage per second to every target.
-}
-
-STRING 31730
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA6> damage per second to every target.
-}
-
-STRING 31731
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA7> damage per second to every target.
-}
-
-STRING 31732
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA8> damage per second to every target.
-}
-
-STRING 31733
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA9> damage per second to every target.
-}
-
-STRING 31734
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA10> damage per second to every target.
-}
-
-STRING 31735
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA11> damage per second to every target.
-}
-
-STRING 31736
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA12> damage per second to every target.
-}
-
-STRING 31737
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA13> damage per second to every target.
-}
-
-STRING 31738
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA14> damage per second to every target.
-}
-
-STRING 31739
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA15> damage per second to every target.
-}
-
-STRING 31740
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA1> damage per second to every target.
-}
-
-STRING 31741
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA2> damage per second to every target.
-}
-
-STRING 31742
-// Abilities: A12I (Flame Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful flame storm which damages enemy units around. Causes <A12L,DataA3> damage per second to every target.
 }
 
 STRING 31747
@@ -85897,7 +84055,7 @@ STRING 32773
 }
 
 STRING 32774
-// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
+// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -85921,7 +84079,7 @@ Brings back to life the corpses of <A13V,DataA1> friendly nearby units.
 }
 
 STRING 32778
-// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
+// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -101509,7 +99667,7 @@ This unit is affected by Critical Aura. It has a chance to do critical hits.
 }
 
 STRING 38382
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0CX (Submerge), Hotkey (Hotkey)
 {
 E
 }
@@ -105625,13 +103783,13 @@ Mechanical Hero, particularly adept at destroying magic. Can learn Replenish, Or
 }
 
 STRING 40296
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 40335
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 E
 }
@@ -107365,13 +105523,13 @@ STRING 40960
 }
 
 STRING 40964
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 41000
-// Upgrades: R0CX (Submerge), Hotkey (Hotkey)
+// Upgrades: R0EM (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -107443,7 +105601,7 @@ D
 }
 
 STRING 41028
-// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
 {
 E
 }
@@ -107653,7 +105811,7 @@ Fish Trap
 }
 
 STRING 41072
-// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
 {
 E
 }
@@ -109327,7 +107485,7 @@ D
 }
 
 STRING 41423
-// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R05G (Defend), Hotkey (Hotkey)
 {
 E
 }
@@ -109542,7 +107700,7 @@ N
 }
 
 STRING 41489
-// Upgrades: R0EM (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R07I (Pillage), Hotkey (Hotkey)
 {
 E
 }
@@ -111424,7 +109582,7 @@ D
 }
 
 STRING 41975
-// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
+// Upgrades: R035 (Cloud), Hotkey (Hotkey)
 {
 E
 }
@@ -111553,12 +109711,6 @@ STRING 41997
 // Abilities: A1JK (Exterminate), Ubertip (Tooltip - Normal - Extended)
 {
 Exterminates a unit without reincarnating it.
-}
-
-STRING 41998
-// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
-{
-E
 }
 
 STRING 41999
@@ -112141,12 +110293,6 @@ STRING 42158
 // Items: I05L (Orb of Orbs), Ubertip (Tooltip - Extended)
 {
 Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Slows movement speed.|n- Summons a Dark Minion on the unit's death.|n- Slows attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> seconds.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.
-}
-
-STRING 42160
-// Upgrades: R05G (Defend), Hotkey (Hotkey)
-{
-E
 }
 
 STRING 42162
@@ -114126,12 +112272,6 @@ STRING 42619
 This unit is affected by Miss Aura. It has a chance to miss its attacks.
 }
 
-STRING 42621
-// Upgrades: R07I (Pillage), Hotkey (Hotkey)
-{
-E
-}
-
 STRING 42624
 // Abilities: A0LO (Release Dogs), Hotkey (Hotkey - Normal)
 {
@@ -114878,12 +113018,6 @@ STRING 42835
 // Abilities: A247 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
-}
-
-STRING 42838
-// Upgrades: R035 (Cloud), Hotkey (Hotkey)
-{
-E
 }
 
 STRING 42841
@@ -122428,12 +120562,6 @@ STRING 47802
 Transforms the Evoker into a Blue Dragon, giving him the ability to fly.
 }
 
-STRING 48101
-// Abilities: A10L (Mass Devour), EditorSuffix (Editor Suffix)
-{
-(Slot 4) (Ulti)
-}
-
 STRING 48144
 // Units: H0T2 (Author), Name (Name)
 {
@@ -127713,12 +125841,6 @@ STRING 50245
 Jailer
 }
 
-STRING 50246
-// Abilities: A0KG (Raise Dead), EditorSuffix (Editor Suffix)
-{
-(Slot 1) (Necromancer)
-}
-
 STRING 50248
 // Upgrades: R0G3 (Backpack), Ubertip (Tooltip - Extended)
 {
@@ -129835,12 +127957,6 @@ STRING 50759
 // Units: N0K5 (Unbroken), Propernames (Proper Names)
 {
 Herald Volazj,Soggoth the Slitherer,Za'qul,Ick'thys the Unfathomable,Faceless of the Deep,Commander Ulthok,Yoth'al the Devourer,X'korr the Compelling,Hr'nglth the Lost,Harbinger Aph'lass,Azshj'thul the Drowned
-}
-
-STRING 50797
-// Abilities: A0HT (Breath of Frost), EditorSuffix (Editor Suffix)
-{
-(Old God) (Slot 3)
 }
 
 STRING 50798
@@ -136036,7 +134152,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 53394
-// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
+// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -137390,12 +135506,6 @@ STRING 54898
 Changes the sound of your clan.
 }
 
-STRING 54900
-// Abilities: A0DH (Feedback), EditorSuffix (Editor Suffix)
-{
-(Antonidas)
-}
-
 STRING 54904
 // Units: n04M (Advanced Clan Tower), Name (Name)
 {
@@ -137522,106 +135632,10 @@ STRING 54926
 |cff8b00ffUnique|r|nThis factory was crafted by a very skillful Tinker who was the best of his kind. It allows you changing unit classifications. Increases the armor by 10.
 }
 
-STRING 54927
-// Abilities: A0DH (Feedback), Researchtip (Tooltip - Learn)
-{
-Learn Feedback - [|cffffcc00Level %d|r]
-}
-
 STRING 54928
 // Items: I10X (Skin Flamebinder), Ubertip (Tooltip - Extended)
 {
 Skin of Flamebinder.
-}
-
-STRING 54929
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 1|r]
-}
-
-STRING 54930
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 2|r]
-}
-
-STRING 54931
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 3|r]
-}
-
-STRING 54932
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 4|r]
-}
-
-STRING 54933
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 5|r]
-}
-
-STRING 54934
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 6|r]
-}
-
-STRING 54935
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 7|r]
-}
-
-STRING 54936
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 8|r]
-}
-
-STRING 54937
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 9|r]
-}
-
-STRING 54938
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 10|r]
-}
-
-STRING 54939
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 11|r]
-}
-
-STRING 54940
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 12|r]
-}
-
-STRING 54941
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 13|r]
-}
-
-STRING 54942
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 14|r]
-}
-
-STRING 54943
-// Abilities: A0DH (Feedback), Tip (Tooltip - Normal)
-{
-Feedback - [|cffffcc00Level 15|r]
 }
 
 STRING 54951
@@ -140424,96 +138438,6 @@ STRING 56064
 // Items: I0H8 (Blue Mushroom), Ubertip (Tooltip - Extended)
 {
 Wondrous plant said to have miraculous mind-expanding properties. Restores <AIhx,DataA1> life and <AIm1,DataA1> mana.
-}
-
-STRING 56073
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA1> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56074
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA2> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56075
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA3> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56076
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA4> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56077
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA5> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56078
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA6> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56079
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA7> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56080
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA8> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56081
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA9> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56082
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA10> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56083
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA11> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56084
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA12> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56085
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA13> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56086
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA14> mana per hit. The mana combusts, dealing damage to the attacked unit.
-}
-
-STRING 56087
-// Abilities: A0DH (Feedback), Ubertip (Tooltip - Normal - Extended)
-{
-Antonidas attacks destroy <A0DH,DataA15> mana per hit. The mana combusts, dealing damage to the attacked unit.
 }
 
 STRING 56092
