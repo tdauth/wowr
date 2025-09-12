@@ -1634,6 +1634,8 @@ StringList {
     EVASION_TOOLTIP                    "Gives a <this,Eev1,x,%>% chance to avoid an attack. |n|n|cffffcc00Increases the chance that an opponent misses with every level.|r",
     CRITICAL_STRIKE_TOOLTIP            "Gives a <this,Ocr1,x>% chance to do <this,Ocr2,x,%>% damage on an attack.|n|n|cffffcc00Increases the damage multiplier with every level.|r",
     DISARMAMENT_TOOLTIP                "Stops all enemies in a target area from attacking melee and ranged for <this,adur,x>.|n|n|cffffcc00Increases the area of effect and duration with every level.|r",
+    SUMMON_AIR_ELEMENTAL_TOOLTIP       "Summons an air elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the air elemental with every level.|r",
+    WEB_TOOLTIP                        "Binds a target enemy air unit in webbing, forcing it to the ground. Webbed units can be hit as though they were land units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     TORNADO_TOOLTIP                    "Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,Tdg1,x> damage per second to buildings. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the slowdown and caused damage with every level.|r",
     BLADESTORM_TOOLTIP                 "Causes a bladestorm of destructive force around the hero, rendering him immune to magic and dealing <this,Oww1,x> damage per second to nearby enemy land units. |nLasts <AOww,Dur2> seconds.|n|n|cffffcc00Increases the duration and damage with every level.|r",
     // Paladin
@@ -1678,11 +1680,13 @@ StringList {
     SUMMON_QUILBEAST_TOOLTIP           "Summons an angry quilbeast to attack your enemies. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned quilbeast with every level.|r",
     SUMMON_HAWK_TOOLTIP                "Summons a proud hawk to spy on your enemies. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned hawk with every level.|r",
     TRUESHOT_AURA_TOOLTIP              "An aura that gives friendly nearby units a <this,Ear1,x,%>% bonus damage to their ranged attacks.|n|n|cffffcc00Increases the base ranged damage with every level.|r",
+    MASS_DEVOUR_TOOLTIP                "Consumes enemy units, slowly digesting them and dealing damage per second to them. If the caster is killed while the consumed units are still digesting, the units that were devoured will be released. Maximum target creep level <A10M,Dev3,x> and causing <A10M,Dev3,x> damage per second to the target.|n|n|cffffcc00Increases the maximum target level and damage per second with every level.|r",
     STARFALL_TOOLTIP                   "Calls down waves of falling stars that damage nearby enemy units. Each wave deals <this,Esf1,x> damage. |nLasts for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     // Rogue
     ENSNARE_TOOLTIP                    "Causes a target enemy unit to be bound to the ground so that it cannot move for <this,adur,x> seconds. Air units that are ensnared can be attacked as though they were land units. |n|n|cffffcc00Increases the duration and decreases the cooldown with every level.|r",
     PICKPOCKETING_TOOLTIP              "Gives your hero the chance to pickpocket a nearby killed unit. It will steal a random item from the unit's inventory including equipment bags and give you 20 % of its bounty extra.|n|n|cffffcc00Increases the chance percentage with every level.|r",
     FIND_ARTIFACTS_TOOLTIP             "Finds <this,ci00,x> random artifacts with level <this,ci01,x>.|n|n|cffffcc00Increases the number and level of found artifacts with every level.|r",
+    ENSLAVEMENT_TOOLTIP                "Converts a killed enemy into a Slave at your nearest town hall.|n|n|cffffcc00Increases the stats of the Slave with every level.|r",
     SUMMON_CREEP_TOOLTIP               "Summons a random creep with level <this,ci00,x>.|n|n|cffffcc00Increases the creep level and stats with every level.|r",
     SUMMON_MERCENARY_CAMP_TOOLTIP      "Summons a mercenary camp to train units.|n|n|cffffcc00Improves the units which can be trained with every level.|r",
     // Druid
@@ -1691,6 +1695,7 @@ StringList {
     THORNS_AURA_TOOLTIP                "An aura that gives friendly nearby units a damage reflection, which deals <this,Eah1,x,%>% of an enemy unit's melee attack damage back to it.|n|n|cffffcc00Increases the returned damage with every level.|r",
     ENTANGLING_ROOTS_TOOLTIP           "Causes roots to burst from the ground, immobilizing and disarming a target enemy unit for <this,adur,x> seconds, and dealing <this,Eer1,x> damage per second. |n|n|cffffcc00Increases damage and duration with every level.|r",
     SUMMON_BEAR_TOOLTIP                "Summons a powerful bear to attack your enemies. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned bear with every level.|r",
+    MASS_FORESTATION_TOOLTIP           "Converts all enemy ground units in the target area into trees.|n|n|cffffcc00Decreases the cooldown and increases the maximum target unit level with every level.|r",
     DRUID_FORMS_TOOLTIP                "Allows transforming into different Druid forms. |n|n|cffffcc00Adds new forms and increases the bonus stats with every level.|r",
     ROAR_TOOLTIP                       "Gives nearby friendly units <this,Nbr1,x> bonus attack damage. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the bonus damage with every level.|r",
     TRANQUILITY_TOOLTIP                "Causes rains of healing energy to pour down in a large area, healing friendly allied units for <this,Etq1,x> hit points per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the healed hit points per second with every level.|r",
@@ -1727,7 +1732,9 @@ StringList {
     DEATH_PACT_TOOLTIP                 "Kills a target friendly Undead unit, giving <this,Udp2,x,%>% of its hit points to the hero. |n|n|cffffcc00Increases the percentage converted into hit points with every level.|r",
     DARK_RITUAL_TOOLTIP                "Sacrifices a target friendly Undead unit to convert <this,Udp1,x,%>% of its hit points into mana for the hero. |n|n|cffffcc00Increases the mana converted into hit points with every level.|r",
     CARRION_BEETLES_TOOLTIP            "The hero progenerates <this,Rai1,x> Carrion Beetles from a target corpse to attack the hero's enemies. Beetles are permanent, but only <this,Ucb6,x> can be controlled at a time. |n|n|cffffcc00Increases the hit points and damage every level.|r",
+    SKELETAL_MASTERY_TOOLTIP           "Increases the duration of raised summoned units to <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     TENTACLE_TOOLTIP                   "Unleashes a mighty tentacle upon the enemy.|n|n|cffffcc00Increases the stats with every level.|r",
+    DISEASE_CLOUD_TOOLTIP              "Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <this,Apl2,x> damage per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     // Witch Doctor
     SERPENT_WARD_TOOLTIP               "Summons an immobile serpentine ward to attack the hero's enemies. The ward is magic and spell immune. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r |n|n|cffffcc00Increases the stats of the serpentine ward with every level.|r",
     SILENCE_TOOLTIP                    "Stops all enemies in a small target area from casting spells for <this,adur,x> seconds.|n|n|cffffcc00Increases the area of effect and duration with every level.|r",

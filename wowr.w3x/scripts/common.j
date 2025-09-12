@@ -6148,12 +6148,16 @@ globals
     constant integer ABILITY_SUMMON_QUILBEAST                        = 'A08N'
     constant integer ABILITY_SUMMON_HAWK                             = 'A0AC'
     constant integer ABILITY_TRUESHOT_AURA                           = 'ACat'
+    constant integer ABILITY_MASS_DEVOUR                             = 'A10L'
+    constant integer ABILITY_MASS_DEVOUR_CARGO                       = 'A10M'
+    constant integer ABILITY_MASS_DEVOUR_DUMMY                       = 'A10N'
     constant integer ABILITY_STARFALL                                = 'A03R'
 
     // Rogue
     constant integer ABILITY_ENSNARE                                 = 'ACen'
     constant integer ABILITY_PICKPOCKETING                           = 'A17B'
     constant integer ABILITY_FIND_ARTIFACTS                          = 'A0HL'
+    constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
     constant integer ABILITY_SUMMON_CREEP                            = 'AY1G'
     constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
 
@@ -6162,7 +6166,9 @@ globals
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
     constant integer ABILITY_CARRION_BEETLES                         = 'A0EN'
+    constant integer ABILITY_SKELETAL_MASTERY                        = 'A0KH'
     constant integer ABILITY_SPAWN_TENTACLE                          = 'ACtn'
+    constant integer ABILITY_DISEASE_CLOUD                           = 'Aap3'
 
     // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
