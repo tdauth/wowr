@@ -1635,6 +1635,8 @@ StringList {
     EVASION_TOOLTIP                    "Gives a <this,Eev1,x,%>% chance to avoid an attack. |n|n|cffffcc00Increases the chance that an opponent misses with every level.|r",
     CRITICAL_STRIKE_TOOLTIP            "Gives a <this,Ocr1,x>% chance to do <this,Ocr2,x,%>% damage on an attack.|n|n|cffffcc00Increases the damage multiplier with every level.|r",
     DISARMAMENT_TOOLTIP                "Stops all enemies in a target area from attacking melee and ranged for <this,adur,x>.|n|n|cffffcc00Increases the area of effect and duration with every level.|r",
+    SUMMON_AIR_ELEMENTAL_TOOLTIP       "Summons an air elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the air elemental with every level.|r",
+    WEB_TOOLTIP                        "Binds a target enemy air unit in webbing, forcing it to the ground. Webbed units can be hit as though they were land units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     TORNADO_TOOLTIP                    "Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,Tdg1,x> damage per second to buildings. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the slowdown and caused damage with every level.|r",
     BLADESTORM_TOOLTIP                 "Causes a bladestorm of destructive force around the hero, rendering him immune to magic and dealing <this,Oww1,x> damage per second to nearby enemy land units. |nLasts <AOww,Dur2> seconds.|n|n|cffffcc00Increases the duration and damage with every level.|r",
     // Paladin
@@ -1646,7 +1648,7 @@ StringList {
     HOLY_AURA_TOOLTIP                  "Gives all enemy Undead nearby units a malus of <this,Oar1,x> to hit point regeneration. The aura does not stack with the regenerative effects of Blight. |n|n|cffffcc00Increases the malus with every level.|r",
     DEVOTION_AURA_TOOLTIP              "Gives <this,Had1,x> additional armor to nearby friendly units.|n|n|cffffcc00Increases the armor bonus with every level.|r",
     HOLY_NOVA_TOOLTIP                  "Casts a powerful nova of Holy Magic damaging Undead enemy units and healing allied non-Undead units.|n|n|cffffcc00Increases the damage and healing with every level.|r",
-    MASS_HOLY_LIGHT_TOOLTIP            "A holy light that can heal friendly living units or damage enemy Undead units.|n|n|cffffcc00Increases the healed hit points with every level.|r",
+    HORN_OF_STORMWIND_TOOLTIP           "Gives nearby friendly units a bonus of <this,Roa2,x> to armor. |nLasts <A0YY,Dur1> seconds. |n|n|cffffcc00Increases the bonus armor with every level.|r",
     MASS_INNER_FIRE_TOOLTIP            "Increases target friendly units' damage by <A1WK,Inf1,x,%>% and armor by <A1WK,Inf2,x>. |nLasts <A1WK,Dur1> seconds.|n|n|cffffcc00Increases the bonus damage and armor with every level.|r",
     RESURRECTION_TOOLTIP               "Brings back to life the corpses of <this,Hre1,x> friendly nearby units.|n|n|cffffcc00Increases the number of corpses with every level.|r",
     // Death Knight
@@ -1657,6 +1659,7 @@ StringList {
     SLEEP_TOOLTIP                      "Puts a target enemy unit to sleep for <this,adur,x> seconds. A sleeping unit can be awoken by attacking it. |n|n|cffffcc00Increases the sleep duration and decreases the mana costs with every level.|r",
     UNHOLY_AURA_TOOLTIP                "Increases nearby friendly units' movement speed by <this,Uau1,x,%>% and life regeneration rate by <this,Uau2,x,%>%. |n|n|cffffcc00Increases the movement and regeneration bonus with every level.|r",
     VAMPIRIC_AURA_TOOLTIP              "Nearby friendly melee units gain <this,Uav1,x,%>% of their attack damage when they hit enemy units. |n|n|cffffcc00Increases the percentage of hit points gained from damage with every level.|r",
+    ORB_OF_ANNHILIATION_TOOLTIP        "Adds <this,fak1,x> bonus damage to the hero's attack and causes his attacks to do area of effect damage. |n|n|cffffcc00Increases the bonus damage and area of effect damage with every level. The hero has requires the weapon type Missile Splash (bonus hero Archimonde).|r",
     ANIMATE_DEAD_TOOLTIP               "Raises <this,Uan1,x> dead units in an area to fight for the hero for <this,adur,x> seconds. |n|n|cffffcc00Increases the number of raised corpses with every level.|r",
     DEATH_AND_DECAY_TOOLTIP            "Damages everything in its area of effect by <this,Udd1,x,%>% of its max hit points per second. Also destroys trees. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the damage with every level.|r",
     // Warrior
@@ -1705,6 +1708,7 @@ StringList {
     FEL_TOOLTIP                        "Temporarily gives a friendly target unit Chaos damage.|n|n|cffffcc00Decreases the cooldown and increases duration with every level.|r",
     DARK_SUMMONING_TOOLTIP             "Summons <this,Uds1,x> friendly units from a target area to the caster.|n|n|cffffcc00Increases the number of summoned units and decreases the cooldown with every level.|r",
     HOWL_OF_TERROR_TOOLTIP             "The hero lets loose a terrifying howl that reduces nearby enemy units' attack damage by <this,Roa1,x,%>% for <this,adur,x> seconds.|n|n|cffffcc00Decreases the attack damage with every level.|r",
+    DOOM_TOOLTIP                       "Marks a target unit for the manifestation of a Demon. The afflicted unit cannot cast spells, has <this,Ndo5,%>% reduced movement speed, and will take <this,Ndo1,x> damage per second until it dies. Upon its death, a great Demon will spawn from its corpse. Doom cannot be dispelled or cancelled. Maximum target unit level is <this,Ndo4,x>.|n|n|cffffcc00Increases the damage per second and maximum creep level with every level.|r",
     DARK_PORTAL_TOOLTIP                "Opens a portal, allowing demons to step through and do the hero's bidding. |n|n|cffffcc00Increases the stats of the demons with every level.|r",
     METAMORPHOSIS_TOOLTIP              "Transforms the hero into a powerful Demon with a ranged attack and <this,cr00,x> bonus hit points. |n|n|cffffcc00Increases the stats of the Demon form with every level.|r",
     FINGER_OF_DEATH_TOOLTIP            "Instantly turns a creature or building inside-out, destroying it utterly. Causes <this,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
@@ -1738,6 +1742,7 @@ StringList {
     TENTACLE_TOOLTIP                   "Unleashes a mighty tentacle upon the enemy.|n|n|cffffcc00Increases the stats with every level.|r",
     DISEASE_CLOUD_TOOLTIP              "Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <this,Apl2,x> damage per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     EXHUME_CORPSES_TOOLTIP             "Generates a corpse within the Meat Wagon every <this,adur,x> seconds. There can be <this,exh1,x> corpses at maximum.",
+    SUMMON_SAPPHIRON_TOOLTIP           "Summons Sapphiron, a powerful undead dragon, to attack your enemies. |n|n|cffffcc00Increases the stats of the summoned unit with every level.|r",
     // Witch Doctor
     SERPENT_WARD_TOOLTIP               "Summons an immobile serpentine ward to attack the hero's enemies. The ward is magic and spell immune. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r |n|n|cffffcc00Increases the stats of the serpentine ward with every level.|r",
     SILENCE_TOOLTIP                    "Stops all enemies in a small target area from casting spells for <this,adur,x> seconds.|n|n|cffffcc00Increases the area of effect and duration with every level.|r",
@@ -1761,7 +1766,7 @@ StringList {
     // Other
     MASS_CHARM_TOOLTIP                 "Takes control of target enemy units. |nCharm cannot be used on Heroes, or creeps above level <A14Q,Nch1,x>. When Charm is being used on workers, they will die instantly. |n|n|cffffcc00Increases the maximum creep level with every level.|r",
     MASS_FINGER_OF_DEATH_TOOLTIP       "Instantly turns a creature or building inside-out, destroying it utterly. Causes <A177,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
-    DOOM_TOOLTIP                       "Marks a target unit for the manifestation of a Demon. The afflicted unit cannot cast spells, has <this,Ndo5,%>% reduced movement speed, and will take <this,Ndo1,x> damage per second until it dies. Upon its death, a great Demon will spawn from its corpse. Doom cannot be dispelled or cancelled. Maximum target unit level is <this,Ndo4,x>.|n|n|cffffcc00Increases the damage per second and maximum creep level with every level.|r",
+
     MASS_DOOM_TOOLTIP                  "Marks target units for the manifestation of a Demon. The afflicted units cannot cast spells, have <A14D,Ndo5,x,%>% reduced movement speed, and will take <A14D,Ndo1,x> damage per second until they die. Upon their death, a great Demon will spawn from their corpse. Doom cannot be dispelled or cancelled. Maximum target unit level is <A14D,Ndo4,x>.|n|n|cffffcc00Increases the damage per second and maximum creep level with every level.|r",
     ATTRIBUTE_BONUS_TOOLTIP            "Gives a total of <this,Iagi,x> points to Agility, Intelligence, and Strength. |n|n|cffffcc00Increases the stats with every level.|r",
     SUMMON_LAVA_SPAWN_TOOLTIP          "Summons a Lava Spawn, a resilient and deadly fire creature. As a Lava Spawn deals damage, it consumes the flesh of its target, eventually splitting into two healthy Lava Spawns.|nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Lava Spawn with every level.|r",
@@ -1794,5 +1799,6 @@ StringList {
     FULL_REGENERATION_TOOLTIP          "Immediately heals all hit points and regenerates all mana for a target friendly unit.|n|n|cffffcc00Decreases the cooldown with every level.|r",
     REVIVE_TOOLTIP                     "Revives <this,cr00,x> friendly dead units including dead heroes. Dead heroes have always a higher priority than regular units. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the number of revived targets and decreases the cooldown with every level.|r",
     FIRE_ATTACK_TOOLTIP                "Adds <A1JO,DataA1> bonus fire damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and do splash damage to nearby enemy units.",
+    MULTIPLY_TOOLTIP                   "Multiplies the number of the target friendly unit by the factor n and copies the target unit <this,ci00,x> times.|n|nBuildings are wrapped up to tiny items. Items are copied with n charges if stackable.|n|n|cffffcc00Increases the factor with every level.|r",
 
 }
