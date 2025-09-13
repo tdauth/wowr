@@ -3701,6 +3701,7 @@ globals
     constant integer SKELETAL_MAGE                                   = 'uskm'
     constant integer SUMMONED_SIEGE_GOLEM                            = 'n053'
     constant integer SUMMONED_MEAT_WAGON                             = 'u014'
+    constant integer SUMMONED_MEAT_WAGON_CLOUD                       = 'u02Y'
     constant integer SUMMONED_SAPPHIRON                              = 'u015'
     constant integer SUMMONED_GUNNER                                 = 'n0CA'
     constant integer SUMMONED_SPOTTER                                = 'n0C2'
@@ -6067,9 +6068,7 @@ globals
     constant integer ABILITY_HOLY_AURA                               = 'A117'
     constant integer ABILITY_DEVOTION_AURA                           = 'ACav'
     constant integer ABILITY_HOLY_NOVA                               = 'A118'
-    constant integer ABILITY_MASS_HOLY_LIGHT                         = 'A119'
-    constant integer ABILITY_MASS_HOLY_LIGHT_ITEM                    = 'A1XE'
-    constant integer ABILITY_MASS_HOLY_LIGHT_DUMMY                   = 'A13Q'
+    constant integer ABILITY_HORN_OF_STORMWIND                       = 'A01Q'
     constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
     constant integer ABILITY_MASS_INNER_FIRE_DUMMY                   = 'A1WK'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
@@ -6165,6 +6164,7 @@ globals
     constant integer ABILITY_CANNIBALIZE                             = 'ACcn'
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
+    constant integer ABILITY_SUMMON_MEAT_WAGON                       = 'A0KI'
     constant integer ABILITY_CARRION_BEETLES                         = 'A0EN'
     constant integer ABILITY_SKELETAL_MASTERY                        = 'A0KH'
     constant integer ABILITY_SPAWN_TENTACLE                          = 'ACtn'
@@ -6176,8 +6176,10 @@ globals
     constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
     constant integer ABILITY_ANTIMAGIC_SHIELD                        = 'ACam'
     constant integer ABILITY_HEX                                     = 'AChx'
+    constant integer ABILITY_SCREAM                                  = 'A07V'
     constant integer ABILITY_GHOST_FORM                              = 'A05N'
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'
+    constant integer ABILITY_MIND_CONTROL                            = 'A22T'
     constant integer ABILITY_CHARM                                   = 'ACch'
     constant integer ABILITY_BIG_BAD_VOODOO                          = 'A01T'
 
@@ -6210,6 +6212,8 @@ globals
 
     // Monk
     constant integer ABILITY_SLIDE                                   = 'A0W7'
+    constant integer ABILITY_CHARGE                                  = 'A0TU'
+    constant integer ABILITY_DISCHARGE                               = 'A12S'
     constant integer ABILITY_DRUNKEN_BRAWLER                         = 'A060'
     constant integer ABILITY_DRUNKEN_HAZE                            = 'A06X'
     constant integer ABILITY_STORM_EARTH_FIRE                        = 'A070'
@@ -6242,6 +6246,12 @@ globals
     constant integer ABILITY_LIFE_REGENERATION_NEUTRAL               = 'ACnr'
     constant integer ABILITY_MANA_REGENERATION_NEUTRAL               = 'ANre'
     constant integer ABILITY_CLONE                                   = 'A033'
+    constant integer ABILITY_OPEN_PORTALS                            = 'A0SZ'
+    constant integer OPEN_PORTALS_PORTAL                             = 'n09W'
+    constant integer ABILITY_FULL_REGENERATION                       = 'A0Y2'
+    constant integer ABILITY_REVIVE                                  = 'A0T7'
+    constant integer REVIVE_DUMMY                                    = 'h0CG'
+
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
     constant integer ABILITY_MASS_CHARM                              = 'A14P'
@@ -6283,6 +6293,9 @@ globals
     constant integer ABILITY_MASS_DEATH_COIL                         = 'A149'
     constant integer ABILITY_MASS_DEATH_COIL_DUMMY                   = 'A14A'
     constant integer ABILITY_MASS_FEL                                = 'A10J'
+    constant integer ABILITY_MASS_HOLY_LIGHT                         = 'A119'
+    constant integer ABILITY_MASS_HOLY_LIGHT_ITEM                    = 'A1XE'
+    constant integer ABILITY_MASS_HOLY_LIGHT_DUMMY                   = 'A13Q'
 
     // WoW Reforged heroes
 
