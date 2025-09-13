@@ -6075,7 +6075,6 @@ globals
 
     // Death Knight
     constant integer ABILITY_CURSE                                   = 'ACcs'
-    constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
     constant integer ABILITY_UNHOLY_FRENZY                           = 'ACuf'
     constant integer ABILITY_BLACK_ARROW                             = 'ACbk'
     constant integer ABILITY_DEATH_COIL                              = 'ACdc'
@@ -6083,6 +6082,7 @@ globals
     constant integer ABILITY_SLEEP                                   = 'ACsl'
     constant integer ABILITY_UNHOLY_AURA                             = 'ACua'
     constant integer ABILITY_VAMPIRIC_AURA                           = 'ACvp'
+    constant integer ABILITY_ORB_OF_ANNHILIATION                     = 'A1G4'
     constant integer ABILITY_ANIMATE_DEAD                            = 'ACad'
     constant integer ABILITY_DEATH_AND_DECAY                         = 'A16P'
 
@@ -6103,10 +6103,10 @@ globals
     constant integer ABILITY_CRIPPLE                                 = 'ACcr'
     constant integer ABILITY_MANA_BURN                               = 'Ambd'
     constant integer ABILITY_DEVOUR_MAGIC                            = 'ACde'
-    constant integer ABILITY_LIFE_DRAIN                              = 'ACdr'
     constant integer ABILITY_FEL                                     = 'A11K'
     constant integer ABILITY_DARK_SUMMONING                          = 'A08B'
     constant integer ABILITY_HOWL_OF_TERROR                          = 'Acht'
+    constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_DARK_PORTAL                             = 'A12C'
     constant integer ABILITY_METAMORPHOSIS                           = 'A05M'
     constant integer ABILITY_RAIN_OF_CHAOS                           = 'A097'
@@ -6161,6 +6161,7 @@ globals
     constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
 
     // Necromancer
+    constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
     constant integer ABILITY_CANNIBALIZE                             = 'ACcn'
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
@@ -6169,6 +6170,8 @@ globals
     constant integer ABILITY_SKELETAL_MASTERY                        = 'A0KH'
     constant integer ABILITY_SPAWN_TENTACLE                          = 'ACtn'
     constant integer ABILITY_DISEASE_CLOUD                           = 'Aap3'
+    constant integer ABILITY_LIFE_DRAIN                              = 'ACdr'
+    constant integer ABILITY_SUMMON_SAPPHIRON                        = 'A0R5'
 
     // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
@@ -6237,7 +6240,6 @@ globals
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
     constant integer ABILITY_SUMMON_LAVA_SPAWN                       = 'A0CO'
     constant integer ABILITY_INFERNO                                 = 'A1V1'
-    constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_CLUB_STRIKE                             = 'A0XR'
     constant integer ABILITY_DRAIN                                   = 'A03C'
     constant integer ABILITY_SOUL_BURN                               = 'A06Z'
@@ -6251,6 +6253,7 @@ globals
     constant integer ABILITY_FULL_REGENERATION                       = 'A0Y2'
     constant integer ABILITY_REVIVE                                  = 'A0T7'
     constant integer REVIVE_DUMMY                                    = 'h0CG'
+    constant integer ABILITY_MULTIPLY                                = 'A184'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
