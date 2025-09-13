@@ -1673,7 +1673,7 @@ StringList {
     REFLECT_TOOLTIP                    "Gives a 20% chance to reflect a range attack.|n|n|cffffcc00Increases the chance with every level.|r",
     AVATAR_TOOLTIP                     "Activate Avatar to give the hero <this,Hav1,x> bonus armor, <this,Hav2,x> bonus hit points, <this,Hav3,x> bonus damage and spell immunity. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the bonus armor, bonus hit points and bonus damage with every level.|r",
     // Hunter
-    RAIN_OF_ARROWS_TOOLTIP             "Calls down waves of arrows that damage units in a target area. |n|n|cffffcc00Increases the number of waves and damage with every level.|r",
+    RAIN_OF_ARROWS_TOOLTIP             "Calls down <this,Hbz1,x> arrow waves; each wave deals <this,Hbz2,x> damage to units in an area. |n|n|cffffcc00Increases the number of waves and damage with every level.|r",
     FAN_OF_KNIVES_TOOLTIP              "The hero hurls a flurry of knives, damaging nearby enemies. Each knife does <this,Efk1,x> damage. |n|n|cffffcc00Increases the damage per target with every level.|r",
     SCOUT_TOOLTIP                      "Temporarily summons an Owl Scout, which can be used to scout the map. |nCan see invisible units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the movement speed and sight range of the Owl Scout with every level.|r",
     SEARING_ARROWS_TOOLTIP             "Adds <this,Hfa1,x> bonus fire damage to an attack against enemies, but drains mana with each shot fired.|n|n|cffffcc00Increases the bonus damage with every level.|r",

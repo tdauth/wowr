@@ -12858,7 +12858,7 @@ Crow Mount
 }
 
 STRING 2552
-// Abilities: A11P (Rain of Arrows), Tip (Tooltip - Normal)
+// Buffs/Effects: B01W (), Bufftip (Tooltip)
 {
 Rain of Arrows
 }
@@ -23630,33 +23630,15 @@ STRING 4885
 }
 
 STRING 4886
-// Buffs/Effects: B00C (), Bufftip (Tooltip)
+// Upgrades: R01R (Cannibalize), Name (Name)
 {
 Corruption
-}
-
-STRING 4887
-// Buffs/Effects: B033 (), Bufftip (Tooltip)
-{
-Corruption
-}
-
-STRING 4888
-// Buffs/Effects: B00C (), Buffubertip (Tooltip - Extended)
-{
-This unit is corrupted; it has been transformed into a corrupted Furbolg.
 }
 
 STRING 4889
 // Upgrades: R01M (Ensnare), EditorSuffix (Editor Suffix)
 {
 (Furbolg)
-}
-
-STRING 4890
-// Upgrades: R01R (Cannibalize), Name (Name)
-{
-Corruption
 }
 
 STRING 4891
@@ -24829,12 +24811,6 @@ STRING 5126
 // Items: bzbf (Full Vial), Description (Description)
 {
 A special vial adept at containing magical healing waters.
-}
-
-STRING 5136
-// Buffs/Effects: B033 (), EditorSuffix (Editor Suffix)
-{
-(Medivh)
 }
 
 STRING 5137
@@ -31139,12 +31115,6 @@ STRING 6302
 Skin Medivh
 }
 
-STRING 6303
-// Buffs/Effects: B00S (), Bufftip (Tooltip)
-{
-Vicaress of Elune
-}
-
 STRING 6305
 // Items: I10I (Skin Medivh), Tip (Tooltip - Basic)
 {
@@ -31526,18 +31496,6 @@ STRING 6400
 // Units: n0DB (Mercenary Camp Firelands), Name (Name)
 {
 Mercenary Camp Firelands
-}
-
-STRING 6401
-// Buffs/Effects: B005 (Hydra), EditorName (Name (Editor Only))
-{
-Hydra
-}
-
-STRING 6402
-// Buffs/Effects: B005 (Hydra), Bufftip (Tooltip)
-{
-Hydra
 }
 
 STRING 6403
@@ -39866,12 +39824,6 @@ STRING 8319
 // Units: e01Y (Worker), Name (Name)
 {
 Worker
-}
-
-STRING 8320
-// Buffs/Effects: B005 (Hydra), Buffubertip (Tooltip - Extended)
-{
-A summoned Hydra.
 }
 
 STRING 8321
@@ -50987,12 +50939,6 @@ STRING 11506
 Golem
 }
 
-STRING 11507
-// Buffs/Effects: B00G (), Bufftip (Tooltip)
-{
-Spider Crab
-}
-
 STRING 11509
 // Abilities: A0L2 (Cooking - Grand Master), Name (Name)
 {
@@ -59546,12 +59492,6 @@ STRING 16575
 Jewelcrafting - Master
 }
 
-STRING 16576
-// Buffs/Effects: B01W (), Bufftip (Tooltip)
-{
-Rain of Arrows
-}
-
 STRING 16577
 // Abilities: A0IP (Jewelcrafting - Master), Ubertip (Tooltip - Normal - Extended)
 {
@@ -62679,12 +62619,6 @@ STRING 18362
 |cff8b00ffUnique|r|nThe powerful enormous War Club of a Gronn.
 }
 
-STRING 18364
-// Buffs/Effects: B00Y (), Bufftip (Tooltip)
-{
-Minigun Rage
-}
-
 STRING 18445
 // Units: o07K (Orc Oil Tanker), Ubertip (Tooltip - Extended)
 {
@@ -65197,12 +65131,6 @@ STRING 20130
 D
 }
 
-STRING 20131
-// Buffs/Effects: B00Y (), Buffubertip (Tooltip - Extended)
-{
-This unit is benefiting from Minigun Rage.  It is moving and attacking more quickly.
-}
-
 STRING 20132
 // Abilities: A0MZ (Link Crafting Stash), Name (Name)
 {
@@ -65388,12 +65316,6 @@ STRING 20186
 // Items: I0JA (Orb of Light), Ubertip (Tooltip - Extended)
 {
 Adds <A15Q,DataA1> bonus damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air. Deals 5 % extra damage against Undead units.
-}
-
-STRING 20190
-// Buffs/Effects: B00R (), Bufftip (Tooltip)
-{
-Banshee Form
 }
 
 STRING 20193
@@ -77807,12 +77729,6 @@ STRING 31031
 caster
 }
 
-STRING 31039
-// Abilities: A11P (Rain of Arrows), Ubertip (Tooltip - Normal - Extended)
-{
-Calls down <A11P,DataA1> arrow waves; each wave deals <A11P,DataB1> damage to units in an area.
-}
-
 STRING 31045
 // Buffs/Effects: B01W (), Buffubertip (Tooltip - Extended)
 {
@@ -78653,18 +78569,6 @@ STRING 31263
 Transforms a killed enemy unit into a Worgen who lasts 60 seconds.
 }
 
-STRING 31312
-// Buffs/Effects: B01Z (), Bufftip (Tooltip)
-{
-Split
-}
-
-STRING 31315
-// Buffs/Effects: B024 (), Bufftip (Tooltip)
-{
-Summon Telescope
-}
-
 STRING 31392
 // Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
@@ -78693,12 +78597,6 @@ STRING 31420
 // Units: E00W (Druid of the Talon), Ubertip (Tooltip - Extended)
 {
 Mystical Hero, adept at using nature spells. Can learn Mass Cyclone, Mass Faerie Fire, Roar, and Crow Form. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 31432
-// Buffs/Effects: B01Z (), Buffubertip (Tooltip - Extended)
-{
-I am a member of a Mortar Team; worship me.
 }
 
 STRING 31435
@@ -79539,12 +79437,6 @@ STRING 32042
 // Units: N06C (Old God of Nightmares), EditorSuffix (Name - Editor Suffix)
 {
 (Boss) (Old God of Nightmares)
-}
-
-STRING 32047
-// Buffs/Effects: B024 (), Buffubertip (Tooltip - Extended)
-{
-A Telescope helping to aim.
 }
 
 STRING 32050
@@ -99029,24 +98921,6 @@ STRING 39828
 Argus
 }
 
-STRING 39865
-// Buffs/Effects: B02N (), Bufftip (Tooltip)
-{
-Worgen Form
-}
-
-STRING 39866
-// Buffs/Effects: B02N (), EditorSuffix (Editor Suffix)
-{
-(Genn Greymane)
-}
-
-STRING 39871
-// Buffs/Effects: B02N (), Buffubertip (Tooltip - Extended)
-{
-Transforms the Genn Greymane into a powerful Worgen with a Chaos attack.
-}
-
 STRING 39872
 // Abilities: A1T5 (Mining - Advanced), Hotkey (Hotkey - Normal)
 {
@@ -100215,18 +100089,6 @@ STRING 40340
 // Units: U02V (Destroyer Form), Tip (Tooltip - Basic)
 {
 Summon Destroyer Form
-}
-
-STRING 40358
-// Buffs/Effects: B02O (), Buffubertip (Tooltip - Extended)
-{
-Transforms the Obsidian Statue into a powerful non-mechanical, flying Destroyer.
-}
-
-STRING 40375
-// Buffs/Effects: B02O (), Bufftip (Tooltip)
-{
-Destroyer Form
 }
 
 STRING 40380
@@ -110295,12 +110157,6 @@ STRING 43322
 Train Sludge Flinger
 }
 
-STRING 43366
-// Buffs/Effects: B033 (), Buffubertip (Tooltip - Extended)
-{
-Transforms Medivh into a powerful Demon with a ranged attack.
-}
-
 STRING 43373
 // Buffs/Effects: B034 (), Bufftip (Tooltip)
 {
@@ -114318,12 +114174,6 @@ STRING 46076
 Hardcore!
 }
 
-STRING 46110
-// Buffs/Effects: B037 (), Bufftip (Tooltip)
-{
-Lion-skull Helmet
-}
-
 STRING 46111
 // Abilities: A1P7 (Teleport), Tip (Tooltip - Normal)
 {
@@ -114514,12 +114364,6 @@ STRING 46149
 // Items: I0TF (Skin Priest), Ubertip (Tooltip - Extended)
 {
 Skin of a Priest.
-}
-
-STRING 46152
-// Buffs/Effects: B037 (), Buffubertip (Tooltip - Extended)
-{
-Uses the king's helmet changing his attack causing Chaos damage and getting bonus hit points.
 }
 
 STRING 46215
@@ -128124,12 +127968,6 @@ STRING 52932
 // Abilities: A1Z7 (Parry Buff), Name (Name)
 {
 Parry Buff
-}
-
-STRING 52933
-// Buffs/Effects: B03S (), Bufftip (Tooltip)
-{
-Djinn
 }
 
 STRING 52934
