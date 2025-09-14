@@ -1670,7 +1670,7 @@ Warrior
 }
 
 STRING 279
-// Items: I07N (Necromancer), Name (Name)
+// Units: U013 (Necromancer), Name (Name)
 {
 Necromancer
 }
@@ -1688,7 +1688,7 @@ Warlock
 }
 
 STRING 282
-// Items: I07N (Necromancer), Tip (Tooltip - Basic)
+// Units: U01B (Necromancer), Name (Name)
 {
 Necromancer
 }
@@ -1772,7 +1772,7 @@ Research Cheap Evolution - [|cffffcc00Level 1|r]
 }
 
 STRING 296
-// Units: O00B (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: O00D (Far Seer), EditorSuffix (Name - Editor Suffix)
 {
 (Hero Selection)
 }
@@ -2396,7 +2396,7 @@ Purchase Scepter of Orcs
 }
 
 STRING 401
-// Items: I07O (Hunter), Name (Name)
+// Units: n0NQ (Hunter), Name (Name)
 {
 Hunter
 }
@@ -2408,7 +2408,7 @@ Blink
 }
 
 STRING 403
-// Items: I07O (Hunter), Tip (Tooltip - Basic)
+// Items: I0VP (Hunter), Name (Name)
 {
 Hunter
 }
@@ -3079,7 +3079,7 @@ Engineering Power Generator
 }
 
 STRING 516
-// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
+// Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3109,7 +3109,7 @@ Summon Dark Wizard
 }
 
 STRING 521
-// Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
+// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3133,9 +3133,39 @@ P
 }
 
 STRING 525
-// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
+// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
+}
+
+STRING 526
+// Units: Uear (Death Knight), EditorSuffix (Name - Editor Suffix)
+{
+ (Evil) (Boss)
+}
+
+STRING 527
+// Units: Eevi (Demon Hunter), EditorSuffix (Name - Editor Suffix)
+{
+ (Evil) (NPC) (Controlable)
+}
+
+STRING 528
+// Units: Ewrd (Warden), EditorSuffix (Name - Editor Suffix)
+{
+(NPC) (Boss)
+}
+
+STRING 529
+// Units: Nmag (Pit Lord), EditorSuffix (Name - Editor Suffix)
+{
+(NPC) (Boss)
+}
+
+STRING 530
+// Units: E00B (Demon Hunter), EditorSuffix (Name - Editor Suffix)
+{
+(Morphed) (Bonus Hero)
 }
 
 STRING 531
@@ -3144,10 +3174,22 @@ STRING 531
 Horn of Stormwind
 }
 
+STRING 532
+// Units: H0YD (Ranger), EditorSuffix (Name - Editor Suffix)
+{
+(Bonus Hero)
+}
+
 STRING 533
 // Units: H002 (Hand of Destruction), Propernames (Proper Names)
 {
 Terrordar,Nerothos,Bleakill,Necros,Fearoth,Dethecus,Maldibion,Nochthitus,Gholbine,Rashgarroth,Aramachus,Zilfallon,Lorthiras,Zenedar,Mullioch,Algammon,Banehallow,Ven'Gyr
+}
+
+STRING 534
+// Units: E02F (Chimaera), EditorSuffix (Name - Editor Suffix)
+{
+(Bonus Hero)
 }
 
 STRING 535
@@ -3157,7 +3199,7 @@ Mass Death Coil
 }
 
 STRING 536
-// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3175,7 +3217,7 @@ STRING 538
 }
 
 STRING 539
-// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
+// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3192,8 +3234,14 @@ STRING 541
 Tinker
 }
 
+STRING 542
+// Units: E000 (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
+{
+(Bonus Hero)
+}
+
 STRING 543
-// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
+// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3229,7 +3277,7 @@ When planting these magical seeds, all dead trees within a radius of 1000 regrow
 }
 
 STRING 549
-// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
+// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3247,7 +3295,7 @@ Clone
 }
 
 STRING 552
-// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
+// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3256,6 +3304,12 @@ STRING 553
 // Items: I00W (Order Stone Fragment), Tip (Tooltip - Basic)
 {
 Purchase Order Stone Fragment
+}
+
+STRING 554
+// Units: N02W (Red Dragon), EditorSuffix (Name - Editor Suffix)
+{
+(Bonus Hero)
 }
 
 STRING 555
@@ -3355,7 +3409,7 @@ Fuel
 }
 
 STRING 571
-// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3367,7 +3421,7 @@ Mass Devour
 }
 
 STRING 573
-// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3558,6 +3612,18 @@ STRING 604
 Dummy Meteor Stun
 }
 
+STRING 605
+// Units: H08E (Guardian of Tirisfal), EditorSuffix (Name - Editor Suffix)
+{
+(Bonus Hero)
+}
+
+STRING 606
+// Units: E01A (Blade of the Black Empire), EditorSuffix (Name - Editor Suffix)
+{
+(Boss)
+}
+
 STRING 607
 // Units: o01C (Ogre Goblin Squad), Hotkey (Hotkey)
 {
@@ -3690,13 +3756,13 @@ Dummy Frost Ray
 }
 
 STRING 629
-// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 630
-// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4036,7 +4102,7 @@ Skin Spirit Walker
 }
 
 STRING 687
-// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
+// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4160,7 +4226,7 @@ Arcane Academy
 }
 
 STRING 709
-// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4184,7 +4250,7 @@ Mechanical Hero, particularly adept at destroying magic. Can learn Rejuvenation,
 }
 
 STRING 713
-// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
+// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4208,7 +4274,7 @@ STRING 716
 }
 
 STRING 717
-// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
+// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4220,7 +4286,7 @@ Hero Abilities Previous Page
 }
 
 STRING 719
-// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
+// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4231,6 +4297,12 @@ STRING 720
 Witch Doctor
 }
 
+STRING 721
+// Units: H03N (Captain), EditorSuffix (Name - Editor Suffix)
+{
+(NPC)
+}
+
 STRING 722
 // Items: I09J (Witch Doctor), Name (Name)
 {
@@ -4238,19 +4310,19 @@ Witch Doctor
 }
 
 STRING 723
-// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
+// Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 724
-// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
+// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 725
-// Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
+// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8798,7 +8870,7 @@ Clothing Bag
 }
 
 STRING 1710
-// Units: Etyr (Priestess of the Moon), EditorSuffix (Name - Editor Suffix)
+// Units: Nklj (Warlock), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -9143,36 +9215,6 @@ STRING 1771
 Buy 100 Power
 }
 
-STRING 1772
-// Units: O00C (Beastmaster), EditorSuffix (Name - Editor Suffix)
-{
-(Hero Selection)
-}
-
-STRING 1773
-// Units: O00D (Far Seer), EditorSuffix (Name - Editor Suffix)
-{
-(Hero Selection)
-}
-
-STRING 1774
-// Units: N01F (Brewmaster), EditorSuffix (Name - Editor Suffix)
-{
-(Hero Selection)
-}
-
-STRING 1775
-// Units: N01P (Pit Lord), EditorSuffix (Name - Editor Suffix)
-{
-(Hero Selection)
-}
-
-STRING 1795
-// Units: N01T (Blademaster), EditorSuffix (Name - Editor Suffix)
-{
-(Hero Selection)
-}
-
 STRING 1796
 // Items: I1A4 (Tome of Magic), Ubertip (Tooltip - Extended)
 {
@@ -9413,7 +9455,7 @@ Summon Wall
 }
 
 STRING 1849
-// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
+// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9947,13 +9989,13 @@ Resources allow training, buying and upgrading units, constructing buildings, re
 }
 
 STRING 1946
-// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1949
-// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
+// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10811,12 +10853,6 @@ STRING 2127
 D
 }
 
-STRING 2128
-// Units: E00B (Demon Hunter), EditorSuffix (Name - Editor Suffix)
-{
- (Morphed - Hero Selection)
-}
-
 STRING 2138
 // Units: n0HX (Zeppelin), Tip (Tooltip - Basic)
 {
@@ -11418,7 +11454,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 }
 
 STRING 2277
-// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A0VH (Summon Air Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11706,7 +11742,7 @@ Revive Samuro
 }
 
 STRING 2327
-// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
+// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12270,7 +12306,7 @@ Revive Dark Wizard
 }
 
 STRING 2452
-// Abilities: A0VH (Summon Air Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -13338,7 +13374,7 @@ Falric
 }
 
 STRING 2630
-// Units: Emfr (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
+// Units: Etyr (Priestess of the Moon), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -14328,7 +14364,7 @@ Build Tiny Trainer
 }
 
 STRING 2823
-// Units: Ogrh (Blademaster), Tip (Tooltip - Basic)
+// Units: O02T (Blademaster), Tip (Tooltip - Basic)
 {
 Summon Grommash Hellscream
 }
@@ -16517,7 +16553,7 @@ Magical Cutter
 }
 
 STRING 3322
-// Units: Ocbh (Tauren Chieftain), EditorSuffix (Name - Editor Suffix)
+// Units: Emfr (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -16727,37 +16763,37 @@ Warrior Hero, exceptional at absorbing damage and melee combat. Can learn Power 
 }
 
 STRING 3357
-// Units: Nsjs (Brewmaster), EditorSuffix (Name - Editor Suffix)
+// Units: Ocbh (Tauren Chieftain), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3358
-// Units: Othr (Far Seer), EditorSuffix (Name - Editor Suffix)
+// Units: Nsjs (Brewmaster), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3359
-// Units: Uanb (Crypt Lord), EditorSuffix (Name - Editor Suffix)
+// Units: Othr (Far Seer), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3360
-// Units: Usyl (Dark Ranger), EditorSuffix (Name - Editor Suffix)
+// Units: Uanb (Crypt Lord), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3361
-// Units: Hkal (Blood Mage), EditorSuffix (Name - Editor Suffix)
+// Units: Usyl (Dark Ranger), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3362
-// Units: Hvsh (Sea Witch), EditorSuffix (Name - Editor Suffix)
+// Units: Hkal (Blood Mage), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -16793,25 +16829,25 @@ Corrupted Entangle Gold Mine
 }
 
 STRING 3368
-// Units: Hjai (Archmage), EditorSuffix (Name - Editor Suffix)
+// Units: Hvsh (Sea Witch), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3369
-// Units: Orkn (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: Hjai (Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3370
-// Units: Hhkl (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: Orkn (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3371
-// Units: Orex (Beastmaster), EditorSuffix (Name - Editor Suffix)
+// Units: Hhkl (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -16823,25 +16859,25 @@ Train Trickster
 }
 
 STRING 3373
-// Units: Naka (Elder Sage), EditorSuffix (Name - Editor Suffix)
+// Units: Orex (Beastmaster), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3374
-// Units: Haah (Archmage), EditorSuffix (Name - Editor Suffix)
+// Units: Naka (Elder Sage), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3375
-// Units: Hpb1 (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: Haah (Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 3376
-// Units: H005 (King of Azeroth), EditorSuffix (Name - Editor Suffix)
+// Units: Hpb1 (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -17993,7 +18029,7 @@ Archmage
 }
 
 STRING 3650
-// Units: H006 (King of Ironforge), EditorSuffix (Name - Editor Suffix)
+// Units: H005 (King of Azeroth), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -18439,7 +18475,7 @@ Provides food, which increases the maximum number of units that can be trained.
 }
 
 STRING 3728
-// Units: h00P (Keeper of the Grave), EditorSuffix (Name - Editor Suffix)
+// Units: H006 (King of Ironforge), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -21825,7 +21861,7 @@ Skeleton Lord
 }
 
 STRING 4534
-// Units: U00P (Eredar Warlock), EditorSuffix (Name - Editor Suffix)
+// Units: h00P (Keeper of the Grave), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -22229,7 +22265,7 @@ Enabled zone hints.
 }
 
 STRING 4604
-// Units: U00R (Doom Guard), EditorSuffix (Name - Editor Suffix)
+// Units: U00P (Eredar Warlock), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -22324,7 +22360,7 @@ STRING 4643
 }
 
 STRING 4644
-// Units: U00S (Queen of Suffering), EditorSuffix (Name - Editor Suffix)
+// Units: U00R (Doom Guard), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -22402,13 +22438,13 @@ E
 }
 
 STRING 4674
-// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 4675
-// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
+// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -22528,7 +22564,7 @@ Flintdagger
 }
 
 STRING 4695
-// Units: N08W (Brewmaster), EditorSuffix (Name - Editor Suffix)
+// Units: U00S (Queen of Suffering), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -23150,7 +23186,7 @@ Transmute
 }
 
 STRING 4802
-// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -31032,7 +31068,7 @@ STRING 6282
 }
 
 STRING 6288
-// Units: H0Q1 (Admiral), EditorSuffix (Name - Editor Suffix)
+// Units: N08W (Brewmaster), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -31421,7 +31457,7 @@ D
 }
 
 STRING 6373
-// Units: H0Q2 (Fleet Admiral), EditorSuffix (Name - Editor Suffix)
+// Units: H0Q1 (Admiral), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -31493,7 +31529,7 @@ Massive melee unit that can disrupt enemy attackers and take incredible amounts 
 }
 
 STRING 6399
-// Units: H0T2 (Author), EditorSuffix (Name - Editor Suffix)
+// Units: H0Q2 (Fleet Admiral), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -31571,7 +31607,7 @@ STRING 6413
 }
 
 STRING 6414
-// Units: H0T8 (Developer), EditorSuffix (Name - Editor Suffix)
+// Units: H0T2 (Author), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -38320,7 +38356,7 @@ C
 }
 
 STRING 8030
-// Units: H0U3 (Regent Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H0T8 (Developer), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -39152,7 +39188,7 @@ Summon General Vezax
 }
 
 STRING 8202
-// Units: H0U4 (Prophet), EditorSuffix (Name - Editor Suffix)
+// Units: H0U3 (Regent Lord), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -41737,7 +41773,7 @@ Meteor
 }
 
 STRING 8666
-// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -41904,7 +41940,7 @@ Gerard
 }
 
 STRING 8697
-// Units: H0UX (The Light Mother), EditorSuffix (Name - Editor Suffix)
+// Units: H0U4 (Prophet), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -41916,7 +41952,7 @@ Gypsy Wagon
 }
 
 STRING 8699
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42337,7 +42373,7 @@ Arcane Magic
 }
 
 STRING 8811
-// Units: U013 (Necromancer), Name (Name)
+// Units: o0B4 (Necromancer), Name (Name)
 {
 Necromancer
 }
@@ -42818,7 +42854,7 @@ Akama's Message
 }
 
 STRING 9143
-// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
+// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42884,7 +42920,7 @@ Holy Nova
 }
 
 STRING 9154
-// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
+// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42902,7 +42938,7 @@ Mass Holy Light
 }
 
 STRING 9157
-// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
+// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42932,7 +42968,7 @@ Mass Inner Fire
 }
 
 STRING 9163
-// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
+// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43617,7 +43653,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 9758
-// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
+// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43659,13 +43695,13 @@ Temporarily gives a friendly target unit Chaos damage.
 }
 
 STRING 9765
-// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
+// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 9766
-// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
+// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43791,7 +43827,7 @@ W
 }
 
 STRING 9973
-// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
+// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43915,7 +43951,7 @@ STRING 10011
 }
 
 STRING 10046
-// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
+// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43939,7 +43975,7 @@ Summon Bear
 }
 
 STRING 10050
-// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
+// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43969,7 +44005,7 @@ Mass Forestation
 }
 
 STRING 10056
-// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43993,7 +44029,7 @@ Druid Forms
 }
 
 STRING 10060
-// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
+// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44518,7 +44554,7 @@ Xavathras
 }
 
 STRING 10154
-// Units: N0CZ (Tuskarr Chieftain), EditorSuffix (Name - Editor Suffix)
+// Units: H0UX (The Light Mother), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -45382,13 +45418,13 @@ Heads of zombies which must be brought to Gerard in the village.
 }
 
 STRING 10300
-// Units: N0GE (Trade Prince of the Bilgewater Carte), EditorSuffix (Name - Editor Suffix)
+// Units: N0CZ (Tuskarr Chieftain), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 10301
-// Units: U016 (Death Knight), EditorSuffix (Name - Editor Suffix)
+// Units: N0GE (Trade Prince of the Bilgewater Carte), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -45720,7 +45756,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 10361
-// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
+// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -47168,7 +47204,7 @@ Buy Property Wyrmrest Temple
 }
 
 STRING 10623
-// Units: U01J (Dungeon Master), EditorSuffix (Name - Editor Suffix)
+// Units: U016 (Death Knight), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -47374,7 +47410,7 @@ King of Gilneas
 }
 
 STRING 10663
-// Units: N0AF (Geomancer), EditorSuffix (Name - Editor Suffix)
+// Units: U01J (Dungeon Master), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -48714,7 +48750,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
+// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -48876,7 +48912,7 @@ Mage Adept Training
 }
 
 STRING 10965
-// Units: Opgh (Blademaster), Tip (Tooltip - Basic)
+// Units: O02U (Blademaster), Tip (Tooltip - Basic)
 {
 Summon Grommash Hellscream
 }
@@ -50115,7 +50151,7 @@ D
 }
 
 STRING 11356
-// Units: H089 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
+// Units: N0AF (Geomancer), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -51252,7 +51288,7 @@ High King Maulgar
 }
 
 STRING 11607
-// Units: H08B (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
+// Units: H089 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -51580,7 +51616,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, Wa
 }
 
 STRING 11719
-// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
+// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52203,7 +52239,7 @@ Storm Bolt
 }
 
 STRING 11904
-// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
+// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52251,13 +52287,13 @@ Summon Golem
 }
 
 STRING 11912
-// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
+// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 11913
-// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52618,7 +52654,7 @@ Murloc Priest
 }
 
 STRING 12005
-// Units: N0M3 (C'Thrax), EditorSuffix (Name - Editor Suffix)
+// Units: H08B (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -52779,13 +52815,13 @@ King of Lordaeron
 }
 
 STRING 12035
-// Units: N0O1 (Villager), EditorSuffix (Name - Editor Suffix)
+// Units: N0M3 (C'Thrax), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 12036
-// Units: E017 (Vile Duke of the Jadefire), EditorSuffix (Name - Editor Suffix)
+// Units: N0O1 (Villager), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -53149,7 +53185,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 12106
-// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
+// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -56396,13 +56432,13 @@ G
 }
 
 STRING 14416
-// Units: U00N (Death Knight), EditorSuffix (Name - Editor Suffix)
+// Units: O00B (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
 
 STRING 14417
-// Units: H018 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
+// Units: O00C (Beastmaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -57037,7 +57073,7 @@ Revive Murloc Sorcerer
 }
 
 STRING 14796
-// Units: E00H (Demigod), EditorSuffix (Name - Editor Suffix)
+// Units: N01F (Brewmaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -57900,7 +57936,7 @@ W
 }
 
 STRING 15577
-// Units: H02B (Sea Witch), EditorSuffix (Name - Editor Suffix)
+// Units: N01P (Pit Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -58074,7 +58110,7 @@ W
 }
 
 STRING 15817
-// Units: H02C (Blood Mage), EditorSuffix (Name - Editor Suffix)
+// Units: N01T (Blademaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -58587,7 +58623,7 @@ Pick third hero.
 }
 
 STRING 16176
-// Units: H03M (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
+// Units: U00N (Death Knight), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -58647,7 +58683,7 @@ STRING 16202
 }
 
 STRING 16203
-// Units: H0A4 (Archmage), EditorSuffix (Name - Editor Suffix)
+// Units: H018 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -59894,7 +59930,7 @@ Changes the ability to Summon Cloud Serpent Mount.
 }
 
 STRING 16888
-// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
+// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -62650,13 +62686,13 @@ Mathog
 }
 
 STRING 18696
-// Units: H0JO (Ranger), EditorSuffix (Name - Editor Suffix)
+// Units: N0C8 (Herald of the Deep Mother), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 18700
-// Units: H0QP (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: H0JO (Ranger), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -62680,7 +62716,7 @@ STRING 18705
 }
 
 STRING 18706
-// Units: H0QQ (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: H0QP (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -62827,13 +62863,13 @@ Critical Strike
 }
 
 STRING 18799
-// Units: H0A5 (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: E00H (Demigod), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
 
 STRING 18800
-// Units: H0AI (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: H02B (Sea Witch), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -63925,7 +63961,7 @@ Revive Ragnaros
 }
 
 STRING 19407
-// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H0QQ (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -64231,7 +64267,7 @@ Freelancer Shipyard
 }
 
 STRING 19758
-// Units: H0AK (Mountain King), EditorSuffix (Name - Editor Suffix)
+// Units: H02C (Blood Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -67348,13 +67384,13 @@ Summon Jaina
 }
 
 STRING 21384
-// Units: U01D (Crypt Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H03M (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
 
 STRING 21385
-// Units: E00X (Warden), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -67450,7 +67486,7 @@ Summon Antonidas
 }
 
 STRING 22255
-// Units: E00Y (Priestess of the Moon), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -67474,7 +67510,7 @@ Revive Kil'jaeden
 }
 
 STRING 22262
-// Units: E00Z (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68424,7 +68460,7 @@ Summon Muradin Bronzebeard
 }
 
 STRING 22489
-// Units: U01B (Necromancer), Name (Name)
+// Items: I0S6 (Necromancer), Name (Name)
 {
 Necromancer
 }
@@ -68496,7 +68532,7 @@ Summon Anub'arak
 }
 
 STRING 22501
-// Units: E010 (Demon Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: H0AK (Mountain King), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68514,7 +68550,7 @@ Revive Anub'arak
 }
 
 STRING 22504
-// Units: O02R (Far Seer), EditorSuffix (Name - Editor Suffix)
+// Units: U01D (Crypt Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68544,7 +68580,7 @@ Summon Tyrande
 }
 
 STRING 22509
-// Units: O02S (Tauren Chieftain), EditorSuffix (Name - Editor Suffix)
+// Units: E00X (Warden), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68568,13 +68604,13 @@ Summon Ghost
 }
 
 STRING 22513
-// Units: O02T (Blademaster), EditorSuffix (Name - Editor Suffix)
+// Units: E00Y (Priestess of the Moon), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
 
 STRING 22514
-// Units: U01E (Dreadlord), EditorSuffix (Name - Editor Suffix)
+// Units: E00Z (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68598,7 +68634,7 @@ Summon Lady Vashj
 }
 
 STRING 22519
-// Units: Oths (Far Seer), Tip (Tooltip - Basic)
+// Units: O02R (Far Seer), Tip (Tooltip - Basic)
 {
 Summon Thrall
 }
@@ -68616,7 +68652,7 @@ Revive Thrall
 }
 
 STRING 22522
-// Units: H0JV (Prophet), EditorSuffix (Name - Editor Suffix)
+// Units: E010 (Demon Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68628,7 +68664,7 @@ Summon Cairne Bloodhoof
 }
 
 STRING 22524
-// Units: H0OU (Naaru), EditorSuffix (Name - Editor Suffix)
+// Units: O02R (Far Seer), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -68646,19 +68682,19 @@ Revive Cairne Bloodhoof
 }
 
 STRING 22527
-// Units: O02T (Blademaster), Tip (Tooltip - Basic)
+// Units: O0BX (Blademaster), Tip (Tooltip - Basic)
 {
 Summon Grommash Hellscream
 }
 
 STRING 22528
-// Units: H0PN (King of Gilneas), EditorSuffix (Name - Editor Suffix)
+// Units: O02S (Tauren Chieftain), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
 
 STRING 22529
-// Units: O02U (Blademaster), Tip (Tooltip - Basic)
+// Units: O0BU (Blademaster), Tip (Tooltip - Basic)
 {
 Summon Grommash Hellscream
 }
@@ -68694,7 +68730,7 @@ Skin Death Knight
 }
 
 STRING 22564
-// Units: N0FA (Warlock), EditorSuffix (Name - Editor Suffix)
+// Units: O02T (Blademaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -69260,7 +69296,7 @@ Reinforced Arcane Creature Attack
 }
 
 STRING 22897
-// Units: E01J (Priestess of the Moon on Owl), EditorSuffix (Name - Editor Suffix)
+// Units: U01E (Dreadlord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -69278,7 +69314,7 @@ Magical Creature Attack
 }
 
 STRING 22904
-// Units: E01K (Archdruid), EditorSuffix (Name - Editor Suffix)
+// Units: H0JV (Prophet), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -69787,7 +69823,7 @@ Revive Mal'Ganis
 }
 
 STRING 23534
-// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -71609,7 +71645,7 @@ A special invention by the Goblins.
 }
 
 STRING 25109
-// Units: N0HJ (Harpy Queen), EditorSuffix (Name - Editor Suffix)
+// Units: H0OU (Naaru), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -71704,7 +71740,7 @@ Cyclone
 }
 
 STRING 25213
-// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -72370,7 +72406,7 @@ Train Eagle
 }
 
 STRING 25948
-// Units: H0QW (High King of the Alliance), EditorSuffix (Name - Editor Suffix)
+// Units: H0PN (King of Gilneas), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -72430,13 +72466,13 @@ STRING 25983
 }
 
 STRING 25994
-// Units: N0KM (C'Thrax), EditorSuffix (Name - Editor Suffix)
+// Units: N0FA (Warlock), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
 
 STRING 25995
-// Units: H0Y5 (Sea Witch), EditorSuffix (Name - Editor Suffix)
+// Units: E01J (Priestess of the Moon on Owl), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -72448,7 +72484,7 @@ Chest
 }
 
 STRING 26003
-// Units: U03I (Crypt Lord), EditorSuffix (Name - Editor Suffix)
+// Units: E01K (Archdruid), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -74318,12 +74354,6 @@ STRING 27928
 (Kobold)
 }
 
-STRING 27931
-// Units: h0GM (Launch Missiles Caster), Name (Name)
-{
-Launch Missiles Caster
-}
-
 STRING 27936
 // Units: o06X (Gnoll Camp), Ubertip (Tooltip - Extended)
 {
@@ -74334,12 +74364,6 @@ STRING 27938
 // Units: o06Z (Kobold Engineer), Ubertip (Tooltip - Extended)
 {
 Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 27939
-// Units: h0GM (Launch Missiles Caster), EditorSuffix (Name - Editor Suffix)
-{
-(Submarine)
 }
 
 STRING 27941
@@ -76327,7 +76351,7 @@ Scream
 }
 
 STRING 29639
-// Units: H0YD (Ranger), EditorSuffix (Name - Editor Suffix)
+// Units: N0HJ (Harpy Queen), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -80928,7 +80952,7 @@ STRING 32773
 }
 
 STRING 32774
-// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
+// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -80952,7 +80976,7 @@ Brings back to life the corpses of <A13V,DataA1> friendly nearby units.
 }
 
 STRING 32778
-// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
+// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -81366,13 +81390,13 @@ Mass Entangling Roots
 }
 
 STRING 33004
-// Units: o0B4 (Necromancer), Name (Name)
+// Items: I0S6 (Necromancer), Tip (Tooltip - Basic)
 {
 Necromancer
 }
 
 STRING 33005
-// Items: I0S6 (Necromancer), Name (Name)
+// Items: I07N (Necromancer), Name (Name)
 {
 Necromancer
 }
@@ -85738,13 +85762,13 @@ Summon Skeletal Razormane
 }
 
 STRING 35093
-// Items: I0S6 (Necromancer), Tip (Tooltip - Basic)
+// Items: I07N (Necromancer), Tip (Tooltip - Basic)
 {
 Necromancer
 }
 
 STRING 35094
-// Units: n0NQ (Hunter), Name (Name)
+// Items: I0VP (Hunter), Tip (Tooltip - Basic)
 {
 Hunter
 }
@@ -86839,7 +86863,7 @@ STRING 35345
 }
 
 STRING 35346
-// Units: E02F (Chimaera), EditorSuffix (Name - Editor Suffix)
+// Units: H0QW (High King of the Alliance), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -87079,7 +87103,7 @@ Nordic giants, powerful warriors with strong ships and Proto-Drakes.|n|n|cffffcc
 }
 
 STRING 35448
-// Units: E000 (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
+// Units: N0KM (C'Thrax), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -94734,7 +94758,7 @@ Craft Shadow Orb +4
 }
 
 STRING 37886
-// Units: N02W (Red Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H0Y5 (Sea Witch), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -94752,7 +94776,7 @@ Craft Shadow Orb +5
 }
 
 STRING 37889
-// Units: H08E (Guardian of Tirisfal), EditorSuffix (Name - Editor Suffix)
+// Units: U03I (Crypt Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero)
 }
@@ -96384,7 +96408,7 @@ A hearty Goblin citizen. Has life regeneration aura.
 }
 
 STRING 38481
-// Units: N0IL (The Jade Serpent), EditorSuffix (Name - Editor Suffix)
+// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -103595,13 +103619,13 @@ Admiral
 }
 
 STRING 41440
-// Units: H0AP (King of Gilneas), EditorSuffix (Name - Editor Suffix)
+// Units: E017 (Vile Duke of the Jadefire), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 41446
-// Units: H0AQ (King of the Vrykul), EditorSuffix (Name - Editor Suffix)
+// Units: H0AP (King of Gilneas), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -105969,7 +105993,7 @@ K
 }
 
 STRING 42166
-// Units: H01A (Dragon Queen), EditorSuffix (Name - Editor Suffix)
+// Units: H0AQ (King of the Vrykul), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -112462,7 +112486,7 @@ Summon Siege Engine
 }
 
 STRING 45273
-// Units: H01K (King of Gnomes), EditorSuffix (Name - Editor Suffix)
+// Units: H01A (Dragon Queen), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -112997,12 +113021,6 @@ Revive Lord Garithos
 
 STRING 45855
 // Units: Emns (Keeper of the Grove), Tip (Tooltip - Basic)
-{
-Summon Malfurion
-}
-
-STRING 45856
-// Units: Efur (Keeper of the Grove), Tip (Tooltip - Basic)
 {
 Summon Malfurion
 }
@@ -114354,7 +114372,7 @@ Revive Neptulon
 }
 
 STRING 46356
-// Units: N0IM (Eagle Spirit), EditorSuffix (Name - Editor Suffix)
+// Units: N0IL (The Jade Serpent), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -114390,7 +114408,7 @@ Revive Therazane
 }
 
 STRING 46362
-// Units: N0J4 (Fel Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IM (Eagle Spirit), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -114426,7 +114444,7 @@ Revive Thunderaan
 }
 
 STRING 46368
-// Units: N02Z (Overlord), EditorSuffix (Name - Editor Suffix)
+// Units: N0J4 (Fel Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -114539,7 +114557,7 @@ A boulder that is thrown at an enemy unit, causing <A1N6,DataA1> points of damag
 }
 
 STRING 46475
-// Units: N030 (Phoenix God), EditorSuffix (Name - Editor Suffix)
+// Units: N02Z (Overlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -114821,7 +114839,7 @@ Gives Ogre units increased resistance to spell damage.
 }
 
 STRING 46530
-// Units: N0M7 (The Dreamer), EditorSuffix (Name - Editor Suffix)
+// Units: N030 (Phoenix God), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -115648,7 +115666,7 @@ Author
 }
 
 STRING 48148
-// Units: H01L (Lord of the Ogres), EditorSuffix (Name - Editor Suffix)
+// Units: H01K (King of Gnomes), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -117014,28 +117032,10 @@ STRING 48999
 Purchase Double Axe
 }
 
-STRING 49000
-// Units: O02R (Far Seer), Tip (Tooltip - Basic)
-{
-Summon Thrall
-}
-
 STRING 49001
 // Units: H02C (Blood Mage), Tip (Tooltip - Basic)
 {
 Summon Kael
-}
-
-STRING 49004
-// Units: O0BX (Blademaster), Tip (Tooltip - Basic)
-{
-Summon Grommash Hellscream
-}
-
-STRING 49007
-// Units: O0BU (Blademaster), Tip (Tooltip - Basic)
-{
-Summon Grommash Hellscream
 }
 
 STRING 49008
@@ -117066,12 +117066,6 @@ STRING 49015
 // Units: Utic (Dreadlord), Tip (Tooltip - Basic)
 {
 Summon Tichondrius
-}
-
-STRING 49016
-// Units: Npld (Pit Lord), Tip (Tooltip - Basic)
-{
-Summon Azgalor
 }
 
 STRING 49017
@@ -117495,13 +117489,13 @@ Arrows
 }
 
 STRING 49117
-// Items: I0VP (Hunter), Name (Name)
+// Items: I07O (Hunter), Name (Name)
 {
 Hunter
 }
 
 STRING 49118
-// Items: I0VP (Hunter), Tip (Tooltip - Basic)
+// Items: I07O (Hunter), Tip (Tooltip - Basic)
 {
 Hunter
 }
@@ -117855,7 +117849,7 @@ STRING 49217
 }
 
 STRING 49230
-// Units: N0M8 (Satyr Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0M7 (The Dreamer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -119222,7 +119216,7 @@ Summon Barade
 }
 
 STRING 49639
-// Units: N09F (Murloc Priest), EditorSuffix (Name - Editor Suffix)
+// Units: H01L (Lord of the Ogres), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -120537,7 +120531,7 @@ STRING 50166
 }
 
 STRING 50167
-// Units: N03G (Khanam Matra), EditorSuffix (Name - Editor Suffix)
+// Units: N09F (Murloc Priest), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -120567,7 +120561,7 @@ Velen
 }
 
 STRING 50176
-// Units: N09S (The Crone), EditorSuffix (Name - Editor Suffix)
+// Units: N03G (Khanam Matra), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -126045,7 +126039,7 @@ A hearty Satyr citizen. Has life regeneration aura.
 }
 
 STRING 51681
-// Units: N0AP (Gnoll King), EditorSuffix (Name - Editor Suffix)
+// Units: N09S (The Crone), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -128109,7 +128103,7 @@ Revive Imonar the Soulhunter
 }
 
 STRING 53222
-// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0M8 (Satyr Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -128595,7 +128589,7 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 53394
-// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
+// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -131621,7 +131615,7 @@ Elder Ko'nani
 }
 
 STRING 55693
-// Units: H02N (Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0AP (Gnoll King), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -131900,7 +131894,7 @@ Monte Gazlowe
 }
 
 STRING 55770
-// Units: H02P (King of Lordaeron), EditorSuffix (Name - Editor Suffix)
+// Units: H02N (Lord), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -133746,7 +133740,7 @@ Summon Ysera
 }
 
 STRING 56405
-// Units: U03L (Master of Revendreth), EditorSuffix (Name - Editor Suffix)
+// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -133776,7 +133770,7 @@ Revive Xavius
 }
 
 STRING 56410
-// Units: E01A (Blade of the Black Empire), EditorSuffix (Name - Editor Suffix)
+// Units: U03L (Master of Revendreth), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -136749,7 +136743,7 @@ The hero pops out of the ground and becomes visible again.
 }
 
 STRING 57531
-// Units: H03N (Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H02P (King of Lordaeron), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
