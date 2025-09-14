@@ -541,7 +541,7 @@ StringList {
     // Hero Attributes
     NO_ATTRIBUTE_POINTS                "No attribute points.",
     NO_ATTRIBUTE_POINTS_SPENT          "No attribute points spent.",
-    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%, Skil Points: %2%",
+    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%, Skill Points: %2%",
     ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribute cannot be unskilled.",
     ATTRIBUTE_POINTS                   "Attribute Points",
     ATTRIBUTE_POINTS_DESCRIPTION       "Allow skilling the standard attributes for your hero.",
