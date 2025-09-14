@@ -6100,12 +6100,12 @@ globals
     constant integer ABILITY_CLEAVING_ATTACK                         = 'ACce'
     constant integer ABILITY_COMMAND_AURA                            = 'ACac'
     constant integer ABILITY_IMPALE                                  = 'ACmp'
-    constant integer ABILITY_REFLECTION                              = 'A1QL'
+    constant integer ABILITY_CLUB_STRIKE                             = 'A0XR'
     constant integer ABILITY_AVATAR                                  = 'A26J'
 
     // Hunter
     constant integer ABILITY_RAIN_OF_ARROWS                          = 'A11P'
-    constant integer ABILITY_FAN_OF_KNIVES                           = 'A0HX'
+    constant integer ABILITY_SENTINEL                                = 'A08M'
     constant integer ABILITY_SCOUT                                   = 'A08G'
     constant integer ABILITY_SEARING_ARROWS                          = 'ACsa'
     constant integer ABILITY_BARRAGE                                 = 'A1OQ'
@@ -6120,6 +6120,7 @@ globals
 
     // Rogue
     constant integer ABILITY_ENSNARE                                 = 'ACen'
+    constant integer ABILITY_FAN_OF_KNIVES                           = 'A0HX'
     constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
     constant integer ABILITY_FERAL_SPIRIT                            = 'ACsf'
@@ -6164,6 +6165,7 @@ globals
     constant integer ABILITY_POISON_ARROWS                           = 'A07Y'
     constant integer ABILITY_ENVENOMED_WEAPONS                       = 'ACvs'
     constant integer ABILITY_VENGEANCE                               = 'A0HY'
+    constant integer ABILITY_MULTIPLY                                = 'A184'
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
@@ -6188,7 +6190,14 @@ globals
     constant integer ABILITY_CHARGE                                  = 'A0TU'
     constant integer ABILITY_DISCHARGE                               = 'A12S'
     constant integer ABILITY_DRUNKEN_BRAWLER                         = 'A060'
+    constant integer ABILITY_REFLECTION                              = 'A1QL'
     constant integer ABILITY_DRUNKEN_HAZE                            = 'A06X'
+    constant integer ABILITY_MISS_AURA                               = 'A1KU'
+    constant integer ABILITY_POWER_WARD                              = 'A0W5'
+    constant integer ABILITY_LIFE_REGENERATION_NEUTRAL               = 'ACnr'
+    constant integer ABILITY_MANA_REGENERATION_NEUTRAL               = 'ANre'
+    constant integer ABILITY_DRUNKEN_AURA                            = 'A088'
+    constant integer ABILITY_CLONE                                   = 'A033'
     constant integer ABILITY_STORM_EARTH_FIRE                        = 'A070'
 
     // Submerge
@@ -6210,19 +6219,13 @@ globals
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
     constant integer ABILITY_SUMMON_LAVA_SPAWN                       = 'A0CO'
     constant integer ABILITY_INFERNO                                 = 'A1V1'
-    constant integer ABILITY_CLUB_STRIKE                             = 'A0XR'
     constant integer ABILITY_DRAIN                                   = 'A03C'
     constant integer ABILITY_SOUL_BURN                               = 'A06Z'
     constant integer ABILITY_TELEPORTATION                           = 'A13N'
-    constant integer ABILITY_POWER_WARD                              = 'A0W5'
-    constant integer ABILITY_LIFE_REGENERATION_NEUTRAL               = 'ACnr'
-    constant integer ABILITY_MANA_REGENERATION_NEUTRAL               = 'ANre'
-    constant integer ABILITY_CLONE                                   = 'A033'
     constant integer ABILITY_OPEN_PORTALS                            = 'A0SZ'
     constant integer OPEN_PORTALS_PORTAL                             = 'n09W'
     constant integer ABILITY_REVIVE                                  = 'A0T7'
     constant integer REVIVE_DUMMY                                    = 'h0CG'
-    constant integer ABILITY_MULTIPLY                                = 'A184'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
