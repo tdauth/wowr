@@ -1697,6 +1697,7 @@ StringList {
     SUMMON_MERCENARY_CAMP_TOOLTIP      "Summons a mercenary camp to train units.|n|n|cffffcc00Improves the units which can be trained with every level.|r",
     // Druid
     REJUVENATION_TOOLTIP               "Heals a target friendly unit for <this,Rej1,x> hit points and regenerates <this,Rej2,x> mana over <this,adur,x> seconds. |n|n|cffffcc00Increases the gained hit points and regenerated mana with every level.|r",
+    FAERIE_FIRE_TOOLTIP                "Reduces a target enemy unit's armor by <this,Fae1,x> and gives vision of that unit. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the reduced armor with every level.|r",
     FORCE_OF_NATURE_TOOLTIP            "Converts a small area of trees into <this,Efn1,x> Treants. Can learn Nature's Blessing. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Increases the stats of Treants with every level.|r",
     THORNS_AURA_TOOLTIP                "An aura that gives friendly nearby units a damage reflection, which deals <this,Eah1,x,%>% of an enemy unit's melee attack damage back to it.|n|n|cffffcc00Increases the returned damage with every level.|r",
     ENTANGLING_ROOTS_TOOLTIP           "Causes roots to burst from the ground, immobilizing and disarming a target enemy unit for <this,adur,x> seconds, and dealing <this,Eer1,x> damage per second. |n|n|cffffcc00Increases damage and duration with every level.|r",
