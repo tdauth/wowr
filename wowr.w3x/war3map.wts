@@ -4952,12 +4952,6 @@ STRING 836
 Bloodlust
 }
 
-STRING 837
-// Items: I07R (Monk), Ubertip (Tooltip - Extended)
-{
-Changes the class to Rogue:|n- Capturing enemies|n- Hiding|n- Damage|n- Items|n- Mercenaries
-}
-
 STRING 838
 // Abilities: A1E1 (Drunken Aura), Name (Name)
 {
@@ -5262,6 +5256,12 @@ STRING 888
 // Units: o01I (Railway North), Hotkey (Hotkey)
 {
 N
+}
+
+STRING 889
+// Items: I07R (Monk), Ubertip (Tooltip - Extended)
+{
+Changes the class to Monk:|n- Evasion|n- Critical Damage|n- Healing
 }
 
 STRING 890

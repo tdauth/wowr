@@ -6128,7 +6128,7 @@ globals
     constant integer ABILITY_FIND_ARTIFACTS                          = 'A0HL'
     constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
     constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
-    constant integer ABILITY_SUMMON_CREEP                            = 'AY1G'
+    constant integer ABILITY_SUMMON_CREEP                            = 'A1YG'
     constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
 
     // Necromancer

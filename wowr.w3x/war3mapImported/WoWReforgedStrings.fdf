@@ -1723,7 +1723,7 @@ StringList {
     RAIN_OF_CHAOS_TOOLTIP              "Calls down multiple Infernals from the sky.|n|n|cffffcc00Increases the stats of the Infernals with every level.|r",
     FINGER_OF_DEATH_TOOLTIP            "Instantly turns a creature or building inside-out, destroying it utterly. Causes <this,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
     // Monk
-    SLIDE_TOOLTIP                      "Lets your hero slide into the given direction, moving the hero quickly and damaging everything on its way.|n|n|cffffcc00Increases the distance and decreases the cooldown with every level.|r",
+    SLIDE_TOOLTIP                      "Lets your hero slide into the given direction with a maximum distance of <this,cr00,x>, moving the hero quickly and damaging everything on its way causing <this,cr01,x> damage to enemy units.|n|n|cffffcc00Increases the distance and damage with every level.|r",
     CHARGE_TOOLTIP                     "Resets the cooldown of all your abilities except Charge. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Decreases the cooldown with every level.|r",
     DISCHARGE_TOOLTIP                  "Starts and adds <this,cr00,x> seconds to cooldowns of the target's abilities. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the added cooldown and decreases the cooldown of this spell with every level.|r",
     DRUNKEN_BRAWLER_TOOLTIP            "Gives a <this,Ocr4,x,%>% chance to dodge an attack and a <this,Ocr1,x,%>% chance to deal <this,Ocr2,x> times total damage.|n|n|cffffcc00Increases the change and damage multiplier with every level.|r",
