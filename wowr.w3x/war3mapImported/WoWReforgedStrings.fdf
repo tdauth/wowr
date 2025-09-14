@@ -1735,7 +1735,7 @@ StringList {
     CLONE_TOOLTIP                      "Clones a target unit for <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     STORM_EARTH_FIRE_TOOLTIP           "Splits the hero into elements, forming specialized warriors. If any of them survive until the end of their summoned timer, the hero is reborn. |nLasts <ANef,HeroDur1> seconds.|n|n|cffffcc00Increases the stats with every level.|r",
     // Tinker
-    REPAIR_TOOLTIP                     "Repairs mechanical units and structures at the cost of resources. |n|n|cffffcc00Increases the ratio of repaired hit points with every level.|r",
+    REPAIR_TOOLTIP                     "Repairs mechanical units and structures at the cost of resources with a ratio of <this,Rep1,x,%> %. Can repair the hero if the hero is mechanical. |n|n|cffffcc00Increases the ratio of repaired hit points with every level.|r",
     HARVEST_TOOLTIP                    "Summons <this,ci00,x> Bundle of Lumbers and Gold Coins.|n|n|cffffcc00Increases the charges of the items with every level.|r",
     DEMOLISH_TOOLTIP                   "Causes attacks to do <this,Nde2,x> times normal damage to buildings and mechanical units.|n|n|cffffcc00Increases the damage factor with every level.|r",
     POCKET_FACTORY_TOOLTIP             "Creates a factory which automatically constructs Clockwerk Goblins. These artificial Goblins, in addition to being potent attackers, explode upon death, causing damage to nearby enemy units.|n|n|cffffcc00Increases the stats of the factory and Clockwerk Goblins and the caused damage by explosions with every level.|r",
@@ -1812,4 +1812,5 @@ StringList {
     OPEN_PORTALS_TOOLTIP               "Opens two portals connected to each other. One at the hero's position and the other one at the target location. The portals last <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     REVIVE_TOOLTIP                     "Revives <this,cr00,x> friendly dead units including dead heroes. Dead heroes have always a higher priority than regular units. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the number of revived targets and decreases the cooldown with every level.|r",
     FIRE_ATTACK_TOOLTIP                "Adds <A1JO,DataA1> bonus fire damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and do splash damage to nearby enemy units.",
+    FINISH_CONSTRUCTION_TOOLTIP        "Finishes the construction and upgrades of friendly buildings.|n|n|cffffcc00Decreases the cooldown with every level.|r",
 }

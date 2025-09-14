@@ -2781,6 +2781,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(ELDER_SAGE)
     call AddHero(VINDICATOR)
     call AddHero(VELEN)
+    call AddHero(NAARU)
     // Furbolg
     call AddHero(FURBOLG_URSA_WARRIOR_HERO)
     // Dalaran
@@ -2867,6 +2868,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(ANCIENT_SASQUATCH)
     call AddHero(ANCIENT_WENDIGO)
     call AddHero(ENRANGED_JUNGLE_STALKER)
+    call AddHero(RAMKAHEN_HUNTRESS)
     call AddHero(HARPY_QUEEN)
     call AddHero(RED_DRAGON_HERO)
 endfunction
