@@ -541,7 +541,7 @@ StringList {
     // Hero Attributes
     NO_ATTRIBUTE_POINTS                "No attribute points.",
     NO_ATTRIBUTE_POINTS_SPENT          "No attribute points spent.",
-    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%",
+    ATTRIBUTE_POINTS_MESSAGE           "Attribute Points: %1%, Skil Points: %2%",
     ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribute cannot be unskilled.",
     ATTRIBUTE_POINTS                   "Attribute Points",
     ATTRIBUTE_POINTS_DESCRIPTION       "Allow skilling the standard attributes for your hero.",
@@ -1665,12 +1665,12 @@ StringList {
     BERSERK_TOOLTIP                    "Causes this unit to attack <this,bsk2,x,%>% and move <this,bsk1,x,%>% faster, but take <this,bsk3,x,%>% more damage.|n|n|cffffcc00Increases the attack and movement speed with every level.|r",
     THUNDER_CLAP_TOOLTIP               "Slams the ground, dealing <this,Htc1,x> damage to nearby enemy land units and slowing their movement by <this,Htc3,x,%>% and attack rate by <this,Htc4,%>%.|n|n|cffffcc00Increases the damage and area with every level.|r",
     PARRY_TOOLTIP                      "Parries the next attack for a short time.|n|n|cffffcc00Increases the time with every level.|r",
-    SPIKED_SHELL_TOOLTIP               "Razor-sharp spikes on the hero's shell deal <this,Uts1,x,%>% of an enemy unit's melee attack damage back to it. |n|n|cffffcc00Increases the damage returned and bonus armor with every level.|r",
+    SPIKED_SHELL_TOOLTIP               "Razor-sharp spikes on the hero's shell giving the hero <this,Uts3,x> bonus armor and deal <this,Uts1,x,%>% of an enemy unit's melee attack damage back to it. |n|n|cffffcc00Increases the damage returned and bonus armor with every level.|r",
     WAR_STOMP_TOOLTIP                  "Slams the ground, dealing <this,Wrs1,x> damage to nearby enemy land units and stunning them for <this,adur,x> seconds. |n|n|cffffcc00Increases the damage with every level.|r",
     CLEAVING_ATTACK_TOOLTIP            "The hero strikes with such force that <this,nca1,x,%>% of his damage strikes through to enemies near the primary attacked unit. |n|n|cffffcc00Increases the distributed damage with every level.|r",
     COMMAND_AURA_TOOLTIP               "Gives extra damage to the attacks of nearby friendly units of <this,Cac1,x,%> %.|n|n|cffffcc00Increases the percentage of extra damage with every level.|r",
-    BASH_TOOLTIP                       "Gives a <this,Hbh1,x>% chance that an attack will do <this,Hbh3,x> bonus damage and stun the target for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage and chance to stun with every level.|r",
-    IMPALE_TOOLTIP                     "Slams the ground, sending a wave of force out in a straight line, dealing <this,Uim1,x> damage and hurling enemy ground units into the air in their wake, stunning them for <this,adur,x> seconds. |n|n|cffffcc00Increases the damage, stun duration and cooldown with every level.|r",
+    BASH_TOOLTIP                       "Gives a <this,Hbh1,x>% chance that an attack will do <this,Hbh3,x> bonus damage and stun the target for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
+    IMPALE_TOOLTIP                     "Slams the ground, sending a wave of force out in a straight line, dealing <this,Uim3,x> damage and hurling enemy ground units into the air in their wake, stunning them for <this,adur,x> seconds. |n|n|cffffcc00Increases the damage with every level.|r",
     REFLECTION_TOOLTIP                 "Gives a <this,cr00,x,%>% chance to reflect <this,cr01,x,%>% damage of a range attack.|n|n|cffffcc00Increases the chance and damage percentage with every level.|r",
     AVATAR_TOOLTIP                     "Activate Avatar to give the hero <this,Hav1,x> bonus armor, <this,Hav2,x> bonus hit points, <this,Hav3,x> bonus damage and spell immunity. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the bonus armor, bonus hit points and bonus damage with every level.|r",
     // Hunter
@@ -1687,9 +1687,12 @@ StringList {
     STARFALL_TOOLTIP                   "Calls down waves of falling stars that damage nearby enemy units. Each wave deals <this,Esf1,x> damage. |nLasts for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     // Rogue
     ENSNARE_TOOLTIP                    "Causes a target enemy unit to be bound to the ground so that it cannot move for <this,adur,x> seconds. Air units that are ensnared can be attacked as though they were land units. |n|n|cffffcc00Increases the duration and decreases the cooldown with every level.|r",
+    TRUE_SIGHT_TOOLTIP                 "Reveals nearby invisible units within a range of <this,aran,x>. |n|n|cffffcc00Increases the sight range with every level.|r",
+    HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
     PICKPOCKETING_TOOLTIP              "Gives your hero the chance to pickpocket a nearby killed unit. It will steal a random item from the unit's inventory including equipment bags and give you 20 % of its bounty extra.|n|n|cffffcc00Increases the chance percentage with every level.|r",
     FIND_ARTIFACTS_TOOLTIP             "Finds <this,ci00,x> random artifacts with level <this,ci01,x>.|n|n|cffffcc00Increases the number and level of found artifacts with every level.|r",
     ENSLAVEMENT_TOOLTIP                "Converts a killed enemy into a Slave at your nearest town hall.|n|n|cffffcc00Increases the stats of the Slave with every level.|r",
+    PILLAGE_AURA_TOOLTIP               "Each attack that does damage to an enemy building also gains resources.|n|n|cffffcc00Increases the gained resources with every level.|r",
     SUMMON_CREEP_TOOLTIP               "Summons a random creep with level <this,ci00,x>.|n|n|cffffcc00Increases the creep level and stats with every level.|r",
     SUMMON_MERCENARY_CAMP_TOOLTIP      "Summons a mercenary camp to train units.|n|n|cffffcc00Improves the units which can be trained with every level.|r",
     // Druid

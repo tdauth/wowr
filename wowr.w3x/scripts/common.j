@@ -6120,10 +6120,13 @@ globals
 
     // Rogue
     constant integer ABILITY_ENSNARE                                 = 'ACen'
+    constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
+    constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
     constant integer ABILITY_FERAL_SPIRIT                            = 'ACsf'
     constant integer ABILITY_PICKPOCKETING                           = 'A17B'
     constant integer ABILITY_FIND_ARTIFACTS                          = 'A0HL'
     constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
+    constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
     constant integer ABILITY_SUMMON_CREEP                            = 'AY1G'
     constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
 
