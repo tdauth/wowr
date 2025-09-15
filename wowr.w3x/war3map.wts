@@ -5851,6 +5851,12 @@ STRING 987
 W
 }
 
+STRING 988
+// Items: I06P (Engineer), Ubertip (Tooltip - Extended)
+{
+Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
+}
+
 STRING 1004
 // Units: h04Y (High Elf Shipyard), Ubertip (Tooltip - Extended)
 {
@@ -9953,12 +9959,6 @@ STRING 1913
 // Abilities: A204 (Demolishing - Master), Tip (Tooltip - Normal)
 {
 Master Demolishing
-}
-
-STRING 1914
-// Items: I06P (Engineer), Ubertip (Tooltip - Extended)
-{
-Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair|n- Tiny Engineering Power Generator
 }
 
 STRING 1915
