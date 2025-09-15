@@ -6113,15 +6113,15 @@ globals
     // Rogue
     constant integer ABILITY_ENSNARE                                 = 'ACen'
     constant integer ABILITY_FAN_OF_KNIVES                           = 'A0HX'
-    constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
+    constant integer ABILITY_BLINK                                   = 'A005'
+    constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
+    constant integer ABILITY_ACID_BOMB                               = 'A0ID'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
     constant integer ABILITY_FERAL_SPIRIT                            = 'ACsf'
-    constant integer ABILITY_PICKPOCKETING                           = 'A17B'
+    constant integer ABILITY_POISON_ARROWS                           = 'A07Y'
+    constant integer ABILITY_ENVENOMED_WEAPONS                       = 'ACvs'
     constant integer ABILITY_FIND_ARTIFACTS                          = 'A0HL'
-    constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
-    constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
-    constant integer ABILITY_SUMMON_CREEP                            = 'A1YG'
-    constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
+    constant integer ABILITY_VENGEANCE                               = 'A0HY'
 
     // Necromancer
     constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
@@ -6148,16 +6148,6 @@ globals
     constant integer ABILITY_MIND_CONTROL                            = 'A22T'
     constant integer ABILITY_CHARM                                   = 'ACch'
     constant integer ABILITY_BIG_BAD_VOODOO                          = 'A01T'
-
-    // Alchemist/Warden/Poison/Moon Magic
-    constant integer ABILITY_BLINK                                   = 'A005'
-    constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
-    constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
-    constant integer ABILITY_ACID_BOMB                               = 'A0ID'
-    constant integer ABILITY_POISON_ARROWS                           = 'A07Y'
-    constant integer ABILITY_ENVENOMED_WEAPONS                       = 'ACvs'
-    constant integer ABILITY_VENGEANCE                               = 'A0HY'
-    constant integer ABILITY_MULTIPLY                                = 'A184'
 
     // Tinker
     constant integer ABILITY_REPAIR                                  = 'A0PP'
@@ -6219,6 +6209,14 @@ globals
     constant integer ABILITY_REVIVE                                  = 'A0T7'
     constant integer REVIVE_DUMMY                                    = 'h0CG'
     constant integer ABILITY_FINISH_CONSTRUCTION                     = 'A0K5'
+    constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
+    constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
+    constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
+    constant integer ABILITY_MULTIPLY                                = 'A184'
+    constant integer ABILITY_SUMMON_CREEP                            = 'A1YG'
+    constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
+    constant integer ABILITY_PICKPOCKETING                           = 'A17B'
+    constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
