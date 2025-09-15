@@ -3262,6 +3262,7 @@ globals
     constant integer POWER_GENERATOR_ENGINEER                        = 'n0OJ' // doctor
     constant integer ITEM_POWER_GENERATOR_ENGINEER                   = 'I19C' // doctor
     constant integer ITEM_SCROLL_OF_REPAIR                           = 'I190' // grand master
+    constant integer ITEM_SCROLL_OF_CONSTRUCTION                     = 'I07W' // grand master
     constant integer ITEM_TINY_DEATH_TOWER                           = 'I00S' // master
     constant integer DEATH_TOWER                                     = 'ntt1' // master
     constant integer ADVANCED_DEATH_TOWER                            = 'ntx2' // master
@@ -6208,7 +6209,8 @@ globals
     constant integer OPEN_PORTALS_PORTAL                             = 'n09W'
     constant integer ABILITY_REVIVE                                  = 'A0T7'
     constant integer REVIVE_DUMMY                                    = 'h0CG'
-    constant integer ABILITY_FINISH_CONSTRUCTION                     = 'A0K5'
+    constant integer ABILITY_FINISH_CONSTRUCTIONS                    = 'A0K5'
+    constant integer ABILITY_FINISH_CONSTRUCTIONS_ITEM               = 'A08X'
     constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
     constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
     constant integer ABILITY_HEALING_SPRAY                           = 'A01R'

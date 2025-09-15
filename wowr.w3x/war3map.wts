@@ -4339,6 +4339,12 @@ STRING 727
 Rogue
 }
 
+STRING 728
+// Items: I07W (Scroll of Construction), Name (Name)
+{
+Scroll of Construction
+}
+
 STRING 729
 // Buffs/Effects: B008 (), EditorSuffix (Editor Suffix)
 {
@@ -4420,6 +4426,12 @@ STRING 742
 // Items: I03K (Warrior), Ubertip (Tooltip - Extended)
 {
 Changes the class to Warrior:|n- Close Combat|n- Damage|n- Defense
+}
+
+STRING 743
+// Items: I07W (Scroll of Construction), Tip (Tooltip - Basic)
+{
+Purchase Scroll of Construction
 }
 
 STRING 744
@@ -5807,6 +5819,36 @@ STRING 982
 // Items: I07Q (Rogue), Ubertip (Tooltip - Extended)
 {
 Changes the class to Rogue:|n- Poison|n- Hiding|n- Capture|n- Items
+}
+
+STRING 983
+// Items: I07W (Scroll of Construction), Description (Description)
+{
+Finishes constructions and upgrades in progress of allied buildings.
+}
+
+STRING 984
+// Items: I07W (Scroll of Construction), Ubertip (Tooltip - Extended)
+{
+Finishes constructions and upgrades in progress of allied buildings.
+}
+
+STRING 985
+// Abilities: A08X (Finish Construction), Name (Name)
+{
+Finish Construction
+}
+
+STRING 986
+// Abilities: A08X (Finish Construction), EditorSuffix (Editor Suffix)
+{
+(Item)
+}
+
+STRING 987
+// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+{
+W
 }
 
 STRING 1004
@@ -57191,13 +57233,13 @@ W
 }
 
 STRING 15094
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 15095
-// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
@@ -57388,13 +57430,13 @@ Summon Geomancer
 }
 
 STRING 15305
-// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15306
-// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
+// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -57708,13 +57750,13 @@ W
 }
 
 STRING 15571
-// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15572
-// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
 {
 W
 }
@@ -57882,13 +57924,13 @@ E
 }
 
 STRING 15810
-// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15811
-// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
 {
 W
 }
