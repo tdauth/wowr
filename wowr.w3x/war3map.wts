@@ -5857,6 +5857,26 @@ STRING 988
 Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
 }
 
+STRING 989
+{
+"-helpclan": Lists clan chat commands.
+}
+
+STRING 990
+{
+"-helpai": Lists AI chat commands.
+}
+
+STRING 991
+{
+"-victory"/"-novictory": Enables/disables victory conditions.
+}
+
+STRING 992
+{
+Use "-repick".
+}
+
 STRING 1004
 // Units: h04Y (High Elf Shipyard), Ubertip (Tooltip - Extended)
 {

@@ -2839,6 +2839,7 @@ globals
     constant integer EQUIPMENT_BAG                                   = 'E00R'
     constant integer MAX_HERO_LEVEL                                  = 75
     constant integer MAX_HERO_SPELL_LEVEL                            = 15
+    constant integer SKILL_POINTS_PER_LEVEL                          = 2
     constant integer MAX_HEROES                                      = 3
 
     // All Races
@@ -6540,6 +6541,19 @@ globals
     constant integer AVATAR_OF_SARGERAS                              = 'U00V'
     constant integer SMOLDERON                                       = 'N0DR'
     constant integer DENATHRIUS                                      = 'U03L'
+    constant integer LORD_NICHOLAS_BUZAN                             = 'H0QQ'
+    constant integer MAGROTH_THE_DEFENDER                            = 'H0QP'
+    constant integer AKAMA                                           = 'N04R'
+    constant integer ALAR                                            = 'N030'
+    constant integer ANTONIDAS                                       = 'H09B'
+    constant integer CTHUN                                           = 'N06E'
+    constant integer CENARIUS_BOSS                                   = 'E00Q'
+    constant integer DEATHWING                                       = 'N067'
+    constant integer DRAGON_TEMPLE_GUARDIAN                          = 'E004'
+    constant integer ELUNE                                           = 'E00S'
+    constant integer FACELESS_NIGHTMARE                              = 'U001'
+    constant integer FELWOODS_PAIN                                   = 'N005'
+    constant integer GRUUL_THE_DRAGONKILLER                          = 'N02Z'
 
     constant integer MATHOGS_CAGE                                    = 'I040'
 
