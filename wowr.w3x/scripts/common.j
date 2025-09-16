@@ -3735,6 +3735,7 @@ globals
     constant integer SUMMONED_MERCENARY_CAMP                         = 'h073'
     constant integer GHOST_FORM                                      = 'H04K'
     constant integer POWER_WARD                                      = 'o026'
+    constant integer TENTACLE                                        = 'nfgt'
 
     // Old Gods
     constant integer TENTACLE_CTHUN                                  = 'n06F'
@@ -6006,7 +6007,7 @@ globals
 
     // Aeromancer
     constant integer ABILITY_CYCLONE                                 = 'ACcy'
-    constant integer ABILITY_MIRROR_IMAGE                            = 'A0CQ'
+    constant integer ABILITY_MIRROR_IMAGE                            = 'A09A'
     constant integer ABILITY_WIND_WALK                               = 'A0KV'
     constant integer ABILITY_EVASION                                 = 'ACev'
     constant integer ABILITY_CLOUD                                   = 'A12D'
@@ -6126,11 +6127,14 @@ globals
     constant integer ABILITY_VENGEANCE                               = 'A0HY'
 
     // Necromancer
-    constant integer ABILITY_RAISE_DEAD                              = 'ACrd'
+    constant integer ABILITY_RAISE_DEAD                              = 'A09B'
     constant integer ABILITY_CANNIBALIZE                             = 'ACcn'
     constant integer ABILITY_DEATH_PACT                              = 'A0EM'
     constant integer ABILITY_DARK_RITUAL                             = 'A0HQ'
     constant integer ABILITY_SUMMON_MEAT_WAGON                       = 'A0KI'
+    constant integer ABILITY_CARGO_HOLD_MEAT_WAGON                   = 'S00N'
+    constant integer ABILITY_EXHUME_CORPSES_MEAT_WAGON               = 'A00K'
+    constant integer ABILITY_DISEASE_CLOUD_MEAT_WAGON                = 'A0KL'
     constant integer ABILITY_CARRION_BEETLES                         = 'A0EN'
     constant integer ABILITY_SKELETAL_MASTERY                        = 'A0KH'
     constant integer ABILITY_SPAWN_TENTACLE                          = 'ACtn'

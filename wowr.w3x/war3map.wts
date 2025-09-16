@@ -5877,6 +5877,18 @@ STRING 992
 Use "-repick".
 }
 
+STRING 993
+// Abilities: A09A (Mirror Image), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
+}
+
+STRING 994
+// Abilities: A09B (Raise Dead), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile) (Necromancer)
+}
+
 STRING 1004
 // Units: h04Y (High Elf Shipyard), Ubertip (Tooltip - Extended)
 {
