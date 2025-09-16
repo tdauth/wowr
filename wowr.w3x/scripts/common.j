@@ -4921,6 +4921,7 @@ globals
     constant integer TROLL_WATCH_TOWER                               = 'o04X'
     constant integer TROLL_BARRACKS                                  = 'o02D' // barracks
     constant integer TROLL_VOODOO_LOUNGE                             = 'o04U' // shop
+    constant integer TROLL_ARENA                                     = 'n080' // sacrificial pit
     constant integer TROLL_TEMPLE_OF_SACRIFICE                       = 'o050' // special building
     constant integer TROLL_SHIPYARD                                  = 'o051'
 
