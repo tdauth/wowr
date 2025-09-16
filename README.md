@@ -1506,3 +1506,4 @@ Here is a list of some modified versions online:
 * CRAZYRUSSIAN: [BTNcrPLUSbooK](https://www.hiveworkshop.com/threads/btncrplusbook.198471/)
 * CRAZYRUSSIAN: [BTNcrMINUSbooK](https://www.hiveworkshop.com/threads/btncrminusbook.198470/)
 * Pakmand: [BTNBack](https://www.hiveworkshop.com/threads/btnback.120394/)
+* GooS: [BTNdancingLightningGS](https://www.hiveworkshop.com/threads/btndancinglightninggs.117514/)

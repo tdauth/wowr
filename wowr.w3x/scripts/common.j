@@ -6559,6 +6559,12 @@ globals
     constant integer FELWOODS_PAIN                                   = 'N005'
     constant integer GRUUL_THE_DRAGONKILLER                          = 'N02Z'
 
+    constant integer MAIEV_BOSS                                      = 'Ewrd'
+    constant integer KAEL_BOSS                                       = 'H01J'
+    constant integer CAPTAIN_BOSS                                    = 'N0O9'
+    constant integer GOBLIN_BANK_DIRECTOR                            = 'O05G'
+    constant integer HERALD_OF_THE_DEEP_MOTHER                       = 'N0C8'
+
     constant integer MATHOGS_CAGE                                    = 'I040'
 
     // AI commands

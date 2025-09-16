@@ -409,12 +409,6 @@ STRING 68
 Druid
 }
 
-STRING 69
-// Abilities: A1VK (Frost Bolt Rain), EditorSuffix (Editor Suffix)
-{
-(Slot 4)
-}
-
 STRING 70
 // Abilities: A11W (Life Aura), EditorSuffix (Editor Suffix)
 {
@@ -5887,6 +5881,54 @@ STRING 994
 // Abilities: A09B (Raise Dead), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile) (Necromancer)
+}
+
+STRING 995
+// Abilities: A09F (Tome of Retraining), Name (Name)
+{
+Tome of Retraining
+}
+
+STRING 996
+// Abilities: A09F (Tome of Retraining), EditorSuffix (Editor Suffix)
+{
+(Skill Menu)
+}
+
+STRING 997
+// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 998
+// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 999
+// Upgrades: R05E (Defend), Hotkey (Hotkey)
+{
+M
+}
+
+STRING 1000
+// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 1001
+// Upgrades: R03C (Ensnare), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 1002
+// Upgrades: R0F5 (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
+{
+G
 }
 
 STRING 1004
@@ -14359,40 +14401,16 @@ STRING 2796
 (Goblin)
 }
 
-STRING 2797
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 4|r]
-}
-
-STRING 2798
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 5|r]
-}
-
 STRING 2799
 // Units: nzep (Zeppelin), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 2800
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 6|r]
-}
-
 STRING 2801
 // Units: o0C0 (Next Skin), Hotkey (Hotkey)
 {
 Q
-}
-
-STRING 2802
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 7|r]
 }
 
 STRING 2803
@@ -14435,24 +14453,6 @@ STRING 2809
 // Items: I1AM (Tiny Trainer), Name (Name)
 {
 Tiny Trainer
-}
-
-STRING 2810
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 8|r]
-}
-
-STRING 2811
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 9|r]
-}
-
-STRING 2812
-// Abilities: A01W (Fire Spell - Flame Strike), Tip (Tooltip - Normal)
-{
-Flame Strike - [|cffffcc00Level 10|r]
 }
 
 STRING 2814
@@ -19744,12 +19744,6 @@ STRING 3971
 // Abilities: A1QC (Power Ward), Name (Name)
 {
 Power Ward
-}
-
-STRING 3972
-// Abilities: A1VK (Frost Bolt Rain), Researchtip (Tooltip - Learn)
-{
-Learn Frost Bolt Rain - [|cffffcc00Level %d|r]
 }
 
 STRING 3974
@@ -28886,13 +28880,13 @@ M
 }
 
 STRING 5838
-// Abilities: A0D3 (Convert into Mechanical), Hotkey (Hotkey - Normal)
+// Abilities: ACmo (Monsoon), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5839
-// Abilities: A0EY (Move), Hotkey (Hotkey - Normal)
+// Abilities: A0D3 (Convert into Mechanical), Hotkey (Hotkey - Normal)
 {
 M
 }
@@ -28910,55 +28904,55 @@ Train Dragonspawn Meddler
 }
 
 STRING 5842
-// Abilities: A1TN (Summon Miners), Hotkey (Hotkey - Normal)
+// Abilities: A0EY (Move), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5843
-// Abilities: A1X4 (Move), Hotkey (Hotkey - Normal)
+// Abilities: A1TN (Summon Miners), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5844
-// Abilities: A21U (Summon Prospectors), Hotkey (Hotkey - Normal)
+// Abilities: A1X4 (Move), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5845
-// Abilities: A237 (Meteor), Hotkey (Hotkey - Normal)
+// Abilities: A21U (Summon Prospectors), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5846
-// Abilities: A10J (Mass Fel), Hotkey (Hotkey - Normal)
+// Abilities: A237 (Meteor), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5847
-// Abilities: A0NR (Meteor), Hotkey (Hotkey - Normal)
+// Abilities: A10J (Mass Fel), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5848
-// Abilities: A119 (Mass Holy Light), Hotkey (Hotkey - Normal)
+// Abilities: A0NR (Meteor), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5849
-// Abilities: A17G (Mass Forestation), Hotkey (Hotkey - Normal)
+// Abilities: A119 (Mass Holy Light), Hotkey (Hotkey - Normal)
 {
 M
 }
 
 STRING 5850
-// Upgrades: R00J (Ghoul Frenzy), Hotkey (Hotkey)
+// Abilities: A17G (Mass Forestation), Hotkey (Hotkey - Normal)
 {
 M
 }
@@ -29024,13 +29018,13 @@ Train Dragon Priest
 }
 
 STRING 5861
-// Upgrades: R061 (Flare), Hotkey (Hotkey)
+// Upgrades: R00J (Ghoul Frenzy), Hotkey (Hotkey)
 {
 M
 }
 
 STRING 5862
-// Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
+// Upgrades: R061 (Flare), Hotkey (Hotkey)
 {
 M
 }
@@ -29042,7 +29036,7 @@ M
 }
 
 STRING 5864
-// Upgrades: R05E (Defend), Hotkey (Hotkey)
+// Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
 {
 M
 }
@@ -32837,7 +32831,7 @@ Fountain
 }
 
 STRING 6710
-// Abilities: A09V (Clear Excluded for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: ACcb (Frost Bolt), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -32927,7 +32921,7 @@ A power generator that can protect buildings nearby by increasing their defense 
 }
 
 STRING 6726
-// Abilities: A0BR (Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Clear Excluded for Savecode), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -32945,7 +32939,7 @@ Next Bag
 }
 
 STRING 6729
-// Abilities: A0D1 (Send to Town Hall), Hotkey (Hotkey - Normal)
+// Abilities: A0BR (Transmute), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -36618,7 +36612,7 @@ Fire Elemental
 }
 
 STRING 7728
-// Abilities: A12M (Soul Theft), Hotkey (Hotkey - Normal)
+// Abilities: A0D1 (Send to Town Hall), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -40867,7 +40861,7 @@ S
 }
 
 STRING 8513
-// Abilities: A13W (Holy Light), Hotkey (Hotkey - Normal)
+// Abilities: A12M (Soul Theft), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -42264,13 +42258,13 @@ W
 }
 
 STRING 8802
-// Abilities: A01G (Call of Drakes), Researchhotkey (Hotkey - Learn)
+// Abilities: ACcv (Crushing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 8803
-// Abilities: A01G (Call of Drakes), Hotkey (Hotkey - Normal)
+// Abilities: A01G (Call of Drakes), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -42641,13 +42635,13 @@ R
 }
 
 STRING 8955
-// Abilities: A01K (Touch of Darkness), Researchhotkey (Hotkey - Learn)
+// Abilities: A01G (Call of Drakes), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 8956
-// Abilities: A01K (Touch of Darkness), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Touch of Darkness), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -42784,7 +42778,7 @@ Wizard
 }
 
 STRING 9137
-// Abilities: A00I (Herbalism - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Touch of Darkness), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43217,13 +43211,13 @@ R
 }
 
 STRING 9473
-// Abilities: A08P (Immortality), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Herbalism - Advanced), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 9474
-// Abilities: A09S (Include Unit for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: A08P (Immortality), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43271,7 +43265,7 @@ R
 }
 
 STRING 9595
-// Abilities: A0AV (Convert Into Orc), Hotkey (Hotkey - Normal)
+// Abilities: A09S (Include Unit for Savecode), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43283,7 +43277,7 @@ Holy Aura
 }
 
 STRING 9615
-// Abilities: A0K5 (Finish Construction), Hotkey (Hotkey - Normal)
+// Abilities: A0AV (Convert Into Orc), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43513,7 +43507,7 @@ Forsaken
 }
 
 STRING 9678
-// Abilities: A0KI (Summon Meat Wagon), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43565,7 +43559,7 @@ Quel'Thalas
 }
 
 STRING 9749
-// Abilities: A0MF (Connect with Destination), Hotkey (Hotkey - Normal)
+// Abilities: A0KI (Summon Meat Wagon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43757,13 +43751,13 @@ Q
 }
 
 STRING 9903
-// Abilities: A0MZ (Link Crafting Stash), Hotkey (Hotkey - Normal)
+// Abilities: A0MF (Connect with Destination), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 9904
-// Abilities: A0PH (Enable Wandering), Hotkey (Hotkey - Normal)
+// Abilities: A0MZ (Link Crafting Stash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -45480,7 +45474,7 @@ Craft wands with temporary effects and multiple charges:|n- Wand of Neutralizati
 }
 
 STRING 10321
-// Abilities: A0PI (Disable Wandering), Hotkey (Hotkey - Normal)
+// Abilities: A0PH (Enable Wandering), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -46908,13 +46902,13 @@ U
 }
 
 STRING 10582
-// Abilities: A1B5 (Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A13W (Holy Light), Hotkey (Hotkey - Normal)
 {
 T
 }
 
 STRING 10583
-// Abilities: A1EG (Holy Light), Hotkey (Hotkey - Normal)
+// Abilities: A1B5 (Teleport), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -47128,7 +47122,7 @@ Bring his heart to Lady Hederine to get your reward.
 }
 
 STRING 10620
-// Abilities: A0QF (Mass Slow), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Disable Wandering), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -47334,7 +47328,7 @@ Find a corpse probe of the dead Cenarius in Ashenvale.
 }
 
 STRING 10660
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Abilities: A1X3 (Command Buttons), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48224,13 +48218,13 @@ The Farmer uses his knowledge to craft a Tiny Barn.
 }
 
 STRING 10850
-// Abilities: A0TU (Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0QF (Mass Slow), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 10851
-// Abilities: A0YZ (Cancel), Hotkey (Hotkey - Normal)
+// Abilities: A0TU (Charge), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -48248,7 +48242,7 @@ C
 }
 
 STRING 10858
-// Abilities: A149 (Mass Death Coil), Hotkey (Hotkey - Normal)
+// Abilities: A0YZ (Cancel), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -48716,7 +48710,7 @@ STRING 10937
 }
 
 STRING 10938
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49326,7 +49320,7 @@ STRING 11071
 }
 
 STRING 11072
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49356,7 +49350,7 @@ Train Goblin Steam Roller
 }
 
 STRING 11078
-// Abilities: A1P7 (Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A1EG (Holy Light), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -49446,7 +49440,7 @@ K
 }
 
 STRING 11128
-// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49470,63 +49464,9 @@ Conjures a pillar of flame that burns ground units for <A01W,DataA1> damage a se
 }
 
 STRING 11135
-// Abilities: A16T (Water), Hotkey (Hotkey - Normal)
+// Abilities: A149 (Mass Death Coil), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 11141
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A02W,DataA2> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11142
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A03W,DataA3> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11143
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A04W,DataA4> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11144
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A05W,DataA5> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11145
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A06W,DataA6> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11146
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A07W,DataA7> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11147
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A08W,DataA8> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11148
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A09W,DataA9> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
-}
-
-STRING 11149
-// Abilities: A01W (Fire Spell - Flame Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Conjures a pillar of flame that burns ground units for <A010W,DataA10> damage a second for 3 seconds. As the pillar of flame subsides, units within the fire continue to take minor damage.
 }
 
 STRING 11150
@@ -49644,7 +49584,7 @@ Further increases the armor, hit points, number of targets and damage of Enginee
 }
 
 STRING 11169
-// Abilities: A173 (Mass Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A16T (Water), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -50311,7 +50251,7 @@ Wine Bottle
 }
 
 STRING 11396
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50688,25 +50628,25 @@ Anathemus,Boulderheart,Fozruk,Gormungan,Grimungous,Baron Kazum,Kashoch the Reave
 }
 
 STRING 11472
-// Abilities: A18B (Unsummon Building), Hotkey (Hotkey - Normal)
+// Abilities: A173 (Mass Bloodlust), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 11473
-// Abilities: A18B (Unsummon Building), Researchhotkey (Hotkey - Learn)
+// Abilities: A18B (Unsummon Building), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 11474
-// Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
+// Abilities: A18B (Unsummon Building), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 11475
-// Abilities: S01J (Slaughter Time), Hotkey (Hotkey - Normal)
+// Abilities: A1P7 (Teleport), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -50810,7 +50750,7 @@ Miner
 }
 
 STRING 11498
-// Abilities: A1X2 (Soul Theft), Hotkey (Hotkey - Normal)
+// Abilities: S01J (Slaughter Time), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -51414,7 +51354,7 @@ E
 }
 
 STRING 11708
-// Abilities: A1G4 (Orb of Annihilation), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51888,7 +51828,7 @@ Summon Siege Golem
 }
 
 STRING 11858
-// Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
+// Abilities: A1G4 (Orb of Annihilation), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -52338,7 +52278,7 @@ R
 }
 
 STRING 11975
-// Abilities: A1Z8 (Track), Hotkey (Hotkey - Normal)
+// Abilities: A1X2 (Soul Theft), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -52444,7 +52384,7 @@ A small cluster of tropical landmasses located off the southeastern coast of Dur
 }
 
 STRING 11994
-// Abilities: A1HR (Healing Wave), Hotkey (Hotkey - Normal)
+// Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52482,7 +52422,7 @@ The former home of the Darkspear tribe of jungle trolls but nor reigned by the M
 }
 
 STRING 12000
-// Abilities: A1JA (West Northrend), Hotkey (Hotkey - Normal)
+// Abilities: A1HR (Healing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53055,7 +52995,7 @@ Allows the unit to become invisible, and move <ANwk,DataB1,%>% faster. If the Pa
 }
 
 STRING 12108
-// Abilities: A1ZW (Speed Boost), Hotkey (Hotkey - Normal)
+// Abilities: A1Z8 (Track), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -53074,12 +53014,12 @@ STRING 12110
 
 STRING 12115
 {
-Summon a Nether Drake at Nethergarde Citadel.
+Summon a Nether Dragon Hatchling at Nethergarde Citadel.
 }
 
 STRING 12116
 {
-Return the Nether Drake to Sylvanas in the Undercity.
+Return the Nether Dragon Hatchling to Sylvanas in the Undercity.
 }
 
 STRING 12117
@@ -53295,7 +53235,7 @@ R
 }
 
 STRING 12161
-// Abilities: A1QE (Hide in Trees), Hotkey (Hotkey - Normal)
+// Abilities: A1ZW (Speed Boost), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -54991,13 +54931,13 @@ E
 }
 
 STRING 13855
-// Abilities: A05B (Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A1QE (Hide in Trees), Hotkey (Hotkey - Normal)
 {
 T
 }
 
 STRING 13856
-// Abilities: A1L6 (+1 Agility), Hotkey (Hotkey - Normal)
+// Abilities: A1JA (West Northrend), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55014,7 +54954,7 @@ P
 }
 
 STRING 13862
-// Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Abilities: A05B (Transmute), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -55650,7 +55590,7 @@ X
 }
 
 STRING 14111
-// Abilities: A1NF (Spell Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A1L6 (+1 Agility), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -56523,13 +56463,13 @@ R
 }
 
 STRING 14579
-// Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
+// Abilities: A1NF (Spell Shield), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 14580
-// Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
+// Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -56954,13 +56894,13 @@ Black Drake
 }
 
 STRING 14876
-// Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
+// Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14877
-// Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
+// Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -57002,7 +56942,7 @@ R
 }
 
 STRING 14885
-// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
+// Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -57014,13 +56954,13 @@ R
 }
 
 STRING 14887
-// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14889
-// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
+// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -57050,7 +56990,7 @@ E
 }
 
 STRING 14895
-// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -57074,7 +57014,7 @@ E
 }
 
 STRING 14899
-// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -57086,25 +57026,25 @@ E
 }
 
 STRING 14903
-// Abilities: A1VK (Frost Bolt Rain), Hotkey (Hotkey - Normal)
+// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14906
-// Abilities: A1VK (Frost Bolt Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14907
-// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
+// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14908
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -57128,7 +57068,7 @@ STRING 14931
 }
 
 STRING 14935
-// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57146,7 +57086,7 @@ E
 }
 
 STRING 14942
-// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
+// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -57241,37 +57181,37 @@ Clans
 }
 
 STRING 15086
-// Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 15087
-// Abilities: A07Y (Poison Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 15088
-// Abilities: A07Y (Poison Arrows), Unhotkey (Hotkey - Turn Off)
+// Abilities: A07Y (Poison Arrows), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 15089
-// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
+// Abilities: A07Y (Poison Arrows), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
 
 STRING 15094
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 15095
-// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
@@ -57462,13 +57402,13 @@ Summon Geomancer
 }
 
 STRING 15305
-// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15306
-// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
+// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -57782,13 +57722,13 @@ W
 }
 
 STRING 15571
-// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15572
-// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
 {
 W
 }
@@ -57938,7 +57878,7 @@ Creates a Safe.
 }
 
 STRING 15806
-// Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
+// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -57956,13 +57896,13 @@ E
 }
 
 STRING 15810
-// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15811
-// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
 {
 W
 }
@@ -57986,7 +57926,7 @@ E
 }
 
 STRING 15827
-// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
 {
 R
 }
@@ -58064,7 +58004,7 @@ Pandaren
 }
 
 STRING 15880
-// Upgrades: R039 (Flak Cannons), Hotkey (Hotkey)
+// Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 T
 }
@@ -58088,7 +58028,7 @@ STRING 15883
 }
 
 STRING 15909
-// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -58176,13 +58116,13 @@ STRING 15934
 }
 
 STRING 15935
-// Upgrades: R03Q (Barrage), Hotkey (Hotkey)
+// Upgrades: R039 (Flak Cannons), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 15936
-// Upgrades: R08Y (Web), Hotkey (Hotkey)
+// Upgrades: R03Q (Barrage), Hotkey (Hotkey)
 {
 T
 }
@@ -58511,7 +58451,7 @@ Disable Wandering
 }
 
 STRING 16182
-// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -58724,7 +58664,7 @@ You own the clan hall now!
 }
 
 STRING 16275
-// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -59273,7 +59213,7 @@ Purchase Book of Jewelcrafting
 }
 
 STRING 16553
-// Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
+// Upgrades: R08Y (Web), Hotkey (Hotkey)
 {
 T
 }
@@ -59734,7 +59674,7 @@ Dummy
 }
 
 STRING 16881
-// Upgrades: R0EG (Ensnare), Hotkey (Hotkey)
+// Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 T
 }
@@ -59764,7 +59704,7 @@ Cloud Serpent Mount
 }
 
 STRING 16886
-// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -59799,7 +59739,7 @@ E
 }
 
 STRING 16892
-// Upgrades: R0GE (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
+// Upgrades: R0EG (Ensnare), Hotkey (Hotkey)
 {
 T
 }
@@ -60445,7 +60385,7 @@ Crane
 }
 
 STRING 17321
-// Upgrades: R0GJ (Chaos), Hotkey (Hotkey)
+// Upgrades: R0GE (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
 {
 T
 }
@@ -60877,7 +60817,7 @@ STRING 17418
 }
 
 STRING 17419
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -61404,7 +61344,7 @@ Your clan island if your clan has one.
 }
 
 STRING 17547
-// Upgrades: R0IG (Envenomed Spears), Hotkey (Hotkey)
+// Upgrades: R0GJ (Chaos), Hotkey (Hotkey)
 {
 T
 }
@@ -61915,7 +61855,7 @@ E
 }
 
 STRING 17802
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -62197,13 +62137,13 @@ Build Worgen Shipyard
 }
 
 STRING 18117
-// Upgrades: R0IO (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0IG (Envenomed Spears), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 18118
-// Upgrades: R03C (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0IO (Liquid Fire), Hotkey (Hotkey)
 {
 T
 }
@@ -63477,13 +63417,13 @@ S
 }
 
 STRING 19040
-// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 19043
-// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -63621,18 +63561,6 @@ Gives gold to player.
 }
 
 STRING 19338
-// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 19339
-// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 19340
 // Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
 {
 R
@@ -66857,12 +66785,6 @@ STRING 20816
 Resets all hero spells.
 }
 
-STRING 20818
-// Items: I0A7 (Tome of Retraining Reset), Name (Name)
-{
-Tome of Retraining Reset
-}
-
 STRING 20828
 // Units: n0FL (Polar Bear), Hotkey (Hotkey)
 {
@@ -68081,12 +68003,6 @@ STRING 22435
 // Units: n08Q (Floating Eye), Name (Name)
 {
 Floating Eye
-}
-
-STRING 22436
-// Abilities: A1X3 (Command Buttons), Hotkey (Hotkey - Normal)
-{
-J
 }
 
 STRING 22437
@@ -76520,13 +76436,13 @@ Calls the personal mount that has average combat capabilities and can be used fo
 }
 
 STRING 30359
-// Abilities: A03M (Hero Skins), Hotkey (Hotkey - Normal)
+// Abilities: A26I (Summon Golem), Hotkey (Hotkey - Normal)
 {
 G
 }
 
 STRING 30360
-// Upgrades: R0AW (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
+// Abilities: A03M (Hero Skins), Hotkey (Hotkey - Normal)
 {
 G
 }
@@ -82501,7 +82417,7 @@ STRING 33568
 }
 
 STRING 33569
-// Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Hotkey (Hotkey)
+// Upgrades: R0AW (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
 {
 G
 }
@@ -90986,7 +90902,7 @@ S
 }
 
 STRING 36472
-// Upgrades: R0F5 (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
+// Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Hotkey (Hotkey)
 {
 G
 }
@@ -99757,12 +99673,6 @@ STRING 40464
 Deposits lumber to get it back with interest charges.
 }
 
-STRING 40465
-// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
-{
-J
-}
-
 STRING 40466
 // Units: n0FK (Icetusk Mammoth), EditorSuffix (Name - Editor Suffix)
 {
@@ -100877,12 +100787,6 @@ STRING 40749
 // Units: E01P (Druid Spider Form), Name (Name)
 {
 Druid Spider Form
-}
-
-STRING 40752
-// Abilities: A0NR (Meteor), Tip (Tooltip - Normal)
-{
-Meteor
 }
 
 STRING 40772
@@ -121714,18 +121618,6 @@ STRING 50672
 Purchase Random Save Code
 }
 
-STRING 50673
-// Abilities: A1VK (Frost Bolt Rain), Name (Name)
-{
-Frost Bolt Rain
-}
-
-STRING 50675
-// Abilities: A1VK (Frost Bolt Rain), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.|n|n|cffffcc00Increases the damage per frost bolt with every level.|r
-}
-
 STRING 50676
 // Items: I0XW (Wand of Telekinesis), Name (Name)
 {
@@ -121754,186 +121646,6 @@ STRING 50682
 // Abilities: A1VJ (Summon Peons Fel Orcs), Name (Name)
 {
 Summon Peons Fel Orcs
-}
-
-STRING 50686
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 1|r]
-}
-
-STRING 50687
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 2|r]
-}
-
-STRING 50688
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 3|r]
-}
-
-STRING 50689
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 4|r]
-}
-
-STRING 50690
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 5|r]
-}
-
-STRING 50691
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 6|r]
-}
-
-STRING 50692
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 7|r]
-}
-
-STRING 50693
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 8|r]
-}
-
-STRING 50694
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 9|r]
-}
-
-STRING 50695
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 10|r]
-}
-
-STRING 50696
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 11|r]
-}
-
-STRING 50697
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 12|r]
-}
-
-STRING 50698
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 13|r]
-}
-
-STRING 50699
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 14|r]
-}
-
-STRING 50700
-// Abilities: A1VK (Frost Bolt Rain), Tip (Tooltip - Normal)
-{
-Frost Bolt Rain - [|cffffcc00Level 15|r]
-}
-
-STRING 50703
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50704
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50705
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50706
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50707
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50708
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50709
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50710
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50711
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50712
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50713
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50714
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50715
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50716
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
-}
-
-STRING 50717
-// Abilities: A1VK (Frost Bolt Rain), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a rain of frost bolts which causes damage to enemy units.
 }
 
 STRING 50726
@@ -134545,12 +134257,6 @@ STRING 57154
 // Abilities: A237 (Meteor), EditorSuffix (Editor Suffix)
 {
 (Arcane Observatory) (Profession) (Thief)
-}
-
-STRING 57155
-// Abilities: A0NR (Meteor), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a powerful meteor which damages ground units and stuns them for some time.
 }
 
 STRING 57157
