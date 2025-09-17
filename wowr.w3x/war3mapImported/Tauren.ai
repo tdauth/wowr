@@ -3,7 +3,7 @@ function BuildingStrategy takes nothing returns nothing
         call InitBuildArray()
         // Tier 1 Buildings
         call SetBuildUnit(1, TAUREN_TIER_1)
-        call SetBuildUnit(workers, TAUREN_TAUREN_WORKER)
+        call SetBuildUnit(workers, TAUREN_WORKER)
         call SetBuildUnit(citizens_male, TAUREN_CITIZEN_MALE)
 
         call BuildingStrategyStandardTier1()
