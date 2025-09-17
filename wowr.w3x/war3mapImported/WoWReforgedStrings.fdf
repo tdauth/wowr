@@ -1564,6 +1564,8 @@ StringList {
     LEARN_ABILITY_X                    "Learn %1%",
     ABILITY_LEVEL_X                    "%1% - [|cffffcc00Level %2%|r]",
     CLICK_TO_CHANGE_ABILITY            "Click to change ability.",
+    NEXT_PAGE_X_Y                      "Next Page (%1%/%2%)",
+    PREVIOUS_PAGE_X_Y                  "Previous Page (%1%/%2%)",
     // Classes
     CLASSES                            "Classes",
     HERO_HAS_DEFAULT_CLASS_X           "Hero has default class %1%.",
@@ -1620,7 +1622,7 @@ StringList {
     // Geomancer
     STORM_BOLT_TOOLTIP                 "Throws a magical hammer at a target enemy unit, dealing <this,Htb1,x> damage and stunning the target for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     SUMMON_WALL_TOOLTIP                "Summons a wall in the direction the hero is facing damaging ground units in its way and blocking ground units.|n|n|cffffcc00Increases damage, duration and length of the wall with every level.|r",
-    ENDURANCE_AURA_TOOLTIP             "Increases nearby friendly units' movement speed by <this,Oea1,x,%>% and attack rate by <this,Oea2,x,%>%.|n|n|cffffcc00Increases movement and attack speed with every level.|r",
+    ENDURANCE_AURA_TOOLTIP             "Increases nearby friendly units' movement speed by <this,Oae1,x,%>% and attack rate by <this,Oae2,x,%>%.|n|n|cffffcc00Increases movement and attack speed with every level.|r",
     FAR_SIGHT_TOOLTIP                  "Reveals the area with a radius of <this,aare,x> of the map that it is cast upon for <this,adur,x> seconds. Also reveals invisible units. |n|n|cffffcc00Increases the duration and revealed area with every level.|r",
     SHOCKWAVE_TOOLTIP                  "A wave of force that ripples outward, causing <this,Osh1,x> damage to land units in a line. |n|n|cffffcc00Increases the damage with every level.|r",
     SUMMON_EARTH_ELEMENTAL_TOOLTIP     "Summons an earth elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the earth elemental with every level.|r",
@@ -1678,7 +1680,7 @@ StringList {
     AVATAR_TOOLTIP                     "Activate Avatar to give the hero <this,Hav1,x> bonus armor, <this,Hav2,x> bonus hit points, <this,Hav3,x> bonus damage and spell immunity. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the bonus armor, bonus hit points and bonus damage with every level.|r",
     // Hunter
     RAIN_OF_ARROWS_TOOLTIP             "Calls down <this,Hbz1,x> arrow waves; each wave deals <this,Hbz2,x> damage to units in an area. |n|n|cffffcc00Increases the number of waves and damage with every level.|r",
-    SENTINEL_TOOLTIP                   "Send an owl to a nearby tree to reveal the area around it. |nCan see invisible units. |nLasts <this,Esn5,x> seconds. |nCoooldown of <this,acdn,x> seconds.",
+    SENTINEL_TOOLTIP                   "Send an owl to a nearby tree to reveal the area around it. |nCan see invisible units. |nLasts <this,Esn5,x> seconds. |nCoooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the duration and decreases the cooldown with every level.|r",
     SCOUT_TOOLTIP                      "Temporarily summons an Owl Scout, which can be used to scout the map. |nCan see invisible units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the movement speed and sight range of the Owl Scout with every level.|r",
     SEARING_ARROWS_TOOLTIP             "Adds <this,Hfa1,x> bonus fire damage to an attack against enemies, but drains mana with each shot fired.|n|n|cffffcc00Increases the bonus damage with every level.|r",
     BARRAGE_TOOLTIP                    "Allows the hero to fire at <this,Efk3,x> nearby enemies at the same time.|n|n|cffffcc00Increases the maximum number of targets per level.|r",

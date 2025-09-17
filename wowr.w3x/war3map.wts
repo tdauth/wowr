@@ -49823,12 +49823,6 @@ STRING 11292
 Battleship
 }
 
-STRING 11298
-// Abilities: A08Y (Demolish), EditorSuffix (Editor Suffix)
-{
-(Admiral Proudmoore - Battleship)
-}
-
 STRING 11299
 // Units: o00R (Goblin Air Field), Ubertip (Tooltip - Extended)
 {
