@@ -202,7 +202,7 @@ globals
     boolean array trace_on
     boolean zep_next_wave           = false
     boolean form_group_timeouts     = true
-    
+
     // WoW Reforged
 
     // traces
@@ -837,7 +837,7 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
 
     elseif unitid == ANCIENT_OF_LORE_HERO then
         set have_qty = have_qty + GetUnitCountEx(ANCIENT_OF_LORE_HERO_ROOTED,false,townid)
-        
+
     // World of Warcraft Reforged
 
     elseif unitid == WATER_TOWER then
@@ -3047,7 +3047,7 @@ function LaunchAttack takes nothing returns nothing
         call Sleep(2)
         return
     endif
-    
+
     if (attackTargetLocation) then
         call TraceII("Launch attack (%d|%d)\n", attackTargetLocationX, attackTargetLocationY)
         call AttackMoveXYA(attackTargetLocationX, attackTargetLocationY)
@@ -3155,21 +3155,21 @@ function GetPlayerInfoText takes nothing returns string
     endif
 
     set msg = msg + ", "
-    
+
     if (attack_enemy_players) then
         set msg = msg + "attack players"
     else
         set msg = msg + "don't attack players"
     endif
-    
+
     set msg = msg + ", "
-    
+
     if (buildShips) then
         set msg = msg + "build ships"
     else
         set msg = msg + "don't build ships"
     endif
-    
+
     set msg = msg + " and get "
 
     if (expansions > 0) then
@@ -3187,9 +3187,9 @@ function GetPlayerInfoText takes nothing returns string
      if (attackTargetLocation) then
         set msg = msg + " and attack a location"
     endif
-    
+
     set msg = msg + "."
-    
+
     return msg
 endfunction
 
@@ -3210,24 +3210,24 @@ function UpdateWorkers takes nothing returns nothing
             set c = GetLastCommand()
             if (c == COMMAND_ATTACK_PLAYERS_ON) then
                 set attack_enemy_players = true
-                call NotifyOtherPlayers(GetLocalizedString("I_WILL_ATTACK_WITH_SHIPS"))
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_PLAYERS_ON"))
             elseif (c == COMMAND_ATTACK_PLAYERS_OFF) then
                 set attack_enemy_players = false
-                call NotifyOtherPlayers("I won't attack enemy players anymore!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_PLAYERS_OFF"))
             elseif (c == COMMAND_ATTACK_ON) then
                 set attacks_disabled = false
-                call NotifyOtherPlayers("I will attack from now on!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_ON"))
             elseif (c == COMMAND_ATTACK_OFF) then
                 set attacks_disabled = true
-                call NotifyOtherPlayers("I won't attack anymore!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_OFF"))
             elseif (c == COMMAND_GIVE_GOLD) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
-                call NotifySpecificPlayer(GetLastData(), "Here, take my gold!")
+                call NotifySpecificPlayer(GetLastData(), GetLocalizedString("COMMAND_GIVE_GOLD"))
             elseif (c == COMMAND_GIVE_LUMBER) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER, 0)
-                call NotifySpecificPlayer(GetLastData(), "Here, take my lumber!")
+                call NotifySpecificPlayer(GetLastData(), GetLocalizedString("COMMAND_GIVE_LUMBER"))
             elseif (c == COMMAND_SHIPS_ON) then
                 set buildShips = true
                 set shipyards = 1
@@ -3236,7 +3236,7 @@ function UpdateWorkers takes nothing returns nothing
                 set ships_battleship = 2
                 set ships_special1 = 2
                 set ships_special2 = 2
-                call NotifyOtherPlayers("I will start building ships!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_SHIPS_ON"))
             elseif (c == COMMAND_SHIPS_OFF) then
                 set buildShips = false
                 set shipyards = 0
@@ -3245,13 +3245,13 @@ function UpdateWorkers takes nothing returns nothing
                 set ships_battleship = 0
                 set ships_special1 = 0
                 set ships_special2 = 0
-                call NotifyOtherPlayers("I will stop building ships!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_SHIPS_OFF"))
             elseif (c == COMMAND_DISABLED_ON) then
                 set disabled = true
-                call NotifyOtherPlayers("I will do nothing (disabled)!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_DISABLED_ON"))
             elseif (c == COMMAND_DISABLED_OFF) then
                 set disabled = false
-                call NotifyOtherPlayers("I will do something (enabled)!")
+                call NotifyOtherPlayers(GetLocalizedString("COMMAND_DISABLED_OFF"))
             elseif (c == COMMAND_EXPANSIONS) then
                 set expansions = GetLastData()
                 call NotifyOtherPlayers("I will build " + I2S2(expansions) + " expansions!")
@@ -3329,7 +3329,7 @@ function ConfigureAI takes nothing returns nothing
     call SetRandomPaths(true)
     call SetDefendPlayer(true)
     call SetReplacements(1, 2, 3)
-    
+
     set attack_enemy_players = difficulty == MELEE_INSANE
     set buildShips = false
     set disabled = false
