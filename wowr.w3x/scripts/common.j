@@ -6141,7 +6141,7 @@ globals
     constant integer ABILITY_SPAWN_TENTACLE                          = 'ACtn'
     constant integer ABILITY_DISEASE_CLOUD                           = 'Aap3'
     constant integer ABILITY_LIFE_DRAIN                              = 'ACdr'
-    constant integer ABILITY_SUMMON_SAPPHIRON                        = 'A0R5'
+    constant integer ABILITY_SUMMON_SAPPHIRON                        = 'A0CP'
 
     // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
@@ -6589,6 +6589,7 @@ globals
     constant integer HYDRA_QUEEN_BOSS                                = 'O002'
     constant integer VOID_REVENANT_BOSS                              = 'U002'
     constant integer STORMBRINGER_BOSS                               = 'E003'
+    constant integer LICH_KING_BOSS                                  = 'Uear'
 
     constant integer MAIEV_BOSS                                      = 'Ewrd'
     constant integer KAEL_BOSS                                       = 'H01J'
