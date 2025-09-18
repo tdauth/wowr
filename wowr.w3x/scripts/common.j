@@ -5994,7 +5994,7 @@ globals
     constant integer ABILITY_MONSOON                                 = 'ACmo'
 
     // Geomancer
-    constant integer ABILITY_STORM_BOLT                              = 'A26F'
+    constant integer ABILITY_HURL_BOULDER                            = 'ACtb'
     constant integer ABILITY_SUMMON_WALL                             = 'A1E3'
     constant integer ABILITY_ENDURANCE_AURA                          = 'SCae'
     constant integer ABILITY_FAR_SIGHT                               = 'A26G'
@@ -6027,11 +6027,10 @@ globals
     constant integer ABILITY_DIVINE_SHIELD                           = 'A1NY'
     constant integer ABILITY_HEALING_WAVE                            = 'Leav'
     constant integer ABILITY_HOLY_AURA                               = 'A117'
+    constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
     constant integer ABILITY_DEVOTION_AURA                           = 'ACav'
     constant integer ABILITY_HOLY_NOVA                               = 'A118'
     constant integer ABILITY_HORN_OF_STORMWIND                       = 'A01Q'
-    constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
-    constant integer ABILITY_MASS_INNER_FIRE_DUMMY                   = 'A1WK'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
     // Death Knight
@@ -6087,9 +6086,9 @@ globals
     constant integer ABILITY_TRANQUILITY                             = 'A1BV'
 
     // Warrior
+    constant integer ABILITY_STORM_BOLT                              = 'A26F'
     constant integer ABILITY_BERSERK                                 = 'A03P'
     constant integer ABILITY_THUNDER_CLAP                            = 'A08S'
-    constant integer ABILITY_PARRY                                   = 'A1Z5'
     constant integer ABILITY_SPIKED_SHELL                            = 'ANth'
     constant integer ABILITY_WAR_STOMP                               = 'Awrs'
     constant integer ABILITY_BASH                                    = 'ACbh'
@@ -6219,12 +6218,12 @@ globals
     constant integer ABILITY_FINISH_CONSTRUCTIONS_ITEM               = 'A08X'
     constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
     constant integer ABILITY_SUMMON_MERCENARY_CAMP                   = 'A0KA'
-    constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
     constant integer ABILITY_MULTIPLY                                = 'A184'
     constant integer ABILITY_SUMMON_CREEP                            = 'A1YG'
     constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
     constant integer ABILITY_PICKPOCKETING                           = 'A17B'
     constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
+    constant integer ABILITY_PARRY                                   = 'A1Z5'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
@@ -6270,6 +6269,8 @@ globals
     constant integer ABILITY_MASS_HOLY_LIGHT                         = 'A119'
     constant integer ABILITY_MASS_HOLY_LIGHT_ITEM                    = 'A1XE'
     constant integer ABILITY_MASS_HOLY_LIGHT_DUMMY                   = 'A13Q'
+    constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
+    constant integer ABILITY_MASS_INNER_FIRE_DUMMY                   = 'A1WK'
 
     // WoW Reforged heroes
 
