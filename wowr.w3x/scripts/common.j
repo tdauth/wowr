@@ -6075,7 +6075,7 @@ globals
 
     // Druid
     constant integer ABILITY_REJUVENATION                            = 'A01I'
-    constant integer ABILITY_FEARIE_FIRE                             = 'ACff'
+    constant integer ABILITY_FAERIE_FIRE                             = 'ACff'
     constant integer ABILITY_FORCE_OF_NATURE                         = 'ACfr'
     constant integer ABILITY_THORNS_AURA                             = 'ACah'
     constant integer ABILITY_ENTANGLING_ROOTS                        = 'Aenr'
