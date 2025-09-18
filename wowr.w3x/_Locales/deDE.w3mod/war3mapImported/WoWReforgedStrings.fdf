@@ -1381,7 +1381,6 @@ StringList {
     INTRUGING                          "Faszinierend!",
     FOR_LORDAERON                      "Für Lordaeron!",
     I_SHOULD_HAVE_BEEN_A_FARMER        "Ich hätte dem Wunsch meines Vaters folgen und Bauer werden sollen!",
-
     WHO_DARES_TO_DEFILE                "Wer ist so dreist und entweiht dies alte Land?",
     TREMBLE_MORTALS_AND_DESPAIR        "Erzittert, Sterbliche und verzweifelt! Diese Welt ist dem Untergang geweiht!",
     FOR_THE_ALLIANCE                   "Für die Allianz!",
@@ -1567,6 +1566,8 @@ StringList {
     CLICK_TO_CHANGE_ABILITY            "Anklicken, um die Fähigkeit zu ändern.",
     NEXT_PAGE_X_Y                      "Nächste Seite (%1%/%2%)",
     PREVIOUS_PAGE_X_Y                  "Vorherige Seite (%1%/%2%)",
+    ABILITY_CHANGED_RANGE              "Fähigkeit zu %1% geändert (%2%/%3%).",
+    ABILITY_NO_OTHER                   "Keine andere Fähigkeit.",
     // Classes
     CLASSES                            "Klassen",
     HERO_HAS_DEFAULT_CLASS_X           "Held hat Standardklasse %1%.",
@@ -1658,14 +1659,14 @@ StringList {
     // Warrior
     BERSERK_TOOLTIP                    "Causes this unit to attack <this,bsk2,x,%>% and move <this,bsk1,x,%>% faster, but take <this,bsk3,x,%>% more damage.|n|n|cffffcc00Increases the attack and movement speed with every level.|r",
     THUNDER_CLAP_TOOLTIP               "Slams the ground, dealing <this,Htc1,x> damage to nearby enemy land units and slowing their movement by <this,Htc3,x,%>% and attack rate by <this,Htc4,%>%.|n|n|cffffcc00Increases the damage and area with every level.|r",
-    PARRY_TOOLTIP                      "Parries the next attack for a short time.|n|n|cffffcc00Increases the time with every level.|r",
+    PARRY_TOOLTIP                      "Parries the next attack for <this,cr00,x> seconds.|n|n|cffffcc00Increases the time with every level.|r",
     SPIKED_SHELL_TOOLTIP               "Razor-sharp spikes on the hero's shell giving the hero <this,Uts3,x> bonus armor and deal <this,Uts1,x,%>% of an enemy unit's melee attack damage back to it. |n|n|cffffcc00Increases the damage returned and bonus armor with every level.|r",
     WAR_STOMP_TOOLTIP                  "Slams the ground, dealing <this,Wrs1,x> damage to nearby enemy land units and stunning them for <this,adur,x> seconds. |n|n|cffffcc00Increases the damage with every level.|r",
     CLEAVING_ATTACK_TOOLTIP            "The hero strikes with such force that <this,nca1,x,%>% of his damage strikes through to enemies near the primary attacked unit. |n|n|cffffcc00Increases the distributed damage with every level.|r",
     COMMAND_AURA_TOOLTIP               "Gives extra damage to the attacks of nearby friendly units of <this,Cac1,x,%> %.|n|n|cffffcc00Increases the percentage of extra damage with every level.|r",
     BASH_TOOLTIP                       "Gives a <this,Hbh1,x>% chance that an attack will do <this,Hbh3,x> bonus damage and stun the target for <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     IMPALE_TOOLTIP                     "Slams the ground, sending a wave of force out in a straight line, dealing <this,Uim3,x> damage and hurling enemy ground units into the air in their wake, stunning them for <this,adur,x> seconds. |n|n|cffffcc00Increases the damage with every level.|r",
-    CLUB_STRIKE_TOOLTIP                "The hero uses a club for a powerful strike knocking back enemy ground units for a distance of <this,cr00,x> and causing <this,cr001,x> damage.|n|n|cffffcc00Increases the damage and knockback distance with every level.|r",
+    CLUB_STRIKE_TOOLTIP                "The hero uses a club for a powerful strike knocking back enemy ground units for a distance of <this,cr00,x> and causing <this,cr01,x> damage.|n|n|cffffcc00Increases the damage and knockback distance with every level.|r",
     AVATAR_TOOLTIP                     "Activate Avatar to give the hero <this,Hav1,x> bonus armor, <this,Hav2,x> bonus hit points, <this,Hav3,x> bonus damage and spell immunity. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the bonus armor, bonus hit points and bonus damage with every level.|r",
     // Hunter
     RAIN_OF_ARROWS_TOOLTIP             "Calls down <this,Hbz1,x> arrow waves; each wave deals <this,Hbz2,x> damage to units in an area. |n|n|cffffcc00Increases the number of waves and damage with every level.|r",
