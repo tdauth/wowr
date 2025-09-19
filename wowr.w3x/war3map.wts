@@ -290,7 +290,7 @@ Talanas Windrunner,Lireesa Windrunner,Alleria Windrunner,Voldana,Rellian,Talthre
 }
 
 STRING 49
-// Units: h0BF (Green Dragon Mount), Name (Name)
+// Units: h0BF (Green Dragon Mount), Tip (Tooltip - Basic)
 {
 Green Dragon Mount
 }
@@ -6417,6 +6417,12 @@ STRING 1088
 T
 }
 
+STRING 1089
+// Units: h004 (Gryphon Mount), Name (Name)
+{
+Gryphon Mount
+}
+
 STRING 1090
 // Units: n05Q (Naga Whaler), Hotkey (Hotkey)
 {
@@ -6873,6 +6879,18 @@ STRING 1167
 F
 }
 
+STRING 1168
+// Units: o003 (Wyvern Mount), Name (Name)
+{
+Wyvern Mount
+}
+
+STRING 1169
+// Units: u004 (Frost Wyrm Mount), Name (Name)
+{
+Frost Wyrm Mount
+}
+
 STRING 1170
 // Upgrades: R04S (Animal War Training), Name (Name)
 {
@@ -6894,6 +6912,12 @@ STRING 1173
 // Units: u01A (Sacrificial Pit), Hotkey (Hotkey)
 {
 R
+}
+
+STRING 1174
+// Units: e005 (Chimaera Mount), Tip (Tooltip - Basic)
+{
+Chimaera Mount
 }
 
 STRING 1175
@@ -7394,6 +7418,18 @@ STRING 1257
 Armoring - Adept
 }
 
+STRING 1258
+// Units: n007 (Nether Drake Mount), Tip (Tooltip - Basic)
+{
+Nether Drake Mount
+}
+
+STRING 1259
+// Units: h04L (Dragonhawk Mount), Name (Name)
+{
+Dragonhawk Mount
+}
+
 STRING 1260
 // Abilities: A02U (Blink), Ubertip (Tooltip - Normal - Extended)
 {
@@ -7410,6 +7446,18 @@ STRING 1262
 // Abilities: A02R (Spell Immunity), EditorSuffix (Editor Suffix)
 {
 (Medivh's Spell Book)
+}
+
+STRING 1263
+// Units: h06C (Giant Sea Turtle Mount), Name (Name)
+{
+Giant Sea Turtle Mount
+}
+
+STRING 1264
+// Units: h06E (Horse Mount), Tip (Tooltip - Basic)
+{
+Horse Mount
 }
 
 STRING 1265
@@ -7580,6 +7628,48 @@ STRING 1292
 Shield of the Undercity Forge
 }
 
+STRING 1293
+// Units: n06W (Mammoth Mount), Tip (Tooltip - Basic)
+{
+Mammoth Mount
+}
+
+STRING 1294
+// Units: h0BF (Green Dragon Mount), Name (Name)
+{
+Green Dragon Mount
+}
+
+STRING 1295
+// Units: h0DI (Eagle Mount), Name (Name)
+{
+Eagle Mount
+}
+
+STRING 1296
+// Units: h0FC (White Tiger Mount), Tip (Tooltip - Basic)
+{
+White Tiger Mount
+}
+
+STRING 1297
+// Units: n0BH (Couatl Mount), Tip (Tooltip - Basic)
+{
+Couatl Mount
+}
+
+STRING 1298
+// Units: n0C1 (Polar Bear Mount), Tip (Tooltip - Basic)
+{
+Polar Bear Mount
+}
+
+STRING 1299
+// Units: h0IR (Proto Drake Mount), Name (Name)
+{
+Proto Drake Mount
+}
+
 STRING 1300
 // Items: I020 (Kel´Thuzad´s Scroll of Dispelling), Name (Name)
 {
@@ -7596,6 +7686,18 @@ STRING 1302
 // Items: I021 (Runeblade of the Frozen Throne), Name (Name)
 {
 Runeblade of the Frozen Throne
+}
+
+STRING 1303
+// Units: n0C4 (Bear Mount), Tip (Tooltip - Basic)
+{
+Bear Mount
+}
+
+STRING 1304
+// Units: h0K4 (Raptor Mount), Tip (Tooltip - Basic)
+{
+Raptor Mount
 }
 
 STRING 1305
@@ -7616,10 +7718,148 @@ STRING 1307
 Further increases the amount of lumber that Sailors can carry by <Rhlh,mod1>.
 }
 
+STRING 1308
+// Units: o04P (Bat Mount), Name (Name)
+{
+Bat Mount
+}
+
+STRING 1309
+// Units: h0KF (Mechanostrider Mount), Tip (Tooltip - Basic)
+{
+Mechanostrider Mount
+}
+
+STRING 1310
+// Units: h0KG (Flying Machine Mount), Name (Name)
+{
+Flying Machine Mount
+}
+
+STRING 1311
+// Units: h0MG (Undead Horse Mount), Tip (Tooltip - Basic)
+{
+Undead Horse Mount
+}
+
+STRING 1312
+// Units: h0PA (Lynx Mount), Tip (Tooltip - Basic)
+{
+Lynx Mount
+}
+
+STRING 1313
+// Units: n0IW (Brutosaur Mount), Tip (Tooltip - Basic)
+{
+Brutosaur Mount
+}
+
+STRING 1314
+// Units: h0UF (Talbuk Mount), Tip (Tooltip - Basic)
+{
+Talbuk Mount
+}
+
+STRING 1315
+// Units: h0UG (Panther Mount), Tip (Tooltip - Basic)
+{
+Panther Mount
+}
+
+STRING 1316
+// Units: o09M (Black Dragon Mount), Name (Name)
+{
+Black Dragon Mount
+}
+
+STRING 1317
+// Units: h0UW (Phoenix Mount), Name (Name)
+{
+Phoenix Mount
+}
+
+STRING 1318
+// Units: h0V5 (Snowy Owl Mount), Name (Name)
+{
+Snowy Owl Mount
+}
+
+STRING 1319
+// Units: h0VI (Dwarf Car Mount), Tip (Tooltip - Basic)
+{
+Dwarf Car Mount
+}
+
+STRING 1320
+// Units: h0VJ (Orc Car Mount), Tip (Tooltip - Basic)
+{
+Orc Car Mount
+}
+
 STRING 1321
 // Doodads: D003 (Statue Lich King), Name (Name)
 {
 Statue Lich King
+}
+
+STRING 1322
+// Units: h0VK (Undead Car Mount), Tip (Tooltip - Basic)
+{
+Undead Car Mount
+}
+
+STRING 1323
+// Units: h0VL (Demon Car Mount), Tip (Tooltip - Basic)
+{
+Demon Car Mount
+}
+
+STRING 1324
+// Units: h0XS (Ship Mount), Name (Name)
+{
+Ship Mount
+}
+
+STRING 1325
+// Units: h0XT (Submarine Mount), Name (Name)
+{
+Submarine Mount
+}
+
+STRING 1326
+// Units: h0Y1 (Elk Mount), Tip (Tooltip - Basic)
+{
+Elk Mount
+}
+
+STRING 1327
+// Units: h0Y4 (Ancient of War Mount), Tip (Tooltip - Basic)
+{
+Ancient of War Mount
+}
+
+STRING 1328
+// Units: h0Y7 (Direhorn Mount), Tip (Tooltip - Basic)
+{
+Direhorn Mount
+}
+
+STRING 1329
+// Units: h0Y8 (Goblin Car Mount), Tip (Tooltip - Basic)
+{
+Goblin Car Mount
+}
+
+STRING 1330
+// Units: h0YB (Night Elf Car Mount), Tip (Tooltip - Basic)
+{
+Night Elf Car Mount
+}
+
+STRING 1331
+// Units: e02G (Hippogryph Mount), Tip (Tooltip - Basic)
+{
+Hippogryph Mount
 }
 
 STRING 1332
@@ -7901,6 +8141,18 @@ STRING 1378
 A holy light that can heal a friendly living unit or damage an enemy Undead unit.
 }
 
+STRING 1379
+// Units: h0YM (Wolf Mount), Tip (Tooltip - Basic)
+{
+Wolf Mount
+}
+
+STRING 1380
+// Units: h07H (Crow Mount), Name (Name)
+{
+Crow Mount
+}
+
 STRING 1381
 // Upgrades: R05N (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
@@ -7941,6 +8193,12 @@ STRING 1387
 // Items: I0LC (Tiny Arcane Sanctum), Name (Name)
 {
 Tiny Arcane Sanctum
+}
+
+STRING 1388
+// Units: n0BT (Zeppelin Mount), Tip (Tooltip - Basic)
+{
+Zeppelin Mount
 }
 
 STRING 1389
@@ -8000,6 +8258,12 @@ STRING 1398
 // Abilities: A1E6 (AOE damage upon death), EditorSuffix (Editor Suffix)
 {
 (Hero Spell) (15 Levels)
+}
+
+STRING 1399
+// Units: h0AX (Albatross Mount), Name (Name)
+{
+Albatross Mount
 }
 
 STRING 1400
@@ -8084,6 +8348,12 @@ STRING 1413
 // Abilities: A0G3 (Animal War Training), EditorSuffix (Editor Suffix)
 {
  (Icon) (High Elf)
+}
+
+STRING 1414
+// Units: u030 (Gargoyle Mount), Name (Name)
+{
+Gargoyle Mount
 }
 
 STRING 1415
@@ -13310,7 +13580,7 @@ Primary defensive structure. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 2551
-// Units: h07H (Crow Mount), Name (Name)
+// Units: h07H (Crow Mount), Tip (Tooltip - Basic)
 {
 Crow Mount
 }
@@ -31244,7 +31514,7 @@ Mass Ensnare
 }
 
 STRING 6257
-// Units: u030 (Gargoyle Mount), Name (Name)
+// Units: u030 (Gargoyle Mount), Tip (Tooltip - Basic)
 {
 Gargoyle Mount
 }
@@ -33779,19 +34049,19 @@ Chaos Stone
 }
 
 STRING 6937
-// Units: h004 (Gryphon Mount), Name (Name)
+// Units: h004 (Gryphon Mount), Tip (Tooltip - Basic)
 {
 Gryphon Mount
 }
 
 STRING 6938
-// Units: o003 (Wyvern Mount), Name (Name)
+// Units: o003 (Wyvern Mount), Tip (Tooltip - Basic)
 {
 Wyvern Mount
 }
 
 STRING 6939
-// Units: u004 (Frost Wyrm Mount), Name (Name)
+// Units: u004 (Frost Wyrm Mount), Tip (Tooltip - Basic)
 {
 Frost Wyrm Mount
 }
@@ -52995,7 +53265,7 @@ STRING 12097
 }
 
 STRING 12099
-// Units: h0AX (Albatross Mount), Name (Name)
+// Units: h0AX (Albatross Mount), Tip (Tooltip - Basic)
 {
 Albatross Mount
 }
@@ -59626,6 +59896,12 @@ F
 }
 
 STRING 16883
+// Units: h0JL (Cloud Serpent Mount), Tip (Tooltip - Basic)
+{
+Cloud Serpent Mount
+}
+
+STRING 16884
 // Units: h0JL (Cloud Serpent Mount), Name (Name)
 {
 Cloud Serpent Mount
@@ -62107,7 +62383,7 @@ STRING 18134
 }
 
 STRING 18135
-// Units: h06C (Giant Sea Turtle Mount), Name (Name)
+// Units: h06C (Giant Sea Turtle Mount), Tip (Tooltip - Basic)
 {
 Giant Sea Turtle Mount
 }
@@ -71167,7 +71443,7 @@ STRING 25061
 }
 
 STRING 25065
-// Units: o04P (Bat Mount), Name (Name)
+// Units: o04P (Bat Mount), Tip (Tooltip - Basic)
 {
 Bat Mount
 }
@@ -72491,7 +72767,7 @@ S
 }
 
 STRING 26392
-// Units: h0DI (Eagle Mount), Name (Name)
+// Units: h0DI (Eagle Mount), Tip (Tooltip - Basic)
 {
 Eagle Mount
 }
@@ -74819,7 +75095,7 @@ Mechanostrider Mount
 }
 
 STRING 28637
-// Units: h0KG (Flying Machine Mount), Name (Name)
+// Units: h0KG (Flying Machine Mount), Tip (Tooltip - Basic)
 {
 Flying Machine Mount
 }
@@ -76688,7 +76964,7 @@ Lucard,Halfdan,Jorfus,Oktel Dragonblood,Overthane Balargarde,Banahogg,Illskar,Ir
 }
 
 STRING 30944
-// Units: h0IR (Proto Drake Mount), Name (Name)
+// Units: h0IR (Proto Drake Mount), Tip (Tooltip - Basic)
 {
 Proto Drake Mount
 }
@@ -77726,9 +78002,15 @@ Bear Mount
 }
 
 STRING 31191
-// Units: h04L (Dragonhawk Mount), Name (Name)
+// Units: h04L (Dragonhawk Mount), Tip (Tooltip - Basic)
 {
 Dragonhawk Mount
+}
+
+STRING 31195
+// Units: o01X (Kodo Beast Mount), Tip (Tooltip - Basic)
+{
+Kodo Beast Mount
 }
 
 STRING 31238
@@ -108540,7 +108822,7 @@ Create Corrupted Altar of Elders
 }
 
 STRING 43386
-// Units: h0UW (Phoenix Mount), Name (Name)
+// Units: h0UW (Phoenix Mount), Tip (Tooltip - Basic)
 {
 Phoenix Mount
 }
@@ -123233,7 +123515,7 @@ Advanced Fel
 }
 
 STRING 51371
-// Units: o09M (Black Dragon Mount), Name (Name)
+// Units: o09M (Black Dragon Mount), Tip (Tooltip - Basic)
 {
 Black Dragon Mount
 }
@@ -125586,7 +125868,7 @@ STRING 52363
 }
 
 STRING 52364
-// Units: h0V5 (Snowy Owl Mount), Name (Name)
+// Units: h0V5 (Snowy Owl Mount), Tip (Tooltip - Basic)
 {
 Snowy Owl Mount
 }
@@ -130792,13 +131074,13 @@ K
 }
 
 STRING 56058
-// Units: h0XS (Ship Mount), Name (Name)
+// Units: h0XS (Ship Mount), Tip (Tooltip - Basic)
 {
 Ship Mount
 }
 
 STRING 56059
-// Units: h0XT (Submarine Mount), Name (Name)
+// Units: h0XT (Submarine Mount), Tip (Tooltip - Basic)
 {
 Submarine Mount
 }
