@@ -3067,8 +3067,11 @@ globals
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
-    constant integer ABILITY_SUMMON_GRYPHON_MOUNT                    = 'A021'
     constant integer WYVERN_MOUNT                                    = 'o003'
+    constant integer BAT_MOUNT                                       = 'o04P'
+    constant integer EAGLE_MOUNT                                     = 'h0DI'
+    constant integer GREEN_DRAGON_MOUNT                              = 'h0BF'
+    constant integer BLACK_DRAGON_MOUNT                              = 'o09M'
     constant integer FROST_WYRM_MOUNT                                = 'u004'
     constant integer GARGOYLE_MOUNT                                  = 'u030'
     constant integer CHIMAERA_MOUNT                                  = 'e005'
