@@ -545,6 +545,8 @@ StringList {
     ATTRIBUTE_CANNOT_BE_UNSKILLED      "Attribute cannot be unskilled.",
     ATTRIBUTE_POINTS                   "Attribute Points",
     ATTRIBUTE_POINTS_DESCRIPTION       "Allow skilling the standard attributes for your hero.",
+    SKILL_POINTS                       "Skill Points",
+    SKILL_POINTS_DESCRIPTION           "Allow skilling abilities for your hero.",
     INSTINCT                           "Instinct",
     INSTINCT_DESCRIPTION               "Increases the hero's sight and movement by 10 per point.",
     STAMINA                            "Stamina",
