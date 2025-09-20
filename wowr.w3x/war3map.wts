@@ -3756,13 +3756,13 @@ Dummy Frost Ray
 }
 
 STRING 629
-// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A11C (Control Magic), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 630
-// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4102,7 +4102,7 @@ Skin Spirit Walker
 }
 
 STRING 687
-// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
+// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4226,7 +4226,7 @@ Arcane Academy
 }
 
 STRING 709
-// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4250,7 +4250,7 @@ Mechanical Hero, particularly adept at destroying magic. Can learn Rejuvenation,
 }
 
 STRING 713
-// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
+// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4274,7 +4274,7 @@ STRING 716
 }
 
 STRING 717
-// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
+// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4286,7 +4286,7 @@ Hero Abilities Previous Page
 }
 
 STRING 719
-// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
+// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4310,19 +4310,19 @@ Witch Doctor
 }
 
 STRING 723
-// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
+// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 724
-// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
+// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 725
-// Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
+// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4400,7 +4400,7 @@ Build Research Tent
 }
 
 STRING 738
-// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
+// Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4411,7 +4411,7 @@ Hero classes determine which spells can be learned by a hero. They give the hero
 }
 
 STRING 740
-// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4977,7 +4977,7 @@ Drunken Aura
 }
 
 STRING 841
-// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
+// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -5810,7 +5810,7 @@ Gives Acidic Carnivores the Poison ability.
 }
 
 STRING 981
-// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -5878,7 +5878,7 @@ Use "-repick".
 }
 
 STRING 993
-// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
+// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8435,7 +8435,7 @@ Rogue
 }
 
 STRING 1423
-// Abilities: A0CP (Summon Sapphiron New), EditorSuffix (Editor Suffix)
+// Abilities: A09A (Mirror Image), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8492,6 +8492,12 @@ STRING 1434
 // Units: n02E (Furbolg), Tip (Tooltip - Basic)
 {
 Train Furbolg
+}
+
+STRING 1435
+// Abilities: A0CP (Summon Sapphiron New), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
 }
 
 STRING 1443
@@ -10201,7 +10207,7 @@ Summon Wall
 }
 
 STRING 1849
-// Abilities: A0VH (Summon Air Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10729,13 +10735,13 @@ Resources allow training, buying and upgrading units, constructing buildings, re
 }
 
 STRING 1946
-// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
+// Abilities: A0VH (Summon Air Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1949
-// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
+// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12194,7 +12200,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 }
 
 STRING 2277
-// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
+// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12482,7 +12488,7 @@ Revive Samuro
 }
 
 STRING 2327
-// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -13046,7 +13052,7 @@ Revive Dark Wizard
 }
 
 STRING 2452
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -23004,13 +23010,13 @@ E
 }
 
 STRING 4674
-// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 4675
-// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
+// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -23752,7 +23758,7 @@ Transmute
 }
 
 STRING 4802
-// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
+// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42009,7 +42015,7 @@ Meteor
 }
 
 STRING 8666
-// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
+// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42188,7 +42194,7 @@ Gypsy Wagon
 }
 
 STRING 8699
-// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
+// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43090,7 +43096,7 @@ Akama's Message
 }
 
 STRING 9143
-// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
+// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43156,7 +43162,7 @@ Holy Nova
 }
 
 STRING 9154
-// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
+// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43174,7 +43180,7 @@ Mass Holy Light
 }
 
 STRING 9157
-// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
+// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43204,7 +43210,7 @@ Mass Inner Fire
 }
 
 STRING 9163
-// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
+// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43853,7 +43859,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 9758
-// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
+// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43895,13 +43901,13 @@ Temporarily gives a friendly target unit Chaos damage.
 }
 
 STRING 9765
-// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 9766
-// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
+// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44027,7 +44033,7 @@ W
 }
 
 STRING 9973
-// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
+// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44151,7 +44157,7 @@ STRING 10011
 }
 
 STRING 10046
-// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44175,7 +44181,7 @@ Summon Bear
 }
 
 STRING 10050
-// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
+// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44199,7 +44205,7 @@ Mass Forestation
 }
 
 STRING 10056
-// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
+// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44217,7 +44223,7 @@ Druid Forms
 }
 
 STRING 10060
-// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
+// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45944,7 +45950,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 10361
-// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -48932,7 +48938,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
+// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -51630,7 +51636,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, Wa
 }
 
 STRING 11719
-// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
+// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52235,7 +52241,7 @@ Storm Bolt
 }
 
 STRING 11904
-// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
+// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52283,13 +52289,13 @@ Summon Golem
 }
 
 STRING 11912
-// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
+// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 11913
-// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
+// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -53163,7 +53169,7 @@ Albatross Mount
 }
 
 STRING 12106
-// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
+// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -59794,7 +59800,7 @@ R
 }
 
 STRING 16888
-// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
+// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -80306,7 +80312,7 @@ STRING 32773
 }
 
 STRING 32774
-// Abilities: A08M (Sentinel), EditorSuffix (Editor Suffix)
+// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -80330,7 +80336,7 @@ Brings back to life the corpses of <A13V,DataA1> friendly nearby units.
 }
 
 STRING 32778
-// Abilities: A088 (Drunken Aura), EditorSuffix (Editor Suffix)
+// Abilities: A08M (Sentinel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -117543,7 +117549,7 @@ Brood Mother
 }
 
 STRING 49657
-// Abilities: A11C (Control Magic), EditorSuffix (Editor Suffix)
+// Abilities: A11F (Mass Teleport), EditorSuffix (Editor Suffix)
 {
 (Creep)
 }
@@ -119111,7 +119117,7 @@ Talbuk Mount
 }
 
 STRING 50276
-// Abilities: A11F (Mass Teleport), EditorSuffix (Editor Suffix)
+// Abilities: A16P (Death And Decay), EditorSuffix (Editor Suffix)
 {
 (Creep)
 }
@@ -119327,7 +119333,7 @@ A powerful crystal for Velen the Prophet.
 }
 
 STRING 50358
-// Abilities: A16P (Death And Decay), EditorSuffix (Editor Suffix)
+// Abilities: A26G (Far Sight), EditorSuffix (Editor Suffix)
 {
 (Creep)
 }
@@ -126125,7 +126131,7 @@ STRING 53225
 }
 
 STRING 53226
-// Abilities: A26G (Far Sight), EditorSuffix (Editor Suffix)
+// Abilities: A26H (Summon Earth Elemental), EditorSuffix (Editor Suffix)
 {
 (Creep)
 }
@@ -126146,12 +126152,6 @@ STRING 53234
 // Items: I104 (Unique - Al'ar's Egg), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffUnique|r|nAn egg of the powerful Phoenix God Al'ar. Gives the hero the abilities Phoenix Fire, Phoenix Egg and Phoenix.
-}
-
-STRING 53245
-// Abilities: A26H (Summon Earth Elemental), EditorSuffix (Editor Suffix)
-{
-(Creep)
 }
 
 STRING 53246
@@ -126341,7 +126341,7 @@ STRING 53376
 }
 
 STRING 53394
-// Abilities: A09A (Mirror Image), EditorSuffix (Editor Suffix)
+// Abilities: A088 (Drunken Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
