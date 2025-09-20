@@ -3824,7 +3824,6 @@ globals
     constant integer ITEM_FREELANCER_TOWER                           = 'I0NB'
     constant integer ITEM_FREELANCER_ADVANCED_TOWER                  = 'I0NC'
     constant integer ITEM_FREELANCER_SHIPYARD                        = 'I0X3'
-    constant integer ITEM_FREELANCER_BOOK_OF_FAST_TRAVEL             = 'I0QG'
 
     constant integer FREELANCER_CITIZEN_MALE                         = NEUTRAL_CITIZEN
     constant integer FREELANCER_CITIZEN_FEMALE                       = NEUTRAL_CITIZEN_FEMALE
@@ -6149,7 +6148,7 @@ globals
     // Rogue
     constant integer ABILITY_ENSNARE                                 = 'ACen'
     constant integer ABILITY_FAN_OF_KNIVES                           = 'A0HX'
-    constant integer ABILITY_BLINK                                   = 'A005'
+    constant integer ABILITY_BLINK                                   = 'A0OZ'
     constant integer ABILITY_SHADOW_STRIKE                           = 'ACss'
     constant integer ABILITY_ACID_BOMB                               = 'A0ID'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
