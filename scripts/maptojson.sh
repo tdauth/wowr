@@ -1,6 +1,6 @@
 #!/bin/bash
 # https://github.com/ChiefOfGxBxL/WC3MapTranslator
-npm install wc3maptranslator # installs the lib globally
+npm install wc3maptranslator
 
 INPUT_DIR="../wowr.w3x/"
 OUTPUT_DIR="./json"
