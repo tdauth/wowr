@@ -565,6 +565,12 @@ STRING 94
 (Medivh's Spell Book)
 }
 
+STRING 95
+// Buffs/Effects: B005 (), Bufftip (Tooltip)
+{
+Golem
+}
+
 STRING 96
 // Abilities: A095 (Resurrection), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4453,7 +4459,7 @@ A powerful Demon artifact which made corrupted Illidan but also made him stronge
 }
 
 STRING 749
-// Abilities: A0DJ (Summon Mount), EditorSuffix (Editor Suffix)
+// Abilities: A1X4 (Move), EditorSuffix (Editor Suffix)
 {
 (Command)
 }
@@ -6412,13 +6418,13 @@ STRING 1087
 }
 
 STRING 1088
-// Upgrades: R03C (Ensnare), Hotkey (Hotkey)
+// Units: n02I (Furbolg Tracker), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 1089
-// Units: h004 (Gryphon Mount), Name (Name)
+// Units: h004 (Gryphon Mount), Tip (Tooltip - Basic)
 {
 Gryphon Mount
 }
@@ -6880,13 +6886,13 @@ F
 }
 
 STRING 1168
-// Units: o003 (Wyvern Mount), Name (Name)
+// Units: o003 (Wyvern Mount), Tip (Tooltip - Basic)
 {
 Wyvern Mount
 }
 
 STRING 1169
-// Units: u004 (Frost Wyrm Mount), Name (Name)
+// Units: u004 (Frost Wyrm Mount), Tip (Tooltip - Basic)
 {
 Frost Wyrm Mount
 }
@@ -6915,7 +6921,7 @@ R
 }
 
 STRING 1174
-// Units: e005 (Chimaera Mount), Tip (Tooltip - Basic)
+// Units: e005 (Chimaera Mount), Name (Name)
 {
 Chimaera Mount
 }
@@ -7419,13 +7425,13 @@ Armoring - Adept
 }
 
 STRING 1258
-// Units: n007 (Nether Drake Mount), Tip (Tooltip - Basic)
+// Units: n007 (Nether Drake Mount), Name (Name)
 {
 Nether Drake Mount
 }
 
 STRING 1259
-// Units: h04L (Dragonhawk Mount), Name (Name)
+// Units: h04L (Dragonhawk Mount), Tip (Tooltip - Basic)
 {
 Dragonhawk Mount
 }
@@ -7449,13 +7455,13 @@ STRING 1262
 }
 
 STRING 1263
-// Units: h06C (Giant Sea Turtle Mount), Name (Name)
+// Units: h06C (Giant Sea Turtle Mount), Tip (Tooltip - Basic)
 {
 Giant Sea Turtle Mount
 }
 
 STRING 1264
-// Units: h06E (Horse Mount), Tip (Tooltip - Basic)
+// Units: h06E (Horse Mount), Name (Name)
 {
 Horse Mount
 }
@@ -7629,7 +7635,7 @@ Shield of the Undercity Forge
 }
 
 STRING 1293
-// Units: n06W (Mammoth Mount), Tip (Tooltip - Basic)
+// Units: n06W (Mammoth Mount), Name (Name)
 {
 Mammoth Mount
 }
@@ -7641,31 +7647,31 @@ Green Dragon Mount
 }
 
 STRING 1295
-// Units: h0DI (Eagle Mount), Name (Name)
+// Units: h0DI (Eagle Mount), Tip (Tooltip - Basic)
 {
 Eagle Mount
 }
 
 STRING 1296
-// Units: h0FC (White Tiger Mount), Tip (Tooltip - Basic)
+// Units: h0FC (White Tiger Mount), Name (Name)
 {
 White Tiger Mount
 }
 
 STRING 1297
-// Units: n0BH (Couatl Mount), Tip (Tooltip - Basic)
+// Units: n0BH (Couatl Mount), Name (Name)
 {
 Couatl Mount
 }
 
 STRING 1298
-// Units: n0C1 (Polar Bear Mount), Tip (Tooltip - Basic)
+// Units: n0C1 (Polar Bear Mount), Name (Name)
 {
 Polar Bear Mount
 }
 
 STRING 1299
-// Units: h0IR (Proto Drake Mount), Name (Name)
+// Units: h0IR (Proto Drake Mount), Tip (Tooltip - Basic)
 {
 Proto Drake Mount
 }
@@ -7689,13 +7695,13 @@ Runeblade of the Frozen Throne
 }
 
 STRING 1303
-// Units: n0C4 (Bear Mount), Tip (Tooltip - Basic)
+// Units: n0C4 (Bear Mount), Name (Name)
 {
 Bear Mount
 }
 
 STRING 1304
-// Units: h0K4 (Raptor Mount), Tip (Tooltip - Basic)
+// Units: h0K4 (Raptor Mount), Name (Name)
 {
 Raptor Mount
 }
@@ -7719,79 +7725,79 @@ Further increases the amount of lumber that Sailors can carry by <Rhlh,mod1>.
 }
 
 STRING 1308
-// Units: o04P (Bat Mount), Name (Name)
+// Units: o04P (Bat Mount), Tip (Tooltip - Basic)
 {
 Bat Mount
 }
 
 STRING 1309
-// Units: h0KF (Mechanostrider Mount), Tip (Tooltip - Basic)
+// Units: h0KF (Mechanostrider Mount), Name (Name)
 {
 Mechanostrider Mount
 }
 
 STRING 1310
-// Units: h0KG (Flying Machine Mount), Name (Name)
+// Units: h0KG (Flying Machine Mount), Tip (Tooltip - Basic)
 {
 Flying Machine Mount
 }
 
 STRING 1311
-// Units: h0MG (Undead Horse Mount), Tip (Tooltip - Basic)
+// Units: h0MG (Undead Horse Mount), Name (Name)
 {
 Undead Horse Mount
 }
 
 STRING 1312
-// Units: h0PA (Lynx Mount), Tip (Tooltip - Basic)
+// Units: h0PA (Lynx Mount), Name (Name)
 {
 Lynx Mount
 }
 
 STRING 1313
-// Units: n0IW (Brutosaur Mount), Tip (Tooltip - Basic)
+// Units: n0IW (Brutosaur Mount), Name (Name)
 {
 Brutosaur Mount
 }
 
 STRING 1314
-// Units: h0UF (Talbuk Mount), Tip (Tooltip - Basic)
+// Units: h0UF (Talbuk Mount), Name (Name)
 {
 Talbuk Mount
 }
 
 STRING 1315
-// Units: h0UG (Panther Mount), Tip (Tooltip - Basic)
+// Units: h0UG (Panther Mount), Name (Name)
 {
 Panther Mount
 }
 
 STRING 1316
-// Units: o09M (Black Dragon Mount), Name (Name)
+// Units: o09M (Black Dragon Mount), Tip (Tooltip - Basic)
 {
 Black Dragon Mount
 }
 
 STRING 1317
-// Units: h0UW (Phoenix Mount), Name (Name)
+// Units: h0UW (Phoenix Mount), Tip (Tooltip - Basic)
 {
 Phoenix Mount
 }
 
 STRING 1318
-// Units: h0V5 (Snowy Owl Mount), Name (Name)
+// Units: h0V5 (Snowy Owl Mount), Tip (Tooltip - Basic)
 {
 Snowy Owl Mount
 }
 
 STRING 1319
-// Units: h0VI (Dwarf Car Mount), Tip (Tooltip - Basic)
+// Units: h0VI (Dwarf Car Mount), Name (Name)
 {
 Dwarf Car Mount
 }
 
 STRING 1320
-// Units: h0VJ (Orc Car Mount), Tip (Tooltip - Basic)
+// Units: h0VJ (Orc Car Mount), Name (Name)
 {
 Orc Car Mount
 }
@@ -7803,61 +7809,61 @@ Statue Lich King
 }
 
 STRING 1322
-// Units: h0VK (Undead Car Mount), Tip (Tooltip - Basic)
+// Units: h0VK (Undead Car Mount), Name (Name)
 {
 Undead Car Mount
 }
 
 STRING 1323
-// Units: h0VL (Demon Car Mount), Tip (Tooltip - Basic)
+// Units: h0VL (Demon Car Mount), Name (Name)
 {
 Demon Car Mount
 }
 
 STRING 1324
-// Units: h0XS (Ship Mount), Name (Name)
+// Units: h0XS (Ship Mount), Tip (Tooltip - Basic)
 {
 Ship Mount
 }
 
 STRING 1325
-// Units: h0XT (Submarine Mount), Name (Name)
+// Units: h0XT (Submarine Mount), Tip (Tooltip - Basic)
 {
 Submarine Mount
 }
 
 STRING 1326
-// Units: h0Y1 (Elk Mount), Tip (Tooltip - Basic)
+// Units: h0Y1 (Elk Mount), Name (Name)
 {
 Elk Mount
 }
 
 STRING 1327
-// Units: h0Y4 (Ancient of War Mount), Tip (Tooltip - Basic)
+// Units: h0Y4 (Ancient of War Mount), Name (Name)
 {
 Ancient of War Mount
 }
 
 STRING 1328
-// Units: h0Y7 (Direhorn Mount), Tip (Tooltip - Basic)
+// Units: h0Y7 (Direhorn Mount), Name (Name)
 {
 Direhorn Mount
 }
 
 STRING 1329
-// Units: h0Y8 (Goblin Car Mount), Tip (Tooltip - Basic)
+// Units: h0Y8 (Goblin Car Mount), Name (Name)
 {
 Goblin Car Mount
 }
 
 STRING 1330
-// Units: h0YB (Night Elf Car Mount), Tip (Tooltip - Basic)
+// Units: h0YB (Night Elf Car Mount), Name (Name)
 {
 Night Elf Car Mount
 }
 
 STRING 1331
-// Units: e02G (Hippogryph Mount), Tip (Tooltip - Basic)
+// Units: e02G (Hippogryph Mount), Name (Name)
 {
 Hippogryph Mount
 }
@@ -8142,13 +8148,13 @@ A holy light that can heal a friendly living unit or damage an enemy Undead unit
 }
 
 STRING 1379
-// Units: h0YM (Wolf Mount), Tip (Tooltip - Basic)
+// Units: h0YM (Wolf Mount), Name (Name)
 {
 Wolf Mount
 }
 
 STRING 1380
-// Units: h07H (Crow Mount), Name (Name)
+// Units: h07H (Crow Mount), Tip (Tooltip - Basic)
 {
 Crow Mount
 }
@@ -8196,7 +8202,7 @@ Tiny Arcane Sanctum
 }
 
 STRING 1388
-// Units: n0BT (Zeppelin Mount), Tip (Tooltip - Basic)
+// Units: n0BT (Zeppelin Mount), Name (Name)
 {
 Zeppelin Mount
 }
@@ -8261,7 +8267,7 @@ STRING 1398
 }
 
 STRING 1399
-// Units: h0AX (Albatross Mount), Name (Name)
+// Units: h0AX (Albatross Mount), Tip (Tooltip - Basic)
 {
 Albatross Mount
 }
@@ -8279,7 +8285,7 @@ Creates a barrier that stops spells from affecting a target unit.
 }
 
 STRING 1402
-// Units: n02I (Furbolg Tracker), Hotkey (Hotkey)
+// Units: n02O (Timber Wolf), Hotkey (Hotkey)
 {
 T
 }
@@ -8351,7 +8357,7 @@ STRING 1413
 }
 
 STRING 1414
-// Units: u030 (Gargoyle Mount), Name (Name)
+// Units: u030 (Gargoyle Mount), Tip (Tooltip - Basic)
 {
 Gargoyle Mount
 }
@@ -8536,7 +8542,7 @@ H
 }
 
 STRING 1469
-// Units: n02O (Timber Wolf), Hotkey (Hotkey)
+// Units: h06V (Table), Hotkey (Hotkey)
 {
 T
 }
@@ -13580,7 +13586,7 @@ Primary defensive structure. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 2551
-// Units: h07H (Crow Mount), Tip (Tooltip - Basic)
+// Units: h07H (Crow Mount), Name (Name)
 {
 Crow Mount
 }
@@ -13628,13 +13634,13 @@ Each attack that does damage to an enemy unit also gains resources.
 }
 
 STRING 2561
-// Units: h06V (Table), Hotkey (Hotkey)
+// Units: h071 (Torture Table), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 2562
-// Units: h071 (Torture Table), Hotkey (Hotkey)
+// Units: o02J (Bat), Hotkey (Hotkey)
 {
 T
 }
@@ -13646,7 +13652,7 @@ O
 }
 
 STRING 2565
-// Units: o02J (Bat), Hotkey (Hotkey)
+// Units: n084 (Sea Elemental), Hotkey (Hotkey)
 {
 T
 }
@@ -14420,7 +14426,7 @@ Summon Black Dragon
 }
 
 STRING 2695
-// Units: n084 (Sea Elemental), Hotkey (Hotkey)
+// Units: n085 (Dalaran Guard Tower), Hotkey (Hotkey)
 {
 T
 }
@@ -15170,7 +15176,7 @@ Hero Abilities Increase Ability Level
 }
 
 STRING 2859
-// Units: n085 (Dalaran Guard Tower), Hotkey (Hotkey)
+// Units: n08E (Dalaran Sky Guard Tower), Hotkey (Hotkey)
 {
 T
 }
@@ -15218,7 +15224,7 @@ W
 }
 
 STRING 2867
-// Units: n08E (Dalaran Sky Guard Tower), Hotkey (Hotkey)
+// Units: n09D (Thieves Guild), Hotkey (Hotkey)
 {
 T
 }
@@ -15781,7 +15787,7 @@ Ping Destination
 }
 
 STRING 3007
-// Units: n09D (Thieves Guild), Hotkey (Hotkey)
+// Units: H0IQ (Thane), Hotkey (Hotkey)
 {
 T
 }
@@ -16339,13 +16345,13 @@ Q
 }
 
 STRING 3127
-// Units: H0IQ (Thane), Hotkey (Hotkey)
+// Units: H0JK (Mortar Team), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 3128
-// Units: H0JK (Mortar Team), Hotkey (Hotkey)
+// Units: n080 (Troll Arena), Hotkey (Hotkey)
 {
 T
 }
@@ -19701,19 +19707,19 @@ X
 }
 
 STRING 3871
-// Units: n080 (Troll Arena), Hotkey (Hotkey)
-{
-T
-}
-
-STRING 3872
 // Units: N0FC (Tuskarr Chieftain), Hotkey (Hotkey)
 {
 T
 }
 
-STRING 3873
+STRING 3872
 // Units: n0FR (Murloc Tiderunner), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 3873
+// Units: n0K9 (Sleepless Tower), Hotkey (Hotkey)
 {
 T
 }
@@ -19821,19 +19827,19 @@ rlev
 }
 
 STRING 3893
-// Units: n0K9 (Sleepless Tower), Hotkey (Hotkey)
-{
-T
-}
-
-STRING 3894
 // Units: n0KH (Trickster), Hotkey (Hotkey)
 {
 T
 }
 
-STRING 3895
+STRING 3894
 // Units: n0KO (Demon Gate), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 3895
+// Units: n0L5 (Trickster), Hotkey (Hotkey)
 {
 T
 }
@@ -20401,7 +20407,7 @@ P
 }
 
 STRING 4054
-// Units: n0L5 (Trickster), Hotkey (Hotkey)
+// Units: N0L8 (Satyr Trickster), Hotkey (Hotkey)
 {
 T
 }
@@ -23650,7 +23656,7 @@ Skyship
 }
 
 STRING 4781
-// Units: N0L8 (Satyr Trickster), Hotkey (Hotkey)
+// Units: h0VH (Thunder Phoenix), Hotkey (Hotkey)
 {
 T
 }
@@ -25596,7 +25602,7 @@ STRING 5163
 }
 
 STRING 5164
-// Units: h0VH (Thunder Phoenix), Hotkey (Hotkey)
+// Units: n076 (Thieves Guild (Thief)), Hotkey (Hotkey)
 {
 T
 }
@@ -25686,7 +25692,7 @@ S
 }
 
 STRING 5180
-// Units: n076 (Thieves Guild (Thief)), Hotkey (Hotkey)
+// Units: n0MO (Arcane Observatory), Hotkey (Hotkey)
 {
 T
 }
@@ -27454,7 +27460,7 @@ Build Manor
 }
 
 STRING 5506
-// Units: n0MO (Arcane Observatory), Hotkey (Hotkey)
+// Units: h07Q (Flying Spear Thrower), Hotkey (Hotkey)
 {
 T
 }
@@ -29336,7 +29342,7 @@ M
 }
 
 STRING 5840
-// Units: h07Q (Flying Spear Thrower), Hotkey (Hotkey)
+// Units: h086 (Fire Hawk), Hotkey (Hotkey)
 {
 T
 }
@@ -30114,7 +30120,7 @@ The feather of a pigeon.
 }
 
 STRING 5977
-// Units: n0BT (Zeppelin Mount), Name (Name)
+// Units: n0BT (Zeppelin Mount), Tip (Tooltip - Basic)
 {
 Zeppelin Mount
 }
@@ -30174,7 +30180,7 @@ Warrior Hero, adept at enhancing ranged attacks and slaying enemies from afar. C
 }
 
 STRING 5993
-// Units: h086 (Fire Hawk), Hotkey (Hotkey)
+// Items: I029 (Tidal Guardian), Hotkey (Hotkey)
 {
 T
 }
@@ -30670,7 +30676,7 @@ STRING 6077
 }
 
 STRING 6078
-// Items: I029 (Tidal Guardian), Hotkey (Hotkey)
+// Items: I145 (Weather Balloon), Hotkey (Hotkey)
 {
 T
 }
@@ -31438,7 +31444,7 @@ S
 }
 
 STRING 6240
-// Items: I145 (Weather Balloon), Hotkey (Hotkey)
+// Items: I147 (Activate Resurrection Stone), Hotkey (Hotkey)
 {
 T
 }
@@ -31514,7 +31520,7 @@ Mass Ensnare
 }
 
 STRING 6257
-// Units: u030 (Gargoyle Mount), Tip (Tooltip - Basic)
+// Units: u030 (Gargoyle Mount), Name (Name)
 {
 Gargoyle Mount
 }
@@ -31544,7 +31550,7 @@ O
 }
 
 STRING 6269
-// Items: I147 (Activate Resurrection Stone), Hotkey (Hotkey)
+// Items: I14A (Deactivate Resurrection Stone), Hotkey (Hotkey)
 {
 T
 }
@@ -32744,7 +32750,7 @@ STRING 6547
 }
 
 STRING 6548
-// Items: I14A (Deactivate Resurrection Stone), Hotkey (Hotkey)
+// Abilities: ACcb (Frost Bolt), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -33043,7 +33049,7 @@ Skin of a Fel Stalker.
 }
 
 STRING 6634
-// Abilities: ACcb (Frost Bolt), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Clear Excluded for Savecode), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -33239,7 +33245,7 @@ Fountain
 }
 
 STRING 6710
-// Abilities: A09V (Clear Excluded for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: A0BR (Transmute), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -33329,7 +33335,7 @@ A power generator that can protect buildings nearby by increasing their defense 
 }
 
 STRING 6726
-// Abilities: A0BR (Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A0D1 (Send to Town Hall), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -33347,7 +33353,7 @@ Next Bag
 }
 
 STRING 6729
-// Abilities: A0D1 (Send to Town Hall), Hotkey (Hotkey - Normal)
+// Abilities: A12M (Soul Theft), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -34049,19 +34055,19 @@ Chaos Stone
 }
 
 STRING 6937
-// Units: h004 (Gryphon Mount), Tip (Tooltip - Basic)
+// Units: h004 (Gryphon Mount), Name (Name)
 {
 Gryphon Mount
 }
 
 STRING 6938
-// Units: o003 (Wyvern Mount), Tip (Tooltip - Basic)
+// Units: o003 (Wyvern Mount), Name (Name)
 {
 Wyvern Mount
 }
 
 STRING 6939
-// Units: u004 (Frost Wyrm Mount), Tip (Tooltip - Basic)
+// Units: u004 (Frost Wyrm Mount), Name (Name)
 {
 Frost Wyrm Mount
 }
@@ -36444,7 +36450,7 @@ Purchase Tiny Banner High Elf
 }
 
 STRING 7632
-// Units: n007 (Nether Drake Mount), Name (Name)
+// Units: n007 (Nether Drake Mount), Tip (Tooltip - Basic)
 {
 Nether Drake Mount
 }
@@ -37020,7 +37026,7 @@ Fire Elemental
 }
 
 STRING 7728
-// Abilities: A12M (Soul Theft), Hotkey (Hotkey - Normal)
+// Abilities: A13W (Holy Light), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -37194,7 +37200,7 @@ Faceless Nightmare
 }
 
 STRING 7758
-// Units: e005 (Chimaera Mount), Name (Name)
+// Units: e005 (Chimaera Mount), Tip (Tooltip - Basic)
 {
 Chimaera Mount
 }
@@ -41227,7 +41233,7 @@ S
 }
 
 STRING 8513
-// Abilities: A13W (Holy Light), Hotkey (Hotkey - Normal)
+// Abilities: A1B5 (Teleport), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -47232,13 +47238,13 @@ U
 }
 
 STRING 10582
-// Abilities: A1B5 (Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A1EG (Holy Light), Hotkey (Hotkey - Normal)
 {
 T
 }
 
 STRING 10583
-// Abilities: A1EG (Holy Light), Hotkey (Hotkey - Normal)
+// Abilities: A1P7 (Teleport), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -49680,7 +49686,7 @@ Train Goblin Steam Roller
 }
 
 STRING 11078
-// Abilities: A1P7 (Teleport), Hotkey (Hotkey - Normal)
+// Abilities: S01J (Slaughter Time), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -50970,7 +50976,7 @@ W
 }
 
 STRING 11475
-// Abilities: S01J (Slaughter Time), Hotkey (Hotkey - Normal)
+// Abilities: A1X2 (Soul Theft), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -51074,7 +51080,7 @@ Miner
 }
 
 STRING 11498
-// Abilities: A1X2 (Soul Theft), Hotkey (Hotkey - Normal)
+// Abilities: A1Z8 (Track), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -51744,7 +51750,7 @@ STRING 11719
 }
 
 STRING 11751
-// Units: h0YM (Wolf Mount), Name (Name)
+// Units: h0YM (Wolf Mount), Tip (Tooltip - Basic)
 {
 Wolf Mount
 }
@@ -52584,7 +52590,7 @@ R
 }
 
 STRING 11975
-// Abilities: A1Z8 (Track), Hotkey (Hotkey - Normal)
+// Abilities: A1ZW (Speed Boost), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -53265,7 +53271,7 @@ STRING 12097
 }
 
 STRING 12099
-// Units: h0AX (Albatross Mount), Tip (Tooltip - Basic)
+// Units: h0AX (Albatross Mount), Name (Name)
 {
 Albatross Mount
 }
@@ -53283,7 +53289,7 @@ Allows the unit to become invisible, and move <ANwk,DataB1,%>% faster. If the Pa
 }
 
 STRING 12108
-// Abilities: A1ZW (Speed Boost), Hotkey (Hotkey - Normal)
+// Abilities: A1QE (Hide in Trees), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -53523,7 +53529,7 @@ R
 }
 
 STRING 12161
-// Abilities: A1QE (Hide in Trees), Hotkey (Hotkey - Normal)
+// Abilities: A05B (Transmute), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -54295,7 +54301,7 @@ Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn S
 }
 
 STRING 12303
-// Abilities: A1X4 (Move), EditorSuffix (Editor Suffix)
+// Abilities: A1X5 (Stop), EditorSuffix (Editor Suffix)
 {
 (Command)
 }
@@ -55219,7 +55225,7 @@ E
 }
 
 STRING 13855
-// Abilities: A05B (Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A0DJ (Summon Mount), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -55242,7 +55248,7 @@ P
 }
 
 STRING 13862
-// Abilities: A0DJ (Summon Mount), Hotkey (Hotkey - Normal)
+// Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 T
 }
@@ -58256,7 +58262,7 @@ Pandaren
 }
 
 STRING 15880
-// Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R039 (Flak Cannons), Hotkey (Hotkey)
 {
 T
 }
@@ -58320,7 +58326,7 @@ Kodo Beast Mount
 }
 
 STRING 15926
-// Units: h06E (Horse Mount), Name (Name)
+// Units: h06E (Horse Mount), Tip (Tooltip - Basic)
 {
 Horse Mount
 }
@@ -58338,13 +58344,13 @@ STRING 15934
 }
 
 STRING 15935
-// Upgrades: R039 (Flak Cannons), Hotkey (Hotkey)
+// Upgrades: R03Q (Barrage), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 15936
-// Upgrades: R03Q (Barrage), Hotkey (Hotkey)
+// Upgrades: R08Y (Web), Hotkey (Hotkey)
 {
 T
 }
@@ -59423,7 +59429,7 @@ Purchase Book of Jewelcrafting
 }
 
 STRING 16553
-// Upgrades: R08Y (Web), Hotkey (Hotkey)
+// Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 T
 }
@@ -59884,7 +59890,7 @@ Dummy
 }
 
 STRING 16881
-// Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
+// Upgrades: R0EG (Ensnare), Hotkey (Hotkey)
 {
 T
 }
@@ -59931,7 +59937,7 @@ E
 }
 
 STRING 16892
-// Upgrades: R0EG (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0GE (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
 {
 T
 }
@@ -60577,7 +60583,7 @@ Crane
 }
 
 STRING 17321
-// Upgrades: R0GE (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
+// Upgrades: R0GJ (Chaos), Hotkey (Hotkey)
 {
 T
 }
@@ -60709,7 +60715,7 @@ Build Crane
 }
 
 STRING 17343
-// Units: n06W (Mammoth Mount), Name (Name)
+// Units: n06W (Mammoth Mount), Tip (Tooltip - Basic)
 {
 Mammoth Mount
 }
@@ -61524,7 +61530,7 @@ Your clan island if your clan has one.
 }
 
 STRING 17547
-// Upgrades: R0GJ (Chaos), Hotkey (Hotkey)
+// Upgrades: R0IG (Envenomed Spears), Hotkey (Hotkey)
 {
 T
 }
@@ -62317,13 +62323,13 @@ Build Worgen Shipyard
 }
 
 STRING 18117
-// Upgrades: R0IG (Envenomed Spears), Hotkey (Hotkey)
+// Upgrades: R0IO (Liquid Fire), Hotkey (Hotkey)
 {
 T
 }
 
 STRING 18118
-// Upgrades: R0IO (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R03C (Ensnare), Hotkey (Hotkey)
 {
 T
 }
@@ -62383,7 +62389,7 @@ STRING 18134
 }
 
 STRING 18135
-// Units: h06C (Giant Sea Turtle Mount), Tip (Tooltip - Basic)
+// Units: h06C (Giant Sea Turtle Mount), Name (Name)
 {
 Giant Sea Turtle Mount
 }
@@ -68708,7 +68714,7 @@ STRING 22579
 }
 
 STRING 22581
-// Units: n0C1 (Polar Bear Mount), Name (Name)
+// Units: n0C1 (Polar Bear Mount), Tip (Tooltip - Basic)
 {
 Polar Bear Mount
 }
@@ -71013,7 +71019,7 @@ Damage Bonus - [|cffffcc00Level 15|r]
 }
 
 STRING 24731
-// Units: n0BH (Couatl Mount), Name (Name)
+// Units: n0BH (Couatl Mount), Tip (Tooltip - Basic)
 {
 Couatl Mount
 }
@@ -71443,7 +71449,7 @@ STRING 25061
 }
 
 STRING 25065
-// Units: o04P (Bat Mount), Tip (Tooltip - Basic)
+// Units: o04P (Bat Mount), Name (Name)
 {
 Bat Mount
 }
@@ -72767,7 +72773,7 @@ S
 }
 
 STRING 26392
-// Units: h0DI (Eagle Mount), Tip (Tooltip - Basic)
+// Units: h0DI (Eagle Mount), Name (Name)
 {
 Eagle Mount
 }
@@ -73781,7 +73787,7 @@ This ward allows learning hero spells.
 }
 
 STRING 27462
-// Units: h0FC (White Tiger Mount), Name (Name)
+// Units: h0FC (White Tiger Mount), Tip (Tooltip - Basic)
 {
 White Tiger Mount
 }
@@ -75089,13 +75095,13 @@ Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn H
 }
 
 STRING 28636
-// Units: h0KF (Mechanostrider Mount), Name (Name)
+// Units: h0KF (Mechanostrider Mount), Tip (Tooltip - Basic)
 {
 Mechanostrider Mount
 }
 
 STRING 28637
-// Units: h0KG (Flying Machine Mount), Tip (Tooltip - Basic)
+// Units: h0KG (Flying Machine Mount), Name (Name)
 {
 Flying Machine Mount
 }
@@ -76964,7 +76970,7 @@ Lucard,Halfdan,Jorfus,Oktel Dragonblood,Overthane Balargarde,Banahogg,Illskar,Ir
 }
 
 STRING 30944
-// Units: h0IR (Proto Drake Mount), Tip (Tooltip - Basic)
+// Units: h0IR (Proto Drake Mount), Name (Name)
 {
 Proto Drake Mount
 }
@@ -77996,13 +78002,13 @@ STRING 31179
 }
 
 STRING 31180
-// Units: n0C4 (Bear Mount), Name (Name)
+// Units: n0C4 (Bear Mount), Tip (Tooltip - Basic)
 {
 Bear Mount
 }
 
 STRING 31191
-// Units: h04L (Dragonhawk Mount), Tip (Tooltip - Basic)
+// Units: h04L (Dragonhawk Mount), Name (Name)
 {
 Dragonhawk Mount
 }
@@ -81085,7 +81091,7 @@ Sells player units for <A22Q,DataA1,%> % of its value.
 }
 
 STRING 33114
-// Units: h0K4 (Raptor Mount), Name (Name)
+// Units: h0K4 (Raptor Mount), Tip (Tooltip - Basic)
 {
 Raptor Mount
 }
@@ -84822,7 +84828,7 @@ Scepter of Lordaeron
 }
 
 STRING 35028
-// Units: h0MG (Undead Horse Mount), Name (Name)
+// Units: h0MG (Undead Horse Mount), Tip (Tooltip - Basic)
 {
 Undead Horse Mount
 }
@@ -95588,7 +95594,7 @@ Summons a wall in the direction the hero is facing damaging ground units in its 
 }
 
 STRING 38599
-// Units: h0PA (Lynx Mount), Name (Name)
+// Units: h0PA (Lynx Mount), Tip (Tooltip - Basic)
 {
 Lynx Mount
 }
@@ -108822,7 +108828,7 @@ Create Corrupted Altar of Elders
 }
 
 STRING 43386
-// Units: h0UW (Phoenix Mount), Tip (Tooltip - Basic)
+// Units: h0UW (Phoenix Mount), Name (Name)
 {
 Phoenix Mount
 }
@@ -114900,7 +114906,7 @@ C
 }
 
 STRING 48582
-// Units: n0IW (Brutosaur Mount), Name (Name)
+// Units: n0IW (Brutosaur Mount), Tip (Tooltip - Basic)
 {
 Brutosaur Mount
 }
@@ -119585,7 +119591,7 @@ An intelligent Draenei citizen. Has mana regeneration aura.
 }
 
 STRING 50275
-// Units: h0UF (Talbuk Mount), Name (Name)
+// Units: h0UF (Talbuk Mount), Tip (Tooltip - Basic)
 {
 Talbuk Mount
 }
@@ -119609,7 +119615,7 @@ Nether Ray
 }
 
 STRING 50279
-// Units: h0UG (Panther Mount), Name (Name)
+// Units: h0UG (Panther Mount), Tip (Tooltip - Basic)
 {
 Panther Mount
 }
@@ -123515,7 +123521,7 @@ Advanced Fel
 }
 
 STRING 51371
-// Units: o09M (Black Dragon Mount), Tip (Tooltip - Basic)
+// Units: o09M (Black Dragon Mount), Name (Name)
 {
 Black Dragon Mount
 }
@@ -124559,25 +124565,25 @@ Xenedar
 }
 
 STRING 51689
-// Abilities: A1X5 (Stop), EditorSuffix (Editor Suffix)
-{
-(Command)
-}
-
-STRING 51690
 // Abilities: A1X6 (Attack), EditorSuffix (Editor Suffix)
 {
 (Command)
 }
 
-STRING 51691
+STRING 51690
 // Abilities: A1X7 (Patrol), EditorSuffix (Editor Suffix)
 {
 (Command)
 }
 
-STRING 51693
+STRING 51691
 // Abilities: A1X9 (Skill), EditorSuffix (Editor Suffix)
+{
+(Command)
+}
+
+STRING 51693
+// Abilities: A0JY (Hold Position), EditorSuffix (Editor Suffix)
 {
 (Command)
 }
@@ -124589,7 +124595,7 @@ Skill hero skills.
 }
 
 STRING 51697
-// Abilities: A0JY (Hold Position), EditorSuffix (Editor Suffix)
+// Abilities: A0DJ (Summon Mount), EditorSuffix (Editor Suffix)
 {
 (Command)
 }
@@ -125153,7 +125159,7 @@ Upgrade to Temple of Seas to enable the production of additional types of struct
 }
 
 STRING 51865
-// Units: h0Y8 (Goblin Car Mount), Name (Name)
+// Units: h0Y8 (Goblin Car Mount), Tip (Tooltip - Basic)
 {
 Goblin Car Mount
 }
@@ -125868,7 +125874,7 @@ STRING 52363
 }
 
 STRING 52364
-// Units: h0V5 (Snowy Owl Mount), Tip (Tooltip - Basic)
+// Units: h0V5 (Snowy Owl Mount), Name (Name)
 {
 Snowy Owl Mount
 }
@@ -126221,7 +126227,7 @@ Detect Leave
 }
 
 STRING 52816
-// Units: h0VI (Dwarf Car Mount), Name (Name)
+// Units: h0VI (Dwarf Car Mount), Tip (Tooltip - Basic)
 {
 Dwarf Car Mount
 }
@@ -126755,19 +126761,19 @@ Summon Monk
 }
 
 STRING 53313
-// Units: h0VJ (Orc Car Mount), Name (Name)
+// Units: h0VJ (Orc Car Mount), Tip (Tooltip - Basic)
 {
 Orc Car Mount
 }
 
 STRING 53314
-// Units: h0VK (Undead Car Mount), Name (Name)
+// Units: h0VK (Undead Car Mount), Tip (Tooltip - Basic)
 {
 Undead Car Mount
 }
 
 STRING 53315
-// Units: h0VL (Demon Car Mount), Name (Name)
+// Units: h0VL (Demon Car Mount), Tip (Tooltip - Basic)
 {
 Demon Car Mount
 }
@@ -131074,13 +131080,13 @@ K
 }
 
 STRING 56058
-// Units: h0XS (Ship Mount), Tip (Tooltip - Basic)
+// Units: h0XS (Ship Mount), Name (Name)
 {
 Ship Mount
 }
 
 STRING 56059
-// Units: h0XT (Submarine Mount), Tip (Tooltip - Basic)
+// Units: h0XT (Submarine Mount), Name (Name)
 {
 Submarine Mount
 }
@@ -131906,7 +131912,7 @@ Further increases the amount of lumber that Shredders can carry by <R0I3,mod1>.
 }
 
 STRING 56398
-// Units: h0Y1 (Elk Mount), Name (Name)
+// Units: h0Y1 (Elk Mount), Tip (Tooltip - Basic)
 {
 Elk Mount
 }
@@ -133228,7 +133234,7 @@ Slam
 }
 
 STRING 56989
-// Units: h0Y4 (Ancient of War Mount), Name (Name)
+// Units: h0Y4 (Ancient of War Mount), Tip (Tooltip - Basic)
 {
 Ancient of War Mount
 }
@@ -133816,7 +133822,7 @@ Outland
 }
 
 STRING 57257
-// Units: h0Y7 (Direhorn Mount), Name (Name)
+// Units: h0Y7 (Direhorn Mount), Tip (Tooltip - Basic)
 {
 Direhorn Mount
 }
@@ -135495,7 +135501,7 @@ Christmas Tree Wall
 }
 
 STRING 57723
-// Units: h0YB (Night Elf Car Mount), Name (Name)
+// Units: h0YB (Night Elf Car Mount), Tip (Tooltip - Basic)
 {
 Night Elf Car Mount
 }
@@ -137127,7 +137133,7 @@ Alash'anir,Brumeran,The Evalcharr,Lord Lakmaeran,Norissis,Prince Lakma,The Razza
 }
 
 STRING 58199
-// Units: e02G (Hippogryph Mount), Name (Name)
+// Units: e02G (Hippogryph Mount), Tip (Tooltip - Basic)
 {
 Hippogryph Mount
 }

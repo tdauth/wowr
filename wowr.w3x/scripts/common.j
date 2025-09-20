@@ -6083,7 +6083,7 @@ globals
     constant integer ABILITY_BANISH                                  = 'ACbn'
     constant integer ABILITY_SPELL_STEAL                             = 'Asps'
     constant integer ABILITY_CONTROL_MAGIC                           = 'A11C'
-    constant integer ABILITY_FEEDBACK                                = 'Afbk'
+    constant integer ABILITY_FEEDBACK                                = 'Afbb'
     constant integer ABILITY_INVISIBILITY                            = 'A25Z'
     constant integer ABILITY_MANA_SHIELD                             = 'ACmf'
     constant integer ABILITY_SIPHON_MANA                             = 'ACsm'
@@ -6458,6 +6458,7 @@ globals
     constant integer MANNOROTH                                       = 'Nman'
     constant integer KIL_JAEDEN                                      = 'N0FA'
     constant integer TICHONDRIUS_HERO                                = 'Utic'
+    constant integer MAGTHERIDON                                     = 'N01P'
     constant integer DOOM_LORD                                       = 'N0LG'
     // Lost Ones
     constant integer ELDER_SAGE                                      = 'N01K'
@@ -6630,6 +6631,8 @@ globals
     constant integer CAPTAIN_BOSS                                    = 'N0O9'
     constant integer GOBLIN_BANK_DIRECTOR                            = 'O05G'
     constant integer HERALD_OF_THE_DEEP_MOTHER                       = 'N0C8'
+    constant integer MAGTHERIDON_BOSS                                = 'Nmag'
+    constant integer GHOST_BOSS                                      = 'Ekgg'
 
     constant integer MATHOGS_CAGE                                    = 'I040'
 

@@ -171,6 +171,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "MANNOROTH",     -2,
         MenuItem "KILJAEDEN",     -2,
         MenuItem "TICHONDRIUS",     -2,
+        MenuItem "MAGTHERIDON",     -2,
         MenuItem "DOOM_LORD",     -2,
         MenuItem "ELDER_SAGE",     -2,
         MenuItem "VINDICATOR",     -2,

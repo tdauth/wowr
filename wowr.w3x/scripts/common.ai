@@ -2776,6 +2776,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(MANNOROTH)
     call AddHero(KIL_JAEDEN)
     call AddHero(TICHONDRIUS_HERO)
+    call AddHero(MAGTHERIDON)
     call AddHero(DOOM_LORD)
     // Draenei
     call AddHero(ELDER_SAGE)
