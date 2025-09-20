@@ -1407,13 +1407,6 @@ StringList {
     CHANGE_PRIMARY_ATTRIBUTE_TO_X      "Change primary attribute to %1%.",
     CHANGE_ATTACK_TO_X                 "Change attack to %1%.",
     RANGE                              "Range",
-    // Standard Hero Abilities
-    ADDING_ABILITY_X                   "Adding ability %1%.",
-    ONLY_AVAILABLE_RESKILLABLE_HEROES  "Only available for reskillable heroes.",
-    ONLY_AVAILABLE_VIP_PLAYERS         "Only available for VIP players.",
-    REQUIRES_HERO_LEVEL_OR_VIP         "Requires hero level %1% or VIP or everything unlocked.",
-    DOT_NOT_AVAILABLE                  "Not available.",
-    ONLY_HEROES_CAN_CHANGE_ABILITY     "Only heroes can change their standard ability.",
     // Power Generator
     HOSTILE_BUILDINGS_NEARBY           "Cannot be constructed with hostile buildings nearby.",
     // Computer
@@ -1569,6 +1562,9 @@ StringList {
     PREVIOUS_PAGE_X_Y                  "Previous Page (%1%/%2%)",
     ABILITY_CHANGED_RANGE              "Changed ability to %1% (%2%/%3%).",
     ABILITY_NO_OTHER                   "No other ability.",
+    AUTO_SKILL_MESSAGE                 "Auto skilled.",
+    REQUIRES_HERO_LEVEL_OR_VIP         "Requires hero level %1% or VIP or everything unlocked.",
+    DOT_NOT_AVAILABLE                  "Not available.",
     // Classes
     CLASSES                            "Classes",
     HERO_HAS_DEFAULT_CLASS_X           "Hero has default class %1%.",
@@ -1591,7 +1587,7 @@ StringList {
     RAIN_OF_FIRE_TOOLTIP               "Calls down waves of fire that damage units in an area. Each wave deals <this,Hbz2,x> initial damage and <this,Hbz5,x> damage per second for <this,adur,x> seconds. |nLasts for <this,Hbz1,x> waves.|n|n|cffffcc00Increases the damage per shard, damage per second from burning per target, maximum wave damage, maximum shards and waves with every level.|r",
     FLAME_STRIKE_TOOLTIP               "Conjures a pillar of fire which damages ground units in a target area over time. Cause <this,Hfs1,x> damage.|n|n|cffffcc00Increases the damage and area of effect with every level.|r",
     METEOR_TOOLTIP                     "Summons a powerful meteor which causes <this,cr00,x> damage to nearby ground units and stuns them for <A1HE,adur,x> seconds.|n|n|cffffcc00Increases the damage and area of effect with every level.|r",
-    SUMMON_FIRE_ELEMENTAL_TOOLTIP      "Summons a fire elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the fire elemental with every level.|r",
+    SUMMON_LAVA_SPAWN_TOOLTIP          "Summons a Lava Spawn, a resilient and deadly fire creature. As a Lava Spawn deals damage, it consumes the flesh of its target, eventually splitting into two healthy Lava Spawns.|nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Lava Spawn with every level.|r",
     VOLCANO_TOOLTIP                    "Causes the ground to erupt into a massive Volcano. Every <this,Nvc3,x> seconds, a wave of molten rocks is hurled from the Volcano at nearby ground units and buildings, causing <this,Nvc5,x> damage to each target and stunning it for <this,adur,x> seconds. Buildings take <this,Nvc4,x> times more damage from molten rocks than units do.|nLasts fifteen seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     FLAME_STORM_TOOLTIP                "Summons a powerful flame storm which damages enemy units around.|n|n|cffffcc00Increases the damage with every level.|r",
     BREATH_OF_FIRE_TOOLTIP             "Breathes a cone of fire at enemy units, dealing <this,Ucs1,x> initial damage. Units that have Drunken Haze on them will ignite and burn for <this,Nbf5,x> damage per second over <this,adur,x> seconds.|n|n|cffffcc00Increases the initial damage and damage per second with every level.|r",
@@ -1772,7 +1768,7 @@ StringList {
     MASS_FINGER_OF_DEATH_TOOLTIP       "Instantly turns a creature or building inside-out, destroying it utterly. Causes <A177,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
     MASS_DOOM_TOOLTIP                  "Marks target units for the manifestation of a Demon. The afflicted units cannot cast spells, have <A14D,Ndo5,x,%>% reduced movement speed, and will take <A14D,Ndo1,x> damage per second until they die. Upon their death, a great Demon will spawn from their corpse. Doom cannot be dispelled or cancelled. Maximum target unit level is <A14D,Ndo4,x>.|n|n|cffffcc00Increases the damage per second and maximum creep level with every level.|r",
     ATTRIBUTE_BONUS_TOOLTIP            "Gives a total of <this,Iagi,x> points to Agility, Intelligence, and Strength. |n|n|cffffcc00Increases the stats with every level.|r",
-    SUMMON_LAVA_SPAWN_TOOLTIP          "Summons a Lava Spawn, a resilient and deadly fire creature. As a Lava Spawn deals damage, it consumes the flesh of its target, eventually splitting into two healthy Lava Spawns.|nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Lava Spawn with every level.|r",
+    SUMMON_FIRE_ELEMENTAL_TOOLTIP      "Summons a fire elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the fire elemental with every level.|r",
     INFERNO_TOOLTIP                    "Summons an Infernal from the sky causing <this,Uin1,x> damage to enemy ground units on impact and stunning them for <this,adur,x> seconds.|nLasts <this,Uin2,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Infernal with every level.|r",
     DRAIN_TOOLTIP                      "Absorbs the life essence and mana of a target enemy unit by taking hit points from it every second and giving them to Gul'dan. |n|nDrain also applies the current rank of the Black Arrow debuff to the target. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the drained and transfered life and mana per second with every level.|r",
     SOUL_BURN_TOOLTIP                  "Wreaths an enemy unit in magical flames which cause <this,Nso1,x> damage per second, prevent the casting of spells, and reduce attack damage by <this,Nso3,x,%>%.|nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the damaget and duration with every level.|r",

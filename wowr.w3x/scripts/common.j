@@ -6003,7 +6003,7 @@ globals
     constant integer ABILITY_METEOR_DUMMY                            = 'A1HE'
     constant integer ABILITY_METEOR_ITEM                             = 'A22V'
     constant integer ABILITY_METEOR_ARCANE_OBSERVATORY               = 'A237'
-    constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
+    constant integer ABILITY_SUMMON_LAVA_SPAWN                       = 'A0CO'
     constant integer ABILITY_VOLCANO                                 = 'A112'
     constant integer ABILITY_FLAME_STORM                             = 'A114'
     constant integer ABILITY_FLAME_STORM_STARFALL                    = 'A12L'
@@ -6237,7 +6237,7 @@ globals
     // Other abilities
     constant integer ABILITY_ATTRIBUTE_BONUS                         = 'A041'
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
-    constant integer ABILITY_SUMMON_LAVA_SPAWN                       = 'A0CO'
+    constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
     constant integer ABILITY_INFERNO                                 = 'A1V1'
     constant integer ABILITY_DRAIN                                   = 'A03C'
     constant integer ABILITY_SOUL_BURN                               = 'A06Z'
