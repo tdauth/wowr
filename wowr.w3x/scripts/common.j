@@ -6533,7 +6533,7 @@ globals
     constant integer BANDIT_LORD                                     = 'H07B'
     constant integer DARK_WIZARD                                     = 'H05U'
     constant integer ASSASSIN                                        = 'H07C'
-    constant integer THIEF                                           = 'H0Y0'
+    constant integer ROGUE                                           = 'H0Y0'
     // Dungeon
     constant integer GIANT_SKELETON                                  = 'U02W'
     constant integer SIEGE_GOLEM                                     = 'N0HY'

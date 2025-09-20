@@ -566,7 +566,7 @@ STRING 94
 }
 
 STRING 95
-// Buffs/Effects: B005 (), Bufftip (Tooltip)
+// Buffs/Effects: B009 (), Bufftip (Tooltip)
 {
 Golem
 }
@@ -731,6 +731,12 @@ STRING 122
 // Items: I03P (Skin Malfurion), Tip (Tooltip - Basic)
 {
 Skin Malfurion
+}
+
+STRING 123
+// Units: H0Y0 (Rogue), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Rogue.|r|n|cffffcc00Mount: Crow.|r
 }
 
 STRING 124
@@ -4328,7 +4334,7 @@ Rogue
 }
 
 STRING 727
-// Items: I07Q (Rogue), Name (Name)
+// Units: H0Y0 (Rogue), Name (Name)
 {
 Rogue
 }
@@ -5641,10 +5647,22 @@ STRING 953
 (Freelancer)
 }
 
+STRING 954
+// Units: H0Y0 (Rogue), Awakentip (Tooltip - Awaken)
+{
+Revive Rogue
+}
+
 STRING 955
 // Abilities: A028 (Demigod's Wrath), Researchtip (Tooltip - Learn)
 {
 Learn Dem|cffffcc00i|rgod´s Wrath
+}
+
+STRING 956
+// Units: H0Y0 (Rogue), Revivetip (Tooltip - Revive)
+{
+Revive Rogue
 }
 
 STRING 957
@@ -6397,6 +6415,12 @@ STRING 1083
 // Abilities: A0VZ (Back), EditorSuffix (Editor Suffix)
 {
 (Skills)
+}
+
+STRING 1084
+// Units: H0Y0 (Rogue), Tip (Tooltip - Basic)
+{
+Summon Rogue
 }
 
 STRING 1085
@@ -8374,6 +8398,12 @@ STRING 1416
 Skin of a Witch Doctor.
 }
 
+STRING 1417
+// Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Necromancer.|r|n|cffffcc00Mount: Crow.|r
+}
+
 STRING 1418
 // Items: I0ZQ (Wolf Spirit Hood), Tip (Tooltip - Basic)
 {
@@ -8396,6 +8426,12 @@ STRING 1421
 // Upgrades: R02L (Liquid Fire), Name (Name)
 {
 Chemistry
+}
+
+STRING 1422
+// Items: I07Q (Rogue), Tip (Tooltip - Basic)
+{
+Rogue
 }
 
 STRING 1428
@@ -9595,12 +9631,6 @@ STRING 1715
 // Items: I16Q (Skin Peasant), Ubertip (Tooltip - Extended)
 {
 Skin of a Peasant.
-}
-
-STRING 1716
-// Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at ranged assaults. Can learn Silence, Polymorph, Brilliance Aura and Animate Dead. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 1717
@@ -16366,12 +16396,6 @@ STRING 3130
 // Units: O0A1 (Sludge Monstrosity), Ubertip (Tooltip - Extended)
 {
 Powerful Hero, adept at crushing the enemy. Can learn Telekinesis, Mass Slow, Envenomed Weapons, and Mass Devour. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 3131
-// Units: H0Y0 (Thief), Ubertip (Tooltip - Extended)
-{
-Criminal Hero, exceptional at tricking and robbing enemies. Can learn Mass Invisibility, Pickpocketing, Find Artifacts and Transmute. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 3139
@@ -44270,22 +44294,10 @@ STRING 10054
 Mass Forestation
 }
 
-STRING 10055
-// Abilities: A17G (Mass Forestation), Tip (Tooltip - Normal)
-{
-Mass Forestation
-}
-
 STRING 10056
 // Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
-}
-
-STRING 10057
-// Abilities: A17G (Mass Forestation), Ubertip (Tooltip - Normal - Extended)
-{
-Converts all enemy ground units in the target area into trees.
 }
 
 STRING 10058
@@ -49243,12 +49255,6 @@ STRING 10974
 Summon Akama
 }
 
-STRING 10975
-// Units: H0Y0 (Thief), Awakentip (Tooltip - Awaken)
-{
-Revive Thief
-}
-
 STRING 10980
 // Units: O02T (Blademaster), Ubertip (Tooltip - Extended)
 {
@@ -49665,12 +49671,6 @@ STRING 11073
 // Upgrades: R038 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
 Increases Goblin Sorceress' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Ancestral Spirit.
-}
-
-STRING 11075
-// Units: H0Y0 (Thief), Revivetip (Tooltip - Revive)
-{
-Revive Thief
 }
 
 STRING 11076
@@ -50891,12 +50891,6 @@ STRING 11458
 Disables housing and tower limits.
 }
 
-STRING 11459
-// Units: H0Y0 (Thief), Tip (Tooltip - Basic)
-{
-Summon Thief
-}
-
 STRING 11460
 // Items: I02R (Unique - Skull of Gul'dan), Ubertip (Tooltip - Extended)
 {
@@ -51104,7 +51098,7 @@ Banner Gnome
 }
 
 STRING 11506
-// Buffs/Effects: B009 (), Bufftip (Tooltip)
+// Buffs/Effects: B005 (), Bufftip (Tooltip)
 {
 Golem
 }
@@ -56536,7 +56530,7 @@ STRING 14417
 }
 
 STRING 14432
-// Units: H0Y0 (Thief), Propernames (Proper Names)
+// Units: H0Y0 (Rogue), Propernames (Proper Names)
 {
 Velkar the Thief,Bink the Burglar,Vagnhild,Kang the Soul Thief,Thaddock the Thief,Nexus-Thief Asar
 }
@@ -58524,7 +58518,7 @@ Revive Dryad
 }
 
 STRING 16073
-// Units: H0Y0 (Thief), Name (Name)
+// Items: I10P (Thief), Name (Name)
 {
 Thief
 }
@@ -96692,7 +96686,7 @@ Battle Mage
 }
 
 STRING 38918
-// Items: I10P (Thief), Name (Name)
+// Items: I10P (Thief), Tip (Tooltip - Basic)
 {
 Thief
 }
@@ -96701,12 +96695,6 @@ STRING 38919
 // Upgrades: R02Q (Liquid Fire), Tip (Tooltip)
 {
 Research Fuel
-}
-
-STRING 38920
-// Items: I10P (Thief), Tip (Tooltip - Basic)
-{
-Thief
 }
 
 STRING 38921
@@ -113713,7 +113701,7 @@ Strong portal building.|n|nOpens a Portal which can have another allied Portal a
 }
 
 STRING 46590
-// Items: I07Q (Rogue), Tip (Tooltip - Basic)
+// Items: I07Q (Rogue), Name (Name)
 {
 Rogue
 }
