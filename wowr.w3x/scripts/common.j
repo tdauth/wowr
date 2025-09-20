@@ -6080,7 +6080,7 @@ globals
 
     // Arcanist
     constant integer ABILITY_BANISH                                  = 'ACbn'
-    constant integer ABILITY_SPELL_STEAL                             = 'Asps'
+    constant integer ABILITY_SPELL_STEAL                             = 'A07Z'
     constant integer ABILITY_CONTROL_MAGIC                           = 'A11C'
     constant integer ABILITY_FEEDBACK                                = 'Afbb'
     constant integer ABILITY_INVISIBILITY                            = 'A25Z'
