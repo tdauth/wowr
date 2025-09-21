@@ -3180,6 +3180,7 @@ globals
     constant integer SEA_GIANT_CUSTOMIZABLE                          = 'H0FB'
     constant integer CUSTOMIZABLE_HERO                               = 'H0Q3'
     constant integer ITEM_VALUES_DUMMY_HERO                          = 'H04W'
+    constant integer MAX_ITEM_STACKS_DUMMY_HERO                      = 'H019'
 
     constant integer ITEM_TYPE_RANDOM                                = 'I19T'
     constant integer ITEM_TYPE_RANDOM_HERO                           = 'I068'
