@@ -6032,7 +6032,7 @@ globals
     constant integer ABILITY_ENDURANCE_AURA                          = 'SCae'
     constant integer ABILITY_FAR_SIGHT                               = 'A26G'
     constant integer ABILITY_SHOCKWAVE                               = 'ACsh'
-    constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
+    constant integer ABILITY_SLAM                                    = 'ACtc'
     constant integer ABILITY_SUMMON_GOLEM                            = 'A26I'
     constant integer ABILITY_BLOODLUST                               = 'ACbl'
     constant integer ABILITY_EARTH_QUAKE                             = 'S00U'
@@ -6097,7 +6097,7 @@ globals
     constant integer ABILITY_MANA_BURN                               = 'Ambd'
     constant integer ABILITY_DEVOUR_MAGIC                            = 'ACde'
     constant integer ABILITY_FEL                                     = 'A11K'
-    constant integer ABILITY_DARK_SUMMONING                          = 'A08B'
+    constant integer ABILITY_DARK_SUMMONING                          = 'A0PQ'
     constant integer ABILITY_HOWL_OF_TERROR                          = 'Acht'
     constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_DARK_PORTAL                             = 'A12C'
@@ -6106,7 +6106,7 @@ globals
     constant integer ABILITY_FINGER_OF_DEATH                         = 'Afod'
 
     // Druid
-    constant integer ABILITY_REJUVENATION                            = 'A01I'
+    constant integer ABILITY_REJUVENATION                            = 'ACrj'
     constant integer ABILITY_FAERIE_FIRE                             = 'ACff'
     constant integer ABILITY_FORCE_OF_NATURE                         = 'ACfr'
     constant integer ABILITY_THORNS_AURA                             = 'ACah'
@@ -6257,6 +6257,7 @@ globals
     constant integer ABILITY_PICKPOCKETING                           = 'A17B'
     constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
     constant integer ABILITY_PARRY                                   = 'A1Z5'
+    constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
