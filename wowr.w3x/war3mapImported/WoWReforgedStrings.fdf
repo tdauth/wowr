@@ -1102,11 +1102,6 @@ StringList {
     STATS_TITLE                        "%1% %2% (%3%/%4%)",
     SINGLEPLAYER                       "Singleplayer",
     MULTIPLAYER                        "Multiplayer",
-    STATS_T                            "T",
-    STATS_C                            "C",
-    H1                                 "H1",
-    H2                                 "H2",
-    H3                                 "H3",
     STATS_LEFT                         "%1% (left)",
     STATS_DEFEATED                     "%1% (defeated)",
     // AI UI

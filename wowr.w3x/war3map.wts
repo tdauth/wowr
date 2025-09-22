@@ -3033,7 +3033,7 @@ Build Tiny Death Tower
 STRING 508
 // Items: I07P (Death Knight), Ubertip (Tooltip - Extended)
 {
-Changes the class to Death Knight:|n- Damage|n- Renimation|n- Weakening
+Changes the class to Death Knight:|n- Damage|n- Reanimation|n- Weakening
 }
 
 STRING 509
@@ -5818,7 +5818,7 @@ STRING 981
 STRING 982
 // Items: I07Q (Rogue), Ubertip (Tooltip - Extended)
 {
-Changes the class to Rogue:|n- Poison|n- Hiding|n- Capture|n- Items
+Changes the class to Rogue:|n- Poison|n- Assassinations|n- Capture|n- Items
 }
 
 STRING 983
