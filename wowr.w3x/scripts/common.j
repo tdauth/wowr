@@ -3690,7 +3690,7 @@ globals
     constant integer PIRATE                                          = 'h0AM'
     constant integer EGG_SACK                                        = 'o0AN'
     constant integer CREEP_EXPLOSIVE_BARREL                          = 'h0P9'
-    constant integer DJINN                                           = 'h0V9'
+    constant integer DJINN                                           = 'h083'
 
     constant integer DARK_PHOENIX                                    = 'h085'
     constant integer GREATER_THUNDER_PHOENIX                         = 'h0VF'
