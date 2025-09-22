@@ -2858,12 +2858,15 @@ function InitHeroes takes nothing returns nothing
     // Dragonkin
     call AddHero(EVOKER)
     call AddHero(DRAGONSPAWN)
-    // Neutral
+    // Elements
     call AddHero(FIRELORD)
+    call AddHero(FROSTLORD)
+    call AddHero(EARTHLORD)
+    call AddHero(WINDLORD)
+    // Neutral
     call AddHero(SEA_GIANT)
     call AddHero(REVENANT_DEEPLORD)
     call AddHero(MAGNATAUR_DESTROYER)
-    call AddHero(ICECROWN_OVERLORD)
     call AddHero(ANCIENT_HYDRA)
     call AddHero(BROOD_MOTHER)
     call AddHero(ANCIENT_SASQUATCH)

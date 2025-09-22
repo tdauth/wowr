@@ -1509,3 +1509,4 @@ Here is a list of some modified versions online:
 * GooS: [BTNdancingLightningGS](https://www.hiveworkshop.com/threads/btndancinglightninggs.117514/)
 * BLazeKraze: [BTNForest](https://www.hiveworkshop.com/threads/btnforest.265678/)
 * sPy: [HolyAura](https://www.hiveworkshop.com/threads/holyaura.158083/)
+* Yoru: [BTNWindGust](https://www.hiveworkshop.com/threads/btnwindgust.169389/)
