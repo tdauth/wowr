@@ -2846,7 +2846,7 @@ function InitHeroes takes nothing returns nothing
     // Bandit
     call AddHero(BANDIT_LORD)
     call AddHero(ASSASSIN)
-    call AddHero(THIEF)
+    call AddHero(ROGUE)
     call AddHero(DARK_WIZARD)
     // Dungeon
     call AddHero(GIANT_SKELETON)
