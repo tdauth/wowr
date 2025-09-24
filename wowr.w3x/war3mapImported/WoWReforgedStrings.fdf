@@ -1805,5 +1805,5 @@ StringList {
     SUMMON_EARTH_ELEMENTAL_TOOLTIP     "Summons an earth elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the earth elemental with every level.|r",
     WEB_TOOLTIP                        "Binds a target enemy air unit in webbing, forcing it to the ground. Webbed units can be hit as though they were land units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
-    SLOW_TOOLTIP                       "Slows a target enemy unit's attack rate by <this,Slo2,x,%>% and movement speed by <this,Slo1,x,%>%. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the percentages with every level.|r"",
+    SLOW_TOOLTIP                       "Slows a target enemy unit's attack rate by <this,Slo2,x,%>% and movement speed by <this,Slo1,x,%>%. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the percentages with every level.|r",
 }
