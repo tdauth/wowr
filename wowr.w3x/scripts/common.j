@@ -3065,6 +3065,10 @@ globals
     constant integer FORTIFIED_HIDEOUT                               = 'h00K'
     constant integer GUARDIANS_CITADEL                               = 'h00L'
 
+    constant integer ABILITY_SPELL_BOOK_HIDEOUT                      = 'A04X'
+    constant integer ABILITY_SHROUD_OF_PROTECTION                    = 'A026'
+    constant integer ABILITY_SHROUD_OF_PROTECTION_DUMMY              = 'h0JJ'
+
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
     constant integer WYVERN_MOUNT                                    = 'o003'
@@ -6260,6 +6264,7 @@ globals
     constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
     constant integer ABILITY_WEB                                     = 'ACwb'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
+    constant integer ABILITY_SLOW                                    = 'ACsw'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
@@ -6631,6 +6636,7 @@ globals
     constant integer VOID_REVENANT_BOSS                              = 'U002'
     constant integer STORMBRINGER_BOSS                               = 'E003'
     constant integer LICH_KING_BOSS                                  = 'Uear'
+    constant integer TARAN_ZHU                                       = 'N00Y'
 
     constant integer MAIEV_BOSS                                      = 'Ewrd'
     constant integer KAEL_BOSS                                       = 'H01J'
