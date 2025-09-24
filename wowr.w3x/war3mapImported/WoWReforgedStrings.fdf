@@ -1721,7 +1721,7 @@ StringList {
     MISS_AURA_TOOLTIP                  "Increases the chance to miss attacks life of nearby enemy units to <this,cr00,x> %.|n|n|cffffcc00Increases the chance with every level.|r",
     POWER_WARD_TOOLTIP                 "Summons an immovable ward that regenerates <ACnr,Oar1,%> % life points and <ANre,Arm1,%>% mana points of a nearby friendly non-mechanical units per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the percentage of regenerated life and mana points with every level.|r",
     DRUNKEN_AURA_TOOLTIP               "Gives a chance of <this,cr02,x> % percent chance to avoid attacks and a chance of <this,cr00,x> % to do <this,cr01,x> times damage to nearby friendly units. |n|n|cffffcc00Increases the chances and damage factor with every level.|r",
-    CLONE_TOOLTIP                      "Clones a target unit for <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
+    CLONE_TOOLTIP                      "Clones a target unit for <this,adur,x> seconds. The clone deals and receives full damage.|n|n|cffffcc00Increases the duration with every level.|r",
     STORM_EARTH_FIRE_TOOLTIP           "Splits the hero into elements, forming specialized warriors. If any of them survive until the end of their summoned timer, the hero is reborn. |nLasts <this,ahdu,x> seconds.|n|n|cffffcc00Increases the stats with every level.|r",
     // Tinker
     REPAIR_TOOLTIP                     "Repairs mechanical units and structures at the cost of resources with a ratio of <this,Rep1,x,%> %. Can repair the hero if the hero is mechanical. |n|n|cffffcc00Increases the ratio of repaired hit points with every level.|r",
