@@ -2863,6 +2863,7 @@ function InitHeroes takes nothing returns nothing
     call AddHero(FROSTLORD)
     call AddHero(EARTHLORD)
     call AddHero(WINDLORD)
+    call AddHero(VOID_LORD)
     // Neutral
     call AddHero(SEA_GIANT)
     call AddHero(REVENANT_DEEPLORD)

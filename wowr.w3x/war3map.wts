@@ -1646,7 +1646,7 @@ STRING 274
 }
 
 STRING 275
-// Abilities: A0W5 (Power Ward), EditorSuffix (Editor Suffix)
+// Abilities: A0W5 (Fountain of Power), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3283,7 +3283,7 @@ STRING 549
 }
 
 STRING 550
-// Units: o026 (Power Ward), Name (Name)
+// Buffs/Effects: B01B (), Bufftip (Tooltip)
 {
 Power Ward
 }
@@ -9771,6 +9771,54 @@ STRING 1645
 S
 }
 
+STRING 1646
+// Units: o026 (Fountain of Power), Name (Name)
+{
+Fountain of Power
+}
+
+STRING 1647
+// Units: o026 (Fountain of Power), EditorSuffix (Name - Editor Suffix)
+{
+(Ward)
+}
+
+STRING 1648
+// Items: I189 (Tiny Fountains of Power), Name (Name)
+{
+Tiny Fountains of Power
+}
+
+STRING 1649
+// Items: I189 (Tiny Fountains of Power), Tip (Tooltip - Basic)
+{
+Purchase Tiny Fountains of Power
+}
+
+STRING 1650
+// Items: I189 (Tiny Fountains of Power), Description (Description)
+{
+Conjures a Fountain of Power.
+}
+
+STRING 1651
+// Items: I189 (Tiny Fountains of Power), Ubertip (Tooltip - Extended)
+{
+Summons an immovable fountain that heals <A01Q,DataA1,%>% and regenerates <A0FR,DataA1,%>% mana of nearby friendly non-mechanical unit's hit points per second. |nContains <whwd,uses> charges. |nLasts <A1QC,Dur1> seconds.
+}
+
+STRING 1652
+// Abilities: A0W5 (Fountain of Power), Name (Name)
+{
+Fountain of Power
+}
+
+STRING 1653
+// Abilities: A1QC (Fountain of Power), Name (Name)
+{
+Fountain of Power
+}
+
 STRING 1660
 // Buffs/Effects: B00O (Cage), EditorSuffix (Editor Suffix)
 {
@@ -16092,12 +16140,6 @@ STRING 2985
 Freelancer AI must harvest gold a bit faster since they share one single Gold Mine.
 }
 
-STRING 2986
-// Items: I189 (Power Wards), Ubertip (Tooltip - Extended)
-{
-Summons an immovable ward that heals <A01Q,DataA1,%>% and regenerates <A0FR,DataA1,%>% mana of nearby friendly non-mechanical unit's hit points per second. |nContains <whwd,uses> charges. |nLasts <A1QC,Dur1> seconds.
-}
-
 STRING 2987
 // Abilities: A05T (Capture Cargo), Name (Name)
 {
@@ -18426,22 +18468,10 @@ STRING 3468
 Cunning Hero, adept at healing magics and voodoo curses. Can learn Power Ward, Far Sight, Mass Cripple and Mass Hex. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Bat.|r|n|cffffcc00Standard Ability: Invisibility.|r
 }
 
-STRING 3469
-// Abilities: A0W5 (Power Ward), Name (Name)
-{
-Power Ward
-}
-
 STRING 3470
 // Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r
-}
-
-STRING 3471
-// Abilities: A0W5 (Power Ward), Tip (Tooltip - Normal)
-{
-Power Ward
 }
 
 STRING 3479
@@ -20610,12 +20640,6 @@ STRING 3970
 Warrior Hero, exceptional at absorbing damage and melee combat. Can learn Shockwave, War Stomp, Endurance Aura and Reincarnation. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
-STRING 3971
-// Abilities: A1QC (Power Ward), Name (Name)
-{
-Power Ward
-}
-
 STRING 3974
 // Units: E003 (Stormbringer), EditorSuffix (Name - Editor Suffix)
 {
@@ -20662,12 +20686,6 @@ STRING 4019
 // Items: I05L (Orb of Orbs), Tip (Tooltip - Basic)
 {
 Craft Orb of Orbs
-}
-
-STRING 4020
-// Buffs/Effects: B01B (), Bufftip (Tooltip)
-{
-Power Ward
 }
 
 STRING 4022
@@ -47291,12 +47309,6 @@ STRING 10539
 Hire Neutral Citizen (male)
 }
 
-STRING 10540
-// Items: I189 (Power Wards), Name (Name)
-{
-Power Wards
-}
-
 STRING 10541
 {
 Return to Thrall for your payment.
@@ -47310,18 +47322,6 @@ Kill the Harpy Queen.
 STRING 10543
 {
 Return her heart to Cairne.
-}
-
-STRING 10544
-// Items: I189 (Power Wards), Tip (Tooltip - Basic)
-{
-Purchase Power Wards
-}
-
-STRING 10545
-// Items: I189 (Power Wards), Description (Description)
-{
-Conjures a Power Ward.
 }
 
 STRING 10546
@@ -76395,7 +76395,7 @@ Train Spearman
 }
 
 STRING 30066
-// Abilities: A0W5 (Power Ward), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Fountain of Power), Hotkey (Hotkey - Normal)
 {
 P
 }

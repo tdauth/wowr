@@ -3179,7 +3179,6 @@ globals
     constant integer UPG_DRAGON_ROOST                                = 'R06M'
     constant integer UPG_ARCANE_PORTALS                              = 'R026'
 
-    constant integer VOID_LORD                                       = 'N09X'
     constant integer ARCHANGEL                                       = 'H0A3'
     constant integer SEA_GIANT_CUSTOMIZABLE                          = 'H0FB'
     constant integer CUSTOMIZABLE_HERO                               = 'H0Q3'
@@ -3382,7 +3381,7 @@ globals
 
     // Witch Doctor
     constant integer ITEM_PEACE_WARDS                                = 'I0R4' // doctor
-    constant integer ITEM_POWER_WARDS                                = 'I189' // grand master
+    constant integer ITEM_TINY_FOUNTAINS_OF_POWER                    = 'I189' // grand master
     constant integer ITEM_HEALING_WARDS                              = 'whwd' // master
     constant integer ITEM_MANA_WARDS                                 = 'I09I' // adept
     constant integer ITEM_STASIS_TRAPS                               = 'I09K' // advanced
@@ -6019,9 +6018,9 @@ globals
 
     // Hydromancer
     constant integer ABILITY_CRUSHING_WAVE                           = 'ACcv'
-    constant integer ABILITY_CHAIN_LIGHTNING                         = 'ACcl'
+    constant integer ABILITY_FOUNTAIN_OF_POWER                       = 'A0W5'
     constant integer ABILITY_SUMMON_WATER_ELEMENTAL                  = 'A0AQ'
-    constant integer ABILITY_FORKED_LIGHTNING                        = 'ACfl'
+    constant integer ABILITY_REFLECTION                              = 'A1QL'
     constant integer ABILITY_BREATH_OF_FROST                         = 'ACbf'
     constant integer ABILITY_FROST_ARMOR                             = 'ACf2'
     constant integer ABILITY_BLIZZARD                                = 'ACbz'
@@ -6045,17 +6044,17 @@ globals
 
     // Aeromancer
     constant integer ABILITY_CYCLONE                                 = 'ACcy'
-    constant integer ABILITY_MIRROR_IMAGE                            = 'A09A'
+    constant integer ABILITY_CHAIN_LIGHTNING                         = 'ACcl'
     constant integer ABILITY_WIND_GUST                               = 'A01I'
     constant integer ABILITY_EVASION                                 = 'ACev'
     constant integer ABILITY_CLOUD                                   = 'A12D'
     constant integer ABILITY_BLINK                                   = 'A0OZ'
-    constant integer ABILITY_DISARMAMENT                             = 'A16K'
+    constant integer ABILITY_FORKED_LIGHTNING                        = 'ACfl'
     constant integer ABILITY_SUMMON_DJINN                            = 'A0VH'
     constant integer ABILITY_AERIAL_SHACKLES                         = 'A01P'
+    constant integer ABILITY_LIGHTNING_SHIELD                        = 'ACls'
     constant integer ABILITY_TORNADO                                 = 'A024'
     constant integer ABILITY_TORNADO_BUILDING_DAMAGE_AURA            = 'Atdg'
-    constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
     // Paladin
     constant integer ABILITY_HEAL                                    = 'Anhe'
@@ -6213,17 +6212,17 @@ globals
     // Monk
     constant integer ABILITY_SLIDE                                   = 'A0W7'
     constant integer ABILITY_CHARGE                                  = 'A0TU'
-    constant integer ABILITY_DISCHARGE                               = 'A12S'
     constant integer ABILITY_DRUNKEN_BRAWLER                         = 'A060'
-    constant integer ABILITY_REFLECTION                              = 'A1QL'
+    constant integer ABILITY_DISARMAMENT                             = 'A16K'
     constant integer ABILITY_DRUNKEN_HAZE                            = 'A06X'
     constant integer ABILITY_MISS_AURA                               = 'A1KU'
-    constant integer ABILITY_POWER_WARD                              = 'A0W5'
+    constant integer ABILITY_MIRROR_IMAGE                            = 'A09A'
     constant integer ABILITY_LIFE_REGENERATION_NEUTRAL               = 'ACnr'
     constant integer ABILITY_MANA_REGENERATION_NEUTRAL               = 'ANre'
     constant integer ABILITY_DRUNKEN_AURA                            = 'A088'
     constant integer ABILITY_CLONE                                   = 'A033'
     constant integer ABILITY_STORM_EARTH_FIRE                        = 'A070'
+    constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
@@ -6265,6 +6264,7 @@ globals
     constant integer ABILITY_WEB                                     = 'ACwb'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
     constant integer ABILITY_SLOW                                    = 'ACsw'
+    constant integer ABILITY_DISCHARGE                               = 'A12S'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
@@ -6558,6 +6558,7 @@ globals
     constant integer FROSTLORD                                       = 'N0K4'
     constant integer EARTHLORD                                       = 'N00W'
     constant integer WINDLORD                                        = 'N001'
+    constant integer VOID_LORD                                       = 'N09X'
     // Neutral
     constant integer SEA_GIANT                                       = 'N0GH'
     constant integer REVENANT_DEEPLORD                               = 'U03J'
