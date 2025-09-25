@@ -1761,11 +1761,21 @@ StringList {
     MIND_CONTROL_TOOLTIP               "The owning player of the target unit is forced to share control with you for <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     CHARM_TOOLTIP                      "Takes permanent control of a target enemy unit. |nCharm cannot be used on Heroes, or creeps above level <this,Nch1,x>. When Charm is being used on workers, they will die instantly. |n|n|cffffcc00Increases the maximum creep level with every level.|r",
     BIG_BAD_VOODOO_TOOLTIP             "Turns all friendly units invulnerable in an area around the hero.|nThe hero does not turn invulnerable.|nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the duration with every level.|r",
+    // Trainer
+    ATTRIBUTE_BONUS_TOOLTIP            "Gives a total of <this,Iagi,x> points to Agility, Intelligence, and Strength.|n|n|cffffcc00Increases the stats with every level.|r",
+    DAMAGE_BONUS_TOOLTIP               "Increases the attack damage of the Hero by <his,Iatt,x>.|n|n|cffffcc00Increases the damage bonus with every level.|r",
+    ARMOR_BONUS_TOOLTIP                "Increases the armor of the Hero by <this,Idef,x>.|n|n|cffffcc00Increases the armor bonus with every level.|r",
+    ATTACK_SPEED_BONUS_TOOLTIP         "Increases the attack speed of the Hero by <this,Isx1,x>.|n|n|cffffcc00Increases the attack speed bonus with every level.|r",
+    MOVE_SPEED_BONUS_TOOLTIP           "Increases the movement speed of the Hero by <this,Imvb,x>.|n|n|cffffcc00Increases the movement speed bonus with every level.|r",
+    LIFE_BONUS_TOOLTIP                 "Increases the Hero's maximum hit points by <this,Ilif,x>.|n|n|cffffcc00Increases the maximum hit points with every level.|r",
+    MANA_BONUS_TOOLTIP                 "Increases the Hero's maximum mana points by <this,Iman,x>.|n|n|cffffcc00Increases the maximum mana points with every level.|r",
+    LIFE_REGENERATION_TOOLTIP          "Increases the Hero's hit point regeneration by <this,Ihpr,x>.|n|n|cffffcc00Increases the hit point regeneration with every level.|r",
+    MANA_REGENERATION_TOOLTIP          "Increases the Hero's rate of mana regeneration by <this,Arm1,x>.|n|n|cffffcc00Increases the mana regeneration with every level.|r",
+    SIGHT_RANGE_BONUS_TOOLTIP          "Increases the Hero's rate sight range by <this,Isib,x>.|n|n|cffffcc00Increases the sight range with every level.|r",
     // Other
     MASS_CHARM_TOOLTIP                 "Takes control of target enemy units. |nCharm cannot be used on Heroes, or creeps above level <A14Q,Nch1,x>. When Charm is being used on workers, they will die instantly. |n|n|cffffcc00Increases the maximum creep level with every level.|r",
     MASS_FINGER_OF_DEATH_TOOLTIP       "Instantly turns a creature or building inside-out, destroying it utterly. Causes <A177,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
     MASS_DOOM_TOOLTIP                  "Marks target units for the manifestation of a Demon. The afflicted units cannot cast spells, have <A14D,Ndo5,x,%>% reduced movement speed, and will take <A14D,Ndo1,x> damage per second until they die. Upon their death, a great Demon will spawn from their corpse. Doom cannot be dispelled or cancelled. Maximum target unit level is <A14D,Ndo4,x>.|n|n|cffffcc00Increases the damage per second and maximum creep level with every level.|r",
-    ATTRIBUTE_BONUS_TOOLTIP            "Gives a total of <this,Iagi,x> points to Agility, Intelligence, and Strength. |n|n|cffffcc00Increases the stats with every level.|r",
     SUMMON_FIRE_ELEMENTAL_TOOLTIP      "Summons a fire elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the fire elemental with every level.|r",
     INFERNO_TOOLTIP                    "Summons an Infernal from the sky causing <this,Uin1,x> damage to enemy ground units on impact and stunning them for <this,adur,x> seconds.|nLasts <this,Uin2,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Infernal with every level.|r",
     DRAIN_TOOLTIP                      "Absorbs the life essence and mana of a target enemy unit by taking hit points from it every second and giving them to Gul'dan. |n|nDrain also applies the current rank of the Black Arrow debuff to the target. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the drained and transfered life and mana per second with every level.|r",
@@ -1807,4 +1817,5 @@ StringList {
     HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
     SLOW_TOOLTIP                       "Slows a target enemy unit's attack rate by <this,Slo2,x,%>% and movement speed by <this,Slo1,x,%>%. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the percentages with every level.|r",
     DISCHARGE_TOOLTIP                  "Starts and adds <this,cr00,x> seconds to cooldowns of the target's abilities. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the added cooldown and decreases the cooldown of this spell with every level.|r",
+    CALL_OF_DRAKES_TOOLTIP             "Summons multiple dragons to support the guardian.|n|n|cffffcc00Increases the stats of the summoned dragons with every level.|r",
 }

@@ -5985,18 +5985,6 @@ globals
 
     // Units (abilities)
 
-    // Heroes (spells)
-    constant integer DEATH_KNIGHT_SHADOW_WORD_DEATH                  = 'A01Q'
-    constant integer CALL_OF_DRAKES                                  = 'A01G'
-    constant integer CALL_OF_DRAKES_DRAKE                            = 'n01J'
-
-    constant integer SOUL_BURN                                       = 'ANso'
-    constant integer BREATH_OF_FIRE                                  = 'ANbf'
-    constant integer SUMMON_SKELETONS                                = 'A1IL'
-    constant integer SPAWN_TENTACLE_CTHUN                            = 'A0HU'
-    constant integer SPAWN_TENTACLE_NZOTH                            = 'A0HV'
-    constant integer SPAWN_TENTACLE_YOGG_SARON                       = 'A0HR'
-
     // Hero Classes
 
     // Pyromancer
@@ -6225,6 +6213,18 @@ globals
     constant integer ABILITY_STORM_EARTH_FIRE                        = 'A070'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
+    // Trainer
+    constant integer ABILITY_ATTRIBUTE_BONUS                         = 'A041'
+    constant integer ABILITY_DAMAGE_BONUS                            = 'A1LN'
+    constant integer ABILITY_ARMOR_BONUS                             = 'A1LP'
+    constant integer ABILITY_ATTACK_SPEED_BONUS                      = 'A1LL'
+    constant integer ABILITY_MOVE_SPEED_BONUS                        = 'A1LI'
+    constant integer ABILITY_LIFE_BONUS                              = 'A1TH'
+    constant integer ABILITY_MANA_BONUS                              = 'A1TI'
+    constant integer ABILITY_LIFE_REGENERATION                       = 'A1LE'
+    constant integer ABILITY_MANA_REGENERATION                       = 'A1LG'
+    constant integer ABILITY_SIGHT_RANGE_BONUS                       = 'A021'
+
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
     constant integer ABILITY_SUBMERGE_NAGA_ROYAL_GUARD               = 'A239'
@@ -6239,8 +6239,11 @@ globals
     // Root
     constant integer ABILITY_ROOT_ANCIENT_OF_LORE                   = 'A0J1'
 
+    // Demigods
+    constant integer ABILITY_CALL_OF_DRAKES                          = 'A01G'
+    constant integer CALL_OF_DRAKES_DRAKE                            = 'n01J'
+
     // Other abilities
-    constant integer ABILITY_ATTRIBUTE_BONUS                         = 'A041'
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
     constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
     constant integer ABILITY_INFERNO                                 = 'A1V1'
