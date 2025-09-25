@@ -3706,6 +3706,7 @@ globals
     constant integer AIR_ELEMENTAL                                   = 'n0IK'
     constant integer FIRE_ELEMENTAL                                  = 'h061'
     constant integer EARTH_ELEMENTAL                                 = 'n0IJ'
+    constant integer VOID_ELEMENTAL                                  = 'h03O'
 
     // Special/Summoned Units
     constant integer WATER_ELEMENTAL_1                               = 'hwat'
@@ -6638,6 +6639,7 @@ globals
     constant integer STORMBRINGER_BOSS                               = 'E003'
     constant integer LICH_KING_BOSS                                  = 'Uear'
     constant integer TARAN_ZHU                                       = 'N00Y'
+    constant integer MURMUR                                          = 'N01X'
 
     constant integer MAIEV_BOSS                                      = 'Ewrd'
     constant integer KAEL_BOSS                                       = 'H01J'
