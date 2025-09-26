@@ -6265,6 +6265,7 @@ globals
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
     constant integer ABILITY_SLOW                                    = 'ACsw'
     constant integer ABILITY_DISCHARGE                               = 'A12S'
+    constant integer ABILITY_SPELL_SHIELD                            = 'A1NF'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'

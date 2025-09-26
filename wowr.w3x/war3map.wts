@@ -391,12 +391,6 @@ STRING 66
 Trains Green Drakes.
 }
 
-STRING 67
-// Abilities: A13I (Target Divine Shield), EditorSuffix (Editor Suffix)
-{
-(Slot 4)
-}
-
 STRING 68
 // Units: h0IX (Druid), Name (Name)
 {
@@ -3205,7 +3199,7 @@ STRING 538
 }
 
 STRING 539
-// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
+// Abilities: A1NF (Spell Shield), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3229,7 +3223,7 @@ STRING 542
 }
 
 STRING 543
-// Abilities: A1TH (Life Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3265,7 +3259,7 @@ When planting these magical seeds, all dead trees within a radius of 1000 regrow
 }
 
 STRING 549
-// Abilities: A1TI (Mana Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A1TH (Life Bonus), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3283,7 +3277,7 @@ Clone
 }
 
 STRING 552
-// Abilities: A1W4 (Mass Ensnare), EditorSuffix (Editor Suffix)
+// Abilities: A1TI (Mana Bonus), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3397,7 +3391,7 @@ Fuel
 }
 
 STRING 571
-// Abilities: A1YG (Summon Creep), EditorSuffix (Editor Suffix)
+// Abilities: A1W4 (Mass Ensnare), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3409,7 +3403,7 @@ Mass Devour
 }
 
 STRING 573
-// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
+// Abilities: A1YG (Summon Creep), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -3744,13 +3738,13 @@ Dummy Frost Ray
 }
 
 STRING 629
-// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
+// Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 630
-// Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
+// Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4090,7 +4084,7 @@ Skin Spirit Walker
 }
 
 STRING 687
-// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
+// Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4214,7 +4208,7 @@ Arcane Academy
 }
 
 STRING 709
-// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
+// Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4238,7 +4232,7 @@ Mechanical Hero, particularly adept at destroying magic. Can learn Rejuvenation,
 }
 
 STRING 713
-// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
+// Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4262,7 +4256,7 @@ STRING 716
 }
 
 STRING 717
-// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
+// Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4274,7 +4268,7 @@ Hero Abilities Previous Page
 }
 
 STRING 719
-// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
+// Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4298,19 +4292,19 @@ Witch Doctor
 }
 
 STRING 723
-// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
+// Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 724
-// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 725
-// Abilities: A11C (Control Magic), EditorSuffix (Editor Suffix)
+// Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4382,7 +4376,7 @@ Build Research Tent
 }
 
 STRING 738
-// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A11C (Control Magic), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4393,7 +4387,7 @@ Hero classes determine which spells can be learned by a hero. They give the hero
 }
 
 STRING 740
-// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -4959,7 +4953,7 @@ Drunken Aura
 }
 
 STRING 841
-// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
+// Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -5792,7 +5786,7 @@ Gives Acidic Carnivores the Poison ability.
 }
 
 STRING 981
-// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -5860,7 +5854,7 @@ Use "-repick".
 }
 
 STRING 993
-// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
+// Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -6478,7 +6472,7 @@ H
 }
 
 STRING 1097
-// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
+// Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -6628,12 +6622,6 @@ STRING 1123
 // Units: h09K (Lightning Elemental), Hotkey (Hotkey)
 {
 L
-}
-
-STRING 1124
-// Abilities: A1NF (Spell Shield), EditorSuffix (Editor Suffix)
-{
-(Slot 2)
 }
 
 STRING 1125
@@ -8224,12 +8212,6 @@ STRING 1418
 Purchase Wolf Spirit Hood
 }
 
-STRING 1419
-// Abilities: A1NF (Spell Shield), Researchtip (Tooltip - Learn)
-{
-Learn Spell Shield - [|cffffcc00Level %d|r]
-}
-
 STRING 1420
 // Items: I0V3 (Spell Shield), Name (Name)
 {
@@ -8249,7 +8231,7 @@ Rogue
 }
 
 STRING 1423
-// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
+// Abilities: A17F (Summon Bear), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8321,7 +8303,7 @@ Train Furbolg
 }
 
 STRING 1435
-// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
+// Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8333,7 +8315,7 @@ D
 }
 
 STRING 1437
-// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
+// Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8363,7 +8345,7 @@ J
 }
 
 STRING 1442
-// Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
+// Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -8866,7 +8848,7 @@ J
 }
 
 STRING 1526
-// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
+// Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9946,7 +9928,7 @@ Clothing Bag
 }
 
 STRING 1709
-// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
+// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9964,7 +9946,7 @@ Alexstrasza
 }
 
 STRING 1712
-// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
+// Abilities: A06Z (Soul Burn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -9988,7 +9970,7 @@ Skin of a Peasant.
 }
 
 STRING 1716
-// Abilities: A08M (Sentinel), EditorSuffix (Editor Suffix)
+// Abilities: A070 (Storm, Earth, And Fire), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10066,7 +10048,7 @@ STRING 1728
 }
 
 STRING 1729
-// Abilities: A088 (Drunken Aura), EditorSuffix (Editor Suffix)
+// Abilities: A08M (Sentinel), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10088,19 +10070,19 @@ Hero Abilities Matching Class
 }
 
 STRING 1733
-// Abilities: A09A (Mirror Image), EditorSuffix (Editor Suffix)
+// Abilities: A088 (Drunken Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1734
-// Abilities: A0CP (Summon Sapphiron), EditorSuffix (Editor Suffix)
+// Abilities: A09A (Mirror Image), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1735
-// Abilities: A01I (Wind Gust), EditorSuffix (Editor Suffix)
+// Abilities: A0CP (Summon Sapphiron), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10322,13 +10304,13 @@ Buy 100 Power
 }
 
 STRING 1772
-// Abilities: A01P (Aerial Shackles), EditorSuffix (Editor Suffix)
+// Abilities: A01I (Wind Gust), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1773
-// Abilities: A021 (Sight Range Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A01P (Aerial Shackles), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -10343,6 +10325,12 @@ STRING 1775
 // Abilities: A07A (Cargo Hold), Name (Name)
 {
 Cargo Hold
+}
+
+STRING 1776
+// Abilities: A021 (Sight Range Bonus), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
 }
 
 STRING 1796
@@ -10585,7 +10573,7 @@ Summon Wall
 }
 
 STRING 1849
-// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -11113,13 +11101,13 @@ Resources allow training, buying and upgrading units, constructing buildings, re
 }
 
 STRING 1946
-// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
+// Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 1949
-// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12578,7 +12566,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 }
 
 STRING 2277
-// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
+// Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -12866,7 +12854,7 @@ Revive Samuro
 }
 
 STRING 2327
-// Abilities: A07Z (Spell Steal), EditorSuffix (Editor Suffix)
+// Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -13430,7 +13418,7 @@ Revive Dark Wizard
 }
 
 STRING 2452
-// Abilities: A0VH (Summon Djinn), EditorSuffix (Editor Suffix)
+// Abilities: A07Z (Spell Steal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -13637,12 +13625,6 @@ STRING 2486
 // Abilities: A1Y0 (Loot Ray), EditorSuffix (Editor Suffix)
 {
 (Heroes)
-}
-
-STRING 2487
-// Abilities: A1NF (Spell Shield), Researchubertip (Tooltip - Learn - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every x seconds.|n|n|cffffcc00Decreases the cooldown with every level.|r
 }
 
 STRING 2488
@@ -23280,13 +23262,13 @@ E
 }
 
 STRING 4674
-// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
+// Abilities: A0VH (Summon Djinn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 4675
-// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
+// Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -24028,7 +24010,7 @@ Transmute
 }
 
 STRING 4802
-// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
+// Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42165,7 +42147,7 @@ Meteor
 }
 
 STRING 8666
-// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -42344,7 +42326,7 @@ Gypsy Wagon
 }
 
 STRING 8699
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43072,7 +43054,7 @@ Akama's Message
 }
 
 STRING 9143
-// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43138,7 +43120,7 @@ Holy Nova
 }
 
 STRING 9154
-// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
+// Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43156,7 +43138,7 @@ Mass Holy Light
 }
 
 STRING 9157
-// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
+// Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43186,7 +43168,7 @@ Mass Inner Fire
 }
 
 STRING 9163
-// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
+// Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43817,7 +43799,7 @@ R
 }
 
 STRING 9751
-// Abilities: A13I (Target Divine Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43835,7 +43817,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 9758
-// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
+// Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -43877,13 +43859,13 @@ Temporarily gives a friendly target unit Chaos damage.
 }
 
 STRING 9765
-// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
+// Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 9766
-// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
+// Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44003,7 +43985,7 @@ W
 }
 
 STRING 9973
-// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
+// Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44121,7 +44103,7 @@ Q
 }
 
 STRING 10046
-// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
+// Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44145,7 +44127,7 @@ Summon Bear
 }
 
 STRING 10050
-// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
+// Abilities: A08G (Scout), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44169,7 +44151,7 @@ Mass Forestation
 }
 
 STRING 10056
-// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A0HY (Vengeance), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -44187,7 +44169,7 @@ Druid Forms
 }
 
 STRING 10060
-// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
+// Abilities: A0ID (Acid Bomb), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -45908,7 +45890,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 10361
-// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
+// Abilities: A05M (Metamorphosis), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -48866,7 +48848,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Healing Spray), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -49302,7 +49284,7 @@ Skins determine the visuals and sounds of units and buildings. They can be custo
 }
 
 STRING 11030
-// Abilities: A13I (Target Divine Shield), Hotkey (Hotkey - Normal)
+// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49320,7 +49302,7 @@ E
 }
 
 STRING 11033
-// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49566,7 +49548,7 @@ Allows building male citizens a Fountain of Blood to train and convert Fel Orcs.
 }
 
 STRING 11123
-// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
+// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50760,19 +50742,19 @@ Anathemus,Boulderheart,Fozruk,Gormungan,Grimungous,Baron Kazum,Kashoch the Reave
 }
 
 STRING 11472
-// Abilities: A1NF (Spell Shield), Researchhotkey (Hotkey - Learn)
-{
-W
-}
-
-STRING 11473
 // Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 11474
+STRING 11473
 // Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 11474
+// Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51456,7 +51438,7 @@ E
 }
 
 STRING 11708
-// Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
+// Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51516,7 +51498,7 @@ Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, Wa
 }
 
 STRING 11719
-// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
+// Abilities: A024 (Tornado), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -51863,18 +51845,6 @@ STRING 11849
 (Lesser) (New Armor Bonus)
 }
 
-STRING 11850
-// Abilities: A1O2 (Item Temporary Invulnerability), Name (Name)
-{
-Item Temporary Invulnerability
-}
-
-STRING 11851
-// Abilities: A1O2 (Item Temporary Invulnerability), EditorSuffix (Editor Suffix)
-{
-(Dummy Target Divine Shield) (New Armor Bonus)
-}
-
 STRING 11852
 // Abilities: A1NY (Divine Shield), Name (Name)
 {
@@ -51906,7 +51876,7 @@ Summon Siege Golem
 }
 
 STRING 11858
-// Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
+// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52115,7 +52085,7 @@ Storm Bolt
 }
 
 STRING 11904
-// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
+// Abilities: A05N (Ghost Form), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52163,13 +52133,13 @@ Summon Golem
 }
 
 STRING 11912
-// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
+// Abilities: A060 (Drunken Brawler), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
 
 STRING 11913
-// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A06X (Drunken Haze), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -52199,7 +52169,7 @@ Repair
 }
 
 STRING 11944
-// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
+// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -52350,7 +52320,7 @@ An encampment of demonic satyr in southern Felwood.|n
 }
 
 STRING 11974
-// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
+// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -52462,7 +52432,7 @@ A small cluster of tropical landmasses located off the southeastern coast of Dur
 }
 
 STRING 11994
-// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
+// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52500,7 +52470,7 @@ The former home of the Darkspear tribe of jungle trolls but nor reigned by the M
 }
 
 STRING 12000
-// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53043,7 +53013,7 @@ Albatross Mount
 }
 
 STRING 12106
-// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
+// Abilities: A07Y (Poison Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -53277,7 +53247,7 @@ O
 }
 
 STRING 12157
-// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53289,7 +53259,7 @@ STRING 12158
 }
 
 STRING 12160
-// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54943,7 +54913,7 @@ Heavy Axe made of very rare minerals. Causes terrible pain among its victims. Gr
 }
 
 STRING 13847
-// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
+// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54961,7 +54931,7 @@ T
 }
 
 STRING 13856
-// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
+// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55614,7 +55584,7 @@ X
 }
 
 STRING 14111
-// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55848,7 +55818,7 @@ Orb of Orbs
 }
 
 STRING 14257
-// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56475,25 +56445,25 @@ E
 }
 
 STRING 14575
-// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
+// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14578
-// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14579
-// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14580
-// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -56762,24 +56732,6 @@ STRING 14727
 S
 }
 
-STRING 14753
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur1> seconds.|nHas a cooldown of <A13I,Cool1> seconds.
-}
-
-STRING 14754
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur2> seconds.|nHas a cooldown of <A13I,Cool2> seconds.
-}
-
-STRING 14755
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur3> seconds.|nHas a cooldown of <A13I,Cool3> seconds.
-}
-
 STRING 14756
 // Abilities: A0P6 (Dark Conversion), EditorSuffix (Editor Suffix)
 {
@@ -56870,73 +56822,73 @@ Black Drake
 }
 
 STRING 14876
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
-{
-W
-}
-
-STRING 14877
 // Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 14878
-// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14879
-// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14880
-// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14881
-// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14882
-// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14884
-// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14885
+STRING 14877
 // Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 14886
+STRING 14878
+// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14879
+// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14880
+// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14881
+// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14882
 // Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14887
+STRING 14884
+// Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14885
 // Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
 
-STRING 14889
+STRING 14886
+// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14887
 // Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 14889
+// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -56966,19 +56918,19 @@ E
 }
 
 STRING 14895
-// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 14896
-// Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
+// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 14897
-// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
 {
 R
 }
@@ -57002,13 +56954,13 @@ E
 }
 
 STRING 14903
-// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 14906
-// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -57020,7 +56972,7 @@ W
 }
 
 STRING 14908
-// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
+// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
 {
 W
 }
@@ -57044,7 +56996,7 @@ STRING 14931
 }
 
 STRING 14935
-// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -57062,7 +57014,7 @@ E
 }
 
 STRING 14942
-// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -57157,24 +57109,18 @@ Clans
 }
 
 STRING 15086
-// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
-{
-W
-}
-
-STRING 15087
 // Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
 {
 W
 }
 
-STRING 15088
+STRING 15087
 // Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
 {
 W
 }
 
-STRING 15089
+STRING 15088
 // Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
 {
 W
@@ -57842,7 +57788,7 @@ E
 }
 
 STRING 15827
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -57944,7 +57890,7 @@ STRING 15883
 }
 
 STRING 15909
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -58325,7 +58271,7 @@ Disable Wandering
 }
 
 STRING 16182
-// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -58538,7 +58484,7 @@ You own the clan hall now!
 }
 
 STRING 16275
-// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -59572,13 +59518,13 @@ Cloud Serpent Mount
 }
 
 STRING 16886
-// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 16888
-// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
+// Abilities: A08N (Summon Quilbeast), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -60028,24 +59974,6 @@ All heroes of all playing users have to be level 75!
 STRING 17030
 {
 Usage; "-anim Stand, Attack, Death, Dissipate, Decay, Birth, Morph, Spell, Work, Walk, Spell Channel, Attack Slam"
-}
-
-STRING 17036
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 2|r]
-}
-
-STRING 17112
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur4> seconds.|nHas a cooldown of <A13I,Cool4> seconds.
-}
-
-STRING 17115
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur5> seconds.|nHas a cooldown of <A13I,Cool5> seconds.
 }
 
 STRING 17213
@@ -60588,48 +60516,6 @@ STRING 17400
 S
 }
 
-STRING 17401
-// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 17402
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 3|r]
-}
-
-STRING 17403
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 4|r]
-}
-
-STRING 17404
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 5|r]
-}
-
-STRING 17405
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 6|r]
-}
-
-STRING 17406
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 7|r]
-}
-
-STRING 17407
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 8|r]
-}
-
 STRING 17414
 // Items: I07B (Reset Equipment Bags), Name (Name)
 {
@@ -60658,12 +60544,6 @@ STRING 17418
 // Abilities: A0IQ (Inventory), EditorSuffix (Editor Suffix)
 {
 (Equipment Bag)
-}
-
-STRING 17419
-// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
-{
-R
 }
 
 STRING 17420
@@ -60958,96 +60838,6 @@ STRING 17475
 // Abilities: A0IV (Enchanting - Master), Name (Name)
 {
 Enchanting - Master
-}
-
-STRING 17481
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 9|r]
-}
-
-STRING 17482
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 10|r]
-}
-
-STRING 17483
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 11|r]
-}
-
-STRING 17484
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 12|r]
-}
-
-STRING 17485
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 13|r]
-}
-
-STRING 17486
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 14|r]
-}
-
-STRING 17487
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 15|r]
-}
-
-STRING 17488
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool1> seconds.
-}
-
-STRING 17489
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool2> seconds.
-}
-
-STRING 17490
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool3> seconds.
-}
-
-STRING 17491
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool4> seconds.
-}
-
-STRING 17492
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool5> seconds.
-}
-
-STRING 17493
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool6> seconds.
-}
-
-STRING 17494
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool7> seconds.
-}
-
-STRING 17495
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool8> seconds.
 }
 
 STRING 17496
@@ -61888,18 +61678,6 @@ STRING 17976
 // Units: n08A (Guardian Golem), Tip (Tooltip - Basic)
 {
 Train Guardian Golem
-}
-
-STRING 18091
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool9> seconds.
-}
-
-STRING 18092
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool10> seconds.
 }
 
 STRING 18097
@@ -68943,12 +68721,6 @@ STRING 23058
 E
 }
 
-STRING 23059
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur6> seconds.|nHas a cooldown of <A13I,Cool6> seconds.
-}
-
 STRING 23060
 {
 Auto skilling all selected heroes owned by you.
@@ -70466,12 +70238,6 @@ STRING 24578
 (Unlimited Bag of Gold)
 }
 
-STRING 24586
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur7> seconds.|nHas a cooldown of <A13I,Cool7> seconds.
-}
-
 STRING 24587
 // Items: I0AP (Christmas Present), Description (Description)
 {
@@ -71565,12 +71331,6 @@ STRING 25758
 // Abilities: A09J (Engineer Place Goblin Land Mine), Hotkey (Hotkey - Normal)
 {
 L
-}
-
-STRING 25800
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
-{
-Spell Shield - [|cffffcc00Level 1|r]
 }
 
 STRING 25896
@@ -72904,12 +72664,6 @@ STRING 27114
 Summon Lava Spawn
 }
 
-STRING 27121
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool11> seconds.
-}
-
 STRING 27178
 // Units: Ogld (Warlock), Ubertip (Tooltip - Extended)
 {
@@ -73148,12 +72902,6 @@ STRING 27635
 // Items: I08W (Summon Cenarius), Hotkey (Hotkey)
 {
 C
-}
-
-STRING 27649
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool12> seconds.
 }
 
 STRING 27693
@@ -75498,12 +75246,6 @@ STRING 29900
 // Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 29911
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool13> seconds.
 }
 
 STRING 29915
@@ -77857,18 +77599,6 @@ STRING 31834
 King of Azeroth
 }
 
-STRING 31835
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool14> seconds.
-}
-
-STRING 31836
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Blocks a negative spell that an enemy casts on the Hero once every <A12P,Cool15> seconds.
-}
-
 STRING 31841
 // Units: n09D (Thieves Guild), Description (Description)
 {
@@ -78487,18 +78217,6 @@ STRING 32473
 A dummy which can be used for training.
 }
 
-STRING 32474
-// Abilities: A13I (Target Divine Shield), Name (Name)
-{
-Target Divine Shield
-}
-
-STRING 32476
-// Abilities: A13I (Target Divine Shield), Researchubertip (Tooltip - Learn - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for a set amount of time.|n|n|cffffcc00Increases the duration and cooldown with every level.|r
-}
-
 STRING 32477
 // Units: h0T4 (Dummy), Name (Name)
 {
@@ -78515,12 +78233,6 @@ STRING 32480
 // Upgrades: R0HC (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Allows building male citizens the Skull of Gul'dan to cast Rain of Chaos anywhere on the map.
-}
-
-STRING 32481
-// Abilities: A13I (Target Divine Shield), Researchtip (Tooltip - Learn)
-{
-Learn Target Divine Shield - [|cffffcc00Level %d|r]
 }
 
 STRING 32493
@@ -78587,18 +78299,6 @@ STRING 32503
 // Upgrades: R02J (Liquid Fire), Ubertip (Tooltip - Extended)
 {
 Allows using explosives to blow up the whole tunnel system.
-}
-
-STRING 32504
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 1|r]
-}
-
-STRING 32505
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 2|r]
 }
 
 STRING 32506
@@ -78823,12 +78523,6 @@ STRING 32544
 (Ogre Goblin Squad)
 }
 
-STRING 32545
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 3|r]
-}
-
 STRING 32546
 // Abilities: A0BG (Healing Spray), EditorSuffix (Editor Suffix)
 {
@@ -78901,126 +78595,6 @@ STRING 32557
 (Orb of Engineering)
 }
 
-STRING 32558
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 4|r]
-}
-
-STRING 32559
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 5|r]
-}
-
-STRING 32560
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 6|r]
-}
-
-STRING 32562
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 7|r]
-}
-
-STRING 32563
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 8|r]
-}
-
-STRING 32564
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 9|r]
-}
-
-STRING 32565
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 10|r]
-}
-
-STRING 32566
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 11|r]
-}
-
-STRING 32567
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 12|r]
-}
-
-STRING 32568
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 13|r]
-}
-
-STRING 32569
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 14|r]
-}
-
-STRING 32570
-// Abilities: A13I (Target Divine Shield), Tip (Tooltip - Normal)
-{
-Target Divine Shield - [|cffffcc00Level 15|r]
-}
-
-STRING 32571
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur8> seconds.|nHas a cooldown of <A13I,Cool8> seconds.
-}
-
-STRING 32572
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur9> seconds.|nHas a cooldown of <A13I,Cool9> seconds.
-}
-
-STRING 32573
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur10> seconds.|nHas a cooldown of <A13I,Cool10> seconds.
-}
-
-STRING 32574
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur11> seconds.|nHas a cooldown of <A13I,Cool11> seconds.
-}
-
-STRING 32575
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur12> seconds.|nHas a cooldown of <A13I,Cool12> seconds.
-}
-
-STRING 32576
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur13> seconds.|nHas a cooldown of <A13I,Cool13> seconds.
-}
-
-STRING 32577
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur14> seconds.|nHas a cooldown of <A13I,Cool14> seconds.
-}
-
-STRING 32578
-// Abilities: A13I (Target Divine Shield), Ubertip (Tooltip - Normal - Extended)
-{
-An impenetrable shield surrounds the target, protecting him from all damage and spells for <A13K,Dur15> seconds.|nHas a cooldown of <A13I,Cool15> seconds.
-}
-
 STRING 32579
 // Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
 {
@@ -79043,12 +78617,6 @@ STRING 32584
 // Upgrades: R00C (Freezing Breath), Hotkey (Hotkey)
 {
 P
-}
-
-STRING 32588
-// Abilities: A13K (Item Temporary Invulnerability), EditorSuffix (Editor Suffix)
-{
-(Dummy Target Divine Shield)
 }
 
 STRING 32614
@@ -79532,7 +79100,7 @@ STRING 32773
 }
 
 STRING 32774
-// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
+// Abilities: A0AC (Summon Hawk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -79556,7 +79124,7 @@ Brings back to life the corpses of <A13V,DataA1> friendly nearby units.
 }
 
 STRING 32778
-// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
+// Abilities: A0CO (Summon Lava Spawn), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }
@@ -123263,7 +122831,7 @@ STRING 53376
 }
 
 STRING 53394
-// Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
+// Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
 }

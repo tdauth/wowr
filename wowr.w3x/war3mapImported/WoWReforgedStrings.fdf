@@ -1817,5 +1817,5 @@ StringList {
     HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
     SLOW_TOOLTIP                       "Slows a target enemy unit's attack rate by <this,Slo2,x,%>% and movement speed by <this,Slo1,x,%>%. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the percentages with every level.|r",
     DISCHARGE_TOOLTIP                  "Starts and adds <this,cr00,x> seconds to cooldowns of the target's abilities. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the added cooldown and decreases the cooldown of this spell with every level.|r",
-    CALL_OF_DRAKES_TOOLTIP             "Summons multiple dragons to support the guardian.|n|n|cffffcc00Increases the stats of the summoned dragons with every level.|r",
+    SPELL_SHIELD_TOOLTIP               "Blocks a negative spell that an enemy casts on the Hero once every <this,acdn,x> seconds.|n|n|cffffcc00Decreases the cooldown with every level.|r",
 }
