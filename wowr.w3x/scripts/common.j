@@ -6239,10 +6239,6 @@ globals
     // Root
     constant integer ABILITY_ROOT_ANCIENT_OF_LORE                   = 'A0J1'
 
-    // Demigods
-    constant integer ABILITY_CALL_OF_DRAKES                          = 'A01G'
-    constant integer CALL_OF_DRAKES_DRAKE                            = 'n01J'
-
     // Other abilities
     constant integer ABILITY_SUMMON_SEA_ELEMENTAL                    = 'ACwe'
     constant integer ABILITY_SUMMON_FIRE_ELEMENTAL                   = 'A111'
