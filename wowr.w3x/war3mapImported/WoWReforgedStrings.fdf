@@ -50,16 +50,14 @@ StringList {
     INVALID_PLAYER_COLOR_X             "Invalid player color %1%.",
     ONLY_MAX_HERO_LEVEL_VIP_COMPUTER   "Only possible at maximum hero level or for VIP or for Computer players.",
     INVALID_TARGET_PLAYER              "Invalid target player.",
-    // Learnable Skills Shop
+    // Skill Menu
     SLOT_X                             "Slot %1%",
     NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Bags.",
     SKILL_FOR_CUSTOMIZABLE_HEROES      "Only customizable, Void Lord, Archangel, Sea Giant heroes or Equipment Bags at hero level 75 can change their hero abilities.",
-    // Reskillable Heroes
-    SKILL_POINTS_REMAINING             "%1% skill points remaining.",
-    // Skill Menu
     NOT_ENOUGH_SKILL_POINTS            "Not enough skill points.",
     ABILITY_HAS_LEVEL_0                "Ability has level 0.",
     NO_ABILITY                         "No ability.",
+    SKILL_POINTS_REMAINING             "%1% skill points remaining.",
     // Resurrection Stones
     ACTIVATED_RESURRECTION_STONE       "Activated Resurrection Stone.",
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",

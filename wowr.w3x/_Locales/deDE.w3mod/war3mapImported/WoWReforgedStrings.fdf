@@ -50,16 +50,14 @@ StringList {
     INVALID_PLAYER_COLOR_X             "Ungültige Spielerfarbe %1%.",
     ONLY_MAX_HERO_LEVEL_VIP_COMPUTER   "Nur ab maximaler Heldenstufe oder für VIP- oder Computer-Spieler möglich.",
     INVALID_TARGET_PLAYER              "Ungültiger Zielspieler.",
-    // Learnable Skills Shop
+    // Skill Menu
     SLOT_X                             "Fach %1%",
     NO_SPELL_FOR_EQUIPMENT_BAG         "Dieser Zauber ist nicht für Ausrüstungstaschen erlaubt.",
     SKILL_FOR_CUSTOMIZABLE_HEROES      "Nur anpassbare, Void Lord-, Erzengel-, Seeriesen-Helden or Ausrückstungstaschen mit Heldenstufe 75 können ihre Heldenfähigkeiten ändern.",
-    // Reskillable Heroes
-    SKILL_POINTS_REMAINING             "%1% verbleibende Fähigkeitspunkte..",
-    // Skill Menu
     NOT_ENOUGH_SKILL_POINTS            "Nicht genügend Fähigkeitspunkte.",
     ABILITY_HAS_LEVEL_0                "Fähigkeit hat Stufe 0.",
     NO_ABILITY                         "Keine Fähigkeit.",
+    SKILL_POINTS_REMAINING             "%1% verbleibende Fähigkeitspunkte..",
     // Resurrection Stones
     ACTIVATED_RESURRECTION_STONE       "Auferstehungsschrein aktiviert.",
     DEACTIVATED_RESURRECTION_STONE     "Auferstehungsschrein deaktiviert.",

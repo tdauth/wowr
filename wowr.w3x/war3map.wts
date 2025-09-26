@@ -398,7 +398,7 @@ Trains Green Drakes.
 }
 
 STRING 67
-// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
+// Abilities: A0Y1 (Telekinesis), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -416,7 +416,7 @@ Random Class
 }
 
 STRING 70
-// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
+// Abilities: A1MO (Divine Shield), Name (Name)
 {
 Divine Shield
 }
@@ -4388,7 +4388,7 @@ STRING 735
 }
 
 STRING 736
-// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
+// Buffs/Effects: B035 (Divine Shield), Bufftip (Tooltip)
 {
 |cff00ff00Divine Shield|r
 }
@@ -51810,7 +51810,7 @@ STRING 11838
 }
 
 STRING 11841
-// Abilities: A1MO (Divine Shield), Name (Name)
+// Abilities: A1NY (Divine Shield), Name (Name)
 {
 Divine Shield
 }
@@ -51852,7 +51852,7 @@ STRING 11849
 }
 
 STRING 11852
-// Abilities: A1NY (Divine Shield), Name (Name)
+// Abilities: A01C (Divine Shield), Name (Name)
 {
 Divine Shield
 }
@@ -68024,13 +68024,13 @@ An additional backpack with equipment which can be carried by your first hero. A
 }
 
 STRING 22534
-// Abilities: A01C (Divine Shield), Name (Name)
+// Buffs/Effects: B035 (Divine Shield), EditorName (Name (Editor Only))
 {
 Divine Shield
 }
 
 STRING 22535
-// Buffs/Effects: B035 (Divine Shield), EditorName (Name (Editor Only))
+// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
 {
 Divine Shield
 }
@@ -74075,7 +74075,7 @@ Telekinesis
 }
 
 STRING 28515
-// Abilities: A0Y1 (Telekinesis), EditorSuffix (Editor Suffix)
+// Abilities: A142 (Pillage Aura), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -76676,7 +76676,7 @@ STRING 31096
 }
 
 STRING 31128
-// Abilities: A142 (Pillage Aura), EditorSuffix (Editor Suffix)
+// Abilities: A1E1 (Drunken Aura), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -79196,7 +79196,7 @@ Pillage Aura
 }
 
 STRING 32831
-// Abilities: A1E1 (Drunken Aura), EditorSuffix (Editor Suffix)
+// Abilities: A1ER (Nocturnal), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -79220,7 +79220,7 @@ E
 }
 
 STRING 32839
-// Abilities: A1ER (Nocturnal), EditorSuffix (Editor Suffix)
+// Abilities: A1I9 (Water Creature), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -79855,7 +79855,7 @@ Space Travel
 }
 
 STRING 33475
-// Abilities: A1I9 (Water Creature), EditorSuffix (Editor Suffix)
+// Abilities: A1IQ (Diurnal), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -92882,7 +92882,7 @@ A valuable gem.
 }
 
 STRING 38374
-// Abilities: A1IQ (Diurnal), EditorSuffix (Editor Suffix)
+// Abilities: A1KV (Miss Aura), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -92936,7 +92936,7 @@ Repairs mechanical units and structures at the cost of resources.
 }
 
 STRING 38441
-// Abilities: A1KV (Miss Aura), EditorSuffix (Editor Suffix)
+// Abilities: A1MO (Divine Shield), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -94172,7 +94172,7 @@ Magic warrior trained to destroy enemies. Initially has Spell Steal, which manip
 }
 
 STRING 38887
-// Abilities: A1MO (Divine Shield), EditorSuffix (Editor Suffix)
+// Abilities: A1WH (Fel), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -99758,7 +99758,7 @@ STRING 41368
 }
 
 STRING 41369
-// Abilities: A1WH (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -105114,7 +105114,7 @@ Dark Portal Orc.
 }
 
 STRING 43378
-// Buffs/Effects: B035 (Divine Shield), Bufftip (Tooltip)
+// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
 {
 |cff00ff00Divine Shield|r
 }
