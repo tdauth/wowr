@@ -50,6 +50,8 @@ StringList {
     INVALID_PLAYER_COLOR_X             "Invalid player color %1%.",
     ONLY_MAX_HERO_LEVEL_VIP_COMPUTER   "Only possible at maximum hero level or for VIP or for Computer players.",
     INVALID_TARGET_PLAYER              "Invalid target player.",
+    // Respawn
+    PREVENT_UNIT_RESPAWN               "Prevent respawn of %1% because of nearby buildings.",
     // Skill Menu
     SLOT_X                             "Slot %1%",
     NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Bags.",
@@ -57,6 +59,7 @@ StringList {
     NOT_ENOUGH_SKILL_POINTS            "Not enough skill points.",
     ABILITY_HAS_LEVEL_0                "Ability has level 0.",
     NO_ABILITY                         "No ability.",
+    REACHED_MAXIMUM_ABILITY_LEVEL      "Reached maximum ability level %1%.",
     SKILL_POINTS_REMAINING             "%1% skill points remaining.",
     // Resurrection Stones
     ACTIVATED_RESURRECTION_STONE       "Activated Resurrection Stone.",
@@ -619,6 +622,7 @@ StringList {
     GRAND_MASTER                       "Grand Master",
     DOCTOR                             "Doctor",
     CRAFT_TEXT                         "+%1%|nCooldown: %2%s",
+    CRAFT_TEXT_COOLDOWN_ONLY           "+%1%",
     CRAFT_BONUS                        "+%1% %2%",
     // Profession Weapon Smith
     INCREASED_DAMAGE_ITEM              "Increased damage bonus of item.",
@@ -1712,7 +1716,7 @@ StringList {
     // Monk
     SLIDE_TOOLTIP                      "Lets your hero slide into the given direction with a maximum distance of <this,cr00,x>, moving the hero quickly and damaging everything on its way causing <this,cr01,x> damage to enemy units.|n|n|cffffcc00Increases the distance and damage with every level.|r",
     CHARGE_TOOLTIP                     "Resets the cooldown of all your abilities except Charge. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Decreases the cooldown with every level.|r",
-    DRUNKEN_BRAWLER_TOOLTIP            "Gives a <this,Ocr4,x,%>% chance to dodge an attack and a <this,Ocr1,x,%>% chance to deal <this,Ocr2,x> times total damage.|n|n|cffffcc00Increases the change and damage multiplier with every level.|r",
+    DRUNKEN_BRAWLER_TOOLTIP            "Gives a <this,Ocr4,x,%>% chance to dodge an attack and a <this,Ocr1,x>% chance to deal <this,Ocr2,x> times total damage.|n|n|cffffcc00Increases the change and damage multiplier with every level.|r",
     REFLECTION_TOOLTIP                 "Gives a <this,cr00,x,%>% chance to reflect <this,cr01,x,%>% damage of a range attack.|n|n|cffffcc00Increases the chance and damage percentage with every level.|r",
     DRUNKEN_HAZE_TOOLTIP               "Drenches enemy units in alcohol, causing their movement speed to be reduced by <this,Nsi3,x,%>%, and have a <this,Nsi2,x,%>% chance to miss on attacks. When units with Drunken Haze cast on them are hit by Breath of Fire, they will ignite and take burn damage. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the chance to miss with every level.|r",
     MISS_AURA_TOOLTIP                  "Increases the chance to miss attacks life of nearby enemy units to <this,cr00,x> %.|n|n|cffffcc00Increases the chance with every level.|r",

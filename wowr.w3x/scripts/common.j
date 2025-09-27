@@ -2838,8 +2838,8 @@ globals
     constant integer BACKPACK                                        = BACK_PACK
     constant integer EQUIPMENT_BAG                                   = 'E00R'
     constant integer MAX_HERO_LEVEL                                  = 75
-    constant integer MAX_HERO_SPELL_LEVEL                            = 15
-    constant integer SKILL_POINTS_PER_LEVEL                          = 2
+    constant integer MAX_HERO_SPELL_LEVEL                            = 7
+    constant integer SKILL_POINTS_PER_LEVEL                          = 1
     constant integer MAX_HEROES                                      = 3
 
     // All Races
