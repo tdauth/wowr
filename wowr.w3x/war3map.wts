@@ -8033,6 +8033,30 @@ STRING 1355
 H
 }
 
+STRING 1356
+// Abilities: A033 (Clone), Tip (Tooltip - Normal)
+{
+Clone
+}
+
+STRING 1357
+// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
+{
+Clone
+}
+
+STRING 1358
+// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
+{
+Spell Shield
+}
+
+STRING 1359
+// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Spell Shield
+}
+
 STRING 1379
 // Units: h0YM (Wolf Mount), Name (Name)
 {
