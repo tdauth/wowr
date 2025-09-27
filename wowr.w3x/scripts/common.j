@@ -6170,13 +6170,13 @@ globals
     // Witch Doctor/Banshee
     constant integer ABILITY_SERPENT_WARD                            = 'A08K'
     constant integer ABILITY_SILENCE                                 = 'ACsi'
-    constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
+    constant integer ABILITY_SLOW                                    = 'ACsw'
     constant integer ABILITY_ANTIMAGIC_SHIELD                        = 'ACam'
     constant integer ABILITY_HEX                                     = 'AChx'
     constant integer ABILITY_SCREAM                                  = 'A07V'
     constant integer ABILITY_GHOST_FORM                              = 'A05N'
     constant integer ABILITY_LOCUST_SWARM                            = 'A0DQ'
-    constant integer ABILITY_MIND_CONTROL                            = 'A22T'
+    constant integer ABILITY_SPELL_SHIELD                            = 'A1NF'
     constant integer ABILITY_CHARM                                   = 'ACch'
     constant integer ABILITY_BIG_BAD_VOODOO                          = 'A01T'
 
@@ -6263,9 +6263,9 @@ globals
     constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
     constant integer ABILITY_WEB                                     = 'ACwb'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
-    constant integer ABILITY_SLOW                                    = 'ACsw'
     constant integer ABILITY_DISCHARGE                               = 'A12S'
-    constant integer ABILITY_SPELL_SHIELD                            = 'A1NF'
+    constant integer ABILITY_MIND_CONTROL                            = 'A22T'
+    constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
@@ -6313,6 +6313,14 @@ globals
     constant integer ABILITY_MASS_HOLY_LIGHT_DUMMY                   = 'A13Q'
     constant integer ABILITY_MASS_INNER_FIRE                         = 'A11A'
     constant integer ABILITY_MASS_INNER_FIRE_DUMMY                   = 'A1WK'
+
+    // Power Generator
+    constant integer ABILITY_STARFALL_POWER_GENERATOR                = 'A085'
+    constant integer ABILITY_AUTO_REPAIR                             = 'A07S'
+    constant integer ABILITY_AUTO_REPAIR_ICON                        = 'A083'
+    constant integer ABILITY_ANCIENT_AUTO_REPAIR                     = 'A086'
+    constant integer ABILITY_DEVOTION_AURA_POWER_GENERATOR           = 'A073'
+    constant integer ABILITY_ANCIENT_DEVOTION_AURA                   = 'A087'
 
     // WoW Reforged heroes
 

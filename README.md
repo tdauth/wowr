@@ -179,6 +179,7 @@ Sometimes versions of this map might lead to crashing but since it is really har
 * Not enough space for AI to build its base.
 * `CreateRegion` in globals instead of a JASS function crashes the game on saving it.
 * String literals which are longer than 1023 characters will lead to crashes on loading save games.
+* Clicking on buildings selling or training unit types which have the same unit type ID as dependency equivalent will crash the game.
 
 ## Know Reasons for Desyncs
 
@@ -226,6 +227,7 @@ Here is a list of some modified versions online:
 * DeMoNiKuS: Original map World of Warcraft Reborn.
 * Runeblade14: Tests.
 * Toasty Toast UwU: Tests.
+* Lissai: Tests.
 * Deranor: Tests.
 * Axxa's World of Warcraft Logo Creator: Logo.
 * [Wowpedia](https://wowpedia.fandom.com/): Most of the lore.
