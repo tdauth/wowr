@@ -27495,66 +27495,6 @@ STRING 5445
 Auto Repair - [|cffffcc00Level 1|r]
 }
 
-STRING 5446
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 2|r]
-}
-
-STRING 5447
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 3|r]
-}
-
-STRING 5448
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 4|r]
-}
-
-STRING 5449
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 5|r]
-}
-
-STRING 5450
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 6|r]
-}
-
-STRING 5451
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 7|r]
-}
-
-STRING 5452
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 8|r]
-}
-
-STRING 5453
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 9|r]
-}
-
-STRING 5454
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 10|r]
-}
-
-STRING 5455
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 11|r]
-}
-
 STRING 5456
 // Units: h09L (Altar of Magic), Name (Name)
 {
@@ -27673,12 +27613,6 @@ STRING 5477
 // Units: n03R (Hydra), Ubertip (Tooltip - Extended)
 {
 Light ranged amphibious unit. Can learn Slow Poison and Spawn Hydra Hatchling which causes a smaller Hydras will arise from its corpse when it is slain. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 5479
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 12|r]
 }
 
 STRING 5482
@@ -31465,24 +31399,6 @@ STRING 6204
 // Units: h088 (Fountain of Mana), EditorSuffix (Name - Editor Suffix)
 {
 (Alchemist)
-}
-
-STRING 6205
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 13|r]
-}
-
-STRING 6206
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 14|r]
-}
-
-STRING 6207
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Auto Repair - [|cffffcc00Level 15|r]
 }
 
 STRING 6208
@@ -67679,90 +67595,6 @@ STRING 22471
 // Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the hit point regeneration rate by <A07S,DataA1,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22472
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA2,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22473
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA3,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22474
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA4,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22475
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA5,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22476
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA6,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22477
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA7,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22478
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA8,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22479
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA9,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22480
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA10,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22481
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA11,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22482
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA12,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22483
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA13,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22484
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA14,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22485
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA15,%> % for player buildings including Ancients in the area.
 }
 
 STRING 22486
