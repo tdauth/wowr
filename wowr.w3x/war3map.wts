@@ -8046,13 +8046,13 @@ Clone
 }
 
 STRING 1358
-// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
+// Items: I0V3 (Spell Shield), Name (Name)
 {
 Spell Shield
 }
 
 STRING 1359
-// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
 {
 Spell Shield
 }
@@ -8291,7 +8291,7 @@ Purchase Wolf Spirit Hood
 }
 
 STRING 1420
-// Items: I0V3 (Spell Shield), Name (Name)
+// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
 {
 Spell Shield
 }
