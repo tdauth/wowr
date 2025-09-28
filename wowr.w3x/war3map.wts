@@ -416,7 +416,7 @@ Random Class
 }
 
 STRING 70
-// Abilities: A1MO (Divine Shield), Name (Name)
+// Abilities: A1NY (Divine Shield), Name (Name)
 {
 Divine Shield
 }
@@ -4388,7 +4388,7 @@ STRING 735
 }
 
 STRING 736
-// Buffs/Effects: B035 (Divine Shield), Bufftip (Tooltip)
+// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
 {
 |cff00ff00Divine Shield|r
 }
@@ -51762,7 +51762,7 @@ STRING 11838
 }
 
 STRING 11841
-// Abilities: A1NY (Divine Shield), Name (Name)
+// Abilities: A01C (Divine Shield), Name (Name)
 {
 Divine Shield
 }
@@ -51804,7 +51804,7 @@ STRING 11849
 }
 
 STRING 11852
-// Abilities: A01C (Divine Shield), Name (Name)
+// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
 {
 Divine Shield
 }
@@ -67889,18 +67889,6 @@ STRING 22533
 // Units: E00R (Equipment Bag), Ubertip (Tooltip - Extended)
 {
 An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried  items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
-}
-
-STRING 22534
-// Buffs/Effects: B035 (Divine Shield), EditorName (Name (Editor Only))
-{
-Divine Shield
-}
-
-STRING 22535
-// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
-{
-Divine Shield
 }
 
 STRING 22545
@@ -92804,7 +92792,7 @@ Repairs mechanical units and structures at the cost of resources.
 }
 
 STRING 38441
-// Abilities: A1MO (Divine Shield), EditorSuffix (Editor Suffix)
+// Abilities: A1WH (Fel), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -94040,7 +94028,7 @@ Magic warrior trained to destroy enemies. Initially has Spell Steal, which manip
 }
 
 STRING 38887
-// Abilities: A1WH (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -99619,12 +99607,6 @@ STRING 41368
 (Murloc)
 }
 
-STRING 41369
-// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
-{
-(Buff)
-}
-
 STRING 41370
 // Buffs/Effects: B02R (Water Creature), EditorName (Name (Editor Only))
 {
@@ -104975,12 +104957,6 @@ STRING 43374
 Dark Portal Orc.
 }
 
-STRING 43378
-// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
-{
-|cff00ff00Divine Shield|r
-}
-
 STRING 43379
 // Units: o07D (Stonemaul Camp), EditorSuffix (Name - Editor Suffix)
 {
@@ -106335,18 +106311,6 @@ STRING 43766
 // Upgrades: R04W (Animal War Training), Tip (Tooltip)
 {
 Hero Level 30
-}
-
-STRING 43963
-// Buffs/Effects: B035 (Divine Shield), Buffubertip (Tooltip - Extended)
-{
-This unit is under a Divine Shield; it has increased armor.
-}
-
-STRING 43964
-// Buffs/Effects: B035 (Divine Shield), EditorSuffix (Editor Suffix)
-{
-(Custom)
 }
 
 STRING 43965
