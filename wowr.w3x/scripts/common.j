@@ -2738,6 +2738,8 @@ globals
     constant string MAP_VERSION                                      = "4.5"
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
+    constant string SAVE_CODE_FOLDER                                 = "wowr"
+
     constant integer PLAYER_RESCUABLE                                = 21
     constant integer PLAYER_BOSSES                                   = 22
     constant integer PLAYER_THE_BURNING_LEGION                       = 23
