@@ -25375,12 +25375,6 @@ STRING 5067
 rlev
 }
 
-STRING 5068
-// Destructibles: B017 (Lava Bridge), Name (Name)
-{
-Lava Bridge
-}
-
 STRING 5069
 // Doodads: D00I (Cave Natural Cliff (South Left)), Name (Name)
 {
@@ -45482,7 +45476,7 @@ X
 
 STRING 10293
 {
-Get your reward from Gerard.
+Bring the Zombie Heads to Gerard to receive your reward.
 }
 
 STRING 10294

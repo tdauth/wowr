@@ -566,7 +566,7 @@ E
 }
 
 STRING 70
-// Abilities: A1MO (Divine Shield), Name (Name)
+// Abilities: A1NY (Divine Shield), Name (Name)
 {
 Divine Shield
 }
@@ -5227,7 +5227,7 @@ STRING 735
 }
 
 STRING 736
-// Buffs/Effects: B035 (Divine Shield), Bufftip (Tooltip)
+// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
 {
 |cff00ff00Divine Shield|r
 }
@@ -5677,7 +5677,7 @@ Goblin-Dynamit
 }
 
 STRING 33554
-// Items: I0WV (Tiny Fruit Stand), Hotkey (Hotkey)
+// Items: I08D (Bandit), Hotkey (Hotkey)
 {
 C
 }
@@ -6829,7 +6829,7 @@ Evolution erforschen - [|cffffcc00Stufe 40|r]
 }
 
 STRING 33706
-// Upgrades: R03L (Stone Form), Hotkey (Hotkey)
+// Upgrades: R05Z (Flare), Hotkey (Hotkey)
 {
 F
 }
@@ -10254,7 +10254,7 @@ STRING 1338
 }
 
 STRING 34106
-// Items: I08D (Bandit), Hotkey (Hotkey)
+// Items: I0G2 (Dungeon), Hotkey (Hotkey)
 {
 C
 }
@@ -10387,6 +10387,54 @@ STRING 1351
 // Upgrades: R05N (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
 Increases the armor and hit points of Kul Tiras buildings.
+}
+
+STRING 1352
+// Units: n08O (Jailer), Hotkey (Hotkey)
+{
+J
+}
+
+STRING 1353
+// Units: n02F (Furbolg Champion), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 1354
+// Units: h0BP (Royal Guard), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 1355
+// Units: ndh2 (Draenei Haven), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 1356
+// Abilities: A033 (Clone), Tip (Tooltip - Normal)
+{
+Clone
+}
+
+STRING 1357
+// Abilities: A033 (Clone), Ubertip (Tooltip - Normal - Extended)
+{
+Clone
+}
+
+STRING 1358
+// Items: I0V3 (Spell Shield), Name (Name)
+{
+Spell Shield
+}
+
+STRING 1359
+// Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
+{
+Spell Shield
 }
 
 STRING 1379
@@ -10527,7 +10575,7 @@ STRING 1396
 }
 
 STRING 34164
-// Items: I0G2 (Dungeon), Hotkey (Hotkey)
+// Items: I0HC (Scribe), Hotkey (Hotkey)
 {
 C
 }
@@ -10659,7 +10707,7 @@ Chemistry
 }
 
 STRING 34176
-// Items: I0HC (Scribe), Hotkey (Hotkey)
+// Items: I191 (Demolition Expert), Hotkey (Hotkey)
 {
 C
 }
@@ -10671,7 +10719,7 @@ STRING 1409
 }
 
 STRING 34177
-// Items: I191 (Demolition Expert), Hotkey (Hotkey)
+// Abilities: A201 (Cluster Rockets), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -10755,7 +10803,7 @@ Teleporter
 }
 
 STRING 1420
-// Items: I0V3 (Spell Shield), Name (Name)
+// Abilities: A1NF (Spell Shield), Ubertip (Tooltip - Normal - Extended)
 {
 Zauberschild
 }
@@ -10833,7 +10881,7 @@ Ein listiger Held, adept at damaging and supporting magics. Can learn Feuerblitz
 }
 
 STRING 1426
-// Units: h0BP (Royal Guard), Hotkey (Hotkey)
+// Units: h0G0 (Record Player), Hotkey (Hotkey)
 {
 R
 }
@@ -10845,7 +10893,7 @@ L
 }
 
 STRING 1427
-// Units: h0G0 (Record Player), Hotkey (Hotkey)
+// Units: N0BG (Naga Royal Guard), Hotkey (Hotkey)
 {
 R
 }
@@ -10995,7 +11043,7 @@ Ermöglicht das Herstellen von Gegenständen.
 }
 
 STRING 1441
-// Units: n08O (Jailer), Hotkey (Hotkey)
+// Units: n0JR (Jailer), Hotkey (Hotkey)
 {
 J
 }
@@ -11228,7 +11276,7 @@ Tank Hero, defending your army and destroying hostile towns. Can learn Schockwel
 }
 
 STRING 1468
-// Units: ndh2 (Draenei Haven), Hotkey (Hotkey)
+// Units: n026 (Furbolg Tribal Center), Hotkey (Hotkey)
 {
 H
 }
@@ -11678,7 +11726,7 @@ Ackerbau und Viehzucht - Fortgeschritten
 }
 
 STRING 1525
-// Units: n0JR (Jailer), Hotkey (Hotkey)
+// Units: H08E (Guardian of Tirisfal), Hotkey (Hotkey)
 {
 J
 }
@@ -12044,7 +12092,7 @@ O
 }
 
 STRING 1569
-// Units: n026 (Furbolg Tribal Center), Hotkey (Hotkey)
+// Units: h01W (Wall), Hotkey (Hotkey)
 {
 H
 }
@@ -12704,7 +12752,7 @@ Fountain of Power
 }
 
 STRING 1657
-// Units: h01W (Wall), Hotkey (Hotkey)
+// Units: h022 (Bridge), Hotkey (Hotkey)
 {
 H
 }
@@ -12878,7 +12926,7 @@ B
 }
 
 STRING 1683
-// Units: N0BG (Naga Royal Guard), Hotkey (Hotkey)
+// Units: H0KA (Human Battleship), Hotkey (Hotkey)
 {
 R
 }
@@ -12902,7 +12950,7 @@ STRING 34454
 }
 
 STRING 1686
-// Units: H0KA (Human Battleship), Hotkey (Hotkey)
+// Units: n079 (Trainer), Hotkey (Hotkey)
 {
 R
 }
@@ -14064,7 +14112,7 @@ Rotdrachen beschwören
 }
 
 STRING 1882
-// Units: h022 (Bridge), Hotkey (Hotkey)
+// Units: h023 (Bridge), Hotkey (Hotkey)
 {
 H
 }
@@ -15057,7 +15105,7 @@ O
 }
 
 STRING 2038
-// Units: n02F (Furbolg Champion), Hotkey (Hotkey)
+// Units: n02L (Polar Furbolg Champion), Hotkey (Hotkey)
 {
 C
 }
@@ -15690,25 +15738,25 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 32|r]
 }
 
 STRING 2181
-// Units: h023 (Bridge), Hotkey (Hotkey)
-{
-H
-}
-
-STRING 2182
 // Units: h024 (Short Bridge), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 2183
+STRING 2182
 // Units: h025 (Short Bridge), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 2184
+STRING 2183
 // Units: h06A (Bookshelf), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 2184
+// Units: h06B (Torch), Hotkey (Hotkey)
 {
 H
 }
@@ -15724,19 +15772,19 @@ Unfortunately, this map has some known unfixed issues. If you think you know the
 }
 
 STRING 2187
-// Units: h06B (Torch), Hotkey (Hotkey)
-{
-H
-}
-
-STRING 2188
 // Units: H06F (Hydromancer), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 2189
+STRING 2188
 // Units: n06X (Hydromancer), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 2189
+// Units: h06S (Rack Armor), Hotkey (Hotkey)
 {
 H
 }
@@ -18402,7 +18450,7 @@ STRING 35261
 }
 
 STRING 2494
-// Units: n02L (Polar Furbolg Champion), Hotkey (Hotkey)
+// Units: h027 (Column Single), Hotkey (Hotkey)
 {
 C
 }
@@ -18630,7 +18678,7 @@ STRING 2515
 }
 
 STRING 2516
-// Units: h027 (Column Single), Hotkey (Hotkey)
+// Units: h034 (Dwarf Mining Cart), Hotkey (Hotkey)
 {
 C
 }
@@ -19437,13 +19485,13 @@ M
 }
 
 STRING 2609
-// Units: h034 (Dwarf Mining Cart), Hotkey (Hotkey)
+// Units: n05O (Coral Golem), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 2610
-// Units: n05O (Coral Golem), Hotkey (Hotkey)
+// Units: h069 (Chair), Hotkey (Hotkey)
 {
 C
 }
@@ -20631,7 +20679,7 @@ Lordaeron-Hafen
 }
 
 STRING 2805
-// Units: h069 (Chair), Hotkey (Hotkey)
+// Units: h06Y (Corpse Impaled), Hotkey (Hotkey)
 {
 C
 }
@@ -20667,7 +20715,7 @@ S
 }
 
 STRING 2808
-// Units: n079 (Trainer), Hotkey (Hotkey)
+// Units: n0GT (Trainer), Hotkey (Hotkey)
 {
 R
 }
@@ -20973,7 +21021,7 @@ STRING 35620
 }
 
 STRING 2853
-// Units: h06Y (Corpse Impaled), Hotkey (Hotkey)
+// Units: h070 (Chain Post), Hotkey (Hotkey)
 {
 C
 }
@@ -21668,7 +21716,7 @@ Mana wiederherstellen
 }
 
 STRING 2939
-// Units: n0GT (Trainer), Hotkey (Hotkey)
+// Units: h0SB (Stop Train), Hotkey (Hotkey)
 {
 R
 }
@@ -21692,7 +21740,7 @@ STRING 35708
 }
 
 STRING 2941
-// Units: h0SB (Stop Train), Hotkey (Hotkey)
+// Units: n0KP (Red Dragon Roost), Hotkey (Hotkey)
 {
 R
 }
@@ -23947,7 +23995,7 @@ Winzige Voodoo-Lounge erwerben
 }
 
 STRING 3185
-// Units: n0KP (Red Dragon Roost), Hotkey (Hotkey)
+// Units: n0LA (Naga Sorceror), Hotkey (Hotkey)
 {
 R
 }
@@ -24235,7 +24283,7 @@ STRING 35977
 }
 
 STRING 3210
-// Units: n0LA (Naga Sorceror), Hotkey (Hotkey)
+// Units: N0MR (Submerged Naga Royal Guard), Hotkey (Hotkey)
 {
 R
 }
@@ -24703,7 +24751,7 @@ M
 }
 
 STRING 36035
-// Upgrades: R05Z (Flare), Hotkey (Hotkey)
+// Upgrades: R06X (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -25093,7 +25141,7 @@ Türe errichten
 }
 
 STRING 3310
-// Units: h06S (Rack Armor), Hotkey (Hotkey)
+// Units: h06W (Tombstone), Hotkey (Hotkey)
 {
 H
 }
@@ -25921,7 +25969,7 @@ STRING 36148
 }
 
 STRING 3381
-// Units: h070 (Chain Post), Hotkey (Hotkey)
+// Units: E00T (Druid of the Claw), Hotkey (Hotkey)
 {
 C
 }
@@ -26017,7 +26065,7 @@ STRING 36156
 }
 
 STRING 3389
-// Units: E00T (Druid of the Claw), Hotkey (Hotkey)
+// Units: n07T (Core Hound), Hotkey (Hotkey)
 {
 C
 }
@@ -28595,7 +28643,7 @@ STRING 3706
 }
 
 STRING 36474
-// Upgrades: R06X (Stone Form), Hotkey (Hotkey)
+// Upgrades: R0CG (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 F
 }
@@ -28953,7 +29001,7 @@ Fel Armor
 }
 
 STRING 3750
-// Units: n07T (Core Hound), Hotkey (Hotkey)
+// Units: h09S (Supply Cart), Hotkey (Hotkey)
 {
 C
 }
@@ -29151,7 +29199,7 @@ E
 }
 
 STRING 3779
-// Units: N0MR (Submerged Naga Royal Guard), Hotkey (Hotkey)
+// Units: H0YD (Ranger), Hotkey (Hotkey)
 {
 R
 }
@@ -29601,7 +29649,7 @@ Q
 }
 
 STRING 3886
-// Units: H0YD (Ranger), Hotkey (Hotkey)
+// Units: N0NC (Naga Siren), Hotkey (Hotkey)
 {
 R
 }
@@ -29697,7 +29745,7 @@ Gefängnis
 }
 
 STRING 3904
-// Units: h06W (Tombstone), Hotkey (Hotkey)
+// Units: h06Z (Altar), Hotkey (Hotkey)
 {
 H
 }
@@ -30853,7 +30901,7 @@ STRING 4252
 }
 
 STRING 4254
-// Units: N0NC (Naga Siren), Hotkey (Hotkey)
+// Units: H0YI (Ranger), Hotkey (Hotkey)
 {
 R
 }
@@ -30901,7 +30949,7 @@ STRING 4280
 }
 
 STRING 4281
-// Units: h09S (Supply Cart), Hotkey (Hotkey)
+// Units: h0BQ (Advanced Barracks), Hotkey (Hotkey)
 {
 C
 }
@@ -32789,7 +32837,7 @@ G
 }
 
 STRING 4505
-// Units: h06Z (Altar), Hotkey (Hotkey)
+// Units: E00W (Druid of the Talon), Hotkey (Hotkey)
 {
 H
 }
@@ -32801,7 +32849,7 @@ F
 }
 
 STRING 4507
-// Units: H0YI (Ranger), Hotkey (Hotkey)
+// Units: n07L (Brigand), Hotkey (Hotkey)
 {
 R
 }
@@ -32921,7 +32969,7 @@ STRING 4525
 }
 
 STRING 4526
-// Units: h0BQ (Advanced Barracks), Hotkey (Hotkey)
+// Units: o04H (Mounts Cage), Hotkey (Hotkey)
 {
 C
 }
@@ -33176,7 +33224,7 @@ Summons a Spiderling every <A1CI,DataA1> seconds which lasts for <A1CI,Dur1> Sek
 }
 
 STRING 4550
-// Units: n07L (Brigand), Hotkey (Hotkey)
+// Units: n0DA (Green Dragon Roost), Hotkey (Hotkey)
 {
 R
 }
@@ -33584,7 +33632,7 @@ STRING 37354
 }
 
 STRING 4587
-// Units: o04H (Mounts Cage), Hotkey (Hotkey)
+// Units: n0CV (Human Child), Hotkey (Hotkey)
 {
 C
 }
@@ -34098,7 +34146,7 @@ Fortgeschrittene Neruber-Flügel
 }
 
 STRING 4647
-// Units: n0DA (Green Dragon Roost), Hotkey (Hotkey)
+// Items: tpow (Tome of Knowledge), Hotkey (Hotkey)
 {
 R
 }
@@ -34512,7 +34560,7 @@ STRING 37459
 }
 
 STRING 4692
-// Units: E00W (Druid of the Talon), Hotkey (Hotkey)
+// Units: h08X (Bridge), Hotkey (Hotkey)
 {
 H
 }
@@ -34599,7 +34647,7 @@ Meister Inschrift
 }
 
 STRING 4699
-// Items: tpow (Tome of Knowledge), Hotkey (Hotkey)
+// Items: I057 (Read Letters), Hotkey (Hotkey)
 {
 R
 }
@@ -34815,7 +34863,7 @@ STRING 37485
 }
 
 STRING 4718
-// Units: n0CV (Human Child), Hotkey (Hotkey)
+// Units: n0CW (Orc Child), Hotkey (Hotkey)
 {
 C
 }
@@ -34947,7 +34995,7 @@ Netzspinner-Adeptenausbildung
 }
 
 STRING 4729
-// Items: I057 (Read Letters), Hotkey (Hotkey)
+// Items: I05S (Darnassus (Teldrassil Isle)), Hotkey (Hotkey)
 {
 R
 }
@@ -35470,7 +35518,7 @@ STRING 37541
 }
 
 STRING 4774
-// Units: h08X (Bridge), Hotkey (Hotkey)
+// Units: h08Y (Bridge), Hotkey (Hotkey)
 {
 H
 }
@@ -35482,7 +35530,7 @@ Eingegrabener Uralter Schrein
 }
 
 STRING 4775
-// Units: h08Y (Bridge), Hotkey (Hotkey)
+// Units: o02K (Troll Hexer), Hotkey (Hotkey)
 {
 H
 }
@@ -35494,7 +35542,7 @@ Uralten Schrein beschwören
 }
 
 STRING 4776
-// Units: o02K (Troll Hexer), Hotkey (Hotkey)
+// Units: h0A1 (Dragonhawk Rider), Hotkey (Hotkey)
 {
 H
 }
@@ -35506,7 +35554,7 @@ Eingegrabene Brutstätte
 }
 
 STRING 4777
-// Units: h0A1 (Dragonhawk Rider), Hotkey (Hotkey)
+// Units: n07Z (Ice Troll High Priest), Hotkey (Hotkey)
 {
 H
 }
@@ -35548,7 +35596,7 @@ T
 }
 
 STRING 4782
-// Units: n0CW (Orc Child), Hotkey (Hotkey)
+// Units: n0CX (Troll Child), Hotkey (Hotkey)
 {
 C
 }
@@ -36646,7 +36694,7 @@ C
 }
 
 STRING 4900
-// Units: H08E (Guardian of Tirisfal), Hotkey (Hotkey)
+// Items: I05O (Deposit 5000 Gold), Hotkey (Hotkey)
 {
 J
 }
@@ -36925,7 +36973,7 @@ Ambush
 }
 
 STRING 4971
-// Units: n07Z (Ice Troll High Priest), Hotkey (Hotkey)
+// Units: h0MX (Archery Target), Hotkey (Hotkey)
 {
 H
 }
@@ -37327,7 +37375,7 @@ The Nest digs into the ground, becomes invisible, and gains a regeneration rate 
 }
 
 STRING 5008
-// Units: h0MX (Archery Target), Hotkey (Hotkey)
+// Units: h0GP (Fire Pit), Hotkey (Hotkey)
 {
 H
 }
@@ -37999,12 +38047,6 @@ STRING 5067
 rlev
 }
 
-STRING 5068
-// Destructibles: B017 (Lava Bridge), Name (Name)
-{
-Lava-Brücke
-}
-
 STRING 5069
 // Doodads: D00I (Cave Natural Cliff (South Left)), Name (Name)
 {
@@ -38022,7 +38064,7 @@ Units owned by player Gaia can be rescued by any other player. Rescued units cha
 }
 
 STRING 5072
-// Units: h0GP (Fire Pit), Hotkey (Hotkey)
+// Units: o05F (Witch Hut), Hotkey (Hotkey)
 {
 H
 }
@@ -38304,7 +38346,7 @@ Schreiber
 }
 
 STRING 5104
-// Units: o05F (Witch Hut), Hotkey (Hotkey)
+// Units: o062 (Spider Shrine), Hotkey (Hotkey)
 {
 H
 }
@@ -38766,7 +38808,7 @@ Monument
 }
 
 STRING 5153
-// Units: o062 (Spider Shrine), Hotkey (Hotkey)
+// Units: o067 (Murloc Hut), Hotkey (Hotkey)
 {
 H
 }
@@ -38946,7 +38988,7 @@ Schemen wiederbeleben
 }
 
 STRING 5170
-// Units: o067 (Murloc Hut), Hotkey (Hotkey)
+// Units: N0HJ (Harpy Queen), Hotkey (Hotkey)
 {
 H
 }
@@ -40435,7 +40477,7 @@ Sacrifices Troll units converting them into random creeps with their base level.
 }
 
 STRING 5350
-// Units: n0CX (Troll Child), Hotkey (Hotkey)
+// Units: n0D5 (Gnome Child), Hotkey (Hotkey)
 {
 C
 }
@@ -40488,7 +40530,7 @@ Increases the armor of Skelett-Kriegers, Skeleton Archers, Skeleton Berserkers, 
 }
 
 STRING 38123
-// Upgrades: R0CG (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R0CM (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -40578,7 +40620,7 @@ U
 }
 
 STRING 5363
-// Items: I05S (Darnassus (Teldrassil Isle)), Hotkey (Hotkey)
+// Items: I05T (Armorer), Hotkey (Hotkey)
 {
 R
 }
@@ -40920,7 +40962,7 @@ STRING 38165
 }
 
 STRING 5398
-// Units: n0D5 (Gnome Child), Hotkey (Hotkey)
+// Units: n0FF (Chieftain), Hotkey (Hotkey)
 {
 C
 }
@@ -40954,7 +40996,7 @@ Ein mystischer Held, particularly adept at cold magic. Can learn Tote erwecken, 
 }
 
 STRING 5401
-// Units: N0HJ (Harpy Queen), Hotkey (Hotkey)
+// Units: n0HQ (Ogre Hunter), Hotkey (Hotkey)
 {
 H
 }
@@ -40966,13 +41008,13 @@ Ambush
 }
 
 STRING 5402
-// Units: n0HQ (Ogre Hunter), Hotkey (Hotkey)
+// Units: n0IO (Refuge), Hotkey (Hotkey)
 {
 H
 }
 
 STRING 5403
-// Units: n0IO (Refuge), Hotkey (Hotkey)
+// Units: n0JC (High Templar), Hotkey (Hotkey)
 {
 H
 }
@@ -40984,7 +41026,7 @@ Select Self
 }
 
 STRING 5404
-// Units: n0JC (High Templar), Hotkey (Hotkey)
+// Units: n0AD (Kobold Hunter), Hotkey (Hotkey)
 {
 H
 }
@@ -41008,7 +41050,7 @@ Altar of Twisting Nether
 }
 
 STRING 5406
-// Units: n0AD (Kobold Hunter), Hotkey (Hotkey)
+// Units: N02W (Red Dragon), Hotkey (Hotkey)
 {
 H
 }
@@ -41074,55 +41116,55 @@ Skin Höllenbestie
 }
 
 STRING 5415
-// Units: N02W (Red Dragon), Hotkey (Hotkey)
-{
-H
-}
-
-STRING 5416
 // Units: h07Z (Heretic), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5417
+STRING 5416
 // Units: h08D (House Door), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5418
+STRING 5417
 // Units: n01I (Hatchery), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5419
+STRING 5418
 // Units: n03R (Hydra), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5420
+STRING 5419
 // Items: I04R (Withdraw All Lumber), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5421
+STRING 5420
 // Abilities: ACcl (Chain Lightning), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5422
+STRING 5421
 // Abilities: A0JI (Replenish Mana and Life), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5423
+STRING 5422
 // Abilities: A0JI (Replenish Mana and Life), Unhotkey (Hotkey - Turn Off)
+{
+H
+}
+
+STRING 5423
+// Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
 {
 H
 }
@@ -41259,66 +41301,6 @@ STRING 5445
 Autoreparatur - [|cffffcc00Stufe 1|r]
 }
 
-STRING 5446
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 2|r]
-}
-
-STRING 5447
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 3|r]
-}
-
-STRING 5448
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 4|r]
-}
-
-STRING 5449
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 5|r]
-}
-
-STRING 5450
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 6|r]
-}
-
-STRING 5451
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 7|r]
-}
-
-STRING 5452
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 8|r]
-}
-
-STRING 5453
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 9|r]
-}
-
-STRING 5454
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 10|r]
-}
-
-STRING 5455
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 11|r]
-}
-
 STRING 5456
 // Units: h09L (Altar of Magic), Name (Name)
 {
@@ -41449,12 +41431,6 @@ STRING 5477
 // Units: n03R (Hydra), Ubertip (Tooltip - Extended)
 {
 Light ranged amphibious unit. Can learn Schleichendes Gift and Spawn Hydra Hatchling which causes a smaller Hydras will arise from its corpse when it is slain. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
-STRING 5479
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 12|r]
 }
 
 STRING 5482
@@ -42218,7 +42194,7 @@ STRING 5630
 }
 
 STRING 5631
-// Units: n0FF (Chieftain), Hotkey (Hotkey)
+// Units: o06R (Ogre Cave), Hotkey (Hotkey)
 {
 C
 }
@@ -42434,7 +42410,7 @@ Drachenhort
 }
 
 STRING 38441
-// Abilities: A1MO (Divine Shield), EditorSuffix (Editor Suffix)
+// Abilities: A1WH (Fel), EditorSuffix (Editor Suffix)
 {
 (Zauberverstärker)
 }
@@ -43419,7 +43395,7 @@ F
 }
 
 STRING 5790
-// Units: o06R (Ogre Cave), Hotkey (Hotkey)
+// Units: o077 (Clefthoof), Hotkey (Hotkey)
 {
 C
 }
@@ -44311,7 +44287,7 @@ Festhaut
 }
 
 STRING 5917
-// Items: I05T (Armorer), Hotkey (Hotkey)
+// Items: I06D (Night Elf), Hotkey (Hotkey)
 {
 R
 }
@@ -45001,7 +44977,7 @@ Luftelementar anheuern
 }
 
 STRING 5999
-// Units: o077 (Clefthoof), Hotkey (Hotkey)
+// Units: h0RV (Cannon), Hotkey (Hotkey)
 {
 C
 }
@@ -45415,7 +45391,7 @@ D
 }
 
 STRING 6039
-// Units: h0RV (Cannon), Hotkey (Hotkey)
+// Units: n0IT (Undead Child), Hotkey (Hotkey)
 {
 C
 }
@@ -45827,7 +45803,7 @@ Creature Attack
 }
 
 STRING 6083
-// Items: I06D (Night Elf), Hotkey (Hotkey)
+// Items: I08X (Magical Item Summoner), Hotkey (Hotkey)
 {
 R
 }
@@ -46001,7 +45977,7 @@ Doktor-Kräuterkunde
 }
 
 STRING 6099
-// Units: n0IT (Undead Child), Hotkey (Hotkey)
+// Units: n0IV (Neutral Child), Hotkey (Hotkey)
 {
 C
 }
@@ -46115,7 +46091,7 @@ Increases Runecarvers' mana capacity, mana regeneration rate, hit points, and gi
 }
 
 STRING 6109
-// Items: I08X (Magical Item Summoner), Hotkey (Hotkey)
+// Items: I09F (Beast Whistle), Hotkey (Hotkey)
 {
 R
 }
@@ -46235,7 +46211,7 @@ Errichtet einen Drachenhorst.
 }
 
 STRING 38887
-// Abilities: A1WH (Fel), EditorSuffix (Editor Suffix)
+// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
 {
 (Zauberverstärker)
 }
@@ -46787,7 +46763,7 @@ S
 }
 
 STRING 6200
-// Items: I09F (Beast Whistle), Hotkey (Hotkey)
+// Items: I0J1 (Randomize Spells), Hotkey (Hotkey)
 {
 R
 }
@@ -46814,24 +46790,6 @@ STRING 6204
 // Units: h088 (Fountain of Mana), EditorSuffix (Name - Editor Suffix)
 {
 (Alchemist)
-}
-
-STRING 6205
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 13|r]
-}
-
-STRING 6206
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 14|r]
-}
-
-STRING 6207
-// Abilities: A083 (Auto Repair), Tip (Tooltip - Normal)
-{
-Autoreparatur - [|cffffcc00Stufe 15|r]
 }
 
 STRING 6208
@@ -48279,7 +48237,7 @@ Q
 }
 
 STRING 6555
-// Items: I0J1 (Randomize Spells), Hotkey (Hotkey)
+// Items: I0JT (Farmer), Hotkey (Hotkey)
 {
 R
 }
@@ -48345,7 +48303,7 @@ Mondkugel
 }
 
 STRING 6569
-// Items: I0JT (Farmer), Hotkey (Hotkey)
+// Items: I0Q5 (Murloc), Hotkey (Hotkey)
 {
 R
 }
@@ -48369,13 +48327,13 @@ A book that contains knowledge of crafting thieving tools.
 }
 
 STRING 6587
-// Items: I0Q5 (Murloc), Hotkey (Hotkey)
+// Items: I0RU (Reset Attributes), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 6588
-// Units: n0IV (Neutral Child), Hotkey (Hotkey)
+// Units: n0IX (Night Elf Child), Hotkey (Hotkey)
 {
 C
 }
@@ -48530,19 +48488,19 @@ Error on loading savecode!
 }
 
 STRING 6618
-// Items: I0RU (Reset Attributes), Hotkey (Hotkey)
-{
-R
-}
-
-STRING 6619
 // Items: I0SS (Gnoll), Hotkey (Hotkey)
 {
 R
 }
 
-STRING 6620
+STRING 6619
 // Items: I0YS (Randomize Skin), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 6620
+// Items: I10P (Thief), Hotkey (Hotkey)
 {
 R
 }
@@ -48846,7 +48804,7 @@ W
 }
 
 STRING 6723
-// Units: n0IX (Night Elf Child), Hotkey (Hotkey)
+// Units: n0IZ (Ogre Child), Hotkey (Hotkey)
 {
 C
 }
@@ -48870,7 +48828,7 @@ T
 }
 
 STRING 6727
-// Units: n0IZ (Ogre Child), Hotkey (Hotkey)
+// Units: n0JW (Bone Chipper), Hotkey (Hotkey)
 {
 C
 }
@@ -48942,7 +48900,7 @@ U
 }
 
 STRING 6739
-// Units: n0JW (Bone Chipper), Hotkey (Hotkey)
+// Units: n0JB (Murloc Cultist), Hotkey (Hotkey)
 {
 C
 }
@@ -49176,7 +49134,7 @@ Der Skin eines Gespenstes.
 }
 
 STRING 6779
-// Items: I10P (Thief), Hotkey (Hotkey)
+// Items: I12M (Mount Hyjal), Hotkey (Hotkey)
 {
 B
 }
@@ -49548,7 +49506,7 @@ STRING 39654
 }
 
 STRING 6887
-// Items: I12M (Mount Hyjal), Hotkey (Hotkey)
+// Items: I19N (Next Skin), Hotkey (Hotkey)
 {
 R
 }
@@ -51172,7 +51130,7 @@ Q
 }
 
 STRING 7060
-// Items: I19N (Next Skin), Hotkey (Hotkey)
+// Items: I0O8 (Jadefire Glen), Hotkey (Hotkey)
 {
 R
 }
@@ -51202,7 +51160,7 @@ E
 }
 
 STRING 7068
-// Items: I0O8 (Jadefire Glen), Hotkey (Hotkey)
+// Abilities: ACcs (Curse), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51376,7 +51334,7 @@ Q
 }
 
 STRING 7112
-// Abilities: ACcs (Curse), Hotkey (Hotkey - Normal)
+// Abilities: ACcs (Curse), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -51736,7 +51694,7 @@ Purchase Tiny Manor
 }
 
 STRING 7164
-// Abilities: ACcs (Curse), Unhotkey (Hotkey - Turn Off)
+// Abilities: ACrg (Rain of Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51796,7 +51754,7 @@ Build Tiny Handelshaus
 }
 
 STRING 7169
-// Abilities: ACrg (Rain of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A01D (Herbalism - Master), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51886,7 +51844,7 @@ Purchase Tiny Arcane Tower
 }
 
 STRING 7178
-// Abilities: A01D (Herbalism - Master), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Fear), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52384,13 +52342,13 @@ STRING 40009
 }
 
 STRING 7244
-// Abilities: A029 (Fear), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Fear), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7245
-// Abilities: A029 (Fear), Hotkey (Hotkey - Normal)
+// Abilities: A04K (Restore Mana), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53127,7 +53085,7 @@ Zahle 10 000 Gold ein
 }
 
 STRING 7419
-// Units: n0JB (Murloc Cultist), Hotkey (Hotkey)
+// Units: n0K0 (Cultist), Hotkey (Hotkey)
 {
 C
 }
@@ -53883,7 +53841,7 @@ Verteidigen
 }
 
 STRING 7605
-// Units: n0K0 (Cultist), Hotkey (Hotkey)
+// Units: n0KF (Faceless One Child), Hotkey (Hotkey)
 {
 C
 }
@@ -54157,7 +54115,7 @@ Zepter der Tuskarr
 }
 
 STRING 7636
-// Abilities: A04K (Restore Mana), Hotkey (Hotkey - Normal)
+// Abilities: A04K (Restore Mana), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -54277,7 +54235,7 @@ Schmetter-Angriff
 }
 
 STRING 40416
-// Upgrades: R0CM (Stone Form), Hotkey (Hotkey)
+// Upgrades: R0EJ (Ensnare), Hotkey (Hotkey)
 {
 F
 }
@@ -54535,7 +54493,7 @@ Purchase Tiny Altar of Twisting Nether
 }
 
 STRING 7674
-// Abilities: A04K (Restore Mana), Unhotkey (Hotkey - Turn Off)
+// Abilities: A04W (Reward Freelancer), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54661,7 +54619,7 @@ Riesigen Frostwolf ausbilden
 }
 
 STRING 7686
-// Abilities: A04W (Reward Freelancer), Hotkey (Hotkey - Normal)
+// Abilities: A05O (Restore Mana), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54961,7 +54919,7 @@ Verteidiger beschwören
 }
 
 STRING 7717
-// Items: I05O (Deposit 5000 Gold), Hotkey (Hotkey)
+// Abilities: ACrj (Rejuvenation), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -57553,7 +57511,7 @@ Q
 }
 
 STRING 7995
-// Abilities: A05O (Restore Mana), Hotkey (Hotkey - Normal)
+// Abilities: A05O (Restore Mana), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -57787,7 +57745,7 @@ Khadgar wiederbeleben
 }
 
 STRING 8029
-// Units: n0KF (Faceless One Child), Hotkey (Hotkey)
+// Units: H0V4 (Developer), Hotkey (Hotkey)
 {
 C
 }
@@ -59216,7 +59174,7 @@ Irrwische beschwören
 }
 
 STRING 41033
-// Upgrades: R0EJ (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07A (Upgrade Moon Glaive), Hotkey (Hotkey)
 {
 F
 }
@@ -59642,7 +59600,7 @@ Reittier
 }
 
 STRING 41077
-// Upgrades: R07A (Upgrade Moon Glaive), Hotkey (Hotkey)
+// Upgrades: R03B (Cloud), Hotkey (Hotkey)
 {
 F
 }
@@ -59828,7 +59786,7 @@ When used on a units, temporarily stops all unit activities. |nHält <Afrz,Dur1>
 }
 
 STRING 8327
-// Units: H0V4 (Developer), Hotkey (Hotkey)
+// Units: n05T (Blood Elf Child), Hotkey (Hotkey)
 {
 C
 }
@@ -59930,7 +59888,7 @@ M
 }
 
 STRING 8337
-// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
+// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 M
 }
@@ -60055,12 +60013,6 @@ STRING 8356
 (Draenei) (Farm)
 }
 
-STRING 41124
-// Upgrades: R03B (Cloud), Hotkey (Hotkey)
-{
-F
-}
-
 STRING 8357
 // Units: n0JJ (Haven), EditorSuffix (Name - Editor Suffix)
 {
@@ -60116,7 +60068,7 @@ L
 }
 
 STRING 8362
-// Abilities: A05O (Restore Mana), Unhotkey (Hotkey - Turn Off)
+// Abilities: A05V (Disable Portal), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61077,7 +61029,7 @@ STRING 41241
 }
 
 STRING 8474
-// Abilities: A05V (Disable Portal), Hotkey (Hotkey - Normal)
+// Abilities: A0AW (Convert Into Night Elf), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61270,7 +61222,7 @@ STRING 41258
 }
 
 STRING 8491
-// Units: n05T (Blood Elf Child), Hotkey (Hotkey)
+// Units: n05W (High Elf Child), Hotkey (Hotkey)
 {
 C
 }
@@ -61585,7 +61537,7 @@ STRING 41286
 }
 
 STRING 8519
-// Abilities: A0AW (Convert Into Night Elf), Hotkey (Hotkey - Normal)
+// Abilities: A0C7 (Paint Red), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -62506,12 +62458,6 @@ STRING 8601
 B
 }
 
-STRING 41369
-// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
-{
-(Zauberverstärker)
-}
-
 STRING 8602
 // Units: o0B6 (Kobold Shipyard), Hotkey (Hotkey)
 {
@@ -62704,7 +62650,7 @@ Research Murloc Eggs
 }
 
 STRING 8622
-// Units: n05W (High Elf Child), Hotkey (Hotkey)
+// Units: n05X (Demon Child), Hotkey (Hotkey)
 {
 C
 }
@@ -62848,7 +62794,7 @@ Research Murloc Shadowcaster Meisterausbildung
 }
 
 STRING 8634
-// Abilities: A0C7 (Paint Red), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Sunwell Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -63338,7 +63284,7 @@ Ernte
 }
 
 STRING 8690
-// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -63675,7 +63621,7 @@ Skin Arbeiter
 }
 
 STRING 8728
-// Abilities: A0G6 (Sunwell Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Find Artifacts), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64076,7 +64022,7 @@ STRING 8827
 }
 
 STRING 8828
-// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -64437,13 +64383,13 @@ Künstlicher Tag
 }
 
 STRING 8951
-// Abilities: A0HL (Find Artifacts), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 8952
-// Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
+// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -64455,7 +64401,7 @@ STRING 41720
 }
 
 STRING 8953
-// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
+// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -64467,7 +64413,7 @@ STRING 41721
 }
 
 STRING 8954
-// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64558,7 +64504,7 @@ Mondsteine
 }
 
 STRING 9007
-// Abilities: ACrj (Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -64570,7 +64516,7 @@ Ein heiliges Licht kann eine befreundete lebende Einheit um <A13Q,DataA1> Treffe
 }
 
 STRING 9011
-// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -65689,13 +65635,13 @@ STRING 41999
 }
 
 STRING 9248
-// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9249
-// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -65731,7 +65677,7 @@ STRING 42024
 }
 
 STRING 9257
-// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
+// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -65743,7 +65689,7 @@ STRING 42025
 }
 
 STRING 9258
-// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
+// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -65971,13 +65917,13 @@ Fleischwagen beschwören
 }
 
 STRING 9334
-// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
+// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9335
-// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
+// Abilities: A0MO (Return Gold and Lumber), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66087,7 +66033,7 @@ STRING 42131
 }
 
 STRING 9364
-// Abilities: A0MO (Return Gold and Lumber), Hotkey (Hotkey - Normal)
+// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66171,13 +66117,13 @@ STRING 42148
 }
 
 STRING 9385
-// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
+// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9386
-// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
+// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66189,7 +66135,7 @@ Attacks can create Clockwork Goblins.
 }
 
 STRING 9387
-// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66207,13 +66153,13 @@ Combines effects of known orbs to one single item. Adds 60 bonus damage to the a
 }
 
 STRING 9391
-// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
+// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9392
-// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66237,7 +66183,7 @@ STRING 42166
 }
 
 STRING 9401
-// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66249,7 +66195,7 @@ STRING 9402
 }
 
 STRING 9403
-// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
+// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66348,7 +66294,7 @@ Feuerangriff
 }
 
 STRING 9472
-// Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
+// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66900,7 +66846,7 @@ Primary structure, used to train Pandaren Holzfällers and receive gathered reso
 }
 
 STRING 9591
-// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66912,7 +66858,7 @@ Ausbau zum Advanced Pandaren Temple ermöglicht die Produktion weiterer Gebäude
 }
 
 STRING 9592
-// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
+// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66924,7 +66870,7 @@ Ausbau zum Great Pandaren Temple ermöglicht die Produktion weiterer Gebäude- u
 }
 
 STRING 9593
-// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66936,7 +66882,7 @@ Mönch
 }
 
 STRING 9594
-// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -67946,7 +67892,7 @@ STRING 42509
 }
 
 STRING 9742
-// Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
+// Abilities: A1X3 (Command Buttons), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67958,7 +67904,7 @@ Reduces all attacks on the Drachenschildkrötes by <Assk,DataC1> damage. Attacks
 }
 
 STRING 9743
-// Units: n05X (Demon Child), Hotkey (Hotkey)
+// Units: n05Y (Goblin Child), Hotkey (Hotkey)
 {
 C
 }
@@ -68034,7 +67980,7 @@ STRING 42517
 }
 
 STRING 9750
-// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
+// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -68046,7 +67992,7 @@ Gives Primal Pandaren the Berserk ability.
 }
 
 STRING 9751
-// Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -68430,7 +68376,7 @@ Boosts all hero attributes by 1.
 }
 
 STRING 9868
-// Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68442,7 +68388,7 @@ Increases all hero attributes by 1 when worn.
 }
 
 STRING 9869
-// Abilities: A1X3 (Command Buttons), Hotkey (Hotkey - Normal)
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68562,13 +68508,13 @@ STRING 9895
 }
 
 STRING 9899
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9900
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68906,7 +68852,7 @@ Craft items which increase your hero attributes:|n- Ring of Superiority|n- Encha
 }
 
 STRING 10008
-// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68918,7 +68864,7 @@ Ring des Schutzes +8 herstellen
 }
 
 STRING 10009
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
+// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
 {
 Q
 }
@@ -69093,12 +69039,6 @@ STRING 42832
 // Items: I0SF (Unique - Orb of Kil'jaeden), Description (Description)
 {
 |cff8b00ffEinzigartig|r|nA unique powerful orb from the Demon Kil'Jaeden which increases your attack damage and allows you casting Schreckgeheul.
-}
-
-STRING 10065
-// Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
-{
-Q
 }
 
 STRING 10066
@@ -69381,12 +69321,6 @@ STRING 10097
 Ein Kriegerheld, evil counterpart to the Human Paladin. Can learn Todesmantel, Hieb Unheilige Aura, and Finger of Death. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
 }
 
-STRING 10098
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
-{
-Q
-}
-
 STRING 10100
 // Units: H0AJ (Paladin), Ubertip (Tooltip - Extended)
 {
@@ -69652,7 +69586,7 @@ Item Unlimited Bag of Food
 }
 
 STRING 10131
-// Units: n05Y (Goblin Child), Hotkey (Hotkey)
+// Units: n05Z (Furbolg Child), Hotkey (Hotkey)
 {
 C
 }
@@ -71649,7 +71583,7 @@ Banane erwerben
 }
 
 STRING 10419
-// Units: n05Z (Furbolg Child), Hotkey (Hotkey)
+// Units: n060 (Dwarf Child), Hotkey (Hotkey)
 {
 C
 }
@@ -73300,12 +73234,6 @@ STRING 10610
 Versunkene Ruinen Tree (Indestructible, small)
 }
 
-STRING 43378
-// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
-{
-|cff00ff00Gottesschild|r
-}
-
 STRING 10611
 // Units: h0N4 (Farmhand), EditorSuffix (Name - Editor Suffix)
 {
@@ -73883,7 +73811,7 @@ Erschafft am Zielort einen Fleischgolem.
 }
 
 STRING 10673
-// Units: n060 (Dwarf Child), Hotkey (Hotkey)
+// Units: n063 (Draenei Child), Hotkey (Hotkey)
 {
 C
 }
@@ -73895,7 +73823,7 @@ Erschafft einen Fleischgolem.
 }
 
 STRING 10674
-// Units: n063 (Draenei Child), Hotkey (Hotkey)
+// Units: n064 (Pandaren Child), Hotkey (Hotkey)
 {
 C
 }
@@ -75583,7 +75511,7 @@ Convert Into Goblin
 }
 
 STRING 10857
-// Units: n064 (Pandaren Child), Hotkey (Hotkey)
+// Units: n065 (Nerubian Child), Hotkey (Hotkey)
 {
 C
 }
@@ -76075,7 +76003,7 @@ S
 }
 
 STRING 10928
-// Units: n065 (Nerubian Child), Hotkey (Hotkey)
+// Units: n07E (Tuskarr Child), Hotkey (Hotkey)
 {
 C
 }
@@ -76709,7 +76637,7 @@ Skins determine the visuals and sounds of units and buildings. They can be custo
 }
 
 STRING 11030
-// Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
+// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -76727,7 +76655,7 @@ E
 }
 
 STRING 11033
-// Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
+// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -76973,7 +76901,7 @@ Erlaubt Bürgern den Bau des Brunnen des Blutes zur AUsbildung und Umwandlung vo
 }
 
 STRING 11123
-// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
+// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -77180,18 +77108,6 @@ STRING 11176
 // Units: N036 (Sea Giant), Name (Name)
 {
 Meeresriese
-}
-
-STRING 43963
-// Buffs/Effects: B035 (Divine Shield), Buffubertip (Tooltip - Extended)
-{
-This unit is under a Gottesschild; it has increased armor.
-}
-
-STRING 43964
-// Buffs/Effects: B035 (Divine Shield), EditorSuffix (Editor Suffix)
-{
-(Custom)
 }
 
 STRING 43965
@@ -79769,7 +79685,7 @@ STRING 11838
 }
 
 STRING 11841
-// Abilities: A1NY (Divine Shield), Name (Name)
+// Abilities: A01C (Divine Shield), Name (Name)
 {
 Gottesschild
 }
@@ -79811,7 +79727,7 @@ STRING 11849
 }
 
 STRING 11852
-// Abilities: A01C (Divine Shield), Name (Name)
+// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
 {
 Gottesschild
 }
@@ -80134,7 +80050,7 @@ Reparieren
 }
 
 STRING 11944
-// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
+// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -80285,7 +80201,7 @@ An encampment of demonic satyr in southern Felwood.|n
 }
 
 STRING 11974
-// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81212,7 +81128,7 @@ O
 }
 
 STRING 12157
-// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81224,7 +81140,7 @@ STRING 12158
 }
 
 STRING 12160
-// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86017,7 +85933,7 @@ Zug anhalten
 }
 
 STRING 13847
-// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
+// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86639,7 +86555,7 @@ STRING 14039
 }
 
 STRING 14040
-// Units: n07E (Tuskarr Child), Hotkey (Hotkey)
+// Units: n0AI (Naga Child), Hotkey (Hotkey)
 {
 C
 }
@@ -87119,7 +87035,7 @@ Kugel der Kugeln
 }
 
 STRING 14257
-// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -87746,13 +87662,13 @@ E
 }
 
 STRING 14575
-// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
+// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14578
-// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
+// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88267,37 +88183,37 @@ W
 }
 
 STRING 14878
-// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14879
 // Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14880
+STRING 14879
 // Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14881
+STRING 14880
 // Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14882
+STRING 14881
 // Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14884
+STRING 14882
 // Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14884
+// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88309,7 +88225,7 @@ W
 }
 
 STRING 14886
-// Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
+// Abilities: A06Y (Robo-Goblin), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -94427,7 +94343,7 @@ Angriffssgeschwindigkeitsbonus - [|cffffcc00Stufe 12|r]
 }
 
 STRING 16843
-// Units: n0AI (Naga Child), Hotkey (Hotkey)
+// Units: n0LN (Fel Orc Child), Hotkey (Hotkey)
 {
 C
 }
@@ -94711,7 +94627,7 @@ T
 }
 
 STRING 16878
-// Units: n0LN (Fel Orc Child), Hotkey (Hotkey)
+// Units: n0LP (Tauren Child), Hotkey (Hotkey)
 {
 C
 }
@@ -95457,7 +95373,7 @@ Gold must be greater than 0!
 }
 
 STRING 16995
-// Units: n0LP (Tauren Child), Hotkey (Hotkey)
+// Units: n0MF (Centaur Child), Hotkey (Hotkey)
 {
 C
 }
@@ -100013,7 +99929,7 @@ Gezeitenweisen wiederbeleben
 }
 
 STRING 17964
-// Units: n0MF (Centaur Child), Hotkey (Hotkey)
+// Units: n0MP (Kobold Child), Hotkey (Hotkey)
 {
 C
 }
@@ -106352,7 +106268,7 @@ Frostangriff - [|cffffcc00Stufe 11|r]
 }
 
 STRING 19570
-// Units: n0MP (Kobold Child), Hotkey (Hotkey)
+// Units: n0N5 (Satyr Child), Hotkey (Hotkey)
 {
 C
 }
@@ -106920,7 +106836,7 @@ Arbeiter wiederbeleben
 }
 
 STRING 19881
-// Units: n0N5 (Satyr Child), Hotkey (Hotkey)
+// Units: n0NP (Quillboar Child), Hotkey (Hotkey)
 {
 C
 }
@@ -107742,7 +107658,7 @@ Pariert für kurze Zeit den nächsten Angriff.
 }
 
 STRING 20148
-// Units: n0NP (Quillboar Child), Hotkey (Hotkey)
+// Units: n0NX (Gnoll Child), Hotkey (Hotkey)
 {
 C
 }
@@ -109815,7 +109731,7 @@ Further increases the damage caused by Stromgenerator shields.
 }
 
 STRING 20626
-// Units: n0NX (Gnoll Child), Hotkey (Hotkey)
+// Units: h078 (Cage Cart), Hotkey (Hotkey)
 {
 C
 }
@@ -109827,7 +109743,7 @@ STRING 53394
 }
 
 STRING 20627
-// Units: h078 (Cage Cart), Hotkey (Hotkey)
+// Units: n091 (Bandit Child), Hotkey (Hotkey)
 {
 C
 }
@@ -110023,19 +109939,19 @@ STRING 53420
 }
 
 STRING 20653
-// Units: n091 (Bandit Child), Hotkey (Hotkey)
-{
-C
-}
-
-STRING 20654
 // Units: n09I (Dalaran Child), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 20655
+STRING 20654
 // Units: n09J (Murloc Child), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 20655
+// Units: n0A8 (Dungeon Child), Hotkey (Hotkey)
 {
 C
 }
@@ -110158,7 +110074,7 @@ Die Insel, von der Jaina Proudmoore stammt.
 }
 
 STRING 20808
-// Units: n0A8 (Dungeon Child), Hotkey (Hotkey)
+// Units: n0AJ (Kobold Mushroom Caster), Hotkey (Hotkey)
 {
 C
 }
@@ -113057,7 +112973,7 @@ Research Verteidigen
 }
 
 STRING 22416
-// Units: n0AJ (Kobold Mushroom Caster), Hotkey (Hotkey)
+// Units: n0B3 (Dragonkin Child), Hotkey (Hotkey)
 {
 C
 }
@@ -113276,90 +113192,6 @@ STRING 22471
 // Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the hit point regeneration rate by <A07S,DataA1,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22472
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA2,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22473
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA3,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22474
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA4,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22475
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA5,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22476
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA6,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22477
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA7,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22478
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA8,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22479
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA9,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22480
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA10,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22481
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA11,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22482
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA12,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22483
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA13,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22484
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA14,%> % for player buildings including Ancients in the area.
-}
-
-STRING 22485
-// Abilities: A083 (Auto Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the hit point regeneration rate by <A07S,DataA15,%> % for player buildings including Ancients in the area.
 }
 
 STRING 22486
@@ -113795,18 +113627,6 @@ STRING 55301
 After having freed themselves from the demonic threat, Thrall´s Orcs and Cairne Bloodhoof´sTauren tribe have re-established their two nations on southern Kalimdor. Although it is openly against Warchief Thrall´s will, rumors of an alliance with the Forsaken Ones spread across the region.
 
 |cff00ff00Empfohlenes Volk:|r Orcs, Tauren, Trolle, Pandaren.
-}
-
-STRING 22534
-// Buffs/Effects: B035 (Divine Shield), EditorName (Name (Editor Only))
-{
-Gottesschild
-}
-
-STRING 22535
-// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
-{
-Gottesschild
 }
 
 STRING 55304
@@ -114263,7 +114083,7 @@ F
 }
 
 STRING 22597
-// Units: n0B3 (Dragonkin Child), Hotkey (Hotkey)
+// Units: n0OD (Worgen Child), Hotkey (Hotkey)
 {
 C
 }
@@ -114812,7 +114632,7 @@ Zwergenunterkunft errichten
 }
 
 STRING 22692
-// Units: n0OD (Worgen Child), Hotkey (Hotkey)
+// Units: n0OE (Vrykul Child), Hotkey (Hotkey)
 {
 C
 }
@@ -118756,7 +118576,7 @@ Zauberinnen-Adeptenausbildung
 }
 
 STRING 23849
-// Units: n0OE (Vrykul Child), Hotkey (Hotkey)
+// Units: h0AU (Cannon), Hotkey (Hotkey)
 {
 C
 }
@@ -120366,7 +120186,7 @@ Research Schmetter-Angriff
 }
 
 STRING 24447
-// Units: h0AU (Cannon), Hotkey (Hotkey)
+// Units: n01H (Draenei Child), Hotkey (Hotkey)
 {
 C
 }
@@ -120954,7 +120774,7 @@ Ingenieur Base Unit
 }
 
 STRING 24533
-// Units: n01H (Draenei Child), Hotkey (Hotkey)
+// Items: I04Z (Clan Banner), Hotkey (Hotkey)
 {
 C
 }
@@ -123477,7 +123297,7 @@ Zwergenbergmann ausbilden
 }
 
 STRING 25074
-// Items: I04Z (Clan Banner), Hotkey (Hotkey)
+// Items: I061 (Third Hero), Hotkey (Hotkey)
 {
 C
 }
@@ -123489,7 +123309,7 @@ STRING 57842
 }
 
 STRING 25075
-// Items: I061 (Third Hero), Hotkey (Hotkey)
+// Items: I06J (Goblin), Hotkey (Hotkey)
 {
 C
 }
@@ -123513,7 +123333,7 @@ Railway North
 }
 
 STRING 25077
-// Items: I06J (Goblin), Hotkey (Hotkey)
+// Items: I07E (Enchanter), Hotkey (Hotkey)
 {
 C
 }
@@ -128064,7 +127884,7 @@ Fortified Dragon's Reach
 }
 
 STRING 26869
-// Items: I07E (Enchanter), Hotkey (Hotkey)
+// Items: I08W (Summon Cenarius), Hotkey (Hotkey)
 {
 C
 }
@@ -129174,7 +128994,7 @@ S
 }
 
 STRING 27635
-// Items: I08W (Summon Cenarius), Hotkey (Hotkey)
+// Items: I09B (Craft Goblin Land Mines), Hotkey (Hotkey)
 {
 C
 }
@@ -129720,7 +129540,7 @@ Diminutive, rat-like subterranean humanoids who dwell in and around caverns and 
 }
 
 STRING 27959
-// Items: I09B (Craft Goblin Land Mines), Hotkey (Hotkey)
+// Items: I0A4 (Theramore (Neutral Zone)), Hotkey (Hotkey)
 {
 C
 }
@@ -130098,7 +129918,7 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 28037
-// Items: I0A4 (Theramore (Neutral Zone)), Hotkey (Hotkey)
+// Items: I0HW (Firework), Hotkey (Hotkey)
 {
 C
 }
@@ -131829,7 +131649,7 @@ Y
 }
 
 STRING 29216
-// Items: I0HW (Firework), Hotkey (Hotkey)
+// Items: I0IN (Gnome), Hotkey (Hotkey)
 {
 C
 }
@@ -132726,7 +132546,7 @@ N
 }
 
 STRING 30466
-// Abilities: A06Y (Robo-Goblin), Hotkey (Hotkey - Normal)
+// Abilities: A0A7 (Random Spell), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -134124,7 +133944,7 @@ Gives the units in the area to another player who can be specified with the chat
 }
 
 STRING 31245
-// Abilities: A0A7 (Random Spell), Hotkey (Hotkey - Normal)
+// Upgrades: R00M (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -134712,7 +134532,7 @@ Flammensturm (Effect)
 }
 
 STRING 31747
-// Upgrades: R00M (Stone Form), Hotkey (Hotkey)
+// Upgrades: R00P (Disease Cloud), Hotkey (Hotkey)
 {
 F
 }
@@ -134724,7 +134544,7 @@ STRING 31748
 }
 
 STRING 31749
-// Upgrades: R00P (Disease Cloud), Hotkey (Hotkey)
+// Upgrades: R017 (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -135846,7 +135666,7 @@ P
 }
 
 STRING 32583
-// Upgrades: R017 (Stone Form), Hotkey (Hotkey)
+// Upgrades: R03L (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -136200,7 +136020,7 @@ E
 }
 
 STRING 32751
-// Items: I0IN (Gnome), Hotkey (Hotkey)
+// Items: I0WV (Tiny Fruit Stand), Hotkey (Hotkey)
 {
 C
 }
