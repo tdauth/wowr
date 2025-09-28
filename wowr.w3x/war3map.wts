@@ -8076,7 +8076,7 @@ STRING 1364
 }
 
 STRING 1365
-// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+// Units: H0A5 (Paladin), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
@@ -8091,6 +8091,48 @@ STRING 1367
 // Units: H0VB (Captain), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r
+}
+
+STRING 1368
+// Units: H03L (Dwarf Mage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Geomancer.|r|n|cffffcc00Mount: Gryphon.|r 
+}
+
+STRING 1369
+// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1370
+// Units: H0JK (Mortar Team), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Hunter.|r|n|cffffcc00Mount: Gryphon.|r 
+}
+
+STRING 1371
+// Units: H0JQ (Elite Rifleman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Hunter.|r|n|cffffcc00Mount: Gryphon.|r 
+}
+
+STRING 1372
+// Units: H0QV (Siege Engine), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Tinker.|r|n|cffffcc00Mount: Flying Machine.|r 
+}
+
+STRING 1373
+// Units: H0YK (Bard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Druid.|r|n|cffffcc00Mount: Gryphon.|r 
+}
+
+STRING 1374
+// Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human.|n|cffffcc00Class:|r Paladin.|n|cffffcc00Strength:|r <Hpal,STR>.|n|cffffcc00Agility:|r <Hpal,AGI>.|n|cffffcc00Intelligence:|r <Hpal,INT>.|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1379
@@ -10095,12 +10137,6 @@ STRING 1717
 Tank Hero, defending your army and destroying hostile towns. Can learn Storm Bolt, Spiked Carapace, Eat Tree, and Demolish. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 1718
-// Units: H0JQ (Elite Rifleman), Ubertip (Tooltip - Extended)
-{
-Precise Hero, adept at multiplying units and ranged assaults. Can learn Storm Bolt, Barrage, Critical Strike and Clone. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Invisibility.|r
-}
-
 STRING 1719
 // Units: N0HY (Siege Golem), Ubertip (Tooltip - Extended)
 {
@@ -10565,12 +10601,6 @@ STRING 1819
 // Units: O01T (Warlock), Ubertip (Tooltip - Extended)
 {
 Powerful Warlock working under the tutelage of Kil'jaeden himself. Can learn Teleportation,  Summon Black Drakes, Find Artifacts, and Lich King. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
-STRING 1820
-// Units: H0YK (Bard), Ubertip (Tooltip - Extended)
-{
-Story telling Hero, adept at buffing friendly and debuffing enemy units. Can learn Disarmament, Mass Bloodlust, Roar and Mass Inner Fire. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Invisibility.|r
 }
 
 STRING 1821
@@ -18204,12 +18234,6 @@ STRING 3468
 Cunning Hero, adept at healing magics and voodoo curses. Can learn Power Ward, Far Sight, Mass Cripple and Mass Hex. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Bat.|r|n|cffffcc00Standard Ability: Invisibility.|r
 }
 
-STRING 3470
-// Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r
-}
-
 STRING 3479
 // Units: h0EK (Air Wall), Hotkey (Hotkey)
 {
@@ -21940,12 +21964,6 @@ STRING 4423
 Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Mirror Image, Wind Walk, Critical Strike and Bladestorm. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
-STRING 4424
-// Units: H0A5 (Paladin), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 4425
 // Units: n08T (Start Game), EditorSuffix (Name - Editor Suffix)
 {
@@ -23809,12 +23827,6 @@ STRING 4795
 // Abilities: A0B4 (Phoenix Fire), Tip (Tooltip - Normal)
 {
 Phoenix Fire Level 1
-}
-
-STRING 4796
-// Units: H03L (Dwarf Mage), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at ranged assaults. Can learn Control Magic, Summon Golem, Brilliance Aura and Transmute. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 4798
@@ -32405,12 +32417,6 @@ STRING 6522
 // Units: E008 (Backpack), Propernames (Proper Names)
 {
 Backpack
-}
-
-STRING 6523
-// Units: H0JK (Mortar Team), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Storm Bolt, Far Sight, Trueshot Aura and Split. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 6524
@@ -106815,12 +106821,6 @@ STRING 45646
 // Items: I100 (Skin Ranger), Name (Name)
 {
 Skin Ranger
-}
-
-STRING 45647
-// Units: H0QV (Siege Engine), Ubertip (Tooltip - Extended)
-{
-Mechanical Hero, adept at offensive combat and disrupting enemy troops. Can learn Barrage, Cluster Rockets, Permanent Immolation and Demolish. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 45648

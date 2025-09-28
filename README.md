@@ -1308,7 +1308,7 @@ Here is a list of some modified versions online:
 * supertoinkz: [Crannies Snow/y and Winter](https://www.hiveworkshop.com/threads/crannies-snow-y-and-winter.166741/)
 * JetFangInferno: [MusicTarget](https://www.hiveworkshop.com/threads/musictarget.50356/)
 * Mike: [Music effect (notes)](https://www.hiveworkshop.com/threads/music-effect-notes.312612/)
-* assasin_lord: [Dwarf Bard](https://www.hiveworkshop.com/threads/dwarf-bard.141889/)
+* assasin_lord, nana7mi: [Dwarf Bard](https://www.hiveworkshop.com/threads/dwarf-bard.141889/)/[Updated Dwarf Bard](https://www.hiveworkshop.com/threads/dwarf-bard.141889/#post-3654560)
 * assasin_lord: [Bard Projectile](https://www.hiveworkshop.com/threads/bard-projectile.141954/)
 * General Frank: [BTNSteamfortress](https://www.hiveworkshop.com/threads/btnsteamfortress.103883/)
 * <PMM>TerranUp16: [BTN_BronzeRoost](https://www.hiveworkshop.com/threads/btn_bronzeroost.56926/)
