@@ -217,7 +217,6 @@ StringList {
     HAS_STOLEN_ITEM_FROM_YOUR_UNIT     "%1% has stolen the item %2% from your unit %3%!",
     STOLE_ITEM_FROM_UNIT               "Stole item %1% from %2%!",
     // Heroes Tavern
-   HERO_TOOLTIP_EXTENDED               "|cffffcc00Class:|r %1%|nRace: %2%|nMount: %3%|nRestricted to: %4%",
     CUSTOMIZABLE                       "Customizable",
     ELEMENTS                           "Elements",
     NAVY                               "Navy",

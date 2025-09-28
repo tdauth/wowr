@@ -715,12 +715,6 @@ STRING 119
 Skin Malfurion
 }
 
-STRING 120
-// Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at ranged assaults. Can learn Raven Form, Summon Golem, Corruption and Mass Polymorph. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 121
 // Units: H005 (King of Azeroth), Propernames (Proper Names)
 {
@@ -8055,6 +8049,53 @@ STRING 1359
 // Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
 {
 Spell Shield
+}
+
+STRING 1360
+{
+Cleanup
+}
+
+STRING 1361
+// Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1362
+// Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1363
+// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r
+}
+
+STRING 1364
+// Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1365
+// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1366
+// Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1367
+// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r
 }
 
 STRING 1379
@@ -24840,12 +24881,6 @@ STRING 4974
 (Dungeon)
 }
 
-STRING 4975
-// Units: H08B (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at ranged assaults. Can learn Raven Form, Mass Slow, Town Portal and Council of Six. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 4976
 // Abilities: A0SP (Create Corpse), EditorSuffix (Editor Suffix)
 {
@@ -25725,12 +25760,6 @@ STRING 5137
 // Upgrades: R017 (Stone Form), effect1 (Effect 1)
 {
 rlev
-}
-
-STRING 5138
-// Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Shockwave, Holy Light, Command Aura and Avatar. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 5140
@@ -30329,12 +30358,6 @@ STRING 5980
 An ancient, bold, and courageous race descended from the earthen:|n- Collect more gold from mines.|n- Strongly armored units.|n- Powerful siege weapons.|n|n|cffffcc00Faction: Alliance.|r
 }
 
-STRING 5981
-// Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at ranged assaults. Can learn Raven Form, Mass Slow, Brilliance Aura and Council of Six. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 5982
 // Units: U01E (Dreadlord), Ubertip (Tooltip - Extended)
 {
@@ -34398,7 +34421,7 @@ Summon Arthas
 }
 
 STRING 6986
-// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+// Units: H0AW (Paladin), Ubertip (Tooltip - Extended)
 {
 Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
@@ -39553,12 +39576,6 @@ STRING 8195
 // Units: n0M2 (Excavation Site), Name (Name)
 {
 Excavation Site
-}
-
-STRING 8196
-// Units: N0M3 (C'Thrax), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, adept at terrorizing enemies. Can learn Mass Firebolt, Howl of Terror, Cleaving Attack, and Mass Transmute. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 8197
@@ -49721,12 +49738,6 @@ STRING 11176
 Sea Giant
 }
 
-STRING 11202
-// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Defend, Parry, Command Aura and Avatar. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
-}
-
 STRING 11203
 // Units: u03Q (Ability Car Horn), Name (Name)
 {
@@ -54712,12 +54723,6 @@ STRING 13721
 // Items: I03H (Unique - Mask of Death), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffUnique|r|nWhile wearing this mask, a Hero will recover hit points equal to <A089,DataA1,%>% of the attack damage dealt to an enemy unit. Allows your hero to summon a Nether Dragon for <A08A,Dur1> seconds.
-}
-
-STRING 13722
-// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at ranged assaults. Can learn Siphon Mana, Mana Shield, Brilliance Aura and Mass Teleport. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 13751
@@ -92653,12 +92658,6 @@ STRING 38165
 (Ogre)
 }
 
-STRING 38166
-// Units: H0AW (Paladin), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 38167
 // Units: n0C3 (Stonemaul Ogre), EditorSuffix (Name - Editor Suffix)
 {
@@ -107904,7 +107903,7 @@ Tiny Thieves Guild
 }
 
 STRING 45851
-// Units: Emfr (Keeper of the Grove), Tip (Tooltip - Basic)
+// Units: Emns (Keeper of the Grove), Tip (Tooltip - Basic)
 {
 Summon Malfurion
 }
@@ -107925,12 +107924,6 @@ STRING 45854
 // Units: Hlgr (Dark Knight), Revivetip (Tooltip - Revive)
 {
 Revive Lord Garithos
-}
-
-STRING 45855
-// Units: Emns (Keeper of the Grove), Tip (Tooltip - Basic)
-{
-Summon Malfurion
 }
 
 STRING 45857
@@ -111926,12 +111919,6 @@ STRING 49010
 // Units: N01T (Blademaster), Tip (Tooltip - Basic)
 {
 Summon Blademaster of Blackrock Clan
-}
-
-STRING 49012
-// Units: H08B (Archmage of the Kirin Tor), Tip (Tooltip - Basic)
-{
-Summon Khadgar
 }
 
 STRING 49014
@@ -118376,24 +118363,6 @@ STRING 50992
 // Units: N0M3 (C'Thrax), Name (Name)
 {
 C'Thrax
-}
-
-STRING 50993
-// Units: N0M3 (C'Thrax), Awakentip (Tooltip - Awaken)
-{
-Revive General Vezax
-}
-
-STRING 50994
-// Units: N0M3 (C'Thrax), Revivetip (Tooltip - Revive)
-{
-Revive General Vezax
-}
-
-STRING 50995
-// Units: N0M3 (C'Thrax), Tip (Tooltip - Basic)
-{
-Summon General Vezax
 }
 
 STRING 50996
@@ -132860,12 +132829,6 @@ STRING 58180
 Mystical Hero, adept at using nature spells. Can learn Mass Rejuvenation, Mass Faerie Fire, Roar, and Druid Forms. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
-STRING 58182
-// Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Mass Holy Light, Holy Nova, Lion-skull Helmet and Resurrection. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 58187
 // Units: H0S1 (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
@@ -133968,18 +133931,6 @@ STRING 58611
 // Buffs/Effects: X000 (Hell Fire (Effect)), EditorSuffix (Editor Suffix)
 {
 (Medivh's Spell Book)
-}
-
-STRING 58612
-// Units: H08B (Archmage of the Kirin Tor), Awakentip (Tooltip - Awaken)
-{
-Revive Khadgar
-}
-
-STRING 58613
-// Units: H08B (Archmage of the Kirin Tor), Revivetip (Tooltip - Revive)
-{
-Revive Khadgar
 }
 
 STRING 58615

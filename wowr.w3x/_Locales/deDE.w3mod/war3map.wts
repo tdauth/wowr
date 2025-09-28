@@ -871,12 +871,6 @@ STRING 119
 Skin Malfurion
 }
 
-STRING 120
-// Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
-{
-Ein mystischer Held, adept at ranged assaults. Can learn Rabengestalt, Golem beschwören, Verderbnis and Massenverwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
 STRING 32888
 // Units: u01M (Legion Ship), Name (Name)
 {
@@ -10435,6 +10429,53 @@ STRING 1359
 // Abilities: A1NF (Spell Shield), Tip (Tooltip - Normal)
 {
 Spell Shield
+}
+
+STRING 1360
+{
+Cleanup
+}
+
+STRING 1361
+// Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1362
+// Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1363
+// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r
+}
+
+STRING 1364
+// Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1365
+// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1366
+// Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1367
+// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r
 }
 
 STRING 1379
@@ -37002,12 +37043,6 @@ STRING 4974
 (Verlies)
 }
 
-STRING 4975
-// Units: H08B (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
-{
-Ein mystischer Held, adept at ranged assaults. Can learn Rabengestalt, Massenlangsam, Town Portal and Rat der Sechs. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
 STRING 4976
 // Abilities: A0SP (Create Corpse), EditorSuffix (Editor Suffix)
 {
@@ -38655,12 +38690,6 @@ STRING 37905
 // Items: I0NR (Master Glyph), Description (Description)
 {
 Provides +4 to hero stats, summoned units and defense, +9 to damage and +200 to hit point and mana to spells.
-}
-
-STRING 5138
-// Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Schockwelle, Heiliges Licht, Befehls-Aura and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 37906
@@ -40965,12 +40994,6 @@ STRING 5398
 // Units: n0FF (Chieftain), Hotkey (Hotkey)
 {
 C
-}
-
-STRING 38166
-// Units: H0AW (Paladin), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r |n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 5399
@@ -44830,12 +44853,6 @@ STRING 38748
 // Upgrades: R0BG (Defend), Ubertip (Tooltip - Extended)
 {
 Allows Speerträgers to use the Spiked Shell ability, which increases damages attacking melee units.
-}
-
-STRING 5981
-// Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
-{
-Ein mystischer Held, adept at ranged assaults. Can learn Rabengestalt, Massenlangsam, Brillanz-Aura and Rat der Sechs. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 38749
@@ -50353,7 +50370,7 @@ Arthas beschwören
 }
 
 STRING 6986
-// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+// Units: H0AW (Paladin), Ubertip (Tooltip - Extended)
 {
 Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r |n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -58694,12 +58711,6 @@ STRING 8195
 // Units: n0M2 (Excavation Site), Name (Name)
 {
 Ausgrabungsstätte
-}
-
-STRING 8196
-// Units: N0M3 (C'Thrax), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, adept at terrorizing enemies. Can learn Massen-Feuerblitz, Schreckgeheul, Schmetter-Angriff, and Massen-Transmutieren. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 8197
@@ -77140,12 +77151,6 @@ STRING 43969
 Oger-Nekromant ausbilden
 }
 
-STRING 11202
-// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Verteidigen, Parieren, Befehls-Aura and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
-}
-
 STRING 43970
 // Units: n0HW (Ogre Necromancer), Name (Name)
 {
@@ -83676,7 +83681,7 @@ Winzige Diebesgilde
 }
 
 STRING 45851
-// Units: Emfr (Keeper of the Grove), Tip (Tooltip - Basic)
+// Units: Emns (Keeper of the Grove), Tip (Tooltip - Basic)
 {
 Malfurion beschwören
 }
@@ -83697,12 +83702,6 @@ STRING 45854
 // Units: Hlgr (Dark Knight), Revivetip (Tooltip - Revive)
 {
 Lord Garithos wiederbeleben
-}
-
-STRING 45855
-// Units: Emns (Keeper of the Grove), Tip (Tooltip - Basic)
-{
-Malfurion beschwören
 }
 
 STRING 45857
@@ -84444,13 +84443,13 @@ STRING 46025
 STRING 46026
 // Units: n0HP (Captured Black Drake), Tip (Tooltip - Basic)
 {
-Train Captured Schwarzdrache
+Gefangenen Schwarzdrache ausbilden
 }
 
 STRING 46027
 // Units: n0HP (Captured Black Drake), Name (Name)
 {
-Captured Schwarzdrache
+Gefangener Schwarzdrache
 }
 
 STRING 46028
@@ -84486,7 +84485,7 @@ Feuerangriff erforschen
 STRING 46037
 // Upgrades: R0EJ (Ensnare), Ubertip (Tooltip - Extended)
 {
-Enables Captured Schwarzdraches to use the Feuerangriff ability.
+Enables Gefangener Schwarzdraches to use the Feuerangriff ability.
 }
 
 STRING 46038
@@ -84719,7 +84718,7 @@ STRING 46113
 STRING 46114
 // Abilities: A1P7 (Teleport), Name (Name)
 {
-Teleport
+Teleportieren
 }
 
 STRING 46115
@@ -85342,12 +85341,6 @@ STRING 46489
 // Abilities: A1PV (Inventions), Ubertip (Tooltip - Normal - Extended)
 {
 Erhöht die Verteidigung und die Bewegungsgeschwindigkeit.
-}
-
-STRING 13722
-// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
-{
-Ein mystischer Held, adept at ranged assaults. Can learn Mana abziehen, Manaschild, Brillanz-Aura and Massenteleportation. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 46490
@@ -91382,12 +91375,6 @@ You won 15 000 lumber!
 STRING 16244
 {
 You won 3 strong creeps!
-}
-
-STRING 49012
-// Units: H08B (Archmage of the Kirin Tor), Tip (Tooltip - Basic)
-{
-Khadgar beschwören
 }
 
 STRING 49014
@@ -100837,13 +100824,13 @@ Tentakeln
 STRING 50918
 // Units: o08W (Creation Hive), Ubertip (Tooltip - Extended)
 {
-Trains Berserkers, and Kings.
+Bildet Berserker und Könige aus.
 }
 
 STRING 50919
 // Units: o08X (Pulsating Portal), Ubertip (Tooltip - Extended)
 {
-Trains Schwindlers, Ballistas, and Aqirs.
+Bildet Schwindler, Ballisten und Aqirs aus.
 }
 
 STRING 50920
@@ -101071,7 +101058,7 @@ Ausbau zum Bösartigen Beobachter
 STRING 18180
 // Upgrades: R059 (Well Spring), Tip (Tooltip)
 {
-Research Shipyard Repair
+Hafenreparatur erforschen
 }
 
 STRING 50948
@@ -101107,7 +101094,7 @@ STRING 50951
 STRING 18184
 // Units: h06P (Dummy Orb of Orbs), EditorSuffix (Name - Editor Suffix)
 {
-(Orb of Lightning)
+(Blitzkugel)
 }
 
 STRING 50952
@@ -101350,34 +101337,16 @@ STRING 18225
 (Dalaran)
 }
 
-STRING 50993
-// Units: N0M3 (C'Thrax), Awakentip (Tooltip - Awaken)
-{
-General Vezax wiederbeleben
-}
-
 STRING 18226
 // Units: h09W (Poison Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 50994
-// Units: N0M3 (C'Thrax), Revivetip (Tooltip - Revive)
-{
-General Vezax wiederbeleben
-}
-
 STRING 18227
 // Abilities: A0NN (Arcane Gold Mine Ability), Name (Name)
 {
 Arcane Gold Mine Ability
-}
-
-STRING 50995
-// Units: N0M3 (C'Thrax), Tip (Tooltip - Basic)
-{
-General Vezax beschwören
 }
 
 STRING 50996
@@ -124873,12 +124842,6 @@ STRING 58180
 Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, Massen-Feenfeuer, Gebrüll, and Druidengestalten. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
-STRING 58182
-// Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Massen-Heiliges-Licht, Heilige Nova, Löwenschädel-Helm and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
 STRING 58187
 // Units: H0S1 (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
@@ -126202,7 +126165,7 @@ Purchase Race Qualification - Track Azeroth Grand Prix
 STRING 58604
 // Items: I052 (Unique - Doomhammer), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nA powerful hammer crafted in Draenor which belongs to the Orc Leader Thrall.|n|nIncreases the damage by 12 with an Orb of Lightning attack, increases the damage against regular heroes and heroes with divine armor and allows casting a Chain Lightning spell.
+|cff8b00ffEinzigartig|r|nA powerful hammer crafted in Draenor which belongs to the Orc Leader Thrall.|n|nIncreases the damage by 12 with an Blitzkugel attack, increases the damage against regular heroes and heroes with divine armor and allows casting a Chain Lightning spell.
 }
 
 STRING 58605
@@ -126239,18 +126202,6 @@ STRING 58611
 // Buffs/Effects: X000 (Hell Fire (Effect)), EditorSuffix (Editor Suffix)
 {
 (Medivhs Zauberbuch)
-}
-
-STRING 58612
-// Units: H08B (Archmage of the Kirin Tor), Awakentip (Tooltip - Awaken)
-{
-Khadgar wiederbeleben
-}
-
-STRING 58613
-// Units: H08B (Archmage of the Kirin Tor), Revivetip (Tooltip - Revive)
-{
-Khadgar wiederbeleben
 }
 
 STRING 58615

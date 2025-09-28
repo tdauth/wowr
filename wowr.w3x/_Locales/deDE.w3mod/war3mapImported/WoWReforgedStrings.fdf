@@ -1175,7 +1175,6 @@ StringList {
     COLON_WEBSITE                      "Website:",
     NEWS_LINE_1                        "- Veröffentlichung %1%.",
     NEWS_LINE_2                        "- Unterstützen Sie das Projekt, indem Sie VIP werden oder mit einzelnen Spenden.",
-
     // Save Codes UI
     HEROES_NEW_LINE                    "Helden:|n %1%",
     ITEMS_NEW_LINE                     "Gegenstände:|n %1%",
@@ -1415,14 +1414,14 @@ StringList {
     MY_NAVY_WILL_ATTACK_X              "Meine Flotte wird %1% angreifen!",
     COMMAND_ATTACK_PLAYERS_ON          "Ich werde von nun an feindliche Spieler angreifen!",
     COMMAND_ATTACK_PLAYERS_OFF         "Ich werde keine feindlichen Spieler mehr angerifen!",
-    COMMAND_ATTACK_ON                  "I will attack from now on!",
-    COMMAND_ATTACK_OFF                 "I won't attack anymore!",
+    COMMAND_ATTACK_ON                  "Ich werde von nun an angreifen!",
+    COMMAND_ATTACK_OFF                 "Ich werde nicht mehr angreifen!",
     COMMAND_GIVE_GOLD                  "Hier, nimm mein Gold!",
     COMMAND_GIVE_LUMBER                "Hier, nimm mein Holz!",
-    COMMAND_SHIPS_ON                   "I will start building ships!",
-    COMMAND_SHIPS_OFF                  "I will stop building ships!",
-    COMMAND_DISABLED_ON                "I will do nothing (disabled)!",
-    COMMAND_DISABLED_OFF               "I will do something (enabled)!",
+    COMMAND_SHIPS_ON                   "Ich werde anfangen Schiffe zu bauen!",
+    COMMAND_SHIPS_OFF                  "Ich werde aufhören Schiffe zu bauen!",
+    COMMAND_DISABLED_ON                "Ich werde nichts tun (deaktiviert)!",
+    COMMAND_DISABLED_OFF               "Ich werde etwas tun (aktiviert)!",
     // Trading Post
     ENABLED_GOLD_AUTO_EXCHANGE         "Automatischen Goldtausch aktiviert.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Automatischen Goldtausch deaktiviert.",
@@ -1819,7 +1818,6 @@ StringList {
     SUMMON_EARTH_ELEMENTAL_TOOLTIP     "Summons an earth elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the earth elemental with every level.|r",
     WEB_TOOLTIP                        "Binds a target enemy air unit in webbing, forcing it to the ground. Webbed units can be hit as though they were land units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
-
     DISCHARGE_TOOLTIP                  "Starts and adds <this,cr00,x> seconds to cooldowns of the target's abilities. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the added cooldown and decreases the cooldown of this spell with every level.|r",
     MIND_CONTROL_TOOLTIP               "The owning player of the target unit is forced to share control with you for <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     TELEKINESIS_TOOLTIP                "Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground. Has a cooldown of <this,acdn,x> seconds and a range of <this,aran,x>.|n|n|cffffcc00Increases the maximum distance and reduces the cooldown with every level.|r",
