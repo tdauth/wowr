@@ -61,6 +61,7 @@ StringList {
     NO_ABILITY                         "No ability.",
     REACHED_MAXIMUM_ABILITY_LEVEL      "Reached maximum ability level %1%.",
     SKILL_POINTS_REMAINING             "%1% skill points remaining.",
+    NO_SKILLED_ABILITIES               "No skilled abilities.",
     // Resurrection Stones
     ACTIVATED_RESURRECTION_STONE       "Activated Resurrection Stone.",
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",

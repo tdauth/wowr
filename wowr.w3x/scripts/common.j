@@ -3623,6 +3623,7 @@ globals
     constant integer ITEM_WOOL                                       = 'I0FZ'
 
     // Tomes
+    constant integer TOME_OF_RETRAINING                              = 'tret'
     constant integer TOME_OF_AGILITY                                 = 'tdex'
     constant integer TOME_OF_AGILITY_2                               = 'tdx2'
     constant integer TOME_OF_EXPERIENCE                              = 'texp'
