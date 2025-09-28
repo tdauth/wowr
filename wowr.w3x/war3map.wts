@@ -8051,11 +8051,6 @@ STRING 1359
 Spell Shield
 }
 
-STRING 1360
-{
-Cleanup
-}
-
 STRING 1361
 // Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
 {
@@ -14946,12 +14941,6 @@ STRING 2690
 (Bandit)
 }
 
-STRING 2692
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA1> damage on impact and burning them for <A13E,DataB1> per second over <A13E,Dur1> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
 STRING 2693
 // Items: I0DC (Tiny Blood Elf Keep), Description (Description)
 {
@@ -14988,18 +14977,6 @@ STRING 2698
 Dummy Club Strike
 }
 
-STRING 2699
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA2> damage on impact and burning them for <A13E,DataB2> per second over <A13E,Dur2> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2700
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA3> damage on impact and burning them for <A13E,DataB3> per second over <A13E,Dur3> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
 STRING 2701
 // Items: I0DC (Tiny Blood Elf Keep), Name (Name)
 {
@@ -15012,22 +14989,10 @@ STRING 2702
 Summon Blue Dragon
 }
 
-STRING 2703
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA4> damage on impact and burning them for <A13E,DataB4> per second over <A13E,Dur4> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
 STRING 2704
 // Units: U01G (Abomination), Ubertip (Tooltip - Extended)
 {
 Warrior Hero, adept at crushing enemies. Can learn Cannibalize, Devour, Unholy Aura and Disease Cloud. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 2705
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA5> damage on impact and burning them for <A13E,DataB5> per second over <A13E,Dur5> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
 }
 
 STRING 2707
@@ -15036,178 +15001,10 @@ STRING 2707
 Summon Bronze Dragon
 }
 
-STRING 2708
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA6> damage on impact and burning them for <A13E,DataB6> per second over <A13E,Dur6> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2709
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA7> damage on impact and burning them for <A13E,DataB7> per second over <A13E,Dur7> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2710
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA8> damage on impact and burning them for <A13E,DataB8> per second over <A13E,Dur8> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2711
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA9> damage on impact and burning them for <A13E,DataB9> per second over <A13E,Dur9> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2712
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA10> damage on impact and burning them for <A13E,DataB10> per second over <A13E,Dur10> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2713
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA11> damage on impact and burning them for <A13E,DataB11> per second over <A13E,Dur11> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2714
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA12> damage on impact and burning them for <A13E,DataB12> per second over <A13E,Dur12> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2715
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA13> damage on impact and burning them for <A13E,DataB13> per second over <A13E,Dur13> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2716
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA14> damage on impact and burning them for <A13E,DataB14> per second over <A13E,Dur14> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2717
-// Abilities: A13D (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A13E,DataA15> damage on impact and burning them for <A13E,DataB15> per second over <A13E,Dur15> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
 STRING 2718
-// Abilities: A13D (Phoenix Fire), Name (Name)
+// Upgrades: R03B (Cloud), Name (Name)
 {
 Phoenix Fire
-}
-
-STRING 2719
-// Abilities: A0HK (Phoenix Fire), EditorSuffix (Editor Suffix)
-{
- (Icon) (Slot 5)
-}
-
-STRING 2720
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA1> damage on impact and burning them for <A14V,DataB1> per second over <A14V,Dur1> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2721
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA2> damage on impact and burning them for <A14V,DataB2> per second over <A14V,Dur2> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2722
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA3> damage on impact and burning them for <A14V,DataB3> per second over <A14V,Dur3> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2723
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA4> damage on impact and burning them for <A14V,DataB4> per second over <A14V,Dur4> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2724
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA5> damage on impact and burning them for <A14V,DataB5> per second over <A14V,Dur5> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2725
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA6> damage on impact and burning them for <A14V,DataB6> per second over <A14V,Dur6> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2726
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA7> damage on impact and burning them for <A14V,DataB7> per second over <A14V,Dur7> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2727
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA8> damage on impact and burning them for <A14V,DataB8> per second over <A14V,Dur8> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2728
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA9> damage on impact and burning them for <A14V,DataB9> per second over <A14V,Dur9> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2729
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA10> damage on impact and burning them for <A14V,DataB10> per second over <A14V,Dur10> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2730
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA11> damage on impact and burning them for <A14V,DataB11> per second over <A14V,Dur11> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2731
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA12> damage on impact and burning them for <A14V,DataB12> per second over <A14V,Dur12> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2732
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA13> damage on impact and burning them for <A14V,DataB13> per second over <A14V,Dur13> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2733
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA14> damage on impact and burning them for <A14V,DataB14> per second over <A14V,Dur14> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2734
-// Abilities: A0HK (Phoenix Fire), Ubertip (Tooltip - Normal - Extended)
-{
-The Phoenix spreads enchanted flames to nearby enemies, dealing <A14V,DataA15> damage on impact and burning them for <A14V,DataB15> per second over <A14V,Dur15> seconds. Its flames burn with such intensity that the Phoenix damages itself as well. When it dies, it creates an egg that will hatch into a Phoenix.
-}
-
-STRING 2735
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 1|r]
-}
-
-STRING 2736
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 2|r]
 }
 
 STRING 2737
@@ -15478,84 +15275,6 @@ STRING 2826
 // Items: I0FY (Milk), Name (Name)
 {
 Milk
-}
-
-STRING 2827
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 3|r]
-}
-
-STRING 2828
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 4|r]
-}
-
-STRING 2829
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 5|r]
-}
-
-STRING 2830
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 6|r]
-}
-
-STRING 2831
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 7|r]
-}
-
-STRING 2832
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 8|r]
-}
-
-STRING 2833
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 9|r]
-}
-
-STRING 2834
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 10|r]
-}
-
-STRING 2835
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 11|r]
-}
-
-STRING 2836
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 12|r]
-}
-
-STRING 2837
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 13|r]
-}
-
-STRING 2838
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 14|r]
-}
-
-STRING 2839
-// Abilities: A13D (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 15|r]
 }
 
 STRING 2840
@@ -23190,12 +22909,6 @@ STRING 4597
 O
 }
 
-STRING 4599
-// Abilities: A258 (Damage Aura), Name (Name)
-{
-Damage Aura
-}
-
 STRING 4602
 // Abilities: ACbc (Breath of Fire), Hotkey (Hotkey - Normal)
 {
@@ -25378,12 +25091,6 @@ STRING 5062
 // Units: h05S (Blood Elf Battleship), EditorSuffix (Name - Editor Suffix)
 {
 (Blood Elf)
-}
-
-STRING 5063
-// Abilities: A0HK (Phoenix Fire), Name (Name)
-{
-Phoenix Fire
 }
 
 STRING 5064
@@ -63284,7 +62991,7 @@ E
 }
 
 STRING 19413
-// Abilities: A258 (Damage Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A25E (Barding - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63344,7 +63051,7 @@ Summons the moving boss Cenarius.
 }
 
 STRING 19479
-// Abilities: A25E (Barding - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Scribing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63512,7 +63219,7 @@ STRING 19662
 }
 
 STRING 19663
-// Abilities: A0ST (Scribing - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A203 (Demolishing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63560,7 +63267,7 @@ STRING 19758
 }
 
 STRING 19759
-// Abilities: A203 (Demolishing - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A26C (Previous Tile), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63732,7 +63439,7 @@ Sea Giant
 }
 
 STRING 19876
-// Abilities: A26C (Previous Tile), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63846,7 +63553,7 @@ Defensive structure against ground units.|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 19905
-// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Slot 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63918,7 +63625,7 @@ Sea Giant
 }
 
 STRING 19936
-// Abilities: A0W4 (Slot 3), Hotkey (Hotkey - Normal)
+// Abilities: A05M (Metamorphosis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64206,7 +63913,7 @@ STRING 20062
 }
 
 STRING 20063
-// Abilities: A05M (Metamorphosis), Hotkey (Hotkey - Normal)
+// Abilities: A088 (Drunken Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64242,7 +63949,7 @@ D
 }
 
 STRING 20074
-// Abilities: A088 (Drunken Aura), Researchhotkey (Hotkey - Learn)
+// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
 }
@@ -70159,190 +69866,10 @@ STRING 24638
 The rider automatically charges after some time.
 }
 
-STRING 24675
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 1|r]
-}
-
-STRING 24676
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 2|r]
-}
-
-STRING 24677
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 3|r]
-}
-
-STRING 24678
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 4|r]
-}
-
-STRING 24679
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 5|r]
-}
-
-STRING 24680
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 6|r]
-}
-
-STRING 24681
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 7|r]
-}
-
-STRING 24682
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 8|r]
-}
-
-STRING 24683
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 9|r]
-}
-
-STRING 24684
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 10|r]
-}
-
-STRING 24685
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 11|r]
-}
-
-STRING 24693
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 12|r]
-}
-
-STRING 24694
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 13|r]
-}
-
-STRING 24695
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 14|r]
-}
-
-STRING 24696
-// Abilities: A1SX (Damage Bonus), Tip (Tooltip - Normal)
-{
-Damage Bonus - [|cffffcc00Level 15|r]
-}
-
 STRING 24731
 // Units: n0BH (Couatl Mount), Tip (Tooltip - Basic)
 {
 Couatl Mount
-}
-
-STRING 24753
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA1> bonus damage.
-}
-
-STRING 24754
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA2> bonus damage.
-}
-
-STRING 24755
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA3> bonus damage.
-}
-
-STRING 24756
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA4> bonus damage.
-}
-
-STRING 24757
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA5> bonus damage.
-}
-
-STRING 24758
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA6> bonus damage.
-}
-
-STRING 24759
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA7> bonus damage.
-}
-
-STRING 24760
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA8> bonus damage.
-}
-
-STRING 24761
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA9> bonus damage.
-}
-
-STRING 24762
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA10> bonus damage.
-}
-
-STRING 24763
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA11> bonus damage.
-}
-
-STRING 24771
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA12> bonus damage.
-}
-
-STRING 24772
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA13> bonus damage.
-}
-
-STRING 24773
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA14> bonus damage.
-}
-
-STRING 24774
-// Abilities: A1SX (Damage Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LN,DataA15> bonus damage.
 }
 
 STRING 24796
@@ -77784,118 +77311,10 @@ STRING 32350
 Revive Druid Aquatic Form
 }
 
-STRING 32355
-// Upgrades: R03B (Cloud), Name (Name)
-{
-Phoenix Fire
-}
-
-STRING 32357
-// Abilities: A258 (Damage Aura), Researchubertip (Tooltip - Learn - Extended)
-{
-Fires down streams of flame, lighting nearby enemies on fire.|n|n|cffffcc00Increases the initial damage and damage per second with every level.|r
-}
-
 STRING 32360
 // Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 32403
-// Abilities: A258 (Damage Aura), Researchtip (Tooltip - Learn)
-{
-Learn Phoenix Fire - [|cffffcc00Level %d|r]
-}
-
-STRING 32405
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 1|r]
-}
-
-STRING 32406
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 2|r]
-}
-
-STRING 32407
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 3|r]
-}
-
-STRING 32408
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 4|r]
-}
-
-STRING 32409
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 5|r]
-}
-
-STRING 32410
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 6|r]
-}
-
-STRING 32411
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 7|r]
-}
-
-STRING 32412
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 8|r]
-}
-
-STRING 32413
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 9|r]
-}
-
-STRING 32414
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 10|r]
-}
-
-STRING 32415
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 11|r]
-}
-
-STRING 32416
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 12|r]
-}
-
-STRING 32417
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 13|r]
-}
-
-STRING 32418
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 14|r]
-}
-
-STRING 32419
-// Abilities: A0HK (Phoenix Fire), Tip (Tooltip - Normal)
-{
-Phoenix Fire - [|cffffcc00Level 15|r]
 }
 
 STRING 32421
@@ -79377,12 +78796,6 @@ STRING 33230
 // Abilities: A14U (Randomize Spells), Ubertip (Tooltip - Normal - Extended)
 {
 Randomizes the learned spells of your hero.|n|n|cffffcc00Only allowed for heroes who can change their spells. Requires all hero spells to have no cooldown.|r
-}
-
-STRING 33233
-// Abilities: A13D (Phoenix Fire), EditorSuffix (Editor Suffix)
-{
- (Icon) (Slot 3)
 }
 
 STRING 33281
@@ -81209,7 +80622,7 @@ Purchase Tiny Temple of Water
 }
 
 STRING 34097
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0CX (Submerge), Hotkey (Hotkey)
 {
 E
 }
@@ -81323,7 +80736,7 @@ STRING 34158
 }
 
 STRING 34161
-// Upgrades: R0CX (Submerge), Hotkey (Hotkey)
+// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 E
 }
@@ -84236,7 +83649,7 @@ Holy Aura
 }
 
 STRING 35519
-// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0EM (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -84860,7 +84273,7 @@ Exchange 100 Lumber for 200 Gold
 }
 
 STRING 35763
-// Upgrades: R0EM (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
 {
 E
 }
@@ -85166,7 +84579,7 @@ D
 }
 
 STRING 35827
-// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
+// Upgrades: R05G (Defend), Hotkey (Hotkey)
 {
 E
 }
@@ -88297,7 +87710,7 @@ L
 }
 
 STRING 36512
-// Upgrades: R05G (Defend), Hotkey (Hotkey)
+// Upgrades: R07I (Pillage), Hotkey (Hotkey)
 {
 E
 }
@@ -88363,7 +87776,7 @@ Dragon Heart
 }
 
 STRING 36593
-// Upgrades: R07I (Pillage), Hotkey (Hotkey)
+// Upgrades: R035 (Cloud), Hotkey (Hotkey)
 {
 E
 }
@@ -90106,12 +89519,6 @@ STRING 37471
 // Abilities: A1UB (Fishing - Advanced), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 37472
-// Upgrades: R035 (Cloud), Hotkey (Hotkey)
-{
-E
 }
 
 STRING 37473
@@ -99198,175 +98605,7 @@ STRING 41300
 Burial Place - Level 1
 }
 
-STRING 41301
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 2
-}
-
-STRING 41302
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 3
-}
-
-STRING 41303
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 4
-}
-
-STRING 41304
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 5
-}
-
-STRING 41305
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 6
-}
-
-STRING 41306
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 7
-}
-
-STRING 41307
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 8
-}
-
-STRING 41308
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 9
-}
-
-STRING 41309
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 10
-}
-
-STRING 41310
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 11
-}
-
-STRING 41311
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 12
-}
-
-STRING 41312
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 13
-}
-
-STRING 41313
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 14
-}
-
-STRING 41314
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
-{
-Burial Place - Level 15
-}
-
 STRING 41315
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41316
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41317
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41318
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41319
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41320
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41321
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41322
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41323
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41324
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41325
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41326
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41327
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41328
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
-}
-
-STRING 41329
 // Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
@@ -103990,12 +103229,6 @@ STRING 42908
 Life Regeneration
 }
 
-STRING 42913
-// Abilities: A1SW (Move Speed Bonus), Name (Name)
-{
-Move Speed Bonus
-}
-
 STRING 42926
 // Units: u02Y (Disease Cloud), EditorSuffix (Name - Editor Suffix)
 {
@@ -104158,26 +103391,8 @@ STRING 42984
 Attack Speed Bonus
 }
 
-STRING 42987
-// Abilities: A1SX (Damage Bonus), Name (Name)
-{
-Damage Bonus
-}
-
 STRING 42990
 // Abilities: A1LP (Armor Bonus), Name (Name)
-{
-Armor Bonus
-}
-
-STRING 42999
-// Abilities: A1TG (Attack Speed Bonus), Name (Name)
-{
-Attack Speed Bonus
-}
-
-STRING 43010
-// Abilities: A1TL (Armor Bonus), Name (Name)
 {
 Armor Bonus
 }
@@ -107050,96 +106265,6 @@ STRING 45174
 (Goblin Mage)
 }
 
-STRING 45176
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 1|r]
-}
-
-STRING 45177
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 2|r]
-}
-
-STRING 45178
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 3|r]
-}
-
-STRING 45179
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 4|r]
-}
-
-STRING 45180
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 5|r]
-}
-
-STRING 45181
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 6|r]
-}
-
-STRING 45182
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 7|r]
-}
-
-STRING 45183
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 8|r]
-}
-
-STRING 45184
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 9|r]
-}
-
-STRING 45185
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 10|r]
-}
-
-STRING 45186
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 11|r]
-}
-
-STRING 45187
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 12|r]
-}
-
-STRING 45188
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 13|r]
-}
-
-STRING 45189
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 14|r]
-}
-
-STRING 45190
-// Abilities: A0CI (Polymorph), Tip (Tooltip - Normal)
-{
-Polymorph - [|cffffcc00Level 15|r]
-}
-
 STRING 45191
 // Abilities: A1OD (Mark 1), Tip (Tooltip - Normal)
 {
@@ -107408,90 +106533,6 @@ STRING 45276
 // Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
 {
 Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur1> seconds.
-}
-
-STRING 45277
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur2> seconds.
-}
-
-STRING 45278
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur3> seconds.
-}
-
-STRING 45279
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur4> seconds.
-}
-
-STRING 45280
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur5> seconds.
-}
-
-STRING 45281
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur6> seconds.
-}
-
-STRING 45282
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur7> seconds.
-}
-
-STRING 45283
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur8> seconds.
-}
-
-STRING 45284
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur9> seconds.
-}
-
-STRING 45285
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur10> seconds.
-}
-
-STRING 45286
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur11> seconds.
-}
-
-STRING 45287
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur12> seconds.
-}
-
-STRING 45288
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur13> seconds.
-}
-
-STRING 45289
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur14> seconds.
-}
-
-STRING 45290
-// Abilities: A0CI (Polymorph), Ubertip (Tooltip - Normal - Extended)
-{
-Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes or summoned units.|nLasts <A0CI,Dur15> seconds.
 }
 
 STRING 45291
@@ -110710,12 +109751,6 @@ STRING 48203
 Hero Level 40
 }
 
-STRING 48516
-// Abilities: A258 (Damage Aura), EditorSuffix (Editor Suffix)
-{
- (Icon) (Slot 3)
-}
-
 STRING 48521
 // Items: I0B0 (Summon Red Dragon), Ubertip (Tooltip - Extended)
 {
@@ -112803,12 +111838,6 @@ STRING 49246
 Increases the attack damage of Pandaren Woodcutters and increases the gathered lumber.
 }
 
-STRING 49264
-// Abilities: A1SW (Move Speed Bonus), EditorSuffix (Editor Suffix)
-{
- (Icon) (Hero Spell) (Slot 5)
-}
-
 STRING 49265
 // Abilities: A1ST (War Club), Name (Name)
 {
@@ -112995,12 +112024,6 @@ STRING 49304
 The legs of a frog.
 }
 
-STRING 49306
-// Abilities: A1SX (Damage Bonus), EditorSuffix (Editor Suffix)
-{
- (Icon) (Hero Spell) (Slot 5)
-}
-
 STRING 49307
 // Items: I0VZ (Player 1), Name (Name)
 {
@@ -113095,192 +112118,6 @@ STRING 49331
 // Units: N0BI (War Queen), Awakentip (Tooltip - Awaken)
 {
 Revive War Queen
-}
-
-STRING 49370
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 1|r]
-}
-
-STRING 49371
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 2|r]
-}
-
-STRING 49372
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 3|r]
-}
-
-STRING 49373
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 4|r]
-}
-
-STRING 49374
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 5|r]
-}
-
-STRING 49375
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 6|r]
-}
-
-STRING 49376
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 7|r]
-}
-
-STRING 49377
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 8|r]
-}
-
-STRING 49378
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 9|r]
-}
-
-STRING 49379
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 10|r]
-}
-
-STRING 49380
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 11|r]
-}
-
-STRING 49381
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 12|r]
-}
-
-STRING 49382
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 13|r]
-}
-
-STRING 49383
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 14|r]
-}
-
-STRING 49384
-// Abilities: A1SW (Move Speed Bonus), Tip (Tooltip - Normal)
-{
-Move Speed Bonus - [|cffffcc00Level 15|r]
-}
-
-STRING 49385
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA1> bonus movement speed.
-}
-
-STRING 49386
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA2> bonus movement speed.
-}
-
-STRING 49387
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA3> bonus movement speed.
-}
-
-STRING 49388
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA4> bonus movement speed.
-}
-
-STRING 49389
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA5> bonus movement speed.
-}
-
-STRING 49390
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA6> bonus movement speed.
-}
-
-STRING 49391
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA7> bonus movement speed.
-}
-
-STRING 49392
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA8> bonus movement speed.
-}
-
-STRING 49393
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA9> bonus movement speed.
-}
-
-STRING 49394
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA10> bonus movement speed.
-}
-
-STRING 49395
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA11> bonus movement speed.
-}
-
-STRING 49396
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA12> bonus movement speed.
-}
-
-STRING 49397
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA13> bonus movement speed.
-}
-
-STRING 49398
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA14> bonus movement speed.
-}
-
-STRING 49399
-// Abilities: A1SW (Move Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1LI,DataA15> bonus movement speed.
-}
-
-STRING 49400
-// Abilities: A1TG (Attack Speed Bonus), EditorSuffix (Editor Suffix)
-{
- (Icon) (Hero Spell) (Slot 5)
 }
 
 STRING 49445
@@ -113846,192 +112683,6 @@ STRING 49597
 (+3) (Magic Hat)
 }
 
-STRING 49599
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 1|r]
-}
-
-STRING 49600
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 2|r]
-}
-
-STRING 49601
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 3|r]
-}
-
-STRING 49602
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 4|r]
-}
-
-STRING 49603
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 5|r]
-}
-
-STRING 49604
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 6|r]
-}
-
-STRING 49605
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 7|r]
-}
-
-STRING 49606
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 8|r]
-}
-
-STRING 49607
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 9|r]
-}
-
-STRING 49608
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 10|r]
-}
-
-STRING 49609
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 11|r]
-}
-
-STRING 49610
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 12|r]
-}
-
-STRING 49611
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 13|r]
-}
-
-STRING 49612
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 14|r]
-}
-
-STRING 49613
-// Abilities: A1TG (Attack Speed Bonus), Tip (Tooltip - Normal)
-{
-Attack Speed Bonus - [|cffffcc00Level 15|r]
-}
-
-STRING 49614
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA1,%> %.
-}
-
-STRING 49615
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA2,%> %.
-}
-
-STRING 49616
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA3,%> %.
-}
-
-STRING 49617
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA4,%> %.
-}
-
-STRING 49618
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA5,%> %.
-}
-
-STRING 49619
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA6,%> %.
-}
-
-STRING 49620
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA7,%> %.
-}
-
-STRING 49621
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA8,%> %.
-}
-
-STRING 49622
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA9,%> %.
-}
-
-STRING 49623
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA10,%> %.
-}
-
-STRING 49624
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA11,%> %.
-}
-
-STRING 49625
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA12,%> %.
-}
-
-STRING 49626
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA13,%> %.
-}
-
-STRING 49627
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA14,%> %.
-}
-
-STRING 49628
-// Abilities: A1TG (Attack Speed Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the attack speed of the Hero by <A1LL,DataA15,%> %.
-}
-
-STRING 49629
-// Abilities: A1TL (Armor Bonus), EditorSuffix (Editor Suffix)
-{
- (Icon) (Hero Spell) (Slot 5)
-}
-
 STRING 49631
 // Units: U01D (Crypt Lord), Ubertip (Tooltip - Extended)
 {
@@ -114238,192 +112889,6 @@ STRING 49677
 // Units: H0V4 (Developer), Name (Name)
 {
 Developer
-}
-
-STRING 49706
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 1|r]
-}
-
-STRING 49707
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 2|r]
-}
-
-STRING 49708
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 3|r]
-}
-
-STRING 49709
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 4|r]
-}
-
-STRING 49710
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 5|r]
-}
-
-STRING 49711
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 6|r]
-}
-
-STRING 49712
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 7|r]
-}
-
-STRING 49713
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 8|r]
-}
-
-STRING 49714
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 9|r]
-}
-
-STRING 49715
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 10|r]
-}
-
-STRING 49716
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 11|r]
-}
-
-STRING 49717
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 12|r]
-}
-
-STRING 49718
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 13|r]
-}
-
-STRING 49719
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 14|r]
-}
-
-STRING 49720
-// Abilities: A1TL (Armor Bonus), Tip (Tooltip - Normal)
-{
-Armor Bonus - [|cffffcc00Level 15|r]
-}
-
-STRING 49721
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA1>.
-}
-
-STRING 49722
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA2>.
-}
-
-STRING 49723
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA3>.
-}
-
-STRING 49724
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA4>.
-}
-
-STRING 49725
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA5>.
-}
-
-STRING 49726
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA6>.
-}
-
-STRING 49727
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA7>.
-}
-
-STRING 49728
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA8>.
-}
-
-STRING 49729
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA9>.
-}
-
-STRING 49730
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA10>.
-}
-
-STRING 49731
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA11>.
-}
-
-STRING 49732
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA12>.
-}
-
-STRING 49733
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA13>.
-}
-
-STRING 49734
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA14>.
-}
-
-STRING 49735
-// Abilities: A1TL (Armor Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the armor of the Hero by <A1LP,DataA15>.
-}
-
-STRING 49736
-// Abilities: A1Y5 (Black Arrow Attack Icon), EditorSuffix (Editor Suffix)
-{
- (Icon) (Hero Spell) (Slot 5)
 }
 
 STRING 49740
@@ -121502,384 +119967,6 @@ STRING 52247
 // Destructibles: B00J (Flag), Name (Name)
 {
 Flag
-}
-
-STRING 52288
-// Abilities: A1Y5 (Black Arrow Attack Icon), Name (Name)
-{
-Black Arrow Attack Icon
-}
-
-STRING 52289
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 1|r]
-}
-
-STRING 52290
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 2|r]
-}
-
-STRING 52291
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 3|r]
-}
-
-STRING 52292
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 4|r]
-}
-
-STRING 52293
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 5|r]
-}
-
-STRING 52294
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 6|r]
-}
-
-STRING 52295
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 7|r]
-}
-
-STRING 52296
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 8|r]
-}
-
-STRING 52297
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 9|r]
-}
-
-STRING 52298
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 10|r]
-}
-
-STRING 52299
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 11|r]
-}
-
-STRING 52300
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 12|r]
-}
-
-STRING 52301
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 13|r]
-}
-
-STRING 52302
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 14|r]
-}
-
-STRING 52303
-// Abilities: A1Y5 (Black Arrow Attack Icon), Tip (Tooltip - Normal)
-{
-Black Arrow Attack - [|cffffcc00Level 15|r]
-}
-
-STRING 52304
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA1> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52305
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA2> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52306
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA3> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52307
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA4> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52308
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA5> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52309
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA6> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52310
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA7> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52311
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA8> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52312
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA9> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52313
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA10> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52314
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA11> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52315
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA12> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52316
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA13> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52317
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA14> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52318
-// Abilities: A1Y5 (Black Arrow Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds bonus damage of <A1Y3,DataA15> to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and will create a Dark Minion when it is the killing blow on an enemy unit. The Dark Minion lasts <ANbs,DataC1> seconds.
-}
-
-STRING 52319
-// Abilities: A1Y8 (Frost Attack Icon), EditorSuffix (Editor Suffix)
-{
- (Icon) (Hero Spell) (Slot 5)
-}
-
-STRING 52326
-// Abilities: A1Y8 (Frost Attack Icon), Name (Name)
-{
-Frost Attack Icon
-}
-
-STRING 52327
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 1|r]
-}
-
-STRING 52328
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 2|r]
-}
-
-STRING 52329
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 3|r]
-}
-
-STRING 52330
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 4|r]
-}
-
-STRING 52331
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 5|r]
-}
-
-STRING 52332
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 6|r]
-}
-
-STRING 52333
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 7|r]
-}
-
-STRING 52334
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 8|r]
-}
-
-STRING 52335
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 9|r]
-}
-
-STRING 52336
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 10|r]
-}
-
-STRING 52337
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 11|r]
-}
-
-STRING 52338
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 12|r]
-}
-
-STRING 52339
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 13|r]
-}
-
-STRING 52340
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 14|r]
-}
-
-STRING 52341
-// Abilities: A1Y8 (Frost Attack Icon), Tip (Tooltip - Normal)
-{
-Frost Attack - [|cffffcc00Level 15|r]
-}
-
-STRING 52342
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA1> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur1> seconds.
-}
-
-STRING 52343
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA2> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur2> seconds.
-}
-
-STRING 52344
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA3> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur3> seconds.
-}
-
-STRING 52345
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA4> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur4> seconds.
-}
-
-STRING 52346
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA5> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur5> seconds.
-}
-
-STRING 52347
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA6> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur6> seconds.
-}
-
-STRING 52348
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA7> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur7> seconds.
-}
-
-STRING 52349
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA8> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur8> seconds.
-}
-
-STRING 52350
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA9> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur9> seconds.
-}
-
-STRING 52351
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA10> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur10> seconds.
-}
-
-STRING 52352
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA11> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur11> seconds.
-}
-
-STRING 52353
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA12> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur12> seconds.
-}
-
-STRING 52354
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA13> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur13> seconds.
-}
-
-STRING 52355
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA14> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur14> seconds.
-}
-
-STRING 52356
-// Abilities: A1Y8 (Frost Attack Icon), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A1Y6,DataA15> bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for <A1Y6,Dur15> seconds.
 }
 
 STRING 52363
@@ -129050,18 +127137,6 @@ STRING 57001
 Hire Fel Shivarra
 }
 
-STRING 57003
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 1|r]
-}
-
-STRING 57004
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 2|r]
-}
-
 STRING 57055
 // Units: n042 (Research Tent), Ubertip (Tooltip - Extended)
 {
@@ -129572,30 +127647,6 @@ STRING 57257
 Direhorn Mount
 }
 
-STRING 57262
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 3|r]
-}
-
-STRING 57263
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 4|r]
-}
-
-STRING 57266
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 5|r]
-}
-
-STRING 57267
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 6|r]
-}
-
 STRING 57269
 // Units: h0Y9 (Chest), Ubertip (Tooltip - Extended)
 {
@@ -129686,18 +127737,6 @@ STRING 57289
 Damages the target area.
 }
 
-STRING 57291
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 7|r]
-}
-
-STRING 57292
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 8|r]
-}
-
 STRING 57295
 // Abilities: A23G (Build Tiny Chest), Name (Name)
 {
@@ -129726,18 +127765,6 @@ STRING 57299
 // Abilities: A23I (Item Flame Strike), EditorSuffix (Editor Suffix)
 {
 (Molotov Cocktail)
-}
-
-STRING 57301
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 9|r]
-}
-
-STRING 57303
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 10|r]
 }
 
 STRING 57305
@@ -131251,30 +129278,6 @@ STRING 57723
 Night Elf Car Mount
 }
 
-STRING 57728
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 11|r]
-}
-
-STRING 57729
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 12|r]
-}
-
-STRING 57735
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 13|r]
-}
-
-STRING 57736
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 14|r]
-}
-
 STRING 57739
 // Units: ndkw (Dark Portal), EditorSuffix (Name - Editor Suffix)
 {
@@ -131603,12 +129606,6 @@ STRING 57866
 // Units: h02S (Dwarf Housing), Name (Name)
 {
 Dwarf Housing
-}
-
-STRING 57869
-// Abilities: A258 (Damage Aura), Tip (Tooltip - Normal)
-{
-Damage Aura - [|cffffcc00Level 15|r]
 }
 
 STRING 57870
@@ -132877,40 +130874,10 @@ STRING 58199
 Hippogryph Mount
 }
 
-STRING 58241
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA1> damage per second to enemy units nearby.
-}
-
-STRING 58242
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA2> damage per second to enemy units nearby.
-}
-
-STRING 58243
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA3> damage per second to enemy units nearby.
-}
-
-STRING 58245
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA4> damage per second to enemy units nearby.
-}
-
 STRING 58247
 // Units: U03J (Deeplord Revenant), Ubertip (Tooltip - Extended)
 {
 Mystical Hero, particularly adept at cold magic. Can learn Crushing Wave, Frost Armor, Summon Sea Elementals, and Monsoon. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 58287
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA5> damage per second to enemy units nearby.
 }
 
 STRING 58290
@@ -133013,66 +130980,6 @@ STRING 58329
 // Units: n0OC (Wyrmrest Temple), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
-}
-
-STRING 58334
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA6> damage per second to enemy units nearby.
-}
-
-STRING 58335
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA7> damage per second to enemy units nearby.
-}
-
-STRING 58336
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA8> damage per second to enemy units nearby.
-}
-
-STRING 58337
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA9> damage per second to enemy units nearby.
-}
-
-STRING 58338
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA10> damage per second to enemy units nearby.
-}
-
-STRING 58339
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA11> damage per second to enemy units nearby.
-}
-
-STRING 58340
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA12> damage per second to enemy units nearby.
-}
-
-STRING 58341
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA13> damage per second to enemy units nearby.
-}
-
-STRING 58342
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA14> damage per second to enemy units nearby.
-}
-
-STRING 58343
-// Abilities: A258 (Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Causes <A252,DataA15> damage per second to enemy units nearby.
 }
 
 STRING 58404
@@ -135124,180 +133031,6 @@ STRING 60456
 // Abilities: A0FN (Sun Key), Ubertip (Tooltip - Normal - Extended)
 {
 Stops all enemies in a target area from attacking and casting spells for <ACsi,Dur1> seconds.
-}
-
-STRING 60457
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 2|r]
-}
-
-STRING 60458
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 1|r]
-}
-
-STRING 60459
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 3|r]
-}
-
-STRING 60460
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 4|r]
-}
-
-STRING 60461
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 5|r]
-}
-
-STRING 60462
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 6|r]
-}
-
-STRING 60463
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 7|r]
-}
-
-STRING 60464
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 8|r]
-}
-
-STRING 60465
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 9|r]
-}
-
-STRING 60466
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 10|r]
-}
-
-STRING 60467
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 11|r]
-}
-
-STRING 60468
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 12|r]
-}
-
-STRING 60469
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 13|r]
-}
-
-STRING 60470
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 14|r]
-}
-
-STRING 60471
-// Abilities: A1VW (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 15|r]
-}
-
-STRING 60557
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA2>.
-}
-
-STRING 60558
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA3>.
-}
-
-STRING 60559
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA4>.
-}
-
-STRING 60560
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA5>.
-}
-
-STRING 60561
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA6>.
-}
-
-STRING 60562
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA7>.
-}
-
-STRING 60563
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA8>.
-}
-
-STRING 60564
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA9>.
-}
-
-STRING 60565
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA10>.
-}
-
-STRING 60566
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA11>.
-}
-
-STRING 60567
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA12>.
-}
-
-STRING 60568
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA13>.
-}
-
-STRING 60569
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA14>.
-}
-
-STRING 60570
-// Abilities: A1VW (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA15>.
 }
 
 STRING 61055
