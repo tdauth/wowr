@@ -2429,7 +2429,7 @@ globals
     // special undead heroes
     constant integer MALGANIS           = 'Umal'
     constant integer TICHONDRIUS        = 'Utic'
-    constant integer PIT_LORD           = 'Npld'
+    constant integer PIT_LORD           = 'Npld' // Azgalor
     constant integer DETHEROC           = 'Udth'
 
     // undead hero abilities
@@ -6465,6 +6465,7 @@ globals
     constant integer SPIRIT_WALKER_HERO_M                            = 'O04M'
     constant integer CAIRNE_BLOODHOOF                                = 'O02S'
     // Demon
+    constant integer PIT_LORD_HERO                                   = 'Nplh'
     constant integer EREDAR_WARLOCK_HERO                             = 'U00M'
     constant integer SUCCUBUS                                        = 'N0AT'
     constant integer DOOM_GUARD                                      = 'N0CB'

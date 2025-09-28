@@ -1700,7 +1700,7 @@ StringList {
     EAT_TREE_TOOLTIP                   "Consume a tree to restore <this,Eat3,x> hit points over <this,adur,x> seconds. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the restored hit points with every level.|r",
     MASS_FORESTATION_TOOLTIP           "Converts all enemy ground units in the target area with maximum unit level <this,ci00,x> into trees.|n|n|cffffcc00Decreases the cooldown and increases the maximum target unit level with every level.|r",
     DRUID_FORMS_TOOLTIP                "Allows transforming into different Druid forms. |n|n|cffffcc00Adds new forms and increases the bonus stats with every level.|r",
-    ROAR_TOOLTIP                       "Gives nearby friendly units <this,Nbr1,x> bonus attack damage. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the bonus damage with every level.|r",
+    ROAR_TOOLTIP                       "Gives nearby friendly units <this,Roa1,x,%>% bonus attack damage. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the bonus damage with every level.|r",
     TRANQUILITY_TOOLTIP                "Causes rains of healing energy to pour down in a large area, healing friendly allied units for <this,Etq1,x> hit points per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the healed hit points per second with every level.|r",
     // Warlock
     CRIPPLE_TOOLTIP                    "Reduces movement speed by <this,Cri1,x,%>%, attack rate by <this,Cri2,x,%>%, and damage by <this,Cri3,x,%>% of a target enemy unit. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the reduced movement speed, attack rate and damage with every level.|r",
