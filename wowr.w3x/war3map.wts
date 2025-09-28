@@ -61,6 +61,12 @@ STRING 10
 (Bonus Hero)
 }
 
+STRING 11
+// Abilities: A01G (Rain of Chaos), EditorSuffix (Editor Suffix)
+{
+(Neutral Hostile)
+}
+
 STRING 14
 // Abilities: A01Q (Horn of Stormwind), Name (Name)
 {

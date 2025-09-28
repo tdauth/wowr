@@ -6097,7 +6097,7 @@ globals
     constant integer ABILITY_DOOM                                    = 'A11L'
     constant integer ABILITY_DARK_PORTAL                             = 'A12C'
     constant integer ABILITY_METAMORPHOSIS                           = 'A05M'
-    constant integer ABILITY_RAIN_OF_CHAOS                           = 'A097'
+    constant integer ABILITY_RAIN_OF_CHAOS                           = 'A01G'
     constant integer ABILITY_FINGER_OF_DEATH                         = 'Afod'
 
     // Druid
@@ -6269,6 +6269,7 @@ globals
     constant integer ABILITY_DISCHARGE                               = 'A12S'
     constant integer ABILITY_MIND_CONTROL                            = 'A22T'
     constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
+    constant integer ABILITY_RAIN_OF_CHAOS_SPECIAL_BUILDING          = 'A097'
 
     constant integer ABILITY_MASS_CHARM_DUMMY                        = 'A14Q'
     constant integer ABILITY_MASS_CHARM_ITEM                         = 'A265'
