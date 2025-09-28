@@ -61,24 +61,6 @@ STRING 10
 (Bonus Hero)
 }
 
-STRING 11
-// Items: I19W (Skin Shaman), Name (Name)
-{
-Skin Shaman
-}
-
-STRING 12
-// Items: I19W (Skin Shaman), Tip (Tooltip - Basic)
-{
-Skin Shaman
-}
-
-STRING 13
-// Items: I0UI (Skin Obsidian Statue), Name (Name)
-{
-Skin Obsidian Statue
-}
-
 STRING 14
 // Abilities: A01Q (Horn of Stormwind), Name (Name)
 {
@@ -445,12 +427,6 @@ STRING 74
 Furion
 }
 
-STRING 75
-// Items: I03J (Skin Furion), Name (Name)
-{
-Skin Furion
-}
-
 STRING 76
 // Items: I02W (Magical Creep Summoner), Name (Name)
 {
@@ -697,34 +673,10 @@ STRING 116
 Increases the gold and lumber gained from selling items. Multiplies the sold item's gold and lumber values with the number of charges of all rings in the selling hero's inventory. If the gold or lumber value of the sold item is 0 it will be at least 10. Gives the owner of the selling unit the additional gold and lumber.|n|nThe ring itself cannot be sold.
 }
 
-STRING 117
-// Items: I03J (Skin Furion), Tip (Tooltip - Basic)
-{
-Skin Furion
-}
-
-STRING 118
-// Items: I03J (Skin Furion), Ubertip (Tooltip - Extended)
-{
-Skin of Furion.
-}
-
-STRING 119
-// Items: I03P (Skin Malfurion), Name (Name)
-{
-Skin Malfurion
-}
-
 STRING 121
 // Units: H005 (King of Azeroth), Propernames (Proper Names)
 {
 Anduin Wrynn
-}
-
-STRING 122
-// Items: I03P (Skin Malfurion), Tip (Tooltip - Basic)
-{
-Skin Malfurion
 }
 
 STRING 123
@@ -1343,12 +1295,6 @@ STRING 225
 // Items: I01X (Shield of the Undercity Forge), Description (Description)
 {
 |cffff8c00Artifact|r|nA heavy diamond-socketed shield from the Undercity Armory.
-}
-
-STRING 226
-// Items: I03P (Skin Malfurion), Ubertip (Tooltip - Extended)
-{
-Skin of Malfurion.
 }
 
 STRING 227
@@ -3480,12 +3426,6 @@ STRING 583
 Frozen Throne Chains
 }
 
-STRING 584
-// Items: I0UI (Skin Obsidian Statue), Tip (Tooltip - Basic)
-{
-Skin Obsidian Statue
-}
-
 STRING 585
 // Abilities: A0VQ (Increase Ability Level), EditorSuffix (Editor Suffix)
 {
@@ -3917,18 +3857,6 @@ STRING 656
 P
 }
 
-STRING 657
-// Items: I19W (Skin Shaman), Ubertip (Tooltip - Extended)
-{
-Skin of a Shaman.
-}
-
-STRING 658
-// Items: I19X (Skin Kodo Beast), Name (Name)
-{
-Skin Kodo Beast
-}
-
 STRING 659
 // Units: o03F (Spirit Lounge), EditorSuffix (Name - Editor Suffix)
 {
@@ -4035,30 +3963,6 @@ STRING 676
 (Submerged)
 }
 
-STRING 677
-// Items: I19X (Skin Kodo Beast), Tip (Tooltip - Basic)
-{
-Skin Kodo Beast
-}
-
-STRING 678
-// Items: I19X (Skin Kodo Beast), Ubertip (Tooltip - Extended)
-{
-Skin of a Kodo Beast.
-}
-
-STRING 679
-// Items: I19Y (Skin Warlock), Name (Name)
-{
-Skin Warlock
-}
-
-STRING 680
-// Items: I19Y (Skin Warlock), Tip (Tooltip - Basic)
-{
-Skin Warlock
-}
-
 STRING 681
 // Units: npn5 (Expert Storm), Name (Name)
 {
@@ -4075,24 +3979,6 @@ STRING 683
 // Units: npn4 (Expert Fire), Name (Name)
 {
 Expert Fire
-}
-
-STRING 684
-// Items: I19Y (Skin Warlock), Ubertip (Tooltip - Extended)
-{
-Skin of a Warlock.
-}
-
-STRING 685
-// Items: I19Z (Skin Spirit Walker), Name (Name)
-{
-Skin Spirit Walker
-}
-
-STRING 686
-// Items: I19Z (Skin Spirit Walker), Tip (Tooltip - Basic)
-{
-Skin Spirit Walker
 }
 
 STRING 687
@@ -4355,12 +4241,6 @@ STRING 731
 // Buffs/Effects: B01T (), Buffubertip (Tooltip - Extended)
 {
 This unit has Horn of Stormwind; its armor has been increased.
-}
-
-STRING 732
-// Items: I19Z (Skin Spirit Walker), Ubertip (Tooltip - Extended)
-{
-Skin of a Spirit Walker.
 }
 
 STRING 733
@@ -6675,18 +6555,6 @@ STRING 1129
 Invalid profession!
 }
 
-STRING 1130
-// Items: I1A0 (Skin Witch Doctor), Name (Name)
-{
-Skin Witch Doctor
-}
-
-STRING 1131
-// Items: I1A0 (Skin Witch Doctor), Tip (Tooltip - Basic)
-{
-Skin Witch Doctor
-}
-
 STRING 1132
 // Abilities: A1ZI (Demolishing - Novice), Name (Name)
 {
@@ -6795,12 +6663,6 @@ STRING 1149
 Hero Abilities Random Class
 }
 
-STRING 1150
-// Items: I0UI (Skin Obsidian Statue), Ubertip (Tooltip - Extended)
-{
-Skin of an Obsidian Statue.
-}
-
 STRING 1151
 // Abilities: A0CQ (Next Spell Variation), Name (Name)
 {
@@ -6855,40 +6717,10 @@ STRING 1159
 (Level 4)
 }
 
-STRING 1160
-// Items: I0UJ (Skin Keeper of the Grove Ghost), Name (Name)
-{
-Skin Keeper of the Grove Ghost
-}
-
-STRING 1161
-// Items: I0UJ (Skin Keeper of the Grove Ghost), Tip (Tooltip - Basic)
-{
-Skin Keeper of the Grove Ghost
-}
-
 STRING 1162
 // Units: eilw (Captured Maiev), Name (Name)
 {
 Captured Maiev
-}
-
-STRING 1163
-// Items: I0UJ (Skin Keeper of the Grove Ghost), Ubertip (Tooltip - Extended)
-{
-Skin of a Keeper of the Grove Ghost.
-}
-
-STRING 1164
-// Items: I0UR (Skin Archdruid), Name (Name)
-{
-Skin Archdruid
-}
-
-STRING 1165
-// Items: I0UR (Skin Archdruid), Tip (Tooltip - Basic)
-{
-Skin Archdruid
 }
 
 STRING 1166
@@ -8129,10 +7961,16 @@ STRING 1373
 |cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Druid.|r|n|cffffcc00Mount: Gryphon.|r 
 }
 
-STRING 1374
+STRING 1377
 // Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human.|n|cffffcc00Class:|r Paladin.|n|cffffcc00Strength:|r <Hpal,STR>.|n|cffffcc00Agility:|r <Hpal,AGI>.|n|cffffcc00Intelligence:|r <Hpal,INT>.|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1378
+// Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1379
@@ -8266,6 +8104,12 @@ STRING 1400
  (Icon) (Blood Elf)
 }
 
+STRING 1401
+// Units: H0Q3 (Customizable Hero), Ubertip (Tooltip - Extended)
+{
+Allows changing attack type, primary attribute, any attribute values, spells and skins for. Use the chat command "-rename X" to give the hero the name X.
+}
+
 STRING 1402
 // Units: n02O (Timber Wolf), Hotkey (Hotkey)
 {
@@ -8348,12 +8192,6 @@ STRING 1415
 // Units: o095 (Nightmare Weaver), Tip (Tooltip - Basic)
 {
 Train Nightmare Weaver
-}
-
-STRING 1416
-// Items: I1A0 (Skin Witch Doctor), Ubertip (Tooltip - Extended)
-{
-Skin of a Witch Doctor.
 }
 
 STRING 1417
@@ -10117,12 +9955,6 @@ STRING 1714
 // Units: h0JJ (Dummy Shroud of Protection), Name (Name)
 {
 Dummy Shroud of Protection
-}
-
-STRING 1715
-// Items: I16Q (Skin Peasant), Ubertip (Tooltip - Extended)
-{
-Skin of a Peasant.
 }
 
 STRING 1716
@@ -15061,18 +14893,6 @@ STRING 2740
 A
 }
 
-STRING 2770
-// Items: I0E6 (Skin Wisp), Name (Name)
-{
-Skin Wisp
-}
-
-STRING 2771
-// Items: I0E6 (Skin Wisp), Tip (Tooltip - Basic)
-{
-Skin Wisp
-}
-
 STRING 2773
 // Units: o010 (Goblin Mage), Casterupgradetip (Caster Upgrade Tips)
 {
@@ -15305,12 +15125,6 @@ STRING 2826
 // Items: I0FY (Milk), Name (Name)
 {
 Milk
-}
-
-STRING 2840
-// Items: I0UR (Skin Archdruid), Ubertip (Tooltip - Extended)
-{
-Skin of an Archdruid.
 }
 
 STRING 2842
@@ -15910,12 +15724,6 @@ STRING 2987
 // Abilities: A05T (Capture Cargo), Name (Name)
 {
 Capture Cargo
-}
-
-STRING 2988
-// Items: I0TH (Skin Mountain Giant), Name (Name)
-{
-Skin Mountain Giant
 }
 
 STRING 2989
@@ -16798,18 +16606,6 @@ STRING 3175
 // Abilities: A03I (Capture), EditorSuffix (Editor Suffix)
 {
 (Bandit) (Cage Cart)
-}
-
-STRING 3176
-// Items: I0E6 (Skin Wisp), Ubertip (Tooltip - Extended)
-{
-Skin of a Wisp.
-}
-
-STRING 3177
-// Items: I0EF (Skin Acolyte), Name (Name)
-{
-Skin Acolyte
 }
 
 STRING 3178
@@ -19078,12 +18874,6 @@ STRING 3691
 F
 }
 
-STRING 3692
-// Items: I0TH (Skin Mountain Giant), Tip (Tooltip - Basic)
-{
-Skin Mountain Giant
-}
-
 STRING 3694
 // Units: h0UA (Outrider), EditorSuffix (Name - Editor Suffix)
 {
@@ -19542,12 +19332,6 @@ STRING 3774
 // Upgrades: R013 (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
 Further increases the armor of Draenei Vindicators, Draenei Stalkers, Draenei Harbringers, Draenei Seers, Salamanders, Tamed Nether Drakes and Draenei Demolishers.
-}
-
-STRING 3775
-// Items: I0TH (Skin Mountain Giant), Ubertip (Tooltip - Extended)
-{
-Skin of a Mountain Giant.
 }
 
 STRING 3776
@@ -22707,12 +22491,6 @@ STRING 4557
 +1 Mystic
 }
 
-STRING 4558
-// Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Warrior.|r
-}
-
 STRING 4559
 {
 Cinematics can be disabled.
@@ -25517,12 +25295,6 @@ STRING 5145
 Build Hatchery
 }
 
-STRING 5146
-// Items: I0EF (Skin Acolyte), Tip (Tooltip - Basic)
-{
-Skin Acolyte
-}
-
 STRING 5147
 // Items: I0C8 (Tiny Temple of Tides), Description (Description)
 {
@@ -25973,30 +25745,6 @@ STRING 5228
 Build Tiny Spawning Grounds
 }
 
-STRING 5229
-// Items: I0EF (Skin Acolyte), Ubertip (Tooltip - Extended)
-{
-Skin of an Acolyte.
-}
-
-STRING 5230
-// Items: I0EH (Skin Peon), Name (Name)
-{
-Skin Peon
-}
-
-STRING 5231
-// Items: I0EH (Skin Peon), Tip (Tooltip - Basic)
-{
-Skin Peon
-}
-
-STRING 5232
-// Items: I0EH (Skin Peon), Ubertip (Tooltip - Extended)
-{
-Skin of a Peon.
-}
-
 STRING 5233
 // Items: I0JK (Talbuk Antler), Name (Name)
 {
@@ -26381,12 +26129,6 @@ STRING 5296
 Sells items dropped from creeps.|n|n|cffffcc00Limited to 1.|r
 }
 
-STRING 5297
-// Items: I0EK (Skin Night Elf Ranger), Name (Name)
-{
-Skin Night Elf Ranger
-}
-
 STRING 5298
 // Units: h05G (Kul Tiras Shipyard), Ubertip (Tooltip - Extended)
 {
@@ -26397,12 +26139,6 @@ STRING 5299
 // Units: N03L (Murloc Sorcerer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
-}
-
-STRING 5300
-// Items: I0EK (Skin Night Elf Ranger), Tip (Tooltip - Basic)
-{
-Skin Night Elf Ranger
 }
 
 STRING 5301
@@ -26831,58 +26567,16 @@ STRING 5372
 Research Cheap Evolution - [|cffffcc00Level 48|r]
 }
 
-STRING 5373
-// Items: I0EK (Skin Night Elf Ranger), Ubertip (Tooltip - Extended)
-{
-Skin of a Night Elf Ranger.
-}
-
-STRING 5374
-// Items: I0EU (Skin Eredar Warlock), Name (Name)
-{
-Skin Eredar Warlock
-}
-
 STRING 5376
 // Upgrades: R017 (Stone Form), effect2 (Effect 2)
 {
 rlev
 }
 
-STRING 5377
-// Items: I0EU (Skin Eredar Warlock), Tip (Tooltip - Basic)
-{
-Skin Eredar Warlock
-}
-
-STRING 5378
-// Items: I0EU (Skin Eredar Warlock), Ubertip (Tooltip - Extended)
-{
-Skin of an Eredar Warlock.
-}
-
-STRING 5379
-// Items: I0EV (Skin Succubus), Name (Name)
-{
-Skin Succubus
-}
-
 STRING 5380
 // Units: n00F (Human Citizen (female)), Ubertip (Tooltip - Extended)
 {
 An intelligent Human citizen. Has mana regeneration aura.
-}
-
-STRING 5381
-// Items: I0EV (Skin Succubus), Tip (Tooltip - Basic)
-{
-Skin Succubus
-}
-
-STRING 5382
-// Items: I0EV (Skin Succubus), Ubertip (Tooltip - Extended)
-{
-Skin of a Succubus.
 }
 
 STRING 5383
@@ -27031,48 +26725,6 @@ STRING 5407
 // Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
 {
 B
-}
-
-STRING 5408
-// Items: I0EX (Skin Doom Guard), Name (Name)
-{
-Skin Doom Guard
-}
-
-STRING 5409
-// Items: I0EX (Skin Doom Guard), Tip (Tooltip - Basic)
-{
-Skin Doom Guard
-}
-
-STRING 5410
-// Items: I0EX (Skin Doom Guard), Ubertip (Tooltip - Extended)
-{
-Skin of a Doom Guard.
-}
-
-STRING 5411
-// Items: I0EY (Skin Fel Beast), Name (Name)
-{
-Skin Fel Beast
-}
-
-STRING 5412
-// Items: I0EY (Skin Fel Beast), Tip (Tooltip - Basic)
-{
-Skin Fel Beast
-}
-
-STRING 5413
-// Items: I0EY (Skin Fel Beast), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Beast.
-}
-
-STRING 5414
-// Items: I0F5 (Skin Infernal), Name (Name)
-{
-Skin Infernal
 }
 
 STRING 5415
@@ -27235,18 +26887,6 @@ STRING 5441
 // Items: I08B (Ore Silver), Tip (Tooltip - Basic)
 {
 Purchase Ore Silver
-}
-
-STRING 5442
-// Items: I0F5 (Skin Infernal), Tip (Tooltip - Basic)
-{
-Skin Infernal
-}
-
-STRING 5443
-// Items: I0F5 (Skin Infernal), Ubertip (Tooltip - Extended)
-{
-Skin of an Infernal.
 }
 
 STRING 5444
@@ -30543,24 +30183,6 @@ STRING 6067
 (Creep)
 }
 
-STRING 6068
-// Items: I102 (Skin Thief), Name (Name)
-{
-Skin Thief
-}
-
-STRING 6069
-// Items: I102 (Skin Thief), Tip (Tooltip - Basic)
-{
-Skin Thief
-}
-
-STRING 6070
-// Items: I102 (Skin Thief), Ubertip (Tooltip - Extended)
-{
-Skin of a Thief.
-}
-
 STRING 6071
 // Units: n07J (Quiraj Prophet), EditorSuffix (Name - Editor Suffix)
 {
@@ -31525,100 +31147,10 @@ STRING 6289
 Summon Medivh
 }
 
-STRING 6290
-// Items: I10E (Skin Uther), Name (Name)
-{
-Skin Uther
-}
-
-STRING 6291
-// Items: I10E (Skin Uther), Tip (Tooltip - Basic)
-{
-Skin Uther
-}
-
-STRING 6292
-// Items: I10E (Skin Uther), Ubertip (Tooltip - Extended)
-{
-Skin of Uther.
-}
-
-STRING 6293
-// Items: I10F (Skin Thrall), Name (Name)
-{
-Skin Thrall
-}
-
-STRING 6294
-// Items: I10F (Skin Thrall), Tip (Tooltip - Basic)
-{
-Skin Thrall
-}
-
-STRING 6295
-// Items: I10F (Skin Thrall), Ubertip (Tooltip - Extended)
-{
-Skin of Thrall.
-}
-
-STRING 6296
-// Items: I10G (Skin Grommash Hellscream), Name (Name)
-{
-Skin Grommash Hellscream
-}
-
-STRING 6297
-// Items: I10G (Skin Grommash Hellscream), Tip (Tooltip - Basic)
-{
-Skin Grommash Hellscream
-}
-
-STRING 6298
-// Items: I10G (Skin Grommash Hellscream), Ubertip (Tooltip - Extended)
-{
-Skin of Grommash Hellscream.
-}
-
-STRING 6299
-// Items: I10H (Skin Jaina), Name (Name)
-{
-Skin Jaina
-}
-
-STRING 6300
-// Items: I10H (Skin Jaina), Tip (Tooltip - Basic)
-{
-Skin Jaina
-}
-
-STRING 6301
-// Items: I10H (Skin Jaina), Ubertip (Tooltip - Extended)
-{
-Skin of Jaina.
-}
-
-STRING 6302
-// Items: I10I (Skin Medivh), Name (Name)
-{
-Skin Medivh
-}
-
-STRING 6305
-// Items: I10I (Skin Medivh), Tip (Tooltip - Basic)
-{
-Skin Medivh
-}
-
 STRING 6314
 // Items: I05Q (Freelancer), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 6315
-// Items: I10I (Skin Medivh), Ubertip (Tooltip - Extended)
-{
-Skin of Medivh.
 }
 
 STRING 6316
@@ -31717,52 +31249,16 @@ STRING 6339
 Slot 3
 }
 
-STRING 6340
-// Items: I10J (Skin Lord Garithos), Name (Name)
-{
-Skin Lord Garithos
-}
-
 STRING 6341
 // Items: I026 (Scepter of Blood Elves), Tip (Tooltip - Basic)
 {
 Purchase Scepter of Blood Elves
 }
 
-STRING 6342
-// Items: I10J (Skin Lord Garithos), Tip (Tooltip - Basic)
-{
-Skin Lord Garithos
-}
-
 STRING 6357
 // Upgrades: R01V (Animal War Training), Name (Name)
 {
 Cheap Evolution
-}
-
-STRING 6358
-// Items: I10J (Skin Lord Garithos), Ubertip (Tooltip - Extended)
-{
-Skin of Lord Garithos.
-}
-
-STRING 6359
-// Items: I10K (Skin Spellbreaker), Name (Name)
-{
-Skin Spellbreaker
-}
-
-STRING 6360
-// Items: I10K (Skin Spellbreaker), Tip (Tooltip - Basic)
-{
-Skin Spellbreaker
-}
-
-STRING 6361
-// Items: I10K (Skin Spellbreaker), Ubertip (Tooltip - Extended)
-{
-Skin of a Spellbreaker.
 }
 
 STRING 6362
@@ -32278,12 +31774,6 @@ STRING 6497
 Buy Property Seat of the Primus
 }
 
-STRING 6499
-// Items: I0EG (Skin Cenarius), Name (Name)
-{
-Skin Cenarius
-}
-
 STRING 6501
 // Units: h08A (Buy Property Seat of the Primus), Tip (Tooltip - Basic)
 {
@@ -32294,18 +31784,6 @@ STRING 6502
 // Units: h0XI (Buy Property Icecrown Citadel), Ubertip (Tooltip - Extended)
 {
 Purchases the property. |n|n|cffffcc00Race: Undead.|r|n|cffffcc00Resource: Gold.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
-}
-
-STRING 6503
-// Items: I0EG (Skin Cenarius), Tip (Tooltip - Basic)
-{
-Skin Cenarius
-}
-
-STRING 6504
-// Items: I0EG (Skin Cenarius), Ubertip (Tooltip - Extended)
-{
-Skin of a Cenarius.|n|n|cffffcc00Only allowed for VIPs.|r
 }
 
 STRING 6505
@@ -32605,12 +32083,6 @@ STRING 6555
 R
 }
 
-STRING 6556
-// Items: I0I3 (Skin Fel Stalker), Name (Name)
-{
-Skin Fel Stalker
-}
-
 STRING 6557
 // Units: E00T (Druid of the Claw), Name (Name)
 {
@@ -32639,12 +32111,6 @@ STRING 6561
 // Units: E00T (Druid of the Claw), Tip (Tooltip - Basic)
 {
 Summon Druid of the Claw
-}
-
-STRING 6566
-// Items: I0I3 (Skin Fel Stalker), Tip (Tooltip - Basic)
-{
-Skin Fel Stalker
 }
 
 STRING 6567
@@ -32856,12 +32322,6 @@ STRING 6621
 Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Repair, Finish Construction, Place Goblin Land Mine and Summon Mercenary Camp.|n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 6631
-// Items: I0I3 (Skin Fel Stalker), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Stalker.
-}
-
 STRING 6634
 // Abilities: A09V (Clear Excluded for Savecode), Hotkey (Hotkey - Normal)
 {
@@ -32874,12 +32334,6 @@ STRING 6640
 Hero Level 5
 }
 
-STRING 6641
-// Items: I0I4 (Skin Elder Sage), Name (Name)
-{
-Skin Elder Sage
-}
-
 STRING 6642
 // Units: o056 (Banner Kul Tiras), Name (Name)
 {
@@ -32890,12 +32344,6 @@ STRING 6643
 // Items: I15R (Grand Master Enchanting Formula), Name (Name)
 {
 Grand Master Enchanting Formula
-}
-
-STRING 6674
-// Items: I0I4 (Skin Elder Sage), Tip (Tooltip - Basic)
-{
-Skin Elder Sage
 }
 
 STRING 6677
@@ -33004,12 +32452,6 @@ STRING 6697
 // Items: I12H (Unique - Remornia), Description (Description)
 {
 |cff8b00ffUnique|r|nPowerful sword of Sire Denathrius.
-}
-
-STRING 6701
-// Items: I0I4 (Skin Elder Sage), Ubertip (Tooltip - Extended)
-{
-Skin of a Elder Sage.
 }
 
 STRING 6702
@@ -33256,36 +32698,6 @@ STRING 6743
 Mystical Hero, adept at ranged assaults. Can learn Teleportation, Far Sight, Mass Holy Light and Revive Heroes. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction. Restricted to account Barade#2569.|r
 }
 
-STRING 6744
-// Items: I0I8 (Skin Velen), Name (Name)
-{
-Skin Velen
-}
-
-STRING 6745
-// Items: I0I8 (Skin Velen), Tip (Tooltip - Basic)
-{
-Skin Velen
-}
-
-STRING 6746
-// Items: I0I8 (Skin Velen), Ubertip (Tooltip - Extended)
-{
-Skin of Velen.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
-STRING 6747
-// Items: I0IA (Skin Arthas Evil), Name (Name)
-{
-Skin Arthas Evil
-}
-
-STRING 6748
-// Items: I0IA (Skin Arthas Evil), Tip (Tooltip - Basic)
-{
-Skin Arthas Evil
-}
-
 STRING 6749
 // Items: I09J (Witch Doctor), Hotkey (Hotkey)
 {
@@ -33296,12 +32708,6 @@ STRING 6750
 // Items: I09U (Orb of Wind), Hotkey (Hotkey)
 {
 W
-}
-
-STRING 6751
-// Items: I0IA (Skin Arthas Evil), Ubertip (Tooltip - Extended)
-{
-Skin of Arthas Evil.|n|n|cffffcc00Restricted to account Barade#2569.|r
 }
 
 STRING 6752
@@ -33382,64 +32788,10 @@ STRING 6764
 Change slot 5.
 }
 
-STRING 6766
-// Items: I0IJ (Skin Abomination), Name (Name)
-{
-Skin Abomination
-}
-
-STRING 6767
-// Items: I0IJ (Skin Abomination), Tip (Tooltip - Basic)
-{
-Skin Abomination
-}
-
-STRING 6768
-// Items: I0IJ (Skin Abomination), Ubertip (Tooltip - Extended)
-{
-Skin of an Abomination.
-}
-
-STRING 6769
-// Items: I0IQ (Skin Shade), Name (Name)
-{
-Skin Shade
-}
-
-STRING 6770
-// Items: I0IQ (Skin Shade), Tip (Tooltip - Basic)
-{
-Skin Shade
-}
-
 STRING 6771
 // Units: H0QW (High King of the Alliance), Hotkey (Hotkey)
 {
 F
-}
-
-STRING 6772
-// Items: I0IQ (Skin Shade), Ubertip (Tooltip - Extended)
-{
-Skin of a Shade.
-}
-
-STRING 6773
-// Items: I0J3 (Skin Banshee), Name (Name)
-{
-Skin Banshee
-}
-
-STRING 6774
-// Items: I0J3 (Skin Banshee), Tip (Tooltip - Basic)
-{
-Skin Banshee
-}
-
-STRING 6775
-// Items: I0J3 (Skin Banshee), Ubertip (Tooltip - Extended)
-{
-Skin of a Banshee.
 }
 
 STRING 6776
@@ -36717,12 +36069,6 @@ STRING 7709
 // Abilities: A063 (Demon Fire), Tip (Tooltip - Normal)
 {
 Demon Fire
-}
-
-STRING 7710
-// Items: I0TI (Skin Drek'Thar), Name (Name)
-{
-Skin Drek'Thar
 }
 
 STRING 7711
@@ -40856,12 +40202,6 @@ STRING 8484
 Successfully loaded your savecode!
 }
 
-STRING 8485
-// Items: I11D (Skin Salamander Lord), Name (Name)
-{
-Skin Salamander Lord
-}
-
 STRING 8486
 // Units: N0BE (Flame Shredder), Ubertip (Tooltip - Extended)
 {
@@ -41361,94 +40701,16 @@ STRING 8577
 (Dalaran) (Quest 3)
 }
 
-STRING 8578
-// Items: I10Y (Skin Fel Grommash Hellscream), Name (Name)
-{
-Skin Fel Grommash Hellscream
-}
-
-STRING 8579
-// Items: I10Y (Skin Fel Grommash Hellscream), Tip (Tooltip - Basic)
-{
-Skin Fel Grommash Hellscream
-}
-
-STRING 8580
-// Items: I10Y (Skin Fel Grommash Hellscream), Ubertip (Tooltip - Extended)
-{
-Skin of Fel Grommash Hellscream.
-}
-
-STRING 8581
-// Items: I169 (Skin Necromancer), Name (Name)
-{
-Skin Necromancer
-}
-
-STRING 8582
-// Items: I169 (Skin Necromancer), Tip (Tooltip - Basic)
-{
-Skin Necromancer
-}
-
-STRING 8583
-// Items: I169 (Skin Necromancer), Ubertip (Tooltip - Extended)
-{
-Skin of Necromancer.
-}
-
-STRING 8584
-// Items: I16A (Skin Lich King), Name (Name)
-{
-Skin Lich King
-}
-
-STRING 8585
-// Items: I16A (Skin Lich King), Tip (Tooltip - Basic)
-{
-Skin Lich King
-}
-
 STRING 8586
 // Units: h0MS (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
 Powerful flying creature, mounted by an archer. Can learn Animal War Training and Scarlet Crusade. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 8587
-// Items: I16B (Skin Kil'jaeden), Name (Name)
-{
-Skin Kil'jaeden
-}
-
-STRING 8588
-// Items: I16B (Skin Kil'jaeden), Tip (Tooltip - Basic)
-{
-Skin Kil'jaeden
-}
-
 STRING 8589
 // Items: I191 (Demolition Expert), Name (Name)
 {
 Demolition Expert
-}
-
-STRING 8590
-// Items: I16C (Skin Admiral Proudmoore), Name (Name)
-{
-Skin Admiral Proudmoore
-}
-
-STRING 8591
-// Items: I16C (Skin Admiral Proudmoore), Tip (Tooltip - Basic)
-{
-Skin Admiral Proudmoore
-}
-
-STRING 8592
-// Items: I16C (Skin Admiral Proudmoore), Ubertip (Tooltip - Extended)
-{
-Skin of an Admiral Proudmoore.
 }
 
 STRING 8593
@@ -41479,12 +40741,6 @@ STRING 8597
 // Units: e013 (Molten Giant), EditorSuffix (Name - Editor Suffix)
 {
 (Creep)
-}
-
-STRING 8598
-// Items: I11D (Skin Salamander Lord), Tip (Tooltip - Basic)
-{
-Skin Salamander Lord
 }
 
 STRING 8599
@@ -42164,52 +41420,16 @@ STRING 8721
 The key to your own house.
 }
 
-STRING 8722
-// Items: I1A1 (Skin Raider), Name (Name)
-{
-Skin Raider
-}
-
-STRING 8723
-// Items: I16P (Skin Wizard), Name (Name)
-{
-Skin Wizard
-}
-
-STRING 8724
-// Items: I16P (Skin Wizard), Tip (Tooltip - Basic)
-{
-Skin Wizard
-}
-
 STRING 8725
 // Abilities: A04W (Reward Freelancer), Name (Name)
 {
 Reward Freelancer
 }
 
-STRING 8726
-// Items: I16P (Skin Wizard), Ubertip (Tooltip - Extended)
-{
-Skin of Wizard.
-}
-
-STRING 8727
-// Items: I16Q (Skin Peasant), Name (Name)
-{
-Skin Peasant
-}
-
 STRING 8728
 // Abilities: A0HL (Find Artifacts), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 8729
-// Items: I16Q (Skin Peasant), Tip (Tooltip - Basic)
-{
-Skin Peasant
 }
 
 STRING 8730
@@ -43742,18 +42962,6 @@ STRING 9981
 (Housing)
 }
 
-STRING 9982
-// Items: I1A1 (Skin Raider), Tip (Tooltip - Basic)
-{
-Skin Raider
-}
-
-STRING 9983
-// Items: I1A1 (Skin Raider), Ubertip (Tooltip - Extended)
-{
-Skin of a Raider.
-}
-
 STRING 9984
 // Abilities: A0YA (Slot 10), Name (Name)
 {
@@ -44276,24 +43484,6 @@ STRING 10134
 // Units: n06X (Hydromancer), Casterupgradetip (Caster Upgrade Tips)
 {
 - Slow,- Slow|n- Crushing Wave,- Slow|n- Crushing Wave|n- Polymorph
-}
-
-STRING 10135
-// Items: I175 (Skin Aegwynn), Name (Name)
-{
-Skin Aegwynn
-}
-
-STRING 10136
-// Items: I175 (Skin Aegwynn), Tip (Tooltip - Basic)
-{
-Skin Aegwynn
-}
-
-STRING 10137
-// Items: I175 (Skin Aegwynn), Ubertip (Tooltip - Extended)
-{
-Skin of Aegwynn.|n|n|cffffcc00Restricted to account Barade#2569.|r
 }
 
 STRING 10138
@@ -45376,12 +44566,6 @@ STRING 10322
 Akama
 }
 
-STRING 10323
-// Items: I0GN (Skin Stormreaver Warlock), Name (Name)
-{
-Skin Stormreaver Warlock
-}
-
 STRING 10324
 {
 Lady Hederine needs the Akama leader to be gone before the attack starts, so the Draenei forces will be weaker and the defense will be successful. Find the Akama, kill him and bring her his heart as proof.
@@ -45587,18 +44771,6 @@ STRING 10361
 // Abilities: A01F (Demolish), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
-}
-
-STRING 10362
-// Items: I0GN (Skin Stormreaver Warlock), Tip (Tooltip - Basic)
-{
-Skin Stormreaver Warlock
-}
-
-STRING 10363
-// Items: I0GN (Skin Stormreaver Warlock), Ubertip (Tooltip - Extended)
-{
-Skin of a Stormreaver Warlock.
 }
 
 STRING 10365
@@ -45844,30 +45016,6 @@ STRING 10407
 Scroll of Mana Regeneration
 }
 
-STRING 10408
-// Items: I16A (Skin Lich King), Ubertip (Tooltip - Extended)
-{
-Skin of the Lich King.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
-STRING 10409
-// Items: I17X (Skin Illidan Evil), Name (Name)
-{
-Skin Illidan Evil
-}
-
-STRING 10410
-// Items: I17X (Skin Illidan Evil), Tip (Tooltip - Basic)
-{
-Skin Illidan Evil
-}
-
-STRING 10411
-// Items: I17X (Skin Illidan Evil), Ubertip (Tooltip - Extended)
-{
-Skin of Illidan Evil.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
 STRING 10412
 // Items: I17Y (Skin Demon Hunter Morphed), Name (Name)
 {
@@ -45901,78 +45049,6 @@ STRING 10419
 // Units: n060 (Dwarf Child), Hotkey (Hotkey)
 {
 C
-}
-
-STRING 10420
-// Items: I17Z (Skin Tichondrius), Name (Name)
-{
-Skin Tichondrius
-}
-
-STRING 10421
-// Items: I17Z (Skin Tichondrius), Tip (Tooltip - Basic)
-{
-Skin Tichondrius
-}
-
-STRING 10422
-// Items: I17Z (Skin Tichondrius), Ubertip (Tooltip - Extended)
-{
-Skin of Tichondrius.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
-STRING 10423
-// Items: I180 (Skin Satyr Hellcaller), Name (Name)
-{
-Skin Satyr Hellcaller
-}
-
-STRING 10424
-// Items: I180 (Skin Satyr Hellcaller), Tip (Tooltip - Basic)
-{
-Skin Satyr Hellcaller
-}
-
-STRING 10425
-// Items: I180 (Skin Satyr Hellcaller), Ubertip (Tooltip - Extended)
-{
-Skin of a Satyr Hellcaller.
-}
-
-STRING 10426
-// Items: I181 (Skin Satyr Trickster), Name (Name)
-{
-Skin Satyr Trickster
-}
-
-STRING 10427
-// Items: I181 (Skin Satyr Trickster), Tip (Tooltip - Basic)
-{
-Skin Satyr Trickster
-}
-
-STRING 10428
-// Items: I181 (Skin Satyr Trickster), Ubertip (Tooltip - Extended)
-{
-Skin of a Satyr Trickster.
-}
-
-STRING 10429
-// Items: I182 (Skin Bishop), Name (Name)
-{
-Skin Bishop
-}
-
-STRING 10430
-// Items: I182 (Skin Bishop), Tip (Tooltip - Basic)
-{
-Skin Bishop
-}
-
-STRING 10431
-// Items: I182 (Skin Bishop), Ubertip (Tooltip - Extended)
-{
-Skin of Bishop.
 }
 
 STRING 10433
@@ -47025,81 +46101,9 @@ STRING 10627
 Purchases the property. |n|n|cffffcc00Race: Dragonkin.|r|n|cffffcc00Resource: Gold.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|nRestricted to account Barade#2569.|r
 }
 
-STRING 10628
-// Items: I18I (Skin Sea Giant), Name (Name)
-{
-Skin Sea Giant
-}
-
-STRING 10629
-// Items: I18I (Skin Sea Giant), Tip (Tooltip - Basic)
-{
-Skin Sea Giant
-}
-
-STRING 10630
-// Items: I18I (Skin Sea Giant), Ubertip (Tooltip - Extended)
-{
-Skin of a Sea Giant.
-}
-
-STRING 10631
-// Items: I18J (Skin Berserk Wildkin), Name (Name)
-{
-Skin Berserk Wildkin
-}
-
-STRING 10632
-// Items: I18J (Skin Berserk Wildkin), Tip (Tooltip - Basic)
-{
-Skin Berserk Wildkin
-}
-
-STRING 10633
-// Items: I18J (Skin Berserk Wildkin), Ubertip (Tooltip - Extended)
-{
-Skin of a Berserk Wildkin.
-}
-
-STRING 10634
-// Items: I18K (Skin Siege Golem), Name (Name)
-{
-Skin Siege Golem
-}
-
-STRING 10635
-// Items: I18K (Skin Siege Golem), Tip (Tooltip - Basic)
-{
-Skin Siege Golem
-}
-
-STRING 10636
-// Items: I18K (Skin Siege Golem), Ubertip (Tooltip - Extended)
-{
-Skin of a Siege Golem.
-}
-
 STRING 10640
 {
 Travel to the Commander of the New Citadel.
-}
-
-STRING 10641
-// Items: I18L (Skin Revenant), Name (Name)
-{
-Skin Revenant
-}
-
-STRING 10642
-// Items: I18L (Skin Revenant), Tip (Tooltip - Basic)
-{
-Skin Revenant
-}
-
-STRING 10643
-// Items: I18L (Skin Revenant), Ubertip (Tooltip - Extended)
-{
-Skin of a Revenant.
 }
 
 STRING 10644
@@ -47317,42 +46321,6 @@ STRING 10682
 Tiny Gnome Turret
 }
 
-STRING 10683
-// Items: I18O (Skin Ner'Zhul), Name (Name)
-{
-Skin Ner'Zhul
-}
-
-STRING 10684
-// Items: I18O (Skin Ner'Zhul), Tip (Tooltip - Basic)
-{
-Skin Ner'Zhul
-}
-
-STRING 10685
-// Items: I18O (Skin Ner'Zhul), Ubertip (Tooltip - Extended)
-{
-Skin of Ner'Zhul.
-}
-
-STRING 10686
-// Items: I18P (Skin Gul'dan), Name (Name)
-{
-Skin Gul'dan
-}
-
-STRING 10687
-// Items: I18P (Skin Gul'dan), Tip (Tooltip - Basic)
-{
-Skin Gul'dan
-}
-
-STRING 10688
-// Items: I18P (Skin Gul'dan), Ubertip (Tooltip - Extended)
-{
-Skin of Gul'dan.
-}
-
 STRING 10689
 {
 Bring the horn to Kel'Thuzad in Sunwell Grove.
@@ -47401,24 +46369,6 @@ STRING 10697
 D
 }
 
-STRING 10698
-// Items: I18T (Skin Khadgar), Name (Name)
-{
-Skin Khadgar
-}
-
-STRING 10699
-// Items: I18T (Skin Khadgar), Tip (Tooltip - Basic)
-{
-Skin Khadgar
-}
-
-STRING 10700
-// Items: I18T (Skin Khadgar), Ubertip (Tooltip - Extended)
-{
-Skin of Khadgar.
-}
-
 STRING 10708
 // Units: h0AR (Merchant Shop), Name (Name)
 {
@@ -47435,78 +46385,6 @@ STRING 10710
 // Units: h0AR (Merchant Shop), Tip (Tooltip - Basic)
 {
 Build Merchant Shop
-}
-
-STRING 10711
-// Items: I18U (Skin Mortar Team), Name (Name)
-{
-Skin Mortar Team
-}
-
-STRING 10712
-// Items: I18U (Skin Mortar Team), Tip (Tooltip - Basic)
-{
-Skin Mortar Team
-}
-
-STRING 10713
-// Items: I18U (Skin Mortar Team), Ubertip (Tooltip - Extended)
-{
-Skin of a Mortar Team.
-}
-
-STRING 10714
-// Items: I18V (Skin Dwarf Mage), Name (Name)
-{
-Skin Dwarf Mage
-}
-
-STRING 10715
-// Items: I18V (Skin Dwarf Mage), Tip (Tooltip - Basic)
-{
-Skin Dwarf Mage
-}
-
-STRING 10716
-// Items: I18V (Skin Dwarf Mage), Ubertip (Tooltip - Extended)
-{
-Skin of a Dwarf Mage.
-}
-
-STRING 10717
-// Items: I18W (Skin Siege Engine), Name (Name)
-{
-Skin Siege Engine
-}
-
-STRING 10718
-// Items: I18W (Skin Siege Engine), Tip (Tooltip - Basic)
-{
-Skin Siege Engine
-}
-
-STRING 10719
-// Items: I18W (Skin Siege Engine), Ubertip (Tooltip - Extended)
-{
-Skin of a Siege Engine.
-}
-
-STRING 10720
-// Items: I18X (Skin Elite Rifleman), Name (Name)
-{
-Skin Elite Rifleman
-}
-
-STRING 10721
-// Items: I18X (Skin Elite Rifleman), Tip (Tooltip - Basic)
-{
-Skin Elite Rifleman
-}
-
-STRING 10722
-// Items: I18X (Skin Elite Rifleman), Ubertip (Tooltip - Extended)
-{
-Skin of an Elite Rifleman.
 }
 
 STRING 10723
@@ -47965,78 +46843,6 @@ STRING 10802
 Creates a Barn at a target location.
 }
 
-STRING 10804
-// Items: I197 (Skin Magnataur Destroyer), Name (Name)
-{
-Skin Magnataur Destroyer
-}
-
-STRING 10805
-// Items: I197 (Skin Magnataur Destroyer), Tip (Tooltip - Basic)
-{
-Skin Magnataur Destroyer
-}
-
-STRING 10806
-// Items: I197 (Skin Magnataur Destroyer), Ubertip (Tooltip - Extended)
-{
-Skin of a Magnataur Destroyer.
-}
-
-STRING 10807
-// Items: I198 (Skin Ancient Sasquatch), Name (Name)
-{
-Skin Ancient Sasquatch
-}
-
-STRING 10808
-// Items: I198 (Skin Ancient Sasquatch), Tip (Tooltip - Basic)
-{
-Skin Ancient Sasquatch
-}
-
-STRING 10809
-// Items: I198 (Skin Ancient Sasquatch), Ubertip (Tooltip - Extended)
-{
-Skin of an Ancient Sasquatch.
-}
-
-STRING 10810
-// Items: I199 (Skin Ancient Wendigo), Name (Name)
-{
-Skin Ancient Wendigo
-}
-
-STRING 10811
-// Items: I199 (Skin Ancient Wendigo), Tip (Tooltip - Basic)
-{
-Skin Ancient Wendigo
-}
-
-STRING 10812
-// Items: I199 (Skin Ancient Wendigo), Ubertip (Tooltip - Extended)
-{
-Skin of an Ancient Wendigo.
-}
-
-STRING 10813
-// Items: I19A (Skin Enraged Jungle Stalker), Name (Name)
-{
-Skin Enraged Jungle Stalker
-}
-
-STRING 10814
-// Items: I19A (Skin Enraged Jungle Stalker), Tip (Tooltip - Basic)
-{
-Skin Enraged Jungle Stalker
-}
-
-STRING 10815
-// Items: I19A (Skin Enraged Jungle Stalker), Ubertip (Tooltip - Extended)
-{
-Skin of an Enraged Jungle Stalker.
-}
-
 STRING 10818
 // Units: n09H (Beehive), EditorSuffix (Name - Editor Suffix)
 {
@@ -48101,24 +46907,6 @@ STRING 10858
 // Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 10859
-// Items: I0QD (Skin Archimonde), Ubertip (Tooltip - Extended)
-{
-Skin of Archimonde.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
-STRING 10860
-// Items: I0QE (Skin Mannoroth), Ubertip (Tooltip - Extended)
-{
-Skin of Mannoroth.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
-STRING 10861
-// Items: I16B (Skin Kil'jaeden), Ubertip (Tooltip - Extended)
-{
-Skin of Kil'jaeden.|n|n|cffffcc00Restricted to account Barade#2569.|r
 }
 
 STRING 10862
@@ -48565,24 +47353,6 @@ STRING 10937
 (Gnome)
 }
 
-STRING 10939
-// Items: I19H (Skin Tuskarr Chieftain), Name (Name)
-{
-Skin Tuskarr Chieftain
-}
-
-STRING 10940
-// Items: I19H (Skin Tuskarr Chieftain), Tip (Tooltip - Basic)
-{
-Skin Tuskarr Chieftain
-}
-
-STRING 10941
-// Items: I19H (Skin Tuskarr Chieftain), Ubertip (Tooltip - Extended)
-{
-Skin of a Tuskarr Chieftain.
-}
-
 STRING 10942
 // Abilities: A02O (Brilliance Aura), Ubertip (Tooltip - Normal - Extended)
 {
@@ -48613,12 +47383,6 @@ STRING 10946
 Increases the armor by 8 and allows casting Roar which increases the damage of the carrying hero and allied units around him by <A08H,DataA1,%> %.
 }
 
-STRING 10947
-// Items: I19I (Skin Ancient Hydra), Name (Name)
-{
-Skin Ancient Hydra
-}
-
 STRING 10948
 // Units: N0CS (Gnomish Engineer), EditorSuffix (Name - Editor Suffix)
 {
@@ -48637,58 +47401,10 @@ STRING 10950
 Mage Master Training
 }
 
-STRING 10951
-// Items: I19I (Skin Ancient Hydra), Tip (Tooltip - Basic)
-{
-Skin Ancient Hydra
-}
-
-STRING 10952
-// Items: I19I (Skin Ancient Hydra), Ubertip (Tooltip - Extended)
-{
-Skin of an Ancient Hydra.
-}
-
-STRING 10953
-// Items: I19J (Skin Forest Troll Warlord), Name (Name)
-{
-Skin Forest Troll Warlord
-}
-
-STRING 10954
-// Items: I19J (Skin Forest Troll Warlord), Tip (Tooltip - Basic)
-{
-Skin Forest Troll Warlord
-}
-
-STRING 10955
-// Items: I19J (Skin Forest Troll Warlord), Ubertip (Tooltip - Extended)
-{
-Skin of a Forest Troll Warlord.
-}
-
-STRING 10956
-// Items: I19K (Skin Goblin Shredder), Name (Name)
-{
-Skin Goblin Shredder
-}
-
 STRING 10957
 // Abilities: A08H (Roar), EditorSuffix (Editor Suffix)
 {
 (Stonemaul Arena Master Belt)
-}
-
-STRING 10958
-// Items: I19K (Skin Goblin Shredder), Tip (Tooltip - Basic)
-{
-Skin Goblin Shredder
-}
-
-STRING 10959
-// Items: I19K (Skin Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-Skin of a Goblin Shredder.
 }
 
 STRING 10962
@@ -50064,60 +48780,6 @@ STRING 11395
 Wine Bottle
 }
 
-STRING 11398
-// Items: I19O (Skin Sapper), Name (Name)
-{
-Skin Sapper
-}
-
-STRING 11399
-// Items: I19O (Skin Sapper), Tip (Tooltip - Basic)
-{
-Skin Sapper
-}
-
-STRING 11400
-// Items: I19O (Skin Sapper), Ubertip (Tooltip - Extended)
-{
-Skin of a Sapper.
-}
-
-STRING 11401
-// Items: I19P (Skin Geomancer), Name (Name)
-{
-Skin Geomancer
-}
-
-STRING 11402
-// Items: I19P (Skin Geomancer), Tip (Tooltip - Basic)
-{
-Skin Geomancer
-}
-
-STRING 11403
-// Items: I19P (Skin Geomancer), Ubertip (Tooltip - Extended)
-{
-Skin of a Geomancer.
-}
-
-STRING 11404
-// Items: I19Q (Skin Gnoll Alpha), Name (Name)
-{
-Skin Gnoll Alpha
-}
-
-STRING 11405
-// Items: I19Q (Skin Gnoll Alpha), Tip (Tooltip - Basic)
-{
-Skin Gnoll Alpha
-}
-
-STRING 11406
-// Items: I19Q (Skin Gnoll Alpha), Ubertip (Tooltip - Extended)
-{
-Skin of a Gnoll Alpha.
-}
-
 STRING 11408
 // Abilities: A092 (Dark Portal), EditorSuffix (Editor Suffix)
 {
@@ -50567,78 +49229,6 @@ STRING 11511
 // Abilities: A0L2 (Cooking - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Cook uses his knowledge to create a Tiny Fruit Stand.
-}
-
-STRING 11512
-// Items: I0R5 (Skin Keeper of the Grove), Name (Name)
-{
-Skin Keeper of the Grove
-}
-
-STRING 11513
-// Items: I0R5 (Skin Keeper of the Grove), Tip (Tooltip - Basic)
-{
-Skin Keeper of the Grove
-}
-
-STRING 11514
-// Items: I0R5 (Skin Keeper of the Grove), Ubertip (Tooltip - Extended)
-{
-Skin of a Keeper of the Grove.
-}
-
-STRING 11515
-// Items: I0R6 (Skin Priestess of the Moon), Name (Name)
-{
-Skin Priestess of the Moon
-}
-
-STRING 11516
-// Items: I0R6 (Skin Priestess of the Moon), Tip (Tooltip - Basic)
-{
-Skin Priestess of the Moon
-}
-
-STRING 11517
-// Items: I0R6 (Skin Priestess of the Moon), Ubertip (Tooltip - Extended)
-{
-Skin of a Priestess of the Moon.
-}
-
-STRING 11518
-// Items: I0R7 (Skin Demon Hunter), Name (Name)
-{
-Skin Demon Hunter
-}
-
-STRING 11519
-// Items: I0R7 (Skin Demon Hunter), Tip (Tooltip - Basic)
-{
-Skin Demon Hunter
-}
-
-STRING 11520
-// Items: I0R7 (Skin Demon Hunter), Ubertip (Tooltip - Extended)
-{
-Skin of a Demon Hunter.
-}
-
-STRING 11521
-// Items: I0R8 (Skin Warden), Name (Name)
-{
-Skin Warden
-}
-
-STRING 11522
-// Items: I0R8 (Skin Warden), Tip (Tooltip - Basic)
-{
-Skin Warden
-}
-
-STRING 11523
-// Items: I0R8 (Skin Warden), Ubertip (Tooltip - Extended)
-{
-Skin of a Warden.
 }
 
 STRING 11528
@@ -51159,24 +49749,6 @@ STRING 11713
 // Units: O08G (Kodo Beast), Propernames (Proper Names)
 {
 Tojara,Nikoro,Kajind,Mikasa,Samuro,Akinos,Mazuru,Yozshura,Daisho,Kigami,Arashicage,Moogul the Sly,Jubei
-}
-
-STRING 11714
-// Items: I0YD (Skin Fel Kodo Beast), Name (Name)
-{
-Skin Fel Kodo Beast
-}
-
-STRING 11715
-// Items: I0YD (Skin Fel Kodo Beast), Tip (Tooltip - Basic)
-{
-Skin Fel Kodo Beast
-}
-
-STRING 11716
-// Items: I0YD (Skin Fel Kodo Beast), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Kodo Beast.
 }
 
 STRING 11718
@@ -53622,54 +52194,6 @@ STRING 12276
 (Demon)
 }
 
-STRING 12277
-// Items: I0TI (Skin Drek'Thar), Tip (Tooltip - Basic)
-{
-Skin Drek'Thar
-}
-
-STRING 12278
-// Items: I0TI (Skin Drek'Thar), Ubertip (Tooltip - Extended)
-{
-Skin of Drek'Thar.
-}
-
-STRING 12279
-// Items: I0TJ (Skin Naga Royal Guard), Name (Name)
-{
-Skin Naga Royal Guard
-}
-
-STRING 12280
-// Items: I0TJ (Skin Naga Royal Guard), Tip (Tooltip - Basic)
-{
-Skin Naga Royal Guard
-}
-
-STRING 12281
-// Items: I0TJ (Skin Naga Royal Guard), Ubertip (Tooltip - Extended)
-{
-Skin of a Naga Royal Guard.
-}
-
-STRING 12282
-// Items: I0TK (Skin Naga Siren), Name (Name)
-{
-Skin Naga Siren
-}
-
-STRING 12283
-// Items: I0TK (Skin Naga Siren), Tip (Tooltip - Basic)
-{
-Skin Naga Siren
-}
-
-STRING 12284
-// Items: I0TK (Skin Naga Siren), Ubertip (Tooltip - Extended)
-{
-Skin of a Naga Siren.
-}
-
 STRING 12289
 // Abilities: A09N (Incinerate), EditorSuffix (Editor Suffix)
 {
@@ -53758,12 +52282,6 @@ STRING 12312
 // Units: N09X (Void Lord), Revivetip (Tooltip - Revive)
 {
 Revive Void Lord
-}
-
-STRING 12313
-// Units: H0Q3 (Customizable Hero), Ubertip (Tooltip - Extended)
-{
-Customizable hero who you can pick attack type, the primary attribute, any attribute values, spells and skins for. Use the chat command "-rename X" to give the hero the name X.  |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Customizable.|r|n|cffffcc00Standard Ability: Skill.|r
 }
 
 STRING 12314
@@ -67603,12 +66121,6 @@ STRING 22533
 An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried  items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
 }
 
-STRING 22545
-// Items: I0R9 (Skin Death Knight), Name (Name)
-{
-Skin Death Knight
-}
-
 STRING 22564
 // Units: N0FA (Warlock), EditorSuffix (Name - Editor Suffix)
 {
@@ -69000,12 +67512,6 @@ STRING 24336
 // Upgrades: R0DO (Storm Hammers), Name (Name)
 {
 Chain Lightning
-}
-
-STRING 24341
-// Items: I0R9 (Skin Death Knight), Tip (Tooltip - Basic)
-{
-Skin Death Knight
 }
 
 STRING 24352
@@ -81473,78 +79979,6 @@ STRING 34547
 Hire Blood Wizard
 }
 
-STRING 34550
-// Items: I10S (Skin Ogre Warrior), Name (Name)
-{
-Skin Ogre Warrior
-}
-
-STRING 34551
-// Items: I10S (Skin Ogre Warrior), Tip (Tooltip - Basic)
-{
-Skin Ogre Warrior
-}
-
-STRING 34552
-// Items: I10S (Skin Ogre Warrior), Ubertip (Tooltip - Extended)
-{
-Skin of Ogre Warrior.
-}
-
-STRING 34553
-// Items: I10T (Skin Ogre Magi), Name (Name)
-{
-Skin Ogre Magi
-}
-
-STRING 34554
-// Items: I10T (Skin Ogre Magi), Tip (Tooltip - Basic)
-{
-Skin Ogre Magi
-}
-
-STRING 34555
-// Items: I10T (Skin Ogre Magi), Ubertip (Tooltip - Extended)
-{
-Skin of Ogre Magi.
-}
-
-STRING 34556
-// Items: I10U (Skin Ogre Lord), Name (Name)
-{
-Skin Ogre Lord
-}
-
-STRING 34557
-// Items: I10U (Skin Ogre Lord), Tip (Tooltip - Basic)
-{
-Skin Ogre Lord
-}
-
-STRING 34558
-// Items: I10U (Skin Ogre Lord), Ubertip (Tooltip - Extended)
-{
-Skin of Ogre Lord.
-}
-
-STRING 34559
-// Items: I10V (Skin Gronn), Name (Name)
-{
-Skin Gronn
-}
-
-STRING 34560
-// Items: I10V (Skin Gronn), Tip (Tooltip - Basic)
-{
-Skin Gronn
-}
-
-STRING 34561
-// Items: I10V (Skin Gronn), Ubertip (Tooltip - Extended)
-{
-Skin of Gronn.
-}
-
 STRING 34565
 // Upgrades: R0AY (Control Magic), Ubertip (Tooltip - Extended)
 {
@@ -92257,12 +90691,6 @@ STRING 38451
 (Heavy Goblin Tank)
 }
 
-STRING 38453
-// Items: I10W (Skin Thane), Name (Name)
-{
-Skin Thane
-}
-
 STRING 38454
 // Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
 {
@@ -92467,22 +90895,10 @@ STRING 38503
 (Goblin Artist)
 }
 
-STRING 38506
-// Items: I10W (Skin Thane), Tip (Tooltip - Basic)
-{
-Skin Thane
-}
-
 STRING 38507
 // Units: n076 (Thieves Guild (Thief)), Ubertip (Tooltip - Extended)
 {
 Sells killed units and dropped items from creeps and enemy players. They can only be purchased once and are removed from the Thieves Guild after that. However, when they die again, they will be readded.|n|n|cffffcc00Does not sell workers, citizens or summoned units.|r
-}
-
-STRING 38508
-// Items: I10W (Skin Thane), Ubertip (Tooltip - Extended)
-{
-Skin of Thane.
 }
 
 STRING 38510
@@ -99198,64 +97614,10 @@ STRING 41456
 Skins
 }
 
-STRING 41459
-// Items: I0Q8 (Skin Arthas), Name (Name)
-{
-Skin Arthas
-}
-
-STRING 41460
-// Items: I0Q8 (Skin Arthas), Tip (Tooltip - Basic)
-{
-Skin Arthas
-}
-
-STRING 41461
-// Items: I0Q8 (Skin Arthas), Ubertip (Tooltip - Extended)
-{
-Skin of Arthas.
-}
-
 STRING 41463
 // Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
-}
-
-STRING 41465
-// Items: I0Q9 (Skin Illidan), Name (Name)
-{
-Skin Illidan
-}
-
-STRING 41466
-// Items: I0Q9 (Skin Illidan), Tip (Tooltip - Basic)
-{
-Skin Illidan
-}
-
-STRING 41470
-// Items: I0Q9 (Skin Illidan), Ubertip (Tooltip - Extended)
-{
-Skin of Illidan.
-}
-
-STRING 41471
-// Items: I0QA (Skin Pit Lord), Name (Name)
-{
-Skin Pit Lord
-}
-
-STRING 41472
-// Items: I0QA (Skin Pit Lord), Tip (Tooltip - Basic)
-{
-Skin Pit Lord
-}
-
-STRING 41473
-// Items: I0QA (Skin Pit Lord), Ubertip (Tooltip - Extended)
-{
-Skin of a Pit Lord.
 }
 
 STRING 41478
@@ -99474,30 +97836,6 @@ STRING 41605
 Warrior Hero, adept at summoning Undead into battle. Can learn Mana Burn, Mass Bloodlust, Unholy Aura, and Animate Dead. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 41607
-// Items: I0QD (Skin Archimonde), Name (Name)
-{
-Skin Archimonde
-}
-
-STRING 41608
-// Items: I0QD (Skin Archimonde), Tip (Tooltip - Basic)
-{
-Skin Archimonde
-}
-
-STRING 41610
-// Items: I0QE (Skin Mannoroth), Name (Name)
-{
-Skin Mannoroth
-}
-
-STRING 41611
-// Items: I0QE (Skin Mannoroth), Tip (Tooltip - Basic)
-{
-Skin Mannoroth
-}
-
 STRING 41616
 // Units: U02W (Giant Skeleton), Tip (Tooltip - Basic)
 {
@@ -99706,82 +98044,10 @@ STRING 41721
 (Ogre)
 }
 
-STRING 41722
-// Items: I0QH (Skin Paladin), Name (Name)
-{
-Skin Paladin
-}
-
-STRING 41723
-// Items: I0QH (Skin Paladin), Tip (Tooltip - Basic)
-{
-Skin Paladin
-}
-
-STRING 41724
-// Items: I0QH (Skin Paladin), Ubertip (Tooltip - Extended)
-{
-Skin of a Paladin.
-}
-
-STRING 41725
-// Items: I0QI (Skin Archmage), Name (Name)
-{
-Skin Archmage
-}
-
-STRING 41726
-// Items: I0QI (Skin Archmage), Tip (Tooltip - Basic)
-{
-Skin Archmage
-}
-
-STRING 41727
-// Items: I0QI (Skin Archmage), Ubertip (Tooltip - Extended)
-{
-Skin of an Archmage.
-}
-
 STRING 41731
 // Abilities: A239 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
-}
-
-STRING 41780
-// Items: I0QK (Skin Mountain King), Name (Name)
-{
-Skin Mountain King
-}
-
-STRING 41781
-// Items: I0QK (Skin Mountain King), Tip (Tooltip - Basic)
-{
-Skin Mountain King
-}
-
-STRING 41782
-// Items: I0QK (Skin Mountain King), Ubertip (Tooltip - Extended)
-{
-Skin of a Mountain King.
-}
-
-STRING 41783
-// Items: I0QL (Skin Blood Mage), Name (Name)
-{
-Skin Blood Mage
-}
-
-STRING 41784
-// Items: I0QL (Skin Blood Mage), Tip (Tooltip - Basic)
-{
-Skin Blood Mage
-}
-
-STRING 41785
-// Items: I0QL (Skin Blood Mage), Ubertip (Tooltip - Extended)
-{
-Skin of a Blood Mage.
 }
 
 STRING 41794
@@ -100748,78 +99014,6 @@ STRING 42051
 // Abilities: A0WB (Fire Attack), Tip (Tooltip - Normal)
 {
 Fire Attack
-}
-
-STRING 42054
-// Items: I0QR (Skin Blademaster), Name (Name)
-{
-Skin Blademaster
-}
-
-STRING 42055
-// Items: I0QR (Skin Blademaster), Tip (Tooltip - Basic)
-{
-Skin Blademaster
-}
-
-STRING 42056
-// Items: I0QR (Skin Blademaster), Ubertip (Tooltip - Extended)
-{
-Skin of a Blademaster.
-}
-
-STRING 42057
-// Items: I0QS (Skin Far Seer), Name (Name)
-{
-Skin Far Seer
-}
-
-STRING 42058
-// Items: I0QS (Skin Far Seer), Tip (Tooltip - Basic)
-{
-Skin Far Seer
-}
-
-STRING 42059
-// Items: I0QS (Skin Far Seer), Ubertip (Tooltip - Extended)
-{
-Skin of a Far Seer.
-}
-
-STRING 42060
-// Items: I0QT (Skin Tauren Chieftain), Name (Name)
-{
-Skin Tauren Chieftain
-}
-
-STRING 42061
-// Items: I0QT (Skin Tauren Chieftain), Tip (Tooltip - Basic)
-{
-Skin Tauren Chieftain
-}
-
-STRING 42062
-// Items: I0QT (Skin Tauren Chieftain), Ubertip (Tooltip - Extended)
-{
-Skin of a Tauren Chieftain.
-}
-
-STRING 42063
-// Items: I0QU (Skin Shadow Hunter), Name (Name)
-{
-Skin Shadow Hunter
-}
-
-STRING 42064
-// Items: I0QU (Skin Shadow Hunter), Tip (Tooltip - Basic)
-{
-Skin Shadow Hunter
-}
-
-STRING 42065
-// Items: I0QU (Skin Shadow Hunter), Ubertip (Tooltip - Extended)
-{
-Skin of a Shadow Hunter.
 }
 
 STRING 42068
@@ -102127,12 +100321,6 @@ STRING 42470
 Produces Dragon Turtles, Firework Teams, and Primal Pandaren. Allows researching upgrades Firework and Fragmentation Shards.
 }
 
-STRING 42471
-// Items: I0R9 (Skin Death Knight), Ubertip (Tooltip - Extended)
-{
-Skin of a Death Knight.
-}
-
 STRING 42472
 // Units: h0AG (Warlord), Ubertip (Tooltip - Extended)
 {
@@ -102395,12 +100583,6 @@ STRING 42521
 // Upgrades: R0DS (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
-}
-
-STRING 42522
-// Items: I0RA (Skin Lich), Name (Name)
-{
-Skin Lich
 }
 
 STRING 42523
@@ -102733,72 +100915,6 @@ STRING 42655
 (Pandaren)
 }
 
-STRING 42673
-// Items: I0RA (Skin Lich), Tip (Tooltip - Basic)
-{
-Skin Lich
-}
-
-STRING 42674
-// Items: I0RA (Skin Lich), Ubertip (Tooltip - Extended)
-{
-Skin of a Lich.
-}
-
-STRING 42675
-// Items: I0RB (Skin Dreadlord), Name (Name)
-{
-Skin Dreadlord
-}
-
-STRING 42676
-// Items: I0RB (Skin Dreadlord), Tip (Tooltip - Basic)
-{
-Skin Dreadlord
-}
-
-STRING 42677
-// Items: I0RB (Skin Dreadlord), Ubertip (Tooltip - Extended)
-{
-Skin of a Dreadlord.
-}
-
-STRING 42678
-// Items: I0RC (Skin Crypt Lord), Name (Name)
-{
-Skin Crypt Lord
-}
-
-STRING 42679
-// Items: I0RC (Skin Crypt Lord), Tip (Tooltip - Basic)
-{
-Skin Crypt Lord
-}
-
-STRING 42680
-// Items: I0RC (Skin Crypt Lord), Ubertip (Tooltip - Extended)
-{
-Skin of a Crypt Lord.
-}
-
-STRING 42681
-// Items: I0RD (Skin Beastmaster), Name (Name)
-{
-Skin Beastmaster
-}
-
-STRING 42682
-// Items: I0RD (Skin Beastmaster), Tip (Tooltip - Basic)
-{
-Skin Beastmaster
-}
-
-STRING 42683
-// Items: I0RD (Skin Beastmaster), Ubertip (Tooltip - Extended)
-{
-Skin of a Beastmaster.
-}
-
 STRING 42693
 // Units: n078 (Gul'dan's Guard), Name (Name)
 {
@@ -102809,24 +100925,6 @@ STRING 42694
 // Units: n078 (Gul'dan's Guard), Tip (Tooltip - Basic)
 {
 Hire Gul'dan's Guard
-}
-
-STRING 42696
-// Items: I0RE (Skin Dark Ranger), Name (Name)
-{
-Skin Dark Ranger
-}
-
-STRING 42697
-// Items: I0RE (Skin Dark Ranger), Tip (Tooltip - Basic)
-{
-Skin Dark Ranger
-}
-
-STRING 42698
-// Items: I0RE (Skin Dark Ranger), Ubertip (Tooltip - Extended)
-{
-Skin of a Dark Ranger.
 }
 
 STRING 42699
@@ -102849,90 +100947,6 @@ Saved.
 STRING 42702
 {
 Loaded.
-}
-
-STRING 42703
-// Items: I0RF (Skin Tinker), Name (Name)
-{
-Skin Tinker
-}
-
-STRING 42704
-// Items: I0RF (Skin Tinker), Tip (Tooltip - Basic)
-{
-Skin Tinker
-}
-
-STRING 42705
-// Items: I0RF (Skin Tinker), Ubertip (Tooltip - Extended)
-{
-Skin of a Tinker.
-}
-
-STRING 42706
-// Items: I0RG (Skin Pandaren Brewmaster), Name (Name)
-{
-Skin Pandaren Brewmaster
-}
-
-STRING 42707
-// Items: I0RG (Skin Pandaren Brewmaster), Tip (Tooltip - Basic)
-{
-Skin Pandaren Brewmaster
-}
-
-STRING 42708
-// Items: I0RG (Skin Pandaren Brewmaster), Ubertip (Tooltip - Extended)
-{
-Skin of a Pandaren Brewmaster.
-}
-
-STRING 42709
-// Items: I0RH (Skin Alchemist), Name (Name)
-{
-Skin Alchemist
-}
-
-STRING 42710
-// Items: I0RH (Skin Alchemist), Tip (Tooltip - Basic)
-{
-Skin Alchemist
-}
-
-STRING 42712
-// Items: I0RI (Skin Firelord), Name (Name)
-{
-Skin Firelord
-}
-
-STRING 42713
-// Items: I0RI (Skin Firelord), Tip (Tooltip - Basic)
-{
-Skin Firelord
-}
-
-STRING 42714
-// Items: I0RI (Skin Firelord), Ubertip (Tooltip - Extended)
-{
-Skin of a Firelord.
-}
-
-STRING 42715
-// Items: I0RJ (Skin Naga Sea Witch), Name (Name)
-{
-Skin Naga Sea Witch
-}
-
-STRING 42716
-// Items: I0RJ (Skin Naga Sea Witch), Tip (Tooltip - Basic)
-{
-Skin Naga Sea Witch
-}
-
-STRING 42717
-// Items: I0RJ (Skin Naga Sea Witch), Ubertip (Tooltip - Extended)
-{
-Skin of a Naga Sea Witch.
 }
 
 STRING 42731
@@ -106817,12 +104831,6 @@ STRING 45644
 Brogg Glopgut,Cho'war the Pillager,High King Maulgar,Hurp'derp,King Dorfbruiser,Rom'ogg Bonecrusher,Thog,Thruk
 }
 
-STRING 45646
-// Items: I100 (Skin Ranger), Name (Name)
-{
-Skin Ranger
-}
-
 STRING 45648
 // Units: n0MD (Centaur Citizen (male)), Tip (Tooltip - Basic)
 {
@@ -108114,24 +106122,6 @@ STRING 46146
 // Upgrades: R0F7 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Stormwind)
-}
-
-STRING 46147
-// Items: I0TF (Skin Priest), Name (Name)
-{
-Skin Priest
-}
-
-STRING 46148
-// Items: I0TF (Skin Priest), Tip (Tooltip - Basic)
-{
-Skin Priest
-}
-
-STRING 46149
-// Items: I0TF (Skin Priest), Ubertip (Tooltip - Extended)
-{
-Skin of a Priest.
 }
 
 STRING 46215
@@ -109655,12 +107645,6 @@ STRING 48156
 A tiny villager who can cast Disarmament.
 }
 
-STRING 48157
-// Items: I100 (Skin Ranger), Tip (Tooltip - Basic)
-{
-Skin Ranger
-}
-
 STRING 48164
 // Units: n0IS (Armory), EditorSuffix (Name - Editor Suffix)
 {
@@ -110788,24 +108772,6 @@ STRING 48970
 Boosts attack damage by 10.
 }
 
-STRING 48971
-// Items: I0UY (Skin Customizable Hero), Name (Name)
-{
-Skin Customizable Hero
-}
-
-STRING 48972
-// Items: I0UY (Skin Customizable Hero), Tip (Tooltip - Basic)
-{
-Skin Customizable Hero
-}
-
-STRING 48973
-// Items: I0UY (Skin Customizable Hero), Ubertip (Tooltip - Extended)
-{
-Skin of a Customizable Hero.
-}
-
 STRING 48976
 // Items: I0VC (Nerubian Headwear), Description (Description)
 {
@@ -111020,12 +108986,6 @@ STRING 49028
 // Items: I0VB (Double Axe), Description (Description)
 {
 Boosts attack damage by 10.
-}
-
-STRING 49029
-// Items: I100 (Skin Ranger), Ubertip (Tooltip - Extended)
-{
-Skin of a Ranger.
 }
 
 STRING 49030
@@ -115060,12 +113020,6 @@ STRING 50498
 Initiate, Adept, Master
 }
 
-STRING 50499
-// Items: I101 (Skin Ancient of Lore), Name (Name)
-{
-Skin Ancient of Lore
-}
-
 STRING 50500
 // Units: H0UL (Lion Rider), Name (Name)
 {
@@ -117244,12 +115198,6 @@ STRING 51070
 Elder Master Training
 }
 
-STRING 51071
-// Items: I0Y8 (Skin Fel Blademaster), Name (Name)
-{
-Skin Fel Blademaster
-}
-
 STRING 51072
 // Upgrades: R0GT (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
@@ -118024,12 +115972,6 @@ STRING 51371
 Black Dragon Mount
 }
 
-STRING 51372
-// Items: I0Y8 (Skin Fel Blademaster), Tip (Tooltip - Basic)
-{
-Skin Fel Blademaster
-}
-
 STRING 51376
 // Units: n0ME (Centaur Citizen (female)), Name (Name)
 {
@@ -118268,12 +116210,6 @@ STRING 51429
 // Abilities: A1VZ (Fel), Ubertip (Tooltip - Normal - Extended)
 {
 Causes this unit to attack <A1VZ,DataB3,%>% faster, but take <A1VZ,DataC3,%>% more damage. Changes the damage type to Chaos. Lasts <A1VZ,Dur3> seconds.
-}
-
-STRING 51430
-// Items: I0Y8 (Skin Fel Blademaster), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Blademaster.
 }
 
 STRING 51431
@@ -118544,96 +116480,6 @@ STRING 51563
 // Abilities: S01M (Cargo Hold), EditorSuffix (Editor Suffix)
 {
 (Pig Farm) (Fel Orc)
-}
-
-STRING 51564
-// Items: I0Y9 (Skin Fel Grunt), Name (Name)
-{
-Skin Fel Grunt
-}
-
-STRING 51565
-// Items: I0Y9 (Skin Fel Grunt), Tip (Tooltip - Basic)
-{
-Skin Fel Grunt
-}
-
-STRING 51566
-// Items: I0Y9 (Skin Fel Grunt), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Grunt.
-}
-
-STRING 51567
-// Items: I0YA (Skin Fel Peon), Name (Name)
-{
-Skin Fel Peon
-}
-
-STRING 51568
-// Items: I0YA (Skin Fel Peon), Tip (Tooltip - Basic)
-{
-Skin Fel Peon
-}
-
-STRING 51569
-// Items: I0YA (Skin Fel Peon), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Peon.
-}
-
-STRING 51570
-// Items: I0YB (Skin Fel Raider), Name (Name)
-{
-Skin Fel Raider
-}
-
-STRING 51571
-// Items: I0YB (Skin Fel Raider), Tip (Tooltip - Basic)
-{
-Skin Fel Raider
-}
-
-STRING 51572
-// Items: I0YB (Skin Fel Raider), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Raider.
-}
-
-STRING 51573
-// Items: I0YC (Skin Fel Warlock), Name (Name)
-{
-Skin Fel Warlock
-}
-
-STRING 51574
-// Items: I0YC (Skin Fel Warlock), Tip (Tooltip - Basic)
-{
-Skin Fel Warlock
-}
-
-STRING 51575
-// Items: I0YC (Skin Fel Warlock), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Warlock.
-}
-
-STRING 51576
-// Items: I1A2 (Skin Fel Kodo Beast), Name (Name)
-{
-Skin Fel Kodo Beast
-}
-
-STRING 51577
-// Items: I1A2 (Skin Fel Kodo Beast), Tip (Tooltip - Basic)
-{
-Skin Fel Kodo Beast
-}
-
-STRING 51578
-// Items: I1A2 (Skin Fel Kodo Beast), Ubertip (Tooltip - Extended)
-{
-Skin of a Fel Kodo Beast.
 }
 
 STRING 51586
@@ -120130,12 +117976,6 @@ STRING 52820
 Parry
 }
 
-STRING 52858
-// Items: I101 (Skin Ancient of Lore), Tip (Tooltip - Basic)
-{
-Skin Ancient of Lore
-}
-
 STRING 52897
 // Buffs/Effects: B03T (Parry), EditorName (Name (Editor Only))
 {
@@ -120380,66 +118220,6 @@ STRING 53112
 // Units: u036 (Ability Black Arrow), Ubertip (Tooltip - Extended)
 {
 Adds <ACbk,DataA1> bonus damage to attacks. Units killed while under the effect of Black Arrow will turn into skeletons.
-}
-
-STRING 53128
-// Items: I0ZT (Skin Furbolg Ursa Warrior), Name (Name)
-{
-Skin Furbolg Ursa Warrior
-}
-
-STRING 53129
-// Items: I0ZT (Skin Furbolg Ursa Warrior), Tip (Tooltip - Basic)
-{
-Skin Furbolg Ursa Warrior
-}
-
-STRING 53130
-// Items: I0ZT (Skin Furbolg Ursa Warrior), Ubertip (Tooltip - Extended)
-{
-Skin of a Furbolg Ursa Warrior.
-}
-
-STRING 53131
-// Items: I0ZU (Skin Sorceress), Name (Name)
-{
-Skin Sorceress
-}
-
-STRING 53132
-// Items: I0ZU (Skin Sorceress), Tip (Tooltip - Basic)
-{
-Skin Sorceress
-}
-
-STRING 53133
-// Items: I0ZU (Skin Sorceress), Ubertip (Tooltip - Extended)
-{
-Skin of a Sorceress.
-}
-
-STRING 53134
-// Items: I0ZV (Skin Captain), Name (Name)
-{
-Skin Captain
-}
-
-STRING 53135
-// Items: I0ZV (Skin Captain), Tip (Tooltip - Basic)
-{
-Skin Captain
-}
-
-STRING 53136
-// Items: I0ZV (Skin Captain), Ubertip (Tooltip - Extended)
-{
-Skin of a Captain.
-}
-
-STRING 53194
-// Items: I101 (Skin Ancient of Lore), Ubertip (Tooltip - Extended)
-{
-Skin of an Ancient of Lore.
 }
 
 STRING 53216
@@ -120806,18 +118586,6 @@ STRING 53618
 // Units: E000 (Keeper of the Grove), Ubertip (Tooltip - Extended)
 {
 Mystical Hero, adept at using nature spells. Can learn Entangling Roots, Force of Nature, Thorns Aura, and Tranquility. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
-STRING 53628
-// Items: I12D (Skin Dryad), Name (Name)
-{
-Skin Dryad
-}
-
-STRING 53660
-// Items: I0RH (Skin Alchemist), Ubertip (Tooltip - Extended)
-{
-Skin of an Alchemist.
 }
 
 STRING 53661
@@ -122115,12 +119883,6 @@ STRING 54913
 Clan Assault
 }
 
-STRING 54914
-// Items: I10X (Skin Flamebinder), Name (Name)
-{
-Skin Flamebinder
-}
-
 STRING 54915
 // Abilities: A0DF (Clan Assault), EditorSuffix (Editor Suffix)
 {
@@ -122131,12 +119893,6 @@ STRING 54916
 // Abilities: A0DG (Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Clan Banner - Dummy)
-}
-
-STRING 54917
-// Items: I10X (Skin Flamebinder), Tip (Tooltip - Basic)
-{
-Skin Flamebinder
 }
 
 STRING 54918
@@ -122191,12 +119947,6 @@ STRING 54926
 // Items: I04W (Unique - Portable Tinker Factory), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffUnique|r|nThis factory was crafted by a very skillful Tinker who was the best of his kind. It allows you changing unit classifications. Increases the armor by 10.
-}
-
-STRING 54928
-// Items: I10X (Skin Flamebinder), Ubertip (Tooltip - Extended)
-{
-Skin of Flamebinder.
 }
 
 STRING 54951
@@ -122859,60 +120609,6 @@ STRING 55327
 Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir the Howler,Skhowl,Kartak the Abominable
 }
 
-STRING 55328
-// Items: I117 (Skin Nerubian Queen), Name (Name)
-{
-Skin Nerubian Queen
-}
-
-STRING 55329
-// Items: I117 (Skin Nerubian Queen), Tip (Tooltip - Basic)
-{
-Skin Nerubian Queen
-}
-
-STRING 55330
-// Items: I117 (Skin Nerubian Queen), Ubertip (Tooltip - Extended)
-{
-Skin of a Nerubian Queen.
-}
-
-STRING 55331
-// Items: I118 (Skin Giant Skeleton), Name (Name)
-{
-Skin Giant Skeleton
-}
-
-STRING 55332
-// Items: I118 (Skin Giant Skeleton), Tip (Tooltip - Basic)
-{
-Skin Giant Skeleton
-}
-
-STRING 55333
-// Items: I118 (Skin Giant Skeleton), Ubertip (Tooltip - Extended)
-{
-Skin of a Giant Skeleton.
-}
-
-STRING 55334
-// Items: I119 (Skin Sludge Monstrosity), Name (Name)
-{
-Skin Sludge Monstrosity
-}
-
-STRING 55335
-// Items: I119 (Skin Sludge Monstrosity), Tip (Tooltip - Basic)
-{
-Skin Sludge Monstrosity
-}
-
-STRING 55336
-// Items: I119 (Skin Sludge Monstrosity), Ubertip (Tooltip - Extended)
-{
-Skin of a Sludge Monstrosity.
-}
-
 STRING 55340
 // Units: o0BA (Lumberyard), Ubertip (Tooltip - Extended)
 {
@@ -122953,24 +120649,6 @@ STRING 55347
 // Items: I067 (Outland Draenei Camp), Tip (Tooltip - Basic)
 {
 Outland Draenei Camp
-}
-
-STRING 55348
-// Items: I11A (Skin Wolf Rider), Name (Name)
-{
-Skin Wolf Rider
-}
-
-STRING 55349
-// Items: I11A (Skin Wolf Rider), Tip (Tooltip - Basic)
-{
-Skin Wolf Rider
-}
-
-STRING 55350
-// Items: I11A (Skin Wolf Rider), Ubertip (Tooltip - Extended)
-{
-Skin of a Wolf Rider.
 }
 
 STRING 55351
@@ -123328,12 +121006,6 @@ STRING 55427
 // Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
 {
 C
-}
-
-STRING 55433
-// Items: I11D (Skin Salamander Lord), Ubertip (Tooltip - Extended)
-{
-Skin of an Salamander Lord.
 }
 
 STRING 55434
@@ -124941,12 +122613,6 @@ STRING 55983
 (Property)
 }
 
-STRING 56045
-// Items: I12D (Skin Dryad), Tip (Tooltip - Basic)
-{
-Skin Dryad
-}
-
 STRING 56046
 // Buffs/Effects: B03Z (), Buffubertip (Tooltip - Extended)
 {
@@ -125181,22 +122847,10 @@ STRING 56223
 Tiny Gold Panning
 }
 
-STRING 56224
-// Items: I12D (Skin Dryad), Ubertip (Tooltip - Extended)
-{
-Skin of a Dryad.
-}
-
 STRING 56225
 // Items: I11Y (Tiny Gold Panning), Tip (Tooltip - Basic)
 {
 Purchase Tiny Gold Panning
-}
-
-STRING 56226
-// Items: I12E (Skin Druid of the Claw), Name (Name)
-{
-Skin Druid of the Claw
 }
 
 STRING 56227
@@ -126553,18 +124207,6 @@ STRING 56655
 (Centaur)
 }
 
-STRING 56656
-// Items: I12E (Skin Druid of the Claw), Tip (Tooltip - Basic)
-{
-Skin Druid of the Claw
-}
-
-STRING 56657
-// Items: I12E (Skin Druid of the Claw), Ubertip (Tooltip - Extended)
-{
-Skin of a Druid of the Claw.
-}
-
 STRING 56658
 // Units: o0AB (Eagle), Ubertip (Tooltip - Extended)
 {
@@ -126791,24 +124433,6 @@ STRING 56762
 // Units: e02D (Dryad Faun), Tip (Tooltip - Basic)
 {
 Hire Dryad Faun
-}
-
-STRING 56764
-// Items: I12F (Skin Druid of the Talon), Name (Name)
-{
-Skin Druid of the Talon
-}
-
-STRING 56765
-// Items: I12F (Skin Druid of the Talon), Tip (Tooltip - Basic)
-{
-Skin Druid of the Talon
-}
-
-STRING 56766
-// Items: I12F (Skin Druid of the Talon), Ubertip (Tooltip - Extended)
-{
-Skin of a Druid of the Talon.
 }
 
 STRING 56778
