@@ -3574,6 +3574,8 @@ globals
     // TODO Add item types.
     constant integer RECORD_PLAYER                                   = 'h0G0'
     constant integer ITEM_RECORD_PLAYER                              = 'I14Q'
+    constant integer MUSIC_STORM_EARTH_FIRE                          = 'h0G3'
+    constant integer STOP_MUSIC                                      = 'h0G4'
 
     // All Races Engineer
     constant integer CHEST                                           = 'h0Y9'
