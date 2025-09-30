@@ -68,7 +68,7 @@ STRING 11
 }
 
 STRING 12
-// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+// Abilities: A21V (Improved Gold Drilling), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
@@ -7341,7 +7341,7 @@ STRING 1262
 }
 
 STRING 1263
-// Units: h06C (Giant Meeresschildkröte Mount), Tip (Tooltip - Basic)
+// Units: h06C (Giant Sea Turtle Mount), Tip (Tooltip - Basic)
 {
 Giant Meeresschildkröte Mount
 }
@@ -41559,7 +41559,7 @@ Verbessertes Goldbohren Stufe 5
 }
 
 STRING 8776
-// Abilities: A21V (Improved Gold Drilling), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
 Increases the amount of gold that Bohrroboters can carry by <R0I3,mod1>.
 }
@@ -43713,7 +43713,7 @@ Unmounts when the horse is being killed and continues fighting on foot.
 }
 
 STRING 10172
-// Units: n0GS (Giant Meeresschildkröte), Hotkey (Hotkey)
+// Units: n0GS (Giant Sea Turtle), Hotkey (Hotkey)
 {
 G
 }
@@ -60038,7 +60038,7 @@ STRING 18134
 }
 
 STRING 18135
-// Units: h06C (Giant Meeresschildkröte Mount), Name (Name)
+// Units: h06C (Giant Sea Turtle Mount), Name (Name)
 {
 Riesenschildkröten-Reittier
 }
@@ -94905,7 +94905,7 @@ Verbesserte Fischerei
 }
 
 STRING 40528
-// Abilities: A1GM (Summon Meeresschildkröte), Name (Name)
+// Abilities: A1GM (Summon Sea Turtle), Name (Name)
 {
 Summon Meeresschildkröte
 }
@@ -94917,7 +94917,7 @@ STRING 40529
 }
 
 STRING 40530
-// Abilities: A1GM (Summon Meeresschildkröte), Tip (Tooltip - Normal)
+// Abilities: A1GM (Summon Sea Turtle), Tip (Tooltip - Normal)
 {
 Summon Meeresschildkröte
 }
@@ -94977,7 +94977,7 @@ STRING 40541
 }
 
 STRING 40542
-// Abilities: A1GM (Summon Meeresschildkröte), EditorSuffix (Editor Suffix)
+// Abilities: A1GM (Summon Sea Turtle), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
 }
@@ -96237,7 +96237,7 @@ STRING 41082
 }
 
 STRING 41083
-// Units: n0G2 (Murloc-Fleischfresser), EditorSuffix (Name - Editor Suffix)
+// Units: n0G2 (Murloc Flesheater), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -96525,7 +96525,7 @@ STRING 41198
 }
 
 STRING 41199
-// Units: n0G2 (Murloc-Fleischfresser), Tip (Tooltip - Basic)
+// Units: n0G2 (Murloc Flesheater), Tip (Tooltip - Basic)
 {
 Murloc-Fleischfresser ausbilden
 }
@@ -99699,7 +99699,7 @@ STRING 42342
 }
 
 STRING 42343
-// Units: n0GS (Giant Meeresschildkröte), EditorSuffix (Name - Editor Suffix)
+// Units: n0GS (Giant Sea Turtle), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
 }
@@ -99897,7 +99897,7 @@ Increases their Monk's mana capacity, mana regeneration rate, hit points, attack
 }
 
 STRING 42383
-// Units: n0GS (Giant Meeresschildkröte), Name (Name)
+// Units: n0GS (Giant Sea Turtle), Name (Name)
 {
 Riesenschildkröte
 }
@@ -99909,7 +99909,7 @@ Trains Monks, Sages, and Druids. |nAlso contains spell upgrades for Monks, Sages
 }
 
 STRING 42385
-// Units: n0GS (Giant Meeresschildkröte), Tip (Tooltip - Basic)
+// Units: n0GS (Giant Sea Turtle), Tip (Tooltip - Basic)
 {
 Riesenschildkröte ausbilden
 }
@@ -100545,7 +100545,7 @@ Upgrades the mortar shells on Feuerwerk-Teams to increase the damage they deal t
 }
 
 STRING 42508
-// Units: n0GS (Giant Meeresschildkröte), Ubertip (Tooltip - Extended)
+// Units: n0GS (Giant Sea Turtle), Ubertip (Tooltip - Extended)
 {
 Heavy melee amphibious unit whose spiked shell harms enemy melee attackers. Can transport units. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -114887,180 +114887,6 @@ STRING 51006
 Causes <A1VV,DataA1> damage per second when hitting a target. Hält <A1VV,Dur1> Sekunden lang an.
 }
 
-STRING 51007
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 2|r]
-}
-
-STRING 51008
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 1|r]
-}
-
-STRING 51009
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 3|r]
-}
-
-STRING 51010
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 4|r]
-}
-
-STRING 51011
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 5|r]
-}
-
-STRING 51012
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 6|r]
-}
-
-STRING 51013
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 7|r]
-}
-
-STRING 51014
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 8|r]
-}
-
-STRING 51015
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 9|r]
-}
-
-STRING 51016
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 10|r]
-}
-
-STRING 51017
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 11|r]
-}
-
-STRING 51018
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 12|r]
-}
-
-STRING 51019
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 13|r]
-}
-
-STRING 51020
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 14|r]
-}
-
-STRING 51021
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Besessenheit - [|cffffcc00Stufe 15|r]
-}
-
-STRING 51022
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA2>.
-}
-
-STRING 51023
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA3>.
-}
-
-STRING 51024
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA4>.
-}
-
-STRING 51025
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA5>.
-}
-
-STRING 51026
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA6>.
-}
-
-STRING 51027
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA7>.
-}
-
-STRING 51028
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA8>.
-}
-
-STRING 51029
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA9>.
-}
-
-STRING 51030
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA10>.
-}
-
-STRING 51031
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA11>.
-}
-
-STRING 51032
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA12>.
-}
-
-STRING 51033
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA13>.
-}
-
-STRING 51034
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA14>.
-}
-
-STRING 51035
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nBesessenheit cannot be used on flying units, Helden, or creeps above level <Apos,DataA15>.
-}
-
 STRING 51038
 // Units: n0KV (Fel Boar), EditorSuffix (Name - Editor Suffix)
 {
@@ -121238,25 +121064,25 @@ Schildkrötenei
 }
 
 STRING 55549
-// Abilities: A214 (Spawn Meeresschildkröte Hatchling), Name (Name)
+// Abilities: A214 (Spawn Sea Turtle Hatchling), Name (Name)
 {
 Spawn Meeresschildkröte Hatchling
 }
 
 STRING 55550
-// Abilities: A214 (Spawn Meeresschildkröte Hatchling), EditorSuffix (Editor Suffix)
+// Abilities: A214 (Spawn Sea Turtle Hatchling), EditorSuffix (Editor Suffix)
 {
 (Schildkrötenei)
 }
 
 STRING 55551
-// Abilities: A215 (Spawn Meeresschildkröte Hatchling), Name (Name)
+// Abilities: A215 (Spawn Sea Turtle Hatchling), Name (Name)
 {
 Spawn Meeresschildkröte Hatchling
 }
 
 STRING 55552
-// Abilities: A215 (Spawn Meeresschildkröte Hatchling), EditorSuffix (Editor Suffix)
+// Abilities: A215 (Spawn Sea Turtle Hatchling), EditorSuffix (Editor Suffix)
 {
 (Drachenschildkröte)
 }
