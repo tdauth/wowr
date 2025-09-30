@@ -4780,21 +4780,21 @@ globals
     constant integer UPG_LORDAERON_SCARLET_MONASTERY                 = 'R0AD' // special building
 
     constant integer LORDAERON_WORKER                                = 'h0LY' // worker
-    constant integer LORDAERON_AIR_SHIP                              = 'n0E2'
-    constant integer LORDAERON_ALLIANCE_SIEGE_TOWER                  = 'h0OE'
-    constant integer LORDAERON_ARCHER                                = 'n0DE'
-    constant integer LORDAERON_BANNER_CARRIER                        = 'h0NA'
-    constant integer LORDAERON_BATTLE_MAGE                           = 'h0N9'
-    constant integer LORDAERON_CROSSBOWMAN                           = 'n0DI'
     constant integer LORDAERON_FOOTMAN                               = 'h0MV'
-    constant integer LORDAERON_GRYPHON_RIDER                         = 'h0MS'
+    constant integer LORDAERON_SPEARMAN                              = 'h0MR' // upgraded footman
+    constant integer LORDAERON_ARCHER                                = 'n0DE'
+    constant integer LORDAERON_CROSSBOWMAN                           = 'n0DI' // upgraded archer
     constant integer LORDAERON_KNIGHT                                = 'h0MI'
-    constant integer LORDAERON_MAGE                                  = 'h0MT'
-    constant integer LORDAERON_PEGASUS_KNIGHT                        = 'h0MQ'
-    constant integer LORDAERON_RIFLEMAN                              = 'h0N8'
+    constant integer LORDAERON_MAGE                                  = 'h0MT' // priest
     constant integer LORDAERON_SORCERESS                             = 'h0MU'
-    constant integer LORDAERON_SPEARMAN                              = 'h0MR'
-    constant integer LORDAERON_SCARLET_CRUSADE_PALADIN               = 'h0OK'
+    constant integer LORDAERON_BATTLE_MAGE                           = 'h0N9' // spell breaker
+    constant integer LORDAERON_AIR_SHIP                              = 'n0E2' // flying machine
+    constant integer LORDAERON_ALLIANCE_SIEGE_TOWER                  = 'h0OE' // siege engine
+    constant integer LORDAERON_RIFLEMAN                              = 'h0N8' // mortar
+    constant integer LORDAERON_BANNER_CARRIER                        = 'h0NA' // workshop unit 4
+    constant integer LORDAERON_GRYPHON_RIDER                         = 'h0MS'
+    constant integer LORDAERON_PEGASUS_KNIGHT                        = 'h0MQ' // dragonhawk rider
+    constant integer LORDAERON_SCARLET_CRUSADE_PALADIN               = 'h0OK' // tauren/special unit
 
     constant integer LORDAERON_CITIZEN_MALE                          = 'n0DY'
     constant integer LORDAERON_CITIZEN_FEMALE                        = 'n0E0'

@@ -962,6 +962,10 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty  + GetUnitCountEx(LORDAERON_TIER_3,false,townid)
     elseif unitid == LORDAERON_SCOUT_TOWER then
         set have_qty = have_qty  + GetUnitCountEx(LORDAERON_GUARD_TOWER,false,townid) + GetUnitCountEx(LORDAERON_CANNON_TOWER,false,townid) + GetUnitCountEx(LORDAERON_ARCANE_TOWER,false,townid)
+    elseif unitid == LORDAERON_FOOTMAN then
+        set have_qty = have_qty + GetUnitCountEx(LORDAERON_SPEARMAN,false,townid)
+    elseif unitid == LORDAERON_ARCHER then
+        set have_qty = have_qty + GetUnitCountEx(LORDAERON_CROSSBOWMAN,false,townid)
 
     elseif unitid == STORMWIND_TIER_1 then
         set have_qty = have_qty + GetUnitCountEx(STORMWIND_TIER_2,false,townid) + GetUnitCountEx(STORMWIND_TIER_3,false,townid)

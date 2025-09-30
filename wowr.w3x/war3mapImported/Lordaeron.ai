@@ -99,6 +99,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(2, knights, LORDAERON_KNIGHT)
         call AttackerSimple(3, priests, LORDAERON_MAGE)
         call AttackerSimple(3, sorceresses, LORDAERON_SORCERESS)
+        call AttackerSimple(4, mortars, LORDAERON_RIFLEMAN)
         call AttackerSimple(4, mortars, LORDAERON_BANNER_CARRIER)
         call AttackerSimple(4, siege_engines, LORDAERON_ALLIANCE_SIEGE_TOWER)
         call AttackerSimple(5, spellbreakers, LORDAERON_BATTLE_MAGE)

@@ -68,7 +68,7 @@ STRING 11
 }
 
 STRING 12
-// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+// Abilities: A21V (Improved Gold Drilling), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
@@ -41558,7 +41558,7 @@ Improved Gold Drilling Level 5
 }
 
 STRING 8776
-// Abilities: A21V (Improved Gold Drilling), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
 Increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
@@ -114884,180 +114884,6 @@ STRING 51006
 // Abilities: A1VV (Poison), Ubertip (Tooltip - Normal - Extended)
 {
 Causes <A1VV,DataA1> damage per second when hitting a target. Lasts <A1VV,Dur1> seconds.
-}
-
-STRING 51007
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 2|r]
-}
-
-STRING 51008
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 1|r]
-}
-
-STRING 51009
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 3|r]
-}
-
-STRING 51010
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 4|r]
-}
-
-STRING 51011
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 5|r]
-}
-
-STRING 51012
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 6|r]
-}
-
-STRING 51013
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 7|r]
-}
-
-STRING 51014
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 8|r]
-}
-
-STRING 51015
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 9|r]
-}
-
-STRING 51016
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 10|r]
-}
-
-STRING 51017
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 11|r]
-}
-
-STRING 51018
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 12|r]
-}
-
-STRING 51019
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 13|r]
-}
-
-STRING 51020
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 14|r]
-}
-
-STRING 51021
-// Abilities: Apos (Possession), Tip (Tooltip - Normal)
-{
-Possession - [|cffffcc00Level 15|r]
-}
-
-STRING 51022
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA2>.
-}
-
-STRING 51023
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA3>.
-}
-
-STRING 51024
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA4>.
-}
-
-STRING 51025
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA5>.
-}
-
-STRING 51026
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA6>.
-}
-
-STRING 51027
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA7>.
-}
-
-STRING 51028
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA8>.
-}
-
-STRING 51029
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA9>.
-}
-
-STRING 51030
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA10>.
-}
-
-STRING 51031
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA11>.
-}
-
-STRING 51032
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA12>.
-}
-
-STRING 51033
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA13>.
-}
-
-STRING 51034
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA14>.
-}
-
-STRING 51035
-// Abilities: Apos (Possession), Ubertip (Tooltip - Normal - Extended)
-{
-Displaces the soul of an enemy, giving you permanent control of it, but destroying the caster's body. |nPossession cannot be used on flying units, Heroes, or creeps above level <Apos,DataA15>.
 }
 
 STRING 51038
