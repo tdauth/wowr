@@ -10581,7 +10581,7 @@ Light ranged unit. Can learn a poison attack which slows and damages enemy units
 STRING 1848
 // Abilities: A1E3 (Summon Wall), Name (Name)
 {
-Summon Wall
+Mauer beschwören
 }
 
 STRING 1849
@@ -12304,7 +12304,7 @@ Kampfarena errichten
 STRING 2231
 // Units: n03N (Gnoll Warlord), Tip (Tooltip - Basic)
 {
-Train Gnoll-Kriegsherr
+Gnoll-Kriegsherr ausbilden
 }
 
 STRING 2232
@@ -12328,7 +12328,7 @@ Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörde
 STRING 2235
 // Units: h05T (Slave), Name (Name)
 {
-Slave
+Sklave
 }
 
 STRING 2236
@@ -13624,7 +13624,7 @@ STRING 2483
 STRING 2484
 // Abilities: A001 (Summon Workers), Name (Name)
 {
-Summon Arbeiters
+Arbeiter beschwören
 }
 
 STRING 2485
@@ -13648,7 +13648,7 @@ STRING 2488
 STRING 2489
 // Items: I1A8 (Tome of Movement), Description (Description)
 {
-Permanently increases Movement Speed.
+Erhöht dauerhaft die Bewegungsgeschwindigkeit.
 }
 
 STRING 2490
@@ -22165,7 +22165,7 @@ Trains Red Dragons. |nAlso contains upgrades for Red Dragons.
 STRING 4496
 // Units: o03X (Dungeon Spikes), Name (Name)
 {
-Verlies Spikes
+Verlies-Stacheln
 }
 
 STRING 4497
@@ -29973,7 +29973,7 @@ Schmiede
 STRING 6024
 // Items: I0XU (Fel Orc), Ubertip (Tooltip - Extended)
 {
-Orcs corrupted by drinking demon blood. Also known as Chaos Orcs.|n- Fel enables Chaos damage temporarily.|n- Strong units.|n- Demon units.|n- Piggery.|n- No Spiked Barricades.|n- No Pillage.|n- No Battle Stations.|n|n|cffffcc00Faction: Horde.|r
+Orcs corrupted by drinking demon blood. Also known as Chaos Orcs.|n- Fel enables Chaos damage temporarily.|n- Strong units.|n- Demon units.|n- Schweinezucht.|n- No Spiked Barricades.|n- No Pillage.|n- No Battle Stations.|n|n|cffffcc00Faction: Horde.|r
 }
 
 STRING 6025
@@ -48778,7 +48778,7 @@ Pendeluhr
 STRING 11389
 // Doodads: D01H (Ink Bottle), Name (Name)
 {
-Ink Bottle
+Tintenglas
 }
 
 STRING 11390
@@ -50246,19 +50246,19 @@ Portale to the old gods prison have been enabled! Traps against teleporting and 
 STRING 11873
 // Units: o073 (Advanced Ogre Mound), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Advanced Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Hoch entwickelten Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 11874
 // Units: o074 (Fortified Ogre Mound), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Fortified Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Befestigten Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 11875
 // Upgrades: R0E7 (Ensnare), Tip (Tooltip)
 {
-Research Pulverisieren
+Pulverisieren erforschen
 }
 
 STRING 11876
@@ -51160,7 +51160,7 @@ Unlock exclusive features in the map.
 
 STRING 12074
 {
-VIP status on Discord.
+VIP-Status auf Discord.
 }
 
 STRING 12075
@@ -51175,7 +51175,7 @@ Freelancer: Pure RPG mode, begins with +15 attributes and +30 % XP rate.
 
 STRING 12077
 {
-"-h/-help": Lists chat commands.
+"-h/-help": Listet alle Chat-Befehle auf.
 }
 
 STRING 12078
@@ -58019,7 +58019,7 @@ Hochelfen-Hafen errichten
 STRING 16961
 // Units: o073 (Advanced Ogre Mound), Name (Name)
 {
-Advanced Oger-Hügel
+Hoch entwickelter Oger-Hügel
 }
 
 STRING 16962
@@ -58037,7 +58037,7 @@ STRING 16963
 STRING 16964
 // Units: o074 (Fortified Ogre Mound), Name (Name)
 {
-Fortified Oger-Hügel
+Befestigter Oger-Hügel
 }
 
 STRING 16965
@@ -63284,7 +63284,7 @@ Orc-Öltanker
 STRING 20350
 // Units: o07M (Orc Oil Tanker), Tip (Tooltip - Basic)
 {
-Train Orc-Öltanker
+Orc-Öltanker ausbilden
 }
 
 STRING 20351
@@ -63392,7 +63392,7 @@ Mana-Schutzzauber
 STRING 20409
 // Units: o0A8 (War Tent), Name (Name)
 {
-War Tent
+Kriegszelt
 }
 
 STRING 20410
@@ -63404,7 +63404,7 @@ STRING 20410
 STRING 20411
 // Units: o0A8 (War Tent), Tip (Tooltip - Basic)
 {
-Build War Tent
+Kriegszelt errichten
 }
 
 STRING 20412
@@ -64488,7 +64488,7 @@ Sturmschlag
 STRING 20780
 // Upgrades: R08W (Burning Oil), Tip (Tooltip)
 {
-Research Cathedral
+Kathedrale erforschen
 }
 
 STRING 20793
@@ -64809,7 +64809,7 @@ Further increases the armor of Versorgungswagens, Dalaran-Missgeburten, Dalaran-
 STRING 21338
 // Units: O09N (Ancient Hydra), Revivetip (Tooltip - Revive)
 {
-Revive Ahnen-Hydra
+Ahnen-Hydra wiederbeleben
 }
 
 STRING 21340
@@ -67248,7 +67248,7 @@ Drain
 STRING 23588
 // Items: I0FT (Kobold Gold Coins), Tip (Tooltip - Basic)
 {
-Purchase Kobold-Goldmünzen
+Kobold-Goldmünzen erwerben
 }
 
 STRING 23590
@@ -67408,9 +67408,9 @@ STRING 23814
 }
 
 STRING 23815
-// Abilities: A0DE (Staff of Teleportation), Tip (Tooltip - Normal)
+// Abilities: A0DE (Stab der Teleportation), Tip (Tooltip - Normal)
 {
-Staff of Teleportation
+Stab der Teleportation
 }
 
 STRING 23843
@@ -67452,7 +67452,7 @@ Further increases the armor of of Pikeman, Zauberlehrlings and Dragonhawk Riders
 STRING 23857
 // Units: n0D0 (Gnome Citizen (male)), Tip (Tooltip - Basic)
 {
-Hire Gnome Citizen (male)
+Gnom-Bürger anheuern
 }
 
 STRING 23874
@@ -67494,7 +67494,7 @@ Heavily armored vehicle, effective at destroying buildings.|n|n|cffffcc00Greift 
 STRING 23895
 // Units: o03W (Dragon Roost), Tip (Tooltip - Basic)
 {
-Build Drachenhorst
+Drachenhorst errichten
 }
 
 STRING 23896
@@ -67578,13 +67578,13 @@ STRING 24383
 STRING 24384
 // Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Golem Adeptenausbildung
+Golem-Adeptenausbildung
 }
 
 STRING 24385
 // Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Golem Meisterausbildung
+Golem-Meisterausbildung
 }
 
 STRING 24386
@@ -67596,13 +67596,13 @@ STRING 24386
 STRING 24387
 // Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Golem Adeptenausbildung
+Golem-Adeptenausbildung
 }
 
 STRING 24388
 // Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Golem Meisterausbildung
+Golem-Meisterausbildung
 }
 
 STRING 24389
@@ -67620,13 +67620,13 @@ Increases Wächter-Golems and Fleischgolems mana capacity, mana regeneration rat
 STRING 24393
 // Units: h0BP (Royal Guard), Name (Name)
 {
-Royal Guard
+Königliche Wache
 }
 
 STRING 24394
 // Units: h0BP (Royal Guard), Tip (Tooltip - Basic)
 {
-Train Royal Guard
+Königliche Wache ausbilden
 }
 
 STRING 24395
@@ -79545,7 +79545,7 @@ STRING 34216
 STRING 34217
 // Units: o01Z (Antimagic Ward), Ubertip (Tooltip - Extended)
 {
-Prevents enemy Reveals, Far Sight, Portal, Scroll of Town Portal, Blinzeln, Massenteleportationation and Staff of Teleportation spells of enemy units in the nearby area and adds a black mask for enemy players. Can cast Stille, detects invisible units and is permanently invisible itself.|n|nOnly works if built before enemy Antimagischer Schutzzaubers in the area.
+Prevents enemy Reveals, Far Sight, Portal, Scroll of Town Portal, Blinzeln, Massenteleportationation and Stab der Teleportation spells of enemy units in the nearby area and adds a black mask for enemy players. Can cast Stille, detects invisible units and is permanently invisible itself.|n|nOnly works if built before enemy Antimagischer Schutzzaubers in the area.
 }
 
 STRING 34218
@@ -89459,7 +89459,7 @@ Build Ancient Ward
 STRING 37827
 // Units: o05E (Ancient Ward), Ubertip (Tooltip - Extended)
 {
-Prevents enemy Reveals, Far Sight, Portal, Scroll of Town Portal, Blinzeln, Massenteleportationation and Staff of Teleportation spells of enemy units in the nearby area and adds a black mask for enemy players. Can cast Stille, detects invisible units and is permanently invisible itself.|n|nOnly works if built before enemy Antimagischer Schutzzaubers in the area.
+Prevents enemy Reveals, Far Sight, Portal, Scroll of Town Portal, Blinzeln, Massenteleportationation and Stab der Teleportation spells of enemy units in the nearby area and adds a black mask for enemy players. Can cast Stille, detects invisible units and is permanently invisible itself.|n|nOnly works if built before enemy Antimagischer Schutzzaubers in the area.
 }
 
 STRING 37828
@@ -103185,7 +103185,7 @@ Hebel Brücke
 STRING 43579
 // Units: o06C (Ogre Mound), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Ogre Slaves and receive gathered resources. Can be upgraded to Advanced Oger-Hügel and then Fortified Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primary structure, used to train Ogre Slaves and receive gathered resources. Can be upgraded to Hoch entwickelter Oger-Hügel and then Befestigter Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 43580
@@ -103821,7 +103821,7 @@ Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nAlso contains th
 STRING 44008
 // Units: o07A (Draenor Merchant), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Oger-Hügel has (Oger-Hügel, Advanced Oger-Hügel, or Fortified Oger-Hügel) and which buildings you have.
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Oger-Hügel has (Oger-Hügel, Hoch entwickelter Oger-Hügel, or Befestigter Oger-Hügel) and which buildings you have.
 }
 
 STRING 44009
@@ -105235,7 +105235,7 @@ Primary healing and supporting spellcaster infused with the blood of demons. Can
 STRING 45925
 // Units: n0K3 (Pig Farm), Ubertip (Tooltip - Extended)
 {
-Produces food. Trains Teufelsebers. Can learn Slaughter Time. Contains the research Piggery.
+Produces food. Trains Teufelsebers. Can learn Slaughter Time. Contains the research Schweinezucht.
 }
 
 STRING 45926
@@ -112544,7 +112544,7 @@ Fortgeschrittene Holzfällerei
 STRING 50391
 // Units: H0UU (Fel Peon), Tip (Tooltip - Basic)
 {
-Summon Fel-Peon
+Fel-Peon beschwören
 }
 
 STRING 50392
@@ -113096,13 +113096,13 @@ Löwen-Reiter ausbilden
 STRING 50506
 // Units: n0JB (Murloc Cultist), Tip (Tooltip - Basic)
 {
-Train Murloc Kultist
+Murloc-Kultist ausbilden
 }
 
 STRING 50507
 // Units: n0JB (Murloc Cultist), Name (Name)
 {
-Murloc Kultist
+Murloc-Kultist
 }
 
 STRING 50508
@@ -114648,7 +114648,7 @@ STRING 50954
 }
 
 STRING 50955
-// Units: o09B (Chaos Vault), EditorSuffix (Name - Editor Suffix)
+// Units: o09B (Chaos-Gewölbe), EditorSuffix (Name - Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -115134,21 +115134,21 @@ Spellcaster production building. Trains Kultists, Hexenmeisters, and Elders. |nA
 }
 
 STRING 51085
-// Units: o09B (Chaos Vault), Name (Name)
+// Units: o09B (Chaos-Gewölbe), Name (Name)
 {
-Chaos Vault
+Chaos-Gewölbe
 }
 
 STRING 51086
-// Units: o09B (Chaos Vault), Tip (Tooltip - Basic)
+// Units: o09B (Chaos-Gewölbe), Tip (Tooltip - Basic)
 {
-Build Chaos Vault
+Chaos-Gewölbe errichten
 }
 
 STRING 51087
 // Units: n0KQ (Kodo Beast), Tip (Tooltip - Basic)
 {
-Train Kodo-Bestie
+Kodo-Bestie ausbilden
 }
 
 STRING 51089
@@ -115376,7 +115376,7 @@ Fel
 STRING 51132
 // Upgrades: R0GS (Berserker Upgrade), Tip (Tooltip)
 {
-Research Fel
+Fel erforschen
 }
 
 STRING 51133
@@ -115430,7 +115430,7 @@ Kriegsmaschine
 STRING 51141
 // Units: o09H (War Machine), Tip (Tooltip - Basic)
 {
-Train Kriegsmaschine
+Kriegsmaschine ausbilden
 }
 
 STRING 51142
@@ -115448,25 +115448,25 @@ Long-range siege weaponry. Effective against buildings but slow and vulnerable. 
 STRING 51144
 // Units: O09I (Fel Warlock), Name (Name)
 {
-Fel Hexenmeister
+Fel-Hexenmeister
 }
 
 STRING 51145
 // Units: O09I (Fel Warlock), Awakentip (Tooltip - Awaken)
 {
-Revive Fel Hexenmeister
+Fel-Hexenmeister wiederbeleben
 }
 
 STRING 51146
 // Units: O09I (Fel Warlock), Revivetip (Tooltip - Revive)
 {
-Revive Fel Hexenmeister
+Fel-Hexenmeister wiederbeleben
 }
 
 STRING 51147
 // Units: O09I (Fel Warlock), Tip (Tooltip - Basic)
 {
-Summon Fel Hexenmeister
+Fel-Hexenmeister beschwören
 }
 
 STRING 51148
@@ -115622,7 +115622,7 @@ Verbesserte Armbrüste
 STRING 51174
 // Upgrades: R0H3 (Improved Bows), Tip (Tooltip)
 {
-Research Verbesserte Armbrüste
+Verbesserte Armbrüste erforschen
 }
 
 STRING 51175
@@ -115640,7 +115640,7 @@ STRING 51176
 STRING 51186
 // Units: n03S (Doom Lord of Sargeras), Name (Name)
 {
-Doom Lord of Sargeras
+Unheils-Lord von Sargeras
 }
 
 STRING 51260
@@ -115658,31 +115658,31 @@ STRING 51297
 STRING 51315
 // Units: n03S (Doom Lord of Sargeras), Tip (Tooltip - Basic)
 {
-Summon Doom Lord of Sargeras
+Unheils-Lord von Sargeras beschwören
 }
 
 STRING 51317
 // Units: N0LG (Doom Lord), Name (Name)
 {
-Doom Lord
+Unheils-Lord
 }
 
 STRING 51318
 // Units: N0LG (Doom Lord), Awakentip (Tooltip - Awaken)
 {
-Revive Doom Lord
+Unheils-Lord wiederbeleben
 }
 
 STRING 51319
 // Units: N0LG (Doom Lord), Revivetip (Tooltip - Revive)
 {
-Revive Doom Lord
+Unheils-Lord wiederbeleben
 }
 
 STRING 51320
 // Units: N0LG (Doom Lord), Tip (Tooltip - Basic)
 {
-Summon Doom Lord
+Unheils-Lord beschwören
 }
 
 STRING 51321
@@ -116138,37 +116138,37 @@ Heilens <A1WR,DataA1> hit points of a target friendly unit for <A1WR,Dur1> Sekun
 STRING 51444
 // Upgrades: R0GS (Berserker Upgrade), Name (Name)
 {
-Improved Fel
+Verbessertes Fel
 }
 
 STRING 51445
 // Upgrades: R0GS (Berserker Upgrade), Name (Name)
 {
-Advanced Fel
+Hoch entwickeltes Fel
 }
 
 STRING 51446
 // Upgrades: R0GS (Berserker Upgrade), Tip (Tooltip)
 {
-Research Improved Fel
+Verbessertes Fel erforschen
 }
 
 STRING 51447
 // Upgrades: R0GS (Berserker Upgrade), Tip (Tooltip)
 {
-Research Advanced Fel
+Hoch entwickeltes Fel erforschen
 }
 
 STRING 51448
 // Upgrades: R0GS (Berserker Upgrade), Ubertip (Tooltip - Extended)
 {
-Increases the duration of the Fel ability.
+Erhöht die Dauer der Fel-Fähigkeit.
 }
 
 STRING 51449
 // Upgrades: R0GS (Berserker Upgrade), Ubertip (Tooltip - Extended)
 {
-Increases the duration of the Fel ability.
+Erhöht die Dauer der Fel-Fähigkeit.
 }
 
 STRING 51450
@@ -116186,13 +116186,13 @@ STRING 51452
 STRING 51453
 // Upgrades: R0H5 (Chaos), Name (Name)
 {
-Piggery
+Schweinezucht
 }
 
 STRING 51454
 // Upgrades: R0H5 (Chaos), Tip (Tooltip)
 {
-Research Piggery
+Schweinezucht erforschen
 }
 
 STRING 51455
@@ -116222,49 +116222,49 @@ Allows Pig Farms to train Teufelsebers and to slaughter them for more Meat.
 STRING 51463
 // Units: O09O (Raider), Tip (Tooltip - Basic)
 {
-Summon Räuber
+Räuber beschwören
 }
 
 STRING 51464
 // Units: O09O (Raider), Revivetip (Tooltip - Revive)
 {
-Revive Räuber
+Räuber wiederbeleben
 }
 
 STRING 51466
 // Units: n0KV (Fel Boar), Tip (Tooltip - Basic)
 {
-Train Teufelseber
+Teufelseber ausbilden
 }
 
 STRING 51467
 // Units: n0KV (Fel Boar), Ubertip (Tooltip - Extended)
 {
-Trains a Teufelseber to be slaughtered for you.
+Bildet Teufelseber aus, um für Sie geschlachtet zu werden.
 }
 
 STRING 51506
 // Upgrades: R0H5 (Chaos), Tip (Tooltip)
 {
-Research Improved Piggery
+Verbesserte Schweinezucht erforschen
 }
 
 STRING 51507
 // Upgrades: R0H5 (Chaos), Tip (Tooltip)
 {
-Research Advanced Piggery
+Hoch entwickelte Schweinezucht erforschen
 }
 
 STRING 51508
 // Upgrades: R0H5 (Chaos), Name (Name)
 {
-Improved Piggery
+Verbesserte Schweinezucht
 }
 
 STRING 51509
 // Upgrades: R0H5 (Chaos), Name (Name)
 {
-Advanced Piggery
+Hoch entwickelte Schweinezucht
 }
 
 STRING 51510
@@ -116288,25 +116288,25 @@ Laderaum (Pig Farm)
 STRING 51549
 // Units: O09P (Fel Raider), Name (Name)
 {
-Fel Räuber
+Fel-Räuber
 }
 
 STRING 51550
 // Units: O09P (Fel Raider), Awakentip (Tooltip - Awaken)
 {
-Revive Fel Räuber
+Fel-Räuber wiederbeleben
 }
 
 STRING 51551
 // Units: O09P (Fel Raider), Tip (Tooltip - Basic)
 {
-Summon Fel Räuber
+Fel-Räuber beschwören
 }
 
 STRING 51552
 // Units: O09P (Fel Raider), Revivetip (Tooltip - Revive)
 {
-Revive Fel Räuber
+Fel-Räuber wiederbeleben
 }
 
 STRING 51554
@@ -119723,13 +119723,13 @@ STRING 54908
 }
 
 STRING 54909
-// Abilities: A0DE (Staff of Teleportation), EditorSuffix (Editor Suffix)
+// Abilities: A0DE (Stab der Teleportation), EditorSuffix (Editor Suffix)
 {
 (Clan Banner)
 }
 
 STRING 54911
-// Abilities: A0DE (Staff of Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DE (Stab der Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Teleports to an allied unit from the same clan.
 }
