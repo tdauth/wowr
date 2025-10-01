@@ -2924,7 +2924,7 @@ Diebesgilden
 }
 
 STRING 494
-// Units: h01V (Freelancer Laboratory), Hotkey (Hotkey)
+// Units: h01V (Freiberufler-Labor), Hotkey (Hotkey)
 {
 Y
 }
@@ -15823,7 +15823,7 @@ S
 }
 
 STRING 3002
-// Units: h01S (Freelancer Shop), Hotkey (Hotkey)
+// Units: h01S (Freiberufler-Laden), Hotkey (Hotkey)
 {
 S
 }
@@ -19613,7 +19613,7 @@ The Sorcerer creates a Wand of Illusion.
 STRING 3849
 // Units: n0MM (Mercenary Camp Emerald Dream), Name (Name)
 {
-Söldnerlager Emerald Dream
+Söldnerlager Smaragdgrüner Traum
 }
 
 STRING 3850
@@ -19673,7 +19673,7 @@ STRING 3858
 STRING 3859
 // Units: n09T (Fire Revenant), Tip (Tooltip - Basic)
 {
-Train Fire Geist
+Feuergeist ausbilden
 }
 
 STRING 3860
@@ -22189,7 +22189,7 @@ Increases the amount of lumber that Junger Furbolgs can carry by 10.
 STRING 4500
 // Units: o03X (Dungeon Spikes), Tip (Tooltip - Basic)
 {
-Build Verlies Spikes
+Verlies-Stacheln errichten
 }
 
 STRING 4502
@@ -22958,13 +22958,13 @@ Heavy melee unit that casts Tote erwecken, Todesmantel, and Animate Dead. |n|n|c
 STRING 4679
 // Units: u01O (Dungeon Shipyard), Name (Name)
 {
-Verlies Shipyard
+Verlies-Hafen
 }
 
 STRING 4680
 // Units: u01O (Dungeon Shipyard), Tip (Tooltip - Basic)
 {
-Build Verlies Shipyard
+Verlies-Hafen errichten
 }
 
 STRING 4681
@@ -23012,19 +23012,19 @@ STRING 4687
 STRING 4688
 // Upgrades: R07K (Burning Oil), Name (Name)
 {
-Throne
+Thron
 }
 
 STRING 4689
 // Upgrades: R07K (Burning Oil), Tip (Tooltip)
 {
-Research Throne
+Thron erforschen
 }
 
 STRING 4690
 // Upgrades: R07K (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Erlaubt Bürgern den Bau a Throne which trains Verlies Lords.
+Erlaubt Bürgern den Bau eines Throns, der Verlies-Lords ausbildet.
 }
 
 STRING 4691
@@ -23712,7 +23712,7 @@ STRING 4809
 STRING 4810
 // Upgrades: R07M (Necromancer Adept Training,Necromancer Master Training), Name (Name)
 {
-Fire Geist Adeptenausbildung
+Feuergeist-Adeptenausbildung
 }
 
 STRING 4811
@@ -23724,31 +23724,31 @@ Helden
 STRING 4812
 // Upgrades: R07M (Necromancer Adept Training,Necromancer Master Training), Name (Name)
 {
-Fire Geist Meisterausbildung
+Feuergeist-Meisterausbildung
 }
 
 STRING 4813
 // Upgrades: R07M (Necromancer Adept Training,Necromancer Master Training), Tip (Tooltip)
 {
-Fire Geist Adeptenausbildung
+Feuergeist-Adeptenausbildung
 }
 
 STRING 4814
 // Upgrades: R07M (Necromancer Adept Training,Necromancer Master Training), Tip (Tooltip)
 {
-Fire Geist Meisterausbildung
+Feuergeist-Meisterausbildung
 }
 
 STRING 4815
 // Upgrades: R07M (Necromancer Adept Training,Necromancer Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Fire Geists' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerbrand.
+Increases Feuergeists' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerbrand.
 }
 
 STRING 4816
 // Upgrades: R07M (Necromancer Adept Training,Necromancer Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Fire Geists' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerblitz.
+Increases Feuergeists' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerblitz.
 }
 
 STRING 4817
@@ -23874,7 +23874,7 @@ A tasty mushroom.
 STRING 4839
 // Abilities: A0SN (Skeleton Bones), Name (Name)
 {
-Skeleton Bones
+Skelettknochen
 }
 
 STRING 4840
@@ -25100,7 +25100,7 @@ Kohlenpfanne errichten
 STRING 5095
 // Units: o03P (Brazier), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Ghosts, Fire Geists, and Heretics. |nAlso contains spell upgrades for Ghosts, Fire Geists, and Heretics.
+Spellcaster production building. Trains Ghosts, Feuergeists, and Heretics. |nAlso contains spell upgrades for Ghosts, Feuergeists, and Heretics.
 }
 
 STRING 5096
@@ -43763,31 +43763,31 @@ Purchase Tiny Beobachtungsturm
 STRING 10180
 // Items: I0P3 (Tiny Keep), Description (Description)
 {
-Creates a Keep.
+Errichtet eine Burg.
 }
 
 STRING 10181
 // Items: I0P3 (Tiny Keep), Name (Name)
 {
-Tiny Keep
+Winzige Burg
 }
 
 STRING 10182
 // Items: I0P3 (Tiny Keep), Tip (Tooltip - Basic)
 {
-Purchase Tiny Keep
+Winzige Burg erwerben
 }
 
 STRING 10183
 // Items: I0P3 (Tiny Keep), Ubertip (Tooltip - Extended)
 {
-Creates a Keep at a target location.
+Errichtet am Zielort eine Burg.
 }
 
 STRING 10184
 // Items: I0P5 (Tiny House), Description (Description)
 {
-Creates a House.
+Errichtet ein Haus.
 }
 
 STRING 10185
@@ -43805,7 +43805,7 @@ Winziges Haus erwerben
 STRING 10187
 // Items: I0P5 (Tiny House), Ubertip (Tooltip - Extended)
 {
-Creates a House at a target location.
+Errichtet am Zielort ein Haus.
 }
 
 STRING 10188
@@ -48445,7 +48445,7 @@ Spellcaster production building. Trains Goblin-Magier, Goblin-Zauberin and Gobli
 }
 
 STRING 11307
-// Units: h01S (Freelancer Shop), Ubertip (Tooltip - Extended)
+// Units: h01S (Freiberufler-Laden), Ubertip (Tooltip - Extended)
 {
 Creates a shop with purchasable items.
 }
@@ -48718,7 +48718,7 @@ STRING 11377
 STRING 11378
 // Units: o023 (Goblin Fortress), Name (Name)
 {
-Goblin Fortress
+Goblin-Festung
 }
 
 STRING 11379
@@ -48784,7 +48784,7 @@ Ink Bottle
 STRING 11390
 // Doodads: D01I (Basement Door), Name (Name)
 {
-Basement Door
+Kellertür
 }
 
 STRING 11391
@@ -48802,7 +48802,7 @@ Bucket Wood
 STRING 11393
 // Doodads: D01L (Candle), Name (Name)
 {
-Candle
+Kerze
 }
 
 STRING 11394
@@ -48814,7 +48814,7 @@ Fackel Mauer
 STRING 11395
 // Doodads: D01N (Wine Bottle), Name (Name)
 {
-Wine Bottle
+Weinflasche
 }
 
 STRING 11408
@@ -50888,7 +50888,7 @@ Shatter the crystal on the Frozen Throne.
 STRING 12025
 // Units: n080 (Troll Arena), Tip (Tooltip - Basic)
 {
-Build Troll Arena
+Troll-Arena errichten
 }
 
 STRING 12026
@@ -50900,7 +50900,7 @@ Criminal ruthless humans known for kidnapping enemies and stealing goods. Includ
 STRING 12027
 // Abilities: A029 (Fear), Tip (Tooltip - Normal)
 {
-Fear
+Furcht
 }
 
 STRING 12028
@@ -50924,7 +50924,7 @@ Buy Property Capital City
 STRING 12031
 // Units: n0O4 (Capital City), Name (Name)
 {
-Capital City
+Hauptstadt
 }
 
 STRING 12032
@@ -50971,23 +50971,23 @@ Captain
 
 STRING 12039
 {
-Centaur Khans (7)
+Zentauren-Khans (7)
 }
 
 STRING 12040
 {
-Crusade
-Killed Undead (5):
+Kreuzzug
+Getötete Untote (5):
 }
 
 STRING 12041
 {
-Paladins slain (5)
+Getötete Paladine (5)
 }
 
 STRING 12042
 {
-Charmed Draenei (5)
+Bezauberte Draenei (5)
 }
 
 STRING 12043
@@ -52964,7 +52964,7 @@ Elfenhof
 }
 
 STRING 12917
-// Units: h01S (Freelancer Shop), EditorSuffix (Name - Editor Suffix)
+// Units: h01S (Freiberufler-Laden), EditorSuffix (Name - Editor Suffix)
 {
 (Freelancers)
 }
@@ -53791,7 +53791,7 @@ Rack Armor
 }
 
 STRING 14108
-// Units: h01V (Freelancer Laboratory), EditorSuffix (Name - Editor Suffix)
+// Units: h01V (Freiberufler-Labor), EditorSuffix (Name - Editor Suffix)
 {
 (Freelancers)
 }
@@ -55841,13 +55841,13 @@ STRING 15577
 STRING 15578
 // Abilities: A0IG (Hostile Devotion Aura), Name (Name)
 {
-Hostile Hingabe-Aura
+Feindliche Hingabe-Aura
 }
 
 STRING 15581
 // Abilities: A0S0 (Turrets), Name (Name)
 {
-Turrets
+Türme
 }
 
 STRING 15582
@@ -55919,7 +55919,7 @@ STRING 15790
 STRING 15791
 // Abilities: A0IH (Hostile Unholy Aura), Name (Name)
 {
-Hostile Unheilige Aura
+Feindliche Unheilige Aura
 }
 
 STRING 15792
@@ -62030,9 +62030,9 @@ Advanced Archeology
 }
 
 STRING 19887
-// Units: h01S (Freelancer Shop), Name (Name)
+// Units: h01S (Freiberufler-Laden), Name (Name)
 {
-Freelancer Shop
+Freiberufler-Laden
 }
 
 STRING 19891
@@ -65170,9 +65170,9 @@ Pandarian Big Wooden Brücke
 }
 
 STRING 22312
-// Units: h01S (Freelancer Shop), Tip (Tooltip - Basic)
+// Units: h01S (Freiberufler-Laden), Tip (Tooltip - Basic)
 {
-Build Freelancer Shop
+Build Freiberufler-Laden
 }
 
 STRING 22313
@@ -67330,7 +67330,7 @@ STRING 23710
 }
 
 STRING 23731
-// Units: h0PH (Stormcrow Knight), Ubertip (Tooltip - Extended)
+// Units: h0PH (Sturmkrähen-Ritter), Ubertip (Tooltip - Extended)
 {
 Powerful flying creature, mounted by a Gilneas spear-thrower. Can learn Animal War Training, and the Schleichendes Gift ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -74601,7 +74601,7 @@ Increases Druids' mana capacity, mana regeneration rate, hit points, and gives t
 }
 
 STRING 31096
-// Units: h0PH (Stormcrow Knight), EditorSuffix (Name - Editor Suffix)
+// Units: h0PH (Sturmkrähen-Ritter), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
 }
@@ -74631,7 +74631,7 @@ Altar des Mondes errichten
 }
 
 STRING 31150
-// Units: o05J (Mindless Worgen), EditorSuffix (Name - Editor Suffix)
+// Units: o05J (Hirnloser Worgen), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
 }
@@ -78649,9 +78649,9 @@ Supporting unit without attack who has the Befehls-Aura ability.
 }
 
 STRING 33920
-// Units: h0PH (Stormcrow Knight), Name (Name)
+// Units: h0PH (Sturmkrähen-Ritter), Name (Name)
 {
-Stormcrow Knight
+Sturmkrähen-Ritter
 }
 
 STRING 33921
@@ -81691,7 +81691,7 @@ Silberbarren
 }
 
 STRING 35331
-// Units: h0IP (Runecarver), Ubertip (Tooltip - Extended)
+// Units: h0IP (Runenmetz), Ubertip (Tooltip - Extended)
 {
 Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -83082,7 +83082,7 @@ Creates a Keep at a target location.
 STRING 35837
 // Items: I0L8 (Tiny Wall), Name (Name)
 {
-Tiny Mauer
+Winzige Mauer
 }
 
 STRING 35838
@@ -86201,37 +86201,37 @@ L
 STRING 36517
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Name (Name)
 {
-Fel Armor
+Fel-Rüstung
 }
 
 STRING 36518
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Name (Name)
 {
-Improved Fel Armor
+Improved Fel-Rüstung
 }
 
 STRING 36519
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Name (Name)
 {
-Advanced Fel Armor
+Advanced Fel-Rüstung
 }
 
 STRING 36520
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Tip (Tooltip)
 {
-Ausbau zum Fel Armor
+Ausbau zum Fel-Rüstung
 }
 
 STRING 36521
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Tip (Tooltip)
 {
-Ausbau zum Improved Fel Armor
+Ausbau zum Improved Fel-Rüstung
 }
 
 STRING 36522
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Tip (Tooltip)
 {
-Ausbau zum Advanced Fel Armor
+Ausbau zum Advanced Fel-Rüstung
 }
 
 STRING 36554
@@ -86307,159 +86307,159 @@ Y
 }
 
 STRING 37075
-// Units: h01V (Freelancer Laboratory), Name (Name)
+// Units: h01V (Freiberufler-Labor), Name (Name)
 {
-Freelancer Laboratory
+Freiberufler-Labor
 }
 
 STRING 37076
-// Units: h01V (Freelancer Laboratory), Tip (Tooltip - Basic)
+// Units: h01V (Freiberufler-Labor), Tip (Tooltip - Basic)
 {
-Build Freelancer Laboratory
+Freiberufler-Labor errichten
 }
 
 STRING 37077
-// Units: h01V (Freelancer Laboratory), Ubertip (Tooltip - Extended)
+// Units: h01V (Freiberufler-Labor), Ubertip (Tooltip - Extended)
 {
 Creates a laboratory with researches. Can be used to return gold and lumber.
 }
 
 STRING 37078
-// Items: I0NB (Tiny Freelancer Tower), Name (Name)
+// Items: I0NB (Tiny Freiberufler-Turm), Name (Name)
 {
-Tiny Freelancer Tower
+Winziger Freiberufler-Turm
 }
 
 STRING 37079
-// Items: I0NB (Tiny Freelancer Tower), Tip (Tooltip - Basic)
+// Items: I0NB (Tiny Freiberufler-Turm), Tip (Tooltip - Basic)
 {
-Purchase Tiny Freelancer Tower
+Winzigen Freiberufler-Turm erwerben
 }
 
 STRING 37080
-// Items: I0NB (Tiny Freelancer Tower), Description (Description)
+// Items: I0NB (Tiny Freiberufler-Turm), Description (Description)
 {
-Creates a Freelancer Tower.
+Creates a Freiberufler-Turm.
 }
 
 STRING 37081
-// Items: I0NB (Tiny Freelancer Tower), Ubertip (Tooltip - Extended)
+// Items: I0NB (Tiny Freiberufler-Turm), Ubertip (Tooltip - Extended)
 {
-Creates a Freelancer Tower at a target location.
+Creates a Freiberufler-Turm at a target location.
 }
 
 STRING 37082
-// Items: I0NC (Tiny Advanced Freelancer Tower), Name (Name)
+// Items: I0NC (Tiny Advanced Freiberufler-Turm), Name (Name)
 {
-Tiny Advanced Freelancer Tower
+Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37083
-// Items: I0NC (Tiny Advanced Freelancer Tower), Tip (Tooltip - Basic)
+// Items: I0NC (Tiny Advanced Freiberufler-Turm), Tip (Tooltip - Basic)
 {
-Purchase Tiny Advanced Freelancer Tower
+Purchase Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37084
-// Items: I0NC (Tiny Advanced Freelancer Tower), Description (Description)
+// Items: I0NC (Tiny Advanced Freiberufler-Turm), Description (Description)
 {
-Creates an Advanced Freelancer Tower.
+Creates an Advanced Freiberufler-Turm.
 }
 
 STRING 37085
-// Items: I0NC (Tiny Advanced Freelancer Tower), Ubertip (Tooltip - Extended)
+// Items: I0NC (Tiny Advanced Freiberufler-Turm), Ubertip (Tooltip - Extended)
 {
-Creates an Advanced Freelancer Tower at a target location.
+Creates an Advanced Freiberufler-Turm at a target location.
 }
 
 STRING 37086
-// Items: I0ND (Tiny Freelancer Shop), Name (Name)
+// Items: I0ND (Tiny Freiberufler-Laden), Name (Name)
 {
-Tiny Freelancer Shop
+Winziger Freiberufler-Laden
 }
 
 STRING 37087
-// Items: I0ND (Tiny Freelancer Shop), Tip (Tooltip - Basic)
+// Items: I0ND (Tiny Freiberufler-Laden), Tip (Tooltip - Basic)
 {
-Purchase Tiny Advanced Freelancer Tower
+Purchase Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37088
-// Items: I0ND (Tiny Freelancer Shop), Description (Description)
+// Items: I0ND (Tiny Freiberufler-Laden), Description (Description)
 {
-Creates a Freelancer Shop.
+Errichtet einen Freiberufler-Laden.
 }
 
 STRING 37089
-// Items: I0ND (Tiny Freelancer Shop), Ubertip (Tooltip - Extended)
+// Items: I0ND (Tiny Freiberufler-Laden), Ubertip (Tooltip - Extended)
 {
-Creates a Freelancer Shop at a target location.
+Errichtet am Zielort einen Freiberufler-Laden.
 }
 
 STRING 37090
 // Items: I0NE (Tiny Freelancer Mercenary Camp), Name (Name)
 {
-Tiny Freiberufler-Söldnerlager
+Winziges Freiberufler-Söldnerlager
 }
 
 STRING 37091
 // Items: I0NE (Tiny Freelancer Mercenary Camp), Tip (Tooltip - Basic)
 {
-Purchase Tiny Freiberufler-Söldnerlager
+Winziges Freiberufler-Söldnerlager erwerben
 }
 
 STRING 37092
 // Items: I0NE (Tiny Freelancer Mercenary Camp), Description (Description)
 {
-Creates a Freiberufler-Söldnerlager.
+Errichtet ein Freiberufler-Söldnerlager.
 }
 
 STRING 37093
 // Items: I0NE (Tiny Freelancer Mercenary Camp), Ubertip (Tooltip - Extended)
 {
-Creates a Freiberufler-Söldnerlager at a target location.
+Errichtet am Zielort ein Freiberufler-Söldnerlager.
 }
 
 STRING 37094
-// Items: I0NF (Tiny Freelancer Laboratory), Name (Name)
+// Items: I0NF (Tiny Freiberufler-Labor), Name (Name)
 {
-Tiny Freelancer Laboratory
+Tiny Freiberufler-Labor
 }
 
 STRING 37095
-// Items: I0NF (Tiny Freelancer Laboratory), Tip (Tooltip - Basic)
+// Items: I0NF (Tiny Freiberufler-Labor), Tip (Tooltip - Basic)
 {
-Purchase Tiny Freelancer Laboratory
+Purchase Tiny Freiberufler-Labor
 }
 
 STRING 37096
-// Items: I0NF (Tiny Freelancer Laboratory), Description (Description)
+// Items: I0NF (Tiny Freiberufler-Labor), Description (Description)
 {
-Creates a Freelancer Laboratory.
+Creates a Freiberufler-Labor.
 }
 
 STRING 37097
-// Items: I0NF (Tiny Freelancer Laboratory), Ubertip (Tooltip - Extended)
+// Items: I0NF (Tiny Freiberufler-Labor), Ubertip (Tooltip - Extended)
 {
-Creates a Freelancer Laboratory at a target location.
+Creates a Freiberufler-Labor at a target location.
 }
 
 STRING 37098
-// Abilities: A1BY (Build Tiny Freelancer Tower), Name (Name)
+// Abilities: A1BY (Build Tiny Freiberufler-Turm), Name (Name)
 {
-Build Tiny Freelancer Tower
+Build Tiny Freiberufler-Turm
 }
 
 STRING 37099
-// Abilities: A1BZ (Build Tiny Advanced Freelancer Tower), Name (Name)
+// Abilities: A1BZ (Build Tiny Advanced Freiberufler-Turm), Name (Name)
 {
-Build Tiny Advanced Freelancer Tower
+Build Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37100
-// Abilities: A1C0 (Build Tiny Freelancer Laboratory), Name (Name)
+// Abilities: A1C0 (Build Tiny Freiberufler-Labor), Name (Name)
 {
-Build Tiny Freelancer Laboratory
+Build Tiny Freiberufler-Labor
 }
 
 STRING 37101
@@ -86469,9 +86469,9 @@ Build Tiny Freiberufler-Söldnerlager
 }
 
 STRING 37102
-// Abilities: A1C2 (Build Tiny Freelancer Shop), Name (Name)
+// Abilities: A1C2 (Build Tiny Freiberufler-Laden), Name (Name)
 {
-Build Tiny Freelancer Shop
+Build Tiny Freiberufler-Laden
 }
 
 STRING 37104
@@ -91019,7 +91019,7 @@ Boat construction facility. Produces Human Transportschiffs, Rakkar-Schiffs, and
 STRING 38611
 // Units: h0P4 (Val'kyr Temple), Ubertip (Tooltip - Extended)
 {
-Trains Goldene Val'kyrs, Dunkle Val'kyrs, Untoter Vrykuls, and Runecarvers.
+Trains Goldene Val'kyrs, Dunkle Val'kyrs, Untoter Vrykuls, and Runenmetzs.
 }
 
 STRING 38626
@@ -91137,7 +91137,7 @@ Heavy warrior. Can cast Stille, Feuerblitz, Schmetter-Angriff, Hieb, Festhaut an
 }
 
 STRING 38703
-// Units: h0IP (Runecarver), EditorSuffix (Name - Editor Suffix)
+// Units: h0IP (Runenmetz), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -91203,15 +91203,15 @@ Supporting spellcaster. Can initially cast Heilen, which increases the life of w
 }
 
 STRING 38732
-// Units: h0IP (Runecarver), Name (Name)
+// Units: h0IP (Runenmetz), Name (Name)
 {
-Runecarver
+Runenmetz
 }
 
 STRING 38733
-// Units: h0IP (Runecarver), Tip (Tooltip - Basic)
+// Units: h0IP (Runenmetz), Tip (Tooltip - Basic)
 {
-Train Runecarver
+Train Runenmetz
 }
 
 STRING 38734
@@ -91745,37 +91745,37 @@ STRING 38858
 STRING 38859
 // Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
 {
-Giants
+Riesen
 }
 
 STRING 38860
 // Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
 {
-Improved Giants
+Verbesserte Riesen
 }
 
 STRING 38861
 // Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
 {
-Advanced Giants
+Hochentwickelte Riesen
 }
 
 STRING 38862
 // Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
 {
-Research Giants
+Riesen erforschen
 }
 
 STRING 38863
 // Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
 {
-Research Improved Giants
+Verbesserte Riesen erforschen
 }
 
 STRING 38864
 // Upgrades: R0BR (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
 {
-Research Advanced Giants
+Hoch entwickelte Riesen erforschen
 }
 
 STRING 38868
@@ -91799,25 +91799,25 @@ Further increases the hit point regeneration rate and maximum hit points of Vryk
 STRING 38871
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Runecarver Adeptenausbildung
+Runenmetz-Adeptenausbildung
 }
 
 STRING 38872
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Runecarver Meisterausbildung
+Runenmetz-Meisterausbildung
 }
 
 STRING 38873
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Runecarver Adeptenausbildung
+Runenmetz-Adeptenausbildung
 }
 
 STRING 38874
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Runecarver Meisterausbildung
+Runenmetz-Meisterausbildung
 }
 
 STRING 38875
@@ -91829,13 +91829,13 @@ STRING 38875
 STRING 38876
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Runecarvers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Increases Runenmetzs' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
 }
 
 STRING 38877
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Runecarvers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
+Increases Runenmetzs' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
 }
 
 STRING 38878
@@ -91895,7 +91895,7 @@ STRING 38887
 STRING 38888
 // Abilities: A1ES (Change Time of Day), EditorSuffix (Editor Suffix)
 {
-(Day)
+(Tag)
 }
 
 STRING 38889
@@ -91949,19 +91949,19 @@ STRING 38897
 STRING 38898
 // Units: H0PE (Deathclaw), Tip (Tooltip - Basic)
 {
-Summon Todeskralle
+Todeskralle beschwören
 }
 
 STRING 38899
 // Units: H0PE (Deathclaw), Awakentip (Tooltip - Awaken)
 {
-Revive Todeskralle
+Todeskralle wiederbeleben
 }
 
 STRING 38900
 // Units: H0PE (Deathclaw), Revivetip (Tooltip - Revive)
 {
-Revive Todeskralle
+Todeskralle wiederbeleben
 }
 
 STRING 38901
@@ -92001,21 +92001,21 @@ Transforms the Worgen back into his normal form, making it slower.
 }
 
 STRING 38907
-// Units: h0PH (Stormcrow Knight), Tip (Tooltip - Basic)
+// Units: h0PH (Sturmkrähen-Ritter), Tip (Tooltip - Basic)
 {
-Train Stormcrow Knight
+Sturmkrähen-Ritter ausbilden
 }
 
 STRING 38908
-// Units: o05J (Mindless Worgen), Name (Name)
+// Units: o05J (Hirnloser Worgen), Name (Name)
 {
-Mindless Worgen
+Hirnloser Worgen
 }
 
 STRING 38909
-// Units: o05J (Mindless Worgen), Tip (Tooltip - Basic)
+// Units: o05J (Hirnloser Worgen), Tip (Tooltip - Basic)
 {
-Train Mindless Worgen
+Hirnlosen Worgen ausbilden
 }
 
 STRING 38910
@@ -92591,7 +92591,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains the upgrade Imp
 STRING 39708
 // Units: h0J8 (Manor), Ubertip (Tooltip - Extended)
 {
-Trains Mindless Worgen, and Stormcrow Knights. |nAlso contains the Improved Kritischer Schlag and Schleichendes Gift upgrades.
+Trains Hirnloser Worgen, and Sturmkrähen-Ritters. |nAlso contains the Improved Kritischer Schlag and Schleichendes Gift upgrades.
 }
 
 STRING 39709
@@ -92819,7 +92819,7 @@ STRING 39775
 STRING 39776
 // Upgrades: R0BV (Cloud), Ubertip (Tooltip - Extended)
 {
-Provides Stormcrow Knights and Mantikors with the Schleichendes Gift ability, which damages hit enemy targets over time.
+Provides Sturmkrähen-Ritters and Mantikors with the Schleichendes Gift ability, which damages hit enemy targets over time.
 }
 
 STRING 39777
@@ -92961,9 +92961,9 @@ Produces Gilneas Gunships, Mantikors, and Bannerträgers. |nAlso contains the Ra
 }
 
 STRING 39801
-// Units: o05J (Mindless Worgen), Ubertip (Tooltip - Extended)
+// Units: o05J (Hirnloser Worgen), Ubertip (Tooltip - Extended)
 {
-Mighty warrior. Has Kritischer Schlag, which gives Mindless Worgen a chance of dealing critical damage. Can gain the Improved Kritischer Schlag upgrade. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Mighty warrior. Has Kritischer Schlag, which gives Hirnloser Worgen a chance of dealing critical damage. Can gain the Improved Kritischer Schlag upgrade. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 39802
@@ -93299,25 +93299,25 @@ STRING 39909
 STRING 39910
 // Items: I0P6 (Tiny Lumber Mill), Description (Description)
 {
-Creates a Lumber Mill.
+Errichtet ein Sägewerk.
 }
 
 STRING 39911
 // Items: I0P6 (Tiny Lumber Mill), Name (Name)
 {
-Tiny Lumber Mill
+Winziges Sägewerk
 }
 
 STRING 39912
 // Items: I0P6 (Tiny Lumber Mill), Tip (Tooltip - Basic)
 {
-Purchase Tiny Lumber Mill
+Winziges Sägewerk erwerben
 }
 
 STRING 39913
 // Items: I0P6 (Tiny Lumber Mill), Ubertip (Tooltip - Extended)
 {
-Creates a Lumber Mill at a target location.
+Errichtet am Zielort ein Sägewerk.
 }
 
 STRING 39914
@@ -93347,73 +93347,73 @@ Errichtet am Zielort eine Schmiede.
 STRING 39918
 // Items: I0P8 (Tiny Altar of Moon), Description (Description)
 {
-Creates an Altar des Mondes.
+Errichtet einen Altar des Mondes.
 }
 
 STRING 39919
 // Items: I0P8 (Tiny Altar of Moon), Name (Name)
 {
-Tiny Altar des Mondes
+Winziger Altar des Mondes
 }
 
 STRING 39920
 // Items: I0P8 (Tiny Altar of Moon), Tip (Tooltip - Basic)
 {
-Purchase Tiny Altar des Mondes
+Winziger Altar des Mondes erwerben
 }
 
 STRING 39921
 // Items: I0P8 (Tiny Altar of Moon), Ubertip (Tooltip - Extended)
 {
-Creates an Altar des Mondes at a target location.
+Errichtet am Zielort einen Altar des Mondes.
 }
 
 STRING 39925
 // Items: I0P9 (Tiny Trade House), Description (Description)
 {
-Creates a Handelshaus.
+Errichtet ein Handelshaus.
 }
 
 STRING 39926
 // Items: I0P9 (Tiny Trade House), Name (Name)
 {
-Tiny Handelshaus
+Winziges Handelshaus
 }
 
 STRING 39927
 // Items: I0P9 (Tiny Trade House), Tip (Tooltip - Basic)
 {
-Purchase Tiny Handelshaus
+Winziges Handelshaus erwerben
 }
 
 STRING 39928
 // Items: I0P9 (Tiny Trade House), Ubertip (Tooltip - Extended)
 {
-Creates a Handelshaus at a target location.
+Errichtet am Zielort ein Handelshaus.
 }
 
 STRING 39929
 // Items: I0PA (Tiny Manor), Description (Description)
 {
-Creates a Manor.
+Errichtet ein Herrenhaus.
 }
 
 STRING 39930
 // Items: I0PA (Tiny Manor), Name (Name)
 {
-Tiny Manor
+Winziges Herrenhaus
 }
 
 STRING 39931
 // Items: I0PA (Tiny Manor), Tip (Tooltip - Basic)
 {
-Purchase Tiny Manor
+Winziges Herrenhaus erwerben
 }
 
 STRING 39932
 // Items: I0PA (Tiny Manor), Ubertip (Tooltip - Extended)
 {
-Creates a Manor at a target location.
+Errichtet am Zielort ein Herrenhaus.
 }
 
 STRING 39933
@@ -93671,55 +93671,55 @@ Creates a Worgen Shipyard at a target location.
 STRING 39975
 // Items: I0PJ (Tiny Worgen Housing), Name (Name)
 {
-Tiny Worgen Housing
+Winzige Worgen-Unterkunft
 }
 
 STRING 39976
 // Items: I0PJ (Tiny Worgen Housing), Description (Description)
 {
-Creates a Worgen Housing.
+Errichtet eine Worgen-Unterkunft.
 }
 
 STRING 39977
 // Items: I0PJ (Tiny Worgen Housing), Tip (Tooltip - Basic)
 {
-Purchase Tiny Worgen Housing
+Winzige Worgen-Unterkunft erwerben
 }
 
 STRING 39978
 // Items: I0PJ (Tiny Worgen Housing), Ubertip (Tooltip - Extended)
 {
-Creates a Worgen Housing at a target location.
+Errichtet am Zielort eine Worgen-Unterkunft.
 }
 
 STRING 39979
 // Items: I0PK (Tiny Wizard Tower), Name (Name)
 {
-Tiny Zaubererturm
+Winziger Zaubererturm
 }
 
 STRING 39980
 // Items: I0PK (Tiny Wizard Tower), Description (Description)
 {
-Creates a Zaubererturm.
+Errichtet einen Zaubererturm.
 }
 
 STRING 39981
 // Items: I0PK (Tiny Wizard Tower), Tip (Tooltip - Basic)
 {
-Purchase Tiny Zaubererturm
+Winzigen Zaubererturm erwerben
 }
 
 STRING 39982
 // Items: I0PK (Tiny Wizard Tower), Ubertip (Tooltip - Extended)
 {
-Creates a Zaubererturm at a target location.
+Errichtet am Zielort einen Zaubererturm.
 }
 
 STRING 39983
 // Items: I0PL (Tiny Greymane Wall), Name (Name)
 {
-Tiny Graumähnenmauer
+Winzige Graumähnenmauer
 }
 
 STRING 39984
@@ -118652,7 +118652,7 @@ Improved Kritischer Schlag
 STRING 54022
 // Upgrades: R0BU (Pulverize Damage Increase), Ubertip (Tooltip - Extended)
 {
-Upgrades the fighting style of Mindless Worgen, improving their Kritischer Schlag ability, giving it a higher chance to multiply their damage on hits with a higher factor.
+Upgrades the fighting style of Hirnloser Worgen, improving their Kritischer Schlag ability, giving it a higher chance to multiply their damage on hits with a higher factor.
 }
 
 STRING 54023
@@ -123006,7 +123006,7 @@ STRING 56297
 STRING 56298
 // Units: o0A9 (Spirit Tent), Tip (Tooltip - Basic)
 {
-Build Spirit Tent
+Geisterzelt errichten
 }
 
 STRING 56299
@@ -123269,7 +123269,7 @@ When throwing these magical gold coins, all emptied gold mines within a radius o
 
 STRING 56373
 {
-The Emerald Dream is accessible through a portal at Hyjal now!
+Der Smaragdgrüner Traum kann nun durch das Portal auf Hyjal erreicht werden!
 }
 
 STRING 56374
@@ -128250,7 +128250,7 @@ Ein mystischer Held, effective at ranged attacks and scouting. Can learn Chain L
 STRING 58173
 // Units: O02T (Blademaster), Awakentip (Tooltip - Awaken)
 {
-Revive Grommash Hellscream
+Grommash Hellscream wiederbeleben
 }
 
 STRING 58174
@@ -128346,7 +128346,7 @@ Crannies
 STRING 58291
 // Destructibles: B011 (Crannies), EditorSuffix (Editor Suffix)
 {
-(Summer)
+(Sommer)
 }
 
 STRING 58292
@@ -128358,7 +128358,7 @@ Crannies
 STRING 58293
 // Destructibles: B012 (Crannies), EditorSuffix (Editor Suffix)
 {
-(Fall)
+(Herbst)
 }
 
 STRING 58294
@@ -128466,13 +128466,13 @@ Unbegrenzten Goblin-Geldbeutel erwerben
 STRING 58408
 // Items: I14P (Unlimited Goblin Wallet), Description (Description)
 {
-Gives the owner gold and lumber.
+Gibt dem Besitzer Gold und Holz.
 }
 
 STRING 58409
 // Items: I14P (Unlimited Goblin Wallet), Ubertip (Tooltip - Extended)
 {
-Gives the owner <A257,DataA1> gold and <A257,DataB1> lumber.
+Gibt dem Besitzer <A257,DataA1> Gold und <A257,DataB1> Holz.
 }
 
 STRING 58410
@@ -128992,27 +128992,27 @@ STRING 58555
 }
 
 STRING 58558
-// Units: n055 (Freelancer Tower), Name (Name)
+// Units: n055 (Freiberufler-Turm), Name (Name)
 {
-Freelancer Tower
+Freiberufler-Turm
 }
 
 STRING 58559
-// Units: n055 (Freelancer Tower), Tip (Tooltip - Basic)
+// Units: n055 (Freiberufler-Turm), Tip (Tooltip - Basic)
 {
-Build Freelancer Tower
+Build Freiberufler-Turm
 }
 
 STRING 58560
-// Units: n056 (Advanced Freelancer Tower), Tip (Tooltip - Basic)
+// Units: n056 (Advanced Freiberufler-Turm), Tip (Tooltip - Basic)
 {
-Ausbau zum Advanced Freelancer Tower
+Ausbau zum Advanced Freiberufler-Turm
 }
 
 STRING 58561
-// Units: n056 (Advanced Freelancer Tower), Name (Name)
+// Units: n056 (Advanced Freiberufler-Turm), Name (Name)
 {
-Advanced Freelancer Tower
+Advanced Freiberufler-Turm
 }
 
 STRING 58562
@@ -130601,7 +130601,7 @@ STRING 61076
 STRING 61077
 // Abilities: A0G0 (Marksmanship), Ubertip (Tooltip - Normal - Extended)
 {
-Increases damage of Archers and War Eagle Riders by <Remk,base1>.
+Erhöht den verursachten Schaden von Bogenschützinnen und Kriegsadler-Reiterrinnen um <Remk,base1>.
 }
 
 STRING 61078
@@ -130613,7 +130613,7 @@ STRING 61078
 STRING 61079
 // Abilities: A0G1 (Marksmanship), Ubertip (Tooltip - Normal - Extended)
 {
-Increases damage of Archers and War Eagle Riders by <Remk,base1>.
+Erhöht den verursachten Schaden von Bogenschützinnen und Kriegsadler-Reiterrinnen um <Remk,base1>.
 }
 
 STRING 61080
