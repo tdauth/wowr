@@ -543,7 +543,6 @@ Here is a list of some modified versions online:
 * ikillforeyou: [Crusader Helm](https://www.hiveworkshop.com/threads/crusader-helm.138849/)
 * Sunchips: [Mail Armor](https://www.hiveworkshop.com/threads/mail-armor.170743/)
 * Usedwell: [Lance of Honor](https://www.hiveworkshop.com/threads/lance-of-honor.160758/)
-* Usedwell: [Lance of Honor](https://www.hiveworkshop.com/threads/lance-of-honor.160758)
 * GooS: [BTNImprovedLance](https://www.hiveworkshop.com/threads/btnimprovedlance.126296/)
 * Astaroth Zion: [Astaroth Zion's Attachment Pack](https://www.hiveworkshop.com/threads/astaroth-zions-attachment-pack.217111/)
 * Kitabatake: [Medieval Weapons](https://www.hiveworkshop.com/threads/medieval-weapons.122913/)
