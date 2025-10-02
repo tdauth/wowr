@@ -34168,7 +34168,7 @@ Q
 }
 
 STRING 7163
-// Items: I0W0 (Player Neutral Feindlich), Hotkey (Hotkey)
+// Items: I0W0 (Player Neutral Hostile), Hotkey (Hotkey)
 {
 E
 }
@@ -109974,19 +109974,19 @@ Spieler 1 rot.
 }
 
 STRING 49310
-// Items: I0W0 (Player Neutral Feindlich), Name (Name)
+// Items: I0W0 (Player Neutral Hostile), Name (Name)
 {
 Spieler Neutral Feindlich
 }
 
 STRING 49311
-// Items: I0W0 (Player Neutral Feindlich), Tip (Tooltip - Basic)
+// Items: I0W0 (Player Neutral Hostile), Tip (Tooltip - Basic)
 {
 Spieler Neutral Feindlich
 }
 
 STRING 49312
-// Items: I0W0 (Player Neutral Feindlich), Ubertip (Tooltip - Extended)
+// Items: I0W0 (Player Neutral Hostile), Ubertip (Tooltip - Extended)
 {
 Spieler Neutral Feindlich. Besitzer der Unholde.
 }
