@@ -106,7 +106,7 @@ Schildkröte
 STRING 18
 // Abilities: A0HL (Find Artifacts), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 19
@@ -196,7 +196,7 @@ Ingenieurwesen
 STRING 33
 // Abilities: A1NY (Divine Shield), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile) (New Divine Armor Type)
+(Neutral Feindlich) (New Divine Armor Type)
 }
 
 STRING 34
@@ -328,13 +328,13 @@ STRING 54
 STRING 55
 // Abilities: A1OQ (Barrage), EditorSuffix (Editor Suffix)
 {
-(Combat) (Neutral Hostile)
+(Combat) (Neutral Feindlich)
 }
 
 STRING 56
 // Abilities: A0K5 (Finish Construction), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 57
@@ -376,13 +376,13 @@ STRING 62
 STRING 63
 // Abilities: A0KI (Summon Meat Wagon), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 64
 // Abilities: A0AQ (Summon Water Elemental), Tip (Tooltip - Normal)
 {
-(Slot 1) (Vrykul) (Wolfsreiterin)
+Summon Water Elemental
 }
 
 STRING 65
@@ -394,7 +394,7 @@ Furion wiederbeleben
 STRING 66
 // Units: n02R (Green Dragon Roost), Ubertip (Tooltip - Extended)
 {
-Trains Green Drakes.
+Bildet Gründrachen aus.
 }
 
 STRING 67
@@ -406,19 +406,19 @@ STRING 67
 STRING 68
 // Units: h0IX (Druid), Name (Name)
 {
-Druid
+Druide
 }
 
 STRING 69
 // Items: I07X (Random Class), Name (Name)
 {
-Random Class
+Zufällige Klasse
 }
 
 STRING 70
 // Abilities: A1NY (Divine Shield), Name (Name)
 {
-Divine Shield
+Gottesschild
 }
 
 STRING 71
@@ -709,6 +709,12 @@ STRING 118
 Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
 
+STRING 119
+// Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Volk:|r Dalaran|n|cffffcc00Class:|r Arkanist|n|cffffcc00Primäres Attribute:|r Intelligenz|n|cffffcc00Kraft:|r 14/2|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r
+}
+
 STRING 121
 // Units: H005 (King of Azeroth), Propernames (Proper Names)
 {
@@ -724,7 +730,7 @@ STRING 123
 STRING 124
 // Abilities: A0PX (Harvest), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 125
@@ -754,7 +760,7 @@ Zufälliger Held
 STRING 129
 // Abilities: A0QD (Mass Invisibility), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 130
@@ -1630,7 +1636,7 @@ Feuerblitz - [|cffffcc00Stufe 12|r]
 STRING 276
 // Abilities: A0WC (Repair Aura), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 277
@@ -1774,25 +1780,25 @@ Mass Polymorph
 STRING 300
 // Abilities: A0XR (Club Strike), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 301
 // Abilities: A0XZ (Telekinesis), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 302
 // Abilities: A0Y2 (Full Regeneration), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 303
 // Abilities: A10L (Mass Devour), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 304
@@ -1888,7 +1894,7 @@ Turns all friendly units in the world invulnerable. |nThe Temple does not turn i
 STRING 319
 // Abilities: A135 (Mass Cripple), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 320
@@ -1906,7 +1912,7 @@ Engineering Upgrade
 STRING 322
 // Abilities: A0KH (Skeletal Mastery), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile) (Icon)
+(Neutral Feindlich) (Icon)
 }
 
 STRING 323
@@ -1960,7 +1966,7 @@ Transforms into Robo-Goblin.
 STRING 331
 // Abilities: A13N (Teleportation), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 332
@@ -1972,37 +1978,37 @@ Death Pact
 STRING 333
 // Abilities: A13V (Resurrection), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 334
 // Abilities: A13W (Holy Light), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 335
 // Abilities: A13Z (Pillage Aura), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 336
 // Abilities: A149 (Mass Death Coil), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 337
 // Abilities: A14F (Mass Entangling Roots), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 338
 // Abilities: A14I (Mass Sleep), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 339
@@ -2482,13 +2488,13 @@ Wolfsreiterin
 STRING 419
 // Abilities: A14P (Mass Charm), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 420
 // Abilities: A14T (Mass Control Magic), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 421
@@ -2500,7 +2506,7 @@ The Weaponsmith uses gathered minerals to forge a Mithril Long Sword.
 STRING 422
 // Abilities: A15V (Mass Mana Burn), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 423
@@ -2554,7 +2560,7 @@ STRING 430
 STRING 431
 // Abilities: A173 (Mass Bloodlust), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 432
@@ -2601,7 +2607,7 @@ STRING 438
 STRING 439
 // Abilities: A176 (Mass Finger of Death), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 440
@@ -2613,7 +2619,7 @@ Verteidigen Plate Armor
 STRING 441
 // Abilities: A17B (Pickpocketing), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 442
@@ -2625,7 +2631,7 @@ F
 STRING 443
 // Abilities: A184 (Multiply), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 444
@@ -2778,13 +2784,13 @@ Vulkan - [|cffffcc00Stufe 5|r]
 STRING 469
 // Abilities: A1G4 (Orb of Annihilation), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 470
 // Abilities: A1GB (Mass Firebolt), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 471
@@ -2832,19 +2838,19 @@ Winziger Baum des Lebens
 STRING 478
 // Abilities: A1H5 (Mass Rejuvenation), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 479
 // Abilities: A1H8 (Mass Cyclone), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 480
 // Abilities: A1IF (Mass Transmute), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 481
@@ -2868,19 +2874,19 @@ Mass Mana Burn
 STRING 484
 // Abilities: A1II (Mass Illusion), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 485
 // Abilities: A1KU (Miss Aura), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 486
 // Abilities: A1LE (Life Regeneration), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 487
@@ -2904,13 +2910,13 @@ Mass Entangling Roots
 STRING 490
 // Abilities: A1LG (Mana Regeneration), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 491
 // Abilities: A1LI (Move Speed Bonus), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 492
@@ -2924,7 +2930,7 @@ Diebesgilden
 }
 
 STRING 494
-// Units: h01V (Freiberufler-Labor), Hotkey (Hotkey)
+// Units: h01V (Freelancer Laboratory), Hotkey (Hotkey)
 {
 Y
 }
@@ -2938,7 +2944,7 @@ Powerup Feed
 STRING 496
 // Items: I089 (Ore Iron), Name (Name)
 {
-Ore Iron
+Eisenerz
 }
 
 STRING 497
@@ -3057,7 +3063,7 @@ Baukunst-Stromgenerator
 STRING 516
 // Abilities: A1LL (Attack Speed Bonus), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 517
@@ -3087,7 +3093,7 @@ Dunklen Zauberer beschwören
 STRING 521
 // Abilities: A1LN (Damage Bonus), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 522
@@ -3111,7 +3117,7 @@ P
 STRING 525
 // Abilities: A1LP (Armor Bonus), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 526
@@ -3177,7 +3183,7 @@ Mass Death Coil
 STRING 536
 // Abilities: A1NF (Spell Shield), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 537
@@ -3189,13 +3195,13 @@ Summon Explosive Barrel
 STRING 538
 // Abilities: A10J (Mass Fel), EditorSuffix (Editor Suffix)
 {
-(Warlock) (Fel Fountain) (Neutral Hostile)
+(Warlock) (Fel Fountain) (Neutral Feindlich)
 }
 
 STRING 539
 // Abilities: A1QL (Reflection), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 540
@@ -3219,7 +3225,7 @@ Wechselt die Klasse zum Tüftler.
 STRING 543
 // Abilities: A1TH (Life Bonus), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 544
@@ -3255,7 +3261,7 @@ When planting these magical seeds, all dead trees within a radius of 1000 regrow
 STRING 549
 // Abilities: A1TI (Mana Bonus), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 550
@@ -3273,7 +3279,7 @@ Clone
 STRING 552
 // Abilities: A1W4 (Mass Ensnare), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 553
@@ -3387,7 +3393,7 @@ Treibstoff
 STRING 571
 // Abilities: A1YG (Summon Creep), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 572
@@ -3399,13 +3405,13 @@ Mass Devour
 STRING 573
 // Abilities: A1Z5 (Parry), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 574
 // Abilities: A05L (Engineering Upgrade), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile) (Icon)
+(Neutral Feindlich) (Icon)
 }
 
 STRING 575
@@ -3417,7 +3423,7 @@ P
 STRING 576
 // Abilities: A0KD (Enslavement), EditorSuffix (Editor Suffix)
 {
- (Icon) (Neutral Hostile)
+ (Icon) (Neutral Feindlich)
 }
 
 STRING 577
@@ -3708,33 +3714,21 @@ STRING 625
 Dummy Mark Target
 }
 
-STRING 626
-// Units: h0V1 (Dummy Fire Ray), Name (Name)
-{
-Dummy Fire Ray
-}
-
 STRING 627
 {
 Marktplätze
 }
 
-STRING 628
-// Units: h0V2 (Dummy Frost Ray), Name (Name)
-{
-Dummy Frost Ray
-}
-
 STRING 629
 // Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 630
 // Abilities: A22T (Mind Control), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 631
@@ -4020,7 +4014,7 @@ Expert Fire
 STRING 687
 // Abilities: A0NR (Meteor), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 688
@@ -4144,7 +4138,7 @@ Arkane Akademie
 STRING 709
 // Abilities: A112 (Volcano), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 710
@@ -4168,7 +4162,7 @@ Mechanical Hero, particularly adept at destroying magic. Can learn Verjüngung, 
 STRING 713
 // Abilities: A114 (Flame Storm), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 714
@@ -4192,7 +4186,7 @@ STRING 716
 STRING 717
 // Abilities: A117 (Holy Aura), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 718
@@ -4204,7 +4198,7 @@ Hero Abilities Previous Page
 STRING 719
 // Abilities: A118 (Holy Nova), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 720
@@ -4228,19 +4222,19 @@ Witch Doctor
 STRING 723
 // Abilities: A119 (Mass Holy Light), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 724
 // Abilities: A11A (Mass Inner Fire), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 725
 // Abilities: A11C (Control Magic), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 726
@@ -4312,7 +4306,7 @@ Forschungszelt errichten
 STRING 738
 // Abilities: A11K (Fel), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 739
@@ -4323,7 +4317,7 @@ Hero classes determine which spells can be learned by a hero. They give the hero
 STRING 740
 // Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 741
@@ -4848,7 +4842,7 @@ Lehrmeister
 STRING 834
 // Units: N032 (Monk), Name (Name)
 {
-Monk
+Mönch
 }
 
 STRING 835
@@ -4889,7 +4883,7 @@ Drunken Aura
 STRING 841
 // Abilities: A12C (Dark Portal), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 842
@@ -5099,13 +5093,13 @@ Player is no AI.
 STRING 876
 // Upgrades: R01C (Burning Oil), Name (Name)
 {
-No AI
+Keine KI
 }
 
 STRING 877
 // Upgrades: R01C (Burning Oil), Tip (Tooltip)
 {
-No AI
+Keine KI
 }
 
 STRING 878
@@ -5722,7 +5716,7 @@ Gives Acidic Carnivores the Poison ability.
 STRING 981
 // Abilities: A179 (Frost Arrows), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 982
@@ -5790,13 +5784,13 @@ Use "-repick".
 STRING 993
 // Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 994
 // Abilities: A09B (Raise Dead), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile) (Necromancer)
+(Neutral Feindlich) (Necromancer)
 }
 
 STRING 995
@@ -7523,19 +7517,19 @@ Schild der Unterstadt-Schmiede
 STRING 1293
 // Units: n06W (Mammoth Mount), Name (Name)
 {
-Mammoth Mount
+Mammut-Reittier
 }
 
 STRING 1294
 // Units: h0BF (Green Dragon Mount), Name (Name)
 {
-Green Dragon Mount
+Großes Gründrachen-Reittier
 }
 
 STRING 1295
 // Units: h0DI (Eagle Mount), Tip (Tooltip - Basic)
 {
-Eagle Mount
+Adler-Reittier
 }
 
 STRING 1296
@@ -7553,7 +7547,7 @@ Couatl Mount
 STRING 1298
 // Units: n0C1 (Polar Bear Mount), Name (Name)
 {
-Polar Bear Mount
+Eisbären-Reittier
 }
 
 STRING 1299
@@ -7583,13 +7577,13 @@ Runeblade of the Frozen Throne
 STRING 1303
 // Units: n0C4 (Bear Mount), Name (Name)
 {
-Bear Mount
+Bären-Reittier
 }
 
 STRING 1304
 // Units: h0K4 (Raptor Mount), Name (Name)
 {
-Raptor Mount
+Raptoren-Reittier
 }
 
 STRING 1305
@@ -7613,7 +7607,7 @@ Further increases the amount of lumber that Matroses can carry by <Rhlh,mod1>.
 STRING 1308
 // Units: o04P (Bat Mount), Tip (Tooltip - Basic)
 {
-Bat Mount
+Fledermaus-Reittier
 }
 
 STRING 1309
@@ -7667,7 +7661,7 @@ Black Dragon Mount
 STRING 1317
 // Units: h0UW (Phoenix Mount), Tip (Tooltip - Basic)
 {
-Phoenix Mount
+Phönix-Reittier
 }
 
 STRING 1318
@@ -8263,7 +8257,7 @@ Rogue
 STRING 1423
 // Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1424
@@ -8335,7 +8329,7 @@ Furbolg ausbilden
 STRING 1435
 // Abilities: A17H (Druid Forms), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1436
@@ -8347,7 +8341,7 @@ D
 STRING 1437
 // Abilities: A1BV (Tranquility), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1438
@@ -8377,7 +8371,7 @@ J
 STRING 1442
 // Abilities: A1QE (Hide in Trees), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1443
@@ -8598,7 +8592,7 @@ I
 STRING 1479
 // Abilities: A0CP (Summon Sapphiron), Name (Name)
 {
-Summon Sapphiron
+Sapphiron beschwören
 }
 
 STRING 1480
@@ -8658,7 +8652,7 @@ O
 STRING 1489
 // Units: N001 (Windlord), Awakentip (Tooltip - Awaken)
 {
-Revive Windlord
+Windlord wiederbeleben
 }
 
 STRING 1490
@@ -8670,7 +8664,7 @@ O
 STRING 1491
 // Units: N001 (Windlord), Revivetip (Tooltip - Revive)
 {
-Revive Windlord
+Windlord wiederbeleben
 }
 
 STRING 1492
@@ -8682,7 +8676,7 @@ O
 STRING 1493
 // Units: N001 (Windlord), Tip (Tooltip - Basic)
 {
-Summon Windlord
+Windlord beschwören
 }
 
 STRING 1494
@@ -8706,13 +8700,13 @@ O
 STRING 1497
 // Abilities: A0VH (Summon Djinn), Name (Name)
 {
-Summon Djinn
+Dschinn beschwören
 }
 
 STRING 1498
 // Abilities: A0VH (Summon Djinn), Tip (Tooltip - Normal)
 {
-Summon Djinn
+Dschinn beschwören
 }
 
 STRING 1499
@@ -8832,7 +8826,7 @@ Magically enhanced, Diamond-socketed Armor. Grants +8 defense, Hingabe-Aura and 
 STRING 1518
 // Units: N00W (Earthlord), Tip (Tooltip - Basic)
 {
-Summon Earthlord
+Erdlord beschwören
 }
 
 STRING 1519
@@ -8880,7 +8874,7 @@ J
 STRING 1526
 // Abilities: A25Z (Invisibility), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1527
@@ -9175,12 +9169,6 @@ STRING 1575
 // Abilities: A051 (Death Coil), EditorSuffix (Editor Suffix)
 {
 (Item - Baradé's Version)
-}
-
-STRING 1576
-// Abilities: A081 (Chain Ray), Name (Name)
-{
-Kettenstrahl
 }
 
 STRING 1577
@@ -9960,7 +9948,7 @@ Clothing Bag
 STRING 1709
 // Abilities: A26F (Storm Bolt), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1710
@@ -9978,7 +9966,7 @@ Alexstrasza
 STRING 1712
 // Abilities: A26I (Summon Golem), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1713
@@ -9996,7 +9984,7 @@ Dummy Shroud of Protection
 STRING 1716
 // Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1717
@@ -10068,7 +10056,7 @@ STRING 1728
 STRING 1729
 // Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1730
@@ -10090,19 +10078,19 @@ Hero Abilities Matching Class
 STRING 1733
 // Abilities: A07Z (Spell Steal), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1734
 // Abilities: A0VH (Summon Djinn), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1735
 // Abilities: A03P (Berserk), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1736
@@ -10318,19 +10306,19 @@ Permanently increases all ability levels.
 STRING 1771
 // Units: h0NZ (Buy 100 Power), Name (Name)
 {
-Buy 100 Power
+100 Energie kaufen
 }
 
 STRING 1772
 // Abilities: A03Q (Stampede), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1773
 // Abilities: A03R (Starfall), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1774
@@ -10348,7 +10336,7 @@ Cargo Hold
 STRING 1776
 // Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1796
@@ -10587,7 +10575,7 @@ Mauer beschwören
 STRING 1849
 // Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1850
@@ -11115,13 +11103,13 @@ Resources allow training, buying and upgrading units, constructing buildings, re
 STRING 1946
 // Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1949
 // Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 1952
@@ -12352,13 +12340,13 @@ Heavy melee siege unit which can learn Barrel Form. The Barrel Form allows to su
 STRING 2239
 // Units: n07G (Gnoll Rocketbreaker), Name (Name)
 {
-Gnoll Rocketbreaker
+Gnoll-Steinbrecher
 }
 
 STRING 2240
 // Units: n07G (Gnoll Rocketbreaker), Tip (Tooltip - Basic)
 {
-Train Gnoll Rocketbreaker
+Gnoll-Steinbrecher ausbilden
 }
 
 STRING 2241
@@ -12466,7 +12454,7 @@ STRING 2257
 STRING 2258
 // Upgrades: R01A (Envenomed Spears), Tip (Tooltip)
 {
-Research Vergiftete Waffen
+Vergiftete Waffen erforschen
 }
 
 STRING 2259
@@ -12502,13 +12490,13 @@ Gives Gnoll melee units the ability Enslavement which allows them to enslave wea
 STRING 2264
 // Upgrades: R05B (Animal War Training), Name (Name)
 {
-Barrel Form
+Fass-Gestalt
 }
 
 STRING 2265
 // Upgrades: R05B (Animal War Training), Tip (Tooltip)
 {
-Research Barrel Form
+Fass-Gestalt erforschen
 }
 
 STRING 2266
@@ -12526,13 +12514,13 @@ STRING 2267
 STRING 2268
 // Units: n07H (Silithid Wasp), Name (Name)
 {
-Silithid Wasp
+Silithidenwespe
 }
 
 STRING 2269
 // Units: n07H (Silithid Wasp), Tip (Tooltip - Basic)
 {
-Hire Silithid Wasp
+Silithidenwespe anheuern
 }
 
 STRING 2270
@@ -12580,7 +12568,7 @@ Defensive amphibious Hero, adept at crushing enemies and protecting itself. Can 
 STRING 2277
 // Abilities: A08K (Serpent Ward), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 2280
@@ -12868,7 +12856,7 @@ Revive Samuro
 STRING 2327
 // Abilities: A0DQ (Locust Swarm), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 2328
@@ -13216,7 +13204,7 @@ A
 STRING 2385
 // Units: H0FB (Sea Giant), Awakentip (Tooltip - Awaken)
 {
-Revive Meeresriese
+Meeresriese wiederbeleben
 }
 
 STRING 2386
@@ -13342,7 +13330,7 @@ The Bard crafts a song.
 STRING 2410
 // Abilities: A24V (Song), Name (Name)
 {
-Song
+Lied
 }
 
 STRING 2411
@@ -13432,7 +13420,7 @@ Dunklen Zauberer wiederbeleben
 STRING 2452
 // Abilities: A0EM (Death Pact), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 2453
@@ -13634,7 +13622,7 @@ STRING 2485
 }
 
 STRING 2486
-// Abilities: A1Y0 (Loot Ray), EditorSuffix (Editor Suffix)
+// Abilities: A098 (Ultravision), EditorSuffix (Editor Suffix)
 {
 (Helden)
 }
@@ -14668,37 +14656,37 @@ STRING 2661
 STRING 2662
 // Upgrades: R077 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Spears
+Speere
 }
 
 STRING 2663
 // Upgrades: R077 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Improved Spears
+Verbesserte Speere
 }
 
 STRING 2664
 // Upgrades: R077 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Advanced Spears
+Hoch entwickelte Speere
 }
 
 STRING 2665
 // Upgrades: R077 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Spears
+Ausbau zu Speeren
 }
 
 STRING 2666
 // Upgrades: R077 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Improved Spears
+Ausbau zu Verbesserten Speeren
 }
 
 STRING 2667
 // Upgrades: R077 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Advanced Spears
+Ausbau zu Hoch entwickelten Speeren
 }
 
 STRING 2668
@@ -15823,7 +15811,7 @@ S
 }
 
 STRING 3002
-// Units: h01S (Freiberufler-Laden), Hotkey (Hotkey)
+// Units: h01S (Freelancer Shop), Hotkey (Hotkey)
 {
 S
 }
@@ -17385,13 +17373,13 @@ STRING 3351
 STRING 3352
 // Units: h07Q (Flying Spear Thrower), Name (Name)
 {
-Flying Spear Thrower
+Fliegender Speerwerfer
 }
 
 STRING 3353
 // Units: h07Q (Flying Spear Thrower), Tip (Tooltip - Basic)
 {
-Train Flying Spear Thrower
+Fliegenden Speerwerfer ausbilden
 }
 
 STRING 3354
@@ -17535,13 +17523,13 @@ STRING 3376
 STRING 3377
 // Units: n09I (Dalaran Child), Name (Name)
 {
-Dalaran Child
+Dalaran-Kind
 }
 
 STRING 3378
 // Units: n09I (Dalaran Child), Tip (Tooltip - Basic)
 {
-Train Dalaran Child
+Dalaran-Kind ausbilden
 }
 
 STRING 3379
@@ -17565,7 +17553,7 @@ C
 STRING 3382
 // Units: h0MM (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Greifenreiters and Pegasus-Ritters.
+Bildet Greifenreiter und Pegasus-Ritter aus.
 }
 
 STRING 3383
@@ -19565,7 +19553,7 @@ Vertikale Mauer errichten
 STRING 3837
 // Units: h01W (Wall), EditorSuffix (Name - Editor Suffix)
 {
-(Vertical)
+(Vertikal)
 }
 
 STRING 3838
@@ -20308,12 +20296,6 @@ STRING 4028
 // Units: n061 (Selection Mode), EditorSuffix (Name - Editor Suffix)
 {
 (Taverne)
-}
-
-STRING 4029
-// Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Dalaran.|r|n|cffffcc00Class: Arkanist.|r
 }
 
 STRING 4030
@@ -22928,13 +22910,13 @@ E
 STRING 4674
 // Abilities: A0EN (Carrion Beetles), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 4675
 // Abilities: A0HQ (Dark Ritual), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 4676
@@ -23670,7 +23652,7 @@ Transmute
 STRING 4802
 // Abilities: A0HX (Fan of Knives), EditorSuffix (Editor Suffix)
 {
-(Neutral Hostile)
+(Neutral Feindlich)
 }
 
 STRING 4803
@@ -24280,13 +24262,13 @@ B
 }
 
 STRING 4926
-// Abilities: A098 (Ultravision), EditorSuffix (Editor Suffix)
+// Abilities: A1ZX (Speed Boost), EditorSuffix (Editor Suffix)
 {
 (Helden)
 }
 
 STRING 4927
-// Abilities: A1ZX (Speed Boost), EditorSuffix (Editor Suffix)
+// Abilities: A263 (Next Skin), EditorSuffix (Editor Suffix)
 {
 (Helden)
 }
@@ -34186,7 +34168,7 @@ Q
 }
 
 STRING 7163
-// Items: I0W0 (Player Neutral Hostile), Hotkey (Hotkey)
+// Items: I0W0 (Player Neutral Feindlich), Hotkey (Hotkey)
 {
 E
 }
@@ -42833,12 +42815,6 @@ STRING 9766
 (Neutral Feindlich)
 }
 
-STRING 9772
-// Abilities: A0KM (Healing Salve), EditorSuffix (Editor Suffix)
-{
-(Moonstone Dummy)
-}
-
 STRING 9775
 // Items: I0YE (Warlock), Hotkey (Hotkey)
 {
@@ -45871,7 +45847,7 @@ In Bäumen verstecken Manaregeneration
 }
 
 STRING 10580
-// Abilities: A263 (Next Skin), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B013 (), EditorSuffix (Editor Suffix)
 {
 (Helden)
 }
@@ -47910,12 +47886,6 @@ STRING 11070
 Ändert den Skin, falls weitere Skins für diesen Helden existieren.
 }
 
-STRING 11071
-// Abilities: A080 (Water Ray), EditorSuffix (Editor Suffix)
-{
-(Helden)
-}
-
 STRING 11073
 // Upgrades: R038 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
@@ -47974,12 +47944,6 @@ STRING 11094
 // Abilities: A0CD (Cut Down Trees), EditorSuffix (Editor Suffix)
 {
 (Goblin-Dampfwalze)
-}
-
-STRING 11116
-// Abilities: A081 (Chain Ray), EditorSuffix (Editor Suffix)
-{
-(Helden)
 }
 
 STRING 11121
@@ -48445,7 +48409,7 @@ Spellcaster production building. Trains Goblin-Magier, Goblin-Zauberin and Gobli
 }
 
 STRING 11307
-// Units: h01S (Freiberufler-Laden), Ubertip (Tooltip - Extended)
+// Units: h01S (Freelancer Shop), Ubertip (Tooltip - Extended)
 {
 Creates a shop with purchasable items.
 }
@@ -52964,7 +52928,7 @@ Elfenhof
 }
 
 STRING 12917
-// Units: h01S (Freiberufler-Laden), EditorSuffix (Name - Editor Suffix)
+// Units: h01S (Freelancer Shop), EditorSuffix (Name - Editor Suffix)
 {
 (Freelancers)
 }
@@ -53791,7 +53755,7 @@ Rack Armor
 }
 
 STRING 14108
-// Units: h01V (Freiberufler-Labor), EditorSuffix (Name - Editor Suffix)
+// Units: h01V (Freelancer Laboratory), EditorSuffix (Name - Editor Suffix)
 {
 (Freelancers)
 }
@@ -54567,12 +54531,6 @@ STRING 14479
 Known acccounts:
 }
 
-STRING 14480
-// Abilities: A183 (Savecodes), Ubertip (Tooltip - Normal - Extended)
-{
-Code 1
-}
-
 STRING 14481
 // Abilities: A0M1 (Disable Bridge), Untip (Tooltip - Turn Off)
 {
@@ -54769,12 +54727,6 @@ STRING 14614
 // Items: I05Y (Second Profession), Tip (Tooltip - Basic)
 {
 Zweiter Beruf
-}
-
-STRING 14623
-// Buffs/Effects: B013 (), EditorSuffix (Editor Suffix)
-{
-(Helden)
 }
 
 STRING 14625
@@ -62030,7 +61982,7 @@ Advanced Archeology
 }
 
 STRING 19887
-// Units: h01S (Freiberufler-Laden), Name (Name)
+// Units: h01S (Freelancer Shop), Name (Name)
 {
 Freiberufler-Laden
 }
@@ -65170,7 +65122,7 @@ Pandarian Big Wooden Brücke
 }
 
 STRING 22312
-// Units: h01S (Freiberufler-Laden), Tip (Tooltip - Basic)
+// Units: h01S (Freelancer Shop), Tip (Tooltip - Basic)
 {
 Build Freiberufler-Laden
 }
@@ -66512,12 +66464,6 @@ STRING 22718
 S
 }
 
-STRING 22719
-// Abilities: A183 (Savecodes), Ubertip (Tooltip - Normal - Extended)
-{
-Code 2
-}
-
 STRING 22721
 // Units: O04L (Spirit Walker), Name (Name)
 {
@@ -67330,7 +67276,7 @@ STRING 23710
 }
 
 STRING 23731
-// Units: h0PH (Sturmkrähen-Ritter), Ubertip (Tooltip - Extended)
+// Units: h0PH (Stormcrow Knight), Ubertip (Tooltip - Extended)
 {
 Powerful flying creature, mounted by a Gilneas spear-thrower. Can learn Animal War Training, and the Schleichendes Gift ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -67408,7 +67354,7 @@ STRING 23814
 }
 
 STRING 23815
-// Abilities: A0DE (Stab der Teleportation), Tip (Tooltip - Normal)
+// Abilities: A0DE (Staff of Teleportation), Tip (Tooltip - Normal)
 {
 Stab der Teleportation
 }
@@ -74601,7 +74547,7 @@ Increases Druids' mana capacity, mana regeneration rate, hit points, and gives t
 }
 
 STRING 31096
-// Units: h0PH (Sturmkrähen-Ritter), EditorSuffix (Name - Editor Suffix)
+// Units: h0PH (Stormcrow Knight), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
 }
@@ -74631,7 +74577,7 @@ Altar des Mondes errichten
 }
 
 STRING 31150
-// Units: o05J (Hirnloser Worgen), EditorSuffix (Name - Editor Suffix)
+// Units: o05J (Mindless Worgen), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
 }
@@ -78649,7 +78595,7 @@ Supporting unit without attack who has the Befehls-Aura ability.
 }
 
 STRING 33920
-// Units: h0PH (Sturmkrähen-Ritter), Name (Name)
+// Units: h0PH (Stormcrow Knight), Name (Name)
 {
 Sturmkrähen-Ritter
 }
@@ -80166,12 +80112,6 @@ STRING 34682
 Menschlicher Mut
 }
 
-STRING 34702
-// Abilities: A183 (Savecodes), Name (Name)
-{
-Speicher-Codes
-}
-
 STRING 34703
 // Units: h0MU (Sorceress), EditorSuffix (Name - Editor Suffix)
 {
@@ -80212,12 +80152,6 @@ STRING 34732
 // Units: h02U (Troll Slayer), Ubertip (Tooltip - Extended)
 {
 Versatile foot soldier. Can learn the Berserk ability. |n|n|cffffcc00Greift Land-Einheiten an.|r
-}
-
-STRING 34734
-// Abilities: A081 (Chain Ray), Tip (Tooltip - Normal)
-{
-Kettenstrahl
 }
 
 STRING 34735
@@ -81691,7 +81625,7 @@ Silberbarren
 }
 
 STRING 35331
-// Units: h0IP (Runenmetz), Ubertip (Tooltip - Extended)
+// Units: h0IP (Runecarver), Ubertip (Tooltip - Extended)
 {
 Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -86307,91 +86241,91 @@ Y
 }
 
 STRING 37075
-// Units: h01V (Freiberufler-Labor), Name (Name)
+// Units: h01V (Freelancer Laboratory), Name (Name)
 {
 Freiberufler-Labor
 }
 
 STRING 37076
-// Units: h01V (Freiberufler-Labor), Tip (Tooltip - Basic)
+// Units: h01V (Freelancer Laboratory), Tip (Tooltip - Basic)
 {
 Freiberufler-Labor errichten
 }
 
 STRING 37077
-// Units: h01V (Freiberufler-Labor), Ubertip (Tooltip - Extended)
+// Units: h01V (Freelancer Laboratory), Ubertip (Tooltip - Extended)
 {
 Creates a laboratory with researches. Can be used to return gold and lumber.
 }
 
 STRING 37078
-// Items: I0NB (Tiny Freiberufler-Turm), Name (Name)
+// Items: I0NB (Tiny Freelancer Tower), Name (Name)
 {
 Winziger Freiberufler-Turm
 }
 
 STRING 37079
-// Items: I0NB (Tiny Freiberufler-Turm), Tip (Tooltip - Basic)
+// Items: I0NB (Tiny Freelancer Tower), Tip (Tooltip - Basic)
 {
 Winzigen Freiberufler-Turm erwerben
 }
 
 STRING 37080
-// Items: I0NB (Tiny Freiberufler-Turm), Description (Description)
+// Items: I0NB (Tiny Freelancer Tower), Description (Description)
 {
 Creates a Freiberufler-Turm.
 }
 
 STRING 37081
-// Items: I0NB (Tiny Freiberufler-Turm), Ubertip (Tooltip - Extended)
+// Items: I0NB (Tiny Freelancer Tower), Ubertip (Tooltip - Extended)
 {
 Creates a Freiberufler-Turm at a target location.
 }
 
 STRING 37082
-// Items: I0NC (Tiny Advanced Freiberufler-Turm), Name (Name)
+// Items: I0NC (Tiny Advanced Freelancer Tower), Name (Name)
 {
 Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37083
-// Items: I0NC (Tiny Advanced Freiberufler-Turm), Tip (Tooltip - Basic)
+// Items: I0NC (Tiny Advanced Freelancer Tower), Tip (Tooltip - Basic)
 {
 Purchase Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37084
-// Items: I0NC (Tiny Advanced Freiberufler-Turm), Description (Description)
+// Items: I0NC (Tiny Advanced Freelancer Tower), Description (Description)
 {
 Creates an Advanced Freiberufler-Turm.
 }
 
 STRING 37085
-// Items: I0NC (Tiny Advanced Freiberufler-Turm), Ubertip (Tooltip - Extended)
+// Items: I0NC (Tiny Advanced Freelancer Tower), Ubertip (Tooltip - Extended)
 {
 Creates an Advanced Freiberufler-Turm at a target location.
 }
 
 STRING 37086
-// Items: I0ND (Tiny Freiberufler-Laden), Name (Name)
+// Items: I0ND (Tiny Freelancer Shop), Name (Name)
 {
 Winziger Freiberufler-Laden
 }
 
 STRING 37087
-// Items: I0ND (Tiny Freiberufler-Laden), Tip (Tooltip - Basic)
+// Items: I0ND (Tiny Freelancer Shop), Tip (Tooltip - Basic)
 {
 Purchase Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37088
-// Items: I0ND (Tiny Freiberufler-Laden), Description (Description)
+// Items: I0ND (Tiny Freelancer Shop), Description (Description)
 {
 Errichtet einen Freiberufler-Laden.
 }
 
 STRING 37089
-// Items: I0ND (Tiny Freiberufler-Laden), Ubertip (Tooltip - Extended)
+// Items: I0ND (Tiny Freelancer Shop), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort einen Freiberufler-Laden.
 }
@@ -86421,43 +86355,43 @@ Errichtet am Zielort ein Freiberufler-Söldnerlager.
 }
 
 STRING 37094
-// Items: I0NF (Tiny Freiberufler-Labor), Name (Name)
+// Items: I0NF (Tiny Freelancer Laboratory), Name (Name)
 {
 Tiny Freiberufler-Labor
 }
 
 STRING 37095
-// Items: I0NF (Tiny Freiberufler-Labor), Tip (Tooltip - Basic)
+// Items: I0NF (Tiny Freelancer Laboratory), Tip (Tooltip - Basic)
 {
 Purchase Tiny Freiberufler-Labor
 }
 
 STRING 37096
-// Items: I0NF (Tiny Freiberufler-Labor), Description (Description)
+// Items: I0NF (Tiny Freelancer Laboratory), Description (Description)
 {
 Creates a Freiberufler-Labor.
 }
 
 STRING 37097
-// Items: I0NF (Tiny Freiberufler-Labor), Ubertip (Tooltip - Extended)
+// Items: I0NF (Tiny Freelancer Laboratory), Ubertip (Tooltip - Extended)
 {
 Creates a Freiberufler-Labor at a target location.
 }
 
 STRING 37098
-// Abilities: A1BY (Build Tiny Freiberufler-Turm), Name (Name)
+// Abilities: A1BY (Build Tiny Freelancer Tower), Name (Name)
 {
 Build Tiny Freiberufler-Turm
 }
 
 STRING 37099
-// Abilities: A1BZ (Build Tiny Advanced Freiberufler-Turm), Name (Name)
+// Abilities: A1BZ (Build Tiny Advanced Freelancer Tower), Name (Name)
 {
 Build Tiny Advanced Freiberufler-Turm
 }
 
 STRING 37100
-// Abilities: A1C0 (Build Tiny Freiberufler-Labor), Name (Name)
+// Abilities: A1C0 (Build Tiny Freelancer Laboratory), Name (Name)
 {
 Build Tiny Freiberufler-Labor
 }
@@ -86469,7 +86403,7 @@ Build Tiny Freiberufler-Söldnerlager
 }
 
 STRING 37102
-// Abilities: A1C2 (Build Tiny Freiberufler-Laden), Name (Name)
+// Abilities: A1C2 (Build Tiny Freelancer Shop), Name (Name)
 {
 Build Tiny Freiberufler-Laden
 }
@@ -91137,7 +91071,7 @@ Heavy warrior. Can cast Stille, Feuerblitz, Schmetter-Angriff, Hieb, Festhaut an
 }
 
 STRING 38703
-// Units: h0IP (Runenmetz), EditorSuffix (Name - Editor Suffix)
+// Units: h0IP (Runecarver), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -91203,13 +91137,13 @@ Supporting spellcaster. Can initially cast Heilen, which increases the life of w
 }
 
 STRING 38732
-// Units: h0IP (Runenmetz), Name (Name)
+// Units: h0IP (Runecarver), Name (Name)
 {
 Runenmetz
 }
 
 STRING 38733
-// Units: h0IP (Runenmetz), Tip (Tooltip - Basic)
+// Units: h0IP (Runecarver), Tip (Tooltip - Basic)
 {
 Train Runenmetz
 }
@@ -92001,19 +91935,19 @@ Transforms the Worgen back into his normal form, making it slower.
 }
 
 STRING 38907
-// Units: h0PH (Sturmkrähen-Ritter), Tip (Tooltip - Basic)
+// Units: h0PH (Stormcrow Knight), Tip (Tooltip - Basic)
 {
 Sturmkrähen-Ritter ausbilden
 }
 
 STRING 38908
-// Units: o05J (Hirnloser Worgen), Name (Name)
+// Units: o05J (Mindless Worgen), Name (Name)
 {
 Hirnloser Worgen
 }
 
 STRING 38909
-// Units: o05J (Hirnloser Worgen), Tip (Tooltip - Basic)
+// Units: o05J (Mindless Worgen), Tip (Tooltip - Basic)
 {
 Hirnlosen Worgen ausbilden
 }
@@ -92961,7 +92895,7 @@ Produces Gilneas Gunships, Mantikors, and Bannerträgers. |nAlso contains the Ra
 }
 
 STRING 39801
-// Units: o05J (Hirnloser Worgen), Ubertip (Tooltip - Extended)
+// Units: o05J (Mindless Worgen), Ubertip (Tooltip - Extended)
 {
 Mighty warrior. Has Kritischer Schlag, which gives Hirnloser Worgen a chance of dealing critical damage. Can gain the Improved Kritischer Schlag upgrade. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -94221,7 +94155,7 @@ Cenarius beschwören
 }
 
 STRING 40229
-// Abilities: A1Y0 (Loot Ray), Hotkey (Hotkey - Normal)
+// Abilities: A1ZX (Speed Boost), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -97724,13 +97658,13 @@ Einzigartig - Kugel von Kil'jaeden
 }
 
 STRING 41499
-// Abilities: A1ZX (Speed Boost), Hotkey (Hotkey - Normal)
+// Abilities: A238 (Submerge), Hotkey (Hotkey - Normal)
 {
 K
 }
 
 STRING 41500
-// Abilities: A238 (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A238 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -97760,7 +97694,7 @@ STRING 41504
 }
 
 STRING 41506
-// Abilities: A238 (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A239 (Submerge), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -97790,7 +97724,7 @@ Purchase Tiny Stacheleber Manger
 }
 
 STRING 41512
-// Abilities: A239 (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A239 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -98082,7 +98016,7 @@ STRING 41721
 }
 
 STRING 41731
-// Abilities: A239 (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A23A (Submerge), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -98442,7 +98376,7 @@ STRING 41868
 }
 
 STRING 41869
-// Abilities: A23A (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A23A (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -99216,7 +99150,7 @@ L
 }
 
 STRING 42164
-// Abilities: A23A (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A247 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -101041,7 +100975,7 @@ D
 }
 
 STRING 42823
-// Abilities: A247 (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A247 (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -101053,7 +100987,7 @@ STRING 42824
 }
 
 STRING 42825
-// Abilities: A247 (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A248 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -101089,7 +101023,7 @@ STRING 42834
 }
 
 STRING 42835
-// Abilities: A248 (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A248 (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -102079,7 +102013,7 @@ Allows skilling hero attributes and randomizing hero spells.
 }
 
 STRING 43294
-// Abilities: A248 (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A249 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -102229,7 +102163,7 @@ STRING 43379
 }
 
 STRING 43381
-// Abilities: A249 (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A249 (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -106838,7 +106772,7 @@ Tosses a target non-mechanical enemy unit into the air, rendering it unable to m
 }
 
 STRING 46545
-// Abilities: A249 (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A24A (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -110000,79 +109934,79 @@ Further increases the armor and hit points of wall buildings.
 STRING 49301
 // Items: I0VY (Frog Legs), Name (Name)
 {
-Frog Legs
+Froschbeine
 }
 
 STRING 49302
 // Items: I0VY (Frog Legs), Tip (Tooltip - Basic)
 {
-Purchase Frog Legs
+Froschbeine kaufen
 }
 
 STRING 49303
 // Items: I0VY (Frog Legs), Description (Description)
 {
-The legs of a frog.
+Die Beine eines Frosches.
 }
 
 STRING 49304
 // Items: I0VY (Frog Legs), Ubertip (Tooltip - Extended)
 {
-The legs of a frog.
+Die Beine eines Frosches.
 }
 
 STRING 49307
 // Items: I0VZ (Player 1), Name (Name)
 {
-Player 1
+Spieler 1
 }
 
 STRING 49308
 // Items: I0VZ (Player 1), Tip (Tooltip - Basic)
 {
-Player 1
+Spieler 1
 }
 
 STRING 49309
 // Items: I0VZ (Player 1), Ubertip (Tooltip - Extended)
 {
-Player 1 red.
+Spieler 1 rot.
 }
 
 STRING 49310
-// Items: I0W0 (Player Neutral Hostile), Name (Name)
+// Items: I0W0 (Player Neutral Feindlich), Name (Name)
 {
-Player Neutral Feindlich
+Spieler Neutral Feindlich
 }
 
 STRING 49311
-// Items: I0W0 (Player Neutral Hostile), Tip (Tooltip - Basic)
+// Items: I0W0 (Player Neutral Feindlich), Tip (Tooltip - Basic)
 {
-Player Neutral Feindlich
+Spieler Neutral Feindlich
 }
 
 STRING 49312
-// Items: I0W0 (Player Neutral Hostile), Ubertip (Tooltip - Extended)
+// Items: I0W0 (Player Neutral Feindlich), Ubertip (Tooltip - Extended)
 {
-Player Neutral Feindlich. Creep owner.
+Spieler Neutral Feindlich. Besitzer der Unholde.
 }
 
 STRING 49313
 // Items: I0W1 (Player Neutral Passive), Name (Name)
 {
-Player Neutral Passive
+Spieler Neutral Passiv
 }
 
 STRING 49314
 // Items: I0W1 (Player Neutral Passive), Tip (Tooltip - Basic)
 {
-Player Neutral Passive
+Spieler Neutral Passiv
 }
 
 STRING 49315
 // Items: I0W1 (Player Neutral Passive), Ubertip (Tooltip - Extended)
 {
-Player Neutral Passive. NPC owner.
+Spieler Neutral Passiv. Besitzer der NPCs.
 }
 
 STRING 49319
@@ -110090,7 +110024,7 @@ Player Color Red
 STRING 49321
 // Items: I0W2 (Player Color Red), Ubertip (Tooltip - Extended)
 {
-Red.
+Rot.
 }
 
 STRING 49323
@@ -110102,13 +110036,13 @@ Skinning Rack
 STRING 49324
 // Units: h06R (Pandaren House), Name (Name)
 {
-Pandaren House
+Pandaren-Haus
 }
 
 STRING 49325
 // Units: h06R (Pandaren House), Tip (Tooltip - Basic)
 {
-Build Pandaren House
+Pandaren-Haus errichten
 }
 
 STRING 49331
@@ -110639,7 +110573,7 @@ The Cook gathers random ingredients for the menus.
 }
 
 STRING 49568
-// Abilities: A24A (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A24A (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -111215,8 +111149,8 @@ Argus
 STRING 49996
 // Items: I0WU (Argus), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
-Homeworld of the Eredar.
+|cff0000ffGeografischer Standort:|r Eine andere Welt.
+Heimatwelt der Eredar.
 
 |cff00ff00Empfohlenes Volk:|r Dämonen, Draenei, Verlorene.
 }
@@ -114648,7 +114582,7 @@ STRING 50954
 }
 
 STRING 50955
-// Units: o09B (Chaos-Gewölbe), EditorSuffix (Name - Editor Suffix)
+// Units: o09B (Chaos Vault), EditorSuffix (Name - Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -115134,13 +115068,13 @@ Spellcaster production building. Trains Kultists, Hexenmeisters, and Elders. |nA
 }
 
 STRING 51085
-// Units: o09B (Chaos-Gewölbe), Name (Name)
+// Units: o09B (Chaos Vault), Name (Name)
 {
 Chaos-Gewölbe
 }
 
 STRING 51086
-// Units: o09B (Chaos-Gewölbe), Tip (Tooltip - Basic)
+// Units: o09B (Chaos Vault), Tip (Tooltip - Basic)
 {
 Chaos-Gewölbe errichten
 }
@@ -116808,7 +116742,7 @@ STRING 51697
 }
 
 STRING 51698
-// Abilities: A24A (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A263 (Next Skin), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -116916,13 +116850,13 @@ STRING 51718
 }
 
 STRING 51728
-// Abilities: A263 (Next Skin), Hotkey (Hotkey - Normal)
+// Abilities: A264 (Flatten All), Hotkey (Hotkey - Normal)
 {
 K
 }
 
 STRING 51729
-// Abilities: A264 (Flatten All), Hotkey (Hotkey - Normal)
+// Abilities: A0J1 (Root), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -117377,12 +117311,6 @@ STRING 51868
 Sasquatch-Urtum
 }
 
-STRING 51869
-// Abilities: A1Y0 (Loot Ray), Name (Name)
-{
-Beutestrahl
-}
-
 STRING 51875
 // Items: I0YR (Skin Villager Female), Name (Name)
 {
@@ -117484,18 +117412,6 @@ STRING 51910
 Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir the Howler,Skhowl,Kartak the Abominable
 }
 
-STRING 51918
-// Abilities: A1Y0 (Loot Ray), Tip (Tooltip - Normal)
-{
-Beutestrahl
-}
-
-STRING 51936
-// Abilities: A1Y0 (Loot Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Casts a ray which pulls target items to the hero.
-}
-
 STRING 51998
 // Items: I0YS (Randomize Skin), Name (Name)
 {
@@ -117538,12 +117454,6 @@ STRING 52004
 Randomizes the skin of your hero.|n|n|cffffcc00Only allowed for heroes who can change their skin.|r
 }
 
-STRING 52025
-// Abilities: A081 (Chain Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Casts a ray which pulls target enemy units to the hero.
-}
-
 STRING 52045
 // Units: n0LB (Exodar), EditorSuffix (Name - Editor Suffix)
 {
@@ -117583,21 +117493,9 @@ Azuremyst Isles Baumwand
 }
 
 STRING 52059
-// Abilities: A1XR (Item Freeze Damage Bonus), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B03Q (Freeze), EditorSuffix (Editor Suffix)
 {
 (Frost Ray)
-}
-
-STRING 52060
-// Abilities: A1XS (Item Liquid Fire), EditorSuffix (Editor Suffix)
-{
-(Fire Ray)
-}
-
-STRING 52061
-// Abilities: A1XS (Item Liquid Fire), Name (Name)
-{
-Item Liquid Fire
 }
 
 STRING 52099
@@ -117610,30 +117508,6 @@ STRING 52100
 // Buffs/Effects: B03Q (Freeze), Buffubertip (Tooltip - Extended)
 {
 Frozen.
-}
-
-STRING 52101
-// Buffs/Effects: B03Q (Freeze), EditorSuffix (Editor Suffix)
-{
-(Frost Ray)
-}
-
-STRING 52108
-// Abilities: A080 (Water Ray), Name (Name)
-{
-Wasserstrahl
-}
-
-STRING 52148
-// Abilities: A080 (Water Ray), Tip (Tooltip - Normal)
-{
-Wasserstrahl
-}
-
-STRING 52166
-// Abilities: A080 (Water Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Casts a ray which will push enemy units away.
 }
 
 STRING 52189
@@ -117667,7 +117541,7 @@ Erz-Zauberin beschwören
 }
 
 STRING 52244
-// Abilities: A080 (Water Ray), Hotkey (Hotkey - Normal)
+// Abilities: A0J1 (Root), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -118344,7 +118218,7 @@ Increases the movement speed by <A1ZW,DataA1,%> % for <A1ZW,Dur1> Sekunden lang 
 }
 
 STRING 53368
-// Abilities: A081 (Chain Ray), Hotkey (Hotkey - Normal)
+// Upgrades: R0DW (Hardened Skin), Hotkey (Hotkey)
 {
 K
 }
@@ -119723,13 +119597,13 @@ STRING 54908
 }
 
 STRING 54909
-// Abilities: A0DE (Stab der Teleportation), EditorSuffix (Editor Suffix)
+// Abilities: A0DE (Staff of Teleportation), EditorSuffix (Editor Suffix)
 {
 (Clan Banner)
 }
 
 STRING 54911
-// Abilities: A0DE (Stab der Teleportation), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DE (Staff of Teleportation), Ubertip (Tooltip - Normal - Extended)
 {
 Teleports to an allied unit from the same clan.
 }
@@ -119833,13 +119707,13 @@ Verteidigungsgebäude with close attack range. Has the Freezing Breath ability. 
 STRING 54954
 // Units: n07E (Tuskarr Child), Name (Name)
 {
-Tuskarr Child
+Tuskarr-Kind
 }
 
 STRING 54955
 // Units: n07E (Tuskarr Child), Tip (Tooltip - Basic)
 {
-Train Tuskarr Child
+Tuskarr-Kind ausbilden
 }
 
 STRING 54956
@@ -119881,7 +119755,7 @@ Hero Clan
 STRING 54964
 // Upgrades: R03D (Animal War Training), Ubertip (Tooltip - Extended)
 {
-Player has a clan.
+Spieler hat Clan.
 }
 
 STRING 54965
@@ -119917,13 +119791,13 @@ STRING 54980
 STRING 54981
 // Units: h0WS (Buy Property Orgrimmar), Name (Name)
 {
-Buy Property Orgrimmar
+Immobilie Orgrimmar kaufen
 }
 
 STRING 54982
 // Units: h0WS (Buy Property Orgrimmar), Tip (Tooltip - Basic)
 {
-Buy Property Orgrimmar
+Immobilie Orgrimmar kaufen
 }
 
 STRING 54983
@@ -119953,19 +119827,19 @@ STRING 54987
 STRING 54988
 // Units: h0WT (Buy Property Undercity), Name (Name)
 {
-Buy Property Unterstadt
+Immobilie Unterstadt kaufen
 }
 
 STRING 54989
 // Units: h0WT (Buy Property Undercity), Tip (Tooltip - Basic)
 {
-Buy Property Unterstadt
+Immobilie Unterstadt kaufen
 }
 
 STRING 54990
 // Units: h0X1 (Buy Property Sunstrider Isle), Name (Name)
 {
-Buy Property Insel der Sonnenwanderer
+Immobilie Insel der Sonnenwanderer kaufen
 }
 
 STRING 54993
@@ -119977,19 +119851,19 @@ STRING 54993
 STRING 54994
 // Units: h0WU (Buy Property Draktharon Keep), Name (Name)
 {
-Buy Property Feste von Drak'Tharon
+Immobilie Feste von Drak'Tharon kaufen
 }
 
 STRING 54995
 // Units: h0WU (Buy Property Draktharon Keep), Tip (Tooltip - Basic)
 {
-Buy Property Feste von Drak'Tharon
+Immobilie Feste von Drak'Tharon kaufen
 }
 
 STRING 54996
 // Units: h0X1 (Buy Property Sunstrider Isle), Tip (Tooltip - Basic)
 {
-Buy Property Insel der Sonnenwanderer
+Immobilie Insel der Sonnenwanderer kaufen
 }
 
 STRING 55021
@@ -120031,7 +119905,7 @@ Immobilie Donnerfels kaufen
 STRING 55029
 // Units: h0X2 (Buy Property Silvermoon), Name (Name)
 {
-Buy Property Silbermond
+Immobilie Silbermond kaufen
 }
 
 STRING 55030
@@ -120073,7 +119947,7 @@ Immobilie Gruuls Unterschlupf kaufen
 STRING 55036
 // Units: h0X2 (Buy Property Silvermoon), Tip (Tooltip - Basic)
 {
-Buy Property Silbermond
+Immobilie Silbermond kaufen
 }
 
 STRING 55039
@@ -120127,13 +120001,13 @@ STRING 55048
 STRING 55049
 // Units: h0WZ (Buy Property Nazjatar), Name (Name)
 {
-Buy Property Nazjatar
+Immobilie Nazjatar kaufen
 }
 
 STRING 55050
 // Units: h0WZ (Buy Property Nazjatar), Tip (Tooltip - Basic)
 {
-Buy Property Nazjatar
+Immobilie Nazjatar kaufen
 }
 
 STRING 55051
@@ -121516,12 +121390,6 @@ STRING 55758
 (Immobilie)
 }
 
-STRING 55759
-// Abilities: A0J1 (Root), Unhotkey (Hotkey - Turn Off)
-{
-K
-}
-
 STRING 55761
 // Units: N0GE (Trade Prince of the Bilgewater Carte), Name (Name)
 {
@@ -121609,25 +121477,25 @@ Ironforge
 STRING 55781
 // Units: h0X0 (Buy Property Ironforge), Name (Name)
 {
-Buy Property Ironforge
+Immobilie Ironforge kaufen
 }
 
 STRING 55782
 // Units: h0X0 (Buy Property Ironforge), Tip (Tooltip - Basic)
 {
-Buy Property Ironforge
+Immobilie Ironforge kaufen
 }
 
 STRING 55783
 // Units: h0XE (Buy Property Gnomeregan), Name (Name)
 {
-Buy Property Gnomeregan
+Immobilie Gnomeregan kaufen
 }
 
 STRING 55784
 // Units: h0XE (Buy Property Gnomeregan), Tip (Tooltip - Basic)
 {
-Buy Property Gnomeregan
+Immobilie Gnomeregan kaufen
 }
 
 STRING 55786
@@ -121777,7 +121645,7 @@ Withdraw gold to get it back with interest charges. This resets the timer for in
 STRING 55821
 // Units: n0LN (Fel Orc Child), Tip (Tooltip - Basic)
 {
-Train Höllenorcs Child
+Höllenorc-Kind ausbilden
 }
 
 STRING 55822
@@ -121801,19 +121669,19 @@ Withdraw lumber to get it back with interest charges. This resets the timer for 
 STRING 55825
 // Units: n0LO (Gilneas City), Name (Name)
 {
-Gilneas City
+Stadt Gilneas
 }
 
 STRING 55826
 // Units: h0XH (Buy Property Gilneas City), Name (Name)
 {
-Buy Property Gilneas City
+Immobilie Stadt Gilneas kaufen
 }
 
 STRING 55827
 // Units: h0XH (Buy Property Gilneas City), Tip (Tooltip - Basic)
 {
-Buy Property Gilneas City
+Immobilie Stadt Gilneas kaufen
 }
 
 STRING 55829
@@ -121843,13 +121711,13 @@ Converts ancient player units into non-ancient player units.
 STRING 55836
 // Units: Hvwd (Ranger), Awakentip (Tooltip - Awaken)
 {
-Revive Sylvanas Windrunner
+Sylvanas Windrunner wiederbeleben
 }
 
 STRING 55837
 // Units: Hvwd (Ranger), Revivetip (Tooltip - Revive)
 {
-Revive Sylvanas Windrunner
+Sylvanas Windrunner wiederbeleben
 }
 
 STRING 55838
@@ -122482,12 +122350,6 @@ STRING 56046
 A powerful dragon.
 }
 
-STRING 56047
-// Abilities: A0J1 (Root), Hotkey (Hotkey - Normal)
-{
-K
-}
-
 STRING 56058
 // Units: h0XS (Ship Mount), Name (Name)
 {
@@ -122530,16 +122392,10 @@ STRING 56064
 Wondrous plant said to have miraculous mind-expanding properties. Restores <AIhx,DataA1> life and <AIm1,DataA1> mana.
 }
 
-STRING 56107
-// Upgrades: R0DW (Hardened Skin), Hotkey (Hotkey)
-{
-K
-}
-
 STRING 56118
 // Items: I11U (Ko'nani's Message), Name (Name)
 {
-Ko'nani's Message
+Ko'nanis Nachricht
 }
 
 STRING 56119
@@ -122557,7 +122413,7 @@ A message from Ko'nani for the people of Theramore.
 STRING 56121
 // Items: I11V (Goods for Ko'nani), Name (Name)
 {
-Goods for Ko'nani
+Güter für Ko'nani
 }
 
 STRING 56122
@@ -122575,7 +122431,7 @@ Goods for the Ältester Ko'nani to craft fishing equipment.
 STRING 56133
 // Units: n0M1 (Pet Cow), Name (Name)
 {
-Haustier Cow
+Haustier Kuh
 }
 
 STRING 56134
@@ -122904,7 +122760,7 @@ Waal anheuern
 STRING 56271
 // Units: n0BW (Kraken), Ubertip (Tooltip - Extended)
 {
-Heavy water unit with Feenfeuer. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Schwere Wassereinheit mit Feenfeuer. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 56272
@@ -122952,7 +122808,7 @@ STRING 56278
 STRING 56279
 // Abilities: A21R (Item Summon Ship), Name (Name)
 {
-Item Schiff beschwören
+Gegenstand Schiff beschwören
 }
 
 STRING 56280
@@ -124585,13 +124441,13 @@ Hire Shadow Shivarra
 STRING 57000
 // Units: n04Q (Fel Shivarra), Name (Name)
 {
-Fel Shivarra
+Höllen-Shivarra
 }
 
 STRING 57001
 // Units: n04Q (Fel Shivarra), Tip (Tooltip - Basic)
 {
-Hire Fel Shivarra
+Höllen-Shivarra anheuern
 }
 
 STRING 57055
@@ -124609,7 +124465,7 @@ Allows watching the stars.
 STRING 57057
 // Units: n0MO (Arcane Observatory), Tip (Tooltip - Basic)
 {
-Build Arkaner Spähposten (Astromant)
+Arkanen Spähposten (Astromant) errichten
 }
 
 STRING 57058
@@ -124639,13 +124495,13 @@ Creates a corpses in the target area.
 STRING 57062
 // Items: I12U (Meteor Stone), Name (Name)
 {
-Meteor Stone
+Meteor-Stein
 }
 
 STRING 57063
 // Items: I12U (Meteor Stone), Tip (Tooltip - Basic)
 {
-Purchase Meteor Stone
+Meteor-Stein erwerben
 }
 
 STRING 57064
@@ -124723,7 +124579,7 @@ Astromant
 STRING 57077
 // Items: I12Y (Book of Astromancy), Name (Name)
 {
-Book of Astromancy
+Buch der Astromantie
 }
 
 STRING 57078
@@ -124741,19 +124597,19 @@ A book that contains knowledge of crafting Astromancy items.
 STRING 57080
 // Items: I12Y (Book of Astromancy), Tip (Tooltip - Basic)
 {
-Purchase Book of Astromancy
+Buch der Astromantie kaufen
 }
 
 STRING 57081
 // Items: I12Z (Tiny Arcane Observatory), Name (Name)
 {
-Tiny Arkaner Spähposten
+Winziger Arkaner Spähposten
 }
 
 STRING 57082
 // Items: I12Z (Tiny Arcane Observatory), Tip (Tooltip - Basic)
 {
-Purchase Arkaner Spähposten
+Winzigen Arkaner Spähposten kaufen
 }
 
 STRING 57083
@@ -124795,7 +124651,7 @@ STRING 57088
 STRING 57089
 // Abilities: A22Y (Astromancy), Name (Name)
 {
-Astromancy
+Astromantie
 }
 
 STRING 57090
@@ -126607,12 +126463,12 @@ Ashenvale Baumwand Winter
 STRING 57678
 // Doodads: D00F (Fireflies), Name (Name)
 {
-Fireflies
+Glühwürmchen
 }
 
 STRING 57679
 {
-No Fog!
+Kein Nebel!
 }
 
 STRING 57680
@@ -126648,13 +126504,13 @@ Lebendige Statue beschwören
 STRING 57691
 // Doodads: D00G (Fountain Statue), Name (Name)
 {
-Fountain Statue
+Brunnenstatue
 }
 
 STRING 57692
 // Abilities: A24G (Stone Form), EditorSuffix (Editor Suffix)
 {
-(Living Statue)
+(Lebende Statue)
 }
 
 STRING 57700
@@ -126684,7 +126540,7 @@ Additional lore based on the Warcraft III campaigns.
 
 STRING 57708
 {
-Does not follow the WoW Expansions.
+Folgt nicht den WoW-Erweiterungen.
 }
 
 STRING 57716
@@ -126978,25 +126834,25 @@ STRING 57842
 STRING 57843
 // Units: o01I (Railway North), Name (Name)
 {
-Railway North
+Eisenbahn Norden
 }
 
 STRING 57844
 // Units: o01I (Railway North), Tip (Tooltip - Basic)
 {
-Railway North
+Eisenbahn Norden
 }
 
 STRING 57846
 // Units: o01J (Railway South), Name (Name)
 {
-Railway South
+Eisenbahn Süden
 }
 
 STRING 57847
 // Units: o01J (Railway South), Tip (Tooltip - Basic)
 {
-Railway South
+Eisenbahn Süden
 }
 
 STRING 57848
@@ -127026,7 +126882,7 @@ Zepter der Zwerge
 STRING 57859
 // Abilities: A0DX (Summon Dwarf Miners), Name (Name)
 {
-Summon Dwarf Miners
+Zwergenbergleute beschwören
 }
 
 STRING 57861
@@ -127194,13 +127050,13 @@ Zwergschmiede errichten
 STRING 57891
 // Units: h02Y (Dwarf Rider), Name (Name)
 {
-Dwarf Rider
+Zwergen-Reiter
 }
 
 STRING 57892
 // Units: h02Y (Dwarf Rider), Tip (Tooltip - Basic)
 {
-Train Dwarf Rider
+Zwergen-Reiter ausbilden
 }
 
 STRING 57893
@@ -127356,13 +127212,13 @@ Loads a targeted friendly Dwarf Miner.
 STRING 57919
 // Units: h02T (Dwarf Rail Tank), Name (Name)
 {
-Dwarf Rail Tank
+Zwergen-Schienenpanzer
 }
 
 STRING 57920
 // Units: h02T (Dwarf Rail Tank), Tip (Tooltip - Basic)
 {
-Train Dwarf Rail Tank
+Zwergen-Schienenpanzer ausbilden
 }
 
 STRING 57921
@@ -127386,13 +127242,13 @@ STRING 57923
 STRING 57924
 // Units: n04U (Gryphon), Name (Name)
 {
-Gryphon
+Greif
 }
 
 STRING 57925
 // Units: n04Y (Gryphon Breeding), Tip (Tooltip - Basic)
 {
-Train Gryphon
+Greif ausbilden
 }
 
 STRING 57926
@@ -128992,25 +128848,25 @@ STRING 58555
 }
 
 STRING 58558
-// Units: n055 (Freiberufler-Turm), Name (Name)
+// Units: n055 (Freelancer Tower), Name (Name)
 {
 Freiberufler-Turm
 }
 
 STRING 58559
-// Units: n055 (Freiberufler-Turm), Tip (Tooltip - Basic)
+// Units: n055 (Freelancer Tower), Tip (Tooltip - Basic)
 {
 Build Freiberufler-Turm
 }
 
 STRING 58560
-// Units: n056 (Advanced Freiberufler-Turm), Tip (Tooltip - Basic)
+// Units: n056 (Advanced Freelancer Tower), Tip (Tooltip - Basic)
 {
 Ausbau zum Advanced Freiberufler-Turm
 }
 
 STRING 58561
-// Units: n056 (Advanced Freiberufler-Turm), Name (Name)
+// Units: n056 (Advanced Freelancer Tower), Name (Name)
 {
 Advanced Freiberufler-Turm
 }
@@ -129072,7 +128928,7 @@ Bewegen
 STRING 58572
 // Abilities: A0EY (Move), Ubertip (Tooltip - Normal - Extended)
 {
-Moves the train.
+Setzt den Zug in Bewegung.
 }
 
 STRING 58573
@@ -129120,7 +128976,7 @@ Richtung ändern
 STRING 58580
 // Abilities: A0F0 (Change Direction), Ubertip (Tooltip - Normal - Extended)
 {
-Changes the direction of the train.
+Ändert die Richtung des Zuges.
 }
 
 STRING 58581
