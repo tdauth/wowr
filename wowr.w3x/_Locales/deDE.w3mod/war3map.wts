@@ -120043,7 +120043,7 @@ STRING 55061
 STRING 55266
 // Units: n0LN (Fel Orc Child), Name (Name)
 {
-Höllenorcs Child
+Höllenorc-Kind
 }
 
 STRING 55269
@@ -121843,13 +121843,13 @@ STRING 55858
 STRING 55859
 // Units: n0LP (Tauren Child), Name (Name)
 {
-Tauren Child
+Tauren-Kind
 }
 
 STRING 55860
 // Units: n0LP (Tauren Child), Tip (Tooltip - Basic)
 {
-Train Tauren Child
+Tauren-Kind ausbilden
 }
 
 STRING 55862
@@ -122293,25 +122293,25 @@ Gnoll-Lager
 STRING 55969
 // Units: h0XN (Buy Property Gnoll Camp), Name (Name)
 {
-Buy Property Gnoll-Lager
+Immobilie Gnoll-Lager kaufen
 }
 
 STRING 55970
 // Units: h0XN (Buy Property Gnoll Camp), Tip (Tooltip - Basic)
 {
-Buy Property Gnoll-Lager
+Immobilie Gnoll-Lager kaufen
 }
 
 STRING 55971
 // Units: h0XN (Buy Property Gnoll Camp), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Gnoll.|r|n|cffffcc00Rohstoff: Meat.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Gnolle.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55974
 // Units: h0XO (Buy Property Maraudon), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Centaur.|r|n|cffffcc00Rohstoff: Meat.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Zentauren.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55976
@@ -124615,7 +124615,7 @@ Winzigen Arkaner Spähposten kaufen
 STRING 57083
 // Items: I0LF (Tiny Arcane Observatory), Description (Description)
 {
-Creates an Arkaner Spähposten.
+Errichtet einen Arkanen Spähposten.
 }
 
 STRING 57084
@@ -124645,7 +124645,7 @@ Build Tiny Arkaner Spähposten
 STRING 57088
 // Abilities: A22X (Build Tiny Arcane Observatory), EditorSuffix (Editor Suffix)
 {
-(Profession Astromant)
+(Beruf Astromant)
 }
 
 STRING 57089
@@ -124765,19 +124765,19 @@ STRING 57154
 STRING 57157
 // Items: I0LF (Tiny Arcane Observatory), Ubertip (Tooltip - Extended)
 {
-Creates an Arkaner Spähposten at a target location.
+Errichtet am Zielort einen Arkanen Spähposten.
 }
 
 STRING 57158
 // Items: I12Z (Tiny Arcane Observatory), Description (Description)
 {
-Creates an Arkaner Spähposten.
+Errichtet einen Arkanen Spähposten.
 }
 
 STRING 57159
 // Items: I12Z (Tiny Arcane Observatory), Ubertip (Tooltip - Extended)
 {
-Creates an Arkaner Spähposten at a target location.|n|n|cffffcc00Profession Astromant.|r
+Errichtet am Zielort einen Arkanen Spähposten.|n|n|cffffcc00Beruf Astromant.|r
 }
 
 STRING 57166
@@ -125083,7 +125083,7 @@ STRING 57299
 STRING 57305
 // Items: I155 (Outland Third Place Cup), Name (Name)
 {
-Outland Third Place Cup
+Pokal Dritter Platz Fremdland
 }
 
 STRING 57307
