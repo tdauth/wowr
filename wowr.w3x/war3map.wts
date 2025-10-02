@@ -3708,21 +3708,9 @@ STRING 625
 Dummy Mark Target
 }
 
-STRING 626
-// Units: h0V1 (Dummy Fire Ray), Name (Name)
-{
-Dummy Fire Ray
-}
-
 STRING 627
 {
 Marketplaces
-}
-
-STRING 628
-// Units: h0V2 (Dummy Frost Ray), Name (Name)
-{
-Dummy Frost Ray
 }
 
 STRING 629
@@ -9177,12 +9165,6 @@ STRING 1575
 (Item - Baradé's Version)
 }
 
-STRING 1576
-// Abilities: A081 (Chain Ray), Name (Name)
-{
-Chain Ray
-}
-
 STRING 1577
 // Abilities: A052 (Animal War Training), Ubertip (Tooltip - Normal - Extended)
 {
@@ -13634,7 +13616,7 @@ STRING 2485
 }
 
 STRING 2486
-// Abilities: A1Y0 (Loot Ray), EditorSuffix (Editor Suffix)
+// Abilities: A098 (Ultravision), EditorSuffix (Editor Suffix)
 {
 (Heroes)
 }
@@ -24280,13 +24262,13 @@ B
 }
 
 STRING 4926
-// Abilities: A098 (Ultravision), EditorSuffix (Editor Suffix)
+// Abilities: A1ZX (Speed Boost), EditorSuffix (Editor Suffix)
 {
 (Heroes)
 }
 
 STRING 4927
-// Abilities: A1ZX (Speed Boost), EditorSuffix (Editor Suffix)
+// Abilities: A263 (Next Skin), EditorSuffix (Editor Suffix)
 {
 (Heroes)
 }
@@ -42832,12 +42814,6 @@ STRING 9766
 (Neutral Hostile)
 }
 
-STRING 9772
-// Abilities: A0KM (Healing Salve), EditorSuffix (Editor Suffix)
-{
-(Moonstone Dummy)
-}
-
 STRING 9775
 // Items: I0YE (Warlock), Hotkey (Hotkey)
 {
@@ -45870,7 +45846,7 @@ Hide in Trees Mana Regeneration
 }
 
 STRING 10580
-// Abilities: A263 (Next Skin), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B013 (), EditorSuffix (Editor Suffix)
 {
 (Heroes)
 }
@@ -47909,12 +47885,6 @@ STRING 11070
 Changes the skin if there are any other skins for this hero.
 }
 
-STRING 11071
-// Abilities: A080 (Water Ray), EditorSuffix (Editor Suffix)
-{
-(Heroes)
-}
-
 STRING 11073
 // Upgrades: R038 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
@@ -47973,12 +47943,6 @@ STRING 11094
 // Abilities: A0CD (Cut Down Trees), EditorSuffix (Editor Suffix)
 {
 (Goblin Steam Roller)
-}
-
-STRING 11116
-// Abilities: A081 (Chain Ray), EditorSuffix (Editor Suffix)
-{
-(Heroes)
 }
 
 STRING 11121
@@ -54566,12 +54530,6 @@ STRING 14479
 Known acccounts:
 }
 
-STRING 14480
-// Abilities: A183 (Savecodes), Ubertip (Tooltip - Normal - Extended)
-{
-Code 1
-}
-
 STRING 14481
 // Abilities: A0M1 (Disable Bridge), Untip (Tooltip - Turn Off)
 {
@@ -54768,12 +54726,6 @@ STRING 14614
 // Items: I05Y (Second Profession), Tip (Tooltip - Basic)
 {
 Second Profession
-}
-
-STRING 14623
-// Buffs/Effects: B013 (), EditorSuffix (Editor Suffix)
-{
-(Heroes)
 }
 
 STRING 14625
@@ -66509,12 +66461,6 @@ STRING 22718
 // Abilities: A1XO (Randomize Skin), Hotkey (Hotkey - Normal)
 {
 S
-}
-
-STRING 22719
-// Abilities: A183 (Savecodes), Ubertip (Tooltip - Normal - Extended)
-{
-Code 2
 }
 
 STRING 22721
@@ -80165,12 +80111,6 @@ STRING 34682
 Human Courage
 }
 
-STRING 34702
-// Abilities: A183 (Savecodes), Name (Name)
-{
-Savecodes
-}
-
 STRING 34703
 // Units: h0MU (Sorceress), EditorSuffix (Name - Editor Suffix)
 {
@@ -80211,12 +80151,6 @@ STRING 34732
 // Units: h02U (Troll Slayer), Ubertip (Tooltip - Extended)
 {
 Versatile foot soldier. Can learn the Berserk ability. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 34734
-// Abilities: A081 (Chain Ray), Tip (Tooltip - Normal)
-{
-Chain Ray
 }
 
 STRING 34735
@@ -94220,7 +94154,7 @@ Summon Cenarius
 }
 
 STRING 40229
-// Abilities: A1Y0 (Loot Ray), Hotkey (Hotkey - Normal)
+// Abilities: A1ZX (Speed Boost), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -97723,13 +97657,13 @@ Unique - Orb of Kil'jaeden
 }
 
 STRING 41499
-// Abilities: A1ZX (Speed Boost), Hotkey (Hotkey - Normal)
+// Abilities: A238 (Submerge), Hotkey (Hotkey - Normal)
 {
 K
 }
 
 STRING 41500
-// Abilities: A238 (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A238 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -97759,7 +97693,7 @@ STRING 41504
 }
 
 STRING 41506
-// Abilities: A238 (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A239 (Submerge), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -97789,7 +97723,7 @@ Purchase Tiny Quillboar Manger
 }
 
 STRING 41512
-// Abilities: A239 (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A239 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -98081,7 +98015,7 @@ STRING 41721
 }
 
 STRING 41731
-// Abilities: A239 (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A23A (Submerge), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -98441,7 +98375,7 @@ STRING 41868
 }
 
 STRING 41869
-// Abilities: A23A (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A23A (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -99215,7 +99149,7 @@ L
 }
 
 STRING 42164
-// Abilities: A23A (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A247 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -101040,7 +100974,7 @@ D
 }
 
 STRING 42823
-// Abilities: A247 (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A247 (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -101052,7 +100986,7 @@ STRING 42824
 }
 
 STRING 42825
-// Abilities: A247 (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A248 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -101088,7 +101022,7 @@ STRING 42834
 }
 
 STRING 42835
-// Abilities: A248 (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A248 (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -102078,7 +102012,7 @@ Allows skilling hero attributes and randomizing hero spells.
 }
 
 STRING 43294
-// Abilities: A248 (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A249 (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -102228,7 +102162,7 @@ STRING 43379
 }
 
 STRING 43381
-// Abilities: A249 (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A249 (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -106837,7 +106771,7 @@ Tosses a target non-mechanical enemy unit into the air, rendering it unable to m
 }
 
 STRING 46545
-// Abilities: A249 (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A24A (Burrow), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -110638,7 +110572,7 @@ The Cook gathers random ingredients for the menus.
 }
 
 STRING 49568
-// Abilities: A24A (Burrow), Hotkey (Hotkey - Normal)
+// Abilities: A24A (Burrow), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -116807,7 +116741,7 @@ STRING 51697
 }
 
 STRING 51698
-// Abilities: A24A (Burrow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A263 (Next Skin), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -116915,13 +116849,13 @@ STRING 51718
 }
 
 STRING 51728
-// Abilities: A263 (Next Skin), Hotkey (Hotkey - Normal)
+// Abilities: A264 (Flatten All), Hotkey (Hotkey - Normal)
 {
 K
 }
 
 STRING 51729
-// Abilities: A264 (Flatten All), Hotkey (Hotkey - Normal)
+// Abilities: A0J1 (Root), Unhotkey (Hotkey - Turn Off)
 {
 K
 }
@@ -117376,12 +117310,6 @@ STRING 51868
 Ancient Sasquatch
 }
 
-STRING 51869
-// Abilities: A1Y0 (Loot Ray), Name (Name)
-{
-Loot Ray
-}
-
 STRING 51875
 // Items: I0YR (Skin Villager Female), Name (Name)
 {
@@ -117483,18 +117411,6 @@ STRING 51910
 Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir the Howler,Skhowl,Kartak the Abominable
 }
 
-STRING 51918
-// Abilities: A1Y0 (Loot Ray), Tip (Tooltip - Normal)
-{
-Loot Ray
-}
-
-STRING 51936
-// Abilities: A1Y0 (Loot Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Casts a ray which pulls target items to the hero.
-}
-
 STRING 51998
 // Items: I0YS (Randomize Skin), Name (Name)
 {
@@ -117537,12 +117453,6 @@ STRING 52004
 Randomizes the skin of your hero.|n|n|cffffcc00Only allowed for heroes who can change their skin.|r
 }
 
-STRING 52025
-// Abilities: A081 (Chain Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Casts a ray which pulls target enemy units to the hero.
-}
-
 STRING 52045
 // Units: n0LB (Exodar), EditorSuffix (Name - Editor Suffix)
 {
@@ -117582,21 +117492,9 @@ Azuremyst Isles Tree Wall
 }
 
 STRING 52059
-// Abilities: A1XR (Item Freeze Damage Bonus), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B03Q (Freeze), EditorSuffix (Editor Suffix)
 {
 (Frost Ray)
-}
-
-STRING 52060
-// Abilities: A1XS (Item Liquid Fire), EditorSuffix (Editor Suffix)
-{
-(Fire Ray)
-}
-
-STRING 52061
-// Abilities: A1XS (Item Liquid Fire), Name (Name)
-{
-Item Liquid Fire
 }
 
 STRING 52099
@@ -117609,30 +117507,6 @@ STRING 52100
 // Buffs/Effects: B03Q (Freeze), Buffubertip (Tooltip - Extended)
 {
 Frozen.
-}
-
-STRING 52101
-// Buffs/Effects: B03Q (Freeze), EditorSuffix (Editor Suffix)
-{
-(Frost Ray)
-}
-
-STRING 52108
-// Abilities: A080 (Water Ray), Name (Name)
-{
-Water Ray
-}
-
-STRING 52148
-// Abilities: A080 (Water Ray), Tip (Tooltip - Normal)
-{
-Water Ray
-}
-
-STRING 52166
-// Abilities: A080 (Water Ray), Ubertip (Tooltip - Normal - Extended)
-{
-Casts a ray which will push enemy units away.
 }
 
 STRING 52189
@@ -117666,7 +117540,7 @@ Summon Arch Sorceress
 }
 
 STRING 52244
-// Abilities: A080 (Water Ray), Hotkey (Hotkey - Normal)
+// Abilities: A0J1 (Root), Hotkey (Hotkey - Normal)
 {
 K
 }
@@ -118343,7 +118217,7 @@ Increases the movement speed by <A1ZW,DataA1,%> % for <A1ZW,Dur1> seconds.
 }
 
 STRING 53368
-// Abilities: A081 (Chain Ray), Hotkey (Hotkey - Normal)
+// Upgrades: R0DW (Hardened Skin), Hotkey (Hotkey)
 {
 K
 }
@@ -121515,12 +121389,6 @@ STRING 55758
 (Property)
 }
 
-STRING 55759
-// Abilities: A0J1 (Root), Unhotkey (Hotkey - Turn Off)
-{
-K
-}
-
 STRING 55761
 // Units: N0GE (Trade Prince of the Bilgewater Carte), Name (Name)
 {
@@ -122481,12 +122349,6 @@ STRING 56046
 A powerful dragon.
 }
 
-STRING 56047
-// Abilities: A0J1 (Root), Hotkey (Hotkey - Normal)
-{
-K
-}
-
 STRING 56058
 // Units: h0XS (Ship Mount), Name (Name)
 {
@@ -122527,12 +122389,6 @@ STRING 56064
 // Items: I0H8 (Blue Mushroom), Ubertip (Tooltip - Extended)
 {
 Wondrous plant said to have miraculous mind-expanding properties. Restores <AIhx,DataA1> life and <AIm1,DataA1> mana.
-}
-
-STRING 56107
-// Upgrades: R0DW (Hardened Skin), Hotkey (Hotkey)
-{
-K
 }
 
 STRING 56118

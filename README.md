@@ -1513,3 +1513,5 @@ Here is a list of some modified versions online:
 * sPy: [HolyAura](https://www.hiveworkshop.com/threads/holyaura.158083/)
 * Yoru: [BTNWindGust](https://www.hiveworkshop.com/threads/btnwindgust.169389/)
 * tillinghast: [Repair](https://www.hiveworkshop.com/threads/repair.327476/)
+* MangakaDark: [Gnome Arcanist](https://www.hiveworkshop.com/threads/gnome-arcanist.355058/)
+* 67chrome: [BTNunitGnomeMystic](https://www.hiveworkshop.com/threads/btnunitgnomemystic.172469/)
