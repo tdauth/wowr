@@ -1874,7 +1874,7 @@ Demigod's Wrath
 }
 
 STRING 316
-// Abilities: A03C (Drain), Tip (Tooltip - Normal)
+// Abilities: A1W2 (Drain), Name (Name)
 {
 Drain
 }
@@ -23325,7 +23325,7 @@ STRING 4743
 }
 
 STRING 4744
-// Abilities: A1W2 (Drain), Name (Name)
+// Abilities: A1W2 (Drain), Tip (Tooltip - Normal)
 {
 Drain
 }
@@ -24541,7 +24541,7 @@ Absorbs the life essence of a target enemy unit by taking <A0SM,DataA1> hit poin
 }
 
 STRING 5002
-// Abilities: A1W2 (Drain), Tip (Tooltip - Normal)
+// Abilities: A1X1 (Drain), Name (Name)
 {
 Drain
 }
@@ -66646,7 +66646,7 @@ G
 }
 
 STRING 22888
-// Abilities: A1X1 (Drain), Name (Name)
+// Abilities: A0SM (Drain), Name (Name)
 {
 Drain
 }
@@ -67185,7 +67185,7 @@ STRING 23534
 }
 
 STRING 23536
-// Abilities: A0SM (Drain), Name (Name)
+// Abilities: A0SM (Drain), Tip (Tooltip - Normal)
 {
 Drain
 }
@@ -70649,7 +70649,7 @@ Devour
 }
 
 STRING 27244
-// Abilities: A0SM (Drain), Tip (Tooltip - Normal)
+// Abilities: A03C (Drain), Name (Name)
 {
 Drain
 }
@@ -114917,7 +114917,7 @@ Unloads the Fel Boars.
 }
 
 STRING 51056
-// Abilities: A03C (Drain), Name (Name)
+// Abilities: A03C (Drain), Tip (Tooltip - Normal)
 {
 Drain
 }
