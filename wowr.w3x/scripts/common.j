@@ -5149,11 +5149,11 @@ globals
     constant integer VRYKUL_TIER_2                                   = 'h0IB'
     constant integer VRYKUL_TIER_3                                   = 'h0IC'
     constant integer VRYKUL_ALTAR                                    = 'h0OF'
-    constant integer VRYKUL_FISHER_HOUSE                             = 'h0IE'
-    constant integer VRYKUL_LONGHOUSE                                = 'h0IJ'
-    constant integer VRYKUL_PROTO_DRAKE_ROOST                        = 'n0BY'
-    constant integer VRYKUL_VALKYR_TEMPLE                            = 'h0P4'
-    constant integer VRYKUL_BEASTIARY                                = 'h0P5'
+    constant integer VRYKUL_FISHER_HOUSE                             = 'h0IE' // farm
+    constant integer VRYKUL_LONGHOUSE                                = 'h0IJ' // barracks
+    constant integer VRYKUL_PROTO_DRAKE_ROOST                        = 'n0BY' // avaiary
+    constant integer VRYKUL_VALKYR_TEMPLE                            = 'h0P4' // arcane sanctuary
+    constant integer VRYKUL_BEASTIARY                                = 'h0P5' // workshop
     constant integer VRYKUL_BLACKSMITH                               = 'h0P6'
     constant integer VRYKUL_LAMP                                     = 'h0P7' // scout tower
     constant integer VRYKUL_SHIPYARD                                 = 'h0IN'
@@ -5177,20 +5177,19 @@ globals
     constant integer UPG_VRYKUL_GIANTS                               = 'R0BR'
     constant integer UPG_VRYKUL_ULTRAVISION                          = 'R0BT'
 
+    constant integer VRYKUL_WORKER                                   = 'h0ID'
     constant integer VRYKUL_WARRIOR                                  = 'h0IK' // footman
     constant integer VRYKUL_SPEAR_CARRIER                            = 'h0IM' // rifleman
     constant integer VRYKUL_MAMMOTH_RIDER                            = 'h0IL' // knight
     constant integer VRYKUL_PROTO_DRAKE                              = 'n0BZ' // gryphon rider
     constant integer VRYKUL_VALKYR_GOLDEN                            = 'n0EW' // priest
     constant integer VRYKUL_VALKYR_DARK                              = 'n0EV' // sorceress
-    constant integer VRYKUL_UNDEAD_VRYKUL                            = 'n0F1'
-    constant integer VRYKUL_RUNECARVER                               = 'h0IP'
-    constant integer VRYKUL_ARMORED_WOLF                             = 'n0EZ'
-    constant integer VRYKUL_MAMMOTH                                  = 'n0F0'
-    constant integer VRYKUL_GIANT_POLAR_BEAR                         = 'n0F6'
-    constant integer VRYKUL_RAKKAR_SHIP                              = 'h0IO'
-
-    constant integer VRYKUL_WORKER                                   = 'h0ID'
+    constant integer VRYKUL_UNDEAD_VRYKUL                            = 'n0F1' // spellbreaker
+    constant integer VRYKUL_RUNECARVER                               = 'h0IP' // flying machine
+    constant integer VRYKUL_ARMORED_WOLF                             = 'n0EZ' // mortar
+    constant integer VRYKUL_MAMMOTH                                  = 'n0F0' // siege engine
+    constant integer VRYKUL_GIANT_POLAR_BEAR                         = 'n0F6' // tauren
+    constant integer VRYKUL_RAKKAR_SHIP                              = 'h0IO' // special ship
 
     constant integer VRYKUL_CITIZEN_MALE                             = 'n0F4'
     constant integer VRYKUL_CITIZEN_FEMALE                           = 'n0F5'
