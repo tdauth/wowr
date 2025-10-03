@@ -5237,18 +5237,18 @@ globals
     constant integer UPG_TUSKARR_BURIAL_PLACE                        = 'R0CU' // special building
 
     constant integer TUSKARR_WORKER                                  = 'o05M' // worker
-    constant integer TUSKARR_GIANT_SNOWY_OWL                         = 'n0FJ' // gryphon
-    constant integer TUSKARR_GIANT_FROST_WOLF                        = 'n0FI'
-    constant integer TUSKARR_ICETUSK_MAMMOTH                         = 'n0FK' // siege engine
-    constant integer TUSKARR_POLAR_BEAR                              = 'n0FL' // sieg engine
-    constant integer TUSKARR_ELITE_ARMORED_POLAR_BEAR                = 'n0FX' // elite siege engine
-    constant integer TUSKARR_CHIEFTAIN                               = 'n0FF' // tauren
     constant integer TUSKARR_FIGHTER                                 = 'n0FD' // footman
     constant integer TUSKARR_SPEARMAN                                = 'o0FE' // rifleman
     constant integer TUSKARR_MAMMOTH_RIDER                           = 'o05T' // knight
     constant integer TUSKARR_HEALER                                  = 'n0FM' // priest
-    constant integer TUSKARR_SHAMAN                                  = 'o05R' // sorceress
-    constant integer TUSKARR_FISHING_BOAT                            = 'h0PU'
+    constant integer TUSKARR_SHAMAN                                  = 'o05R' // sorceress/spellbreaker
+    constant integer TUSKARR_GIANT_SNOWY_OWL                         = 'n0FJ' // gryphon/dragonhawk
+    constant integer TUSKARR_GIANT_FROST_WOLF                        = 'n0FI' // flying machine
+    constant integer TUSKARR_ICETUSK_MAMMOTH                         = 'n0FK' // mortar
+    constant integer TUSKARR_POLAR_BEAR                              = 'n0FL' // siege engine
+    constant integer TUSKARR_ELITE_ARMORED_POLAR_BEAR                = 'n0FX' // elite siege engine
+    constant integer TUSKARR_CHIEFTAIN                               = 'n0FF' // tauren
+    constant integer TUSKARR_FISHING_BOAT                            = 'h0PU' // special ship 1
 
     constant integer TUSKARR_PET                                     = 'n0FH'
     constant integer TUSKARR_CITIZEN_FEMALE                          = 'n0FN'
@@ -5303,22 +5303,22 @@ globals
 
     constant integer NERUBIAN_WORKER                                 = 'u01P'
     constant integer NERUBIAN_WORKER_BURROWED                        = 'u02R'
-    constant integer NERUBIAN_CRYPT_DRONE                            = 'u021'
+    constant integer NERUBIAN_CRYPT_DRONE                            = 'u021' // gryphon
     constant integer NERUBIAN_CRYPT_DRONE_COCOON                     = 'u022'
-    constant integer NERUBIAN_CRYPT_FIEND                            = 'u020'
+    constant integer NERUBIAN_CRYPT_FIEND                            = 'u020' // mortar/siege engine
     constant integer NERUBIAN_CRYPT_FIEND_BURROWED                   = 'u02E'
-    constant integer NERUBIAN_FLYING_BOMBARDER                       = 'u02C'
-    constant integer NERUBIAN_QUEEN                                  = 'n0EB'
+    constant integer NERUBIAN_FLYING_BOMBARDER                       = 'u02C' // flying machine/dragonhawk
+    constant integer NERUBIAN_QUEEN                                  = 'n0EB' // tauren
     constant integer NERUBIAN_QUEEN_BURROWED                         = 'n0ER'
-    constant integer NERUBIAN_SEER                                   = 'n0EF'
+    constant integer NERUBIAN_SEER                                   = 'n0EF' // priest
     constant integer NERUBIAN_SEER_BURROWED                          = 'n0EQ'
-    constant integer NERUBIAN_SPEAR_THROWER                          = 'n0EI'
+    constant integer NERUBIAN_SPEAR_THROWER                          = 'n0EI' // rifleman
     constant integer NERUBIAN_SPEAR_THROWER_BURROWED                 = 'n0EP'
-    constant integer NERUBIAN_SPIDER_LORD                            = 'n0EG'
+    constant integer NERUBIAN_SPIDER_LORD                            = 'n0EG' // knight
     constant integer NERUBIAN_SPIDER_LORD_BURROWED                   = 'n0EO'
     constant integer NERUBIAN_WARRIOR                                = 'n0E8' // footman
     constant integer NERUBIAN_WARRIOR_BURROWED                       = 'n0EN'
-    constant integer NERUBIAN_WEBSPINNER                             = 'n0EJ'
+    constant integer NERUBIAN_WEBSPINNER                             = 'n0EJ' // sorceress/spellbreaker
     constant integer NERUBIAN_WEBSPINNER_BURROWED                    = 'n0EM'
 
     constant integer NERUBIAN_CITIZEN_MALE                           = 'n0E9'
