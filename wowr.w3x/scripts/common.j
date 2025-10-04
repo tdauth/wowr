@@ -5334,14 +5334,15 @@ globals
     constant integer MURLOC_TIER_3                                   = 'n0G5'
     constant integer MURLOC_ALTAR                                    = 'n0FZ'
     constant integer MURLOC_SHOP                                     = 'h0PZ'
-    constant integer MURLOC_HUT                                      = 'o067'
-    constant integer MURLOC_BLADEMAKING_HUT                          = 'o06A' // Forge
-    constant integer MURLOC_BARRACKS                                 = 'n0FQ'
-    constant integer MURLOC_LUMBER_KEEP                              = 'o068'
+    constant integer MURLOC_HUT                                      = 'o067' // farm
+    constant integer MURLOC_BLADEMAKING_HUT                          = 'o06A' // blacksmith
+    constant integer MURLOC_BARRACKS                                 = 'n0FQ' // barracks
+    constant integer MURLOC_LUMBER_KEEP                              = 'o068' // lumber mill
     constant integer MURLOC_FISHER                                   = 'o069' // special building
     constant integer MURLOC_HATCHLING_GROUNDS                        = 'n0G1' // beastiary
     constant integer MURLOC_SORCERER_DEN                             = 'n0G0' // sanctuary
     constant integer MURLOC_BONE_CHIPPER                             = 'n0JW' // tower
+    constant integer MURLIC_SHIPYARD                                 = 'e00U'
 
     constant integer UPG_MURLOC_BACKPACK                             = 'R0CV'
     constant integer UPG_MURLOC_DAMAGE                               = 'R0G8'
@@ -5363,7 +5364,7 @@ globals
     constant integer MURLOC_BUBBLE_MAGE                              = 'n0G7' // sorceress
     constant integer MURLOC_SHADOWCASTER                             = 'n0G9' // priest
     constant integer MURLOC_CULTIST                                  = 'n0JB' // spellbreaker
-    constant integer MURLOC_DRAGON_TURTLE                            = 'n0FS' // catapult
+    constant integer MURLOC_DRAGON_TURTLE                            = 'n0FS' // catapult/siege engine
     constant integer MURLOC_DRAGON_TURTLE_SIEGE_FORM                 = 'n0FT' // catapult siege form
     constant integer MURLOC_SNAP_DRAGON                              = 'n0AR' // mortar
     constant integer MURLOC_COUATL                                   = 'n0BA' // weak air

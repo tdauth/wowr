@@ -74,10 +74,10 @@ function BuildingStrategy takes nothing returns nothing
         call StartExpansionSimple(MURLOC_BONE_CHIPPER)
 
         if (buildShips) then
-            call StartUnitSimple(shipyards, HUMAN_SHIPYARD)
-            call StartUnitSimple(ships_transport, HUMAN_TRANSPORT_SHIP)
-            call StartUnitSimple(ships_frigate, HUMAN_FRIGATE)
-            call StartUnitSimple(ships_battleship, HUMAN_BATTLESHIP)
+            call StartUnitSimple(shipyards, MURLIC_SHIPYARD)
+            call StartUnitSimple(ships_transport, ELF_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ELF_FRIGATE)
+            call StartUnitSimple(ships_battleship, ELF_BATTLESHIP)
         endif
 
         call Sleep(3)

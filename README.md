@@ -1514,3 +1514,5 @@ Here is a list of some modified versions online:
 * tillinghast: [Repair](https://www.hiveworkshop.com/threads/repair.327476/)
 * MangakaDark: [Gnome Arcanist](https://www.hiveworkshop.com/threads/gnome-arcanist.355058/)
 * 67chrome: [BTNunitGnomeMystic](https://www.hiveworkshop.com/threads/btnunitgnomemystic.172469/)
+* Ujimasa Hojo: [Watch Tower and Derivatives](https://www.hiveworkshop.com/threads/watch-tower-and-derivatives.245383/)
+* HuanJuan, Blizzard Entertainment: [Ogre Warlock](https://www.hiveworkshop.com/threads/ogre-warlock.355323/)
