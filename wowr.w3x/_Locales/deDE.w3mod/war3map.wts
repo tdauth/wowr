@@ -715,10 +715,22 @@ STRING 119
 |cffffcc00Volk:|r Dalaran|n|cffffcc00Class:|r Arkanist|n|cffffcc00Primäres Attribute:|r Intelligenz|n|cffffcc00Kraft:|r 14/2|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r
 }
 
+STRING 120
+// Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
+{
+Changes the class to Witch Doctor:|n- Shadow Magic|n- Weakening|n- Charm|n- Hex
+}
+
 STRING 121
 // Units: H005 (King of Azeroth), Propernames (Proper Names)
 {
 Anduin Wrynn
+}
+
+STRING 122
+// Units: e00U (Murloc Shipyard), Name (Name)
+{
+Murloc Shipyard
 }
 
 STRING 123
@@ -1339,6 +1351,12 @@ STRING 225
 |cffff8c00Artefakt|r|nA heavy diamond-socketed shield from the Unterstadt Armory.
 }
 
+STRING 226
+// Units: e00U (Murloc Shipyard), Tip (Tooltip - Basic)
+{
+Build Murloc Shipyard
+}
+
 STRING 227
 // Items: I01Y (Digging Equipment), Name (Name)
 {
@@ -1874,7 +1892,7 @@ Demigod's Wrath
 }
 
 STRING 316
-// Abilities: A03C (Drain), Tip (Tooltip - Normal)
+// Abilities: A1W2 (Drain), Name (Name)
 {
 Drain
 }
@@ -3468,6 +3486,12 @@ STRING 583
 Frostthron-Ketten
 }
 
+STRING 584
+// Upgrades: R0I1 (Submerge), EditorSuffix (Editor Suffix)
+{
+(Murloc)
+}
+
 STRING 585
 // Abilities: A0VQ (Increase Ability Level), EditorSuffix (Editor Suffix)
 {
@@ -3714,9 +3738,21 @@ STRING 625
 Dummy Mark Target
 }
 
+STRING 626
+// Upgrades: R088 (Flak Cannons), Hotkey (Hotkey)
+{
+S
+}
+
 STRING 627
 {
 Marktplätze
+}
+
+STRING 628
+// Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 629
@@ -3887,6 +3923,18 @@ STRING 656
 P
 }
 
+STRING 657
+// Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 658
+// Upgrades: R0IH (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
+{
+A
+}
+
 STRING 659
 // Units: o03F (Spirit Lounge), EditorSuffix (Name - Editor Suffix)
 {
@@ -3993,6 +4041,18 @@ STRING 676
 (Abtauchend)
 }
 
+STRING 677
+// Upgrades: R07E (Sundering Blades), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 680
+// Units: Hapm (Admiral), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Kul Tiras|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
 STRING 681
 // Units: npn5 (Expert Storm), Name (Name)
 {
@@ -4009,6 +4069,24 @@ STRING 683
 // Units: npn4 (Expert Fire), Name (Name)
 {
 Expert Fire
+}
+
+STRING 684
+// Units: Hssa (High King), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Arcanist|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 685
+// Units: Hant (Archmage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/1.8|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 686
+// Units: Hgam (Ghostly Archmage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/1.8|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 687
@@ -4273,6 +4351,12 @@ STRING 731
 This unit has Horn von Sturmwind; its armor has been increased.
 }
 
+STRING 732
+// Units: N02W (Red Dragon), EditorSuffix (Name - Editor Suffix)
+{
+(Bonus Hero)
+}
+
 STRING 733
 // Units: u006 (Gan'arg Engineer), EditorSuffix (Name - Editor Suffix)
 {
@@ -4375,7 +4459,7 @@ STRING 749
 }
 
 STRING 750
-// Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
+// Units: H08E (Guardian of Tirisfal), EditorSuffix (Name - Editor Suffix)
 {
 Wechselt die Klasse zum Hexendoktor:|n- Schwächung|n- Bezauberung|n- Hexerei
 }
@@ -6854,12 +6938,6 @@ STRING 1182
 The still beating heart of a Dragon.
 }
 
-STRING 1183
-// Units: Hapm (Admiral), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Gabelblitz, Meeres-Elementargeist beschwören, Schreckgeheul and Schlachtschiff. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
 STRING 1184
 // Items: I019 (Letter for Muradin), Name (Name)
 {
@@ -6900,12 +6978,6 @@ STRING 1190
 // Units: h0N6 (Scarlet Monastery), EditorSuffix (Name - Editor Suffix)
 {
 (Spezialgebäude) (Lordaeron)
-}
-
-STRING 1191
-// Units: Hssa (High King), Ubertip (Tooltip - Extended)
-{
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Feuerregen, Feueratem, Brillanz-Aura and Phönix. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1192
@@ -12824,25 +12896,25 @@ A
 }
 
 STRING 2322
-// Abilities: A09Z (Ping Excluded Units for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: ACad (Animate Dead), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2323
-// Abilities: A0AX (Convert Into Blood Elf), Hotkey (Hotkey - Normal)
+// Abilities: A09Z (Ping Excluded Units for Savecode), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2324
-// Abilities: A0D5 (Convert into Ancient), Hotkey (Hotkey - Normal)
+// Abilities: A0AX (Convert Into Blood Elf), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2325
-// Abilities: A0MG (Select Location), Hotkey (Hotkey - Normal)
+// Abilities: A0D5 (Convert into Ancient), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -12860,13 +12932,13 @@ STRING 2327
 }
 
 STRING 2328
-// Abilities: A1GU (Wildkin Form), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Select Location), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2329
-// Abilities: A1IO (Artifical Day), Hotkey (Hotkey - Normal)
+// Abilities: A1GU (Wildkin Form), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -12878,181 +12950,181 @@ Zerberus
 }
 
 STRING 2331
-// Abilities: A1L8 (-1 Strength), Hotkey (Hotkey - Normal)
+// Abilities: A1IO (Artifical Day), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2332
-// Abilities: A1LL (Attack Speed Bonus), Researchhotkey (Hotkey - Learn)
+// Abilities: A1L8 (-1 Strength), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2333
-// Abilities: A1LN (Damage Bonus), Researchhotkey (Hotkey - Learn)
+// Abilities: A1LL (Attack Speed Bonus), Researchhotkey (Hotkey - Learn)
 {
 A
 }
 
 STRING 2334
-// Abilities: A1LP (Armor Bonus), Researchhotkey (Hotkey - Learn)
+// Abilities: A1LN (Damage Bonus), Researchhotkey (Hotkey - Learn)
 {
 A
 }
 
 STRING 2335
-// Abilities: A1OG (Mark 4), Hotkey (Hotkey - Normal)
+// Abilities: A1LP (Armor Bonus), Researchhotkey (Hotkey - Learn)
 {
 A
 }
 
 STRING 2336
-// Abilities: A1X6 (Attack), Hotkey (Hotkey - Normal)
+// Abilities: A1OG (Mark 4), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2337
-// Abilities: A1XA (Auto Skill), Hotkey (Hotkey - Normal)
+// Abilities: A1X6 (Attack), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2338
-// Abilities: A0WR (Herbalism - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1XA (Auto Skill), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2339
-// Abilities: A0WK (Alchemy - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (Herbalism - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2340
-// Abilities: A0WM (Dragon Breeding - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0WK (Alchemy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2341
-// Abilities: A0WV (Necromancy - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0WM (Dragon Breeding - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2342
-// Abilities: A0YG (Weaponsmithing - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0WV (Necromancy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2343
-// Abilities: A0YI (Scribing - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0YG (Weaponsmithing - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2344
-// Abilities: A0YJ (Enchanting - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0YI (Scribing - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2345
-// Abilities: A0YM (Armoring - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0YJ (Enchanting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2346
-// Abilities: A108 (Inscription - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A0YM (Armoring - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2347
-// Abilities: A10A (Warlockery - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A108 (Inscription - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2348
-// Abilities: A10F (Archaeology - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A10A (Warlockery - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2349
-// Abilities: A10R (Runeforging - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A10F (Archaeology - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2350
-// Abilities: A10W (Jewelcrafting - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A10R (Runeforging - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2351
-// Abilities: A17I (Witch Doctor - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A10W (Jewelcrafting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2352
-// Abilities: A17M (Loremastery - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A17I (Witch Doctor - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2353
-// Abilities: A1BE (Sorcery - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A17M (Loremastery - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2354
-// Abilities: A1P5 (Sculpting - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1BE (Sorcery - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2355
-// Abilities: A1UD (Farming - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1P5 (Sculpting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2356
-// Abilities: A1ZB (Merchant - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1UD (Farming - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2357
-// Abilities: A1ZH (Engineering - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1ZB (Merchant - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2358
-// Abilities: A209 (Hunting - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1ZH (Engineering - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2359
-// Abilities: A24F (Captain - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A209 (Hunting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2360
-// Abilities: A25X (Astromancy - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A24F (Captain - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -13076,37 +13148,37 @@ Kombinierer
 }
 
 STRING 2364
-// Abilities: A260 (Demolishing - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A25X (Astromancy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2365
-// Abilities: A266 (Taming - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A260 (Demolishing - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2366
-// Abilities: A0L2 (Cooking - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A266 (Taming - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2367
-// Abilities: A0WT (Slot 5), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (Cooking - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2368
-// Abilities: A0ID (Acid Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0WT (Slot 5), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2369
-// Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
+// Abilities: A0ID (Acid Bomb), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -13118,7 +13190,7 @@ A
 }
 
 STRING 2371
-// Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
+// Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
 {
 A
 }
@@ -13130,13 +13202,13 @@ A
 }
 
 STRING 2373
-// Upgrades: R06G (Web), Hotkey (Hotkey)
+// Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
 {
 A
 }
 
 STRING 2374
-// Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
+// Upgrades: R06G (Web), Hotkey (Hotkey)
 {
 A
 }
@@ -13148,13 +13220,13 @@ A
 }
 
 STRING 2376
-// Upgrades: R09D (Pillage), Hotkey (Hotkey)
+// Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
 {
 A
 }
 
 STRING 2377
-// Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Hotkey (Hotkey)
+// Upgrades: R09D (Pillage), Hotkey (Hotkey)
 {
 A
 }
@@ -13166,7 +13238,7 @@ A
 }
 
 STRING 2379
-// Upgrades: R0BL (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
+// Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Hotkey (Hotkey)
 {
 A
 }
@@ -13178,7 +13250,7 @@ A
 }
 
 STRING 2381
-// Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
+// Upgrades: R0BL (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
 {
 A
 }
@@ -13190,7 +13262,7 @@ A
 }
 
 STRING 2383
-// Upgrades: R0DL (Druid of the Claw Adept Training,Druid of the Claw Master Training), Hotkey (Hotkey)
+// Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
 {
 A
 }
@@ -14894,19 +14966,19 @@ Phönixfeuer
 }
 
 STRING 2737
-// Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Hotkey (Hotkey)
+// Upgrades: R0DL (Druid of the Claw Adept Training,Druid of the Claw Master Training), Hotkey (Hotkey)
 {
 A
 }
 
 STRING 2738
-// Upgrades: R0EA (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Hotkey (Hotkey)
 {
 A
 }
 
 STRING 2739
-// Upgrades: R0IH (Naga Siren Adept Training,Naga Siren Master Training), Hotkey (Hotkey)
+// Upgrades: R0EA (Ensnare), Hotkey (Hotkey)
 {
 A
 }
@@ -20328,12 +20400,6 @@ STRING 4034
 M
 }
 
-STRING 4035
-// Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Blood Elf.|r|n|cffffcc00Class: Feuermagier.|r
-}
-
 STRING 4036
 // Abilities: A0GD (Improved Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
@@ -21180,12 +21246,6 @@ STRING 4298
 Feueratem
 }
 
-STRING 4299
-// Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Warrior.|r
-}
-
 STRING 4300
 // Abilities: A16K (Disarmament), EditorSuffix (Editor Suffix)
 {
@@ -21217,7 +21277,7 @@ Entwaffnung
 }
 
 STRING 4305
-// Units: Hddt (Master Swordsman), EditorSuffix (Name - Editor Suffix)
+// Units: Hant (Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -23325,7 +23385,7 @@ STRING 4743
 }
 
 STRING 4744
-// Abilities: A1W2 (Drain), Name (Name)
+// Abilities: A1W2 (Drain), Tip (Tooltip - Normal)
 {
 Drain
 }
@@ -24541,7 +24601,7 @@ Absorptions the life essence of a target enemy unit by taking <A0SM,DataA1> hit 
 }
 
 STRING 5002
-// Abilities: A1W2 (Drain), Tip (Tooltip - Normal)
+// Abilities: A1X1 (Drain), Name (Name)
 {
 Drain
 }
@@ -27620,7 +27680,7 @@ Kombination of Humans, Dwarves and Elves.|n- Fast building construction with mul
 }
 
 STRING 5604
-// Units: Osam (Blademaster), EditorSuffix (Name - Editor Suffix)
+// Units: Hgam (Ghostly Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -31047,7 +31107,7 @@ Travel to Outland and capture him. He has to brought to trial for his crimes to 
 }
 
 STRING 6254
-// Units: U00L (Dark Ranger), EditorSuffix (Name - Editor Suffix)
+// Units: Hddt (Master Swordsman), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -31989,7 +32049,7 @@ B
 }
 
 STRING 6536
-// Units: O00B (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: Osam (Blademaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -32055,7 +32115,7 @@ STRING 6546
 }
 
 STRING 6547
-// Units: O00C (Beastmaster), EditorSuffix (Name - Editor Suffix)
+// Units: U00L (Dark Ranger), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -32658,7 +32718,7 @@ Skin Dorfbewohner-Kindes 2
 }
 
 STRING 6734
-// Units: N01F (Brewmaster), EditorSuffix (Name - Editor Suffix)
+// Units: O00B (Shadow Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -33132,7 +33192,7 @@ Goblinschredder beschwören
 }
 
 STRING 6894
-// Units: N01P (Pit Lord), EditorSuffix (Name - Editor Suffix)
+// Units: O00C (Beastmaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -41345,7 +41405,7 @@ Aegwynn beschwören
 }
 
 STRING 8706
-// Units: N01T (Blademaster), EditorSuffix (Name - Editor Suffix)
+// Units: N01F (Brewmaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -45376,7 +45436,7 @@ Invasion
 }
 
 STRING 10485
-// Items: fgrg (Stone Token), Hotkey (Hotkey)
+// Units: e00U (Murloc Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -45811,7 +45871,7 @@ STRING 10572
 }
 
 STRING 10573
-// Items: gomn (Glyph of Omniscience), Hotkey (Hotkey)
+// Items: fgrg (Stone Token), Hotkey (Hotkey)
 {
 S
 }
@@ -46503,7 +46563,7 @@ D
 }
 
 STRING 10742
-// Items: rots (Scepter of the Sea), Hotkey (Hotkey)
+// Items: gomn (Glyph of Omniscience), Hotkey (Hotkey)
 {
 S
 }
@@ -46713,7 +46773,7 @@ L
 }
 
 STRING 10779
-// Items: I05Y (Second Profession), Hotkey (Hotkey)
+// Items: rots (Scepter of the Sea), Hotkey (Hotkey)
 {
 S
 }
@@ -46905,7 +46965,7 @@ W
 }
 
 STRING 10854
-// Items: I065 (Naga Ruins (Sunken Kalimdor)), Hotkey (Hotkey)
+// Items: I05Y (Second Profession), Hotkey (Hotkey)
 {
 S
 }
@@ -47145,19 +47205,19 @@ G
 }
 
 STRING 10900
-// Items: I06F (Naga), Hotkey (Hotkey)
+// Items: I065 (Naga Ruins (Sunken Kalimdor)), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 10901
-// Items: I06Q (Loremaster), Hotkey (Hotkey)
+// Items: I06F (Naga), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 10902
-// Items: I08U (Boards), Hotkey (Hotkey)
+// Items: I06Q (Loremaster), Hotkey (Hotkey)
 {
 S
 }
@@ -47301,7 +47361,7 @@ Creates a Gnome Turret.
 }
 
 STRING 10927
-// Items: I097 (Craft Boards), Hotkey (Hotkey)
+// Items: I08U (Boards), Hotkey (Hotkey)
 {
 S
 }
@@ -47649,7 +47709,7 @@ Ein listiger Held, adept at quickly killing individual units and creating confus
 }
 
 STRING 11019
-// Items: I09H (Item Locker), Hotkey (Hotkey)
+// Items: I097 (Craft Boards), Hotkey (Hotkey)
 {
 S
 }
@@ -48944,7 +49004,7 @@ Reveals an area of the map. |nDetects invisible units. |nHält <A096,Dur1> Sekun
 }
 
 STRING 11442
-// Items: I09Q (Troll), Hotkey (Hotkey)
+// Items: I09H (Item Locker), Hotkey (Hotkey)
 {
 S
 }
@@ -49723,7 +49783,7 @@ W
 }
 
 STRING 11709
-// Items: I0B0 (Summon Red Dragon), Hotkey (Hotkey)
+// Items: I09Q (Troll), Hotkey (Hotkey)
 {
 S
 }
@@ -53605,7 +53665,7 @@ Build Demon Shipyard
 }
 
 STRING 14055
-// Items: I0AL (Summon Green Dragon), Hotkey (Hotkey)
+// Items: I0B0 (Summon Red Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -54395,7 +54455,7 @@ Purchase Amulet of Martial Arts
 }
 
 STRING 14411
-// Items: I0AM (Summon Black Dragon), Hotkey (Hotkey)
+// Items: I0AL (Summon Green Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -54413,13 +54473,13 @@ G
 }
 
 STRING 14416
-// Units: U00N (Death Knight), EditorSuffix (Name - Editor Suffix)
+// Units: N01P (Pit Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
 
 STRING 14417
-// Units: H018 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
+// Units: N01T (Blademaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -54904,7 +54964,7 @@ STRING 14726
 }
 
 STRING 14727
-// Items: I0AN (Summon Bronze Dragon), Hotkey (Hotkey)
+// Items: I0AM (Summon Black Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -54976,7 +55036,7 @@ Murloczauberer wiederbeleben
 }
 
 STRING 14796
-// Units: E00H (Demigod), EditorSuffix (Name - Editor Suffix)
+// Units: U00N (Death Knight), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -55785,7 +55845,7 @@ Augen-Tentakel erzeugen
 }
 
 STRING 15577
-// Units: H02B (Sea Witch), EditorSuffix (Name - Editor Suffix)
+// Units: H018 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -55947,7 +56007,7 @@ E
 }
 
 STRING 15817
-// Units: H02C (Blood Mage), EditorSuffix (Name - Editor Suffix)
+// Units: E00H (Demigod), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -56412,7 +56472,7 @@ Dritten Helden auswählen.
 }
 
 STRING 16176
-// Units: H03M (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
+// Units: H02B (Sea Witch), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -56472,7 +56532,7 @@ STRING 16202
 }
 
 STRING 16203
-// Units: H0A4 (Archmage), EditorSuffix (Name - Editor Suffix)
+// Units: H02C (Blood Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -57601,7 +57661,7 @@ STRING 16859
 }
 
 STRING 16860
-// Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
+// Items: I0AN (Summon Bronze Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -57780,7 +57840,7 @@ O
 }
 
 STRING 16918
-// Items: I0B3 (Summon Nether Dragon), Hotkey (Hotkey)
+// Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -58087,7 +58147,7 @@ You must be the leader of the clan!
 }
 
 STRING 17004
-// Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
+// Items: I0B3 (Summon Nether Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -58208,7 +58268,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 17296
-// Items: I0NM (Inscriptor), Hotkey (Hotkey)
+// Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
 {
 S
 }
@@ -58580,7 +58640,7 @@ Equips the sword which allows only melee attacks.
 }
 
 STRING 17362
-// Items: I0OT (Summon Guard of the Old Gods), Hotkey (Hotkey)
+// Items: I0NM (Inscriptor), Hotkey (Hotkey)
 {
 S
 }
@@ -58688,7 +58748,7 @@ STRING 17397
 }
 
 STRING 17400
-// Items: I0RR (-1 Agility), Hotkey (Hotkey)
+// Items: I0OT (Summon Guard of the Old Gods), Hotkey (Hotkey)
 {
 S
 }
@@ -59702,7 +59762,7 @@ Boards
 }
 
 STRING 17811
-// Items: I0WN (Cook), Hotkey (Hotkey)
+// Items: I0RR (-1 Agility), Hotkey (Hotkey)
 {
 S
 }
@@ -59972,7 +60032,7 @@ Nachtaktiv
 }
 
 STRING 18126
-// Items: I0WX (Fisherman), Hotkey (Hotkey)
+// Items: I0WN (Cook), Hotkey (Hotkey)
 {
 S
 }
@@ -60271,7 +60331,7 @@ STRING 18706
 }
 
 STRING 18734
-// Items: I13G (Tome of Armor), Hotkey (Hotkey)
+// Items: I0WX (Fisherman), Hotkey (Hotkey)
 {
 S
 }
@@ -60406,13 +60466,13 @@ Kritischer Schlag
 }
 
 STRING 18799
-// Units: H0A5 (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: H03M (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
 
 STRING 18800
-// Units: H0AI (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: H0A4 (Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -61162,7 +61222,7 @@ Manaregeneration
 }
 
 STRING 18995
-// Items: I16D (Craft Firehand Gauntlets), Hotkey (Hotkey)
+// Items: I13G (Tome of Armor), Hotkey (Hotkey)
 {
 S
 }
@@ -61738,7 +61798,7 @@ E
 }
 
 STRING 19665
-// Items: I18B (Scepter of the Cult), Hotkey (Hotkey)
+// Items: I16D (Craft Firehand Gauntlets), Hotkey (Hotkey)
 {
 S
 }
@@ -61774,7 +61834,7 @@ Freelancer Shipyard
 }
 
 STRING 19758
-// Units: H0AK (Mountain King), EditorSuffix (Name - Editor Suffix)
+// Units: H0A5 (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -62144,7 +62204,7 @@ E
 }
 
 STRING 19937
-// Items: I19U (Spade), Hotkey (Hotkey)
+// Items: I18B (Scepter of the Cult), Hotkey (Hotkey)
 {
 S
 }
@@ -62330,7 +62390,7 @@ Y
 }
 
 STRING 20037
-// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
+// Items: I19U (Spade), Hotkey (Hotkey)
 {
 S
 }
@@ -62444,13 +62504,13 @@ Gold und Holz zurückbringen
 }
 
 STRING 20070
-// Abilities: A0AY (Convert Into Naga), Hotkey (Hotkey - Normal)
+// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 20071
-// Abilities: A0DC (Play Clan Sound), Hotkey (Hotkey - Normal)
+// Abilities: A0AY (Convert Into Naga), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62703,7 +62763,7 @@ Y
 }
 
 STRING 20146
-// Abilities: A0EZ (Stop), Hotkey (Hotkey - Normal)
+// Abilities: A0DC (Play Clan Sound), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -63252,19 +63312,19 @@ STRING 20352
 }
 
 STRING 20353
-// Abilities: A0D4 (Convert into Organic), Hotkey (Hotkey - Normal)
+// Abilities: ACdc (Death Coil), Hotkey (Hotkey - Normal)
 {
 O
 }
 
 STRING 20354
-// Abilities: A0MQ (Order Items), Hotkey (Hotkey - Normal)
+// Abilities: A0D4 (Convert into Organic), Hotkey (Hotkey - Normal)
 {
 O
 }
 
 STRING 20355
-// Abilities: A12D (Cloud), Hotkey (Hotkey - Normal)
+// Abilities: A0MQ (Order Items), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -63282,7 +63342,7 @@ STRING 20357
 }
 
 STRING 20358
-// Abilities: A1PM (Harvest Custom Resources), Hotkey (Hotkey - Normal)
+// Abilities: A12D (Cloud), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -64867,7 +64927,7 @@ STRING 21375
 }
 
 STRING 21381
-// Abilities: A0PQ (Dark Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0EZ (Stop), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64879,13 +64939,13 @@ Jaina beschwören
 }
 
 STRING 21384
-// Units: U01D (Crypt Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H0AI (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
 
 STRING 21385
-// Units: E00X (Warden), EditorSuffix (Name - Editor Suffix)
+// Units: H0AK (Mountain King), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -64975,7 +65035,7 @@ Summon Antonidas
 }
 
 STRING 22255
-// Units: E00Y (Priestess of the Moon), EditorSuffix (Name - Editor Suffix)
+// Units: U01D (Crypt Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -64999,7 +65059,7 @@ Revive Kil'jaeden
 }
 
 STRING 22262
-// Units: E00Z (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
+// Units: E00X (Warden), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -65529,7 +65589,7 @@ Großen Leerwandler ausbilden
 }
 
 STRING 22399
-// Abilities: A1PN (Return Resources), Hotkey (Hotkey - Normal)
+// Abilities: A1PM (Harvest Custom Resources), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -65547,7 +65607,7 @@ Eredar-Zauberer-Meisterausbildung
 }
 
 STRING 22403
-// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
+// Abilities: A0PQ (Dark Summoning), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65931,7 +65991,7 @@ Anub'arak beschwören
 }
 
 STRING 22501
-// Units: E010 (Demon Hunter), EditorSuffix (Name - Editor Suffix)
+// Units: E00Y (Priestess of the Moon), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -65949,7 +66009,7 @@ Anub'arak wiederbeleben
 }
 
 STRING 22504
-// Units: O02R (Far Seer), EditorSuffix (Name - Editor Suffix)
+// Units: E00Z (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -65979,7 +66039,7 @@ Tyrande beschwören
 }
 
 STRING 22509
-// Units: O02S (Tauren Chieftain), EditorSuffix (Name - Editor Suffix)
+// Units: E010 (Demon Hunter), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66003,13 +66063,13 @@ Geist beschwören
 }
 
 STRING 22513
-// Units: O02T (Blademaster), EditorSuffix (Name - Editor Suffix)
+// Units: O02R (Far Seer), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
 
 STRING 22514
-// Units: U01E (Dreadlord), EditorSuffix (Name - Editor Suffix)
+// Units: O02S (Tauren Chieftain), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66051,7 +66111,7 @@ Thrall wiederbeleben
 }
 
 STRING 22522
-// Units: H0JV (Prophet), EditorSuffix (Name - Editor Suffix)
+// Units: O02T (Blademaster), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66063,7 +66123,7 @@ Cairne Bloodhoof beschwören
 }
 
 STRING 22524
-// Units: H0OU (Naaru), EditorSuffix (Name - Editor Suffix)
+// Units: U01E (Dreadlord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66087,7 +66147,7 @@ Grommash Hellscream beschwören
 }
 
 STRING 22528
-// Units: H0PN (King of Gilneas), EditorSuffix (Name - Editor Suffix)
+// Units: H0JV (Prophet), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66111,7 +66171,7 @@ An additional backpack with equipment which can be carried by your first hero. A
 }
 
 STRING 22564
-// Units: N0FA (Warlock), EditorSuffix (Name - Editor Suffix)
+// Units: H0OU (Naaru), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66363,7 +66423,7 @@ Massives Drachenei.
 }
 
 STRING 22690
-// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66435,31 +66495,31 @@ Blaudrachen beschwören
 }
 
 STRING 22714
-// Abilities: A1H2 (Bear Form), Hotkey (Hotkey - Normal)
+// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 22715
-// Abilities: A1L9 (-1 Agility), Hotkey (Hotkey - Normal)
+// Abilities: A1H2 (Bear Form), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 22716
-// Abilities: A1OH (Transfer), Hotkey (Hotkey - Normal)
+// Abilities: A1L9 (-1 Agility), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 22717
-// Abilities: A1X5 (Stop), Hotkey (Hotkey - Normal)
+// Abilities: A1OH (Transfer), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 22718
-// Abilities: A1XO (Randomize Skin), Hotkey (Hotkey - Normal)
+// Abilities: A1X5 (Stop), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66647,7 +66707,7 @@ G
 }
 
 STRING 22888
-// Abilities: A1X1 (Drain), Name (Name)
+// Abilities: A0SM (Drain), Name (Name)
 {
 Drain
 }
@@ -66659,7 +66719,7 @@ Reinforced Arcane Creature Attack
 }
 
 STRING 22897
-// Units: E01J (Priestess of the Moon on Owl), EditorSuffix (Name - Editor Suffix)
+// Units: H0PN (King of Gilneas), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66677,7 +66737,7 @@ Magical Creature Attack
 }
 
 STRING 22904
-// Units: E01K (Archdruid), EditorSuffix (Name - Editor Suffix)
+// Units: N0FA (Warlock), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -66802,7 +66862,7 @@ E
 }
 
 STRING 23064
-// Abilities: A0WS (Herbalism - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1XO (Randomize Skin), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -67186,7 +67246,7 @@ STRING 23534
 }
 
 STRING 23536
-// Abilities: A0SM (Drain), Name (Name)
+// Abilities: A0SM (Drain), Tip (Tooltip - Normal)
 {
 Drain
 }
@@ -67330,13 +67390,13 @@ Heavy ranged amphibious unit. Can initially cast Parasit. Can also learn Todesma
 }
 
 STRING 23794
-// Abilities: A226 (Summon Eagle), Hotkey (Hotkey - Normal)
+// Abilities: A1PN (Return Resources), Hotkey (Hotkey - Normal)
 {
 O
 }
 
 STRING 23795
-// Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Hotkey (Hotkey)
+// Abilities: A226 (Summon Eagle), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -67360,7 +67420,7 @@ Stab der Teleportation
 }
 
 STRING 23843
-// Abilities: A0WN (Dragon Breeding - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0WS (Herbalism - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68422,7 +68482,7 @@ Brunnen errichten
 }
 
 STRING 24843
-// Abilities: A0WO (Alchemy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0WN (Dragon Breeding - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68588,7 +68648,7 @@ Evasion
 }
 
 STRING 25012
-// Upgrades: R07E (Sundering Blades), Hotkey (Hotkey)
+// Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Hotkey (Hotkey)
 {
 O
 }
@@ -68768,7 +68828,7 @@ A special invention by the Goblins.
 }
 
 STRING 25109
-// Units: N0HJ (Harpy Queen), EditorSuffix (Name - Editor Suffix)
+// Units: E01J (Priestess of the Moon on Owl), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -68911,7 +68971,7 @@ Captain wiederbeleben
 }
 
 STRING 25383
-// Abilities: A0WY (Necromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0WO (Alchemy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69181,7 +69241,7 @@ D
 }
 
 STRING 25611
-// Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0WY (Necromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69247,7 +69307,7 @@ Adler ausbilden
 }
 
 STRING 25948
-// Units: H0QW (High King of the Alliance), EditorSuffix (Name - Editor Suffix)
+// Units: E01K (Archdruid), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -69307,13 +69367,13 @@ STRING 25983
 }
 
 STRING 25994
-// Units: N0KM (C'Thrax), EditorSuffix (Name - Editor Suffix)
+// Units: N0HJ (Harpy Queen), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
 
 STRING 25995
-// Units: H0Y5 (Sea Witch), EditorSuffix (Name - Editor Suffix)
+// Units: H0QW (High King of the Alliance), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -69325,7 +69385,7 @@ Truhe
 }
 
 STRING 26003
-// Units: U03I (Crypt Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0KM (C'Thrax), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -69528,7 +69588,7 @@ Golden Claw
 }
 
 STRING 26168
-// Abilities: A0YL (Enchanting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69732,7 +69792,7 @@ Mauer errichten
 }
 
 STRING 26251
-// Abilities: A0ZK (Armoring - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0YL (Enchanting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69792,7 +69852,7 @@ Ausbau zum Advanced Dragon's Reach
 }
 
 STRING 26431
-// Abilities: A107 (Weaponsmithing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Armoring - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -70362,19 +70422,19 @@ STRING 26722
 }
 
 STRING 26730
-// Abilities: A109 (Inscription - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A107 (Weaponsmithing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 26853
-// Abilities: A10B (Warlockery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A109 (Inscription - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 26862
-// Abilities: A10H (Archaeology - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Warlockery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -70650,7 +70710,7 @@ Verschlingen
 }
 
 STRING 27244
-// Abilities: A0SM (Drain), Tip (Tooltip - Normal)
+// Abilities: A03C (Drain), Name (Name)
 {
 Drain
 }
@@ -70776,7 +70836,7 @@ G
 }
 
 STRING 27633
-// Abilities: A10T (Runeforging - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10H (Archaeology - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -70818,7 +70878,7 @@ Schwarmraketen erforschen
 }
 
 STRING 27793
-// Abilities: A10X (Jewelcrafting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10T (Runeforging - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71664,7 +71724,7 @@ Gibt den Angriffen in der Nähe befindlicher befreundeter Einheiten eine zusätz
 }
 
 STRING 28168
-// Abilities: A114 (Flame Storm), Hotkey (Hotkey - Normal)
+// Abilities: A10X (Jewelcrafting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71856,7 +71916,7 @@ Train Ballista
 }
 
 STRING 28420
-// Abilities: A17L (Witch Doctor - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A114 (Flame Storm), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73036,7 +73096,7 @@ Schrei
 }
 
 STRING 29639
-// Units: H0YD (Ranger), EditorSuffix (Name - Editor Suffix)
+// Units: H0Y5 (Sea Witch), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -73060,7 +73120,7 @@ Abtauchend Lady Vashj
 }
 
 STRING 29678
-// Abilities: A17N (Loremastery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A17L (Witch Doctor - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73144,7 +73204,7 @@ Schild der Ehre herstellen
 }
 
 STRING 30023
-// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A17N (Loremastery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73359,7 +73419,7 @@ STRING 30461
 }
 
 STRING 30463
-// Abilities: A1NT (Sculpting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73443,7 +73503,7 @@ E
 }
 
 STRING 30703
-// Abilities: A1ZF (Merchant - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1NT (Sculpting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73485,7 +73545,7 @@ P
 }
 
 STRING 30800
-// Abilities: A208 (Hunting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1ZF (Merchant - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73857,7 +73917,7 @@ STRING 30933
 }
 
 STRING 30934
-// Abilities: A20T (Farming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A208 (Hunting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -74979,7 +75039,7 @@ Korallengolem ausbilden
 }
 
 STRING 31525
-// Abilities: A20Y (Engineering - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A20T (Farming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -75573,7 +75633,7 @@ Djinn
 }
 
 STRING 32016
-// Abilities: A21G (Captain - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A20Y (Engineering - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -75771,7 +75831,7 @@ STRING 32275
 }
 
 STRING 32279
-// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A21G (Captain - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -76173,7 +76233,7 @@ Ein schönes Haustier.
 }
 
 STRING 32523
-// Abilities: A261 (Demolishing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -76371,7 +76431,7 @@ STRING 32557
 }
 
 STRING 32579
-// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A261 (Demolishing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -77414,7 +77474,7 @@ STRING 33301
 }
 
 STRING 33342
-// Abilities: A07Z (Spell Steal), Hotkey (Hotkey - Normal)
+// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -77546,7 +77606,7 @@ Feuerregen erforschen
 }
 
 STRING 33423
-// Abilities: A07Z (Spell Steal), Unhotkey (Hotkey - Turn Off)
+// Abilities: A07Z (Spell Steal), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -77564,7 +77624,7 @@ L
 }
 
 STRING 33428
-// Abilities: A0X1 (Slot 6), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Spell Steal), Unhotkey (Hotkey - Turn Off)
 {
 S
 }
@@ -78158,7 +78218,7 @@ Troll-Tigerhai-Reiter ausbilden
 }
 
 STRING 33715
-// Abilities: A03N (Matching Class), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Slot 6), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -79477,7 +79537,7 @@ D
 }
 
 STRING 34215
-// Abilities: A08M (Sentinel), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Matching Class), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -79927,7 +79987,7 @@ Hire Schürfer
 }
 
 STRING 34503
-// Abilities: A01I (Wind Gust), Hotkey (Hotkey - Normal)
+// Abilities: A08M (Sentinel), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -80137,7 +80197,7 @@ STRING 34709
 }
 
 STRING 34728
-// Upgrades: R00F (Banshee Adept Training,Banshee Master Training), Hotkey (Hotkey)
+// Abilities: A01I (Wind Gust), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -81706,7 +81766,7 @@ STRING 35345
 }
 
 STRING 35346
-// Units: E02F (Chimaera), EditorSuffix (Name - Editor Suffix)
+// Units: U03I (Crypt Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -81820,7 +81880,7 @@ Bietet eine zusätzliche Quelle für Goldeinkommen.|n|n|cffffcc00Begrenzt auf 4.
 }
 
 STRING 35395
-// Upgrades: R093 (Flak Cannons), Hotkey (Hotkey)
+// Upgrades: R00F (Banshee Adept Training,Banshee Master Training), Hotkey (Hotkey)
 {
 S
 }
@@ -81946,7 +82006,7 @@ Nordic giants, powerful warriors with strong ships and Proto-Drakes.|n|n|cffffcc
 }
 
 STRING 35448
-// Units: E000 (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
+// Units: H0YD (Ranger), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -82102,7 +82162,7 @@ P
 }
 
 STRING 35575
-// Upgrades: R0GP (Chaos), Hotkey (Hotkey)
+// Upgrades: R093 (Flak Cannons), Hotkey (Hotkey)
 {
 S
 }
@@ -85941,7 +86001,7 @@ STRING 36360
 }
 
 STRING 36361
-// Upgrades: R0I1 (Submerge), Hotkey (Hotkey)
+// Upgrades: R0GP (Chaos), Hotkey (Hotkey)
 {
 S
 }
@@ -86001,7 +86061,7 @@ Y
 }
 
 STRING 36451
-// Upgrades: R06L (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0I1 (Submerge), Hotkey (Hotkey)
 {
 S
 }
@@ -87459,7 +87519,7 @@ N
 }
 
 STRING 37385
-// Upgrades: R088 (Flak Cannons), Hotkey (Hotkey)
+// Upgrades: R06L (Ensnare), Hotkey (Hotkey)
 {
 S
 }
@@ -89553,7 +89613,7 @@ Schattenkugel +4 herstellen
 }
 
 STRING 37886
-// Units: N02W (Red Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: E02F (Chimaera), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -89571,7 +89631,7 @@ Schattenkugel +5 herstellen
 }
 
 STRING 37889
-// Units: H08E (Guardian of Tirisfal), EditorSuffix (Name - Editor Suffix)
+// Units: E000 (Keeper of the Grove), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -97239,7 +97299,7 @@ Water Creature
 }
 
 STRING 41371
-// Abilities: A1I8 (Unit Inventory), EditorSuffix (Editor Suffix)
+// Units: e00U (Murloc Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -97263,7 +97323,7 @@ STRING 41375
 }
 
 STRING 41382
-// Abilities: A1IC (River Bank Buff), EditorSuffix (Editor Suffix)
+// Abilities: A1I8 (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97317,13 +97377,13 @@ Turtles will spawn Eggs after dying which will summon Hatchlings.
 }
 
 STRING 41391
-// Abilities: A1ID (Swarming Buff), EditorSuffix (Editor Suffix)
+// Abilities: A1IC (River Bank Buff), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 41392
-// Abilities: A1V6 (Death Coil), EditorSuffix (Editor Suffix)
+// Abilities: A1ID (Swarming Buff), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97353,7 +97413,7 @@ Research Murloc Bubble Magier-Meister-Ausbildung
 }
 
 STRING 41397
-// Abilities: A1V7 (Hex), EditorSuffix (Editor Suffix)
+// Abilities: A1V6 (Death Coil), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97401,7 +97461,7 @@ Gives Murloc units the ability Flussbett which increases stats as long as this u
 }
 
 STRING 41405
-// Abilities: A1V8 (Summon Sea Giant), EditorSuffix (Editor Suffix)
+// Abilities: A1V7 (Hex), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97455,7 +97515,7 @@ Gives Murloc units the ability Swarming which increases stats for all nearby all
 }
 
 STRING 41417
-// Abilities: A1VD (Charm), EditorSuffix (Editor Suffix)
+// Abilities: A1V8 (Summon Sea Giant), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97503,13 +97563,13 @@ C
 }
 
 STRING 41429
-// Abilities: A1VE (Parasite), EditorSuffix (Editor Suffix)
+// Abilities: A1VD (Charm), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 41430
-// Abilities: A1VF (Murloc), EditorSuffix (Editor Suffix)
+// Abilities: A1VE (Parasite), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97521,7 +97581,7 @@ Flussbett
 }
 
 STRING 41432
-// Abilities: A1VG (Murloc Sound), EditorSuffix (Editor Suffix)
+// Abilities: A1VF (Murloc), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -113064,19 +113124,19 @@ Summons a powerful Meeresriese with <nsel,realHP> hit points that does <nsel,min
 }
 
 STRING 50515
-// Abilities: A211 (Pulverize), EditorSuffix (Editor Suffix)
+// Abilities: A1VG (Murloc Sound), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 50516
-// Abilities: A212 (Abolish Magic), EditorSuffix (Editor Suffix)
+// Abilities: A211 (Pulverize), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 50517
-// Abilities: A216 (Siege Form), EditorSuffix (Editor Suffix)
+// Abilities: A212 (Abolish Magic), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -113100,19 +113160,19 @@ L
 }
 
 STRING 50521
-// Buffs/Effects: B02R (Water Creature), EditorSuffix (Editor Suffix)
+// Abilities: A216 (Siege Form), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 50522
-// Buffs/Effects: B02S (River Bank), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B02R (Water Creature), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 50523
-// Buffs/Effects: B02T (Swarming), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B02S (River Bank), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -113316,19 +113376,19 @@ C
 }
 
 STRING 50615
-// Buffs/Effects: B03N (), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B02T (Swarming), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 50616
-// Upgrades: R0CV (Backpack), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B03N (), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 50617
-// Upgrades: R0CW (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0CV (Backpack), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -113466,7 +113526,7 @@ Makes the Murloc sound.
 }
 
 STRING 50642
-// Upgrades: R0CX (Submerge), EditorSuffix (Editor Suffix)
+// Upgrades: R0CW (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -114918,7 +114978,7 @@ Unloads the Teufelsebers.
 }
 
 STRING 51056
-// Abilities: A03C (Drain), Name (Name)
+// Abilities: A03C (Drain), Tip (Tooltip - Normal)
 {
 Drain
 }
@@ -120854,13 +120914,13 @@ C
 }
 
 STRING 55458
-// Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0CX (Submerge), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 55462
-// Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -120884,31 +120944,31 @@ Light ranged unit that has a poison attack which slows and damages enemy units. 
 }
 
 STRING 55540
-// Upgrades: R0D0 (Submerge), EditorSuffix (Editor Suffix)
+// Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 55541
-// Upgrades: R0D1 (Submerge), EditorSuffix (Editor Suffix)
+// Upgrades: R0D0 (Submerge), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 55542
-// Upgrades: R0G8 (Coral Blades,Chitinous Blades,Razorspine Blades), EditorSuffix (Editor Suffix)
+// Upgrades: R0D1 (Submerge), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 55543
-// Upgrades: R0G9 (Coral Scales,Chitinous Scales,Razorspine Scales), EditorSuffix (Editor Suffix)
+// Upgrades: R0G8 (Coral Blades,Chitinous Blades,Razorspine Blades), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 55544
-// Upgrades: R0GE (Naga Siren Adept Training,Naga Siren Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0G9 (Coral Scales,Chitinous Scales,Razorspine Scales), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -120986,13 +121046,13 @@ Transforms the Belagerungsdrachenschildkröte into its normal form, returning it
 }
 
 STRING 55558
-// Upgrades: R0HZ (Pulverize Damage Increase), EditorSuffix (Editor Suffix)
+// Upgrades: R0GE (Naga Siren Adept Training,Naga Siren Master Training), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 55559
-// Upgrades: R0I0 (Abolish Magic), EditorSuffix (Editor Suffix)
+// Upgrades: R0HZ (Pulverize Damage Increase), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -121010,7 +121070,7 @@ Gives Drachenschildkrötes the ability Belagerungsgestalt.
 }
 
 STRING 55662
-// Upgrades: R0I1 (Submerge), EditorSuffix (Editor Suffix)
+// Upgrades: R0I0 (Abolish Magic), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
