@@ -6604,6 +6604,7 @@ globals
     constant integer DWARF_SUBMARINE_PILOT_HERO                      = 'N0BD'
     // Account specific
     constant integer BARADE                                          = 'H0V4'
+    constant integer EYLON                                           = 'E00V'
 
     // Bosses
     constant integer ARCHIMONDE_BOSS                                 = 'N011'

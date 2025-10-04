@@ -1516,3 +1516,5 @@ Here is a list of some modified versions online:
 * 67chrome: [BTNunitGnomeMystic](https://www.hiveworkshop.com/threads/btnunitgnomemystic.172469/)
 * Ujimasa Hojo: [Watch Tower and Derivatives](https://www.hiveworkshop.com/threads/watch-tower-and-derivatives.245383/)
 * HuanJuan, Blizzard Entertainment: [Ogre Warlock](https://www.hiveworkshop.com/threads/ogre-warlock.355323/)
+* General Frank: [Bloodelf Phoenix Guard](https://www.hiveworkshop.com/threads/bloodelf-phoenix-guard.50668/)
+* MangakaDark: [Blood Mage (Female) Icon](https://www.hiveworkshop.com/threads/blood-mage-female-icon.354738/)
