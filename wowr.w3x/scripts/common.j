@@ -2738,7 +2738,9 @@ globals
     constant string MAP_VERSION                                      = "4.5"
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
+    constant string CUSTOM_MAP_DATA_FOLDER                           = "%userprofile%\\Documents\\Warcraft III\\CustomMapData"
     constant string SAVE_CODE_FOLDER                                 = "wowr"
+    constant string USER_SAVE_CODE_FOLDER                            =  CUSTOM_MAP_DATA_FOLDER + "\\" + SAVE_CODE_FOLDER
 
     constant integer PLAYER_RESCUABLE                                = 21
     constant integer PLAYER_BOSSES                                   = 22
