@@ -355,6 +355,8 @@ StringList {
     FURBOLG_URSA_WARROR                "Furbolg Ursa Warrior",
     ARCHMAGE                           "Archmage",
     ARCH_SORCERESS                     "Arch Sorceress",
+    ANTONIDAS                          "Antonidas",
+    ANTONIDAS_GHOST                    "Antonidas Ghost",
     AEGWYN                             "Aegwyn",
     HYDROMANCER                        "Hydromancer",
     TIDESAGE                           "Tidesage",

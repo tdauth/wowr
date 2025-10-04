@@ -104,7 +104,7 @@ function AttackWaves takes nothing returns nothing
         call AttackerSimple(12, 1, OGRE_KORGALL)
         call AttackerSimple(12, 4, OGRE_STONEMAUL_OGRE)
         call AttackerSimple(12, 4, OGRE_STONEMAUL_MAGI)
-        call AttackerSimple(12, gryphons, OGRE_BRONZE_DRAKE)
+        call AttackerSimple(12, gryphons, OGRE_DRAKE)
         call AttackerSimple(12, flying_machines, OGRE_ZEPPELIN)
         call AttackerSimple(12, dragon_hawks, STORMWIND_EAGLE_KNIGHT)
         call AttackerSimple(12, dragon_hawks, STORMWIND_GRYPHON_KNIGHT)

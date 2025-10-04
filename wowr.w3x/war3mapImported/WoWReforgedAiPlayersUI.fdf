@@ -177,6 +177,8 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "FURBOLG_URSA_WARROR",     -2,
         MenuItem "ARCHMAGE",     -2,
         MenuItem "ARCH_SORCERESS",     -2,
+        MenuItem "ANTONIDAS",     -2,
+        MenuItem "ANTONIDAS_GHOST",     -2,
         MenuItem "AEGWYN",     -2,
         MenuItem "HYDROMANCER",     -2,
         MenuItem "TIDESAGE",     -2,

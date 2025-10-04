@@ -5419,20 +5419,20 @@ globals
 
     constant integer OGRE_OGRE_SLAVE                                 = 'o06B' // worker
     constant integer OGRE_OGRE_WARRIOR                               = 'n0GN' // footman
-    constant integer OGRE_OGRE_STONE_THROWER                         = 'n0GM' // rifleman
-    constant integer OGRE_OGRE_HUNTER                                = 'n0HQ' // raider/rifleman 2
-    constant integer OGRE_BRONZE_DRAKE                               = 'n0HP' // wind rider
-    constant integer OGRE_ZEPPELIN                                   = 'n0HX' // zeppelin
-    constant integer OGRE_CLEFTHOOF                                  = 'o077' // clefthoof
+    constant integer OGRE_OGRE_HUNTER                                = 'n0HQ' // rifleman
+    constant integer OGRE_OGRE_LORD                                  = 'n0HM' // knight
+    constant integer OGRE_DRAKE                                      = 'n0HP' // gryphon
+    constant integer OGRE_ZEPPELIN                                   = 'n0HX' // flying machine
+    constant integer OGRE_CLEFTHOOF                                  = 'o077' // siege engine
+    constant integer OGRE_OGRE_STONE_THROWER                         = 'n0GM' // mortar
     constant integer OGRE_OGRE_DRUMMER                               = 'n0GL' // knight
-    constant integer OGRE_OGRE_FIRE_BREATHER                         = 'n0HV' // knight 2
+    constant integer OGRE_OGRE_FIRE_BREATHER                         = 'n0HV' // shade
     constant integer OGRE_OGRE_MAGI                                  = 'n0HN' // sorceress
     constant integer OGRE_OGRE_WARLOCK                               = 'n0HO' // priest
     constant integer OGRE_OGRE_NECROMANCER                           = 'n0HW' // spell breaker
-    constant integer OGRE_OGRE_LORD                                  = 'n0HM' // tauren
-    constant integer OGRE_MOKNATHAL                                  = 'n07E' // tauren 2
-    constant integer OGRE_GRONN                                      = 'n0I4' // tauren 3
-    constant integer OGRE_GRONN_WAR_CLUB                             = 'n0I5' // tauren 3
+    constant integer OGRE_GRONN                                      = 'n0I4' // tauren
+    constant integer OGRE_GRONN_WAR_CLUB                             = 'n0I5' // tauren morphed
+    constant integer OGRE_MOKNATHAL                                  = 'n07E' // dragonhawk
 
     constant integer OGRE_KORGALL                                    = 'n071' // special unit
     constant integer OGRE_STONEMAUL_OGRE                             = 'n0C3' // special unit
@@ -6494,6 +6494,8 @@ globals
     constant integer FURBOLG_URSA_WARRIOR_HERO_M                     = 'E00F'
     // Dalaran
     constant integer ARCH_SORCERESS                                  = 'H0V3'
+    constant integer ANTONIDAS                                       = 'Hant'
+    constant integer ANTONIDAS_GHOST                                 = 'Hgam'
     constant integer AEGWYNN                                         = 'H08E'
     // Kul Tiras
     constant integer HYDROMANCER                                     = 'H06F'
@@ -6632,7 +6634,7 @@ globals
     constant integer MAGROTH_THE_DEFENDER                            = 'H0QP'
     constant integer AKAMA                                           = 'N04R'
     constant integer ALAR                                            = 'N030'
-    constant integer ANTONIDAS                                       = 'H09B'
+    constant integer ANTONIDAS_BOSS                                  = 'H09B'
     constant integer CENARIUS_BOSS                                   = 'E00Q'
     constant integer DEATHWING                                       = 'N067'
     constant integer DRAGON_TEMPLE_GUARDIAN                          = 'E004'
