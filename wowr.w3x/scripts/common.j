@@ -3212,6 +3212,18 @@ globals
     constant integer ITEM_NIGHT_ELF_SCEPTER                          = 'I004'
     constant integer ITEM_BLOOD_ELF                                  = 'I06E'
     constant integer ITEM_BLOOD_ELF_SCEPTER                          = 'I026'
+    constant integer ITEM_NAGA                                       = 'I06F'
+    constant integer ITEM_NAGA_SCEPTER                               = 'I001'
+    constant integer ITEM_DRAENEI                                    = 'I0TU'
+    constant integer ITEM_DRAENEI_SCEPTER                            = 'I0TV'
+    constant integer ITEM_LOST_ONES                                  = 'I06H'
+    constant integer ITEM_LOST_ONES_SCEPTER                          = 'I02G'
+    constant integer ITEM_DEMON                                      = 'I06G'
+    constant integer ITEM_DEMON_SCEPTER                              = 'I02A'
+    constant integer ITEM_FURBOLG                                    = 'I06I'
+    constant integer ITEM_FURBOLG_SCEPTER                            = 'I03B'
+    constant integer ITEM_GOBLIN                                     = 'I06J'
+    constant integer ITEM_GOBLIN_SCEPTER                             = 'I047'
 
     // professions
     constant integer ITEM_TYPE_SCRIBE                                = 'I0HC'
@@ -4228,6 +4240,7 @@ globals
     constant integer ITEM_DEMON_HOUSING                              = 'I0SZ'
 
     // Lost Ones
+    constant integer ITEM_DRAENEI_TIER_1                             = 'I02O'
     constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
     constant integer DRAENEI_BARRACKS                                = 'ndh3'
     constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
@@ -4266,6 +4279,7 @@ globals
     constant integer DRAENEI_HOUSING                                 = 'h011'
 
     // Furbolg
+    constant integer ITEM_FURBOLG_TIER_1                             = 'I03A'
     constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // tier 1-3
     constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
     constant integer FURBOLG_DEFILED_FOUNTAIN                        = 'n02B' // sanctum/damned temple
@@ -4320,6 +4334,7 @@ globals
     constant integer FURBOLG_HOUSING                                 = 'h015'
 
     // Goblin
+    constant integer ITEM_GOBLIN_TIER_1                              = 'I048'
     constant integer GOBLIN_TIER_1                                   = 'o00O' // tier 1
     constant integer GOBLIN_TIER_2                                   = 'o022' // tier 2
     constant integer GOBLIN_TIER_3                                   = 'o023' // tier 3
@@ -5464,6 +5479,7 @@ globals
     constant integer OGRE_SHIPYARD                                   = 'o07C'
 
     // Eredar/Draenei
+    constant integer ITEM_EREDAR_TIER_1                              = 'I0TW'
     constant integer EREDAR_TIER_1                                   = 'n0IO'
     constant integer EREDAR_TIER_2                                   = 'n0JJ'
     constant integer EREDAR_TIER_3                                   = 'n0JK'
