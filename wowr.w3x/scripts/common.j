@@ -3196,9 +3196,24 @@ globals
     constant integer ITEM_TYPE_RANDOM_RACE                           = 'I06A'
     constant integer ITEM_TYPE_RANDOM_PROFESSION                     = 'I069'
     constant integer ITEM_TYPE_RANDOM_START_LOCATION                 = 'I0ZS'
-    constant integer ITEM_TYPE_WARLORD                               = 'I05R'
-    constant integer ITEM_TYPE_FREELANCER                            = 'I05Q'
 
+    // game modes
+    constant integer ITEM_WARLORD                                    = 'I05R'
+    constant integer ITEM_FREELANCER                                 = 'I05Q'
+
+    // races
+    constant integer ITEM_HUMAN                                      = 'I05U'
+    constant integer ITEM_HUMAN_SCEPTER                              = 'I000'
+    constant integer ITEM_ORC                                        = 'I06B'
+    constant integer ITEM_ORC_SCEPTER                                = 'I002'
+    constant integer ITEM_UNDEAD                                     = 'I06C'
+    constant integer ITEM_UNDEAD_SCEPTER                             = 'I003'
+    constant integer ITEM_NIGHT_ELF                                  = 'I06D'
+    constant integer ITEM_NIGHT_ELF_SCEPTER                          = 'I004'
+    constant integer ITEM_BLOOD_ELF                                  = 'I06E'
+    constant integer ITEM_BLOOD_ELF_SCEPTER                          = 'I026'
+
+    // professions
     constant integer ITEM_TYPE_SCRIBE                                = 'I0HC'
 
     // arena
