@@ -73,7 +73,7 @@ function BuildingStrategy takes nothing returns nothing
         call StartExpansionSimple(FACELESS_ONE_TENTACLE_PIT)
 
         if (buildShips) then
-            call StartUnitSimple(shipyards, UNDEAD_SHIPYARD)
+            call StartUnitSimple(shipyards, FACELESS_ONE_SHIPYARD)
             call StartUnitSimple(ships_transport, UNDEAD_TRANSPORT_SHIP)
             call StartUnitSimple(ships_frigate, UNDEAD_FRIGATE)
             call StartUnitSimple(ships_battleship, UNDEAD_BATTLESHIP)

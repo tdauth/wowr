@@ -3061,6 +3061,8 @@ globals
 
     constant integer UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS               = 'R00B'
     constant integer UPG_STORM_PROTECTION                            = 'R029'
+    constant integer UPG_IMPROVED_AIR_TRANSPORT                      = 'R02F'
+    constant integer UPG_REINFORCED_WALLS                            = 'R0FQ'
 
     constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
     constant integer MAX_WOWR_HERO_LEVEL                             = 75
@@ -5558,6 +5560,7 @@ globals
     constant integer FACELESS_ONE_TENTACLE                           = 'n0K8' // farm
     constant integer FACELESS_ONE_TENTACLE_PIT                       = 'n0K6' // watch tower
     constant integer FACELESS_ONE_SHOP                               = 'o08Y' // shop
+    constant integer FACELESS_ONE_SHIPYARD                           = 'u00U'
     constant integer FACELESS_ONE_FORGOTTEN_ONE                      = 'n0K7' // special building
 
     constant integer UPG_FACELESS_ONE_BACKPACK                       = 'R0GH'
@@ -5569,17 +5572,17 @@ globals
     constant integer UPG_FACELESS_ONE_WITCH                          = 'R0GO'
 
     constant integer FACELESS_ONE_WORKER                             = 'o08U'
-    constant integer FACELESS_ONE_AQIR                               = 'n0KC'
-    constant integer FACELESS_ONE_BERSERKER                          = 'n0KE'
-    constant integer FACELESS_ONE_RIDER                              = 'h0UO'
-    constant integer FACELESS_ONE_KING                               = 'n0KI'
-    constant integer FACELESS_ONE_TRICKSTER                          = 'n0KH'
-    constant integer FACELESS_ONE_UNBROCKEN_DARKHUNTER               = 'n0KA'
-    constant integer FACELESS_ONE_BONE_THROWER                       = 'o090'
-    constant integer FACELESS_ONE_WITCH                              = 'u033'
-    constant integer FACELESS_ONE_CULTIST                            = 'u034'
-    constant integer FACELESS_ONE_BALLISTA                           = 'o091'
-    constant integer FACELESS_ONE_NIGHTMARE_WEAVER                   = 'o095'
+    constant integer FACELESS_ONE_UNBROCKEN_DARKHUNTER               = 'n0KA' // footman
+    constant integer FACELESS_ONE_BONE_THROWER                       = 'o090' // rifleman
+    constant integer FACELESS_ONE_RIDER                              = 'h0UO' // knight
+    constant integer FACELESS_ONE_KING                               = 'n0KI' // tauren
+    constant integer FACELESS_ONE_WITCH                              = 'u033' // priest/spellbreaker
+    constant integer FACELESS_ONE_CULTIST                            = 'u034' // sorceress
+    constant integer FACELESS_ONE_AQIR                               = 'n0KC' // mortar
+    constant integer FACELESS_ONE_BALLISTA                           = 'o091' // siege engine
+    constant integer FACELESS_ONE_NIGHTMARE_WEAVER                   = 'o095' // gryphon
+    constant integer FACELESS_ONE_TRICKSTER                          = 'n0KH' // dragonhawk
+    constant integer FACELESS_ONE_BERSERKER                          = 'n0KE' // flying machine
 
     constant integer FACELESS_ONE_PET                                = 'n0EC'
     constant integer FACELESS_ONE_CHILD                              = 'n0KF'
