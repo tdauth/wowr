@@ -3201,30 +3201,6 @@ globals
     constant integer ITEM_WARLORD                                    = 'I05R'
     constant integer ITEM_FREELANCER                                 = 'I05Q'
 
-    // races
-    constant integer ITEM_HUMAN                                      = 'I05U'
-    constant integer ITEM_HUMAN_SCEPTER                              = 'I000'
-    constant integer ITEM_ORC                                        = 'I06B'
-    constant integer ITEM_ORC_SCEPTER                                = 'I002'
-    constant integer ITEM_UNDEAD                                     = 'I06C'
-    constant integer ITEM_UNDEAD_SCEPTER                             = 'I003'
-    constant integer ITEM_NIGHT_ELF                                  = 'I06D'
-    constant integer ITEM_NIGHT_ELF_SCEPTER                          = 'I004'
-    constant integer ITEM_BLOOD_ELF                                  = 'I06E'
-    constant integer ITEM_BLOOD_ELF_SCEPTER                          = 'I026'
-    constant integer ITEM_NAGA                                       = 'I06F'
-    constant integer ITEM_NAGA_SCEPTER                               = 'I001'
-    constant integer ITEM_DRAENEI                                    = 'I0TU'
-    constant integer ITEM_DRAENEI_SCEPTER                            = 'I0TV'
-    constant integer ITEM_LOST_ONES                                  = 'I06H'
-    constant integer ITEM_LOST_ONES_SCEPTER                          = 'I02G'
-    constant integer ITEM_DEMON                                      = 'I06G'
-    constant integer ITEM_DEMON_SCEPTER                              = 'I02A'
-    constant integer ITEM_FURBOLG                                    = 'I06I'
-    constant integer ITEM_FURBOLG_SCEPTER                            = 'I03B'
-    constant integer ITEM_GOBLIN                                     = 'I06J'
-    constant integer ITEM_GOBLIN_SCEPTER                             = 'I047'
-
     // professions
     constant integer ITEM_TYPE_SCRIBE                                = 'I0HC'
 
@@ -3872,6 +3848,8 @@ globals
     constant integer FREELANCER_PET                                  = 'n00Q'
 
     // Human
+    constant integer ITEM_HUMAN                                      = 'I05U'
+    constant integer ITEM_HUMAN_SCEPTER                              = 'I000'
     constant integer ITEM_HUMAN_TIER_1                               = 'I02P'
     constant integer ITEM_HUMAN_TIER_2                               = 'I0L7'
     constant integer ITEM_HUMAN_TIER_3                               = 'tcas'
@@ -3911,6 +3889,8 @@ globals
     constant integer HUMAN_ARCANE_OBSERVATORY                        = 'h01Q' // special building
 
     // Orc
+    constant integer ITEM_ORC                                        = 'I06B'
+    constant integer ITEM_ORC_SCEPTER                                = 'I002'
     constant integer ITEM_ORC_TIER_1                                 = 'tgrh'
     constant integer ITEM_ORC_TIER_2                                 = 'I0LS'
     constant integer ITEM_ORC_TIER_3                                 = 'I0LQ'
@@ -3945,6 +3925,8 @@ globals
     constant integer FEL_DRAGON_ROOST                                = 'ndrb'
 
     // Undead
+    constant integer ITEM_UNDEAD                                     = 'I06C'
+    constant integer ITEM_UNDEAD_SCEPTER                             = 'I003'
     constant integer ITEM_UNDEAD_TIER_1                              = 'I02K'
     constant integer ITEM_UNDEAD_TIER_2                              = 'I0M9'
     constant integer ITEM_UNDEAD_TIER_3                              = 'I0M5'
@@ -3982,6 +3964,8 @@ globals
     constant integer UNDEAD_LICH_KING                                = 'n037' // special building
 
     // Night Elf
+    constant integer ITEM_ELF                                        = 'I06D'
+    constant integer ITEM_ELF_SCEPTER                                = 'I004'
     constant integer ITEM_ELF_TIER_1                                 = 'I02J'
     constant integer ITEM_ELF_TIER_2                                 = 'I0MO'
     constant integer ITEM_ELF_TIER_3                                 = 'I0MP'
@@ -4016,9 +4000,11 @@ globals
     constant integer ELF_WORLD_TREE                                  = 'o00G' // special building
 
     // Blood Elf
-    constant integer ITEM_BLOOD_ELF_TOWN_HALL                        = 'I02L'
-    constant integer ITEM_BLOOD_ELF_KEEP                             = 'I0DC'
-    constant integer ITEM_BLOOD_ELF_CASTLE                           = 'I0GK'
+    constant integer ITEM_BLOOD_ELF                                  = 'I06E'
+    constant integer ITEM_BLOOD_ELF_SCEPTER                          = 'I026'
+    constant integer ITEM_BLOOD_ELF_TIER_1                           = 'I02L'
+    constant integer ITEM_BLOOD_ELF_TIER_2                           = 'I0DC'
+    constant integer ITEM_BLOOD_ELF_TIER_3                           = 'I0GK'
     constant integer ITEM_BLOOD_ELF_FARM                             = 'I0HE'
     constant integer ITEM_BLOOD_ELF_ALTAR                            = 'I0K8'
     constant integer ITEM_BLOOD_ELF_SCOUT_TOWER                      = 'I0D8'
@@ -4104,9 +4090,11 @@ globals
     constant integer BLOOD_ELF_HOUSING                               = 'h00T'
 
     // Naga
-    constant integer ITEM_NAGA_TEMPLE_1                              = 'I02M'
-    constant integer ITEM_NAGA_TEMPLE_2                              = 'I0C8'
-    constant integer ITEM_NAGA_TEMPLE_3                              = 'I0DI'
+    constant integer ITEM_NAGA                                       = 'I06F'
+    constant integer ITEM_NAGA_SCEPTER                               = 'I001'
+    constant integer ITEM_NAGA_TIER_1                                = 'I02M'
+    constant integer ITEM_NAGA_TIER_2                                = 'I0C8'
+    constant integer ITEM_NAGA_TIER_3                                = 'I0DI'
     constant integer ITEM_NAGA_CORAL_BED                             = 'I0DL'
     constant integer ITEM_NAGA_SPAWNING_GROUNDS                      = 'I0DZ'
     constant integer ITEM_NAGA_ROYAL_VAULT                           = 'I0F8'
@@ -4159,8 +4147,10 @@ globals
     constant integer NAGA_HOUSING                                    = 'h00Q'
 
     // Demon
+    constant integer ITEM_DEMON                                      = 'I06G'
+    constant integer ITEM_DEMON_SCEPTER                              = 'I02A'
     constant integer DEMON_GATE_1                                    = 'u005' // tier 1
-    constant integer ITEM_DEMON_GATE_1                               = 'I02N'
+    constant integer ITEM_DEMON_TIER_1                               = 'I02N'
     constant integer DEMON_GATE_2                                    = 'u00E' // tier 2
     constant integer DEMON_GATE_3                                    = 'u00F' // tier 3
     constant integer DEMON_FORTIFIED_INFERNAL_MACHINE                = 'u007' // farm
@@ -4240,7 +4230,9 @@ globals
     constant integer ITEM_DEMON_HOUSING                              = 'I0SZ'
 
     // Lost Ones
-    constant integer ITEM_DRAENEI_TIER_1                             = 'I02O'
+    constant integer ITEM_LOST_ONES                                  = 'I06H'
+    constant integer ITEM_LOST_ONES_SCEPTER                          = 'I02G'
+    constant integer ITEM_LOST_ONES_TIER_1                           = 'I02O'
     constant integer DRAENEI_HAVEN                                   = 'ndh2' // tier 1 - 3
     constant integer DRAENEI_BARRACKS                                = 'ndh3'
     constant integer DRAENEI_SEERS_DEN                               = 'ndh4'
@@ -4279,6 +4271,8 @@ globals
     constant integer DRAENEI_HOUSING                                 = 'h011'
 
     // Furbolg
+    constant integer ITEM_FURBOLG                                    = 'I06I'
+    constant integer ITEM_FURBOLG_SCEPTER                            = 'I03B'
     constant integer ITEM_FURBOLG_TIER_1                             = 'I03A'
     constant integer FURBOLG_TRIBAL_CENTER                           = 'n026' // tier 1-3
     constant integer FURBOLG_BARRACKS                                = 'n027' // barracks
@@ -4334,6 +4328,8 @@ globals
     constant integer FURBOLG_HOUSING                                 = 'h015'
 
     // Goblin
+    constant integer ITEM_GOBLIN                                     = 'I06J'
+    constant integer ITEM_GOBLIN_SCEPTER                             = 'I047'
     constant integer ITEM_GOBLIN_TIER_1                              = 'I048'
     constant integer GOBLIN_TIER_1                                   = 'o00O' // tier 1
     constant integer GOBLIN_TIER_2                                   = 'o022' // tier 2
@@ -4412,6 +4408,9 @@ globals
     constant integer GOBLIN_HOUSING                                  = 'h02H'
 
     // Dwarf
+    constant integer ITEM_DWARF                                      = 'I06K'
+    constant integer ITEM_DWARF_SCEPTER                              = 'I053'
+    constant integer ITEM_DWARF_TIER_1                               = 'I054'
     constant integer DWARF_TIER_1                                    = 'h02R' // tier 1
     constant integer DWARF_TIER_2                                    = 'h030' // tier 2
     constant integer DWARF_TIER_3                                    = 'h031' // tier 3
@@ -4487,6 +4486,8 @@ globals
     constant integer DWARF_HOUSING                                   = 'h02S'
 
     // High Elf
+    constant integer ITEM_HIGH_ELF                                   = 'I06L'
+    constant integer ITEM_HIGH_ELF_SCEPTER                           = 'I05G'
     constant integer ITEM_HIGH_ELF_TIER_1                            = 'I05F'
     constant integer ITEM_HIGH_ELF_TIER_2                            = 'I13Y'
     constant integer ITEM_HIGH_ELF_TIER_3                            = 'I13Z'
@@ -4572,6 +4573,9 @@ globals
     constant integer HIGH_ELF_HOUSING                                = 'h04H'
 
     // Gnome
+    constant integer ITEM_GNOME                                      = 'I0IN'
+    constant integer ITEM_GNOME_SCEPTER                              = 'I0IP'
+    constant integer ITEM_GNOME_TIER_1                               = 'I0IO'
     constant integer GNOME_TIER_1                                    = 'h0JX'
     constant integer GNOME_TIER_2                                    = 'h0KB'
     constant integer GNOME_TIER_3                                    = 'h0KE'
@@ -4624,6 +4628,10 @@ globals
     constant integer GNOME_HOUSING                                   = 'h0KZ'
 
     // Dalaran
+    constant integer ITEM_DALARAN                                    = 'I06U'
+    constant integer ITEM_DALARAN_SCEPTER                            = 'I08R'
+    constant integer ITEM_DALARAN_TIER_1                             = 'I07Y'
+
     constant integer DALARAN_TIER_1                                  = 'h051' // tier 1
     constant integer DALARAN_TIER_2                                  = 'h099' // tier 2
     constant integer DALARAN_TIER_3                                  = 'h09A' // tier 3
@@ -4695,6 +4703,10 @@ globals
     constant integer DALARAN_HOUSING                                 = 'h09E'
 
     // Kul Tiras
+    constant integer ITEM_KUL_TIRAS                                  = 'I06X'
+    constant integer ITEM_KUL_TIRAS_SCEPTER                          = 'I06W'
+    constant integer ITEM_KUL_TIRAS_TIER_1                           = 'I06V'
+
     constant integer KULTIRAS_TIER_1                                 = 'h057' // tier 1
     constant integer KULTIRAS_TIER_2                                 = 'h05I' // tier 2
     constant integer KULTIRAS_TIER_3                                 = 'h05J' // tier 3
@@ -4773,6 +4785,10 @@ globals
     constant integer KULTIRAS_HOUSING                                = 'h090'
 
     // Lordaeron
+    constant integer ITEM_LORDAERON                                  = 'I0KD'
+    constant integer ITEM_LORDAERON_SCEPTER                          = 'I0KE'
+    constant integer ITEM_LORDAERON_TIER_1                           = 'I0KF'
+
     constant integer LORDAERON_TIER_1                                = 'h0LX'
     constant integer LORDAERON_TIER_2                                = 'h0MC'
     constant integer LORDAERON_TIER_3                                = 'h0MD'
@@ -4837,6 +4853,9 @@ globals
     constant integer LORDAERON_HOUSING                               = 'h0N7'
 
     // Stormwind
+    constant integer ITEM_STORMWIND                                  = 'I0TA'
+    constant integer ITEM_STORMWIND_SCEPTER                          = 'I0TB'
+
     constant integer STORMWIND_TIER_1                                = 'h0QY'
     constant integer ITEM_STORMWIND_TIER_1                           = 'I0TC'
     constant integer STORMWIND_TIER_2                                = 'h0RC'
@@ -4920,6 +4939,10 @@ globals
     constant integer ITEM_STORMWIND_HOUSING                          = 'I17L'
 
     // Pandaren
+    constant integer ITEM_PANDAREN                                   = 'I07U'
+    constant integer ITEM_PANDAREN_SCEPTER                           = 'I07T'
+    constant integer ITEM_PANDAREN_TIER_1                            = 'I07S'
+
     constant integer PANDAREN_TIER_1                                 = 'h06D' // tier 1
     constant integer PANDAREN_TIER_2                                 = 'h0AC' // tier 2
     constant integer PANDAREN_TIER_3                                 = 'h0AD' // tier 3
@@ -4985,6 +5008,9 @@ globals
     constant integer PANDAREN_HOUSING                                = 'h0JU'
 
     // Troll
+    constant integer ITEM_TROLL                                      = 'I09Q'
+    constant integer ITEM_TROLL_SCEPTER                              = 'I09P'
+    constant integer ITEM_TROLL_TIER_1                               = 'I09O'
     constant integer TROLL_TIER_1                                    = 'o029'
     constant integer TROLL_TIER_2                                    = 'o02A'
     constant integer TROLL_TIER_3                                    = 'o02B'
@@ -5043,6 +5069,10 @@ globals
     constant integer TROLL_HOUSING                                   = 'h098'
 
     // Tauren
+    constant integer ITEM_TAUREN                                      = 'I09T'
+    constant integer ITEM_TAUREN_SCEPTER                              = 'I09S'
+    constant integer ITEM_TAUREN_TIER_1                               = 'I09R'
+
     constant integer TAUREN_TIER_1                                    = 'o02M'
     constant integer TAUREN_TIER_2                                    = 'o037'
     constant integer TAUREN_TIER_3                                    = 'o038'
@@ -5093,6 +5123,10 @@ globals
     constant integer TAUREN_HOUSING                                   = 'h0H1'
 
     // Worgen
+    constant integer ITEM_WORGEN                                     = 'I0HQ'
+    constant integer ITEM_WORGEN_SCEPTER                             = 'I0HR'
+    constant integer ITEM_WORGEN_TIER_1                              = 'I0HS'
+
     constant integer WORGEN_TOWN_HALL                                = 'h0IU'
     constant integer WORGEN_KEEP                                     = 'h0IZ'
     constant integer WORGEN_CASTLE                                   = 'h0IV'
@@ -5179,6 +5213,10 @@ globals
     constant integer WORGEN_HOUSING                                  = 'h0JA'
 
     // Vrykul
+    constant integer ITEM_VRYKUL                                     = 'I0HK'
+    constant integer ITEM_VRYKUL_SCEPTER                             = 'I0HL'
+    constant integer ITEM_VRYKUL_TIER_1                              = 'I0HM'
+
     constant integer VRYKUL_TIER_1                                   = 'h0IA'
     constant integer VRYKUL_TIER_2                                   = 'h0IB'
     constant integer VRYKUL_TIER_3                                   = 'h0IC'
@@ -5232,6 +5270,10 @@ globals
     constant integer VRYKUL_HOUSING                                  = 'h0PC'
 
     // Tuskarr
+    constant integer ITEM_TUSKARR                                    = 'I0PT'
+    constant integer ITEM_TUSKARR_SCEPTER                            = 'I0PR'
+    constant integer ITEM_TUSKARR_TIER_1                             = 'I0PS'
+
     constant integer TUSKARR_FROZEN_HALL                             = 'o05N' // tier 1
     constant integer TUSKARR_FROZEN_STRONGHOLD                       = 'o05Y' // tier 2
     constant integer TUSKARR_FROZEN_FORTRESS                         = 'o05Z' // tier 3
@@ -5291,6 +5333,10 @@ globals
     constant integer TUSKARR_HOUSING                                 = 'h0PT'
 
     // Nerubian
+    constant integer ITEM_NERUBIAN                                   = 'I0M1'
+    constant integer ITEM_NERUBIAN_SCEPTER                           = 'I0M2'
+    constant integer ITEM_NERUBIAN_TIER_1                            = 'I0M0'
+
     constant integer NERUBIAN_TIER_1                                 = 'u01Q'
     constant integer NERUBIAN_TIER_1_BURROWED                        = 'u01R'
     constant integer NERUBIAN_TIER_2                                 = 'u023'
@@ -5363,6 +5409,10 @@ globals
     constant integer NERUBIAN_HOUSING_BURROWED                       = 'h0P1'
 
     // Murloc
+    constant integer ITEM_MURLOC                                     = 'I0Q5'
+    constant integer ITEM_MURLOC_SCEPTER                             = 'I0Q6'
+    constant integer ITEM_MURLOC_TIER_1                              = 'I0Q7'
+
     constant integer MURLOC_TIER_1                                   = 'n0FP'
     constant integer MURLOC_TIER_2                                   = 'n0G6'
     constant integer MURLOC_TIER_3                                   = 'n0G5'
@@ -5411,6 +5461,10 @@ globals
     constant integer MURLOC_HOUSING                                  = 'h0Q0'
 
     // Ogre
+    constant integer ITEM_OGRE                                       = 'I0QO'
+    constant integer ITEM_OGRE_SCEPTER                               = 'I0QN'
+    constant integer ITEM_OGRE_TIER_1                                = 'I0QP'
+
     constant integer OGRE_TIER_1                                     = 'o06C'
     constant integer OGRE_TIER_2                                     = 'o073'
     constant integer OGRE_TIER_3                                     = 'o074'
@@ -5479,6 +5533,8 @@ globals
     constant integer OGRE_SHIPYARD                                   = 'o07C'
 
     // Eredar/Draenei
+    constant integer ITEM_EREDAR                                     = 'I0TU'
+    constant integer ITEM_EREDAR_SCEPTER                             = 'I0TV'
     constant integer ITEM_EREDAR_TIER_1                              = 'I0TW'
     constant integer EREDAR_TIER_1                                   = 'n0IO'
     constant integer EREDAR_TIER_2                                   = 'n0JJ'
@@ -5527,6 +5583,9 @@ globals
     constant integer EREDAR_SHIPYARD                                 = 'o016'
 
     // Fel Orc
+    constant integer ITEM_FEL_ORC                                    = 'I0XU'
+    constant integer ITEM_FEL_ORC_SCEPTER                            = 'I0XT'
+    constant integer ITEM_FEL_ORC_TIER_1                             = 'I0XS'
     constant integer FEL_ORC_TIER_1                                  = 'o08R'
     constant integer FEL_ORC_TIER_2                                  = 'o09A'
     constant integer FEL_ORC_TIER_3                                  = 'o09F'
@@ -5579,6 +5638,10 @@ globals
     constant integer FEL_ORC_HOUSING                                 = 'h0US'
 
     // Faceless One
+    constant integer ITEM_FACELESS_ONE                               = 'I0XZ'
+    constant integer ITEM_FACELESS_ONE_SCEPTER                       = 'I0XX'
+    constant integer ITEM_FACELESS_ONE_TIER_1                        = 'I0XY'
+
     constant integer FACELESS_ONE_TIER_1                             = 'o08V'
     constant integer FACELESS_ONE_TIER_2                             = 'o092'
     constant integer FACELESS_ONE_TIER_3                             = 'o093'
@@ -5622,6 +5685,10 @@ globals
     constant integer FACELESS_ONE_HOUSING                            = 'h0UP'
 
     // Satyr
+    constant integer ITEM_SATYR                                      = 'I0SC'
+    constant integer ITEM_SATYR_SCEPTER                              = 'I0SA'
+    constant integer ITEM_SATYR_TIER_1                               = 'I0SB'
+
     constant integer SATYR_TIER_1                                    = 'n0GX'
     constant integer SATYR_TIER_2                                    = 'n0GY'
     constant integer SATYR_TIER_3                                    = 'n0GZ'
@@ -5670,6 +5737,10 @@ globals
     constant integer SATYR_HOUSING                                   = 'e02A'
 
     // Centaur
+    constant integer ITEM_CENTAUR                                    = 'I0SP'
+    constant integer ITEM_CENTAUR_SCEPTER                            = 'I0SO'
+    constant integer ITEM_CENTAUR_TIER_1                             = 'I0SN'
+
     constant integer CENTAUR_TIER_1                                  = 'o06V'
     constant integer CENTAUR_TIER_2                                  = 'o0AI'
     constant integer CENTAUR_TIER_3                                  = 'o0AJ'
@@ -5715,6 +5786,10 @@ globals
     constant integer CENTAUR_HOUSING                                 = 'h0Y2'
 
     // Gnoll
+    constant integer ITEM_GNOLL                                      = 'I0SS'
+    constant integer ITEM_GNOLL_SCEPTER                              = 'I0SR'
+    constant integer ITEM_GNOLL_TIER_1                               = 'I0SQ'
+
     constant integer GNOLL_TIER_1                                    = 'o06X'
     constant integer GNOLL_TIER_2                                    = 'o0BE'
     constant integer GNOLL_TIER_3                                    = 'o0BF'
@@ -5750,6 +5825,10 @@ globals
     constant integer GNOLL_HOUSING                                   = 'h0FQ'
 
     // Kobold
+    constant integer ITEM_KOBOLD                                     = 'I0ST'
+    constant integer ITEM_KOBOLD_SCEPTER                             = 'I0SV'
+    constant integer ITEM_KOBOLD_TIER_1                              = 'I0SW'
+
     constant integer KOBOLD_TIER_1                                   = 'o070'
     constant integer KOBOLD_TIER_2                                   = 'o09Y'
     constant integer KOBOLD_TIER_3                                   = 'o09Z'
@@ -5791,6 +5870,10 @@ globals
     constant integer KOBOLD_HOUSING                                  = 'h0X4'
 
     // Quillboar
+    constant integer ITEM_QUILLBOAR                                  = 'I0SU'
+    constant integer ITEM_QUILLBOAR_SCEPTER                          = 'I0SX'
+    constant integer ITEM_QUILLBOAR_TIER_1                           = 'I0SY'
+
     constant integer QUILLBOAR_TIER_1                                = 'o071'
     constant integer QUILLBOAR_TIER_2                                = 'o0B0'
     constant integer QUILLBOAR_TIER_3                                = 'o0B1'
@@ -5838,6 +5921,10 @@ globals
     constant integer QUILLBOAR_SKELETAL_RAZORMANE                    = 'u03K'
 
     // Bandit
+    constant integer ITEM_BANDIT                                     = 'I08D'
+    constant integer ITEM_BANDIT_SCEPTER                             = 'I08F'
+    constant integer ITEM_BANDIT_TIER_1                              = 'I08C'
+
     constant integer BANDIT_TIER_1                                   = 'h05X'
     constant integer ITEM_TINY_BANDIT_TIER_1                         = 'I08C'
     constant integer BANDIT_TIER_2                                   = 'h05Y'
@@ -5913,6 +6000,10 @@ globals
     constant integer ITEM_TINY_BANDIT_HOUSING                        = 'I0DE'
 
     // Dungeon
+    constant integer ITEM_DUNGEON                                    = 'I0G2'
+    constant integer ITEM_DUNGEON_SCEPTER                            = 'I0G1'
+    constant integer ITEM_DUNGEON_TIER_1                             = 'I0G0'
+
     constant integer DUNGEON_TIER_1                                  = 'o03M'
     constant integer DUNGEON_TIER_2                                  = 'o03R'
     constant integer DUNGEON_TIER_3                                  = 'o03S'
@@ -5987,6 +6078,10 @@ globals
     constant integer DUNGEON_HOUSING                                 = 'h07X'
 
     // Dragonkin
+    constant integer ITEM_DRAGONKIN                                  = 'I0XF'
+    constant integer ITEM_DRAGONKIN_SCEPTER                          = 'I0XH'
+    constant integer ITEM_DRAGONKIN_TIER_1                           = 'I0XG'
+
     constant integer DRAGONKIN_TIER_1                                = 'o08P'
     constant integer DRAGONKIN_TIER_2                                = 'o041'
     constant integer DRAGONKIN_TIER_3                                = 'o044'
