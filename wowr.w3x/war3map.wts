@@ -10029,6 +10029,12 @@ STRING 1688
 Tome of Magic
 }
 
+STRING 1689
+// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
+{
+(VIP Hero)
+}
+
 STRING 1690
 // Units: h050 (Dummy Orb of Orbs), EditorSuffix (Name - Editor Suffix)
 {
@@ -89735,12 +89741,6 @@ STRING 37888
 // Items: I0NZ (Craft Shadow Orb +5), Tip (Tooltip - Basic)
 {
 Craft Shadow Orb +5
-}
-
-STRING 37889
-// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
-{
-(Bonus Hero)
 }
 
 STRING 37890
