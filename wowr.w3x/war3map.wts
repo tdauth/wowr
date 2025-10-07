@@ -9351,6 +9351,12 @@ STRING 1575
 (Item - Baradé's Version)
 }
 
+STRING 1576
+// Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
+{
+Craft items which heal your hero and increase the hero's life:|n- Potion of Greater Healing|n- Scroll of Healing|n- Health Stone|n- Potion of Invulnerability|n- Talisman of Everlasting|n- Tiny Fountain of Health
+}
+
 STRING 1577
 // Abilities: A052 (Animal War Training), Ubertip (Tooltip - Normal - Extended)
 {
@@ -9403,6 +9409,12 @@ STRING 1585
 // Units: o08C (Workshop), Ubertip (Tooltip - Extended)
 {
 Trains Vigilants, Siegebreakers, and Dimensional Ships.
+}
+
+STRING 1586
+// Items: I06O (Alchemist), Ubertip (Tooltip - Extended)
+{
+Craft items which restore mana of your hero and increase the hero's maximum mana:|n- Potion of Greater Mana|n- Scroll of Mana|n- Mana Stone|n- Wand of Mana Stealing|n- Talisman of Spell Protection|n- Tiny Fountain of Mana
 }
 
 STRING 1587
@@ -9565,6 +9577,12 @@ STRING 1613
 // Units: h00V (Orc Housing), Name (Name)
 {
 Orc Housing
+}
+
+STRING 1614
+// Items: I06Q (Loremaster), Ubertip (Tooltip - Extended)
+{
+Craft items with temporary effects:|n- Scroll of Protection|n- Scroll of the Beast|n- Scroll of Restoration|n- Arcane Scroll|n- Scroll of Resurrection|n- Ankh of Reincarnation
 }
 
 STRING 1615
@@ -43354,12 +43372,6 @@ STRING 10076
 S
 }
 
-STRING 10077
-// Items: I06Q (Loremaster), Ubertip (Tooltip - Extended)
-{
-Craft items with temporary effects:|n- Scroll of Protection|n- Scroll of Restoration|n- Scroll of Resurrection|n- Ankh of Reincarnation|n- Scroll of the Beast|n- Arcane Scroll
-}
-
 STRING 10078
 // Abilities: A17M (Loremastery - Grand Master), Name (Name)
 {
@@ -46691,18 +46703,6 @@ STRING 10747
 // Units: h088 (Fountain of Mana), Tip (Tooltip - Basic)
 {
 Build Fountain of Mana
-}
-
-STRING 10748
-// Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
-{
-Craft items which heal your hero and increase the hero's life:|n- Potion of Greater Healing|n- Health Stone|n- Potion of Invulnerability|n- Talisman of Everlasting|n- Scroll of Healing|n- Tiny Fountain of Health
-}
-
-STRING 10749
-// Items: I06O (Alchemist), Ubertip (Tooltip - Extended)
-{
-Craft items which restore mana of your hero and increase the hero's maximum mana:|n- Potion of Greater Mana|n- Mana Stone|n- Wand of Mana Stealing|n- Talisman of Spell Protection|n- Scroll of Mana|n- Tiny Fountain of Mana
 }
 
 STRING 10750
