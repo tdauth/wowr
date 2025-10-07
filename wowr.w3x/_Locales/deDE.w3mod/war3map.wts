@@ -194,7 +194,7 @@ Ingenieurwesen
 }
 
 STRING 33
-// Abilities: A1NY (Gottesschild), EditorSuffix (Editor Suffix)
+// Abilities: A1NY (Divine Shield), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich) (New Divine Armor Type)
 }
@@ -416,7 +416,7 @@ Zufällige Klasse
 }
 
 STRING 70
-// Abilities: A1NY (Gottesschild), Name (Name)
+// Abilities: A1NY (Divine Shield), Name (Name)
 {
 Gottesschild
 }
@@ -1640,7 +1640,7 @@ Feuerblitz - [|cffffcc00Stufe 10|r]
 }
 
 STRING 274
-// Abilities: A0W5 (Brunnen der Macht), EditorSuffix (Editor Suffix)
+// Abilities: A0W5 (Fountain of Power), EditorSuffix (Editor Suffix)
 {
 Feuerblitz - [|cffffcc00Stufe 11|r]
 }
@@ -2480,7 +2480,7 @@ Converts units into Naga units.
 }
 
 STRING 415
-// Items: I024 (Talisman des Zauberschutzes), Description (Description)
+// Items: I024 (Talisman of Spell Protection), Description (Description)
 {
 Blocks an enemy spell every 15 seconds and adds 250 Mana.
 }
@@ -2492,7 +2492,7 @@ Wechselt die Klasse zum Jäger:|n- Gefährten beschwören|n- Fernkampf|n- Schade
 }
 
 STRING 417
-// Items: I024 (Talisman des Zauberschutzes), Tip (Tooltip - Basic)
+// Items: I024 (Talisman of Spell Protection), Tip (Tooltip - Basic)
 {
 Purchase Talisman des Zauberschutzes
 }
@@ -2528,7 +2528,7 @@ STRING 422
 }
 
 STRING 423
-// Items: I025 (Talisman der Ewigkeit), Tip (Tooltip - Basic)
+// Items: I025 (Talisman of Everlasting), Tip (Tooltip - Basic)
 {
 Purchase Talisman der Ewigkeit
 }
@@ -4388,7 +4388,7 @@ STRING 735
 }
 
 STRING 736
-// Buffs/Effects: B003 (Gottesschild), Bufftip (Tooltip)
+// Buffs/Effects: B003 (Divine Shield), Bufftip (Tooltip)
 {
 |cff00ff00Gottesschild|r
 }
@@ -6466,7 +6466,7 @@ G
 }
 
 STRING 1092
-// Units: o02L (Troll Bloodmage), Hotkey (Hotkey)
+// Units: o02L (Troll-Blutmagier), Hotkey (Hotkey)
 {
 B
 }
@@ -6649,7 +6649,7 @@ L
 }
 
 STRING 1124
-// Buffs/Effects: B003 (Gottesschild), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B003 (Divine Shield), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Gottesschild. It hase Divine armor.
 }
@@ -6772,7 +6772,7 @@ Purchase Book of Panzerung
 }
 
 STRING 1145
-// Items: I0ZQ (Wolfsgeistkapuze), Name (Name)
+// Items: I0ZQ (Wolf Spirit Hood), Name (Name)
 {
 Wolfsgeistkapuze
 }
@@ -8202,7 +8202,7 @@ Provides Kul Tiras towers with the ability to detect invisible units.
 }
 
 STRING 1384
-// Units: o095 (Albtraumweber), Name (Name)
+// Units: o095 (Nightmare Weaver), Name (Name)
 {
 Albtraumweber
 }
@@ -8339,13 +8339,13 @@ X
 }
 
 STRING 1407
-// Abilities: A0BL (Chemie), Name (Name)
+// Abilities: A0BL (Chemistry), Name (Name)
 {
 Chemie
 }
 
 STRING 1408
-// Abilities: A0BL (Chemie), Tip (Tooltip - Normal)
+// Abilities: A0BL (Chemistry), Tip (Tooltip - Normal)
 {
 Chemie
 }
@@ -8387,7 +8387,7 @@ Gargoyle-Reittier
 }
 
 STRING 1415
-// Units: o095 (Albtraumweber), Tip (Tooltip - Basic)
+// Units: o095 (Nightmare Weaver), Tip (Tooltip - Basic)
 {
 Albtraumweber ausbilden
 }
@@ -8405,7 +8405,7 @@ STRING 1417
 }
 
 STRING 1418
-// Items: I0ZQ (Wolfsgeistkapuze), Tip (Tooltip - Basic)
+// Items: I0ZQ (Wolf Spirit Hood), Tip (Tooltip - Basic)
 {
 Wolfsgeistkapuze erwerben
 }
@@ -8465,7 +8465,7 @@ R
 }
 
 STRING 1428
-// Items: I024 (Talisman des Zauberschutzes), Name (Name)
+// Items: I024 (Talisman of Spell Protection), Name (Name)
 {
 Talisman des Zauberschutzes
 }
@@ -8477,13 +8477,13 @@ S
 }
 
 STRING 1430
-// Items: I025 (Talisman der Ewigkeit), Name (Name)
+// Items: I025 (Talisman of Everlasting), Name (Name)
 {
 Talisman der Ewigkeit
 }
 
 STRING 1431
-// Items: I025 (Talisman der Ewigkeit), Description (Description)
+// Items: I025 (Talisman of Everlasting), Description (Description)
 {
 Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
 }
@@ -8896,7 +8896,7 @@ Taran Zhu beschwören
 }
 
 STRING 1500
-// Units: u00Q (Furbolg-Marktplatz), Hotkey (Hotkey)
+// Units: u00Q (Furbolg Marketplace), Hotkey (Hotkey)
 {
 O
 }
@@ -9196,13 +9196,13 @@ A magical scroll that will dispel the invulnerability of the guardians of the Ho
 }
 
 STRING 1550
-// Items: I024 (Talisman des Zauberschutzes), Ubertip (Tooltip - Extended)
+// Items: I024 (Talisman of Spell Protection), Ubertip (Tooltip - Extended)
 {
 Blocks an enemy spell every 15 seconds and adds 250 Mana.
 }
 
 STRING 1551
-// Items: I025 (Talisman der Ewigkeit), Ubertip (Tooltip - Extended)
+// Items: I025 (Talisman of Everlasting), Ubertip (Tooltip - Extended)
 {
 Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
 }
@@ -9351,6 +9351,12 @@ STRING 1575
 (Item - Baradé's Version)
 }
 
+STRING 1576
+// Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
+{
+Craft items which heal your hero and increase the hero's life:|n- Potion of Greater Healing|n- Scroll of Healing|n- Health Stone|n- Potion of Invulnerability|n- Talisman of Everlasting|n- Tiny Fountain of Health
+}
+
 STRING 1577
 // Abilities: A052 (Animal War Training), Ubertip (Tooltip - Normal - Extended)
 {
@@ -9403,6 +9409,12 @@ STRING 1585
 // Units: o08C (Workshop), Ubertip (Tooltip - Extended)
 {
 Trains Vigilants, Belagerungsbrechers, and Dimensional Ships.
+}
+
+STRING 1586
+// Items: I06O (Alchemist), Ubertip (Tooltip - Extended)
+{
+Craft items which restore mana of your hero and increase the hero's maximum mana:|n- Potion of Greater Mana|n- Scroll of Mana|n- Mana Stone|n- Wand of Mana Stealing|n- Talisman of Spell Protection|n- Tiny Fountain of Mana
 }
 
 STRING 1587
@@ -9565,6 +9577,12 @@ STRING 1613
 // Units: h00V (Orc Housing), Name (Name)
 {
 Orc-Unterkunft
+}
+
+STRING 1614
+// Items: I06Q (Loremaster), Ubertip (Tooltip - Extended)
+{
+Craft items with temporary effects:|n- Scroll of Protection|n- Scroll of the Beast|n- Scroll of Restoration|n- Arcane Scroll|n- Scroll of Resurrection|n- Ankh of Reincarnation
 }
 
 STRING 1615
@@ -9754,13 +9772,13 @@ S
 }
 
 STRING 1646
-// Units: o026 (Brunnen der Macht), Name (Name)
+// Units: o026 (Fountain of Power), Name (Name)
 {
 Brunnen der Macht
 }
 
 STRING 1647
-// Units: o026 (Brunnen der Macht), EditorSuffix (Name - Editor Suffix)
+// Units: o026 (Fountain of Power), EditorSuffix (Name - Editor Suffix)
 {
 (Ward)
 }
@@ -9790,13 +9808,13 @@ Summons an immovable fountain that heals <A01Q,DataA1,%>% and regenerates <A0FR,
 }
 
 STRING 1652
-// Abilities: A0W5 (Brunnen der Macht), Name (Name)
+// Abilities: A0W5 (Fountain of Power), Name (Name)
 {
 Brunnen der Macht
 }
 
 STRING 1653
-// Abilities: A1QC (Brunnen der Macht), Name (Name)
+// Abilities: A1QC (Fountain of Power), Name (Name)
 {
 Brunnen der Macht
 }
@@ -9844,7 +9862,7 @@ STRING 1660
 }
 
 STRING 1661
-// Units: N07U (Elementar-Lord), Name (Name)
+// Units: N07U (Elemental Lord), Name (Name)
 {
 Elementar-Lord
 }
@@ -9862,7 +9880,7 @@ D
 }
 
 STRING 1664
-// Units: n072 (Teufelsplünderer), Hotkey (Hotkey)
+// Units: n072 (Fel Reaver), Hotkey (Hotkey)
 {
 E
 }
@@ -9892,7 +9910,7 @@ D
 }
 
 STRING 1669
-// Units: n07Q (Teufelsplünderer), Hotkey (Hotkey)
+// Units: n07Q (Fel Reaver), Hotkey (Hotkey)
 {
 E
 }
@@ -9904,13 +9922,13 @@ D
 }
 
 STRING 1671
-// Units: N07U (Elementar-Lord), Hotkey (Hotkey)
+// Units: N07U (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 1672
-// Units: N01X (Elementar-Lord), Propernames (Proper Names)
+// Units: N01X (Elemental Lord), Propernames (Proper Names)
 {
 Murmur
 }
@@ -9922,13 +9940,13 @@ E
 }
 
 STRING 1674
-// Units: N01X (Elementar-Lord), Awakentip (Tooltip - Awaken)
+// Units: N01X (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
 Murmur wiederbeleben
 }
 
 STRING 1675
-// Units: N01X (Elementar-Lord), Tip (Tooltip - Basic)
+// Units: N01X (Elemental Lord), Tip (Tooltip - Basic)
 {
 Murmur beschwören
 }
@@ -9940,7 +9958,7 @@ Causes rains of healing energy to pour down in a large area, healing friendly al
 }
 
 STRING 1677
-// Units: N01X (Elementar-Lord), Revivetip (Tooltip - Revive)
+// Units: N01X (Elemental Lord), Revivetip (Tooltip - Revive)
 {
 Murmur wiederbeleben
 }
@@ -9958,7 +9976,7 @@ Turns all friendly units in the world invulnerable. |nThe Temple does not turn i
 }
 
 STRING 1680
-// Units: N0IG (Elementar-Lord), Ubertip (Tooltip - Extended)
+// Units: N0IG (Elemental Lord), Ubertip (Tooltip - Extended)
 {
 Mystical Hero, adept at disrupting spells and dealing large amounts of fire damage. Can learn Crushing Wave, Mana Shield, Bash, Monsoon and Summon Sea Elemental.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
 }
@@ -10009,6 +10027,12 @@ STRING 1688
 // Items: I1A4 (Tome of Magic), Name (Name)
 {
 Foliant der Magie
+}
+
+STRING 1689
+// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
+{
+(VIP Hero)
 }
 
 STRING 1690
@@ -10874,7 +10898,7 @@ Ein Kriegerheld, adept at terrorizing enemies. Can learn Manabrand, Schwarzer Pf
 }
 
 STRING 1870
-// Units: N01X (Elementar-Lord), Ubertip (Tooltip - Extended)
+// Units: N01X (Elemental Lord), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at disrupting spells and dealing large amounts of fire damage. Can learn Schmetterwelle, Manaschild, Hieb, Monsun and Meeres-Elementargeist beschwören.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -12008,7 +12032,7 @@ Q
 }
 
 STRING 2080
-// Units: n0G7 (Murloc Bubble Mage), Hotkey (Hotkey)
+// Units: n0G7 (Murloc-Blasen-Magier), Hotkey (Hotkey)
 {
 B
 }
@@ -12074,13 +12098,13 @@ Kor'gall
 }
 
 STRING 2091
-// Units: n072 (Teufelsplünderer), Name (Name)
+// Units: n072 (Fel Reaver), Name (Name)
 {
 Teufelsplünderer
 }
 
 STRING 2092
-// Units: n072 (Teufelsplünderer), Tip (Tooltip - Basic)
+// Units: n072 (Fel Reaver), Tip (Tooltip - Basic)
 {
 Teufelsplünderer beschwören
 }
@@ -12098,13 +12122,13 @@ Höllenplünderer beschwören
 }
 
 STRING 2095
-// Units: n074 (Leerenplünderer), Name (Name)
+// Units: n074 (Void Reaver), Name (Name)
 {
 Leerenplünderer
 }
 
 STRING 2096
-// Units: n074 (Leerenplünderer), Tip (Tooltip - Basic)
+// Units: n074 (Void Reaver), Tip (Tooltip - Basic)
 {
 Leerenplünderer beschwören
 }
@@ -12704,7 +12728,7 @@ Silithidenwespe anheuern
 }
 
 STRING 2270
-// Units: n07J (Quiraj-Prophet), Name (Name)
+// Units: n07J (Quiraj Prophet), Name (Name)
 {
 Quiraj-Prophet
 }
@@ -12716,13 +12740,13 @@ STRING 2271
 }
 
 STRING 2272
-// Units: n07J (Quiraj-Prophet), Tip (Tooltip - Basic)
+// Units: n07J (Quiraj Prophet), Tip (Tooltip - Basic)
 {
 Quiraj-Prophet anheuern
 }
 
 STRING 2273
-// Units: n07J (Quiraj-Prophet), Ubertip (Tooltip - Extended)
+// Units: n07J (Quiraj Prophet), Ubertip (Tooltip - Extended)
 {
 Medium melee spell caster unit. Can cast Verbannen and Schlaf.|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -17217,11 +17241,11 @@ Käfig
 STRING 3278
 // Units: h0PZ (Murloc Treasurehold), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Gathering Hall, Gathering Stronghold, or Gathering Fortress) and which buildings you have.
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Versammlungshalle, Versammlungs-Hochburg, or Versammlungs-Festung) and which buildings you have.
 }
 
 STRING 3279
-// Units: n0G9 (Murloc Shadowcaster), Casterupgradetip (Caster Upgrade Tips)
+// Units: n0G9 (Murloc-Schattenzauberer), Casterupgradetip (Caster Upgrade Tips)
 {
 - Parasit,- Parasit|n- Todesmantel,- Parasit|n- Todesmanteln- Hex
 }
@@ -18169,7 +18193,7 @@ Ein mystischer Held, adept at using nature spells. Can learn Wucherwurzeln, Natu
 }
 
 STRING 3456
-// Units: N07U (Elementar-Lord), Ubertip (Tooltip - Extended)
+// Units: N07U (Elemental Lord), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at disrupting spells and dealing large amounts of fire damage.  Can learn Seelenbrand, Lavabrut beschwören, Verbrennen and Volcano.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -20845,7 +20869,7 @@ Drachenzüchter - Adept
 }
 
 STRING 4135
-// Units: N0IG (Elementar-Lord), Hotkey (Hotkey)
+// Units: N0IG (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -21079,7 +21103,7 @@ Baum essen
 }
 
 STRING 4178
-// Units: N0IH (Elementar-Lord), Hotkey (Hotkey)
+// Units: N0IH (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -21199,7 +21223,7 @@ STRING 4249
 }
 
 STRING 4250
-// Units: u00Q (Furbolg-Marktplatz), EditorSuffix (Name - Editor Suffix)
+// Units: u00Q (Furbolg Marketplace), EditorSuffix (Name - Editor Suffix)
 {
 (Furbolgs)
 }
@@ -21503,7 +21527,7 @@ Geben Sie das Buch an Gerard zurück.
 }
 
 STRING 4348
-// Units: o09W (Freiberufler-Hafen), EditorSuffix (Name - Editor Suffix)
+// Units: o09W (Freelancer Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Freiberufler)
 }
@@ -21815,13 +21839,13 @@ S
 }
 
 STRING 4402
-// Units: u00Q (Furbolg-Marktplatz), Name (Name)
+// Units: u00Q (Furbolg Marketplace), Name (Name)
 {
 Furbolg-Marktplatz
 }
 
 STRING 4403
-// Units: u00Q (Furbolg-Marktplatz), Tip (Tooltip - Basic)
+// Units: u00Q (Furbolg Marketplace), Tip (Tooltip - Basic)
 {
 Furbolg-Marktplatz errichten
 }
@@ -22277,7 +22301,7 @@ STRING 4483
 }
 
 STRING 4490
-// Units: N0II (Elementar-Lord), Hotkey (Hotkey)
+// Units: N0II (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -22790,13 +22814,13 @@ STRING 4578
 }
 
 STRING 4579
-// Units: N0IH (Elementar-Lord), Ubertip (Tooltip - Extended)
+// Units: N0IH (Elemental Lord), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at disrupting spells and dealing large amounts of fire damage. Can learn Schockwelle, Erd-Elementargeist beschwören, Hieb, Erdbeben and Kriegsdonner.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 4580
-// Units: N0II (Elementar-Lord), Ubertip (Tooltip - Extended)
+// Units: N0II (Elemental Lord), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at disrupting spells and dealing large amounts of fire damage. Can learn Gabelblitz, Windlauf, Hieb, Massenwirbelsturm and Ausweichaura.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -24364,7 +24388,7 @@ J
 }
 
 STRING 4901
-// Abilities: A0W1 (Build Tiny Freiberufler-Hafen), EditorSuffix (Editor Suffix)
+// Abilities: A0W1 (Build Tiny Freelancer Shipyard), EditorSuffix (Editor Suffix)
 {
 (Freiberufler)
 }
@@ -25302,7 +25326,7 @@ Schreiber
 }
 
 STRING 5104
-// Units: o062 (Spider Shrine), Hotkey (Hotkey)
+// Units: o062 (Spinnenschrein), Hotkey (Hotkey)
 {
 H
 }
@@ -25818,7 +25842,7 @@ Q
 }
 
 STRING 5210
-// Units: N0DR (Elementar-Lord), Hotkey (Hotkey)
+// Units: N0DR (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -26088,7 +26112,7 @@ Creates a Great Verlies.
 }
 
 STRING 5259
-// Units: N01X (Elementar-Lord), Hotkey (Hotkey)
+// Units: N01X (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -27424,7 +27448,7 @@ B
 }
 
 STRING 5542
-// Units: o068 (Murloc Lumberkeep), Hotkey (Hotkey)
+// Units: o068 (Murloc-Holzfäller), Hotkey (Hotkey)
 {
 L
 }
@@ -27754,7 +27778,7 @@ STRING 5597
 }
 
 STRING 5598
-// Abilities: A0DI (Stachelpanzerschale), EditorSuffix (Editor Suffix)
+// Abilities: A0DI (Spiked Shell), EditorSuffix (Editor Suffix)
 {
 (Naga)
 }
@@ -28004,25 +28028,25 @@ Errichtet am Zielort eine Freiberufler-Unterkunft.
 }
 
 STRING 5649
-// Items: I0X3 (Tiny Freiberufler-Hafen), Name (Name)
+// Items: I0X3 (Tiny Freelancer Shipyard), Name (Name)
 {
 Winziger Freiberufler-Hafen
 }
 
 STRING 5650
-// Items: I0X3 (Tiny Freiberufler-Hafen), Description (Description)
+// Items: I0X3 (Tiny Freelancer Shipyard), Description (Description)
 {
 Errichtet einen Freiberufler-Hafen.
 }
 
 STRING 5651
-// Items: I0X3 (Tiny Freiberufler-Hafen), Tip (Tooltip - Basic)
+// Items: I0X3 (Tiny Freelancer Shipyard), Tip (Tooltip - Basic)
 {
 Winzigen Freiberufler-Hafen erwerben
 }
 
 STRING 5652
-// Items: I0X3 (Tiny Freiberufler-Hafen), Ubertip (Tooltip - Extended)
+// Items: I0X3 (Tiny Freelancer Shipyard), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort einen Freiberufler-Hafen.
 }
@@ -28040,7 +28064,7 @@ STRING 5654
 }
 
 STRING 5655
-// Abilities: A0W1 (Build Tiny Freiberufler-Hafen), Name (Name)
+// Abilities: A0W1 (Build Tiny Freelancer Shipyard), Name (Name)
 {
 Build Tiny Freiberufler-Hafen
 }
@@ -28502,7 +28526,7 @@ Ausbau zum Drachenhöhle ermöglicht die Produktion weiterer Gebäude- und Einhe
 }
 
 STRING 5739
-// Units: o068 (Murloc Lumberkeep), Ubertip (Tooltip - Extended)
+// Units: o068 (Murloc-Holzfäller), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz.
 }
@@ -28695,7 +28719,7 @@ M
 }
 
 STRING 5771
-// Items: I06C (Undead), Ubertip (Tooltip - Extended)
+// Items: I06C (Untote), Ubertip (Tooltip - Extended)
 {
 - Summon buildings without requiring a constructing worker.|n- Blight which allows hit points regeneration.|n- Summon skeletons from corpses.|n|n|cffffcc00Faction: Horde.|r
 }
@@ -29449,7 +29473,7 @@ STRING 5903
 }
 
 STRING 5904
-// Items: I06G (Demon), Ubertip (Tooltip - Extended)
+// Items: I06G (Dämonen), Ubertip (Tooltip - Extended)
 {
 - Summon buildings without requiring a constructing worker.|n- Strong units.|n- Bezauberung enemies.|n- Transport units over the map.|n- Capture enemy units.|n|n|cffffcc00Faction: Horde.|r
 }
@@ -30371,7 +30395,7 @@ STRING 6067
 }
 
 STRING 6071
-// Units: n07J (Quiraj-Prophet), EditorSuffix (Name - Editor Suffix)
+// Units: n07J (Quiraj Prophet), EditorSuffix (Name - Editor Suffix)
 {
 (Unhold)
 }
@@ -30747,7 +30771,7 @@ STRING 6165
 }
 
 STRING 6166
-// Units: n074 (Leerenplünderer), Hotkey (Hotkey)
+// Units: n074 (Void Reaver), Hotkey (Hotkey)
 {
 V
 }
@@ -30759,7 +30783,7 @@ V
 }
 
 STRING 6168
-// Units: n07S (Leerenplünderer), Hotkey (Hotkey)
+// Units: n07S (Void Reaver), Hotkey (Hotkey)
 {
 V
 }
@@ -30801,7 +30825,7 @@ V
 }
 
 STRING 6175
-// Units: o069 (Murloc Fisher), Hotkey (Hotkey)
+// Units: o069 (Murloc-Fischer), Hotkey (Hotkey)
 {
 V
 }
@@ -31550,21 +31574,21 @@ Spinnenkrebs-Ungetüm
 }
 
 STRING 6394
-// Units: n0FP (Gathering Hall), Ubertip (Tooltip - Extended)
+// Units: n0FP (Versammlungshalle), Ubertip (Tooltip - Extended)
 {
 Primary structure, used to train Murloc Arbeiter and receive gathered resources.
 }
 
 STRING 6395
-// Units: n0G5 (Gathering Fortress), Ubertip (Tooltip - Extended)
+// Units: n0G5 (Versammlungs-Festung), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Gathering Fortress ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Versammlungs-Festung ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 6396
-// Units: n0G6 (Gathering Stronghold), Ubertip (Tooltip - Extended)
+// Units: n0G6 (Versammlungs-Hochburg), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Gathering Stronghold ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Versammlungs-Hochburg ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 6397
@@ -31616,7 +31640,7 @@ Kristall-Golem beschwören
 }
 
 STRING 6407
-// Units: N0IG (Elementar-Lord), Name (Name)
+// Units: N0IG (Elemental Lord), Name (Name)
 {
 Elementar-Lord
 }
@@ -31628,25 +31652,25 @@ Land
 }
 
 STRING 6409
-// Units: N0DR (Elementar-Lord), Propernames (Proper Names)
+// Units: N0DR (Elemental Lord), Propernames (Proper Names)
 {
 Smolderon
 }
 
 STRING 6410
-// Units: N0DR (Elementar-Lord), Awakentip (Tooltip - Awaken)
+// Units: N0DR (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
 Smolderon wiederbeleben
 }
 
 STRING 6411
-// Units: N0DR (Elementar-Lord), Tip (Tooltip - Basic)
+// Units: N0DR (Elemental Lord), Tip (Tooltip - Basic)
 {
 Smolderon wiederbeleben
 }
 
 STRING 6412
-// Units: N0DR (Elementar-Lord), Revivetip (Tooltip - Revive)
+// Units: N0DR (Elemental Lord), Revivetip (Tooltip - Revive)
 {
 Smolderon wiederbeleben
 }
@@ -32241,7 +32265,7 @@ Q
 }
 
 STRING 6551
-// Items: I06C (Undead), Hotkey (Hotkey)
+// Items: I06C (Untote), Hotkey (Hotkey)
 {
 E
 }
@@ -32700,7 +32724,7 @@ W
 }
 
 STRING 6713
-// Units: n0G9 (Murloc Shadowcaster), Hotkey (Hotkey)
+// Units: n0G9 (Murloc-Schattenzauberer), Hotkey (Hotkey)
 {
 S
 }
@@ -34414,7 +34438,7 @@ R
 }
 
 STRING 7179
-// Items: I0XZ (Gesichtslose), Hotkey (Hotkey)
+// Items: I0XZ (Faceless One), Hotkey (Hotkey)
 {
 W
 }
@@ -35493,7 +35517,7 @@ STRING 7581
 }
 
 STRING 7582
-// Units: n07Q (Teufelsplünderer), EditorSuffix (Name - Editor Suffix)
+// Units: n07Q (Fel Reaver), EditorSuffix (Name - Editor Suffix)
 {
 (Dämonen)
 }
@@ -35517,7 +35541,7 @@ STRING 7585
 }
 
 STRING 7586
-// Units: n07S (Leerenplünderer), EditorSuffix (Name - Editor Suffix)
+// Units: n07S (Void Reaver), EditorSuffix (Name - Editor Suffix)
 {
 (Dämonen)
 }
@@ -38047,7 +38071,7 @@ K
 }
 
 STRING 8033
-// Units: N0DR (Elementar-Lord), Ubertip (Tooltip - Extended)
+// Units: N0DR (Elemental Lord), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at disrupting spells and dealing large amounts of fire damage. Can learn Massen-Feuerblitz, Feuer-Elementargeist beschwörens, Dauerhafter Feuerbrand, Volcano and Feuerangriff.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -38783,7 +38807,7 @@ Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, 
 }
 
 STRING 8189
-// Units: o09W (Freiberufler-Hafen), Hotkey (Hotkey)
+// Units: o09W (Freelancer Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -43355,12 +43379,6 @@ STRING 10076
 S
 }
 
-STRING 10077
-// Items: I06Q (Loremaster), Ubertip (Tooltip - Extended)
-{
-Craft items with temporary effects:|n- Scroll of Protection|n- Scroll of Restoration|n- Scroll of Auferstehung|n- Ankh der Reinkarnation|n- Scroll of the Beast|n- Arcane Scroll
-}
-
 STRING 10078
 // Abilities: A17M (Loremastery - Grand Master), Name (Name)
 {
@@ -43869,7 +43887,7 @@ G
 }
 
 STRING 10174
-// Items: I06G (Demon), Hotkey (Hotkey)
+// Items: I06G (Dämonen), Hotkey (Hotkey)
 {
 F
 }
@@ -45497,7 +45515,7 @@ Trains Schiffsarzts, Sturm-Zauberers, and Wasserbeschwörers. |nAlso contains sp
 }
 
 STRING 10477
-// Items: I06C (Undead), Name (Name)
+// Items: I06C (Untote), Name (Name)
 {
 Untote
 }
@@ -46694,18 +46712,6 @@ STRING 10747
 Mana-Brunnen errichten
 }
 
-STRING 10748
-// Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
-{
-Craft items which heal your hero and increase the hero's life:|n- Potion of Greater Heilening|n- Heilenth Stone|n- Potion of Invulnerability|n- Talisman der Ewigkeit|n- Scroll of Heilening|n- Winziger Brunnen der Gesundheit
-}
-
-STRING 10749
-// Items: I06O (Alchemist), Ubertip (Tooltip - Extended)
-{
-Craft items which restore mana of your hero and increase the hero's maximum mana:|n- Potion of Greater Mana|n- Mana Stone|n- Wand of Mana Stealing|n- Talisman des Zauberschutzes|n- Scroll of Mana|n- Winziger Mana-Brunnen
-}
-
 STRING 10750
 // Units: n0OF (Hunting Camp), EditorSuffix (Name - Editor Suffix)
 {
@@ -47823,7 +47829,7 @@ S
 }
 
 STRING 11020
-// Units: u00Q (Furbolg-Marktplatz), Ubertip (Tooltip - Extended)
+// Units: u00Q (Furbolg Marketplace), Ubertip (Tooltip - Extended)
 {
 Errichtet einen Laden mit käuflichen Gegenständen.
 }
@@ -47917,7 +47923,7 @@ Nächster Skin
 }
 
 STRING 11048
-// Items: I06C (Undead), Tip (Tooltip - Basic)
+// Items: I06C (Untote), Tip (Tooltip - Basic)
 {
 Untote
 }
@@ -48337,9 +48343,9 @@ Meeresriese
 }
 
 STRING 11203
-// Units: u03Q (Ability Car Horn), Name (Name)
+// Units: u03Q (Ability Autohupe), Name (Name)
 {
-Ability Car Horn
+Fähigkeit Autohupe
 }
 
 STRING 11204
@@ -48349,9 +48355,9 @@ STRING 11204
 }
 
 STRING 11205
-// Units: u03Q (Ability Car Horn), Tip (Tooltip - Basic)
+// Units: u03Q (Ability Autohupe), Tip (Tooltip - Basic)
 {
-Car Horn
+Autohupe
 }
 
 STRING 11206
@@ -48445,9 +48451,9 @@ Feuerblitz
 }
 
 STRING 11251
-// Abilities: A23N (Car Horn), Name (Name)
+// Abilities: A23N (Autohupe), Name (Name)
 {
-Car Horn
+Autohupe
 }
 
 STRING 11252
@@ -48475,13 +48481,13 @@ Unleashes the power of the dead Cenarius and causes 1000 + number of Wisps insid
 }
 
 STRING 11256
-// Abilities: A23N (Car Horn), Tip (Tooltip - Normal)
+// Abilities: A23N (Autohupe), Tip (Tooltip - Normal)
 {
-Car Horn
+Autohupe
 }
 
 STRING 11258
-// Units: u03Q (Ability Car Horn), Ubertip (Tooltip - Extended)
+// Units: u03Q (Ability Autohupe), Ubertip (Tooltip - Extended)
 {
 Bläst die Hupe des Autos.
 }
@@ -48489,7 +48495,7 @@ Bläst die Hupe des Autos.
 STRING 11259
 // Units: H01K (King of Gnomes), Name (Name)
 {
-King of Gnomes
+König der Gnome
 }
 
 STRING 11260
@@ -48513,7 +48519,7 @@ P
 STRING 11264
 // Units: o0C1 (Barrel), Name (Name)
 {
-Barrel
+Fass
 }
 
 STRING 11265
@@ -48537,7 +48543,7 @@ Trains Goblin-Flugdrohnes, Goblin Zeppelins, and Goblin-Kriegszeppelins. |nAlso 
 STRING 11300
 // Upgrades: R04Z (Exhume Corpses), Tip (Tooltip)
 {
-Research Verteidigen
+Verteidigen erforschen
 }
 
 STRING 11301
@@ -48826,7 +48832,7 @@ Tür
 STRING 11374
 // Doodads: D019 (House Wall 1), Name (Name)
 {
-House Wall 1
+Hauswand 1
 }
 
 STRING 11375
@@ -48862,7 +48868,7 @@ STRING 11379
 STRING 11380
 // Doodads: D01A (House Wall 2), Name (Name)
 {
-House Wall 2
+Hauswand 2
 }
 
 STRING 11381
@@ -48874,7 +48880,7 @@ Puts a target creep to sleep and converts it into a zombie.
 STRING 11382
 // Doodads: D01B (House Wall Window), Name (Name)
 {
-House Wall Window
+Hauswand Fenster
 }
 
 STRING 11384
@@ -48922,13 +48928,13 @@ Kellertür
 STRING 11391
 // Doodads: D01J (Bucket Potato), Name (Name)
 {
-Bucket Potato
+Eimer Kartoffel
 }
 
 STRING 11392
 // Doodads: D01K (Bucket Wood), Name (Name)
 {
-Bucket Wood
+Eimer Holz
 }
 
 STRING 11393
@@ -49595,7 +49601,7 @@ The Astromant uses knowledge to craft Leuchtsignal Guns and Escape Portale.
 STRING 11603
 // Units: H01L (Lord of the Ogres), Name (Name)
 {
-Lord of the Ogres
+Lord der Oger
 }
 
 STRING 11604
@@ -50221,7 +50227,7 @@ STRING 11838
 }
 
 STRING 11841
-// Abilities: A01C (Gottesschild), Name (Name)
+// Abilities: A01C (Divine Shield), Name (Name)
 {
 Gottesschild
 }
@@ -50263,7 +50269,7 @@ STRING 11849
 }
 
 STRING 11852
-// Buffs/Effects: B003 (Gottesschild), EditorName (Name (Editor Only))
+// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
 {
 Gottesschild
 }
@@ -50448,7 +50454,7 @@ STRING 11884
 }
 
 STRING 11885
-// Units: n0G7 (Murloc Bubble Mage), Casterupgradename (Caster Upgrade Names)
+// Units: n0G7 (Murloc-Blasen-Magier), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -50593,7 +50599,7 @@ R
 
 STRING 11945
 {
-Bring the letter to Jaina on Theramore.
+Bringt den Brief zu Jaina auf Theramore.
 }
 
 STRING 11946
@@ -50905,15 +50911,15 @@ The Sea Witch
 }
 
 STRING 12003
-// Units: N09F (Murloc Priest), Name (Name)
+// Units: N09F (Murloc-Priester), Name (Name)
 {
-Murloc Priest
+Murloc-Priester
 }
 
 STRING 12004
-// Units: N09F (Murloc Priest), Propernames (Proper Names)
+// Units: N09F (Murloc-Priester), Propernames (Proper Names)
 {
-Murloc Priest
+Murloc-Priester
 }
 
 STRING 12005
@@ -51486,7 +51492,7 @@ Kill 5 enemy Paladin heroes.
 
 STRING 12120
 {
-Warcraft III Cheats
+Warcraft-III-Cheats
 }
 
 STRING 12121
@@ -51587,7 +51593,7 @@ Return the Seelen der Wilden Götter to Jaina on Theramore.
 
 STRING 12140
 {
-Bring the message to Illidan.
+Bringt die Nachricht zu Illidan.
 }
 
 STRING 12141
@@ -51602,7 +51608,7 @@ Return the Orc-Flagge to Illidan in Outland.
 
 STRING 12143
 {
-Defeat Magtheridon in Outland.
+Besiegt Magtheridon in Fremdland.
 }
 
 STRING 12144
@@ -51913,7 +51919,7 @@ Spaten erwerben
 STRING 12200
 // Items: I0T0 (Tiny Fortified Infernal Machine), Tip (Tooltip - Basic)
 {
-
+Purchase Tiny Fortified Infernal Machine
 }
 
 STRING 12201
@@ -52048,19 +52054,19 @@ Creates an Obelisk.
 STRING 12224
 // Items: I0PN (Tiny Obelisk), Name (Name)
 {
-Tiny Obelisk
+Winziger Obelisk
 }
 
 STRING 12225
 // Items: I0PN (Tiny Obelisk), Tip (Tooltip - Basic)
 {
-Purchase Tiny Obelisk
+Winzigen Obelisk erwerben
 }
 
 STRING 12226
 // Items: I0PN (Tiny Obelisk), Ubertip (Tooltip - Extended)
 {
-Creates an Obelisk at a target location.
+Errichtet am Zielort einen Obelisk.
 }
 
 STRING 12227
@@ -52096,31 +52102,31 @@ Build Tiny Obelisk
 STRING 12232
 // Units: u00K (Undead Shipyard), EditorSuffix (Name - Editor Suffix)
 {
-(Undead)
+(Untote)
 }
 
 STRING 12233
 // Abilities: A04O (Slow), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12234
 // Abilities: A04P (True Sight), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12235
 // Abilities: A04Q (Defend), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12236
 // Abilities: S001 (Load), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12237
@@ -52156,7 +52162,7 @@ Creates a Demon Portal at a target location.
 STRING 12242
 // Items: I0QF (Tiny Shrine), Name (Name)
 {
-Tiny Shrine
+Winziger Schrein
 }
 
 STRING 12243
@@ -52168,13 +52174,13 @@ Purchase Tiny Shrine
 STRING 12244
 // Items: I0QF (Tiny Shrine), Description (Description)
 {
-Creates a Shrine.
+Errichtet einen Schrein.
 }
 
 STRING 12245
 // Items: I0QF (Tiny Shrine), Ubertip (Tooltip - Extended)
 {
-Creates Shrine at a target location.
+Errichtet am Zielort einen Schrein.
 }
 
 STRING 12246
@@ -52252,25 +52258,25 @@ Build Tiny Demon Housing
 STRING 12258
 // Abilities: A04R (Cargo Hold), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12259
 // Abilities: A04S (Stand Down), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12260
 // Abilities: A04T (Battle Stations), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12261
 // Abilities: A04U (Spiked Barricades), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12262
@@ -52354,13 +52360,13 @@ Build Tiny Book of Summoning Pedestal
 STRING 12275
 // Abilities: A04V (Unit Inventory), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12276
 // Abilities: A05H (Incite Unholy Frenzy), EditorSuffix (Editor Suffix)
 {
-(Demon)
+(Dämonen)
 }
 
 STRING 12289
@@ -53114,7 +53120,7 @@ STRING 13320
 }
 
 STRING 13321
-// Items: I0ZQ (Wolfsgeistkapuze), Ubertip (Tooltip - Extended)
+// Items: I0ZQ (Wolf Spirit Hood), Ubertip (Tooltip - Extended)
 {
 Increases the armor of the Hero by 2 when worn.|n|n|cffffcc00Head.|r
 }
@@ -54486,7 +54492,7 @@ Avatar von Sargeras
 }
 
 STRING 14358
-// Units: N07U (Elementar-Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N07U (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -59762,7 +59768,7 @@ STRING 17787
 }
 
 STRING 17788
-// Units: n0G9 (Murloc Shadowcaster), Casterupgradename (Caster Upgrade Names)
+// Units: n0G9 (Murloc-Schattenzauberer), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -60409,7 +60415,7 @@ STRING 18696
 }
 
 STRING 18700
-// Units: N0IG (Elementar-Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -60433,7 +60439,7 @@ STRING 18705
 }
 
 STRING 18706
-// Units: N0IH (Elementar-Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -61540,13 +61546,13 @@ Gan'arg-Ingenieur ausbilden
 }
 
 STRING 19391
-// Units: n07Q (Teufelsplünderer), Name (Name)
+// Units: n07Q (Fel Reaver), Name (Name)
 {
 Teufelsplünderer
 }
 
 STRING 19392
-// Units: n07Q (Teufelsplünderer), Tip (Tooltip - Basic)
+// Units: n07Q (Fel Reaver), Tip (Tooltip - Basic)
 {
 Train Teufelsplünderer
 }
@@ -61570,13 +61576,13 @@ STRING 19395
 }
 
 STRING 19396
-// Units: n07S (Leerenplünderer), Name (Name)
+// Units: n07S (Void Reaver), Name (Name)
 {
 Leerenplünderer
 }
 
 STRING 19397
-// Units: n07S (Leerenplünderer), Tip (Tooltip - Basic)
+// Units: n07S (Void Reaver), Tip (Tooltip - Basic)
 {
 Summon Leerenplünderer
 }
@@ -61606,37 +61612,37 @@ Hire Core Hound
 }
 
 STRING 19402
-// Units: N0IH (Elementar-Lord), Name (Name)
+// Units: N0IH (Elemental Lord), Name (Name)
 {
 Elementar-Lord
 }
 
 STRING 19403
-// Units: N07U (Elementar-Lord), Propernames (Proper Names)
+// Units: N07U (Elemental Lord), Propernames (Proper Names)
 {
 Ragnaros
 }
 
 STRING 19404
-// Units: N07U (Elementar-Lord), Awakentip (Tooltip - Awaken)
+// Units: N07U (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
 Revive Ragnaros
 }
 
 STRING 19405
-// Units: N07U (Elementar-Lord), Tip (Tooltip - Basic)
+// Units: N07U (Elemental Lord), Tip (Tooltip - Basic)
 {
 Summon Ragnaros
 }
 
 STRING 19406
-// Units: N07U (Elementar-Lord), Revivetip (Tooltip - Revive)
+// Units: N07U (Elemental Lord), Revivetip (Tooltip - Revive)
 {
 Revive Ragnaros
 }
 
 STRING 19407
-// Units: N0II (Elementar-Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -61936,7 +61942,7 @@ Drenches the Oger-Goblin-Trupp ammo in burning oil, causing them to light the gr
 }
 
 STRING 19757
-// Units: o09W (Freiberufler-Hafen), Name (Name)
+// Units: o09W (Freelancer Shipyard), Name (Name)
 {
 Freiberufler-Hafen
 }
@@ -63198,13 +63204,13 @@ Troll-Hexer ausbilden
 }
 
 STRING 20223
-// Units: o02L (Troll Bloodmage), Name (Name)
+// Units: o02L (Troll-Blutmagier), Name (Name)
 {
 Troll-Blutmagier
 }
 
 STRING 20224
-// Units: o02L (Troll Bloodmage), Tip (Tooltip - Basic)
+// Units: o02L (Troll-Blutmagier), Tip (Tooltip - Basic)
 {
 Troll-Blutmagier ausbilden
 }
@@ -64582,7 +64588,7 @@ rlev
 }
 
 STRING 20679
-// Units: n07Q (Teufelsplünderer), Ubertip (Tooltip - Extended)
+// Units: n07Q (Fel Reaver), Ubertip (Tooltip - Extended)
 {
 Heavy melee unit cloaked in demonic flames that damage nearby enemy ground units. Immune to magic. Causes siege damage. Can harvest lumber. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -64975,7 +64981,7 @@ Heavy melee unit cloaked in demonic flames that damage nearby enemy ground units
 }
 
 STRING 21366
-// Units: n07S (Leerenplünderer), Ubertip (Tooltip - Extended)
+// Units: n07S (Void Reaver), Ubertip (Tooltip - Extended)
 {
 Heavy melee unit cloaked in demonic flames that damage nearby enemy ground units. Immune to magic. Causes siege damage. Can harvest lumber. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -67492,7 +67498,7 @@ Verzauberung
 }
 
 STRING 23761
-// Units: n0G9 (Murloc Shadowcaster), Ubertip (Tooltip - Extended)
+// Units: n0G9 (Murloc-Schattenzauberer), Ubertip (Tooltip - Extended)
 {
 Heavy ranged amphibious unit. Can initially cast Parasit. Can also learn Todesmantel, and Hex. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -68822,7 +68828,7 @@ STRING 25055
 }
 
 STRING 25056
-// Units: o02L (Troll Bloodmage), EditorSuffix (Name - Editor Suffix)
+// Units: o02L (Troll-Blutmagier), EditorSuffix (Name - Editor Suffix)
 {
 (Trolle)
 }
@@ -71694,7 +71700,7 @@ Hire Phönix
 }
 
 STRING 28059
-// Abilities: A0W5 (Brunnen der Macht), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Fountain of Power), Hotkey (Hotkey - Normal)
 {
 P
 }
@@ -76215,7 +76221,7 @@ STRING 32498
 }
 
 STRING 32499
-// Units: o09W (Freiberufler-Hafen), Tip (Tooltip - Basic)
+// Units: o09W (Freelancer Shipyard), Tip (Tooltip - Basic)
 {
 Build Freiberufler-Hafen
 }
@@ -77984,7 +77990,7 @@ Transforms the Troll Golem back into his standing form, allowing him to attack a
 }
 
 STRING 33553
-// Abilities: A1NY (Gottesschild), Hotkey (Hotkey - Normal)
+// Abilities: A1NY (Divine Shield), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -78404,13 +78410,13 @@ STRING 33780
 }
 
 STRING 33781
-// Units: o02L (Troll Bloodmage), Casterupgradetip (Caster Upgrade Tips)
+// Units: o02L (Troll-Blutmagier), Casterupgradetip (Caster Upgrade Tips)
 {
 - Kannibalismus,- Kannibalismus|n- Unstable Concoction,- Kannibalismus|n- Unstable Concoction|n- Lebensauger
 }
 
 STRING 33782
-// Units: o02L (Troll Bloodmage), Ubertip (Tooltip - Extended)
+// Units: o02L (Troll-Blutmagier), Ubertip (Tooltip - Extended)
 {
 Supporting spellcaster. Can initially cast Kannibalismus, which heals hit points by eating enemy living ground units. Can also learn Unstable Concoction and Lebensauger. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -78843,19 +78849,19 @@ STRING 33932
 STRING 33933
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Troll Armor
+Ausbau zur Trollrüstung
 }
 
 STRING 33934
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Improved Troll Armor
+Ausbau zur Verbesserten Trollrüstung
 }
 
 STRING 33935
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Advanced Troll Armor
+Ausbau zur Hoch entwickelten Trollrüstung
 }
 
 STRING 33939
@@ -78867,25 +78873,25 @@ STRING 33939
 STRING 33940
 // Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Troll Hexer Adeptenausbildung
+Troll-Hexer-Adeptenausbildung
 }
 
 STRING 33941
 // Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Troll Hexer Meisterausbildung
+Troll-Hexer-Meisterausbildung
 }
 
 STRING 33942
 // Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Troll Hexer Adeptenausbildung
+Troll-Hexer-Adeptenausbildung
 }
 
 STRING 33943
 // Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Troll Hexer Meisterausbildung
+Troll-Hexer-Meisterausbildung
 }
 
 STRING 33944
@@ -78903,25 +78909,25 @@ STRING 33945
 STRING 33946
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Troll Bloodmage Adeptenausbildung
+Troll-Blutmagier-Adeptenausbildung
 }
 
 STRING 33947
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Troll Bloodmage Meisterausbildung
+Troll-Blutmagier-Meisterausbildung
 }
 
 STRING 33948
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Troll Bloodmage Adeptenausbildung
+Troll-Blutmagier-Adeptenausbildung
 }
 
 STRING 33949
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Troll Bloodmage Meisterausbildung
+Troll-Blutmagier-Meisterausbildung
 }
 
 STRING 33950
@@ -78939,7 +78945,7 @@ STRING 33951
 STRING 33958
 // Units: n0F7 (Arakkoa), Tip (Tooltip - Basic)
 {
-Hire Arakkoa
+Arakkoa anheuern
 }
 
 STRING 33959
@@ -78951,7 +78957,7 @@ Aqir
 STRING 33960
 // Units: n0CU (Aqir), Tip (Tooltip - Basic)
 {
-Summon Aqir
+Aqir beschwören
 }
 
 STRING 33967
@@ -79317,7 +79323,7 @@ Allows you to participate in the Outland race.
 STRING 34105
 // Units: o07A (Draenor Merchant), Tip (Tooltip - Basic)
 {
-Build Händler von Draenor
+Händler von Draenor errichten
 }
 
 STRING 34106
@@ -79329,7 +79335,7 @@ C
 STRING 34107
 // Abilities: A0AS (Spell Book), EditorSuffix (Editor Suffix)
 {
-(Heart of Y'Shaarj)
+(Herz von Y'Shaarj)
 }
 
 STRING 34111
@@ -81900,13 +81906,13 @@ STRING 35349
 STRING 35350
 // Items: I0NG (Tiny Fortified Hideout), Name (Name)
 {
-Tiny Befestigtes Versteck
+Winziges Befestigtes Versteck
 }
 
 STRING 35351
 // Items: I0NG (Tiny Fortified Hideout), Description (Description)
 {
-Creates a Befestigtes Versteck at a target location.
+Errichtet am Zielort ein Befestigtes Versteck.
 }
 
 STRING 35352
@@ -81918,19 +81924,19 @@ Creates a Befestigtes Versteck at a target location. Befestigtes Verstecks have 
 STRING 35353
 // Items: I0NG (Tiny Fortified Hideout), Tip (Tooltip - Basic)
 {
-Buy Tiny Befestigtes Versteck
+Winziges Befestigtes Versteck erwerben
 }
 
 STRING 35354
 // Items: I0NH (Tiny Guardian´s Citadel), Name (Name)
 {
-Tiny Wächterzitadelle
+Winzige Wächterzitadelle
 }
 
 STRING 35355
 // Items: I0NH (Tiny Guardian´s Citadel), Description (Description)
 {
-Creates a Wächterzitadelle at a target location.
+Errichtet am Zielort eine Wächterzitadelle.
 }
 
 STRING 35356
@@ -81942,7 +81948,7 @@ Creates a Wächterzitadelle at a target location. Wächterzitadelles have some s
 STRING 35357
 // Items: I0NH (Tiny Guardian´s Citadel), Tip (Tooltip - Basic)
 {
-Buy Tiny Wächterzitadelle
+Winzige Wächterzitadelle erwerben
 }
 
 STRING 35358
@@ -81972,7 +81978,7 @@ Amboss errichten
 STRING 35362
 // Units: h0OV (Anvil), Ubertip (Tooltip - Extended)
 {
-Useful for a Blacksmith.
+Nützlich für einen Schmied.
 }
 
 STRING 35363
@@ -82374,7 +82380,7 @@ STRING 35624
 STRING 35625
 // Units: n0E1 (Fish Market), Tip (Tooltip - Basic)
 {
-Build Fish Market
+Fischmarkt errichten
 }
 
 STRING 35626
@@ -82914,7 +82920,7 @@ Umzugskartons erwerben
 STRING 35781
 // Items: I0M3 (Tiny Ziggurat), Tip (Tooltip - Basic)
 {
-Purchase Tiny Ziggurat
+Winziges Ziggurat erwerben
 }
 
 STRING 35782
@@ -89007,7 +89013,7 @@ Erlaubt Bürgern den Bau a Heavy Tank to fight enemy troops!
 }
 
 STRING 37679
-// Abilities: A0BL (Chemie), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BL (Chemistry), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the damage by <A0BM,DataA1> and causes AOE damage.
 }
@@ -89736,12 +89742,6 @@ STRING 37888
 // Items: I0NZ (Craft Shadow Orb +5), Tip (Tooltip - Basic)
 {
 Schattenkugel +5 herstellen
-}
-
-STRING 37889
-// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
-{
-(Bonus-Held)
 }
 
 STRING 37890
@@ -90575,13 +90575,13 @@ L
 STRING 38147
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Troll Bloodmages' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unstable Concoction.
+Increases Troll-Blutmagiers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unstable Concoction.
 }
 
 STRING 38148
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Troll Bloodmages' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lebensauger.
+Increases Troll-Blutmagiers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lebensauger.
 }
 
 STRING 38151
@@ -91341,7 +91341,7 @@ STRING 38737
 }
 
 STRING 38738
-// Abilities: A1EB (Stachelpanzerschale), EditorSuffix (Editor Suffix)
+// Abilities: A1EB (Spiked Shell), EditorSuffix (Editor Suffix)
 {
 (Vrykul)
 }
@@ -91989,7 +91989,7 @@ Magic warrior trained to destroy enemies. Initially has Spell Steal, which manip
 }
 
 STRING 38887
-// Abilities: A01C (Gottesschild), EditorSuffix (Editor Suffix)
+// Abilities: A01C (Divine Shield), EditorSuffix (Editor Suffix)
 {
 (Zauberverstärker)
 }
@@ -93029,7 +93029,7 @@ STRING 39793
 STRING 39795
 // Upgrades: R0C9 (Control Magic), Tip (Tooltip)
 {
-Research Feuerregen
+Feuerregen erforschen
 }
 
 STRING 39796
@@ -93071,37 +93071,37 @@ Mighty warrior. Has Kritischer Schlag, which gives Hirnloser Worgen a chance of 
 STRING 39802
 // Units: h0PK (Gilneas Transport Ship), Name (Name)
 {
-Gilneas Transportschiff
+Gilneas-Transportschiff
 }
 
 STRING 39803
 // Units: h0PK (Gilneas Transport Ship), Tip (Tooltip - Basic)
 {
-Hire Gilneas Transportschiff
+Gilneas-Transportschiff anheuern
 }
 
 STRING 39804
 // Units: h0PL (Gilneas Frigate), Name (Name)
 {
-Gilneas Frigate
+Gilneas-Fregatte
 }
 
 STRING 39805
 // Units: h0PL (Gilneas Frigate), Tip (Tooltip - Basic)
 {
-Hire Gilneas Frigate
+Gilneas-Fregatte anheuern
 }
 
 STRING 39806
 // Units: h0PM (Gilneas Battleship), Name (Name)
 {
-Gilneas Schlachtschiff
+Gilneas-Schlachtschiff
 }
 
 STRING 39807
 // Units: h0PM (Gilneas Battleship), Tip (Tooltip - Basic)
 {
-Hire Gilneas Schlachtschiff
+Gilneas-Schlachtschiff anheuern
 }
 
 STRING 39808
@@ -93149,13 +93149,13 @@ STRING 39814
 STRING 39815
 // Upgrades: R0CA (Cloud), Name (Name)
 {
-Cargo
+Ladung
 }
 
 STRING 39816
 // Upgrades: R0CA (Cloud), Tip (Tooltip)
 {
-Research Cargo
+Ladung erforschen
 }
 
 STRING 39817
@@ -93323,7 +93323,7 @@ Creates a Keep.
 STRING 39897
 // Items: I17A (Tiny Keep), Name (Name)
 {
-Tiny Keep
+Winzige Burg
 }
 
 STRING 39898
@@ -93353,7 +93353,7 @@ Creates a House.
 STRING 39902
 // Items: I17C (Tiny House), Name (Name)
 {
-Tiny House
+Winziges Haus
 }
 
 STRING 39903
@@ -93683,13 +93683,13 @@ Erschafft einen Wachturm.
 STRING 39960
 // Items: I00H (Tiny Guard Tower), Name (Name)
 {
-Tiny Guard Tower
+Winziger Wachturm
 }
 
 STRING 39961
 // Items: I00H (Tiny Guard Tower), Tip (Tooltip - Basic)
 {
-Purchase Tiny Guard Tower
+Winzigen Wachturm erwerben
 }
 
 STRING 39962
@@ -93701,73 +93701,73 @@ Erschafft am Zielort einen Wachturm.
 STRING 39963
 // Items: I179 (Tiny Scout Tower), Name (Name)
 {
-Tiny Beobachtungsturm
+Winziger Beobachtungsturm
 }
 
 STRING 39964
 // Items: I0PG (Tiny Scout Tower), Description (Description)
 {
-Creates a Beobachtungsturm.
+Errichtet einen Beobachtungsturm.
 }
 
 STRING 39965
 // Items: I179 (Tiny Scout Tower), Tip (Tooltip - Basic)
 {
-Purchase Tiny Beobachtungsturm
+Winzigen Beobachtungsturm erwerben
 }
 
 STRING 39966
 // Items: I0PG (Tiny Scout Tower), Ubertip (Tooltip - Extended)
 {
-Creates a Beobachtungsturm at a target location.
+Errichtet am Zielort einen Beobachtungsturm.
 }
 
 STRING 39967
 // Items: I1AT (Tiny Workshop), Name (Name)
 {
-Tiny Werkstatt
+Winzige Werkstatt
 }
 
 STRING 39968
 // Items: I140 (Pumpkin), Name (Name)
 {
-Pumpkin
+Kürbis
 }
 
 STRING 39969
 // Items: I1AT (Tiny Workshop), Tip (Tooltip - Basic)
 {
-Purchase Tiny Werkstatt
+Winzige Werkstatt erwerben
 }
 
 STRING 39970
 // Items: I140 (Pumpkin), Tip (Tooltip - Basic)
 {
-Purchase Pumpkin
+Kürbis erwerben
 }
 
 STRING 39971
 // Items: I0PI (Tiny Worgen Shipyard), Name (Name)
 {
-Tiny Worgen Shipyard
+Winziger Worgen-Hafen
 }
 
 STRING 39972
 // Items: I0PI (Tiny Worgen Shipyard), Description (Description)
 {
-Creates a Worgen Shipyard.
+Errichtet einen Worgen-Hafen.
 }
 
 STRING 39973
 // Items: I0PI (Tiny Worgen Shipyard), Tip (Tooltip - Basic)
 {
-Purchase Tiny Worgen Shipyard
+Winzigen Worgen-Hafen erwerben
 }
 
 STRING 39974
 // Items: I0PI (Tiny Worgen Shipyard), Ubertip (Tooltip - Extended)
 {
-Creates a Worgen Shipyard at a target location.
+Errichtet am Zielort einen Worgen-Hafen.
 }
 
 STRING 39975
@@ -94217,13 +94217,13 @@ Build Northern Vendor Shop
 STRING 40185
 // Items: I05N (Deposit 10 000 Gold), Name (Name)
 {
-Zahle 10 000 Gold ein
+10 000 Gold einzahlen
 }
 
 STRING 40186
 // Items: I05N (Deposit 10 000 Gold), Tip (Tooltip - Basic)
 {
-Zahle 10 000 Gold ein
+10 000 Gold einzahlen
 }
 
 STRING 40187
@@ -94241,13 +94241,13 @@ Deposits gold to get it back with interest charges.
 STRING 40189
 // Items: I05M (Deposit 10 000 Lumber), Name (Name)
 {
-Zahle 10 000 Holz ein
+10 000 Holz einzahlen
 }
 
 STRING 40190
 // Items: I05M (Deposit 10 000 Lumber), Tip (Tooltip - Basic)
 {
-Zahle 10 000 Holz ein
+10 000 Holz einzahlen
 }
 
 STRING 40191
@@ -94685,13 +94685,13 @@ Eisbären ausbilden
 STRING 40457
 // Items: I05O (Deposit 5000 Gold), Name (Name)
 {
-Deposit 5000 Gold
+5000 Gold einzahlen
 }
 
 STRING 40458
 // Items: I05O (Deposit 5000 Gold), Tip (Tooltip - Basic)
 {
-Deposit 5000 Gold
+5000 Gold einzahlen
 }
 
 STRING 40459
@@ -94709,13 +94709,13 @@ Deposits gold to get it back with interest charges.
 STRING 40461
 // Items: I05P (Deposit 5000 Lumber), Name (Name)
 {
-Deposit 5000 Lumber
+5000 Holz einzahlen
 }
 
 STRING 40462
 // Items: I05P (Deposit 5000 Lumber), Tip (Tooltip - Basic)
 {
-Deposit 5000 Lumber
+5000 Holz einzahlen
 }
 
 STRING 40463
@@ -94899,19 +94899,19 @@ Kaserne errichten
 }
 
 STRING 40508
-// Units: o062 (Spider Shrine), Name (Name)
+// Units: o062 (Spinnenschrein), Name (Name)
 {
-Spider Shrine
+Spinnenschrein
 }
 
 STRING 40509
-// Units: o062 (Spider Shrine), Tip (Tooltip - Basic)
+// Units: o062 (Spinnenschrein), Tip (Tooltip - Basic)
 {
-Ausbau zum Spider Shrine
+Ausbau zum Spinnenschrein
 }
 
 STRING 40510
-// Units: o062 (Spider Shrine), Ubertip (Tooltip - Extended)
+// Units: o062 (Spinnenschrein), Ubertip (Tooltip - Extended)
 {
 Verteidigungsgebäude. Can cast Web and has the ability Spawn Spiderlings. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -94941,7 +94941,7 @@ Tuskarr-Hafen
 }
 
 STRING 40515
-// Units: o062 (Spider Shrine), EditorSuffix (Name - Editor Suffix)
+// Units: o062 (Spinnenschrein), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -95009,7 +95009,7 @@ Verbesserte Fischerei
 STRING 40528
 // Abilities: A1GM (Summon Sea Turtle), Name (Name)
 {
-Summon Meeresschildkröte
+Meeresschildkröte beschwören
 }
 
 STRING 40529
@@ -95021,7 +95021,7 @@ STRING 40529
 STRING 40530
 // Abilities: A1GM (Summon Sea Turtle), Tip (Tooltip - Normal)
 {
-Summon Meeresschildkröte
+Meeresschildkröte beschwören
 }
 
 STRING 40531
@@ -95123,37 +95123,37 @@ STRING 40564
 STRING 40565
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Beast Protection
+Bestienschutz
 }
 
 STRING 40568
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Improved Beast Protection
+Verbesserter Bestienschutz
 }
 
 STRING 40569
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Advanced Beast Protection
+Hoch entwickelter Bestienschutz
 }
 
 STRING 40570
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Beast Protection
+Ausbau zum Bestienschutz
 }
 
 STRING 40571
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Improved Beast Protection
+Ausbau zum Verbesserten Bestienschutz
 }
 
 STRING 40572
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Advanced Beast Protection
+Ausbau zum Hoch entwickelten Bestienschutz
 }
 
 STRING 40573
@@ -95399,7 +95399,7 @@ Mammut-Reiter
 STRING 40628
 // Units: o05T (Mammoth Rider), Tip (Tooltip - Basic)
 {
-Train Mammut-Reiter
+Mammut-Reiter ausbilden
 }
 
 STRING 40629
@@ -95433,21 +95433,21 @@ STRING 40633
 }
 
 STRING 40634
-// Units: o068 (Murloc Lumberkeep), Name (Name)
+// Units: o068 (Murloc-Holzfäller), Name (Name)
 {
-Murloc Lumberkeep
+Murloc-Holzfäller
 }
 
 STRING 40635
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zum Tuskarr-Harpunes
+Ausbau zu Tuskarr-Harpunen
 }
 
 STRING 40636
-// Units: o068 (Murloc Lumberkeep), Tip (Tooltip - Basic)
+// Units: o068 (Murloc-Holzfäller), Tip (Tooltip - Basic)
 {
-Build Murloc Lumberkeep
+Murloc-Holzfäller errichten
 }
 
 STRING 40637
@@ -95519,7 +95519,7 @@ Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, 
 STRING 40658
 // Units: n0G0 (Murloc Sorcerer Den), Ubertip (Tooltip - Extended)
 {
-Trains Murloc Bubble Mages. Also contains spell upgrades for Murloc Bubble Mages.
+Trains Murloc-Blasen-Magiers. Also contains spell upgrades for Murloc-Blasen-Magiers.
 }
 
 STRING 40660
@@ -95811,21 +95811,21 @@ STRING 40729
 }
 
 STRING 40740
-// Units: n0FP (Gathering Hall), Name (Name)
+// Units: n0FP (Versammlungshalle), Name (Name)
 {
-Gathering Hall
+Versammlungshalle
 }
 
 STRING 40741
-// Units: o068 (Murloc Lumberkeep), EditorSuffix (Name - Editor Suffix)
+// Units: o068 (Murloc-Holzfäller), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 40742
-// Units: n0FP (Gathering Hall), Tip (Tooltip - Basic)
+// Units: n0FP (Versammlungshalle), Tip (Tooltip - Basic)
 {
-Build Gathering Hall
+Versammlungshalle errichten
 }
 
 STRING 40746
@@ -96621,7 +96621,7 @@ Gives specific Tuskarr ground units the ability to carry items.
 }
 
 STRING 41198
-// Units: o06A (Murloc Blademaking Hut), EditorSuffix (Name - Editor Suffix)
+// Units: o06A (Murloc-Klingenherstellungshütte), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -96783,27 +96783,27 @@ Zepter der Murloc erwerben
 }
 
 STRING 41231
-// Items: I0Q7 (Tiny Gathering Hall), Description (Description)
+// Items: I0Q7 (Tiny Versammlungshalle), Description (Description)
 {
-Creates a Gathering Hall.
+Creates a Versammlungshalle.
 }
 
 STRING 41232
-// Items: I0Q7 (Tiny Gathering Hall), Name (Name)
+// Items: I0Q7 (Tiny Versammlungshalle), Name (Name)
 {
-Tiny Gathering Hall
+Tiny Versammlungshalle
 }
 
 STRING 41233
-// Items: I0Q7 (Tiny Gathering Hall), Tip (Tooltip - Basic)
+// Items: I0Q7 (Tiny Versammlungshalle), Tip (Tooltip - Basic)
 {
-Purchase Tiny Gathering Hall
+Purchase Tiny Versammlungshalle
 }
 
 STRING 41234
-// Items: I0Q7 (Tiny Gathering Hall), Ubertip (Tooltip - Extended)
+// Items: I0Q7 (Tiny Versammlungshalle), Ubertip (Tooltip - Extended)
 {
-Creates a Gathering Hall at a target location.
+Creates a Versammlungshalle at a target location.
 }
 
 STRING 41235
@@ -96819,9 +96819,9 @@ STRING 41236
 }
 
 STRING 41237
-// Abilities: A1I4 (Build Tiny Gathering Hall), Name (Name)
+// Abilities: A1I4 (Build Tiny Versammlungshalle), Name (Name)
 {
-Build Tiny Gathering Hall
+Build Tiny Versammlungshalle
 }
 
 STRING 41239
@@ -96951,7 +96951,7 @@ STRING 41259
 }
 
 STRING 41260
-// Units: n0G7 (Murloc Bubble Mage), EditorSuffix (Name - Editor Suffix)
+// Units: n0G7 (Murloc-Blasen-Magier), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -96993,45 +96993,45 @@ Murloc-Unterkunft errichten
 }
 
 STRING 41268
-// Units: n0G9 (Murloc Shadowcaster), EditorSuffix (Name - Editor Suffix)
+// Units: n0G9 (Murloc-Schattenzauberer), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 41269
-// Units: o069 (Murloc Fisher), Name (Name)
+// Units: o069 (Murloc-Fischer), Name (Name)
 {
 Murloc-Fischer
 }
 
 STRING 41270
-// Units: o069 (Murloc Fisher), Tip (Tooltip - Basic)
+// Units: o069 (Murloc-Fischer), Tip (Tooltip - Basic)
 {
 Murloc-Fischer errichten
 }
 
 STRING 41271
-// Units: o069 (Murloc Fisher), Ubertip (Tooltip - Extended)
+// Units: o069 (Murloc-Fischer), Ubertip (Tooltip - Extended)
 {
 Giant statue which protects your base with powerful storms. |n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 41272
-// Units: o069 (Murloc Fisher), EditorSuffix (Name - Editor Suffix)
+// Units: o069 (Murloc-Fischer), EditorSuffix (Name - Editor Suffix)
 {
 (Spezialgebäude) (Murlocs)
 }
 
 STRING 41273
-// Units: n0G5 (Gathering Fortress), Name (Name)
+// Units: n0G5 (Versammlungs-Festung), Name (Name)
 {
-Gathering Fortress
+Versammlungs-Festung
 }
 
 STRING 41274
-// Units: n0G5 (Gathering Fortress), Tip (Tooltip - Basic)
+// Units: n0G5 (Versammlungs-Festung), Tip (Tooltip - Basic)
 {
-Ausbau zum Gathering Fortress
+Ausbau zur Versammlungs-Festung
 }
 
 STRING 41275
@@ -97041,15 +97041,15 @@ STRING 41275
 }
 
 STRING 41276
-// Units: n0G6 (Gathering Stronghold), Tip (Tooltip - Basic)
+// Units: n0G6 (Versammlungs-Hochburg), Tip (Tooltip - Basic)
 {
-Ausbau zum Gathering Stronghold
+Ausbau zur Versammlungs-Hochburg
 }
 
 STRING 41277
-// Units: n0G6 (Gathering Stronghold), Name (Name)
+// Units: n0G6 (Versammlungs-Hochburg), Name (Name)
 {
-Gathering Stronghold
+Versammlungs-Hochburg
 }
 
 STRING 41278
@@ -97059,15 +97059,15 @@ STRING 41278
 }
 
 STRING 41279
-// Units: o06A (Murloc Blademaking Hut), Name (Name)
+// Units: o06A (Murloc-Klingenherstellungshütte), Name (Name)
 {
-Murloc Blademaking Hut
+Murloc-Klingenherstellungshütte
 }
 
 STRING 41280
-// Units: o06A (Murloc Blademaking Hut), Tip (Tooltip - Basic)
+// Units: o06A (Murloc-Klingenherstellungshütte), Tip (Tooltip - Basic)
 {
-Build Murloc Blademaking Hut
+Murloc-Klingenherstellungshütte errichten
 }
 
 STRING 41281
@@ -97083,15 +97083,15 @@ STRING 41282
 }
 
 STRING 41283
-// Units: n0G7 (Murloc Bubble Mage), Name (Name)
+// Units: n0G7 (Murloc-Blasen-Magier), Name (Name)
 {
-Murloc Bubble Mage
+Murloc-Blasen-Magier
 }
 
 STRING 41284
-// Units: n0G7 (Murloc Bubble Mage), Tip (Tooltip - Basic)
+// Units: n0G7 (Murloc-Blasen-Magier), Tip (Tooltip - Basic)
 {
-Train Murloc Bubble Mage
+Murloc-Blasen-Magier ausbilden
 }
 
 STRING 41285
@@ -97341,9 +97341,9 @@ C
 }
 
 STRING 41359
-// Units: n0G9 (Murloc Shadowcaster), Name (Name)
+// Units: n0G9 (Murloc-Schattenzauberer), Name (Name)
 {
-Murloc Shadowcaster
+Murloc-Schattenzauberer
 }
 
 STRING 41360
@@ -97445,13 +97445,13 @@ Gives specific Murloc ground units the ability to carry items.
 STRING 41384
 // Upgrades: R0CW (Burning Oil), Name (Name)
 {
-Murloc Fisher
+Murloc-Fischer
 }
 
 STRING 41385
 // Upgrades: R0CW (Burning Oil), Tip (Tooltip)
 {
-Research Murloc Fisher
+Murloc-Fischer erforschen
 }
 
 STRING 41386
@@ -97469,13 +97469,13 @@ STRING 41387
 STRING 41388
 // Upgrades: R0CX (Submerge), Name (Name)
 {
-Murloc Eggs
+Murloc-Eier
 }
 
 STRING 41389
 // Upgrades: R0CX (Submerge), Tip (Tooltip)
 {
-Research Murloc Eggs
+Murloc-Eier erforschen
 }
 
 STRING 41390
@@ -97499,25 +97499,25 @@ STRING 41392
 STRING 41393
 // Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Name (Name)
 {
-Murloc Bubble Magier-Adepten-Ausbildung
+Murloc-Blasen-Magier-Adepten-Ausbildung
 }
 
 STRING 41394
 // Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Name (Name)
 {
-Murloc Bubble Magier-Meister-Ausbildung
+Murloc-Blasen-Magier-Meister-Ausbildung
 }
 
 STRING 41395
 // Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Bubble Magier-Adepten-Ausbildung
+Murloc-Blasen-Magier-Adepten-Ausbildung
 }
 
 STRING 41396
 // Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Bubble Magier-Meister-Ausbildung
+Murloc-Blasen-Magier-Meister-Ausbildung
 }
 
 STRING 41397
@@ -97529,25 +97529,25 @@ STRING 41397
 STRING 41398
 // Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Name (Name)
 {
-Murloc Shadowcaster Adeptenausbildung
+Murloc-Schattenzauberer-Adeptenausbildung
 }
 
 STRING 41399
 // Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Name (Name)
 {
-Murloc Shadowcaster Meisterausbildung
+Murloc-Schattenzauberer-Meisterausbildung
 }
 
 STRING 41400
 // Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Shadowcaster Adeptenausbildung
+Murloc-Schattenzauberer-Adeptenausbildung
 }
 
 STRING 41401
 // Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Shadowcaster Meisterausbildung
+Murloc-Schattenzauberer-Meisterausbildung
 }
 
 STRING 41402
@@ -97882,13 +97882,13 @@ Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nAlso contains the Ein
 STRING 41509
 // Items: I0SY (Tiny Quillboar Manger), Name (Name)
 {
-Tiny Stacheleber Manger
+Winziger Stacheleber-Futtertrog
 }
 
 STRING 41510
 // Items: I0SY (Tiny Quillboar Manger), Tip (Tooltip - Basic)
 {
-Purchase Tiny Stacheleber Manger
+Winzigen Stacheleber-Futtertrog erwerben
 }
 
 STRING 41512
@@ -97900,19 +97900,19 @@ K
 STRING 41513
 // Items: I0SY (Tiny Quillboar Manger), Description (Description)
 {
-Creates a Stacheleber Manger.
+Errichtet einen Stacheleber-Futtertrog.
 }
 
 STRING 41514
 // Items: I0SY (Tiny Quillboar Manger), Ubertip (Tooltip - Extended)
 {
-Creates a Stacheleber Manger at a target location.
+Errichtet am Zielort einen Stacheleber-Futtertrog.
 }
 
 STRING 41516
 // Abilities: A1N2 (Build Tiny Quillboar Manger), Name (Name)
 {
-Build Tiny Stacheleber Manger
+Build Tiny Stacheleber-Futtertrog
 }
 
 STRING 41521
@@ -98192,25 +98192,25 @@ K
 STRING 41794
 // Items: I0QM (Tiny Skins), Name (Name)
 {
-Tiny Skins
+Winzige Skins
 }
 
 STRING 41795
 // Items: I0QM (Tiny Skins), Description (Description)
 {
-Creates Skins at a target location.
+Errichtet am Zielort Skins.
 }
 
 STRING 41796
 // Items: I0QM (Tiny Skins), Tip (Tooltip - Basic)
 {
-Purchase Tiny Skins
+Winzige Skins erwerben
 }
 
 STRING 41797
 // Items: I0QM (Tiny Skins), Ubertip (Tooltip - Extended)
 {
-Creates Skins at a target location.
+Errichtet am Zielort Skins.
 }
 
 STRING 41798
@@ -98294,25 +98294,25 @@ Oger-Hafen
 STRING 41815
 // Items: I0QP (Tiny Ogre Mound), Name (Name)
 {
-Tiny Oger-Hügel
+Winziger Oger-Hügel
 }
 
 STRING 41816
 // Items: I0QP (Tiny Ogre Mound), Tip (Tooltip - Basic)
 {
-Purchase Tiny Oger-Hügel
+Winzigen Oger-Hügel erwerben
 }
 
 STRING 41817
 // Items: I0QP (Tiny Ogre Mound), Ubertip (Tooltip - Extended)
 {
-Creates a Oger-Hügel at a target location.
+Errichtet am Zielort einen Oger-Hügel.
 }
 
 STRING 41820
 // Abilities: A1J0 (Summon Ogres), Name (Name)
 {
-Summon Ogres
+Oger beschwören
 }
 
 STRING 41822
@@ -100281,7 +100281,7 @@ STRING 42434
 }
 
 STRING 42435
-// Abilities: A1KR (Stachelpanzerschale), EditorSuffix (Editor Suffix)
+// Abilities: A1KR (Spiked Shell), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -106413,31 +106413,31 @@ Getötete Elementar-Lords
 }
 
 STRING 46351
-// Units: N0II (Elementar-Lord), Name (Name)
+// Units: N0II (Elemental Lord), Name (Name)
 {
 Elementar-Lord
 }
 
 STRING 46352
-// Units: N0IG (Elementar-Lord), Propernames (Proper Names)
+// Units: N0IG (Elemental Lord), Propernames (Proper Names)
 {
 Neptulon
 }
 
 STRING 46353
-// Units: N0IG (Elementar-Lord), Awakentip (Tooltip - Awaken)
+// Units: N0IG (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
 Neptulon wiederbeleben
 }
 
 STRING 46354
-// Units: N0IG (Elementar-Lord), Tip (Tooltip - Basic)
+// Units: N0IG (Elemental Lord), Tip (Tooltip - Basic)
 {
 Neptulon beschwören
 }
 
 STRING 46355
-// Units: N0IG (Elementar-Lord), Revivetip (Tooltip - Revive)
+// Units: N0IG (Elemental Lord), Revivetip (Tooltip - Revive)
 {
 Neptulon wiederbeleben
 }
@@ -106449,31 +106449,31 @@ STRING 46356
 }
 
 STRING 46357
-// Units: N0DR (Elementar-Lord), Name (Name)
+// Units: N0DR (Elemental Lord), Name (Name)
 {
 Elementar-Lord
 }
 
 STRING 46358
-// Units: N0IH (Elementar-Lord), Propernames (Proper Names)
+// Units: N0IH (Elemental Lord), Propernames (Proper Names)
 {
 Therazane
 }
 
 STRING 46359
-// Units: N0IH (Elementar-Lord), Awakentip (Tooltip - Awaken)
+// Units: N0IH (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
 Therazane wiederbeleben
 }
 
 STRING 46360
-// Units: N0IH (Elementar-Lord), Tip (Tooltip - Basic)
+// Units: N0IH (Elemental Lord), Tip (Tooltip - Basic)
 {
 Therazane beschwören
 }
 
 STRING 46361
-// Units: N0IH (Elementar-Lord), Revivetip (Tooltip - Revive)
+// Units: N0IH (Elemental Lord), Revivetip (Tooltip - Revive)
 {
 Therazane wiederbeleben
 }
@@ -106485,31 +106485,31 @@ STRING 46362
 }
 
 STRING 46363
-// Units: N01X (Elementar-Lord), Name (Name)
+// Units: N01X (Elemental Lord), Name (Name)
 {
 Elementar-Lord
 }
 
 STRING 46364
-// Units: N0II (Elementar-Lord), Propernames (Proper Names)
+// Units: N0II (Elemental Lord), Propernames (Proper Names)
 {
 Thunderaan
 }
 
 STRING 46365
-// Units: N0II (Elementar-Lord), Awakentip (Tooltip - Awaken)
+// Units: N0II (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
 Thunderaan wiederbeleben
 }
 
 STRING 46366
-// Units: N0II (Elementar-Lord), Tip (Tooltip - Basic)
+// Units: N0II (Elemental Lord), Tip (Tooltip - Basic)
 {
 Thunderaan beschwören
 }
 
 STRING 46367
-// Units: N0II (Elementar-Lord), Revivetip (Tooltip - Revive)
+// Units: N0II (Elemental Lord), Revivetip (Tooltip - Revive)
 {
 Thunderaan wiederbeleben
 }
@@ -106904,7 +106904,7 @@ Gives Ogre units increased resistance to spell damage.
 }
 
 STRING 46530
-// Units: N0DR (Elementar-Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -107449,13 +107449,13 @@ Naga
 }
 
 STRING 47552
-// Items: I06G (Demon), Name (Name)
+// Items: I06G (Dämonen), Name (Name)
 {
 Dämonen
 }
 
 STRING 47553
-// Items: I06G (Demon), Tip (Tooltip - Basic)
+// Items: I06G (Dämonen), Tip (Tooltip - Basic)
 {
 Dämonen
 }
@@ -108505,7 +108505,7 @@ Umhang erwerben
 }
 
 STRING 48667
-// Items: I0ZQ (Wolfsgeistkapuze), Description (Description)
+// Items: I0ZQ (Wolf Spirit Hood), Description (Description)
 {
 Erhöht die Rüstung um 2.
 }
@@ -110819,7 +110819,7 @@ Barade beschwören
 }
 
 STRING 49639
-// Units: N09F (Murloc Priest), EditorSuffix (Name - Editor Suffix)
+// Units: N09F (Murloc-Priester), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -112884,7 +112884,7 @@ Ausbau zur Magischen Arkonite-Verteidigung
 }
 
 STRING 50447
-// Units: n0FP (Gathering Hall), EditorSuffix (Name - Editor Suffix)
+// Units: n0FP (Versammlungshalle), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs) (Tier 1)
 }
@@ -112896,19 +112896,19 @@ STRING 50448
 }
 
 STRING 50449
-// Units: n0G5 (Gathering Fortress), EditorSuffix (Name - Editor Suffix)
+// Units: n0G5 (Versammlungs-Festung), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs) (Tier 3)
 }
 
 STRING 50450
-// Units: n0G6 (Gathering Stronghold), EditorSuffix (Name - Editor Suffix)
+// Units: n0G6 (Versammlungs-Hochburg), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs) (Tier 2)
 }
 
 STRING 50451
-// Units: o06A (Murloc Blademaking Hut), Ubertip (Tooltip - Extended)
+// Units: o06A (Murloc-Klingenherstellungshütte), Ubertip (Tooltip - Extended)
 {
 Contains upgrades Coral Blades, Coral Scales, Swarming and Flussbett.
 }
@@ -113112,15 +113112,15 @@ Langhaus errichten
 }
 
 STRING 50493
-// Units: n0G7 (Murloc Bubble Mage), Casterupgradetip (Caster Upgrade Tips)
+// Units: n0G7 (Murloc-Blasen-Magier), Casterupgradetip (Caster Upgrade Tips)
 {
 - Parasit,- Parasit|n- Frost-Rüstung,- Parasit|n- Frost-Rüstung|n- Wirbelsturm
 }
 
 STRING 50494
-// Units: n0G9 (Murloc Shadowcaster), Tip (Tooltip - Basic)
+// Units: n0G9 (Murloc-Schattenzauberer), Tip (Tooltip - Basic)
 {
-Train Murloc Shadowcaster
+Train Murloc-Schattenzauberer
 }
 
 STRING 50495
@@ -113462,7 +113462,7 @@ STRING 50606
 STRING 50607
 // Upgrades: R0CW (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Erlaubt Bürgern den Bau a Murloc Fisher to protect your base.
+Erlaubt Bürgern den Bau a Murloc-Fischer to protect your base.
 }
 
 STRING 50611
@@ -113892,13 +113892,13 @@ Ausbau zum Acidic Carnivore
 }
 
 STRING 50746
-// Items: I0XZ (Gesichtslose), Name (Name)
+// Items: I0XZ (Faceless One), Name (Name)
 {
 Gesichtslose
 }
 
 STRING 50747
-// Items: I0XZ (Gesichtslose), Tip (Tooltip - Basic)
+// Items: I0XZ (Faceless One), Tip (Tooltip - Basic)
 {
 Gesichtslose
 }
@@ -114096,7 +114096,7 @@ STRING 50822
 }
 
 STRING 50824
-// Items: I0XZ (Gesichtslose), Ubertip (Tooltip - Extended)
+// Items: I0XZ (Faceless One), Ubertip (Tooltip - Extended)
 {
 Created by the old gods the Faceless Ones served the Black Empire on Azeroth before the Titans arrived. They include other races like the Aqir:|n- Mind Control.|n- Magic.|n- Tentakeln.
 }
@@ -114396,7 +114396,7 @@ Erlaubt Bürgern den Bau a Vergessener, a powerful creature from ancient times.
 }
 
 STRING 50877
-// Units: o095 (Albtraumweber), EditorSuffix (Name - Editor Suffix)
+// Units: o095 (Nightmare Weaver), EditorSuffix (Name - Editor Suffix)
 {
 (Gesichtslose)
 }
@@ -115832,25 +115832,25 @@ Improved Fel
 STRING 51351
 // Units: O09L (Fel Crossbowman), Name (Name)
 {
-Fel Armbrustman
+Höllen-Armbrustschütze
 }
 
 STRING 51352
 // Units: O09L (Fel Crossbowman), Awakentip (Tooltip - Awaken)
 {
-Revive Fel Armbrustman
+Höllen-Armbrustschützen wiederbeleben
 }
 
 STRING 51353
 // Units: O09L (Fel Crossbowman), Revivetip (Tooltip - Revive)
 {
-Revive Fel Armbrustman
+Höllen-Armbrustschützen wiederbeleben
 }
 
 STRING 51354
 // Units: O09L (Fel Crossbowman), Tip (Tooltip - Basic)
 {
-Summon Fel Armbrustman
+Höllen-Armbrustschützen beschwören
 }
 
 STRING 51356
@@ -119791,49 +119791,49 @@ STRING 54916
 STRING 54918
 // Items: I04O (Deposit 1000 Gold), Name (Name)
 {
-Deposit 1000 Gold
+1000 Gold einzahlen
 }
 
 STRING 54919
 // Items: I04O (Deposit 1000 Gold), Tip (Tooltip - Basic)
 {
-Deposit 1000 Gold
+1000 Gold einzahlen
 }
 
 STRING 54920
 // Items: I04P (Deposit 1000 Lumber), Name (Name)
 {
-Deposit 1000 Lumber
+1000 Holz einzahlen
 }
 
 STRING 54921
 // Items: I04P (Deposit 1000 Lumber), Tip (Tooltip - Basic)
 {
-Deposit 1000 Lumber
+1000 Holz einzahlen
 }
 
 STRING 54922
 // Items: I04Q (Withdraw All Gold), Name (Name)
 {
-Withdraw All Gold
+Alles Gold abheben
 }
 
 STRING 54923
 // Items: I04Q (Withdraw All Gold), Tip (Tooltip - Basic)
 {
-Withdraw All Gold
+Alles Gold abheben
 }
 
 STRING 54924
 // Items: I04R (Withdraw All Lumber), Name (Name)
 {
-Withdraw All Lumber
+Alles Holz abheben
 }
 
 STRING 54925
 // Items: I04R (Withdraw All Lumber), Tip (Tooltip - Basic)
 {
-Withdraw All Lumber
+Alles Holz abheben
 }
 
 STRING 54926
@@ -119857,7 +119857,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 STRING 54953
 // Units: o060 (Block of Ice), Ubertip (Tooltip - Extended)
 {
-Verteidigungsgebäude with close attack range. Has the Freezing Breath ability. Can be upgraded to Spider Shrine, Ice Wall, and Frost Snowman.  |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Verteidigungsgebäude with close attack range. Has the Freezing Breath ability. Can be upgraded to Spinnenschrein, Ice Wall, and Frost Snowman.  |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 54954
@@ -121030,7 +121030,7 @@ Upgrades the totem carried by Meeresrieses, increasing the damage of their Pulve
 STRING 55538
 // Units: n0G1 (Hatchling Ground), Ubertip (Tooltip - Extended)
 {
-Trains Snap Dragons, Drachenschildkrötes, and Meeresrieses. Also contains the Murloc Eggs upgrade.
+Trains Snap Dragons, Drachenschildkrötes, and Meeresrieses. Also contains the Murloc-Eier upgrade.
 }
 
 STRING 55539
@@ -123357,7 +123357,7 @@ Xavius wiederbeleben
 }
 
 STRING 56410
-// Units: N01X (Elementar-Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N01X (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -124245,13 +124245,13 @@ STRING 56711
 }
 
 STRING 56749
-// Abilities: A22F (Item Stachelpanzerschale), Name (Name)
+// Abilities: A22F (Item Spiked Shell), Name (Name)
 {
 Item Stachelpanzerschale
 }
 
 STRING 56750
-// Abilities: A22F (Item Stachelpanzerschale), EditorSuffix (Editor Suffix)
+// Abilities: A22F (Item Spiked Shell), EditorSuffix (Editor Suffix)
 {
 (Horns of Xavius)
 }
@@ -124541,7 +124541,7 @@ Ability Kampfrausch
 }
 
 STRING 56979
-// Units: u03Q (Ability Car Horn), EditorSuffix (Name - Editor Suffix)
+// Units: u03Q (Ability Autohupe), EditorSuffix (Name - Editor Suffix)
 {
 (Hexenhütte)
 }
@@ -125273,13 +125273,13 @@ STRING 57321
 }
 
 STRING 57326
-// Abilities: A23N (Car Horn), EditorSuffix (Editor Suffix)
+// Abilities: A23N (Autohupe), EditorSuffix (Editor Suffix)
 {
 (Auto-Reittier)
 }
 
 STRING 57329
-// Abilities: A23N (Car Horn), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A23N (Autohupe), Ubertip (Tooltip - Normal - Extended)
 {
 Bläst die Hupe des Autos.
 }
