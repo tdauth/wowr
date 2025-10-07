@@ -81923,7 +81923,7 @@ Creates a Fortified Hideout at a target location. Fortified Hideouts have some s
 STRING 35353
 // Items: I0NG (Tiny Fortified Hideout), Tip (Tooltip - Basic)
 {
-Buy Tiny Fortified Hideout
+Purchase Tiny Fortified Hideout
 }
 
 STRING 35354
@@ -81947,7 +81947,7 @@ Creates a Guardian´s Citadel at a target location. Guardian´s Citadels have so
 STRING 35357
 // Items: I0NH (Tiny Guardian´s Citadel), Tip (Tooltip - Basic)
 {
-Buy Tiny Guardian´s Citadel
+Purchase Tiny Guardian´s Citadel
 }
 
 STRING 35358
@@ -97510,13 +97510,13 @@ Murloc Bubble Mage Master Training
 STRING 41395
 // Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Bubble Mage Adept Training
+Murloc Bubble Mage Adept Training
 }
 
 STRING 41396
 // Upgrades: R0CY (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Bubble Mage Master Training
+Murloc Bubble Mage Master Training
 }
 
 STRING 41397
@@ -97540,13 +97540,13 @@ Murloc Shadowcaster Master Training
 STRING 41400
 // Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Shadowcaster Adept Training
+Murloc Shadowcaster Adept Training
 }
 
 STRING 41401
 // Upgrades: R0CZ (Naga Siren Adept Training,Naga Siren Master Training), Tip (Tooltip)
 {
-Research Murloc Shadowcaster Master Training
+Murloc Shadowcaster Master Training
 }
 
 STRING 41402
