@@ -2494,7 +2494,7 @@ Wechselt die Klasse zum Jäger:|n- Gefährten beschwören|n- Fernkampf|n- Schade
 STRING 417
 // Items: I024 (Talisman of Spell Protection), Tip (Tooltip - Basic)
 {
-Purchase Talisman des Zauberschutzes
+Talisman des Zauberschutzes erwerben
 }
 
 STRING 418
@@ -11843,7 +11843,7 @@ STRING 2048
 }
 
 STRING 2049
-// Items: I1A5 (Tome of Chaos), Name (Name)
+// Items: I1A5 (Foliant des Chaos), Name (Name)
 {
 Foliant des Chaos
 }
@@ -11885,19 +11885,19 @@ The heart of the powerful Grubenlord Magtheridon. It must be returned to Illidan
 }
 
 STRING 2056
-// Items: I1A5 (Tome of Chaos), Tip (Tooltip - Basic)
+// Items: I1A5 (Foliant des Chaos), Tip (Tooltip - Basic)
 {
-Purchase Tome of Chaos
+Foliant des Chaos erwerben
 }
 
 STRING 2057
-// Items: I1A5 (Tome of Chaos), Description (Description)
+// Items: I1A5 (Foliant des Chaos), Description (Description)
 {
 Permanently changes the damage type to Chaos.
 }
 
 STRING 2058
-// Items: I1A5 (Tome of Chaos), Ubertip (Tooltip - Extended)
+// Items: I1A5 (Foliant des Chaos), Ubertip (Tooltip - Extended)
 {
 Permanently changes the damage type of the Hero to Chaos when used.
 }
@@ -11975,19 +11975,19 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Kul Tiras.|r|n|cffffcc00Rohstoff: Fr
 }
 
 STRING 2071
-// Units: h0YH (Buy Property Dalaran), Name (Name)
+// Units: h0YH (Buy Immobilie Dalaran), Name (Name)
 {
-Buy Property Dalaran
+Immobilie Dalaran kaufen
 }
 
 STRING 2072
-// Units: h0YH (Buy Property Dalaran), Tip (Tooltip - Basic)
+// Units: h0YH (Buy Immobilie Dalaran), Tip (Tooltip - Basic)
 {
-Buy Property Dalaran
+Immobilie Dalaran kaufen
 }
 
 STRING 2073
-// Units: h0YH (Buy Property Dalaran), Ubertip (Tooltip - Extended)
+// Units: h0YH (Buy Immobilie Dalaran), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Dalaran.|r|n|cffffcc00Rohstoff: Power.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -18535,7 +18535,7 @@ B
 }
 
 STRING 3527
-// Units: h0YH (Buy Property Dalaran), Hotkey (Hotkey)
+// Units: h0YH (Buy Immobilie Dalaran), Hotkey (Hotkey)
 {
 B
 }
@@ -59397,7 +59397,7 @@ Priester beschwören
 STRING 17559
 // Abilities: A0IY (Life and Mana Regeneration), Tip (Tooltip - Normal)
 {
-Life and Manaregeneration
+Lebens- und Manaregeneration
 }
 
 STRING 17560
@@ -59740,14 +59740,14 @@ Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n
 }
 
 STRING 17773
-// Units: o075 (Ogre Arena), Name (Name)
+// Units: o075 (Oger-Arena), Name (Name)
 {
-Ogre Arena
+Oger-Arena
 }
 
 STRING 17775
 {
-New quest available at Theramore!
+Neue Quest auf Theramore verfügbar!
 }
 
 STRING 17777
@@ -60044,9 +60044,9 @@ Contains useful spells.
 }
 
 STRING 18101
-// Units: o075 (Ogre Arena), Tip (Tooltip - Basic)
+// Units: o075 (Oger-Arena), Tip (Tooltip - Basic)
 {
-Build Ogre Arena
+Build Oger-Arena
 }
 
 STRING 18102
@@ -70080,7 +70080,7 @@ STRING 26542
 }
 
 STRING 26543
-// Units: o075 (Ogre Arena), EditorSuffix (Name - Editor Suffix)
+// Units: o075 (Oger-Arena), EditorSuffix (Name - Editor Suffix)
 {
 (Oger)
 }
@@ -105917,7 +105917,7 @@ STRING 46040
 }
 
 STRING 46041
-// Units: o075 (Ogre Arena), Ubertip (Tooltip - Extended)
+// Units: o075 (Oger-Arena), Ubertip (Tooltip - Extended)
 {
 Trains Oger-Lords, Mok'Nathal and Gronn. |nAlso contains the upgrade Reinkarnation for Oger-Lords, Bären beschwören for Mok'Nathal and Kriegskeules for Gronn.
 }
