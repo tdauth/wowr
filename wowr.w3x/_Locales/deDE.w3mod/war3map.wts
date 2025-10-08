@@ -9934,7 +9934,7 @@ Murmur
 }
 
 STRING 1673
-// Units: o024 (Goblin-Geschütz), Hotkey (Hotkey)
+// Units: o024 (Goblin Turret), Hotkey (Hotkey)
 {
 E
 }
@@ -46515,7 +46515,7 @@ Find Cenarius horn in Ashenvale.
 }
 
 STRING 10682
-// Items: I0K6 (Tiny Gnom-Geschütz), Name (Name)
+// Items: I0K6 (Tiny Gnome Turret), Name (Name)
 {
 Winziges Gnom-Geschütz
 }
@@ -46531,7 +46531,7 @@ Destroy one Nation´s Capital (Tier 1, 2 or 3 Rathaus or a or a Demigod Temple).
 }
 
 STRING 10691
-// Items: I0K6 (Tiny Gnom-Geschütz), Tip (Tooltip - Basic)
+// Items: I0K6 (Tiny Gnome Turret), Tip (Tooltip - Basic)
 {
 Winziges Gnom-Geschütz erwerben
 }
@@ -47469,7 +47469,7 @@ The Astromant uses his knowledge to create a Tiny Moon and Moonkey.
 }
 
 STRING 10926
-// Items: I0K6 (Tiny Gnom-Geschütz), Description (Description)
+// Items: I0K6 (Tiny Gnome Turret), Description (Description)
 {
 Creates a Gnom-Geschütz.
 }
@@ -47523,13 +47523,13 @@ STRING 10934
 }
 
 STRING 10935
-// Items: I0K6 (Tiny Gnom-Geschütz), Ubertip (Tooltip - Extended)
+// Items: I0K6 (Tiny Gnome Turret), Ubertip (Tooltip - Extended)
 {
 Creates a Gnom-Geschütz at a target location.
 }
 
 STRING 10936
-// Abilities: A0HW (Build Tiny Gnom-Geschütz), Name (Name)
+// Abilities: A0HW (Build Tiny Gnome Turret), Name (Name)
 {
 Build Tiny Gnom-Geschütz
 }
@@ -55120,7 +55120,7 @@ Build Gnome Horst
 }
 
 STRING 14790
-// Units: h0KH (Gnom-Geschütz), EditorSuffix (Name - Editor Suffix)
+// Units: h0KH (Gnome Turret), EditorSuffix (Name - Editor Suffix)
 {
 (Gnome)
 }
@@ -62222,19 +62222,19 @@ The Archaeologist uses his knowledge to dig for a random level 7 item.
 }
 
 STRING 19902
-// Units: o024 (Goblin-Geschütz), Name (Name)
+// Units: o024 (Goblin Turret), Name (Name)
 {
 Goblin-Geschütz
 }
 
 STRING 19903
-// Units: o024 (Goblin-Geschütz), Tip (Tooltip - Basic)
+// Units: o024 (Goblin Turret), Tip (Tooltip - Basic)
 {
 Ausbau zum Goblin-Geschütz
 }
 
 STRING 19904
-// Units: o024 (Goblin-Geschütz), Ubertip (Tooltip - Extended)
+// Units: o024 (Goblin Turret), Ubertip (Tooltip - Extended)
 {
 Verteidigungsgebäude against ground units.|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -66758,7 +66758,7 @@ Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|
 }
 
 STRING 22782
-// Units: h0KH (Gnom-Geschütz), Ubertip (Tooltip - Extended)
+// Units: h0KH (Gnome Turret), Ubertip (Tooltip - Extended)
 {
 Simple defense tower.
 }
@@ -72228,13 +72228,13 @@ Flugapparat-Reittier
 }
 
 STRING 28638
-// Units: h0KH (Gnom-Geschütz), Name (Name)
+// Units: h0KH (Gnome Turret), Name (Name)
 {
 Gnom-Geschütz
 }
 
 STRING 28639
-// Units: h0KH (Gnom-Geschütz), Tip (Tooltip - Basic)
+// Units: h0KH (Gnome Turret), Tip (Tooltip - Basic)
 {
 Build Gnom-Geschütz
 }
@@ -88737,13 +88737,13 @@ STRING 37619
 }
 
 STRING 37620
-// Units: e00J (Mobiles Geschütz), Name (Name)
+// Units: e00J (Mobile Turret), Name (Name)
 {
 Mobiles Geschütz
 }
 
 STRING 37621
-// Units: e00J (Mobiles Geschütz), Tip (Tooltip - Basic)
+// Units: e00J (Mobile Turret), Tip (Tooltip - Basic)
 {
 Mobiles Geschütz errichten
 }
@@ -89067,13 +89067,13 @@ Web
 }
 
 STRING 37738
-// Abilities: A1N8 (Hinterhalt), Name (Name)
+// Abilities: A1N8 (Ambush), Name (Name)
 {
 Hinterhalt
 }
 
 STRING 37740
-// Abilities: A1N8 (Hinterhalt), Tip (Tooltip - Normal)
+// Abilities: A1N8 (Ambush), Tip (Tooltip - Normal)
 {
 Hinterhalt
 }
@@ -90149,7 +90149,7 @@ A Kul Tiras navy commander's shield.
 }
 
 STRING 38067
-// Abilities: A1N8 (Hinterhalt), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1N8 (Ambush), Ubertip (Tooltip - Normal - Extended)
 {
 |cff87ceebNon-Combat Consumable|r|nRenders the unit invisible for <A1N8,Dur1> seconds when used. An invisible unit is untargetable by the enemy unless detected. If the unit attacks, uses an ability, or casts a spell, the invisibility effect is lost.
 }
@@ -98400,25 +98400,25 @@ STRING 41842
 }
 
 STRING 41843
-// Units: o06E (Tauren-Axtkrieger), Name (Name)
+// Units: o06E (Tauren Axe Fighter), Name (Name)
 {
 Tauren-Axtkrieger
 }
 
 STRING 41844
-// Units: o06E (Tauren-Axtkrieger), Tip (Tooltip - Basic)
+// Units: o06E (Tauren Axe Fighter), Tip (Tooltip - Basic)
 {
 Tauren-Axtkrieger ausbilden
 }
 
 STRING 41845
-// Units: o06E (Tauren-Axtkrieger), Ubertip (Tooltip - Extended)
+// Units: o06E (Tauren Axe Fighter), Ubertip (Tooltip - Extended)
 {
 Brutish Tauren warrior. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 41846
-// Units: o06E (Tauren-Axtkrieger), EditorSuffix (Name - Editor Suffix)
+// Units: o06E (Tauren Axe Fighter), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
@@ -99687,7 +99687,7 @@ STRING 42320
 }
 
 STRING 42321
-// Abilities: A1N8 (Hinterhalt), EditorSuffix (Editor Suffix)
+// Abilities: A1N8 (Ambush), EditorSuffix (Editor Suffix)
 {
 (Oger)
 }
@@ -102025,7 +102025,7 @@ Waldwolf ausbilden
 }
 
 STRING 43257
-// Abilities: A1N8 (Hinterhalt), Hotkey (Hotkey - Normal)
+// Abilities: A1N8 (Ambush), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -102415,7 +102415,7 @@ STRING 43408
 }
 
 STRING 43409
-// Units: e00J (Mobiles Geschütz), EditorSuffix (Name - Editor Suffix)
+// Units: e00J (Mobile Turret), EditorSuffix (Name - Editor Suffix)
 {
 (Goblins)
 }
@@ -102685,7 +102685,7 @@ The Bildhauer uses craftsmanship to create a Tiny Fleischgolem.
 }
 
 STRING 43460
-// Units: o024 (Goblin-Geschütz), EditorSuffix (Name - Editor Suffix)
+// Units: o024 (Goblin Turret), EditorSuffix (Name - Editor Suffix)
 {
 (Goblins)
 }
