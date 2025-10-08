@@ -10030,7 +10030,7 @@ Tome of Magic
 }
 
 STRING 1689
-// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
+// Units: H0V4 (Developer), EditorSuffix (Name - Editor Suffix)
 {
 (VIP Hero)
 }
@@ -117708,7 +117708,7 @@ Flag
 }
 
 STRING 52363
-// Units: H0V4 (Developer), EditorSuffix (Name - Editor Suffix)
+// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
 {
 (VIP Hero)
 }
