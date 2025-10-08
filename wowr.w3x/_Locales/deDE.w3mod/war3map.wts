@@ -27240,25 +27240,25 @@ Revive Samuro
 STRING 5501
 // Items: I0F8 (Tiny Royal Vault), Description (Description)
 {
-Creates a Königliches Gewölbe.
+Errichtet ein Königliches Gewölbe.
 }
 
 STRING 5502
 // Items: I0F8 (Tiny Royal Vault), Name (Name)
 {
-Tiny Königliches Gewölbe
+Winziges Königliches Gewölbe
 }
 
 STRING 5503
 // Items: I0F8 (Tiny Royal Vault), Tip (Tooltip - Basic)
 {
-Purchase Tiny Königliches Gewölbe
+Winziges Königliches Gewölbe erwerben
 }
 
 STRING 5504
 // Units: h0J8 (Manor), Tip (Tooltip - Basic)
 {
-Build Manor
+Herrenhaus errichten
 }
 
 STRING 5506
@@ -27288,7 +27288,7 @@ H
 STRING 5510
 // Units: o007 (Tauren Shipyard), Name (Name)
 {
-Tauren Shipyard
+Tauren-Hafen
 }
 
 STRING 5513
@@ -27468,7 +27468,7 @@ Creates a Blood Elf Keep at a target location.
 STRING 5545
 // Units: o007 (Tauren Shipyard), Tip (Tooltip - Basic)
 {
-Build Tauren Shipyard
+Tauren-Hafen errichten
 }
 
 STRING 5546
@@ -56231,7 +56231,7 @@ Build Tiny Pandaren Temple
 STRING 15882
 // Abilities: A0J5 (Summon Pandaren Workers), Name (Name)
 {
-Summon Pandaren Arbeiters
+Pandaren-Arbeiter beschwören
 }
 
 STRING 15883
@@ -56277,7 +56277,7 @@ Ein listiger Held, adept at entering and escaping combat. Can learn Harvest, Mag
 STRING 15925
 // Units: o01X (Kodo Beast Mount), Name (Name)
 {
-Kodo-Bestie Mount
+Kodo-Bestien-Reittier
 }
 
 STRING 15926
@@ -93545,7 +93545,7 @@ Build Tiny Handelshaus
 STRING 39937
 // Abilities: A1FR (Build Tiny Manor), Name (Name)
 {
-Build Tiny Manor
+Winziges Herrenhaus errichten
 }
 
 STRING 39938
