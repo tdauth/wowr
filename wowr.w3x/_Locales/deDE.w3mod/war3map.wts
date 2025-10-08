@@ -6466,7 +6466,7 @@ G
 }
 
 STRING 1092
-// Units: o02L (Troll-Blutmagier), Hotkey (Hotkey)
+// Units: o02L (Troll Bloodmage), Hotkey (Hotkey)
 {
 B
 }
@@ -10030,7 +10030,7 @@ Foliant der Magie
 }
 
 STRING 1689
-// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
+// Units: H0V4 (Developer), EditorSuffix (Name - Editor Suffix)
 {
 (VIP Hero)
 }
@@ -10666,7 +10666,7 @@ Powerful Hexenmeister working under the tutelage of Kil'jaeden himself. Can lear
 STRING 1821
 // Units: ngme (Black Market), Ubertip (Tooltip - Extended)
 {
-Neutral shop with all kinds of items to improve your hero and unit stats and to build a Hideout for Freelancers.
+Neutral shop with all kinds of items to improve your hero and unit stats and to build a Hideout for Freiberufler.
 }
 
 STRING 1831
@@ -11000,7 +11000,7 @@ STRING 1886
 STRING 1887
 // Upgrades: R02E (Burning Oil), Name (Name)
 {
-AI Freelancers Fast Gold Bonus
+AI Freiberufler Fast Gold Bonus
 }
 
 STRING 1888
@@ -11773,7 +11773,7 @@ Spielmodi
 
 STRING 2036
 {
-You can choose one of two game modes after the hero selection. As a warlord you play partly in the strategy mode and can build a base. This has the advantage that you have mostly a bigger army than other players. On the other hand, as a freelancer your hero starts with +15 points on all attributes and your hero gets 30% more experience from killing hostile units. Freelancers can see neutral buildings from start.
+You can choose one of two game modes after the hero selection. As a warlord you play partly in the strategy mode and can build a base. This has the advantage that you have mostly a bigger army than other players. On the other hand, as a freelancer your hero starts with +15 points on all attributes and your hero gets 30% more experience from killing hostile units. Freiberufler can see neutral buildings from start.
 }
 
 STRING 2037
@@ -11843,7 +11843,7 @@ STRING 2048
 }
 
 STRING 2049
-// Items: I1A5 (Foliant des Chaos), Name (Name)
+// Items: I1A5 (Tome of Chaos), Name (Name)
 {
 Foliant des Chaos
 }
@@ -11885,19 +11885,19 @@ The heart of the powerful Grubenlord Magtheridon. It must be returned to Illidan
 }
 
 STRING 2056
-// Items: I1A5 (Foliant des Chaos), Tip (Tooltip - Basic)
+// Items: I1A5 (Tome of Chaos), Tip (Tooltip - Basic)
 {
 Foliant des Chaos erwerben
 }
 
 STRING 2057
-// Items: I1A5 (Foliant des Chaos), Description (Description)
+// Items: I1A5 (Tome of Chaos), Description (Description)
 {
 Permanently changes the damage type to Chaos.
 }
 
 STRING 2058
-// Items: I1A5 (Foliant des Chaos), Ubertip (Tooltip - Extended)
+// Items: I1A5 (Tome of Chaos), Ubertip (Tooltip - Extended)
 {
 Permanently changes the damage type of the Hero to Chaos when used.
 }
@@ -11975,19 +11975,19 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Kul Tiras.|r|n|cffffcc00Rohstoff: Fr
 }
 
 STRING 2071
-// Units: h0YH (Buy Immobilie Dalaran), Name (Name)
+// Units: h0YH (Buy Property Dalaran), Name (Name)
 {
 Immobilie Dalaran kaufen
 }
 
 STRING 2072
-// Units: h0YH (Buy Immobilie Dalaran), Tip (Tooltip - Basic)
+// Units: h0YH (Buy Property Dalaran), Tip (Tooltip - Basic)
 {
 Immobilie Dalaran kaufen
 }
 
 STRING 2073
-// Units: h0YH (Buy Immobilie Dalaran), Ubertip (Tooltip - Extended)
+// Units: h0YH (Buy Property Dalaran), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Dalaran.|r|n|cffffcc00Rohstoff: Power.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -12032,7 +12032,7 @@ Q
 }
 
 STRING 2080
-// Units: n0G7 (Murloc-Blasen-Magier), Hotkey (Hotkey)
+// Units: n0G7 (Murloc Bubble Mage), Hotkey (Hotkey)
 {
 B
 }
@@ -17245,7 +17245,7 @@ Creates a shop with purchasable items. The items available depend upon what leve
 }
 
 STRING 3279
-// Units: n0G9 (Murloc-Schattenzauberer), Casterupgradetip (Caster Upgrade Tips)
+// Units: n0G9 (Murloc Shadowcaster), Casterupgradetip (Caster Upgrade Tips)
 {
 - Parasit,- Parasit|n- Todesmantel,- Parasit|n- Todesmanteln- Hex
 }
@@ -18535,7 +18535,7 @@ B
 }
 
 STRING 3527
-// Units: h0YH (Buy Immobilie Dalaran), Hotkey (Hotkey)
+// Units: h0YH (Buy Property Dalaran), Hotkey (Hotkey)
 {
 B
 }
@@ -25326,7 +25326,7 @@ Schreiber
 }
 
 STRING 5104
-// Units: o062 (Spinnenschrein), Hotkey (Hotkey)
+// Units: o062 (Spider Shrine), Hotkey (Hotkey)
 {
 H
 }
@@ -27240,25 +27240,25 @@ Revive Samuro
 STRING 5501
 // Items: I0F8 (Tiny Royal Vault), Description (Description)
 {
-Creates a Königliches Gewölbe.
+Errichtet ein Königliches Gewölbe.
 }
 
 STRING 5502
 // Items: I0F8 (Tiny Royal Vault), Name (Name)
 {
-Tiny Königliches Gewölbe
+Winziges Königliches Gewölbe
 }
 
 STRING 5503
 // Items: I0F8 (Tiny Royal Vault), Tip (Tooltip - Basic)
 {
-Purchase Tiny Königliches Gewölbe
+Winziges Königliches Gewölbe erwerben
 }
 
 STRING 5504
 // Units: h0J8 (Manor), Tip (Tooltip - Basic)
 {
-Build Manor
+Herrenhaus errichten
 }
 
 STRING 5506
@@ -27288,7 +27288,7 @@ H
 STRING 5510
 // Units: o007 (Tauren Shipyard), Name (Name)
 {
-Tauren Shipyard
+Tauren-Hafen
 }
 
 STRING 5513
@@ -27448,7 +27448,7 @@ B
 }
 
 STRING 5542
-// Units: o068 (Murloc-Holzfäller), Hotkey (Hotkey)
+// Units: o068 (Murloc Lumberkeep), Hotkey (Hotkey)
 {
 L
 }
@@ -27468,7 +27468,7 @@ Creates a Blood Elf Keep at a target location.
 STRING 5545
 // Units: o007 (Tauren Shipyard), Tip (Tooltip - Basic)
 {
-Build Tauren Shipyard
+Tauren-Hafen errichten
 }
 
 STRING 5546
@@ -28526,7 +28526,7 @@ Ausbau zum Drachenhöhle ermöglicht die Produktion weiterer Gebäude- und Einhe
 }
 
 STRING 5739
-// Units: o068 (Murloc-Holzfäller), Ubertip (Tooltip - Extended)
+// Units: o068 (Murloc Lumberkeep), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz.
 }
@@ -28719,7 +28719,7 @@ M
 }
 
 STRING 5771
-// Items: I06C (Untote), Ubertip (Tooltip - Extended)
+// Items: I06C (Undead), Ubertip (Tooltip - Extended)
 {
 - Summon buildings without requiring a constructing worker.|n- Blight which allows hit points regeneration.|n- Summon skeletons from corpses.|n|n|cffffcc00Faction: Horde.|r
 }
@@ -29473,7 +29473,7 @@ STRING 5903
 }
 
 STRING 5904
-// Items: I06G (Dämonen), Ubertip (Tooltip - Extended)
+// Items: I06G (Demon), Ubertip (Tooltip - Extended)
 {
 - Summon buildings without requiring a constructing worker.|n- Strong units.|n- Bezauberung enemies.|n- Transport units over the map.|n- Capture enemy units.|n|n|cffffcc00Faction: Horde.|r
 }
@@ -30825,7 +30825,7 @@ V
 }
 
 STRING 6175
-// Units: o069 (Murloc-Fischer), Hotkey (Hotkey)
+// Units: o069 (Murloc Fisher), Hotkey (Hotkey)
 {
 V
 }
@@ -31574,19 +31574,19 @@ Spinnenkrebs-Ungetüm
 }
 
 STRING 6394
-// Units: n0FP (Versammlungshalle), Ubertip (Tooltip - Extended)
+// Units: n0FP (Gathering Hall), Ubertip (Tooltip - Extended)
 {
 Primary structure, used to train Murloc Arbeiter and receive gathered resources.
 }
 
 STRING 6395
-// Units: n0G5 (Versammlungs-Festung), Ubertip (Tooltip - Extended)
+// Units: n0G5 (Gathering Fortress), Ubertip (Tooltip - Extended)
 {
 Ausbau zum Versammlungs-Festung ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 6396
-// Units: n0G6 (Versammlungs-Hochburg), Ubertip (Tooltip - Extended)
+// Units: n0G6 (Gathering Stronghold), Ubertip (Tooltip - Extended)
 {
 Ausbau zum Versammlungs-Hochburg ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
@@ -32265,7 +32265,7 @@ Q
 }
 
 STRING 6551
-// Items: I06C (Untote), Hotkey (Hotkey)
+// Items: I06C (Undead), Hotkey (Hotkey)
 {
 E
 }
@@ -32724,7 +32724,7 @@ W
 }
 
 STRING 6713
-// Units: n0G9 (Murloc-Schattenzauberer), Hotkey (Hotkey)
+// Units: n0G9 (Murloc Shadowcaster), Hotkey (Hotkey)
 {
 S
 }
@@ -43887,7 +43887,7 @@ G
 }
 
 STRING 10174
-// Items: I06G (Dämonen), Hotkey (Hotkey)
+// Items: I06G (Demon), Hotkey (Hotkey)
 {
 F
 }
@@ -45515,7 +45515,7 @@ Trains Schiffsarzts, Sturm-Zauberers, and Wasserbeschwörers. |nAlso contains sp
 }
 
 STRING 10477
-// Items: I06C (Untote), Name (Name)
+// Items: I06C (Undead), Name (Name)
 {
 Untote
 }
@@ -46479,19 +46479,19 @@ C
 STRING 10675
 // Units: o03A (Tauren Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Tauren Axe Fighters, Tauren Spear Throwers, Log Launchers, and Kodo-Besties.
+Primäres Truppen-Produktionsgebäude. Bildet Tauren-Axtkrieger, Tauren-Speerwerfer, Holzwerfer, und Kodo-Bestien aus.
 }
 
 STRING 10676
 // Units: o06F (Log Launcher), Name (Name)
 {
-Log Launcher
+Holzwerfer
 }
 
 STRING 10677
 // Units: o06F (Log Launcher), Tip (Tooltip - Basic)
 {
-Train Log Launcher
+Holzwerfer ausbilden
 }
 
 STRING 10678
@@ -46517,7 +46517,7 @@ Find Cenarius horn in Ashenvale.
 STRING 10682
 // Items: I0K6 (Tiny Gnome Turret), Name (Name)
 {
-Tiny Gnome Turret
+Winziges Gnom-Geschütz
 }
 
 STRING 10689
@@ -46533,7 +46533,7 @@ Destroy one Nation´s Capital (Tier 1, 2 or 3 Rathaus or a or a Demigod Temple).
 STRING 10691
 // Items: I0K6 (Tiny Gnome Turret), Tip (Tooltip - Basic)
 {
-Purchase Tiny Gnome Turret
+Winziges Gnom-Geschütz erwerben
 }
 
 STRING 10692
@@ -47471,7 +47471,7 @@ The Astromant uses his knowledge to create a Tiny Moon and Moonkey.
 STRING 10926
 // Items: I0K6 (Tiny Gnome Turret), Description (Description)
 {
-Creates a Gnome Turret.
+Creates a Gnom-Geschütz.
 }
 
 STRING 10927
@@ -47525,13 +47525,13 @@ STRING 10934
 STRING 10935
 // Items: I0K6 (Tiny Gnome Turret), Ubertip (Tooltip - Extended)
 {
-Creates a Gnome Turret at a target location.
+Creates a Gnom-Geschütz at a target location.
 }
 
 STRING 10936
 // Abilities: A0HW (Build Tiny Gnome Turret), Name (Name)
 {
-Build Tiny Gnome Turret
+Build Tiny Gnom-Geschütz
 }
 
 STRING 10937
@@ -47923,7 +47923,7 @@ Nächster Skin
 }
 
 STRING 11048
-// Items: I06C (Untote), Tip (Tooltip - Basic)
+// Items: I06C (Undead), Tip (Tooltip - Basic)
 {
 Untote
 }
@@ -48343,7 +48343,7 @@ Meeresriese
 }
 
 STRING 11203
-// Units: u03Q (Ability Autohupe), Name (Name)
+// Units: u03Q (Ability Car Horn), Name (Name)
 {
 Fähigkeit Autohupe
 }
@@ -48355,7 +48355,7 @@ STRING 11204
 }
 
 STRING 11205
-// Units: u03Q (Ability Autohupe), Tip (Tooltip - Basic)
+// Units: u03Q (Ability Car Horn), Tip (Tooltip - Basic)
 {
 Autohupe
 }
@@ -48451,7 +48451,7 @@ Feuerblitz
 }
 
 STRING 11251
-// Abilities: A23N (Autohupe), Name (Name)
+// Abilities: A23N (Car Horn), Name (Name)
 {
 Autohupe
 }
@@ -48481,13 +48481,13 @@ Unleashes the power of the dead Cenarius and causes 1000 + number of Wisps insid
 }
 
 STRING 11256
-// Abilities: A23N (Autohupe), Tip (Tooltip - Normal)
+// Abilities: A23N (Car Horn), Tip (Tooltip - Normal)
 {
 Autohupe
 }
 
 STRING 11258
-// Units: u03Q (Ability Autohupe), Ubertip (Tooltip - Extended)
+// Units: u03Q (Ability Car Horn), Ubertip (Tooltip - Extended)
 {
 Bläst die Hupe des Autos.
 }
@@ -48573,7 +48573,7 @@ Trains Flammenpanzers, Sturmpanzers, Goblin-Kaisers and Goblin-Dampfwalzes. |nAl
 STRING 11305
 // Units: o011 (Goblin Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Goblin-Flammenwerfers, Goblin-Randaliers, Flammenschredders and Oger-Goblin-Trupps. |nAlso contains the Mobile Turret, Flammengranate, and Sprengstoff-Fass upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Goblin-Flammenwerfers, Goblin-Randaliers, Flammenschredders and Oger-Goblin-Trupps. |nAlso contains the Mobiles Geschütz, Flammengranate, and Sprengstoff-Fass upgrades.
 }
 
 STRING 11306
@@ -49227,7 +49227,7 @@ Freiberufler belohnen
 STRING 11463
 // Abilities: A04W (Reward Freelancer), Ubertip (Tooltip - Normal - Extended)
 {
-Rewards a freelancer with 800 gold and lumber and 200 experience. Can be used on Freelancers anywhere on the map.
+Rewards a freelancer with 800 gold and lumber and 200 experience. Can be used on Freiberufler anywhere on the map.
 }
 
 STRING 11464
@@ -50454,7 +50454,7 @@ STRING 11884
 }
 
 STRING 11885
-// Units: n0G7 (Murloc-Blasen-Magier), Casterupgradename (Caster Upgrade Names)
+// Units: n0G7 (Murloc Bubble Mage), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -50911,13 +50911,13 @@ The Sea Witch
 }
 
 STRING 12003
-// Units: N09F (Murloc-Priester), Name (Name)
+// Units: N09F (Murloc Priest), Name (Name)
 {
 Murloc-Priester
 }
 
 STRING 12004
-// Units: N09F (Murloc-Priester), Propernames (Proper Names)
+// Units: N09F (Murloc Priest), Propernames (Proper Names)
 {
 Murloc-Priester
 }
@@ -52138,25 +52138,25 @@ Creates a Graveyard at a target location.
 STRING 12238
 // Items: I0PQ (Tiny Demon Portal), Description (Description)
 {
-Creates a Demon Portal.
+Errichtet ein Dämonenportal.
 }
 
 STRING 12239
 // Items: I0PQ (Tiny Demon Portal), Name (Name)
 {
-Tiny Demon Portal
+Winziges Dämonenportal
 }
 
 STRING 12240
 // Items: I0PQ (Tiny Demon Portal), Tip (Tooltip - Basic)
 {
-Purchase Tiny Demon Portal
+Winziges Dämonenportal erwerben
 }
 
 STRING 12241
 // Items: I0PQ (Tiny Demon Portal), Ubertip (Tooltip - Extended)
 {
-Creates a Demon Portal at a target location.
+Errichtet am Zielort ein Dämonenportal.
 }
 
 STRING 12242
@@ -52168,7 +52168,7 @@ Winziger Schrein
 STRING 12243
 // Items: I0QF (Tiny Shrine), Tip (Tooltip - Basic)
 {
-Purchase Tiny Shrine
+Winzigen Schrein erwerben
 }
 
 STRING 12244
@@ -52186,13 +52186,13 @@ Errichtet am Zielort einen Schrein.
 STRING 12246
 // Items: I0SI (Tiny Floating Rock), Name (Name)
 {
-Tiny Floating Rock
+Winziger Schwebender Felsen
 }
 
 STRING 12247
 // Items: I0SI (Tiny Floating Rock), Tip (Tooltip - Basic)
 {
-Purchase Tiny Floating Rock
+Winzigen Schwebenden Felsen erwerben
 }
 
 STRING 12248
@@ -52210,25 +52210,25 @@ Creates a Floating Rock at a target location.
 STRING 12250
 // Items: I0SZ (Tiny Demon Housing), Name (Name)
 {
-Tiny Demon Housing
+Winzige Dämonen-Unterkunft
 }
 
 STRING 12251
 // Items: I0SZ (Tiny Demon Housing), Tip (Tooltip - Basic)
 {
-Purchase Tiny Demon Housing
+Winzige Dämonen-Unterkunft erwerben
 }
 
 STRING 12252
 // Items: I0SZ (Tiny Demon Housing), Description (Description)
 {
-Creates a Demon Housing.
+Errichtet eine Dämonen-Unterkunft.
 }
 
 STRING 12253
 // Items: I0SZ (Tiny Demon Housing), Ubertip (Tooltip - Extended)
 {
-Creates a Demon Housing at a target location.
+Errichtet am Zielort eine Dämonen-Unterkunft.
 }
 
 STRING 12254
@@ -52906,7 +52906,7 @@ The Nether Drake spreads enchanted flames to nearby enemies, dealing <A04G,DataA
 STRING 12394
 // Upgrades: R00M (Stone Form), Name (Name)
 {
-Improved Dämonen-Feuer
+Verbessertes Dämonen-Feuer
 }
 
 STRING 12395
@@ -52924,13 +52924,13 @@ Improves the Dämonen-Feuer ability of Nether Drakes.
 STRING 12398
 // Upgrades: R017 (Stone Form), Name (Name)
 {
-Improved Dämonen-Feuer
+Verbessertes Dämonen-Feuer
 }
 
 STRING 12399
 // Upgrades: R017 (Stone Form), Tip (Tooltip)
 {
-Research Improved Dämonen-Feuer
+Verbessertes Dämonen-Feuer erforschen
 }
 
 STRING 12400
@@ -53104,7 +53104,7 @@ Elfenhof
 STRING 12917
 // Units: h01S (Freelancer Shop), EditorSuffix (Name - Editor Suffix)
 {
-(Freelancers)
+(Freiberufler)
 }
 
 STRING 13318
@@ -53829,37 +53829,37 @@ STRING 14062
 STRING 14063
 // Units: h099 (Dalaran Keep), Name (Name)
 {
-Dalaran Keep
+Dalaran-Burg
 }
 
 STRING 14064
 // Units: h099 (Dalaran Keep), Tip (Tooltip - Basic)
 {
-Ausbau zum Dalaran Keep
+Ausbau zur Dalaran-Burg
 }
 
 STRING 14065
 // Units: h099 (Dalaran Keep), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Dalaran Keep ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zur Dalaran-Burg ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 14066
 // Units: h09A (Dalaran Castle), Name (Name)
 {
-Dalaran Castle
+Dalaran-Schloss
 }
 
 STRING 14067
 // Units: h09A (Dalaran Castle), Tip (Tooltip - Basic)
 {
-Ausbau zum Dalaran Castle
+Ausbau zum Dalaran-Schloss
 }
 
 STRING 14068
 // Units: h09A (Dalaran Castle), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Dalaran Castle ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Dalaran-Schloss ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 14069
@@ -53901,7 +53901,7 @@ Arkaner Hafen
 STRING 14075
 // Units: h09D (Arcane Shipyard), Tip (Tooltip - Basic)
 {
-Build Arkaner Hafen
+Arkanen Hafen errichten
 }
 
 STRING 14101
@@ -53919,7 +53919,7 @@ Creates a mercenary camp with trainable creeps.
 STRING 14104
 // Units: h01U (Freelancer Mercenary Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Freelancers)
+(Freiberufler)
 }
 
 STRING 14107
@@ -53931,7 +53931,7 @@ Rack Armor
 STRING 14108
 // Units: h01V (Freelancer Laboratory), EditorSuffix (Name - Editor Suffix)
 {
-(Freelancers)
+(Freiberufler)
 }
 
 STRING 14109
@@ -55641,7 +55641,7 @@ Build Kobold Tunnel
 STRING 15263
 // Items: I0W7 (Pickaxe), Tip (Tooltip - Basic)
 {
-Purchase Spitzhacke
+Spitzhacke erwerben
 }
 
 STRING 15264
@@ -55767,7 +55767,7 @@ STRING 15323
 STRING 15327
 // Units: N0HH (Geomancer), Revivetip (Tooltip - Revive)
 {
-Revive Erdmagier
+Erdmagier wiederbeleben
 }
 
 STRING 15331
@@ -55973,7 +55973,7 @@ Feindliche Hingabe-Aura
 STRING 15581
 // Abilities: A0S0 (Turrets), Name (Name)
 {
-Türme
+Geschütze
 }
 
 STRING 15582
@@ -56231,7 +56231,7 @@ Build Tiny Pandaren Temple
 STRING 15882
 // Abilities: A0J5 (Summon Pandaren Workers), Name (Name)
 {
-Summon Pandaren Arbeiters
+Pandaren-Arbeiter beschwören
 }
 
 STRING 15883
@@ -56277,7 +56277,7 @@ Ein listiger Held, adept at entering and escaping combat. Can learn Harvest, Mag
 STRING 15925
 // Units: o01X (Kodo Beast Mount), Name (Name)
 {
-Kodo-Bestie Mount
+Kodo-Bestien-Reittier
 }
 
 STRING 15926
@@ -56367,7 +56367,7 @@ Schützen beschwören
 STRING 15956
 // Units: o01E (Turret), Name (Name)
 {
-Turret
+Geschütz
 }
 
 STRING 15962
@@ -56385,7 +56385,7 @@ Sturm-Zauberer
 STRING 15994
 // Units: h06K (Storm Sorcerer), Tip (Tooltip - Basic)
 {
-Train Sturm-Zauberer
+Sturm-Zauberer ausbilden
 }
 
 STRING 15995
@@ -56481,7 +56481,7 @@ Dryade wiederbeleben
 STRING 16073
 // Items: I10P (Thief), Name (Name)
 {
-Thief
+Dieb
 }
 
 STRING 16079
@@ -56717,7 +56717,7 @@ Reached limit of colors!
 STRING 16234
 // Units: o070 (Kobold Camp), Tip (Tooltip - Basic)
 {
-Build Kobold-Lager
+Kobold-Lager errichten
 }
 
 STRING 16235
@@ -56729,7 +56729,7 @@ STRING 16235
 STRING 16236
 // Units: h0WN (Gnome Shipyard), Tip (Tooltip - Basic)
 {
-Build Gnome Shipyard
+Gnom-Hafen errichten
 }
 
 STRING 16237
@@ -58342,7 +58342,7 @@ F
 STRING 17215
 // Units: n05C (War Golem), Tip (Tooltip - Basic)
 {
-Train Kriegs-Golem
+Kriegs-Golem ausbilden
 }
 
 STRING 17216
@@ -58354,7 +58354,7 @@ Gryphon Chick
 STRING 17217
 // Units: n04V (Gryphon), Tip (Tooltip - Basic)
 {
-Train Gryphon
+Gryphon ausbilden
 }
 
 STRING 17218
@@ -59740,7 +59740,7 @@ Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n
 }
 
 STRING 17773
-// Units: o075 (Oger-Arena), Name (Name)
+// Units: o075 (Ogre Arena), Name (Name)
 {
 Oger-Arena
 }
@@ -59768,7 +59768,7 @@ STRING 17787
 }
 
 STRING 17788
-// Units: n0G9 (Murloc-Schattenzauberer), Casterupgradename (Caster Upgrade Names)
+// Units: n0G9 (Murloc Shadowcaster), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -60044,7 +60044,7 @@ Contains useful spells.
 }
 
 STRING 18101
-// Units: o075 (Oger-Arena), Tip (Tooltip - Basic)
+// Units: o075 (Ogre Arena), Tip (Tooltip - Basic)
 {
 Build Oger-Arena
 }
@@ -62224,13 +62224,13 @@ The Archaeologist uses his knowledge to dig for a random level 7 item.
 STRING 19902
 // Units: o024 (Goblin Turret), Name (Name)
 {
-Goblin Turret
+Goblin-Geschütz
 }
 
 STRING 19903
 // Units: o024 (Goblin Turret), Tip (Tooltip - Basic)
 {
-Ausbau zum Goblin Turret
+Ausbau zum Goblin-Geschütz
 }
 
 STRING 19904
@@ -63204,13 +63204,13 @@ Troll-Hexer ausbilden
 }
 
 STRING 20223
-// Units: o02L (Troll-Blutmagier), Name (Name)
+// Units: o02L (Troll Bloodmage), Name (Name)
 {
 Troll-Blutmagier
 }
 
 STRING 20224
-// Units: o02L (Troll-Blutmagier), Tip (Tooltip - Basic)
+// Units: o02L (Troll Bloodmage), Tip (Tooltip - Basic)
 {
 Troll-Blutmagier ausbilden
 }
@@ -67498,7 +67498,7 @@ Verzauberung
 }
 
 STRING 23761
-// Units: n0G9 (Murloc-Schattenzauberer), Ubertip (Tooltip - Extended)
+// Units: n0G9 (Murloc Shadowcaster), Ubertip (Tooltip - Extended)
 {
 Heavy ranged amphibious unit. Can initially cast Parasit. Can also learn Todesmantel, and Hex. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -68202,7 +68202,7 @@ Primary structure, used to train Matroses and receive gathered resources. Can be
 STRING 24496
 // Units: h0BQ (Advanced Barracks), Name (Name)
 {
-Advanced Kaserne
+Hoch entwickelte Kaserne
 }
 
 STRING 24497
@@ -68238,7 +68238,7 @@ Monsun
 STRING 24502
 // Abilities: A0S0 (Turrets), Tip (Tooltip - Normal)
 {
-Turrets
+Geschütze
 }
 
 STRING 24503
@@ -68250,7 +68250,7 @@ STRING 24503
 STRING 24504
 // Abilities: A0S1 (Turrets), Tip (Tooltip - Normal)
 {
-Turrets
+Geschütze
 }
 
 STRING 24505
@@ -68262,7 +68262,7 @@ Automatically attacks targets with the turrets.
 STRING 24506
 // Abilities: A0S1 (Turrets), Name (Name)
 {
-Turrets
+Geschütze
 }
 
 STRING 24525
@@ -68828,7 +68828,7 @@ STRING 25055
 }
 
 STRING 25056
-// Units: o02L (Troll-Blutmagier), EditorSuffix (Name - Editor Suffix)
+// Units: o02L (Troll Bloodmage), EditorSuffix (Name - Editor Suffix)
 {
 (Trolle)
 }
@@ -70080,7 +70080,7 @@ STRING 26542
 }
 
 STRING 26543
-// Units: o075 (Oger-Arena), EditorSuffix (Name - Editor Suffix)
+// Units: o075 (Ogre Arena), EditorSuffix (Name - Editor Suffix)
 {
 (Oger)
 }
@@ -72230,13 +72230,13 @@ Flugapparat-Reittier
 STRING 28638
 // Units: h0KH (Gnome Turret), Name (Name)
 {
-Gnome Turret
+Gnom-Geschütz
 }
 
 STRING 28639
 // Units: h0KH (Gnome Turret), Tip (Tooltip - Basic)
 {
-Build Gnome Turret
+Build Gnom-Geschütz
 }
 
 STRING 28640
@@ -74411,7 +74411,7 @@ Conditions to retreat from Pandaria from the Mur'gul.
 STRING 31016
 // Items: I018 (Tiny Hideout), Ubertip (Tooltip - Extended)
 {
-Creates a Hideout at a target location. Hideouts have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freelancers and limited to 1.|r
+Creates a Hideout at a target location. Hideouts have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freiberufler and limited to 1.|r
 }
 
 STRING 31021
@@ -78410,13 +78410,13 @@ STRING 33780
 }
 
 STRING 33781
-// Units: o02L (Troll-Blutmagier), Casterupgradetip (Caster Upgrade Tips)
+// Units: o02L (Troll Bloodmage), Casterupgradetip (Caster Upgrade Tips)
 {
 - Kannibalismus,- Kannibalismus|n- Unstable Concoction,- Kannibalismus|n- Unstable Concoction|n- Lebensauger
 }
 
 STRING 33782
-// Units: o02L (Troll-Blutmagier), Ubertip (Tooltip - Extended)
+// Units: o02L (Troll Bloodmage), Ubertip (Tooltip - Extended)
 {
 Supporting spellcaster. Can initially cast Kannibalismus, which heals hit points by eating enemy living ground units. Can also learn Unstable Concoction and Lebensauger. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -81918,7 +81918,7 @@ Errichtet am Zielort ein Befestigtes Versteck.
 STRING 35352
 // Items: I0NG (Tiny Fortified Hideout), Ubertip (Tooltip - Extended)
 {
-Creates a Befestigtes Versteck at a target location. Befestigtes Verstecks have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freelancers and limited to 1.|r
+Creates a Befestigtes Versteck at a target location. Befestigtes Verstecks have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freiberufler and limited to 1.|r
 }
 
 STRING 35353
@@ -81942,7 +81942,7 @@ Errichtet am Zielort eine Wächterzitadelle.
 STRING 35356
 // Items: I0NH (Tiny Guardian´s Citadel), Ubertip (Tooltip - Extended)
 {
-Creates a Wächterzitadelle at a target location. Wächterzitadelles have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freelancers and limited to 1.|r
+Creates a Wächterzitadelle at a target location. Wächterzitadelles have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freiberufler and limited to 1.|r
 }
 
 STRING 35357
@@ -87395,19 +87395,19 @@ Flying attack creature. Can learn the Cocoon ability. |n|n|cffffcc00Greift Land-
 STRING 37342
 // Units: n0EG (Nerubian Spider Lord), Tip (Tooltip - Basic)
 {
-Train Nerubian Spider Lord
+Neruber-Spinnenlord ausbilden
 }
 
 STRING 37343
 // Abilities: A1CK (Enable Hatchery), Name (Name)
 {
-Enable Brutstätte
+Brutstätte aktivieren
 }
 
 STRING 37344
 // Abilities: A1CK (Enable Hatchery), Tip (Tooltip - Normal)
 {
-Enable Brutstätte
+Brutstätte aktivieren
 }
 
 STRING 37345
@@ -87425,13 +87425,13 @@ STRING 37346
 STRING 37347
 // Abilities: A1CL (Disable Hatchery), Name (Name)
 {
-Disable Brutstätte
+Brutstätte deaktiviert
 }
 
 STRING 37348
 // Abilities: A1CL (Disable Hatchery), Tip (Tooltip - Normal)
 {
-Disable Brutstätte
+Brutstätte deaktiviert
 }
 
 STRING 37349
@@ -87731,37 +87731,37 @@ STRING 37404
 STRING 37405
 // Upgrades: R0B7 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Name (Name)
 {
-Nerubian Armor
+Neruber-Rüstung
 }
 
 STRING 37406
 // Upgrades: R0B7 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Name (Name)
 {
-Improved Nerubian Armor
+Verbesserte Neruber-Rüstung
 }
 
 STRING 37407
 // Upgrades: R0B7 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Name (Name)
 {
-Advanced Nerubian Armor
+Hoch entwickelte Neruber-Rüstung
 }
 
 STRING 37408
 // Upgrades: R0B7 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Tip (Tooltip)
 {
-Ausbau zum Nerubian Armor
+Ausbau zur Neruber-Rüstung
 }
 
 STRING 37409
 // Upgrades: R0B7 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Tip (Tooltip)
 {
-Ausbau zum Improved Nerubian Armor
+Ausbau zur Verbesserten Neruber-Rüstung
 }
 
 STRING 37410
 // Upgrades: R0B7 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Tip (Tooltip)
 {
-Ausbau zum Advanced Nerubian Armor
+Ausbau zur Hoch entwickelten Neruber-Rüstung
 }
 
 STRING 37411
@@ -87785,13 +87785,13 @@ Verbesserte Neruber-Flügel
 STRING 37414
 // Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Name (Name)
 {
-Fortgeschrittene Neruber-Flügel
+Hoch entwickelte Neruber-Flügel
 }
 
 STRING 37415
 // Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Tip (Tooltip)
 {
-Ausbau zu Fortgeschrittenen Neruber-Flügeln
+Ausbau zu Hoch entwickelten Neruber-Flügeln
 }
 
 STRING 37416
@@ -87803,7 +87803,7 @@ Ausbau zu Verbesserten Neruber-Flügel
 STRING 37417
 // Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Tip (Tooltip)
 {
-Ausbau zu Fortgeschrittenen Neruber-Flügeln
+Ausbau zu Hoch entwickelten Neruber-Flügeln
 }
 
 STRING 37419
@@ -87821,7 +87821,7 @@ Eingegrabener Neruber-Krieger
 STRING 37421
 // Units: u02D (Nest), Ubertip (Tooltip - Extended)
 {
-Produces Neruber-Speerwerfers, Nerubian Spider Lords, and Flying Bombarders.
+Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Flying Bombarders.
 }
 
 STRING 37422
@@ -88061,7 +88061,7 @@ Adept Inschrift
 STRING 37464
 // Units: h0P4 (Val'kyr Temple), Tip (Tooltip - Basic)
 {
-Build Val'kyr Temple
+Val'kyr-Tempel errichten
 }
 
 STRING 37465
@@ -88295,7 +88295,7 @@ Nest beschwören
 STRING 37505
 // Units: u02L (Burrowed Nest), Ubertip (Tooltip - Extended)
 {
-Produces Neruber-Speerwerfers, Nerubian Spider Lords, and Flying Bombarders.
+Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Flying Bombarders.
 }
 
 STRING 37506
@@ -88739,13 +88739,13 @@ STRING 37619
 STRING 37620
 // Units: e00J (Mobile Turret), Name (Name)
 {
-Mobile Turret
+Mobiles Geschütz
 }
 
 STRING 37621
 // Units: e00J (Mobile Turret), Tip (Tooltip - Basic)
 {
-Create Mobile Turret
+Mobiles Geschütz errichten
 }
 
 STRING 37623
@@ -88763,7 +88763,7 @@ Flammengranate
 STRING 37625
 // Abilities: A0BU (Root), EditorSuffix (Editor Suffix)
 {
-(Goblin Mobile Turret)
+(Goblin Mobiles Geschütz)
 }
 
 STRING 37626
@@ -88787,19 +88787,19 @@ Changes the defense type and enables attacks.
 STRING 37629
 // Abilities: A0BU (Root), Unubertip (Tooltip - Turn Off - Extended)
 {
-Lets the Mobile Turret move but it cannot attack and has weaker armour.
+Lets the Mobiles Geschütz move but it cannot attack and has weaker armour.
 }
 
 STRING 37630
 // Abilities: A0BV (Take Turret), Name (Name)
 {
-Take Turret
+Geschütz nehmen
 }
 
 STRING 37631
 // Abilities: A0BV (Take Turret), Tip (Tooltip - Normal)
 {
-Take Turret
+Geschütz nehmen
 }
 
 STRING 37632
@@ -88811,43 +88811,43 @@ Takes a turret to carry it around and get into position.|n|n|cffffcc00Greift Lan
 STRING 37633
 // Abilities: A0BW (Place Turret), Name (Name)
 {
-Place Turret
+Geschütz platzieren
 }
 
 STRING 37634
 // Abilities: A0BW (Place Turret), Tip (Tooltip - Normal)
 {
-Place Turret
+Geschütz platzieren
 }
 
 STRING 37635
 // Abilities: A0BW (Place Turret), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Turret defending the area.
+Platziert ein Geschütz zur Verteidung des Gebiets.
 }
 
 STRING 37637
 // Units: u037 (Nerubian Shipyard), Name (Name)
 {
-Nerubian Shipyard
+Neruber-Hafen
 }
 
 STRING 37638
 // Units: u037 (Nerubian Shipyard), Tip (Tooltip - Basic)
 {
-Build Nerubian Shipyard
+Neruber-Hafen errichten
 }
 
 STRING 37639
 // Units: o09X (Fel Orc Shipyard), Name (Name)
 {
-Höllenorcs Shipyard
+Höllenorc-Hafen
 }
 
 STRING 37640
 // Units: o09X (Fel Orc Shipyard), Tip (Tooltip - Basic)
 {
-Build Höllenorcs Shipyard
+Höllenorc-Hafen errichten
 }
 
 STRING 37641
@@ -88859,7 +88859,7 @@ Flammengranate
 STRING 37642
 // Upgrades: R02T (Liquid Fire), Tip (Tooltip)
 {
-Research Flammengranate
+Flammengranate erforschen
 }
 
 STRING 37643
@@ -88877,13 +88877,13 @@ Allows Goblin-Flammenwerfers to use the ability Flammengranate.
 STRING 37646
 // Upgrades: R02U (Liquid Fire), Name (Name)
 {
-Mobile Turret
+Mobiles Geschütz
 }
 
 STRING 37647
 // Upgrades: R02U (Liquid Fire), Tip (Tooltip)
 {
-Research Mobile Turret
+Mobiles Geschütz erforschen
 }
 
 STRING 37648
@@ -89069,13 +89069,13 @@ Web
 STRING 37738
 // Abilities: A1N8 (Ambush), Name (Name)
 {
-Ambush
+Hinterhalt
 }
 
 STRING 37740
 // Abilities: A1N8 (Ambush), Tip (Tooltip - Normal)
 {
-Ambush
+Hinterhalt
 }
 
 STRING 37744
@@ -89093,25 +89093,25 @@ STRING 37745
 STRING 37746
 // Units: n0EO (Burrowed Nerubian Spider Lord), Tip (Tooltip - Basic)
 {
-Train Nerubian Spider Lord
+Neruber-Spinnenlord ausbilden
 }
 
 STRING 37747
 // Units: n0EO (Burrowed Nerubian Spider Lord), Name (Name)
 {
-Eingegraben Nerubian Spider Lord
+Eingegrabener Neruber-Spinnenlord
 }
 
 STRING 37748
 // Units: n0EP (Burrowed Nerubian Spear Thrower), Name (Name)
 {
-Eingegraben Neruber-Speerwerfer
+Eingegrabener Neruber-Speerwerfer
 }
 
 STRING 37749
 // Units: n0EP (Burrowed Nerubian Spear Thrower), Tip (Tooltip - Basic)
 {
-Train Neruber-Speerwerfer
+Neruber-Speerwerfer ausbilden
 }
 
 STRING 37750
@@ -90659,7 +90659,7 @@ Ein mystischer Held, particularly adept at cold magic. Can learn Tote erwecken, 
 STRING 38169
 // Upgrades: R0EA (Ensnare), Name (Name)
 {
-Ambush
+Hinterhalt
 }
 
 STRING 38171
@@ -91649,7 +91649,7 @@ Festhaut
 STRING 38811
 // Units: n02Y (Neutral Citizen (male)), Ubertip (Tooltip - Extended)
 {
-A hearty neutral citizen. Has life and mana regeneration aura. Can build a Stromgenerator and Portale. Can collect gold and lumber and repair structures.|n|n|cffffcc00Can only be hired by Freelancers.|r
+A hearty neutral citizen. Has life and mana regeneration aura. Can build a Stromgenerator and Portale. Can collect gold and lumber and repair structures.|n|n|cffffcc00Can only be hired by Freiberufler.|r
 }
 
 STRING 38826
@@ -93545,7 +93545,7 @@ Build Tiny Handelshaus
 STRING 39937
 // Abilities: A1FR (Build Tiny Manor), Name (Name)
 {
-Build Tiny Manor
+Winziges Herrenhaus errichten
 }
 
 STRING 39938
@@ -94899,19 +94899,19 @@ Kaserne errichten
 }
 
 STRING 40508
-// Units: o062 (Spinnenschrein), Name (Name)
+// Units: o062 (Spider Shrine), Name (Name)
 {
 Spinnenschrein
 }
 
 STRING 40509
-// Units: o062 (Spinnenschrein), Tip (Tooltip - Basic)
+// Units: o062 (Spider Shrine), Tip (Tooltip - Basic)
 {
 Ausbau zum Spinnenschrein
 }
 
 STRING 40510
-// Units: o062 (Spinnenschrein), Ubertip (Tooltip - Extended)
+// Units: o062 (Spider Shrine), Ubertip (Tooltip - Extended)
 {
 Verteidigungsgebäude. Can cast Web and has the ability Spawn Spiderlings. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -94941,7 +94941,7 @@ Tuskarr-Hafen
 }
 
 STRING 40515
-// Units: o062 (Spinnenschrein), EditorSuffix (Name - Editor Suffix)
+// Units: o062 (Spider Shrine), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -95433,7 +95433,7 @@ STRING 40633
 }
 
 STRING 40634
-// Units: o068 (Murloc-Holzfäller), Name (Name)
+// Units: o068 (Murloc Lumberkeep), Name (Name)
 {
 Murloc-Holzfäller
 }
@@ -95445,7 +95445,7 @@ Ausbau zu Tuskarr-Harpunen
 }
 
 STRING 40636
-// Units: o068 (Murloc-Holzfäller), Tip (Tooltip - Basic)
+// Units: o068 (Murloc Lumberkeep), Tip (Tooltip - Basic)
 {
 Murloc-Holzfäller errichten
 }
@@ -95811,19 +95811,19 @@ STRING 40729
 }
 
 STRING 40740
-// Units: n0FP (Versammlungshalle), Name (Name)
+// Units: n0FP (Gathering Hall), Name (Name)
 {
 Versammlungshalle
 }
 
 STRING 40741
-// Units: o068 (Murloc-Holzfäller), EditorSuffix (Name - Editor Suffix)
+// Units: o068 (Murloc Lumberkeep), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 40742
-// Units: n0FP (Versammlungshalle), Tip (Tooltip - Basic)
+// Units: n0FP (Gathering Hall), Tip (Tooltip - Basic)
 {
 Versammlungshalle errichten
 }
@@ -96521,7 +96521,7 @@ STRING 41135
 STRING 41177
 // Upgrades: R0EA (Ensnare), Tip (Tooltip)
 {
-Research Ambush
+Research Hinterhalt
 }
 
 STRING 41180
@@ -96621,7 +96621,7 @@ Gives specific Tuskarr ground units the ability to carry items.
 }
 
 STRING 41198
-// Units: o06A (Murloc-Klingenherstellungshütte), EditorSuffix (Name - Editor Suffix)
+// Units: o06A (Murloc Blademaking Hut), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -96713,19 +96713,19 @@ STRING 41216
 STRING 41217
 // Units: o066 (Crossbow Turret), Name (Name)
 {
-Armbrust Turret
+Armbrust-Geschütz
 }
 
 STRING 41218
 // Items: I0Q4 (Crossbow Turrets), Name (Name)
 {
-Armbrust Turrets
+Armbrust-Geschütze
 }
 
 STRING 41219
 // Items: I0Q4 (Crossbow Turrets), Tip (Tooltip - Basic)
 {
-Purchase Armbrust Turrets
+Armbrust-Geschütze erwerben
 }
 
 STRING 41220
@@ -96749,7 +96749,7 @@ STRING 41222
 STRING 41223
 // Abilities: A1I2 (Crossbow Turret), Name (Name)
 {
-Armbrust Turret
+Armbrust-Geschütz
 }
 
 STRING 41224
@@ -96783,25 +96783,25 @@ Zepter der Murloc erwerben
 }
 
 STRING 41231
-// Items: I0Q7 (Tiny Versammlungshalle), Description (Description)
+// Items: I0Q7 (Tiny Gathering Hall), Description (Description)
 {
 Creates a Versammlungshalle.
 }
 
 STRING 41232
-// Items: I0Q7 (Tiny Versammlungshalle), Name (Name)
+// Items: I0Q7 (Tiny Gathering Hall), Name (Name)
 {
 Tiny Versammlungshalle
 }
 
 STRING 41233
-// Items: I0Q7 (Tiny Versammlungshalle), Tip (Tooltip - Basic)
+// Items: I0Q7 (Tiny Gathering Hall), Tip (Tooltip - Basic)
 {
 Purchase Tiny Versammlungshalle
 }
 
 STRING 41234
-// Items: I0Q7 (Tiny Versammlungshalle), Ubertip (Tooltip - Extended)
+// Items: I0Q7 (Tiny Gathering Hall), Ubertip (Tooltip - Extended)
 {
 Creates a Versammlungshalle at a target location.
 }
@@ -96819,7 +96819,7 @@ STRING 41236
 }
 
 STRING 41237
-// Abilities: A1I4 (Build Tiny Versammlungshalle), Name (Name)
+// Abilities: A1I4 (Build Tiny Gathering Hall), Name (Name)
 {
 Build Tiny Versammlungshalle
 }
@@ -96951,7 +96951,7 @@ STRING 41259
 }
 
 STRING 41260
-// Units: n0G7 (Murloc-Blasen-Magier), EditorSuffix (Name - Editor Suffix)
+// Units: n0G7 (Murloc Bubble Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -96993,43 +96993,43 @@ Murloc-Unterkunft errichten
 }
 
 STRING 41268
-// Units: n0G9 (Murloc-Schattenzauberer), EditorSuffix (Name - Editor Suffix)
+// Units: n0G9 (Murloc Shadowcaster), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 41269
-// Units: o069 (Murloc-Fischer), Name (Name)
+// Units: o069 (Murloc Fisher), Name (Name)
 {
 Murloc-Fischer
 }
 
 STRING 41270
-// Units: o069 (Murloc-Fischer), Tip (Tooltip - Basic)
+// Units: o069 (Murloc Fisher), Tip (Tooltip - Basic)
 {
 Murloc-Fischer errichten
 }
 
 STRING 41271
-// Units: o069 (Murloc-Fischer), Ubertip (Tooltip - Extended)
+// Units: o069 (Murloc Fisher), Ubertip (Tooltip - Extended)
 {
 Giant statue which protects your base with powerful storms. |n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 41272
-// Units: o069 (Murloc-Fischer), EditorSuffix (Name - Editor Suffix)
+// Units: o069 (Murloc Fisher), EditorSuffix (Name - Editor Suffix)
 {
 (Spezialgebäude) (Murlocs)
 }
 
 STRING 41273
-// Units: n0G5 (Versammlungs-Festung), Name (Name)
+// Units: n0G5 (Gathering Fortress), Name (Name)
 {
 Versammlungs-Festung
 }
 
 STRING 41274
-// Units: n0G5 (Versammlungs-Festung), Tip (Tooltip - Basic)
+// Units: n0G5 (Gathering Fortress), Tip (Tooltip - Basic)
 {
 Ausbau zur Versammlungs-Festung
 }
@@ -97041,13 +97041,13 @@ STRING 41275
 }
 
 STRING 41276
-// Units: n0G6 (Versammlungs-Hochburg), Tip (Tooltip - Basic)
+// Units: n0G6 (Gathering Stronghold), Tip (Tooltip - Basic)
 {
 Ausbau zur Versammlungs-Hochburg
 }
 
 STRING 41277
-// Units: n0G6 (Versammlungs-Hochburg), Name (Name)
+// Units: n0G6 (Gathering Stronghold), Name (Name)
 {
 Versammlungs-Hochburg
 }
@@ -97059,13 +97059,13 @@ STRING 41278
 }
 
 STRING 41279
-// Units: o06A (Murloc-Klingenherstellungshütte), Name (Name)
+// Units: o06A (Murloc Blademaking Hut), Name (Name)
 {
 Murloc-Klingenherstellungshütte
 }
 
 STRING 41280
-// Units: o06A (Murloc-Klingenherstellungshütte), Tip (Tooltip - Basic)
+// Units: o06A (Murloc Blademaking Hut), Tip (Tooltip - Basic)
 {
 Murloc-Klingenherstellungshütte errichten
 }
@@ -97083,13 +97083,13 @@ STRING 41282
 }
 
 STRING 41283
-// Units: n0G7 (Murloc-Blasen-Magier), Name (Name)
+// Units: n0G7 (Murloc Bubble Mage), Name (Name)
 {
 Murloc-Blasen-Magier
 }
 
 STRING 41284
-// Units: n0G7 (Murloc-Blasen-Magier), Tip (Tooltip - Basic)
+// Units: n0G7 (Murloc Bubble Mage), Tip (Tooltip - Basic)
 {
 Murloc-Blasen-Magier ausbilden
 }
@@ -97341,7 +97341,7 @@ C
 }
 
 STRING 41359
-// Units: n0G9 (Murloc-Schattenzauberer), Name (Name)
+// Units: n0G9 (Murloc Shadowcaster), Name (Name)
 {
 Murloc-Schattenzauberer
 }
@@ -97702,7 +97702,7 @@ STRING 41433
 
 STRING 41434
 {
-Complete achievements!
+Errungenschaften abschließen!
 }
 
 STRING 41435
@@ -97768,7 +97768,7 @@ STRING 41478
 STRING 41479
 // Upgrades: R0EF (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
 {
-Necromancer Adeptenausbildung
+Nekromanten-Adeptenausbildung
 }
 
 STRING 41480
@@ -98228,7 +98228,7 @@ Oger-Hügel
 STRING 41801
 // Units: o06C (Ogre Mound), Tip (Tooltip - Basic)
 {
-Build Oger-Hügel
+Oger-Hügel errichten
 }
 
 STRING 41802
@@ -98354,13 +98354,13 @@ Eine intelligente Oger-Bürgerin. Hat eine Manaregenerations-Aura.
 STRING 41832
 // Units: h0QC (Ogre Housing), Name (Name)
 {
-Ogre Housing
+Oger-Unterkunft
 }
 
 STRING 41833
 // Units: h0QC (Ogre Housing), Tip (Tooltip - Basic)
 {
-Build Ogre Housing
+Oger-Unterkunft errichten
 }
 
 STRING 41835
@@ -98402,13 +98402,13 @@ STRING 41842
 STRING 41843
 // Units: o06E (Tauren Axe Fighter), Name (Name)
 {
-Tauren Axe Fighter
+Tauren-Axtkrieger
 }
 
 STRING 41844
 // Units: o06E (Tauren Axe Fighter), Tip (Tooltip - Basic)
 {
-Train Tauren Axe Fighter
+Tauren-Axtkrieger ausbilden
 }
 
 STRING 41845
@@ -98750,7 +98750,7 @@ Gives specific Lordaeron ground units the ability to carry items.
 STRING 41907
 // Upgrades: R0EA (Ensnare), Ubertip (Tooltip - Extended)
 {
-Enables Ogre Hunters to use the Ambush ability. Ambush makes the Ogre Hunter invisible for some time.
+Enables Ogre Hunters to use the Hinterhalt ability. Hinterhalt makes the Ogre Hunter invisible for some time.
 }
 
 STRING 41908
@@ -103917,7 +103917,7 @@ Oger-Lord ausbilden
 STRING 44007
 // Units: o078 (Beastiary), Ubertip (Tooltip - Extended)
 {
-Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nAlso contains the Einschnüren, Ambush, and Blitzangriff upgrades.
+Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nAlso contains the Einschnüren, Hinterhalt, and Blitzangriff upgrades.
 }
 
 STRING 44008
@@ -105917,7 +105917,7 @@ STRING 46040
 }
 
 STRING 46041
-// Units: o075 (Oger-Arena), Ubertip (Tooltip - Extended)
+// Units: o075 (Ogre Arena), Ubertip (Tooltip - Extended)
 {
 Trains Oger-Lords, Mok'Nathal and Gronn. |nAlso contains the upgrade Reinkarnation for Oger-Lords, Bären beschwören for Mok'Nathal and Kriegskeules for Gronn.
 }
@@ -107449,13 +107449,13 @@ Naga
 }
 
 STRING 47552
-// Items: I06G (Dämonen), Name (Name)
+// Items: I06G (Demon), Name (Name)
 {
 Dämonen
 }
 
 STRING 47553
-// Items: I06G (Dämonen), Tip (Tooltip - Basic)
+// Items: I06G (Demon), Tip (Tooltip - Basic)
 {
 Dämonen
 }
@@ -110819,7 +110819,7 @@ Barade beschwören
 }
 
 STRING 49639
-// Units: N09F (Murloc-Priester), EditorSuffix (Name - Editor Suffix)
+// Units: N09F (Murloc Priest), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -111314,7 +111314,7 @@ Heimatwelt der Eredar.
 STRING 49998
 // Units: n0J7 (Fruit Stand), Ubertip (Tooltip - Extended)
 {
-Neutral shop with all kinds of items to improve your hero and unit stats and to build a Hideout for Freelancers.
+Neutral shop with all kinds of items to improve your hero and unit stats and to build a Hideout for Freiberufler.
 }
 
 STRING 50000
@@ -112884,7 +112884,7 @@ Ausbau zur Magischen Arkonite-Verteidigung
 }
 
 STRING 50447
-// Units: n0FP (Versammlungshalle), EditorSuffix (Name - Editor Suffix)
+// Units: n0FP (Gathering Hall), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs) (Tier 1)
 }
@@ -112896,19 +112896,19 @@ STRING 50448
 }
 
 STRING 50449
-// Units: n0G5 (Versammlungs-Festung), EditorSuffix (Name - Editor Suffix)
+// Units: n0G5 (Gathering Fortress), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs) (Tier 3)
 }
 
 STRING 50450
-// Units: n0G6 (Versammlungs-Hochburg), EditorSuffix (Name - Editor Suffix)
+// Units: n0G6 (Gathering Stronghold), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs) (Tier 2)
 }
 
 STRING 50451
-// Units: o06A (Murloc-Klingenherstellungshütte), Ubertip (Tooltip - Extended)
+// Units: o06A (Murloc Blademaking Hut), Ubertip (Tooltip - Extended)
 {
 Contains upgrades Coral Blades, Coral Scales, Swarming and Flussbett.
 }
@@ -113112,13 +113112,13 @@ Langhaus errichten
 }
 
 STRING 50493
-// Units: n0G7 (Murloc-Blasen-Magier), Casterupgradetip (Caster Upgrade Tips)
+// Units: n0G7 (Murloc Bubble Mage), Casterupgradetip (Caster Upgrade Tips)
 {
 - Parasit,- Parasit|n- Frost-Rüstung,- Parasit|n- Frost-Rüstung|n- Wirbelsturm
 }
 
 STRING 50494
-// Units: n0G9 (Murloc-Schattenzauberer), Tip (Tooltip - Basic)
+// Units: n0G9 (Murloc Shadowcaster), Tip (Tooltip - Basic)
 {
 Train Murloc-Schattenzauberer
 }
@@ -117709,7 +117709,7 @@ Flag
 }
 
 STRING 52363
-// Units: H0V4 (Developer), EditorSuffix (Name - Editor Suffix)
+// Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
 {
 (VIP Hero)
 }
@@ -124471,7 +124471,7 @@ STRING 56964
 STRING 56965
 // Buffs/Effects: B042 (), Bufftip (Tooltip)
 {
-Armbrust Turret
+Armbrust-Geschütz
 }
 
 STRING 56966
@@ -124541,7 +124541,7 @@ Ability Kampfrausch
 }
 
 STRING 56979
-// Units: u03Q (Ability Autohupe), EditorSuffix (Name - Editor Suffix)
+// Units: u03Q (Ability Car Horn), EditorSuffix (Name - Editor Suffix)
 {
 (Hexenhütte)
 }
@@ -125273,13 +125273,13 @@ STRING 57321
 }
 
 STRING 57326
-// Abilities: A23N (Autohupe), EditorSuffix (Editor Suffix)
+// Abilities: A23N (Car Horn), EditorSuffix (Editor Suffix)
 {
 (Auto-Reittier)
 }
 
 STRING 57329
-// Abilities: A23N (Autohupe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A23N (Car Horn), Ubertip (Tooltip - Normal - Extended)
 {
 Bläst die Hupe des Autos.
 }
