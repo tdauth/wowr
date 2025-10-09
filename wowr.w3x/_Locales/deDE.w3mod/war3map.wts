@@ -3595,9 +3595,9 @@ K
 }
 
 STRING 602
-// Units: h0OY (Dummy Orb of Web), Name (Name)
+// Units: h0OY (Dummy Netzkugel), Name (Name)
 {
-Dummy Orb of Web
+Dummy Netzkugel
 }
 
 STRING 603
@@ -22850,7 +22850,7 @@ Powerful Fel Lord  boss hero who can cast Schreckgeheul, Donnerschlag, Schmetter
 }
 
 STRING 4585
-// Units: u02C (Flying Bombarder), Hotkey (Hotkey)
+// Units: u02C (Fliegender Bomber), Hotkey (Hotkey)
 {
 F
 }
@@ -71990,7 +71990,7 @@ Epi­gra­fi­ker
 STRING 28386
 // Items: I0NN (Book of Inscription), Name (Name)
 {
-Book of Inschrift
+Buch der Inschrift
 }
 
 STRING 28388
@@ -73971,7 +73971,7 @@ Bodengestalt
 }
 
 STRING 30897
-// Abilities: A1C5 (Cocoon), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Kokon), Untip (Tooltip - Turn Off)
 {
 Fluggestalt
 }
@@ -83178,13 +83178,13 @@ Draws nearby creeps to ward and charms them when they attack the lure.
 STRING 35835
 // Items: I08I (Tiny Keep), Tip (Tooltip - Basic)
 {
-Purchase Tiny Keep
+Winzige Burg erwerben
 }
 
 STRING 35836
 // Items: I08I (Tiny Keep), Ubertip (Tooltip - Extended)
 {
-Creates a Keep at a target location.
+Errichtet am Zielort eine Burg.
 }
 
 STRING 35837
@@ -83196,19 +83196,19 @@ Winzige Mauer
 STRING 35838
 // Items: I0L8 (Tiny Wall), Description (Description)
 {
-Creates a Wall at a target location.
+Errichtet am Zielort eine Mauer.
 }
 
 STRING 35839
 // Items: I0L8 (Tiny Wall), Tip (Tooltip - Basic)
 {
-Purchase Tiny Mauer
+Winzige Mauer erwerben
 }
 
 STRING 35840
 // Items: I0L8 (Tiny Wall), Ubertip (Tooltip - Extended)
 {
-Creates a Wall at a target location.
+Errichtet am Zielort eine Mauer.
 }
 
 STRING 35841
@@ -84263,7 +84263,7 @@ STRING 36026
 STRING 36027
 // Units: o05D (Spider Egg Sack), Name (Name)
 {
-Spinnenei Sack
+Spinnenei-Sack
 }
 
 STRING 36028
@@ -84347,7 +84347,7 @@ STRING 36040
 STRING 36041
 // Items: I0NN (Book of Inscription), Tip (Tooltip - Basic)
 {
-Purchase Book of Inschrift
+Buch der Inschrift erwerben
 }
 
 STRING 36042
@@ -84381,7 +84381,7 @@ STRING 36046
 }
 
 STRING 36047
-// Units: u020 (Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+// Units: u020 (Gruftbestie), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84393,7 +84393,7 @@ Spinnen-Gift
 }
 
 STRING 36049
-// Units: u021 (Crypt Drone), EditorSuffix (Name - Editor Suffix)
+// Units: u021 (Gruftdrohne), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84405,7 +84405,7 @@ Spinnen-Gift
 }
 
 STRING 36051
-// Units: u022 (Crypt Drone Cocoon), EditorSuffix (Name - Editor Suffix)
+// Units: u022 (Gruftdrohnen-Kokon), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84563,7 +84563,7 @@ STRING 36078
 STRING 36079
 // Units: h0OI (Door Open), Ubertip (Tooltip - Extended)
 {
-Allows entering your house.
+Erlaubt es Ihnen Ihr Haus zu betreten.
 }
 
 STRING 36080
@@ -84765,25 +84765,25 @@ Errichtet am Zielort eine Halle der Toten.
 }
 
 STRING 36117
-// Items: I0MA (Tiny Nerubian Tower), Description (Description)
+// Items: I0MA (Tiny Neruben-Turm), Description (Description)
 {
 Errichtet einen Neruben-Turm.
 }
 
 STRING 36118
-// Items: I0MA (Tiny Nerubian Tower), Name (Name)
+// Items: I0MA (Tiny Neruben-Turm), Name (Name)
 {
 Winziger Neruben-Turm
 }
 
 STRING 36119
-// Items: I0MA (Tiny Nerubian Tower), Tip (Tooltip - Basic)
+// Items: I0MA (Tiny Neruben-Turm), Tip (Tooltip - Basic)
 {
 Winzigen Neruben-Turm erwerben
 }
 
 STRING 36120
-// Items: I0MA (Tiny Nerubian Tower), Ubertip (Tooltip - Extended)
+// Items: I0MA (Tiny Neruben-Turm), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort einen Neruben-Turm.
 }
@@ -84993,9 +84993,9 @@ STRING 36154
 }
 
 STRING 36155
-// Abilities: A1AG (Build Tiny Nerubian Tower), Name (Name)
+// Abilities: A1AG (Build Tiny Neruben-Turm), Name (Name)
 {
-Build Tiny Nerubian Tower
+Build Tiny Neruben-Turm
 }
 
 STRING 36156
@@ -85011,7 +85011,7 @@ Build Tiny Sacrificial Pit
 }
 
 STRING 36158
-// Abilities: A1AG (Build Tiny Nerubian Tower), EditorSuffix (Editor Suffix)
+// Abilities: A1AG (Build Tiny Neruben-Turm), EditorSuffix (Editor Suffix)
 {
 (Untote)
 }
@@ -85877,55 +85877,55 @@ STRING 36315
 STRING 36316
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
 {
-Improved Ingenieurwissenschaften
+Verbesserte Ingenieurwissenschaften
 }
 
 STRING 36317
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
 {
-Advanced Ingenieurwissenschaften
+Hoch entwickelte Ingenieurwissenschaften
 }
 
 STRING 36318
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
 {
-Imbued Ingenieurwissenschaften
+Magische Ingenieurwissenschaften
 }
 
 STRING 36319
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
-Ausbau zum Improved Ingenieurwissenschaften
+Ausbau zu Verbesserten Ingenieurwissenschaften
 }
 
 STRING 36320
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
-Ausbau zum Advanced Ingenieurwissenschaften
+Ausbau zu Hoch entwickelten Ingenieurwissenschaften
 }
 
 STRING 36321
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
-Ausbau zum Imbued Ingenieurwissenschaften
+Ausbau zu Magischen Ingenieurwissenschaften
 }
 
 STRING 36322
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of mechanical units.
+Verbessert Panzerung und Trefferpunkte der mechanischen Einheiten.
 }
 
 STRING 36323
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of mechanical units.
+Verbessert Panzerung und Trefferpunkte der mechanischen Einheiten noch weiter.
 }
 
 STRING 36324
 // Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of mechanical units.
+Verbessert Panzerung und Trefferpunkte der mechanischen Einheiten noch weiter.
 }
 
 STRING 36325
@@ -85937,7 +85937,7 @@ STRING 36325
 STRING 36326
 // Units: u01W (Ability Remove All), Name (Name)
 {
-Ability Remove All
+Fähigkeit Alle entfernen
 }
 
 STRING 36327
@@ -86619,75 +86619,75 @@ STRING 37109
 }
 
 STRING 37110
-// Units: u01Z (Spawning Pit), Name (Name)
+// Units: u01Z (Brutgrube), Name (Name)
 {
-Spawning Pit
+Brutgrube
 }
 
 STRING 37111
-// Units: u01Z (Spawning Pit), EditorSuffix (Name - Editor Suffix)
+// Units: u01Z (Brutgrube), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber) (Kaserne)
 }
 
 STRING 37112
-// Units: u01Z (Spawning Pit), Tip (Tooltip - Basic)
+// Units: u01Z (Brutgrube), Tip (Tooltip - Basic)
 {
-Summon Spawning Pit
+Brutgrube beschwören
 }
 
 STRING 37113
-// Units: u01Z (Spawning Pit), Ubertip (Tooltip - Extended)
+// Units: u01Z (Brutgrube), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Crypt Fiends, and Crypt Drones. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
+Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
 }
 
 STRING 37114
 // Units: n0E8 (Nerubian Warrior), Tip (Tooltip - Basic)
 {
-Train Neruber-Krieger
+Neruber-Krieger ausbilden
 }
 
 STRING 37115
-// Units: u021 (Crypt Drone), Name (Name)
+// Units: u021 (Gruftdrohne), Name (Name)
 {
-Crypt Drone
+Gruftdrohne
 }
 
 STRING 37116
-// Units: u021 (Crypt Drone), Tip (Tooltip - Basic)
+// Units: u021 (Gruftdrohne), Tip (Tooltip - Basic)
 {
-Train Crypt Drone
+Gruftdrohne ausbilden
 }
 
 STRING 37117
-// Units: u022 (Crypt Drone Cocoon), Name (Name)
+// Units: u022 (Gruftdrohnen-Kokon), Name (Name)
 {
-Crypt Drone Cocoon
+Gruftdrohnen-Kokon
 }
 
 STRING 37118
-// Units: u022 (Crypt Drone Cocoon), Tip (Tooltip - Basic)
+// Units: u022 (Gruftdrohnen-Kokon), Tip (Tooltip - Basic)
 {
-Train Crypt Drone Cocoon
+Gruftdrohnen-Kokon ausbilden
 }
 
 STRING 37119
 // Units: u023 (Advanced Metropolis), Name (Name)
 {
-Fortgeschrittene Metropole
+Hoch entwickelte Metropole
 }
 
 STRING 37120
 // Units: u023 (Advanced Metropolis), Tip (Tooltip - Basic)
 {
-Ausbau zum Fortgeschrittene Metropole
+Ausbau zur Hoch entwickelten Metropole
 }
 
 STRING 37121
 // Units: u023 (Advanced Metropolis), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Fortgeschrittene Metropole ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ausbau zur Hoch entwickelten Metropole ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 37122
@@ -86787,15 +86787,15 @@ STRING 37141
 }
 
 STRING 37142
-// Abilities: A1C5 (Cocoon), Tip (Tooltip - Normal)
+// Abilities: A1C5 (Kokon), Tip (Tooltip - Normal)
 {
-Cocoon
+Kokon
 }
 
 STRING 37143
-// Abilities: A1C5 (Cocoon), Name (Name)
+// Abilities: A1C5 (Kokon), Name (Name)
 {
-Cocoon
+Kokon
 }
 
 STRING 37144
@@ -86805,37 +86805,37 @@ STRING 37144
 }
 
 STRING 37145
-// Abilities: A1C5 (Cocoon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1C5 (Kokon), Ubertip (Tooltip - Normal - Extended)
 {
-Transforms the Crypt Drones into a cocoon that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> hit points per second. |nThe Crypt Drone cannot attack in this form.
+Transforms the Gruftdrohnes into a cocoon that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> hit points per second. |nThe Gruftdrohne cannot attack in this form.
 }
 
 STRING 37146
-// Abilities: A1C5 (Cocoon), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Kokon), Unubertip (Tooltip - Turn Off - Extended)
 {
-Returns the Crypt Drone to the air.
+Returns the Gruftdrohne to the air.
 }
 
 STRING 37147
-// Abilities: A1C6 (Spawn Spiderlings), Name (Name)
+// Abilities: A1C6 (Spinnlinge erzeugen), Name (Name)
 {
-Spawn Spiderlings
+Spinnlinge erzeugen
 }
 
 STRING 37148
-// Abilities: A1C6 (Spawn Spiderlings), EditorSuffix (Editor Suffix)
+// Abilities: A1C6 (Spinnlinge erzeugen), EditorSuffix (Editor Suffix)
 {
  (Icon) (Neruber)
 }
 
 STRING 37149
-// Abilities: A1C6 (Spawn Spiderlings), Tip (Tooltip - Normal)
+// Abilities: A1C6 (Spinnlinge erzeugen), Tip (Tooltip - Normal)
 {
-Spawn Spiderlings
+Spinnlinge erzeugen
 }
 
 STRING 37150
-// Abilities: A1C6 (Spawn Spiderlings), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1C6 (Spinnlinge erzeugen), Ubertip (Tooltip - Normal - Extended)
 {
 Summons 2 Spiderlings on death.
 }
@@ -86847,7 +86847,7 @@ STRING 37151
 }
 
 STRING 37156
-// Units: u02A (Nerubian Tower), EditorSuffix (Name - Editor Suffix)
+// Units: u02A (Neruben-Turm), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -86873,7 +86873,7 @@ Kokon erforschen
 STRING 37160
 // Upgrades: R0B1 (Stone Form), Ubertip (Tooltip - Extended)
 {
-Enables the ability for Crypt Drones to assume Cocoon. Cocoon transforms the Crypt Drones into a cocoon with high armor, spell immunity, and regeneration. The Crypt Drone cannot attack in this form.
+Enables the ability for Gruftdrohnes to assume Kokon. Kokon transforms the Gruftdrohnes into a cocoon with high armor, spell immunity, and regeneration. The Gruftdrohne cannot attack in this form.
 }
 
 STRING 37161
@@ -86885,19 +86885,19 @@ STRING 37161
 STRING 37162
 // Upgrades: R0B2 (Stone Form), Name (Name)
 {
-Spawn Spiderlings
+Spinnlinge erzeugen
 }
 
 STRING 37163
 // Upgrades: R0B2 (Stone Form), Tip (Tooltip)
 {
-Research Spawn Spiderlings
+Spinnlinge erzeugen erforschen
 }
 
 STRING 37164
 // Upgrades: R0B2 (Stone Form), Ubertip (Tooltip - Extended)
 {
-Enables the ability for Neruber-Kriegers  to assume Spawn Spiderlings. Spawn Spiderlings summons Spiderlings when a Neruber-Krieger dies.
+Enables the ability for Neruber-Kriegers  to assume Spinnlinge erzeugen. Spinnlinge erzeugen summons Spiderlings when a Neruber-Krieger dies.
 }
 
 STRING 37165
@@ -86907,7 +86907,7 @@ P
 }
 
 STRING 37166
-// Units: u02C (Flying Bombarder), EditorSuffix (Name - Editor Suffix)
+// Units: u02C (Fliegender Bomber), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -86925,25 +86925,25 @@ Gives specific Nerubian ground units the ability to carry items.
 }
 
 STRING 37169
-// Items: I0NI (Orb of Web), Name (Name)
+// Items: I0NI (Netzkugel), Name (Name)
 {
-Orb of Web
+Netzkugel
 }
 
 STRING 37170
-// Items: I0NI (Orb of Web), Tip (Tooltip - Basic)
+// Items: I0NI (Netzkugel), Tip (Tooltip - Basic)
 {
-Purchase Orb of Web
+Netzkugel erwerben
 }
 
 STRING 37171
-// Items: I0NI (Orb of Web), Ubertip (Tooltip - Extended)
+// Items: I0NI (Netzkugel), Ubertip (Tooltip - Extended)
 {
 Adds <A1CA,DataA1> bonus damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.
 }
 
 STRING 37172
-// Items: I0NI (Orb of Web), Description (Description)
+// Items: I0NI (Netzkugel), Description (Description)
 {
 Attacks can web enemies.
 }
@@ -86963,13 +86963,13 @@ Spinnenei beschwören
 STRING 37175
 // Abilities: A1C9 (Web), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Orb of Web)
+(Neruber) (Netzkugel)
 }
 
 STRING 37176
 // Abilities: A1CA (Item Attack Lightning Bonus), EditorSuffix (Editor Suffix)
 {
-(Orb of Web)
+(Netzkugel)
 }
 
 STRING 37177
@@ -86985,13 +86985,13 @@ STRING 37178
 }
 
 STRING 37179
-// Units: u02E (Burrowed Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+// Units: u02E (Burrowed Gruftbestie), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
 
 STRING 37180
-// Units: u02F (Burrowed Nerubian Tower), EditorSuffix (Name - Editor Suffix)
+// Units: u02F (Burrowed Neruben-Turm), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -87183,7 +87183,7 @@ Ein Schwein, das bestraft werden will.
 }
 
 STRING 37301
-// Abilities: A1CH (Spawn Spiderlings), EditorSuffix (Editor Suffix)
+// Abilities: A1CH (Spinnlinge erzeugen), EditorSuffix (Editor Suffix)
 {
 (Neruber) (Spinnenei)
 }
@@ -87321,19 +87321,19 @@ STRING 37327
 }
 
 STRING 37328
-// Units: u02C (Flying Bombarder), Name (Name)
+// Units: u02C (Fliegender Bomber), Name (Name)
 {
-Flying Bombarder
+Fliegender Bomber
 }
 
 STRING 37329
-// Units: u02C (Flying Bombarder), Tip (Tooltip - Basic)
+// Units: u02C (Fliegender Bomber), Tip (Tooltip - Basic)
 {
-Train Flying Bombarder
+Fliegender Bomber ausbilden
 }
 
 STRING 37330
-// Units: u02C (Flying Bombarder), Ubertip (Tooltip - Extended)
+// Units: u02C (Fliegender Bomber), Ubertip (Tooltip - Extended)
 {
 Slow flying attack creature with a strong ground siege attack. |n|n|cffffcc00Attacks land.|r
 }
@@ -87347,7 +87347,7 @@ Nest
 STRING 37332
 // Units: u02D (Nest), Tip (Tooltip - Basic)
 {
-Summon Nest
+Nest beschwören
 }
 
 STRING 37333
@@ -87387,9 +87387,9 @@ Spielt Sturm, Erde und Feuer.
 }
 
 STRING 37341
-// Units: u021 (Crypt Drone), Ubertip (Tooltip - Extended)
+// Units: u021 (Gruftdrohne), Ubertip (Tooltip - Extended)
 {
-Flying attack creature. Can learn the Cocoon ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Flying attack creature. Can learn the Kokon ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 37342
@@ -87449,7 +87449,7 @@ STRING 37350
 STRING 37351
 // Abilities: A1CJ (Burrow), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Crypt Fiend)
+(Neruber) (Gruftbestie)
 }
 
 STRING 37354
@@ -87545,13 +87545,13 @@ Heavy Axe made of very rare minerals. Causes terrible pain among its victims. Gr
 STRING 37369
 // Units: n0EF (Nerubian Seer), Tip (Tooltip - Basic)
 {
-Train Neruben-Seher
+Neruben-Seher ausbilden
 }
 
 STRING 37370
-// Units: u02F (Burrowed Nerubian Tower), Name (Name)
+// Units: u02F (Burrowed Neruben-Turm), Name (Name)
 {
-Eingegrabener Nerubian Tower
+Eingegrabener Neruben-Turm
 }
 
 STRING 37371
@@ -87569,19 +87569,19 @@ STRING 37372
 STRING 37373
 // Abilities: A1CM (Burrow), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Nerubian Tower)
+(Neruber) (Neruben-Turm)
 }
 
 STRING 37374
 // Abilities: A1CM (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nerubian Tower digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Neruben-Turm digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
 }
 
 STRING 37375
 // Abilities: A1CM (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nerubian Tower pops out of the ground and becomes visible again.
+The Neruben-Turm pops out of the ground and becomes visible again.
 }
 
 STRING 37376
@@ -87653,19 +87653,19 @@ STRING 37387
 STRING 37388
 // Upgrades: R0B6 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
 {
-Nerubian Weapons
+Neruber-Waffen
 }
 
 STRING 37389
 // Upgrades: R0B6 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
 {
-Improved Nerubian Weapons
+Verbesserte Neruber-Waffen
 }
 
 STRING 37390
 // Upgrades: R0B6 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
 {
-Advanced Nerubian Weapons
+Hoch entwickelte Neruber-Waffen
 }
 
 STRING 37391
@@ -87695,7 +87695,7 @@ Deactivate Cutting Down Trees to stop draining mana.
 STRING 37396
 // Upgrades: R0B6 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Tip (Tooltip)
 {
-Ausbau zum Nerubian Weapons
+Ausbau zu Neruber-Waffen
 }
 
 STRING 37397
@@ -87713,13 +87713,13 @@ Upgrades Goblin-Flugdrohnes, giving them the Sperrfeuer ability, which allows th
 STRING 37402
 // Upgrades: R0B6 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Tip (Tooltip)
 {
-Ausbau zum Improved Nerubian Weapons
+Ausbau zu Verbesserten Neruber-Waffen
 }
 
 STRING 37403
 // Upgrades: R0B6 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Tip (Tooltip)
 {
-Ausbau zum Nerubian Weapons
+Ausbau zu Neruber-Waffen
 }
 
 STRING 37404
@@ -87821,7 +87821,7 @@ Eingegrabener Neruber-Krieger
 STRING 37421
 // Units: u02D (Nest), Ubertip (Tooltip - Extended)
 {
-Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Flying Bombarders.
+Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Fliegender Bombers.
 }
 
 STRING 37422
@@ -88149,13 +88149,13 @@ STRING 37480
 }
 
 STRING 37481
-// Abilities: A1A6 (Spawn Spiderlings), EditorSuffix (Editor Suffix)
+// Abilities: A1A6 (Spinnlinge erzeugen), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
 
 STRING 37482
-// Abilities: A1C5 (Cocoon), EditorSuffix (Editor Suffix)
+// Abilities: A1C5 (Kokon), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -88295,31 +88295,31 @@ Nest beschwören
 STRING 37505
 // Units: u02L (Burrowed Nest), Ubertip (Tooltip - Extended)
 {
-Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Flying Bombarders.
+Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Fliegender Bombers.
 }
 
 STRING 37506
-// Units: u02M (Burrowed Spawning Pit), Name (Name)
+// Units: u02M (Burrowed Brutgrube), Name (Name)
 {
-Eingegraben Spawning Pit
+Eingegraben Brutgrube
 }
 
 STRING 37507
-// Units: u02M (Burrowed Spawning Pit), EditorSuffix (Name - Editor Suffix)
+// Units: u02M (Burrowed Brutgrube), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber) (Kaserne)
 }
 
 STRING 37508
-// Units: u02M (Burrowed Spawning Pit), Tip (Tooltip - Basic)
+// Units: u02M (Burrowed Brutgrube), Tip (Tooltip - Basic)
 {
-Summon Spawning Pit
+Summon Brutgrube
 }
 
 STRING 37509
-// Units: u02M (Burrowed Spawning Pit), Ubertip (Tooltip - Extended)
+// Units: u02M (Burrowed Brutgrube), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Crypt Fiends, and Crypt Drones. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
+Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
 }
 
 STRING 37510
@@ -88415,19 +88415,19 @@ The Nest pops out of the ground and becomes visible again.
 STRING 37525
 // Abilities: A1D1 (Burrow), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Spawning Pit)
+(Neruber) (Brutgrube)
 }
 
 STRING 37526
 // Abilities: A1D1 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Spawning Pit digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutgrube digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
 }
 
 STRING 37527
 // Abilities: A1D1 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Spawning Pit pops out of the ground and becomes visible again.
+The Brutgrube pops out of the ground and becomes visible again.
 }
 
 STRING 37528
@@ -94913,7 +94913,7 @@ Ausbau zum Spinnenschrein
 STRING 40510
 // Units: o062 (Spider Shrine), Ubertip (Tooltip - Extended)
 {
-Verteidigungsgebäude. Can cast Web and has the ability Spawn Spiderlings. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Verteidigungsgebäude. Can cast Web and has the ability Spinnlinge erzeugen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 40511
