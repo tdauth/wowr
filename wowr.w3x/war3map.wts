@@ -10185,6 +10185,11 @@ STRING 1714
 Dummy Shroud of Protection
 }
 
+STRING 1715
+{
+Long loading time leads to errors for some players.
+}
+
 STRING 1716
 // Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
@@ -10195,6 +10200,11 @@ STRING 1717
 // Units: E00G (Mountain Giant), Ubertip (Tooltip - Extended)
 {
 Tank Hero, defending your army and destroying hostile towns. Can learn Storm Bolt, Spiked Carapace, Eat Tree, and Demolish. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1718
+{
+Enchanting does not work for all item abilities due to Warcraft bugs.
 }
 
 STRING 1719
@@ -10541,6 +10551,41 @@ STRING 1776
 // Abilities: A05B (Transmute), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
+}
+
+STRING 1777
+{
+Goblin Town Hall has a weird light bug pointing to the hero glow.
+}
+
+STRING 1778
+{
+Goblin Tower leads to terrain becoming black sometimes.
+}
+
+STRING 1779
+{
+Line of Sight Blockers do not work for flying units (occlusion height).
+}
+
+STRING 1780
+{
+Researches increasing unit maximum life can lead to negative maximum life and instant unit deaths.
+}
+
+STRING 1781
+{
+Release 2.0 of Warcraft III broke older version before 3.31 with a new frame hierarchy.
+}
+
+STRING 1782
+{
+AI might crash in start locations which have too little ground area space.
+}
+
+STRING 1783
+{
+Loading save games might crash because of string literals longer than 1023 characters.
 }
 
 STRING 1796
