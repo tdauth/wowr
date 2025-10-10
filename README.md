@@ -1518,3 +1518,4 @@ Here is a list of some modified versions online:
 * HuanJuan, Blizzard Entertainment: [Ogre Warlock](https://www.hiveworkshop.com/threads/ogre-warlock.355323/)
 * General Frank: [Bloodelf Phoenix Guard](https://www.hiveworkshop.com/threads/bloodelf-phoenix-guard.50668/)
 * MangakaDark: [Blood Mage (Female) Icon](https://www.hiveworkshop.com/threads/blood-mage-female-icon.354738/)
+* TianJiYiPin: [Xal'atath](https://www.hiveworkshop.com/threads/xalatath.354994/)

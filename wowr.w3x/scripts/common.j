@@ -2889,6 +2889,10 @@ globals
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
 
     // Neutral Buildings
+    constant integer RAILWAY_STATION                                 = 'n0IR'
+    constant integer SCEPTERS_SHOP                                   = 'n06Q'
+    constant integer PROFESSION_BOOKS_SHOP                           = 'n06R'
+    constant integer RANDOM_CORPSE                                   = 'n0NK'
     constant integer MARKETPLACE                                     = 'nmrk'
     constant integer CRAFTING_STASH_NEUTRAL                          = 'h0J2'
     constant integer PORTAL_NEUTRAL                                  = 'nwgt'

@@ -1,0 +1,100 @@
+﻿STRING 1
+{
+Unit Group Respawn System 1.3
+}
+
+STRING 2
+{
+1-2
+}
+
+STRING 3
+{
+Killed and charmed units will automatically respawn after some time.
+}
+
+STRING 4
+{
+Baradé
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 8
+{
+Player 2
+}
+
+STRING 11
+{
+Baradé's Unit Group Respawn System 1.3
+}
+
+STRING 14
+{
+- All preplaced creeps will respawn after their whole group has been killed or charmed.
+}
+
+STRING 15
+{
+- All preplaced critters will respawn at their dying location after they have been killed or charmed.
+}
+
+STRING 16
+{
+- Press Escape or enter chat command "-respawn" to respawn all creeps and critters.
+}
+
+STRING 17
+{
+- Enter chat command "-ping" to ping all respawning groups and units.
+}
+
+STRING 18
+{
+Respawn all units!
+}
+
+STRING 19
+{
+Orc
+}
+
+STRING 20
+{
+Users
+}
+
+STRING 21
+{
+Orcs
+}
+
+STRING 22
+{
+Gaia
+}
+
+STRING 23
+{
+- Enter chat command "-pingextra" to ping all respawning groups and units which have no fixed unit.
+}
+
+STRING 24
+{
+- Enter chat command "-pingunits" to ping all respawning units.
+}
+
+STRING 25
+{
+Creep Heroes
+}
+
+STRING 26
+{
+Creeps
+}
+

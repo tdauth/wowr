@@ -709,12 +709,6 @@ STRING 118
 Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
 
-STRING 119
-// Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 120
 // Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
 {
@@ -3749,12 +3743,6 @@ STRING 627
 Marketplaces
 }
 
-STRING 628
-// Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 629
 // Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
@@ -3921,12 +3909,6 @@ STRING 656
 // Units: n00S (Pet Stag), Hotkey (Hotkey)
 {
 P
-}
-
-STRING 657
-// Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 658
@@ -8075,12 +8057,6 @@ STRING 1362
 |cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
-STRING 1363
-// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r
-}
-
 STRING 1364
 // Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
 {
@@ -8097,12 +8073,6 @@ STRING 1366
 // Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
-STRING 1367
-// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r
 }
 
 STRING 1368
@@ -8157,18 +8127,6 @@ STRING 1376
 // Units: u00U (Faceless One Shipyard), Name (Name)
 {
 Faceless One Shipyard
-}
-
-STRING 1377
-// Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 1378
-// Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1379
@@ -8396,12 +8354,6 @@ STRING 1416
 // Units: o08U (Worker), EditorSuffix (Name - Editor Suffix)
 {
 (Faceless One)
-}
-
-STRING 1417
-// Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land and air units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Necromancer.|r|n|cffffcc00Mount: Crow.|r
 }
 
 STRING 1418
@@ -10586,6 +10538,60 @@ AI might crash in start locations which have too little ground area space.
 STRING 1783
 {
 Loading save games might crash because of string literals longer than 1023 characters.
+}
+
+STRING 1784
+// Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1785
+// Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1786
+// Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1787
+// Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1788
+// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 13/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 22/3.2|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1789
+// Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1790
+// Units: H0KV (Peasant), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Tinker|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1791
+// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1792
+// Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Bandit|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 13/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 22/3.2|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 1796
@@ -22934,12 +22940,6 @@ STRING 4591
 // Abilities: A0AK (Item Next Skin), Name (Name)
 {
 Item Next Skin
-}
-
-STRING 4592
-// Units: H0KV (Peasant), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Tinker.|r
 }
 
 STRING 4593
