@@ -6801,6 +6801,8 @@ globals
     constant integer HERALD_OF_THE_DEEP_MOTHER                       = 'N0C8'
     constant integer MAGTHERIDON_BOSS                                = 'Nmag'
     constant integer GHOST_BOSS                                      = 'Ekgg'
+    constant integer DALVENGYR_BOSS                                  = 'Uvng'
+    constant integer BALNAZZAR_BOSS                                  = 'Ubal'
 
     constant integer MATHOGS_CAGE                                    = 'I040'
 

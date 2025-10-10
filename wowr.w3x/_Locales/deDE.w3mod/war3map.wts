@@ -709,12 +709,6 @@ STRING 118
 Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
 
-STRING 119
-// Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Volk:|r Dalaran|n|cffffcc00Class:|r Arkanist|n|cffffcc00Primäres Attribute:|r Intelligenz|n|cffffcc00Kraft:|r 14/2|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3.2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 120
 // Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
 {
@@ -3595,7 +3589,7 @@ K
 }
 
 STRING 602
-// Units: h0OY (Dummy Netzkugel), Name (Name)
+// Units: h0OY (Dummy Orb of Web), Name (Name)
 {
 Dummy Netzkugel
 }
@@ -3747,12 +3741,6 @@ S
 STRING 627
 {
 Marktplätze
-}
-
-STRING 628
-// Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 629
@@ -3921,12 +3909,6 @@ STRING 656
 // Units: n00S (Pet Stag), Hotkey (Hotkey)
 {
 P
-}
-
-STRING 657
-// Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 658
@@ -7041,7 +7023,7 @@ This urn contains the remains of Muradin Bronzebeard. After his death during Fro
 }
 
 STRING 1190
-// Units: h0N6 (Scharlachrotes Kloster), EditorSuffix (Name - Editor Suffix)
+// Units: h0N6 (Scarlet Monastery), EditorSuffix (Name - Editor Suffix)
 {
 (Spezialgebäude) (Lordaeron)
 }
@@ -8063,58 +8045,10 @@ STRING 1360
 Gives the Hero Divine armor.
 }
 
-STRING 1361
-// Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
-STRING 1362
-// Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
-STRING 1363
-// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r
-}
-
-STRING 1364
-// Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Arcanist.|r|n|cffffcc00Mount: Gryphon.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
-STRING 1365
-// Units: H0A5 (Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|r |n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
-STRING 1366
-// Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
-}
-
-STRING 1367
-// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Warrior.|r|n|cffffcc00Mount: Gryphon.|r
-}
-
 STRING 1368
 // Units: H03L (Dwarf Mage), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Race: Dwarf.|r|n|cffffcc00Class: Geomancer.|r|n|cffffcc00Mount: Gryphon.|r
-}
-
-STRING 1369
-// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Paladin.|r|n|cffffcc00Mount: Gryphon.|r |n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1370
@@ -8157,18 +8091,6 @@ STRING 1376
 // Units: u00U (Faceless One Shipyard), Name (Name)
 {
 Faceless One Shipyard
-}
-
-STRING 1377
-// Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 1378
-// Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1379
@@ -8396,12 +8318,6 @@ STRING 1416
 // Units: o08U (Worker), EditorSuffix (Name - Editor Suffix)
 {
 (Gesichtslose)
-}
-
-STRING 1417
-// Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Necromancer.|r|n|cffffcc00Mount: Crow.|r
 }
 
 STRING 1418
@@ -10185,6 +10101,11 @@ STRING 1714
 Dummy Shroud of Protection
 }
 
+STRING 1715
+{
+Long loading time leads to errors for some players.
+}
+
 STRING 1716
 // Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
@@ -10195,6 +10116,11 @@ STRING 1717
 // Units: E00G (Mountain Giant), Ubertip (Tooltip - Extended)
 {
 Tank Hero, defending your army and destroying hostile towns. Can learn Storm Bolt, Stachelpanzer, Baum essen, and Demolieren. |n|n|cffffcc00Greift Land-Einheiten an.|r
+}
+
+STRING 1718
+{
+Enchanting does not work for all item abilities due to Warcraft bugs.
 }
 
 STRING 1719
@@ -10543,10 +10469,123 @@ STRING 1776
 (Neutral Feindlich)
 }
 
+STRING 1777
+{
+Goblin Town Hall has a weird light bug pointing to the hero glow.
+}
+
+STRING 1778
+{
+Goblin Tower leads to terrain becoming black sometimes.
+}
+
+STRING 1779
+{
+Line of Sight Blockers do not work for flying units (occlusion height).
+}
+
+STRING 1780
+{
+Researches increasing unit maximum life can lead to negative maximum life and instant unit deaths.
+}
+
+STRING 1781
+{
+Release 2.0 of Warcraft III broke older version before 3.31 with a new frame hierarchy.
+}
+
+STRING 1782
+{
+AI might crash in start locations which have too little ground area space.
+}
+
+STRING 1783
+{
+Loading save games might crash because of string literals longer than 1023 characters.
+}
+
+STRING 1784
+// Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1785
+// Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1786
+// Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1787
+// Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1788
+// Units: H00W (Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 13/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 22/3.2|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1789
+// Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1790
+// Units: H0KV (Peasant), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Tinker|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1791
+// Units: H0VB (Captain), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1792
+// Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Bandit|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 13/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 22/3.2|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1793
+// Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1794
+// Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1795
+// Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3.2|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
 STRING 1796
 // Items: I1A4 (Tome of Magic), Ubertip (Tooltip - Extended)
 {
 Permanently increases the ability levels of the Hero by 1 when used.
+}
+
+STRING 1797
+// Units: H0A5 (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 1798
@@ -10603,6 +10642,12 @@ STRING 1806
 Heavy warrior. Can cast Stille, Feuerblitz, Schmetter-Angriff, Hieb, Festhaut and Animate Dead. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Requires 4 Diamonds and 10 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
+STRING 1807
+// Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
 STRING 1808
 // Abilities: A1PZ (Cyclone), EditorSuffix (Editor Suffix)
 {
@@ -10625,6 +10670,12 @@ STRING 1811
 // Units: n025 (Power Generator), Hotkey (Hotkey)
 {
 G
+}
+
+STRING 1812
+// Units: H0QW (High King of the Alliance), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 1813
@@ -15008,7 +15059,7 @@ STRING 2686
 }
 
 STRING 2687
-// Buffs/Effects: B02R (Wasserkreatur), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B02R (Water Creature), Buffubertip (Tooltip - Extended)
 {
 This unit is a hero. This has no special effect. It only adds the hero glow.
 }
@@ -18217,7 +18268,7 @@ Eldin Sunstrider,Tanin Hawkwing,Lorn Bloodseeker,Aldos Firestar,Gilaras Drakeson
 }
 
 STRING 3462
-// Abilities: A1I9 (Wasserkreatur), Name (Name)
+// Abilities: A1I9 (Water Creature), Name (Name)
 {
 Wasserkreatur
 }
@@ -18289,7 +18340,7 @@ Q
 }
 
 STRING 3485
-// Units: H0GR (Gepanzertes U-Boot), Hotkey (Hotkey)
+// Units: H0GR (Ironclad Submarine), Hotkey (Hotkey)
 {
 E
 }
@@ -22850,7 +22901,7 @@ Powerful Fel Lord  boss hero who can cast Schreckgeheul, Donnerschlag, Schmetter
 }
 
 STRING 4585
-// Units: u02C (Fliegender Bomber), Hotkey (Hotkey)
+// Units: u02C (Flying Bombarder), Hotkey (Hotkey)
 {
 F
 }
@@ -22889,12 +22940,6 @@ STRING 4591
 // Abilities: A0AK (Item Next Skin), Name (Name)
 {
 Item Nächster Skin
-}
-
-STRING 4592
-// Units: H0KV (Peasant), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Human.|r|n|cffffcc00Class: Tüftler.|r
 }
 
 STRING 4593
@@ -24052,7 +24097,7 @@ Skelettknochen
 }
 
 STRING 4840
-// Units: h0N6 (Scharlachrotes Kloster), Name (Name)
+// Units: h0N6 (Scarlet Monastery), Name (Name)
 {
 Scharlachrotes Kloster
 }
@@ -24190,7 +24235,7 @@ STRING 4864
 }
 
 STRING 4865
-// Units: h0N6 (Scharlachrotes Kloster), Tip (Tooltip - Basic)
+// Units: h0N6 (Scarlet Monastery), Tip (Tooltip - Basic)
 {
 Scharlachrotes Kloster errichten
 }
@@ -24751,7 +24796,7 @@ D
 }
 
 STRING 5005
-// Units: o063 (Frost-Schneemann), Hotkey (Hotkey)
+// Units: o063 (Frost Snowman), Hotkey (Hotkey)
 {
 F
 }
@@ -35577,7 +35622,7 @@ Purchase Tiny Banner Lordaeron
 }
 
 STRING 7592
-// Units: h0N6 (Scharlachrotes Kloster), Ubertip (Tooltip - Extended)
+// Units: h0N6 (Scarlet Monastery), Ubertip (Tooltip - Extended)
 {
 Special building with a high sight range. Has Truesight, Resurrect and Reveal. |n|n|cffffcc00Begrenzt auf 1.|r
 }
@@ -46372,7 +46417,7 @@ U
 }
 
 STRING 10655
-// Units: h0WL (Gepanzertes U-Boot), Hotkey (Hotkey)
+// Units: h0WL (Ironclad Submarine), Hotkey (Hotkey)
 {
 I
 }
@@ -49297,7 +49342,7 @@ Water based hero, exceptional at hiding and striking from the water. Can learn T
 }
 
 STRING 11477
-// Units: H0GR (Gepanzertes U-Boot), Ubertip (Tooltip - Extended)
+// Units: H0GR (Ironclad Submarine), Ubertip (Tooltip - Extended)
 {
 Water based hero, exceptional at hiding and striking from the water. Can learn Torpedos, Wassermine platzieren, Wasserbombe abwerfen and Raketen abschießen. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -52598,7 +52643,7 @@ G
 }
 
 STRING 12337
-// Units: h0WM (Gepanzertes U-Boot), Hotkey (Hotkey)
+// Units: h0WM (Ironclad Submarine), Hotkey (Hotkey)
 {
 I
 }
@@ -62606,7 +62651,7 @@ E
 }
 
 STRING 20064
-// Units: n0GR (Urpanda), Hotkey (Hotkey)
+// Units: n0GR (Primal Pandaren), Hotkey (Hotkey)
 {
 P
 }
@@ -64993,7 +65038,7 @@ Dalaran-Horst errichten
 }
 
 STRING 21368
-// Items: I04Y (Draenei-Schlächter), Description (Description)
+// Items: I04Y (Draenei Slayer), Description (Description)
 {
 A powerful Demon sword which causes increased damage against defense type Hero and increases the attack speed.
 }
@@ -65457,7 +65502,7 @@ Kriegsdonner
 }
 
 STRING 22343
-// Items: I04Y (Draenei-Schlächter), Ubertip (Tooltip - Extended)
+// Items: I04Y (Draenei Slayer), Ubertip (Tooltip - Extended)
 {
 A powerful Demon sword which causes increased damage against defense type Hero by <A0D9,DataB1,%> % and increases the attack speed by <AIs2,DataA1,%> %.
 }
@@ -72749,7 +72794,7 @@ X
 }
 
 STRING 29161
-// Units: H0GT (Gepanzertes U-Boot), Ubertip (Tooltip - Extended)
+// Units: H0GT (Ironclad Submarine), Ubertip (Tooltip - Extended)
 {
 Water based hero, exceptional at hiding and striking from the water. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Raketen abschießen. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -72760,7 +72805,7 @@ Do not damage units from a player in passive mode!
 }
 
 STRING 29163
-// Units: H0GR (Gepanzertes U-Boot), Propernames (Proper Names)
+// Units: H0GR (Ironclad Submarine), Propernames (Proper Names)
 {
 U-Boot
 }
@@ -72783,13 +72828,13 @@ Allows harvesting 1000 meat.
 }
 
 STRING 29167
-// Units: H0GT (Gepanzertes U-Boot), EditorSuffix (Name - Editor Suffix)
+// Units: H0GT (Ironclad Submarine), EditorSuffix (Name - Editor Suffix)
 {
 (Abtauchend)
 }
 
 STRING 29168
-// Units: H0GR (Gepanzertes U-Boot), Name (Name)
+// Units: H0GR (Ironclad Submarine), Name (Name)
 {
 Gepanzertes U-Boot
 }
@@ -72801,19 +72846,19 @@ U-Boot
 }
 
 STRING 29170
-// Units: H0GR (Gepanzertes U-Boot), Awakentip (Tooltip - Awaken)
+// Units: H0GR (Ironclad Submarine), Awakentip (Tooltip - Awaken)
 {
 Revive Gepanzertes U-Boot
 }
 
 STRING 29171
-// Units: H0GR (Gepanzertes U-Boot), Revivetip (Tooltip - Revive)
+// Units: H0GR (Ironclad Submarine), Revivetip (Tooltip - Revive)
 {
 Revive Gepanzertes U-Boot
 }
 
 STRING 29178
-// Units: H0GR (Gepanzertes U-Boot), Tip (Tooltip - Basic)
+// Units: H0GR (Ironclad Submarine), Tip (Tooltip - Basic)
 {
 Summon Gepanzertes U-Boot
 }
@@ -72825,7 +72870,7 @@ Goblin-U-Boot
 }
 
 STRING 29181
-// Units: H0GT (Gepanzertes U-Boot), Propernames (Proper Names)
+// Units: H0GT (Ironclad Submarine), Propernames (Proper Names)
 {
 U-Boot
 }
@@ -72855,7 +72900,7 @@ Feuerstelle
 }
 
 STRING 29186
-// Units: H0GT (Gepanzertes U-Boot), Name (Name)
+// Units: H0GT (Ironclad Submarine), Name (Name)
 {
 Gepanzertes U-Boot
 }
@@ -72867,19 +72912,19 @@ Feuerstelle errichten
 }
 
 STRING 29188
-// Units: H0GT (Gepanzertes U-Boot), Awakentip (Tooltip - Awaken)
+// Units: H0GT (Ironclad Submarine), Awakentip (Tooltip - Awaken)
 {
 Revive Gepanzertes U-Boot
 }
 
 STRING 29189
-// Units: H0GT (Gepanzertes U-Boot), Revivetip (Tooltip - Revive)
+// Units: H0GT (Ironclad Submarine), Revivetip (Tooltip - Revive)
 {
 Revive Gepanzertes U-Boot
 }
 
 STRING 29190
-// Units: H0GT (Gepanzertes U-Boot), Tip (Tooltip - Basic)
+// Units: H0GT (Ironclad Submarine), Tip (Tooltip - Basic)
 {
 Summon Gepanzertes U-Boot
 }
@@ -73971,7 +74016,7 @@ Bodengestalt
 }
 
 STRING 30897
-// Abilities: A1C5 (Kokon), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Cocoon), Untip (Tooltip - Turn Off)
 {
 Fluggestalt
 }
@@ -77163,7 +77208,7 @@ E
 }
 
 STRING 32839
-// Abilities: A1I9 (Wasserkreatur), EditorSuffix (Editor Suffix)
+// Abilities: A1I9 (Water Creature), EditorSuffix (Editor Suffix)
 {
 (Zauberverstärker)
 }
@@ -77426,7 +77471,7 @@ Massenbezauberung
 }
 
 STRING 33134
-// Units: n0GR (Urpanda), Ubertip (Tooltip - Extended)
+// Units: n0GR (Primal Pandaren), Ubertip (Tooltip - Extended)
 {
 Medium melee unit. Urpanda existed long before Pandaren became civilized. They are not as peacful as their more advanced successors. Can learn the Berserk ability. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -77564,7 +77609,7 @@ Druiden-Meisterausbildung
 }
 
 STRING 33298
-// Units: h0QI (Magischer Turm), EditorSuffix (Name - Editor Suffix)
+// Units: h0QI (Magic Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
 }
@@ -84381,7 +84426,7 @@ STRING 36046
 }
 
 STRING 36047
-// Units: u020 (Gruftbestie), EditorSuffix (Name - Editor Suffix)
+// Units: u020 (Crypt Fiend), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84393,7 +84438,7 @@ Spinnen-Gift
 }
 
 STRING 36049
-// Units: u021 (Gruftdrohne), EditorSuffix (Name - Editor Suffix)
+// Units: u021 (Crypt Drone), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84405,7 +84450,7 @@ Spinnen-Gift
 }
 
 STRING 36051
-// Units: u022 (Gruftdrohnen-Kokon), EditorSuffix (Name - Editor Suffix)
+// Units: u022 (Crypt Drone Cocoon), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84765,25 +84810,25 @@ Errichtet am Zielort eine Halle der Toten.
 }
 
 STRING 36117
-// Items: I0MA (Tiny Neruben-Turm), Description (Description)
+// Items: I0MA (Tiny Nerubian Tower), Description (Description)
 {
 Errichtet einen Neruben-Turm.
 }
 
 STRING 36118
-// Items: I0MA (Tiny Neruben-Turm), Name (Name)
+// Items: I0MA (Tiny Nerubian Tower), Name (Name)
 {
 Winziger Neruben-Turm
 }
 
 STRING 36119
-// Items: I0MA (Tiny Neruben-Turm), Tip (Tooltip - Basic)
+// Items: I0MA (Tiny Nerubian Tower), Tip (Tooltip - Basic)
 {
 Winzigen Neruben-Turm erwerben
 }
 
 STRING 36120
-// Items: I0MA (Tiny Neruben-Turm), Ubertip (Tooltip - Extended)
+// Items: I0MA (Tiny Nerubian Tower), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort einen Neruben-Turm.
 }
@@ -84993,7 +85038,7 @@ STRING 36154
 }
 
 STRING 36155
-// Abilities: A1AG (Build Tiny Neruben-Turm), Name (Name)
+// Abilities: A1AG (Build Tiny Nerubian Tower), Name (Name)
 {
 Build Tiny Neruben-Turm
 }
@@ -85011,7 +85056,7 @@ Build Tiny Sacrificial Pit
 }
 
 STRING 36158
-// Abilities: A1AG (Build Tiny Neruben-Turm), EditorSuffix (Editor Suffix)
+// Abilities: A1AG (Build Tiny Nerubian Tower), EditorSuffix (Editor Suffix)
 {
 (Untote)
 }
@@ -85209,25 +85254,25 @@ STRING 36193
 }
 
 STRING 36194
-// Items: I0MK (Tiny Urtum des Windes), Name (Name)
+// Items: I0MK (Tiny Ancient of Wind), Name (Name)
 {
 Winziges Urtum des Windes
 }
 
 STRING 36195
-// Items: I0MK (Tiny Urtum des Windes), Tip (Tooltip - Basic)
+// Items: I0MK (Tiny Ancient of Wind), Tip (Tooltip - Basic)
 {
 Winziges Urtum des Windes erwerben
 }
 
 STRING 36196
-// Items: I0MK (Tiny Urtum des Windes), Description (Description)
+// Items: I0MK (Tiny Ancient of Wind), Description (Description)
 {
 Errichtet ein Urtum des Windes.
 }
 
 STRING 36197
-// Items: I0MK (Tiny Urtum des Windes), Ubertip (Tooltip - Extended)
+// Items: I0MK (Tiny Ancient of Wind), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort ein Urtum des Windes.
 }
@@ -85353,7 +85398,7 @@ Errichtet am Zielort einen Baum der Ewigkeit.
 }
 
 STRING 36218
-// Abilities: A1AQ (Build Tiny Urtum des Windes), Name (Name)
+// Abilities: A1AQ (Build Tiny Ancient of Wind), Name (Name)
 {
 Build Tiny Urtum des Windes
 }
@@ -85371,7 +85416,7 @@ Build Tiny Ancient of Wonders
 }
 
 STRING 36221
-// Abilities: A1AQ (Build Tiny Urtum des Windes), EditorSuffix (Editor Suffix)
+// Abilities: A1AQ (Build Tiny Ancient of Wind), EditorSuffix (Editor Suffix)
 {
 (Nachtelfen)
 }
@@ -86619,25 +86664,25 @@ STRING 37109
 }
 
 STRING 37110
-// Units: u01Z (Brutgrube), Name (Name)
+// Units: u01Z (Spawning Pit), Name (Name)
 {
 Brutgrube
 }
 
 STRING 37111
-// Units: u01Z (Brutgrube), EditorSuffix (Name - Editor Suffix)
+// Units: u01Z (Spawning Pit), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber) (Kaserne)
 }
 
 STRING 37112
-// Units: u01Z (Brutgrube), Tip (Tooltip - Basic)
+// Units: u01Z (Spawning Pit), Tip (Tooltip - Basic)
 {
 Brutgrube beschwören
 }
 
 STRING 37113
-// Units: u01Z (Brutgrube), Ubertip (Tooltip - Extended)
+// Units: u01Z (Spawning Pit), Ubertip (Tooltip - Extended)
 {
 Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
 }
@@ -86649,25 +86694,25 @@ Neruber-Krieger ausbilden
 }
 
 STRING 37115
-// Units: u021 (Gruftdrohne), Name (Name)
+// Units: u021 (Crypt Drone), Name (Name)
 {
 Gruftdrohne
 }
 
 STRING 37116
-// Units: u021 (Gruftdrohne), Tip (Tooltip - Basic)
+// Units: u021 (Crypt Drone), Tip (Tooltip - Basic)
 {
 Gruftdrohne ausbilden
 }
 
 STRING 37117
-// Units: u022 (Gruftdrohnen-Kokon), Name (Name)
+// Units: u022 (Crypt Drone Cocoon), Name (Name)
 {
 Gruftdrohnen-Kokon
 }
 
 STRING 37118
-// Units: u022 (Gruftdrohnen-Kokon), Tip (Tooltip - Basic)
+// Units: u022 (Crypt Drone Cocoon), Tip (Tooltip - Basic)
 {
 Gruftdrohnen-Kokon ausbilden
 }
@@ -86787,13 +86832,13 @@ STRING 37141
 }
 
 STRING 37142
-// Abilities: A1C5 (Kokon), Tip (Tooltip - Normal)
+// Abilities: A1C5 (Cocoon), Tip (Tooltip - Normal)
 {
 Kokon
 }
 
 STRING 37143
-// Abilities: A1C5 (Kokon), Name (Name)
+// Abilities: A1C5 (Cocoon), Name (Name)
 {
 Kokon
 }
@@ -86805,37 +86850,37 @@ STRING 37144
 }
 
 STRING 37145
-// Abilities: A1C5 (Kokon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1C5 (Cocoon), Ubertip (Tooltip - Normal - Extended)
 {
 Transforms the Gruftdrohnes into a cocoon that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> hit points per second. |nThe Gruftdrohne cannot attack in this form.
 }
 
 STRING 37146
-// Abilities: A1C5 (Kokon), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Cocoon), Unubertip (Tooltip - Turn Off - Extended)
 {
 Returns the Gruftdrohne to the air.
 }
 
 STRING 37147
-// Abilities: A1C6 (Spinnlinge erzeugen), Name (Name)
+// Abilities: A1C6 (Spawn Spiderlings), Name (Name)
 {
 Spinnlinge erzeugen
 }
 
 STRING 37148
-// Abilities: A1C6 (Spinnlinge erzeugen), EditorSuffix (Editor Suffix)
+// Abilities: A1C6 (Spawn Spiderlings), EditorSuffix (Editor Suffix)
 {
  (Icon) (Neruber)
 }
 
 STRING 37149
-// Abilities: A1C6 (Spinnlinge erzeugen), Tip (Tooltip - Normal)
+// Abilities: A1C6 (Spawn Spiderlings), Tip (Tooltip - Normal)
 {
 Spinnlinge erzeugen
 }
 
 STRING 37150
-// Abilities: A1C6 (Spinnlinge erzeugen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1C6 (Spawn Spiderlings), Ubertip (Tooltip - Normal - Extended)
 {
 Summons 2 Spiderlings on death.
 }
@@ -86847,7 +86892,7 @@ STRING 37151
 }
 
 STRING 37156
-// Units: u02A (Neruben-Turm), EditorSuffix (Name - Editor Suffix)
+// Units: u02A (Nerubian Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -86907,7 +86952,7 @@ P
 }
 
 STRING 37166
-// Units: u02C (Fliegender Bomber), EditorSuffix (Name - Editor Suffix)
+// Units: u02C (Flying Bombarder), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -86925,25 +86970,25 @@ Gives specific Nerubian ground units the ability to carry items.
 }
 
 STRING 37169
-// Items: I0NI (Netzkugel), Name (Name)
+// Items: I0NI (Orb of Web), Name (Name)
 {
 Netzkugel
 }
 
 STRING 37170
-// Items: I0NI (Netzkugel), Tip (Tooltip - Basic)
+// Items: I0NI (Orb of Web), Tip (Tooltip - Basic)
 {
 Netzkugel erwerben
 }
 
 STRING 37171
-// Items: I0NI (Netzkugel), Ubertip (Tooltip - Extended)
+// Items: I0NI (Orb of Web), Ubertip (Tooltip - Extended)
 {
 Adds <A1CA,DataA1> bonus damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.
 }
 
 STRING 37172
-// Items: I0NI (Netzkugel), Description (Description)
+// Items: I0NI (Orb of Web), Description (Description)
 {
 Attacks can web enemies.
 }
@@ -86985,13 +87030,13 @@ STRING 37178
 }
 
 STRING 37179
-// Units: u02E (Burrowed Gruftbestie), EditorSuffix (Name - Editor Suffix)
+// Units: u02E (Burrowed Crypt Fiend), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
 
 STRING 37180
-// Units: u02F (Burrowed Neruben-Turm), EditorSuffix (Name - Editor Suffix)
+// Units: u02F (Burrowed Nerubian Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -87183,7 +87228,7 @@ Ein Schwein, das bestraft werden will.
 }
 
 STRING 37301
-// Abilities: A1CH (Spinnlinge erzeugen), EditorSuffix (Editor Suffix)
+// Abilities: A1CH (Spawn Spiderlings), EditorSuffix (Editor Suffix)
 {
 (Neruber) (Spinnenei)
 }
@@ -87321,19 +87366,19 @@ STRING 37327
 }
 
 STRING 37328
-// Units: u02C (Fliegender Bomber), Name (Name)
+// Units: u02C (Flying Bombarder), Name (Name)
 {
 Fliegender Bomber
 }
 
 STRING 37329
-// Units: u02C (Fliegender Bomber), Tip (Tooltip - Basic)
+// Units: u02C (Flying Bombarder), Tip (Tooltip - Basic)
 {
 Fliegender Bomber ausbilden
 }
 
 STRING 37330
-// Units: u02C (Fliegender Bomber), Ubertip (Tooltip - Extended)
+// Units: u02C (Flying Bombarder), Ubertip (Tooltip - Extended)
 {
 Slow flying attack creature with a strong ground siege attack. |n|n|cffffcc00Attacks land.|r
 }
@@ -87387,7 +87432,7 @@ Spielt Sturm, Erde und Feuer.
 }
 
 STRING 37341
-// Units: u021 (Gruftdrohne), Ubertip (Tooltip - Extended)
+// Units: u021 (Crypt Drone), Ubertip (Tooltip - Extended)
 {
 Flying attack creature. Can learn the Kokon ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -87549,7 +87594,7 @@ Neruben-Seher ausbilden
 }
 
 STRING 37370
-// Units: u02F (Burrowed Neruben-Turm), Name (Name)
+// Units: u02F (Burrowed Nerubian Tower), Name (Name)
 {
 Eingegrabener Neruben-Turm
 }
@@ -88149,13 +88194,13 @@ STRING 37480
 }
 
 STRING 37481
-// Abilities: A1A6 (Spinnlinge erzeugen), EditorSuffix (Editor Suffix)
+// Abilities: A1A6 (Spawn Spiderlings), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
 
 STRING 37482
-// Abilities: A1C5 (Kokon), EditorSuffix (Editor Suffix)
+// Abilities: A1C5 (Cocoon), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -88299,25 +88344,25 @@ Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Fliegender Bombers.
 }
 
 STRING 37506
-// Units: u02M (Burrowed Brutgrube), Name (Name)
+// Units: u02M (Burrowed Spawning Pit), Name (Name)
 {
 Eingegraben Brutgrube
 }
 
 STRING 37507
-// Units: u02M (Burrowed Brutgrube), EditorSuffix (Name - Editor Suffix)
+// Units: u02M (Burrowed Spawning Pit), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber) (Kaserne)
 }
 
 STRING 37508
-// Units: u02M (Burrowed Brutgrube), Tip (Tooltip - Basic)
+// Units: u02M (Burrowed Spawning Pit), Tip (Tooltip - Basic)
 {
 Summon Brutgrube
 }
 
 STRING 37509
-// Units: u02M (Burrowed Brutgrube), Ubertip (Tooltip - Extended)
+// Units: u02M (Burrowed Spawning Pit), Ubertip (Tooltip - Extended)
 {
 Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
 }
@@ -94917,19 +94962,19 @@ Verteidigungsgebäude. Can cast Web and has the ability Spinnlinge erzeugen. |n|
 }
 
 STRING 40511
-// Units: o063 (Frost-Schneemann), Name (Name)
+// Units: o063 (Frost Snowman), Name (Name)
 {
 Frost-Schneemann
 }
 
 STRING 40512
-// Units: o063 (Frost-Schneemann), Tip (Tooltip - Basic)
+// Units: o063 (Frost Snowman), Tip (Tooltip - Basic)
 {
 Ausbau zum Frost-Schneemann
 }
 
 STRING 40513
-// Units: o063 (Frost-Schneemann), Ubertip (Tooltip - Extended)
+// Units: o063 (Frost Snowman), Ubertip (Tooltip - Extended)
 {
 Verteidigungsgebäude which causes magic damage. Has the Rückkopplung ability. Can learn the Magic Sentry upgrade. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -94971,7 +95016,7 @@ Ein Fischerboot, das viele Fische fangen kann.
 }
 
 STRING 40520
-// Units: o063 (Frost-Schneemann), EditorSuffix (Name - Editor Suffix)
+// Units: o063 (Frost Snowman), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -95025,25 +95070,25 @@ Meeresschildkröte beschwören
 }
 
 STRING 40531
-// Abilities: A1GN (Astrale Bestien), Name (Name)
+// Abilities: A1GN (Etheral Beasts), Name (Name)
 {
 Astrale Bestien
 }
 
 STRING 40532
-// Abilities: A1GN (Astrale Bestien), EditorSuffix (Editor Suffix)
+// Abilities: A1GN (Etheral Beasts), EditorSuffix (Editor Suffix)
 {
  (Icon) (Tuskarr)
 }
 
 STRING 40533
-// Abilities: A1GN (Astrale Bestien), Tip (Tooltip - Normal)
+// Abilities: A1GN (Etheral Beasts), Tip (Tooltip - Normal)
 {
 Astrale Bestien
 }
 
 STRING 40534
-// Abilities: A1GN (Astrale Bestien), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1GN (Etheral Beasts), Ubertip (Tooltip - Normal - Extended)
 {
 Increase the attack and movement speed of Tuskarr beasts.
 }
@@ -97347,25 +97392,25 @@ Murloc-Schattenzauberer
 }
 
 STRING 41360
-// Abilities: A1I6 (Schwärmen), Tip (Tooltip - Normal)
+// Abilities: A1I6 (Swarming), Tip (Tooltip - Normal)
 {
 Schwärmen
 }
 
 STRING 41361
-// Abilities: A1I6 (Schwärmen), Name (Name)
+// Abilities: A1I6 (Swarming), Name (Name)
 {
 Schwärmen
 }
 
 STRING 41362
-// Abilities: A1I6 (Schwärmen), EditorSuffix (Editor Suffix)
+// Abilities: A1I6 (Swarming), EditorSuffix (Editor Suffix)
 {
  (Icon) (Murlocs)
 }
 
 STRING 41363
-// Abilities: A1I6 (Schwärmen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1I6 (Swarming), Ubertip (Tooltip - Normal - Extended)
 {
 Increases stats for the number of friendly Murloc warriors nearby.
 }
@@ -97401,7 +97446,7 @@ STRING 41368
 }
 
 STRING 41370
-// Buffs/Effects: B02R (Wasserkreatur), EditorName (Name (Editor Only))
+// Buffs/Effects: B02R (Water Creature), EditorName (Name (Editor Only))
 {
 Wasserkreatur
 }
@@ -97413,7 +97458,7 @@ STRING 41371
 }
 
 STRING 41372
-// Buffs/Effects: B02R (Wasserkreatur), Bufftip (Tooltip)
+// Buffs/Effects: B02R (Water Creature), Bufftip (Tooltip)
 {
 |cff00ff00Wasserkreatur|r
 }
@@ -97485,7 +97530,7 @@ Turtles will spawn Eggs after dying which will summon Hatchlings.
 }
 
 STRING 41391
-// Abilities: A1ID (Schwärmen Buff), EditorSuffix (Editor Suffix)
+// Abilities: A1ID (Swarming Buff), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -97587,7 +97632,7 @@ Decreases maximum hit points of destructables for gold and lumber.
 }
 
 STRING 41409
-// Buffs/Effects: B02T (Schwärmen), EditorName (Name (Editor Only))
+// Buffs/Effects: B02T (Swarming), EditorName (Name (Editor Only))
 {
 Schwärmen
 }
@@ -97635,7 +97680,7 @@ Flussbett Buff
 }
 
 STRING 41419
-// Abilities: A1ID (Schwärmen Buff), Name (Name)
+// Abilities: A1ID (Swarming Buff), Name (Name)
 {
 Schwärmen Buff
 }
@@ -97647,7 +97692,7 @@ This unit is a target of Flussbett; it has increased movement and attack speed i
 }
 
 STRING 41421
-// Buffs/Effects: B02T (Schwärmen), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B02T (Swarming), Buffubertip (Tooltip - Extended)
 {
 This unit is a target of Schwärmen; it has increased stats for nearby allied Murloc units.
 }
@@ -99795,7 +99840,7 @@ STRING 42341
 }
 
 STRING 42342
-// Units: n0GR (Urpanda), EditorSuffix (Name - Editor Suffix)
+// Units: n0GR (Primal Pandaren), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
 }
@@ -100473,7 +100518,7 @@ Primäres Truppen-Produktionsgebäude. Trains Honorguards, Archers and Kriegsher
 }
 
 STRING 42474
-// Units: n0GR (Urpanda), Tip (Tooltip - Basic)
+// Units: n0GR (Primal Pandaren), Tip (Tooltip - Basic)
 {
 Urpanda ausbilden
 }
@@ -101377,7 +101422,7 @@ Entfernt 1 Intelligenz. Benutzen Sie den Chat-Befehl "-int -X", um X Intelligenz
 }
 
 STRING 42906
-// Units: h0QI (Magischer Turm), Name (Name)
+// Units: h0QI (Magic Tower), Name (Name)
 {
 Magischer Turm
 }
@@ -101581,7 +101626,7 @@ Advanced Nekromantie
 }
 
 STRING 43161
-// Units: n0H7 (Beerenbüsche), Name (Name)
+// Units: n0H7 (Berry Bushes), Name (Name)
 {
 Beerenbüsche
 }
@@ -102061,13 +102106,13 @@ Ein mystischer Held, adept at summoning beasts into battle. Can learn Windlauf, 
 }
 
 STRING 43265
-// Units: e022 (Corrupted Urtum des Windes), Name (Name)
+// Units: e022 (Corrupted Ancient of Wind), Name (Name)
 {
 Verderbter Urtum des Windes
 }
 
 STRING 43266
-// Units: e022 (Corrupted Urtum des Windes), Tip (Tooltip - Basic)
+// Units: e022 (Corrupted Ancient of Wind), Tip (Tooltip - Basic)
 {
 Create Verderbter Urtum des Windes
 }
@@ -109848,7 +109893,7 @@ Increases the damage by <A1P4,DataA1> and causes area of effect damage.
 }
 
 STRING 49233
-// Units: h0QI (Magischer Turm), Tip (Tooltip - Basic)
+// Units: h0QI (Magic Tower), Tip (Tooltip - Basic)
 {
 Ausbau zum Magischer Turm
 }
@@ -113256,7 +113301,7 @@ L
 }
 
 STRING 50521
-// Buffs/Effects: B02R (Wasserkreatur), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B02R (Water Creature), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -113268,7 +113313,7 @@ STRING 50522
 }
 
 STRING 50523
-// Buffs/Effects: B02T (Schwärmen), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B02T (Swarming), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -113454,7 +113499,7 @@ STRING 50605
 }
 
 STRING 50606
-// Buffs/Effects: B02T (Schwärmen), Bufftip (Tooltip)
+// Buffs/Effects: B02T (Swarming), Bufftip (Tooltip)
 {
 |cff00ff00Schwärmen|r
 }
@@ -117060,7 +117105,7 @@ STRING 51738
 }
 
 STRING 51739
-// Units: e022 (Corrupted Urtum des Windes), EditorSuffix (Name - Editor Suffix)
+// Units: e022 (Corrupted Ancient of Wind), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
@@ -119226,43 +119271,43 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 54124
-// Units: h0WL (Gepanzertes U-Boot), Name (Name)
+// Units: h0WL (Ironclad Submarine), Name (Name)
 {
 Gepanzertes U-Boot
 }
 
 STRING 54125
-// Units: h0WL (Gepanzertes U-Boot), Tip (Tooltip - Basic)
+// Units: h0WL (Ironclad Submarine), Tip (Tooltip - Basic)
 {
 Train Gepanzertes U-Boot
 }
 
 STRING 54451
-// Units: h0WL (Gepanzertes U-Boot), Ubertip (Tooltip - Extended)
+// Units: h0WL (Ironclad Submarine), Ubertip (Tooltip - Extended)
 {
 A versatile submarine good at hiding and surprising enemies. Can cast Abtauchen which allows to cast Torpedo, Dauerhafte Unsichtbarkeit, Sonar and makes the submarine much faster. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 54452
-// Units: h0WM (Gepanzertes U-Boot), Name (Name)
+// Units: h0WM (Ironclad Submarine), Name (Name)
 {
 Gepanzertes U-Boot
 }
 
 STRING 54453
-// Units: h0WM (Gepanzertes U-Boot), Tip (Tooltip - Basic)
+// Units: h0WM (Ironclad Submarine), Tip (Tooltip - Basic)
 {
 Gepanzertes U-Boot ausbilden
 }
 
 STRING 54454
-// Units: h0WM (Gepanzertes U-Boot), Ubertip (Tooltip - Extended)
+// Units: h0WM (Ironclad Submarine), Ubertip (Tooltip - Extended)
 {
 A versatile submarine good at hiding and surprising enemies. Can cast Abtauchen which allows to cast Torpedo, Dauerhafte Unsichtbarkeit, Sonar and makes the submarine much faster. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 54455
-// Units: h0WM (Gepanzertes U-Boot), EditorSuffix (Name - Editor Suffix)
+// Units: h0WM (Ironclad Submarine), EditorSuffix (Name - Editor Suffix)
 {
 (Abtauchend) (Zwerge)
 }
@@ -119573,13 +119618,13 @@ The Banner of a fallen Draenei. Bring it to the Queen of the New Citadel to coll
 }
 
 STRING 54869
-// Items: I04Y (Draenei-Schlächter), Name (Name)
+// Items: I04Y (Draenei Slayer), Name (Name)
 {
 Draenei-Schlächter
 }
 
 STRING 54870
-// Items: I04Y (Draenei-Schlächter), Tip (Tooltip - Basic)
+// Items: I04Y (Draenei Slayer), Tip (Tooltip - Basic)
 {
 Draenei-Schlächter erwerben
 }
@@ -121523,7 +121568,7 @@ The tropical homeland of the goblins. Their capital of Undermine is located bene
 }
 
 STRING 55755
-// Units: n0NJ (Organisation für Goblin-Rennen), EditorSuffix (Name - Editor Suffix)
+// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -127144,7 +127189,7 @@ Rieseneisbär ausbilden
 }
 
 STRING 57881
-// Units: h0WL (Gepanzertes U-Boot), EditorSuffix (Name - Editor Suffix)
+// Units: h0WL (Ironclad Submarine), EditorSuffix (Name - Editor Suffix)
 {
 (Zwerge)
 }
@@ -128350,49 +128395,49 @@ Ein mystischer Held, particularly adept at cold magic. Can learn Schmetterwelle,
 }
 
 STRING 58290
-// Destructibles: B011 (Spalten), Name (Name)
+// Destructibles: B011 (Crannies), Name (Name)
 {
 Spalten
 }
 
 STRING 58291
-// Destructibles: B011 (Spalten), EditorSuffix (Editor Suffix)
+// Destructibles: B011 (Crannies), EditorSuffix (Editor Suffix)
 {
 (Sommer)
 }
 
 STRING 58292
-// Destructibles: B012 (Spalten), Name (Name)
+// Destructibles: B012 (Crannies), Name (Name)
 {
 Spalten
 }
 
 STRING 58293
-// Destructibles: B012 (Spalten), EditorSuffix (Editor Suffix)
+// Destructibles: B012 (Crannies), EditorSuffix (Editor Suffix)
 {
 (Herbst)
 }
 
 STRING 58294
-// Destructibles: B013 (Spalten), Name (Name)
+// Destructibles: B013 (Crannies), Name (Name)
 {
 Spalten
 }
 
 STRING 58295
-// Destructibles: B013 (Spalten), EditorSuffix (Editor Suffix)
+// Destructibles: B013 (Crannies), EditorSuffix (Editor Suffix)
 {
 (Winter)
 }
 
 STRING 58296
-// Destructibles: B014 (Spalten), Name (Name)
+// Destructibles: B014 (Crannies), Name (Name)
 {
 Spalten
 }
 
 STRING 58297
-// Destructibles: B014 (Spalten), EditorSuffix (Editor Suffix)
+// Destructibles: B014 (Crannies), EditorSuffix (Editor Suffix)
 {
 (Winter Snowy)
 }
@@ -128716,7 +128761,7 @@ The cup for the winner of the third place.
 }
 
 STRING 58503
-// Units: n0NJ (Organisation für Goblin-Rennen), Name (Name)
+// Units: n0NJ (Goblin Racing Organisation), Name (Name)
 {
 Organisation für Goblin-Rennen
 }
