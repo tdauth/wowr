@@ -1414,16 +1414,6 @@ StringList {
     HOSTILE_BUILDINGS_NEARBY           "Cannot be constructed with hostile buildings nearby.",
     // Computer
     MY_NAVY_WILL_ATTACK_X              "My navy will attack %1%!",
-    COMMAND_ATTACK_PLAYERS_ON          "I will attack enemy players from now on!",
-    COMMAND_ATTACK_PLAYERS_OFF         "I won't attack enemy players anymore!",
-    COMMAND_ATTACK_ON                  "I will attack from now on!",
-    COMMAND_ATTACK_OFF                 "I won't attack anymore!",
-    COMMAND_GIVE_GOLD                  "Here, take my gold!",
-    COMMAND_GIVE_LUMBER                "Here, take my lumber!",
-    COMMAND_SHIPS_ON                   "I will start building ships!",
-    COMMAND_SHIPS_OFF                  "I will stop building ships!",
-    COMMAND_DISABLED_ON                "I will do nothing (disabled)!",
-    COMMAND_DISABLED_OFF               "I will do something (enabled)!",
     // Trading Post
     ENABLED_GOLD_AUTO_EXCHANGE         "Enabled automatic gold exchange.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Disabled automatic gold exchange.",

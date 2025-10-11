@@ -3221,26 +3221,27 @@ function UpdateWorkers takes nothing returns nothing
         loop
             exitwhen (CommandsWaiting() <= 0)
             set c = GetLastCommand()
+            // GetLocalizedString does not work in common.ai.
             if (c == COMMAND_ATTACK_PLAYERS_ON) then
                 set attack_enemy_players = true
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_PLAYERS_ON"))
+                call NotifyOtherPlayers("I will attack enemy players from now on!")
             elseif (c == COMMAND_ATTACK_PLAYERS_OFF) then
                 set attack_enemy_players = false
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_PLAYERS_OFF"))
+                call NotifyOtherPlayers("I won't attack enemy players anymore!")
             elseif (c == COMMAND_ATTACK_ON) then
                 set attacks_disabled = false
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_ON"))
+                call NotifyOtherPlayers("I will attack from now on!")
             elseif (c == COMMAND_ATTACK_OFF) then
                 set attacks_disabled = true
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_ATTACK_OFF"))
+                call NotifyOtherPlayers("I won't attack anymore!")
             elseif (c == COMMAND_GIVE_GOLD) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_GOLD) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_GOLD, 0)
-                call NotifySpecificPlayer(GetLastData(), GetLocalizedString("COMMAND_GIVE_GOLD"))
+                call NotifySpecificPlayer(GetLastData(), "Here, take my gold!")
             elseif (c == COMMAND_GIVE_LUMBER) then
                 call SetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(GetLastData()), PLAYER_STATE_RESOURCE_LUMBER) + GetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER))
                 call SetPlayerState(Player(GetAiPlayer()), PLAYER_STATE_RESOURCE_LUMBER, 0)
-                call NotifySpecificPlayer(GetLastData(), GetLocalizedString("COMMAND_GIVE_LUMBER"))
+                call NotifySpecificPlayer(GetLastData(), "Here, take my lumber!")
             elseif (c == COMMAND_SHIPS_ON) then
                 set buildShips = true
                 set shipyards = 1
@@ -3249,7 +3250,7 @@ function UpdateWorkers takes nothing returns nothing
                 set ships_battleship = 2
                 set ships_special1 = 2
                 set ships_special2 = 2
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_SHIPS_ON"))
+                call NotifyOtherPlayers("I will start building ships!")
             elseif (c == COMMAND_SHIPS_OFF) then
                 set buildShips = false
                 set shipyards = 0
@@ -3258,13 +3259,13 @@ function UpdateWorkers takes nothing returns nothing
                 set ships_battleship = 0
                 set ships_special1 = 0
                 set ships_special2 = 0
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_SHIPS_OFF"))
+                call NotifyOtherPlayers("I will stop building ships!")
             elseif (c == COMMAND_DISABLED_ON) then
                 set disabled = true
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_DISABLED_ON"))
+                call NotifyOtherPlayers("I will do nothing (disabled)!")
             elseif (c == COMMAND_DISABLED_OFF) then
                 set disabled = false
-                call NotifyOtherPlayers(GetLocalizedString("COMMAND_DISABLED_OFF"))
+                call NotifyOtherPlayers("I will do something (enabled)!")
             elseif (c == COMMAND_EXPANSIONS) then
                 set expansions = GetLastData()
                 call NotifyOtherPlayers("I will build " + I2S2(expansions) + " expansions!")
