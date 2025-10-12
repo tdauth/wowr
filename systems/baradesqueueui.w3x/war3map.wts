@@ -1,49 +1,4 @@
-﻿STRING 1
-{
-Baradé's Queue UI 1.0
-}
-
-STRING 2
-{
-1-2
-}
-
-STRING 3
-{
-Train units and heroes, construct and upgrade buildings, revive heroes and research.
-}
-
-STRING 4
-{
-Baradé
-}
-
-STRING 5
-{
-Player 1
-}
-
-STRING 6
-{
-Force 1
-}
-
-STRING 8
-{
-Player 2
-}
-
-STRING 11
-{
-Baradé's Queue UI 1.0
-}
-
-STRING 16
-{
-|cff808080Drop item on shop to sell|NDouble right click item to unstack|R
-}
-
-STRING 17
+﻿STRING 17
 // Units: h001 (Next Page), Name (Name)
 {
 Next Page
@@ -125,11 +80,6 @@ STRING 30
 // Units: n003 ( ), EditorSuffix (Name - Editor Suffix)
 {
 Advanced Tavern
-}
-
-STRING 37
-{
-- Train, research, build and upgrade to test the queue UI.
 }
 
 STRING 38
