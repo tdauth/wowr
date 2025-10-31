@@ -719,7 +719,6 @@ StringList {
     DEMIGOD_TEMPLE                     "Demigod Temple",
     THERAMORE                          "Theramore",
     NAZJATAR                           "Nazjatar",
-    NAUJATAR_DESCRIPTION               "The home of the Naga.",
     TOMB_OF_SARGERAS                   "Tomb of Sargeras",
     PRISON_OF_SARGERAS                 "Prison of Sargeras",
     ECHO_ISLES                         "Echo Isles",
