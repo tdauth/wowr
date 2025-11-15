@@ -30,10 +30,8 @@ Send me your Battle.net ID on Discord after subscribing to get it unlocked with 
 ## Play the Map
 
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
-* [Releases](https://github.com/tdauth/wowr/releases)
-* [Google Drive](https://drive.google.com/drive/u/1/folders/1ZQL_8YVCbYfe8r6juGQnfMPIfzaHLfcd)
-* [Official download on Warcraft 3: Reforged - Map database](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/World%20of%20Warcraft%20Reforged)
-* [Official download on Epic War](https://www.epicwar.com/maps/343915/)
+* [Official Releases](https://github.com/tdauth/wowr/releases)
+* [Google Drive](https://drive.google.com/drive/u/1/folders/1ZQL_8YVCbYfe8r6juGQnfMPIfzaHLfcd) contains development versions.
 * [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
 
 
@@ -79,7 +77,8 @@ Custom models with high polygon count will affect the FPS as well.
 Make sure that custom assets have a low file size and a certain quality standard before using them.
 A huge map area will also make the minimap much smaller and pretty much almost useless.
 Cliff types are restricted to only two being rendered which limits areas such as Outland using its own cliff type.
-Use the 16 different tile types wisely.
+Use the 64 different tile types wisely.
+The [Warcraft III Wishlist](https://github.com/tdauth/warcraft-iii-wishlist) lists all the required features and bug fixes for the game.
 
 ## Computer AI
 
@@ -318,7 +317,6 @@ Here is a list of some modified versions online:
 * Deolrin, ike_ike: [Human Mailbox](https://www.hiveworkshop.com/threads/human-mailbox.159694/)
 * Stefan.K: [Hero_Khadgar](https://www.hiveworkshop.com/threads/hero_khadgar.298518/)
 * loktar: [Khadgar](https://www.hiveworkshop.com/threads/khadgar.327433/)
-* xw1995327www: [Dark Portal <Azeroth>](https://www.hiveworkshop.com/threads/dark-portal-azeroth.338833/)
 * Mike: [All types castle (on standart textures)](https://www.hiveworkshop.com/threads/all-types-castle-on-standart-textures.273222/)
 * Mr. Bob: [Norse Hall](https://www.hiveworkshop.com/threads/norse-hall.127049/)
 * Rhapsodie: [Legends of Arkain - BloodStone Dwarfs](https://www.hiveworkshop.com/threads/legends-of-arkain-bloodstone-dwarfs.338535)
@@ -658,7 +656,6 @@ Here is a list of some modified versions online:
 * Kenathorn: [Pickaxe Item](https://www.hiveworkshop.com/threads/pickaxe-item.264110/)
 * Grey Knight: [DUMMY](https://www.hiveworkshop.com/threads/dummy.290070/)
 * tillinghast: [Alchemist lab](https://www.hiveworkshop.com/threads/alchemist-lab.341958/)
-* Golden-Drake: [BTNGDFlameWhip](https://www.hiveworkshop.com/threads/btngdflamewhip.259262/)
 * The Panda: [BTNFlameStorm](https://www.hiveworkshop.com/threads/btnflamestorm.307458/)
 * r.ace613: [Acolyte and Derivatives](https://www.hiveworkshop.com/threads/acolyte-and-derivatives.336072/)
 * Darky29: [BTNDragonEye](https://www.hiveworkshop.com/threads/btndragoneye.54555/)
@@ -773,7 +770,6 @@ Here is a list of some modified versions online:
 * maxor_gan: [BTNFirePit](https://www.hiveworkshop.com/threads/btnfirepit.161699/)
 * Mr. Bob: [Tavern](https://www.hiveworkshop.com/threads/tavern.134347/)
 * TESCAO: [BTNLaserBeam](https://www.hiveworkshop.com/threads/btnlaserbeam.203387/)
-* jk2pach: [ScoutTower](https://www.hiveworkshop.com/threads/scouttower.181906/)
 * Cavman: [Bull and Cow](https://www.hiveworkshop.com/threads/bull-and-cow.138728/)
 * darkdeathknight: [BTNcow](https://www.hiveworkshop.com/threads/btncow.198766/)
 * Frozen_Naga: [BTN.Galaxy](https://www.hiveworkshop.com/threads/btn-galaxy.57048/)
@@ -1018,7 +1014,6 @@ Here is a list of some modified versions online:
 * Ujimasa Hojo: [Villager (Kid) and Derivatives](https://www.hiveworkshop.com/threads/villager-kid-and-derivatives.294275/)
 * Verdun: [domer](https://www.hiveworkshop.com/threads/domer.199969/)
 * StonemaulMidget: [All Human Nations Tents_Colored](https://www.hiveworkshop.com/threads/all-human-nations-tents_colored.340717/)
-* Illidan(Evil)X: [Replaceable Flag](https://www.hiveworkshop.com/threads/replaceable-flag.278718/)
 * TheHuntress: [Horse Upgrade](https://www.hiveworkshop.com/threads/horse-upgrade.351721/)
 * General Frank: [Azure Dragon Judicator](https://www.hiveworkshop.com/threads/azure-dragon-judicator.50600/)
 * Muoteck: [BTN_AzureDragonJudicator](https://www.hiveworkshop.com/threads/btn_azuredragonjudicator.58940/)

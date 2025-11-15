@@ -117746,12 +117746,6 @@ STRING 52244
 K
 }
 
-STRING 52247
-// Destructibles: B00J (Flag), Name (Name)
-{
-Flag
-}
-
 STRING 52363
 // Units: E00V (Warden), EditorSuffix (Name - Editor Suffix)
 {
