@@ -21730,7 +21730,7 @@ Build Tiny Furbolg-Stammeszentrum
 STRING 4373
 // Abilities: A075 (Summon Young Furbolgs), Name (Name)
 {
-Summon Junger Furbolgs
+Junge Furbolgs beschwören
 }
 
 STRING 4374
@@ -25485,9 +25485,9 @@ N
 }
 
 STRING 5123
-// Items: I0HI (Dune Worm Piss), Name (Name)
+// Items: I0HI (Sandwurm-Urin), Name (Name)
 {
-Dune Worm Piss
+Sandwurm-Urin
 }
 
 STRING 5124
@@ -25625,7 +25625,7 @@ STRING 5159
 STRING 5160
 // Units: n02Q (Dark Portal), Tip (Tooltip - Basic)
 {
-Summon Dunkles Portal
+Dunkles Portal beschwören
 }
 
 STRING 5161
@@ -25701,9 +25701,9 @@ D
 }
 
 STRING 5174
-// Items: I0HF (Rat's Tail), Name (Name)
+// Items: I0HF (Rattenschwanz), Name (Name)
 {
-Rat's Tail
+Rattenschwanz
 }
 
 STRING 5175
@@ -25833,21 +25833,21 @@ Build Winziger Tempel der Meere
 }
 
 STRING 5199
-// Items: I0HF (Rat's Tail), Tip (Tooltip - Basic)
+// Items: I0HF (Rattenschwanz), Tip (Tooltip - Basic)
 {
-Purchase Rat's Tail
+Rattenschwanz erwerben
 }
 
 STRING 5200
-// Items: I0HF (Rat's Tail), Description (Description)
+// Items: I0HF (Rattenschwanz), Description (Description)
 {
-The tail of a rat.
+Der Schwanz einer Ratte.
 }
 
 STRING 5201
-// Items: I0HF (Rat's Tail), Ubertip (Tooltip - Extended)
+// Items: I0HF (Rattenschwanz), Ubertip (Tooltip - Extended)
 {
-The tail of a rat.
+Der Schwanz einer Ratte.
 }
 
 STRING 5202
@@ -25899,93 +25899,93 @@ W
 }
 
 STRING 5212
-// Items: I0HI (Dune Worm Piss), Tip (Tooltip - Basic)
+// Items: I0HI (Sandwurm-Urin), Tip (Tooltip - Basic)
 {
-Purchase Dune Worm Piss
+Sandwurm-Urin erwerben
 }
 
 STRING 5213
-// Items: I0HI (Dune Worm Piss), Description (Description)
+// Items: I0HI (Sandwurm-Urin), Description (Description)
 {
-The piss of a Dune Worm.
+Der Urin eines Sandwurms.
 }
 
 STRING 5214
-// Items: I0HI (Dune Worm Piss), Ubertip (Tooltip - Extended)
+// Items: I0HI (Sandwurm-Urin), Ubertip (Tooltip - Extended)
 {
-The piss of a Dune Worm.
+Der Urin eines Sandwurms.
 }
 
 STRING 5215
-// Items: I0I9 (Penguin Wings), Name (Name)
+// Items: I0I9 (Pinguinflügel), Name (Name)
 {
-Penguin Wings
+Pinguinflügel
 }
 
 STRING 5216
-// Items: I0I9 (Penguin Wings), Tip (Tooltip - Basic)
+// Items: I0I9 (Pinguinflügel), Tip (Tooltip - Basic)
 {
-Purchase Penguin Wings
+Pinguinflügel erwerben
 }
 
 STRING 5217
-// Items: I0I9 (Penguin Wings), Description (Description)
+// Items: I0I9 (Pinguinflügel), Description (Description)
 {
-The wings of a Penguin.
+Die Flügel eines Pinguins.
 }
 
 STRING 5218
-// Items: I0I9 (Penguin Wings), Ubertip (Tooltip - Extended)
+// Items: I0I9 (Pinguinflügel), Ubertip (Tooltip - Extended)
 {
-The wings of a Penguin.
+Die Flügel eines Pinguins.
 }
 
 STRING 5219
-// Items: I0JI (Seal Blubber), Name (Name)
+// Items: I0JI (Seehund-Fett), Name (Name)
 {
-Seal Blubber
+Seehund-Fett
 }
 
 STRING 5220
-// Items: I0JI (Seal Blubber), Tip (Tooltip - Basic)
+// Items: I0JI (Seehund-Fett), Tip (Tooltip - Basic)
 {
-Purchase Seal Blubber
+Seehund-Fett erwerben
 }
 
 STRING 5221
-// Items: I0JI (Seal Blubber), Description (Description)
+// Items: I0JI (Seehund-Fett), Description (Description)
 {
-The blubber of a Seal.
+Das Fett eines Seehundes.
 }
 
 STRING 5222
-// Items: I0JI (Seal Blubber), Ubertip (Tooltip - Extended)
+// Items: I0JI (Seehund-Fett), Ubertip (Tooltip - Extended)
 {
-The blubber of a Seal.
+Das Fett eines Seehundes.
 }
 
 STRING 5223
-// Items: I0JJ (Vulture Feather), Name (Name)
+// Items: I0JJ (Geier-Feder), Name (Name)
 {
-Vulture Feather
+Geier-Feder
 }
 
 STRING 5224
-// Items: I0JJ (Vulture Feather), Tip (Tooltip - Basic)
+// Items: I0JJ (Geier-Feder), Tip (Tooltip - Basic)
 {
-Purchase Vulture Feather
+Geier-Feder erwerben
 }
 
 STRING 5225
-// Items: I0JJ (Vulture Feather), Description (Description)
+// Items: I0JJ (Geier-Feder), Description (Description)
 {
-The feather of a Vulture.
+Die Feder eines Geiers.
 }
 
 STRING 5226
-// Items: I0JJ (Vulture Feather), Ubertip (Tooltip - Extended)
+// Items: I0JJ (Geier-Feder), Ubertip (Tooltip - Extended)
 {
-The feather of a Vulture.
+Die Feder eines Geiers.
 }
 
 STRING 5227
@@ -26099,25 +26099,25 @@ Die Buckel eines Kamels.
 STRING 5249
 // Items: I0K0 (Dog Skin), Name (Name)
 {
-Hund Skin
+Hundefell
 }
 
 STRING 5250
 // Items: I0K0 (Dog Skin), Tip (Tooltip - Basic)
 {
-Purchase Hund Skin
+Hundefell erwerben
 }
 
 STRING 5251
 // Items: I0K0 (Dog Skin), Description (Description)
 {
-The skin of a Hund.
+Das Fell eines Hundes.
 }
 
 STRING 5252
 // Items: I0K0 (Dog Skin), Ubertip (Tooltip - Extended)
 {
-The skin of a Hund.
+Das Fell eines Hundes.
 }
 
 STRING 5253
@@ -109913,35 +109913,35 @@ Provides Pandaren towers with the ability to detect invisible units.
 STRING 49236
 // Items: I0D8 (Tiny Scout Tower), Name (Name)
 {
-Tiny Beobachtungsturm
+Winziger Beobachtungsturm
 }
 
 STRING 49237
 // Items: I0D8 (Tiny Scout Tower), Tip (Tooltip - Basic)
 {
-Purchase Tiny Beobachtungsturm
+Winzigen Beobachtungsturm erwerben
 }
 
 STRING 49239
-// Abilities: A1TM (Bamboo Sticks), Name (Name)
+// Abilities: A1TM (Bambusstäbe), Name (Name)
 {
-Bamboo Sticks
+Bambusstäbe
 }
 
 STRING 49240
-// Abilities: A1TM (Bamboo Sticks), Tip (Tooltip - Normal)
+// Abilities: A1TM (Bambusstäbe), Tip (Tooltip - Normal)
 {
-Bamboo Sticks
+Bambusstäbe
 }
 
 STRING 49241
-// Abilities: A1TM (Bamboo Sticks), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1TM (Bambusstäbe), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the amount of damage by Holzfällers against trees by <R0FU,mod1> and the amount of lumber that Holzfällers can carry by <R0FU,mod2>.
 }
 
 STRING 49242
-// Abilities: A1TM (Bamboo Sticks), EditorSuffix (Editor Suffix)
+// Abilities: A1TM (Bambusstäbe), EditorSuffix (Editor Suffix)
 {
  (Icon) (Pandaren)
 }
@@ -109955,13 +109955,13 @@ STRING 49243
 STRING 49244
 // Upgrades: R0FU (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
 {
-Bamboo Sticks
+Bambusstäbe
 }
 
 STRING 49245
 // Upgrades: R0FU (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
 {
-Research Bamboo Sticks
+Bambusstäbe erforschen
 }
 
 STRING 49246
@@ -110021,13 +110021,13 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 STRING 49276
 // Items: I0HW (Firework), Description (Description)
 {
-Celebrate something.
+Etwas feiern.
 }
 
 STRING 49277
 // Items: I0HW (Firework), Ubertip (Tooltip - Extended)
 {
-Celebrate something.
+Etwas feiern.
 }
 
 STRING 49279
@@ -122836,7 +122836,7 @@ Bringt die getragenen Rohstoffe zum nächstgelegenen Gebäude zurück.
 STRING 56241
 // Abilities: A21J (Harvest), EditorSuffix (Editor Suffix)
 {
-(Bohrroboters) (Gold)
+(Bohrroboter) (Gold)
 }
 
 STRING 56242
