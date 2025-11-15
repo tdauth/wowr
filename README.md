@@ -557,7 +557,6 @@ Here is a list of some modified versions online:
 * Blood Raven: [Bronze Set](https://www.hiveworkshop.com/threads/bronze-set.273293/)
 * San: [Pick Lock](https://www.hiveworkshop.com/threads/pick-lock.295820/)
 * Blizzard Entertainment: [BTNAbility_Warrior_Disarm](https://www.hiveworkshop.com/threads/btnability_warrior_disarm.55457/)
-* Kofi_Banan: [Airbase](https://www.hiveworkshop.com/threads/airbase.48703/)
 * killst4r: [Nuclear Silo2](https://www.hiveworkshop.com/threads/nuclear-silo2.47314/)
 * WILL THE ALMIGHTY: [NuclearExplosion](https://www.hiveworkshop.com/threads/nuclearexplosion.51829/)
 * mikeisman2: [BTNNuclearExplosion](https://www.hiveworkshop.com/threads/btnnuclearexplosion.200971/)
