@@ -2735,7 +2735,7 @@ globals
     // WoW Reforged
     // make constants available to triggers AND common.ai
 
-    constant string MAP_VERSION                                      = "4.5"
+    constant string MAP_VERSION                                      = "4.6"
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
     constant string CUSTOM_MAP_DATA_FOLDER                           = "%userprofile%\\Documents\\Warcraft III\\CustomMapData"
