@@ -34,7 +34,7 @@ Zurück
 STRING 6
 // Abilities: A14P (Mass Charm), Name (Name)
 {
-Mass Charm
+Massenbezauberung
 }
 
 STRING 7
@@ -25485,7 +25485,7 @@ N
 }
 
 STRING 5123
-// Items: I0HI (Sandwurm-Urin), Name (Name)
+// Items: I0HI (Dune Worm Piss), Name (Name)
 {
 Sandwurm-Urin
 }
@@ -25701,7 +25701,7 @@ D
 }
 
 STRING 5174
-// Items: I0HF (Rattenschwanz), Name (Name)
+// Items: I0HF (Rat's Tail), Name (Name)
 {
 Rattenschwanz
 }
@@ -25833,19 +25833,19 @@ Build Winziger Tempel der Meere
 }
 
 STRING 5199
-// Items: I0HF (Rattenschwanz), Tip (Tooltip - Basic)
+// Items: I0HF (Rat's Tail), Tip (Tooltip - Basic)
 {
 Rattenschwanz erwerben
 }
 
 STRING 5200
-// Items: I0HF (Rattenschwanz), Description (Description)
+// Items: I0HF (Rat's Tail), Description (Description)
 {
 Der Schwanz einer Ratte.
 }
 
 STRING 5201
-// Items: I0HF (Rattenschwanz), Ubertip (Tooltip - Extended)
+// Items: I0HF (Rat's Tail), Ubertip (Tooltip - Extended)
 {
 Der Schwanz einer Ratte.
 }
@@ -25899,91 +25899,91 @@ W
 }
 
 STRING 5212
-// Items: I0HI (Sandwurm-Urin), Tip (Tooltip - Basic)
+// Items: I0HI (Dune Worm Piss), Tip (Tooltip - Basic)
 {
 Sandwurm-Urin erwerben
 }
 
 STRING 5213
-// Items: I0HI (Sandwurm-Urin), Description (Description)
+// Items: I0HI (Dune Worm Piss), Description (Description)
 {
 Der Urin eines Sandwurms.
 }
 
 STRING 5214
-// Items: I0HI (Sandwurm-Urin), Ubertip (Tooltip - Extended)
+// Items: I0HI (Dune Worm Piss), Ubertip (Tooltip - Extended)
 {
 Der Urin eines Sandwurms.
 }
 
 STRING 5215
-// Items: I0I9 (Pinguinflügel), Name (Name)
+// Items: I0I9 (Penguin Wings), Name (Name)
 {
 Pinguinflügel
 }
 
 STRING 5216
-// Items: I0I9 (Pinguinflügel), Tip (Tooltip - Basic)
+// Items: I0I9 (Penguin Wings), Tip (Tooltip - Basic)
 {
 Pinguinflügel erwerben
 }
 
 STRING 5217
-// Items: I0I9 (Pinguinflügel), Description (Description)
+// Items: I0I9 (Penguin Wings), Description (Description)
 {
 Die Flügel eines Pinguins.
 }
 
 STRING 5218
-// Items: I0I9 (Pinguinflügel), Ubertip (Tooltip - Extended)
+// Items: I0I9 (Penguin Wings), Ubertip (Tooltip - Extended)
 {
 Die Flügel eines Pinguins.
 }
 
 STRING 5219
-// Items: I0JI (Seehund-Fett), Name (Name)
+// Items: I0JI (Seal Blubber), Name (Name)
 {
 Seehund-Fett
 }
 
 STRING 5220
-// Items: I0JI (Seehund-Fett), Tip (Tooltip - Basic)
+// Items: I0JI (Seal Blubber), Tip (Tooltip - Basic)
 {
 Seehund-Fett erwerben
 }
 
 STRING 5221
-// Items: I0JI (Seehund-Fett), Description (Description)
+// Items: I0JI (Seal Blubber), Description (Description)
 {
 Das Fett eines Seehundes.
 }
 
 STRING 5222
-// Items: I0JI (Seehund-Fett), Ubertip (Tooltip - Extended)
+// Items: I0JI (Seal Blubber), Ubertip (Tooltip - Extended)
 {
 Das Fett eines Seehundes.
 }
 
 STRING 5223
-// Items: I0JJ (Geier-Feder), Name (Name)
+// Items: I0JJ (Vulture Feather), Name (Name)
 {
 Geier-Feder
 }
 
 STRING 5224
-// Items: I0JJ (Geier-Feder), Tip (Tooltip - Basic)
+// Items: I0JJ (Vulture Feather), Tip (Tooltip - Basic)
 {
 Geier-Feder erwerben
 }
 
 STRING 5225
-// Items: I0JJ (Geier-Feder), Description (Description)
+// Items: I0JJ (Vulture Feather), Description (Description)
 {
 Die Feder eines Geiers.
 }
 
 STRING 5226
-// Items: I0JJ (Geier-Feder), Ubertip (Tooltip - Extended)
+// Items: I0JJ (Vulture Feather), Ubertip (Tooltip - Extended)
 {
 Die Feder eines Geiers.
 }
@@ -109923,25 +109923,25 @@ Winzigen Beobachtungsturm erwerben
 }
 
 STRING 49239
-// Abilities: A1TM (Bambusstäbe), Name (Name)
+// Abilities: A1TM (Bamboo Sticks), Name (Name)
 {
 Bambusstäbe
 }
 
 STRING 49240
-// Abilities: A1TM (Bambusstäbe), Tip (Tooltip - Normal)
+// Abilities: A1TM (Bamboo Sticks), Tip (Tooltip - Normal)
 {
 Bambusstäbe
 }
 
 STRING 49241
-// Abilities: A1TM (Bambusstäbe), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1TM (Bamboo Sticks), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the amount of damage by Holzfällers against trees by <R0FU,mod1> and the amount of lumber that Holzfällers can carry by <R0FU,mod2>.
 }
 
 STRING 49242
-// Abilities: A1TM (Bambusstäbe), EditorSuffix (Editor Suffix)
+// Abilities: A1TM (Bamboo Sticks), EditorSuffix (Editor Suffix)
 {
  (Icon) (Pandaren)
 }
@@ -117745,12 +117745,6 @@ STRING 52244
 // Abilities: A0J1 (Root), Hotkey (Hotkey - Normal)
 {
 K
-}
-
-STRING 52247
-// Destructibles: B00J (Flag), Name (Name)
-{
-Flag
 }
 
 STRING 52363
