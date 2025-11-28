@@ -391,7 +391,6 @@ Here is a list of some modified versions online:
 * Explobomb: [Fel Reaver](https://www.hiveworkshop.com/threads/fel-reaver.325698/)
 * Mr. Bob: [Library](https://www.hiveworkshop.com/threads/library.135790/)
 * Missing Shadowsong: [Elune Classic (Sponsored by Missing Shadowsong)](https://www.hiveworkshop.com/threads/elune-classic-sponsored-by-missing-shadowsong.351929/)
-* Alethos: [Envoy of the Goddess / Vicaress of Elune](https://www.hiveworkshop.com/threads/envoy-of-the-goddess-vicaress-of-elune.303229/)
 * Blizzard Entertainment: [BTNINV_Misc_Bag_09](https://www.hiveworkshop.com/threads/btninv_misc_bag_09.55166/)
 * Direfury: [†-Revellion-†'s Goblin Engineer](https://www.hiveworkshop.com/threads/%E2%80%A0-revellion-%E2%80%A0s-goblin-engineer.135478/)
 * Ergius: [IronOre](https://www.hiveworkshop.com/threads/ironore.90713/)
