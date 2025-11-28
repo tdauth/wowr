@@ -29560,7 +29560,7 @@ STRING 5910
 }
 
 STRING 5911
-// Units: e01D (Cloud Serpent), Hotkey (Hotkey)
+// Units: e01D (Wolkenschlange), Hotkey (Hotkey)
 {
 S
 }
@@ -57902,13 +57902,13 @@ F
 }
 
 STRING 16883
-// Units: h0JL (Cloud Serpent Mount), Tip (Tooltip - Basic)
+// Units: h0JL (Wolkenschlange Mount), Tip (Tooltip - Basic)
 {
 Wolkenschlangen-Reittier
 }
 
 STRING 16884
-// Units: h0JL (Cloud Serpent Mount), Name (Name)
+// Units: h0JL (Wolkenschlange Mount), Name (Name)
 {
 Wolkenschlangen-Reittier
 }
@@ -76656,7 +76656,7 @@ STRING 32624
 }
 
 STRING 32625
-// Units: e01D (Cloud Serpent), EditorSuffix (Name - Editor Suffix)
+// Units: e01D (Wolkenschlange), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
 }
@@ -77495,7 +77495,7 @@ STRING 33216
 }
 
 STRING 33221
-// Units: e01D (Cloud Serpent), Name (Name)
+// Units: e01D (Wolkenschlange), Name (Name)
 {
 Wolkenschlange
 }
@@ -77513,7 +77513,7 @@ Randomizes the learned spells of your hero.|n|n|cffffcc00Only allowed for heroes
 }
 
 STRING 33281
-// Units: e01D (Cloud Serpent), Tip (Tooltip - Basic)
+// Units: e01D (Wolkenschlange), Tip (Tooltip - Basic)
 {
 Wolkenschlange ausbilden
 }
@@ -77665,13 +77665,13 @@ Schiff der Legion
 STRING 33403
 // Units: u01N (Legion Ship), Tip (Tooltip - Basic)
 {
-Train Schiff der Legion
+Schiff der Legion ausbilden
 }
 
 STRING 33404
 // Units: u01M (Legion Ship), Ubertip (Tooltip - Extended)
 {
-A massive air transport. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ein massiver Luftransporter. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 33405
@@ -77803,7 +77803,7 @@ STRING 33430
 STRING 33431
 // Units: u01N (Legion Ship), Ubertip (Tooltip - Extended)
 {
-A massive air transport. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ein massiver Luftransporter. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 33432
@@ -100062,7 +100062,7 @@ Riesenschildkröte ausbilden
 }
 
 STRING 42386
-// Units: e01D (Cloud Serpent), Ubertip (Tooltip - Extended)
+// Units: e01D (Wolkenschlange), Ubertip (Tooltip - Extended)
 {
 Flying attack beast. Melee attack against air units and range attack against ground units. Can cast the Lightning Shield ability. Can learn the Chain Lightning and Cloud abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
