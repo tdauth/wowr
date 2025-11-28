@@ -341,7 +341,6 @@ Here is a list of some modified versions online:
 * Ujimasa Hojo: [Arcane Observatory and Derivatives](https://www.hiveworkshop.com/threads/arcane-observatory-and-derivatives.224634/)
 * Ujimasa Hojo: [Archer (Dragonhawk Mount) and Derivatives](https://www.hiveworkshop.com/threads/archer-dragonhawk-mount-and-derivatives.307950/)
 * Jampacked11: [Random Basic](https://www.hiveworkshop.com/threads/random-basic.329922/)
-* Lockheart: [Rank 0-5](https://www.hiveworkshop.com/threads/rank-0-5.295070/)
 * bakr: [Kultiras Buildings](https://www.hiveworkshop.com/threads/kultiras-buildings.328594/)
 * Asssssvi: [Cannoneer Team Kul-Tiras HD/Age of Colonization](https://www.hiveworkshop.com/threads/cannoneer-team-kul-tiras-hd-age-of-colonization.325300/)
 * Asssssvi: [Guardsman Kul-Tiras HD](https://www.hiveworkshop.com/threads/guardsman-kul-tiras-hd.322285/)
