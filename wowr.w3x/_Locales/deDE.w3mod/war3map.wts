@@ -51643,7 +51643,7 @@ Bringt die Nachricht zu Illidan.
 
 STRING 12141
 {
-Visit the Orc leader in Outland.
+Besucht den Anführer der Orcs in Fremdland.
 }
 
 STRING 12142
@@ -51658,7 +51658,7 @@ Besiegt Magtheridon in Fremdland.
 
 STRING 12144
 {
-Return Magtheridon's Heart to Illidan in Outland.
+Bringt Magtheridons Herz zu Illidan in Fremdland.
 }
 
 STRING 12146
@@ -51668,7 +51668,7 @@ Bring Illidan's Orb to Magtheridon in Outland.
 
 STRING 12147
 {
-Destroy the Demon Gate in Outland.
+Zerstört das Dämonentor in Fremdland.
 }
 
 STRING 12148
@@ -51684,7 +51684,7 @@ Restores <A05O,DataB1> mana to up to 6 nearby friendly non-mechanical units.
 
 STRING 12150
 {
-Bring the message from Velen to Illidan in Outland.
+Bringt die Nachricht von Velen zu Illidan in Fremdland.
 }
 
 STRING 12151
@@ -71241,7 +71241,7 @@ STRING 27918
 }
 
 STRING 27919
-// Units: n0FY (Burial Place), Ubertip (Tooltip - Extended)
+// Units: n0FY (Grabstätte), Ubertip (Tooltip - Extended)
 {
 Has auras with effects depending on the number of units lost to enemies. |n|n|cffffcc00Begrenzt auf 1.|r
 }
@@ -96882,7 +96882,7 @@ Heilener
 }
 
 STRING 41241
-// Units: n0FY (Burial Place), EditorSuffix (Name - Editor Suffix)
+// Units: n0FY (Grabstätte), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr) (Spezialgebäude)
 }
@@ -96894,15 +96894,15 @@ Has auras with effects depending on the number of units lost to enemies. |n|n|cf
 }
 
 STRING 41243
-// Units: n0FY (Burial Place), Tip (Tooltip - Basic)
+// Units: n0FY (Grabstätte), Tip (Tooltip - Basic)
 {
-Build Burial Place
+Build Grabstätte
 }
 
 STRING 41244
-// Units: n0FY (Burial Place), Name (Name)
+// Units: n0FY (Grabstätte), Name (Name)
 {
-Burial Place
+Grabstätte
 }
 
 STRING 41245
@@ -96944,43 +96944,43 @@ Ausbau zum Advanced Harpoons
 STRING 41251
 // Upgrades: R0CO (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Heilener Adeptenausbildung
+Medizinmann-Adeptenausbildung
 }
 
 STRING 41252
 // Upgrades: R0CO (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Heilener Doctor Meisterausbildung
+Medizinmann-Meisterausbildung
 }
 
 STRING 41253
 // Upgrades: R0CO (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Heilener Adeptenausbildung
+Medizinmann-Adeptenausbildung
 }
 
 STRING 41254
 // Upgrades: R0CO (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Heilener Meisterausbildung
+Medizinmann-Meisterausbildung
 }
 
 STRING 41255
-// Abilities: A1I5 (Burial Place), Name (Name)
+// Abilities: A1I5 (Grabstätte), Name (Name)
 {
-Burial Place
+Grabstätte
 }
 
 STRING 41256
 // Upgrades: R0CU (Burning Oil), Name (Name)
 {
-Burial Place
+Grabstätte
 }
 
 STRING 41257
 // Upgrades: R0CU (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Erlaubt Bürgern den Bau a Burial Place which has auras with effects depending on the number of units lost to enemies.
+Erlaubt Bürgern den Bau a Grabstätte which has auras with effects depending on the number of units lost to enemies.
 }
 
 STRING 41258
@@ -96990,7 +96990,7 @@ STRING 41258
 }
 
 STRING 41259
-// Abilities: A1I5 (Burial Place), EditorSuffix (Editor Suffix)
+// Abilities: A1I5 (Grabstätte), EditorSuffix (Editor Suffix)
 {
  (Icon) (Tuskarr)
 }
@@ -97154,7 +97154,7 @@ STRING 41286
 STRING 41287
 // Units: n0G8 (Sea Giant), Tip (Tooltip - Basic)
 {
-Train Meeresriese
+Meeresriesen ausbilden
 }
 
 STRING 41288
@@ -97166,7 +97166,7 @@ STRING 41288
 STRING 41290
 // Upgrades: R0CU (Burning Oil), Tip (Tooltip)
 {
-Burial Place
+Grabstätte
 }
 
 STRING 41294
@@ -97206,13 +97206,13 @@ Increases the damage, armor and hit points.
 }
 
 STRING 41300
-// Abilities: A1I5 (Burial Place), Tip (Tooltip - Normal)
+// Abilities: A1I5 (Grabstätte), Tip (Tooltip - Normal)
 {
-Burial Place - Stufe 1
+Grabstätte - Stufe 1
 }
 
 STRING 41315
-// Abilities: A1I5 (Burial Place), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1I5 (Grabstätte), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the effect of all auras. The level is increased for every Tuskarr unit killed by an enemy up to level 15.
 }
@@ -97604,7 +97604,7 @@ Flussbett
 STRING 41403
 // Upgrades: R0D0 (Submerge), Tip (Tooltip)
 {
-Research Flussbett
+Flussbett erforschen
 }
 
 STRING 41404
@@ -97646,19 +97646,19 @@ Schwärmen
 STRING 41411
 // Upgrades: R0IP (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
 {
-Keiler-Mystiker Meisterausbildung
+Keiler-Mystiker-Meisterausbildung
 }
 
 STRING 41412
 // Upgrades: R0IP (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
 {
-Keiler-Mystiker Adeptenausbildung
+Keiler-Mystiker-Adeptenausbildung
 }
 
 STRING 41415
 // Upgrades: R0D1 (Submerge), Tip (Tooltip)
 {
-Research Schwärmen
+Schwärmen erforschen
 }
 
 STRING 41416
@@ -97676,13 +97676,13 @@ STRING 41417
 STRING 41418
 // Abilities: A1IC (River Bank Buff), Name (Name)
 {
-Flussbett Buff
+Flussbett Zauberverstärker
 }
 
 STRING 41419
 // Abilities: A1ID (Swarming Buff), Name (Name)
 {
-Schwärmen Buff
+Schwärmen Zauberverstärker
 }
 
 STRING 41420
@@ -97783,13 +97783,13 @@ STRING 41446
 STRING 41451
 // Abilities: A1IB (Mana Regeneration), EditorSuffix (Editor Suffix)
 {
-(Neutral) (Mechanical Helden)
+(Neutral) (Mechanische Helden)
 }
 
 STRING 41452
 // Abilities: A1IE (Life Regeneration Aura), EditorSuffix (Editor Suffix)
 {
- (Neutral) (Hero)
+ (Neutral) (Held)
 }
 
 STRING 41456
@@ -97993,7 +97993,7 @@ STRING 41559
 STRING 41563
 // Units: o06B (Ogre Slave), Name (Name)
 {
-Ogre Slave
+Oger-Sklave
 }
 
 STRING 41581
@@ -98089,13 +98089,13 @@ Ausbau zum Sonnenrüstung
 STRING 41678
 // Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Tip (Tooltip)
 {
-Ausbau zum Improved Sonnenrüstung
+Ausbau zur Verbesserten Sonnenrüstung
 }
 
 STRING 41679
 // Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Tip (Tooltip)
 {
-Ausbau zum Advanced Sonnenrüstung
+Ausbau zur Hoch entwickelten Sonnenrüstung
 }
 
 STRING 41680
@@ -98191,7 +98191,7 @@ STRING 41700
 STRING 41702
 // Units: n0GD (Skins), Ubertip (Tooltip - Extended)
 {
-Allows changing the skin of customizable heroes.
+Erlaubt den Skin von anpassbaren Helden zu ändern.
 }
 
 STRING 41714
