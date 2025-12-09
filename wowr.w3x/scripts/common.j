@@ -2768,10 +2768,10 @@ globals
     constant string URL_SUBSCRIBE                                    = "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY"
     constant string URL_DONATE                                       = "https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8"
 
-    constant string QR_CODE_SUBSCRIBE                                = "war3mapImported\\QR_Code_Subscribe.blp"
-    constant string QR_CODE_DONATE                                   = "war3mapImported\\QR_Code_Donate.blp"
-    constant string QR_CODE_DISCORD                                  = "war3mapImported\\QR_Code_Discord.blp"
-    constant string QR_CODE_WEBSITE                                  = "war3mapImported\\QR_Code_Website.blp"
+    constant string QR_CODE_SUBSCRIBE                                = "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Subscribe.blp"
+    constant string QR_CODE_DONATE                                   = "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Donate.blp"
+    constant string QR_CODE_DISCORD                                  = "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Discord.blp"
+    constant string QR_CODE_WEBSITE                                  = "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Website.blp"
 
     // limits
     constant integer MAX_ITEM_ABILITIES                              = 4

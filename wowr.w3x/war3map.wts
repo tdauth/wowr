@@ -48933,12 +48933,6 @@ STRING 11384
 House Door
 }
 
-STRING 11385
-// Doodads: D01D (Ladder), Name (Name)
-{
-Ladder
-}
-
 STRING 11386
 // Doodads: D01E (Bed), Name (Name)
 {
