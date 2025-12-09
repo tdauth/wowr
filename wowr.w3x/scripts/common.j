@@ -5318,7 +5318,7 @@ globals
 
     constant integer TUSKARR_WORKER                                  = 'o05M' // worker
     constant integer TUSKARR_FIGHTER                                 = 'n0FD' // footman
-    constant integer TUSKARR_SPEARMAN                                = 'o0FE' // rifleman
+    constant integer TUSKARR_SPEARMAN                                = 'n0FE' // rifleman
     constant integer TUSKARR_MAMMOTH_RIDER                           = 'o05T' // knight
     constant integer TUSKARR_HEALER                                  = 'n0FM' // priest
     constant integer TUSKARR_SHAMAN                                  = 'o05R' // sorceress/spellbreaker
@@ -5627,7 +5627,7 @@ globals
     constant integer FEL_ORC_GRUNT                                   = 'n0KN' // footman
     constant integer FEL_ORC_CROSSBOWMAN                             = 'o08T' // rifleman
     constant integer FEL_ORC_ELDER                                   = 'n0K2' // Shaman
-    constant integer FEL_ORC_WARLOCK                                 = 'o0K1' // Witch Doctor
+    constant integer FEL_ORC_WARLOCK                                 = 'n0K1' // Witch Doctor
     constant integer FEL_ORC_CULTIST                                 = 'n0K0' // Spirit Walker
     constant integer FEL_ORC_KODO_BEAST                              = 'n0KQ'
     constant integer FEL_ORC_RAIDER                                  = 'n0KR'
