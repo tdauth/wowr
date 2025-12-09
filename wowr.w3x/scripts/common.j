@@ -2889,7 +2889,6 @@ globals
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
 
     // Neutral Buildings
-    constant integer RAILWAY_STATION                                 = 'n0IR'
     constant integer SCEPTERS_SHOP                                   = 'n06Q'
     constant integer PROFESSION_BOOKS_SHOP                           = 'n06R'
     constant integer RANDOM_CORPSE                                   = 'n0NK'
@@ -3132,8 +3131,6 @@ globals
     constant integer NEUTRAL_CITIZEN                                 = 'n02Y'
     constant integer NEUTRAL_CITIZEN_FEMALE                          = 'n03E'
     constant integer NEUTRAL_CHILD                                   = 'n0IV'
-
-    constant integer GNOMISH_LOCOMOTIVE_TRAIN                        = 'n0IP'
 
     // Levers
     constant integer LEVER_BRIDGE                                    = 'n0HZ'

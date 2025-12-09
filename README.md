@@ -643,7 +643,6 @@ Here is a list of some modified versions online:
 * 4eNNightmare, HappyCockroach: [Herald of the Deep Mother](https://www.hiveworkshop.com/threads/herald-of-the-deep-mother.295047/)
 * Grey Knight: [Firework Update](https://www.hiveworkshop.com/threads/firework-update.274027/)
 * Ujimasa Hojo: [Mortar Team and Derivatives](https://www.hiveworkshop.com/threads/mortar-team-and-derivatives.295866/)
-* Ujimasa Hojo: [MortarTeam](https://www.hiveworkshop.com/threads/mortarteam.48059/)
 * Kenathorn: [Icons to Models Pack](https://www.hiveworkshop.com/threads/icons-to-models-pack.316803/)
 * republicola: [RingOfProtection](https://www.hiveworkshop.com/threads/ringofprotection.49489/)
 * Arak1da: [DwarfHero Female Woodcutter](https://www.hiveworkshop.com/threads/dwarfhero-female-woodcutter.305764/)

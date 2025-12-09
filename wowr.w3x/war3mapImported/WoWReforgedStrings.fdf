@@ -1037,7 +1037,6 @@ StringList {
     SETTINGS_CHEATS                    "- Cheats: %1%",
     SETTINGS_BUILDER                   "- Builder: %1%",
     SETTINGS_PORTALS                   "- Portals: %1%",
-    SETTINGS_TRAIN                     "- Train: %1%",
     // News UI
     NEWS                               "News",
     COLON_SUBSCRIBE_VIP                "Subscribe (VIP):",
