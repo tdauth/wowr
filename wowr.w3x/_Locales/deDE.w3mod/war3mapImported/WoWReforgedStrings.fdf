@@ -1037,7 +1037,6 @@ StringList {
     SETTINGS_CHEATS                    "- Cheats: %1%",
     SETTINGS_BUILDER                   "- Builder: %1%",
     SETTINGS_PORTALS                   "- Portale: %1%",
-    SETTINGS_TRAIN                     "- Zug: %1%",
     // News UI
     NEWS                               "Neuigkeiten",
     COLON_SUBSCRIBE_VIP                "Abonnieren (VIP):",
@@ -1428,7 +1427,7 @@ StringList {
     DOT_NOT_AVAILABLE                  "Nicht verfügbar.",
     // Classes
     CLASSES                            "Klassen",
-    HERO_HAS_DEFAULT_CLASS_X           "Held hat Standardklasse %1%.",
+    HERO_HAS_CLASS_X                   "Held hat Standardklasse %1%.",
     NO_MATCHING_CLASS                  "Keine passende Klasse.",
     // Arcanist
     BANISH_TOOLTIP                     "Turns a non-mechanical unit ethereal and slows its movement speed by <this,Hbn1,0,%>% for <this,adur,x> seconds. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect.|n|n|cffffcc00Increases the duration with every level.|r",
