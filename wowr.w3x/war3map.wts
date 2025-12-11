@@ -104964,11 +104964,6 @@ STRING 45879
 Summon Cenarius
 }
 
-STRING 45880
-{
-No Hardcore!
-}
-
 STRING 45881
 // Units: N03L (Murloc Sorcerer), Awakentip (Tooltip - Awaken)
 {
@@ -105794,11 +105789,6 @@ STRING 46074
 // Units: H0RW (High King of the Alliance), Propernames (Proper Names)
 {
 Anduin Wrynn
-}
-
-STRING 46076
-{
-Hardcore!
 }
 
 STRING 46111
