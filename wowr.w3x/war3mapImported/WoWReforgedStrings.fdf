@@ -714,8 +714,6 @@ StringList {
     VIP_ROOM                           "VIP Room",
     PLAYER_HOUSINGS                    "Player Housings",
     AZEROTH                            "Azeroth",
-    ALLIANCE_ISLAND                    "Alliance Island",
-    HORDE_ISLAND                       "Horde Island",
     DEMIGOD_TEMPLE                     "Demigod Temple",
     THERAMORE                          "Theramore",
     NAZJATAR                           "Nazjatar",

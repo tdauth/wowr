@@ -18300,12 +18300,6 @@ STRING 3466
 Hero Level 45
 }
 
-STRING 3467
-// Units: n03I (Team Protection Tower), Name (Name)
-{
-Team Protection Tower
-}
-
 STRING 3468
 // Units: O04Y (Witch Doctor), Ubertip (Tooltip - Extended)
 {
@@ -57012,11 +57006,6 @@ Use "-clear" to remove this information.
 STRING 16467
 {
 Updating alliances with Computer AI players.
-}
-
-STRING 16468
-{
-You cannot start constructing buildings on the Freelancer AI islands!
 }
 
 STRING 16469
