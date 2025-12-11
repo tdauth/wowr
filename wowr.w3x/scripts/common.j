@@ -2778,6 +2778,8 @@ globals
     constant integer MAX_HERO_ABILITIES                              = 5
     constant integer MAX_UNIT_ABILITIES                              = 30 // actually infinite but we want to stop somewhere
 
+    constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75 // for common.ai
+
     // balance
     constant integer MANA_COSTS_PER_ABILITY_LEVEL                    = 10
 
