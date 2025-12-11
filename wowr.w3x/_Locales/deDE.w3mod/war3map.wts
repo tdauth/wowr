@@ -10318,13 +10318,13 @@ Powerful Demon Hero, adept at terrorizing enemies. Can learn Donnerschlag, Schre
 STRING 1750
 // Units: O002 (Hydra Queen), Revivetip (Tooltip - Revive)
 {
-Hydren-Königin wiederbeleben
+Hydra-Königin wiederbeleben
 }
 
 STRING 1751
 // Units: O002 (Hydra Queen), Awakentip (Tooltip - Awaken)
 {
-Hydren-Königin wiederbeleben
+Hydra-Königin wiederbeleben
 }
 
 STRING 1752
