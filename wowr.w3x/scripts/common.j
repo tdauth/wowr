@@ -3067,9 +3067,6 @@ globals
     constant integer UPG_IMPROVED_AIR_TRANSPORT                      = 'R02F'
     constant integer UPG_REINFORCED_WALLS                            = 'R0FQ'
 
-    constant integer MAX_WOWR_RESEARCH_LEVEL                         = 75
-    constant integer MAX_WOWR_HERO_LEVEL                             = 75
-
     constant integer HIDEOUT                                         = 'h00J'
     constant integer FORTIFIED_HIDEOUT                               = 'h00K'
     constant integer GUARDIANS_CITADEL                               = 'h00L'

@@ -709,6 +709,12 @@ STRING 118
 Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
 }
 
+STRING 119
+// Units: h03R (Skill Menu), Name (Name)
+{
+Skill Menu
+}
+
 STRING 120
 // Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
 {
@@ -3743,6 +3749,12 @@ STRING 627
 Marketplaces
 }
 
+STRING 628
+// Units: h03R (Skill Menu), Tip (Tooltip - Basic)
+{
+Purchase Skill Menu
+}
+
 STRING 629
 // Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
@@ -3909,6 +3921,12 @@ STRING 656
 // Units: n00S (Pet Stag), Hotkey (Hotkey)
 {
 P
+}
+
+STRING 657
+// Units: h03R (Skill Menu), Ubertip (Tooltip - Extended)
+{
+Gives the unit a skill menu.
 }
 
 STRING 658
@@ -4926,12 +4944,6 @@ Monk
 STRING 835
 {
 Bosses
-}
-
-STRING 836
-// Units: u03D (Ability Bloodlust), Tip (Tooltip - Basic)
-{
-Bloodlust
 }
 
 STRING 837
@@ -24244,7 +24256,7 @@ V
 }
 
 STRING 4869
-// Units: u02S (Ability Bash), Tip (Tooltip - Basic)
+// Abilities: A0HF (Bash), Name (Name)
 {
 Bash
 }
@@ -32161,12 +32173,6 @@ STRING 6527
 W
 }
 
-STRING 6528
-// Units: u02S (Ability Bash), Name (Name)
-{
-Ability Bash
-}
-
 STRING 6529
 // Items: I0WQ (Cook Fish Menu), Hotkey (Hotkey)
 {
@@ -32252,12 +32258,6 @@ Research Cheap Evolution - [|cffffcc00Level 54|r]
 }
 
 STRING 6543
-// Units: u03B (Ability Roar), Tip (Tooltip - Basic)
-{
-Roar
-}
-
-STRING 6544
 // Upgrades: R0EL (Ensnare), Name (Name)
 {
 Roar
@@ -36048,7 +36048,7 @@ Stops all enemies in a target area from casting spells for <A04A,Dur1> seconds.
 }
 
 STRING 7666
-// Units: u01V (Ability Heal), Tip (Tooltip - Basic)
+// Abilities: A04C (Heal), Name (Name)
 {
 Heal
 }
@@ -36072,7 +36072,7 @@ STRING 7669
 }
 
 STRING 7670
-// Abilities: A04C (Heal), Name (Name)
+// Abilities: A04C (Heal), Tip (Tooltip - Normal)
 {
 Heal
 }
@@ -48365,20 +48365,14 @@ STRING 11176
 Sea Giant
 }
 
-STRING 11203
-// Units: u03Q (Ability Car Horn), Name (Name)
-{
-Ability Car Horn
-}
-
 STRING 11204
-// Units: u01V (Ability Heal), EditorSuffix (Name - Editor Suffix)
+// Units: h03R (Skill Menu), EditorSuffix (Name - Editor Suffix)
 {
 (Witch Hut)
 }
 
 STRING 11205
-// Units: u03Q (Ability Car Horn), Tip (Tooltip - Basic)
+// Abilities: A23N (Car Horn), Name (Name)
 {
 Car Horn
 }
@@ -48393,12 +48387,6 @@ STRING 11207
 // Abilities: A093 (Reanimation), Ubertip (Tooltip - Normal - Extended)
 {
 Reanimates <A093,DataA1> corpses for <A093,Dur1> seconds.
-}
-
-STRING 11208
-// Units: u03R (Ability Firebolt), Name (Name)
-{
-Ability Firebolt
 }
 
 STRING 11230
@@ -48417,18 +48405,6 @@ STRING 11236
 // Abilities: A08U (Sea Elemental), Name (Name)
 {
 Sea Elemental
-}
-
-STRING 11237
-// Units: u01W (Ability Remove All), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 11238
-// Units: u03R (Ability Firebolt), Ubertip (Tooltip - Extended)
-{
-Hurls a fiery bolt that stuns a target enemy unit.
 }
 
 STRING 11239
@@ -48467,14 +48443,8 @@ STRING 11246
 (World Tree)
 }
 
-STRING 11250
-// Units: u03R (Ability Firebolt), Tip (Tooltip - Basic)
-{
-Firebolt
-}
-
 STRING 11251
-// Abilities: A23N (Car Horn), Name (Name)
+// Abilities: A23N (Car Horn), Tip (Tooltip - Normal)
 {
 Car Horn
 }
@@ -48503,14 +48473,8 @@ STRING 11255
 Unleashes the power of the dead Cenarius and causes 1000 + number of Wisps inside the World Tree * 100 damage to every Demon hostile unit in the target area.
 }
 
-STRING 11256
-// Abilities: A23N (Car Horn), Tip (Tooltip - Normal)
-{
-Car Horn
-}
-
 STRING 11258
-// Units: u03Q (Ability Car Horn), Ubertip (Tooltip - Extended)
+// Abilities: A23N (Car Horn), Ubertip (Tooltip - Normal - Extended)
 {
 Blows the car's horn.
 }
@@ -60525,22 +60489,10 @@ STRING 18790
 P
 }
 
-STRING 18791
-// Units: u01X (Ability Mana Shield), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
 STRING 18792
 // Units: h0IY (Wizard Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
-}
-
-STRING 18793
-// Units: u02I (Ability Critical Strike), Tip (Tooltip - Basic)
-{
-Critical Strike
 }
 
 STRING 18799
@@ -60904,7 +60856,7 @@ Arcane Academy of Theramore
 }
 
 STRING 18900
-// Units: u01X (Ability Mana Shield), Tip (Tooltip - Basic)
+// Items: I042 (Mana Shield), Name (Name)
 {
 Mana Shield
 }
@@ -63635,12 +63587,6 @@ STRING 20475
 Enchanted Gold Mine
 }
 
-STRING 20476
-// Units: u02S (Ability Bash), Ubertip (Tooltip - Extended)
-{
-Gives a <ACbh,DataA1>% chance that an attack will do <ACbh,DataC1> bonus damage and stun the target for <ACbh,Dur1> seconds.
-}
-
 STRING 20477
 // Abilities: S00Q (Load Elemental Servant), Name (Name)
 {
@@ -64974,24 +64920,6 @@ STRING 21370
 Adds <A0GP,DataA1> bonus sun damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air. It also removes <A0GO,DataC1> mana from hit heroes and <A0GO,DataA1> mana from the hit units and causes <A0GO,DataE1> extra damage to summoned units.
 }
 
-STRING 21371
-// Units: u02T (Ability Blizzard), Name (Name)
-{
-Ability Blizzard
-}
-
-STRING 21372
-// Units: u01Y (Ability Dispel Magic), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 21373
-// Units: u02T (Ability Blizzard), Ubertip (Tooltip - Extended)
-{
-Calls down <ACbz,DataA1> freezing ice shard waves; each wave deals <ACbz,DataB1> damage to units in a small area.
-}
-
 STRING 21374
 // Items: I07J (Master Enchanting Formula), Ubertip (Tooltip - Extended)
 {
@@ -65149,12 +65077,6 @@ Holy Light
 }
 
 STRING 22268
-// Units: u035 (Ability Brilliance Aura), Tip (Tooltip - Basic)
-{
-Brilliance Aura
-}
-
-STRING 22269
 // Abilities: A0XK (Brilliance Aura), Name (Name)
 {
 Brilliance Aura
@@ -66452,12 +66374,6 @@ STRING 22656
 Chaos
 }
 
-STRING 22660
-// Units: u02T (Ability Blizzard), Tip (Tooltip - Basic)
-{
-Blizzard
-}
-
 STRING 22665
 // Items: I0GR (Cripple), Ubertip (Tooltip - Extended)
 {
@@ -66964,7 +66880,7 @@ House
 }
 
 STRING 23157
-// Abilities: A0HF (Bash), Name (Name)
+// Abilities: A156 (Bash), Name (Name)
 {
 Bash
 }
@@ -66976,13 +66892,13 @@ Cleaving Attack
 }
 
 STRING 23167
-// Abilities: A156 (Bash), Name (Name)
+// Upgrades: R01P (Ensnare), Name (Name)
 {
 Bash
 }
 
 STRING 23171
-// Upgrades: R01P (Ensnare), Name (Name)
+// Upgrades: R0GP (Chaos), Name (Name)
 {
 Bash
 }
@@ -68714,12 +68630,6 @@ O
 }
 
 STRING 25010
-// Units: u02H (Ability Evasion), Tip (Tooltip - Basic)
-{
-Evasion
-}
-
-STRING 25011
 // Abilities: A0XL (Evasion), Name (Name)
 {
 Evasion
@@ -68881,12 +68791,6 @@ STRING 25080
 (Revive)
 }
 
-STRING 25087
-// Items: I042 (Mana Shield), Name (Name)
-{
-Mana Shield
-}
-
 STRING 25101
 // Upgrades: R08X (Magic Sentry), effect1 (Effect 1)
 {
@@ -68986,12 +68890,6 @@ STRING 25201
 // Units: h0KR (Mortar Team), EditorSuffix (Name - Editor Suffix)
 {
 (Gnome)
-}
-
-STRING 25211
-// Units: u03C (Ability Cyclone), Tip (Tooltip - Basic)
-{
-Cyclone
 }
 
 STRING 25213
@@ -69959,12 +69857,6 @@ STRING 26473
 Rain of Fire
 }
 
-STRING 26478
-// Units: u036 (Ability Black Arrow), Tip (Tooltip - Basic)
-{
-Black Arrow
-}
-
 STRING 26481
 // Abilities: A201 (Cluster Rockets), Tip (Tooltip - Normal)
 {
@@ -69981,12 +69873,6 @@ STRING 26488
 // Upgrades: R0C9 (Control Magic), Name (Name)
 {
 Rain of Fire
-}
-
-STRING 26490
-// Abilities: A04C (Heal), Tip (Tooltip - Normal)
-{
-Heal
 }
 
 STRING 26501
@@ -76034,30 +75920,6 @@ STRING 32442
 (Goblin Tool Box)
 }
 
-STRING 32443
-// Units: u01X (Ability Mana Shield), Name (Name)
-{
-Ability Mana Shield
-}
-
-STRING 32444
-// Units: u02H (Ability Evasion), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 32445
-// Units: u01X (Ability Mana Shield), Ubertip (Tooltip - Extended)
-{
-Activates a shield that absorbs <ACmf,DataA1> damage per point of mana.
-}
-
-STRING 32449
-// Units: u01Y (Ability Dispel Magic), Name (Name)
-{
-Ability Dispel Magic
-}
-
 STRING 32452
 // Items: I0I6 (Random Item Level 1 - 2), Name (Name)
 {
@@ -77639,12 +77501,6 @@ STRING 33412
 // Abilities: A158 (Space Travel), Ubertip (Tooltip - Normal - Extended)
 {
 The ship travels through space which allows it to travel it anywhere in almost no time.
-}
-
-STRING 33413
-// Upgrades: R0GP (Chaos), Name (Name)
-{
-Bash
 }
 
 STRING 33414
@@ -85646,24 +85502,6 @@ STRING 36276
 Build Witch Hut
 }
 
-STRING 36278
-// Units: u01V (Ability Heal), Name (Name)
-{
-Ability Heal
-}
-
-STRING 36279
-// Units: u02I (Ability Critical Strike), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 36280
-// Units: u01V (Ability Heal), Ubertip (Tooltip - Extended)
-{
-Heals a target friendly non-mechanical wounded unit.
-}
-
 STRING 36285
 // Items: I0MX (Tiny Witch Hut), Name (Name)
 {
@@ -85892,30 +85730,6 @@ STRING 36325
 (Lordaeron)
 }
 
-STRING 36326
-// Units: u01W (Ability Remove All), Name (Name)
-{
-Ability Remove All
-}
-
-STRING 36327
-// Units: u02S (Ability Bash), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 36328
-// Units: u01W (Ability Remove All), Tip (Tooltip - Basic)
-{
-Remove all learned abilities
-}
-
-STRING 36329
-// Units: u01W (Ability Remove All), Ubertip (Tooltip - Extended)
-{
-Removes all abilities from the unit which have been learned from the Witch Hut.
-}
-
 STRING 36330
 // Units: h0OL (Human Fire Ship), Name (Name)
 {
@@ -86088,24 +85902,6 @@ STRING 36363
 // Upgrades: R0AT (Animal War Training), Ubertip (Tooltip - Extended)
 {
 Increases the maximum hit points of Knights, Pegasus Knights, and Gryphon Riders by <Rhan,base1>.
-}
-
-STRING 36364
-// Units: u02T (Ability Blizzard), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 36365
-// Units: u01Y (Ability Dispel Magic), Tip (Tooltip - Basic)
-{
-Dispel Magic
-}
-
-STRING 36366
-// Units: u01Y (Ability Dispel Magic), Ubertip (Tooltip - Extended)
-{
-Removes all buffs from units in a target area. |n|cffffcc00Deals <Adsm,DataB1> damage to summoned units.|r
 }
 
 STRING 36391
@@ -87876,42 +87672,6 @@ STRING 37438
 // Units: u02G (Burrowed Altar of the Spider), Tip (Tooltip - Basic)
 {
 Summon Altar of the Spider
-}
-
-STRING 37439
-// Units: u02H (Ability Evasion), Name (Name)
-{
-Ability Evasion
-}
-
-STRING 37440
-// Units: u035 (Ability Brilliance Aura), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 37441
-// Units: u02H (Ability Evasion), Ubertip (Tooltip - Extended)
-{
-Gives a <ACev,DataA1,%>% percent chance to avoid an attack.
-}
-
-STRING 37442
-// Units: u02I (Ability Critical Strike), Name (Name)
-{
-Ability Critical Strike
-}
-
-STRING 37443
-// Units: u036 (Ability Black Arrow), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 37444
-// Units: u02I (Ability Critical Strike), Ubertip (Tooltip - Extended)
-{
-Gives a <ACct,DataA1>% chance to do <ACct,DataB1> times total damage on an attack.
 }
 
 STRING 37445
@@ -106885,12 +106645,6 @@ STRING 46534
 Trains Stonemaul Ogre, Stonemaul Magi, and Kor'gall.|n|n|cffffcc00Limited to 1.|r
 }
 
-STRING 46542
-// Units: u03C (Ability Cyclone), Ubertip (Tooltip - Extended)
-{
-Tosses a target non-mechanical enemy unit into the air, rendering it unable to move, attack or cast spells, and stopping others from attacking or casting on it. |nLasts <ACcy,Dur1> seconds.
-}
-
 STRING 46545
 // Abilities: A24A (Burrow), Hotkey (Hotkey - Normal)
 {
@@ -117971,42 +117725,6 @@ STRING 53060
 Mystical Hero, particularly adept at cold magic. Can learn Rain of Fire, Life Drain, Siphon Mana and Mass Devour. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 53107
-// Units: u035 (Ability Brilliance Aura), Name (Name)
-{
-Ability Brilliance Aura
-}
-
-STRING 53108
-// Units: u03B (Ability Roar), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 53109
-// Units: u035 (Ability Brilliance Aura), Ubertip (Tooltip - Extended)
-{
-Gives additional mana regeneration to nearby friendly units of <ACba,DataA1> mana per second.
-}
-
-STRING 53110
-// Units: u036 (Ability Black Arrow), Name (Name)
-{
-Ability Black Arrow
-}
-
-STRING 53111
-// Units: u03C (Ability Cyclone), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 53112
-// Units: u036 (Ability Black Arrow), Ubertip (Tooltip - Extended)
-{
-Adds <ACbk,DataA1> bonus damage to attacks. Units killed while under the effect of Black Arrow will turn into skeletons.
-}
-
 STRING 53216
 // Units: N030 (Phoenix God), Name (Name)
 {
@@ -124396,74 +124114,8 @@ STRING 56972
 Increases sight range and makes it at night the same as at day.
 }
 
-STRING 56973
-// Units: u03B (Ability Roar), Name (Name)
-{
-Ability Roar
-}
-
-STRING 56974
-// Units: u03D (Ability Bloodlust), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 56975
-// Units: u03B (Ability Roar), Ubertip (Tooltip - Extended)
-{
-Gives nearby friendly units a <ACro,DataA1,%>% bonus to damage. |nLasts <ACro,Dur1> seconds.
-}
-
-STRING 56976
-// Units: u03C (Ability Cyclone), Name (Name)
-{
-Ability Cyclone
-}
-
-STRING 56977
-// Units: u03E (Ability Slam), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 56978
-// Units: u03D (Ability Bloodlust), Name (Name)
-{
-Ability Bloodlust
-}
-
-STRING 56979
-// Units: u03Q (Ability Car Horn), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 56980
-// Units: u03D (Ability Bloodlust), Ubertip (Tooltip - Extended)
-{
-Increases a target friendly unit's attack rate by <ACbl,DataA1,%>% and movement speed by <ACbl,DataB1,%>% for <ACbl,Dur1> seconds.
-}
-
-STRING 56981
-// Units: u03E (Ability Slam), Name (Name)
-{
-Ability Slam
-}
-
-STRING 56982
-// Units: u03R (Ability Firebolt), EditorSuffix (Name - Editor Suffix)
-{
-(Witch Hut)
-}
-
-STRING 56983
-// Units: u03E (Ability Slam), Ubertip (Tooltip - Extended)
-{
-Slams the ground, dealing <ACtc,DataA1> points of damage and slowing the movement and attack rate of nearby enemy units.
-}
-
 STRING 56987
-// Units: u03E (Ability Slam), Tip (Tooltip - Basic)
+// Upgrades: R03K (Flying Machine Bombs), Name (Name)
 {
 Slam
 }
@@ -125168,12 +124820,6 @@ STRING 57326
 // Abilities: A23N (Car Horn), EditorSuffix (Editor Suffix)
 {
 (Car Mount)
-}
-
-STRING 57329
-// Abilities: A23N (Car Horn), Ubertip (Tooltip - Normal - Extended)
-{
-Blows the car's horn.
 }
 
 STRING 57330
@@ -127579,12 +127225,6 @@ STRING 57995
 // Abilities: S00G (Chaos), EditorSuffix (Editor Suffix)
 {
 (Dwarf)
-}
-
-STRING 57996
-// Upgrades: R03K (Flying Machine Bombs), Name (Name)
-{
-Slam
 }
 
 STRING 57997
