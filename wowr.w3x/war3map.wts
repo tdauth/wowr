@@ -6543,6 +6543,12 @@ STRING 1105
 Selects a random class available.
 }
 
+STRING 1106
+// Upgrades: R088 (Flak Cannons), EditorSuffix (Editor Suffix)
+{
+(Draenei)
+}
+
 STRING 1107
 // Units: N005 (Felwood's Pain), Tip (Tooltip - Basic)
 {
@@ -22850,7 +22856,7 @@ Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can 
 }
 
 STRING 4577
-// Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1Q1 (Build Tiny Refuge), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -35486,7 +35492,7 @@ Creates a Banner at a target location.
 }
 
 STRING 7572
-// Abilities: A1Q1 (Build Tiny Refuge), EditorSuffix (Editor Suffix)
+// Abilities: A1UN (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -36246,7 +36252,7 @@ Succubus Master Training
 }
 
 STRING 7699
-// Abilities: A1UN (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A1UO (Defend), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -37389,7 +37395,7 @@ Creates a Tidal Guardian at a target location.
 }
 
 STRING 7894
-// Abilities: A1UO (Defend), EditorSuffix (Editor Suffix)
+// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -37569,7 +37575,7 @@ Hire Big Infernal Juggernaut
 }
 
 STRING 7931
-// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
+// Upgrades: R0G4 (Defend), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -37608,12 +37614,6 @@ STRING 7951
 // Upgrades: R04T (Animal War Training), Tip (Tooltip)
 {
 Hero Level 60
-}
-
-STRING 7952
-// Upgrades: R0G4 (Defend), EditorSuffix (Editor Suffix)
-{
-(Eredar)
 }
 
 STRING 7953
@@ -39990,13 +39990,13 @@ STRING 8395
 }
 
 STRING 8396
-// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
+// Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8397
-// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
+// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -40169,13 +40169,13 @@ Space Travel
 }
 
 STRING 8435
-// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
+// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8436
-// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
+// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40199,7 +40199,7 @@ Mystic Adept Training
 }
 
 STRING 8440
-// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
+// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40223,7 +40223,7 @@ Mystic Master Training
 }
 
 STRING 8444
-// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40271,7 +40271,7 @@ Gives Dimensional Ships the ability Hyperspace which allows them to travel at an
 }
 
 STRING 8452
-// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
+// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -54903,7 +54903,7 @@ STRING 14627
 }
 
 STRING 14629
-// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
+// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -54969,7 +54969,7 @@ Priest
 }
 
 STRING 14657
-// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
+// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -55077,7 +55077,7 @@ STRING 14757
 }
 
 STRING 14758
-// Upgrades: R0G7 (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -111734,7 +111734,7 @@ Research Draenei Prison
 }
 
 STRING 50243
-// Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0G7 (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -118934,13 +118934,13 @@ A tiny villager who can cast Disarmament.
 }
 
 STRING 54469
-// Upgrades: R087 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 54470
-// Upgrades: R088 (Flak Cannons), EditorSuffix (Editor Suffix)
+// Upgrades: R087 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
