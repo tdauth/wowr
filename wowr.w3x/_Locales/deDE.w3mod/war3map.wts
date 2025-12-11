@@ -5656,7 +5656,7 @@ Learn Demigod´s Wrath
 STRING 956
 // Units: H0Y0 (Rogue), Revivetip (Tooltip - Revive)
 {
-Revive Rogue
+Schurken wiederbeleben
 }
 
 STRING 957
@@ -8600,7 +8600,7 @@ Kael'thas Sunstrider's pet phoenix boss hero who can cast Flammenschlag, Feueran
 STRING 1463
 // Units: o0A4 (Arcane Academy), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Kobold Erdmagiers and Kobold Mushroom Casters. |nAlso contains spell upgrades for Kobold Erdmagiers and Kobold Mushroom Casters.
+Spellcaster production building. Trains Kobold Erdmagiers and Kobold-Pilzzauberins. |nAlso contains spell upgrades for Kobold Erdmagiers and Kobold-Pilzzauberins.
 }
 
 STRING 1464
@@ -8864,19 +8864,19 @@ STRING 1506
 STRING 1507
 // Units: N0K4 (Frostlord), Awakentip (Tooltip - Awaken)
 {
-Revive Frostlord
+Frostlord wiederbeleben
 }
 
 STRING 1508
 // Units: N0K4 (Frostlord), Revivetip (Tooltip - Revive)
 {
-Revive Frostlord
+Frostlord wiederbeleben
 }
 
 STRING 1509
 // Units: N0K4 (Frostlord), Tip (Tooltip - Basic)
 {
-Summon Frostlord
+Frostlord beschwören
 }
 
 STRING 1510
@@ -8888,7 +8888,7 @@ Ahune,Alluvius,Hailstone Lieutenant,Lokholar the Ice Lord
 STRING 1511
 // Units: N00W (Earthlord), Name (Name)
 {
-Earthlord
+Erdlord
 }
 
 STRING 1512
@@ -8900,13 +8900,13 @@ A book that contains knowledge of compisong different arcane scrolls.
 STRING 1513
 // Units: N00W (Earthlord), Awakentip (Tooltip - Awaken)
 {
-Revive Earthlord
+Erdlord wiederbeleben
 }
 
 STRING 1514
 // Units: N00W (Earthlord), Revivetip (Tooltip - Revive)
 {
-Revive Earthlord
+Erdlord wiederbeleben
 }
 
 STRING 1515
@@ -10318,13 +10318,13 @@ Powerful Demon Hero, adept at terrorizing enemies. Can learn Donnerschlag, Schre
 STRING 1750
 // Units: O002 (Hydra Queen), Revivetip (Tooltip - Revive)
 {
-Revive Hydra Queen
+Hydren-Königin wiederbeleben
 }
 
 STRING 1751
 // Units: O002 (Hydra Queen), Awakentip (Tooltip - Awaken)
 {
-Revive Hydra Queen
+Hydren-Königin wiederbeleben
 }
 
 STRING 1752
@@ -23457,15 +23457,15 @@ Initiand, Adept, Meister
 }
 
 STRING 4727
-// Units: n0AJ (Kobold Mushroom Caster), EditorSuffix (Name - Editor Suffix)
+// Units: n0AJ (Kobold-Pilzzauberin), EditorSuffix (Name - Editor Suffix)
 {
 (Kobolde) (Zauberin)
 }
 
 STRING 4728
-// Units: n0AJ (Kobold Mushroom Caster), Tip (Tooltip - Basic)
+// Units: n0AJ (Kobold-Pilzzauberin), Tip (Tooltip - Basic)
 {
-Train Kobold Mushroom Caster
+Kobold-Pilzzauberin ausbilden
 }
 
 STRING 4729
@@ -23499,9 +23499,9 @@ STRING 4733
 }
 
 STRING 4734
-// Units: n0AJ (Kobold Mushroom Caster), Name (Name)
+// Units: n0AJ (Kobold-Pilzzauberin), Name (Name)
 {
-Kobold Mushroom Caster
+Kobold-Pilzzauberin
 }
 
 STRING 4735
@@ -24144,7 +24144,7 @@ Zweites Volk
 STRING 4850
 // Abilities: A0SN (Skeleton Bones), Tip (Tooltip - Normal)
 {
-Skeleton Bones
+Skelettknochen
 }
 
 STRING 4851
@@ -24264,7 +24264,7 @@ Hieb
 STRING 4870
 // Upgrades: R01P (Ensnare), Tip (Tooltip)
 {
-Research Hieb
+Hieb erforschen
 }
 
 STRING 4871
@@ -24282,13 +24282,13 @@ STRING 4872
 STRING 4873
 // Units: h017 (Lumber Camp), Name (Name)
 {
-Lumber Camp
+Holzlager
 }
 
 STRING 4874
 // Units: h017 (Lumber Camp), Tip (Tooltip - Basic)
 {
-Build Lumber Camp
+Holzlager errichten
 }
 
 STRING 4875
@@ -24318,7 +24318,7 @@ W
 STRING 4879
 // Units: n0HF (Centaur Worker), Name (Name)
 {
-Centaur Arbeiter
+Zentauren-Arbeiter
 }
 
 STRING 4880
@@ -27276,7 +27276,7 @@ Light ranged amphibious unit. Can learn Schleichendes Gift and Spawn Hydra Hatch
 STRING 5482
 // Units: Osam (Blademaster), Revivetip (Tooltip - Revive)
 {
-Revive Samuro
+Samuro wiederbeleben
 }
 
 STRING 5501
@@ -28839,7 +28839,7 @@ STRING 5783
 }
 
 STRING 5784
-// Units: n08K (Stonemaul Magi), Hotkey (Hotkey)
+// Units: n08K (Stonemaul-Magier), Hotkey (Hotkey)
 {
 M
 }
@@ -49797,7 +49797,7 @@ Boden ändern
 STRING 11695
 // Units: O0BT (Fel Kodo Beast), Name (Name)
 {
-Fel Kodo-Bestie
+Fel-Kodobestie
 }
 
 STRING 11696
@@ -49827,7 +49827,7 @@ Nächster Boden
 STRING 11700
 // Units: O0BT (Fel Kodo Beast), Awakentip (Tooltip - Awaken)
 {
-Revive Fel Kodo-Bestie
+Fel-Kodobestie wiederbeleben
 }
 
 STRING 11701
@@ -49851,13 +49851,13 @@ Vorheriger Boden
 STRING 11704
 // Units: O0BT (Fel Kodo Beast), Revivetip (Tooltip - Revive)
 {
-Revive Fel Kodo-Bestie
+Fel-Kodobestie wiederbeleben
 }
 
 STRING 11706
 // Units: O0BT (Fel Kodo Beast), Tip (Tooltip - Basic)
 {
-Summon Fel Kodo-Bestie
+Fel-Kodobestie beschwören
 }
 
 STRING 11707
@@ -50103,13 +50103,13 @@ STRING 11789
 STRING 11820
 // Units: o07D (Stonemaul Camp), Name (Name)
 {
-Stonemaul Camp
+Stonemaul-Lager
 }
 
 STRING 11821
 // Upgrades: R0EN (Burning Oil), Tip (Tooltip)
 {
-Research Stonemaul Camp
+Stonemaul-Lager erforschen
 }
 
 STRING 11822
@@ -50127,7 +50127,7 @@ STRING 11823
 STRING 11824
 // Units: h0R9 (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Greifenreiters, Adler-Ritters, and Gryphon Knights.
+Bildet Greifenreiter, Adler-Ritter und Greifenritter aus.
 }
 
 STRING 11825
@@ -50137,9 +50137,9 @@ Spellcaster production building. Trains Oger-Magier, Ogre Hexenmeisters, and Ogr
 }
 
 STRING 11826
-// Units: n08K (Stonemaul Magi), Tip (Tooltip - Basic)
+// Units: n08K (Stonemaul-Magier), Tip (Tooltip - Basic)
 {
-Train Stonemaul Magi
+Stonemaul-Magier ausbilden
 }
 
 STRING 11827
@@ -52396,13 +52396,13 @@ Several unit commands.
 STRING 12305
 // Abilities: A1X9 (Skill), Name (Name)
 {
-Skill
+Erlernen
 }
 
 STRING 12306
 // Abilities: A1X9 (Skill), Tip (Tooltip - Normal)
 {
-Skill
+Erlernen
 }
 
 STRING 12308
@@ -52414,31 +52414,31 @@ STRING 12308
 STRING 12309
 // Units: N09X (Void Lord), Name (Name)
 {
-Void Lord
+Leerenlord
 }
 
 STRING 12310
 // Units: N09X (Void Lord), Tip (Tooltip - Basic)
 {
-Summon Void Lord
+Leerenlord beschwören
 }
 
 STRING 12311
 // Units: N09X (Void Lord), Awakentip (Tooltip - Awaken)
 {
-Revive Void Lord
+Leerenlord wiederbeleben
 }
 
 STRING 12312
 // Units: N09X (Void Lord), Revivetip (Tooltip - Revive)
 {
-Revive Void Lord
+Leerenlord wiederbeleben
 }
 
 STRING 12314
 // Units: H0Q3 (Customizable Hero), Name (Name)
 {
-Customizable Hero
+Anpassbarer Held
 }
 
 STRING 12315
@@ -52456,19 +52456,19 @@ Heldenstufe 50
 STRING 12317
 // Units: H0Q3 (Customizable Hero), Awakentip (Tooltip - Awaken)
 {
-Revive Customizable Hero
+Anpassbaren Helden wiederbeleben
 }
 
 STRING 12318
 // Units: H0Q3 (Customizable Hero), Revivetip (Tooltip - Revive)
 {
-Revive Customizable Hero
+Anpassbaren Helden wiederbeleben
 }
 
 STRING 12319
 // Units: H0Q3 (Customizable Hero), Tip (Tooltip - Basic)
 {
-Summon Customizable Hero
+Anpassbaren Helden beschwören
 }
 
 STRING 12320
@@ -54906,19 +54906,19 @@ STRING 14629
 STRING 14630
 // Units: O01T (Warlock), Awakentip (Tooltip - Awaken)
 {
-Revive Ner'Zhul
+Ner'Zhul wiederbeleben
 }
 
 STRING 14631
 // Units: O01T (Warlock), Revivetip (Tooltip - Revive)
 {
-Revive Ner'Zhul
+Ner'Zhul wiederbeleben
 }
 
 STRING 14632
 // Units: O01T (Warlock), Tip (Tooltip - Basic)
 {
-Summon Ner'Zhul
+Ner'Zhul beschwören
 }
 
 STRING 14633
@@ -54930,19 +54930,19 @@ Ner'Zhul
 STRING 14634
 // Units: O01U (Lich King), Awakentip (Tooltip - Awaken)
 {
-Revive Ner'Zhul
+Ner'Zhul wiederbeleben
 }
 
 STRING 14635
 // Units: O01U (Lich King), Revivetip (Tooltip - Revive)
 {
-Revive Ner'Zhul
+Ner'Zhul wiederbeleben
 }
 
 STRING 14636
 // Units: O01U (Lich King), Tip (Tooltip - Basic)
 {
-Summon Ner'Zhul
+Ner'Zhul beschwören
 }
 
 STRING 14637
@@ -60371,7 +60371,7 @@ S
 STRING 18737
 // Units: N011 (The Defiler), Revivetip (Tooltip - Revive)
 {
-Revive Archimonde
+Archimonde wiederbeleben
 }
 
 STRING 18742
@@ -60950,7 +60950,7 @@ STRING 18925
 STRING 18931
 // Units: H0VB (Captain), Awakentip (Tooltip - Awaken)
 {
-Revive Captain
+Captain wiederbeleben
 }
 
 STRING 18935
@@ -61532,19 +61532,19 @@ Ragnaros
 STRING 19404
 // Units: N07U (Elemental Lord), Awakentip (Tooltip - Awaken)
 {
-Revive Ragnaros
+Ragnaros wiederbeleben
 }
 
 STRING 19405
 // Units: N07U (Elemental Lord), Tip (Tooltip - Basic)
 {
-Summon Ragnaros
+Ragnaros beschwören
 }
 
 STRING 19406
 // Units: N07U (Elemental Lord), Revivetip (Tooltip - Revive)
 {
-Revive Ragnaros
+Ragnaros wiederbeleben
 }
 
 STRING 19407
@@ -63304,7 +63304,7 @@ Conjures a Manaschutzzauber.
 STRING 20333
 // Units: H0UU (Fel Peon), Awakentip (Tooltip - Awaken)
 {
-Revive Fel-Peon
+Fel-Peon wiederbeleben
 }
 
 STRING 20349
@@ -64551,7 +64551,7 @@ Die Insel, von der Jaina Proudmoore stammt.
 }
 
 STRING 20808
-// Units: n0AJ (Kobold Mushroom Caster), Hotkey (Hotkey)
+// Units: n0AJ (Kobold-Pilzzauberin), Hotkey (Hotkey)
 {
 C
 }
@@ -65027,7 +65027,7 @@ Uther wiederbeleben
 STRING 22254
 // Units: H09B (Ghostly Archmage), Tip (Tooltip - Basic)
 {
-Summon Antonidas
+Antonidas beschwören
 }
 
 STRING 22255
@@ -65039,19 +65039,19 @@ STRING 22255
 STRING 22257
 // Units: N01O (The Deceiver), Tip (Tooltip - Basic)
 {
-Summon Kil'jaeden
+Kil'jaeden beschwören
 }
 
 STRING 22258
 // Units: N01O (The Deceiver), Awakentip (Tooltip - Awaken)
 {
-Revive Kil'jaeden
+Kil'jaeden wiederbeleben
 }
 
 STRING 22259
 // Units: N01O (The Deceiver), Revivetip (Tooltip - Revive)
 {
-Revive Kil'jaeden
+Kil'jaeden wiederbeleben
 }
 
 STRING 22262
@@ -65108,7 +65108,7 @@ E
 STRING 22299
 // Units: H0KV (Peasant), Revivetip (Tooltip - Revive)
 {
-Revive Arbeiter
+Arbeiter wiederbeleben
 }
 
 STRING 22301
@@ -65120,13 +65120,13 @@ STRING 22301
 STRING 22303
 // Units: h0A7 (Altar of Wind), Name (Name)
 {
-Altar of Wind
+Altar des Windes
 }
 
 STRING 22304
 // Units: h0A7 (Altar of Wind), Tip (Tooltip - Basic)
 {
-Build Altar of Wind
+Altar des Windes errichten
 }
 
 STRING 22305
@@ -65180,7 +65180,7 @@ Build Freiberufler-Laden
 STRING 22313
 // Units: h0AA (Sage), Name (Name)
 {
-Sage
+Weiser
 }
 
 STRING 22314
@@ -65192,7 +65192,7 @@ STRING 22314
 STRING 22315
 // Units: h0AA (Sage), Tip (Tooltip - Basic)
 {
-Train Sage
+Weisen ausbilden
 }
 
 STRING 22316
@@ -70576,25 +70576,25 @@ Mystischer Held, geschickt bei der Benutzung von Naturzaubern. Kann 'Wucherwurze
 STRING 27180
 // Units: Emns (Keeper of the Grove), Awakentip (Tooltip - Awaken)
 {
-Revive Malfurion
+Malfurion wiederbeleben
 }
 
 STRING 27181
 // Units: Emns (Keeper of the Grove), Revivetip (Tooltip - Revive)
 {
-Revive Malfurion
+Malfurion wiederbeleben
 }
 
 STRING 27182
 // Units: Hddt (Master Swordsman), Awakentip (Tooltip - Awaken)
 {
-Revive Thalorien Dawnseeker
+Thalorien Dawnseeker wiederbeleben
 }
 
 STRING 27183
 // Units: Hddt (Master Swordsman), Revivetip (Tooltip - Revive)
 {
-Revive Thalorien Dawnseeker
+Thalorien Dawnseeker wiederbeleben
 }
 
 STRING 27184
@@ -70714,7 +70714,7 @@ Zauberbuch
 STRING 27455
 // Items: I0FJ (Spell Book), Tip (Tooltip - Basic)
 {
-Purchase Zauberbuch
+Zauberbuch erwerben
 }
 
 STRING 27456
@@ -70948,7 +70948,7 @@ Further increases the amount of gold that Kobold-Ingenieurs can carry by 1.
 STRING 27898
 // Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
 {
-Improved Bergbau
+Verbesserter Bergbau
 }
 
 STRING 27900
@@ -70960,7 +70960,7 @@ Verlernen
 STRING 27901
 // Abilities: A0X5 (Improved Mining), Tip (Tooltip - Normal)
 {
-Advanced Bergbau
+Hoch entwickelter Bergbau
 }
 
 STRING 27902
@@ -70972,13 +70972,13 @@ Powerful Hexenmeister working under the tutelage of Kil'jaeden himself. Can lear
 STRING 27903
 // Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
 {
-Improved Bergbau
+Verbesserter Bergbau
 }
 
 STRING 27904
 // Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
 {
-Advanced Bergbau
+Hoch entwickelter Bergbau
 }
 
 STRING 27907
@@ -70990,13 +70990,13 @@ STRING 27907
 STRING 27908
 // Upgrades: R0IV (Magic Sentry), Name (Name)
 {
-Gold Coins
+Goldmünzen
 }
 
 STRING 27909
 // Upgrades: R0IV (Magic Sentry), Tip (Tooltip)
 {
-Research Gold Coins
+Goldmünzen erforschen
 }
 
 STRING 27912
@@ -71014,13 +71014,13 @@ Verteidigungsgebäude. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 STRING 27915
 // Units: o0B8 (Advanced Watch Tower), Name (Name)
 {
-Erweiterter Wachturm
+Hoch entwickelter Wachturm
 }
 
 STRING 27916
 // Units: o0B8 (Advanced Watch Tower), Tip (Tooltip - Basic)
 {
-Erweiterten Wachturm errichten
+Hoch entwickelten Wachturm errichten
 }
 
 STRING 27917
@@ -71170,7 +71170,7 @@ Ein schönes Haustier.
 STRING 27962
 // Units: n09V (Pet Direhorn), Tip (Tooltip - Basic)
 {
-Train Haustier Terrorhorn
+Haustier Terrorhorn ausbilden
 }
 
 STRING 27963
@@ -71200,7 +71200,7 @@ Hütte errichten
 STRING 27967
 // Units: O04L (Spirit Walker), Awakentip (Tooltip - Awaken)
 {
-Revive Geistläufer
+Geistläufer wiederbeleben
 }
 
 STRING 27968
@@ -72010,7 +72010,7 @@ Geistläufer wiederbeleben
 STRING 28577
 // Units: H0UU (Fel Peon), Revivetip (Tooltip - Revive)
 {
-Revive Fel-Peon
+Fel-Peon wiederbeleben
 }
 
 STRING 28599
@@ -72280,7 +72280,7 @@ STRING 29015
 STRING 29016
 // Units: N0BB (Submarine Pilot), Awakentip (Tooltip - Awaken)
 {
-Revive U-Boot Pilot
+U-Boot-Pilot wiederbeleben
 }
 
 STRING 29017
@@ -72292,7 +72292,7 @@ U-Boot-Pilot beschwören
 STRING 29018
 // Units: N0BB (Submarine Pilot), Revivetip (Tooltip - Revive)
 {
-Revive U-Boot Pilot
+U-Boot-Pilot wiederbeleben
 }
 
 STRING 29019
@@ -90341,7 +90341,7 @@ Ein listiger Held, adept at quickly killing individual units and creating confus
 }
 
 STRING 38165
-// Units: n08K (Stonemaul Magi), EditorSuffix (Name - Editor Suffix)
+// Units: n08K (Stonemaul-Magier), EditorSuffix (Name - Editor Suffix)
 {
 (Oger)
 }
@@ -103635,7 +103635,7 @@ Lord of the Ogres. This powerfully built Ogre can crush lesser beasts with his b
 }
 
 STRING 44010
-// Units: n08K (Stonemaul Magi), Ubertip (Tooltip - Extended)
+// Units: n08K (Stonemaul-Magier), Ubertip (Tooltip - Extended)
 {
 Powerful spellcaster. Intelligent and decisive, these Oger-Magier support their warriors with arcane spells. Can cast Gebrüll. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Limit to 4.|r
 }
@@ -105310,7 +105310,7 @@ STRING 45979
 STRING 45980
 // Abilities: A1OV (Fly), EditorSuffix (Editor Suffix)
 {
-(Sturmwind) (Gryphon Knight)
+(Sturmwind) (Greifenritter)
 }
 
 STRING 45981
@@ -105520,13 +105520,13 @@ STRING 46020
 STRING 46021
 // Upgrades: R0EY (Animal War Training), Name (Name)
 {
-Unmount
+Absteigen
 }
 
 STRING 46022
 // Upgrades: R0EY (Animal War Training), Tip (Tooltip)
 {
-Research Unmount
+Absteigen erforschen
 }
 
 STRING 46023
@@ -105784,7 +105784,7 @@ Anduin Wrynn
 STRING 46111
 // Abilities: A1P7 (Teleport), Tip (Tooltip - Normal)
 {
-Teleport
+Teleportieren
 }
 
 STRING 46112
@@ -105796,7 +105796,7 @@ Teleports the Mage to a friendly unit.
 STRING 46113
 // Abilities: A1P8 (Blizzard), EditorSuffix (Editor Suffix)
 {
-(Sturmwind) (Mage)
+(Sturmwind) (Magier)
 }
 
 STRING 46114
@@ -105808,7 +105808,7 @@ Teleportieren
 STRING 46115
 // Abilities: A17Q (Firebolt), EditorSuffix (Editor Suffix)
 {
-(Sturmwind) (Mage)
+(Sturmwind) (Magier)
 }
 
 STRING 46116
@@ -106262,7 +106262,7 @@ Erd-Elementargeist
 
 STRING 46466
 {
-Gefangene wilde Götter
+Gefangene wilde Götter (4)
 }
 
 STRING 46467
@@ -106622,7 +106622,7 @@ STRING 46533
 STRING 46534
 // Units: o07D (Stonemaul Camp), Ubertip (Tooltip - Extended)
 {
-Trains Stonemaul Ogre, Stonemaul Magi, and Kor'gall.|n|n|cffffcc00Begrenzt auf 1.|r
+Trains Stonemaul Ogre, Stonemaul-Magier, and Kor'gall.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 46545
@@ -107591,25 +107591,25 @@ Gibt dem Spieler bei Benutzung 30 Früchte.
 }
 
 STRING 48536
-// Items: I0U4 (Sleeping Bag), Name (Name)
+// Items: I0U4 (Schlafsack), Name (Name)
 {
 Schlafsack
 }
 
 STRING 48537
-// Items: I0U4 (Sleeping Bag), Tip (Tooltip - Basic)
+// Items: I0U4 (Schlafsack), Tip (Tooltip - Basic)
 {
 Schlafsack erwerben
 }
 
 STRING 48538
-// Items: I0U4 (Sleeping Bag), Ubertip (Tooltip - Extended)
+// Items: I0U4 (Schlafsack), Ubertip (Tooltip - Extended)
 {
 Ermöglicht das Schlafen bis zu einer bestimmten Tageszeit.
 }
 
 STRING 48539
-// Items: I0U4 (Sleeping Bag), Description (Description)
+// Items: I0U4 (Schlafsack), Description (Description)
 {
 Ermöglicht das Schlafen bis zu einer bestimmten Tageszeit.
 }
@@ -107623,7 +107623,7 @@ Disassembles the crafted target item or unit back to its requirements.
 STRING 48541
 // Abilities: A1QN (Spell Book), EditorSuffix (Editor Suffix)
 {
-(Schlafing Bag)
+(Schlafsack)
 }
 
 STRING 48542
@@ -107987,21 +107987,21 @@ Setzt die Angriffsabklingzeit eines Helden einmalig zurück.
 }
 
 STRING 48628
-// Items: I0UF (Quiver Equipment), Name (Name)
+// Items: I0UF (Köcherausrüstung), Name (Name)
 {
-Quiver Equipment
+Köcherausrüstung
 }
 
 STRING 48629
-// Items: I0UF (Quiver Equipment), Tip (Tooltip - Basic)
+// Items: I0UF (Köcherausrüstung), Tip (Tooltip - Basic)
 {
-Purchase Quiver Equipment
+Köcherausrüstung erwerben
 }
 
 STRING 48630
-// Items: I0UF (Quiver Equipment), Description (Description)
+// Items: I0UF (Köcherausrüstung), Description (Description)
 {
-Increases the attack speed.
+Erhöht die Angriffsgeschwindigkeit.
 }
 
 STRING 48631
@@ -108079,7 +108079,7 @@ STRING 48642
 STRING 48643
 // Abilities: A1R5 (Item Attack Speed Bonus), EditorSuffix (Editor Suffix)
 {
-(Quiver Equipment)
+(Köcherausrüstung)
 }
 
 STRING 48644
@@ -108472,7 +108472,7 @@ Increases the armor of the Hero by 3 when worn.|n|n|cffffcc00Feet.|r
 }
 
 STRING 48955
-// Items: I0UF (Quiver Equipment), Ubertip (Tooltip - Extended)
+// Items: I0UF (Köcherausrüstung), Ubertip (Tooltip - Extended)
 {
 Increases the attack speed.|n|n|cffffcc00Right Hand.|r
 }
@@ -110373,25 +110373,25 @@ L
 }
 
 STRING 49592
-// Items: I0WK (Magic Hat), Name (Name)
+// Items: I0WK (Zaubererhut), Name (Name)
 {
-Magic Hat
+Zaubererhut
 }
 
 STRING 49593
-// Items: I0WK (Magic Hat), Tip (Tooltip - Basic)
+// Items: I0WK (Zaubererhut), Tip (Tooltip - Basic)
 {
-Purchase Magic Hat
+Zaubererhut erwerben
 }
 
 STRING 49594
-// Items: I0WK (Magic Hat), Description (Description)
+// Items: I0WK (Zaubererhut), Description (Description)
 {
 Erhöht die Rüstung um 3 and the intelligence by 3.
 }
 
 STRING 49595
-// Items: I0WK (Magic Hat), Ubertip (Tooltip - Extended)
+// Items: I0WK (Zaubererhut), Ubertip (Tooltip - Extended)
 {
 Increases the armor of the Hero by 3 and the intelligence by 3 when worn.|n|n|cffffcc00Head.|r
 }
@@ -110399,7 +110399,7 @@ Increases the armor of the Hero by 3 and the intelligence by 3 when worn.|n|n|cf
 STRING 49597
 // Abilities: A1TF (Item Armor Bonus), EditorSuffix (Editor Suffix)
 {
-(+3) (Magic Hat)
+(+3) (Zaubererhut)
 }
 
 STRING 49631
@@ -116052,7 +116052,7 @@ STRING 51560
 STRING 51561
 // Units: E02C (Dryad), Revivetip (Tooltip - Revive)
 {
-Revive Dryad
+Dryade wiederbeleben
 }
 
 STRING 51562
@@ -120423,7 +120423,7 @@ Initiand, Adept, Meister
 }
 
 STRING 55417
-// Units: n0AJ (Kobold Mushroom Caster), Casterupgradetip (Caster Upgrade Tips)
+// Units: n0AJ (Kobold-Pilzzauberin), Casterupgradetip (Caster Upgrade Tips)
 {
 - Wächterschutz,- Wächterschutz|n- Stasisfalle,- Wächterschutz|n- Stasisfalle|n- Heil-Schutzzauber
 }
@@ -124485,7 +124485,7 @@ STRING 57169
 }
 
 STRING 57170
-// Units: n0AJ (Kobold Mushroom Caster), Casterupgradename (Caster Upgrade Names)
+// Units: n0AJ (Kobold-Pilzzauberin), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -127234,7 +127234,7 @@ STRING 58000
 STRING 58003
 // Upgrades: R07R (Defend), Tip (Tooltip)
 {
-Research Verschlingen
+Verschlingen erforschen
 }
 
 STRING 58004
