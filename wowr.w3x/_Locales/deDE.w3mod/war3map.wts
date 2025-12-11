@@ -364,7 +364,7 @@ Ein listiger Held, adept at maneuvering through battles. Can learn Chain Lightni
 STRING 61
 // Abilities: A0KA (Summon Mercenary Camp), EditorSuffix (Editor Suffix)
 {
-(Druid)
+(Druide)
 }
 
 STRING 62
@@ -707,6 +707,12 @@ STRING 118
 // Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
 Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
+}
+
+STRING 119
+// Units: h03R (Skill Menu), Name (Name)
+{
+Skill Menu
 }
 
 STRING 120
@@ -1570,83 +1576,83 @@ Gnomfabrik
 STRING 263
 // Abilities: A0QF (Mass Slow), EditorSuffix (Editor Suffix)
 {
-Feuerblitz erlernen - [|cffffcc00Stufe %d|r]
+(Neutral Feindlich)
 }
 
 STRING 264
 // Units: H04K (Ghost), Name (Name)
 {
-Feuerblitz - [|cffffcc00Stufe 1|r]
+Geist
 }
 
 STRING 265
 // Units: H04K (Ghost), Propernames (Proper Names)
 {
-Feuerblitz - [|cffffcc00Stufe 2|r]
+Geist
 }
 
 STRING 266
 // Units: e01C (Druid), Name (Name)
 {
-Druid
+Druide
 }
 
 STRING 267
 // Abilities: A05N (Ghost Form), Name (Name)
 {
-Feuerblitz - [|cffffcc00Stufe 4|r]
+Geister-Gestalt
 }
 
 STRING 268
 // Abilities: A0QS (Mass Polymorph), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 5|r]
+(Neutral Feindlich)
 }
 
 STRING 269
 // Abilities: A0SZ (Open Portals), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 6|r]
+(Neutral Feindlich)
 }
 
 STRING 270
 // Abilities: A0T7 (Revive), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 7|r]
+(Neutral Feindlich)
 }
 
 STRING 271
 // Abilities: A1K9 (Drunken Haze), Tip (Tooltip - Normal)
 {
-Feuerblitz - [|cffffcc00Stufe 8|r]
+Drunken Haze
 }
 
 STRING 272
 // Abilities: A0TU (Charge), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 9|r]
+(Neutral Feindlich)
 }
 
 STRING 273
 // Abilities: A033 (Clone), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 10|r]
+(Neutral Feindlich)
 }
 
 STRING 274
 // Abilities: A0W5 (Fountain of Power), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 11|r]
+(Neutral Feindlich)
 }
 
 STRING 275
 // Abilities: A0W7 (Slide), EditorSuffix (Editor Suffix)
 {
-Feuerblitz - [|cffffcc00Stufe 12|r]
+(Neutral Feindlich)
 }
 
 STRING 276
-// Abilities: A0WC (Repair Aura), EditorSuffix (Editor Suffix)
+// Abilities: A0WC (Reparatur-Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -1654,13 +1660,13 @@ STRING 276
 STRING 277
 // Units: h0IK (Warrior), Name (Name)
 {
-Warrior
+Krieger
 }
 
 STRING 278
 // Items: I03K (Warrior), Name (Name)
 {
-Warrior
+Krieger
 }
 
 STRING 279
@@ -2764,7 +2770,7 @@ Vulkan - [|cffffcc00Stufe 3|r]
 }
 
 STRING 464
-// Abilities: A1E5 (Summon Explosive Barrel), EditorSuffix (Editor Suffix)
+// Abilities: A1E5 (Explosives Fass beschwören), EditorSuffix (Editor Suffix)
 {
 Vulkan - [|cffffcc00Stufe 4|r]
 }
@@ -3057,7 +3063,7 @@ Granis Darkhammer,Jorn the Redeemer,Sage Truthbearer,Malak the Avenger,Gavinrad 
 STRING 513
 // Units: n0OJ (Engineering Power Generator), Tip (Tooltip - Basic)
 {
-Build Baukunst-Stromgenerator
+Baukunst-Stromgenerator errichten
 }
 
 STRING 514
@@ -3135,13 +3141,13 @@ STRING 525
 STRING 526
 // Units: Uear (Death Knight), EditorSuffix (Name - Editor Suffix)
 {
- (Evil) (Boss)
+ (Böse) (Boss)
 }
 
 STRING 527
 // Units: Eevi (Demon Hunter), EditorSuffix (Name - Editor Suffix)
 {
- (Evil) (NPC) (Controlable)
+ (Böse) (NPC) (Steuerbar)
 }
 
 STRING 528
@@ -3199,9 +3205,9 @@ STRING 536
 }
 
 STRING 537
-// Abilities: A1E5 (Summon Explosive Barrel), Tip (Tooltip - Normal)
+// Abilities: A1E5 (Explosives Fass beschwören), Tip (Tooltip - Normal)
 {
-Summon Explosive Barrel
+Explosives Fass beschwören
 }
 
 STRING 538
@@ -3241,9 +3247,9 @@ STRING 543
 }
 
 STRING 544
-// Abilities: A0WC (Repair Aura), Name (Name)
+// Abilities: A0WC (Reparatur-Aura), Name (Name)
 {
-Repair Aura
+Reparatur-Aura
 }
 
 STRING 545
@@ -3743,6 +3749,12 @@ STRING 627
 Marktplätze
 }
 
+STRING 628
+// Units: h03R (Skill Menu), Tip (Tooltip - Basic)
+{
+Purchase Skill Menu
+}
+
 STRING 629
 // Abilities: A201 (Cluster Rockets), EditorSuffix (Editor Suffix)
 {
@@ -3911,6 +3923,12 @@ STRING 656
 P
 }
 
+STRING 657
+// Units: h03R (Skill Menu), Ubertip (Tooltip - Extended)
+{
+Gives the unit a skill menu.
+}
+
 STRING 658
 // Units: Hssa (High King), Hotkey (Hotkey)
 {
@@ -4038,7 +4056,7 @@ STRING 678
 STRING 679
 // Units: E00V (Warden), Tip (Tooltip - Basic)
 {
-Summon Eylon
+Eylon beschwören
 }
 
 STRING 680
@@ -4926,12 +4944,6 @@ Mönch
 STRING 835
 {
 Bosse
-}
-
-STRING 836
-// Units: u03D (Ability Bloodlust), Tip (Tooltip - Basic)
-{
-Kampfrausch
 }
 
 STRING 837
@@ -5940,7 +5952,7 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 STRING 1006
 // Items: I0KU (Wand of Drain Resources), Name (Name)
 {
-Zauberstab des Absaugens Resources
+Zauberstab des Rohstoffabsaugens
 }
 
 STRING 1007
@@ -5967,9 +5979,9 @@ STRING 1010
 }
 
 STRING 1011
-// Units: o04R (Ice Troll Hut), Ubertip (Tooltip - Extended)
+// Units: o04R (Eis-Troll-Hütte), Ubertip (Tooltip - Extended)
 {
-Trains Eis-Troll-Hohepriesters and Ice Troll Kriegsherrs. |nAlso contains upgrades for Eis-Troll-Hohepriesters and Ice Troll Kriegsherrs.
+Trains Eis-Troll-Hohepriesters and Eis-Troll-Kriegsherrs. |nAlso contains upgrades for Eis-Troll-Hohepriesters and Eis-Troll-Kriegsherrs.
 }
 
 STRING 1012
@@ -6069,9 +6081,9 @@ Tauren
 }
 
 STRING 1028
-// Units: h0KD (Artillery Tank), Name (Name)
+// Units: h0KD (Artillerie-Panzer), Name (Name)
 {
-Artillery Tank
+Artillerie-Panzer
 }
 
 STRING 1029
@@ -6112,7 +6124,7 @@ Speicher-Codes
 
 STRING 1035
 {
-AI is crafting items!
+KI stellt Gegenstände her!
 }
 
 STRING 1036
@@ -6531,6 +6543,12 @@ STRING 1105
 Wählt eine zufällige verfügbare Klasse.
 }
 
+STRING 1106
+// Upgrades: R088 (Flak Cannons), EditorSuffix (Editor Suffix)
+{
+(Draenei)
+}
+
 STRING 1107
 // Units: N005 (Felwood's Pain), Tip (Tooltip - Basic)
 {
@@ -6656,13 +6674,13 @@ Invalid profession!
 STRING 1130
 // Units: E00V (Warden), Awakentip (Tooltip - Awaken)
 {
-Revive Eylon
+Eylon wiederbeleben
 }
 
 STRING 1131
 // Units: E00V (Warden), Revivetip (Tooltip - Revive)
 {
-Revive Eylon
+Eylon wiederbeleben
 }
 
 STRING 1132
@@ -6680,7 +6698,7 @@ Novize Demolieren
 STRING 1134
 // Units: h0WJ (Shipyard), Name (Name)
 {
-Shipyard
+Hafen
 }
 
 STRING 1135
@@ -8074,25 +8092,25 @@ Gives the Hero Divine armor for <AIdv,Dur1> seconds when used.
 STRING 1375
 // Units: u00K (Undead Shipyard), Tip (Tooltip - Basic)
 {
-Build Shipyard
+Hafen errichten
 }
 
 STRING 1376
 // Units: u00U (Faceless One Shipyard), Name (Name)
 {
-Faceless One Shipyard
+Hafen der Gesichtslosen
 }
 
 STRING 1379
 // Units: h0YM (Wolf Mount), Name (Name)
 {
-Wolf Mount
+Wolfs-Reittier
 }
 
 STRING 1380
 // Units: h07H (Crow Mount), Tip (Tooltip - Basic)
 {
-Crow Mount
+Krähen-Reittier
 }
 
 STRING 1381
@@ -8503,7 +8521,7 @@ Summon Arch Lich
 }
 
 STRING 1450
-// Units: h08I (Buy Property Capital City), Ubertip (Tooltip - Extended)
+// Units: h08I (Buy Property Hauptstadt), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Lordaeron.|r|n|cffffcc00Rohstoff: Wool.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -9314,7 +9332,7 @@ Build Pylon
 STRING 1585
 // Units: o08C (Workshop), Ubertip (Tooltip - Extended)
 {
-Trains Vigilants, Belagerungsbrechers, and Dimensional Ships.
+Trains Vigilants, Belagerungsbrechers, and Dimensionsschiffs.
 }
 
 STRING 1586
@@ -18282,12 +18300,6 @@ STRING 3466
 Heldenstufe 45
 }
 
-STRING 3467
-// Units: n03I (Team Protection Tower), Name (Name)
-{
-Teamschutzturm
-}
-
 STRING 3468
 // Units: O04Y (Witch Doctor), Ubertip (Tooltip - Extended)
 {
@@ -18795,7 +18807,7 @@ This unit is under the effects of Manaregeneration; it has an increased mana reg
 STRING 3631
 // Buffs/Effects: B00D (Mana Regeneration), EditorSuffix (Editor Suffix)
 {
-(Citizen)
+(Bürger)
 }
 
 STRING 3632
@@ -18825,7 +18837,7 @@ Lebensregeneration
 STRING 3636
 // Buffs/Effects: B00E (Life Regeneration), EditorSuffix (Editor Suffix)
 {
-(Citizen)
+(Bürger)
 }
 
 STRING 3637
@@ -20593,7 +20605,7 @@ D
 }
 
 STRING 4049
-// Units: h08I (Buy Property Capital City), Hotkey (Hotkey)
+// Units: h08I (Buy Property Hauptstadt), Hotkey (Hotkey)
 {
 B
 }
@@ -22838,7 +22850,7 @@ Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. C
 }
 
 STRING 4577
-// Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1Q1 (Build Tiny Refuge), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -23289,7 +23301,7 @@ R
 }
 
 STRING 4700
-// Units: n0CP (Troll Golem), Hotkey (Hotkey)
+// Units: n0CP (Troll-Golem), Hotkey (Hotkey)
 {
 G
 }
@@ -24244,7 +24256,7 @@ V
 }
 
 STRING 4869
-// Units: u02S (Ability Bash), Tip (Tooltip - Basic)
+// Abilities: A0HF (Bash), Name (Name)
 {
 Hieb
 }
@@ -28264,13 +28276,13 @@ M
 STRING 5689
 // Units: o046 (Nest), EditorSuffix (Name - Editor Suffix)
 {
-(Dragonkin) (Farm)
+(Dragonkin) (Hof)
 }
 
 STRING 5690
 // Units: o046 (Nest), Tip (Tooltip - Basic)
 {
-Build Nest
+Nest errichten
 }
 
 STRING 5691
@@ -28280,15 +28292,15 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 5692
-// Units: o047 (Quarry), Name (Name)
+// Units: o047 (Steinbruch), Name (Name)
 {
-Quarry
+Steinbruch
 }
 
 STRING 5693
-// Units: o047 (Quarry), Tip (Tooltip - Basic)
+// Units: o047 (Steinbruch), Tip (Tooltip - Basic)
 {
-Build Quarry
+Steinbruch errichten
 }
 
 STRING 5694
@@ -28330,13 +28342,13 @@ Horst
 STRING 5700
 // Units: o0AA (Roost), Tip (Tooltip - Basic)
 {
-Horst errichten
+Horst errichtenDragon Tower
 }
 
 STRING 5701
 // Units: o04B (Dragon Tower), Name (Name)
 {
-Dragon Tower
+Drachen-Turm
 }
 
 STRING 5702
@@ -28454,7 +28466,7 @@ Schwarzdrachen ausbilden
 }
 
 STRING 5721
-// Units: o047 (Quarry), EditorSuffix (Name - Editor Suffix)
+// Units: o047 (Steinbruch), EditorSuffix (Name - Editor Suffix)
 {
 (Dragonkin)
 }
@@ -32162,12 +32174,6 @@ STRING 6527
 W
 }
 
-STRING 6528
-// Units: u02S (Ability Bash), Name (Name)
-{
-Fähigkeit Hieb
-}
-
 STRING 6529
 // Items: I0WQ (Cook Fish Menu), Hotkey (Hotkey)
 {
@@ -32253,12 +32259,6 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 54|r]
 }
 
 STRING 6543
-// Units: u03B (Ability Roar), Tip (Tooltip - Basic)
-{
-Gebrüll
-}
-
-STRING 6544
 // Upgrades: R0EL (Ensnare), Name (Name)
 {
 Gebrüll
@@ -35487,7 +35487,7 @@ Errichtet am Zielort ein Banner.
 }
 
 STRING 7572
-// Abilities: A1Q1 (Build Tiny Refuge), EditorSuffix (Editor Suffix)
+// Abilities: A1UN (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -36049,7 +36049,7 @@ Hindert alle Feinde in einem Zielgebiet daran, <A04A,Dur1> Sekunden lang Zauber 
 }
 
 STRING 7666
-// Units: u01V (Ability Heal), Tip (Tooltip - Basic)
+// Abilities: A04C (Heal), Name (Name)
 {
 Heilen
 }
@@ -36073,7 +36073,7 @@ STRING 7669
 }
 
 STRING 7670
-// Abilities: A04C (Heal), Name (Name)
+// Abilities: A04C (Heal), Tip (Tooltip - Normal)
 {
 Heilen
 }
@@ -36163,7 +36163,7 @@ Gives you 100 bonus gold and 100 bonus lumber whenever any player researches any
 }
 
 STRING 7685
-// Units: h0KD (Artillery Tank), EditorSuffix (Name - Editor Suffix)
+// Units: h0KD (Artillerie-Panzer), EditorSuffix (Name - Editor Suffix)
 {
 (Gnome)
 }
@@ -36247,7 +36247,7 @@ Sukkubus-Meisterausbildung
 }
 
 STRING 7699
-// Abilities: A1UN (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A1UO (Defend), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -37390,7 +37390,7 @@ Creates a Tidal Guardian at a target location.
 }
 
 STRING 7894
-// Abilities: A1UO (Defend), EditorSuffix (Editor Suffix)
+// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -37570,7 +37570,7 @@ Hire Big Höllenbestie Juggernaut
 }
 
 STRING 7931
-// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
+// Upgrades: R0G4 (Defend), EditorSuffix (Editor Suffix)
 {
 (Eredar)
 }
@@ -37609,12 +37609,6 @@ STRING 7951
 // Upgrades: R04T (Animal War Training), Tip (Tooltip)
 {
 Heldenstufe 60
-}
-
-STRING 7952
-// Upgrades: R0G4 (Defend), EditorSuffix (Editor Suffix)
-{
-(Eredar)
 }
 
 STRING 7953
@@ -39856,13 +39850,13 @@ Draenei-Hafen errichten
 STRING 8373
 // Units: n063 (Draenei Child), Name (Name)
 {
-Draenei Child
+Draenei-Kind
 }
 
 STRING 8374
 // Units: n063 (Draenei Child), Tip (Tooltip - Basic)
 {
-Train Draenei Child
+Draenei-Kind ausbilden
 }
 
 STRING 8375
@@ -39991,13 +39985,13 @@ STRING 8395
 }
 
 STRING 8396
-// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
+// Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8397
-// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
+// Units: h01I (Dimensionsschiff), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -40052,13 +40046,13 @@ Werkstatt errichten
 
 STRING 8406
 {
-Trains Vigilants, Belagerungsbrechers, and Nether Rays.
+Bildet Vigilants, Belagerungsbrechers und Nether Rays aus.
 }
 
 STRING 8407
 // Units: e01H (Captured Kael), Name (Name)
 {
-Trains Elekk-Ritters.
+Bildet Elekk-Ritters aus.
 }
 
 STRING 8408
@@ -40128,19 +40122,19 @@ B
 }
 
 STRING 8428
-// Units: h01I (Dimensional Ship), Name (Name)
+// Units: h01I (Dimensionsschiff), Name (Name)
 {
-Dimensional Ship
+Dimensionsschiff
 }
 
 STRING 8429
-// Units: h01I (Dimensional Ship), Tip (Tooltip - Basic)
+// Units: h01I (Dimensionsschiff), Tip (Tooltip - Basic)
 {
-Train Dimensional Ship
+Dimensionsschiff ausbilden
 }
 
 STRING 8430
-// Units: h01I (Dimensional Ship), Ubertip (Tooltip - Extended)
+// Units: h01I (Dimensionsschiff), Ubertip (Tooltip - Extended)
 {
 Strong flying machin which can transport ground units. Excellent at scouting, and traveling long distances. |nCan see invisible units. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -40170,13 +40164,13 @@ Raumfahrt
 }
 
 STRING 8435
-// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
+// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8436
-// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
+// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40200,7 +40194,7 @@ Mystic Adeptenausbildung
 }
 
 STRING 8440
-// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
+// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40224,7 +40218,7 @@ Mystic Meisterausbildung
 }
 
 STRING 8444
-// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40268,11 +40262,11 @@ Raumfahrt erforschen
 STRING 8451
 // Upgrades: R088 (Flak Cannons), Ubertip (Tooltip - Extended)
 {
-Gives Dimensional Ships the ability Hyperspace which allows them to travel at any visible point on the map.
+Gives Dimensionsschiffs the ability Hyperspace which allows them to travel at any visible point on the map.
 }
 
 STRING 8452
-// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
+// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -41919,7 +41913,7 @@ STRING 8827
 }
 
 STRING 8828
-// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Reparatur-Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42418,7 +42412,7 @@ Q
 }
 
 STRING 9257
-// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
+// Abilities: A1E5 (Explosives Fass beschwören), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48147,7 +48141,7 @@ STRING 11094
 STRING 11121
 // Units: o02I (Warbeast Kraal), Ubertip (Tooltip - Extended)
 {
-Trains Batriders, Bats, Troll Golems, and Zalandari Throne of Wars. |nAlso contains the Liquid Fire and Sperrfeuer upgrades.
+Trains Batriders, Bats, Troll-Golems, and Zalandari Throne of Wars. |nAlso contains the Liquid Fire and Sperrfeuer upgrades.
 }
 
 STRING 11122
@@ -48366,20 +48360,14 @@ STRING 11176
 Meeresriese
 }
 
-STRING 11203
-// Units: u03Q (Ability Car Horn), Name (Name)
-{
-Fähigkeit Autohupe
-}
-
 STRING 11204
-// Units: u01V (Ability Heal), EditorSuffix (Name - Editor Suffix)
+// Units: h03R (Skill Menu), EditorSuffix (Name - Editor Suffix)
 {
 (Hexenhütte)
 }
 
 STRING 11205
-// Units: u03Q (Ability Car Horn), Tip (Tooltip - Basic)
+// Abilities: A23N (Car Horn), Name (Name)
 {
 Autohupe
 }
@@ -48394,12 +48382,6 @@ STRING 11207
 // Abilities: A093 (Reanimation), Ubertip (Tooltip - Normal - Extended)
 {
 Reanimates <A093,DataA1> corpses for <A093,Dur1> Sekunden lang an.
-}
-
-STRING 11208
-// Units: u03R (Ability Firebolt), Name (Name)
-{
-Ability Feuerblitz
 }
 
 STRING 11230
@@ -48418,18 +48400,6 @@ STRING 11236
 // Abilities: A08U (Sea Elemental), Name (Name)
 {
 Meeres-Elementargeist
-}
-
-STRING 11237
-// Units: u01W (Ability Remove All), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 11238
-// Units: u03R (Ability Firebolt), Ubertip (Tooltip - Extended)
-{
-Hurls a fiery bolt that stuns a target enemy unit.
 }
 
 STRING 11239
@@ -48468,14 +48438,8 @@ STRING 11246
 (Weltenbaum)
 }
 
-STRING 11250
-// Units: u03R (Ability Firebolt), Tip (Tooltip - Basic)
-{
-Feuerblitz
-}
-
 STRING 11251
-// Abilities: A23N (Car Horn), Name (Name)
+// Abilities: A23N (Car Horn), Tip (Tooltip - Normal)
 {
 Autohupe
 }
@@ -48504,14 +48468,8 @@ STRING 11255
 Unleashes the power of the dead Cenarius and causes 1000 + number of Wisps inside the World Tree * 100 damage to every Demon hostile unit in the target area.
 }
 
-STRING 11256
-// Abilities: A23N (Car Horn), Tip (Tooltip - Normal)
-{
-Autohupe
-}
-
 STRING 11258
-// Units: u03Q (Ability Car Horn), Ubertip (Tooltip - Extended)
+// Abilities: A23N (Car Horn), Ubertip (Tooltip - Normal - Extended)
 {
 Bläst die Hupe des Autos.
 }
@@ -51066,19 +51024,19 @@ Banner Alterac
 }
 
 STRING 12029
-// Units: h08I (Buy Property Capital City), Name (Name)
+// Units: h08I (Buy Property Hauptstadt), Name (Name)
 {
-Buy Property Capital City
+Immobilie Hauptstadt kaufen
 }
 
 STRING 12030
-// Units: h08I (Buy Property Capital City), Tip (Tooltip - Basic)
+// Units: h08I (Buy Property Hauptstadt), Tip (Tooltip - Basic)
 {
-Buy Property Capital City
+Immobilie Hauptstadt kaufen
 }
 
 STRING 12031
-// Units: n0O4 (Capital City), Name (Name)
+// Units: n0O4 (Hauptstadt), Name (Name)
 {
 Hauptstadt
 }
@@ -51098,7 +51056,7 @@ Terenas Menethil II
 STRING 12034
 // Units: H02P (King of Lordaeron), Name (Name)
 {
-King of Lordaeron
+König von Lordaeron
 }
 
 STRING 12035
@@ -51160,7 +51118,7 @@ STRING 12044
 
 STRING 12045
 {
-Kill 20 Undead creeps.
+Tötet 20 untote Unholde.
 }
 
 STRING 12046
@@ -51170,7 +51128,7 @@ Return to Sylvanas Windrunner in Unterstadt.
 
 STRING 12047
 {
-Undead Creeps (20)
+Untote Unholde (20)
 }
 
 STRING 12048
@@ -51306,7 +51264,7 @@ Support the project with a subscription to become a VIP.
 
 STRING 12072
 {
-"-vips": Lists all VIPs.
+"-vips": Listet alle VIPs auf.
 }
 
 STRING 12073
@@ -51336,7 +51294,7 @@ STRING 12077
 
 STRING 12078
 {
-"-helpping": Lists ping chat commands.
+"-helpping": Listet alle Signal-Chat-Befehle auf.
 }
 
 STRING 12079
@@ -52420,7 +52378,7 @@ Cunning Hero, high base hit points and high hit point regeneration but only at n
 STRING 12302
 // Units: N0F3 (Sapper), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Summon Explosive Barrel, Unsummon Building, Place Goblin Land Mine and Transmute.|n|n|cffffcc00Attacks land units.|r
+Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Explosives Fass beschwören, Unsummon Building, Place Goblin Land Mine and Transmute.|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 12303
@@ -54940,7 +54898,7 @@ STRING 14627
 }
 
 STRING 14629
-// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
+// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -55006,7 +54964,7 @@ Priester
 }
 
 STRING 14657
-// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
+// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -55114,7 +55072,7 @@ STRING 14757
 }
 
 STRING 14758
-// Upgrades: R0G7 (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -57049,11 +57007,6 @@ Use "-clear" to remove this information.
 STRING 16467
 {
 Updating alliances with Computer AI players.
-}
-
-STRING 16468
-{
-You cannot start constructing buildings on the Freelancer AI islands!
 }
 
 STRING 16469
@@ -60526,22 +60479,10 @@ STRING 18790
 P
 }
 
-STRING 18791
-// Units: u01X (Ability Mana Shield), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
 STRING 18792
 // Units: h0IY (Wizard Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
-}
-
-STRING 18793
-// Units: u02I (Ability Critical Strike), Tip (Tooltip - Basic)
-{
-Kritischer Schlag
 }
 
 STRING 18799
@@ -60905,7 +60846,7 @@ Arkane Akademie von Theramore
 }
 
 STRING 18900
-// Units: u01X (Ability Mana Shield), Tip (Tooltip - Basic)
+// Items: I042 (Mana Shield), Name (Name)
 {
 Manaschild
 }
@@ -63636,12 +63577,6 @@ STRING 20475
 Enchanted Gold Mine
 }
 
-STRING 20476
-// Units: u02S (Ability Bash), Ubertip (Tooltip - Extended)
-{
-Verleiht eine Chance von <ACbh,DataA1>% chance that an attack will do <ACbh,DataC1> bonus damage and stun the target for <ACbh,Dur1> Sekunden lang an.
-}
-
 STRING 20477
 // Abilities: S00Q (Load Elemental Servant), Name (Name)
 {
@@ -64975,24 +64910,6 @@ STRING 21370
 Adds <A0GP,DataA1> bonus sun damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air. It also removes <A0GO,DataC1> mana from hit heroes and <A0GO,DataA1> mana from the hit units and causes <A0GO,DataE1> extra damage to summoned units.
 }
 
-STRING 21371
-// Units: u02T (Ability Blizzard), Name (Name)
-{
-Ability Blizzard
-}
-
-STRING 21372
-// Units: u01Y (Ability Dispel Magic), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 21373
-// Units: u02T (Ability Blizzard), Ubertip (Tooltip - Extended)
-{
-Calls down <ACbz,DataA1> freezing ice shard waves; each wave deals <ACbz,DataB1> damage to units in a small area.
-}
-
 STRING 21374
 // Items: I07J (Master Enchanting Formula), Ubertip (Tooltip - Extended)
 {
@@ -65150,12 +65067,6 @@ Heiliges Licht
 }
 
 STRING 22268
-// Units: u035 (Ability Brilliance Aura), Tip (Tooltip - Basic)
-{
-Brillanz-Aura
-}
-
-STRING 22269
 // Abilities: A0XK (Brilliance Aura), Name (Name)
 {
 Brillanz-Aura
@@ -66453,12 +66364,6 @@ STRING 22656
 Chaos
 }
 
-STRING 22660
-// Units: u02T (Ability Blizzard), Tip (Tooltip - Basic)
-{
-Blizzard
-}
-
 STRING 22665
 // Items: I0GR (Cripple), Ubertip (Tooltip - Extended)
 {
@@ -66621,9 +66526,9 @@ Maximale Nahrung zu 600 geändert.
 }
 
 STRING 22728
-// Units: h0KD (Artillery Tank), Tip (Tooltip - Basic)
+// Units: h0KD (Artillerie-Panzer), Tip (Tooltip - Basic)
 {
-Train Artillery Tank
+Train Artillerie-Panzer
 }
 
 STRING 22729
@@ -66965,7 +66870,7 @@ Haus
 }
 
 STRING 23157
-// Abilities: A0HF (Bash), Name (Name)
+// Abilities: A156 (Bash), Name (Name)
 {
 Hieb
 }
@@ -66977,13 +66882,13 @@ Schmetter-Angriff
 }
 
 STRING 23167
-// Abilities: A156 (Bash), Name (Name)
+// Upgrades: R01P (Ensnare), Name (Name)
 {
 Hieb
 }
 
 STRING 23171
-// Upgrades: R01P (Ensnare), Name (Name)
+// Upgrades: R0GP (Chaos), Name (Name)
 {
 Hieb
 }
@@ -68715,12 +68620,6 @@ O
 }
 
 STRING 25010
-// Units: u02H (Ability Evasion), Tip (Tooltip - Basic)
-{
-Evasion
-}
-
-STRING 25011
 // Abilities: A0XL (Evasion), Name (Name)
 {
 Evasion
@@ -68882,12 +68781,6 @@ STRING 25080
 (Revive)
 }
 
-STRING 25087
-// Items: I042 (Mana Shield), Name (Name)
-{
-Manaschild
-}
-
 STRING 25101
 // Upgrades: R08X (Magic Sentry), effect1 (Effect 1)
 {
@@ -68987,12 +68880,6 @@ STRING 25201
 // Units: h0KR (Mortar Team), EditorSuffix (Name - Editor Suffix)
 {
 (Gnome)
-}
-
-STRING 25211
-// Units: u03C (Ability Cyclone), Tip (Tooltip - Basic)
-{
-Wirbelsturm
 }
 
 STRING 25213
@@ -69960,12 +69847,6 @@ STRING 26473
 Feuerregen
 }
 
-STRING 26478
-// Units: u036 (Ability Black Arrow), Tip (Tooltip - Basic)
-{
-Schwarzer Pfeil
-}
-
 STRING 26481
 // Abilities: A201 (Cluster Rockets), Tip (Tooltip - Normal)
 {
@@ -69982,12 +69863,6 @@ STRING 26488
 // Upgrades: R0C9 (Control Magic), Name (Name)
 {
 Feuerregen
-}
-
-STRING 26490
-// Abilities: A04C (Heal), Tip (Tooltip - Normal)
-{
-Heilen
 }
 
 STRING 26501
@@ -70113,7 +69988,7 @@ STRING 26624
 STRING 26632
 // Units: u00U (Faceless One Shipyard), Tip (Tooltip - Basic)
 {
-Werft errichten
+Hafen der Gesichtslosen errichten
 }
 
 STRING 26647
@@ -70891,7 +70766,7 @@ Purchase Höllenbestie Destroyer
 }
 
 STRING 27494
-// Abilities: A0WC (Repair Aura), Tip (Tooltip - Normal)
+// Abilities: A0WC (Reparatur-Aura), Tip (Tooltip - Normal)
 {
 Reparaturaura
 }
@@ -71515,7 +71390,7 @@ Bietet eine zusätzliche Quelle für Goldeinkommen.|n|n|cffffcc00Begrenzt auf 4.
 }
 
 STRING 28006
-// Units: o04R (Ice Troll Hut), EditorSuffix (Name - Editor Suffix)
+// Units: o04R (Eis-Troll-Hütte), EditorSuffix (Name - Editor Suffix)
 {
 (Trolle)
 }
@@ -76035,30 +75910,6 @@ STRING 32442
 (Goblin-Werkzeugkasten)
 }
 
-STRING 32443
-// Units: u01X (Ability Mana Shield), Name (Name)
-{
-Ability Manaschild
-}
-
-STRING 32444
-// Units: u02H (Ability Evasion), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 32445
-// Units: u01X (Ability Mana Shield), Ubertip (Tooltip - Extended)
-{
-Activates a shield that absorbs <ACmf,DataA1> damage per point of mana.
-}
-
-STRING 32449
-// Units: u01Y (Ability Dispel Magic), Name (Name)
-{
-Ability Magie bannen
-}
-
 STRING 32452
 // Items: I0I6 (Random Item Level 1 - 2), Name (Name)
 {
@@ -77642,12 +77493,6 @@ STRING 33412
 The ship travels through space which allows it to travel it anywhere in almost no time.
 }
 
-STRING 33413
-// Upgrades: R0GP (Chaos), Name (Name)
-{
-Hieb
-}
-
 STRING 33414
 // Upgrades: R00P (Disease Cloud), EditorSuffix (Editor Suffix)
 {
@@ -77829,21 +77674,21 @@ Highly mobile raptor rider. Effective against units. |n|n|cffffcc00Greift Land- 
 }
 
 STRING 33521
-// Units: o04R (Ice Troll Hut), Name (Name)
+// Units: o04R (Eis-Troll-Hütte), Name (Name)
 {
-Ice Troll Hut
+Eis-Troll-Hütte
 }
 
 STRING 33522
-// Units: n0CP (Troll Golem), EditorSuffix (Name - Editor Suffix)
+// Units: n0CP (Troll-Golem), EditorSuffix (Name - Editor Suffix)
 {
 (Trolle)
 }
 
 STRING 33523
-// Units: o04R (Ice Troll Hut), Tip (Tooltip - Basic)
+// Units: o04R (Eis-Troll-Hütte), Tip (Tooltip - Basic)
 {
-Build Ice Troll Hut
+Eis-Troll-Hütte errichten
 }
 
 STRING 33524
@@ -77855,7 +77700,7 @@ STRING 33524
 STRING 33525
 // Units: n0CO (Ice Troll Warlord), Tip (Tooltip - Basic)
 {
-Train Ice Troll Kriegsherr
+Eis-Troll-Kriegsherr ausbilden
 }
 
 STRING 33526
@@ -77877,15 +77722,15 @@ STRING 33528
 }
 
 STRING 33529
-// Units: n0CP (Troll Golem), Name (Name)
+// Units: n0CP (Troll-Golem), Name (Name)
 {
-Troll Golem
+Troll-Golem
 }
 
 STRING 33530
-// Units: n0CP (Troll Golem), Tip (Tooltip - Basic)
+// Units: n0CP (Troll-Golem), Tip (Tooltip - Basic)
 {
-Train Troll Golem
+Troll-Golem ausbilden
 }
 
 STRING 33531
@@ -77895,19 +77740,19 @@ STRING 33531
 }
 
 STRING 33532
-// Units: n0CQ (Troll Golem), Name (Name)
+// Units: n0CQ (Troll-Golem), Name (Name)
 {
-Troll Golem
+Troll-Golem
 }
 
 STRING 33533
-// Units: n0CQ (Troll Golem), Tip (Tooltip - Basic)
+// Units: n0CQ (Troll-Golem), Tip (Tooltip - Basic)
 {
-Train Troll Golem
+Troll-Golem ausbilden
 }
 
 STRING 33534
-// Units: n0CQ (Troll Golem), EditorSuffix (Name - Editor Suffix)
+// Units: n0CQ (Troll-Golem), EditorSuffix (Name - Editor Suffix)
 {
 (Trolle) (Sitting Form)
 }
@@ -77951,7 +77796,7 @@ Train Voodoo Cannoneer
 STRING 33551
 // Abilities: A15E (Sitting Form), Unubertip (Tooltip - Turn Off - Extended)
 {
-Transforms the Troll Golem back into his standing form, allowing him to attack and move again.
+Transforms the Troll-Golem back into his standing form, allowing him to attack and move again.
 }
 
 STRING 33553
@@ -78077,7 +77922,7 @@ Volltreffer-Aura erfroschen
 STRING 33578
 // Upgrades: R098 (Liquid Fire), Ubertip (Tooltip - Extended)
 {
-Gives Ice Troll Kriegsherr the Trueshot ability, which increases the damage of nearby friendly range attacking units.
+Gives Eis-Troll-Kriegsherr the Trueshot ability, which increases the damage of nearby friendly range attacking units.
 }
 
 STRING 33579
@@ -78143,19 +77988,19 @@ STRING 33597
 STRING 33599
 // Units: O04Y (Witch Doctor), Awakentip (Tooltip - Awaken)
 {
-Revive Troll-Medizinmann
+Troll-Medizinmann wiederbeleben
 }
 
 STRING 33600
 // Units: O04Y (Witch Doctor), Revivetip (Tooltip - Revive)
 {
-Revive Troll-Medizinmann
+Troll-Medizinmann wiederbeleben
 }
 
 STRING 33601
 // Units: O04Y (Witch Doctor), Tip (Tooltip - Basic)
 {
-Summon Troll-Medizinmann
+Troll-Medizinmann beschwören
 }
 
 STRING 33608
@@ -78191,13 +78036,13 @@ STRING 33690
 STRING 33691
 // Units: Utic (Dreadlord), Awakentip (Tooltip - Awaken)
 {
-Revive Tichondrius
+Tichondrius wiederbeleben
 }
 
 STRING 33692
 // Abilities: A15E (Sitting Form), Ubertip (Tooltip - Normal - Extended)
 {
-Transforms the Troll Golem into his sitting form, giving him more defense and higher hit points and mana regeneration rate but removing the ability to attack and to move.
+Transforms the Troll-Golem into his sitting form, giving him more defense and higher hit points and mana regeneration rate but removing the ability to attack and to move.
 }
 
 STRING 33694
@@ -78209,7 +78054,7 @@ Verkauft Troll-Einheiten.
 STRING 33696
 // Units: n080 (Troll Arena), Ubertip (Tooltip - Extended)
 {
-Sells Troll creep units.|n|n|cffffcc00Begrenzt auf 1.|r
+Verkauft Troll-Unhold-Einheiten.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 33698
@@ -78311,7 +78156,7 @@ Sells killed units from creeps and enemy players. Units can only be purchased on
 STRING 33724
 // Items: I0KU (Wand of Drain Resources), Tip (Tooltip - Basic)
 {
-Purchase Zauberstab des Absaugens Resources
+Zauberstab des Rohstoffabsaugens erwerben
 }
 
 STRING 33725
@@ -79462,7 +79307,7 @@ C
 STRING 34184
 // Units: h0NH (Gnome Brassman), Ubertip (Tooltip - Extended)
 {
-Trains primary assault troops. Trains Riflemen, Field Ingenieurs, and Artillery Tanks.
+Trains primary assault troops. Trains Riflemen, Field Ingenieurs, and Artillerie-Panzers.
 }
 
 STRING 34185
@@ -85647,24 +85492,6 @@ STRING 36276
 Hexenhütte errichten
 }
 
-STRING 36278
-// Units: u01V (Ability Heal), Name (Name)
-{
-Ability Heilen
-}
-
-STRING 36279
-// Units: u02I (Ability Critical Strike), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 36280
-// Units: u01V (Ability Heal), Ubertip (Tooltip - Extended)
-{
-Heilens a target friendly non-mechanical wounded unit.
-}
-
 STRING 36285
 // Items: I0MX (Tiny Witch Hut), Name (Name)
 {
@@ -85893,30 +85720,6 @@ STRING 36325
 (Lordaeron)
 }
 
-STRING 36326
-// Units: u01W (Ability Remove All), Name (Name)
-{
-Fähigkeit Alle entfernen
-}
-
-STRING 36327
-// Units: u02S (Ability Bash), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 36328
-// Units: u01W (Ability Remove All), Tip (Tooltip - Basic)
-{
-Entfernt alle erlernten Fähigkeiten.
-}
-
-STRING 36329
-// Units: u01W (Ability Remove All), Ubertip (Tooltip - Extended)
-{
-Entfernt alle Fähigkeiten von der Einheit, die von einer Hexenhütte erlernt wurden.
-}
-
 STRING 36330
 // Units: h0OL (Human Fire Ship), Name (Name)
 {
@@ -86091,24 +85894,6 @@ STRING 36363
 Increases the maximum hit points of Knights, Pegasus-Ritters, and Greifenreiters by <Rhan,base1>.
 }
 
-STRING 36364
-// Units: u02T (Ability Blizzard), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 36365
-// Units: u01Y (Ability Dispel Magic), Tip (Tooltip - Basic)
-{
-Magie bannen
-}
-
-STRING 36366
-// Units: u01Y (Ability Dispel Magic), Ubertip (Tooltip - Extended)
-{
-Removes all buffs from units in a target area. |n|cffffcc00Deals <Adsm,DataB1> damage to summoned units.|r
-}
-
 STRING 36391
 // Items: I08F (Scepter of Bandits), Ubertip (Tooltip - Extended)
 {
@@ -86226,7 +86011,7 @@ STRING 36503
 STRING 36504
 // Abilities: A1BH (Life Regeneration), EditorSuffix (Editor Suffix)
 {
- (Icon) (Citizen)
+ (Icon) (Bürger)
 }
 
 STRING 36505
@@ -87877,42 +87662,6 @@ STRING 37438
 // Units: u02G (Burrowed Altar of the Spider), Tip (Tooltip - Basic)
 {
 Altar der Spinne beschwören
-}
-
-STRING 37439
-// Units: u02H (Ability Evasion), Name (Name)
-{
-Fähigkeit Ausweichen
-}
-
-STRING 37440
-// Units: u035 (Ability Brilliance Aura), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 37441
-// Units: u02H (Ability Evasion), Ubertip (Tooltip - Extended)
-{
-Verleiht eine Chance von <ACev,DataA1,%>% percent chance to avoid an attack.
-}
-
-STRING 37442
-// Units: u02I (Ability Critical Strike), Name (Name)
-{
-Fähigkeit Kritischer Schlag
-}
-
-STRING 37443
-// Units: u036 (Ability Black Arrow), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 37444
-// Units: u02I (Ability Critical Strike), Ubertip (Tooltip - Extended)
-{
-Verleiht eine Chance von <ACct,DataA1>% chance to do <ACct,DataB1> times total damage on an attack.
 }
 
 STRING 37445
@@ -91156,7 +90905,7 @@ Vrykul-Bürgerin anheuern
 }
 
 STRING 38639
-// Abilities: A1E5 (Summon Explosive Barrel), Name (Name)
+// Abilities: A1E5 (Explosives Fass beschwören), Name (Name)
 {
 Sprengstoff-Fass beschwören
 }
@@ -105205,11 +104954,6 @@ STRING 45879
 Cenarius beschwören
 }
 
-STRING 45880
-{
-Kein Hardcore!
-}
-
 STRING 45881
 // Units: N03L (Murloc Sorcerer), Awakentip (Tooltip - Awaken)
 {
@@ -106035,11 +105779,6 @@ STRING 46074
 // Units: H0RW (High King of the Alliance), Propernames (Proper Names)
 {
 Anduin Wrynn
-}
-
-STRING 46076
-{
-Hardcore!
 }
 
 STRING 46111
@@ -106884,12 +106623,6 @@ STRING 46534
 // Units: o07D (Stonemaul Camp), Ubertip (Tooltip - Extended)
 {
 Trains Stonemaul Ogre, Stonemaul Magi, and Kor'gall.|n|n|cffffcc00Begrenzt auf 1.|r
-}
-
-STRING 46542
-// Units: u03C (Ability Cyclone), Ubertip (Tooltip - Extended)
-{
-Tosses a target non-mechanical enemy unit into the air, rendering it unable to move, attack or cast spells, and stopping others from attacking or casting on it. |nHält <ACcy,Dur1> Sekunden lang an.
 }
 
 STRING 46545
@@ -111991,7 +111724,7 @@ Draenei-Gefängnis erforschen
 }
 
 STRING 50243
-// Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0G7 (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -112327,7 +112060,7 @@ Elekk-Ritter ausbilden
 }
 
 STRING 50353
-// Units: o047 (Quarry), Ubertip (Tooltip - Extended)
+// Units: o047 (Steinbruch), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz.
 }
@@ -116751,7 +116484,7 @@ Eine intelligente Satyr-Bürgerin. Hat eine Mana-Regenerations-Aura.
 STRING 51683
 // Units: n0L9 (Xenedar), EditorSuffix (Name - Editor Suffix)
 {
-(Argus) (Dimensional Ship)
+(Argus) (Dimensionsschiff)
 }
 
 STRING 51684
@@ -117512,7 +117245,7 @@ Randomizes the skin of your hero.|n|n|cffffcc00Only allowed for heroes who can c
 STRING 52045
 // Units: n0LB (Exodar), EditorSuffix (Name - Editor Suffix)
 {
-(Azuremyst Isles) (Dimensional Ship)
+(Azuremyst Isles) (Dimensionsschiff)
 }
 
 STRING 52046
@@ -117970,42 +117703,6 @@ STRING 53060
 // Units: U032 (Jailer), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, particularly adept at cold magic. Can learn Feuerregen, Lebensauger, Mana abziehen and Massenverschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
-STRING 53107
-// Units: u035 (Ability Brilliance Aura), Name (Name)
-{
-Fähigkeit Brillanz-Aura
-}
-
-STRING 53108
-// Units: u03B (Ability Roar), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 53109
-// Units: u035 (Ability Brilliance Aura), Ubertip (Tooltip - Extended)
-{
-Gives additional mana regeneration to nearby friendly units of <ACba,DataA1> mana per second.
-}
-
-STRING 53110
-// Units: u036 (Ability Black Arrow), Name (Name)
-{
-Fähigkeit Schwarzer Pfeil
-}
-
-STRING 53111
-// Units: u03C (Ability Cyclone), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 53112
-// Units: u036 (Ability Black Arrow), Ubertip (Tooltip - Extended)
-{
-Adds <ACbk,DataA1> bonus damage to attacks. Units killed while under the effect of Schwarzer Pfeil will turn into skeletons.
 }
 
 STRING 53216
@@ -119227,13 +118924,13 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 54469
-// Upgrades: R087 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 54470
-// Upgrades: R088 (Flak Cannons), EditorSuffix (Editor Suffix)
+// Upgrades: R087 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -122388,7 +122085,7 @@ STRING 55982
 }
 
 STRING 55983
-// Units: n0O4 (Capital City), EditorSuffix (Name - Editor Suffix)
+// Units: n0O4 (Hauptstadt), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -124397,74 +124094,8 @@ STRING 56972
 Increases sight range and makes it at night the same as at day.
 }
 
-STRING 56973
-// Units: u03B (Ability Roar), Name (Name)
-{
-Fähigkeit Gebrüll
-}
-
-STRING 56974
-// Units: u03D (Ability Bloodlust), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 56975
-// Units: u03B (Ability Roar), Ubertip (Tooltip - Extended)
-{
-Gives nearby friendly units a <ACro,DataA1,%>% bonus to damage. |nHält <ACro,Dur1> Sekunden lang an.
-}
-
-STRING 56976
-// Units: u03C (Ability Cyclone), Name (Name)
-{
-Ability Wirbelsturm
-}
-
-STRING 56977
-// Units: u03E (Ability Slam), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 56978
-// Units: u03D (Ability Bloodlust), Name (Name)
-{
-Ability Kampfrausch
-}
-
-STRING 56979
-// Units: u03Q (Ability Car Horn), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 56980
-// Units: u03D (Ability Bloodlust), Ubertip (Tooltip - Extended)
-{
-Increases a target friendly unit's attack rate by <ACbl,DataA1,%>% and movement speed by <ACbl,DataB1,%>% for <ACbl,Dur1> Sekunden lang an.
-}
-
-STRING 56981
-// Units: u03E (Ability Slam), Name (Name)
-{
-Ability Slam
-}
-
-STRING 56982
-// Units: u03R (Ability Firebolt), EditorSuffix (Name - Editor Suffix)
-{
-(Hexenhütte)
-}
-
-STRING 56983
-// Units: u03E (Ability Slam), Ubertip (Tooltip - Extended)
-{
-Slams the ground, dealing <ACtc,DataA1> points of damage and slowing the movement and attack rate of nearby enemy units.
-}
-
 STRING 56987
-// Units: u03E (Ability Slam), Tip (Tooltip - Basic)
+// Upgrades: R03K (Flying Machine Bombs), Name (Name)
 {
 Slam
 }
@@ -125169,12 +124800,6 @@ STRING 57326
 // Abilities: A23N (Car Horn), EditorSuffix (Editor Suffix)
 {
 (Auto-Reittier)
-}
-
-STRING 57329
-// Abilities: A23N (Car Horn), Ubertip (Tooltip - Normal - Extended)
-{
-Bläst die Hupe des Autos.
 }
 
 STRING 57330
@@ -127582,12 +127207,6 @@ STRING 57995
 (Zwerge)
 }
 
-STRING 57996
-// Upgrades: R03K (Flying Machine Bombs), Name (Name)
-{
-Slam
-}
-
 STRING 57997
 // Upgrades: R03K (Flying Machine Bombs), Tip (Tooltip)
 {
@@ -128911,13 +128530,13 @@ Build Freiberufler-Turm
 STRING 58560
 // Units: n056 (Advanced Freelancer Tower), Tip (Tooltip - Basic)
 {
-Ausbau zum Advanced Freiberufler-Turm
+Ausbau zum Hoch entwickelten Freiberufler-Turm
 }
 
 STRING 58561
 // Units: n056 (Advanced Freelancer Tower), Name (Name)
 {
-Advanced Freiberufler-Turm
+Hoch entwickelter Freiberufler-Turm
 }
 
 STRING 58562
