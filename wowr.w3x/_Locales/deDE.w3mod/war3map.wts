@@ -43365,7 +43365,7 @@ Großmeister Troll-Medizinmann
 STRING 10071
 // Abilities: A17I (Witch Doctor - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Troll-Medizinmann uses his knowledge to create a Fountain of Macht-Schutzzauber.
+The Troll-Medizinmann uses his knowledge to create einen Winzigen Brunnen der Macht.
 }
 
 STRING 10072
@@ -45855,7 +45855,7 @@ Dunkle Beschwörung Air
 STRING 10536
 // Items: I09J (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-Craft wards:|n- Wächterschutzs|n- Stasisfalles|n- Manaschutzzaubers|n- Heil-Schutzzaubers|n- Macht-Schutzzaubers|n- Friedens-Schutzzaubers
+Stellt Schutzzauber her:|n- Wächterschutzzauber|n- Stasisfallen|n- Manaschutzzauber|n- Heil-Schutzzauber|n- Winzige Brunnen der Macht|n- Friedens-Schutzzauber
 }
 
 STRING 10537

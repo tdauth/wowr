@@ -43280,7 +43280,7 @@ Grand Master Witch Doctor
 STRING 10071
 // Abilities: A17I (Witch Doctor - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Witch Doctor uses his knowledge to create a Fountain of Power Ward.
+The Witch Doctor uses his knowledge to create a Tiny Fountain of Power.
 }
 
 STRING 10072
@@ -45770,7 +45770,7 @@ Dark Summoning Air
 STRING 10536
 // Items: I09J (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-Craft wards:|n- Sentry Wards|n- Stasis Traps|n- Mana Wards|n- Healing Wards|n- Power Wards|n- Peace Wards
+Craft wards:|n- Sentry Wards|n- Stasis Traps|n- Mana Wards|n- Healing Wards|n- Tiny Fountains of Power|n- Peace Wards
 }
 
 STRING 10537
