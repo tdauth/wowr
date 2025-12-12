@@ -246,6 +246,8 @@ Here is a list of some modified versions online:
 * Almia: [World Bounds v1.3](https://github.com/nestharus/JASS/blob/master/jass/Systems/WorldBounds/script.j)
 * Xetanth87: [I2S without natives for use in AI scripts](https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/)
 * The_Silent: [Medieval Wall Trigger Map](https://www.hiveworkshop.com/pastebin/907781cf76579f09be5b3697c14733b8.24012)
+* Baradé, Blizzard Entertainment: Doodad icons
+* Baradé: Digit icons.
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
 * PROXY, ~Nightmare: [Sargeras](https://www.hiveworkshop.com/threads/sargeras.294982/)
@@ -1204,7 +1206,6 @@ Here is a list of some modified versions online:
 * Sunchips: [Wolf Spirit Headpiece by Sunchips](https://www.hiveworkshop.com/threads/wolf-spirit-headpiece-by-sunchips.167582/)
 * Sunchips: [InfernalDestroyer](https://www.hiveworkshop.com/threads/infernaldestroyer.152782/)
 * Blizzard Entertainment, Zephyrius2412: [Blood Elven Upgrades](https://www.hiveworkshop.com/threads/blood-elven-upgrades.300406/)
-* Barade, Blizzard Entertainment: [Doodad icons](https://www.hiveworkshop.com/threads/doodad-icons.354421/)
 * NhazUl: [Dreadlord Child](https://www.hiveworkshop.com/threads/dreadlord-child.158890/)
 * Thrikodius: [Goblin Kid](https://www.hiveworkshop.com/threads/goblin-kid.191479/)
 * Em!: [Creep-Spawner/Basements&Tunnels/Waygates](https://www.hiveworkshop.com/threads/creep-spawner-basements-tunnels-waygates.354041/)

@@ -6544,7 +6544,7 @@ Selects a random class available.
 }
 
 STRING 1106
-// Upgrades: R088 (Flak Cannons), EditorSuffix (Editor Suffix)
+// Units: o08C (Workshop), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -7499,7 +7499,7 @@ Mystical Hero, adept at ranged combat. Can learn Forked Lightning, Frost Arrows,
 }
 
 STRING 1268
-// Units: o08C (Workshop), EditorSuffix (Name - Editor Suffix)
+// Units: h0U5 (Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -15529,7 +15529,7 @@ rhpo
 }
 
 STRING 2862
-// Units: h0U5 (Spire), EditorSuffix (Name - Editor Suffix)
+// Units: h0U6 (Forge), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -18793,7 +18793,7 @@ Research Cheap Evolution - [|cffffcc00Level 45|r]
 }
 
 STRING 3629
-// Units: h0U6 (Forge), EditorSuffix (Name - Editor Suffix)
+// Units: h0U7 (Temple), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -18817,13 +18817,13 @@ Life Regeneration
 }
 
 STRING 3633
-// Units: h0U7 (Temple), EditorSuffix (Name - Editor Suffix)
+// Units: n0JC (High Templar), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 3634
-// Units: n0JC (High Templar), EditorSuffix (Name - Editor Suffix)
+// Units: n0JD (Mystic), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -19079,19 +19079,19 @@ Further increases the armor and hit points of Draenei buildings.
 }
 
 STRING 3680
-// Units: n0JD (Mystic), EditorSuffix (Name - Editor Suffix)
-{
-(Draenei)
-}
-
-STRING 3681
 // Units: h0U8 (Barracks), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 3682
+STRING 3681
 // Units: h0U9 (Peacekeeper), EditorSuffix (Name - Editor Suffix)
+{
+(Draenei)
+}
+
+STRING 3682
+// Units: n0JE (Rangari), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -19133,7 +19133,7 @@ Demon Fire
 }
 
 STRING 3689
-// Units: n0JE (Rangari), EditorSuffix (Name - Editor Suffix)
+// Units: h0UA (Outrider), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -19151,19 +19151,19 @@ F
 }
 
 STRING 3694
-// Units: h0UA (Outrider), EditorSuffix (Name - Editor Suffix)
-{
-(Draenei)
-}
-
-STRING 3695
 // Units: n0JF (Siegebreaker), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 3696
+STRING 3695
 // Units: n0JG (Vigilant), EditorSuffix (Name - Editor Suffix)
+{
+(Draenei)
+}
+
+STRING 3696
+// Units: h0UB (Elekk Knight), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -19193,31 +19193,31 @@ Gives Salamanders the ability Devour.
 }
 
 STRING 3701
-// Units: h0UB (Elekk Knight), EditorSuffix (Name - Editor Suffix)
-{
-(Draenei)
-}
-
-STRING 3702
 // Units: h0UC (Argus Merchant), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 3703
+STRING 3702
 // Units: n0JH (Nether Ray), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 3704
+STRING 3703
 // Units: h0UD (Altar of Naaru), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 3705
+STRING 3704
 // Units: n0JN (Pet Talbuk), EditorSuffix (Name - Editor Suffix)
+{
+(Draenei)
+}
+
+STRING 3705
+// Units: n0JO (Draenei Citizen (male)), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39859,13 +39859,13 @@ Train Draenei Child
 }
 
 STRING 8375
-// Units: n0JO (Draenei Citizen (male)), EditorSuffix (Name - Editor Suffix)
+// Units: n0JP (Draenei Citizen (female)), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8376
-// Units: n0JP (Draenei Citizen (female)), EditorSuffix (Name - Editor Suffix)
+// Units: h0UK (Argunite Mill), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39906,37 +39906,37 @@ Scepter of Draenei
 }
 
 STRING 8383
-// Units: h0UK (Argunite Mill), EditorSuffix (Name - Editor Suffix)
-{
-(Draenei)
-}
-
-STRING 8384
 // Units: n01H (Draenei Child), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8385
+STRING 8384
 // Units: h01D (Stables), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8386
+STRING 8385
 // Units: h01E (Arcane Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8387
+STRING 8386
 // Units: h01F (Guard Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8388
+STRING 8387
 // Units: h01G (Siege Spire), EditorSuffix (Name - Editor Suffix)
+{
+(Draenei)
+}
+
+STRING 8388
+// Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39984,13 +39984,13 @@ STRING 8395
 }
 
 STRING 8396
-// Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
+// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8397
-// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
+// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40163,13 +40163,13 @@ Space Travel
 }
 
 STRING 8435
-// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
+// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8436
-// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
+// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40193,7 +40193,7 @@ Mystic Adept Training
 }
 
 STRING 8440
-// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
+// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40217,7 +40217,7 @@ Mystic Master Training
 }
 
 STRING 8444
-// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
+// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40265,7 +40265,7 @@ Gives Dimensional Ships the ability Hyperspace which allows them to travel at an
 }
 
 STRING 8452
-// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -54897,7 +54897,7 @@ STRING 14627
 }
 
 STRING 14629
-// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
+// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -54963,7 +54963,7 @@ Priest
 }
 
 STRING 14657
-// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
+// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -55071,7 +55071,7 @@ STRING 14757
 }
 
 STRING 14758
-// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0G7 (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -111723,7 +111723,7 @@ Research Draenei Prison
 }
 
 STRING 50243
-// Upgrades: R0G7 (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -118923,13 +118923,13 @@ A tiny villager who can cast Disarmament.
 }
 
 STRING 54469
-// Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R087 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 54470
-// Upgrades: R087 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R088 (Flak Cannons), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
