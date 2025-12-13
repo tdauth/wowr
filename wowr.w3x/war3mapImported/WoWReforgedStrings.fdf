@@ -827,6 +827,8 @@ StringList {
     GRUULS_LIAR                        "Gruul's Lair",
     ARGUS                              "Argus",
     EREDATH                            "Eredath",
+    ANTARON_WASTES                     "Antoran Wastes",
+    KROKUUN                            "Krokuun",
     EMERALD_DREAM                      "Emerald Dream",
     SHADOWLANDS                        "Shadowlands",
     REVENDRETH                         "Revendreth",
