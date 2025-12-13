@@ -1419,7 +1419,7 @@ StringList {
     PREVIOUS_PAGE_X_Y                  "Vorherige Seite (%1%/%2%)",
     ABILITY_CHANGED_RANGE              "Fähigkeit zu %1% geändert (%2%/%3%).",
     ABILITY_NO_OTHER                   "Keine andere Fähigkeit.",
-    AUTO_SKILL_MESSAGE                 "Auto skilled.",
+    AUTO_SKILL_MESSAGE                 "Automatisch gelernt.",
     REQUIRES_HERO_LEVEL_OR_VIP         "Benötigt Heldenstufe %1% oder VIP oder alles freigeschaltet.",
     DOT_NOT_AVAILABLE                  "Nicht verfügbar.",
     // Classes

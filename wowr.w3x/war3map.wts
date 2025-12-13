@@ -24544,11 +24544,9 @@ STRING 4936
 - Get better items from quests and killing bosses.
 - Forge alliances via Warcraft's ally menu (F11) or chat commands.
 - Revive your dead heroes on Theramore.
-- Do not leave early: It takes some time before the fun starts.
-- Sell crafted items if you need gold.
+- Sell crafted items for gold.
 - Save your hero with "-save".
-- See quests with "-ping".
-- Find players to create a clan.
+- See quest markers with "-ping".
 - Play with Computer players.
 - SD graphics are recommended.
 - Discord: discord.gg/eM34z36
@@ -37307,7 +37305,7 @@ Creates a Tidal Guardian at a target location.
 STRING 7894
 // Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
 {
-(Eredar)
+(Draenei)
 }
 
 STRING 7895
@@ -38892,7 +38890,7 @@ Purchase Book of Archaeology
 STRING 8214
 // Items: I0YE (Warlock), Ubertip (Tooltip - Extended)
 {
-Summon Demons and craft demonic items:|n- Ward of Draining|n- Demon Blood|n- Inferno Stone|n- Tiny Demon Portal|n- Demonic Figurine and Spiked Collar|n- Fel Fountain
+Summon Demons and craft demonic items:|n- Wand of Drain|n- Demon Blood|n- Inferno Stone|n- Tiny Demon Portal|n- Demonic Figurine and Spiked Collar|n- Fel Fountain
 }
 
 STRING 8215
@@ -111492,7 +111490,7 @@ Jailer
 STRING 50248
 // Upgrades: R0G3 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Eredar ground units the ability to carry items.
+Gives specific Draenei ground units the ability to carry items.
 }
 
 STRING 50250

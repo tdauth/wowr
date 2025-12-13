@@ -686,13 +686,13 @@ A
 }
 
 STRING 115
-// Items: I0D6 (Ring of the Trading Guild), Description (Description)
+// Items: I0D6 (Ring der Handelsgilde), Description (Description)
 {
 Increases the gold and lumber gained from selling items.
 }
 
 STRING 116
-// Items: I0D6 (Ring of the Trading Guild), Ubertip (Tooltip - Extended)
+// Items: I0D6 (Ring der Handelsgilde), Ubertip (Tooltip - Extended)
 {
 Increases the gold and lumber gained from selling items. Multiplies the sold item's gold and lumber values with the number of charges of all rings in the selling hero's inventory. If the gold or lumber value of the sold item is 0 it will be at least 10. Gives the owner of the selling unit the additional gold and lumber.|n|nThe ring itself cannot be sold.
 }
@@ -10070,7 +10070,7 @@ Ein Kriegerheld, adept at terrorizing enemies. Can learn Schockwelle, Donnerschl
 STRING 1708
 // Items: I0BV (Clothing Bag), Name (Name)
 {
-Clothing Bag
+Kleidertasche
 }
 
 STRING 1709
@@ -11560,7 +11560,7 @@ Research Verteidigen
 STRING 1984
 // Items: I0BV (Clothing Bag), Tip (Tooltip - Basic)
 {
-Gives Swordmen and Blood Elf Lieutenants the ability Verteidigen.
+Kleidertasche erwerben
 }
 
 STRING 1985
@@ -12537,7 +12537,7 @@ STRING 2227
 STRING 2228
 // Upgrades: R0IX (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Gnoll ground units the ability to carry items.
+Verleiht bestimmten Gnoll-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 2229
@@ -13063,7 +13063,7 @@ A
 }
 
 STRING 2318
-// Items: I18H (Magical Filler), Hotkey (Hotkey)
+// Items: I18H (Magischer Auffüller), Hotkey (Hotkey)
 {
 A
 }
@@ -13941,7 +13941,7 @@ STRING 2495
 STRING 2496
 // Upgrades: R05C (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Bandit ground units the ability to carry items.
+Verleiht bestimmten Banditen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 2497
@@ -14697,7 +14697,7 @@ Einbrecher ausbilden
 STRING 2625
 // Units: h02Q (Dwarf Miner), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 2626
@@ -19301,7 +19301,7 @@ Heavy ranged flying unit. Tamed from the Outland area to serve the Draenei. |n|n
 STRING 3721
 // Units: o02C (Troll Gatherer), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 3722
@@ -20689,15 +20689,15 @@ D
 }
 
 STRING 4093
-// Items: I02Z (Rune of Restoration (Runeforger)), Name (Name)
+// Items: I02Z (Rune der Wiederherstellung (Runeforger)), Name (Name)
 {
-Rune of Restoration (Runeforger)
+Rune der Wiederherstellung (Runeforger)
 }
 
 STRING 4094
-// Items: I030 (Rune of Speed (Runeforger)), Name (Name)
+// Items: I030 (Rune der Geschwindigkeit (Runeforger)), Name (Name)
 {
-Rune of Speed (Runeforger)
+Rune der Geschwindigkeit (Runeforger)
 }
 
 STRING 4095
@@ -20733,7 +20733,7 @@ A book that contains knowledge of breeding dragons.
 STRING 4100
 // Abilities: A06I (Runeforging - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magical power to create a Rune of Speed.
+The Runeforger uses magical power to create a Rune der Geschwindigkeit.
 }
 
 STRING 4101
@@ -20751,7 +20751,7 @@ E
 STRING 4104
 // Abilities: A06J (Runeforging - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to craft a Rune of Restoration.
+The Runeforger uses magic to craft a Rune der Wiederherstellung.
 }
 
 STRING 4105
@@ -20869,25 +20869,25 @@ Summons Tharifas to fight for you. |nHält <AIbd,Dur1> Sekunden lang an.
 }
 
 STRING 4126
-// Items: I037 (Green Dragon Egg), Description (Description)
+// Items: I037 (Green Drachenei), Description (Description)
 {
 Beschwört einen grünen Großdrachen.
 }
 
 STRING 4127
-// Items: I037 (Green Dragon Egg), Name (Name)
+// Items: I037 (Green Drachenei), Name (Name)
 {
 Ei eines grünen Großdrachens
 }
 
 STRING 4128
-// Items: I037 (Green Dragon Egg), Tip (Tooltip - Basic)
+// Items: I037 (Green Drachenei), Tip (Tooltip - Basic)
 {
 Ei eines grünen Großdrachens erwerben
 }
 
 STRING 4129
-// Items: I037 (Green Dragon Egg), Ubertip (Tooltip - Extended)
+// Items: I037 (Green Drachenei), Ubertip (Tooltip - Extended)
 {
 Summons a Green Dragon to fight for you. |nHält <AIbd,Dur1> Sekunden lang an.
 }
@@ -20907,7 +20907,7 @@ N
 STRING 4133
 // Abilities: A06M (Dragon Breeder - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Drachenzüchter uses his knowledge to breed a Dragon Egg of a Green Dragon Whelp.
+The Drachenzüchter uses his knowledge to breed a Drachenei of a Green Dragon Whelp.
 }
 
 STRING 4134
@@ -20925,7 +20925,7 @@ E
 STRING 4137
 // Abilities: A06N (Dragon Breeder - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Drachenzüchter uses his knowledge to breed a Dragon Egg of Tharifas.
+The Drachenzüchter uses his knowledge to breed a Drachenei of Tharifas.
 }
 
 STRING 4138
@@ -20943,7 +20943,7 @@ Drachenzüchter - Fortgeschritten
 STRING 4141
 // Abilities: A06O (Dragon Breeder - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Drachenzüchter uses his knowledge to breed a Dragon Egg of a Green Drake.
+The Drachenzüchter uses his knowledge to breed a Drachenei of a Green Drake.
 }
 
 STRING 4142
@@ -20955,7 +20955,7 @@ Drachenzüchter - Meister
 STRING 4144
 // Abilities: A06P (Dragon Breeder - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Drachenzüchter uses his knowledge to breed a Dragon Egg of a Green Dragon.
+The Drachenzüchter uses his knowledge to breed a Drachenei of a Green Dragon.
 }
 
 STRING 4145
@@ -21051,7 +21051,7 @@ STRING 4160
 STRING 4161
 // Upgrades: R07H (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Verlies ground units the ability to carry items.
+Verleiht bestimmten Verlies-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 4162
@@ -21237,7 +21237,7 @@ STRING 4243
 STRING 4244
 // Upgrades: R01D (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Furbolg ground units the ability to carry items.
+Verleiht bestimmten Furbolg-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 4245
@@ -21249,7 +21249,7 @@ STRING 4245
 STRING 4246
 // Upgrades: R01E (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Naga ground units the ability to carry items.
+Verleiht bestimmten Naga-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 4247
@@ -21787,7 +21787,7 @@ Furbolg-Bürgerin anheuern
 STRING 4384
 // Units: u00T (Haunted Gold Mine), EditorSuffix (Name - Editor Suffix)
 {
-(Housing)
+(Unterkunft)
 }
 
 STRING 4385
@@ -23363,13 +23363,13 @@ Aktiviert das nächstgelegene Portal.
 STRING 4710
 // Items: I0BV (Clothing Bag), Description (Description)
 {
-Allows changing the skin of a unit.
+Ermöglicht das Ändern des Skins einer Einheit.
 }
 
 STRING 4711
 // Items: I0BV (Clothing Bag), Ubertip (Tooltip - Extended)
 {
-Allows changing the skin of a unit.
+Ermöglicht das Ändern des Skins einer Einheit.
 }
 
 STRING 4713
@@ -24544,11 +24544,9 @@ STRING 4936
 - Erhaltet bessere Gegenstände durch Quests und die Tötung von Bossen.
 - Schmiedet Allianzen über das Allianzmenü von Warcraft (F11) oder Chat-Befehle.
 - Belebt eure toten Helden auf Theramore wieder.
-- Verlasst nicht zu früh das Spiel: Es dauert eine Weile, bis der Spaß beginnt.
-- Verkauft hergestellte Gegenstände, falls ihr Gold benötigt.
+- Verkauft hergestellte Gegenstände für Gold.
 - Speichert eure Helden mit "-save".
-- Seht Quests mit "-ping".
-- Findet andere Spieler, um einen Clan zu gründen.
+- Seht Quest-Markierungen mit "-ping".
 - Spielt mit Computer-Spielern.
 - SD-Grafikeinstellungen werden empfohlen.
 - Discord: discord.gg/eM34z36
@@ -28775,7 +28773,7 @@ STRING 5785
 STRING 5786
 // Upgrades: R0GF (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Dragonkin ground units the ability to carry items.
+Verleiht bestimmten Dragonkin-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 5787
@@ -29901,7 +29899,7 @@ Special Hero, who can change his spells during combat. |n|n|cffffcc00Greift Land
 STRING 5984
 // Units: h0G2 (Next Page), Name (Name)
 {
-Special Hero, who can change his spells during combat. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Coatl.|r|n|cffffcc00Standard Ability: Zufällige Zauber.|r
+Nächste Seite
 }
 
 STRING 5985
@@ -30081,7 +30079,7 @@ STRING 6019
 STRING 6020
 // Items: I0QO (Ogre), Ubertip (Tooltip - Extended)
 {
-Large, brutish humanoids of notable strength native to Draenor:|n- Clans.|n- Powerful giant warriors.|n- Powerful damaging abilities: Kriegsdonner, Verschlingen, Hieb, Hurl Boulder.|n|n|cffffcc00Faction: Horde.|r
+Große, brutale Humanoide von bemerkenswerter Stärke, die in Draenor beheimatet sind:|n- Clans.|n- Powerful giant warriors.|n- Powerful damaging abilities: Kriegsdonner, Verschlingen, Hieb, Hurl Boulder.|n|n|cffffcc00Faction: Horde.|r
 }
 
 STRING 6021
@@ -30425,7 +30423,7 @@ R
 }
 
 STRING 6084
-// Items: I0B1 (Dragon Egg), Ubertip (Tooltip - Extended)
+// Items: I0B1 (Drachenei), Ubertip (Tooltip - Extended)
 {
 This massive egg will not hatch without a parent to warm it. Can be used as an ingredient to permanently summon a dragon.
 }
@@ -30619,7 +30617,7 @@ Building to train Green Drakes.
 STRING 6116
 // Items: I06T (Dragon Breeder), Ubertip (Tooltip - Extended)
 {
-Craft dragon eggs:|n- Ei eines grünen Großdrachen-Welpen|n- Tharifas-Ei|n- Gründrachen-Ei|n- Ei eines grünen Großdrachens|n- Dragon Egg|n- Tiny Drachenhorst
+Stellt Dracheneier her:|n- Ei eines grünen Großdrachen-Welpen|n- Tharifas-Ei|n- Gründrachen-Ei|n- Ei eines grünen Großdrachens|n- Drachenei|n- Winziger Drachenhorst
 }
 
 STRING 6117
@@ -30839,7 +30837,7 @@ V
 STRING 6184
 // Abilities: A0UL (Build Tiny Dragon Roost), Name (Name)
 {
-Build Tiny Drachenhorst
+Build Winziger Drachenhorst
 }
 
 STRING 6185
@@ -30898,7 +30896,7 @@ Doktor-Drachenzucht
 STRING 6195
 // Abilities: A0WN (Dragon Breeding - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Drachenzüchter uses his knowledge to create a Tiny Drachenhorst.
+The Drachenzüchter uses his knowledge to create a Winziger Drachenhorst.
 }
 
 STRING 6196
@@ -30937,7 +30935,7 @@ STRING 6201
 STRING 6202
 // Abilities: A0WM (Dragon Breeding - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Drachenzüchter uses his knowledge to create a Dragon Egg.
+The Drachenzüchter uses his knowledge to create a Drachenei.
 }
 
 STRING 6203
@@ -32930,7 +32928,7 @@ Banner-Laden
 STRING 6762
 // Units: h0IT (Peasant), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 6763
@@ -32978,7 +32976,7 @@ B
 STRING 6780
 // Units: h0G2 (Next Page), Tip (Tooltip - Basic)
 {
-B
+Nächste Seite
 }
 
 STRING 6781
@@ -33499,7 +33497,7 @@ P
 STRING 6958
 // Abilities: A0V5 (Hero Abilities), Ubertip (Tooltip - Normal - Extended)
 {
-B
+Öffnet das Fähigkeiten-Menü, mit dessen Hilfe Sie unbenutzte Punkte den Fähigkeiten eines Helden zuweisen können.
 }
 
 STRING 6959
@@ -34200,7 +34198,7 @@ E
 STRING 7096
 // Units: o05M (Worker), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 7098
@@ -34536,7 +34534,7 @@ STRING 7256
 STRING 7257
 // Upgrades: R02G (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Goblin ground units the ability to carry items.
+Verleiht bestimmten Goblin-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 7258
@@ -35650,7 +35648,7 @@ Alle Unholde neu erschaffen!
 STRING 7613
 // Units: h052 (Elemental Servant), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 7614
@@ -35805,7 +35803,7 @@ Gives Höllenbesties the ability Festhaut.
 STRING 7639
 // Upgrades: R00G (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Demon ground units the ability to carry items.
+Verleiht bestimmten Dämonen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 7640
@@ -35931,13 +35929,13 @@ STRING 7659
 STRING 7660
 // Units: h03B (Dwarf Gun Tower), Ubertip (Tooltip - Extended)
 {
-Heavy defensive structure. Particularly effective against clusters of troops. Can learn Long Rifles ability. |n|n|cffffcc00Attacks land units and trees.|r
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn Long Rifles ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 7661
 // Units: h03D (Dwarf Cannon Tower), Ubertip (Tooltip - Extended)
 {
-Heavy defensive structure. Particularly effective against clusters of troops. Can learn Fragmentation Shards ability. |n|n|cffffcc00Attacks land units and trees.|r
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn Fragmentation Shards ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 7662
@@ -36093,7 +36091,7 @@ R
 STRING 7687
 // Upgrades: R09O (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Gnome ground units the ability to carry items.
+Verleiht bestimmten Gnom-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 7688
@@ -36387,7 +36385,7 @@ S
 STRING 7737
 // Units: h0G1 (Previous Page), Name (Name)
 {
-M
+Vorherige Seite
 }
 
 STRING 7738
@@ -37941,7 +37939,7 @@ Adept Captain
 STRING 8021
 // Abilities: A0JP (Captain - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The captain crafts a Compass which detects enemy ships on the sea.
+The captain crafts a Kompass which detects enemy ships on the sea.
 }
 
 STRING 8022
@@ -38893,7 +38891,7 @@ Buch der Archäologie erwerben
 STRING 8214
 // Items: I0YE (Warlock), Ubertip (Tooltip - Extended)
 {
-Summon Demons and craft demonic items:|n- Ward of Draining|n- Dämonenblut|n- Höllenstein|n- Tiny Demon Portal|n- Dämonen-Statuette and Stachelhalsband|n- Fel-Brunnen
+Beschwört Dämonen und stellt dämonische Gegenstände her:|n- Zauberstab des Absaugens|n- Dämonenblut|n- Höllenstein|n- Winziges Dämonentor|n- Dämonen-Statuette and Stachelhalsband|n- Fel-Brunnen
 }
 
 STRING 8215
@@ -40572,7 +40570,7 @@ STRING 8526
 STRING 8527
 // Items: I06S (Runeforger), Ubertip (Tooltip - Extended)
 {
-Craft runes with multiple charges:|n- Rune of Speed|n- Rune of Magie bannen|n- Rune of Restoration|n- Rune der Wiedergeburt|n- Rune of Lesser Auferstehung|n- Rune of Greater Auferstehung
+Stellt Runen mit mehreren Aufladungen her:|n- Rune der Geschwindigkeit|n- Rune of Magie bannen|n- Rune der Wiederherstellung|n- Rune der Wiedergeburt|n- Rune of Lesser Auferstehung|n- Rune der Großen Auferstehung
 }
 
 STRING 8528
@@ -40590,53 +40588,53 @@ Rune of Lesser Auferstehung (Runeforger)
 STRING 8530
 // Items: I164 (Rune of Greater Resurrection (Runeforger)), Name (Name)
 {
-Rune of Greater Auferstehung (Runeforger)
+Rune der Großen Auferstehung (Runeforger)
 }
 
 STRING 8531
-// Items: I165 (Golden Crown), Ubertip (Tooltip - Extended)
+// Items: I165 (Goldene Krone), Ubertip (Tooltip - Extended)
 {
 Increases all hero stats by 7.
 }
 
 STRING 8532
-// Items: I165 (Golden Crown), Name (Name)
+// Items: I165 (Goldene Krone), Name (Name)
 {
 Goldene Krone
 }
 
 STRING 8533
-// Items: I165 (Golden Crown), Tip (Tooltip - Basic)
+// Items: I165 (Goldene Krone), Tip (Tooltip - Basic)
 {
 Goldene Krone erwerben
 }
 
 STRING 8534
-// Items: I165 (Golden Crown), Description (Description)
+// Items: I165 (Goldene Krone), Description (Description)
 {
 Increases all hero stats by 7.
 }
 
 STRING 8535
-// Items: I166 (Bracelet), Ubertip (Tooltip - Extended)
+// Items: I166 (Armreif), Ubertip (Tooltip - Extended)
 {
 Increases all hero stats by 6.
 }
 
 STRING 8536
-// Items: I166 (Bracelet), Name (Name)
+// Items: I166 (Armreif), Name (Name)
 {
 Armreif
 }
 
 STRING 8537
-// Items: I166 (Bracelet), Tip (Tooltip - Basic)
+// Items: I166 (Armreif), Tip (Tooltip - Basic)
 {
 Armreif erwerben
 }
 
 STRING 8538
-// Items: I166 (Bracelet), Description (Description)
+// Items: I166 (Armreif), Description (Description)
 {
 Increases all hero stats by 6.
 }
@@ -40710,7 +40708,7 @@ Doctor Runenschmieden
 STRING 8550
 // Abilities: A10T (Runeforging - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses his knowledge to craft a Rune of Greater Auferstehung.
+The Runeforger uses his knowledge to craft a Rune der Großen Auferstehung.
 }
 
 STRING 8551
@@ -40734,13 +40732,13 @@ Juwelenherstellung - Großmeister
 STRING 8554
 // Abilities: A10W (Jewelcrafting - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Juwelenherstellung
+Großmeister-Juwelenherstellung
 }
 
 STRING 8555
 // Abilities: A10W (Jewelcrafting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Jewelcrafter uses his gathered jewels to craft a Bracelet.
+The Jewelcrafter uses his gathered jewels to craft a Armreif.
 }
 
 STRING 8556
@@ -40752,13 +40750,13 @@ Juwelenherstellung - Doctor
 STRING 8557
 // Abilities: A10X (Jewelcrafting - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Juwelenherstellung
+Doktor-Juwelenherstellung
 }
 
 STRING 8558
 // Abilities: A10X (Jewelcrafting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Jewelcrafter uses his gathered jewels to craft a Golden Crown.
+The Jewelcrafter uses his gathered jewels to craft a Goldene Krone.
 }
 
 STRING 8559
@@ -42686,7 +42684,7 @@ Combines effects of known orbs to one single item. Adds 60 bonus damage to the a
 STRING 9638
 // Items: I080 (Captain), Ubertip (Tooltip - Extended)
 {
-Craft items which allow you to live as a captain of the sea. Arrr!|n- Winziges Kapitänsschiff |n- Treasure Map|n- Compass|n- Steuerrad|n- Gnomisches U-Boot|n- Tiny Shipyard
+Stellt Gegenstände her, die euch erlauben als Kapität zur See zu leben. Arrr!|n- Winziges Kapitänsschiff |n- Schatzkarte|n- Kompass|n- Steuerrad|n- Gnomisches U-Boot|n- Winziger Hafen
 }
 
 STRING 9639
@@ -43116,7 +43114,7 @@ B
 STRING 9999
 // Units: n0OM (John), EditorSuffix (Name - Editor Suffix)
 {
-(Housing)
+(Unterkunft)
 }
 
 STRING 10000
@@ -43140,13 +43138,13 @@ B
 STRING 10003
 // Units: o0C3 (Enter Common Housing), EditorSuffix (Name - Editor Suffix)
 {
-(Housing)
+(Unterkunft)
 }
 
 STRING 10004
 // Items: I075 (Jewelcrafter), Ubertip (Tooltip - Extended)
 {
-Craft items which increase your hero attributes:|n- Ring of Superiority|n- Enchanted Edelstein|n- Grüner Edelstein|n- Juwelen-Amulett|n- Bracelet|n- Golden Crown
+Stellt Gegenstände her, die eure Heldenattribute erhöhen:|n- Ring der Überlegenheit|n- Verzauberter Edelstein|n- Grüner Edelstein|n- Juwelen-Amulett|n- Armreif|n- Goldene Krone
 }
 
 STRING 10008
@@ -46077,7 +46075,7 @@ Return to Lady Hederine to get your reward.
 STRING 10600
 // Items: I09D (Archaeologist), Ubertip (Tooltip - Extended)
 {
-Allows digging for random items:|n- Zufälliger Gegenstand Stufe 1|n- Zufälliger Gegenstand Stufe 3|n- Zufälliger Gegenstand Stufe 5|n- Zufälliger Gegenstand Stufe 7|n- Zufälliger Gegenstand Stufe 8|n- Tiny Ausgrabungsstätte
+Ermöglicht das Ausgraben von zufälligen Gegenständen:|n- Zufälliger Gegenstand Stufe 1|n- Zufälliger Gegenstand Stufe 3|n- Zufälliger Gegenstand Stufe 5|n- Zufälliger Gegenstand Stufe 7|n- Zufälliger Gegenstand Stufe 8|n- Winzige Ausgrabungsstätte
 }
 
 STRING 10601
@@ -46105,27 +46103,27 @@ Errichtet am Zielort ein Tiergehege.
 }
 
 STRING 10605
-// Items: I18H (Magical Filler), Name (Name)
+// Items: I18H (Magischer Auffüller), Name (Name)
 {
-Magical Filler
+Magischer Auffüller
 }
 
 STRING 10606
-// Items: I18H (Magical Filler), Description (Description)
+// Items: I18H (Magischer Auffüller), Description (Description)
 {
-Magical Filler from the far continent of Kalimdor that refills mines.
+Magischer Auffüller from the far continent of Kalimdor that refills mines.
 }
 
 STRING 10607
-// Items: I18H (Magical Filler), Ubertip (Tooltip - Extended)
+// Items: I18H (Magischer Auffüller), Ubertip (Tooltip - Extended)
 {
-Refills a mine.
+Füllt eine Mine wieder auf.
 }
 
 STRING 10608
-// Items: I18H (Magical Filler), Tip (Tooltip - Basic)
+// Items: I18H (Magischer Auffüller), Tip (Tooltip - Basic)
 {
-Purchase Magical Filler
+Magischen Auffüller erwerben
 }
 
 STRING 10609
@@ -46177,9 +46175,9 @@ The Farmer uses his knowledge to craft a Winziges Tiergehege.
 }
 
 STRING 10617
-// Abilities: A1VT (Magical Filler), Name (Name)
+// Abilities: A1VT (Magischer Auffüller), Name (Name)
 {
-Magical Filler
+Magischer Auffüller
 }
 
 STRING 10618
@@ -46613,7 +46611,7 @@ Doktor-Händler
 STRING 10738
 // Abilities: A1ZF (Merchant - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler uses his knowledge to craft a Tiny Händler-Laden.
+The Händler uses his knowledge to craft a Winziger Händler-Laden.
 }
 
 STRING 10739
@@ -46655,7 +46653,7 @@ STRING 10750
 STRING 10751
 // Items: I0D1 (Merchant), Ubertip (Tooltip - Extended)
 {
-Craft bills to increase charges of other items:|n- Small Bill|n- Bill|n- Large Bill|n- Ring of the Trading Guild|n- Amulett des Feilschens|n- Tiny Händler-Laden
+Stellt Rechnungen her, um die Aufladungen von anderen Gegenständen zu erhöhen:|n- Kleine Rechnung|n- Rechnung|n- Große Rechnung|n- Ring der Handelsgilde|n- Amulett des Feilschens|n- Winziger Händler-Laden
 }
 
 STRING 10752
@@ -47127,25 +47125,25 @@ Errichtet einen Baukunst-Stromgenerator.
 }
 
 STRING 10879
-// Items: I19D (Tiny Shipyard), Name (Name)
+// Items: I19D (Winziger Hafen), Name (Name)
 {
 Winziger Hafen
 }
 
 STRING 10880
-// Items: I19D (Tiny Shipyard), Tip (Tooltip - Basic)
+// Items: I19D (Winziger Hafen), Tip (Tooltip - Basic)
 {
 Winzigen Hafen erwerben
 }
 
 STRING 10881
-// Items: I19D (Tiny Shipyard), Description (Description)
+// Items: I19D (Winziger Hafen), Description (Description)
 {
 Errichtet einen Hafen.
 }
 
 STRING 10882
-// Items: I19D (Tiny Shipyard), Ubertip (Tooltip - Extended)
+// Items: I19D (Winziger Hafen), Ubertip (Tooltip - Extended)
 {
 Errichtet einen Hafen.
 }
@@ -47193,7 +47191,7 @@ The Ingenieur uses his knowledge to create a Winzigen Baukunst-Stromgenerator.
 }
 
 STRING 10890
-// Abilities: A21F (Build Tiny Shipyard), Name (Name)
+// Abilities: A21F (Build Winziger Hafen), Name (Name)
 {
 Winzigen Hafen errichten
 }
@@ -47219,7 +47217,7 @@ Doktor-Kapitän
 STRING 10894
 // Abilities: A21G (Captain - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Captain uses his knowledge to create a Tiny Shipyard.
+The Captain uses his knowledge to create a Winziger Hafen.
 }
 
 STRING 10895
@@ -47337,7 +47335,7 @@ Winzigen Stern erwerben
 }
 
 STRING 10915
-// Abilities: A21F (Build Tiny Shipyard), EditorSuffix (Editor Suffix)
+// Abilities: A21F (Build Winziger Hafen), EditorSuffix (Editor Suffix)
 {
 (Kapitän)
 }
@@ -49644,13 +49642,13 @@ Königin des Leidens
 STRING 11642
 // Items: I0N4 (Outland Netherstorm), Name (Name)
 {
-Outland Netherstorm
+Fremdland Nethersturm
 }
 
 STRING 11643
 // Items: I0N4 (Outland Netherstorm), Tip (Tooltip - Basic)
 {
-Outland Netherstorm
+Fremdland Nethersturm
 }
 
 STRING 11644
@@ -50047,7 +50045,7 @@ Bildet Greifenreiter, Adler-Ritter und Greifenritter aus.
 }
 
 STRING 11825
-// Units: o076 (Magi Lodge), Ubertip (Tooltip - Extended)
+// Units: o076 (Magierhaus), Ubertip (Tooltip - Extended)
 {
 Spellcaster production building. Trains Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers. |nAlso contains spell upgrades for Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers.
 }
@@ -50996,7 +50994,7 @@ Captain Garran Vimes
 STRING 12038
 // Items: I080 (Captain), Tip (Tooltip - Basic)
 {
-Captain
+Kapitän
 }
 
 STRING 12039
@@ -51200,7 +51198,7 @@ Races belong to one faction or are neutral.
 
 STRING 12076
 {
-Freelancer: Pure RPG mode, begins with +15 attributes and +30 % XP rate.
+Freiberufler: Purer RPG-Modus, beginnt mit +15 Attributen und +30 % Erfahrungsrate.
 }
 
 STRING 12077
@@ -51594,13 +51592,13 @@ STRING 12162
 STRING 12163
 // Upgrades: R0IK (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Stacheleber ground units the ability to carry items.
+Verleiht bestimmten Stacheleber-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 12164
 // Units: o072 (Worker), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 12165
@@ -51896,7 +51894,7 @@ The ancestral homeland of Azeroth's dragonflights.
 }
 
 STRING 12215
-// Items: I0B1 (Dragon Egg), Name (Name)
+// Items: I0B1 (Drachenei), Name (Name)
 {
 Drachenei
 }
@@ -52276,7 +52274,7 @@ STRING 12290
 STRING 12298
 // Abilities: A0JY (Hold Position), Ubertip (Tooltip - Normal - Extended)
 {
-Holds the position.
+Hält die Position.
 }
 
 STRING 12299
@@ -52306,7 +52304,7 @@ STRING 12303
 STRING 12304
 // Abilities: A1X3 (Command Buttons), Ubertip (Tooltip - Normal - Extended)
 {
-Several unit commands.
+Mehrere Einheitenbefehle
 }
 
 STRING 12305
@@ -54467,7 +54465,7 @@ Velkar the Thief,Bink the Burglar,Vagnhild,Kang the Soul Thief,Thaddock the Thie
 }
 
 STRING 14436
-// Items: rnsp (Ring of Superiority), Description (Description)
+// Items: rnsp (Ring der Überlegenheit), Description (Description)
 {
 Provides a +2 bonus to Strength, Agility and Intelligence.
 }
@@ -54479,7 +54477,7 @@ E
 }
 
 STRING 14463
-// Items: rnsp (Ring of Superiority), Ubertip (Tooltip - Extended)
+// Items: rnsp (Ring der Überlegenheit), Ubertip (Tooltip - Extended)
 {
 Increases the Strength, Agility and Intelligence of the Hero by 2 when worn.
 }
@@ -54894,7 +54892,7 @@ Tresor errichten
 STRING 14691
 // Units: h0JY (Engineer), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 14697
@@ -55259,7 +55257,7 @@ Scharlachroter Kreuzzug erforschen
 STRING 14980
 // Units: o06B (Ogre Slave), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 14981
@@ -57202,7 +57200,7 @@ N
 STRING 16557
 // Abilities: A0IL (Jewelcrafting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Jewelcrafter uses his gathered jewels to craft a Ring of Superiority.
+The Jewelcrafter uses his gathered jewels to craft a Ring der Überlegenheit.
 }
 
 STRING 16558
@@ -57268,7 +57266,7 @@ Juwelenherstellung - Advanced
 STRING 16570
 // Abilities: A0IN (Jewelcrafting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Jewelcrafter uses gathered jewels to create an Enchanted Edelstein.
+The Jewelcrafter uses gathered jewels to create an Verzauberter Edelstein.
 }
 
 STRING 16571
@@ -59523,7 +59521,7 @@ STRING 17730
 STRING 17752
 // Units: o06Y (Gnoll Runt), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 17773
@@ -59833,7 +59831,7 @@ Contains useful spells.
 STRING 18101
 // Units: o075 (Ogre Arena), Tip (Tooltip - Basic)
 {
-Build Oger-Arena
+Oger-Arena errichten
 }
 
 STRING 18102
@@ -60313,13 +60311,13 @@ V
 }
 
 STRING 18778
-// Items: I083 (Treasure Map), Name (Name)
+// Items: I083 (Schatzkarte), Name (Name)
 {
 Schatzkarte
 }
 
 STRING 18779
-// Items: I083 (Treasure Map), Tip (Tooltip - Basic)
+// Items: I083 (Schatzkarte), Tip (Tooltip - Basic)
 {
 Schatzkarte erwerben
 }
@@ -60361,25 +60359,25 @@ STRING 18800
 }
 
 STRING 18801
-// Items: I085 (Compass), Name (Name)
+// Items: I085 (Kompass), Name (Name)
 {
 Kompass
 }
 
 STRING 18802
-// Items: I085 (Compass), Tip (Tooltip - Basic)
+// Items: I085 (Kompass), Tip (Tooltip - Basic)
 {
 Kompass erwerben
 }
 
 STRING 18803
-// Items: I085 (Compass), Description (Description)
+// Items: I085 (Kompass), Description (Description)
 {
 Detects enemy ships on the sea.
 }
 
 STRING 18822
-// Items: I085 (Compass), Ubertip (Tooltip - Extended)
+// Items: I085 (Kompass), Ubertip (Tooltip - Extended)
 {
 Detects enemy ships on the sea.
 }
@@ -62171,7 +62169,7 @@ Converts the target item into the chosen race if possible.|n|n|cffffcc00The targ
 }
 
 STRING 20019
-// Items: I083 (Treasure Map), Description (Description)
+// Items: I083 (Schatzkarte), Description (Description)
 {
 Gives you the location of a hidden treasure on the map which increases your gold and lumber.
 }
@@ -62546,7 +62544,7 @@ E
 }
 
 STRING 20108
-// Items: I083 (Treasure Map), Ubertip (Tooltip - Extended)
+// Items: I083 (Schatzkarte), Ubertip (Tooltip - Extended)
 {
 Gives you the location of a hidden treasure on the map which increases your gold and lumber.
 }
@@ -63081,15 +63079,15 @@ Schild der Ehre herstellen
 }
 
 STRING 20282
-// Units: o076 (Magi Lodge), Name (Name)
+// Units: o076 (Magierhaus), Name (Name)
 {
-Magi Lodge
+Magierhaus
 }
 
 STRING 20283
-// Units: o076 (Magi Lodge), Tip (Tooltip - Basic)
+// Units: o076 (Magierhaus), Tip (Tooltip - Basic)
 {
-Build Magi Lodge
+Magierhaus errichten
 }
 
 STRING 20284
@@ -65037,7 +65035,7 @@ Weisen ausbilden
 STRING 22316
 // Units: h067 (Pandaren Woodcutter), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia.  |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. Can become Militia.  |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 22317
@@ -66228,19 +66226,19 @@ STRING 22685
 }
 
 STRING 22687
-// Doodads: D01Q (Dragon Egg), Name (Name)
+// Doodads: D01Q (Drachenei), Name (Name)
 {
 Drachenei
 }
 
 STRING 22688
-// Items: I0B1 (Dragon Egg), Tip (Tooltip - Basic)
+// Items: I0B1 (Drachenei), Tip (Tooltip - Basic)
 {
 Drachenei erwerben
 }
 
 STRING 22689
-// Items: I0B1 (Dragon Egg), Description (Description)
+// Items: I0B1 (Drachenei), Description (Description)
 {
 Massives Drachenei.
 }
@@ -66463,7 +66461,7 @@ D
 STRING 22781
 // Units: n0HF (Centaur Worker), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 22782
@@ -68860,25 +68858,25 @@ Purchase Book of Händler
 }
 
 STRING 25492
-// Items: I0D3 (Small Bill), Name (Name)
+// Items: I0D3 (Kleine Rechnung), Name (Name)
 {
-Small Bill
+Kleine Rechnung
 }
 
 STRING 25493
-// Items: I0D3 (Small Bill), Tip (Tooltip - Basic)
+// Items: I0D3 (Kleine Rechnung), Tip (Tooltip - Basic)
 {
-Purchase Small Bill
+Purchase Kleine Rechnung
 }
 
 STRING 25494
-// Items: I0D3 (Small Bill), Description (Description)
+// Items: I0D3 (Kleine Rechnung), Description (Description)
 {
 Increases the charges of the target item by 1.
 }
 
 STRING 25495
-// Items: I0D3 (Small Bill), Ubertip (Tooltip - Extended)
+// Items: I0D3 (Kleine Rechnung), Ubertip (Tooltip - Extended)
 {
 Increases the charges of the target item by 1.
 }
@@ -68914,9 +68912,9 @@ N
 }
 
 STRING 25502
-// Abilities: A0U5 (Small Bill), Name (Name)
+// Abilities: A0U5 (Kleine Rechnung), Name (Name)
 {
-Small Bill
+Kleine Rechnung
 }
 
 STRING 25558
@@ -68950,39 +68948,39 @@ Increases the charges of the target item by 2.
 }
 
 STRING 25567
-// Items: I0D5 (Large Bill), Name (Name)
+// Items: I0D5 (Große Rechnung), Name (Name)
 {
-Large Bill
+Große Rechnung
 }
 
 STRING 25568
-// Items: I0D5 (Large Bill), Tip (Tooltip - Basic)
+// Items: I0D5 (Große Rechnung), Tip (Tooltip - Basic)
 {
-Purchase Large Bill
+Purchase Große Rechnung
 }
 
 STRING 25569
-// Items: I0D5 (Large Bill), Description (Description)
+// Items: I0D5 (Große Rechnung), Description (Description)
 {
 Increases the charges of the target item by 3.
 }
 
 STRING 25570
-// Items: I0D5 (Large Bill), Ubertip (Tooltip - Extended)
+// Items: I0D5 (Große Rechnung), Ubertip (Tooltip - Extended)
 {
 Increases the charges of the target item by 3.
 }
 
 STRING 25571
-// Items: I0D6 (Ring of the Trading Guild), Name (Name)
+// Items: I0D6 (Ring der Handelsgilde), Name (Name)
 {
-Ring of the Trading Guild
+Ring der Handelsgilde
 }
 
 STRING 25572
-// Items: I0D6 (Ring of the Trading Guild), Tip (Tooltip - Basic)
+// Items: I0D6 (Ring der Handelsgilde), Tip (Tooltip - Basic)
 {
-Purchase Ring of the Trading Guild
+Purchase Ring der Handelsgilde
 }
 
 STRING 25576
@@ -68992,9 +68990,9 @@ Rechnung
 }
 
 STRING 25577
-// Abilities: A0U8 (Large Bill), Name (Name)
+// Abilities: A0U8 (Große Rechnung), Name (Name)
 {
-Large Bill
+Große Rechnung
 }
 
 STRING 25578
@@ -69036,7 +69034,7 @@ Meister Händler
 STRING 25587
 // Abilities: A0UB (Merchant - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler crafts a Ring of the Trading Guild which increases the gold and lumber from sold items.
+The Händler crafts a Ring der Handelsgilde which increases the gold and lumber from sold items.
 }
 
 STRING 25588
@@ -70937,7 +70935,7 @@ Primary structure, used to train Gnoll Runts and receive gathered resources. Can
 STRING 27938
 // Units: o06Z (Kobold Engineer), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 27941
@@ -71717,7 +71715,7 @@ S
 STRING 28421
 // Units: h05V (Burgler), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 28453
@@ -74042,43 +74040,43 @@ Novizen-Juwelenherstellung
 STRING 30997
 // Abilities: A0IN (Jewelcrafting - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Juwelenherstellung
+Fortgeschrittene Juwelenherstellung
 }
 
 STRING 30998
 // Abilities: A0IO (Jewelcrafting - Adept), Tip (Tooltip - Normal)
 {
-Adept Juwelenherstellung
+Adepten-Juwelenherstellung
 }
 
 STRING 30999
 // Abilities: A0IP (Jewelcrafting - Master), Tip (Tooltip - Normal)
 {
-Meister Juwelenherstellung
+Meister-Juwelenherstellung
 }
 
 STRING 31000
 // Abilities: A0IS (Enchanting - Novice), Tip (Tooltip - Normal)
 {
-Novize Verzaubern
+Novizen-Verzaubern
 }
 
 STRING 31001
 // Abilities: A0IT (Enchanting - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Verzaubern
+Fortgeschrittenes Verzaubern
 }
 
 STRING 31002
 // Abilities: A0IU (Enchanting - Adept), Tip (Tooltip - Normal)
 {
-Adept Verzaubern
+Adepten-Verzaubern
 }
 
 STRING 31003
 // Abilities: A0IV (Enchanting - Master), Tip (Tooltip - Normal)
 {
-Meister Verzaubern
+Meister-Verzaubern
 }
 
 STRING 31004
@@ -74778,7 +74776,7 @@ Druid Wassergestalt
 }
 
 STRING 31492
-// Units: o076 (Magi Lodge), EditorSuffix (Name - Editor Suffix)
+// Units: o076 (Magierhaus), EditorSuffix (Name - Editor Suffix)
 {
 (Oger)
 }
@@ -74786,7 +74784,7 @@ STRING 31492
 STRING 31493
 // Upgrades: R0D4 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Ogre ground units the ability to carry items. Ogre ground units can carry up to <A1J2,DataA1> items.
+Verleiht bestimmten Oger-Land-Einheiten die Fähigkeit, Gegenstände zu tragen. Oger-Land-Einheiten können bis zu <A1J2,DataA1> Gegenstände tragen.
 }
 
 STRING 31515
@@ -75374,7 +75372,7 @@ The Enchanter uses his knowledge to craft a Meister-Verzauberformel.
 STRING 31847
 // Abilities: A0U3 (Merchant - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler issues a Small Bill.
+The Händler issues a Kleine Rechnung.
 }
 
 STRING 31848
@@ -75386,7 +75384,7 @@ The Händler issues a Bill.
 STRING 31849
 // Abilities: A0UA (Merchant - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler issues a Large Bill.
+The Händler issues a Große Rechnung.
 }
 
 STRING 31913
@@ -75806,7 +75804,7 @@ Trains Blue Drakes.
 STRING 32471
 // Upgrades: R08Z (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Pandaren ground units the ability to carry items.
+Verleiht bestimmten Pandaren-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 32472
@@ -86498,7 +86496,7 @@ STRING 37167
 STRING 37168
 // Upgrades: R0B3 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Nerubian ground units the ability to carry items.
+Verleiht bestimmten Neruber-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 37169
@@ -90014,7 +90012,7 @@ STRING 38126
 STRING 38127
 // Units: o08O (Dragonspawn Slave), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 38128
@@ -90890,7 +90888,7 @@ STRING 38743
 STRING 38744
 // Upgrades: R0BE (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Vrykul ground units the ability to carry items.
+Verleiht bestimmten Vrykul-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 38745
@@ -96134,7 +96132,7 @@ Meeresschildkröte
 STRING 41197
 // Upgrades: R0CC (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Tuskarr ground units the ability to carry items.
+Verleiht bestimmten Tuskarr-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41198
@@ -96956,7 +96954,7 @@ STRING 41382
 STRING 41383
 // Upgrades: R0CV (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Murloc ground units the ability to carry items.
+Verleiht bestimmten Murloc-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41384
@@ -98237,31 +98235,31 @@ Transforms Tauren into Elite Tauren, giving them increased hit points, armor and
 STRING 41898
 // Upgrades: R05T (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Dalaran ground units the ability to carry items.
+Verleiht bestimmten Dalaran-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41899
 // Upgrades: R06Z (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Kul Tiras ground units the ability to carry items.
+Verleiht bestimmten Kul-Tiras-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41903
 // Upgrades: R08V (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Worgen ground units the ability to carry items.
+Verleiht bestimmten Worgen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41904
 // Upgrades: R099 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Troll ground units the ability to carry items.
+Verleiht bestimmten Troll-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41906
 // Upgrades: R0AG (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Lordaeron ground units the ability to carry items.
+Verleiht bestimmten Lordaeron-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41907
@@ -98273,7 +98271,7 @@ Enables Ogre Hunters to use the Hinterhalt ability. Hinterhalt makes the Ogre Hu
 STRING 41908
 // Upgrades: R0D5 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Tauren ground units the ability to carry items.
+Verleiht bestimmten Tauren-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 41909
@@ -99968,7 +99966,7 @@ STRING 42468
 STRING 42469
 // Units: h0A8 (Firework Team), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Feuerwerk abilities. |n|n|cffffcc00Attacks land units and trees.|r
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Feuerwerk abilities. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 42470
@@ -101892,7 +101890,7 @@ STRING 43392
 STRING 43393
 // Upgrades: R0DY (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Blood Elf ground units the ability to carry items.
+Verleiht bestimmten Blutelfen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 43394
@@ -103254,19 +103252,19 @@ Beschwört eine Leiche.
 STRING 43974
 // Abilities: A1NN (Ogre), Name (Name)
 {
-Ogre
+Oger
 }
 
 STRING 43975
 // Abilities: A1NN (Ogre), Tip (Tooltip - Normal)
 {
-Ogre
+Oger
 }
 
 STRING 43976
 // Abilities: A1NN (Ogre), Ubertip (Tooltip - Normal - Extended)
 {
-Ogre abilities.
+Oger-Fähigkeiten.
 }
 
 STRING 43977
@@ -104166,7 +104164,7 @@ Stellt Werkzeuge zur Übertragung von Gegenstandsfähigkeiten auf andere Gegenst
 STRING 45262
 // Units: o08U (Worker), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 45268
@@ -104813,7 +104811,7 @@ Website: https://wowreforged.org
 STRING 45919
 // Units: n0JZ (Peon), Ubertip (Tooltip - Extended)
 {
-Basic worker unit infused with the blood of demons. Can harvest gold and lumber, build structures, and Repair. Can learn Fel. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit infused with the blood of demons. Can harvest gold and lumber, build structures, and Repair. Can learn Fel. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 45920
@@ -105767,7 +105765,7 @@ STRING 46146
 STRING 46215
 // Units: o03L (Skeletal Servant), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 46246
@@ -107264,37 +107262,37 @@ Heldenstufe 40
 STRING 48521
 // Items: I0B0 (Summon Red Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Red Dragon.|n|n|cffffcc00Requires 5 Dragon Eggs and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Red Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48522
 // Items: I0AL (Summon Green Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Green Dragon.|n|n|cffffcc00Requires 5 Dragon Eggs and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Green Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48523
 // Items: I0AM (Summon Black Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Schwarzer Großdrache.|n|n|cffffcc00Requires 5 Dragon Eggs and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Schwarzer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48524
 // Items: I0AN (Summon Bronze Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Bronzener Großdrache.|n|n|cffffcc00Requires 5 Dragon Eggs and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Bronzener Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48525
 // Items: I0B2 (Summon Blue Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Blauer Großdrache.|n|n|cffffcc00Requires 5 Dragon Eggs and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Blauer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48526
 // Items: I0B3 (Summon Nether Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Nether Dragon.|n|n|cffffcc00Requires 5 Dragon Eggs and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Nether Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48528
@@ -111493,7 +111491,7 @@ Kerkermeister
 STRING 50248
 // Upgrades: R0G3 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Eredar ground units the ability to carry items.
+Verleiht bestimmten Draenei-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 50250
@@ -113581,7 +113579,7 @@ STRING 50842
 STRING 50843
 // Upgrades: R0GH (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Faceless One ground units the ability to carry items.
+Verleiht bestimmten Gesichtslosen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 50844
@@ -114871,7 +114869,7 @@ Primäres Truppen-Produktionsgebäude. Trains Grunts, Armbrustmen and Kriegsmasc
 STRING 51138
 // Units: o098 (War Machine), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Burning Oil ability. |n|n|cffffcc00Attacks land units and trees.|r
+Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Burning Oil ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 51139
@@ -114901,7 +114899,7 @@ STRING 51142
 STRING 51143
 // Units: o09H (War Machine), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Burning Oil ability. |n|n|cffffcc00Attacks land units and trees.|r
+Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Burning Oil ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 51144
@@ -115051,7 +115049,7 @@ Turns the Kriegsmaschine back into an undeployed position, giving it a shorter a
 STRING 51169
 // Upgrades: R0GG (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Höllenorcs ground units the ability to carry items.
+Verleiht bestimmten Höllenorc-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 51170
@@ -115357,7 +115355,7 @@ STRING 51389
 STRING 51390
 // Upgrades: R0I4 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Centaur ground units the ability to carry items.
+Verleiht bestimmten Zentauren-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 51391
@@ -115921,7 +115919,7 @@ Novize Hexenmeisterei
 STRING 51605
 // Upgrades: R08Y (Web), Name (Name)
 {
-Soul Theft
+Seelendiebstahl
 }
 
 STRING 51606
@@ -115939,7 +115937,7 @@ Advanced Hexenmeisterei
 STRING 51608
 // Upgrades: R0ER (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Sturmwind ground units the ability to carry items.
+Verleiht bestimmten Sturmwind-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 51609
@@ -116257,7 +116255,7 @@ STRING 51693
 STRING 51696
 // Abilities: A1X9 (Skill), Ubertip (Tooltip - Normal - Extended)
 {
-Skill hero skills.
+Erlernt Heldenfähigkeiten.
 }
 
 STRING 51697
@@ -116659,7 +116657,7 @@ STRING 51778
 STRING 51779
 // Upgrades: R0DX (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Satyr ground units the ability to carry items.
+Verleiht bestimmten Satyr-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 51780
@@ -117433,7 +117431,7 @@ STRING 53000
 STRING 53001
 // Upgrades: R0HB (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Kobold ground units the ability to carry items.
+Verleiht bestimmten Kobold-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 53060
@@ -121986,7 +121984,7 @@ Dient als Abladepunkt für das gesammeltes Gold.
 STRING 56215
 // Items: I0XM (Lumberjack), Ubertip (Tooltip - Extended)
 {
-Craft lumber and tools to get more lumber:|n- Felling Axe|n- Magischer Samen, Bundle of Lumber and Magischer Fäller |n- Shredder|n- Tiny Sawmilll
+Stellt Holz und Werkzeuge für noch mehr Holz her:|n- Felling Axe|n- Magischer Samen, Bundle of Lumber and Magischer Fäller |n- Shredder|n- Tiny Sawmilll
 }
 
 STRING 56216
@@ -122010,7 +122008,7 @@ STRING 56218
 STRING 56219
 // Items: I11W (Prospector), Ubertip (Tooltip - Extended)
 {
-Craft gold and tools to get more gold:|n- Goldbohrer|n- Magische Goldmünzes and Gold Coins|n- Bohrroboter|n- Winzige Goldwäscherei
+Stellt Gold und Werkzeuge für noch mehr Gold her:|n- Goldbohrer|n- Magische Goldmünzen und Goldmünzen|n- Bohrroboter|n- Winzige Goldwäscherei
 }
 
 STRING 56220
@@ -126575,7 +126573,7 @@ STRING 57911
 STRING 57912
 // Upgrades: R03H (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Dwarf ground units the ability to carry items.
+Verleiht bestimmten Zwergen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 57914
@@ -129616,7 +129614,7 @@ STRING 60241
 STRING 60242
 // Upgrades: R048 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific High Elf ground units the ability to carry items.
+Verleiht bestimmten Hochelfen-Land-Einheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 60243
