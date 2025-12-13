@@ -2735,6 +2735,8 @@ globals
     // WoW Reforged
     // make constants available to triggers AND common.ai
 
+    constant playercolor PLAYER_COLOR_BLACK                          = ConvertPlayerColor(24)
+
     constant string MAP_VERSION                                      = "4.6"
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
