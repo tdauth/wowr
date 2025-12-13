@@ -827,6 +827,8 @@ StringList {
     GRUULS_LIAR                        "Gruuls Unterschlupf",
     ARGUS                              "Argus",
     EREDATH                            "Eredath",
+    ANTARON_WASTES                     "Antoranische Ödnis",
+    KROKUUN                            "Krokuun",
     EMERALD_DREAM                      "Smaragdgrüner Traum",
     SHADOWLANDS                        "Schattenlande",
     REVENDRETH                         "Revendreth",
