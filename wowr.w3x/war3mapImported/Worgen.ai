@@ -10,7 +10,7 @@ function BuildingStrategy takes nothing returns nothing
 
         call SetBuildUnit(2, WORGEN_HOUSING)
         call SetBuildUnit(3, WORGEN_HOUSE)
-        call SetBuildUnit(2, WORGEN_BARRACKS)
+        call SetBuildUnit(1, WORGEN_BARRACKS)
         call SetBuildUnit(1, WORGEN_ALTAR)
         call SetBuildUnit(1, WORGEN_LUMBER_MILL)
         call SetBuildUnit(1, WORGEN_BLACKSMITH)
