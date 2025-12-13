@@ -1031,7 +1031,6 @@ StringList {
     SETTINGS_LEGION                    "- Die brennende Legion: %1%",
     SETTINGS_VICTORY                   "- Sieg: %1%",
     SETTINGS_SEASONS                   "- Jahreszeiten: %1%",
-    SETTINGS_HARDCORE                  "- Hardcore: %1%",
     SETTINGS_CHEATS                    "- Cheats: %1%",
     SETTINGS_BUILDER                   "- Builder: %1%",
     SETTINGS_PORTALS                   "- Portale: %1%",
@@ -1221,6 +1220,7 @@ StringList {
     PICKED_START_LOCATION_X            "Startort %1% gewählt.",
     NO_CLAN_ISLAND                     "Sie müssen Mitglied des clans TheElvenClan sein, um auf der Clan-Insel zu starten.",
     YOU_ARE_CARRYING_NOW_THE_X         "Sie tragen nun das %1%.",
+    ACCEPT_HINT                        "Klicken Sie auf Akzeptieren in der Taverne Spiel starten, um Ihre Auswahl für das Spiel zu übernehmen.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt.",
     // Alliance with the Burning Legion
