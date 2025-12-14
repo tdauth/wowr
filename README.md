@@ -118,15 +118,15 @@ These are the existing translations so far:
 * 🇺🇸 English: [map strings](./wowr.w3x/war3map.wts), [global strings](./wowr.w3x/war3mapImported/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/war3mapMisc.txt)
 * 🇩🇪 German: [map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [global strings](./wowr.w3x/_Locales/deDE.w3mod/war3mapImported/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/_Locales/deDE.w3mod/war3mapMisc.txt) The German translation uses the German translations from of Warcraft III: The Frozen Throne rather than Warcraft III: Reforged which is more nostalgic and overall much better in the oppinion of the map creator.
 
-The files have to be updated according to the English files which are the main files.
+The files have to be updated according to the English files which are the main files with the script [diffstrings.bat](./scripts/diffstrings.bat).
+It uses the tool [wc3trans](https://github.com/tdauth/wc3trans) to update the map strings and [Meld](https://meldmerge.org/) to diff the files.
+
+
 Strings in custom scripts should always refer to entries from the global strings FDF file:
 
 ```
-Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result()
+Format(GetLocalizedStringSafe("SETTINGS_PLAYERS")).i(GetPlayers()).result()
 ```
-
-The function Format is part of the library StringFormat.
-Use [diffstrings.bat](./scripts/diffstrings.bat) to automatically update and compare the translation files with the original ones.
 
 ## Release Process
 
