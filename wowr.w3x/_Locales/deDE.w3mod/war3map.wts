@@ -4946,6 +4946,12 @@ STRING 835
 Bosse
 }
 
+STRING 836
+// Abilities: ACss (Shadow Strike), Name (Name)
+{
+Schattenschlag
+}
+
 STRING 837
 // Items: I04D (Warlock), Ubertip (Tooltip - Extended)
 {

@@ -441,6 +441,7 @@ StringList {
     NORTHREND_WEST                     "Northrend West",
     SUNSTRIDER_ISLE                    "Insel der Sonnenwanderer",
     KEZAN                              "Kezan",
+    UNDERMINE                          "Undermine",
     PANDARIA                           "Pandaria",
     ARGUS                              "Argus",
     AZUREMYST_ISLES                    "Azurmythosinseln",
