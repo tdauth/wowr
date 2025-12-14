@@ -246,7 +246,7 @@ Here is a list of some modified versions online:
 * Almia: [World Bounds v1.3](https://github.com/nestharus/JASS/blob/master/jass/Systems/WorldBounds/script.j)
 * Xetanth87: [I2S without natives for use in AI scripts](https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/)
 * The_Silent: [Medieval Wall Trigger Map](https://www.hiveworkshop.com/pastebin/907781cf76579f09be5b3697c14733b8.24012)
-* Baradé, Blizzard Entertainment: Doodad icons
+* Baradé, Blizzard Entertainment: Doodad icons.
 * Baradé: Digit icons.
 * Kam, Xaran Alamas, Dmitry Rommel, Tufy: [Gnomish Submarine](https://www.hiveworkshop.com/threads/gnomish-submarine.66130/)
 * Scias: [BTNGnomeEngineer](https://www.hiveworkshop.com/threads/btngnomeengineer.310795/)
@@ -409,8 +409,6 @@ Here is a list of some modified versions online:
 * RightField: [Branch](https://www.hiveworkshop.com/threads/branch.49481/)
 * Mephestrial: [Gan'arg Engineer](https://www.hiveworkshop.com/threads/ganarg-engineer.158134/)
 * Explobomb: [Core Hound](https://www.hiveworkshop.com/threads/core-hound.331564/)
-* Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.318737/)
-* Murlocologist: [Ragnaros](https://www.hiveworkshop.com/threads/ragnaros.326594/)
 * The Panda: [BTNBlastHammer](https://www.hiveworkshop.com/threads/btnblasthammer.327759/)
 * Murlocologist: [Ashbringer](https://www.hiveworkshop.com/threads/ashbringer.328960/)
 * Eagle XI: [Goblin Building Icons](https://www.hiveworkshop.com/threads/goblin-building-icons.275807/)
@@ -493,7 +491,6 @@ Here is a list of some modified versions online:
 * JollyD: [BTNGiftHive](https://www.hiveworkshop.com/threads/btngifthive.227947/)
 * Mc !: [Present](https://www.hiveworkshop.com/threads/present.49772/)
 * Thrikodius: [Frosty the Snowman](https://www.hiveworkshop.com/threads/frosty-the-snowman.119803/)
-* Mr. Bob: [Medieval Buildings: The complete collection.](https://www.hiveworkshop.com/threads/medieval-buildings-the-complete-collection.157245/)
 * PrinceYaser: [Queen Azshara](https://www.hiveworkshop.com/threads/queen-azshara.303895/)
 * Eagle XI: [Siegemachinery Icons](https://www.hiveworkshop.com/threads/siegemachinery-icons.275804/)
 * Eagle XI: [Medieval Building Icons](https://www.hiveworkshop.com/threads/medieval-building-icons.275805/)
