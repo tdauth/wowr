@@ -49,28 +49,28 @@ DependencyOr=o08Q,o03U,o0AU,o0AG,o0A0,o09D,n0KD,h0UD,h0R1,o07B,e025,h0QM,n0FZ,o0
 
 [TWN1]
 DependencyOr=o08P,o03M,h05X,o071,o06V,o08R,o070,o08V,n0IO,h0QY,o06C,n0GX,h0JX,n0FP,o05N,h0IU,h0IA,u01Q,h0LX,o029,o029,o02M,h06D,h051,h057,n05M,n026,ndh2,h00J,u005,htow,ogre,etol,unpl,o00O,h02R,h040
-Name=Rathaus Stufe 1
+Name=Tier 1 Hall
 
 [TWN2]
 DependencyOr=o041,o03R,h05Y,o0B0,o0AI,o09Y,o09A,o092,n0JJ,h0RC,o073,n0GY,h0KB,n0G6,o05Y,h0IZ,h0IB,u023,h0MC,o02A,o037,o02A,h0AC,h051,h05I,n026,ndh2,h00K,u00E,h00A,hkee,ostr,etoa,unp1,nntt,o022,h030,h03Z
-Name=Rathaus Stufe 2
+Name=Tier 2 Hall
 XPFactor=0
 
 [TWN3]
 DependencyOr=o044,o03S,h05Z,o0B1,o0AJ,o09Z,o09F,o093,n0JK,h0RD,o074,n0GZ,h0KE,n0G5,o05Z,h0IV,h0IC,u024,h0MD,o02B,o038,o02B,h0AD,h051,h05J,n026,ndh2,h00L,u00F,h00B,hcas,ofrt,etoe,unp2,n05N,o023,h031,h041
-Name=Rathaus Stufe 3
+Name=Tier 3 Hall
 XPFactor=0
 
 [TWN4]
 DependencyOr=h00M,h00N,h0C0
-Name=Rathaus Stufe 4
+Name=Tier 4 Hall
 
 [TWN5]
-Name=Rathaus Stufe 5
+Name=Tier 5 Hall
 
 [TWN6]
-Name=Rathaus Stufe 6
+Name=Tier 6 Hall
 
 [TWN7]
-Name=Rathaus Stufe 7
+Name=Tier 7 Hall
 
