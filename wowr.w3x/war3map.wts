@@ -57595,26 +57595,6 @@ STRING 16870
 No votekick is running!
 }
 
-STRING 16871
-{
-Enabled AI for yourself!
-}
-
-STRING 16872
-{
-Your hero must be at least at level 200 to enable the AI for yourself!
-}
-
-STRING 16873
-{
-Disabled AI for yourself!
-}
-
-STRING 16874
-{
-Your hero must be at least at level 200 to disable the AI for yourself!
-}
-
 STRING 16877
 // Upgrades: R0EG (Ensnare), Hotkey (Hotkey)
 {
