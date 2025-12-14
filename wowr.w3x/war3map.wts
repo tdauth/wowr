@@ -37303,7 +37303,7 @@ Creates a Tidal Guardian at a target location.
 }
 
 STRING 7894
-// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
+// Units: n0JP (Draenei Citizen (female)), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39773,13 +39773,13 @@ Train Draenei Child
 }
 
 STRING 8375
-// Units: n0JP (Draenei Citizen (female)), EditorSuffix (Name - Editor Suffix)
+// Units: h0UK (Argunite Mill), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8376
-// Units: h0UK (Argunite Mill), EditorSuffix (Name - Editor Suffix)
+// Units: n01H (Draenei Child), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39820,37 +39820,37 @@ Scepter of Draenei
 }
 
 STRING 8383
-// Units: n01H (Draenei Child), EditorSuffix (Name - Editor Suffix)
-{
-(Draenei)
-}
-
-STRING 8384
 // Units: h01D (Stables), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8385
+STRING 8384
 // Units: h01E (Arcane Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8386
+STRING 8385
 // Units: h01F (Guard Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8387
+STRING 8386
 // Units: h01G (Siege Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8388
+STRING 8387
 // Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
+{
+(Draenei)
+}
+
+STRING 8388
+// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39898,13 +39898,13 @@ STRING 8395
 }
 
 STRING 8396
-// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
+// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8397
-// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
+// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40077,13 +40077,13 @@ Space Travel
 }
 
 STRING 8435
-// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
+// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8436
-// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
+// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40107,7 +40107,7 @@ Mystic Adept Training
 }
 
 STRING 8440
-// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
+// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40131,7 +40131,7 @@ Mystic Master Training
 }
 
 STRING 8444
-// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40179,7 +40179,7 @@ Gives Dimensional Ships the ability Hyperspace which allows them to travel at an
 }
 
 STRING 8452
-// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
+// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -54781,7 +54781,7 @@ STRING 14627
 }
 
 STRING 14629
-// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
+// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
