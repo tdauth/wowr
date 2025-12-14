@@ -1285,6 +1285,11 @@ StringList {
     // Trading Post
     ENABLED_GOLD_AUTO_EXCHANGE         "Automatischen Goldtausch aktiviert.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Automatischen Goldtausch deaktiviert.",
+    // Chat Commands
+    AI_CHANGE                          "Sie haben die KI zu %1% für %2% geändert.",
+    AI_CHANGE_ERROR                    "KI kann nicht zu %1% für %2% geändert werden.",
+    ENABLED                            "aktiviert",
+    DISABLED                           "deaktiviert",
     // Votes
     UNABLE_TO_VOTE                     "Abstimmung unmöglich.",
     UNABLE_TO_START_VOTE               "Abstimmungsstart unmöglich.",

@@ -686,13 +686,13 @@ A
 }
 
 STRING 115
-// Items: I0D6 (Ring der Handelsgilde), Description (Description)
+// Items: I0D6 (Ring of the Trading Guild), Description (Description)
 {
 Increases the gold and lumber gained from selling items.
 }
 
 STRING 116
-// Items: I0D6 (Ring der Handelsgilde), Ubertip (Tooltip - Extended)
+// Items: I0D6 (Ring of the Trading Guild), Ubertip (Tooltip - Extended)
 {
 Increases the gold and lumber gained from selling items. Multiplies the sold item's gold and lumber values with the number of charges of all rings in the selling hero's inventory. If the gold or lumber value of the sold item is 0 it will be at least 10. Gives the owner of the selling unit the additional gold and lumber.|n|nThe ring itself cannot be sold.
 }
@@ -13063,7 +13063,7 @@ A
 }
 
 STRING 2318
-// Items: I18H (Magischer Auffüller), Hotkey (Hotkey)
+// Items: I18H (Magical Filler), Hotkey (Hotkey)
 {
 A
 }
@@ -20689,13 +20689,13 @@ D
 }
 
 STRING 4093
-// Items: I02Z (Rune der Wiederherstellung (Runeforger)), Name (Name)
+// Items: I02Z (Rune of Restoration (Runeforger)), Name (Name)
 {
 Rune der Wiederherstellung (Runeforger)
 }
 
 STRING 4094
-// Items: I030 (Rune der Geschwindigkeit (Runeforger)), Name (Name)
+// Items: I030 (Rune of Speed (Runeforger)), Name (Name)
 {
 Rune der Geschwindigkeit (Runeforger)
 }
@@ -20869,25 +20869,25 @@ Summons Tharifas to fight for you. |nHält <AIbd,Dur1> Sekunden lang an.
 }
 
 STRING 4126
-// Items: I037 (Green Drachenei), Description (Description)
+// Items: I037 (Green Dragon Egg), Description (Description)
 {
 Beschwört einen grünen Großdrachen.
 }
 
 STRING 4127
-// Items: I037 (Green Drachenei), Name (Name)
+// Items: I037 (Green Dragon Egg), Name (Name)
 {
 Ei eines grünen Großdrachens
 }
 
 STRING 4128
-// Items: I037 (Green Drachenei), Tip (Tooltip - Basic)
+// Items: I037 (Green Dragon Egg), Tip (Tooltip - Basic)
 {
 Ei eines grünen Großdrachens erwerben
 }
 
 STRING 4129
-// Items: I037 (Green Drachenei), Ubertip (Tooltip - Extended)
+// Items: I037 (Green Dragon Egg), Ubertip (Tooltip - Extended)
 {
 Summons a Green Dragon to fight for you. |nHält <AIbd,Dur1> Sekunden lang an.
 }
@@ -30423,7 +30423,7 @@ R
 }
 
 STRING 6084
-// Items: I0B1 (Drachenei), Ubertip (Tooltip - Extended)
+// Items: I0B1 (Dragon Egg), Ubertip (Tooltip - Extended)
 {
 This massive egg will not hatch without a parent to warm it. Can be used as an ingredient to permanently summon a dragon.
 }
@@ -37304,7 +37304,7 @@ Creates a Tidal Guardian at a target location.
 }
 
 STRING 7894
-// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
+// Units: n0JP (Draenei Citizen (female)), EditorSuffix (Name - Editor Suffix)
 {
 (Eredar)
 }
@@ -39774,13 +39774,13 @@ Draenei-Kind ausbilden
 }
 
 STRING 8375
-// Units: n0JP (Draenei Citizen (female)), EditorSuffix (Name - Editor Suffix)
+// Units: h0UK (Argunite Mill), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8376
-// Units: h0UK (Argunite Mill), EditorSuffix (Name - Editor Suffix)
+// Units: n01H (Draenei Child), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39821,37 +39821,37 @@ Zepter der Draenei
 }
 
 STRING 8383
-// Units: n01H (Draenei Child), EditorSuffix (Name - Editor Suffix)
-{
-(Draenei)
-}
-
-STRING 8384
 // Units: h01D (Stables), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8385
+STRING 8384
 // Units: h01E (Arcane Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8386
+STRING 8385
 // Units: h01F (Guard Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8387
+STRING 8386
 // Units: h01G (Siege Spire), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
-STRING 8388
+STRING 8387
 // Units: H01H (Vindicator), EditorSuffix (Name - Editor Suffix)
+{
+(Draenei)
+}
+
+STRING 8388
+// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -39899,13 +39899,13 @@ STRING 8395
 }
 
 STRING 8396
-// Units: h01I (Dimensional Ship), EditorSuffix (Name - Editor Suffix)
+// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8397
-// Abilities: A062 (Demon Fire), EditorSuffix (Editor Suffix)
+// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40078,13 +40078,13 @@ Raumfahrt
 }
 
 STRING 8435
-// Abilities: A064 (Devour), EditorSuffix (Editor Suffix)
+// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8436
-// Abilities: A065 (Healing Wave), EditorSuffix (Editor Suffix)
+// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40108,7 +40108,7 @@ Mystic Adeptenausbildung
 }
 
 STRING 8440
-// Abilities: A066 (Brilliance Aura), EditorSuffix (Editor Suffix)
+// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40132,7 +40132,7 @@ Mystic Meisterausbildung
 }
 
 STRING 8444
-// Abilities: A067 (Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40180,7 +40180,7 @@ Gives Dimensionsschiffs the ability Hyperspace which allows them to travel at an
 }
 
 STRING 8452
-// Abilities: A068 (Ray of Disruption), EditorSuffix (Editor Suffix)
+// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -40592,49 +40592,49 @@ Rune der Großen Auferstehung (Runeforger)
 }
 
 STRING 8531
-// Items: I165 (Goldene Krone), Ubertip (Tooltip - Extended)
+// Items: I165 (Golden Crown), Ubertip (Tooltip - Extended)
 {
 Increases all hero stats by 7.
 }
 
 STRING 8532
-// Items: I165 (Goldene Krone), Name (Name)
+// Items: I165 (Golden Crown), Name (Name)
 {
 Goldene Krone
 }
 
 STRING 8533
-// Items: I165 (Goldene Krone), Tip (Tooltip - Basic)
+// Items: I165 (Golden Crown), Tip (Tooltip - Basic)
 {
 Goldene Krone erwerben
 }
 
 STRING 8534
-// Items: I165 (Goldene Krone), Description (Description)
+// Items: I165 (Golden Crown), Description (Description)
 {
 Increases all hero stats by 7.
 }
 
 STRING 8535
-// Items: I166 (Armreif), Ubertip (Tooltip - Extended)
+// Items: I166 (Bracelet), Ubertip (Tooltip - Extended)
 {
 Increases all hero stats by 6.
 }
 
 STRING 8536
-// Items: I166 (Armreif), Name (Name)
+// Items: I166 (Bracelet), Name (Name)
 {
 Armreif
 }
 
 STRING 8537
-// Items: I166 (Armreif), Tip (Tooltip - Basic)
+// Items: I166 (Bracelet), Tip (Tooltip - Basic)
 {
 Armreif erwerben
 }
 
 STRING 8538
-// Items: I166 (Armreif), Description (Description)
+// Items: I166 (Bracelet), Description (Description)
 {
 Increases all hero stats by 6.
 }
@@ -46103,25 +46103,25 @@ Errichtet am Zielort ein Tiergehege.
 }
 
 STRING 10605
-// Items: I18H (Magischer Auffüller), Name (Name)
+// Items: I18H (Magical Filler), Name (Name)
 {
 Magischer Auffüller
 }
 
 STRING 10606
-// Items: I18H (Magischer Auffüller), Description (Description)
+// Items: I18H (Magical Filler), Description (Description)
 {
 Magischer Auffüller from the far continent of Kalimdor that refills mines.
 }
 
 STRING 10607
-// Items: I18H (Magischer Auffüller), Ubertip (Tooltip - Extended)
+// Items: I18H (Magical Filler), Ubertip (Tooltip - Extended)
 {
 Füllt eine Mine wieder auf.
 }
 
 STRING 10608
-// Items: I18H (Magischer Auffüller), Tip (Tooltip - Basic)
+// Items: I18H (Magical Filler), Tip (Tooltip - Basic)
 {
 Magischen Auffüller erwerben
 }
@@ -46175,7 +46175,7 @@ The Farmer uses his knowledge to craft a Winziges Tiergehege.
 }
 
 STRING 10617
-// Abilities: A1VT (Magischer Auffüller), Name (Name)
+// Abilities: A1VT (Magical Filler), Name (Name)
 {
 Magischer Auffüller
 }
@@ -47125,25 +47125,25 @@ Errichtet einen Baukunst-Stromgenerator.
 }
 
 STRING 10879
-// Items: I19D (Winziger Hafen), Name (Name)
+// Items: I19D (Tiny Shipyard), Name (Name)
 {
 Winziger Hafen
 }
 
 STRING 10880
-// Items: I19D (Winziger Hafen), Tip (Tooltip - Basic)
+// Items: I19D (Tiny Shipyard), Tip (Tooltip - Basic)
 {
 Winzigen Hafen erwerben
 }
 
 STRING 10881
-// Items: I19D (Winziger Hafen), Description (Description)
+// Items: I19D (Tiny Shipyard), Description (Description)
 {
 Errichtet einen Hafen.
 }
 
 STRING 10882
-// Items: I19D (Winziger Hafen), Ubertip (Tooltip - Extended)
+// Items: I19D (Tiny Shipyard), Ubertip (Tooltip - Extended)
 {
 Errichtet einen Hafen.
 }
@@ -47191,7 +47191,7 @@ The Ingenieur uses his knowledge to create a Winzigen Baukunst-Stromgenerator.
 }
 
 STRING 10890
-// Abilities: A21F (Build Winziger Hafen), Name (Name)
+// Abilities: A21F (Build Tiny Shipyard), Name (Name)
 {
 Winzigen Hafen errichten
 }
@@ -47335,7 +47335,7 @@ Winzigen Stern erwerben
 }
 
 STRING 10915
-// Abilities: A21F (Build Winziger Hafen), EditorSuffix (Editor Suffix)
+// Abilities: A21F (Build Tiny Shipyard), EditorSuffix (Editor Suffix)
 {
 (Kapitän)
 }
@@ -50045,7 +50045,7 @@ Bildet Greifenreiter, Adler-Ritter und Greifenritter aus.
 }
 
 STRING 11825
-// Units: o076 (Magierhaus), Ubertip (Tooltip - Extended)
+// Units: o076 (Magi Lodge), Ubertip (Tooltip - Extended)
 {
 Spellcaster production building. Trains Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers. |nAlso contains spell upgrades for Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers.
 }
@@ -51894,7 +51894,7 @@ The ancestral homeland of Azeroth's dragonflights.
 }
 
 STRING 12215
-// Items: I0B1 (Drachenei), Name (Name)
+// Items: I0B1 (Dragon Egg), Name (Name)
 {
 Drachenei
 }
@@ -54465,7 +54465,7 @@ Velkar the Thief,Bink the Burglar,Vagnhild,Kang the Soul Thief,Thaddock the Thie
 }
 
 STRING 14436
-// Items: rnsp (Ring der Überlegenheit), Description (Description)
+// Items: rnsp (Ring of Superiority), Description (Description)
 {
 Provides a +2 bonus to Strength, Agility and Intelligence.
 }
@@ -54477,7 +54477,7 @@ E
 }
 
 STRING 14463
-// Items: rnsp (Ring der Überlegenheit), Ubertip (Tooltip - Extended)
+// Items: rnsp (Ring of Superiority), Ubertip (Tooltip - Extended)
 {
 Increases the Strength, Agility and Intelligence of the Hero by 2 when worn.
 }
@@ -54782,7 +54782,7 @@ STRING 14627
 }
 
 STRING 14629
-// Abilities: A0JX (Space Travel), EditorSuffix (Editor Suffix)
+// Upgrades: R0G3 (Backpack), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -57596,26 +57596,6 @@ STRING 16870
 No votekick is running!
 }
 
-STRING 16871
-{
-Enabled AI for yourself!
-}
-
-STRING 16872
-{
-Your hero must be at least at level 200 to enable the AI for yourself!
-}
-
-STRING 16873
-{
-Disabled AI for yourself!
-}
-
-STRING 16874
-{
-Your hero must be at least at level 200 to disable the AI for yourself!
-}
-
 STRING 16877
 // Upgrades: R0EG (Ensnare), Hotkey (Hotkey)
 {
@@ -60311,13 +60291,13 @@ V
 }
 
 STRING 18778
-// Items: I083 (Schatzkarte), Name (Name)
+// Items: I083 (Treasure Map), Name (Name)
 {
 Schatzkarte
 }
 
 STRING 18779
-// Items: I083 (Schatzkarte), Tip (Tooltip - Basic)
+// Items: I083 (Treasure Map), Tip (Tooltip - Basic)
 {
 Schatzkarte erwerben
 }
@@ -60359,25 +60339,25 @@ STRING 18800
 }
 
 STRING 18801
-// Items: I085 (Kompass), Name (Name)
+// Items: I085 (Compass), Name (Name)
 {
 Kompass
 }
 
 STRING 18802
-// Items: I085 (Kompass), Tip (Tooltip - Basic)
+// Items: I085 (Compass), Tip (Tooltip - Basic)
 {
 Kompass erwerben
 }
 
 STRING 18803
-// Items: I085 (Kompass), Description (Description)
+// Items: I085 (Compass), Description (Description)
 {
 Detects enemy ships on the sea.
 }
 
 STRING 18822
-// Items: I085 (Kompass), Ubertip (Tooltip - Extended)
+// Items: I085 (Compass), Ubertip (Tooltip - Extended)
 {
 Detects enemy ships on the sea.
 }
@@ -62169,7 +62149,7 @@ Converts the target item into the chosen race if possible.|n|n|cffffcc00The targ
 }
 
 STRING 20019
-// Items: I083 (Schatzkarte), Description (Description)
+// Items: I083 (Treasure Map), Description (Description)
 {
 Gives you the location of a hidden treasure on the map which increases your gold and lumber.
 }
@@ -62544,7 +62524,7 @@ E
 }
 
 STRING 20108
-// Items: I083 (Schatzkarte), Ubertip (Tooltip - Extended)
+// Items: I083 (Treasure Map), Ubertip (Tooltip - Extended)
 {
 Gives you the location of a hidden treasure on the map which increases your gold and lumber.
 }
@@ -63079,13 +63059,13 @@ Schild der Ehre herstellen
 }
 
 STRING 20282
-// Units: o076 (Magierhaus), Name (Name)
+// Units: o076 (Magi Lodge), Name (Name)
 {
 Magierhaus
 }
 
 STRING 20283
-// Units: o076 (Magierhaus), Tip (Tooltip - Basic)
+// Units: o076 (Magi Lodge), Tip (Tooltip - Basic)
 {
 Magierhaus errichten
 }
@@ -66226,19 +66206,19 @@ STRING 22685
 }
 
 STRING 22687
-// Doodads: D01Q (Drachenei), Name (Name)
+// Doodads: D01Q (Dragon Egg), Name (Name)
 {
 Drachenei
 }
 
 STRING 22688
-// Items: I0B1 (Drachenei), Tip (Tooltip - Basic)
+// Items: I0B1 (Dragon Egg), Tip (Tooltip - Basic)
 {
 Drachenei erwerben
 }
 
 STRING 22689
-// Items: I0B1 (Drachenei), Description (Description)
+// Items: I0B1 (Dragon Egg), Description (Description)
 {
 Massives Drachenei.
 }
@@ -68858,25 +68838,25 @@ Purchase Book of Händler
 }
 
 STRING 25492
-// Items: I0D3 (Kleine Rechnung), Name (Name)
+// Items: I0D3 (Small Bill), Name (Name)
 {
 Kleine Rechnung
 }
 
 STRING 25493
-// Items: I0D3 (Kleine Rechnung), Tip (Tooltip - Basic)
+// Items: I0D3 (Small Bill), Tip (Tooltip - Basic)
 {
 Purchase Kleine Rechnung
 }
 
 STRING 25494
-// Items: I0D3 (Kleine Rechnung), Description (Description)
+// Items: I0D3 (Small Bill), Description (Description)
 {
 Increases the charges of the target item by 1.
 }
 
 STRING 25495
-// Items: I0D3 (Kleine Rechnung), Ubertip (Tooltip - Extended)
+// Items: I0D3 (Small Bill), Ubertip (Tooltip - Extended)
 {
 Increases the charges of the target item by 1.
 }
@@ -68912,7 +68892,7 @@ N
 }
 
 STRING 25502
-// Abilities: A0U5 (Kleine Rechnung), Name (Name)
+// Abilities: A0U5 (Small Bill), Name (Name)
 {
 Kleine Rechnung
 }
@@ -68948,37 +68928,37 @@ Increases the charges of the target item by 2.
 }
 
 STRING 25567
-// Items: I0D5 (Große Rechnung), Name (Name)
+// Items: I0D5 (Large Bill), Name (Name)
 {
 Große Rechnung
 }
 
 STRING 25568
-// Items: I0D5 (Große Rechnung), Tip (Tooltip - Basic)
+// Items: I0D5 (Large Bill), Tip (Tooltip - Basic)
 {
 Purchase Große Rechnung
 }
 
 STRING 25569
-// Items: I0D5 (Große Rechnung), Description (Description)
+// Items: I0D5 (Large Bill), Description (Description)
 {
 Increases the charges of the target item by 3.
 }
 
 STRING 25570
-// Items: I0D5 (Große Rechnung), Ubertip (Tooltip - Extended)
+// Items: I0D5 (Large Bill), Ubertip (Tooltip - Extended)
 {
 Increases the charges of the target item by 3.
 }
 
 STRING 25571
-// Items: I0D6 (Ring der Handelsgilde), Name (Name)
+// Items: I0D6 (Ring of the Trading Guild), Name (Name)
 {
 Ring der Handelsgilde
 }
 
 STRING 25572
-// Items: I0D6 (Ring der Handelsgilde), Tip (Tooltip - Basic)
+// Items: I0D6 (Ring of the Trading Guild), Tip (Tooltip - Basic)
 {
 Purchase Ring der Handelsgilde
 }
@@ -68990,7 +68970,7 @@ Rechnung
 }
 
 STRING 25577
-// Abilities: A0U8 (Große Rechnung), Name (Name)
+// Abilities: A0U8 (Large Bill), Name (Name)
 {
 Große Rechnung
 }
@@ -74776,7 +74756,7 @@ Druid Wassergestalt
 }
 
 STRING 31492
-// Units: o076 (Magierhaus), EditorSuffix (Name - Editor Suffix)
+// Units: o076 (Magi Lodge), EditorSuffix (Name - Editor Suffix)
 {
 (Oger)
 }

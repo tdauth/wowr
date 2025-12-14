@@ -1287,16 +1287,10 @@ StringList {
     ENABLED_GOLD_AUTO_EXCHANGE         "Enabled automatic gold exchange.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Disabled automatic gold exchange.",
     // Chat Commands
-    AI_DIFFICULTY                      "You changed the AI to %1% for %2%.",
-    AI_DIFFICULTY_ERROR                "Unable to change AI to %1% for %2%.",
-    AI_CONTROL                         "You changed the AI to %1% for %2%.",
-    AI_CONTROL_ERROR                   "Unable to change AI to %1% for %2%.",
-    ENABLE                             "enable",
-    DISABLE                            "disable",
+    AI_CHANGE                          "You changed the AI to %1% for %2%.",
+    AI_CHANGE_ERROR                    "Unable to change AI to %1% for %2%.",
     ENABLED                            "enabled",
     DISABLED                           "disabled",
-    AI_ENABLE                          "You have %1% the AI script for %2%.",
-    AI_ENABLE_ERROR                    "Unable to %1% AI for %2%.",
     // Votes
     UNABLE_TO_VOTE                     "Unable to vote.",
     UNABLE_TO_START_VOTE               "Unable to start vote.",
