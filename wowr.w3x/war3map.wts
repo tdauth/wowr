@@ -100933,7 +100933,7 @@ Summons an Ice Revenant. The Ice Revenant lasts <AIir,Dur1> seconds.|n|n|cffffcc
 STRING 42965
 // Items: I0KJ (Craft Spiked Collar), Ubertip (Tooltip - Extended)
 {
-Summons a Fel Stalker to fight for you. |nLasts <AIfh,Dur1> seconds.|n|n|cffffcc00Requirements:|n- 3 Spikes|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a Fel Stalker to fight for you. |nLasts <AIfh,Dur1> seconds.|n|n|cffffcc00Requirements:|n- 3 Spikes|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42966
@@ -100945,61 +100945,61 @@ Gives <A18G,DataA1> gold to the player when used.|n|n|cffffcc00Requires 3 Silver
 STRING 42967
 // Items: I0NV (Craft Shadow Orb +1), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 1.|n|n|cffffcc00Requirements:|n- Shadow Orb Fragment|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 1.|n|n|cffffcc00Requirements:|n- Shadow Orb Fragment|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42968
 // Items: I0NW (Craft Shadow Orb +2), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 2.|n|n|cffffcc00Requirements:|n- 2 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 2.|n|n|cffffcc00Requirements:|n- 2 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42969
 // Items: I0NX (Craft Shadow Orb +3), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 3.|n|n|cffffcc00Requirements:|n- 3 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 3.|n|n|cffffcc00Requirements:|n- 3 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42970
 // Items: I0NY (Craft Shadow Orb +4), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 4 and armor by 1.|n|n|cffffcc00Requirements:|n- 4 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 4 and armor by 1.|n|n|cffffcc00Requirements:|n- 4 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42971
 // Items: I0NZ (Craft Shadow Orb +5), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 5 and armor by 1.|n|n|cffffcc00Requirements:|n- 5 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 5 and armor by 1.|n|n|cffffcc00Requirements:|n- 5 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42972
 // Items: I0O0 (Craft Shadow Orb +6), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 6 and armor by 1.|n|n|cffffcc00Requirements:|n- 6 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 6 and armor by 1.|n|n|cffffcc00Requirements:|n- 6 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42973
 // Items: I0O1 (Craft Shadow Orb +7), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 7 and armor by 2.|n|n|cffffcc00Requirements:|n- 7 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 7 and armor by 2.|n|n|cffffcc00Requirements:|n- 7 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42974
 // Items: I0O2 (Craft Shadow Orb +8), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 8 and armor by 2.|n|n|cffffcc00Requirements:|n- 8 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 8 and armor by 2.|n|n|cffffcc00Requirements:|n- 8 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42975
 // Items: I0O3 (Craft Shadow Orb +9), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 9, armor by 2 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 9 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 9, armor by 2 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 9 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42976
 // Items: I0O4 (Craft Shadow Orb +10), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 10, armor by 3 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 10 Shadow Orb Fragments|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 10, armor by 3 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 10 Shadow Orb Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 42977
