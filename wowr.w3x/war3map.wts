@@ -94,7 +94,7 @@ STRING 15
 STRING 16
 // Abilities: A11F (Mass Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-Teleports 4 of the player's nearby units, including the hero, to a friendly ground unit or structure.
+Teleports <A11F,DataA1> of the player's nearby units, including the hero, to a friendly ground unit or structure.
 }
 
 STRING 17
@@ -142,7 +142,7 @@ STRING 23
 STRING 24
 // Units: Emns (Keeper of the Grove), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, adept at using nature spells. Can learn Entangling Roots, Force of Nature, Thorns Aura, and Tranquility. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Night Elf|n|cffffcc00Class:|r Druid|n|cffffcc00Mount:|r Chimaera|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 17/1.8|n|cffffcc00Agility:|r 15/1.5|n|cffffcc00Intelligence:|r 18/2.7|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 25
@@ -358,7 +358,7 @@ STRING 59
 STRING 60
 // Units: N01K (Elder Sage), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at maneuvering through battles. Can learn Chain Lightning, Shadow Strike, Feral Spirit and Reincarnation. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Lost Ones|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Nether Drake|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 20/1.2|n|cffffcc00Intelligence:|r 19/2.8|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 61
@@ -478,7 +478,7 @@ Purchase Magical Creep Summoner
 STRING 80
 // Units: O032 (Shado Pan), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Slide, Mirror Image, Critical Strike and Bladestorm. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Pandaren|n|cffffcc00Class:|r Monk|n|cffffcc00Mount:|r Cloud Serpent|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 81
@@ -502,7 +502,7 @@ Medivh's Army
 STRING 84
 // Abilities: A02P (Orc Army), Ubertip (Tooltip - Normal - Extended)
 {
-Summons 22 Chaos Orcs.
+Summons <A02P,DataA1> Chaos Orcs.
 }
 
 STRING 85
@@ -694,7 +694,7 @@ Increases the gold and lumber gained from selling items.
 STRING 116
 // Items: I0D6 (Ring of the Trading Guild), Ubertip (Tooltip - Extended)
 {
-Increases the gold and lumber gained from selling items. Multiplies the sold item's gold and lumber values with the number of charges of all rings in the selling hero's inventory. If the gold or lumber value of the sold item is 0 it will be at least 10. Gives the owner of the selling unit the additional gold and lumber.|n|nThe ring itself cannot be sold.
+Increases the gold and lumber gained from selling items. Multiplies the sold item's gold and lumber values with the number of charges of all rings in the selling hero's inventory. The gold or lumber value of the sold item is always 10 at minimum. Gives the owner of the selling unit the additional gold and lumber.|n|nThe ring itself cannot be sold.
 }
 
 STRING 117
@@ -736,7 +736,7 @@ Murloc Shipyard
 STRING 123
 // Units: H0Y0 (Rogue), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Rogue.|r|n|cffffcc00Mount: Crow.|r
+|cffffcc00Race:|r Bandit|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 13/1.5|n|cffffcc00Agility:|r 22/2.7|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 124
@@ -814,13 +814,13 @@ STRING 135
 STRING 136
 // Items: I007 (Unique - Book of the 4 Elements), Description (Description)
 {
-|cff8b00ffUnique|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item !
+|cff8b00ffUnique|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item!
 }
 
 STRING 137
 // Items: I007 (Unique - Book of the 4 Elements), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffUnique|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item !|n|n Grants +6 Int, Brilliance Aura, +10 damage and holds different spells to cast.
+|cff8b00ffUnique|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item!|n|n Grants +6 Int, Brilliance Aura, +10 damage and holds different spells to cast.
 }
 
 STRING 138
@@ -1402,7 +1402,7 @@ STRING 233
 STRING 234
 // Items: I021 (Runeblade of the Frozen Throne), Ubertip (Tooltip - Extended)
 {
-|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by 20 when carried. Also grants Unholy Aura, Endurance Aura and allows to cast a wide-range Blizzard. |n|cffffcc00History|r|n|cffffdeadAnother of the Lich King´s mysterious Runeblades. For destroying one of the Lich King´s enemy nations, the Hero who lead the assault on its capital was rewarded by the Dark Lord with this mighty sword. Though the blade turns the carrier into an evil being, the power it emerges is almost unbearable for the wielder and causes ever increasing lust for destruction. A nice toy for the Lich King´s newest Champion !|r
+|cffff8c00Artifact|r|nIncreases the attack damage of the Hero by 20 when carried. Also grants Unholy Aura, Endurance Aura and allows to cast a wide-range Blizzard. |n|cffffcc00History|r|n|cffffdeadAnother of the Lich King´s mysterious Runeblades. For destroying one of the Lich King´s enemy nations, the Hero who lead the assault on its capital was rewarded by the Dark Lord with this mighty sword. Though the blade turns the carrier into an evil being, the power it emerges is almost unbearable for the wielder and causes ever increasing lust for destruction. A nice toy for the Lich King´s newest Champion!|r
 }
 
 STRING 235
@@ -2997,7 +2997,7 @@ Death Knight
 STRING 502
 // Abilities: A006 (Engineering - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Engineer creates a Do-It-Yourself Cold Tower (which can be upgraded to an Advanced Cold Tower). You´ll have it up in no time !
+The Engineer creates a Do-It-Yourself Cold Tower (which can be upgraded to an Advanced Cold Tower). You´ll have it up in no time!
 }
 
 STRING 503
@@ -3009,7 +3009,7 @@ Death Knight
 STRING 504
 // Abilities: A00H (Engineering - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Engineer creates a Do-It-Yourself Death Tower (which can be upgraded to an Advanced Death Tower). You´ll have it up in no time !
+The Engineer creates a Do-It-Yourself Death Tower (which can be upgraded to an Advanced Death Tower). You´ll have it up in no time!
 }
 
 STRING 505
@@ -7099,7 +7099,7 @@ The heart of the Harpy Queen that terrorized the Tauren tribe of Thunder Bluff.
 STRING 1200
 // Items: bfhr (Heart of the Harpy Queen), Ubertip (Tooltip - Extended)
 {
-The heart of the Harpy Queen that terrorized the Tauren tribe of Thunder Bluff. Return it to Cairne for a reward !
+The heart of the Harpy Queen that terrorized the Tauren tribe of Thunder Bluff. Return it to Cairne for a reward!
 }
 
 STRING 1201
@@ -7561,7 +7561,7 @@ STRING 1276
 STRING 1277
 // Items: I023 (Nation´s Battle Standard), Ubertip (Tooltip - Extended)
 {
-The Battle Standard of a fallen Nation. Return it to the Lich King at the Frozen Throne for your reward !
+The Battle Standard of a fallen Nation. Return it to the Lich King at the Frozen Throne for your reward!
 }
 
 STRING 1278

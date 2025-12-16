@@ -70,13 +70,13 @@ STRING 11
 STRING 12
 // Abilities: A21V (Improved Gold Drilling), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
+Erhöht die Goldmenge, die Bohrroboter tragen können, um <R0I3,mod1>.
 }
 
 STRING 13
 // Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
+Erhöht die Goldmenge, die Bohrroboter tragen können, nochmals um <R0I3,mod1>.
 }
 
 STRING 14
@@ -94,7 +94,7 @@ STRING 15
 STRING 16
 // Abilities: A11F (Mass Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-Teleports 4 of the player's nearby units, including the hero, to a friendly ground unit or structure.
+Teleportiert <A11F,DataA1> in der Nähe befindliche Einheiten des Spielers einschließlich des Helds zu einer befreundeten Land-Einheit oder einem befreundeten Gebäude.
 }
 
 STRING 17
@@ -112,13 +112,13 @@ STRING 18
 STRING 19
 // Abilities: A034 (Hero Abilities Back), Name (Name)
 {
-Hero Abilities Back
+Heldenfähigkeiten Zurück
 }
 
 STRING 20
 // Abilities: A1XA (Auto Skill), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 21
@@ -142,7 +142,7 @@ STRING 23
 STRING 24
 // Units: Emns (Keeper of the Grove), Ubertip (Tooltip - Extended)
 {
-Mystischer Held, geschickt bei der Benutzung von Naturzaubern. Kann 'Wucherwurzeln', 'Naturgewalt', 'Dornen-Aura' und 'Gelassenheit' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Nachtelfen|n|cffffcc00Klasse:|r Druide|n|cffffcc00Reittier:|r Schimäre|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 17/1.8|n|cffffcc00Beweglichkeit:|r 15/1.5|n|cffffcc00Intelligenz:|r 18/2.7|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 25
@@ -196,7 +196,7 @@ Ingenieurwesen
 STRING 33
 // Abilities: A1NY (Divine Shield), EditorSuffix (Editor Suffix)
 {
-(Neutral Feindlich) (New Divine Armor Type)
+(Neutral Feindlich) (Neuer Göttlicher Rüstungstyp)
 }
 
 STRING 34
@@ -262,7 +262,7 @@ Goblin-Kriegszeppelin-Bomben
 STRING 44
 // Abilities: A0CB (Goblin War Zeppelin Bombs), Ubertip (Tooltip - Normal - Extended)
 {
-Calls down <ACbz,DataA1> bomb waves; each wave deals <ACbz,DataB1> damage to units in a small area.
+Ruft <ACbz,DataA1> Wellen aus Bomben herbei; jede Welle fügt Einheiten in einem kleinen Gebiet <ACbz,DataB1> Punkte Schaden zu.
 }
 
 STRING 45
@@ -298,19 +298,19 @@ Gründrachen-Reittier
 STRING 50
 // Abilities: A01I (Wind Gust), Name (Name)
 {
-Hero Abilities Auto Skill
+Heldenfähigkeiten Auto-Lernen
 }
 
 STRING 51
 // Abilities: A0V5 (Hero Abilities), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 52
 // Abilities: A0W7 (Slide), Name (Name)
 {
-Slide
+Gleiten
 }
 
 STRING 53
@@ -328,7 +328,7 @@ STRING 54
 STRING 55
 // Abilities: A1OQ (Barrage), EditorSuffix (Editor Suffix)
 {
-(Combat) (Neutral Feindlich)
+(Kampf) (Neutral Feindlich)
 }
 
 STRING 56
@@ -358,7 +358,7 @@ STRING 59
 STRING 60
 // Units: N01K (Elder Sage), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at maneuvering through battles. Can learn Chain Lightning, Shadow Strike, Wildgeist and Reinkarnation. |n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Verlorene|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Niederdrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 20/1.2|n|cffffcc00Intelligenz:|r 19/2.8|n|n|cffffcc00Greift Landeinheiten an.|r
 }
 
 STRING 61
@@ -380,9 +380,9 @@ STRING 63
 }
 
 STRING 64
-// Abilities: A0AQ (Summon Water Elemental), Tip (Tooltip - Normal)
+// Abilities: A0AQ (Wasser-Elementargeist beschwören), Tip (Tooltip - Normal)
 {
-Summon Water Elemental
+Wasser-Elementargeist beschwören
 }
 
 STRING 65
@@ -400,7 +400,7 @@ Bildet Gründrachen aus.
 STRING 67
 // Abilities: A0Y1 (Telekinesis), EditorSuffix (Editor Suffix)
 {
-(Buff)
+(Zauberverstärker)
 }
 
 STRING 68
@@ -448,7 +448,7 @@ Furion
 STRING 75
 // Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
+Erhöht die Goldmenge, die Bohrroboter tragen können, nochmals um <R0I3,mod1>.
 }
 
 STRING 76
@@ -460,13 +460,13 @@ Magischer Unhold-Beschwörer
 STRING 77
 // Items: I02W (Magical Creep Summoner), Description (Description)
 {
-Magischer Unhold-Beschwörer from the far continent of Kalimdor that summons dead creeps.
+Magischer Unhold-Beschwörer vom fernen Kontinent Kalimdor, der tote Unholde beschwört.
 }
 
 STRING 78
 // Items: I02W (Magical Creep Summoner), Ubertip (Tooltip - Extended)
 {
-When using this magical creep summoner, all dead creeps within a radius of 1000 will be summoned.
+Bei Benutzung dieses magischen Unhold-Beschwörers werden alle toten Unholde innerhalb eines Radius von 1000 beschworen.
 }
 
 STRING 79
@@ -478,7 +478,7 @@ Magischen Unhold-Beschwörer erwerben
 STRING 80
 // Units: O032 (Shado Pan), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at quickly killing individual units and creating confusion among enemies. Can learn Gleiten, Spiegelbild, Kritischer Schlag and Bladestorm. |n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Pandaren|n|cffffcc00Klasse:|r Mönch|n|cffffcc00Reittier:|r Wolkenschlange|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 22/1.75|n|cffffcc00Intelligenz:|r 16/2.25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 81
@@ -502,7 +502,7 @@ Medivhs Heer
 STRING 84
 // Abilities: A02P (Orc Army), Ubertip (Tooltip - Normal - Extended)
 {
-Beschwört 22 Chaos-Orcs.
+Beschwört <A02P,DataA1> Chaos-Orcs.
 }
 
 STRING 85
@@ -532,7 +532,7 @@ Höllenfeuer
 STRING 89
 // Abilities: A03W (Hell Fire), Ubertip (Tooltip - Normal - Extended)
 {
-Calls down waves of hell fire that damage nearby enemy units. Each wave deals <A03W,DataA1> damage. |nHält for <A03W,Dur1> Sekunden lang an.
+Ruft Wellen von Höllenfeuer herbei, die Einheiten in einem bestimmten Gebiet verletzen. Jede Welle fügt <A03W,DataA1> Punkte Schaden zu. |nHält for <A03W,Dur1> Sekunden lang an.
 }
 
 STRING 90
@@ -574,7 +574,7 @@ Golem
 STRING 96
 // Abilities: A095 (Resurrection), Ubertip (Tooltip - Normal - Extended)
 {
-Brings back to life the corpses of <A095,DataA1> friendly nearby units. The range is much higher than for the hero ability.
+Holt die sterblichen Überreste von <A095,DataA1> befreundeten in der Nähe befindlichen Einheiten wieder ins Leben zurück. Die Reichweite ist wesentlich größer als die der Heldenfähigkeit.
 }
 
 STRING 97
@@ -598,7 +598,7 @@ Blinzeln
 STRING 100
 // Abilities: A01E (Blink), EditorSuffix (Editor Suffix)
 {
-(Dalaran Building) (New)
+(Dalaran-Gebäude) (Neu)
 }
 
 STRING 101
@@ -622,49 +622,49 @@ R
 STRING 104
 // Abilities: A0EP (Improved Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+ (Icon) (Zwerge)
 }
 
 STRING 105
 // Abilities: A0OP (Animal War Training), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+ (Icon) (Dalaran)
 }
 
 STRING 106
 // Abilities: A0M5 (Loading Goods), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+ (Icon) (Kul Tiras)
 }
 
 STRING 107
 // Abilities: A0G0 (Marksmanship), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+ (Icon) (High Elf)
 }
 
 STRING 108
 // Abilities: A0M2 (Jetpack), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+(Neutral Feindlich)
 }
 
 STRING 109
 // Abilities: A0OZ (Blink), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+(Neutral Feindlich)
 }
 
 STRING 110
 // Abilities: A0PP (Repair), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+(Neutral Feindlich)
 }
 
 STRING 111
 // Abilities: A0PQ (Dark Summoning), EditorSuffix (Editor Suffix)
 {
-Returns to normal Tüftler form, losing the benefits of Robo-Goblin but once again becoming organic.
+(Neutral Feindlich)
 }
 
 STRING 112
@@ -688,37 +688,37 @@ A
 STRING 115
 // Items: I0D6 (Ring of the Trading Guild), Description (Description)
 {
-Increases the gold and lumber gained from selling items.
+Erhöht den Gold- und Holzertrag durch den Verkauf von Gegenständen.
 }
 
 STRING 116
 // Items: I0D6 (Ring of the Trading Guild), Ubertip (Tooltip - Extended)
 {
-Increases the gold and lumber gained from selling items. Multiplies the sold item's gold and lumber values with the number of charges of all rings in the selling hero's inventory. If the gold or lumber value of the sold item is 0 it will be at least 10. Gives the owner of the selling unit the additional gold and lumber.|n|nThe ring itself cannot be sold.
+Erhöht den Gold- und Holzertrag durch den Verkauf von Gegenständen. Multipliziert den Gold- und Holzwert des verkauften Gegenstands mit der Anzahl der Aufladungen aller Ringe im Inventar des verkaufenden Helden. Der Gold- oder Holzwert des verkauften Gegenstands beträgt immer mindestens 10. Der Besitzer der verkaufenden Einheit erhält das zusätzliche Gold und Holz. |n|nDer Ring selbst kann nicht verkauft werden.
 }
 
 STRING 117
 // Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
+Erhöht die Goldmenge, die Bohrroboter tragen können, nochmals um <R0I3,mod1>.
 }
 
 STRING 118
 // Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Further increases the amount of gold that Drillbots can carry by <R0I3,mod1>.
+Erhöht die Goldmenge, die Bohrroboter tragen können, nochmals um <R0I3,mod1>.
 }
 
 STRING 119
 // Units: h03R (Skill Menu), Name (Name)
 {
-Skill Menu
+Fähigkeitenmenu
 }
 
 STRING 120
 // Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-Changes the class to Witch Doctor:|n- Shadow Magic|n- Weakening|n- Charm|n- Hex
+Wechselt die Klasse zum Hexendoktor:|n- Schattenmagie|n- Schwächung|n- Bezauberung|n- Hexerei
 }
 
 STRING 121
@@ -730,13 +730,13 @@ Anduin Wrynn
 STRING 122
 // Units: e00U (Murloc Shipyard), Name (Name)
 {
-Murloc Shipyard
+Murloc-Hafen
 }
 
 STRING 123
 // Units: H0Y0 (Rogue), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Attacks land units.|r|n|cffffcc00Race: Bandit.|r|n|cffffcc00Class: Rogue.|r|n|cffffcc00Mount: Crow.|r
+|cffffcc00Volk:|r Banditen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 13/1.5|n|cffffcc00Beweglichkeit:|r 22/2.7|n|cffffcc00Intelligenz:|r 17/2.25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 124
@@ -754,7 +754,7 @@ Berufe
 STRING 126
 // Abilities: A08F (Regeneration Aura), EditorSuffix (Editor Suffix)
 {
-(Stonemaul Arena Meister Belt)
+(Stonemaul-Arenameister-Gürtel)
 }
 
 STRING 127
@@ -814,13 +814,13 @@ STRING 135
 STRING 136
 // Items: I007 (Unique - Book of the 4 Elements), Description (Description)
 {
-|cff8b00ffEinzigartig|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item !
+|cff8b00ffEinzigartig|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item!
 }
 
 STRING 137
 // Items: I007 (Unique - Book of the 4 Elements), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item !|n|n Grants +6 Int, Brillanz-Aura, +10 damage and holds different spells to cast.
+|cff8b00ffEinzigartig|r|nThis spell book made by an unknown author contains arcane spells from each of the 4 elements to be wielded by its owner, giving him many advantages in and out of combat. Truly a very valuable item!|n|n Grants +6 Int, Brillanz-Aura, +10 damage and holds different spells to cast.
 }
 
 STRING 138
@@ -1402,7 +1402,7 @@ STRING 233
 STRING 234
 // Items: I021 (Runeblade of the Frozen Throne), Ubertip (Tooltip - Extended)
 {
-|cffff8c00Artefakt|r|nIncreases the attack damage of the Hero by 20 when carried. Also grants Unheilige Aura, Ausdauer-Aura and allows to cast a wide-range Blizzard. |n|cffffcc00History|r|n|cffffdeadAnother of the Lich-König´s mysterious Runeblades. For destroying one of the Lich-König´s enemy nations, the Hero who lead the assault on its capital was rewarded by the Dark Lord with this mighty sword. Though the blade turns the carrier into an evil being, the power it emerges is almost unbearable for the wielder and causes ever increasing lust for destruction. A nice toy for the Lich-König´s newest Champion !|r
+|cffff8c00Artefakt|r|nIncreases the attack damage of the Hero by 20 when carried. Also grants Unheilige Aura, Ausdauer-Aura and allows to cast a wide-range Blizzard. |n|cffffcc00History|r|n|cffffdeadAnother of the Lich-König´s mysterious Runeblades. For destroying one of the Lich-König´s enemy nations, the Hero who lead the assault on its capital was rewarded by the Dark Lord with this mighty sword. Though the blade turns the carrier into an evil being, the power it emerges is almost unbearable for the wielder and causes ever increasing lust for destruction. A nice toy for the Lich-König´s newest Champion!|r
 }
 
 STRING 235
@@ -2758,7 +2758,7 @@ Spell Damage Reduction (einzigartig)
 }
 
 STRING 462
-// Abilities: A0AQ (Summon Water Elemental), Name (Name)
+// Abilities: A0AQ (Wasser-Elementargeist beschwören), Name (Name)
 {
 Vulkan - [|cffffcc00Stufe 2|r]
 }
@@ -2997,7 +2997,7 @@ Todesritter
 STRING 502
 // Abilities: A006 (Engineering - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Ingenieur creates a Do-It-Yourself Kälte-Turm (which can be upgraded to an Advanced Kälte-Turm). You´ll have it up in no time !
+The Ingenieur creates a Do-It-Yourself Kälte-Turm (which can be upgraded to an Advanced Kälte-Turm). You´ll have it up in no time!
 }
 
 STRING 503
@@ -7099,7 +7099,7 @@ The heart of the Harpyien-Königin that terrorized the Tauren tribe of Donnerfel
 STRING 1200
 // Items: bfhr (Heart of the Harpy Queen), Ubertip (Tooltip - Extended)
 {
-The heart of the Harpyien-Königin that terrorized the Tauren tribe of Donnerfels. Return it to Cairne for a reward !
+The heart of the Harpyien-Königin that terrorized the Tauren tribe of Donnerfels. Return it to Cairne for a reward!
 }
 
 STRING 1201
@@ -7561,7 +7561,7 @@ STRING 1276
 STRING 1277
 // Items: I023 (Nation´s Battle Standard), Ubertip (Tooltip - Extended)
 {
-The Battle Standard of a fallen Nation. Return it to the Lich-König at the Frozen Throne for your reward !
+The Battle Standard of a fallen Nation. Return it to the Lich-König at the Frozen Throne for your reward!
 }
 
 STRING 1278
@@ -10842,7 +10842,7 @@ Mauer beschwören
 }
 
 STRING 1849
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Wasser-Elementargeist beschwören), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -121940,7 +121940,7 @@ Bohrroboter anheuern
 STRING 56210
 // Units: n0M5 (Drillbot), Ubertip (Tooltip - Extended)
 {
-Medium melee unit made of iron. Excellent at harvesting large amounts of gold. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Mittlere Nahkampf-Einheit aus Eisen. Ausgezeichnet zum Abbau großer Gold-Mengen geeignet. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 56211
