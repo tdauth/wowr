@@ -380,7 +380,7 @@ STRING 63
 }
 
 STRING 64
-// Abilities: A0AQ (Wasser-Elementargeist beschwören), Tip (Tooltip - Normal)
+// Abilities: A0AQ (Summon Water Elemental), Tip (Tooltip - Normal)
 {
 Wasser-Elementargeist beschwören
 }
@@ -2758,7 +2758,7 @@ Spell Damage Reduction (einzigartig)
 }
 
 STRING 462
-// Abilities: A0AQ (Wasser-Elementargeist beschwören), Name (Name)
+// Abilities: A0AQ (Summon Water Elemental), Name (Name)
 {
 Vulkan - [|cffffcc00Stufe 2|r]
 }
@@ -10842,7 +10842,7 @@ Mauer beschwören
 }
 
 STRING 1849
-// Abilities: A0AQ (Wasser-Elementargeist beschwören), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
