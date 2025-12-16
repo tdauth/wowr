@@ -139,7 +139,7 @@ Use this check list when releasing a new version of the map:
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
 * Use [check.bat](./scripts/check.bat) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
 * Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
-* Make sure that save games still work by saving and loading.
+* Make sure that savegames still work by saving and loading.
 * Remove all compressable modifications in object data using the script [compress.sh](./scripts/compress.sh).
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
 * Use the cheat "-savecodemissing" to check for missing save code objects.
@@ -178,7 +178,7 @@ Sometimes versions of this map might lead to crashing but since it is really har
 * Training of certain unit types by the AI.
 * Not enough space for AI to build its base.
 * `CreateRegion` in globals instead of a JASS function crashes the game on saving it.
-* String literals which are longer than 1023 characters will lead to crashes on loading save games.
+* String literals which are longer than 1023 characters will lead to crashes on loading savegames.
 * Clicking on buildings selling or training unit types which have the same unit type ID as dependency equivalent will crash the game.
 
 ## Know Reasons for Desyncs
