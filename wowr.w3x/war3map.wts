@@ -4795,7 +4795,7 @@ Requires matching player name and game mode etc.
 
 STRING 807
 {
-Savecodes are stored in "C:\Users\XXX\Documents\Warcraft III\CustomMapData".
+Savecodes are stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
 }
 
 STRING 808
@@ -4805,7 +4805,7 @@ Press the Print key to store a screenshot.
 
 STRING 809
 {
-Screenshots stored in "C:\Users\XXX\Documents\Warcraft III\ScreenShots".
+Screenshots stored in "%userprofile%\Documents\Warcraft III\ScreenShots".
 }
 
 STRING 810
@@ -49555,7 +49555,7 @@ It only works for the same game type, mode and single/multiplayer.
 
 STRING 11618
 {
-It is stored in C:\Users\<your user>\Documents\Warcraft III\CustomMapData.
+It is stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
 }
 
 STRING 11619
