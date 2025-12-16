@@ -2743,6 +2743,7 @@ globals
     constant string CUSTOM_MAP_DATA_FOLDER                           = "%userprofile%\\Documents\\Warcraft III\\CustomMapData"
     constant string SAVE_CODE_FOLDER                                 = "wowr"
     constant string USER_SAVE_CODE_FOLDER                            =  CUSTOM_MAP_DATA_FOLDER + "\\" + SAVE_CODE_FOLDER
+    constant string USER_SAVE_GAME_FOLDER                            = "%userprofile%\\Documents\Warcraft III\BattleNet"
 
     constant integer PLAYER_RESCUABLE                                = 21
     constant integer PLAYER_BOSSES                                   = 22
