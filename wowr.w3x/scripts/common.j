@@ -2737,13 +2737,14 @@ globals
 
     constant playercolor PLAYER_COLOR_BLACK                          = ConvertPlayerColor(24)
 
-    constant string MAP_VERSION                                      = "4.6"
+    constant string MAP_VERSION                                      = "4.7"
     constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
-    constant string CUSTOM_MAP_DATA_FOLDER                           = "%userprofile%\\Documents\\Warcraft III\\CustomMapData"
+    constant string WARCRAFT_III_DOCUMENTS_FOLDER                    = "%userprofile%\\Documents\\Warcraft III"
+    constant string CUSTOM_MAP_DATA_FOLDER                           = WARCRAFT_III_DOCUMENTS_FOLDER + "\\CustomMapData"
     constant string SAVE_CODE_FOLDER                                 = "wowr"
     constant string USER_SAVE_CODE_FOLDER                            =  CUSTOM_MAP_DATA_FOLDER + "\\" + SAVE_CODE_FOLDER
-    constant string USER_SAVE_GAME_FOLDER                            = "%userprofile%\\Documents\Warcraft III\BattleNet"
+    constant string USER_SAVE_GAME_FOLDER                            = WARCRAFT_III_DOCUMENTS_FOLDER + "\\BattleNet"
 
     constant integer PLAYER_RESCUABLE                                = 21
     constant integer PLAYER_BOSSES                                   = 22
