@@ -127521,7 +127521,7 @@ Revive Sylvanas Windrunner
 STRING 58179
 // Units: E01J (Priestess of the Moon on Owl), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, adept at enhancing ranged attacks and slaying enemies from afar. Can learn Scout, Searing Arrows, Trueshot Aura, and Starfall. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Night Elf|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Chimaera|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 58180
