@@ -4404,6 +4404,7 @@ globals
     constant integer UPG_GOBLIN_REPAIR                               = 'R02K'
     constant integer UPG_GOBLIN_BANKING                              = 'R02P'
     constant integer UPG_GOBLIN_LUMBER                               = 'R02O'
+    constant integer UPG_GOBLIN_BERSERK_TANK                         = 'R03E'
 
     constant integer GOBLIN_CITIZEN_MALE                             = 'n03Y'
     constant integer GOBLIN_CITIZEN_FEMALE                           = 'n03Z'

@@ -54,7 +54,6 @@ StringList {
     // Skill Menu
     SLOT_X                             "Slot %1%",
     NO_SPELL_FOR_EQUIPMENT_BAG         "This spell is not allowed for Equipment Bags.",
-    SKILL_FOR_CUSTOMIZABLE_HEROES      "Only customizable, Void Lord, Archangel, Sea Giant heroes or Equipment Bags at hero level 75 can change their hero abilities.",
     NOT_ENOUGH_SKILL_POINTS            "Not enough skill points.",
     ABILITY_HAS_LEVEL_0                "Ability has level 0.",
     NO_ABILITY                         "No ability.",
@@ -1204,6 +1203,13 @@ StringList {
     ONLY_DURING_PLAYER_SELECTION       "Only during player selection.",
     CANNOT_CHANGE_GAME_MODE            "You have to be in your initial hero selection or full repick to change the game mode.",
     UNABLE_TO_PICK_RACE                "Unable to pick a race.",
+    UNABLE_TO_PICK_RACE_X              "Unable to pick race %1%.",
+    BONUS_RACE_REQUIREMENT             "Bonus races require hero level %1% or to be a VIP.",
+    UNABLE_TO_PICK_PROFESSION          "Unable to pick profession.",
+    SCRIBE_REQUIREMENT                 "Profession Scribe must be enabled with '-tomes'.",
+    PICK_HERO_X                        "Pick hero %1%.",
+    PICK_PROFESSION_X                  "Pick profession %1%.",
+    PICK_RACE_X                        "Pick race %1%.",
     PICK_YOUR_GAME_MODE                "Pick your game mode.",
     PICK_YOUR_FIRST_PROFESSION         "Pick your first profession.",
     PICK_YOUR_FIRST_RACE               "Pick your first race.",
@@ -1287,6 +1293,7 @@ StringList {
     ENABLED_GOLD_AUTO_EXCHANGE         "Enabled automatic gold exchange.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Disabled automatic gold exchange.",
     // Chat Commands
+    HOST_X                             "Host: %1%",
     AI_CHANGE                          "You changed the AI to %1% for %2%.",
     AI_CHANGE_ERROR                    "Unable to change AI to %1% for %2%.",
     ENABLED                            "enabled",
@@ -1310,13 +1317,8 @@ StringList {
     // Repick
     NO_REPICK_WITH_ILLIDAN             "You cannot repick while controlling Illidan.",
     NO_REPICK_WITH_ENEMIES             "You cannot repick when enemies are within a certain range.",
-    HERO_2_REQUIREMENT                 "Your hero level must be 45 or higher.",
-    HERO_3_REQUIREMENT                 "Your hero level must be 65 or higher.",
-    PROFESSION_2_REQUIREMENT           "Your hero level must be 20 or higher.",
-    PROFESSION_3_REQUIREMENT           "Your hero level must be 45 or higher.",
     NO_REPICK_RACE_FOR_FREELANCERS     "Repicking the race is only possible for Warlords.",
-    RACE_2_REQUIREMENT                 "Your hero level must be 30 or higher.",
-    RACE_3_REQUIREMENT                 "Your hero level must be 65 or higher.",
+    HERO_LEVEL_REQUIREMENT             "Requires hero level %1% or higher.",
     // Equipment
     ONLY_CUSTOMIZABLE_HEROES_EQUIPMENT "Only customizable heroes can use equipment items.",
     // Elevator
@@ -1426,7 +1428,6 @@ StringList {
     ABILITY_CHANGED_RANGE              "Changed ability to %1% (%2%/%3%).",
     ABILITY_NO_OTHER                   "No other ability.",
     AUTO_SKILL_MESSAGE                 "Auto skilled.",
-    REQUIRES_HERO_LEVEL_OR_VIP         "Requires hero level %1% or VIP or everything unlocked.",
     DOT_NOT_AVAILABLE                  "Not available.",
     // Classes
     CLASSES                            "Classes",

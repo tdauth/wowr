@@ -59,6 +59,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(1, UPG_GOBLIN_EXPLOSIVE_BARREL)
         call SetBuildUpgr(1, UPG_GOBLIN_CUT_DOWN_TREES)
         call SetBuildUpgr(1, UPG_GOBLIN_OIL_DRILLING)
+        call SetBuildUpgr(1, UPG_GOBLIN_BERSERK_TANK)
 
         call SetBuildUpgr(1, UPG_GOBLIN_BACKPACK)
 
