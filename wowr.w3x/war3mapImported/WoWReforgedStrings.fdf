@@ -1193,8 +1193,6 @@ StringList {
     CREEPS                             "Creeps",
     CITIZENS                           "Citizens",
     RESCUABLE                          "Rescuable",
-    // Book of Mercenaries and Book of Fast Travel
-    NO_PICKUP_X_AS_WARLORD             "Cannot pick up %1% as Warlord.",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",

@@ -54,7 +54,6 @@ StringList {
     // Skill Menu
     SLOT_X                             "Fach %1%",
     NO_SPELL_FOR_EQUIPMENT_BAG         "Dieser Zauber ist nicht für Ausrüstungstaschen erlaubt.",
-    SKILL_FOR_CUSTOMIZABLE_HEROES      "Nur anpassbare, Void Lord-, Erzengel-, Seeriesen-Helden or Ausrückstungstaschen mit Heldenstufe 75 können ihre Heldenfähigkeiten ändern.",
     NOT_ENOUGH_SKILL_POINTS            "Nicht genügend Fähigkeitspunkte.",
     ABILITY_HAS_LEVEL_0                "Fähigkeit hat Stufe 0.",
     NO_ABILITY                         "Keine Fähigkeit.",
@@ -1194,8 +1193,6 @@ StringList {
     CREEPS                             "Unholde",
     CITIZENS                           "Bürger",
     RESCUABLE                          "Rettbar",
-    // Book of Mercenaries
-    NO_PICKUP_X_AS_WARLORD             "%1% kann als Kriegsherr nicht aufgehoben werden.",
     // Freelancer Hideouts
     HIDEHOUTS_ARE_LIMITED_TO_1         "Verstecke sind auf 1 begrenzt.",
     HIDEOUTS_ARE_RESTRUCTED            "Verstecke sind auf Freiberufler beschränkt.",
@@ -1204,6 +1201,13 @@ StringList {
     ONLY_DURING_PLAYER_SELECTION       "Nur während der Spielerauswahl.",
     CANNOT_CHANGE_GAME_MODE            "Sie müssen in der initialen Heldenauswahl oder vollständigen Neuauswahl sein, um den Spielmodus ändern zu können.",
     UNABLE_TO_PICK_RACE                "Volk kann nicht gewählt werden.",
+    UNABLE_TO_PICK_RACE_X              "Volk %1% kann nicht gewählt werden.",
+    BONUS_RACE_REQUIREMENT             "Bonus-Völker benötigen Heldenstufe %1% oder den VIP-Status.",
+    UNABLE_TO_PICK_PROFESSION          "Beruf kann nicht gewählt werden.",
+    SCRIBE_REQUIREMENT                 "Beruf Schreiber muss mit '-tomes' aktiviert werden.",
+    PICK_HERO_X                        "Wählen Sie Held %1%.",
+    PICK_PROFESSION_X                  "Wählen Sie Beruf %1%.",
+    PICK_RACE_X                        "Wählen Sie Volk %1%.",
     PICK_YOUR_GAME_MODE                "Wählen Sie Ihren Spielmodus.",
     PICK_YOUR_FIRST_PROFESSION         "Wählen Sie Ihren ersten Beruf.",
     PICK_YOUR_FIRST_RACE               "Wählen Sie Ihre erstes Volk.",
@@ -1217,7 +1221,7 @@ StringList {
     HYPHEN_FIRST_HERO                  "- Erster Held",
     HYPHEN_SECOND_HERO                 "- Zweiter Held",
     HYPHEN_THIRD_HERO                  "- Dritter Held",
-    PICKED_HERO_X                      "Helden %1% gewählt.",
+    PICKED_HERO_X                      "Held %1% gewählt.",
     PICKED_RACE_X_Y                    "Volk %1% gewählt: %2%",
     PICKED_PROFESSION_X_Y              "Beruf %1% gewählt: %2%.",
     PICKED_START_LOCATION_X            "Startort %1% gewählt.",
@@ -1287,6 +1291,7 @@ StringList {
     ENABLED_GOLD_AUTO_EXCHANGE         "Automatischen Goldtausch aktiviert.",
     DISABLED_GOLD_AUTO_EXCHANGE        "Automatischen Goldtausch deaktiviert.",
     // Chat Commands
+    HOST_X                             "Host: %1%",
     AI_CHANGE                          "Sie haben die KI zu %1% für %2% geändert.",
     AI_CHANGE_ERROR                    "KI kann nicht zu %1% für %2% geändert werden.",
     ENABLED                            "aktiviert",
@@ -1310,13 +1315,8 @@ StringList {
     // Repick
     NO_REPICK_WITH_ILLIDAN             "Sie können nicht neu auswählen während Sie Illidan kontrollieren.",
     NO_REPICK_WITH_ENEMIES             "Sie können nicht neuwählen, wenn sich Gegner in einer gewissen Reichweite befinden.",
-    HERO_2_REQUIREMENT                 "Ihre Heldenstufe muss 45 oder höher sein.",
-    HERO_3_REQUIREMENT                 "Ihre Heldenstufe muss 65 oder höher sein.",
-    PROFESSION_2_REQUIREMENT           "Ihre Heldenstufe muss 20 oder höher sein.",
-    PROFESSION_3_REQUIREMENT           "Ihre Heldenstufe muss 45 oder höher sein.",
     NO_REPICK_RACE_FOR_FREELANCERS     "Das Volk neuzuwählen ist nur für Kriegsherren möglich.",
-    RACE_2_REQUIREMENT                 "Ihre Heldenstufe muss 30 oder höher sein.",
-    RACE_3_REQUIREMENT                 "Ihre Heldenstufe muss 65 oder höher sein.",
+    HERO_LEVEL_REQUIREMENT             "Benötigt Heldenstufe %1% oder höher.",
     // Equipment
     ONLY_CUSTOMIZABLE_HEROES_EQUIPMENT "Nur anpassbare Helden können Ausrüstungsgegenstände benutzen.",
     // Elevator
@@ -1426,7 +1426,6 @@ StringList {
     ABILITY_CHANGED_RANGE              "Fähigkeit zu %1% geändert (%2%/%3%).",
     ABILITY_NO_OTHER                   "Keine andere Fähigkeit.",
     AUTO_SKILL_MESSAGE                 "Automatisch gelernt.",
-    REQUIRES_HERO_LEVEL_OR_VIP         "Benötigt Heldenstufe %1% oder VIP oder alles freigeschaltet.",
     DOT_NOT_AVAILABLE                  "Nicht verfügbar.",
     // Classes
     CLASSES                            "Klassen",
