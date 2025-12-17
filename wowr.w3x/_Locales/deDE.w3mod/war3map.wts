@@ -127528,19 +127528,19 @@ Ein Kriegerheld, adept at enhancing ranged attacks and slaying enemies from afar
 STRING 58180
 // Units: E01K (Archdruid), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, Massen-Feenfeuer, Gebrüll, and Druidengestalten. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Nachtelfen|n|cffffcc00Klasse:|r Druide|n|cffffcc00Reittier:|r Schimäre|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 16/2|n|cffffcc00Beweglichkeit:|r 15/1.5|n|cffffcc00Intelligenz:|r 18/2.7|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 58187
 // Units: H0S1 (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
-Flying warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Storm Bolt, Sperrfeuer, Hieb and Avatar. |n|n|cffffcc00Attacks air units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Zwerge|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 24/3|n|cffffcc00Beweglichkeit:|r 11/1.5|n|cffffcc00Intelligenz:|r 15/2.25|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 58191
 // Units: H0YI (Ranger), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at damaging opponents. Can learn Scout, Giftpfeile, Volltreffer-Aura, and Sternenregen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Schimäre.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Nachtelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Hippogryph|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1.9|n|cffffcc00Beweglichkeit:|r 19/1.5|n|cffffcc00Intelligenz:|r 15/2.6|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 58192

@@ -127527,19 +127527,19 @@ Warrior Hero, adept at enhancing ranged attacks and slaying enemies from afar. C
 STRING 58180
 // Units: E01K (Archdruid), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, adept at using nature spells. Can learn Mass Rejuvenation, Mass Faerie Fire, Roar, and Druid Forms. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Night Elf|n|cffffcc00Class:|r Druid|n|cffffcc00Mount:|r Chimaera|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 16/2|n|cffffcc00Agility:|r 15/1.5|n|cffffcc00Intelligence:|r 18/2.7|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 58187
 // Units: H0S1 (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
-Flying warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Storm Bolt, Barrage, Bash and Avatar. |n|n|cffffcc00Attacks air units.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 58191
 // Units: H0YI (Ranger), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at damaging opponents. Can learn Scout, Poison Arrows, Trueshot Aura, and Starfall.|n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Chimaera.|r|n|cffffcc00Standard Ability: Invisibility.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Night Elf|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Hippogryph|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 58192
