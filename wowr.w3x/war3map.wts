@@ -10746,6 +10746,12 @@ STRING 1813
 X
 }
 
+STRING 1814
+// Upgrades: R0H5 (Chaos), Hotkey (Hotkey)
+{
+P
+}
+
 STRING 1815
 // Units: H0Q3 (Customizable Hero), Hotkey (Hotkey)
 {
@@ -10774,6 +10780,12 @@ STRING 1819
 // Units: O01T (Warlock), Ubertip (Tooltip - Extended)
 {
 Powerful Warlock working under the tutelage of Kil'jaeden himself. Can learn Teleportation,  Summon Black Drakes, Find Artifacts, and Lich King. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+}
+
+STRING 1820
+// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+{
+W
 }
 
 STRING 1821
@@ -43095,13 +43107,13 @@ Q
 }
 
 STRING 9903
-// Abilities: A149 (Mass Death Coil), Hotkey (Hotkey - Normal)
+// Abilities: Leav (Healing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 9904
-// Abilities: A16T (Water), Hotkey (Hotkey - Normal)
+// Abilities: A149 (Mass Death Coil), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -44740,7 +44752,7 @@ Craft wands with temporary effects and multiple charges:|n- Wand of Neutralizati
 }
 
 STRING 10321
-// Abilities: A173 (Mass Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A16T (Water), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -46244,7 +46256,7 @@ Bring his heart to Lady Hederine to get your reward.
 }
 
 STRING 10620
-// Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
+// Abilities: A173 (Mass Bloodlust), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -47052,13 +47064,13 @@ The Farmer uses his knowledge to craft a Tiny Barn.
 }
 
 STRING 10850
-// Abilities: A1G4 (Orb of Annihilation), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 10851
-// Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
+// Abilities: A1G4 (Orb of Annihilation), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -47076,7 +47088,7 @@ C
 }
 
 STRING 10858
-// Abilities: A1HR (Healing Wave), Hotkey (Hotkey - Normal)
+// Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -48166,7 +48178,7 @@ Conjures a pillar of flame that burns ground units for <A01W,DataA1> damage a se
 }
 
 STRING 11135
-// Abilities: A1L6 (+1 Agility), Hotkey (Hotkey - Normal)
+// Abilities: A1HR (Healing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -48286,7 +48298,7 @@ Further increases the armor, hit points, number of targets and damage of Enginee
 }
 
 STRING 11169
-// Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
+// Abilities: A1L6 (+1 Agility), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49210,19 +49222,19 @@ Anathemus,Boulderheart,Fozruk,Gormungan,Grimungous,Baron Kazum,Kashoch the Reave
 }
 
 STRING 11472
-// Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
+// Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 11473
-// Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
+// Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 11474
-// Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
+// Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49834,7 +49846,7 @@ E
 }
 
 STRING 11708
-// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
+// Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -50242,7 +50254,7 @@ Summon Siege Golem
 }
 
 STRING 11858
-// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -50798,7 +50810,7 @@ A small cluster of tropical landmasses located off the southeastern coast of Dur
 }
 
 STRING 11994
-// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
+// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -50836,7 +50848,7 @@ The former home of the Darkspear tribe of jungle trolls but nor reigned by the M
 }
 
 STRING 12000
-// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53237,7 +53249,7 @@ T
 }
 
 STRING 13856
-// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53860,7 +53872,7 @@ X
 }
 
 STRING 14111
-// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
+// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -54727,13 +54739,13 @@ R
 }
 
 STRING 14579
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14580
-// Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55086,13 +55098,13 @@ Black Drake
 }
 
 STRING 14876
-// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
+// Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14877
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55134,7 +55146,7 @@ R
 }
 
 STRING 14885
-// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
@@ -55146,13 +55158,13 @@ R
 }
 
 STRING 14887
-// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 14889
-// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
+// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -55230,13 +55242,13 @@ R
 }
 
 STRING 14907
-// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 14908
-// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
 {
 W
 }
@@ -55373,13 +55385,13 @@ Clans
 }
 
 STRING 15086
-// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 15087
-// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
 {
 W
 }
@@ -73338,7 +73350,7 @@ Mur'gul Conditions
 }
 
 STRING 30782
-// Abilities: A07Y (Poison Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A01R (Healing Spray), Hotkey (Hotkey - Normal)
 {
 P
 }
@@ -76212,7 +76224,7 @@ S
 }
 
 STRING 32581
-// Abilities: A07Y (Poison Arrows), Unhotkey (Hotkey - Turn Off)
+// Abilities: A07Y (Poison Arrows), Hotkey (Hotkey - Normal)
 {
 P
 }
@@ -76224,7 +76236,7 @@ F
 }
 
 STRING 32584
-// Upgrades: R00C (Freezing Breath), Hotkey (Hotkey)
+// Abilities: A07Y (Poison Arrows), Unhotkey (Hotkey - Turn Off)
 {
 P
 }
@@ -77261,7 +77273,7 @@ Train Legion Ship
 }
 
 STRING 33347
-// Upgrades: R00O (Disease Cloud), Hotkey (Hotkey)
+// Upgrades: R00C (Freezing Breath), Hotkey (Hotkey)
 {
 P
 }
@@ -79216,7 +79228,7 @@ L
 }
 
 STRING 34196
-// Upgrades: R023 (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R00O (Disease Cloud), Hotkey (Hotkey)
 {
 P
 }
@@ -79492,7 +79504,7 @@ D
 }
 
 STRING 34307
-// Upgrades: R029 (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R023 (Burning Oil), Hotkey (Hotkey)
 {
 P
 }
@@ -79648,7 +79660,7 @@ C
 }
 
 STRING 34382
-// Upgrades: R02K (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R029 (Magic Sentry), Hotkey (Hotkey)
 {
 P
 }
@@ -79696,7 +79708,7 @@ Build Freelancer Mercenary Camp
 }
 
 STRING 34390
-// Upgrades: R0B2 (Stone Form), Hotkey (Hotkey)
+// Upgrades: R02K (Liquid Fire), Hotkey (Hotkey)
 {
 P
 }
@@ -81919,7 +81931,7 @@ Build Lordaeron Shipyard
 }
 
 STRING 35574
-// Upgrades: R0BC (Skeletal Mastery), Hotkey (Hotkey)
+// Upgrades: R0B2 (Stone Form), Hotkey (Hotkey)
 {
 P
 }
@@ -86670,7 +86682,7 @@ Summon Spider Egg
 }
 
 STRING 37196
-// Upgrades: R0E7 (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0BC (Skeletal Mastery), Hotkey (Hotkey)
 {
 P
 }
@@ -89184,13 +89196,13 @@ STRING 37857
 }
 
 STRING 37858
-// Upgrades: R0GQ (Chaos), Hotkey (Hotkey)
+// Upgrades: R0E7 (Ensnare), Hotkey (Hotkey)
 {
 P
 }
 
 STRING 37859
-// Upgrades: R0H5 (Chaos), Hotkey (Hotkey)
+// Upgrades: R0GQ (Chaos), Hotkey (Hotkey)
 {
 P
 }
