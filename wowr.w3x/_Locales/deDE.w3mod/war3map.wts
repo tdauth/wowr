@@ -14769,7 +14769,7 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 STRING 2626
 // Units: h05X (Town Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Burglers and receive gathered resources. Can be upgraded to Keep and then Castle ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Einbrechern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 2627
@@ -17307,7 +17307,7 @@ Rekrut,Jäger,Meister
 STRING 3269
 // Units: h07P (Slave Master), Casterupgradetip (Caster Upgrade Tips)
 {
-- Slow,- Slow|n- Hunde freilassen,- Slow|n- Hunde freilassen|n- Käfig platzieren
+- Langsam,- Langsam|n- Hunde freilassen,- Langsam|n- Hunde freilassen|n- Käfig platzieren
 }
 
 STRING 3270
@@ -19593,7 +19593,7 @@ Söldnerlager Felwood
 }
 
 STRING 3761
-// Units: n0CI (Enraged Fire Elemental), Hotkey (Hotkey)
+// Units: n0CI (Wütender Feuer-Elementargeist), Hotkey (Hotkey)
 {
 E
 }
@@ -32920,7 +32920,7 @@ Ein mystischer Held, adept at ranged assaults. Can learn Teleportation, Far Sigh
 }
 
 STRING 6749
-// Items: I09U (Orb of Wind), Hotkey (Hotkey)
+// Items: I09U (Wind-Kugel), Hotkey (Hotkey)
 {
 W
 }
@@ -42744,7 +42744,7 @@ Increases the life regeneration rate of the Hero by <Arll,DataA1> hit points per
 STRING 9635
 // Items: I09A (Craft Orb of Orbs), Ubertip (Tooltip - Extended)
 {
-Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Slows movement speed.|n- Summons a Dark Minion on the unit's death.|n- Slows attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.|n|n|cffffcc00Requires 6 Orbs.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Langsams movement speed.|n- Summons a Dark Minion on the unit's death.|n- Langsams attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.|n|n|cffffcc00Requires 6 Orbs.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 9638
@@ -43680,7 +43680,7 @@ Ein mystischer Held, adept at ranged assaults. Can learn Heilige Magie, Arkane M
 STRING 10134
 // Units: n06X (Hydromancer), Casterupgradetip (Caster Upgrade Tips)
 {
-- Slow,- Slow|n- Schmetterwelle,- Slow|n- Schmetterwelle|n- Verwandlung
+- Langsam,- Langsam|n- Schmetterwelle,- Langsam|n- Schmetterwelle|n- Verwandlung
 }
 
 STRING 10138
@@ -50382,7 +50382,7 @@ Mobile Einheit, die die Rückführung von Gold und Holz von überall ermöglicht
 STRING 11880
 // Units: n0HN (Ogre Magi), Casterupgradetip (Caster Upgrade Tips)
 {
-- Kampfrausch,- Kampfrausch|n- Slow,- Kampfrausch|n- Slow|n- Verjüngung
+- Kampfrausch,- Kampfrausch|n- Langsam,- Kampfrausch|n- Langsam|n- Verjüngung
 }
 
 STRING 11881
@@ -50560,37 +50560,37 @@ Bringt den Brief zu Jaina auf Theramore.
 
 STRING 11946
 {
-Return the material to Khadgar in Dalaran.
+Bringt das Material zurück zu Khadgar in Dalaran.
 }
 
 STRING 11947
 {
-Hire an Enraged Fire Elemental.
+Heuert einen Wütender Feuer-Elementargeist an.
 }
 
 STRING 11948
 {
-Bring the Enraged Fire Elemental to Khadgar in Dalaran.
+Bringt den Wütenden Feuer-Elementargeist zu Khadgar in Dalaran.
 }
 
 STRING 11949
 {
-Repair the Stromgenerator of Dalaran.
+Repariert den Stromgenerator von Dalaran.
 }
 
 STRING 11950
 {
-Bring the Ingenieur Certification to Khadgar.
+Bringt die Ingenieurzertifizierung zu Khadgar.
 }
 
 STRING 11951
 {
-Defeat the Undeads attacking Daralan.
+Besiegt die Untoten, die Dalaran angreifen.
 }
 
 STRING 11952
 {
-Bring the Head of the Dreadlord to Khadgar in Dalaran.
+Bringt den Kopf des Schreckenslords zu Khadgar in Dalaran.
 }
 
 STRING 11953
@@ -51249,7 +51249,7 @@ STRING 12072
 
 STRING 12073
 {
-Unlock exclusive features in the map.
+Schaltet exklusive Features in der Karte frei.
 }
 
 STRING 12074
@@ -51443,7 +51443,7 @@ Return the corpse probe to Sylvanas in the Unterstadt.
 
 STRING 12119
 {
-Kill 5 enemy Paladin heroes.
+Tötet 5 feindliche Paladin-Helden.
 }
 
 STRING 12120
@@ -51478,7 +51478,7 @@ Jagt 6 Wale.
 
 STRING 12126
 {
-Return the Whale Fat to Elder Ko'nani.
+Bringt das Wal-Fett zurück zum Ältesten Ko'nani.
 }
 
 STRING 12127
@@ -51519,7 +51519,7 @@ Destroy all Dimensional Gates on Azeroth.
 STRING 12134
 // Abilities: A05O (Restore Mana), Tip (Tooltip - Normal)
 {
-Restore Mana
+Mana wiederherstellen
 }
 
 STRING 12135
@@ -51899,25 +51899,25 @@ Creates an Altar of Twisting Nether at a target location.
 STRING 12205
 // Items: I0OP (Tiny Dimensional Gate), Name (Name)
 {
-Tiny Dimensional Gate
+Winziges Dimensionstor
 }
 
 STRING 12206
 // Items: I0OP (Tiny Dimensional Gate), Tip (Tooltip - Basic)
 {
-Purchase Tiny Dimensional Gate
+Winziges Dimensionstor erwerben
 }
 
 STRING 12207
 // Items: I0OP (Tiny Dimensional Gate), Description (Description)
 {
-Creates a Dimensional Gate.
+Errichtet ein Dimensionstor.
 }
 
 STRING 12208
 // Items: I0OP (Tiny Dimensional Gate), Ubertip (Tooltip - Extended)
 {
-Creates Dimensional Gate at a target location.
+Errichtet am Zielort ein Dimensionstor.
 }
 
 STRING 12209
@@ -52004,7 +52004,7 @@ Creates a Demon Shipyard at a target location.
 STRING 12223
 // Items: I0PN (Tiny Obelisk), Description (Description)
 {
-Creates an Obelisk.
+Errichtet einen Obelisk.
 }
 
 STRING 12224
@@ -53717,25 +53717,25 @@ STRING 14056
 }
 
 STRING 14057
-// Items: I09U (Orb of Wind), Name (Name)
+// Items: I09U (Wind-Kugel), Name (Name)
 {
-Orb of Wind
+Wind-Kugel
 }
 
 STRING 14058
-// Items: I09U (Orb of Wind), Tip (Tooltip - Basic)
+// Items: I09U (Wind-Kugel), Tip (Tooltip - Basic)
 {
-Purchase Orb of Wind
+Wind-Kugel erwerben
 }
 
 STRING 14059
-// Items: I09U (Orb of Wind), Description (Description)
+// Items: I09U (Wind-Kugel), Description (Description)
 {
 Attacks cause Wind stun.
 }
 
 STRING 14060
-// Items: I09U (Orb of Wind), Ubertip (Tooltip - Extended)
+// Items: I09U (Wind-Kugel), Ubertip (Tooltip - Extended)
 {
 Adds <A0NB,DataA1> bonus wind damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and give a chance of <AIbx,DataA1> % to stun the enemy for <AIbx,Dur1> seconds and cause <AIbx,DataC1> extra damage.
 }
@@ -76321,13 +76321,13 @@ Summon Berserk Feuer-Elementargeist
 }
 
 STRING 32631
-// Units: n0CI (Enraged Fire Elemental), Name (Name)
+// Units: n0CI (Wütender Feuer-Elementargeist), Name (Name)
 {
 Wütender Feuer-Elementargeist
 }
 
 STRING 32632
-// Units: n0CI (Enraged Fire Elemental), Tip (Tooltip - Basic)
+// Units: n0CI (Wütender Feuer-Elementargeist), Tip (Tooltip - Basic)
 {
 Wütenden Feuer-Elementargeist beschwören
 }
@@ -92845,7 +92845,7 @@ STRING 39894
 STRING 39896
 // Items: I17A (Tiny Keep), Description (Description)
 {
-Creates a Keep.
+Errichtet eine Burg.
 }
 
 STRING 39897
@@ -92857,25 +92857,25 @@ Winzige Burg
 STRING 39898
 // Items: I17A (Tiny Keep), Tip (Tooltip - Basic)
 {
-Purchase Tiny Keep
+Winzige Burg erwerben
 }
 
 STRING 39899
 // Items: I17A (Tiny Keep), Ubertip (Tooltip - Extended)
 {
-Creates a Keep at a target location.
+Errichtet am Zielort eine Burg.
 }
 
 STRING 39900
 // Items: I0P4 (Tiny Castle), Ubertip (Tooltip - Extended)
 {
-Creates Castle at a target location.
+Errichtet am Zielort ein Schloss.
 }
 
 STRING 39901
 // Items: I17C (Tiny House), Description (Description)
 {
-Creates a House.
+Errichtet ein Haus.
 }
 
 STRING 39902
@@ -92887,13 +92887,13 @@ Winziges Haus
 STRING 39903
 // Items: I17C (Tiny House), Tip (Tooltip - Basic)
 {
-Purchase Tiny House
+Winziges Haus erwerben
 }
 
 STRING 39904
 // Items: I17C (Tiny House), Ubertip (Tooltip - Extended)
 {
-Creates a House at a target location.
+Errichtet am Zielort ein Haus.
 }
 
 STRING 39905
@@ -98824,7 +98824,7 @@ Attacks can create Clockwork Goblins.
 STRING 42158
 // Items: I05L (Orb of Orbs), Ubertip (Tooltip - Extended)
 {
-Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Slows movement speed.|n- Summons a Dark Minion on the unit's death.|n- Slows attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.
+Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Langsams movement speed.|n- Summons a Dark Minion on the unit's death.|n- Langsams attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.
 }
 
 STRING 42162
@@ -112338,7 +112338,7 @@ Further increases the attack damage of Murloc attack units.
 STRING 50463
 // Units: n0HC (Sludge Flinger), Casterupgradetip (Caster Upgrade Tips)
 {
-- Slow,- Slow|n- Parasit,- Slow|n- Parasit|n- Verschlingen
+- Langsam,- Langsam|n- Parasit,- Langsam|n- Parasit|n- Verschlingen
 }
 
 STRING 50464
