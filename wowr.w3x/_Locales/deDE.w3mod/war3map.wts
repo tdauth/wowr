@@ -1840,37 +1840,37 @@ Build Water Tower
 STRING 307
 // Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
 {
-Todesfinger - [|cffffcc00Stufe 1|r]
+(Neutral Feindlich)
 }
 
 STRING 308
 // Abilities: A0BG (Healing Spray), Tip (Tooltip - Normal)
 {
-Todesfinger - [|cffffcc00Stufe 2|r]
+Heil-Spray
 }
 
 STRING 309
 // Abilities: A12D (Cloud), EditorSuffix (Editor Suffix)
 {
-Todesfinger - [|cffffcc00Stufe 3|r]
+(Neutral Feindlich)
 }
 
 STRING 310
 // Abilities: A09O (Tornado), Researchubertip (Tooltip - Learn - Extended)
 {
-Todesfinger - [|cffffcc00Stufe 4|r]
+Beschwört einen heftigen lenkbaren Tornado, der das Bewegungstempo feindlicher Einheiten verlangsamt, feindliche Land-Einheiten zufällig in die Luft wirbelt und feindlichen Gebäuden Schaden zufügt.
 }
 
 STRING 311
 // Abilities: A12S (Discharge), EditorSuffix (Editor Suffix)
 {
-Todesfinger - [|cffffcc00Stufe 5|r]
+(Neutral Feindlich)
 }
 
 STRING 312
 // Units: Edmm (Demon Form), Name (Name)
 {
-Todesfinger - [|cffffcc00Stufe 6|r]
+Dämonengestalt
 }
 
 STRING 313
