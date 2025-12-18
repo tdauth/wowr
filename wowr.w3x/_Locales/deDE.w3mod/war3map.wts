@@ -1264,7 +1264,7 @@ Tyrandes Brief für Thrall
 STRING 211
 // Items: I01K (Tyrande´s Letter for Thrall), Description (Description)
 {
-Ein Brief von Tyrande für Thrall in Ogrimmar.
+Ein Brief von Tyrande für Thrall in Orgrimmar.
 }
 
 STRING 212
@@ -7135,7 +7135,7 @@ Varimathras der Verräter beschwören
 STRING 1206
 // Items: I01K (Tyrande´s Letter for Thrall), Ubertip (Tooltip - Extended)
 {
-A letter from Tyrande for Thrall in Ogrimmar. She is thankful for the copy of the Orcs´ Code of Laws.
+A letter from Tyrande for Thrall in Orgrimmar. She is thankful for the copy of the Orcs´ Code of Laws.
 }
 
 STRING 1207
@@ -49004,7 +49004,7 @@ Großmeister Taming
 STRING 11428
 // Abilities: A266 (Taming - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Tamer uses his knowledge to create a Scroll of Bezauberung.
+Der Dompteur nutzt sein Wissen, um eine Rolle der Bezauberung herzustellen.
 }
 
 STRING 11429
@@ -49088,7 +49088,7 @@ Lich-König beschwören
 STRING 11444
 // Items: I0L1 (Tamer), Ubertip (Tooltip - Extended)
 {
-Tames creeps which allows you controlling them permanently:|n- Small Bait|n- Bait|n- Advanced Bait|n- Monsterköder|n- Scroll of Bezauberung|n- Tiny Käfig
+Tames creeps which allows you controlling them permanently:|n- Kleiner Köder|n- Köder|n- Hoch entwickelter Köder|n- Monsterköder|n- Rolle der Bezauberung|n- Winziger Käfig
 }
 
 STRING 11445
@@ -49159,7 +49159,7 @@ Auferstehungsschrein errichten
 
 STRING 11458
 {
-Disables housing and tower limits.
+Deaktiviert das Unterkunft- und Turm-Limit.
 }
 
 STRING 11460
@@ -49591,7 +49591,7 @@ Sieg: |cffff0000AKTIVIERT|r
 
 STRING 11610
 {
-The victory has been voted to |cffff0000ENABLED|r.
+Der Sieg wurde zu |cffff0000AKTIVIERT|r abgestimmt.
 }
 
 STRING 11613
@@ -49601,7 +49601,7 @@ Sieg: |cffff0000DEAKTIVIERT|r
 
 STRING 11614
 {
-The victory has been voted to |cffff0000DISABLED|r.
+Der Sieg wurde zu |cffff0000DEAKTIVIERT|r abgestimmt.
 }
 
 STRING 11616
@@ -51194,7 +51194,7 @@ Improved Day Harvest Diurnal
 
 STRING 12062
 {
-Bring the plans to Thrall in Orgrimmar.
+Bringt die Pläne zu Thrall in Orgrimmar.
 }
 
 STRING 12063
@@ -82702,7 +82702,7 @@ Bezauberung
 STRING 35802
 // Abilities: A192 (Charm), EditorSuffix (Editor Suffix)
 {
-(Small Bait)
+(Kleiner Köder)
 }
 
 STRING 35803
@@ -82738,13 +82738,13 @@ Bezauberungs a creep with a base level up to 5.
 STRING 35809
 // Items: I0L6 (Advanced Bait), Name (Name)
 {
-Fortgeschrittener Köder
+Hoch entwickelter Köder
 }
 
 STRING 35810
 // Items: I0L6 (Advanced Bait), Tip (Tooltip - Basic)
 {
-Fortgeschrittenen Köder erwerben
+Hoch entwickelten Köder erwerben
 }
 
 STRING 35811
@@ -82780,7 +82780,7 @@ Advanced Taming
 STRING 35819
 // Abilities: A195 (Charm), EditorSuffix (Editor Suffix)
 {
-(Advanced Bait)
+(Hoch entwickelter Köder)
 }
 
 STRING 35820

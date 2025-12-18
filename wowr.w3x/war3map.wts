@@ -1264,7 +1264,7 @@ Tyrande´s Letter for Thrall
 STRING 211
 // Items: I01K (Tyrande´s Letter for Thrall), Description (Description)
 {
-A letter from Tyrande for Thrall in Ogrimmar.
+A letter from Tyrande for Thrall in Orgrimmar.
 }
 
 STRING 212
@@ -7135,7 +7135,7 @@ Summon Varimathras the Betrayer
 STRING 1206
 // Items: I01K (Tyrande´s Letter for Thrall), Ubertip (Tooltip - Extended)
 {
-A letter from Tyrande for Thrall in Ogrimmar. She is thankful for the copy of the Orcs´ Code of Laws.
+A letter from Tyrande for Thrall in Orgrimmar. She is thankful for the copy of the Orcs´ Code of Laws.
 }
 
 STRING 1207
