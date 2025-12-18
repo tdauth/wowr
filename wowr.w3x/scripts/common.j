@@ -2843,6 +2843,7 @@ globals
     constant integer TEAM_FIXED_COMPUTER                             = 2
     constant integer TEAM_NONE                                       = 3
 
+    // Heroes
     constant integer HERO_SELECTOR                                   = 'H056'
     constant integer BACK_PACK                                       = 'E008'
     constant integer BACKPACK                                        = BACK_PACK
@@ -2851,6 +2852,8 @@ globals
     constant integer MAX_HERO_SPELL_LEVEL                            = 7
     constant integer SKILL_POINTS_PER_LEVEL                          = 1
     constant integer MAX_HEROES                                      = 3
+    constant real START_ATTRIBUTE_POINTS                             = 55.0
+    constant real ATTRIBUTE_POINTS_PER_LEVEL                         = 5.0
 
     // All Races
     constant integer SPELL_BOOK                                      = 'o025'
