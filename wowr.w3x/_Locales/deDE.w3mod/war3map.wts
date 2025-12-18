@@ -6378,7 +6378,7 @@ Horde
 STRING 1077
 // Units: H0PN (King of Gilneas), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Fluch, Schreckgeheul, Kritische Aura and Worgen-Gestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Gryphon/Wild laufen.|r|n|cffffcc00Standard Ability: Berserk.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Worgen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00kraft:|r 22/2.7|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 17/1.8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1078
@@ -6746,7 +6746,7 @@ Zepter der Nachtelfen erwerben
 STRING 1141
 // Units: H0PO (King of Gilneas), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Fluch, Schreckgeheul, Kritische Aura and Worgen-Gestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Worgen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00kraft:|r 22/2.7|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 17/1.8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1142
@@ -127492,7 +127492,7 @@ Illidan wiederbeleben
 STRING 58171
 // Units: O02R (Far Seer), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, effective at ranged attacks and scouting. Can learn Chain Lightning, Far Sight, Wildgeist and Earthquake. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Orc|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 16/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 58173

@@ -6378,7 +6378,7 @@ Horde
 STRING 1077
 // Units: H0PN (King of Gilneas), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Curse, Howl of Terror, Critical Aura and Worgen Form. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Gryphon/Running Wild.|r|n|cffffcc00Standard Ability: Berserk.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Worgen|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 1078
@@ -6746,7 +6746,7 @@ Purchase Scepter of Night Elves
 STRING 1141
 // Units: H0PO (King of Gilneas), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Curse, Howl of Terror, Critical Aura and Worgen Form. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Worgen|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 1142
@@ -127491,7 +127491,7 @@ Revive Illidan
 STRING 58171
 // Units: O02R (Far Seer), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, effective at ranged attacks and scouting. Can learn Chain Lightning, Far Sight, Feral Spirit and Earthquake. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 16/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 58173
