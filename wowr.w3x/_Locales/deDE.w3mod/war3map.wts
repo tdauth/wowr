@@ -6378,7 +6378,7 @@ Horde
 STRING 1077
 // Units: H0PN (King of Gilneas), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Worgen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00kraft:|r 22/2.7|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 17/1.8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Worgen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/1,8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1078
@@ -6746,7 +6746,7 @@ Zepter der Nachtelfen erwerben
 STRING 1141
 // Units: H0PO (King of Gilneas), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Worgen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00kraft:|r 22/2.7|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 17/1.8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Worgen|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/1,8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1142
@@ -45491,7 +45491,7 @@ Feste von Drak'Tharon (Eiskrone)
 STRING 10473
 // Units: o09Y (Advanced Kobold Camp), Name (Name)
 {
-Fortgeschrittenes Kobold-Lager
+Hoch entwickeltes Kobold-Lager
 }
 
 STRING 10474
@@ -45509,7 +45509,7 @@ Naga-Ruinen (Versunkenes Kalimdor)
 STRING 10476
 // Units: h06G (Arcane Sanctum), Ubertip (Tooltip - Extended)
 {
-Trains Schiffsarzts, Sturm-Zauberers, and Wasserbeschwörers. |nAlso contains spell upgrades for Schiffsarzts, Sturm-Zauberers, and Wasserbeschwörers, and Magic Sentry.
+Bildet Schiffsärzte, Sturm-Zauberer und Wasserbeschwörer aus. |nBietet auch die Ausbaustufen für Schiffsärzte, Sturm-Zauberer und Wasserbeschwörer und 'Magischer Schutz'.
 }
 
 STRING 10477
@@ -45527,7 +45527,7 @@ Doctor Bildhauerei
 STRING 10479
 // Abilities: A1NT (Sculpting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Bildhauer uses his knowledge to craft a Tiny Golem Factory.
+Der Bildhauer nutzt sein Wissen, um eine Winzige Golem-Fabrik herzustellen.
 }
 
 STRING 10480
@@ -45551,7 +45551,7 @@ Großmeister Bildhauerei
 STRING 10483
 // Abilities: A1P5 (Sculpting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Bildhauer uses his knowledge to craft a Tiny Göttlicher Golem.
+Der Bildhauer nutzt sein Wissen, um einen Winzigen Göttlichen Golem herzustellen.
 }
 
 STRING 10484
@@ -45720,12 +45720,12 @@ STRING 10514
 
 STRING 10515
 {
-Wild Gods
+Wilde Götter
 }
 
 STRING 10516
 {
-Capture the remaining Wild Gods in Azeroth and bring their souls to Jaina.
+Fangt die verbliebenen Wilden Götter in Azeroth und bringt ihre Seelen zu Jaina.
 }
 
 STRING 10517
@@ -58042,12 +58042,12 @@ STRING 16986
 
 STRING 16987
 {
-You must be the leader of your clan!
+Sie müssen der Anführer des Clans sein!
 }
 
 STRING 16988
 {
-You must be the member of a clan!
+Sie müssen ein Mitglied des Clans sein!
 }
 
 STRING 16991
@@ -95533,13 +95533,13 @@ STRING 40897
 STRING 40898
 // Units: n0FX (Elite Armored Polar Bear), Tip (Tooltip - Basic)
 {
-Train Elite Armored Eisbär
+Gepanzerten Elite-Eisbär ausbilden
 }
 
 STRING 40899
 // Units: n0FX (Elite Armored Polar Bear), Name (Name)
 {
-Elite Armored Eisbär
+Gepanzerter Elite-Eisbär
 }
 
 STRING 40900
@@ -95803,7 +95803,7 @@ Reuse
 STRING 41073
 // Units: N0FC (Tuskarr Chieftain), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, adept at summoning beasts into battle. Can learn Masseneinschnüren, Kriegsdonner, Befehls-Aura, and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Tuskarr|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Schnee-Eule|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2.9|n|cffffcc00Beweglichkeit:|r 14/1.3|n|cffffcc00Intelligenz:|r 15/2.25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 41074
@@ -95887,13 +95887,13 @@ STRING 41087
 STRING 41088
 // Abilities: A1HS (Elite Armored Polar Bear), Name (Name)
 {
-Elite Armored Eisbär
+Gepanzerter Elite-Eisbär
 }
 
 STRING 41089
 // Upgrades: R0CP (Barrage), Tip (Tooltip)
 {
-Research Elite Armored Eisbär
+Gepanzerten Elite-Eisbär erforschen
 }
 
 STRING 41090
@@ -95911,7 +95911,7 @@ Initiand, Adept, Meister
 STRING 41092
 // Units: n0FF (Chieftain), Name (Name)
 {
-Chieftain
+Häuptling
 }
 
 STRING 41093
@@ -95929,7 +95929,7 @@ When used on a units, temporarily stops all unit activities. |nHält <Afrz,Dur1>
 STRING 41095
 // Abilities: A1HS (Elite Armored Polar Bear), Tip (Tooltip - Normal)
 {
-Elite Armored Eisbär
+Gepanzerter Elite-Eisbär
 }
 
 STRING 41096
@@ -95941,7 +95941,7 @@ STRING 41096
 STRING 41097
 // Abilities: S01B (Chaos), EditorSuffix (Editor Suffix)
 {
-(Elite Armored Eisbär) (Tuskarr)
+(Gepanzerter Elite-Eisbär) (Tuskarr)
 }
 
 STRING 41099
@@ -95995,7 +95995,7 @@ STRING 41127
 STRING 41128
 // Upgrades: R0CP (Barrage), Name (Name)
 {
-Elite Armored Eisbär
+Gepanzerter Elite-Eisbär
 }
 
 STRING 41130
@@ -96655,7 +96655,7 @@ Bildet Häuptlinge aus. |nAlso contains the Clans upgrade which gives Chieftains
 STRING 41296
 // Units: o05W (Ice Cutters Lodge), Ubertip (Tooltip - Extended)
 {
-Trains Giant Frost Wolves, Icetusk Mammuts, Eisbärs, and Riesige Schnee-Eulen. |nAlso contains the Astrale Bestien, Kritischer Schlag, Schmetter-Angriff, Verschlingen and Elite Armored Eisbär upgrades.
+Trains Giant Frost Wolves, Icetusk Mammuts, Eisbärs, and Riesige Schnee-Eulen. |nAlso contains the Astrale Bestien, Kritischer Schlag, Schmetter-Angriff, Verschlingen and Gepanzerter Elite-Eisbär upgrades.
 }
 
 STRING 41297
@@ -119684,13 +119684,13 @@ STRING 55304
 STRING 55305
 // Units: o09Y (Advanced Kobold Camp), Tip (Tooltip - Basic)
 {
-Ausbau zum Fortgeschrittenen Kobold-Lager
+Ausbau zum Hoch entwickelten Kobold-Lager
 }
 
 STRING 55306
 // Units: o09Y (Advanced Kobold Camp), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Fortgeschrittenes Kobold-Lagerermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Hoch entwickelten Kobold-Lager ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 55307
@@ -121739,13 +121739,13 @@ STRING 55963
 STRING 55964
 // Units: h0XM (Buy Property Kobold Camp), Name (Name)
 {
-Buy Property Kobold-Lager
+Immobilie Kobold-Lager kaufen
 }
 
 STRING 55965
 // Units: h0XM (Buy Property Kobold Camp), Tip (Tooltip - Basic)
 {
-Buy Property Kobold-Lager
+Immobilie Kobold-Lager kaufen
 }
 
 STRING 55967
@@ -129039,7 +129039,7 @@ Constructs a Minenschacht, so Arbeiters can collect resources from the Gold Mine
 STRING 59721
 // Units: u011 (Dwarf Mine Shaft), EditorSuffix (Name - Editor Suffix)
 {
-(AI)
+(KI)
 }
 
 STRING 59722

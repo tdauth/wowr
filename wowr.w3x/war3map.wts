@@ -95802,7 +95802,7 @@ Fish Trap
 STRING 41073
 // Units: N0FC (Tuskarr Chieftain), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, adept at summoning beasts into battle. Can learn Mass Ensnare, War Stomp, Command Aura, and Avatar. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Tuskarr|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Snowy Owl|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.9|n|cffffcc00Agility:|r 14/1.3|n|cffffcc00Intelligence:|r 15/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 41074
