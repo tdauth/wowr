@@ -58170,7 +58170,7 @@ Train Gryphon
 STRING 17218
 // Units: n0CG (Gryphon Chick), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Air) (Breeded)
+(Dwarf) (Air) (Breeded)
 }
 
 STRING 17222
@@ -59039,7 +59039,7 @@ STRING 17529
 STRING 17530
 // Abilities: S00H (Chaos), EditorSuffix (Editor Suffix)
 {
-(Dwarf - Mine First Upgrade)
+(Dwarf) (Mine) (First Upgrade)
 }
 
 STRING 17531
@@ -59051,7 +59051,7 @@ Chaos
 STRING 17532
 // Abilities: S00I (Chaos), EditorSuffix (Editor Suffix)
 {
-(Dwarf - Mine Second Upgrade)
+(Dwarf) (Mine) (Second Upgrade)
 }
 
 STRING 17533
@@ -126633,7 +126633,7 @@ Train Dwarf Mining Cart
 STRING 57923
 // Units: n04V (Gryphon), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Air)
+(Dwarf) (Air)
 }
 
 STRING 57924
@@ -126651,7 +126651,7 @@ Train Gryphon
 STRING 57926
 // Units: n04U (Gryphon), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Ground)
+(Dwarf) (Ground)
 }
 
 STRING 57927
@@ -126729,13 +126729,13 @@ Train Gryphon
 STRING 57943
 // Units: n04Y (Gryphon Breeding), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Breeding)
+(Dwarf) (Breeding)
 }
 
 STRING 57946
 // Abilities: A0DZ (Land), EditorSuffix (Editor Suffix)
 {
-(Dwarf Gryphon)
+(Dwarf) (Gryphon)
 }
 
 STRING 57948
@@ -126765,7 +126765,7 @@ Breed
 STRING 57953
 // Abilities: A0E0 (Breed), EditorSuffix (Editor Suffix)
 {
-(Dwarf Gryphon)
+(Dwarf) (Gryphon)
 }
 
 STRING 57955
@@ -126837,13 +126837,13 @@ Build Dwarf Scout Tower
 STRING 57968
 // Abilities: A0E1 (Slam), EditorSuffix (Editor Suffix)
 {
-(Dwarf War Golem)
+(Dwarf) (War Golem)
 }
 
 STRING 57969
 // Abilities: A0E2 (Resistant Skin), EditorSuffix (Editor Suffix)
 {
-(Dwarf War Golem)
+(Dwarf) (War Golem)
 }
 
 STRING 57971
@@ -127401,7 +127401,7 @@ Increases Battle Priests' mana capacity, mana regeneration rate, hit points, and
 STRING 58090
 // Units: n052 (War Golem), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Sleep Form)
+(Dwarf) (Sleep Form)
 }
 
 STRING 58092

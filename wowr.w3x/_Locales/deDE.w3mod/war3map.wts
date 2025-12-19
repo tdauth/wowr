@@ -19739,7 +19739,7 @@ Produces Belagerungsmaschines, Flugapparats, Mörser-Trupps and Dampf-Festunges.
 STRING 3790
 // Units: n04X (War Golem), Ubertip (Tooltip - Extended)
 {
-Heavy melee unit. Resistant to spells. Can also learn Schlafgestalt and Slam. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Heavy melee unit. Resistant to spells. Can also learn Schlafgestalt and Schmettern. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3791
@@ -58157,9 +58157,9 @@ Kriegs-Golem ausbilden
 }
 
 STRING 17216
-// Units: n0CG (Gryphon Chick), Name (Name)
+// Units: n0CG (Greifenküken), Name (Name)
 {
-Gryphon Chick
+Greifenküken
 }
 
 STRING 17217
@@ -58169,9 +58169,9 @@ Gryphon ausbilden
 }
 
 STRING 17218
-// Units: n0CG (Gryphon Chick), EditorSuffix (Name - Editor Suffix)
+// Units: n0CG (Greifenküken), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Air) (Breeded)
+(Dwarf) (Air) (Breeded)
 }
 
 STRING 17222
@@ -59040,7 +59040,7 @@ STRING 17529
 STRING 17530
 // Abilities: S00H (Chaos), EditorSuffix (Editor Suffix)
 {
-(Dwarf - Mine First Upgrade)
+(Dwarf) (Mine) (First Upgrade)
 }
 
 STRING 17531
@@ -59052,7 +59052,7 @@ Chaos
 STRING 17532
 // Abilities: S00I (Chaos), EditorSuffix (Editor Suffix)
 {
-(Dwarf - Mine Second Upgrade)
+(Dwarf) (Mine) (Second Upgrade)
 }
 
 STRING 17533
@@ -63840,7 +63840,7 @@ Upgrades all buildings' movement speed and armor.
 STRING 20553
 // Units: n08A (Guardian Golem), Ubertip (Tooltip - Extended)
 {
-Strong combat creature. Can cast Hurl Boulder and Slam. Has the ability Spell Immunity. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Strong combat creature. Can cast Hurl Boulder and Schmettern. Has the ability Spell Immunity. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 20555
@@ -123821,7 +123821,7 @@ Increases sight range and makes it at night the same as at day.
 STRING 56987
 // Upgrades: R03K (Flying Machine Bombs), Name (Name)
 {
-Slam
+Schmettern
 }
 
 STRING 56989
@@ -126634,7 +126634,7 @@ Train Dwarf Bergbau Cart
 STRING 57923
 // Units: n04V (Gryphon), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Air)
+(Dwarf) (Air)
 }
 
 STRING 57924
@@ -126652,7 +126652,7 @@ Greif ausbilden
 STRING 57926
 // Units: n04U (Gryphon), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Ground)
+(Dwarf) (Ground)
 }
 
 STRING 57927
@@ -126716,13 +126716,13 @@ Light flying melee unit that hurls pin-feathers. Can cast Land to attack ground 
 }
 
 STRING 57940
-// Units: n0CG (Gryphon Chick), Ubertip (Tooltip - Extended)
+// Units: n0CG (Greifenküken), Ubertip (Tooltip - Extended)
 {
 Light flying melee unit that hurls pin-feathers. Can cast Land to attack ground units. |n|n|cffffcc00Attacks air units.|r
 }
 
 STRING 57942
-// Units: n0CG (Gryphon Chick), Tip (Tooltip - Basic)
+// Units: n0CG (Greifenküken), Tip (Tooltip - Basic)
 {
 Greif ausbilden
 }
@@ -126730,13 +126730,13 @@ Greif ausbilden
 STRING 57943
 // Units: n04Y (Gryphon Breeding), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Breeding)
+(Dwarf) (Breeding)
 }
 
 STRING 57946
 // Abilities: A0DZ (Land), EditorSuffix (Editor Suffix)
 {
-(Dwarf Gryphon)
+(Dwarf) (Gryphon)
 }
 
 STRING 57948
@@ -126766,7 +126766,7 @@ Brüten
 STRING 57953
 // Abilities: A0E0 (Breed), EditorSuffix (Editor Suffix)
 {
-(Dwarf Gryphon)
+(Dwarf) (Gryphon)
 }
 
 STRING 57955
@@ -126832,19 +126832,19 @@ Zwergen-Beobachtungsturm
 STRING 57967
 // Units: h039 (Dwarf Scout Tower), Tip (Tooltip - Basic)
 {
-Build Zwergen-Beobachtungsturm
+Zwergen-Beobachtungsturm errichten
 }
 
 STRING 57968
 // Abilities: A0E1 (Slam), EditorSuffix (Editor Suffix)
 {
-(Dwarf Kriegs-Golem)
+(Zwerge) (Kriegs-Golem)
 }
 
 STRING 57969
 // Abilities: A0E2 (Resistant Skin), EditorSuffix (Editor Suffix)
 {
-(Dwarf Kriegs-Golem)
+(Zwerge) (Kriegs-Golem)
 }
 
 STRING 57971
@@ -126934,13 +126934,13 @@ STRING 57995
 STRING 57997
 // Upgrades: R03K (Flying Machine Bombs), Tip (Tooltip)
 {
-Research Slam
+Schmettern erforschen
 }
 
 STRING 57998
 // Upgrades: R03K (Flying Machine Bombs), Ubertip (Tooltip - Extended)
 {
-Allows Kriegs-Golems to cast Slam.
+Ermöglicht Kriegs-Golems, die 'Schmettern'-Fähigkeit zu benutzen.
 }
 
 STRING 57999
@@ -127402,7 +127402,7 @@ Increases Kampfpriesters' mana capacity, mana regeneration rate, hit points, and
 STRING 58090
 // Units: n052 (War Golem), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf - Schlafgestalt)
+(Zwerge) (Schlafgestalt)
 }
 
 STRING 58092
@@ -127426,7 +127426,7 @@ Kriegs-Golem-Gestalt
 STRING 58095
 // Abilities: A0F8 (Sleep Form), Unubertip (Tooltip - Turn Off - Extended)
 {
-Wakes the Kriegs-Golem up.
+Weckt den Kriegs-Golem auf.
 }
 
 STRING 58096
@@ -127450,7 +127450,7 @@ Schlafgestalt erforschen
 STRING 58099
 // Upgrades: R07T (Flying Machine Bombs), Ubertip (Tooltip - Extended)
 {
-Allows Kriegs-Golems to cast Schlafgestalt.
+Ermöglicht Kriegs-Golems, die 'Schlafgestalt'-Fähigkeit zu benutzen.
 }
 
 STRING 58100
@@ -127828,7 +127828,7 @@ Meister Barding
 STRING 58479
 // Abilities: A25A (Barding - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Tiny Plattenspieler.
+Stellt einen Winzigen Plattenspieler her.
 }
 
 STRING 58480
