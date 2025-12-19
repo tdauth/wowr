@@ -9912,7 +9912,7 @@ Murmur
 }
 
 STRING 1673
-// Units: h09F (Elemental Sanctuary), Hotkey (Hotkey)
+// Units: h09F (Elementares Sanktum), Hotkey (Hotkey)
 {
 E
 }
@@ -10741,7 +10741,7 @@ STRING 1812
 }
 
 STRING 1813
-// Units: h09X (Elemental Sanctuary Extended), Hotkey (Hotkey)
+// Units: h09X (Elementares Sanktum Extended), Hotkey (Hotkey)
 {
 X
 }
@@ -17361,13 +17361,13 @@ Käfig
 STRING 3278
 // Units: h0PZ (Murloc Treasurehold), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Versammlungshalle, Versammlungs-Hochburg, or Versammlungs-Festung) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Rathaus hat (Versammlungshalle, Versammlungs-Hochburg oder Versammlungs-Festung) und welche Gebäude Sie haben.
 }
 
 STRING 3279
 // Units: n0G9 (Murloc Shadowcaster), Casterupgradetip (Caster Upgrade Tips)
 {
-- Parasit,- Parasit|n- Todesmantel,- Parasit|n- Todesmanteln- Hex
+- Parasit,- Parasit|n- Todesmantel,- Parasit|n- Todesmantel|n- Hexerei
 }
 
 STRING 3280
@@ -27932,7 +27932,7 @@ STRING 5605
 STRING 5606
 // Items: I06B (Orc), Ubertip (Tooltip - Extended)
 {
-Kombination of Orc, Troll and Tauren units.|n- Powerful ground units.|n- Strong melee units.|n- Easy to play.|n|n|cffffcc00Faction: Horde.|r
+Kombination aus Orc-, Troll- und Tauren-Einheiten.|n- Mächtige Land-Einheiten.|n- Starke Nahkampf-Einheiten.|n- Einfach zu spielen.|n|n|cffffcc00Fraktion: Horde.|r
 }
 
 STRING 5607
@@ -27968,7 +27968,7 @@ Held
 STRING 5612
 // Items: I0HE (Tiny Elven Farm), Ubertip (Tooltip - Extended)
 {
-Creates a Elven Farm at a target location.
+Errichtet am Zielort einen Elfen-Hof.
 }
 
 STRING 5613
@@ -27998,25 +27998,25 @@ STRING 5617
 STRING 5619
 // Items: I0LD (Tiny Arcane Vault), Name (Name)
 {
-Tiny Arkanes Gewölbe
+Winziges Arkanes Gewölbe
 }
 
 STRING 5621
 // Items: I0LD (Tiny Arcane Vault), Tip (Tooltip - Basic)
 {
-Purchase Tiny Arkanes Gewölbe
+Winziges Arkanes Gewölbe erwerben
 }
 
 STRING 5623
 // Items: I0LD (Tiny Arcane Vault), Description (Description)
 {
-Creates a Arkanes Gewölbe.
+Errichtet ein Arkanes Gewölbe.
 }
 
 STRING 5625
 // Items: I0LD (Tiny Arcane Vault), Ubertip (Tooltip - Extended)
 {
-Creates a Arkanes Gewölbe at a target location.
+Errichtet am Zielort ein Arkanes Gewölbe.
 }
 
 STRING 5627
@@ -34885,9 +34885,9 @@ Zurück setzen.
 }
 
 STRING 7382
-// Units: h09F (Elemental Sanctuary), Name (Name)
+// Units: h09F (Elementares Sanktum), Name (Name)
 {
-Elemental Sanctuary
+Elementares Sanktum
 }
 
 STRING 7383
@@ -34905,7 +34905,7 @@ STRING 7384
 STRING 7385
 // Items: I07C (Potion of Greater Restoration), Ubertip (Tooltip - Extended)
 {
-Heilens <A0OV,DataA1> hit points and restores <A0OV,DataB1> mana when used.
+Heilt bei Benutzung <A0OV,DataA1> Trefferpunkte und stellt <A0OV,DataB1> Mana wieder.
 }
 
 STRING 7386
@@ -34923,7 +34923,7 @@ Dalaran-Schild
 STRING 7388
 // Upgrades: R05R (Cloud), Ubertip (Tooltip - Extended)
 {
-Allows Stromgenerators to enable or disable shields which cause damage to enemy units.
+Ermöglicht es Stromgeneratoren Schilde zu aktivieren oder deaktivieren, die feindlichen Einheiten Schaden zufügen.
 }
 
 STRING 7398
@@ -35683,7 +35683,7 @@ STRING 7607
 }
 
 STRING 7608
-// Units: h09F (Elemental Sanctuary), EditorSuffix (Name - Editor Suffix)
+// Units: h09F (Elementares Sanktum), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -63388,7 +63388,7 @@ STRING 20463
 }
 
 STRING 20464
-// Units: h09X (Elemental Sanctuary Extended), EditorSuffix (Name - Editor Suffix)
+// Units: h09X (Elementares Sanktum Extended), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -63796,15 +63796,15 @@ Allows Dalaran buildings to use the ability Manaschild.
 }
 
 STRING 20543
-// Units: h09X (Elemental Sanctuary Extended), Name (Name)
+// Units: h09X (Elementares Sanktum Extended), Name (Name)
 {
-Elemental Sanctuary Extended
+Elementares Sanktum Extended
 }
 
 STRING 20544
-// Units: h09X (Elemental Sanctuary Extended), Tip (Tooltip - Basic)
+// Units: h09X (Elementares Sanktum Extended), Tip (Tooltip - Basic)
 {
-Ausbau zum Elemental Sanctuary Extended
+Ausbau zum Elementares Sanktum Extended
 }
 
 STRING 20545
@@ -64192,13 +64192,13 @@ STRING 20633
 }
 
 STRING 20634
-// Units: h09F (Elemental Sanctuary), Tip (Tooltip - Basic)
+// Units: h09F (Elementares Sanktum), Tip (Tooltip - Basic)
 {
-Ausbau zum Elemental Sanctuary
+Ausbau zum Elementares Sanktum
 }
 
 STRING 20635
-// Units: h09F (Elemental Sanctuary), Ubertip (Tooltip - Extended)
+// Units: h09F (Elementares Sanktum), Ubertip (Tooltip - Extended)
 {
 Trains Luft-Elementargeists, Water Elementals, Feuer-Elementargeister and Meeres-Elementargeists. |nAlso contains the Elemental Convergence upgrade.
 }
@@ -64210,7 +64210,7 @@ Produces Dalaran-Mutanten, Dalaran-Missgeburten, Wächter-Golems, and Fleischgol
 }
 
 STRING 20637
-// Units: h09X (Elemental Sanctuary Extended), Ubertip (Tooltip - Extended)
+// Units: h09X (Elementares Sanktum Extended), Ubertip (Tooltip - Extended)
 {
 Trains Leerenelementars, Poison Elementals, Frost-Elementargeists, Lightning Elementals and Sand-Elementargeists. |nAlso contains the Elemental Convergence upgrade.
 }
@@ -65060,15 +65060,15 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 }
 
 STRING 22317
-// Units: h0AB (Elemental Sanctuary), Name (Name)
+// Units: h0AB (Elementares Sanktum), Name (Name)
 {
-Elemental Sanctuary
+Elementares Sanktum
 }
 
 STRING 22318
-// Units: h0AB (Elemental Sanctuary), Tip (Tooltip - Basic)
+// Units: h0AB (Elementares Sanktum), Tip (Tooltip - Basic)
 {
-Build Elemental Sanctuary
+Build Elementares Sanktum
 }
 
 STRING 22320
@@ -66776,7 +66776,7 @@ Bogenschützen ausbilden
 }
 
 STRING 23196
-// Units: h0AB (Elemental Sanctuary), EditorSuffix (Name - Editor Suffix)
+// Units: h0AB (Elementares Sanktum), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
 }
@@ -90229,7 +90229,7 @@ Allows Randaliers to place Sprengstoff-Fasss which cause more damage than Goblin
 STRING 38228
 // Upgrades: R02Y (Animal War Training), Ubertip (Tooltip - Extended)
 {
-Allows Sturmpanzers to cast Schwarmraketen.
+Ermöglicht Sturmpanzern, die 'Schwarmraketen'-Fähigkeit zu benutzen.
 }
 
 STRING 38363
@@ -92569,13 +92569,13 @@ STRING 39796
 STRING 39797
 // Upgrades: R0C9 (Control Magic), Ubertip (Tooltip - Extended)
 {
-Gives Kampfmagiers the ability to cast Feuerregen.
+Ermöglicht Kampfmagiern, die 'Feuerregen'-Fähigkeit zu benutzen.
 }
 
 STRING 39798
 // Units: h0IY (Wizard Tower), Ubertip (Tooltip - Extended)
 {
-Trains Nachtpirschers, Druids and Kampfmagiers. |nAlso contains spell upgrades for Nachtpirschers, Druids and Kampfmagiers, and Magic Sentry.
+Bildet Nachtpirscher, Druiden und Kampfmagier aus. |nAlso contains spell upgrades for Nachtpirschers, Druids and Kampfmagiers, and Magic Sentry.
 }
 
 STRING 39799
@@ -96025,7 +96025,7 @@ STRING 41133
 STRING 41134
 // Units: h0PZ (Murloc Treasurehold), Name (Name)
 {
-Murloc Treasurehold
+Murloc-Schatzkammer
 }
 
 STRING 41135
@@ -96043,7 +96043,7 @@ Research Hinterhalt
 STRING 41180
 // Units: o05R (Shaman), Casterupgradetip (Caster Upgrade Tips)
 {
-- Purge,- Purge|n- Kampfrausch,- Purge|n- Kampfrausch|n- Summon Meeresschildkröte
+- Reinigen,- Reinigen|n- Kampfrausch,- Reinigen|n- Kampfrausch|n- Meeresschildkröte beschwören
 }
 
 STRING 41181
@@ -96055,7 +96055,7 @@ Primary spellcaster. Can initially cast Purge, which dispels magical buffs and c
 STRING 41182
 // Units: h0PZ (Murloc Treasurehold), Tip (Tooltip - Basic)
 {
-Build Murloc Treasurehold
+Murloc-Schatzkammer errichten
 }
 
 STRING 41183
@@ -99521,7 +99521,7 @@ Riesenschildkröte
 }
 
 STRING 42384
-// Units: h0AB (Elemental Sanctuary), Ubertip (Tooltip - Extended)
+// Units: h0AB (Elementares Sanktum), Ubertip (Tooltip - Extended)
 {
 Trains Monks, Sages, and Druids. |nAlso contains spell upgrades for Monks, Sages, and Druids, and Magic Sentry.
 }
@@ -106562,7 +106562,7 @@ Windlauf erforschen
 STRING 46603
 // Upgrades: R0FL (Defend), Ubertip (Tooltip - Extended)
 {
-Allows Rogues to use the Windlauf ability.
+Ermöglicht Schurken, die 'Windlauf'-Fähigkeit zu benutzen.
 }
 
 STRING 46604

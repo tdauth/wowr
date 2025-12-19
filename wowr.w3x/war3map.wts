@@ -17367,7 +17367,7 @@ Creates a shop with purchasable items. The items available depend upon what leve
 STRING 3279
 // Units: n0G9 (Murloc Shadowcaster), Casterupgradetip (Caster Upgrade Tips)
 {
-- Parasite,- Parasite|n- Death Coil,- Parasite|n- Death Coiln- Hex
+- Parasite,- Parasite|n- Death Coil,- Parasite|n- Death Coil|n- Hex
 }
 
 STRING 3280
@@ -92568,7 +92568,7 @@ STRING 39796
 STRING 39797
 // Upgrades: R0C9 (Control Magic), Ubertip (Tooltip - Extended)
 {
-Gives Battle Mages the ability to cast Rain of Fire.
+Allows Battle Mages to cast Rain of Fire.
 }
 
 STRING 39798
