@@ -9912,7 +9912,7 @@ Murmur
 }
 
 STRING 1673
-// Units: h09F (Elementares Sanktum), Hotkey (Hotkey)
+// Units: h09F (Elemental Sanctuary), Hotkey (Hotkey)
 {
 E
 }
@@ -10741,7 +10741,7 @@ STRING 1812
 }
 
 STRING 1813
-// Units: h09X (Elementares Sanktum Extended), Hotkey (Hotkey)
+// Units: h09X (Elemental Sanctuary Extended), Hotkey (Hotkey)
 {
 X
 }
@@ -12181,15 +12181,15 @@ Barde
 }
 
 STRING 2084
-// Items: I152 (Race Qualification - Track Outland), Name (Name)
+// Items: I152 (Rennqualifikation - Track Outland), Name (Name)
 {
-Race Qualification - Track Outland
+Rennqualifikation - Track Outland
 }
 
 STRING 2085
-// Items: I14H (Book of Barding), Name (Name)
+// Items: I14H (Book of Dichtkunst), Name (Name)
 {
-Book of Barding
+Buch der Dichtkunst
 }
 
 STRING 2086
@@ -13603,21 +13603,21 @@ Provides Blood Elf towers with the ability to detect invisible units.
 }
 
 STRING 2400
-// Items: I14H (Book of Barding), Description (Description)
+// Items: I14H (Book of Dichtkunst), Description (Description)
 {
-A book that contains knowledge of music and poems.
+Ein Buch, das Wissen über Musik und Gedichte enthält.
 }
 
 STRING 2401
-// Items: I14H (Book of Barding), Ubertip (Tooltip - Extended)
+// Items: I14H (Book of Dichtkunst), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of music and poems.
+Ein Buch, das Wissen über Musik und Gedichte enthält.
 }
 
 STRING 2402
-// Items: I14H (Book of Barding), Tip (Tooltip - Basic)
+// Items: I14H (Book of Dichtkunst), Tip (Tooltip - Basic)
 {
-Purchase Book of Barding
+Buch der Dichtkunst erwerben
 }
 
 STRING 2403
@@ -13633,27 +13633,27 @@ Lied erwerben
 }
 
 STRING 2405
-// Abilities: A01S (Barding), Name (Name)
+// Abilities: A01S (Dichtkunst), Name (Name)
 {
-Barding
+Dichtkunst
 }
 
 STRING 2407
-// Abilities: A24U (Barding - Novice), Name (Name)
+// Abilities: A24U (Dichtkunst - Novice), Name (Name)
 {
-Barding - Novize
+Dichtkunst - Novize
 }
 
 STRING 2408
-// Abilities: A24U (Barding - Novice), Tip (Tooltip - Normal)
+// Abilities: A24U (Dichtkunst - Novice), Tip (Tooltip - Normal)
 {
-Novize Barding
+Novizen-Dichtkunst
 }
 
 STRING 2409
-// Abilities: A24U (Barding - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A24U (Dichtkunst - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Bard crafts a song.
+Schreibt ein Lied.
 }
 
 STRING 2410
@@ -21495,7 +21495,7 @@ Feueratem
 STRING 4300
 // Abilities: A16K (Disarmament), EditorSuffix (Editor Suffix)
 {
-(Child)
+(Kind)
 }
 
 STRING 4301
@@ -23114,7 +23114,7 @@ STRING 4640
 STRING 4641
 // Items: I1AE (Skin Villager Child), Name (Name)
 {
-Skin Villager Child
+Skin Dorfbewohner-Kind
 }
 
 STRING 4642
@@ -34885,7 +34885,7 @@ Zurück setzen.
 }
 
 STRING 7382
-// Units: h09F (Elementares Sanktum), Name (Name)
+// Units: h09F (Elemental Sanctuary), Name (Name)
 {
 Elementares Sanktum
 }
@@ -35683,7 +35683,7 @@ STRING 7607
 }
 
 STRING 7608
-// Units: h09F (Elementares Sanktum), EditorSuffix (Name - Editor Suffix)
+// Units: h09F (Elemental Sanctuary), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -53281,7 +53281,7 @@ Plattform errichten
 STRING 13885
 // Units: h028 (Platform), Ubertip (Tooltip - Extended)
 {
-Allows building and moving on water.
+Ermöglicht das Bauen auf und Bewegen über Wasser.
 }
 
 STRING 13886
@@ -53293,19 +53293,19 @@ E
 STRING 13888
 // Items: I03Q (Instructions for the Commander of the Citadel), Ubertip (Tooltip - Extended)
 {
-Instructions for the Kommandant der Zitadelle from Socrethar.
+Anweisungen für den Kommandanten der Zitadelle von Socrethar.
 }
 
 STRING 13889
 // Items: I03Q (Instructions for the Commander of the Citadel), Description (Description)
 {
-Instructions for the Kommandant der Zitadelle from Socrethar.
+Anweisungen für den Kommandanten der Zitadelle von Socrethar.
 }
 
 STRING 13893
 // Abilities: A094 (True Sight), Ubertip (Tooltip - Normal - Extended)
 {
-Reveals invisible units in a range of <A094,rng1>.
+Deckt unsichtbare Einheiten innerhalb einer Reichweiter von <A094,rng1> auf.
 }
 
 STRING 13896
@@ -53695,13 +53695,13 @@ O
 STRING 14053
 // Units: u017 (Demon Shipyard), Name (Name)
 {
-Demon Shipyard
+Dämonen-Hafen
 }
 
 STRING 14054
 // Units: u017 (Demon Shipyard), Tip (Tooltip - Basic)
 {
-Build Demon Shipyard
+Dämonen-Hafen errichten
 }
 
 STRING 14055
@@ -53953,7 +53953,7 @@ G
 STRING 14129
 // Abilities: A0SQ (Capture), Tip (Tooltip - Normal)
 {
-Capture
+Gefangen nehmen
 }
 
 STRING 14130
@@ -53965,13 +53965,13 @@ STRING 14130
 STRING 14131
 // Upgrades: R07Q (Stone Form), Name (Name)
 {
-Capture
+Gefangen nehmen
 }
 
 STRING 14132
 // Abilities: A09W (Capture), Ubertip (Tooltip - Normal - Extended)
 {
-Captures an enemy unit. If the Draenei-Gefängnis is destroyed while the captured unit is still inside, the unit that was captured will be released.
+Nimmt eine feindliche Einheit gefangen. If the Draenei-Gefängnis is destroyed while the captured unit is still inside, the unit that was captured will be released.
 }
 
 STRING 14133
@@ -54252,7 +54252,7 @@ Mana-Kraut erwerben
 STRING 14325
 // Units: n03M (Advanced Death Tower), EditorSuffix (Name - Editor Suffix)
 {
-(The New Citadel)
+(Die neue Zitadelle)
 }
 
 STRING 14329
@@ -55711,19 +55711,19 @@ Al'ar,Blazewing,Blaze of the Heavens,Harbinger of Darkness
 STRING 15334
 // Destructibles: B00X (Ashenvale Christmas Tree Wall), Name (Name)
 {
-Ashenvale Christmas Baumwand
+Ashenvale Weihnachten Baumwand
 }
 
 STRING 15335
 // Destructibles: B00Y (Azuremyst Isles Christmas Tree Wall), Name (Name)
 {
-Azuremyst Isles Christmas Baumwand
+Azuremyst Isles Weihnachten Baumwand
 }
 
 STRING 15336
 // Destructibles: B00Z (Cityscape Christmas Tree Wall), Name (Name)
 {
-Cityscape Christmas Baumwand
+Cityscape Weihnachten Baumwand
 }
 
 STRING 15338
@@ -58157,7 +58157,7 @@ Kriegs-Golem ausbilden
 }
 
 STRING 17216
-// Units: n0CG (Greifenküken), Name (Name)
+// Units: n0CG (Gryphon Chick), Name (Name)
 {
 Greifenküken
 }
@@ -58169,7 +58169,7 @@ Gryphon ausbilden
 }
 
 STRING 17218
-// Units: n0CG (Greifenküken), EditorSuffix (Name - Editor Suffix)
+// Units: n0CG (Gryphon Chick), EditorSuffix (Name - Editor Suffix)
 {
 (Dwarf) (Air) (Breeded)
 }
@@ -60169,7 +60169,7 @@ Alles freigschaltet!
 STRING 18357
 // Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
 {
-Arcane Creature Attack
+Arkaner Kreaturen-Angriff
 }
 
 STRING 18358
@@ -61460,7 +61460,7 @@ E
 }
 
 STRING 19412
-// Abilities: A25E (Barding - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A25E (Dichtkunst - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63388,7 +63388,7 @@ STRING 20463
 }
 
 STRING 20464
-// Units: h09X (Elementares Sanktum Extended), EditorSuffix (Name - Editor Suffix)
+// Units: h09X (Elemental Sanctuary Extended), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -63796,13 +63796,13 @@ Allows Dalaran buildings to use the ability Manaschild.
 }
 
 STRING 20543
-// Units: h09X (Elementares Sanktum Extended), Name (Name)
+// Units: h09X (Elemental Sanctuary Extended), Name (Name)
 {
 Elementares Sanktum Extended
 }
 
 STRING 20544
-// Units: h09X (Elementares Sanktum Extended), Tip (Tooltip - Basic)
+// Units: h09X (Elemental Sanctuary Extended), Tip (Tooltip - Basic)
 {
 Ausbau zum Elementares Sanktum Extended
 }
@@ -64192,13 +64192,13 @@ STRING 20633
 }
 
 STRING 20634
-// Units: h09F (Elementares Sanktum), Tip (Tooltip - Basic)
+// Units: h09F (Elemental Sanctuary), Tip (Tooltip - Basic)
 {
 Ausbau zum Elementares Sanktum
 }
 
 STRING 20635
-// Units: h09F (Elementares Sanktum), Ubertip (Tooltip - Extended)
+// Units: h09F (Elemental Sanctuary), Ubertip (Tooltip - Extended)
 {
 Trains Luft-Elementargeists, Water Elementals, Feuer-Elementargeister and Meeres-Elementargeists. |nAlso contains the Elemental Convergence upgrade.
 }
@@ -64210,7 +64210,7 @@ Produces Dalaran-Mutanten, Dalaran-Missgeburten, Wächter-Golems, and Fleischgol
 }
 
 STRING 20637
-// Units: h09X (Elementares Sanktum Extended), Ubertip (Tooltip - Extended)
+// Units: h09X (Elemental Sanctuary Extended), Ubertip (Tooltip - Extended)
 {
 Trains Leerenelementars, Poison Elementals, Frost-Elementargeists, Lightning Elementals and Sand-Elementargeists. |nAlso contains the Elemental Convergence upgrade.
 }
@@ -64270,7 +64270,7 @@ Gold sammeln
 
 STRING 20649
 {
-Red water!
+Rotes Wasser!
 }
 
 STRING 20650
@@ -65060,13 +65060,13 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 }
 
 STRING 22317
-// Units: h0AB (Elementares Sanktum), Name (Name)
+// Units: h0AB (Elemental Sanctuary), Name (Name)
 {
 Elementares Sanktum
 }
 
 STRING 22318
-// Units: h0AB (Elementares Sanktum), Tip (Tooltip - Basic)
+// Units: h0AB (Elemental Sanctuary), Tip (Tooltip - Basic)
 {
 Build Elementares Sanktum
 }
@@ -66557,7 +66557,7 @@ Drain
 STRING 22895
 // Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
 {
-Reinforced Arcane Creature Attack
+Verstärkter arkaner Kreaturen-Angriff
 }
 
 STRING 22897
@@ -66575,7 +66575,7 @@ Water Bomb
 STRING 22902
 // Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
 {
-Magical Creature Attack
+Magischer Kreaturen-Angriff
 }
 
 STRING 22904
@@ -66617,19 +66617,19 @@ Gibt dem Spieler Gold und Holz.
 STRING 22933
 // Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Tip (Tooltip)
 {
-Ausbau zum Magical Creature Attack
+Ausbau zum Magischen Kreaturen-Angriff
 }
 
 STRING 22949
 // Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Tip (Tooltip)
 {
-Ausbau zum Reinforced Arcane Creature Attack
+Ausbau zum Verstärkten arkanen Kreaturen-Angriff
 }
 
 STRING 22950
 // Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Tip (Tooltip)
 {
-Ausbau zum Arcane Creature Attack
+Ausbau zum Arkanen Kreaturen-Angriff
 }
 
 STRING 22951
@@ -66776,7 +66776,7 @@ Bogenschützen ausbilden
 }
 
 STRING 23196
-// Units: h0AB (Elementares Sanktum), EditorSuffix (Name - Editor Suffix)
+// Units: h0AB (Elemental Sanctuary), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
 }
@@ -72216,19 +72216,19 @@ Flammenschredder
 STRING 29058
 // Units: N0BE (Flame Shredder), Awakentip (Tooltip - Awaken)
 {
-Revive Flammenschredder
+Flammenschredder wiederbeleben
 }
 
 STRING 29059
 // Units: N0BE (Flame Shredder), Tip (Tooltip - Basic)
 {
-Summon Flammenschredder
+Flammenschredder beschwören
 }
 
 STRING 29060
 // Units: N0BE (Flame Shredder), Revivetip (Tooltip - Revive)
 {
-Revive Flammenschredder
+Flammenschredder wiederbeleben
 }
 
 STRING 29079
@@ -75691,13 +75691,13 @@ Light flying melee unit that hurls pin-feathers. Can cast Land to attack ground 
 }
 
 STRING 32422
-// Units: n04Y (Gryphon Breeding), Name (Name)
+// Units: n04Y (Greifenzucht), Name (Name)
 {
-Gryphon Breeding
+Greifenzucht
 }
 
 STRING 32423
-// Units: n04Y (Gryphon Breeding), Ubertip (Tooltip - Extended)
+// Units: n04Y (Greifenzucht), Ubertip (Tooltip - Extended)
 {
 Light flying melee unit that hurls pin-feathers. Can cast Land to attack ground units. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -75711,13 +75711,13 @@ Highly skilled sharpshooter, effective against air units. Can gain the Improved 
 STRING 32425
 // Units: h0JU (Pandaren Housing), Name (Name)
 {
-Pandaren Housing
+Pandaren-Unterkunft
 }
 
 STRING 32426
 // Units: h0JU (Pandaren Housing), Tip (Tooltip - Basic)
 {
-Build Pandaren Housing
+Pandaren-Unterkunft errichten
 }
 
 STRING 32427
@@ -78977,13 +78977,13 @@ Winzigen Tempel des Wassers errichten
 }
 
 STRING 34103
-// Items: I152 (Race Qualification - Track Outland), Description (Description)
+// Items: I152 (Rennqualifikation - Track Outland), Description (Description)
 {
 Allows you to participate in the Outland race.
 }
 
 STRING 34104
-// Items: I152 (Race Qualification - Track Outland), Ubertip (Tooltip - Extended)
+// Items: I152 (Rennqualifikation - Track Outland), Ubertip (Tooltip - Extended)
 {
 Allows you to participate in the Outland race.
 }
@@ -79007,9 +79007,9 @@ STRING 34107
 }
 
 STRING 34111
-// Items: I152 (Race Qualification - Track Outland), Tip (Tooltip - Basic)
+// Items: I152 (Rennqualifikation - Track Outland), Tip (Tooltip - Basic)
 {
-Purchase Race Qualification - Track Outland
+Purchase Rennqualifikation - Track Outland
 }
 
 STRING 34112
@@ -91213,37 +91213,37 @@ STRING 38830
 STRING 38831
 // Upgrades: R09F (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
 {
-Creature Attack
+Kreaturen-Angriff
 }
 
 STRING 38832
 // Upgrades: R09F (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
 {
-Improved Creature Attack
+Verbesserter Kreaturen-Angriff
 }
 
 STRING 38833
 // Upgrades: R09F (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
 {
-Advanced Creature Attack
+Hoch entwickelter Kreaturen-Angriff
 }
 
 STRING 38834
 // Upgrades: R09F (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
 {
-Ausbau zum Creature Attack
+Ausbau zum Kreaturen-Angriff
 }
 
 STRING 38835
 // Upgrades: R09F (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
 {
-Ausbau zum Improved Creature Attack
+Ausbau zum Verbesserten Kreaturen-Angriff
 }
 
 STRING 38836
 // Upgrades: R09F (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
 {
-Ausbau zum Advanced Creature Attack
+Ausbau zum Hoch entwickelten Kreaturen-Angriff
 }
 
 STRING 38837
@@ -91327,37 +91327,37 @@ STRING 38849
 STRING 38850
 // Upgrades: R0BP (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Creature Attack
+Kreaturen-Angriff
 }
 
 STRING 38851
 // Upgrades: R0BP (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Improved Creature Attack
+Verbesserter Kreaturen-Angriff
 }
 
 STRING 38852
 // Upgrades: R0BP (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Advanced Creature Attack
+Hoch entwickelter Kreaturen-Angriff
 }
 
 STRING 38853
 // Upgrades: R0BP (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Creature Attack
+Ausbau zum Kreaturen-Angriff
 }
 
 STRING 38854
 // Upgrades: R0BP (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Improved Creature Attack
+Ausbau zum Verbesserten Kreaturen-Angriff
 }
 
 STRING 38855
 // Upgrades: R0BP (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Advanced Creature Attack
+Ausbau zum Hoch entwickelten Kreaturen-Angriff
 }
 
 STRING 38856
@@ -92491,19 +92491,19 @@ STRING 39782
 STRING 39783
 // Upgrades: R0C6 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
-Gilneas Armor
+Gilneas-Rüstung
 }
 
 STRING 39784
 // Upgrades: R0C6 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
-Improved Gilneas Armor
+Verbesserte Gilneas-Rüstung
 }
 
 STRING 39785
 // Upgrades: R0C6 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
-Advanced Gilneas Armor
+Hoch entwickelte Gilneas-Rüstung
 }
 
 STRING 39786
@@ -92515,37 +92515,37 @@ STRING 39786
 STRING 39787
 // Upgrades: R0C7 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Gilneas Range Weapons
+Gilneas-Distanzwaffen
 }
 
 STRING 39788
 // Upgrades: R0C7 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Improved Gilneas Range Weapons
+Verbesserte Gilneas-Distanzwaffen
 }
 
 STRING 39789
 // Upgrades: R0C7 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Advanced Gilneas Range Weapons
+Hoch entwickelte Gilneas-Distanzwaffen
 }
 
 STRING 39790
 // Upgrades: R0C7 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Gilneas Range Weapons
+Ausbau zu Gilneas-Distanzwaffen
 }
 
 STRING 39791
 // Upgrades: R0C7 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Improved Gilneas Range Weapons
+Ausbau zu Verbesserten Gilneas-Distanzwaffen
 }
 
 STRING 39792
 // Upgrades: R0C7 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zum Advanced Gilneas Range Weapons
+Ausbau zu Hoch entwickelten Gilneas-Distanzwaffen
 }
 
 STRING 39793
@@ -97612,7 +97612,7 @@ STRING 41689
 }
 
 STRING 41690
-// Abilities: A25B (Barding - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A25B (Dichtkunst - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -99521,7 +99521,7 @@ Riesenschildkröte
 }
 
 STRING 42384
-// Units: h0AB (Elementares Sanktum), Ubertip (Tooltip - Extended)
+// Units: h0AB (Elemental Sanctuary), Ubertip (Tooltip - Extended)
 {
 Trains Monks, Sages, and Druids. |nAlso contains spell upgrades for Monks, Sages, and Druids, and Magic Sentry.
 }
@@ -102851,37 +102851,37 @@ STRING 43586
 STRING 43587
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
-Oger-Fernkampfwaffen
+Oger-Distanzwaffen
 }
 
 STRING 43588
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
-Verbesserte Oger-Fernkampfwaffen
+Verbesserte Oger-Distanzwaffen
 }
 
 STRING 43589
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
-Hoch entwickelte Oger-Fernkampfwaffen
+Hoch entwickelte Oger-Distanzwaffen
 }
 
 STRING 43590
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zu Oger-Fernkampfwaffen
+Ausbau zu Oger-Distanzwaffen
 }
 
 STRING 43591
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zu Verbesserten Oger-Fernkampfwaffen
+Ausbau zu Verbesserten Oger-Distanzwaffen
 }
 
 STRING 43592
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zu Hoch entwickelten Oger-Fernkampfwaffen
+Ausbau zu Hoch entwickelten Oger-Distanzwaffen
 }
 
 STRING 43613
@@ -103287,7 +103287,7 @@ STRING 43979
 }
 
 STRING 43980
-// Abilities: A24U (Barding - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A24U (Dichtkunst - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -107483,19 +107483,19 @@ Schwert erwerben
 }
 
 STRING 48566
-// Items: I0U6 (Crusader Helmet), Name (Name)
+// Items: I0U6 (Knight Helmet), Name (Name)
 {
-Crusader Helmet
+Ritterhelm
 }
 
 STRING 48567
-// Items: I0U6 (Crusader Helmet), Tip (Tooltip - Basic)
+// Items: I0U6 (Knight Helmet), Tip (Tooltip - Basic)
 {
-Purchase Crusader Helmet
+Ritterhelm erwerben
 }
 
 STRING 48568
-// Items: I0U6 (Crusader Helmet), Description (Description)
+// Items: I0U6 (Knight Helmet), Description (Description)
 {
 Erhöht die Rüstung um 5.
 }
@@ -107551,7 +107551,7 @@ STRING 48577
 STRING 48578
 // Abilities: A1QT (Item Armor Bonus), EditorSuffix (Editor Suffix)
 {
-(+5) (Crusader Helmet)
+(+5) (Ritterhelm)
 }
 
 STRING 48579
@@ -108196,7 +108196,7 @@ Increases the attack damage of the Hero by 5 when worn.|n|n|cffffcc00Left Hand, 
 }
 
 STRING 48950
-// Items: I0U6 (Crusader Helmet), Ubertip (Tooltip - Extended)
+// Items: I0U6 (Knight Helmet), Ubertip (Tooltip - Extended)
 {
 Increases the armor of the Hero by 5 when worn.|n|n|cffffcc00Head.|r
 }
@@ -108348,7 +108348,7 @@ Fackel
 STRING 48986
 // Units: n0IX (Night Elf Child), Tip (Tooltip - Basic)
 {
-Train Night Elf Child
+Nachtelfen-Kind ausbilden
 }
 
 STRING 48987
@@ -117954,7 +117954,7 @@ Increases the armor of the Hero by 9 when worn.|n|n|cffffcc00Right Hand.|r
 STRING 53740
 // Abilities: A20D (Item Armor Bonus), EditorSuffix (Editor Suffix)
 {
-(+9) (Knight Shield)
+(+9) (Ritterschild)
 }
 
 STRING 53742
@@ -119753,7 +119753,7 @@ The capital of the the Blood Elves.
 STRING 55316
 // Units: n0FB (Fel Fountain), Tip (Tooltip - Basic)
 {
-Build Fel-Brunnen
+Fel-Brunnen errichten
 }
 
 STRING 55317
@@ -120083,7 +120083,7 @@ Kobold-Jäger ausbilden
 STRING 55393
 // Units: n0AD (Kobold Hunter), Ubertip (Tooltip - Extended)
 {
-Light range unit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Leichte Fernkampfeinheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 55399
@@ -125980,7 +125980,7 @@ STRING 57721
 STRING 57722
 // Destructibles: B00W (Christmas Tree Wall), Name (Name)
 {
-Christmas Baumwand
+Weihnachten Baumwand
 }
 
 STRING 57723
@@ -126634,7 +126634,7 @@ Train Dwarf Bergbau Cart
 STRING 57923
 // Units: n04V (Gryphon), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf) (Air)
+(Zwerge) (Luft)
 }
 
 STRING 57924
@@ -126644,7 +126644,7 @@ Greif
 }
 
 STRING 57925
-// Units: n04Y (Gryphon Breeding), Tip (Tooltip - Basic)
+// Units: n04Y (Greifenzucht), Tip (Tooltip - Basic)
 {
 Greif ausbilden
 }
@@ -126652,7 +126652,7 @@ Greif ausbilden
 STRING 57926
 // Units: n04U (Gryphon), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf) (Ground)
+(Zwerge) (Boden)
 }
 
 STRING 57927
@@ -126700,13 +126700,13 @@ STRING 57934
 STRING 57936
 // Units: h038 (Dwarf Shipyard), Name (Name)
 {
-Hafen der Zwerge
+Zwergen-Hafen
 }
 
 STRING 57937
 // Units: h038 (Dwarf Shipyard), Tip (Tooltip - Basic)
 {
-Hafen der Zwerge errichten
+Zwergen-Hafen errichten
 }
 
 STRING 57939
@@ -126716,27 +126716,27 @@ Light flying melee unit that hurls pin-feathers. Can cast Land to attack ground 
 }
 
 STRING 57940
-// Units: n0CG (Greifenküken), Ubertip (Tooltip - Extended)
+// Units: n0CG (Gryphon Chick), Ubertip (Tooltip - Extended)
 {
 Light flying melee unit that hurls pin-feathers. Can cast Land to attack ground units. |n|n|cffffcc00Attacks air units.|r
 }
 
 STRING 57942
-// Units: n0CG (Greifenküken), Tip (Tooltip - Basic)
+// Units: n0CG (Gryphon Chick), Tip (Tooltip - Basic)
 {
 Greif ausbilden
 }
 
 STRING 57943
-// Units: n04Y (Gryphon Breeding), EditorSuffix (Name - Editor Suffix)
+// Units: n04Y (Greifenzucht), EditorSuffix (Name - Editor Suffix)
 {
-(Dwarf) (Breeding)
+(Zwerge) (Zucht)
 }
 
 STRING 57946
 // Abilities: A0DZ (Land), EditorSuffix (Editor Suffix)
 {
-(Dwarf) (Gryphon)
+(Zwerge) (Greif)
 }
 
 STRING 57948
@@ -126766,7 +126766,7 @@ Brüten
 STRING 57953
 // Abilities: A0E0 (Breed), EditorSuffix (Editor Suffix)
 {
-(Dwarf) (Gryphon)
+(Zwerge) (Greif)
 }
 
 STRING 57955
@@ -126802,7 +126802,7 @@ STRING 57959
 STRING 57960
 // Upgrades: R03I (Flying Machine Bombs), Ubertip (Tooltip - Extended)
 {
-Allows Gryphons to cast Breed.
+Ermöglicht Greifen, die 'Brüten'-Fähigkeit zu benutzen-
 }
 
 STRING 57962
@@ -127814,37 +127814,37 @@ Build Tiny Plattenspieler
 }
 
 STRING 58477
-// Abilities: A25A (Barding - Master), Name (Name)
+// Abilities: A25A (Dichtkunst - Master), Name (Name)
 {
-Barding - Meister
+Dichtkunst - Meister
 }
 
 STRING 58478
-// Abilities: A25A (Barding - Master), Tip (Tooltip - Normal)
+// Abilities: A25A (Dichtkunst - Master), Tip (Tooltip - Normal)
 {
-Meister Barding
+Meister-Dichtkunst
 }
 
 STRING 58479
-// Abilities: A25A (Barding - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25A (Dichtkunst - Master), Ubertip (Tooltip - Normal - Extended)
 {
 Stellt einen Winzigen Plattenspieler her.
 }
 
 STRING 58480
-// Abilities: A25B (Barding - Advanced), Name (Name)
+// Abilities: A25B (Dichtkunst - Advanced), Name (Name)
 {
-Barding - Advanced
+Dichtkunst - Advanced
 }
 
 STRING 58481
-// Abilities: A25B (Barding - Advanced), Tip (Tooltip - Normal)
+// Abilities: A25B (Dichtkunst - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Barding
+Fortgeschrittene Dichtkunst
 }
 
 STRING 58482
-// Abilities: A25B (Barding - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25B (Dichtkunst - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 Stellt eine Flöte her.
 }
@@ -127858,13 +127858,13 @@ STRING 58483
 STRING 58484
 // Abilities: A25C (Item Life Regeneration Aura), Name (Name)
 {
-Item Lebensregeneration Aura
+Gegenstand Lebensregenerations-Aura
 }
 
 STRING 58485
 // Abilities: A25D (Item Mana Regeneration), Name (Name)
 {
-Item Manaregeneration
+Gegenstand Manaregeneration
 }
 
 STRING 58486
@@ -127910,19 +127910,19 @@ Gedicht erwerben
 }
 
 STRING 58495
-// Abilities: A25E (Barding - Adept), Name (Name)
+// Abilities: A25E (Dichtkunst - Adept), Name (Name)
 {
-Barding - Adept
+Dichtkunst - Adept
 }
 
 STRING 58496
-// Abilities: A25E (Barding - Adept), Tip (Tooltip - Normal)
+// Abilities: A25E (Dichtkunst - Adept), Tip (Tooltip - Normal)
 {
-Adept Barding
+Adepten-Dichtkunst
 }
 
 STRING 58497
-// Abilities: A25E (Barding - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25E (Dichtkunst - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 Schreibt Gedichte.
 }
@@ -127960,31 +127960,31 @@ Organisation für Goblin-Rennen
 STRING 58504
 // Items: I14G (Bard), Ubertip (Tooltip - Extended)
 {
-Craft items to make wonderful music and write poems:|n- Songs|n- Flötes|n- Gedichts|n- Tiny Plattenspielers
+Stellt Gegenstände her, um wunderbare Musik zu machen und Gedichte zu schreiben:|n- Lieder|n- Flöten|n- Gedichte|n- Winzige Plattenspielers
 }
 
 STRING 58505
-// Items: I14T (Race Qualification - Track Northrend), Name (Name)
+// Items: I14T (Rennqualifikation - Track Northrend), Name (Name)
 {
-Race Qualification - Track Northrend
+Rennqualifikation - Track Northrend
 }
 
 STRING 58506
-// Items: I14T (Race Qualification - Track Northrend), Description (Description)
+// Items: I14T (Rennqualifikation - Track Northrend), Description (Description)
 {
 Allows you to participate in the Northrend race.
 }
 
 STRING 58507
-// Items: I14T (Race Qualification - Track Northrend), Ubertip (Tooltip - Extended)
+// Items: I14T (Rennqualifikation - Track Northrend), Ubertip (Tooltip - Extended)
 {
 Allows you to participate in the Northrend race.
 }
 
 STRING 58508
-// Items: I14T (Race Qualification - Track Northrend), Tip (Tooltip - Basic)
+// Items: I14T (Rennqualifikation - Track Northrend), Tip (Tooltip - Basic)
 {
-Purchase Race Qualification - Track Northrend
+Purchase Rennqualifikation - Track Northrend
 }
 
 STRING 58509
@@ -128306,9 +128306,9 @@ Increases the range of Riflemen and Gun Tower attacks.
 }
 
 STRING 58583
-// Items: I14X (Race Qualification - Track Azeroth Grand Prix), Name (Name)
+// Items: I14X (Rennqualifikation - Track Azeroth Grand Prix), Name (Name)
 {
-Race Qualification - Track Azeroth Grand Prix
+Rennqualifikation - Track Azeroth Grand Prix
 }
 
 STRING 58584
@@ -128342,7 +128342,7 @@ Winziges Portal
 }
 
 STRING 58589
-// Items: I14X (Race Qualification - Track Azeroth Grand Prix), Description (Description)
+// Items: I14X (Rennqualifikation - Track Azeroth Grand Prix), Description (Description)
 {
 Allows you to participate in the Azeroth Grand Prix.
 }
@@ -128354,7 +128354,7 @@ Winziges Portal erwerben
 }
 
 STRING 58591
-// Items: I14X (Race Qualification - Track Azeroth Grand Prix), Ubertip (Tooltip - Extended)
+// Items: I14X (Rennqualifikation - Track Azeroth Grand Prix), Ubertip (Tooltip - Extended)
 {
 Allows you to participate in the Azeroth Grand Prix.
 }
@@ -128426,9 +128426,9 @@ Converts units into Dwarf units.
 }
 
 STRING 58603
-// Items: I14X (Race Qualification - Track Azeroth Grand Prix), Tip (Tooltip - Basic)
+// Items: I14X (Rennqualifikation - Track Azeroth Grand Prix), Tip (Tooltip - Basic)
 {
-Purchase Race Qualification - Track Azeroth Grand Prix
+Purchase Rennqualifikation - Track Azeroth Grand Prix
 }
 
 STRING 58604
@@ -128511,7 +128511,7 @@ The cup for the winner of the third place.
 
 STRING 58642
 {
-Race Qualifications are now available in Kezan's Organisation für Goblin-Rennen!
+Rennqualifikations are now available in Kezan's Organisation für Goblin-Rennen!
 }
 
 STRING 58669

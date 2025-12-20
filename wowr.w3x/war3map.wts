@@ -12187,9 +12187,9 @@ Race Qualification - Track Outland
 }
 
 STRING 2085
-// Items: I14H (Book of Barding), Name (Name)
+// Items: I14H (Book of Poetry), Name (Name)
 {
-Book of Barding
+Book of Poetry
 }
 
 STRING 2086
@@ -13603,21 +13603,21 @@ Provides Blood Elf towers with the ability to detect invisible units.
 }
 
 STRING 2400
-// Items: I14H (Book of Barding), Description (Description)
+// Items: I14H (Book of Poetry), Description (Description)
 {
 A book that contains knowledge of music and poems.
 }
 
 STRING 2401
-// Items: I14H (Book of Barding), Ubertip (Tooltip - Extended)
+// Items: I14H (Book of Poetry), Ubertip (Tooltip - Extended)
 {
 A book that contains knowledge of music and poems.
 }
 
 STRING 2402
-// Items: I14H (Book of Barding), Tip (Tooltip - Basic)
+// Items: I14H (Book of Poetry), Tip (Tooltip - Basic)
 {
-Purchase Book of Barding
+Purchase Book of Poetry
 }
 
 STRING 2403
@@ -13633,27 +13633,27 @@ Purchase Song
 }
 
 STRING 2405
-// Abilities: A01S (Barding), Name (Name)
+// Abilities: A01S (Poetry), Name (Name)
 {
-Barding
+Poetry
 }
 
 STRING 2407
-// Abilities: A24U (Barding - Novice), Name (Name)
+// Abilities: A24U (Poetry - Novice), Name (Name)
 {
-Barding - Novice
+Poetry - Novice
 }
 
 STRING 2408
-// Abilities: A24U (Barding - Novice), Tip (Tooltip - Normal)
+// Abilities: A24U (Poetry - Novice), Tip (Tooltip - Normal)
 {
-Novice Barding
+Novice Poetry
 }
 
 STRING 2409
-// Abilities: A24U (Barding - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A24U (Poetry - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Bard crafts a song.
+Writes a song.
 }
 
 STRING 2410
@@ -61459,7 +61459,7 @@ E
 }
 
 STRING 19412
-// Abilities: A25E (Barding - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A25E (Poetry - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -97611,7 +97611,7 @@ STRING 41689
 }
 
 STRING 41690
-// Abilities: A25B (Barding - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A25B (Poetry - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -103286,7 +103286,7 @@ STRING 43979
 }
 
 STRING 43980
-// Abilities: A24U (Barding - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A24U (Poetry - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -107482,19 +107482,19 @@ Purchase Sword
 }
 
 STRING 48566
-// Items: I0U6 (Crusader Helmet), Name (Name)
+// Items: I0U6 (Knight Helmet), Name (Name)
 {
-Crusader Helmet
+Knight Helmet
 }
 
 STRING 48567
-// Items: I0U6 (Crusader Helmet), Tip (Tooltip - Basic)
+// Items: I0U6 (Knight Helmet), Tip (Tooltip - Basic)
 {
-Purchase Crusader Helmet
+Purchase Knight Helmet
 }
 
 STRING 48568
-// Items: I0U6 (Crusader Helmet), Description (Description)
+// Items: I0U6 (Knight Helmet), Description (Description)
 {
 Increases the armor by 5.
 }
@@ -107550,7 +107550,7 @@ STRING 48577
 STRING 48578
 // Abilities: A1QT (Item Armor Bonus), EditorSuffix (Editor Suffix)
 {
-(+5) (Crusader Helmet)
+(+5) (Knight Helmet)
 }
 
 STRING 48579
@@ -108195,7 +108195,7 @@ Increases the attack damage of the Hero by 5 when worn.|n|n|cffffcc00Left Hand, 
 }
 
 STRING 48950
-// Items: I0U6 (Crusader Helmet), Ubertip (Tooltip - Extended)
+// Items: I0U6 (Knight Helmet), Ubertip (Tooltip - Extended)
 {
 Increases the armor of the Hero by 5 when worn.|n|n|cffffcc00Head.|r
 }
@@ -127813,37 +127813,37 @@ Build Tiny Record Player
 }
 
 STRING 58477
-// Abilities: A25A (Barding - Master), Name (Name)
+// Abilities: A25A (Poetry - Master), Name (Name)
 {
-Barding - Master
+Poetry - Master
 }
 
 STRING 58478
-// Abilities: A25A (Barding - Master), Tip (Tooltip - Normal)
+// Abilities: A25A (Poetry - Master), Tip (Tooltip - Normal)
 {
-Master Barding
+Master Poetry
 }
 
 STRING 58479
-// Abilities: A25A (Barding - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25A (Poetry - Master), Ubertip (Tooltip - Normal - Extended)
 {
 Crafts a Tiny Record Player.
 }
 
 STRING 58480
-// Abilities: A25B (Barding - Advanced), Name (Name)
+// Abilities: A25B (Poetry - Advanced), Name (Name)
 {
-Barding - Advanced
+Poetry - Advanced
 }
 
 STRING 58481
-// Abilities: A25B (Barding - Advanced), Tip (Tooltip - Normal)
+// Abilities: A25B (Poetry - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Barding
+Advanced Poetry
 }
 
 STRING 58482
-// Abilities: A25B (Barding - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25B (Poetry - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 Crafts a Flute.
 }
@@ -127909,19 +127909,19 @@ Purchase Poem
 }
 
 STRING 58495
-// Abilities: A25E (Barding - Adept), Name (Name)
+// Abilities: A25E (Poetry - Adept), Name (Name)
 {
-Barding - Adept
+Poetry - Adept
 }
 
 STRING 58496
-// Abilities: A25E (Barding - Adept), Tip (Tooltip - Normal)
+// Abilities: A25E (Poetry - Adept), Tip (Tooltip - Normal)
 {
-Adept Barding
+Adept Poetry
 }
 
 STRING 58497
-// Abilities: A25E (Barding - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25E (Poetry - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 Crafts Poems.
 }
