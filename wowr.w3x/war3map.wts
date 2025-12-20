@@ -6731,12 +6731,6 @@ STRING 1140
 Purchase Scepter of Night Elves
 }
 
-STRING 1141
-// Units: H0PO (King of Gilneas), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Worgen|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
-}
-
 STRING 1142
 // Units: O004 (Stormreaver Warlock), Name (Name)
 {
@@ -9828,7 +9822,7 @@ STRING 1660
 }
 
 STRING 1661
-// Units: N07U (Elemental Lord), Name (Name)
+// Units: N0IG (Elemental Lord), Name (Name)
 {
 Elemental Lord
 }
@@ -9876,7 +9870,7 @@ D
 }
 
 STRING 1669
-// Units: N07U (Elemental Lord), Hotkey (Hotkey)
+// Units: o024 (Goblin Turret), Hotkey (Hotkey)
 {
 E
 }
@@ -9888,7 +9882,7 @@ D
 }
 
 STRING 1671
-// Units: o024 (Goblin Turret), Hotkey (Hotkey)
+// Units: h09F (Elemental Sanctuary), Hotkey (Hotkey)
 {
 E
 }
@@ -9900,7 +9894,7 @@ Murmur
 }
 
 STRING 1673
-// Units: h09F (Elemental Sanctuary), Hotkey (Hotkey)
+// Units: E011 (Iron Fist), Hotkey (Hotkey)
 {
 E
 }
@@ -9948,7 +9942,7 @@ Mystical Hero, adept at disrupting spells and dealing large amounts of fire dama
 }
 
 STRING 1681
-// Units: E011 (Iron Fist), Hotkey (Hotkey)
+// Units: n09Q (Engineer Base Unit), Hotkey (Hotkey)
 {
 E
 }
@@ -10469,12 +10463,6 @@ STRING 1768
 // Abilities: A05E (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
 (+10 All Stats)
-}
-
-STRING 1769
-// Units: H0PS (King of Gilneas), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Curse, Howl of Terror, Critical Aura and Worgen Form. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1770
@@ -12733,7 +12721,7 @@ Barrel Form
 }
 
 STRING 2252
-// Abilities: A11Y (Running Wild), Untip (Tooltip - Turn Off)
+// Abilities: A1H4 (Normal Form), Name (Name)
 {
 Normal Form
 }
@@ -14527,7 +14515,7 @@ Gives Bandit range units the Envenomed Weapons ability which damages hit enemies
 }
 
 STRING 2588
-// Units: n09Q (Engineer Base Unit), Hotkey (Hotkey)
+// Units: e018 (Empty Chest), Hotkey (Hotkey)
 {
 E
 }
@@ -15163,13 +15151,13 @@ T
 }
 
 STRING 2696
-// Units: e018 (Empty Chest), Hotkey (Hotkey)
+// Units: H0GR (Ironclad Submarine), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 2697
-// Units: H0GR (Ironclad Submarine), Hotkey (Hotkey)
+// Units: H0JQ (Elite Rifleman), Hotkey (Hotkey)
 {
 E
 }
@@ -18222,12 +18210,6 @@ STRING 3449
 Powerful flying boss hero who can cast Breath of Fire, Summon Fire Elemental, Command Aura, Reincarnation and Cleaving Attack.|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
 }
 
-STRING 3450
-// Units: N0BI (War Queen), Ubertip (Tooltip - Extended)
-{
-Mystical Sea Witch boss hero, adept at ranged assaults. Can learn Forked Lightning, Frost Arrows, Mana Shield, Volcano, and Summon Watery Minion. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
-}
-
 STRING 3451
 // Units: N069 (Old God of Death), Ubertip (Tooltip - Extended)
 {
@@ -18250,12 +18232,6 @@ STRING 3454
 // Units: E00Q (Demigod), Ubertip (Tooltip - Extended)
 {
 Mystical Hero, adept at using nature spells. Can learn Entangling Roots, Force of Nature, Thorns Aura, Tranquility, and Attribute Bonus. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
-}
-
-STRING 3456
-// Units: N07U (Elemental Lord), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at disrupting spells and dealing large amounts of fire damage.  Can learn Soul Burn, Summon Lava Spawn, Incinerate and Volcano.|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
 }
 
 STRING 3458
@@ -18343,13 +18319,13 @@ Q
 }
 
 STRING 3485
-// Units: H0JQ (Elite Rifleman), Hotkey (Hotkey)
+// Units: n0CI (Enraged Fire Elemental), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 3486
-// Units: n0CI (Enraged Fire Elemental), Hotkey (Hotkey)
+// Units: h0QR (Elevator), Hotkey (Hotkey)
 {
 E
 }
@@ -19533,7 +19509,7 @@ Mercenary Camp Felwood
 }
 
 STRING 3761
-// Units: h0QR (Elevator), Hotkey (Hotkey)
+// Units: h0S0 (Eagle Knight), Hotkey (Hotkey)
 {
 E
 }
@@ -19623,7 +19599,7 @@ Mercenary Camp Outland
 }
 
 STRING 3777
-// Units: h0S0 (Eagle Knight), Hotkey (Hotkey)
+// Units: N0IG (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -20526,12 +20502,6 @@ STRING 4023
 F
 }
 
-STRING 4024
-// Units: H0JO (Ranger), Ubertip (Tooltip - Extended)
-{
-Cunning boss Hero, adept at damaging opponents. Can learn Holy Light, Cold Arrows, Trueshot Aura, and Banshee Form, and Attribute Bonus. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
-}
-
 STRING 4025
 // Abilities: A0GU (Dwarf Missiles), Tip (Tooltip - Normal)
 {
@@ -20749,7 +20719,7 @@ Runeforging - Adept
 }
 
 STRING 4102
-// Units: N0IG (Elemental Lord), Hotkey (Hotkey)
+// Units: N0IH (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -20923,7 +20893,7 @@ Dragon Breeder - Adept
 }
 
 STRING 4135
-// Units: N0IH (Elemental Lord), Hotkey (Hotkey)
+// Units: N0II (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -21157,7 +21127,7 @@ Eat Tree
 }
 
 STRING 4178
-// Units: N0II (Elemental Lord), Hotkey (Hotkey)
+// Units: h0UB (Elekk Knight), Hotkey (Hotkey)
 {
 E
 }
@@ -22355,7 +22325,7 @@ STRING 4483
 }
 
 STRING 4490
-// Units: h0UB (Elekk Knight), Hotkey (Hotkey)
+// Units: n0K2 (Elder), Hotkey (Hotkey)
 {
 E
 }
@@ -22688,7 +22658,7 @@ Q
 }
 
 STRING 4546
-// Units: n0K2 (Elder), Hotkey (Hotkey)
+// Units: n0K8 (Endless Fountain), Hotkey (Hotkey)
 {
 E
 }
@@ -23106,7 +23076,7 @@ The skin of a Skink.
 }
 
 STRING 4673
-// Units: n0K8 (Endless Fountain), Hotkey (Hotkey)
+// Units: o0AB (Eagle), Hotkey (Hotkey)
 {
 E
 }
@@ -23589,7 +23559,7 @@ Research Phoenix Egg
 }
 
 STRING 4754
-// Units: o0AB (Eagle), Hotkey (Hotkey)
+// Units: o040 (Disable Portal), Hotkey (Hotkey)
 {
 E
 }
@@ -25280,18 +25250,6 @@ STRING 5095
 Spellcaster production building. Trains Ghosts, Fire Revenants, and Heretics. |nAlso contains spell upgrades for Ghosts, Fire Revenants, and Heretics.
 }
 
-STRING 5096
-// Units: H0Q2 (Fleet Admiral), Name (Name)
-{
-Fleet Admiral
-}
-
-STRING 5097
-// Units: H0Q2 (Fleet Admiral), Propernames (Proper Names)
-{
-Fleet Admiral Tethys
-}
-
 STRING 5098
 // Units: n00E (Human Citizen (male)), Tip (Tooltip - Basic)
 {
@@ -25449,7 +25407,7 @@ Dune Worm Piss
 }
 
 STRING 5124
-// Units: o040 (Disable Portal), Hotkey (Hotkey)
+// Units: N0DR (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
@@ -25611,13 +25569,13 @@ T
 }
 
 STRING 5166
-// Units: N0DR (Elemental Lord), Hotkey (Hotkey)
+// Units: N01X (Elemental Lord), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 5167
-// Units: N01X (Elemental Lord), Hotkey (Hotkey)
+// Items: tint (Tome of Intelligence), Hotkey (Hotkey)
 {
 E
 }
@@ -25845,7 +25803,7 @@ Q
 }
 
 STRING 5210
-// Items: tint (Tome of Intelligence), Hotkey (Hotkey)
+// Items: I02W (Magical Creep Summoner), Hotkey (Hotkey)
 {
 E
 }
@@ -26115,7 +26073,7 @@ Creates a Great Dungeon.
 }
 
 STRING 5259
-// Items: I02W (Magical Creep Summoner), Hotkey (Hotkey)
+// Items: I05I (Easter Egg), Hotkey (Hotkey)
 {
 E
 }
@@ -26637,7 +26595,7 @@ Build Tiny Brazier
 }
 
 STRING 5349
-// Items: I05I (Easter Egg), Hotkey (Hotkey)
+// Items: I05L (Orb of Orbs), Hotkey (Hotkey)
 {
 E
 }
@@ -27917,7 +27875,7 @@ Creates a Arcane Vault at a target location.
 }
 
 STRING 5627
-// Items: I05L (Orb of Orbs), Hotkey (Hotkey)
+// Items: I05Q (Freelancer), Hotkey (Hotkey)
 {
 E
 }
@@ -30403,7 +30361,7 @@ N
 }
 
 STRING 6087
-// Items: I05Q (Freelancer), Hotkey (Hotkey)
+// Items: I062 (Draktharon Keep (Icecrown)), Hotkey (Hotkey)
 {
 E
 }
@@ -31211,7 +31169,7 @@ T
 }
 
 STRING 6270
-// Items: I062 (Draktharon Keep (Icecrown)), Hotkey (Hotkey)
+// Items: I069 (Random Profession), Hotkey (Hotkey)
 {
 E
 }
@@ -31277,7 +31235,7 @@ Summon Medivh
 }
 
 STRING 6314
-// Items: I069 (Random Profession), Hotkey (Hotkey)
+// Items: I06C (Undead), Hotkey (Hotkey)
 {
 E
 }
@@ -31289,7 +31247,7 @@ Q
 }
 
 STRING 6317
-// Items: I06C (Undead), Hotkey (Hotkey)
+// Items: I06M (Weapon Smith), Hotkey (Hotkey)
 {
 E
 }
@@ -31450,7 +31408,7 @@ D
 }
 
 STRING 6373
-// Units: H0Q2 (Fleet Admiral), EditorSuffix (Name - Editor Suffix)
+// Units: H0T2 (Author), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -31522,7 +31480,7 @@ Massive melee unit that can disrupt enemy attackers and take incredible amounts 
 }
 
 STRING 6399
-// Units: H0T2 (Author), EditorSuffix (Name - Editor Suffix)
+// Units: H0T8 (Developer), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -31558,7 +31516,7 @@ Summon Crystal Golem
 }
 
 STRING 6407
-// Units: N0IG (Elemental Lord), Name (Name)
+// Units: N0IH (Elemental Lord), Name (Name)
 {
 Elemental Lord
 }
@@ -31600,7 +31558,7 @@ STRING 6413
 }
 
 STRING 6414
-// Units: H0T8 (Developer), EditorSuffix (Name - Editor Suffix)
+// Units: H0U3 (Regent Lord), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -31736,7 +31694,7 @@ S
 }
 
 STRING 6444
-// Items: I06M (Weapon Smith), Hotkey (Hotkey)
+// Items: I06U (Dalaran), Hotkey (Hotkey)
 {
 E
 }
@@ -32171,13 +32129,13 @@ Q
 }
 
 STRING 6551
-// Items: I06U (Dalaran), Hotkey (Hotkey)
+// Items: I09A (Craft Orb of Orbs), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 6552
-// Items: I09A (Craft Orb of Orbs), Hotkey (Hotkey)
+// Items: I0D1 (Merchant), Hotkey (Hotkey)
 {
 E
 }
@@ -32846,7 +32804,7 @@ Revive Goblin Shredder
 }
 
 STRING 6755
-// Items: I0D1 (Merchant), Hotkey (Hotkey)
+// Items: I0O6 (Third Race), Hotkey (Hotkey)
 {
 E
 }
@@ -33509,7 +33467,7 @@ Previous Bag
 }
 
 STRING 6969
-// Items: I0O6 (Third Race), Hotkey (Hotkey)
+// Items: I0RQ (+1 Intelligence), Hotkey (Hotkey)
 {
 E
 }
@@ -33657,7 +33615,7 @@ Blade of the Black Empire
 }
 
 STRING 6995
-// Items: I0RQ (+1 Intelligence), Hotkey (Hotkey)
+// Items: I0SP (Centaur), Hotkey (Hotkey)
 {
 E
 }
@@ -34026,13 +33984,13 @@ W
 }
 
 STRING 7064
-// Items: I0SP (Centaur), Hotkey (Hotkey)
+// Items: I0VP (Hunter), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 7066
-// Items: I0VP (Hunter), Hotkey (Hotkey)
+// Items: I0VZ (Player 1), Hotkey (Hotkey)
 {
 E
 }
@@ -34050,7 +34008,7 @@ Archimonde
 }
 
 STRING 7070
-// Items: I0VZ (Player 1), Hotkey (Hotkey)
+// Items: I0W0 (Player Neutral Hostile), Hotkey (Hotkey)
 {
 E
 }
@@ -34146,13 +34104,13 @@ Find Artifacts
 }
 
 STRING 7093
-// Items: I0W0 (Player Neutral Hostile), Hotkey (Hotkey)
+// Items: I0W1 (Player Neutral Passive), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 7094
-// Items: I0W1 (Player Neutral Passive), Hotkey (Hotkey)
+// Items: I0W2 (Player Color Red), Hotkey (Hotkey)
 {
 E
 }
@@ -34266,7 +34224,7 @@ Q
 }
 
 STRING 7163
-// Items: I0W2 (Player Color Red), Hotkey (Hotkey)
+// Items: I0W5 (Miner), Hotkey (Hotkey)
 {
 E
 }
@@ -34356,7 +34314,7 @@ W
 }
 
 STRING 7181
-// Items: I0W5 (Miner), Hotkey (Hotkey)
+// Items: I0XM (Lumberjack), Hotkey (Hotkey)
 {
 E
 }
@@ -35051,7 +35009,7 @@ Q
 }
 
 STRING 7436
-// Items: I0XM (Lumberjack), Hotkey (Hotkey)
+// Items: I0YE (Warlock), Hotkey (Hotkey)
 {
 E
 }
@@ -37953,7 +37911,7 @@ C
 }
 
 STRING 8030
-// Units: H0U3 (Regent Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H0U4 (Prophet), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -38289,7 +38247,7 @@ STRING 8102
 }
 
 STRING 8103
-// Items: I0YE (Warlock), Hotkey (Hotkey)
+// Items: I11L (Icecrown Citadel), Hotkey (Hotkey)
 {
 E
 }
@@ -38779,7 +38737,7 @@ Summon General Vezax
 }
 
 STRING 8202
-// Units: H0U4 (Prophet), EditorSuffix (Name - Editor Suffix)
+// Units: H0UX (The Light Mother), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -40920,7 +40878,7 @@ The head of the leading Dreadlord of the Undead forces which attacked Dalaran.
 }
 
 STRING 8611
-// Items: I11L (Icecrown Citadel), Hotkey (Hotkey)
+// Items: I11W (Prospector), Hotkey (Hotkey)
 {
 E
 }
@@ -41034,7 +40992,7 @@ Cleaving Attack
 }
 
 STRING 8630
-// Items: I0GL (Water Base), Hotkey (Hotkey)
+// Items: I0PT (Tuskarr), Hotkey (Hotkey)
 {
 V
 }
@@ -41387,7 +41345,7 @@ Gerard
 }
 
 STRING 8697
-// Units: H0UX (The Light Mother), EditorSuffix (Name - Editor Suffix)
+// Units: N0CZ (Tuskarr Chieftain), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -42908,7 +42866,7 @@ STRING 9766
 }
 
 STRING 9775
-// Items: I11W (Prospector), Hotkey (Hotkey)
+// Items: I146 (Candy), Hotkey (Hotkey)
 {
 E
 }
@@ -42968,7 +42926,7 @@ Slot 9
 }
 
 STRING 9889
-// Items: I146 (Candy), Hotkey (Hotkey)
+// Abilities: A016 (Engineering - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42980,7 +42938,7 @@ F
 }
 
 STRING 9891
-// Abilities: A016 (Engineering - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A009 (Alchemy - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43659,7 +43617,7 @@ Xavathras
 }
 
 STRING 10154
-// Units: N0CZ (Tuskarr Chieftain), EditorSuffix (Name - Editor Suffix)
+// Units: N0GE (Trade Prince of the Bilgewater Carte), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -44517,13 +44475,13 @@ Heads of zombies which must be brought to Gerard in the village.
 }
 
 STRING 10300
-// Units: N0GE (Trade Prince of the Bilgewater Carte), EditorSuffix (Name - Editor Suffix)
+// Units: U016 (Death Knight), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 10301
-// Units: U016 (Death Knight), EditorSuffix (Name - Editor Suffix)
+// Units: U01J (Dungeon Master), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -46159,7 +46117,7 @@ Buy Property Wyrmrest Temple
 }
 
 STRING 10623
-// Units: U01J (Dungeon Master), EditorSuffix (Name - Editor Suffix)
+// Units: N0AF (Geomancer), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -46275,7 +46233,7 @@ Find a corpse probe of the dead Cenarius in Ashenvale.
 }
 
 STRING 10661
-// Units: H0PO (King of Gilneas), Propernames (Proper Names)
+// Units: H0AP (King of Gilneas), Propernames (Proper Names)
 {
 Genn Greymane
 }
@@ -46287,7 +46245,7 @@ King of Gilneas
 }
 
 STRING 10663
-// Units: N0AF (Geomancer), EditorSuffix (Name - Editor Suffix)
+// Units: H089 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -47621,7 +47579,7 @@ Creates a Nuclear Silo.
 }
 
 STRING 11002
-// Abilities: A009 (Alchemy - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A01N (Armoring - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47769,13 +47727,13 @@ R
 }
 
 STRING 11031
-// Abilities: A01N (Armoring - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A01B (Herbalism - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 11032
-// Abilities: A01B (Herbalism - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A00G (Loremastery - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48578,7 +48536,7 @@ D
 }
 
 STRING 11356
-// Units: H089 (The Last Guardian), EditorSuffix (Name - Editor Suffix)
+// Units: H08B (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -49344,7 +49302,7 @@ Save Codes: |cffff0000DISABLED|r
 }
 
 STRING 11574
-// Abilities: A00G (Loremastery - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A00S (Weaponsmithing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49385,7 +49343,7 @@ AI 10
 }
 
 STRING 11594
-// Items: I0PT (Tuskarr), Hotkey (Hotkey)
+// Items: I0RW (Skill), Hotkey (Hotkey)
 {
 V
 }
@@ -49463,7 +49421,7 @@ High King Maulgar
 }
 
 STRING 11607
-// Units: H08B (Archmage of the Kirin Tor), EditorSuffix (Name - Editor Suffix)
+// Units: N0M3 (C'Thrax), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -49725,7 +49683,7 @@ Summon Fel Kodo Beast
 }
 
 STRING 11707
-// Abilities: A00S (Weaponsmithing - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A04C (Heal), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50211,7 +50169,7 @@ Raise
 }
 
 STRING 11870
-// Abilities: A04C (Heal), Hotkey (Hotkey - Normal)
+// Abilities: A04C (Heal), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -50763,7 +50721,7 @@ Murloc Priest
 }
 
 STRING 12005
-// Units: N0M3 (C'Thrax), EditorSuffix (Name - Editor Suffix)
+// Units: N0O1 (Villager), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -50924,13 +50882,13 @@ King of Lordaeron
 }
 
 STRING 12035
-// Units: N0O1 (Villager), EditorSuffix (Name - Editor Suffix)
+// Units: E017 (Vile Duke of the Jadefire), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 12036
-// Units: E017 (Vile Duke of the Jadefire), EditorSuffix (Name - Editor Suffix)
+// Units: H0AP (King of Gilneas), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -53122,7 +53080,7 @@ R
 }
 
 STRING 13853
-// Abilities: A04C (Heal), Unhotkey (Hotkey - Turn Off)
+// Abilities: A05W (Ping Destination), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53169,7 +53127,7 @@ Allows building and moving on water.
 }
 
 STRING 13886
-// Abilities: A05W (Ping Destination), Hotkey (Hotkey - Normal)
+// Abilities: A06E (Sorcery - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53343,7 +53301,7 @@ Allows building male citizens a Corrupted Ancient Protector to protect your base
 }
 
 STRING 13956
-// Abilities: A06E (Sorcery - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A06J (Runeforging - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53367,7 +53325,7 @@ Pings all units and structures which are excluded for the savecode.
 }
 
 STRING 13965
-// Abilities: A06J (Runeforging - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A06N (Dragon Breeder - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53457,7 +53415,7 @@ Explicitely excludes a unit or structure from being saved in the savecode.
 }
 
 STRING 13996
-// Abilities: A06N (Dragon Breeder - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A095 (Resurrection), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53487,19 +53445,19 @@ rsig
 }
 
 STRING 14032
-// Abilities: A1ET (Running Wild), Untip (Tooltip - Turn Off)
+// Abilities: A1H4 (Normal Form), Tip (Tooltip - Normal)
 {
 Normal Form
 }
 
 STRING 14035
-// Abilities: A1GG (Running Wild), Untip (Tooltip - Turn Off)
+// Abilities: A216 (Siege Form), Untip (Tooltip - Turn Off)
 {
 Normal Form
 }
 
 STRING 14038
-// Abilities: A1H4 (Normal Form), Name (Name)
+// Abilities: A031 (Barrel Form), Untip (Tooltip - Turn Off)
 {
 Normal Form
 }
@@ -53793,7 +53751,7 @@ Clears all excluded units for the savecode.
 }
 
 STRING 14121
-// Abilities: A095 (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A09U (Clear Included for Savecode), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54236,7 +54194,7 @@ Branch
 }
 
 STRING 14347
-// Abilities: A09U (Clear Included for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: A0AT (Convert Into Undead), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54302,7 +54260,7 @@ Avatar of Sargeras
 }
 
 STRING 14358
-// Units: N07U (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Ghostly Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -54421,7 +54379,7 @@ Provides a +2 bonus to Strength, Agility and Intelligence.
 }
 
 STRING 14437
-// Abilities: A0AT (Convert Into Undead), Hotkey (Hotkey - Normal)
+// Abilities: A0C8 (Erase), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54600,13 +54558,13 @@ rarm
 }
 
 STRING 14573
-// Abilities: A0C8 (Erase), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (Jewelcrafting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 14574
-// Abilities: A0IO (Jewelcrafting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Enchanting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55055,25 +55013,25 @@ W
 }
 
 STRING 14890
-// Abilities: A0IU (Enchanting - Adept), Hotkey (Hotkey - Normal)
-{
-E
-}
-
-STRING 14891
 // Abilities: A0JP (Captain - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 14892
+STRING 14891
 // Abilities: A0MK (Archaeology - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 14893
+STRING 14892
 // Abilities: A0MW (Witch Doctor - Adept), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 14893
+// Abilities: A0UA (Merchant - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55097,7 +55055,7 @@ R
 }
 
 STRING 14898
-// Abilities: A0UA (Merchant - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (Blink), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55109,7 +55067,7 @@ W
 }
 
 STRING 14902
-// Abilities: A0Z0 (Blink), Hotkey (Hotkey - Normal)
+// Abilities: A12F (Shop Purchase Unit), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55163,13 +55121,13 @@ R
 }
 
 STRING 14938
-// Abilities: A12F (Shop Purchase Unit), Hotkey (Hotkey - Normal)
+// Abilities: A12S (Discharge), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 14939
-// Abilities: A12S (Discharge), Hotkey (Hotkey - Normal)
+// Abilities: A13Z (Pillage Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55282,7 +55240,7 @@ W
 }
 
 STRING 15096
-// Units: H09B (Ghostly Archmage), EditorSuffix (Name - Editor Suffix)
+// Units: N0C8 (Herald of the Deep Mother), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -55347,7 +55305,7 @@ STRING 15125
 }
 
 STRING 15126
-// Units: N0BI (War Queen), EditorSuffix (Name - Editor Suffix)
+// Units: H0QP (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -55395,13 +55353,13 @@ STRING 15222
 }
 
 STRING 15223
-// Abilities: A13Z (Pillage Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A15V (Mass Mana Burn), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 15224
-// Abilities: A15V (Mass Mana Burn), Hotkey (Hotkey - Normal)
+// Abilities: A17V (Farming - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55485,7 +55443,7 @@ Revive Yogg-saron
 }
 
 STRING 15310
-// Units: N0C8 (Herald of the Deep Mother), EditorSuffix (Name - Editor Suffix)
+// Units: H0QQ (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -55527,7 +55485,7 @@ STRING 15316
 }
 
 STRING 15317
-// Units: H0JO (Ranger), EditorSuffix (Name - Editor Suffix)
+// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -55913,13 +55871,13 @@ R
 }
 
 STRING 15807
-// Abilities: A17V (Farming - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A196 (Taming - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 15809
-// Abilities: A196 (Taming - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1CQ (Inscription - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55931,13 +55889,13 @@ STRING 15817
 }
 
 STRING 15818
-// Units: H0QP (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 15820
-// Abilities: A1CQ (Inscription - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1GW (Cat Form), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56175,7 +56133,7 @@ Turret
 }
 
 STRING 15962
-// Abilities: A1GW (Cat Form), Hotkey (Hotkey - Normal)
+// Abilities: A1II (Mass Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56301,13 +56259,13 @@ Kobold Camp
 }
 
 STRING 16102
-// Abilities: A1II (Mass Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A1JK (Exterminate), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 16103
-// Abilities: A1JK (Exterminate), Hotkey (Hotkey - Normal)
+// Abilities: A1KU (Miss Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56819,7 +56777,7 @@ Quills
 }
 
 STRING 16471
-// Abilities: A1KU (Miss Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A1L7 (+1 Intelligence), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57039,7 +56997,7 @@ Purchase Branch
 }
 
 STRING 16542
-// Items: I0RW (Skill), Hotkey (Hotkey)
+// Abilities: A0N5 (Save Codes), Hotkey (Hotkey - Normal)
 {
 V
 }
@@ -57201,7 +57159,7 @@ Jewelcrafting - Adept
 }
 
 STRING 16572
-// Abilities: A1L7 (+1 Intelligence), Hotkey (Hotkey - Normal)
+// Abilities: A1M3 (Necromancy - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57581,7 +57539,7 @@ Your hero can be revived at altars and on Theramore but will be removed on repic
 }
 
 STRING 16891
-// Abilities: A1M3 (Necromancy - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1MS (Sculpting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -58665,7 +58623,7 @@ Opens a Portal which can have another allied Portal as destination. This helps y
 }
 
 STRING 17435
-// Abilities: A1MS (Sculpting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1O8 (Combination - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -58875,7 +58833,7 @@ Enchanting - Adept
 }
 
 STRING 17472
-// Abilities: A1O8 (Combination - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1OE (Mark 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -59307,7 +59265,7 @@ Increases Hydromancers' mana capacity, mana regeneration rate, hit points, and g
 }
 
 STRING 17672
-// Abilities: A1OE (Mark 2), Hotkey (Hotkey - Normal)
+// Abilities: A1QA (Magical Item Summoner), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -59518,7 +59476,7 @@ Gives <A0EI,DataA1> gold to the player when used.
 }
 
 STRING 17800
-// Abilities: A1QA (Magical Item Summoner), Hotkey (Hotkey - Normal)
+// Abilities: A1QL (Reflection), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -59722,7 +59680,7 @@ Train Guardian Golem
 }
 
 STRING 18097
-// Abilities: A1QL (Reflection), Researchhotkey (Hotkey - Learn)
+// Abilities: A1QQ (Sleep to Evening), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60093,13 +60051,13 @@ Mathog
 }
 
 STRING 18696
-// Units: H0QQ (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 18700
-// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IL (The Jade Serpent), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -60123,7 +60081,7 @@ STRING 18705
 }
 
 STRING 18706
-// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IM (Eagle Spirit), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -60210,7 +60168,7 @@ N
 }
 
 STRING 18777
-// Abilities: A0N5 (Save Codes), Hotkey (Hotkey - Normal)
+// Abilities: A13U (Flying Val'kyr), Hotkey (Hotkey - Normal)
 {
 V
 }
@@ -60288,7 +60246,7 @@ Detects enemy ships on the sea.
 }
 
 STRING 18824
-// Abilities: A1QQ (Sleep to Evening), Hotkey (Hotkey - Normal)
+// Abilities: A1SQ (Hunting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60720,13 +60678,13 @@ Revive Captain
 }
 
 STRING 18935
-// Abilities: A1SQ (Hunting - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1T6 (Mining - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 18936
-// Abilities: A1T6 (Mining - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A1UH (Fishing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61146,25 +61104,25 @@ Gives gold to player.
 }
 
 STRING 19345
-// Abilities: A1UH (Fishing - Adept), Hotkey (Hotkey - Normal)
-{
-E
-}
-
-STRING 19347
 // Abilities: A1UK (Cooking - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 19348
+STRING 19347
 // Abilities: A1UZ (Lumberjacking - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 19349
+STRING 19348
 // Abilities: A1WY (Warlockery - Adept), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 19349
+// Abilities: A20N (Thieving - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61176,7 +61134,7 @@ Y
 }
 
 STRING 19381
-// Abilities: A20N (Thieving - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A21O (Prospecting - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61284,37 +61242,13 @@ Hire Core Hound
 }
 
 STRING 19402
-// Units: N0IH (Elemental Lord), Name (Name)
+// Units: N0II (Elemental Lord), Name (Name)
 {
 Elemental Lord
 }
 
-STRING 19403
-// Units: N07U (Elemental Lord), Propernames (Proper Names)
-{
-Ragnaros
-}
-
-STRING 19404
-// Units: N07U (Elemental Lord), Awakentip (Tooltip - Awaken)
-{
-Revive Ragnaros
-}
-
-STRING 19405
-// Units: N07U (Elemental Lord), Tip (Tooltip - Basic)
-{
-Summon Ragnaros
-}
-
-STRING 19406
-// Units: N07U (Elemental Lord), Revivetip (Tooltip - Revive)
-{
-Revive Ragnaros
-}
-
 STRING 19407
-// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0J4 (Fel Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -61332,25 +61266,25 @@ Hire Fel Core Hound
 }
 
 STRING 19410
-// Abilities: A21O (Prospecting - Adept), Hotkey (Hotkey - Normal)
-{
-E
-}
-
-STRING 19411
 // Abilities: A231 (Astromancy - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 19412
+STRING 19411
 // Abilities: A25E (Poetry - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 19413
+STRING 19412
 // Abilities: A0ST (Scribing - Adept), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 19413
+// Abilities: A203 (Demolishing - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61410,7 +61344,7 @@ Summons the moving boss Cenarius.
 }
 
 STRING 19479
-// Abilities: A203 (Demolishing - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A26C (Previous Tile), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61578,7 +61512,7 @@ STRING 19662
 }
 
 STRING 19663
-// Abilities: A26C (Previous Tile), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61626,7 +61560,7 @@ STRING 19758
 }
 
 STRING 19759
-// Abilities: A0W0 (Decrease Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Slot 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61798,7 +61732,7 @@ Sea Giant
 }
 
 STRING 19876
-// Abilities: A0W4 (Slot 3), Hotkey (Hotkey - Normal)
+// Abilities: A05M (Metamorphosis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61912,7 +61846,7 @@ Defensive structure against ground units.|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 19905
-// Abilities: A05M (Metamorphosis), Hotkey (Hotkey - Normal)
+// Abilities: A088 (Drunken Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61984,7 +61918,7 @@ Sea Giant
 }
 
 STRING 19936
-// Abilities: A088 (Drunken Aura), Researchhotkey (Hotkey - Learn)
+// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
 }
@@ -64335,7 +64269,7 @@ P
 }
 
 STRING 20837
-// Abilities: A13U (Flying Val'kyr), Hotkey (Hotkey - Normal)
+// Abilities: A13U (Flying Val'kyr), Unhotkey (Hotkey - Turn Off)
 {
 V
 }
@@ -65225,13 +65159,13 @@ F
 }
 
 STRING 22380
-// Abilities: A13U (Flying Val'kyr), Unhotkey (Hotkey - Turn Off)
+// Abilities: A13X (Flying Val'kyr), Unhotkey (Hotkey - Turn Off)
 {
 V
 }
 
 STRING 22381
-// Abilities: A13X (Flying Val'kyr), Unhotkey (Hotkey - Turn Off)
+// Abilities: A13X (Flying Val'kyr), Hotkey (Hotkey - Normal)
 {
 V
 }
@@ -66310,7 +66244,7 @@ Mage Tower
 }
 
 STRING 22770
-// Units: H0PO (King of Gilneas), Name (Name)
+// Units: H0AP (King of Gilneas), Name (Name)
 {
 King of Gilneas
 }
@@ -66966,7 +66900,7 @@ Revive Mal'Ganis
 }
 
 STRING 23534
-// Units: N0IL (The Jade Serpent), EditorSuffix (Name - Editor Suffix)
+// Units: N02Z (Overlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -67128,7 +67062,7 @@ O
 }
 
 STRING 23801
-// Abilities: A13X (Flying Val'kyr), Hotkey (Hotkey - Normal)
+// Upgrades: R01N (Ensnare), Hotkey (Hotkey)
 {
 V
 }
@@ -68625,7 +68559,7 @@ STRING 25201
 }
 
 STRING 25213
-// Units: N0IM (Eagle Spirit), EditorSuffix (Name - Editor Suffix)
+// Units: N030 (Phoenix God), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -68658,12 +68592,6 @@ STRING 25279
 // Units: H0VB (Captain), Tip (Tooltip - Basic)
 {
 Summon Captain
-}
-
-STRING 25313
-// Units: N0BI (War Queen), Propernames (Proper Names)
-{
-War Queen
 }
 
 STRING 25348
@@ -68706,12 +68634,6 @@ STRING 25389
 // Units: n0GN (Ogre Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Ogre)
-}
-
-STRING 25391
-// Units: N0BI (War Queen), Name (Name)
-{
-War Queen
 }
 
 STRING 25402
@@ -68990,12 +68912,6 @@ STRING 25896
 rmvx
 }
 
-STRING 25897
-// Units: N0BI (War Queen), Tip (Tooltip - Basic)
-{
-Summon War Queen
-}
-
 STRING 25935
 // Abilities: A1V8 (Summon Sea Giant), Name (Name)
 {
@@ -69132,12 +69048,6 @@ STRING 26031
 // Items: I0DF (Lock Pick), Ubertip (Tooltip - Extended)
 {
 Opens closed gates and locked chests.
-}
-
-STRING 26034
-// Units: N0BI (War Queen), Revivetip (Tooltip - Revive)
-{
-Revive War Queen
 }
 
 STRING 26035
@@ -70580,7 +70490,7 @@ S
 }
 
 STRING 27794
-// Upgrades: R01N (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0CQ (Stone Form), Hotkey (Hotkey)
 {
 V
 }
@@ -72646,27 +72556,6 @@ STRING 29229
 (+2) (Wolf Spirit Hood)
 }
 
-STRING 29230
-// Items: I0GL (Water Base), Name (Name)
-{
-Water Base
-}
-
-STRING 29231
-// Items: I0GL (Water Base), Tip (Tooltip - Basic)
-{
-Water Base
-}
-
-STRING 29232
-// Items: I0GL (Water Base), Ubertip (Tooltip - Extended)
-{
-|cff0000ffGeographic Location:|r East
-An island in shallow water.
-
-|cff00ff00Recommended Races:|r Freelancers, Naga.
-}
-
 STRING 29236
 {
 Your third hero can be revived at altars and on Theramore but will be removed on repicks! Use "-h3" to repick your third hero.
@@ -73148,12 +73037,6 @@ STRING 30479
 // Units: h0IC (Fortified Dragon's Reach), Tip (Tooltip - Basic)
 {
 Upgrade to Fortified Dragon's Reach
-}
-
-STRING 30495
-// Upgrades: R0CQ (Stone Form), Hotkey (Hotkey)
-{
-V
 }
 
 STRING 30496
@@ -74230,12 +74113,6 @@ STRING 31083
 (Worgen)
 }
 
-STRING 31084
-// Units: U01L (Worgen Death Knight), Name (Name)
-{
-Worgen Death Knight
-}
-
 STRING 31085
 // Abilities: A11S (Worgen Curse), Tip (Tooltip - Normal)
 {
@@ -74336,60 +74213,6 @@ STRING 31150
 // Units: o05J (Mindless Worgen), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
-}
-
-STRING 31151
-// Units: U01L (Worgen Death Knight), EditorSuffix (Name - Editor Suffix)
-{
-(Running Wild)
-}
-
-STRING 31152
-// Abilities: A11Y (Running Wild), Name (Name)
-{
-Running Wild
-}
-
-STRING 31153
-// Abilities: A11Y (Running Wild), Tip (Tooltip - Normal)
-{
-Running Wild
-}
-
-STRING 31155
-// Abilities: A11Y (Running Wild), EditorSuffix (Editor Suffix)
-{
-(Worgen) (Worgen Death Knight)
-}
-
-STRING 31156
-// Abilities: A1ET (Running Wild), Name (Name)
-{
-Running Wild
-}
-
-STRING 31157
-// Abilities: A1ET (Running Wild), Tip (Tooltip - Normal)
-{
-Running Wild
-}
-
-STRING 31158
-// Abilities: A1H4 (Normal Form), Tip (Tooltip - Normal)
-{
-Normal Form
-}
-
-STRING 31159
-// Abilities: A11Y (Running Wild), Ubertip (Tooltip - Normal - Extended)
-{
-Transforms the Worgen into his wild form, allowing him to run much faster.
-}
-
-STRING 31160
-// Abilities: A11Y (Running Wild), Unubertip (Tooltip - Turn Off - Extended)
-{
-Transforms the Worgen back into his normal form, making it slower.
 }
 
 STRING 31163
@@ -77950,7 +77773,7 @@ STRING 33761
 }
 
 STRING 33762
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0CX (Submerge), Hotkey (Hotkey)
 {
 E
 }
@@ -78813,7 +78636,7 @@ STRING 34058
 }
 
 STRING 34086
-// Upgrades: R0CX (Submerge), Hotkey (Hotkey)
+// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 E
 }
@@ -79137,7 +78960,7 @@ Gives <A0GB,DataA1> gold and <A0GA,DataA1> lumber to the player when used.
 }
 
 STRING 34201
-// Upgrades: R0E2 (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0EM (Magic Sentry), Hotkey (Hotkey)
 {
 E
 }
@@ -79977,7 +79800,7 @@ Adept Farming
 }
 
 STRING 34847
-// Upgrades: R0EM (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
 {
 E
 }
@@ -82404,13 +82227,13 @@ Exchange 100 Lumber for 200 Gold
 }
 
 STRING 35763
-// Upgrades: R0GS (Berserker Upgrade), Hotkey (Hotkey)
+// Upgrades: R05G (Defend), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 35770
-// Upgrades: R05G (Defend), Hotkey (Hotkey)
+// Upgrades: R07I (Pillage), Hotkey (Hotkey)
 {
 E
 }
@@ -82710,7 +82533,7 @@ D
 }
 
 STRING 35827
-// Upgrades: R07I (Pillage), Hotkey (Hotkey)
+// Upgrades: R035 (Cloud), Hotkey (Hotkey)
 {
 E
 }
@@ -85778,12 +85601,6 @@ STRING 36508
 // Abilities: A0PB (Last Bag), Hotkey (Hotkey - Normal)
 {
 L
-}
-
-STRING 36512
-// Upgrades: R035 (Cloud), Hotkey (Hotkey)
-{
-E
 }
 
 STRING 36513
@@ -90333,7 +90150,7 @@ A hearty Goblin citizen. Has life regeneration aura.
 }
 
 STRING 38481
-// Units: N0J4 (Fel Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0M7 (The Dreamer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -91448,72 +91265,6 @@ STRING 38895
 Sun Lord
 }
 
-STRING 38896
-// Units: H0PE (Deathclaw), Name (Name)
-{
-Deathclaw
-}
-
-STRING 38897
-// Units: H0PE (Deathclaw), EditorSuffix (Name - Editor Suffix)
-{
-(Worgen) (Running Wild)
-}
-
-STRING 38898
-// Units: H0PE (Deathclaw), Tip (Tooltip - Basic)
-{
-Summon Deathclaw
-}
-
-STRING 38899
-// Units: H0PE (Deathclaw), Awakentip (Tooltip - Awaken)
-{
-Revive Deathclaw
-}
-
-STRING 38900
-// Units: H0PE (Deathclaw), Revivetip (Tooltip - Revive)
-{
-Revive Deathclaw
-}
-
-STRING 38901
-// Abilities: A1ET (Running Wild), EditorSuffix (Editor Suffix)
-{
-(Worgen) (Worgen Deathclaw)
-}
-
-STRING 38902
-// Abilities: A1GG (Running Wild), Name (Name)
-{
-Running Wild
-}
-
-STRING 38903
-// Abilities: A1GG (Running Wild), Tip (Tooltip - Normal)
-{
-Running Wild
-}
-
-STRING 38904
-// Abilities: A216 (Siege Form), Untip (Tooltip - Turn Off)
-{
-Normal Form
-}
-
-STRING 38905
-// Abilities: A1ET (Running Wild), Ubertip (Tooltip - Normal - Extended)
-{
-Transforms the Worgen into his wild form, allowing him to run much faster.
-}
-
-STRING 38906
-// Abilities: A1ET (Running Wild), Unubertip (Tooltip - Turn Off - Extended)
-{
-Transforms the Worgen back into his normal form, making it slower.
-}
-
 STRING 38907
 // Units: h0PH (Stormcrow Knight), Tip (Tooltip - Basic)
 {
@@ -91896,12 +91647,6 @@ STRING 39668
 // Abilities: A1F2 (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Worgen)
-}
-
-STRING 39669
-// Units: H0PS (King of Gilneas), Propernames (Proper Names)
-{
-Genn Greymane
 }
 
 STRING 39670
@@ -92580,36 +92325,6 @@ STRING 39818
 // Upgrades: R08U (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Worgen)
-}
-
-STRING 39819
-// Units: H0PS (King of Gilneas), Name (Name)
-{
-King of Gilneas
-}
-
-STRING 39820
-// Units: H0PO (King of Gilneas), Awakentip (Tooltip - Awaken)
-{
-Revive Genn Greymane
-}
-
-STRING 39821
-// Units: H0PO (King of Gilneas), Revivetip (Tooltip - Revive)
-{
-Revive Genn Greymane
-}
-
-STRING 39822
-// Units: H0PO (King of Gilneas), Tip (Tooltip - Basic)
-{
-Summon Genn Greymane
-}
-
-STRING 39823
-// Units: H0PO (King of Gilneas), EditorSuffix (Name - Editor Suffix)
-{
-(Bonus Hero) (Worgen Form)
 }
 
 STRING 39824
@@ -93398,12 +93113,6 @@ STRING 40017
 Summon Tuskarr Chieftain
 }
 
-STRING 40020
-// Units: H0PE (Deathclaw), Ubertip (Tooltip - Extended)
-{
-Warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Wind Walk, Devour, Critical Strike and Avatar. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Mount: Running Wild.|r|n|cffffcc00Standard Ability: Berserk.|r
-}
-
 STRING 40022
 // Abilities: A1G3 (Nocturnal), Ubertip (Tooltip - Normal - Extended)
 {
@@ -93786,66 +93495,6 @@ STRING 40380
 // Units: n0FF (Chieftain), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
-}
-
-STRING 40386
-// Units: H0AP (King of Gilneas), Propernames (Proper Names)
-{
-Genn Greymane
-}
-
-STRING 40387
-// Units: H0AP (King of Gilneas), Name (Name)
-{
-King of Gilneas
-}
-
-STRING 40388
-// Units: H0PS (King of Gilneas), Awakentip (Tooltip - Awaken)
-{
-Revive Genn Greymane
-}
-
-STRING 40389
-// Units: H0PS (King of Gilneas), Revivetip (Tooltip - Revive)
-{
-Revive Genn Greymane
-}
-
-STRING 40390
-// Units: H0PS (King of Gilneas), Tip (Tooltip - Basic)
-{
-Summon Genn Greymane
-}
-
-STRING 40391
-// Units: H0PS (King of Gilneas), EditorSuffix (Name - Editor Suffix)
-{
-(Bonus Hero) (Worgen Form) (Running Wild)
-}
-
-STRING 40393
-// Abilities: A1GG (Running Wild), EditorSuffix (Editor Suffix)
-{
-(Worgen) (Greymane)
-}
-
-STRING 40396
-// Abilities: A031 (Barrel Form), Untip (Tooltip - Turn Off)
-{
-Normal Form
-}
-
-STRING 40397
-// Abilities: A1GG (Running Wild), Ubertip (Tooltip - Normal - Extended)
-{
-Transforms the Worgen into his wild form, allowing him to run much faster.
-}
-
-STRING 40398
-// Abilities: A1GG (Running Wild), Unubertip (Tooltip - Turn Off - Extended)
-{
-Transforms the Worgen back into his normal form, making it slower.
 }
 
 STRING 40400
@@ -97124,13 +96773,13 @@ Admiral
 }
 
 STRING 41440
-// Units: H0AP (King of Gilneas), EditorSuffix (Name - Editor Suffix)
+// Units: H0AQ (King of the Vrykul), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
 
 STRING 41446
-// Units: H0AQ (King of the Vrykul), EditorSuffix (Name - Editor Suffix)
+// Units: H01A (Dragon Queen), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -98724,7 +98373,7 @@ K
 }
 
 STRING 42166
-// Units: H01A (Dragon Queen), EditorSuffix (Name - Editor Suffix)
+// Units: H01K (King of Gnomes), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -102960,12 +102609,6 @@ STRING 43743
 Orc
 }
 
-STRING 43744
-// Units: H0JO (Ranger), Tip (Tooltip - Basic)
-{
-Summon Sylvanas Windrunner
-}
-
 STRING 43745
 // Units: H002 (Hand of Destruction), Awakentip (Tooltip - Awaken)
 {
@@ -104077,7 +103720,7 @@ Summon Siege Engine
 }
 
 STRING 45273
-// Units: H01K (King of Gnomes), EditorSuffix (Name - Editor Suffix)
+// Units: H01L (Lord of the Ogres), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -105797,7 +105440,7 @@ Elemental Lords killed (5)
 }
 
 STRING 46351
-// Units: N0II (Elemental Lord), Name (Name)
+// Units: N0DR (Elemental Lord), Name (Name)
 {
 Elemental Lord
 }
@@ -105827,13 +105470,13 @@ Revive Neptulon
 }
 
 STRING 46356
-// Units: N02Z (Overlord), EditorSuffix (Name - Editor Suffix)
+// Units: N0M8 (Satyr Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 46357
-// Units: N0DR (Elemental Lord), Name (Name)
+// Units: N01X (Elemental Lord), Name (Name)
 {
 Elemental Lord
 }
@@ -105863,15 +105506,9 @@ Revive Therazane
 }
 
 STRING 46362
-// Units: N030 (Phoenix God), EditorSuffix (Name - Editor Suffix)
+// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
-}
-
-STRING 46363
-// Units: N01X (Elemental Lord), Name (Name)
-{
-Elemental Lord
 }
 
 STRING 46364
@@ -105899,7 +105536,7 @@ Revive Thunderaan
 }
 
 STRING 46368
-// Units: N0M7 (The Dreamer), EditorSuffix (Name - Editor Suffix)
+// Units: U03L (Master of Revendreth), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -106006,7 +105643,7 @@ A boulder that is thrown at an enemy unit, causing <A1N6,DataA1> points of damag
 }
 
 STRING 46475
-// Units: N0M8 (Satyr Lord), EditorSuffix (Name - Editor Suffix)
+// Units: E01A (Blade of the Black Empire), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -106288,7 +105925,7 @@ Gives Ogre units increased resistance to spell damage.
 }
 
 STRING 46530
-// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N00Y (Lord of the Shado-Pan), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -106880,12 +106517,6 @@ STRING 47706
 C
 }
 
-STRING 47776
-// Units: H0SZ (Evoker), Ubertip (Tooltip - Extended)
-{
-Mystical Hero, adept at controlling magic and ranged assaults. Can learn Breath of Fire, Jump Attack, Tail Swipe and Mass Charm. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Dragon Form.|r|n|cffffcc00Standard Ability: Invisibility.|r
-}
-
 STRING 47777
 // Units: H0SY (Evoker), Name (Name)
 {
@@ -106922,78 +106553,6 @@ STRING 47782
 Emberthal,Azurathel,Cindrethresh,Viridia,Sarkareth
 }
 
-STRING 47784
-// Units: H0SZ (Evoker), Name (Name)
-{
-Evoker
-}
-
-STRING 47785
-// Units: H0SZ (Evoker), Awakentip (Tooltip - Awaken)
-{
-Revive Evoker
-}
-
-STRING 47786
-// Units: H0SZ (Evoker), Tip (Tooltip - Basic)
-{
-Summon Evoker
-}
-
-STRING 47787
-// Units: H0SZ (Evoker), Revivetip (Tooltip - Revive)
-{
-Revive Evoker
-}
-
-STRING 47788
-// Units: H0SZ (Evoker), EditorSuffix (Name - Editor Suffix)
-{
-(Dracthyr) (Dragon Form)
-}
-
-STRING 47789
-// Units: H0SZ (Evoker), Propernames (Proper Names)
-{
-Emberthal,Azurathel,Cindrethresh,Viridia,Sarkareth
-}
-
-STRING 47790
-// Abilities: A1QH (Dragon Form), Tip (Tooltip - Normal)
-{
-Dragon Form
-}
-
-STRING 47791
-// Abilities: A1QH (Dragon Form), Name (Name)
-{
-Dragon Form
-}
-
-STRING 47797
-// Abilities: A1QH (Dragon Form), EditorSuffix (Editor Suffix)
-{
-(Evoker) (Dracthyr)
-}
-
-STRING 47798
-// Abilities: A1QH (Dragon Form), Unubertip (Tooltip - Turn Off - Extended)
-{
-Transforms the Druid into a Worgen.
-}
-
-STRING 47799
-// Abilities: A1QH (Dragon Form), Untip (Tooltip - Turn Off)
-{
-Dracthyr Form
-}
-
-STRING 47802
-// Abilities: A1QH (Dragon Form), Ubertip (Tooltip - Normal - Extended)
-{
-Transforms the Evoker into a Blue Dragon, giving him the ability to fly.
-}
-
 STRING 48144
 // Units: H0T2 (Author), Name (Name)
 {
@@ -107001,7 +106560,7 @@ Author
 }
 
 STRING 48148
-// Units: H01L (Lord of the Ogres), EditorSuffix (Name - Editor Suffix)
+// Units: N09F (Murloc Priest), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -109106,7 +108665,7 @@ Lucard,Halfdan,Jorfus,Oktel Dragonblood,Overthane Balargarde,Banahogg,Illskar,Ir
 }
 
 STRING 49230
-// Units: U03L (Master of Revendreth), EditorSuffix (Name - Editor Suffix)
+// Units: N01X (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -109469,12 +109028,6 @@ STRING 49325
 // Units: h06R (Pandaren House), Tip (Tooltip - Basic)
 {
 Build Pandaren House
-}
-
-STRING 49331
-// Units: N0BI (War Queen), Awakentip (Tooltip - Awaken)
-{
-Revive War Queen
 }
 
 STRING 49445
@@ -110089,7 +109642,7 @@ Summon Barade
 }
 
 STRING 49639
-// Units: N09F (Murloc Priest), EditorSuffix (Name - Editor Suffix)
+// Units: N03G (Khanam Matra), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -111182,7 +110735,7 @@ STRING 50166
 }
 
 STRING 50167
-// Units: N03G (Khanam Matra), EditorSuffix (Name - Editor Suffix)
+// Units: N09S (The Crone), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -111212,7 +110765,7 @@ Velen
 }
 
 STRING 50176
-// Units: N09S (The Crone), EditorSuffix (Name - Editor Suffix)
+// Units: N0AP (Gnoll King), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -116090,7 +115643,7 @@ A hearty Satyr citizen. Has life regeneration aura.
 }
 
 STRING 51681
-// Units: N0AP (Gnoll King), EditorSuffix (Name - Editor Suffix)
+// Units: H02N (Lord), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -117359,12 +116912,6 @@ STRING 53221
 // Units: N0J4 (Fel Lord), Revivetip (Tooltip - Revive)
 {
 Revive Imonar the Soulhunter
-}
-
-STRING 53222
-// Units: E01A (Blade of the Black Empire), EditorSuffix (Name - Editor Suffix)
-{
-(Boss)
 }
 
 STRING 53223
@@ -120502,7 +120049,7 @@ Elder Ko'nani
 }
 
 STRING 55693
-// Units: H02N (Lord), EditorSuffix (Name - Editor Suffix)
+// Units: H02P (King of Lordaeron), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -120775,7 +120322,7 @@ Monte Gazlowe
 }
 
 STRING 55770
-// Units: H02P (King of Lordaeron), EditorSuffix (Name - Editor Suffix)
+// Units: H03N (Captain), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -122524,12 +122071,6 @@ STRING 56403
 Summon Ysera
 }
 
-STRING 56405
-// Units: N00Y (Lord of the Shado-Pan), EditorSuffix (Name - Editor Suffix)
-{
-(Boss)
-}
-
 STRING 56406
 // Units: N0M8 (Satyr Lord), Name (Name)
 {
@@ -122552,12 +122093,6 @@ STRING 56409
 // Units: N0M8 (Satyr Lord), Revivetip (Tooltip - Revive)
 {
 Revive Xavius
-}
-
-STRING 56410
-// Units: N01X (Elemental Lord), EditorSuffix (Name - Editor Suffix)
-{
-(Boss)
 }
 
 STRING 56412
@@ -125233,12 +124768,6 @@ STRING 57527
 The hero pops out of the ground and becomes visible again.
 }
 
-STRING 57531
-// Units: H03N (Captain), EditorSuffix (Name - Editor Suffix)
-{
-(NPC)
-}
-
 STRING 57535
 // Units: U03G (Burrowed Crypt Lord), Name (Name)
 {
@@ -127379,18 +126908,6 @@ STRING 58174
 // Units: O02T (Blademaster), Revivetip (Tooltip - Revive)
 {
 Revive Grommash Hellscream
-}
-
-STRING 58176
-// Units: H0JO (Ranger), Awakentip (Tooltip - Awaken)
-{
-Revive Sylvanas Windrunner
-}
-
-STRING 58177
-// Units: H0JO (Ranger), Revivetip (Tooltip - Revive)
-{
-Revive Sylvanas Windrunner
 }
 
 STRING 58179

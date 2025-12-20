@@ -6653,7 +6653,6 @@ globals
     constant integer DEATHCLAW                                       = 'H0J1'
     constant integer WORGEN_DEATH_KNIGHT                             = 'U01K'
     constant integer GENN_GREYMANE                                   = 'H0PN'
-    constant integer GENN_GREYMANE_M                                 = 'H0PO'
     // Tuskarr
     constant integer HERO_TUSKARR_CHIEFTAIN                          = 'N0FC'
     // Murloc
@@ -6708,7 +6707,6 @@ globals
     constant integer BERSERK_WILDKIN                                 = 'N0HK'
     // Dragonkin
     constant integer EVOKER                                          = 'H0SY'
-    constant integer EVOKER_M                                        = 'H0SZ'
     constant integer DRAGONSPAWN                                     = 'N0JY'
     // Elements
     constant integer FIRELORD                                        = 'Nfir'
@@ -6757,9 +6755,6 @@ globals
     constant integer THUNDERAAN                                      = 'N0II'
     constant integer THERAZANE                                       = 'N0IH'
     constant integer IMONAR                                          = 'N0J4'
-    constant integer WAR_QUEEN                                       = 'N0BI'
-    constant integer SYLVANAS_BOSS                                   = 'H0JO'
-    constant integer RAGNAROS                                        = 'N07U'
     constant integer QUEEN_AZSHARA                                   = 'N068'
     constant integer GIZLOCK                                         = 'N04K'
     constant integer RUMBLEFITZ                                      = 'N041'
