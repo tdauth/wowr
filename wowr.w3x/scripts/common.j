@@ -6779,7 +6779,6 @@ globals
     constant integer MATHOG                                          = 'O00L'
     constant integer GULDAN_BOSS                                     = 'O00M'
     constant integer THE_EYE_OF_SARGERAS                             = 'N03O'
-    constant integer SPIDER_CRAB_BEHEMOTH_BOSS                       = 'N03P'
     constant integer MURLOC_SORCERER_BOSS                            = 'N03L'
     constant integer TORTOLLA                                        = 'N03B'
     constant integer KING_DEEPBEARD                                  = 'N036'
