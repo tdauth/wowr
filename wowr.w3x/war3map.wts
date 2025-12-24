@@ -4,27 +4,6 @@
 Big Bad Voodoo (Unique)
 }
 
-STRING 1
-{
-World of Warcraft Reforged 4.7
-}
-
-STRING 2
-{
-10 Adventurers
-}
-
-STRING 3
-{
-Baradé's enhanced Reforged version of the ORPG/strategy map "World of Warcraft Reborn" by EvilPitlord and DeMoNiKuS.
-discord.gg/eM34z36
-}
-
-STRING 4
-{
-Baradé, EvilPitlord, DeMoNiKuS
-}
-
 STRING 5
 // Abilities: A0VZ (Back), Name (Name)
 {
@@ -2059,26 +2038,6 @@ STRING 345
 Arcanist
 }
 
-STRING 346
-{
-No neutral portals!
-}
-
-STRING 347
-{
-Neutral portals!
-}
-
-STRING 348
-{
-Properties
-}
-
-STRING 349
-{
-Properties are unique indestructible buildings at fixed locations which can be purchased by one single player during the game. They allow hiring race-specific units and gathering resources by loading workers.
-}
-
 STRING 350
 // Units: n090 (Mercenary Camp Dragon Isles), Name (Name)
 {
@@ -2199,11 +2158,6 @@ STRING 369
 (Vrykul)
 }
 
-STRING 370
-{
-Trading Posts
-}
-
 STRING 371
 // Units: H003 (Eternal Guardian), Hotkey (Hotkey)
 {
@@ -2220,11 +2174,6 @@ STRING 373
 // Abilities: A01M (Alchemy - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 The Alchemist uses gathered herbs and minerals to create a Mana Stone.
-}
-
-STRING 374
-{
-Trading Posts allow buying and selling resources.
 }
 
 STRING 375
@@ -2599,11 +2548,6 @@ STRING 436
 (Critter) (Farmer)
 }
 
-STRING 437
-{
-Warlord: Partly strategy mode.
-}
-
 STRING 438
 // Units: nmrk (Marketplace), EditorSuffix (Name - Editor Suffix)
 {
@@ -2670,20 +2614,10 @@ STRING 448
 Trains Priests, and Sorceresses. |nAlso contains spell upgrades for Priests and Sorceresses, and Magic Sentry.
 }
 
-STRING 449
-{
-Creator: Baradé
-}
-
 STRING 450
 // Upgrades: R04Y (Animal War Training), Name (Name)
 {
 Bonus Heroes
-}
-
-STRING 451
-{
-Please provide feedback.
 }
 
 STRING 452
@@ -2708,11 +2642,6 @@ STRING 455
 // Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Night Elf and Undead AI cannot use housings. They need a bonus.
-}
-
-STRING 456
-{
-Website: https://wowreforged.org
 }
 
 STRING 457
@@ -2925,16 +2854,6 @@ STRING 491
 (Neutral Hostile)
 }
 
-STRING 492
-{
-Allow buying and selling resources.
-}
-
-STRING 493
-{
-Thieve Guilds
-}
-
 STRING 494
 // Units: h01V (Freelancer Laboratory), Hotkey (Hotkey)
 {
@@ -2951,11 +2870,6 @@ STRING 496
 // Items: I089 (Ore Iron), Name (Name)
 {
 Ore Iron
-}
-
-STRING 497
-{
-Thieves Guilds sell units of enemy killed unit types. If you kill creeps or enemy units, your Thieve Guild will sell the unit. It is limited to only 1 to keep it balanced.
 }
 
 STRING 498
@@ -3732,11 +3646,6 @@ STRING 626
 S
 }
 
-STRING 627
-{
-Marketplaces
-}
-
 STRING 628
 // Units: h03R (Skill Menu), Tip (Tooltip - Basic)
 {
@@ -3965,11 +3874,6 @@ STRING 665
 Upgrade to Guard Tower
 }
 
-STRING 666
-{
-All the people who contributed to this map.
-}
-
 STRING 667
 // Units: o01F (Oil Platform), Name (Name)
 {
@@ -3980,11 +3884,6 @@ STRING 668
 // Units: o01F (Oil Platform), Tip (Tooltip - Basic)
 {
 Build Oil Platform
-}
-
-STRING 669
-{
-Marketplaces sell items dropped by creeps.
 }
 
 STRING 670
@@ -4107,36 +4006,6 @@ STRING 689
 Decay
 }
 
-STRING 690
-{
-1
-}
-
-STRING 691
-{
-2
-}
-
-STRING 692
-{
-3
-}
-
-STRING 693
-{
-4
-}
-
-STRING 694
-{
-5
-}
-
-STRING 695
-{
-6
-}
-
 STRING 696
 // Abilities: A0AZ (Convert Into Demon), Name (Name)
 {
@@ -4189,16 +4058,6 @@ STRING 704
 // Abilities: A0B1 (Convert Into Furbolg), Name (Name)
 {
 Convert Into Furbolg
-}
-
-STRING 705
-{
-7
-}
-
-STRING 706
-{
-8
 }
 
 STRING 707
@@ -4393,11 +4252,6 @@ STRING 738
 (Neutral Hostile)
 }
 
-STRING 739
-{
-Hero classes determine which spells can be learned by a hero. They give the hero certain traits which are useful when combined with other hero classes.
-}
-
 STRING 740
 // Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
@@ -4488,30 +4342,10 @@ STRING 754
 Powerful flying boss hero who can cast Breath of Fire, Summon Fire Elemental, Command Aura, Reincarnation and Cleaving Attack.|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
 }
 
-STRING 755
-{
-Mounts Cages
-}
-
-STRING 756
-{
-Mounts Cages allow your hero to change his/her mount. Different mounts have different abilities, movement speeds and types.
-}
-
 STRING 757
 // Units: n0BU (Dynamite Stick), Name (Name)
 {
 Dynamite Stick
-}
-
-STRING 758
-{
-Crafting Stashes
-}
-
-STRING 759
-{
-Crafting Stashes can be built by male citizens and allow you to craft items and summon creatures given the required items. Put the required items in the inventory and craft or summon as many items or creatures as you want to. Link Crafting Stashes with each other, to use multiple inventories for required items.
 }
 
 STRING 760
@@ -4542,11 +4376,6 @@ STRING 764
 // Abilities: A0CI (Polymorph), EditorSuffix (Editor Suffix)
 {
 (Goblin Mage)
-}
-
-STRING 765
-{
-Clans
 }
 
 STRING 766
@@ -4687,16 +4516,6 @@ STRING 788
 S
 }
 
-STRING 789
-{
-Portals
-}
-
-STRING 790
-{
-The whole map contains many portals connecting places with each other. This is required to allow the AI to get everywhere easily without buying Zeppelins but also to connect all players with each other. No player should have an unfair advantage of reaching places much faster than others. Portals can also be built by Citizens to connect your different bases with each other. You won't have to cross the whole map with your army to defend your other bases. A research allows your built portals to teleport your units to any discovered place on the map except it is protected by an Antimagic Ward.
-}
-
 STRING 791
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
@@ -4721,96 +4540,6 @@ STRING 794
 Craft explosives to demolish enemy units and structures:|n- Goblin Land Mines|n- Explosive Barrels, Goblin Dynamite and Goblin Burning Grenades|n- Sapper|n- Sledge Hammer|n- TNT Catapult|n- Tiny Nuclear Silo
 }
 
-STRING 795
-{
-Save Codes
-}
-
-STRING 796
-{
-You can save/load your hero settings and XP. However, it is restricted to the corresponding game type since the game type influences how fast you gain XP etc. Just make a screenshot of the savecode to store it on your disk.
-}
-
-STRING 797
-{
-"-presave": Lists the prestored savecodes.
-}
-
-STRING 798
-{
-"-clanspresave": Lists the prestored clan savecodes.
-}
-
-STRING 799
-{
-"-loadp X": Loads the prestored savecode X.
-}
-
-STRING 800
-{
-"-loadclanp X": Loads the prestored clan savecode X.
-}
-
-STRING 801
-{
-"-save": Saves your hero and prints the savecode.
-}
-
-STRING 802
-{
-"-savec": Saves your hero without info.
-}
-
-STRING 803
-{
-"-saveautoon": Enables auto saving of your hero.
-}
-
-STRING 804
-{
-"-saveautooff": Disables auto saving of your hero.
-}
-
-STRING 805
-{
-"-load XXX": Loads your hero from savecode XXX.
-}
-
-STRING 806
-{
-Requires matching player name and game mode etc.
-}
-
-STRING 807
-{
-Savecodes are stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
-}
-
-STRING 808
-{
-Press the Print key to store a screenshot.
-}
-
-STRING 809
-{
-Screenshots stored in "%userprofile%\Documents\Warcraft III\ScreenShots".
-}
-
-STRING 810
-{
-"-loadi XXX": Loads items from savecode XXX.
-}
-
-STRING 811
-{
-"-loadu XXX": Loads units from savecode.
-}
-
-STRING 812
-{
-"-loadb XXX": Loads buildings from savecode.
-}
-
 STRING 813
 // Abilities: A01M (Alchemy - Advanced), Name (Name)
 {
@@ -4829,41 +4558,6 @@ STRING 815
 Alchemy - Master
 }
 
-STRING 816
-{
-"-loadc XXX": Loads the clan savecode XXX.
-}
-
-STRING 817
-{
-"-loadl XXX": Loads the letter savecode XXX.
-}
-
-STRING 818
-{
-"-savecheck XXX": Checks savecode XXX.
-}
-
-STRING 819
-{
-Legendary items and quest rewards are not saved.
-}
-
-STRING 820
-{
-Race and Freelancer units/buildings must match your mode.
-}
-
-STRING 821
-{
-Special Race Buildings
-}
-
-STRING 822
-{
-Every race has a special building which can be researched in the Tier 3 town hall and built by the Male Citizen. It can only be built once and has some special abilities for the race which have their origin in the lore of Warcraft III.
-}
-
 STRING 823
 // Items: I192 (Book of Demolishing), Description (Description)
 {
@@ -4880,41 +4574,6 @@ STRING 825
 // Items: I192 (Book of Demolishing), Tip (Tooltip - Basic)
 {
 Purchase Book of Demolishing
-}
-
-STRING 826
-{
-Player Stats
-}
-
-STRING 827
-{
-There is a multiboard at the top right of the screen with the title "Stats" to show player stats of all players. It might help you to identify strong/weak players and compare yourself to other players. The counter in the header shows how many human players are still online from the beginning of the game. It does not include AI players or unused slots. It also shows the elapsed time of the game. Every row has the color of the player to make it easier to find the values of a certain player.
-}
-
-STRING 828
-{
-Stats X/Y: online/total human players.
-}
-
-STRING 829
-{
-X:Y:Z - Elapsed game time in hours, minutes and seconds.
-}
-
-STRING 830
-{
-Player number, player name
-}
-
-STRING 831
-{
-Team
-}
-
-STRING 832
-{
-Clan
 }
 
 STRING 833
@@ -5269,41 +4928,6 @@ STRING 892
 // Units: n03H (Engineer Ship), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 893
-{
-1. Race
-}
-
-STRING 894
-{
-2. Race
-}
-
-STRING 895
-{
-3. Race
-}
-
-STRING 896
-{
-1. Profession
-}
-
-STRING 897
-{
-2. Profession
-}
-
-STRING 898
-{
-3. Profession
-}
-
-STRING 899
-{
-1. Hero Level
 }
 
 STRING 900
@@ -5840,26 +5464,6 @@ STRING 988
 Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
 }
 
-STRING 989
-{
-"-helpclan": Lists clan chat commands.
-}
-
-STRING 990
-{
-"-helpai": Lists AI chat commands.
-}
-
-STRING 991
-{
-"-victory"/"-novictory": Enables/disables victory conditions.
-}
-
-STRING 992
-{
-Use "-repick".
-}
-
 STRING 993
 // Abilities: A17E (Change Time of Day), EditorSuffix (Editor Suffix)
 {
@@ -5942,11 +5546,6 @@ STRING 1006
 // Items: I0KU (Wand of Drain Resources), Name (Name)
 {
 Wand of Drain Resources
-}
-
-STRING 1007
-{
-2. Hero Level
 }
 
 STRING 1008
@@ -6111,11 +5710,6 @@ STRING 1034
 Save Codes
 }
 
-STRING 1035
-{
-AI is crafting items!
-}
-
 STRING 1036
 // Abilities: A09C (Drop all Items), EditorSuffix (Editor Suffix)
 {
@@ -6134,20 +5728,10 @@ STRING 1038
 (Backpack)
 }
 
-STRING 1039
-{
-Dragon Slayer
-}
-
 STRING 1040
 // Units: n0K1 (Warlock), Name (Name)
 {
 Warlock
-}
-
-STRING 1041
-{
-Lately there has been some harassment by an evil Red Dragon that recently appeared in the region. The creature has caused serious damage to the defenses of Nethergarde Citadel and now the wizards there have had enough! There is a substantional reward to the hero who kills the dragon and returns its heart to the Archmage of Nethergarde.
 }
 
 STRING 1042
@@ -6540,25 +6124,10 @@ STRING 1108
 Summon Hydra Queen
 }
 
-STRING 1109
-{
-3. Hero Level
-}
-
 STRING 1111
 // Abilities: A08Y (Random Class), Name (Name)
 {
 Random Class
-}
-
-STRING 1112
-{
-Car Races
-}
-
-STRING 1113
-{
-The Goblins on Kezan provide races which let the winners earn valuable cups. You have to buy a qualification to start a race. There can be only one race at a time. The first three winners will get a cup which can be sold. You can only participate with your first hero. Move your hero to all check points of the race in the correct order in the given time to win it.
 }
 
 STRING 1114
@@ -6573,16 +6142,6 @@ STRING 1115
 Random Class
 }
 
-STRING 1116
-{
-Stonemaul Gauntlet
-}
-
-STRING 1117
-{
-The Stonemaul Ogres are famous for their passion for combat and fighting games. Their new warchief Rexxar has inspired them to establish a public gladiator arena. Here Heros can choose between different opponents to fight against in order to gain experience and maybe some small rewards. However, the Arena must first be officially opened by a certain Orc Quest. If you choose to fight in the arena, there is no turning back. If you enter the Arena with more than 1 Hero (Hero group), you lose the contest as soon as the 1st Hero dies. And if a Hero leaves the Arena before the fight is over, the battle is also over and you prove your cowardness to the Stonemaul Ogres. Aaahahahaharrr!
-}
-
 STRING 1118
 // Units: n0ER (Burrowed Nerubian Queen), Hotkey (Hotkey)
 {
@@ -6593,16 +6152,6 @@ STRING 1119
 // Units: h09U (Air Elemental), Name (Name)
 {
 Air Elemental
-}
-
-STRING 1120
-{
-Transfer Units
-}
-
-STRING 1121
-{
-Every player can give units to an allied player with an ability in his/her base or hideout. After using the ability on the given units you have to enter "-give <playernumber>" to give the units to a certain player. You can enter "-nogive" to cancel the process or simply cast the ability again.
 }
 
 STRING 1122
@@ -6623,16 +6172,6 @@ STRING 1124
 This unit is affected by Divine Shield. It hase Divine armor.
 }
 
-STRING 1125
-{
-Reward Freelancers
-}
-
-STRING 1126
-{
-Warlords can reward freelancers with an ability in their main building. This will give a freelancer 800 gold, 800 lumber and 200 experience. It can be done every 180 seconds and helps to push freelancers.
-}
-
 STRING 1127
 // Items: I19U (Spade), Name (Name)
 {
@@ -6643,11 +6182,6 @@ STRING 1128
 // Items: I0Q1 (Goblin Tool Box), Tip (Tooltip - Basic)
 {
 Purchase Goblin Tool Box
-}
-
-STRING 1129
-{
-Invalid profession!
 }
 
 STRING 1130
@@ -6888,11 +6422,6 @@ STRING 1170
 // Upgrades: R04S (Animal War Training), Name (Name)
 {
 Demigod
-}
-
-STRING 1171
-{
-|cff808080Drop item on shop to sell|NDouble right click item to unstack|R
 }
 
 STRING 1172
@@ -7867,11 +7396,6 @@ STRING 1333
 Adds 1 strength. Use chat command "-str X" to add X strength. Use chat command "-str" to add maximum strength.
 }
 
-STRING 1334
-{
-Spawn legendary items!
-}
-
 STRING 1335
 // Items: I08Z (Unique - Sulfuras), Ubertip (Tooltip - Extended)
 {
@@ -7924,11 +7448,6 @@ STRING 1343
 // Units: nhea (Blood Elf Archer), EditorSuffix (Name - Editor Suffix)
 {
 (Blood Elf)
-}
-
-STRING 1344
-{
-Evolution Level
 }
 
 STRING 1345
@@ -8181,11 +7700,6 @@ STRING 1389
 // Abilities: A01X (Water Spell - Crushing Wave), EditorSuffix (Editor Suffix)
 {
 (Spell Book)
-}
-
-STRING 1390
-{
-Slay the Bandit Lord.
 }
 
 STRING 1391
@@ -8594,11 +8108,6 @@ STRING 1458
 // Abilities: A105 (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Club Strike)
-}
-
-STRING 1459
-{
-No dungeon key discovered in Ashenvale yet! Explore the area to find it!
 }
 
 STRING 1460
@@ -10131,11 +9640,6 @@ STRING 1714
 Dummy Shroud of Protection
 }
 
-STRING 1715
-{
-Long loading time leads to errors for some players.
-}
-
 STRING 1716
 // Abilities: A26J (Avatar), EditorSuffix (Editor Suffix)
 {
@@ -10146,11 +9650,6 @@ STRING 1717
 // Units: E00G (Mountain Giant), Ubertip (Tooltip - Extended)
 {
 Tank Hero, defending your army and destroying hostile towns. Can learn Storm Bolt, Spiked Carapace, Eat Tree, and Demolish. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 1718
-{
-Enchanting does not work for all item abilities due to Warcraft bugs.
 }
 
 STRING 1719
@@ -10217,16 +9716,6 @@ STRING 1729
 // Abilities: A0KV (Wind Walk), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
-}
-
-STRING 1730
-{
-Lor'themar Theron
-}
-
-STRING 1731
-{
-However, our addiction to magic and the destruction of the Sunwell have weakened us. We need the help of the rangers to defeat the Undead and restore the Sunwell. Hire a ranger and return her to me to get your reward!
 }
 
 STRING 1732
@@ -10493,41 +9982,6 @@ STRING 1776
 (Neutral Hostile)
 }
 
-STRING 1777
-{
-Goblin Town Hall has a weird light bug pointing to the hero glow.
-}
-
-STRING 1778
-{
-Goblin Tower leads to terrain becoming black sometimes.
-}
-
-STRING 1779
-{
-Line of Sight Blockers do not work for flying units (occlusion height).
-}
-
-STRING 1780
-{
-Researches increasing unit maximum life can lead to negative maximum life and instant unit deaths.
-}
-
-STRING 1781
-{
-Release 2.0 of Warcraft III broke older version before 3.31 with a new frame hierarchy.
-}
-
-STRING 1782
-{
-AI might crash in start locations which have too little ground area space.
-}
-
-STRING 1783
-{
-Loading save games might crash because of string literals longer than 1023 characters.
-}
-
 STRING 1784
 // Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
 {
@@ -10792,11 +10246,6 @@ STRING 1836
 Tiny Workshop
 }
 
-STRING 1837
-{
-You can either create or join a clan. Clans are groups of players who want to play together. Clans have members, a name, one leader, several captains and store gold and lumber for all members. Clans can have one Clan Hall in a game. Their stats will be stored in savecodes which can be improved even when not all clan members are playing.
-}
-
 STRING 1838
 // Units: h04C (Arch Cleric), Casterupgradetip (Caster Upgrade Tips)
 {
@@ -10911,25 +10360,10 @@ STRING 1856
 Guard Tower
 }
 
-STRING 1857
-{
-Well done! This might have secured the peace between our nations. Take this item as a reward.
-}
-
 STRING 1858
 // Units: n02D (Furbolg Polar Hut), Hotkey (Hotkey)
 {
 P
-}
-
-STRING 1859
-{
-Lor'themar Theron
-}
-
-STRING 1860
-{
-The rangers will help us to reclaim our home and restore the Sunwell. Take this item as reward.
 }
 
 STRING 1861
@@ -10960,16 +10394,6 @@ STRING 1865
 // Units: n04J (Trading Post), Ubertip (Tooltip - Extended)
 {
 Allows trading all resources other than gold and lumber.
-}
-
-STRING 1866
-{
-Goblin Bank
-}
-
-STRING 1867
-{
-The Goblin Bank is a neutral building located Theramore. You can use it to increase your gold and lumber by depositing it for some time and getting interests. You can also play the Wheel of Fortune there.
 }
 
 STRING 1868
@@ -11062,20 +10486,10 @@ STRING 1882
 H
 }
 
-STRING 1883
-{
-AI harvest researches enabled.
-}
-
 STRING 1884
 // Units: h06I (Aviary), Ubertip (Tooltip - Extended)
 {
 Trains Peregrin Falcons, and Albatross Riders. |nAlso contains the True Sight and Devour upgrades.
-}
-
-STRING 1885
-{
-AI harvest researches disabled.
 }
 
 STRING 1886
@@ -11132,16 +10546,6 @@ STRING 1894
 Provides an additional source of gold income.|n|n|cffffcc00Limited to 4.|r
 }
 
-STRING 1895
-{
-Evolution
-}
-
-STRING 1896
-{
-You can research Evolution to increase the the maximum life, damage, armour and level of all of your units, so they will give enemy players more XP. The upgrade is also used for all creeps and units from bosses on the map as soon as the hero of playing users with the lowest hero level hits level 10. The upgrade is useful to continue leveling in late game and to kill strong heroes with a stronger army of units if you invested into units more than leveling.
-}
-
 STRING 1897
 // Units: n00I (Orc Citizen (male)), Name (Name)
 {
@@ -11172,16 +10576,6 @@ STRING 1901
 Hire Orc Citizen (female)
 }
 
-STRING 1902
-{
-Divine Golems
-}
-
-STRING 1903
-{
-When your hero gets to level 35 you can train powerful Divine Golems.
-}
-
 STRING 1904
 // Abilities: A203 (Demolishing - Adept), Name (Name)
 {
@@ -11206,70 +10600,16 @@ STRING 1907
 Demolishing - Master
 }
 
-STRING 1908
-{
-Mounts
-}
-
-STRING 1909
-{
-When your hero gets to level 20 he/she can cast an ability which summons a flying mount. This mount can transport one unit. Your hero can use it to fly over the Ocean or cliffs to get wherever he/she wants to. Your mount will be different depending on the race of your hero.
-}
-
 STRING 1910
 // Units: h020 (Gate Closed), Hotkey (Hotkey)
 {
 G
 }
 
-STRING 1911
-{
-Demigod
-}
-
-STRING 1912
-{
-If you are bored with the standard heroes and you want to become more powerful, you can become a demigod. You can do this by buying either a 'Order Stone Fragment' (light side) or a 'Chaos Stone Fragment' (dark side) and by placing your hero in the center of the middle island above the Maelstorm, You have to place a level 10 dragon of the corresponding color in each fire. If your hero uses the item in the center of the island he/she will become a demigod automatically. The hero keeps the gained experience.
-}
-
 STRING 1913
 // Abilities: A204 (Demolishing - Master), Tip (Tooltip - Normal)
 {
 Master Demolishing
-}
-
-STRING 1915
-{
-Leaderboards
-}
-
-STRING 1916
-{
-Some epic quests will create leaderboards. In order to hide or show them again, use following commands (works only if the quests are activated):
-
-1. CRUSADE:
-- turn on leaderboard: "-crusadeon"
-- turn off leaderboard: "-crusadeoff"
-
-2. THE SILVER HAND:
-- turn on leaderboard: "-paladinson"
-- turn off leaderboard: "-paladinsoff"
-
-3. CENTAUR KHANS:
-- turn on leaderboard: "-centaurson"
-- turn off leaderboard: "-centaursoff"
-
-Note: Even when the quest has been activated, and you turn off the leaderboard, the counts will continue until the quest requirement is accomplished. Also, it turns off/on the leaderboard display only for the player who writes the chat message.
-}
-
-STRING 1917
-{
-Equipment Bags
-}
-
-STRING 1918
-{
-Equipment bags allow your hero to equip additional items and to skill additional spells.
 }
 
 STRING 1919
@@ -11284,35 +10624,10 @@ STRING 1921
 Primary structure, used to train Workers and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
 }
 
-STRING 1922
-{
-Welcome to the kingdom of the Nerubian, stranger! The Lich King needs to help of the Faceless Ones. However, he needs the power of Cenarius remains to control them.
-}
-
 STRING 1923
 // Units: h00I (Scout Tower), Ubertip (Tooltip - Extended)
 {
 Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, or an Arcane Tower. Can learn the Magic Sentry ability.
-}
-
-STRING 1924
-{
-Backpack
-}
-
-STRING 1925
-{
-You can select your backpack at the left top corner directly under your hero icon, so your hero can carry enough items with him/her. Use the two abilities in the backpack to change the current bag.
-}
-
-STRING 1926
-{
-Quests
-}
-
-STRING 1927
-{
-You can solve optional quests to get items as rewards. You recognize NPCs who give quests by the exclamation mark over their heads. If one player accepts a quest, he/she or any other player can solve the quest and gets a reward from the NPC for it. Use the chat command "-ping" to ping the current quest locations on the minimap.
 }
 
 STRING 1928
@@ -11321,52 +10636,10 @@ STRING 1928
 The High Elves revere the sun. Increases the sight and other stats of High Elf units at day time. Workers harvest plus 10 lumber during the day.
 }
 
-STRING 1929
-{
-Legendary Artifacts
-}
-
-STRING 1930
-{
-Legends and rumors speak of many legendary Artifacts hidden across the World. The bad news is, you can´t get them for free, but in order to retrieve them, must defeat each Dungeon Master guarding them. Since the Artifact Guardians are very powerful, it is advised not to venture alone into their lairs, or at least not well prepared.
-
-If a Hero carrying a unique artifact DIES without an Ankh or the Reincarnation skill, the artifacts will be removed from the Hero. They can then again be retrieved from the location where they were originally found.
-}
-
 STRING 1931
 // Units: n00J (Orc Citizen (female)), Ubertip (Tooltip - Extended)
 {
 An intelligent Orc citizen. Has mana regeneration aura.
-}
-
-STRING 1932
-{
-Bosses
-}
-
-STRING 1933
-{
-Bosses are marked by the red skulls on the minimap. They are creep heroes which you can kill to gain experience and their legendary item. Each legendary item is unique in the game and has some powerful abilities. The legendary items are reset to their boss location when your first hero dies even if it is placed in your backpack or equipment bag.
-}
-
-STRING 1934
-{
-Creeps
-}
-
-STRING 1935
-{
-You can kill creeps to increase the level of your hero. There is different creeps everywhere in the world. When you kill a group of computer-controlled creeps, it will be respawned after 100 seconds, so the number of opponents in the game is not finite. Some groups leave items after their extermination which can be picked up by your hero. The creeps won't respawn if there is a building in the area. When the building is destroyed, the creeps will respawn again.
-}
-
-STRING 1936
-{
-Computer AI
-}
-
-STRING 1937
-{
-Computer players are warlords by default. They start with a main building, five workers and their hero. The AI will collect gold and lumber and build additional gold mines. It should attack creeps and hostile players from time to time. If you are allied to a computer player it is recommended to defend him and to give him resources if you are a warlord yourself. Allied computer players might turn out to be rather useful when attacking another player. When the base of a computer player is destroyed, the hero will get a tiny main building to rebuild a base. Their race is defined in the beginning by the host player.
 }
 
 STRING 1938
@@ -11381,16 +10654,6 @@ STRING 1939
 Allows changing the ground.
 }
 
-STRING 1943
-{
-Resources
-}
-
-STRING 1944
-{
-Resources allow training, buying and upgrading units, constructing buildings, researching upgrades and buying items. Different resources have a different value. More valuable resources are usually harder to harvest.
-}
-
 STRING 1946
 // Abilities: A08S (Thunder Clap), EditorSuffix (Editor Suffix)
 {
@@ -11401,48 +10664,6 @@ STRING 1949
 // Abilities: A01T (Big Bad Voodoo), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
-}
-
-STRING 1952
-{
-Cities and Hideouts
-}
-
-STRING 1953
-{
-Every warlord-type Hero has a nation-specific scepter. With this he or she can summon workers who will start building their nations. It is recommended that they build within city walls because the probability of their buildings being attacked by creeps or "terrorist" Heros is considerably lowered. Also, they can spawn citizens and build housings for them. Citizens make your town more realistic and also have some useful abilities.
-
-Hideouts are for Freelancer Heros. They are their personal homes and provide among other things a safe place to recover. It should be considered building them within city walls or under the protection of a warlord player to lower destruction probability.
-}
-
-STRING 1954
-{
-Hero Death
-}
-
-STRING 1955
-{
-If your hero dies you can either revive him/her in your own built altar if you are a warlord or revive him/her in the altar on Theramore or in your hideout. You can leave the island by buying a boat. If you have no gold, just sell crafted items. Note that ressurecting your hero on Theramore takes longer than in your own altar or hideout. Resurrection Stones allow reviving your hero automatically.
-}
-
-STRING 1956
-{
-Alliances
-}
-
-STRING 1957
-{
-Alliances can be changed via the default Warcraft menu. You can also send resources via the standard menu. There are chat commands for single player games to change the alliances. The AI should react to your alliance changes. When you ally an AI player, the player should ally you as well etc. Special AI players or bosses are not included.
-}
-
-STRING 1958
-{
-Dig them up and bring them to Kel'Thuzad. He will use the Sunwell's power for a special ritual giving the Lich King his required powers. Get your reward at Sunwell Grove from Kel' Thuzad.
-}
-
-STRING 1959
-{
-You have brought me the remains of this once powerful Demigod. I will proceed my ritual to give the Lich King the power to control the Faceless Ones. Take this item as a reward.
 }
 
 STRING 1960
@@ -11517,16 +10738,6 @@ STRING 1971
 (Blood Elf)
 }
 
-STRING 1972
-{
-Full Repick
-}
-
-STRING 1973
-{
-You can select your hero again including the game mode by using the chat command "-fullrepick". He keeps only a part of the gained experience and you lose all units on the map! All of your carried items will be dropped on the island Theramore, so quest items and rewards won't get lost. Repicks are allowed only every 30 seconds. You can reselect your initial game mode.
-}
-
 STRING 1974
 // Units: h009 (Town Hall), EditorSuffix (Name - Editor Suffix)
 {
@@ -11557,16 +10768,6 @@ STRING 1978
 (Blood Elf)
 }
 
-STRING 1979
-{
-Repick
-}
-
-STRING 1980
-{
-You can select your hero again by using the chat command "-repick". He keeps the gained experience but you lose all units on the map! All of your carried items will be dropped on the island Theramore, so quest items and rewards won't get lost. Repicks are allowed only every 30 seconds. You cannot rechoose your initially selected game mode.
-}
-
 STRING 1981
 // Units: h00E (Arcane Sanctum), EditorSuffix (Name - Editor Suffix)
 {
@@ -11595,46 +10796,6 @@ STRING 1985
 // Units: h00F (Lumber Mill), EditorSuffix (Name - Editor Suffix)
 {
 (Blood Elf)
-}
-
-STRING 1986
-{
-Universal Chat Commands
-}
-
-STRING 1987
-{
-Enter the chat commands without the double quotes. These chat commands are available by Warcraft III: Reforged and in Battle.net.
-}
-
-STRING 1988
-{
-Chat Commands
-}
-
-STRING 1989
-{
-Enter the chat commands without the double quotes. The leaderboards will appear during certain quests. Note: Even when the quest has been activated, and you turn off the leaderboard, the counts will continue until the quest requirement is accomplished. Also, it turns off/on the leaderboard display only for the player who writes the chat message.
-}
-
-STRING 1993
-{
-Victory
-}
-
-STRING 1994
-{
-Every player can win the game by killing the boss Archimonde if the victory conditions are enabled. The game ends after this. All players who are not allied with the killing player will lose the game.
-}
-
-STRING 1995
-{
-Start Locations
-}
-
-STRING 1996
-{
-The start locations allow you to start the game at some specified area on the map. Some start locations may be occupied by other players including Warlord AI. The Clan Island is restricted to clan members.
 }
 
 STRING 1997
@@ -11745,16 +10906,6 @@ STRING 2014
 Research Evolution - [|cffffcc00Level 75|r]
 }
 
-STRING 2015
-{
-Races
-}
-
-STRING 2016
-{
-This selection is restricted to warlords. They receive a scepter and tiny town hall of their race which allows them to summon two workers and therefore to build their first base.
-}
-
 STRING 2017
 // Units: n0CW (Orc Child), Name (Name)
 {
@@ -11771,16 +10922,6 @@ STRING 2019
 // Units: n0CV (Human Child), Ubertip (Tooltip - Extended)
 {
 A tiny villager who can cast Disarmament.
-}
-
-STRING 2020
-{
-Professions
-}
-
-STRING 2021
-{
-After choosing your race or game mode, you have to select a profession. The profession allows you to craft items. These items might help your hero or units to become stronger or to restore their stats or to fortify your base. Crafting items costs mana.
 }
 
 STRING 2022
@@ -11805,16 +10946,6 @@ STRING 2025
 // Units: n00G (Undead Citizen (male)), Hotkey (Hotkey)
 {
 M
-}
-
-STRING 2026
-{
-Heroes
-}
-
-STRING 2027
-{
-You have to pick a hero in the beginning of the game which can be repicked. You are allowed to pick two additional heroes at some point when you reached a higher level with your first hero.
 }
 
 STRING 2029
@@ -11851,16 +10982,6 @@ STRING 2034
 // Units: n00H (Undead Citizen (female)), Hotkey (Hotkey)
 {
 M
-}
-
-STRING 2035
-{
-Game Modes
-}
-
-STRING 2036
-{
-You can choose one of two game modes after the hero selection. As a warlord you play partly in the strategy mode and can build a base. This has the advantage that you have mostly a bigger army than other players. On the other hand, as a freelancer your hero starts with +15 points on all attributes and your hero gets 30% more experience from killing hostile units. Freelancers can see neutral buildings from start.
 }
 
 STRING 2037
@@ -12310,16 +11431,6 @@ STRING 2184
 H
 }
 
-STRING 2185
-{
-Known Issues
-}
-
-STRING 2186
-{
-Unfortunately, this map has some known unfixed issues. If you think you know the cause of an issue or the solution to fix it, please report it on Discord.
-}
-
 STRING 2187
 // Units: H06F (Hydromancer), Hotkey (Hotkey)
 {
@@ -12336,16 +11447,6 @@ STRING 2189
 // Units: h06S (Rack Armor), Hotkey (Hotkey)
 {
 H
-}
-
-STRING 2190
-{
-Hero Journey
-}
-
-STRING 2191
-{
-Your hero levels will unlock new features in the map.
 }
 
 STRING 2192
@@ -12436,16 +11537,6 @@ STRING 2206
 // Units: h0U5 (Spire), Tip (Tooltip - Basic)
 {
 Build Spire
-}
-
-STRING 2207
-{
-AI reset has been voted to |cffff0000YES|r.
-}
-
-STRING 2208
-{
-There are no AI players.
 }
 
 STRING 2209
@@ -18928,11 +18019,6 @@ STRING 3660
 Gives the player 30 Wool when being used.
 }
 
-STRING 3661
-{
-Cheats
-}
-
 STRING 3662
 // Upgrades: R011 (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
@@ -18943,11 +18029,6 @@ STRING 3663
 // Upgrades: R014 (Shaman Adept Training,Shaman Master Training), Name (Name)
 {
 Draenei Seer Adept Training
-}
-
-STRING 3664
-{
-Cheats are useful for testing the map. They are enabled automatically for player WorldEdit in single player. They can only be used by player 1 red.
 }
 
 STRING 3665
@@ -19200,16 +18281,6 @@ STRING 3710
 // Units: o03O (Skeleton Barracks), EditorSuffix (Name - Editor Suffix)
 {
 (Dungeon)
-}
-
-STRING 3711
-{
-No Cheats!
-}
-
-STRING 3712
-{
-Cheats!
 }
 
 STRING 3713
@@ -20254,16 +19325,6 @@ STRING 3941
 // Upgrades: R01C (Burning Oil), Tip (Tooltip)
 {
 AI Gold Bonus Game Type Fast
-}
-
-STRING 3943
-{
-Baradé, EvilPitlord, DeMoNiKuS
-}
-
-STRING 3944
-{
-World Of Warcraft Reforged 4.7
 }
 
 STRING 3945
@@ -21520,11 +20581,6 @@ STRING 4333
 (All Races)
 }
 
-STRING 4347
-{
-Return Ledger to Gerard.
-}
-
 STRING 4348
 // Units: o09W (Freelancer Shipyard), EditorSuffix (Name - Editor Suffix)
 {
@@ -22662,35 +21718,10 @@ STRING 4550
 R
 }
 
-STRING 4551
-{
-Cinematics: |cffff0000ENABLED|r
-}
-
-STRING 4552
-{
-Cinematics have been voted to |cffff0000ENABLED|r.
-}
-
-STRING 4553
-{
-Cinematics: |cffff0000DISABLED|r
-}
-
-STRING 4554
-{
-Cinematics have been voted to |cffff0000DISABLED|r.
-}
-
 STRING 4556
 // Destructibles: B015 (Short Force Bridge), Name (Name)
 {
 Short Force Bridge
-}
-
-STRING 4559
-{
-Cinematics can be disabled.
 }
 
 STRING 4563
@@ -22721,11 +21752,6 @@ STRING 4567
 // Units: n0IV (Neutral Child), Ubertip (Tooltip - Extended)
 {
 A tiny villager who can cast Disarmament.
-}
-
-STRING 4568
-{
-Welcome to Orgrimmar, stranger! Our Orcish nation needs to inform the Night Elves about our progress. Deliver my message to Tyrande on Teldrassil Isle and return to get your reward from me.
 }
 
 STRING 4570
@@ -22884,11 +21910,6 @@ STRING 4602
 B
 }
 
-STRING 4603
-{
-Enabled zone hints.
-}
-
 STRING 4604
 // Units: U00R (Doom Guard), EditorSuffix (Name - Editor Suffix)
 {
@@ -22935,11 +21956,6 @@ STRING 4635
 // Abilities: A0QY (Burning Arrows), Tip (Tooltip - Normal)
 {
 Burning Arrows
-}
-
-STRING 4636
-{
-Disabled zone hints.
 }
 
 STRING 4637
@@ -23581,65 +22597,10 @@ STRING 4761
 Ghost Adept Training
 }
 
-STRING 4762
-{
-Reveal!
-}
-
-STRING 4763
-{
-Enable order debugger.
-}
-
-STRING 4764
-{
-Disable order debugger.
-}
-
-STRING 4765
-{
-Auto skill heroes!
-}
-
-STRING 4766
-{
-Created all orbs!
-}
-
-STRING 4767
-{
-Add claws!
-}
-
-STRING 4768
-{
-Add claws damage bonus!
-}
-
-STRING 4769
-{
-|cffffcc00New Quest discovered:|r Stormrage
-}
-
 STRING 4770
 // Abilities: A18W (Build Tiny Aviary), Name (Name)
 {
 Build Tiny Aviary
-}
-
-STRING 4771
-{
-Letters for you or your clan:
-}
-
-STRING 4772
-{
-Map
-}
-
-STRING 4773
-{
-Welcome to World of Warcraft Reforged. This map is an open world RPG. This means that you can do whatever you want to. Complete some of the optional quests, hunt other players or forge alliances. Baradé wishes you a lot of fun while playing. I thank EvilPitlord and DeMoNiKuS for the creation of the original map "World of Warcraft Reborn".
 }
 
 STRING 4774
@@ -24452,25 +23413,6 @@ STRING 4935
 Convert Grunts, Warlocks, Raiders, Kodo Beasts and Peons into Fel Orc units.
 }
 
-STRING 4936
-{
-- Quick start with -rs.
-- Warlords build a base and army, Freelancers level faster.
-- Get better items from quests and killing bosses.
-- Forge alliances via Warcraft's ally menu (F11) or chat commands.
-- Revive your dead heroes on Theramore.
-- Sell crafted items for gold.
-- Save your hero with "-save".
-- See quest markers with "-ping".
-- Play with Computer players.
-- SD graphics are recommended.
-- Discord: discord.gg/eM34z36
-
-Please provide feedback and report any bugs.
-Testing: Runeblade14, Toasty, Deranor and others.
-Credits: Quest Log (F9).
-}
-
 STRING 4944
 // Items: I0H2 (Unique - Ancient Bow), Description (Description)
 {
@@ -25069,11 +24011,6 @@ STRING 5069
 // Doodads: D00I (Cave Natural Cliff (South Left)), Name (Name)
 {
 Cave Natural Cliff (South Left)
-}
-
-STRING 5071
-{
-Units owned by player Rescuable can be rescued by any other player. Rescued units change their owner to the rescuing player. Rescuing units is only possible if you the player has enough food left to rescue the unit.
 }
 
 STRING 5072
@@ -26816,16 +25753,6 @@ STRING 5398
 C
 }
 
-STRING 5399
-{
-Players
-}
-
-STRING 5400
-{
-Players own heroes, units, buildings and resources. The number of players is determined in the game lobby. Computer players play with Warcraft's AI. Empty slots will not be playing. Users can leave at any time during a game. Users can also be kicked from games by votes.One single player is the host.The ownership of units can be transfered to other players using spells like Charm or chat commands. Players can use their save codes to to save/load data during a game. There are several fixed Computer players which cannot be changed in the game lobby. Alliances between players are preset by their game lobby team. Alliances can be changed during the game using chat commands.
-}
-
 STRING 5401
 // Units: n0HQ (Ogre Hunter), Hotkey (Hotkey)
 {
@@ -27724,16 +26651,6 @@ STRING 5600
 // Abilities: A0DP (Build Tiny Altar of the Depths), EditorSuffix (Editor Suffix)
 {
 (Naga)
-}
-
-STRING 5601
-{
-Factions
-}
-
-STRING 5602
-{
-Factions consist of multiple races which allied for a common goal. The two game lobby teams represent the two major factions Alliance and Horde. Players from the same faction are allied by default. The faction The Burning Legion fights against all players. The faction Rescuable allows rescuing respawning units.
 }
 
 STRING 5603
@@ -29140,16 +28057,6 @@ STRING 5871
 (Dragonkin)
 }
 
-STRING 5872
-{
-Enabled paged buttons UI.
-}
-
-STRING 5873
-{
-Disabled paged buttons UI.
-}
-
 STRING 5874
 // Items: I0ZD (Skin Grunt), Name (Name)
 {
@@ -30104,16 +29011,6 @@ STRING 6042
 Summon Enraged Earth Elemental
 }
 
-STRING 6043
-{
-Enabled queue UI.
-}
-
-STRING 6044
-{
-Disabled queue UI.
-}
-
 STRING 6047
 // Units: n0CY (Tol'vir), Name (Name)
 {
@@ -30570,16 +29467,6 @@ STRING 6157
 Warrior Hero, adept at summoning insect minions and crushing enemies. Can learn Mass Invisibility, Summon Spider Egg, Envenomed Weapons and Mass Web. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 6158
-{
-Lor'themar Theron
-}
-
-STRING 6159
-{
-Let us clean the Sunwell from this Undead corruption and return to our former immortality!
-}
-
 STRING 6160
 // Units: nef7 (High Elven Farm), EditorSuffix (Name - Editor Suffix)
 {
@@ -30772,11 +29659,6 @@ STRING 6191
 Summon Xal'atath
 }
 
-STRING 6193
-{
-You cannot create a clan named "TheElvenClan"!
-}
-
 STRING 6194
 // Abilities: A0WN (Dragon Breeding - Doctor), Tip (Tooltip - Normal)
 {
@@ -30787,21 +29669,6 @@ STRING 6195
 // Abilities: A0WN (Dragon Breeding - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 The Dragon Breeder uses his knowledge to create a Tiny Dragon Roost.
-}
-
-STRING 6196
-{
-Saved clan! Use "-loadc X" to load your clan in the next game.
-}
-
-STRING 6197
-{
-Use "-clanrename X" to give your clan a name!
-}
-
-STRING 6198
-{
-You are already part of a clan!
 }
 
 STRING 6199
@@ -31038,50 +29905,10 @@ STRING 6241
 U
 }
 
-STRING 6242
-{
-Move a ship to the port of Stormwind.
-}
-
-STRING 6243
-{
-Move a ship to the port of Theramore.
-}
-
-STRING 6244
-{
-Move a ship to the port of Teldrassil.
-}
-
-STRING 6245
-{
-Move a ship to the port of Sunstrider Isle.
-}
-
 STRING 6249
 // Units: o08F (Hunting Dog), EditorSuffix (Name - Editor Suffix)
 {
 (Hunter)
-}
-
-STRING 6250
-{
-Lor'themar Theron
-}
-
-STRING 6251
-{
-Our former prince Kael has betroyed us. His addiction to magic led to his corruption under Demonic influence.
-}
-
-STRING 6252
-{
-Lor'themar Theron
-}
-
-STRING 6253
-{
-Travel to Outland and capture him. He has to brought to trial for his crimes to our people. He is protected by his strong Phoenixes, so be careful!
 }
 
 STRING 6254
@@ -31360,11 +30187,6 @@ STRING 6368
 (Skills)
 }
 
-STRING 6369
-{
-Clear queue UI.
-}
-
 STRING 6371
 // Units: N0JU (Gronn), Hotkey (Hotkey)
 {
@@ -31545,11 +30367,6 @@ STRING 6417
 Banner Theramore
 }
 
-STRING 6419
-{
-Move a ship back to the port of Kul Tiras.
-}
-
 STRING 6420
 // Items: I110 (Tiny Necromancer Graveyard), Name (Name)
 {
@@ -31608,11 +30425,6 @@ STRING 6429
 // Abilities: A0WV (Necromancy - Grand Master), Tip (Tooltip - Normal)
 {
 Grand Master Necromancy
-}
-
-STRING 6430
-{
-Successfully loaded your savecode!
 }
 
 STRING 6431
@@ -32332,11 +31144,6 @@ STRING 6614
 O
 }
 
-STRING 6616
-{
-Error on loading savecode!
-}
-
 STRING 6618
 // Items: I0YS (Randomize Skin), Hotkey (Hotkey)
 {
@@ -32509,16 +31316,6 @@ STRING 6704
 // Abilities: A034 (Hero Abilities Back), EditorSuffix (Editor Suffix)
 {
 (Skills)
-}
-
-STRING 6705
-{
-StringStartsWith: true
-}
-
-STRING 6706
-{
-StringStartsWith: false
 }
 
 STRING 6707
@@ -33337,11 +32134,6 @@ STRING 6950
 Floating Rock
 }
 
-STRING 6951
-{
-No Reveal!
-}
-
 STRING 6953
 // Units: u00C (Dungeon of Pain), Name (Name)
 {
@@ -33384,20 +32176,10 @@ STRING 6960
 Primary structure, used to train Artificers and receive lumber gathered by Ghouls. Can be upgraded to Haven and then Sanctuary to enable the production of additional types of structures and units.
 }
 
-STRING 6961
-{
-Lor'themar Theron
-}
-
 STRING 6962
 // Units: h06T (Captain Ship), Hotkey (Hotkey)
 {
 P
-}
-
-STRING 6964
-{
-You have done well. Kael needs to be put before trial for his crimes against his own people.
 }
 
 STRING 6965
@@ -33470,16 +32252,6 @@ STRING 6977
 // Abilities: A1IY (Hero Attributes), Name (Name)
 {
 Hero Attributes
-}
-
-STRING 6979
-{
-Lor'themar Theron
-}
-
-STRING 6980
-{
-Welcome to Sunstrider Island stranger! We Blood Elves are trying to reclaim our former kingdom Quel'Thalas which has been destroyed by the Scourge.
 }
 
 STRING 6981
@@ -34676,11 +33448,6 @@ STRING 7380
 Dragon Roost
 }
 
-STRING 7381
-{
-Reset.
-}
-
 STRING 7382
 // Units: h09F (Elemental Sanctuary), Name (Name)
 {
@@ -35497,11 +34264,6 @@ STRING 7611
 P
 }
 
-STRING 7612
-{
-Respawning all creeps!
-}
-
 STRING 7613
 // Units: h052 (Elemental Servant), Ubertip (Tooltip - Extended)
 {
@@ -35536,11 +34298,6 @@ STRING 7618
 // Units: n071 (Kor'gall), Hotkey (Hotkey)
 {
 K
-}
-
-STRING 7619
-{
-No more visible water!
 }
 
 STRING 7620
@@ -36371,11 +35128,6 @@ STRING 7760
 (Lost Ones)
 }
 
-STRING 7761
-{
-Unfreeze everything.
-}
-
 STRING 7762
 // Items: I15F (Tiny Banner Blood Elf), Tip (Tooltip - Basic)
 {
@@ -36502,20 +35254,10 @@ STRING 7782
 Naga Housing
 }
 
-STRING 7783
-{
-Enabled rescuing units from player Gaia.
-}
-
 STRING 7784
 // Units: h0N7 (Human Housing), Name (Name)
 {
 Human Housing
-}
-
-STRING 7785
-{
-Disabled rescuing units from player Gaia.
 }
 
 STRING 7786
@@ -38513,11 +37255,6 @@ STRING 8172
 Supply Cart
 }
 
-STRING 8174
-{
-|cff00ff00HINT|r - Elementals are now available at the Arcane Laboratory in Dalaran!
-}
-
 STRING 8175
 // Units: N02T (Nether Dragon), Name (Name)
 {
@@ -38552,11 +37289,6 @@ STRING 8180
 // Units: E02B (Ancient of Lore), Propernames (Proper Names)
 {
 Ashyen,Bathran,Elder Ironbranch,Elderlimb,Elothir,Furgus Warpwood,Hastat the Ancient,Leafbeard the Storied,Nordu,Onu,Sapling of Lore,Stoma the Ancient,Treebole,Vartrus the Ancient
-}
-
-STRING 8181
-{
-Successfully loaded your savecode!
 }
 
 STRING 8182
@@ -39654,11 +38386,6 @@ STRING 8378
 Draenei
 }
 
-STRING 8379
-{
-Lor'themar Theron
-}
-
 STRING 8380
 // Items: I0TV (Scepter of Draenei), Name (Name)
 {
@@ -39813,11 +38540,6 @@ STRING 8405
 // Units: o08C (Workshop), Tip (Tooltip - Basic)
 {
 Build Workshop
-}
-
-STRING 8406
-{
-Once a noble man, he has falled for the Demonic influence and we might be able to help him
 }
 
 STRING 8407
@@ -40138,21 +38860,6 @@ STRING 8468
 Further increases the armor, hit points and hit points regeneration of Draenei buildings.
 }
 
-STRING 8469
-{
-Error on loading savecode!
-}
-
-STRING 8471
-{
-Successfully loaded your savecode!
-}
-
-STRING 8472
-{
-Error on loading savecode!
-}
-
 STRING 8474
 // Abilities: A0G6 (Sunwell Resurrection), Hotkey (Hotkey - Normal)
 {
@@ -40177,35 +38884,10 @@ STRING 8477
 S
 }
 
-STRING 8478
-{
-Successfully loaded your savecode!
-}
-
-STRING 8479
-{
-Error on loading savecode!
-}
-
-STRING 8481
-{
-Successfully loaded your savecode!
-}
-
-STRING 8482
-{
-Error on loading savecode!
-}
-
 STRING 8483
 // Abilities: A0I5 (Spawn Eye Tentacle), Name (Name)
 {
 Spawn Eye Tentacle
-}
-
-STRING 8484
-{
-Successfully loaded your savecode!
 }
 
 STRING 8486
@@ -40244,71 +38926,6 @@ STRING 8491
 C
 }
 
-STRING 8492
-{
-Kill the Red Dragon.
-}
-
-STRING 8493
-{
-Bring the Red Dragon's heart to the Archmage of Nethergarde.
-}
-
-STRING 8494
-{
-Golem Factory
-}
-
-STRING 8495
-{
-The Engineers of Ironforge have discovered some very interesting blueprints in the city´s library: apparently there seems to be a long abandoned and forgotten Golem Factory somewhere under the city. This subject has drawn the Dwarf King´s attention since Golems would be an invaluable weapon against the increasing Undead threat. King Magni Bronzebeard requires brave adventurers to travel into the unexplored corridors deep under the city, and if the rumor is true, bring a Battle Golem to him as a proof of the factory´s existence!
-}
-
-STRING 8496
-{
-Purchase a Battle Golem from the forgotten Golem Factory.
-}
-
-STRING 8497
-{
-Bring the Battle Golem to King Magni Bronzebeard.
-}
-
-STRING 8498
-{
-Search for Muradin
-}
-
-STRING 8499
-{
-Although it may be a suicide mission, the High King of the Dwarves requests that you travel to Icecrown and find out what happened to Muradin Bronzebeard, the High King´s brother. Find the Dwarf and, should he still live, escort safely him back to Ironforge!
-}
-
-STRING 8500
-{
-Find Muradin.
-}
-
-STRING 8501
-{
-Return Muradin to Magni Bronzebeard.
-}
-
-STRING 8502
-{
-Crusade
-}
-
-STRING 8503
-{
-The time has come to take countermeasures against the increasing threat caused by the Scourge! To prevent another cataclysm like in Lordaeron, King Anduin Wrynn and the Order of the Silver Hand have called out a Crusade against the Undead. Heros throughout the land are called for to hunt down and destroy 5 Undead heros to avenge the death of legendary Sir Uther Lightbringer and the downfall of the Order of the Silver Hand in Lordaeron!
-}
-
-STRING 8504
-{
-Kill 5 Undead heros.
-}
-
 STRING 8505
 // Units: n0ML (Mercenary Camp Shadowlands), Name (Name)
 {
@@ -40333,11 +38950,6 @@ STRING 8508
 V
 }
 
-STRING 8509
-{
-Bring the trophy to King Anduin Wrynn.
-}
-
 STRING 8510
 // Units: n09T (Fire Revenant), Hotkey (Hotkey)
 {
@@ -40360,11 +38972,6 @@ STRING 8513
 // Abilities: A1EG (Holy Light), Hotkey (Hotkey - Normal)
 {
 T
-}
-
-STRING 8514
-{
-Archimonde
 }
 
 STRING 8515
@@ -40401,21 +39008,6 @@ STRING 8520
 // Units: n087 (Apprentice Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
-}
-
-STRING 8521
-{
-Successfully loaded your savecode!
-}
-
-STRING 8522
-{
-Error on loading savecode!
-}
-
-STRING 8525
-{
-Successfully loaded your savecode!
 }
 
 STRING 8526
@@ -40616,16 +39208,6 @@ STRING 8558
 The Jewelcrafter uses his gathered jewels to craft a Golden Crown.
 }
 
-STRING 8559
-{
-Archimonde has returned to this world to conquer it with the help of his Burning Legion. Travel to Outland, find and defeat him to protect Azeroth.
-}
-
-STRING 8560
-{
-Defeat Archimonde.
-}
-
 STRING 8561
 // Units: o0B6 (Kobold Shipyard), Hotkey (Hotkey)
 {
@@ -40642,21 +39224,6 @@ STRING 8563
 // Units: h09I (Fire Elemental), Name (Name)
 {
 Fire Elemental
-}
-
-STRING 8564
-{
-Error on loading savecode!
-}
-
-STRING 8568
-{
-Successfully loaded your savecode!
-}
-
-STRING 8569
-{
-Error on loading savecode!
 }
 
 STRING 8570
@@ -40789,11 +39356,6 @@ STRING 8605
 // Units: h09Q (Pikeman), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
-}
-
-STRING 8607
-{
-Successfully loaded your savecode!
 }
 
 STRING 8608
@@ -41162,35 +39724,10 @@ STRING 8673
 (Creep)
 }
 
-STRING 8676
-{
-Bandit Lord
-}
-
-STRING 8677
-{
-The cunning Bandit Lord, Menag, has been terrorizing the lands around Strahnbrad for months. He and his lackeys just made off with a ledger full of vital information regarding the estate of the local farmer, Gerard.
-}
-
 STRING 8678
 // Abilities: A0XM (Slot 8), Name (Name)
 {
 Slot 8
-}
-
-STRING 8679
-{
-Fief
-}
-
-STRING 8680
-{
-Siege of Dalaran
-}
-
-STRING 8681
-{
-Undead Waves 10/
 }
 
 STRING 8682
@@ -41227,16 +39764,6 @@ STRING 8687
 // Units: o04E (Dragonkin Shipyard), Hotkey (Hotkey)
 {
 S
-}
-
-STRING 8688
-{
-The village needs protection from the kingdom of Stormwind. Visit New Stormwind and get some equipment to arm some villagers. Bring the equipment to Gerard to receive your reward.
-}
-
-STRING 8689
-{
-Harvest
 }
 
 STRING 8690
@@ -41299,30 +39826,10 @@ STRING 8699
 (Neutral Hostile)
 }
 
-STRING 8700
-{
-Get some equipment in New Stormwind.
-}
-
-STRING 8701
-{
-Bring the equipment to Gerard.
-}
-
-STRING 8702
-{
-It is harvest time in the village. Harvest wheat, bring the it to the wind mill to get flour, deliver the flour to the tavern to get bread, sell the bread to Theramore and return the gold to Gerard to receive your reward.
-}
-
 STRING 8703
 // Upgrades: R089 (Animal War Training), Name (Name)
 {
 VIP or Hero Level 10
-}
-
-STRING 8704
-{
-The Plague
 }
 
 STRING 8705
@@ -41359,11 +39866,6 @@ STRING 8710
 // Units: o0C2 (Barrel), EditorSuffix (Name - Editor Suffix)
 {
 (Variation 2) (Creep)
-}
-
-STRING 8711
-{
-Harvest wheat.
 }
 
 STRING 8712
@@ -41436,11 +39938,6 @@ STRING 8728
 // Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 8730
-{
-The grain has been plagued by the Undead Scourge. Villagers are converted into Undead. You must get some spells from Dalaran to stop the Plague and fight the Undead attacking the village. Get your reward from Gerard after completing the tasks.
 }
 
 STRING 8747
@@ -41539,11 +40036,6 @@ STRING 8777
 Increases the amount of gold that Drillbots can carry by <R0I3,mod2>.
 }
 
-STRING 8786
-{
-Reconstruction
-}
-
 STRING 8787
 // Abilities: A04X (Spell Book), Ubertip (Tooltip - Normal - Extended)
 {
@@ -41578,11 +40070,6 @@ STRING 8792
 // Buffs/Effects: X000 (Hell Fire (Effect)), EditorSuffix (Editor Suffix)
 {
 (Medivh's Spell Book)
-}
-
-STRING 8793
-{
-Archimonde has fully destroyed Dalaran during the third war. Khadgar and the Kirin Tor have reconstructed the city flying in the sky. To fully reconstruct the city, they need more material from human allies. Travel to Jaina and get some material from Theramore. Return the material to Khadgar to get your reward.
 }
 
 STRING 8801
@@ -41627,21 +40114,6 @@ STRING 8807
 Vehicle which can auto repair mechanical units around it and cut down trees. Can be upgraded with abilities Berserk Tank and Cut Down Trees. |n|n|cffffcc00Attacks ground units.|r
 }
 
-STRING 8808
-{
-Fire Elemental
-}
-
-STRING 8809
-{
-Khadgar needs an Enraged Fire Elemental for experiments giving the Kirin Tor the ability to summon Fire Elementals. Get an Enraged Fire Elemental in Firelands and return it to Khadgar to receive your reward.
-}
-
-STRING 8810
-{
-Arcane Magic
-}
-
 STRING 8811
 // Units: o0B4 (Necromancer), Name (Name)
 {
@@ -41666,11 +40138,6 @@ STRING 8824
 Summon Necromancer
 }
 
-STRING 8825
-{
-Khadgar and the Kirin Tor need to create a magic shield around the city of Dalaran to protect it. Construct the power generator to enable the shield. Return the letter of the engineers to Khadgar to receive your reward.
-}
-
 STRING 8826
 // Abilities: A0D6 (Convert into Non-Ancient), Hotkey (Hotkey - Normal)
 {
@@ -41689,16 +40156,6 @@ STRING 8828
 Q
 }
 
-STRING 8829
-{
-Siege of Dalaran
-}
-
-STRING 8830
-{
-The city of Dalaran is attacked by enemy forces. Defend it against them. Get your reward from Khadgar for a successful defence.
-}
-
 STRING 8846
 // Items: I0UL (Cape), Description (Description)
 {
@@ -41709,11 +40166,6 @@ STRING 8873
 // Abilities: A04X (Spell Book), EditorSuffix (Editor Suffix)
 {
 (Hideout)
-}
-
-STRING 8874
-{
-Sea Trade
 }
 
 STRING 8910
@@ -41732,36 +40184,6 @@ STRING 8913
 // Units: u015 (Sapphiron), EditorSuffix (Name - Editor Suffix)
 {
  (undead - Necromancer)
-}
-
-STRING 8915
-{
-The kingdom of Kul Tiras is specialized in sea travel due to its location on an island. It has a big navy but needs to import certain resources which are not present on the island. Extend the sea trade routes by bringing a Trading Ship to different ports in a certain order: New Stormwind, Theramore, Teldrassil and Sunstrider Isle and returning it to Kul Tiras. Get your reward from Admiral Proudmoore's spirit.
-}
-
-STRING 8917
-{
-Treasure Hunting
-}
-
-STRING 8918
-{
-Admiral Proudmoore's spirit has received a treasure map from captured pirates. He wants you to dig up all the treasures marked on the map and return them to him to get your reward. Destroy the treasures to dig them up.
-}
-
-STRING 8919
-{
-Cultists
-}
-
-STRING 8920
-{
-There is a cult spreading in the kingdom of Kul Tiras which worships a powerful Kraken next to the coast. Admiral Proudmoore's spirit wants you to sacrifice those cult members to the Kraken which is what they want, too. KIll the Kraken after the sacrifices. Get your reward from Admiral Proudmoore's spirit.
-}
-
-STRING 8921
-{
-Sea Battle
 }
 
 STRING 8922
@@ -41842,37 +40264,6 @@ STRING 8956
 W
 }
 
-STRING 8984
-{
-The kingdom of Kul Tiras is attacked by Pirates. The coast must be defended. Help the Kul Tiras navy to defend their coast, destroy all Pirate ships and attack the pirate bay and kill their captain. Return the captain's skull to Admiral Proudmoore's Spirit to receive your reward.
-}
-
-STRING 8985
-{
-Druid Spell
-}
-
-STRING 8986
-{
-The City of Darnassus is flourishing as hoped. However, there seems to be a problem with the Night Elf housings around the new World Tree. They are somehow falling apart. Apparently this seems to be a side-effect of the World Tree´s growing. Tyrande needs a special Spell from the Druids of the Talon to enhance the structures and shield them from the World Tree´s damaging magic. She requires a Hero to travel to the Barrow Dens in Ashenvale, find the druids and recover the Spell for her. Although this is only a small running job, there will be a reward for the Hero´s efforts to help the Night Elves.
-}
-
-STRING 8987
-{
-The World Tree
-}
-
-STRING 8988
-{
-Ever since the destruction of the Demon Archimonde near the World Tree, its regeneration has somehow been strange. The Arch-Druid Furion suspects some kind of corruption of the magical waters the World Tree is feeding from...
-Since the dispelling of demonic magicks is the speciality of the Paladins of the Silver Hand, Furion needs their help. Someone must seek the head of their Order who is currently in Nethergarde Citadel in Azeroth and get a sample of blessed water from him. Pouring the blessed water into the Well of Eternity should dispel any remnants of demonic corruption in it.
-}
-
-STRING 8989
-{
-Moon Stones
-}
-
 STRING 9007
 // Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
 {
@@ -41913,16 +40304,6 @@ STRING 9023
 // Units: h09T (Fire Elemental), Name (Name)
 {
 Fire Elemental
-}
-
-STRING 9024
-{
-Bring the wheat to the wind mill.
-}
-
-STRING 9061
-{
-Bring Lor'themar's message to Sylvanas in Undercity.
 }
 
 STRING 9109
@@ -42147,11 +40528,6 @@ STRING 9214
 (Creep)
 }
 
-STRING 9216
-{
-Bring the flour to the tavern.
-}
-
 STRING 9217
 // Units: n0D9 (Troll Owl Rider), EditorSuffix (Name - Editor Suffix)
 {
@@ -42240,26 +40616,6 @@ STRING 9359
 // Items: I0RW (Skill), Tip (Tooltip - Basic)
 {
 Skill
-}
-
-STRING 9360
-{
-During an experiment with the newly discovered Moon Stones, there has been an accident. The effect of the Moon Stone somehow prolongued the Eclipse to an incredible length. Tyrande has tried many spells to cancel the eclipse but with no success. She believes that with the help of the Arch-Sorceress Jaina Proudmoore, she could dispel the eclipse and also enhance the moon stones so that such an accident does not occur again. The mission is simple: travel to Theramore, and let Jaina enhance the moon stone Tyrande gave you. Afterwards return to it to Tyrande and receive a small reward for  helping the Night Elves !
-}
-
-STRING 9361
-{
-Demon Blood
-}
-
-STRING 9362
-{
-After the Legion´s defeat on Kalimdor, the Night Elves seem to have overlooked something. There is still a defiled Fountain somewhere in Fellwood, probably the source of the Warsong Clan´s former corruption. To prevent other creatures to drink from it, Furion asks you to travel to the nearby Felwood Forest, find the Defiled Fountain and destroy it. But be on your guard, since there seem to be remnants of the Dark Legion´s strike force that the Night Elves have not yet eliminated!
-}
-
-STRING 9363
-{
-Durotar Law Code
 }
 
 STRING 9364
@@ -42586,86 +40942,6 @@ STRING 9651
 Necromancer Meat Wagon
 }
 
-STRING 9654
-{
-The Orcish nation of Durotar is prospering well. Under the guidance of Warchief Thrall, they have established a council of elders that is responsible for establishing order and laws among the hot-headed Orcs. Although the Night Elves and Humans already have written codes of law, this is something totally new for the young nation of Orcs. Thrall promised to keep the Night Elves informed about the progress of Durotar´s legislative acts. Since his former running pet, Rexxar, has moved to the wilds again, Thrall needs a new errand boy. Your Hero has to take the Code of Laws tome and take it to Tyrande on Teldrassil Isle. Afterwards you can return to Thrall and claim you payment for the job.
-}
-
-STRING 9656
-{
-Harpy Menace
-}
-
-STRING 9657
-{
-The Tauren have constantly been harassed by Harpies and Centaurs since they moved to Mulgore. Now a scout has discovered one of the Harpies´ Queens. Cairne believes that if she was destroyed, the Harpies would at last be silenced. He needs a strong Hero to travel to the nearby Stonetalon Mountains, find the Harpy Queen and dispose of her as she deserves. Return afterwards her heart to Cairne as a proof of the Mission success and claim your reward! (*ugh*)
-}
-
-STRING 9658
-{
-Arena Contest
-}
-
-STRING 9659
-{
-Rexxar and the Stonemaul Ogres declare their Arena officially as open ! For the first warrior to beat Level 9 of the Gauntlet Arena, Rexxar has announced a special prize, apart from the items that may be dropped in the Arena fights. Beat Level 9 of the Gauntlet and show Rexxar the Stonemaul Arena Master Belt. He will then reward your Hero with something special.
-}
-
-STRING 9660
-{
-Centaur Khans
-}
-
-STRING 9661
-{
-The Pandaren Brewmaster, Chem Stormstout, has recently arrived in Mulgore with interesting news from his travel in the south. There seems to be an increased movement of the centaurs. They apparently seem to have their seasonal fights for who is to be the new Supreme Centaur leader. The Tauren see their opportunity to strike a blow at the centaurs in order to lower their battle morale and cause confusion among them. Cairne and Chem will reward any Hero who kills all 7 Centaur Khans in the southern part of the Barrens.
-}
-
-STRING 9668
-{
-Farstriders
-}
-
-STRING 9669
-{
-The Blood Elves have to retake their former kingdom Quel'Thalas and restore the Sunwell. Due to their magic addiction they are heavily weakened and need the help of the unaffected rangers of the Farstriders to defeat the Scourge from Quel'Thalas. Hire a ranger from the Mercenary Camp and return her to Sunstrider Isle to get your reward.
-}
-
-STRING 9670
-{
-Hire a Ranger at the Mercenary Camp in Sunwell Grove.
-}
-
-STRING 9672
-{
-Return the Ranger to Lor'Themar Theron.
-}
-
-STRING 9673
-{
-Traitor
-}
-
-STRING 9674
-{
-Prince Kael has betrayed the Blood Elf people. He followed his addiction to magic and became corrupted by Demon powers. Together with his new master Illidan and the Naga he his now residing in Outland but has plans to reclaim the Blood Elf kingdom. Lor'themar wants you to capture him and bring him before trial before he can endanger his people.
-}
-
-STRING 9675
-{
-Capture Kael in Outland.
-}
-
-STRING 9676
-{
-Return Kael to Lor'Themar Theron.
-}
-
-STRING 9677
-{
-Forsaken
-}
-
 STRING 9678
 // Abilities: A0YZ (Cancel), Hotkey (Hotkey - Normal)
 {
@@ -42696,11 +40972,6 @@ STRING 9744
 N
 }
 
-STRING 9745
-{
-We need more allies the make the Blood Elf army strong enough for defeating the Scourge in our former kingdom. Sylvanas Windrunner is ready to help the Blood Elves with her Forsaken troops to defeat the common enemy if we meet her and kill enemy undead creeps for her.
-}
-
 STRING 9746
 // Abilities: A0Y9 (Slot 9), Name (Name)
 {
@@ -42711,11 +40982,6 @@ STRING 9747
 // Abilities: A08Y (Random Class), EditorSuffix (Editor Suffix)
 {
 (Skills)
-}
-
-STRING 9748
-{
-Quel'Thalas
 }
 
 STRING 9749
@@ -42892,16 +41158,6 @@ STRING 9973
 (Neutral Hostile)
 }
 
-STRING 9974
-{
-It is time to reclaim the kingdom of Quel'Thalas and to heal the corrupted Sunwell to claim the former immortality of the Blood Elves. The prophet Velen prepared an essence of the Naaru to heal the Sunwell. Get it and return it to Lor'themar. The Blood Elves army is ready to attack the Scourge. Take it to reconquer Quel'Thalas and heal the Sunwell.
-}
-
-STRING 9975
-{
-Tomb of Sargeras
-}
-
 STRING 9976
 // Abilities: A0Y9 (Slot 9), Ubertip (Tooltip - Normal - Extended)
 {
@@ -43058,16 +41314,6 @@ STRING 10061
 Allows transforming into different Druid forms. |n|n|cffffcc00Adds new forms and increases the bonus stats with every level.|r
 }
 
-STRING 10062
-{
-After having returned from Outland, Illidan, Kael and Vashj have devised a new plan to strike at the Lich King. However, Lord Illidan needs a special Artifact which he can only get from his Master, Kil´Jaeden himself. He is currently somewhere in the Tomb of Sargeras, for reasons unknown. Your hero must travel to the Tomb of Sargeras near the Maelstrom, find Kil´Jaeden, get the Artifact from him and return it to Illidan. Kil´Jaeden may be somewhat be aroused by the lost battle at Icecrown Glacier, so watch your steps carefully.
-}
-
-STRING 10063
-{
-Fight Fire with Fire
-}
-
 STRING 10064
 // Abilities: A17F (Summon Bear), Name (Name)
 {
@@ -43078,11 +41324,6 @@ STRING 10066
 // Abilities: A0YC (Slot 11), Name (Name)
 {
 Slot 11
-}
-
-STRING 10067
-{
-Lord Illidan is getting tired of being chased by the Night Elf Warden Maiev Shadowsong. Before the next step to strike at the Lich King, Illidan wants the Warden matter solved first. According to spy reports, Maiev and her group of Huntresses have currently set up a base camp near the Naga Temple Ruins, giving you the chance to conduct a surprise attack! However, Illidan wants Maiev alive. You will have to use a special magical scroll Kael has made to prevent Maiev from using her teleporting skills and capture her. The quest is to find Maiev and use the Arcane Scroll near her in order to activate the spell. Afterwards, return Maiev to Illidan and claim your reward!
 }
 
 STRING 10068
@@ -43127,11 +41368,6 @@ STRING 10074
 The Witch Doctor uses his knowledge to create Peace Wards.
 }
 
-STRING 10075
-{
-Sapphiron
-}
-
 STRING 10076
 // Units: e019 (Blood Elf Shipyard), Hotkey (Hotkey)
 {
@@ -43174,25 +41410,10 @@ STRING 10083
 The Loreamster uses his knowledge to create a Arcane Scroll.
 }
 
-STRING 10084
-{
-The time to strike at the Lich King is coming near. But before, a final step is needed. There is a mighty Frost Wyrm called Sapphiron who watches every movement in and out of Icecrown. Lord Illidan requires you to destroy it in order to get to the Icecrown Glacier undetected! The Dragon is however protected by a spell that prevents him from being harmed in any way. Lady Vashj has created a special spell that will dispel the protection of the Frost Wyrm and make it vulnerable. The quest is to travel to Icecrown, find Sapphiron´s Lair, use the magic scroll near the Dragon and after the invulnerability is dispelled, kill it. Afterwards return the creature´s head to Lord Illidan. This time Sapphiron stays dead!
-}
-
 STRING 10085
 // Units: h0AT (Shipyard), Hotkey (Hotkey)
 {
 S
-}
-
-STRING 10086
-{
-Sell the bread to Theramore.
-}
-
-STRING 10087
-{
-Stormrage
 }
 
 STRING 10088
@@ -43201,25 +41422,10 @@ STRING 10088
 VIP or Hero Level 10
 }
 
-STRING 10089
-{
-It is time to strike at the Lich King himself! Illidan has a score to settle with Arthas. However, the subject of this campaign is not to destroy the Lich King himself since his powers are still far too great at the moment but his temporary death will be enough to accomplish the actual quest: the Lich King created a powerful device that would allow him to increase his evil sorceries to a tremendous extent. Fortunately he has not yet used it. This must be prevented at all costs! Recently Kil´Jaeden has given Illidan a special ring that will prevent Frostmourne´s powers from permanently destroying Illidan. However, in order to destroy the Lich King´s artifact, Illidan needs to enhance his double-bladed weapon first with sacred waters from a certain magical well. Take his Blade to the Sunwell in Silvermoon, and after they are enhanced by the magic waters of the Sunwell, return the blade to Illidan. Afterwards guide Illidan himself to the Frozen Throne and conduct a surprise attack on the Dark Knight!
-}
-
 STRING 10090
 // Abilities: A0PX (Harvest), Name (Name)
 {
 Harvest
-}
-
-STRING 10091
-{
-Return the gold to Gerard.
-}
-
-STRING 10092
-{
-Dark Portal
 }
 
 STRING 10093
@@ -43244,26 +41450,6 @@ STRING 10100
 // Units: H0AJ (Paladin), Ubertip (Tooltip - Extended)
 {
 Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Holy Light, Divine Shield, Devotion Aura and Resurrection. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction. Restricted to account Barade#2569.|r
-}
-
-STRING 10101
-{
-The Orcish warriors are the fiercest warriors known and they would be a valuable addition to the Forsaken Army. The Dark Lady Sylvanas has devised a plan to enslave the unsuspecting Orcs and turn them into the undead. To realize this idea, it will take several steps. At first, Sylvanas needs the Life essence of a Nether Drake. Your Hero needs to travel to Nethergarde Citadel and summon a Nether Drake Hatchling through the Dark Portal there. Afterwards return the creature to Sylvanas in the Undercity and claim your reward!
-}
-
-STRING 10102
-{
-Stormreaver Hermit
-}
-
-STRING 10103
-{
-After having captured the Nether Drake, the next step is to get a corpse probe of a dead orc. In Durotar, there is a Stormreaver Hermit who makes forbidden experiments with Orcish corpses. Sylvanas wants your Hero tage the bag of Gold, travel to Durotar, find the Warlock and buy a corpse probe from him. Afterwards return with the cadaver to the Undercity.
-}
-
-STRING 10104
-{
-The Silver Hand
 }
 
 STRING 10105
@@ -43398,22 +41584,6 @@ STRING 10126
 Payment from Theramore for the bread of the village which must be returned to Gerard.
 }
 
-STRING 10127
-{
-After having added the Orcs as part of the Forsaken, Sylvanas wants revenge on the Paladins of the Silver Hand who constantly hunt the Undead and cause the most dangerous threat for the Forsaken at the moment. There will be a bounty for the Hero who first kills 5 Paladins of the Silver Hand. However facing one of them is very dangerous, especially for the undead. Prepare yourself well !
-Hint: no Human genocide is allowed !
-}
-
-STRING 10128
-{
-Legendary Items
-}
-
-STRING 10129
-{
-Now it is time to craft some powerful items to protect the base of the Forsaken in Azeroth. Slyvanas knows how to craft items but needs some references to create really powerful items. You must kill at least two Bosses and bring their legendary artifacts to Sylvanas as references, so she can create powerful items and protect her city. Note that there is a limited number of bosses in the map and other players might pick up legendary artifacts as well.
-}
-
 STRING 10130
 // Abilities: A17O (Item Unlimited Bag of Food), Name (Name)
 {
@@ -43504,31 +41674,6 @@ STRING 10147
 Amphibious
 }
 
-STRING 10148
-{
-Demigod´s Remnants
-}
-
-STRING 10149
-{
-The Faceless Ones of Azjul-Nerub have drawn the Lich King´ interest in them. He wants them as part of the scourge, but he needs more magic power in order to control them. Anub´Arak has received word from Kel´Thuzad that the Lich King´s power could be increased to that extent with a special ritual. The Lich will however need some items first to unravel the spell. The ancient Night Elves´ Demigod, Cenarius, lies buried somewhere in Ashenvale Forest. First, your Hero must travel to Ashenvale and find a corpse probe of the dead creature. Afterwards take it to the Sunwell Grove in the Silvermoon Ruins where Kel´Thuzad will await your arrival.
-}
-
-STRING 10150
-{
-Demigod´s Horn
-}
-
-STRING 10151
-{
-The next step to unravel Kel´Thzad´s spell requires the ancient Artifact known as the Horn of Cenarius. Fortunately as it is, the Horn seems to be guarded only by a few creatures and is vulnerable to theft. But in order to remove it from the pedestal that magically holds it, you need a special totem that Kel´Thuzad has created. The mission is simple: Sneak with the Lich´s relic to the Horn in Ashenvale Forest, destroy the Spirits who guard the Horn and afterwards return the Horn to Kel´Thuzad.
-}
-
-STRING 10152
-{
-Lich King´s Order
-}
-
 STRING 10153
 // Units: E017 (Vile Duke of the Jadefire), Propernames (Proper Names)
 {
@@ -43545,21 +41690,6 @@ STRING 10155
 // Units: E017 (Vile Duke of the Jadefire), Name (Name)
 {
 Vile Duke of the Jadefire
-}
-
-STRING 10156
-{
-After having enabled the Lich King to control the the mysterious Faceless Ones, the time has come to unravel the Scourge´s Wrath. The Quest is as hard as easy it is to describe it: you are to destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple). Hiring Faceless Ones in Draktharon Keep (Anub´Arak) might be clever in order to accomplish this difficult task. After you complete your Quest, return to Arthas and claim your reward !
-}
-
-STRING 10157
-{
-The Burning Legion
-}
-
-STRING 10158
-{
-The Lich King will now have his revenge on his original creator Kil'jaeden who is still active in the Outland area. The Lich King already betrayed his former master and creator but now it is time to act and to fight the Burning Legion. Use the help of the Draenei to attack Kil'jaeden and steal his Orb and bring it back to the Lich King. Note that you do not have to kill Kil'jaeden since he is pretty strong.
 }
 
 STRING 10160
@@ -43602,11 +41732,6 @@ STRING 10166
 // Units: N0GH (Sea Giant), Hotkey (Hotkey)
 {
 G
-}
-
-STRING 10167
-{
-Akama's Message
 }
 
 STRING 10168
@@ -43787,11 +41912,6 @@ STRING 10197
 // Units: h0MF (House), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
-}
-
-STRING 10198
-{
-Akama wants to send a message to Illidan and ask him for help in the fight against Maghteridon's Demons. Bring the message to Illidan.
 }
 
 STRING 10199
@@ -44020,11 +42140,6 @@ STRING 10236
 // Units: h0RD (Castle), EditorSuffix (Name - Editor Suffix)
 {
 (Stormwind)
-}
-
-STRING 10237
-{
-An unlikely Alliance
 }
 
 STRING 10238
@@ -44309,26 +42424,6 @@ STRING 10284
 (Dragonkin)
 }
 
-STRING 10285
-{
-Get some spells from Dalaran.
-}
-
-STRING 10286
-{
-Fight the Undead attacking the village.
-}
-
-STRING 10287
-{
-There is still some of the Orcs in the Outland regions. They suffer the same as the Draenei from the Demon invasion. Visit their leader and ask them for help. Return their answer back to Illidan.
-}
-
-STRING 10288
-{
-Magtheridon's Defeat
-}
-
 STRING 10289
 // Items: I17R (Empty Vial), Ubertip (Tooltip - Extended)
 {
@@ -44341,20 +42436,10 @@ STRING 10290
 A special vial adept at containing magical healing waters.
 }
 
-STRING 10291
-{
-Illidan needs to defeat Magtheridon in a final strike. He constructed a powerful orb which will help you to fight the powerful demon and to defeat him once and for all. Take the orb and defeat Magtheridon with it. Take his heart and bring it to Illidan.
-}
-
 STRING 10292
 // Items: I0Q1 (Goblin Tool Box), Hotkey (Hotkey)
 {
 X
-}
-
-STRING 10293
-{
-Bring the Zombie Heads to Gerard to receive your reward.
 }
 
 STRING 10294
@@ -44405,20 +42490,10 @@ STRING 10301
 (NPC)
 }
 
-STRING 10302
-{
-Archimonde's Return
-}
-
 STRING 10303
 // Units: H02N (Lord), Name (Name)
 {
 Lord
-}
-
-STRING 10304
-{
-Demons are trying to summon Archimonde through a powerful Demon Portal in Outland. This has to be prevented. Travel to the Demon Portal and destroy it. Return to Illidan to get your reward.
 }
 
 STRING 10305
@@ -44427,25 +42502,10 @@ STRING 10305
 |cffff8c00Artifact|r|nSummons <AIsh,DataB1> Workers to do your bidding. Also grants the Hero and friendly nearby units increased attack rate and movement speed.|n|cffffcc00History|r|n|cffffdeadNames of generations of Nation Leaders are carved into this staff. The wielder can call upon them for wisdom and guidance in times of peace.|r
 }
 
-STRING 10306
-{
-The New Citadel
-}
-
-STRING 10307
-{
-Socrethar wants you to get information about the progress of the new Demon citadel in Outland as fast as possible. He gave you some instructions for the Commander of the Citadel. Visit the citadel and talk to the Commander of the Citadel who is in charge and give him the instructions. Deliver the message from the Commander back to Socrethar.
-}
-
 STRING 10308
 // Units: n08J (Terdrassil), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
-}
-
-STRING 10309
-{
-Draenei Deserters
 }
 
 STRING 10310
@@ -44496,11 +42556,6 @@ STRING 10317
 The Sorcerer uses his knowledge to create a Wand of Telekinesis.
 }
 
-STRING 10318
-{
-Lady Hederine needs information about planned attacks from the Draenei. Hence, she gives you spell to convert Draeneis which will give her the information she needs. Convert 5 Draenei and bring them to her. Return the spell to her to receive your reward.
-}
-
 STRING 10319
 // Units: o016 (Draenei Shipyard), Hotkey (Hotkey)
 {
@@ -44519,31 +42574,6 @@ STRING 10321
 W
 }
 
-STRING 10322
-{
-Akama
-}
-
-STRING 10324
-{
-Lady Hederine needs the Akama leader to be gone before the attack starts, so the Draenei forces will be weaker and the defense will be successful. Find the Akama, kill him and bring her his heart as proof.
-}
-
-STRING 10325
-{
-Citadel Defense
-}
-
-STRING 10326
-{
-A Draenei force is ready to attack The New Citadel. We must defend it at any cost to increase the presence of Demons in Outland and strengthen their position. Travel the The New Citadel and help defending it against Draenei forces.
-}
-
-STRING 10327
-{
-A New Recipe
-}
-
 STRING 10328
 // Units: h04G (Outpost), Name (Name)
 {
@@ -44556,56 +42586,16 @@ STRING 10329
 Build Outpost
 }
 
-STRING 10330
-{
-Chen wants to try out a new recipe for his beer. He needs some ingredients from all over the World Tree next to Malfurion. Get the ingredients and return them to him to get your reward.
-}
-
-STRING 10331
-{
-Goblin Invention
-}
-
-STRING 10332
-{
-Chen needs a special invention from the Goblins for constructing his big brewery. Travel to Kezan, buy a Goblin Blaster and return it to Chen.
-}
-
 STRING 10333
 // Units: h0PB (Inn), Name (Name)
 {
 Inn
 }
 
-STRING 10334
-{
-Mur'gul Revenge
-}
-
 STRING 10335
 // Units: h0PB (Inn), Tip (Tooltip - Basic)
 {
 Build Inn
-}
-
-STRING 10336
-{
-The Mur'gul are back sending a herald with some conditions for the Pandaren to retreat from this land. Although peaceful we have to fight them back to protect our land. Kill the herald and bring the conditions to Chen to get your reward.
-}
-
-STRING 10337
-{
-World Peace
-}
-
-STRING 10338
-{
-The Pandaren want to have world peace. No more fighting in Azeroth. No more fighting in the world. They are fed up with violence. To secure the peace Chen needs the source of violence to be destroyed: The Goblin Bankers. They cause most of the issues due to their financial tricks making people of Azeroth really unhappy. Travel to Kezan and kill the director of the Goblin Bank. Return to Chen with his bag of gold. Chen will use the gold to buy more food rescuing the starving Pandaren and craft a new item you can use to spread the peace in Azeroth.
-}
-
-STRING 10339
-{
-Invasion of Argus
 }
 
 STRING 10340
@@ -44620,20 +42610,10 @@ STRING 10341
 Build Barn
 }
 
-STRING 10342
-{
-Velen the Prophet has started the invasion of Argus, the former planet of the Draenei civilization which is now corrupted by the Burning Legion. The planet is threatening Azeroth. Hence, the demonic leaders must be defeated. Velen needs the help of Illidan. Get a powerful artifact from Illidan in Outland and return it to Velen.
-}
-
 STRING 10343
 // Units: n0O5 (Animal Pen), Name (Name)
 {
 Animal Pen
-}
-
-STRING 10344
-{
-Army of the Light
 }
 
 STRING 10345
@@ -44646,11 +42626,6 @@ STRING 10346
 // Units: h0M8 (Wind Mill), Name (Name)
 {
 Wind Mill
-}
-
-STRING 10347
-{
-Velen the Prophet needs the help of the Naaru and the Army of Light to defeat the Demons on Argus. Visit the Naaru Xe'ra at the crashing site of the dimensional ship Xenedar, hire a Lightforged Peacekeeper and return him to Velen to get your reward.
 }
 
 STRING 10348
@@ -44671,46 +42646,16 @@ STRING 10350
 Build Granary
 }
 
-STRING 10351
-{
-Exodar
-}
-
 STRING 10352
 // Units: n0GU (Fruit Stand), Name (Name)
 {
 Fruit Stand
 }
 
-STRING 10353
-{
-Velen the Prophet needs more troops from Exodar in Azeroth to fight the Burning Legion. Travel to Exodar at the Azuremyst Isle in Azeroth, hire 5 Rangari and return them to Velen to get your reward.
-}
-
 STRING 10354
 // Units: n0GU (Fruit Stand), Tip (Tooltip - Basic)
 {
 Build Fruit Stand
-}
-
-STRING 10355
-{
-Demon Hunt
-}
-
-STRING 10356
-{
-Velen the Prophet orders the attack on Argus with his whole army. Kill as many enemy Demon heroes as possible to defeat the Burning Legion once again. After killing 5 enemy Demon heroes return to Velen and receive your reward.
-}
-
-STRING 10357
-{
-Fishing
-}
-
-STRING 10358
-{
-Elder Ko'nani from the Tuskarr needs better fishing equipment to make his tribe survive in the cold harsh environment of the north. Travel to Theramore and get some goods to craft fishing equipment. Return the goods to Elder Ko'nani to get your reward.
 }
 
 STRING 10359
@@ -44729,16 +42674,6 @@ STRING 10361
 // Abilities: A06Y (Robo-Goblin), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
-}
-
-STRING 10365
-{
-Whaling
-}
-
-STRING 10366
-{
-Elder Ko'nani from the Tuskarr wants you to hunt down the Whales of the sea. Hunt 6 Whales and return the Whale Fat to Elder Ko'nani to get your reward.
 }
 
 STRING 10367
@@ -44801,75 +42736,10 @@ STRING 10376
 S
 }
 
-STRING 10377
-{
-Funeral
-}
-
-STRING 10378
-{
-Elder Ko'nani from the Tuskarr wants you to celebrate his father's funeral in the tradional Tuskarr way. Take the boat with the body of his father and sink it in the Maelstrom. Return the spirit to Ko'nani.
-}
-
-STRING 10379
-{
-Ancestors
-}
-
-STRING 10380
-{
-Elder Ko'nani from the Tuskarr wants you travel to the Tuskarr Statue created for their ancestors and summon a Tuskarr Chieftain from the past to get his advice. Travel to the statue, hire a Tuskarr Chieftain and return it to to Ko'nani to get your reward.
-}
-
-STRING 10381
-{
-Blue Prints
-}
-
-STRING 10382
-{
-Monte Glazlowe has promised Thrall to support the horde with the Goblin Engineering skills. The Goblins have drafted some plans for building Orgrimmar. Bring these plans to Thrall and return the answer from Thrall to Monte Glazlowe to get your reward.
-}
-
-STRING 10383
-{
-Azeroth Grand Prix
-}
-
-STRING 10384
-{
-Monte Glazlowe organizes the famous Azeroth Grand Prix. Win the race for the Goblins and get your reward. You can win the race with your first hero by reaching all the checkpoints in time as the first player.
-}
-
-STRING 10385
-{
-Investements
-}
-
 STRING 10386
 // Units: h011 (Draenei Housing), Ubertip (Tooltip - Extended)
 {
 Provides an additional source of gold income.|n|n|cffffcc00Limited to 4.|r
-}
-
-STRING 10387
-{
-Monte Glazlowe needs you to invest some gold into different stocks of Azeroth. He needs to get some gold from the mines of Ironforge to invest since the Goblin's gold is already used for different things. Travel to the mines of Ironforge, get the gold treasure and return it to Monte Glazlowe to get your reward.
-}
-
-STRING 10388
-{
-Transmutation
-}
-
-STRING 10389
-{
-Monte Glazlowe wants to build an Alchemist Laboratory in which he can transform units into different races. Build an Alchemist Laboratory using a Female Citizen and transform a unit with at least food cost of 4 and return to Monte Glazlowe to get your reward.
-}
-
-STRING 10390
-{
-Old Gods
 }
 
 STRING 10391
@@ -44990,11 +42860,6 @@ STRING 10414
 // Items: I17Y (Skin Demon Hunter Morphed), Ubertip (Tooltip - Extended)
 {
 Skin of Demon Hunter Morphed.|n|n|cffffcc00Restricted to account Barade#2569.|r
-}
-
-STRING 10417
-{
-Jaina got the information that the titan Sargeras imprisioned the old gods of Azeroth in a prison and killed the most powerful one. She needs the heart the most powerful old god to defeat the titan Sargeras. You must travel to Outland and fight all of the old of the gods to get the heart and return it to Jaina.
 }
 
 STRING 10418
@@ -45315,20 +43180,10 @@ STRING 10483
 The Sculptor uses his knowledge to craft a Tiny Divine Golem.
 }
 
-STRING 10484
-{
-Invasion
-}
-
 STRING 10485
 // Items: fgrg (Stone Token), Hotkey (Hotkey)
 {
 S
-}
-
-STRING 10486
-{
-Sargeras is planning another invasion from the Burning Legion now as revenge for killing his imprisoned Old Gods. The whole planet will be invaded by his Demon creatures. Close all of his portals on Azeroth to stop the invasion!
 }
 
 STRING 10487
@@ -45371,11 +43226,6 @@ STRING 10493
 // Abilities: A0KJ (Summon Old Gods), Ubertip (Tooltip - Normal - Extended)
 {
 Summons 3 Old Gods.
-}
-
-STRING 10494
-{
-Elemental Lords
 }
 
 STRING 10495
@@ -45468,25 +43318,10 @@ STRING 10512
 (Kul Tiras)
 }
 
-STRING 10513
-{
-The Elemental Lords are back from the Elemental Plane for revenge on Azeroth. Defeat them and return to Jaina.
-}
-
 STRING 10514
 // Abilities: A08D (Item Dark Portal), EditorSuffix (Editor Suffix)
 {
 (VIP Flag)
-}
-
-STRING 10515
-{
-Wild Gods
-}
-
-STRING 10516
-{
-Capture the remaining Wild Gods in Azeroth and bring their souls to Jaina.
 }
 
 STRING 10517
@@ -45501,30 +43336,10 @@ STRING 10518
 Hide in Trees
 }
 
-STRING 10519
-{
-|cffffcc00Quest update:|r Treasure Hunting
-}
-
-STRING 10520
-{
-Discord: https://discord.gg/eM34z36
-}
-
-STRING 10521
-{
-Development: https://github.com/tdauth/wowr
-}
-
 STRING 10522
 // Abilities: S007 (Cargo Hold), EditorSuffix (Editor Suffix)
 {
 (VIP Car)
-}
-
-STRING 10523
-{
-Bring the Code of Laws tome to Tyrande on Teldrassil Isle.
 }
 
 STRING 10524
@@ -45617,70 +43432,10 @@ STRING 10539
 Hire Neutral Citizen (male)
 }
 
-STRING 10541
-{
-Return to Thrall for your payment.
-}
-
-STRING 10542
-{
-Kill the Harpy Queen.
-}
-
-STRING 10543
-{
-Return her heart to Cairne.
-}
-
-STRING 10546
-{
-Beat Level 9 of the Gauntlet.
-}
-
-STRING 10548
-{
-Support
-}
-
-STRING 10549
-{
-Support the creator of the map. VIPs are allowed to enter the VIP room and the secret chamber from the beginning. It provides them some bonuses in the game which should not be too unfair but still give them a bit of advantage or at least a visible status in the game. VIPs are usually players who helped to improve the map over time.
-}
-
-STRING 10550
-{
-Bring the instructions to the Commander of the Citadel.
-}
-
-STRING 10551
-{
-Deliver the message from the Commander back to Socrethar.
-}
-
-STRING 10552
-{
-Show Rexxar the Stonemaul Arena Master Belt.
-}
-
 STRING 10553
 // Abilities: A1QE (Hide in Trees), Ubertip (Tooltip - Normal - Extended)
 {
 Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.
-}
-
-STRING 10557
-{
-Kill all 7 Centaur Khans.
-}
-
-STRING 10558
-{
-|cffffcc00Quest update:|r Cultists
-}
-
-STRING 10560
-{
-|cffffcc00Quest update:|r Sea Battle
 }
 
 STRING 10561
@@ -45815,11 +43570,6 @@ STRING 10583
 T
 }
 
-STRING 10584
-{
-Return to Cairne to receive your reward.
-}
-
 STRING 10585
 // Items: I18D (Captain's Head (Trophy)), Name (Name)
 {
@@ -45862,16 +43612,6 @@ STRING 10591
 |cff8b00ffUnique|r|nThis hat allows calling the winds of the sea.
 }
 
-STRING 10592
-{
-Our Tauren nation is threatened by the Harpies. You have to kill their queen to eliminate this threat.
-}
-
-STRING 10593
-{
-Bring me her heart and I will reward you.
-}
-
 STRING 10594
 // Units: H01A (Dragon Queen), Name (Name)
 {
@@ -45882,21 +43622,6 @@ STRING 10596
 // Units: n0O5 (Animal Pen), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral) (Mine)
-}
-
-STRING 10597
-{
-Recreated player selection Soul.
-}
-
-STRING 10598
-{
-Convert 5 Draenei with the Charm item by Lady Hederine.
-}
-
-STRING 10599
-{
-Return to Lady Hederine to get your reward.
 }
 
 STRING 10600
@@ -46007,16 +43732,6 @@ STRING 10617
 Magical Filler
 }
 
-STRING 10618
-{
-Kill the Draenei Akama.
-}
-
-STRING 10619
-{
-Bring his heart to Lady Hederine to get your reward.
-}
-
 STRING 10620
 // Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
 {
@@ -46057,11 +43772,6 @@ STRING 10627
 // Units: h0AO (Buy Property Wyrmrest Temple), Ubertip (Tooltip - Extended)
 {
 Purchases the property. |n|n|cffffcc00Race: Dragonkin.|r|n|cffffcc00Resource: Gold.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|nRestricted to account Barade#2569.|r
-}
-
-STRING 10640
-{
-Travel to the Commander of the New Citadel.
 }
 
 STRING 10644
@@ -46134,21 +43844,6 @@ STRING 10655
 // Units: h0WL (Ironclad Submarine), Hotkey (Hotkey)
 {
 I
-}
-
-STRING 10657
-{
-Defend the New Citadel against the Draenei.
-}
-
-STRING 10658
-{
-Return the Draenei Banner to Lady Hederine to get your reward.
-}
-
-STRING 10659
-{
-Find a corpse probe of the dead Cenarius in Ashenvale.
 }
 
 STRING 10661
@@ -46253,66 +43948,16 @@ STRING 10677
 Train Log Launcher
 }
 
-STRING 10678
-{
-Player Housings
-}
-
-STRING 10679
-{
-Players can purchase their own housings if it has been unlocked for their account. Your own housing is a location for your units to be safe and invite other players. Player housings allow customization.
-}
-
-STRING 10680
-{
-Bring the probe to Kel'Thuzad in Sunwell Grove.
-}
-
-STRING 10681
-{
-Find Cenarius horn in Ashenvale.
-}
-
 STRING 10682
 // Items: I0K6 (Tiny Gnome Turret), Name (Name)
 {
 Tiny Gnome Turret
 }
 
-STRING 10689
-{
-Bring the horn to Kel'Thuzad in Sunwell Grove.
-}
-
-STRING 10690
-{
-Destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple).
-}
-
 STRING 10691
 // Items: I0K6 (Tiny Gnome Turret), Tip (Tooltip - Basic)
 {
 Purchase Tiny Gnome Turret
-}
-
-STRING 10692
-{
-Return to Arthas to claim your reward.
-}
-
-STRING 10693
-{
-Travel to the Draenei Mercenary Camp in Outland.
-}
-
-STRING 10694
-{
-Hire a Draenei of every type.
-}
-
-STRING 10695
-{
-Get Kil'jaeden's Chaos Stone and return it to Arthas.
 }
 
 STRING 10696
@@ -47629,16 +45274,6 @@ STRING 11026
 ratc
 }
 
-STRING 11028
-{
-Skins
-}
-
-STRING 11029
-{
-Skins determine the visuals and sounds of units and buildings. They can be customized for certain units and buildings. The unit or building still is the same after changing its skin. Skins can be restricted to certain accounts or VIPs. Skin buildings allow changing skins.
-}
-
 STRING 11030
 // Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
 {
@@ -48425,11 +46060,6 @@ STRING 11351
 Enters the common housing which is a neutral safe zone for all players with housings.
 }
 
-STRING 11352
-{
-Archmage of Nethergarde
-}
-
 STRING 11353
 // Items: I03U (Stone from the Commander of the Citadel), Description (Description)
 {
@@ -48518,11 +46148,6 @@ STRING 11371
 // Units: o0C4 (Leave Common Housing), Ubertip (Tooltip - Extended)
 {
 Leaves the common housing which is a neutral safe zone for all players with housings.
-}
-
-STRING 11372
-{
-Welcome stranger! An evil Red Dragon has appeared near this city which attacked our defenses. We need your help to defeat the beast. Certainly, we will reward you for your services.
 }
 
 STRING 11373
@@ -48897,11 +46522,6 @@ STRING 11456
 Build Resurrection Stone
 }
 
-STRING 11458
-{
-Disables housing and tower limits.
-}
-
 STRING 11460
 // Items: I02R (Unique - Skull of Gul'dan), Ubertip (Tooltip - Extended)
 {
@@ -48998,16 +46618,6 @@ STRING 11477
 Water based hero, exceptional at hiding and striking from the water. Can learn Torpedoes, Place Water Mine, Drop Water Bomb and Launch Missiles. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 11478
-{
-Computer AI: |cffff0000RESPAWN|r
-}
-
-STRING 11479
-{
-The AI respawn has been voted to |cffff0000RESPAWN|r.
-}
-
 STRING 11480
 // Units: N0HU (Magnataur Destroyer), Ubertip (Tooltip - Extended)
 {
@@ -49030,16 +46640,6 @@ STRING 11483
 // Units: N0LD (Brood Mother), Ubertip (Tooltip - Extended)
 {
 Warrior Hero, adept at summoning beasts into battle. Can learn Mass Invisibility, Summon Spider Egg, Envenomed Weapons, and Mass Ensnare. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 11486
-{
-Computer AI: |cffff0000NO RESPAWN|r
-}
-
-STRING 11494
-{
-The AI respawn has been voted to |cffff0000NO RESPAWN|r.
 }
 
 STRING 11495
@@ -49114,11 +46714,6 @@ STRING 11537
 Revive Xal'atath
 }
 
-STRING 11541
-{
-Save Codes: |cffff0000ENABLED|r
-}
-
 STRING 11545
 // Items: I0W5 (Miner), Ubertip (Tooltip - Extended)
 {
@@ -49177,11 +46772,6 @@ STRING 11572
 // Units: o0A2 (Forge), Tip (Tooltip - Basic)
 {
 Build Forge
-}
-
-STRING 11573
-{
-Save Codes: |cffff0000DISABLED|r
 }
 
 STRING 11574
@@ -49266,67 +46856,6 @@ STRING 11607
 // Units: N0M3 (C'Thrax), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
-}
-
-STRING 11609
-{
-Victory: |cffff0000ENABLED|r
-}
-
-STRING 11610
-{
-The victory has been voted to |cffff0000ENABLED|r.
-}
-
-STRING 11613
-{
-Victory: |cffff0000DISABLED|r
-}
-
-STRING 11614
-{
-The victory has been voted to |cffff0000DISABLED|r.
-}
-
-STRING 11616
-{
-Here is your savecode:
-}
-
-STRING 11617
-{
-It only works for the same game type, mode and single/multiplayer.
-}
-
-STRING 11618
-{
-It is stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
-}
-
-STRING 11619
-{
-The text file contains a "-load XXX" chat command to load your savecode again.
-}
-
-STRING 11620
-{
-A screenshot might also help to backup the savecode.
-Use "-clear" to hide this message. Use "-savec" to generate a savecode without this long message.
-}
-
-STRING 11621
-{
-Other files are generated as well for items, units, buildings etc. Quest rewards and legendary items are not saved!
-}
-
-STRING 11622
-{
-Generated savecodes.
-}
-
-STRING 11623
-{
-Saved hero(es)! Use "-saveautooff" to disable auto saving.
 }
 
 STRING 11626
@@ -50016,11 +47545,6 @@ STRING 11870
 E
 }
 
-STRING 11871
-{
-Portals to the old gods prison have been enabled! Traps against teleporting and air units in the dungeon have been disabled!
-}
-
 STRING 11873
 // Units: o073 (Advanced Ogre Mound), Ubertip (Tooltip - Extended)
 {
@@ -50237,86 +47761,6 @@ STRING 11944
 R
 }
 
-STRING 11945
-{
-Bring the letter to Jaina on Theramore.
-}
-
-STRING 11946
-{
-Return the material to Khadgar in Dalaran.
-}
-
-STRING 11947
-{
-Hire an Enraged Fire Elemental.
-}
-
-STRING 11948
-{
-Bring the Enraged Fire Elemental to Khadgar in Dalaran.
-}
-
-STRING 11949
-{
-Repair the Power Generator of Dalaran.
-}
-
-STRING 11950
-{
-Bring the Engineer Certification to Khadgar.
-}
-
-STRING 11951
-{
-Defeat the Undeads attacking Daralan.
-}
-
-STRING 11952
-{
-Bring the Head of the Dreadlord to Khadgar in Dalaran.
-}
-
-STRING 11953
-{
-Dig up all treasures.
-}
-
-STRING 11954
-{
-Bring the treasures to Admiral Proudmoore.
-}
-
-STRING 11955
-{
-Sacrifice all Cultists to the Kraken.
-}
-
-STRING 11956
-{
-Kill the Kraken.
-}
-
-STRING 11957
-{
-Bring the Kraken's Head to Admiral Proudmoore.
-}
-
-STRING 11958
-{
-Destroy all Pirate Ships.
-}
-
-STRING 11959
-{
-Kill the Captain.
-}
-
-STRING 11960
-{
-Bring the Captain's Head to Admiral Proudmoore.
-}
-
 STRING 11961
 // Units: h0VM (Skyfire Gunship), Ubertip (Tooltip - Extended)
 {
@@ -50365,61 +47809,6 @@ STRING 11976
 (Icon) (Kul Tiras)
 }
 
-STRING 11977
-{
-Bring the Druid Letter to Barrow Dens in Ashenvale.
-}
-
-STRING 11978
-{
-Bring the Druid spell to Tyrande in Darnassus.
-}
-
-STRING 11979
-{
-Get the blessed water from the head of the Silver Hand in Nethergarde Citadel.
-}
-
-STRING 11980
-{
-Bring the blessed water to Malfurion at Mount Hyjal.
-}
-
-STRING 11981
-{
-Bring the Moonstone to Jaina Proudmoore on Theramore.
-}
-
-STRING 11982
-{
-Thank you for the spell stranger! It will reinforce the housings.
-}
-
-STRING 11983
-{
-Return the Enhanced Moonstone to Tyrande in Darnassus.
-}
-
-STRING 11984
-{
-Destroy the Defiled Fountain in Felwood Forest.
-}
-
-STRING 11985
-{
-Return to Malfurion at Mount Hyjal.
-}
-
-STRING 11986
-{
-Welcome to Darnassus! Our city is growing. However, the World Tree is growing, too and damaging our housings.
-}
-
-STRING 11987
-{
-We need a spell from the Druids of the Talon to enhance their structures.
-}
-
 STRING 11988
 // Units: h05H (Workshop), Ubertip (Tooltip - Extended)
 {
@@ -50463,11 +47852,6 @@ STRING 11994
 // Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 11995
-{
-"-q/-news": Shows news with links and QR codes.
 }
 
 STRING 11996
@@ -50531,101 +47915,6 @@ STRING 12005
 // Units: N0O1 (Villager), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
-}
-
-STRING 12006
-{
-Get ingredients from the World Tree next to Malfurion.
-}
-
-STRING 12007
-{
-Bring the ingredients to Chen in Pandaria.
-}
-
-STRING 12008
-{
-Buy a Goblin Blaster on Kezan.
-}
-
-STRING 12009
-{
-Bring the Goblin Blaster to Chen on Pandaria.
-}
-
-STRING 12010
-{
-Kill the herald on Pandaria.
-}
-
-STRING 12011
-{
-Bring the dropped conditions to Chen on Pandaria.
-}
-
-STRING 12012
-{
-Kill the director of the Goblin Bank on Kezan.
-}
-
-STRING 12013
-{
-Bring the dropped bag of gold to Chen on Pandaria.
-}
-
-STRING 12014
-{
-Get the artifact from Kil´Jaeden in the Tomb of Sargeras near the Maelstrom.
-}
-
-STRING 12015
-{
-Bring the artifact to Lord Illidan in Nazjatar.
-}
-
-STRING 12016
-{
-Capture Maiev in Sunken Ruins with Kael's scroll.
-}
-
-STRING 12017
-{
-Return the captured Maiev to Lord Illidan in Nazjatar.
-}
-
-STRING 12018
-{
-Use the magic scroll in Sapphiron´s Lair in Icecrown.
-}
-
-STRING 12019
-{
-Kill Sapphiron.
-}
-
-STRING 12020
-{
-Return Sapphiron's head to Lord Illidan in Nazjatar.
-}
-
-STRING 12021
-{
-Take Lord Illidan's Blade to the Sunwell in Silvermoon.
-}
-
-STRING 12022
-{
-Return the enhanced blade to Lord Illidan in Nazjatar.
-}
-
-STRING 12023
-{
-Guide Lord Illidan himself to the Frozen Throne and kill the Lich King.
-}
-
-STRING 12024
-{
-Shatter the crystal on the Frozen Throne.
 }
 
 STRING 12025
@@ -50712,27 +48001,6 @@ STRING 12038
 Captain
 }
 
-STRING 12039
-{
-Centaur Khans (7)
-}
-
-STRING 12040
-{
-Crusade
-Killed Undead (5):
-}
-
-STRING 12041
-{
-Paladins slain (5)
-}
-
-STRING 12042
-{
-Charmed Draenei (5)
-}
-
 STRING 12043
 // Units: N068 (Naga Queen), EditorSuffix (Name - Editor Suffix)
 {
@@ -50743,21 +48011,6 @@ STRING 12044
 // Units: N06E (Old God of Madness and Chaos), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
-}
-
-STRING 12045
-{
-Kill 20 Undead creeps.
-}
-
-STRING 12046
-{
-Return to Sylvanas Windrunner in Undercity.
-}
-
-STRING 12047
-{
-Undead Creeps (20)
 }
 
 STRING 12048
@@ -50782,21 +48035,6 @@ STRING 12051
 // Items: I11U (Ko'nani's Message), Description (Description)
 {
 A message from Ko'nani for the people of Theramore.
-}
-
-STRING 12052
-{
-Get the essence of the Naaru from Velen the Prophet.
-}
-
-STRING 12053
-{
-Bring the essence to Lor'themar.
-}
-
-STRING 12054
-{
-Reconquer Quel'Thalas with the Blood Elf and Forsaken army.
 }
 
 STRING 12055
@@ -50839,91 +48077,6 @@ STRING 12061
 // Upgrades: R0D3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
 {
 Improved Day Harvest Diurnal
-}
-
-STRING 12062
-{
-Bring the plans to Thrall in Orgrimmar.
-}
-
-STRING 12063
-{
-Return the answer from Thrall to Monte Glazlowe on Kezan.
-}
-
-STRING 12064
-{
-Win the race for the Goblins.
-}
-
-STRING 12065
-{
-Get your reward from Monte Glazlowe on Kezan.
-}
-
-STRING 12066
-{
-Get the gold treasure in Ironforge.
-}
-
-STRING 12067
-{
-Bring the treasure to Monte Glazlowe on Kezan.
-}
-
-STRING 12068
-{
-Convert a unit with food costs of at least 4 with an Alchemist Lab.
-}
-
-STRING 12069
-{
-Bring the Alchemist Lab Plans to Monte Glazlowe on Kezan.
-}
-
-STRING 12070
-{
-Support the project to improve its quality.
-}
-
-STRING 12071
-{
-Support the project with a subscription to become a VIP.
-}
-
-STRING 12072
-{
-"-vips": Lists all VIPs.
-}
-
-STRING 12073
-{
-Unlock exclusive features in the map.
-}
-
-STRING 12074
-{
-VIP status on Discord.
-}
-
-STRING 12075
-{
-Races belong to one faction or are neutral.
-}
-
-STRING 12076
-{
-Freelancer: Pure RPG mode, begins with +15 attributes and +30 % XP rate.
-}
-
-STRING 12077
-{
-"-h/-help": Lists chat commands.
-}
-
-STRING 12078
-{
-"-helpping": Lists ping chat commands.
 }
 
 STRING 12079
@@ -51070,196 +48223,16 @@ STRING 12110
 - Increases the maximum hit points, mana and damage of all player units.|n- Increases the armor and level by 1 every 10 levels of this research of all player units.|n- Increases armour, movement speed and attack and sight range of ships and submarines.|n- Allows unit abilities to target units with a level above their initial level: Polymorph (Human, Goblin), Transmute (Goblin), Possession (Undead), Charm Creeps) etc. This does not improve hero abilities!|n- Increases cargo hold, movement speed and mana of mounts.|n|nIs increased automatically for creeps and bosses to the lowest hero level of playing users.
 }
 
-STRING 12115
-{
-Summon a Nether Dragon Hatchling at Nethergarde Citadel.
-}
-
-STRING 12116
-{
-Return the Nether Dragon Hatchling to Sylvanas in the Undercity.
-}
-
-STRING 12117
-{
-Bring the bag of gold to the Stormreaver Hermit in Durotar.
-}
-
-STRING 12118
-{
-Return the corpse probe to Sylvanas in the Undercity.
-}
-
-STRING 12119
-{
-Kill 5 enemy Paladin heroes.
-}
-
-STRING 12120
-{
-Warcraft III Cheats
-}
-
-STRING 12121
-{
-Return the trophy to Sylvanas in the Undercity.
-}
-
-STRING 12122
-{
-Bring at least 2 legendary artifacts to Sylvanas in the Undercity.
-}
-
-STRING 12123
-{
-Get some goods to craft fishing equipment from Theramore.
-}
-
-STRING 12124
-{
-Return the goods to Elder Ko'nani.
-}
-
-STRING 12125
-{
-Hunt 6 Whales.
-}
-
-STRING 12126
-{
-Return the Whale Fat to Elder Ko'nani.
-}
-
-STRING 12127
-{
-Sink the boat with the body in the Maelstrom.
-}
-
-STRING 12128
-{
-Return the spirit to Elder Ko'nani.
-}
-
-STRING 12129
-{
-Hire a Tuskarr Chieftain from the statue.
-}
-
-STRING 12130
-{
-Return the Tuskarr Chieftain to Elder Ko'nani.
-}
-
-STRING 12131
-{
-Defeat all of the old of the gods in Sargeras' prison.
-}
-
-STRING 12132
-{
-Return the heart of the Old God to Jaina on Theramore.
-}
-
-STRING 12133
-{
-Destroy all Dimensional Gates on Azeroth.
-}
-
 STRING 12134
 // Abilities: A05O (Restore Mana), Tip (Tooltip - Normal)
 {
 Restore Mana
 }
 
-STRING 12135
-{
-Return the Portal Stone to Jaina on Theramore.
-}
-
-STRING 12136
-{
-Defeat all Elemental Lords.
-}
-
-STRING 12137
-{
-Return the Elemental Stone to Jaina on Theramore.
-}
-
-STRING 12138
-{
-Defeat all Wild Gods.
-}
-
-STRING 12139
-{
-Return the Wild God Souls to Jaina on Theramore.
-}
-
-STRING 12140
-{
-Bring the message to Illidan.
-}
-
-STRING 12141
-{
-Visit the Orc leader in Outland.
-}
-
-STRING 12142
-{
-Return the Orc Flag to Illidan in Outland.
-}
-
-STRING 12143
-{
-Defeat Magtheridon in Outland.
-}
-
-STRING 12144
-{
-Return Magtheridon's Heart to Illidan in Outland.
-}
-
-STRING 12146
-{
-Bring Illidan's Orb to Magtheridon in Outland.
-}
-
-STRING 12147
-{
-Destroy the Demon Gate in Outland.
-}
-
-STRING 12148
-{
-Return the Demon Gate Stone to Illidan in Outland.
-}
-
 STRING 12149
 // Abilities: A05O (Restore Mana), Ubertip (Tooltip - Normal - Extended)
 {
 Restores <A05O,DataB1> mana to up to 6 nearby friendly non-mechanical units.
-}
-
-STRING 12150
-{
-Bring the message from Velen to Illidan in Outland.
-}
-
-STRING 12151
-{
-Return Illidan's Arkonite Crystal to Velen on Argus.
-}
-
-STRING 12152
-{
-Hire a Lightforged Peacekeeper at the Xenedar on Argus.
-}
-
-STRING 12154
-{
-Return the Lightforged Peacekeeper to Velen on Argus.
 }
 
 STRING 12155
@@ -51388,11 +48361,6 @@ STRING 12176
 Regenerates the mana of a target friendly unit for <A25N,DataA1> mana points over <A25N,Dur1> seconds.
 }
 
-STRING 12177
-{
-Hire 5 Rangari from Exodar at the Azuremyst Isle in Azeroth.
-}
-
 STRING 12178
 // Units: n0NT (Harpy Rogue), EditorSuffix (Name - Editor Suffix)
 {
@@ -51493,26 +48461,6 @@ STRING 12194
 // Units: o0B0 (Shelter), Name (Name)
 {
 Shelter
-}
-
-STRING 12195
-{
-Warcraft III provides a number of cheat codes to test maps. These only work in singleplayer. Press the enter key, type in the code, and press enter again. Cheat codes are not case sensitive.
-}
-
-STRING 12196
-{
-Return the 5 Rangari to Velen on Argus.
-}
-
-STRING 12197
-{
-Kill 5 enemy Demon heroes.
-}
-
-STRING 12198
-{
-Return the Demon's Head to Velen on Argus.
 }
 
 STRING 12199
@@ -52883,11 +49831,6 @@ STRING 13856
 W
 }
 
-STRING 13859
-{
-Draenei waves:
-}
-
 STRING 13861
 // Units: h0MQ (Pegasus Knight), Hotkey (Hotkey)
 {
@@ -53824,11 +50767,6 @@ STRING 14272
 Sonar
 }
 
-STRING 14273
-{
-Loading letter savecode:
-}
-
 STRING 14274
 // Units: H0OG (Peon), Ubertip (Tooltip - Extended)
 {
@@ -54087,11 +51025,6 @@ STRING 14366
 (+15 All Stats)
 }
 
-STRING 14395
-{
-Successfully loaded your savecode!
-}
-
 STRING 14404
 // Units: N0C8 (Herald of the Deep Mother), Ubertip (Tooltip - Extended)
 {
@@ -54222,11 +51155,6 @@ STRING 14478
 // Units: N036 (Sea Giant), Propernames (Proper Names)
 {
 King Deepbeard
-}
-
-STRING 14479
-{
-Known acccounts:
 }
 
 STRING 14481
@@ -54679,11 +51607,6 @@ STRING 14796
 (Bonus Hero)
 }
 
-STRING 14797
-{
-Stats have been voted to |cffff0000YES|r.
-}
-
 STRING 14798
 // Units: H01H (Vindicator), Ubertip (Tooltip - Extended)
 {
@@ -54942,11 +51865,6 @@ STRING 15000
 Revive Phoenix
 }
 
-STRING 15016
-{
-Quests
-}
-
 STRING 15026
 // Units: E02C (Dryad), Name (Name)
 {
@@ -55041,11 +51959,6 @@ STRING 15104
 // Items: I071 (Unique - Heart of Aszhara), Description (Description)
 {
 |cff8b00ffUnique|r|nThe heart of Queen Aszhara.
-}
-
-STRING 15105
-{
-Showing AI GUI!
 }
 
 STRING 15124
@@ -55358,26 +52271,6 @@ STRING 15363
 // Items: I10Z (Craft Potion of Greater Healing), Hotkey (Hotkey)
 {
 Y
-}
-
-STRING 15364
-{
-Customizable Heroes
-}
-
-STRING 15365
-{
-Customizable heroes can change their hero attributes, spells and skins.
-}
-
-STRING 15366
-{
-Void Lords
-}
-
-STRING 15367
-{
-You can pick the Void Lord as hero when your main hero has reached the maximum hero level. The Void Lord can reskill all of his hero spells at the Arcane Academy of Theramore. Every spell slot can have one of several given hero spells. Once you have learned a hero spell, you can reset all hero spells to reskill again. There is a version of this special hero for every primary attribute. The hero causes Chaos damage and can walk on water.
 }
 
 STRING 15376
@@ -55770,20 +52663,10 @@ STRING 15912
 Train Supply Cart
 }
 
-STRING 15916
-{
-Picked Warlord.
-}
-
 STRING 15919
 // Units: H06F (Hydromancer), Revivetip (Tooltip - Revive)
 {
 Revive Hydromancer
-}
-
-STRING 15920
-{
-Picked Freelancer.
 }
 
 STRING 15921
@@ -56038,11 +52921,6 @@ STRING 16123
 Mass Invisibility
 }
 
-STRING 16163
-{
-Pick game mode, hero, race, profession, start location and start the game. Use "-random" to pick random and "-start" to start the game or "-rs" for both at once.
-}
-
 STRING 16164
 // Abilities: A0PH (Enable Wandering), Name (Name)
 {
@@ -56053,11 +52931,6 @@ STRING 16165
 // Abilities: A0PH (Enable Wandering), Tip (Tooltip - Normal)
 {
 Enable Wandering
-}
-
-STRING 16166
-{
-Load your prestored savecodes with "-loadp X":
 }
 
 STRING 16170
@@ -56150,11 +53023,6 @@ STRING 16205
 Convert Item
 }
 
-STRING 16206
-{
-Enter "-x/-revive" to select the your altar on Theramore to revive your hero or revive the hero at any other altar or hideout. Theramore is a safe area where heroes cannot kill each other. If you have no gold to leave, sell crafted items.
-}
-
 STRING 16207
 // Items: I09I (Mana Wards), Ubertip (Tooltip - Extended)
 {
@@ -56179,11 +53047,6 @@ STRING 16214
 Dalaran Citizen (male)
 }
 
-STRING 16230
-{
-Resurrection all over the map!
-}
-
 STRING 16231
 // Units: n082 (Dalaran Citizen (male)), Tip (Tooltip - Basic)
 {
@@ -56194,11 +53057,6 @@ STRING 16232
 // Items: I146 (Candy), Name (Name)
 {
 Candy
-}
-
-STRING 16233
-{
-Reached limit of colors!
 }
 
 STRING 16234
@@ -56219,55 +53077,10 @@ STRING 16236
 Build Gnome Shipyard
 }
 
-STRING 16237
-{
-Target is resistant to magic.
-}
-
-STRING 16238
-{
-Target is already under the affect of Rune of Rebirth!
-}
-
 STRING 16239
 // Units: n082 (Dalaran Citizen (male)), Ubertip (Tooltip - Extended)
 {
 A hearty Dalaran citizen. Has life regeneration aura.
-}
-
-STRING 16240
-{
-No valid targets!
-}
-
-STRING 16241
-{
-You lost!
-}
-
-STRING 16242
-{
-You won 15 000 gold!
-}
-
-STRING 16243
-{
-You won 15 000 lumber!
-}
-
-STRING 16244
-{
-You won 3 strong creeps!
-}
-
-STRING 16260
-{
-Not enough supply to receive a strong creep!
-}
-
-STRING 16261
-{
-Deposited gold. Wait to get its value increased!
 }
 
 STRING 16262
@@ -56280,11 +53093,6 @@ STRING 16263
 // Items: I0ST (Kobold), Name (Name)
 {
 Kobold
-}
-
-STRING 16264
-{
-Deposited lumber. Wait to get its value increased!
 }
 
 STRING 16265
@@ -56311,76 +53119,16 @@ STRING 16270
 Quillboar
 }
 
-STRING 16271
-{
-Loaded presaved clans.
-}
-
-STRING 16272
-{
-You own the clan hall now!
-}
-
-STRING 16308
-{
-You have no clan!
-}
-
-STRING 16309
-{
-Your clan has already one Clan Hall!
-}
-
 STRING 16310
 // Items: I0SU (Quillboar), Ubertip (Tooltip - Extended)
 {
 Aggressive, primitive boar-like humanoids:|n- Summons.|n- Endurance.|n- Quills, spikes and thorns causing damage.|n- Harpies as air units.|n- Healing Wards.
 }
 
-STRING 16311
-{
-Clan Deposits can be used now!
-}
-
-STRING 16315
-{
-Included unit!
-}
-
-STRING 16316
-{
-Unit is already included!
-}
-
-STRING 16317
-{
-No valid unit!
-}
-
-STRING 16318
-{
-Excluded unit!
-}
-
-STRING 16319
-{
-Unit is already excluded!
-}
-
 STRING 16320
 // Items: I0SV (Scepter of Kobolds), Name (Name)
 {
 Scepter of Kobolds
-}
-
-STRING 16321
-{
-Cleared included!
-}
-
-STRING 16322
-{
-Cleared excluded!
 }
 
 STRING 16341
@@ -56411,26 +53159,6 @@ STRING 16362
 // Items: I0SW (Tiny Kobold Camp), Name (Name)
 {
 Tiny Kobold Camp
-}
-
-STRING 16363
-{
-Tomes: |cffff0000ENABLED|r
-}
-
-STRING 16364
-{
-Tomes have been voted to |cffff0000YES|r.
-}
-
-STRING 16365
-{
-Tomes: |cffff0000DISABLED|r
-}
-
-STRING 16366
-{
-Tomes have been voted to |cffff0000NO|r.
 }
 
 STRING 16371
@@ -56505,21 +53233,6 @@ STRING 16463
 (Creep)
 }
 
-STRING 16464
-{
-Portals to The Burning Legion have been opened!
-}
-
-STRING 16466
-{
-Use "-clear" to remove this information.
-}
-
-STRING 16467
-{
-Updating alliances with Computer AI players.
-}
-
 STRING 16469
 // Abilities: A25P (Quills), Name (Name)
 {
@@ -56532,40 +53245,10 @@ STRING 16471
 E
 }
 
-STRING 16472
-{
-Deathwing The Destroyer appears from the sky to burn down this world to its ground!
-}
-
-STRING 16473
-{
-Cenarius has been reborn! He's come to destroy players that dare defile the wild!
-}
-
 STRING 16474
 // Upgrades: R0EE (Ensnare), Ubertip (Tooltip - Extended)
 {
 Enables Ogre Fire Breathers to use the Firebolt ability
-}
-
-STRING 16477
-{
-You cause Chaos damage now!
-}
-
-STRING 16478
-{
-You do not cause Chaos damage anymore!
-}
-
-STRING 16479
-{
-You have Divine armor now!
-}
-
-STRING 16480
-{
-You do not have Divine armor anymore!
 }
 
 STRING 16481
@@ -56610,60 +53293,10 @@ STRING 16488
 Scepter of Quillboars
 }
 
-STRING 16489
-{
-Reset
-}
-
-STRING 16490
-{
-Found a key to a dungeon!
-}
-
-STRING 16491
-{
-Search for key in Ashenvale and Felwood to get the correct combination! Use "-pingkey" to ping it on the minimap!
-}
-
-STRING 16492
-{
-Wrong combination! Wait 30 seconds to try it again if you are still alive.
-}
-
-STRING 16493
-{
-Correct combination, opening the gate!
-}
-
-STRING 16494
-{
-Find the matching keys of this dungeon to get the correct combination!
-}
-
-STRING 16495
-{
-The dungeon is filled with traps. Flying units will be killed here!
-}
-
-STRING 16496
-{
-A force bridge appears!
-}
-
-STRING 16501
-{
-VIPs have been disabled!
-}
-
 STRING 16503
 // Items: I0KE (Scepter of Lordaeron), Ubertip (Tooltip - Extended)
 {
 |cffff8c00Artifact|r|nSummons <AIsh,DataB1> Workers to do your bidding. Also grants the Hero and friendly nearby units increased attack rate and movement speed.|n|cffffcc00History|r|n|cffffdeadNames of generations of Nation Leaders are carved into this staff. The wielder can call upon them for wisdom and guidance in times of peace.|r
-}
-
-STRING 16504
-{
-You cannot pickup a VIP item if you are not a VIP!
 }
 
 STRING 16509
@@ -56690,20 +53323,10 @@ STRING 16519
 Build Dalaran Housing
 }
 
-STRING 16521
-{
-You cannot build around portals.
-}
-
 STRING 16522
 // Units: H0AJ (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus Hero) (wielding Frostmourne)
-}
-
-STRING 16523
-{
-Some Units have entered the most hazardous area of the |cffff0000Maelstrom|r and have been totally destroyed by the tempest.
 }
 
 STRING 16534
@@ -56982,80 +53605,16 @@ STRING 16587
 (Kul Tiras)
 }
 
-STRING 16588
-{
-|cffffcc00HEALING|r
-Your life has been fully regenerated!
-}
-
-STRING 16589
-{
-|cffffcc00MANA RESTORATION|r
-Your mana has been fully restored!
-}
-
-STRING 16650
-{
-|cffffcc00NEUTRAL ZONE|r
-You are entering Theramore. This area is a neutral zone. All heroes are invulnerable here. Besides, you can repick safely on Theramore.
-}
-
-STRING 16651
-{
-|cffffcc00NEUTRAL ZONE|r
-You are leaving Theramore by which you become vulnerable again. Besides, you can only repick if no enemies are in range of your hero.
-}
-
-STRING 16652
-{
-You cannot create buildings on Theramore!
-}
-
 STRING 16653
 // Units: n0LI (Kobold Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Kobold)
 }
 
-STRING 16654
-{
-Spell is not ready.
-}
-
-STRING 16655
-{
-Target has to be a freelancer!
-}
-
-STRING 16657
-{
-Your given units are empty.
-}
-
-STRING 16658
-{
-Cleared unit group to give.
-}
-
-STRING 16659
-{
-Updating alliances with left players.
-}
-
 STRING 16660
 // Units: h0MH (Barracks), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
-}
-
-STRING 16661
-{
-Enable UI for backpack on selection.
-}
-
-STRING 16662
-{
-Disable UI for backpack on selection.
 }
 
 STRING 16663
@@ -57142,11 +53701,6 @@ STRING 16841
 Kul Tiras Housing
 }
 
-STRING 16842
-{
-Discord: https://discord.com/invite/eM34z36
-}
-
 STRING 16843
 // Units: n0LN (Fel Orc Child), Hotkey (Hotkey)
 {
@@ -57159,11 +53713,6 @@ STRING 16844
 Hire Engineer Bridge and Walls
 }
 
-STRING 16846
-{
-Your items are dropped on Theramore and your units are removed! Only your experience is stored.
-}
-
 STRING 16848
 // Units: o0A0 (Altar of Candles), EditorSuffix (Name - Editor Suffix)
 {
@@ -57174,11 +53723,6 @@ STRING 16849
 // Units: o0A2 (Forge), EditorSuffix (Name - Editor Suffix)
 {
 (Kobold)
-}
-
-STRING 16851
-{
-Your items are dropped on Theramore and your units are removed! Only 1/4 of your experience is stored but you can repick the game mode!
 }
 
 STRING 16857
@@ -57197,26 +53741,6 @@ STRING 16860
 // Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
 {
 S
-}
-
-STRING 16863
-{
-Killing selected player units!
-}
-
-STRING 16868
-{
-You cannot start a votekick against yourself!
-}
-
-STRING 16869
-{
-You cannot vote more than once!
-}
-
-STRING 16870
-{
-No votekick is running!
 }
 
 STRING 16877
@@ -57273,11 +53797,6 @@ STRING 16888
 (Neutral Hostile)
 }
 
-STRING 16890
-{
-Your hero can be revived at altars and on Theramore but will be removed on repicks! Use "-repick" to repick your hero.
-}
-
 STRING 16891
 // Abilities: A1MS (Sculpting - Adept), Hotkey (Hotkey - Normal)
 {
@@ -57294,11 +53813,6 @@ STRING 16896
 // Units: h084 (Lightning Elemental), Hotkey (Hotkey)
 {
 L
-}
-
-STRING 16897
-{
-Your second hero can be revived at altars and on Theramore but will be removed on repicks! Use "-h2" to repick your second hero.
 }
 
 STRING 16898
@@ -57323,21 +53837,6 @@ STRING 16910
 // Items: I0C3 (Scroll of the Ghosts of the Sea), Hotkey (Hotkey)
 {
 G
-}
-
-STRING 16912
-{
-Armories
-}
-
-STRING 16914
-{
-Enabled auto save! Use "-saveautooff" to disable it.
-}
-
-STRING 16915
-{
-Disabled auto save! Use "-saveautoon" to disable it.
 }
 
 STRING 16917
@@ -57400,11 +53899,6 @@ STRING 16932
 Y
 }
 
-STRING 16933
-{
-Error on loading savecode!
-}
-
 STRING 16934
 // Items: I113 (Craft Potion of Greater Invisibility), Hotkey (Hotkey)
 {
@@ -57435,56 +53929,16 @@ STRING 16938
 Revive Harpy Queen
 }
 
-STRING 16943
-{
-|cffffcc00Quest update:|r You can get your old hero back from now on!
-}
-
-STRING 16944
-{
-|cffffcc00Quest update:|r You can get Illidan from now on!
-}
-
 STRING 16945
 // Units: N0HK (Berserk Wildkin), Tip (Tooltip - Basic)
 {
 Summon Berserk Wildkin
 }
 
-STRING 16946
-{
-Empty clan name! Use "-loadc XXX <Clan Name>"!
-}
-
 STRING 16947
 // Units: N0HK (Berserk Wildkin), Awakentip (Tooltip - Awaken)
 {
 Revive Berserk Wildkin
-}
-
-STRING 16948
-{
-Repicking your third hero!
-}
-
-STRING 16949
-{
-Repicking your second hero!
-}
-
-STRING 16950
-{
-Repicking your first hero!
-}
-
-STRING 16951
-{
-Your presaved savecodes:
-}
-
-STRING 16952
-{
-Load your prestored clan savecodes with "-loadclanp X":
 }
 
 STRING 16953
@@ -57571,70 +54025,10 @@ STRING 16966
 (Ogre) (Tier 3)
 }
 
-STRING 16967
-{
-Avatar of Sargeras:
-}
-
 STRING 16968
 // Units: n06U (Mounts Cage), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
-}
-
-STRING 16979
-{
-Enabled passive mode!
-}
-
-STRING 16980
-{
-Disabled passive mode!
-}
-
-STRING 16981
-{
-Do not attack units from a player in passive mode!
-}
-
-STRING 16982
-{
-You cannot attack other players in passive mode!
-}
-
-STRING 16983
-{
-You have not enough lumber!
-}
-
-STRING 16984
-{
-You have not enough gold!
-}
-
-STRING 16985
-{
-All bounties:
-}
-
-STRING 16986
-{
-\"TheElvenClan\" is reserved.
-}
-
-STRING 16987
-{
-You must be the leader of your clan!
-}
-
-STRING 16988
-{
-You must be the member of a clan!
-}
-
-STRING 16991
-{
-Gold must be greater than 0!
 }
 
 STRING 16995
@@ -57643,81 +54037,16 @@ STRING 16995
 C
 }
 
-STRING 17001
-{
-Clan members:
-}
-
-STRING 17003
-{
-You must be the leader of the clan!
-}
-
 STRING 17004
 // Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 17005
-{
-You cannot change your own clan rank!
-}
-
-STRING 17006
-{
-Enter "-clanaccept" to accept the invitation and join the clan!
-}
-
-STRING 17009
-{
-You cannot invite yourself!
-}
-
-STRING 17010
-{
-You are already a member of a clan!
-}
-
-STRING 17023
-{
-You are a regular clan member now!
-}
-
-STRING 17024
-{
-You have no clan invitation!
-}
-
-STRING 17025
-{
-You are not in a clan!
-}
-
-STRING 17026
-{
-Enabled clan AI player resource messages!
-}
-
-STRING 17027
-{
-Disabled clan AI player resource messages!
-}
-
 STRING 17028
 // Units: h09S (Supply Cart), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
-}
-
-STRING 17029
-{
-All heroes of all playing users have to be level 75!
-}
-
-STRING 17030
-{
-Usage; "-anim Stand, Attack, Death, Dissipate, Decay, Birth, Morph, Spell, Work, Walk, Spell Channel, Attack Slam"
 }
 
 STRING 17213
@@ -58596,11 +54925,6 @@ STRING 17509
 Summon Ancient Hydra
 }
 
-STRING 17520
-{
-|cffffcc00Quest update:|r An Undead hero was killed.
-}
-
 STRING 17527
 // Abilities: A0IW (Advanced Mine Shaft), Name (Name)
 {
@@ -58955,31 +55279,6 @@ STRING 17656
 Sister Hatelash,Serena Bloodfeather,Marion Wormwing,Edana Hatetalon,Bloodfury Ripper,Fury Shelda,Mistress of the Coldwind,Sirana Iceshriek,Cliffclutch Matriarch,High Crawliac,Witchmatron Magora,Magula,Hexweaver Akara,Grelda the Hag
 }
 
-STRING 17659
-{
-|cffffcc00Quest update:|r Illidan is ready to travel to Icecrown!
-}
-
-STRING 17660
-{
-|cffffcc00Quest update:|r Guide Illidan to the Frozen Throne peak and attack the Lich King!
-}
-
-STRING 17661
-{
-|cffffcc00Quest update:|r Guide Illidan to the Frozen Throne peak and attack the Lich King! To get your old Hero back, step with Illidan on the circle of power after 30 seconds from now on!
-}
-
-STRING 17662
-{
-|cffffcc00Quest update:|r Guide Illidan to the Frozen Throne peak and attack the Lich King! To control Illidan again, step with your Hero on the circle of power after 30 seconds from now on!
-}
-
-STRING 17663
-{
-|cffffcc00Quest update:|r |cffff0000Illidan Stormrage|r is attacking the |cffff0000Lich King|r!
-}
-
 STRING 17670
 // Upgrades: R05L (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
@@ -59088,21 +55387,6 @@ STRING 17694
 (Engineer)
 }
 
-STRING 17720
-{
-|cffffcc00Quest update:|r Kel´Thuzad is examining the body parts (and apparently has some problems with his helmet). Come back later for the next quest !
-}
-
-STRING 17724
-{
-|cffffcc00Quest update:|r Faceless Warriors are now available for training in Draktharon Keep (Northrend)! Next quest is available at the Lich King himself!
-}
-
-STRING 17730
-{
-|cffffcc00Quest info:|r Hire one Draenei of every type before stealing the item!
-}
-
 STRING 17752
 // Units: o06Y (Gnoll Runt), Ubertip (Tooltip - Extended)
 {
@@ -59113,16 +55397,6 @@ STRING 17773
 // Units: o075 (Ogre Arena), Name (Name)
 {
 Ogre Arena
-}
-
-STRING 17775
-{
-New quest available at Theramore!
-}
-
-STRING 17777
-{
-Old Gods slain (3)
 }
 
 STRING 17786
@@ -59723,11 +55997,6 @@ STRING 18355
 // Units: N068 (Naga Queen), Name (Name)
 {
 Naga Queen
-}
-
-STRING 18356
-{
-Unlocked everything!
 }
 
 STRING 18357
@@ -61377,11 +57646,6 @@ STRING 19848
 Upgrades Ogre Goblin Squads to fire rocks smothered in burning oil, which causes the ground to burn.
 }
 
-STRING 19850
-{
-Let's craft some items!
-}
-
 STRING 19853
 // Items: I09B (Craft Goblin Land Mines), Name (Name)
 {
@@ -61404,11 +57668,6 @@ STRING 19857
 // Items: I09C (Black Powder), Tip (Tooltip - Basic)
 {
 Purchase Black Powder
-}
-
-STRING 19859
-{
-Locked everything!
 }
 
 STRING 19860
@@ -62162,16 +58421,6 @@ STRING 20133
 // Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 20134
-{
-Unlinked Crafting Stashes.
-}
-
-STRING 20135
-{
-Linked Crafting Stashes.
 }
 
 STRING 20136
@@ -63779,11 +60028,6 @@ STRING 20641
 Gather Lumber
 }
 
-STRING 20642
-{
-Water is visible!
-}
-
 STRING 20643
 // Abilities: A0OC (Gather Gold), Ubertip (Tooltip - Normal - Extended)
 {
@@ -63806,11 +60050,6 @@ STRING 20648
 // Abilities: A0OC (Gather Gold), Name (Name)
 {
 Gather Gold
-}
-
-STRING 20649
-{
-Red water!
 }
 
 STRING 20650
@@ -64482,21 +60721,6 @@ STRING 22278
 Holy Light
 }
 
-STRING 22292
-{
-Armories can be built to buy equipment items for customizable heroes.
-}
-
-STRING 22295
-{
-Witch Huts
-}
-
-STRING 22296
-{
-Witch Huts can be built by female citizens. They allow giving units different abilities. The units are permanently stored for mounts.
-}
-
 STRING 22298
 // Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
@@ -64705,11 +60929,6 @@ STRING 22337
 // Units: h0A9 (Workshop), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren)
-}
-
-STRING 22338
-{
-Enable Builder.
 }
 
 STRING 22339
@@ -65918,11 +62137,6 @@ STRING 22723
 I
 }
 
-STRING 22727
-{
-Changed food maximum to 600.
-}
-
 STRING 22728
 // Units: h0KD (Artillery Tank), Tip (Tooltip - Basic)
 {
@@ -66070,16 +62284,6 @@ STRING 22796
 // Units: n06R (Profession Books Shop), Name (Name)
 {
 Profession Books Shop
-}
-
-STRING 22813
-{
-Enabled Free For All alliances!
-}
-
-STRING 22814
-{
-Enabled Lobby alliances!
 }
 
 STRING 22815
@@ -66230,11 +62434,6 @@ STRING 23058
 // Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 23060
-{
-Auto skilling all selected heroes owned by you.
 }
 
 STRING 23062
@@ -67983,16 +64182,6 @@ STRING 24957
 Purchase Escape Portal
 }
 
-STRING 24958
-{
-Enabled bag info.
-}
-
-STRING 24959
-{
-Disabled bag info.
-}
-
 STRING 24994
 // Abilities: A0XN (Thorns Aura), Name (Name)
 {
@@ -68207,11 +64396,6 @@ STRING 25115
 // Items: I0H5 (Iron Bars), Name (Name)
 {
 Iron Bars
-}
-
-STRING 25116
-{
-Archimonde
 }
 
 STRING 25117
@@ -68860,11 +65044,6 @@ STRING 26141
 // Items: I0UG (Bow), Ubertip (Tooltip - Extended)
 {
 Increases the attack damage of the Hero by 8 when worn.|n|n|cffffcc00Right Hand, One Hand and Range.|r
-}
-
-STRING 26142
-{
-Changed food maximum to 300.
 }
 
 STRING 26143
@@ -71933,11 +68112,6 @@ STRING 29126
 (Goblin)
 }
 
-STRING 29127
-{
-Fog!
-}
-
 STRING 29128
 // Abilities: A0ZA (Leave Submarine), Hotkey (Hotkey - Normal)
 {
@@ -71968,20 +68142,10 @@ STRING 29161
 Water based hero, exceptional at hiding and striking from the water. Can learn Holy Light, Divine Shield, Devotion Aura and Launch Missiles. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 29162
-{
-Do not damage units from a player in passive mode!
-}
-
 STRING 29163
 // Units: H0GR (Ironclad Submarine), Propernames (Proper Names)
 {
 Submarine
-}
-
-STRING 29164
-{
-You cannot damage other players in passive mode!
 }
 
 STRING 29165
@@ -72278,11 +68442,6 @@ STRING 29229
 (+2) (Wolf Spirit Hood)
 }
 
-STRING 29236
-{
-Your third hero can be revived at altars and on Theramore but will be removed on repicks! Use "-h3" to repick your third hero.
-}
-
 STRING 29276
 // Units: U01K (Worgen Death Knight), Name (Name)
 {
@@ -72323,11 +68482,6 @@ STRING 29385
 // Units: o0A6 (Glowing Mushroom), EditorSuffix (Name - Editor Suffix)
 {
 (Kobold)
-}
-
-STRING 29415
-{
-Changed food maximum to 100.
 }
 
 STRING 29426
@@ -72628,11 +68782,6 @@ STRING 30243
 // Abilities: A10N (Devour), EditorSuffix (Editor Suffix)
 {
 (Dummy) (Mass Devour)
-}
-
-STRING 30250
-{
-Enter "-help/-h" to get all chat commands. Enter "-clear/-c" to clear the screen from messages. Enter "-unlock" to unlock everything from start.
 }
 
 STRING 30255
@@ -76361,11 +72510,6 @@ STRING 33011
 Purchase Wand of Corpses
 }
 
-STRING 33012
-{
-Changed food maximum to 200.
-}
-
 STRING 33013
 // Abilities: A1LZ (Necromancy), Name (Name)
 {
@@ -77828,11 +73972,6 @@ STRING 33896
 // Upgrades: R09E (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
 Upgrade to Arcanite Troll Spears
-}
-
-STRING 33914
-{
-Moved floating hero into the sea.
 }
 
 STRING 33915
@@ -80943,21 +77082,6 @@ STRING 35339
 Ogre Strength
 }
 
-STRING 35341
-{
-Enabled save codes!
-}
-
-STRING 35342
-{
-Disabled save codes!
-}
-
-STRING 35343
-{
-Got maximum resources!
-}
-
 STRING 35344
 // Units: h0GP (Fire Pit), Ubertip (Tooltip - Extended)
 {
@@ -82660,11 +78784,6 @@ STRING 35902
 // Items: I0PB (Tiny Arcane Tower), Ubertip (Tooltip - Extended)
 {
 Creates an Arcane Tower at a target location.
-}
-
-STRING 35903
-{
-Enables housing and tower limits.
 }
 
 STRING 35904
@@ -89099,11 +85218,6 @@ STRING 38067
 |cff87ceebNon-Combat Consumable|r|nRenders the unit invisible for <A1N8,Dur1> seconds when used. An invisible unit is untargetable by the enemy unless detected. If the unit attacks, uses an ability, or casts a spell, the invisibility effect is lost.
 }
 
-STRING 38068
-{
-The Burning Legion has been voted to |cffff0000NO|r.
-}
-
 STRING 38069
 // Items: I0NP (Adept Glyph), Ubertip (Tooltip - Extended)
 {
@@ -89384,11 +85498,6 @@ STRING 38117
 // Units: o050 (Temple of Sacrifice), Ubertip (Tooltip - Extended)
 {
 Sacrifices Troll units converting them into random creeps with their base level.|n|n|cffffcc00Limited to 1.|r
-}
-
-STRING 38118
-{
-Enabled Jaina quests.
 }
 
 STRING 38119
@@ -96459,11 +92568,6 @@ STRING 41433
 (Naga)
 }
 
-STRING 41434
-{
-Complete achievements!
-}
-
 STRING 41435
 // Units: H0KA (Human Battleship), Ubertip (Tooltip - Extended)
 {
@@ -96906,16 +93010,6 @@ STRING 41702
 // Units: n0GD (Skins), Ubertip (Tooltip - Extended)
 {
 Allows changing the skin of customizable heroes.
-}
-
-STRING 41714
-{
-Changed time of day to 12:00!
-}
-
-STRING 41715
-{
-Changed time of day to 24:00!
 }
 
 STRING 41716
@@ -98106,25 +94200,10 @@ STRING 42197
 (Ogre)
 }
 
-STRING 42198
-{
-Quests/Info
-}
-
 STRING 42199
 // Items: I0QW (Orb of Nature), Name (Name)
 {
 Orb of Nature
-}
-
-STRING 42201
-{
-Quests/Info (|Cfffed312F9|R)
-}
-
-STRING 42202
-{
-Information
 }
 
 STRING 42206
@@ -99835,16 +95914,6 @@ STRING 42700
 // Abilities: A1NB (Cripple), EditorSuffix (Editor Suffix)
 {
 (Ogre)
-}
-
-STRING 42701
-{
-Saved.
-}
-
-STRING 42702
-{
-Loaded.
 }
 
 STRING 42731
@@ -104041,11 +100110,6 @@ STRING 45917
 Frigid Lieutenant,Gahz'rilla,Gesharahan,Trigore the Lasher,Vorsha the Lasher
 }
 
-STRING 45918
-{
-Website: https://wowreforged.org
-}
-
 STRING 45919
 // Units: n0JZ (Peon), Ubertip (Tooltip - Extended)
 {
@@ -105144,11 +101208,6 @@ STRING 46342
 C
 }
 
-STRING 46349
-{
-Elemental Lords killed (5)
-}
-
 STRING 46351
 // Units: N0DR (Elemental Lord), Name (Name)
 {
@@ -105297,11 +101356,6 @@ STRING 46448
 // Buffs/Effects: B038 (), Bufftip (Tooltip)
 {
 Earth Elemental
-}
-
-STRING 46466
-{
-Wild Gods captured (4)
 }
 
 STRING 46467
@@ -105956,11 +102010,6 @@ STRING 46650
 // Abilities: A1QB (Magical Cutter), EditorSuffix (Editor Suffix)
 {
 (Heart of Azeroth)
-}
-
-STRING 46656
-{
-Disable Builder.
 }
 
 STRING 47446
@@ -107269,11 +103318,6 @@ STRING 48909
 // Abilities: A1RK (Item Damage Bonus), EditorSuffix (Editor Suffix)
 {
 (+10) (Extra Katana)
-}
-
-STRING 48912
-{
-Changed food maximum to 50.
 }
 
 STRING 48913
@@ -109100,11 +105144,6 @@ STRING 49511
 The skin of a Fel Boar.
 }
 
-STRING 49513
-{
-Enabled quests!
-}
-
 STRING 49514
 // Units: n0OO (Turtle), EditorSuffix (Name - Editor Suffix)
 {
@@ -109381,11 +105420,6 @@ STRING 49648
 (Instant)
 }
 
-STRING 49649
-{
-Avatar of Sargeras:
-}
-
 STRING 49650
 // Sound/Ambient/DoodadEffects/SargerasRoar.flac
 {
@@ -109480,11 +105514,6 @@ STRING 49670
 // Units: N0LD (Brood Mother), EditorSuffix (Name - Editor Suffix)
 {
 (Spider)
-}
-
-STRING 49674
-{
-Archimonde
 }
 
 STRING 49675
@@ -116060,11 +112089,6 @@ STRING 51907
 This unit is Tracking; it has increased movement speed and pings all nearby critters which can be hunted.
 }
 
-STRING 51908
-{
-Winter is coming!
-}
-
 STRING 51909
 // Units: O09R (Ancient Wendigo), Propernames (Proper Names)
 {
@@ -116317,11 +112341,6 @@ STRING 52661
 // Units: h02L (Goblin Laborer), EditorSuffix (Name - Editor Suffix)
 {
 (New - Race Human for proper construction)
-}
-
-STRING 52710
-{
-Demon heroes slain (5)
 }
 
 STRING 52717
@@ -117888,11 +113907,6 @@ STRING 54487
 // Abilities: A20Q (Build Tiny Thieves Guild), Name (Name)
 {
 Build Tiny Thieves Guild
-}
-
-STRING 54493
-{
-Download: https://github.com/tdauth/wowr/releases
 }
 
 STRING 54524
@@ -121333,11 +117347,6 @@ STRING 56259
 Prospecting
 }
 
-STRING 56267
-{
-Whales hunted (6)
-}
-
 STRING 56269
 // Units: n0M6 (Whale), Name (Name)
 {
@@ -121714,11 +117723,6 @@ STRING 56372
 // Items: I120 (Magical Gold Coin), Ubertip (Tooltip - Extended)
 {
 When throwing these magical gold coins, all emptied gold mines within a radius of 1000 are refilled.
-}
-
-STRING 56373
-{
-The Emerald Dream is accessible through a portal at Hyjal now!
 }
 
 STRING 56374
@@ -124219,11 +120223,6 @@ STRING 57477
 (High Elf)
 }
 
-STRING 57478
-{
-It is summer time!
-}
-
 STRING 57479
 // Items: I0LB (Tiny Gryphon Aviary), Description (Description)
 {
@@ -124324,26 +120323,6 @@ STRING 57495
 // Abilities: A245 (Build Tiny High Elf Castle), Name (Name)
 {
 Build Tiny High Elf Castle
-}
-
-STRING 57496
-{
-Fall!
-}
-
-STRING 57497
-{
-Spring!
-}
-
-STRING 57498
-{
-Weather!
-}
-
-STRING 57499
-{
-Stop Weather!
 }
 
 STRING 57500
@@ -124658,36 +120637,6 @@ STRING 57578
 Hire Sand Troll
 }
 
-STRING 57579
-{
-Noon!
-}
-
-STRING 57580
-{
-Morning!
-}
-
-STRING 57581
-{
-Evening!
-}
-
-STRING 57582
-{
-Midnight!
-}
-
-STRING 57583
-{
-Enabled time cycle!
-}
-
-STRING 57584
-{
-Disabled time cycle!
-}
-
 STRING 57585
 // Abilities: A24D (Examine Ground), Name (Name)
 {
@@ -124710,21 +120659,6 @@ STRING 57588
 // Abilities: A24D (Examine Ground), Ubertip (Tooltip - Normal - Extended)
 {
 Shows the terrain type of the target point.
-}
-
-STRING 57590
-{
-Enable seasons!
-}
-
-STRING 57591
-{
-Disable seasons!
-}
-
-STRING 57594
-{
-Credits
 }
 
 STRING 57599
@@ -124773,16 +120707,6 @@ STRING 57613
 // Upgrades: R0IJ (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
 Increases the damage and hit points of Corrupted Ancient Protectors.
-}
-
-STRING 57614
-{
-Environment
-}
-
-STRING 57615
-{
-The environment defines the visuals of the world like the sky, ambient sounds, time of day, calendar and weather.
 }
 
 STRING 57640
@@ -124959,11 +120883,6 @@ STRING 57678
 Fireflies
 }
 
-STRING 57679
-{
-No Fog!
-}
-
 STRING 57680
 // Destructibles: B00V (Ashenvale Snowy Tree Wall), Name (Name)
 {
@@ -125004,36 +120923,6 @@ STRING 57692
 // Abilities: A24G (Stone Form), EditorSuffix (Editor Suffix)
 {
 (Living Statue)
-}
-
-STRING 57700
-{
-Tomes are items which increase hero stats permanently. Hence, they are disabled by default to keep the game balanced. However, they can be enabled by a vote. This allows buying and crafting tomes as well as loading them via save codes.
-}
-
-STRING 57704
-{
-Lore
-}
-
-STRING 57705
-{
-The lore in this map is based on everything in the original map World of Warcraft Reborn which seems to be World of Warcraft Classic. The additional stuff from the Reforged version is mostly based on the Warcraft III campaigns and not World of Warcraft or any of its expansions since I have never really played World of Warcraft and the lore seems to be too much to know everything. I took most information from the campaign missions of the Reign of Chaos and Frozen Throne campaigns, so do not be disappointed if there is lots of stuff missing which exists in or different from World of Warcraft.|nBaradé
-}
-
-STRING 57706
-{
-Original lore from Reborn based on WoW Classic.
-}
-
-STRING 57707
-{
-Additional lore based on the Warcraft III campaigns.
-}
-
-STRING 57708
-{
-Does not follow the WoW Expansions.
 }
 
 STRING 57716
@@ -125112,36 +121001,6 @@ STRING 57744
 // Items: I14A (Deactivate Resurrection Stone), Ubertip (Tooltip - Extended)
 {
 The activating hero will be resurrected automatically at this stone after some time whenever the hero dies.
-}
-
-STRING 57791
-{
-Hero Abilities
-}
-
-STRING 57792
-{
-Hero Abilities can be built by female citizens. They your heroes to change their standard abilities.
-}
-
-STRING 57793
-{
-Can be built by female citizens.
-}
-
-STRING 57794
-{
-Change standard hero abilities.
-}
-
-STRING 57795
-{
-Alchemist Labs
-}
-
-STRING 57796
-{
-Alchemist Labs can be built by female citizens. They allow converting units into different races.
 }
 
 STRING 57801
@@ -127586,11 +123445,6 @@ STRING 58641
 The cup for the winner of the third place.
 }
 
-STRING 58642
-{
-Race Qualifications are now available in Kezan's Goblin Racing Organisation!
-}
-
 STRING 58669
 // Units: h03P (Clan Village), Ubertip (Tooltip - Extended)
 {
@@ -127657,16 +123511,6 @@ STRING 58734
 Permanently increases the Skill Points of the Hero by 1 when used.
 }
 
-STRING 58736
-{
-Spell Books
-}
-
-STRING 58737
-{
-Spell Books can be built by female citizens. They contain all learnable hero spells. Only reskillable heroes can learn them.
-}
-
 STRING 58739
 // Units: n0NK (Random Corpse), Name (Name)
 {
@@ -127683,26 +123527,6 @@ STRING 58741
 // Upgrades: R022 (Burning Oil), Name (Name)
 {
 Arcane Observatory
-}
-
-STRING 58742
-{
-Antimagic Wards
-}
-
-STRING 58743
-{
-Antimagic Wards can be built by female citizens. They block the enemy sight for the area around them. They also block enemy teleportation spells for this area and allow silencing enemy units.
-}
-
-STRING 58750
-{
-Dragon Roosts
-}
-
-STRING 58751
-{
-Dragon Roosts allow you to train all different types of dragons.
 }
 
 STRING 58760

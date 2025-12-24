@@ -3,9 +3,9 @@ InfoPanelIconArmorDivine=ReplaceableTextures\CommandButtons\ATTDivineArmorNew.bl
 InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmorNew.blp
 
 [FrameDef]
-ITEM_PAWN_TOOLTIP=TRIGSTR_1171
-KEY_QUESTS=TRIGSTR_42201
-QUESTS=TRIGSTR_42198
-QUESTSMAIN=TRIGSTR_42202
-QUESTSOPTIONAL=TRIGSTR_15016
+ITEM_PAWN_TOOLTIP=
+KEY_QUESTS=
+QUESTS=
+QUESTSMAIN=
+QUESTSOPTIONAL=
 
