@@ -5859,17 +5859,17 @@ Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n
 
 STRING 989
 {
-"-helpclan": Lists clan chat commands.
+"-helpclan": Listet Clan-Chat-Befehle auf.
 }
 
 STRING 990
 {
-"-helpai": Lists AI chat commands.
+"-helpai": Listet KI-Chat-Befehle auf.
 }
 
 STRING 991
 {
-"-victory"/"-novictory": Enables/disables victory conditions.
+"-victory"/"-novictory": Aktiviert/deaktiviert die Siegesbedingungen.
 }
 
 STRING 992
@@ -5890,13 +5890,13 @@ STRING 994
 }
 
 STRING 995
-// Abilities: A09F (Tome of Retraining), Name (Name)
+// Abilities: A09F (Foliant des Vergessens), Name (Name)
 {
-Tome of Retraining
+Foliant des Vergessens
 }
 
 STRING 996
-// Abilities: A09F (Tome of Retraining), EditorSuffix (Editor Suffix)
+// Abilities: A09F (Foliant des Vergessens), EditorSuffix (Editor Suffix)
 {
 (Skill Menu)
 }
@@ -5940,7 +5940,7 @@ G
 STRING 1003
 // Items: I07X (Random Class), Tip (Tooltip - Basic)
 {
-Random Class
+Zufällige Klasse
 }
 
 STRING 1004
@@ -43745,7 +43745,7 @@ Amphibisch
 
 STRING 10148
 {
-Demigod´s Remnants
+Überreste des Halbgottes
 }
 
 STRING 10149
@@ -43755,7 +43755,7 @@ The Faceless Ones of Azjul-Nerub have drawn the Lich-König´ interest in them. 
 
 STRING 10150
 {
-Demigod´s Horn
+Horn des Halbgottes
 }
 
 STRING 10151
@@ -46387,7 +46387,7 @@ Return to Lady Hederine to get your reward.
 
 STRING 10659
 {
-Find a corpse probe of the dead Cenarius in Ashenvale.
+Findet in Ashenvale eine Probe der Leiche des toten Cenarius.
 }
 
 STRING 10661
@@ -46504,12 +46504,12 @@ Players can purchase their own housings if it has been unlocked for their accoun
 
 STRING 10680
 {
-Bring the probe to Kel'Thuzad in Sonnenbrunnen Grove.
+Bringt die Probe zu Kel'Thuzad im Sonnenbrunnenhain.
 }
 
 STRING 10681
 {
-Find Cenarius horn in Ashenvale.
+Findet Cenarius' Horn in Ashenvale.
 }
 
 STRING 10682
@@ -121385,25 +121385,25 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Neu-Sturmwind.|r|n|cffffcc00Rohstoff
 STRING 55873
 // Units: h0WS (Buy Property Orgrimmar), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben.|n|n|cffffcc00Volk: Orc.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben.|n|n|cffffcc00Volk: Orcs.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55874
 // Units: h0WT (Buy Property Undercity), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Undead.|r|n|cffffcc00Rohstoff: Gunst.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Untote.|r|n|cffffcc00Rohstoff: Gunst.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55875
 // Units: h0WU (Buy Property Draktharon Keep), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Nerubian.|r|n|cffffcc00Rohstoff: Silber.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Neruber.|r|n|cffffcc00Rohstoff: Silber.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55876
 // Units: h0WV (Buy Property Terdrassil), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Night Elf.|r|n|cffffcc00Rohstoff: Früchte.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Nachtelfen.|r|n|cffffcc00Rohstoff: Früchte.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55877
@@ -121415,7 +121415,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Tauren.|r|n|cffffcc00Rohstoff: Gunst
 STRING 55878
 // Units: h0WX (Buy Property Gruul's Lair), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Ogre.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Oger.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55879
@@ -121433,7 +121433,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Naga.|r|n|cffffcc00Rohstoff: Wasser.
 STRING 55881
 // Units: h0X0 (Buy Property Ironforge), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Dwarf.|r|n|cffffcc00Rohstoff: Edelsteine.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Zwerge.|r|n|cffffcc00Rohstoff: Edelsteine.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55882
