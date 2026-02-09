@@ -2867,9 +2867,9 @@ Powerup Feed
 }
 
 STRING 496
-// Items: I089 (Ore Iron), Name (Name)
+// Items: I089 (Iron Ore), Name (Name)
 {
-Ore Iron
+Iron Ore
 }
 
 STRING 498
@@ -2951,9 +2951,9 @@ Train Lightning Elemental
 }
 
 STRING 511
-// Items: I089 (Ore Iron), Tip (Tooltip - Basic)
+// Items: I089 (Iron Ore), Tip (Tooltip - Basic)
 {
-Purchase Ore Iron
+Purchase Iron Ore
 }
 
 STRING 512
@@ -25886,7 +25886,7 @@ H
 }
 
 STRING 5430
-// Items: I089 (Ore Iron), Ubertip (Tooltip - Extended)
+// Items: I089 (Iron Ore), Ubertip (Tooltip - Extended)
 {
 Allows crafting items.
 }
@@ -25910,39 +25910,39 @@ H
 }
 
 STRING 5434
-// Items: I089 (Ore Iron), Description (Description)
+// Items: I089 (Iron Ore), Description (Description)
 {
 Allows crafting items.
 }
 
 STRING 5435
-// Items: I08A (Ore Gold), Name (Name)
+// Items: I08A (Gold Ore), Name (Name)
 {
-Ore Gold
+Gold Ore
 }
 
 STRING 5436
-// Items: I08A (Ore Gold), Tip (Tooltip - Basic)
+// Items: I08A (Gold Ore), Tip (Tooltip - Basic)
 {
-Purchase Ore Gold
+Purchase Gold Ore
 }
 
 STRING 5437
-// Items: I08A (Ore Gold), Ubertip (Tooltip - Extended)
+// Items: I08A (Gold Ore), Ubertip (Tooltip - Extended)
 {
 Allows crafting items.
 }
 
 STRING 5438
-// Items: I08A (Ore Gold), Description (Description)
+// Items: I08A (Gold Ore), Description (Description)
 {
 Allows crafting items.
 }
 
 STRING 5439
-// Items: I08B (Ore Silver), Name (Name)
+// Items: I08B (Silver Ore), Name (Name)
 {
-Ore Silver
+Silver Ore
 }
 
 STRING 5440
@@ -25952,9 +25952,9 @@ Upgrade to Kul Tiras Advanced Shipyard
 }
 
 STRING 5441
-// Items: I08B (Ore Silver), Tip (Tooltip - Basic)
+// Items: I08B (Silver Ore), Tip (Tooltip - Basic)
 {
-Purchase Ore Silver
+Purchase Silver Ore
 }
 
 STRING 5444
@@ -25976,13 +25976,13 @@ Altar of Magic
 }
 
 STRING 5458
-// Items: I08B (Ore Silver), Ubertip (Tooltip - Extended)
+// Items: I08B (Silver Ore), Ubertip (Tooltip - Extended)
 {
 Allows crafting items.
 }
 
 STRING 5459
-// Items: I08B (Ore Silver), Description (Description)
+// Items: I08B (Silver Ore), Description (Description)
 {
 Allows crafting items.
 }
@@ -39949,7 +39949,7 @@ STRING 8747
 STRING 8762
 // Items: I11X (Gold Drill), Ubertip (Tooltip - Extended)
 {
-Allows harvesting gold and increases attack damage against structures.|n|nAdds an additional item when picking up a respawning item of the following type:|n- Ore Gold|n- Gold Coins|n- Gold Bar
+Allows harvesting gold and increases attack damage against structures.|n|nAdds an additional item when picking up a respawning item of the following type:|n- Gold Ore|n- Gold Coins|n- Gold Bar
 }
 
 STRING 8763
@@ -105393,7 +105393,7 @@ STRING 49639
 STRING 49640
 // Items: I0W7 (Pickaxe), Ubertip (Tooltip - Extended)
 {
-Allows harvesting minerals and increases attack damage against structures. Minerals are:|n- Rock|n- Silver|n- Iron|n- Gemstones|n|nAdds an additional item when picking up a respawning item of the following type:|n- Rocks|n- Ore Iron|n- Ore Silver|n- Ore Gold
+Allows harvesting minerals and increases attack damage against structures. Minerals are:|n- Rock|n- Silver|n- Iron|n- Gemstones|n|nAdds an additional item when picking up a respawning item of the following type:|n- Rocks|n- Iron Ore|n- Silver Ore|n- Gold Ore
 }
 
 STRING 49641
