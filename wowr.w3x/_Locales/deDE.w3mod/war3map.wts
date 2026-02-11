@@ -110,7 +110,7 @@ STRING 18
 }
 
 STRING 19
-// Abilities: A034 (Hero Abilities Back), Name (Name)
+// Abilities: A034 (Heldenfähigkeiten Back), Name (Name)
 {
 Heldenfähigkeiten Zurück
 }
@@ -302,7 +302,7 @@ Heldenfähigkeiten Auto-Lernen
 }
 
 STRING 51
-// Abilities: A0V5 (Hero Abilities), EditorSuffix (Editor Suffix)
+// Abilities: A0V5 (Heldenfähigkeiten), EditorSuffix (Editor Suffix)
 {
 (Fähigkeiten)
 }
@@ -1724,7 +1724,7 @@ Erdmagier
 }
 
 STRING 288
-// Abilities: A176 (Mass Finger of Death), Name (Name)
+// Abilities: A176 (Massen-Todesfinger), Name (Name)
 {
 Todesfinger erlernen - [|cffffcc00Stufe %d|r]
 }
@@ -2623,7 +2623,7 @@ STRING 438
 }
 
 STRING 439
-// Abilities: A176 (Mass Finger of Death), EditorSuffix (Editor Suffix)
+// Abilities: A176 (Massen-Todesfinger), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -2713,7 +2713,7 @@ Ultravision
 STRING 454
 // Abilities: A0VL (Slot 1), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 455
@@ -3037,9 +3037,9 @@ Wechselt die Klasse zum Todesritter:|n- Schaden|n- Tote beleben|n- Schwächung
 }
 
 STRING 509
-// Abilities: A03E (Hero Abilities Next Page), Name (Name)
+// Abilities: A03E (Heldenfähigkeiten Next Page), Name (Name)
 {
-Hero Abilities Next Page
+Heldenfähigkeiten Next Page
 }
 
 STRING 510
@@ -3285,7 +3285,7 @@ STRING 549
 STRING 550
 // Units: h09Z (Void Elemental), Name (Name)
 {
-Power Ward
+Macht-Schutzzauber
 }
 
 STRING 551
@@ -3495,7 +3495,7 @@ STRING 584
 STRING 585
 // Abilities: A0VQ (Fähigkeitsstufe erhöhen), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 586
@@ -3798,7 +3798,7 @@ Sägewerk errichten
 }
 
 STRING 636
-// Units: o03C (Wyvern Roost), Name (Name)
+// Units: o03C (Flügeldrache Roost), Name (Name)
 {
 Flügeldrachen-Horst
 }
@@ -3810,13 +3810,13 @@ STRING 637
 }
 
 STRING 638
-// Units: o03C (Wyvern Roost), Tip (Tooltip - Basic)
+// Units: o03C (Flügeldrache Roost), Tip (Tooltip - Basic)
 {
 Flügeldrachen-Horst errichten
 }
 
 STRING 639
-// Units: o03D (Wyvern), Name (Name)
+// Units: o03D (Flügeldrache), Name (Name)
 {
 Flügeldrache
 }
@@ -3828,37 +3828,37 @@ STRING 640
 }
 
 STRING 641
-// Units: o03D (Wyvern), Tip (Tooltip - Basic)
+// Units: o03D (Flügeldrache), Tip (Tooltip - Basic)
 {
 Flügeldrachen ausbilden
 }
 
 STRING 642
-// Units: o03D (Wyvern), Ubertip (Tooltip - Extended)
+// Units: o03D (Flügeldrache), Ubertip (Tooltip - Extended)
 {
 Highly mobile flying creature. Excellent at scouting. |n|n|cffffcc00Attacks air units.|r
 }
 
 STRING 643
-// Units: o03E (Spirit Wyvern), Name (Name)
+// Units: o03E (Spirit Flügeldrache), Name (Name)
 {
 Geisterflügeldrache
 }
 
 STRING 644
-// Units: o03C (Wyvern Roost), EditorSuffix (Name - Editor Suffix)
+// Units: o03C (Flügeldrache Roost), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
 
 STRING 645
-// Units: o03E (Spirit Wyvern), Tip (Tooltip - Basic)
+// Units: o03E (Spirit Flügeldrache), Tip (Tooltip - Basic)
 {
 Geisterflügeldrachen ausbilden
 }
 
 STRING 646
-// Units: o03E (Spirit Wyvern), Ubertip (Tooltip - Extended)
+// Units: o03E (Spirit Flügeldrache), Ubertip (Tooltip - Extended)
 {
 Highly mobile flying creature. Excellent at scouting. Causes magic damage. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -3870,13 +3870,13 @@ Geisterhaus
 }
 
 STRING 648
-// Units: o03D (Wyvern), EditorSuffix (Name - Editor Suffix)
+// Units: o03D (Flügeldrache), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
 
 STRING 649
-// Units: o03E (Spirit Wyvern), EditorSuffix (Name - Editor Suffix)
+// Units: o03E (Spirit Flügeldrache), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
@@ -4280,9 +4280,9 @@ STRING 717
 }
 
 STRING 718
-// Abilities: A03G (Hero Abilities Previous Page), Name (Name)
+// Abilities: A03G (Heldenfähigkeiten Previous Page), Name (Name)
 {
-Hero Abilities Previous Page
+Heldenfähigkeiten Previous Page
 }
 
 STRING 719
@@ -4354,7 +4354,7 @@ STRING 729
 STRING 730
 // Abilities: A0VS (Ability Placeholder), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 731
@@ -4730,7 +4730,7 @@ The key to your own house. Use it to enter or leave your personal house. Your pe
 STRING 794
 // Items: I191 (Demolition Expert), Ubertip (Tooltip - Extended)
 {
-Craft explosives to demolish enemy units and structures:|n- Goblin Land Mines|n- Sprengstoff-Fasss, Goblin-Dynamit and Goblin Burning Grenades|n- Randalier|n- Sledge Hammer|n- TNT-Katapult|n- Tiny Nukleares Silo
+Craft explosives to demolish enemy units and structures:|n- Goblin Land Mines|n- Sprengstoff-Fasss, Goblin-Dynamit and Goblin Burning Grenades|n- Randalier|n- Vorschlaghammer|n- TNT-Katapult|n- Tiny Nukleares Silo
 }
 
 STRING 795
@@ -5163,7 +5163,7 @@ STRING 871
 }
 
 STRING 872
-// Items: I193 (Sledge Hammer), Name (Name)
+// Items: I193 (Vorschlaghammer), Name (Name)
 {
 Vorschlaghammer
 }
@@ -5786,13 +5786,13 @@ Trains Priests, and Zauberinnen. |nAlso contains spell upgrades for Priests and 
 }
 
 STRING 977
-// Items: I193 (Sledge Hammer), Description (Description)
+// Items: I193 (Vorschlaghammer), Description (Description)
 {
 Powerful hammer to destroy structures.
 }
 
 STRING 978
-// Items: I193 (Sledge Hammer), Ubertip (Tooltip - Extended)
+// Items: I193 (Vorschlaghammer), Ubertip (Tooltip - Extended)
 {
 Powerful hammer to destroy structures. Multiplies the damage against structures by <A025,DataA1> and increases it by <A026,DataA1,%> %.
 }
@@ -5981,7 +5981,7 @@ Picks a random class for your hero which replaces all abilities.
 STRING 1010
 // Abilities: A0VV (Slot 2), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1011
@@ -6168,9 +6168,9 @@ Portal aktiviert.
 }
 
 STRING 1042
-// Items: I193 (Sledge Hammer), Tip (Tooltip - Basic)
+// Items: I193 (Vorschlaghammer), Tip (Tooltip - Basic)
 {
-Purchase Sledge Hammer
+Vorschlaghammer erwerben
 }
 
 STRING 1043
@@ -6394,51 +6394,51 @@ Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, 
 }
 
 STRING 1080
-// Abilities: A0A7 (Random Spell), Name (Name)
+// Abilities: A0A7 (Zufälliger Zauber), Name (Name)
 {
-Random Spell
+Zufälliger Zauber
 }
 
 STRING 1081
-// Abilities: A0A7 (Random Spell), Tip (Tooltip - Normal)
+// Abilities: A0A7 (Zufälliger Zauber), Tip (Tooltip - Normal)
 {
-Random Spell
+Zufälliger Zauber
 }
 
 STRING 1082
-// Abilities: A0A7 (Random Spell), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0A7 (Zufälliger Zauber), Ubertip (Tooltip - Normal - Extended)
 {
-Picks a random spell for this slot.
+Wählt für diesen Slot einen zufälligen Zauber.
 }
 
 STRING 1083
 // Abilities: A0VZ (Back), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1084
 // Units: H0Y0 (Rogue), Tip (Tooltip - Basic)
 {
-Summon Rogue
+Schurken beschwören
 }
 
 STRING 1085
 // Abilities: A0W0 (Fähigkeitsstufe verringern), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1086
-// Abilities: A0AF (Hero Abilities Random Spell), Name (Name)
+// Abilities: A0AF (Heldenfähigkeiten Zufälliger Zauber), Name (Name)
 {
-Hero Abilities Random Spell
+Heldenfähigkeiten Zufälliger Zauber
 }
 
 STRING 1087
 // Abilities: A0W3 (Placeholder Hero Ability), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1088
@@ -6575,7 +6575,7 @@ STRING 1109
 STRING 1111
 // Abilities: A08Y (Random Class), Name (Name)
 {
-Random Class
+Zufällige Klasse
 }
 
 STRING 1112
@@ -6597,7 +6597,7 @@ Primary structure, used to train Elementardieners and receive gathered resources
 STRING 1115
 // Abilities: A08Y (Random Class), Tip (Tooltip - Normal)
 {
-Random Class
+Zufällige Klasse
 }
 
 STRING 1116
@@ -6792,9 +6792,9 @@ Legendäres Artefakt
 }
 
 STRING 1149
-// Abilities: A0AE (Hero Abilities Random Class), Name (Name)
+// Abilities: A0AE (Heldenfähigkeiten Random Class), Name (Name)
 {
-Hero Abilities Random Class
+Heldenfähigkeiten Random Class
 }
 
 STRING 1150
@@ -6830,19 +6830,19 @@ Y
 STRING 1155
 // Abilities: A0W4 (Slot 3), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1156
-// Abilities: A0DH (Hero Abilities Next Spell Variation), Name (Name)
+// Abilities: A0DH (Heldenfähigkeiten Next Spell Variation), Name (Name)
 {
-Hero Abilities Next Spell Variation
+Heldenfähigkeiten Next Spell Variation
 }
 
 STRING 1157
 // Abilities: A0WG (Slot 4), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1158
@@ -6890,7 +6890,7 @@ Gives the Hero Divine armor for <AIvl,Dur1> seconds when used.
 STRING 1165
 // Items: pnvl (Potion of Lesser Invulnerability), Description (Description)
 {
-Gives the Hero Divine armor.
+Gibt dem Helden göttliche Rüstung.
 }
 
 STRING 1166
@@ -6906,15 +6906,15 @@ F
 }
 
 STRING 1168
-// Units: o003 (Wyvern Mount), Tip (Tooltip - Basic)
+// Units: o003 (Flügeldrachen-Reittier), Tip (Tooltip - Basic)
 {
-Wyvern Mount
+Flügeldrachen-Reittier
 }
 
 STRING 1169
-// Units: u004 (Frost Wyrm Mount), Tip (Tooltip - Basic)
+// Units: u004 (Frost-Wyrm-Reittier), Tip (Tooltip - Basic)
 {
-Frost Wyrm Mount
+Frost-Wyrm-Reittier
 }
 
 STRING 1170
@@ -7361,9 +7361,9 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 22|r]
 }
 
 STRING 1244
-// Items: fwss (Frost Wyrm Skull Shield), Ubertip (Tooltip - Extended)
+// Items: fwss (Frost-Wyrm Skull Shield), Ubertip (Tooltip - Extended)
 {
-This ancient Frost Wyrm skull has been equipped with handles, turning it into a powerful shield. Increases armor by 7 when worn, grants Unheilige Aura and reduces Magic damage dealt to the Hero by <AIsr,DataB1,%>%.
+This ancient Frost-Wyrm skull has been equipped with handles, turning it into a powerful shield. Increases armor by 7 when worn, grants Unheilige Aura and reduces Magic damage dealt to the Hero by <AIsr,DataB1,%>%.
 }
 
 STRING 1245
@@ -7908,7 +7908,7 @@ Legendäre Gegenstände erzeugt!
 STRING 1335
 // Items: I08Z (Unique - Sulfuras), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nThis is the legendary hammer of the Fire Lord, Ragnaros. |nGrants +30 fire attack damage, summons 2 Core Hounds, gives the hero the passive ability Verbrennen.
+|cff8b00ffEinzigartig|r|nThis is the legendary hammer of the Fire Lord, Ragnaros. |nGrants +30 fire attack damage, summons 2 Kernhunds, gives the hero the passive ability Verbrennen.
 }
 
 STRING 1336
@@ -9708,7 +9708,7 @@ Winziges Rathaus erwerben
 }
 
 STRING 1639
-// Units: h09R (Fire Mage), Hotkey (Hotkey)
+// Units: h09R (Feuermagier), Hotkey (Hotkey)
 {
 K
 }
@@ -10242,7 +10242,7 @@ STRING 1727
 STRING 1728
 // Abilities: A0WX (Previous Page), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1729
@@ -10262,9 +10262,9 @@ However, our addiction to magic and the destruction of the Sonnenbrunnen have we
 }
 
 STRING 1732
-// Abilities: A03O (Hero Abilities Matching Class), Name (Name)
+// Abilities: A03O (Heldenfähigkeiten Matching Class), Name (Name)
 {
-Hero Abilities Matching Class
+Heldenfähigkeiten Matching Class
 }
 
 STRING 1733
@@ -10288,7 +10288,7 @@ STRING 1735
 STRING 1736
 // Abilities: A0X1 (Slot 6), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 1737
@@ -12859,7 +12859,7 @@ Quiraj-Prophet
 }
 
 STRING 2271
-// Units: n07T (Core Hound), EditorSuffix (Name - Editor Suffix)
+// Units: n07T (Kernhund), EditorSuffix (Name - Editor Suffix)
 {
 (Unhold)
 }
@@ -14353,9 +14353,9 @@ Parry
 }
 
 STRING 2554
-// Abilities: A03S (Hero Abilities Placeholder), Name (Name)
+// Abilities: A03S (Heldenfähigkeiten Placeholder), Name (Name)
 {
-Hero Abilities Placeholder
+Heldenfähigkeiten Placeholder
 }
 
 STRING 2555
@@ -15555,7 +15555,7 @@ C
 STRING 2855
 // Abilities: A0X2 (Slot 7), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 2856
@@ -15571,7 +15571,7 @@ STRING 2857
 }
 
 STRING 2858
-// Abilities: A03T (Hero Abilities Fähigkeitsstufe erhöhen), Name (Name)
+// Abilities: A03T (Heldenfähigkeiten Fähigkeitsstufe erhöhen), Name (Name)
 {
 Heldenfähigkeiten Fähigkeitsstufe erhöhen
 }
@@ -15583,9 +15583,9 @@ T
 }
 
 STRING 2860
-// Abilities: A0XJ (Hero Abilities Hidden), EditorSuffix (Editor Suffix)
+// Abilities: A0XJ (Heldenfähigkeiten Hidden), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 2861
@@ -15601,7 +15601,7 @@ STRING 2862
 }
 
 STRING 2863
-// Abilities: A03X (Hero Abilities Fähigkeitsstufe verringern), Name (Name)
+// Abilities: A03X (Heldenfähigkeiten Fähigkeitsstufe verringern), Name (Name)
 {
 Heldenfähigkeiten Fähigkeitsstufe verringern
 }
@@ -16743,7 +16743,7 @@ Powerful Hero, adept at crushing the enemy. Can learn Telekinese, Massenlangsam,
 STRING 3139
 // Abilities: A0XM (Slot 8), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 3141
@@ -17473,7 +17473,7 @@ L
 }
 
 STRING 3315
-// Units: n0E3 (Hero Abilities), Hotkey (Hotkey)
+// Units: n0E3 (Heldenfähigkeiten), Hotkey (Hotkey)
 {
 L
 }
@@ -17917,7 +17917,7 @@ STRING 3388
 }
 
 STRING 3389
-// Units: n07T (Core Hound), Hotkey (Hotkey)
+// Units: n07T (Kernhund), Hotkey (Hotkey)
 {
 C
 }
@@ -25582,7 +25582,7 @@ Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. C
 }
 
 STRING 5141
-// Units: nnsg (Spawning Grounds), Ubertip (Tooltip - Extended)
+// Units: nnsg (Brutstättes), Ubertip (Tooltip - Extended)
 {
 Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. Also contains the Einschnüren upgrade.
 }
@@ -25852,15 +25852,15 @@ Errichtet eine Korallenbank.
 }
 
 STRING 5190
-// Items: I0DZ (Tiny Spawning Grounds), Name (Name)
+// Items: I0DZ (Tiny Brutstättes), Name (Name)
 {
-Tiny Spawning Grounds
+Tiny Brutstättes
 }
 
 STRING 5191
-// Items: I0DZ (Tiny Spawning Grounds), Description (Description)
+// Items: I0DZ (Tiny Brutstättes), Description (Description)
 {
-Creates a Spawning Grounds.
+Creates a Brutstättes.
 }
 
 STRING 5192
@@ -25876,15 +25876,15 @@ B
 }
 
 STRING 5194
-// Items: I0DZ (Tiny Spawning Grounds), Ubertip (Tooltip - Extended)
+// Items: I0DZ (Tiny Brutstättes), Ubertip (Tooltip - Extended)
 {
-Creates a Spawning Grounds at a target location.
+Creates a Brutstättes at a target location.
 }
 
 STRING 5196
-// Items: I0DZ (Tiny Spawning Grounds), Tip (Tooltip - Basic)
+// Items: I0DZ (Tiny Brutstättes), Tip (Tooltip - Basic)
 {
-Purchase Tiny Spawning Grounds
+Purchase Tiny Brutstättes
 }
 
 STRING 5198
@@ -26056,9 +26056,9 @@ Korallenbank errichten
 }
 
 STRING 5228
-// Abilities: A0CT (Build Tiny Spawning Grounds), Name (Name)
+// Abilities: A0CT (Build Tiny Brutstättes), Name (Name)
 {
-Build Tiny Spawning Grounds
+Build Tiny Brutstättes
 }
 
 STRING 5233
@@ -30461,7 +30461,7 @@ T
 STRING 6079
 // Abilities: A205 (Demolish), EditorSuffix (Editor Suffix)
 {
-(Gegenstand) (Sledge Hammer)
+(Gegenstand) (Vorschlaghammer)
 }
 
 STRING 6080
@@ -30473,7 +30473,7 @@ STRING 6080
 STRING 6081
 // Abilities: A206 (Sundering Blades), EditorSuffix (Editor Suffix)
 {
-(Sledge Hammer)
+(Vorschlaghammer)
 }
 
 STRING 6082
@@ -32688,7 +32688,7 @@ B
 }
 
 STRING 6704
-// Abilities: A034 (Hero Abilities Back), EditorSuffix (Editor Suffix)
+// Abilities: A034 (Heldenfähigkeiten Back), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -33406,13 +33406,13 @@ Der Skin eines Dorfbewohner Männlich 2.
 }
 
 STRING 6932
-// Units: n0E3 (Hero Abilities), Name (Name)
+// Units: n0E3 (Heldenfähigkeiten), Name (Name)
 {
 B
 }
 
 STRING 6933
-// Abilities: A0V5 (Hero Abilities), Name (Name)
+// Abilities: A0V5 (Heldenfähigkeiten), Name (Name)
 {
 B
 }
@@ -33442,13 +33442,13 @@ Greifen-Reittier
 }
 
 STRING 6938
-// Units: o003 (Wyvern Mount), Name (Name)
+// Units: o003 (Flügeldrachen-Reittier), Name (Name)
 {
 Flügeldrachenreittier
 }
 
 STRING 6939
-// Units: u004 (Frost Wyrm Mount), Name (Name)
+// Units: u004 (Frost-Wyrm-Reittier), Name (Name)
 {
 Frost-Wyrm-Reittier
 }
@@ -33496,7 +33496,7 @@ STRING 6946
 }
 
 STRING 6947
-// Abilities: A0V5 (Hero Abilities), Tip (Tooltip - Normal)
+// Abilities: A0V5 (Heldenfähigkeiten), Tip (Tooltip - Normal)
 {
 Heldenfähigkeiten
 }
@@ -33561,7 +33561,7 @@ P
 }
 
 STRING 6958
-// Abilities: A0V5 (Hero Abilities), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0V5 (Heldenfähigkeiten), Ubertip (Tooltip - Normal - Extended)
 {
 Öffnet das Fähigkeiten-Menü, mit dessen Hilfe Sie unbenutzte Punkte den Fähigkeiten eines Helden zuweisen können.
 }
@@ -36766,7 +36766,7 @@ Tiny Banner Bronzebeard
 STRING 7792
 // Units: h0U5 (Spire), Ubertip (Tooltip - Extended)
 {
-Basic observation tower. Has no attack, but can be upgraded into a Guard Spire, an Arcane Spire, or a Siege Spire. Can learn the Magic Sentry ability.
+Basic observation tower. Has no attack, but can be upgraded into a Wachturm, an Arkaner Turm, or a Siege Spire. Can learn the Magic Sentry ability.
 }
 
 STRING 7793
@@ -36830,7 +36830,7 @@ O
 }
 
 STRING 7804
-// Abilities: A03E (Hero Abilities Next Page), EditorSuffix (Editor Suffix)
+// Abilities: A03E (Heldenfähigkeiten Next Page), EditorSuffix (Editor Suffix)
 {
 M
 }
@@ -36920,15 +36920,15 @@ STRING 7818
 }
 
 STRING 7819
-// Units: h01E (Arcane Spire), Name (Name)
+// Units: h01E (Arkaner Turm), Name (Name)
 {
-Arcane Spire
+Arkaner Turm
 }
 
 STRING 7820
-// Units: h01E (Arcane Spire), Tip (Tooltip - Basic)
+// Units: h01E (Arkaner Turm), Tip (Tooltip - Basic)
 {
-Ausbau zum Arcane Spire
+Ausbau zum Arkanen Turm
 }
 
 STRING 7821
@@ -36938,15 +36938,15 @@ Ein herzlicher Chaos-Orc-Bürger. Hat eine Lebensregenerations-Aura.
 }
 
 STRING 7822
-// Units: h01F (Guard Spire), Name (Name)
+// Units: h01F (Wachturm), Name (Name)
 {
-Guard Spire
+Wachturm
 }
 
 STRING 7823
-// Units: h01F (Guard Spire), Tip (Tooltip - Basic)
+// Units: h01F (Wachturm), Tip (Tooltip - Basic)
 {
-Ausbau zum Guard Spire
+Ausbau zum Wachturm
 }
 
 STRING 7824
@@ -37024,7 +37024,7 @@ Naga-Bürgerin anheuern
 STRING 7836
 // Upgrades: R029 (Magic Sentry), Ubertip (Tooltip - Extended)
 {
-Your units won't die in Maelstrom anymore.
+Ihre Einheiten werden im Maelstrom nicht mehr sterben.
 }
 
 STRING 7837
@@ -37058,7 +37058,7 @@ Nachtelfen-Bürgerin anheuern
 }
 
 STRING 7842
-// Units: o03E (Spirit Wyvern), Hotkey (Hotkey)
+// Units: o03E (Spirit Flügeldrache), Hotkey (Hotkey)
 {
 P
 }
@@ -37238,7 +37238,7 @@ Heavy ranged unit can cast Verkrüppeln and Feuerregen. |n|n|cffffcc00Greift Lan
 }
 
 STRING 7872
-// Units: h09P (Arcane Blacksmith), Name (Name)
+// Units: h09P (Arkane Schmiede), Name (Name)
 {
 Arkane Schmiede
 }
@@ -37328,9 +37328,9 @@ Steinfragment des Chaos erwerben
 }
 
 STRING 7887
-// Units: h09P (Arcane Blacksmith), Tip (Tooltip - Basic)
+// Units: h09P (Arkane Schmiede), Tip (Tooltip - Basic)
 {
-Build Arcane Blacksmith
+Arkane Schmiede errichten
 }
 
 STRING 7888
@@ -37360,13 +37360,13 @@ Flutwächter
 STRING 7892
 // Items: I029 (Flutwächter), Description (Description)
 {
-Builds a Flutwächter.
+Errichtet einen Flutwächter.
 }
 
 STRING 7893
 // Items: I029 (Flutwächter), Ubertip (Tooltip - Extended)
 {
-Creates a Flutwächter at a target location.
+Errichtet am Zielort einen Flutwächter.
 }
 
 STRING 7894
@@ -37384,7 +37384,7 @@ STRING 7895
 STRING 7900
 // Units: h09G (Sand Elemental), Tip (Tooltip - Basic)
 {
-Train Sand-Elementargeist
+Sand-Elementargeist ausbilden
 }
 
 STRING 7901
@@ -37474,7 +37474,7 @@ Zauberer
 STRING 7915
 // Units: h077 (Wizard), Tip (Tooltip - Basic)
 {
-Train Zauberer
+Zauberer ausbilden
 }
 
 STRING 7916
@@ -37484,15 +37484,15 @@ Tiny Banner Wildhammer
 }
 
 STRING 7917
-// Units: h09Q (Pikeman), Name (Name)
+// Units: h09Q (Pikenier), Name (Name)
 {
-Pikeman
+Pikenier
 }
 
 STRING 7918
-// Units: h09Q (Pikeman), Tip (Tooltip - Basic)
+// Units: h09Q (Pikenier), Tip (Tooltip - Basic)
 {
-Train Pikeman
+Pikenier ausbilden
 }
 
 STRING 7919
@@ -37502,19 +37502,19 @@ STRING 7919
 }
 
 STRING 7920
-// Units: h09R (Fire Mage), Name (Name)
+// Units: h09R (Feuermagier), Name (Name)
 {
-Fire Mage
+Feuermagier
 }
 
 STRING 7921
-// Units: h09R (Fire Mage), Tip (Tooltip - Basic)
+// Units: h09R (Feuermagier), Tip (Tooltip - Basic)
 {
-Train Fire Mage
+Feuermagier ausbilden
 }
 
 STRING 7922
-// Units: h09P (Arcane Blacksmith), EditorSuffix (Name - Editor Suffix)
+// Units: h09P (Arkane Schmiede), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -37823,21 +37823,21 @@ Build Tiny Banner Night Elf
 }
 
 STRING 7991
-// Abilities: A0XW (Rotate), Name (Name)
+// Abilities: A0XW (Drehen), Name (Name)
 {
-Rotate
+Drehen
 }
 
 STRING 7992
-// Abilities: A0XW (Rotate), Tip (Tooltip - Normal)
+// Abilities: A0XW (Drehen), Tip (Tooltip - Normal)
 {
-Rotate
+Drehen
 }
 
 STRING 7993
-// Abilities: A0XW (Rotate), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Drehen), Ubertip (Tooltip - Normal - Extended)
 {
-Rotates the unit by 15 degrees.
+Drehens the unit by 15 degrees.
 }
 
 STRING 7994
@@ -37885,7 +37885,7 @@ Kapitän
 STRING 8001
 // Items: I19F (Tiny Moon), Description (Description)
 {
-Creates a Moon.
+Errichtet einen Mond.
 }
 
 STRING 8002
@@ -37909,7 +37909,7 @@ Ein Buch, das Kapitänszauber enthält.
 STRING 8005
 // Items: I081 (Book of Captain), Tip (Tooltip - Basic)
 {
-Purchase Buch des Kapitäns
+Buch des Kapitäns erwerben
 }
 
 STRING 8006
@@ -37969,7 +37969,7 @@ STRING 8014
 STRING 8015
 // Abilities: A0JM (Summon Captain Ship), Name (Name)
 {
-Summon Kapitänsschiff
+Kapitänsschiff beschwören
 }
 
 STRING 8016
@@ -39618,7 +39618,7 @@ M
 }
 
 STRING 8338
-// Abilities: A03G (Hero Abilities Previous Page), EditorSuffix (Editor Suffix)
+// Abilities: A03G (Heldenfähigkeiten Previous Page), EditorSuffix (Editor Suffix)
 {
 M
 }
@@ -39893,13 +39893,13 @@ STRING 8383
 }
 
 STRING 8384
-// Units: h01E (Arcane Spire), EditorSuffix (Name - Editor Suffix)
+// Units: h01E (Arkaner Turm), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
 
 STRING 8385
-// Units: h01F (Guard Spire), EditorSuffix (Name - Editor Suffix)
+// Units: h01F (Wachturm), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -40090,7 +40090,7 @@ Sperrfeuer
 }
 
 STRING 8426
-// Abilities: A03O (Hero Abilities Matching Class), EditorSuffix (Editor Suffix)
+// Abilities: A03O (Heldenfähigkeiten Matching Class), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -40959,13 +40959,13 @@ STRING 8597
 }
 
 STRING 8599
-// Abilities: A0XJ (Hero Abilities Hidden), Name (Name)
+// Abilities: A0XJ (Heldenfähigkeiten Hidden), Name (Name)
 {
 B
 }
 
 STRING 8600
-// Abilities: A03S (Hero Abilities Placeholder), EditorSuffix (Editor Suffix)
+// Abilities: A03S (Heldenfähigkeiten Placeholder), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -40989,13 +40989,13 @@ B
 }
 
 STRING 8604
-// Abilities: A03T (Hero Abilities Fähigkeitsstufe erhöhen), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Heldenfähigkeiten Fähigkeitsstufe erhöhen), EditorSuffix (Editor Suffix)
 {
 B
 }
 
 STRING 8605
-// Units: h09Q (Pikeman), EditorSuffix (Name - Editor Suffix)
+// Units: h09Q (Pikenier), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -41030,13 +41030,13 @@ E
 }
 
 STRING 8612
-// Units: h09R (Fire Mage), Ubertip (Tooltip - Extended)
+// Units: h09R (Feuermagier), Ubertip (Tooltip - Extended)
 {
 Damaging spellcaster. Can initially cast Feuerblitz. Can also learn Feuerregen and Feuer-Elementargeist beschwören. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 8613
-// Units: h09R (Fire Mage), Casterupgradetip (Caster Upgrade Tips)
+// Units: h09R (Feuermagier), Casterupgradetip (Caster Upgrade Tips)
 {
 - Feuerblitz,- Feuerblitz|n- Feuerregen,- Feuerblitz|n- Feuerregen|n- Feuer-Elementargeist beschwören
 }
@@ -41096,7 +41096,7 @@ C
 }
 
 STRING 8623
-// Units: h09Q (Pikeman), Ubertip (Tooltip - Extended)
+// Units: h09Q (Pikenier), Ubertip (Tooltip - Extended)
 {
 Versatile foot soldier. Can learn the Schmetter-Angriff ability. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -41110,19 +41110,19 @@ Medium ranged unit that hurls shadow magic. Can cast Tote erwecken and Aas-Schwa
 STRING 8625
 // Abilities: A0OQ (Firebolt), EditorSuffix (Editor Suffix)
 {
-(Fire Mage) (Dalaran)
+(Feuermagier) (Dalaran)
 }
 
 STRING 8626
 // Abilities: A0OR (Rain of Fire), EditorSuffix (Editor Suffix)
 {
-(Fire Mage) (Dalaran)
+(Feuermagier) (Dalaran)
 }
 
 STRING 8627
 // Abilities: A110 (Cleaving Attack), EditorSuffix (Editor Suffix)
 {
-(Dalaran) (Pikeman)
+(Dalaran) (Pikenier)
 }
 
 STRING 8628
@@ -41653,7 +41653,7 @@ The grain has been plagued by the Undead Scourge. Villagers are converted into U
 }
 
 STRING 8747
-// Abilities: A03X (Hero Abilities Fähigkeitsstufe verringern), EditorSuffix (Editor Suffix)
+// Abilities: A03X (Heldenfähigkeiten Fähigkeitsstufe verringern), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -43048,7 +43048,7 @@ Q
 }
 
 STRING 9869
-// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Heldenfähigkeiten), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43184,7 +43184,7 @@ STRING 9999
 }
 
 STRING 10000
-// Abilities: A0A7 (Random Spell), EditorSuffix (Editor Suffix)
+// Abilities: A0A7 (Zufälliger Zauber), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -43415,7 +43415,7 @@ The Loreamster uses his knowledge to create a Arcane Scroll.
 
 STRING 10084
 {
-The time to strike at the Lich-König is coming near. But before, a final step is needed. There is a mighty Frost Wyrm called Sapphiron who watches every movement in and out of Eiskrone. Lord Illidan requires you to destroy it in order to get to the Eiskrone Glacier undetected ! The Dragon is however protected by a spell that prevents him from being harmed in any way. Lady Vashj has created a special Spell that will dispel the protection of the Frost Wyrm and make it vulnerable. The quest is to travel to Eiskrone, find Sapphiron´s Lair, use the magic scroll near the Dragon and after the invulnerability is dispelled, kill it. Afterwards return the creature´s head to Lord Illidan. This time Sapphiron stays dead !
+The time to strike at the Lich-König is coming near. But before, a final step is needed. There is a mighty Frost-Wyrm called Sapphiron who watches every movement in and out of Eiskrone. Lord Illidan requires you to destroy it in order to get to the Eiskrone Glacier undetected ! The Dragon is however protected by a spell that prevents him from being harmed in any way. Lady Vashj has created a special Spell that will dispel the protection of the Frost-Wyrm and make it vulnerable. The quest is to travel to Eiskrone, find Sapphiron´s Lair, use the magic scroll near the Dragon and after the invulnerability is dispelled, kill it. Afterwards return the creature´s head to Lord Illidan. This time Sapphiron stays dead !
 }
 
 STRING 10085
@@ -43702,7 +43702,7 @@ Der Skin von Arthas benutzt Frostmourne.|n|n|cffffcc00Beschränkt auf Benutzer B
 }
 
 STRING 10141
-// Abilities: A0AE (Hero Abilities Random Class), EditorSuffix (Editor Suffix)
+// Abilities: A0AE (Heldenfähigkeiten Random Class), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -44807,7 +44807,7 @@ Goblin-Erfindung
 
 STRING 10332
 {
-Chen needs a special invention from the Goblins for constructing his big brewery. Travel to Kezan, buy a Goblin Blaster and return it to Chen.
+Chen needs a special invention from the Goblins for constructing his big brewery. Travel to Kezan, buy a Goblin-Blaster and return it to Chen.
 }
 
 STRING 10333
@@ -47157,7 +47157,7 @@ The Sprengmeister uses his knowledge to summon Randaliers.
 STRING 10873
 // Abilities: A204 (Demolishing - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Sprengmeister uses his knowledge to craft a Sledge Hammer.
+The Sprengmeister uses his knowledge to craft a Vorschlaghammer.
 }
 
 STRING 10874
@@ -47897,7 +47897,7 @@ E
 }
 
 STRING 11033
-// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A176 (Massen-Todesfinger), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48095,7 +48095,7 @@ Goblin-Alchimist ausbilden
 }
 
 STRING 11082
-// Abilities: A0CC (Replenish Mechanical Units), EditorSuffix (Editor Suffix)
+// Abilities: A0CC (Mechanische Einheiten auffüllen), EditorSuffix (Editor Suffix)
 {
 (Goblin-Dampfwalze)
 }
@@ -50886,62 +50886,62 @@ STRING 12005
 
 STRING 12006
 {
-Get ingredients from the World Tree next to Malfurion.
+Besorgt die Zutaten vom Weltenbaum in der Nähe von Malfurion.
 }
 
 STRING 12007
 {
-Bring the ingredients to Chen in Pandaria.
+Bringt die Zutaten zu Chen auf Pandaria.
 }
 
 STRING 12008
 {
-Buy a Goblin Blaster on Kezan.
+Kauf einen Goblin-Blaster auf Kezan.
 }
 
 STRING 12009
 {
-Bring the Goblin Blaster to Chen on Pandaria.
+Bringt den Goblin-Blaster zu Chen auf Pandaria.
 }
 
 STRING 12010
 {
-Kill the herald on Pandaria.
+Tötet den Herold auf Pandaria.
 }
 
 STRING 12011
 {
-Bring the dropped conditions to Chen on Pandaria.
+Bringt die fallen gelassenen Bedingungen zu Chen auf Pandaria.
 }
 
 STRING 12012
 {
-Kill the director of the Goblin Bank on Kezan.
+Tötet den Direktor der Goblin-Bank auf Kezan.
 }
 
 STRING 12013
 {
-Bring the dropped bag of gold to Chen on Pandaria.
+Bringt den fallen gelassenen Goldbeutel zu Chen auf Pandaria.
 }
 
 STRING 12014
 {
-Get the artifact from Kil´Jaeden in the Tomb of Sargeras near the Maelstrom.
+Bersorgt das Artefakt von Kil´Jaeden im Grab von Sargeras nahe des Maelstroms.
 }
 
 STRING 12015
 {
-Bring the artifact to Lord Illidan in Nazjatar.
+Bringt das Artefakt zu Lord Illidan in Nazjatar.
 }
 
 STRING 12016
 {
-Capture Maiev in Versunkene Ruinen with Kael's scroll.
+Fangt Maiev in den Versunkenen Ruinen mit Kaels Spruchrolle.
 }
 
 STRING 12017
 {
-Return the captured Maiev to Lord Illidan in Nazjatar.
+Bringt die gefangene Maiev zurück zu Lord Illidan in Nazjatar.
 }
 
 STRING 12018
@@ -50951,7 +50951,7 @@ Use the magic scroll in Sapphiron´s Lair in Eiskrone.
 
 STRING 12019
 {
-Kill Sapphiron.
+Tötet Sapphiron.
 }
 
 STRING 12020
@@ -52572,9 +52572,9 @@ Slot 1
 }
 
 STRING 12340
-// Abilities: A0AF (Hero Abilities Random Spell), EditorSuffix (Editor Suffix)
+// Abilities: A0AF (Heldenfähigkeiten Zufälliger Zauber), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 12342
@@ -52616,7 +52616,7 @@ Fähigkeitsstufe erhöhen
 STRING 12348
 // Abilities: A0CQ (Next Spell Variation), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 12349
@@ -52722,9 +52722,9 @@ Allows crossing rivers.
 }
 
 STRING 12366
-// Abilities: A0DH (Hero Abilities Next Spell Variation), EditorSuffix (Editor Suffix)
+// Abilities: A0DH (Heldenfähigkeiten Next Spell Variation), EditorSuffix (Editor Suffix)
 {
-(Skills)
+(Fähigkeiten)
 }
 
 STRING 12367
@@ -53831,9 +53831,9 @@ Arkanen Hafen errichten
 }
 
 STRING 14101
-// Abilities: A176 (Mass Finger of Death), Tip (Tooltip - Normal)
+// Abilities: A176 (Massen-Todesfinger), Tip (Tooltip - Normal)
 {
-Mass Finger of Death
+Massen-Todesfinger
 }
 
 STRING 14103
@@ -55123,7 +55123,7 @@ R
 }
 
 STRING 14880
-// Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
+// Abilities: A0XW (Drehen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56576,7 +56576,7 @@ Schließfach
 }
 
 STRING 16213
-// Units: h09R (Fire Mage), EditorSuffix (Name - Editor Suffix)
+// Units: h09R (Feuermagier), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -57789,21 +57789,21 @@ Neruben-Königin ausbilden
 }
 
 STRING 16927
-// Units: u025 (Spawning Ground), Name (Name)
+// Units: u025 (Brutstätte), Name (Name)
 {
-Spawning Ground
+Brutstätte
 }
 
 STRING 16928
-// Units: u025 (Spawning Ground), Tip (Tooltip - Basic)
+// Units: u025 (Brutstätte), Tip (Tooltip - Basic)
 {
-Summon Spawning Ground
+Brutstätte beschwören
 }
 
 STRING 16930
 // Abilities: A22Q (Sell Unit), Name (Name)
 {
-Sell Unit
+Einheit verkaufen
 }
 
 STRING 16931
@@ -57820,7 +57820,7 @@ Y
 
 STRING 16933
 {
-Error on loading savecode!
+Fehler beim Laden des Speicher-Codes!
 }
 
 STRING 16934
@@ -57924,7 +57924,7 @@ Aroom,Chieftain Oomooroo,Cukkaw,Lunaclaw,Razortalon
 }
 
 STRING 16956
-// Units: u025 (Spawning Ground), Ubertip (Tooltip - Extended)
+// Units: u025 (Brutstätte), Ubertip (Tooltip - Extended)
 {
 Produces Neruben-Königin. Also contains the Freezing Breath upgrade.
 }
@@ -58723,7 +58723,7 @@ Restores lost hit and mana points.
 STRING 17422
 // Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of Pikeman, Zauberlehrlings and Dragonhawk Riders.
+Increases the attack damage of Pikenier, Zauberlehrlings and Dragonhawk Riders.
 }
 
 STRING 17423
@@ -61388,15 +61388,15 @@ STRING 19399
 }
 
 STRING 19400
-// Units: n07T (Core Hound), Name (Name)
+// Units: n07T (Kernhund), Name (Name)
 {
-Core Hound
+Kernhund
 }
 
 STRING 19401
-// Units: n07T (Core Hound), Tip (Tooltip - Basic)
+// Units: n07T (Kernhund), Tip (Tooltip - Basic)
 {
-Hire Core Hound
+Kernhund anheuern
 }
 
 STRING 19402
@@ -61436,15 +61436,15 @@ STRING 19407
 }
 
 STRING 19408
-// Units: n07V (Fel Core Hound), Name (Name)
+// Units: n07V (Höllen-Kernhund), Name (Name)
 {
-Fel Core Hound
+Höllen-Kernhund
 }
 
 STRING 19409
-// Units: n07V (Fel Core Hound), Tip (Tooltip - Basic)
+// Units: n07V (Höllen-Kernhund), Tip (Tooltip - Basic)
 {
-Hire Fel Core Hound
+Höllen-Kernhund anheuern
 }
 
 STRING 19410
@@ -61496,9 +61496,9 @@ STRING 19471
 }
 
 STRING 19472
-// Abilities: A0MB (Item Core Hound Summon), Name (Name)
+// Abilities: A0MB (Item Kernhund Summon), Name (Name)
 {
-Item Core Hound Summon
+Item Kernhund Summon
 }
 
 STRING 19473
@@ -62697,7 +62697,7 @@ F
 STRING 20158
 // Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Pikeman, Zauberlehrlings and Dragonhawk Riders.
+Further increases the attack damage of Pikenier, Zauberlehrlings and Dragonhawk Riders.
 }
 
 STRING 20159
@@ -64603,13 +64603,13 @@ Fire Magier-Meister-Ausbildung
 STRING 21312
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Fire Mages mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerregen.
+Increases Feuermagiers mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerregen.
 }
 
 STRING 21313
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Fire Mages mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuer-Elementargeist beschwören.
+Increases Feuermagiers mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuer-Elementargeist beschwören.
 }
 
 STRING 21319
@@ -64729,7 +64729,7 @@ G
 STRING 21359
 // Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Pikeman, Zauberlehrlings and Dragonhawk Riders.
+Further increases the attack damage of Pikenier, Zauberlehrlings and Dragonhawk Riders.
 }
 
 STRING 21365
@@ -67282,19 +67282,19 @@ STRING 23852
 STRING 23854
 // Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increases the armor of of Pikeman, Zauberlehrlings and Dragonhawk Riders.
+Increases the armor of of Pikenier, Zauberlehrlings and Dragonhawk Riders.
 }
 
 STRING 23855
 // Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of of Pikeman, Zauberlehrlings and Dragonhawk Riders.
+Further increases the armor of of Pikenier, Zauberlehrlings and Dragonhawk Riders.
 }
 
 STRING 23856
 // Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of of Pikeman, Zauberlehrlings and Dragonhawk Riders.
+Further increases the armor of of Pikenier, Zauberlehrlings and Dragonhawk Riders.
 }
 
 STRING 23857
@@ -68360,9 +68360,9 @@ Banshee beschwören
 }
 
 STRING 24882
-// Units: ngbl (Goblin Blaster), Tip (Tooltip - Basic)
+// Units: ngbl (Goblin-Blaster), Tip (Tooltip - Basic)
 {
-Summon Goblin Blaster
+Summon Goblin-Blaster
 }
 
 STRING 24885
@@ -68652,7 +68652,7 @@ E
 }
 
 STRING 25106
-// Units: ngbl (Goblin Blaster), Ubertip (Tooltip - Extended)
+// Units: ngbl (Goblin-Blaster), Ubertip (Tooltip - Extended)
 {
 A special invention by the Goblins.
 }
@@ -73243,7 +73243,7 @@ N
 }
 
 STRING 30466
-// Abilities: A0A7 (Random Spell), Hotkey (Hotkey - Normal)
+// Abilities: A0A7 (Zufälliger Zauber), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -79681,11 +79681,11 @@ STRING 34384
 STRING 34385
 // Units: h09N (Arcane Sanctum), Ubertip (Tooltip - Extended)
 {
-Trains Zauberinnen, Fire Mages and Zauberers. |nAlso contains spell upgrades for Zauberinnen, Fire Mages, Zauberers, and Magic Sentry.
+Trains Zauberinnen, Feuermagiers and Zauberers. |nAlso contains spell upgrades for Zauberinnen, Feuermagiers, Zauberers, and Magic Sentry.
 }
 
 STRING 34386
-// Units: h09P (Arcane Blacksmith), Ubertip (Tooltip - Extended)
+// Units: h09P (Arkane Schmiede), Ubertip (Tooltip - Extended)
 {
 Contains upgrades for improved armor, weaponry and Dalaran buildings.
 }
@@ -79723,7 +79723,7 @@ Pulverisieren
 STRING 34427
 // Abilities: A177 (Finger of Death), EditorSuffix (Editor Suffix)
 {
-(Dummy) (Mass Finger of Death)
+(Dummy) (Massen-Todesfinger)
 }
 
 STRING 34430
@@ -85795,13 +85795,13 @@ F
 }
 
 STRING 36492
-// Units: n0E3 (Hero Abilities), Ubertip (Tooltip - Extended)
+// Units: n0E3 (Heldenfähigkeiten), Ubertip (Tooltip - Extended)
 {
 Allows changing the standard ability of your hero.
 }
 
 STRING 36493
-// Units: n0E3 (Hero Abilities), Description (Description)
+// Units: n0E3 (Heldenfähigkeiten), Description (Description)
 {
 Allows changing the standard ability of your hero.
 }
@@ -85813,7 +85813,7 @@ Ein mystischer Held, adept at ranged combat. Can learn Gabelblitz, Frostpfeile, 
 }
 
 STRING 36495
-// Units: n0E3 (Hero Abilities), Tip (Tooltip - Basic)
+// Units: n0E3 (Heldenfähigkeiten), Tip (Tooltip - Basic)
 {
 Heldenfähigkeiten errichten
 }
@@ -85831,37 +85831,37 @@ Allows changing the standard ability of your hero.
 }
 
 STRING 36498
-// Items: I0J6 (Tiny Hero Abilities), Name (Name)
+// Items: I0J6 (Tiny Heldenfähigkeiten), Name (Name)
 {
-Tiny Hero Abilities
+Tiny Heldenfähigkeiten
 }
 
 STRING 36499
-// Items: I0J6 (Tiny Hero Abilities), Description (Description)
+// Items: I0J6 (Tiny Heldenfähigkeiten), Description (Description)
 {
-Creates Hero Abilities at a target location.
+Creates Heldenfähigkeiten at a target location.
 }
 
 STRING 36500
-// Items: I0J6 (Tiny Hero Abilities), Tip (Tooltip - Basic)
+// Items: I0J6 (Tiny Heldenfähigkeiten), Tip (Tooltip - Basic)
 {
-Purchase Tiny Hero Abilities
+Purchase Tiny Heldenfähigkeiten
 }
 
 STRING 36501
-// Items: I0J6 (Tiny Hero Abilities), Ubertip (Tooltip - Extended)
+// Items: I0J6 (Tiny Heldenfähigkeiten), Ubertip (Tooltip - Extended)
 {
-Creates Hero Abilities at a target location.
+Creates Heldenfähigkeiten at a target location.
 }
 
 STRING 36502
-// Abilities: A1BG (Build Tiny Hero Abilities), Name (Name)
+// Abilities: A1BG (Build Tiny Heldenfähigkeiten), Name (Name)
 {
-Build Tiny Hero Abilities
+Build Tiny Heldenfähigkeiten
 }
 
 STRING 36503
-// Units: n0E3 (Hero Abilities), EditorSuffix (Name - Editor Suffix)
+// Units: n0E3 (Heldenfähigkeiten), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -86365,7 +86365,7 @@ STRING 37138
 }
 
 STRING 37139
-// Units: u025 (Spawning Ground), EditorSuffix (Name - Editor Suffix)
+// Units: u025 (Brutstätte), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -86701,7 +86701,7 @@ Spinnenei
 }
 
 STRING 37199
-// Units: u02J (Burrowed Spawning Ground), EditorSuffix (Name - Editor Suffix)
+// Units: u02J (Burrowed Brutstätte), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -87805,19 +87805,19 @@ Netzspinner-Meisterausbildung
 }
 
 STRING 37498
-// Units: u02J (Burrowed Spawning Ground), Name (Name)
+// Units: u02J (Burrowed Brutstätte), Name (Name)
 {
-Eingegraben Spawning Ground
+Eingegraben Brutstätte
 }
 
 STRING 37499
-// Units: u02J (Burrowed Spawning Ground), Tip (Tooltip - Basic)
+// Units: u02J (Burrowed Brutstätte), Tip (Tooltip - Basic)
 {
-Summon Spawning Ground
+Summon Brutstätte
 }
 
 STRING 37500
-// Units: u02J (Burrowed Spawning Ground), Ubertip (Tooltip - Extended)
+// Units: u02J (Burrowed Brutstätte), Ubertip (Tooltip - Extended)
 {
 Produces Neruben-Königin. Also contains the Freezing Breath upgrade.
 }
@@ -87915,19 +87915,19 @@ Ausbau zum Große Metropole ermöglicht die Produktion weiterer Gebäude- und Ei
 STRING 37516
 // Abilities: A1CY (Burrow), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Spawning Ground)
+(Neruber) (Brutstätte)
 }
 
 STRING 37517
 // Abilities: A1CY (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Spawning Ground digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutstätte digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
 }
 
 STRING 37518
 // Abilities: A1CY (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Spawning Ground pops out of the ground and becomes visible again.
+The Brutstätte pops out of the ground and becomes visible again.
 }
 
 STRING 37519
@@ -87939,13 +87939,13 @@ STRING 37519
 STRING 37520
 // Abilities: A1CZ (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Spawning Ground digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutstätte digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
 }
 
 STRING 37521
 // Abilities: A1CZ (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Spawning Ground pops out of the ground and becomes visible again.
+The Brutstätte pops out of the ground and becomes visible again.
 }
 
 STRING 37522
@@ -89307,7 +89307,7 @@ Schattenkugel +6 herstellen
 STRING 37892
 // Units: H0P2 (Acolyte), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Frost Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 37893
@@ -89535,7 +89535,7 @@ Akolyt
 STRING 37936
 // Units: H0P3 (Shade), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Frost Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 37937
@@ -98324,7 +98324,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 41958
-// Units: o03C (Wyvern Roost), Ubertip (Tooltip - Extended)
+// Units: o03C (Flügeldrache Roost), Ubertip (Tooltip - Extended)
 {
 Trains Flügeldraches, and Geisterflügeldraches.
 }
@@ -103863,19 +103863,19 @@ STRING 45159
 }
 
 STRING 45160
-// Abilities: A0CC (Replenish Mechanical Units), Name (Name)
+// Abilities: A0CC (Mechanische Einheiten auffüllen), Name (Name)
 {
-Replenish Mechanical Units
+Mechanische Einheiten auffüllen
 }
 
 STRING 45161
-// Abilities: A0CC (Replenish Mechanical Units), Tip (Tooltip - Normal)
+// Abilities: A0CC (Mechanische Einheiten auffüllen), Tip (Tooltip - Normal)
 {
-Replenish Mechanical Units
+Mechanische Einheiten auffüllen
 }
 
 STRING 45162
-// Abilities: A0CC (Replenish Mechanical Units), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CC (Mechanische Einheiten auffüllen), Ubertip (Tooltip - Normal - Extended)
 {
 Replenish the life and mana of a target friendly mechanical unit.
 }
@@ -115194,7 +115194,7 @@ This unit is affected by Fel. It causes Chaos damage.
 STRING 51350
 // Abilities: A1VZ (Fel), Tip (Tooltip - Normal)
 {
-Improved Fel
+Verbessertes Fel
 }
 
 STRING 51351
@@ -115386,7 +115386,7 @@ Dämonen-Macht Stufe 1
 STRING 51400
 // Abilities: A1WP (Demon Power), Ubertip (Tooltip - Normal - Extended)
 {
-The number of sold Demon units depends on the number of killed enemy units.
+Die Anzahl verkaufter Dämonen hängt von der Anzahl getöteter Feinde ab.
 }
 
 STRING 51401
@@ -115410,19 +115410,19 @@ Dämonen-Macht Stufe 4
 STRING 51404
 // Abilities: A1WP (Demon Power), Ubertip (Tooltip - Normal - Extended)
 {
-The number of sold Demon units depends on the number of killed enemy units.
+Die Anzahl verkaufter Dämonen hängt von der Anzahl getöteter Feinde ab.
 }
 
 STRING 51405
 // Abilities: A1WP (Demon Power), Ubertip (Tooltip - Normal - Extended)
 {
-The number of sold Demon units depends on the number of killed enemy units.
+Die Anzahl verkaufter Dämonen hängt von der Anzahl getöteter Feinde ab.
 }
 
 STRING 51406
 // Abilities: A1WP (Demon Power), Ubertip (Tooltip - Normal - Extended)
 {
-The number of sold Demon units depends on the number of killed enemy units.
+Die Anzahl verkaufter Dämonen hängt von der Anzahl getöteter Feinde ab.
 }
 
 STRING 51411
@@ -126026,7 +126026,7 @@ Heldenfähigkeiten
 
 STRING 57792
 {
-Hero Abilities can be built by female citizens. They your heroes to change their standard abilities.
+Heldenfähigkeiten can be built by female citizens. They your heroes to change their standard abilities.
 }
 
 STRING 57793
