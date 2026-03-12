@@ -1904,7 +1904,7 @@ Demigod´s Protection
 }
 
 STRING 318
-// Abilities: A026 (Shroud of Protection), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A026 (Schutzmantel), Ubertip (Tooltip - Normal - Extended)
 {
 Turns all friendly units in the world invulnerable. |nThe Temple does not turn invulnerable. |nHält <AOvd,Dur1> Sekunden lang an.
 }
@@ -6288,7 +6288,7 @@ I
 }
 
 STRING 1062
-// Abilities: A026 (Shroud of Protection), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A026 (Schutzmantel), Researchubertip (Tooltip - Learn - Extended)
 {
 Turns all friendly units and buildings invulnerable in an area around the Citadel. |nThe Citadel stays vulnerable. |nHält <AOvd,Dur1> Sekunden lang an.
 }
@@ -6591,7 +6591,7 @@ The Goblins on Kezan provide races which let the winners earn valuable cups. You
 STRING 1114
 // Units: h051 (Dalaran Town Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Elementardieners and receive gathered resources. Can be upgraded to Keep and then Castle ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Elementardienern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 1115
@@ -10158,9 +10158,9 @@ Dummy Clan Assault
 }
 
 STRING 1714
-// Units: h0JJ (Dummy Shroud of Protection), Name (Name)
+// Units: h0JJ (Dummy Schutzmantel), Name (Name)
 {
-Dummy Shroud of Protection
+Dummy Schutzmantel
 }
 
 STRING 1715
@@ -11319,7 +11319,7 @@ Adds an additional poison effect to Gnoll-Auftragsmörders' and Gnoll Warhawk Ri
 STRING 1921
 // Units: h009 (Town Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters and receive gathered resources. Can be upgraded to Keep and then Castle ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 1922
@@ -24661,7 +24661,7 @@ Mannoroth wiederbeleben
 STRING 4967
 // Units: o00O (Goblin Town Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Goblin-Arbeiterers, Goblinschredders Goblin Bürger and receive gathered resources.
+Primäres Gebäude, wird zum Ausbilden von Goblin-Arbeitern, Goblinschreddern, Goblin-Bürgern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 4969
@@ -25590,7 +25590,7 @@ Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. Also contains the Eins
 STRING 5142
 // Units: n05M (Temple of Water), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Mur'gul Slaves and receive gathered resources. Can be upgraded to Temple of Tides and then Tempel der Meere ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Mur'gul-Sklaven und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Tempel der Gezeiten und dann zum Tempel der Meere ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 5143
@@ -26658,7 +26658,7 @@ STRING 5333
 STRING 5334
 // Units: o03M (Dungeon), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Skelett-Dieners and receive gathered resources. Can be upgraded to Dark Verlies and then Great Verlies ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Skelett-Dienern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zum Dunklen Verlies und dann zum Großen Verlies ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 5336
@@ -31598,7 +31598,7 @@ Spinnenkrebs-Ungetüm
 STRING 6394
 // Units: n0FP (Gathering Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Murloc Arbeiter and receive gathered resources.
+Primäres Gebäude, wird zum Ausbilden von Murloc-Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet.
 }
 
 STRING 6395
@@ -39420,9 +39420,9 @@ Sukkubus wiederbeleben
 }
 
 STRING 8300
-// Abilities: A00N (Hideout Camouflage), Tip (Tooltip - Normal)
+// Abilities: A00N (Versteck-Tarnung), Tip (Tooltip - Normal)
 {
-Hideout Camouflage
+Versteck-Tarnung
 }
 
 STRING 8301
@@ -42368,9 +42368,9 @@ STRING 9217
 }
 
 STRING 9227
-// Abilities: A026 (Shroud of Protection), Name (Name)
+// Abilities: A026 (Schutzmantel), Name (Name)
 {
-Shroud of Protection
+Schutzmantel
 }
 
 STRING 9229
@@ -43893,7 +43893,7 @@ F
 STRING 10175
 // Units: h0R7 (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Bannerträgers, Cannons, Alliance Siege Towers, and Sturmwind Airships.
+Produces Bannerträgers, Cannons, Allianz-Belagerungsturms, and Sturmwind Airships.
 }
 
 STRING 10176
@@ -44459,7 +44459,7 @@ Upgrades Houses, Beobachtungsturms, Guard Towers, Arcane Towers, and Cannon Towe
 }
 
 STRING 10270
-// Units: h0RE (Alliance Siege Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h0RE (Allianz-Belagerungsturm), EditorSuffix (Name - Editor Suffix)
 {
 (Sturmwind)
 }
@@ -51807,7 +51807,7 @@ Futtertrog errichten
 STRING 12188
 // Units: o071 (Manger), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters and receive gathered resources. Can be upgraded to Stronghold and then Fortress ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 12189
@@ -60710,7 +60710,7 @@ N
 }
 
 STRING 18897
-// Abilities: A00N (Hideout Camouflage), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Versteck-Tarnung), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61054,7 +61054,7 @@ STRING 18975
 STRING 18976
 // Upgrades: R057 (Long Rifles), Ubertip (Tooltip - Extended)
 {
-Allows all battleships to transport units.
+Erlaubt Kriegsschiffen, Einheiten zu transportieren.
 }
 
 STRING 18977
@@ -61078,19 +61078,19 @@ STRING 18984
 STRING 18985
 // Abilities: A0NS (Healing Aura), Name (Name)
 {
-Heilening Aura
+Heil-Aura
 }
 
 STRING 18986
 // Abilities: A0NS (Healing Aura), Tip (Tooltip - Normal)
 {
-Heilening Aura
+Heil-Aura
 }
 
 STRING 18987
 // Abilities: A0NS (Healing Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Heilens allied nearby units.
+Heilt nahelegene verbündete Einheiten.
 }
 
 STRING 18988
@@ -61234,19 +61234,19 @@ Magischer Gegenstands-Beschwörer
 STRING 19333
 // Items: I08X (Magical Item Summoner), Tip (Tooltip - Basic)
 {
-Purchase Magischer Gegenstands-Beschwörer
+Magischen Gegenstands-Beschwörer erwerben
 }
 
 STRING 19334
 // Units: h0MO (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Riflemen, Bannerträgers, and Alliance Siege Towers.
+Produces Riflemen, Bannerträgers, and Allianz-Belagerungsturms.
 }
 
 STRING 19335
-// Units: h0OE (Alliance Siege Tower), Name (Name)
+// Units: h0OE (Allianz-Belagerungsturm), Name (Name)
 {
-Alliance Siege Tower
+Allianz-Belagerungsturm
 }
 
 STRING 19336
@@ -61258,7 +61258,7 @@ Gives <A0M9,DataA1> gold to the player when used.
 STRING 19337
 // Items: I08Y (Exchange 100 Lumber for 200 Gold), Description (Description)
 {
-Gives gold to player.
+Gibt dem Spieler Gold.
 }
 
 STRING 19345
@@ -61298,9 +61298,9 @@ E
 }
 
 STRING 19383
-// Units: h0OE (Alliance Siege Tower), Tip (Tooltip - Basic)
+// Units: h0OE (Allianz-Belagerungsturm), Tip (Tooltip - Basic)
 {
-Train Alliance Siege Tower
+Train Allianz-Belagerungsturm
 }
 
 STRING 19386
@@ -61372,7 +61372,7 @@ Leerenplünderer
 STRING 19397
 // Units: n07S (Void Reaver), Tip (Tooltip - Basic)
 {
-Summon Leerenplünderer
+Leerenplünderer beschwören
 }
 
 STRING 19398
@@ -61498,7 +61498,7 @@ STRING 19471
 STRING 19472
 // Abilities: A0MB (Item Kernhund Summon), Name (Name)
 {
-Item Kernhund Summon
+Gegenstand Kernhund beschwören
 }
 
 STRING 19473
@@ -61510,7 +61510,7 @@ Todesschwinge beschwören
 STRING 19474
 // Items: I08V (Summon Deathwing), Ubertip (Tooltip - Extended)
 {
-Summons the moving boss Todesschwinge.
+Beschwört den sich bewegenden Boss Todesschwinge.
 }
 
 STRING 19476
@@ -61522,7 +61522,7 @@ Cenarius beschwören
 STRING 19477
 // Items: I08W (Summon Cenarius), Ubertip (Tooltip - Extended)
 {
-Summons the moving boss Cenarius.
+Beschwört den sich bewegenden Boss Cenarius.
 }
 
 STRING 19479
@@ -61552,19 +61552,19 @@ Ausbau zum Wächterzitadelle
 STRING 19566
 // Units: n02F (Furbolg Champion), Tip (Tooltip - Basic)
 {
-Train Furbolg Champion
+Furbolg-Champion ausbilden
 }
 
 STRING 19567
-// Abilities: A00N (Hideout Camouflage), Name (Name)
+// Abilities: A00N (Versteck-Tarnung), Name (Name)
 {
-Hideout Camouflage
+Versteck-Tarnung
 }
 
 STRING 19568
-// Abilities: A026 (Shroud of Protection), Tip (Tooltip - Normal)
+// Abilities: A026 (Schutzmantel), Tip (Tooltip - Normal)
 {
-Shroud of Protection
+Schutzmantel
 }
 
 STRING 19569
@@ -62292,7 +62292,7 @@ Y
 }
 
 STRING 20037
-// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
+// Abilities: A026 (Schutzmantel), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -67924,7 +67924,7 @@ STRING 24494
 STRING 24495
 // Units: h057 (Town Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Matroses and receive gathered resources. Can be upgraded to Keep and then Castle ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Matrosen und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 24496
@@ -69071,7 +69071,7 @@ S
 }
 
 STRING 25619
-// Abilities: A026 (Shroud of Protection), Researchhotkey (Hotkey - Learn)
+// Abilities: A026 (Schutzmantel), Researchhotkey (Hotkey - Learn)
 {
 P
 }
@@ -72952,7 +72952,7 @@ E
 STRING 29743
 // Units: h0JX (Town Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Ingenieurs and receive gathered resources. Can be upgraded to Keep and then Castle ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Ingenieueren und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 29751
@@ -81734,7 +81734,7 @@ STRING 35437
 }
 
 STRING 35440
-// Units: h0OE (Alliance Siege Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h0OE (Allianz-Belagerungsturm), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -83829,13 +83829,13 @@ Metropole beschwören
 STRING 36011
 // Units: u01Q (Metropolis), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters and receive lumber gathered by them. Can be upgraded to Halls of the Dead and then Black Citadel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hall der Toten und dann zur Schwarzen Zitadelle ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 36012
 // Items: I0M0 (Tiny Metropolis), Description (Description)
 {
-Creates a Metropole.
+Metropole errichten.
 }
 
 STRING 36013
@@ -83949,7 +83949,7 @@ Metropole beschwören
 STRING 36031
 // Units: u01R (Burrowed Metropolis), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters and receive lumber gathered by them. Can be upgraded to Halls of the Dead and then Black Citadel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Halle der Toten und dann zur Schwarzen Zitadelle ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 36032
@@ -90607,7 +90607,7 @@ Summons a wall in the direction the hero is facing damaging ground units in its 
 STRING 38599
 // Units: h0PA (Lynx Mount), Tip (Tooltip - Basic)
 {
-Lynx Mount
+Lynx-Reittier
 }
 
 STRING 38605
@@ -90649,7 +90649,7 @@ Boat construction facility. Produces Human Transportschiffs, Rakkar-Schiffs, and
 STRING 38611
 // Units: h0P4 (Val'kyr Temple), Ubertip (Tooltip - Extended)
 {
-Trains Goldene Val'kyrs, Dunkle Val'kyrs, Untoter Vrykuls, and Runenmetzs.
+Bildet Goldene Val'kyrs, Dunkle Val'kyrs, Untoter Vrykuls, und Runenmetze aus.
 }
 
 STRING 38626
@@ -98314,7 +98314,7 @@ Drachenkunde erforschen
 STRING 41955
 // Units: o02M (Great Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Tauren Arbeiters and receive gathered resources. Can be upgraded to Stronghold and then Fortress ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Tauren-Arbeiter und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 41957
@@ -98326,13 +98326,13 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 STRING 41958
 // Units: o03C (Flügeldrache Roost), Ubertip (Tooltip - Extended)
 {
-Trains Flügeldraches, and Geisterflügeldraches.
+Bildet Flügeldrachen und Geisterflügeldrachen aus.
 }
 
 STRING 41959
 // Units: o03F (Spirit Lounge), Tip (Tooltip - Basic)
 {
-Build Geisterhaus
+Geisterhaus errichten
 }
 
 STRING 41960
@@ -99409,19 +99409,19 @@ STRING 42357
 STRING 42358
 // Units: h06D (Pandaren Temple), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Pandaren Holzfällers and receive gathered resources. Can be upgraded to Advanced Pandaren Temple and then Great Pandaren Temple ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Pandaren-Holzfällern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zum Hoch entwickelten Pandaren-Tempel und dann zum Großen Pandaren-Tempel ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 42359
 // Units: h0AC (Advanced Pandaren Temple), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Advanced Pandaren Temple ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Hoch entwickelten Pandaren-Tempel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 42360
 // Units: h0AD (Great Pandaren Temple), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Great Pandaren Temple ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Großen Pandaren-Tempel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 42361
@@ -102485,7 +102485,7 @@ STRING 43511
 STRING 43512
 // Units: o06V (Centaur Camp), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Centaur Arbeiters and receive gathered resources. Can be upgraded to Stronghold and then Fortress ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Zentauren-Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 43513
@@ -102543,13 +102543,13 @@ Zepter der Zentauren
 }
 
 STRING 43522
-// Units: h0RE (Alliance Siege Tower), Name (Name)
+// Units: h0RE (Allianz-Belagerungsturm), Name (Name)
 {
 Allianz-Belagerungsturm
 }
 
 STRING 43523
-// Units: h0RE (Alliance Siege Tower), Tip (Tooltip - Basic)
+// Units: h0RE (Allianz-Belagerungsturm), Tip (Tooltip - Basic)
 {
 Allianz-Belagerungsturm ausbilden
 }
@@ -102803,7 +102803,7 @@ Hebel Brücke
 STRING 43579
 // Units: o06C (Ogre Mound), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Ogre Slaves and receive gathered resources. Can be upgraded to Hoch entwickelter Oger-Hügel and then Befestigter Oger-Hügel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Oger-Sklaven und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zum Hoch entwickelten Oger-Hügel und dann zum Befestigten Oger-Hügel ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 43580
@@ -105716,13 +105716,13 @@ STRING 46134
 }
 
 STRING 46135
-// Units: h0OE (Alliance Siege Tower), Ubertip (Tooltip - Extended)
+// Units: h0OE (Allianz-Belagerungsturm), Ubertip (Tooltip - Extended)
 {
 Heavily armored vehicle, effective at destroying buildings. |n|n|cffffcc00Attacks buildings.|r
 }
 
 STRING 46136
-// Units: h0RE (Alliance Siege Tower), Ubertip (Tooltip - Extended)
+// Units: h0RE (Allianz-Belagerungsturm), Ubertip (Tooltip - Extended)
 {
 Heavily armored vehicle, effective at destroying buildings. |n|n|cffffcc00Attacks buildings.|r
 }
@@ -111660,7 +111660,7 @@ STRING 50317
 STRING 50319
 // Units: o08P (Dragon Pit), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Drachenbrut-Sklaves and receive gathered resources. Can be upgraded to Advanced Drachenhorst and then Fortified Drachenhorst ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Drachenbrut-Sklaven und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zum Hoch entwickelten Drachenhorst und dann zum Befestigten Drachenhorst ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 50320
@@ -116064,7 +116064,7 @@ The Hexenmeister crafts a Tiny Demon Portal.
 STRING 51641
 // Units: h0LX (Town Center), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters and receive gathered resources. Can be upgraded to Citadel and then Palast ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Zitadelle und dann zum Palast ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 51642
@@ -117300,7 +117300,7 @@ Kobold-Ingenieur ausbilden
 STRING 52955
 // Units: o070 (Kobold Camp), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Kobold-Ingenieurs and receive gathered resources. Can be upgraded to Stronghold and then Fortress ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Kobold-Ingeniueren und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hochburg und dann zur Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 52956
@@ -119159,7 +119159,7 @@ STRING 54926
 STRING 54951
 // Units: o05N (Frozen Hall), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters and receive gathered resources. Can be upgraded to Gefrorene Hochburg and then Gefrorene Festung ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Gefrorenen Hochburg und dann zur Gefrorenen Festung ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 54952
