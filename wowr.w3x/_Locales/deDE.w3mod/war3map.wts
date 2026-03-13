@@ -3571,9 +3571,9 @@ Dummy Ride Down
 }
 
 STRING 598
-// Units: h0CH (Dummy Escape Portal), Name (Name)
+// Units: h0CH (Dummy Fluchtportal), Name (Name)
 {
-Dummy Escape Portal
+Dummy Fluchtportal
 }
 
 STRING 599
@@ -32058,7 +32058,7 @@ Changes the attack type to melee.
 STRING 6511
 // Items: I12G (Shadowlands), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
+|cff0000ffGeografischer Standort:|r Andere Welt.
 The realm of Death, an infinite plane where the souls of deceased mortals go to be reborn, serve, find peace, do battle, or endure endless torment.
 
 |cff00ff00Empfohlenes Volk:|r Untote.
@@ -32812,7 +32812,7 @@ A power generator that can protect buildings nearby by increasing their defense 
 }
 
 STRING 6726
-// Abilities: A12M (Soul Theft), Hotkey (Hotkey - Normal)
+// Abilities: A12M (Seelendiebstahl), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -39041,7 +39041,7 @@ Ny'alotha
 STRING 8228
 // Items: I161 (Ny'alotha), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
+|cff0000ffGeografischer Standort:|r Andere Welt.
 An alternate reality inhabited by the Old Gods and their minions.
 
 |cff00ff00Empfohlenes Volk:|r Gesichtslose.
@@ -48077,7 +48077,7 @@ Goblin-Dampfwalze ausbilden
 }
 
 STRING 11078
-// Abilities: A1X2 (Soul Theft), Hotkey (Hotkey - Normal)
+// Abilities: A1X2 (Seelendiebstahl), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -49545,13 +49545,13 @@ Hebel Tor und Portal
 STRING 11601
 // Items: I12X (Astromancer), Ubertip (Tooltip - Extended)
 {
-Craft items to explore the stars and travel through space:|n- Navigation Scrolls and Tiny Portale|n- Leuchtsignal Guns and Escape Portale|n- Meteor Stones and Scroll of Town Portale|n- Tiny Arcane Observatories|n- Tiny Moon, Moonstone|n- Tiny Sun, Sonnenstein
+Craft items to explore the stars and travel through space:|n- Navigation Scrolls and Tiny Portale|n- Leuchtsignal Guns and Fluchtportale|n- Meteor Stones and Scroll of Town Portale|n- Tiny Arcane Observatories|n- Tiny Moon, Moonstone|n- Tiny Sun, Sonnenstein
 }
 
 STRING 11602
 // Abilities: A230 (Astromancy - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Astromant uses knowledge to craft Leuchtsignal Guns and Escape Portale.
+The Astromant uses knowledge to craft Leuchtsignal Guns and Fluchtportale.
 }
 
 STRING 11603
@@ -49720,7 +49720,7 @@ Fremdland Nethersturm
 STRING 11644
 // Items: I0N4 (Outland Netherstorm), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
+|cff0000ffGeografischer Standort:|r Andere Welt.
 Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
 
 |cff00ff00Empfohlenes Volk:|r Oger.
@@ -51923,7 +51923,7 @@ Errichtet am Zielort ein Dimensionstor.
 STRING 12209
 // Items: I0OQ (Tiny Dungeon of Pain), Description (Description)
 {
-Creates a Dungeon of Pain.
+Errichtet ein Verlies der Schmerzen.
 }
 
 STRING 12210
@@ -51968,37 +51968,37 @@ Drachenei
 STRING 12217
 // Items: I0OQ (Tiny Dungeon of Pain), Tip (Tooltip - Basic)
 {
-Purchase Tiny Dungeon of Pain
+Winziges Verlies der Schmerzen erwerben
 }
 
 STRING 12218
 // Items: I0OQ (Tiny Dungeon of Pain), Ubertip (Tooltip - Extended)
 {
-Creates a Dungeon of Pain at a target location.
+Errichtet am Zielort ein Verlies der Schmerzen.
 }
 
 STRING 12219
 // Items: I0P2 (Tiny Demon Shipyard), Name (Name)
 {
-Tiny Demon Shipyard
+Winziger Dämonen-Hafen
 }
 
 STRING 12220
 // Items: I0P2 (Tiny Demon Shipyard), Tip (Tooltip - Basic)
 {
-Purchase Tiny Demon Shipyard
+Winzigen Dämonen-Hafen kaufen
 }
 
 STRING 12221
 // Items: I0P2 (Tiny Demon Shipyard), Description (Description)
 {
-Creates a Demon Shipyard.
+Errichtet einen Dämonen-Hafen.
 }
 
 STRING 12222
 // Items: I0P2 (Tiny Demon Shipyard), Ubertip (Tooltip - Extended)
 {
-Creates a Demon Shipyard at a target location.
+Errichtet am Zielort einen Dämonen-Hafen.
 }
 
 STRING 12223
@@ -52040,19 +52040,19 @@ Build Tiny Dimensional Gate
 STRING 12229
 // Abilities: A0NF (Build Tiny Dungeon of Pain), Name (Name)
 {
-Build Tiny Dungeon of Pain
+Winziges Verlies der Schmerzen errichten
 }
 
 STRING 12230
 // Abilities: A0QL (Build Tiny Demon Shipyard), Name (Name)
 {
-Build Tiny Demon Shipyard
+Winzigen Dämonen-Hafen errichten
 }
 
 STRING 12231
 // Abilities: A0QQ (Build Tiny Obelisk), Name (Name)
 {
-Build Tiny Obelisk
+Winzigen Obelisk errichten
 }
 
 STRING 12232
@@ -52470,7 +52470,7 @@ Tor errichten
 }
 
 STRING 12323
-// Abilities: A12M (Soul Theft), Name (Name)
+// Abilities: A12M (Seelendiebstahl), Name (Name)
 {
 Seelendiebstahl
 }
@@ -68374,13 +68374,13 @@ Portal
 STRING 24889
 // Units: n09W (Portal), EditorSuffix (Name - Editor Suffix)
 {
-(Open Portale)
+(Portale öffnen)
 }
 
 STRING 24890
 // Abilities: A0SZ (Open Portals), Name (Name)
 {
-Open Portale
+Portale öffnen
 }
 
 STRING 24893
@@ -68390,25 +68390,25 @@ Ein listiger Held, adept at healing magics and voodoo curses. Can learn Heilwell
 }
 
 STRING 24948
-// Units: h0CH (Dummy Escape Portal), EditorSuffix (Name - Editor Suffix)
+// Units: h0CH (Dummy Fluchtportal), EditorSuffix (Name - Editor Suffix)
 {
 (Massenteleportation)
 }
 
 STRING 24949
-// Abilities: A0TJ (Scroll of Escape Portal), Name (Name)
+// Abilities: A0TJ (Spruchrolle des Fluchtportals), Name (Name)
 {
-Scroll of Escape Portal
+Spruchrolle des Fluchtportals
 }
 
 STRING 24951
-// Items: I0CO (Escape Portal), Description (Description)
+// Items: I0CO (Fluchtportal), Description (Description)
 {
 Transports troops to a visible area on the map and allows them to escape back.
 }
 
 STRING 24952
-// Items: I0CO (Escape Portal), Ubertip (Tooltip - Extended)
+// Items: I0CO (Fluchtportal), Ubertip (Tooltip - Extended)
 {
 Teleports the Hero and any of its nearby troops to a visible target location on the map and places there an invulnerable portal to escape back.
 }
@@ -68422,7 +68422,7 @@ Monstrosität
 STRING 24954
 // Abilities: A0TK (Mass Teleport), EditorSuffix (Editor Suffix)
 {
-(Dummy, Escape Portal)
+(Dummy, Fluchtportal)
 }
 
 STRING 24955
@@ -68432,25 +68432,25 @@ Monstrosität wiederbeleben
 }
 
 STRING 24956
-// Items: I0CO (Escape Portal), Name (Name)
+// Items: I0CO (Fluchtportal), Name (Name)
 {
-Escape Portal
+Fluchtportal
 }
 
 STRING 24957
-// Items: I0CO (Escape Portal), Tip (Tooltip - Basic)
+// Items: I0CO (Fluchtportal), Tip (Tooltip - Basic)
 {
-Purchase Escape Portal
+Fluchtportal erwerben
 }
 
 STRING 24958
 {
-Enabled bag info.
+Taschen-Info aktivieren.
 }
 
 STRING 24959
 {
-Disabled bag info.
+Taschen-Info deaktivieren.
 }
 
 STRING 24994
@@ -68863,13 +68863,13 @@ Buch der Händler
 STRING 25489
 // Items: I0D2 (Book of Merchant), Description (Description)
 {
-A book that contains knowledge of issuing bills.
+Ein Buch, welches das Wissen enthält, Rechnungen zu stellen.
 }
 
 STRING 25490
 // Items: I0D2 (Book of Merchant), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of issuing bills.
+Ein Buch, welches das Wissen enthält, Rechnungen zu stellen.
 }
 
 STRING 25491
@@ -68893,13 +68893,13 @@ Kleine Rechnung erwerben
 STRING 25494
 // Items: I0D3 (Small Bill), Description (Description)
 {
-Increases the charges of the target item by 1.
+Erhöht die Aufladungen des Zielgegenstands um 1.
 }
 
 STRING 25495
 // Items: I0D3 (Small Bill), Ubertip (Tooltip - Extended)
 {
-Increases the charges of the target item by 1.
+Erhöht die Aufladungen des Zielgegenstands um 1.
 }
 
 STRING 25496
@@ -68917,7 +68917,7 @@ Händler - Novize
 STRING 25498
 // Abilities: A0U3 (Merchant - Novice), Tip (Tooltip - Normal)
 {
-Novize Händler
+Novize-Händler
 }
 
 STRING 25500
@@ -68959,13 +68959,13 @@ Rechnung erwerben
 STRING 25565
 // Items: I0D4 (Bill), Description (Description)
 {
-Increases the charges of the target item by 2.
+Erhöht die Aufladungen des Zielgegenstands um 2.
 }
 
 STRING 25566
 // Items: I0D4 (Bill), Ubertip (Tooltip - Extended)
 {
-Increases the charges of the target item by 2.
+Erhöht die Aufladungen des Zielgegenstands um 2.
 }
 
 STRING 25567
@@ -68977,19 +68977,19 @@ Große Rechnung
 STRING 25568
 // Items: I0D5 (Large Bill), Tip (Tooltip - Basic)
 {
-Purchase Große Rechnung
+Große Rechnung erwerben
 }
 
 STRING 25569
 // Items: I0D5 (Large Bill), Description (Description)
 {
-Increases the charges of the target item by 3.
+Erhöht die Aufladungen des Zielgegenstands um 3.
 }
 
 STRING 25570
 // Items: I0D5 (Large Bill), Ubertip (Tooltip - Extended)
 {
-Increases the charges of the target item by 3.
+Erhöht die Aufladungen des Zielgegenstands um 3.
 }
 
 STRING 25571
@@ -69001,7 +69001,7 @@ Ring der Handelsgilde
 STRING 25572
 // Items: I0D6 (Ring of the Trading Guild), Tip (Tooltip - Basic)
 {
-Purchase Ring der Handelsgilde
+Ring der Handelsgilde erwerben
 }
 
 STRING 25576
@@ -69019,13 +69019,13 @@ Große Rechnung
 STRING 25578
 // Abilities: A0U9 (Merchant - Advanced), Name (Name)
 {
-Händler - Advanced
+Händler - Fortgeschritten
 }
 
 STRING 25579
 // Abilities: A0U9 (Merchant - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Händler
+Fortgeschrittener Händler
 }
 
 STRING 25581
@@ -69037,7 +69037,7 @@ Händler - Adept
 STRING 25583
 // Abilities: A0UA (Merchant - Adept), Tip (Tooltip - Normal)
 {
-Adpet Händler
+Adpet-Händler
 }
 
 STRING 25585
@@ -69049,13 +69049,13 @@ Händler - Meister
 STRING 25586
 // Abilities: A0UB (Merchant - Master), Tip (Tooltip - Normal)
 {
-Meister Händler
+Meister-Händler
 }
 
 STRING 25587
 // Abilities: A0UB (Merchant - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler crafts a Ring der Handelsgilde which increases the gold and lumber from sold items.
+Der Händler stellt einen Ring der Handelsgilde her, der das Gold und Holz durch verkaufte Gegenstände erhöht.
 }
 
 STRING 25588
@@ -69175,7 +69175,7 @@ STRING 25973
 STRING 25978
 // Items: I0M3 (Tiny Ziggurat), Name (Name)
 {
-Tiny Ziggurat
+Winziges Ziggurat
 }
 
 STRING 25981
@@ -69337,7 +69337,7 @@ STRING 26088
 STRING 26114
 // Units: n0HQ (Ogre Hunter), Tip (Tooltip - Basic)
 {
-Train Ogre Hunter
+Oger-Jäger ausbilden
 }
 
 STRING 26141
@@ -69348,7 +69348,7 @@ Increases the attack damage of the Hero by 8 when worn.|n|n|cffffcc00Right Hand,
 
 STRING 26142
 {
-Changed food maximum to 300.
+Ändert das Nahrungsmaximum auf 300.
 }
 
 STRING 26143
@@ -69390,13 +69390,13 @@ Boosts attack damage by 20.
 STRING 26164
 // Items: I0V3 (Spell Shield), Tip (Tooltip - Basic)
 {
-Purchase Zauberschild
+Zauberschild erwerben
 }
 
 STRING 26165
 // Items: I0V3 (Spell Shield), Description (Description)
 {
-Boosts armor  by 4.
+Boosts armor by 4.
 }
 
 STRING 26166
@@ -71746,7 +71746,7 @@ Allows entering your base.
 }
 
 STRING 28456
-// Abilities: A12M (Soul Theft), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A12M (Seelendiebstahl), Ubertip (Tooltip - Normal - Extended)
 {
 Traps the targeted enemy inside the Soul Gem when used. The enemy is returned to play when the bearer of the Soul is killed. While an enemy is trapped, the bearer of the Soul is revealed to the enemy through the Fog of War.
 }
@@ -72986,7 +72986,7 @@ E
 }
 
 STRING 29875
-// Units: h0NH (Gnome Brassman), EditorSuffix (Name - Editor Suffix)
+// Units: h0NH (Messing-Gnom), EditorSuffix (Name - Editor Suffix)
 {
 (Gnome)
 }
@@ -74871,7 +74871,7 @@ Erlaubt den Verkauf von Einheiten.
 STRING 31530
 // Abilities: A12F (Shop Purchase Unit), Tip (Tooltip - Normal)
 {
-Shop Purchase Unit
+Laden Einheit erwerben
 }
 
 STRING 31531
@@ -74973,13 +74973,13 @@ Dismounts the Archer from the Dragonhawk.
 STRING 31551
 // Abilities: A0H0 (Mount Dragonhawk), Name (Name)
 {
-Mount Dragonhawk
+Drachenfalken besteigen
 }
 
 STRING 31552
 // Abilities: A0H0 (Mount Dragonhawk), Tip (Tooltip - Normal)
 {
-Mount Dragonhawk
+Drachenfalken besteigen
 }
 
 STRING 31553
@@ -75045,13 +75045,13 @@ Trains Dragonhawks to allow Archers to mount them. This allows them to attack bo
 STRING 31563
 // Units: h053 (Dalaran Power Generator), Name (Name)
 {
-Dalaran Stromgenerator
+Dalaran-Stromgenerator
 }
 
 STRING 31564
 // Units: h053 (Dalaran Power Generator), Tip (Tooltip - Basic)
 {
-Build Dalaran Stromgenerator
+Dalaran-Stromgenerator errichten
 }
 
 STRING 31565
@@ -75069,13 +75069,13 @@ STRING 31566
 STRING 31571
 // Units: h055 (Dalaran Guards Tower), Name (Name)
 {
-Dalaran Guards Tower
+Dalaran-Wachturm
 }
 
 STRING 31572
 // Units: h055 (Dalaran Guards Tower), Tip (Tooltip - Basic)
 {
-Build Dalran Guards Tower
+Dalaran-Wachturm errichten
 }
 
 STRING 31576
@@ -75087,7 +75087,7 @@ Heldenwähler
 STRING 31577
 // Abilities: A0H8 (Inventory), EditorSuffix (Editor Suffix)
 {
-(Soul)
+(Seele)
 }
 
 STRING 31579
@@ -75153,7 +75153,7 @@ STRING 31679
 STRING 31680
 // Units: n08P (Inquisitor), Ubertip (Tooltip - Extended)
 {
-Casting unit with Schwebendes Auge, Antimagie-Hülle and Soul Theft. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Casting unit with Schwebendes Auge, Antimagie-Hülle and Seelendiebstahl. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 31681
@@ -75175,25 +75175,25 @@ STRING 31687
 }
 
 STRING 31688
-// Abilities: A12M (Soul Theft), Tip (Tooltip - Normal)
+// Abilities: A12M (Seelendiebstahl), Tip (Tooltip - Normal)
 {
-Soul Theft
+Seelendiebstahl
 }
 
 STRING 31689
-// Abilities: A12M (Soul Theft), EditorSuffix (Editor Suffix)
+// Abilities: A12M (Seelendiebstahl), EditorSuffix (Editor Suffix)
 {
 (Dämonen) (Inquisitor)
 }
 
 STRING 31695
-// Abilities: A1X2 (Soul Theft), Name (Name)
+// Abilities: A1X2 (Seelendiebstahl), Name (Name)
 {
-Soul Theft
+Seelendiebstahl
 }
 
 STRING 31696
-// Abilities: A1X2 (Soul Theft), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1X2 (Seelendiebstahl), Ubertip (Tooltip - Normal - Extended)
 {
 Traps the targeted enemy inside the Soul Gem when used. The enemy is returned to play when the bearer of the Soul is killed. While an enemy is trapped, the bearer of the Soul is revealed to the enemy through the Fog of War.
 }
@@ -75247,9 +75247,9 @@ F
 }
 
 STRING 31751
-// Abilities: A1X2 (Soul Theft), Tip (Tooltip - Normal)
+// Abilities: A1X2 (Seelendiebstahl), Tip (Tooltip - Normal)
 {
-Soul Theft
+Seelendiebstahl
 }
 
 STRING 31752
@@ -75261,13 +75261,13 @@ STRING 31752
 STRING 31754
 // Upgrades: R08Y (Web), Tip (Tooltip)
 {
-Research Soul Theft
+Seelendiebstahl erforschen
 }
 
 STRING 31755
 // Upgrades: R08Y (Web), Ubertip (Tooltip - Extended)
 {
-Gives Inquisitors the ability Soul Theft.
+Gibt Inquisitoren die Fähigkeit 'Seelendiebstahl'.
 }
 
 STRING 31756
@@ -75345,13 +75345,13 @@ Grabmal von Sargeras
 STRING 31833
 // Units: H006 (King of Ironforge), Name (Name)
 {
-King of Ironforge
+König von Ironforge
 }
 
 STRING 31834
 // Units: H005 (King of Azeroth), Name (Name)
 {
-King of Azeroth
+König von Azeroth
 }
 
 STRING 31841
@@ -75417,19 +75417,19 @@ Geistläufer
 STRING 31914
 // Units: O04M (Spirit Walker), Awakentip (Tooltip - Awaken)
 {
-Revive Geistläufer
+Geistläufer wiederbeleben
 }
 
 STRING 31915
 // Units: O04M (Spirit Walker), Revivetip (Tooltip - Revive)
 {
-Revive Geistläufer
+Geistläufer wiederbeleben
 }
 
 STRING 31916
 // Units: O04M (Spirit Walker), Tip (Tooltip - Basic)
 {
-Summon Geistläufer
+Geistläufer beschwören
 }
 
 STRING 31919
@@ -75585,19 +75585,19 @@ Elite-Scharfschütze
 STRING 32052
 // Units: H0JQ (Elite Rifleman), Awakentip (Tooltip - Awaken)
 {
-Revive Elite-Scharfschütze
+Elite-Scharfschütze wiederbeleben
 }
 
 STRING 32053
 // Units: H0JQ (Elite Rifleman), Tip (Tooltip - Basic)
 {
-Summon Elite-Scharfschütze
+Elite-Scharfschütze beschwören
 }
 
 STRING 32054
 // Units: H0JQ (Elite Rifleman), Revivetip (Tooltip - Revive)
 {
-Revive Elite-Scharfschütze
+Elite-Scharfschütze wiederbeleben
 }
 
 STRING 32055
@@ -75615,7 +75615,7 @@ Schädel des Gul'dan erforschen
 STRING 32113
 // Units: u01P (Nerubian Worker), Tip (Tooltip - Basic)
 {
-Train Nerubian Arbeiter
+Nerubian-Arbeiter ausbilden
 }
 
 STRING 32138
@@ -75675,7 +75675,7 @@ E
 STRING 32350
 // Units: E01L (Druid Aquatic Form), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Wassergestalt
+Druide in Wassergestalt wiederbeleben
 }
 
 STRING 32360
@@ -76599,7 +76599,7 @@ Val'kyr
 STRING 32753
 // Units: n0CK (Val'kyr), Tip (Tooltip - Basic)
 {
-Hire Val'kyr
+Val'kyr anheuern
 }
 
 STRING 32754
@@ -77484,15 +77484,15 @@ Alchemistenlabor
 }
 
 STRING 33489
-// Units: h0NH (Gnome Brassman), Name (Name)
+// Units: h0NH (Messing-Gnom), Name (Name)
 {
-Gnome Brassman
+Messing-Gnom
 }
 
 STRING 33490
-// Units: h0NH (Gnome Brassman), Tip (Tooltip - Basic)
+// Units: h0NH (Messing-Gnom), Tip (Tooltip - Basic)
 {
-Build Gnome Brassman
+Messing-Gnom errichten
 }
 
 STRING 33491
@@ -79163,7 +79163,7 @@ C
 }
 
 STRING 34184
-// Units: h0NH (Gnome Brassman), Ubertip (Tooltip - Extended)
+// Units: h0NH (Messing-Gnom), Ubertip (Tooltip - Extended)
 {
 Trains primary assault troops. Trains Riflemen, Field Ingenieurs, and Artillerie-Panzers.
 }
@@ -111846,7 +111846,7 @@ Inquisitor
 STRING 50361
 // Units: n0JS (Inquisitor), Ubertip (Tooltip - Extended)
 {
-Casting unit with Schwebendes Auge, Antimagie-Hülle and Soul Theft. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Casting unit with Schwebendes Auge, Antimagie-Hülle and Seelendiebstahl. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 50363
@@ -120155,7 +120155,7 @@ STRING 55417
 STRING 55418
 // Items: I067 (Outland Draenei Camp), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
+|cff0000ffGeografischer Standort:|r Andere Welt.
 Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
 
 |cff00ff00Empfohlenes Volk:|r Draenei.
@@ -120164,7 +120164,7 @@ Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
 STRING 55419
 // Items: I11B (Outland Black Citadel), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
+|cff0000ffGeografischer Standort:|r Andere Welt.
 Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
 
 |cff00ff00Empfohlenes Volk:|r Dämonen, Höllenorcs.
@@ -120173,7 +120173,7 @@ Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
 STRING 55420
 // Items: I11C (Outland Illidan's Camp), Ubertip (Tooltip - Extended)
 {
-|cff0000ffGeografischer Standort:|r Another World.
+|cff0000ffGeografischer Standort:|r Andere Welt.
 Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
 
 |cff00ff00Empfohlenes Volk:|r Blutelfen, Naga.
@@ -120410,7 +120410,7 @@ Schildkrötenei
 STRING 55549
 // Abilities: A214 (Spawn Sea Turtle Hatchling), Name (Name)
 {
-Spawn Meeresschildkröte Hatchling
+Meeresschildkröten-Junges beschwören
 }
 
 STRING 55550
@@ -120422,7 +120422,7 @@ STRING 55550
 STRING 55551
 // Abilities: A215 (Spawn Sea Turtle Hatchling), Name (Name)
 {
-Spawn Meeresschildkröte Hatchling
+Meeresschildkröten-Junges beschwören
 }
 
 STRING 55552
@@ -120638,13 +120638,13 @@ STRING 55695
 STRING 55702
 // Units: h0X8 (Buy Property Jadefire Glen), Name (Name)
 {
-Buy Property Jadefire Glen
+Immobilie Jadefire Glen kaufen
 }
 
 STRING 55703
 // Units: h0X8 (Buy Property Jadefire Glen), Tip (Tooltip - Basic)
 {
-Buy Property Jadefire Glen
+Immobilie Jadefire Glen kaufen
 }
 
 STRING 55705
@@ -121007,25 +121007,25 @@ Convert into Non-Ancient
 STRING 55794
 // Units: h0WY (Buy Property Hellfire Citadel), Name (Name)
 {
-Buy Property Hellfire Citadel
+Immobilie Höllenfeuer-Zitadelle kaufen
 }
 
 STRING 55795
 // Units: h0WY (Buy Property Hellfire Citadel), Tip (Tooltip - Basic)
 {
-Buy Property Hellfire Citadel
+Immobilie Höllenfeuer-Zitadelle kaufen
 }
 
 STRING 55802
 // Units: h0XG (Buy Property Antorus, the Burning Throne), Name (Name)
 {
-Buy Property Antorus, the Burning Throne
+Immobilie Antorus, den brennenden Thron kaufen
 }
 
 STRING 55803
 // Units: h0XG (Buy Property Antorus, the Burning Throne), Tip (Tooltip - Basic)
 {
-Buy Property Antorus, the Burning Throne
+Immobilie Antorus, den brennenden Thron kaufen
 }
 
 STRING 55805
@@ -121085,7 +121085,7 @@ STRING 55813
 STRING 55814
 // Upgrades: R0GV (Burning Oil), Name (Name)
 {
-Hellfire Citadel
+Höllenfeuer-Zitadelle
 }
 
 STRING 55815
@@ -121241,7 +121241,7 @@ STRING 55845
 STRING 55847
 // Abilities: A0D7 (Convert into Undead), Name (Name)
 {
-Convert into Undead
+In Untoten umwandeln
 }
 
 STRING 55848
@@ -122360,7 +122360,7 @@ STRING 56302
 }
 
 STRING 56303
-// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
+// Abilities: A1X2 (Seelendiebstahl), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
@@ -123713,7 +123713,7 @@ The former World Tree of the Night Elves which was attacked by Archimonde.|n
 STRING 56861
 // Units: u01A (Sacrificial Pit), Ubertip (Tooltip - Extended)
 {
-Trains Kerkermeisters and Inquisitors.|nAlso contain Soul Theft, Antimagie-Hülle, and Improved Verschlingen upgrades.
+Trains Kerkermeisters and Inquisitors.|nAlso contain Seelendiebstahl, Antimagie-Hülle, and Improved Verschlingen upgrades.
 }
 
 STRING 56862
