@@ -26238,61 +26238,61 @@ Creates a Great Verlies at a target location.
 STRING 5262
 // Items: I0K4 (Tiny Dark Dungeon), Description (Description)
 {
-Creates a Dark Verlies.
+Errichtet ein Dunkles Verlies.
 }
 
 STRING 5263
 // Items: I0K4 (Tiny Dark Dungeon), Name (Name)
 {
-Tiny Dark Verlies
+Winziges Dunkles Verlies
 }
 
 STRING 5264
 // Items: I0K4 (Tiny Dark Dungeon), Tip (Tooltip - Basic)
 {
-Purchase Tiny Dark Verlies
+Winziges Dunkles Verlies erwerben
 }
 
 STRING 5265
 // Items: I0K4 (Tiny Dark Dungeon), Ubertip (Tooltip - Extended)
 {
-Creates a Dark Verlies at a target location.
+Errichtet am Zielort ein Dunkles Verlies.
 }
 
 STRING 5266
 // Items: I0K5 (Tiny Skeleton Barracks), Name (Name)
 {
-Tiny Skeleton Kaserne
+Winzige Skelett-Kaserne
 }
 
 STRING 5267
 // Items: I0K5 (Tiny Skeleton Barracks), Tip (Tooltip - Basic)
 {
-Purchase Tiny Skeleton Kaserne
+Winzige Skelett-Kaserne erwerben
 }
 
 STRING 5268
 // Items: I0K9 (Tiny Torture Chamber), Description (Description)
 {
-Creates a Torture Chamber.
+Errichtet eine Folterkammer.
 }
 
 STRING 5269
 // Items: I0K9 (Tiny Torture Chamber), Name (Name)
 {
-Tiny Torture Chamber
+Winzige Folterkammer
 }
 
 STRING 5270
 // Items: I0K9 (Tiny Torture Chamber), Tip (Tooltip - Basic)
 {
-Purchase Tiny Torture Chamber
+Winzige Folterkammer erwerben
 }
 
 STRING 5271
 // Items: I0K9 (Tiny Torture Chamber), Ubertip (Tooltip - Extended)
 {
-Creates a Torture Chamber at a target location.
+Errichtet am Zielort eine Folterkammer.
 }
 
 STRING 5272
@@ -26346,25 +26346,25 @@ Erschafft am Zielort eine Bibliothek.
 STRING 5280
 // Items: I0KY (Tiny Spikes), Name (Name)
 {
-Tiny Spikes
+Winzige Stacheln
 }
 
 STRING 5281
 // Items: I0KY (Tiny Spikes), Tip (Tooltip - Basic)
 {
-Purchase Tiny Spikes
+Winzige Stacheln erwerben
 }
 
 STRING 5282
 // Items: I0KY (Tiny Spikes), Description (Description)
 {
-Creates Spikes.
+Errichtet Stacheln.
 }
 
 STRING 5283
 // Items: I0KY (Tiny Spikes), Ubertip (Tooltip - Extended)
 {
-Creates Spikes at a target location.
+Errichtet Stacheln am Zielort.
 }
 
 STRING 5284
@@ -39350,7 +39350,7 @@ Großmeister-Archäologie
 STRING 8282
 // Abilities: A10F (Archaeology - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Archaeologist uses his knowledge to dig for a random level 8 item.
+Der Archäologe nutzt sein Wissen, um nach einem zufälligen Gegenstand der Stufe 8 zu graben.
 }
 
 STRING 8283
@@ -39362,7 +39362,7 @@ Build Tiny Ausgrabungsstätte
 STRING 8284
 // Abilities: A10H (Archaeology - Doctor), Name (Name)
 {
-Archäologie - Doctor
+Archäologie - Doktor
 }
 
 STRING 8285
@@ -39374,7 +39374,7 @@ Doktor-Archäologie
 STRING 8286
 // Abilities: A10H (Archaeology - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Archaeologist uses his knowledge to craft a Tiny Ausgrabungsstätte.
+Der Archäologe nutzt sein Wissen, um eine Winzige Ausgrabungsstätte herzustellen.
 }
 
 STRING 8287
@@ -61988,25 +61988,25 @@ Bestien-Pfeife
 STRING 19898
 // Abilities: A0MJ (Archaeology - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Archaeologist uses his knowledge to dig for a random level 1 item.
+Der Archäologe nutzt sein Wissen, um nach einem zufälligen Gegenstand der Stufe 1 zu graben.
 }
 
 STRING 19899
 // Abilities: A0MK (Archaeology - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Archaeologist uses his knowledge to dig for a random level 5 item.
+Der Archäologe nutzt sein Wissen, um nach einem zufälligen Gegenstand der Stufe 5 zu graben.
 }
 
 STRING 19900
 // Abilities: A0ML (Archeology - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Archaeologist uses his knowledge to dig for a random level 3 item.
+Der Archäologe nutzt sein Wissen, um nach einem zufälligen Gegenstand der Stufe 3 zu graben.
 }
 
 STRING 19901
 // Abilities: A0MM (Archaeology - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Archaeologist uses his knowledge to dig for a random level 7 item.
+Der Archäologe nutzt sein Wissen, um nach einem zufälligen Gegenstand der Stufe 7 zu graben.
 }
 
 STRING 19902
@@ -68248,13 +68248,13 @@ Höllenbestie Destroyer
 STRING 24625
 // Units: o08T (Crossbowman), Name (Name)
 {
-Armbrustman
+Armbrustschütze
 }
 
 STRING 24626
 // Units: o08T (Crossbowman), Tip (Tooltip - Basic)
 {
-Train Armbrustman
+Armbrustschützen ausbilden
 }
 
 STRING 24638
@@ -81085,7 +81085,7 @@ Chaos
 STRING 35175
 // Abilities: S015 (Chaos), EditorSuffix (Editor Suffix)
 {
-(Lordaeron) (Armbrustman)
+(Lordaeron) (Armbrustschütze)
 }
 
 STRING 35176
