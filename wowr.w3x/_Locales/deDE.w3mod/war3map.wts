@@ -9344,7 +9344,7 @@ Increases the maximum hit points of this unit by <R000,base1>.
 STRING 1578
 // Units: n0OG (Hunting Hawk), Name (Name)
 {
-Jagd Hawk
+Jagdfalke
 }
 
 STRING 1579
@@ -31055,7 +31055,7 @@ STRING 6213
 STRING 6214
 // Items: I0VP (Hunter), Ubertip (Tooltip - Extended)
 {
-Craft weapons and equipments which allow hunting creeps and critters. Use "-t/-trophies" to list all hunting trophies:|n- Jagdbogen|n- Skinning Rack|n- Jagd Hund Käfig|n- Bear Trap|n- Jagd Hawk|n- Tiny Jagd Camp
+Craft weapons and equipments which allow hunting creeps and critters. Use "-t/-trophies" to list all hunting trophies:|n- Jagdbogen|n- Häutungsständer|n- Jagdhund-Käfig|n- Bärenfalle|n- Jagdfalke|n- Winziges Jagdlager
 }
 
 STRING 6215
@@ -31067,7 +31067,7 @@ Winziges Jagdlager
 STRING 6216
 // Items: I03E (Alliance with the Burning Legion), Name (Name)
 {
-Alliance with the Burning Legion
+Bündnis mit der Brennenden Legion
 }
 
 STRING 6217
@@ -31079,7 +31079,7 @@ Allies the Burning Legion for 5 minutes.
 STRING 6218
 // Items: I03E (Alliance with the Burning Legion), Tip (Tooltip - Basic)
 {
-Purchase Alliance with the Burning Legion
+Bündnis mit der Brennenden Legion erwerben
 }
 
 STRING 6219
@@ -46857,7 +46857,7 @@ Doctor Jagd
 STRING 10774
 // Abilities: A208 (Hunting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Hunter uses his knowledge to create a Tiny Jagd Camp.
+The Hunter uses his knowledge to create a Winziges Jagdlager.
 }
 
 STRING 10775
@@ -46875,7 +46875,7 @@ Großmeister Jagd
 STRING 10777
 // Abilities: A209 (Hunting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Hunter uses his knowledge to summon a Jagd Hawk.
+The Hunter uses his knowledge to summon a Jagdfalke.
 }
 
 STRING 10778
@@ -69149,7 +69149,7 @@ Ein listiger Held, adept at damaging opponents. Can learn Scout, Cold Pfeile, Vo
 }
 
 STRING 25957
-// Items: I0VV (Bear Traps), Ubertip (Tooltip - Extended)
+// Items: I0VV (Bärenfalles), Ubertip (Tooltip - Extended)
 {
 Places a hidden bear trap at a target point. Enemy units that move near the bear trap will activate the it, destroying it and causing area of effect damage to nearby units. |nContains <gobm,uses> charges.|n|nTiers which were damaged or killed by bear traps will drop hunting trophies on their death.
 }
@@ -69163,7 +69163,7 @@ STRING 25958
 STRING 25959
 // Abilities: A1Z8 (Track), EditorSuffix (Editor Suffix)
 {
-(Jäger) (Jagd Hund)
+(Jäger) (Jagdhund)
 }
 
 STRING 25973
@@ -96367,7 +96367,7 @@ Has auras with effects depending on the number of units lost to enemies. |n|n|cf
 STRING 41243
 // Units: n0FY (Burial Place), Tip (Tooltip - Basic)
 {
-Build Grabstätte
+Grabstätte errichten
 }
 
 STRING 41244
@@ -96385,31 +96385,31 @@ Arbeiter
 STRING 41246
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
-Harpoons
+Harpunen
 }
 
 STRING 41247
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
-Improved Harpoons
+Verbesserte Harpunen
 }
 
 STRING 41248
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
-Advanced Harpoons
+Hoch entwickelte Harpunen
 }
 
 STRING 41249
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zum Harpoons
+Ausbau zu Harpunen
 }
 
 STRING 41250
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zum Advanced Harpoons
+Ausbau zu Hochentwickelten Harpunen
 }
 
 STRING 41251
@@ -96699,7 +96699,7 @@ STRING 41332
 {
 Increases the melee attack damage of Fighters, Speerkämpfer, Mammut-Reiters, and Chieftains.
 }
-
+'
 STRING 41333
 // Upgrades: R0CD (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
@@ -109006,7 +109006,7 @@ Das Geweih eines Hirsches.
 }
 
 STRING 49151
-// Units: n0IY (Bear Trap), Name (Name)
+// Units: n0IY (Bärenfalle), Name (Name)
 {
 Bärenfalle
 }
@@ -109060,13 +109060,13 @@ Die Wolle eines Schafs.
 }
 
 STRING 49175
-// Items: I0VV (Bear Traps), Name (Name)
+// Items: I0VV (Bärenfalles), Name (Name)
 {
 Bärenfallen
 }
 
 STRING 49176
-// Items: I0VV (Bear Traps), Tip (Tooltip - Basic)
+// Items: I0VV (Bärenfalles), Tip (Tooltip - Basic)
 {
 Bärenfallen erwerben
 }
@@ -109096,39 +109096,39 @@ Reinforced Walls
 }
 
 STRING 49181
-// Abilities: A1SM (Item Place Bear Trap), Name (Name)
+// Abilities: A1SM (Item Place Bärenfalle), Name (Name)
 {
-Item Place Bear Trap
+Item Place Bärenfalle
 }
 
 STRING 49182
 // Units: o08E (Skinning Rack), Name (Name)
 {
-Skinning Rack
+Häutungsständer
 }
 
 STRING 49183
 // Items: I0VW (Skinning Racks), Name (Name)
 {
-Skinning Racks
+Häutungsständer
 }
 
 STRING 49184
 // Items: I0VW (Skinning Racks), Tip (Tooltip - Basic)
 {
-Purchase Skinning Racks
+Häutungsständer erwerben
 }
 
 STRING 49185
 // Abilities: A1SN (Skinning Rack), Name (Name)
 {
-Skinning Rack
+Häutungsständer
 }
 
 STRING 49186
 // Abilities: A1SO (Hunting - Advanced), Name (Name)
 {
-Jagd - Advanced
+Jagd - Fortgeschritten
 }
 
 STRING 49187
@@ -109152,25 +109152,25 @@ D
 STRING 49202
 // Units: o08F (Hunting Dog), Name (Name)
 {
-Jagd Hund
+Jagdhund
 }
 
 STRING 49203
 // Items: I0VX (Hunting Dog Cage), Description (Description)
 {
-Summons a Green Drake.
+Beschwört einen Gründrachen.
 }
 
 STRING 49204
 // Items: I0VX (Hunting Dog Cage), Name (Name)
 {
-Jagd Hund Käfig
+Jagdhund-Käfig
 }
 
 STRING 49205
 // Items: I0VX (Hunting Dog Cage), Tip (Tooltip - Basic)
 {
-Purchase Jagd Hund Käfig
+Jagdhund-Käfig erwerben
 }
 
 STRING 49207
@@ -109182,7 +109182,7 @@ STRING 49207
 STRING 49208
 // Abilities: A1SP (Item Hunting Dog Summon), Name (Name)
 {
-Item Jagd Hund Summon
+Item Jagdhund Summon
 }
 
 STRING 49209
@@ -109236,7 +109236,7 @@ Increases the damage by <A1P4,DataA1> and causes area of effect damage.
 STRING 49233
 // Units: h0QI (Magic Tower), Tip (Tooltip - Basic)
 {
-Ausbau zum Magischer Turm
+Ausbau zum Magischen Turm
 }
 
 STRING 49234
@@ -109374,7 +109374,7 @@ Etwas feiern.
 STRING 49279
 // Items: I0VW (Skinning Racks), Description (Description)
 {
-Summons a Skinning Rack.
+Beschwört einen Häutungsständer.
 }
 
 STRING 49280
@@ -109386,25 +109386,25 @@ STRING 49280
 STRING 49281
 // Abilities: A1SI (Hunting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Hunter crafts a Jagdbogen.
+Der Jäger stellt einen Jagdbogen her.
 }
 
 STRING 49282
 // Abilities: A1SL (Hunting - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Hunter crafts two Bear Traps.
+Der Jäger stellt zwei Bärenfallen her.
 }
 
 STRING 49283
 // Abilities: A1SO (Hunting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Hunter crafts two Skinning Racks.
+Der Jäger stellt zwei Häutungsständer her.
 }
 
 STRING 49284
 // Abilities: A1SQ (Hunting - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Hunter crafts two Jagd Hund Käfigs.
+Der Jäger stellt zwei Jagdhund-Käfige her.
 }
 
 STRING 49285
@@ -109572,7 +109572,7 @@ Rot.
 STRING 49323
 // Buffs/Effects: B03E (), Bufftip (Tooltip)
 {
-Skinning Rack
+Häutungsständer
 }
 
 STRING 49324
@@ -109979,7 +109979,7 @@ Ein Kriegerheld, evil counterpart to the Human Paladin. Can learn Todesmantel, T
 STRING 49517
 // Items: I0VX (Hunting Dog Cage), Ubertip (Tooltip - Extended)
 {
-Summons a Jagd Hund to fight for you. |nHält <AIbd,Dur1> Sekunden lang an. Jagd Hunds who damage or kill critters will get hunting trophies from them.
+Summons a Jagdhund to fight for you. |nHält <AIbd,Dur1> Sekunden lang an. Jagdhunds who damage or kill critters will get hunting trophies from them.
 }
 
 STRING 49518
@@ -110033,7 +110033,7 @@ Destroys the skinning rack and adds additional charges to hunting trophy items i
 STRING 49531
 // Abilities: A1T2 (Skin), EditorSuffix (Editor Suffix)
 {
-(Skinning Rack) (Selfdestruct) (Jäger)
+(Häutungsständer) (Selbstzerstörung) (Jäger)
 }
 
 STRING 49549
@@ -126100,7 +126100,7 @@ Precisely crafted hunting bow. Grants <A1SH,DataA1> damage and allows to attack 
 STRING 57809
 // Items: I0VW (Skinning Racks), Ubertip (Tooltip - Extended)
 {
-Summons a Skinning Rack to improve your hunting trophies for <AIsw,Dur1> Sekunden lang an. Increases the charges of all trophy items by 1 in each inventory slot when it dies. Drops 2 random trophies on death.
+Summons a Häutungsständer to improve your hunting trophies for <AIsw,Dur1> Sekunden lang an. Increases the charges of all trophy items by 1 in each inventory slot when it dies. Drops 2 random trophies on death.
 }
 
 STRING 57810
