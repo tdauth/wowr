@@ -122,7 +122,7 @@ STRING 20
 }
 
 STRING 21
-// Units: n05Q (Naga Whaler), EditorSuffix (Name - Editor Suffix)
+// Units: n05Q (Naga-Walfänger), EditorSuffix (Name - Editor Suffix)
 {
 (Naga) (Zauberer 3) (Schredder)
 }
@@ -6454,7 +6454,7 @@ Gryphon Mount
 }
 
 STRING 1090
-// Units: n05Q (Naga Whaler), Hotkey (Hotkey)
+// Units: n05Q (Naga-Walfänger), Hotkey (Hotkey)
 {
 W
 }
@@ -8766,7 +8766,7 @@ M
 }
 
 STRING 1482
-// Units: u019 (Legion Transporter), Hotkey (Hotkey)
+// Units: u019 (Legionstransporter), Hotkey (Hotkey)
 {
 L
 }
@@ -13387,7 +13387,7 @@ A
 }
 
 STRING 2361
-// Units: n00C (Unholy Cathedral), Description (Description)
+// Units: n00C (Unholy Kathedrale), Description (Description)
 {
 Erlaubt Ihnen Skelettierte Orcs anzuheuern.
 }
@@ -18523,7 +18523,7 @@ B
 }
 
 STRING 3506
-// Units: h0X6 (Buy Property Timbermaw Hold), Hotkey (Hotkey)
+// Units: h0X6 (Buy Property Holzschlundfestung), Hotkey (Hotkey)
 {
 B
 }
@@ -19317,7 +19317,7 @@ Cheats!
 }
 
 STRING 3713
-// Units: h0RK (Cathedral of Light), Ubertip (Tooltip - Extended)
+// Units: h0RK (Kathedrale of Light), Ubertip (Tooltip - Extended)
 {
 Special building which trains Bischofs and can cast Massen-Heiliges-Licht. |n|n|cffffcc00Begrenzt auf 1.|r
 }
@@ -23154,7 +23154,7 @@ R
 }
 
 STRING 4648
-// Units: e00P (Dragonhawk Archer Rider), Ubertip (Tooltip - Extended)
+// Units: e00P (Drachenfalken-Bogenschützenreiterin), Ubertip (Tooltip - Extended)
 {
 Mit Bogenschützin berittener Drachenfalke. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -25596,7 +25596,7 @@ Primäres Gebäude, wird zum Ausbilden von Mur'gul-Sklaven und zum Einlagern ges
 STRING 5143
 // Units: n05P (Pyramid of the Serpent), Ubertip (Tooltip - Extended)
 {
-Trains Naga Whalers, Coral Golems, and Naga-Königswaches. Provides the research Festhaut.|n|nCan be used to return harvested lumber.
+Trains Naga-Walfängers, Coral Golems, and Naga-Königswaches. Provides the research Festhaut.|n|nCan be used to return harvested lumber.
 }
 
 STRING 5144
@@ -25744,7 +25744,7 @@ H
 }
 
 STRING 5171
-// Units: n0MS (Submerged Naga Whaler), EditorSuffix (Name - Editor Suffix)
+// Units: n0MS (Submerged Naga-Walfänger), EditorSuffix (Name - Editor Suffix)
 {
 (Naga)
 }
@@ -35557,7 +35557,7 @@ STRING 7586
 }
 
 STRING 7587
-// Units: u019 (Legion Transporter), EditorSuffix (Name - Editor Suffix)
+// Units: u019 (Legionstransporter), EditorSuffix (Name - Editor Suffix)
 {
 (Dämonen)
 }
@@ -36688,7 +36688,7 @@ The Destroyer´s seat of power. Has different offensive capabilities. Can learn 
 }
 
 STRING 7779
-// Units: n00C (Unholy Cathedral), Name (Name)
+// Units: n00C (Unholy Kathedrale), Name (Name)
 {
 Unheilige Kathedrale
 }
@@ -44297,25 +44297,25 @@ Bischof Arthur,Bischof DeLavey,Bischof Street,Bischof Neheri,Bischof Leander,Bis
 }
 
 STRING 10243
-// Items: I17M (Tiny Cathedral of Light), Name (Name)
+// Items: I17M (Tiny Kathedrale of Light), Name (Name)
 {
 Winzige Kathedrale des Lichts
 }
 
 STRING 10244
-// Items: I17M (Tiny Cathedral of Light), Tip (Tooltip - Basic)
+// Items: I17M (Tiny Kathedrale of Light), Tip (Tooltip - Basic)
 {
 Kathedrale des Lichts erwerben
 }
 
 STRING 10245
-// Items: I17M (Tiny Cathedral of Light), Description (Description)
+// Items: I17M (Tiny Kathedrale of Light), Description (Description)
 {
 Erschafft eine Kathedrale des Lichts.
 }
 
 STRING 10246
-// Items: I17M (Tiny Cathedral of Light), Ubertip (Tooltip - Extended)
+// Items: I17M (Tiny Kathedrale of Light), Ubertip (Tooltip - Extended)
 {
 Erschafft am Zielort eine Kathedrale des Lichts.
 }
@@ -44423,7 +44423,7 @@ Upgrades Houses, Beobachtungsturms, Guard Towers, Arcane Towers, and Cannon Towe
 }
 
 STRING 10264
-// Abilities: A1B8 (Build Tiny Cathedral of Light), Name (Name)
+// Abilities: A1B8 (Build Tiny Kathedrale of Light), Name (Name)
 {
 Winzige Kathedrale des Lichts
 }
@@ -44889,7 +44889,7 @@ Windmühle
 
 STRING 10347
 {
-Velen the Prophet needs the help of the Naaru and the Army of Light to defeat the Demons on Argus. Visit the Naaru Xe'ra at the crashing site of the dimensional ship Xenedar, hire a Lightforged Friedensstifter and return him to Velen to get your reward.
+Velen the Prophet needs the help of the Naaru and the Army of Light to defeat the Demons on Argus. Visit the Naaru Xe'ra at the crashing site of the dimensional ship Xenedar, hire a Lichtgeschmiedeter Friedensstifter and return him to Velen to get your reward.
 }
 
 STRING 10348
@@ -49545,7 +49545,7 @@ Hebel Tor und Portal
 STRING 11601
 // Items: I12X (Astromancer), Ubertip (Tooltip - Extended)
 {
-Craft items to explore the stars and travel through space:|n- Navigation Scrolls and Tiny Portale|n- Leuchtsignal Guns and Fluchtportale|n- Meteor Stones and Scroll of Town Portale|n- Tiny Arcane Observatories|n- Tiny Moon, Moonstone|n- Tiny Sun, Sonnenstein
+Craft items to explore the stars and travel through space:|n- Spruchrolle der Navigations and Tiny Portale|n- Leuchtsignal Guns and Fluchtportale|n- Meteor Stones and Scroll of Town Portale|n- Tiny Arcane Observatories|n- Tiny Moon, Moonstone|n- Tiny Sun, Sonnenstein
 }
 
 STRING 11602
@@ -51605,12 +51605,12 @@ Return Illidan's Arkonite Crystal to Velen on Argus.
 
 STRING 12152
 {
-Hire a Lightforged Friedensstifter at the Xenedar on Argus.
+Heuert einen Lichtgeschmiedeten Friedensstifter in Xenedar auf Argus an.
 }
 
 STRING 12154
 {
-Return the Lightforged Friedensstifter to Velen on Argus.
+Bringt den Lichtgeschmiedeten Friedensstifter zu Velen auf Argus.
 }
 
 STRING 12155
@@ -52248,27 +52248,27 @@ Creates a Fortified Infernal Machine at a target location.
 }
 
 STRING 12264
-// Items: I0T6 (Tiny Legion Transporter), Name (Name)
+// Items: I0T6 (Tiny Legionstransporter), Name (Name)
 {
-Tiny Legion Transporter
+Winziger Legionstransporter
 }
 
 STRING 12265
-// Items: I0T6 (Tiny Legion Transporter), Tip (Tooltip - Basic)
+// Items: I0T6 (Tiny Legionstransporter), Tip (Tooltip - Basic)
 {
-Purchase Tiny Legion Transporter
+Winzigen Legionstransporter erwerben
 }
 
 STRING 12266
-// Items: I0T6 (Tiny Legion Transporter), Description (Description)
+// Items: I0T6 (Tiny Legionstransporter), Description (Description)
 {
-Creates a Legion Transporter.
+Errichtet einen Legionstransporter.
 }
 
 STRING 12267
-// Items: I0T6 (Tiny Legion Transporter), Ubertip (Tooltip - Extended)
+// Items: I0T6 (Tiny Legionstransporter), Ubertip (Tooltip - Extended)
 {
-Creates a Legion Transporter at a target location.
+Errichtet am Zielort einen Legionstransporter.
 }
 
 STRING 12268
@@ -52302,9 +52302,9 @@ Build Tiny Fortified Infernal Machine
 }
 
 STRING 12273
-// Abilities: A0UF (Build Tiny Legion Transporter), Name (Name)
+// Abilities: A0UF (Build Tiny Legionstransporter), Name (Name)
 {
-Build Tiny Legion Transporter
+Build Tiny Legionstransporter
 }
 
 STRING 12274
@@ -52328,13 +52328,13 @@ STRING 12276
 STRING 12289
 // Abilities: A09N (Incinerate), EditorSuffix (Editor Suffix)
 {
-(Fire Magic)
+(Feuermagie)
 }
 
 STRING 12290
 // Abilities: A0V4 (Phoenix), EditorSuffix (Editor Suffix)
 {
-(Fire Magic)
+(Feuermagie)
 }
 
 STRING 12298
@@ -52604,7 +52604,7 @@ Unheilshüter
 STRING 12346
 // Abilities: A0VL (Slot 1), Ubertip (Tooltip - Normal - Extended)
 {
-Change slot 1.
+Fach 1 ändern.
 }
 
 STRING 12347
@@ -53042,7 +53042,7 @@ Slot 2
 STRING 12459
 // Abilities: A0VV (Slot 2), Ubertip (Tooltip - Normal - Extended)
 {
-Change slot 2.
+Fach 2 ändern.
 }
 
 STRING 12819
@@ -56213,7 +56213,7 @@ Manor
 }
 
 STRING 15934
-// Units: h0J9 (Cathedral), EditorSuffix (Name - Editor Suffix)
+// Units: h0J9 (Kathedrale), EditorSuffix (Name - Editor Suffix)
 {
 (Spezialgebäude) (Worgen)
 }
@@ -56243,9 +56243,9 @@ O
 }
 
 STRING 15942
-// Units: h0J9 (Cathedral), Tip (Tooltip - Basic)
+// Units: h0J9 (Kathedrale), Tip (Tooltip - Basic)
 {
-Build Cathedral
+Build Kathedrale
 }
 
 STRING 15945
@@ -59952,7 +59952,7 @@ S
 }
 
 STRING 18133
-// Units: h0J9 (Cathedral), Name (Name)
+// Units: h0J9 (Kathedrale), Name (Name)
 {
 Kathedrale
 }
@@ -63672,13 +63672,13 @@ Allows Dalaran buildings to use the ability Blinzeln.
 STRING 20522
 // Upgrades: R05Z (Flare), Tip (Tooltip)
 {
-Research Spawn Feuer-Elementargeister
+Spawn Feuer-Elementargeister beschwören erforschen
 }
 
 STRING 20523
 // Abilities: A0NZ (Spawn Fire Elementals), Tip (Tooltip - Normal)
 {
-Spawn Feuer-Elementargeister
+Feuer-Elementargeister beschwören
 }
 
 STRING 20524
@@ -63972,7 +63972,7 @@ STRING 20578
 STRING 20580
 // Units: n08D (Dalaran Mutant), Tip (Tooltip - Basic)
 {
-Train Dalaran-Mutant
+Dalaran-Mutant ausbilden
 }
 
 STRING 20581
@@ -64194,7 +64194,7 @@ STRING 20633
 STRING 20634
 // Units: h09F (Elemental Sanctuary), Tip (Tooltip - Basic)
 {
-Ausbau zum Elementares Sanktum
+Ausbau zum Elementaren Sanktum
 }
 
 STRING 20635
@@ -64218,7 +64218,7 @@ Trains Leerenelementars, Poison Elementals, Frost-Elementargeists, Lightning Ele
 STRING 20638
 // Units: h0A0 (Dalaran Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Dragonhawk Riders. |nAlso contains the Cloud upgrade.
+Bildet Drachenfalkenreiter aus. |nAlso contains the Cloud upgrade.
 }
 
 STRING 20639
@@ -64241,7 +64241,7 @@ Holz sammeln
 
 STRING 20642
 {
-Water is visible!
+Wasser ist sichtbar!
 }
 
 STRING 20643
@@ -64282,7 +64282,7 @@ Holz sammeln
 STRING 20651
 // Upgrades: R063 (Cloud), Name (Name)
 {
-Arcane Gold Mines
+Arkane Goldminen
 }
 
 STRING 20652
@@ -64312,25 +64312,25 @@ C
 STRING 20656
 // Upgrades: R063 (Cloud), Tip (Tooltip)
 {
-Research Arcane Gold Mines
+Arkane Goldminen erforschen
 }
 
 STRING 20657
 // Upgrades: R063 (Cloud), Tip (Tooltip)
 {
-Research Improved Arcane Gold Mines
+Verbesserte Arkane Goldminen erforschen
 }
 
 STRING 20658
 // Upgrades: R063 (Cloud), Tip (Tooltip)
 {
-Research Advanced Arcane Gold Mines
+Hoch entwickelte Arkane Goldminen erforschen
 }
 
 STRING 20659
 // Upgrades: R063 (Cloud), Tip (Tooltip)
 {
-Research Meisterful Arcane Gold Mines
+Meisterhafte Arkane Goldminen erforschen
 }
 
 STRING 20660
@@ -64360,7 +64360,7 @@ The Troll-Medizinmann uses gathered material to craft Manaschutzzaubers.
 STRING 20683
 // Upgrades: R08W (Burning Oil), Name (Name)
 {
-Cathedral
+Kathedrale
 }
 
 STRING 20684
@@ -64423,25 +64423,25 @@ Increases the maximum hit points of this unit by <R000,base1>.
 STRING 20813
 // Items: I0A6 (Reset Hero Spells), Name (Name)
 {
-Reset Hero Spells
+Heldenzauber zurücksetzen
 }
 
 STRING 20814
 // Items: I0A6 (Reset Hero Spells), Tip (Tooltip - Basic)
 {
-Reset Hero Spells
+Heldenzauber zurücksetzen
 }
 
 STRING 20815
 // Items: I0A6 (Reset Hero Spells), Ubertip (Tooltip - Extended)
 {
-Resets all hero spells.
+Setzt alle Heldenzauber zurück.
 }
 
 STRING 20816
 // Items: I0A6 (Reset Hero Spells), Description (Description)
 {
-Resets all hero spells.
+Setzt alle Heldenzauber zurück.
 }
 
 STRING 20828
@@ -64573,13 +64573,13 @@ STRING 21306
 STRING 21307
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Fire Magier-Adepten-Ausbildung
+Feuermagier-Adepten-Ausbildung
 }
 
 STRING 21308
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Fire Magier-Meister-Ausbildung
+Feuermagier-Meister-Ausbildung
 }
 
 STRING 21309
@@ -64591,13 +64591,13 @@ STRING 21309
 STRING 21310
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Fire Magier-Adepten-Ausbildung
+Feuermagier-Adepten-Ausbildung
 }
 
 STRING 21311
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Fire Magier-Meister-Ausbildung
+Feuermagier-Meister-Ausbildung
 }
 
 STRING 21312
@@ -65032,7 +65032,7 @@ Pandarian Big Wooden Brücke
 STRING 22312
 // Units: h01S (Freelancer Shop), Tip (Tooltip - Basic)
 {
-Build Freiberufler-Laden
+Freiberufler-Laden errichten
 }
 
 STRING 22313
@@ -65068,31 +65068,31 @@ Elementares Sanktum
 STRING 22318
 // Units: h0AB (Elemental Sanctuary), Tip (Tooltip - Basic)
 {
-Build Elementares Sanktum
+Elementares Sanktum errichten
 }
 
 STRING 22320
-// Units: h0AC (Advanced Pandaren Temple), Name (Name)
+// Units: h0AC (Hoch entwickelter Pandaren-Tempel), Name (Name)
 {
-Advanced Pandaren Temple
+Hoch entwickelter Pandaren-Tempel
 }
 
 STRING 22321
-// Units: h0AC (Advanced Pandaren Temple), Tip (Tooltip - Basic)
+// Units: h0AC (Hoch entwickelter Pandaren-Tempel), Tip (Tooltip - Basic)
 {
-Ausbau zum Advanced Pandaren Temple
+Ausbau zum Hoch entwickelten Pandaren-Tempel
 }
 
 STRING 22322
-// Units: h0AD (Great Pandaren Temple), Name (Name)
+// Units: h0AD (Großer Pandaren-Tempel), Name (Name)
 {
-Great Pandaren Temple
+Großer Pandaren-Tempel
 }
 
 STRING 22323
-// Units: h0AD (Great Pandaren Temple), Tip (Tooltip - Basic)
+// Units: h0AD (Großer Pandaren-Tempel), Tip (Tooltip - Basic)
 {
-Ausbau zum Great Pandaren Temple
+Ausbau zum Großen Pandaren-Tempel
 }
 
 STRING 22324
@@ -65104,13 +65104,13 @@ STRING 22324
 STRING 22325
 // Units: h0AF (Storm Spire), Name (Name)
 {
-Storm Spire
+Sturmturm
 }
 
 STRING 22326
 // Units: h0AF (Storm Spire), Tip (Tooltip - Basic)
 {
-Build Storm Spire
+Sturmturm errichten
 }
 
 STRING 22327
@@ -65122,13 +65122,13 @@ STRING 22327
 STRING 22328
 // Units: n08M (Pandaren Citizen (male)), Name (Name)
 {
-Pandaren Citizen (male)
+Pandaren-Bürger
 }
 
 STRING 22329
 // Units: n08M (Pandaren Citizen (male)), Tip (Tooltip - Basic)
 {
-Hire Pandaren Citizen (male)
+Pandaren-Bürger anheuern
 }
 
 STRING 22330
@@ -65140,13 +65140,13 @@ Ein herzlicher Menschen-Bürger. Hat eine Lebensregenerations-Aura.
 STRING 22331
 // Units: n08N (Pandaren Citizen (female)), Name (Name)
 {
-Pandaren Citizen (female)
+Pandaren-Bürgerin
 }
 
 STRING 22332
 // Units: n08N (Pandaren Citizen (female)), Tip (Tooltip - Basic)
 {
-Hire Pandaren Citizen (female)
+Pandaren-Bürgerin anheuern
 }
 
 STRING 22333
@@ -65245,19 +65245,19 @@ Obelisk beschwören
 }
 
 STRING 22352
-// Units: u019 (Legion Transporter), Name (Name)
+// Units: u019 (Legionstransporter), Name (Name)
 {
 Legionstransporter
 }
 
 STRING 22353
-// Units: u019 (Legion Transporter), Tip (Tooltip - Basic)
+// Units: u019 (Legionstransporter), Tip (Tooltip - Basic)
 {
-Summon Legionstransporter
+Legionstransporter beschwören
 }
 
 STRING 22354
-// Units: u019 (Legion Transporter), Ubertip (Tooltip - Extended)
+// Units: u019 (Legionstransporter), Ubertip (Tooltip - Extended)
 {
 Can cast Dunkle Beschwörung.
 }
@@ -65361,13 +65361,13 @@ Kriegsdonner
 STRING 22386
 // Upgrades: R0CS (Ensnare), Tip (Tooltip)
 {
-Research Kriegsdonner
+Kriegsdonner erforschen
 }
 
 STRING 22387
 // Upgrades: R06D (Freezing Breath), Ubertip (Tooltip - Extended)
 {
-Allows Reavers to use the ability Kriegsdonner.
+Ermöglicht es den Reavers, die Fähigkeit 'Kriegsdonner' einzusetzen.
 }
 
 STRING 22388
@@ -65511,7 +65511,7 @@ L
 STRING 22412
 // Upgrades: R00Q (Destroyer Form), Tip (Tooltip)
 {
-Research Slow
+Langsamkeit erforschen
 }
 
 STRING 22413
@@ -65523,7 +65523,7 @@ G
 STRING 22415
 // Upgrades: R06P (Exhume Corpses), Tip (Tooltip)
 {
-Research Verteidigen
+Verteidigen erforschen
 }
 
 STRING 22416
@@ -65641,7 +65641,7 @@ I
 }
 
 STRING 22438
-// Abilities: A0UF (Build Tiny Legion Transporter), EditorSuffix (Editor Suffix)
+// Abilities: A0UF (Build Tiny Legionstransporter), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
@@ -66069,7 +66069,7 @@ Ausbau zum Hochelfenschloss ermöglicht die Produktion weiterer Gebäude- und Ei
 STRING 22574
 // Units: o077 (Clefthoof), Tip (Tooltip - Basic)
 {
-Train Grollhuf
+Grollhuf ausbilden
 }
 
 STRING 22575
@@ -66183,31 +66183,31 @@ STRING 22605
 STRING 22614
 // Units: n0C3 (Stonemaul Ogre), Tip (Tooltip - Basic)
 {
-Train Stonemaul Ogre
+Stonemaul-Oger ausbilden
 }
 
 STRING 22615
 // Units: h00Q (Naga Housing), Tip (Tooltip - Basic)
 {
-Build Naga Housing
+Naga-Unterkunft errichten
 }
 
 STRING 22616
 // Units: h0N7 (Human Housing), Tip (Tooltip - Basic)
 {
-Build Human Housing
+Menschen-Unterkunft errichten
 }
 
 STRING 22618
 // Units: h00T (Blood Elf Housing), Tip (Tooltip - Basic)
 {
-Build Blood Elf Housing
+Blutelfen-Unterkunft errichten
 }
 
 STRING 22619
 // Units: h00U (Undead Housing), Tip (Tooltip - Basic)
 {
-Build Undead Housing
+Untoten-Unterkunft errichten
 }
 
 STRING 22620
@@ -66297,13 +66297,13 @@ P
 STRING 22696
 // Upgrades: R06G (Web), Tip (Tooltip)
 {
-Research Antimagie-Hülle
+Antimagie-Hülle erforschen
 }
 
 STRING 22697
 // Upgrades: R06G (Web), Ubertip (Tooltip - Extended)
 {
-Gives Inquisitors the ability Antimagie-Hülle.
+Gibt Inquisitoren die Fähigkeit 'Antimagie-Hülle'.
 }
 
 STRING 22699
@@ -66440,7 +66440,7 @@ Weizenfeld
 STRING 22772
 // Units: n0DL (Wheat Field), Tip (Tooltip - Basic)
 {
-Build Weizenfeld
+Weizenfeld errichten
 }
 
 STRING 22774
@@ -66523,7 +66523,7 @@ STRING 22794
 STRING 22795
 // Abilities: A0PW (Player Settings), EditorSuffix (Editor Suffix)
 {
-(Soul) (Icon)
+(Seele) (Icon)
 }
 
 STRING 22796
@@ -66534,12 +66534,12 @@ Berufsbücherladen
 
 STRING 22813
 {
-Enabled Free For All alliances!
+Free-For-All-Allianzen aktiviert!
 }
 
 STRING 22814
 {
-Enabled Lobby alliances!
+Lobby-Allianzen aktiviert!
 }
 
 STRING 22815
@@ -66569,7 +66569,7 @@ STRING 22897
 STRING 22901
 // Units: n0B8 (Water Bomb), Name (Name)
 {
-Water Bomb
+Wasser-Bombe
 }
 
 STRING 22902
@@ -66694,7 +66694,7 @@ E
 
 STRING 23060
 {
-Auto skilling all selected heroes owned by you.
+Automatisches Lernen für all Ihre ausgewählten Helden.
 }
 
 STRING 23062
@@ -66970,31 +66970,31 @@ Diebesgilde
 STRING 23409
 // Units: n06T (Engineer Furniture), Tip (Tooltip - Basic)
 {
-Hire Ingenieur Furniture
+Ingenieur für Möbel anheuern
 }
 
 STRING 23410
 // Units: n06Z (Engineer Item Stuff), Name (Name)
 {
-Ingenieur Item Stuff
+Ingenieur für Gegenstandssachen
 }
 
 STRING 23411
 // Units: n06Z (Engineer Item Stuff), Tip (Tooltip - Basic)
 {
-Hire Ingenieur Item Stuff
+Ingenieur für Gegenstandssachen anheuern
 }
 
 STRING 23412
 // Units: n070 (Engineer Dungeon), Name (Name)
 {
-Ingenieur Verlies
+Ingenieur für Verliese
 }
 
 STRING 23413
 // Units: n070 (Engineer Dungeon), Tip (Tooltip - Basic)
 {
-Ingenieur Verlies anheuern
+Ingenieur für Verliese anheuern
 }
 
 STRING 23415
@@ -67060,7 +67060,7 @@ Befehls-Aura
 STRING 23477
 // Units: Umal (Dreadlord), Tip (Tooltip - Basic)
 {
-Summon Mal'Ganis
+Mal'Ganis beschwören
 }
 
 STRING 23478
@@ -67132,7 +67132,7 @@ Setzt Abklingzeiten zurück
 STRING 23595
 // Abilities: A0QR (Reset Cooldowns), EditorSuffix (Editor Suffix)
 {
-(Elune's Moonstone)
+(Elunes Mondstein)
 }
 
 STRING 23598
@@ -67396,7 +67396,7 @@ Allows to train all Dragons.|n|n|cffffcc00Begrenzt auf 1.|r
 STRING 24336
 // Upgrades: R0DO (Storm Hammers), Name (Name)
 {
-Chain Lightning
+Kettenblitz
 }
 
 STRING 24352
@@ -74893,13 +74893,13 @@ Sells unit for <A12F,DataA1,%> % of its gold and <A12F,DataB1,%> % of its lumber
 }
 
 STRING 31534
-// Units: n05Q (Naga Whaler), Name (Name)
+// Units: n05Q (Naga-Walfänger), Name (Name)
 {
 Naga-Walfänger
 }
 
 STRING 31535
-// Units: n05Q (Naga Whaler), Tip (Tooltip - Basic)
+// Units: n05Q (Naga-Walfänger), Tip (Tooltip - Basic)
 {
 Naga-Walfänger ausbilden
 }
@@ -74913,7 +74913,7 @@ Dalaran-Rathaus errichten
 STRING 31538
 // Abilities: A12F (Shop Purchase Unit), Name (Name)
 {
-Shop Purchase Unit
+Laden Einheit erwerben
 }
 
 STRING 31540
@@ -74941,15 +74941,15 @@ Flammensturm
 }
 
 STRING 31546
-// Units: e00P (Dragonhawk Archer Rider), Name (Name)
+// Units: e00P (Drachenfalken-Bogenschützenreiterin), Name (Name)
 {
-Dragonhawk Archer Rider
+Drachenfalken-Bogenschützenreiterin
 }
 
 STRING 31547
-// Units: e00P (Dragonhawk Archer Rider), Tip (Tooltip - Basic)
+// Units: e00P (Drachenfalken-Bogenschützenreiterin), Tip (Tooltip - Basic)
 {
-Ride Dragonhawk Archer Rider
+Drachenfalken-Bogenschützenreiterin reiten
 }
 
 STRING 31548
@@ -75297,13 +75297,13 @@ STRING 31760
 STRING 31762
 // Units: h0UY (Lightforged Peacekeeper), Name (Name)
 {
-Lightforged Friedensstifter
+Lichtgeschmiedeter Friedensstifter
 }
 
 STRING 31763
 // Units: h0UY (Lightforged Peacekeeper), Tip (Tooltip - Basic)
 {
-Hire Lightforged Friedensstifter
+Lichtgeschmiedeten Friedensstifter anheuern
 }
 
 STRING 31764
@@ -75357,13 +75357,13 @@ König von Azeroth
 STRING 31841
 // Units: n09D (Thieves Guild), Description (Description)
 {
-Sells killed units from creeps and enemy players.
+Verkauft getötete Einheiten von Unholden und gegnerischen Spielern.
 }
 
 STRING 31842
 // Units: h0X5 (Buy Property Darkspear Isle), Tip (Tooltip - Basic)
 {
-Buy Property Dunkelspeer-Insel
+Immobilie Dunkelspeer-Insel kaufen
 }
 
 STRING 31843
@@ -75393,19 +75393,19 @@ The Enchanter uses his knowledge to craft a Meister-Verzauberformel.
 STRING 31847
 // Abilities: A0U3 (Merchant - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler issues a Kleine Rechnung.
+Der Händler schreibt eine Kleine Rechnung.
 }
 
 STRING 31848
 // Abilities: A0U9 (Merchant - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler issues a Bill.
+Der Händler schreibt eine Rechnung.
 }
 
 STRING 31849
 // Abilities: A0UA (Merchant - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Händler issues a Große Rechnung.
+Der Händler schreibt eine Große Rechnung.
 }
 
 STRING 31913
@@ -75735,7 +75735,7 @@ STRING 32428
 STRING 32429
 // Abilities: A13M (Drunk Panda), Name (Name)
 {
-Drunk Panda
+Betrunkener Panda
 }
 
 STRING 32430
@@ -75747,7 +75747,7 @@ STRING 32430
 STRING 32431
 // Abilities: A13M (Drunk Panda), Tip (Tooltip - Normal)
 {
-Drunk Panda
+Betrunkener Panda
 }
 
 STRING 32432
@@ -75787,9 +75787,9 @@ Zufälliger Gegenstand Stufe 5
 }
 
 STRING 32456
-// Units: h0X6 (Buy Property Timbermaw Hold), Name (Name)
+// Units: h0X6 (Buy Property Holzschlundfestung), Name (Name)
 {
-Buy Property Timbermaw Hold
+Immobilie Holzschlundfestung kaufen
 }
 
 STRING 32457
@@ -75799,15 +75799,15 @@ Zufälliger Gegenstand Stufe 7
 }
 
 STRING 32458
-// Units: h0X6 (Buy Property Timbermaw Hold), Tip (Tooltip - Basic)
+// Units: h0X6 (Buy Property Holzschlundfestung), Tip (Tooltip - Basic)
 {
-Buy Property Timbermaw Hold
+Immobilie Holzschlundfestung kaufen
 }
 
 STRING 32461
 // Items: I0DD (Tiny Thieves Guild), Ubertip (Tooltip - Extended)
 {
-Creates a Diebesgilde at a target location.
+Errichtet am Zielort eine Diebesgilde.
 }
 
 STRING 32463
@@ -75819,7 +75819,7 @@ STRING 32463
 STRING 32469
 // Units: h04J (Blue Dragon Nexus), Ubertip (Tooltip - Extended)
 {
-Trains Blue Drakes.
+Bildet Blaudrachen aus.
 }
 
 STRING 32471
@@ -76197,7 +76197,7 @@ Kugel der Ingenieurwissenschaften
 STRING 32554
 // Items: I049 (Orb of Engineering), Tip (Tooltip - Basic)
 {
-Purchase Kugel der Ingenieurwissenschaften
+Kugel der Ingenieurwissenschaften erwerben
 }
 
 STRING 32555
@@ -92129,7 +92129,7 @@ rmin
 }
 
 STRING 39690
-// Units: h0J9 (Cathedral), Ubertip (Tooltip - Extended)
+// Units: h0J9 (Kathedrale), Ubertip (Tooltip - Extended)
 {
 Special building which can force the moon to appear. |n|n|cffffcc00Begrenzt auf 1.|r
 }
@@ -92155,7 +92155,7 @@ Changes the time of day to midnight for <A1F5,Dur1> Sekunden lang an.
 STRING 39697
 // Upgrades: R08W (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Erlaubt Bürgern den Bau a Cathedral which can force the moon to appear.
+Erlaubt Bürgern den Bau a Kathedrale which can force the moon to appear.
 }
 
 STRING 39698
@@ -92507,7 +92507,7 @@ Hoch entwickelte Gilneas-Rüstung
 }
 
 STRING 39786
-// Abilities: A1FV (Build Tiny Cathedral), EditorSuffix (Editor Suffix)
+// Abilities: A1FV (Build Tiny Kathedrale), EditorSuffix (Editor Suffix)
 {
 (Worgen)
 }
@@ -93179,25 +93179,25 @@ Erschafft am Zielort einen Kanonenturm.
 }
 
 STRING 39955
-// Items: I0PE (Tiny Cathedral), Description (Description)
+// Items: I0PE (Tiny Kathedrale), Description (Description)
 {
 Erschafft eine Kathedrale.
 }
 
 STRING 39956
-// Items: I0PE (Tiny Cathedral), Name (Name)
+// Items: I0PE (Tiny Kathedrale), Name (Name)
 {
 Winzige Kathedrale
 }
 
 STRING 39957
-// Items: I0PE (Tiny Cathedral), Tip (Tooltip - Basic)
+// Items: I0PE (Tiny Kathedrale), Tip (Tooltip - Basic)
 {
 Winzige Kathedrale erwerben
 }
 
 STRING 39958
-// Items: I0PE (Tiny Cathedral), Ubertip (Tooltip - Extended)
+// Items: I0PE (Tiny Kathedrale), Ubertip (Tooltip - Extended)
 {
 Erschafft am Zielort eine Kathedrale.
 }
@@ -93389,9 +93389,9 @@ Build Tiny Cannon Tower
 }
 
 STRING 39990
-// Abilities: A1FV (Build Tiny Cathedral), Name (Name)
+// Abilities: A1FV (Build Tiny Kathedrale), Name (Name)
 {
-Build Tiny Cathedral
+Build Tiny Kathedrale
 }
 
 STRING 39991
@@ -98951,13 +98951,13 @@ Bergmann
 }
 
 STRING 42250
-// Units: h0AC (Advanced Pandaren Temple), EditorSuffix (Name - Editor Suffix)
+// Units: h0AC (Hoch entwickelter Pandaren-Tempel), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren) (Tier 2)
 }
 
 STRING 42251
-// Units: h0AD (Great Pandaren Temple), EditorSuffix (Name - Editor Suffix)
+// Units: h0AD (Großer Pandaren-Tempel), EditorSuffix (Name - Editor Suffix)
 {
 (Pandaren) (Tier 3)
 }
@@ -99247,7 +99247,7 @@ Druiden ausbilden
 STRING 42329
 // Units: h0QH (Brewery), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Pandaren Temple, Advanced Pandaren Temple, or Great Pandaren Temple) and which buildings you have.
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Pandaren Temple, Hoch entwickelter Pandaren-Tempel, or Großer Pandaren-Tempel) and which buildings you have.
 }
 
 STRING 42330
@@ -99413,13 +99413,13 @@ Primäres Gebäude, wird zum Ausbilden von Pandaren-Holzfällern und zum Einlage
 }
 
 STRING 42359
-// Units: h0AC (Advanced Pandaren Temple), Ubertip (Tooltip - Extended)
+// Units: h0AC (Hoch entwickelter Pandaren-Tempel), Ubertip (Tooltip - Extended)
 {
 Ausbau zum Hoch entwickelten Pandaren-Tempel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 42360
-// Units: h0AD (Great Pandaren Temple), Ubertip (Tooltip - Extended)
+// Units: h0AD (Großer Pandaren-Tempel), Ubertip (Tooltip - Extended)
 {
 Ausbau zum Großen Pandaren-Tempel ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
@@ -99685,13 +99685,13 @@ STRING 42413
 STRING 42414
 // Abilities: A1KI (Call to Arms), Ubertip (Tooltip - Normal - Extended)
 {
-Run to the nearest Advanced Pandaren Temple, Greate Pandaren Temple or starting Pandaren Temple to arm the Holzfäller, converting him into Militia. |nHält <Amil,Dur1> Sekunden lang an.
+Run to the nearest Hoch entwickelter Pandaren-Tempel, Greate Pandaren Temple or starting Pandaren Temple to arm the Holzfäller, converting him into Militia. |nHält <Amil,Dur1> Sekunden lang an.
 }
 
 STRING 42415
 // Abilities: A1KI (Call to Arms), Unubertip (Tooltip - Turn Off - Extended)
 {
-Run to the nearest Advanced Pandaren Temple, Greate Pandaren Temple or starting Pandaren Temple to disarm the Militia, converting it into a Holzfäller.
+Run to the nearest Hoch entwickelter Pandaren-Tempel, Greate Pandaren Temple or starting Pandaren Temple to disarm the Militia, converting it into a Holzfäller.
 }
 
 STRING 42416
@@ -99809,51 +99809,51 @@ rhpr
 }
 
 STRING 42438
-// Abilities: A1KN (Pandaren Drink), Name (Name)
+// Abilities: A1KN (Pandaren-Getränk), Name (Name)
 {
-Pandaren Drink
+Pandaren-Getränk
 }
 
 STRING 42439
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
 {
-Improved Pandaren Drink
+Improved Pandaren-Getränk
 }
 
 STRING 42440
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
 {
-Advanced Pandaren Drink
+Advanced Pandaren-Getränk
 }
 
 STRING 42441
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
 {
-Powerful Pandaren Drink
+Powerful Pandaren-Getränk
 }
 
 STRING 42442
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Tip (Tooltip)
 {
-Ausbau zum Pandaren Drink
+Ausbau zum Pandaren-Getränk
 }
 
 STRING 42443
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Tip (Tooltip)
 {
-Ausbau zum Improved Pandaren Drink
+Ausbau zum Improved Pandaren-Getränk
 }
 
 STRING 42444
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Tip (Tooltip)
 {
-Ausbau zum Advanced Pandaren Drink
+Ausbau zum Advanced Pandaren-Getränk
 }
 
 STRING 42445
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Tip (Tooltip)
 {
-Ausbau zum Powerful Pandaren Drink
+Ausbau zum Powerful Pandaren-Getränk
 }
 
 STRING 42447
@@ -99901,7 +99901,7 @@ Feuerwerk
 STRING 42457
 // Upgrades: R0DN (Flare), Tip (Tooltip)
 {
-Research Feuerwerk
+Feuerwerk erforschen
 }
 
 STRING 42458
@@ -99913,13 +99913,13 @@ Provides Feuerwerk-Teams with the Feuerwerk ability. Feuerwerks can be used to r
 STRING 42460
 // Upgrades: R0DO (Storm Hammers), Tip (Tooltip)
 {
-Research Chain Lightning
+Kettenblitz erforschen
 }
 
 STRING 42461
 // Upgrades: R0DO (Storm Hammers), Ubertip (Tooltip - Extended)
 {
-Gives Wolkenschlanges the ability Chain Lightning.
+Gibt Wolkenschlangen die Fähigkeit 'Kettenblitz'.
 }
 
 STRING 42462
@@ -99949,7 +99949,7 @@ Jade-Wald
 STRING 42466
 // Upgrades: R0DQ (Burning Oil), Tip (Tooltip)
 {
-Research Jade-Wald
+Jade-Wald erforschen
 }
 
 STRING 42467
@@ -99979,7 +99979,7 @@ Produziert Drachenschildkröten, Feuerwerk-Teams und Urpandas. Allows researchin
 STRING 42472
 // Units: h0AG (Warlord), Ubertip (Tooltip - Extended)
 {
-Powerful melee warrior. Can learn Befehls-Aura. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Mächtiger Nahkampfkrieger. Kann 'Befehls-Aura' erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 42473
@@ -99995,55 +99995,55 @@ Urpanda ausbilden
 }
 
 STRING 42475
-// Abilities: A1KN (Pandaren Drink), Tip (Tooltip - Normal)
+// Abilities: A1KN (Pandaren-Getränk), Tip (Tooltip - Normal)
 {
-Pandaren Drink Stufe 1
+Pandaren-Getränk Stufe 1
 }
 
 STRING 42476
-// Abilities: A1KN (Pandaren Drink), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1KN (Pandaren-Getränk), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the hit point regeneration.
+Erhöht die Trefferpunkteregeneration.
 }
 
 STRING 42477
-// Abilities: A1KN (Pandaren Drink), Tip (Tooltip - Normal)
+// Abilities: A1KN (Pandaren-Getränk), Tip (Tooltip - Normal)
 {
-Pandaren Drink Stufe 2
+Pandaren-Getränk Stufe 2
 }
 
 STRING 42478
-// Abilities: A1KN (Pandaren Drink), Tip (Tooltip - Normal)
+// Abilities: A1KN (Pandaren-Getränk), Tip (Tooltip - Normal)
 {
-Pandaren Drink Stufe 3
+Pandaren-Getränk Stufe 3
 }
 
 STRING 42479
-// Abilities: A1KN (Pandaren Drink), Tip (Tooltip - Normal)
+// Abilities: A1KN (Pandaren-Getränk), Tip (Tooltip - Normal)
 {
-Pandaren Drink Stufe 4
+Pandaren-Getränk Stufe 4
 }
 
 STRING 42480
-// Abilities: A1KN (Pandaren Drink), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1KN (Pandaren-Getränk), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the hit point regeneration.
+Erhöht die Trefferpunkteregeneration.
 }
 
 STRING 42481
-// Abilities: A1KN (Pandaren Drink), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1KN (Pandaren-Getränk), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the hit point regeneration.
+Erhöht die Trefferpunkteregeneration.
 }
 
 STRING 42482
-// Abilities: A1KN (Pandaren Drink), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1KN (Pandaren-Getränk), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the hit point regeneration.
+Erhöht die Trefferpunkteregeneration.
 }
 
 STRING 42483
-// Abilities: A1KN (Pandaren Drink), EditorSuffix (Editor Suffix)
+// Abilities: A1KN (Pandaren-Getränk), EditorSuffix (Editor Suffix)
 {
  (Icon) (Pandaren)
 }
@@ -100063,7 +100063,7 @@ D
 STRING 42490
 // Upgrades: R0DM (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
 {
-Pandaren Drink
+Pandaren-Getränk
 }
 
 STRING 42491
@@ -100111,7 +100111,7 @@ STRING 42498
 STRING 42499
 // Upgrades: R0DR (Cloud), Tip (Tooltip)
 {
-Research Befehls-Aura
+Befehls-Aura erforschen
 }
 
 STRING 42500
@@ -100123,25 +100123,25 @@ Provides Kriegsherrs with the Befehls-Aura ability, which increases the damage o
 STRING 42501
 // Upgrades: R0DS (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Sage Adeptenausbildung
+Weise-Adeptenausbildung
 }
 
 STRING 42502
 // Upgrades: R0DS (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Sage Meisterausbildung
+Weise-Meisterausbildung
 }
 
 STRING 42503
 // Upgrades: R0DS (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Sage Adeptenausbildung
+Weise-Adeptenausbildung
 }
 
 STRING 42504
 // Upgrades: R0DS (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Sage Meisterausbildung
+Weise-Meisterausbildung
 }
 
 STRING 42505
@@ -104918,19 +104918,19 @@ STRING 45939
 }
 
 STRING 45940
-// Units: h0RK (Cathedral of Light), EditorSuffix (Name - Editor Suffix)
+// Units: h0RK (Kathedrale of Light), EditorSuffix (Name - Editor Suffix)
 {
 (Spezialgebäude) (Sturmwind)
 }
 
 STRING 45942
-// Units: h0RK (Cathedral of Light), Name (Name)
+// Units: h0RK (Kathedrale of Light), Name (Name)
 {
 Kathedrale des Lichts
 }
 
 STRING 45943
-// Units: h0RK (Cathedral of Light), Tip (Tooltip - Basic)
+// Units: h0RK (Kathedrale of Light), Tip (Tooltip - Basic)
 {
 Kathedrale des Lichts errichten
 }
@@ -105278,7 +105278,7 @@ STRING 46012
 }
 
 STRING 46013
-// Abilities: A1B8 (Build Tiny Cathedral of Light), EditorSuffix (Editor Suffix)
+// Abilities: A1B8 (Build Tiny Kathedrale of Light), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -110061,9 +110061,9 @@ Zufällige Zutat
 }
 
 STRING 49554
-// Units: n0C9 (Timbermaw Hold), Name (Name)
+// Units: n0C9 (Holzschlundfestung), Name (Name)
 {
-Timbermaw Hold
+Holzschlundfestung
 }
 
 STRING 49555
@@ -113668,27 +113668,27 @@ Ausbau zu Flüsternde Kammern
 }
 
 STRING 50860
-// Units: o093 (Cathedral of Madness), Name (Name)
+// Units: o093 (Kathedrale of Madness), Name (Name)
 {
 Kathedrale des Wahnsinns
 }
 
 STRING 50861
-// Units: o093 (Cathedral of Madness), Tip (Tooltip - Basic)
+// Units: o093 (Kathedrale of Madness), Tip (Tooltip - Basic)
 {
 Ausbau zur Kathedrale des Wahnsinns
 }
 
 STRING 50862
-// Units: o093 (Cathedral of Madness), EditorSuffix (Name - Editor Suffix)
+// Units: o093 (Kathedrale of Madness), EditorSuffix (Name - Editor Suffix)
 {
 (Gesichtslose) (Tier 3)
 }
 
 STRING 50863
-// Units: o093 (Cathedral of Madness), Ubertip (Tooltip - Extended)
+// Units: o093 (Kathedrale of Madness), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Cathedral of Madness ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zum Kathedrale of Madness ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 50864
@@ -118716,13 +118716,13 @@ Diebstahl - Adept
 STRING 54481
 // Abilities: A20N (Thieving - Adept), Tip (Tooltip - Normal)
 {
-Adept Diebstahl
+Adepten-Diebstahl
 }
 
 STRING 54482
 // Abilities: A20N (Thieving - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Thief uses his knowledge to craft Taschendiebstahl.
+Der Dieb nutzt sein Wissen, um Taschendiebstahl herzustellen.
 }
 
 STRING 54483
@@ -118734,13 +118734,13 @@ Diebstahl - Meister
 STRING 54484
 // Abilities: A20O (Thieving - Master), Tip (Tooltip - Normal)
 {
-Meister Thiefing
+Meister-Diebstahl
 }
 
 STRING 54485
 // Abilities: A20O (Thieving - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Thief uses his knowledge to craft a Winzige Diebesgilde.
+Der Dieb nutzt sein Wissen, um eine Winzige Diebesgilde herzustellen.
 }
 
 STRING 54486
@@ -118752,7 +118752,7 @@ Diebstahl
 STRING 54487
 // Abilities: A20Q (Build Tiny Thieves Guild), Name (Name)
 {
-Build Winzige Diebesgilde
+Winzige Diebesgilde errichten
 }
 
 STRING 54493
@@ -118955,19 +118955,19 @@ STRING 54881
 STRING 54882
 // Abilities: A0DC (Play Clan Sound), Name (Name)
 {
-Play Clan Sound
+Clan-Sound abspielen
 }
 
 STRING 54883
 // Abilities: A0DC (Play Clan Sound), Tip (Tooltip - Normal)
 {
-Play Clan Sound
+Clan-Sound abspielen
 }
 
 STRING 54884
 // Abilities: A0DC (Play Clan Sound), Ubertip (Tooltip - Normal - Extended)
 {
-Plays the Clan's sound.
+Spielt den Sound des Clans ab.
 }
 
 STRING 54885
@@ -118997,67 +118997,67 @@ A powerful tower to protect your Clan-Halle.
 STRING 54891
 // Items: I050 (Clan Horn Sound), Name (Name)
 {
-Clan Horn Sound
+Clan-Horn-Sound
 }
 
 STRING 54892
 // Items: I050 (Clan Horn Sound), Tip (Tooltip - Basic)
 {
-Clan Horn Sound
+Clan-Horn-Sound
 }
 
 STRING 54893
 // Items: I050 (Clan Horn Sound), Ubertip (Tooltip - Extended)
 {
-Changes the sound of your clan.
+Ändert den Sound Eures Clans.
 }
 
 STRING 54894
 // Items: I050 (Clan Horn Sound), Description (Description)
 {
-Changes the sound of your clan.
+Ändert den Sound Eures Clans.
 }
 
 STRING 54895
 // Items: I051 (Clan Laugh Sound), Name (Name)
 {
-Clan Laugh Sound
+Clan-Lach-Sound
 }
 
 STRING 54896
 // Items: I051 (Clan Laugh Sound), Tip (Tooltip - Basic)
 {
-Clan Laugh Sound
+Clan-Lach-Sound
 }
 
 STRING 54897
 // Items: I051 (Clan Laugh Sound), Ubertip (Tooltip - Extended)
 {
-Changes the sound of your clan.
+Ändert den Sound Eures Clans.
 }
 
 STRING 54898
 // Items: I051 (Clan Laugh Sound), Description (Description)
 {
-Changes the sound of your clan.
+Ändert den Sound Eures Clans.
 }
 
 STRING 54904
 // Units: n04M (Advanced Clan Tower), Name (Name)
 {
-Advanced Clan-Turm
+Hoch entwickelter Clan-Turm
 }
 
 STRING 54905
 // Units: n04M (Advanced Clan Tower), Tip (Tooltip - Basic)
 {
-Ausbau zum Advanced Clan-Turm
+Ausbau zum Hoch entwickelter Clan-Turm
 }
 
 STRING 54906
 // Units: n04N (Clan Tower), Ubertip (Tooltip - Extended)
 {
-A powerful tower to protect your Clan-Halle.
+Ein mächtiger Turm, um Eure Clan-Halle zu schützen.
 }
 
 STRING 54908
@@ -119397,7 +119397,7 @@ Gruuls Unterschlupf
 }
 
 STRING 55033
-// Units: n0C9 (Timbermaw Hold), EditorSuffix (Name - Editor Suffix)
+// Units: n0C9 (Holzschlundfestung), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -121497,7 +121497,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Troll.|r|n|cffffcc00Rohstoff: Öl.|r
 }
 
 STRING 55892
-// Units: h0X6 (Buy Property Timbermaw Hold), Ubertip (Tooltip - Extended)
+// Units: h0X6 (Buy Property Holzschlundfestung), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Furbolg.|r|n|cffffcc00Rohstoff: Holz.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -123921,25 +123921,25 @@ Calls a meteor down from the sky, dealing <AIin,DataA1> damage and stunning enem
 }
 
 STRING 57066
-// Items: I12V (Navigation Scroll), Name (Name)
+// Items: I12V (Spruchrolle der Navigation), Name (Name)
 {
-Navigation Scroll
+Spruchrolle der Navigation
 }
 
 STRING 57067
-// Items: I12V (Navigation Scroll), Tip (Tooltip - Basic)
+// Items: I12V (Spruchrolle der Navigation), Tip (Tooltip - Basic)
 {
-Purchase Navigation Scroll
+Spruchrolle der Navigation erwerben
 }
 
 STRING 57068
-// Items: I12V (Navigation Scroll), Description (Description)
+// Items: I12V (Spruchrolle der Navigation), Description (Description)
 {
 Casts Blinzeln with an unlimited distance.
 }
 
 STRING 57069
-// Items: I12V (Navigation Scroll), Ubertip (Tooltip - Extended)
+// Items: I12V (Spruchrolle der Navigation), Ubertip (Tooltip - Extended)
 {
 Casts Blinzeln with an unlimited distance.
 }
@@ -123947,25 +123947,25 @@ Casts Blinzeln with an unlimited distance.
 STRING 57070
 // Items: I12W (Tiny Portal (Astromancer)), Name (Name)
 {
-Tiny Portal (Astromant)
+Winziges Portal (Astromant)
 }
 
 STRING 57071
 // Items: I12W (Tiny Portal (Astromancer)), Description (Description)
 {
-Creates a Portal at a target location.
+Errichtet am Zielort ein Portal.
 }
 
 STRING 57072
 // Items: I05B (Tiny Portal), Tip (Tooltip - Basic)
 {
-Purchase Tiny Portal
+Winziges Portal erwerben
 }
 
 STRING 57073
 // Items: I12W (Tiny Portal (Astromancer)), Ubertip (Tooltip - Extended)
 {
-Creates a Portal at a target location.
+Errichtet am Zielort ein Portal.
 }
 
 STRING 57074
@@ -124035,9 +124035,9 @@ Item Meteor
 }
 
 STRING 57086
-// Abilities: A22W (Blink (Item Version) (Navigation Scroll)), Name (Name)
+// Abilities: A22W (Blink (Item Version) (Spruchrolle der Navigation)), Name (Name)
 {
-Blinzeln (Item Version) (Navigation Scroll)
+Blinzeln (Item Version) (Spruchrolle der Navigation)
 }
 
 STRING 57087
@@ -124073,7 +124073,7 @@ Novize Astromancy
 STRING 57092
 // Abilities: A22Z (Astromancy - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Astromant uses knowledge to craft Navigation Scrolls and Tiny Portale.
+The Astromant uses knowledge to craft Spruchrolle der Navigations and Tiny Portale.
 }
 
 STRING 57093
@@ -124185,7 +124185,7 @@ Errichtet am Zielort einen Arkanen Spähposten.|n|n|cffffcc00Beruf Astromant.|r
 }
 
 STRING 57166
-// Units: n05Q (Naga Whaler), Ubertip (Tooltip - Extended)
+// Units: n05Q (Naga-Walfänger), Ubertip (Tooltip - Extended)
 {
 Powerful melee unit. Has the Abtauchen ability, which allows this unit to hide in water. Can learn Einschnüren. Can harvest lumber like a Goblinschredder.  |n|n|cffffcc00Greift Land-Einheiten an.
 }
@@ -124215,19 +124215,19 @@ Initiand, Adept, Meister
 }
 
 STRING 57171
-// Units: n0MS (Submerged Naga Whaler), Name (Name)
+// Units: n0MS (Submerged Naga-Walfänger), Name (Name)
 {
-Abtauchend Naga Whaler
+Abgetauchter Naga-Walfänger
 }
 
 STRING 57172
-// Units: n0MS (Submerged Naga Whaler), Tip (Tooltip - Basic)
+// Units: n0MS (Submerged Naga-Walfänger), Tip (Tooltip - Basic)
 {
-Train Naga Whaler
+Naga-Walfänger ausbilden
 }
 
 STRING 57173
-// Units: n0MS (Submerged Naga Whaler), Ubertip (Tooltip - Extended)
+// Units: n0MS (Submerged Naga-Walfänger), Ubertip (Tooltip - Extended)
 {
 Powerful melee unit. Has the Abtauchen ability, which allows this unit to hide in water. Can learn Einschnüren. Can harvest lumber like a Goblinschredder.  |n|n|cffffcc00Greift Land-Einheiten an.
 }
@@ -124259,7 +124259,7 @@ Causes the hero to attack faster, but take more damage.
 STRING 57229
 // Abilities: A23D (Submerge), EditorSuffix (Editor Suffix)
 {
-(Naga Whaler)
+(Naga-Walfänger)
 }
 
 STRING 57230
@@ -129301,7 +129301,7 @@ Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability,
 }
 
 STRING 60180
-// Units: e00P (Dragonhawk Archer Rider), EditorSuffix (Name - Editor Suffix)
+// Units: e00P (Drachenfalken-Bogenschützenreiterin), EditorSuffix (Name - Editor Suffix)
 {
 (Hochelfen)
 }
