@@ -18201,7 +18201,7 @@ Powerful titan hero Sargeras. Can learn Verkrüppeln, Kritischer Schlag, Trunken
 STRING 3436
 // Units: H02C (Blood Mage), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Flammenschlag, Verbannen, Mana abziehen and Phönix. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Feuermagier|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 16/2|n|cffffcc00Beweglichkeit:|r 15/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 3437
@@ -37312,13 +37312,13 @@ Steinfragment des Chaos
 STRING 7884
 // Items: I00X (Chaos Stone Fragment), Description (Description)
 {
-Boosts attack damage by 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
+Verstärkt den Angriffsschaden um 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
 }
 
 STRING 7885
 // Items: I00X (Chaos Stone Fragment), Ubertip (Tooltip - Extended)
 {
-Boosts attack damage by 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
+Verstärkt den Angriffsschaden um 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
 }
 
 STRING 7886
@@ -43398,13 +43398,13 @@ The Lehrmeister uses his knowledget to craft a Scroll of the Beast.
 STRING 10081
 // Abilities: A17N (Loremastery - Doctor), Name (Name)
 {
-Lehrmeisterei - Doctor
+Lehrmeisterei - Doktor
 }
 
 STRING 10082
 // Abilities: A17N (Loremastery - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Lehrmeisterei
+Doktor Lehrmeisterei
 }
 
 STRING 10083
@@ -43426,7 +43426,7 @@ S
 
 STRING 10086
 {
-Sell the bread to Theramore.
+Verkauft das Brot an Theramore.
 }
 
 STRING 10087
@@ -43453,7 +43453,7 @@ Ernte
 
 STRING 10091
 {
-Return the gold to Gerard.
+Bringt das Gold zu Gerard zurück.
 }
 
 STRING 10092
@@ -43464,7 +43464,7 @@ Dunkles Portal
 STRING 10093
 // Units: H0YC (Phoenix), Ubertip (Tooltip - Extended)
 {
-Flying warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Flamestrike, Feuerangriff, Phönixfeuer and Phönix-Ei. |n|n|cffffcc00Attacks air units.|r|n|cffffcc00Mount: Phönix.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
+|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Feuermagier|n|cffffcc00Reittier:|r Phönix|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 11/1.5|n|cffffcc00Beweglichkeit:|r 15/2.25|n|cffffcc00Intelligenz:|r 24/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
 }
 
 STRING 10094
@@ -43502,37 +43502,37 @@ After having captured the Nether Drake, the next step is to get a corpse probe o
 
 STRING 10104
 {
-The Silver Hand
+Die silberne Hand
 }
 
 STRING 10105
 // Items: I16X (Letter for Anduin), Name (Name)
 {
-Letter for Anduin
+Brief für Anduin
 }
 
 STRING 10106
 // Items: I16X (Letter for Anduin), Description (Description)
 {
-A letter for Anduin in Neu-Sturmwind.
+Ein Brief für Anduin in Neu-Sturmwind.
 }
 
 STRING 10107
 // Items: I16X (Letter for Anduin), Ubertip (Tooltip - Extended)
 {
-A letter for Anduin in Neu-Sturmwind from Gerard in the village.
+Ein Brief für Anduin in Neu-Sturmwind von Gerard aus dem Dorf.
 }
 
 STRING 10108
 // Items: I16Y (Equipment for Villagers), Name (Name)
 {
-Equipment for Villagers
+Ausrüstung für Dorfbewohner
 }
 
 STRING 10109
 // Items: I16Y (Equipment for Villagers), Description (Description)
 {
-Equipment for villagers.
+Ausrüstung für Dorfbewohner.
 }
 
 STRING 10110
@@ -43544,7 +43544,7 @@ Equipment for Villagers which has to be delivered to Gerard.
 STRING 10111
 // Items: I16Z (Unlimited Bag of Food), Name (Name)
 {
-Unlimited Bag of Food
+Unbegrenzter Beutel voll Nahrung
 }
 
 STRING 10112
@@ -43562,25 +43562,25 @@ Gives you random food from the village.
 STRING 10114
 // Items: I16Z (Unlimited Bag of Food), Tip (Tooltip - Basic)
 {
-Purchase Unlimited Bag of Food
+Unbegrenzten Beutel voll Nahrung erwerben
 }
 
 STRING 10115
 // Items: I170 (Wheat from the Village), Name (Name)
 {
-Wheat from the Village
+Weizen aus dem Dorf
 }
 
 STRING 10116
 // Items: I170 (Wheat from the Village), Description (Description)
 {
-Wheat for the wind mill.
+Weizen für die Windmühle.
 }
 
 STRING 10117
 // Items: I170 (Wheat from the Village), Ubertip (Tooltip - Extended)
 {
-Wheat for the wind mill.
+Weizen für die Windmühle.
 }
 
 STRING 10118
@@ -43645,7 +43645,7 @@ Hint: no Human genocide is allowed !
 
 STRING 10128
 {
-Legendary Items
+Legendäre Gegenstände
 }
 
 STRING 10129
@@ -43845,7 +43845,7 @@ G
 
 STRING 10167
 {
-Akama's Message
+Akamas Nachricht
 }
 
 STRING 10168
@@ -43911,13 +43911,13 @@ Sturmwind-Luftschiff ausbilden
 STRING 10178
 // Items: I0R3 (Tiny Scout Tower), Name (Name)
 {
-Tiny Beobachtungsturm
+Winziger Beobachtungsturm
 }
 
 STRING 10179
 // Items: I0R3 (Tiny Scout Tower), Tip (Tooltip - Basic)
 {
-Purchase Tiny Beobachtungsturm
+Winzigen Beobachtungsturm erwerben
 }
 
 STRING 10180
@@ -49112,7 +49112,7 @@ Buch des Beschwörung-Postaments errichten
 STRING 11448
 // Units: H068 (Priest), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Heiliges Licht, Inneres Feuer, Heilen and Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Class:|r Paladin|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 11449
@@ -58375,7 +58375,7 @@ Waldläufer beschwören
 STRING 17328
 // Units: H03Y (Ranger), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at damaging opponents. Can learn Scout, Cold Pfeile, Volltreffer-Aura, and Sternenregen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1.9|n|cffffcc00Beweglichkeit:|r 19/1.5|n|cffffcc00Intelligenz:|r 15/2.6|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 17329
@@ -69145,7 +69145,7 @@ Plattenspieler
 STRING 25956
 // Units: Hvwd (Ranger), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at damaging opponents. Can learn Scout, Cold Pfeile, Volltreffer-Aura, and Sternenregen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1.9|n|cffffcc00Beweglichkeit:|r 19/1.5|n|cffffcc00Intelligenz:|r 15/2.6|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r
 }
 
 STRING 25957
@@ -69384,7 +69384,7 @@ Increases the attack damage of the Hero by 20 when worn.|n|n|cffffcc00Left Hand,
 STRING 26163
 // Items: I0V2 (Flamberge), Description (Description)
 {
-Boosts attack damage by 20.
+Verstärkt den Angriffsschaden um 20.
 }
 
 STRING 26164
@@ -69396,7 +69396,7 @@ Zauberschild erwerben
 STRING 26165
 // Items: I0V3 (Spell Shield), Description (Description)
 {
-Boosts armor by 4.
+Erhöht die Rüstung um 4.
 }
 
 STRING 26166
@@ -70458,7 +70458,7 @@ Thalorien Dawnseeker wiederbeleben
 STRING 27184
 // Units: Hddt (Master Swordsman), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Storm Bolt, Verbannen, Kritischer Schlag and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Berserk.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 22/1.75|n|cffffcc00Intelligenz:|r 16/2.25|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 27185
@@ -72753,7 +72753,7 @@ Increases the attack damage of the Hero by 9 and has Dauerhafter Feuerbrand when
 STRING 29228
 // Items: I0ZR (Infernal Destroyer), Description (Description)
 {
-Boosts attack damage by 9 and has Dauerhafter Feuerbrand.
+Verstärkt den Angriffsschaden um 9 and has Dauerhafter Feuerbrand.
 }
 
 STRING 29229
@@ -100631,7 +100631,7 @@ Ring des Schutzes +8 herstellen
 STRING 42779
 // Items: I0RM (Ring of Protection +8), Description (Description)
 {
-Boosts armor by 8.
+Erhöht die Rüstung um 8.
 }
 
 STRING 42780
@@ -107587,13 +107587,13 @@ Paladin-Hammer erwerben
 STRING 48585
 // Items: I0U8 (Paladin Hammer), Description (Description)
 {
-Boosts attack damage by 12.
+Verstärkt den Angriffsschaden um 12.
 }
 
 STRING 48586
 // Items: I0V0 (Halberd), Description (Description)
 {
-Boosts attack damage by 12.
+Verstärkt den Angriffsschaden um 12.
 }
 
 STRING 48590
@@ -107779,7 +107779,7 @@ Bogen erwerben
 STRING 48634
 // Items: I0UG (Bow), Description (Description)
 {
-Boosts attack damage by 8.
+Verstärkt den Angriffsschaden um 8.
 }
 
 STRING 48635
@@ -107803,13 +107803,13 @@ Sense erwerben
 STRING 48638
 // Items: I0UH (Scythe), Description (Description)
 {
-Boosts attack damage by 7.
+Verstärkt den Angriffsschaden um 7.
 }
 
 STRING 48639
 // Items: I0V4 (Golden Claw), Description (Description)
 {
-Boosts attack damage by 12.
+Verstärkt den Angriffsschaden um 12.
 }
 
 STRING 48640
@@ -107899,7 +107899,7 @@ Erhöht die Rüstung um 2.
 STRING 48668
 // Items: I0V5 (Extra Golden Claw), Description (Description)
 {
-Boosts attack damage by 12.
+Verstärkt den Angriffsschaden um 12.
 }
 
 STRING 48669
@@ -107965,7 +107965,7 @@ Katana erwerben
 STRING 48679
 // Items: I0UO (Katana), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 48680
@@ -108019,13 +108019,13 @@ Fackel erwerben
 STRING 48688
 // Items: I0UP (Torch), Description (Description)
 {
-Boosts attack damage by 2 and causes damage to nearby enemies.
+Verstärkt den Angriffsschaden um 2 and causes damage to nearby enemies.
 }
 
 STRING 48689
 // Items: I0UT (Extra Katana), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 48691
@@ -108103,7 +108103,7 @@ Extra Katana erwerben
 STRING 48907
 // Items: I0UW (Crossbow), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 48908
@@ -108120,7 +108120,7 @@ STRING 48909
 
 STRING 48912
 {
-Changed food maximum to 50.
+Maximale Nahrung auf 50 geändert.
 }
 
 STRING 48913
@@ -108156,7 +108156,7 @@ Armbrust erwerben
 STRING 48924
 // Items: I0UX (Flamethrower), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 48925
@@ -108180,7 +108180,7 @@ STRING 48928
 STRING 48930
 // Items: I0V7 (Naga Trident), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 48931
@@ -108294,7 +108294,7 @@ Increases the attack damage of the Hero by 10 when worn.|n|n|cffffcc00Left Hand,
 STRING 48970
 // Items: I0V8 (Pirate Pistol), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 48976
@@ -108330,7 +108330,7 @@ Increases the attack damage of the Hero by 12 when worn.|n|n|cffffcc00Left Hand,
 STRING 48981
 // Items: I0V6 (Elven Bow), Description (Description)
 {
-Boosts attack damage by 12.
+Verstärkt den Angriffsschaden um 12.
 }
 
 STRING 48983
@@ -108372,7 +108372,7 @@ Increases the attack damage of the Hero by 4 when worn.|n|n|cffffcc00Left Hand, 
 STRING 48990
 // Items: I0V9 (Warhammer), Description (Description)
 {
-Boosts attack damage by 4.
+Verstärkt den Angriffsschaden um 4.
 }
 
 STRING 48991
@@ -108396,7 +108396,7 @@ Increases the attack damage of the Hero by 6 when worn.|n|n|cffffcc00Left Hand, 
 STRING 48994
 // Items: I0VA (Centaur Staff), Description (Description)
 {
-Boosts attack damage by 6.
+Verstärkt den Angriffsschaden um 6.
 }
 
 STRING 48995
@@ -108510,7 +108510,7 @@ Increases the attack damage of the Hero by 10 when worn.|n|n|cffffcc00Left Hand,
 STRING 49028
 // Items: I0VB (Double Axe), Description (Description)
 {
-Boosts attack damage by 10.
+Verstärkt den Angriffsschaden um 10.
 }
 
 STRING 49030
@@ -108600,7 +108600,7 @@ Increases the attack damage of the Hero by 8 when worn.|n|n|cffffcc00Left Hand, 
 STRING 49062
 // Items: I0VG (Druid Staff), Description (Description)
 {
-Boosts attack damage by 8.
+Verstärkt den Angriffsschaden um 8.
 }
 
 STRING 49063
@@ -108624,7 +108624,7 @@ Increases the attack damage of the Hero by 6 when worn.|n|n|cffffcc00Left Hand, 
 STRING 49066
 // Items: I0VH (Pirate Cutlass), Description (Description)
 {
-Boosts attack damage by 6.
+Verstärkt den Angriffsschaden um 6.
 }
 
 STRING 49067
@@ -108648,7 +108648,7 @@ Increases the attack damage of the Hero by 7 when worn.|n|n|cffffcc00Left Hand, 
 STRING 49070
 // Items: I0VI (Rapier), Description (Description)
 {
-Boosts attack damage by 7.
+Verstärkt den Angriffsschaden um 7.
 }
 
 STRING 49071
@@ -108672,7 +108672,7 @@ Increases the attack damage of the Hero by 8 when worn.|n|n|cffffcc00Left Hand, 
 STRING 49074
 // Items: I0VJ (Arcane Staff), Description (Description)
 {
-Boosts attack damage by 8.
+Verstärkt den Angriffsschaden um 8.
 }
 
 STRING 49075
@@ -108750,7 +108750,7 @@ Increases the attack damage of the Hero by 25 when worn.|n|n|cffffcc00Left Hand,
 STRING 49088
 // Items: I0VK (Demon Blade), Description (Description)
 {
-Boosts attack damage by 25.
+Verstärkt den Angriffsschaden um 25.
 }
 
 STRING 49089
@@ -108786,7 +108786,7 @@ Increases the attack damage of the Hero by 13 when worn.|n|n|cffffcc00Left Hand,
 STRING 49094
 // Items: I0VL (Naginata), Description (Description)
 {
-Boosts attack damage by 13.
+Verstärkt den Angriffsschaden um 13.
 }
 
 STRING 49095
@@ -108810,7 +108810,7 @@ Increases the attack damage of the Hero by 9 when worn.|n|n|cffffcc00Left Hand, 
 STRING 49098
 // Items: I0VM (Demon Hunter Blade), Description (Description)
 {
-Boosts attack damage by 9.
+Verstärkt den Angriffsschaden um 9.
 }
 
 STRING 49099
@@ -110649,7 +110649,7 @@ Wurfaxt erwerben
 STRING 49990
 // Items: I0WT (Throwing Axe), Description (Description)
 {
-Boosts attack damage by 8.
+Verstärkt den Angriffsschaden um 8.
 }
 
 STRING 49991
@@ -117037,7 +117037,7 @@ Frozen.
 STRING 52189
 // Units: H0B2 (Sorceress), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Massen-Unsichtbarkeit, Massenlangsam, Brillanz-Aura and Massenverwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Magic Sentry.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Arkanist|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 52191

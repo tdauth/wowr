@@ -1,7 +1,28 @@
-ï»¿STRING 0
+STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
+}
+
+STRING 1
+{
+World of Warcraft Reforged 4.7
+}
+
+STRING 2
+{
+10 Adventurers
+}
+
+STRING 3
+{
+Baradé's enhanced Reforged version of the ORPG/strategy map "World of Warcraft Reborn" by EvilPitlord and DeMoNiKuS.
+discord.gg/eM34z36
+}
+
+STRING 4
+{
+Baradé, EvilPitlord, DeMoNiKuS
 }
 
 STRING 5
@@ -17206,7 +17227,7 @@ Powerful titan hero Sargeras. Can learn Cripple, Critical Strike, Drunken Brawle
 STRING 3436
 // Units: H02C (Blood Mage), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, adept at controlling magic and ranged assaults. Can learn Flame Strike, Banish, Siphon Mana and Phoenix. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 16/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 3437
@@ -41419,7 +41440,7 @@ Harvest
 STRING 10093
 // Units: H0YC (Phoenix), Ubertip (Tooltip - Extended)
 {
-Flying warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Flamestrike, Fire Attack, Phoenix Fire and Phoenix Egg. |n|n|cffffcc00Attacks air units.|r|n|cffffcc00Mount: Phoenix.|r|n|cffffcc00Standard Ability: Invisibility.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction. Restricted to account Barade#2569.|r
+|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Mount:|r Phoenix|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 11/1.5|n|cffffcc00Agility:|r 15/2.25|n|cffffcc00Intelligence:|r 24/3|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction. Restricted to account Barade#2569.|r
 }
 
 STRING 10094
@@ -46465,7 +46486,7 @@ Build Book of Summoning Pedestal
 STRING 11448
 // Units: H068 (Priest), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, adept at controlling magic and ranged assaults. Can learn Holy Light, Inner Fire, Heal and Resurrection. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Invisibility.|r
+|cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 11449
@@ -54274,7 +54295,7 @@ Summon Ranger
 STRING 17328
 // Units: H03Y (Ranger), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at damaging opponents. Can learn Scout, Cold Arrows, Trueshot Aura, and Starfall.|n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Invisibility.|r
+|cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 17329
@@ -64839,7 +64860,7 @@ Record Player
 STRING 25956
 // Units: Hvwd (Ranger), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at damaging opponents. Can learn Scout, Cold Arrows, Trueshot Aura, and Starfall. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 25957
@@ -66141,7 +66162,7 @@ Revive Thalorien Dawnseeker
 STRING 27184
 // Units: Hddt (Master Swordsman), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can learn Storm Bolt, Banish, Critical Strike and Resurrection. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Berserk.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 27185
@@ -112190,7 +112211,7 @@ Frozen.
 STRING 52189
 // Units: H0B2 (Sorceress), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, adept at controlling magic and ranged assaults. Can learn Mass Invisibility, Mass Slow, Brilliance Aura and Mass Polymorph. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Magic Sentry.|r
+|cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 52191
