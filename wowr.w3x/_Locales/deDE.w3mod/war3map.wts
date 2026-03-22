@@ -18267,7 +18267,7 @@ Ein listiger Held, exceptional at disrupting battles and enduring damage. Can le
 STRING 3447
 // Units: H0K7 (Spellbreaker), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Massen-Magie-kontrollieren, Manaschild, Rückkopplungsaura and Magische Verteidigung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Spell Steal.|r
+|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Arkanist|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 17/1.8|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 22/2.7|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3448
@@ -18321,13 +18321,13 @@ Ein mystischer Held, adept at disrupting spells and dealing large amounts of fir
 STRING 3458
 // Units: H0A4 (Archmage), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at ranged assaults. Can learn Blizzard, Wasser-Elementargeist beschwören, Brillanz-Aura and Massenteleportation. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Kul Tiras|n|cffffcc00Klasse:|r Wassermagier|n|cffffcc00Reittier:|r Albatross|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/1.8|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3.2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 3459
 // Items: I0FV (Seed Plum), Description (Description)
 {
-Grows a Pflaumenbaum at a target location.
+Pflanzt am Zielort einen Pflaumenbaum an.
 }
 
 STRING 3461
@@ -18369,7 +18369,7 @@ Heldenstufe 45
 STRING 3468
 // Units: O04Y (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at healing magics and voodoo curses. Can learn Macht-Schutzzauber, Far Sight, Massenverkrüppeln and Massenhexerei. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Bat.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+|cffffcc00Volk:|r Trolle|n|cffffcc00Klasse:|r Hexendoktor|n|cffffcc00Reittier:|r Fledermaus|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 17/1.5|n|cffffcc00Intelligenz:|r 20/2.5|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3479
@@ -46953,7 +46953,7 @@ Troll-Kriegsherr wiederbeleben
 STRING 10790
 // Units: N0OH (Troll Warlord), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at manipulating opponents. Can learn Masseneinschnüren, Gebrüll, Volltreffer-Aura, and Summon Green Dragon. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+|cffffcc00Volk:|r Trolle|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Fledermaus|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 15/1.9|n|cffffcc00Beweglichkeit:|r 21/1.5|n|cffffcc00Intelligenz:|r 15/2.6|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 10791
@@ -68362,7 +68362,7 @@ Banshee beschwören
 STRING 24882
 // Units: ngbl (Goblin-Blaster), Tip (Tooltip - Basic)
 {
-Summon Goblin-Blaster
+Goblin-Blaster beschwören
 }
 
 STRING 24885
@@ -68386,7 +68386,7 @@ Portale öffnen
 STRING 24893
 // Units: Oshd (Shadow Hunter), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at healing magics and voodoo curses. Can learn Heilwelle, Hex, Schlangenschutz and Big Bad Voodoo. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Bat.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+|cffffcc00Volk:|r Trolle|n|cffffcc00Klasse:|r Hexendoktor|n|cffffcc00Reittier:|r Fledermaus|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 20/1.5|n|cffffcc00Intelligenz:|r 17/2.5|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 24948
@@ -68480,7 +68480,7 @@ O
 STRING 25010
 // Abilities: A0XL (Evasion), Name (Name)
 {
-Evasion
+Ausweichen
 }
 
 STRING 25012
@@ -68498,7 +68498,7 @@ Manabrand
 STRING 25024
 // Abilities: A0T7 (Revive), Name (Name)
 {
-Revive
+Wiederbeleben
 }
 
 STRING 25032
@@ -68594,7 +68594,7 @@ Fledermaus-Reittier
 STRING 25069
 // Items: I0HA (Dungeon Goldmünzen), Ubertip (Tooltip - Extended)
 {
-Gives <A0X6,DataA1> gold to the player when used.
+Gibt dem Spieler bei Benutzung <A0X6,DataA1> Gold.
 }
 
 STRING 25074
@@ -68630,13 +68630,13 @@ Dummy Caster Auferstehung
 STRING 25079
 // Units: h0CG (Dummy Caster Resurrection), EditorSuffix (Name - Editor Suffix)
 {
-(Revive)
+(Wiederbeleben)
 }
 
 STRING 25080
 // Abilities: A0T9 (Item Resurrection), EditorSuffix (Editor Suffix)
 {
-(Revive)
+(Wiederbeleben)
 }
 
 STRING 25101
@@ -68677,13 +68677,13 @@ Archimonde
 STRING 25117
 // Items: I0H5 (Iron Bars), Ubertip (Tooltip - Extended)
 {
-Can be used to craft anything made out of iron.
+Kann für die Herstellung von etwas aus Eisen benutzt werden.
 }
 
 STRING 25118
 // Items: I0H5 (Iron Bars), Description (Description)
 {
-Can be used to craft anything made out of iron.
+Kann für die Herstellung von etwas aus Eisen benutzt werden.
 }
 
 STRING 25119
