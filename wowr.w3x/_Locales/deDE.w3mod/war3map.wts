@@ -718,7 +718,7 @@ Fähigkeitenmenu
 STRING 120
 // Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Hexendoktor:|n- Schattenmagie|n- Schwächung|n- Bezauberung|n- Hexerei
+Wechselt die Klasse zum Hexendoktor:|n- Schlangenschutz|n- Stille|n- Langsamkeit|n- Antimagie-Hülle|n- Hexerei|n- Schrei|n- Geistergestalt|n- Heuschrecken-Schwarm|n- Zauberschild|n- Bezauberung|n- Großer böser Voodoo
 }
 
 STRING 121
@@ -1708,7 +1708,7 @@ Paladin
 STRING 285
 // Items: I07N (Necromancer), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Paladin.
+Wechselt die Klasse zum Nekromanten:|n- Totenerweckung|n- Kannibalismus|n- Todespakt|n- Dunkles Ritual|n- Fleischwagen beschwören|n- Aas-Käfer|n- Skelett-Herrschaft|n- Tentakel erzeugen|n- Seuchenwolke|n- Lebensauger|n- Sapphiron beschwören
 }
 
 STRING 286
@@ -2488,7 +2488,7 @@ Blocks an enemy spell every 15 seconds and adds 250 Mana.
 STRING 416
 // Items: I07O (Hunter), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Jäger:|n- Gefährten beschwören|n- Fernkampf|n- Schaden|n- Erkundung
+Wechselt die Klasse zum Jäger:|n- Pfeilregen|n- Wächter|n- Ausspähen|n- Sengpfeile|n- Sperrfeuer|n- Bären beschwören|n- Stachelbestie beschwören|n- Falken beschwören|n- Stampede|n- Volltreffer-Aura|n- Massen-Verschlingen|n- Sternenregen
 }
 
 STRING 417
@@ -3033,13 +3033,13 @@ Build Tiny Death Tower
 STRING 508
 // Items: I07P (Death Knight), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Todesritter:|n- Schaden|n- Tote beleben|n- Schwächung
+Wechselt die Klasse zum Todesritter:|n- Fluch|n- Unheilige Raserei|n- Schwarzer Pfeil|n- Todesmantel|n- Aas-Schwarm|n- Schlafen|n- Unheilige Aura|n- Vampir-Aura|n- Vernichtungskugel|n- Tote beleben|n- Tod und Verfall
 }
 
 STRING 509
 // Abilities: A03E (Heldenfähigkeiten Next Page), Name (Name)
 {
-Heldenfähigkeiten Next Page
+Heldenfähigkeiten Nächste Seite
 }
 
 STRING 510
@@ -4407,7 +4407,7 @@ STRING 738
 
 STRING 739
 {
-Hero classes determine which spells can be learned by a hero. They give the hero certain traits which are useful when combined with other hero classes.
+Heldenklassen bestimmen, welche Zauber von einem Helden erlernt werden können. Sie geben dem Helden bestimmte Merkmale, die nützlich sind, wenn sie mit anderen Heldenklassen kombiniert werden.
 }
 
 STRING 740
@@ -4419,7 +4419,7 @@ STRING 740
 STRING 741
 // Units: o04N (Monk), Name (Name)
 {
-Monk
+Mönch
 }
 
 STRING 742
@@ -4437,13 +4437,13 @@ Rolle der Konstruktion erwerben
 STRING 744
 // Abilities: A0DJ (Summon Mount), Ubertip (Tooltip - Normal - Extended)
 {
-Summons the corresponding mount.
+Beschwört das zugehörige Reittier.
 }
 
 STRING 745
 // Items: I05H (Arcanist), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Arkanist:|n- Mana|n- Teleportation|n- Polymorph
+Wechselt die Klasse zum Arkanist:|n- Verbannen|n- Zauberdiebstahl|n- Magie kontrollieren|n- Rückkopplung|n- Unsichtbarkeit|n- Manaschild|n- Mana abziehen|n- Magie bannen|n- Brillanz-Aura|n- Massen-Teleportation|n- Verwandlung
 }
 
 STRING 746
@@ -4455,7 +4455,7 @@ Magischen Samen erwerben
 STRING 747
 // Items: I06Y (Tinker), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Tüftler:|n- Repair|n- Damage|n- Mechanical units
+Wechselt die Klasse zum Tüftler:|n- Reparatur|n- Ernten|n- Verwüsten|n- Taschen-Fabrik|n- Explosives Fass beschwören|n- Reparatur-Aura|n- Jetpack|n- Schwarmraketen|n- Ingenieurskunst-Ausbau|n- Transmutieren|n- Robo-Goblin
 }
 
 STRING 748
@@ -4955,13 +4955,13 @@ Schattenschlag
 STRING 837
 // Items: I04D (Warlock), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Hexenmeister:|n- Fel|n- Terror|n- Dämonische Diener
+Wechselt die Klasse zum Hexenmeister:|n- Verkrüppeln|n- Manabrand|n- Magie verschlingen|n- Fel|n- Dunkle Beschwörung|n- Schreckgeheul|n- Verhängnis|n- Dunkes Portal|n- Metamorphose|n- Chaosregen|n- Todesfinger
 }
 
 STRING 838
-// Abilities: A1E1 (Drunken Aura), Name (Name)
+// Abilities: A1E1 (Trunken-Aura), Name (Name)
 {
-Drunken Aura
+Trunken-Aura
 }
 
 STRING 839
@@ -4971,9 +4971,9 @@ W
 }
 
 STRING 840
-// Abilities: A088 (Drunken Aura), Name (Name)
+// Abilities: A088 (Trunken-Aura), Name (Name)
 {
-Drunken Aura
+Trunken-Aura
 }
 
 STRING 841
@@ -4983,9 +4983,9 @@ STRING 841
 }
 
 STRING 842
-// Buffs/Effects: B02K (Drunken Aura), Bufftip (Tooltip)
+// Buffs/Effects: B02K (Trunken-Aura), Bufftip (Tooltip)
 {
-|cff00ff00Drunken Aura|r
+|cff00ff00Trunken-Aura|r
 }
 
 STRING 843
@@ -4995,15 +4995,15 @@ Alchemie - Novize
 }
 
 STRING 844
-// Buffs/Effects: B02K (Drunken Aura), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B02K (Trunken-Aura), Buffubertip (Tooltip - Extended)
 {
-This unit is affected by Drunken Aura. It has the chance to evade hits and do critical damage.
+This unit is affected by Trunken-Aura. It has the chance to evade hits and do critical damage.
 }
 
 STRING 845
-// Buffs/Effects: B02K (Drunken Aura), EditorName (Name (Editor Only))
+// Buffs/Effects: B02K (Trunken-Aura), EditorName (Name (Editor Only))
 {
-Drunken Aura
+Trunken-Aura
 }
 
 STRING 846
@@ -5267,7 +5267,7 @@ N
 STRING 889
 // Items: I07R (Monk), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Mönch:|n- Ausweichen|n- Kritischer Schaden|n- Heilung
+Wechselt die Klasse zum Mönch:|n- Gleiten|n- Aufladung|n- Trunkenbold|n- Entwaffnung|n- Trunkenheit|n- Fehlschlagsaura|n- Spiegelbild|n- Trunken-Aura|n- Klonen|n- Sturm-Erd-Feuer|n- Klingensturm
 }
 
 STRING 890
@@ -5818,19 +5818,19 @@ STRING 981
 STRING 982
 // Items: I07Q (Rogue), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Schurken:|n- Gift|n- Attentate|n- Gefangennahme|n- Gegenstände
+Wechselt die Klasse zum Schurken:|n- Einschnüren|n- Dolchfächer|n- Kritischer Schlag|n- Schattenschlag|n- Säure-Bombe|n- Windlauf|n- Wildgeist|n- Giftpfeile|n- Giftwaffen|n- Artefakte finden|n- Rachegeist
 }
 
 STRING 983
 // Items: I07W (Scroll of Construction), Description (Description)
 {
-Finishes constructions and upgrades in progress of allied buildings.
+Schließt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden ab.
 }
 
 STRING 984
 // Items: I07W (Scroll of Construction), Ubertip (Tooltip - Extended)
 {
-Finishes constructions and upgrades in progress of allied buildings.
+Schließt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden ab.
 }
 
 STRING 985
@@ -6504,31 +6504,31 @@ Summon Sapphiron New
 STRING 1098
 // Items: I03K (Warrior), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Krieger:|n- Nahkampf|n- Schaden|n- Verteidigung|n- Betäubung
+Wechselt die Klasse zum Krieger:|n- Sturmschlag|n- Berserk|n- Donnerschlag|n- Stachelpanzer|n- Kriegsdonner|n- Hieb|n- Schmetter-Angriff|n- Befehls-Aura|n- Aufspießen|n- Keulenschlag|n- Avatar
 }
 
 STRING 1099
 // Items: I04K (Paladin), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Paladin:|n- Schutz|n- Heilung|n- Auferstehung|n- Untoten Schaden zufügen
+Wechselt die Klasse zum Paladin:|n- Heilen|n- Inneres Feuer|n- Heiliges Licht|n- Gottesschild|n- Heilwelle|n- Heilige Aura|n- Heil-Spray|n- Hingabeaura|n- Heilige Nova|n- Horn von Sturmwind|n- Auferstehung
 }
 
 STRING 1100
 // Items: I04L (Geomancer), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Erdmagier:|n- Erdschaden|n- Erddiener|n- Fernsicht
+Wechselt die Klasse zum Erdmagier:|n- Felsen schleudern|n- Mauer beschwören|n- Ausdauer-Aura|n- Fernsicht|n- Schockwelle|n- Schmettern|n- Golem beschwören|n- Kampfrausch|n- Erdbeben|n- Stampede|n- Reinkarnation
 }
 
 STRING 1101
 // Items: I04M (Pyromancer), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Feuermagier:|n- Fire Damage|n- Minions
+Wechselt die Klasse zum Feuermagier:|n- Feuerblitz|n- Feuerbrand|n- Feuerregen|n- Flammenschlag|n- Meteor|n- Lavabrut beschwören|n- Vulkan|n- Flammensturm|n- Feueratem|n- Verbrennen|n- Phönix
 }
 
 STRING 1102
 // Items: I06Z (Druid), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Druiden:|n- Gestalten|n- Heilung|n- Zauberverstärker
+Wechselt die Klasse zum Druiden:|n- Verjüngung|n- Feenfeuer|n- Naturgewalt|n- Dornen-Aura|n- Wucherwurzeln|n- Vollständige Regeneration|n- Baum essen|n- Massen-Bewaldung|n- Druiden-Gestalten|n- Gebrüll|n- Gelassenheit
 }
 
 STRING 1103
@@ -9800,13 +9800,13 @@ Brunnen der Macht
 STRING 1654
 // Items: I070 (Aeromancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Aeromancer:|n- Air Damage|n- Lightning Damage|n- Disable Enemies|n- Cyclones
+Wechselt die Klasse zum Luftmagier:|n- Wirbelsturm|n- Kettenblitz|n- Windböe|n- Ausweichen|n- Wolke|n- Beflügelt|n- Gabelblitz|n- Dschinn beschwören|n- Luftfesseln|n- Blitzschild|n- Tornado
 }
 
 STRING 1655
 // Items: I07L (Hydromancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Hydromancer:|n- Water Damage|n- Frost Damage|n- Frost Armor|n- Healing and Regeneration
+Wechselt die Klasse zum Wassermagier:|n- Schmetterwelle|n- Brunnen der Macht|n- asser-Elementargeist beschwören|n- Spiegelung|n- Frost-Atem|n- Frost-Rüstung|n- Blizzard|n- Frost-Nova|n- Frostpfeile|n- Frostschlag|n- Monsun
 }
 
 STRING 1656
@@ -50512,7 +50512,7 @@ Golem beschwören
 }
 
 STRING 11912
-// Abilities: A088 (Drunken Aura), EditorSuffix (Editor Suffix)
+// Abilities: A088 (Trunken-Aura), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -62100,7 +62100,7 @@ Meeresriese
 }
 
 STRING 19936
-// Abilities: A088 (Drunken Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A088 (Trunken-Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74425,7 +74425,7 @@ STRING 31096
 }
 
 STRING 31128
-// Abilities: A1E1 (Drunken Aura), EditorSuffix (Editor Suffix)
+// Abilities: A1E1 (Trunken-Aura), EditorSuffix (Editor Suffix)
 {
 (Zauberverstärker)
 }

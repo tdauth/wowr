@@ -706,7 +706,7 @@ Skill Menu
 STRING 120
 // Items: I07M (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-Changes the class to Witch Doctor:|n- Shadow Magic|n- Weakening|n- Charm|n- Hex
+Changes the class to Witch Doctor:|n- Serpent Ward|n- Silence|n- Slow|n- Anti-magic Shell|n- Hex|n- Scream|n- Ghost Form|n- Locust Swarm|n- Spell Shield|n- Charm|n- Big Bad Voodoo
 }
 
 STRING 121
@@ -1696,7 +1696,7 @@ Paladin
 STRING 285
 // Items: I07N (Necromancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Necromancer:|n- Raise Undeads|n- Corpses|n- Life Consuming
+Changes the class to Necromancer:|n- Raise Dead|n- Cannibalize|n- Death Pact|n- Dark Ritual|n- Summon Meat Wagon|n- Carrion Beetles|n- Skeletal Mastery|n- Spawn Tentacle|n- Disease Cloud|n- Life Drain|n- Summon Sapphiron
 }
 
 STRING 286
@@ -2446,7 +2446,7 @@ Blocks an enemy spell every 15 seconds and adds 250 Mana.
 STRING 416
 // Items: I07O (Hunter), Ubertip (Tooltip - Extended)
 {
-Changes the class to Hunter:|n- Summon Companions|n- Range Combat|n- Damage|n- Scouting
+Changes the class to Hunter:|n- Rain of Arrows|n- Sentinel|n- Scout|n- Searing Arrows|n- Barrage|n- Summon Bear|n- Summon Quilbeast|n- Summon Hawk|n- Stampede|n- Trueshot Aura|n- Mass Devour|n- Starfall
 }
 
 STRING 417
@@ -2956,7 +2956,7 @@ Build Tiny Death Tower
 STRING 508
 // Items: I07P (Death Knight), Ubertip (Tooltip - Extended)
 {
-Changes the class to Death Knight:|n- Damage|n- Reanimation|n- Weakening
+Changes the class to Death Knight:|n- Curse|n- Unholy Frenzy|n- Black Arrow|n- Death Coil|n- Carrion Swarm|n- Sleep|n- Unholy Aura|n- Vampiric Aura|n- Orb of Annihilation|n- Animate Dead|n- Death and Decay
 }
 
 STRING 509
@@ -4306,7 +4306,7 @@ Summons the corresponding mount.
 STRING 745
 // Items: I05H (Arcanist), Ubertip (Tooltip - Extended)
 {
-Changes the class to Arcanist:|n- Mana|n- Teleportation|n- Polymorph
+Changes the class to Arcanist:|n- Banish|n- Spell Steal|n- Control Magic|n- Feedback|n- Invisibility|n- Mana Shield|n- Siphon Mana|n- Dispel Magic|n- Brilliance Aura|n- Mass Teleport|n- Polymorph
 }
 
 STRING 746
@@ -4318,7 +4318,7 @@ Purchase Magical Seed
 STRING 747
 // Items: I06Y (Tinker), Ubertip (Tooltip - Extended)
 {
-Changes the class to Tinker:|n- Repair|n- Damage|n- Mechanical units
+Changes the class to Tinker:|n- Repair|n- Harvest|n- Demolish|n- Pocket Factory|n- Summon Explosive Barrel|n- Repair Aura|n- Jetpack|n- Cluster Rockets|n- Engineering Upgrade|n- Transmute|n- Robo-Goblin
 }
 
 STRING 748
@@ -4618,8 +4618,7 @@ Shadow Strike
 STRING 837
 // Items: I04D (Warlock), Ubertip (Tooltip - Extended)
 {
-Changes the class to Warlock:|n- Fel|n- Terror|n- Demonic minions
-}
+Changes the class to Warlock:|n- Cripple|n- Mana Burn|n- Devour Magic|n- Fel|n- Dark Summoning|n- Howl of Terror|n- Doom|n- Dark Portal|n- Metamorphosis|n- Rain of Chaos|n- Finger of Death
 
 STRING 838
 // Abilities: A1E1 (Drunken Aura), Name (Name)
@@ -4930,7 +4929,7 @@ N
 STRING 889
 // Items: I07R (Monk), Ubertip (Tooltip - Extended)
 {
-Changes the class to Monk:|n- Evasion|n- Critical Damage|n- Healing
+Changes the class to Monk:|n- Slide|n- Charge|n- Drunken Brawler|n- Disarmament|n- Drunken Haze|n- Miss Aura|n- Mirror Image|n- Drunken Aura|n- Clone|n- Storm, Earth, And Fire|n- Bladestorm
 }
 
 STRING 890
@@ -5446,7 +5445,7 @@ STRING 981
 STRING 982
 // Items: I07Q (Rogue), Ubertip (Tooltip - Extended)
 {
-Changes the class to Rogue:|n- Poison|n- Assassinations|n- Capture|n- Items
+Changes the class to Rogue:|n- Ensnare|n- Fan of Knives|n- Critical Strike|n- Shadow Strike|n- Acid Bomb|n- Wind Walk|n- Feral Spirit|n- Poison Arrows|n- Envenomed Weapons|n- Find Artifacts|n- Vengeance
 }
 
 STRING 983
@@ -6082,31 +6081,31 @@ STRING 1097
 STRING 1098
 // Items: I03K (Warrior), Ubertip (Tooltip - Extended)
 {
-Changes the class to Warrior:|n- Close Combat|n- Damage|n- Defense|n- Stunning
+Changes the class to Warrior:|n- Storm Bolt|n- Berserk|n- Thunder Clap|n- Spiked Shell|n- War Stomp|n- Bash|n- Cleaving Attack|n- Command Aura|n- Impale|n- Club Strike|n- Avatar
 }
 
 STRING 1099
 // Items: I04K (Paladin), Ubertip (Tooltip - Extended)
 {
-Changes the class to Paladin:|n- Protection|n- Healing|n- Resurrection|n- Damaging Undead
+Changes the class to Paladin:|n- Heal|n- Inner Fire|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
 
 STRING 1100
 // Items: I04L (Geomancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Geomancer:|n- Earth Damage|n- Earth Minions|n- Far Sight
+Changes the class to Geomancer:|n- Hurl Boulder|n- Summon Wall|n- Endurance Aura|n- Far Sight|n- Shockwave|n- Slam|n- Summon Golem|n- Bloodlust|n- Earthquake|n- Stampede|n- Reincarnation
 }
 
 STRING 1101
 // Items: I04M (Pyromancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Pyromancer:|n- Fire Damage|n- Minions
+Changes the class to Pyromancer:|n- Firebolt|n- Immolation|n- Rain of Fire|n- Flame Strike|n- Meteor|n- Summon Lava Spawn|n- Volcano|n- Flame Storm|n- Breath of Fire|n- Incinerate|n- Phoenix
 }
 
 STRING 1102
 // Items: I06Z (Druid), Ubertip (Tooltip - Extended)
 {
-Changes the class to Druid:|n- Forms|n- Healing|n- Buffs
+Changes the class to Druid:|n- Rejuvenation|n- Faerie Fire|n- Force of Nature|n- Thorns Aura|n- Entangling Roots|n- Full Regeneration|n- Eat Tree|n- Mass Forestation|n- Druid Forms|n- Roar|n- Tranquility
 }
 
 STRING 1103
@@ -9298,13 +9297,13 @@ Fountain of Power
 STRING 1654
 // Items: I070 (Aeromancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Aeromancer:|n- Air Damage|n- Lightning Damage|n- Disable Enemies|n- Cyclones
+Changes the class to Aeromancer:|n- Cyclone|n- Chain Lightning|n- Wind Gust|n- Evasion|n- Cloud|n- Blink|n- Forked Lightning|n- Summon Djinn|n- Aerial Shackles|n- Lightning Shield|n- Tornado
 }
 
 STRING 1655
 // Items: I07L (Hydromancer), Ubertip (Tooltip - Extended)
 {
-Changes the class to Hydromancer:|n- Water Damage|n- Frost Damage|n- Frost Armor|n- Healing and Regeneration
+Changes the class to Hydromancer:|n- Crushing Wave|n- Fountain of Power|n- Summon Water Elemental|n- Reflection|n- Breath of Frost|n- Frost Armor|n- Blizzard|n- Frost Nova|n- Frost Arrows|n- Frost Bolt|n- Monsoon
 }
 
 STRING 1656
