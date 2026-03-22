@@ -541,6 +541,18 @@ STRING 90
 Build Tiny Tidal Guardian
 }
 
+STRING 91
+// Buffs/Effects: B002 (Cover), EditorName (Name (Editor Only))
+{
+Cover
+}
+
+STRING 92
+// Buffs/Effects: B002 (Cover), Bufftip (Tooltip)
+{
+Cover
+}
+
 STRING 93
 // Abilities: A02O (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
@@ -1474,7 +1486,7 @@ Disables the Portal or Hideout.
 STRING 248
 // Abilities: A05W (Ping Destination), Ubertip (Tooltip - Normal - Extended)
 {
-Pings the Destination of the Portal or Hideout on the minimap for the owning player.
+Pings the destination of the Portal or Hideout on the minimap for the owning player.
 }
 
 STRING 249
@@ -1720,7 +1732,7 @@ Mass Finger of Death
 STRING 289
 // Abilities: A04L (Harvest), EditorSuffix (Editor Suffix)
 {
-(Gold and Lumber Demon Imp)
+(Gold and Lumber Gan'arg Engineer)
 }
 
 STRING 290
@@ -2059,6 +2071,26 @@ STRING 345
 Arcanist
 }
 
+STRING 346
+{
+No neutral portals!
+}
+
+STRING 347
+{
+Neutrale portals!
+}
+
+STRING 348
+{
+Properties
+}
+
+STRING 349
+{
+Properties are unique indestructible buildings at fixed locations which can be purchased by one single player during the game. They allow hiring race-specific units and gathering resources by loading workers.
+}
+
 STRING 350
 // Units: n090 (Mercenary Camp Dragon Isles), Name (Name)
 {
@@ -2179,6 +2211,11 @@ STRING 369
 (Vrykul)
 }
 
+STRING 370
+{
+Trading Posts
+}
+
 STRING 371
 // Units: H003 (Eternal Guardian), Hotkey (Hotkey)
 {
@@ -2195,6 +2232,11 @@ STRING 373
 // Abilities: A01M (Alchemy - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 The Alchemist uses gathered herbs and minerals to create a Mana Stone.
+}
+
+STRING 374
+{
+Trading Posts allow exchanging resources.
 }
 
 STRING 375
@@ -2665,6 +2707,11 @@ STRING 455
 Night Elf and Undead AI cannot use housings. They need a bonus.
 }
 
+STRING 456
+{
+Website: https://wowreforged.org
+}
+
 STRING 457
 // Upgrades: R019 (Burning Oil), Name (Name)
 {
@@ -2875,6 +2922,16 @@ STRING 491
 (Neutral Hostile)
 }
 
+STRING 492
+{
+Gold is affected by taxes.
+}
+
+STRING 493
+{
+Thieving Guilds
+}
+
 STRING 494
 // Units: h01V (Freelancer Laboratory), Hotkey (Hotkey)
 {
@@ -2891,6 +2948,11 @@ STRING 496
 // Items: I089 (Iron Ore), Name (Name)
 {
 Iron Ore
+}
+
+STRING 497
+{
+Thieving Guilds sell units of enemy killed unit types. If you kill creeps or enemy units, your Thieve Guild will sell the unit. It is limited to only 1 to keep it balanced.
 }
 
 STRING 498
@@ -3665,6 +3727,11 @@ STRING 626
 // Units: ushp (Undead Shipyard), Hotkey (Hotkey)
 {
 S
+}
+
+STRING 627
+{
+Market Places
 }
 
 STRING 628

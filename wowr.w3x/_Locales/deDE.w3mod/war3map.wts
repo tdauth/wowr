@@ -538,7 +538,7 @@ Ruft Wellen von Höllenfeuer herbei, die Einheiten in einem bestimmten Gebiet ve
 STRING 90
 // Abilities: A040 (Build Tiny Flutwächter), Name (Name)
 {
-Build Tiny Flutwächter
+Winzigen Flutwächter errichten
 }
 
 STRING 91
@@ -640,7 +640,7 @@ STRING 106
 STRING 107
 // Abilities: A0G0 (Marksmanship), EditorSuffix (Editor Suffix)
 {
- (Icon) (High Elf)
+ (Icon) (Hochelfen)
 }
 
 STRING 108
@@ -926,219 +926,219 @@ Dämonentöter-Axt erwerben
 }
 
 STRING 155
-// Items: I00Y (Gauntlet Ticket - Level 1), Name (Name)
+// Items: I00Y (Handschuh-Eintrittskarte - Level 1), Name (Name)
 {
-Gauntlet Ticket - Stufe 1
+Handschuh-Eintrittskarte - Stufe 1
 }
 
 STRING 156
-// Items: I00Y (Gauntlet Ticket - Level 1), Description (Description)
+// Items: I00Y (Handschuh-Eintrittskarte - Level 1), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 1
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 1
 }
 
 STRING 157
-// Items: I00Y (Gauntlet Ticket - Level 1), Ubertip (Tooltip - Extended)
+// Items: I00Y (Handschuh-Eintrittskarte - Level 1), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 1
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 1
 }
 
 STRING 158
-// Items: I00Y (Gauntlet Ticket - Level 1), Tip (Tooltip - Basic)
+// Items: I00Y (Handschuh-Eintrittskarte - Level 1), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 1
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 1
 }
 
 STRING 159
-// Items: I00Z (Gauntlet Ticket - Level 2), Name (Name)
+// Items: I00Z (Handschuh-Eintrittskarte - Level 2), Name (Name)
 {
-Gauntlet Ticket - Stufe 2
+Handschuh-Eintrittskarte - Stufe 2
 }
 
 STRING 160
-// Items: I00Z (Gauntlet Ticket - Level 2), Description (Description)
+// Items: I00Z (Handschuh-Eintrittskarte - Level 2), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 2
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 2
 }
 
 STRING 161
-// Items: I00Z (Gauntlet Ticket - Level 2), Ubertip (Tooltip - Extended)
+// Items: I00Z (Handschuh-Eintrittskarte - Level 2), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 2
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 2
 }
 
 STRING 162
-// Items: I00Z (Gauntlet Ticket - Level 2), Tip (Tooltip - Basic)
+// Items: I00Z (Handschuh-Eintrittskarte - Level 2), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 2
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 2
 }
 
 STRING 163
-// Items: I010 (Gauntlet Ticket - Level 7), Name (Name)
+// Items: I010 (Handschuh-Eintrittskarte - Level 7), Name (Name)
 {
-Gauntlet Ticket - Stufe 7
+Handschuh-Eintrittskarte - Stufe 7
 }
 
 STRING 164
-// Items: I010 (Gauntlet Ticket - Level 7), Description (Description)
+// Items: I010 (Handschuh-Eintrittskarte - Level 7), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 7
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 7
 }
 
 STRING 165
-// Items: I010 (Gauntlet Ticket - Level 7), Ubertip (Tooltip - Extended)
+// Items: I010 (Handschuh-Eintrittskarte - Level 7), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 7
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 7
 }
 
 STRING 166
-// Items: I010 (Gauntlet Ticket - Level 7), Tip (Tooltip - Basic)
+// Items: I010 (Handschuh-Eintrittskarte - Level 7), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 7
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 7
 }
 
 STRING 167
-// Items: I011 (Gauntlet Ticket - Level 3), Name (Name)
+// Items: I011 (Handschuh-Eintrittskarte - Level 3), Name (Name)
 {
-Gauntlet Ticket - Stufe 3
+Handschuh-Eintrittskarte - Stufe 3
 }
 
 STRING 168
-// Items: I011 (Gauntlet Ticket - Level 3), Description (Description)
+// Items: I011 (Handschuh-Eintrittskarte - Level 3), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 3
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 3
 }
 
 STRING 169
-// Items: I011 (Gauntlet Ticket - Level 3), Ubertip (Tooltip - Extended)
+// Items: I011 (Handschuh-Eintrittskarte - Level 3), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 3
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 3
 }
 
 STRING 170
-// Items: I011 (Gauntlet Ticket - Level 3), Tip (Tooltip - Basic)
+// Items: I011 (Handschuh-Eintrittskarte - Level 3), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 3
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 3
 }
 
 STRING 171
-// Items: I012 (Gauntlet Ticket - Level 4), Name (Name)
+// Items: I012 (Handschuh-Eintrittskarte - Level 4), Name (Name)
 {
-Gauntlet Ticket - Stufe 4
+Handschuh-Eintrittskarte - Stufe 4
 }
 
 STRING 172
-// Items: I012 (Gauntlet Ticket - Level 4), Description (Description)
+// Items: I012 (Handschuh-Eintrittskarte - Level 4), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 4
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 4
 }
 
 STRING 173
-// Items: I012 (Gauntlet Ticket - Level 4), Ubertip (Tooltip - Extended)
+// Items: I012 (Handschuh-Eintrittskarte - Level 4), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 4
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 4
 }
 
 STRING 174
-// Items: I012 (Gauntlet Ticket - Level 4), Tip (Tooltip - Basic)
+// Items: I012 (Handschuh-Eintrittskarte - Level 4), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 4
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 4
 }
 
 STRING 175
-// Items: I013 (Gauntlet Ticket - Level 5), Name (Name)
+// Items: I013 (Handschuh-Eintrittskarte - Level 5), Name (Name)
 {
-Gauntlet Ticket - Stufe 5
+Handschuh-Eintrittskarte - Stufe 5
 }
 
 STRING 176
-// Items: I013 (Gauntlet Ticket - Level 5), Description (Description)
+// Items: I013 (Handschuh-Eintrittskarte - Level 5), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 5
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 5
 }
 
 STRING 177
-// Items: I013 (Gauntlet Ticket - Level 5), Ubertip (Tooltip - Extended)
+// Items: I013 (Handschuh-Eintrittskarte - Level 5), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 5
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 5
 }
 
 STRING 178
-// Items: I013 (Gauntlet Ticket - Level 5), Tip (Tooltip - Basic)
+// Items: I013 (Handschuh-Eintrittskarte - Level 5), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 5
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 5
 }
 
 STRING 179
-// Items: I014 (Gauntlet Ticket - Level 6), Name (Name)
+// Items: I014 (Handschuh-Eintrittskarte - Level 6), Name (Name)
 {
-Gauntlet Ticket - Stufe 6
+Handschuh-Eintrittskarte - Stufe 6
 }
 
 STRING 180
-// Items: I014 (Gauntlet Ticket - Level 6), Description (Description)
+// Items: I014 (Handschuh-Eintrittskarte - Level 6), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 6
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 6
 }
 
 STRING 181
-// Items: I014 (Gauntlet Ticket - Level 6), Ubertip (Tooltip - Extended)
+// Items: I014 (Handschuh-Eintrittskarte - Level 6), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 6
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 6
 }
 
 STRING 182
-// Items: I014 (Gauntlet Ticket - Level 6), Tip (Tooltip - Basic)
+// Items: I014 (Handschuh-Eintrittskarte - Level 6), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 6
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 6
 }
 
 STRING 183
-// Items: I015 (Gauntlet Ticket - Level 8), Name (Name)
+// Items: I015 (Handschuh-Eintrittskarte - Level 8), Name (Name)
 {
-Gauntlet Ticket - Stufe 8
+Handschuh-Eintrittskarte - Stufe 8
 }
 
 STRING 184
-// Items: I015 (Gauntlet Ticket - Level 8), Description (Description)
+// Items: I015 (Handschuh-Eintrittskarte - Level 8), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 8
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 8
 }
 
 STRING 185
-// Items: I015 (Gauntlet Ticket - Level 8), Ubertip (Tooltip - Extended)
+// Items: I015 (Handschuh-Eintrittskarte - Level 8), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 8
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 8
 }
 
 STRING 186
-// Items: I015 (Gauntlet Ticket - Level 8), Tip (Tooltip - Basic)
+// Items: I015 (Handschuh-Eintrittskarte - Level 8), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 8
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 8
 }
 
 STRING 187
-// Items: I016 (Gauntlet Ticket - Level 9), Name (Name)
+// Items: I016 (Handschuh-Eintrittskarte - Level 9), Name (Name)
 {
-Gauntlet Ticket - Stufe 9
+Handschuh-Eintrittskarte - Stufe 9
 }
 
 STRING 188
-// Items: I016 (Gauntlet Ticket - Level 9), Description (Description)
+// Items: I016 (Handschuh-Eintrittskarte - Level 9), Description (Description)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 9
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 9
 }
 
 STRING 189
-// Items: I016 (Gauntlet Ticket - Level 9), Ubertip (Tooltip - Extended)
+// Items: I016 (Handschuh-Eintrittskarte - Level 9), Ubertip (Tooltip - Extended)
 {
-A Stonemaul Gauntlet Arena ticket.|nStufe 9
+Eine Eintrittskarte für die Stonemaul-Handschuh-Arena.|nStufe 9
 }
 
 STRING 190
-// Items: I016 (Gauntlet Ticket - Level 9), Tip (Tooltip - Basic)
+// Items: I016 (Handschuh-Eintrittskarte - Level 9), Tip (Tooltip - Basic)
 {
-Purchase Gauntlet Arena Ticket - Stufe 9
+Eintrittskarte für die Stonemaul-Handschuh-Arena erwerben - Stufe 9
 }
 
 STRING 191
@@ -1354,7 +1354,7 @@ STRING 225
 STRING 226
 // Units: e00U (Murloc Shipyard), Tip (Tooltip - Basic)
 {
-Build Murloc Shipyard
+Murloc-Hafen errichten
 }
 
 STRING 227
@@ -1474,19 +1474,19 @@ Khanam Matra
 STRING 246
 // Abilities: A05U (Select Destination), Ubertip (Tooltip - Normal - Extended)
 {
-Selects an allied Portal or Hideout as destination.
+Wählt ein verbündetes Portal oder Versteck als Ziel aus.
 }
 
 STRING 247
 // Abilities: A05V (Disable Portal), Ubertip (Tooltip - Normal - Extended)
 {
-Disables the Portal or Hideout.
+Deaktiviert das Portal oder Versteck.
 }
 
 STRING 248
 // Abilities: A05W (Ping Destination), Ubertip (Tooltip - Normal - Extended)
 {
-Pings the Destination of the Portal or Hideout on the minimap for the owning player.
+Signalisiert das Ziel des Portals oder Verstecks auf der Minikarte für den besitzenden Spieler.
 }
 
 STRING 249
@@ -1510,13 +1510,13 @@ W
 STRING 252
 // Items: bzbe (Empty Vial), Ubertip (Tooltip - Extended)
 {
-A special vial adept at containing magical healing waters.
+Eine besondere Phiole, die das magische Heilwasser aufnehmen kann.
 }
 
 STRING 253
 // Items: bzbe (Empty Vial), Description (Description)
 {
-A special vial adept at containing magical healing waters.
+Eine besondere Phiole, die das magische Heilwasser aufnehmen kann.
 }
 
 STRING 254
@@ -1624,7 +1624,7 @@ STRING 270
 STRING 271
 // Abilities: A1K9 (Drunken Haze), Tip (Tooltip - Normal)
 {
-Drunken Haze
+Trunkenheit
 }
 
 STRING 272
@@ -1724,15 +1724,15 @@ Erdmagier
 }
 
 STRING 288
-// Abilities: A176 (Massen-Todesfinger), Name (Name)
+// Abilities: A176 (Mass Finger of Death), Name (Name)
 {
-Todesfinger erlernen - [|cffffcc00Stufe %d|r]
+Massen-Todesfinger
 }
 
 STRING 289
 // Abilities: A04L (Harvest), EditorSuffix (Editor Suffix)
 {
-(Gold and Lumber Demon Imp)
+(Gold und Holz Gan'arg-Ingenieur)
 }
 
 STRING 290
@@ -1774,25 +1774,25 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 1|r]
 STRING 296
 // Units: O00D (Far Seer), EditorSuffix (Name - Editor Suffix)
 {
-(Hero Selection)
+(Heldenauswahl)
 }
 
 STRING 297
-// Abilities: A028 (Demigod's Wrath), Name (Name)
+// Abilities: A028 (Zorn des Halbgottes), Name (Name)
 {
-Demigod's Wrath
+Zorn des Halbgottes
 }
 
 STRING 298
 // Abilities: A0QF (Mass Slow), Name (Name)
 {
-Mass Slow
+Massen-Langsamkeit
 }
 
 STRING 299
 // Abilities: A0QS (Mass Polymorph), Name (Name)
 {
-Mass Polymorph
+Massen-Verwandlung
 }
 
 STRING 300
@@ -1822,19 +1822,19 @@ STRING 303
 STRING 304
 // Abilities: A1H8 (Mass Cyclone), Name (Name)
 {
-Mass Cyclone
+Massen-Wirbelsturm
 }
 
 STRING 305
 // Abilities: A1II (Mass Illusion), Name (Name)
 {
-Mass Illusion
+Massen-Illusion
 }
 
 STRING 306
 // Units: n0ND (Water Tower), Tip (Tooltip - Basic)
 {
-Build Water Tower
+Wasserturm errichten
 }
 
 STRING 307
@@ -1886,9 +1886,9 @@ Feuermagier
 }
 
 STRING 315
-// Abilities: A028 (Demigod's Wrath), Tip (Tooltip - Normal)
+// Abilities: A028 (Zorn des Halbgottes), Tip (Tooltip - Normal)
 {
-Demigod's Wrath
+Zorn des Halbgottes
 }
 
 STRING 316
@@ -2236,7 +2236,7 @@ The Alchemist uses gathered herbs and minerals to create a Mana Stone.
 
 STRING 374
 {
-Handelspostens allow collecting resources with trained Pack Horses. The Pack Horses search for an allied town hall furthest away and transport gold and lumber from the allied Handelsposten furthest away to the town hall furthest away. The amount depends on the time it takes for the horses to reach the town hall and is increased with the time passing. The gold is also affected by taxes.
+Handelsposten ermöglichen denTausch von Rohstoffen.
 }
 
 STRING 375
@@ -2760,19 +2760,19 @@ Spell Damage Reduction (einzigartig)
 STRING 462
 // Abilities: A0AQ (Summon Water Elemental), Name (Name)
 {
-Vulkan - [|cffffcc00Stufe 2|r]
+Wasser-Elementargeist beschwören
 }
 
 STRING 463
 // Abilities: A1E3 (Summon Wall), EditorSuffix (Editor Suffix)
 {
-Vulkan - [|cffffcc00Stufe 3|r]
+(Neutral Feindlich)
 }
 
 STRING 464
 // Abilities: A1E5 (Summon Explosive Barrel), EditorSuffix (Editor Suffix)
 {
-Vulkan - [|cffffcc00Stufe 4|r]
+(Neutral Feindlich)
 }
 
 STRING 465
@@ -2796,7 +2796,7 @@ Spell Damage Reduction (unique shield)
 STRING 468
 // Units: h01Z (Wall), Hotkey (Hotkey)
 {
-Vulkan - [|cffffcc00Stufe 5|r]
+J
 }
 
 STRING 469
@@ -2814,7 +2814,7 @@ STRING 470
 STRING 471
 // Abilities: A173 (Mass Bloodlust), Name (Name)
 {
-Mass Bloodlust
+Massen-Kampfrausch
 }
 
 STRING 472
@@ -2838,13 +2838,13 @@ Sends a gigantic wave which deals 150 damage to each enemy land unit in a line, 
 STRING 475
 // Abilities: A1GB (Mass Firebolt), Name (Name)
 {
-Mass Firebolt
+Massen-Feuerblitz
 }
 
 STRING 476
 // Abilities: A1H5 (Mass Rejuvenation), Name (Name)
 {
-Mass Rejuvenation
+Massen-Verjüngung
 }
 
 STRING 477
@@ -2874,19 +2874,19 @@ STRING 480
 STRING 481
 // Abilities: A135 (Mass Cripple), Name (Name)
 {
-Mass Cripple
+Massen-Verküppelung
 }
 
 STRING 482
 // Abilities: A14L (Mass Hex), Name (Name)
 {
-Mass Hex
+Massen-Hexerei
 }
 
 STRING 483
 // Abilities: A15V (Mass Mana Burn), Name (Name)
 {
-Mass Mana Burn
+Massen-Manabrand
 }
 
 STRING 484
@@ -3331,7 +3331,7 @@ Boosts defense by 10 and casts Heiliges Licht. Also needed for the Guardian Tran
 }
 
 STRING 558
-// Abilities: A028 (Demigod's Wrath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A028 (Zorn des Halbgottes), Ubertip (Tooltip - Normal - Extended)
 {
 Hurls a bolt of destruction anywhere in the world, dealing instantly <A028,DataC1> damage.
 }
@@ -3493,7 +3493,7 @@ STRING 584
 }
 
 STRING 585
-// Abilities: A0VQ (Fähigkeitsstufe erhöhen), EditorSuffix (Editor Suffix)
+// Abilities: A0VQ (Increase Ability Level), EditorSuffix (Editor Suffix)
 {
 (Fähigkeiten)
 }
@@ -3571,7 +3571,7 @@ Dummy Ride Down
 }
 
 STRING 598
-// Units: h0CH (Dummy Fluchtportal), Name (Name)
+// Units: h0CH (Dummy Escape Portal), Name (Name)
 {
 Dummy Fluchtportal
 }
@@ -5654,7 +5654,7 @@ Revive Rogue
 }
 
 STRING 955
-// Abilities: A028 (Demigod's Wrath), Researchtip (Tooltip - Learn)
+// Abilities: A028 (Zorn des Halbgottes), Researchtip (Tooltip - Learn)
 {
 Learn Demigod´s Wrath
 }
@@ -5768,7 +5768,7 @@ STRING 973
 }
 
 STRING 974
-// Abilities: A028 (Demigod's Wrath), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A028 (Zorn des Halbgottes), Researchubertip (Tooltip - Learn - Extended)
 {
 Hurls a bolt of destruction anywhere in the world, dealing instantly 800 Damage.
 }
@@ -10653,7 +10653,7 @@ STRING 1797
 STRING 1798
 // Items: envl (Enchanted Vial), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Quest-Aktualisierung:|r Return the vial to the plagued grain in the village.
+|cffffcc00Quest-Aktualisierung:|r Bringt die Phiole zurück zum dem verseuchten Korn im Dorf.
 }
 
 STRING 1799
@@ -25560,13 +25560,13 @@ E
 STRING 5125
 // Items: bzbf (Full Vial), Ubertip (Tooltip - Extended)
 {
-A special vial adept at containing the magical healing waters from the Paladins of the Silver Hand.
+Eine besondere Phiole, die das magische Heilwasser der Paladine der Silberhand aufnehmen kann.
 }
 
 STRING 5126
 // Items: bzbf (Full Vial), Description (Description)
 {
-A special vial adept at containing magical healing waters.
+Eine besondere Phiole, die das magische Heilwasser aufnehmen kann.
 }
 
 STRING 5137
@@ -44571,13 +44571,13 @@ Magtheridon's Defeat
 STRING 10289
 // Items: I17R (Empty Vial), Ubertip (Tooltip - Extended)
 {
-A special vial adept at containing magical healing waters. It must be brought to Dalaran to fill it.
+Eine besondere Phiole, die das magische Heilwasser aufnehmen kann. It must be brought to Dalaran to fill it.
 }
 
 STRING 10290
 // Items: I17R (Empty Vial), Description (Description)
 {
-A special vial adept at containing magical healing waters.
+Eine besondere Phiole, die das magische Heilwasser aufnehmen kann.
 }
 
 STRING 10291
@@ -44593,7 +44593,7 @@ X
 
 STRING 10293
 {
-Get your reward from Gerard.
+Holt eure Belohnung von Gerard.
 }
 
 STRING 10294
@@ -44605,13 +44605,13 @@ King of the Vrykul
 STRING 10295
 // Items: I17S (Full Vial), Ubertip (Tooltip - Extended)
 {
-A special vial adept at containing the magical healing waters from Dalaran to end the Plague in the village.
+Eine besondere Phiole, die das magische Heilwasser aus Dalaran aufnehmen kann, um die Seuche im Dorf zu beenden.
 }
 
 STRING 10296
 // Items: I17S (Full Vial), Description (Description)
 {
-A special vial adept at containing magical healing waters.
+Eine besondere Phiole, die das magische Heilwasser aufnehmen kann.
 }
 
 STRING 10297
@@ -57018,70 +57018,10 @@ STRING 16488
 Zepter der Stacheleber
 }
 
-STRING 16489
-{
-Reset
-}
-
-STRING 16490
-{
-Found a key to a dungeon!
-}
-
-STRING 16491
-{
-Search for keys in Ashenvale and Felwood to get the correct combination! Use "-pingkeys" to ping all visible keys on the minimap!
-}
-
-STRING 16492
-{
-Wrong combination! Wait 30 seconds to try it again if you are still alive.
-}
-
-STRING 16493
-{
-Correct combination, opening the gate!
-}
-
-STRING 16494
-{
-Find the matching keys of this dungeon to get the correct combination!
-}
-
-STRING 16495
-{
-The dungeon is filled with traps. Flying units will be killed here!
-}
-
-STRING 16496
-{
-A force bridge appears!
-}
-
-STRING 16500
-{
-Welcome VIP! Do not drop regular items here!
-}
-
-STRING 16501
-{
-VIPs have been disabled!
-}
-
-STRING 16502
-{
-The VIP room is only revealed when you become a VIP!
-}
-
 STRING 16503
 // Items: I0KE (Scepter of Lordaeron), Ubertip (Tooltip - Extended)
 {
 |cffff8c00Artefakt|r|nRuft <AIsh,DataB1> Arbeiter herbei, die Euren Befehlen gehorchen. Gewährt dem Helden und befreundeten in der Nähe befindlichen Einheiten außerdem eine erhöhte Angriffs- und Bewegungsgeschwindigkeit.|n|cffffcc00Geschichte|r|n|cffffdeadDie Namen von Generationen von Staatsoberhäuptern sind in diesen Stab eingraviert. Der Träger kann sie in Friedenszeiten um Weisheit und Führung bitten.|r
-}
-
-STRING 16504
-{
-You cannot pickup a VIP item if you are not a VIP!
 }
 
 STRING 16509
@@ -57106,11 +57046,6 @@ STRING 16519
 // Units: h09E (Dalaran Housing), Tip (Tooltip - Basic)
 {
 Dalaran-Unterkunft errichten
-}
-
-STRING 16521
-{
-You cannot build around portals.
 }
 
 STRING 16522
