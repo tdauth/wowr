@@ -2710,11 +2710,6 @@ STRING 455
 Night Elf and Undead AI cannot use housings. They need a bonus.
 }
 
-STRING 456
-{
-Website: https://wowreforged.org
-}
-
 STRING 457
 // Upgrades: R019 (Burning Oil), Name (Name)
 {
