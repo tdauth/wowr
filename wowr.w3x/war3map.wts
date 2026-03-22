@@ -1,4 +1,4 @@
-STRING 0
+﻿STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
@@ -539,18 +539,6 @@ STRING 90
 // Abilities: A040 (Build Tiny Tidal Guardian), Name (Name)
 {
 Build Tiny Tidal Guardian
-}
-
-STRING 91
-// Buffs/Effects: B002 (Cover), EditorName (Name (Editor Only))
-{
-Cover
-}
-
-STRING 92
-// Buffs/Effects: B002 (Cover), Bufftip (Tooltip)
-{
-Cover
 }
 
 STRING 93
@@ -2611,6 +2599,11 @@ STRING 436
 (Critter) (Farmer)
 }
 
+STRING 437
+{
+"-savecodeconverter": Allows you converting old savecodes into new ones.
+}
+
 STRING 438
 // Units: nmrk (Marketplace), EditorSuffix (Name - Editor Suffix)
 {
@@ -2677,10 +2670,20 @@ STRING 448
 Trains Priests, and Sorceresses. |nAlso contains spell upgrades for Priests and Sorceresses, and Magic Sentry.
 }
 
+STRING 449
+{
+"-saveautoon/off": Enables/disables auto saving of your hero.
+}
+
 STRING 450
 // Upgrades: R04Y (Animal War Training), Name (Name)
 {
 Bonus Heroes
+}
+
+STRING 451
+{
+"-savegui": Shows the GUI for savecodes.
 }
 
 STRING 452
@@ -3962,6 +3965,11 @@ STRING 665
 Upgrade to Guard Tower
 }
 
+STRING 666
+{
+"-asave": Saves all savecodes in the auto load file.
+}
+
 STRING 667
 // Units: o01F (Oil Platform), Name (Name)
 {
@@ -3972,6 +3980,11 @@ STRING 668
 // Units: o01F (Oil Platform), Tip (Tooltip - Basic)
 {
 Build Oil Platform
+}
+
+STRING 669
+{
+"-aload": Loads all save codes from the auto load file.
 }
 
 STRING 670
@@ -4092,6 +4105,31 @@ STRING 689
 // Abilities: A1BR (Decay), Name (Name)
 {
 Decay
+}
+
+STRING 690
+{
+"-areset": Allows saving and loading automatic save codes.
+}
+
+STRING 691
+{
+"-loadr X": Loads your researches from savecode X.
+}
+
+STRING 692
+{
+"-loadres X": Loads your resources from savecode X.
+}
+
+STRING 693
+{
+"-generated": Lists all generated savecodes from the current game.
+}
+
+STRING 694
+{
+"-cleargenerated": Clears all generated savecodes from the current game.
 }
 
 STRING 696
@@ -19480,12 +19518,6 @@ STRING 3937
 rman
 }
 
-STRING 3938
-// Units: N07B (The Destroyer), EditorSuffix (Name - Editor Suffix)
-{
-(Boss) (Landed)
-}
-
 STRING 3939
 // Units: o03U (Altar of Pain), Tip (Tooltip - Basic)
 {
@@ -21146,12 +21178,6 @@ STRING 4416
 // Units: n02O (Timber Wolf), EditorSuffix (Name - Editor Suffix)
 {
 (Furbolg)
-}
-
-STRING 4417
-// Units: N07B (The Destroyer), Ubertip (Tooltip - Extended)
-{
-Flying boss hero from Outland who can cast Critical Strike, Evasion, Life Steal, Demon Master and Reincarnation.
 }
 
 STRING 4418
@@ -31897,18 +31923,6 @@ STRING 6857
 I
 }
 
-STRING 6858
-// Abilities: A0K6 (Land), Researchubertip (Tooltip - Learn - Extended)
-{
-Transforms Deathwing into a landed Deathwing, removing the ability to fly but allowing to use abilities like Cleaving Attack. |n|n|cffffcc00Increases the stats with every level.|r
-}
-
-STRING 6859
-// Abilities: A0K6 (Land), Researchtip (Tooltip - Learn)
-{
-Learn Land - [|cffffcc00Level %d|r]
-}
-
 STRING 6860
 // Abilities: A0DZ (Land), Tip (Tooltip - Normal)
 {
@@ -31997,30 +32011,6 @@ STRING 6874
 // Units: o04K (Banner Gilneas), Name (Name)
 {
 Banner Gilneas
-}
-
-STRING 6875
-// Abilities: A0K6 (Land), Tip (Tooltip - Normal)
-{
-Land
-}
-
-STRING 6876
-// Abilities: A0K6 (Land), EditorSuffix (Editor Suffix)
-{
-(Deathwing)
-}
-
-STRING 6877
-// Abilities: A0K6 (Land), Ubertip (Tooltip - Normal - Extended)
-{
-Transforms Deathwing into a landed version, removing from him the ability to fly.
-}
-
-STRING 6878
-// Abilities: A0K6 (Land), Unubertip (Tooltip - Turn Off - Extended)
-{
-Transforms Deathwing into a flying version, giving him the ability to fly.
 }
 
 STRING 6879
@@ -39680,7 +39670,7 @@ N
 }
 
 STRING 8634
-// Abilities: A0K6 (Land), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40100,7 +40090,7 @@ Reward Freelancer
 }
 
 STRING 8728
-// Abilities: A0KA (Summon Mercenary Camp), Hotkey (Hotkey - Normal)
+// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40394,7 +40384,7 @@ Guardian of Tirisfal
 }
 
 STRING 8951
-// Abilities: A0OR (Rain of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40412,7 +40402,7 @@ Q
 }
 
 STRING 8954
-// Abilities: A0QS (Mass Polymorph), Hotkey (Hotkey - Normal)
+// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40445,18 +40435,6 @@ STRING 9011
 // Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 9016
-// Units: N07B (The Destroyer), Name (Name)
-{
-The Destroyer
-}
-
-STRING 9017
-// Units: N07B (The Destroyer), Propernames (Proper Names)
-{
-Deathwing
 }
 
 STRING 9022
@@ -40754,7 +40732,7 @@ Q
 }
 
 STRING 9335
-// Abilities: A0SZ (Open Portals), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40784,7 +40762,7 @@ Skill
 }
 
 STRING 9364
-// Abilities: A0T7 (Revive), Hotkey (Hotkey - Normal)
+// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40802,7 +40780,7 @@ Q
 }
 
 STRING 9387
-// Abilities: A033 (Clone), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40886,7 +40864,7 @@ Upgrade to Advanced Strength of the Silvermoon
 }
 
 STRING 9472
-// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -40922,25 +40900,25 @@ STRING 9553
 }
 
 STRING 9591
-// Abilities: A135 (Mass Cripple), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 9592
 // Abilities: A13V (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 9593
+STRING 9592
 // Abilities: A14C (Mass Doom), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 9594
+STRING 9593
 // Abilities: A14I (Mass Sleep), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 9594
+// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41156,13 +41134,13 @@ W
 }
 
 STRING 9750
-// Abilities: A14L (Mass Hex), Hotkey (Hotkey - Normal)
+// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9751
-// Abilities: A14P (Mass Charm), Hotkey (Hotkey - Normal)
+// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45440,7 +45418,7 @@ ratc
 }
 
 STRING 11030
-// Abilities: A176 (Mass Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45458,7 +45436,7 @@ E
 }
 
 STRING 11033
-// Abilities: A184 (Multiply), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45692,7 +45670,7 @@ Allows building male citizens a Fountain of Blood to train and convert Fel Orcs.
 }
 
 STRING 11123
-// Abilities: A1EK (Resurrection), Hotkey (Hotkey - Normal)
+// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47921,7 +47899,7 @@ Repair
 }
 
 STRING 11944
-// Abilities: A1H1 (Spider Form), Hotkey (Hotkey - Normal)
+// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -47957,7 +47935,7 @@ Jadefire Glen
 }
 
 STRING 11974
-// Abilities: A1IF (Mass Transmute), Hotkey (Hotkey - Normal)
+// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48413,7 +48391,7 @@ O
 }
 
 STRING 12157
-// Abilities: A1LC (Reset Attributes), Hotkey (Hotkey - Normal)
+// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48425,7 +48403,7 @@ STRING 12158
 }
 
 STRING 12160
-// Abilities: A1OF (Mark 3), Hotkey (Hotkey - Normal)
+// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49973,7 +49951,7 @@ Heavy Axe made of very rare minerals. Causes terrible pain among its victims. Gr
 }
 
 STRING 13847
-// Abilities: A1Q9 (Magical Seed), Hotkey (Hotkey - Normal)
+// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50843,7 +50821,7 @@ Orb of Orbs
 }
 
 STRING 14257
-// Abilities: A1QB (Magical Cutter), Hotkey (Hotkey - Normal)
+// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51419,13 +51397,13 @@ E
 }
 
 STRING 14575
-// Abilities: A1QR (Sleep to Midnight), Hotkey (Hotkey - Normal)
+// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14578
-// Abilities: A1W4 (Mass Ensnare), Hotkey (Hotkey - Normal)
+// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51682,12 +51660,6 @@ STRING 14706
 Revive Keeper of Ashbringer
 }
 
-STRING 14721
-// Abilities: A0K6 (Land), Name (Name)
-{
-Land
-}
-
 STRING 14726
 // Abilities: A0MV (Stasis Trap), EditorSuffix (Editor Suffix)
 {
@@ -51797,37 +51769,37 @@ W
 }
 
 STRING 14878
-// Abilities: A22T (Mind Control), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 14879
 // Abilities: A0XW (Rotate), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14880
+STRING 14879
 // Abilities: A0WG (Slot 4), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14881
+STRING 14880
 // Abilities: A06Y (Robo-Goblin), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 14882
+STRING 14881
 // Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
 
-STRING 14884
+STRING 14882
 // Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 14884
+// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -51839,7 +51811,7 @@ W
 }
 
 STRING 14886
-// Upgrades: R0EH (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -51887,7 +51859,7 @@ W
 }
 
 STRING 14896
-// Upgrades: R0EL (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
 {
 R
 }
@@ -51923,7 +51895,7 @@ R
 }
 
 STRING 14906
-// Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Hotkey (Hotkey)
+// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
 {
 R
 }
@@ -51959,7 +51931,7 @@ STRING 14931
 }
 
 STRING 14935
-// Upgrades: R0I5 (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -51977,7 +51949,7 @@ E
 }
 
 STRING 14942
-// Upgrades: R07F (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
 {
 R
 }
@@ -52679,7 +52651,7 @@ Creates a Safe.
 }
 
 STRING 15806
-// Upgrades: R07J (Magic Sentry), Hotkey (Hotkey)
+// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -52715,7 +52687,7 @@ E
 }
 
 STRING 15827
-// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -52814,12 +52786,6 @@ STRING 15883
 // Abilities: A0N1 (Summon Troll Workers), EditorSuffix (Editor Suffix)
 {
 (Item)
-}
-
-STRING 15909
-// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
-{
-R
 }
 
 STRING 15912
@@ -53414,36 +53380,6 @@ STRING 16474
 // Upgrades: R0EE (Ensnare), Ubertip (Tooltip - Extended)
 {
 Enables Ogre Fire Breathers to use the Firebolt ability
-}
-
-STRING 16481
-// Doodads: D004 (1), Name (Name)
-{
-1
-}
-
-STRING 16482
-// Doodads: D005 (2), Name (Name)
-{
-2
-}
-
-STRING 16483
-// Doodads: D007 (3), Name (Name)
-{
-3
-}
-
-STRING 16484
-// Doodads: D008 (4), Name (Name)
-{
-4
-}
-
-STRING 16485
-// Doodads: D006 (5), Name (Name)
-{
-5
 }
 
 STRING 16486
@@ -54449,7 +54385,7 @@ Summon Ranger
 }
 
 STRING 17328
-// Units: H03Y (Ranger), Ubertip (Tooltip - Extended)
+// Units: Hvwd (Ranger), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -55703,7 +55639,7 @@ Connect with Destination
 }
 
 STRING 17815
-// Units: N07B (The Destroyer), Tip (Tooltip - Basic)
+// Items: I08V (Summon Deathwing), Name (Name)
 {
 Summon Deathwing
 }
@@ -57476,7 +57412,7 @@ Item Core Hound Summon
 }
 
 STRING 19473
-// Items: I08V (Summon Deathwing), Name (Name)
+// Items: I08V (Summon Deathwing), Tip (Tooltip - Basic)
 {
 Summon Deathwing
 }
@@ -65014,7 +64950,7 @@ Record Player
 }
 
 STRING 25956
-// Units: Hvwd (Ranger), Ubertip (Tooltip - Extended)
+// Units: H03Y (Ranger), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r High Elf|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -70222,7 +70158,7 @@ STRING 31096
 }
 
 STRING 31128
-// Abilities: A1E1 (Drunken Aura), EditorSuffix (Editor Suffix)
+// Abilities: A1E1 (), EditorSuffix (Editor Suffix)
 {
 (Buff)
 }
@@ -85186,7 +85122,7 @@ U
 }
 
 STRING 37926
-// Abilities: A0K6 (Land), Hotkey (Hotkey - Normal)
+// Abilities: A1BI (Convert Item), Hotkey (Hotkey - Normal)
 {
 I
 }
@@ -85330,7 +85266,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades.
 }
 
 STRING 38000
-// Abilities: A0K6 (Land), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1TW (Enable/Disable Gold Exchange), Hotkey (Hotkey - Normal)
 {
 I
 }
@@ -89236,7 +89172,7 @@ STRING 40127
 }
 
 STRING 40144
-// Abilities: A1BI (Convert Item), Hotkey (Hotkey - Normal)
+// Abilities: A11A (Mass Inner Fire), Hotkey (Hotkey - Normal)
 {
 I
 }
@@ -96321,24 +96257,6 @@ STRING 42875
 HAHAHAHAHAHAHAHAHAHAHA!
 }
 
-STRING 42880
-// Units: N07B (The Destroyer), Awakentip (Tooltip - Awaken)
-{
-Revive Deathwing
-}
-
-STRING 42881
-// Units: N07B (The Destroyer), Revivetip (Tooltip - Revive)
-{
-Revive Deathwing
-}
-
-STRING 42888
-// Items: I08V (Summon Deathwing), Tip (Tooltip - Basic)
-{
-Summon Deathwing
-}
-
 STRING 42889
 // Abilities: A08Y (Random Class), Hotkey (Hotkey - Normal)
 {
@@ -100588,7 +100506,7 @@ STRING 45980
 }
 
 STRING 45981
-// Abilities: A0K6 (Land), Untip (Tooltip - Turn Off)
+// Abilities: A1OV (Fly), Tip (Tooltip - Normal)
 {
 Fly
 }
@@ -100600,7 +100518,7 @@ Walk
 }
 
 STRING 45983
-// Abilities: A1OV (Fly), Tip (Tooltip - Normal)
+// Abilities: A1OV (Fly), Name (Name)
 {
 Fly
 }
@@ -105718,7 +105636,7 @@ D
 }
 
 STRING 49819
-// Abilities: A1TW (Enable/Disable Gold Exchange), Hotkey (Hotkey - Normal)
+// Abilities: A1YU (Examine Item), Hotkey (Hotkey - Normal)
 {
 I
 }
@@ -107185,7 +107103,7 @@ Casting unit with Floating Eye, Anti-magic Shell and Soul Theft. |n|n|cffffcc00A
 }
 
 STRING 50363
-// Abilities: A11A (Mass Inner Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Illusion), Hotkey (Hotkey - Normal)
 {
 I
 }
@@ -107461,7 +107379,7 @@ STRING 50416
 }
 
 STRING 50417
-// Abilities: A1YU (Examine Item), Hotkey (Hotkey - Normal)
+// Upgrades: R0G6 (Flak Cannons), Hotkey (Hotkey)
 {
 I
 }
@@ -109510,12 +109428,6 @@ STRING 50971
 // Units: o092 (Whispering Chambers), Ubertip (Tooltip - Extended)
 {
 Upgrade to Whispering Chambers to enable the production of additional types of structures and units.
-}
-
-STRING 50973
-// Abilities: A0KY (Illusion), Hotkey (Hotkey - Normal)
-{
-I
 }
 
 STRING 50974
@@ -112110,12 +112022,6 @@ STRING 51803
 Train Infernal
 }
 
-STRING 51807
-// Upgrades: R0G6 (Flak Cannons), Hotkey (Hotkey)
-{
-I
-}
-
 STRING 51808
 // Upgrades: R0HC (Burning Oil), EditorSuffix (Editor Suffix)
 {
@@ -113100,12 +113006,6 @@ STRING 53430
 // Abilities: A14U (Randomize Spells), Tip (Tooltip - Normal)
 {
 Randomize Spells
-}
-
-STRING 53462
-// Abilities: A1OV (Fly), Name (Name)
-{
-Fly
 }
 
 STRING 53618

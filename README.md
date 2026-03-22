@@ -286,7 +286,6 @@ Debugging the map with it would help to find issues which are really hard to fin
 * Makuza: [GoblinFireworkerbackup](https://www.hiveworkshop.com/threads/goblinfireworkerbackup.47788/)
 * Geries, MiniMage: [GoblinAirDrone](https://www.hiveworkshop.com/threads/goblinairdrone.237875/)
 * The_Silent: [Drop Crate (Airdrop)](https://www.hiveworkshop.com/threads/drop-crate-airdrop.324103/)
-* Fingolfin: [Parachute](https://www.hiveworkshop.com/threads/parachute.260435/)
 * Sellenisko: [GoblinHutNewOneV](https://www.hiveworkshop.com/threads/goblinhutnewonev.163316/)
 * Freddyk: [Goblin Bookworm](https://www.hiveworkshop.com/threads/goblin-bookworm.292743/)
 * Kuhneghetz: [Female Goblin](https://www.hiveworkshop.com/threads/female-goblin.178045/)
