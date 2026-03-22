@@ -2,7 +2,7 @@
 DIR=$(pwd)
 INI_FILE="$DIR/warsmash.ini"
 #MAP_DIR=../wowr.w3x
-MAP_DIR="../releases/wowr4.6.w3x"
+MAP_DIR="$DIR/../releases/wowr4.6.w3x"
 WARSMASH_DIR="$HOME/Dokumente/Projekte/WarsmashModEngine"
 cd "$WARSMASH_DIR"
 git pull
