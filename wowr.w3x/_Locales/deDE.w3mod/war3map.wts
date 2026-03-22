@@ -11620,7 +11620,7 @@ Verteidigen
 STRING 1983
 // Upgrades: R00N (Exhume Corpses), Tip (Tooltip)
 {
-Research Verteidigen
+Verteidigen erforschen
 }
 
 STRING 1984
@@ -14523,7 +14523,7 @@ Vergiftete Waffen
 STRING 2585
 // Upgrades: R05G (Defend), Tip (Tooltip)
 {
-Research Vergiftete Waffen
+Vergiftete Waffen erforschen
 }
 
 STRING 2586
@@ -24258,7 +24258,7 @@ Feenfeuer
 STRING 4858
 // Upgrades: R01N (Ensnare), Tip (Tooltip)
 {
-Research Feenfeuer
+Feenfeuer erforschen
 }
 
 STRING 4859
@@ -24444,7 +24444,7 @@ B
 STRING 4892
 // Upgrades: R01R (Cannibalize), Tip (Tooltip)
 {
-Research Verderbnis
+Verderbnis erforschen
 }
 
 STRING 4893
@@ -29545,7 +29545,7 @@ S
 STRING 5912
 // Upgrades: R080 (Magic Sentry), Name (Name)
 {
-Spell Damage Reduction
+Zauberschaden-Reduzierung
 }
 
 STRING 5913
@@ -29557,7 +29557,7 @@ STRING 5913
 STRING 5914
 // Upgrades: R080 (Magic Sentry), Tip (Tooltip)
 {
-Research Spell Damage Reduction
+Zauberschaden-Reduzierung erforschen
 }
 
 STRING 5915
@@ -41146,7 +41146,7 @@ V
 STRING 8631
 // Upgrades: R00L (Web), Tip (Tooltip)
 {
-Research Schmetter-Angriff
+Schmetter-Angriff erforschen
 }
 
 STRING 8632
@@ -54670,37 +54670,37 @@ Ingenieurschiff Place Goblin Water Mine
 STRING 14489
 // Abilities: A0AI (Engineer Ship Place Goblin Water Mine), Tip (Tooltip - Normal)
 {
-Place Goblin Water Mine
+Goblin-Wassermine platzieren
 }
 
 STRING 14490
 // Abilities: A0AI (Engineer Ship Place Goblin Water Mine), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Goblin Water Mine.
+Platziert eine Goblin-Wassermine.
 }
 
 STRING 14491
 // Units: n03Q (Goblin Water Mine), Name (Name)
 {
-Goblin Water Mine
+Goblin-Wassermine
 }
 
 STRING 14493
 // Upgrades: R02F (Flying Machine Bombs), Name (Name)
 {
-Improved Air Transport
+Verbesserter Lufttransport
 }
 
 STRING 14494
 // Upgrades: R02F (Flying Machine Bombs), Tip (Tooltip)
 {
-Research Improved Air Transport
+Verbesserten Lufttransport erforschen
 }
 
 STRING 14495
 // Upgrades: R02F (Flying Machine Bombs), Ubertip (Tooltip - Extended)
 {
-Increases the cargo slots and armor by 2.
+Erhöht die Transportplätze und Rüstung auf 2.
 }
 
 STRING 14496
@@ -54814,7 +54814,7 @@ STRING 14605
 STRING 14608
 // Upgrades: R05H (Ensnare), Tip (Tooltip)
 {
-Research Reistant Skin
+Festhaut erforschen
 }
 
 STRING 14612
@@ -61804,13 +61804,13 @@ STRING 19840
 STRING 19842
 // Upgrades: R026 (Animal War Training), Name (Name)
 {
-Arcane Portale
+Arkane Portale
 }
 
 STRING 19843
 // Upgrades: R026 (Animal War Training), Tip (Tooltip)
 {
-Research Arcane Portale
+Arkane Portale erforschen
 }
 
 STRING 19844
@@ -63468,7 +63468,7 @@ STRING 20482
 STRING 20483
 // Upgrades: R05R (Cloud), Tip (Tooltip)
 {
-Research Dalaran-Schild
+Dalaran-Schild erforschen
 }
 
 STRING 20484
@@ -64128,13 +64128,13 @@ Manaregeneration
 STRING 20622
 // Upgrades: R05R (Cloud), Tip (Tooltip)
 {
-Research Improved Dalaran-Schild
+Verbesserten Dalaran-Schild erforschen
 }
 
 STRING 20623
 // Upgrades: R05R (Cloud), Tip (Tooltip)
 {
-Research Meisterful Dalaran-Schild
+Meisterhaften Dalaran-Schild erforschen
 }
 
 STRING 20624
@@ -66009,7 +66009,7 @@ Grommash Hellscream beschwören
 STRING 22530
 // Units: O02U (Blademaster), EditorSuffix (Name - Editor Suffix)
 {
-(Bonus-Held) (Possessed)
+(Bonus-Held) (Besessen)
 }
 
 STRING 22533
@@ -66488,13 +66488,13 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 STRING 22782
 // Units: h0KH (Gnome Turret), Ubertip (Tooltip - Extended)
 {
-Simple defense tower.
+Einfacher Turm zur Verteidigung.
 }
 
 STRING 22785
 // Upgrades: R0EO (Ensnare), Tip (Tooltip)
 {
-Research Kriegsdonner
+Kriegsdonner erforschen
 }
 
 STRING 22792
@@ -67594,7 +67594,7 @@ Verteidigen
 STRING 24415
 // Upgrades: R01T (Exhume Corpses), Tip (Tooltip)
 {
-Research Verteidigen
+Verteidigen erforschen
 }
 
 STRING 24416
@@ -67714,7 +67714,7 @@ Enables Guardsmen to use the Einschnüren ability. Einschnüren causes a target 
 STRING 24446
 // Upgrades: R06R (Ensnare), Tip (Tooltip)
 {
-Research Schmetter-Angriff
+Schmetter-Angriff erforschen
 }
 
 STRING 24447
@@ -67792,7 +67792,7 @@ F
 STRING 24471
 // Upgrades: R06X (Stone Form), Tip (Tooltip)
 {
-Research Verschlingen
+Verschlingen erforschen
 }
 
 STRING 24472
@@ -67870,7 +67870,7 @@ STRING 24483
 STRING 24485
 // Upgrades: R0IG (Envenomed Spears), Tip (Tooltip)
 {
-Research Durchblick
+Durchblick erforschen
 }
 
 STRING 24486
@@ -76263,13 +76263,13 @@ Ein Schwein, das bestraft werden will.
 STRING 32621
 // Upgrades: R091 (Sundering Blades), Name (Name)
 {
-Drunk Panda
+Betrunkener Panda
 }
 
 STRING 32622
 // Upgrades: R091 (Sundering Blades), Tip (Tooltip)
 {
-Research Drunk Panda
+Betrunkener Panda erforschen
 }
 
 STRING 32623
@@ -86613,7 +86613,7 @@ Spinnenei
 STRING 37184
 // Upgrades: R0B4 (Stone Form), Tip (Tooltip)
 {
-Research Spinnenei
+Spinnenei erforschen
 }
 
 STRING 37185
@@ -90919,7 +90919,7 @@ Allows Speerträgers to use the Stachelpanzerschale ability, which increases dam
 STRING 38749
 // Upgrades: R0DW (Hardened Skin), Tip (Tooltip)
 {
-Research Stachelpanzerschale
+Stachelpanzerschale erforschen
 }
 
 STRING 38750
@@ -90937,7 +90937,7 @@ Hallen der Tapferkeit
 STRING 38752
 // Upgrades: R0BH (Burning Oil), Tip (Tooltip)
 {
-Research Hallen der Tapferkeit
+Hallen der Tapferkeit erforschen
 }
 
 STRING 38753
@@ -91699,7 +91699,7 @@ Dieb
 STRING 38919
 // Upgrades: R02Q (Liquid Fire), Tip (Tooltip)
 {
-Research Treibstoff
+Treibstoff erforschen
 }
 
 STRING 38921
@@ -95827,7 +95827,7 @@ F
 STRING 41078
 // Upgrades: R0CM (Stone Form), Tip (Tooltip)
 {
-Research Verschlingen
+Verschlingen erforschen
 }
 
 STRING 41079
@@ -96007,7 +96007,7 @@ STRING 41130
 STRING 41131
 // Upgrades: R0CQ (Stone Form), Tip (Tooltip)
 {
-Research Schmetter-Angriff
+Schmetter-Angriff erforschen
 }
 
 STRING 41132
@@ -96193,13 +96193,13 @@ STRING 41209
 STRING 41211
 // Upgrades: R07U (Freezing Breath), Tip (Tooltip)
 {
-Research Kriegsdonner
+Kriegsdonner erforschen
 }
 
 STRING 41212
 // Upgrades: R0CT (Stone Form), Name (Name)
 {
-Critikal Strike
+Kritischer Schlag
 }
 
 STRING 41213
@@ -96211,7 +96211,7 @@ Train Murloc Huntsman
 STRING 41214
 // Upgrades: R0CT (Stone Form), Tip (Tooltip)
 {
-Research Critikal Strike
+Kritischen Schlag erforschen
 }
 
 STRING 41215
@@ -99739,7 +99739,7 @@ Entwaffnung
 STRING 42423
 // Upgrades: R03J (Burning Oil), Tip (Tooltip)
 {
-Research Dwarf Lumber Mill
+Zwergen-Sägewerk erforschen
 }
 
 STRING 42424
@@ -104567,7 +104567,7 @@ Luftversorgung
 STRING 45788
 // Upgrades: R02H (Flak Cannons), Tip (Tooltip)
 {
-Research Luftversorgung
+Luftversorgung erforschen
 }
 
 STRING 45792
@@ -114702,13 +114702,13 @@ STRING 51109
 STRING 51110
 // Units: n095 (Hellfire Citadel), Name (Name)
 {
-Hellfire Citadel
+Höllenfeuer-Zitadelle
 }
 
 STRING 51111
 // Upgrades: R0GV (Burning Oil), Tip (Tooltip)
 {
-Research Hellfire Citadel
+Höllenfeuer-Zitadelle erforschen
 }
 
 STRING 51112
@@ -115488,13 +115488,13 @@ STRING 51420
 STRING 51421
 // Upgrades: R0H4 (Chaos), Tip (Tooltip)
 {
-Research Improved Dämonen-Macht
+Verbesserte Dämonen-Macht erforschen
 }
 
 STRING 51422
 // Upgrades: R0H4 (Chaos), Tip (Tooltip)
 {
-Research Advanced Dämonen-Macht
+Hoch entwickelte Dämonen-Macht erforschen
 }
 
 STRING 51423
@@ -115512,13 +115512,13 @@ Further increases the number of available Demon units for kills.
 STRING 51425
 // Upgrades: R0H4 (Chaos), Name (Name)
 {
-Improved Dämonen-Macht
+Verbesserte Dämonen-Macht
 }
 
 STRING 51426
 // Upgrades: R0H4 (Chaos), Name (Name)
 {
-Advanced Dämonen-Macht
+Hoch entwickelte Dämonen-Macht
 }
 
 STRING 51428
@@ -116706,7 +116706,7 @@ STRING 51787
 STRING 51788
 // Upgrades: R0H9 (Well Spring), Tip (Tooltip)
 {
-Research Manabrand
+Manabrand erforschen
 }
 
 STRING 51793
@@ -116724,13 +116724,13 @@ Hoch entwickelter Manabrand
 STRING 51795
 // Upgrades: R0H9 (Well Spring), Tip (Tooltip)
 {
-Research Verbesserter Manabrand
+Verbesserten Manabrand erforschen
 }
 
 STRING 51796
 // Upgrades: R0H9 (Well Spring), Tip (Tooltip)
 {
-Research Hoch entwickelter Manabrand
+Hoch entwickelten Manabrand erforschen
 }
 
 STRING 51797
