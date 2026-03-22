@@ -4740,7 +4740,7 @@ Speicher-Codes
 
 STRING 796
 {
-You can save/load your hero settings and XP. However, it is restricted to the corresponding game type since the game type influences how fast you gain XP etc. Just make a screenshot of the savecode to store it on your disk.
+You can save your current game progress and load it in any other later game. However, it is restricted to your current game mode since the game mode determines how fast your heroes gain experience. Check out the folder "%userprofile%\Documents\Warcraft III\CustomMapData\wowr" and sort the text files in there by modification time. Look for the text files with your Battle.net account name. They contain your save codes. You can copy and paste the -load chat commands into the Warcraft chat and load them in any other game. You cannot load save codes from your current game in the same game.
 }
 
 STRING 797

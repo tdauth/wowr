@@ -4561,6 +4561,96 @@ STRING 794
 Craft explosives to demolish enemy units and structures:|n- Goblin Land Mines|n- Explosive Barrels, Goblin Dynamite and Goblin Burning Grenades|n- Sapper|n- Sledge Hammer|n- TNT Catapult|n- Tiny Nuclear Silo
 }
 
+STRING 795
+{
+Save Codes
+}
+
+STRING 796
+{
+You can save your current game progress and load it in any other later game. However, it is restricted to your current game mode since the game mode determines how fast your heroes gain experience. Check out the folder "%userprofile%\Documents\Warcraft III\CustomMapData\wowr" and sort the text files in there by modification time. Look for the text files with your Battle.net account name. They contain your save codes. You can copy and paste the -load chat commands into the Warcraft chat and load them in any other game. You cannot load save codes from your current game in the same game.
+}
+
+STRING 797
+{
+"-presave": Lists the prestored savecodes.
+}
+
+STRING 798
+{
+"-clanspresave": Lists the prestored clan savecodes.
+}
+
+STRING 799
+{
+"-loadp X": Loads the prestored savecode X.
+}
+
+STRING 800
+{
+"-loadclanp X": Loads the prestored clan savecode X.
+}
+
+STRING 801
+{
+"-save": Saves your hero and prints the savecode.
+}
+
+STRING 802
+{
+"-savec": Saves your hero without info.
+}
+
+STRING 803
+{
+"-saveautoon": Enables auto saving of your hero.
+}
+
+STRING 804
+{
+"-saveautooff": Disables auto saving of your hero.
+}
+
+STRING 805
+{
+"-load XXX": Loads your hero from savecode XXX.
+}
+
+STRING 806
+{
+Requires matching player name and game mode etc.
+}
+
+STRING 807
+{
+Savecodes are stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
+}
+
+STRING 808
+{
+Press the Print key to store a screenshot.
+}
+
+STRING 809
+{
+Screenshots stored in "%userprofile%\Documents\Warcraft III\ScreenShots".
+}
+
+STRING 810
+{
+"-loadi XXX": Loads items from savecode XXX.
+}
+
+STRING 811
+{
+"-loadu XXX": Loads units from savecode.
+}
+
+STRING 812
+{
+"-loadb XXX": Loads buildings from savecode.
+}
+
 STRING 813
 // Abilities: A01M (Alchemy - Advanced), Name (Name)
 {
