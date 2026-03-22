@@ -227,6 +227,9 @@ Here is a list of some modified versions online:
 [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) is a Warcraft III Open Source emulator.
 To run this map with WarsmashModEngine use [warsmash.sh](./scripts/warsmash.sh) on Linux systems.
 However, make sure that [warsmash.ini](./scripts/warsmash.ini) and the paths in warsmash.sh are set up correctly for your Warcraft III installation and map.
+Log files are created in `WarsmashModEngine/core/assets/Logs/`.
+
+
 WarsmashModEngine is currently not fully supporting Reforged and hence does not fully support this map but might support it in the future.
 Debugging the map with it would help to find issues which are really hard to find with the official Warcraft III game which is closed source and does not allow to set any break points and inspect stack traces.
 
