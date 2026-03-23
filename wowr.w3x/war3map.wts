@@ -18208,7 +18208,7 @@ Revive Engineer
 STRING 3653
 // Units: H0AK (Mountain King), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, adept at offensive combat and disrupting enemy troops. Can learn Storm Bolt, Thunder Clap, Bash and Avatar. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/1.5|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 3654

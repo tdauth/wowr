@@ -18208,7 +18208,7 @@ Revive Ingenieur
 STRING 3653
 // Units: H0AK (Mountain King), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, adept at offensive combat and disrupting enemy troops. Can learn Storm Bolt, Donnerschlag, Hieb and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Zwerge|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 24/3|n|cffffcc00Beweglichkeit:|r 11/1.5|n|cffffcc00Intelligenz:|r 15/1.5|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 3654
@@ -54407,7 +54407,7 @@ Waldläufer beschwören
 STRING 17328
 // Units: Hvwd (Ranger), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1.9|n|cffffcc00Beweglichkeit:|r 19/1.5|n|cffffcc00Intelligenz:|r 15/2.6|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1,9|n|cffffcc00Beweglichkeit:|r 19/1,5|n|cffffcc00Intelligenz:|r 15/2,6|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 17329
@@ -64972,7 +64972,7 @@ Plattenspieler
 STRING 25956
 // Units: H03Y (Ranger), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1.9|n|cffffcc00Beweglichkeit:|r 19/1.5|n|cffffcc00Intelligenz:|r 15/2.6|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1,9|n|cffffcc00Beweglichkeit:|r 19/1,5|n|cffffcc00Intelligenz:|r 15/2,6|n|n|cffffcc00Greift Land- und Lufteinheiten an.|r
 }
 
 STRING 25957
