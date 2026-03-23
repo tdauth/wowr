@@ -1,4 +1,4 @@
-﻿STRING 0
+STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
@@ -4159,7 +4159,7 @@ STRING 694
 STRING 695
 // Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Roguer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 696
@@ -8857,7 +8857,7 @@ Research Cheap Evolution - [|cffffcc00Level 29|r]
 STRING 1543
 // Units: O08G (Kodo Beast), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at healing magics and voodoo curses. Can learn Shockwave, War Stomp, Command Aura and Mass Devour. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Wyvern.|r|n|cffffcc00Standard Ability: Berserk.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 20/1.5|n|cffffcc00Intelligence:|r 17/2.5|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1544
@@ -9907,7 +9907,7 @@ Warrior Hero, adept at summoning beasts into battle. Can learn Storm Bolt, War S
 STRING 1720
 // Units: O09O (Raider), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Storm Bolt, Demolish, Pillage Aura and Mass Ensnare. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 1721
@@ -13510,7 +13510,7 @@ Revive Bandit Lord
 STRING 2530
 // Units: O0AK (Shaman), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at healing magics and voodoo curses. Can learn Silence, Mass Bloodlust, Brilliance Aura and Monsoon. |n|n|cffffcc00Attacks land and air units.|r|n|cffffcc00Mount: Wyvern.|r|n|cffffcc00Standard Ability: Invisibility.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 17/1.5|n|cffffcc00Intelligence:|r 20/2.5|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 2531
@@ -45241,7 +45241,7 @@ Summon Akama
 STRING 10980
 // Units: O02T (Blademaster), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Mirror Image, Wind Walk, Critical Strike and Bladestorm. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 19/2|n|cffffcc00Agility:|r 23/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 10981
@@ -45367,7 +45367,7 @@ Build Tiny Nuclear Silo
 STRING 11010
 // Units: O004 (Stormreaver Warlock), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, effective at ranged attacks and scouting. Can learn Chain Lightning, Mass Bloodlust, Drain and Animate Dead. |n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warlock|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 11011
@@ -45397,7 +45397,7 @@ Summon Skeletal Orc Champion
 STRING 11015
 // Units: O005 (Skeletal Orc Champion), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Death Coil, War Stomp, Cripple and Inferno. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 11019
@@ -50944,7 +50944,7 @@ Sonar
 STRING 14274
 // Units: H0OG (Peon), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Finish Construction, Repair Aura and Mechanical Repair. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Wyvern.|r|n|cffffcc00Standard Ability: Repair.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Tinker|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 14301
@@ -66291,7 +66291,7 @@ STRING 27184
 STRING 27185
 // Units: O02U (Blademaster), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at quickly killing individual units and creating confusion among enemies. Can learn Mirror Image, Wind Walk, Critical Strike and Bladestorm. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 19/2|n|cffffcc00Agility:|r 23/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 27186
@@ -73863,7 +73863,7 @@ STRING 33796
 STRING 33797
 // Units: O02O (Warlock), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at damaging and supporting magics. Can learn Firebolt, Summon Doom Guard, Cripple and Animate Dead. |n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warlock|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 20/1.5|n|cffffcc00Intelligence:|r 17/2.5|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 33798
