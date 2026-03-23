@@ -1,4 +1,4 @@
-STRING 0
+﻿STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
@@ -4156,6 +4156,12 @@ STRING 694
 "-cleargenerated": Clears all generated savecodes from the current game.
 }
 
+STRING 695
+// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Roguer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
 STRING 696
 // Abilities: A0AZ (Convert Into Demon), Name (Name)
 {
@@ -4208,6 +4214,12 @@ STRING 704
 // Abilities: A0B1 (Convert Into Furbolg), Name (Name)
 {
 Convert Into Furbolg
+}
+
+STRING 705
+// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 707
