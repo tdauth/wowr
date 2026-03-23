@@ -1,4 +1,4 @@
-STRING 0
+﻿STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
@@ -4812,7 +4812,7 @@ Changes the class to Warlock:|n- Cripple|n- Mana Burn|n- Devour Magic|n- Fel|n- 
 }
 
 STRING 838
-// Abilities: A1E1 (Drunken Aura), Name (Name)
+// Abilities: A088 (Drunken Aura), Name (Name)
 {
 Drunken Aura
 }
@@ -4824,7 +4824,7 @@ W
 }
 
 STRING 840
-// Abilities: A088 (Drunken Aura), Name (Name)
+// Buffs/Effects: B02K (Drunken Aura), EditorName (Name (Editor Only))
 {
 Drunken Aura
 }
@@ -4851,12 +4851,6 @@ STRING 844
 // Buffs/Effects: B02K (Drunken Aura), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Drunken Aura. It has the chance to evade hits and do critical damage.
-}
-
-STRING 845
-// Buffs/Effects: B02K (Drunken Aura), EditorName (Name (Editor Only))
-{
-Drunken Aura
 }
 
 STRING 846

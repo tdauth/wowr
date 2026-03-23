@@ -2,10 +2,3 @@
 InfoPanelIconArmorDivine=ReplaceableTextures\CommandButtons\ATTDivineArmorNew.blp
 InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmorNew.blp
 
-[FrameDef]
-ITEM_PAWN_TOOLTIP=
-KEY_QUESTS=
-QUESTS=
-QUESTSMAIN=
-QUESTSOPTIONAL=
-
