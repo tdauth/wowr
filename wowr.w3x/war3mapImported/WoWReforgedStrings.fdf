@@ -1881,6 +1881,7 @@ StringList {
     IQ_PLAYERS_BOSSES                  "Player Bosses owns all bosses and is allied with all creeps.",
     IQ_PLAYERS_NEUTRAL_HOSTILE         "Player Neutral Hostile owns all creeps and is allied with all bosses.",
     IQ_PLAYERS_NEUTRAL_PASSIVE         "Player Neutral Passive owns all NPCs and neutral buildings.",
+    IQ_CLASSES_DESCRIPTION             "Hero classes determine which spells can be learned by a hero. They give the hero certain traits which are useful when combined with other hero classes.",
     IQ_CREDITS_TITLE                   "Credits",
     IQ_CREDITS_DESCRIPTION             "All the people who contributed to this map.",
 }
