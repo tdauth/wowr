@@ -1315,9 +1315,6 @@ StringList {
     FOREST_TROLLS                      "Forest Trolls",
     DARK_TROLLS                        "Dark Trolls",
     ICE_TROLLS                         "Ice Trolls",
-    // Railway
-    TRAIN_HAS_TO_BE_STOPPED            "The train has to be stopped.",
-    TRAIN_MUST_BE_IN_STATION           "The train must be in a station.",
     // Demon Quest 2
     TARGET_MUST_BE_CREEP_DRAENEI       "Target must be a creep Draenei unit.",
     // Abilities
@@ -1882,6 +1879,14 @@ StringList {
     IQ_PLAYERS_NEUTRAL_HOSTILE         "Player Neutral Hostile owns all creeps and is allied with all bosses.",
     IQ_PLAYERS_NEUTRAL_PASSIVE         "Player Neutral Passive owns all NPCs and neutral buildings.",
     IQ_CLASSES_DESCRIPTION             "Hero classes determine which spells can be learned by a hero. They give the hero certain traits which are useful when combined with other hero classes.",
+    IQ_HEROES_DESCRIPTION              "You have to pick a hero in the beginning of the game which can be repicked. You are allowed to pick two additional heroes at some point when you reached a higher level with your first hero.",
+    IQ_HEROES_0                        "Maximum level is 75.",
+    IQ_HEROES_1                        "Additional, bonus and boss heroes require a higher hero level of your first hero.",
+    IQ_HEROES_2                        "Hero 2 and 3 have no backpack and no equipment bags.",
+    IQ_PROFESSIONS_DESCRIPTION         "After choosing your race or game mode, you have to select a profession. The profession allows you to craft items. These items might help your hero or units to become stronger or to restore their stats or to fortify your base. Crafting items costs mana.",
+    IQ_PROFESSIONS_0                   "Craft items.",
+    IQ_PROFESSIONS_1                   "Additional professions require a higher hero level of your first hero.",
+    IQ_PROFESSIONS_2                   "Higher hero levels reduce the crafting cooldowns and increases crafted charges.",
     IQ_CREDITS_TITLE                   "Credits",
     IQ_CREDITS_DESCRIPTION             "All the people who contributed to this map.",
 }

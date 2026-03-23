@@ -541,6 +541,16 @@ STRING 90
 Build Tiny Tidal Guardian
 }
 
+STRING 91
+{
+World of Warcraft Reforged 4.7
+}
+
+STRING 92
+{
+Baradé, EvilPitlord, DeMoNiKuS
+}
+
 STRING 93
 // Abilities: A02O (Brilliance Aura), EditorSuffix (Editor Suffix)
 {
@@ -2708,6 +2718,25 @@ STRING 455
 // Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Night Elf and Undead AI cannot use housings. They need a bonus.
+}
+
+STRING 456
+{
+- Quick start with -rs.
+- Warlords build a base and army, Freelancers level faster.
+- Get better items from quests and killing bosses.
+- Forge alliances via Warcraft's ally menu (F11) or chat commands.
+- Revive your dead heroes on Theramore.
+- Sell crafted items for gold.
+- Save your hero with "-save".
+- See quest markers with "-ping".
+- Play with Computer players.
+- SD graphics are recommended.
+- Discord: discord.gg/eM34z36
+
+Please provide feedback and report any bugs.
+Testing: Runeblade14, Toasty, Deranor and others.
+Credits: Quest Log (F9).
 }
 
 STRING 457
