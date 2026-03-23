@@ -1,4 +1,4 @@
-﻿STRING 0
+STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
@@ -4809,6 +4809,7 @@ STRING 837
 // Items: I04D (Warlock), Ubertip (Tooltip - Extended)
 {
 Changes the class to Warlock:|n- Cripple|n- Mana Burn|n- Devour Magic|n- Fel|n- Dark Summoning|n- Howl of Terror|n- Doom|n- Dark Portal|n- Metamorphosis|n- Rain of Chaos|n- Finger of Death
+}
 
 STRING 838
 // Abilities: A1E1 (Drunken Aura), Name (Name)
