@@ -7970,7 +7970,7 @@ STRING 1400
 STRING 1401
 // Units: H0Q3 (Customizable Hero), Ubertip (Tooltip - Extended)
 {
-Allows changing attack type, primary attribute, any attribute values, spells and skins for. Use the chat command "-rename X" to give the hero the name X.
+Erlaubt es, die Angriffstyp, das primäre Attribute, beliebige Attribut-Werte, Zauber und Skins zu ändern. Benutzen Sie den Chat-Befehl "-rename X", um dem Helden den Namen X zu geben.
 }
 
 STRING 1402
@@ -10202,7 +10202,7 @@ STRING 1785
 STRING 1786
 // Units: Hblm (Blood Mage), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Blood Elf|n|cffffcc00Class:|r Pyromancer|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Feuermagier|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1787
@@ -38121,7 +38121,7 @@ S
 STRING 8306
 // Units: h0G1 (Previous Page), Tip (Tooltip - Basic)
 {
-M
+Vorherige Seite
 }
 
 STRING 8307

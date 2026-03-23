@@ -7970,7 +7970,7 @@ STRING 1400
 STRING 1401
 // Units: H0Q3 (Customizable Hero), Ubertip (Tooltip - Extended)
 {
-Allows changing attack type, primary attribute, any attribute values, spells and skins for. Use the chat command "-rename X" to give the hero the name X.
+Allows changing attack type, primary attribute, any attribute values, spells and skins. Use the chat command "-rename X" to give the hero the name X.
 }
 
 STRING 1402
