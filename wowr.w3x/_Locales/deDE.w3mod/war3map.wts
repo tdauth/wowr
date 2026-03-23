@@ -358,7 +358,7 @@ STRING 59
 STRING 60
 // Units: N01K (Elder Sage), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Verlorene|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Niederdrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 20/1.2|n|cffffcc00Intelligenz:|r 19/2.8|n|n|cffffcc00Greift Landeinheiten an.|r
+|cffffcc00Volk:|r Verlorene|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Niederdrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 20/1,2|n|cffffcc00Intelligenz:|r 19/2,8|n|n|cffffcc00Greift Landeinheiten an.|r
 }
 
 STRING 61
@@ -8816,7 +8816,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 29|r]
 STRING 1543
 // Units: O08G (Kodo Beast), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at healing magics and voodoo curses. Can learn Schockwelle, Kriegsdonner, Befehls-Aura and Massenverschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Flügeldrache.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein listiger Held, adept at healing magics and voodoo curses. Can learn Schockwelle, Kriegsdonner, Befehls-Aura and Massenverschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 1544
@@ -10148,7 +10148,7 @@ STRING 1768
 STRING 1770
 // Items: I1A4 (Tome of Magic), Description (Description)
 {
-Permanently increases all ability levels.
+Erhöht dauerhaft alle Fähigkeitsstufen.
 }
 
 STRING 1771
@@ -10190,13 +10190,13 @@ STRING 1776
 STRING 1784
 // Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/2,25|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Volk:|r Human|n|cffffcc00Klasse:|r Paladin|n|cffffcc00Reittier:|r Gryphon|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 1785
 // Units: Hamg (Archmage), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3,2|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Dalaran|n|cffffcc00Klasse:|r Arcanist|n|cffffcc00Reittier:|r Dragonhawk|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 14/2|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3,2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1786
@@ -10208,67 +10208,67 @@ STRING 1786
 STRING 1787
 // Units: Hmkg (Mountain King), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Dwarf|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1,5|n|cffffcc00Intelligence:|r 15/2,25|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Volk:|r Zwerge|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 24/3|n|cffffcc00Beweglichkeit:|r 11/1,5|n|cffffcc00Intelligenz:|r 15/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 1788
 // Units: H00W (Wizard), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 13/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 22/3,2|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Menschen|n|cffffcc00Klasse:|r Arcanist|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 13/2|n|cffffcc00Beweglichkeit:|r 15/1|n|cffffcc00Intelligenz:|r 22/3,2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1789
 // Units: H0BS (Dark Knight), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/1,8|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Volk:|r Menschen|n|cffffcc00Klasse:|r Warrior|n|cffffcc00Reittier:|r Greif|n|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/1,8|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 1790
 // Units: H0KV (Peasant), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Tinker|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/2,25|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Volk:|r Menschen|n|cffffcc00Klasse:|r Tinker|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 1791
 // Units: H0VB (Captain), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/2,25|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Volk:|r Menschen|n|cffffcc00Klasse:|r Warrior|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 1792
 // Units: H05U (Dark Wizard), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Bandit|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Crow|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 13/2|n|cffffcc00Agility:|r 15/1|n|cffffcc00Intelligence:|r 22/3,2|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Banditen|n|cffffcc00Klasse:|r Necromancer|n|cffffcc00Reittier:|r Krähe|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 13/2|n|cffffcc00Beweglichkeit:|r 15/1|n|cffffcc00Intelligenz:|r 22/3,2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1793
 // Units: Hlgr (Dark Knight), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/2,25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Volk:|r Menschen|n|cffffcc00Klasse:|r Warrior|n|cffffcc00Reittier:|r Greif|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1794
 // Units: H018 (The Last Guardian), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3,2|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Volk:|r Dalaran|n|cffffcc00Klasse:|r Arkanist|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 14/2|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3,2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1795
 // Units: H03M (Archmage of the Kirin Tor), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Dalaran|n|cffffcc00Class:|r Arcanist|n|cffffcc00Mount:|r Dragonhawk|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/2|n|cffffcc00Agility:|r 17/1|n|cffffcc00Intelligence:|r 19/3,2|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Volk:|r Dalaran|n|cffffcc00Klasse:|r Arkanist|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 14/2|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3,2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1796
 // Items: I1A4 (Tome of Magic), Ubertip (Tooltip - Extended)
 {
-Permanently increases the ability levels of the Hero by 1 when used.
+Erhöht bei Benutzung dauerhaft alle Fähigkeitsstufen des Helden um 1.
 }
 
 STRING 1797
 // Units: H0A5 (Paladin), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/2,25|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Volk:|r Menschen|n|cffffcc00Klasse:|r Paladin|n|cffffcc00Reittier:|r Gryphon|n|cffffcc00Primäres Attribut:|r Strength|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1798
@@ -10328,7 +10328,7 @@ Heavy warrior. Can cast Stille, Feuerblitz, Schmetter-Angriff, Hieb, Festhaut an
 STRING 1807
 // Units: H0AI (Paladin), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Human|n|cffffcc00Class:|r Paladin|n|cffffcc00Mount:|r Gryphon|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2,7|n|cffffcc00Agility:|r 13/1,5|n|cffffcc00Intelligence:|r 17/2,25|n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Volk:|r Human|n|cffffcc00Klasse:|r Paladin|n|cffffcc00Reittier:|r Gryphon|n|cffffcc00Primäres Attribut:|r Strength|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r |n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1808
@@ -10346,7 +10346,7 @@ K
 STRING 1810
 // Units: H08H (Bishop), Ubertip (Tooltip - Extended)
 {
-Holy Hero, adept at banning Undead, charming enemies and healing friendly units. Can learn Massen-Heiliges-Licht, Heilige Nova, Heilige Aura and Massenbezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Verjüngung.|r
+Holy Hero, adept at banning Undead, charming enemies and healing friendly units. Can learn Massen-Heiliges-Licht, Heilige Nova, Heilige Aura and Massenbezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Gryphon.|r|n|cffffcc00Standard Ability: Verjüngung.|r
 }
 
 STRING 1811
@@ -12947,7 +12947,7 @@ Waldläufer beschwören
 STRING 2415
 // Units: H0YD (Ranger), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at damaging opponents. Can learn Scout, Giftpfeile, Volltreffer-Aura, and Sternenregen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Schimäre.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+Ein listiger Held, adept at damaging opponents. Can learn Scout, Giftpfeile, Volltreffer-Aura, and Sternenregen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Schimäre.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 2416
@@ -13469,7 +13469,7 @@ Banditenlord wiederbeleben
 STRING 2530
 // Units: O0AK (Shaman), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at healing magics and voodoo curses. Can learn Stille, Massenkampfrausch, Brillanz-Aura and Monsun. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Flügeldrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Ein listiger Held, adept at healing magics and voodoo curses. Can learn Stille, Massenkampfrausch, Brillanz-Aura and Monsun. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 2531
@@ -15941,7 +15941,7 @@ T
 STRING 3129
 // Units: H0V3 (Arch Sorceress), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Teleportation, Verwandlung, Brillanz-Aura, and Feuer- und Froststrahl. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Beutestrahl.|r
+Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Teleportation, Verwandlung, Brillanz-Aura, and Feuer- und Froststrahl. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Dragonhawk.|r|n|cffffcc00Standard Ability: Beutestrahl.|r
 }
 
 STRING 3130
@@ -17471,7 +17471,7 @@ Ein listiger Held, exceptional at disrupting battles and enduring damage. Can le
 STRING 3447
 // Units: H0K7 (Spellbreaker), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Arkanist|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 17/1.8|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 22/2.7|n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Arkanist|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 17/1,8|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 22/2,7|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3448
@@ -17513,7 +17513,7 @@ Ein mystischer Held, adept at using nature spells. Can learn Wucherwurzeln, Natu
 STRING 3458
 // Units: H0A4 (Archmage), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Kul Tiras|n|cffffcc00Klasse:|r Wassermagier|n|cffffcc00Reittier:|r Albatross|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/1.8|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3.2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Kul Tiras|n|cffffcc00Klasse:|r Wassermagier|n|cffffcc00Reittier:|r Albatross|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/1,8|n|cffffcc00Beweglichkeit:|r 17/1|n|cffffcc00Intelligenz:|r 19/3,2|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 3459
@@ -17561,7 +17561,7 @@ Heldenstufe 45
 STRING 3468
 // Units: O04Y (Witch Doctor), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Trolle|n|cffffcc00Klasse:|r Hexendoktor|n|cffffcc00Reittier:|r Fledermaus|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 17/1.5|n|cffffcc00Intelligenz:|r 20/2.5|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+|cffffcc00Volk:|r Trolle|n|cffffcc00Klasse:|r Hexendoktor|n|cffffcc00Reittier:|r Fledermaus|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 17/1,5|n|cffffcc00Intelligenz:|r 20/2,5|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3479
@@ -19757,7 +19757,7 @@ Increases damage dealt to enemy targets with Fortified armor by <A0GU,DataB1,%>%
 STRING 4027
 // Units: H0OU (Naaru), Ubertip (Tooltip - Extended)
 {
-Light Hero, exceptional at fighting Undead and augmenting nearby friendly troops. Can learn Teleportation, Gottesschild, Massen-Heiliges-Licht and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+Light Hero, exceptional at fighting Undead and augmenting nearby friendly troops. Can learn Teleportation, Gottesschild, Massen-Heiliges-Licht and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Gryphon.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 4028
@@ -21986,7 +21986,7 @@ Verlies
 STRING 4576
 // Units: H0A3 (Archangel), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 4577
@@ -28872,7 +28872,7 @@ Ein listiger Held, adept at controlling combat. Can learn Tote erwecken, Drain, 
 STRING 5983
 // Units: H0FB (Sea Giant), Ubertip (Tooltip - Extended)
 {
-Special Hero, who can change his spells during combat. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Coatl.|r|n|cffffcc00Standard Ability: Zufällige Zauber.|r
+Special Hero, who can change his spells during combat. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Coatl.|r|n|cffffcc00Standard Ability: Zufällige Zauber.|r
 }
 
 STRING 5984
@@ -28884,7 +28884,7 @@ Nächste Seite
 STRING 5985
 // Abilities: A0Y9 (Slot 9), EditorSuffix (Editor Suffix)
 {
-Special Hero, who can change his spells during combat. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Coatl.|r|n|cffffcc00Standard Ability: Zufällige Zauber.|r
+Special Hero, who can change his spells during combat. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Coatl.|r|n|cffffcc00Standard Ability: Zufällige Zauber.|r
 }
 
 STRING 5986
@@ -28938,7 +28938,7 @@ C
 STRING 6000
 // Units: H07C (Assassin), Ubertip (Tooltip - Extended)
 {
-Agile Hero, adept at controlling capturing enemies and ranged assaults. Can learn Pfeilhagel, Shadow Strike, Vergiftete Waffen and Masseneinschnüren. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Dragonhawk.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Agile Hero, adept at controlling capturing enemies and ranged assaults. Can learn Pfeilhagel, Shadow Strike, Vergiftete Waffen and Masseneinschnüren. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Dragonhawk.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 6001
@@ -34989,7 +34989,7 @@ Dämonen-Feuer
 STRING 7711
 // Units: H0UL (Lion Rider), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Gryphon.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 7712
@@ -38715,7 +38715,7 @@ Keiler-Häuptling beschwören
 STRING 8411
 // Units: H0KM (Vindicator), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Nether Drake.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Nether Drake.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 8412
@@ -40317,7 +40317,7 @@ STRING 8873
 STRING 8910
 // Units: O09L (Fel Crossbowman), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at range combat. Can learn Sperrfeuer, Searing Pfeile, Volltreffer-Aura and Avatar. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Schwarzer Großdrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Ein listiger Held, adept at range combat. Can learn Sperrfeuer, Searing Pfeile, Volltreffer-Aura and Avatar. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Schwarzer Großdrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 8912
@@ -41565,7 +41565,7 @@ Ernte
 STRING 10093
 // Units: H0YC (Phoenix), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Feuermagier|n|cffffcc00Reittier:|r Phönix|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 11/1.5|n|cffffcc00Beweglichkeit:|r 15/2.25|n|cffffcc00Intelligenz:|r 24/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
+|cffffcc00Volk:|r Blutelfen|n|cffffcc00Klasse:|r Feuermagier|n|cffffcc00Reittier:|r Phönix|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 11/1,5|n|cffffcc00Beweglichkeit:|r 15/2,25|n|cffffcc00Intelligenz:|r 24/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
 }
 
 STRING 10094
@@ -46611,7 +46611,7 @@ Buch des Beschwörung-Postaments errichten
 STRING 11448
 // Units: H068 (Priest), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Hochelfen|n|cffffcc00Class:|r Paladin|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Paladin|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 11449
@@ -47232,7 +47232,7 @@ Tojara,Nikoro,Kajind,Mikasa,Samuro,Akinos,Mazuru,Yozshura,Daisho,Kigami,Arashica
 STRING 11718
 // Units: O0BT (Fel Kodo Beast), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at healing magics and voodoo curses. Can learn Schockwelle, Kriegsdonner, Befehls-Aura and Massenverschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Schwarzer Großdrache.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein listiger Held, adept at healing magics and voodoo curses. Can learn Schockwelle, Kriegsdonner, Befehls-Aura and Massenverschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Schwarzer Großdrache.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 11719
@@ -49068,7 +49068,7 @@ Cunning Hero, high base hit points and high hit point regeneration but only at n
 STRING 12302
 // Units: N0F3 (Sapper), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Explosives Fass beschwören, Unsummon Building, Place Goblin Land Mine and Transmute.|n|n|cffffcc00Attacks land units.|r
+Cunning Hero, exceptional at disrupting battles and enduring damage. Can learn Explosives Fass beschwören, Unsummon Building, Place Goblin Land Mine and Transmute.|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 12303
@@ -50904,7 +50904,7 @@ Sonar
 STRING 14274
 // Units: H0OG (Peon), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Finish Construction, Reparaturaura and Mechanische Reparatur. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Flügeldrache.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Finish Construction, Reparaturaura and Mechanische Reparatur. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 14301
@@ -51738,7 +51738,7 @@ STRING 14796
 STRING 14798
 // Units: H01H (Vindicator), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Nether Drake.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. Can learn Heiliges Licht, Gottesschild, Hingabe-Aura and Auferstehung. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Nether Drake.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 14862
@@ -64637,7 +64637,7 @@ STRING 25389
 STRING 25402
 // Units: H0SY (Evoker), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Feueratem, Sprung-Attacke, Schwanzhieb and Drachenangriff. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Drachengestalt.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Feueratem, Sprung-Attacke, Schwanzhieb and Drachenangriff. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Drachengestalt.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 25404
@@ -66245,7 +66245,7 @@ Thalorien Dawnseeker wiederbeleben
 STRING 27184
 // Units: Hddt (Master Swordsman), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 22/1.75|n|cffffcc00Intelligenz:|r 16/2.25|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Hochelfen|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Drachenfalke|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 22/1,75|n|cffffcc00Intelligenz:|r 16/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 27185
@@ -71303,7 +71303,7 @@ Heavily armored vehicle, effective at destroying buildings. Can be upgraded with
 STRING 32259
 // Units: H0IQ (Thane), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, adept at offensive combat and disrupting enemy troops. Can learn Verteidigen, Kriegsdonner, Hieb and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Protodrache.|r|n|cffffcc00Standard Ability: Berserk.|r
+Ein Kriegerheld, adept at offensive combat and disrupting enemy troops. Can learn Verteidigen, Kriegsdonner, Hieb and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Protodrache.|r|n|cffffcc00Standard Ability: Berserk.|r
 }
 
 STRING 32275
@@ -79829,7 +79829,7 @@ P
 STRING 36071
 // Units: H0UU (Fel Peon), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Finish Construction, Reparaturaura and Mechanische Reparatur. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Flügeldrache.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Finish Construction, Reparaturaura and Mechanische Reparatur. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 36074
@@ -84935,7 +84935,7 @@ Schattenkugel +6 herstellen
 STRING 37892
 // Units: H0P2 (Acolyte), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 37893
@@ -85163,7 +85163,7 @@ Akolyt
 STRING 37936
 // Units: H0P3 (Shade), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Mount: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 37937
@@ -87437,7 +87437,7 @@ Gilneas Banner
 STRING 39646
 // Units: U01K (Worgen Death Knight), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, evil counterpart to the Human Paladin. Can learn Todesmantel, Todespakt, Unheilige Aura, and Animate Dead. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Mount: Wild laufen.|r|n|cffffcc00Standard Ability: Nachtaktiv.|r
+Ein Kriegerheld, evil counterpart to the Human Paladin. Can learn Todesmantel, Todespakt, Unheilige Aura, and Animate Dead. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Reittier: Wild laufen.|r|n|cffffcc00Standard Ability: Nachtaktiv.|r
 }
 
 STRING 39647
@@ -88247,7 +88247,7 @@ STRING 39818
 STRING 39824
 // Units: H0J1 (Deathclaw), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, adept at offensive combat and disrupting enemy troops. Can learn Windlauf, Verschlingen, Kritischer Schlag and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Mount: Wild laufen.|r|n|cffffcc00Standard Ability: Nachtaktiv.|r
+Ein Kriegerheld, adept at offensive combat and disrupting enemy troops. Can learn Windlauf, Verschlingen, Kritischer Schlag and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Reittier: Wild laufen.|r|n|cffffcc00Standard Ability: Nachtaktiv.|r
 }
 
 STRING 39828
@@ -90803,7 +90803,7 @@ Versammlungshalle errichten
 STRING 40746
 // Units: H0IS (Flamebinder), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Meteor, Feuerregen, Phönixfeuer and Flammensturm. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Protodrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Meteor, Feuerregen, Phönixfeuer and Flammensturm. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Protodrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 40747
@@ -91247,7 +91247,7 @@ Reuse
 STRING 41073
 // Units: N0FC (Tuskarr Chieftain), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Tuskarr|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Schnee-Eule|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2.9|n|cffffcc00Beweglichkeit:|r 14/1.3|n|cffffcc00Intelligenz:|r 15/2.25|n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Tuskarr|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Schnee-Eule|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,9|n|cffffcc00Beweglichkeit:|r 14/1,3|n|cffffcc00Intelligenz:|r 15/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 41074
@@ -99833,7 +99833,7 @@ STRING 45597
 STRING 45639
 // Units: O07J (Ogre Magi), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at healing magics and voodoo curses. Can learn Massen-Feuerblitz, Massenkampfrausch, Brillanz-Aura and Massenhexerei. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Flügeldrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Ein listiger Held, adept at healing magics and voodoo curses. Can learn Massen-Feuerblitz, Massenkampfrausch, Brillanz-Aura and Massenhexerei. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 45640
@@ -108404,7 +108404,7 @@ STRING 50726
 STRING 50727
 // Units: H0UN (Tidesage), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Schmetterwelle, Meeres-Elementargeist beschwören, Mana-Aura and Bezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Mount: Gryphon.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
+Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn Schmetterwelle, Meeres-Elementargeist beschwören, Mana-Aura and Bezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|cffffcc00Reittier: Gryphon.|r|n|cffffcc00Standard Ability: Unsichtbarkeit.|r
 }
 
 STRING 50728
