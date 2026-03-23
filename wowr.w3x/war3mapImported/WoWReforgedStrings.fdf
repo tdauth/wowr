@@ -1854,7 +1854,7 @@ StringList {
     IQ_SUPPORT_4                       "Unlock exclusive features in the map.",
     IQ_SUPPORT_5                       "VIP status on Discord.",
     IQ_CHAT_COMMANDS_TITLE             "Chat Commands",
-    IQ_CHAT_COMMANDS_DESCRIPTION       "Enter the chat commands without the double quotes. The leaderboards will appear during certain quests. Note: Even when the quest has been activated, and you turn off the leaderboard, the counts will continue until the quest requirement is accomplished. Also, it turns off/on the leaderboard display only for the player who writes the chat message.",
+    IQ_CHAT_COMMANDS_DESCRIPTION       "Enter the chat commands without the single quotes. The leaderboards will appear during certain quests. Note: Even when the quest has been activated, and you turn off the leaderboard, the counts will continue until the quest requirement is accomplished. Also, it turns off/on the leaderboard display only for the player who writes the chat message.",
     IQ_KNOWN_ISSUES_TITLE              "Known Issues",
     IQ_KNOWN_ISSUES_DESCRIPTION        "Unfortunately, this map has some known unfixed issues. If you think you know the cause of an issue or the solution to fix it, please report it on Discord.",
     IQ_KNOWN_ISSUES_0                  "Long loading time leads to errors for some players.",

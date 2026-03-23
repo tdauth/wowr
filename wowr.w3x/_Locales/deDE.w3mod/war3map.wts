@@ -4812,7 +4812,7 @@ Wechselt die Klasse zum Hexenmeister:|n- Verkrüppeln|n- Manabrand|n- Magie vers
 }
 
 STRING 838
-// Abilities: A1E1 (Drunken Aura), Name (Name)
+// Abilities: A088 (Drunken Aura), Name (Name)
 {
 Trunken-Aura
 }
@@ -4824,7 +4824,7 @@ W
 }
 
 STRING 840
-// Abilities: A088 (Drunken Aura), Name (Name)
+// Buffs/Effects: B02K (Drunken Aura), EditorName (Name (Editor Only))
 {
 Trunken-Aura
 }
@@ -4851,12 +4851,6 @@ STRING 844
 // Buffs/Effects: B02K (Drunken Aura), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Trunken-Aura. It has the chance to evade hits and do critical damage.
-}
-
-STRING 845
-// Buffs/Effects: B02K (Drunken Aura), EditorName (Name (Editor Only))
-{
-Trunken-Aura
 }
 
 STRING 846
