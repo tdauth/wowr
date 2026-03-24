@@ -2748,7 +2748,6 @@ globals
 
     constant integer PLAYER_RESCUABLE                                = 21
     constant integer PLAYER_BOSSES                                   = 22
-    constant integer PLAYER_THE_BURNING_LEGION                       = 23
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57

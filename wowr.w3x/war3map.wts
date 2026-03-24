@@ -4865,9 +4865,28 @@ STRING 817
 }
 
 STRING 818
-// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 819
+{
+Player 2
+}
+
+STRING 820
+{
+Player 3
+}
+
+STRING 821
+{
+Player 4
+}
+
+STRING 822
+{
+Player 5
 }
 
 STRING 823
@@ -4888,6 +4907,41 @@ STRING 825
 Purchase Book of Demolishing
 }
 
+STRING 826
+{
+Player 6
+}
+
+STRING 827
+{
+Player 7
+}
+
+STRING 828
+{
+Player 8
+}
+
+STRING 829
+{
+Player 9
+}
+
+STRING 830
+{
+Player 10
+}
+
+STRING 831
+{
+Bosses New
+}
+
+STRING 832
+{
+Rescuable
+}
+
 STRING 833
 // Items: I06Q (Loremaster), Name (Name)
 {
@@ -4898,6 +4952,11 @@ STRING 834
 // Units: N032 (Monk), Name (Name)
 {
 Monk
+}
+
+STRING 835
+{
+Bosses
 }
 
 STRING 836
@@ -4952,6 +5011,11 @@ STRING 844
 // Buffs/Effects: B02K (Drunken Aura), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Drunken Aura. It has the chance to evade hits and do critical damage.
+}
+
+STRING 845
+{
+Alliance
 }
 
 STRING 846
@@ -5234,6 +5298,38 @@ STRING 892
 // Units: n03H (Engineer Ship), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 893
+{
+Horde
+}
+
+STRING 894
+{
+Computer
+}
+
+STRING 895
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 896
+{
+Player 1
+}
+
+STRING 897
+// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 898
+// Items: I0VZ (Player 1), Tip (Tooltip - Basic)
+{
+Player 1
 }
 
 STRING 900
@@ -104863,13 +104959,12 @@ The legs of a frog.
 }
 
 STRING 49307
-// Items: I0VZ (Player 1), Name (Name)
 {
 Player 1
 }
 
 STRING 49308
-// Items: I0VZ (Player 1), Tip (Tooltip - Basic)
+// Items: I0VZ (Player 1), Name (Name)
 {
 Player 1
 }
