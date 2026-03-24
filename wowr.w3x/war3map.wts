@@ -1,4 +1,4 @@
-STRING 0
+﻿STRING 0
 // Abilities: A02I (Big Bad Voodoo (Unique)), Name (Name)
 {
 Big Bad Voodoo (Unique)
@@ -4157,7 +4157,6 @@ STRING 694
 }
 
 STRING 695
-// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
@@ -4217,7 +4216,11 @@ Convert Into Furbolg
 }
 
 STRING 705
-// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 706
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -4414,6 +4417,12 @@ STRING 738
 (Neutral Hostile)
 }
 
+STRING 739
+// Units: O09O (Raider), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
+}
+
 STRING 740
 // Abilities: A11L (Doom), EditorSuffix (Editor Suffix)
 {
@@ -4502,6 +4511,17 @@ STRING 754
 // Units: N067 (The Destroyer), Ubertip (Tooltip - Extended)
 {
 Powerful flying boss hero who can cast Breath of Fire, Summon Fire Elemental, Command Aura, Reincarnation and Cleaving Attack.|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
+}
+
+STRING 755
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 756
+// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 757
@@ -9905,7 +9925,7 @@ Warrior Hero, adept at summoning beasts into battle. Can learn Storm Bolt, War S
 }
 
 STRING 1720
-// Units: O09O (Raider), Ubertip (Tooltip - Extended)
+// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
