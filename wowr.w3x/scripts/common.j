@@ -2746,8 +2746,9 @@ globals
     constant string USER_SAVE_CODE_FOLDER                            =  CUSTOM_MAP_DATA_FOLDER + "\\" + SAVE_CODE_FOLDER
     constant string USER_SAVE_GAME_FOLDER                            = WARCRAFT_III_DOCUMENTS_FOLDER + "\\BattleNet"
 
-    constant integer PLAYER_RESCUABLE                                = 21
-    constant integer PLAYER_BOSSES                                   = 22
+    constant integer PLAYER_BOSSES                                   = 10
+    constant integer PLAYER_RESCUABLE                                = 11
+    constant integer MAX_PLAYERS                                     = 12
 
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
