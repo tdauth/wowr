@@ -217,7 +217,7 @@ StringList {
     // Heroes Tavern
     CUSTOMIZABLE                       "Anpassbar",
     ELEMENTS                           "Elemente",
-    NAVY                               "Flotte",
+    TAVERN_NAVY                        "Flotte",
     DEMIGODS                           "Halbgötter",
     // Heroes
     HERO_RANDOM_MATCHING_RACE          "Zufällig passend zum Volk",
@@ -1864,6 +1864,8 @@ StringList {
     IQ_KNOWN_ISSUES_7                  "AI might crash in start locations which have too little ground area space.",
     IQ_KNOWN_ISSUES_7                  "Loading save games might crash because of string literals longer than 1023 characters.",
     IQ_KNOWN_ISSUES_8                  "Tooltips von passiven Fähigkeiten werden nicht aktualisiert.",
+    IQ_HERO_JOURNEY_TITLE              "Heldenreise",
+    IQ_HERO_JOURNEY_DESCRIPTION        "Ihre Heldenstufen werden neue Features in der Karte freischalten.",
     IQ_FACTIONS_TITLE                  "Fraktionen",
     IQ_FACTIONS_DESCRIPTION            "Factions consist of multiple races which allied for a common goal. The two game lobby teams represent the two major factions Alliance and Horde. Players from the same faction are allied by default. The faction The Burning Legion fights against all players. The faction Rescuable allows rescuing respawning units.",
     IQ_FACTIONS_0                      "Races belong to one faction or are neutral.",
@@ -1883,6 +1885,7 @@ StringList {
     IQ_HEROES_0                        "Die maximale Stufe ist 75.",
     IQ_HEROES_1                        "Additional, bonus and boss heroes require a higher hero level of your first hero.",
     IQ_HEROES_2                        "Hero 2 and 3 have no backpack and no equipment bags.",
+    IQ_PROFESSIONS_TITLE               "Berufe",
     IQ_PROFESSIONS_DESCRIPTION         "After choosing your race or game mode, you have to select a profession. The profession allows you to craft items. These items might help your hero or units to become stronger or to restore their stats or to fortify your base. Crafting items costs mana.",
     IQ_PROFESSIONS_0                   "Craft items.",
     IQ_PROFESSIONS_1                   "Additional professions require a higher hero level of your first hero.",

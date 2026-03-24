@@ -9739,7 +9739,7 @@ R
 }
 
 STRING 1687
-// Units: h071 (Torture Table), Hotkey (Hotkey)
+// Units: h071 (Folter Table), Hotkey (Hotkey)
 {
 T
 }
@@ -19282,7 +19282,7 @@ The skin of a Skink.
 }
 
 STRING 3875
-// Units: o03V (Torture Chamber), Name (Name)
+// Units: o03V (Folter Chamber), Name (Name)
 {
 Folterkammer
 }
@@ -19294,7 +19294,7 @@ STRING 3876
 }
 
 STRING 3877
-// Units: o03V (Torture Chamber), Tip (Tooltip - Basic)
+// Units: o03V (Folter Chamber), Tip (Tooltip - Basic)
 {
 Folterkammer errichten
 }
@@ -19576,7 +19576,7 @@ Altar der Schmerzen errichten
 }
 
 STRING 3940
-// Units: o03V (Torture Chamber), EditorSuffix (Name - Editor Suffix)
+// Units: o03V (Folter Chamber), EditorSuffix (Name - Editor Suffix)
 {
 (Verlies)
 }
@@ -19728,7 +19728,7 @@ Ein herzlicher Verlies-Bürger. Hat eine Lebensregenerations-Aura.
 STRING 3968
 // Items: I0G2 (Dungeon), Ubertip (Tooltip - Extended)
 {
-Einkerkerning and torturing underground creatures:|n- Einkerkerning.|n- Torture.|n- Fire.
+Einkerkernde und folternde unterirdische Kreaturen:|n- Einkerkerung.|n- Folter.|n- Feuer.
 }
 
 STRING 3969
@@ -23098,7 +23098,7 @@ Increases Feuergeists' mana capacity, mana regeneration rate, hit points, and gi
 }
 
 STRING 4817
-// Abilities: S00T (Torture), EditorSuffix (Editor Suffix)
+// Abilities: S00T (Folter), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -23748,7 +23748,7 @@ STRING 4974
 STRING 4976
 // Abilities: A0SP (Create Corpse), EditorSuffix (Editor Suffix)
 {
-(Verlies) (Torture Chamber)
+(Verlies) (Folter Chamber)
 }
 
 STRING 4977
@@ -23784,11 +23784,11 @@ Leiche erzeugen erforschen
 STRING 4982
 // Upgrades: R07P (Burrow), Ubertip (Tooltip - Extended)
 {
-Torture Chambers gain the ability Create Corpse which creates corpses around it. The corpses can be used to raise skeletons.
+Folter Chambers gain the ability Create Corpse which creates corpses around it. The corpses can be used to raise skeletons.
 }
 
 STRING 4983
-// Abilities: A0U6 (Build Tiny Torture Chamber), EditorSuffix (Editor Suffix)
+// Abilities: A0U6 (Build Tiny Folter Chamber), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -24334,19 +24334,19 @@ Gives <A0X6,DataA1> gold to the player when used.
 }
 
 STRING 5083
-// Abilities: S00T (Torture), Ubertip (Tooltip - Normal - Extended)
+// Abilities: S00T (Folter), Ubertip (Tooltip - Normal - Extended)
 {
-Tortures a prisoner until it dies. The prisoner leaves a Corpse which reduces the armor of nearby enemy units. When it is destroyed by enemy units, it drops some gold.
+Folters a prisoner until it dies. The prisoner leaves a Corpse which reduces the armor of nearby enemy units. When it is destroyed by enemy units, it drops some gold.
 }
 
 STRING 5084
-// Abilities: S00T (Torture), Tip (Tooltip - Normal)
+// Abilities: S00T (Folter), Tip (Tooltip - Normal)
 {
 Folter
 }
 
 STRING 5085
-// Abilities: S00T (Torture), Name (Name)
+// Abilities: S00T (Folter), Name (Name)
 {
 Folter
 }
@@ -25288,25 +25288,25 @@ Winzige Skelett-Kaserne erwerben
 }
 
 STRING 5268
-// Items: I0K9 (Tiny Torture Chamber), Description (Description)
+// Items: I0K9 (Tiny Folter Chamber), Description (Description)
 {
 Errichtet eine Folterkammer.
 }
 
 STRING 5269
-// Items: I0K9 (Tiny Torture Chamber), Name (Name)
+// Items: I0K9 (Tiny Folter Chamber), Name (Name)
 {
 Winzige Folterkammer
 }
 
 STRING 5270
-// Items: I0K9 (Tiny Torture Chamber), Tip (Tooltip - Basic)
+// Items: I0K9 (Tiny Folter Chamber), Tip (Tooltip - Basic)
 {
 Winzige Folterkammer erwerben
 }
 
 STRING 5271
-// Items: I0K9 (Tiny Torture Chamber), Ubertip (Tooltip - Extended)
+// Items: I0K9 (Tiny Folter Chamber), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort eine Folterkammer.
 }
@@ -25546,7 +25546,7 @@ Winzige Skelett-Kaserne errichten
 }
 
 STRING 5313
-// Abilities: A0U6 (Build Tiny Torture Chamber), Name (Name)
+// Abilities: A0U6 (Build Tiny Folter Chamber), Name (Name)
 {
 Winzige Folterkammer errichten
 }
@@ -25702,7 +25702,7 @@ Heavy melee unit. Can learn Schlafgestalt, Kriegsdonner and Festhaut. |n|n|cffff
 }
 
 STRING 5340
-// Units: o03V (Torture Chamber), Ubertip (Tooltip - Extended)
+// Units: o03V (Folter Chamber), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz. |nAlso trains Prisoners and contains upgrades for improved armor, melee weapons, ranged weapons, and Create Corpse.
 }
@@ -26904,7 +26904,7 @@ STRING 5600
 STRING 5603
 // Items: I05U (Human), Ubertip (Tooltip - Extended)
 {
-Kombination of Humans, Dwarves and Elves.|n- Fast building construction with multiple workers.|n- Strong buildings.|n- Harvest more lumber.|n- Many different types of units.|n|n|cffffcc00Faction: Alliance.|r
+Kombination of Menschen, Zwergen und Elfen.|n- Schnelle Gebäudeaufbau mit mehreren Arbeitern.|n- Starke Gebäude.|n- Sammeln mehr Holz.|n- Viele verschiedene Typen von Einheiten.|n|n|cffffcc00Fraktion: Allianz.|r
 }
 
 STRING 5604
@@ -28723,7 +28723,7 @@ Build Tiny Werkstatt
 STRING 5946
 // Items: I06H (Lost Ones), Ubertip (Tooltip - Extended)
 {
-Lost Ones of the Draenei race. Highly mutated and deformed Draenei.|n- Strong units.|n- Einkerkerning.|n|n|cffffcc00Faction: Horde.|r
+Lost Ones of the Draenei race. Highly mutated and deformed Draenei.|n- Strong units.|n- Einkerkerung.|n|n|cffffcc00Faction: Horde.|r
 }
 
 STRING 5947
@@ -40112,7 +40112,7 @@ Some door for your house.
 }
 
 STRING 8718
-// Units: h071 (Torture Table), EditorSuffix (Name - Editor Suffix)
+// Units: h071 (Folter Table), EditorSuffix (Name - Editor Suffix)
 {
 (Möbel)
 }
@@ -41794,7 +41794,7 @@ C
 STRING 10132
 // Units: H0V4 (Developer), Ubertip (Tooltip - Extended)
 {
-Map creator hero, adept at creating maps and adding bugs. Can learn Gleiten, Schmetterwelle, Fehlschlagsaura, and Massen-Transmutieren. |n|n|cffffcc00Greift Land-Einheiten an.|r |n|n|cffffcc00Beschränkt auf Benutzer Barade#2569.|r
+Kartenersteller.|n|n|cffffcc00Volk:|r -|n|cffffcc00Klasse:|r Mönch|n|cffffcc00Reittier:|r Schnee-Eule|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 24/3|n|cffffcc00Beweglichkeit:|r 11/1.5|n|cffffcc00Intelligenz:|r 15/1.5|n|n|cffffcc00Greift Land-Einheiten an.|r |n|n|cffffcc00Beschränkt auf Benutzer Barade#2569.|r
 }
 
 STRING 10133
@@ -51781,7 +51781,7 @@ STRING 14792
 STRING 14793
 // Items: I06J (Goblin), Ubertip (Tooltip - Extended)
 {
-- Strong mechanical units.|n- Increased gold income.|n- Shreeder units for harvesting more lumber.|n- Strong buildings.|n- Transmutieren their buildings if necessary.
+- Strong mechanical units.|n- Increased gold income.|n- Shreeder units for harvesting more lumber.|n- Strong buildings.|n- Transmutieren their buildings if necessary.|n|n|cffffcc00Fraktion: Horde.|r
 }
 
 STRING 14795
@@ -56630,19 +56630,19 @@ Wir brauchen einen Gefangenen.
 }
 
 STRING 18874
-// Units: h071 (Torture Table), Name (Name)
+// Units: h071 (Folter Table), Name (Name)
 {
 Foltertisch
 }
 
 STRING 18875
-// Units: h071 (Torture Table), Tip (Tooltip - Basic)
+// Units: h071 (Folter Table), Tip (Tooltip - Basic)
 {
 Foltertisch errichten
 }
 
 STRING 18876
-// Units: h071 (Torture Table), Ubertip (Tooltip - Extended)
+// Units: h071 (Folter Table), Ubertip (Tooltip - Extended)
 {
 Lasst es schmerzhaft sein!
 }
@@ -58276,7 +58276,7 @@ Altar des Manas
 STRING 20045
 // Items: I07M (Witch Doctor), Name (Name)
 {
-Troll-Medizinmann
+Hexendoktor
 }
 
 STRING 20051

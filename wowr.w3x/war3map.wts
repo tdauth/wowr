@@ -41793,7 +41793,7 @@ C
 STRING 10132
 // Units: H0V4 (Developer), Ubertip (Tooltip - Extended)
 {
-Map creator hero, adept at creating maps and adding bugs. Can learn Slide, Crushing Wave, Miss Aura, and Mass Transmute. |n|n|cffffcc00Attacks land units.|r |n|n|cffffcc00Restricted to account Barade#2569.|r
+Map creator.|n|n|cffffcc00Race:|r -|n|cffffcc00Class:|r Monk|n|cffffcc00Mount:|r Snowy Owl Mount|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 24/3|n|cffffcc00Agility:|r 11/1.5|n|cffffcc00Intelligence:|r 15/1.5|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Restricted to account Barade#2569.|r
 }
 
 STRING 10133
@@ -51780,7 +51780,7 @@ STRING 14792
 STRING 14793
 // Items: I06J (Goblin), Ubertip (Tooltip - Extended)
 {
-- Strong mechanical units.|n- Increased gold income.|n- Shreeder units for harvesting more lumber.|n- Strong buildings.|n- Transmute their buildings if necessary.
+- Strong mechanical units.|n- Increased gold income.|n- Shreeder units for harvesting more lumber.|n- Strong buildings.|n- Transmute their buildings if necessary.|n|n|cffffcc00Faction: Horde.|r
 }
 
 STRING 14795

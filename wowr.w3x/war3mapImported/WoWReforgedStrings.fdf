@@ -217,7 +217,7 @@ StringList {
     // Heroes Tavern
     CUSTOMIZABLE                       "Customizable",
     ELEMENTS                           "Elements",
-    NAVY                               "Navy",
+    TAVERN_NAVY                        "Navy",
     DEMIGODS                           "Demigods",
     // Heroes
     HERO_RANDOM_MATCHING_RACE          "Random Matching Race",
@@ -1852,6 +1852,8 @@ StringList {
     IQ_SUPPORT_5                       "VIP status on Discord.",
     IQ_CHAT_COMMANDS_TITLE             "Chat Commands",
     IQ_CHAT_COMMANDS_DESCRIPTION       "Enter the chat commands without the single quotes. The leaderboards will appear during certain quests. Note: Even when the quest has been activated, and you turn off the leaderboard, the counts will continue until the quest requirement is accomplished. Also, it turns off/on the leaderboard display only for the player who writes the chat message.",
+    IQ_HERO_JOURNEY_TITLE              "Hero Journey",
+    IQ_HERO_JOURNEY_DESCRIPTION        "Your hero levels will unlock new features in the map.",
     IQ_KNOWN_ISSUES_TITLE              "Known Issues",
     IQ_KNOWN_ISSUES_DESCRIPTION        "Unfortunately, this map has some known unfixed issues. If you think you know the cause of an issue or the solution to fix it, please report it on Discord.",
     IQ_KNOWN_ISSUES_0                  "Long loading time leads to errors for some players.",
@@ -1883,6 +1885,7 @@ StringList {
     IQ_HEROES_0                        "Maximum level is 75.",
     IQ_HEROES_1                        "Additional, bonus and boss heroes require a higher hero level of your first hero.",
     IQ_HEROES_2                        "Hero 2 and 3 have no backpack and no equipment bags.",
+    IQ_PROFESSIONS_TITLE               "Professions",
     IQ_PROFESSIONS_DESCRIPTION         "After choosing your race or game mode, you have to select a profession. The profession allows you to craft items. These items might help your hero or units to become stronger or to restore their stats or to fortify your base. Crafting items costs mana.",
     IQ_PROFESSIONS_0                   "Craft items.",
     IQ_PROFESSIONS_1                   "Additional professions require a higher hero level of your first hero.",
