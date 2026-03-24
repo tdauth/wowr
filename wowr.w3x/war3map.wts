@@ -4713,7 +4713,11 @@ S
 }
 
 STRING 789
-// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 790
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -4848,6 +4852,12 @@ STRING 815
 // Abilities: A00A (Alchemy - Master), Name (Name)
 {
 Alchemy - Master
+}
+
+STRING 816
+// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 823
