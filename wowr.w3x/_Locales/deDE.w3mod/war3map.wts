@@ -2069,16 +2069,6 @@ STRING 345
 Arkanist
 }
 
-STRING 346
-{
-Keine neutralen Portale!
-}
-
-STRING 347
-{
-Neutrale Portale!
-}
-
 STRING 348
 {
 Immobilien
@@ -4418,7 +4408,7 @@ STRING 738
 }
 
 STRING 739
-// Units: O09O (Raider), Ubertip (Tooltip - Extended)
+// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
@@ -4519,7 +4509,6 @@ STRING 755
 }
 
 STRING 756
-// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -4528,6 +4517,16 @@ STRING 757
 // Units: n0BU (Dynamite Stick), Name (Name)
 {
 Dynamitstab
+}
+
+STRING 758
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 759
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 760
@@ -4558,6 +4557,11 @@ STRING 764
 // Abilities: A0CI (Polymorph), EditorSuffix (Editor Suffix)
 {
 (Goblin-Magier)
+}
+
+STRING 765
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 766
@@ -4698,6 +4702,16 @@ STRING 788
 S
 }
 
+STRING 789
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 790
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
 STRING 791
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
@@ -4830,6 +4844,41 @@ STRING 815
 Alchemie - Meister
 }
 
+STRING 816
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 817
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 818
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 819
+{
+Spieler 2
+}
+
+STRING 820
+{
+Spieler 3
+}
+
+STRING 821
+{
+Spieler 4
+}
+
+STRING 822
+{
+Spieler 5
+}
+
 STRING 823
 // Items: I192 (Book of Demolishing), Description (Description)
 {
@@ -4848,6 +4897,41 @@ STRING 825
 Buch der Sprengmeisterei erwerben
 }
 
+STRING 826
+{
+Spieler 6
+}
+
+STRING 827
+{
+Spieler 7
+}
+
+STRING 828
+{
+Spieler 8
+}
+
+STRING 829
+{
+Spieler 9
+}
+
+STRING 830
+{
+Spieler 10
+}
+
+STRING 831
+{
+Bosse
+}
+
+STRING 832
+{
+Rettbar
+}
+
 STRING 833
 // Items: I06Q (Loremaster), Name (Name)
 {
@@ -4858,6 +4942,11 @@ STRING 834
 // Units: N032 (Monk), Name (Name)
 {
 Mönch
+}
+
+STRING 835
+{
+Bosse
 }
 
 STRING 836
@@ -4912,6 +5001,11 @@ STRING 844
 // Buffs/Effects: B02K (Drunken Aura), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Trunken-Aura. It has the chance to evade hits and do critical damage.
+}
+
+STRING 845
+{
+Allianz
 }
 
 STRING 846
@@ -5194,6 +5288,41 @@ STRING 892
 // Units: n03H (Engineer Ship), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 893
+{
+Horde
+}
+
+STRING 894
+{
+Computer
+}
+
+STRING 895
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 896
+{
+Spieler 1
+}
+
+STRING 897
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 898
+{
+Spieler 1
+}
+
+STRING 899
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 900
@@ -5728,6 +5857,12 @@ STRING 988
 // Items: I06P (Engineer), Ubertip (Tooltip - Extended)
 {
 Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
+}
+
+STRING 989
+// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 993
@@ -9739,7 +9874,7 @@ R
 }
 
 STRING 1687
-// Units: h071 (Folter Table), Hotkey (Hotkey)
+// Units: h071 (Torture Table), Hotkey (Hotkey)
 {
 T
 }
@@ -9925,7 +10060,7 @@ Ein Kriegerheld, adept at summoning beasts into battle. Can learn Storm Bolt, Kr
 }
 
 STRING 1720
-// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
+// Units: O09O (Raider), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Schurke|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 22/1,75|n|cffffcc00Intelligenz:|r 16/2,25|n|n|cffffcc00Greift Land-Einheiten.|r
 }
@@ -19282,7 +19417,7 @@ The skin of a Skink.
 }
 
 STRING 3875
-// Units: o03V (Folter Chamber), Name (Name)
+// Units: o03V (Torture Chamber), Name (Name)
 {
 Folterkammer
 }
@@ -19294,7 +19429,7 @@ STRING 3876
 }
 
 STRING 3877
-// Units: o03V (Folter Chamber), Tip (Tooltip - Basic)
+// Units: o03V (Torture Chamber), Tip (Tooltip - Basic)
 {
 Folterkammer errichten
 }
@@ -19576,7 +19711,7 @@ Altar der Schmerzen errichten
 }
 
 STRING 3940
-// Units: o03V (Folter Chamber), EditorSuffix (Name - Editor Suffix)
+// Units: o03V (Torture Chamber), EditorSuffix (Name - Editor Suffix)
 {
 (Verlies)
 }
@@ -20166,7 +20301,7 @@ Ei eines grünen Großdrachens erwerben
 STRING 4129
 // Items: I037 (Green Dragon Egg), Ubertip (Tooltip - Extended)
 {
-Summons a Green Dragon to fight for you. |nHält <AIbd,Dur1> Sekunden lang an.
+Beschwört einen Gründrachen, um für Sie zu kämpfen. |nHält <AIbd,Dur1> Sekunden lang an.
 }
 
 STRING 4130
@@ -23098,7 +23233,7 @@ Increases Feuergeists' mana capacity, mana regeneration rate, hit points, and gi
 }
 
 STRING 4817
-// Abilities: S00T (Folter), EditorSuffix (Editor Suffix)
+// Abilities: S00T (Torture), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -23788,7 +23923,7 @@ Folter Chambers gain the ability Create Corpse which creates corpses around it. 
 }
 
 STRING 4983
-// Abilities: A0U6 (Build Tiny Folter Chamber), EditorSuffix (Editor Suffix)
+// Abilities: A0U6 (Build Tiny Torture Chamber), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -24334,19 +24469,19 @@ Gives <A0X6,DataA1> gold to the player when used.
 }
 
 STRING 5083
-// Abilities: S00T (Folter), Ubertip (Tooltip - Normal - Extended)
+// Abilities: S00T (Torture), Ubertip (Tooltip - Normal - Extended)
 {
 Folters a prisoner until it dies. The prisoner leaves a Corpse which reduces the armor of nearby enemy units. When it is destroyed by enemy units, it drops some gold.
 }
 
 STRING 5084
-// Abilities: S00T (Folter), Tip (Tooltip - Normal)
+// Abilities: S00T (Torture), Tip (Tooltip - Normal)
 {
 Folter
 }
 
 STRING 5085
-// Abilities: S00T (Folter), Name (Name)
+// Abilities: S00T (Torture), Name (Name)
 {
 Folter
 }
@@ -25288,25 +25423,25 @@ Winzige Skelett-Kaserne erwerben
 }
 
 STRING 5268
-// Items: I0K9 (Tiny Folter Chamber), Description (Description)
+// Items: I0K9 (Tiny Torture Chamber), Description (Description)
 {
 Errichtet eine Folterkammer.
 }
 
 STRING 5269
-// Items: I0K9 (Tiny Folter Chamber), Name (Name)
+// Items: I0K9 (Tiny Torture Chamber), Name (Name)
 {
 Winzige Folterkammer
 }
 
 STRING 5270
-// Items: I0K9 (Tiny Folter Chamber), Tip (Tooltip - Basic)
+// Items: I0K9 (Tiny Torture Chamber), Tip (Tooltip - Basic)
 {
 Winzige Folterkammer erwerben
 }
 
 STRING 5271
-// Items: I0K9 (Tiny Folter Chamber), Ubertip (Tooltip - Extended)
+// Items: I0K9 (Tiny Torture Chamber), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort eine Folterkammer.
 }
@@ -25546,7 +25681,7 @@ Winzige Skelett-Kaserne errichten
 }
 
 STRING 5313
-// Abilities: A0U6 (Build Tiny Folter Chamber), Name (Name)
+// Abilities: A0U6 (Build Tiny Torture Chamber), Name (Name)
 {
 Winzige Folterkammer errichten
 }
@@ -25702,7 +25837,7 @@ Heavy melee unit. Can learn Schlafgestalt, Kriegsdonner and Festhaut. |n|n|cffff
 }
 
 STRING 5340
-// Units: o03V (Folter Chamber), Ubertip (Tooltip - Extended)
+// Units: o03V (Torture Chamber), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz. |nAlso trains Prisoners and contains upgrades for improved armor, melee weapons, ranged weapons, and Create Corpse.
 }
@@ -40112,7 +40247,7 @@ Some door for your house.
 }
 
 STRING 8718
-// Units: h071 (Folter Table), EditorSuffix (Name - Editor Suffix)
+// Units: h071 (Torture Table), EditorSuffix (Name - Editor Suffix)
 {
 (Möbel)
 }
@@ -56630,19 +56765,19 @@ Wir brauchen einen Gefangenen.
 }
 
 STRING 18874
-// Units: h071 (Folter Table), Name (Name)
+// Units: h071 (Torture Table), Name (Name)
 {
 Foltertisch
 }
 
 STRING 18875
-// Units: h071 (Folter Table), Tip (Tooltip - Basic)
+// Units: h071 (Torture Table), Tip (Tooltip - Basic)
 {
 Foltertisch errichten
 }
 
 STRING 18876
-// Units: h071 (Folter Table), Ubertip (Tooltip - Extended)
+// Units: h071 (Torture Table), Ubertip (Tooltip - Extended)
 {
 Lasst es schmerzhaft sein!
 }
