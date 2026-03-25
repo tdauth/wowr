@@ -10596,7 +10596,7 @@ Trains Priests, Sorceresses, and Arch Clerics. |nAlso contains spell upgrades fo
 STRING 1819
 // Units: O01T (Warlock), Ubertip (Tooltip - Extended)
 {
-Powerful Warlock working under the tutelage of Kil'jaeden himself. Can learn Teleportation,  Summon Black Drakes, Find Artifacts, and Lich King. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warlock|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 1820
@@ -40518,7 +40518,7 @@ Cunning Hero, adept at range combat. Can learn Barrage, Searing Arrows, Trueshot
 STRING 8912
 // Units: U013 (Necromancer), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, particularly adept at cold magic. Can learn Raise Dead, Summon Meat Wagon, Skeletal Mastery and Summon Sapphiron. |n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 8913
@@ -66404,7 +66404,7 @@ Summon Lava Spawn
 STRING 27178
 // Units: Ogld (Warlock), Ubertip (Tooltip - Extended)
 {
-Powerful Warlock working under the tutelage of Kil'jaeden himself. Can learn Rain of Fire, Drain, Mana Shield and Finger of Death. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warlock|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 27179
@@ -66464,7 +66464,7 @@ Cunning Hero, adept at maneuvering through battles. Can learn Immolation, Evasio
 STRING 27188
 // Units: O00D (Far Seer), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, effective at ranged attacks and scouting. Can learn Chain Lightning, Far Sight, Feral Spirit and Earthquake. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 27189
@@ -67274,7 +67274,7 @@ Build Forge
 STRING 28013
 // Units: U01F (Banshee), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, particularly adept at cold magic. Can learn Curse, Anti-magic Shell, Scream and Charm. |n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Witch Doctor|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 28014
@@ -85130,7 +85130,7 @@ Craft Shadow Orb +6
 STRING 37892
 // Units: H0P2 (Acolyte), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Unsummon Buildings, Repair Aura and Shade Form. |n|n|cffffcc00Attacks land units.|r|n|cffffcc00Mount: Frost Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Tinker|n|cffffcc00Mount:|r Gargoyle|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/2.7|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 37893

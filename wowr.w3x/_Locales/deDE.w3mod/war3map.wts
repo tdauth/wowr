@@ -2712,33 +2712,33 @@ Night Elf and Undead AI cannot use housings. They need a bonus.
 
 STRING 456
 {
-- Quick start with -rs.
-- Warlords build a base and army, Freelancers level faster.
-- Get better items from quests and killing bosses.
-- Forge alliances via Warcraft's ally menu (F11) or chat commands.
-- Revive your dead heroes on Theramore.
-- Sell crafted items for gold.
-- Save your hero with "-save".
-- See quest markers with "-ping".
-- Play with Computer players.
-- SD graphics are recommended.
+- Schnellstart mit -rs.
+- Kriegsherren errichten eine Basis und bilden eine Armee aus, Freiberufler steigen schneller Stufen auf.
+- Erhaltet bessere Gegenstände durch Quests und die Tötung von Bossen.
+- Schmiedet Allianzen über das Allianzmenü von Warcraft (F11) oder Chat-Befehle.
+- Belebt eure toten Helden auf Theramore wieder.
+- Verkauft hergestellte Gegenstände für Gold.
+- Speichert eure Helden mit "-save".
+- Seht Quest-Markierungen mit "-ping".
+- Spielt mit Computer-Spielern.
+- SD-Grafikeinstellungen werden empfohlen.
 - Discord: discord.gg/eM34z36
 
-Please provide feedback and report any bugs.
-Testing: Runeblade14, Toasty, Deranor and others.
-Credits: Quest Log (F9).
+Bitte gebt Feedback und meldet sämtliche Fehler.
+Tests: Runeblade14, Toasty, Deranor und andere.
+Mitwirkende: Quest-Log (F9).
 }
 
 STRING 457
 // Upgrades: R019 (Burning Oil), Name (Name)
 {
-AI Gold Bonus
+KI-Goldbonus
 }
 
 STRING 458
 // Upgrades: R019 (Burning Oil), Tip (Tooltip)
 {
-AI Gold Bonus
+KI-Goldbonus
 }
 
 STRING 459
@@ -2754,9 +2754,9 @@ Zauberschild (einzigartig)
 }
 
 STRING 461
-// Abilities: A00X (Spell Damage Reduction (unique)), Name (Name)
+// Abilities: A00X (Zauberschadenreduzierung (unique)), Name (Name)
 {
-Spell Damage Reduction (einzigartig)
+Zauberschadenreduzierung (einzigartig)
 }
 
 STRING 462
@@ -2790,9 +2790,9 @@ Spiegelbild (einzigartig)
 }
 
 STRING 467
-// Abilities: A013 (Spell Damage Reduction (unique shield)), Name (Name)
+// Abilities: A013 (Zauberschadenreduzierung (einzigartiger Schild)), Name (Name)
 {
-Spell Damage Reduction (unique shield)
+Zauberschadenreduzierung (einzigartiger Schild)
 }
 
 STRING 468
@@ -5203,7 +5203,7 @@ Keine KI
 STRING 878
 // Upgrades: R019 (Burning Oil), Tip (Tooltip)
 {
-AI Gold Bonus Game Type Fast
+KI-Goldbonus Game Type Fast
 }
 
 STRING 879
@@ -5215,7 +5215,7 @@ Night Elf and Undead AI cannot use housings. They need a bonus.
 STRING 880
 // Upgrades: R019 (Burning Oil), Name (Name)
 {
-AI Gold Bonus Game Type Fast
+KI-Goldbonus Game Type Fast
 }
 
 STRING 881
@@ -10596,7 +10596,7 @@ Trains Priests, Zauberinnen, and Erzklerikers. |nAlso contains spell upgrades fo
 STRING 1819
 // Units: O01T (Warlock), Ubertip (Tooltip - Extended)
 {
-Powerful Hexenmeister working under the tutelage of Kil'jaeden himself. Can learn Teleportation,  Schwarzdrachen beschwören, Artefakte finden, and Lich-König. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Hexenmeister|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/1,8|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 1820
@@ -19719,7 +19719,7 @@ STRING 3940
 STRING 3941
 // Upgrades: R01C (Burning Oil), Tip (Tooltip)
 {
-AI Gold Bonus Game Type Fast
+KI-Goldbonus Game Type Fast
 }
 
 STRING 3945
@@ -19731,7 +19731,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 46|r]
 STRING 3946
 // Upgrades: R01C (Burning Oil), Name (Name)
 {
-AI Gold Bonus Game Type Fast
+KI-Goldbonus Game Type Fast
 }
 
 STRING 3947
@@ -28520,13 +28520,13 @@ STRING 5889
 }
 
 STRING 5890
-// Abilities: A0W2 (Spell Damage Reduction), Tip (Tooltip - Normal)
+// Abilities: A0W2 (Zauberschadenreduzierung), Tip (Tooltip - Normal)
 {
-Spell Damage Reduction
+Zauberschadenreduzierung
 }
 
 STRING 5891
-// Abilities: A0W2 (Spell Damage Reduction), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W2 (Zauberschadenreduzierung), Ubertip (Tooltip - Normal - Extended)
 {
 Reduces the taken spell damage <A0W2,DataB1,%> %.
 }
@@ -37262,7 +37262,7 @@ The Armorer uses his knowledge to create a Mythische goldene Rüstung.
 }
 
 STRING 8102
-// Abilities: A0ZJ (Spell Damage Reduction), EditorSuffix (Editor Suffix)
+// Abilities: A0ZJ (Zauberschadenreduzierung), EditorSuffix (Editor Suffix)
 {
 (Mythische goldene Rüstung)
 }
@@ -40519,7 +40519,7 @@ Ein listiger Held, adept at range combat. Can learn Sperrfeuer, Searing Pfeile, 
 STRING 8912
 // Units: U013 (Necromancer), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, particularly adept at cold magic. Can learn Tote erwecken, Fleischwagen beschwören, Skelett-Langlebigkeit and Sapphiron beschwören. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Nekromant|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3,4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 8913
@@ -47618,7 +47618,7 @@ STRING 11788
 }
 
 STRING 11789
-// Abilities: A0W2 (Spell Damage Reduction), EditorSuffix (Editor Suffix)
+// Abilities: A0W2 (Zauberschadenreduzierung), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -66405,7 +66405,7 @@ Lavabrut beschwören
 STRING 27178
 // Units: Ogld (Warlock), Ubertip (Tooltip - Extended)
 {
-Powerful Hexenmeister working under the tutelage of Kil'jaeden himself. Can learn Feuerregen, Drain, Manaschild and Finger of Death. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Hexenmeister|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/1.8|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 27179
@@ -66465,7 +66465,7 @@ Ein listiger Held, adept at maneuvering through battles. Can learn Feuerbrand, E
 STRING 27188
 // Units: O00D (Far Seer), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, effective at ranged attacks and scouting. Can learn Chain Lightning, Far Sight, Wildgeist and Earthquake. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Orc|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 27189
@@ -67275,7 +67275,7 @@ Schmiede errichten
 STRING 28013
 // Units: U01F (Banshee), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, particularly adept at cold magic. Can learn Fluch, Antimagie-Hülle, Schrei and Bezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Hexendoktor|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3,4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 28014
@@ -85131,7 +85131,7 @@ Schattenkugel +6 herstellen
 STRING 37892
 // Units: H0P2 (Acolyte), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Gebäude wegschickens, Reparaturaura and Schemengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Frost-Wyrm.|r|n|cffffcc00Standard Ability: Repair.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Tüftler|n|cffffcc00Reittier:|r Gargoyl|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2.7|n|cffffcc00Beweglichkeit:|r 13/1.5|n|cffffcc00Intelligenz:|r 17/2.7|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 37893
@@ -119096,7 +119096,7 @@ STRING 56863
 }
 
 STRING 56864
-// Abilities: A22L (Spell Damage Reduction), EditorSuffix (Editor Suffix)
+// Abilities: A22L (Zauberschadenreduzierung), EditorSuffix (Editor Suffix)
 {
 (Ysera's Heart)
 }
