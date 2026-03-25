@@ -4248,7 +4248,7 @@ Mystical Hero, supporting your army by reviving units and preventing enemy spell
 STRING 712
 // Units: U02U (Obsidian Statue), Ubertip (Tooltip - Extended)
 {
-Mechanical Hero, particularly adept at destroying magic. Can learn Rejuvenation, Orb of Annihilation, Absorb and Destroyer Form. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 713
@@ -14661,7 +14661,7 @@ Summon Blue Dragon
 STRING 2704
 // Units: U01G (Abomination), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, adept at crushing enemies. Can learn Cannibalize, Devour, Unholy Aura and Disease Cloud. |n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 26/3.2|n|cffffcc00Agility:|r 14/1.2|n|cffffcc00Intelligence:|r 14/1.6|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 2707
@@ -29061,7 +29061,7 @@ An ancient, bold, and courageous race descended from the earthen:|n- Collect mor
 STRING 5982
 // Units: U01E (Dreadlord), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at controlling combat. Can learn Raise Dead, Drain, Aura of Darkness, and Mass Sleep. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 20/2.5|n|cffffcc00Agility:|r 16/1|n|cffffcc00Intelligence:|r 18/2.5|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 5983
@@ -41772,7 +41772,7 @@ STRING 10094
 STRING 10097
 // Units: U00N (Death Knight), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Bash Unholy Aura, and Finger of Death. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction. Restricted to account Barade#2569.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Death Knight|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 23/2.7|n|cffffcc00Agility:|r 12/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction. Restricted to account Barade#2569.|r
 }
 
 STRING 10100
@@ -66452,7 +66452,7 @@ STRING 27185
 STRING 27186
 // Units: U00L (Dark Ranger), Ubertip (Tooltip - Extended)
 {
-Cunning Hero, adept at manipulating opponents. Can learn Silence, Black Arrow, Life Drain, and Charm. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Hunter|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/1.9|n|cffffcc00Agility:|r 19/1.5|n|cffffcc00Intelligence:|r 15/2.6|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 27187
@@ -66476,7 +66476,7 @@ STRING 27189
 STRING 27190
 // Units: U00J (Lich), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, particularly adept at cold magic. Can learn Frost Armor, Frost Nova, Dark Ritual and Death And Decay. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 14/1.6|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 27192
@@ -85994,7 +85994,7 @@ STRING 38167
 STRING 38168
 // Units: U01B (Necromancer), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, particularly adept at cold magic. Can learn Raise Dead, Summon Meat Wagon, Skeletal Mastery and Summon Sapphiron. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 38169
@@ -105422,7 +105422,7 @@ STRING 49514
 STRING 49515
 // Units: U01C (Death Knight), Ubertip (Tooltip - Extended)
 {
-Warrior Hero, evil counterpart to the Human Paladin. Can learn Death Coil, Death Pact, Unholy Aura, and Animate Dead. |n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Death Knight|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 23/2.7|n|cffffcc00Agility:|r 12/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
 
 STRING 49517

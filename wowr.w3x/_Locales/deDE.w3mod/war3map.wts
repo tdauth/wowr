@@ -4248,7 +4248,7 @@ Ein mystischer Held, supporting your army by reviving units and preventing enemy
 STRING 712
 // Units: U02U (Obsidian Statue), Ubertip (Tooltip - Extended)
 {
-Mechanical Hero, particularly adept at destroying magic. Can learn Verjüngung, Vernichtungskugel, Absorption and Zerstörergestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Nekromant|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3,4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 713
@@ -14661,7 +14661,7 @@ Blauen Großdrachen beschwören
 STRING 2704
 // Units: U01G (Abomination), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, adept at crushing enemies. Can learn Kannibalismus, Verschlingen, Unheilige Aura and Seuchenwolke. |n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Krieger|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 26/3,2|n|cffffcc00Beweglichkeit:|r 14/1,2|n|cffffcc00Intelligenz:|r 14/1,6|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 2707
@@ -29062,7 +29062,7 @@ An ancient, bold, and courageous race descended from the earthen:|n- Collect mor
 STRING 5982
 // Units: U01E (Dreadlord), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at controlling combat. Can learn Tote erwecken, Drain, Dunkelheits-Aura, and Massenschlaf. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Nekromant|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 20/2,5|n|cffffcc00Beweglichkeit:|r 16/1|n|cffffcc00Intelligenz:|r 18/2,5|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 5983
@@ -41773,7 +41773,7 @@ STRING 10094
 STRING 10097
 // Units: U00N (Death Knight), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, evil counterpart to the Human Paladin. Can learn Todesmantel, Hieb Unheilige Aura, and Finger of Death. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Todesritter|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 23/2,7|n|cffffcc00Beweglichkeit:|r 12/1,5|n|cffffcc00Intelligenz:|r 17/1,8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
 }
 
 STRING 10100
@@ -66453,7 +66453,7 @@ STRING 27185
 STRING 27186
 // Units: U00L (Dark Ranger), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, adept at manipulating opponents. Can learn Stille, Schwarzer Pfeil, Lebensauger, and Bezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Jäger|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Beweglichkeit|n|cffffcc00Kraft:|r 18/1,9|n|cffffcc00Beweglichkeit:|r 19/1,5|n|cffffcc00Intelligenz:|r 15/2,6|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 27187
@@ -66477,7 +66477,7 @@ STRING 27189
 STRING 27190
 // Units: U00J (Lich), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, particularly adept at cold magic. Can learn Frost-Rüstung, Frost-Nova, Dark Ritual and Death And Decay. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Necromant|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 14/1,6|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3,4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 27192
@@ -85995,7 +85995,7 @@ STRING 38167
 STRING 38168
 // Units: U01B (Necromancer), Ubertip (Tooltip - Extended)
 {
-Ein mystischer Held, particularly adept at cold magic. Can learn Tote erwecken, Fleischwagen beschwören, Skelett-Langlebigkeit and Sapphiron beschwören. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Nekromant|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3,4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 38169
@@ -105423,7 +105423,7 @@ STRING 49514
 STRING 49515
 // Units: U01C (Death Knight), Ubertip (Tooltip - Extended)
 {
-Ein Kriegerheld, evil counterpart to the Human Paladin. Can learn Todesmantel, Todespakt, Unheilige Aura, and Animate Dead. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
+|cffffcc00Volk:|r Untote|n|cffffcc00Klasse:|r Todesritter|n|cffffcc00Reittier:|r Frost-Wyrm|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 23/2,7|n|cffffcc00Beweglichkeit:|r 12/1,5|n|cffffcc00Intelligenz:|r 17/1,8|n|n|cffffcc00Greift Land-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
 STRING 49517
