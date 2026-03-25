@@ -882,6 +882,7 @@ StringList {
     STATS_LEFT                         "%1% (verlassen)",
     STATS_DEFEATED                     "%1% (besiegt)",
     // AI UI
+    AI_HOST_CHOOSES                    "Der Host %1% muss die Einstellungen für die Computer-Spieler vornehmen.",
     AI_UI_TITLE                        "Computer-Spieler (%1%/%2%)",
     COLOR                              "Farbe",
     LOCATION_WARLORD_ONLY              "Ort (nur Kriegsherr)",

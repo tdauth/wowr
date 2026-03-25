@@ -882,6 +882,7 @@ StringList {
     STATS_LEFT                         "%1% (left)",
     STATS_DEFEATED                     "%1% (defeated)",
     // AI UI
+    AI_HOST_CHOOSES                    "The host %1% has to apply settings for Computer players.",
     AI_UI_TITLE                        "Computer Players (%1%/%2%)",
     COLOR                              "Color",
     LOCATION_WARLORD_ONLY              "Location (Warlord only)",
@@ -933,12 +934,10 @@ StringList {
     SETTINGS_TOMES                     "- Tomes: %1%",
     SETTINGS_CINEMATICS                "- Cinematics: %1%",
     SETTINGS_AI_RESPAWN                "- AI Respawn: %1%",
-    SETTINGS_LEGION                    "- The Burning Legion: %1%",
     SETTINGS_VICTORY                   "- Victory: %1%",
     SETTINGS_SEASONS                   "- Seasons: %1%",
     SETTINGS_CHEATS                    "- Cheats: %1%",
     SETTINGS_BUILDER                   "- Builder: %1%",
-    SETTINGS_PORTALS                   "- Portals: %1%",
     // News UI
     NEWS                               "News",
     COLON_SUBSCRIBE_VIP                "Subscribe (VIP):",
@@ -1133,10 +1132,6 @@ StringList {
     ACCEPT_HINT                        "Click on Accept in the tavern Start Game to apply your selection for the game.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Area is protected by an Antimagic Ward.",
-    // Alliance with the Burning Legion
-    ALLIANCE_THE_BURNING_LEGION_COLON  "Alliance with the Burning Legion:",
-    ALLIANCE_THE_BURNING_LEGION_START  "The alliance between The Burning Legion and %1% has started for %2% minutes!",
-    ALLIANCE_THE_BURNING_LEGION_END    "The alliance between The Burning Legion and %1% has ended!",
     // Taunts
     TAUNTS                             "Taunts",
     TAUNTS_DESCRIPTION                 "Taunts can be used to send sounds with chat commands to other players.",
@@ -1245,8 +1240,6 @@ StringList {
     NO_AI_RESPAWN                      "No AI Respawn",
     STATS                              "Stats",
     NO_STATS                           "No Stats",
-    THE_BURNING_LEGION                 "The Burning Legion",
-    NO_BURNING_LEGION                  "No Burning Legion",
     BUILDER                            "Builder",
     NO_BUILDER                         "No Builder",
     AMBIENT_SOUND                      "Ambient Sound",
@@ -1291,8 +1284,6 @@ StringList {
     REVEAL                             "Reveal",
     NO_CHEATS                          "No Cheats",
     CHEATS                             "Cheats",
-    NO_PORTALS                         "No Portals",
-    PORTALS                            "Portals",
     // Tiles
     TILE_DIRT                          "Dirt",
     TILE_ROUGH_DIRT                    "Rough Dirt",
@@ -1786,7 +1777,6 @@ StringList {
     CC_RESOURCES_INFO                  "'-resinfo/-resourcesinfo': Shows the resource information about the first selected unit.",
     CC_SAVE_CODES                      "'-savecodes/-nosavecodes': Enables/disables savecodes for all players.",
     CC_STATS                           "'-stats'/'-nostats': Enables/disables stats.",
-    CC_LEGION                          "'-legion'/'-nolegion': Enables/disables The Burning Legion.",
     CC_ACHIEVEMENTS                    "'-achievements': Lists all available achievements with your score.",
     CC_STR                             "'-str X': Skills X strength. Skills max strength if empty.",
     CC_AGI                             "'-agi X': Skills X agility. Skills max agility if empty.",
@@ -1833,7 +1823,6 @@ StringList {
     CC_WATER_RED                       "'-waterred': Changes the color of water to red.",
     CC_FOG                             "'-fog'/'-nofog': Enables/disables visibility of fog.",
     CC_REVEAL                          "'-reveal'/'-noreveal': Enables/disables complete map visibility.",
-    CC_PORTALS                         "'-portals'/'-noportals': Enables/disables neutral portals.",
     CC_CHEATS                          "'-cheats'/'-nocheats': Enables/disables cheat chat commands.",
     CC_RESET_REVOLUTION                "'-resetevolution X': Resets level of research Evolution back to X.",
     // Info Quests
@@ -1867,7 +1856,7 @@ StringList {
     IQ_KNOWN_ISSUES_7                  "Loading save games might crash because of string literals longer than 1023 characters.",
     IQ_KNOWN_ISSUES_8                  "Tooltips of passive abillities are not updated.",
     IQ_FACTIONS_TITLE                  "Factions",
-    IQ_FACTIONS_DESCRIPTION            "Factions consist of multiple races which allied for a common goal. The two game lobby teams represent the two major factions Alliance and Horde. Players from the same faction are allied by default. The faction The Burning Legion fights against all players. The faction Rescuable allows rescuing respawning units.",
+    IQ_FACTIONS_DESCRIPTION            "Factions consist of multiple races which allied for a common goal. The two game lobby teams represent the two major factions Alliance and Horde. Players from the same faction are allied by default. The faction Bosses fights against all players. The faction Rescuable allows rescuing respawning units.",
     IQ_FACTIONS_0                      "Races belong to one faction or are neutral.",
     IQ_GAME_MODES_TITLE                "Game Modes",
     IQ_GAME_MODES_DESCRIPTION          "You can choose one of two game modes after the hero selection. As a warlord you play partly in the strategy mode and can build a base. This has the advantage that you have mostly a bigger army than other players. On the other hand, as a freelancer your hero starts with +15 points on all attributes and your hero gets 30% more experience from killing hostile units. Freelancers can see neutral buildings from start.",
@@ -1876,7 +1865,6 @@ StringList {
     IQ_PLAYERS_TITLE                   "Players",
     IQ_PLAYERS_DESCRIPTION             "Players own heroes, units, buildings and resources. The number of players is determined in the game lobby. Computer players play with Warcraft's AI. Empty slots will not be playing. Users can leave at any time during a game. Users can also be kicked from games by votes.One single player is the host.The ownership of units can be transfered to other players using spells like Charm or chat commands. Players can use their save codes to to save/load data during a game. There are several fixed Computer players which cannot be changed in the game lobby. Alliances between players are preset by their game lobby team. Alliances can be changed during the game using chat commands.",
     IQ_PLAYERS_RESCUABLE               "Fixed Computer player Rescuable allows rescuing units.",
-    IQ_PLAYERS_LEGION                  "Player The Burning Legion plays with Demon AI at Archimonde's realm.",
     IQ_PLAYERS_BOSSES                  "Player Bosses owns all bosses and is allied with all creeps.",
     IQ_PLAYERS_NEUTRAL_HOSTILE         "Player Neutral Hostile owns all creeps and is allied with all bosses.",
     IQ_PLAYERS_NEUTRAL_PASSIVE         "Player Neutral Passive owns all NPCs and neutral buildings.",
