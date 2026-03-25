@@ -2069,6 +2069,18 @@ STRING 345
 Arcanist
 }
 
+STRING 346
+// Units: Udea (Death Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Death Knight|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 23/2.7|n|cffffcc00Agility:|r 12/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 347
+// Units: U02U (Obsidian Statue), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
+}
+
 STRING 348
 {
 Properties
@@ -4147,6 +4159,7 @@ STRING 694
 }
 
 STRING 695
+// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
@@ -4206,11 +4219,7 @@ Convert Into Furbolg
 }
 
 STRING 705
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 706
+// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -4246,7 +4255,7 @@ Mystical Hero, supporting your army by reviving units and preventing enemy spell
 }
 
 STRING 712
-// Units: U02U (Obsidian Statue), Ubertip (Tooltip - Extended)
+// Units: Ulic (Lich), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
 }
@@ -4408,7 +4417,7 @@ STRING 738
 }
 
 STRING 739
-// Units: Obla (Blademaster), Ubertip (Tooltip - Extended)
+// Units: O09O (Raider), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
@@ -5859,10 +5868,16 @@ STRING 988
 Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
 }
 
-STRING 989
-// Units: Ofar (Far Seer), Ubertip (Tooltip - Extended)
+STRING 990
+// Units: Udre (Dreadlord), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Race:|r Demon|n|cffffcc00Class:|r Death Knight|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 20/2.5|n|cffffcc00Agility:|r 16/1|n|cffffcc00Intelligence:|r 18/2.5|n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 991
+// Units: U01G (Abomination), Ubertip (Tooltip - Extended)
+{
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 26/3.2|n|cffffcc00Agility:|r 14/1.2|n|cffffcc00Intelligence:|r 14/1.6|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 993
@@ -10059,12 +10074,6 @@ STRING 1719
 Warrior Hero, adept at summoning beasts into battle. Can learn Storm Bolt, War Stomp, Bash, and Avatar. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 1720
-// Units: O09O (Raider), Ubertip (Tooltip - Extended)
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 1721
 // Units: O09P (Fel Raider), Ubertip (Tooltip - Extended)
 {
@@ -10594,7 +10603,7 @@ Trains Priests, Sorceresses, and Arch Clerics. |nAlso contains spell upgrades fo
 }
 
 STRING 1819
-// Units: O01T (Warlock), Ubertip (Tooltip - Extended)
+// Units: Ogld (Warlock), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warlock|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
@@ -14659,7 +14668,7 @@ Summon Blue Dragon
 }
 
 STRING 2704
-// Units: U01G (Abomination), Ubertip (Tooltip - Extended)
+// Units: Ucrl (Crypt Lord), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Undead|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 26/3.2|n|cffffcc00Agility:|r 14/1.2|n|cffffcc00Intelligence:|r 14/1.6|n|n|cffffcc00Attacks land units.|r
 }
@@ -66402,7 +66411,7 @@ Summon Lava Spawn
 }
 
 STRING 27178
-// Units: Ogld (Warlock), Ubertip (Tooltip - Extended)
+// Units: O01T (Warlock), Ubertip (Tooltip - Extended)
 {
 |cffffcc00Race:|r Orc|n|cffffcc00Class:|r Warlock|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 22/2.7|n|cffffcc00Agility:|r 13/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Bonus hero requires level 40. Use -unlock to disable this restriction.|r
 }
