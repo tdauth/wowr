@@ -1130,6 +1130,7 @@ StringList {
     NO_CLAN_ISLAND                     "Sie müssen Mitglied des clans TheElvenClan sein, um auf der Clan-Insel zu starten.",
     YOU_ARE_CARRYING_NOW_THE_X         "Sie tragen nun das %1%.",
     ACCEPT_HINT                        "Klicken Sie auf Akzeptieren in der Taverne Spiel starten, um Ihre Auswahl für das Spiel zu übernehmen.",
+    GIVE_X_TO_Y                        "Gebe %1% an %2%.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt.",
     // Taunts
