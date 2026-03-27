@@ -3446,6 +3446,13 @@ globals
     constant integer COW                                             = 'n0DX'
     constant integer CHICKEN                                         = 'nech'
 
+    constant integer PUMPKIN_SEED                                    = 'o0AL'
+    constant integer APPLE_TREE                                      = 'o034'
+    constant integer PLUM_TREE                                       = 'o03K'
+    constant integer CHERRY_TREE                                     = 'o035'
+    constant integer STRAWBERRY_BUSH                                 = 'o036'
+    constant integer BEEHIVE                                         = 'n09H'
+
     // Tamer
     constant integer ITEM_SMALL_BAIT                                 = 'I0L4' // novice
     constant integer ITEM_BAIT                                       = 'I0L5' // advanced
@@ -3687,6 +3694,8 @@ globals
     constant integer ITEM_PLUM                                       = 'I0FP'
     constant integer ITEM_PUMPKIN                                    = 'I140'
     constant integer ITEM_WOOL                                       = 'I0FZ'
+    constant integer ITEM_HONEYCOMB                                  = 'I0KM'
+    constant integer ITEM_STRAWBERRY                                 = 'I0FE'
 
     // Tomes
     constant integer TOME_OF_RETRAINING                              = 'tret'

@@ -1,14 +1,16 @@
-library WoWReforgedEnslave requires Utilities
+library WoWReforgedEnslave initializer Init requires Utilities
 
 globals
     constant integer UNIT_TYPE_ID = 'h05T'
+
+    private trigger deathTrigger = CreateTrigger()
 endglobals
 
 private function FilterIsTownHall takes nothing returns boolean
     return IsUnitType(GetFilterUnit(), UNIT_TYPE_TOWNHALL)
 endfunction
 
-function Enslave takes unit whichUnit, unit killer returns nothing
+private function Enslave takes unit whichUnit, unit killer returns nothing
     local group g = CreateGroup()
     local unit townHall = null
     local unit slave = null
@@ -24,6 +26,22 @@ function Enslave takes unit whichUnit, unit killer returns nothing
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
+endfunction
+
+private function HasEnslavementAbility takes unit whichUnit returns boolean
+    return GetUnitAbilityLevel(whichUnit, 'A030') > 0 or GetUnitAbilityLevel(whichUnit, 'A03J') > 0 or GetUnitAbilityLevel(whichUnit, 'A0KD') > 0
+endfunction
+
+private function TriggerConditionDeath takes nothing returns boolean
+    if (GetKillingUnit() != null and IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and not  IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and GetOwningPlayer(GetTriggerUnit()) != GetOwningPlayer(GetKillingUnit()) and HasEnslavementAbility(GetKillingUnit())) then
+        call Enslave(GetTriggerUnit(), GetKillingUnit())
+    endif
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
 endfunction
 
 endlibrary
