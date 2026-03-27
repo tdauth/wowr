@@ -3339,18 +3339,23 @@ globals
     // adept is 2 goblin sappers
     constant integer ITEM_EXPLOSIVE_BARRELS                          = 'I19B' // advanced
     constant integer ITEM_GOBLIN_GRENADES                            = 'I137' // advanced
+    constant integer ITEM_GOBLIN_BURNING_GRENADES                    = 'I136' // advanced
     constant integer ITEM_GOBLIN_LAND_MINES                          = 'gobm' // novice
 
     constant integer GOBLIN_LAND_MINE                                = 'nglm'
     constant integer EXPLOSIVE_BARREL                                = 'n0LH'
 
     // Lore Master
-    constant integer ITEM_ANKH_OF_REINCARNATION                      = 'ankh' // master
-    constant integer ITEM_SCROLL_OF_RESURRECTION                     = 'srrc' // adept
-    constant integer ITEM_SCROLL_OF_RESTORATION                      = 'sres' // advanced
+    constant integer ITEM_ANKH_OF_REINCARNATION                      = 'ankh' // doctor
+    constant integer ITEM_SCROLL_OF_RESURRECTION                     = 'srrc' // grand master
+    constant integer ITEM_ARCANE_SCROLL                              = 'arsc' // master
+    constant integer ITEM_SCROLL_OF_RESTORATION                      = 'sres' // adept
+    constant integer ITEM_SCROLL_OF_THE_BEAST                        = 'sror' // advanced
     constant integer ITEM_SCROLL_OF_PROTECTION                       = 'spro' // novice
 
     // Sorcerer
+    constant integer ITEM_WAND_OF_TELEKINESIS                        = 'I0XW' // doctor
+    constant integer ITEM_WAND_OF_SHADOWSIGHT                        = 'wshs' // grand master
     constant integer ITEM_WAND_OF_SORCERER_ILLUSION                  = 'I039' // master
     constant integer ITEM_WAND_OF_REANIMATION                        = 'I038' // adept
     constant integer ITEM_WAND_OF_THE_WIND                           = 'wcyc' // advanced
@@ -3384,17 +3389,28 @@ globals
     // Enchanter
     constant integer ITEM_DOCTOR_ENCHANTING_FORMULA                  = 'I15S' // doctor
     constant integer ITEM_GRAND_MASTER_ENCHANTING_FORMULA            = 'I15R' // grand master
+    constant integer ITEM_MASTER_ENCHANTING_FORMULA                  = 'I07J' // master
+    constant integer ITEM_ADEPT_ENCHANTING_FORMULA                   = 'I07I' // adept
+    constant integer ITEM_ADVANCED_ENCHANTING_FORMULA                = 'I07H' // advanced
+    constant integer ITEM_NOVICE_ENCHANTING_FORMULA                  = 'I07F' // novice
 
     // Captain
-    // TODO Add item types.
     constant integer SHIPYARD                                        = 'h0AT' // doctor
     constant integer ITEM_SHIPYARD                                   = 'I19D' // doctor
     constant integer CANNON                                          = 'h0AU' // doctor shipyard
+    constant integer ITEM_NAVIGATION_WHEEL                           = 'I086' // master
+    constant integer ITEM_COMPASS                                    = 'I085' // adept
+    constant integer ITEM_TREASURE_MAP                               = 'I083' // advanced
+    constant integer ITEM_CAPTAIN_SHIP                               = 'I082' // novice
 
     // Archaeologist
     constant integer EXCAVATION_SITE                                 = 'n0M2' // doctor
     constant integer ITEM_EXCAVATION_SITE                            = 'I160' // doctor
-    // TODO Add item types.
+    constant integer ITEM_RANDOM_8                                   = 'I15Z' // grand master
+    constant integer ITEM_RANDOM_7                                   = 'I0IH' // master
+    constant integer ITEM_RANDOM_5                                   = 'I0IG' // adept
+    constant integer ITEM_RANDOM_3                                   = 'I0IF' // advanced
+    constant integer ITEM_RANDOM_1                                   = 'I0I6' // novice
 
     // Witch Doctor
     constant integer ITEM_PEACE_WARDS                                = 'I0R4' // doctor
@@ -3405,20 +3421,23 @@ globals
     constant integer ITEM_SENTRY_WARDS                               = 'wswd' // novice
 
     // Merchant
-    // TODO Add item types.
-    constant integer ITEM_AMULET_OF_HAGGLE                           = 'I18Y' // grand master
     constant integer ITEM_MERCHANT_SHOP                              = 'I18Z' // doctor
     constant integer MERCHANT_SHOP                                   = 'h0AR' // doctor
+    constant integer ITEM_AMULET_OF_HAGGLE                           = 'I18Y' // grand master
+    constant integer ITEM_RING_OF_THE_TRADING_GUILD                  = 'I0D6' // master
+    constant integer ITEM_LARGE_BILL                                 = 'I0D5' // adept
+    constant integer ITEM_BILL                                       = 'I0D4' // advanced
+    constant integer ITEM_SMALL_BILL                                 = 'I0D3' // novice
 
     // Farmer
     constant integer FARM_FARMER                                     = 'h0KW'
-    constant integer ITEM_TINY_FARM_FARMER                           = 'I0JU'
-    constant integer GRANARY                                         = 'h0M7'
-    constant integer ITEM_TINY_GRANARY                               = 'I0KA'
+    constant integer ITEM_TINY_FARM_FARMER                           = 'I0JU' // novice
     constant integer WATER_SUPPLY                                    = 'h0KX'
-    constant integer ITEM_TINY_WATER_SUPPLY                          = 'I0JW'
+    constant integer ITEM_TINY_WATER_SUPPLY                          = 'I0JW' // advanced
+    constant integer GRANARY                                         = 'h0M7'
+    constant integer ITEM_TINY_GRANARY                               = 'I0KA' // adept
     constant integer WIND_MILL                                       = 'h0M8'
-    constant integer ITEM_TINY_WIND_MILL                             = 'I0KB'
+    constant integer ITEM_TINY_WIND_MILL                             = 'I0KB' // master
     constant integer ANIMAL_PEN_FARMER                               = 'h0AN' // grand master
     constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G' // grand master
     constant integer BARN                                            = 'h0AS' // doctor
@@ -3428,54 +3447,58 @@ globals
     constant integer CHICKEN                                         = 'nech'
 
     // Tamer
-    constant integer ITEM_SMALL_BAIT                                 = 'I0L4' // rank 1
-    constant integer ITEM_BAIT                                       = 'I0L5' // rank 2
-    constant integer ITEM_ADVANCED_BAIT                              = 'I0L6' // rank 3
-    constant integer ITEM_MONSTER_LURE                               = 'I0L2' // rank 4
+    constant integer ITEM_SMALL_BAIT                                 = 'I0L4' // novice
+    constant integer ITEM_BAIT                                       = 'I0L5' // advanced
+    constant integer ITEM_ADVANCED_BAIT                              = 'I0L6' // adept
+    constant integer ITEM_MONSTER_LURE                               = 'I0L2' // master
     constant integer ITEM_SCROLL_OF_CHARM                            = 'I19R' // grand master
     constant integer ITEM_CAGE                                       = 'I19S' // doctor
     constant integer CAGE_TAMER                                      = 'h0AV' // doctor
 
     // Inscriptor
-    constant integer ITEM_DOCTOR_GLYPH                               = 'I15X'
-    constant integer ITEM_GRAND_MASTER_GLYPH                         = 'I15W'
-    constant integer ITEM_MASTER_GLYPH                               = 'I0NR'
-    constant integer ITEM_ADVANCED_GLYPH                             = 'I0NQ'
-    constant integer ITEM_ADEPT_GLYPH                                = 'I0NP'
-    constant integer ITEM_NOVICE_GLYPH                               = 'I0NO'
+    constant integer ITEM_DOCTOR_GLYPH                               = 'I15X' // doctor
+    constant integer ITEM_GRAND_MASTER_GLYPH                         = 'I15W' // grand master
+    constant integer ITEM_MASTER_GLYPH                               = 'I0NR' // master
+    constant integer ITEM_ADVANCED_GLYPH                             = 'I0NQ' // adept
+    constant integer ITEM_ADEPT_GLYPH                                = 'I0NP' // advanced
+    constant integer ITEM_NOVICE_GLYPH                               = 'I0NO' // novice
 
     // Necromancer
-    constant integer ITEM_ROD_OF_NECROMANCY                          = 'rnec' // rank 1
-    constant integer ITEM_WAND_OF_CORPSES                            = 'I0S9' // rank 2
-    constant integer ITEM_SACRIFICAL_SCULL                           = 'skul' // rank 3
-    constant integer ITEM_BOOK_OF_THE_DEAD                           = 'fgsk' // rank 4
-    constant integer ITEM_SCROLL_OF_ANIMATE_DEAD                     = 'sand' // rank 5
-    constant integer ITEM_TINY_NECROMANCER_GRAVEYARD                 = 'I110' // rank 6
+    constant integer ITEM_ROD_OF_NECROMANCY                          = 'rnec' // novice
+    constant integer ITEM_WAND_OF_CORPSES                            = 'I0S9' // advanced
+    constant integer ITEM_SACRIFICAL_SCULL                           = 'skul' // adept
+    constant integer ITEM_BOOK_OF_THE_DEAD                           = 'fgsk' // master
+    constant integer ITEM_SCROLL_OF_ANIMATE_DEAD                     = 'sand' // grand master
+    constant integer ITEM_TINY_NECROMANCER_GRAVEYARD                 = 'I110' // doctor
     constant integer NECROMANCER_GRAVEYARD                           = 'u038'
     constant integer NECROMANCER_MEAT_WAGON                          = 'u03M'
 
     // Golem Sculptor
-    constant integer ITEM_TINY_MUD_GOLEM                             = 'I0SJ' // rank 1
-    constant integer ITEM_TINY_WAR_GOLEM                             = 'I0SL' // rank 2
-    constant integer ITEM_TINY_SIEGE_GOLEM                           = 'I0SK' // rank 3
-    constant integer ITEM_TINY_FLESH_GOLEM                           = 'I0SM' // rank 4
-    constant integer ITEM_TINY_DIVINE_GOLEM                          = 'I186' // rank 5
-    constant integer ITEM_TINY_GOLEM_FACTORY                         = 'I185' // rank 6
+    constant integer ITEM_TINY_MUD_GOLEM                             = 'I0SJ' // novice
+    constant integer ITEM_TINY_WAR_GOLEM                             = 'I0SL' // advanced
+    constant integer ITEM_TINY_SIEGE_GOLEM                           = 'I0SK' // adept
+    constant integer ITEM_TINY_FLESH_GOLEM                           = 'I0SM' // master
+    constant integer ITEM_TINY_DIVINE_GOLEM                          = 'I186' // grand master
+    constant integer ITEM_TINY_GOLEM_FACTORY                         = 'I185' // doctor
 
     constant integer GOLEM_FACTORY                                   = 'n0O6'
     constant integer DIVINE_GOLEM_GOLEM_SCULPTOR                     = 'n0O7'
 
     // Combiner
     // TODO Add item types.
-    constant integer ITEM_MASTER_COMBINATION_TOOL                    = 'I0T9'
-    constant integer ITEM_ADVANCED_COMBINATION_TOOL                  = 'I0T8'
-    constant integer ITEM_COMBINATION_TOOL                           = 'I0T7'
-    constant integer ITEM_SMALL_COMBINATION_TOOL                     = 'I0T5'
+    constant integer ITEM_MASTER_COMBINATION_TOOL                    = 'I0T9' // master
+    constant integer ITEM_ADVANCED_COMBINATION_TOOL                  = 'I0T8' // adept
+    constant integer ITEM_COMBINATION_TOOL                           = 'I0T7' // advanced
+    constant integer ITEM_SMALL_COMBINATION_TOOL                     = 'I0T5' // novice
 
     // Hunter
     constant integer HUNTING_CAMP                                    = 'n0OF' // doctor
     constant integer ITEM_HUNTING_CAMP                               = 'I194' // doctor
     constant integer HUNTING_HAWK                                    = 'n0OG' // grand master
+    constant integer ITEM_BEAR_TRAP                                  = 'I0VV' // master
+    constant integer ITEM_HUNTING_DOG_CAGE                           = 'I0VX' // adept
+    constant integer ITEM_SKINNING_RACKS                             = 'I0VW' // advanced
+    constant integer ITEM_HUNTING_BOW                                = 'I0VR' // novice
 
     // Critters
     constant integer STAG                                            = 'nder'
@@ -3535,62 +3558,86 @@ globals
     constant integer ITEM_TURTLE_SHELL                               = 'I19V'
 
     // Miner
-    constant integer ITEM_PICKAXE                                    = 'I0W7'
+    constant integer ITEM_MINES                                      = 'I0W8' // master
+    constant integer ITEM_DIAMOND                                    = 'I0OI' // adept
+    constant integer ITEM_RANDOM_ORE                                 = 'I0W9' // advanced
+    constant integer ITEM_PICKAXE                                    = 'I0W7' // novice
 
     // Cook
+    constant integer ITEM_FRUIT_STAND                                = 'I0WV' // grand master
+    constant integer ITEM_RECIPE                                     = 'I0XC' // master
+    constant integer ITEM_RANDOM_INGREDIENT                          = 'I0XB' // adept
+    constant integer ITEM_KITCHEN_KNIFE                              = 'I0XA' // advanced
     constant integer FIRE_PIT_COOK                                   = 'h0U1'
-    constant integer ITEM_FIRE_PIT                                   = 'I0WO'
+    constant integer ITEM_FIRE_PIT                                   = 'I0WO' // novice
 
     // Fisherman
-    constant integer ITEM_FISHING_PORT                               = 'I0WY'
+    constant integer ITEM_FISHING_PORT                               = 'I0WY' // novice
     constant integer FISHING_PORT                                    = 'h0U2'
-    constant integer ITEM_FISH_MARKET                                = 'I0X8'
+    constant integer ITEM_FISH_TRAP                                  = 'I0Q2' // advanced
+    constant integer ITEM_FISHING_ROD                                = 'I0X9' // adept
+    constant integer ITEM_FISH_MARKET                                = 'I0X8' // master
     constant integer FISH_MARKET_FISHERMAN                           = 'n0J8'
     // TODO Add item types.
 
     // Prospector
-    constant integer ITEM_GOLD_DRILL                                 = 'I11X'
+    constant integer ITEM_GOLD_DRILL                                 = 'I11X' // novice
+    constant integer ITEM_MAGICAL_GOLD_COIN                          = 'I120' // advanced
     constant integer GOLD_PANNING                                    = 'h0XX'
-    constant integer ITEM_TINY_GOLD_PANNING                          = 'I11Y'
+    constant integer ITEM_GOLD_PANNING                               = 'I11Y' // master
 
     // Lumberjack
+    constant integer ITEM_FELLING_AXE                                = 'I0XO' // novice
+    constant integer ITEM_MAGICAL_SEED                               = 'I00V' // adept
+    constant integer ITEM_BUNDLE_OF_LUMBER                           = 'lmbr' // adept
+    constant integer ITEM_MAGICAL_CUTTER                             = 'I02V' // adept
     constant integer SAWMILL                                         = 'h0UH'
-    constant integer ITEM_TINY_SAWMILL                               = 'I0XN'
+    constant integer ITEM_SAWMILL                                    = 'I0XN' // master
 
     // Warlock
-    constant integer ITEM_WAND_OF_DRAIN                              = 'I0YH' // rank 1
-    constant integer ITEM_INFERNO_STONE                              = 'infs' // rank 2
-    constant integer ITEM_DEMON_BLOOD                                = 'I0Y7' // rank 3
-    constant integer ITEM_TINY_DEMON_GATE                            = 'I0YG' // rank 4
+    constant integer ITEM_WAND_OF_DRAIN                              = 'I0YH' // novice
+    constant integer ITEM_INFERNO_STONE                              = 'infs' // advanced
+    constant integer ITEM_DEMON_BLOOD                                = 'I0Y7' // adept
+    constant integer ITEM_TINY_DEMON_GATE                            = 'I0YG' // master
     constant integer ITEM_SPIKED_COLLAR                              = 'fgfh' // grand master
     constant integer ITEM_DEMONIC_FIGURE                             = 'fgdg' // grand master
     constant integer ITEM_TINY_FEL_FOUNTAIN                          = 'I15Y' // doctor
     constant integer FEL_FOUNTAIN_WARLOCK                            = 'n0M0'
 
     // Thief
+    constant integer ITEM_LOCK_PICK                                  = 'I0DF' // novice
+    constant integer ITEM_ITEM_LOCKER                                = 'I09H' // advanced
     constant integer SAFE                                            = 'h0OH'
-    constant integer ITEM_TINY_SAFE                                  = 'I0FN'
+    constant integer ITEM_TINY_SAFE                                  = 'I0FN' // adept
+    constant integer ITEM_LOCKED_ITEM_SUMMONER                       = 'I09M' // master
+    constant integer ITEM_PICKPOCKETING                              = 'I03F' // grand master
     constant integer THIEVES_GUILD_THIEF                             = 'n076'
-    constant integer ITEM_TINY_THIEVES_GUILD_THIEF                   = 'I10R'
+    constant integer ITEM_TINY_THIEVES_GUILD_THIEF                   = 'I10R' // doctor
 
     // Astromancer
-    constant integer ITEM_NAVIGATION_SCROLL                          = 'I12V'
-    constant integer ITEM_TINY_PORTAL_ASTROMANCER                    = 'I12W'
-    constant integer ITEM_FLARE_GUN                                  = 'fgun'
-    constant integer ITEM_METEOR_STONE                               = 'I12U'
+    constant integer ITEM_NAVIGATION_SCROLL                          = 'I12V' // novice
+    constant integer ITEM_TINY_PORTAL_ASTROMANCER                    = 'I12W' // novice
+    constant integer ITEM_FLARE_GUN                                  = 'fgun' // advanced
+    constant integer ITEM_ESCAPE_PORTAL                              = 'I0CO' // advanced
+    constant integer ITEM_METEOR_STONE                               = 'I12U' // adept
+    constant integer ITEM_SCROLL_OF_TOWN_PORTAL                      = 'stwp' // adept
     constant integer ARCANE_OBSERVATORY_ASTROMANCER                  = 'n0MO'
-    constant integer ITEM_TINY_ARCANE_OBSERVATORY_ASTROMANCER        = 'I12Z'
+    constant integer ITEM_ARCANE_OBSERVATORY_ASTROMANCER             = 'I12Z' // master
     constant integer MOON                                            = 'n0OL' // grand master
     constant integer ITEM_MOON                                       = 'I19F' // grand master
+    constant integer ITEM_MOONSTONE                                  = 'moon' // grand master
     constant integer STAR                                            = 'n0OK' // doctor
     constant integer ITEM_STAR                                       = 'I19E' // doctor
+    constant integer ITEM_SUNSTONE                                   = 'I0OW' // doctor
 
     // Bard
-    // TODO Add item types.
     constant integer RECORD_PLAYER                                   = 'h0G0'
-    constant integer ITEM_RECORD_PLAYER                              = 'I14Q'
+    constant integer ITEM_RECORD_PLAYER                              = 'I14Q' // master
     constant integer MUSIC_STORM_EARTH_FIRE                          = 'h0G3'
     constant integer STOP_MUSIC                                      = 'h0G4'
+    constant integer ITEM_POEM                                       = 'I14S' // advanced
+    constant integer ITEM_FLUTE                                      = 'I14R' // adept
+    constant integer ITEM_SONG                                       = 'I14I' // novice
 
     // All Races Engineer
     constant integer CHEST                                           = 'h0Y9'
@@ -3645,26 +3692,26 @@ globals
     constant integer TOME_OF_RETRAINING                              = 'tret'
     constant integer TOME_OF_AGILITY                                 = 'tdex'
     constant integer TOME_OF_AGILITY_2                               = 'tdx2'
-    constant integer TOME_OF_EXPERIENCE                              = 'texp'
-    constant integer TOME_OF_GREATER_EXPERIENCE                      = 'tgxp'
+    constant integer TOME_OF_EXPERIENCE                              = 'texp' // master
+    constant integer TOME_OF_GREATER_EXPERIENCE                      = 'tgxp' // grand master
     constant integer TOME_OF_INTELLIGENCE                            = 'tint'
     constant integer TOME_OF_INTELLIGENCE_2                          = 'tin2'
-    constant integer TOME_OF_KNOWLEDGE                               = 'tpow'
+    constant integer TOME_OF_KNOWLEDGE                               = 'tpow' // novice
     constant integer TOME_OF_STRENGTH                                = 'tstr'
     constant integer TOME_OF_STRENGTH_2                              = 'tst2'
-    constant integer TOME_OF_POWER                                   = 'tkno'
-    constant integer TOME_OF_ARMOR                                   = 'I13G'
-    constant integer TOME_OF_DAMAGE                                  = 'I13E'
-    constant integer TOME_OF_MOVEMENT                                = 'I1A8'
-    constant integer TOME_OF_SIGHT                                   = 'I1A7'
-    constant integer TOME_OF_MAGIC                                   = 'I1A4'
+    constant integer TOME_OF_POWER                                   = 'tkno' // doctor
+    constant integer TOME_OF_ARMOR                                   = 'I13G' // adept
+    constant integer TOME_OF_DAMAGE                                  = 'I13E' // adept
+    constant integer TOME_OF_MOVEMENT                                = 'I1A8' // adept
+    constant integer TOME_OF_SIGHT                                   = 'I1A7' // adept
+    constant integer TOME_OF_MAGIC                                   = 'I1A4' // master
     constant integer TOME_OF_CHAOS                                   = 'I1A5'
     constant integer TOME_OF_DIVINITY                                = 'I1A6'
     constant integer TOME_OF_SKILL_POINTS                            = 'I156'
-    constant integer MANUAL_OF_HEALTH                                = 'manh'
-    constant integer MANUAL_OF_MANA                                  = 'I13F'
-    constant integer TOME_OF_LIFE_REGENARTION                        = 'I1AB'
-    constant integer TOME_OF_MANA_REGENERATION                       = 'I1AC'
+    constant integer MANUAL_OF_HEALTH                                = 'manh' // advanced
+    constant integer MANUAL_OF_MANA                                  = 'I13F' // advanced
+    constant integer TOME_OF_LIFE_REGENARTION                        = 'I1AB' // advanced
+    constant integer TOME_OF_MANA_REGENERATION                       = 'I1AC' // advanced
 
     // Dungeon
     constant integer ITEM_SPIKE_TRAPS                                = 'I0GH'

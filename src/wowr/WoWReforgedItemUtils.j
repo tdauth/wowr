@@ -126,7 +126,7 @@ function DropAllItemsNotFromProfessionForHero takes unit hero returns nothing
                 set j = 0
                 loop
                     exitwhen (j == max2)
-                    if (udg_ProfessionItemType[j] == GetItemTypeId(slotItem) and playerProfession1 != j and playerProfession2 != j and playerProfession3 != j) then
+                    if (GetProfession(i).itemTypeId == GetItemTypeId(slotItem) and playerProfession1 != j and playerProfession2 != j and playerProfession3 != j) then
                         call BackpackMessage(owner, Format(GetLocalizedString("DROPPING_ITEM_OF_OTHER_PROFESSION")).s(GetItemName(slotItem)).result())
                         call UnitRemoveItemFromSlot(hero, i)
                         exitwhen (true)

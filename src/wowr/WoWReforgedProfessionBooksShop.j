@@ -6,7 +6,7 @@ function AddProfessionBooksShop takes unit shop returns nothing
     call EnablePagedButtons(shop)
     loop
         exitwhen (i == max)
-         call AddPagedButtonsItemType(shop, udg_ProfessionItemType[i])
+         call AddPagedButtonsItemType(shop, GetProfession(i).itemTypeId)
         set i = i + 1
     endloop
 endfunction

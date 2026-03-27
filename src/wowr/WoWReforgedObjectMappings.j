@@ -89,16 +89,16 @@ private function Init takes nothing returns nothing
     call AddObjectMapping(FISHING_PORT, ITEM_FISHING_PORT)
     call AddObjectMapping(FISH_MARKET_FISHERMAN, ITEM_FISH_MARKET)
     // Prospector
-    call AddObjectMapping(GOLD_PANNING, ITEM_TINY_GOLD_PANNING)
+    call AddObjectMapping(GOLD_PANNING, ITEM_GOLD_PANNING)
     // Lumberjack
-    call AddObjectMapping(SAWMILL, ITEM_TINY_SAWMILL)
+    call AddObjectMapping(SAWMILL, ITEM_SAWMILL)
     // Thief
     call AddObjectMapping(SAFE, ITEM_TINY_SAFE)
     call AddObjectMapping(THIEVES_GUILD_THIEF, ITEM_TINY_THIEVES_GUILD_THIEF)
     // Warlock
     call AddObjectMapping(FEL_FOUNTAIN_WARLOCK, ITEM_TINY_FEL_FOUNTAIN)
     // Astromancer
-    call AddObjectMapping(ARCANE_OBSERVATORY_ASTROMANCER, ITEM_TINY_ARCANE_OBSERVATORY_ASTROMANCER)
+    call AddObjectMapping(ARCANE_OBSERVATORY_ASTROMANCER, ITEM_ARCANE_OBSERVATORY_ASTROMANCER)
     // Bard
     call AddObjectMapping(RECORD_PLAYER, ITEM_RECORD_PLAYER)
     // Banners

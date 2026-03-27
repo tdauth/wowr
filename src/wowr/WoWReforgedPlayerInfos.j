@@ -99,12 +99,12 @@ function DisplayStats takes player to, player from returns nothing
     local integer buildingsRazed = GetPlayerScore(from, PLAYER_SCORE_STRUCT_RAZED)
     local integer bossesKilled = udg_BossKills[convertedPlayerId]
     local integer bossesMax = BlzGroupGetSize(udg_Bosses)
-    local string race1 = udg_RaceName[udg_PlayerRace[convertedPlayerId]] + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace1(from), from))) + " %%)"
-    local string race2 = udg_RaceName[udg_PlayerRace2[convertedPlayerId]] + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace2(from), from))) + " %%)"
-    local string race3 = udg_RaceName[udg_PlayerRace3[convertedPlayerId]] + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %%)"
-    local string profession1 = udg_ProfessionName[udg_PlayerProfession[convertedPlayerId]]
-    local string profession2 = udg_ProfessionName[udg_PlayerProfession2[convertedPlayerId]]
-    local string profession3 = udg_ProfessionName[udg_PlayerProfession3[convertedPlayerId]]
+    local string race1 = GetRaceName(udg_PlayerRace[convertedPlayerId]) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace1(from), from))) + " %%)"
+    local string race2 = GetRaceName(udg_PlayerRace2[convertedPlayerId]) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace2(from), from))) + " %%)"
+    local string race3 = GetRaceName(udg_PlayerRace3[convertedPlayerId]) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %%)"
+    local string profession1 = GetProfessionName(udg_PlayerProfession[convertedPlayerId])
+    local string profession2 = GetProfessionName(udg_PlayerProfession2[convertedPlayerId])
+    local string profession3 = GetProfessionName(udg_PlayerProfession3[convertedPlayerId])
     local integer gold = GetPlayerState(from, PLAYER_STATE_RESOURCE_GOLD)
     local integer lumber = GetPlayerState(from, PLAYER_STATE_RESOURCE_LUMBER)
     local integer foodUsed = GetPlayerState(from, PLAYER_STATE_RESOURCE_FOOD_USED)
@@ -233,27 +233,27 @@ function GetPlayerSelectionSettings takes player whichPlayer returns string
     endif
     
     if (udg_PlayerSelectionRace1[convertedPlayerId] != udg_RaceNone) then
-        set race1 = udg_RaceName[udg_PlayerSelectionRace1[convertedPlayerId]]
+        set race1 = GetRaceName(udg_PlayerSelectionRace1[convertedPlayerId])
     endif
     
     if (udg_PlayerSelectionRace2[convertedPlayerId] != udg_RaceNone) then
-        set race2 = udg_RaceName[udg_PlayerSelectionRace2[convertedPlayerId]]
+        set race2 = GetRaceName(udg_PlayerSelectionRace2[convertedPlayerId])
     endif
     
     if (udg_PlayerSelectionRace3[convertedPlayerId] != udg_RaceNone) then
-        set race3 = udg_RaceName[udg_PlayerSelectionRace3[convertedPlayerId]]
+        set race3 = GetRaceName(udg_PlayerSelectionRace3[convertedPlayerId])
     endif
     
     if (udg_PlayerSelectionProfession1[convertedPlayerId] != udg_ProfessionNone) then
-        set profession1 = udg_ProfessionName[udg_PlayerSelectionProfession1[convertedPlayerId]]
+        set profession1 = GetProfessionName(udg_PlayerSelectionProfession1[convertedPlayerId])
     endif
     
     if (udg_PlayerSelectionProfession2[convertedPlayerId] != udg_ProfessionNone) then
-        set profession2 = udg_ProfessionName[udg_PlayerSelectionProfession2[convertedPlayerId]]
+        set profession2 = GetProfessionName(udg_PlayerSelectionProfession2[convertedPlayerId])
     endif
     
     if (udg_PlayerSelectionProfession3[convertedPlayerId] != udg_ProfessionNone) then
-        set profession3 = udg_ProfessionName[udg_PlayerSelectionProfession3[convertedPlayerId]]
+        set profession3 = GetProfessionName(udg_PlayerSelectionProfession3[convertedPlayerId])
     endif
     
     set startLocation = GetStartLocationName(udg_PlayerSelectionStartLocation[convertedPlayerId])
