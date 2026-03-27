@@ -1,4 +1,4 @@
-library WoWReforgedEquipment initializer Init requires SimError, Villager255, WoWReforgedUtils, WoWReforgedEquipmentBags, WoWReforgedBackpacks, WoWReforgedHeroTransformation, WoWReforgedSaveCodeObjects
+library WoWReforgedEquipment initializer Init requires SimError, Villager255, WoWReforgedUtils, WoWReforgedEquipmentBags, WoWReforgedBackpacks, WoWReforgedHeroTransformation
 
 globals
     public constant integer CATEGORY_HEAD = 0
@@ -343,19 +343,6 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(attackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(attackTrigger, Condition(function TriggerConditionAttack))
     call TriggerAddAction(attackTrigger, function TriggerActionAttack)
-endfunction
-
-function AddSaveObjectItemTypesFromEquipment takes nothing returns nothing
-    local integer i = 0
-    local integer max = GetMaxEquipmentItemTypes()
-    loop
-        exitwhen (i == max)
-        if (GetEquipmentItemTypeId(i) != 0) then
-            set udg_TmpItemTypeId = GetEquipmentItemTypeId(i)
-            call AddSaveObjectItemType()
-        endif
-        set i = i + 1
-    endloop
 endfunction
 
 private function RemoveUnitHook takes unit whichUnit returns nothing

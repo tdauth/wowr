@@ -1,4 +1,4 @@
-library WoWReforgedPrestoredSaveCodes requires WoWReforgedUtils, WoWReforgedClans, WoWReforgedSaveCodes, WoWReforgedVIPs
+library WoWReforgedPrestoredSaveCodes initializer Init requires WoWReforgedUtils, WoWReforgedClans, WoWReforgedSaveCodes, WoWReforgedVIPs, WoWReforgedSaveCodeObjects // init after WoWReforgedSaveCodeObjects
 
 globals
     constant integer PRESTORED_SAVECODE_TYPE_HEROES = 0
@@ -454,7 +454,7 @@ private function EnumGeneratePrestoredForVip takes nothing returns nothing
 endfunction
 
 // Add all prestored savecodes into this function
-function InitPrestoredSaveCodes takes nothing returns nothing
+private function Init takes nothing returns nothing
     // ##############################################################
     // WorldOfWarcraftReforged-letter-from_Barade#2569-to_all-messageLength_15.txt
     // Hello citizens!

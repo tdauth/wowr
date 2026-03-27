@@ -608,10 +608,6 @@ function IsWall takes integer buildingId returns boolean
     return buildingId == WALL
 endfunction
 
-function AddWoWReforgedTinyBuildingItem takes nothing returns nothing
-    call AddTinyBuildingItem(udg_TmpAbilityCode, udg_TmpUnitType)
-endfunction
-
 globals
     private player tmpPlayer = null
 endglobals

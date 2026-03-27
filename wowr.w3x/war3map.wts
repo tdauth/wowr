@@ -6614,7 +6614,6 @@ Thieving - Doctor
 }
 
 STRING 1113
-// Abilities: A01J (Thieving - Doctor), Name (Name)
 {
 Thieving - Doctor
 }
@@ -6631,6 +6630,16 @@ STRING 1115
 Random Class
 }
 
+STRING 1116
+{
+Thieving - Doctor
+}
+
+STRING 1117
+{
+Thieving - Doctor
+}
+
 STRING 1118
 // Units: n0ER (Burrowed Nerubian Queen), Hotkey (Hotkey)
 {
@@ -6641,6 +6650,12 @@ STRING 1119
 // Units: h09U (Air Elemental), Name (Name)
 {
 Air Elemental
+}
+
+STRING 1120
+// Abilities: A01J (Thieving - Doctor), Name (Name)
+{
+Thieving - Doctor
 }
 
 STRING 1122

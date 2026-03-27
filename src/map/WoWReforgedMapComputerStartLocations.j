@@ -1,4 +1,4 @@
-library WoWReforgedMapComputerStartLocations initializer Init requires WoWReforgedComputerStartLocations, WoWReforgedAllRaces
+library WoWReforgedMapComputerStartLocations initializer Init requires WoWReforgedComputerStartLocations, WoWReforgedRaces
 
 private function Init takes nothing returns nothing
 	// Kalimdor

@@ -56,18 +56,6 @@ function GetNeutralBuilding takes integer index returns integer
     return objectTypeNeutralBuildings[index]
 endfunction
 
-function AddCreepsSaveObjects takes nothing returns nothing
-    local integer i = 0
-    local integer max = GetCreepsMax()
-    loop
-        exitwhen (i == max)
-        if (GetCreep(i) != 0) then
-            call AddSaveObjectUnitTypeEx(GetCreep(i))
-        endif
-        set i = i + 1
-    endloop
-endfunction
-
 /*
 function IsNeutralBuilding takes integer unitTypeId returns boolean
     local integer i = 0

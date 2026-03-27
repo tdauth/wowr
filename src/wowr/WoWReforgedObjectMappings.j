@@ -1,4 +1,4 @@
-library WoWReforgedObjectMappings initializer Init requires WoWReforgedSaveCodeObjects, WoWReforgedBanners
+library WoWReforgedObjectMappings initializer Init requires TinyBuildingsLimits, WoWReforgedBanners
 
 globals
     private hashtable h = InitHashtable()
@@ -7,7 +7,6 @@ endglobals
 function AddObjectMapping takes integer id, integer mapping returns nothing
     call SaveInteger(h, id, 0, mapping)
     call SaveInteger(h, mapping, 0, id)
-    call AddSaveObjectItemTypeEx(mapping)
 endfunction
 
 function GetObjectMapping takes integer id returns integer
@@ -103,6 +102,32 @@ private function Init takes nothing returns nothing
     call AddObjectMapping(RECORD_PLAYER, ITEM_RECORD_PLAYER)
     // Banners
     call AddBannersObjectMappings()
+
+    // Limits
+    call AddTinyBuildingItem('A0F3', POWER_GENERATOR)
+    call AddTinyBuildingItem('A19L', RESEARCH_TENT)
+    call AddTinyBuildingItem('A1QU', ARMORY)
+    call AddTinyBuildingItem('A21Y', 'n09L')
+    call AddTinyBuildingItem('A1BY', 'n055')
+    call AddTinyBuildingItem('A1BZ', 'n056')
+    call AddTinyBuildingItem('AIbt', 'hwtw')
+    call AddTinyBuildingItem('A19I', 'hgtw')
+    call AddTinyBuildingItem('A19J', 'hctw')
+    call AddTinyBuildingItem('A19K', 'hatw')
+    call AddTinyBuildingItem('A0GQ', 'h04G')
+    call AddTinyBuildingItem('A242', 'n05I')
+    call AddTinyBuildingItem('A19F', 'h00R')
+    call AddTinyBuildingItem('A19Y', 'h00V')
+    call AddTinyBuildingItem('A19X', 'owtw')
+    call AddTinyBuildingItem('A1B1', 'h00V')
+    call AddTinyBuildingItem('A1AX', 'e016')
+    call AddTinyBuildingItem('A241', 'h04H')
+    call AddTinyBuildingItem('A1AN', 'etrp')
+    call AddTinyBuildingItem('A19G', 'h01Q')
+    call AddTinyBuildingItem('A1A0', 'o00F')
+    call AddTinyBuildingItem('A1B2', 'n037')
+    call AddTinyBuildingItem('A1AY', 'o00G')
+    call AddTinyBuildingItem('A240', 'n05F')
 endfunction
 
 endlibrary

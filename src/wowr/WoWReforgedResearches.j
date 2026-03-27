@@ -1,4 +1,4 @@
-library WoWReforgedResearches requires WoWReforgedSaveCodeObjects
+library WoWReforgedResearches
 
 struct Research
     integer researchId
@@ -89,30 +89,6 @@ endfunction
 
 //function GetResearchAbilityCount takes integer researchId returns integer
 //function GetResearchAbilityByIndex takes integer researchId, integer index returns integer
-
-function ExcludeResearchFromSaveObjects takes integer researchId returns boolean
-    if (researchId == UPG_EVOLUTION) then
-        return true
-    elseif (researchId == UPG_CHEAP_EVOLUTION) then
-        return true
-    endif
-    return false
-endfunction
-
-function AddResearchSaveObjects takes nothing returns nothing
-    local integer i = 0
-    local integer max = GetResearchesMax()
-    local Research r = 0
-    loop
-        exitwhen (i == max)
-        set r = GetResearch(i)
-        if (not ExcludeResearchFromSaveObjects(r.researchId) and r.researchId != 0) then
-            set udg_TmpTechType = r.researchId
-            call AddSaveObjectResearch()
-        endif
-        set i = i + 1
-    endloop
-endfunction
 
 function GetResearchesTotalForRace takes integer whichRace returns integer
     local integer i = 0

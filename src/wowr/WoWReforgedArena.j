@@ -1,4 +1,4 @@
-library WoWReforgedArena initializer Init requires MathUtils, WoWReforgedSaveCodeObjects
+library WoWReforgedArena initializer Init requires MathUtils
 
 struct ArenaTicket
     integer itemTypeId
@@ -92,18 +92,6 @@ function AddArenaTicketUnitType takes integer unitTypeId, integer count returns 
     set t.unitTypeIds[t.unitTypeIdsCounter] = unitTypeId
     set t.unitTypeIdsCounts[t.unitTypeIdsCounter] = count
     set t.unitTypeIdsCounter = t.unitTypeIdsCounter + 1
-endfunction
-
-function AddSaveObjectItemTypesFromArena takes nothing returns nothing
-    local integer i = 0
-    local integer max = GetArenaTicketsMax()
-    loop
-        exitwhen (i == max)
-        if (GetArenaTicket(i).rewardItemTypeId != 0) then
-            call AddSaveObjectItemTypeEx(GetArenaTicket(i).rewardItemTypeId)
-        endif
-        set i = i + 1
-    endloop
 endfunction
 
 function SpawnArenaEnemies takes ArenaTicket t, rect whichRect, rect targetRect returns nothing

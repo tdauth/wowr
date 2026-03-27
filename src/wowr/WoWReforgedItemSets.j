@@ -1,4 +1,4 @@
-library WoWReforgedItemSets initializer Init requires NewBonus, WoWReforgedSaveCodeObjects, WoWReforgedI18n
+library WoWReforgedItemSets initializer Init requires NewBonus, WoWReforgedI18n
 
 function interface OnItemSetFunction takes unit hero, ItemSet s returns nothing
 
@@ -18,6 +18,14 @@ globals
     private trigger dropTrigger = CreateTrigger()
     private hashtable h = InitHashtable()
 endglobals
+
+function GetItemSetsMax takes nothing returns integer
+    return itemSetsCounter
+endfunction
+
+function GetItemSet takes integer index returns ItemSet
+    return itemSets[index]
+endfunction
 
 function UnitHasItemSet takes unit whichUnit returns boolean
     return LoadBoolean(h, GetHandleId(whichUnit), 0)
@@ -62,25 +70,6 @@ private function CheckAllItemSets takes unit whichUnit returns nothing
                 call s.onUncomplete.execute(whichUnit, s)
             endif
         endif
-        set i = i + 1
-    endloop
-endfunction
-
-function AddItemSetComponentsToSaveCodes takes nothing returns nothing
-    local ItemSet s = 0
-    local integer j = 0
-    local integer counter = 0
-    local integer i = 0
-    loop
-        exitwhen (i == itemSetsCounter)
-        set s = itemSets[i]
-        set counter = 0
-        set j = 0
-        loop
-            exitwhen (j == s.componentsCounter)
-            call AddSaveObjectItemTypeEx(s.components[j])
-            set j = j + 1
-        endloop
         set i = i + 1
     endloop
 endfunction
