@@ -44,6 +44,7 @@ private function Init takes nothing returns nothing
     call AddChange("Change hero class of Blademaster heroes from Warrior to Rogue.")
     call AddChange("Change hero class of Lich King from Necromancer into Death Knight.")
     call AddChange("Fix several profession craft ability IDs.")
+    call AddChange("Split crafted items of profession Thief into all profession ranks.")
     call AddChange("Remove German buff for Cover.")
     call AddChange("Remove lots of terrain, creeps, bosses and NPCs to make the map much smaller.")
     call AddChange("Remove unused Running Wild content.")
