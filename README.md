@@ -49,6 +49,13 @@ Make sure that the JassHelper and vJass are enabled:
 
 ![JassHelper](images/JassHelper.jpg "JassHelper")
 
+`C:\Program Files (x86)\Warcraft III\_retail_\x86_64\JassHelper\jasshelper.conf` must contain the correct lookup folder:
+
+```
+[lookupfolders]
+"D:\wowr\src\"
+```
+
 ## Frozen Throne Support
 
 This map has been developed for Warcraft III: Reforged.

@@ -2919,6 +2919,7 @@ globals
     constant integer ITEM_TINY_TRAINER                               = 'I1AM'
     constant integer LEGENDARY_ARTIFACT                              = 'nfrm'
     constant integer CHEST_NEUTRAL                                   = 'n0AB'
+    constant integer CHEST_NEUTRAL_EMPTY                             = 'e018'
     constant integer ALCHEMIST_LAB_NEUTRAL                           = 'n0CD'
     constant integer FOUNTAIN_OF_HEALTH_NEUTRAL                      = 'nfoh'
     constant integer FOUNTAIN_OF_MANA_NEUTRAL                        = 'nmoo'

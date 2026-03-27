@@ -1,0 +1,455 @@
+library WoWReforgedInfoQuests initializer Init requires QuestUtils, SafeString, Taunts, WoWReforgedClasses
+// Info quests are the required quests and provide more information about this map. They have to be stored for generating the website.
+
+globals
+    private integer questsMax = 0
+    private quest array questHandle
+    private string array questId
+    private string array questIcon
+    private string array questTitle
+    private string array questDescription
+endglobals
+
+function AddInfoQuest takes string title, string description, string iconPath returns quest
+    local integer index = questsMax
+    local quest q = CreateQuest()
+    set questId[index] = title
+    set questIcon[index] = iconPath
+    set questTitle[index] = title
+    set questDescription[index] = description
+    set questsMax = questsMax + 1
+    
+    set questHandle[questsMax - 1] = q
+    call QuestSetTitle(q, title)
+    call QuestSetDescription(q, description)
+    call QuestSetIconPath(q, iconPath)
+    call QuestSetRequired(q, true)
+    call QuestSetDiscovered(q, true)
+    call QuestSetCompleted(q, false)
+    
+    return q
+endfunction
+
+function AddInfoQuestItem takes string description returns nothing
+    local questitem i = QuestCreateItem(questHandle[questsMax - 1])
+    call QuestItemSetDescription(i, description)
+    call QuestItemSetCompleted(i, false)
+endfunction
+
+function GetInfoQuestsMax takes nothing returns integer
+    return questsMax
+endfunction
+
+function GetInfoQuestHandle takes integer q returns quest
+    return questHandle[q]
+endfunction
+
+function GetInfoQuestId takes integer q returns string
+    return questId[q]
+endfunction
+
+function GetInfoQuestIcon takes integer q returns string
+    return questIcon[q]
+endfunction
+
+function GetInfoQuestTitle takes integer q returns string
+    return questTitle[q]
+endfunction
+
+function GetInfoQuestDescription takes integer q returns string
+    return questDescription[q]
+endfunction
+
+private function AddInfoQuestItemHeroJourney takes integer level returns nothing
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("HERO_JOURNEY_X_QUEST_ITEM")).i(level).s(GetLocalizedStringSafe("HERO_JOURNEY_" + I2S(level))).result())
+endfunction
+
+private function AddInfoQuestItemHeroJourneyMax takes integer level, integer index returns nothing
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("HERO_JOURNEY_X_QUEST_ITEM")).i(level).s(GetLocalizedStringSafe("HERO_JOURNEY_" + I2S(level) + "_" + I2S(index))).result())
+endfunction
+
+private function AddClassesQuestItems takes nothing returns nothing
+    local integer i = 0
+    local integer max = GetMaxHeroClasses()
+    loop
+        exitwhen ( i == max )
+        call AddInfoQuestItem(GetHeroClassName(i))
+        set i=i + 1
+    endloop
+endfunction
+
+private function AddTauntsQuestItems takes nothing returns nothing
+    local integer i= 0
+    local integer max= GetTauntsCount()
+    call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_1"))
+    loop
+        exitwhen (i == max)
+        call AddInfoQuestItem("\"" + GetTauntChatCommand(i) + "\": " + GetTauntText(i))
+        set i = i + 1
+    endloop
+endfunction
+
+private function Init takes nothing returns nothing
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_MAP_TITLE"), GetLocalizedStringSafe("IQ_MAP_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNLogo.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_4"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_SUPPORT_TITLE"), GetLocalizedStringSafe("IQ_SUPPORT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Donate.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEWS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_VIPS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_4"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_5"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_CHAT_COMMANDS_TITLE"), GetLocalizedStringSafe("IQ_CHAT_COMMANDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBrilliance.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_PING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_CLAN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_AI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_ALLY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_VISUAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_RESOURCES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_R"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_ATTRIBUTES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_SAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_FOOD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_TIME"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_RESET"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_CHEATS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_CINEMATICS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLEAR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HIDE_SHOW"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UI_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UI_QUEUE_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UI_QUEUE_CLEAR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_INFO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_REVIVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DISCORD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WEBSITE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DOWNLOAD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_VERSION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEWS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SETTINGS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOG"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DIPLOMACY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RANDOM"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_START"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RANDOM_START"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_H_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_P_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_R_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_REPICK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FULL_REPICK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GET"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNLOCK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_VICTORY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NOSTATS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AUTO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ITEMS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PICKUP"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ORDER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ZONES_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ZONE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ZONE_FULL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SUICIDE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ANIM"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_TRANSFER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NO_TRANSFER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PLAYERS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_VOTEKICK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_YES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_H"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_F"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_M"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PORTALS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_ALTARS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_RES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_GOLDMINES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_NPCS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PROPERTIES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DRAGONS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_L"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_AI_STARTS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_BOSSES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_RACES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_HUMAN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_VILLAGE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DALARAN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_KUL_TIRAS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_NIGHT_ELF"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_ORC"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_BLOOD_ELF"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_NAGA"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_FORSAKEN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_LICH_KING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DRAENEI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DEMON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PANDA"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_EREDAR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_TUSKARR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_GOBLIN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_JAINA"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CRUSADE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CENTAURS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PALADINS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DRAENEI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DEMONS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNDEADS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WHALES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_OLD_GODS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_INVASION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ELEMENTAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WILD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_RESET"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_RESPAWN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_EASY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_NORMAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_HARD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_INSANE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_NONE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_NEUTRAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_CREEP"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_COMPUTER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_IGNORE_ALL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_IGNORE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_USE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_ATTACKS_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_ATTACKS_PLAYERS_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_SHIPS_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_GOLD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_EXPANSIONS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_SHREDDERS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_ZEPPELINS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_HERO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_LOAD_MINES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_REVIVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_PROFESSION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_INFO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_TARGET_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_TARGET"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_TRACE_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FFA"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOBBY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FRIENDS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FRIENDS_V"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FRIENDS_VUF"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ENEMIES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_SHARED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_NOT_SHARED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ALLY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ALLY_V"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ALLY_VU"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ALLY_VUF"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEUTRAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEUTRAL_V"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNALLY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNALLY_V"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PRESAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_PRESAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_P"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_CLAN_P"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_C"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_AUTO_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_GUI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_A_SAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_A_LOAD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_A_RESET"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_CHECK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_RES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GENERATED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLEAR_GENERATED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PASSIVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BOUNTY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BOUNTIES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_C"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_RENAME"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_GOLD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_LUMBER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_W_GOLD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_W_LUMBER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLANS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_INFO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_RANK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLANK_INVITE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_ACCEPT"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLAN_LEAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GOBLIN_DEPOSIT"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_MAX_BOSS_LEVELS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ENCHANTER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_INSCRIPTOR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_TROPHIES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LETTER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_MAIL_BOX"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DICE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HOST"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ACCOUNTS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_VIPS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNLOCKED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BANS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GOLD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LUMBER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_TOMES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CINEMATICS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESOURCES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RES_GUI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GIVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ASK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SELL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SELL_ALL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SELL_WOOD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BUY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESOURCES_INFO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_CODES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_STATS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ACHIEVEMENTS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_STR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AGI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_INT"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RENAME"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SHOUT"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BUILDER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RENAME"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SCALE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_TEAM_COLOR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PLAYER_COLOR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PLAYER_NAME"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_MOUNT_NAME"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CIN_DALARAN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AMBIENT_SOUND"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AMBIENT_SOUND_A"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_AMBIENT_SOUND_L"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NO_AMBIENT_SOUND"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_A"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_B"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_BLIZZARD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_J"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_C"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_FOGGED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_GENERIC"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_MOON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FOOD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LIMITS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SEASONS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WINTER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SPRING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SUMMER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FALL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WEATHER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_MORNING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_NOON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_EVENING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_MIDNIGHT"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DNC"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WATER"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WATER_RED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FOG"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_REVEAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CHEATS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESET_REVOLUTION"))
+    
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_TITLE"), GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDisenchant.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_4"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_5"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_6"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_7"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_8"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_9"))
+
+    set udg_QuestHeroJourney = AddInfoQuest(GetLocalizedStringSafe("IQ_HERO_JOURNEY_TITLE"), GetLocalizedStringSafe("IQ_HERO_JOURNEY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    call AddInfoQuestItemHeroJourney(5)
+    call AddInfoQuestItemHeroJourney(10)
+    call AddInfoQuestItemHeroJourney(15)
+    call AddInfoQuestItemHeroJourney(20)
+    call AddInfoQuestItemHeroJourney(25)
+    call AddInfoQuestItemHeroJourney(30)
+    call AddInfoQuestItemHeroJourney(35)
+    call AddInfoQuestItemHeroJourney(40)
+    call AddInfoQuestItemHeroJourney(45)
+    call AddInfoQuestItemHeroJourney(50)
+    call AddInfoQuestItemHeroJourney(55)
+    call AddInfoQuestItemHeroJourney(60)
+    call AddInfoQuestItemHeroJourney(65)
+    call AddInfoQuestItemHeroJourney(70)
+    call AddInfoQuestItemHeroJourneyMax(75, 1)
+    call AddInfoQuestItemHeroJourneyMax(75, 2)
+    call AddInfoQuestItemHeroJourneyMax(75, 3)
+    call AddInfoQuestItem(GetLocalizedStringSafe("HERO_JOURNEY_VIP"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_TITLE"), GetLocalizedStringSafe("IQ_KNOWN_ISSUES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_4"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_5"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_6"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_7"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_FACTIONS_TITLE"), GetLocalizedStringSafe("IQ_FACTIONS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNOrcCaptureFlag.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("ALLIANCE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("HORDE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("THE_BURNING_LEGION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("BOSSES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("RESCUABLE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_FACTIONS_0"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_GAME_MODES_TITLE"), GetLocalizedStringSafe("IQ_GAME_MODES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHumanCaptureFlag.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_GAME_MODES_WARLORD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_GAME_MODES_FREELANCER"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_PLAYERS_TITLE"), GetLocalizedStringSafe("IQ_PLAYERS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNVillagerWoman.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_RESCUABLE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_LEGION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_BOSSES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_NEUTRAL_HOSTILE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_NEUTRAL_PASSIVE"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("CLASSES"), GetLocalizedStringSafe("IQ_CLASSES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPriestAdept.blp")
+    call AddClassesQuestItems()
+
+    call AddInfoQuest(GetLocalizedStringSafe("HEROES"), GetLocalizedStringSafe("IQ_HEROES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_REPICK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FULL_REPICK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_H_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_HEROES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_HEROES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_HEROES_2"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_PROFESSIONS_TITLE"), GetLocalizedStringSafe("IQ_PROFESSIONS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNThunderclap.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_P_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROFESSIONS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROFESSIONS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROFESSIONS_2"))
+    
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_RACES_TITLE"), GetLocalizedStringSafe("IQ_RACES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPeasant.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_P_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_R_X"))
+    
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_START_LOCATIONS_TITLE"), GetLocalizedStringSafe("IQ_START_LOCATIONS_DESCRIPTION"), "ReplaceableTextures\\WorldEditUI\\StartingLocation.blp")
+    
+    set udg_QuestVictory = AddInfoQuest(GetLocalizedStringSafe("IQ_VICTORY_TITLE"), GetLocalizedStringSafe("IQ_VICTORY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_VICTORY"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("TAUNTS"), GetLocalizedStringSafe("TAUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandaTaunt.blp")
+    call AddTauntsQuestItems()
+endfunction
+
+endlibrary

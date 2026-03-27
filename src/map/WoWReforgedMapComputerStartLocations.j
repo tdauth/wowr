@@ -1,0 +1,98 @@
+library WoWReforgedMapComputerStartLocations initializer Init requires WoWReforgedComputerStartLocations, WoWReforgedAllRaces
+
+private function Init takes nothing returns nothing
+	// Kalimdor
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Teldrassil, gg_rct_Town_Hall_Shipyard_Teldrassil)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceNightElf)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceFurbolg)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceSatyr)
+
+	call AddComputerStartLocationRectNoShipyard(gg_rct_Town_Hall_Hyjal)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceNightElf)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceFurbolg)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceSatyr)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Orgrimmar, gg_rct_Town_Hall_Shipyard_Orgrimmar)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceOrc)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceQuillboar)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceCentaur)
+    
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Thunder_Bluff, gg_rct_Town_Hall_Shipyard_Thunder_Bluff)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceTauren)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceQuillboar)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceCentaur)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Echo_Isles, gg_rct_Town_Hall_Shipyard_Echo_Isles)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceTroll)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Darkspear_Islands, gg_rct_Town_Hall_Shipyard_Darkspear_Islands)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceMurloc)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceDungeon)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceDragonkin)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Theramore, gg_rct_Town_Hall_Shipyard_Theramore)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceKulTiras)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceHuman)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Kezan, gg_rct_Town_Hall_Shipyard_Kezan)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceGoblin)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceKobold)
+
+	// Eastern Kingdoms
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Stormwind, gg_rct_Town_Hall_Shipyard_Stormwind)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceStormwind)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceHuman)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceLordaeron)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceGnoll)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceBandit)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceWorgen)
+    
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Kul_Tiras, gg_rct_Town_Hall_Shipyard_Kul_Tiras)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceKulTiras)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceHuman)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceLordaeron)
+    
+	call AddComputerStartLocationRectNoShipyard(gg_rct_Town_Hall_Undercity)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceUndead)
+    
+	call AddComputerStartLocationRectNoShipyard(gg_rct_Town_Hall_Ironforge)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceDwarf)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceGnome)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceKobold)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Sunwell_Grove, gg_rct_Town_Hall_Shipyard_Sunwell_Grove)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceHighElf)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Sunstrider_Isle, gg_rct_Town_Hall_Shipyard_Sunstrider_Isle)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceBloodElf)
+
+	// Northrend
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Northrend_West, gg_rct_Town_Hall_Shipyard_Northrend_West)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceUndead)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Northrend_East, gg_rct_Town_Hall_Shipyard_Northrend_East)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceNerubian)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceFacelessOne)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Moaki_Harbor, gg_rct_Town_Hall_Shipyard_Moaki_Harbor)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceTuskarr)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceVrykul)
+
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Dalaran, gg_rct_Town_Hall_Shipyard_Dalaran)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceDalaran)
+
+    // South
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Sunken_Ruins, gg_rct_Town_Hall_Shipyard_Sunken_Ruins)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceNaga)
+	call AddComputerStartLocationPossibleRaceLast(udg_RacePandaren)
+
+    // Outland
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Outland, gg_rct_Town_Hall_Shipyard_Outland)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceDemon)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceLostOnes)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceFelOrc)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceDraenei)
+	call AddComputerStartLocationPossibleRaceLast(udg_RaceOgre)
+endfunction
+
+endlibrary
