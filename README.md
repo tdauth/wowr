@@ -56,6 +56,8 @@ Make sure that the JassHelper and vJass are enabled:
 "D:\wowr\src\"
 ```
 
+**Note that the file `jasshelper.conf` is reset by the Battle.net app automatically and you might have to adapt it multiple times.**
+
 ## Frozen Throne Support
 
 This map has been developed for Warcraft III: Reforged.
