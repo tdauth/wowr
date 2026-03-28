@@ -1929,7 +1929,7 @@ StringList {
     IQ_PORTALS_DESCRIPTION             "Portals can also be built by Citizens to connect your different locations on the map directly with each other. This makes moving units around much faster. A research allows your built portals to teleport your units to any discovered location on the map except it is protected by an Antimagic Ward.",
     IQ_PORTALS_0                       "Können von Bürgern errichtet werden.",
     IQ_PORTALS_1                       "Verbinden Orte direkt miteinander.",
-    IQ_PORTALS_2                       "Teleport units to any discovered area if upgraded."
+    IQ_PORTALS_2                       "Teleport units to any discovered area if upgraded.",
     IQ_PORTALS_3                       "Protect locations against enemy portals with Antimagic Wards.",
     IQ_CREDITS_TITLE                   "Credits",
     IQ_CREDITS_DESCRIPTION             "All the people who contributed to this map.",
