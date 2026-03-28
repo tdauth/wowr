@@ -58,7 +58,7 @@ function SetEquipmentTypeAnimation takes integer index, integer animation return
     set equipmentItemTypeAnimation[index] = animation
 endfunction
 
-function AddEquipmentItemType takes integer itemTypeId, string categoryName, integer category, integer animation returns integer
+private function AddEquipmentItemType takes integer itemTypeId, string categoryName, integer category, integer animation returns integer
     set equipmentItemTypeId[equipmentTypesCounter] = itemTypeId
     set equipmentItemTypeCategoryName[equipmentTypesCounter]= categoryName
     set equipmentItemTypeCategory[equipmentTypesCounter] = category
@@ -67,75 +67,12 @@ function AddEquipmentItemType takes integer itemTypeId, string categoryName, int
     return equipmentTypesCounter
 endfunction
 
-// VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON
-function AddEquipmentItemTypeWoWReforged takes nothing returns integer
-    local integer index = AddEquipmentItemType(udg_TmpItemTypeId, udg_TmpString, udg_TmpInteger, udg_TmpInteger2)
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON
-    return index
-endfunction
-
-function EquipmentCategoryTwoHanded takes nothing returns nothing
+private function EquipmentCategoryTwoHanded takes nothing returns nothing
     call SetEquipmentItemTypeCategoryType(equipmentTypesCounter, CATEGORY_TYPE_TWO_HANDED, true)
 endfunction
 
-function EquipmentCategoryRange takes nothing returns nothing
+private function EquipmentCategoryRange takes nothing returns nothing
     call SetEquipmentItemTypeCategoryType(equipmentTypesCounter, CATEGORY_TYPE_RANGE, true)
-endfunction
-
-function EquipmentCategoryHead takes nothing returns nothing
-    set udg_TmpInteger = CATEGORY_HEAD
-endfunction
-
-function EquipmentCategoryLeftHand takes nothing returns nothing
-    set udg_TmpInteger = CATEGORY_LEFT_HAND
-endfunction
-
-function EquipmentCategoryRightHand takes nothing returns nothing
-    set udg_TmpInteger = CATEGORY_RIGHT_HAND
-endfunction
-
-function EquipmentCategoryBody takes nothing returns nothing
-    set udg_TmpInteger = CATEGORY_BODY
-endfunction
-
-function EquipmentCategoryFoot takes nothing returns nothing
-    set udg_TmpInteger = CATEGORY_FOOT
-endfunction
-
-function EquipmentAnimationShield takes nothing returns nothing
-     set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_SHIELD
-endfunction
-
-function EquipmentAnimationNoWeapon takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON
-endfunction
-
-function EquipmentAnimationLeftHandWeapon takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON
-endfunction
-
-function EquipmentAnimationTwoHandHammer takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_TWO_HAND_HAMMER
-endfunction
-
-function EquipmentAnimationTwoWeapons takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_TWO_WEAPONS
-endfunction
-
-function EquipmentAnimationBow takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_BOW
-endfunction
-
-function EquipmentAnimationMinigun takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_MINIGUN
-endfunction
-
-function EquipmentAnimationTwoHand takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_TWO_HAND
-endfunction
-
-function EquipmentAnimationGun takes nothing returns nothing
-    set udg_TmpInteger2 = VILLAGER_255_ANIMATION_ATTACK_SHOOT_GUN
 endfunction
 
 function GetMaxEquipmentItemTypes takes nothing returns integer
@@ -335,14 +272,94 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddCondition(pickupTrigger, Condition(function TriggerConditionIsCustomizableAttriburesHero))
     call TriggerAddAction(pickupTrigger, function TriggerActionPickupItem)
-    
+
     call TriggerRegisterAnyUnitEventBJ(dropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(dropTrigger, Condition(function TriggerConditionIsCustomizableAttriburesHero))
     call TriggerAddAction(dropTrigger, function TriggerActionDropItem)
-    
+
     call TriggerRegisterAnyUnitEventBJ(attackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(attackTrigger, Condition(function TriggerConditionAttack))
     call TriggerAddAction(attackTrigger, function TriggerActionAttack)
+
+    // Misc
+    call AddEquipmentItemType('I0UP', GetLocalizedStringSafe("PAGE_TITLE_MISC"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Torch
+    call AddEquipmentItemType('I0UQ', GetLocalizedStringSafe("PAGE_TITLE_MISC"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Lantern
+    call AddEquipmentItemType('I0UF', GetLocalizedStringSafe("PAGE_TITLE_MISC"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Quiver Equipment
+
+    // Melee Weapons
+    call AddEquipmentItemType('I0U5', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Sword
+    call AddEquipmentItemType('I0V7', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Naga Trident
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0VM', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Demon Hunter Blade
+    call AddEquipmentItemType('I0VI', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Rapier
+    call AddEquipmentItemType('I0VH', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Pirate Cutlass
+    call AddEquipmentItemType('I0V4', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Golden Claw
+    call AddEquipmentItemType('I0V5', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_WEAPONS) // Extra Golden Claw
+    call AddEquipmentItemType('I0UO', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Katana
+    call AddEquipmentItemType('I0UT', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_WEAPONS) // Extra Katana
+    call AddEquipmentItemType('I0VB', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Double Axe
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0V9', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND_HAMMER) // Warhammer
+    call AddEquipmentItemType('I0U8', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND_HAMMER) // Paladin Hammer
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0UH', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Scythe
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0VK', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Demon Blade
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0VL', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Naginata
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0V0', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Halberd
+    call EquipmentCategoryTwoHanded()
+    call AddEquipmentItemType('I0ZR', GetLocalizedStringSafe("PAGE_TITLE_MELEE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_TWO_HAND) // Infernal Destroyer
+    call EquipmentCategoryTwoHanded()
+
+    // Range Weapons
+    call AddEquipmentItemType('I0UG', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_BOW) // Bow
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0V6', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_BOW) // Elven Bow
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0UW', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_SHOOT_GUN) // Crossbow
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0WT', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Throwing Axe
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0VA', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Centaur Staff
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0VG', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Druid Staff
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0VJ', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Arcane Staff
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0V8', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_SHOOT_GUN) // Pirate Pistol
+    call EquipmentCategoryRange()
+    call AddEquipmentItemType('I0UX', GetLocalizedStringSafe("PAGE_TITLE_RANGE_WEAPONS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_MINIGUN) // Flamethrower
+    call EquipmentCategoryRange()
+    call EquipmentCategoryTwoHanded()
+
+    // Shields
+    call AddEquipmentItemType('I0UA', GetLocalizedStringSafe("PAGE_TITLE_SHIELDS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_SHIELD) // Guard Shield
+    call AddEquipmentItemType('I10O', GetLocalizedStringSafe("PAGE_TITLE_SHIELDS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_SHIELD) // Knight Shield
+    call AddEquipmentItemType('I0V3', GetLocalizedStringSafe("PAGE_TITLE_SHIELDS"), CATEGORY_RIGHT_HAND, VILLAGER_255_ANIMATION_ATTACK_SHIELD) // Spell Shield
+
+    // Armors
+    call AddEquipmentItemType('I0UN', GetLocalizedStringSafe("PAGE_TITLE_ARMORS"), CATEGORY_BODY, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Bandit Armor
+    call AddEquipmentItemType('I0UB', GetLocalizedStringSafe("PAGE_TITLE_ARMORS"), CATEGORY_BODY, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Mail Armor
+    call AddEquipmentItemType('I13I', GetLocalizedStringSafe("PAGE_TITLE_ARMORS"), CATEGORY_BODY, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Stormwind Armor
+    call AddEquipmentItemType('I0UM', GetLocalizedStringSafe("PAGE_TITLE_ARMORS"), CATEGORY_BODY, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Kul Tiras Armor
+    call AddEquipmentItemType('I0UL', GetLocalizedStringSafe("PAGE_TITLE_ARMORS"), CATEGORY_BODY, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Cape
+    call AddEquipmentItemType('I0US', GetLocalizedStringSafe("PAGE_TITLE_ARMORS"), CATEGORY_BODY, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Jetpack
+
+    // Helmets
+    call AddEquipmentItemType('I0UK', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Hood
+    call AddEquipmentItemType('I0ZQ', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Wolf Spirit Hood
+    call AddEquipmentItemType('I0UC', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Guard Helmet
+    call AddEquipmentItemType('I0VC', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Nerubian Headwear
+    call AddEquipmentItemType('I0VF', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Wizard Hat
+    call AddEquipmentItemType('I0WK', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Magic Hat
+    call AddEquipmentItemType('I0U6', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Knight Helmet
+    call AddEquipmentItemType('I0VD', GetLocalizedStringSafe("PAGE_TITLE_HELMETS"), CATEGORY_HEAD, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Pirate Hat
+
+    // Boots
+    call AddEquipmentItemType('I0UD', GetLocalizedStringSafe("PAGE_TITLE_BOOTS"), CATEGORY_FOOT, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Wolf Pelt Boots
+    call AddEquipmentItemType('I10N', GetLocalizedStringSafe("PAGE_TITLE_BOOTS"), CATEGORY_FOOT, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Metal Boots
 endfunction
 
 private function RemoveUnitHook takes unit whichUnit returns nothing

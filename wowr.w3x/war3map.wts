@@ -65353,30 +65353,6 @@ STRING 26158
 Increases the armor by 3.
 }
 
-STRING 26160
-// Items: I0V2 (Flamberge), Name (Name)
-{
-Flamberge
-}
-
-STRING 26161
-// Items: I0V2 (Flamberge), Tip (Tooltip - Basic)
-{
-Purchase Flamberge
-}
-
-STRING 26162
-// Items: I0V2 (Flamberge), Ubertip (Tooltip - Extended)
-{
-Increases the attack damage of the Hero by 20 when worn.|n|n|cffffcc00Left Hand, Two Hand and Melee.|r
-}
-
-STRING 26163
-// Items: I0V2 (Flamberge), Description (Description)
-{
-Boosts attack damage by 20.
-}
-
 STRING 26164
 // Items: I0V3 (Spell Shield), Tip (Tooltip - Basic)
 {
@@ -104219,12 +104195,6 @@ STRING 49088
 // Items: I0VK (Demon Blade), Description (Description)
 {
 Boosts attack damage by 25.
-}
-
-STRING 49089
-// Abilities: A1RU (Item Damage Bonus), EditorSuffix (Editor Suffix)
-{
-(+20) (Flamberge)
 }
 
 STRING 49090
