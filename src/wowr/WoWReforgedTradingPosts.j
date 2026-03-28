@@ -1,4 +1,4 @@
-library WoWReforgedTradingPosts initializer Init requires MathUtils, PagedButtons
+library WoWReforgedTradingPosts initializer Init requires MathUtils, PagedButtons, WoWReforgedResources
 
 globals
     private group tradingPosts = CreateGroup()
@@ -21,17 +21,13 @@ globals
     private integer tradingPostResourceCount = 0
 endglobals
 
-function AddTradingPostResource takes Resource resource, integer buyUnitTypeId, integer sellUnitTypeId returns nothing
+private function AddTradingPostResource takes Resource resource, integer buyUnitTypeId, integer sellUnitTypeId returns nothing
     local TradingPostResource r = TradingPostResource.create()
     set r.resource = resource
     set r.buyUnitTypeId = buyUnitTypeId
     set r.sellUnitTypeId = sellUnitTypeId
     set tradingPostResource[tradingPostResourceCount] = r
     set tradingPostResourceCount = tradingPostResourceCount + 1
-endfunction
-
-function AddTradingPostResourceWoWReforged takes nothing returns nothing
-    call AddTradingPostResource(udg_TmpInteger, udg_TmpUnitType, udg_TmpUnitType2)
 endfunction
 
 function AddResourcesShop takes unit shop returns nothing
@@ -120,18 +116,37 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionAutoExchangeCast))
     call TriggerAddAction(castTrigger, function TriggerActionAutoExchangeCast)
-    
+
     call TriggerRegisterGatherEvent(gatherTrigger)
     call TriggerAddCondition(gatherTrigger, Condition(function TriggerConditionGather))
-    
+
     call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
-    
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-    
+
     call TriggerRegisterAnyUnitEventBJ(sellTrigger, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(sellTrigger, Condition(function TriggerConditionSell))
+
+    call AddTradingPostResource(Resources_LUMBER, 'h0O3', 'h0O4')
+    call AddTradingPostResource(udg_ResourceOil, 'h0NN', 'h0NM')
+    call AddTradingPostResource(udg_ResourceCopper, 'h0NO', 'h0NR')
+    call AddTradingPostResource(udg_ResourceSilver, 'h0NP', 'h0NS')
+    call AddTradingPostResource(udg_ResourceGemstones, 'h0NQ', 'h0NT')
+    call AddTradingPostResource(udg_ResourceMeat, 'h0NK', 'h0NL')
+    call AddTradingPostResource(udg_ResourceGrain, 'h0NU', 'h0O5')
+    call AddTradingPostResource(udg_ResourceMilk, 'h07U', 'h07W')
+    call AddTradingPostResource(udg_ResourceWool, 'h07T', 'h07V')
+    call AddTradingPostResource(udg_ResourceRock, 'h0NV', 'h0O6')
+    call AddTradingPostResource(udg_ResourceIron, 'h0NW', 'h0O7')
+    call AddTradingPostResource(udg_ResourceBlackPowder, 'h0NX', 'h0O8')
+    call AddTradingPostResource(udg_ResourceWater, 'h0NY', 'h0OA')
+    call AddTradingPostResource(udg_ResourceElectricity, 'h0NZ', 'h0O9')
+    call AddTradingPostResource(udg_ResourceFavor, 'h0O0', 'h0OB')
+    call AddTradingPostResource(udg_ResourceFruits, 'h0QB', 'h0QK')
+    call AddTradingPostResource(udg_ResourceFel, 'h0X9', 'h0XA')
+    call AddTradingPostResource(udg_ResourceArgunite, 'h0UI', 'h0UJ')
 endfunction
 
 endlibrary

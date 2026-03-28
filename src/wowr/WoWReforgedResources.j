@@ -1,18 +1,22 @@
-library WoWReforgedResources requires Resources, PlayerColorUtils, StringUtils, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces
+library WoWReforgedResources initializer Init requires Resources, PlayerColorUtils, StringUtils, SafeString, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces, WoWReforgedStats
 
 globals
     private integer maxMines = 0
     private integer array mineTypes
     private integer array mineResource
     private integer array mineStartAmount
-    
+
     private integer maxWaterMines = 0
     private integer array waterMineTypes
     private integer array waterMineResource
     private integer array waterMineStartAmount
-    
+
     private integer randomMinesCounter = 0
     private integer randomWaterMinesCounter = 0
+
+    private trigger triggerChatCommandGuiOn = CreateTrigger()
+    private trigger triggerChatCommandGuiOff = CreateTrigger()
+    private trigger triggerChatCommandInfo = CreateTrigger()
 endglobals
 
 function GetMaxMines takes nothing returns integer
@@ -356,17 +360,17 @@ function AddOilBoat takes unit producer, unit worker returns nothing
     endif
 endfunction
 
-function AddWoWReforgedResource takes nothing returns integer
-    set udg_TmpInteger = AddResource(udg_TmpString)
-    call SetResourceGoldExchangeRate(udg_TmpInteger, udg_TmpReal)
-    call SetResourceIcon(udg_TmpInteger, udg_TmpIcon)
-    call SetResourceIconAtt(udg_TmpInteger, udg_TmpIcon2)
-    call SetResourceDescription(udg_TmpInteger, udg_TmpString2)
-    call SetResourceColorRed(udg_TmpInteger, udg_TmpInteger2)
-    call SetResourceColorGreen(udg_TmpInteger, udg_TmpInteger3)
-    call SetResourceColorBlue(udg_TmpInteger, udg_TmpInteger4)
+private function Add takes string name, string description, real exchangeRate, integer red, integer green, integer blue, string icon, string iconAtt returns integer
+    local integer r = AddResource(name)
+    call SetResourceGoldExchangeRate(r, exchangeRate)
+    call SetResourceIcon(r, icon)
+    call SetResourceIconAtt(r, iconAtt)
+    call SetResourceDescription(r, description)
+    call SetResourceColorRed(r, red)
+    call SetResourceColorGreen(r, green)
+    call SetResourceColorBlue(r, blue)
     
-    return udg_TmpInteger
+    return r
 endfunction
 
 function IsSellableResource takes integer index returns boolean
@@ -476,6 +480,67 @@ function MagicalFiller takes unit caster, unit mine returns nothing
         call IssueImmediateOrder(caster, "stop")
         call SimError(GetOwningPlayer(caster), GetLocalizedString("TARGET_MUST_BE_A_MINE"))
     endif
+endfunction
+
+private function EnumRegisterChatCommandEvents takes nothing returns nothing
+    call TriggerRegisterPlayerChatEvent(triggerChatCommandGuiOn, GetEnumPlayer(), "-resgui", false)
+    call TriggerRegisterPlayerChatEvent(triggerChatCommandGuiOn, GetEnumPlayer(), "-resguion", false)
+    call TriggerRegisterPlayerChatEvent(triggerChatCommandGuiOff, GetEnumPlayer(), "-resguioff", false)
+    call TriggerRegisterPlayerChatEvent(triggerChatCommandInfo, GetEnumPlayer(), "-resinfo", true)
+    call TriggerRegisterPlayerChatEvent(triggerChatCommandInfo, GetEnumPlayer(), "-resourcesinfo", true)
+endfunction
+
+private function TriggerConditionChatCommandGuiOn takes nothing returns boolean
+    local player targetPlayer = GetTriggerPlayer()
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player tokenPlayer = GetPlayerFromString(token)
+    if (tokenPlayer != null) then
+        set targetPlayer = tokenPlayer
+    endif
+    call ShowPlayerResourceMultiboard(targetPlayer)
+    set udg_MultiboardsToggled[GetConvertedPlayerId(GetTriggerPlayer())] = true
+    return false
+endfunction
+
+private function TriggerConditionChatCommandGuiOff takes nothing returns boolean
+    call HidePlayerResourceMultiboard(GetTriggerPlayer())
+    call ShowStatsMultiboard(GetTriggerPlayer())
+    set udg_MultiboardsToggled[GetConvertedPlayerId(GetTriggerPlayer())] = false
+    return false
+endfunction
+
+private function TriggerConditionChatCommandInfo takes nothing returns boolean
+    call ShowResourceInfo(GetTriggerPlayer())
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function EnumRegisterChatCommandEvents)
+    call TriggerAddCondition(triggerChatCommandGuiOn, Condition(function TriggerConditionChatCommandGuiOn))
+    call TriggerAddCondition(triggerChatCommandGuiOff, Condition(function TriggerConditionChatCommandGuiOff))
+    call TriggerAddCondition(triggerChatCommandInfo, Condition(function TriggerConditionChatCommandInfo))
+
+    set udg_ResourceGold = Resources_GOLD
+    set udg_ResourceLumber = Resources_LUMBER
+    set udg_ResourceOil = Add(GetLocalizedStringSafe("OIL"), GetLocalizedStringSafe("OIL_DESCRIPTION"), 2.0, 50, 50, 50, "ReplaceableTextures\\CommandButtons\\BTNOil.blp", "ReplaceableTextures\\CommandButtons\\BTNOil.blp")
+    set udg_ResourceCopper = Add(GetLocalizedStringSafe("COPPER"), GetLocalizedStringSafe("COPPER_DESCRIPTION"), 0.25, 184, 115, 51, "ReplaceableTextures\\CommandButtons\\BTNCopperCoins.blp", "ReplaceableTextures\\CommandButtons\\BTNCopperCoins.blp")
+    set udg_ResourceSilver = Add(GetLocalizedStringSafe("SILVER"), GetLocalizedStringSafe("SILVER_DESCRIPTION"), 0.5, 192, 192, 192, "ReplaceableTextures\\CommandButtons\\BTNSilverCoin.blp", "ReplaceableTextures\\CommandButtons\\BTNSilverCoin.blp")
+    set udg_ResourceGemstones = Add(GetLocalizedStringSafe("GEMSTONES"), GetLocalizedStringSafe("GEMSTONES_DESCRIPTION"), 2.5, 192, 192, 192, "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp", "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp")
+    set udg_ResourceMeat = Add(GetLocalizedStringSafe("MEAT"), GetLocalizedStringSafe("MEAT_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp", "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp")
+    set udg_ResourceGrain = Add(GetLocalizedStringSafe("GRAIN"), GetLocalizedStringSafe("GRAIN_DESCRIPTION"), 0.4, 243, 164, 2, "ReplaceableTextures\\CommandButtons\\BTNWheat.blp", "ReplaceableTextures\\CommandButtons\\BTNWheat.blp")
+    set udg_ResourceMilk = Add(GetLocalizedStringSafe("MILK"), GetLocalizedStringSafe("MILK_DESCRIPTION"), 0.6, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Milk_04.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Milk_04.blp")
+    set udg_ResourceWool = Add(GetLocalizedStringSafe("WOOL"), GetLocalizedStringSafe("WOOL_DESCRIPTION"), 1.2, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNSheep.blp", "ReplaceableTextures\\CommandButtons\\BTNSheep.blp")
+    set udg_ResourceRock = Add(GetLocalizedStringSafe("ROCKS"), GetLocalizedStringSafe("ROCKS_DESCRIPTION"), 0.4, 128, 128, 128, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp")
+    set udg_ResourceIron = Add(GetLocalizedStringSafe("IRON"), GetLocalizedStringSafe("IRON_DESCRIPTION"), 0.5, 161, 157, 148, "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp")
+    set udg_ResourceBlackPowder = Add(GetLocalizedStringSafe("BLACK_POWDER"), GetLocalizedStringSafe("BLACK_POWDER_DESCRIPTION"), 0.8, 0, 0, 0, "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp", "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp")    
+    set udg_ResourceBlackPowder = Add(GetLocalizedStringSafe("WATER"), GetLocalizedStringSafe("WATER_DESCRIPTION"), 0.20, 14, 135, 204, "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp")
+    set udg_ResourceElectricity = Add(GetLocalizedStringSafe("POWER"), GetLocalizedStringSafe("POWER_DESCRIPTION"), 1.30, 179, 206, 255, "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp", "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp")
+    set udg_ResourceFavor = Add(GetLocalizedStringSafe("FAVOR"), GetLocalizedStringSafe("FAVOR_DESCRIPTION"), 1.1, 234, 208, 35, "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp", "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp")
+    set udg_ResourceFruits = Add(GetLocalizedStringSafe("FRUITS"), GetLocalizedStringSafe("FRUITS_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNOrange.blp", "ReplaceableTextures\\CommandButtons\\BTNOrange.blp")
+    set udg_ResourceFel = Add(GetLocalizedStringSafe("FEL"), GetLocalizedStringSafe("FEL_DESCRIPTION"), 2.0, 50, 255, 50, "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp", "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp")
+    set udg_ResourceArgunite = Add(GetLocalizedStringSafe("ARGUNITE"), GetLocalizedStringSafe("ARGUNITE_DESCRIPTION"), 2.0, 191, 85, 236, "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds", "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds")
+
+    call InitRandomMines()
 endfunction
 
 endlibrary
