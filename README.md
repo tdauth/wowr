@@ -38,12 +38,11 @@ Send me your Battle.net ID on Discord after subscribing to get it unlocked with 
 Download and place the map file `wowr[version].w3x` into the folder `C:\Users\%USERNAME%\Documents\Warcraft III\Maps\Download`.
 Start Warcraft III: Reforged and play a custom game by choosing the map.
 
+## Modifying the Map
 
-*Enable HD graphics in older versions of the map:* Older versions of the map are restricted to SD graphics to avoid performance issues.
-However, you can easily remove this restriction by opening and modifying the map with the World Editor.
-Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
-
-![SD and HD](images/HD.jpg "SD and HD")
+- Start the World Editor of Warcraft III.
+- Open the map folder [wowr.w3x](./wowr.w3x).
+- Save the map with these preconditions:
 
 Make sure that the JassHelper and vJass are enabled:
 
@@ -59,6 +58,15 @@ Make sure that the JassHelper and vJass are enabled:
 It has to be the [src](./src) folder from this repository.
 
 **Note that the file `jasshelper.conf` is reset by the Battle.net app automatically and you might have to adapt it multiple times.**
+
+Use a script like [updatejasshelperconfig.sh](./scripts/updatejasshelperconfig.sh) to automatically update the jasshelper.conf file.
+
+
+*Enable HD graphics in older versions of the map:* Older versions of the map are restricted to SD graphics to avoid performance issues.
+However, you can easily remove this restriction by opening and modifying the map with the World Editor.
+Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
+
+![SD and HD](images/HD.jpg "SD and HD")
 
 ## Frozen Throne Support
 
