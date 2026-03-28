@@ -6657,7 +6657,11 @@ This unit is affected by Divine Shield. It hase Divine armor.
 }
 
 STRING 1125
-// Abilities: A01J (Thieving - Doctor), Name (Name)
+{
+Thieving - Doctor
+}
+
+STRING 1126
 {
 Thieving - Doctor
 }
@@ -6672,6 +6676,12 @@ STRING 1128
 // Items: I0Q1 (Goblin Tool Box), Tip (Tooltip - Basic)
 {
 Purchase Goblin Tool Box
+}
+
+STRING 1129
+// Abilities: A01J (Thieving - Doctor), Name (Name)
+{
+Thieving - Doctor
 }
 
 STRING 1130

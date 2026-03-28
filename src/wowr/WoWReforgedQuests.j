@@ -4,9 +4,9 @@ globals
     private integer questsMax = 0
     private quest array questHandle
     private string array questId
-    private string array questIcon
     private string array questTitle
     private string array questDescription
+    private string array questIcon
     private unit array questNpc
     private integer array questReward
     private integer array questRequirement
@@ -27,7 +27,7 @@ private function AddQuestWoWReforged takes nothing returns integer
     set questReward[index] = udg_TmpItemTypeId
     set questRequirement[index] = tmpRequirement
     set questsMax = questsMax + 1
-    
+
     return index
 endfunction
 
@@ -97,6 +97,38 @@ private function GetLastCreatedQuestBJHook takes nothing returns nothing
 endfunction
 
 hook GetLastCreatedQuestBJ GetLastCreatedQuestBJHook
+
+function AddQuest takes string id, string title, string description, string iconPath, unit npc, integer rewardItemTypeId returns quest
+    local integer index = questsMax
+    local quest q = CreateQuest()
+
+    set bj_lastCreatedQuest = q
+    call QuestSetTitle(q, title)
+    call QuestSetDescription(q, description)
+    call QuestSetIconPath(q, iconPath)
+    call QuestSetRequired(q, false)
+    call QuestSetDiscovered(q, false)
+    call QuestSetCompleted(q, false)
+
+    set questId[index] = id
+    set questTitle[index] = title
+    set questDescription[index] = description
+    set questIcon[index] = iconPath
+    set questNpc[index] = npc
+    set questReward[index] = rewardItemTypeId
+    set questRequirement[index] = -1
+    set questsMax = questsMax + 1
+
+    return q
+endfunction
+
+function AddQuestNext takes string id, string title, string description, string iconPath, unit npc, integer rewardItemTypeId returns quest
+    local quest q = AddQuest(id, title, description, iconPath, npc, rewardItemTypeId)
+    if (questsMax >= 2) then
+        set questRequirement[questsMax - 1] = questsMax - 2
+    endif
+    return q
+endfunction
 
 function ShowQuestRewards takes player whichPlayer returns nothing
     local integer max = GetQuestsMax()
