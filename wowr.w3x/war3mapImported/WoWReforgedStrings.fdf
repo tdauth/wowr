@@ -1930,7 +1930,7 @@ StringList {
     IQ_PORTALS_0                       "Can be build by Male citizens.",
     IQ_PORTALS_1                       "Connect locations directly with each other.",
     IQ_PORTALS_2                       "Teleport units to any discovered area if upgraded."
-    IQ_PORTALS_3                       "Protect locations against enemy portals with Antimagic Wards."
+    IQ_PORTALS_3                       "Protect locations against enemy portals with Antimagic Wards.",
     IQ_CREDITS_TITLE                   "Credits",
     IQ_CREDITS_DESCRIPTION             "All the people who contributed to this map.",
     // Quests
