@@ -400,6 +400,8 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_5"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_6"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_7"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_8"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_9"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_FACTIONS_TITLE"), GetLocalizedStringSafe("IQ_FACTIONS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNOrcCaptureFlag.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("ALLIANCE"))
@@ -436,17 +438,58 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROFESSIONS_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROFESSIONS_1"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROFESSIONS_2"))
-    
+
     call AddInfoQuest(GetLocalizedStringSafe("IQ_RACES_TITLE"), GetLocalizedStringSafe("IQ_RACES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPeasant.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_P_X"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_1"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_R_X"))
-    
+
     call AddInfoQuest(GetLocalizedStringSafe("IQ_START_LOCATIONS_TITLE"), GetLocalizedStringSafe("IQ_START_LOCATIONS_DESCRIPTION"), "ReplaceableTextures\\WorldEditUI\\StartingLocation.blp")
-    
+
     set udg_QuestVictory = AddInfoQuest(GetLocalizedStringSafe("IQ_VICTORY_TITLE"), GetLocalizedStringSafe("IQ_VICTORY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_VICTORY"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_CREEPS_TITLE"), Format(GetLocalizedStringSafe("IQ_CREEPS_DESCRIPTION")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp")
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_BOSSES_TITLE"), Format(GetLocalizedStringSafe("IQ_BOSSES_DESCRIPTION")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNMannoroth.blp")
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_BOSSES_0")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result())
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_BOSSES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_BOSSES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_BOSSES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_L"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_QUESTS_TITLE"), GetLocalizedStringSafe("IQ_QUESTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_QUESTS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_QUESTS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_QUESTS_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_HUMAN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_VILLAGE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DALARAN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_KUL_TIRAS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_NIGHT_ELF"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_ORC"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_BLOOD_ELF"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_NAGA"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_FORSAKEN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_LICH_KING"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DRAENEI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_DEMON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PANDA"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_EREDAR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_TUSKARR"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_GOBLIN"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_JAINA"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_SAVE_CODES_TITLE"), GetLocalizedStringSafe("IQ_SAVE_CODES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNIconSave.blp")
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_PORTALS_TITLE"), GetLocalizedStringSafe("IQ_PORTALS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNWaygate.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PORTALS"))
 
     call AddInfoQuest(GetLocalizedStringSafe("TAUNTS"), GetLocalizedStringSafe("TAUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandaTaunt.blp")
     call AddTauntsQuestItems()
