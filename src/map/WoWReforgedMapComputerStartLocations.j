@@ -1,5 +1,6 @@
 library WoWReforgedMapComputerStartLocations initializer Init requires WoWReforgedComputerStartLocations, WoWReforgedRaces
 
+// Has to match StartLocationsPopup.
 private function Init takes nothing returns nothing
 	// Kalimdor
 	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Teldrassil, gg_rct_Town_Hall_Shipyard_Teldrassil)
