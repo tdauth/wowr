@@ -53938,7 +53938,7 @@ Strong creature. Can cast Schockwelle, Verschlingen and Verkrüppeln. |n|n|cffff
 STRING 16583
 // Items: I07A (Equipment Bag), Description (Description)
 {
-An additional bag with equipment.
+Eine zusätzliche Tasche mit Ausrüstung.
 }
 
 STRING 16584
@@ -62134,7 +62134,7 @@ STRING 22530
 STRING 22533
 // Units: E00R (Equipment Bag), Ubertip (Tooltip - Extended)
 {
-An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried  items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
+Eine zusätzliche Tasche mit Ausrüstung, die von Ihrem ersten Helden getragen werden kann. Alle Boni von getragenen Gegenständen werden Ihrem ersten Helden gegeben, genau wie vom normalen Heldeninventar.|n|nDie Heldenwerte sind dieselben wie die Ihres ersten Helden. Die Tasche kann angepasste Heldenfähigkeiten pro Fähigkeitenfach erlernen.|n|nSie kann außerdem als Herstellungslager verwendet werden.
 }
 
 STRING 22564

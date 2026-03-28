@@ -62118,7 +62118,7 @@ STRING 22530
 STRING 22533
 // Units: E00R (Equipment Bag), Ubertip (Tooltip - Extended)
 {
-An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried  items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
+An additional bag with equipment which can be carried by your first hero. All bonuses by the carried items will be given to your first hero just like from the regular hero inventory.|n|nThe hero stats are the same as from your first hero. The bag can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
 }
 
 STRING 22564
