@@ -117370,13 +117370,13 @@ Buch der Schürferei
 STRING 56228
 // Items: I11Z (Book of Prospecting), Description (Description)
 {
-A book that contains knowledge of crafting prospecting tools.
+Ein Buch, welches das Wissen enthält, Schürfwerkzeuge herzustellen.
 }
 
 STRING 56229
 // Items: I11Z (Book of Prospecting), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of crafting prospecting tools.
+Ein Buch, welches das Wissen enthält, Schürfwerkzeuge herzustellen.
 }
 
 STRING 56230
