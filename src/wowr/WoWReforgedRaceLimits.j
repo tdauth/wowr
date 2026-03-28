@@ -1,4 +1,4 @@
-library WoWReforgedRacesLimits requires WoWReforgedUtils, WoWReforgedRaces
+library WoWReforgedRacesLimits initializer Init requires WoWReforgedUtils, WoWReforgedRaces
 
 function SetRacesLimits takes integer housingLimit, integer towerLimit returns nothing
     local integer max = GetRacesMax()
@@ -42,6 +42,10 @@ endfunction
 
 function ResetRacesLimits takes nothing returns nothing
     call SetRacesLimits(-1, -1)
+endfunction
+
+private function Init takes nothing returns nothing
+    call AddRacesLimits()
 endfunction
 
 endlibrary

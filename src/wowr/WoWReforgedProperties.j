@@ -1,4 +1,4 @@
-library WoWReforgedProperties initializer Init requires GenerateIds, PagedButtons, optional PagedButtonsUI, Resources, optional ResourcesGui, WoWReforgedRaces, WoWReforgedPings, WoWReforgedResearches, WoWReforgedAccount
+library WoWReforgedProperties initializer Init requires GenerateIds, PagedButtons, optional PagedButtonsUI, Resources, optional ResourcesGui, WoWReforgedRaces, WoWReforgedPings, WoWReforgedResearches, WoWReforgedResources, WoWReforgedAccount
 
 globals
     public constant real RESOURCES_INTERVAL = 30.0
@@ -289,6 +289,45 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(purchaseTrigger, EVENT_PLAYER_UNIT_SELL)
     // Use a trigger action because of ResourcesGui_StartUpdateTimerForUnits and the player selection.
     call TriggerAddAction(purchaseTrigger, function TriggerActionPurchase)
+
+    call AddProperty('n0NF', 'h0YE', udg_ResourceFruits, udg_RaceHuman, true) // Theramore Isle
+    call AddProperty('n07I', 'h0WP', udg_ResourceIron, udg_RaceStormwind, true) // New Stormwind
+    call AddProperty('n0NH', 'h0YG', udg_ResourceFruits, udg_RaceKulTiras, true) // Boralus
+    call AddProperty('n09G', 'h07N', udg_ResourceGold, udg_RaceBandit, true) // Deadmines
+    call AddProperty('n0NI', 'h0YH', udg_ResourceElectricity, udg_RaceDalaran, true) // Dalaran
+    call AddProperty('n097', 'h0X0', udg_ResourceGemstones, udg_RaceDwarf, true) // Ironforge
+    call AddProperty('n0HI', 'h0XE', udg_ResourceIron, udg_RaceGnome, true) // Gnomeregan
+    call AddProperty('n0LW', 'h0XN', udg_ResourceMeat, udg_RaceGnoll, false) // Gnoll Camp
+    call AddProperty('n0LV', 'h0XM', udg_ResourceGold, udg_RaceKobold, false) // Kobold Camp
+    call AddProperty('n0LO', 'h0XH', udg_ResourceRock, udg_RaceWorgen, true) // Gilneas City
+    call AddProperty('n07N', 'h0WS', udg_ResourceMeat, udg_RaceOrc, true) // Orgrimmar
+    call AddProperty('n08S', 'h0WW', udg_ResourceFavor, udg_RaceTauren, true) // Thunder Bluff
+    call AddProperty('n0LX', 'h0XO', udg_ResourceMeat, udg_RaceCentaur, false) // Maraudon
+    call AddProperty('n0LY', 'h0XP', udg_ResourceMeat, udg_RaceQuillboar, false) // Razorfen Kraul
+    call AddProperty('n0BK', 'h0X5', udg_ResourceOil, udg_RaceTroll, true) // Darkspear Isle
+    call AddProperty('n07O', 'h0WT', udg_ResourceFavor, udg_RaceUndead, false) // Undercity
+    call AddProperty('n098', 'h0X1', udg_ResourceGold, udg_RaceBloodElf, true) // Sunstrider Isle
+    call AddProperty('n099', 'h0X2', udg_ResourceSilver, udg_RaceHighElf, true) // Silvermoon
+    call AddProperty('n0LR', 'h0XI', udg_ResourceGold, udg_RaceUndead, true) // Icecrown Citadel
+    call AddProperty('n07W', 'h0WU', udg_ResourceSilver, udg_RaceNerubian, true) // Azjol-Nerub
+    call AddProperty('n0LL', 'h0XF', udg_ResourceMeat, udg_RaceVrykul, true) // Utgarde Keep
+    call AddProperty('n0CT', 'h0X7', udg_ResourceMeat, udg_RaceTuskarr, true) // Moa'ki Harbor
+    call AddProperty('n0E5', 'h0XB', udg_ResourceArgunite, udg_RaceDraenei, true) // Exodar
+    call AddProperty('n0LM', 'h0XG', udg_ResourceFel, udg_RaceDemon, true) // Antorus, the Burning Throne
+    call AddProperty('n08J', 'h0WV', udg_ResourceFruits, udg_RaceNightElf, true) // Terdrassil
+    call AddProperty('n0C9', 'h0X6', udg_ResourceLumber, udg_RaceFurbolg, false) // Timbermaw Hold
+    call AddProperty('n0D6', 'h0X8', udg_ResourceLumber, udg_RaceSatyr, false) // Jadefire Glen
+    call AddProperty('n0GA', 'h0XD', udg_ResourceOil, udg_RaceGoblin, true) // The Undermine
+    call AddProperty('n096', 'h0WZ', udg_ResourceWater, udg_RaceNaga, true) // Nazjatar
+    call AddProperty('n0LS', 'h0XJ', udg_ResourceWater, udg_RaceMurloc, true) // Murloc Camp
+    call AddProperty('n08Z', 'h0WX', udg_ResourceMeat, udg_RaceOgre, true) // Gruul's Lair
+    call AddProperty('n095', 'h0WY', udg_ResourceFel, udg_RaceFelOrc, true) // Hellfire Citadel
+    call AddProperty('n0LU', 'h0XL', udg_ResourceArgunite, udg_RaceLostOnes, true) // Fallow Sanctuary
+    call AddProperty('n09A', 'h0X3', udg_ResourceLumber, udg_RacePandaren, true) // The Shrine of Seven Stars
+    call AddProperty('n0EU', 'h0XC', udg_ResourceGold, udg_RaceFacelessOne, true) // Ny'alotha
+    call AddProperty('n0AA', 'h07Y', udg_ResourceGold, udg_RaceDungeon, true) // Dungeon
+    call AddProperty('n0O4', 'h08I', udg_ResourceWool, udg_RaceLordaeron, false) // Capital City
+    call AddProperty('n0OC', 'h0AO', udg_ResourceGold, udg_RaceDragonkin, false) // Wyrmrest Temple
 endfunction
 
 endlibrary

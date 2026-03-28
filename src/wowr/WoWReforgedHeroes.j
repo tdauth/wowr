@@ -1,4 +1,4 @@
-library WoWReforgedHeroes requires PagedButtonsConfig, StringUtils, UnitTypeUtils, WoWReforgedUtils, WoWReforgedAccount, WoWReforgedClasses, WoWReforgedRaces, WoWReforgedDependencyEquivalents
+library WoWReforgedHeroes initializer Init requires PagedButtonsConfig, StringUtils, UnitTypeUtils, WoWReforgedUtils, WoWReforgedAccount, WoWReforgedClasses, WoWReforgedRaces, WoWReforgedDependencyEquivalents
 
 private function AddHeroPagedButtonsConfig takes integer id, string modelPath returns nothing
     call AddPagedButtonsConfigHero(id, 0, 0, 1, 1, 0, 0, modelPath)
@@ -122,7 +122,8 @@ function ApplyHeroMount takes unit hero returns nothing
     call SetHeroMountTypeByUnitTypeId(hero, GetHeroMountUnitTypeIdByUnitTypeId(GetPrimaryDependencyEquivalent(GetUnitTypeId(hero))))
 endfunction
 
-function InitHeroes takes nothing returns nothing
+// After races.
+private function Init takes nothing returns nothing
     // Customizable
     call AddHero(CUSTOMIZABLE_HERO, -1, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("CUSTOMIZABLE"), "")
     

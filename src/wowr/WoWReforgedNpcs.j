@@ -100,7 +100,6 @@ private function Init takes nothing returns nothing
     call AddNpc('H0UX')
     call AddNpc('H0Q1')
     call AddNpc('H0Q2')
-    call AddNpc('U03N')
     call AddNpc('N0O1')
     call AddNpc('H0AQ')
     call AddNpc('H0AP')

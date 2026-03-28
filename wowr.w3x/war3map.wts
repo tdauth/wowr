@@ -1853,6 +1853,12 @@ STRING 309
 (Neutral Hostile)
 }
 
+STRING 310
+// Abilities: A01J (Thieving - Doctor), Name (Name)
+{
+Thieving - Doctor
+}
+
 STRING 311
 // Abilities: A12S (Discharge), EditorSuffix (Editor Suffix)
 {
@@ -6679,7 +6685,6 @@ Purchase Goblin Tool Box
 }
 
 STRING 1129
-// Abilities: A01J (Thieving - Doctor), Name (Name)
 {
 Thieving - Doctor
 }
@@ -18070,97 +18075,97 @@ B
 }
 
 STRING 3518
-// Units: h0XK (Buy Property Black Temple), Hotkey (Hotkey)
-{
-B
-}
-
-STRING 3519
 // Units: h0XL (Buy Property Fallow Sanctuary), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3520
+STRING 3519
 // Units: h0XM (Buy Property Kobold Camp), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3521
+STRING 3520
 // Units: h0XN (Buy Property Gnoll Camp), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3522
+STRING 3521
 // Units: h0XO (Buy Property Maraudon), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3523
+STRING 3522
 // Units: h0XP (Buy Property Razorfen Kraul), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3524
+STRING 3523
 // Units: h0YE (Buy Property Theramore Isle), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3525
-// Units: h0YF (Buy Property Tomb of Sargeras), Hotkey (Hotkey)
-{
-B
-}
-
-STRING 3526
+STRING 3524
 // Units: h0YG (Buy Property Boralus), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3527
+STRING 3525
 // Units: h0YH (Buy Property Dalaran), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3528
+STRING 3526
 // Units: n0NM (Quillboar), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3529
+STRING 3527
 // Units: n094 (Crossbowman), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3530
+STRING 3528
 // Units: h07N (Buy Property Deadmines), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3531
+STRING 3529
 // Units: n09U (Skeleton Berserker), Hotkey (Hotkey)
 {
 B
 }
 
-STRING 3532
+STRING 3530
 // Units: h07Y (Buy Property Dungeon), Hotkey (Hotkey)
 {
 B
 }
 
+STRING 3531
+// Units: h08I (Buy Property Capital City), Hotkey (Hotkey)
+{
+B
+}
+
+STRING 3532
+// Units: h0AO (Buy Property Wyrmrest Temple), Hotkey (Hotkey)
+{
+B
+}
+
 STRING 3533
-// Units: h08A (Buy Property Seat of the Primus), Hotkey (Hotkey)
+// Items: I09G (The Burning Legion), Hotkey (Hotkey)
 {
 B
 }
@@ -20092,7 +20097,7 @@ D
 }
 
 STRING 4049
-// Units: h08I (Buy Property Capital City), Hotkey (Hotkey)
+// Abilities: ACbc (Breath of Fire), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -21892,7 +21897,7 @@ F
 }
 
 STRING 4503
-// Units: h0AO (Buy Property Wyrmrest Temple), Hotkey (Hotkey)
+// Abilities: A0C9 (Paint Blue), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -22291,7 +22296,7 @@ Flying Wild God boss hero who can cast Mirror Image, Drunken Brawler, Miss Aura,
 }
 
 STRING 4582
-// Items: I09G (The Burning Legion), Hotkey (Hotkey)
+// Abilities: A01E (Blink), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -22369,7 +22374,7 @@ O
 }
 
 STRING 4602
-// Abilities: ACbc (Breath of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0EN (Carrion Beetles), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -22549,7 +22554,7 @@ STRING 4675
 }
 
 STRING 4676
-// Abilities: A0C9 (Paint Blue), Hotkey (Hotkey - Normal)
+// Upgrades: R01P (Ensnare), Hotkey (Hotkey)
 {
 B
 }
@@ -23710,7 +23715,7 @@ STRING 4889
 }
 
 STRING 4891
-// Abilities: A01E (Blink), Hotkey (Hotkey - Normal)
+// Upgrades: R02P (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 B
 }
@@ -23830,7 +23835,7 @@ Convert Unit
 }
 
 STRING 4925
-// Abilities: A0EN (Carrion Beetles), Hotkey (Hotkey - Normal)
+// Upgrades: R02P (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 B
 }
@@ -23848,7 +23853,7 @@ STRING 4927
 }
 
 STRING 4928
-// Upgrades: R01P (Ensnare), Hotkey (Hotkey)
+// Upgrades: R05Y (Flare), Hotkey (Hotkey)
 {
 B
 }
@@ -25090,13 +25095,13 @@ Creates a Spawning Grounds.
 }
 
 STRING 5192
-// Upgrades: R02P (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 5193
-// Upgrades: R02P (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 B
 }
@@ -26170,31 +26175,31 @@ P
 }
 
 STRING 5391
-// Upgrades: R05Y (Flare), Hotkey (Hotkey)
+// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 5392
-// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
+// Upgrades: R0EK (Ensnare), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 5393
-// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
+// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 5394
-// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
+// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 5395
-// Upgrades: R0EK (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
 {
 B
 }
@@ -26254,7 +26259,7 @@ H
 }
 
 STRING 5407
-// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
+// Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 B
 }
@@ -26452,18 +26457,6 @@ Allows crafting items.
 }
 
 STRING 5460
-// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
-{
-B
-}
-
-STRING 5461
-// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
-{
-B
-}
-
-STRING 5462
 // Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 B
@@ -26761,12 +26754,6 @@ STRING 5540
 // Items: I1AO (Skin Thrall Unmounted), Ubertip (Tooltip - Extended)
 {
 Skin of Thrall Unmounted.
-}
-
-STRING 5541
-// Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
-{
-B
 }
 
 STRING 5542
@@ -31083,28 +31070,10 @@ STRING 6496
 Gives all ships the ability Hyperspace which allows them to travel at any visible point on the map.
 }
 
-STRING 6497
-// Units: h08A (Buy Property Seat of the Primus), Name (Name)
-{
-Buy Property Seat of the Primus
-}
-
-STRING 6501
-// Units: h08A (Buy Property Seat of the Primus), Tip (Tooltip - Basic)
-{
-Buy Property Seat of the Primus
-}
-
 STRING 6502
 // Units: h0XI (Buy Property Icecrown Citadel), Ubertip (Tooltip - Extended)
 {
 Purchases the property. |n|n|cffffcc00Race: Undead.|r|n|cffffcc00Resource: Gold.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
-}
-
-STRING 6505
-// Units: n0DW (Seat of the Primus), Name (Name)
-{
-Seat of the Primus
 }
 
 STRING 6506
@@ -37033,24 +37002,6 @@ STRING 8034
 // Units: U03L (Master of Revendreth), Ubertip (Tooltip - Extended)
 {
 Powerful Undead hero. Can learn Death Coil, Life Drain, Vampiric Aura, Animate Dead, and Reincarnation Aura.|n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Boss hero requires level 50. Use -unlock to disable this restriction.|r
-}
-
-STRING 8035
-// Units: U03N (Eternal One), EditorSuffix (Name - Editor Suffix)
-{
- (Lich) (NPC)
-}
-
-STRING 8036
-// Units: U03N (Eternal One), Propernames (Proper Names)
-{
-Primus
-}
-
-STRING 8037
-// Units: U03N (Eternal One), Name (Name)
-{
-Eternal One
 }
 
 STRING 8038
@@ -71256,12 +71207,6 @@ STRING 31791
 // Upgrades: R0E4 (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
 {
 Ogre Clubs
-}
-
-STRING 31801
-// Units: n0NG (Tomb of Sargeras), Name (Name)
-{
-Tomb of Sargeras
 }
 
 STRING 31833
@@ -116171,7 +116116,7 @@ STRING 55721
 }
 
 STRING 55722
-// Units: n0LT (Black Temple), EditorSuffix (Name - Editor Suffix)
+// Units: n0LU (Fallow Sanctuary), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -116306,7 +116251,7 @@ STRING 55757
 }
 
 STRING 55758
-// Units: n0LU (Fallow Sanctuary), EditorSuffix (Name - Editor Suffix)
+// Units: n0LV (Kobold Camp), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -116432,7 +116377,7 @@ Converts non-ancient player units into ancient player units.
 }
 
 STRING 55789
-// Units: n0LV (Kobold Camp), EditorSuffix (Name - Editor Suffix)
+// Units: n0LW (Gnoll Camp), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -116504,7 +116449,7 @@ Antorus, the Burning Throne
 }
 
 STRING 55810
-// Units: n0LW (Gnoll Camp), EditorSuffix (Name - Editor Suffix)
+// Units: n0LX (Maraudon), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -116522,7 +116467,7 @@ Deposits gold to get it back with interest charges.
 }
 
 STRING 55813
-// Units: n0LX (Maraudon), EditorSuffix (Name - Editor Suffix)
+// Units: n0LY (Razorfen Kraul), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -116600,7 +116545,7 @@ Buy Property Gilneas City
 }
 
 STRING 55829
-// Units: n0LY (Razorfen Kraul), EditorSuffix (Name - Editor Suffix)
+// Units: n0NF (Theramore Isle), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -117025,12 +116970,6 @@ STRING 55906
 Buy Property Icecrown Citadel
 }
 
-STRING 55907
-// Units: h08A (Buy Property Seat of the Primus), Ubertip (Tooltip - Extended)
-{
-Purchases the property. |n|n|cffffcc00Race: Undead.|r|n|cffffcc00Resource: Gold.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
-}
-
 STRING 55908
 // Units: h0XJ (Buy Property Murloc Camp), Name (Name)
 {
@@ -117073,34 +117012,10 @@ STRING 55914
 Heavy ranged unit with Brilliance Aura. Can also cast Raise Dead, Polymorph, Blink and Permanent Invisibility. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 55942
-// Units: n0LT (Black Temple), Name (Name)
-{
-Black Temple
-}
-
 STRING 55943
-// Units: n0NF (Theramore Isle), EditorSuffix (Name - Editor Suffix)
+// Units: n0NH (Boralus), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
-}
-
-STRING 55944
-// Units: h0XK (Buy Property Black Temple), Name (Name)
-{
-Buy Property Black Temple
-}
-
-STRING 55945
-// Units: h0XK (Buy Property Black Temple), Tip (Tooltip - Basic)
-{
-Buy Property Black Temple
-}
-
-STRING 55946
-// Units: h0XK (Buy Property Black Temple), Ubertip (Tooltip - Extended)
-{
-Purchases the property. |n|n|cffffcc00Race: Blood Elf.|r|n|cffffcc00Resource: Fel.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
 }
 
 STRING 55947
@@ -117128,19 +117043,19 @@ Fallow Sanctuary
 }
 
 STRING 55951
-// Units: n0NG (Tomb of Sargeras), EditorSuffix (Name - Editor Suffix)
+// Units: n0NI (Dalaran), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
 
 STRING 55952
-// Units: n0NH (Boralus), EditorSuffix (Name - Editor Suffix)
+// Units: n09G (Deadmines), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
 
 STRING 55953
-// Units: n0NI (Dalaran), EditorSuffix (Name - Editor Suffix)
+// Units: n0AA (Dungeon), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -117230,13 +117145,13 @@ Purchases the property. |n|n|cffffcc00Race: Centaur.|r|n|cffffcc00Resource: Meat
 }
 
 STRING 55976
-// Units: n09G (Deadmines), EditorSuffix (Name - Editor Suffix)
+// Units: n0O4 (Capital City), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
 
 STRING 55978
-// Units: n0AA (Dungeon), EditorSuffix (Name - Editor Suffix)
+// Units: n0OC (Wyrmrest Temple), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
 }
@@ -117245,18 +117160,6 @@ STRING 55981
 // Units: h0XP (Buy Property Razorfen Kraul), Ubertip (Tooltip - Extended)
 {
 Purchases the property. |n|n|cffffcc00Race: Quillboar.|r|n|cffffcc00Resource: Meat.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
-}
-
-STRING 55982
-// Units: n0DW (Seat of the Primus), EditorSuffix (Name - Editor Suffix)
-{
-(Property)
-}
-
-STRING 55983
-// Units: n0O4 (Capital City), EditorSuffix (Name - Editor Suffix)
-{
-(Property)
 }
 
 STRING 56046
@@ -122907,34 +122810,10 @@ STRING 58301
 Theramore Isle
 }
 
-STRING 58302
-// Units: h0YF (Buy Property Tomb of Sargeras), Name (Name)
-{
-Buy Property Tomb of Sargeras
-}
-
-STRING 58303
-// Units: h0YF (Buy Property Tomb of Sargeras), Tip (Tooltip - Basic)
-{
-Buy Property Tomb of Sargeras
-}
-
-STRING 58304
-// Units: h0YF (Buy Property Tomb of Sargeras), Ubertip (Tooltip - Extended)
-{
-Purchases the property. |n|n|cffffcc00Race: Demon.|r|n|cffffcc00Resource: Fel.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
-}
-
 STRING 58328
 // Units: n0NH (Boralus), Name (Name)
 {
 Boralus
-}
-
-STRING 58329
-// Units: n0OC (Wyrmrest Temple), EditorSuffix (Name - Editor Suffix)
-{
-(Property)
 }
 
 STRING 58404
