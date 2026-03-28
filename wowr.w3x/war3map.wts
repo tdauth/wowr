@@ -6634,7 +6634,6 @@ Thieving - Doctor
 }
 
 STRING 1121
-// Abilities: A01J (Thieving - Doctor), Name (Name)
 {
 Thieving - Doctor
 }
@@ -6655,6 +6654,12 @@ STRING 1124
 // Buffs/Effects: B003 (Divine Shield), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Divine Shield. It hase Divine armor.
+}
+
+STRING 1125
+// Abilities: A01J (Thieving - Doctor), Name (Name)
+{
+Thieving - Doctor
 }
 
 STRING 1127
