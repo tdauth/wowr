@@ -67,7 +67,7 @@ However, it can be adapted for the old Frozen Throne version.
 Use the tool [Map Adapter](https://www.hiveworkshop.com/threads/map-adapter.326456/) or adapt the map manually.
 JASS natives which only exist in Reforged must be replaced with custom functions.
 You have to adapt the [common.j](./wowr.w3x/scripts/common.j) file and remove natives which do not exist in Frozen Throne.
-You have to add all of these natives to the map script [war3map.j](./wowr.w3x/scripts/war3map.j) as user-defined JASS functions.
+You have to add all of these natives to the map script war3map.j as user-defined JASS functions.
 Modify any map file manually with an MPQ editor like [Ladik's MPQ Editor](https://www.hiveworkshop.com/threads/ladiks-mpq-editor-version-2-0-1-278.91512/).
 
 ## On the Limitations of Warcraft III
