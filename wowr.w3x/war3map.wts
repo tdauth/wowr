@@ -22196,7 +22196,7 @@ Short Force Bridge
 STRING 4563
 // Items: I0HC (Scribe), Ubertip (Tooltip - Extended)
 {
-Craft tomes which increase hero attributes permanently:|n- Tome of Knowledge|n- Manual of Health, Manual of Mana, Tome of Life Regeneration and Tome of Mana Regeneration|n- Tome of Damage, Tome of Armor, Tome of Movement and Tome of Sight|n- Tome of Experience and Tome of Magic|n- Tome of Greater Experience|n- Tome of Power|n|n|cffffcc00Requires tomes to be enabled. Use -tomes to disable this restriction.|r
+Craft tomes which increase hero attributes permanently:|n- Tome of Knowledge|n- Manual of Health, Manual of Mana, Tome of Life Regeneration and Tome of Mana Regeneration|n- Tome of Damage, Tome of Armor, Tome of Movement and Tome of Sight|n- Tome of Experience and Tome of Magic|n- Tome of Greater Experience|n- Tome of Power|n|n|cffffcc00Requires tomes to be enabled. Use "-tomes" to disable this restriction.|r
 }
 
 STRING 4564

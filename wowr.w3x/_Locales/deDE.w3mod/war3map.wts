@@ -488,7 +488,7 @@ Orc-Heer
 }
 
 STRING 82
-// Items: I01I (Tyrande´s Moonstone), Name (Name)
+// Items: I01I (Tyrande´s Mondstein), Name (Name)
 {
 Tyrandes Mondstein
 }
@@ -1188,49 +1188,49 @@ A Druid Spell required for Tyrande to shield the Night Elf housings from damagin
 }
 
 STRING 199
-// Items: I01G (Bugged Moonstone), Name (Name)
+// Items: I01G (Bugged Mondstein), Name (Name)
 {
-Bugged Moonstone
+Bugged Mondstein
 }
 
 STRING 200
-// Items: I01G (Bugged Moonstone), Description (Description)
+// Items: I01G (Bugged Mondstein), Description (Description)
 {
-A somehow bugged Moonstone from Tyrande. Take it to Jaina Proudmoore on Insel Theramore.
+A somehow bugged Mondstein from Tyrande. Take it to Jaina Proudmoore on Insel Theramore.
 }
 
 STRING 201
-// Items: I01G (Bugged Moonstone), Ubertip (Tooltip - Extended)
+// Items: I01G (Bugged Mondstein), Ubertip (Tooltip - Extended)
 {
-A somehow bugged Moonstone from Tyrande. Take it to Jaina Proudmoore on Insel Theramore.
+A somehow bugged Mondstein from Tyrande. Take it to Jaina Proudmoore on Insel Theramore.
 }
 
 STRING 202
-// Items: I01H (Enhanced Moonstone), Name (Name)
+// Items: I01H (Enhanced Mondstein), Name (Name)
 {
 Verbesserter Mondstein
 }
 
 STRING 203
-// Items: I01H (Enhanced Moonstone), Description (Description)
+// Items: I01H (Enhanced Mondstein), Description (Description)
 {
-An enhanced Moonstone from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
+An enhanced Mondstein from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
 }
 
 STRING 204
-// Items: I01H (Enhanced Moonstone), Ubertip (Tooltip - Extended)
+// Items: I01H (Enhanced Mondstein), Ubertip (Tooltip - Extended)
 {
-An enhanced Moonstone from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
+An enhanced Mondstein from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
 }
 
 STRING 205
-// Items: I01I (Tyrande´s Moonstone), Description (Description)
+// Items: I01I (Tyrande´s Mondstein), Description (Description)
 {
-|cffff8c00Artefakt|r|nA special Moonstone crafted by the Night Elves´ Priestess Tyrande Whisperwind.
+|cffff8c00Artefakt|r|nA special Mondstein crafted by the Night Elves´ Priestess Tyrande Whisperwind.
 }
 
 STRING 206
-// Items: I01I (Tyrande´s Moonstone), Ubertip (Tooltip - Extended)
+// Items: I01I (Tyrande´s Mondstein), Ubertip (Tooltip - Extended)
 {
 |cffff8c00Artefakt|r|nIncreases the defense of the Hero by 8. Also grants the ability to make a sun eclipse for a short period of time|n|cffffcc00History|r|n|cffffdeadAfter the incident with the prolongued sun eclipse caused by a bugged moonstone was solved, Tyrande gave this special copy of the moonstones to the Hero who helped finding and dispelling the item bug.|r
 }
@@ -3567,9 +3567,9 @@ Increases Goblin-Magier's mana capacity, mana regeneration rate, hit points, and
 }
 
 STRING 596
-// Units: h074 (Dummy Moonstone), Name (Name)
+// Units: h074 (Dummy Mondstein), Name (Name)
 {
-Dummy Moonstone
+Dummy Mondstein
 }
 
 STRING 597
@@ -12909,7 +12909,7 @@ A
 }
 
 STRING 2357
-// Abilities: A25X (Astromancy - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A25X (Astromantie - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -22196,7 +22196,7 @@ Kurze Energiebrücke
 STRING 4563
 // Items: I0HC (Scribe), Ubertip (Tooltip - Extended)
 {
-Craft tomes which increase hero attributes permanently:|n- Tome of Knowledge|n- Manual of Heilenth, Manual of Mana, Tome of Lebensregeneration and Tome of Manaregeneration|n- Tome of Damage, Tome of Armor, Tome of Movement and Tome of Sight|n- Tome of Experience and Tome of Magic|n- Tome of Greater Experience|n- Tome of Power|n|n|cffffcc00Requires tomes to be enabled. Use -tomes to disable this restriction.|r
+Stellt Folianten her, die Heldenattribute dauerhaft erhöhen:|n- Foliant des Wissens|n- Buch der Gesundheit, Buch des Manas, Foliant der Lebensregeneration und Foliant der Manaregeneration|n- Foliant des Schadens, Foliant der Rüstung, Foliant der Bewegung und Foliant der Sicht|n- Foliant der Erfahrung und Foliant der Magie|n- Foliant er Größeren Erfahrung|n- Foliant der Macht|n|n|cffffcc00Setzt voraus, dass Folianten aktiviert sind. Benutzen Sie "-tomes", um diese Beschränkung aufzuheben.|r
 }
 
 STRING 4564
@@ -45181,37 +45181,37 @@ STRING 10919
 }
 
 STRING 10920
-// Abilities: A25W (Astromancy - Doctor), Name (Name)
+// Abilities: A25W (Astromantie - Doctor), Name (Name)
 {
-Astromancy - Doctor
+Astromantie - Doctor
 }
 
 STRING 10921
-// Abilities: A25W (Astromancy - Doctor), Tip (Tooltip - Normal)
+// Abilities: A25W (Astromantie - Doctor), Tip (Tooltip - Normal)
 {
 Doktor-Astromanz
 }
 
 STRING 10922
-// Abilities: A25W (Astromancy - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25W (Astromantie - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 Der Astromant nutzt sein Wissen, um einen winzigen Stern und einen Sonnenstein zu erschaffen.
 }
 
 STRING 10923
-// Abilities: A25X (Astromancy - Grand Master), Name (Name)
+// Abilities: A25X (Astromantie - Grand Master), Name (Name)
 {
-Astromancy - Großmeister
+Astromantie - Großmeister
 }
 
 STRING 10924
-// Abilities: A25X (Astromancy - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A25X (Astromantie - Grand Master), Tip (Tooltip - Normal)
 {
 Großmeister-Astromanz
 }
 
 STRING 10925
-// Abilities: A25X (Astromancy - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25X (Astromantie - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Astromant uses his knowledge to create a Tiny Moon and Moonkey.
 }
@@ -47169,13 +47169,13 @@ Hebel Tor und Portal
 STRING 11601
 // Items: I12X (Astromancer), Ubertip (Tooltip - Extended)
 {
-Craft items to explore the stars and travel through space:|n- Spruchrolle der Navigations and Tiny Portale|n- Leuchtsignal Guns and Fluchtportale|n- Meteor Stones and Scroll of Town Portale|n- Tiny Arcane Observatories|n- Tiny Moon, Moonstone|n- Tiny Sun, Sonnenstein
+Stellt Gegenstände zur Erkundung der Sterne und der Reise durch den Weltraum her:|n- Spruchrollen der Navigation und Winzige Portale|n- Leuchtsignalpistolen und Fluchtportale|n- Meteorsteine und Rollen der Stadtportale|n- Winziges Arkanes Observatorium|n- Winziger Mond, Mondstein|n- Winzige Sonne, Sonnenstein
 }
 
 STRING 11602
-// Abilities: A230 (Astromancy - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A230 (Astromantie - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Astromant uses knowledge to craft Leuchtsignal Guns and Fluchtportale.
+Der Astromant nutzt Wissen, um Leuchtsignalpistolen und Fluchtportale herzustellen.
 }
 
 STRING 11603
@@ -57553,7 +57553,7 @@ Höllen-Kernhund anheuern
 }
 
 STRING 19410
-// Abilities: A231 (Astromancy - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A231 (Astromantie - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63135,21 +63135,21 @@ Kobold-Goldmünzen erwerben
 }
 
 STRING 23590
-// Items: I0BM (Unique - Elune's Moonstone), Name (Name)
+// Items: I0BM (Unique - Elune's Mondstein), Name (Name)
 {
-Einzigartig - Elune's Moonstone
+Einzigartig - Elune's Mondstein
 }
 
 STRING 23591
-// Items: I0BM (Unique - Elune's Moonstone), Ubertip (Tooltip - Extended)
+// Items: I0BM (Unique - Elune's Mondstein), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nAn enchanted Moonstone by Elune herself.|n|nReduces the cooldown of all abilities.
+|cff8b00ffEinzigartig|r|nAn enchanted Mondstein by Elune herself.|n|nReduces the cooldown of all abilities.
 }
 
 STRING 23592
-// Items: I0BM (Unique - Elune's Moonstone), Description (Description)
+// Items: I0BM (Unique - Elune's Mondstein), Description (Description)
 {
-|cff8b00ffEinzigartig|r|nAn enchanted Moonstone by Elune herself.|n|nReduces the cooldown of all abilities.
+|cff8b00ffEinzigartig|r|nAn enchanted Mondstein by Elune herself.|n|nReduces the cooldown of all abilities.
 }
 
 STRING 23593
@@ -70701,7 +70701,7 @@ Korallengolem ausbilden
 }
 
 STRING 31525
-// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A25W (Astromantie - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -93057,7 +93057,7 @@ STRING 41522
 }
 
 STRING 41523
-// Abilities: A230 (Astromancy - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A230 (Astromantie - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97347,7 +97347,7 @@ This unit has Horn von Cenarius; its attack damage has been increased.
 }
 
 STRING 43313
-// Abilities: A22Z (Astromancy - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A22Z (Astromantie - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -119278,25 +119278,25 @@ Astromant
 }
 
 STRING 57077
-// Items: I12Y (Book of Astromancy), Name (Name)
+// Items: I12Y (Book of Astromantie), Name (Name)
 {
 Buch der Astromantie
 }
 
 STRING 57078
-// Items: I12Y (Book of Astromancy), Description (Description)
+// Items: I12Y (Book of Astromantie), Description (Description)
 {
-A book that contains knowledge of crafting Astromancy items.
+A book that contains knowledge of crafting Astromantie items.
 }
 
 STRING 57079
-// Items: I12Y (Book of Astromancy), Ubertip (Tooltip - Extended)
+// Items: I12Y (Book of Astromantie), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of crafting Astromancy items.
+A book that contains knowledge of crafting Astromantie items.
 }
 
 STRING 57080
-// Items: I12Y (Book of Astromancy), Tip (Tooltip - Basic)
+// Items: I12Y (Book of Astromantie), Tip (Tooltip - Basic)
 {
 Buch der Astromantie kaufen
 }
@@ -119350,69 +119350,69 @@ STRING 57088
 }
 
 STRING 57089
-// Abilities: A22Y (Astromancy), Name (Name)
+// Abilities: A22Y (Astromantie), Name (Name)
 {
 Astromantie
 }
 
 STRING 57090
-// Abilities: A22Z (Astromancy - Novice), Name (Name)
+// Abilities: A22Z (Astromantie - Novice), Name (Name)
 {
-Astromancy - Novize
+Astromantie - Novize
 }
 
 STRING 57091
-// Abilities: A22Z (Astromancy - Novice), Tip (Tooltip - Normal)
+// Abilities: A22Z (Astromantie - Novice), Tip (Tooltip - Normal)
 {
-Novize Astromancy
+Novizen-Astromantie
 }
 
 STRING 57092
-// Abilities: A22Z (Astromancy - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A22Z (Astromantie - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Astromant uses knowledge to craft Spruchrolle der Navigations and Tiny Portale.
+Der Astromant nutzt Wissen, um Spruchrollen der Navigation und Winzige Portale herzustellen.
 }
 
 STRING 57093
-// Abilities: A230 (Astromancy - Advanced), Name (Name)
+// Abilities: A230 (Astromantie - Advanced), Name (Name)
 {
-Astromancy - Advanced
+Astromantie - Fortgeschritten
 }
 
 STRING 57094
-// Abilities: A230 (Astromancy - Advanced), Tip (Tooltip - Normal)
+// Abilities: A230 (Astromantie - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Astromancy
+Fortgeschrittene Astromantie
 }
 
 STRING 57096
-// Abilities: A231 (Astromancy - Adept), Name (Name)
+// Abilities: A231 (Astromantie - Adept), Name (Name)
 {
-Astromancy - Adept
+Astromantie - Adept
 }
 
 STRING 57097
-// Abilities: A231 (Astromancy - Adept), Tip (Tooltip - Normal)
+// Abilities: A231 (Astromantie - Adept), Tip (Tooltip - Normal)
 {
-Adept Astromancy
+Adepten-Astromantie
 }
 
 STRING 57099
-// Abilities: A232 (Astromancy - Master), Name (Name)
+// Abilities: A232 (Astromantie - Master), Name (Name)
 {
-Astromancy - Meister
+Astromantie - Meister
 }
 
 STRING 57100
-// Abilities: A232 (Astromancy - Master), Tip (Tooltip - Normal)
+// Abilities: A232 (Astromantie - Master), Tip (Tooltip - Normal)
 {
-Meister Astromancy
+Meister-Astromantie
 }
 
 STRING 57101
-// Abilities: A232 (Astromancy - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A232 (Astromantie - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Astromancy uses knowledge to craft Tiny Arcane Observatories.
+Der Astromant nutzt Wissen, um Winzige Arkane Observatorien herzustellen.
 }
 
 STRING 57109
@@ -119434,9 +119434,9 @@ STRING 57131
 }
 
 STRING 57148
-// Abilities: A231 (Astromancy - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A231 (Astromantie - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Astromancy uses knowledge to craft Meteor Stones and Scroll of Town Portale.
+Der Astromant nutzt Wissen, um Meteorsteine und Rollen der Stadtportale herzustellen.
 }
 
 STRING 57149
