@@ -90,7 +90,13 @@ globals
     private integer array objectTypeAbilitiesLevels
     private integer array objectTypeAbilitiesRace
     private integer objectTypeAbilitiesCounter = 0
+
+    private integer racesCounter = 0
 endglobals
+
+function GetRacesMax takes nothing returns integer
+    return racesCounter
+endfunction
 
 function GetPlayerRace1 takes player whichPlayer returns integer
     return udg_PlayerRace[GetConvertedPlayerId(whichPlayer)]
@@ -298,8 +304,9 @@ endfunction
 function GetObjectRace takes integer objectTypeId returns integer
     local integer id = GetPrimaryDependencyEquivalent(objectTypeId)
     local integer i = 0
+    local integer max = GetRacesMax()
     loop
-        exitwhen (i == udg_MaxRaces)
+        exitwhen (i == max)
         if (GetRaceObjectType(i, id) != RACE_OBJECT_TYPE_NONE) then
             return i
         endif
@@ -331,8 +338,9 @@ function GetObjectRaceType takes integer objectTypeId returns integer
     local integer i = 0
     local integer tmpType = 0
     local integer result = RACE_OBJECT_TYPE_NONE
+    local integer max = GetRacesMax()
     loop
-        exitwhen (i >= udg_MaxRaces or result != RACE_OBJECT_TYPE_NONE)
+        exitwhen (i >= max or result != RACE_OBJECT_TYPE_NONE)
         set tmpType = GetRaceObjectTypeIncludingDependencyEquivalents(i, objectTypeId)
         if (tmpType != RACE_OBJECT_TYPE_NONE) then
             set result = tmpType
@@ -353,9 +361,10 @@ endfunction
 
 function MapRaceObjectType takes integer objectTypeId, integer targetRace returns integer
     local integer i = 0
+    local integer max = GetRacesMax()
     local integer tmpType = 0
     loop
-        exitwhen (i == udg_MaxRaces)
+        exitwhen (i == max)
         set tmpType = GetRaceObjectTypeIncludingDependencyEquivalents(i, objectTypeId)
         if (tmpType != RACE_OBJECT_TYPE_NONE) then
             return GetRaceObjectTypeId(targetRace, tmpType)
@@ -514,8 +523,8 @@ function GetRaceItemTypeId takes integer r returns integer
 endfunction
 
 function AddRace takes nothing returns integer
-    local integer index = udg_MaxRaces
-    set udg_MaxRaces = udg_MaxRaces + 1
+    local integer index = racesCounter
+    set racesCounter = racesCounter + 1
     return index
 endfunction
 
@@ -575,10 +584,6 @@ function AddUnitTypeResearchType takes nothing returns nothing
      call AddObjectIdIntegerListFieldValue(udg_TmpUnitType, OBJECT_DATA_FIELD_URES, udg_TmpTechType)
 endfunction
 */
-
-function GetRacesMax takes nothing returns integer
-    return udg_MaxRaces
-endfunction
 
 function GetRaceByTavernItemTypeId takes integer tavernItemTypeId returns integer
     local integer max = GetRacesMax()
@@ -4389,7 +4394,7 @@ endfunction
 
 private function AddRaceScepterItems takes nothing returns nothing
     local integer i = 0
-    local integer max = udg_MaxRaces
+    local integer max = GetRacesMax()
     loop
         exitwhen (i == max)
         call SetRaceObjectType(i, RACE_OBJECT_TYPE_SCEPTER_ITEM, udg_RaceItemType[i])

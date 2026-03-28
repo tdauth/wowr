@@ -1127,7 +1127,6 @@ StringList {
     PICKED_RACE_X_Y                    "Volk %1% gewählt: %2%",
     PICKED_PROFESSION_X_Y              "Beruf %1% gewählt: %2%.",
     PICKED_START_LOCATION_X            "Startort %1% gewählt.",
-    NO_CLAN_ISLAND                     "Sie müssen Mitglied des clans TheElvenClan sein, um auf der Clan-Insel zu starten.",
     YOU_ARE_CARRYING_NOW_THE_X         "Sie tragen nun das %1%.",
     ACCEPT_HINT                        "Klicken Sie auf Akzeptieren in der Taverne Spiel starten, um Ihre Auswahl für das Spiel zu übernehmen.",
     GIVE_X_TO_Y                        "Gebe %1% an %2%.",

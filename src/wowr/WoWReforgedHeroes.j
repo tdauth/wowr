@@ -1,37 +1,52 @@
 library WoWReforgedHeroes initializer Init requires PagedButtonsConfig, StringUtils, UnitTypeUtils, WoWReforgedUtils, WoWReforgedAccount, WoWReforgedClasses, WoWReforgedRaces, WoWReforgedDependencyEquivalents
 
+struct Hero
+    integer whichRace
+    integer unitTypeId
+    integer mountUnitTypeId
+    boolean isBonus
+    string category
+    string accountNames
+endstruct
+
+globals
+    private Hero array heroes
+    private integer heroesCounter = 0
+endglobals
+
 private function AddHeroPagedButtonsConfig takes integer id, string modelPath returns nothing
     call AddPagedButtonsConfigHero(id, 0, 0, 1, 1, 0, 0, modelPath)
 endfunction
 
 function GetHeroesMax takes nothing returns integer
-    return udg_HeroUnitTypeIndex
+    return heroesCounter
 endfunction
 
 function GetHeroRace takes integer index returns integer
-    return udg_HeroRace[index]
+    return heroes[index].whichRace
 endfunction
 
 function GetHeroUnitType takes integer index returns integer
-    return udg_HeroUnitType[index]
+    return heroes[index].unitTypeId
 endfunction
 
 function GetHeroMountUnitTypeId takes integer index returns integer
-    return udg_HeroMountUnitType[index]
+    return heroes[index].mountUnitTypeId
 endfunction
 
 function GetHeroIsBonus takes integer index returns boolean
-    return udg_HeroIsBonus[index]
+    return heroes[index].isBonus
 endfunction
 
 function GetHeroCategory takes integer index returns string
-    return udg_HeroCategory[index]
+    return heroes[index].category
 endfunction
 
 function GetHeroIndexByUnitTypeId takes integer unitTypeId returns integer
     local integer i = 0
+    local integer max = GetHeroesMax()
     loop
-        exitwhen (i >= udg_MaxHeroUnitTypes)
+        exitwhen (i >= max)
         if (GetHeroUnitType(i) == unitTypeId) then
             return i
         endif
@@ -69,15 +84,16 @@ function PlayerCanBuyHeroErrorMessage takes player whichPlayer, unit hero return
 endfunction
 
 private function AddHero takes integer unitTypeId, integer whichClass, integer whichRace, integer mountUnitTypeId, boolean isBonus, string category, string accountNames returns integer
-    local integer index = udg_HeroUnitTypeIndex
-    set udg_HeroUnitType[index] = unitTypeId
-    set udg_HeroRace[index] = whichRace
-    set udg_HeroMountUnitType[index] = mountUnitTypeId
-    set udg_HeroIsBonus[index] = isBonus
-    set udg_HeroCategory[index] = category
-    set udg_HeroAccountNames[index] = accountNames
-    set udg_HeroUnitTypeIndex = udg_HeroUnitTypeIndex + 1
-    set udg_MaxHeroUnitTypes = udg_HeroUnitTypeIndex
+    local integer index = heroesCounter
+    local Hero hero = Hero.create()
+    set hero.unitTypeId = unitTypeId
+    set hero.whichRace = whichRace
+    set hero.mountUnitTypeId = mountUnitTypeId
+    set hero.isBonus = isBonus
+    set hero.category = category
+    set hero.accountNames= accountNames
+    set heroes[index] = hero
+    set heroesCounter = heroesCounter + 1
     
     //call AddHeroPagedButtonsConfig(unitTypeId, "")
     if (whichClass != CLASS_NONE) then
@@ -91,9 +107,10 @@ function ChooseRandomHeroFromRace takes integer whichRace returns integer
     local integer array heroIndices
     local integer heroIndicesCounter = 0
     local integer i = 0
+    local integer max = GetHeroesMax()
     loop
-        exitwhen (i >= udg_MaxHeroUnitTypes)
-        if ((udg_HeroRace[i] == whichRace or whichRace == udg_RaceFreelancer)) then
+        exitwhen (i >= max)
+        if ((GetHeroRace(i) == whichRace or whichRace == udg_RaceFreelancer)) then
             //call BJDebugMsg("Adding index " + I2S(i) + " possible heroes for race " + GetObjectName(udg_RaceTavernItemType[whichRace]) + ": " + GetObjectName(udg_HeroUnitType[i]))
             set heroIndices[heroIndicesCounter] = i
             set heroIndicesCounter = heroIndicesCounter + 1

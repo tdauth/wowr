@@ -243,11 +243,8 @@ function SelectRandomProfession takes unit buyingUnit, unit tavern returns nothi
 endfunction
 
 function PlayerCanBuyStartLocationEx takes player whichPlayer, integer itemTypeId returns boolean
-    local integer index = GetStartLocationByItemTypeId(itemTypeId)
-    if (index >= 0) then
-        return not GetStartLocationIsClanArea(index) or PlayerIsInElvenClan(whichPlayer)
-    endif
-    return false
+    //local integer index = GetStartLocationByItemTypeId(itemTypeId)
+    return true
 endfunction
 
 function SelectRandomStartLocation takes unit buyingUnit, unit tavern returns nothing

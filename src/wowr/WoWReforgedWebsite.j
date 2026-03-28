@@ -2327,7 +2327,7 @@ endfunction
 
 private function GenerateRaces takes nothing returns nothing
     local integer i = 0
-    local integer max = udg_MaxRaces
+    local integer max = GetRacesMax()
 
     call FileStart()
     call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")

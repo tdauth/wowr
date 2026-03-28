@@ -1,4 +1,8 @@
-library WoWReforgedComputer requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars
+library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedMapData
+
+globals
+    private trigger heroLevelTrigger = CreateTrigger()
+endglobals
 
 private function FilterIsAltar takes nothing returns boolean
     return IsUnitAltar(GetFilterUnit())
@@ -347,6 +351,59 @@ function AddAllPreplacedComputerUnits takes player whichPlayer returns nothing
     call GroupEnumUnitsOfPlayer(udg_ComputerTownHalls[convertedPlayerId], whichPlayer, Filter(function FilterIsTownHall))
     call GroupEnumUnitsOfPlayer(udg_ComputerUnits[convertedPlayerId], whichPlayer, Filter(function FilterIsUnit))
     call GroupEnumUnitsOfPlayer(udg_ComputerWorkers[convertedPlayerId], whichPlayer, Filter(function FilterIsWorker))
+endfunction
+
+private function PickRandomUnusedRace takes player owner returns integer
+    local integer i = 1
+    local integer max = GetRacesMax()
+    loop
+        exitwhen (i >= max)
+        if (not PlayerHasRace(owner, i)) then
+            return i
+        endif
+        set i = i + 1
+    endloop
+    return udg_RaceNone
+endfunction
+
+private function TriggerConditionHeroLevel takes nothing returns boolean
+    local player owner = GetOwningPlayer(GetTriggerUnit())
+    local integer convertedPlayerId = GetConvertedPlayerId(owner)
+    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER and udg_Held[convertedPlayerId] == GetTriggerUnit()) then
+        if (IsPlayerWarlord(owner)) then
+            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_2 and GetPlayerRace2(owner) == udg_RaceNone) then
+                set udg_PlayerRace2[convertedPlayerId] = PickRandomUnusedRace(owner)
+            endif
+
+            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_3 and GetPlayerRace3(owner) == udg_RaceNone) then
+                set udg_PlayerRace3[convertedPlayerId] = PickRandomUnusedRace(owner)
+            endif
+        endif
+
+        if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_2 and GetPlayerProfession2(owner) == udg_ProfessionNone) then
+            call ComputerAutopickProfession2(GetOwningPlayer(GetTriggerUnit()))
+        endif
+
+        if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_3 and GetPlayerProfession3(owner) == udg_ProfessionNone) then
+            call ComputerAutopickProfession3(GetOwningPlayer(GetTriggerUnit()))
+        endif
+    endif
+    set owner = null
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(heroLevelTrigger, EVENT_PLAYER_HERO_LEVEL)
+    call TriggerAddCondition(heroLevelTrigger, Condition(function TriggerConditionHeroLevel))
+
+    /*
+     * Prevents attacking each other from the beginning.
+     * Do NOT enumerate all units and stop them in the beginning of the game which would cause a massive lag.
+     */
+    call SetPlayerAllianceStateBJ(GetMapBossesPlayer(), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION)
+    call SetPlayerAllianceStateBJ(GetMapBossesPlayer(), GetMapGaiaPlayer(), bj_ALLIANCE_NEUTRAL)
+    call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), GetMapBossesPlayer(), bj_ALLIANCE_ALLIED_VISION)
+    call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), GetMapGaiaPlayer(), bj_ALLIANCE_NEUTRAL)
 endfunction
 
 endlibrary

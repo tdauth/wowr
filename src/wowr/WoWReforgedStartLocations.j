@@ -5,7 +5,6 @@ globals
     private real array startLocationsX
     private real array startLocationsY
     private real array startLocationsFacing
-    private boolean array startLocationsIsClanArea
     private integer startLocationsCounter = 0
 endglobals
 
@@ -13,30 +12,19 @@ function GetMaxStartLocations takes nothing returns integer
     return startLocationsCounter
 endfunction
 
-function AddStartLocation takes integer itemTypeId, real x, real y, real facing, boolean isClanArea returns integer
+function AddStartLocation takes integer itemTypeId, rect r, real facing returns integer
     local integer index = startLocationsCounter
     set startLocationsItemTypeIds[index] = itemTypeId
-    set startLocationsX[index] = x
-    set startLocationsY[index] = y
+    set startLocationsX[index] = GetRectCenterX(r)
+    set startLocationsY[index] = GetRectCenterY(r)
     set startLocationsFacing[index] = facing
-    set startLocationsIsClanArea[index] = isClanArea
     set startLocationsCounter = startLocationsCounter + 1
     
     return index
 endfunction
 
-function AddWoWReforgedStartLocation takes nothing returns integer
-    local integer startLocation = AddStartLocation(udg_TmpItemTypeId, GetRectCenterX(udg_TmpRect), GetRectCenterY(udg_TmpRect), udg_TmpReal, udg_TmpBoolean)
-    set udg_TmpBoolean = false
-    return startLocation
-endfunction
-
 function GetStartLocationItemTypeId takes integer startLocation returns integer
     return startLocationsItemTypeIds[startLocation]
-endfunction
-
-function GetStartLocationIsClanArea takes integer startLocation returns boolean
-    return startLocationsIsClanArea[startLocation]
 endfunction
 
 function GetStartLocationName takes integer startLocation returns string
