@@ -26589,7 +26589,7 @@ T
 STRING 5507
 // Items: I0F8 (Tiny Royal Vault), Ubertip (Tooltip - Extended)
 {
-Creates a Königliches Gewölbe at a target location.
+Errichtet am Zielort ein Königliches Gewölbe.
 }
 
 STRING 5508
@@ -27868,13 +27868,13 @@ Eine intelligente Dämonen-Bürgerin. Hat eine Manaregenerations-Aura.
 STRING 5759
 // Units: n0B3 (Dragonkin Child), Name (Name)
 {
-Dragonkin Child
+Dragonkin-Kind
 }
 
 STRING 5760
 // Units: n0B3 (Dragonkin Child), Tip (Tooltip - Basic)
 {
-Train Dragonkin Child
+Dragonkin-Kind ausbilden
 }
 
 STRING 5761
