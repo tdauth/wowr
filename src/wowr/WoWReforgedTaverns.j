@@ -304,19 +304,20 @@ function SelectAllRandomWithCustomizableHero takes unit buyingUnit, unit tavern 
 endfunction
 
 private function TriggerActionSellItem takes nothing returns boolean
-    if (GetItemTypeId(GetSoldItem()) == ITEM_TYPE_RANDOM_HERO) then
+    local integer itemTypeId = GetItemTypeId(GetSoldItem())
+    if (itemTypeId == ITEM_TYPE_RANDOM_HERO) then
         call SelectRandomHero(GetBuyingUnit(), GetTriggerUnit())
         call RemoveItem(GetSoldItem())
-    elseif (GetItemTypeId(GetSoldItem()) == ITEM_TYPE_RANDOM_RACE) then
+    elseif (itemTypeId == ITEM_TYPE_RANDOM_RACE) then
         call SelectRandomRace(GetBuyingUnit(), GetTriggerUnit())
         call RemoveItem(GetSoldItem())
-    elseif (GetItemTypeId(GetSoldItem()) == ITEM_TYPE_RANDOM_PROFESSION) then
+    elseif (itemTypeId == ITEM_TYPE_RANDOM_PROFESSION) then
         call SelectRandomProfession(GetBuyingUnit(), GetTriggerUnit())
         call RemoveItem(GetSoldItem())
-    elseif (GetItemTypeId(GetSoldItem()) == ITEM_TYPE_RANDOM_START_LOCATION) then
+    elseif (itemTypeId == ITEM_TYPE_RANDOM_START_LOCATION) then
         call SelectRandomStartLocation(GetBuyingUnit(), GetTriggerUnit())
         call RemoveItem(GetSoldItem())
-    elseif (GetItemTypeId(GetSoldItem()) == ITEM_TYPE_RANDOM) then
+    elseif (itemTypeId == ITEM_TYPE_RANDOM) then
         call SelectAllRandom(GetBuyingUnit(), GetTriggerUnit())
         call RemoveItem(GetSoldItem())
     endif
