@@ -58,7 +58,7 @@ endfunction
 private function Init takes nothing returns nothing
     local force whichForce = CreateForce()
     call ForceAddPlayingUserPlayers(whichForce)
-    call AddBan("WorldEditX", "Spamming and killing allies.")
+    //call AddBan("WorldEditX", "Spamming and killing allies.")
     
     call ForForce(whichForce, function ForGroupCheckBan)
     call ForceClear(whichForce)
