@@ -1913,7 +1913,7 @@ StringList {
     IQ_CHEATS_CIN_INVASION             "'-cininvasion': Shows the Invasion cinematic.",
     IQ_CREEPS_TITLE                    "Creeps",
     IQ_CREEPS_DESCRIPTION              "You can kill creeps to increase the level of your hero. There is different creeps everywhere in the world. When you kill a group of computer-controlled creeps, it will be respawned after %1%, so the number of opponents in the game is not finite. Some groups leave items after their extermination which can be picked up by your hero. The creeps won't respawn if there is a building in the area. When the building is destroyed, the creeps will respawn again.",
-    IQ_BOSSES_TITLE                    "Bosses", // Replaces info quest Legendary Items
+    IQ_BOSSES_TITLE                    "Bosses",
     IQ_BOSSES_DESCRIPTION              "Legends and rumors speak of many legendary Artifacts hidden across the World. The bad news is, you can´t get them for free, but in order to retrieve them, must defeat each boss guarding them. Since the bosses are very powerful, it is advised not to venture alone into their lairs, or at least not well prepared. If a hero carrying a unique artifact dies without an Ankh or the Reincarnation skill, the artifacts will be removed from the hero. They can then again be retrieved from the location where they were originally found. Dead bosses will respawn automatically after %1%.",
     IQ_BOSSES_0                        "Dead bossses will respawn automatically after %1%.",
     IQ_BOSSES_1                        "Killing bosses allows to get legendary items.",

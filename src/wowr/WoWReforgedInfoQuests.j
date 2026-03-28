@@ -450,6 +450,7 @@ private function Init takes nothing returns nothing
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_CREEPS_TITLE"), Format(GetLocalizedStringSafe("IQ_CREEPS_DESCRIPTION")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp")
 
+    // Replaces info quest Legendary Items
     call AddInfoQuest(GetLocalizedStringSafe("IQ_BOSSES_TITLE"), Format(GetLocalizedStringSafe("IQ_BOSSES_DESCRIPTION")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNMannoroth.blp")
     call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_BOSSES_0")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result())
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_BOSSES_1"))
