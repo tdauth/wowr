@@ -56,6 +56,8 @@ Make sure that the JassHelper and vJass are enabled:
 "D:\wowr\src\"
 ```
 
+It has to be the [src](./src) folder from this repository.
+
 **Note that the file `jasshelper.conf` is reset by the Battle.net app automatically and you might have to adapt it multiple times.**
 
 ## Frozen Throne Support
@@ -219,17 +221,7 @@ The original map had no trigger data, so all triggers had to be recreated based 
 The original map script has been added to this repository as well as the original map strings:
 
 * [war3map.j](./original_map/war3map.j)
-* [war3map.wts](./translations/war3map.wts)
-
-### Other Modified Versions
-
-Look into the folder [original_map_modified](./original_map_modified) where some of the modified versions of the original map are stored.
-Here is a list of some modified versions online:
-
-* [World of War in Warcraft 2.03b](https://www.epicwar.com/maps/2673/)
-* [World of Warcraft Reborn 2](https://www.epicwar.com/maps/40351/)
-* [World of Warcraft 1.8](https://www.epicwar.com/maps/228752)
-* [WoW Reanimated](https://maps.w3reforged.com/maps/categories/role-play-game-rpg/wow-reanimated): Complete revision of the original map. It has many more dungeons, professions, heroes and races but no AI support and is missing lots of features from this map.
+* [war3map.wts](./original_map/war3map.wts)
 
 ## WarsmashModEngine
 
