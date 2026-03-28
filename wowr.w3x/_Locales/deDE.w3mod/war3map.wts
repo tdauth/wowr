@@ -8130,13 +8130,13 @@ Krähen-Reittier
 STRING 1381
 // Upgrades: R05N (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Kul Tiras buildings.
+Verbessert Panzerung und Trefferpunkte der Gebäude von Kul Tiras noch weiter.
 }
 
 STRING 1382
 // Upgrades: R05N (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Kul Tiras buildings.
+Verbessert Panzerung und Trefferpunkte der Gebäude von Kul Tiras noch weiter.
 }
 
 STRING 1383
@@ -15459,19 +15459,19 @@ Ausbau zu Magischen Belagerungswaffen
 STRING 2968
 // Upgrades: R00Z (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Blood Elf siege weapons.
+Verbessert Panzerung und Trefferpunkte der Blutelfen-Belagerungswaffen.
 }
 
 STRING 2969
 // Upgrades: R00Z (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Blood Elf siege weapons.
+Verbessert Panzerung und Trefferpunkte der Blutelfen-Belagerungswaffen noch weiter.
 }
 
 STRING 2970
 // Upgrades: R00Z (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Blood Elf siege weapons.
+Verbessert Panzerung und Trefferpunkte der Blutelfen-Belagerungswaffen noch weiter.
 }
 
 STRING 2971
@@ -18579,19 +18579,19 @@ Increases Draenei-Herold's mana capacity, mana regeneration rate, hit points, an
 STRING 3677
 // Upgrades: R016 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Draenei buildings.
+Verbessert Panzerung und Trefferpunkte der Draenei-Gebäude.
 }
 
 STRING 3678
 // Upgrades: R016 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Draenei buildings.
+Verbessert Panzerung und Trefferpunkte der Draenei-Gebäude noch weiter.
 }
 
 STRING 3679
 // Upgrades: R016 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Draenei buildings.
+Verbessert Panzerung und Trefferpunkte der Draenei-Gebäude noch weiter.
 }
 
 STRING 3680
@@ -39193,7 +39193,7 @@ Phönix-Ei erwerben
 STRING 8455
 // Items: I0JS (Phoenix Egg), Description (Description)
 {
-|cffff8c00Artefakt|r|nThe egg of a powerful Donner-Phönix from Kael.
+|cffff8c00Artefakt|r|nDas Ei eines mächtigen Donner-Phönixs von Kael.
 }
 
 STRING 8456
@@ -42139,19 +42139,19 @@ G
 STRING 10168
 // Upgrades: R0ET (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Sturmwind buildings.
+Verbessert Panzerung und Trefferpunkte der Gebäude von Sturmwind.
 }
 
 STRING 10169
 // Upgrades: R0ET (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Sturmwind buildings.
+Verbessert Panzerung und Trefferpunkte der Gebäude von Sturmwind noch weiter.
 }
 
 STRING 10170
 // Upgrades: R0ET (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Sturmwind buildings.
+Verbessert Panzerung und Trefferpunkte der Gebäude von Sturmwind noch weiter.
 }
 
 STRING 10171
@@ -83385,19 +83385,19 @@ Ausbau zum Imbued Ancient Architecture
 STRING 37434
 // Upgrades: R0B9 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Nerubian buildings.
+Verbessert Panzerung und Trefferpunkte der Neruber-Gebäude noch weiter.
 }
 
 STRING 37435
 // Upgrades: R0B9 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Nerubian buildings.
+Verbessert Panzerung und Trefferpunkte der Neruber-Gebäude.
 }
 
 STRING 37436
 // Upgrades: R0B9 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Nerubian buildings.
+Verbessert Panzerung und Trefferpunkte der Neruber-Gebäude noch weiter.
 }
 
 STRING 37437
@@ -86277,19 +86277,19 @@ rlev
 STRING 38459
 // Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
-Ausbau zum Improved Construction
+Ausbau zum Verbesserten Bau
 }
 
 STRING 38460
 // Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
-Ausbau zum Advanced Construction
+Ausbau zur Hoch entwickelten Bau
 }
 
 STRING 38461
 // Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
-Ausbau zum Imbued Construction
+Ausbau zum Magischen Bau
 }
 
 STRING 38462
@@ -86325,7 +86325,7 @@ Goblin-Künstler
 STRING 38473
 // Units: n045 (Goblin Artist), Tip (Tooltip - Basic)
 {
-Hire Goblin-Künstler
+Goblin-Künstler anheuer
 }
 
 STRING 38474
@@ -104991,19 +104991,19 @@ STRING 49294
 STRING 49298
 // Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of wall buildings.
+Verbessert Panzerung und Trefferpunkte der Mauern-Gebäude.
 }
 
 STRING 49299
 // Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of wall buildings.
+Verbessert Panzerung und Trefferpunkte der Mauern-Gebäude noch weiter.
 }
 
 STRING 49300
 // Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of wall buildings.
+Verbessert Panzerung und Trefferpunkte der Mauern-Gebäude noch weiter.
 }
 
 STRING 49301
@@ -113018,7 +113018,7 @@ STRING 53246
 STRING 53285
 // Abilities: A1ZS (Item Phoenix), Name (Name)
 {
-Item Phönix
+Gegenstand Phönix
 }
 
 STRING 53286
@@ -113030,7 +113030,7 @@ STRING 53286
 STRING 53287
 // Abilities: A1ZT (Item Phoenix Egg), Name (Name)
 {
-Item Phönix-Ei
+Gegenstand Phönix-Ei
 }
 
 STRING 53288
@@ -113042,19 +113042,19 @@ STRING 53288
 STRING 53289
 // Abilities: A1ZU (Item Phoenix Fire), Name (Name)
 {
-Item Phönixfeuer
+Gegenstand Phönixfeuer
 }
 
 STRING 53293
 // Units: h0VF (Greater Thunder Phoenix), Name (Name)
 {
-Greater Donner-Phönix
+Großer Donner-Phönix
 }
 
 STRING 53294
 // Units: h0VF (Greater Thunder Phoenix), Tip (Tooltip - Basic)
 {
-Hire Greater Donner-Phönix
+Großen Donner-Phönix anheuern
 }
 
 STRING 53295
@@ -113066,19 +113066,19 @@ A powerful flaming Phönix. Can cast Feueratem and Phönixfeuer and has Festhaut
 STRING 53296
 // Units: h0VG (Lesser Thunder Phoenix), Name (Name)
 {
-Lesser Donner-Phönix
+Kleiner Donner-Phönix
 }
 
 STRING 53297
 // Units: h0VG (Lesser Thunder Phoenix), Tip (Tooltip - Basic)
 {
-Hire Lesser Donner-Phönix
+Kleinen Donner-Phönix anheuern
 }
 
 STRING 53298
 // Units: h0VG (Lesser Thunder Phoenix), Ubertip (Tooltip - Extended)
 {
-A powerful flaming Phönix. Can cast Phönixfeuer. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ein mächtiger flammender Phönix. Kann 'Phönixfeuer' wirken. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 53299
@@ -113096,7 +113096,7 @@ Donner-Phönix anheuern
 STRING 53301
 // Units: h086 (Fire Hawk), Ubertip (Tooltip - Extended)
 {
-A powerful flaming Phönix. Can cast Phönixfeuer and has Festhaut. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ein mächtiger flammender Phönix. Kann 'Phönixfeuer' und 'Festhaut' wirken. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 53306
@@ -113174,13 +113174,13 @@ STRING 53330
 STRING 53332
 // Abilities: A1ZW (Speed Boost), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the movement speed by <A1ZW,DataA1,%> % for <A1ZW,Dur1> Sekunden lang an.
+Erhöht <A1ZW,Dur1> Sekunden lang an die Bewegungsgeschwindigkeit um <A1ZW,DataA1,%> %.
 }
 
 STRING 53335
 // Abilities: A1ZX (Speed Boost), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the movement speed by <A1ZW,DataA1,%> % for <A1ZW,Dur1> Sekunden lang an.
+Erhöht <A1ZW,Dur1> Sekunden lang an die Bewegungsgeschwindigkeit um <A1ZW,DataA1,%> %.
 }
 
 STRING 53376
@@ -113480,19 +113480,19 @@ Upgrades the fighting style of Hirnloser Worgen, improving their Kritischer Schl
 STRING 54023
 // Upgrades: R0C0 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Worgen buildings.
+Verbessert Panzerung und Trefferpunkte der Worgen-Gebäude.
 }
 
 STRING 54024
 // Upgrades: R0C0 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Worgen buildings.
+Verbessert Panzerung und Trefferpunkte der Worgen-Gebäude noch weiter.
 }
 
 STRING 54025
 // Upgrades: R0C0 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Worgen buildings.
+Verbessert Panzerung und Trefferpunkte der Worgen-Gebäude noch weiter.
 }
 
 STRING 54026
@@ -123514,7 +123514,7 @@ Freiberufler-Turm
 STRING 58559
 // Units: n055 (Freelancer Tower), Tip (Tooltip - Basic)
 {
-Build Freiberufler-Turm
+Freiberufler-Turm errichten
 }
 
 STRING 58560
@@ -123532,37 +123532,37 @@ Hoch entwickelter Freiberufler-Turm
 STRING 58562
 // Upgrades: R003 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Blood Elf buildings.
+Verbessert Panzerung und Trefferpunkte der Blutelfen-Gebäude.
 }
 
 STRING 58563
 // Upgrades: R003 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Blood Elf buildings.
+Verbessert Panzerung und Trefferpunkte der Blutelfen-Gebäude noch weiter.
 }
 
 STRING 58564
 // Upgrades: R003 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Blood Elf buildings.
+Verbessert Panzerung und Trefferpunkte der Blutelfen-Gebäude noch weiter.
 }
 
 STRING 58565
 // Upgrades: R03R (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Dwarf buildings.
+Verbessert Panzerung und Trefferpunkte der Zwergen-Gebäude.
 }
 
 STRING 58566
 // Upgrades: R03R (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Dwarf buildings.
+Verbessert Panzerung und Trefferpunkte der Zwergen-Gebäude noch weiter.
 }
 
 STRING 58567
 // Upgrades: R03R (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Dwarf buildings.
+Verbessert Panzerung und Trefferpunkte der Zwergen-Gebäude noch weiter.
 }
 
 STRING 58568
