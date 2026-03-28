@@ -640,7 +640,7 @@ function GetBookItemProfession takes integer itemTypeId returns integer
     local integer max = GetProfessionsMax()
     loop
         exitwhen (i >= max)
-        if (GetProfession(i).itemTypeId == itemTypeId) then
+        if (GetProfession(i).bookItemTypeId == itemTypeId) then
             return i
         endif
         set i = i + 1
