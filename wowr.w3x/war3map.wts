@@ -1853,12 +1853,6 @@ STRING 309
 (Neutral Hostile)
 }
 
-STRING 310
-// Abilities: A09O (Tornado), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings.
-}
-
 STRING 311
 // Abilities: A12S (Discharge), EditorSuffix (Editor Suffix)
 {
@@ -1941,12 +1935,6 @@ STRING 324
 // Units: Nrob (Tinker), EditorSuffix (Name - Editor Suffix)
 {
 (Robo-Goblin)
-}
-
-STRING 325
-// Abilities: A027 (Demigod´s Protection), Researchtip (Tooltip - Learn)
-{
-Learn Demigod´s Protection
 }
 
 STRING 326
@@ -5670,12 +5658,6 @@ STRING 954
 Revive Rogue
 }
 
-STRING 955
-// Abilities: A028 (Demigod's Wrath), Researchtip (Tooltip - Learn)
-{
-Learn Dem|cffffcc00i|rgod´s Wrath
-}
-
 STRING 956
 // Units: H0Y0 (Rogue), Revivetip (Tooltip - Revive)
 {
@@ -5782,12 +5764,6 @@ STRING 973
 // Abilities: A000 (Summon Acolytes), EditorSuffix (Editor Suffix)
 {
 (Item)
-}
-
-STRING 974
-// Abilities: A028 (Demigod's Wrath), Researchubertip (Tooltip - Learn - Extended)
-{
-Hurls a bolt of destruction anywhere in the world, dealing instantly 800 Damage.
 }
 
 STRING 975
@@ -6653,6 +6629,11 @@ Air Elemental
 }
 
 STRING 1120
+{
+Thieving - Doctor
+}
+
+STRING 1121
 // Abilities: A01J (Thieving - Doctor), Name (Name)
 {
 Thieving - Doctor
@@ -8548,12 +8529,6 @@ STRING 1447
 M
 }
 
-STRING 1448
-// Abilities: A08D (Item Dark Portal), Researchtip (Tooltip - Learn)
-{
-Learn Dark Portal - [|cffffcc00Level %d|r]
-}
-
 STRING 1449
 // Units: U003 (Arch Lich), Tip (Tooltip - Basic)
 {
@@ -9929,7 +9904,7 @@ STRING 1678
 }
 
 STRING 1679
-// Abilities: A027 (Demigod´s Protection), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A027 (Demigod´s Protection), Ubertip (Tooltip - Normal - Extended)
 {
 Turns all friendly units in the world invulnerable. |nThe Temple does not turn invulnerable. |nLasts <AOvd,Dur1> seconds.
 }
@@ -18233,18 +18208,6 @@ STRING 3564
 // Items: I0FX (Tiny Sheepfold), Ubertip (Tooltip - Extended)
 {
 Creates a Sheepfold at a target location.
-}
-
-STRING 3565
-// Abilities: A09O (Tornado), Researchtip (Tooltip - Learn)
-{
-Learn Tornado - [|cffffcc00Level %d|r]
-}
-
-STRING 3566
-// Abilities: A024 (Tornado), Researchubertip (Tooltip - Learn - Extended)
-{
-Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings.
 }
 
 STRING 3567
@@ -40966,12 +40929,6 @@ STRING 9227
 Shroud of Protection
 }
 
-STRING 9229
-// Abilities: A027 (Demigod´s Protection), Ubertip (Tooltip - Normal - Extended)
-{
-Turns all friendly units in the world invulnerable. |nThe Temple does not turn invulnerable. |nLasts <AOvd,Dur1> seconds.
-}
-
 STRING 9248
 // Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
 {
@@ -43085,12 +43042,6 @@ Build Fruit Stand
 }
 
 STRING 10359
-// Abilities: A1BV (Tranquility), Researchubertip (Tooltip - Learn - Extended)
-{
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 hit points per second. |nLasts <AEtq,Dur1> seconds.
-}
-
-STRING 10360
 // Abilities: A1BV (Tranquility), Ubertip (Tooltip - Normal - Extended)
 {
 Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 hit points per second. |nLasts <AEtq,Dur1> seconds.
@@ -50333,12 +50284,6 @@ STRING 13904
 // Units: n03N (Gnoll Warlord), Hotkey (Hotkey)
 {
 G
-}
-
-STRING 13920
-// Abilities: A024 (Tornado), Researchtip (Tooltip - Learn)
-{
-Learn Tornado - [|cffffcc00Level %d|r]
 }
 
 STRING 13923
