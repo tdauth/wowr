@@ -2679,7 +2679,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 2|r]
 STRING 448
 // Units: h0NI (Gnomish Laboratory), Ubertip (Tooltip - Extended)
 {
-Trains Priests, and Zauberinnen. |nAlso contains spell upgrades for Priests and Zauberinnen, and Magic Sentry.
+Bildet Prieser und Zauberinnen aus. |nAlso contains spell upgrades for Priests and Zauberinnen, and Magic Sentry.
 }
 
 STRING 449
@@ -3305,7 +3305,7 @@ Macht-Schutzzauber
 STRING 551
 // Abilities: A033 (Clone), Name (Name)
 {
-Clone
+Klonen
 }
 
 STRING 552
@@ -3527,13 +3527,13 @@ STRING 587
 STRING 588
 // Upgrades: R036 (Shaman Adept Training,Shaman Master Training), Name (Name)
 {
-Goblin-Alchimist Meisterausbildung
+Goblin-Alchimisten-Meisterausbildung
 }
 
 STRING 589
 // Upgrades: R036 (Shaman Adept Training,Shaman Master Training), Name (Name)
 {
-Goblin-Alchimist Adeptenausbildung
+Goblin-Alchimisten-Adeptenausbildung
 }
 
 STRING 590
@@ -3545,7 +3545,7 @@ O
 STRING 591
 // Upgrades: R036 (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
 {
-Goblin-Alchimist Meisterausbildung
+Goblin-Alchimisten-Meisterausbildung
 }
 
 STRING 592
@@ -4813,7 +4813,7 @@ Requires matching player name and game mode etc.
 
 STRING 807
 {
-Speicher-Codes are stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
+Speicher-Codes werden in "%userprofile%\Documents\Warcraft III\CustomMapData" abgespeichert.
 }
 
 STRING 808
@@ -4823,7 +4823,7 @@ Press the Print key to store a screenshot.
 
 STRING 809
 {
-Screenshots stored in "%userprofile%\Documents\Warcraft III\ScreenShots".
+Screenshots werden in "%userprofile%\Documents\Warcraft III\ScreenShots" abgespeichert.
 }
 
 STRING 810
@@ -4844,7 +4844,7 @@ STRING 812
 STRING 813
 // Abilities: A01M (Alchemy - Advanced), Name (Name)
 {
-Alchemie - Advanced
+Alchemie - Fortgeschritten
 }
 
 STRING 814
@@ -5170,13 +5170,13 @@ Magischer Unhold-Beschwörer
 STRING 870
 // Units: ugol (Haunted Gold Mine for Undead AI), EditorSuffix (Name - Editor Suffix)
 {
-(Undead AI)
+(Untoten-KI)
 }
 
 STRING 871
 // Abilities: Abgm (Blighted Gold Mine Ability), EditorSuffix (Editor Suffix)
 {
-(Undead AI)
+(Untoten-KI)
 }
 
 STRING 872
@@ -5186,7 +5186,7 @@ Vorschlaghammer
 }
 
 STRING 873
-// Items: I02X (Book of Sorcery), Name (Name)
+// Items: I02X (Book of Zauberei), Name (Name)
 {
 Buch der Zauberei
 }
@@ -5248,31 +5248,31 @@ Haunt Gold Mine for AI
 STRING 883
 // Units: u00O (Haunted Gold Mine), EditorSuffix (Name - Editor Suffix)
 {
-(No AI)
+(Keine KI)
 }
 
 STRING 884
-// Items: I02X (Book of Sorcery), Description (Description)
+// Items: I02X (Book of Zauberei), Description (Description)
 {
 Ein Buch, das Wissen zur Herstellung von Zauberstäben enthält.
 }
 
 STRING 885
-// Items: I02X (Book of Sorcery), Ubertip (Tooltip - Extended)
+// Items: I02X (Book of Zauberei), Ubertip (Tooltip - Extended)
 {
 Ein Buch, das Wissen zur Herstellung von Zauberstäben enthält.
 }
 
 STRING 886
-// Abilities: A06C (Sorcery), Name (Name)
+// Abilities: A06C (Zauberei), Name (Name)
 {
-Sorcery
+Zauberei
 }
 
 STRING 887
-// Abilities: A06H (Sorcery - Advanced), Name (Name)
+// Abilities: A06H (Zauberei - Advanced), Name (Name)
 {
-Sorcery - Advanced
+Zauberei - Fortgeschritten
 }
 
 STRING 888
@@ -5288,15 +5288,15 @@ Wechselt die Klasse zum Mönch:|n- Gleiten|n- Aufladung|n- Trunkenbold|n- Entwaf
 }
 
 STRING 890
-// Abilities: A06H (Sorcery - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06H (Zauberei - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 The Sorcerer uses his gathered material to craft a Wand of the Wind.
 }
 
 STRING 891
-// Abilities: A06E (Sorcery - Adept), Name (Name)
+// Abilities: A06E (Zauberei - Adept), Name (Name)
 {
-Sorcery - Adept
+Zauberei - Adept
 }
 
 STRING 892
@@ -12853,7 +12853,7 @@ A
 }
 
 STRING 2351
-// Abilities: A1BE (Sorcery - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A1BE (Zauberei - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -18133,7 +18133,7 @@ B
 }
 
 STRING 3531
-// Units: n09U (Skeleton Berserker), Hotkey (Hotkey)
+// Units: n09U (Skelett-Berserker), Hotkey (Hotkey)
 {
 B
 }
@@ -19327,9 +19327,9 @@ Mauer
 }
 
 STRING 3842
-// Abilities: A06F (Sorcery - Novice), Name (Name)
+// Abilities: A06F (Zauberei - Novice), Name (Name)
 {
-Sorcery - Novize
+Zauberei - Novize
 }
 
 STRING 3843
@@ -19339,19 +19339,19 @@ N
 }
 
 STRING 3845
-// Abilities: A06F (Sorcery - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06F (Zauberei - Novice), Ubertip (Tooltip - Normal - Extended)
 {
 The Sorcerer uses his gathered material to craft a Wand of Neutralization.
 }
 
 STRING 3846
-// Abilities: A06G (Sorcery - Master), Name (Name)
+// Abilities: A06G (Zauberei - Master), Name (Name)
 {
-Sorcery - Meister
+Zauberei - Meister
 }
 
 STRING 3848
-// Abilities: A06G (Sorcery - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06G (Zauberei - Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Sorcerer creates a Wand of Illusion.
 }
@@ -19383,19 +19383,19 @@ F
 STRING 3853
 // Units: h07Y (Buy Property Dungeon), Tip (Tooltip - Basic)
 {
-Buy Property Verlies
+Immobilie Verlies kaufen
 }
 
 STRING 3854
 // Units: o03O (Skeleton Barracks), Name (Name)
 {
-Skeleton Kaserne
+Skelett-Kaserne
 }
 
 STRING 3855
 // Units: o03O (Skeleton Barracks), Tip (Tooltip - Basic)
 {
-Build Skeleton Kaserne
+Skelett-Kaserne errichten
 }
 
 STRING 3856
@@ -19507,21 +19507,21 @@ Folterkammer errichten
 }
 
 STRING 3878
-// Units: n09U (Skeleton Berserker), Name (Name)
+// Units: n09U (Skelett-Berserker), Name (Name)
 {
-Skeleton Berserker
+Skelett-Berserker
 }
 
 STRING 3879
-// Units: n09U (Skeleton Berserker), EditorSuffix (Name - Editor Suffix)
+// Units: n09U (Skelett-Berserker), EditorSuffix (Name - Editor Suffix)
 {
 (Verlies)
 }
 
 STRING 3880
-// Units: n09U (Skeleton Berserker), Tip (Tooltip - Basic)
+// Units: n09U (Skelett-Berserker), Tip (Tooltip - Basic)
 {
-Train Skeleton Berserker
+Skelett-Berserker ausbilden
 }
 
 STRING 3881
@@ -19641,7 +19641,7 @@ STRING 3901
 STRING 3902
 // Units: o03O (Skeleton Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Skelett-Kriegers, Skeleton Archers and Skeleton Berserkers.
+Primäres Truppen-Produktionsgebäude. Trains Skelett-Kriegers, Skeleton Archers and Skelett-Berserkers.
 }
 
 STRING 3903
@@ -19665,13 +19665,13 @@ Gefängnis errichten
 STRING 3915
 // Units: o03R (Dark Dungeon), Name (Name)
 {
-Dark Verlies
+Dunkles Verlies
 }
 
 STRING 3916
 // Units: o03R (Dark Dungeon), Tip (Tooltip - Basic)
 {
-Ausbau zum Dark Verlies
+Ausbau zum Dunklen Verlies
 }
 
 STRING 3917
@@ -20127,7 +20127,7 @@ T
 STRING 4055
 // Upgrades: R03Q (Barrage), Ubertip (Tooltip - Extended)
 {
-Upgrades Belagerungsmaschines to Elite-Belagerungspanzers.
+Baut Belagerungsmaschinen zu Elite-Belagerungspanzern aus.
 }
 
 STRING 4056
@@ -20139,19 +20139,19 @@ Antimagischer Schutzzauber
 STRING 4086
 // Items: I02Y (Book of Runeforging), Name (Name)
 {
-Book of Runenschmieden
+Buch des Runenschmiedens
 }
 
 STRING 4087
 // Items: I02Y (Book of Runeforging), Description (Description)
 {
-A book that contains knowledge of crafting runes.
+Ein Buch, welches das Wissen enthält, Runen herzustellen.
 }
 
 STRING 4088
 // Items: I02Y (Book of Runeforging), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of crafting runes.
+Ein Buch, welches das Wissen enthält, Runen herzustellen.
 }
 
 STRING 4089
@@ -21531,13 +21531,13 @@ Wolfskäfig errichten
 STRING 4434
 // Units: n02C (Wolves Cage), Ubertip (Tooltip - Extended)
 {
-Building to train tamed wolves of the forest.
+Gebäude zur Ausbilding von gezähmten Wölfen des Waldes.
 }
 
 STRING 4435
 // Units: n02C (Wolves Cage), Description (Description)
 {
-Building to train tamed wolves of the forest.
+Gebäude zur Ausbilding von gezähmten Wölfen des Waldes.
 }
 
 STRING 4436
@@ -23389,7 +23389,7 @@ Fires down streams of flame, lighting nearby enemies on fire.
 }
 
 STRING 4832
-// Units: n09U (Skeleton Berserker), Ubertip (Tooltip - Extended)
+// Units: n09U (Skelett-Berserker), Ubertip (Tooltip - Extended)
 {
 Large melee unit. Can cast Berserk. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -24189,7 +24189,7 @@ STRING 5018
 STRING 5019
 // Upgrades: R07S (Berserker Upgrade), Ubertip (Tooltip - Extended)
 {
-Gives Skeleton Berserkers the Berserk ability.
+Gives Skelett-Berserkers the Berserk ability.
 }
 
 STRING 5020
@@ -25977,19 +25977,19 @@ C
 STRING 5351
 // Upgrades: R07W (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the melee attack damage of Skelett-Kriegers, Skeleton Berserkers, Kriegs-Golems, Wildekins and Verlies Lords.
+Increases the melee attack damage of Skelett-Kriegers, Skelett-Berserkers, Kriegs-Golems, Wildekins and Verlies Lords.
 }
 
 STRING 5352
 // Upgrades: R07W (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the melee attack damage of Skelett-Kriegers, Skeleton Berserkers, Kriegs-Golems, Wildekins and Verlies Lords.
+Further increases the melee attack damage of Skelett-Kriegers, Skelett-Berserkers, Kriegs-Golems, Wildekins and Verlies Lords.
 }
 
 STRING 5353
 // Upgrades: R07W (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the melee attack damage of Skelett-Kriegers, Skeleton Berserkers, Kriegs-Golems, Wildekins and Verlies Lords.
+Further increases the melee attack damage of Skelett-Kriegers, Skelett-Berserkers, Kriegs-Golems, Wildekins and Verlies Lords.
 }
 
 STRING 5354
@@ -26001,19 +26001,19 @@ STRING 5354
 STRING 5355
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Skelett-Kriegers, Skeleton Archers, Skeleton Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
+Increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5356
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skeleton Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
+Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5357
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skeleton Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
+Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5358
@@ -30760,7 +30760,7 @@ Elementar-Lord
 STRING 6408
 // Abilities: A0DZ (Land), Name (Name)
 {
-Land
+Landen
 }
 
 STRING 6409
@@ -30896,7 +30896,7 @@ Nekromantie - Doktor
 }
 
 STRING 6434
-// Abilities: A06F (Sorcery - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Zauberei - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -31108,7 +31108,7 @@ Seat of the Primus
 STRING 6506
 // Items: I0II (Melee), Name (Name)
 {
-Melee
+Nahkampf
 }
 
 STRING 6507
@@ -31126,13 +31126,13 @@ Schattenlande
 STRING 6509
 // Items: I0II (Melee), Tip (Tooltip - Basic)
 {
-Melee
+Nahkampf
 }
 
 STRING 6510
 // Items: I0II (Melee), Ubertip (Tooltip - Extended)
 {
-Changes the attack type to melee.
+Wechselt den Angriffstyp zu Nahkampf.
 }
 
 STRING 6511
@@ -31159,7 +31159,7 @@ STRING 6513
 STRING 6514
 // Items: I0UZ (Range), Tip (Tooltip - Basic)
 {
-Range
+Fernkampf
 }
 
 STRING 6515
@@ -31177,7 +31177,7 @@ Medium melee unit that hurls Demon fire. Can cast Tote erwecken and Aas-Schwarm.
 STRING 6517
 // Items: I0UZ (Range), Ubertip (Tooltip - Extended)
 {
-Changes the attack type to range.
+Wechselt den Angriffstyp auf Fernkampf.
 }
 
 STRING 6518
@@ -31207,7 +31207,7 @@ STRING 6521
 STRING 6522
 // Units: E008 (Backpack), Propernames (Proper Names)
 {
-Backpack
+Rucksack
 }
 
 STRING 6524
@@ -42923,37 +42923,37 @@ B
 }
 
 STRING 10312
-// Abilities: A1BE (Sorcery - Grand Master), Name (Name)
+// Abilities: A1BE (Zauberei - Grand Master), Name (Name)
 {
 Zauberei - Großmeister
 }
 
 STRING 10313
-// Abilities: A1BE (Sorcery - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A1BE (Zauberei - Grand Master), Tip (Tooltip - Normal)
 {
 Großmeister-Zauberei
 }
 
 STRING 10314
-// Abilities: A1BE (Sorcery - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1BE (Zauberei - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Sorcerer uses his knowledge to create a Wand of Shadowsight.
 }
 
 STRING 10315
-// Abilities: A1BF (Sorcery - Doctor), Name (Name)
+// Abilities: A1BF (Zauberei - Doctor), Name (Name)
 {
 Zauberei - Doktor
 }
 
 STRING 10316
-// Abilities: A1BF (Sorcery - Doctor), Tip (Tooltip - Normal)
+// Abilities: A1BF (Zauberei - Doctor), Tip (Tooltip - Normal)
 {
 Doktor-Zauberei
 }
 
 STRING 10317
-// Abilities: A1BF (Sorcery - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1BF (Zauberei - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 The Sorcerer uses his knowledge to create a Wand of Telekinese.
 }
@@ -43397,7 +43397,7 @@ Winziger Göttlicher Golem
 }
 
 STRING 10453
-// Items: I02X (Book of Sorcery), Tip (Tooltip - Basic)
+// Items: I02X (Book of Zauberei), Tip (Tooltip - Basic)
 {
 Buch der Zauberei erwerben
 }
@@ -47846,7 +47846,7 @@ Gottesschild
 }
 
 STRING 11853
-// Abilities: A06H (Sorcery - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A06H (Zauberei - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -50258,7 +50258,7 @@ Ermöglicht das Bauen auf und Bewegen über Wasser.
 }
 
 STRING 13886
-// Abilities: A06E (Sorcery - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A06E (Zauberei - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54446,9 +54446,9 @@ STRING 17218
 }
 
 STRING 17222
-// Abilities: A0MD (Breed Chicks), Name (Name)
+// Abilities: A0MD (Küken ausbrüten), Name (Name)
 {
-Breed Chicks
+Küken ausbrüten
 }
 
 STRING 17293
@@ -54914,27 +54914,27 @@ O
 }
 
 STRING 17393
-// Abilities: A0MD (Breed Chicks), Tip (Tooltip - Normal)
+// Abilities: A0MD (Küken ausbrüten), Tip (Tooltip - Normal)
 {
-Breed Chicks
+Küken ausbrüten
 }
 
 STRING 17394
-// Abilities: A0MD (Breed Chicks), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MD (Küken ausbrüten), Ubertip (Tooltip - Normal - Extended)
 {
-Breed Chicks.
+Küken ausbrüten.
 }
 
 STRING 17395
 // Buffs/Effects: B026 (), Bufftip (Tooltip)
 {
-Gryph Chick
+Greifenküken
 }
 
 STRING 17396
 // Buffs/Effects: B026 (), Buffubertip (Tooltip - Extended)
 {
-Gryph Chick.
+Greifenküken.
 }
 
 STRING 17397
@@ -55162,25 +55162,25 @@ Spell casting Hero, good for damaging enemy troops. Can learn Feuerblitz, Manasc
 STRING 17454
 // Items: I07F (Novice Enchanting Formula), Name (Name)
 {
-Novize Verzauberformel
+Novizen-Verzauberformel
 }
 
 STRING 17455
 // Items: I07F (Novice Enchanting Formula), Tip (Tooltip - Basic)
 {
-Purchase Novize Verzauberformel
+Novizen-Verzauberformel erwerben
 }
 
 STRING 17456
 // Items: I07H (Advanced Enchanting Formula), Name (Name)
 {
-Advanced Verzauberformel
+Fortgeschrittene Verzauberformel
 }
 
 STRING 17457
 // Items: I07H (Advanced Enchanting Formula), Tip (Tooltip - Basic)
 {
-Purchase Advanced Verzauberformel
+Fortgeschrittene Verzauberformel erwerben
 }
 
 STRING 17458
@@ -57445,7 +57445,7 @@ Allianz-Belagerungsturm
 STRING 19336
 // Items: I08Y (Exchange 100 Lumber for 200 Gold), Ubertip (Tooltip - Extended)
 {
-Gives <A0M9,DataA1> gold to the player when used.
+Gibt dem Spieler bei Benutzung <A0M9,DataA1> Gold.
 }
 
 STRING 19337
@@ -57493,7 +57493,7 @@ E
 STRING 19383
 // Units: h0OE (Alliance Siege Tower), Tip (Tooltip - Basic)
 {
-Train Allianz-Belagerungsturm
+Allianz-Belagerungsturm ausbilden
 }
 
 STRING 19386
@@ -57535,7 +57535,7 @@ Teufelsplünderer
 STRING 19392
 // Units: n07Q (Fel Reaver), Tip (Tooltip - Basic)
 {
-Train Teufelsplünderer
+Teufelsplünderer ausbilden
 }
 
 STRING 19393
@@ -57793,7 +57793,7 @@ Ausbau zum Hochelfenburg
 STRING 19578
 // Items: I0JQ (Craft Ice Shards), Description (Description)
 {
-Gives lumber to player.
+Gibt dem Spieler Holz.
 }
 
 STRING 19579
@@ -57811,7 +57811,7 @@ Großen Wiederherstellungstrank herstellen
 STRING 19654
 // Items: I098 (Craft Potion of Greater Restoration), Description (Description)
 {
-Restores lost hit and mana points.
+Stellt verlorene Treffer- und Manapunkte wieder her.
 }
 
 STRING 19655
@@ -57835,7 +57835,7 @@ Einheit verkaufen
 STRING 19658
 // Units: o00T (Altar of Engineering), Tip (Tooltip - Basic)
 {
-Build Altar der Ingenieurskunst
+Altar der Ingenieurskunst errichten
 }
 
 STRING 19659
@@ -68941,7 +68941,7 @@ Abtauchend Lady Vashj
 }
 
 STRING 29678
-// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1BF (Zauberei - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69973,31 +69973,31 @@ The Weaponsmith uses gathered minerals to forge a Blessed Dragon Lance.
 }
 
 STRING 30983
-// Abilities: A06E (Sorcery - Adept), Tip (Tooltip - Normal)
+// Abilities: A06E (Zauberei - Adept), Tip (Tooltip - Normal)
 {
 Adepten-Zauberei
 }
 
 STRING 30984
-// Abilities: A06E (Sorcery - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06E (Zauberei - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 The Sorcerer uses his gathered material to create a Wand of Reanimation.
 }
 
 STRING 30985
-// Abilities: A06F (Sorcery - Novice), Tip (Tooltip - Normal)
+// Abilities: A06F (Zauberei - Novice), Tip (Tooltip - Normal)
 {
 Novizen-Zauberei
 }
 
 STRING 30986
-// Abilities: A06G (Sorcery - Master), Tip (Tooltip - Normal)
+// Abilities: A06G (Zauberei - Master), Tip (Tooltip - Normal)
 {
 Meister-Zauberei
 }
 
 STRING 30987
-// Abilities: A06H (Sorcery - Advanced), Tip (Tooltip - Normal)
+// Abilities: A06H (Zauberei - Advanced), Tip (Tooltip - Normal)
 {
 Fortgeschrittene Zauberei
 }
@@ -122042,7 +122042,7 @@ Brüten
 }
 
 STRING 57953
-// Abilities: A0MD (Breed Chicks), EditorSuffix (Editor Suffix)
+// Abilities: A0MD (Küken ausbrüten), EditorSuffix (Editor Suffix)
 {
 (Zwerge) (Greif)
 }
