@@ -1956,5 +1956,5 @@ StringList {
     Q_CRUSADE_TITLE                    "Crusade",
     Q_CRUSADE_DESCRIPTION              "The time has come to take countermeasures against the increasing threat caused by the Scourge! To prevent another cataclysm like in Lordaeron, King Anduin Wrynn and the Order of the Silver Hand have called out a Crusade against the Undead. Heros throughout the land are called for to hunt down and destroy 5 Undead heros to avenge the death of legendary Sir Uther Lightbringer and the downfall of the Order of the Silver Hand in Lordaeron!",
     Q_CRUSADE_0                        "Kill 5 Undead heroes.",
-    Q_CRUSADE_1                         "Bring the trophy to King Anduin Wrynn.",
+    Q_CRUSADE_1                        "Bring the trophy to King Anduin Wrynn.",
 }
