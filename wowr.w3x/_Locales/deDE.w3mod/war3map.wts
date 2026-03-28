@@ -41437,7 +41437,7 @@ Verkauft Folianten.
 STRING 9761
 // Items: I07L (Hydromancer), Tip (Tooltip - Basic)
 {
-Wasserbeschwörer
+Wassermagier
 }
 
 STRING 9762
@@ -46903,13 +46903,13 @@ Erlaubt Bürgern den Bau des Buches des Beschwörung-Postaments, um Höllenbesti
 STRING 11452
 // Items: I0Q1 (Goblin Tool Box), Description (Description)
 {
-Allows reinforcing, repairing and examining objects and digging the ground.
+Ermöglicht das Verstärken, Reparieren und Untersuchen von Objekten und Graben im Boden.
 }
 
 STRING 11453
 // Items: I0Q1 (Goblin Tool Box), Ubertip (Tooltip - Extended)
 {
-Allows reinforcing, repairing and examining objects and digging the ground.
+Ermöglicht das Verstärken, Reparieren und Untersuchen von Objekten und Graben im Boden.
 }
 
 STRING 11455
@@ -51040,7 +51040,7 @@ Speicher-Meister anheuern
 STRING 14247
 // Units: n03J (Save Master), Ubertip (Tooltip - Extended)
 {
-Can select units and buildings which should be saved in a savecode or not.
+Kann Einheiten und Gebäude auswählen, die in einen Speicher-Code abgespeichert werden sollen oder nicht.
 }
 
 STRING 14249
@@ -54046,7 +54046,7 @@ Skins
 STRING 16839
 // Items: I09J (Witch Doctor), Tip (Tooltip - Basic)
 {
-Troll-Medizinmann
+Hexendoktor
 }
 
 STRING 16840
@@ -70107,7 +70107,7 @@ Conditions to retreat from Pandaria from the Mur'gul.
 STRING 31016
 // Items: I018 (Tiny Hideout), Ubertip (Tooltip - Extended)
 {
-Creates a Hideout at a target location. Hideouts have some special abilities and can receive Gold and Lumber from Neutral Bürger and Shredders.|n|n|cffffcc00Can only be used by Freiberufler and limited to 1.|r
+Errichtet am Zielort ein Versteck. Verstecke haben spezielle Fähigkeiten und können Gold und Holz von neutralen Bürgern und Schreddern erhalten.|n|n|cffffcc00Kann nur von Freiberuflern benutzt werden und ist auf 1 begrenzt.|r
 }
 
 STRING 31021
@@ -87063,7 +87063,7 @@ Festhaut
 STRING 38811
 // Units: n02Y (Neutral Citizen (male)), Ubertip (Tooltip - Extended)
 {
-A hearty neutral citizen. Has life and mana regeneration aura. Can build a Stromgenerator and Portale. Can collect gold and lumber and repair structures.|n|n|cffffcc00Can only be hired by Freiberufler.|r
+Ein herzlicher Dalaran-Bürger. Hat eine Lebensregenerations-Aura. Kann einen Stromgenerator und Portale errichten. Kann Gold und Holz sammeln und Gebäude reparieren.|n|n|cffffcc00Kann nur von Freiberuflern angeheuert werden.|r
 }
 
 STRING 38826
@@ -102915,7 +102915,7 @@ Ermöglicht das Schlafen bis zu einer bestimmten Tageszeit.
 STRING 48540
 // Abilities: A1DP (Disassemble), Ubertip (Tooltip - Normal - Extended)
 {
-Disassembles the crafted target item or unit back to its requirements.
+Zerlegt den hergestellten Zielgegenstand oder die Zieleinheit zurück in seine oder ihre Bestandteile.
 }
 
 STRING 48541
@@ -111528,13 +111528,13 @@ Stiefel der Teleportation erwerben
 STRING 51630
 // Items: I0YI (Boots of Teleportation), Description (Description)
 {
-Move orders teleport the hero instantly to the target location if it has been discovered.
+Bewegungsbefehle teleportieren den Helden sofort zum Zielort, falls dieser nicht durch den Nebel des Krieges verdeckt ist.
 }
 
 STRING 51631
 // Items: I0YI (Boots of Teleportation), Ubertip (Tooltip - Extended)
 {
-Move orders teleport the hero instantly to the target location if it has been discovered.
+Bewegungsbefehle teleportieren den Helden sofort zum Zielort, falls dieser nicht durch den Nebel des Krieges verdeckt ist.
 }
 
 STRING 51632
@@ -111552,19 +111552,19 @@ Stiefel der Teleportation herstellen
 STRING 51638
 // Abilities: A1WX (Warlockery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Hexenmeisterei crafts an Höllenstein.
+Der Hexenmeisterei stellt einen Höllenstein her.
 }
 
 STRING 51639
 // Abilities: A1WY (Warlockery - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Hexenmeister crafts Dämonenblut.
+Der Hexenmeister stellt Dämonenblut her.
 }
 
 STRING 51640
 // Abilities: A1WZ (Warlockery - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Hexenmeister crafts a Tiny Demon Portal.
+Der Hexenmeister stellt ein Winziges Dämonen-Portal her.
 }
 
 STRING 51641

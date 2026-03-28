@@ -87047,7 +87047,7 @@ Resistant Skin
 STRING 38811
 // Units: n02Y (Neutral Citizen (male)), Ubertip (Tooltip - Extended)
 {
-A hearty neutral citizen. Has life and mana regeneration aura. Can build a Power Generator and Portals. Can collect gold and lumber and repair structures.|n|n|cffffcc00Can only be hired by Freelancers.|r
+A hearty neutral citizen. Has life regeneration aura. Can build a Power Generator and Portals. Can collect gold and lumber and repair structures.|n|n|cffffcc00Can only be hired by Freelancers.|r
 }
 
 STRING 38826
@@ -111512,13 +111512,13 @@ Purchase Boots of Teleportation
 STRING 51630
 // Items: I0YI (Boots of Teleportation), Description (Description)
 {
-Move orders teleport the hero instantly to the target location if it has been discovered.
+Move orders teleport the hero instantly to the target location if it is not hidden by the fog of war.
 }
 
 STRING 51631
 // Items: I0YI (Boots of Teleportation), Ubertip (Tooltip - Extended)
 {
-Move orders teleport the hero instantly to the target location if it has been discovered.
+Move orders teleport the hero instantly to the target location if it is not hidden by the fog of war.
 }
 
 STRING 51632
@@ -111536,7 +111536,7 @@ Craft Boots of Teleportation
 STRING 51638
 // Abilities: A1WX (Warlockery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Warlockery crafts an Inferno Stone.
+The Warlock crafts an Inferno Stone.
 }
 
 STRING 51639
