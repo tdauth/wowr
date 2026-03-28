@@ -1957,4 +1957,28 @@ StringList {
     Q_CRUSADE_DESCRIPTION              "The time has come to take countermeasures against the increasing threat caused by the Scourge! To prevent another cataclysm like in Lordaeron, King Anduin Wrynn and the Order of the Silver Hand have called out a Crusade against the Undead. Heros throughout the land are called for to hunt down and destroy 5 Undead heros to avenge the death of legendary Sir Uther Lightbringer and the downfall of the Order of the Silver Hand in Lordaeron!",
     Q_CRUSADE_0                        "Tötet 5 untote Helden.",
     Q_CRUSADE_1                        "Bring the trophy to King Anduin Wrynn.",
+    // VillageQuest1
+    Q_BANDIT_LORD_TITLE                "Bandit Lord",
+    Q_BANDIT_LORD_DESCRIPTION          "The cunning Bandit Lord, Menag, has been terrorizing the lands around Strahnbrad for months. He and his lackeys just made off with a ledger full of vital information regarding the estate of the local farmer, Gerard.",
+    Q_BANDIT_LORD_0                    "Slay the Bandit Lord.",
+    Q_BANDIT_LORD_1                    "Return Ledger to Gerard.",
+    // VillageQuest2
+    Q_FIEF_TITLE                       "Fief",
+    Q_FIEF_DESCRIPTION                 "The village needs protection from the kingdom of Stormwind. Visit New Stormwind and get some equipment to arm some villagers. Bring the equipment to Gerard to receive your reward.",
+    Q_FIEF_0                           "Get some equipment in New Stormwind.",
+    Q_FIEF_1                           "Bring the equipment to Gerard.",
+    // VillageQuest3
+    Q_HARVEST_TITLE                    "Harvest",
+    Q_HARVEST_DESCRIPTION              "It is harvest time in the village. Harvest wheat, bring the it to the wind mill to get flour, deliver the flour to the tavern to get bread, sell the bread to Theramore and return the gold to Gerard to receive your reward.",
+    Q_HARVEST_0                        "Harvest wheat.",
+    Q_HARVEST_1                        "Bring the wheat to the wind mill.",
+    Q_HARVEST_2                        "Bring the flour to the tavern.",
+    Q_HARVEST_3                        "Sell the bread to Theramore.",
+    Q_HARVEST_4                        "Return the gold to Gerard.",
+    // VillageQuest4
+    Q_THE_PLAGUE_TITLE                 "The Plague",
+    Q_THE_PLAGUE_DESCRIPTION           "The grain has been plagued by the Undead Scourge. Villagers are converted into Undead. You must get some spells from Dalaran to stop the Plague and fight the Undead attacking the village. Get your reward from Gerard after completing the tasks.",
+    Q_THE_PLAGUE_0                     "Get some spells from Dalaran.",
+    Q_THE_PLAGUE_1                     "Fight the Undead attacking the village.",
+    Q_THE_PLAGUE_2                     "Bring the Zombie Heads to Gerard to receive your reward.",
 }

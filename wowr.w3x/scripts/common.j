@@ -3654,6 +3654,20 @@ globals
 
     constant integer ITEM_GLOVES_OF_HASTE                            = 'gcel'
 
+    // Quest Rewards
+
+    // Human Quests
+    constant integer ITEM_RING_OF_THE_ARCHMAGI                       = 'ram4'
+    constant integer ITEM_BLADEBADE_ARMOR                            = 'blba'
+    constant integer ITEM_MURADINS_AXE                               = 'I01B'
+    constant integer ITEM_ROYAL_PALADIN_HAMMER                       = 'I01C'
+
+    // Village Quests
+    constant integer ITEM_MEDAILLION_OF_COURAGE                      = 'mcou'
+    constant integer ITEM_HELM_OF_BATTLETHIRST                       = 'hbth'
+    constant integer ITEM_UNLIMITED_BAG_OF_FOOD                      = 'I16Z'
+    constant integer ITEM_ENCHANTED_VIAL                             = 'envl'
+
     // Holy Set
     constant integer ITEM_HOLY_CREST                                 = 'I16G'
     constant integer ITEM_HOLY_BOOTS                                 = 'I16H'
