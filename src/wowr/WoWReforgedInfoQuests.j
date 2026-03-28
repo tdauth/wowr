@@ -406,7 +406,6 @@ private function Init takes nothing returns nothing
     call AddInfoQuest(GetLocalizedStringSafe("IQ_FACTIONS_TITLE"), GetLocalizedStringSafe("IQ_FACTIONS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNOrcCaptureFlag.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("ALLIANCE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("HORDE"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("THE_BURNING_LEGION"))
     call AddInfoQuestItem(GetLocalizedStringSafe("BOSSES"))
     call AddInfoQuestItem(GetLocalizedStringSafe("RESCUABLE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_FACTIONS_0"))
@@ -416,9 +415,8 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_GAME_MODES_FREELANCER"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_PLAYERS_TITLE"), GetLocalizedStringSafe("IQ_PLAYERS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNVillagerWoman.blp")
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_RESCUABLE"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_LEGION"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_BOSSES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_RESCUABLE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_NEUTRAL_HOSTILE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYERS_NEUTRAL_PASSIVE"))
 
