@@ -1,4 +1,4 @@
-library WoWReforgedCredits initializer Init requires QuestUtils, WoWReforgedInfoQuests, WoWReforgedI18n
+library WoWReforgedCredits initializer Init requires WoWReforgedInfoQuests, WoWReforgedI18n
 
 private function AddCredit takes string credits returns nothing
     call AddInfoQuestItem(credits)
