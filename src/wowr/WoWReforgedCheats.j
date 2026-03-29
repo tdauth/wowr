@@ -30,6 +30,22 @@ function CheatNoPassive takes nothing returns nothing
     call BJDebugMsg("Removed all passive.")
 endfunction
 
+function CheatLegendaryItems takes player whichPlayer returns nothing
+    local unit hero = GetPlayerHero1(whichPlayer)
+    local item whichItem = null
+    local integer i = 0
+    local integer max = GetLegendaryItemsMax()
+    loop
+        exitwhen (i == max)
+        if (udg_LegendaryItemType[i] != 0) then
+            set whichItem = UnitAddItemById(hero, udg_LegendaryItemType[i])
+        else
+            call BJDebugMsg("Warning: Legendary item with index " + I2S(i) + " is 0.")
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
 function CheatItems takes player whichPlayer returns nothing
     local unit hero = GetPlayerHero1(whichPlayer)
     local item whichItem = null
@@ -51,17 +67,7 @@ function CheatItems takes player whichPlayer returns nothing
         set i = i + 1
     endloop
     
-    set i = 0
-    set max = GetLegendaryItemsMax()
-    loop
-        exitwhen (i == max)
-        if (udg_LegendaryItemType[i] != 0) then
-            set whichItem = UnitAddItemById(hero, udg_LegendaryItemType[i])
-        else
-            call BJDebugMsg("Warning: Legendary item with index " + I2S(i) + " is 0.")
-        endif
-        set i = i + 1
-    endloop
+    call CheatLegendaryItems(whichPlayer)
     
     set i = 0
     set max = GetQuestsMax()
