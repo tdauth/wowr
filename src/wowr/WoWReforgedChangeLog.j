@@ -51,6 +51,8 @@ private function Init takes nothing returns nothing
     call AddChange("Remove unused Evoker Dragon Form content.")
     call AddChange("Remove unused assets.")
     call AddChange("Remove item Lumber carried by Pack Horse.")
+    call AddChange("Remove hero ability tooltips from non-hero abilities.")
+    call AddChange("Fix icon of property Gnomeregan.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
 
