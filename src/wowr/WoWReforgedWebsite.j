@@ -1827,7 +1827,7 @@ endfunction
 
 private function GenerateLegendaryItems takes nothing returns nothing
     local integer i = 0
-    local integer max = udg_LegendaryItemTypeSize
+    local integer max = GetLegendaryItemsMax()
     loop
         exitwhen (i == max)
         if (udg_LegendaryItemType[i] != 0) then
@@ -1845,7 +1845,7 @@ private function GenerateQuestRewardItems takes nothing returns nothing
     loop
         exitwhen (i == max)
         if (GetQuestReward(i) != 0) then
-            call GenerateItem(GetQuestReward(i), GetSaveObjectItemMax() + udg_LegendaryItemTypeSize + i)
+            call GenerateItem(GetQuestReward(i), GetSaveObjectItemMax() + GetLegendaryItemsMax() + i)
         else
             call BJDebugMsg("Warning: Quest reward item with index " + I2S(i) + " is 0.")
         endif

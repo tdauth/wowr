@@ -674,6 +674,8 @@ StringList {
     X_IS_NOT_AVAILABLE                 "%1% is not available.",
     NO_ITEMS_TO_DISASSEMBLE            "No items to disassemble.",
     CANNOT_BE_DISASSEMBLED             "Cannot be disassembled.",
+    LINKED_CRAFTING_STASHES            "Linked Crafting Stashes.",
+    UNLINKED_CRAFTING_STASHES          "Unlinked Crafting Stashes.",
     PAGE_TITLE_UNIQUE                  "(Unique)",
     PAGE_TITLE_ORBS                    "(Orbs)",
     PAGE_TITLE_POTIONS                 "(Potions)",

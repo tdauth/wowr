@@ -52,7 +52,7 @@ function CheatItems takes player whichPlayer returns nothing
     endloop
     
     set i = 0
-    set max = udg_LegendaryItemTypeSize
+    set max = GetLegendaryItemsMax()
     loop
         exitwhen (i == max)
         if (udg_LegendaryItemType[i] != 0) then

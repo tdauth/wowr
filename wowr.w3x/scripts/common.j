@@ -3210,37 +3210,37 @@ globals
     constant integer ITEM_FREELANCER                                 = 'I05Q'
 
     // professions
-    constant integer ITEM_TYPE_SCRIBE                                = 'I0HC'
+    constant integer ITEM_SCRIBE                                     = 'I0HC'
 
     // arena
     constant integer STONEMAUL_ARENA_MASTER                          = 'h008'
 
-    constant integer ITEM_TYPE_TICKET_1                              = 'I00Y'
-    constant integer ITEM_TYPE_STONE_TOKEN                           = 'fgrg'
+    constant integer ITEM_TICKET_1                                   = 'I00Y'
+    constant integer ITEM_STONE_TOKEN                                = 'fgrg'
 
-    constant integer ITEM_TYPE_TICKET_2                              = 'I00Z'
-    constant integer ITEM_TYPE_TALISMAN_OF_THE_WILD                  = 'totw'
+    constant integer ITEM_TICKET_2                                   = 'I00Z'
+    constant integer ITEM_TALISMAN_OF_THE_WILD                       = 'totw'
 
-    constant integer ITEM_TYPE_TICKET_3                              = 'I011'
-    constant integer ITEM_TYPE_ICE_SHARD                             = 'shar'
+    constant integer ITEM_TICKET_3                                   = 'I011'
+    constant integer ITEM_ICE_SHARD                                  = 'shar'
 
-    constant integer ITEM_TYPE_TICKET_4                              = 'I012'
-    constant integer ITEM_TYPE_GLOVES_OF_SPELL_MASTERY               = 'gvsm'
+    constant integer ITEM_TICKET_4                                   = 'I012'
+    constant integer ITEM_GLOVES_OF_SPELL_MASTERY                    = 'gvsm'
 
-    constant integer ITEM_TYPE_TICKET_5                              = 'I013'
-    constant integer ITEM_TYPE_SHAMAN_CLAWS                          = 'shcw'
+    constant integer ITEM_TICKET_5                                   = 'I013'
+    constant integer ITEM_SHAMAN_CLAWS                               = 'shcw'
 
-    constant integer ITEM_TYPE_TICKET_6                              = 'I014'
-    constant integer ITEM_TYPE_THUNDERLIZARD_DIAMOND                 = 'thdm'
+    constant integer ITEM_TICKET_6                                   = 'I014'
+    constant integer ITEM_THUNDERLIZARD_DIAMOND                      = 'thdm'
 
-    constant integer ITEM_TYPE_TICKET_7                              = 'I010'
-    constant integer ITEM_TYPE_SHIELD_OF_HONOR                       = 'shhn'
+    constant integer ITEM_TICKET_7                                   = 'I010'
+    constant integer ITEM_SHIELD_OF_HONOR                            = 'shhn'
 
-    constant integer ITEM_TYPE_TICKET_8                              = 'I015'
-    constant integer ITEM_TYPE_SERATHIL                              = 'srtl'
+    constant integer ITEM_TICKET_8                                   = 'I015'
+    constant integer ITEM_SERATHIL                                   = 'srtl'
 
-    constant integer ITEM_TYPE_TICKET_9                              = 'I016'
-    constant integer ITEM_TYPE_STONEMAUL_ARENA_MASTER_BELT           = 'I03G'
+    constant integer ITEM_TICKET_9                                   = 'I016'
+    constant integer ITEM_STONEMAUL_ARENA_MASTER_BELT                = 'I03G'
 
     // mercenary camps
     constant integer MERCENARY_CAMP_ASHENVALE                        = 'nmr5'
@@ -3578,6 +3578,11 @@ globals
     constant integer FIRE_PIT_COOK                                   = 'h0U1'
     constant integer ITEM_FIRE_PIT                                   = 'I0WO' // novice
 
+    constant integer ITEM_FISH_MENU                                  = 'I0WR'
+    constant integer ITEM_WARRIOR_MENU                               = 'I0X0'
+    constant integer ITEM_RANGER_MENU                                = 'I0X4'
+    constant integer ITEM_MAGICIAN_MENU                              = 'I0X7'
+
     // Fisherman
     constant integer ITEM_FISHING_PORT                               = 'I0WY' // novice
     constant integer FISHING_PORT                                    = 'h0U2'
@@ -3676,12 +3681,68 @@ globals
     constant integer ITEM_HOLY_SHIELD                                = 'I16K'
     constant integer ITEM_HOLY_SWORD                                 = 'I16L'
 
+    // Recipes
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
+    constant integer ITEM_ORB_OF_ORBS                                = 'I05L'
+
+    // Orbs
+    constant integer ITEM_ORB_OF_FROST                               = 'ofro'
+    constant integer ITEM_ORB_OF_CORRUPTION                          = 'ocor'
+    constant integer ITEM_ORB_OF_FIRE                                = 'ofir'
+    constant integer ITEM_ORB_OF_FIRE_2                              = 'ofr2'
+    constant integer ITEM_ORB_OF_LIGHTNING                           = 'olig'
+    constant integer ITEM_ORB_OF_LIGHTNING_2                         = 'oli2'
+    constant integer ITEM_ORB_OF_SLOW                                = 'oslo'
+    constant integer ITEM_ORB_OF_VENOM                               = 'oven'
+    constant integer ITEM_ORB_OF_DARKNESS                            = 'odef'
+    constant integer ITEM_DWARVEN_CELESTIAL_ORB_OF_SOULS             = 'I058'
+    constant integer ITEM_ORB_OF_SUN                                 = 'I05J'
+    constant integer ITEM_ORB_OF_ENGINEERING                         = 'I049'
+    constant integer ITEM_ORB_OF_WIND                                = 'I09U'
+    constant integer ITEM_ORB_OF_BLOOD                               = 'I0J9'
+    constant integer ITEM_ORB_OF_LIGHT                               = 'I0JA'
+    constant integer ITEM_ORB_OF_WEB                                 = 'I0NI'
+    constant integer ITEM_ORB_OF_MAGIC                               = 'I0OY'
+    constant integer ITEM_ORB_OF_ANCESTORS                           = 'I0OX'
+    constant integer ITEM_ORB_OF_MOON                                = 'I0P0'
+    constant integer ITEM_ORB_OF_NATURE                              = 'I0QW'
+
+    constant integer ITEM_SHADOW_ORB_1                               = 'sor1'
+    constant integer ITEM_SHADOW_ORB_2                               = 'sor2'
+    constant integer ITEM_SHADOW_ORB_3                               = 'sor3'
+    constant integer ITEM_SHADOW_ORB_4                               = 'sor4'
+    constant integer ITEM_SHADOW_ORB_5                               = 'sor5'
+    constant integer ITEM_SHADOW_ORB_6                               = 'sor6'
+    constant integer ITEM_SHADOW_ORB_7                               = 'sor7'
+    constant integer ITEM_SHADOW_ORB_8                               = 'sor8'
+    constant integer ITEM_SHADOW_ORB_9                               = 'sor9'
+    constant integer ITEM_SHADOW_ORB_10                              = 'sora'
+
+    constant integer ITEM_SHADOW_ORB_FRAGMENT                        = 'sorf'
+
     constant integer ITEM_GOBLIN_TOOL_BOX                            = 'I0Q1'
     constant integer ITEM_SPADE                                      = 'I19U'
 
+    constant integer ITEM_POTION_OF_HEALING                          = 'phea'
+    constant integer ITEM_POTION_OF_MANA                             = 'pman'
+    constant integer ITEM_POTION_OF_INVISIBILITY                     = 'pinv'
+    constant integer ITEM_POTION_OF_GREATER_INVISIBILITY             = 'pgin'
+    constant integer ITEM_POTION_OF_GREATER_RESTORATION              = 'I07C'
+    constant integer ITEM_RESTORATION_STONE                          = 'I07D'
+
+    constant integer ITEM_HEALING_HERB                               = 'I092'
+    constant integer ITEM_MANA_HERB                                  = 'I090'
+
+    constant integer ITEM_BOARDS                                     = 'I08U'
+
+    constant integer ITEM_BRANCH                                     = 'I08T'
+    constant integer ITEM_BLACK_POWDER                               = 'I09C'
+    constant integer ITEM_SPIKE                                      = 'I0KK'
+
     constant integer ITEM_GOLD_COINS                                 = 'gold'
     constant integer ITEM_GOLD_BARS                                  = 'I055'
+    constant integer ITEM_SILVER_BARS                                = 'I0KQ'
+    constant integer ITEM_IRON_BARS                                  = 'I0H5'
 
     constant integer ITEM_ROCKS                                      = 'I095'
     constant integer ITEM_ORE_GOLD                                   = 'I08A'
@@ -3690,9 +3751,27 @@ globals
 
     constant integer ITEM_GEM_DIAMOND                                = 'I0OI'
 
+    constant integer ITEM_ICE                                        = 'I0JP'
+
     constant integer ITEM_CHRISTMAS_PRESENT                          = 'I0AP'
     constant integer ITEM_EASTER_EGG                                 = 'I05I'
     constant integer ITEM_CANDY                                      = 'I146'
+
+    constant integer ITEM_CLAWS_OF_ATTACK_3                          = 'rat3'
+    constant integer ITEM_CLAWS_OF_ATTACK_9                          = 'rat9'
+    constant integer ITEM_CLAWS_OF_ATTACK_12                         = 'ratc'
+    constant integer ITEM_CLAWS_OF_ATTACK_15                         = 'ratf'
+
+    constant integer ITEM_RING_OF_PROTECTION_1                       = 'rde0'
+    constant integer ITEM_RING_OF_PROTECTION_2                       = 'rde1'
+    constant integer ITEM_RING_OF_PROTECTION_3                       = 'rde2'
+    constant integer ITEM_RING_OF_PROTECTION_4                       = 'rde3'
+    constant integer ITEM_RING_OF_PROTECTION_8                       = 'I0RM'
+
+    constant integer ITEM_ENCHANTED_SHIELD                           = 'shen'
+    constant integer ITEM_FROST_GUARD                                = 'frgd'
+    constant integer ITEM_FIREHAND_GAUNTLETS                         = 'frhg'
+    constant integer ITEM_SEARING_BLADE                              = 'srbd'
 
     // Food
     constant integer ITEM_BUNDLE_OF_WHEAT                            = 'I0KT'
@@ -3872,6 +3951,8 @@ globals
     constant integer EYE_TENTACLE_CTHUN                              = 'n06K'
     constant integer EYE_TENTACLE_NZOTH                              = 'n06L'
     constant integer MACE_TENTACLE_YOGG_SARON                        = 'n06B'
+
+    constant integer GUARD_OF_THE_OLD_GODS                           = 'n06P'
 
     // Housing
     constant integer REAL_ESTATE_AGENT                               = 'n0O3'

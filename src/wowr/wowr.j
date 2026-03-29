@@ -318,6 +318,7 @@
 
 //! import "map/WoWReforgedMapComputerStartLocations.j"
 //! import "map/WoWReforgedMapData.j"
+//! import "map/WoWReforgedMapLegendaryItems.j"
 //! import "map/WoWReforgedMapQuests.j"
 //! import "map/WoWReforgedMapStartLocations.j"
 //! import "map/WoWReforgedMapZones.j"

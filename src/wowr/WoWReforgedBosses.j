@@ -148,17 +148,16 @@ function GetUnitLegendaryItemsCount takes unit hero returns integer
     return result
 endfunction
 
-function AddLegendaryItem takes nothing returns nothing
-    set legendaryItemTypeId[legendaryItemsCounter] = udg_TmpItemTypeId
-    set legendaryItemBoss[legendaryItemsCounter] = udg_TmpUnit
-    set legendaryItemBuilding[legendaryItemsCounter] = udg_TmpUnit2
-    set legendaryItemRect[legendaryItemsCounter] = udg_TmpRect
+function AddLegendaryItem takes integer itemTypeId, unit boss, unit building, rect r returns nothing
+    set legendaryItemTypeId[legendaryItemsCounter] = itemTypeId
+    set legendaryItemBoss[legendaryItemsCounter] = boss
+    set legendaryItemBuilding[legendaryItemsCounter] = building
+    set legendaryItemRect[legendaryItemsCounter] = r
     
-    set udg_LegendaryItemType[legendaryItemsCounter] = udg_TmpItemTypeId
-    set udg_LegendaryItemDropRect[legendaryItemsCounter] = udg_TmpRect
+    set udg_LegendaryItemType[legendaryItemsCounter] = itemTypeId
+    set udg_LegendaryItemDropRect[legendaryItemsCounter] = r
     
     set legendaryItemsCounter = legendaryItemsCounter + 1
-    set udg_LegendaryItemTypeSize = udg_LegendaryItemTypeSize + 1
 endfunction
 
 private function TriggerConditionDeath takes nothing returns boolean

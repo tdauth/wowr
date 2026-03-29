@@ -27,7 +27,7 @@ globals
 endglobals
 
 function PlayerCanPickProfession takes player whichPlayer, integer id returns boolean
-    return id != ITEM_TYPE_SCRIBE or udg_Tomes
+    return id != ITEM_SCRIBE or udg_Tomes
 endfunction
 
 function GetRankName takes integer rank returns string
