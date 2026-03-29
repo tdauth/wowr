@@ -217,10 +217,10 @@ private function CreateUI takes nothing returns nothing
     call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("NEWS_LINE_1")).s(MAP_VERSION).result())
     call BlzFrameAddText(TextAreaFrame, GetLocalizedString("NEWS_LINE_2"))
     set i = 0
-    set max = QuestGetItemCount(GetVersionQuest(0))
+    set max = GetMaxChangeLogQuestItems()
     loop
         exitwhen (i == max)
-        call BlzFrameAddText(TextAreaFrame, "- " + GetLocalizedString(QuestItemGetDescription(QuestGetItem(GetVersionQuest(0), i))))
+        call BlzFrameAddText(TextAreaFrame, "- " + GetLocalizedString(GetVersionQuestItemDescription(i)))
         set i = i + 1
     endloop
 

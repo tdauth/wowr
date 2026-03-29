@@ -30,10 +30,11 @@ function AddInfoQuest takes string title, string description, string iconPath re
     return q
 endfunction
 
-function AddInfoQuestItem takes string description returns nothing
+function AddInfoQuestItem takes string description returns questitem
     local questitem i = QuestCreateItem(questHandle[questsMax - 1])
     call QuestItemSetDescription(i, description)
     call QuestItemSetCompleted(i, false)
+    return i
 endfunction
 
 function GetInfoQuestsMax takes nothing returns integer

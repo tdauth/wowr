@@ -1,25 +1,27 @@
 library WoWReforgedChangeLog initializer Init requires QuestUtils, WoWReforgedInfoQuests, WoWReforgedI18n
 
 globals
-    private quest array versionQuests
-    private integer versionQuestsCounter = 0
+    private string array versionQuestItemDescriptions
+    private integer versionQuestItemsCounter = 0
 endglobals
 
-function GetVersionQuest takes integer index returns quest
-    return versionQuests[index]
+function GetVersionQuestItemDescription takes integer index returns string
+    return versionQuestItemDescriptions[index]
 endfunction
 
-function GetMaxVersions takes nothing returns integer
+function GetMaxChangeLogQuestItems takes nothing returns integer
     return versionQuestsCounter
 endfunction
 
 private function AddVersion takes string v returns nothing
-    set versionQuests[versionQuestsCounter] = AddInfoQuest(v, Format(GetLocalizedStringSafe("ALL_CHANGES_OF_VERSION")).s(v).result(), "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp")
-    set versionQuestsCounter = versionQuestsCounter + 1
+    call AddInfoQuest(v, Format(GetLocalizedStringSafe("ALL_CHANGES_OF_VERSION")).s(v).result(), "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp")
+    set versionQuestItemsCounter = 0
 endfunction
 
 private function AddChange takes string change returns nothing
     call AddInfoQuestItem(change)
+    set versionQuestItemDescriptions[versionQuestItemsCounter] = change
+    set versionQuestItemsCounter = versionQuestItemsCounter + 1
 endfunction
 
 private function Init takes nothing returns nothing
