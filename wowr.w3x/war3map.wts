@@ -2536,7 +2536,7 @@ Revive Wolf Rider
 STRING 425
 // Abilities: A00L (Weaponsmithing - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Weaponsmith uses gathered minerals to craft a Bow of Fire..
+The Weaponsmith uses gathered minerals to craft a Bow of Fire.
 }
 
 STRING 426
@@ -62710,7 +62710,7 @@ Build House
 STRING 23037
 // Items: I07A (Equipment Bag), Ubertip (Tooltip - Extended)
 {
-An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried  items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
+An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
 }
 
 STRING 23039
@@ -87436,7 +87436,7 @@ Cut Down Trees
 STRING 38922
 // Items: I10P (Thief), Ubertip (Tooltip - Extended)
 {
-Craft items which allow lock picking and pick pocketing:|n- Lock Pick|n- Locked Item Summoner/Item Locker/Tiny Safes|n- Pickpocketing|n- Tiny Thieves Guild
+Craft items which allow lock picking and pick pocketing:|n- Lock Pick|n- Locked Item Summoner|n- Item Locker|n- Tiny Safes|n- Pickpocketing|n- Tiny Thieves Guild
 }
 
 STRING 38923
@@ -116877,7 +116877,7 @@ Purchases the property. |n|n|cffffcc00Race: Satyr.|r|n|cffffcc00Resource: Fel.|r
 STRING 55895
 // Units: h0XB (Buy Property Exodar), Ubertip (Tooltip - Extended)
 {
-Purchases the property. |n|n|cffffcc00Race: Eredar.|r|n|cffffcc00Resource: Argunite.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
+Purchases the property. |n|n|cffffcc00Race: Draenei.|r|n|cffffcc00Resource: Argunite.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
 }
 
 STRING 55896
@@ -117003,7 +117003,7 @@ Buy Property Fallow Sanctuary
 STRING 55949
 // Units: h0XL (Buy Property Fallow Sanctuary), Ubertip (Tooltip - Extended)
 {
-Purchases the property. |n|n|cffffcc00Race: Draenei.|r|n|cffffcc00Resource: Argunite.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
+Purchases the property. |n|n|cffffcc00Race: Lost Ones.|r|n|cffffcc00Resource: Argunite.|r|n|cffffcc00Food: 80.|r|n|cffffcc00Automatically gives you all researches from the race.|r
 }
 
 STRING 55950

@@ -2536,7 +2536,7 @@ Wolfsreiterin wiederbeleben
 STRING 425
 // Abilities: A00L (Weaponsmithing - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Weaponsmith uses gathered minerals to craft a Bow of Fire..
+The Weaponsmith uses gathered minerals to craft a Bow of Fire.
 }
 
 STRING 426
@@ -7430,7 +7430,7 @@ STRING 1254
 STRING 1255
 // Abilities: A03M (Hero Skins), Ubertip (Tooltip - Normal - Extended)
 {
-Allows changing the skin.
+Ermöglicht den Wechsel des Skins.
 }
 
 STRING 1256
@@ -7448,13 +7448,13 @@ Panzerung - Adept
 STRING 1258
 // Units: n007 (Nether Drake Mount), Name (Name)
 {
-Nether Drake Mount
+Niederdrachen-Reittier
 }
 
 STRING 1259
 // Units: h04L (Dragonhawk Mount), Tip (Tooltip - Basic)
 {
-Dragonhawk Mount
+Drachenfalken-Reittier
 }
 
 STRING 1260
@@ -7478,13 +7478,13 @@ STRING 1262
 STRING 1263
 // Units: h06C (Giant Sea Turtle Mount), Tip (Tooltip - Basic)
 {
-Giant Meeresschildkröte Mount
+Riesiges Meeresschildkröten-Reittier Mount
 }
 
 STRING 1264
 // Units: h06E (Horse Mount), Name (Name)
 {
-Horse Mount
+Pferde-Reittier
 }
 
 STRING 1265
@@ -8558,7 +8558,7 @@ Summon Arch Lich
 STRING 1450
 // Units: h08I (Buy Property Capital City), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Lordaeron.|r|n|cffffcc00Rohstoff: Wool.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Lordaeron.|r|n|cffffcc00Rohstoff: Wolle.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 1451
@@ -9308,7 +9308,7 @@ STRING 1575
 STRING 1576
 // Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
 {
-Craft items which heal your hero and increase the hero's life:|n- Potion of Greater Healing|n- Scroll of Healing|n- Health Stone|n- Potion of Invulnerability|n- Talisman of Everlasting|n- Tiny Fountain of Health
+Stellt Gegenstände her, die Ihren Helden heilen und das Leben des Helden erhöhen:|n- Großer Heiltrank|n- Rolle der Heilung|n- Gesundheitsstein|n- Trank der Unverwundbarkeit|n- Talisman of Everlasting|n- Winziger Brunnen der Gesundheit
 }
 
 STRING 1577
@@ -9368,7 +9368,7 @@ Trains Vigilants, Belagerungsbrechers, and Dimensionsschiffs.
 STRING 1586
 // Items: I06O (Alchemist), Ubertip (Tooltip - Extended)
 {
-Craft items which restore mana of your hero and increase the hero's maximum mana:|n- Potion of Greater Mana|n- Scroll of Mana|n- Mana Stone|n- Wand of Mana Stealing|n- Talisman of Spell Protection|n- Tiny Fountain of Mana
+Stellt Gegenstände her, die das Mana Ihres Helden wiederherstelle und das maximale Mana des Helden erhöhen:|n- Großer Manatrank|n- Rolles Manas|n- Manastein|n- Zauberstab des Mana-Stehlens|n- Talisman des Zauberschutzes|n- Winziger Mana-Brunnen
 }
 
 STRING 1587
@@ -11672,7 +11672,7 @@ Buy Property Boralus
 STRING 2070
 // Units: h0YG (Buy Property Boralus), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Kul Tiras.|r|n|cffffcc00Rohstoff: Fruits.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Kul Tiras.|r|n|cffffcc00Rohstoff: Früchte.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 2071
@@ -11690,7 +11690,7 @@ Immobilie Dalaran kaufen
 STRING 2073
 // Units: h0YH (Buy Property Dalaran), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Dalaran.|r|n|cffffcc00Rohstoff: Power.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Dalaran.|r|n|cffffcc00Rohstoff: Energie.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 2074
@@ -15047,7 +15047,7 @@ Buy Property Deadmines
 STRING 2847
 // Units: h07N (Buy Property Deadmines), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Bandit.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Banditen.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 2848
@@ -23357,7 +23357,7 @@ Increases Heretics' mana capacity, mana regeneration rate, hit points, and gives
 STRING 4824
 // Units: h0XM (Buy Property Kobold Camp), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Kobold.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Kobolde.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 4825
@@ -31074,7 +31074,7 @@ Gives all ships the ability Hyperspace which allows them to travel at any visibl
 STRING 6502
 // Units: h0XI (Buy Property Icecrown Citadel), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Undead.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Untote.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 6506
@@ -32637,7 +32637,7 @@ B
 STRING 6977
 // Abilities: A1IY (Hero Attributes), Name (Name)
 {
-B
+Helden-Attribute
 }
 
 STRING 6981
@@ -32679,13 +32679,13 @@ Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. C
 STRING 6987
 // Units: n0JJ (Haven), Tip (Tooltip - Basic)
 {
-Ausbau zum Oase
+Ausbau zur Oase
 }
 
 STRING 6988
 // Units: n0JJ (Haven), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Oase ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ausbau zur Oase ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 6989
@@ -32829,7 +32829,7 @@ Erschafft am Zielort ein Versteck.
 STRING 7013
 // Units: n0JK (Sanctuary), Name (Name)
 {
-Sanctuary
+Heiligtum
 }
 
 STRING 7014
@@ -32865,7 +32865,7 @@ Zepter der Dämonen erwerben
 STRING 7021
 // Units: n0JK (Sanctuary), Tip (Tooltip - Basic)
 {
-Ausbau zum Sanctuary
+Ausbau zum Heiligtum
 }
 
 STRING 7022
@@ -33159,7 +33159,7 @@ Diagonale Brücke errichten
 STRING 7082
 // Units: n0JK (Sanctuary), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Sanctuary ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ausbau zum Heiligtum ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 7083
@@ -33225,7 +33225,7 @@ Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n
 STRING 7098
 // Units: n054 (Event House), Ubertip (Tooltip - Extended)
 {
-A house to control important events.|n|n|cffffcc00Begrenzt auf 1.|r
+Ein Haus zur Steuerung wichtiger Ereignisse.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 7109
@@ -37440,7 +37440,7 @@ Waffenschmiedekunst - Doctor
 STRING 8127
 // Abilities: A107 (Weaponsmithing - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Waffenschmiedekunst
+Doktor-Waffenschmiedekunst
 }
 
 STRING 8128
@@ -43761,7 +43761,7 @@ Stellt Schutzzauber her:|n- Wächterschutzzauber|n- Stasisfallen|n- Manaschutzza
 STRING 10537
 // Items: I0SD (Sculptor), Ubertip (Tooltip - Extended)
 {
-Craft golems which fight for you:|n- Schlammgolem|n- Kriegs-Golem|n- Belagerungsgolem|n- Fleischgolem|n- Göttlicher Golem|n- Tiny Golem Factory
+Stellt Golems her, die für euch kämpfen:|n- Schlammgolem|n- Kriegs-Golem|n- Belagerungsgolem|n- Fleischgolem|n- Göttlicher Golem|n- Winzige Golem-Fabrik
 }
 
 STRING 10538
@@ -53286,7 +53286,7 @@ STRING 16176
 STRING 16177
 // Abilities: A0PH (Enable Wandering), Ubertip (Tooltip - Normal - Extended)
 {
-Enables the Wandering ability.
+Aktiviert die Wanderfähigkeit.
 }
 
 STRING 16178
@@ -53322,7 +53322,7 @@ P
 STRING 16201
 // Abilities: A0PI (Disable Wandering), Ubertip (Tooltip - Normal - Extended)
 {
-Disables the Wandering ability.
+Deaktiviert die Wanderfähigkeit.
 }
 
 STRING 16202
@@ -57825,7 +57825,7 @@ STRING 19754
 STRING 19755
 // Units: h0UE (Draenei Housing), Tip (Tooltip - Basic)
 {
-Build Draenei Housing
+Draenei-Unterkunft errichten
 }
 
 STRING 19756
@@ -62711,7 +62711,7 @@ Haus errichten
 STRING 23037
 // Items: I07A (Equipment Bag), Ubertip (Tooltip - Extended)
 {
-An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried  items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
+An additional backpack with equipment which can be carried by your first hero. All bonuses by the carried items will be given to your first hero just like the from regular hero inventory.|n|nThe hero stats are the same as from your first hero. It can learn customized hero abilities per ability slot.|n|nIt can also be used as Crafting Stash.
 }
 
 STRING 23039
@@ -69863,7 +69863,7 @@ Fortgeschrittene Waffenschmiedekunst
 STRING 30979
 // Abilities: A00S (Weaponsmithing - Adept), Tip (Tooltip - Normal)
 {
-Adepten Waffenschmiedekunst
+Adepten-Waffenschmiedekunst
 }
 
 STRING 30980
@@ -81689,7 +81689,7 @@ STRING 36504
 STRING 36505
 // Abilities: A1BH (Life Regeneration), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the life regeneration of nearby friendly units by <A07X,DataA1,%> %.
+Erhöht die Lebensregeneration von nahegelegenen freundlichen Einheiten um <A07X,DataA1,%> %.
 }
 
 STRING 36506
@@ -87437,7 +87437,7 @@ Bäume fällen
 STRING 38922
 // Items: I10P (Thief), Ubertip (Tooltip - Extended)
 {
-Craft items which allow lock picking and pick pocketing:|n- Lock Pick|n- Beschwörer weggesperrter Gegenstände/Schließfach/Winzige Tresore|n- Taschendiebstahl|n- Winzige Diebesgilde
+Stellt Gegenstände her, die Schlösserknacken und Taschendiebstahl ermöglichen:|n- Dietrich|n- Beschwörer weggesperrter Gegenstände|n- Schließfach|n- Winzige Tresore|n- Taschendiebstahl|n- Winzige Diebesgilde
 }
 
 STRING 38923
@@ -116824,7 +116824,7 @@ Clan Night Elf Banner
 STRING 55886
 // Units: h0X1 (Buy Property Sunstrider Isle), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Blood Elf.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Blutelfen.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55887
@@ -116842,7 +116842,7 @@ Converts Undead player units into non-Undead  player units.
 STRING 55889
 // Units: h0X2 (Buy Property Silvermoon), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: High Elf.|r|n|cffffcc00Rohstoff: Silber.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Hochelfen.|r|n|cffffcc00Rohstoff: Silber.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55890
@@ -116854,7 +116854,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Pandaren.|r|n|cffffcc00Rohstoff: Hol
 STRING 55891
 // Units: h0X5 (Buy Property Darkspear Isle), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Troll.|r|n|cffffcc00Rohstoff: Öl.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Trolle.|r|n|cffffcc00Rohstoff: Öl.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55892
@@ -116878,13 +116878,13 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Satyr.|r|n|cffffcc00Rohstoff: Fel.|r
 STRING 55895
 // Units: h0XB (Buy Property Exodar), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Eredar.|r|n|cffffcc00Rohstoff: Argunit.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Draenei.|r|n|cffffcc00Rohstoff: Argunit.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55896
 // Units: h0XC (Buy Property Ny'alotha), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Faceless One.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Gesichtslose.|r|n|cffffcc00Rohstoff: Gold.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55897
@@ -116896,7 +116896,7 @@ Clan-Abgesandter
 STRING 55898
 // Units: h0XD (Buy Property The Undermine), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Goblin.|r|n|cffffcc00Rohstoff: Oil.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Goblins.|r|n|cffffcc00Rohstoff: Öl.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55899
@@ -116914,7 +116914,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Vrykul.|r|n|cffffcc00Rohstoff: Fleis
 STRING 55901
 // Units: h0XG (Buy Property Antorus, the Burning Throne), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Demon.|r|n|cffffcc00Rohstoff: Fel.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Dämonen.|r|n|cffffcc00Rohstoff: Fel.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55903
@@ -116962,7 +116962,7 @@ STRING 55910
 STRING 55911
 // Units: h0XJ (Buy Property Murloc Camp), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Murloc.|r|n|cffffcc00Rohstoff: Wasser.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Murlocs.|r|n|cffffcc00Rohstoff: Wasser.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55912
@@ -117004,7 +117004,7 @@ Buy Property Fallow Sanctuary
 STRING 55949
 // Units: h0XL (Buy Property Fallow Sanctuary), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Draenei.|r|n|cffffcc00Rohstoff: Argunit.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Verlorene.|r|n|cffffcc00Rohstoff: Argunit.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55950
@@ -117130,7 +117130,7 @@ STRING 55978
 STRING 55981
 // Units: h0XP (Buy Property Razorfen Kraul), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Stacheleber.|r|n|cffffcc00Rohstoff: Meat.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Stacheleber.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 56046
@@ -122772,7 +122772,7 @@ Immobilie Insel Theramore kaufen
 STRING 58300
 // Units: h0YE (Buy Property Theramore Isle), Ubertip (Tooltip - Extended)
 {
-Die Immobilie erwerben. |n|n|cffffcc00Volk: Human.|r|n|cffffcc00Rohstoff: Fruits.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
+Die Immobilie erwerben. |n|n|cffffcc00Volk: Menschen.|r|n|cffffcc00Rohstoff: Früchte.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 58301
