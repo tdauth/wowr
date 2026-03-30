@@ -460,49 +460,32 @@ function GetLowestHeroLevel1FromAllPlayingUsers takes nothing returns integer
     return result
 endfunction
 
-function SaveTriggerParameterInteger takes handle Trigger, integer ParameterKey, integer Value returns nothing
-    call SaveInteger(h, GetHandleId(Trigger), ParameterKey, Value)
+function SaveTriggerParameterInteger takes handle whichTrigger, integer key, integer value returns nothing
+    call SaveInteger(h, GetHandleId(whichTrigger), key, value)
 endfunction
 
-function LoadTriggerParameterInteger takes handle Trigger, integer ParameterKey returns integer
-    return LoadInteger(h, GetHandleId(Trigger), ParameterKey)
+function LoadTriggerParameterInteger takes handle whichTrigger, integer key returns integer
+    return LoadInteger(h, GetHandleId(whichTrigger), key)
 endfunction
 
-function TriggerParameterIntegerExists takes handle Trigger, integer ParameterKey returns boolean
-    return HaveSavedInteger(h, GetHandleId(Trigger), ParameterKey)
+function SaveUnitParameterInteger takes unit whichUnit, integer key, integer value returns nothing
+    call SaveInteger(h, GetHandleId(whichUnit), key, value)
 endfunction
 
-function DestroyParameterTrigger takes trigger Trigger returns nothing
-    call FlushChildHashtable(h, GetHandleId(Trigger))
-    call DestroyTrigger(Trigger)
+function LoadUnitParameterInteger takes unit whichUnit, integer key returns integer
+    return LoadInteger(h, GetHandleId(whichUnit), key)
 endfunction
 
-function SaveUnitParameterInteger takes unit whichUnit, integer ParameterKey, integer Value returns nothing
-    call SaveInteger(h, GetHandleId(whichUnit), ParameterKey, Value)
+function SaveDestructableParameterInteger takes destructable whichDestructable, integer key, integer value returns nothing
+    call SaveInteger(h, GetHandleId(whichDestructable), key, value)
 endfunction
 
-function LoadUnitParameterInteger takes unit whichUnit, integer ParameterKey returns integer
-    return LoadInteger(h, GetHandleId(whichUnit), ParameterKey)
+function LoadDestructableParameterInteger takes destructable whichDestructable, integer key returns integer
+    return LoadInteger(h, GetHandleId(whichDestructable), key)
 endfunction
 
-function UnitParameterIntegerExists takes unit whichUnit, integer ParameterKey returns boolean
-    return HaveSavedInteger(h, GetHandleId(whichUnit), ParameterKey)
-endfunction
-
-function SaveDestructableParameterInteger takes destructable whichDestructable, integer ParameterKey, integer Value returns nothing
-    call SaveInteger(h, GetHandleId(whichDestructable), ParameterKey, Value)
-endfunction
-
-function LoadDestructableParameterInteger takes destructable whichDestructable, integer ParameterKey returns integer
-    return LoadInteger(h, GetHandleId(whichDestructable), ParameterKey)
-endfunction
-
-function DestructableParameterIntegerExists takes destructable whichDestructable, integer ParameterKey returns boolean
-    return HaveSavedInteger(h, GetHandleId(whichDestructable), ParameterKey)
-endfunction
-
-function FlushUnitParameters takes unit whichUnit returns nothing
-    call FlushChildHashtable(h, GetHandleId(whichUnit))
+function DestructableParameterIntegerExists takes destructable whichDestructable, integer key returns boolean
+    return HaveSavedInteger(h, GetHandleId(whichDestructable), key)
 endfunction
 
 function DropAllItemsFromHero1 takes player whichPlayer returns integer
