@@ -288,7 +288,7 @@ private function SetVisible takes boolean visible returns nothing
     local integer counter = 0
     local integer i = 0
 
-    call BJDebugMsg("UIAiPlayers SetVisible with force count " + I2S(CountPlayersInForceBJ(Force)))
+    call BJDebugMsg("UIAiPlayers SetVisible with force count " + I2S(CountPlayersInForceBJ(Force)) + " and visible: " + B2S(visible))
 
     call BlzFrameSetVisible(BackgroundFrame, visible)
     call BlzFrameSetVisible(TitleFrame, visible)

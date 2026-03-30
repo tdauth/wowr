@@ -5,6 +5,7 @@ globals
     
     private trigger sellTrigger = CreateTrigger()
     public trigger levelUpTrigger = CreateTrigger() // public for WoWReforgedHeroTransformation
+    private trigger channelTrigger = CreateTrigger()
 endglobals
 
 function ShowWowReforgedSkillPoints takes unit hero returns nothing
@@ -85,30 +86,6 @@ function WoWReforgedSkillAttribute takes unit hero, integer whichStat, real valu
             call SimError(GetOwningPlayer(hero), GetLocalizedString("ATTRIBUTE_CANNOT_BE_UNSKILLED"))
         endif
     endif
-endfunction
-
-function WoWReforgedSkillStrength takes nothing returns nothing
-    call WoWReforgedSkillAttribute(udg_TmpUnit, bj_HEROSTAT_STR, udg_TmpReal)
-endfunction
-
-function WoWReforgedSkillStrengthMax takes nothing returns nothing
-    call WoWReforgedSkillAttribute(udg_TmpUnit, bj_HEROSTAT_STR, GetUnitAttribute(udg_TmpUnit, udg_AttributeAttributePoints))
-endfunction
-
-function WoWReforgedSkillAgility takes nothing returns nothing
-    call WoWReforgedSkillAttribute(udg_TmpUnit, bj_HEROSTAT_AGI, udg_TmpReal)
-endfunction
-
-function WoWReforgedSkillAgilityMax takes nothing returns nothing
-    call WoWReforgedSkillAttribute(udg_TmpUnit, bj_HEROSTAT_AGI, GetUnitAttribute(udg_TmpUnit, udg_AttributeAttributePoints))
-endfunction
-
-function WoWReforgedSkillIntelligence takes nothing returns nothing
-    call WoWReforgedSkillAttribute(udg_TmpUnit, bj_HEROSTAT_INT, udg_TmpReal)
-endfunction
-
-function WoWReforgedSkillIntelligenceMax takes nothing returns nothing
-    call WoWReforgedSkillAttribute(udg_TmpUnit, bj_HEROSTAT_INT, GetUnitAttribute(udg_TmpUnit, udg_AttributeAttributePoints))
 endfunction
 
 private function IsPlayerHero takes nothing returns boolean
@@ -225,13 +202,40 @@ private function TriggerConditionLevelUp takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionChannel takes nothing returns boolean
+    local integer abilityId = GetSpellAbilityId()
+    if (abilityId == 'A1L5') then
+        call WoWReforgedSkillAttribute(GetTriggerUnit(), bj_HEROSTAT_STR, 1.0)
+    elseif (abilityId == 'A1L6') then
+        call WoWReforgedSkillAttribute(GetTriggerUnit(), bj_HEROSTAT_AGI, 1.0)
+    elseif (abilityId == 'A1L7') then
+        call WoWReforgedSkillAttribute(GetTriggerUnit(), bj_HEROSTAT_INT, 1.0)
+    elseif (abilityId == 'A1L8') then
+        call WoWReforgedSkillAttribute(GetTriggerUnit(), bj_HEROSTAT_STR, -1.0)
+    elseif (abilityId == 'A1L9') then
+        call WoWReforgedSkillAttribute(GetTriggerUnit(), bj_HEROSTAT_AGI, -1.0)
+    elseif (abilityId == 'A1LA') then
+        call WoWReforgedSkillAttribute(GetTriggerUnit(), bj_HEROSTAT_INT, -1.0)
+    elseif (abilityId == 'A1LB') then
+        call ShowWowReforgedSkillPoints(GetTriggerUnit())
+    elseif (abilityId == 'A1LC') then
+        call ResetWowReforgedSkillPoints(GetTriggerUnit())
+    elseif (abilityId == 'A1LD') then
+        call EqualWowReforgedSkillPoints(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(sellTrigger, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(sellTrigger, Condition(function TriggerConditionSell))
-    
+
     call TriggerRegisterAnyUnitEventBJ(levelUpTrigger, EVENT_PLAYER_HERO_LEVEL)
     call TriggerAddCondition(levelUpTrigger, Condition(function TriggerConditionLevelUp))
-    
+
+    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
+
     set udg_AttributeAttributePoints = AddAttribute(GetLocalizedStringSafe("ATTRIBUTE_POINTS"))
     call SetAttributeIcon(udg_AttributeAttributePoints, "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     call SetAttributeDescription(udg_AttributeAttributePoints, GetLocalizedStringSafe("ATTRIBUTE_POINTS_DESCRIPTION"))

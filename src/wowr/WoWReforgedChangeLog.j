@@ -10,7 +10,7 @@ function GetVersionQuestItemDescription takes integer index returns string
 endfunction
 
 function GetMaxChangeLogQuestItems takes nothing returns integer
-    return versionQuestsCounter
+    return versionQuestItemsCounter
 endfunction
 
 private function AddVersion takes string v returns nothing
