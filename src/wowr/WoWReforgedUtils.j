@@ -7,6 +7,8 @@ UnitTypeUtils
 */
 globals
     constant boolean MAP_DEBUG_MODE_ENABLED = true //MAP_DEBUG_MODE
+
+    private hashtable h = InitHashtable()
 endglobals
 
 //! textmacro DEBUG_MODE_CHECK
@@ -459,48 +461,48 @@ function GetLowestHeroLevel1FromAllPlayingUsers takes nothing returns integer
 endfunction
 
 function SaveTriggerParameterInteger takes handle Trigger, integer ParameterKey, integer Value returns nothing
-    call SaveInteger(udg_DB, GetHandleId(Trigger), ParameterKey, Value)
+    call SaveInteger(h, GetHandleId(Trigger), ParameterKey, Value)
 endfunction
 
 function LoadTriggerParameterInteger takes handle Trigger, integer ParameterKey returns integer
-    return LoadInteger(udg_DB, GetHandleId(Trigger), ParameterKey)
+    return LoadInteger(h, GetHandleId(Trigger), ParameterKey)
 endfunction
 
 function TriggerParameterIntegerExists takes handle Trigger, integer ParameterKey returns boolean
-    return HaveSavedInteger(udg_DB, GetHandleId(Trigger), ParameterKey)
+    return HaveSavedInteger(h, GetHandleId(Trigger), ParameterKey)
 endfunction
 
 function DestroyParameterTrigger takes trigger Trigger returns nothing
-    call FlushChildHashtable(udg_DB, GetHandleId(Trigger))
+    call FlushChildHashtable(h, GetHandleId(Trigger))
     call DestroyTrigger(Trigger)
 endfunction
 
 function SaveUnitParameterInteger takes unit whichUnit, integer ParameterKey, integer Value returns nothing
-    call SaveInteger(udg_DB, GetHandleId(whichUnit), ParameterKey, Value)
+    call SaveInteger(h, GetHandleId(whichUnit), ParameterKey, Value)
 endfunction
 
 function LoadUnitParameterInteger takes unit whichUnit, integer ParameterKey returns integer
-    return LoadInteger(udg_DB, GetHandleId(whichUnit), ParameterKey)
+    return LoadInteger(h, GetHandleId(whichUnit), ParameterKey)
 endfunction
 
 function UnitParameterIntegerExists takes unit whichUnit, integer ParameterKey returns boolean
-    return HaveSavedInteger(udg_DB, GetHandleId(whichUnit), ParameterKey)
+    return HaveSavedInteger(h, GetHandleId(whichUnit), ParameterKey)
 endfunction
 
 function SaveDestructableParameterInteger takes destructable whichDestructable, integer ParameterKey, integer Value returns nothing
-    call SaveInteger(udg_DB, GetHandleId(whichDestructable), ParameterKey, Value)
+    call SaveInteger(h, GetHandleId(whichDestructable), ParameterKey, Value)
 endfunction
 
 function LoadDestructableParameterInteger takes destructable whichDestructable, integer ParameterKey returns integer
-    return LoadInteger(udg_DB, GetHandleId(whichDestructable), ParameterKey)
+    return LoadInteger(h, GetHandleId(whichDestructable), ParameterKey)
 endfunction
 
 function DestructableParameterIntegerExists takes destructable whichDestructable, integer ParameterKey returns boolean
-    return HaveSavedInteger(udg_DB, GetHandleId(whichDestructable), ParameterKey)
+    return HaveSavedInteger(h, GetHandleId(whichDestructable), ParameterKey)
 endfunction
 
 function FlushUnitParameters takes unit whichUnit returns nothing
-    call FlushChildHashtable(udg_DB, GetHandleId(whichUnit))
+    call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
 function DropAllItemsFromHero1 takes player whichPlayer returns integer
@@ -683,7 +685,7 @@ function DisplayUnitRespawnInfo takes unit whichUnit, player whichPlayer returns
 endfunction
 
 private function Init takes nothing returns nothing
-    set udg_DB = InitHashtable()
+    set h = InitHashtable()
 endfunction
 
 endlibrary

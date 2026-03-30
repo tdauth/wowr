@@ -884,7 +884,7 @@ private function HeroDownFunction takes nothing returns nothing
 endfunction
 
 private function GetStartLocationsLastIndex takes nothing returns integer
-    return udg_TownHallCounter + AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM_HORDE
+    return GetMaxComputerStartLocations() + AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM_HORDE
 endfunction
 
 private function StartLocationUpFunction takes nothing returns nothing

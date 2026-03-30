@@ -1,4 +1,4 @@
-library WoWReforgedComputerStartLocations requires MathUtils
+library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedTmpVariables
 
 struct ComputerStartLocation
     real x
@@ -66,6 +66,12 @@ endfunction
 
 function AddComputerStartLocationPossibleRaceLast takes integer r returns integer
      return AddComputerStartLocationPossibleRace(GetLastCreatedComputerStartLocation(), r)
+endfunction
+
+// TODO Remove as soon as all GUI triggers have been moved to vJass code.
+function MoveTmpLocationToComputerStartLocation takes integer index returns nothing
+	local ComputerStartLocation l = GetComputerStartLocation(index)
+	call MoveTmpLocation(l.x, l.y)
 endfunction
 
 endlibrary

@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedActionsBarUI, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedPrestoredSaveCodes
+library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedActionsBarUI, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedPrestoredSaveCodes, WoWReforgedComputerStartLocations
 
 globals
     private ChatCommand array chatCommands
@@ -385,6 +385,20 @@ private function AiOff takes nothing returns nothing
     call ChatCommandAiEnable(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_DISABLED_OFF)
 endfunction
 
+private function PingAiStarts takes nothing returns nothing
+    local ComputerStartLocation l = 0
+    local integer i = 0
+    local integer max = GetMaxComputerStartLocations()
+    loop
+        exitwhen (i == max)
+        set l = GetComputerStartLocation(i)
+        if (l.taken) then
+            call PingMinimapForPlayer(GetTriggerPlayer(), l.x, l.y, 5.0)
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
 private function Hide takes nothing returns nothing
     call HideUI(GetTriggerPlayer())
 endfunction
@@ -452,6 +466,8 @@ private function Init takes nothing returns nothing
     call Add("-aicomputer", false, function AiComputer)
     call Add("-aion", false, function AiOn)
     call Add("-aioff", false, function AiOff)
+
+    call Add("-pingaistarts", true, function PingAiStarts)
 
     call Add("-hide", true, function Hide)
     call Add("-show", true, function Show)

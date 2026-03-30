@@ -1,4 +1,4 @@
-library WoWReforgedResources initializer Init requires Resources, PlayerColorUtils, StringUtils, SafeString, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces, WoWReforgedStats
+library WoWReforgedResources initializer Init requires Resources, PlayerColorUtils, StringUtils, SafeString, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces, WoWReforgedStats, WoWReforgedComputerStartLocations
 
 globals
     private integer maxMines = 0
@@ -155,10 +155,9 @@ private function ForGroupRemoveUnit takes nothing returns nothing
 endfunction
 
 function RemoveRandomMinesAtAIStartLocation takes integer computerStartLocation returns nothing
-    local real x = GetRectCenterX(udg_TownHallLocation[computerStartLocation])
-    local real y = GetRectCenterY(udg_TownHallLocation[computerStartLocation])
+    local ComputerStartLocation c =  GetComputerStartLocation(computerStartLocation)
     local group mines = CreateGroup()
-    call GroupEnumUnitsInRange(mines, x, y, 4096.0, Filter(function FilterIsRandomMine))
+    call GroupEnumUnitsInRange(mines, c.x, c.y, 4096.0, Filter(function FilterIsRandomMine))
     call ForGroup(mines, function ForGroupRemoveUnit)
     call GroupClear(mines)
     call DestroyGroup(mines)

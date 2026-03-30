@@ -1,4 +1,4 @@
-library WoWReforgedWebsite initializer Init requires Ascii, OpLimit, UnitDex, Indexer, SafeString, Resources, DamageCalculationTableUI, GenerateIds, UnitTypeUtils, ItemUtils, FileUtils, StringUtils, UnitCost, TimeOfDayUtils, QuestUtils, SaveCodeSystem, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedPrestoredSaveCodes, WoWReforgedQuests, WoWReforgedInfoQuests, WoWReforgedProfessions, WoWReforgedMounts, WoWReforgedResearches, WoWReforgedSkins, WoWReforgedEquipment, WoWReforgedProperties, WoWReforgedRacing, WoWReforgedCalendar, WoWReforgedArena, WoWReforgedNpcs, WoWReforgedDependencyEquivalents, WoWReforgedObjectMappings, WoWReforgedHunter, WoWReforgedStartLocations, WoWReforgedVIPs, WoWReforgedAccount, WoWReforgedResources, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedHeroTransformation
+library WoWReforgedWebsite initializer Init requires Ascii, OpLimit, UnitDex, Indexer, SafeString, Resources, DamageCalculationTableUI, GenerateIds, UnitTypeUtils, ItemUtils, FileUtils, StringUtils, UnitCost, TimeOfDayUtils, QuestUtils, SaveCodeSystem, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedPrestoredSaveCodes, WoWReforgedQuests, WoWReforgedInfoQuests, WoWReforgedProfessions, WoWReforgedMounts, WoWReforgedResearches, WoWReforgedSkins, WoWReforgedEquipment, WoWReforgedProperties, WoWReforgedRacing, WoWReforgedCalendar, WoWReforgedArena, WoWReforgedNpcs, WoWReforgedDependencyEquivalents, WoWReforgedObjectMappings, WoWReforgedHunter, WoWReforgedStartLocations, WoWReforgedVIPs, WoWReforgedAccount, WoWReforgedResources, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedComputerStartLocations, WoWReforgedHeroTransformation
 
 /*
 Generates data necessary for https://github.com/tdauth/wowr-website
@@ -4231,8 +4231,8 @@ private function GenerateStartLocations takes nothing returns nothing
     
     set i = 0
     loop
-        exitwhen (i == udg_TownHallCounter)
-        set zone = GetZoneByCoordinates(GetRectCenterX(udg_TownHallLocation[i]), GetRectCenterY(udg_TownHallLocation[i]))
+        exitwhen (i == GetMaxComputerStartLocations())
+        set zone = GetZoneByCoordinates(GetComputerStartLocation(i).x, GetComputerStartLocation(i).y)
         set icon = "???"
         if (zone != 0) then
             set icon = GetZoneIcon(zone)

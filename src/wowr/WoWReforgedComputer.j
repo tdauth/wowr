@@ -1,4 +1,4 @@
-library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedMapData
+library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedComputerStartLocations, WoWReforgedMapData
 
 globals
     private trigger heroLevelTrigger = CreateTrigger()
@@ -299,7 +299,9 @@ function StartingUnitsAndPickAI takes player whichPlayer, location l, integer wh
 endfunction
 
 function RecreateStartingUnitsAI takes player whichPlayer returns nothing
-    local location l = GetRectCenter(udg_TownHallLocation[udg_ComputerStartLocation[GetConvertedPlayerId(whichPlayer)]])
+    local integer index = udg_ComputerStartLocation[GetConvertedPlayerId(whichPlayer)]
+    local ComputerStartLocation c = GetComputerStartLocation(index)
+    local location l = Location(c.x, c.y)
     call StartingUnitsAndPickAIEx(whichPlayer, l, GetPlayerRace1(whichPlayer), true)
     call RemoveLocation(l)
     set l = null
