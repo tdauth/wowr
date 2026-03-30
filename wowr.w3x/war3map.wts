@@ -65297,7 +65297,7 @@ Disarmament
 STRING 26079
 // Buffs/Effects: B016 (), Buffubertip (Tooltip - Extended)
 {
-This unit is Disarmed; it cannot cast attack.
+This unit is Disarmed; it cannot attack.
 }
 
 STRING 26082

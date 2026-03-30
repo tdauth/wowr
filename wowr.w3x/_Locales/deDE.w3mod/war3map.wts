@@ -12460,7 +12460,7 @@ A
 }
 
 STRING 2282
-// Units: h0CR (Kul Tiras Advanced Shipyard), Hotkey (Hotkey)
+// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Hotkey (Hotkey)
 {
 A
 }
@@ -24828,7 +24828,7 @@ Primäres Gebäude, wird zum Ausbilden von Mur'gul-Sklaven und zum Einlagern ges
 STRING 5143
 // Units: n05P (Pyramid of the Serpent), Ubertip (Tooltip - Extended)
 {
-Trains Naga-Walfängers, Coral Golems, and Naga-Königswaches. Provides the research Festhaut.|n|nCan be used to return harvested lumber.
+Bildet Naga-Walfänger, Korallen-Golems und Naga-Königswachen. Bietet die Ausbaustufe 'Festhaut'.|n|nDient als Abladepunkt für das geschlagene Holz.
 }
 
 STRING 5144
@@ -26248,9 +26248,9 @@ H
 }
 
 STRING 5405
-// Units: h0CR (Kul Tiras Advanced Shipyard), Name (Name)
+// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Name (Name)
 {
-Kul Tiras Advanced Shipyard
+Hoch entwickelter Hafen von Kul Tiras
 }
 
 STRING 5406
@@ -26416,9 +26416,9 @@ Silbererz
 }
 
 STRING 5440
-// Units: h0CR (Kul Tiras Advanced Shipyard), Tip (Tooltip - Basic)
+// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Tip (Tooltip - Basic)
 {
-Ausbau zum Kul Tiras Advanced Shipyard
+Ausbau zum Hoch entwickelten Hafen von Kul Tiras
 }
 
 STRING 5441
@@ -26530,7 +26530,7 @@ O
 }
 
 STRING 5475
-// Units: h0CR (Kul Tiras Advanced Shipyard), Ubertip (Tooltip - Extended)
+// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Ubertip (Tooltip - Extended)
 {
 Boat construction facility. Produces Dreadnoughts and Piraten-Schlachtschiffs. Provides research Transporters and Schiffskanonen.
 }
@@ -62437,7 +62437,7 @@ I
 STRING 22728
 // Units: h0KD (Artillery Tank), Tip (Tooltip - Basic)
 {
-Train Artillerie-Panzer
+Artillerie-Panzer ausbilden
 }
 
 STRING 22729
@@ -65244,13 +65244,13 @@ Dietrich erwerben
 STRING 26030
 // Items: I0DF (Lock Pick), Description (Description)
 {
-Opens closed gates and locked chests.
+Öffnet verschlossene Tore und abgeschlossene Truhen.
 }
 
 STRING 26031
 // Items: I0DF (Lock Pick), Ubertip (Tooltip - Extended)
 {
-Opens closed gates and locked chests.
+Öffnet verschlossene Tore und abgeschlossene Truhen.
 }
 
 STRING 26035
@@ -65298,7 +65298,7 @@ Entwaffnung
 STRING 26079
 // Buffs/Effects: B016 (), Buffubertip (Tooltip - Extended)
 {
-This unit is Disarmed; it cannot cast attack.
+Diese Einheit ist 'Entwaffnet'; sie kann nicht angreifen.
 }
 
 STRING 26082
