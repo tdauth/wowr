@@ -307,14 +307,6 @@ function AddRacingTrackCheckpoint takes RacingTrack t, unit whichUnit returns no
     call TriggerRegisterEnterRegion(enterCheckpointTrigger, r, null)
 endfunction
 
-function AddRacingTrackWoWReforged takes nothing returns nothing
-    set udg_TmpInteger = AddRacingTrack(udg_TmpString, udg_TmpItemTypeId, udg_TmpItemTypeId2, udg_TmpItemTypeId3, udg_TmpItemTypeId4)
-endfunction
-
-function AddRacingTrackCheckpointWoWReforged takes nothing returns nothing
-    call AddRacingTrackCheckpoint(udg_TmpInteger, udg_TmpUnit)
-endfunction
-
 private function TriggerConditionSellItem takes nothing returns boolean
     local item whichItem = GetSoldItem()
     local RacingTrack t = GetRacingTrackByItemTypeId(GetItemTypeId(whichItem))
