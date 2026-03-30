@@ -7322,7 +7322,7 @@ A scroll that contains a special spell to capture Maiev.
 STRING 1237
 // Items: I01Q (Kael´s Scroll of Supression), Ubertip (Tooltip - Extended)
 {
-A scroll that contains a special spell to capture Maiev. Stand in a radius of 600 near Maiev and use the scroll to capture her. Hint: the scroll works only on Maiev, so dont think you can capture other Heros with it.
+A scroll that contains a special spell to capture Maiev. Stand in a radius of 600 near Maiev and use the scroll to capture her. Hint: the scroll works only on Maiev, so dont think you can capture other heroes with it.
 }
 
 STRING 1238

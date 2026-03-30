@@ -7314,15 +7314,15 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 17|r]
 }
 
 STRING 1236
-// Items: I01Q (Kael´s Scroll of Supression), Description (Description)
+// Items: I01Q (Kael´s Rolle der Unterdrückung), Description (Description)
 {
-A scroll that contains a special spell to capture Maiev.
+Eine Rolle, die einen besonderen Zauber enthält, um Maiev zu fangen.
 }
 
 STRING 1237
-// Items: I01Q (Kael´s Scroll of Supression), Ubertip (Tooltip - Extended)
+// Items: I01Q (Kael´s Rolle der Unterdrückung), Ubertip (Tooltip - Extended)
 {
-A scroll that contains a special spell to capture Maiev. Stand in a radius of 600 near Maiev and use the scroll to capture her. Hint: the scroll works only on Maiev, so dont think you can capture other Heros with it.
+Eine Rolle, die einen besonderen Zauber enthält, um Maiev zu fangen. Steht in einem Umkreis von 600 neben Maiev und benutzt die Rolle, um sie zu fangen. Tipp: Die Rolle wirkt nur bei Maiev, glaubt also nicht, dass Ihr andere Helden damit fangen könnt.
 }
 
 STRING 1238
@@ -7368,9 +7368,9 @@ This ancient Frost-Wyrm skull has been equipped with handles, turning it into a 
 }
 
 STRING 1245
-// Items: I01Q (Kael´s Scroll of Supression), Name (Name)
+// Items: I01Q (Kael´s Rolle der Unterdrückung), Name (Name)
 {
-Kael´s Scroll of Supression
+Kaels Rolle der Unterdrückung
 }
 
 STRING 1246
@@ -47169,7 +47169,7 @@ Hebel Tor und Portal
 STRING 11601
 // Items: I12X (Astromancer), Ubertip (Tooltip - Extended)
 {
-Stellt Gegenstände zur Erkundung der Sterne und der Reise durch den Weltraum her:|n- Spruchrollen der Navigation und Winzige Portale|n- Leuchtsignalpistolen und Fluchtportale|n- Meteorsteine und Rollen der Stadtportale|n- Winziges Arkanes Observatorium|n- Winziger Mond, Mondstein|n- Winzige Sonne, Sonnenstein
+Stellt Gegenstände zur Erkundung der Sterne und der Reise durch den Weltraum her:|n- Rollen der Navigation und Winzige Portale|n- Leuchtsignalpistolen und Fluchtportale|n- Meteorsteine und Rollen der Stadtportale|n- Winziges Arkanes Observatorium|n- Winziger Mond, Mondstein|n- Winzige Sonne, Sonnenstein
 }
 
 STRING 11602
@@ -64433,7 +64433,7 @@ STRING 24948
 STRING 24949
 // Abilities: A0TJ (Scroll of Escape Portal), Name (Name)
 {
-Spruchrolle des Fluchtportals
+Rolle des Fluchtportals
 }
 
 STRING 24951
@@ -119220,13 +119220,13 @@ Calls a meteor down from the sky, dealing <AIin,DataA1> damage and stunning enem
 STRING 57066
 // Items: I12V (Navigation Scroll), Name (Name)
 {
-Spruchrolle der Navigation
+Rolle der Navigation
 }
 
 STRING 57067
 // Items: I12V (Navigation Scroll), Tip (Tooltip - Basic)
 {
-Spruchrolle der Navigation erwerben
+Rolle der Navigation erwerben
 }
 
 STRING 57068
@@ -119334,7 +119334,7 @@ Item Meteor
 STRING 57086
 // Abilities: A22W (Blink (Item Version) (Navigation Scroll)), Name (Name)
 {
-Blinzeln (Item Version) (Spruchrolle der Navigation)
+Blinzeln (Item Version) (Rolle der Navigation)
 }
 
 STRING 57087
@@ -119370,7 +119370,7 @@ Novizen-Astromantie
 STRING 57092
 // Abilities: A22Z (Astromantie - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Der Astromant nutzt Wissen, um Spruchrollen der Navigation und Winzige Portale herzustellen.
+Der Astromant nutzt Wissen, um Rollen der Navigation und Winzige Portale herzustellen.
 }
 
 STRING 57093
