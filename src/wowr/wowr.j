@@ -321,6 +321,7 @@
 //! import "map/WoWReforgedMapData.j"
 //! import "map/WoWReforgedMapLegendaryItems.j"
 //! import "map/WoWReforgedMapLevers.j"
+//! import "map/WoWReforgedMapQuelThalas.j"
 //! import "map/WoWReforgedMapQuests.j"
 //! import "map/WoWReforgedMapResurrectionStones.j"
 //! import "map/WoWReforgedMapStartLocations.j"
