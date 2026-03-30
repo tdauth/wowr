@@ -1836,7 +1836,7 @@ Wasserturm errichten
 }
 
 STRING 307
-// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
+// Abilities: A11P (Pfeilregen), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -5133,7 +5133,7 @@ Waffenschmiedekunst - Adept
 }
 
 STRING 865
-// Abilities: A11P (Rain of Arrows), Name (Name)
+// Abilities: A11P (Pfeilregen), Name (Name)
 {
 Pfeilregen
 }
@@ -9607,7 +9607,7 @@ Magischer Samen
 }
 
 STRING 1626
-// Units: h01T (AI Laboratory), Hotkey (Hotkey)
+// Units: h01T (KI-Labor), Hotkey (Hotkey)
 {
 O
 }
@@ -9735,19 +9735,19 @@ Brunnen der Macht
 STRING 1647
 // Units: o026 (Fountain of Power), EditorSuffix (Name - Editor Suffix)
 {
-(Ward)
+(Schutzzauber)
 }
 
 STRING 1648
 // Items: I189 (Tiny Fountains of Power), Name (Name)
 {
-Tiny Fountains of Power
+Winzige Brunnen der Macht
 }
 
 STRING 1649
 // Items: I189 (Tiny Fountains of Power), Tip (Tooltip - Basic)
 {
-Purchase Tiny Fountains of Power
+Winzige Brunnen der Macht erwerben
 }
 
 STRING 1650
@@ -10167,19 +10167,19 @@ Ein listiger Held, adept at quickly killing individual units and creating confus
 STRING 1722
 // Items: I0LC (Tiny Arcane Sanctum), Tip (Tooltip - Basic)
 {
-Purchase Tiny Arkanes Sanktum
+Winziges Arkanes Sanktum erwerben
 }
 
 STRING 1723
 // Items: I0LC (Tiny Arcane Sanctum), Description (Description)
 {
-Creates a Arkanes Sanktum.
+Errichtet ein Arkanes Sanktum.
 }
 
 STRING 1724
 // Items: I0LC (Tiny Arcane Sanctum), Ubertip (Tooltip - Extended)
 {
-Creates a Arkanes Sanktum at a target location.
+Errichtet am Zielort ein Arkanes Sanktum.
 }
 
 STRING 1725
@@ -10983,7 +10983,7 @@ H
 STRING 1884
 // Units: h06I (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Peregrin Falcons, and Albatross Riders. |nAlso contains the Durchblick and Verschlingen upgrades.
+Bildet Wanderfalken und Albatrossreiter aus. |nBietet auch die Ausbaustufen 'Durchblick' und 'Verschlingen'.
 }
 
 STRING 1886
@@ -10999,13 +10999,13 @@ AI Freiberufler Fast Gold Bonus
 }
 
 STRING 1888
-// Units: n09O (Albatross Rider), Name (Name)
+// Units: n09O (Albatrossreiter), Name (Name)
 {
 Albatros-Reiter
 }
 
 STRING 1889
-// Units: n09O (Albatross Rider), Tip (Tooltip - Basic)
+// Units: n09O (Albatrossreiter), Tip (Tooltip - Basic)
 {
 Albatros-Reiter ausbilden
 }
@@ -11013,13 +11013,13 @@ Albatros-Reiter ausbilden
 STRING 1890
 // Abilities: A08D (Item Dark Portal), Name (Name)
 {
-Item Dunkles Portal
+Gegenstand Dunkles Portal
 }
 
 STRING 1891
 // Abilities: A0HP (Item Tornado), Name (Name)
 {
-Item Tornado
+Gegenstand Tornado
 }
 
 STRING 1892
@@ -11163,7 +11163,7 @@ STRING 1949
 STRING 1960
 // Units: h013 (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Ballistes, Wagons, and Käfigs. |nAlso contains the Improved Belagerungswaffen, and Burning Oil upgrades.
+Produces Ballistes, Wagons, and Käfigs. |nBietet auch die Ausbaustufen Improved Belagerungswaffen, and Burning Oil upgrades.
 }
 
 STRING 1961
@@ -12186,7 +12186,7 @@ STRING 2233
 STRING 2234
 // Units: o0BC (Kennel), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörders, Gnoll-Aufsehers and Gnoll Rocketbreakers. |nAlso contains the Enslavement, Vergiftete Waffen, and Barrel Form upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörders, Gnoll-Aufsehers and Gnoll Rocketbreakers. |nBietet auch die Ausbaustufen Enslavement, Vergiftete Waffen, and Barrel Form upgrades.
 }
 
 STRING 2235
@@ -13890,7 +13890,7 @@ Krähenreittier
 STRING 2552
 // Buffs/Effects: B01W (), Bufftip (Tooltip)
 {
-Rain of Arrows
+Pfeilregen
 }
 
 STRING 2553
@@ -14190,13 +14190,13 @@ Purchase Tiny Bandit Shipyard
 STRING 2605
 // Abilities: A05S (Capture), Name (Name)
 {
-Capture
+Fangen
 }
 
 STRING 2606
 // Abilities: A05S (Capture), Tip (Tooltip - Normal)
 {
-Capture
+Fangen
 }
 
 STRING 2607
@@ -15408,13 +15408,13 @@ Krone des Lich-Königs
 STRING 2955
 // Items: I02U (Crown of the Lich King), Tip (Tooltip - Basic)
 {
-Purchase Krone des Lich-Königs
+Krone des Lich-Königs erwerben
 }
 
 STRING 2956
 // Items: I02U (Crown of the Lich King), Description (Description)
 {
-|cffff8c00Artefakt|r|nThe powerful crown of the Lich-König.
+|cffff8c00Artefakt|r|nDie mächtige Krone des Lich-Königs.
 }
 
 STRING 2957
@@ -15558,7 +15558,7 @@ F
 STRING 2981
 // Abilities: A09W (Capture), Name (Name)
 {
-Capture
+Gefangen nehmen
 }
 
 STRING 2983
@@ -15570,7 +15570,7 @@ STRING 2983
 STRING 2984
 // Abilities: A09W (Capture), Tip (Tooltip - Normal)
 {
-Capture
+Gefangen nehmen
 }
 
 STRING 2985
@@ -16350,7 +16350,7 @@ Causes a Greifenräuber's attacks to damage multiple units.
 STRING 3158
 // Units: h060 (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Bandits, Brigands and Banditenlords. |nAlso contains the Shadow Meld, Einschnüren, Vergiftete Waffen, and Niederreiten upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Bandits, Brigands and Banditenlords. |nBietet auch die Ausbaustufen Shadow Meld, Einschnüren, Vergiftete Waffen, and Niederreiten upgrades.
 }
 
 STRING 3159
@@ -16380,19 +16380,19 @@ Bildet Zauberer und Ketzer aus. |nAlso contains spell upgrades for Zauberers and
 STRING 3163
 // Units: h075 (Lumber Mill), Ubertip (Tooltip - Extended)
 {
-Dient als Abladepunkt für das geschlagene Holz. |nAlso contains the upgrade for Lumber Harvesting.
+Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen upgrade for Lumber Harvesting.
 }
 
 STRING 3164
 // Units: h079 (Prison), Ubertip (Tooltip - Extended)
 {
-Produces Armbrustmen, Käfig Carts, and Schwergewichts. |nAlso contains the Enslavement and Festhaut upgrades.
+Produces Armbrustmen, Käfig Carts, and Schwergewichts. |nBietet auch die Ausbaustufen Enslavement and Festhaut upgrades.
 }
 
 STRING 3165
 // Units: h07D (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Crows and Greifenräubers. Also contains the Durchblick, Feather Attack, and Storm Hammers upgrades.
+Trains Crows and Greifenräubers. Bietet auch die Ausbaustufen Durchblick, Feather Attack, and Storm Hammers upgrades.
 }
 
 STRING 3166
@@ -18016,7 +18016,7 @@ B
 }
 
 STRING 3508
-// Units: h0X8 (Buy Property Jadefire Glen), Hotkey (Hotkey)
+// Units: h0X8 (Buy Property Jadefeuerglenn), Hotkey (Hotkey)
 {
 B
 }
@@ -18100,7 +18100,7 @@ B
 }
 
 STRING 3522
-// Units: h0XP (Buy Property Razorfen Kraul), Hotkey (Hotkey)
+// Units: h0XP (Buy Property Kral der Klingenhauer), Hotkey (Hotkey)
 {
 B
 }
@@ -18714,7 +18714,7 @@ Verschlingen erforschen
 STRING 3700
 // Upgrades: R018 (Stone Form), Ubertip (Tooltip - Extended)
 {
-Gives Salamanders the ability Verschlingen.
+Gives Salamander the ability Verschlingen.
 }
 
 STRING 3701
@@ -19080,13 +19080,13 @@ Söldnerlager Lordaeron Winter
 STRING 3767
 // Upgrades: R012 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Draenei-Herolds, Draenei-Sehers, Salamanders, Gezähmter Niederdraches and Draenei Demoliereners.
+Increases the Distanzangriff-Schaden of Draenei-Herolds, Draenei-Sehers, Salamander, Gezähmter Niederdraches and Draenei Demoliereners.
 }
 
 STRING 3768
 // Upgrades: R012 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Draenei-Herolds, Draenei-Sehers, Salamanders, Gezähmter Niederdraches and Draenei Demoliereners.
+Further increases the Distanzangriff-Schaden of Draenei-Herolds, Draenei-Sehers, Salamander, Gezähmter Niederdraches and Draenei Demoliereners.
 }
 
 STRING 3769
@@ -19104,25 +19104,25 @@ Söldnerlager Northrend
 STRING 3771
 // Upgrades: R012 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Draenei-Herolds, Draenei-Sehers, Salamanders, Gezähmter Niederdraches and Draenei Demoliereners.
+Further increases the Distanzangriff-Schaden of Draenei-Herolds, Draenei-Sehers, Salamander, Gezähmter Niederdraches and Draenei Demoliereners.
 }
 
 STRING 3772
 // Upgrades: R013 (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-Herolds, Draenei-Sehers, Salamanders, Gezähmter Niederdraches and Draenei Demoliereners.
+Increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-Herolds, Draenei-Sehers, Salamander, Gezähmter Niederdraches and Draenei Demoliereners.
 }
 
 STRING 3773
 // Upgrades: R013 (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-Herolds, Draenei-Sehers, Salamanders, Gezähmter Niederdraches and Draenei Demoliereners.
+Further increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-Herolds, Draenei-Sehers, Salamander, Gezähmter Niederdraches and Draenei Demoliereners.
 }
 
 STRING 3774
 // Upgrades: R013 (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-Herolds, Draenei-Sehers, Salamanders, Gezähmter Niederdraches and Draenei Demoliereners.
+Further increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-Herolds, Draenei-Sehers, Salamander, Gezähmter Niederdraches and Draenei Demoliereners.
 }
 
 STRING 3776
@@ -19182,7 +19182,7 @@ Powerful mounted warrior. Can cast Storm Bolt. Can learn Animal War Training. |n
 STRING 3789
 // Units: h032 (Dwarf Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Belagerungsmaschines, Flugapparats, Mörser-Trupps and Dampf-Festunges. |nAlso contains the Leuchtsignal, Fragmentation Shards, Sperrfeuer, Flugapparat Bombs, Flak Cannons, and Elite-Belagerungspanzer upgrades.
+Produces Belagerungsmaschines, Flugapparats, Mörser-Trupps and Dampf-Festunges. |nBietet auch die Ausbaustufen Leuchtsignal, Fragmentation Shards, Sperrfeuer, Flugapparat Bombs, Flak Cannons, and Elite-Belagerungspanzer upgrades.
 }
 
 STRING 3790
@@ -19998,7 +19998,7 @@ rlum
 STRING 4018
 // Units: h04O (Phoenix), Ubertip (Tooltip - Extended)
 {
-Trains Phönixes and Dragonhawk Riders.  |nAlso contains the upgrade Cloud.
+Trains Phönixes and Dragonhawk Riders.  |nBietet auch die Ausbaustufen upgrade Cloud.
 }
 
 STRING 4019
@@ -20604,7 +20604,7 @@ Falkenschreiter-Reiter ausbilden
 STRING 4171
 // Units: h00C (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Archers, and Falkenschreiter-Reiters. |nAlso contains the Verteidigen, Marksmanship, Improved Bows and Animal War Training upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Archers, and Falkenschreiter-Reiters. |nBietet auch die Ausbaustufen Verteidigen, Marksmanship, Improved Bows and Animal War Training upgrades.
 }
 
 STRING 4172
@@ -20940,7 +20940,7 @@ Magisches Gewölbe
 STRING 4303
 // Units: n01I (Hatchery), Ubertip (Tooltip - Extended)
 {
-Trains Coatls, Drachenschildkrötes and Hydras.  Also contains the upgrades Magie aufheben, Stachelpanzerschale and Schleichendes Gift.
+Trains Coatls, Drachenschildkrötes and Hydras.  Bietet auch die Ausbaustufen upgrades Magie aufheben, Stachelpanzerschale and Schleichendes Gift.
 }
 
 STRING 4304
@@ -21612,7 +21612,7 @@ STRING 4447
 STRING 4448
 // Upgrades: R07I (Pillage), Ubertip (Tooltip - Extended)
 {
-Gives Salamanders the ability Baum essen which allows them to consume trees to heal themselves.
+Gives Salamander the ability Baum essen which allows them to consume trees to heal themselves.
 }
 
 STRING 4449
@@ -21840,7 +21840,7 @@ STRING 4491
 STRING 4492
 // Units: h045 (Dragonhawk Aviary), Ubertip (Tooltip - Extended)
 {
-Trains War Eagles, Dragonhawks, and Dragonhawk Riders. |nAlso contains the Kriegsadler-Zähmung, Drachenfalken-Zähmung and Cloud upgrades.
+Trains War Eagles, Dragonhawks, and Dragonhawk Riders. |nBietet auch die Ausbaustufen Kriegsadler-Zähmung, Drachenfalken-Zähmung and Cloud upgrades.
 }
 
 STRING 4493
@@ -23106,7 +23106,7 @@ The Crone
 STRING 4779
 // Units: h04P (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Phönixes, Dragonhawk Riders and Luftschiffs.  |nAlso contains the upgrades Phönix-Eis, Phönixfeuer and Cloud.
+Bildet Phönixe, Drachenfalken-Reiter und Luftschiffe aus. |nBietet auch die Ausbaustufen 'Phönix-Eis', 'Phönixfeuer' und 'Wolke'.
 }
 
 STRING 4780
@@ -23178,7 +23178,7 @@ Purchase Dwarven Celestial Orb of Souls
 STRING 4791
 // Items: I0C4 (Unlimited Bag of Gold), Tip (Tooltip - Basic)
 {
-Purchase Unlimited Bag of Gold
+Unbegrenzten Beutel voll Gold erwerben
 }
 
 STRING 4792
@@ -23226,7 +23226,7 @@ Ein Kriegerheld, suppors the troops and weakens enemy troops. Can learn Verjüng
 STRING 4801
 // Abilities: A0BA (Transmute), Name (Name)
 {
-Transmute
+Transmutieren
 }
 
 STRING 4802
@@ -23238,7 +23238,7 @@ STRING 4802
 STRING 4803
 // Abilities: A0BA (Transmute), Tip (Tooltip - Normal)
 {
-Transmute
+Transmutieren
 }
 
 STRING 4804
@@ -23322,25 +23322,25 @@ STRING 4817
 STRING 4818
 // Upgrades: R07N (Necromancer Adept Training,Necromancer Master Training), Name (Name)
 {
-Heretic Adeptenausbildung
+Ketzer-Adeptenausbildung
 }
 
 STRING 4819
 // Upgrades: R07N (Necromancer Adept Training,Necromancer Master Training), Name (Name)
 {
-Heretic Meisterausbildung
+Ketzer-Meisterausbildung
 }
 
 STRING 4820
 // Upgrades: R07N (Necromancer Adept Training,Necromancer Master Training), Tip (Tooltip)
 {
-Heretic Adeptenausbildung
+Ketzer-Adeptenausbildung
 }
 
 STRING 4821
 // Upgrades: R07N (Necromancer Adept Training,Necromancer Master Training), Tip (Tooltip)
 {
-Heretic Meisterausbildung
+Ketzer-Meisterausbildung
 }
 
 STRING 4822
@@ -23406,19 +23406,19 @@ Large melee unit. Can cast Berserk. |n|n|cffffcc00Greift Land-Einheiten an.|r
 STRING 4833
 // Items: I11P (Mushroom), Description (Description)
 {
-A tasty mushroom.
+Ein leckerer Pilz.
 }
 
 STRING 4834
 // Items: I0H8 (Blue Mushroom), Name (Name)
 {
-Blue Mushroom
+Blauer Pilz
 }
 
 STRING 4835
 // Items: I0H8 (Blue Mushroom), Tip (Tooltip - Basic)
 {
-Purchase Blue Mushroom
+Blauen Pilz erwerben
 }
 
 STRING 4836
@@ -23430,7 +23430,7 @@ Wondrous plant said to have miraculous mind-expanding properties. Restores <AIhx
 STRING 4838
 // Items: I0H8 (Blue Mushroom), Description (Description)
 {
-A tasty mushroom.
+Ein leckerer Pilz.
 }
 
 STRING 4839
@@ -23640,7 +23640,7 @@ Holzlager errichten
 STRING 4875
 // Units: h017 (Lumber Camp), Ubertip (Tooltip - Extended)
 {
-Dient als Abladepunkt für das geschlagene Holz. |nAlso contains the upgrades for Furbolg warriors.
+Dient als Abladepunkt für das geschlagene Holz. |nBietet auch Ausbaustufen für Furbolg-Krieger.
 }
 
 STRING 4876
@@ -24156,7 +24156,7 @@ STRING 5010
 STRING 5012
 // Upgrades: R07R (Defend), Ubertip (Tooltip - Extended)
 {
-Gives Salamanders and Red Dragons the Verschlingen ability which allows devouring enemy ground units.
+Gives Salamander and Red Dragons the Verschlingen ability which allows devouring enemy ground units.
 }
 
 STRING 5013
@@ -24816,7 +24816,7 @@ Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. C
 STRING 5141
 // Units: nnsg (Spawning Grounds), Ubertip (Tooltip - Extended)
 {
-Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. Also contains the Einschnüren upgrade.
+Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. |nBietet auch die Ausbaustufe 'Einschnüren'.
 }
 
 STRING 5142
@@ -25902,7 +25902,7 @@ Spell caster melee unit can initially cast Heilen which restores hit points of a
 STRING 5337
 // Units: o03Q (Prison), Ubertip (Tooltip - Extended)
 {
-Trains Salamanders, Sludge Monstrosities, Kriegs-Golems, and Wildekins. |nAlso contains the Verschlingen, Baum essen, Kriegsdonner, Schlafgestalt, and Festhaut upgrades.
+Bildet Salamander, Schlamm-Monster, Kriegs-Golems und Wildekins aus. |nBietet auch die Ausbaustufen 'Verschlingen', 'Baum essen', 'Kriegsdonner', 'Schlafgestalt' und 'Festhaut'.
 }
 
 STRING 5338
@@ -26010,19 +26010,19 @@ STRING 5354
 STRING 5355
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
+Increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5356
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
+Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5357
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamanders, Sludge Monstrosities, Wildekins, Red Dragons and Verlies Lords.
+Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5358
@@ -26034,19 +26034,19 @@ STRING 5358
 STRING 5359
 // Upgrades: R07Y (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Skeleton Archers, Salamanders, Sludge Monstrosities, and Red Dragons.
+Erhöht den Distanzangriff-Schaden von Skelett-Bogenschützen, Salamandern, Schlamm-Monstern und Rotdrachen.
 }
 
 STRING 5360
 // Upgrades: R07Y (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Skeleton Archers, Salamanders, Sludge Monstrosities, and Red Dragons.
+Erhöht den Distanzangriff-Schaden von Skelett-Bogenschützen, Salamandern, Schlamm-Monstern und Rotdrachen noch mehr.
 }
 
 STRING 5361
 // Upgrades: R07Y (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Skeleton Archers, Salamanders, Sludge Monstrosities, and Red Dragons.
+Erhöht den Distanzangriff-Schaden von Skelett-Bogenschützen, Salamandern, Schlamm-Monstern und Rotdrachen noch mehr.
 }
 
 STRING 5362
@@ -26098,7 +26098,7 @@ Menschen-Bürgerin
 }
 
 STRING 5370
-// Units: n09P (Peregrin Falcon), Ubertip (Tooltip - Extended)
+// Units: n09P (Wanderfalken), Ubertip (Tooltip - Extended)
 {
 Light flying melee unit that causes extra damage against air units. Can learn Durchblick. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -26982,19 +26982,19 @@ Errichtet am Zielort ein Blutelfen-Schloss.
 STRING 5581
 // Items: I0GF (Tiny Naga Shipyard), Description (Description)
 {
-Creates a Hafen der Naga.
+Errichtet einen Naga-Hafen.
 }
 
 STRING 5582
 // Items: I0GF (Tiny Naga Shipyard), Tip (Tooltip - Basic)
 {
-Purchase Tiny Hafen der Naga
+Winzigen Naga-Hafen erwerben
 }
 
 STRING 5583
 // Items: I0GF (Tiny Naga Shipyard), Ubertip (Tooltip - Extended)
 {
-Creates a Hafen der Naga at a target location.
+Errichtet am Zielort einen Naga-Hafen.
 }
 
 STRING 5584
@@ -27048,7 +27048,7 @@ Build Tiny Naga Housing
 STRING 5592
 // Abilities: A0I9 (Build Tiny Naga Shipyard), Name (Name)
 {
-Build Tiny Hafen der Naga
+Build Tiny Naga-Hafen
 }
 
 STRING 5593
@@ -28195,7 +28195,7 @@ STRING 5814
 STRING 5815
 // Units: o0AO (Dungeon), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Drachenbrut Meddlers, Drakonid Spearthrowers, and Drachenbrut-Aufsehers. |nAlso contains the Brute Strength, Berserker, Troll Regeneration, and Burning Oil upgrades.
+Primäres Truppen-Produktionsgebäude. Bildet Drachenbrut-Schnüffler, Drakonid-Speerwerfer und Drachenbrut-Aufseher aus. |nBietet auch die Ausbaustufen 'Brutale Kraft', 'Berserker', 'Troll-Regeneration' und 'Brennendes Öl'.
 }
 
 STRING 5816
@@ -28351,7 +28351,7 @@ T
 STRING 5841
 // Units: n0NL (Dragonspawn Meddler), Tip (Tooltip - Basic)
 {
-Train Drachenbrut Meddler
+Train Drachenbrut-Schnüffler
 }
 
 STRING 5842
@@ -28441,7 +28441,7 @@ Heldenstufe 55
 STRING 5856
 // Units: n0NL (Dragonspawn Meddler), Name (Name)
 {
-Drachenbrut Meddler
+Drachenbrut-Schnüffler
 }
 
 STRING 5857
@@ -33998,7 +33998,7 @@ STRING 7417
 }
 
 STRING 7418
-// Items: I0OF (Darkspear Islands), Hotkey (Hotkey)
+// Items: I0OF (Dunkelspeerinseln), Hotkey (Hotkey)
 {
 W
 }
@@ -34438,7 +34438,7 @@ Befestigte Höllenmaschine
 STRING 7576
 // Units: u00B (Portal), Ubertip (Tooltip - Extended)
 {
-Produces Unheilshüters, Greater Voidwalker and Höllenbestie Machines. Also contains the Verteidigen, Verkrüppeln, Slow and Feuerregen upgrades.
+Produces Unheilshüters, Greater Voidwalker and Höllenbestie Machines. Bietet auch die Ausbaustufen Verteidigen, Verkrüppeln, Slow and Feuerregen upgrades.
 }
 
 STRING 7577
@@ -34646,7 +34646,7 @@ Verkrüppeln
 }
 
 STRING 7611
-// Units: n09P (Peregrin Falcon), Hotkey (Hotkey)
+// Units: n09P (Wanderfalken), Hotkey (Hotkey)
 {
 P
 }
@@ -34768,7 +34768,7 @@ Niederdrachen-Reittier
 STRING 7633
 // Units: u00D (Shrine), Ubertip (Tooltip - Extended)
 {
-Trains Höllenbesties. Also contains the Dauerhafter Feuerbrand, Harthaut and Festhaut upgrades.
+Trains Höllenbesties. Bietet auch die Ausbaustufen Dauerhafter Feuerbrand, Harthaut and Festhaut upgrades.
 }
 
 STRING 7634
@@ -37651,7 +37651,7 @@ Purchase Stonemaul Arena Meister Belt
 STRING 8179
 // Units: h044 (High Elf Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Blood Elf Lieutenants, Schwertkämpfer, Dragonhawk Riders, and Archers. |nAlso contains the Verteidigen, Blood Elf Animal War Training, and Cloud upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Blood Elf Lieutenants, Schwertkämpfer, Dragonhawk Riders, and Archers. |nBietet auch die Ausbaustufen Verteidigen, Blood Elf Animal War Training, and Cloud upgrades.
 }
 
 STRING 8180
@@ -40988,7 +40988,7 @@ Q
 }
 
 STRING 9387
-// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Pfeilregen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41362,7 +41362,7 @@ P
 STRING 9753
 // Units: h0R3 (Lumber Mill), Ubertip (Tooltip - Extended)
 {
-Dient als Abladepunkt für das geschlagene Holz. |nAlso contains the upgrades for Lumber Harvesting, Masonry and Reinforced Defenses.
+Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen upgrades for Lumber Harvesting, Masonry and Reinforced Defenses.
 }
 
 STRING 9758
@@ -45862,7 +45862,7 @@ STRING 11094
 STRING 11121
 // Units: o02I (Warbeast Kraal), Ubertip (Tooltip - Extended)
 {
-Trains Batriders, Bats, Troll-Golems, and Zalandari Throne of Wars. |nAlso contains the Liquid Fire and Sperrfeuer upgrades.
+Trains Batriders, Bats, Troll-Golems, and Zalandari Throne of Wars. |nBietet auch die Ausbaustufen Liquid Fire and Sperrfeuer upgrades.
 }
 
 STRING 11122
@@ -46234,7 +46234,7 @@ Schlachtschiff
 STRING 11299
 // Units: o00R (Goblin Air Field), Ubertip (Tooltip - Extended)
 {
-Trains Goblin-Flugdrohnes, Goblin Zeppelins, and Goblin-Kriegszeppelins. |nAlso contains the Sperrfeuer, Luftversorgung and Goblin-Kriegszeppelin-Bomben upgrades.
+Trains Goblin-Flugdrohnes, Goblin Zeppelins, and Goblin-Kriegszeppelins. |nBietet auch die Ausbaustufen Sperrfeuer, Luftversorgung and Goblin-Kriegszeppelin-Bomben upgrades.
 }
 
 STRING 11300
@@ -46270,7 +46270,7 @@ Trains Flammenpanzers, Sturmpanzers, Goblin-Kaisers and Goblin-Dampfwalzes. |nAl
 STRING 11305
 // Units: o011 (Goblin Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Goblin-Flammenwerfers, Goblin-Randaliers, Flammenschredders and Oger-Goblin-Trupps. |nAlso contains the Mobiles Geschütz, Flammengranate, and Sprengstoff-Fass upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Goblin-Flammenwerfers, Goblin-Randaliers, Flammenschredders and Oger-Goblin-Trupps. |nBietet auch die Ausbaustufen Mobiles Geschütz, Flammengranate, and Sprengstoff-Fass upgrades.
 }
 
 STRING 11306
@@ -47701,19 +47701,19 @@ K
 STRING 11832
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage for Ogre units.
+Increases the Distanzangriff-Schaden for Ogre units.
 }
 
 STRING 11833
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage for Ogre units.
+Further increases the Distanzangriff-Schaden for Ogre units.
 }
 
 STRING 11834
 // Upgrades: R0ED (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage for Ogre units.
+Further increases the Distanzangriff-Schaden for Ogre units.
 }
 
 STRING 11835
@@ -48131,9 +48131,9 @@ Immobilie Festung Utgarde kaufen
 }
 
 STRING 11971
-// Units: n0D6 (Jadefire Glen), Name (Name)
+// Units: n0D6 (Jadefeuerglenn), Name (Name)
 {
-Jadefire Glen
+Jadefeuerglenn
 }
 
 STRING 11974
@@ -48157,7 +48157,7 @@ STRING 11976
 STRING 11988
 // Units: h05H (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Skyfire-Kanonenschiffs, Canoneer Teams, Siege Land Ships, and Flying Dreadnoughts. |nAlso contains the Flare, Fragmentation Shards, and Land Cannons upgrades.
+Produces Skyfire-Kanonenschiffs, Canoneer Teams, Siege Land Ships, and Flying Dreadnoughts. |nBietet auch die Ausbaustufen Flare, Fragmentation Shards, and Land Cannons upgrades.
 }
 
 STRING 11989
@@ -48167,9 +48167,9 @@ Strong mechanical flying machine. Can transport ground units. Can cast Turrets. 
 }
 
 STRING 11990
-// Items: I0OF (Darkspear Islands), Name (Name)
+// Items: I0OF (Dunkelspeerinseln), Name (Name)
 {
-Darkspear Islands
+Dunkelspeerinseln
 }
 
 STRING 11991
@@ -48212,13 +48212,13 @@ Build Warbeast Kraal
 }
 
 STRING 11998
-// Items: I0OF (Darkspear Islands), Tip (Tooltip - Basic)
+// Items: I0OF (Dunkelspeerinseln), Tip (Tooltip - Basic)
 {
-Darkspear Islands
+Dunkelspeerinseln
 }
 
 STRING 11999
-// Items: I0OF (Darkspear Islands), Ubertip (Tooltip - Extended)
+// Items: I0OF (Dunkelspeerinseln), Ubertip (Tooltip - Extended)
 {
 |cff0000ffGeografischer Standort:|r Somewhere within the Südmeere.
 The former home of the Darkspear tribe of jungle trolls but nor reigned by the Murlocs.
@@ -48241,7 +48241,7 @@ Zar'jira
 STRING 12002
 // Units: Nswt (The Sea Witch), Name (Name)
 {
-The Sea Witch
+Die Meerhexe
 }
 
 STRING 12003
@@ -48773,27 +48773,27 @@ Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelt
 }
 
 STRING 12189
-// Units: n0LY (Razorfen Kraul), Name (Name)
+// Units: n0LY (Kral der Klingenhauer), Name (Name)
 {
-Razorfen Kraul
+Kral der Klingenhauer
 }
 
 STRING 12190
-// Units: h0XP (Buy Property Razorfen Kraul), Name (Name)
+// Units: h0XP (Buy Property Kral der Klingenhauer), Name (Name)
 {
-Buy Property Razorfen Kraul
+Immobilie Kral der Klingenhauer kaufen
 }
 
 STRING 12191
-// Units: h0XP (Buy Property Razorfen Kraul), Tip (Tooltip - Basic)
+// Units: h0XP (Buy Property Kral der Klingenhauer), Tip (Tooltip - Basic)
 {
-Buy Property Razorfen Kraul
+Immobilie Kral der Klingenhauer kaufen
 }
 
 STRING 12192
 // Units: n0NM (Quillboar), Tip (Tooltip - Basic)
 {
-Train Stacheleber
+Stacheleber ausbilden
 }
 
 STRING 12193
@@ -50035,19 +50035,19 @@ Further increases the melee attack damage of Furbolgs, Furbolg-Spurenlesers, Fur
 STRING 13783
 // Upgrades: R01G (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions, Furbolg-Ursa-Kriegers, Eis-Furbolgs, Eis-Furbolg-Heldens, Furbolg-Schamanes and Furbolg-Ahnenschamanes.
+Increases the Distanzangriff-Schaden of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions, Furbolg-Ursa-Kriegers, Eis-Furbolgs, Eis-Furbolg-Heldens, Furbolg-Schamanes and Furbolg-Ahnenschamanes.
 }
 
 STRING 13784
 // Upgrades: R01G (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions, Furbolg-Ursa-Kriegers, Eis-Furbolgs, Eis-Furbolg-Heldens, Furbolg-Schamanes and Furbolg-Ahnenschamanes.
+Further increases the Distanzangriff-Schaden of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions, Furbolg-Ursa-Kriegers, Eis-Furbolgs, Eis-Furbolg-Heldens, Furbolg-Schamanes and Furbolg-Ahnenschamanes.
 }
 
 STRING 13785
 // Upgrades: R01G (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions, Furbolg-Ursa-Kriegers, Eis-Furbolgs, Eis-Furbolg-Heldens, Furbolg-Schamanes and Furbolg-Ahnenschamanes.
+Further increases the Distanzangriff-Schaden of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions, Furbolg-Ursa-Kriegers, Eis-Furbolgs, Eis-Furbolg-Heldens, Furbolg-Schamanes and Furbolg-Ahnenschamanes.
 }
 
 STRING 13786
@@ -50069,21 +50069,21 @@ Further increases the armor of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions
 }
 
 STRING 13789
-// Units: h01T (AI Laboratory), Name (Name)
+// Units: h01T (KI-Labor), Name (Name)
 {
-AI Laboratory
+KI-Labor
 }
 
 STRING 13790
-// Units: h01T (AI Laboratory), Tip (Tooltip - Basic)
+// Units: h01T (KI-Labor), Tip (Tooltip - Basic)
 {
-Build AI Laboratory
+KI-Labor errichten
 }
 
 STRING 13791
-// Units: h01T (AI Laboratory), Ubertip (Tooltip - Extended)
+// Units: h01T (KI-Labor), Ubertip (Tooltip - Extended)
 {
-Allows training Shredders, Neutral Bürger and mercenaries.
+Ermöglicht die Ausbildung von Schreddern, Neutralen Bürgern und Söldnern.
 }
 
 STRING 13792
@@ -52153,13 +52153,13 @@ R
 STRING 14943
 // Units: h02V (Dwarf Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Troll-Schlächters, Dwarf Riflemen and Dwarf Riders. |nAlso contains the Berserker Upgrade, Long Rifles, and Animal War Training upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Troll-Schlächters, Dwarf Riflemen and Dwarf Riders. |nBietet auch die Ausbaustufen Berserker Upgrade, Long Rifles, and Animal War Training upgrades.
 }
 
 STRING 14944
 // Units: h02Z (Dwarf Beastiary), Ubertip (Tooltip - Extended)
 {
-Bildet Greife, Rieseneisbären und Greifenreiter aus. |nAlso contains the Breeding, Verschlingen, and Storm Hammers upgrades.
+Bildet Greife, Rieseneisbären und Greifenreiter aus. |nBietet auch die Ausbaustufen Breeding, Verschlingen, and Storm Hammers upgrades.
 }
 
 STRING 14961
@@ -54259,7 +54259,7 @@ Aroom,Chieftain Oomooroo,Cukkaw,Lunaclaw,Razortalon
 STRING 16956
 // Units: u025 (Spawning Ground), Ubertip (Tooltip - Extended)
 {
-Produces Neruben-Königin. Also contains the Freezing Breath upgrade.
+Produces Neruben-Königin. Bietet auch die Ausbaustufen Freezing Breath upgrade.
 }
 
 STRING 16957
@@ -56996,7 +56996,7 @@ STRING 18939
 }
 
 STRING 18940
-// Units: n09O (Albatross Rider), EditorSuffix (Name - Editor Suffix)
+// Units: n09O (Albatrossreiter), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -57014,7 +57014,7 @@ Kul-Tiras-Schlachtschiff anheuern
 }
 
 STRING 18945
-// Units: n09P (Peregrin Falcon), EditorSuffix (Name - Editor Suffix)
+// Units: n09P (Wanderfalken), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -59386,7 +59386,7 @@ Kriegszelt errichten
 STRING 20412
 // Units: o0A8 (War Tent), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Centaur Drudges, Centaur Archers and Centaur Outrunners.  |nAlso contains the Searing Pfeile, and Niederreiten upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Centaur Drudges, Centaur Archers and Centaur Outrunners.  |nBietet auch die Ausbaustufen Searing Pfeile, and Niederreiten upgrades.
 }
 
 STRING 20413
@@ -60286,7 +60286,7 @@ Ausbau zum Elementaren Sanktum
 STRING 20635
 // Units: h09F (Elemental Sanctuary), Ubertip (Tooltip - Extended)
 {
-Trains Luft-Elementargeists, Water Elementals, Feuer-Elementargeister and Meeres-Elementargeists. |nAlso contains the Elemental Convergence upgrade.
+Trains Luft-Elementargeists, Water Elementals, Feuer-Elementargeister and Meeres-Elementargeists. |nBietet auch die Ausbaustufen Elemental Convergence upgrade.
 }
 
 STRING 20636
@@ -60298,13 +60298,13 @@ Produces Dalaran-Mutanten, Dalaran-Missgeburten, Wächter-Golems, and Fleischgol
 STRING 20637
 // Units: h09X (Elemental Sanctuary Extended), Ubertip (Tooltip - Extended)
 {
-Trains Leerenelementars, Poison Elementals, Frost-Elementargeists, Lightning Elementals and Sand-Elementargeists. |nAlso contains the Elemental Convergence upgrade.
+Trains Leerenelementars, Poison Elementals, Frost-Elementargeists, Lightning Elementals and Sand-Elementargeists. |nBietet auch die Ausbaustufen Elemental Convergence upgrade.
 }
 
 STRING 20638
 // Units: h0A0 (Dalaran Aviary), Ubertip (Tooltip - Extended)
 {
-Bildet Drachenfalkenreiter aus. |nAlso contains the Cloud upgrade.
+Bildet Drachenfalkenreiter aus. |nBietet auch die Ausbaustufen Cloud upgrade.
 }
 
 STRING 20639
@@ -63834,7 +63834,7 @@ Verschlingen erforschen
 STRING 24472
 // Upgrades: R06X (Stone Form), Ubertip (Tooltip - Extended)
 {
-Gives Water Dragons the ability Verschlingen.
+Verleit Wasserdrachen die Fähigkeit 'Verschlingen'.
 }
 
 STRING 24473
@@ -63844,15 +63844,15 @@ STRING 24473
 }
 
 STRING 24474
-// Units: n09P (Peregrin Falcon), Name (Name)
+// Units: n09P (Wanderfalken), Name (Name)
 {
-Peregrin Falcon
+Wanderfalken
 }
 
 STRING 24475
-// Units: n09P (Peregrin Falcon), Tip (Tooltip - Basic)
+// Units: n09P (Wanderfalken), Tip (Tooltip - Basic)
 {
-Train Peregrin Falcon
+Wanderfalken ausbilden
 }
 
 STRING 24476
@@ -63912,7 +63912,7 @@ Durchblick erforschen
 STRING 24486
 // Upgrades: R06Y (Magic Sentry), Ubertip (Tooltip - Extended)
 {
-Provides Peregrin Falcons with the ability to detect invisible units.
+Verleit Wanderfalken die Fähigkeit, unsichtbare Einheiten zu entdecken.
 }
 
 STRING 24487
@@ -64186,7 +64186,7 @@ Primäres Truppen-Produktionsgebäude. Trains Guardsmen, Freibeuters and Royal G
 }
 
 STRING 24553
-// Units: n09O (Albatross Rider), Ubertip (Tooltip - Extended)
+// Units: n09O (Albatrossreiter), Ubertip (Tooltip - Extended)
 {
 Stronger flying unit that can learn Verschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -70042,13 +70042,13 @@ This unit is being damaged by Pfeilhagel.
 }
 
 STRING 31046
-// Buffs/Effects: B01X (Rain of Arrows (Caster)), EditorName (Name (Editor Only))
+// Buffs/Effects: B01X (Pfeilregen (Caster)), EditorName (Name (Editor Only))
 {
 Pfeilhagel (Caster)
 }
 
 STRING 31047
-// Buffs/Effects: X006 (Rain of Arrows (Effect)), EditorName (Name (Editor Only))
+// Buffs/Effects: X006 (Pfeilregen (Effect)), EditorName (Name (Editor Only))
 {
 Pfeilhagel (Effect)
 }
@@ -70680,13 +70680,13 @@ Schatzkammer der Gezeiten errichten
 STRING 31521
 // Units: e00O (Naga Shipyard), Name (Name)
 {
-Hafen der Naga
+Naga-Hafen
 }
 
 STRING 31522
 // Units: e00O (Naga Shipyard), Tip (Tooltip - Basic)
 {
-Hafen der Naga errichten
+Naga-Hafen errichten
 }
 
 STRING 31523
@@ -76416,7 +76416,7 @@ Arbeiter ausbilden
 STRING 35082
 // Units: o0AQ (Training Camp), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Stachelebers, Hunters and Räubers. |nAlso contains the Quil Spray upgrade.
+Primäres Truppen-Produktionsgebäude. Trains Stachelebers, Hunters and Räubers. |nBietet auch die Ausbaustufen Quil Spray upgrade.
 }
 
 STRING 35083
@@ -82038,7 +82038,7 @@ Brutgrube beschwören
 STRING 37113
 // Units: u01Z (Spawning Pit), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
+Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Bietet auch die Ausbaustufen upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
 }
 
 STRING 37114
@@ -83622,7 +83622,7 @@ Summon Brutstätte
 STRING 37500
 // Units: u02J (Burrowed Spawning Ground), Ubertip (Tooltip - Extended)
 {
-Produces Neruben-Königin. Also contains the Freezing Breath upgrade.
+Produces Neruben-Königin. Bietet auch die Ausbaustufen Freezing Breath upgrade.
 }
 
 STRING 37501
@@ -83676,7 +83676,7 @@ Summon Brutgrube
 STRING 37509
 // Units: u02M (Burrowed Spawning Pit), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Also contains the upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
+Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Bietet auch die Ausbaustufen upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
 }
 
 STRING 37510
@@ -85428,7 +85428,7 @@ Falric,Marwyn,Kerwin,Dirgehammer,Alpert,Conrad,Trask,Doren,Broderick,Roberts,Ruf
 STRING 37999
 // Units: h0KK (Gnome Factory), Ubertip (Tooltip - Extended)
 {
-Dient als Abladepunkt für das geschlagene Holz. |nAlso contains the upgrades.
+Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen upgrades.
 }
 
 STRING 38000
@@ -85812,7 +85812,7 @@ Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n
 STRING 38128
 // Units: o02D (Troll Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Headhunters, Manhunters, Darkspear Troll Riders, and Voodoo Cannoneers. |nAlso contains the Berserker, and Troll Regeneration upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Headhunters, Manhunters, Darkspear Troll Riders, and Voodoo Cannoneers. |nBietet auch die Ausbaustufen Berserker, and Troll Regeneration upgrades.
 }
 
 STRING 38129
@@ -86430,7 +86430,7 @@ Ausbau zum Fortified Dragon's Reach ermöglicht die Produktion weiterer Gebäude
 STRING 38609
 // Units: h0IJ (Longhouse), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Warriors, Speerträgers and Mammut-Reiters. |nAlso contains the Verteidigen, and Stachelpanzerschale upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Warriors, Speerträgers and Mammut-Reiters. |nBietet auch die Ausbaustufen Verteidigen, and Stachelpanzerschale upgrades.
 }
 
 STRING 38610
@@ -87936,13 +87936,13 @@ STRING 39706
 STRING 39707
 // Units: h0J7 (Lumber Mill), Ubertip (Tooltip - Extended)
 {
-Dient als Abladepunkt für das geschlagene Holz. |nAlso contains the upgrade Improved Wall.
+Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen upgrade Improved Wall.
 }
 
 STRING 39708
 // Units: h0J8 (Manor), Ubertip (Tooltip - Extended)
 {
-Trains Hirnloser Worgen, and Sturmkrähen-Ritters. |nAlso contains the Improved Kritischer Schlag and Schleichendes Gift upgrades.
+Trains Hirnloser Worgen, and Sturmkrähen-Ritters. |nBietet auch die Ausbaustufen Improved Kritischer Schlag and Schleichendes Gift upgrades.
 }
 
 STRING 39709
@@ -88308,7 +88308,7 @@ Contains upgrades for improved armor, weaponry and Worgen traits.
 STRING 39800
 // Units: h0JE (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Gilneas Gunships, Mantikors, and Bannerträgers. |nAlso contains the Raketen, Cargo, Sperrfeuer, and Menschlicher Mut upgrades.
+Produces Gilneas Gunships, Mantikors, and Bannerträgers. |nBietet auch die Ausbaustufen Raketen, Cargo, Sperrfeuer, and Menschlicher Mut upgrades.
 }
 
 STRING 39801
@@ -91836,7 +91836,7 @@ Kritischen Schlag erforschen
 STRING 41215
 // Upgrades: R0CT (Stone Form), Ubertip (Tooltip - Extended)
 {
-Gives Giant Frost Wolves the Critikal Strike ability.
+Gives Riesenfrostwölfe the Critikal Strike ability.
 }
 
 STRING 41216
@@ -92028,7 +92028,7 @@ Ausbau zu Harpunen
 STRING 41250
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Tip (Tooltip)
 {
-Ausbau zu Hochentwickelten Harpunen
+Ausbau zu Hoch entwickelten Harpunen
 }
 
 STRING 41251
@@ -92262,19 +92262,19 @@ Grabstätte
 STRING 41294
 // Units: o05S (Igloo Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Tuskarr Fighters, Tuskarr-Speerkämpfer and Tuskarr Mammut-Reiters.|nAlso contains the Frostimmunität, Einschnüren, and Kriegsdonner upgrades.
+Primäres Truppen-Produktionsgebäude. Bildet Tuskarr-Kämpfer, Tuskarr-Speerkämpfer und Tuskarr-Mammut-Reiter aus. |nBietet auch die Ausbaustufen 'Frostimmunität', 'Einschnüren' und 'Kriegsdonner'.
 }
 
 STRING 41295
 // Units: o05V (Decorated Cavern), Ubertip (Tooltip - Extended)
 {
-Bildet Häuptlinge aus. |nAlso contains the Clans upgrade which gives Chieftains the Befehls-Aura ability.
+Bildet Häuptlinge aus. |nBietet auch die Ausbaustufe 'Clans', die Häuptlingen die Fähigkeit 'Befehls-Aura' verleiht.
 }
 
 STRING 41296
 // Units: o05W (Ice Cutters Lodge), Ubertip (Tooltip - Extended)
 {
-Trains Giant Frost Wolves, Eiszahn-Mammuts, Eisbärs, and Riesige Schnee-Eulen. |nAlso contains the Astrale Bestien, Kritischer Schlag, Schmetter-Angriff, Verschlingen and Gepanzerter Elite-Eisbär upgrades.
+Bildet Riesenfrostwölfe, Eiszahn-Mammuts, Eisbären und Riesige Schnee-Eulen aus. |nBietet auch die Ausbaustufen 'Astrale Bestien', 'Kritischer Schlag', 'Schmetter-Angriff' und 'Gepanzerter Elite-Eisbär'.
 }
 
 STRING 41297
@@ -92292,7 +92292,7 @@ Riesige Schneeeule
 STRING 41299
 // Abilities: A1HS (Elite Armored Polar Bear), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the damage, armor and hit points.
+Erhöht Schaden, Rüstung und Trefferpunkte.
 }
 
 STRING 41300
@@ -92370,25 +92370,25 @@ Further increases the amount of lumber that Arbeiters can carry by 5 and the amo
 STRING 41341
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Giant Frost Wolves, Eiszahn-Mammuts, Eisbärs, and Riesige Schnee-Eulen.
+Increases the armor of Riesenfrostwölfe, Eiszahn-Mammuts, Eisbären, and Riesige Schnee-Eulen.
 }
 
 STRING 41342
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Giant Frost Wolves, Eiszahn-Mammuts, Eisbärs, and Riesige Schnee-Eulen.
+Further increases the armor of Riesenfrostwölfe, Eiszahn-Mammuts, Eisbären, and Riesige Schnee-Eulen.
 }
 
 STRING 41343
 // Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Giant Frost Wolves, Eiszahn-Mammuts, Eisbärs, and Riesige Schnee-Eulen.
+Further increases the armor of Riesenfrostwölfe, Eiszahn-Mammuts, Eisbären, and Riesige Schnee-Eulen.
 }
 
 STRING 41344
 // Upgrades: R0CI (Brute Strength), Ubertip (Tooltip - Extended)
 {
-Increase the attack and movement speed of Mammut-Reiters, Giant Frost Wolves, Eiszahn-Mammuts, Eisbärs, and Riesige Schnee-Eulen.
+Increase the attack and movement speed of Mammut-Reiters, Riesenfrostwölfe, Eiszahn-Mammuts, Eisbären, and Riesige Schnee-Eulen.
 }
 
 STRING 41345
@@ -92400,19 +92400,19 @@ Provides Frost Snowmen with the ability to detect invisible units.
 STRING 41346
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Speerkämpfer and Riesige Schnee-Eulen.
+Increases the Distanzangriff-Schaden of Speerkämpfer and Riesige Schnee-Eulen.
 }
 
 STRING 41347
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Speerkämpfer and Riesige Schnee-Eulen.
+Further increases the Distanzangriff-Schaden of Speerkämpfer and Riesige Schnee-Eulen.
 }
 
 STRING 41348
 // Upgrades: R0CK (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Speerkämpfer and Riesige Schnee-Eulen.
+Further increases the Distanzangriff-Schaden of Speerkämpfer and Riesige Schnee-Eulen.
 }
 
 STRING 41349
@@ -92424,7 +92424,7 @@ Gives Chieftains the ability Befehls-Aura. Befehls-Aura ncreases the damage of f
 STRING 41350
 // Upgrades: R0IP (Shaman Adept Training,Shaman Master Training), Name (Name)
 {
-Keiler-Mystiker Meisterausbildung
+Keiler-Mystiker-Meisterausbildung
 }
 
 STRING 41351
@@ -92454,7 +92454,7 @@ Increases Heileners' mana capacity, mana regeneration rate, hit points, and give
 STRING 41355
 // Upgrades: R0CP (Barrage), Ubertip (Tooltip - Extended)
 {
-Upgrades Eisbärs, giving them more damage, armor and hit points.
+Verbessert Eisbären, indem sie mehr Schaden, Rüstung und Trefferpunkte erhalten.
 }
 
 STRING 41356
@@ -93006,7 +93006,7 @@ Supporting spellcaster. Can initially cast Verbannen, which removes negative buf
 STRING 41508
 // Units: o0B2 (Animal Battle Grounds), Ubertip (Tooltip - Extended)
 {
-Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nAlso contains the Einschnüren, Envenomed Spears, Liquid Fire and War Drums upgrades.
+Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nBietet auch die Ausbaustufen Einschnüren, Envenomed Spears, Liquid Fire and War Drums upgrades.
 }
 
 STRING 41509
@@ -95574,7 +95574,7 @@ Mächtiger Nahkampfkrieger. Kann 'Befehls-Aura' erlernen. |n|n|cffffcc00Greift L
 STRING 42473
 // Units: h0AH (Dojo), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Honorguards, Archers and Kriegsherrs. |nAlso contains the Verteidigen, Improved Bows, and Befehls-Aura upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Honorguards, Archers and Kriegsherrs. |nBietet auch die Ausbaustufen Verteidigen, Improved Bows, and Befehls-Aura upgrades.
 }
 
 STRING 42474
@@ -98370,7 +98370,7 @@ Primäres Gebäude, wird zum Ausbilden von Oger-Sklaven und zum Einlagern gesamm
 STRING 43580
 // Units: o06R (Ogre Cave), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Oger-Kriegers, Oger-Steinwerfers and Ogre Dummers. |nAlso contains the Oger-Stärke, Pulverisieren, and Festhaut upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Oger-Kriegers, Oger-Steinwerfers and Ogre Dummers. |nBietet auch die Ausbaustufen Oger-Stärke, Pulverisieren, and Festhaut upgrades.
 }
 
 STRING 43581
@@ -98484,19 +98484,19 @@ Further increases the armor of Goblin units.
 STRING 43619
 // Upgrades: R033 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Goblin units.
+Increases the Distanzangriff-Schaden of Goblin units.
 }
 
 STRING 43620
 // Upgrades: R033 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Goblin units.
+Further increases the Distanzangriff-Schaden of Goblin units.
 }
 
 STRING 43621
 // Upgrades: R033 (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Goblin units.
+Further increases the Distanzangriff-Schaden of Goblin units.
 }
 
 STRING 43622
@@ -98988,7 +98988,7 @@ Oger-Lord ausbilden
 STRING 44007
 // Units: o078 (Beastiary), Ubertip (Tooltip - Extended)
 {
-Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nAlso contains the Einschnüren, Hinterhalt, and Blitzangriff upgrades.
+Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nBietet auch die Ausbaustufen Einschnüren, Hinterhalt, and Blitzangriff upgrades.
 }
 
 STRING 44008
@@ -100974,7 +100974,7 @@ STRING 46040
 STRING 46041
 // Units: o075 (Ogre Arena), Ubertip (Tooltip - Extended)
 {
-Trains Oger-Lords, Mok'Nathal and Gronn. |nAlso contains the upgrade Reinkarnation for Oger-Lords, Bären beschwören for Mok'Nathal and Kriegskeules for Gronn.
+Trains Oger-Lords, Mok'Nathal and Gronn. |nBietet auch die Ausbaustufen upgrade Reinkarnation for Oger-Lords, Bären beschwören for Mok'Nathal and Kriegskeules for Gronn.
 }
 
 STRING 46042
@@ -110271,7 +110271,7 @@ Causes this unit to attack <A1VZ,DataB1,%>% faster, but take <A1VZ,DataC1,%>% mo
 STRING 51137
 // Units: o097 (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Grunts, Armbrustmen and Kriegsmaschines. |nAlso contains the Fel, and Burning Oil upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Grunts, Armbrustmen and Kriegsmaschines. |nBietet auch die Ausbaustufen Fel, and Burning Oil upgrades.
 }
 
 STRING 51138
@@ -110283,7 +110283,7 @@ Long-range siege weaponry. Effective against buildings but slow and vulnerable. 
 STRING 51139
 // Units: o09C (Beastiary), Ubertip (Tooltip - Extended)
 {
-Trains Räubers, Kodo-Besties, and Lancers. |nAlso contains the Einschnüren, and War Drums upgrades.
+Trains Räubers, Kodo-Besties, and Lancers. |nBietet auch die Ausbaustufen Einschnüren, and War Drums upgrades.
 }
 
 STRING 51140
@@ -111477,7 +111477,7 @@ Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelt
 STRING 51642
 // Units: h0MH (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Footmen, Archers, and Knights. |nAlso contains the Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Animal War Training upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Footmen, Archers, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Animal War Training upgrades.
 }
 
 STRING 51643
@@ -111501,7 +111501,7 @@ Trains Priests, Zauberinnen, and Mages. |nAlso contains spell upgrades for Pries
 STRING 51647
 // Units: h0RB (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Footmen, Rangers and Knights. |nAlso contains the Verteidigen, Improved Bows, Marksmanship, Unmount, Animal War Training, and Sundering Blades upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Footmen, Rangers and Knights. |nBietet auch die Ausbaustufen Verteidigen, Improved Bows, Marksmanship, Unmount, Animal War Training, and Sundering Blades upgrades.
 }
 
 STRING 51652
@@ -114837,7 +114837,7 @@ Nazjatar
 }
 
 STRING 55048
-// Units: n0D6 (Jadefire Glen), EditorSuffix (Name - Editor Suffix)
+// Units: n0D6 (Jadefeuerglenn), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -115355,7 +115355,7 @@ STRING 55373
 STRING 55374
 // Units: o09S (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Kobold-Krieger, Kobold-Tunnelgräbers. |nAlso contains the Candles, and Eingraben upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Kobold-Krieger, Kobold-Tunnelgräbers. |nBietet auch die Ausbaustufen Candles, and Eingraben upgrades.
 }
 
 STRING 55375
@@ -115718,7 +115718,7 @@ Upgrades the totem carried by Meeresrieses, increasing the damage of their Pulve
 STRING 55538
 // Units: n0G1 (Hatchling Ground), Ubertip (Tooltip - Extended)
 {
-Trains Snap Dragons, Drachenschildkrötes, and Meeresrieses. Also contains the Murloc-Eier upgrade.
+Trains Snap Dragons, Drachenschildkrötes, and Meeresrieses. Bietet auch die Ausbaustufen Murloc-Eier upgrade.
 }
 
 STRING 55539
@@ -116010,15 +116010,15 @@ STRING 55695
 }
 
 STRING 55702
-// Units: h0X8 (Buy Property Jadefire Glen), Name (Name)
+// Units: h0X8 (Buy Property Jadefeuerglenn), Name (Name)
 {
-Immobilie Jadefire Glen kaufen
+Immobilie Jadefeuerglenn kaufen
 }
 
 STRING 55703
-// Units: h0X8 (Buy Property Jadefire Glen), Tip (Tooltip - Basic)
+// Units: h0X8 (Buy Property Jadefeuerglenn), Tip (Tooltip - Basic)
 {
-Immobilie Jadefire Glen kaufen
+Immobilie Jadefeuerglenn kaufen
 }
 
 STRING 55707
@@ -116439,7 +116439,7 @@ Deposits gold to get it back with interest charges.
 }
 
 STRING 55813
-// Units: n0LY (Razorfen Kraul), EditorSuffix (Name - Editor Suffix)
+// Units: n0LY (Kral der Klingenhauer), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -116871,7 +116871,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Tuskarr.|r|n|cffffcc00Rohstoff: Flei
 }
 
 STRING 55894
-// Units: h0X8 (Buy Property Jadefire Glen), Ubertip (Tooltip - Extended)
+// Units: h0X8 (Buy Property Jadefeuerglenn), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Satyr.|r|n|cffffcc00Rohstoff: Fel.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -117129,7 +117129,7 @@ STRING 55978
 }
 
 STRING 55981
-// Units: h0XP (Buy Property Razorfen Kraul), Ubertip (Tooltip - Extended)
+// Units: h0XP (Buy Property Kral der Klingenhauer), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Stacheleber.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -118757,19 +118757,19 @@ Further increases the melee attack damage of Centaur units.
 STRING 56674
 // Upgrades: R0ID (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Centaur units.
+Increases the Distanzangriff-Schaden of Centaur units.
 }
 
 STRING 56675
 // Upgrades: R0ID (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Centaur units.
+Further increases the Distanzangriff-Schaden of Centaur units.
 }
 
 STRING 56676
 // Upgrades: R0ID (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Centaur units.
+Further increases the Distanzangriff-Schaden of Centaur units.
 }
 
 STRING 56677
@@ -123985,7 +123985,7 @@ C
 STRING 59334
 // Upgrades: R0CM (Stone Form), Ubertip (Tooltip - Extended)
 {
-Gives Eisbärs and Riesige Schnee-Eulen the ability Verschlingen.
+Gives Eisbären and Riesige Schnee-Eulen the ability Verschlingen.
 }
 
 STRING 59335

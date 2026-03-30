@@ -23106,7 +23106,7 @@ The Crone
 STRING 4779
 // Units: h04P (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Phoenixes, Dragonhawk Riders and Skyships.  |nAlso contains the upgrades Phoenix Eggs, Phoenix Fire and Cloud.
+Trains Phoenixes, Dragonhawk Riders and Skyships. |nAlso contains the upgrades Phoenix Eggs, Phoenix Fire and Cloud.
 }
 
 STRING 4780
@@ -24816,7 +24816,7 @@ Warrior Hero, exceptional at defense and augmenting nearby friendly troops. Can 
 STRING 5141
 // Units: nnsg (Spawning Grounds), Ubertip (Tooltip - Extended)
 {
-Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. Also contains the Ensnare upgrade.
+Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. |nAlso contains the Ensnare upgrade.
 }
 
 STRING 5142
@@ -92261,7 +92261,7 @@ Burial Place
 STRING 41294
 // Units: o05S (Igloo Barracks), Ubertip (Tooltip - Extended)
 {
-Primary troop production building. Trains Tuskarr Fighters, Tuskarr Spearmen and Tuskarr Mammoth Riders.|nAlso contains the Frost Immunity, Ensnare, and War Stomp upgrades.
+Primary troop production building. Trains Tuskarr Fighters, Tuskarr Spearmen and Tuskarr Mammoth Riders. |nAlso contains the Frost Immunity, Ensnare, and War Stomp upgrades.
 }
 
 STRING 41295
