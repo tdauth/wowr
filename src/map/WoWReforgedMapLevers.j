@@ -35,6 +35,8 @@ private function Init takes nothing returns nothing
     call AddLeverGate(gg_unit_n0ES_1631, gg_dest_LTg3_5486)
     // Dakspear Islands
     call AddLeverGate(gg_unit_n0ES_0690, gg_dest_DTg4_17547)
+    // Kezan
+    call AddLeverGate(gg_unit_n0ES_0113, gg_dest_DTg7_2218)
     // Dalaran
     call AddLeverGate(gg_unit_n0ES_0044, gg_dest_LTg1_17155)
     call AddLeverGate(gg_unit_n0ES_0046, gg_dest_LTg3_1334)

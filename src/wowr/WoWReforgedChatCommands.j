@@ -1,34 +1,42 @@
 library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedActionsBarUI, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedPrestoredSaveCodes
 
 globals
-    // Use different chat event triggers in hope that using TriggerRegisterPlayerChatEvent is faster to filter chat commands than any custom string checks.
-    private trigger help = CreateTrigger()
-    private trigger helpPing = CreateTrigger()
-    private trigger helpClan = CreateTrigger()
-    private trigger helpAi = CreateTrigger()
-    private trigger info = CreateTrigger()
-    private trigger host = CreateTrigger()
-    
-    private trigger str = CreateTrigger()
-    private trigger strMax = CreateTrigger()
-    private trigger agi = CreateTrigger()
-    private trigger agiMax = CreateTrigger()
-    private trigger int = CreateTrigger()
-    private trigger intMax = CreateTrigger()
-    private trigger resetA = CreateTrigger()
-    private trigger equalA = CreateTrigger()
-    
-    private trigger aiEasy = CreateTrigger()
-    private trigger aiNormal = CreateTrigger()
-    private trigger aiHard = CreateTrigger()
-    private trigger aiInsane = CreateTrigger()
-    private trigger aiNone = CreateTrigger()
-    private trigger aiNeutral = CreateTrigger()
-    private trigger aiCreep = CreateTrigger()
-    private trigger aiComputer = CreateTrigger()
-    private trigger aiOn = CreateTrigger()
-    private trigger aiOff = CreateTrigger()
+    private ChatCommand array chatCommands
+    private integer chatCommandsCounter = 0
 endglobals
+
+struct ChatCommand
+    string array commands[5]
+    integer commandsCounter = 0
+    boolean exactMatch
+    // Use different chat event triggers in hope that using TriggerRegisterPlayerChatEvent is faster to filter chat commands than any custom string checks.
+    trigger t = CreateTrigger()
+
+    method addAlias takes string c returns nothing
+        set this.commands[this.commandsCounter] = c
+        set this.commandsCounter = this.commandsCounter + 1
+    endmethod
+
+    static method create takes string command, boolean exactMatch, code f returns thistype
+        local thistype this = thistype.allocate()
+        set this.exactMatch = exactMatch
+        call TriggerAddAction(t, f)
+        call this.addAlias(command)
+
+        set chatCommands[chatCommandsCounter] = this
+        set chatCommandsCounter = chatCommandsCounter + 1
+
+        return this
+    endmethod
+endstruct
+
+private function Add takes string command, boolean exactMatch, code f returns nothing
+    call ChatCommand.create(command, exactMatch, f)
+endfunction
+
+private function AddAlias takes string c returns nothing
+    call chatCommands[chatCommandsCounter - 1].addAlias(c)
+endfunction
 
 function ShowUI takes player whichPlayer returns nothing
 static if (LIBRARY_QueueUI) then
@@ -177,59 +185,96 @@ private function ChatCommandAiEnable takes player whichPlayer, string command, i
 endfunction
 
 private function EnumPlayerRegisterChatEvent takes nothing returns nothing
-    call TriggerRegisterPlayerChatEvent(help, GetEnumPlayer(), "-help", true)
-    call TriggerRegisterPlayerChatEvent(help, GetEnumPlayer(), "help", true)
-    call TriggerRegisterPlayerChatEvent(help, GetEnumPlayer(), "-h", true)
-    call TriggerRegisterPlayerChatEvent(helpPing, GetEnumPlayer(), "-helpping", true)
-    call TriggerRegisterPlayerChatEvent(helpClan, GetEnumPlayer(), "-helpclan", true)
-    call TriggerRegisterPlayerChatEvent(helpAi, GetEnumPlayer(), "-helpai", true)
-    call TriggerRegisterPlayerChatEvent(info, GetEnumPlayer(), "-info", false)
-    call TriggerRegisterPlayerChatEvent(info, GetEnumPlayer(), "-i", false)
-    call TriggerRegisterPlayerChatEvent(info, GetEnumPlayer(), "-stats", false)
-    call TriggerRegisterPlayerChatEvent(host, GetEnumPlayer(), "-host", true)
-    
-    call TriggerRegisterPlayerChatEvent(str, GetEnumPlayer(), "-str ", false)
-    call TriggerRegisterPlayerChatEvent(strMax, GetEnumPlayer(), "-str", true)
-    call TriggerRegisterPlayerChatEvent(agi, GetEnumPlayer(), "-agi ", false)
-    call TriggerRegisterPlayerChatEvent(agiMax, GetEnumPlayer(), "-agi", true)
-    call TriggerRegisterPlayerChatEvent(int, GetEnumPlayer(), "-int ", false)
-    call TriggerRegisterPlayerChatEvent(intMax, GetEnumPlayer(), "-int", true)
-    call TriggerRegisterPlayerChatEvent(resetA, GetEnumPlayer(), "-reseta", true)
-    call TriggerRegisterPlayerChatEvent(equalA, GetEnumPlayer(), "-equala", true)
-    
-    call TriggerRegisterPlayerChatEvent(aiEasy, GetEnumPlayer(), "-aieasy", false)
-    call TriggerRegisterPlayerChatEvent(aiNormal, GetEnumPlayer(), "-ainormal", false)
-    call TriggerRegisterPlayerChatEvent(aiHard, GetEnumPlayer(), "-aihard", false)
-    call TriggerRegisterPlayerChatEvent(aiInsane, GetEnumPlayer(), "-aiinsane", false)
-    call TriggerRegisterPlayerChatEvent(aiNone, GetEnumPlayer(), "-ainone", false)
-    call TriggerRegisterPlayerChatEvent(aiNeutral, GetEnumPlayer(), "-aineutral", false)
-    call TriggerRegisterPlayerChatEvent(aiCreep, GetEnumPlayer(), "-aicreep", false)
-    call TriggerRegisterPlayerChatEvent(aiComputer, GetEnumPlayer(), "-aicomputer", false)
-    call TriggerRegisterPlayerChatEvent(aiOn, GetEnumPlayer(), "-aion", false)
-    call TriggerRegisterPlayerChatEvent(aiOff, GetEnumPlayer(), "-aioff", false)
+    local integer i = 0
+    local integer max = chatCommandsCounter
+    local integer j = 0
+    local integer max2 = 0
+    loop
+        exitwhen (i == max)
+        set j = 0
+        set max2 = chatCommands[i].commandsCounter
+        loop
+            exitwhen (j == max2)
+            call TriggerRegisterPlayerChatEvent(chatCommands[i].t, GetEnumPlayer(), chatCommands[i].commands[j], chatCommands[i].exactMatch)
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
 endfunction
 
-private function TriggerConditionHelp takes nothing returns boolean
+private function Help takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpText())
-    return false
 endfunction
 
-private function TriggerConditionHelpPing takes nothing returns boolean
+private function HelpPing takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextPing())
-    return false
 endfunction
 
-private function TriggerConditionHelpClan takes nothing returns boolean
+private function HelpClan takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextClan())
-    return false
 endfunction
 
-private function TriggerConditionHelpAi takes nothing returns boolean
+private function HelpAi takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextAi())
-    return false
 endfunction
 
-private function TriggerConditionInfo takes nothing returns boolean
+private function HelpAlly takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextAlly())
+endfunction
+
+private function HelpVisual takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextVisual())
+endfunction
+
+private function HelpResources takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextResources())
+endfunction
+
+private function HelpAttributes takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextAttributes())
+endfunction
+
+private function HelpSave takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextSave())
+endfunction
+
+private function HelpFood takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextFood())
+endfunction
+
+private function HelpTime takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextTime())
+endfunction
+
+private function HelpReset takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextReset())
+endfunction
+
+private function HelpCheats takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextCheats())
+endfunction
+
+private function Discord takes nothing returns nothing
+    call ShowDiscordUI(GetTriggerPlayer())
+endfunction
+
+private function Website takes nothing returns nothing
+    call ShowWebsiteUI(GetTriggerPlayer())
+endfunction
+
+private function Download takes nothing returns nothing
+    call ShowDownloadUI(GetTriggerPlayer())
+endfunction
+
+private function Version takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetVersionMessage())
+endfunction
+
+private function Time takes nothing returns nothing
+    call DisplayTime(GetTriggerPlayer())
+endfunction
+
+private function Info takes nothing returns nothing
     local string x = StringToken(GetEventPlayerChatString(), 1)
     local player p = GetPlayerFromString(x)
     if (p == null) then
@@ -242,133 +287,177 @@ private function TriggerConditionInfo takes nothing returns boolean
         call DisplayStats(GetTriggerPlayer(), p)
         set p = null
     endif
-    return false
 endfunction
 
-private function TriggerConditionHost takes nothing returns boolean
+private function Host takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("HOST_X")).s(GetPlayerNameColored(GetHost())).result())
-
-    return false
 endfunction
 
-private function TriggerConditionStr takes nothing returns boolean
+private function Get takes nothing returns nothing
+    call RecreateHeroItems(GetTriggerPlayer())
+endfunction
+
+private function Players takes nothing returns nothing
+    call ShowPlayers(GetTriggerPlayer())
+endfunction
+
+private function Accounts takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetPrestoredSaveCodeAccounts())
+endfunction
+
+private function Bans takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetBanInfo())
+endfunction
+
+private function Vips takes nothing returns nothing
+    call DisplayVIPs(GetTriggerPlayer())
+endfunction
+
+private function Str takes nothing returns nothing
     call SkillStr(GetTriggerPlayer(), I2R(S2I(StringTokenEnteredChatMessageEx(1, true))))
-    return false
 endfunction
 
-private function TriggerConditionStrMax takes nothing returns boolean
+private function StrMax takes nothing returns nothing
     call SkillStrMax(GetTriggerPlayer())
-    return false
 endfunction
 
-private function TriggerConditionAgi takes nothing returns boolean
+private function Agi takes nothing returns nothing
     call SkillAgi(GetTriggerPlayer(), I2R(S2I(StringTokenEnteredChatMessageEx(1, true))))
-    return false
 endfunction
 
-private function TriggerConditionAgiMax takes nothing returns boolean
+private function AgiMax takes nothing returns nothing
     call SkillAgiMax(GetTriggerPlayer())
-    return false
 endfunction
 
-private function TriggerConditionInt takes nothing returns boolean
+private function Int takes nothing returns nothing
     call SkillInt(GetTriggerPlayer(), I2R(S2I(StringTokenEnteredChatMessageEx(1, true))))
-    return false
 endfunction
 
-private function TriggerConditionIntMax takes nothing returns boolean
+private function IntMax takes nothing returns nothing
     call SkillIntMax(GetTriggerPlayer())
-    return false
 endfunction
 
-private function TriggerConditionResetA takes nothing returns boolean
+private function ResetA takes nothing returns nothing
     call ResetAllSkillPoints(GetTriggerPlayer())
-    return false
 endfunction
 
-private function TriggerConditionEqualA takes nothing returns boolean
+private function EqualA takes nothing returns nothing
     call EqualizeAllSkillPoints(GetTriggerPlayer())
-    return false
 endfunction
 
-private function TriggerConditionAiEasy takes nothing returns boolean
+private function AiEasy takes nothing returns nothing
     call ChatCommandAiDifficulty(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_EASY)
-    return false
 endfunction
 
-private function TriggerConditionAiNormal takes nothing returns boolean
+private function AiNormal takes nothing returns nothing
     call ChatCommandAiDifficulty(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_NORMAL)
-    return false
 endfunction
 
-private function TriggerConditionAiHard takes nothing returns boolean
+private function AiHard takes nothing returns nothing
     call ChatCommandAiDifficulty(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_HARD)
-    return false
 endfunction
 
-private function TriggerConditionAiInsane takes nothing returns boolean
+private function AiInsane takes nothing returns nothing
     call ChatCommandAiDifficulty(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_INSANE)
-    return false
 endfunction
 
-private function TriggerConditionAiNone takes nothing returns boolean
+private function AiNone takes nothing returns nothing
     call ChatCommandAiControl(GetTriggerPlayer(), GetEventPlayerChatString(), MAP_CONTROL_NONE)
-    return false
 endfunction
 
-private function TriggerConditionAiNeutral takes nothing returns boolean
+private function AiNeutral takes nothing returns nothing
     call ChatCommandAiControl(GetTriggerPlayer(), GetEventPlayerChatString(), MAP_CONTROL_NEUTRAL)
-    return false
 endfunction
 
-private function TriggerConditionAiCreep takes nothing returns boolean
+private function AiCreep takes nothing returns nothing
     call ChatCommandAiControl(GetTriggerPlayer(), GetEventPlayerChatString(), MAP_CONTROL_CREEP)
-    return false
 endfunction
 
-private function TriggerConditionAiComputer takes nothing returns boolean
+private function AiComputer takes nothing returns nothing
     call ChatCommandAiControl(GetTriggerPlayer(), GetEventPlayerChatString(), MAP_CONTROL_CREEP)
-    return false
 endfunction
 
-private function TriggerConditionAiOn takes nothing returns boolean
+private function AiOn takes nothing returns nothing
     call ChatCommandAiEnable(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_DISABLED_ON)
-    return false
 endfunction
 
-private function TriggerConditionAiOff takes nothing returns boolean
+private function AiOff takes nothing returns nothing
     call ChatCommandAiEnable(GetTriggerPlayer(), GetEventPlayerChatString(), COMMAND_DISABLED_OFF)
-    return false
+endfunction
+
+private function Hide takes nothing returns nothing
+    call HideUI(GetTriggerPlayer())
+endfunction
+
+private function Show takes nothing returns nothing
+    call ShowUI(GetTriggerPlayer())
 endfunction
 
 private function Init takes nothing returns nothing
+    call Add("-help", true, function Help)
+    call AddAlias("-h")
+    call AddAlias("help")
+    call AddAlias("h")
+    call Add("-helpping", true, function HelpPing)
+    call Add("-helpclan", true, function HelpClan)
+    call Add("-helpai", true, function HelpAi)
+    call Add("-helpally", true, function HelpAlly)
+    call Add("-helpvisual", true, function HelpVisual)
+    call Add("-helpresources", true, function HelpResources)
+    call Add("-helpattributes", true, function HelpAttributes)
+    call Add("-helpsave", true, function HelpSave)
+    call Add("-helpfood", true, function HelpFood)
+    call Add("-helptime", true, function HelpTime)
+    call Add("-helpreset", true, function HelpReset)
+    call Add("-helpcheats", true, function HelpCheats)
+
+    call Add("-discord", true, function Discord)
+    call AddAlias("-d")
+    call Add("-website", true, function Website)
+    call AddAlias("-w")
+    call Add("-download", true, function Download)
+    call AddAlias("-o")
+    call Add("-version", true, function Version)
+    call AddAlias("-v")
+    call Add("-time", true, function Time)
+
+    call Add("-info", false, function Info)
+    call AddAlias("-i")
+    call Add("-host", true, function Host)
+
+    call Add("-get", true, function Get)
+    call AddAlias("-g")
+    call Add("-players", true, function Players)
+    call Add("-accounts", true, function Accounts)
+    call Add("-bans", true, function Bans)
+    call AddAlias("-b")
+    call Add("-vips", true, function Vips)
+
+    call Add("-str", false, function Str)
+    call Add("-str", true, function StrMax)
+    call Add("-agi", false, function Agi)
+    call Add("-agi", true, function AgiMax)
+    call Add("-int", false, function Int)
+    call Add("-int", true, function IntMax)
+    call Add("-reseta", true, function ResetA)
+    call Add("-equala", true, function EqualA)
+
+    call Add("-aieasy", false, function AiEasy)
+    call Add("-ainormal", false, function AiNormal)
+    call Add("-aihard", false, function AiHard)
+    call Add("-aiinsane", false, function AiInsane)
+    call Add("-ainone", false, function AiNone)
+    call Add("-aineutral", false, function AiNeutral)
+    call Add("-aicreep", false, function AiCreep)
+    call Add("-aicomputer", false, function AiComputer)
+    call Add("-aion", false, function AiOn)
+    call Add("-aioff", false, function AiOff)
+
+    call Add("-hide", true, function Hide)
+    call Add("-show", true, function Show)
+
+    // after all chat commands
     call ForForce(GetPlayersAll(), function EnumPlayerRegisterChatEvent)
-    call TriggerAddCondition(help, Condition(function TriggerConditionHelp))
-    call TriggerAddCondition(helpPing, Condition(function TriggerConditionHelpPing))
-    call TriggerAddCondition(helpClan, Condition(function TriggerConditionHelpClan))
-    call TriggerAddCondition(helpAi, Condition(function TriggerConditionHelpAi))
-    call TriggerAddCondition(info, Condition(function TriggerConditionInfo))
-    call TriggerAddCondition(host, Condition(function TriggerConditionHost))
-    
-    call TriggerAddCondition(str, Condition(function TriggerConditionStr))
-    call TriggerAddCondition(strMax, Condition(function TriggerConditionStrMax))
-    call TriggerAddCondition(agi, Condition(function TriggerConditionAgi))
-    call TriggerAddCondition(agiMax, Condition(function TriggerConditionAgiMax))
-    call TriggerAddCondition(int, Condition(function TriggerConditionInt))
-    call TriggerAddCondition(intMax, Condition(function TriggerConditionIntMax))
-    call TriggerAddCondition(resetA, Condition(function TriggerConditionResetA))
-    call TriggerAddCondition(equalA, Condition(function TriggerConditionEqualA))
-    
-    call TriggerAddCondition(aiEasy, Condition(function TriggerConditionAiEasy))
-    call TriggerAddCondition(aiNormal, Condition(function TriggerConditionAiNormal))
-    call TriggerAddCondition(aiHard, Condition(function TriggerConditionAiHard))
-    call TriggerAddCondition(aiInsane, Condition(function TriggerConditionAiInsane))
-    call TriggerAddCondition(aiNone, Condition(function TriggerConditionAiNone))
-    call TriggerAddCondition(aiNeutral, Condition(function TriggerConditionAiNeutral))
-    call TriggerAddCondition(aiCreep, Condition(function TriggerConditionAiCreep))
-    call TriggerAddCondition(aiComputer, Condition(function TriggerConditionAiComputer))
-    call TriggerAddCondition(aiOn, Condition(function TriggerConditionAiOn))
-    call TriggerAddCondition(aiOff, Condition(function TriggerConditionAiOff))
 endfunction
 
 endlibrary
