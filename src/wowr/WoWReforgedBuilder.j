@@ -1,4 +1,4 @@
-library WoWReforgedBuilder initializer Init requires PagedButtons, WoWReforgedRaces, WoWReforgedNeutral
+library WoWReforgedBuilder initializer Init requires PagedButtons, SafeString, WoWReforgedRaces, WoWReforgedNeutral
 
 globals
     constant integer BUILDER = 'E027'
@@ -23,18 +23,18 @@ function EnableBuilder takes unit whichUnit returns nothing
     local integer j = 0
     call EnablePagedButtons(whichUnit)
     
-    call SetPagedButtonsCurrentPageName(whichUnit, "Players")
+    call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("PLAYERS"))
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_PLAYER_RED)
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_NEUTRAL_HOSTILE)
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_NEUTRAL_PASSIVE)
     
     call AddPagedButtonsSpacersRemaining(whichUnit)
    
-    call SetPagedButtonsCurrentPageName(whichUnit, "Colors")
+    call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("COLORS"))
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_COLOR_RED)
     call AddPagedButtonsSpacersRemaining(whichUnit)
     
-    call SetPagedButtonsCurrentPageName(whichUnit, "Creeps")
+    call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("CREEPS"))
     set i = 0
     set max = GetCreepsMax()
     loop
@@ -45,7 +45,7 @@ function EnableBuilder takes unit whichUnit returns nothing
         set i = i + 1
     endloop
     
-    call SetPagedButtonsCurrentPageName(whichUnit, "Races")
+    call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("RACES"))
     set max = GetRacesMax()
     loop
         exitwhen (i >= max)
