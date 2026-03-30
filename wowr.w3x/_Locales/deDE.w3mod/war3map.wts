@@ -101933,7 +101933,7 @@ Ohn'ahra beschwören
 STRING 46529
 // Upgrades: R0E8 (Resistant Skin), Ubertip (Tooltip - Extended)
 {
-Gives Ogre units increased resistance to spell damage.
+Verleiht Oger-Einheiten erhöhte Resistenz gegen Zauberschaden.
 }
 
 STRING 46530
@@ -101963,7 +101963,7 @@ STRING 46533
 STRING 46534
 // Units: o07D (Stonemaul Camp), Ubertip (Tooltip - Extended)
 {
-Trains Stonemaul Ogre, Stonemaul-Magier, and Kor'gall.|n|n|cffffcc00Begrenzt auf 1.|r
+Bildet Stonemaul-Oger, Stonemaul-Magier und Kor'gall aus.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 46545
@@ -102149,13 +102149,13 @@ L
 STRING 46632
 // Items: I0QY (Heart of Azeroth), Ubertip (Tooltip - Extended)
 {
-Increases damage, armor, and hit points. Allows respawning creep and items and cutting and regrowing trees.
+Erhöht Schaden, Rüstung und Trefferpunkte. Ermöglicht die neu Erzeugung von Unholden und Gegenständen und das Fällen und erneute Wachsen von Bäumen.
 }
 
 STRING 46633
 // Items: I0QY (Heart of Azeroth), Description (Description)
 {
-Increases damage, armor, and hit points. Allows respawning creep and items and cutting and regrowing trees.
+Erhöht Schaden, Rüstung und Trefferpunkte. Ermöglicht die neu Erzeugung von Unholden und Gegenständen und das Fällen und erneute Wachsen von Bäumen.
 }
 
 STRING 46634
