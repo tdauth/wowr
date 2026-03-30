@@ -78,19 +78,18 @@ private function DisableLeverPortal takes Lever l returns nothing
     call WaygateActivate(l.targetPortal, false)
 endfunction
 
-
-function AddLeverGateWowReforged takes nothing returns nothing
-    call AddLever(udg_TmpUnit, udg_TmpDestructible, null, 0.0, 0.0, null, 0.0, 0.0, LEVER_TYPE_GATE)
-    call KillDestructable(udg_TmpDestructible) // open
-    call SetDestructableAnimation(udg_TmpDestructible, "death alternate")
+function AddLeverGate takes unit lever, destructable gate returns nothing
+    call AddLever(lever, gate, null, 0.0, 0.0, null, 0.0, 0.0, LEVER_TYPE_GATE)
+    call KillDestructable(gate) // open
+    call SetDestructableAnimation(gate, "death alternate")
 endfunction
 
-function AddLeverBridgeWowReforged takes nothing returns nothing
-    call AddLever(udg_TmpUnit, udg_TmpDestructible, null, 0.0, 0.0, null, 0.0, 0.0, LEVER_TYPE_BRIDGE)
+function AddLeverBridge takes unit lever, destructable bridge returns nothing
+    call AddLever(lever, bridge, null, 0.0, 0.0, null, 0.0, 0.0, LEVER_TYPE_BRIDGE)
 endfunction
 
-function AddLeverPortalWowReforged takes nothing returns nothing
-    local Lever l = AddLever(udg_TmpUnit, null, udg_TmpUnit2, GetRectCenterX(udg_TmpRect), GetRectCenterY(udg_TmpRect), udg_TmpUnit3, GetRectCenterX(udg_TmpRect2), GetRectCenterY(udg_TmpRect2), LEVER_TYPE_PORTAL)
+function AddLeverPortal takes unit lever, unit sourcePortal, rect sourceRect, unit targetPortal, rect targetRect returns nothing
+    local Lever l = AddLever(lever, null, sourcePortal, GetRectCenterX(sourceRect), GetRectCenterY(sourceRect), targetPortal, GetRectCenterX(targetRect), GetRectCenterY(targetRect), LEVER_TYPE_PORTAL)
     call EnableLeverPortal(l)
 endfunction
 

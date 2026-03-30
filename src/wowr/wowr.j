@@ -316,9 +316,12 @@
 //! import "wowr/WoWReforgedWrapUp.j"
 //! import "wowr/WoWReforgedZones.j"
 
+//! import "map/WoWReforgedMapCheatSaveCodes.j"
 //! import "map/WoWReforgedMapComputerStartLocations.j"
 //! import "map/WoWReforgedMapData.j"
 //! import "map/WoWReforgedMapLegendaryItems.j"
+//! import "map/WoWReforgedMapLevers.j"
 //! import "map/WoWReforgedMapQuests.j"
+//! import "map/WoWReforgedMapResurrectionStones.j"
 //! import "map/WoWReforgedMapStartLocations.j"
 //! import "map/WoWReforgedMapZones.j"

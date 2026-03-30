@@ -55,6 +55,8 @@ private function Init takes nothing returns nothing
     call AddChange("Remove item Lumber carried by Pack Horse.")
     call AddChange("Remove hero ability tooltips from non-hero abilities.")
     call AddChange("Fix icon of property Gnomeregan.")
+    call AddChange("Add gate to the north of Teldrassil.")
+    call AddChange("Add gate to the west of Thunder Bluff.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
 

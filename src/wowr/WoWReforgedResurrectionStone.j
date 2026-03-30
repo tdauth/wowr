@@ -157,10 +157,6 @@ function AddResurrectionStone takes unit u, rect revivalRect, real facing return
     return r
 endfunction
 
-function AddResurrectionStoneWoWReforged takes nothing returns nothing
-    call AddResurrectionStone(udg_TmpUnit, udg_TmpRect, udg_TmpReal)
-endfunction
-
 private function TimerFunctionResurrect takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetExpiredTimer()), 0)
     local integer playerId = LoadInteger(h, GetHandleId(GetExpiredTimer()), 1)
