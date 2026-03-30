@@ -52,10 +52,6 @@ endfunction
 //function AddResearchUnitType takes integer unitTypeId returns nothing
 //function AddResearchAbility takes integer abilityId returns nothing
 
-function AddResearchWoWReforged takes nothing returns Research
-    return AddResearch(udg_TmpInteger, udg_TmpTechType)
-endfunction
-
 function GetResearchesMax takes nothing returns integer
     return researchesCounter
 endfunction

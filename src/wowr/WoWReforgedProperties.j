@@ -105,7 +105,7 @@ function IsUnitProperty takes unit whichUnit returns boolean
     return IsProperty(GetUnitTypeId(whichUnit))
 endfunction
 
-function AddProperty takes integer unitTypeId, integer purchaseUnitTypeId, integer resource, integer soldRace, boolean shipyard returns Property
+private function AddProperty takes integer unitTypeId, integer purchaseUnitTypeId, integer resource, integer soldRace, boolean shipyard returns Property
     local Property property = Property.create()
     set property.unitTypeId = unitTypeId
     set property.purchaseUnitTypeId = purchaseUnitTypeId
@@ -117,11 +117,6 @@ function AddProperty takes integer unitTypeId, integer purchaseUnitTypeId, integ
     set propertiesCounter = propertiesCounter + 1
     
     return property
-endfunction
-
-function AddPropertyWoWReforged takes nothing returns nothing
-    set udg_TmpInteger = AddProperty(udg_TmpUnitType, udg_TmpUnitType2, udg_TmpInteger, udg_TmpInteger3, udg_TmpBoolean)
-    set udg_TmpBoolean = false
 endfunction
 
 private function AddUnitType takes integer index, unit shop, integer t returns nothing

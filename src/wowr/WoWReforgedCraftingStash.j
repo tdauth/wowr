@@ -46,8 +46,8 @@ private function CraftItemTriggerAction takes nothing returns nothing
 endfunction
 
 private function CraftUnitTriggerAction takes nothing returns nothing
-    call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTriggerCraftingUnit())), bj_QUESTMESSAGE_UNITACQUIRED, Format(GetLocalizedStringSafe("CRAFTED_UNIT_X")).s(GetUnitName(udg_TmpUnit2)).result())
-    call PingUnitForPlayer(udg_TmpUnit2, GetOwningPlayer(GetTriggerCraftingUnit()))
+    call QuestMessageBJ(GetForceOfPlayer(GetOwningPlayer(GetTriggerCraftingUnit())), bj_QUESTMESSAGE_UNITACQUIRED, Format(GetLocalizedStringSafe("CRAFTED_UNIT_X")).s(GetUnitName(GetTriggerCraftingUnit())).result())
+    call PingUnitForPlayer(GetTriggerCraftingUnit(), GetOwningPlayer(GetTriggerCraftingUnit()))
 endfunction
 
 private function TriggerConditionOnRequirement takes nothing returns boolean
