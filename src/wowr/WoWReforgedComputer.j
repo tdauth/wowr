@@ -1,7 +1,26 @@
-library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedComputerStartLocations, WoWReforgedMapData
+library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedComputerStartLocations, WoWReforgedAutoSkill, WoWReforgedMapData, WoWReforgedUiAiPlayers
 
 globals
+    private force computerPlayers = CreateForce()
+    private force computerLobbyPlayers = CreateForce()
+    private force userPlayers = CreateForce()
+    private force array teamPlayers
+    private group array computerTownHalls
+    private group array computerShipyards
+    private group array computerNavy
+    private trigger playerLeavesTrigger = CreateTrigger()
+    private trigger allianceChangeTrigger = CreateTrigger()
     private trigger heroLevelTrigger = CreateTrigger()
+    private trigger deathTrigger = CreateTrigger()
+    private trigger constructFinishTrigger = CreateTrigger()
+    private timer autoRevivalTimer = CreateTimer()
+    private timer autoCraftTimer = CreateTimer()
+    private timer autoAttackNavyTimer = CreateTimer()
+    private timer autoLoadMinesTimer = CreateTimer()
+
+    // Allows execution in dependency WoWReforgedUiAiPlayers:
+    public trigger startLobbySettingsTrigger = CreateTrigger()
+    public player startLobbySettingsPlayer = null
 endglobals
 
 private function FilterIsAltar takes nothing returns boolean
@@ -57,8 +76,27 @@ function ComputerAIAutoReviveHeroesAll takes nothing returns nothing
     call DestroyForce(all)
 endfunction
 
+private function EnumHeroAutoCrafts takes nothing returns nothing
+    call CraftProfessionItemsAI(GetEnumUnit())
+endfunction
+
+private function EnumAutoCraft takes nothing returns nothing
+    local group heroes = null
+    if (GetPlayerProfession1(GetEnumPlayer()) != udg_ProfessionNone or GetPlayerProfession2(GetEnumPlayer()) != udg_ProfessionNone or GetPlayerProfession3(GetEnumPlayer()) != udg_ProfessionNone) then
+        set heroes = GetPlayerHeroes(GetEnumPlayer())
+        call ForGroup(heroes, function EnumHeroAutoCrafts)
+        call GroupClear(heroes)
+        call DestroyGroup(heroes)
+        set heroes = null
+    endif
+endfunction
+
+private function ComputerAIAutoCraft takes nothing returns nothing
+    call ForForce(computerLobbyPlayers, function EnumAutoCraft)
+endfunction
+
 function GetComputerAINavy takes player whichPlayer returns group
-    return udg_ComputerNavy[GetPlayerId(whichPlayer)]
+    return computerNavy[GetPlayerId(whichPlayer)]
 endfunction
 
 function ComputerAINavyAttacks takes player whichPlayer returns nothing
@@ -289,7 +327,6 @@ function StartingUnitsAndPickAIEx takes player whichPlayer, location l, integer 
     call StartingUnitsAndPickAIStandard(whichPlayer, l, whichRace, recreate)
     if (mineId != 0) then
         call StartingUnitsReplaceAllMines(whichPlayer, l, whichRace)
-        call EnableTrigger(gg_trg_Computer_Auto_Load_Mines)
         call AutloadWorkersIntoMinesAI(whichPlayer)
     endif
 endfunction
@@ -368,35 +405,423 @@ private function PickRandomUnusedRace takes player owner returns integer
     return udg_RaceNone
 endfunction
 
+private function EnumAITechnologies takes nothing returns nothing
+    // No Portals for AI to avoid crashes
+    call SetPlayerUnitAvailableBJ('h014', false, GetEnumPlayer())
+    call SetPlayerAbilityAvailableBJ(false, 'A05V', GetEnumPlayer())
+    call SetPlayerAbilityAvailableBJ(false, 'A05W', GetEnumPlayer())
+    call SetPlayerAbilityAvailableBJ(false, 'A05U', GetEnumPlayer())
+    call SetPlayerAbilityAvailableBJ(false, 'Awrp', GetEnumPlayer())
+    // Disable goldmines
+    call SetPlayerUnitAvailableBJ('u00T', false, GetEnumPlayer())
+    call SetPlayerUnitAvailableBJ('u00O', false, GetEnumPlayer())
+    // Disable Tunnel Systems
+    call SetPlayerUnitAvailableBJ('o00P', false, GetEnumPlayer())
+    // Disable Special Buildings
+    call SetPlayerUnitAvailableBJ('o01G', false, GetEnumPlayer())
+    // Only AI Undead goldmine
+    call SetPlayerUnitAvailableBJ('u00O', false, GetEnumPlayer())
+    // Only AI Dwarf goldmine
+    call SetPlayerUnitAvailableBJ('u00Y', false, GetEnumPlayer())
+endfunction
+
+private function EnumUserTechnologies takes nothing returns nothing
+    call SetPlayerTechResearchedSwap('R019', 0, GetEnumPlayer())
+    call SetPlayerTechResearchedSwap('R01C', 1, GetEnumPlayer())
+    // Only non-AI Undead goldmine
+    call SetPlayerUnitAvailableBJ('ugol', false, GetEnumPlayer())
+    // Only non-AI Dwarf goldmine
+    call SetPlayerUnitAvailableBJ('u011', false, GetEnumPlayer())
+endfunction
+
+private function EnumUpdateAllianceState takes nothing returns nothing
+    if (IsPlayerAlly(GetTriggerPlayer(), GetEnumPlayer())) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, true, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_XP, true, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_SPELLS, true, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_REQUEST, true, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_RESPONSE, true, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    else
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, false, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_XP, false, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_SPELLS, false, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_REQUEST, false, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_RESPONSE, false, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    endif
+    if (IsPlayerEnemy(GetTriggerPlayer(), GetEnumPlayer())) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_PASSIVE, false, GetTriggerPlayer())
+    else
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_PASSIVE, true, GetTriggerPlayer())
+    endif
+    if (GetPlayerAlliance(GetTriggerPlayer(), GetEnumPlayer(), ALLIANCE_SHARED_CONTROL)) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, true, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    else
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, false, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    endif
+    if (GetPlayerAlliance(GetTriggerPlayer(), GetEnumPlayer(), ALLIANCE_SHARED_VISION)) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, true, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    else
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, false, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    endif
+    if (GetPlayerAlliance(GetTriggerPlayer(), GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL)) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    else
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    endif
+endfunction
+
+private function TriggerConditionPlayerLeaves takes nothing returns boolean
+    if (GetTriggerPlayer() == GetHostCached()) then
+        if (CountAiPlayersWithConfig() > 0) then
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+            call SetAiPlayersUiVisibleForPlayer(GetHost(), true)
+        endif
+    endif
+
+    return false
+endfunction
+
+function DisableAllianceChangesTrigger takes nothing returns nothing
+    call DisableTrigger(allianceChangeTrigger)
+endfunction
+
+function EnableAllianceChangesTrigger takes nothing returns nothing
+    call EnableTrigger(allianceChangeTrigger)
+endfunction
+
+private function TriggerConditionAllianceChange takes nothing returns boolean
+    if (GetPlayerController(GetTriggerPlayer()) == MAP_CONTROL_USER and GetTriggerPlayer() != GetMapBossesPlayer()) then
+        call DisableAllianceChangesTrigger()
+        call ForForce(computerPlayers, function EnumUpdateAllianceState)
+        //call h__DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()), "TRIGSTR_16466")
+        call EnableAllianceChangesTrigger()
+        // Recreate the stats multiboard in case Warcraft's shared ressources multiboard appeared.
+        call CreateStats()
+    endif
+    return false
+endfunction
+
 private function TriggerConditionHeroLevel takes nothing returns boolean
     local player owner = GetOwningPlayer(GetTriggerUnit())
     local integer convertedPlayerId = GetConvertedPlayerId(owner)
-    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER and udg_Held[convertedPlayerId] == GetTriggerUnit()) then
-        if (IsPlayerWarlord(owner)) then
-            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_2 and GetPlayerRace2(owner) == udg_RaceNone) then
-                set udg_PlayerRace2[convertedPlayerId] = PickRandomUnusedRace(owner)
+    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
+        if (udg_Held[convertedPlayerId] == GetTriggerUnit()) then
+            if (IsPlayerWarlord(owner)) then
+                if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_2 and GetPlayerRace2(owner) == udg_RaceNone) then
+                    set udg_PlayerRace2[convertedPlayerId] = PickRandomUnusedRace(owner)
+                endif
+
+                if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_3 and GetPlayerRace3(owner) == udg_RaceNone) then
+                    set udg_PlayerRace3[convertedPlayerId] = PickRandomUnusedRace(owner)
+                endif
             endif
 
-            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_3 and GetPlayerRace3(owner) == udg_RaceNone) then
-                set udg_PlayerRace3[convertedPlayerId] = PickRandomUnusedRace(owner)
+            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_2 and GetPlayerProfession2(owner) == udg_ProfessionNone) then
+                call ComputerAutopickProfession2(GetOwningPlayer(GetTriggerUnit()))
+            endif
+
+            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_3 and GetPlayerProfession3(owner) == udg_ProfessionNone) then
+                call ComputerAutopickProfession3(GetOwningPlayer(GetTriggerUnit()))
             endif
         endif
 
-        if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_2 and GetPlayerProfession2(owner) == udg_ProfessionNone) then
-            call ComputerAutopickProfession2(GetOwningPlayer(GetTriggerUnit()))
+        call AutoSkillHero(GetTriggerUnit())
+    endif
+    set owner = null
+    return false
+endfunction
+
+private function TriggerConditionDeath takes nothing returns boolean
+    local player owner = GetOwningPlayer(GetTriggerUnit())
+    local integer playerId = GetPlayerId(owner)
+    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
+        if (IsUnitInGroup(GetTriggerUnit(), computerTownHalls[playerId])) then
+            call GroupRemoveUnit(computerTownHalls[playerId], GetTriggerUnit())
+
+            // respawn last town hall
+            if (BlzGroupGetSize(computerTownHalls[playerId]) == 0 and udg_AIRespawn) then
+                call RecreateStartingUnitsAI(owner)
+
+                // The player needs enough gold to build workers
+                if (GetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD) < 100) then
+                    call AdjustPlayerStateBJ(100, owner, PLAYER_STATE_RESOURCE_GOLD)
+                endif
+            endif
+        elseif (IsUnitInGroup(GetTriggerUnit(), computerShipyards[playerId])) then
+            call GroupRemoveUnit(computerShipyards[playerId], GetTriggerUnit())
+
+            // respawn last shipyard
+            if (BlzGroupGetSize(computerShipyards[playerId]) == 0 and udg_AIRespawn) then
+                call GroupAddUnit(computerShipyards[playerId], CreateUnit(owner, GetUnitTypeId(GetTriggerUnit()), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING))
+            endif
         endif
 
-        if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_3 and GetPlayerProfession3(owner) == udg_ProfessionNone) then
-            call ComputerAutopickProfession3(GetOwningPlayer(GetTriggerUnit()))
+        if (not udg_AIRespawn and GetPlayerState(owner, PLAYER_STATE_GAME_RESULT) != 1 and GetMapAllowConfigureAIPlayer(owner)) then
+            call CustomDefeatBJ(owner, GetLocalizedString("GAMEOVER_DEFEAT"))
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_DEFEATED_Y")).s(GetPlayerNameColored(GetOwningPlayer(GetKillingUnit()))).s(GetPlayerNameColored(owner)).result())
         endif
     endif
     set owner = null
     return false
 endfunction
 
+private function TriggerConditionConstructFinish takes nothing returns boolean
+    local player owner = GetOwningPlayer(GetConstructedStructure())
+    local integer playerId = GetPlayerId(owner)
+    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
+        if (IsUnitType(GetConstructedStructure(), UNIT_TYPE_TOWNHALL)  and not IsUnitInGroup(GetConstructedStructure(), computerTownHalls[playerId])) then
+            call GroupAddUnit(computerTownHalls[playerId], GetConstructedStructure())
+
+            if (BlzGroupGetSize(computerTownHalls[playerId]) == 01) then
+                // The player needs enough gold to build workers
+                if (GetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD) < 100) then
+                    call AdjustPlayerStateBJ(100, owner, PLAYER_STATE_RESOURCE_GOLD)
+                endif
+            endif
+        endif
+    endif
+    set owner = null
+    return false
+endfunction
+
+private function EnumAutoTrainNavy takes nothing returns nothing
+    call ComputerAITrainNavy(GetEnumUnit())
+endfunction
+
+private function EnumAutoAttackNavy takes nothing returns nothing
+    local integer playerId = GetPlayerId(GetEnumPlayer())
+    if (BlzGroupGetSize(computerNavy[playerId]) >= 5) then
+        call ComputerAINavyAttacks(GetEnumPlayer())
+    else
+        call ForGroup(computerShipyards[playerId], function EnumAutoTrainNavy)
+    endif
+endfunction
+
+private function TimerFunctionAutoAttackNavy takes nothing returns nothing
+    call ForForce(computerPlayers, function EnumAutoAttackNavy)
+endfunction
+
+private function EnumAutoLoadMines takes nothing returns nothing
+    if (PlayerHasRace(GetEnumPlayer(), udg_RaceDwarf) or PlayerHasRace(GetEnumPlayer(), udg_RaceDalaran) or PlayerHasRace(GetEnumPlayer(), udg_RaceSatyr)) then
+        call AutloadWorkersIntoMinesAI(GetEnumPlayer())
+    endif
+endfunction
+
+private function TimerFunctionAutoLoadMines takes nothing returns nothing
+    call ForForce(computerPlayers, function EnumAutoLoadMines)
+endfunction
+
+private function EnumStartLobbySettings takes nothing returns nothing
+    local integer playerId = GetPlayerId(GetEnumPlayer())
+    local boolean isWarlord = false
+    local integer startLocationIndex = -1
+    local ComputerStartLocation computerStartLocation = 0
+    local integer playerRace = udg_RaceNone
+    local location l = null
+    local integer i = 0
+    local integer max = 0
+    local unit hero = null
+    // Name
+    call SetPlayerName(GetEnumPlayer(), AiPlayersUIGetPlayerName(GetEnumPlayer()))
+    // Color
+    call SetPlayerColorBJ(GetEnumPlayer(), AiPlayersUIGetColor(GetEnumPlayer()), true)
+    // Team
+    call SetPlayerTeam(GetEnumPlayer(), AiPlayersUIGetTeam(GetEnumPlayer()))
+    // TODO Update team forces!
+    // Start Gold and Lumber and Food
+    call SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD, AiPlayersUIGetStartGold(GetEnumPlayer()))
+    call SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER, AiPlayersUIGetStartLumber(GetEnumPlayer()))
+    call SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, AiPlayersUIGetFoodLimit(GetEnumPlayer()))
+    // Start Researches
+    call SetPlayerTechResearchedSwap(UPG_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()), GetEnumPlayer())
+    call SetPlayerTechResearchedSwap(UPG_CHEAP_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()), GetEnumPlayer())
+    // Profession
+    set udg_PlayerProfession[GetConvertedPlayerId(GetEnumPlayer())] = AiPlayersUIGetPlayerProfession(GetEnumPlayer())
+    // Do not create profession items for AI. They cannot handle it.
+    // Either Warlord or Freelancer
+    set isWarlord = AiPlayersUIGetPlayerWarlord(GetEnumPlayer())
+    // Start
+    // Get free start location with a goldmine
+    set startLocationIndex = AiPlayersUIGetStartLocation(GetEnumPlayer())
+    // Create a main building and hero only if a goldmine is still available
+    if (startLocationIndex != -1) then
+        // Take Start Location
+        set computerStartLocation = GetComputerStartLocation(startLocationIndex)
+        set computerStartLocation.taken = true
+        set l = Location(computerStartLocation.x, computerStartLocation.y)
+        set udg_ComputerStartLocation[GetConvertedPlayerId(GetEnumPlayer())] = startLocationIndex
+        call RemoveRandomMinesAtAIStartLocation(startLocationIndex)
+        // Race
+        set playerRace = AiPlayersUIGetPlayerRace(GetEnumPlayer(), startLocationIndex)
+        set udg_ComputerRace[GetConvertedPlayerId(GetEnumPlayer())] = playerRace
+        set udg_PlayerRace[GetConvertedPlayerId(GetEnumPlayer())] = playerRace
+        // Start Main Building and Workers
+        call StartingUnitsAndPickAI(GetEnumPlayer(), l, playerRace)
+
+        // Reveal start location once
+        set i = 0
+        set max = bj_MAX_PLAYERS
+        loop
+            exitwhen (i == max)
+            call CreateFogModifierRadius(Player(i), FOG_OF_WAR_FOGGED, computerStartLocation.x, computerStartLocation.y, 512, true, true)
+            set i = i + 1
+        endloop
+
+        // Harvest Bonuses
+        if (playerRace == udg_RaceUndead or playerRace == udg_RaceNightElf or playerRace == udg_RaceDwarf or playerRace == udg_RaceDalaran) then
+            call SetPlayerTechResearchedSwap('R019', 1, GetEnumPlayer())
+        endif
+        // Hero
+        // After race for matching hero!
+        set i = 0
+        set max = AiPlayersUIGetHeroesCount(GetEnumPlayer())
+        loop
+            exitwhen (i == max)
+            set hero = CreateUnit(GetEnumPlayer(), GetHeroUnitType(AiPlayersUIGetHero(GetEnumPlayer())), computerStartLocation.x, computerStartLocation.y, bj_UNIT_FACING)
+            call SetHeroLevel(hero, AiPlayersUIGetHeroStartLevel(GetEnumPlayer()), false)
+            call AddCommandButtons(hero)
+            call AddSkillMenu(hero)
+            call ApplyHeroClass(hero)
+            call ApplyHeroMount(hero)
+            call AutoSkillHero(hero)
+            // Remove spell Invisible
+            call UnitRemoveAbility(hero, 'Aivs')
+            if (i == 0) then
+                call SetPlayerHero1(GetEnumPlayer(), hero)
+            elseif (i == 1) then
+                call SetPlayerHero2(GetEnumPlayer(), hero)
+            elseif (i == 2) then
+                call SetPlayerHero3(GetEnumPlayer(), hero)
+            endif
+            if (not isWarlord) then
+                call ModifyHeroStat(bj_HEROSTAT_STR, hero, bj_MODIFYMETHOD_ADD, udg_FreelancerBonusAttributes)
+                call ModifyHeroStat(bj_HEROSTAT_AGI, hero, bj_MODIFYMETHOD_ADD, udg_FreelancerBonusAttributes)
+                call ModifyHeroStat(bj_HEROSTAT_INT, hero, bj_MODIFYMETHOD_ADD, udg_FreelancerBonusAttributes)
+            endif
+            set i = i + 1
+        endloop
+        // Remove Altar on Theramore to prevent hero revivals there
+        set bj_wantDestroyGroup=true
+        call RemoveUnit(FirstOfGroup(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), FOUNTAIN_OF_LIFE)))
+        if (isWarlord) then
+            set udg_PlayerIsWarlord[GetConvertedPlayerId(GetEnumPlayer())]=true
+            call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_WarlordXPRate)
+        else
+            set udg_PlayerIsWarlord[GetConvertedPlayerId(GetEnumPlayer())]=false
+            call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_FreelancerXPRate)
+            call SetPlayerTechResearchedSwap('R01W', 1, GetEnumPlayer())
+            // Freelancer AI Gold Harvest Bonus
+            call SetPlayerTechResearchedSwap('R02E', 1, GetEnumPlayer())
+        endif
+    endif
+    // Attack Players
+    if (AiPlayersUIGetAttackPlayers(GetEnumPlayer()) == 1) then
+        call CommandAI(GetEnumPlayer(), COMMAND_ATTACK_PLAYERS_ON, 0)
+    endif
+    // Expansions
+    if (AiPlayersUIGetExpansions(GetEnumPlayer()) > 0) then
+        call CommandAI(GetEnumPlayer(), COMMAND_EXPANSIONS, AiPlayersUIGetExpansions(GetEnumPlayer()))
+    endif
+    // Navy
+    if (computerStartLocation != 0 and computerStartLocation.hasShipyard and playerRace != udg_RaceNone) then
+        if (GetRaceShipyard(playerRace) != 0) then
+            call GroupAddUnit(computerShipyards[playerId], CreateUnit(GetEnumPlayer(), GetRaceShipyard(playerRace), computerStartLocation.x, computerStartLocation.y, bj_UNIT_FACING))
+        endif
+        if (GetRaceShipyard2(playerRace) != 0) then
+            call GroupAddUnit(computerShipyards[playerId], CreateUnit(GetEnumPlayer(), GetRaceShipyard2(playerRace), computerStartLocation.x, computerStartLocation.y, bj_UNIT_FACING))
+        endif
+        call CommandAI(GetEnumPlayer(), COMMAND_SHIPS_ON, 0)
+    endif
+    // Difficulty
+    call CommandAI(GetEnumPlayer(), COMMAND_EASY + AiPlayersUIGetDifficulty(GetEnumPlayer()), 0)
+    // Allied vision
+    call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], teamPlayers[GetPlayerTeam(GetEnumPlayer())], bj_ALLIANCE_ALLIED_VISION)
+    call SetForceAllianceStateBJ(teamPlayers[GetPlayerTeam(GetEnumPlayer())], bj_FORCE_PLAYER[playerId], bj_ALLIANCE_ALLIED_VISION)
+    // Shared control
+    if (AiPlayersUIGetSharedControl(GetEnumPlayer()) == 1) then
+        call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], teamPlayers[GetPlayerTeam(GetEnumPlayer())], bj_ALLIANCE_ALLIED_ADVUNITS)
+    endif
+endfunction
+
+private function StartLobbySettings takes nothing returns nothing
+    call DisableTrigger(playerLeavesTrigger)
+    // Create Computer player main buildings, workers and heroes
+    call ForForce(computerLobbyPlayers, function EnumStartLobbySettings)
+    // Recreate stats multiboard
+    call CreateStats()
+    // No AI
+    //call ConditionalTriggerExecute(gg_trg_Computer_Init_No_AI)
+endfunction
+
+private function StartGame takes nothing returns nothing
+    if (CountAiPlayersWithConfig() > 0) then
+        call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+        call SetAiPlayersUiVisibleForPlayer(GetHost(), true)
+    else
+        call StartLobbySettings()
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
+    local player slotPlayer = null
+    local integer team = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set slotPlayer = Player(i)
+        set team = GetPlayerTeam(slotPlayer)
+
+        if (teamPlayers[team] == null) then
+            set teamPlayers[team] = CreateForce()
+            call ForceAddPlayer(teamPlayers[team], slotPlayer)
+        endif
+
+        set computerTownHalls[i] = CreateGroup()
+        set computerShipyards[i] = CreateGroup()
+        set computerNavy[i] = CreateGroup()
+
+        if (GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
+            call ForceAddPlayer(computerPlayers, slotPlayer)
+
+            if (GetMapAllowConfigureAIPlayer(slotPlayer)) then
+                call ForceAddPlayer(computerLobbyPlayers, slotPlayer)
+            endif
+
+            call TriggerRegisterPlayerEventAllianceChanged(allianceChangeTrigger, slotPlayer)
+        elseif (GetPlayerController(slotPlayer) == MAP_CONTROL_USER) then
+            call ForceAddPlayer(userPlayers, slotPlayer)
+        endif
+        set slotPlayer = null
+        set i = i + 1
+    endloop
+
+    call ForForce(computerPlayers, function EnumAITechnologies)
+    call ForForce(userPlayers, function EnumUserTechnologies)
+
+    call TriggerAddCondition(playerLeavesTrigger, Condition(function TriggerConditionPlayerLeaves))
+
+    call TriggerAddCondition(allianceChangeTrigger, Condition(function TriggerConditionAllianceChange))
+
     call TriggerRegisterAnyUnitEventBJ(heroLevelTrigger, EVENT_PLAYER_HERO_LEVEL)
     call TriggerAddCondition(heroLevelTrigger, Condition(function TriggerConditionHeroLevel))
+
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
+
+    call TriggerAddAction(startLobbySettingsTrigger, function StartLobbySettings)
 
     /*
      * Prevents attacking each other from the beginning.
@@ -406,6 +831,13 @@ private function Init takes nothing returns nothing
     call SetPlayerAllianceStateBJ(GetMapBossesPlayer(), GetMapGaiaPlayer(), bj_ALLIANCE_NEUTRAL)
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), GetMapBossesPlayer(), bj_ALLIANCE_ALLIED_VISION)
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), GetMapGaiaPlayer(), bj_ALLIANCE_NEUTRAL)
+
+    call TimerStart(autoRevivalTimer, 60.0, true, function ComputerAIAutoReviveHeroesAll)
+    call TimerStart(autoCraftTimer, 120.0, true, function ComputerAIAutoCraft)
+    call TimerStart(autoAttackNavyTimer, 360.0, true, function TimerFunctionAutoAttackNavy)
+    call TimerStart(autoLoadMinesTimer, 120.0, true, function TimerFunctionAutoLoadMines)
+
+    call OnStartGame(function StartGame)
 endfunction
 
 endlibrary

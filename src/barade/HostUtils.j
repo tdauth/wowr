@@ -31,4 +31,8 @@ function GetHost takes nothing returns player
     return Host
 endfunction
 
+function GetHostCached takes nothing returns player
+    return Host
+endfunction
+
 endlibrary

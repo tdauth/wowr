@@ -1,4 +1,4 @@
-library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedTmpVariables
+library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedTmpVariables, WoWReforgedRaces
 
 struct ComputerStartLocation
     real x
@@ -10,9 +10,38 @@ struct ComputerStartLocation
     integer possibleRacesCounter = 0
     boolean taken = false
 
-  method getRandomPossibleRace takes nothing returns integer
+    method getRandomPossibleRace takes nothing returns integer
         return possibleRaces[GetRandomInt(0, possibleRacesCounter)]
-   endmethod
+    endmethod
+
+    method hasRace takes integer whichRace returns boolean
+        local integer i = 0
+        loop
+            exitwhen (i == possibleRacesCounter)
+            if (possibleRaces[i] == whichRace) then
+                return true
+            endif
+            set i = i + 1
+        endloop
+        return false
+    endmethod
+
+    method hasTeam takes integer team returns boolean
+        local integer i = 0
+        local integer raceTeam = TEAM_NONE
+        if (possibleRacesCounter == 0) then
+            return true
+        endif
+        loop
+            exitwhen (i == possibleRacesCounter)
+            set raceTeam = GetRaceTeam(possibleRaces[i])
+            if (raceTeam == team or raceTeam == TEAM_NONE) then
+                return true
+            endif
+            set i = i + 1
+        endloop
+        return false
+    endmethod
 endstruct
 
 globals

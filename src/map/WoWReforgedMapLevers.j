@@ -3,7 +3,10 @@ library WoWReforgedMapLevers initializer Init requires WoWReforgedLevers
 private function Init takes nothing returns nothing
     // Northrend
     call AddLeverGate(gg_unit_n0ES_2035, gg_dest_ITg1_7756)
+    call AddLeverGate(gg_unit_n0ES_0116, gg_dest_ITg1_0618)
+    // Northrend East
     call AddLeverGate(gg_unit_n0ES_2358, gg_dest_ITg2_7663)
+    call AddLeverGate(gg_unit_n0ES_0115, gg_dest_ITg1_2219)
     // Eastern Kingdoms
     // New Stormwind
     call AddLeverGate(gg_unit_n0ES_2026, gg_dest_LTe2_20016)
@@ -46,6 +49,8 @@ private function Init takes nothing returns nothing
     // Thunder Bluff
     call AddLeverGate(gg_unit_n0ES_2059, gg_dest_DTg8_5096)
     call AddLeverGate(gg_unit_n0ES_0058, gg_dest_DTg7_2184)
+    // Echo Isles
+    call AddLeverGate(gg_unit_n0ES_0117, gg_dest_DTg8_2220)
     // Sunken Ruins
     call AddLeverGate(gg_unit_n0ES_0112, gg_dest_ZTsx_2195)
     call AddLeverGate(gg_unit_n0ES_2023, gg_dest_ZTsx_9720)

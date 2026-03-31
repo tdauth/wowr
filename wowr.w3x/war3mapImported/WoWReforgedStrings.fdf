@@ -569,6 +569,15 @@ StringList {
     SOURCE_TARGET                      "Source/Target",
     DIPLOMACY_CHANGE_NOT_ALLOWED       "You are not allowed to change diplomacy.",
     FROM_TO_X                          "From %1% to %2%: %3%",
+    // Alliances
+    ALLIANCE_ALLIED                    "%1% is allied to you now!",
+    ALLIANCE_HOSTILE                   "%1% is hostile to you now!",
+    ALLIANCE_SHARED_CONTROL            "%1% has shared units with you now!",
+    ALLIANCE_NO_SHARED_CONTROL         "%1% has no shared units with you now!",
+    ALLIANCE_SHARED_VISION             "%1% has shared vision with you now!",
+    ALLIANCE_NO_SHARED_VISION          "%1% has no shared vision with you now!",
+    ALLIANCE_SHARED_ADVANCED_CONTROL   "%1% has full shared units with you now!",
+    ALLIANCE_NO_SHARED_ADVANCED_CONTROL"%1% has no full shared units with you now!",
     // Tomes
     TOMES_DISABLED                     "Tomes are disabled.",
     // Backpack

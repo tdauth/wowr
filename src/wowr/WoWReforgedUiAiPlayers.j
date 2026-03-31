@@ -1,4 +1,5 @@
-library WoWReforgedUiAiPlayers initializer Init requires OnStartGame, FrameLoader, FrameSaver, PlayerColorUtils, HostUtils, WoWReforgedUi, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedHeroes, WoWReforgedRaces, WoWReforgedComputer 
+library WoWReforgedUiAiPlayers initializer Init requires OnStartGame, FrameLoader, FrameSaver, PlayerColorUtils, HostUtils, WoWReforgedUi, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedHeroes, WoWReforgedRaces, WoWReforgedComputerStartLocations
+
 /**
  * AI Players GUI which helps to configure AI players for one game in the beginning of the game.
  * Only the host sees this GUI and can specify heroes, races etc.
@@ -472,8 +473,8 @@ endfunction
 private function ApplyFunction takes nothing returns nothing
     call HideAiPlayersUiForPlayer(GetTriggerPlayer())
     call SyncData(GetTriggerPlayer())
-    set udg_TmpPlayer2 = GetTriggerPlayer()
-    call ConditionalTriggerExecute(gg_trg_Computer_Start_Lobby_Settings)
+    set WoWReforgedComputer_startLobbySettingsPlayer = GetTriggerPlayer()
+    call TriggerExecute(WoWReforgedComputer_startLobbySettingsTrigger)
 endfunction
 
 private function GetPlayerIndex takes player whichPlayer returns integer
@@ -551,9 +552,10 @@ endfunction
 
 function AiPlayersUIChooseComputerStartLocation takes integer startIndex returns integer
     local integer i = startIndex
+    local integer max = GetMaxComputerStartLocations()
     loop
-        exitwhen (i >= udg_Max_TownHalls)
-        if (not udg_ComputerStartLocationTaken[i]) then
+        exitwhen (i >= max)
+        if (not GetComputerStartLocation(i).taken) then
             return i
         endif
         set i = i + 1
@@ -566,11 +568,12 @@ endfunction
 
 function AiPlayersUIChooseComputerStartLocationTeam takes integer team returns integer
     local integer i = 0
+    local integer max = GetMaxComputerStartLocations()
     local integer array choices
     local integer choicesCounter = 0
     loop
-        exitwhen (i >= udg_Max_TownHalls)
-        if (not udg_ComputerStartLocationTaken[i] and (udg_TownHallRace[i] == udg_RaceNone or GetRaceTeam(udg_TownHallRace[i]) == team)) then
+        exitwhen (i >= max)
+        if (not GetComputerStartLocation(i).taken and GetComputerStartLocation(i).hasTeam(team)) then
             set choices[choicesCounter] = i
             set choicesCounter = choicesCounter + 1
         endif
