@@ -6277,7 +6277,7 @@ Winziges Versteck errichten
 STRING 1059
 // Abilities: A025 (Tranquility), Researchubertip (Tooltip - Learn - Extended)
 {
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 hit points per second. |nHält <AEtq,Dur1> Sekunden lang an.
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 Trefferpunkten pro Sekunde. |nHält <AEtq,Dur1> Sekunden lang an.
 }
 
 STRING 1060
@@ -9525,7 +9525,7 @@ N
 STRING 1612
 // Units: o06X (Gnoll Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Gnolle) (Rathaus) (Tier 1)
+(Gnolle) (Rathaus) (Stufe 1)
 }
 
 STRING 1613
@@ -9759,7 +9759,7 @@ Conjures a Brunnen der Macht.
 STRING 1651
 // Items: I189 (Tiny Fountains of Power), Ubertip (Tooltip - Extended)
 {
-Summons an immovable fountain that heals <A01Q,DataA1,%>% and regenerates <A0FR,DataA1,%>% mana of nearby friendly non-mechanical unit's hit points per second. |nContains <whwd,uses> charges. |nLasts <A1QC,Dur1> seconds.
+Summons an immovable fountain that heals <A01Q,DataA1,%>% and regenerates <A0FR,DataA1,%>% mana of nearby friendly non-mechanical unit's Trefferpunkten pro Sekunde. |nContains <whwd,uses> charges. |nLasts <A1QC,Dur1> seconds.
 }
 
 STRING 1652
@@ -9909,7 +9909,7 @@ Murmur beschwören
 STRING 1676
 // Abilities: A025 (Tranquility), Ubertip (Tooltip - Normal - Extended)
 {
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 hit points per second. |nHält <AEtq,Dur1> Sekunden lang an.
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 Trefferpunkten pro Sekunde. |nHält <AEtq,Dur1> Sekunden lang an.
 }
 
 STRING 1677
@@ -10743,7 +10743,7 @@ Winzige Werkstatt
 STRING 1838
 // Units: h04C (Arch Cleric), Casterupgradetip (Caster Upgrade Tips)
 {
-- Magical Laterne,- Magical Laterne|n- Dispel Entwaffnung,- Magical Laterne|n- Entwaffnung|n- Manaschutzzauber, Sonnenbrunnen Auferstehung
+- Magical Laterne,- Magical Laterne|n- Dispel Entwaffnung,- Magical Laterne|n- Entwaffnung|n- Manaschutzzauber, Sonnenbrunnen-Auferstehung
 }
 
 STRING 1839
@@ -10821,7 +10821,7 @@ B
 STRING 1851
 // Units: h04C (Arch Cleric), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Magical Laterne, which summons a Magical Laterne to watch a certain area for some time. Can also learn Entwaffnung, Manaschutzzauber and Sonnenbrunnen Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Supporting spellcaster. Can initially cast Magical Laterne, which summons a Magical Laterne to watch a certain area for some time. Can also learn Entwaffnung, Manaschutzzauber and Sonnenbrunnen-Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1852
@@ -10833,7 +10833,7 @@ Increases Erzklerikers' mana capacity, mana regeneration rate, hit points, and g
 STRING 1853
 // Upgrades: R04L (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Erzklerikers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Manaschutzzauber and Sonnenbrunnen Auferstehung.
+Increases Erzklerikers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Manaschutzzauber and Sonnenbrunnen-Auferstehung.
 }
 
 STRING 1854
@@ -10917,7 +10917,7 @@ The Sandwurm digs into the ground and becomes invisible.
 STRING 1872
 // Abilities: A24C (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Sandwurm pops out of the ground and becomes visible again.
+The Sandwurm bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 1873
@@ -11535,7 +11535,7 @@ Light melee unit that casts Parasit, Incite Unholy Frenzy and Stille. |n|n|cffff
 STRING 2047
 // Abilities: A05H (Incite Unholy Frenzy), Ubertip (Tooltip - Normal - Extended)
 {
-Sacrifices a target friendly unit. All nearby non-mechanical units gain Unholy Frenzy, increasing attack rate by <Auuf,DataA1,%>% but draining them of <Auuf,DataB1> hit points per second. |nHält <Auuf,Dur1> Sekunden lang an.
+Sacrifices a target friendly unit. All nearby non-mechanical units gain Unholy Frenzy, increasing attack rate by <Auuf,DataA1,%>% but draining them of <Auuf,DataB1> Trefferpunkten pro Sekunde. |nHält <Auuf,Dur1> Sekunden lang an.
 }
 
 STRING 2048
@@ -12040,7 +12040,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 2210
-// Units: o0BD (Elemental Grove), Ubertip (Tooltip - Extended)
+// Units: o0BD (Elementarhain), Ubertip (Tooltip - Extended)
 {
 Spellcaster production building. Trains Gnoll-Schatzjägers and Gnoll Mystweavers. |nAlso contains spell upgrades for Gnoll-Schatzjägers and Gnoll Mystweavers.
 }
@@ -12088,7 +12088,7 @@ Gnoll-Schatzjäger
 }
 
 STRING 2218
-// Units: o0BA (Lumberyard), EditorSuffix (Name - Editor Suffix)
+// Units: o0BA (Holzlager), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
@@ -12106,7 +12106,7 @@ Gnoll Mystweaver
 }
 
 STRING 2221
-// Units: o0BB (Altar of Fangs), EditorSuffix (Name - Editor Suffix)
+// Units: o0BB (Altar der Reißzähne), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
@@ -12130,19 +12130,19 @@ Train Gnoll Warhawk Rider
 }
 
 STRING 2225
-// Units: o0BC (Kennel), EditorSuffix (Name - Editor Suffix)
+// Units: o0BC (Zwinger), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
 
 STRING 2226
-// Units: o0BD (Elemental Grove), EditorSuffix (Name - Editor Suffix)
+// Units: o0BD (Elementarhain), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
 
 STRING 2227
-// Units: o0BG (Savage Tower), EditorSuffix (Name - Editor Suffix)
+// Units: o0BG (Wilder Turm), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
@@ -12184,7 +12184,7 @@ STRING 2233
 }
 
 STRING 2234
-// Units: o0BC (Kennel), Ubertip (Tooltip - Extended)
+// Units: o0BC (Zwinger), Ubertip (Tooltip - Extended)
 {
 Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörders, Gnoll-Aufsehers and Gnoll Rocketbreakers. |nBietet auch die Ausbaustufen Enslavement, Vergiftete Waffen, and Barrel Form upgrades.
 }
@@ -15732,7 +15732,7 @@ Foliant der Lebensregeneration erwerben
 STRING 3020
 // Units: o00O (Goblin Town Hall), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 1)
+(Stufe 1)
 }
 
 STRING 3021
@@ -17262,7 +17262,7 @@ STRING 3362
 STRING 3363
 // Units: n0GX (Corrupted Tree of Life), EditorSuffix (Name - Editor Suffix)
 {
-(Satyr) (Tier 1)
+(Satyr) (Stufe 1)
 }
 
 STRING 3364
@@ -17274,7 +17274,7 @@ Primary structure, used to train Arbeiters, Satyr Bürger (male) and entangle go
 STRING 3365
 // Units: n0GY (Corrupted Tree of Ages), EditorSuffix (Name - Editor Suffix)
 {
-(Satyr) (Tier 2)
+(Satyr) (Stufe 2)
 }
 
 STRING 3366
@@ -18834,7 +18834,7 @@ Golem Factory
 STRING 3724
 // Units: o03M (Dungeon), EditorSuffix (Name - Editor Suffix)
 {
-(Verlies) (Tier 1)
+(Verlies) (Stufe 1)
 }
 
 STRING 3725
@@ -19686,7 +19686,7 @@ Ausbau zum Dunklen Verlies
 STRING 3917
 // Units: o03R (Dark Dungeon), EditorSuffix (Name - Editor Suffix)
 {
-(Verlies) (Tier 2)
+(Verlies) (Stufe 2)
 }
 
 STRING 3918
@@ -19698,7 +19698,7 @@ Ausbau zum Dark Verlies ermöglicht die Produktion weiterer Gebäude- und Einhei
 STRING 3919
 // Units: o03S (Great Dungeon), EditorSuffix (Name - Editor Suffix)
 {
-(Verlies) (Tier 3)
+(Verlies) (Stufe 3)
 }
 
 STRING 3920
@@ -20820,7 +20820,7 @@ Verderbnis
 STRING 4278
 // Units: o06C (Ogre Mound), EditorSuffix (Name - Editor Suffix)
 {
-(Oger) (Tier 1)
+(Oger) (Stufe 1)
 }
 
 STRING 4280
@@ -24084,13 +24084,13 @@ Menschen-Bürger
 STRING 4999
 // Abilities: A1Z9 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Kobold-Tunnelgräber digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second. |nThe Kobold-Tunnelgräber cannot attack while burrowed.
+Der Kobold-Tunnelgräber vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde. |nDer Kobold-Tunnelgräber kann nicht angreifen, während er sich eingegraben hat.
 }
 
 STRING 5000
 // Abilities: A1Z9 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Kobold-Tunnelgräber pops out of the ground and becomes visible again.
+Der Kobold-Tunnelgräber bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 5001
@@ -24102,7 +24102,7 @@ Absorptions the life essence of a target enemy unit by taking <A0SM,DataA1> hit 
 STRING 5002
 // Abilities: A1X1 (Drain), Name (Name)
 {
-Drain
+Absaugen
 }
 
 STRING 5003
@@ -24156,7 +24156,7 @@ STRING 5010
 STRING 5012
 // Upgrades: R07R (Defend), Ubertip (Tooltip - Extended)
 {
-Gives Salamander and Red Dragons the Verschlingen ability which allows devouring enemy ground units.
+Gibt Salamandern und Rotdrachen die Fähigkeit 'Verschlingen', die es erlaubt gegnerische Boden-Einheiten zu verschlingen.
 }
 
 STRING 5013
@@ -24252,7 +24252,7 @@ Erweckt den Kriegs-Golem.
 STRING 5029
 // Abilities: A0EL (Sleep Form), Ubertip (Tooltip - Normal - Extended)
 {
-Transforms the Kriegs-Golem into a statue that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> hit points per second. |nThe Kriegs-Golem cannot attack in this form.
+Transforms the Kriegs-Golem into a statue that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> Trefferpunkten pro Sekunde. |nThe Kriegs-Golem cannot attack in this form.
 }
 
 STRING 5030
@@ -24510,43 +24510,43 @@ Gefangener
 STRING 5076
 // Units: n0AK (Prisoner), Ubertip (Tooltip - Extended)
 {
-A hearty villager who needs to be tortured and sacrificed.
+Ein herzlicher Dorfbewohner, der gefoltert und geopfert werden muss.
 }
 
 STRING 5077
 // Units: n0AO (Prisoner Corpse), Tip (Tooltip - Basic)
 {
-Train Prisoner Corpse
+Gefangenenleiche ausbilden
 }
 
 STRING 5078
 // Units: n0AO (Prisoner Corpse), Name (Name)
 {
-Prisoner Corpse
+Gefangenenleiche
 }
 
 STRING 5079
 // Units: n0AO (Prisoner Corpse), Ubertip (Tooltip - Extended)
 {
-A hearty villager who needs to be tortured and sacrificed.
+Ein herzlicher Dorfbewohner, der gefoltert und geopfert werden muss.
 }
 
 STRING 5080
 // Items: I0HA (Dungeon Gold Coins), Name (Name)
 {
-Verlies Goldmünzen
+Verlies-Goldmünzen
 }
 
 STRING 5081
 // Items: I0HA (Dungeon Gold Coins), Tip (Tooltip - Basic)
 {
-Purchase Verlies Goldmünzen
+Verlies-Goldmünzen erwerben
 }
 
 STRING 5082
 // Items: I0FT (Kobold Gold Coins), Ubertip (Tooltip - Extended)
 {
-Gives <A0X6,DataA1> gold to the player when used.
+Gibt dem Spieler bei Benutzung <A0X6,DataA1> Gold.
 }
 
 STRING 5083
@@ -27342,7 +27342,7 @@ Drachengrube
 STRING 5669
 // Units: o08P (Dragon Pit), EditorSuffix (Name - Editor Suffix)
 {
-(Dragonkin) (Tier 1)
+(Dragonkin) (Stufe 1)
 }
 
 STRING 5670
@@ -27360,7 +27360,7 @@ Drachenhöhle
 STRING 5672
 // Units: o041 (Dragon Cavern), EditorSuffix (Name - Editor Suffix)
 {
-(Dragonkin) (Tier 2)
+(Dragonkin) (Stufe 2)
 }
 
 STRING 5673
@@ -27372,7 +27372,7 @@ Drachenhort
 STRING 5674
 // Units: o044 (Dragon Lair), EditorSuffix (Name - Editor Suffix)
 {
-(Dragonkin) (Tier 3)
+(Dragonkin) (Stufe 3)
 }
 
 STRING 5675
@@ -38614,7 +38614,7 @@ STRING 8354
 STRING 8355
 // Units: n0IO (Refuge), EditorSuffix (Name - Editor Suffix)
 {
-(Draenei) (Tier 1)
+(Draenei) (Stufe 1)
 }
 
 STRING 8356
@@ -38626,13 +38626,13 @@ STRING 8356
 STRING 8357
 // Units: n0JJ (Haven), EditorSuffix (Name - Editor Suffix)
 {
-(Draenei) (Tier 2)
+(Draenei) (Stufe 2)
 }
 
 STRING 8358
 // Units: n0JK (Sanctuary), EditorSuffix (Name - Editor Suffix)
 {
-(Draenei) (Tier 3)
+(Draenei) (Stufe 3)
 }
 
 STRING 8359
@@ -43012,7 +43012,7 @@ Obststand errichten
 STRING 10359
 // Abilities: A1BV (Tranquility), Ubertip (Tooltip - Normal - Extended)
 {
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 hit points per second. |nHält <AEtq,Dur1> Sekunden lang an.
+Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 Trefferpunkten pro Sekunde. |nHält <AEtq,Dur1> Sekunden lang an.
 }
 
 STRING 10361
@@ -46066,7 +46066,7 @@ Eine Reihe nützlicher Spielerinteraktionen.
 STRING 11175
 // Units: o023 (Goblin Fortress), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 3)
+(Stufe 3)
 }
 
 STRING 11176
@@ -46522,7 +46522,7 @@ Goblin Stronghold
 STRING 11377
 // Units: o022 (Goblin Stronghold), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 2)
+(Stufe 2)
 }
 
 STRING 11378
@@ -48799,7 +48799,7 @@ Stacheleber ausbilden
 STRING 12193
 // Units: o0B0 (Shelter), EditorSuffix (Name - Editor Suffix)
 {
-(Stacheleber) (Tier 2)
+(Stacheleber) (Stufe 2)
 }
 
 STRING 12194
@@ -53395,7 +53395,7 @@ Kobold-Lager errichten
 STRING 16235
 // Units: o070 (Kobold Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Kobolde) (Rathaus) (Tier 1)
+(Kobolde) (Rathaus) (Stufe 1)
 }
 
 STRING 16236
@@ -54301,7 +54301,7 @@ Altar des Krieges
 STRING 16963
 // Units: o073 (Advanced Ogre Mound), EditorSuffix (Name - Editor Suffix)
 {
-(Oger) (Tier 2)
+(Oger) (Stufe 2)
 }
 
 STRING 16964
@@ -54319,7 +54319,7 @@ Altar des Krieges errichten
 STRING 16966
 // Units: o074 (Fortified Ogre Mound), EditorSuffix (Name - Editor Suffix)
 {
-(Oger) (Tier 3)
+(Oger) (Stufe 3)
 }
 
 STRING 16968
@@ -67036,15 +67036,15 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 27969
-// Units: o0BA (Lumberyard), Name (Name)
+// Units: o0BA (Holzlager), Name (Name)
 {
-Lumberyard
+Holzlager
 }
 
 STRING 27970
-// Units: o0BA (Lumberyard), Tip (Tooltip - Basic)
+// Units: o0BA (Holzlager), Tip (Tooltip - Basic)
 {
-Build Lumberyard
+Holzlager errichten
 }
 
 STRING 27971
@@ -67060,15 +67060,15 @@ STRING 27972
 }
 
 STRING 27973
-// Units: o0BB (Altar of Fangs), Name (Name)
+// Units: o0BB (Altar der Reißzähne), Name (Name)
 {
-Altar of Fangs
+Altar der Reißzähne
 }
 
 STRING 27974
-// Units: o0BB (Altar of Fangs), Tip (Tooltip - Basic)
+// Units: o0BB (Altar der Reißzähne), Tip (Tooltip - Basic)
 {
-Build Altar of Fangs
+Altar der Reißzähne errichten
 }
 
 STRING 27975
@@ -67078,15 +67078,15 @@ STRING 27975
 }
 
 STRING 27976
-// Units: o0BC (Kennel), Name (Name)
+// Units: o0BC (Zwinger), Name (Name)
 {
-Kennel
+Zwinger
 }
 
 STRING 27977
-// Units: o0BC (Kennel), Tip (Tooltip - Basic)
+// Units: o0BC (Zwinger), Tip (Tooltip - Basic)
 {
-Build Kennel
+Zwinger errichten
 }
 
 STRING 27978
@@ -67096,15 +67096,15 @@ STRING 27978
 }
 
 STRING 27979
-// Units: o0BD (Elemental Grove), Tip (Tooltip - Basic)
+// Units: o0BD (Elementarhain), Tip (Tooltip - Basic)
 {
-Build Elemental Grove
+Elementarhain errichten
 }
 
 STRING 27980
-// Units: o0BD (Elemental Grove), Name (Name)
+// Units: o0BD (Elementarhain), Name (Name)
 {
-Elemental Grove
+Elementarhain
 }
 
 STRING 27981
@@ -67116,7 +67116,7 @@ Außenposten
 STRING 27982
 // Units: o0BE (Outpost), EditorSuffix (Name - Editor Suffix)
 {
-(Gnolle) (Tier 2)
+(Gnolle) (Stufe 2)
 }
 
 STRING 27983
@@ -67140,7 +67140,7 @@ Fort
 STRING 27986
 // Units: o0BF (Fort), EditorSuffix (Name - Editor Suffix)
 {
-(Gnolle) (Tier 3)
+(Gnolle) (Stufe 3)
 }
 
 STRING 27987
@@ -67156,15 +67156,15 @@ Ausbau zum Fort ermöglicht die Produktion weiterer Gebäude- und Einheitenarten
 }
 
 STRING 27989
-// Units: o0BG (Savage Tower), Name (Name)
+// Units: o0BG (Wilder Turm), Name (Name)
 {
-Savage Tower
+Wilder Turm
 }
 
 STRING 27990
-// Units: o0BG (Savage Tower), Tip (Tooltip - Basic)
+// Units: o0BG (Wilder Turm), Tip (Tooltip - Basic)
 {
-Build Savage Tower
+Wilden Turm errichten
 }
 
 STRING 27991
@@ -67188,13 +67188,13 @@ STRING 27999
 STRING 28000
 // Units: o0BH (Gnoll Merchant), Name (Name)
 {
-Gnoll Händler
+Gnoll-Händler
 }
 
 STRING 28001
 // Units: o0BH (Gnoll Merchant), Tip (Tooltip - Basic)
 {
-Build Gnoll Händler
+Gnoll-Händler errichten
 }
 
 STRING 28002
@@ -68454,19 +68454,19 @@ U-Boot
 STRING 29170
 // Units: H0GR (Ironclad Submarine), Awakentip (Tooltip - Awaken)
 {
-Revive Gepanzertes U-Boot
+Gepanzertes U-Boot wiederbeleben
 }
 
 STRING 29171
 // Units: H0GR (Ironclad Submarine), Revivetip (Tooltip - Revive)
 {
-Revive Gepanzertes U-Boot
+Gepanzertes U-Boot wiederbeleben
 }
 
 STRING 29178
 // Units: H0GR (Ironclad Submarine), Tip (Tooltip - Basic)
 {
-Summon Gepanzertes U-Boot
+Gepanzertes U-Boot beschwören
 }
 
 STRING 29180
@@ -70038,7 +70038,7 @@ caster
 STRING 31045
 // Buffs/Effects: B01W (), Buffubertip (Tooltip - Extended)
 {
-This unit is being damaged by Pfeilhagel.
+Diese Einheit erleidet Schaden durch einen Pfeilhagel.
 }
 
 STRING 31046
@@ -73974,7 +73974,7 @@ STRING 33789
 STRING 33790
 // Abilities: A16E (Cannibalize), Ubertip (Tooltip - Normal - Extended)
 {
-Consumes a nearby ground units to heal <ACcn,DataA1> hit points per second.
+Consumes a nearby ground units to heal <ACcn,DataA1> Trefferpunkten pro Sekunde.
 }
 
 STRING 33791
@@ -74286,19 +74286,19 @@ STRING 33921
 STRING 33922
 // Upgrades: R09G (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Creature Armor
+Kreaturen-Panzer
 }
 
 STRING 33923
 // Upgrades: R09G (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Improved Creature Armor
+Verbesserter Kreaturen-Panzer
 }
 
 STRING 33924
 // Upgrades: R09G (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Advanced Creature Armor
+Hoch entwickelter Kreaturen-Panzer
 }
 
 STRING 33925
@@ -74310,37 +74310,37 @@ STRING 33925
 STRING 33926
 // Upgrades: R09G (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Creature Armor
+Ausbau zum Kreaturen-Panzer
 }
 
 STRING 33927
 // Upgrades: R09G (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Improved Creature Armor
+Ausbau zum Verbesserten Kreaturen-Panzer
 }
 
 STRING 33928
 // Upgrades: R09G (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zum Advanced Creature Armor
+Ausbau zum Hoch entwickelten Kreaturen-Panzer
 }
 
 STRING 33929
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Troll Armor
+Troll-Rüstung
 }
 
 STRING 33930
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Improved Troll Armor
+Verbesserte Troll-Rüstung
 }
 
 STRING 33931
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Advanced Troll Armor
+Hoch entwickelte Troll-Rüstung
 }
 
 STRING 33932
@@ -74352,19 +74352,19 @@ STRING 33932
 STRING 33933
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zur Trollrüstung
+Ausbau zur Troll-Rüstung
 }
 
 STRING 33934
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zur Verbesserten Trollrüstung
+Ausbau zur Verbesserten Troll-Rüstung
 }
 
 STRING 33935
 // Upgrades: R09H (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Ausbau zur Hoch entwickelten Trollrüstung
+Ausbau zur Hoch entwickelten Troll-Rüstung
 }
 
 STRING 33939
@@ -74934,7 +74934,7 @@ Water
 STRING 34166
 // Items: I0JM (Water), Tip (Tooltip - Basic)
 {
-Purchase Water
+Wasser erwerben
 }
 
 STRING 34167
@@ -74952,13 +74952,13 @@ Creates an area of Water at a target location.
 STRING 34169
 // Abilities: A16T (Water), Name (Name)
 {
-Water
+Wasser
 }
 
 STRING 34170
 // Abilities: A16T (Water), Tip (Tooltip - Normal)
 {
-Water
+Wasser
 }
 
 STRING 34171
@@ -75084,7 +75084,7 @@ STRING 34198
 STRING 34200
 // Items: I0AP (Christmas Present), Ubertip (Tooltip - Extended)
 {
-Gives <A0GB,DataA1> gold and <A0GA,DataA1> lumber to the player when used.
+Gibt dem Spieler bei Benutzung <A0GB,DataA1> Gold und <A0GA,DataA1> Holz.
 }
 
 STRING 34201
@@ -75168,7 +75168,7 @@ Prevents enemy Reveals, Far Sight, Portal, Scroll of Town Portal, Blinzeln, Mass
 STRING 34218
 // Units: Utic (Dreadlord), Revivetip (Tooltip - Revive)
 {
-Revive Tichondrius
+Tichondrius wiederbeleben
 }
 
 STRING 34219
@@ -76230,7 +76230,7 @@ Ausbau zum Unterstand
 STRING 35048
 // Units: o0B1 (Ancestral Bastion), EditorSuffix (Name - Editor Suffix)
 {
-(Stacheleber) (Tier 3)
+(Stacheleber) (Stufe 3)
 }
 
 STRING 35049
@@ -76380,7 +76380,7 @@ STRING 35075
 STRING 35076
 // Units: n0NR (Quilbeast), Ubertip (Tooltip - Extended)
 {
-Powerful unit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Mächtige Einheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 35077
@@ -77842,7 +77842,7 @@ STRING 35621
 }
 
 STRING 35622
-// Units: n0E1 (Fish Market), Name (Name)
+// Units: n0E1 (Fischmarkt), Name (Name)
 {
 Fischmarkt
 }
@@ -77860,7 +77860,7 @@ STRING 35624
 }
 
 STRING 35625
-// Units: n0E1 (Fish Market), Tip (Tooltip - Basic)
+// Units: n0E1 (Fischmarkt), Tip (Tooltip - Basic)
 {
 Fischmarkt errichten
 }
@@ -78352,39 +78352,39 @@ E
 }
 
 STRING 35772
-// Units: o05C (Lordaeron Banner), Name (Name)
+// Units: o05C (Banner von Lordaeron), Name (Name)
 {
-Lordaeron Banner
+Banner von Lordaeron
 }
 
 STRING 35773
-// Items: I0KZ (Lordaeron Banner), Name (Name)
+// Items: I0KZ (Banner von Lordaeron), Name (Name)
 {
-Lordaeron Banner
+Banner von Lordaeron
 }
 
 STRING 35774
-// Items: I0KZ (Lordaeron Banner), Tip (Tooltip - Basic)
+// Items: I0KZ (Banner von Lordaeron), Tip (Tooltip - Basic)
 {
-Purchase Lordaeron Banner
+Banner von Lordaeron erwerben
 }
 
 STRING 35775
-// Items: I0KZ (Lordaeron Banner), Description (Description)
+// Items: I0KZ (Banner von Lordaeron), Description (Description)
 {
-Conjures a Lordaeron Banner.
+Conjures a Banner von Lordaeron.
 }
 
 STRING 35776
-// Items: I0KZ (Lordaeron Banner), Ubertip (Tooltip - Extended)
+// Items: I0KZ (Banner von Lordaeron), Ubertip (Tooltip - Extended)
 {
 Summons an immovable ward that has gives an armor bonus of <ACav,DataA1> to nearby friendly non-mechanical units. |nContains <whwd,uses> charges. |nHält <Ahwd,Dur1> Sekunden lang an.
 }
 
 STRING 35777
-// Abilities: A18Y (Lordaeron Banner), Name (Name)
+// Abilities: A18Y (Banner von Lordaeron), Name (Name)
 {
-Lordaeron Banner
+Banner von Lordaeron
 }
 
 STRING 35778
@@ -79686,7 +79686,7 @@ Neruber
 STRING 36018
 // Items: I0NN (Book of Inscription), Description (Description)
 {
-A book that contains knowledge of crafting Glyphs.
+Ein Buch, welches Wissen zur Herstellung von Glyphen enthält.
 }
 
 STRING 36019
@@ -79746,7 +79746,7 @@ Spinnenei-Sack
 STRING 36028
 // Items: I0NN (Book of Inscription), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of crafting Glyphs.
+Ein Buch, welches Wissen zur Herstellung von Glyphen enthält.
 }
 
 STRING 36029
@@ -79776,13 +79776,13 @@ STRING 36032
 STRING 36033
 // Abilities: A1A3 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Metropole pops out of the ground and becomes visible again.
+The Metropole bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 36034
 // Abilities: A1A3 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Metropole digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second. |nThe Metropole cannot attack while burrowed.
+The Metropole vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde. |nThe Metropole kann nicht angreifen, während er sich eingegraben hat.
 }
 
 STRING 36035
@@ -79902,13 +79902,13 @@ STRING 36053
 STRING 36054
 // Abilities: A1A7 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Neruben-Ziggurat digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Neruben-Ziggurat vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 36055
 // Abilities: A1A7 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Neruben-Ziggurat pops out of the ground and becomes visible again.
+The Neruben-Ziggurat bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 36056
@@ -82206,7 +82206,7 @@ STRING 37144
 STRING 37145
 // Abilities: A1C5 (Cocoon), Ubertip (Tooltip - Normal - Extended)
 {
-Transforms the Gruftdrohnes into a cocoon that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> hit points per second. |nThe Gruftdrohne cannot attack in this form.
+Transforms the Gruftdrohnes into a cocoon that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> Trefferpunkten pro Sekunde. |nThe Gruftdrohne cannot attack in this form.
 }
 
 STRING 37146
@@ -82974,13 +82974,13 @@ STRING 37373
 STRING 37374
 // Abilities: A1CM (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Neruben-Turm digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Neruben-Turm vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37375
 // Abilities: A1CM (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Neruben-Turm pops out of the ground and becomes visible again.
+The Neruben-Turm bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37376
@@ -83394,13 +83394,13 @@ STRING 37459
 STRING 37460
 // Abilities: A1CP (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Altar of the Spider digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Altar of the Spider vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37461
 // Abilities: A1CP (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Altar of the Spider pops out of the ground and becomes visible again.
+The Altar of the Spider bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37462
@@ -83682,7 +83682,7 @@ Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, an
 STRING 37510
 // Units: u02N (Burrowed Advanced Metropolis), Name (Name)
 {
-Eingegrabene Fortgeschrittene Metropole
+Eingegrabene Hoch entwickelte Metropole
 }
 
 STRING 37511
@@ -83694,7 +83694,7 @@ Ausbau zur Fortgeschrittenen Metropole
 STRING 37512
 // Units: u02N (Burrowed Advanced Metropolis), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Fortgeschrittene Metropole ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Ausbau zur Hoch entwickelten Metropole ermöglicht die Produktion weiterer Gebäude- und Einheitenarten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 37513
@@ -83724,13 +83724,13 @@ STRING 37516
 STRING 37517
 // Abilities: A1CY (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutstätte digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37518
 // Abilities: A1CY (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutstätte pops out of the ground and becomes visible again.
+The Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37519
@@ -83742,13 +83742,13 @@ STRING 37519
 STRING 37520
 // Abilities: A1CZ (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutstätte digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37521
 // Abilities: A1CZ (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutstätte pops out of the ground and becomes visible again.
+The Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37522
@@ -83760,13 +83760,13 @@ STRING 37522
 STRING 37523
 // Abilities: A1D0 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37524
 // Abilities: A1D0 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37525
@@ -83778,31 +83778,31 @@ STRING 37525
 STRING 37526
 // Abilities: A1D1 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutgrube digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutgrube vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37527
 // Abilities: A1D1 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutgrube pops out of the ground and becomes visible again.
+The Brutgrube bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37528
 // Abilities: A1D2 (Burrow), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Fortgeschrittene Metropole)
+(Neruber) (Hoch entwickelte Metropole)
 }
 
 STRING 37529
 // Abilities: A1D2 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Fortgeschrittene Metropole digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+Die Hoch entwickelte Metropole vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37530
 // Abilities: A1D2 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Fortgeschrittene Metropole pops out of the ground and becomes visible again.
+Die Hoch entwickelte Metropole bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37531
@@ -83814,13 +83814,13 @@ STRING 37531
 STRING 37532
 // Abilities: A1D3 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Große Metropole digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Große Metropole vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37533
 // Abilities: A1D3 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Große Metropole pops out of the ground and becomes visible again.
+The Große Metropole bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37534
@@ -83836,7 +83836,7 @@ STRING 37535
 }
 
 STRING 37536
-// Abilities: A1DJ (Next Tunnel), EditorSuffix (Editor Suffix)
+// Abilities: A1DJ (Nächster Tunnel), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -84378,13 +84378,13 @@ STRING 37728
 STRING 37729
 // Abilities: A1D9 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Uralter Schrein digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Uralter Schrein vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37730
 // Abilities: A1D9 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Uralter Schrein pops out of the ground and becomes visible again.
+The Uralter Schrein bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37731
@@ -84396,13 +84396,13 @@ STRING 37731
 STRING 37732
 // Abilities: A1DA (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutstätte digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37733
 // Abilities: A1DA (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutstätte pops out of the ground and becomes visible again.
+The Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37734
@@ -84582,13 +84582,13 @@ STRING 37768
 STRING 37769
 // Abilities: A1DC (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37770
 // Abilities: A1DC (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37771
@@ -84600,13 +84600,13 @@ STRING 37771
 STRING 37772
 // Abilities: A1DD (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37773
 // Abilities: A1DD (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37774
@@ -84618,13 +84618,13 @@ STRING 37774
 STRING 37775
 // Abilities: A1DE (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37776
 // Abilities: A1DE (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37777
@@ -84636,13 +84636,13 @@ STRING 37777
 STRING 37778
 // Abilities: A1DF (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37779
 // Abilities: A1DF (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37780
@@ -84654,13 +84654,13 @@ STRING 37780
 STRING 37781
 // Abilities: A1DG (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37782
 // Abilities: A1DG (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37783
@@ -84672,13 +84672,13 @@ STRING 37783
 STRING 37784
 // Abilities: A1DH (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37785
 // Abilities: A1DH (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37786
@@ -84690,31 +84690,31 @@ STRING 37786
 STRING 37787
 // Abilities: A1DI (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37788
 // Abilities: A1DI (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest pops out of the ground and becomes visible again.
+The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37789
-// Abilities: A1DJ (Next Tunnel), Name (Name)
+// Abilities: A1DJ (Nächster Tunnel), Name (Name)
 {
-Next Tunnel
+Nächster Tunnel
 }
 
 STRING 37790
-// Abilities: A1DJ (Next Tunnel), Tip (Tooltip - Normal)
+// Abilities: A1DJ (Nächster Tunnel), Tip (Tooltip - Normal)
 {
-Next Tunnel
+Nächster Tunnel
 }
 
 STRING 37791
-// Abilities: A1DJ (Next Tunnel), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1DJ (Nächster Tunnel), Ubertip (Tooltip - Normal - Extended)
 {
-Selects the next tunnel.
+Wählt den nächsten Tunnel aus.
 }
 
 STRING 37792
@@ -84930,7 +84930,7 @@ STRING 37828
 STRING 37829
 // Abilities: A1DL (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Altar of the Spider digs into the ground, becomes invisible, and gains a regeneration rate of <ucrm,regenHP> hit points per second.
+The Altar of the Spider vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37830
@@ -84942,7 +84942,7 @@ STRING 37830
 STRING 37846
 // Abilities: A1DL (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Altar of the Spider pops out of the ground and becomes visible again.
+The Altar of the Spider bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37847
@@ -86100,19 +86100,19 @@ STRING 38441
 STRING 38443
 // Abilities: A0C5 (Auto Rockets), Name (Name)
 {
-Auto Raketen
+Auto-Raketen
 }
 
 STRING 38444
 // Abilities: A0C5 (Auto Rockets), Tip (Tooltip - Normal)
 {
-Auto Raketen
+Auto-Raketen
 }
 
 STRING 38445
 // Abilities: A0C5 (Auto Rockets), EditorSuffix (Editor Suffix)
 {
-(Heavy Goblin Tank)
+(Schwerer Goblin-Panzer)
 }
 
 STRING 38446
@@ -86124,13 +86124,13 @@ Fires rockets at nearby enemy units.
 STRING 38447
 // Abilities: A0C6 (Auto Rockets), Name (Name)
 {
-Auto Raketen
+Auto-Raketen
 }
 
 STRING 38448
 // Abilities: A0C6 (Auto Rockets), Tip (Tooltip - Normal)
 {
-Auto Raketen
+Auto-Raketen
 }
 
 STRING 38449
@@ -86148,7 +86148,7 @@ Fires rockets at nearby enemy units causing <A0C5,DataA1> damage.
 STRING 38451
 // Abilities: S00C (Death And Decay), EditorSuffix (Editor Suffix)
 {
-(Heavy Goblin Tank)
+(Schwerer Goblin-Panzer)
 }
 
 STRING 38454
@@ -86364,7 +86364,7 @@ Sells killed units and dropped items from creeps and enemy players. They can onl
 STRING 38510
 // Units: o01G (Heavy Tank), Ubertip (Tooltip - Extended)
 {
-Heavy spell immune tank which can move on water. Can cast Auto Raketen and Death and Decay.|n|n|cffffcc00Begrenzt auf 1.|r
+Heavy spell immune tank which can move on water. Can cast Auto-Raketen and Death and Decay.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 38558
@@ -87504,7 +87504,7 @@ Purchase Gilneas Banner
 STRING 38934
 // Items: I0OZ (Gilneas Banner), Description (Description)
 {
-Conjures a Lordaeron Banner.
+Conjures a Banner von Lordaeron.
 }
 
 STRING 38935
@@ -91110,7 +91110,7 @@ Hire Multi-Tier Hydra
 STRING 40891
 // Units: n0FU (Multi-Tier Hydra), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 1)
+(Stufe 1)
 }
 
 STRING 40892
@@ -91128,7 +91128,7 @@ Hire Multi-Tier Hydra
 STRING 40894
 // Units: n0FV (Multi-Tier Hydra), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 2)
+(Stufe 2)
 }
 
 STRING 40895
@@ -91146,7 +91146,7 @@ Hire Multi-Tier Hydra
 STRING 40897
 // Units: n0FW (Multi-Tier Hydra), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 3)
+(Stufe 3)
 }
 
 STRING 40898
@@ -94542,13 +94542,13 @@ Bergmann
 STRING 42250
 // Units: h0AC (Advanced Pandaren Temple), EditorSuffix (Name - Editor Suffix)
 {
-(Pandaren) (Tier 2)
+(Pandaren) (Stufe 2)
 }
 
 STRING 42251
 // Units: h0AD (Great Pandaren Temple), EditorSuffix (Name - Editor Suffix)
 {
-(Pandaren) (Tier 3)
+(Pandaren) (Stufe 3)
 }
 
 STRING 42252
@@ -95134,7 +95134,7 @@ Melee spellcaster. Can initially cast Gebrüll, which increases attack damage. C
 }
 
 STRING 42388
-// Units: o0BG (Savage Tower), Ubertip (Tooltip - Extended)
+// Units: o0BG (Wilder Turm), Ubertip (Tooltip - Extended)
 {
 Verteidigungsgebäude. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -98040,7 +98040,7 @@ Zentaurenlager errichten
 STRING 43511
 // Units: o06V (Centaur Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Zentauren) (Rathaus Tier 1)
+(Zentauren) (Rathaus Stufe 1)
 }
 
 STRING 43512
@@ -105460,7 +105460,7 @@ STRING 49531
 }
 
 STRING 49549
-// Items: I0XA (Kitchen Knife), Ubertip (Tooltip - Extended)
+// Items: I0XA (Küchenmesser), Ubertip (Tooltip - Extended)
 {
 Sharp knife of a cook. Grants <A1SH,DataA1> damage and allows cutting ingredients.|n|nUse on a food item to increase the charges by 1.
 }
@@ -105874,7 +105874,7 @@ Koch
 }
 
 STRING 49952
-// Units: n0J8 (Fish Market), Name (Name)
+// Units: n0J8 (Fischmarkt), Name (Name)
 {
 Fischmarkt
 }
@@ -105958,7 +105958,7 @@ Buch des Kochens erwerben
 }
 
 STRING 49968
-// Units: n0J8 (Fish Market), Tip (Tooltip - Basic)
+// Units: n0J8 (Fischmarkt), Tip (Tooltip - Basic)
 {
 Fischmarkt errichten
 }
@@ -106369,7 +106369,7 @@ Winzige Feuerstelle errichten
 }
 
 STRING 50044
-// Units: n0J8 (Fish Market), EditorSuffix (Name - Editor Suffix)
+// Units: n0J8 (Fischmarkt), EditorSuffix (Name - Editor Suffix)
 {
 (Fischer)
 }
@@ -106513,27 +106513,27 @@ Increases attack and movement speed of the hero.
 }
 
 STRING 50072
-// Items: I0X8 (Tiny Fish Market), Name (Name)
+// Items: I0X8 (Tiny Fischmarkt), Name (Name)
 {
-Tiny Fish Market
+Winziger Fischmarkt
 }
 
 STRING 50073
-// Items: I0X8 (Tiny Fish Market), Tip (Tooltip - Basic)
+// Items: I0X8 (Tiny Fischmarkt), Tip (Tooltip - Basic)
 {
-Purchase Tiny Fish Market
+Winzigen Fischmarkt erwerben
 }
 
 STRING 50074
-// Items: I0X8 (Tiny Fish Market), Description (Description)
+// Items: I0X8 (Tiny Fischmarkt), Description (Description)
 {
-Creates a Fish Market.
+Errichtet einen Fischmarkt.
 }
 
 STRING 50075
-// Items: I0X8 (Tiny Fish Market), Ubertip (Tooltip - Extended)
+// Items: I0X8 (Tiny Fischmarkt), Ubertip (Tooltip - Extended)
 {
-Creates a Fish Market at a target location.
+Errichtet am Zielort einen Fischmarkt.
 }
 
 STRING 50078
@@ -106587,13 +106587,13 @@ Angelrute erwerben
 STRING 50126
 // Items: I0X9 (Fishing Rod), Ubertip (Tooltip - Extended)
 {
-Allows fishing in water.
+Ermöglicht das Fischen im Wasser.
 }
 
 STRING 50127
 // Items: I0X9 (Fishing Rod), Description (Description)
 {
-Allows fishing in water.
+Ermöglicht das Fischen im Wasser.
 }
 
 STRING 50144
@@ -106635,7 +106635,7 @@ Hai anheuern
 STRING 50151
 // Items: I0WX (Fisherman), Ubertip (Tooltip - Extended)
 {
-Craft fishing equipment which allow gathering meat:|n- Tiny Fischerei Port|n- Reuse|n- Angelrute|n- Fish Market
+Craft fishing equipment which allow gathering meat:|n- Tiny Fischerei Port|n- Reuse|n- Angelrute|n- Fischmarkt
 }
 
 STRING 50152
@@ -106651,19 +106651,19 @@ The Fischer uses his knowledge to craft a Reuse.
 }
 
 STRING 50154
-// Abilities: A1UI (Fish Market), Name (Name)
+// Abilities: A1UI (Fischmarkt), Name (Name)
 {
-Fish Market
+Fischmarkt
 }
 
 STRING 50155
-// Abilities: A1UI (Fish Market), Tip (Tooltip - Normal)
+// Abilities: A1UI (Fischmarkt), Tip (Tooltip - Normal)
 {
-Fish Market
+Fischmarkt
 }
 
 STRING 50156
-// Abilities: A1UI (Fish Market), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1UI (Fischmarkt), Ubertip (Tooltip - Normal - Extended)
 {
 Selling Fish gives additional 10 gold per charge.
 }
@@ -106675,19 +106675,19 @@ D
 }
 
 STRING 50159
-// Items: I0XA (Kitchen Knife), Name (Name)
+// Items: I0XA (Küchenmesser), Name (Name)
 {
 Küchenmesser
 }
 
 STRING 50160
-// Items: I0XA (Kitchen Knife), Description (Description)
+// Items: I0XA (Küchenmesser), Description (Description)
 {
 Sharp knife of a cook. Grants <A1SH,DataA1> damage and allows cutting ingredients.
 }
 
 STRING 50162
-// Items: I0XA (Kitchen Knife), Tip (Tooltip - Basic)
+// Items: I0XA (Küchenmesser), Tip (Tooltip - Basic)
 {
 Küchenmesser erwerben
 }
@@ -106695,7 +106695,7 @@ Küchenmesser erwerben
 STRING 50163
 // Items: I0XC (Recipe), Description (Description)
 {
-Increases the number of crafted menus per charge.
+Erhöht mit jeder Aufladung die Anzahl hergestellter Menüs.
 }
 
 STRING 50165
@@ -106707,7 +106707,7 @@ Zutaten schneiden
 STRING 50166
 // Abilities: A1UM (Cut Ingredients), EditorSuffix (Editor Suffix)
 {
-(Kitchen Knife)
+(Küchenmesser)
 }
 
 STRING 50167
@@ -107673,7 +107673,7 @@ Ausbau zur Magischen Arkonite-Verteidigung
 STRING 50447
 // Units: n0FP (Gathering Hall), EditorSuffix (Name - Editor Suffix)
 {
-(Murlocs) (Tier 1)
+(Murlocs) (Stufe 1)
 }
 
 STRING 50448
@@ -107685,13 +107685,13 @@ STRING 50448
 STRING 50449
 // Units: n0G5 (Gathering Fortress), EditorSuffix (Name - Editor Suffix)
 {
-(Murlocs) (Tier 3)
+(Murlocs) (Stufe 3)
 }
 
 STRING 50450
 // Units: n0G6 (Gathering Stronghold), EditorSuffix (Name - Editor Suffix)
 {
-(Murlocs) (Tier 2)
+(Murlocs) (Stufe 2)
 }
 
 STRING 50451
@@ -108621,7 +108621,7 @@ Arbeiter ausbilden
 STRING 50735
 // Units: o08V (Twisted Halls), EditorSuffix (Name - Editor Suffix)
 {
-(Gesichtslose) (Tier 1)
+(Gesichtslose) (Stufe 1)
 }
 
 STRING 50737
@@ -109065,7 +109065,7 @@ STRING 50856
 STRING 50857
 // Units: o092 (Whispering Chambers), EditorSuffix (Name - Editor Suffix)
 {
-(Gesichtslose) (Tier 2)
+(Gesichtslose) (Stufe 2)
 }
 
 STRING 50858
@@ -109095,7 +109095,7 @@ Ausbau zur Kathedrale des Wahnsinns
 STRING 50862
 // Units: o093 (Cathedral of Madness), EditorSuffix (Name - Editor Suffix)
 {
-(Gesichtslose) (Tier 3)
+(Gesichtslose) (Stufe 3)
 }
 
 STRING 50863
@@ -109359,7 +109359,7 @@ STRING 50927
 STRING 50928
 // Upgrades: R0GM (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Creature Armor
+Kreaturen-Panzer
 }
 
 STRING 50929
@@ -111393,19 +111393,19 @@ STRING 51616
 STRING 51623
 // Units: u005 (Demon Gate), EditorSuffix (Name - Editor Suffix)
 {
-(Dämonen) (Tier 1)
+(Dämonen) (Stufe 1)
 }
 
 STRING 51624
 // Units: u00E (Large Demon Gate), EditorSuffix (Name - Editor Suffix)
 {
-(Dämonen) (Tier 2)
+(Dämonen) (Stufe 2)
 }
 
 STRING 51625
 // Units: u00F (Gigantic Demon Gate), EditorSuffix (Name - Editor Suffix)
 {
-(Dämonen) (Tier 3)
+(Dämonen) (Stufe 3)
 }
 
 STRING 51626
@@ -112197,7 +112197,7 @@ Der Ausbau zum Tempel der Gezeiten ermöglicht die Produktion weiterer Gebäude-
 STRING 51859
 // Units: nntt (Temple of Tides), EditorSuffix (Name - Editor Suffix)
 {
-(Naga) (Tier 2)
+(Naga) (Stufe 2)
 }
 
 STRING 51860
@@ -112209,13 +112209,13 @@ STRING 51860
 STRING 51861
 // Units: n05M (Temple of Water), EditorSuffix (Name - Editor Suffix)
 {
-(Naga) (Tier 1)
+(Naga) (Stufe 1)
 }
 
 STRING 51863
 // Units: n05N (Temple of Seas), EditorSuffix (Name - Editor Suffix)
 {
-(Naga) (Tier 3)
+(Naga) (Stufe 3)
 }
 
 STRING 51864
@@ -114797,7 +114797,7 @@ Immobilie Silbermond kaufen
 STRING 55039
 // Units: h031 (Dwarf Castle), EditorSuffix (Name - Editor Suffix)
 {
-(Zwerge) (Tier 3)
+(Zwerge) (Stufe 3)
 }
 
 STRING 55040
@@ -115052,7 +115052,7 @@ After having freed themselves from the demonic threat, Thrall´s Orcs and Cairne
 STRING 55304
 // Units: o09Y (Advanced Kobold Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Kobolde) (Tier 2)
+(Kobolde) (Stufe 2)
 }
 
 STRING 55305
@@ -115070,7 +115070,7 @@ Ausbau zum Hoch entwickelten Kobold-Lager ermöglicht die Produktion weiterer Ge
 STRING 55307
 // Units: o09Z (Fortified Kobold Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Kobolde) (Tier 3)
+(Kobolde) (Stufe 3)
 }
 
 STRING 55308
@@ -115191,7 +115191,7 @@ Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir
 }
 
 STRING 55340
-// Units: o0BA (Lumberyard), Ubertip (Tooltip - Extended)
+// Units: o0BA (Holzlager), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for improved armor, melee weapons, and ranged weapons.
 }
@@ -117065,7 +117065,7 @@ The citadel of the Lich-König.
 STRING 55963
 // Units: o071 (Manger), EditorSuffix (Name - Editor Suffix)
 {
-(Stacheleber) (Tier 1)
+(Stacheleber) (Stufe 1)
 }
 
 STRING 55964
@@ -118361,7 +118361,7 @@ Ausbau zum Fortgeschrittenen Zentaurenlager
 STRING 56573
 // Units: o0AI (Advanced Centaur Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Zentauren) (Rathaus Tier 2)
+(Zentauren) (Rathaus Stufe 2)
 }
 
 STRING 56574
@@ -118385,7 +118385,7 @@ Ausbau zum Befestigten Zentaurenlager
 STRING 56577
 // Units: o0AJ (Fortified Centaur Camp), EditorSuffix (Name - Editor Suffix)
 {
-(Zentauren) (Rathaus Tier 3)
+(Zentauren) (Rathaus Stufe 3)
 }
 
 STRING 56578
@@ -119857,7 +119857,7 @@ Erhöht dauerhaft den Schaden.
 STRING 57344
 // Units: n026 (Furbolg Tribal Center), EditorSuffix (Name - Editor Suffix)
 {
-(Furbolgs) (Tier 1-3)
+(Furbolgs) (Stufe 1-3)
 }
 
 STRING 57345
@@ -122569,7 +122569,7 @@ Weckt den Kriegs-Golem auf.
 STRING 58096
 // Abilities: A0F8 (Sleep Form), Ubertip (Tooltip - Normal - Extended)
 {
-Transforms the Kriegs-Golem into a statue that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> hit points per second. |nThe Kriegs-Golem cannot attack in this form.
+Transforms the Kriegs-Golem into a statue that is immune to spells, gains additional armor and has a regeneration rate of <Astn,DataE1> Trefferpunkten pro Sekunde. |nThe Kriegs-Golem cannot attack in this form.
 }
 
 STRING 58097
@@ -124093,7 +124093,7 @@ Zwergen-Minenschacht errichten
 STRING 59720
 // Units: u011 (Dwarf Mine Shaft), Ubertip (Tooltip - Extended)
 {
-Constructs a Minenschacht, so Arbeiters can collect resources from the Gold Mine.
+Errichtet einen Minenschacht, damit Arbeiter Rohstoffe aus der Goldmine sammeln können.
 }
 
 STRING 59721
@@ -124261,13 +124261,13 @@ Hochelfen-Arbeiter beschwören
 STRING 60159
 // Abilities: A0G6 (Sunwell Resurrection), Name (Name)
 {
-Sonnenbrunnen Auferstehung
+Sonnenbrunnen-Auferstehung
 }
 
 STRING 60160
 // Abilities: A0G6 (Sunwell Resurrection), Tip (Tooltip - Normal)
 {
-Sonnenbrunnen Auferstehung
+Sonnenbrunnen-Auferstehung
 }
 
 STRING 60162
