@@ -8,11 +8,13 @@ globals
     private group array computerTownHalls
     private group array computerShipyards
     private group array computerNavy
+    private group array computerUnits
     private trigger playerLeavesTrigger = CreateTrigger()
     private trigger allianceChangeTrigger = CreateTrigger()
     private trigger heroLevelTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private trigger constructFinishTrigger = CreateTrigger()
+    private trigger trainFinishTrigger = CreateTrigger()
     private timer autoRevivalTimer = CreateTimer()
     private timer autoCraftTimer = CreateTimer()
     private timer autoAttackNavyTimer = CreateTimer()
@@ -541,10 +543,28 @@ private function TriggerConditionHeroLevel takes nothing returns boolean
     return false
 endfunction
 
+private function PlayerHeroesAreDead takes player whichPlayer returns boolean
+    local group heroes = GetPlayerHeroes(whichPlayer)
+    local integer i = 0
+    local integer max = BlzGroupGetSize(heroes)
+    local boolean result = true
+    loop
+        exitwhen (i == max or not result)
+        if (IsUnitAliveBJ(BlzGroupUnitAt(heroes, i))) then
+            set result = false
+        endif
+        set i = i + 1
+    endloop
+    call GroupClear(heroes)
+    call DestroyGroup(heroes)
+    set heroes = null
+    return result
+endfunction
+
 private function TriggerConditionDeath takes nothing returns boolean
     local player owner = GetOwningPlayer(GetTriggerUnit())
     local integer playerId = GetPlayerId(owner)
-    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
+    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER and GetMapAllowConfigureAIPlayer(owner)) then
         if (IsUnitInGroup(GetTriggerUnit(), computerTownHalls[playerId])) then
             call GroupRemoveUnit(computerTownHalls[playerId], GetTriggerUnit())
 
@@ -557,7 +577,9 @@ private function TriggerConditionDeath takes nothing returns boolean
                     call AdjustPlayerStateBJ(100, owner, PLAYER_STATE_RESOURCE_GOLD)
                 endif
             endif
-        elseif (IsUnitInGroup(GetTriggerUnit(), computerShipyards[playerId])) then
+        endif
+
+        if (IsUnitInGroup(GetTriggerUnit(), computerShipyards[playerId])) then
             call GroupRemoveUnit(computerShipyards[playerId], GetTriggerUnit())
 
             // respawn last shipyard
@@ -566,9 +588,13 @@ private function TriggerConditionDeath takes nothing returns boolean
             endif
         endif
 
-        if (not udg_AIRespawn and GetPlayerState(owner, PLAYER_STATE_GAME_RESULT) != 1 and GetMapAllowConfigureAIPlayer(owner)) then
-            call CustomDefeatBJ(owner, GetLocalizedString("GAMEOVER_DEFEAT"))
-            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_DEFEATED_Y")).s(GetPlayerNameColored(GetOwningPlayer(GetKillingUnit()))).s(GetPlayerNameColored(owner)).result())
+        if (IsUnitInGroup(GetTriggerUnit(), computerUnits[playerId])) then
+            call GroupRemoveUnit(computerUnits[playerId], GetTriggerUnit())
+        endif
+
+        if (not udg_AIRespawn and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and GetPlayerState(owner, PLAYER_STATE_GAME_RESULT) != 1 and BlzGroupGetSize(computerUnits[playerId]) == 0 and PlayerHeroesAreDead(owner)) then
+            call CustomDefeatBJ(owner, GetLocalizedStringSafe("GAMEOVER_DEFEAT"))
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("X_HAS_DEFEATED_Y")).s(GetPlayerNameColored(GetOwningPlayer(GetKillingUnit()))).s(GetPlayerNameColored(owner)).result())
         endif
     endif
     set owner = null
@@ -579,7 +605,7 @@ private function TriggerConditionConstructFinish takes nothing returns boolean
     local player owner = GetOwningPlayer(GetConstructedStructure())
     local integer playerId = GetPlayerId(owner)
     if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
-        if (IsUnitType(GetConstructedStructure(), UNIT_TYPE_TOWNHALL)  and not IsUnitInGroup(GetConstructedStructure(), computerTownHalls[playerId])) then
+        if (IsUnitType(GetConstructedStructure(), UNIT_TYPE_TOWNHALL)) then
             call GroupAddUnit(computerTownHalls[playerId], GetConstructedStructure())
 
             if (BlzGroupGetSize(computerTownHalls[playerId]) == 01) then
@@ -589,6 +615,17 @@ private function TriggerConditionConstructFinish takes nothing returns boolean
                 endif
             endif
         endif
+        call GroupAddUnit(computerUnits[playerId], GetConstructedStructure())
+    endif
+    set owner = null
+    return false
+endfunction
+
+private function TriggerConditionTrainFinish takes nothing returns boolean
+    local player owner = GetOwningPlayer(GetTrainedUnit())
+    local integer playerId = GetPlayerId(owner)
+    if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
+        call GroupAddUnit(computerUnits[playerId], GetTrainedUnit())
     endif
     set owner = null
     return false
@@ -809,6 +846,7 @@ private function Init takes nothing returns nothing
         set computerTownHalls[i] = CreateGroup()
         set computerShipyards[i] = CreateGroup()
         set computerNavy[i] = CreateGroup()
+        set computerUnits[i] = CreateGroup()
 
         if (GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             call ForceAddPlayer(computerPlayers, slotPlayer)
@@ -841,6 +879,9 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
 
+    call TriggerRegisterAnyUnitEventBJ(trainFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(trainFinishTrigger, Condition(function TriggerConditionTrainFinish))
+
     call TriggerAddAction(startLobbySettingsTrigger, function StartLobbySettings)
 
     /*
@@ -859,5 +900,22 @@ private function Init takes nothing returns nothing
 
     call OnStartGame(function StartGame)
 endfunction
+
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    local integer playerId = GetPlayerId(GetOwningPlayer(whichUnit))
+    if (IsUnitInGroup(whichUnit, computerTownHalls[playerId])) then
+        call GroupRemoveUnit(computerTownHalls[playerId], whichUnit)
+    endif
+
+    if (IsUnitInGroup(whichUnit, computerShipyards[playerId])) then
+        call GroupRemoveUnit(computerShipyards[playerId], whichUnit)
+    endif
+
+    if (IsUnitInGroup(whichUnit, computerUnits[playerId])) then
+        call GroupRemoveUnit(computerUnits[playerId], whichUnit)
+    endif
+endfunction
+
+hook RemoveUnit RemoveUnitHook
 
 endlibrary
