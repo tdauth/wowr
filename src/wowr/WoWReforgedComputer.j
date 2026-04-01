@@ -745,11 +745,11 @@ private function EnumStartLobbySettings takes nothing returns nothing
     // Difficulty
     call CommandAI(GetEnumPlayer(), COMMAND_EASY + AiPlayersUIGetDifficulty(GetEnumPlayer()), 0)
     // Allied vision
-    call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], teamPlayers[GetPlayerTeam(GetEnumPlayer())], bj_ALLIANCE_ALLIED_VISION)
-    call SetForceAllianceStateBJ(teamPlayers[GetPlayerTeam(GetEnumPlayer())], bj_FORCE_PLAYER[playerId], bj_ALLIANCE_ALLIED_VISION)
+    call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], GetMapTeamPlayers(GetPlayerTeam(GetEnumPlayer())), bj_ALLIANCE_ALLIED_VISION)
+    call SetForceAllianceStateBJ(GetMapTeamPlayers(GetPlayerTeam(GetEnumPlayer())), bj_FORCE_PLAYER[playerId], bj_ALLIANCE_ALLIED_VISION)
     // Shared control
     if (AiPlayersUIGetSharedControl(GetEnumPlayer()) == 1) then
-        call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], teamPlayers[GetPlayerTeam(GetEnumPlayer())], bj_ALLIANCE_ALLIED_ADVUNITS)
+        call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], GetMapTeamPlayers(GetPlayerTeam(GetEnumPlayer())), bj_ALLIANCE_ALLIED_ADVUNITS)
     endif
 endfunction
 
@@ -774,17 +774,10 @@ endfunction
 
 private function Init takes nothing returns nothing
     local player slotPlayer = null
-    local integer team = 0
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
-        set team = GetPlayerTeam(slotPlayer)
-
-        if (teamPlayers[team] == null) then
-            set teamPlayers[team] = CreateForce()
-            call ForceAddPlayer(teamPlayers[team], slotPlayer)
-        endif
 
         set computerTownHalls[i] = CreateGroup()
         set computerShipyards[i] = CreateGroup()

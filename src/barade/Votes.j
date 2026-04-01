@@ -285,6 +285,11 @@ function VoteSetYesTrigger takes integer vote, trigger whichTrigger returns noth
     set VoteYesTrigger[vote] = whichTrigger
 endfunction
 
+function VoteSetYesTriggerAction takes integer vote, code triggerAction returns nothing
+    set VoteYesTrigger[vote] = CreateTrigger()
+    call TriggerAddAction(VoteYesTrigger[vote], triggerAction)
+endfunction
+
 function VoteRemovePlayer takes integer vote, player whichPlayer returns nothing
     call ForceRemovePlayer(VotePlayers[vote], whichPlayer)
 endfunction

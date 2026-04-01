@@ -1,5 +1,23 @@
 library WoWReforgedMapData initializer Init requires StringUtils, WoWReforgedTerrain, WoWReforgedVIPs
 
+globals
+    private force lobbyPlayers = CreateForce()
+    private force array teamPlayers
+    private constant integer teams = 3
+endglobals
+
+function GetMapLobbyPlayers takes nothing returns force
+    return lobbyPlayers
+endfunction
+
+function GetMapTeamPlayers takes integer team returns force
+    return teamPlayers[team]
+endfunction
+
+function GetMapTeams takes nothing returns integer
+    return teams
+endfunction
+
 // Do not use udg_xxxx variables which might not be initialized yet.
 function GetMapGaiaPlayer takes nothing returns player
     return Player(PLAYER_RESCUABLE)
@@ -42,7 +60,7 @@ function GetMapWaterNeutralZoneFacing takes player whichPlayer returns real
 endfunction
 
 function GetMapAllowConfigureAIPlayer takes player whichPlayer returns boolean
-    return whichPlayer != GetMapBossesPlayer() and whichPlayer != GetMapGaiaPlayer()
+    return whichPlayer != GetMapBossesPlayer() and whichPlayer != GetMapGaiaPlayer() and whichPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and whichPlayer != Player(PLAYER_NEUTRAL_PASSIVE)
 endfunction
 
 function AddMapSettings takes framehandle textArea returns nothing
@@ -50,6 +68,24 @@ function AddMapSettings takes framehandle textArea returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    local player slotPlayer = null
+    local integer team = 0
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYER_SLOTS)
+        set slotPlayer = Player(i)
+        if (GetMapAllowConfigureAIPlayer(slotPlayer)) then
+            call ForceAddPlayer(lobbyPlayers, slotPlayer)
+        endif
+        set team = GetPlayerTeam(slotPlayer)
+        if (teamPlayers[team] == null) then
+            set teamPlayers[team] = CreateForce()
+        endif
+        call ForceAddPlayer(teamPlayers[team], slotPlayer)
+        set slotPlayer = null
+        set i = i + 1
+    endloop
+
     call AddMapTile(TILE_TYPE_DIRT)
     call AddMapTile(TILE_TYPE_ROUGH_DIRT)
     call AddMapTile(TILE_TYPE_GRASSY_DIRT)

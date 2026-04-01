@@ -445,7 +445,7 @@ private function Init takes nothing returns nothing
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_START_LOCATIONS_TITLE"), GetLocalizedStringSafe("IQ_START_LOCATIONS_DESCRIPTION"), "ReplaceableTextures\\WorldEditUI\\StartingLocation.blp")
 
-    set udg_QuestVictory = AddInfoQuest(GetLocalizedStringSafe("IQ_VICTORY_TITLE"), GetLocalizedStringSafe("IQ_VICTORY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp")
+    set udg_QuestVictory = AddInfoQuest(Format(GetLocalizedStringSafe("IQ_VICTORY_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result(), GetLocalizedStringSafe("IQ_VICTORY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_VICTORY"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_CREEPS_TITLE"), Format(GetLocalizedStringSafe("IQ_CREEPS_DESCRIPTION")).t(R2I(UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp")
@@ -481,7 +481,7 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_GOBLIN"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_JAINA"))
 
-    call AddInfoQuest(GetLocalizedStringSafe("IQ_SAVE_CODES_TITLE"), GetLocalizedStringSafe("IQ_SAVE_CODES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNIconSave.blp")
+    set udg_QuestSaveAndLoad = AddInfoQuest(Format(GetLocalizedStringSafe("IQ_SAVE_CODES_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result(), GetLocalizedStringSafe("IQ_SAVE_CODES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNIconSave.blp")
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_PORTALS_TITLE"), GetLocalizedStringSafe("IQ_PORTALS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNWaygate.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_0"))
