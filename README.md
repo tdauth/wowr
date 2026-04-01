@@ -109,14 +109,14 @@ Run [check.bat](./scripts/check.bat) on Windows to check all custom AI scripts f
 
 ### Warlords
 
-The *.ai files from [war3mapImported](./wowr.w3x/war3mapImported) folder contain a very basic warlord AI for computer players.
+The *.ai files from [wowr](./wowr.w3x/wowr) folder contain a very basic warlord AI for computer players.
 Warlord computer players start with a town hall and workers besides their hero.
 they will get a new town hall automatically to rebuild their base if the auto respawn is enabled whenever they lose all workers and town halls.
 This prevents ending the game for an AI.
 
 ### Freelancers
 
-The file [Freelancer.ai](./wowr.w3x/war3mapImported/Freelancer.ai) is imported into the map whenever it is updated.
+The file [Freelancer.ai](./wowr.w3x/wowr/Freelancer.ai) is imported into the map whenever it is updated.
 It contains a very basic freelancer AI for computer players.
 
 ## Custom Systems
@@ -127,7 +127,7 @@ Each system provides a prototype map which shows you how to use it.
 
 ## Custom FDF Files
 
-All custom FDF files are listed in the file [wowrTOC.toc](./wowr.w3x/war3mapImported/wowrTOC.toc).
+All custom FDF files are listed in the file [wowrTOC.toc](./wowr.w3x/wowr/wowrTOC.toc).
 It has to be loaded with `BlzLoadTOCFile` before using any `GetLocalizedString` calls.
 
 ## Internationalization
@@ -135,8 +135,8 @@ It has to be loaded with `BlzLoadTOCFile` before using any `GetLocalizedString` 
 There can be translations of the map into different languages.
 These are the existing translations so far:
 
-* 🇺🇸 English: [map strings](./wowr.w3x/war3map.wts), [global strings](./wowr.w3x/war3mapImported/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/war3mapMisc.txt)
-* 🇩🇪 German: [map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [global strings](./wowr.w3x/_Locales/deDE.w3mod/war3mapImported/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/_Locales/deDE.w3mod/war3mapMisc.txt) The German translation uses the German translations from of Warcraft III: The Frozen Throne rather than Warcraft III: Reforged which is more nostalgic and overall much better in the oppinion of the map creator.
+* 🇺🇸 English: [map strings](./wowr.w3x/war3map.wts), [global strings](./wowr.w3x/wowr/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/war3mapMisc.txt)
+* 🇩🇪 German: [map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [global strings](./wowr.w3x/_Locales/deDE.w3mod/wowr/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/_Locales/deDE.w3mod/war3mapMisc.txt) The German translation uses the German translations from of Warcraft III: The Frozen Throne rather than Warcraft III: Reforged which is more nostalgic and overall much better in the oppinion of the map creator.
 
 The files have to be updated according to the English files which are the main files with the script [diffstrings.bat](./scripts/diffstrings.bat).
 It uses the tool [wc3trans](https://github.com/tdauth/wc3trans) to update the map strings and [Meld](https://meldmerge.org/) to diff the files.

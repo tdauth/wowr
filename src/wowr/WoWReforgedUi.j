@@ -71,7 +71,7 @@ function SetTextAreaText takes framehandle f, string text returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
-    call BlzLoadTOCFile("war3mapImported\\wowrTOC.toc")
+    call BlzLoadTOCFile("wowr\\wowrTOC.toc")
 endfunction
 
 endlibrary

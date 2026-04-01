@@ -977,7 +977,7 @@ private function AddFreelancer takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceFreelancer = r
     call SetRaceTavernItemType(r, ITEM_FREELANCER)
-    call SetRaceAiScript(r, "war3mapImported\\Freelancer.ai")
+    call SetRaceAiScript(r, "wowr\\Freelancer.ai")
     call SetRaceTeam(r, TEAM_NONE)
 
     // buildings
@@ -1053,7 +1053,7 @@ private function AddHuman takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceHuman = r
     call SetRaceTavernItemType(r, ITEM_HUMAN)
-    call SetRaceAiScript(r, "war3mapImported\\Human.ai")
+    call SetRaceAiScript(r, "wowr\\Human.ai")
     call SetRaceItemType(r, ITEM_HUMAN_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -1153,7 +1153,7 @@ private function AddOrc takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceOrc = r
     call SetRaceTavernItemType(r, ITEM_ORC)
-    call SetRaceAiScript(r, "war3mapImported\\Orc.ai")
+    call SetRaceAiScript(r, "wowr\\Orc.ai")
     call SetRaceItemType(r, ITEM_ORC_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -1248,7 +1248,7 @@ private function AddUndead takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceUndead = r
     call SetRaceTavernItemType(r, ITEM_UNDEAD)
-    call SetRaceAiScript(r, "war3mapImported\\Undead.ai")
+    call SetRaceAiScript(r, "wowr\\Undead.ai")
     call SetRaceItemType(r, ITEM_UNDEAD_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
     call SetRaceHasFootmanWorker(r, true)
@@ -1351,7 +1351,7 @@ private function AddNightElf takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceNightElf = r
     call SetRaceTavernItemType(r, ITEM_ELF)
-    call SetRaceAiScript(r, "war3mapImported\\NightElf.ai")
+    call SetRaceAiScript(r, "wowr\\NightElf.ai")
     call SetRaceItemType(r, ITEM_ELF_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -1450,7 +1450,7 @@ private function AddBloodElf takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceBloodElf = r
     call SetRaceTavernItemType(r, ITEM_BLOOD_ELF)
-    call SetRaceAiScript(r, "war3mapImported\\BloodElf.ai")
+    call SetRaceAiScript(r, "wowr\\BloodElf.ai")
     call SetRaceItemType(r, ITEM_BLOOD_ELF_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -1549,7 +1549,7 @@ private function AddNaga takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceNaga = r
     call SetRaceTavernItemType(r, ITEM_NAGA)
-    call SetRaceAiScript(r, "war3mapImported\\Naga.ai")
+    call SetRaceAiScript(r, "wowr\\Naga.ai")
     call SetRaceItemType(r, ITEM_NAGA_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
     
@@ -1641,7 +1641,7 @@ private function AddDraenei takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceDraenei = r
     call SetRaceTavernItemType(r, ITEM_EREDAR)
-    call SetRaceAiScript(r, "war3mapImported\\Draenei.ai")
+    call SetRaceAiScript(r, "wowr\\Draenei.ai")
     call SetRaceItemType(r, ITEM_EREDAR_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -1723,7 +1723,7 @@ private function AddLostOnes takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceLostOnes = r
     call SetRaceTavernItemType(r, ITEM_LOST_ONES)
-    call SetRaceAiScript(r, "war3mapImported\\LostOnes.ai")
+    call SetRaceAiScript(r, "wowr\\LostOnes.ai")
     call SetRaceItemType(r, ITEM_LOST_ONES_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -1807,7 +1807,7 @@ private function AddDemon takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceDemon = r
     call SetRaceTavernItemType(r, ITEM_DEMON)
-    call SetRaceAiScript(r, "war3mapImported\\Demon.ai")
+    call SetRaceAiScript(r, "wowr\\Demon.ai")
     call SetRaceItemType(r, ITEM_DEMON_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -1911,7 +1911,7 @@ private function AddFurbolg takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceFurbolg = r
     call SetRaceTavernItemType(r, ITEM_FURBOLG)
-    call SetRaceAiScript(r, "war3mapImported\\Furbolg.ai")
+    call SetRaceAiScript(r, "wowr\\Furbolg.ai")
     call SetRaceItemType(r, ITEM_FURBOLG_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -2006,7 +2006,7 @@ private function AddGoblin takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceGoblin = r
     call SetRaceTavernItemType(r, ITEM_GOBLIN)
-    call SetRaceAiScript(r, "war3mapImported\\Goblin.ai")
+    call SetRaceAiScript(r, "wowr\\Goblin.ai")
     call SetRaceItemType(r, ITEM_GOBLIN_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -2117,7 +2117,7 @@ private function AddDwarf takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceDwarf = r
     call SetRaceTavernItemType(r, ITEM_DWARF)
-    call SetRaceAiScript(r, "war3mapImported\\Dwarf.ai")
+    call SetRaceAiScript(r, "wowr\\Dwarf.ai")
     call SetRaceItemType(r, ITEM_DWARF_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -2223,7 +2223,7 @@ private function AddHighElf takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceHighElf = r
     call SetRaceTavernItemType(r, ITEM_HIGH_ELF)
-    call SetRaceAiScript(r, "war3mapImported\\HighElf.ai")
+    call SetRaceAiScript(r, "wowr\\HighElf.ai")
     call SetRaceItemType(r, ITEM_HIGH_ELF_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -2320,7 +2320,7 @@ private function AddGnome takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceGnome = r
     call SetRaceTavernItemType(r, ITEM_GNOME)
-    call SetRaceAiScript(r, "war3mapImported\\Gnome.ai")
+    call SetRaceAiScript(r, "wowr\\Gnome.ai")
     call SetRaceItemType(r, ITEM_GNOME_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -2408,7 +2408,7 @@ private function AddTroll takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceTroll = r
     call SetRaceTavernItemType(r, ITEM_TROLL)
-    call SetRaceAiScript(r, "war3mapImported\\Troll.ai")
+    call SetRaceAiScript(r, "wowr\\Troll.ai")
     call SetRaceItemType(r, ITEM_TROLL_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -2504,7 +2504,7 @@ private function AddTauren takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceTauren = r
     call SetRaceTavernItemType(r, ITEM_TAUREN)
-    call SetRaceAiScript(r, "war3mapImported\\Tauren.ai")
+    call SetRaceAiScript(r, "wowr\\Tauren.ai")
     call SetRaceItemType(r, ITEM_TAUREN_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -2592,7 +2592,7 @@ private function AddPandaren takes nothing returns nothing
     local integer r = AddRace()
     set udg_RacePandaren = r
     call SetRaceTavernItemType(r, ITEM_PANDAREN)
-    call SetRaceAiScript(r, "war3mapImported\\Pandaren.ai")
+    call SetRaceAiScript(r, "wowr\\Pandaren.ai")
     call SetRaceItemType(r, ITEM_PANDAREN_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -2689,7 +2689,7 @@ private function AddLordaeron takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceLordaeron = r
     call SetRaceTavernItemType(r, ITEM_LORDAERON)
-    call SetRaceAiScript(r, "war3mapImported\\Lordaeron.ai")
+    call SetRaceAiScript(r, "wowr\\Lordaeron.ai")
     call SetRaceItemType(r, ITEM_LORDAERON_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -2787,7 +2787,7 @@ private function AddStormwind takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceStormwind = r
     call SetRaceTavernItemType(r, ITEM_STORMWIND)
-    call SetRaceAiScript(r, "war3mapImported\\Stormwind.ai")
+    call SetRaceAiScript(r, "wowr\\Stormwind.ai")
     call SetRaceItemType(r, ITEM_STORMWIND_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -2886,7 +2886,7 @@ private function AddDalaran takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceDalaran = r
     call SetRaceTavernItemType(r, ITEM_DALARAN)
-    call SetRaceAiScript(r, "war3mapImported\\Dalaran.ai")
+    call SetRaceAiScript(r, "wowr\\Dalaran.ai")
     call SetRaceItemType(r, ITEM_DALARAN_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -2993,7 +2993,7 @@ private function AddKulTiras takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceKulTiras = r
     call SetRaceTavernItemType(r, ITEM_KUL_TIRAS)
-    call SetRaceAiScript(r, "war3mapImported\\KulTiras.ai")
+    call SetRaceAiScript(r, "wowr\\KulTiras.ai")
     call SetRaceItemType(r, ITEM_KUL_TIRAS_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -3102,7 +3102,7 @@ private function AddWorgen takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceWorgen = r
     call SetRaceTavernItemType(r, ITEM_WORGEN)
-    call SetRaceAiScript(r, "war3mapImported\\Worgen.ai")
+    call SetRaceAiScript(r, "wowr\\Worgen.ai")
     call SetRaceItemType(r, ITEM_WORGEN_SCEPTER)
     call SetRaceTeam(r, TEAM_ALLIANCE)
 
@@ -3200,7 +3200,7 @@ private function AddVrykul takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceVrykul = r
     call SetRaceTavernItemType(r, ITEM_VRYKUL)
-    call SetRaceAiScript(r, "war3mapImported\\Vrykul.ai")
+    call SetRaceAiScript(r, "wowr\\Vrykul.ai")
     call SetRaceItemType(r, ITEM_VRYKUL_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -3292,7 +3292,7 @@ private function AddNerubian takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceNerubian = r
     call SetRaceTavernItemType(r, ITEM_NERUBIAN)
-    call SetRaceAiScript(r, "war3mapImported\\Nerubian.ai")
+    call SetRaceAiScript(r, "wowr\\Nerubian.ai")
     call SetRaceItemType(r, ITEM_NERUBIAN_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -3382,7 +3382,7 @@ private function AddTuskarr takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceTuskarr = r
     call SetRaceTavernItemType(r, ITEM_TUSKARR)
-    call SetRaceAiScript(r, "war3mapImported\\Tuskarr.ai")
+    call SetRaceAiScript(r, "wowr\\Tuskarr.ai")
     call SetRaceItemType(r, ITEM_TUSKARR_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -3477,7 +3477,7 @@ private function AddMurloc takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceMurloc = r
     call SetRaceTavernItemType(r, ITEM_MURLOC)
-    call SetRaceAiScript(r, "war3mapImported\\Murloc.ai")
+    call SetRaceAiScript(r, "wowr\\Murloc.ai")
     call SetRaceItemType(r, ITEM_MURLOC_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -3564,7 +3564,7 @@ private function AddOgre takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceOgre = r
     call SetRaceTavernItemType(r, ITEM_OGRE)
-    call SetRaceAiScript(r, "war3mapImported\\Ogre.ai")
+    call SetRaceAiScript(r, "wowr\\Ogre.ai")
     call SetRaceItemType(r, ITEM_OGRE_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -3665,7 +3665,7 @@ private function AddFelOrc takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceFelOrc = r
     call SetRaceTavernItemType(r, ITEM_FEL_ORC)
-    call SetRaceAiScript(r, "war3mapImported\\FelOrc.ai")
+    call SetRaceAiScript(r, "wowr\\FelOrc.ai")
     call SetRaceItemType(r, ITEM_FEL_ORC_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -3755,7 +3755,7 @@ private function AddFacelessOne takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceFacelessOne = r
     call SetRaceTavernItemType(r, ITEM_FACELESS_ONE)
-    call SetRaceAiScript(r, "war3mapImported\\FacelessOne.ai")
+    call SetRaceAiScript(r, "wowr\\FacelessOne.ai")
     call SetRaceItemType(r, ITEM_FACELESS_ONE_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -3837,7 +3837,7 @@ private function AddSatyr takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceSatyr = r
     call SetRaceTavernItemType(r, ITEM_SATYR)
-    call SetRaceAiScript(r, "war3mapImported\\Satyr.ai")
+    call SetRaceAiScript(r, "wowr\\Satyr.ai")
     call SetRaceItemType(r, ITEM_SATYR_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
 
@@ -3905,7 +3905,7 @@ private function AddCentaur takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceCentaur = r
     call SetRaceTavernItemType(r, ITEM_CENTAUR)
-    call SetRaceAiScript(r, "war3mapImported\\Centaur.ai")
+    call SetRaceAiScript(r, "wowr\\Centaur.ai")
     call SetRaceItemType(r, ITEM_CENTAUR_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -3971,7 +3971,7 @@ private function AddGnoll takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceGnoll = r
     call SetRaceTavernItemType(r, ITEM_GNOLL)
-    call SetRaceAiScript(r, "war3mapImported\\Gnoll.ai")
+    call SetRaceAiScript(r, "wowr\\Gnoll.ai")
     call SetRaceItemType(r, ITEM_GNOLL_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -4028,7 +4028,7 @@ private function AddKobold takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceKobold = r
     call SetRaceTavernItemType(r, ITEM_KOBOLD)
-    call SetRaceAiScript(r, "war3mapImported\\Kobold.ai")
+    call SetRaceAiScript(r, "wowr\\Kobold.ai")
     call SetRaceItemType(r, ITEM_KOBOLD_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -4090,7 +4090,7 @@ private function AddQuillboar takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceQuillboar = r
     call SetRaceTavernItemType(r, ITEM_QUILLBOAR)
-    call SetRaceAiScript(r, "war3mapImported\\Quillboar.ai")
+    call SetRaceAiScript(r, "wowr\\Quillboar.ai")
     call SetRaceItemType(r, ITEM_QUILLBOAR_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -4152,7 +4152,7 @@ private function AddBandit takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceBandit = r
     call SetRaceTavernItemType(r, ITEM_BANDIT)
-    call SetRaceAiScript(r, "war3mapImported\\Bandit.ai")
+    call SetRaceAiScript(r, "wowr\\Bandit.ai")
     call SetRaceItemType(r, ITEM_BANDIT_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -4245,7 +4245,7 @@ private function AddDungeon takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceDungeon = r
     call SetRaceTavernItemType(r, ITEM_DUNGEON)
-    call SetRaceAiScript(r, "war3mapImported\\Dungeon.ai")
+    call SetRaceAiScript(r, "wowr\\Dungeon.ai")
     call SetRaceItemType(r, ITEM_DUNGEON_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
@@ -4337,7 +4337,7 @@ private function AddDragonkin takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceDragonkin = r
     call SetRaceTavernItemType(r, ITEM_DRAGONKIN)
-    call SetRaceAiScript(r, "war3mapImported\\Dragonkin.ai")
+    call SetRaceAiScript(r, "wowr\\Dragonkin.ai")
     call SetRaceItemType(r, ITEM_DRAGONKIN_SCEPTER)
     call SetRaceTeam(r, TEAM_NONE)
 
