@@ -569,6 +569,15 @@ StringList {
     SOURCE_TARGET                      "Quelle/Ziele",
     DIPLOMACY_CHANGE_NOT_ALLOWED       "Sie dürfen die Diplomatie nicht ändern.",
     FROM_TO_X                          "Von %1% zu %2%: %3%",
+    // Alliances
+    ALLIANCE_ALLIED                    "%1% ist nun mit Ihnen verbündet!",
+    ALLIANCE_HOSTILE                   "%1% ist nun mit Ihnen verfeindet!",
+    ALLIANCE_SHARED_CONTROL            "%1% hat nun geteilte Einheiten mit Ihnen!",
+    ALLIANCE_NO_SHARED_CONTROL         "%1% hat nun keine geteilten Einheiten mehr mit Ihnen!",
+    ALLIANCE_SHARED_VISION             "%1% hat nun geteilte Sicht mit Ihnen!",
+    ALLIANCE_NO_SHARED_VISION          "%1% hat nun keine geteilte Sicht mehr mit Ihnen!",
+    ALLIANCE_SHARED_ADVANCED_CONTROL   "%1% hat nun vollständig geteilte Einheiten mit Ihnen!",
+    ALLIANCE_NO_SHARED_ADVANCED_CONTROL"%1% hat nun keine vollständig geteilten Einheiten mehr mit Ihnen!",
     // Tomes
     TOMES_DISABLED                     "Folianten sind deaktiviert.",
     // Backpack

@@ -488,7 +488,7 @@ Orc-Heer
 }
 
 STRING 82
-// Items: I01I (Tyrande´s Mondstein), Name (Name)
+// Items: I01I (Tyrande´s Moonstone), Name (Name)
 {
 Tyrandes Mondstein
 }
@@ -1188,49 +1188,49 @@ A Druid Spell required for Tyrande to shield the Night Elf housings from damagin
 }
 
 STRING 199
-// Items: I01G (Bugged Mondstein), Name (Name)
+// Items: I01G (Bugged Moonstone), Name (Name)
 {
 Bugged Mondstein
 }
 
 STRING 200
-// Items: I01G (Bugged Mondstein), Description (Description)
+// Items: I01G (Bugged Moonstone), Description (Description)
 {
 A somehow bugged Mondstein from Tyrande. Take it to Jaina Proudmoore on Insel Theramore.
 }
 
 STRING 201
-// Items: I01G (Bugged Mondstein), Ubertip (Tooltip - Extended)
+// Items: I01G (Bugged Moonstone), Ubertip (Tooltip - Extended)
 {
 A somehow bugged Mondstein from Tyrande. Take it to Jaina Proudmoore on Insel Theramore.
 }
 
 STRING 202
-// Items: I01H (Enhanced Mondstein), Name (Name)
+// Items: I01H (Enhanced Moonstone), Name (Name)
 {
 Verbesserter Mondstein
 }
 
 STRING 203
-// Items: I01H (Enhanced Mondstein), Description (Description)
+// Items: I01H (Enhanced Moonstone), Description (Description)
 {
 An enhanced Mondstein from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
 }
 
 STRING 204
-// Items: I01H (Enhanced Mondstein), Ubertip (Tooltip - Extended)
+// Items: I01H (Enhanced Moonstone), Ubertip (Tooltip - Extended)
 {
 An enhanced Mondstein from Jaina that should cancel the prolongued Sun Eclipse. Take it to Tyrande on Teldrassil Isle.
 }
 
 STRING 205
-// Items: I01I (Tyrande´s Mondstein), Description (Description)
+// Items: I01I (Tyrande´s Moonstone), Description (Description)
 {
 |cffff8c00Artefakt|r|nA special Mondstein crafted by the Night Elves´ Priestess Tyrande Whisperwind.
 }
 
 STRING 206
-// Items: I01I (Tyrande´s Mondstein), Ubertip (Tooltip - Extended)
+// Items: I01I (Tyrande´s Moonstone), Ubertip (Tooltip - Extended)
 {
 |cffff8c00Artefakt|r|nIncreases the defense of the Hero by 8. Also grants the ability to make a sun eclipse for a short period of time|n|cffffcc00History|r|n|cffffdeadAfter the incident with the prolongued sun eclipse caused by a bugged moonstone was solved, Tyrande gave this special copy of the moonstones to the Hero who helped finding and dispelling the item bug.|r
 }
@@ -1836,7 +1836,7 @@ Wasserturm errichten
 }
 
 STRING 307
-// Abilities: A11P (Pfeilregen), EditorSuffix (Editor Suffix)
+// Abilities: A11P (Rain of Arrows), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -3568,7 +3568,7 @@ Increases Goblin-Magier's mana capacity, mana regeneration rate, hit points, and
 }
 
 STRING 596
-// Units: h074 (Dummy Mondstein), Name (Name)
+// Units: h074 (Dummy Moonstone), Name (Name)
 {
 Dummy Mondstein
 }
@@ -5133,7 +5133,7 @@ Waffenschmiedekunst - Adept
 }
 
 STRING 865
-// Abilities: A11P (Pfeilregen), Name (Name)
+// Abilities: A11P (Rain of Arrows), Name (Name)
 {
 Pfeilregen
 }
@@ -7315,13 +7315,13 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 17|r]
 }
 
 STRING 1236
-// Items: I01Q (Kael´s Rolle der Unterdrückung), Description (Description)
+// Items: I01Q (Kael´s Scroll of Supression), Description (Description)
 {
 Eine Rolle, die einen besonderen Zauber enthält, um Maiev zu fangen.
 }
 
 STRING 1237
-// Items: I01Q (Kael´s Rolle der Unterdrückung), Ubertip (Tooltip - Extended)
+// Items: I01Q (Kael´s Scroll of Supression), Ubertip (Tooltip - Extended)
 {
 Eine Rolle, die einen besonderen Zauber enthält, um Maiev zu fangen. Steht in einem Umkreis von 600 neben Maiev und benutzt die Rolle, um sie zu fangen. Tipp: Die Rolle wirkt nur bei Maiev, glaubt also nicht, dass Ihr andere Helden damit fangen könnt.
 }
@@ -7369,7 +7369,7 @@ This ancient Frost-Wyrm skull has been equipped with handles, turning it into a 
 }
 
 STRING 1245
-// Items: I01Q (Kael´s Rolle der Unterdrückung), Name (Name)
+// Items: I01Q (Kael´s Scroll of Supression), Name (Name)
 {
 Kaels Rolle der Unterdrückung
 }
@@ -9607,7 +9607,7 @@ Magischer Samen
 }
 
 STRING 1626
-// Units: h01T (KI-Labor), Hotkey (Hotkey)
+// Units: h01T (AI Laboratory), Hotkey (Hotkey)
 {
 O
 }
@@ -10999,13 +10999,13 @@ AI Freiberufler Fast Gold Bonus
 }
 
 STRING 1888
-// Units: n09O (Albatrossreiter), Name (Name)
+// Units: n09O (Albatross Rider), Name (Name)
 {
 Albatros-Reiter
 }
 
 STRING 1889
-// Units: n09O (Albatrossreiter), Tip (Tooltip - Basic)
+// Units: n09O (Albatross Rider), Tip (Tooltip - Basic)
 {
 Albatros-Reiter ausbilden
 }
@@ -12040,7 +12040,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 2210
-// Units: o0BD (Elementarhain), Ubertip (Tooltip - Extended)
+// Units: o0BD (Elemental Grove), Ubertip (Tooltip - Extended)
 {
 Spellcaster production building. Trains Gnoll-Schatzjägers and Gnoll Mystweavers. |nAlso contains spell upgrades for Gnoll-Schatzjägers and Gnoll Mystweavers.
 }
@@ -12088,7 +12088,7 @@ Gnoll-Schatzjäger
 }
 
 STRING 2218
-// Units: o0BA (Holzlager), EditorSuffix (Name - Editor Suffix)
+// Units: o0BA (Lumberyard), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
@@ -12106,7 +12106,7 @@ Gnoll Mystweaver
 }
 
 STRING 2221
-// Units: o0BB (Altar der Reißzähne), EditorSuffix (Name - Editor Suffix)
+// Units: o0BB (Altar of Fangs), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
@@ -12130,19 +12130,19 @@ Train Gnoll Warhawk Rider
 }
 
 STRING 2225
-// Units: o0BC (Zwinger), EditorSuffix (Name - Editor Suffix)
+// Units: o0BC (Kennel), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
 
 STRING 2226
-// Units: o0BD (Elementarhain), EditorSuffix (Name - Editor Suffix)
+// Units: o0BD (Elemental Grove), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
 
 STRING 2227
-// Units: o0BG (Wilder Turm), EditorSuffix (Name - Editor Suffix)
+// Units: o0BG (Savage Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle)
 }
@@ -12184,7 +12184,7 @@ STRING 2233
 }
 
 STRING 2234
-// Units: o0BC (Zwinger), Ubertip (Tooltip - Extended)
+// Units: o0BC (Kennel), Ubertip (Tooltip - Extended)
 {
 Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörders, Gnoll-Aufsehers and Gnoll Rocketbreakers. |nBietet auch die Ausbaustufen Enslavement, Vergiftete Waffen, and Barrel Form upgrades.
 }
@@ -12460,7 +12460,7 @@ A
 }
 
 STRING 2282
-// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Hotkey (Hotkey)
+// Units: h0CR (Kul Tiras Advanced Shipyard), Hotkey (Hotkey)
 {
 A
 }
@@ -12910,7 +12910,7 @@ A
 }
 
 STRING 2357
-// Abilities: A25X (Astromantie - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A25X (Astromancy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -18016,7 +18016,7 @@ B
 }
 
 STRING 3508
-// Units: h0X8 (Buy Property Jadefeuerglenn), Hotkey (Hotkey)
+// Units: h0X8 (Buy Property Jadefire Glen), Hotkey (Hotkey)
 {
 B
 }
@@ -18100,7 +18100,7 @@ B
 }
 
 STRING 3522
-// Units: h0XP (Buy Property Kral der Klingenhauer), Hotkey (Hotkey)
+// Units: h0XP (Buy Property Razorfen Kraul), Hotkey (Hotkey)
 {
 B
 }
@@ -26098,7 +26098,7 @@ Menschen-Bürgerin
 }
 
 STRING 5370
-// Units: n09P (Wanderfalken), Ubertip (Tooltip - Extended)
+// Units: n09P (Peregrin Falcon), Ubertip (Tooltip - Extended)
 {
 Light flying melee unit that causes extra damage against air units. Can learn Durchblick. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -26248,7 +26248,7 @@ H
 }
 
 STRING 5405
-// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Name (Name)
+// Units: h0CR (Kul Tiras Advanced Shipyard), Name (Name)
 {
 Hoch entwickelter Hafen von Kul Tiras
 }
@@ -26416,7 +26416,7 @@ Silbererz
 }
 
 STRING 5440
-// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Tip (Tooltip - Basic)
+// Units: h0CR (Kul Tiras Advanced Shipyard), Tip (Tooltip - Basic)
 {
 Ausbau zum Hoch entwickelten Hafen von Kul Tiras
 }
@@ -26530,7 +26530,7 @@ O
 }
 
 STRING 5475
-// Units: h0CR (Hoch entwickelter Hafen von Kul Tiras), Ubertip (Tooltip - Extended)
+// Units: h0CR (Kul Tiras Advanced Shipyard), Ubertip (Tooltip - Extended)
 {
 Boat construction facility. Produces Dreadnoughts and Piraten-Schlachtschiffs. Provides research Transporters and Schiffskanonen.
 }
@@ -33998,7 +33998,7 @@ STRING 7417
 }
 
 STRING 7418
-// Items: I0OF (Dunkelspeerinseln), Hotkey (Hotkey)
+// Items: I0OF (Darkspear Islands), Hotkey (Hotkey)
 {
 W
 }
@@ -34646,7 +34646,7 @@ Verkrüppeln
 }
 
 STRING 7611
-// Units: n09P (Wanderfalken), Hotkey (Hotkey)
+// Units: n09P (Peregrin Falcon), Hotkey (Hotkey)
 {
 P
 }
@@ -40988,7 +40988,7 @@ Q
 }
 
 STRING 9387
-// Abilities: A11P (Pfeilregen), Hotkey (Hotkey - Normal)
+// Abilities: A11P (Rain of Arrows), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -45182,37 +45182,37 @@ STRING 10919
 }
 
 STRING 10920
-// Abilities: A25W (Astromantie - Doctor), Name (Name)
+// Abilities: A25W (Astromancy - Doctor), Name (Name)
 {
 Astromantie - Doctor
 }
 
 STRING 10921
-// Abilities: A25W (Astromantie - Doctor), Tip (Tooltip - Normal)
+// Abilities: A25W (Astromancy - Doctor), Tip (Tooltip - Normal)
 {
 Doktor-Astromanz
 }
 
 STRING 10922
-// Abilities: A25W (Astromantie - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25W (Astromancy - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 Der Astromant nutzt sein Wissen, um einen winzigen Stern und einen Sonnenstein zu erschaffen.
 }
 
 STRING 10923
-// Abilities: A25X (Astromantie - Grand Master), Name (Name)
+// Abilities: A25X (Astromancy - Grand Master), Name (Name)
 {
 Astromantie - Großmeister
 }
 
 STRING 10924
-// Abilities: A25X (Astromantie - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A25X (Astromancy - Grand Master), Tip (Tooltip - Normal)
 {
 Großmeister-Astromanz
 }
 
 STRING 10925
-// Abilities: A25X (Astromantie - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A25X (Astromancy - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Astromant uses his knowledge to create a Tiny Moon and Moonkey.
 }
@@ -47174,7 +47174,7 @@ Stellt Gegenstände zur Erkundung der Sterne und der Reise durch den Weltraum he
 }
 
 STRING 11602
-// Abilities: A230 (Astromantie - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A230 (Astromancy - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 Der Astromant nutzt Wissen, um Leuchtsignalpistolen und Fluchtportale herzustellen.
 }
@@ -48131,7 +48131,7 @@ Immobilie Festung Utgarde kaufen
 }
 
 STRING 11971
-// Units: n0D6 (Jadefeuerglenn), Name (Name)
+// Units: n0D6 (Jadefire Glen), Name (Name)
 {
 Jadefeuerglenn
 }
@@ -48167,7 +48167,7 @@ Strong mechanical flying machine. Can transport ground units. Can cast Turrets. 
 }
 
 STRING 11990
-// Items: I0OF (Dunkelspeerinseln), Name (Name)
+// Items: I0OF (Darkspear Islands), Name (Name)
 {
 Dunkelspeerinseln
 }
@@ -48212,13 +48212,13 @@ Build Warbeast Kraal
 }
 
 STRING 11998
-// Items: I0OF (Dunkelspeerinseln), Tip (Tooltip - Basic)
+// Items: I0OF (Darkspear Islands), Tip (Tooltip - Basic)
 {
 Dunkelspeerinseln
 }
 
 STRING 11999
-// Items: I0OF (Dunkelspeerinseln), Ubertip (Tooltip - Extended)
+// Items: I0OF (Darkspear Islands), Ubertip (Tooltip - Extended)
 {
 |cff0000ffGeografischer Standort:|r Somewhere within the Südmeere.
 The former home of the Darkspear tribe of jungle trolls but nor reigned by the Murlocs.
@@ -48773,19 +48773,19 @@ Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelt
 }
 
 STRING 12189
-// Units: n0LY (Kral der Klingenhauer), Name (Name)
+// Units: n0LY (Razorfen Kraul), Name (Name)
 {
 Kral der Klingenhauer
 }
 
 STRING 12190
-// Units: h0XP (Buy Property Kral der Klingenhauer), Name (Name)
+// Units: h0XP (Buy Property Razorfen Kraul), Name (Name)
 {
 Immobilie Kral der Klingenhauer kaufen
 }
 
 STRING 12191
-// Units: h0XP (Buy Property Kral der Klingenhauer), Tip (Tooltip - Basic)
+// Units: h0XP (Buy Property Razorfen Kraul), Tip (Tooltip - Basic)
 {
 Immobilie Kral der Klingenhauer kaufen
 }
@@ -50069,19 +50069,19 @@ Further increases the armor of Furbolgs, Furbolg-Spurenlesers, Furbolg Champions
 }
 
 STRING 13789
-// Units: h01T (KI-Labor), Name (Name)
+// Units: h01T (AI Laboratory), Name (Name)
 {
 KI-Labor
 }
 
 STRING 13790
-// Units: h01T (KI-Labor), Tip (Tooltip - Basic)
+// Units: h01T (AI Laboratory), Tip (Tooltip - Basic)
 {
 KI-Labor errichten
 }
 
 STRING 13791
-// Units: h01T (KI-Labor), Ubertip (Tooltip - Extended)
+// Units: h01T (AI Laboratory), Ubertip (Tooltip - Extended)
 {
 Ermöglicht die Ausbildung von Schreddern, Neutralen Bürgern und Söldnern.
 }
@@ -56996,7 +56996,7 @@ STRING 18939
 }
 
 STRING 18940
-// Units: n09O (Albatrossreiter), EditorSuffix (Name - Editor Suffix)
+// Units: n09O (Albatross Rider), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -57014,7 +57014,7 @@ Kul-Tiras-Schlachtschiff anheuern
 }
 
 STRING 18945
-// Units: n09P (Wanderfalken), EditorSuffix (Name - Editor Suffix)
+// Units: n09P (Peregrin Falcon), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -57554,7 +57554,7 @@ Höllen-Kernhund anheuern
 }
 
 STRING 19410
-// Abilities: A231 (Astromantie - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A231 (Astromancy - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63136,19 +63136,19 @@ Kobold-Goldmünzen erwerben
 }
 
 STRING 23590
-// Items: I0BM (Unique - Elune's Mondstein), Name (Name)
+// Items: I0BM (Unique - Elune's Moonstone), Name (Name)
 {
 Einzigartig - Elune's Mondstein
 }
 
 STRING 23591
-// Items: I0BM (Unique - Elune's Mondstein), Ubertip (Tooltip - Extended)
+// Items: I0BM (Unique - Elune's Moonstone), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffEinzigartig|r|nAn enchanted Mondstein by Elune herself.|n|nReduces the cooldown of all abilities.
 }
 
 STRING 23592
-// Items: I0BM (Unique - Elune's Mondstein), Description (Description)
+// Items: I0BM (Unique - Elune's Moonstone), Description (Description)
 {
 |cff8b00ffEinzigartig|r|nAn enchanted Mondstein by Elune herself.|n|nReduces the cooldown of all abilities.
 }
@@ -63844,13 +63844,13 @@ STRING 24473
 }
 
 STRING 24474
-// Units: n09P (Wanderfalken), Name (Name)
+// Units: n09P (Peregrin Falcon), Name (Name)
 {
 Wanderfalken
 }
 
 STRING 24475
-// Units: n09P (Wanderfalken), Tip (Tooltip - Basic)
+// Units: n09P (Peregrin Falcon), Tip (Tooltip - Basic)
 {
 Wanderfalken ausbilden
 }
@@ -64186,7 +64186,7 @@ Primäres Truppen-Produktionsgebäude. Trains Guardsmen, Freibeuters and Royal G
 }
 
 STRING 24553
-// Units: n09O (Albatrossreiter), Ubertip (Tooltip - Extended)
+// Units: n09O (Albatross Rider), Ubertip (Tooltip - Extended)
 {
 Stronger flying unit that can learn Verschlingen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -67036,13 +67036,13 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 27969
-// Units: o0BA (Holzlager), Name (Name)
+// Units: o0BA (Lumberyard), Name (Name)
 {
 Holzlager
 }
 
 STRING 27970
-// Units: o0BA (Holzlager), Tip (Tooltip - Basic)
+// Units: o0BA (Lumberyard), Tip (Tooltip - Basic)
 {
 Holzlager errichten
 }
@@ -67060,13 +67060,13 @@ STRING 27972
 }
 
 STRING 27973
-// Units: o0BB (Altar der Reißzähne), Name (Name)
+// Units: o0BB (Altar of Fangs), Name (Name)
 {
 Altar der Reißzähne
 }
 
 STRING 27974
-// Units: o0BB (Altar der Reißzähne), Tip (Tooltip - Basic)
+// Units: o0BB (Altar of Fangs), Tip (Tooltip - Basic)
 {
 Altar der Reißzähne errichten
 }
@@ -67078,13 +67078,13 @@ STRING 27975
 }
 
 STRING 27976
-// Units: o0BC (Zwinger), Name (Name)
+// Units: o0BC (Kennel), Name (Name)
 {
 Zwinger
 }
 
 STRING 27977
-// Units: o0BC (Zwinger), Tip (Tooltip - Basic)
+// Units: o0BC (Kennel), Tip (Tooltip - Basic)
 {
 Zwinger errichten
 }
@@ -67096,13 +67096,13 @@ STRING 27978
 }
 
 STRING 27979
-// Units: o0BD (Elementarhain), Tip (Tooltip - Basic)
+// Units: o0BD (Elemental Grove), Tip (Tooltip - Basic)
 {
 Elementarhain errichten
 }
 
 STRING 27980
-// Units: o0BD (Elementarhain), Name (Name)
+// Units: o0BD (Elemental Grove), Name (Name)
 {
 Elementarhain
 }
@@ -67156,13 +67156,13 @@ Ausbau zum Fort ermöglicht die Produktion weiterer Gebäude- und Einheitenarten
 }
 
 STRING 27989
-// Units: o0BG (Wilder Turm), Name (Name)
+// Units: o0BG (Savage Tower), Name (Name)
 {
 Wilder Turm
 }
 
 STRING 27990
-// Units: o0BG (Wilder Turm), Tip (Tooltip - Basic)
+// Units: o0BG (Savage Tower), Tip (Tooltip - Basic)
 {
 Wilden Turm errichten
 }
@@ -70042,13 +70042,13 @@ Diese Einheit erleidet Schaden durch einen Pfeilhagel.
 }
 
 STRING 31046
-// Buffs/Effects: B01X (Pfeilregen (Caster)), EditorName (Name (Editor Only))
+// Buffs/Effects: B01X (Rain of Arrows (Caster)), EditorName (Name (Editor Only))
 {
 Pfeilhagel (Caster)
 }
 
 STRING 31047
-// Buffs/Effects: X006 (Pfeilregen (Effect)), EditorName (Name (Editor Only))
+// Buffs/Effects: X006 (Rain of Arrows (Effect)), EditorName (Name (Editor Only))
 {
 Pfeilhagel (Effect)
 }
@@ -70702,7 +70702,7 @@ Korallengolem ausbilden
 }
 
 STRING 31525
-// Abilities: A25W (Astromantie - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -77842,7 +77842,7 @@ STRING 35621
 }
 
 STRING 35622
-// Units: n0E1 (Fischmarkt), Name (Name)
+// Units: n0E1 (Fish Market), Name (Name)
 {
 Fischmarkt
 }
@@ -77860,7 +77860,7 @@ STRING 35624
 }
 
 STRING 35625
-// Units: n0E1 (Fischmarkt), Tip (Tooltip - Basic)
+// Units: n0E1 (Fish Market), Tip (Tooltip - Basic)
 {
 Fischmarkt errichten
 }
@@ -78352,37 +78352,37 @@ E
 }
 
 STRING 35772
-// Units: o05C (Banner von Lordaeron), Name (Name)
+// Units: o05C (Lordaeron Banner), Name (Name)
 {
 Banner von Lordaeron
 }
 
 STRING 35773
-// Items: I0KZ (Banner von Lordaeron), Name (Name)
+// Items: I0KZ (Lordaeron Banner), Name (Name)
 {
 Banner von Lordaeron
 }
 
 STRING 35774
-// Items: I0KZ (Banner von Lordaeron), Tip (Tooltip - Basic)
+// Items: I0KZ (Lordaeron Banner), Tip (Tooltip - Basic)
 {
 Banner von Lordaeron erwerben
 }
 
 STRING 35775
-// Items: I0KZ (Banner von Lordaeron), Description (Description)
+// Items: I0KZ (Lordaeron Banner), Description (Description)
 {
 Conjures a Banner von Lordaeron.
 }
 
 STRING 35776
-// Items: I0KZ (Banner von Lordaeron), Ubertip (Tooltip - Extended)
+// Items: I0KZ (Lordaeron Banner), Ubertip (Tooltip - Extended)
 {
 Summons an immovable ward that has gives an armor bonus of <ACav,DataA1> to nearby friendly non-mechanical units. |nContains <whwd,uses> charges. |nHält <Ahwd,Dur1> Sekunden lang an.
 }
 
 STRING 35777
-// Abilities: A18Y (Banner von Lordaeron), Name (Name)
+// Abilities: A18Y (Lordaeron Banner), Name (Name)
 {
 Banner von Lordaeron
 }
@@ -83836,7 +83836,7 @@ STRING 37535
 }
 
 STRING 37536
-// Abilities: A1DJ (Nächster Tunnel), EditorSuffix (Editor Suffix)
+// Abilities: A1DJ (Next Tunnel), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -84700,19 +84700,19 @@ The Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37789
-// Abilities: A1DJ (Nächster Tunnel), Name (Name)
+// Abilities: A1DJ (Next Tunnel), Name (Name)
 {
 Nächster Tunnel
 }
 
 STRING 37790
-// Abilities: A1DJ (Nächster Tunnel), Tip (Tooltip - Normal)
+// Abilities: A1DJ (Next Tunnel), Tip (Tooltip - Normal)
 {
 Nächster Tunnel
 }
 
 STRING 37791
-// Abilities: A1DJ (Nächster Tunnel), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1DJ (Next Tunnel), Ubertip (Tooltip - Normal - Extended)
 {
 Wählt den nächsten Tunnel aus.
 }
@@ -93058,7 +93058,7 @@ STRING 41522
 }
 
 STRING 41523
-// Abilities: A230 (Astromantie - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A230 (Astromancy - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -95134,7 +95134,7 @@ Melee spellcaster. Can initially cast Gebrüll, which increases attack damage. C
 }
 
 STRING 42388
-// Units: o0BG (Wilder Turm), Ubertip (Tooltip - Extended)
+// Units: o0BG (Savage Tower), Ubertip (Tooltip - Extended)
 {
 Verteidigungsgebäude. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -97348,7 +97348,7 @@ This unit has Horn von Cenarius; its attack damage has been increased.
 }
 
 STRING 43313
-// Abilities: A22Z (Astromantie - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A22Z (Astromancy - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -105460,7 +105460,7 @@ STRING 49531
 }
 
 STRING 49549
-// Items: I0XA (Küchenmesser), Ubertip (Tooltip - Extended)
+// Items: I0XA (Kitchen Knife), Ubertip (Tooltip - Extended)
 {
 Sharp knife of a cook. Grants <A1SH,DataA1> damage and allows cutting ingredients.|n|nUse on a food item to increase the charges by 1.
 }
@@ -105874,7 +105874,7 @@ Koch
 }
 
 STRING 49952
-// Units: n0J8 (Fischmarkt), Name (Name)
+// Units: n0J8 (Fish Market), Name (Name)
 {
 Fischmarkt
 }
@@ -105958,7 +105958,7 @@ Buch des Kochens erwerben
 }
 
 STRING 49968
-// Units: n0J8 (Fischmarkt), Tip (Tooltip - Basic)
+// Units: n0J8 (Fish Market), Tip (Tooltip - Basic)
 {
 Fischmarkt errichten
 }
@@ -106369,7 +106369,7 @@ Winzige Feuerstelle errichten
 }
 
 STRING 50044
-// Units: n0J8 (Fischmarkt), EditorSuffix (Name - Editor Suffix)
+// Units: n0J8 (Fish Market), EditorSuffix (Name - Editor Suffix)
 {
 (Fischer)
 }
@@ -106513,25 +106513,25 @@ Increases attack and movement speed of the hero.
 }
 
 STRING 50072
-// Items: I0X8 (Tiny Fischmarkt), Name (Name)
+// Items: I0X8 (Tiny Fish Market), Name (Name)
 {
 Winziger Fischmarkt
 }
 
 STRING 50073
-// Items: I0X8 (Tiny Fischmarkt), Tip (Tooltip - Basic)
+// Items: I0X8 (Tiny Fish Market), Tip (Tooltip - Basic)
 {
 Winzigen Fischmarkt erwerben
 }
 
 STRING 50074
-// Items: I0X8 (Tiny Fischmarkt), Description (Description)
+// Items: I0X8 (Tiny Fish Market), Description (Description)
 {
 Errichtet einen Fischmarkt.
 }
 
 STRING 50075
-// Items: I0X8 (Tiny Fischmarkt), Ubertip (Tooltip - Extended)
+// Items: I0X8 (Tiny Fish Market), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort einen Fischmarkt.
 }
@@ -106651,19 +106651,19 @@ The Fischer uses his knowledge to craft a Reuse.
 }
 
 STRING 50154
-// Abilities: A1UI (Fischmarkt), Name (Name)
+// Abilities: A1UI (Fish Market), Name (Name)
 {
 Fischmarkt
 }
 
 STRING 50155
-// Abilities: A1UI (Fischmarkt), Tip (Tooltip - Normal)
+// Abilities: A1UI (Fish Market), Tip (Tooltip - Normal)
 {
 Fischmarkt
 }
 
 STRING 50156
-// Abilities: A1UI (Fischmarkt), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1UI (Fish Market), Ubertip (Tooltip - Normal - Extended)
 {
 Selling Fish gives additional 10 gold per charge.
 }
@@ -106675,19 +106675,19 @@ D
 }
 
 STRING 50159
-// Items: I0XA (Küchenmesser), Name (Name)
+// Items: I0XA (Kitchen Knife), Name (Name)
 {
 Küchenmesser
 }
 
 STRING 50160
-// Items: I0XA (Küchenmesser), Description (Description)
+// Items: I0XA (Kitchen Knife), Description (Description)
 {
 Sharp knife of a cook. Grants <A1SH,DataA1> damage and allows cutting ingredients.
 }
 
 STRING 50162
-// Items: I0XA (Küchenmesser), Tip (Tooltip - Basic)
+// Items: I0XA (Kitchen Knife), Tip (Tooltip - Basic)
 {
 Küchenmesser erwerben
 }
@@ -114837,7 +114837,7 @@ Nazjatar
 }
 
 STRING 55048
-// Units: n0D6 (Jadefeuerglenn), EditorSuffix (Name - Editor Suffix)
+// Units: n0D6 (Jadefire Glen), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -115191,7 +115191,7 @@ Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir
 }
 
 STRING 55340
-// Units: o0BA (Holzlager), Ubertip (Tooltip - Extended)
+// Units: o0BA (Lumberyard), Ubertip (Tooltip - Extended)
 {
 Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for improved armor, melee weapons, and ranged weapons.
 }
@@ -116010,13 +116010,13 @@ STRING 55695
 }
 
 STRING 55702
-// Units: h0X8 (Buy Property Jadefeuerglenn), Name (Name)
+// Units: h0X8 (Buy Property Jadefire Glen), Name (Name)
 {
 Immobilie Jadefeuerglenn kaufen
 }
 
 STRING 55703
-// Units: h0X8 (Buy Property Jadefeuerglenn), Tip (Tooltip - Basic)
+// Units: h0X8 (Buy Property Jadefire Glen), Tip (Tooltip - Basic)
 {
 Immobilie Jadefeuerglenn kaufen
 }
@@ -116439,7 +116439,7 @@ Deposits gold to get it back with interest charges.
 }
 
 STRING 55813
-// Units: n0LY (Kral der Klingenhauer), EditorSuffix (Name - Editor Suffix)
+// Units: n0LY (Razorfen Kraul), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -116871,7 +116871,7 @@ Die Immobilie erwerben. |n|n|cffffcc00Volk: Tuskarr.|r|n|cffffcc00Rohstoff: Flei
 }
 
 STRING 55894
-// Units: h0X8 (Buy Property Jadefeuerglenn), Ubertip (Tooltip - Extended)
+// Units: h0X8 (Buy Property Jadefire Glen), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Satyr.|r|n|cffffcc00Rohstoff: Fel.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -117129,7 +117129,7 @@ STRING 55978
 }
 
 STRING 55981
-// Units: h0XP (Buy Property Kral der Klingenhauer), Ubertip (Tooltip - Extended)
+// Units: h0XP (Buy Property Razorfen Kraul), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Stacheleber.|r|n|cffffcc00Rohstoff: Fleisch.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
@@ -119279,25 +119279,25 @@ Astromant
 }
 
 STRING 57077
-// Items: I12Y (Book of Astromantie), Name (Name)
+// Items: I12Y (Book of Astromancy), Name (Name)
 {
 Buch der Astromantie
 }
 
 STRING 57078
-// Items: I12Y (Book of Astromantie), Description (Description)
+// Items: I12Y (Book of Astromancy), Description (Description)
 {
 A book that contains knowledge of crafting Astromantie items.
 }
 
 STRING 57079
-// Items: I12Y (Book of Astromantie), Ubertip (Tooltip - Extended)
+// Items: I12Y (Book of Astromancy), Ubertip (Tooltip - Extended)
 {
 A book that contains knowledge of crafting Astromantie items.
 }
 
 STRING 57080
-// Items: I12Y (Book of Astromantie), Tip (Tooltip - Basic)
+// Items: I12Y (Book of Astromancy), Tip (Tooltip - Basic)
 {
 Buch der Astromantie kaufen
 }
@@ -119351,67 +119351,67 @@ STRING 57088
 }
 
 STRING 57089
-// Abilities: A22Y (Astromantie), Name (Name)
+// Abilities: A22Y (Astromancy), Name (Name)
 {
 Astromantie
 }
 
 STRING 57090
-// Abilities: A22Z (Astromantie - Novice), Name (Name)
+// Abilities: A22Z (Astromancy - Novice), Name (Name)
 {
 Astromantie - Novize
 }
 
 STRING 57091
-// Abilities: A22Z (Astromantie - Novice), Tip (Tooltip - Normal)
+// Abilities: A22Z (Astromancy - Novice), Tip (Tooltip - Normal)
 {
 Novizen-Astromantie
 }
 
 STRING 57092
-// Abilities: A22Z (Astromantie - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A22Z (Astromancy - Novice), Ubertip (Tooltip - Normal - Extended)
 {
 Der Astromant nutzt Wissen, um Rollen der Navigation und Winzige Portale herzustellen.
 }
 
 STRING 57093
-// Abilities: A230 (Astromantie - Advanced), Name (Name)
+// Abilities: A230 (Astromancy - Advanced), Name (Name)
 {
 Astromantie - Fortgeschritten
 }
 
 STRING 57094
-// Abilities: A230 (Astromantie - Advanced), Tip (Tooltip - Normal)
+// Abilities: A230 (Astromancy - Advanced), Tip (Tooltip - Normal)
 {
 Fortgeschrittene Astromantie
 }
 
 STRING 57096
-// Abilities: A231 (Astromantie - Adept), Name (Name)
+// Abilities: A231 (Astromancy - Adept), Name (Name)
 {
 Astromantie - Adept
 }
 
 STRING 57097
-// Abilities: A231 (Astromantie - Adept), Tip (Tooltip - Normal)
+// Abilities: A231 (Astromancy - Adept), Tip (Tooltip - Normal)
 {
 Adepten-Astromantie
 }
 
 STRING 57099
-// Abilities: A232 (Astromantie - Master), Name (Name)
+// Abilities: A232 (Astromancy - Master), Name (Name)
 {
 Astromantie - Meister
 }
 
 STRING 57100
-// Abilities: A232 (Astromantie - Master), Tip (Tooltip - Normal)
+// Abilities: A232 (Astromancy - Master), Tip (Tooltip - Normal)
 {
 Meister-Astromantie
 }
 
 STRING 57101
-// Abilities: A232 (Astromantie - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A232 (Astromancy - Master), Ubertip (Tooltip - Normal - Extended)
 {
 Der Astromant nutzt Wissen, um Winzige Arkane Observatorien herzustellen.
 }
@@ -119435,7 +119435,7 @@ STRING 57131
 }
 
 STRING 57148
-// Abilities: A231 (Astromantie - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A231 (Astromancy - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 Der Astromant nutzt Wissen, um Meteorsteine und Rollen der Stadtportale herzustellen.
 }
