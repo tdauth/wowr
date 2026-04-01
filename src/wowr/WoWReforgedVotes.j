@@ -1,4 +1,4 @@
-library WoWReforgedVotes initializer Init requires Votes, WoWReforgedMapData, WoWReforgedTomes
+library WoWReforgedVotes initializer Init requires Votes, WoWReforgedMapData, WoWReforgedTomes, WoWReforgedComputer, WoWReforgedStats
     
 function AddWowReforgedVote takes nothing returns nothing
     local integer vote = VoteCreate(udg_TmpString)
@@ -131,6 +131,33 @@ private function NoCinematics takes nothing returns nothing
     call DisplayVoteDisabled(GetLocalizedStringSafe("CINEMATICS"))
 endfunction
 
+private function AiReset takes nothing returns nothing
+    call DisplayVoteEnabled(GetLocalizedStringSafe("AI_RESET"))
+    call ResetComputerPlayers()
+endfunction
+
+private function AiRespawn takes nothing returns nothing
+    set udg_AIRespawn = true
+    call QuestSetTitle(udg_QuestAI, Format(GetLocalizedStringSafe("IQ_AI_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result())
+    call DisplayVoteEnabled(GetLocalizedStringSafe("AI_RESPAWN"))
+endfunction
+
+private function NoAiRespawn takes nothing returns nothing
+    set udg_AIRespawn = false
+    call QuestSetTitle(udg_QuestAI, Format(GetLocalizedStringSafe("IQ_AI_TITLE")).s(GetLocalizedStringSafe("IQ_DISABLED")).result())
+    call DisplayVoteDisabled(GetLocalizedStringSafe("AI_RESPAWN"))
+endfunction
+
+private function Stats takes nothing returns nothing
+    call CreateStats()
+    call DisplayVoteEnabled(GetLocalizedStringSafe("STATS"))
+endfunction
+
+private function NoStats takes nothing returns nothing
+    call DestroyStats()
+    call DisplayVoteDisabled(GetLocalizedStringSafe("STATS"))
+endfunction
+
 private function Init takes nothing returns nothing
     call Add(GetLocalizedStringSafe("VICTORY"), "-victory", function Victory)
     call Add(GetLocalizedStringSafe("NO_VICTORY"), "-novictory", function NoVictory)
@@ -148,6 +175,14 @@ private function Init takes nothing returns nothing
 
     call Add(GetLocalizedStringSafe("CINEMATICS"), "-cinematics", function Cinematics)
     call Add(GetLocalizedStringSafe("NO_CINEMATICS"), "-nocinematics", function NoCinematics)
+
+    call Add(GetLocalizedStringSafe("AI_RESET"), "-aireset", function AiReset)
+
+    call Add(GetLocalizedStringSafe("AI_RESPAWN"), "-airespawn", function AiRespawn)
+    call Add(GetLocalizedStringSafe("NO_AI_RESPAWN"), "-noairespawn", function NoAiRespawn)
+
+    call Add(GetLocalizedStringSafe("STATS"), "-stats", function Stats)
+    call Add(GetLocalizedStringSafe("NO_STATS"), "-nostats", function NoStats)
 endfunction
 
 endlibrary

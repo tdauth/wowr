@@ -773,6 +773,32 @@ private function StartGame takes nothing returns nothing
     endif
 endfunction
 
+private function EnumRemovePlayerUnits takes nothing returns nothing
+    call RemovePlayerUnits(GetEnumPlayer())
+endfunction
+
+function ResetComputerPlayers takes nothing returns boolean
+    local integer i = 0
+    local integer max = GetMaxComputerStartLocations()
+    // Reset units
+    call ForForce(computerLobbyPlayers, function EnumRemovePlayerUnits)
+    // Reset Start Locations
+    loop
+        exitwhen (i == max)
+        set GetComputerStartLocation(i).taken = false
+        set i = i + 1
+    endloop
+
+    if (CountAiPlayersWithConfig() > 0) then
+        call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+        call ShowAiPlayersUiForPlayer(GetHost())
+
+        return true
+    endif
+
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0

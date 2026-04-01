@@ -185,6 +185,7 @@
 //! import "wowr/WoWReforgedUnlimitedBagOfFood.j"
 //! import "wowr/WoWReforgedUtils.j"
 //! import "wowr/WoWReforgedVIPs.j"
+//! import "wowr/WoWReforgedVotekick.j"
 //! import "wowr/WoWReforgedVotes.j"
 //! import "wowr/WoWReforgedWitchHut.j"
 //! import "wowr/WoWReforgedWrapUp.j"
