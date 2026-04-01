@@ -1,4 +1,4 @@
-library WoWReforgedCraftingStash initializer Init requires Crafting, WoWReforgedBosses, WoWReforgedMapLegendaryItems
+library WoWReforgedCraftingStash initializer Init requires Crafting, WoWReforgedBosses, WoWReforgedMapBosses
 
 globals
     private trigger castTrigger = CreateTrigger()

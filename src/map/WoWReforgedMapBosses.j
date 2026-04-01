@@ -1,4 +1,8 @@
-library WoWReforgedMapLegendaryItems initializer Init requires WoWReforgedBosses
+library WoWReforgedMapBosses initializer Init requires WoWReforgedBosses
+
+function GetBossArchimonde takes nothing returns unit
+    return gg_unit_N011_0053
+endfunction
 
 private function Init takes nothing returns nothing
     call AddLegendaryItem('I007', gg_unit_U001_0889, gg_unit_nfrm_0255, gg_rct_Legendary_Book) // Unique - Book of the 4 Elements
@@ -9,7 +13,7 @@ private function Init takes nothing returns nothing
     call AddLegendaryItem('I008', gg_unit_U003_0892, gg_unit_nfrm_0258, gg_rct_Legendary_Shield) // Unique - Shield of the Void
     call AddLegendaryItem('I005', gg_unit_E003_0894, gg_unit_nfrm_0260, gg_rct_Legendary_Horn) // Unique - Stormbringer´s Horn
     call AddLegendaryItem('I009', gg_unit_U000_0891, gg_unit_nfrm_0257, gg_rct_Legendary_Wings) // 	Unique - Varimathras´ Wings
-    call AddLegendaryItem('I027', gg_unit_N011_0053, gg_unit_nfrm_0054, gg_rct_Legendary_Medivhs_Spell_Book) // Unique - Medivh's Spell Book
+    call AddLegendaryItem('I027', GetBossArchimonde(), gg_unit_nfrm_0054, gg_rct_Legendary_Medivhs_Spell_Book) // Unique - Medivh's Spell Book
     call AddLegendaryItem('I03R', gg_unit_N036_0516, gg_unit_nfrm_0517, gg_rct_Legendary_Scepter_of_the_Sea) // Unique - Scepter of King Deepbeard
     call AddLegendaryItem('I03T', gg_unit_N03B_0622, gg_unit_nfrm_0623, gg_rct_Legendary_Turtle_Shell) // Unique - Tortolla's Shell
     call AddLegendaryItem('I03S', gg_unit_H01P_0590, gg_unit_nfrm_0589, gg_rct_Legendary_Frostmourne) // Unique - The Ashbringer
