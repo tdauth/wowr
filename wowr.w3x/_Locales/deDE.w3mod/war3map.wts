@@ -48617,7 +48617,7 @@ T
 }
 
 STRING 12162
-// Units: o0B2 (Animal Battle Grounds), EditorSuffix (Name - Editor Suffix)
+// Units: o0B2 (Tierkampfplätze), EditorSuffix (Name - Editor Suffix)
 {
 (Stacheleber)
 }
@@ -48677,7 +48677,7 @@ Supporting spellcaster. Can initially cast Verjüngung, which regenerates mana f
 }
 
 STRING 12172
-// Units: o0B3 (Sacrificial Grounds), EditorSuffix (Name - Editor Suffix)
+// Units: o0B3 (Opferstätten), EditorSuffix (Name - Editor Suffix)
 {
 (Stacheleber)
 }
@@ -53531,7 +53531,7 @@ STRING 16450
 }
 
 STRING 16451
-// Units: o0B3 (Sacrificial Grounds), Ubertip (Tooltip - Extended)
+// Units: o0B3 (Opferstätten), Ubertip (Tooltip - Extended)
 {
 Bildet Klingenmähnen-Häuptlinge aus. |nBietet auch die Ausbaustufen für Klingenmähnen-Häuptlings an.
 }
@@ -72846,7 +72846,7 @@ STRING 33048
 STRING 33051
 // Units: o05O (Altar of Ice), Name (Name)
 {
-Altar des Eis
+Altar des Eises
 }
 
 STRING 33052
@@ -72858,7 +72858,7 @@ STRING 33052
 STRING 33053
 // Units: o05O (Altar of Ice), Tip (Tooltip - Basic)
 {
-Altar des Eis errichten
+Altar des Eises errichten
 }
 
 STRING 33054
@@ -72880,19 +72880,19 @@ STRING 33056
 }
 
 STRING 33057
-// Units: o05Q (Hunters Rest), Name (Name)
+// Units: o05Q (Jägerruhe), Name (Name)
 {
-Hunters Rest
+Jägerruhe
 }
 
 STRING 33058
-// Units: o05Q (Hunters Rest), Tip (Tooltip - Basic)
+// Units: o05Q (Jägerruhe), Tip (Tooltip - Basic)
 {
-Build Hunters Rest
+Jägerruhe errichten
 }
 
 STRING 33059
-// Units: o05Q (Hunters Rest), EditorSuffix (Name - Editor Suffix)
+// Units: o05Q (Jägerruhe), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -76318,27 +76318,27 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 35063
-// Units: o0B2 (Animal Battle Grounds), Name (Name)
+// Units: o0B2 (Tierkampfplätze), Name (Name)
 {
-Animal Battle Grounds
+Tierkampfplätze
 }
 
 STRING 35064
-// Units: o0B2 (Animal Battle Grounds), Tip (Tooltip - Basic)
+// Units: o0B2 (Tierkampfplätze), Tip (Tooltip - Basic)
 {
-Build Animal Battle Grounds
+Tierkampfplätze errichten
 }
 
 STRING 35065
-// Units: o0B3 (Sacrificial Grounds), Name (Name)
+// Units: o0B3 (Opferstätten), Name (Name)
 {
-Sacrificial Grounds
+Opferstätten
 }
 
 STRING 35066
-// Units: o0B3 (Sacrificial Grounds), Tip (Tooltip - Basic)
+// Units: o0B3 (Opferstätten), Tip (Tooltip - Basic)
 {
-Build Sacrificial Grounds
+Opferstätten errichten
 }
 
 STRING 35067
@@ -89416,15 +89416,15 @@ STRING 40182
 }
 
 STRING 40183
-// Units: o05U (Northern Vendor Shop), Name (Name)
+// Units: o05U (Nördlicher Straßenladen), Name (Name)
 {
-Northern Vendor Shop
+Nördlicher Straßenladen
 }
 
 STRING 40184
-// Units: o05U (Northern Vendor Shop), Tip (Tooltip - Basic)
+// Units: o05U (Nördlicher Straßenladen), Tip (Tooltip - Basic)
 {
-Build Northern Vendor Shop
+Nördlichen Straßenladen errichten
 }
 
 STRING 40185
@@ -89476,25 +89476,25 @@ Deposits lumber to get it back with interest charges.
 }
 
 STRING 40196
-// Units: o05U (Northern Vendor Shop), EditorSuffix (Name - Editor Suffix)
+// Units: o05U (Nördlicher Straßenladen), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
 
 STRING 40197
-// Units: o05V (Decorated Cavern), Name (Name)
+// Units: o05V (Verzierte Höhle), Name (Name)
 {
-Decorated Cavern
+Verzierte Höhle
 }
 
 STRING 40202
-// Units: o05V (Decorated Cavern), Tip (Tooltip - Basic)
+// Units: o05V (Verzierte Höhle), Tip (Tooltip - Basic)
 {
-Build Decorated Cavern
+Verzierte Höhle errichten
 }
 
 STRING 40203
-// Units: o05V (Decorated Cavern), EditorSuffix (Name - Editor Suffix)
+// Units: o05V (Verzierte Höhle), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -91084,9 +91084,9 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 40887
-// Units: o05Q (Hunters Rest), Ubertip (Tooltip - Extended)
+// Units: o05Q (Jägerruhe), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Shaman and Heileners. |nAlso contains spell upgrades for Shaman and Heileners.
+Spellcaster production building. Bildet Schamanen und Heiler aus. |nAlso contains spell upgrades for Schamanen und Heiler.
 }
 
 STRING 40888
@@ -91696,7 +91696,7 @@ Highly mobile rider. Effective against buildings. Can learn the Kriegsdonner abi
 }
 
 STRING 41186
-// Units: o05U (Northern Vendor Shop), Ubertip (Tooltip - Extended)
+// Units: o05U (Nördlicher Straßenladen), Ubertip (Tooltip - Extended)
 {
 Creates a shop with purchasable items. The items available depend upon what level of upgrade your Haupthaus has (Gefrorene Halle, Gefrorene Hochburg, or Gefrorene Festung) and which buildings you have.
 }
@@ -91962,13 +91962,13 @@ Build Tiny Versammlungshalle
 STRING 41239
 // Units: n0FM (Healer), Tip (Tooltip - Basic)
 {
-Train Heilener
+Heiler ausbilden
 }
 
 STRING 41240
 // Units: n0FM (Healer), Name (Name)
 {
-Heilener
+Heiler
 }
 
 STRING 41241
@@ -92266,7 +92266,7 @@ Primäres Truppen-Produktionsgebäude. Bildet Tuskarr-Kämpfer, Tuskarr-Speerkä
 }
 
 STRING 41295
-// Units: o05V (Decorated Cavern), Ubertip (Tooltip - Extended)
+// Units: o05V (Verzierte Höhle), Ubertip (Tooltip - Extended)
 {
 Bildet Häuptlinge aus. |nBietet auch die Ausbaustufe 'Clans', die Häuptlingen die Fähigkeit 'Befehls-Aura' verleiht.
 }
@@ -92442,13 +92442,13 @@ Increases Shaman mana capacity, mana regeneration rate, hit points, and gives th
 STRING 41353
 // Upgrades: R0CO (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Heileners' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Heilern und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 41354
 // Upgrades: R0CO (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Heileners' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Heilwelle.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Heilern und ermöglicht ihnen, 'Heilwelle' zu wirken.
 }
 
 STRING 41355
@@ -93004,7 +93004,7 @@ Supporting spellcaster. Can initially cast Verbannen, which removes negative buf
 }
 
 STRING 41508
-// Units: o0B2 (Animal Battle Grounds), Ubertip (Tooltip - Extended)
+// Units: o0B2 (Tierkampfplätze), Ubertip (Tooltip - Extended)
 {
 Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nBietet auch die Ausbaustufen Einschnüren, Envenomed Spears, Liquid Fire and War Drums upgrades.
 }
