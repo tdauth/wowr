@@ -43492,13 +43492,13 @@ Untote
 STRING 10478
 // Abilities: A1NT (Sculpting - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Bildhauerei
+Doktor-Bildhauerei
 }
 
 STRING 10479
 // Abilities: A1NT (Sculpting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-Der Bildhauer nutzt sein Wissen, um eine Winzige Golem-Fabrik herzustellen.
+Stellt Winzige Golem-Fabriken her.
 }
 
 STRING 10480
@@ -43516,13 +43516,13 @@ Bildhauerei - Großmeister
 STRING 10482
 // Abilities: A1P5 (Sculpting - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Bildhauerei
+Großmeister-Bildhauerei
 }
 
 STRING 10483
 // Abilities: A1P5 (Sculpting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Der Bildhauer nutzt sein Wissen, um einen Winzigen Göttlichen Golem herzustellen.
+Stellt Winzige Göttliche Golems her.
 }
 
 STRING 10485
@@ -44752,7 +44752,7 @@ Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir
 STRING 10798
 // Items: I0JT (Farmer), Ubertip (Tooltip - Extended)
 {
-Stellt winzige Gebäude her, welche die Produktion von verschiedenen Rohstoffen, die Ausbildung von Landarbeitern, die Zucht von Tieren und den Verkauf von Samen zum Anbau von Nahrung ermöglichen:|n- Winziger Hof|n- Winzige Wasserversorgung|n- Winziger Kornspeicher|n- Winzige Windmühle|n- Winziges Tiergehege|n- Winzige Scheune
+Stellt winzige Gebäude her, welche die Produktion von verschiedenen Rohstoffen, die Ausbildung von Landarbeitern, die Zucht von Tieren und den Verkauf von Samen zum Anbau von Nahrung ermöglichen:|n- Winzige Höf|n- Winzige Wasserversorgungen|n- Winzige Kornspeicher|n- Winzige Windmühlen|n- Winzige Tiergehege|n- Winzige Scheunen
 }
 
 STRING 10799
@@ -97698,31 +97698,31 @@ Bildhauerei - Novize
 STRING 43449
 // Abilities: A1M8 (Sculpting - Novice), Tip (Tooltip - Normal)
 {
-Novize Bildhauerei
+Novizen-Bildhauerei
 }
 
 STRING 43450
 // Abilities: A1M8 (Sculpting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Bildhauer uses his knowledge to craft a Tiny Schlammgolem.
+Stellt Winzige Schlammgolems her.
 }
 
 STRING 43451
 // Abilities: A1MC (Sculpting - Advanced), Name (Name)
 {
-Bildhauerei - Advanced
+Bildhauerei - Fortgeschritten
 }
 
 STRING 43452
 // Abilities: A1MC (Sculpting - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Bildhauerei
+Fortgeschrittene Bildhauerei
 }
 
 STRING 43453
 // Abilities: A1MC (Sculpting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Bildhauer uses craftsmanship to create an Tiny Kriegs-Golem.
+Stellt Winzige Kriegs-Golems her.
 }
 
 STRING 43454
@@ -97734,13 +97734,13 @@ Bildhauerei - Adept
 STRING 43455
 // Abilities: A1MS (Sculpting - Adept), Tip (Tooltip - Normal)
 {
-Adept Bildhauerei
+Adepten-Bildhauerei
 }
 
 STRING 43456
 // Abilities: A1MS (Sculpting - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Bildhauer uses craftsmanship to create a Tiny Belagerungsgolem.
+Stellt Winzige Belagerungsgolems her.
 }
 
 STRING 43457
@@ -97752,13 +97752,13 @@ Bildhauerei - Meister
 STRING 43458
 // Abilities: A1MT (Sculpting - Master), Tip (Tooltip - Normal)
 {
-Meister Bildhauerei
+Meister-Bildhauerei
 }
 
 STRING 43459
 // Abilities: A1MT (Sculpting - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Bildhauer uses craftsmanship to create a Tiny Fleischgolem.
+Stellt Winzige Fleischgolems her.
 }
 
 STRING 43460

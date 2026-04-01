@@ -24732,7 +24732,7 @@ Advanced Scribing
 STRING 5115
 // Abilities: A0SS (Scribing - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Manual of Health and a Manual of Mana.
+Craft Manuals of Health and Mana.
 }
 
 STRING 5116
@@ -24750,7 +24750,7 @@ Adept Scribing
 STRING 5118
 // Abilities: A0ST (Scribing - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Tome of Damage and a Tome of Armor.
+Craft Tomes of Damage and Armor.
 }
 
 STRING 5119
@@ -24768,7 +24768,7 @@ Master Scribing
 STRING 5121
 // Abilities: A0SU (Scribing - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Tome of Experience.
+Craft Tome of Experiences.
 }
 
 STRING 5122
@@ -43497,7 +43497,7 @@ Doctor Sculpting
 STRING 10479
 // Abilities: A1NT (Sculpting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Sculptor uses his knowledge to craft a Tiny Golem Factory.
+Craft Tiny Golem Factories.
 }
 
 STRING 10480
@@ -43521,7 +43521,7 @@ Grand Master Sculpting
 STRING 10483
 // Abilities: A1P5 (Sculpting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Sculptor uses his knowledge to craft a Tiny Divine Golem.
+Craft Tiny Divine Golems.
 }
 
 STRING 10485
@@ -44751,7 +44751,7 @@ Bonerender,Edan the Howler,Ironbeard,Vagash,Bloodroar the Stalker,Grumpus,Mezzir
 STRING 10798
 // Items: I0JT (Farmer), Ubertip (Tooltip - Extended)
 {
-Crafts tiny buildings which allow producing different resources, training Farmhands, breeding animals and selling seeds to grow food:|n- Tiny Farm|n- Tiny Water Supply|n- Tiny Granary|n- Tiny Wind Mill|n- Tiny Animal Pen|n- Tiny Barn
+Craft tiny buildings which allow producing different resources, training Farmhands, breeding animals and selling seeds to grow food:|n- Tiny Farms|n- Tiny Water Supplies|n- Tiny Granaries|n- Tiny Wind Mills|n- Tiny Animal Pens|n- Tiny Barns
 }
 
 STRING 10799
@@ -97703,7 +97703,7 @@ Novice Sculpting
 STRING 43450
 // Abilities: A1M8 (Sculpting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Sculptor uses his knowledge to craft a Tiny Mud Golem.
+Craft Tiny Mud Golems.
 }
 
 STRING 43451
@@ -97721,7 +97721,7 @@ Advanced Sculpting
 STRING 43453
 // Abilities: A1MC (Sculpting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Sculptor uses craftsmanship to create an Tiny War Golem.
+Craft Tiny War Golems.
 }
 
 STRING 43454
@@ -97739,7 +97739,7 @@ Adept Sculpting
 STRING 43456
 // Abilities: A1MS (Sculpting - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Sculptor uses craftsmanship to create a Tiny Siege Golem.
+Craft Tiny Siege Golems.
 }
 
 STRING 43457
@@ -97757,7 +97757,7 @@ Master Sculpting
 STRING 43459
 // Abilities: A1MT (Sculpting - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Sculptor uses craftsmanship to create a Tiny Flesh Golem.
+Craft Tiny Flesh Golems.
 }
 
 STRING 43460
@@ -99713,7 +99713,7 @@ Allows transfering item abilities for items up to level 8.
 STRING 45260
 // Items: I0T3 (Combiner), Ubertip (Tooltip - Extended)
 {
-Crafts tools which transfer item abilities to other items:|n- Small Combination Tool|n- Combination Tool|n- Advanced Combination Tool|n- Master Combination Tool
+Craft tools which transfer item abilities to other items:|n- Small Combination Tool|n- Combination Tool|n- Advanced Combination Tool|n- Master Combination Tool
 }
 
 STRING 45262
@@ -122928,7 +122928,7 @@ Master Poetry
 STRING 58479
 // Abilities: A25A (Poetry - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Tiny Record Player.
+Craft Tiny Record Players.
 }
 
 STRING 58480
@@ -122946,7 +122946,7 @@ Advanced Poetry
 STRING 58482
 // Abilities: A25B (Poetry - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Flute.
+Craft Flutes.
 }
 
 STRING 58483
@@ -123024,7 +123024,7 @@ Adept Poetry
 STRING 58497
 // Abilities: A25E (Poetry - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Poems.
+Craft Poems.
 }
 
 STRING 58499
