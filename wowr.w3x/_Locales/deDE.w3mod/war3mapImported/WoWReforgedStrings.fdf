@@ -100,9 +100,15 @@ StringList {
     BAN_LIST_HEADER                    "Bans:|n",
     BAN_LIST_ITEM                      "%1% - %2%",
     // Votekick
+    VOTEKICK_AGAINST_X                 "Votekick gegen %1%",
+    VOTEKICK_STARTED_AGAINST_X         "%1% hat einen Votekick gegen %2% gestartet! Geben Sie '-yes' ein, um dafür abzustimmen, den Spieler aus dem Spiel zu werfen.",
+    VOTEKICK_NOT_ALLOWED               "Sie können keinen Votekick gegen %1% starten.",
+    VOTEKICK_COOLDOWN                  "Warten Sie %1% bis Sie einen neuen Votekick starten können.",
     X_HAS_BEEN_KICKED                  "%1% wurde per Abstimmung gekickt!",
     YOU_HAVE_BEEN_KICKED               "Sie wurden gekickt!",
     VOTEKICK_HAS_EXPIRED               "Votekick ist abgelaufen!",
+    VOTEKICK_NOT_RUNNING               "Es läuft kein Votekick.",
+    VOTEKICK_ALREADY_VOTED             "Sie haben bereits abgestimmt.",
     // Transfer Units
     SELECTED_UNITS_FOR_TRANSFER        "%1% Einheiten zur Übergabe ausgewählt. Geben Sie '-give <Spielernummer>' ein, um zuzustimmen oder '-nogive' um abzubrechen.",
     // Attack and Defense Types
@@ -1204,6 +1210,10 @@ StringList {
     ENABLED                            "aktiviert",
     DISABLED                           "deaktiviert",
     // Votes
+    IQ_ENABLED                         "Aktiviert",
+    IQ_DISABLED                        "Deaktiviert",
+    VOTE_ENABLED                       "%1% aktiviert.",
+    VOTE_DISABLED                      "%1% deaktiviert.",
     UNABLE_TO_VOTE                     "Abstimmung unmöglich.",
     UNABLE_TO_START_VOTE               "Abstimmungsstart unmöglich.",
     START_VOTE_MESSAGE                 "%1% hat Abstimmung %2% gestartet. Mit '%3%' akzeptieren oder ignorieren.",
@@ -1235,6 +1245,7 @@ StringList {
     // Votes
     VICTORY                            "Sieg",
     NO_VICTORY                         "Kein Sieg",
+    SAVE_CODES                         "Speicher-Codes",
     NO_SAVE_CODES                      "Keine Speicher-Codes",
     FFA                                "FFA",
     LOBBY                              "Lobby",
@@ -1906,6 +1917,9 @@ StringList {
     IQ_START_LOCATIONS_DESCRIPTION     "The start locations allow you to start the game at some specified area on the map. Some start locations may be occupied by other players including Warlord AI.",
     IQ_VICTORY_TITLE                   "Sieg",
     IQ_VICTORY_DESCRIPTION             "Every player can win the game by killing the boss Archimonde if the victory conditions are enabled. The game ends after this. All players who are not allied with the killing player will lose the game.",
+    IQ_AI_TITLE                        "Computer-KI (Respawn %1%)",
+    IQ_AI_DESCRIPTION                  "Computer players are warlords by default. They start with a main building, five workers and their hero. The AI will collect gold and lumber and build additional gold mines. It should attack creeps and hostile players from time to time. If you are allied to a computer player it is recommended to defend him and to give him resources if you are a warlord yourself. Allied computer players might turn out to be rather useful when attacking another player. When the base of a computer player is destroyed, the hero will get a tiny main building to rebuild a base. Their race is defined in the beginning by the host player.",
+    IQ_AI_0                            "Change alliances to get control."
     IQ_CHEATS_TITLE                    "Cheats",
     IQ_CHEATS_DESCRIPTION              "Cheats are useful for testing the map. They are enabled automatically for player WorldEdit in singleplayer.",
     IQ_CHEATS_UNFREEZE                 "'-unfreeze': Unfreezes everything.",
@@ -1938,6 +1952,16 @@ StringList {
     IQ_PORTALS_1                       "Verbinden Orte direkt miteinander.",
     IQ_PORTALS_2                       "Teleport units to any discovered area if upgraded.",
     IQ_PORTALS_3                       "Protect locations against enemy portals with Antimagic Wards.",
+    IQ_TOMES_TITLE                     "Folianten %1%",
+    IQ_TOMES_DESCRIPTION               "Tomes are items which increase hero stats permanently. Hence, they are disabled by default to keep the game balanced. However, they can be enabled by a vote. This allows buying and crafting tomes as well as loading them via save codes.",
+    IQ_TOMES_0                         "Items which increase hero stats permanently.",
+    IQ_TOMES_1                         "Can only be loaded with save codes if enabled.",
+    IQ_TOMES_2                         "Available in the Library at Theramore.",
+    IQ_TOMES_3                         "Profession Scribe allows crafting tomes.",
+    IQ_CINEMATICS_TITLE                "Videos %1%",
+    IQ_CINEMATICS_DESCRIPTION          "Cinematics are optional ingame video sequences which help immersion and story telling.",
+    IQ_CINEMATICS_0                    "Shown to all players at the same time.",
+    IQ_CINEMATICS_1                    "Can be skipped with the Escape key.",
     IQ_CREDITS_TITLE                   "Mitwirkende",
     IQ_CREDITS_DESCRIPTION             "Alle Leute, die an dieser Karte mitgewirkt haben.",
     // Quests
@@ -1955,7 +1979,7 @@ StringList {
     Q_GOLEM_FACTORY_0                  "Purchase a Battle Golem from the forgotten Golem Factory.",
     Q_GOLEM_FACTORY_1                  "Bring the Battle Golem to King Magni Bronzebeard.",
     // HumanQuest3
-    Q_SEARCH_FOR_MURADIN_TITLE         "Search for Muradin",
+    Q_SEARCH_FOR_MURADIN_TITLE         "Die Suche nach Muradin",
     Q_SEARCH_FOR_MURADIN_DESCRIPTION   "Although it may be a suicide mission, the High King of the Dwarves requests that you travel to Icecrown and find out what happened to Muradin Bronzebeard, the High King´s brother. Find the Dwarf and, should he still live, escort safely him back to Ironforge!",
     Q_SEARCH_FOR_MURADIN_0             "Find Muradin.",
     Q_SEARCH_FOR_MURADIN_1             "Return Muradin to Magni Bronzebeard.",
