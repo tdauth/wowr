@@ -259,12 +259,10 @@ function GetAiPlayersWithConfig takes nothing returns force
     local player aiPlayer = null
     local force result = CreateForce()
     local integer i = 0
-    call BJDebugMsg("Getting AI players:")
     loop
         exitwhen (i >= bj_MAX_PLAYERS)
         set aiPlayer = Player(i)
         if (GetPlayerController(aiPlayer) == MAP_CONTROL_COMPUTER and GetPlayerSlotState(aiPlayer) == PLAYER_SLOT_STATE_PLAYING and GetMapAllowConfigureAIPlayer(aiPlayer)) then
-            call BJDebugMsg("Adding player " + GetPlayerName(aiPlayer) + " to AI players.")
             call ForceAddPlayer(result, aiPlayer)
         endif
         set aiPlayer = null
@@ -288,8 +286,6 @@ private function SetVisible takes boolean visible returns nothing
     local integer counterEnd = counterStart + AI_PLAYERS_UI_MAX_PLAYERS - 1
     local integer counter = 0
     local integer i = 0
-
-    call BJDebugMsg("UIAiPlayers SetVisible with force count " + I2S(CountPlayersInForceBJ(Force)) + " and visible: " + B2S(visible))
 
     call BlzFrameSetVisible(BackgroundFrame, visible)
     call BlzFrameSetVisible(TitleFrame, visible)
@@ -1122,7 +1118,6 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
         exitwhen (i >= bj_MAX_PLAYERS)
         set aiPlayer = Player(i)
         if (IsPlayerInForce(aiPlayer, aiPlayers)) then
-            call BJDebugMsg("Creating AI players UI with player " + GetPlayerName(aiPlayer))
             call ForceAddPlayer(Force, aiPlayer)
 
             set index = counter
