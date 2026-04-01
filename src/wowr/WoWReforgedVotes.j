@@ -1,4 +1,4 @@
-library WoWReforgedVotes initializer Init requires Votes, WoWReforgedMapData
+library WoWReforgedVotes initializer Init requires Votes, WoWReforgedMapData, WoWReforgedTomes
     
 function AddWowReforgedVote takes nothing returns nothing
     local integer vote = VoteCreate(udg_TmpString)
@@ -105,6 +105,32 @@ private function Lock takes nothing returns nothing
     call DisplayVoteEnabled(GetLocalizedStringSafe("LOCK"))
 endfunction
 
+private function Tomes takes nothing returns nothing
+    set udg_Tomes = true
+    call QuestSetTitle(udg_QuestTomes, Format(GetLocalizedStringSafe("IQ_TOMES_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result())
+    call DisplayVoteEnabled(GetLocalizedStringSafe("TOMES"))
+    call ShowLibraries()
+endfunction
+
+private function NoTomes takes nothing returns nothing
+    set udg_Tomes = false
+    call QuestSetTitle(udg_QuestTomes, Format(GetLocalizedStringSafe("IQ_TOMES_TITLE")).s(GetLocalizedStringSafe("IQ_DISABLED")).result())
+    call DisplayVoteEnabled(GetLocalizedStringSafe("NO_TOMES"))
+    call HideLibraries()
+endfunction
+
+private function Cinematics takes nothing returns nothing
+    set udg_Cinematics = true
+    call QuestSetTitle(udg_QuestCinematics, Format(GetLocalizedStringSafe("IQ_CINEMATICS_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result())
+    call DisplayVoteEnabled(GetLocalizedStringSafe("CINEMATICS"))
+endfunction
+
+private function NoCinematics takes nothing returns nothing
+    set udg_Cinematics = false
+    call QuestSetTitle(udg_QuestCinematics, Format(GetLocalizedStringSafe("IQ_CINEMATICS_TITLE")).s(GetLocalizedStringSafe("IQ_DISABLED")).result())
+    call DisplayVoteDisabled(GetLocalizedStringSafe("CINEMATICS"))
+endfunction
+
 private function Init takes nothing returns nothing
     call Add(GetLocalizedStringSafe("VICTORY"), "-victory", function Victory)
     call Add(GetLocalizedStringSafe("NO_VICTORY"), "-novictory", function NoVictory)
@@ -116,6 +142,12 @@ private function Init takes nothing returns nothing
 
     call Add(GetLocalizedStringSafe("UNLOCK"), "-unlock", function Unlock)
     call Add(GetLocalizedStringSafe("LOCK"), "-lock", function Lock)
+
+    call Add(GetLocalizedStringSafe("TOMES"), "-tomes", function Tomes)
+    call Add(GetLocalizedStringSafe("NO_TOMES"), "-notomes", function NoTomes)
+
+    call Add(GetLocalizedStringSafe("CINEMATICS"), "-cinematics", function Cinematics)
+    call Add(GetLocalizedStringSafe("NO_CINEMATICS"), "-nocinematics", function NoCinematics)
 endfunction
 
 endlibrary

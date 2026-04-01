@@ -490,6 +490,20 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_3"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PORTALS"))
 
+    set udg_QuestTomes = AddInfoQuest(Format(GetLocalizedStringSafe("IQ_TOMES_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result(), GetLocalizedStringSafe("IQ_TOMES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNManual3.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_TOMES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_TOMES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_TOMES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_TOMES_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_TOMES"))
+
+    set udg_QuestCinematics = AddInfoQuest(Format(GetLocalizedStringSafe("IQ_CINEMATICS_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result(), GetLocalizedStringSafe("IQ_CINEMATICS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNCamera.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CINEMATICS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CINEMATICS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_CINEMATICS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CINEMATICS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CIN_DALARAN"))
+
     call AddInfoQuest(GetLocalizedStringSafe("TAUNTS"), GetLocalizedStringSafe("TAUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandaTaunt.blp")
     call AddTauntsQuestItems()
 endfunction
