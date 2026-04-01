@@ -466,7 +466,7 @@ Magical Creep Summoner from the far continent of Kalimdor that summons dead cree
 STRING 78
 // Items: I02W (Magical Creep Summoner), Ubertip (Tooltip - Extended)
 {
-When using this magical creep summoner, all dead creeps within a radius of 1000 will be summoned.
+All dead creeps within a radius of 1000 will be summoned when using this magical creep summoner.
 }
 
 STRING 79
@@ -57447,7 +57447,7 @@ Magical Item Summoner from the far continent of Kalimdor that respawns missing i
 STRING 19388
 // Items: I08X (Magical Item Summoner), Ubertip (Tooltip - Extended)
 {
-When using this magical item summoner, all missing respawnable items within a radius of 1000 will be respawned.
+All missing respawnable items within a radius of 1000 will be respawned when using this magical item summoner.
 }
 
 STRING 19389

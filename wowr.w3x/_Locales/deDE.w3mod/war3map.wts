@@ -466,7 +466,7 @@ Magischer Unhold-Beschwörer vom fernen Kontinent Kalimdor, der tote Unholde bes
 STRING 78
 // Items: I02W (Magical Creep Summoner), Ubertip (Tooltip - Extended)
 {
-Bei Benutzung dieses magischen Unhold-Beschwörers werden alle toten Unholde innerhalb eines Radius von 1000 beschworen.
+Alle toten Unholde innerhalb eines Radius von 1000 werden neu beschworen, wenn dieser magische Unhold-Beschwörer benutzt wird.
 }
 
 STRING 79
@@ -57442,13 +57442,13 @@ X
 STRING 19387
 // Items: I08X (Magical Item Summoner), Description (Description)
 {
-Magischer Gegenstands-Beschwörer from the far continent of Kalimdor that respawns missing items.
+Magischer Gegenstands-Beschwörer vom fernen Kontinent Kalimdor, der fehlende Gegenstände neu erzeugt.
 }
 
 STRING 19388
 // Items: I08X (Magical Item Summoner), Ubertip (Tooltip - Extended)
 {
-When using this magical item summoner, all missing respawnable items within a radius of 1000 will be respawned.
+Alle fehlenden wieder erzeugbaren Gegenstände in einem Umkreis von 1000 werden neu erzeugt, wenn dieser magische Gegenstands-Beschwörer benutzt wird.
 }
 
 STRING 19389
