@@ -150,7 +150,7 @@ function GiveProfessionBookToHero takes unit hero, integer professionIndex retur
 endfunction
 
 function DisplayPickedProfessionMessage takes player whichPlayer, integer professionIndex, integer professionNumber returns nothing
-        call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedString("PICKED_PROFESSION_X_Y")).s(GetProfessionName(professionIndex)).i(professionNumber).result())
+        call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedString("PICKED_PROFESSION_X_Y")).i(professionNumber).s(GetProfessionName(professionIndex)).result())
 endfunction
 
 private function AddProfessionCrafted takes integer rank, integer itemTypeId, integer unitTypeId, integer charges, boolean onCast, integer abilityId returns nothing
