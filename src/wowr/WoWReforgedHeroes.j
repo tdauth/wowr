@@ -110,7 +110,7 @@ function ChooseRandomHeroFromRace takes integer whichRace returns integer
     local integer max = GetHeroesMax()
     loop
         exitwhen (i >= max)
-        if ((GetHeroRace(i) == whichRace or whichRace == udg_RaceFreelancer)) then
+        if ((GetHeroRace(i) == whichRace or whichRace == udg_RaceFreelancer) and not IsUnitTypeNavyHero(GetHeroUnitType(i))) then
             //call BJDebugMsg("Adding index " + I2S(i) + " possible heroes for race " + GetObjectName(udg_RaceTavernItemType[whichRace]) + ": " + GetObjectName(udg_HeroUnitType[i]))
             set heroIndices[heroIndicesCounter] = i
             set heroIndicesCounter = heroIndicesCounter + 1

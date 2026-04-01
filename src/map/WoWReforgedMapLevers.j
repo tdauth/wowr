@@ -9,8 +9,11 @@ private function Init takes nothing returns nothing
     call AddLeverGate(gg_unit_n0ES_0115, gg_dest_ITg1_2219)
     // Eastern Kingdoms
     // New Stormwind
-    call AddLeverGate(gg_unit_n0ES_2026, gg_dest_LTe2_20016)
     call AddLeverGate(gg_unit_n0ES_2033, gg_dest_DTg7_1860)
+    call AddLeverGate(gg_unit_n0ES_2026, gg_dest_DTg6_1861)
+    // Kul Tiras
+    call AddLeverGate(gg_unit_n0ES_0121, gg_dest_LTg3_2221)
+    call AddLeverGate(gg_unit_n0ES_0119, gg_dest_LTg4_2222)
     // Ironforge
     call AddLeverGate(gg_unit_n08R_0648, gg_dest_DTg5_0648)
     call AddLeverBridge(gg_unit_n08R_0648, gg_dest_LT04_0581)
@@ -26,6 +29,10 @@ private function Init takes nothing returns nothing
     call AddLeverGate(gg_unit_n08R_2024, gg_dest_LTe2_2302)
     call AddLeverBridge(gg_unit_n08R_2024, gg_dest_LT07_2301)
     call AddLeverGate(gg_unit_n0ES_0105, gg_dest_LTe3_2186)
+    // Sunwell Grove
+    call AddLeverGate(gg_unit_n08R_2700, gg_dest_ATg4_2596)
+    call AddLeverBridge(gg_unit_n08R_2700, gg_dest_DTs1_1007)
+    call AddLeverGate(gg_unit_n0ES_0106, gg_dest_ATg3_2187)
     // Ashenvale
     // Teldrassil
     call AddLeverGate(gg_unit_n08R_2076, gg_dest_LTe2_20016)

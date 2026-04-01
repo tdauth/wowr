@@ -60,6 +60,7 @@ private function Init takes nothing returns nothing
     call AddChange("Move properties into shallow water to allow buying ships.")
     call AddChange("Scale down building Water Oil Platform.")
     call AddChange("Connect multiple areas with each other using shallow water and bridges to allow AI to move anywhere on the map.")
+    call AddChange("Computer won't get any navy hero anymore.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
 
