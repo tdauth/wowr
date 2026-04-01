@@ -3282,7 +3282,7 @@ Magical Seed from the far continent of Kalimdor that regrows dead trees.
 STRING 548
 // Items: I00V (Magical Seed), Ubertip (Tooltip - Extended)
 {
-When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+All dead trees within a radius of 1000 regrow when planting these magical seeds.
 }
 
 STRING 549
@@ -9069,7 +9069,7 @@ Magical Seed from the far continent of Kalimdor that regrows dead trees.
 STRING 1536
 // Items: I017 (Magical Seed (3)), Ubertip (Tooltip - Extended)
 {
-When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+All dead trees within a radius of 1000 regrow when planting these magical seeds.
 }
 
 STRING 1537
@@ -16998,7 +16998,7 @@ Magical Cutter from the far continent of Kalimdor that cuts down trees.
 STRING 3319
 // Items: I02V (Magical Cutter), Ubertip (Tooltip - Extended)
 {
-When using this magical cutter, all living trees within a radius of 1000 will be cut down.
+All living trees within a radius of 1000 will be cut down when using this magical cutter.
 }
 
 STRING 3320
@@ -102203,7 +102203,7 @@ Magical Seed
 STRING 46641
 // Abilities: A1Q9 (Magical Seed), Ubertip (Tooltip - Normal - Extended)
 {
-When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+All dead trees within a radius of 1000 regrow when planting these magical seeds.
 }
 
 STRING 46642
@@ -102251,7 +102251,7 @@ Magical Cutter
 STRING 46649
 // Abilities: A1QB (Magical Cutter), Ubertip (Tooltip - Normal - Extended)
 {
-When using this magical cutter, all living trees within a radius of 1000 will be cut down.
+All living trees within a radius of 1000 will be cut down when using this magical cutter.
 }
 
 STRING 46650

@@ -3066,7 +3066,7 @@ Eisenerz erwerben
 STRING 512
 // Units: H003 (Eternal Guardian), Propernames (Proper Names)
 {
-Granis Darkhammer,Jorn the Redeemer,Sage Truthbearer,Malak the Avenger,Gavinrad the Dire,Morlune the Mighty,Agamand the True,Ballador the Bright,Manadar the Heilener,Zann the Verteidigener,Arius the Seeker,Aurrius the Pure,Karnwield the Seeker,Buzan the Fearless
+Granis Darkhammer,Jorn der Erlöser,Sage Truthbearer,Malak der Rächer,Gavinrad der Entsetzliche,Morlune der Mächtige,Agamand der Wahre,Ballador der Schlaue,Manadar der Heiler,Zann der Verteidiger,Arius der Sucher,Aurrius der Reine,Karnwield der Sucher,Buzan der Furchtlose
 }
 
 STRING 513
@@ -3282,7 +3282,7 @@ Magischer Samen from the far continent of Kalimdor that regrows dead trees.
 STRING 548
 // Items: I00V (Magical Seed), Ubertip (Tooltip - Extended)
 {
-When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden. 
 }
 
 STRING 549
@@ -9069,7 +9069,7 @@ Magischer Samen from the far continent of Kalimdor that regrows dead trees.
 STRING 1536
 // Items: I017 (Magical Seed (3)), Ubertip (Tooltip - Extended)
 {
-When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden. 
 }
 
 STRING 1537
@@ -13764,7 +13764,7 @@ STRING 2530
 STRING 2531
 // Units: H0BS (Dark Knight), Propernames (Proper Names)
 {
-Granis Darkhammer,Jorn the Redeemer,Sage Truthbearer,Malak the Avenger,Gavinrad the Dire,Morlune the Mighty,Agamand the True,Ballador the Bright,Manadar the Heilener,Zann the Verteidigener,Arius the Seeker,Aurrius the Pure,Karnwield the Seeker,Buzan the Fearless
+Granis Darkhammer,Jorn der Erlöser,Sage Truthbearer,Malak der Rächer,Gavinrad der Entsetzliche,Morlune der Mächtige,Agamand der Wahre,Ballador der Schlaue,Manadar der Heiler,Zann der Verteidiger,Arius der Sucher,Aurrius der Reine,Karnwield der Sucher,Buzan der Furchtlose
 }
 
 STRING 2532
@@ -16992,13 +16992,13 @@ Magischer Fäller
 STRING 3318
 // Items: I02V (Magical Cutter), Description (Description)
 {
-Magischer Fäller from the far continent of Kalimdor that cuts down trees.
+Magischer Fäller vom fernen Kontinent Kalimdor, der Bäume fällt.
 }
 
 STRING 3319
 // Items: I02V (Magical Cutter), Ubertip (Tooltip - Extended)
 {
-When using this magical cutter, all living trees within a radius of 1000 will be cut down.
+Alle lebenden Bäume in einem Umkreis von 1000 werden gefällt, wenn dieser magische Fäller benutzt wird.
 }
 
 STRING 3320
@@ -102204,7 +102204,7 @@ Magischer Samen
 STRING 46641
 // Abilities: A1Q9 (Magical Seed), Ubertip (Tooltip - Normal - Extended)
 {
-When planting these magical seeds, all dead trees within a radius of 1000 regrow.
+Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden. 
 }
 
 STRING 46642
@@ -102252,7 +102252,7 @@ Magischer Fäller
 STRING 46649
 // Abilities: A1QB (Magical Cutter), Ubertip (Tooltip - Normal - Extended)
 {
-When using this magical cutter, all living trees within a radius of 1000 will be cut down.
+Alle lebenden Bäume in einem Umkreis von 1000 werden gefällt, wenn dieser magische Fäller benutzt wird.
 }
 
 STRING 46650
