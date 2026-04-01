@@ -1921,7 +1921,7 @@ StringList {
     IQ_VICTORY_DESCRIPTION             "Every player can win the game by killing the boss Archimonde if the victory conditions are enabled. The game ends after this. All players who are not allied with the killing player will lose the game.",
     IQ_AI_TITLE                        "Computer AI (Respawn %1%)",
     IQ_AI_DESCRIPTION                  "Computer players are warlords by default. They start with a main building, five workers and their hero. The AI will collect gold and lumber and build additional gold mines. It should attack creeps and hostile players from time to time. If you are allied to a computer player it is recommended to defend him and to give him resources if you are a warlord yourself. Allied computer players might turn out to be rather useful when attacking another player. When the base of a computer player is destroyed, the hero will get a tiny main building to rebuild a base. Their race is defined in the beginning by the host player.",
-    IQ_AI_0                            "Change alliances to get control."
+    IQ_AI_0                            "Change alliances to get control.",
     IQ_CHEATS_TITLE                    "Cheats",
     IQ_CHEATS_DESCRIPTION              "Cheats are useful for testing the map. They are enabled automatically for player WorldEdit in singleplayer.",
     IQ_CHEATS_UNFREEZE                 "'-unfreeze': Unfreezes everything.",
