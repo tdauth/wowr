@@ -197,7 +197,7 @@ private function ForGroupAutoLoadMine takes nothing returns nothing
     call AutoLoadMineAI(GetEnumUnit())
 endfunction
 
-private function AutloadWorkersIntoMinesAI takes player whichPlayer returns nothing
+function AutloadWorkersIntoMinesAI takes player whichPlayer returns nothing
     local group mines = CreateGroup()
     local group workers = CreateGroup()
     call GroupEnumUnitsOfPlayer(mines, whichPlayer, Filter(function FilterIsUnitMineOrHousingOfRace))
