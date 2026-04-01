@@ -635,7 +635,7 @@ function GetRandomHordeRaceWithAISupport takes nothing returns integer
     return GetRandomTeamRaceWithAISupport(TEAM_HORDE)
 endfunction
 
-function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocation returns integer
+function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocation, integer team returns integer
     local integer index = GetPlayerIndex(whichPlayer)
     local integer frameValue = 0
     local integer random = 0
@@ -645,7 +645,7 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
         set frameValue = Races[index]
         //constant integer AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM = 1
         if (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_MATCHING_START_LOCATION) then
-            return udg_TownHallRace[startLocation]
+            return GetComputerStartLocation(startLocation).getRandomPossibleRace(team)
         elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_WARLORD) then
             return GetRandomRaceWithAISupport()
         elseif (frameValue == AI_PLAYERS_UI_RACES_MENU_ITEM_RANDOM_ALLIANCE) then

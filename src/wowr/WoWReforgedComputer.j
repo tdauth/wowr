@@ -197,7 +197,7 @@ private function ForGroupAutoLoadMine takes nothing returns nothing
     call AutoLoadMineAI(GetEnumUnit())
 endfunction
 
-function AutloadWorkersIntoMinesAI takes player whichPlayer returns nothing
+private function AutloadWorkersIntoMinesAI takes player whichPlayer returns nothing
     local group mines = CreateGroup()
     local group workers = CreateGroup()
     call GroupEnumUnitsOfPlayer(mines, whichPlayer, Filter(function FilterIsUnitMineOrHousingOfRace))
@@ -221,7 +221,7 @@ globals
     private unit array ghoul
 endglobals
 
-function StartingUnitsPeons takes player whichPlayer, location l, integer whichRace returns nothing
+private function StartingUnitsPeons takes player whichPlayer, location l, integer whichRace returns nothing
     local integer peonId = GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_WORKER)
     local integer ghoulId = GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_FOOTMAN)
     local real     peonX = GetLocationX(l)
@@ -253,7 +253,7 @@ function StartingUnitsPeons takes player whichPlayer, location l, integer whichR
     endif
 endfunction
 
-function StartingUnitsShredders takes player whichPlayer, location l, integer whichRace returns nothing
+private function StartingUnitsShredders takes player whichPlayer, location l, integer whichRace returns nothing
     local real     peonX = GetLocationX(l)
     local real     peonY = GetLocationY(l) - 412.00
     local real     unitSpacing   = 64.00
@@ -272,7 +272,7 @@ private function FilterFunctionIsMine takes nothing returns boolean
     return GetUnitTypeId(GetFilterUnit()) == GOLD_MINE
 endfunction
 
-function StartingUnitsReplaceMine takes player whichPlayer, unit mine, integer whichRace returns nothing
+private function StartingUnitsReplaceMine takes player whichPlayer, unit mine, integer whichRace returns nothing
     local integer mineId = GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MINE) // TODO Always use AI version
     local location l = GetUnitLoc(mine)
     call ReplaceUnitBJ(mine, mineId, bj_UNIT_STATE_METHOD_RELATIVE)
@@ -289,7 +289,7 @@ function StartingUnitsReplaceMine takes player whichPlayer, unit mine, integer w
     set l = null
 endfunction
 
-function StartingUnitsReplaceAllMines takes player whichPlayer, location l, integer whichRace returns nothing
+private function StartingUnitsReplaceAllMines takes player whichPlayer, location l, integer whichRace returns nothing
     local group mines = GetUnitsInRangeOfLocMatching(2048.00, l, Filter(function FilterFunctionIsMine))
     local integer max = BlzGroupGetSize(mines)
     local integer i = 0
@@ -303,7 +303,7 @@ function StartingUnitsReplaceAllMines takes player whichPlayer, location l, inte
     set mines = null
 endfunction
 
-function StartingUnitsAndPickAIStandard takes player whichPlayer, location l, integer whichRace, boolean recreate returns nothing
+private function StartingUnitsAndPickAIStandard takes player whichPlayer, location l, integer whichRace, boolean recreate returns nothing
     local integer townHallId = GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_1)
     local unit townHall = CreateUnitAtLoc(whichPlayer, townHallId, l, bj_UNIT_FACING)
     local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
@@ -320,7 +320,7 @@ function StartingUnitsAndPickAIStandard takes player whichPlayer, location l, in
     endif
 endfunction
 
-function StartingUnitsAndPickAIEx takes player whichPlayer, location l, integer whichRace, boolean recreate returns nothing
+private function StartingUnitsAndPickAIEx takes player whichPlayer, location l, integer whichRace, boolean recreate returns nothing
     local integer mineId = GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MINE)
     call PingMinimap(GetLocationX(l), GetLocationY(l), 4.0)
     //call BJDebugMsg("Create starting units with peons for player " + GetPlayerName(whichPlayer) + " and race " + I2S(whichRace))
@@ -331,7 +331,7 @@ function StartingUnitsAndPickAIEx takes player whichPlayer, location l, integer 
     endif
 endfunction
 
-function StartingUnitsAndPickAI takes player whichPlayer, location l, integer whichRace returns nothing
+private function StartingUnitsAndPickAI takes player whichPlayer, location l, integer whichRace returns nothing
     call StartingUnitsAndPickAIEx(whichPlayer, l, whichRace, false)
 endfunction
 
@@ -623,6 +623,7 @@ endfunction
 
 private function EnumStartLobbySettings takes nothing returns nothing
     local integer playerId = GetPlayerId(GetEnumPlayer())
+    local integer convertedPlayerId = GetConvertedPlayerId(GetEnumPlayer())
     local boolean isWarlord = false
     local integer startLocationIndex = -1
     local ComputerStartLocation computerStartLocation = 0
@@ -646,7 +647,7 @@ private function EnumStartLobbySettings takes nothing returns nothing
     call SetPlayerTechResearchedSwap(UPG_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()), GetEnumPlayer())
     call SetPlayerTechResearchedSwap(UPG_CHEAP_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()), GetEnumPlayer())
     // Profession
-    set udg_PlayerProfession[GetConvertedPlayerId(GetEnumPlayer())] = AiPlayersUIGetPlayerProfession(GetEnumPlayer())
+    set udg_PlayerProfession[convertedPlayerId] = AiPlayersUIGetPlayerProfession(GetEnumPlayer())
     // Do not create profession items for AI. They cannot handle it.
     // Either Warlord or Freelancer
     set isWarlord = AiPlayersUIGetPlayerWarlord(GetEnumPlayer())
@@ -659,12 +660,12 @@ private function EnumStartLobbySettings takes nothing returns nothing
         set computerStartLocation = GetComputerStartLocation(startLocationIndex)
         set computerStartLocation.taken = true
         set l = Location(computerStartLocation.x, computerStartLocation.y)
-        set udg_ComputerStartLocation[GetConvertedPlayerId(GetEnumPlayer())] = startLocationIndex
+        set udg_ComputerStartLocation[convertedPlayerId] = startLocationIndex
         call RemoveRandomMinesAtAIStartLocation(startLocationIndex)
         // Race
-        set playerRace = AiPlayersUIGetPlayerRace(GetEnumPlayer(), startLocationIndex)
-        set udg_ComputerRace[GetConvertedPlayerId(GetEnumPlayer())] = playerRace
-        set udg_PlayerRace[GetConvertedPlayerId(GetEnumPlayer())] = playerRace
+        set playerRace = AiPlayersUIGetPlayerRace(GetEnumPlayer(), startLocationIndex, GetPlayerTeam(GetEnumPlayer()))
+        set udg_ComputerRace[convertedPlayerId] = playerRace
+        set udg_PlayerRace[convertedPlayerId] = playerRace
         // Start Main Building and Workers
         call StartingUnitsAndPickAI(GetEnumPlayer(), l, playerRace)
 
@@ -711,13 +712,13 @@ private function EnumStartLobbySettings takes nothing returns nothing
             set i = i + 1
         endloop
         // Remove Altar on Theramore to prevent hero revivals there
-        set bj_wantDestroyGroup=true
+        set bj_wantDestroyGroup = true
         call RemoveUnit(FirstOfGroup(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), FOUNTAIN_OF_LIFE)))
         if (isWarlord) then
-            set udg_PlayerIsWarlord[GetConvertedPlayerId(GetEnumPlayer())]=true
+            set udg_PlayerIsWarlord[convertedPlayerId] = true
             call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_WarlordXPRate)
         else
-            set udg_PlayerIsWarlord[GetConvertedPlayerId(GetEnumPlayer())]=false
+            set udg_PlayerIsWarlord[convertedPlayerId] = false
             call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_FreelancerXPRate)
             call SetPlayerTechResearchedSwap('R01W', 1, GetEnumPlayer())
             // Freelancer AI Gold Harvest Bonus
@@ -735,10 +736,10 @@ private function EnumStartLobbySettings takes nothing returns nothing
     // Navy
     if (computerStartLocation != 0 and computerStartLocation.hasShipyard and playerRace != udg_RaceNone) then
         if (GetRaceShipyard(playerRace) != 0) then
-            call GroupAddUnit(computerShipyards[playerId], CreateUnit(GetEnumPlayer(), GetRaceShipyard(playerRace), computerStartLocation.x, computerStartLocation.y, bj_UNIT_FACING))
+            call GroupAddUnit(computerShipyards[playerId], CreateUnit(GetEnumPlayer(), GetRaceShipyard(playerRace), computerStartLocation.shipyardX, computerStartLocation.shipyardY, bj_UNIT_FACING))
         endif
         if (GetRaceShipyard2(playerRace) != 0) then
-            call GroupAddUnit(computerShipyards[playerId], CreateUnit(GetEnumPlayer(), GetRaceShipyard2(playerRace), computerStartLocation.x, computerStartLocation.y, bj_UNIT_FACING))
+            call GroupAddUnit(computerShipyards[playerId], CreateUnit(GetEnumPlayer(), GetRaceShipyard2(playerRace), computerStartLocation.shipyardX, computerStartLocation.shipyardY, bj_UNIT_FACING))
         endif
         call CommandAI(GetEnumPlayer(), COMMAND_SHIPS_ON, 0)
     endif

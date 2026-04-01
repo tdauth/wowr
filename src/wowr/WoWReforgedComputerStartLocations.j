@@ -10,8 +10,25 @@ struct ComputerStartLocation
     integer possibleRacesCounter = 0
     boolean taken = false
 
-    method getRandomPossibleRace takes nothing returns integer
-        return possibleRaces[GetRandomInt(0, possibleRacesCounter)]
+    method getRandomPossibleRace takes integer team returns integer
+        local integer raceTeam = TEAM_NONE
+        local integer i = 0
+        local integer array r
+        local integer c = 0
+        loop
+            exitwhen (i == possibleRacesCounter)
+            set raceTeam = GetRaceTeam(possibleRaces[i])
+            if (raceTeam == team or raceTeam == TEAM_NONE) then
+                set r[c] = possibleRaces[i]
+                set c = c + 1
+            endif
+            set i = i + 1
+        endloop
+        if (c > 0) then
+            return r[GetRandomInt(0, c)]
+        endif
+
+        return udg_RaceFreelancer
     endmethod
 
     method hasRace takes integer whichRace returns boolean
