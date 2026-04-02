@@ -315,7 +315,7 @@ function GetSaveCode takes player whichPlayer returns string
     local integer gold = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
     local integer lumber = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER)
     local integer evolutionLevel = GetPlayerTechCountSimple(UPG_EVOLUTION, whichPlayer)
-    local integer equipmentBags = BlzGroupGetSize(udg_EquipmentBags[convertedPlayerId])
+    local integer equipmentBags = GetEquipmentBagsCount(whichPlayer)
 
     return GetSaveCodeEx(whichPlayer, GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, heroLevel, xp, heroLevel2, xp2, heroLevel3, xp3, gold, lumber, evolutionLevel, GetSaveCodeDemigodValue(whichPlayer), equipmentBags)
 endfunction
@@ -1435,9 +1435,9 @@ function GetSaveCodeItemsForIndex takes player whichPlayer, boolean writeFile, i
         set i = index - 3
         //call BJDebugMsg("Backpack item " + I2S(i))
         return GetSaveCodeItemsEx3(playerName, isSinglePlayer, isWarlord, xpRate, writeFile, index, GetBackpackItemTypeId(GetBackpackItemIndex(playerId, i, 0)), GetBackpackItemCharges(GetBackpackItemIndex(playerId, i, 0)), GetBackpackItemTypeId(GetBackpackItemIndex(playerId, i, 1)), GetBackpackItemCharges(GetBackpackItemIndex(playerId, i, 1)), GetBackpackItemTypeId(GetBackpackItemIndex(playerId, i, 2)), GetBackpackItemCharges(GetBackpackItemIndex(playerId, i, 2)), GetBackpackItemTypeId(GetBackpackItemIndex(playerId, i, 3)), GetBackpackItemCharges(GetBackpackItemIndex(playerId, i, 3)), GetBackpackItemTypeId(GetBackpackItemIndex(playerId, i, 4)), GetBackpackItemCharges(GetBackpackItemIndex(playerId, i, 4)), GetBackpackItemTypeId(GetBackpackItemIndex(playerId, i, 5)), GetBackpackItemCharges(GetBackpackItemIndex(playerId, i, 5)))
-    elseif (index >= 3 + BACKPACK_MAX_PAGES and index < BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])) then
+    elseif (index >= 3 + BACKPACK_MAX_PAGES and index < GetEquipmentBagsCount(whichPlayer)) then
         set i = index - 3 + BACKPACK_MAX_PAGES
-        return GetSaveCodeItemsEx(playerName, isSinglePlayer, isWarlord, xpRate, BlzGroupUnitAt(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], i), writeFile, index)
+        return GetSaveCodeItemsEx(playerName, isSinglePlayer, isWarlord, xpRate, GetPlayerEquipmentBag(whichPlayer, i), writeFile, index)
     endif
     return ""
 endfunction
@@ -1454,7 +1454,7 @@ function GetAllSaveCodeItems takes player whichPlayer returns string
     local integer i = 0
     local integer index = 0
     local integer playerId = GetPlayerId(whichPlayer)
-    local integer max = BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    local integer max = 0
     local string result = GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerHero1(whichPlayer), true, 0)
     call GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerHero2(whichPlayer), true, 1)
     call GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerHero3(whichPlayer), true, 2)
@@ -1470,10 +1470,10 @@ function GetAllSaveCodeItems takes player whichPlayer returns string
     endloop
     
     set i = 0
-    set max = BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    set max = GetEquipmentBagsCount(whichPlayer)
     loop
         exitwhen (i == max)
-        call GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, BlzGroupUnitAt(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], i), true, index)
+        call GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerEquipmentBag(whichPlayer, i), true, index)
         set index = index + 1
         set i = i + 1
     endloop

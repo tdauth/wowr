@@ -719,7 +719,7 @@ function AiPlayersUIGetStartLocation takes player whichPlayer returns integer
         if (frameValue == AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM_MATCHING_TEAM) then
             return AiPlayersUIChooseComputerStartLocationTeam(Teams[index])
         elseif (frameValue == AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM) then
-            return AiPlayersUIChooseComputerStartLocation(GetRandomInt(0, udg_Max_TownHalls - 1))
+            return AiPlayersUIChooseComputerStartLocation(GetRandomInt(0, GetMaxComputerStartLocations() - 1))
         elseif (frameValue == AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM_ALLIANCE) then
             return AiPlayersUIChooseComputerStartLocationAlliance()
         elseif (frameValue == AI_PLAYERS_UI_START_LOCATION_MENU_ITEM_RANDOM_HORDE) then

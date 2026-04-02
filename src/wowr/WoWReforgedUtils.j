@@ -252,10 +252,6 @@ function GetLivingHero takes player whichPlayer returns unit
     return GetPlayerHero1(whichPlayer)
 endfunction
 
-function GetPlayerEquipmentBags takes player whichPlayer returns group
-    return udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)]
-endfunction
-
 function GetHeroLevelMaxXP takes integer heroLevel returns integer
     local integer result = 0 // level 1 XP
     local integer i = 3

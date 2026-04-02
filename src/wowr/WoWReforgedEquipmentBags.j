@@ -1,7 +1,9 @@
-library WoWReforgedEquipmentBags requires SimError, WoWReforgedUtils, WoWReforgedAbilityFields, WoWReforgedSkillMenu, WoWReforgedCommandButtons
+library WoWReforgedEquipmentBags initializer Init requires SimError, WoWReforgedUtils, WoWReforgedAbilityFields, WoWReforgedSkillMenu, WoWReforgedCommandButtons
 
 globals
     constant integer MAX_EQUIPMENT_BAGS = 3
+
+    private group array playerEquipmentBags
 endglobals
 
 function GetMaxEquipmentBags takes player whichPlayer returns integer
@@ -22,7 +24,15 @@ function GetMaxEquipmentBags takes player whichPlayer returns integer
 endfunction
 
 function GetEquipmentBagsCount takes player whichPlayer returns integer
-    return BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    return BlzGroupGetSize(playerEquipmentBags[GetPlayerId(whichPlayer)])
+endfunction
+
+function GetPlayerEquipmentBags takes player whichPlayer returns group
+    return playerEquipmentBags[GetPlayerId(whichPlayer)]
+endfunction
+
+function GetPlayerEquipmentBag takes player whichPlayer, integer index returns unit
+    return BlzGroupUnitAt(playerEquipmentBags[GetPlayerId(whichPlayer)], index)
 endfunction
 
 function EquipmentBagAddAbilities takes unit bag, item whichItem returns nothing
@@ -110,14 +120,14 @@ function RemoveEquipmentBags takes player whichPlayer returns nothing
     local integer i = 0
     loop
         exitwhen (i >= max)
-        set equipmentBag = BlzGroupUnitAt(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], i)
+        set equipmentBag = GetPlayerEquipmentBag(whichPlayer, i)
         call DropAllItemsFromHero(equipmentBag)
         call DisableItemCraftingUnit(equipmentBag)
         call RemoveUnit(equipmentBag)
         set equipmentBag = null
         set i = i + 1
     endloop
-    call GroupClear(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    call GroupClear(GetPlayerEquipmentBags(whichPlayer))
 endfunction
 
 function UpdateEquipmentBagHeroLevels takes player whichPlayer returns nothing
@@ -127,7 +137,7 @@ function UpdateEquipmentBagHeroLevels takes player whichPlayer returns nothing
     local integer i = 0
     loop
         exitwhen (i >= max)
-        set equipmentBag = BlzGroupUnitAt(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], i)
+        set equipmentBag = GetPlayerEquipmentBag(whichPlayer, i)
         call SuspendHeroXP(equipmentBag, false)
         if (GetHeroLevel(equipmentBag) < highHeroLevel) then
             call SetHeroLevel(equipmentBag, highHeroLevel, true)
@@ -144,7 +154,7 @@ private function CreateSingleEquipmentBag takes player whichPlayer, integer inde
     local unit equipmentBag = CreateUnit(whichPlayer, EQUIPMENT_BAG, GetUnitX(udg_Hero[playerId]), GetUnitY(udg_Hero[playerId]), bj_UNIT_FACING)
     local string equipmentBagName = Format(GetLocalizedString("EQUIPMENT_BAG_INDEX")).i(index).result()
     call SuspendHeroXP(equipmentBag, true)
-    call GroupAddUnit(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], equipmentBag)
+    call GroupAddUnit(GetPlayerEquipmentBags(whichPlayer), equipmentBag)
     call UnitRemoveAbility(equipmentBag, 'A02N')
     call UnitAddAbility(equipmentBag, 'AInv')
     call BlzSetUnitName(equipmentBag, equipmentBagName)
@@ -165,7 +175,7 @@ function CreateEquipmentBags takes player whichPlayer, integer equipmentBags ret
         set i = i + 1
     endloop
     call UpdateEquipmentBagHeroLevels(whichPlayer)
-    call LinkItemCraftingGroupInventories(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    call LinkItemCraftingGroupInventories(GetPlayerEquipmentBags(whichPlayer))
 endfunction
 
 private function ForGroupRemoveUnit takes nothing returns nothing
@@ -185,7 +195,7 @@ function RecreateEquipmentBags takes player whichPlayer, integer equipmentBags r
     local integer max = IMaxBJ(oldMax, equipmentBags)
     local unit equipmentBag = null
     local integer sourceHandleId = 0
-    local group oldBags = CopyGroup(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    local group oldBags = CopyGroup(GetPlayerEquipmentBags(whichPlayer))
     local group removingBags = CreateGroup()
     local integer i = 0
     set max = IMinBJ(max, GetMaxEquipmentBags(whichPlayer))
@@ -208,7 +218,7 @@ function RecreateEquipmentBags takes player whichPlayer, integer equipmentBags r
         set i = i + 1
     endloop
     //call BJDebugMsg("Remove 1 old equipment bags with count " + I2S(CountUnitsInGroup(removingBags)))
-    call GroupRemoveGroup(removingBags, udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    call GroupRemoveGroup(removingBags, GetPlayerEquipmentBags(whichPlayer))
     //call BJDebugMsg("Remove 2 old equipment bags with count " + I2S(CountUnitsInGroup(removingBags)))
     call ForGroup(removingBags, function ForGroupRemoveUnit)
     call GroupClear(removingBags)
@@ -218,13 +228,13 @@ function RecreateEquipmentBags takes player whichPlayer, integer equipmentBags r
     call DestroyGroup(oldBags)
     set oldBags = null
     call UpdateEquipmentBagHeroLevels(whichPlayer)
-    call LinkItemCraftingGroupInventories(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    call LinkItemCraftingGroupInventories(GetPlayerEquipmentBags(whichPlayer))
 endfunction
 
 function ResetEquipmentBags takes player whichPlayer returns nothing
     //call BJDebugMsg("Equipment bags size " + I2S(GetEquipmentBagsCount(whichPlayer)))
-    call ForGroup(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)], function ForGroupRemoveUnit)
-    call GroupClear(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+    call ForGroup(GetPlayerEquipmentBags(whichPlayer), function ForGroupRemoveUnit)
+    call GroupClear(GetPlayerEquipmentBags(whichPlayer))
 endfunction
 
 function AddEquipmentBag takes player whichPlayer returns nothing
@@ -232,7 +242,7 @@ function AddEquipmentBag takes player whichPlayer returns nothing
     if (GetEquipmentBagsCount(whichPlayer) < max) then
         call CreateSingleEquipmentBag(whichPlayer, GetEquipmentBagsCount(whichPlayer) + 1, true)
         call UpdateEquipmentBagHeroLevels(whichPlayer)
-        call LinkItemCraftingGroupInventories(udg_EquipmentBags[GetConvertedPlayerId(whichPlayer)])
+        call LinkItemCraftingGroupInventories(GetPlayerEquipmentBags(whichPlayer))
     else
         call SimError(whichPlayer, Format(GetLocalizedString("MAXIMUM_EQUIPMENT_BAGS")).i(max).result())
     endif
@@ -241,6 +251,15 @@ endfunction
 function RecreateAllEquipmentBags takes player whichPlayer returns nothing
     local integer count = GetEquipmentBagsCount(whichPlayer)
     call RecreateEquipmentBags(whichPlayer, count)
+endfunction
+
+private function Init takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set playerEquipmentBags[i] = CreateGroup()
+        set i = i + 1
+    endloop
 endfunction
 
 endlibrary

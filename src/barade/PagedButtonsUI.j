@@ -278,7 +278,6 @@ private function UpdateItemsForUI takes player whichPlayer returns nothing
                 set objectId = GetPagedButtonId(shop, slot)
                 if (UIVisible[playerId]) then //  and GetItemCharges(index) > 0
                     if (whichPlayer == GetLocalPlayer()) then
-                        //call BlzFrameSetTexture(SlotFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
                         call BlzFrameSetTexture(SlotBackdropFrame[i], BlzGetAbilityIcon(objectId), 0, true)
                         call BlzFrameSetText(SlotChargesFrame[i], "1") // I2S(GetItemCharges(index))
                         call BlzFrameSetText(SlotPageFrame[i], I2S(GetPagedButtonsPageByIndex(shop, slot) + 1))

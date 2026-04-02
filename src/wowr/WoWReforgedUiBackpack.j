@@ -78,7 +78,6 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
             exitwhen (j == bj_MAX_INVENTORY)
             set index = Index2D(i, j, bj_MAX_INVENTORY)
             set itemTypeId = GetBackpackItemTypeId(index)
-            //call BlzFrameSetTexture(BackpackItemFrame[index], GetIconByItemType(udg_RucksackItemType[index]), 0, true)
             if (itemTypeId == 0) then
                 call BlzFrameSetTexture(BackpackItemBackdropFrame[index], "UI\\Widgets\\Console\\Human\\human-inventory-slotfiller.blp", 0, true)
                 call BlzFrameSetVisible(BackpackItemChargesBackgroundFrame[index], false)
