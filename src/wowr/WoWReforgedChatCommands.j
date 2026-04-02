@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedPrestoredSaveCodes, WoWReforgedComputerStartLocations
+library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedPrestoredSaveCodes, WoWReforgedCheats, WoWReforgedComputerStartLocations
 
 globals
     private ChatCommand array chatCommands

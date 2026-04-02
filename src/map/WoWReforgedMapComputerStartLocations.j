@@ -56,7 +56,7 @@ private function Init takes nothing returns nothing
 	call AddComputerStartLocationRectNoShipyard(gg_rct_Town_Hall_Undercity)
 	call AddComputerStartLocationPossibleRaceLast(udg_RaceUndead)
     
-	call AddComputerStartLocationRectNoShipyard(gg_rct_Town_Hall_Ironforge)
+	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Ironforge, gg_rct_Town_Hall_Shipyard_Ironforge)
 	call AddComputerStartLocationPossibleRaceLast(udg_RaceDwarf)
 	call AddComputerStartLocationPossibleRaceLast(udg_RaceGnome)
 	call AddComputerStartLocationPossibleRaceLast(udg_RaceKobold)
