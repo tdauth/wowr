@@ -3929,15 +3929,6 @@ globals
 
     constant integer GUARD_OF_THE_OLD_GODS                           = 'n06P'
 
-    // Housing
-    constant integer REAL_ESTATE_AGENT                               = 'n0O3'
-    constant integer CARETAKER                                       = 'n0O2'
-    constant integer LEAVE_HOUSING                                   = 'o0BS'
-    constant integer ITEM_HOUSE_KEY                                  = 'I16O'
-
-    constant integer ENTER_COMMON_HOUSING                            = 'o0C3'
-    constant integer LEAVE_COMMON_HOUSING                            = 'o0C4'
-
     // Freelancer
     constant integer FREELANCER_TIER_1                               = HIDEOUT
     constant integer FREELANCER_TIER_2                               = FORTIFIED_HIDEOUT

@@ -209,6 +209,20 @@ function UnlockedAccountIds takes Account a returns string
     return result
 endfunction
 
+function DisplayAccountInfo takes player whichPlayer, Account a returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 4.0, Format(GetLocalizedString("UNLOCKED_X_FOR_Y")).s(a.name).s(UnlockedAccountIds(a)).result())
+endfunction
+
+function DisplayAccounts takes player whichPlayer returns nothing
+    local integer i = 0
+    local integer max = GetAccountsMax()
+    loop
+        exitwhen (i == max)
+        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 4.0,  "- " + GetAccount(i).name)
+        set i = i + 1
+    endloop
+endfunction
+
 function ShowUnlockedAccountIds takes player whichPlayer returns nothing
     local string result = "-"
     local integer playerId = GetPlayerId(whichPlayer)
@@ -259,7 +273,6 @@ private function UnlockVIP takes Account a returns nothing
     call AccountUnlock(a, PHOENIX_MOUNT)
     call AccountUnlock(a, SNOWY_OWL_MOUNT)
     call AccountUnlock(a, PHOENIX)
-    call AccountUnlock(a, ITEM_HOUSE_KEY)
     call AccountUnlock(a, PROPERTY_WYRMREST_TEMPLE)
     call AccountUnlockChatCommand(a, "-playername")
     call AccountUnlockChatCommand(a, "-cleargenerated")

@@ -144,7 +144,6 @@ function GenerateSaveCode takes player whichPlayer, string playerName, boolean s
     call GetSaveCodeDragonUnits(whichPlayer, playerName, singlePlayer, warlord)
     call GetSaveCodeGoodItems(playerName, singlePlayer, warlord)
     call GetSaveCodeHumanUpgrades(whichPlayer, playerName, singlePlayer, warlord)
-    call GetSaveCodeLetter(true, playerName, "all", "Hello citizens!")
 endfunction
 
 function GenerateSaveCodeNewOpLimit takes nothing returns nothing

@@ -123,8 +123,6 @@ private function Init takes nothing returns nothing
     call AddNeutralBuilding(PHOENIX_ROOST)
     call AddNeutralBuilding(MOUNTS_SHOP)
     call AddNeutralBuilding(BANNER_SHOP_NEUTRAL)
-    call AddNeutralBuilding(REAL_ESTATE_AGENT)
-    call AddNeutralBuilding(CARETAKER)
     call AddNeutralBuilding(CHEST_NEUTRAL)
     call AddNeutralBuilding(FLOTSAM)
     call AddNeutralBuilding(FISH_SCHOOL)

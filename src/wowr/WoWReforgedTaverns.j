@@ -1,4 +1,4 @@
-library WoWReforgedTaverns initializer Init requires PagedButtons, OpLimit, UnitGroupUtils, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedStartLocations, WoWReforgedPrestoredSaveCodes
+library WoWReforgedTaverns initializer Init requires PagedButtons, OpLimit, UnitGroupUtils, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedStartLocations
 
 globals
     private unit tmpUnit = null

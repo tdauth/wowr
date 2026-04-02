@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedPrestoredSaveCodes, WoWReforgedCheats, WoWReforgedComputerStartLocations
+library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations
 
 globals
     private ChatCommand array chatCommands
@@ -272,12 +272,14 @@ endfunction
 
 private function Info takes nothing returns nothing
     local string x = StringToken(GetEventPlayerChatString(), 1)
+    local Account a = 0
     local player p = GetPlayerFromString(x)
     if (p == null) then
-        if (StringLength(x) == 0 or not IsValidAccount(x)) then
+        set a = GetAccountByName(x)
+        if (a == null) then
             call DisplayStats(GetTriggerPlayer(), GetTriggerPlayer())
         else
-            call DisplayAccountInfo(GetTriggerPlayer(), x)
+            call DisplayAccountInfo(GetTriggerPlayer(), a)
         endif
     else
         call DisplayStats(GetTriggerPlayer(), p)
@@ -298,7 +300,7 @@ private function Players takes nothing returns nothing
 endfunction
 
 private function Accounts takes nothing returns nothing
-    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetPrestoredSaveCodeAccounts())
+    call DisplayAccounts(GetTriggerPlayer())
 endfunction
 
 private function Bans takes nothing returns nothing
