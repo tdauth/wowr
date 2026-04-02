@@ -43,6 +43,9 @@ private function Init takes nothing returns nothing
     // Theramore
     call AddLeverGate(gg_unit_n0ES_1635, gg_dest_LTg1_5488)
     call AddLeverGate(gg_unit_n0ES_1631, gg_dest_LTg3_5486)
+    // Theramore Neutral Zone
+    call AddLeverGate(gg_unit_n0ES_2030, gg_dest_LTg4_1765)
+    call AddLeverGate(gg_unit_n0ES_2074, gg_dest_LTg3_1843)
     // Dakspear Islands
     call AddLeverGate(gg_unit_n0ES_0690, gg_dest_DTg4_17547)
     // Kezan
