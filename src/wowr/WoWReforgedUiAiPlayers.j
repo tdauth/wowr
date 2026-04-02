@@ -528,7 +528,7 @@ function AiPlayersUIGetHero takes player whichPlayer returns integer
         set frameValue = Heroes[index]
         
         if (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM_MATCHING_RACE) then
-            return ChooseRandomHeroFromRace(udg_PlayerRace[GetConvertedPlayerId(whichPlayer)])
+            return ChooseRandomHeroFromRace(GetPlayerRace1(whichPlayer))
         elseif (frameValue == AI_PLAYERS_UI_HEROES_MENU_ITEM_RANDOM) then
             return GetRandomInt(0, GetHeroesMax() - 1)
         endif
