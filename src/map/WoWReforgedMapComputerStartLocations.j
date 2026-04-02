@@ -37,7 +37,6 @@ private function Init takes nothing returns nothing
 
 	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Kezan, gg_rct_Town_Hall_Shipyard_Kezan)
 	call AddComputerStartLocationPossibleRaceLast(udg_RaceGoblin)
-	call AddComputerStartLocationPossibleRaceLast(udg_RaceKobold)
 
 	// Eastern Kingdoms
 	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Stormwind, gg_rct_Town_Hall_Shipyard_Stormwind)
