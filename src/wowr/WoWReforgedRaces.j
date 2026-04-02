@@ -522,7 +522,7 @@ function GetRaceItemTypeId takes integer r returns integer
     return udg_RaceItemType[r]
 endfunction
 
-function AddRace takes nothing returns integer
+private function AddRace takes nothing returns integer
     local integer index = racesCounter
     set racesCounter = racesCounter + 1
     return index
@@ -540,30 +540,30 @@ function GetRaceTeam takes integer r returns integer
     return udg_RaceTeam[r]
 endfunction
 
-function SetRaceTeam takes integer whichRace, integer team returns nothing
+private function SetRaceTeam takes integer whichRace, integer team returns nothing
     set udg_RaceTeam[whichRace] = team
 endfunction
 
-function SetRaceTavernItemType takes integer whichRace, integer itemTypeId returns nothing
+private function SetRaceTavernItemType takes integer whichRace, integer itemTypeId returns nothing
     set udg_RaceName[whichRace] = GetObjectName(itemTypeId)
     set udg_RaceTavernItemType[whichRace] = itemTypeId
 endfunction
 
 // scepter
-function SetRaceItemType takes integer whichRace, integer itemTypeId returns nothing
+private function SetRaceItemType takes integer whichRace, integer itemTypeId returns nothing
     set udg_RaceItemType[whichRace] = itemTypeId
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SCEPTER_ITEM, itemTypeId)
 endfunction
 
-function SetRaceAiScript takes integer whichRace, string aiScript returns nothing
+private function SetRaceAiScript takes integer whichRace, string aiScript returns nothing
     set udg_RaceAIScript[whichRace] = aiScript
 endfunction
 
-function SetRaceHasFootmanWorker takes integer whichRace, boolean flag returns nothing
+private function SetRaceHasFootmanWorker takes integer whichRace, boolean flag returns nothing
     set udg_RaceHasFootmanWorker[whichRace] = flag
 endfunction
 
-function SetRaceHasBlight takes integer whichRace, boolean flag returns nothing
+private function SetRaceHasBlight takes integer whichRace, boolean flag returns nothing
     set udg_RaceHasBlight[whichRace] = flag
 endfunction
 
@@ -625,140 +625,140 @@ function IsUnitHousing takes unit whichUnit returns boolean
     return IsHousing(GetUnitTypeId(whichUnit))
 endfunction
 
-function SetRaceTier1 takes integer whichRace, integer id returns nothing
+private function SetRaceTier1 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1, id)
 endfunction
 
-function SetRaceTier1Item takes integer whichRace, integer id returns nothing
+private function SetRaceTier1Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM, id)
     set udg_RaceItemTypeTinyCastle[whichRace] = id
 endfunction
 
-function SetRaceTier2 takes integer whichRace, integer id returns nothing
+private function SetRaceTier2 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_2, id)
 endfunction
 
-function SetRaceTier2Item takes integer whichRace, integer id returns nothing
+private function SetRaceTier2Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_2_ITEM, id)
 endfunction
 
-function SetRaceTier3 takes integer whichRace, integer id returns nothing
+private function SetRaceTier3 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_3, id)
 endfunction
 
-function SetRaceTier3Item takes integer whichRace, integer id returns nothing
+private function SetRaceTier3Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_3_ITEM, id)
 endfunction
 
-function SetRaceFarm takes integer whichRace, integer id returns nothing
+private function SetRaceFarm takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_FARM, id)
 endfunction
 
-function SetRaceFarmItem takes integer whichRace, integer id returns nothing
+private function SetRaceFarmItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_FARM_ITEM, id)
 endfunction
 
-function SetRaceBarracks takes integer whichRace, integer id returns nothing
+private function SetRaceBarracks takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_BARRACKS, id)
 endfunction
 
-function SetRaceBarracksItem takes integer whichRace, integer id returns nothing
+private function SetRaceBarracksItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_BARRACKS_ITEM, id)
 endfunction
 
-function SetRaceBlacksmith takes integer whichRace, integer id returns nothing
+private function SetRaceBlacksmith takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_BLACK_SMITH, id)
 endfunction
 
-function SetRaceBlacksmithItem takes integer whichRace, integer id returns nothing
+private function SetRaceBlacksmithItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_BLACK_SMITH_ITEM, id)
 endfunction
 
-function SetRaceMill takes integer whichRace, integer id returns nothing
+private function SetRaceMill takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MILL, id)
 endfunction
 
-function SetRaceMillItem takes integer whichRace, integer id returns nothing
+private function SetRaceMillItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MILL_ITEM, id)
 endfunction
 
-function SetRaceAltar takes integer whichRace, integer id returns nothing
+private function SetRaceAltar takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ALTAR, id)
 endfunction
 
-function SetRaceAltarItem takes integer whichRace, integer id returns nothing
+private function SetRaceAltarItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ALTAR_ITEM, id)
 endfunction
 
-function SetRaceArcaneSanctum takes integer whichRace, integer id returns nothing
+private function SetRaceArcaneSanctum takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ARCANE_SANCTUM, id)
 endfunction
 
-function SetRaceArcaneSanctumItem takes integer whichRace, integer id returns nothing
+private function SetRaceArcaneSanctumItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ARCANE_SANCTUM_ITEM, id)
 endfunction
 
-function SetRaceShop takes integer whichRace, integer id returns nothing
+private function SetRaceShop takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHOP, id)
 endfunction
 
-function SetRaceShopItem takes integer whichRace, integer id returns nothing
+private function SetRaceShopItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHOP_ITEM, id)
 endfunction
 
-function SetRaceScoutTower takes integer whichRace, integer id returns nothing
+private function SetRaceScoutTower takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SCOUT_TOWER, id)
 endfunction
 
-function SetRaceScoutTowerItem takes integer whichRace, integer id returns nothing
+private function SetRaceScoutTowerItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SCOUT_TOWER_ITEM, id)
 endfunction
 
-function SetRaceGuardTower takes integer whichRace, integer id returns nothing
+private function SetRaceGuardTower takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_GUARD_TOWER, id)
 endfunction
 
-function SetRaceGuardTowerItem takes integer whichRace, integer id returns nothing
+private function SetRaceGuardTowerItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_GUARD_TOWER_ITEM, id)
 endfunction
 
-function SetRaceCannonTower takes integer whichRace, integer id returns nothing
+private function SetRaceCannonTower takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_CANNON_TOWER, id)
 endfunction
 
-function SetRaceCannonTowerItem takes integer whichRace, integer id returns nothing
+private function SetRaceCannonTowerItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_CANNON_TOWER_ITEM, id)
 endfunction
 
-function SetRaceArcaneTower takes integer whichRace, integer id returns nothing
+private function SetRaceArcaneTower takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ARCANE_TOWER, id)
 endfunction
 
-function SetRaceArcaneTowerItem takes integer whichRace, integer id returns nothing
+private function SetRaceArcaneTowerItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ARCANE_TOWER_ITEM, id)
 endfunction
 
-function SetRaceWorkshop takes integer whichRace, integer id returns nothing
+private function SetRaceWorkshop takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_WORKSHOP, id)
 endfunction
 
-function SetRaceWorkshopItem takes integer whichRace, integer id returns nothing
+private function SetRaceWorkshopItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_WORKSHOP_ITEM, id)
 endfunction
 
-function SetRaceAviary takes integer whichRace, integer id returns nothing
+private function SetRaceAviary takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_GRYPHON_AVIARY, id)
 endfunction
 
-function SetRaceAviaryItem takes integer whichRace, integer id returns nothing
+private function SetRaceAviaryItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_GRYPHON_AVIARY_ITEM, id)
 endfunction
 
-function SetRaceSacrificialPit takes integer whichRace, integer id returns nothing
+private function SetRaceSacrificialPit takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SACRIFICIAL_PIT, id)
 endfunction
 
-function SetRaceSacrificialPitItem takes integer whichRace, integer id returns nothing
+private function SetRaceSacrificialPitItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SACRIFICIAL_PIT_ITEM, id)
 endfunction
 
@@ -766,11 +766,11 @@ function GetRaceHousing takes integer whichRace returns integer
     return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_HOUSING)
 endfunction
 
-function SetRaceHousing takes integer whichRace, integer id returns nothing
+private function SetRaceHousing takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_HOUSING, id)
 endfunction
 
-function SetRaceHousingItem takes integer whichRace, integer id returns nothing
+private function SetRaceHousingItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_HOUSING_ITEM, id)
 endfunction
 
@@ -778,7 +778,7 @@ function GetRaceMine takes integer whichRace returns integer
     return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MINE)
 endfunction
 
-function SetRaceMine takes integer whichRace, integer id returns nothing
+private function SetRaceMine takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MINE, id)
 endfunction
 
@@ -794,27 +794,27 @@ function GetRaceShipyard2 takes integer r returns integer
     return GetRaceObjectTypeId(r, RACE_OBJECT_TYPE_SHIPYARD_2)
 endfunction
 
-function SetRaceShipyard2 takes integer whichRace, integer id returns nothing
+private function SetRaceShipyard2 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHIPYARD_2, id)
 endfunction
 
-function SetRaceShipyardItem takes integer whichRace, integer id returns nothing
+private function SetRaceShipyardItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHIPYARD_ITEM, id)
 endfunction
 
-function SetRaceSpecialBuilding takes integer whichRace, integer id returns nothing
+private function SetRaceSpecialBuilding takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SPECIAL_BUILDING, id)
 endfunction
 
-function SetRaceSpecialBuildingItem takes integer whichRace, integer id returns nothing
+private function SetRaceSpecialBuildingItem takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SPECIAL_BUILDING_ITEM, id)
 endfunction
 
-function SetRaceSpecialBuilding2 takes integer whichRace, integer id returns nothing
+private function SetRaceSpecialBuilding2 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2, id)
 endfunction
 
-function SetRaceSpecialBuilding2Item takes integer whichRace, integer id returns nothing
+private function SetRaceSpecialBuilding2Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2_ITEM, id)
 endfunction
 
@@ -822,107 +822,107 @@ function GetRaceWorker takes integer whichRace returns integer
     return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_WORKER)
 endfunction
 
-function SetRaceWorker takes integer whichRace, integer id returns nothing
+private function SetRaceWorker takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_WORKER, id)
 endfunction
 
-function SetRaceTownHall3 takes integer whichRace, integer id returns nothing
+private function SetRaceTownHall3 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TOWN_HALL_3, id)
 endfunction
 
-function SetRaceTownHall4 takes integer whichRace, integer id returns nothing
+private function SetRaceTownHall4 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TOWN_HALL_4, id)
 endfunction
 
-function SetRaceFootman takes integer whichRace, integer id returns nothing
+private function SetRaceFootman takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_FOOTMAN, id)
 endfunction
 
-function SetRaceRifleman takes integer whichRace, integer id returns nothing
+private function SetRaceRifleman takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_RIFLEMAN, id)
 endfunction
 
-function SetRaceKnight takes integer whichRace, integer id returns nothing
+private function SetRaceKnight takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_KNIGHT, id)
 endfunction
 
-function SetRaceBarracks4 takes integer whichRace, integer id returns nothing
+private function SetRaceBarracks4 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_BARRACKS_4, id)
 endfunction
 
-function SetRacePriest takes integer whichRace, integer id returns nothing
+private function SetRacePriest takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_PRIEST, id)
 endfunction
 
-function SetRaceSorceress takes integer whichRace, integer id returns nothing
+private function SetRaceSorceress takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SORCERESS, id)
 endfunction
 
-function SetRaceSpellBreaker takes integer whichRace, integer id returns nothing
+private function SetRaceSpellBreaker takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SPELLBREAKER, id)
 endfunction
 
-function SetRaceArcaneSanctum4 takes integer whichRace, integer id returns nothing
+private function SetRaceArcaneSanctum4 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_ARCANE_SANCTUM_4, id)
 endfunction
 
-function SetRaceFlyingMachine takes integer whichRace, integer id returns nothing
+private function SetRaceFlyingMachine takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_FLYING_MACHINE, id)
 endfunction
 
-function SetRaceSiegeEngine takes integer whichRace, integer id returns nothing
+private function SetRaceSiegeEngine takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SIEGE_ENGINE, id)
 endfunction
 
-function SetRaceMortar takes integer whichRace, integer id returns nothing
+private function SetRaceMortar takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MORTAR, id)
 endfunction
 
-function SetRaceWorkshop4 takes integer whichRace, integer id returns nothing
+private function SetRaceWorkshop4 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_WORKSHOP_4, id)
 endfunction
 
-function SetRaceTauren takes integer whichRace, integer id returns nothing
+private function SetRaceTauren takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TAUREN, id)
 endfunction
 
-function SetRaceGryphon takes integer whichRace, integer id returns nothing
+private function SetRaceGryphon takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_GRYPHON, id)
 endfunction
 
-function SetRaceDragonHawk takes integer whichRace, integer id returns nothing
+private function SetRaceDragonHawk takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_DRAGONHAWK, id)
 endfunction
 
-function SetRaceAviary3 takes integer whichRace, integer id returns nothing
+private function SetRaceAviary3 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_AVIARY_3, id)
 endfunction
 
-function SetRaceAviary4 takes integer whichRace, integer id returns nothing
+private function SetRaceAviary4 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_AVIARY_4, id)
 endfunction
 
-function SetRaceShade takes integer whichRace, integer id returns nothing
+private function SetRaceShade takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHADE, id)
 endfunction
 
-function SetRaceCitizenMale takes integer whichRace, integer id returns nothing
+private function SetRaceCitizenMale takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MALE_CITIZEN, id)
 endfunction
 
-function SetRaceCitizenFemale takes integer whichRace, integer id returns nothing
+private function SetRaceCitizenFemale takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_FEMALE_CITIZEN, id)
 endfunction
 
-function SetRaceChild takes integer whichRace, integer id returns nothing
+private function SetRaceChild takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_CHILD, id)
 endfunction
 
-function SetRacePet takes integer whichRace, integer id returns nothing
+private function SetRacePet takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_PET, id)
 endfunction
 
-function SetRaceTransportShip takes integer whichRace, integer id returns nothing
+private function SetRaceTransportShip takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TRANSPORT_SHIP, id)
 endfunction
 
@@ -930,7 +930,7 @@ function GetRaceTransportShip takes integer r returns integer
     return GetRaceObjectTypeId(r, RACE_OBJECT_TYPE_TRANSPORT_SHIP)
 endfunction
 
-function SetRaceFrigate takes integer whichRace, integer id returns nothing
+private function SetRaceFrigate takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_FRIGATE, id)
 endfunction
 
@@ -938,7 +938,7 @@ function GetRaceFrigate takes integer r returns integer
     return GetRaceObjectTypeId(r, RACE_OBJECT_TYPE_FRIGATE)
 endfunction
 
-function SetRaceBattleship takes integer whichRace, integer id returns nothing
+private function SetRaceBattleship takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_BATTLESHIP, id)
 endfunction
 
@@ -946,7 +946,7 @@ function GetRaceBattleship takes integer r returns integer
     return GetRaceObjectTypeId(r, RACE_OBJECT_TYPE_BATTLESHIP)
 endfunction
 
-function SetRaceShipSpecial1 takes integer whichRace, integer id returns nothing
+private function SetRaceShipSpecial1 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHIP_SPECIAL_1, id)
 endfunction
 
@@ -954,7 +954,7 @@ function GetRaceShipSpecial1 takes integer r returns integer
     return GetRaceObjectTypeId(r, RACE_OBJECT_TYPE_SHIP_SPECIAL_1)
 endfunction
 
-function SetRaceShipSpecial2 takes integer whichRace, integer id returns nothing
+private function SetRaceShipSpecial2 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_SHIP_SPECIAL_2, id)
 endfunction
 
