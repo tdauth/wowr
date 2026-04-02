@@ -1430,7 +1430,7 @@ Einzigartig - Medivhs Zauberbuch
 STRING 239
 // Units: u009 (Floating Rock), Ubertip (Tooltip - Extended)
 {
-Provides attack and armor upgrades for Demon units. Also serves as a drop-off point for harvested lumber.
+Provides attack and armor upgrades for Demon units. Also Dient als Abladepunkt für das geschlagene Holz.
 }
 
 STRING 240
@@ -3282,7 +3282,7 @@ Magischer Samen from the far continent of Kalimdor that regrows dead trees.
 STRING 548
 // Items: I00V (Magical Seed), Ubertip (Tooltip - Extended)
 {
-Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden. 
+Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden.
 }
 
 STRING 549
@@ -3546,25 +3546,25 @@ Goblin-Alchimisten-Meisterausbildung
 STRING 592
 // Upgrades: R036 (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Goblin-Alchimist mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lightning Shield.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Goblin-Alchimisten und ermöglicht ihnen, 'Blitzschild' zu wirken.
 }
 
 STRING 593
 // Upgrades: R036 (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Goblin-Alchimist mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Kampfrausch.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Goblin-Alchimisten und ermöglicht ihnen, 'Kampfrausch' zu wirken.
 }
 
 STRING 594
 // Upgrades: R037 (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Goblin-Magier's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Stasisfalle.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Goblin-Magier und ermöglicht ihnen, 'Stasisfalle' zu wirken.
 }
 
 STRING 595
 // Upgrades: R037 (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Goblin-Magier's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Heil-Schutzzauber.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Goblin-Magier und ermöglicht ihnen, 'Heil-Schutzzauber' zu wirken.
 }
 
 STRING 596
@@ -9069,7 +9069,7 @@ Magischer Samen from the far continent of Kalimdor that regrows dead trees.
 STRING 1536
 // Items: I017 (Magical Seed (3)), Ubertip (Tooltip - Extended)
 {
-Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden. 
+Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden.
 }
 
 STRING 1537
@@ -29311,7 +29311,7 @@ The human kingdom of Lordaeron:|n- Fast building construction with multiple work
 STRING 6019
 // Items: I0M1 (Nerubian), Ubertip (Tooltip - Extended)
 {
-- Eingraben units and buildings.|n- Blight which allows hit points regeneration.|n- Webs allow capturing ground and air units.|n- Poison damages enemies over time.|n- Spiderlings are summoned when units die.|n- Larvas produce new units.|n- Tunnels connect remote locations but for friendly units only.|n|n|cffffcc00Faction: Horde.|r
+- Eingraben units and buildings.|n- Blight which allows hit points regeneration.|n- Webs allow capturing ground and air units.|n- Poison damages enemies over time.|n- Spinnlings are summoned when units die.|n- Larvas produce new units.|n- Tunnels connect remote locations but for friendly units only.|n|n|cffffcc00Faction: Horde.|r
 }
 
 STRING 6020
@@ -45802,7 +45802,7 @@ STRING 11070
 STRING 11073
 // Upgrades: R038 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Goblin-Zauberin' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Ancestral Spirit.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Goblin-Zauberinnen und ermöglicht ihnen, 'Ahnen-Geist' zu wirken.
 }
 
 STRING 11076
@@ -48007,7 +48007,7 @@ Erhöht die Panzerung von Ogereinheiten zusätzlich.
 STRING 11892
 // Upgrades: R0EC (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Ogre Hexenmeisters' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Verkrüppeln.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Oger-Hexenmeistern und ermöglicht ihnen, 'Verkrüppeln' zu wirken.
 }
 
 STRING 11903
@@ -48085,7 +48085,7 @@ STRING 11917
 STRING 11918
 // Upgrades: R0EC (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Ogre Hexenmeisters' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerblitz.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Oger-Hexenmeistern und ermöglicht ihnen, 'Feuerblitz' zu wirken.
 }
 
 STRING 11940
@@ -48745,13 +48745,13 @@ Keiler-Medizinmann-Meisterausbildung
 STRING 12184
 // Upgrades: R0IL (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Keiler-Medizinmänner's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Wildgeist.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Keiler-Medizinmännern und ermöglicht ihnen, 'Wildgeist' zu wirken.
 }
 
 STRING 12185
 // Upgrades: R0IL (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Keiler-Medizinmänner's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Heil-Schutzzauber.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Keiler-Medizinmännern und ermöglicht ihnen, 'Heil-Schutzzauber' zu wirken.
 }
 
 STRING 12186
@@ -54397,7 +54397,7 @@ Thalorien Dawnseeker beschwören
 STRING 17294
 // Units: o00S (Fuel Pump), Ubertip (Tooltip - Extended)
 {
-Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for improved armor, melee weapons, ranged weapons, Repair, Improved Construction, Treibstoff, Chemie, Verbesserter Holz-Abbau, and Improved Bankwesen.
+Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for improved armor, melee weapons, ranged weapons, Repair, Improved Construction, Treibstoff, Chemie, Verbesserter Holz-Abbau, and Verbessertes Bankwesen.
 }
 
 STRING 17296
@@ -55429,13 +55429,13 @@ Sturm-Zauberer-Meister-Ausbildung
 STRING 17565
 // Upgrades: R05J (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Sturm-Zauberers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unsichtbarkeit.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Sturm-Zauberern und ermöglicht ihnen, 'Unsichtbarkeit' zu wirken.
 }
 
 STRING 17584
 // Upgrades: R05J (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Sturm-Zauberers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Verwandlung.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Sturm-Zauberern und ermöglicht ihnen, 'Verwandlung' zu wirken.
 }
 
 STRING 17585
@@ -55501,13 +55501,13 @@ STRING 17595
 STRING 17596
 // Upgrades: R05K (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Schiffsarzts' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schiffsärzten und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 17597
 // Upgrades: R05K (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Schiffsarzts' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schiffsärzten und ermöglicht ihnen, 'Inneres Feuer' zu wirken.
 }
 
 STRING 17598
@@ -55543,7 +55543,7 @@ STRING 17602
 STRING 17603
 // Upgrades: R05L (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Wasserbeschwörers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Wasserbeschwörern und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 17605
@@ -55579,7 +55579,7 @@ Sister Hatelash,Serena Bloodfeather,Marion Wormwing,Edana Hatetalon,Bloodfury Ri
 STRING 17670
 // Upgrades: R05L (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Wasserbeschwörers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Wasserbeschwörern und ermöglicht ihnen, 'Inneres Feuer' zu wirken.
 }
 
 STRING 17672
@@ -59650,13 +59650,13 @@ Zauberer-Meisterausbildung
 STRING 20500
 // Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Zauberers mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Meeres-Elementargeist beschwören.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Zauberern und ermöglicht ihnen, 'Meeres-Elementargeist beschwören' zu wirken.
 }
 
 STRING 20501
 // Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Zauberers mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Stille.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Zauberern und ermöglicht ihnen, 'Stille' zu wirken.
 }
 
 STRING 20502
@@ -60679,13 +60679,13 @@ Feuermagier-Meister-Ausbildung
 STRING 21312
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Feuermagiers mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuerregen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Feuermagiern und ermöglicht ihnen, 'Feuerregen' zu wirken.
 }
 
 STRING 21313
 // Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Feuermagiers mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Feuer-Elementargeist beschwören.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Feuermagiern und ermöglicht ihnen, 'Feuer-Elementargeist beschwören' zu wirken.
 }
 
 STRING 21319
@@ -63492,13 +63492,13 @@ Golem-Meisterausbildung
 STRING 24389
 // Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Wächter-Golems and Fleischgolems mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Hurl Boulder and Schockwelle.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Wächter-Golems und Fleischgolems und ermöglicht ihnen, 'Felsen schleudern' und 'Schockwelle' zu wirken.
 }
 
 STRING 24390
 // Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Wächter-Golems and Fleischgolems mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Spell Immunity and Verschlingen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Wächter-Golems und Fleischgolems und ermöglicht ihnen, 'Zauber-Immunität' und 'Verschlingen' zu wirken.
 }
 
 STRING 24393
@@ -68790,7 +68790,7 @@ Verkrüppeln
 STRING 29552
 // Upgrades: R0AW (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Mage's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Magiern und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 29554
@@ -70314,13 +70314,13 @@ STRING 31093
 STRING 31094
 // Upgrades: R08U (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Druids' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Druiden und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 31095
 // Upgrades: R08U (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Druids' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Druiden und ermöglicht ihnen, 'Inneres Feuer' zu wirken.
 }
 
 STRING 31096
@@ -73122,7 +73122,7 @@ P
 STRING 33348
 // Upgrades: R0AW (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Mage's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Teleport.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Magiern und ermöglicht ihnen, 'Teleportation' zu wirken.
 }
 
 STRING 33393
@@ -73650,13 +73650,13 @@ Eis-Troll-Hohepriester-Meister-Ausbildung
 STRING 33583
 // Upgrades: R09A (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Eis-Troll-Hohepriester's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie aufheben.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Eis-Troll-Hohepriestern und ermöglicht ihnen, 'Magie aufheben' zu wirken.
 }
 
 STRING 33584
 // Upgrades: R09A (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Eis-Troll-Hohepriester's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Frost-Rüstung.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Eis-Troll-Hohepriestern und ermöglicht ihnen, 'Frost-Rüstung' zu wirken.
 }
 
 STRING 33594
@@ -82216,27 +82216,27 @@ Returns the Gruftdrohne to the air.
 }
 
 STRING 37147
-// Abilities: A1C6 (Spawn Spiderlings), Name (Name)
+// Abilities: A1C6 (Spawn Spinnlings), Name (Name)
 {
 Spinnlinge erzeugen
 }
 
 STRING 37148
-// Abilities: A1C6 (Spawn Spiderlings), EditorSuffix (Editor Suffix)
+// Abilities: A1C6 (Spawn Spinnlings), EditorSuffix (Editor Suffix)
 {
  (Icon) (Neruber)
 }
 
 STRING 37149
-// Abilities: A1C6 (Spawn Spiderlings), Tip (Tooltip - Normal)
+// Abilities: A1C6 (Spawn Spinnlings), Tip (Tooltip - Normal)
 {
 Spinnlinge erzeugen
 }
 
 STRING 37150
-// Abilities: A1C6 (Spawn Spiderlings), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1C6 (Spawn Spinnlings), Ubertip (Tooltip - Normal - Extended)
 {
-Summons 2 Spiderlings on death.
+Summons 2 Spinnlings on death.
 }
 
 STRING 37151
@@ -82296,7 +82296,7 @@ Spinnlinge erzeugen erforschen
 STRING 37164
 // Upgrades: R0B2 (Stone Form), Ubertip (Tooltip - Extended)
 {
-Enables the ability for Neruber-Kriegers  to assume Spinnlinge erzeugen. Spinnlinge erzeugen summons Spiderlings when a Neruber-Krieger dies.
+Enables the ability for Neruber-Kriegers  to assume Spinnlinge erzeugen. Spinnlinge erzeugen summons Spinnlings when a Neruber-Krieger dies.
 }
 
 STRING 37165
@@ -82422,7 +82422,7 @@ Spinnenei erforschen
 STRING 37185
 // Upgrades: R0B4 (Stone Form), Ubertip (Tooltip - Extended)
 {
-Enables the ability for Neruben-Königins to assume Spinnenei which summons a Spinneneis that will summon Spiderlings on death.
+Enables the ability for Neruben-Königins to assume Spinnenei which summons a Spinneneis that will summon Spinnlings on death.
 }
 
 STRING 37186
@@ -82470,7 +82470,7 @@ Beschwört ein Spinnenei.
 STRING 37193
 // Items: I0NJ (Spider Egg), Ubertip (Tooltip - Extended)
 {
-Summons a Spinnenei which produces Spiderlings.
+Summons a Spinnenei which produces Spinnlings.
 }
 
 STRING 37194
@@ -82542,7 +82542,7 @@ Eingegraben Neruben-Netzweber
 STRING 37253
 // Abilities: A1C8 (Summon Spider Egg), Ubertip (Tooltip - Normal - Extended)
 {
-Summons an immovable ward that explodes and summons Spiderlings.
+Summons an immovable ward that explodes and summons Spinnlings.
 }
 
 STRING 37292
@@ -82582,7 +82582,7 @@ Ein Schwein, das bestraft werden will.
 }
 
 STRING 37301
-// Abilities: A1CH (Spawn Spiderlings), EditorSuffix (Editor Suffix)
+// Abilities: A1CH (Spawn Spinnlings), EditorSuffix (Editor Suffix)
 {
 (Neruber) (Spinnenei)
 }
@@ -82596,7 +82596,7 @@ Neruber-Tunnel
 STRING 37306
 // Units: u028 (Nerubian Tunnel), Tip (Tooltip - Basic)
 {
-Summon Neruber-Tunnel
+Neruber-Tunnel beschwören
 }
 
 STRING 37307
@@ -82614,13 +82614,13 @@ Brutstätte
 STRING 37309
 // Units: u029 (Hatchery), Tip (Tooltip - Basic)
 {
-Summon Brutstätte
+Brutstätte beschwören
 }
 
 STRING 37310
 // Units: u029 (Hatchery), Ubertip (Tooltip - Extended)
 {
-Provides attack and armor upgrades for Nerubian units. Also hatches Spiderlings and serves as a drop-off point for harvested lumber.
+Bietet die Ausbaustufen für verbesserte Waffen und Rüstung von Neruber-Einheiten. Brütet auch Spinnlinge aus und dient als Abladepunkt für das geschlagene Holz.
 }
 
 STRING 37311
@@ -82630,45 +82630,45 @@ STRING 37311
 }
 
 STRING 37312
-// Abilities: A1CI (Hatch Spiderling), Name (Name)
+// Abilities: A1CI (Brutspinnling), Name (Name)
 {
-Hatch Spiderling
+Brutspinnling
 }
 
 STRING 37313
-// Abilities: A1CI (Hatch Spiderling), EditorSuffix (Editor Suffix)
+// Abilities: A1CI (Brutspinnling), EditorSuffix (Editor Suffix)
 {
 (Brutstätte) (Neruber)
 }
 
 STRING 37314
-// Abilities: A1CI (Hatch Spiderling), Tip (Tooltip - Normal)
+// Abilities: A1CI (Brutspinnling), Tip (Tooltip - Normal)
 {
-Hatch Spiderlings
+Brutspinnlinge
 }
 
 STRING 37315
 // Items: I0NO (Novice Glyph), Tip (Tooltip - Basic)
 {
-Purchase Novize Glyph
+Novizen-Glyphe erwerben
 }
 
 STRING 37317
-// Abilities: A1CI (Hatch Spiderling), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1CI (Brutspinnling), Ubertip (Tooltip - Normal - Extended)
 {
-Summons a Spiderling every <A1CI,DataA1> seconds which lasts for <A1CI,Dur1> Sekunden lang an.
+Summons a Spinnling every <A1CI,DataA1> seconds which lasts for <A1CI,Dur1> Sekunden lang an.
 }
 
 STRING 37318
 // Buffs/Effects: B02I (), Bufftip (Tooltip)
 {
-Spiderling
+Spinnling
 }
 
 STRING 37319
 // Buffs/Effects: B02I (), Buffubertip (Tooltip - Extended)
 {
-Spiderling.
+Spinnling.
 }
 
 STRING 37320
@@ -82704,7 +82704,7 @@ Uralter Schrein
 STRING 37325
 // Units: u02B (Ancient Shrine), Tip (Tooltip - Basic)
 {
-Summon Uralter Schrein
+Uralten Schrein beschwören
 }
 
 STRING 37326
@@ -82812,7 +82812,7 @@ Brutstätte aktivieren
 STRING 37345
 // Abilities: A1CK (Enable Hatchery), Ubertip (Tooltip - Normal - Extended)
 {
-Enables the Spiderling spawns.
+Aktiviert die Erzeugung von Spinnlingen.
 }
 
 STRING 37346
@@ -82836,7 +82836,7 @@ Brutstätte deaktiviert
 STRING 37349
 // Abilities: A1CL (Disable Hatchery), Ubertip (Tooltip - Normal - Extended)
 {
-Disables spawning Spiderlings.
+Deaktiviert die Erzeugung von Spinnlingen.
 }
 
 STRING 37350
@@ -83412,7 +83412,7 @@ Inschrift - Adept
 STRING 37463
 // Abilities: A1CQ (Inscription - Adept), Tip (Tooltip - Normal)
 {
-Adept Inschrift
+Adepten-Inschrift
 }
 
 STRING 37464
@@ -83430,7 +83430,7 @@ Inschrift - Meister
 STRING 37466
 // Abilities: A1CR (Inscription - Master), Tip (Tooltip - Normal)
 {
-Meister Inschrift
+Meister-Inschrift
 }
 
 STRING 37467
@@ -83442,13 +83442,13 @@ STRING 37467
 STRING 37468
 // Abilities: A1CS (Inscription - Advanced), Name (Name)
 {
-Inschrift - Advanced
+Inschrift - Fortgeschritten
 }
 
 STRING 37469
 // Abilities: A1CS (Inscription - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Inschrift
+Fortgeschrittene Inschrift
 }
 
 STRING 37470
@@ -83506,7 +83506,7 @@ STRING 37480
 }
 
 STRING 37481
-// Abilities: A1A6 (Spawn Spiderlings), EditorSuffix (Editor Suffix)
+// Abilities: A1A6 (Spawn Spinnlings), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -83568,13 +83568,13 @@ Seher-Meisterausbildung
 STRING 37491
 // Upgrades: R0BA (Necromancer Adept Training,Necromancer Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Seer's' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unholy Frenzy.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Sehern und ermöglicht ihnen, 'Unheilige Raserei' zu wirken.
 }
 
 STRING 37492
 // Upgrades: R0BA (Necromancer Adept Training,Necromancer Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Seer's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Verkrüppeln.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Sehern und ermöglicht ihnen, 'Verkrüppeln' zu wirken.
 }
 
 STRING 37493
@@ -83622,7 +83622,7 @@ Summon Brutstätte
 STRING 37500
 // Units: u02J (Burrowed Spawning Ground), Ubertip (Tooltip - Extended)
 {
-Produces Neruben-Königin. Bietet auch die Ausbaustufen Freezing Breath upgrade.
+Bildet Neruben-Königin aus. Bietet auch die Ausbaustufen Freezing Breath upgrade.
 }
 
 STRING 37501
@@ -83670,7 +83670,7 @@ STRING 37507
 STRING 37508
 // Units: u02M (Burrowed Spawning Pit), Tip (Tooltip - Basic)
 {
-Summon Brutgrube
+Brutgrube beschwören
 }
 
 STRING 37509
@@ -83688,7 +83688,7 @@ Eingegrabene Hoch entwickelte Metropole
 STRING 37511
 // Units: u02N (Burrowed Advanced Metropolis), Tip (Tooltip - Basic)
 {
-Ausbau zur Fortgeschrittenen Metropole
+Ausbau zur Hoch entwickelten Metropole
 }
 
 STRING 37512
@@ -83724,13 +83724,13 @@ STRING 37516
 STRING 37517
 // Abilities: A1CY (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Die Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37518
 // Abilities: A1CY (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
+Die Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37519
@@ -83742,13 +83742,13 @@ STRING 37519
 STRING 37520
 // Abilities: A1CZ (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Die Brutstätte vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37521
 // Abilities: A1CZ (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
+Die Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37522
@@ -83760,13 +83760,13 @@ STRING 37522
 STRING 37523
 // Abilities: A1D0 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Das Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37524
 // Abilities: A1D0 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest bricht aus der Erde hervor und wird wieder sichtbar.
+Das Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37525
@@ -83778,13 +83778,13 @@ STRING 37525
 STRING 37526
 // Abilities: A1D1 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Brutgrube vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Die Brutgrube vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37527
 // Abilities: A1D1 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Brutgrube bricht aus der Erde hervor und wird wieder sichtbar.
+Die Brutgrube bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37528
@@ -83814,13 +83814,13 @@ STRING 37531
 STRING 37532
 // Abilities: A1D3 (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Große Metropole vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Die Große Metropole vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37533
 // Abilities: A1D3 (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Große Metropole bricht aus der Erde hervor und wird wieder sichtbar.
+Die Große Metropole bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37534
@@ -83892,7 +83892,7 @@ Brutstätte beschwören
 STRING 37546
 // Units: u02Q (Burrowed Hatchery), Ubertip (Tooltip - Extended)
 {
-Provides attack and armor upgrades for Nerubian units. Also hatches Spiderlings and serves as a drop-off point for harvested lumber.
+Provides attack and armor upgrades for Nerubian units. Also hatches Spinnlings and Dient als Abladepunkt für das geschlagene Holz.
 }
 
 STRING 37560
@@ -83916,19 +83916,19 @@ Ausbau zum Goblin-Raketenturm
 STRING 37578
 // Abilities: A0BO (Improved Banking), Name (Name)
 {
-Improved Bankwesen
+Verbessertes Bankwesen
 }
 
 STRING 37579
 // Abilities: A0BO (Improved Banking), Tip (Tooltip - Normal)
 {
-Improved Bankwesen
+Verbessertes Bankwesen
 }
 
 STRING 37580
 // Abilities: A0BO (Improved Banking), Tip (Tooltip - Normal)
 {
-Improved Bankwesen
+Verbessertes Bankwesen
 }
 
 STRING 37582
@@ -85854,13 +85854,13 @@ STRING 38139
 STRING 38140
 // Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Troll Hexers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unsichtbarkeit.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Troll-Hexern und ermöglicht ihnen, 'Unsichtbarkeit' zu wirken.
 }
 
 STRING 38141
 // Upgrades: R09I (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Troll Hexers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Hex.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Troll-Hexern und ermöglicht ihnen, 'Hexerei' zu wirken.
 }
 
 STRING 38142
@@ -85896,13 +85896,13 @@ L
 STRING 38147
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Troll-Blutmagiers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unstable Concoction.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Troll-Blutmagiern und ermöglicht ihnen, 'Instabiles Gebräu' zu wirken.
 }
 
 STRING 38148
 // Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Troll-Blutmagiers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lebensauger.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Troll-Blutmagiern und ermöglicht ihnen, 'Lebensauger' zu wirken.
 }
 
 STRING 38151
@@ -87252,13 +87252,13 @@ STRING 38875
 STRING 38876
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Runenmetzs' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Runenmetzen und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 38877
 // Upgrades: R0BS (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Runenmetzs' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Runenmetzen und ermöglicht ihnen, 'Inneres Feuer' zu wirken.
 }
 
 STRING 38878
@@ -88050,13 +88050,13 @@ Nachtpirscher-Meisterausbildung
 STRING 39727
 // Upgrades: R0C4 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Nachtpirschers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unsichtbarkeit.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Nachtpirschern und ermöglicht ihnen, 'Unsichtbarkeit' zu wirken.
 }
 
 STRING 39728
 // Upgrades: R0C4 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Nachtpirschers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Verwandlung.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Nachtpirschern und ermöglicht ihnen, 'Verwandlung' zu wirken.
 }
 
 STRING 39729
@@ -92430,13 +92430,13 @@ Keiler-Mystiker-Meisterausbildung
 STRING 41351
 // Upgrades: R0CN (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Kampfrausch.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schamanen und ermöglicht ihnen, 'Kampfrausch' zu wirken.
 }
 
 STRING 41352
 // Upgrades: R0CN (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Summon Meeresschildkröte.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schamanen und ermöglicht ihnen, 'Meeresschildkröte beschwören' zu wirken.
 }
 
 STRING 41353
@@ -92904,13 +92904,13 @@ Nekromanten-Adeptenausbildung
 STRING 41480
 // Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Name (Name)
 {
-Necromancer Mystic Meisterausbildung
+Nekromanten-Mystiker-Meisterausbildung
 }
 
 STRING 41481
 // Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
 {
-Necromancer Mystic Meisterausbildung
+Nekromanten-Mystiker-Meisterausbildung
 }
 
 STRING 41483
@@ -92922,19 +92922,19 @@ Massen-Illusion
 STRING 41484
 // Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
 {
-Necromancer Mystic Adeptenausbildung
+Nekromanten-Mystiker-Adeptenausbildung
 }
 
 STRING 41485
 // Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Necromancer's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lightning Shield.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Nekromanten und ermöglicht ihnen, 'Blitzschild' zu wirken.
 }
 
 STRING 41486
 // Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Necromancer's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Kampfrausch.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Nekromanten und ermöglicht ihnen, 'Kampfrausch' zu wirken.
 }
 
 STRING 41487
@@ -95094,13 +95094,13 @@ STRING 42380
 STRING 42381
 // Upgrades: R0DL (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
 {
-Increases their Monk's mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Windlauf.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Mönchen und ermöglicht ihnen, 'Windlauf' zu wirken.
 }
 
 STRING 42382
 // Upgrades: R0DL (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
 {
-Increases their Monk's mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Gleiten.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Mönchen und ermöglicht ihnen, 'Gleiten' zu wirken.
 }
 
 STRING 42383
@@ -98310,13 +98310,13 @@ Oger-Magier-Adeptenausbildung
 STRING 43570
 // Upgrades: R0EB (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Oger-Magier mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Slow.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Oger-Magiern und ermöglicht ihnen, 'Langsamkeit' zu wirken.
 }
 
 STRING 43571
 // Upgrades: R0EB (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Oger-Magier mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Verjüngung.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Oger-Magiern und ermöglicht ihnen, 'Verjüngung' zu wirken.
 }
 
 STRING 43572
@@ -98958,13 +98958,13 @@ Nekromanten-Meister-Ausbildung
 STRING 44001
 // Upgrades: R0EF (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Necromancers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Leiche beschwören.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Nekromanten und ermöglicht ihnen, 'Leiche beschwören' zu wirken.
 }
 
 STRING 44002
 // Upgrades: R0EF (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Necromancers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Parasit.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Nekromanten und ermöglicht ihnen, 'Parasit' zu wirken.
 }
 
 STRING 44004
@@ -101238,13 +101238,13 @@ STRING 46129
 STRING 46130
 // Upgrades: R0F5 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Mage's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Teleport.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Magiern und ermöglicht ihnen, 'Teleportation' zu wirken.
 }
 
 STRING 46131
 // Upgrades: R0F5 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Mage's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Blizzard.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Magiern und ermöglicht ihnen, 'Blizzard' zu wirken.
 }
 
 STRING 46132
@@ -102204,7 +102204,7 @@ Magischer Samen
 STRING 46641
 // Abilities: A1Q9 (Magical Seed), Ubertip (Tooltip - Normal - Extended)
 {
-Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden. 
+Alle toten Bäume in einem Umkreis von 1000 wachsen erneut, wenn diese magischen Samen gepflanzt werden.
 }
 
 STRING 46642
@@ -102276,13 +102276,13 @@ STRING 47447
 STRING 47448
 // Upgrades: R0IP (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Keiler-Mystiker mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Wirbelsturm.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Keiler-Mystiker und ermöglicht ihnen, 'Wirbelsturm' zu wirken.
 }
 
 STRING 47449
 // Upgrades: R0IP (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Keiler-Mystiker mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Stampede.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Keiler-Mystiker und ermöglicht ihnen, 'Stampede' zu wirken.
 }
 
 STRING 47450
@@ -107871,13 +107871,13 @@ Schlammwerfer-Meisterausbildung
 STRING 50488
 // Upgrades: R0GC (Druid of the Talon Adept Training,Druid of the Talon Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Schlammwerfer's mana capacity, mana regeneration rate, hit points, and gives them the ability Parasit.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schlammwerfern und ermöglicht ihnen, 'Parasit' zu wirken.
 }
 
 STRING 50489
 // Upgrades: R0GC (Druid of the Talon Adept Training,Druid of the Talon Master Training), Ubertip (Tooltip - Extended)
 {
-Increases their Schlammwerfer's mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Verschlingen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schlammwerfern und ermöglicht ihnen, 'Verschlingen' zu wirken.
 }
 
 STRING 50490
@@ -107907,7 +107907,7 @@ STRING 50493
 STRING 50494
 // Units: n0G9 (Murloc Shadowcaster), Tip (Tooltip - Basic)
 {
-Train Murloc-Schattenzauberer
+Murloc-Schattenzauberer ausbilden
 }
 
 STRING 50495
@@ -110835,13 +110835,13 @@ Die Anzahl verkaufter Dämonen hängt von der Anzahl getöteter Feinde ab.
 STRING 51411
 // Upgrades: R0GN (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dunkle Beschwörung.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schamanen und ermöglicht ihnen, 'Dunkle Beschwörung' zu wirken.
 }
 
 STRING 51412
 // Upgrades: R0GN (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Unheilshüter.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Schamanen und ermöglicht ihnen, 'Unheilshüter' zu wirken.
 }
 
 STRING 51413
@@ -115337,13 +115337,13 @@ Erdmagier-Meisterausbildung
 STRING 55371
 // Upgrades: R0HX (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Erdmagier mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Kampfrausch.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Erdmagiern und ermöglicht ihnen, 'Kampfrausch' zu wirken.
 }
 
 STRING 55372
 // Upgrades: R0HX (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Erdmagier mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lightning Shield.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Erdmagiern und ermöglicht ihnen, 'Blitzschild' zu wirken.
 }
 
 STRING 55373
@@ -119623,13 +119623,13 @@ Naga-Zauberer-Meisterausbildung erforschen
 STRING 57247
 // Upgrades: R0IH (Naga Siren Adept Training,Naga Siren Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Naga-Zauberers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie aufheben.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Naga-Zauberer und ermöglicht ihnen, 'Magie aufheben' zu wirken.
 }
 
 STRING 57248
 // Upgrades: R0IH (Naga Siren Adept Training,Naga Siren Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Naga-Zauberers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Meeres-Elementargeist beschwören.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Naga-Zauberer und ermöglicht ihnen, 'Meeres-Elementargeist' zu wirken.
 }
 
 STRING 57251
@@ -122527,13 +122527,13 @@ Kampfpriester-Meisterausbildung
 STRING 58085
 // Upgrades: R03U (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Kampfpriesters' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Magie bannen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Kampfpriestern und ermöglicht ihnen, 'Magie bannen' zu wirken.
 }
 
 STRING 58086
 // Upgrades: R03U (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Kampfpriesters' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inneres Feuer.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Kampfpriestern und ermöglicht ihnen, 'Inneres Feuer' zu wirken.
 }
 
 STRING 58090
