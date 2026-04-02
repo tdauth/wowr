@@ -146,6 +146,7 @@ private function ExecuteCallbacks takes integer vote, integer choice, integer vo
         set callbackChoice = choice
         set callbackVotes = votes
         if (IsTriggerEnabled(VoteYesTrigger[i])) then
+            call BJDebugMsg("Executing vote callback trigger")
             call ConditionalTriggerExecute(VoteYesTrigger[vote])
         endif
     endif
@@ -264,7 +265,7 @@ function VoteAddVote takes integer vote, integer choice, player whichPlayer, boo
     local integer index = VoteChoiceIndex(choice, vote)
     
     if (not IsPlayerInForce(whichPlayer, VoteChoicesVotes[index])) then
-        //call BJDebugMsg("Add vote to choice " + I2S(choice))
+        call BJDebugMsg("Add vote to choice " + I2S(choice))
         call ForceAddPlayer(VoteChoicesVotes[index], whichPlayer)
         
         if (showMessage) then
