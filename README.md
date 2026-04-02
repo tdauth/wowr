@@ -38,7 +38,7 @@ Send me your Battle.net ID on Discord after subscribing to get it unlocked with 
 Download and place the map file `wowr[version].w3x` into the folder `C:\Users\%USERNAME%\Documents\Warcraft III\Maps\Download`.
 Start Warcraft III: Reforged and play a custom game by choosing the map.
 
-## Modifying the Map
+## Modify the Map
 
 - Start the World Editor of Warcraft III.
 - Open the map folder [wowr.w3x](./wowr.w3x).
