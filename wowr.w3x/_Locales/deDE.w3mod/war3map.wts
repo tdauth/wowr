@@ -48617,7 +48617,7 @@ T
 }
 
 STRING 12162
-// Units: o0B2 (Tierkampfplätze), EditorSuffix (Name - Editor Suffix)
+// Units: o0B2 (Animal Battle Grounds), EditorSuffix (Name - Editor Suffix)
 {
 (Stacheleber)
 }
@@ -48677,7 +48677,7 @@ Supporting spellcaster. Can initially cast Verjüngung, which regenerates mana f
 }
 
 STRING 12172
-// Units: o0B3 (Opferstätten), EditorSuffix (Name - Editor Suffix)
+// Units: o0B3 (Sacrificial Grounds), EditorSuffix (Name - Editor Suffix)
 {
 (Stacheleber)
 }
@@ -53531,7 +53531,7 @@ STRING 16450
 }
 
 STRING 16451
-// Units: o0B3 (Opferstätten), Ubertip (Tooltip - Extended)
+// Units: o0B3 (Sacrificial Grounds), Ubertip (Tooltip - Extended)
 {
 Bildet Klingenmähnen-Häuptlinge aus. |nBietet auch die Ausbaustufen für Klingenmähnen-Häuptlings an.
 }
@@ -72880,19 +72880,19 @@ STRING 33056
 }
 
 STRING 33057
-// Units: o05Q (Jägerruhe), Name (Name)
+// Units: o05Q (Hunters Rest), Name (Name)
 {
 Jägerruhe
 }
 
 STRING 33058
-// Units: o05Q (Jägerruhe), Tip (Tooltip - Basic)
+// Units: o05Q (Hunters Rest), Tip (Tooltip - Basic)
 {
 Jägerruhe errichten
 }
 
 STRING 33059
-// Units: o05Q (Jägerruhe), EditorSuffix (Name - Editor Suffix)
+// Units: o05Q (Hunters Rest), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -76318,25 +76318,25 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 35063
-// Units: o0B2 (Tierkampfplätze), Name (Name)
+// Units: o0B2 (Animal Battle Grounds), Name (Name)
 {
 Tierkampfplätze
 }
 
 STRING 35064
-// Units: o0B2 (Tierkampfplätze), Tip (Tooltip - Basic)
+// Units: o0B2 (Animal Battle Grounds), Tip (Tooltip - Basic)
 {
 Tierkampfplätze errichten
 }
 
 STRING 35065
-// Units: o0B3 (Opferstätten), Name (Name)
+// Units: o0B3 (Sacrificial Grounds), Name (Name)
 {
 Opferstätten
 }
 
 STRING 35066
-// Units: o0B3 (Opferstätten), Tip (Tooltip - Basic)
+// Units: o0B3 (Sacrificial Grounds), Tip (Tooltip - Basic)
 {
 Opferstätten errichten
 }
@@ -89416,13 +89416,13 @@ STRING 40182
 }
 
 STRING 40183
-// Units: o05U (Nördlicher Straßenladen), Name (Name)
+// Units: o05U (Northern Vendor Shop), Name (Name)
 {
 Nördlicher Straßenladen
 }
 
 STRING 40184
-// Units: o05U (Nördlicher Straßenladen), Tip (Tooltip - Basic)
+// Units: o05U (Northern Vendor Shop), Tip (Tooltip - Basic)
 {
 Nördlichen Straßenladen errichten
 }
@@ -89476,25 +89476,25 @@ Deposits lumber to get it back with interest charges.
 }
 
 STRING 40196
-// Units: o05U (Nördlicher Straßenladen), EditorSuffix (Name - Editor Suffix)
+// Units: o05U (Northern Vendor Shop), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
 
 STRING 40197
-// Units: o05V (Verzierte Höhle), Name (Name)
+// Units: o05V (Decorated Cavern), Name (Name)
 {
 Verzierte Höhle
 }
 
 STRING 40202
-// Units: o05V (Verzierte Höhle), Tip (Tooltip - Basic)
+// Units: o05V (Decorated Cavern), Tip (Tooltip - Basic)
 {
 Verzierte Höhle errichten
 }
 
 STRING 40203
-// Units: o05V (Verzierte Höhle), EditorSuffix (Name - Editor Suffix)
+// Units: o05V (Decorated Cavern), EditorSuffix (Name - Editor Suffix)
 {
 (Tuskarr)
 }
@@ -91084,7 +91084,7 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 40887
-// Units: o05Q (Jägerruhe), Ubertip (Tooltip - Extended)
+// Units: o05Q (Hunters Rest), Ubertip (Tooltip - Extended)
 {
 Spellcaster production building. Bildet Schamanen und Heiler aus. |nAlso contains spell upgrades for Schamanen und Heiler.
 }
@@ -91696,7 +91696,7 @@ Highly mobile rider. Effective against buildings. Can learn the Kriegsdonner abi
 }
 
 STRING 41186
-// Units: o05U (Nördlicher Straßenladen), Ubertip (Tooltip - Extended)
+// Units: o05U (Northern Vendor Shop), Ubertip (Tooltip - Extended)
 {
 Creates a shop with purchasable items. The items available depend upon what level of upgrade your Haupthaus has (Gefrorene Halle, Gefrorene Hochburg, or Gefrorene Festung) and which buildings you have.
 }
@@ -92266,7 +92266,7 @@ Primäres Truppen-Produktionsgebäude. Bildet Tuskarr-Kämpfer, Tuskarr-Speerkä
 }
 
 STRING 41295
-// Units: o05V (Verzierte Höhle), Ubertip (Tooltip - Extended)
+// Units: o05V (Decorated Cavern), Ubertip (Tooltip - Extended)
 {
 Bildet Häuptlinge aus. |nBietet auch die Ausbaustufe 'Clans', die Häuptlingen die Fähigkeit 'Befehls-Aura' verleiht.
 }
@@ -93004,7 +93004,7 @@ Supporting spellcaster. Can initially cast Verbannen, which removes negative buf
 }
 
 STRING 41508
-// Units: o0B2 (Tierkampfplätze), Ubertip (Tooltip - Extended)
+// Units: o0B2 (Animal Battle Grounds), Ubertip (Tooltip - Extended)
 {
 Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nBietet auch die Ausbaustufen Einschnüren, Envenomed Spears, Liquid Fire and War Drums upgrades.
 }

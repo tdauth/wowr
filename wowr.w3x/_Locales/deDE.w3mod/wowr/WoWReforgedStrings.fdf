@@ -689,6 +689,8 @@ StringList {
     X_IS_NOT_AVAILABLE                 "%1% ist nicht verfügbar.",
     NO_ITEMS_TO_DISASSEMBLE            "Keine Gegenstände zum zerlegen.",
     CANNOT_BE_DISASSEMBLED             "Kann nicht zerlegt werden.",
+    LINKED_CRAFTING_STASHES            "Herstellungslager miteinander verknüpft.",
+    UNLINKED_CRAFTING_STASHES          "Herstellngsalger von einander getrennt.",
     PAGE_TITLE_UNIQUE                  "(Einzigartig)",
     PAGE_TITLE_ORBS                    "(Kugeln)",
     PAGE_TITLE_POTIONS                 "(Tränke)",
@@ -1304,6 +1306,8 @@ StringList {
     REVEAL                             "Aufdeckung",
     NO_CHEATS                          "Keine Cheats",
     CHEATS                             "Cheats",
+    // Map Votes
+    CIN_DALARAN                        "Video Dalaran",
     // Tiles
     TILE_DIRT                          "Erde",
     TILE_ROUGH_DIRT                    "Raue Erde",
@@ -1322,6 +1326,8 @@ StringList {
     TILE_OUTLAND_ROUGH_DIRT            "Rote raue Erde",
     TILE_UNDERGROUND_BRICK             "Unterirdisch",
     UNKNOWN                            "Unbekannt",
+    // Builder
+    BUILDER_NO_SAVE_CODES              "Speicher-Codes müssen für Erbauer deaktiviert sein.",
     // Trolls
     FOREST_TROLLS                      "Wald-Trolle",
     DARK_TROLLS                        "Dunkle Trolle",
