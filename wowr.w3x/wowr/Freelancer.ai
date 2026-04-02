@@ -24,11 +24,9 @@ function BuildingStrategy takes nothing returns nothing
 
         call LoopActionFreelancerWoWReforged()
 
-        /*
-        call StartExpansionTownHall(FURBOLG_TRIBAL_CENTER)
-        call StartExpansionSimple(FURBOLG_LUMBER_CAMP)
-        call StartExpansionSimple(GUARDING_FURBOLG)
-        */
+        //call StartExpansionTownHall(FURBOLG_TRIBAL_CENTER)
+        //call StartExpansionSimple(FURBOLG_LUMBER_CAMP)
+        //call StartExpansionSimple(GUARDING_FURBOLG)
 
         if (buildShips) then
             call StartUnitSimple(shipyards, FREELANCER_SHIPYARD)
