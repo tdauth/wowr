@@ -1802,7 +1802,7 @@ StringList {
     IQ_MAP_DESCRIPTION                 "Willkommen in World of Warcraft Reforged. Bei dieser Karte handelt es sich um ein Rollenspiel mit offener Welt. Das bedeutet , Sie können tun und lassen, was immer Sie wollen. Erfüllen Sie einige der optionalen Quests, jagen Sie andere Spieler oder schmieden Sie Allianzen. Baradé wünscht Ihnen viel Spaß beim Spielen. Ich bedanke mich bei EvilPitlord und DeMoNiKuS für die Erstellung der ursprünglichen Karte 'World of Warcraft Reborn'.",
     IQ_MAP_0                           "Ersteller: Baradé",
     IQ_MAP_1                           "Gebt bitte Feedback.",
-    IQ_MAP_2                           "Website: https://wowreforged.org",
+    IQ_MAP_2                           "Website: https://tdauth.github.io/wowr-website",
     IQ_MAP_3                           "Discord: https://discord.gg/eM34z36",
     IQ_MAP_4                           "Entwicklung: https://github.com/tdauth/wowr",
     IQ_SUPPORT_TITLE                   "Unterstützen",

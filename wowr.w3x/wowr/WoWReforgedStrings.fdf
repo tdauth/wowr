@@ -1801,7 +1801,7 @@ StringList {
     IQ_MAP_DESCRIPTION                 "Welcome to World of Warcraft Reforged. This map is an open world RPG. This means that you can do whatever you want to. Complete some of the optional quests, hunt other players or forge alliances. Baradé wishes you a lot of fun while playing. I thank EvilPitlord and DeMoNiKuS for the creation of the original map 'World of Warcraft Reborn'.",
     IQ_MAP_0                           "Creator: Baradé",
     IQ_MAP_1                           "Please provide feedback.",
-    IQ_MAP_2                           "Website: https://wowreforged.org",
+    IQ_MAP_2                           "Website: https://tdauth.github.io/wowr-website",
     IQ_MAP_3                           "Discord: https://discord.gg/eM34z36",
     IQ_MAP_4                           "Development: https://github.com/tdauth/wowr",
     IQ_SUPPORT_TITLE                   "Support",

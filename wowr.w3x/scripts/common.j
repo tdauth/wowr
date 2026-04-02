@@ -2767,7 +2767,7 @@ globals
     constant string UI_ICON_DOWN                                     = "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp"
 
     constant string URL_DISCORD                                      = "https://discord.com/invite/eM34z36"
-    constant string URL_WEBSITE                                      = "https://wowreforged.org"
+    constant string URL_WEBSITE                                      = "https://tdauth.github.io/wowr-website"
     constant string URL_DOWNLOAD                                     = "https://github.com/tdauth/wowr/releases"
     constant string URL_SUBSCRIBE                                    = "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY"
     constant string URL_DONATE                                       = "https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8"

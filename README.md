@@ -6,9 +6,9 @@ Open world role-playing game and strategy map for Warcraft III: Reforged based o
 This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
 
 
-Official website: [wowreforged.org](https://wowreforged.org)
+[Official website](https://tdauth.github.io/wowr-website)
 
-GitHub Repository of the official website: [wowr-website](https://github.com/tdauth/wowr-website)
+GitHub Repository [wowr-website](https://github.com/tdauth/wowr-website) of the official website.
 
 The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the Warcraft III: Reforged World Editor.
 
