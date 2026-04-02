@@ -7,8 +7,6 @@ function BuildingStrategy takes nothing returns nothing
     call SetBuildUnit(3, FREELANCER_PET)
     call SetBuildUnit(4, FREELANCER_HOUSING)
 
-    call SetBuildUnit(2, SHREDDER)
-
     //call SetBuildUnit(1, FREELANCER_LABORATORY) // TODO Leads to a crash!
     //call SetBuildUnit(1, FREELANCER_SHOP)
     //call SetBuildUnit(1, FREELANCER_MERCENARY_CAMP)
