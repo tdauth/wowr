@@ -210,10 +210,6 @@ private function HelpPing takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextPing())
 endfunction
 
-private function HelpClan takes nothing returns nothing
-    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextClan())
-endfunction
-
 private function HelpAi takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextAi())
 endfunction
@@ -413,7 +409,6 @@ private function Init takes nothing returns nothing
     call AddAlias("help")
     call AddAlias("h")
     call Add("-helpping", true, function HelpPing)
-    call Add("-helpclan", true, function HelpClan)
     call Add("-helpai", true, function HelpAi)
     call Add("-helpally", true, function HelpAlly)
     call Add("-helpvisual", true, function HelpVisual)

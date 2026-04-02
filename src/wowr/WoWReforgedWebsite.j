@@ -2785,92 +2785,6 @@ private function GeneratePlayers takes nothing returns nothing
     call FileSave("WorldOfWarcraftReforged-Players.txt")
 endfunction
 
-private function GenerateClans takes nothing returns nothing
-    local integer i = 0
-    local integer max = GetPrestoredSaveCodesMax()
-    local string name = ""
-    local string saveCode = ""
-    local integer j = 0
-    local integer max2 = 0
-    local integer index = 0
-    
-    call ClearGeneratedStringIds()
-    
-    call FileStart()
-    call FileWriteLine("<!-- Clans generated with chat command \"-website\". -->")
-    set i = 0
-    loop
-        exitwhen (i == max)
-        if (GetPrestoredSaveCodeTypeByIndex(i) == PRESTORED_SAVECODE_TYPE_CLANS) then
-            set name = GetPrestoredSaveCodePlayerNameByIndex(i)
-            
-            if (GenerateIdString(name)) then
-                set saveCode = GetPrestoredSaveCodeByIndex(i)
-            
-                call FileWriteLine("<tr id=\"" + name + "\">")
-                
-                // banner
-                call FileWriteLine("<td>")
-                call FileWriteLine("<img class=\"wowr-icon\" src=\"" + GetClanIconPath(i) + "\" />")
-                call FileWriteLine("</td>")
-                
-                // name
-                call FileWriteLine("<td>")
-                call FileWriteLine(name)
-                call FileWriteLine("</td>")
-
-                // gold
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(GetSaveCodeClanGold(name, saveCode)))
-                call GenerateGoldIcon()
-                call FileWriteLine("</td>")
-                
-                // lumber
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(GetSaveCodeClanLumber(name, saveCode)))
-                call GenerateLumberIcon()
-                call FileWriteLine("</td>")
-
-                // members
-                call FileWriteLine("<td>")
-                call FileWriteLine("<ul>")
-                set j = 0
-                set max2 = PrestoredSaveCodePlayerNamesCounter[i]
-                loop
-                    exitwhen (j == max2)
-                    set index = Index2D(i, j, PRESTORED_SAVECODE_MAX_CLAN_MEMBERS)
-                    call FileWriteLine("<li>")
-                    call FileWriteLine("<a href=\"https://us.forums.blizzard.com/en/warcraft3/u/" +  GetPrestoredSaveCodeMemberPlayerName(index) + "\">")
-                    call FileWriteLine(GetPrestoredSaveCodeMemberPlayerName(index))
-                    call FileWriteLine("</a>")
-                    
-                    call FileWriteLine(" - ")
-                    call FileWriteLine(GetClanRankName(GetPrestoredSaveCodeMemberPlayerRank(index)))
-                    call FileWriteLine("</li>")
-
-                    set j = j + 1
-                endloop
-                
-                call FileWriteLine("</ul>")
-                call FileWriteLine("</td>")
-
-                // savecode
-                call FileWriteLine("<td>")
-                call FileWriteLine(saveCode)
-                call FileWriteLine("</td>")
-
-                call FileWriteLine("</tr>")
-            endif
-        endif
-        set i = i + 1
-    endloop
-    
-    call FileWriteLine("<!-- Clans generated with chat command \"-website\". -->")
-
-    // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Clans.txt")
-endfunction
-
 private function GenerateQuestEx takes integer i returns nothing
     local integer j = 0
     local integer max2 = 0
@@ -4202,16 +4116,6 @@ private function GenerateStartLocations takes nothing returns nothing
             call FileWriteLine("-")
         endif
         call FileWriteLine("</td>")
-
-        // is clan area
-        if (GetStartLocationIsClanArea(i)) then
-            call FileWriteLine(ColumnDataOrder(I2S(index), "yes"))
-            call FileWriteLine("yes")
-        else
-            call FileWriteLine(ColumnDataOrder(I2S(index), "no"))
-            call FileWriteLine("no")
-        endif
-        call FileWriteLine("</td>")
         
         // has navy
         call FileWriteLine(ColumnDataOrder(I2S(index), "no"))
@@ -4258,11 +4162,6 @@ private function GenerateStartLocations takes nothing returns nothing
             call FileWriteLine(ColumnDataOrder(I2S(index), "-"))
             call FileWriteLine("-")
         endif
-        call FileWriteLine("</td>")
-
-        // is clan area
-        call FileWriteLine(ColumnDataOrder(I2S(index), "no"))
-        call FileWriteLine("no")
         call FileWriteLine("</td>")
         
         // has shipyard
@@ -4323,7 +4222,6 @@ private function TriggerActionWebsite takes nothing returns nothing
     call NewOpLimit(function GenerateProfessions)
     call NewOpLimit(function GenerateProfessionsOverview)
     call NewOpLimit(function GeneratePlayers)
-    call NewOpLimit(function GenerateClans)
     call NewOpLimit(function GenerateNpcs)
     call NewOpLimit(function GenerateQuests)
     call NewOpLimit(function GenerateInfoQuests)

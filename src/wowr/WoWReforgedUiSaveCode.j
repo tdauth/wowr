@@ -150,17 +150,7 @@ globals
     private trigger LoadTriggerResources
     private trigger EnterTriggerResources
 
-    // line 7: clan savecode
-    private framehandle LabelFrameClan
-    private framehandle EditBoxClan
-    private trigger TriggerEditBoxClan
-    private framehandle UpdateButtonFrameClan
-    private trigger UpdateTriggerClan
-    private framehandle LoadButtonFrameClan
-    private trigger LoadTriggerClan
-    private trigger EnterTriggerClan
-    
-    // line 8: savecode dir
+    // line 7: savecode dir
     private framehandle LabelFrameDirectory
     private framehandle EditBoxDirectory
     private trigger TriggerEditBoxDirectory
@@ -375,50 +365,6 @@ function SetTooltipResourcesSaveCodeInfo takes player whichPlayer returns nothin
     call SetTooltip(whichPlayer, Format(GetLocalizedString("RESOURCES_NEW_LINE")).s(GetSaveCodeInfosResources(whichPlayer, saveCode)).result())
 endfunction
 
-function FormattedSaveCodeClan takes string saveCode returns string
-    if (StringStartsWith(saveCode, "-loadc ")) then
-        return StringToken(saveCode, 1)
-    endif
-
-    return StringToken(saveCode, 0)
-endfunction
-
-function FormattedSaveCodeClanName takes string saveCode returns string
-    if (StringStartsWith(saveCode, "-loadc ")) then
-        return StringToken(saveCode, 2)
-    endif
-
-    return StringToken(saveCode, 1)
-endfunction
-
-function SetClanText takes player whichPlayer, string txt returns nothing
-    if (GetLocalPlayer() == whichPlayer) then
-        call BlzFrameSetText(EditBoxClan, txt)
-    endif
-endfunction
-
-function GetClanText takes player whichPlayer returns string
-    return BlzFrameGetText(EditBoxClan)
-endfunction
-
-function UpdateClanText takes player whichPlayer returns nothing
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
-    if (udg_ClanPlayerClan[convertedPlayerId] > 0) then
-        call SetClanText(whichPlayer, "-loadc " + GetSaveCodeClan(udg_ClanPlayerClan[convertedPlayerId]) + " " + udg_ClanName[udg_ClanPlayerClan[convertedPlayerId]])
-    endif
-endfunction
-
-function SetTooltipClanSaveCodeInfo takes player whichPlayer returns nothing
-    local string saveCode = FormattedSaveCodeClan(GetClanText(whichPlayer))
-    local string clanName = FormattedSaveCodeClanName(GetClanText(whichPlayer))
-    //call BJDebugMsg("Clan name: " + clanName)
-    if (StringLength(clanName) > 0) then
-        call SetTooltip(whichPlayer, Format(GetLocalizedString("RESOURCES_NEW_LINE")).s(GetSaveCodeInfosClan(clanName, saveCode)).result())
-    else
-        call SetTooltip(whichPlayer, GetLocalizedString("MISSING_CLAN_NAME"))
-    endif
-endfunction
-
 function UpdateAll takes player whichPlayer returns nothing
     local integer playerId = GetPlayerId(whichPlayer)
     call UpdateHeroesText(whichPlayer)
@@ -431,7 +377,6 @@ function UpdateAll takes player whichPlayer returns nothing
     call UpdateBuildingsText(whichPlayer)
     set buildingsIndex = 0
     call UpdateResourcesText(whichPlayer)
-    call UpdateClanText(whichPlayer)
     
     if (GetLocalPlayer() == whichPlayer) then
         call BlzFrameSetText(ItemsEditIndex, I2S(itemsIndex))
@@ -504,18 +449,6 @@ function LoadResources takes player whichPlayer, string input returns nothing
     endif
 endfunction
 
-function LoadClan takes player whichPlayer, string input returns nothing
-    local string saveCode = FormattedSaveCodeClan(input)
-    local string clanName = FormattedSaveCodeClanName(input)
-    //call BJDebugMsg("Click load buildings")
-
-    if (ApplySaveCodeClan(whichPlayer, clanName, saveCode)) then
-        call SetTooltip(whichPlayer, Format(GetLocalizedString("SUCCESSFULLY_LOADED_SAVECODE_X")).s(ColoredSaveCode(saveCode)).result())
-    else
-        call SetTooltip(whichPlayer, Format(GetLocalizedString("ERROR_ON_LOADING_SAVECODE_X")).s(ColoredSaveCode(saveCode)).result())
-    endif
-endfunction
-
 function TriggerActionSyncData takes nothing returns nothing
     local player whichPlayer = GetTriggerPlayer()
     local string prefix = BlzGetTriggerSyncPrefix()
@@ -537,8 +470,6 @@ function TriggerActionSyncData takes nothing returns nothing
         call LoadBuildings(whichPlayer, input)
     elseif (StringStartsWith(data, "LoadResources")) then
         call LoadResources(whichPlayer, input)    
-    elseif (StringStartsWith(data, "LoadClan")) then
-        call LoadClan(whichPlayer, input)
     endif
     set whichPlayer = null
 endfunction
@@ -588,14 +519,6 @@ function SyncLoadResources takes player whichPlayer returns nothing
 
     if (GetLocalPlayer() == whichPlayer) then
         call BlzSendSyncData("", "LoadResources_" + GetResourcesText(whichPlayer))
-    endif
-endfunction
-
-function SyncLoadClan takes player whichPlayer returns nothing
-    local integer playerId = GetPlayerId(whichPlayer)
-
-    if (GetLocalPlayer() == whichPlayer) then
-        call BlzSendSyncData("", "LoadClan_" + GetClanText(whichPlayer))
     endif
 endfunction
 
@@ -654,11 +577,6 @@ function SetSaveCodeUIVisibleAll takes boolean visible returns nothing
     call BlzFrameSetVisible(EditBoxResources, visible)
     call BlzFrameSetVisible(UpdateButtonFrameResources, visible)
     call BlzFrameSetVisible(LoadButtonFrameResources, visible)
-    // clan
-    call BlzFrameSetVisible(LabelFrameClan, visible)
-    call BlzFrameSetVisible(EditBoxClan, visible)
-    call BlzFrameSetVisible(UpdateButtonFrameClan, visible)
-    call BlzFrameSetVisible(LoadButtonFrameClan, visible)
     // directory
     call BlzFrameSetVisible(LabelFrameDirectory, visible)
     call BlzFrameSetVisible(EditBoxDirectory, visible)
@@ -998,27 +916,6 @@ function LoadFunctionResources takes nothing returns nothing
     call SyncLoadResources(GetTriggerPlayer())
 endfunction
 
-function EditBoxEnterClan takes player whichPlayer returns nothing
-    call SetTooltipClanSaveCodeInfo(whichPlayer)
-endfunction
-
-function SaveCodeEnterFunctionClan takes nothing returns nothing
-    call EditBoxEnterClan(GetTriggerPlayer())
-endfunction
-
-function UpdateFunctionClan takes nothing returns nothing
-    //call BJDebugMsg("Click update buildings")
-    call UpdateClanText(GetTriggerPlayer())
-    
-    if (GetLocalPlayer() == GetTriggerPlayer()) then
-        call BlzFrameSetText(TooltipLabelFrame, GetLocalizedString("UPDATED_SAVE_CODE_CLAN"))
-    endif
-endfunction
-
-function LoadFunctionClan takes nothing returns nothing
-    call SyncLoadClan(GetTriggerPlayer())
-endfunction
-
 function EditBoxEnterDirectory takes player whichPlayer returns nothing
     call SetTooltip(whichPlayer, GetLocalizedString("SAVE_CODE_DIRECTORY_INFO"))
 endfunction
@@ -1061,7 +958,6 @@ private function LoadFunctionAll takes nothing returns nothing
     call SyncLoadUnits(GetTriggerPlayer())
     call SyncLoadResearches(GetTriggerPlayer())
     call SyncLoadBuildings(GetTriggerPlayer())
-    call SyncLoadClan(GetTriggerPlayer())
     
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         call BlzFrameSetText(TooltipLabelFrame, GetLocalizedString("TRIED_TO_LOAD_ALL_SAVE_CODES"))
@@ -1461,46 +1357,6 @@ private function CreateSaveCodeUI takes nothing returns nothing
     set LoadTriggerResources = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(LoadTriggerResources, LoadButtonFrameResources, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(LoadTriggerResources, function LoadFunctionResources)
-
-    // line 6: clan
-    set y = y - LINE_HEIGHT - LINE_SPACING
-
-    set LabelFrameClan = BlzCreateFrameByType("TEXT", "SaveGuiLabelClan", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameClan, FRAMEPOINT_TOPLEFT, LABEL_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameClan, FRAMEPOINT_BOTTOMRIGHT, LABEL_X + LABEL_WIDTH, y - LINE_HEIGHT)
-    call BlzFrameSetText(LabelFrameClan, GetLocalizedString("COLON_CLAN"))
-    call BlzFrameSetTextAlignment(LabelFrameClan, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
-
-    set EditBoxClan = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(EditBoxClan, FRAMEPOINT_TOPLEFT, LINEEDIT_X, y)
-    call BlzFrameSetAbsPoint(EditBoxClan, FRAMEPOINT_BOTTOMRIGHT, LINEEDIT_X + LINEEDIT_WIDTH, y - LINE_HEIGHT)
-    call BlzFrameSetText(EditBoxClan, "-loadc xxx")
-
-    set TriggerEditBoxClan = CreateTrigger()
-    call TriggerAddAction(TriggerEditBoxClan, function SaveCodeEnterFunctionClan)
-    call BlzTriggerRegisterFrameEvent(TriggerEditBoxClan, EditBoxClan, FRAMEEVENT_EDITBOX_ENTER)
-
-    set EnterTriggerClan = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(EnterTriggerClan, EditBoxClan, FRAMEEVENT_MOUSE_ENTER)
-    call TriggerAddAction(EnterTriggerClan, function SaveCodeEnterFunctionClan)
-
-    set UpdateButtonFrameClan = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(UpdateButtonFrameClan, FRAMEPOINT_TOPLEFT, UPDATE_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(UpdateButtonFrameClan, FRAMEPOINT_BOTTOMRIGHT, UPDATE_BUTTON_X + UPDATE_BUTTON_WIDTH, y - LINE_HEIGHT)
-    call BlzFrameSetText(UpdateButtonFrameClan, GetLocalizedString("UPDATE_YELLOW"))
-
-    set UpdateTriggerClan = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(UpdateTriggerClan, UpdateButtonFrameClan, FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(UpdateTriggerClan, function UpdateFunctionClan)
-
-    set LoadButtonFrameClan = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(LoadButtonFrameClan, FRAMEPOINT_TOPLEFT, LOAD_BUTTON_X, y)
-    call BlzFrameSetAbsPoint(LoadButtonFrameClan, FRAMEPOINT_BOTTOMRIGHT, LOAD_BUTTON_X + LOAD_BUTTON_WIDTH, y - LINE_HEIGHT)
-    call BlzFrameSetText(LoadButtonFrameClan, GetLocalizedString("LOAD_YELLOW"))
-
-    set LoadTriggerClan = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(LoadTriggerClan, LoadButtonFrameClan, FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(LoadTriggerClan, function LoadFunctionClan)
     
     // line 7: directory
     set y = y - LINE_HEIGHT - LINE_SPACING

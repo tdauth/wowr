@@ -51,10 +51,6 @@ function GetSaveCodeAllResourcesFileName takes string playerName, boolean isWarl
     return SAVE_CODE_FOLDER + "\\" + playerName + "-" + GetModeSuffix() + "-" + GetGameModeSuffix(isWarlord) + "-Resources.txt"
 endfunction
 
-function GetSaveCodeAllClanFileName takes string playerName, boolean isWarlord returns string
-    return SAVE_CODE_FOLDER + "\\" + playerName + "-" + GetModeSuffix() + "-" + GetGameModeSuffix(isWarlord) + "-Clan.txt"
-endfunction
-
 function GetSaveCodeAllFileNameForPlayer takes player whichPlayer returns string
     return GetSaveCodeAllFileName(GetPlayerName(whichPlayer), IsPlayerWarlord(whichPlayer))
 endfunction
@@ -77,10 +73,6 @@ endfunction
 
 function GetSaveCodeAllFileNameResourcesForPlayer takes player whichPlayer returns string
     return GetSaveCodeAllResourcesFileName(GetPlayerName(whichPlayer), IsPlayerWarlord(whichPlayer))
-endfunction
-
-function GetSaveCodeAllFileNameClanForPlayer takes player whichPlayer returns string
-    return GetSaveCodeAllClanFileName(GetPlayerName(whichPlayer), IsPlayerWarlord(whichPlayer))
 endfunction
 
 function CreateSaveCodeAllHeroesTextFileEx takes player whichPlayer returns nothing
@@ -242,27 +234,6 @@ function CreateSaveCodeAllResourcesTextFile takes player whichPlayer returns not
     call NewOpLimit(function CreateSaveCodeAllResourcesTextFileNewOpLimit)
 endfunction
 
-function CreateSaveCodeAllClanTextFileEx takes player whichPlayer, string clanName returns nothing
-    local string saveCode = GetSaveCodeClan(GetPlayerClan(whichPlayer))
-    local string content = ""
-    
-    set content = content + " -clan " + clanName
-    set content = content + " -loadc " + saveCode
-    set content = content + " "
-
-    call FileIO_Write(GetSaveCodeAllFileNameClanForPlayer(whichPlayer), content)
-endfunction
-
-function CreateSaveCodeAllClanTextFileNewOpLimit takes nothing returns nothing
-    call CreateSaveCodeAllClanTextFileEx(tmpPlayer, tmpString)
-endfunction
-
-function CreateSaveCodeAllClanTextFile takes player whichPlayer, string clanName returns nothing
-    set tmpPlayer = whichPlayer
-    set tmpString = clanName
-    call NewOpLimit(function CreateSaveCodeAllClanTextFileNewOpLimit)
-endfunction
-
 function CreateSaveCodeAllTextFile takes player whichPlayer returns nothing
     if (loadedAllOnce[GetPlayerId(whichPlayer)]) then
         call CreateSaveCodeAllHeroesTextFile(whichPlayer)
@@ -277,9 +248,6 @@ function CreateSaveCodeAllTextFile takes player whichPlayer returns nothing
         //call BJDebugMsg("After researches")
         call CreateSaveCodeAllResourcesTextFile(whichPlayer)
         //call BJDebugMsg("After resources")
-        if (GetPlayerClan(whichPlayer) > 0) then
-            call CreateSaveCodeAllClanTextFile(whichPlayer, GetClanName(GetPlayerClan(whichPlayer)))
-        endif
     else
         call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, GetLocalizedString("AT_LEAST_ONE_ALOAD"))
     endif
@@ -384,20 +352,6 @@ function LoadSaveCodeAllResources takes player whichPlayer, string allSaveCodes 
     endif
 endfunction
 
-function LoadSaveCodeAllClan takes player whichPlayer, string allSaveCodes returns nothing
-    local integer playerId = GetPlayerId(whichPlayer)
-    local string saveCode = GetSaveCodeFromFile(allSaveCodes, "-loadc ", 0)
-    local string clanName = GetSaveCodeFromFile(allSaveCodes, "-clan ", 0)
-    
-    if (saveCode != null) then
-        if (ApplySaveCodeClan(whichPlayer, clanName, saveCode)) then
-            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetLocalizedString("LOADED_CLAN_SAVE_CODES"))
-        endif
-    else
-        call SimError(whichPlayer, Format(GetLocalizedString("MISSING_SAVE_CODE_WITH_LOADC")).s(allSaveCodes).result())
-    endif
-endfunction
-
 function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
     local string playerName = GetPlayerName(whichPlayer)
     local integer playerId = GetPlayerId(whichPlayer)
@@ -407,7 +361,6 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
     local string fileNameBuildings = GetSaveCodeAllFileNameBuildingsForPlayer(whichPlayer)
     local string fileNameResearches = GetSaveCodeAllFileNameResearchesForPlayer(whichPlayer)
     local string fileNameResources = GetSaveCodeAllFileNameResourcesForPlayer(whichPlayer)
-    local string fileNameClan = GetSaveCodeAllFileNameClanForPlayer(whichPlayer)
     local string fileContent = null
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, Format(GetLocalizedString("LOADING_YOUR_CHARACTER_FROM_FILE")).s(fileNameHeroes).result())
     if (GetLocalPlayer() == whichPlayer) then
@@ -457,14 +410,6 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
             call BlzSendSyncData("SaveCodeAllResources", fileContent)
         else
             call BlzSendSyncData("SaveCodeAllResources", "missing")
-        endif
-        
-        set fileContent = FileIO_Read(fileNameClan)
-        //call BJDebugMsg("File content: " + fileContent)
-        if (fileContent != null) then
-            call BlzSendSyncData("SaveCodeAllClan", fileContent)
-        else
-            call BlzSendSyncData("SaveCodeAllClan", "missing")
         endif
     endif
 endfunction
@@ -516,13 +461,6 @@ private function TriggerActionSync takes nothing returns nothing
             call SimError(triggerPlayer, GetLocalizedString("MISSING_RESOURCES_SAVE_CODE_FILE"))
         else
             call LoadSaveCodeAllResources(triggerPlayer, data)
-        endif
-    elseif (prefix == "SaveCodeAllClan") then
-        //call BJDebugMsg("Synced: " + BlzGetTriggerSyncData())
-        if (data == "missing") then
-            call SimError(triggerPlayer, GetLocalizedString("MISSING_CLAN_SAVE_CODE_FILE"))
-        else
-            call LoadSaveCodeAllClan(triggerPlayer, data)
         endif
     endif
     set triggerPlayer = null

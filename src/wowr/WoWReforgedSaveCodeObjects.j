@@ -674,8 +674,6 @@ private function AddUnits takes nothing returns nothing
     call AddUnit('nbot')
     call AddUnit('n03H')
     call AddUnit('h029')
-    // CLANS
-    call AddUnit('n04G')
     // CREEP UNITS
     call AddCreepsSaveObjects()
     // RACE UNITS

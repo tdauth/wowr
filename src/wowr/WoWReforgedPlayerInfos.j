@@ -2,15 +2,11 @@ library WoWReforgedPlayerInfos requires StringUtils, WoWReforgedUtils, WoWReforg
 // Make sure no string literal has more than 1023 characters.
 
 function GetHelpText takes nothing returns string
-    return "-h/-help, -helpping, -helpclan, -helpai, -helpally, -helpcamera, -helpvisual, -helpresources, -helpattributes, -helpsave, -helpfood, -helptime, -helpreset, -helpcheats, -c/-clear, -uion/off, -uiqueueon/off, -uiqueueclear, -d/-discord, -w/-website, -o/-download, -v/-version, -q/-news, -x/-revive, -l/-log, -dp/-diplomacy, -sel, -host, -p/-players, -a/-accounts, -i/-info X, -qr/-questrewards, -gold X Y, -lumber X Y, -cooldowns, -aireset, -repick, -fullrepick, -g/-get, -auto, -e/-enchanter, -n/-inscriptor, -log, -it/-items, -pi/pickup, -o/-order, -baginfoon/off, -baguion/off -h1/2/3, -p1/2/3, -r1/2/3, -passive, -k/-suicide, -anim X, -gaiaon/off, -bounty X Y Z, -bounties, -camlockon/off, -votekick X, -yes, -wrapup, -goblindeposit, -maxbosslevels, -z/-zoneson/off, -letter X Y, -mailbox, -dice X, -unlock, -lock, -tomes, -notomes, -legion, -nolegion, -vips, -vipson/off, -mountname1/2/3 X"
+    return "-h/-help, -helpping, -helpai, -helpally, -helpcamera, -helpvisual, -helpresources, -helpattributes, -helpsave, -helpfood, -helptime, -helpreset, -helpcheats, -c/-clear, -uion/off, -uiqueueon/off, -uiqueueclear, -d/-discord, -w/-website, -o/-download, -v/-version, -q/-news, -x/-revive, -l/-log, -dp/-diplomacy, -sel, -host, -p/-players, -a/-accounts, -i/-info X, -qr/-questrewards, -gold X Y, -lumber X Y, -cooldowns, -aireset, -repick, -fullrepick, -g/-get, -auto, -e/-enchanter, -n/-inscriptor, -log, -it/-items, -pi/pickup, -o/-order, -baginfoon/off, -baguion/off -h1/2/3, -p1/2/3, -r1/2/3, -passive, -k/-suicide, -anim X, -gaiaon/off, -bounty X Y Z, -bounties, -camlockon/off, -votekick X, -yes, -wrapup, -goblindeposit, -maxbosslevels, -z/-zoneson/off, -letter X Y, -mailbox, -dice X, -unlock, -lock, -tomes, -notomes, -legion, -nolegion, -vips, -vipson/off, -mountname1/2/3 X"
 endfunction
 
 function GetHelpTextPing takes nothing returns string
     return "-ping, -pingh, -pingf, -pingl, -pingm, -pingbosses/pingb/bosses, -pingportals, -pingkey, -pingdragons, -pinggoldmines, -pingnpcs, -pingaistarts, -pingproperties, -pingaltars, -pingres/resurrectionstones, -pingrace, -pinghuman, -pingvillage, -pingdalaran, -pingkultiras, -pingnightelf, -pingorc, -pingnaga, -pingbloodelf, -pingforsaken, -pinglichking, -pingdraenei, -pingdemon, -pingpanda, -pingeredar, -pingtuskarr, -pinggoblin, -pingjaina"
-endfunction
-
-function GetHelpTextClan takes nothing returns string
-    return "-clanrename X, -clangold X, -clanlumber X, -clanwgold X, -clanwlumber X, -clans, -claninfo, -clanrank X Y, -claninvite X, -clanaccept, -clanleave, -clanaion/off"
 endfunction
 
 function GetHelpTextAi takes nothing returns string
@@ -34,7 +30,7 @@ function GetHelpTextAttributes takes nothing returns string
 endfunction
 
 function GetHelpTextSave takes nothing returns string
-    return "-presave, -clanspresave, -loadp[i/u/b/r/l] X, -loadclanp X, -save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -generated"
+    return "-save, -savec, -savegui, -asave, -aload, -load[i/u/b/r/l] X, -generated"
 endfunction
 
 function GetHelpTextFood takes nothing returns string
@@ -56,7 +52,6 @@ endfunction
 function ShowPlayers takes player to returns nothing
     local player listedPlayer = null
     local integer convertedPlayerId = 0
-    local string clanName = ""
     local string vip = ""
     local integer i = 0
     loop
@@ -64,17 +59,12 @@ function ShowPlayers takes player to returns nothing
         set listedPlayer = Player(i)
         if (GetPlayerSlotState(listedPlayer) == PLAYER_SLOT_STATE_PLAYING) then
             set convertedPlayerId = GetConvertedPlayerId(listedPlayer)
-            if (udg_ClanPlayerClan[convertedPlayerId] != 0) then
-                set clanName = ", Clan: " + udg_ClanName[udg_ClanPlayerClan[convertedPlayerId]]
-            else
-                set clanName = ""
-            endif
             if (IsPlayerVIP(listedPlayer)) then
                 set vip = ", VIP"
             else 
                 set vip = ""
             endif
-            call DisplayTimedTextToPlayer(to, 0, 0, 20.0, I2S(GetPlayerTeam(listedPlayer) + 1) + " [" + I2S(i + 1) + "]" + GetPlayerColorString(GetPlayerColor(listedPlayer), GetPlayerName(listedPlayer)) + ": " + GetPlayerColorName(listedPlayer) + clanName + vip)
+            call DisplayTimedTextToPlayer(to, 0, 0, 20.0, I2S(GetPlayerTeam(listedPlayer) + 1) + " [" + I2S(i + 1) + "]" + GetPlayerColorString(GetPlayerColor(listedPlayer), GetPlayerName(listedPlayer)) + ": " + GetPlayerColorName(listedPlayer) + vip)
         endif
         set listedPlayer = null
         set i = i + 1
@@ -86,7 +76,6 @@ function DisplayStats takes player to, player from returns nothing
     local integer convertedPlayerId = GetConvertedPlayerId(from)
     local string team = GetLocalizedString("UNKNOWN")
     local string warlord = GetLocalizedString("WARLORD")
-    local string clanName = ""
     local string vip = ""
     local string heroName1 = GetUnitName(udg_Hero[playerId])
     local string heroName2 = GetUnitName(udg_Hero2[playerId])
@@ -122,9 +111,6 @@ function DisplayStats takes player to, player from returns nothing
     
     if (not udg_PlayerIsWarlord[convertedPlayerId]) then
         set warlord = ", " + GetLocalizedString("FREELANCER")
-    endif
-    if (udg_ClanPlayerClan[convertedPlayerId] != 0) then
-        set clanName = ", Clan: " + udg_ClanName[udg_ClanPlayerClan[convertedPlayerId]]
     endif
     if (IsPlayerVIP(from)) then
         set vip = ", VIP"
@@ -165,7 +151,7 @@ function DisplayStats takes player to, player from returns nothing
         set profession3 = "-"
     endif
     
-    call DisplayTimedTextToPlayer(to, 0, 0, 20.0, Format(GetLocalizedString("PLAYER_INFOS")).s(GetPlayerNameColored(from)).s(warlord).s(clanName).s(vip).s(team).i(xpRate).s(heroName1).s(heroLevel1).s(heroName2).s(heroLevel2).s(heroName3).s(heroLevel3).s(race1).s(race2).s(race3).s(profession1).s(profession2).s(profession3).i(gold).i(lumber).i(foodUsed).i(foodMax).i(evolutionLevel).i(heroKills).i(unitKills).i(buildingsRazed).i(bossesKilled).i(bossesMax).result())
+    call DisplayTimedTextToPlayer(to, 0, 0, 20.0, Format(GetLocalizedString("PLAYER_INFOS")).s(GetPlayerNameColored(from)).s(warlord).s(vip).s(team).i(xpRate).s(heroName1).s(heroLevel1).s(heroName2).s(heroLevel2).s(heroName3).s(heroLevel3).s(race1).s(race2).s(race3).s(profession1).s(profession2).s(profession3).i(gold).i(lumber).i(foodUsed).i(foodMax).i(evolutionLevel).i(heroKills).i(unitKills).i(buildingsRazed).i(bossesKilled).i(bossesMax).result())
 endfunction
 
 private function GetPlayerSelectionModeName takes integer mode returns string

@@ -129,23 +129,12 @@ function GetSaveCodeHumanUpgrades takes player whichPlayer, string playerName, b
     return result
 endfunction
 
-function GetSaveCodeTheElvenClan takes boolean singlePlayer, string playerName returns string
-    // there seems to be an issue if we pass these values directly as literals
-    local integer clanIcon = 0 // TODO Leads to stopping the code execution 'I04S'
-    local integer gold = 40000
-    local integer lumber = 40000
-    return GetSaveCodeClanEx(singlePlayer, "TheElvenClan", clanIcon, 1, gold, lumber, true, playerName, udg_ClanRankLeader, "WorldEdit", udg_ClanRankLeader, "Barade#2569", udg_ClanRankLeader, "Runeblade14#2451", udg_ClanRankCaptain, "AntiDenseMan#1202", udg_ClanRankCaptain, "Chaoskrieger#21738", udg_ClanRankCaptain, "", 0, 5)
-endfunction
-
 globals
     private player generateSaveCodePlayer
     private string generateSaveCodePlayerName
     private boolean generateSaveCodeSinglePlayer
     private boolean generateSaveCodeWarlord
     private integer generateSaveCodeXpRate
-
-    private boolean generateSaveCodeClanSinglePlayer
-    private string generateSaveCodeClanPlayerName
 endglobals
 
 function GenerateSaveCode takes player whichPlayer, string playerName, boolean singlePlayer, boolean warlord, integer xpRate returns nothing
@@ -160,12 +149,6 @@ endfunction
 
 function GenerateSaveCodeNewOpLimit takes nothing returns nothing
     call GenerateSaveCode(generateSaveCodePlayer, generateSaveCodePlayerName, generateSaveCodeSinglePlayer, generateSaveCodeWarlord, generateSaveCodeXpRate)
-endfunction
-
-function GetSaveCodeTheElvenClanNewOpLimit takes nothing returns nothing
-    call BJDebugMsg("Generating savecodes for TheElvenClan")
-    call GetSaveCodeTheElvenClan(generateSaveCodeClanSinglePlayer, generateSaveCodeClanPlayerName)
-    call BJDebugMsg("Done generating savecodes for TheElvenClan")
 endfunction
 
 function GenerateSaveCodes takes player whichPlayer returns nothing
@@ -219,11 +202,6 @@ function GenerateSaveCodes takes player whichPlayer returns nothing
                 call NewOpLimit(function GenerateSaveCodeNewOpLimit)
                 set k = k  + 1
             endloop
-            call BJDebugMsg("Clan Save Code")
-            set generateSaveCodeClanSinglePlayer = singlePlayer[j]
-            set generateSaveCodeClanPlayerName = playerName[i]
-            call NewOpLimit(function GetSaveCodeTheElvenClanNewOpLimit)
-            call BJDebugMsg("After Generating Clan Save Code")
             set j = j + 1
         endloop
         set i = i + 1

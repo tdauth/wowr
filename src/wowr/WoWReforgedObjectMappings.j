@@ -38,9 +38,6 @@ private function Init takes nothing returns nothing
     call AddObjectMapping(THIEVES_GUILD, ITEM_TINY_THIEVES_GUILD)
     call AddObjectMapping(MOUNTS_CAGE, ITEM_TINY_MOUNTS_CAGE)
     call AddObjectMapping(DRAGON_ROOST, ITEM_TINY_DRAGON_ROOST)
-    call AddObjectMapping(CLAN_HALL, ITEM_TINY_CLAN_HALL)
-    call AddObjectMapping(CLAN_TOWER, ITEM_TINY_CLAN_TOWER)
-    call AddObjectMapping(ADVANCED_CLAN_TOWER, ITEM_TINY_CLAN_TOWER)
     call AddObjectMapping(CHEST, ITEM_TINY_CHEST)
     // Herbalist
     call AddObjectMapping(FOUNTAIN_OF_HEALTH, ITEM_FOUNTAIN_OF_HEALTH)

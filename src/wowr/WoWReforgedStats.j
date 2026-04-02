@@ -57,15 +57,6 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemValue(mitem, text)
     call MultiboardReleaseItem(mitem)
-    // Clan
-    set column = column + 1
-    if (isUser) then
-        set itemTypeId = udg_ClanIcon[udg_ClanPlayerClan[convertedPlayerId]]
-        set text = GetIconByItemType(itemTypeId)
-        set mitem = MultiboardGetItem(m, currentRow, column)
-        call MultiboardSetItemIcon(mitem, text)
-        call MultiboardReleaseItem(mitem)
-    endif
     // Game Mode/Race 1
     set column = column + 1
     if (whichPlayer != udg_BossesPlayer) then
@@ -264,12 +255,6 @@ function CreateStats takes nothing returns nothing
             set mitem = MultiboardGetItem(m, row, column)
             call MultiboardSetItemStyle(mitem, true, false)
             call MultiboardSetItemValueColor(mitem, red, green, blue, 255)
-            call MultiboardSetItemWidth(mitem, 0.01)
-            call MultiboardReleaseItem(mitem)
-            set column = column + 1
-            // Clan
-            set mitem = MultiboardGetItem(m, row, column)
-            call MultiboardSetItemStyle(mitem, false, isUser)
             call MultiboardSetItemWidth(mitem, 0.01)
             call MultiboardReleaseItem(mitem)
             set column = column + 1

@@ -347,8 +347,7 @@ function RecreateStartingUnitsAI takes player whichPlayer returns nothing
 endfunction
 
 private function FilterIsRemovableUnit takes nothing returns boolean
-    local integer unitTypeId = GetUnitTypeId(GetFilterUnit())
-    return unitTypeId != FOUNTAIN_OF_LIFE and not IsUnitInGroup(GetFilterUnit(), udg_ClanHalls)
+    return GetUnitTypeId(GetFilterUnit()) != FOUNTAIN_OF_LIFE
 endfunction
 
 private function ForGroupRemoveUnit takes nothing returns nothing

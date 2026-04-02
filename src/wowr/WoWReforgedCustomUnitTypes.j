@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedClanShop, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -94,14 +94,6 @@ private struct CustomUnitTypeAddBannersShop extends CustomUnitType
     
     public stub method handler takes unit whichUnit returns nothing
         call AddBannersShop(whichUnit)
-    endmethod
-
-endstruct
-
-private struct CustomUnitTypeAddClanShop extends CustomUnitType
-    
-    public stub method handler takes unit whichUnit returns nothing
-        call AddClanShop(whichUnit)
     endmethod
 
 endstruct
@@ -405,10 +397,6 @@ private function Init takes nothing returns nothing
     set c = CustomUnitTypeAddBannersShop.create()
     call AddCustomUnitType(BANNER_SHOP, c)
     call AddCustomUnitType(BANNER_SHOP_NEUTRAL, c)
-    
-    set c = CustomUnitTypeAddClanShop.create()
-    call AddCustomUnitType(CLAN_SHOP, c)
-    call AddCustomUnitType(CLAN_SHOP_NEUTRAL, c)
 
     set c = CustomUnitTypeAddMountsShop.create()
     call AddCustomUnitType(MOUNTS_SHOP, c)

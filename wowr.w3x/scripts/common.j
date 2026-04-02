@@ -3159,31 +3159,6 @@ globals
     constant integer CRANNIES_WINTER                                 = 'B013'
     constant integer CRANNIES_WINTER_SNOWY                           = 'B014'
 
-    // clans
-    constant integer CLAN_SHOP                                       = 'n04I'
-    constant integer CLAN_SHOP_NEUTRAL                               = 'n0AQ'
-    constant integer CLAN_HORN_SOUND                                 = 'I050'
-    constant integer CLAN_LAUGH_SOUND                                = 'I051'
-    constant integer CLAN_CREATE_CLAN                                = 'I04H'
-    constant integer CLAN_TINY_CLAN_HALL                             = 'I04I'
-    constant integer ITEM_TINY_CLAN_HALL                             = 'I04I'
-    constant integer ITEM_TINY_CLAN_TOWER                            = 'I05A'
-    constant integer CLAN_BANNER_NIGHT_ELF                           = 'I04U'
-    constant integer CLAN_BANNER_UNDEAD                              = 'I04V'
-    constant integer CLAN_BANNER_ORC                                 = 'I04T'
-    constant integer CLAN_BANNER_HUMAN                               = 'I04S'
-    constant integer CLAN_BANNER_PANDAREN                            = 'I11I'
-    constant integer CLAN_BANNER_DWARF                               = 'I11J'
-    constant integer CLAN_BANNER_GNOME                               = 'I11K'
-
-    constant integer CLAN_HALL                                       = 'h02M'
-    constant integer CLAN_TOWER                                      = 'n04N'
-    constant integer ADVANCED_CLAN_TOWER                             = 'n04M'
-    constant integer CLAN_EMISSARY                                   = 'n04G'
-
-    constant integer UPG_HERO_CLAN                                   = 'R03D'
-    constant integer UPG_CLAN_HAS_NO_AI_PLAYER                       = 'R046'
-
     constant integer DEMIGOD_LIGHT                                   = 'H003'
     constant integer DEMIGOD_DARK                                    = 'H002'
 
