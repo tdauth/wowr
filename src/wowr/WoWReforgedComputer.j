@@ -783,12 +783,14 @@ private function EnumStartLobbySettings takes nothing returns nothing
     // Difficulty
     call CommandAI(GetEnumPlayer(), COMMAND_EASY + AiPlayersUIGetDifficulty(GetEnumPlayer()), 0)
     // Allied vision
+    call DisableAllianceChangesTrigger()
     call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], GetMapTeamPlayers(GetPlayerTeam(GetEnumPlayer())), bj_ALLIANCE_ALLIED_VISION)
     call SetForceAllianceStateBJ(GetMapTeamPlayers(GetPlayerTeam(GetEnumPlayer())), bj_FORCE_PLAYER[playerId], bj_ALLIANCE_ALLIED_VISION)
     // Shared control
     if (AiPlayersUIGetSharedControl(GetEnumPlayer()) == 1) then
         call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], GetMapTeamPlayers(GetPlayerTeam(GetEnumPlayer())), bj_ALLIANCE_ALLIED_ADVUNITS)
     endif
+    call EnableAllianceChangesTrigger()
 endfunction
 
 private function StartLobbySettings takes nothing returns nothing
