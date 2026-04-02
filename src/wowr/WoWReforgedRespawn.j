@@ -9,15 +9,6 @@ private function GetRespawnBuildingSize takes nothing returns real
     return 1400.0
 endfunction
 
-function GetRespawnGroupOfDestructable takes destructable whichDestructable returns integer
-    if (DestructableParameterIntegerExists(whichDestructable, 0)) then
-        debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has a group!")
-        return LoadDestructableParameterInteger(whichDestructable, 0)
-    endif
-    debug call BJDebugMsg("Destructable " + GetDestructableName(whichDestructable) + " has no group!")
-    return -1
-endfunction
-
 private function FilterFunctionIsBuilding takes nothing returns boolean
     local unit filterUnit = GetFilterUnit()
     local player owner = GetOwningPlayer(filterUnit)

@@ -46,6 +46,8 @@ globals
     private constant real TOOLTIP_LABEL_WIDTH = 0.10
     private constant real TOOLTIP_LABEL_HEIGHT = 0.32
 
+    private hashtable h = InitHashtable()
+
     private framehandle BackgroundFrame
     private framehandle TitleFrame
 
@@ -715,7 +717,7 @@ function LoadFunctionHeroes takes nothing returns nothing
 endfunction
 
 function SaveCodeEnterFunctionItemsIndex takes nothing returns nothing
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
     local integer playerId = GetPlayerId(GetTriggerPlayer())
     
     set itemsIndex = IMaxBJ(0, IMinBJ(30, S2I(BlzFrameGetText(ItemsEditIndex))))
@@ -778,7 +780,7 @@ function LoadFunctionItems takes nothing returns nothing
 endfunction
 
 function SaveCodeEnterFunctionUnitsIndex takes nothing returns nothing
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
     local integer playerId = GetPlayerId(GetTriggerPlayer())
     
     set unitsIndex = IMaxBJ(0, IMinBJ(30, S2I(BlzFrameGetText(UnitsEditIndex))))
@@ -843,7 +845,7 @@ function LoadFunctionUnits takes nothing returns nothing
 endfunction
 
 function SaveCodeEnterFunctionResearchesIndex takes nothing returns nothing
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
     local integer playerId = GetPlayerId(GetTriggerPlayer())
     
     set researchesIndex = IMaxBJ(0, IMinBJ(30, S2I(BlzFrameGetText(ResearchesEditIndex))))
@@ -909,7 +911,7 @@ function LoadFunctionResearches takes nothing returns nothing
 endfunction
 
 function SaveCodeEnterFunctionBuildingsIndex takes nothing returns nothing
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 0)
+    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
     local integer playerId = GetPlayerId(GetTriggerPlayer())
     
     set researchesIndex = IMaxBJ(0, IMinBJ(30, S2I(BlzFrameGetText(BuildingsEditIndex))))

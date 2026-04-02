@@ -1,4 +1,4 @@
-library WoWReforgedUtils initializer Init requires TreeUtils, MathUtils, CameraUtils, HeroUtils, ForceUtils, SelectionUtils, AttackRange, StringUtils, CopyGroup, Aura, Crafting, UnitGroupRespawnSystem, MassSpell, WoWReforgedI18n
+library WoWReforgedUtils requires TreeUtils, MathUtils, CameraUtils, HeroUtils, ForceUtils, SelectionUtils, AttackRange, StringUtils, CopyGroup, Aura, Crafting, UnitGroupRespawnSystem, MassSpell, WoWReforgedI18n
 /*
 function GetNpcName takes unit hero returns string
     return GetUnitNameByType(GetUnitTypeId(hero), GetOwningPlayer(hero))
@@ -7,8 +7,6 @@ UnitTypeUtils
 */
 globals
     constant boolean MAP_DEBUG_MODE_ENABLED = true //MAP_DEBUG_MODE
-
-    private hashtable h = InitHashtable()
 endglobals
 
 //! textmacro DEBUG_MODE_CHECK
@@ -460,34 +458,6 @@ function GetLowestHeroLevel1FromAllPlayingUsers takes nothing returns integer
     return result
 endfunction
 
-function SaveTriggerParameterInteger takes handle whichTrigger, integer key, integer value returns nothing
-    call SaveInteger(h, GetHandleId(whichTrigger), key, value)
-endfunction
-
-function LoadTriggerParameterInteger takes handle whichTrigger, integer key returns integer
-    return LoadInteger(h, GetHandleId(whichTrigger), key)
-endfunction
-
-function SaveUnitParameterInteger takes unit whichUnit, integer key, integer value returns nothing
-    call SaveInteger(h, GetHandleId(whichUnit), key, value)
-endfunction
-
-function LoadUnitParameterInteger takes unit whichUnit, integer key returns integer
-    return LoadInteger(h, GetHandleId(whichUnit), key)
-endfunction
-
-function SaveDestructableParameterInteger takes destructable whichDestructable, integer key, integer value returns nothing
-    call SaveInteger(h, GetHandleId(whichDestructable), key, value)
-endfunction
-
-function LoadDestructableParameterInteger takes destructable whichDestructable, integer key returns integer
-    return LoadInteger(h, GetHandleId(whichDestructable), key)
-endfunction
-
-function DestructableParameterIntegerExists takes destructable whichDestructable, integer key returns boolean
-    return HaveSavedInteger(h, GetHandleId(whichDestructable), key)
-endfunction
-
 function DropAllItemsFromHero1 takes player whichPlayer returns integer
     return DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
 endfunction
@@ -665,10 +635,6 @@ function DisplayUnitRespawnInfo takes unit whichUnit, player whichPlayer returns
         set groupIndex = GetRespawnUnitGroupIndex(unitIndex)
     endif
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Unit respawn index: " + I2S(unitIndex) + "\nUnit group index: " + I2S(groupIndex))
-endfunction
-
-private function Init takes nothing returns nothing
-    set h = InitHashtable()
 endfunction
 
 endlibrary

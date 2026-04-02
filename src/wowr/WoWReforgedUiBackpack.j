@@ -30,6 +30,12 @@ globals
     
     public constant real TOOLTIP_FONT_HEIGHT = 0.008
     
+    private hashtable h = InitHashtable()
+
+    private constant integer KEY_INDEX = 1
+    private constant integer KEY_BAG = 2
+    private constant integer KEY_SLOT = 3
+
     private boolean array BackpackUIVisible
     private framehandle BackpackBackgroundFrame
     private framehandle BackpackTitleFrame
@@ -203,9 +209,10 @@ function HideBackpackUIForAllPlayers takes nothing returns nothing
 endfunction
 
 function BackpackClickItemFunction takes nothing returns nothing
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
-    local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
-    local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
+    local integer handleId = GetHandleId(GetTriggeringTrigger())
+    local integer index = LoadInteger(h, handleId, KEY_INDEX)
+    local integer bag = LoadInteger(h, handleId, KEY_BAG)
+    local integer slot = LoadInteger(h, handleId, KEY_SLOT)
     local string text = Format(GetLocalizedString("BAG_CHANGED")).i(bag + 1).result() // Changed to bag %1%.
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         call BlzFrameSetText(BackpackTooltipText, text)
@@ -215,9 +222,10 @@ endfunction
 
 private function EnterItemFunction takes nothing returns nothing
     local integer playerId = GetPlayerId(GetTriggerPlayer())
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
-    local integer bag = LoadTriggerParameterInteger(GetTriggeringTrigger(), 2)
-    local integer slot = LoadTriggerParameterInteger(GetTriggeringTrigger(), 3)
+    local integer handleId = GetHandleId(GetTriggeringTrigger())
+    local integer index = LoadInteger(h, handleId, KEY_INDEX)
+    local integer bag = LoadInteger(h, handleId, KEY_BAG)
+    local integer slot = LoadInteger(h, handleId, KEY_SLOT)
     local string tooltip = Format(GetLocalizedString("BAG_EMPTY_SLOT")).i(slot + 1).i(bag + 1).result()
     local integer itemTypeId = GetBackpackItemTypeId(index)
     local PagedButtonsConfig c = 0
@@ -303,7 +311,7 @@ endfunction
 
 private function LeaveItemFunction takes nothing returns nothing
     local integer playerId = GetPlayerId(GetTriggerPlayer())
-    local integer index = LoadTriggerParameterInteger(GetTriggeringTrigger(), 1)
+    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 1)
     //call BJDebugMsg("Leave item " + I2S(index))
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         call BlzFrameSetTexture(BackpackTooltipIcon, "", 0, false)
@@ -377,21 +385,21 @@ private function CreateBackpackUI takes nothing returns nothing
             set BackpackItemTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTrigger[index], BackpackItemFrame[index], FRAMEEVENT_CONTROL_CLICK)
             call TriggerAddAction(BackpackItemTrigger[index], function BackpackClickItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 1, index)
-            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 2, i)
-            call SaveTriggerParameterInteger(BackpackItemTrigger[index], 3, j)
+            call SaveInteger(h, GetHandleId(BackpackItemTrigger[index]), KEY_INDEX, index)
+            call SaveInteger(h, GetHandleId(BackpackItemTrigger[index]), KEY_BAG, i)
+            call SaveInteger(h, GetHandleId(BackpackItemTrigger[index]), KEY_SLOT, j)
 
             set BackpackItemTooltipOnTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOnTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_ENTER)
             call TriggerAddAction(BackpackItemTooltipOnTrigger[index], function EnterItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 1, index)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 2, i)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOnTrigger[index], 3, j)
+            call SaveInteger(h, GetHandleId(BackpackItemTooltipOnTrigger[index]), KEY_INDEX, index)
+            call SaveInteger(h, GetHandleId(BackpackItemTooltipOnTrigger[index]), KEY_BAG, i)
+            call SaveInteger(h, GetHandleId(BackpackItemTooltipOnTrigger[index]), KEY_SLOT, j)
 
             set BackpackItemTooltipOffTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOffTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_LEAVE)
             call TriggerAddAction(BackpackItemTooltipOffTrigger[index], function LeaveItemFunction)
-            call SaveTriggerParameterInteger(BackpackItemTooltipOffTrigger[index], 1, index)
+            call SaveInteger(h, GetHandleId(BackpackItemTooltipOffTrigger[index]), 1, index)
 
             // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
             
