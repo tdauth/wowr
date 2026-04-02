@@ -42,7 +42,7 @@ function ShowUI takes player whichPlayer returns nothing
 static if (LIBRARY_QueueUI) then
     call SetQueueUIEnabledForPlayer(whichPlayer, true)
 endif
-static if (LIBRARY_WoWReforgedActionsBarUI) then
+static if (LIBRARY_WoWReforgedUiActionsBar) then
     call ShowActionsBarUI(whichPlayer)
 endif
     call ShowStatsMultiboard(whichPlayer)
@@ -56,7 +56,7 @@ function HideUI takes player whichPlayer returns nothing
 static if (LIBRARY_QueueUI) then
     call SetQueueUIEnabledForPlayer(whichPlayer, false)
 endif
-static if (LIBRARY_WoWReforgedActionsBarUI) then
+static if (LIBRARY_WoWReforgedUiActionsBar) then
     call HideActionsBarUI(whichPlayer)
 endif
     call HideStatsMultiboard(whichPlayer)

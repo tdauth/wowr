@@ -60,7 +60,7 @@ private function RestorePlayerQueueUI takes nothing returns nothing
 endfunction
 endif
 
-static if (LIBRARY_WoWReforgedActionsBarUI) then
+static if (LIBRARY_WoWReforgedUiActionsBar) then
 private function EnumHideActionsBar takes nothing returns nothing
     call HideActionsBarUI(GetEnumPlayer())
 endfunction
@@ -72,7 +72,7 @@ static if (LIBRARY_QueueUI) then
     call StorePlayerQueueUI()
     call HideQueueUI()
 endif
-static if (LIBRARY_WoWReforgedActionsBarUI) then
+static if (LIBRARY_WoWReforgedUiActionsBar) then
     call ForForce(GetPlayersAll(), function EnumHideActionsBar)
 endif
 endfunction
@@ -81,7 +81,7 @@ function EndPrepareCinematic takes nothing returns nothing
     set udg_CinematicPreparation = false
 endfunction
 
-static if (LIBRARY_WoWReforgedActionsBarUI) then
+static if (LIBRARY_WoWReforgedUiActionsBar) then
 private function EnumShowActionsBar takes nothing returns nothing
     call ShowActionsBarUI(GetEnumPlayer())
 endfunction
@@ -91,7 +91,7 @@ function UnprepareCinematic takes nothing returns nothing
 static if (LIBRARY_QueueUI) then
     call RestorePlayerQueueUI()
 endif
-static if (LIBRARY_WoWReforgedActionsBarUI) then
+static if (LIBRARY_WoWReforgedUiActionsBar) then
     call ForForce(GetPlayersAll(), function EnumShowActionsBar)
 endif
 endfunction
