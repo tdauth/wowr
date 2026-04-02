@@ -1,27 +1,43 @@
 function BuildingStrategy takes nothing returns nothing
-    call SetBuildUnit(1, FOUNTAIN_OF_LIFE)
-    call SetBuildUnit(1, FREELANCER_TIER_1)
-    call SetBuildUnit(3, FREELANCER_CITIZEN_MALE)
-    call SetBuildUnit(3, FREELANCER_CITIZEN_FEMALE)
-    call SetBuildUnit(3, FREELANCER_CHILD)
-    call SetBuildUnit(3, FREELANCER_PET)
-    call SetBuildUnit(4, FREELANCER_HOUSING)
+    loop
+        call InitBuildArray()
+        // Tier 1 Buildings
+        call SetBuildUnit(1, FOUNTAIN_OF_LIFE)
+        call SetBuildUnit(1, FREELANCER_TIER_1)
+        call SetBuildUnit(workers, FREELANCER_CITIZEN_MALE)
+        call SetBuildUnit(citizens_female, FREELANCER_CITIZEN_FEMALE)
+        call SetBuildUnit(children, FREELANCER_CHILD)
+        call SetBuildUnit(pets, FREELANCER_PET)
+        call SetBuildUnit(2, FREELANCER_HOUSING)
 
-    //call SetBuildUnit(1, FREELANCER_LABORATORY) // TODO Leads to a crash!
-    //call SetBuildUnit(1, FREELANCER_SHOP)
-    //call SetBuildUnit(1, FREELANCER_MERCENARY_CAMP)
-    call SetBuildUnit(1, FREELANCER_TIER_2)
-    call SetBuildUnit(1, FREELANCER_TIER_3)
-    call SetBuildUnit(1, FREELANCER_ADVANCED_TOWER)
+        //call SetBuildUnit(1, FREELANCER_LABORATORY) // TODO Leads to a crash!
+        //call SetBuildUnit(1, FREELANCER_SHOP)
+        //call SetBuildUnit(1, FREELANCER_MERCENARY_CAMP)
 
-    call SetBuildUpgr(1, UPG_FREELANCER_MAGIC_SENTRY)
+        call SetBuildUnit(1, FREELANCER_TIER_2)
+        call SetBuildUnit(1, FREELANCER_TIER_3)
+        call SetBuildUnit(1, FREELANCER_ADVANCED_TOWER)
 
-    call BuildingStrategyStandardTier3Freelancer()
+        call SetBuildUpgr(1, UPG_FREELANCER_MAGIC_SENTRY)
 
-     loop
+        call BuildingStrategyStandardTier3Freelancer()
+
         call LoopActionFreelancerWoWReforged()
 
-        call Sleep(M1)
+        /*
+        call StartExpansionTownHall(FURBOLG_TRIBAL_CENTER)
+        call StartExpansionSimple(FURBOLG_LUMBER_CAMP)
+        call StartExpansionSimple(GUARDING_FURBOLG)
+        */
+
+        if (buildShips) then
+            call StartUnitSimple(shipyards, FREELANCER_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
+            call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
+        endif
+
+        call Sleep(3)
     endloop
 endfunction
 
