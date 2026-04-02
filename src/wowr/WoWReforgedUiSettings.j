@@ -1,4 +1,4 @@
-library WoWReforgedUiSettings initializer Init requires OnStartGame, optional FrameLoader, StringUtils, WoWReforgedUi, WoWReforgedMapData, WoWReforgedUtils, WoWReforgedCalendar
+library WoWReforgedUiSettings initializer Init requires OnStartGame, optional FrameLoader, StringUtils, WoWReforgedUi, WoWReforgedMapData, WoWReforgedUtils, WoWReforgedCalendar, WoWReforgedBuilder
 
 globals
     public constant string CHAT_COMMAND_SHORT = "-st"
@@ -65,7 +65,7 @@ function SetSettingsUIVisible takes boolean visible returns nothing
         call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_SEASONS")).s(B2Option(IsSeasonsEnabled())).result())
         call AddMapSettings(TextAreaFrame)
         call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_CHEATS")).s(B2Option(udg_Cheats)).result())
-        call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_BUILDER")).s(B2Option(udg_Builder != null)).result())
+        call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_BUILDER")).s(B2Option(IsBuildersEnabled())).result())
     endif
     call BlzFrameSetVisible(BackgroundFrame, visible)
 endfunction

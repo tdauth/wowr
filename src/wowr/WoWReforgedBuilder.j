@@ -11,12 +11,15 @@ globals
     
     private integer array targetPlayerIndex
 
+    private boolean buildersEnabled = false
+    private group allBuilders = CreateGroup()
+    private unit array playerBuilders
     private trigger sellTrigger = CreateTrigger()
     private trigger orderTrigger = CreateTrigger()
     private trigger orderTargetTrigger = CreateTrigger()
 endglobals
 
-function EnableBuilder takes unit whichUnit returns nothing
+private function EnableBuilder takes unit whichUnit returns nothing
     local integer max = 0
     local integer i = 0
     local integer max2 = 0
@@ -64,6 +67,45 @@ function EnableBuilder takes unit whichUnit returns nothing
         endloop
         set i = i + 1
     endloop
+endfunction
+
+function IsBuildersEnabled takes nothing returns boolean
+    return buildersEnabled
+endfunction
+
+private function CreateBuilder takes player whichPlayer returns nothing
+    local integer playerId = GetPlayerId(whichPlayer)
+    set playerBuilders[playerId] = CreateUnit(whichPlayer, 'E027', GetRectCenterX(gg_rct_Town_Hall_Stormwind), GetRectCenterY(gg_rct_Town_Hall_Stormwind), bj_UNIT_FACING)
+    call SuspendHeroXP(playerBuilders[playerId], true)
+    call EnableBuilder(playerBuilders[playerId])
+    call GroupAddUnit(allBuilders, playerBuilders[playerId])
+endfunction
+
+function RemoveAllBuilders takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (playerBuilders[i] != null) then
+            call GroupRemoveUnit(allBuilders, playerBuilders[i])
+            call RemoveUnit(playerBuilders[i])
+            set playerBuilders[i] = null
+        endif
+        set i = i + 1
+    endloop
+    set buildersEnabled = false
+endfunction
+
+function CreateAllBuilders takes nothing returns nothing
+    local integer i = 0
+    call RemoveAllBuilders()
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        if (GetMapAllowConfigureAIPlayer(Player(i)) and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) then
+            call CreateBuilder(Player(i))
+        endif
+        set i = i + 1
+    endloop
+    set buildersEnabled = true
 endfunction
 
 private function GetTargetPlayer takes player whichPlayer returns player

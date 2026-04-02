@@ -1,4 +1,4 @@
-library WoWReforgedCalendar initializer Init requires StringUtils, TreeUtils, WeatherEffectUtils, TimeOfDayUtils, OnStartGame, WoWReforgedUtils, WoWReforgedTerrain, WoWReforgedZones, WoWReforgedVotes, WoWReforgedI18n
+library WoWReforgedCalendar initializer Init requires StringUtils, TreeUtils, WeatherEffectUtils, TimeOfDayUtils, Votes, OnStartGame, WoWReforgedUtils, WoWReforgedTerrain, WoWReforgedZones, WoWReforgedI18n
 
 struct TreeMapping
     integer summerId
@@ -147,6 +147,7 @@ endfunction
 
 function AddCalendarEvent takes string name, string vote, integer startDay, real startTimeOfDay, integer endDay, real endTimeOfDay, CalendarEventFunction startFunc, CalendarEventFunction endFunc, string icon returns CalendarEvent
     local CalendarEvent e = CalendarEvent.create()
+    local integer v = 0
     set e.name = name
     set e.vote = vote
     set e.startDay = startDay
@@ -162,10 +163,11 @@ function AddCalendarEvent takes string name, string vote, integer startDay, real
     call SaveInteger(h, GetHandleId(e.voteTrigger), 0, e)
     call TriggerAddAction(e.voteTrigger, function TriggerActionVote)
 
-    set udg_TmpString = name
-    set udg_TmpString2 = vote
-    set udg_TmpTrigger = e.voteTrigger
-    call AddWowReforgedVote()
+    set v = VoteCreate(name)
+    //call VoteAddYesChoice(vote)
+    call VoteAddChoice(v, false, vote, vote)
+    call VoteSetStartChatCommand(v, vote)
+    call VoteSetYesTrigger(v, e.voteTrigger)
     
     return e
 endfunction

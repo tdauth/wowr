@@ -1306,6 +1306,8 @@ StringList {
     REVEAL                             "Reveal",
     NO_CHEATS                          "No Cheats",
     CHEATS                             "Cheats",
+    // Map Votes
+    CIN_DALARAN                        "Cinematic Dalaran",
     // Tiles
     TILE_DIRT                          "Dirt",
     TILE_ROUGH_DIRT                    "Rough Dirt",
@@ -1324,6 +1326,8 @@ StringList {
     TILE_OUTLAND_ROUGH_DIRT            "Red Rough Dirt",
     TILE_UNDERGROUND_BRICK             "Underground",
     UNKNOWN                            "Unknown",
+    // Builder
+    BUILDER_NO_SAVE_CODES              "Savecodes must be disabled for Builders.",
     // Trolls
     FOREST_TROLLS                      "Forest Trolls",
     DARK_TROLLS                        "Dark Trolls",
