@@ -47,7 +47,9 @@ private function EnumFFA takes nothing returns nothing
 endfunction
 
 private function FFA takes nothing returns nothing
+    call DisableAllianceChangesTrigger()
     call ForForce(GetMapLobbyPlayers(), function EnumFFA)
+    call EnableAllianceChangesTrigger()
     call DisplayVoteEnabled(GetLocalizedStringSafe("FFA"))
 endfunction
 
@@ -57,7 +59,9 @@ private function EnumLobby takes nothing returns nothing
 endfunction
 
 private function Lobby takes nothing returns nothing
+    call DisableAllianceChangesTrigger()
     call ForForce(GetMapLobbyPlayers(), function EnumLobby)
+    call EnableAllianceChangesTrigger()
     call DisplayVoteEnabled(GetLocalizedStringSafe("LOBBY"))
 endfunction
 
