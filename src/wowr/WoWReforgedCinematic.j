@@ -1,4 +1,4 @@
-library WoWReforgedCinematic initializer Init requires TextTagUtils, SelectionUtils, ItemRespawn, optional QueueUI, WoWReforgedTextTag, WoWReforgedCalendar, optional WoWReforgedActionsBarUI
+library WoWReforgedCinematic initializer Init requires TextTagUtils, SelectionUtils, ItemRespawn, optional QueueUI, WoWReforgedTextTag, WoWReforgedCalendar, optional WoWReforgedUiActionsBar
 
 globals
     public constant string PREFIX_X = "CINEMATIC_X"
