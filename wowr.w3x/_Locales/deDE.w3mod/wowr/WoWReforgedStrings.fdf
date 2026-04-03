@@ -1704,8 +1704,6 @@ StringList {
     CC_GENERATED                       "'-generated': Lists all generated savecodes from the current game.",
     CC_CLEAR_GENERATED                 "'-cleargenerated': Clears all generated savecodes from the current game.",
     CC_PASSIVE                         "'-passive': Passive mode against enemy players.",
-    CC_BOUNTY                          "'-bounty X Y Z': Sets a bounty of X gold and Y lumber on player Z.",
-    CC_BOUNTIES                        "'-bounties': Shows all bounties on players.",
     CC_GOBLIN_DEPOSIT                  "'-goblindeposit': Shows your gold and lumber in the Goblin Bank.",
     CC_MAX_BOSS_LEVELS                 "'-maxbosslevels': Increases the hero level of all bosses.",
     CC_ENCHANTER                       "'-e/-enchanter': Lists enchanting bonuses and items.",

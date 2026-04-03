@@ -265,8 +265,6 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_GENERATED"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLEAR_GENERATED"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PASSIVE"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BOUNTY"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BOUNTIES"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_C"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_GOBLIN_DEPOSIT"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_MAX_BOSS_LEVELS"))
