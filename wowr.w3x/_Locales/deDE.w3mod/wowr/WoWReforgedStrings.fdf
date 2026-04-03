@@ -1606,7 +1606,6 @@ StringList {
     CC_YES                             "'-yes': Votes for a votekick.",
     CC_PING                            "'-ping': Pings the current quest locations on the minimap.",
     CC_PING_H                          "'-pingh': Pings all allied heroes.",
-    CC_PING_F                          "'-pingf': Pings all allied Freelancer heroes.",
     CC_PING_M                          "'-pingm': Pings all of your mounts.",
     CC_PING_PORTALS                    "'-pingportals': Pings all of your and allied portals.",
     CC_PING_ALTARS                     "'-pingaltars': Pings all of your altars.",

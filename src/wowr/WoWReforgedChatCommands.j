@@ -311,6 +311,241 @@ private function Vips takes nothing returns nothing
     call DisplayVIPs(GetTriggerPlayer())
 endfunction
 
+private function EnumFriends takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, true, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, true, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, true, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, true, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumEnemies takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumNeutralAll takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumVisionAll takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, true, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumNoVision takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumControlAll takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumNoControl takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer()) then
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, false, GetEnumPlayer())
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetEnumPlayer())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    endif
+endfunction
+
+private function EnumAi takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer() and IsPlayerAlly(GetEnumPlayer(), GetTriggerPlayer()) and GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, true, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    endif
+endfunction
+
+private function EnumNoAi takes nothing returns nothing
+    if (GetEnumPlayer() != GetTriggerPlayer() and IsPlayerAlly(GetEnumPlayer(), GetTriggerPlayer()) and GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER) then
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, false, GetTriggerPlayer())
+        call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetTriggerPlayer())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+    endif
+endfunction
+
+private function PrepareAllianceChanges takes nothing returns nothing
+    call DisableAllianceChangesTrigger()
+    call DisableTrigger(gg_trg_Player_Leaves_Alliance_Change)
+endfunction
+
+private function EndAllianceChanges takes nothing returns nothing
+    call EnableAllianceChangesTrigger()
+    call EnableTrigger(gg_trg_Player_Leaves_Alliance_Change)
+endfunction
+
+private function AllianceChange takes code f returns nothing
+    call PrepareAllianceChanges()
+    call ForForce(GetMapLobbyPlayers(), f)
+    call EndAllianceChanges()
+endfunction
+
+private function Friends takes nothing returns nothing
+    call AllianceChange(function EnumFriends)
+endfunction
+
+private function Enemies takes nothing returns nothing
+    call AllianceChange(function EnumEnemies)
+endfunction
+
+private function NeutralAll takes nothing returns nothing
+    call AllianceChange(function EnumNeutralAll)
+endfunction
+
+private function VisionAll takes nothing returns nothing
+    call AllianceChange(function EnumVisionAll)
+endfunction
+
+private function NoVision takes nothing returns nothing
+    call AllianceChange(function EnumNoVision)
+endfunction
+
+private function ControlAll takes nothing returns nothing
+    call AllianceChange(function EnumControlAll)
+endfunction
+
+private function NoControl takes nothing returns nothing
+    call AllianceChange(function EnumNoControl)
+endfunction
+
+private function Ai takes nothing returns nothing
+    call AllianceChange(function EnumAi)
+endfunction
+
+private function NoAi takes nothing returns nothing
+    call AllianceChange(function EnumNoAi)
+endfunction
+
+private function Ally takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, true, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, true, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, true, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, true, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
+private function Unally takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, false, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
+private function Neutral takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
+private function Vision takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, true, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
+private function Unvision takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
+private function Control takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
+private function Uncontrol takes nothing returns nothing
+    local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
+    if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
+        call PrepareAllianceChanges()
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, p)
+        call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, p)
+        call EndAllianceChanges()
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
+    endif
+endfunction
+
 private function Str takes nothing returns nothing
     call SkillStr(GetTriggerPlayer(), I2R(S2I(StringTokenEnteredChatMessageEx(1, true))))
 endfunction
@@ -403,6 +638,26 @@ endfunction
 
 private function Show takes nothing returns nothing
     call ShowUI(GetTriggerPlayer())
+endfunction
+
+private function Unlocked takes nothing returns nothing
+    call ShowUnlockedAccountIds(GetTriggerPlayer())
+endfunction
+
+private function PingHeroes takes nothing returns nothing
+    call PingAlliedHeroes(GetTriggerPlayer())
+endfunction
+
+private function PingGoldMinesAction takes nothing returns nothing
+    call PingGoldMines(GetTriggerPlayer())
+endfunction
+
+private function PingNpcsAction takes nothing returns nothing
+    call PingNpcs(GetTriggerPlayer())
+endfunction
+
+private function PingDragonRoostsAction takes nothing returns nothing
+    call PingDragonRoosts(GetTriggerPlayer())
 endfunction
 
 private function PingLegendaryItemsAction takes nothing returns nothing
@@ -501,6 +756,23 @@ private function Init takes nothing returns nothing
     call AddAlias("-b")
     call Add("-vips", true, function Vips)
 
+    call Add("-friends", true, function Friends)
+    call Add("-enemies", true, function Enemies)
+    call Add("-neutralall", true, function NeutralAll)
+    call Add("-visionall", true, function VisionAll)
+    call Add("-novision", true, function NoVision)
+    call Add("-controlall", true, function ControlAll)
+    call Add("-nocontrol", true, function NoControl)
+    call Add("-ai", true, function Ai)
+    call Add("-noai", true, function NoAi)
+    call Add("-ally", false, function Ally)
+    call Add("-unally", false, function Unally)
+    call Add("-neutral", false, function Neutral)
+    call Add("-vision", false, function Vision)
+    call Add("-unvision", false, function Unvision)
+    call Add("-control", false, function Control)
+    call Add("-uncontrol", false, function Uncontrol)
+
     call Add("-str", false, function Str)
     call Add("-str", true, function StrMax)
     call Add("-agi", false, function Agi)
@@ -528,6 +800,13 @@ private function Init takes nothing returns nothing
 
     // TODO Hero repick and ping chat commands
 
+    call Add("-unlocked", true, function Unlocked)
+    call AddAlias("-u")
+
+    call Add("-pingh", true, function PingHeroes)
+    call Add("-pinggoldmines", true, function PingGoldMinesAction)
+    call Add("-pingnpcs", true, function PingNpcsAction)
+    call Add("-pingdragons", true, function PingDragonRoostsAction)
     call Add("-pingl", true, function PingLegendaryItemsAction)
     call Add("-pingm", true, function PingMountsAction)
     call Add("-pingportals", true, function PingPortalsAction)

@@ -49,12 +49,33 @@ private function EnumPingUnit takes nothing returns nothing
     call PingUnitForPlayer(GetEnumUnit(), owner)
 endfunction
 
+function PingMatchingUnitsForPlayer takes player whichPlayer, filterfunc f returns nothing
+    local group g = CreateGroup()
+    call GroupEnumUnitsInRect(g, GetPlayableMapRect(), f)
+    call ForGroup(g, function EnumPingUnit)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
 private function FilterIsLegendaryItem takes nothing returns boolean
     return IsLegendaryItem(GetFilterItem())
 endfunction
 
 private function EnumPingItem takes nothing returns nothing
     call PingItemForPlayer(GetEnumItem(), owner)
+endfunction
+
+function IsDragonRoost takes integer unitTypeId returns boolean
+    return unitTypeId == 'nrwm' or unitTypeId == 'ndrg' or unitTypeId == 'ndrz' or unitTypeId == 'ndrk' or unitTypeId == 'ndru' or unitTypeId == 'ndro'
+endfunction
+
+private function FilterIsDragonRoost takes nothing returns boolean
+    return IsDragonRoost(GetUnitTypeId(GetFilterUnit()))
+endfunction
+
+function PingDragonRoosts takes player whichPlayer returns nothing
+    call PingMatchingUnitsForPlayer(whichPlayer, Filter(function FilterIsDragonRoost))
 endfunction
 
 function PingLegendaryItems takes player whichPlayer returns nothing
@@ -81,13 +102,7 @@ private function FilterIsPingablePortal takes nothing returns boolean
 endfunction
 
 function PingPortals takes player whichPlayer returns nothing
-    local group g = CreateGroup()
-    set owner = whichPlayer
-    call GroupEnumUnitsInRect(g, GetPlayableMapRect(), Filter(function FilterIsPingablePortal))
-    call ForGroup(g, function EnumPingUnit)
-    call GroupClear(g)
-    call DestroyGroup(g)
-    set g = null
+    call PingMatchingUnitsForPlayer(whichPlayer, Filter(function FilterIsPingablePortal))
 endfunction
 
 function PingBosses takes player whichPlayer returns nothing
@@ -96,28 +111,6 @@ function PingBosses takes player whichPlayer returns nothing
     loop
         exitwhen (i == max)
         call PingUnitForPlayer(BlzGroupUnitAt(udg_Bosses, i), whichPlayer)
-        set i = i + 1
-    endloop
-endfunction
-
-function PingAlliedFreelancerHeroes takes player whichPlayer returns nothing
-    local player slotPlayer = null
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_PLAYERS)
-        set slotPlayer = Player(i)
-        if (IsPlayerAlly(slotPlayer, whichPlayer) and IsPlayerFreelancer(slotPlayer)) then
-            if (GetPlayerHero1(slotPlayer) != null) then
-                call PingUnitForPlayer(GetPlayerHero1(slotPlayer), whichPlayer)
-            endif
-            if (GetPlayerHero2(slotPlayer) != null) then
-                call PingUnitForPlayer(GetPlayerHero2(slotPlayer), whichPlayer)
-            endif
-            if (GetPlayerHero3(slotPlayer) != null) then
-                call PingUnitForPlayer(GetPlayerHero3(slotPlayer), whichPlayer)
-            endif
-        endif
-        set slotPlayer = null
         set i = i + 1
     endloop
 endfunction

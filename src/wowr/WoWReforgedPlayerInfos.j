@@ -14,7 +14,7 @@ function GetHelpTextAi takes nothing returns string
 endfunction
 
 function GetHelpTextAlly takes nothing returns string
-    return "-ffa, -lobby, -aishared, -ainotshared, -friends, -friendsv, -friendsvuf, -enemies, -ally X, -allyv X, -allyvu X, -allyvuf X, -neutral X, -neutralv X, -unally X, -unallyv X"
+    return "-ffa, -lobby, -friends, -enemies, -neutralall, -visionall, -novision, -controlall, -nocontrol, -ai, -noai, -ally X, -unally X, -neutral X, -vision X, -unvision X, -control X, -uncontrol X"
 endfunction
 
 function GetHelpTextVisual takes nothing returns string
@@ -51,14 +51,12 @@ endfunction
 
 function ShowPlayers takes player to returns nothing
     local player listedPlayer = null
-    local integer convertedPlayerId = 0
     local string vip = ""
     local integer i = 0
     loop
         exitwhen (i >= bj_MAX_PLAYERS)
         set listedPlayer = Player(i)
         if (GetPlayerSlotState(listedPlayer) == PLAYER_SLOT_STATE_PLAYING) then
-            set convertedPlayerId = GetConvertedPlayerId(listedPlayer)
             if (IsPlayerVIP(listedPlayer)) then
                 set vip = ", VIP"
             else 

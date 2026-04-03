@@ -65,9 +65,12 @@ private function Init takes nothing returns nothing
     call AddChange("Scale down building Water Oil Platform.")
     call AddChange("Connect multiple areas with each other using shallow water and bridges to allow AI to move anywhere on the map.")
     call AddChange("Computer won't get any navy hero anymore.")
+    call AddChange("Remove chat command \"-pingf\".")
+    call AddChange("Revise alliances chat commands.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
 
+static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
     call AddChange("Remove unused assets.")
     call AddChange("Register all banner object mappings during map initialization.")
@@ -116,7 +119,6 @@ private function Init takes nothing returns nothing
     call AddChange("Revise terrain.")
     call AddChange("Improve website data.")
 
-static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.5")
     call AddChange("Fix automatic pick stuff in the beginning of the game to allow an instant start.")
     call AddChange("Fix portrait of hero Shandris Feathermoon.")
