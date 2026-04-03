@@ -40720,7 +40720,7 @@ Protector
 STRING 9151
 // Units: h06J (Ship Doctor), Tip (Tooltip - Basic)
 {
-Train Schiffsarzt
+Schiffsarzt ausbilden
 }
 
 STRING 9152
@@ -40768,7 +40768,7 @@ Massen-Heiliges-Licht
 STRING 9160
 // Abilities: A04Y (Give Units to Another Allied Player), Name (Name)
 {
-Give Units to Another Allied Player
+Gibt Einheiten einem anderen verbündeten Spieler
 }
 
 STRING 9161
@@ -70320,7 +70320,7 @@ STRING 31239
 STRING 31242
 // Abilities: A04Y (Give Units to Another Allied Player), Ubertip (Tooltip - Normal - Extended)
 {
-Gives the units in the area to another player who can be specified with the chat command "-give [player number]". The process can be canceled with "-nogive".
+Gibt die Einheiten im Zielgebiet einem anderen Spieler, die mit dem Chat-Befehl "-give [Spielernummer/Spielerfarbe/Spielername]" angegeben werden kann. Der Prozess kann mit "-nogive" abgebrochen werden.
 }
 
 STRING 31245

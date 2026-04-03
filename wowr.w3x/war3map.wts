@@ -70319,7 +70319,7 @@ STRING 31239
 STRING 31242
 // Abilities: A04Y (Give Units to Another Allied Player), Ubertip (Tooltip - Normal - Extended)
 {
-Gives the units in the area to another player who can be specified with the chat command "-give [player number]". The process can be canceled with "-nogive".
+Gives the units in the area to another player who can be specified with the chat command "-give [player number/player color/player name]". The process can be canceled with "-nogive".
 }
 
 STRING 31245
