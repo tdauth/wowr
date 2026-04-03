@@ -4,10 +4,15 @@ globals
     private force lobbyPlayers = CreateForce()
     private force array teamPlayers
     private constant integer teams = 3
+    private constant integer maxLobbyPlayers = 10
 endglobals
 
 function GetMapLobbyPlayers takes nothing returns force
     return lobbyPlayers
+endfunction
+
+function GetMapMaxLobbyPlayers takes nothing returns integer
+    return maxLobbyPlayers
 endfunction
 
 function GetMapTeamPlayers takes integer team returns force
