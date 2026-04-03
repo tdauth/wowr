@@ -11,32 +11,16 @@ function PingUnitForPlayer takes unit whichUnit, player whichPlayer returns noth
     call PingMinimapForPlayer(whichPlayer, GetUnitX(whichUnit), GetUnitY(whichUnit), PING_DURATION)
 endfunction
 
-function PingUnitForPlayerWoWReforged takes nothing returns nothing
-    call PingUnitForPlayer(udg_TmpUnit, udg_TmpPlayer)
-endfunction
-
 function PingItemForPlayer takes item whichItem, player whichPlayer returns nothing
     call PingMinimapForPlayer(whichPlayer, GetItemX(whichItem), GetItemY(whichItem), PING_DURATION)
-endfunction
-
-function PingItemForPlayerWoWReforged takes nothing returns nothing
-    call PingItemForPlayer(udg_TmpItem, udg_TmpPlayer)
 endfunction
 
 function PingRectForPlayer takes rect whichRect, player whichPlayer returns nothing
     call PingMinimapForPlayer(whichPlayer, GetRectCenterX(whichRect), GetRectCenterY(whichRect), PING_DURATION)
 endfunction
 
-function PingRectForPlayerWoWReforged takes nothing returns nothing
-    call PingRectForPlayer(udg_TmpRect, udg_TmpPlayer)
-endfunction
-
 function PingDestructableForPlayer takes destructable whichDestructable, player whichPlayer returns nothing
     call PingMinimapForPlayer(whichPlayer, GetDestructableX(whichDestructable), GetDestructableY(whichDestructable), PING_DURATION)
-endfunction
-
-function PingDestructableForPlayerWoWReforged takes nothing returns nothing
-    call PingDestructableForPlayer(udg_TmpDestructible, udg_TmpPlayer)
 endfunction
 
 function PingAlliedHeroes takes player whichPlayer returns nothing
@@ -59,6 +43,29 @@ function PingAlliedHeroes takes player whichPlayer returns nothing
         set slotPlayer = null
         set i = i + 1
     endloop
+endfunction
+
+private function IsPingablePortal takes player whichPlayer, unit whichUnit returns boolean
+    local integer unitTypeId = GetUnitTypeId(whichUnit)
+    return unitTypeId == PORTAL_NEUTRAL or unitTypeId == PORTAL_NEUTRAL_WATER or (IsUnitAlly(whichUnit,whichPlayer) and (unitTypeId == PORTAL or unitTypeId == HIDEOUT or unitTypeId == FORTIFIED_HIDEOUT or unitTypeId == GUARDIANS_CITADEL or unitTypeId == TEMPLE_OF_DARKNESS))
+endfunction
+
+private function FilterIsPingablePortal takes nothing returns boolean
+    return IsPingablePortal(owner, GetFilterUnit())
+endfunction
+
+private function EnumPingUnit takes nothing returns nothing
+    call PingUnitForPlayer(GetEnumUnit(), owner)
+endfunction
+
+function PingPortals takes player whichPlayer returns nothing
+    local group g = CreateGroup()
+    set owner = whichPlayer
+    call GroupEnumUnitsInRect(g, GetPlayableMapRect(), Filter(function FilterIsPingablePortal))
+    call ForGroup(g, function EnumPingUnit)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
 endfunction
 
 function PingBosses takes player whichPlayer returns nothing

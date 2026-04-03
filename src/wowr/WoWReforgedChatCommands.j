@@ -405,6 +405,55 @@ private function Show takes nothing returns nothing
     call ShowUI(GetTriggerPlayer())
 endfunction
 
+private function PingPortalsAction takes nothing returns nothing
+    call PingPortals(GetTriggerPlayer())
+endfunction
+
+private function PingBossesAction takes nothing returns nothing
+    call PingBosses(GetTriggerPlayer())
+endfunction
+
+private function PingPropertiesAction takes nothing returns nothing
+    call PingProperties(GetTriggerPlayer())
+endfunction
+
+private function PingAltarsAction takes nothing returns nothing
+    call PingAltars(GetTriggerPlayer())
+endfunction
+
+private function PingRes takes nothing returns nothing
+    call PingResurrectionStones(GetTriggerPlayer())
+endfunction
+
+private function PingRaces takes nothing returns nothing
+    call PingRacingTrackNextCheckPointForPlayer(GetTriggerPlayer())
+endfunction
+
+private function EnumSuicide takes nothing returns nothing
+    if (GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer()) then
+        if (RectContainsUnit(GetMapPlayerSelectionRect(), GetEnumUnit())) then
+            call KillUnit(GetEnumUnit())
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("NOT_ALLOWED_IN_PLAYER_SELECTION"))
+        endif
+    endif
+endfunction
+
+private function Suicide takes nothing returns nothing
+    local group g = GetUnitsSelectedAll(GetTriggerPlayer())
+    call ForGroup(g, function EnumSuicide)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
+private function Clear takes nothing returns nothing
+    if (GetLocalPlayer() == GetTriggerPlayer()) then
+        // Use only local code (no net traffic) within this block to avoid desyncs.
+        call ClearTextMessages()
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     call Add("-help", true, function Help)
     call AddAlias("-h")
@@ -468,6 +517,22 @@ private function Init takes nothing returns nothing
 
     call Add("-hide", true, function Hide)
     call Add("-show", true, function Show)
+
+    // TODO Hero repick and ping chat commands
+
+    call Add("-pingportals", true, function PingPortalsAction)
+    call Add("-pingbosses", true, function PingBossesAction)
+    call AddAlias("-pingb")
+    call AddAlias("-bosses")
+    call Add("-pingproperties", true, function PingPropertiesAction)
+    call Add("-pingaltars", true, function PingAltarsAction)
+    call Add("-pingres", true, function PingRes)
+    call AddAlias("-resurrectionstones")
+    call Add("-pingraces", true, function PingRaces)
+
+    call Add("-suicide", true, function Suicide)
+
+    call Add("-clear", true, function Clear)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)
