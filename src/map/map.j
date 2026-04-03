@@ -9,5 +9,6 @@
 //! import "map/WoWReforgedMapRacingTracks.j"
 //! import "map/WoWReforgedMapResurrectionStones.j"
 //! import "map/WoWReforgedMapStartLocations.j"
+//! import "map/WoWReforgedMapVictory.j"
 //! import "map/WoWReforgedMapVotes.j"
 //! import "map/WoWReforgedMapZones.j"

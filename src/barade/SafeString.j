@@ -1,5 +1,10 @@
 library SafeString
 
+/*
+ * Saving the game with a string longer than 1023 characters will lead to a crash when loading the savegame in Warcraft III: Reforged.
+ * This library provides GetLocalizedStringSafe which checks for the length and does not return and localized string which is longar than 1023 characters.
+ */
+
 globals
     constant integer MAX_STRING_LENGTH = 1023
 endglobals

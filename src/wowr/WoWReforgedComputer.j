@@ -9,11 +9,13 @@ globals
     private group array computerShipyards
     private group array computerNavy
     private group array computerUnits
+    private integer array computerStartLocations
     private trigger playerLeavesTrigger = CreateTrigger()
     private trigger allianceChangeTrigger = CreateTrigger()
     private trigger heroLevelTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private trigger constructFinishTrigger = CreateTrigger()
+    private trigger researchFinishTrigger = CreateTrigger()
     private trigger trainFinishTrigger = CreateTrigger()
     private timer autoRevivalTimer = CreateTimer()
     private timer autoCraftTimer = CreateTimer()
@@ -230,28 +232,23 @@ private function StartingUnitsPeons takes player whichPlayer, location l, intege
     local real     peonY = GetLocationY(l) - 224.00
     local real     unitSpacing   = 64.00
     local unit peon = null
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
+    local integer playerId = GetPlayerId(whichPlayer)
     // Spawn Peasants directly south of the town hall.
     set peon = CreateUnit(whichPlayer, peonId, peonX + 2.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-    call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
-    call GroupAddUnit(udg_ComputerWorkers[convertedPlayerId], peon)
+    call GroupAddUnit(computerUnits[playerId], peon)
     set peon = CreateUnit(whichPlayer, peonId, peonX + 1.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-    call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
-    call GroupAddUnit(udg_ComputerWorkers[convertedPlayerId], peon)
+    call GroupAddUnit(computerUnits[playerId], peon)
     set peon = CreateUnit(whichPlayer, peonId, peonX + 0.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-    call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
-    call GroupAddUnit(udg_ComputerWorkers[convertedPlayerId], peon)
+    call GroupAddUnit(computerUnits[playerId], peon)
     if (GetRaceHasFootmanWorker(whichRace)) then
         set peon = CreateUnit(whichPlayer, ghoulId, peonX - 1.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-        call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
+        call GroupAddUnit(computerUnits[playerId], peon)
         set ghoul[GetPlayerId(whichPlayer)] = peon
     else
         set peon = CreateUnit(whichPlayer, peonId, peonX - 1.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-        call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
-        call GroupAddUnit(udg_ComputerWorkers[convertedPlayerId], peon)
+        call GroupAddUnit(computerUnits[playerId], peon)
         set peon = CreateUnit(whichPlayer, peonId, peonX - 2.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-        call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
-        call GroupAddUnit(udg_ComputerWorkers[convertedPlayerId], peon)
+        call GroupAddUnit(computerUnits[playerId], peon)
     endif
 endfunction
 
@@ -260,14 +257,14 @@ private function StartingUnitsShredders takes player whichPlayer, location l, in
     local real     peonY = GetLocationY(l) - 412.00
     local real     unitSpacing   = 64.00
     local unit peon = null
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
+    local integer playerId = GetPlayerId(whichPlayer)
     // Spawn Peasants directly south of the town hall.
     set peon = CreateUnit(whichPlayer, SHREDDER, peonX + 2.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-    call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
+    call GroupAddUnit(computerUnits[playerId], peon)
     set peon = CreateUnit(whichPlayer, SHREDDER, peonX + 1.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-    call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
+    call GroupAddUnit(computerUnits[playerId], peon)
     set peon = CreateUnit(whichPlayer, SHREDDER, peonX + 0.00 * unitSpacing, peonY + 0.00 * unitSpacing, bj_UNIT_FACING)
-    call GroupAddUnit(udg_ComputerUnits[convertedPlayerId], peon)
+    call GroupAddUnit(computerUnits[playerId], peon)
 endfunction
 
 private function FilterFunctionIsMine takes nothing returns boolean
@@ -308,9 +305,9 @@ endfunction
 private function StartingUnitsAndPickAIStandard takes player whichPlayer, location l, integer whichRace, boolean recreate returns nothing
     local integer townHallId = GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_1)
     local unit townHall = CreateUnitAtLoc(whichPlayer, townHallId, l, bj_UNIT_FACING)
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
-    call GroupAddUnit(udg_ComputerTownHalls[convertedPlayerId], townHall)
-    call GroupAddUnit(udg_ComputerBuildings[convertedPlayerId], townHall)
+    local integer playerId = GetPlayerId(whichPlayer)
+    call GroupAddUnit(computerTownHalls[playerId], townHall)
+    call GroupAddUnit(computerUnits[playerId], townHall)
     // Spawn Peasants directly south of the town hall.
     call StartingUnitsPeons(whichPlayer, l, whichRace)
     call StartingUnitsShredders(whichPlayer, l, whichRace)
@@ -338,7 +335,7 @@ private function StartingUnitsAndPickAI takes player whichPlayer, location l, in
 endfunction
 
 function RecreateStartingUnitsAI takes player whichPlayer returns nothing
-    local integer index = udg_ComputerStartLocation[GetConvertedPlayerId(whichPlayer)]
+    local integer index = computerStartLocations[GetPlayerId(whichPlayer)]
     local ComputerStartLocation c = GetComputerStartLocation(index)
     local location l = Location(c.x, c.y)
     call StartingUnitsAndPickAIEx(whichPlayer, l, GetPlayerRace1(whichPlayer), true)
@@ -369,28 +366,18 @@ function RemovePlayerUnits takes player whichPlayer returns nothing
     set g = null
 endfunction
 
-private function FilterIsBuilding takes nothing returns boolean
-    return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
-endfunction
-
 private function FilterIsTownHall takes nothing returns boolean
     return IsUnitType(GetFilterUnit(), UNIT_TYPE_TOWNHALL)
 endfunction
 
 private function FilterIsUnit takes nothing returns boolean
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
-endfunction
-
-private function FilterIsWorker takes nothing returns boolean
-    return IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
 endfunction
 
 function AddAllPreplacedComputerUnits takes player whichPlayer returns nothing
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
-    call GroupEnumUnitsOfPlayer(udg_ComputerBuildings[convertedPlayerId], whichPlayer, Filter(function FilterIsBuilding))
-    call GroupEnumUnitsOfPlayer(udg_ComputerTownHalls[convertedPlayerId], whichPlayer, Filter(function FilterIsTownHall))
-    call GroupEnumUnitsOfPlayer(udg_ComputerUnits[convertedPlayerId], whichPlayer, Filter(function FilterIsUnit))
-    call GroupEnumUnitsOfPlayer(udg_ComputerWorkers[convertedPlayerId], whichPlayer, Filter(function FilterIsWorker))
+    local integer playerId = GetPlayerId(whichPlayer)
+    call GroupEnumUnitsOfPlayer(computerTownHalls[playerId], whichPlayer, Filter(function FilterIsTownHall))
+    call GroupEnumUnitsOfPlayer(computerUnits[playerId], whichPlayer, Filter(function FilterIsUnit))
 endfunction
 
 private function PickRandomUnusedRace takes player owner returns integer
@@ -516,7 +503,7 @@ private function TriggerConditionHeroLevel takes nothing returns boolean
     local player owner = GetOwningPlayer(GetTriggerUnit())
     local integer convertedPlayerId = GetConvertedPlayerId(owner)
     if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
-        if (udg_Held[convertedPlayerId] == GetTriggerUnit()) then
+        if (GetPlayerHero1(owner) == GetTriggerUnit()) then
             if (IsPlayerWarlord(owner)) then
                 if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_RACE_2 and GetPlayerRace2(owner) == udg_RaceNone) then
                     set udg_PlayerRace2[convertedPlayerId] = PickRandomUnusedRace(owner)
@@ -615,8 +602,24 @@ private function TriggerConditionConstructFinish takes nothing returns boolean
             endif
         endif
         call GroupAddUnit(computerUnits[playerId], GetConstructedStructure())
+
+        if (GetUnitTypeId(GetConstructedStructure()) == DALARAN_POWER_GENERATOR) then
+            call IssueImmediateOrder(GetConstructedStructure(), "channel") // enables the power generator ability
+        endif
     endif
     set owner = null
+    return false
+endfunction
+
+private function EnumChannel takes nothing returns nothing
+    call IssueImmediateOrder(GetEnumUnit(), "channel") // enables the power generator ability
+endfunction
+
+private function TriggerConditionResearchFinish takes nothing returns boolean
+    if (GetResearched() == UPG_DALARAN_SHIELD and GetPlayerController(GetOwningPlayer(GetTriggerUnit())) == MAP_CONTROL_COMPUTER) then
+        set bj_wantDestroyGroup = true
+        call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), DALARAN_POWER_GENERATOR), function EnumChannel)
+    endif
     return false
 endfunction
 
@@ -625,6 +628,14 @@ private function TriggerConditionTrainFinish takes nothing returns boolean
     local integer playerId = GetPlayerId(owner)
     if (GetPlayerController(owner) == MAP_CONTROL_COMPUTER) then
         call GroupAddUnit(computerUnits[playerId], GetTrainedUnit())
+
+        /*
+        Remove the worker classification or otherwise AI will train many many citizens.
+        TODO: Will this really work? AI trains them because of their classification, so it should be removed before training them!
+        */
+        if (IsUnitType(GetTrainedUnit(), UNIT_TYPE_PEON) and IsCitizen(GetUnitTypeId(GetTrainedUnit()))) then
+            call UnitRemoveType(GetTrainedUnit(), UNIT_TYPE_PEON)
+        endif
     endif
     set owner = null
     return false
@@ -696,11 +707,10 @@ private function EnumStartLobbySettings takes nothing returns nothing
         set computerStartLocation = GetComputerStartLocation(startLocationIndex)
         set computerStartLocation.taken = true
         set l = Location(computerStartLocation.x, computerStartLocation.y)
-        set udg_ComputerStartLocation[convertedPlayerId] = startLocationIndex
+        set computerStartLocations[playerId] = startLocationIndex
         call RemoveRandomMinesAtAIStartLocation(startLocationIndex)
         // Race
         set playerRace = AiPlayersUIGetPlayerRace(GetEnumPlayer(), startLocationIndex, GetPlayerTeam(GetEnumPlayer()))
-        set udg_ComputerRace[convertedPlayerId] = playerRace
         set udg_PlayerRace[convertedPlayerId] = playerRace
         // Start Main Building and Workers
         call StartingUnitsAndPickAI(GetEnumPlayer(), l, playerRace)
@@ -849,6 +859,7 @@ private function Init takes nothing returns nothing
         set computerShipyards[i] = CreateGroup()
         set computerNavy[i] = CreateGroup()
         set computerUnits[i] = CreateGroup()
+        set computerStartLocations[i] = -1
 
         if (GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             call ForceAddPlayer(computerPlayers, slotPlayer)
@@ -880,6 +891,9 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
+
+    call TriggerRegisterAnyUnitEventBJ(researchFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(researchFinishTrigger, Condition(function TriggerConditionResearchFinish))
 
     call TriggerRegisterAnyUnitEventBJ(trainFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(trainFinishTrigger, Condition(function TriggerConditionTrainFinish))
