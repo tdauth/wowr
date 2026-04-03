@@ -385,8 +385,6 @@ endfunction
 
 private function AddItems takes nothing returns nothing
     // NEUTRAL SHOPS
-    // Real Estate Agent
-    call AddItem('I16O')
     // Goblin Merchant
     call AddItem('I00V')
     call AddItem('I017')
