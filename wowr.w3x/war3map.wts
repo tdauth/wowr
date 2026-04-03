@@ -9589,7 +9589,7 @@ N
 }
 
 STRING 1624
-// Items: I05E (Clan AI Player), Hotkey (Hotkey)
+// Items: I0KL (Net), Hotkey (Hotkey)
 {
 N
 }
@@ -13198,7 +13198,7 @@ Song
 }
 
 STRING 2411
-// Items: I0KL (Net), Hotkey (Hotkey)
+// Abilities: A007 (Alchemy - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -19324,7 +19324,7 @@ Sorcery - Novice
 }
 
 STRING 3843
-// Abilities: A007 (Alchemy - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A00C (Armoring - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -20374,7 +20374,7 @@ Dragon Breeder - Novice
 }
 
 STRING 4131
-// Abilities: A00C (Armoring - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A00L (Weaponsmithing - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -24754,7 +24754,7 @@ Craft Tome of Experiences.
 }
 
 STRING 5122
-// Abilities: A00L (Weaponsmithing - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A00Q (Loremastery - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -26926,7 +26926,7 @@ W
 }
 
 STRING 5574
-// Abilities: A00Q (Loremastery - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A01A (Engineering - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -29404,7 +29404,7 @@ Hire Kraken
 }
 
 STRING 6038
-// Abilities: A01A (Engineering - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Next Bag), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -29644,7 +29644,7 @@ STRING 6085
 }
 
 STRING 6086
-// Abilities: A02L (Next Bag), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Sorcery - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -30868,7 +30868,7 @@ Necromancy - Doctor
 }
 
 STRING 6434
-// Abilities: A06F (Sorcery - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A06I (Runeforging - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -31177,7 +31177,7 @@ W
 }
 
 STRING 6526
-// Abilities: A06I (Runeforging - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A06M (Dragon Breeder - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -39853,7 +39853,7 @@ K
 }
 
 STRING 8633
-// Abilities: A06M (Dragon Breeder - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0D6 (Convert into Non-Ancient), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -40459,7 +40459,7 @@ Summon Necromancer
 }
 
 STRING 8826
-// Abilities: A0D6 (Convert into Non-Ancient), Hotkey (Hotkey - Normal)
+// Abilities: A0D7 (Convert into Undead), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -41251,7 +41251,7 @@ C
 }
 
 STRING 9744
-// Abilities: A0D7 (Convert into Undead), Hotkey (Hotkey - Normal)
+// Abilities: A0IL (Jewelcrafting - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -52185,12 +52185,6 @@ STRING 15134
 Mace Tentacle
 }
 
-STRING 15216
-// Upgrades: R03D (Animal War Training), Tip (Tooltip)
-{
-Clan
-}
-
 STRING 15222
 // Abilities: A0IG (Hostile Devotion Aura), EditorSuffix (Editor Suffix)
 {
@@ -53578,7 +53572,7 @@ Jewelcrafting - Novice
 }
 
 STRING 16555
-// Abilities: A0IL (Jewelcrafting - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0IS (Enchanting - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -54190,7 +54184,7 @@ STRING 17028
 }
 
 STRING 17213
-// Abilities: A0IS (Enchanting - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0JK (Captain - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -54928,7 +54922,7 @@ Enchanting - Novice
 }
 
 STRING 17451
-// Abilities: A0JK (Captain - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0MJ (Archaeology - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -56281,7 +56275,7 @@ Upgrade to Advanced Pandaren Armor
 }
 
 STRING 18770
-// Abilities: A0MJ (Archaeology - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0MT (Witch Doctor - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -56665,7 +56659,7 @@ Unique - Portable Tinker Factory
 }
 
 STRING 18896
-// Abilities: A0MT (Witch Doctor - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0U3 (Merchant - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -57829,7 +57823,7 @@ Archeology
 }
 
 STRING 19872
-// Abilities: A0U3 (Merchant - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A170 (Farming - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -57961,7 +57955,7 @@ E
 }
 
 STRING 19909
-// Abilities: A170 (Farming - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A191 (Taming - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -58039,7 +58033,7 @@ S
 }
 
 STRING 19938
-// Abilities: A191 (Taming - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1CO (Inscription - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -58363,7 +58357,7 @@ Used as ingredient for crafting items.
 }
 
 STRING 20085
-// Abilities: A1CO (Inscription - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1F5 (Artificial Night), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -58528,7 +58522,7 @@ Witch Doctor
 }
 
 STRING 20129
-// Abilities: A1F5 (Artificial Night), Hotkey (Hotkey - Normal)
+// Abilities: A1KG (Chain Lightning), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -61816,7 +61810,7 @@ Summon Illidan
 }
 
 STRING 22517
-// Abilities: A1KG (Chain Lightning), Hotkey (Hotkey - Normal)
+// Abilities: A1M1 (Necromancy - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -63909,7 +63903,7 @@ Engineer Base Unit
 }
 
 STRING 24533
-// Items: I04Z (Clan Banner), Hotkey (Hotkey)
+// Items: I061 (Third Hero), Hotkey (Hotkey)
 {
 C
 }
@@ -64455,13 +64449,13 @@ Gives <A0X6,DataA1> gold to the player when used.
 }
 
 STRING 25074
-// Items: I061 (Third Hero), Hotkey (Hotkey)
+// Items: I06J (Goblin), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 25075
-// Items: I06J (Goblin), Hotkey (Hotkey)
+// Items: I07E (Enchanter), Hotkey (Hotkey)
 {
 C
 }
@@ -64473,7 +64467,7 @@ D
 }
 
 STRING 25077
-// Items: I07E (Enchanter), Hotkey (Hotkey)
+// Items: I08W (Summon Cenarius), Hotkey (Hotkey)
 {
 C
 }
@@ -64767,7 +64761,7 @@ Merchant
 }
 
 STRING 25501
-// Abilities: A1M1 (Necromancy - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1M8 (Sculpting - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -66057,7 +66051,7 @@ Fortified Dragon's Reach
 }
 
 STRING 26869
-// Items: I08W (Summon Cenarius), Hotkey (Hotkey)
+// Items: I09B (Craft Goblin Land Mines), Hotkey (Hotkey)
 {
 C
 }
@@ -66453,7 +66447,7 @@ S
 }
 
 STRING 27635
-// Items: I09B (Craft Goblin Land Mines), Hotkey (Hotkey)
+// Items: I0A4 (Theramore (Neutral Zone)), Hotkey (Hotkey)
 {
 C
 }
@@ -66807,7 +66801,7 @@ Diminutive, rat-like subterranean humanoids who dwell in and around caverns and 
 }
 
 STRING 27959
-// Items: I0A4 (Theramore (Neutral Zone)), Hotkey (Hotkey)
+// Items: I0HW (Firework), Hotkey (Hotkey)
 {
 C
 }
@@ -67185,7 +67179,7 @@ A tiny villager who can cast Disarmament.
 }
 
 STRING 28037
-// Items: I0HW (Firework), Hotkey (Hotkey)
+// Items: I0IN (Gnome), Hotkey (Hotkey)
 {
 C
 }
@@ -68469,7 +68463,7 @@ Y
 }
 
 STRING 29216
-// Items: I0IN (Gnome), Hotkey (Hotkey)
+// Items: I0WV (Tiny Fruit Stand), Hotkey (Hotkey)
 {
 C
 }
@@ -68775,7 +68769,7 @@ S
 }
 
 STRING 30024
-// Abilities: A1M8 (Sculpting - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1O6 (Combination - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -68931,7 +68925,7 @@ STRING 30437
 }
 
 STRING 30440
-// Abilities: A1O6 (Combination - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1SI (Hunting - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -68985,7 +68979,7 @@ S
 }
 
 STRING 30464
-// Abilities: A1SI (Hunting - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1T4 (Mining - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -72261,7 +72255,7 @@ E
 }
 
 STRING 32751
-// Items: I0WV (Tiny Fruit Stand), Hotkey (Hotkey)
+// Items: I08D (Bandit), Hotkey (Hotkey)
 {
 C
 }
@@ -73335,7 +73329,7 @@ D
 }
 
 STRING 33554
-// Items: I08D (Bandit), Hotkey (Hotkey)
+// Items: I0G2 (Dungeon), Hotkey (Hotkey)
 {
 C
 }
@@ -74661,7 +74655,7 @@ Build Draenor Merchant
 }
 
 STRING 34106
-// Items: I0G2 (Dungeon), Hotkey (Hotkey)
+// Items: I0HC (Scribe), Hotkey (Hotkey)
 {
 C
 }
@@ -74751,7 +74745,7 @@ A tiny villager who can cast Disarmament.
 }
 
 STRING 34164
-// Items: I0HC (Scribe), Hotkey (Hotkey)
+// Items: I191 (Demolition Expert), Hotkey (Hotkey)
 {
 C
 }
@@ -74817,13 +74811,13 @@ A tiny villager who can cast Disarmament.
 }
 
 STRING 34176
-// Items: I191 (Demolition Expert), Hotkey (Hotkey)
+// Abilities: A201 (Cluster Rockets), Hotkey (Hotkey - Normal)
 {
 C
 }
 
 STRING 34177
-// Abilities: A201 (Cluster Rockets), Hotkey (Hotkey - Normal)
+// Abilities: A03I (Capture), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -75153,7 +75147,7 @@ The Farmer creates a Tiny Water Supply.
 }
 
 STRING 34299
-// Abilities: A1T4 (Mining - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1U2 (Cooking - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -75321,7 +75315,7 @@ A tiny villager who can cast Disarmament.
 }
 
 STRING 34380
-// Abilities: A03I (Capture), Hotkey (Hotkey - Normal)
+// Upgrades: R00L (Web), Hotkey (Hotkey)
 {
 C
 }
@@ -75687,7 +75681,7 @@ Research Spearmen
 }
 
 STRING 34775
-// Upgrades: R00L (Web), Hotkey (Hotkey)
+// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
 {
 C
 }
@@ -78357,7 +78351,7 @@ STRING 35802
 }
 
 STRING 35803
-// Abilities: A1U2 (Cooking - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1UA (Fishing - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -82851,7 +82845,7 @@ Lever Gate and Bridge
 }
 
 STRING 37384
-// Abilities: A1UA (Fishing - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1UX (Lumberjacking - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -92763,7 +92757,7 @@ Increases Necromancer's mana capacity, mana regeneration rate, hit points, and g
 }
 
 STRING 41487
-// Abilities: A1UX (Lumberjacking - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A1WW (Warlockery - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -92793,7 +92787,7 @@ K
 }
 
 STRING 41501
-// Abilities: A1WW (Warlockery - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A20L (Thieving - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -94272,12 +94266,6 @@ STRING 42166
 // Units: H01K (King of Gnomes), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
-}
-
-STRING 42174
-// Items: I04H (Create a Clan), Hotkey (Hotkey)
-{
-Z
 }
 
 STRING 42195
@@ -96519,7 +96507,7 @@ Corrupted Entangled Gold Mine
 }
 
 STRING 43171
-// Abilities: A20L (Thieving - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A21M (Prospecting - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -96807,7 +96795,7 @@ Train Giant Skeleton Warrior
 }
 
 STRING 43230
-// Abilities: A21M (Prospecting - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A22Z (Astromancy - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -97173,7 +97161,7 @@ This unit has Horn of Cenarius; its attack damage has been increased.
 }
 
 STRING 43313
-// Abilities: A22Z (Astromancy - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A24U (Poetry - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -98667,7 +98655,7 @@ STRING 43979
 }
 
 STRING 43980
-// Abilities: A24U (Poetry - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A0SR (Scribing - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -99435,7 +99423,7 @@ STRING 45209
 }
 
 STRING 45210
-// Abilities: A0SR (Scribing - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A118 (Holy Nova), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -99969,7 +99957,7 @@ A book that contains knowledge of crafting thieving tools.
 }
 
 STRING 45796
-// Abilities: A118 (Holy Nova), Hotkey (Hotkey - Normal)
+// Abilities: A1ZI (Demolishing - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -101169,7 +101157,7 @@ Passive Transformation
 }
 
 STRING 46283
-// Abilities: A1ZI (Demolishing - Novice), Hotkey (Hotkey - Normal)
+// Upgrades: R02S (Liquid Fire), Hotkey (Hotkey)
 {
 N
 }
@@ -104217,7 +104205,7 @@ Tojara,Nikoro,Kajind,Mikasa,Samuro,Akinos,Mazuru,Yozshura,Daisho,Kigami,Arashica
 }
 
 STRING 49132
-// Upgrades: R02S (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Hotkey (Hotkey)
 {
 N
 }
@@ -104990,12 +104978,6 @@ STRING 49471
 The Miner uses his equipment to construct a mine of random minerals.
 }
 
-STRING 49472
-// Upgrades: R0IQ (Shaman Adept Training,Shaman Master Training), Hotkey (Hotkey)
-{
-N
-}
-
 STRING 49474
 // Upgrades: R0H4 (Chaos), Hotkey (Hotkey)
 {
@@ -105672,12 +105654,6 @@ STRING 49932
 // Upgrades: R0GF (Backpack), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
-}
-
-STRING 49949
-// Items: I11I (Clan Pandaren Banner), Name (Name)
-{
-Clan Pandaren Banner
 }
 
 STRING 49950
@@ -107313,24 +107289,6 @@ STRING 50408
 // Units: n0JT (Argunite Mine), Name (Name)
 {
 Argunite Mine
-}
-
-STRING 50409
-// Items: I11I (Clan Pandaren Banner), Tip (Tooltip - Basic)
-{
-Clan Pandaren Banner
-}
-
-STRING 50410
-// Items: I04S (Clan Human Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
-STRING 50411
-// Items: I04S (Clan Human Banner), Description (Description)
-{
-Changes the banner of your clan.
 }
 
 STRING 50412
@@ -113041,64 +112999,10 @@ STRING 53711
 (+3) (Metal Boots) (Right)
 }
 
-STRING 53712
-// Items: I04H (Create a Clan), Name (Name)
-{
-Create a Clan
-}
-
-STRING 53713
-// Items: I04H (Create a Clan), Tip (Tooltip - Basic)
-{
-Create a Clan
-}
-
-STRING 53714
-// Items: I04H (Create a Clan), Ubertip (Tooltip - Extended)
-{
-Clans can have multiple players as members, clan halls, shared gold and lumber and other benefits. They are stored in savecodes.
-}
-
-STRING 53715
-// Items: I04I (Tiny Clan Hall), Name (Name)
-{
-Tiny Clan Hall
-}
-
-STRING 53716
-// Items: I04I (Tiny Clan Hall), Tip (Tooltip - Basic)
-{
-Purchase Tiny Clan Hall
-}
-
-STRING 53717
-// Items: I04I (Tiny Clan Hall), Ubertip (Tooltip - Extended)
-{
-Creates a Clan Hall at a target location.
-}
-
 STRING 53718
 // Abilities: A0CU (Build Tiny Clan Hall), Name (Name)
 {
 Build Tiny Clan Hall
-}
-
-STRING 53719
-// Upgrades: R03A (Animal War Training), Name (Name)
-{
-Hero No Clan
-}
-
-STRING 53720
-// Upgrades: R03A (Animal War Training), Tip (Tooltip)
-{
-No Clan
-}
-
-STRING 53721
-// Upgrades: R03A (Animal War Training), Ubertip (Tooltip - Extended)
-{
-Player has no clan.
 }
 
 STRING 53734
@@ -113947,12 +113851,6 @@ STRING 54543
 (Clan Hall)
 }
 
-STRING 54550
-// Items: I04Z (Clan Banner), Description (Description)
-{
-The banner of your clan which provides a number of useful abilities.
-}
-
 STRING 54551
 // Items: I04J (The Heart of Akama), Description (Description)
 {
@@ -113995,12 +113893,6 @@ STRING 54562
 Portable Tinker Factory - Spell Book
 }
 
-STRING 54565
-// Items: I04Z (Clan Banner), Ubertip (Tooltip - Extended)
-{
-The banner of your clan which provides a number of useful abilities.
-}
-
 STRING 54653
 // Units: n076 (Thieves Guild (Thief)), Name (Name)
 {
@@ -114029,12 +113921,6 @@ STRING 54657
 // Items: I03F (Pickpocketing), Description (Description)
 {
 Gives your hero the chance to pickpocket a nearby killed unit.
-}
-
-STRING 54864
-// Items: I04Z (Clan Banner), Name (Name)
-{
-Clan Banner
 }
 
 STRING 54866
@@ -114071,12 +113957,6 @@ STRING 54873
 // Abilities: A0D9 (Sundering Blades), EditorSuffix (Editor Suffix)
 {
 (Draenei Slayer)
-}
-
-STRING 54874
-// Items: I04Z (Clan Banner), Tip (Tooltip - Basic)
-{
-Purchase Clan Banner
 }
 
 STRING 54878
@@ -114125,54 +114005,6 @@ STRING 54885
 // Abilities: A0DC (Play Clan Sound), EditorSuffix (Editor Suffix)
 {
 (Clan Hall)
-}
-
-STRING 54891
-// Items: I050 (Clan Horn Sound), Name (Name)
-{
-Clan Horn Sound
-}
-
-STRING 54892
-// Items: I050 (Clan Horn Sound), Tip (Tooltip - Basic)
-{
-Clan Horn Sound
-}
-
-STRING 54893
-// Items: I050 (Clan Horn Sound), Ubertip (Tooltip - Extended)
-{
-Changes the sound of your clan.
-}
-
-STRING 54894
-// Items: I050 (Clan Horn Sound), Description (Description)
-{
-Changes the sound of your clan.
-}
-
-STRING 54895
-// Items: I051 (Clan Laugh Sound), Name (Name)
-{
-Clan Laugh Sound
-}
-
-STRING 54896
-// Items: I051 (Clan Laugh Sound), Tip (Tooltip - Basic)
-{
-Clan Laugh Sound
-}
-
-STRING 54897
-// Items: I051 (Clan Laugh Sound), Ubertip (Tooltip - Extended)
-{
-Changes the sound of your clan.
-}
-
-STRING 54898
-// Items: I051 (Clan Laugh Sound), Description (Description)
-{
-Changes the sound of your clan.
 }
 
 STRING 54908
@@ -114329,18 +114161,6 @@ STRING 54961
 // Units: n095 (Hellfire Citadel), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
-}
-
-STRING 54962
-// Upgrades: R03D (Animal War Training), Name (Name)
-{
-Hero Clan
-}
-
-STRING 54964
-// Upgrades: R03D (Animal War Training), Ubertip (Tooltip - Extended)
-{
-Player has a clan.
 }
 
 STRING 54965
@@ -115834,36 +115654,6 @@ STRING 55722
 (Property)
 }
 
-STRING 55736
-// Items: I11J (Clan Dwarf Banner), Name (Name)
-{
-Clan Dwarf Banner
-}
-
-STRING 55737
-// Items: I11J (Clan Dwarf Banner), Tip (Tooltip - Basic)
-{
-Clan Pandaren Banner
-}
-
-STRING 55738
-// Items: I04T (Clan Orc Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
-STRING 55739
-// Items: I04T (Clan Orc Banner), Description (Description)
-{
-Changes the banner of your clan.
-}
-
-STRING 55740
-// Items: I11K (Clan Gnome Banner), Name (Name)
-{
-Clan Gnome Banner
-}
-
 STRING 55741
 // Units: n0JT (Argunite Mine), Tip (Tooltip - Basic)
 {
@@ -116023,28 +115813,10 @@ STRING 55774
 Converts mechanical player units into organic player units.
 }
 
-STRING 55775
-// Items: I11K (Clan Gnome Banner), Tip (Tooltip - Basic)
-{
-Clan Gnome Banner
-}
-
-STRING 55776
-// Items: I04U (Clan Night Elf Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
 STRING 55778
 // Abilities: A0D5 (Convert into Ancient), Name (Name)
 {
 Convert into Ancient
-}
-
-STRING 55779
-// Items: I04U (Clan Night Elf Banner), Description (Description)
-{
-Changes the banner of your clan.
 }
 
 STRING 55780
@@ -116293,94 +116065,10 @@ STRING 55837
 Revive Sylvanas Windrunner
 }
 
-STRING 55838
-// Items: I04S (Clan Human Banner), Name (Name)
-{
-Clan Human Banner
-}
-
-STRING 55839
-// Items: I04S (Clan Human Banner), Tip (Tooltip - Basic)
-{
-Clan Human Banner
-}
-
-STRING 55840
-// Items: I04V (Clan Undead Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
-STRING 55841
-// Items: I04V (Clan Undead Banner), Description (Description)
-{
-Changes the banner of your clan.
-}
-
-STRING 55842
-// Items: I04T (Clan Orc Banner), Name (Name)
-{
-Clan Orc Banner
-}
-
-STRING 55843
-// Items: I04T (Clan Orc Banner), Tip (Tooltip - Basic)
-{
-Clan Orc Banner
-}
-
-STRING 55844
-// Items: I11I (Clan Pandaren Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
-STRING 55845
-// Items: I11I (Clan Pandaren Banner), Description (Description)
-{
-Changes the banner of your clan.
-}
-
 STRING 55847
 // Abilities: A0D7 (Convert into Undead), Name (Name)
 {
 Convert into Undead
-}
-
-STRING 55848
-// Items: I11J (Clan Dwarf Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
-STRING 55849
-// Items: I11J (Clan Dwarf Banner), Description (Description)
-{
-Changes the banner of your clan.
-}
-
-STRING 55850
-// Items: I04V (Clan Undead Banner), Name (Name)
-{
-Clan Undead Banner
-}
-
-STRING 55851
-// Items: I04V (Clan Undead Banner), Tip (Tooltip - Basic)
-{
-Clan Undead Banner
-}
-
-STRING 55852
-// Items: I11K (Clan Gnome Banner), Ubertip (Tooltip - Extended)
-{
-Changes the banner of your clan.
-}
-
-STRING 55853
-// Items: I11K (Clan Gnome Banner), Description (Description)
-{
-Changes the banner of your clan.
 }
 
 STRING 55854
@@ -116543,24 +116231,6 @@ STRING 55882
 // Abilities: A0D8 (Convert into Non-Undead), Name (Name)
 {
 Convert into Non-Undead
-}
-
-STRING 55883
-// Items: I04I (Tiny Clan Hall), Description (Description)
-{
-Creates a Clan Hall at a target location.
-}
-
-STRING 55884
-// Items: I04U (Clan Night Elf Banner), Name (Name)
-{
-Clan Night Elf Banner
-}
-
-STRING 55885
-// Items: I04U (Clan Night Elf Banner), Tip (Tooltip - Basic)
-{
-Clan Night Elf Banner
 }
 
 STRING 55886
@@ -123099,30 +122769,6 @@ STRING 58583
 Race Qualification - Track Azeroth Grand Prix
 }
 
-STRING 58584
-// Items: I05A (Tiny Clan Tower), Name (Name)
-{
-Tiny Clan Tower
-}
-
-STRING 58585
-// Items: I05A (Tiny Clan Tower), Description (Description)
-{
-Creates a Clan Tower at a target location.
-}
-
-STRING 58586
-// Items: I05A (Tiny Clan Tower), Tip (Tooltip - Basic)
-{
-Purchase Tiny Clan Tower
-}
-
-STRING 58587
-// Items: I05A (Tiny Clan Tower), Ubertip (Tooltip - Extended)
-{
-Creates a Clan Tower at a target location.
-}
-
 STRING 58588
 // Items: I05B (Tiny Portal), Name (Name)
 {
@@ -123514,25 +123160,25 @@ C
 }
 
 STRING 59117
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
-{
-C
-}
-
-STRING 59118
 // Upgrades: R02Q (Liquid Fire), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59119
+STRING 59118
 // Upgrades: R02R (Liquid Fire), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59120
+STRING 59119
 // Upgrades: R02U (Liquid Fire), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 59120
+// Upgrades: R05R (Cloud), Hotkey (Hotkey)
 {
 C
 }
@@ -123544,7 +123190,7 @@ C
 }
 
 STRING 59122
-// Upgrades: R05R (Cloud), Hotkey (Hotkey)
+// Upgrades: R063 (Cloud), Hotkey (Hotkey)
 {
 C
 }
@@ -123562,13 +123208,13 @@ C
 }
 
 STRING 59125
-// Upgrades: R063 (Cloud), Hotkey (Hotkey)
+// Upgrades: R06F (Web), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59126
-// Upgrades: R06F (Web), Hotkey (Hotkey)
+// Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Hotkey (Hotkey)
 {
 C
 }
@@ -123586,48 +123232,42 @@ C
 }
 
 STRING 59129
-// Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Hotkey (Hotkey)
-{
-C
-}
-
-STRING 59130
 // Upgrades: R06R (Ensnare), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59131
+STRING 59130
 // Upgrades: R0A6 (Barrage), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59132
+STRING 59131
 // Upgrades: R0B1 (Stone Form), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59133
+STRING 59132
 // Upgrades: R0CT (Stone Form), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59134
+STRING 59133
 // Upgrades: R0F3 (Berserker Upgrade), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59135
+STRING 59134
 // Upgrades: R0IV (Magic Sentry), Hotkey (Hotkey)
 {
 C
 }
 
-STRING 59136
+STRING 59135
 // Upgrades: R07Q (Stone Form), Hotkey (Hotkey)
 {
 C
@@ -123757,42 +123397,6 @@ STRING 59722
 // Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Night Elf, Undead and Dwarf AI cannot use housings. They need a bonus.
-}
-
-STRING 59728
-// Items: I05E (Clan AI Player), Name (Name)
-{
-Clan AI Player
-}
-
-STRING 59729
-// Items: I05E (Clan AI Player), Tip (Tooltip - Basic)
-{
-Purchase Clan AI Player
-}
-
-STRING 59730
-// Items: I05E (Clan AI Player), Ubertip (Tooltip - Extended)
-{
-Purchases an AI player for the clan who shares his gold and lumber with the clan.
-}
-
-STRING 59732
-// Upgrades: R046 (Animal War Training), Name (Name)
-{
-Clan Has No AI Player
-}
-
-STRING 59733
-// Upgrades: R046 (Animal War Training), Tip (Tooltip)
-{
-Clan Has No AI Player
-}
-
-STRING 59734
-// Upgrades: R046 (Animal War Training), Ubertip (Tooltip - Extended)
-{
-Clan Has No AI Player
 }
 
 STRING 60131
@@ -124819,30 +124423,6 @@ STRING 62080
 // Upgrades: R04K (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (High Elf)
-}
-
-STRING 62084
-// Items: I04B (Dungeon Key), Name (Name)
-{
-Dungeon Key
-}
-
-STRING 62085
-// Items: I04B (Dungeon Key), Tip (Tooltip - Basic)
-{
-Purchase Dungeon Key
-}
-
-STRING 62086
-// Items: I04B (Dungeon Key), Description (Description)
-{
-The key to a dungeon.
-}
-
-STRING 62087
-// Items: I04B (Dungeon Key), Ubertip (Tooltip - Extended)
-{
-The key to a dungeon.
 }
 
 STRING 62088
