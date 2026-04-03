@@ -1,4 +1,4 @@
-library WoWReforgedCheats requires Ascii, WoWReforgedUtils, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, WoWReforgedCinematic, optional OrdersWatcher
+library WoWReforgedCheats requires Ascii, StringFormat, SafeString, WoWReforgedUtils, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, WoWReforgedCinematic, optional OrdersWatcher
 
 function GetHelpTextCheats takes nothing returns string
     return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -revive, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -kill, -fill, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -combination, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -achievementscheat, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
@@ -185,25 +185,23 @@ function CheatProfessions takes nothing returns nothing
     endloop
 endfunction
 
-function CheatBoots takes player whichPlayer returns nothing
-    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Created Boots of Teleportation for your first hero.")
+private function CreateItemForFirstHero takes player whichPlayer, integer itemTypeId returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, Format(GetLocalizedStringSafe("CREATED_X_FOR_FIRST_HERO")).s(GetObjectName(itemTypeId)).result())
     if (GetPlayerHero1(whichPlayer) != null) then
-        call UnitAddItemById(GetPlayerHero1(whichPlayer), ITEM_BOOTS_OF_TELEPORTATION)
+        call UnitAddItemById(GetPlayerHero1(whichPlayer), itemTypeId)
     endif
+endfunction
+
+function CheatBoots takes player whichPlayer returns nothing
+    call CreateItemForFirstHero(whichPlayer, ITEM_BOOTS_OF_TELEPORTATION)
 endfunction
 
 function CheatTool takes player whichPlayer returns nothing
-    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Created Goblin Tool Box for your first hero.")
-    if (GetPlayerHero1(whichPlayer) != null) then
-        call UnitAddItemById(GetPlayerHero1(whichPlayer), ITEM_GOBLIN_TOOL_BOX)
-    endif
+    call CreateItemForFirstHero(whichPlayer, ITEM_GOBLIN_TOOL_BOX)
 endfunction
 
 function CheatSpade takes player whichPlayer returns nothing
-    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, "Created Spade for your first hero.")
-    if (GetPlayerHero1(whichPlayer) != null) then
-        call UnitAddItemById(GetPlayerHero1(whichPlayer), ITEM_SPADE)
-    endif
+    call CreateItemForFirstHero(whichPlayer, ITEM_SPADE)
 endfunction
 
 function CheatTerrain takes player whichPlayer returns nothing
