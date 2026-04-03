@@ -1,4 +1,4 @@
-library WoWReforgedVIPs initializer Init requires PlayerColorUtils, UnitGroupUtils, OnStartGame, WoWReforgedUtils, WoWReforgedI18n
+library WoWReforgedVIPs initializer Init requires PlayerColorUtils, UnitGroupUtils, SafeString, OnStartGame, WoWReforgedUtils, WoWReforgedI18n, WoWReforgedMapData
 
 globals
     private integer vipCounter = 0
@@ -15,26 +15,6 @@ function GetVIP takes integer index returns string
     return vips[index]
 endfunction
 
-function GetVIPPlayers takes nothing returns force
-    return vipPlayers
-endfunction
-
-function GetNonVIPPlayers takes nothing returns force
-    local player slotPlayer = null
-    local force result = CreateForce()
-    local integer i = 0
-    loop
-        exitwhen (i >= bj_MAX_PLAYERS)
-        set slotPlayer = Player(i)
-        if (not IsPlayerInForce(slotPlayer, vipPlayers)) then
-            call ForceAddPlayer(result, slotPlayer)
-        endif
-        set slotPlayer = null
-        set i = i + 1
-    endloop
-    return result
-endfunction
-
 function IsAccountVIP takes string account returns boolean
     local integer i = 0
     loop
@@ -48,39 +28,28 @@ function IsAccountVIP takes string account returns boolean
 endfunction
 
 function IsPlayerVIP takes player whichPlayer returns boolean
-    //return IsPlayerInForce(whichPlayer, vipPlayers)
-    return udg_VIPOnForPlayer[GetConvertedPlayerId(whichPlayer)]
+    return IsPlayerInForce(whichPlayer, vipPlayers)
 endfunction
 
-function WelcomeVIP takes player whichPlayer returns nothing
-    call QuestMessageForPlayer(whichPlayer, bj_QUESTMESSAGE_ALWAYSHINT, Format(GetLocalizedString("VIP_WELCOME")).s(GetPlayerNameColored(whichPlayer)).result())
-endfunction
-
-function WelcomeVIPs takes nothing returns nothing
-    local force nonVipPlayers = GetNonVIPPlayers()
+private function WelcomeVIPs takes nothing returns nothing
     local player slotPlayer = null
     local string txt = null
     local integer i = 0
+    local integer max = GetMapMaxLobbyPlayers()
     loop
-        exitwhen (i >= bj_MAX_PLAYERS)
+        exitwhen (i >= max)
         set slotPlayer = Player(i)
         if (IsPlayerVIP(slotPlayer)) then
             if (txt != null) then
                 set txt = txt + ", "
             endif
             set txt = txt + GetPlayerNameColored(slotPlayer)
-            call WelcomeVIP(slotPlayer)
         endif
         set slotPlayer = null
         set i = i + 1
     endloop
-    if (txt != null) then
-        call QuestMessageBJ(nonVipPlayers, bj_QUESTMESSAGE_ALWAYSHINT, Format(GetLocalizedString("VIP_WELCOME_ALL")).s(txt).result())
-        call PlaySoundBJ(gg_snd_UtherReturns)
-    endif
-    call ForceClear(nonVipPlayers)
-    call DestroyForce(nonVipPlayers)
-    set nonVipPlayers = null
+    call QuestMessageBJ(GetAllPlayingUsers(), bj_QUESTMESSAGE_ALWAYSHINT, Format(GetLocalizedStringSafe("VIP_WELCOME")).s(txt).result())
+    call PlaySoundBJ(gg_snd_UtherReturns)
 endfunction
 
 function UpdateResearchesForVIP takes player whichPlayer returns nothing
@@ -91,7 +60,7 @@ function UpdateResearchesForVIP takes player whichPlayer returns nothing
     endif
 endfunction
 
-function GetVIPsInfoText takes nothing returns string
+private function GetVIPsInfoText takes nothing returns string
     local string text = "VIPS:"
     local integer i = 0
     loop

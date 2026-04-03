@@ -1,4 +1,4 @@
-library WoWReforgedMapData initializer Init requires StringUtils, WoWReforgedTerrain, WoWReforgedVIPs
+library WoWReforgedMapData initializer Init requires StringUtils, WoWReforgedTerrain
 
 globals
     private force lobbyPlayers = CreateForce()
