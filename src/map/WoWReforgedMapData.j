@@ -16,6 +16,22 @@ function GetMapMaxLobbyPlayers takes nothing returns integer
 endfunction
 
 function GetMapTeamPlayers takes integer team returns force
+    // We have to recalculate every time since player teams can change but the number of teams always stays the same:
+    local integer i = 0
+    local integer max = teams
+    loop
+        exitwhen (i == max)
+        call ForceClear(teamPlayers[i])
+        set i = i + 1
+    endloop
+    set i = 0
+    set max = bj_MAX_PLAYERS
+    loop
+        exitwhen (i == max)
+        call ForceAddPlayer(teamPlayers[GetPlayerTeam(Player(i))], Player(i))
+        set i = i +1
+    endloop
+
     return teamPlayers[team]
 endfunction
 
