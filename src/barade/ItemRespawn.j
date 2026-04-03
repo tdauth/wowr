@@ -516,9 +516,7 @@ private function TriggerActionRespawnItem takes nothing returns nothing
 endfunction
 
 private function AddEnumItem takes nothing returns nothing
-    if (GetItemTypeId(GetEnumItem()) != DUNGEON_KEY) then
-        call AddRespawnItem(GetEnumItem())
-    endif
+    call AddRespawnItem(GetEnumItem())
 endfunction
 
 private function Init takes nothing returns nothing
